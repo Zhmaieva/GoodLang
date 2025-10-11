@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StepLang</title>
+    <style>
+        :root {
+            --bg: #fff3df;
+            --accent: #ff6138;
+            --accent-dark: #d74e2a;
+            --green: #4ba36e;
+            --blue: #3a6ea5;
+            --text: #3a2a1d;
+            --muted: #a47856;
+            --radius: 20px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 960px;
+            width: 100%;
+            padding: 40px 24px 80px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 32px;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 12px;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            font-weight: 800;
+            color: var(--accent-dark);
+            letter-spacing: 0.02em;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 14px;
+            max-width: 500px;
+        }
+
+        /* ——— Level Switch ——— */
+        .level-switch {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .level-btn {
+            appearance: none;
+            background: #fffdf8;
+            color: var(--text);
+            border: 2px solid var(--accent);
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 2px 2px 0 var(--accent-dark);
+            transition: transform .1s ease, background .15s ease, box-shadow .15s ease;
+        }
+        .level-btn:hover { transform: translateY(1px); }
+        .level-btn.selected {
+            background: var(--green);
+            color: #fff;
+            box-shadow: 2px 2px 0 #2d6f48;
+            border-color: #2d6f48;
+        }
+        .level-btn:focus-visible {
+            outline: 3px solid var(--blue);
+            outline-offset: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .card {
+            background: #fffdf8;
+            border: 3px solid var(--accent);
+            border-radius: var(--radius);
+            box-shadow: 4px 4px 0 var(--accent-dark);
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 16px;
+            text-transform: uppercase;
+            color: var(--text);
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 0.05em;
+        }
+
+        .ua {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .input-wrap {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        textarea {
+            flex: 1;
+            min-height: 70px;
+            border-radius: var(--radius);
+            border: 3px solid var(--accent);
+            background: #fffaf3;
+            padding: 12px 14px;
+            font-size: 16px;
+            color: var(--text);
+            transition: opacity .15s ease;
+        }
+        textarea:focus { outline: none; border-color: var(--blue); }
+        textarea:disabled { opacity: .7; cursor: not-allowed; }
+
+        .btn {
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            border-radius: 999px;
+            padding: 12px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+            box-shadow: 3px 3px 0 var(--accent-dark);
+            width: 100%;
+        }
+        .btn:hover { background: var(--accent-dark); transform: translateY(1px); }
+
+        .result { display: flex; flex-direction: column; gap: 10px; }
+
+        .feedback {
+            background: #fffaf3;
+            border: 2px dashed var(--accent);
+            padding: 12px 14px;
+            border-radius: var(--radius);
+            color: var(--text);
+        }
+
+        footer {
+            margin-top: 32px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+            border-top: 2px solid var(--accent);
+            padding-top: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <div>
+                <h1>StepLang</h1>
+                <div class="sub">Переклад → короткий фідбек → нове речення згідно твого рівня</div>
+            </div>
+        </div>
+
+        <!-- Level Switch -->
+        <div class="level-switch" role="group" aria-label="Вибір рівня">
+            <button class="level-btn selected" data-level="beginner" aria-pressed="true">Beginner</button>
+            <button class="level-btn" data-level="intermediate" aria-pressed="false">Intermediate</button>
+            <button class="level-btn" data-level="advanced" aria-pressed="false">Advanced</button>
+        </div>
+    </header>
+
+    <section class="grid">
+        <!-- Left: Task & Input -->
+        <div class="card panel" aria-live="polite">
+            <div class="ua" id="uaTask">Яка зараз година?</div>
+
+            <div class="input-wrap">
+                <textarea id="answer" placeholder="Введіть переклад англійською…" autocomplete="off"></textarea>
+                <button id="checkBtn" class="btn" aria-label="Перевірити переклад">Перевірити</button>
+            </div>
+        </div>
+
+        <!-- Right: Result -->
+        <div class="card panel">
+            <h2 class="title">Результат</h2>
+            <div class="result" id="result">
+                <div class="feedback tiny">Короткий фідбек зʼявиться тут.</div>
+                <div class="rule-badges" id="rules" style="display:none"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>© 2025 StepLang</footer>
+</div>
+
+<script>
+    // ————— Data —————
+    const BANK = {
+        BE_Q: {
+            name: "Wh + BE inversion",
+            short: "З to be робимо інверсію: What time **is** it?",
+            ladder: [
+                { ua: "Котра зараз година?", en: ["what time is it?", "what's the time?"] },
+                { ua: "Де він?", en: ["where is he?"] },
+                { ua: "Хто це?", en: ["who is that?", "who's that?"] }
+            ]
+        },
+        WH_DOES: {
+            name: "Wh + do/does",
+            short: "У Wh-питанні потрібні do/does перед підметом.",
+            ladder: [
+                { ua: "Де ти живеш?", en: ["where do you live?"] },
+                { ua: "Де вона працює?", en: ["where does she work?"] },
+                { ua: "Коли він приходить?", en: ["when does he come?"] }
+            ]
+        }
+    };
+
+    // Проста мапа правил під рівні (можеш легко розширити пізніше)
+    const LEVEL_RULE_MAP = {
+        beginner: 'BE_Q',
+        intermediate: 'WH_DOES',
+        advanced: 'WH_DOES' // тимчасово; додамо складніші правила згодом
+    };
+
+    let state = {
+        level: 'beginner',
+        ruleKey: LEVEL_RULE_MAP['beginner'],
+        ladderIndex: 0
+    };
+
+    // ————— DOM —————
+    const btn = document.getElementById('checkBtn');
+    const taskBox = document.getElementById('uaTask');
+    const resultBox = document.querySelector('.feedback');
+    const rulesBox = document.getElementById('rules');
+    const answerBox = document.getElementById('answer');
+    const levelButtons = document.querySelectorAll('.level-btn');
+
+    // ————— Helpers —————
+    function normalize(s) {
+        return s.trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+    function setHint(html) { resultBox.innerHTML = html; }
+
+    // Ховаємо блок правил повністю
+    function renderRules() {
+        rulesBox.innerHTML = '';
+        rulesBox.style.display = 'none';
+    }
+
+    function setTask() {
+        const rule = BANK[state.ruleKey];
+        const item = rule.ladder[state.ladderIndex % rule.ladder.length];
+        taskBox.textContent = item.ua;
+        answerBox.value = '';
+        setHint('Порада: перекладіть і натисніть «Перевірити»');
+        renderRules();
+    }
+
+    function setLevel(level) {
+        // Візуальне виділення єдиної кнопки
+        levelButtons.forEach(b => {
+            const isSelected = b.dataset.level === level;
+            b.classList.toggle('selected', isSelected);
+            b.setAttribute('aria-pressed', String(isSelected));
+        });
+
+        // Оновлюємо стан + правило
+        state.level = level;
+        state.ruleKey = LEVEL_RULE_MAP[level] || 'BE_Q';
+        state.ladderIndex = 0;
+
+        // Скидаємо UI під новий рівень
+        btn.textContent = 'Перевірити';
+        btn.dataset.mode = 'check';
+        answerBox.disabled = false;
+        setTask();
+        answerBox.focus();
+    }
+
+    // ————— Основна логіка —————
+    function checkOrNext() {
+        if (btn.dataset.mode === 'next') {
+            // натиснули "наступне речення": переходимо далі
+            state.ladderIndex = (state.ladderIndex + 1) % BANK[state.ruleKey].ladder.length;
+            setTask();
+            btn.textContent = 'Перевірити';
+            btn.dataset.mode = 'check';
+            answerBox.disabled = false; // знову активуємо інпут
+            answerBox.focus();
+            return;
+        }
+
+        const rule = BANK[state.ruleKey];
+        const item = rule.ladder[state.ladderIndex];
+        const ans = normalize(answerBox.value);
+
+        if (!ans) {
+            setHint('Введіть переклад перед перевіркою.');
+            return;
+        }
+
+        const ok = item.en.some(acc => normalize(acc) === ans);
+
+        // Після перевірки блокуємо textarea до натискання "Наступне речення"
+        answerBox.disabled = true;
+
+        if (ok) {
+            setHint('<span style="color: var(--green); font-weight: 700;">✔ Правильно!</span> Натисніть «Наступне речення» для продовження.');
+            renderRules();
+            btn.textContent = 'Наступне речення';
+            btn.dataset.mode = 'next';
+        } else {
+            setHint('<span style="color: var(--accent-dark); font-weight: 700;">❌ Не зовсім.</span> ' + rule.short + ' Натисніть «Наступне речення» для продовження.');
+            renderRules();
+            btn.textContent = 'Наступне речення';
+            btn.dataset.mode = 'next';
+        }
+    }
+
+    // ————— Події —————
+    btn.addEventListener('click', checkOrNext);
+
+    answerBox.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') checkOrNext();
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            checkOrNext();
+        }
+    });
+
+    levelButtons.forEach(b => {
+        b.addEventListener('click', () => setLevel(b.dataset.level));
+    });
+
+    // ————— Початковий стан —————
+    btn.dataset.mode = 'check';
+    setTask();
+</script>
+</body>
+</html>
