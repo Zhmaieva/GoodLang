@@ -1,14 +1,21 @@
-// app.js (Node 18+, console app)
+// console.js (Node 18+, console app)
 import OpenAI from "openai";
 import { GrammarRule } from "./rules.js";
 
 const client = new OpenAI({ apiKey: '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' });
+
+
+export function randomRule() {
+    const values = Object.values(GrammarRule);
+    return values[Math.floor(Math.random() * values.length)];
+}
 
 // Core function
 export async function evaluateAndCoach({
                                            rule = GrammarRule.TO_BE,
                                            targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
                                            userEnglish = "",                // learner's translation attempt (English)
+                                           textToTranslate = "",
                                            difficulty = "A2",               // A1–B2, affects sample complexity
                                        }) {
 
@@ -31,11 +38,12 @@ Difficulty: ${difficulty}.
 
     const userPrompt = `
 TARGET_LANGUAGE: ${targetLanguage}
-GRAMMAR_RULE: ${rule})
+GRAMMAR_RULE: ${rule}
+TEXT_TO_TRANSLATE: ${textToTranslate}
 
 TASKS:
 1) If LEARNER_ENGLISH IS empty, create a short sample sentence in TARGET_LANGUAGE that demonstrates the rule (GRAMMAR_RULE). Then do not do next steps.
-2) If LEARNER_ENGLISH is NOT empty, evaluate if it's correct according to English rules.
+2) If LEARNER_ENGLISH is NOT empty, evaluate if it's correct according to English rules and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation.
 3) If wrong, give a helpful human tip and new short sentence to translate next.
 4) Also, give correct translation from TARGET_LANGUAGE to English.
 5) List violated rules.
