@@ -54,7 +54,8 @@ app.get('/translations/', async (req, res, next) => {
            isAnswerCorrect: result.answer_is_correct,
            correctAnswer: result.correct_answer,
            tipIfWrong: result.tip_if_wrong,
-           violatedRules: result.violated_rules
+           violatedRules: result.violated_rules,
+           score: result.score,
        });
    }  catch (e) {
        next(e);

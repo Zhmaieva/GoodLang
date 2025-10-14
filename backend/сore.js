@@ -31,7 +31,8 @@ Schema:
   "correct_answer": string,
   "tip_if_wrong": string,
   "next_target_sentence": string,
-  "violated_rules": string[]
+  "violated_rules": string[],
+  "score": number
 }
 Difficulty: ${difficulty}.
   `;
@@ -47,6 +48,7 @@ TASKS:
 3) If wrong, give a helpful human tip and new short sentence to translate next.
 4) Also, give correct translation from TARGET_LANGUAGE to English.
 5) List violated rules.
+6) Give score: 1 - correct, 0.75 - 1 spelling mistake, 0.5 - 2-3 spelling mistakes, 0.25 - 3+ spelling mistakes, but grammatically correct, 0 - wrong.
 
 LEARNER_ENGLISH: ${userEnglish || "(none)"}
 `;
