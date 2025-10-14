@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StepLang — Правило: To be (am / is / are)</title>
+    <style>
+        :root{
+            --bg:#fff3df; --card:#fffdf8; --accent:#ff6138; --accent-dark:#d74e2a; --green:#4ba36e; --blue:#3a6ea5; --text:#3a2a1d; --muted:#a47856; --bad:#ef476f; --warn:#ffd166; --good:#4ba36e; --radius:20px;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh}
+        .container{max-width:980px;width:100%;padding:36px 20px 80px}
+
+        header{display:flex;justify-content:space-between;align-items:end;gap:16px;border-bottom:3px solid var(--accent);padding-bottom:12px;margin-bottom:20px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:48px;height:48px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+        h1{margin:0;font-size:28px;color:var(--accent-dark);letter-spacing:.02em}
+        .sub{color:var(--muted);font-size:14px}
+
+        .grid{display:grid;grid-template-columns:1fr;gap:16px}
+        .card{background:var(--card);border:3px solid var(--accent);border-radius:var(--radius);box-shadow:4px 4px 0 var(--accent-dark);padding:16px}
+        .section-title{margin:4px 2px 8px;font-size:16px;letter-spacing:.05em;text-transform:uppercase;font-weight:800}
+        .hint{color:var(--muted);font-size:13px}
+
+        .flex{display:flex;gap:12px;flex-wrap:wrap}
+        .btn{background:var(--accent);color:#fff;border:none;border-radius:999px;padding:10px 16px;font-weight:700;box-shadow:3px 3px 0 var(--accent-dark);cursor:pointer}
+        .btn.secondary{background:#fff;color:var(--text);border:2px solid var(--accent)}
+        .btn:hover{background:var(--accent-dark);transform:translateY(1px)}
+
+        .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;border:2px solid var(--accent)}
+        .badge.good{background:var(--good);border-color:#2d6f48;color:#fff}
+        .badge.warn{background:var(--warn);border-color:#b8921d}
+        .badge.bad{background:var(--bad);border-color:#ad2e49;color:#fff}
+
+        table{width:100%;border-collapse:separate;border-spacing:0}
+        th,td{padding:10px;border-bottom:2px solid var(--accent)}
+        thead th{background:linear-gradient(#fffaf3,#fff);text-transform:uppercase;font-size:12px;color:var(--muted);letter-spacing:.06em;border-top-left-radius:12px;border-top-right-radius:12px}
+
+        .example{background:#fff;border:2px dashed var(--accent);border-radius:14px;padding:10px;margin:6px 0}
+        .ex-en{font-weight:700}
+        .ex-ua{color:var(--muted)}
+
+        /* Level switch (локально у тренажері) */
+        .level-switch{display:flex;gap:8px;flex-wrap:wrap}
+        .level-btn{
+            appearance:none;background:#fffdf8;color:var(--text);border:2px solid var(--accent);
+            border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;cursor:pointer;
+            box-shadow:2px 2px 0 var(--accent-dark);transition:transform .1s ease, background .15s ease, box-shadow .15s ease;
+        }
+        .level-btn:hover{transform:translateY(1px)}
+        .level-btn.selected{background:var(--green);color:#fff;box-shadow:2px 2px 0 #2d6f48;border-color:#2d6f48}
+
+        /* Translation trainer UI */
+        .ua{font-size:20px;font-weight:700;color:var(--text)}
+        .input-wrap{margin-top:12px;display:flex;flex-direction:column;gap:12px}
+        textarea{
+            min-height:72px;border-radius:var(--radius);border:3px solid var(--accent);background:#fffaf3;
+            padding:12px 14px;font-size:16px;color:var(--text);
+        }
+        textarea:focus{outline:none;border-color:var(--blue)}
+        .result{display:flex;flex-direction:column;gap:10px}
+        .feedback{
+            background:#fffaf3;border:2px dashed var(--accent);padding:12px 14px;border-radius:var(--radius);color:var(--text);min-height:44px
+        }
+        .correct-wrap{background:#fff;border:2px solid var(--green);border-radius:var(--radius);box-shadow:2px 2px 0 #2d6f48;padding:10px 12px}
+        .correct-title{font-size:13px;font-weight:800;color:var(--green);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+        .correct-text{
+            font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+            font-size:15px;background:#f4fff7;border:1.5px dashed var(--green);border-radius:12px;padding:8px 10px;display:inline-block
+        }
+
+        .note{background:#fff7ea;border:2px solid var(--accent);border-radius:14px;padding:10px}
+
+        footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+        @media (max-width:640px){ h1{font-size:22px} }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="brand">
+            <div class="logo">SL</div>
+            <div>
+                <h1>To be (am / is / are)</h1>
+                <div class="sub">Просте пояснення + таблиця + приклади + тренажер у форматі перекладу</div>
+            </div>
+        </div>
+        <div class="flex">
+            <button class="btn secondary" onclick="history.back()">← Назад</button>
+            <button class="btn" id="startPractice">Тренувати це правило</button>
+        </div>
+    </header>
+
+    <section class="grid">
+        <!-- 1. Коли вживаємо to be -->
+        <div class="card">
+            <div class="section-title">Коли вживаємо <em>to be</em></div>
+            <div class="flex">
+                <span class="badge">🆔 Ідентичність / професія: <strong>I am a student.</strong></span>
+                <span class="badge">🙂 Стан/якість: <strong>She is happy.</strong></span>
+                <span class="badge">📍 Місцезнаходження: <strong>We are at home.</strong></span>
+                <span class="badge">🕰️ Час/дата/вік*: <strong>It is Monday. I am 7.</strong></span>
+            </div>
+            <p class="hint">*В англійській про вік кажуть із <em>to be</em>: <strong>I am 7</strong>, а не <em>I have 7 years</em>.</p>
+        </div>
+
+        <!-- 2. Форми в Present Simple -->
+        <div class="card">
+            <div class="section-title">Форми в Present Simple</div>
+            <table aria-label="Conjugation table">
+                <thead>
+                <tr>
+                    <th>Особа</th>
+                    <th>Ствердження</th>
+                    <th>Заперечення</th>
+                    <th>Питання</th>
+                    <th>Скорочення</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>I</td>
+                    <td>I <strong>am</strong></td>
+                    <td>I <strong>am not</strong></td>
+                    <td><strong>Am</strong> I...?</td>
+                    <td>I’m / I’m not</td>
+                </tr>
+                <tr>
+                    <td>He / She / It</td>
+                    <td>He <strong>is</strong></td>
+                    <td>He <strong>is not</strong></td>
+                    <td><strong>Is</strong> he...?</td>
+                    <td>He’s / He isn’t</td>
+                </tr>
+                <tr>
+                    <td>You / We / They</td>
+                    <td>They <strong>are</strong></td>
+                    <td>They <strong>are not</strong></td>
+                    <td><strong>Are</strong> they...?</td>
+                    <td>They’re / They aren’t</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="hint">Порядок слів у питанні: <strong>Am/Is/Are + підмет + ... ?</strong></div>
+        </div>
+
+        <!-- 3. Приклади -->
+        <div class="card">
+            <div class="section-title">Приклади</div>
+            <div class="example"><div class="ex-en">I am from Ukraine.</div><div class="ex-ua">Я з України.</div></div>
+            <div class="example"><div class="ex-en">She is a doctor.</div><div class="ex-ua">Вона лікар.</div></div>
+            <div class="example"><div class="ex-en">We are tired but happy.</div><div class="ex-ua">Ми втомлені, але щасливі.</div></div>
+            <div class="example"><div class="ex-en">Is he at school?</div><div class="ex-ua">Він у школі?</div></div>
+            <div class="example"><div class="ex-en">They aren’t ready.</div><div class="ex-ua">Вони не готові.</div></div>
+        </div>
+
+        <!-- 4. Типові помилки -->
+        <div class="card">
+            <div class="section-title">Типові помилки</div>
+            <ul>
+                <li>❌ <em>I are</em> / <em>I is</em> → ✅ <strong>I am</strong></li>
+                <li>❌ <em>He don’t is</em> → ✅ <strong>He isn’t</strong> (у <em>to be</em> <em>do/does</em> не використовуємо)</li>
+                <li>❌ <em>I have 7 years</em> → ✅ <strong>I am 7 (years old)</strong></li>
+                <li>❌ Пропуск <em>to be</em> у теперішньому: <em>She very happy</em> → ✅ <strong>She is very happy</strong></li>
+            </ul>
+            <div class="note">Памʼятай: у Present Simple для <em>to be</em> питання й заперечення будуються <strong>без</strong> допоміжних <em>do/does</em>.</div>
+        </div>
+
+        <!-- 5. Переклад-тренажер у стилі основного додатку -->
+        <div class="card">
+            <div class="section-title">Переклад-тренажер (To be)</div>
+            <div class="hint">Перекладіть українське речення англійською, використовуючи <em>am / is / are</em>. Потім натисніть «Перевірити».</div>
+
+            <div class="level-switch" role="group" aria-label="Вибір рівня" style="margin:10px 0 8px">
+                <button class="level-btn selected" data-level="beginner" aria-pressed="true">Beginner</button>
+                <button class="level-btn" data-level="intermediate" aria-pressed="false">Intermediate</button>
+                <button class="level-btn" data-level="advanced" aria-pressed="false">Advanced</button>
+            </div>
+
+            <div class="example" style="margin-top:8px">
+                <div class="ua" id="uaTask">Завантаження завдання…</div>
+            </div>
+
+            <div class="input-wrap">
+                <textarea id="answer" placeholder="Введіть переклад англійською…"></textarea>
+                <button class="btn" id="checkBtn" aria-label="Перевірити переклад">Перевірити</button>
+            </div>
+
+            <div class="result" style="margin-top:10px">
+                <div class="feedback" id="feedbackBox">Порада: перекладіть і натисніть «Перевірити»</div>
+                <div id="correctBox" class="correct-wrap" hidden>
+                    <div class="correct-title">Правильна відповідь</div>
+                    <div class="correct-text" id="correctText">—</div>
+                </div>
+            </div>
+
+            <div class="flex" style="margin-top:10px">
+                <button class="btn secondary" id="nextBtn">Наступне речення</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>© 2025 StepLang • Пояснення правила <em>to be</em></footer>
+</div>
+
+<script>
+    // ===== Банк завдань для перекладу (To be) =====
+    const BANK = {
+        beginner: [
+            {ua:'Я у школі.', en:['i am at school','i’m at school']},
+            {ua:'Вона лікар.', en:['she is a doctor','she’s a doctor']},
+            {ua:'Ми вдома.', en:['we are at home','we’re at home']},
+            {ua:'Він щасливий.', en:['he is happy','he’s happy']},
+            {ua:'Вони не готові.', en:["they are not ready","they aren't ready","they’re not ready"]},
+            {ua:'Чи ти з України?', en:['are you from ukraine?']},
+            {ua:'Мені 7 років.', en:['i am 7','i am seven','i’m 7','i’m seven','i am seven years old','i’m seven years old']},
+        ],
+        intermediate: [
+            {ua:'Вона не вдома — вона на роботі.', en:['she is not at home — she is at work','she isn’t at home — she is at work','she’s not at home — she’s at work','she isn’t at home, she is at work','she’s not at home, she’s at work']},
+            {ua:'Чи ми запізнилися?', en:['are we late?']},
+            {ua:'Кіт під столом.', en:['the cat is under the table']},
+            {ua:'Це важко?', en:['is it hard?','is it difficult?']},
+            {ua:'Погода сьогодні чудова.', en:['the weather is great today','the weather is wonderful today']},
+        ],
+        advanced: [
+            {ua:'Чи вчитель сьогодні вільний?', en:['is the teacher free today?']},
+            {ua:'Мої батьки зараз у відпустці.', en:['my parents are on vacation now']},
+            {ua:'Чи все гаразд?', en:['is everything ok?','is everything okay?']},
+            {ua:'Причина проста: ми втомлені.', en:['the reason is simple: we are tired']},
+            {ua:'Чи твій брат проти цієї ідеї?', en:['is your brother against this idea?']},
+        ]
+    };
+
+    // ===== Допоміжні =====
+    const norm = s => (s || '').toLowerCase().replace(/\s+/g,' ').trim().replace(/’/g,"'");
+    const sample = arr => arr[Math.floor(Math.random()*arr.length)];
+
+    let LEVEL = 'beginner';
+    let CURRENT = null;
+
+    function pickTask(){
+        const pool = BANK[LEVEL] || BANK.beginner;
+        CURRENT = sample(pool);
+        document.getElementById('uaTask').textContent = CURRENT.ua;
+        document.getElementById('answer').value = '';
+        document.getElementById('feedbackBox').textContent = 'Перекладіть речення та натисніть «Перевірити»';
+        document.getElementById('correctBox').hidden = true;
+    }
+
+    function checkAnswer(){
+        if(!CURRENT) return;
+        const user = norm(document.getElementById('answer').value);
+        const ok = CURRENT.en.some(a => norm(a) === user);
+
+        if(ok){
+            document.getElementById('feedbackBox').innerHTML = '✔ Молодець! Все правильно.';
+            document.getElementById('correctBox').hidden = true;
+
+            // Запис у аналітику, якщо є
+            if(window.StepLangAnalytics){
+                window.StepLangAnalytics.updateRuleStat?.(1, true); // id=1: To be (am/is/are)
+                ['am','is','are'].forEach(w => window.StepLangAnalytics.noteWordResult?.(w, true));
+            }
+        } else {
+            document.getElementById('feedbackBox').innerHTML = '✘ Спробуй ще. Підказка: зверни увагу на форму <em>am / is / are</em> і порядок слів.';
+            document.getElementById('correctText').textContent = CURRENT.en[0];
+            document.getElementById('correctBox').hidden = false;
+
+            if(window.StepLangAnalytics){
+                window.StepLangAnalytics.updateRuleStat?.(1, false);
+                ['am','is','are'].forEach(w => window.StepLangAnalytics.noteWordResult?.(w, false));
+            }
+        }
+    }
+
+    // Події
+    document.querySelectorAll('.level-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+            document.querySelectorAll('.level-btn').forEach(b=>b.classList.remove('selected'));
+            btn.classList.add('selected');
+            LEVEL = btn.dataset.level;
+            pickTask();
+        });
+    });
+    document.getElementById('checkBtn').addEventListener('click', checkAnswer);
+    document.getElementById('nextBtn').addEventListener('click', pickTask);
+
+    document.getElementById('startPractice').addEventListener('click', ()=>{
+        alert('Запуск тренування по правилу: To be (am/is/are). Підʼєднай навігацію до екрана практики.');
+    });
+
+    // Перше завантаження
+    pickTask();
+</script>
+</body>
+</html>

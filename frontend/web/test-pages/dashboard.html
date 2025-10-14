@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StepLang — Аналітика</title>
+    <style>
+        :root{
+            --bg:#fff3df; --accent:#ff6138; --accent-dark:#d74e2a; --green:#4ba36e; --blue:#3a6ea5; --text:#3a2a1d; --muted:#a47856; --radius:20px;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh}
+        .container{max-width:1100px;width:100%;padding:40px 24px 90px;margin:0 auto}
+
+        header{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px;border-bottom:3px solid var(--accent);padding-bottom:12px;gap:16px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:50px;height:50px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px}
+        h1{font-size:30px;margin:0;font-weight:800;color:var(--accent-dark);letter-spacing:.02em}
+        .sub{color:var(--muted);font-size:14px;max-width:520px}
+
+        nav.actions{display:flex;gap:10px;flex-wrap:wrap}
+        .btn{background:var(--accent);color:#fff;font-weight:700;border:none;border-radius:999px;padding:10px 18px;font-size:14px;cursor:pointer;transition:background .2s ease,transform .1s ease;box-shadow:3px 3px 0 var(--accent-dark)}
+        .btn:hover{background:var(--accent-dark);transform:translateY(1px)}
+        .btn.secondary{background:#fffdf8;color:var(--text);border:2px solid var(--accent)}
+
+        .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px}
+        .card{background:#fffdf8;border:3px solid var(--accent);border-radius:var(--radius);box-shadow:4px 4px 0 var(--accent-dark);padding:18px}
+        .kpi{display:flex;flex-direction:column;gap:6px}
+        .kpi .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+        .kpi .value{font-size:28px;font-weight:800}
+        .spark{height:8px;border-radius:8px;background:#fff;border:2px solid var(--accent);margin-top:6px;position:relative;overflow:hidden}
+        .spark > i{display:block;position:absolute;height:100%;background:var(--green);left:0;top:0}
+
+        .filters{display:flex;align-items:center;gap:10px;margin:22px 0 10px;flex-wrap:wrap}
+        .pill{appearance:none;background:#fffdf8;color:var(--text);border:2px solid var(--accent);border-radius:999px;padding:8px 14px;font-weight:700;font-size:13px;cursor:pointer;box-shadow:2px 2px 0 var(--accent-dark)}
+        .pill.selected{background:var(--green);color:#fff;border-color:#2d6f48;box-shadow:2px 2px 0 #2d6f48}
+        .search{flex:1;display:flex;gap:8px}
+        .search input{flex:1;border:3px solid var(--accent);border-radius:999px;background:#fffaf3;padding:10px 14px;font-size:14px}
+
+        .table{background:#fffdf8;border:3px solid var(--accent);border-radius:var(--radius);box-shadow:4px 4px 0 var(--accent-dark);overflow:hidden}
+        .thead,.trow{display:grid;grid-template-columns:60px 1.4fr .8fr .8fr 1fr .9fr;gap:10px;align-items:center}
+        .thead{background:linear-gradient(#fffaf3,#fff);border-bottom:3px solid var(--accent);padding:10px 14px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+        .trow{padding:12px 14px;border-bottom:2px solid var(--accent)}
+        .trow:last-child{border-bottom:none}
+        .rule-name{font-weight:700}
+        .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;border:2px solid var(--accent)}
+        .badge.ok{background:var(--green);border-color:#2d6f48;color:#fff}
+        .badge.warn{background:#ffd166;border-color:#b8921d}
+        .badge.bad{background:#ef476f;border-color:#ad2e49;color:#fff}
+
+        .bar{height:10px;background:#fff;border:2px solid var(--accent);border-radius:10px;position:relative;overflow:hidden}
+        .bar > i{position:absolute;left:0;top:0;bottom:0;background:var(--green)}
+
+        .section-title{margin:20px 2px 10px;font-size:16px;text-transform:uppercase;color:var(--text);font-weight:800;letter-spacing:.05em}
+
+        /* ONE-FOCUS weak section */
+        .weak-list{display:block}
+        .focus-card{background:#fffdf8;border:3px solid var(--accent);border-radius:var(--radius);padding:14px;box-shadow:4px 4px 0 var(--accent-dark)}
+        .focus-head{display:flex;justify-content:space-between;gap:8px;align-items:center}
+        .focus-meta{color:var(--muted);font-size:13px}
+        .focus-actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+
+        /* Smart queue */
+        .queue-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:8px 0}
+        .queue-list{display:grid;grid-template-columns:1fr;gap:8px}
+        .queue-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:#fffdf8;border:2px solid var(--accent);border-radius:12px;padding:10px}
+        .queue-item .reason{font-weight:700}
+        .queue-item .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:4px 8px;border-radius:999px;border:2px solid var(--accent)}
+        .chip.risk{background:#ef476f;color:#fff;border-color:#ad2e49}
+        .chip.learn{background:#ffd166;color:#3a2a1d;border-color:#b8921d}
+        .chip.new{background:#fff;color:#3a2a1d;border-color:var(--accent)}
+
+        footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;border-top:2px solid var(--accent);padding-top:12px}
+
+        @media (max-width: 980px){
+            .grid{grid-template-columns:repeat(2,1fr)}
+            .thead,.trow{grid-template-columns:50px 1.2fr .7fr .7fr 1fr .9fr}
+        }
+        @media (max-width: 640px){
+            .grid{grid-template-columns:1fr}
+            .thead,.trow{grid-template-columns:40px 1fr .8fr .8fr 1fr}
+            .thead .col-last,.trow .col-last{display:none}
+            .queue-item{grid-template-columns:1fr auto}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true">SL</div>
+            <div>
+                <h1>Аналітика StepLang</h1>
+                <div class="sub">Огляд прогресу за правилами та словами: що вже засвоєно, а що варто потренувати.</div>
+            </div>
+        </div>
+        <nav class="actions">
+            <button class="btn secondary" id="backToPractice">← Практика</button>
+            <button class="btn" id="exportJson">Експортувати JSON</button>
+        </nav>
+    </header>
+
+    <!-- KPI cards -->
+    <section class="grid" id="kpis">
+        <div class="card kpi">
+            <div class="label">Загальна точність</div>
+            <div class="value" id="kpi-acc">—%</div>
+            <div class="spark"><i id="spark-acc" style="width:0%"></i></div>
+        </div>
+        <div class="card kpi">
+            <div class="label">Всього відповідей</div>
+            <div class="value" id="kpi-attempts">—</div>
+            <div class="spark"><i id="spark-attempts" style="width:0%"></i></div>
+        </div>
+        <!-- Replaced "Словниковий запас" with "Вивчені правила" -->
+        <div class="card kpi">
+            <div class="label">Вивчені правила</div>
+            <div class="value" id="kpi-mastered-rules">—</div>
+            <div class="spark"><i id="spark-mastered-rules" style="width:0%"></i></div>
+        </div>
+        <div class="card kpi">
+            <div class="label">Вивчені слова</div>
+            <div class="value" id="kpi-learned">—</div>
+            <div class="spark"><i id="spark-learned" style="width:0%"></i></div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <div class="filters">
+        <div class="level-switch" role="group" aria-label="Фільтр рівня">
+            <button class="pill selected" data-level="all" aria-pressed="true">Усі</button>
+            <button class="pill" data-level="A1">A1</button>
+            <button class="pill" data-level="A2">A2</button>
+            <button class="pill" data-level="B1">B1</button>
+            <button class="pill" data-level="B2">B2</button>
+        </div>
+        <div class="search">
+            <input id="search" type="search" placeholder="Пошук правила… (наприклад, Present Perfect, or, wish)" aria-label="Пошук правила" />
+        </div>
+        <button class="pill" id="toggleWeak">Лише слабкі</button>
+    </div>
+
+    <!-- Table of rules -->
+    <div class="table" aria-live="polite">
+        <div class="thead">
+            <div>#</div>
+            <div>Правило</div>
+            <div>Точність</div>
+            <div>Спроби</div>
+            <div>Остання практика</div>
+            <div class="col-last">Статус</div>
+        </div>
+        <div id="tbody"></div>
+    </div>
+
+    <div class="section-title">Правило для практики</div>
+    <div class="weak-list" id="weakList"></div>
+
+    <div class="section-title">Рекомендовані слова для вивчення</div>
+    <div class="queue-controls">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn" id="generateQueueBtn">Слова для вивчення</button>
+            <button class="btn secondary" id="startPracticeBtn">Почати практику</button>
+        </div>
+        <div class="sub" id="queueInfo">Порада: натисніть, щоб система зібрала 10 пріоритетних слів.</div>
+    </div>
+    <div class="queue-list" id="queueList"></div>
+
+    <footer>© 2025 StepLang • Дашборд аналітики (прототип)</footer>
+</div>
+
+<script>
+    // =====================
+    // Data model (prototype)
+    // =====================
+    // Rule stats
+    const SAMPLE_RULES = [
+        { id:51, name:'Present Perfect', level:'B1', attempts:28, correct:22, lastSeen:'2025-10-09T18:30:00Z' },
+        { id:1, name:'To be (am/is/are)', level:'A1', attempts:40, correct:38, lastSeen:'2025-10-10T16:11:00Z' },
+        { id:26, name:'Past Simple (regular/irregular)', level:'A2', attempts:31, correct:21, lastSeen:'2025-10-08T09:02:00Z' },
+        { id:63, name:'Passive Voice (all tenses)', level:'B1', attempts:14, correct:7, lastSeen:'2025-10-07T21:02:00Z' },
+        { id:58, name:'2nd Conditional', level:'B1', attempts:12, correct:5, lastSeen:'2025-10-05T08:12:00Z' },
+        { id:59, name:'3rd Conditional', level:'B1', attempts:9, correct:3, lastSeen:'2025-10-03T10:11:00Z' },
+        { id:18, name:'Be from (nationality)', level:'A1', attempts:7, correct:7, lastSeen:'2025-10-09T07:45:00Z' },
+        { id:37, name:'Comparatives', level:'A2', attempts:15, correct:11, lastSeen:'2025-10-06T12:00:00Z' },
+        { id:81, name:'Inversion after negative adverbials', level:'B2', attempts:6, correct:1, lastSeen:'2025-10-04T22:10:00Z' },
+        { id:67, name:'Too / enough / so / such', level:'B1', attempts:10, correct:6, lastSeen:'2025-10-09T12:00:00Z' },
+        { id:32, name:'Be going to vs will', level:'A2', attempts:16, correct:9, lastSeen:'2025-10-10T15:10:00Z' }
+    ];
+
+    // Vocabulary stats (prototype) WORDS: {word, attempts, correct, hadError, lastSeen, last3:[0/1]}
+    const WORDS = new Map();
+    [
+        {word:'enough',      history:[0,1,1,1],     lastSeen:'2025-10-10T10:00:00Z'},
+        {word:'although',    history:[0,0,1,1,1],   lastSeen:'2025-10-09T12:30:00Z'},
+        {word:'through',     history:[0,0,0,1],     lastSeen:'2025-10-08T08:00:00Z'},
+        {word:'comparative', history:[0,1,0,1,1],   lastSeen:'2025-10-07T19:20:00Z'},
+        {word:'possessive',  history:[0,1,1],       lastSeen:'2025-10-06T09:05:00Z'},
+        {word:'whether',     history:[0,0,1],       lastSeen:'2025-10-05T18:40:00Z'},
+        {word:'scarcely',    history:[0,0,0],       lastSeen:'2025-10-04T21:00:00Z'},
+        {word:'apple',       history:[1,1],         lastSeen:'2025-10-10T09:00:00Z'}
+    ].forEach(x=>{
+        WORDS.set(x.word, {
+            word: x.word,
+            attempts: x.history.length,
+            correct: x.history.reduce((s,b)=>s+(b?1:0),0),
+            hadError: x.history.some(v=>v===0),
+            lastSeen: x.lastSeen,
+            last3: x.history.slice(-3)
+        });
+    });
+
+    // --- Simple translations storage (UA)
+    const TRANSLATE_UA = new Map(Object.entries({
+        enough: 'досить',
+        although: 'хоча',
+        through: 'через / крізь',
+        comparative: 'ступінь порівняння',
+        possessive: 'присвійний',
+        whether: 'чи',
+        scarcely: 'ледве',
+        apple: 'яблуко'
+    }));
+    function getUa(word){
+        const w = (word||'').toLowerCase();
+        return TRANSLATE_UA.get(w) || '—';
+    }
+    // Date like "Oct 4, 2025"
+    function fmtDateEnShort(iso){
+        if(!iso) return '—';
+        const d = new Date(iso);
+        return d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+    }
+
+    // Thresholds
+    const MASTERED_ACC = 0.85; // rules mastered threshold
+    const WEAK_ACC = 0.6;
+
+    // State
+    let FILTER_LEVEL = 'all';
+    let SHOW_WEAK_ONLY = false;
+    let QUERY = '';
+    let QUEUE = []; // current smart queue
+
+    // ===== Utils =====
+    const pct = (num, den) => (den ? Math.round((num/den)*100) : 0);
+    const fmtDate = (iso) => {
+        if(!iso) return '—';
+        const d = new Date(iso);
+        return d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});
+    };
+    const daysSince = (iso)=>{
+        if(!iso) return 999;
+        const d = new Date(iso).getTime();
+        return Math.max(0, Math.round((Date.now()-d)/(1000*60*60*24)));
+    };
+
+    // ===== Rules status helpers =====
+    const statusOf = (r)=>{
+        const a = r.attempts ? r.correct/r.attempts : 0;
+        if (r.attempts >= 10 && a >= MASTERED_ACC) return {label:'Засвоєно', cls:'ok'};
+        if (a < WEAK_ACC || r.attempts < 5) return {label:'Потребує практики', cls:'bad'};
+        return {label:'У процесі', cls:'warn'};
+    };
+
+    // ===== KPIs for rules =====
+    function computeKPIs(rows){
+        const totalAttempts = rows.reduce((s,r)=>s+r.attempts,0);
+        const totalCorrect  = rows.reduce((s,r)=>s+r.correct,0);
+        const accuracy = pct(totalCorrect,totalAttempts);
+        return {
+            accuracy,
+            totalAttempts,
+            mastered: rows.filter(r=>{
+                const a = r.attempts? r.correct/r.attempts : 0;
+                return r.attempts>=10 && a>=MASTERED_ACC;
+            }).length
+        };
+    }
+
+    // ===== Vocabulary helpers =====
+    function acc(nCorrect, nAll){ return nAll ? (nCorrect/nAll) : 0; }
+    function isWordLearned(w){
+        if(!w.hadError) return false;
+        const last3ok = (w.last3 && w.last3.length===3 && w.last3.every(v=>v===1));
+        const goodAcc = (w.attempts >= 2 && acc(w.correct, w.attempts) >= 0.85);
+        return last3ok || goodAcc;
+    }
+    function computeVocab(){
+        const items = Array.from(WORDS.values()).map(w=>({
+            ...w,
+            accuracy: acc(w.correct, w.attempts),
+            learned: isWordLearned(w),
+            lastWrong: (w.last3 && w.last3.length>0) ? w.last3[w.last3.length-1]===0 : false
+        }));
+
+        const learnedList = items.filter(w=>w.learned).sort((a,b)=> new Date(b.lastSeen)-new Date(a.lastSeen)).slice(0,12);
+        const riskList = items.filter(w=> w.attempts>=2 && w.accuracy < 0.6).sort((a,b)=> a.accuracy - b.accuracy).slice(0,12);
+        const kpiLearned = items.filter(w=>w.learned).length;
+
+        return {items, kpiLearned, learnedList, riskList};
+    }
+
+    // ===== Smart queue selection =====
+    function bucketOf(w){
+        // order matters: risk > learn > new
+        const accuracy = w.accuracy ?? acc(w.correct, w.attempts);
+        if (accuracy < 0.6 && w.attempts>=2) return 'risk';
+        if ((w.last3 && w.last3.length>0 && w.last3[w.last3.length-1]===0)) return 'risk';
+        if (w.attempts<=1) return 'new';
+        if (!w.learned && w.attempts>=2 && accuracy<0.85) return 'learn';
+        return 'other';
+    }
+    function priorityOf(w){
+        const accuracy = w.accuracy ?? acc(w.correct, w.attempts);
+        const days = Math.max(0, daysSince(w.lastSeen));
+        const lastWrongBonus = (w.last3 && w.last3[w.last3.length-1]===0) ? 0.5 : 0;
+        const base =
+            bucketOf(w)==='risk' ? 3 :
+                bucketOf(w)==='learn' ? 2 :
+                    bucketOf(w)==='new' ? 1.5 : 1;
+        return base * ((1 - accuracy) + 0.15) * (1 + days/7) + lastWrongBonus;
+    }
+    function getSmartQueue(n=10){
+        const {items} = computeVocab();
+        const candidates = items.filter(w=> !(acc(w.correct,w.attempts)>=0.9 && w.attempts>=3));
+        candidates.forEach(w=> w._prio = priorityOf(w));
+
+        const risk = candidates.filter(w=> bucketOf(w)==='risk').sort((a,b)=> b._prio - a._prio).slice(0,4);
+        const learn = candidates.filter(w=> bucketOf(w)==='learn').sort((a,b)=> b._prio - a._prio).slice(0,3);
+        const nnew = candidates.filter(w=> bucketOf(w)==='new').sort((a,b)=> b._prio - a._prio).slice(0,3);
+
+        const picked = [];
+        const take = (arr, tag)=> arr.forEach(w=>{
+            if(!picked.find(x=>x.word===w.word)){
+                picked.push({...w, reason: tag});
+            }
+        });
+        take(risk,'risk');
+        take(learn,'learn');
+        take(nnew,'new');
+
+        if (picked.length < n){
+            const rest = candidates
+                .filter(w=> !picked.find(x=>x.word===w.word))
+                .sort((a,b)=> b._prio - a._prio);
+            for(const w of rest){
+                if(picked.length>=n) break;
+                picked.push({...w, reason: bucketOf(w)});
+            }
+        }
+        return picked.slice(0,n);
+    }
+
+    // ===== Rendering =====
+    const tbody = document.getElementById('tbody');
+    const weakList = document.getElementById('weakList');
+
+    function renderTable(rows){
+        tbody.innerHTML = '';
+        rows.forEach((r,idx)=>{
+            const a = pct(r.correct, r.attempts);
+            const st = statusOf(r);
+            const row = document.createElement('div');
+            row.className = 'trow';
+            row.innerHTML = `
+        <div>${idx+1}</div>
+        <div><div class="rule-name">${r.name}</div><div class="sub">Рівень: ${r.level}</div></div>
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <strong>${a}%</strong>
+          </div>
+          <div class="bar" aria-label="Прогрес">
+            <i style="width:${a}%;${a<60?'background:#ef476f':a<85?'background:#ffd166':'background:#4ba36e'}"></i>
+          </div>
+        </div>
+        <div>${r.attempts}</div>
+        <div>${fmtDate(r.lastSeen)}</div>
+        <div class="col-last"><span class="badge ${st.cls}">${st.label}</span></div>
+      `;
+            tbody.appendChild(row);
+        });
+    }
+
+    // ONE-FOCUS weak section: show only the weakest "bad" rule
+    function renderWeak(rows){
+        weakList.innerHTML = '';
+        const bads = [...rows].filter(r=> statusOf(r).cls==='bad');
+        if (!bads.length){
+            const div = document.createElement('div');
+            div.className = 'focus-card';
+            div.innerHTML = `
+            <div class="focus-head">
+              <strong>Немає правил у «червоній зоні» 🎉</strong>
+            </div>
+            <div class="focus-meta">Продовжуйте практику — система підсвітить правило, яке потребує уваги, щойно воно зʼявиться.</div>
+          `;
+            weakList.appendChild(div);
+            return;
+        }
+        bads.sort((a,b)=> (a.correct/a.attempts) - (b.correct/b.attempts) || new Date(b.lastSeen)-new Date(a.lastSeen));
+        const r = bads[0];
+        const a = pct(r.correct, r.attempts);
+        const div = document.createElement('div');
+        div.className = 'focus-card';
+        div.innerHTML = `
+          <div class="focus-head">
+            <strong>${r.name}</strong>
+            <span class="badge bad">${a}%</span>
+          </div>
+          <div class="focus-meta">Рівень: ${r.level} • Спроб: ${r.attempts} • Остання практика: ${fmtDate(r.lastSeen)}</div>
+          <div class="bar" style="margin-top:8px"><i style="width:${a}%;background:#ef476f"></i></div>
+          <div class="focus-actions">
+            <button class="pill" data-notes="${r.id}">Пояснення правила</button>
+            <button class="pill" data-jump="${r.id}">Почати практику</button>
+          </div>
+        `;
+        weakList.appendChild(div);
+    }
+
+    function renderQueue(){
+        const list = document.getElementById('queueList');
+        const info = document.getElementById('queueInfo');
+        list.innerHTML = '';
+        if (!QUEUE.length){
+            info.textContent = 'Порада: натисніть, щоб система зібрала 10 пріоритетних слів.';
+            return;
+        }
+        info.textContent = 'Черга зібрана — натисніть будь-яке слово, щоб перейти до практики.';
+
+        QUEUE.forEach((w, i)=>{
+            // статуси: risk -> "Потребує практики", learn -> "У процесі", new -> "Нове"
+            let statusText = 'Нове', chipCls = 'chip new';
+            if (w.reason === 'risk'){ statusText = 'Потребує практики'; chipCls = 'chip risk'; }
+            else if (w.reason === 'learn'){ statusText = 'У процесі'; chipCls = 'chip learn'; }
+
+            const ua = getUa(w.word);
+            const last = fmtDateEnShort(w.lastSeen);
+
+            const item = document.createElement('div');
+            item.className = 'queue-item';
+            item.innerHTML = `
+              <div>
+                <strong>${i+1}. ${w.word} — ${ua}</strong>
+                <div class="sub">Останнє: ${last}</div>
+              </div>
+              <div style="text-align:right"><span class="${chipCls}">${statusText}</span></div>
+            `;
+            item.addEventListener('click', ()=>{
+                alert('Почати тренування слова: ' + w.word + ' (підʼєднай роутер/скрін практики)');
+            });
+            list.appendChild(item);
+        });
+    }
+
+    function applyFilters(data){
+        return data.filter(r=> (FILTER_LEVEL==='all' || r.level===FILTER_LEVEL))
+            .filter(r=> !QUERY || r.name.toLowerCase().includes(QUERY));
+    }
+
+    function renderAll(){
+        const filtered = applyFilters(DATA);
+        renderTable(SHOW_WEAK_ONLY ? filtered.filter(r=>statusOf(r).cls==='bad') : filtered);
+        renderWeak(filtered);
+        renderQueue();
+
+        // KPI — rules
+        const k = computeKPIs(filtered);
+        document.getElementById('kpi-acc').textContent = k.accuracy + '%';
+        document.getElementById('kpi-attempts').textContent = k.totalAttempts;
+        document.getElementById('spark-acc').style.width = k.accuracy + '%';
+        document.getElementById('spark-attempts').style.width = Math.min(100, k.totalAttempts) + '%';
+
+        // KPI — learned words
+        const v = computeVocab();
+        document.getElementById('kpi-learned').textContent = v.kpiLearned;
+        document.getElementById('spark-learned').style.width = Math.min(100, v.kpiLearned) + '%';
+
+        // KPI — mastered rules (replaces vocab)
+        const mastered = k.mastered;
+        document.getElementById('kpi-mastered-rules').textContent = mastered;
+        const masteredPct = filtered.length ? Math.round((mastered / filtered.length) * 100) : 0;
+        document.getElementById('spark-mastered-rules').style.width = masteredPct + '%';
+    }
+
+    // =====================
+    // Wiring
+    // =====================
+    const DATA = [...SAMPLE_RULES];
+
+    // Level filter
+    document.querySelectorAll('.pill[data-level]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+            document.querySelectorAll('.pill[data-level]').forEach(b=>b.classList.remove('selected'));
+            btn.classList.add('selected');
+            FILTER_LEVEL = btn.dataset.level;
+            renderAll();
+        });
+    });
+
+    // Weak toggle
+    document.getElementById('toggleWeak').addEventListener('click', (e)=>{
+        SHOW_WEAK_ONLY = !SHOW_WEAK_ONLY;
+        e.currentTarget.classList.toggle('selected', SHOW_WEAK_ONLY);
+        e.currentTarget.textContent = SHOW_WEAK_ONLY ? 'Показати всі' : 'Лише слабкі';
+        renderAll();
+    });
+
+    // Search
+    document.getElementById('search').addEventListener('input', (e)=>{
+        QUERY = e.target.value.trim().toLowerCase();
+        renderAll();
+    });
+
+    // Export JSON
+    document.getElementById('exportJson').addEventListener('click', ()=>{
+        const payload = {
+            rules: DATA,
+            vocab: Array.from(WORDS.values()),
+            smartQueue: QUEUE
+        };
+        const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'steplang-analytics.json'; a.click();
+        setTimeout(()=>URL.revokeObjectURL(url), 5000);
+    });
+
+    // Back to practice (stub)
+    document.getElementById('backToPractice').addEventListener('click', ()=>{
+        alert('Повернення до практики: підʼєднай до вашого роутера або файлу index.html');
+    });
+
+    // Generate smart queue
+    document.getElementById('generateQueueBtn').addEventListener('click', ()=>{
+        QUEUE = getSmartQueue(10);
+        renderQueue();
+    });
+
+    // Start practice (stub)
+    document.getElementById('startPracticeBtn').addEventListener('click', ()=>{
+        alert('Почати практику: підʼєднай до екрана практики вашого додатку.');
+    });
+
+    // --- Vocabulary record updater
+    function touchWord(word, isCorrect){
+        const key = (word||'').trim().toLowerCase();
+        if(!key) return;
+        let rec = WORDS.get(key);
+        if(!rec){
+            rec = { word:key, attempts:0, correct:0, hadError:false, lastSeen:null, last3:[] };
+            WORDS.set(key, rec);
+        }
+        rec.attempts += 1;
+        rec.correct  += isCorrect ? 1 : 0;
+        rec.hadError = rec.hadError || !isCorrect;
+        rec.lastSeen = new Date().toISOString();
+        rec.last3.push(isCorrect ? 1 : 0);
+        if(rec.last3.length>3) rec.last3 = rec.last3.slice(-3);
+    }
+
+    // Public API (including translation setter)
+    window.StepLangAnalytics = {
+        updateRuleStat(ruleId, isCorrect){
+            let rec = DATA.find(r=>r.id===ruleId);
+            if(!rec){
+                rec = { id:ruleId, name:`Rule #${ruleId}`, level:'A1', attempts:0, correct:0, lastSeen:null };
+                DATA.push(rec);
+            }
+            rec.attempts += 1;
+            rec.correct  += isCorrect ? 1 : 0;
+            rec.lastSeen = new Date().toISOString();
+            renderAll();
+        },
+        hydrate(list){
+            DATA.length = 0;
+            list.forEach(x=>DATA.push({...x}));
+            renderAll();
+        },
+        noteWordResult(word, isCorrect){
+            touchWord(word, !!isCorrect);
+            renderAll();
+        },
+        getSmartQueue(n=10){
+            return getSmartQueue(n);
+        },
+        setTranslation(word, ua){
+            if(!word) return;
+            TRANSLATE_UA.set(String(word).toLowerCase(), ua || '—');
+        }
+    };
+
+    // First render
+    renderAll();
+</script>
+</body>
+</html>

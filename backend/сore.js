@@ -1,12 +1,12 @@
 // console.js (Node 18+, console app)
 import OpenAI from "openai";
-import { GrammarRule } from "./rules.js";
+import {GrammarRule, LEVEL_RULES} from "../shared/rules.js";
 
 const client = new OpenAI({ apiKey: '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' });
 
 
-export function randomRule() {
-    const values = Object.values(GrammarRule);
+export function randomRule(level) {
+    const values = LEVEL_RULES[level];
     return values[Math.floor(Math.random() * values.length)];
 }
 

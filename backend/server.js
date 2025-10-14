@@ -37,7 +37,7 @@ app.get('/translations/', async (req, res, next) => {
    try {
        const { level, rule, translation, textToTranslate, } = req.query;
 
-       const selectedRule = rule ?? randomRule();
+       const selectedRule = rule ?? randomRule(level);
        const result = await evaluateAndCoach({
            rule: selectedRule,
            targetLanguage: "Ukrainian",
