@@ -18,7 +18,7 @@ export function saveAnswers() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
 }
 
-function addAnswer(score, rule, level) {
+export function addAnswer(score, rule, level) {
     const answer = new AnswerData();
     answer.score = score;
     answer.rule = rule;
@@ -75,29 +75,74 @@ function statusFor(accuracy, attempts) {
 }
 
 // --- API ---
-// Per-level statistics array
-export function getStatisticsByLevel(level) {
-    const all = getAnswers();
-    const rules = LEVEL_RULES[level] || [];
+// Utility: flatten all rules from LEVEL_RULES into a Set
+function allRulesFromLevels(LEVEL_RULES) {
+    const s = new Set();
+    Object.values(LEVEL_RULES || {}).forEach(arr => (arr || []).forEach(r => s.add(r)));
+    return s;
+}
 
-    return rules.map((rule) => {
-        const attempts = all.filter((a) => a.level === level && a.rule === rule);
+// Utility: which levels contain this rule (could be multiple)
+function levelsForRule(rule, LEVEL_RULES) {
+    return Object.entries(LEVEL_RULES || {}).reduce((acc, [lvl, rules]) => {
+        if ((rules || []).includes(rule)) acc.push(lvl);
+        return acc;
+    }, []);
+}
+
+/**
+ * Get statistics for all known rules.
+ * @param {string|null} levelOpt - (optional) limit to a specific level; pass null/undefined to get ALL rules across levels.
+ */
+export function getAllStatistics() {
+    const allAnswers = getAnswers(); // [{ rule, isCorrect, ts, ...}, ...]
+    // Build a comprehensive set of rule IDs
+    const set = new Set([
+        // from labels
+        ...Object.keys(RULE_LABELS || {}),
+        // from per-level mapping
+        ...allRulesFromLevels(LEVEL_RULES),
+        // from actual answer history
+        ...allAnswers.map(a => a.rule).filter(Boolean),
+    ]);
+
+    // If a level is specified, keep only rules that belong to that level
+    const ruleIds = [...set];
+
+    // Helper: attempts per rule (optionally you could also filter by level if answers have level)
+    const attemptsForRule = (ruleId) =>
+        allAnswers.filter(a => a && a.rule === ruleId);
+
+    // Choose a primary level for display (if a rule belongs to many, take the first)
+    const primaryLevelFor = (ruleId) => {
+        const lvls = levelsForRule(ruleId, LEVEL_RULES);
+        return lvls[0] || null;
+    };
+
+    return ruleIds.map((ruleId) => {
+        const attempts = attemptsForRule(ruleId);
         const attemptsNumber = attempts.length;
-        const accuracy = averageAccuracyPercent(attempts);
-        const lastAttemptDate = latestDateISO(attempts);
+        const accuracy = averageAccuracyPercent(attempts);     // should return 0 if empty
+        const lastAttemptDate = latestDateISO(attempts);       // should return null if empty
+
+        const primaryLevel = primaryLevelFor(ruleId);
+        const levelName = primaryLevel ?? "—";
 
         return {
-            rule,                                   // rule id
-            ruleName: RULE_LABELS[rule] || rule,    // human label
-            level,                                  // level id
-            levelName: level,                       // alias (as requested)
-            accuracy,                               // 0 if no records
+            rule: ruleId,                                        // rule id
+            ruleName: RULE_LABELS?.[ruleId] || ruleId,           // human label
+            level: primaryLevel,                                  // level id (or null)
+            levelName,                                            // alias for display
+            accuracy,                                             // 0 if no records
             attemptsNumber,
-            lastAttemptDate,                        // ISO or null
+            lastAttemptDate,                                      // ISO or null
             status: statusFor(accuracy, attemptsNumber),
         };
-    });
+    })
+        // (optional) sort by label
+        .sort((a, b) => String(a.ruleName).localeCompare(String(b.ruleName)));
 }
+
 
 // Overall accuracy across ALL answers
 export function getOverallAccuracy() {

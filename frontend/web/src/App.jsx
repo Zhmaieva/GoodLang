@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AnalyticsPage from "./components/pages/AnalyticsPage";
+import RuleToBePage from "./components/pages/RuleToBePage.jsx";
 
 export default function App() {
     // Theme lives here and is passed down
@@ -21,6 +22,7 @@ export default function App() {
         <Routes>
             <Route path="/" element={<HomePage theme={theme} />} />
             <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
+            <Route path="/rule/to-be" element={<RuleToBePage theme={theme} />} />
         </Routes>
     );
 }

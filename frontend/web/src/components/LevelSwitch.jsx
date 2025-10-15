@@ -33,7 +33,7 @@ export default function LevelSwitch({ level, loading, onLevelChange, theme, comp
 
     return (
         <div style={wrap} role="group" aria-label="Вибір рівня">
-            {["beginner", "intermediate", "advanced"].map((l) => (
+            {["Початківець", "Середній", "Просунутий"].map((l) => (
                 <button
                     key={l}
                     onMouseEnter={() => setHovered(l)}
@@ -43,7 +43,7 @@ export default function LevelSwitch({ level, loading, onLevelChange, theme, comp
                     disabled={loading}
                     onClick={() => !loading && onLevelChange(l)}
                 >
-                    {l === "beginner" ? "Beginner" : l === "intermediate" ? "Intermediate" : "Advanced"}
+                    {l === "Початківець" ? "Початківець" : l === "Середній" ? "Середній" : "Просунутий"}
                 </button>
             ))}
         </div>

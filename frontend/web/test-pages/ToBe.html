@@ -37,7 +37,13 @@
         th,td{padding:10px;border-bottom:2px solid var(--accent)}
         thead th{background:linear-gradient(#fffaf3,#fff);text-transform:uppercase;font-size:12px;color:var(--muted);letter-spacing:.06em;border-top-left-radius:12px;border-top-right-radius:12px}
 
-        .example{background:#fff;border:2px dashed var(--accent);border-radius:14px;padding:10px;margin:6px 0}
+        .example {
+            background: #fff;
+            border: 2px solid var(--accent);
+            border-radius: 14px;
+            padding: 10px;
+            margin: 6px 0;
+        }
         .ex-en{font-weight:700}
         .ex-ua{color:var(--muted)}
 
@@ -60,14 +66,24 @@
         }
         textarea:focus{outline:none;border-color:var(--blue)}
         .result{display:flex;flex-direction:column;gap:10px}
-        .feedback{
-            background:#fffaf3;border:2px dashed var(--accent);padding:12px 14px;border-radius:var(--radius);color:var(--text);min-height:44px
+        .feedback {
+            background: #fffaf3;
+            border: 2px solid var(--accent);
+            padding: 12px 14px;
+            border-radius: var(--radius);
+            color: var(--text);
+            min-height: 44px;
         }
         .correct-wrap{background:#fff;border:2px solid var(--green);border-radius:var(--radius);box-shadow:2px 2px 0 #2d6f48;padding:10px 12px}
         .correct-title{font-size:13px;font-weight:800;color:var(--green);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
-        .correct-text{
-            font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-            font-size:15px;background:#f4fff7;border:1.5px dashed var(--green);border-radius:12px;padding:8px 10px;display:inline-block
+        .correct-text {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 15px;
+            background: #f4fff7;
+            border: 1.5px solid var(--green);
+            border-radius: 12px;
+            padding: 8px 10px;
+            display: inline-block;
         }
 
         .note{background:#fff7ea;border:2px solid var(--accent);border-radius:14px;padding:10px}
@@ -83,7 +99,7 @@
             <div class="logo">SL</div>
             <div>
                 <h1>To be (am / is / are)</h1>
-                <div class="sub">Просте пояснення + таблиця + приклади + тренажер у форматі перекладу</div>
+                <div class="sub">Стиль <em>Essential Grammar in Use</em>: просто, з прикладами і мінімумом термінів</div>
             </div>
         </div>
         <div class="flex">
@@ -93,19 +109,25 @@
     </header>
 
     <section class="grid">
-        <!-- 1. Коли вживаємо to be -->
+        <!-- 0. Що означає be -->
+        <div class="card">
+            <div class="section-title">Що означає <em>be</em></div>
+            <p><strong>Be</strong> = <em>бути / є / знаходитись</em>. Використовуємо, щоб сказати <strong>хто</strong> я/він/вона, <strong>де</strong> я/ми, або <strong>який</strong>(а) я/щось.</p>
+        </div>
+
+        <!-- 1. Коли вживаємо to be (спрощено) -->
         <div class="card">
             <div class="section-title">Коли вживаємо <em>to be</em></div>
             <div class="flex">
-                <span class="badge">🆔 Ідентичність / професія: <strong>I am a student.</strong></span>
-                <span class="badge">🙂 Стан/якість: <strong>She is happy.</strong></span>
-                <span class="badge">📍 Місцезнаходження: <strong>We are at home.</strong></span>
-                <span class="badge">🕰️ Час/дата/вік*: <strong>It is Monday. I am 7.</strong></span>
+                <span class="badge">🆔 Я — хтось: <strong>I’m a student.</strong></span>
+                <span class="badge">🙂 Який(а): <strong>She’s happy.</strong></span>
+                <span class="badge">📍 Де: <strong>We’re at home.</strong></span>
+                <span class="badge">🕰️ Час/погода/вік: <strong>It’s Monday. I’m 7.</strong></span>
             </div>
-            <p class="hint">*В англійській про вік кажуть із <em>to be</em>: <strong>I am 7</strong>, а не <em>I have 7 years</em>.</p>
+            <p class="hint">Про вік англійською кажуть із <em>to be</em>: <strong>I’m 7 (years old)</strong>, а не <em>I have 7 years</em>.</p>
         </div>
 
-        <!-- 2. Форми в Present Simple -->
+        <!-- 2. Форми в Present Simple (EGIU-стиль) -->
         <div class="card">
             <div class="section-title">Форми в Present Simple</div>
             <table aria-label="Conjugation table">
@@ -115,109 +137,77 @@
                     <th>Ствердження</th>
                     <th>Заперечення</th>
                     <th>Питання</th>
-                    <th>Скорочення</th>
+                    <th>Короткі відповіді</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>I</td>
-                    <td>I <strong>am</strong></td>
-                    <td>I <strong>am not</strong></td>
-                    <td><strong>Am</strong> I...?</td>
-                    <td>I’m / I’m not</td>
+                    <td>I <strong>am</strong> → <em>I’m</em></td>
+                    <td>I <strong>am not</strong> → <em>I’m not</em></td>
+                    <td><strong>Am</strong> I…?</td>
+                    <td>Yes, I am. / No, I’m not.</td>
                 </tr>
                 <tr>
                     <td>He / She / It</td>
-                    <td>He <strong>is</strong></td>
-                    <td>He <strong>is not</strong></td>
-                    <td><strong>Is</strong> he...?</td>
-                    <td>He’s / He isn’t</td>
+                    <td>He <strong>is</strong> → <em>He’s</em></td>
+                    <td>He <strong>is not</strong> → <em>He isn’t / He’s not</em></td>
+                    <td><strong>Is</strong> he…?</td>
+                    <td>Yes, he is. / No, he isn’t.</td>
                 </tr>
                 <tr>
                     <td>You / We / They</td>
-                    <td>They <strong>are</strong></td>
-                    <td>They <strong>are not</strong></td>
-                    <td><strong>Are</strong> they...?</td>
-                    <td>They’re / They aren’t</td>
+                    <td>They <strong>are</strong> → <em>They’re</em></td>
+                    <td>They <strong>are not</strong> → <em>They aren’t / They’re not</em></td>
+                    <td><strong>Are</strong> they…?</td>
+                    <td>Yes, they are. / No, they aren’t.</td>
                 </tr>
                 </tbody>
             </table>
-            <div class="hint">Порядок слів у питанні: <strong>Am/Is/Are + підмет + ... ?</strong></div>
+            <div class="hint">Питання: <strong>Am/Is/Are + підмет + … ?</strong> Заперечення: <strong>am not / isn’t / aren’t</strong>. <u>Не використовуємо</u> <em>do/does</em> з <em>to be</em>.</div>
         </div>
 
-        <!-- 3. Приклади -->
+        <!-- 3. Приклади (простi та повсякденні) -->
         <div class="card">
             <div class="section-title">Приклади</div>
-            <div class="example"><div class="ex-en">I am from Ukraine.</div><div class="ex-ua">Я з України.</div></div>
-            <div class="example"><div class="ex-en">She is a doctor.</div><div class="ex-ua">Вона лікар.</div></div>
-            <div class="example"><div class="ex-en">We are tired but happy.</div><div class="ex-ua">Ми втомлені, але щасливі.</div></div>
+            <div class="example"><div class="ex-en">I’m from Ukraine.</div><div class="ex-ua">Я з України.</div></div>
+            <div class="example"><div class="ex-en">She’s a doctor.</div><div class="ex-ua">Вона лікар.</div></div>
+            <div class="example"><div class="ex-en">We’re tired but happy.</div><div class="ex-ua">Ми втомлені, але щасливі.</div></div>
             <div class="example"><div class="ex-en">Is he at school?</div><div class="ex-ua">Він у школі?</div></div>
             <div class="example"><div class="ex-en">They aren’t ready.</div><div class="ex-ua">Вони не готові.</div></div>
         </div>
 
-        <!-- 4. Типові помилки -->
+        <!-- 4. Типові помилки (лаконічно) -->
         <div class="card">
             <div class="section-title">Типові помилки</div>
             <ul>
-                <li>❌ <em>I are</em> / <em>I is</em> → ✅ <strong>I am</strong></li>
-                <li>❌ <em>He don’t is</em> → ✅ <strong>He isn’t</strong> (у <em>to be</em> <em>do/does</em> не використовуємо)</li>
-                <li>❌ <em>I have 7 years</em> → ✅ <strong>I am 7 (years old)</strong></li>
-                <li>❌ Пропуск <em>to be</em> у теперішньому: <em>She very happy</em> → ✅ <strong>She is very happy</strong></li>
+                <li>❌ <em>I are / I is</em> → ✅ <strong>I am</strong></li>
+                <li>❌ <em>He don’t is</em> → ✅ <strong>He isn’t</strong> (без <em>do/does</em>)</li>
+                <li>❌ <em>I have 7 years</em> → ✅ <strong>I’m 7 (years old)</strong></li>
+                <li>❌ <em>She very happy</em> → ✅ <strong>She is very happy</strong></li>
             </ul>
-            <div class="note">Памʼятай: у Present Simple для <em>to be</em> питання й заперечення будуються <strong>без</strong> допоміжних <em>do/does</em>.</div>
+            <div class="note">У Present Simple для <em>to be</em> питання й заперечення будуються <strong>без</strong> допоміжних <em>do/does</em>.</div>
         </div>
 
-        <!-- 5. Переклад-тренажер у стилі основного додатку -->
-        <div class="card">
-            <div class="section-title">Переклад-тренажер (To be)</div>
-            <div class="hint">Перекладіть українське речення англійською, використовуючи <em>am / is / are</em>. Потім натисніть «Перевірити».</div>
-
-            <div class="level-switch" role="group" aria-label="Вибір рівня" style="margin:10px 0 8px">
-                <button class="level-btn selected" data-level="beginner" aria-pressed="true">Beginner</button>
-                <button class="level-btn" data-level="intermediate" aria-pressed="false">Intermediate</button>
-                <button class="level-btn" data-level="advanced" aria-pressed="false">Advanced</button>
-            </div>
-
-            <div class="example" style="margin-top:8px">
-                <div class="ua" id="uaTask">Завантаження завдання…</div>
-            </div>
-
-            <div class="input-wrap">
-                <textarea id="answer" placeholder="Введіть переклад англійською…"></textarea>
-                <button class="btn" id="checkBtn" aria-label="Перевірити переклад">Перевірити</button>
-            </div>
-
-            <div class="result" style="margin-top:10px">
-                <div class="feedback" id="feedbackBox">Порада: перекладіть і натисніть «Перевірити»</div>
-                <div id="correctBox" class="correct-wrap" hidden>
-                    <div class="correct-title">Правильна відповідь</div>
-                    <div class="correct-text" id="correctText">—</div>
-                </div>
-            </div>
-
-            <div class="flex" style="margin-top:10px">
-                <button class="btn secondary" id="nextBtn">Наступне речення</button>
-            </div>
-        </div>
     </section>
 
     <footer>© 2025 StepLang • Пояснення правила <em>to be</em></footer>
 </div>
 
 <script>
-    // ===== Банк завдань для перекладу (To be) =====
+    // ===== Банк завдань для перекладу (To be) — прості, повсякденні приклади =====
     const BANK = {
         beginner: [
-            {ua:'Я у школі.', en:['i am at school','i’m at school']},
-            {ua:'Вона лікар.', en:['she is a doctor','she’s a doctor']},
-            {ua:'Ми вдома.', en:['we are at home','we’re at home']},
-            {ua:'Він щасливий.', en:['he is happy','he’s happy']},
-            {ua:'Вони не готові.', en:["they are not ready","they aren't ready","they’re not ready"]},
+            {ua:'Я у школі.', en:['i am at school','i\'m at school']},
+            {ua:'Вона лікар.', en:['she is a doctor','she\'s a doctor']},
+            {ua:'Ми вдома.', en:['we are at home','we\'re at home']},
+            {ua:'Він щасливий.', en:['he is happy','he\'s happy']},
+            {ua:'Вони не готові.', en:["they are not ready","they aren't ready","they\'re not ready"]},
             {ua:'Чи ти з України?', en:['are you from ukraine?']},
-            {ua:'Мені 7 років.', en:['i am 7','i am seven','i’m 7','i’m seven','i am seven years old','i’m seven years old']},
+            {ua:'Мені 7 років.', en:['i am 7','i am seven','i\'m 7','i\'m seven','i am seven years old','i\'m seven years old']},
         ],
         intermediate: [
-            {ua:'Вона не вдома — вона на роботі.', en:['she is not at home — she is at work','she isn’t at home — she is at work','she’s not at home — she’s at work','she isn’t at home, she is at work','she’s not at home, she’s at work']},
+            {ua:'Вона не вдома — вона на роботі.', en:['she is not at home — she is at work','she isn\'t at home — she is at work','she\'s not at home — she\'s at work','she isn\'t at home, she is at work','she\'s not at home, she\'s at work']},
             {ua:'Чи ми запізнилися?', en:['are we late?']},
             {ua:'Кіт під столом.', en:['the cat is under the table']},
             {ua:'Це важко?', en:['is it hard?','is it difficult?']},
@@ -275,13 +265,14 @@
     }
 
     // Події
-    document.querySelectorAll('.level-btn').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
+    document.addEventListener('click', (e)=>{
+        const btn = e.target.closest('.level-btn');
+        if(btn){
             document.querySelectorAll('.level-btn').forEach(b=>b.classList.remove('selected'));
             btn.classList.add('selected');
             LEVEL = btn.dataset.level;
             pickTask();
-        });
+        }
     });
     document.getElementById('checkBtn').addEventListener('click', checkAnswer);
     document.getElementById('nextBtn').addEventListener('click', pickTask);

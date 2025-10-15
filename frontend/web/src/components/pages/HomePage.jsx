@@ -6,6 +6,7 @@ import TaskCard from "../TaskCard";
 import ResultCard from "../ResultCard";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { callAPI } from "../../services/api";
+import {addAnswer} from "../../services/dataService.js";
 
 export default function HomePage({ theme }) {
     const LEVEL_TO_DIFFICULTY = useMemo(
@@ -75,6 +76,9 @@ export default function HomePage({ theme }) {
         try {
             setControlsDisabled(true);
             const data = await callAPI({ level: difficulty, textToTranslate, translation: userAns, rule });
+
+            addAnswer(data.score, data.rule, data.level);
+
             if (data.isAnswerCorrect) {
                 setHint("✔ Правильно!");
                 setCorrectAnswer("");
@@ -119,14 +123,14 @@ export default function HomePage({ theme }) {
 
     const gridStyle = {
         display: "flex",
-        flexDirection: twoCols ? "row" : "column",
+        flexDirection: "column",
         gap: 24,
     };
 
     // Analytics button (LevelSwitch style)
     const [hoveredAnalytics, setHoveredAnalytics] = useState(false);
     const analyticsButtonStyles = {
-        container: { display: "flex", justifyContent: "flex-end", margin: "16px 0 0" },
+        container: { display: "flex", justifyContent: "center", margin: "16px 0 0", flexDirection: "row",},
         button: (isHover) => ({
             appearance: "none",
             padding: "10px 18px",
@@ -150,19 +154,13 @@ export default function HomePage({ theme }) {
     return (
         <AppShell theme={theme}>
             <div ref={containerRef}>
-                <Header theme={theme} level={level} loading={loading} onLevelChange={handleLevelChange} />
-
-                <div style={analyticsButtonStyles.container}>
-                    <button
-                        onMouseEnter={() => setHoveredAnalytics(true)}
-                        onMouseLeave={() => setHoveredAnalytics(false)}
-                        style={analyticsButtonStyles.button(hoveredAnalytics)}
-                        onClick={handleAnalyticsClick}
-                    >
-                        Аналітика →
-                    </button>
-                </div>
-
+                <Header
+                    theme={theme}
+                    level={level}
+                    defaultLevel="beginner"
+                    loading={loading}
+                    onLevelChange={handleLevelChange}
+                />
                 <section style={gridStyle}>
                     <TaskCard
                         theme={theme}
@@ -176,11 +174,28 @@ export default function HomePage({ theme }) {
                         textareaRef={textareaRef}
                         onKeyDown={handleKeyDown}
                     />
-                    <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer} />
+                    <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer}/>
+                    <button
+                        onMouseEnter={() => setHoveredAnalytics(true)}
+                        onMouseLeave={() => setHoveredAnalytics(false)}
+                        style={analyticsButtonStyles.button(hoveredAnalytics)}
+                        onClick={handleAnalyticsClick}
+                    >
+                        Що мені підтягнути? →
+                    </button>
                 </section>
 
-                <footer style={{ marginTop: 32, textAlign: "center", color: theme.muted, fontSize: 13, borderTop: `2px solid ${theme.accent}`, paddingTop: 12 }}>
-                    © 2025 StepLang
+                <footer style={{
+                    marginTop: 32,
+                    textAlign: "center",
+                    color: theme.muted,
+                    fontSize: 13,
+                    borderTop: `2px solid ${theme.accent}`,
+                    paddingTop: 12
+                }}>
+                    <div style={analyticsButtonStyles.container}>
+                        <div>© 2025 StepLang</div>
+                    </div>
                 </footer>
             </div>
         </AppShell>
