@@ -33,19 +33,24 @@ export default function LevelSwitch({ level, loading, onLevelChange, theme, comp
 
     return (
         <div style={wrap} role="group" aria-label="Вибір рівня">
-            {["Початківець", "Середній", "Просунутий"].map((l) => (
+            {[
+                {value: "beginner", label: "Початківець"},
+                {value: "intermediate", label: "Середній"},
+                {value: "advanced", label: "Просунутий"},
+            ].map(({value, label}) => (
                 <button
-                    key={l}
-                    onMouseEnter={() => setHovered(l)}
+                    key={value}
+                    onMouseEnter={() => setHovered(value)}
                     onMouseLeave={() => setHovered(null)}
-                    style={btn(level === l, hovered === l)}
-                    aria-pressed={level === l}
+                    style={btn(level === value, hovered === value)}
+                    aria-pressed={level === value}
                     disabled={loading}
-                    onClick={() => !loading && onLevelChange(l)}
+                    onClick={() => !loading && onLevelChange(value)}
                 >
-                    {l === "Початківець" ? "Початківець" : l === "Середній" ? "Середній" : "Просунутий"}
+                    {label}
                 </button>
             ))}
         </div>
+
     );
 }

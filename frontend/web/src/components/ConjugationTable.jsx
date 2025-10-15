@@ -1,8 +1,25 @@
 import React from "react";
 
-export default function ConjugationTable({ theme, rows }) {
-    const table = { width: "100%", borderCollapse: "separate", borderSpacing: 0 };
-    const thtd = { padding: 10, borderBottom: `2px solid ${theme.accent}` };
+/**
+ * A fully dynamic table component.
+ *
+ * @param {object} props
+ * @param {object} props.theme - color theme
+ * @param {string[]} props.headers - array of column titles
+ * @param {Array<Array<string|JSX.Element>>} props.rows - 2D array of data rows
+ */
+export default function ConjugationTable({ theme, headers = [], rows = [] }) {
+    const table = {
+        width: "100%",
+        borderCollapse: "separate",
+        borderSpacing: 0,
+    };
+    const thtd = {
+        padding: 10,
+        borderBottom: `2px solid ${theme.accent}`,
+        verticalAlign: "top",
+        textAlign: "left",
+    };
     const theadTh = {
         ...thtd,
         background: "linear-gradient(#fffaf3,#fff)",
@@ -10,23 +27,30 @@ export default function ConjugationTable({ theme, rows }) {
         fontSize: 12,
         color: theme.muted,
         letterSpacing: ".06em",
+        fontWeight: 700,
     };
+
     return (
-        <table style={table} aria-label="Conjugation table">
-            <thead>
-            <tr>
-                <th style={theadTh}>Особа</th>
-                <th style={theadTh}>Ствердження</th>
-                <th style={theadTh}>Заперечення</th>
-                <th style={theadTh}>Питання</th>
-                <th style={theadTh}>Короткі відповіді</th>
-            </tr>
-            </thead>
+        <table style={table} aria-label="Dynamic table">
+            {headers.length > 0 && (
+                <thead>
+                <tr>
+                    {headers.map((h, i) => (
+                        <th key={i} style={theadTh}>
+                            {h}
+                        </th>
+                    ))}
+                </tr>
+                </thead>
+            )}
+
             <tbody>
-            {rows.map((r, i) => (
+            {rows.map((row, i) => (
                 <tr key={i}>
-                    {r.map((cell, j) => (
-                        <td key={j} style={thtd}>{cell}</td>
+                    {row.map((cell, j) => (
+                        <td key={j} style={thtd}>
+                            {cell}
+                        </td>
                     ))}
                 </tr>
             ))}

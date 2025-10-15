@@ -20,7 +20,8 @@ import WeakFocus from "../WeakFocus";
 import QueueSection from "../QueueSection";
 import FooterBar from "../FooterBar";
 import {useNavigate} from "react-router-dom";
-import {getAllStatistics} from "../../services/dataService.js";
+import {getAllStatistics, inferUserLevel} from "../../services/dataService.js";
+import {GrammarRule, LEVEL_RULES, RULE_LABELS} from "../../utils/rules.js";
 
 export default function AnalyticsPage() {
     // ----- State (mirrors your script) -----
@@ -34,10 +35,25 @@ export default function AnalyticsPage() {
     // ----- Derived -----
     const filteredRules = useMemo(() => {
         const q = query.trim().toLowerCase();
+
+        // Map StepLang levels → CEFR ranges
+        const LEVEL_TO_DIFFICULTY = {
+            beginner: ["A1"],
+            intermediate: ["A2", "B1"],
+            advanced: ["B2"],
+        };
+
         return rules
-            .filter(r => filterLevel === "all" || r.level === filterLevel)
-            .filter(r => !q || r.name.toLowerCase().includes(q));
+            .filter(r => {
+                if (filterLevel === "all") return true;
+
+                const group = LEVEL_TO_DIFFICULTY[filterLevel] || [];
+                // keep rule if its level is within this group
+                return group.includes(r.level);
+            })
+            .filter(r => !q || r.ruleName.toLowerCase().includes(q));
     }, [rules, filterLevel, query]);
+
 
     const tableRows = useMemo(
         () => (showWeakOnly ? filteredRules.filter(r => statusOf(r).cls === "bad") : filteredRules),
@@ -76,7 +92,12 @@ export default function AnalyticsPage() {
                 accuracy={kpis.accuracy}
                 attempts={kpis.totalAttempts}
                 masteredRules={kpis.mastered}
-                learnedWords={vocab.kpiLearned}
+                userLevel={inferUserLevel({
+                    minAttemptsPerRule: 1,
+                    minRulesWithAttempts: 6,
+                    minTotalAttemptsPerLevel: 6,
+                    minAccuracy: 80
+                })}
             />
             <FiltersBar
                 filterLevel={filterLevel}
@@ -92,8 +113,7 @@ export default function AnalyticsPage() {
                 statusOf={statusOf}
                 fmtDate={fmtDate}
                 onRowClick={(rule) => {
-                    if (rule.name === "To be (am/is/are)")
-                        navigate("/rule/to-be");
+                    navigate(`/rule/${rule.rule}`);
                 }}
             />
             <WeakFocus rows={filteredRules} pct={pct} statusOf={statusOf} fmtDate={fmtDate} />

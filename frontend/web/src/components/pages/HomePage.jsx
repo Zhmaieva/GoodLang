@@ -10,7 +10,7 @@ import {addAnswer} from "../../services/dataService.js";
 
 export default function HomePage({ theme }) {
     const LEVEL_TO_DIFFICULTY = useMemo(
-        () => ({ beginner: ["A1", "A2"], intermediate: ["B1", "B2"], advanced: ["C1", "C2"] }),
+        () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),
         []
     );
     const randomDifficulty = (level) => {
@@ -33,11 +33,14 @@ export default function HomePage({ theme }) {
 
     // Responsive grid (container-based)
     const { ref: containerRef, isWide: twoCols } = useBreakpoint(880);
+    const didInit = useRef(false);
 
     useEffect(() => {
+        if (didInit.current) return;   // skip the 2nd StrictMode mount
+        didInit.current = true;
+
         resetToLoadingPlaceholders();
-        loadNewTask();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        loadNewTask().then();
     }, []);
 
     useEffect(() => {

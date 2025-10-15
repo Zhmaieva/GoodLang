@@ -44,6 +44,11 @@ nav.actions{display:flex;gap:10px;flex-wrap:wrap}
 .badge.ok{background:var(--green);border-color:#2d6f48;color:#fff}
 .badge.warn{background:#ffd166;border-color:#b8921d}
 .badge.bad{background:#ef476f;border-color:#ad2e49;color:#fff}
+.badge.na {
+    background: #e0e0e0;        /* light grey background */
+    border-color: #b0b0b0;      /* medium grey border */
+    color: #555;                /* darker grey text */
+}
 
 .bar{height:10px;background:#fff;border:2px solid var(--accent);border-radius:10px;position:relative;overflow:hidden}
 .bar > i{position:absolute;left:0;top:0;bottom:0;background:var(--green)}

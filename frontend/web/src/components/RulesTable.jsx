@@ -1,6 +1,13 @@
 import {statusOf} from "./pages/analyticsLogic.js";
 
 export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick }) {
+    const LEVEL_MAP = {
+        A1: { label: "Початківець", percent: 33 },
+        A2: { label: "Середній", percent: 66 },
+        B1: { label: "Середній", percent: 66 },
+        B2: { label: "Просунутий", percent: 100 },
+    };
+
     return (
         <div className="table" aria-live="polite">
             <div className="thead">
@@ -23,7 +30,7 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick })
                             <div>{idx + 1}</div>
                             <div>
                                 <div className="rule-name">{r.ruleName}</div>
-                                <div className="sub">Рівень: {r.level}</div>
+                                <div className="sub">Рівень: {LEVEL_MAP[r.level].label}</div>
                             </div>
                             <div>
                                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>

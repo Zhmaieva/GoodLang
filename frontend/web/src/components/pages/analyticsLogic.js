@@ -74,6 +74,7 @@ export const daysSince = (iso) => {
 export const statusOf = (r) => {
     if (r.status === 'learned') return { label: "Засвоєно", cls: "ok" };
     if (r.status === 'needs practice')       return { label: "Потребує практики", cls: "bad" };
+    if (r.status === 'not defined')       return { label: "Не вистачає даних", cls: "na" };
     return { label: "У процесі", cls: "warn" };
 };
 
