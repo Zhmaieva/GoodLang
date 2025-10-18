@@ -1,9 +1,49 @@
 // console.js (Node 18+, console app)
 import OpenAI from "openai";
-import {GrammarRule, LEVEL_RULES} from "../shared/rules.js";
+import {GrammarRule, LEVEL_RULES} from "./rules.js";
 
 const client = new OpenAI({ apiKey: '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' });
 
+// Hash function to convert any string/number into a good 32-bit seed
+function xmur3(str) {
+    for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
+        h = Math.imul(h ^ str.charCodeAt(i), 3432918353),
+            h = (h << 13) | (h >>> 19);
+    return function() {
+        h = Math.imul(h ^ (h >>> 16), 2246822507);
+        h = Math.imul(h ^ (h >>> 13), 3266489909);
+        return (h ^= h >>> 16) >>> 0;
+    };
+}
+
+// Stronger seeded RNG (sfc32)
+function sfc32(a, b, c, d) {
+    return function() {
+        a >>>= 0; b >>>= 0; c >>>= 0; d >>>= 0;
+        var t = (a + b) | 0;
+        a = b ^ (b >>> 9);
+        b = (c + (c << 3)) | 0;
+        c = (c << 21) | (c >>> 11);
+        d = (d + 1) | 0;
+        t = (t + d) | 0;
+        c = (c + t) | 0;
+        return (t >>> 0) / 4294967296;
+    };
+}
+
+// Shuffle using string or number seed
+export function shuffleBySeed(array, seedInput) {
+    const seedStr = String(seedInput);
+    const seedFn = xmur3(seedStr);
+    const rand = sfc32(seedFn(), seedFn(), seedFn(), seedFn());
+    const arr = [...array];
+
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(rand() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
 
 export function randomRule(level) {
     const values = LEVEL_RULES[level];
@@ -12,11 +52,10 @@ export function randomRule(level) {
 
 // Core function
 export async function evaluateAndCoach({
-                                           rule = GrammarRule.TO_BE,
+                                           rules = [GrammarRule.TO_BE],
                                            targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
                                            userEnglish = "",                // learner's translation attempt (English)
-                                           textToTranslate = "",
-                                           difficulty = "A2",               // A1–B2, affects sample complexity
+                                           textToTranslate = ""
                                        }) {
 
 
@@ -25,30 +64,24 @@ You are a friendly but precise ESL grammar tutor.
 Return JSON only.
 Schema:
 {
-  "rule": string,
   "sample_in_target_language": string,
   "answer_is_correct": boolean,
   "correct_answer": string,
   "tip_if_wrong": string,
-  "next_target_sentence": string,
-  "violated_rules": string[],
-  "score": number
+  "scores": number[]
 }
-Difficulty: ${difficulty}.
   `;
 
     const userPrompt = `
 TARGET_LANGUAGE: ${targetLanguage}
-GRAMMAR_RULE: ${rule}
+GRAMMAR_RULES: [${rules.join(', ')}]
 TEXT_TO_TRANSLATE: ${textToTranslate}
 
 TASKS:
-1) If LEARNER_ENGLISH IS empty, create a short sample sentence in TARGET_LANGUAGE that demonstrates the rule (GRAMMAR_RULE). Then do not do next steps.
-2) If LEARNER_ENGLISH is NOT empty, evaluate if it's correct according to English rules and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation.
-3) If wrong, give a helpful human tip and new short sentence to translate next.
-4) Also, give correct translation from TARGET_LANGUAGE to English.
-5) List violated rules.
-6) Give score: 1 - correct, 0.75 - 1 spelling mistake, 0.5 - 2-3 spelling mistakes, 0.25 - 3+ spelling mistakes, but grammatically correct, 0 - wrong.
+1) Evaluate if LEARNER_ENGLISH is correct according to English rules and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation.
+2) If wrong, give a helpful human tip in TARGET_LANGUAGE
+3) Also, give correct translation from TARGET_LANGUAGE to English.
+4) For each of GRAMMAR_RULES exactly, give score in output array accordingly: 1 - correct, 0.75 - 1 spelling mistake, 0.5 - 2-3 spelling mistakes, 0.25 - 3+ spelling mistakes, but grammatically correct, 0 - wrong.
 
 LEARNER_ENGLISH: ${userEnglish || "(none)"}
 `;

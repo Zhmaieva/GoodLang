@@ -1,0 +1,509 @@
+{
+  "PRESENT_SIMPLE_FREQ": [
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Я завжди прокидаюся рано.",
+      "en": ["I always wake up early."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вона часто п’є чай вранці.",
+      "en": ["She often drinks tea in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Він не завжди розуміє мене.",
+      "en": ["He doesn’t always understand me.", "He does not always understand me."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Ти часто ходиш до спортзалу?",
+      "en": ["Do you often go to the gym?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Як часто ти телефонуєш батькам?",
+      "en": ["How often do you call your parents?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Ми іноді дивимось телевізор ввечері.",
+      "en": ["We sometimes watch TV in the evening."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вони завжди приходять вчасно.",
+      "en": ["They always come on time."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Я ніколи не їм м’яса.",
+      "en": ["I never eat meat."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вона зазвичай працює з дому.",
+      "en": ["She usually works from home."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Він іноді читає газету вранці.",
+      "en": ["He sometimes reads a newspaper in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Я завжди п’ю каву о сьомій ранку.",
+      "en": ["I always drink coffee at seven in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Вона часто обідає в офісі.",
+      "en": ["She often has lunch at the office."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Я завжди додаю цукор у чай.",
+      "en": ["I always add sugar to my tea."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вони рідко дивляться фільми вдома.",
+      "en": ["They rarely watch movies at home."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Коли ти зазвичай лягаєш спати?",
+      "en": ["When do you usually go to bed?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Ми не часто ходимо в ресторани.",
+      "en": ["We don’t often go to restaurants.", "We do not often go to restaurants."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "ua": "Мій брат завжди веселий вранці.",
+      "en": ["My brother is always happy in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Вона іноді запізнюється на роботу.",
+      "en": ["She is sometimes late for work."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Я часто втомлений після роботи.",
+      "en": ["I am often tired after work."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Він зазвичай у бібліотеці після обіду.",
+      "en": ["He is usually in the library after lunch."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Ми часто відвідуємо зоопарк улітку.",
+      "en": ["We often visit the zoo in summer."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вони іноді грають у футбол у парку.",
+      "en": ["They sometimes play football in the park."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Твоя сестра часто готує вдома?",
+      "en": ["Does your sister often cook at home?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Що ти зазвичай робиш у неділю?",
+      "en": ["What do you usually do on Sunday?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Він майже ніколи не читає книжок.",
+      "en": ["He hardly ever reads books.", "He almost never reads books."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Я зазвичай працюю по буднях.",
+      "en": ["I usually work on weekdays."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Вона завжди снідає о восьмій.",
+      "en": ["She always has breakfast at eight.", "She always eats breakfast at eight."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Він завжди п’є багато води.",
+      "en": ["He always drinks a lot of water."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "ua": "Ми часто маємо багато роботи.",
+      "en": ["We often have a lot of work."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_S"],
+      "ua": "Він часто користується маминим телефоном.",
+      "en": ["He often uses his mother’s phone."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "LIKE_ING"],
+      "ua": "Я часто люблю читати перед сном.",
+      "en": ["I often like reading before bed."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Вона завжди на роботі в понеділок.",
+      "en": ["She is always at work on Monday."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "ua": "Мій тато завжди спокійний.",
+      "en": ["My dad is always calm."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Де ти зазвичай купуєш продукти?",
+      "en": ["Where do you usually buy groceries?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Вона часто слухає радіо.",
+      "en": ["She often listens to the radio."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Ми завжди допомагаємо одне одному.",
+      "en": ["We always help each other."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Він часто злий, коли голодний.",
+      "en": ["He is often angry when he is hungry."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "ua": "Вони часто їдять багато фруктів.",
+      "en": ["They often eat a lot of fruit."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Я зазвичай гуляю після обіду.",
+      "en": ["I usually go for a walk after lunch."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Ми ніколи не спізнюємось.",
+      "en": ["We never come late.", "We are never late."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Вона часто відвідує бабусю у вихідні.",
+      "en": ["She often visits her grandmother at the weekend.", "She often visits her grandma on weekends."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вони зазвичай вечеряють о шостій.",
+      "en": ["They usually have dinner at six."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Я іноді сумний без причини.",
+      "en": ["I am sometimes sad for no reason."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Він завжди у своїй кімнаті ввечері.",
+      "en": ["He is always in his room in the evening."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Ти часто граєш на гітарі?",
+      "en": ["Do you often play the guitar?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вона ніколи не забуває свій телефон.",
+      "en": ["She never forgets her phone."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Ми завжди у школі вчасно.",
+      "en": ["We are always at school on time."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Чому ти завжди спішиш?",
+      "en": ["Why are you always in a hurry?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Він ніколи не дивиться новини.",
+      "en": ["He never watches the news."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Я часто читаю книгу перед сном.",
+      "en": ["I often read a book before bed."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Я не часто їм солодке.",
+      "en": ["I don’t often eat sweets.", "I do not often eat sweets."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Як часто ти ходиш до стоматолога?",
+      "en": ["How often do you go to the dentist?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Ми зазвичай зустрічаємось після школи.",
+      "en": ["We usually meet after school."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Вона завжди щаслива, коли бачить кота.",
+      "en": ["She is always happy when she sees a cat."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Він часто в офісі допізна.",
+      "en": ["He is often at the office until late."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Вони часто відвідують своїх бабусь?",
+      "en": ["Do they often visit their grandmothers?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Коли ти зазвичай прибираєш свою кімнату?",
+      "en": ["When do you usually clean your room?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Вона часто читає журнал перед сном.",
+      "en": ["She often reads a magazine before bed."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Він ніколи не запізнюється до школи.",
+      "en": ["He never comes late to school.", "He is never late for school."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "ua": "Моя мама завжди добра до всіх.",
+      "en": ["My mom is always kind to everyone."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Ми часто ходимо до парку разом.",
+      "en": ["We often go to the park together."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Він іноді сердитий без причини.",
+      "en": ["He is sometimes angry for no reason."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Я завжди прокидаюсь о сьомій ранку.",
+      "en": ["I always wake up at seven in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Ми рідко їмо фастфуд.",
+      "en": ["We rarely eat fast food.", "We don’t often eat fast food."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Чому ти завжди спішиш?",
+      "en": ["Why are you always in a hurry?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Ти часто дивишся фільми англійською?",
+      "en": ["Do you often watch movies in English?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Я завжди готовий допомогти.",
+      "en": ["I am always ready to help."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вона іноді співає у душі.",
+      "en": ["She sometimes sings in the shower."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Вони часто у спортзалі після роботи.",
+      "en": ["They are often at the gym after work."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "ua": "Він завжди має багато енергії вранці.",
+      "en": ["He always has a lot of energy in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Ми зазвичай вечеряємо разом.",
+      "en": ["We usually have dinner together."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Ти завжди носиш окуляри?",
+      "en": ["Do you always wear glasses?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Моя сестра часто в кімнаті, коли я приходжу.",
+      "en": ["My sister is often in her room when I come."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Як часто вони телефонують тобі?",
+      "en": ["How often do they call you?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Вона не часто виходить з дому.",
+      "en": ["She doesn’t often go out.", "She does not often go out."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "ua": "Мій дідусь завжди веселий.",
+      "en": ["My grandpa is always cheerful."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Я часто слухаю радіо дорогою на роботу.",
+      "en": ["I often listen to the radio on my way to work."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Ми завжди п’ємо воду перед тренуванням.",
+      "en": ["We always drink water before training."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Вони зазвичай дивляться телевізор після вечері.",
+      "en": ["They usually watch TV after dinner."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Твій брат часто грає в комп’ютерні ігри?",
+      "en": ["Does your brother often play computer games?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Ми ніколи не сваримось.",
+      "en": ["We never argue."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Вона завжди працює вранці.",
+      "en": ["She always works in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Я іноді у бібліотеці після обіду.",
+      "en": ["I am sometimes in the library after lunch."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Вони завжди пунктуальні.",
+      "en": ["They are always punctual."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "ua": "Я часто маю багато роботи.",
+      "en": ["I often have a lot of work."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Де ти зазвичай обідаєш?",
+      "en": ["Where do you usually have lunch?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Він ніколи не дивиться новини по телевізору.",
+      "en": ["He never watches the news on TV."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Ми часто слухаємо музику ввечері.",
+      "en": ["We often listen to music in the evening."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "ua": "Мій друг завжди щирий.",
+      "en": ["My friend is always honest."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Вона часто читає книгу перед сном.",
+      "en": ["She often reads a book before sleep."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Ти завжди посміхаєшся?",
+      "en": ["Do you always smile?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Я зазвичай п’ю чай після обіду.",
+      "en": ["I usually drink tea after lunch."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Він іноді серйозний, коли говорить.",
+      "en": ["He is sometimes serious when he speaks."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Ми завжди вдома у неділю.",
+      "en": ["We are always at home on Sunday."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "ua": "Хто зазвичай готує вечерю у вас вдома?",
+      "en": ["Who usually cooks dinner at your home?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+      "ua": "Вона майже ніколи не виходить у вихідні.",
+      "en": ["She hardly ever goes out at weekends."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Він завжди засинає пізно.",
+      "en": ["He always falls asleep late."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Ми іноді гуляємо біля річки.",
+      "en": ["We sometimes walk by the river."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "ua": "Вони часто грають у настільні ігри?",
+      "en": ["Do they often play board games?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "ua": "Моя сестра завжди ввічлива з усіма.",
+      "en": ["My sister is always polite to everyone."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
+      "ua": "Я часто втомлений після тренування.",
+      "en": ["I am often tired after training."]
+    }
+  ]
+}

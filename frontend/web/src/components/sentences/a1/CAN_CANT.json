@@ -1,0 +1,487 @@
+{ "CAN_CANT": [
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш бігти швидко?",
+    "en": ["Can you run quickly?", "Are you able to run fast?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш прийти завтра.",
+    "en": ["You can’t come tomorrow.", "You’re not able to come tomorrow."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Можна припаркувати машину тут?",
+    "en": ["Can I park the car here?", "Is it okay to park the car here?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "PERSONAL_PRONOUNS"],
+    "ua": "Ти можеш допомогти мені готувати?",
+    "en": ["Can you help me cook?", "Are you able to help me with cooking?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш прочитати цю книгу?",
+    "en": ["Can you read this book?", "Are you able to read this book?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "GERUND_VS_INFINITIVE"],
+    "ua": "Ми не можемо чекати до вечора.",
+    "en": ["We can’t wait until evening.", "We’re not able to wait until tonight."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "DEMONSTRATIVES"],
+    "ua": "Ти можеш зробити це завдання легким?",
+    "en": ["Can you make this task easy?", "Are you able to simplify this task?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Можна увійти до класу?",
+    "en": ["Can I enter the classroom?", "Is it okay to come into the class?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш брати мої речі.",
+    "en": ["You can’t take my things.", "You’re not able to take my stuff."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "DEMONSTRATIVES"],
+    "ua": "Ти можеш знайти ключі на столі?",
+    "en": ["Can you find the keys on the table?", "Are you able to locate the keys on the table?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш говорити голосніше?",
+    "en": ["Can you speak louder?", "Could you talk more loudly?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Він не може плавати в басейні.",
+    "en": ["He can’t swim in the pool.", "He’s not able to swim in the pool."]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "YES_NO_Q"],
+    "ua": "Ти можеш навчитися грати на гітарі?",
+    "en": ["Can you learn to play the guitar?", "Are you able to learn guitar playing?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ми можемо зустрітися після обіду?",
+    "en": ["Can we meet after lunch?", "Is it possible to meet after the meal?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш палити тут.",
+    "en": ["You can’t smoke here.", "You’re not able to smoke here."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш відкрити цей лист?",
+    "en": ["Can you open this letter?", "Are you able to open this letter?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш працювати тихіше?",
+    "en": ["Can you work more quietly?", "Could you work less noisily?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Ми не можемо грати на вулиці.",
+    "en": ["We can’t play outside.", "We’re not able to play on the street."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш намалювати гарну картину?",
+    "en": ["Can you draw a beautiful picture?", "Are you able to paint a nice picture?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "YES_NO_Q"],
+    "ua": "Можна взяти твою ручку?",
+    "en": ["Can I take your pen?", "Is it okay to borrow your pen?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш спізнитися на урок.",
+    "en": ["You can’t be late for class.", "You’re not able to arrive late to class."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш сидіти біля вікна?",
+    "en": ["Can you sit by the window?", "Are you able to sit next to the window?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "PERSONAL_PRONOUNS"],
+    "ua": "Ти можеш допомогти мені писати листа?",
+    "en": ["Can you help me write a letter?", "Are you able to assist with writing a letter?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_FREQUENCY_OFTEN_NEVER", "YES_NO_Q"],
+    "ua": "Ти можеш приходити раніше?",
+    "en": ["Can you come earlier?", "Could you arrive earlier?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Вона не може співати цю пісню.",
+    "en": ["She can’t sing this song.", "She’s not able to sing that song."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш закінчити роботу до п’ятниці?",
+    "en": ["Can you finish the work by Friday?", "Are you able to complete the work before Friday?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш показати мені цей документ?",
+    "en": ["Can you show me this document?", "Could you let me see this document?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш паркуватися в цьому місці.",
+    "en": ["You can’t park in this spot.", "You’re not able to park in this place."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш зробити чай гарячим?",
+    "en": ["Can you make the tea hot?", "Are you able to prepare hot tea?"]
+  },
+  {
+    "rules": ["CAN_CANT", "YES_NO_Q"],
+    "ua": "Можна відкрити вікно?",
+    "en": ["Can I open the window?", "Is it okay to open the window?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_FREQUENCY_OFTEN_NEVER", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш дивитися телевізор зараз.",
+    "en": ["You can’t watch TV now.", "You’re not able to watch TV right now."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш поставити сумку на підлогу?",
+    "en": ["Can you put the bag on the floor?", "Could you place the bag on the floor?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "YES_NO_Q"],
+    "ua": "Ти можеш навчити мене плавати?",
+    "en": ["Can you teach me to swim?", "Are you able to teach me swimming?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш пояснити це зрозуміло?",
+    "en": ["Can you explain it clearly?", "Could you clarify it in a clear way?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Ми не можемо пропустити цей урок.",
+    "en": ["We can’t miss this class.", "We’re not able to skip this lesson."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш дати мені цей зошит?",
+    "en": ["Can you give me this notebook?", "Could you hand me that notebook?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш зателефонувати мені ввечері?",
+    "en": ["Can you call me in the evening?", "Could you phone me tonight?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш бігати в коридорі.",
+    "en": ["You can’t run in the hallway.", "You’re not able to run in the corridor."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш зробити цей проект цікавим?",
+    "en": ["Can you make this project interesting?", "Are you able to make this project engaging?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "YES_NO_Q"],
+    "ua": "Можна скористатися твоїм комп’ютером?",
+    "en": ["Can I use your computer?", "Is it okay to use your computer?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш залишити двері відчиненими.",
+    "en": ["You can’t leave the door open.", "You’re not able to leave the door unlocked."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш чекати мене біля входу?",
+    "en": ["Can you wait for me at the entrance?", "Could you wait for me by the door?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "PERSONAL_PRONOUNS"],
+    "ua": "Ти можеш допомогти мені вчитися?",
+    "en": ["Can you help me study?", "Are you able to assist with studying?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_FREQUENCY_OFTEN_NEVER", "YES_NO_Q"],
+    "ua": "Ти можеш закінчити це швидше?",
+    "en": ["Can you finish this sooner?", "Could you complete this earlier?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Вона не може вирішити цю задачу.",
+    "en": ["She can’t solve this problem.", "She’s not able to figure out this task."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш принести цю коробку?",
+    "en": ["Can you bring this box?", "Could you carry this box?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш прийти до шостої?",
+    "en": ["Can you come by six?", "Are you able to arrive before six?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш їсти в класі.",
+    "en": ["You can’t eat in class.", "You’re not able to eat in the classroom."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш зробити цю вправу простішою?",
+    "en": ["Can you make this exercise simpler?", "Are you able to simplify this exercise?"]
+  },
+  {
+    "rules": ["CAN_CANT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "YES_NO_Q"],
+    "ua": "Можна взяти ще один квиток?",
+    "en": ["Can I take another ticket?", "Is it okay to get another ticket?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш забути про цю зустріч.",
+    "en": ["You can’t forget about this meeting.", "You’re not able to forget this meeting."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш поставити стілець біля столу?",
+    "en": ["Can you put the chair by the table?", "Could you place the chair next to the table?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "YES_NO_Q"],
+    "ua": "Ти можеш навчити мене малювати?",
+    "en": ["Can you teach me to draw?", "Are you able to teach me drawing?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш співати тихіше?",
+    "en": ["Can you sing more quietly?", "Could you sing less loudly?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Ми не можемо пропустити цю подію.",
+    "en": ["We can’t miss this event.", "We’re not able to skip this occasion."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш прочитати цей текст?",
+    "en": ["Can you read this text?", "Are you able to read this passage?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш закінчити до завтра?",
+    "en": ["Can you finish by tomorrow?", "Are you able to complete it by tomorrow?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш використовувати мій телефон.",
+    "en": ["You can’t use my phone.", "You’re not able to use my phone."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш зробити цю страву смачною?",
+    "en": ["Can you make this dish tasty?", "Are you able to prepare this dish deliciously?"]
+  },
+  {
+    "rules": ["CAN_CANT", "YES_NO_Q"],
+    "ua": "Можна сфотографувати цей пейзаж?",
+    "en": ["Can I photograph this landscape?", "Is it okay to take a picture of this view?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш спати в класі.",
+    "en": ["You can’t sleep in class.", "You’re not able to sleep in the classroom."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш залишити сумку в кутку?",
+    "en": ["Can you leave the bag in the corner?", "Could you put the bag in the corner?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "PERSONAL_PRONOUNS"],
+    "ua": "Ти можеш допомогти мені малювати?",
+    "en": ["Can you help me draw?", "Are you able to assist with drawing?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_FREQUENCY_OFTEN_NEVER", "YES_NO_Q"],
+    "ua": "Ти можеш приходити частіше?",
+    "en": ["Can you come more often?", "Could you visit more frequently?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Він не може вирішити цю проблему.",
+    "en": ["He can’t solve this problem.", "He’s not able to fix this issue."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш показати мені цю книгу?",
+    "en": ["Can you show me this book?", "Could you let me see this book?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш прийти до обіду?",
+    "en": ["Can you come before lunch?", "Are you able to arrive by lunchtime?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш слухати музику голосно.",
+    "en": ["You can’t listen to music loudly.", "You’re not able to play music loudly."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш зробити цю гру веселою?",
+    "en": ["Can you make this game fun?", "Are you able to make this game enjoyable?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "YES_NO_Q"],
+    "ua": "Можна взяти твій телефон?",
+    "en": ["Can I take your phone?", "Is it okay to borrow your phone?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш забути про цей урок.",
+    "en": ["You can’t forget about this lesson.", "You’re not able to forget this class."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш стояти біля дверей?",
+    "en": ["Can you stand by the door?", "Could you wait near the door?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "YES_NO_Q"],
+    "ua": "Ти можеш навчити мене танцювати?",
+    "en": ["Can you teach me to dance?", "Are you able to teach me dancing?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш працювати уважніше?",
+    "en": ["Can you work more carefully?", "Could you work with more attention?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Ми не можемо пропустити цей концерт.",
+    "en": ["We can’t miss this concert.", "We’re not able to skip this concert."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш відкрити цю скриньку?",
+    "en": ["Can you open this box?", "Are you able to open this chest?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш закінчити до вечора?",
+    "en": ["Can you finish by evening?", "Are you able to complete it by tonight?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш брати чужі книги.",
+    "en": ["You can’t take other people’s books.", "You’re not able to take others’ books."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш зробити цей звіт коротшим?",
+    "en": ["Can you make this report shorter?", "Are you able to shorten this report?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "YES_NO_Q"],
+    "ua": "Можна подивитися твій зошит?",
+    "en": ["Can I look at your notebook?", "Is it okay to see your notebook?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш грати в цій кімнаті.",
+    "en": ["You can’t play in this room.", "You’re not able to play in this room."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш залишити ключі на столі?",
+    "en": ["Can you leave the keys on the table?", "Could you put the keys on the table?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "PERSONAL_PRONOUNS"],
+    "ua": "Ти можеш допомогти мені організувати вечірку?",
+    "en": ["Can you help me organize a party?", "Are you able to assist with planning a party?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш говорити повільніше?",
+    "en": ["Can you speak more slowly?", "Could you talk slower?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Вона не може намалювати цю картину.",
+    "en": ["She can’t draw this picture.", "She’s not able to paint this image."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш показати мені цей малюнок?",
+    "en": ["Can you show me this drawing?", "Could you let me see this sketch?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш прийти після восьмої?",
+    "en": ["Can you come after eight?", "Are you able to arrive after eight o’clock?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш їсти солодке зараз.",
+    "en": ["You can’t eat sweets now.", "You’re not able to eat candy right now."]
+  },
+  {
+    "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
+    "ua": "Ти можеш зробити цей торт смачним?",
+    "en": ["Can you make this cake tasty?", "Are you able to bake this cake deliciously?"]
+  },
+  {
+    "rules": ["CAN_CANT", "POSSESSIVE_S", "YES_NO_Q"],
+    "ua": "Можна взяти твій олівець?",
+    "en": ["Can I take your pencil?", "Is it okay to borrow your pencil?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Ти не можеш забути про цей урок.",
+    "en": ["You can’t forget about this lesson.", "You’re not able to forget this class."]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
+    "ua": "Ти можеш стояти біля дверей?",
+    "en": ["Can you stand by the door?", "Could you wait near the door?"]
+  },
+  {
+    "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "YES_NO_Q"],
+    "ua": "Ти можеш навчити мене танцювати?",
+    "en": ["Can you teach me to dance?", "Are you able to teach me dancing?"]
+  },
+  {
+    "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "YES_NO_Q"],
+    "ua": "Ти можеш працювати уважніше?",
+    "en": ["Can you work more carefully?", "Could you work with more attention?"]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
+    "ua": "Ми не можемо пропустити цей концерт.",
+    "en": ["We can’t miss this concert.", "We’re not able to skip this concert."]
+  },
+  {
+    "rules": ["CAN_CANT", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Ти можеш відкрити цю скриньку?",
+    "en": ["Can you open this box?", "Are you able to open this chest?"]
+  },
+  {
+    "rules": ["CAN_CANT", "PREP_TIME", "YES_NO_Q"],
+    "ua": "Ти можеш закінчити до вечора?",
+    "en": ["Can you finish by evening?", "Are you able to complete it by tonight?"]
+  }
+] }

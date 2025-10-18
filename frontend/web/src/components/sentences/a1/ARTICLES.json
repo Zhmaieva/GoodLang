@@ -1,0 +1,352 @@
+{ "ARTICLES": [
+  {
+    "rules": ["ARTICLES", "TO_BE"],
+    "ua": "Вона лікар.",
+    "en": ["She is a doctor.", "She's a doctor.", "She is a physician.", "She's a physician."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE"],
+    "ua": "Він у лікарні.",
+    "en": ["He is in the hospital.", "He's in the hospital.", "He is in hospital.", "He's in hospital."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT", "THERE_IS_ARE"],
+    "ua": "На столі є хліб.",
+    "en": ["There is some bread on the table.", "There's some bread on the table.", "There is bread on the table.", "There's bread on the table."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "ua": "Я купив новий комп’ютер.",
+    "en": ["I bought a new computer.", "I've bought a new computer."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE", "PRESENT_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Ми живемо біля річки.",
+    "en": ["We live near the river.", "We live by the river."]
+  },
+  {
+    "rules": ["ARTICLES", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": "На полиці є пляшка води.",
+    "en": ["There is a bottle of water on the shelf.", "There's a bottle of water on the shelf."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
+    "ua": "Він — хороший учень.",
+    "en": ["He is a good student.", "He's a good student."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PRESENT_PERFECT", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
+    "ua": "Ми бачили старий міст.",
+    "en": ["We saw an old bridge.", "We’ve seen an old bridge."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
+    "ua": "Сніг лежить на землі.",
+    "en": ["The snow is on the ground."]
+  },
+  {
+    "rules": ["ARTICLES", "SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Це цікава ідея.",
+    "en": ["It’s an interesting idea.", "This is an interesting idea."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Вона відчинила вікно.",
+    "en": ["She opened the window."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "ua": "Ми пішли в ресторан на вечерю.",
+    "en": ["We went to a restaurant for dinner.", "We had dinner at a restaurant."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ключ лежить на столі.",
+    "en": ["The key is on the table."]
+  },
+  {
+    "rules": ["ARTICLES", "HAVE_HAVE_GOT", "PERSONAL_PRONOUNS"],
+    "ua": "Вона має кота й собаку.",
+    "en": ["She has a cat and a dog.", "She's got a cat and a dog."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "ua": "Ми бачили Ейфелеву вежу.",
+    "en": ["We saw the Eiffel Tower.", "We’ve seen the Eiffel Tower."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_CONTINUOUS", "PERSONAL_PRONOUNS"],
+    "ua": "Він дивиться телевізор.",
+    "en": ["He is watching TV.", "He’s watching television."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Ми їли піцу на обід.",
+    "en": ["We had pizza for lunch.", "We ate pizza for lunch."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "ua": "Вона написала листа своєму другові.",
+    "en": ["She wrote a letter to her friend.", "She’s written a letter to her friend."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
+    "ua": "Це була чудова подорож.",
+    "en": ["It was a wonderful trip.", "It was an amazing trip."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Ми пішли на пляж.",
+    "en": ["We went to the beach."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Я бачив веселку після дощу.",
+    "en": ["I saw a rainbow after the rain."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PRESENT_CONTINUOUS", "SIMPLE_ADJ", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "ua": "Ми живемо у великому місті.",
+    "en": ["We live in a big city.", "We’re living in a big city."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "SUPERLATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Це була найкраща вечеря в моєму житті.",
+    "en": ["It was the best dinner of my life."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
+    "ua": "Вона — архітектор.",
+    "en": ["She is an architect.", "She's an architect."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "PERSONAL_PRONOUNS"],
+    "ua": "Він — найкращий студент у класі.",
+    "en": ["He is the best student in the class.", "He's the best student in the class."]
+  },
+  {
+    "rules": ["ARTICLES", "HAVE_HAVE_GOT", "COUNT_UNCOUNT"],
+    "ua": "У мене болить зуб.",
+    "en": ["I have a toothache.", "I've got a toothache."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Ми зазвичай снідаємо о восьмій.",
+    "en": ["We usually have breakfast at eight.", "We usually eat breakfast at eight."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Ми пішли до лікаря вчора.",
+    "en": ["We went to the doctor yesterday."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "SUPERLATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Це був найщасливіший день у моєму житті.",
+    "en": ["It was the happiest day of my life."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "ua": "Моя сестра в бібліотеці.",
+    "en": ["My sister is at the library."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "DEMONSTRATIVES", "SIMPLE_ADJ"],
+    "ua": "Це була гарна ідея.",
+    "en": ["That was a good idea.", "It was a good idea."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "RELATIVE_CLAUSES"],
+    "ua": "Ми відвідали музей, який був дуже цікавий.",
+    "en": ["We visited the museum that was very interesting.", "We visited the museum which was very interesting."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE"],
+    "ua": "Собака — вірний друг людини.",
+    "en": ["The dog is a faithful friend of man.", "The dog is a loyal friend of humans."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "LIKE_ING"],
+    "ua": "Коти люблять спати.",
+    "en": ["Cats love sleeping.", "Cats like to sleep."]
+  },
+  {
+    "rules": ["ARTICLES", "WAS_WERE"],
+    "ua": "Море було спокійним.",
+    "en": ["The sea was calm."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE", "PRESENT_CONTINUOUS"],
+    "ua": "Вони зараз у морі.",
+    "en": ["They are at sea."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Інтернет — важлива частина нашого життя.",
+    "en": ["The Internet is an important part of our life."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_TIME", "ADVERBS_FREQUENCY"],
+    "ua": "Ми завжди п’ємо каву вранці.",
+    "en": ["We always drink coffee in the morning."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_TIME", "ADVERBS_FREQUENCY"],
+    "ua": "Вони зазвичай ходять у спортзал після роботи.",
+    "en": ["They usually go to the gym after work."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": "Я обідаю в школі.",
+    "en": ["I have lunch at school.", "I eat lunch at school."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Ми поїхали на море минулого літа.",
+    "en": ["We went to the sea last summer."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Погода сьогодні гарна.",
+    "en": ["The weather is nice today.", "The weather is good today."]
+  },
+  {
+    "rules": ["ARTICLES", "SUPERLATIVES", "TO_BE"],
+    "ua": "Вода — це найцінніший ресурс на Землі.",
+    "en": ["Water is the most valuable resource on Earth."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE"],
+    "ua": "Бідні часто потребують допомоги.",
+    "en": ["The poor often need help."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE"],
+    "ua": "Багаті мають більше можливостей.",
+    "en": ["The rich have more opportunities."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE"],
+    "ua": "Діти — наше майбутнє.",
+    "en": ["Children are our future."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE"],
+    "ua": "Освіта — це ключ до успіху.",
+    "en": ["Education is the key to success."]
+  },
+  {
+    "rules": ["ARTICLES", "MUST_MUSTNT", "PASSIVE_VOICE"],
+    "ua": "Довкілля потрібно захищати.",
+    "en": ["The environment must be protected."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY"],
+    "ua": "Я граю на фортепіано щодня.",
+    "en": ["I play the piano every day."]
+  },
+  {
+    "rules": ["ARTICLES", "PAST_SIMPLE", "SIMPLE_ADJ"],
+    "ua": "Це був справжній сюрприз.",
+    "en": ["It was a real surprise."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY", "PREP_TIME"],
+    "ua": "Ми часто дивимось телевізор увечері.",
+    "en": ["We often watch TV in the evening.", "We often watch television in the evening."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY", "PREP_TIME"],
+    "ua": "Вона іноді ходить до церкви в неділю.",
+    "en": ["She sometimes goes to church on Sundays."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE"],
+    "ua": "Ми живемо біля моря.",
+    "en": ["We live near the sea.", "We live by the sea.", "We live close to the sea.", "We live at the seaside."]
+  },
+  {
+    "rules": ["ARTICLES", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Ми ходимо в школу кожного дня.",
+    "en": ["We go to school every day.", "We go to school each day."]
+  },
+  {
+    "rules": ["ARTICLES", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Вона на роботі.",
+    "en": ["She is at work.", "She's at work."]
+  },
+  {
+    "rules": ["ARTICLES", "SIMPLE_ADJ"],
+    "ua": "Сонце сьогодні яскраве.",
+    "en": ["The sun is bright today.", "The sun is very bright today.", "The sun is shining brightly today."]
+  },
+  {
+    "rules": ["ARTICLES", "DEMONSTRATIVES", "SIMPLE_ADJ"],
+    "ua": "Це питання дуже важливе.",
+    "en": ["This is an important question.", "It's an important question.", "This question is very important."]
+  },
+  {
+    "rules": ["ARTICLES", "POSSESSIVE_S"],
+    "ua": "Ми відвідали музей Лондона.",
+    "en": ["We visited the Museum of London.", "We visited London’s museum."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT", "TO_BE"],
+    "ua": "Повітря сьогодні дуже холодне.",
+    "en": ["The air is very cold today."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Я люблю читати книги.",
+    "en": ["I love reading books.", "I like reading books."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT", "TO_BE"],
+    "ua": "Музика робить мене щасливою.",
+    "en": ["Music makes me happy."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
+    "ua": "Місяць у небі дуже яскравий.",
+    "en": ["The moon in the sky is very bright."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE", "THERE_IS_ARE"],
+    "ua": "На підлозі є килим.",
+    "en": ["There is a carpet on the floor.", "There's a carpet on the floor."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "ua": "Я люблю слухати музику.",
+    "en": ["I like listening to music.", "I like to listen to music."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
+    "ua": "Двері відчинені.",
+    "en": ["The door is open."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Це те саме питання.",
+    "en": ["This is the same question.", "It’s the same question."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Вона грає на скрипці.",
+    "en": ["She plays the violin."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE"],
+    "ua": "Ми часто ходимо в кіно.",
+    "en": ["We often go to the cinema.", "We often go to the movies."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT", "PRESENT_SIMPLE"],
+    "ua": "Вони обідають удома.",
+    "en": ["They have lunch at home.", "They eat lunch at home."]
+  },
+  {
+    "rules": ["ARTICLES", "TO_BE"],
+    "ua": "Інтернет сьогодні дуже повільний.",
+    "en": ["The Internet is very slow today."]
+  }
+] }

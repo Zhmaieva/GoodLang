@@ -1,11 +1,14 @@
 const express = require("express");
-const {randomRule, evaluateAndCoach} = require("./сore");
+const {randomRule, evaluateAndCoach, shuffleBySeed} = require("./сore");
+const {ALL_RULES_SAMPLES} = require("./allRulesSamples");
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
 const port = (portIndex !== -1 && args[portIndex + 1]) ? parseInt(args[portIndex + 1], 10) : 3000;
 
 const app = express();
+
+const locale = 'ua';
 
 // Manual CORS header
 app.use((req, res, next) => {
@@ -35,27 +38,57 @@ app.get('/health', async (req, res, next) => {
 
 app.get('/translations/', async (req, res, next) => {
    try {
-       const { level, rule, translation, textToTranslate, } = req.query;
+       const { level, rules, translation, textToTranslate, skip, seed } = req.query;
 
-       const selectedRule = rule ?? randomRule(level);
+       if (!textToTranslate) {
+           const selectedRule = Array.isArray(rules) && rules.length > 0 ? rules[0] : randomRule(level ?? 'A1');
+
+           const samples = shuffleBySeed(ALL_RULES_SAMPLES['THERE_IS_ARE'], seed ?? 1);
+           const skipNumber = Number.parseInt(skip ?? 0 % samples.length);
+           const sample = samples[skipNumber];//todo: find selectedRule, shuffle by seed and skip
+
+           return res.json({
+               rules: sample.rules,
+               textToTranslate: sample[locale],
+               isAnswerCorrect: false,
+               correctAnswer: "",
+               tipIfWrong: "",
+               score: 0,
+               skip: skipNumber + 1
+           });
+       }
+
        const result = await evaluateAndCoach({
-           rule: selectedRule,
+           rules: Array.isArray(rules) ? rules : [rules],
            targetLanguage: "Ukrainian",
            userEnglish: translation ?? "",
-           textToTranslate: textToTranslate ?? "",
-           difficulty: level ?? "A2"
+           textToTranslate: textToTranslate ?? ""
        });
-       const newTextToTranslate = result.sample_in_target_language || result.next_target_sentence || "";
+
+       let newTextToTranslate = "";
+       let newRules = rules;
+       let newSkip = Number.parseInt(skip) + 1;
+
+       const scores = result.scores;
+       for (let i = 0; i < scores.length; i++) {
+           if (scores[i] < 1) {
+               const failedRule = rules[i];
+               //newTextToTranslate = ALL_RULES_SAMPLES[failedRule][0];//todo: find selectedRule, shuffle by seed and skip;
+               const newSample = shuffleBySeed(ALL_RULES_SAMPLES['THERE_IS_ARE'], seed ?? 1)[newSkip];
+               newRules = newSample.rules;
+               newTextToTranslate = newSample[locale];//todo: find selectedRule, shuffle by seed and skip;
+               break;
+           }
+       }
 
        return res.json({
-           rule: selectedRule,
+           rules: newRules,
            textToTranslate: newTextToTranslate,
-           evaluationSkipped: !translation,
            isAnswerCorrect: result.answer_is_correct,
            correctAnswer: result.correct_answer,
            tipIfWrong: result.tip_if_wrong,
-           violatedRules: result.violated_rules,
-           score: result.score,
+           scores: scores,
+           skip: newSkip
        });
    }  catch (e) {
        next(e);

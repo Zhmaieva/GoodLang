@@ -1,0 +1,259 @@
+{
+  "PERSONAL_PRONOUNS": [
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Я втомлений.",
+      "en": ["I am tired.", "I'm tired."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "PREP_PLACE"],
+      "ua": "Вона в школі.",
+      "en": ["She is at school.", "She's at school."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Він лікар.",
+      "en": ["He is a doctor.", "He's a doctor."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "PREP_PLACE"],
+      "ua": "Ми вдома.",
+      "en": ["We are at home.", "We're at home."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Вони друзі.",
+      "en": ["They are friends.", "They're friends."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Це холодно.",
+      "en": ["It is cold.", "It's cold."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Ти правий.",
+      "en": ["You are right.", "You're right."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Я не голодний.",
+      "en": ["I am not hungry.", "I'm not hungry."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Вона не щаслива.",
+      "en": ["She is not happy.", "She isn't happy.", "She's not happy."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "PREP_PLACE"],
+      "ua": "Він у машині.",
+      "en": ["He is in the car.", "He's in the car."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Ми готові.",
+      "en": ["We are ready.", "We're ready."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "SIMPLE_ADJ"],
+      "ua": "Вони розумні.",
+      "en": ["They are smart.", "They're smart."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "PREP_PLACE"],
+      "ua": "Він на роботі.",
+      "en": ["He is at work.", "He's at work."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Вона медсестра.",
+      "en": ["She is a nurse.", "She's a nurse."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Я студент.",
+      "en": ["I am a student.", "I'm a student."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Ти не серйозний.",
+      "en": ["You are not serious.", "You're not serious.", "You aren't serious."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Ми сім'я.",
+      "en": ["We are a family.", "We're a family."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "COUNT_UNCOUNT"],
+      "ua": "Це вода.",
+      "en": ["It is water.", "It's water."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "ARTICLES"],
+      "ua": "Він учитель.",
+      "en": ["He is a teacher.", "He's a teacher."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "SIMPLE_ADJ"],
+      "ua": "Вона гарна.",
+      "en": ["She is beautiful.", "She's beautiful."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "ua": "Я люблю каву.",
+      "en": ["I like coffee."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "ua": "Він грає у футбол.",
+      "en": ["He plays football.", "He plays soccer."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE", "PREP_PLACE"],
+      "ua": "Ми живемо у Варшаві.",
+      "en": ["We live in Warsaw."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE", "PREP_PLACE"],
+      "ua": "Вони працюють у лікарні.",
+      "en": ["They work in a hospital."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "ua": "Вона дивиться телевізор щовечора.",
+      "en": ["She watches TV every evening."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
+      "ua": "Він часто запізнюється.",
+      "en": ["He is often late."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
+      "ua": "Ми завжди снідаємо разом.",
+      "en": ["We always have breakfast together."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "NEGATION_DONT_DOESNT"],
+      "ua": "Я не розумію.",
+      "en": ["I don't understand."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "NEGATION_DONT_DOESNT"],
+      "ua": "Вона не любить каву.",
+      "en": ["She doesn't like coffee."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "YES_NO_Q"],
+      "ua": "Ти втомився?",
+      "en": ["Are you tired?"]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "YES_NO_Q", "PREP_PLACE"],
+      "ua": "Він вдома?",
+      "en": ["Is he at home?"]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "YES_NO_Q"],
+      "ua": "Вони готові?",
+      "en": ["Are they ready?"]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "WH_Q"],
+      "ua": "Де вона?",
+      "en": ["Where is she?"]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "WH_Q"],
+      "ua": "Хто він?",
+      "en": ["Who is he?"]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "CAN_CANT"],
+      "ua": "Я можу допомогти.",
+      "en": ["I can help."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "CAN_CANT"],
+      "ua": "Він не може співати.",
+      "en": ["He can't sing.", "He cannot sing."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "LIKE_ING"],
+      "ua": "Вона любить плавати.",
+      "en": ["She likes swimming."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "LIKE_ING"],
+      "ua": "Ми не любимо чекати.",
+      "en": ["We don't like waiting."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_CONT_NOW"],
+      "ua": "Я зараз працюю.",
+      "en": ["I am working now.", "I'm working now."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_CONT_NOW"],
+      "ua": "Вона зараз читає.",
+      "en": ["She is reading now.", "She's reading now."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_CONT_NOW"],
+      "ua": "Вони зараз дивляться фільм.",
+      "en": ["They are watching a movie now.", "They're watching a film now."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "HAVE_HAVE_GOT"],
+      "ua": "У мене є собака.",
+      "en": ["I have a dog.", "I've got a dog."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "HAVE_HAVE_GOT"],
+      "ua": "У неї є новий телефон.",
+      "en": ["She has a new phone.", "She's got a new phone."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Вони щасливі разом.",
+      "en": ["They are happy together.", "They're happy together."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Він не готовий.",
+      "en": ["He isn't ready.", "He is not ready."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "WAS_WERE", "PREP_PLACE"],
+      "ua": "Я був у Парижі.",
+      "en": ["I was in Paris."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "WAS_WERE", "PREP_PLACE"],
+      "ua": "Ми були на вечірці.",
+      "en": ["We were at the party."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "WAS_WERE", "PREP_PLACE"],
+      "ua": "Вона була в лікарні.",
+      "en": ["She was in the hospital.", "She was in hospital."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "WAS_WERE"],
+      "ua": "Вони були щасливі.",
+      "en": ["They were happy."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
+      "ua": "Це було чудово.",
+      "en": ["It was great."]
+    },
+    {
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "ua": "Ти добре співаєш.",
+      "en": ["You sing well."]
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{ "DEMONSTRATIVES": [
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Це моя нова машина.",
+    "en": ["This is my new car."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це яблуко зелене.",
+    "en": ["This apple is green."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Це гарна ідея.",
+    "en": ["That is a good idea.", "That's a good idea."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PERSONAL_PRONOUNS"],
+    "ua": "Це мій брат.",
+    "en": ["This is my brother."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PERSONAL_PRONOUNS"],
+    "ua": "Це моя книга.",
+    "en": ["This is my book."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це мої друзі.",
+    "en": ["These are my friends."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це мої ключі.",
+    "en": ["These are my keys."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це на твоєму столі.",
+    "en": ["It is on your desk.", "It's on your desk.", "It is on your table.", "It's on your table."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це поруч із дверима.",
+    "en": ["It is next to the door.", "It's next to the door.", "It is beside the door.", "It's beside the door."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Це яблуко, а не апельсин.",
+    "en": ["This is an apple, not an orange."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Та сукня гарна.",
+    "en": ["That dress is beautiful."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ті діти веселі.",
+    "en": ["Those children are happy."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "POSSESSIVE_S"],
+    "ua": "Це собака мого друга.",
+    "en": ["This is my friend's dog."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це в холодильнику.",
+    "en": ["It is in the fridge.", "It's in the fridge.", "It is in the refrigerator.", "It's in the refrigerator."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COUNT_UNCOUNT"],
+    "ua": "Це вода з криниці.",
+    "en": ["This is water from the well."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це яблука з мого саду.",
+    "en": ["These are apples from my garden."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Та кімната маленька.",
+    "en": ["That room is small."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ті хлопці на зупинці.",
+    "en": ["Those boys are at the bus stop."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ці квіти гарні.",
+    "en": ["These flowers are beautiful."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ці яблука солодкі.",
+    "en": ["These apples are sweet."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Це моє улюблене кафе.",
+    "en": ["This is my favorite cafe.", "This is my favourite cafe.", "This is my favorite café.", "This is my favourite café."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PERSONAL_PRONOUNS"],
+    "ua": "Це його телефон.",
+    "en": ["That is his phone.", "That's his phone."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ці речі нові.",
+    "en": ["These things are new."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це на полиці.",
+    "en": ["It is on the shelf.", "It's on the shelf."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "TOO_VERY"],
+    "ua": "Це дуже важливо.",
+    "en": ["That is very important.", "That's very important."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це яйця з ферми.",
+    "en": ["These are eggs from the farm."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це в моїй сумці.",
+    "en": ["It is in my bag.", "It's in my bag."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COUNT_UNCOUNT"],
+    "ua": "Це гарна новина.",
+    "en": ["That is good news.", "That's good news."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Та людина груба.",
+    "en": ["That person is rude."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ARTICLES", "PREP_PLACE"],
+    "ua": "Це пляж біля мого дому.",
+    "en": ["This is the beach near my house."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ті машини на парковці.",
+    "en": ["Those cars are in the parking lot.", "Those cars are in the car park."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": "Це не моя чашка.",
+    "en": ["This is not my cup.", "This isn't my cup."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це не мої окуляри.",
+    "en": ["These are not my glasses.", "These aren't my glasses."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це не його провина.",
+    "en": ["That is not his fault.", "That isn't his fault.", "That's not his fault."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Це дивно.",
+    "en": ["That is strange.", "That's strange."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Це цікаво.",
+    "en": ["That is interesting.", "That's interesting."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ці фотографії старі.",
+    "en": ["These photos are old.", "These pictures are old."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ARTICLES", "SIMPLE_ADJ"],
+    "ua": "Це гарна ідея!",
+    "en": ["That is a great idea!", "That's a great idea!"]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PERSONAL_PRONOUNS"],
+    "ua": "Ці діти мої сусіди.",
+    "en": ["These children are my neighbours.", "These children are my neighbors.", "These kids are my neighbours.", "These kids are my neighbors."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це на кухні.",
+    "en": ["It is in the kitchen.", "It's in the kitchen."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "TOO_VERY"],
+    "ua": "Ці будинки дуже старі.",
+    "en": ["These houses are very old."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "WAS_WERE", "SIMPLE_ADJ"],
+    "ua": "Це було дивно.",
+    "en": ["That was strange."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "WAS_WERE", "ARTICLES"],
+    "ua": "Це була гарна вечеря.",
+    "en": ["That was a nice dinner."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "WAS_WERE", "SIMPLE_ADJ"],
+    "ua": "Це було дорого.",
+    "en": ["That was expensive."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "WAS_WERE", "SIMPLE_ADJ"],
+    "ua": "Ті фільми були нудні.",
+    "en": ["Those movies were boring.", "Those films were boring."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "BE_FROM"],
+    "ua": "Ці хлопці з мого класу.",
+    "en": ["These boys are from my class."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ці речі на столі.",
+    "en": ["These things are on the table."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COMPARATIVES"],
+    "ua": "Ті квіти дорожчі.",
+    "en": ["Those flowers are more expensive."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "LIKE_ING"],
+    "ua": "Ці туфлі мені не подобаються.",
+    "en": ["I don't like these shoes."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ті коти під деревом.",
+    "en": ["Those cats are under the tree."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це на стіні.",
+    "en": ["It's on the wall.", "It is on the wall."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ARTICLES"],
+    "ua": "Це собака у дворі.",
+    "en": ["That's a dog in the yard.", "That is a dog in the yard."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ті фільми цікаві.",
+    "en": ["Those movies are interesting.", "Those films are interesting."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COUNT_UNCOUNT"],
+    "ua": "Це молоко свіже.",
+    "en": ["This milk is fresh."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ARTICLES"],
+    "ua": "Це великий будинок.",
+    "en": ["That is a big house.", "That's a big house."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "TOO_VERY"],
+    "ua": "Ця страва дуже смачна.",
+    "en": ["This dish is very tasty.", "This meal is very delicious."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це під ліжком.",
+    "en": ["It's under the bed.", "It is under the bed."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": "У цьому місті є гарні парки.",
+    "en": ["There are beautiful parks in this city."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "У цьому магазині є знижка.",
+    "en": ["There is a discount in this shop."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PERSONAL_PRONOUNS"],
+    "ua": "Це їхній будинок.",
+    "en": ["That is their house.", "That's their house."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ці штани короткі.",
+    "en": ["These trousers are short.", "These pants are short."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ці квитки на столі.",
+    "en": ["These tickets are on the table."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Це гарний план.",
+    "en": ["That is a good plan.", "That's a good plan."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "BE_FROM"],
+    "ua": "Ці люди з Італії.",
+    "en": ["These people are from Italy."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Це завдання легке.",
+    "en": ["This task is easy."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це дуже дорого.",
+    "en": ["That is very expensive.", "That's very expensive."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COUNT_UNCOUNT"],
+    "ua": "Це хліб з пекарні.",
+    "en": ["This is bread from the bakery."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ARTICLES"],
+    "ua": "Це хлопець моєї сестри.",
+    "en": ["This is my sister’s boyfriend."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Та картина красива.",
+    "en": ["That picture is beautiful."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це не мій гаманець.",
+    "en": ["This isn't my wallet.", "This is not my wallet."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ці стільці біля вікна.",
+    "en": ["These chairs are near the window."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ця кава гаряча.",
+    "en": ["This coffee is hot."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ARTICLES"],
+    "ua": "Це мій перший урок англійської.",
+    "en": ["This is my first English lesson."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ті дні були важкі.",
+    "en": ["Those days were hard.", "Those days were difficult."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "THERE_IS_ARE", "QUANTIFIERS"],
+    "ua": "У цьому холодильнику є трохи молока.",
+    "en": ["There is some milk in this fridge."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "THERE_IS_ARE"],
+    "ua": "У тій коробці є іграшки.",
+    "en": ["There are toys in that box."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "TOO_ENOUGH"],
+    "ua": "Ці черевики занадто великі.",
+    "en": ["These shoes are too big."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Цей фільм сумний.",
+    "en": ["This movie is sad.", "This film is sad."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COMPARATIVES"],
+    "ua": "Та книга цікавіша.",
+    "en": ["That book is more interesting."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це за дверима.",
+    "en": ["It is behind the door.", "It's behind the door."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ці діти в садку.",
+    "en": ["These children are in the kindergarten."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це неправильно.",
+    "en": ["That is wrong.", "That's wrong."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це чудово!",
+    "en": ["That is great!", "That's great!"]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це не важливо.",
+    "en": ["That isn't important.", "That is not important."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ARTICLES"],
+    "ua": "Це був хороший день.",
+    "en": ["That was a good day."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ті книги на полиці.",
+    "en": ["Those books are on the shelf."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COUNT_UNCOUNT"],
+    "ua": "Це сік без цукру.",
+    "en": ["This is juice without sugar."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це правильна відповідь.",
+    "en": ["This is the correct answer."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "CAN_CANT"],
+    "ua": "Цей телефон може робити гарні фото.",
+    "en": ["This phone can take good pictures."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Та кімната чиста.",
+    "en": ["That room is clean."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ця страва гостра.",
+    "en": ["This dish is spicy."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це добре запитання.",
+    "en": ["That is a good question.", "That's a good question."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COMPARATIVES"],
+    "ua": "Цей тиждень коротший.",
+    "en": ["This week is shorter."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Це в коробці.",
+    "en": ["It is in the box.", "It's in the box."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це був жахливий день.",
+    "en": ["That was a terrible day."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Ті фотографії на стіні.",
+    "en": ["Those photos are on the wall.", "Those pictures are on the wall."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це було смішно.",
+    "en": ["That was funny."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Ці люди добрі.",
+    "en": ["These people are kind."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ця школа нова.",
+    "en": ["This school is new."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE", "COUNT_UNCOUNT"],
+    "ua": "Це чай без молока.",
+    "en": ["This is tea without milk."]
+  },
+  {
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
+    "ua": "Це моя улюблена пісня.",
+    "en": ["This is my favorite song.", "This is my favourite song."]
+  },
+
+] }

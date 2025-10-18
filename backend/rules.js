@@ -218,6 +218,16 @@ export const RULE_LABELS = Object.freeze({
     FRONTING_FOR_EMPHASIS: "Fronting for emphasis",
     INDIRECT_SPEECH_QUESTION_FORMS: "Question forms in indirect speech",
     CONDITIONAL_INVERSION: "Conditional inversion",
+    COMPOUND_SENTENCES: "Compound sentences",
+    COMPLEX_SENTENCES: "Complex sentences",
+    COMPOUND_COMPLEX_SENTENCES: "Compound–complex sentences",
+    DECLARATIVE_SENTENCES: "Declarative sentences",
+    CORRELATIVE_CONJUNCTIONS: "Correlative conjunctions (either...or / neither...nor / both...and)",
+    WORD_FORMATION: "Word formation (prefixes, suffixes, roots)",
+    PARALLELISM: "Parallelism (balanced grammatical structures)",
+    MODIFIERS: "Modifiers (placement and clarity)",
+    ORDER_OF_ADJECTIVES: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",
+    PREP_DIRECTION: "Prepositions of direction (to, into, towards)"
 });
 
 // Group rules by CEFR level

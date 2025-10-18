@@ -1,0 +1,504 @@
+{
+  "IMPERATIVES": [
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_OF_MANNER"],
+      "ua": "Відкрий двері тихо.",
+      "en": ["Open the door quietly.", "Quietly open the door."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE", "COMPOUND_SENTENCES"],
+      "ua": "Сядь за стіл і їж.",
+      "en": ["Sit at the table and eat.", "Take a seat at the table and eat."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Напиши звіт до понеділка.",
+      "en": ["Write the report by Monday.", "Finish the report before Monday."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "GERUND_VS_INFINITIVE"],
+      "ua": "Не забудь полити квіти.",
+      "en": ["Don’t forget to water the flowers.", "Make sure to water the flowers."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES", "PREP_PLACE"],
+      "ua": "Допоможи братові з уроками.",
+      "en": ["Help your brother with his homework.", "Assist your brother with his assignments."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_OF_MANNER"],
+      "ua": "Прочитай інструкцію уважно.",
+      "en": ["Read the instructions carefully.", "Carefully review the instructions."]
+    },
+    {
+      "rules": ["IMPERATIVES", "TO_BE", "PREP_PLACE"],
+      "ua": "Будь ввічливим із гостями.",
+      "en": ["Be polite to the guests.", "Act politely with the guests."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Подзвони мені ввечері.",
+      "en": ["Call me in the evening.", "Give me a call tonight."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "ua": "Не кричи на вулиці.",
+      "en": ["Don’t shout on the street.", "Don’t yell outside."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Поклади книгу на полицю.",
+      "en": ["Put the book on the shelf.", "Place the book on the shelf."]
+    },
+    {
+      "rules": ["IMPERATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
+      "ua": "Візьми парасольку, бо дощ.",
+      "en": ["Take an umbrella, it’s raining.", "Grab an umbrella because it’s raining."]
+    },
+    {
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ", "COMPOUND_SENTENCES"],
+      "ua": "Закрий вікно, холодно.",
+      "en": ["Close the window, it’s cold.", "Shut the window, it’s chilly."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_OF_MANNER", "PREP_PLACE"],
+      "ua": "Прийди на зустріч вчасно.",
+      "en": ["Come to the meeting on time.", "Arrive at the meeting punctually."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "SIMPLE_ADJ"],
+      "ua": "Не пий холодну воду.",
+      "en": ["Don’t drink cold water.", "Avoid drinking cold water."]
+    },
+    {
+      "rules": ["IMPERATIVES", "POSSESSIVE_S"],
+      "ua": "Перевір свою пошту.",
+      "en": ["Check your email.", "Look at your inbox."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES"],
+      "ua": "Попроси вибачення у друга.",
+      "en": ["Apologize to your friend.", "Say sorry to your friend."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Вимий посуд після обіду.",
+      "en": ["Wash the dishes after lunch.", "Clean the dishes after the meal."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Зроби домашнє завдання зараз.",
+      "en": ["Do your homework now.", "Complete your homework right now."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "ua": "Не бігай по калюжах.",
+      "en": ["Don’t run through puddles.", "Avoid running in puddles."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES", "SIMPLE_ADJ"],
+      "ua": "Подивись цей фільм, він цікавий.",
+      "en": ["Watch this movie, it’s interesting.", "Check out this film, it’s engaging."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Вивчи нові слова до завтра.",
+      "en": ["Learn new words by tomorrow.", "Memorize new words before tomorrow."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Тримай телефон у кишені.",
+      "en": ["Keep your phone in your pocket.", "Put your phone in your pocket."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "ua": "Не кури в приміщенні.",
+      "en": ["Don’t smoke indoors.", "Avoid smoking inside."]
+    },
+    {
+      "rules": ["IMPERATIVES", "POSSESSIVE_S"],
+      "ua": "Прибери свою кімнату.",
+      "en": ["Clean your room.", "Tidy up your room."]
+    },
+    {
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ"],
+      "ua": "Спробуй новий рецепт.",
+      "en": ["Try a new recipe.", "Test out a new recipe."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Вимкни телевізор перед сном.",
+      "en": ["Turn off the TV before bed.", "Switch off the television before sleeping."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "SIMPLE_ADJ"],
+      "ua": "Не чіпай гарячу плиту.",
+      "en": ["Don’t touch the hot stove.", "Avoid touching the hot stove."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Поїдь у відпустку цього літа.",
+      "en": ["Go on vacation this summer.", "Take a trip this summer."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Зателефонуй бабусі сьогодні.",
+      "en": ["Call your grandmother today.", "Phone your grandma today."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Постав чайник на плиту.",
+      "en": ["Put the kettle on the stove.", "Place the kettle on the burner."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не спізнися на автобус.",
+      "en": ["Don’t be late for the bus.", "Don’t miss the bus."]
+    },
+    {
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ"],
+      "ua": "Одягни теплий светр.",
+      "en": ["Put on a warm sweater.", "Wear a warm sweater."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES"],
+      "ua": "Перекажи мені цю історію.",
+      "en": ["Tell me this story.", "Recount this story to me."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_OF_MANNER"],
+      "ua": "Слухай учителя уважно.",
+      "en": ["Listen to the teacher carefully.", "Pay close attention to the teacher."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "ua": "Не їж солодке перед вечерею.",
+      "en": ["Don’t eat sweets before dinner.", "Avoid sweets before supper."]
+    },
+    {
+      "rules": ["IMPERATIVES", "COUNT_UNCOUNT"],
+      "ua": "Принеси мені склянку води.",
+      "en": ["Bring me a glass of water.", "Get me a glass of water."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Почисть взуття перед виходом.",
+      "en": ["Clean your shoes before going out.", "Polish your shoes before leaving."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Погодуй кота ввечері.",
+      "en": ["Feed the cat in the evening.", "Give the cat food tonight."]
+    },
+    {
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ"],
+      "ua": "Запиши важливі нотатки.",
+      "en": ["Write down important notes.", "Take note of important points."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не розмовляй із повним ротом.",
+      "en": ["Don’t talk with your mouth full.", "Avoid speaking with food in your mouth."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME", "PREP_PLACE"],
+      "ua": "Подивись на карту перед поїздкою.",
+      "en": ["Look at the map before the trip.", "Check the map before traveling."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_OF_MANNER"],
+      "ua": "Збери свої речі швидко.",
+      "en": ["Pack your things quickly.", "Gather your belongings fast."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не грайся з ножем.",
+      "en": ["Don’t play with the knife.", "Avoid playing with the knife."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES"],
+      "ua": "Попроси допомоги у сусіда.",
+      "en": ["Ask the neighbor for help.", "Request assistance from the neighbor."]
+    },
+    {
+      "rules": ["IMPERATIVES", "POSSESSIVE_S"],
+      "ua": "Візьми з собою документи.",
+      "en": ["Take your documents with you.", "Bring your documents along."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "GERUND_VS_INFINITIVE"],
+      "ua": "Не забудь зарядити телефон.",
+      "en": ["Don’t forget to charge your phone.", "Make sure to charge your phone."]
+    },
+    {
+      "rules": ["IMPERATIVES"],
+      "ua": "Прочитай правила гри.",
+      "en": ["Read the game rules.", "Go over the rules of the game."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_OF_MANNER", "PREP_PLACE"],
+      "ua": "Будь уважним на дорозі.",
+      "en": ["Be careful on the road.", "Stay cautious on the street."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES"],
+      "ua": "Поклич друзів на вечірку.",
+      "en": ["Invite your friends to the party.", "Call your friends to the gathering."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не залишай двері відчиненими.",
+      "en": ["Don’t leave the door open.", "Avoid leaving the door unlocked."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Спакуй валізу заздалегідь.",
+      "en": ["Pack your suitcase in advance.", "Prepare your suitcase early."]
+    },
+    {
+      "rules": ["IMPERATIVES"],
+      "ua": "Дай мені ручку, будь ласка.",
+      "en": ["Give me a pen, please.", "Hand me a pen, please."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "COMPOUND_SENTENCES"],
+      "ua": "Не шуми, діти сплять.",
+      "en": ["Don’t make noise, the kids are sleeping.", "Keep quiet, the children are asleep."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME", "PREP_PLACE"],
+      "ua": "Подивись у дзеркало перед виходом.",
+      "en": ["Look in the mirror before leaving.", "Check the mirror before going out."]
+    },
+    {
+      "rules": ["IMPERATIVES", "GERUND_VS_INFINITIVE"],
+      "ua": "Вивчи вірш напам’ять.",
+      "en": ["Learn the poem by heart.", "Memorize the poem."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_OF_MANNER"],
+      "ua": "Прийми ліки вчасно.",
+      "en": ["Take your medicine on time.", "Use your medication punctually."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "ua": "Не дивись у телефон під час їжі.",
+      "en": ["Don’t look at your phone during meals.", "Avoid using your phone while eating."]
+    },
+    {
+      "rules": ["IMPERATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Зроби каву для всіх.",
+      "en": ["Make coffee for everyone.", "Prepare coffee for everybody."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Почисть зуби перед сном.",
+      "en": ["Brush your teeth before bed.", "Clean your teeth before sleeping."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не бери чужі речі.",
+      "en": ["Don’t take other people’s things.", "Avoid taking others’ belongings."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES"],
+      "ua": "Запроси колегу на обід.",
+      "en": ["Invite your colleague to lunch.", "Ask your coworker to join for lunch."]
+    },
+    {
+      "rules": ["IMPERATIVES"],
+      "ua": "Подивись розклад занять.",
+      "en": ["Check the class schedule.", "Look at the timetable for classes."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "TOO_ENOUGH"],
+      "ua": "Не їж багато солоного.",
+      "en": ["Don’t eat too much salty food.", "Avoid eating a lot of salty snacks."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Прийди на тренування раніше.",
+      "en": ["Come to training early.", "Arrive at practice earlier."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Вимкни музику після десятої.",
+      "en": ["Turn off the music after ten.", "Stop the music after ten o’clock."]
+    },
+    {
+      "rules": ["IMPERATIVES"],
+      "ua": "Попроси вчителя пояснити ще раз.",
+      "en": ["Ask the teacher to explain again.", "Request the teacher to clarify once more."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "ua": "Не забудь про зустріч завтра.",
+      "en": ["Don’t forget about tomorrow’s meeting.", "Remember the meeting tomorrow."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Поклади гроші в гаманець.",
+      "en": ["Put the money in your wallet.", "Place the money in your purse."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Подивись погоду на завтра.",
+      "en": ["Check the weather for tomorrow.", "Look up tomorrow’s weather."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "ua": "Не пий каву перед сном.",
+      "en": ["Don’t drink coffee before bed.", "Avoid coffee before sleeping."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Прибери сміття з двору.",
+      "en": ["Clean the trash from the yard.", "Remove the garbage from the courtyard."]
+    },
+    {
+      "rules": ["IMPERATIVES", "COUNT_UNCOUNT"],
+      "ua": "Зроби копію документів.",
+      "en": ["Make a copy of the documents.", "Duplicate the documents."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "TOO_ENOUGH"],
+      "ua": "Не гуляй довго на холоді.",
+      "en": ["Don’t walk outside for too long in the cold.", "Avoid staying out in the cold for long."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Попроси знижку в магазині.",
+      "en": ["Ask for a discount at the store.", "Request a discount in the shop."]
+    },
+    {
+      "rules": ["IMPERATIVES", "COUNT_UNCOUNT"],
+      "ua": "Візьми з собою перекус.",
+      "en": ["Take a snack with you.", "Bring a snack along."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Закрий кран після миття.",
+      "en": ["Turn off the tap after washing.", "Close the faucet after cleaning."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "TOO_ENOUGH"],
+      "ua": "Не бери занадто важкий рюкзак.",
+      "en": ["Don’t take too heavy a backpack.", "Don’t pick up too heavy a backpack."]
+    },
+    {
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ"],
+      "ua": "Подивись новий серіал.",
+      "en": ["Watch the new series.", "Check out the new show."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES"],
+      "ua": "Напиши повідомлення другу.",
+      "en": ["Write a message to your friend.", "Send a text to your friend."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "ua": "Не залишай їжу на столі.",
+      "en": ["Don’t leave food on the table.", "Avoid leaving food out on the table."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Погодуй рибок у акваріумі.",
+      "en": ["Feed the fish in the aquarium.", "Give food to the fish in the tank."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Вимий руки перед їжею.",
+      "en": ["Wash your hands before eating.", "Clean your hands before meals."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не забудь про день народження мами.",
+      "en": ["Don’t forget about Mom’s birthday.", "Remember Mom’s birthday."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Постав будильник на сьому.",
+      "en": ["Set the alarm for seven.", "Put the alarm on for seven o’clock."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Принеси мені книгу з полиці.",
+      "en": ["Bring me the book from the shelf.", "Get me the book off the shelf."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не розмовляй із незнайомцями.",
+      "en": ["Don’t talk to strangers.", "Avoid speaking with strangers."]
+    },
+    {
+      "rules": ["IMPERATIVES", "THERE_IS_ARE", "PREP_PLACE"],
+      "ua": "Подивись, чи є молоко в холодильнику.",
+      "en": ["Check if there’s milk in the fridge.", "See if there’s milk in the refrigerator."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_TIME"],
+      "ua": "Зроби зарядку вранці.",
+      "en": ["Do morning exercises.", "Work out in the morning."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "ua": "Не ходи босоніж по холодній підлозі.",
+      "en": ["Don’t walk barefoot on a cold floor.", "Avoid going barefoot on the cold floor."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Запиши ідею в блокнот.",
+      "en": ["Write down the idea in your notebook.", "Note the idea in your notepad."]
+    },
+    {
+      "rules": ["IMPERATIVES"],
+      "ua": "Поклич собаку додому.",
+      "en": ["Call the dog back home.", "Bring the dog inside."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "ua": "Не пий газовані напої.",
+      "en": ["Don’t drink fizzy drinks.", "Avoid drinking soda."]
+    },
+    {
+      "rules": ["IMPERATIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Прийди на зупинку раніше.",
+      "en": ["Come to the bus stop early.", "Arrive at the stop earlier."]
+    },
+    {
+      "rules": ["IMPERATIVES", "POSSESSIVE_S"],
+      "ua": "Візьми з собою навушники.",
+      "en": ["Take your headphones with you.", "Bring your earphones along."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "GERUND_VS_INFINITIVE"],
+      "ua": "Не забудь повернути книгу в бібліотеку.",
+      "en": ["Don’t forget to return the book to the library.", "Make sure to return the book to the library."]
+    },
+    {
+      "rules": ["IMPERATIVES"],
+      "ua": "Подивись розклад поїздів.",
+      "en": ["Check the train schedule.", "Look at the train timetable."]
+    },
+    {
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
+      "ua": "Прибери іграшки з підлоги.",
+      "en": ["Pick up the toys from the floor.", "Clear the toys off the floor."]
+    },
+    {
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "ua": "Не їж чипси перед обідом.",
+      "en": ["Don’t eat chips before lunch.", "Avoid eating chips before the meal."]
+    },
+    {
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES"],
+      "ua": "Попроси вибачення у сестри.",
+      "en": ["Apologize to your sister.", "Say sorry to your sister."]
+    },
+    {
+      "rules": ["IMPERATIVES", "TO_BE", "COMPOUND_SENTENCES"],
+      "ua": "Будь собою і не бійся.",
+      "en": ["Be yourself and don’t be afraid.", "Stay true to yourself and fear not."]
+    }
+  ]
+}

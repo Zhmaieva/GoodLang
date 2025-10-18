@@ -6,7 +6,7 @@ import TaskCard from "../TaskCard";
 import ResultCard from "../ResultCard";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { callAPI } from "../../services/api";
-import {addAnswer} from "../../services/dataService.js";
+import {addAnswer, getSeed, saveSeed} from "../../services/dataService.js";
 
 export default function HomePage({ theme }) {
     const LEVEL_TO_DIFFICULTY = useMemo(
@@ -22,7 +22,9 @@ export default function HomePage({ theme }) {
     const [level, setLevel] = useState("beginner");
     const [difficulty, setDifficulty] = useState(() => randomDifficulty("beginner"));
     const [textToTranslate, setTextToTranslate] = useState("");
-    const [rule, setRule] = useState(null);
+    const [nextTextToTranslate, setNextTextToTranslate] = useState("");
+    const [rules, setRules] = useState([]);
+    const [nextRules, setNextRules] = useState([]);
     const [mode, setMode] = useState("check"); // 'check' | 'next'
     const [loading, setLoading] = useState(false);
     const [hint, setHint] = useState('Порада: перекладіть і натисніть «Перевірити»');
@@ -58,10 +60,26 @@ export default function HomePage({ theme }) {
         try {
             setControlsDisabled(true);
             setAnswer("");
-            const data = await callAPI({ level: difficulty });
-            setTextToTranslate(data.textToTranslate || "");
-            setRule(data.rule || null);
-            setUaTask(data.textToTranslate || "—");
+
+            if (!nextRules || !nextTextToTranslate) {
+                const {seed, skip} = getSeed();
+                saveSeed({seed, skip});
+
+                const data = await callAPI({ level: difficulty, seed, skip });
+                setTextToTranslate(data.textToTranslate || "");
+                setRules(data.rules || null);
+                setUaTask(data.textToTranslate || "—");
+
+                saveSeed({seed, skip: data.skip ?? (skip+1) });
+            } else {
+                setTextToTranslate(nextTextToTranslate || "");
+                setRules(nextRules || null);
+                setUaTask(nextTextToTranslate || "—");
+            }
+
+            setNextTextToTranslate('');
+            setNextRules([]);
+
             setHint('Порада: перекладіть і натисніть «Перевірити»');
             setCorrectAnswer("");
             setMode("check");
@@ -78,9 +96,11 @@ export default function HomePage({ theme }) {
         if (!userAns) { setHint("Введіть переклад перед перевіркою."); return; }
         try {
             setControlsDisabled(true);
-            const data = await callAPI({ level: difficulty, textToTranslate, translation: userAns, rule });
 
-            addAnswer(data.score, data.rule, data.level);
+            const {seed, skip} = getSeed();
+            const data = await callAPI({ level: difficulty, textToTranslate, translation: userAns, rules, seed, skip });
+
+            addAnswer(data.scores, rules, data.level);
 
             if (data.isAnswerCorrect) {
                 setHint("✔ Правильно!");
@@ -91,6 +111,11 @@ export default function HomePage({ theme }) {
                 setCorrectAnswer(data.correctAnswer || "");
             }
             setMode("next");
+
+            setNextTextToTranslate(data.textToTranslate || "");
+            setNextRules(data.rules);
+
+            saveSeed({seed, skip: data.skip ?? (skip+1) });
         } catch (e) {
             console.error(e);
             setHint("❌ Помилка перевірки. Перевірте підключення до сервера.");

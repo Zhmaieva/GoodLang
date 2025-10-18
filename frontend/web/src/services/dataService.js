@@ -2,6 +2,8 @@
 import { LEVEL_RULES, RULE_LABELS } from "../utils/rules";
 
 const STORAGE_KEY = "answers_data";
+const STORAGE_KEY_SEED = "samples_seed";
+const STORAGE_KEY_SKIP = "samples_skip";
 
 export class AnswerData {
     constructor() {
@@ -18,14 +20,27 @@ export function saveAnswers(data) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
-export function addAnswer(score, rule, level) {
-    const answer = new AnswerData();
-    answer.score = score;
-    answer.rule = rule;
-    answer.level = level;
+export function saveSeed({seed, skip}) {
+    localStorage.setItem(STORAGE_KEY_SEED, seed);
+    localStorage.setItem(STORAGE_KEY_SKIP, skip);
+}
 
+export function getSeed() {
+   const seed = Number.parseInt(localStorage.getItem(STORAGE_KEY_SEED) ?? (Math.random() * 1000));
+   const skip = Number.parseInt(localStorage.getItem(STORAGE_KEY_SKIP) ?? 0);
+   return {seed, skip};
+}
+
+export function addAnswer(scores, rules, level) {
     const data = [...getAnswers()];
-    data.push(answer);
+    for (let i = 0; i < rules.length; i++) {
+        const answer = new AnswerData();
+        answer.score = scores[i];
+        answer.rule = rules[i];
+        answer.level = level;
+
+        data.push(answer);
+    }
 
     _answersCache = data;
 

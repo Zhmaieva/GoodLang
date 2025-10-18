@@ -1,0 +1,509 @@
+{
+  "WH_Q": [
+    {
+      "rules": ["WH_Q", "TO_BE", "SIMPLE_ADJ"],
+      "ua": "Хто твій найкращий друг?",
+      "en": ["Who is your best friend?", "Who's your best friend?"]
+    },
+    {
+      "rules": ["WH_Q", "TO_BE"],
+      "ua": "Де мій телефон?",
+      "en": ["Where is my phone?", "Where's my phone?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "ua": "Коли ти зазвичай прокидаєшся?",
+      "en": ["When do you usually wake up?"]
+    },
+    {
+      "rules": ["WH_Q", "THERE_IS_ARE", "ARTICLES"],
+      "ua": "Скільки стільців у кімнаті?",
+      "en": ["How many chairs are there in the room?"]
+    },
+    {
+      "rules": ["WH_Q", "HAVE_HAVE_GOT", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Скільки в тебе братів і сестер?",
+      "en": ["How many brothers and sisters do you have?", "How many brothers and sisters have you got?"]
+    },
+    {
+      "rules": ["WH_Q", "CAN_CANT", "PERSONAL_PRONOUNS"],
+      "ua": "Що ти можеш зробити сьогодні?",
+      "en": ["What can you do today?"]
+    },
+    {
+      "rules": ["WH_Q", "PREP_TIME", "TO_BE"],
+      "ua": "Коли твій день народження?",
+      "en": ["When is your birthday?", "When's your birthday?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_CONTINUOUS_NOW", "PREP_PLACE"],
+      "ua": "Що вони зараз роблять?",
+      "en": ["What are they doing now?"]
+    },
+    {
+      "rules": ["WH_Q", "COUNT_UNCOUNT", "ARTICLES"],
+      "ua": "Скільки води в пляшці?",
+      "en": ["How much water is there in the bottle?"]
+    },
+    {
+      "rules": ["WH_Q", "LIKE_ING", "PERSONAL_PRONOUNS"],
+      "ua": "Що ти любиш робити у вільний час?",
+      "en": ["What do you like doing in your free time?"]
+    },
+    {
+      "rules": ["WH_Q", "ARTICLES", "RELATIVE_CLAUSES"],
+      "ua": "Де ресторан, про який ти говорив?",
+      "en": ["Where is the restaurant you talked about?", "Where’s the restaurant you talked about?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
+      "ua": "Коли ти поїхав у Лондон?",
+      "en": ["When did you go to London?"]
+    },
+    {
+      "rules": ["WH_Q", "WAS_WERE", "PREP_PLACE"],
+      "ua": "Де ти був учора?",
+      "en": ["Where were you yesterday?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_CONTINUOUS", "PREP_TIME"],
+      "ua": "Що ти робив о восьмій годині?",
+      "en": ["What were you doing at eight?", "What were you doing at 8?"]
+    },
+    {
+      "rules": ["WH_Q", "FUTURE_WITH_PRESENT_CONTINUOUS", "PREP_TIME"],
+      "ua": "Коли ти зустрічаєшся з Марком?",
+      "en": ["When are you meeting Mark?"]
+    },
+    {
+      "rules": ["WH_Q", "GOING_TO_PLANS", "PERSONAL_PRONOUNS"],
+      "ua": "Що ти збираєшся купити завтра?",
+      "en": ["What are you going to buy tomorrow?"]
+    },
+    {
+      "rules": ["WH_Q", "WILL_PREDICTIONS"],
+      "ua": "Коли він повернеться?",
+      "en": ["When will he come back?", "When will he return?"]
+    },
+    {
+      "rules": ["WH_Q", "HAVE_TO_DONT_HAVE_TO"],
+      "ua": "Чому ти маєш іти зараз?",
+      "en": ["Why do you have to go now?"]
+    },
+    {
+      "rules": ["WH_Q", "SHOULD_SHOULDN'T"],
+      "ua": "Що я маю зробити далі?",
+      "en": ["What should I do next?"]
+    },
+    {
+      "rules": ["WH_Q", "MAY_MIGHT"],
+      "ua": "Де ми можемо зустрітися?",
+      "en": ["Where may we meet?", "Where can we meet?"]
+    },
+    {
+      "rules": ["WH_Q", "COMPARATIVES", "ARTICLES"],
+      "ua": "Який маршрут коротший?",
+      "en": ["Which route is shorter?"]
+    },
+    {
+      "rules": ["WH_Q", "SUPERLATIVES", "ARTICLES"],
+      "ua": "Яке місто найбільше у світі?",
+      "en": ["What is the biggest city in the world?", "What's the biggest city in the world?"]
+    },
+    {
+      "rules": ["WH_Q", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
+      "ua": "Чиє це пальто?",
+      "en": ["Whose coat is this?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "ARTICLES"],
+      "ua": "Хто відкрив двері?",
+      "en": ["Who opened the door?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+      "ua": "Що ти вже зробив?",
+      "en": ["What have you done already?", "What have you done so far?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_PERFECT", "SINCE_FOR"],
+      "ua": "Як довго ти тут живеш?",
+      "en": ["How long have you lived here?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_PERFECT_CONTINUOUS", "SINCE_FOR"],
+      "ua": "Як довго ви чекаєте?",
+      "en": ["How long have you been waiting?"]
+    },
+    {
+      "rules": ["WH_Q", "USED_TO"],
+      "ua": "Де ти раніше працював?",
+      "en": ["Where did you use to work?"]
+    },
+    {
+      "rules": ["WH_Q", "BE_USED_TO_GET_USED_TO"],
+      "ua": "До чого ти вже звик?",
+      "en": ["What are you used to?"]
+    },
+    {
+      "rules": ["WH_Q", "COUNT_UNCOUNT", "ARTICLES"],
+      "ua": "Скільки молока залишилося?",
+      "en": ["How much milk is left?"]
+    },
+    {
+      "rules": ["WH_Q", "QUANTIFIERS", "THERE_IS_ARE"],
+      "ua": "Скільки людей у черзі?",
+      "en": ["How many people are there in the queue?", "How many people are there in line?"]
+    },
+    {
+      "rules": ["WH_Q", "ORDINALS_DATES", "PREP_TIME"],
+      "ua": "Коли твоя наступна зустріч?",
+      "en": ["When is your next meeting?", "When’s your next meeting?"]
+    },
+    {
+      "rules": ["WH_Q", "LIKE_LOVE_HATE_ING", "PERSONAL_PRONOUNS"],
+      "ua": "Що ти ненавидиш робити?",
+      "en": ["What do you hate doing?"]
+    },
+    {
+      "rules": ["WH_Q", "ARTICLES", "SIMPLE_ADJ"],
+      "ua": "Де найближча аптека?",
+      "en": ["Where is the nearest pharmacy?", "Where's the nearest pharmacy?"]
+    },
+    {
+      "rules": ["WH_Q", "PREP_TIME", "ARTICLES"],
+      "ua": "Коли починається урок?",
+      "en": ["When does the lesson start?"]
+    },
+    {
+      "rules": ["WH_Q", "MAKE_DO_DIFFERENCE"],
+      "ua": "Що робить різницю у цьому випадку?",
+      "en": ["What makes a difference in this case?"]
+    },
+    {
+      "rules": ["WH_Q", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+      "ua": "Коли було побудовано цей будинок?",
+      "en": ["When was this house built?"]
+    },
+    {
+      "rules": ["WH_Q", "GET_PAST_PARTICIPLE"],
+      "ua": "Як він зазвичай травмується?",
+      "en": ["How does he usually get hurt?"]
+    },
+    {
+      "rules": ["WH_Q", "RELATIVE_CLAUSES", "ARTICLES"],
+      "ua": "Яка книга, про яку ти казав?",
+      "en": ["Which is the book that you mentioned?", "Which book did you mention?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ", "HOW_OFTEN_LONG_MUCH"],
+      "ua": "Як часто ти бігаєш?",
+      "en": ["How often do you run?"]
+    },
+    {
+      "rules": ["WH_Q", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Де твоя сумка?",
+      "en": ["Where is your bag?", "Where’s your bag?"]
+    },
+    {
+      "rules": ["WH_Q", "IF_PRESENT_WILL_V", "PRESENT_SIMPLE_FREQ"],
+      "ua": "Що ти зробиш, якщо підеш раніше?",
+      "en": ["What will you do if you leave early?"]
+    },
+    {
+      "rules": ["WH_Q", "BE_FROM_NATIONALITY", "TO_BE"],
+      "ua": "Звідки ти?",
+      "en": ["Where are you from?"]
+    },
+    {
+      "rules": ["WH_Q", "ARTICLES"],
+      "ua": "Де тут туалет?",
+      "en": ["Where is the bathroom here?", "Where’s the toilet here?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ", "ADVERBS_OF_FREQUENCY"],
+      "ua": "Як часто вона ходить до спортзалу?",
+      "en": ["How often does she go to the gym?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
+      "ua": "Що ти сказав?",
+      "en": ["What did you say?"]
+    },
+    {
+      "rules": ["WH_Q", "MODAL_VERBS_OF_PROBABILITY", "TO_BE"],
+      "ua": "Хто це може бути?",
+      "en": ["Who could that be?", "Who might that be?"]
+    },
+    {
+      "rules": ["WH_Q", "REPORTED_SPEECH", "PERSONAL_PRONOUNS"],
+      "ua": "Що він сказав тобі?",
+      "en": ["What did he say to you?"]
+    },
+    {
+      "rules": ["WH_Q", "PHRASAL_VERBS_COMMON", "PERSONAL_PRONOUNS"],
+      "ua": "Коли ти прокинувся сьогодні?",
+      "en": ["When did you wake up today?"]
+    },
+    {
+      "rules": ["WH_Q", "PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
+      "ua": "Коли ви повернулися додому?",
+      "en": ["When did you come back home?", "When did you return home?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_CONTINUOUS_NOW"],
+      "ua": "Куди ти йдеш?",
+      "en": ["Where are you going?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_CONTINUOUS", "PERSONAL_PRONOUNS"],
+      "ua": "Що ти робиш зараз?",
+      "en": ["What are you doing now?", "What’re you doing now?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_SIMPLE", "PERSONAL_PRONOUNS"],
+      "ua": "Де вона живе?",
+      "en": ["Where does she live?", "Where’s she living?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "NEGATION"],
+      "ua": "Чому він не прийшов?",
+      "en": ["Why didn’t he come?", "Why hasn’t he come?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_CONTINUOUS", "PERSONAL_PRONOUNS"],
+      "ua": "Куди вони йдуть?",
+      "en": ["Where are they going?", "Where’re they headed?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "DEMONSTRATIVES"],
+      "ua": "Хто це зробив?",
+      "en": ["Who did this?", "Who’s done this?"]
+    },
+    {
+      "rules": ["WH_Q", "ADVERBS_OF_FREQUENCY", "PRESENT_SIMPLE"],
+      "ua": "Як часто ти ходиш до спортзалу?",
+      "en": ["How often do you go to the gym?", "How often are you going to the gym?"]
+    },
+    {
+      "rules": ["WH_Q", "COUNTABLE_NOUNS", "HAVE_HAVE_GOT"],
+      "ua": "Скільки у тебе є книг?",
+      "en": ["How many books do you have?", "How many books have you got?"]
+    },
+    {
+      "rules": ["WH_Q", "POSSESSIVE_S", "DEMONSTRATIVES"],
+      "ua": "Чий це собака?",
+      "en": ["Whose dog is this?", "Whose is this dog?"]
+    },
+    {
+      "rules": ["WH_Q", "INFINITIVE", "PRESENT_SIMPLE"],
+      "ua": "Що ти хочеш зробити?",
+      "en": ["What do you want to do?", "What are you wanting to do?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+      "ua": "Де ти був учора?",
+      "en": ["Where were you yesterday?", "Where’d you been yesterday?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_PERFECT_CONTINUOUS", "HOW_LONG"],
+      "ua": "Як довго ти вчиш англійську?",
+      "en": ["How long have you been learning English?", "How long’ve you been studying English?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_CONTINUOUS", "PREPOSITIONS_OF_PLACE"],
+      "ua": "Що вона готує на кухні?",
+      "en": ["What is she cooking in the kitchen?", "What’s she making in the kitchen?"]
+    },
+    {
+      "rules": ["WH_Q", "TO_BE", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Хто твої найкращі друзі?",
+      "en": ["Who are your best friends?", "Who’re your closest friends?"]
+    },
+    {
+      "rules": ["WH_Q", "GOING_TO", "FUTURE_WITH_PRESENT_CONTINUOUS"],
+      "ua": "Куди ти поїдеш наступного літа?",
+      "en": ["Where are you going next summer?", "Where will you go next summer?"]
+    },
+    {
+      "rules": ["WH_Q", "TO_BE", "SIMPLE_ADJECTIVES"],
+      "ua": "Чому ти такий втомлений?",
+      "en": ["Why are you so tired?", "Why’re you that exhausted?"]
+    },
+    {
+      "rules": ["WH_Q", "HOW_MUCH", "DEMONSTRATIVES"],
+      "ua": "Скільки коштує ця книга?",
+      "en": ["How much does this book cost?", "How much is this book?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_CONTINUOUS", "WHEN"],
+      "ua": "Що ти робив, коли я подзвонив?",
+      "en": ["What were you doing when I called?", "What’d you been doing when I rang?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "ARTICLES"],
+      "ua": "Хто виграв гру?",
+      "en": ["Who won the game?", "Who’s won the game?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_SIMPLE", "PREPOSITIONS_OF_PLACE"],
+      "ua": "Як ти добираєшся до школи?",
+      "en": ["How do you get to school?", "How do you travel to school?"]
+    },
+    {
+      "rules": ["WH_Q", "LIKE_ING", "NEGATION"],
+      "ua": "Чому ти не любиш читати?",
+      "en": ["Why don’t you like reading?", "Why do you dislike reading?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Де твій брат був минулого тижня?",
+      "en": ["Where was your brother last week?", "Where’d your brother been last week?"]
+    },
+    {
+      "rules": ["WH_Q", "GOING_TO", "WILL"],
+      "ua": "Що ти будеш робити завтра?",
+      "en": ["What are you going to do tomorrow?", "What will you do tomorrow?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "INFINITIVE"],
+      "ua": "Хто навчив тебе грати на гітарі?",
+      "en": ["Who taught you to play the guitar?", "Who’s taught you guitar?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+      "ua": "Як довго ти знаєш її?",
+      "en": ["How long have you known her?", "How long’ve you been knowing her?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "DEMONSTRATIVES"],
+      "ua": "Де ти купив цю куртку?",
+      "en": ["Where did you buy this jacket?", "Where’d you get this jacket?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_SIMPLE", "ADVERBS_OF_FREQUENCY"],
+      "ua": "Що ти зазвичай їси на сніданок?",
+      "en": ["What do you usually eat for breakfast?", "What’re you usually having for breakfast?"]
+    },
+    {
+      "rules": ["WH_Q", "HAVE_TO", "MUST"],
+      "ua": "Чому він повинен залишитися вдома?",
+      "en": ["Why does he have to stay home?", "Why must he stay at home?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "DEMONSTRATIVES"],
+      "ua": "Хто написав цю книгу?",
+      "en": ["Who wrote this book?", "Who’s written this book?"]
+    },
+    {
+      "rules": ["WH_Q", "WILL", "FUTURE_WITH_PRESENT_CONTINUOUS"],
+      "ua": "Де вони будуть завтра ввечері?",
+      "en": ["Where will they be tomorrow evening?", "Where are they going to be tomorrow night?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "HOW_LONG"],
+      "ua": "Скільки часу ти провів там?",
+      "en": ["How long did you spend there?", "How much time did you spend there?"]
+    },
+    {
+      "rules": ["WH_Q", "INFINITIVE", "PRESENT_SIMPLE"],
+      "ua": "Що ти робиш, щоб залишатися здоровим?",
+      "en": ["What do you do to stay healthy?", "What are you doing to keep healthy?"]
+    },
+    {
+      "rules": ["WH_Q", "TO_BE", "SIMPLE_ADJECTIVES"],
+      "ua": "Хто твої улюблені актори?",
+      "en": ["Who are your favorite actors?", "Who’re your favorite actors?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "WHEN"],
+      "ua": "Де ти був, коли почалася буря?",
+      "en": ["Where were you when the storm started?", "Where’d you been when the storm began?"]
+    },
+    {
+      "rules": ["WH_Q", "CAN_CANT", "NEGATION"],
+      "ua": "Чому ти не можеш прийти?",
+      "en": ["Why can’t you come?", "Why aren’t you able to come?"]
+    },
+    {
+      "rules": ["WH_Q", "ADVERBS_OF_FREQUENCY", "PRESENT_SIMPLE"],
+      "ua": "Як часто ти відвідуєш бабусю?",
+      "en": ["How often do you visit your grandma?", "How often are you visiting your grandmother?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "PREPOSITIONS_OF_PLACE"],
+      "ua": "Що ти купив у магазині?",
+      "en": ["What did you buy at the store?", "What’d you get in the shop?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "DEMONSTRATIVES"],
+      "ua": "Хто сказав тобі про це?",
+      "en": ["Who told you about it?", "Who’s told you about this?"]
+    },
+    {
+      "rules": ["WH_Q", "ADVERBS_OF_FREQUENCY", "PRESENT_SIMPLE"],
+      "ua": "Де ти зазвичай паркуєш машину?",
+      "en": ["Where do you usually park your car?", "Where do you normally park the car?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_CONTINUOUS", "PERSONAL_PRONOUNS"],
+      "ua": "Чому вона плакала вчора?",
+      "en": ["Why was she crying yesterday?", "Why’d she been crying yesterday?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "COUNTABLE_NOUNS"],
+      "ua": "Скільки людей було на вечірці?",
+      "en": ["How many people were at the party?", "How many people attended the party?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_CONTINUOUS", "BEFORE_AFTER"],
+      "ua": "Що ти робив до того, як я прийшов?",
+      "en": ["What were you doing before I came?", "What’d you been doing before I arrived?"]
+    },
+    {
+      "rules": ["WH_Q", "TO_BE", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Хто твій учитель англійської?",
+      "en": ["Who is your English teacher?", "Who’s your teacher for English?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "DEMONSTRATIVES"],
+      "ua": "Де ти знайшов ці ключі?",
+      "en": ["Where did you find these keys?", "Where’d you get those keys?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "NEGATION"],
+      "ua": "Чому ти не пішов до школи?",
+      "en": ["Why didn’t you go to school?", "Why haven’t you gone to school?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "HOW_LONG"],
+      "ua": "Як довго ти чекав автобуса?",
+      "en": ["How long did you wait for the bus?", "How long were you waiting for the bus?"]
+    },
+    {
+      "rules": ["WH_Q", "GOING_TO", "WILL"],
+      "ua": "Що ти збираєшся купити?",
+      "en": ["What are you going to buy?", "What will you buy?"]
+    },
+    {
+      "rules": ["WH_Q", "PAST_SIMPLE", "ORDINAL_NUMBERS"],
+      "ua": "Хто виграв останній матч?",
+      "en": ["Who won the last match?", "Who’s won the latest match?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_PERFECT", "DEMONSTRATIVES"],
+      "ua": "Де ти був увесь цей час?",
+      "en": ["Where have you been all this time?", "Where’ve you been this whole time?"]
+    },
+    {
+      "rules": ["WH_Q", "TO_BE", "SIMPLE_ADJECTIVES"],
+      "ua": "Чому він такий сердитий?",
+      "en": ["Why is he so angry?", "Why’s he that upset?"]
+    },
+    {
+      "rules": ["WH_Q", "PRESENT_SIMPLE", "WHEN"],
+      "ua": "Що ти робиш, коли тобі нудно?",
+      "en": ["What do you do when you’re bored?", "What do you do if you’re bored?"]
+    }
+  ]
+}
