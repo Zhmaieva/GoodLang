@@ -1,0 +1,607 @@
+{ "PRESENT_PERFECT": [
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Я щойно закінчив домашнє завдання.",
+    "en": [
+      "I have just finished my homework.",
+      "I've just finished my homework."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Вона вже приготувала обід.",
+    "en": [
+      "She has already cooked lunch.",
+      "She's already cooked lunch."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Вони щойно прийшли додому.",
+    "en": [
+      "They have just come home.",
+      "They've just come home."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST", "DEMONSTRATIVES"],
+    "ua": "Ти вже подивився цей фільм?",
+    "en": [
+      "Have you already watched this movie?",
+      "Have you watched this movie already?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Ми живемо тут п’ять років.",
+    "en": [
+      "We have lived here for five years.",
+      "We've lived here for five years."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Ти коли-небудь був у Парижі?",
+    "en": [
+      "Have you ever been to Paris?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Я ніколи не пив каву без молока.",
+    "en": [
+      "I have never drunk coffee without milk.",
+      "I've never drunk coffee without milk."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Він втратив свої ключі.",
+    "en": [
+      "He has lost his keys.",
+      "He's lost his keys."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона купила новий телефон.",
+    "en": [
+      "She has bought a new phone.",
+      "She's bought a new phone."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми закінчили гру.",
+    "en": [
+      "We have finished the game.",
+      "We've finished the game."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT", "DEMONSTRATIVES"],
+    "ua": "Я вже бачив цього актора.",
+    "en": [
+      "I have seen this actor before.",
+      "I've seen this actor before."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ти щось їв сьогодні?",
+    "en": [
+      "Have you eaten anything today?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вони втекли з вечірки.",
+    "en": [
+      "They have left the party.",
+      "They've left the party."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона знайшла свій гаманець.",
+    "en": [
+      "She has found her wallet.",
+      "She's found her wallet."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я взяв із собою парасольку.",
+    "en": [
+      "I have taken an umbrella with me.",
+      "I've taken an umbrella with me."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Ми щойно поговорили з учителем.",
+    "en": [
+      "We have just talked to the teacher.",
+      "We've just talked to the teacher."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Я знаю її з дитинства.",
+    "en": [
+      "I have known her since childhood.",
+      "I've known her since childhood."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Вони працюють тут з понеділка.",
+    "en": [
+      "They have worked here since Monday.",
+      "They've worked here since Monday."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Він ніколи не бачив снігу.",
+    "en": [
+      "He has never seen snow.",
+      "He's never seen snow."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я змінив свою думку.",
+    "en": [
+      "I have changed my mind.",
+      "I've changed my mind."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Ти вже зробив це завдання?",
+    "en": [
+      "Have you done this task yet?",
+      "Have you already done this task?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона зламала свій телефон.",
+    "en": [
+      "She has broken her phone.",
+      "She's broken her phone."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми втратили багато часу.",
+    "en": [
+      "We have lost a lot of time.",
+      "We've lost a lot of time."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вони переїхали до нового міста.",
+    "en": [
+      "They have moved to a new town.",
+      "They've moved to a new town."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Я ніколи не стирав білизну сам.",
+    "en": [
+      "I have never done laundry by myself.",
+      "I've never done laundry by myself."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Ти коли-небудь пробував суші?",
+    "en": [
+      "Have you ever tried sushi?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми вже закінчили роботу.",
+    "en": [
+      "We have already finished the work.",
+      "We've already finished the work."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Він змінив школу.",
+    "en": [
+      "He has changed schools.",
+      "He's changed schools."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я вивчив багато нових слів.",
+    "en": [
+      "I have learned many new words.",
+      "I've learned many new words."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Вона ще не почала їсти.",
+    "en": [
+      "She hasn’t started eating yet.",
+      "She has not started eating yet."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вони запросили нас на вечірку.",
+    "en": [
+      "They have invited us to the party.",
+      "They've invited us to the party."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я читав цю книгу двічі.",
+    "en": [
+      "I have read this book twice.",
+      "I've read this book twice."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Він забув закрити двері.",
+    "en": [
+      "He has forgotten to close the door.",
+      "He's forgotten to close the door."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Ми знайомі кілька років.",
+    "en": [
+      "We have known each other for several years.",
+      "We've known each other for several years."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ти бачив мої ключі?",
+    "en": [
+      "Have you seen my keys?"
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона випила занадто багато кави.",
+    "en": [
+      "She has drunk too much coffee.",
+      "She's drunk too much coffee."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Ми ще не вирішили це питання.",
+    "en": [
+      "We haven’t solved this problem yet.",
+      "We have not solved this problem yet."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "DEMONSTRATIVES"],
+    "ua": "Я вже зустрічав цього хлопця.",
+    "en": [
+      "I have already met this guy.",
+      "I've already met this guy."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Він залишив парасольку вдома.",
+    "en": [
+      "He has left his umbrella at home.",
+      "He's left his umbrella at home."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Ти вже прибирав свою кімнату?",
+    "en": [
+      "Have you cleaned your room yet?"
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми вже подивилися цей серіал.",
+    "en": [
+      "We have already watched this series.",
+      "We've already watched this series."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона загубила свій гаманець.",
+    "en": [
+      "She has lost her wallet.",
+      "She's lost her wallet."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Я ще не отримав відповідь.",
+    "en": [
+      "I haven’t received a reply yet.",
+      "I have not received a reply yet."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Ти коли-небудь катався на коні?",
+    "en": [
+      "Have you ever ridden a horse?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми з’їли всю піцу.",
+    "en": [
+      "We have eaten all the pizza.",
+      "We've eaten all the pizza."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вони відкрили новий магазин.",
+    "en": [
+      "They have opened a new shop.",
+      "They've opened a new shop."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Я щойно отримав повідомлення.",
+    "en": [
+      "I have just received a message.",
+      "I've just received a message."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Він уже зробив домашнє завдання.",
+    "en": [
+      "He has already done his homework.",
+      "He's already done his homework."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "DEMONSTRATIVES"],
+    "ua": "Ми бачили ті зірки раніше.",
+    "en": [
+      "We have seen those stars before.",
+      "We've seen those stars before."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Я ніколи не був за кордоном.",
+    "en": [
+      "I have never been abroad.",
+      "I've never been abroad."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я сьогодні вже поснідав.",
+    "en": [
+      "I have already had breakfast today.",
+      "I've already had breakfast today."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона зламала свій ніготь.",
+    "en": [
+      "She has broken her nail.",
+      "She's broken her nail."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Ти коли-небудь бачив китів?",
+    "en": [
+      "Have you ever seen whales?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми ще не приготували вечерю.",
+    "en": [
+      "We haven’t cooked dinner yet.",
+      "We have not cooked dinner yet."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вони продали свій будинок.",
+    "en": [
+      "They have sold their house.",
+      "They've sold their house."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я написав два листи сьогодні.",
+    "en": [
+      "I have written two letters today.",
+      "I've written two letters today."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона втратила свій телефон ще раз.",
+    "en": [
+      "She has lost her phone again.",
+      "She's lost her phone again."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Він вже пообідав.",
+    "en": [
+      "He has already had lunch.",
+      "He's already had lunch."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вони розчистили сніг біля дому.",
+    "en": [
+      "They have cleared the snow near the house.",
+      "They've cleared the snow near the house."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Я знаю його три роки.",
+    "en": [
+      "I have known him for three years.",
+      "I've known him for three years."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона розфарбувала свою кімнату.",
+    "en": [
+      "She has painted her room.",
+      "She's painted her room."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми вже попрали одяг.",
+    "en": [
+      "We have already done the laundry.",
+      "We've already done the laundry."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Я ніколи не грав у теніс.",
+    "en": [
+      "I have never played tennis.",
+      "I've never played tennis."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Він порізав палець.",
+    "en": [
+      "He has cut his finger.",
+      "He's cut his finger."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Вони лише щойно прибули.",
+    "en": [
+      "They have just arrived.",
+      "They've just arrived."
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми купили квитки на концерт.",
+    "en": [
+      "We have bought tickets for the concert.",
+      "We've bought tickets for the concert."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона підняла руку.",
+    "en": [
+      "She has raised her hand.",
+      "She's raised her hand."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "DEMONSTRATIVES"],
+    "ua": "Я вже дивився той фільм.",
+    "en": [
+      "I have already watched that movie.",
+      "I've already watched that movie."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Він ще не відправив листа.",
+    "en": [
+      "He hasn’t sent the letter yet.",
+      "He has not sent the letter yet."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Ти колись куштував манго?",
+    "en": [
+      "Have you ever tasted mango?"
+    ]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Ми спіймали таксі.",
+    "en": [
+      "We have caught a taxi.",
+      "We've caught a taxi."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я знайшов цікаву статтю.",
+    "en": [
+      "I have found an interesting article.",
+      "I've found an interesting article."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT", "EVER_NEVER"],
+    "ua": "Він ніколи не читав цю книгу.",
+    "en": [
+      "He has never read this book.",
+      "He's never read this book."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Вона підготувала презентацію.",
+    "en": [
+      "She has prepared the presentation.",
+      "She's prepared the presentation."
+    ]
+  },
+  {
+    "rules": ["PRESENT_PERFECT"],
+    "ua": "Я ще не завершив свою роботу.",
+    "en": [
+      "I haven’t finished my work yet.",
+      "I have not finished my work yet."
+    ]
+  }
+] }

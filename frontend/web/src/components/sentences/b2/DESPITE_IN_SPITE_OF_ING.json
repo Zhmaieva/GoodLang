@@ -1,0 +1,890 @@
+{ "DESPITE_IN_SPITE_OF_ING": [
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PAST_SIMPLE"],
+    "ua": "Попри дощ, вони грали у футбол. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the rain, they played football.",
+      "In spite of the rain, they played football."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT"],
+    "ua": "Попри втому, вона завершила роботу. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being tired, she has finished the work.",
+      "In spite of being tired, she has finished the work."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Він прийшов на зустріч попри те, що почувався зле. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite feeling ill, he came to the meeting.",
+      "In spite of feeling ill, he came to the meeting."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_CONT_NOW"],
+    "ua": "Попри те, що йде дощ, ми все одно йдемо гуляти. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite it raining, we are still going for a walk.",
+      "In spite of it raining, we are still going for a walk."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри затримку, зустріч була успішною. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being delayed, the meeting was successful.",
+      "In spite of being delayed, the meeting was successful."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Попри проблеми, є надія на успіх. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the problems, there is hope for success.",
+      "In spite of the problems, there is hope for success."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PAST_PERFECT"],
+    "ua": "Попри те, що він вивчив матеріал, він не склав тест. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having studied the material, he didn’t pass the test.",
+      "In spite of having studied the material, he didn’t pass the test."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "TOO_ENOUGH"],
+    "ua": "Попри те, що було надто холодно, ми пішли купатися. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite it being too cold, we went swimming.",
+      "In spite of it being too cold, we went swimming."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Попри свої помилки, він отримав схвалення. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite his mistakes, he received approval.",
+      "In spite of his mistakes, he received approval."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "FIRST_CONDITIONAL"],
+    "ua": "Ми поїдемо на пікнік, попри дощ, якщо він буде слабким. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "We’ll go on a picnic despite it raining if it’s light.",
+      "We’ll go on a picnic in spite of it raining if it’s light."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT"],
+    "ua": "Попри те, що він працював цілий день, він ще не завершив проект. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite working all day, he hasn’t finished the project yet.",
+      "In spite of working all day, he hasn’t finished the project yet."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що були зроблені всі зусилля, проблема не була вирішена. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite all efforts being made, the problem wasn’t solved.",
+      "In spite of all efforts being made, the problem wasn’t solved."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Попри те, що він запізнився, його впустили на лекцію. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being late, he was allowed into the lecture.",
+      "In spite of being late, he was allowed into the lecture."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Попри відсутність доказів, це може бути правдою. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the lack of evidence, it might be true.",
+      "In spite of the lack of evidence, it might be true."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT_CONT"],
+    "ua": "Попри те, що ми працювали годинами, результат не з’явився. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having been working for hours, the result hasn’t appeared.",
+      "In spite of having been working for hours, the result hasn’t appeared."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PAST_SIMPLE"],
+    "ua": "Попри попередження, вони пішли в море під час шторму. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the warning, they went to sea during the storm.",
+      "In spite of the warning, they went to sea during the storm."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "FIRST_CONDITIONAL"],
+    "ua": "Ми підемо на прогулянку, попри те, що буде холодно. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "We’ll go for a walk despite it being cold.",
+      "We’ll go for a walk in spite of it being cold."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Попри шум, у бібліотеці є люди, які працюють. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the noise, there are people working in the library.",
+      "In spite of the noise, there are people working in the library."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "TOO_ENOUGH"],
+    "ua": "Попри те, що вона занадто втомлена, вона допомагає іншим. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being too tired, she helps others.",
+      "In spite of being too tired, she helps others."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_CONT_NOW"],
+    "ua": "Попри те, що зараз іде дощ, діти граються надворі. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite it raining now, the children are playing outside.",
+      "In spite of it raining now, the children are playing outside."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PAST_PERFECT"],
+    "ua": "Попри те, що він уже закінчив роботу, він залишився допомогти. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having finished his work, he stayed to help.",
+      "In spite of having finished his work, he stayed to help."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Попри свої страхи, вона виступила на сцені. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite her fears, she performed on stage.",
+      "In spite of her fears, she performed on stage."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Попри втому, він завжди допомагає іншим. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being tired, he always helps others.",
+      "In spite of being tired, he always helps others."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "COMPARATIVES"],
+    "ua": "Попри те, що вона молодша, вона досвідченіша. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being younger, she is more experienced.",
+      "In spite of being younger, she is more experienced."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "LIKE_LOVE_HATE_ING"],
+    "ua": "Попри те, що він не любить подорожувати, він поїхав заради родини. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite not liking traveling, he went for his family.",
+      "In spite of not liking traveling, he went for his family."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що фільм був знятий давно, він все ще популярний. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being made years ago, the film is still popular.",
+      "In spite of being made years ago, the film is still popular."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Попри попередження, вони могли потрапити в небезпеку. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the warnings, they might have been in danger.",
+      "In spite of the warnings, they might have been in danger."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Попри те, що він не цікавиться спортом, він пішов на гру. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite not being interested in sports, he went to the game.",
+      "In spite of not being interested in sports, he went to the game."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "ZERO_CONDITIONAL"],
+    "ua": "Попри холодну погоду, вони завжди плавають у морі. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the cold weather, they always swim in the sea.",
+      "In spite of the cold weather, they always swim in the sea."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "HAVE_HAVE_GOT"],
+    "ua": "Попри те, що ми маємо мало часу, ми все одно зустрінемось. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having little time, we’ll still meet.",
+      "In spite of having little time, we’ll still meet."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "WILL_PREDICTIONS"],
+    "ua": "Попри труднощі, команда виграє змагання. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the difficulties, the team will win the competition.",
+      "In spite of the difficulties, the team will win the competition."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "COUNT_UNCOUNT"],
+    "ua": "Попри дощ і бруд, діти насолоджувались грою. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the rain and mud, the children enjoyed the game.",
+      "In spite of the rain and mud, the children enjoyed the game."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT"],
+    "ua": "Попри те, що вона вивчала англійську роками, їй важко говорити. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite studying English for years, she finds it hard to speak.",
+      "In spite of studying English for years, she finds it hard to speak."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Попри проблеми, є шанс на перемогу. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the problems, there is a chance of winning.",
+      "In spite of the problems, there is a chance of winning."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PAST_SIMPLE"],
+    "ua": "Попри сильний дощ, вони дістались додому без проблем. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the heavy rain, they got home safely.",
+      "In spite of the heavy rain, they got home safely."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що проєкт був завершений раніше, він потребує доопрацювання. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being completed early, the project still needs improvement.",
+      "In spite of being completed early, the project still needs improvement."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODAL_PERFECTS"],
+    "ua": "Попри те, що він міг помилитися, його рішення виявилося правильним. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having possibly made a mistake, his decision turned out to be right.",
+      "In spite of having possibly made a mistake, his decision turned out to be right."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "REPORTED_SPEECH"],
+    "ua": "Вона сказала, що попри втому, продовжувала працювати. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "She said that despite being tired, she kept working.",
+      "She said that in spite of being tired, she kept working."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "SECOND_CONDITIONAL"],
+    "ua": "Якби не його наполегливість, попри всі труднощі, він би не досяг успіху. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "If not for his persistence, despite facing all difficulties, he wouldn’t succeed.",
+      "If not for his persistence, in spite of facing all difficulties, he wouldn’t succeed."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THIRD_CONDITIONAL"],
+    "ua": "Попри те, що він працював наполегливо, він міг зазнати невдачі. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having worked hard, he could have failed.",
+      "In spite of having worked hard, he could have failed."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що його було попереджено, він не зупинився. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being warned, he didn’t stop.",
+      "In spite of being warned, he didn’t stop."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "INVERSION_AFTER_NEGATIVE_ADVERBIALS"],
+    "ua": "Лише попри втрату підтримки, він зберіг спокій. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Only despite losing support did he remain calm.",
+      "Only in spite of losing support did he remain calm."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "RELATIVE_CLAUSES"],
+    "ua": "Компанія, попри те, що зазнала збитків, продовжує зростати. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "The company, despite suffering losses, continues to grow.",
+      "The company, in spite of suffering losses, continues to grow."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT_CONT"],
+    "ua": "Попри те, що ми працюємо без перерви, ми ще не завершили звіт. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having been working non-stop, we haven’t finished the report yet.",
+      "In spite of having been working non-stop, we haven’t finished the report yet."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "TOO_ENOUGH"],
+    "ua": "Попри те, що він занадто молодий, його поважають. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being too young, he is respected.",
+      "In spite of being too young, he is respected."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Попри те, що вона не цікавиться політикою, вона проголосувала. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite not being interested in politics, she voted.",
+      "In spite of not being interested in politics, she voted."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Попри ризики, це може бути вигідною інвестицією. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the risks, it might be a profitable investment.",
+      "In spite of the risks, it might be a profitable investment."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що його було звільнено, він залишився спокійним. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being fired, he stayed calm.",
+      "In spite of being fired, he stayed calm."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PARTICIPLE_CLAUSES"],
+    "ua": "Попри отримавши пораду, він зробив усе по-своєму. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having received advice, he did everything his own way.",
+      "In spite of having received advice, he did everything his own way."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Попри те, що було темно, вони продовжували йти вперед. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite it being dark, they kept moving forward.",
+      "In spite of it being dark, they kept moving forward."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT", "COMPARATIVES"],
+    "ua": "Попри те, що результати були гірші, команда виступила впевненіше. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having worse results, the team performed more confidently.",
+      "In spite of having worse results, the team performed more confidently."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "COUNT_UNCOUNT"],
+    "ua": "Попри погану погоду, глядачів зібралось багато. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the bad weather, there were many spectators.",
+      "In spite of the bad weather, there were many spectators."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Попри втому, він часто залишається на роботі допізна. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being tired, he often stays late at work.",
+      "In spite of being tired, he often stays late at work."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES", "THERE_IS_ARE"],
+    "ua": "Попри труднощі, є причини для оптимізму. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the difficulties, there are reasons for optimism.",
+      "In spite of the difficulties, there are reasons for optimism."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PAST_PERFECT"],
+    "ua": "Попри те, що вони вже прибули, зустріч ще не почалася. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having arrived, the meeting hadn’t started yet.",
+      "In spite of having arrived, the meeting hadn’t started yet."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "WILL_PREDICTIONS"],
+    "ua": "Попри всі ризики, компанія досягне успіху. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the risks, the company will succeed.",
+      "In spite of the risks, the company will succeed."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Попри обмежений час, є шанс завершити проєкт. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the limited time, there is a chance to complete the project.",
+      "In spite of the limited time, there is a chance to complete the project."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "ZERO_CONDITIONAL"],
+    "ua": "Попри холодну погоду, люди завжди виходять на прогулянку. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the cold weather, people always go for a walk.",
+      "In spite of the cold weather, people always go for a walk."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT", "BE_SUPPOSED_TO"],
+    "ua": "Попри те, що він мав бути вдома, він поїхав на роботу. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite being supposed to stay home, he went to work.",
+      "In spite of being supposed to stay home, he went to work."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PARTICIPLE_CLAUSES"],
+    "ua": "Попри закінчивши навчання, він залишився в університеті як викладач. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having graduated, he stayed at the university as a teacher.",
+      "In spite of having graduated, he stayed at the university as a teacher."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES", "PRESENT_PERFECT"],
+    "ua": "Попри те, що були прийняті заходи, проблема не зникла. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite measures being taken, the problem has not disappeared.",
+      "In spite of measures being taken, the problem has not disappeared."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Попри те, що було складно, учасники досягли мети. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite it being difficult, the participants achieved their goal.",
+      "In spite of it being difficult, the participants achieved their goal."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Попри ризики, проєкт може виявитися успішним. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the risks, the project might turn out to be successful.",
+      "In spite of the risks, the project might turn out to be successful."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT"],
+    "ua": "Попри значний прогрес, залишається ще багато роботи. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having made significant progress, there is still much work to do.",
+      "In spite of having made significant progress, there is still much work to do."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри заходи, які були впроваджені урядом, проблема залишається невирішеною. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the measures implemented by the government, the problem remains unsolved.",
+      "In spite of the measures implemented by the government, the problem remains unsolved."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "COMPARATIVES"],
+    "ua": "Попри те, що ситуація покращилась, рівень безробіття все ще високий. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the situation improving, unemployment remains high.",
+      "In spite of the situation improving, unemployment remains high."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT_CONT"],
+    "ua": "Попри те, що економіка зростає вже кілька років, нерівність не зменшується. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the economy having been growing for years, inequality has not decreased.",
+      "In spite of the economy having been growing for years, inequality has not decreased."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що було витрачено багато ресурсів, результат розчарував. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite many resources being spent, the result was disappointing.",
+      "In spite of many resources being spent, the result was disappointing."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THERE_IS_ARE"],
+    "ua": "Попри численні труднощі, є причини для оптимізму. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite numerous difficulties, there are reasons for optimism.",
+      "In spite of numerous difficulties, there are reasons for optimism."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_CONT_NOW"],
+    "ua": "Попри те, що зараз падає дощ, подія триває. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite it raining now, the event is continuing.",
+      "In spite of it raining now, the event is continuing."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PAST_PERFECT"],
+    "ua": "Попри те, що вони завершили дослідження, нові питання залишились. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having completed the research, new questions remained.",
+      "In spite of having completed the research, new questions remained."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Попри свої помилки, автор зробив вагомий внесок у науку. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite his mistakes, the author made a significant contribution to science.",
+      "In spite of his mistakes, the author made a significant contribution to science."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BE_SUPPOSED_TO"],
+    "ua": "Попри те, що доповідь мала бути короткою, вона тривала годину. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the report being supposed to be short, it lasted an hour.",
+      "In spite of the report being supposed to be short, it lasted an hour."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "ZERO_CONDITIONAL"],
+    "ua": "Попри негоду, люди завжди приходять на ярмарок. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the bad weather, people always attend the fair.",
+      "In spite of the bad weather, people always attend the fair."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "WILL_PREDICTIONS"],
+    "ua": "Попри труднощі, компанія досягне своїх цілей. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the difficulties, the company will achieve its goals.",
+      "In spite of the difficulties, the company will achieve its goals."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "ADVERBS_OF_MANNER"],
+    "ua": "Попри обережно плануючи кожен крок, він зазнав невдачі. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite carefully planning every step, he failed.",
+      "In spite of carefully planning every step, he failed."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що дані були зібрані ретельно, висновки неточні. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the data being collected carefully, the conclusions are inaccurate.",
+      "In spite of the data being collected carefully, the conclusions are inaccurate."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "FIRST_CONDITIONAL"],
+    "ua": "Ми продовжимо експеримент, попри затримки, якщо отримаємо дозвіл. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "We’ll continue the experiment despite the delays if we get approval.",
+      "We’ll continue the experiment in spite of the delays if we get approval."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "LIKE_LOVE_HATE_ING"],
+    "ua": "Попри не люблячи виступати, він погодився зробити презентацію. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite not liking speaking in public, he agreed to give a presentation.",
+      "In spite of not liking speaking in public, he agreed to give a presentation."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Попри труднощі, команда завжди дотримується дедлайнів. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the difficulties, the team always meets deadlines.",
+      "In spite of the difficulties, the team always meets deadlines."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES", "COMPARATIVES"],
+    "ua": "Попри те, що умови стали кращими, система все ще потребує змін. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the conditions being better, the system still needs changes.",
+      "In spite of the conditions being better, the system still needs changes."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "COUNT_UNCOUNT"],
+    "ua": "Попри обмежені ресурси, команда виконала завдання. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the limited resources, the team completed the task.",
+      "In spite of the limited resources, the team completed the task."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODAL_PERFECTS"],
+    "ua": "Попри маючи можливість здатися, він продовжував боротися. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having been able to give up, he kept fighting.",
+      "In spite of having been able to give up, he kept fighting."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що проблему було вирішено, наслідки залишилися. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the problem being solved, the consequences remained.",
+      "In spite of the problem being solved, the consequences remained."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT", "BE_SUPPOSED_TO"],
+    "ua": "Попри те, що звіт мав бути поданий учора, його ще не відправили. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the report being supposed to be submitted yesterday, it hasn’t been sent yet.",
+      "In spite of the report being supposed to be submitted yesterday, it hasn’t been sent yet."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що були досягнуті значні успіхи в медицині, нерівність у доступі до лікування залишається проблемою. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite significant progress being made in medicine, inequality in access to healthcare remains an issue.",
+      "In spite of significant progress being made in medicine, inequality in access to healthcare remains an issue."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Попри зростаючу кількість доказів, уряд не змінює свою політику. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite growing evidence, the government does not change its policy.",
+      "In spite of growing evidence, the government does not change its policy."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Попри ризики, впровадження нових технологій може принести користь суспільству. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the risks, implementing new technologies might benefit society.",
+      "In spite of the risks, implementing new technologies might benefit society."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT"],
+    "ua": "Попри те, що суспільство стало більш освіченим, стереотипи досі існують. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite society having become more educated, stereotypes still exist.",
+      "In spite of society having become more educated, stereotypes still exist."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що проблему було досліджено, її все ще недооцінюють. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the problem being researched, it is still underestimated.",
+      "In spite of the problem being researched, it is still underestimated."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT_CONT"],
+    "ua": "Попри те, що вчені працюють над вирішенням проблеми роками, прогрес залишається повільним. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite scientists having been working on the issue for years, progress remains slow.",
+      "In spite of scientists having been working on the issue for years, progress remains slow."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THERE_IS_ARE"],
+    "ua": "Попри труднощі, є вагомі причини продовжувати дослідження. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the difficulties, there are strong reasons to continue the research.",
+      "In spite of the difficulties, there are strong reasons to continue the research."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BE_SUPPOSED_TO"],
+    "ua": "Попри те, що система мала забезпечити рівність, вона створила нові бар’єри. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the system being supposed to ensure equality, it has created new barriers.",
+      "In spite of the system being supposed to ensure equality, it has created new barriers."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Попри розвиток технологій, люди часто покладаються на застарілі методи. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite technological development, people often rely on outdated methods.",
+      "In spite of technological development, people often rely on outdated methods."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "ZERO_CONDITIONAL"],
+    "ua": "Попри збільшення фінансування, якщо керування неефективне, результати не покращуються. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite increased funding, if management is ineffective, results do not improve.",
+      "In spite of increased funding, if management is ineffective, results do not improve."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "TOO_ENOUGH"],
+    "ua": "Попри те, що умови надто суворі, багато студентів продовжують навчання. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the conditions being too harsh, many students continue studying.",
+      "In spite of the conditions being too harsh, many students continue studying."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "COMPARATIVES"],
+    "ua": "Попри те, що ситуація виглядає краще, проблеми залишаються серйозними. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the situation appearing better, the problems remain serious.",
+      "In spite of the situation appearing better, the problems remain serious."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що реформи були впроваджені, їхній ефект поки що обмежений. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite reforms being implemented, their effect is still limited.",
+      "In spite of reforms being implemented, their effect is still limited."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODAL_PERFECTS"],
+    "ua": "Попри те, що могли бути зроблені помилки, дослідження залишається цінним. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite mistakes having possibly been made, the research remains valuable.",
+      "In spite of mistakes having possibly been made, the research remains valuable."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "FIRST_CONDITIONAL"],
+    "ua": "Ми продовжимо підтримку, попри зміни в політичній ситуації. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "We will continue support despite changes in the political situation.",
+      "We will continue support in spite of changes in the political situation."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES", "PRESENT_PERFECT"],
+    "ua": "Попри те, що політика була переглянута, основні проблеми не зникли. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the policy having been revised, the main issues have not disappeared.",
+      "In spite of the policy having been revised, the main issues have not disappeared."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Попри не цікавлячись політикою, багато молодих людей беруть участь у виборах. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite not being interested in politics, many young people take part in elections.",
+      "In spite of not being interested in politics, many young people take part in elections."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT_CONT"],
+    "ua": "Попри те, що уряд працює над реформами, результати не видно. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the government having been working on reforms, the results are not visible.",
+      "In spite of the government having been working on reforms, the results are not visible."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "ARTICLES"],
+    "ua": "Попри позитивні зміни, система освіти все ще має недоліки. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the positive changes, the education system still has flaws.",
+      "In spite of the positive changes, the education system still has flaws."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "RELATIVE_CLAUSES"],
+    "ua": "Компанії, попри втрачаючи клієнтів, продовжують рекламувати дорогі продукти. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Companies, despite losing clients, continue advertising expensive products.",
+      "Companies, in spite of losing clients, continue advertising expensive products."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "THERE_IS_ARE", "PRESENT_PERFECT"],
+    "ua": "Попри те, що є певний прогрес, ще не досягнуто справжньої рівності. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite there being some progress, true equality has not yet been achieved.",
+      "In spite of there being some progress, true equality has not yet been achieved."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "COUNT_UNCOUNT"],
+    "ua": "Попри відсутність достатньої інформації, було прийнято рішення. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the lack of sufficient information, a decision was made.",
+      "In spite of the lack of sufficient information, a decision was made."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Попри те, що закон був прийнятий, він не забезпечує реальних змін. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the law being passed, it does not ensure real change.",
+      "In spite of the law being passed, it does not ensure real change."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "MODAL_PERFECTS"],
+    "ua": "Попри маючи можливість діяти раніше, влада зреагувала із запізненням. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having been able to act earlier, the authorities responded late.",
+      "In spite of having been able to act earlier, the authorities responded late."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT", "WILL_PREDICTIONS"],
+    "ua": "Попри досягнення, суспільство, ймовірно, зіткнеться з новими викликами. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite the achievements, society will likely face new challenges.",
+      "In spite of the achievements, society will likely face new challenges."
+    ]
+  },
+  {
+    "rules": ["DESPITE_IN_SPITE_OF_ING", "PARTICIPLE_CLAUSES"],
+    "ua": "Попри закінчивши навчання, багато випускників залишаються без роботи. (use DESPITE / IN SPITE OF ...)",
+    "en": [
+      "Despite having graduated, many graduates remain unemployed.",
+      "In spite of having graduated, many graduates remain unemployed."
+    ]
+  }
+] }

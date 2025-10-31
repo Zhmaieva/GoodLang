@@ -1,0 +1,833 @@
+{ "ENOUGH_TOO_MUCH_MANY": [
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+    "ua": ["На столі занадто багато паперу."],
+    "en": [
+      "There is too much paper on the table."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": ["У холодильнику достатньо молока."],
+    "en": [
+      "There is enough milk in the fridge."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": ["Тут немає достатньо місця для всіх."],
+    "en": [
+      "There isn’t enough space for everyone.",
+      "There is not enough space for everyone."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+    "ua": ["У цій кімнаті занадто багато меблів."],
+    "en": [
+      "There is too much furniture in this room."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["У нього достатньо часу, щоб підготуватися."],
+    "en": [
+      "He has enough time to get ready."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": ["На вулиці занадто багато шуму."],
+    "en": [
+      "There is too much noise outside."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT", "ARTICLES", "PREP_PLACE"],
+    "ua": ["У коробці занадто багато цукерок."],
+    "en": [
+      "There are too many candies in the box."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": ["Ці завдання занадто складні для початківців."],
+    "en": [
+      "These tasks are too difficult for beginners."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["У нас немає достатньо грошей, щоб купити цю машину."],
+    "en": [
+      "We don’t have enough money to buy this car.",
+      "We do not have enough money to buy this car."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT", "PREP_TIME"],
+    "ua": ["У неї занадто багато роботи сьогодні."],
+    "en": [
+      "She has too much work today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+    "ua": ["У холодильнику занадто багато їжі."],
+    "en": [
+      "There is too much food in the fridge."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": ["У класі достатньо стільців для всіх."],
+    "en": [
+      "There are enough chairs for everyone in the classroom."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Він має достатньо енергії, щоб продовжувати працювати."],
+    "en": [
+      "He has enough energy to keep working."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "ARTICLES"],
+    "ua": ["На пляжі занадто багато людей."],
+    "en": [
+      "There are too many people on the beach."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У мене недостатньо часу, щоб закінчити проект."],
+    "en": [
+      "I don’t have enough time to finish the project.",
+      "I do not have enough time to finish the project."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У цій каві занадто багато цукру."],
+    "en": [
+      "There is too much sugar in this coffee."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE"],
+    "ua": ["У бібліотеці достатньо книжок для всіх учнів."],
+    "en": [
+      "There are enough books for all the students in the library."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Вона витрачає занадто багато грошей на одяг."],
+    "en": [
+      "She spends too much money on clothes."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_ISNT_ARENT_ANY"],
+    "ua": ["У холодильнику немає достатньо овочів."],
+    "en": [
+      "There aren’t enough vegetables in the fridge.",
+      "There are not enough vegetables in the fridge."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["У нього занадто багато друзів у школі."],
+    "en": [
+      "He has too many friends at school."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо часу, щоб приготувати вечерю."],
+    "en": [
+      "We have enough time to cook dinner."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": ["У цьому місті занадто багато транспорту."],
+    "en": [
+      "There is too much traffic in this city."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Тут недостатньо світла, щоб читати."],
+    "en": [
+      "There isn’t enough light to read.",
+      "There is not enough light to read."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "DEMONSTRATIVES"],
+    "ua": ["Ці валізи занадто важкі, щоб нести."],
+    "en": [
+      "These bags are too heavy to carry."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нього занадто багато домашніх завдань сьогодні."],
+    "en": [
+      "He has too much homework today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо води для подорожі."],
+    "en": [
+      "We have enough water for the trip."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": ["На полиці занадто багато книжок."],
+    "en": [
+      "There are too many books on the shelf."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Я не маю достатньо грошей, щоб купити квиток."],
+    "en": [
+      "I don’t have enough money to buy a ticket.",
+      "I do not have enough money to buy a ticket."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["У коробці занадто багато іграшок."],
+    "en": [
+      "There are too many toys in the box."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У неї достатньо сил, щоб підняти цю коробку."],
+    "en": [
+      "She has enough strength to lift this box."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE"],
+    "ua": ["На вулиці занадто багато машин."],
+    "en": [
+      "There are too many cars on the street."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо часу, щоб завершити все."],
+    "en": [
+      "We have enough time to finish everything."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У кімнаті занадто багато шуму, щоб зосередитися."],
+    "en": [
+      "There is too much noise in the room to concentrate."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У неї недостатньо грошей для нової сукні."],
+    "en": [
+      "She doesn’t have enough money for a new dress.",
+      "She does not have enough money for a new dress."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нас занадто багато роботи на сьогодні."],
+    "en": [
+      "We have too much work for today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": ["На столі занадто багато чашок."],
+    "en": [
+      "There are too many cups on the table."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо води, щоб приготувати вечерю."],
+    "en": [
+      "We have enough water to cook dinner."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": ["У холодильнику немає достатньо молока для кави."],
+    "en": [
+      "There isn’t enough milk for coffee in the fridge.",
+      "There is not enough milk for coffee in the fridge."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Він витрачає занадто багато часу на телефон."],
+    "en": [
+      "He spends too much time on his phone."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["У коробці занадто багато олівців."],
+    "en": [
+      "There are too many pencils in the box."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нас недостатньо їжі для вечірки."],
+    "en": [
+      "We don’t have enough food for the party.",
+      "We do not have enough food for the party."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE"],
+    "ua": ["У парку занадто багато людей у вихідні."],
+    "en": [
+      "There are too many people in the park on weekends."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Вона має достатньо досвіду для цієї роботи."],
+    "en": [
+      "She has enough experience for this job."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["На полиці занадто багато книжок і журналів."],
+    "en": [
+      "There are too many books and magazines on the shelf."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У мене недостатньо сил, щоб закінчити це сьогодні."],
+    "en": [
+      "I don’t have enough energy to finish it today.",
+      "I do not have enough energy to finish it today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["На вулиці занадто багато сміття."],
+    "en": [
+      "There is too much rubbish on the street."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо місця в машині."],
+    "en": [
+      "We have enough space in the car."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нього занадто багато домашніх завдань."],
+    "en": [
+      "He has too much homework."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Вони мають достатньо грошей, щоб купити квитки."],
+    "en": [
+      "They have enough money to buy the tickets."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE"],
+    "ua": ["У класі занадто багато учнів."],
+    "en": [
+      "There are too many students in the classroom."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Тут недостатньо світла для фото."],
+    "en": [
+      "There isn’t enough light for a photo.",
+      "There is not enough light for a photo."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["У сумці занадто багато речей."],
+    "en": [
+      "There are too many things in the bag."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["У мене достатньо води для приготування супу."],
+    "en": [
+      "I have enough water to make the soup."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_ISNT_ARENT_ANY"],
+    "ua": ["У нас немає достатньо часу, щоб дістатися до вокзалу."],
+    "en": [
+      "There isn’t enough time to get to the station.",
+      "There is not enough time to get to the station."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["У класі занадто багато шуму."],
+    "en": [
+      "There is too much noise in the classroom."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо грошей, щоб купити подарунок."],
+    "en": [
+      "We have enough money to buy a present."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Вона випила занадто багато кави сьогодні."],
+    "en": [
+      "She drank too much coffee today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["На підлозі занадто багато пилу."],
+    "en": [
+      "There is too much dust on the floor."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нас недостатньо стільців для гостей."],
+    "en": [
+      "We don’t have enough chairs for the guests.",
+      "We do not have enough chairs for the guests."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["У нього достатньо сил, щоб пробігти марафон."],
+    "en": [
+      "He has enough strength to run a marathon."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+    "ua": ["На кухні занадто багато посуду в раковині."],
+    "en": [
+      "There are too many dishes in the sink.",
+      "There’re too many dishes in the sink."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT", "COUNT_UNCOUNT"],
+    "ua": ["Ми маємо достатньо їжі, щоб нагодувати всіх."],
+    "en": [
+      "We have enough food to feed everyone.",
+      "We’ve enough food to feed everyone."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_ISNT_ARENT_ANY"],
+    "ua": ["У класі немає достатньо стільців для всіх учнів."],
+    "en": [
+      "There aren’t enough chairs for all the students in the class.",
+      "There’re not enough chairs for all the students in the class."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Вона має занадто багато ідей для одного проекту."],
+    "en": [
+      "She has too many ideas for one project.",
+      "She’s too many ideas for one project."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нас недостатньо грошей, щоб оплатити рахунки."],
+    "en": [
+      "We don’t have enough money to pay the bills.",
+      "We do not have enough money to pay the bills."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["На вулиці занадто багато реклами."],
+    "en": [
+      "There is too much advertising on the street.",
+      "There’s too much advertising on the street."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Він має достатньо досвіду для цієї роботи."],
+    "en": [
+      "He has enough experience for this job.",
+      "He’s enough experience for this job."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["На полиці занадто багато коробок."],
+    "en": [
+      "There are too many boxes on the shelf.",
+      "There’re too many boxes on the shelf."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У мене занадто багато справ на сьогодні."],
+    "en": [
+      "I have too many things to do today.",
+      "I’ve too many things to do today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У цьому супі занадто багато солі."],
+    "en": [
+      "There is too much salt in this soup.",
+      "There’s too much salt in this soup."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["У кімнаті занадто багато меблів."],
+    "en": [
+      "There is too much furniture in the room.",
+      "There’s too much furniture in the room."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо ковдр для всіх гостей."],
+    "en": [
+      "We have enough blankets for all the guests.",
+      "We’ve enough blankets for all the guests."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["На стіні занадто багато картин."],
+    "en": [
+      "There are too many pictures on the wall.",
+      "There’re too many pictures on the wall."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_ISNT_ARENT_ANY"],
+    "ua": ["У мене немає достатньо часу, щоб подивитися цей фільм."],
+    "en": [
+      "I haven’t got enough time to watch this movie.",
+      "I have not got enough time to watch this movie."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Вона читає занадто багато книжок одночасно."],
+    "en": [
+      "She reads too many books at the same time."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Вони мають достатньо інформації, щоб прийняти рішення."],
+    "en": [
+      "They have enough information to make a decision.",
+      "They’ve enough information to make a decision."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "ARTICLES", "PREP_PLACE"],
+    "ua": ["У коробці занадто багато маркерів і ручок."],
+    "en": [
+      "There are too many markers and pens in the box.",
+      "There’re too many markers and pens in the box."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Ми витрачаємо занадто багато часу на соцмережі."],
+    "en": [
+      "We spend too much time on social media."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["У нього достатньо навичок, щоб стати лідером."],
+    "en": [
+      "He has enough skills to become a leader.",
+      "He’s enough skills to become a leader."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "THERE_ISNT_ARENT_ANY"],
+    "ua": ["У холодильнику немає достатньо яєць для омлету."],
+    "en": [
+      "There aren’t enough eggs in the fridge for an omelet.",
+      "There’re not enough eggs in the fridge for an omelet."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нас занадто багато зустрічей сьогодні."],
+    "en": [
+      "We have too many meetings today.",
+      "We’ve too many meetings today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["На пляжі занадто багато сміття."],
+    "en": [
+      "There is too much trash on the beach.",
+      "There’s too much trash on the beach."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Вона має достатньо води, щоб напоїти квіти."],
+    "en": [
+      "She has enough water to water the flowers.",
+      "She’s enough water to water the flowers."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": ["У місті занадто багато магазинів."],
+    "en": [
+      "There are too many shops in the city.",
+      "There’re too many shops in the city."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Я не маю достатньо часу, щоб зробити домашнє завдання."],
+    "en": [
+      "I don’t have enough time to do my homework.",
+      "I do not have enough time to do my homework."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["На столі занадто багато документів."],
+    "en": [
+      "There are too many documents on the table.",
+      "There’re too many documents on the table."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо часу, щоб відпочити перед зустріччю."],
+    "en": [
+      "We have enough time to rest before the meeting.",
+      "We’ve enough time to rest before the meeting."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
+    "ua": ["У холодильнику немає достатньо сиру для піци."],
+    "en": [
+      "There isn’t enough cheese for the pizza in the fridge.",
+      "There’s not enough cheese for the pizza in the fridge."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Він п’є занадто багато кави щодня."],
+    "en": [
+      "He drinks too much coffee every day.",
+      "He’s drinking too much coffee every day."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо ідей для цього проєкту."],
+    "en": [
+      "We have enough ideas for this project.",
+      "We’ve enough ideas for this project."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["У кімнаті занадто багато людей."],
+    "en": [
+      "There are too many people in the room.",
+      "There’re too many people in the room."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У мене недостатньо енергії, щоб працювати сьогодні."],
+    "en": [
+      "I don’t have enough energy to work today.",
+      "I do not have enough energy to work today."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": ["На вулиці занадто багато машин."],
+    "en": [
+      "There are too many cars on the street.",
+      "There’re too many cars on the street."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["У неї достатньо друзів, щоб не нудьгувати."],
+    "en": [
+      "She has enough friends to never feel bored.",
+      "She’s enough friends to never feel bored."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Ми витратили занадто багато грошей на ремонт."],
+    "en": [
+      "We spent too much money on the renovation.",
+      "We’ve spent too much money on the renovation."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": ["У школі занадто багато нових учнів цього року."],
+    "en": [
+      "There are too many new students at the school this year.",
+      "There’re too many new students at the school this year."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["Він має достатньо часу, щоб написати листа."],
+    "en": [
+      "He has enough time to write a letter.",
+      "He’s enough time to write a letter."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У нас занадто багато завдань на цей тиждень."],
+    "en": [
+      "We have too many tasks this week.",
+      "We’ve too many tasks this week."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": ["У зоопарку занадто багато тварин у клітках."],
+    "en": [
+      "There are too many animals in cages at the zoo.",
+      "There’re too many animals in cages at the zoo."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Я маю достатньо часу, щоб приготувати вечерю."],
+    "en": [
+      "I have enough time to cook dinner.",
+      "I’ve enough time to cook dinner."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": ["У цьому місті занадто багато реклами."],
+    "en": [
+      "There is too much advertising in this city.",
+      "There’s too much advertising in this city."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+    "ua": ["Ми маємо достатньо місця для наметів."],
+    "en": [
+      "We have enough space for the tents.",
+      "We’ve enough space for the tents."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
+    "ua": ["У коробці немає достатньо олівців для всіх."],
+    "en": [
+      "There aren’t enough pencils in the box for everyone.",
+      "There’re not enough pencils in the box for everyone."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["Вона витрачає занадто багато часу на покупки."],
+    "en": [
+      "She spends too much time shopping.",
+      "She’s spending too much time shopping."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": ["У парку занадто багато лавок."],
+    "en": [
+      "There are too many benches in the park.",
+      "There’re too many benches in the park."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Вони мають достатньо сил, щоб продовжити роботу."],
+    "en": [
+      "They have enough strength to keep working.",
+      "They’ve enough strength to keep working."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
+    "ua": ["У нас немає достатньо води для подорожі."],
+    "en": [
+      "There isn’t enough water for the trip.",
+      "There’s not enough water for the trip."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": ["У неї занадто багато роботи цього тижня."],
+    "en": [
+      "She has too much work this week.",
+      "She’s too much work this week."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
+    "ua": ["Я маю достатньо грошей, щоб оплатити вечерю."],
+    "en": [
+      "I have enough money to pay for dinner.",
+      "I’ve enough money to pay for dinner."
+    ]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": ["У бібліотеці занадто багато старих книжок."],
+    "en": [
+      "There are too many old books in the library.",
+      "There’re too many old books in the library."
+    ]
+  }
+] }

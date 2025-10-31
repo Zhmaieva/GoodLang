@@ -1,0 +1,502 @@
+{ "BE_FROM_NATIONALITY": [
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з України.",
+    "en": ["I am from Ukraine.", "I come from Ukraine."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Польщі?",
+    "en": ["Are you from Poland?", "Do you come from Poland?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Вона з Франції.",
+    "en": ["She is from France.", "She comes from France."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато студентів з Італії.",
+    "en": ["Many students are from Italy.", "A lot of students come from Italy."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Цей чоловік з Японії?",
+    "en": ["Is this man from Japan?", "Does that man come from Japan?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Він з Німеччини.",
+    "en": ["He is from Germany.", "He comes from Germany."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ви з Канади?",
+    "en": ["Are you from Canada?", "Do you come from Canada?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі вчителі з Іспанії.",
+    "en": ["Some teachers are from Spain.", "Certain teachers come from Spain."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця дівчина з Бразилії.",
+    "en": ["This girl is from Brazil.", "That girl comes from Brazil."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця жінка з Китаю?",
+    "en": ["Is this woman from China?", "Does that woman come from China?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Ми з Австралії.",
+    "en": ["We are from Australia.", "We come from Australia."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Англії?",
+    "en": ["Are you from England?", "Do you come from England?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато людей з Індії.",
+    "en": ["Many people are from India.", "A lot of people come from India."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей хлопець з Мексики.",
+    "en": ["This boy is from Mexico.", "That boy comes from Mexico."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей актор з Росії?",
+    "en": ["Is this actor from Russia?", "Does that actor come from Russia?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Туреччини.",
+    "en": ["I am from Turkey.", "I come from Turkey."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі гості з Греції.",
+    "en": ["Some guests are from Greece.", "Certain guests come from Greece."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Вона з Швеції?",
+    "en": ["Is she from Sweden?", "Does she come from Sweden?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця людина з Португалії.",
+    "en": ["This person is from Portugal.", "That person comes from Portugal."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей студент з Кореї?",
+    "en": ["Is this student from Korea?", "Does that student come from Korea?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Він з Ірландії.",
+    "en": ["He is from Ireland.", "He comes from Ireland."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато дітей з Норвегії.",
+    "en": ["Many children are from Norway.", "A lot of children come from Norway."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Фінляндії?",
+    "en": ["Are you from Finland?", "Do you come from Finland?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця вчителька з Данії.",
+    "en": ["This teacher is from Denmark.", "That teacher comes from Denmark."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей музикант з Австрії?",
+    "en": ["Is this musician from Austria?", "Does that musician come from Austria?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Ми з Швейцарії.",
+    "en": ["We are from Switzerland.", "We come from Switzerland."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі друзі з Аргентини.",
+    "en": ["Some friends are from Argentina.", "Certain friends come from Argentina."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Вона з Чилі?",
+    "en": ["Is she from Chile?", "Does she come from Chile?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей чоловік з Єгипту.",
+    "en": ["This man is from Egypt.", "That man comes from Egypt."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця дівчина з Таїланду?",
+    "en": ["Is this girl from Thailand?", "Does that girl come from Thailand?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Нідерландів.",
+    "en": ["I am from the Netherlands.", "I come from the Netherlands."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато туристів з Бельгії.",
+    "en": ["Many tourists are from Belgium.", "A lot of tourists come from Belgium."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Угорщини?",
+    "en": ["Are you from Hungary?", "Do you come from Hungary?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця людина з Чехії.",
+    "en": ["This person is from the Czech Republic.", "That person comes from the Czech Republic."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей хлопець з Словаччини?",
+    "en": ["Is this boy from Slovakia?", "Does that boy come from Slovakia?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Він з Нової Зеландії.",
+    "en": ["He is from New Zealand.", "He comes from New Zealand."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі спортсмени з ПАР.",
+    "en": ["Some athletes are from South Africa.", "Certain athletes come from South Africa."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Вона з В’єтнаму?",
+    "en": ["Is she from Vietnam?", "Does she come from Vietnam?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця жінка з Колумбії.",
+    "en": ["This woman is from Colombia.", "That woman comes from Colombia."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей учитель з Перу?",
+    "en": ["Is this teacher from Peru?", "Does that teacher come from Peru?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Ісландії.",
+    "en": ["I am from Iceland.", "I come from Iceland."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато працівників з Ізраїлю.",
+    "en": ["Many workers are from Israel.", "A lot of workers come from Israel."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Малайзії?",
+    "en": ["Are you from Malaysia?", "Do you come from Malaysia?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей студент з Сінгапуру.",
+    "en": ["This student is from Singapore.", "That student comes from Singapore."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця людина з Марокко?",
+    "en": ["Is this person from Morocco?", "Does that person come from Morocco?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Вона з Алжиру.",
+    "en": ["She is from Algeria.", "She comes from Algeria."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі відвідувачі з Нігерії.",
+    "en": ["Some visitors are from Nigeria.", "Certain visitors come from Nigeria."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Він з Гани?",
+    "en": ["Is he from Ghana?", "Does he come from Ghana?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей гість з Кенії.",
+    "en": ["This guest is from Kenya.", "That guest comes from Kenya."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця дівчина з Уганди?",
+    "en": ["Is this girl from Uganda?", "Does that girl come from Uganda?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Італії.",
+    "en": ["I am from Italy.", "I come from Italy."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Іспанії?",
+    "en": ["Are you from Spain?", "Do you come from Spain?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Вона з Японії.",
+    "en": ["She is from Japan.", "She comes from Japan."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато учнів з Франції.",
+    "en": ["Many students are from France.", "A lot of students come from France."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "YES_NO_Q"],
+    "ua": "Цей хлопець з Канади?",
+    "en": ["Is this boy from Canada?", "Does that boy come from Canada?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Він з Бразилії.",
+    "en": ["He is from Brazil.", "He comes from Brazil."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ви з Німеччини?",
+    "en": ["Are you from Germany?", "Do you come from Germany?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі гості з Китаю.",
+    "en": ["Some guests are from China.", "Certain guests come from China."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця дівчина з Австралії.",
+    "en": ["This girl is from Australia.", "That girl comes from Australia."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця людина з Мексики?",
+    "en": ["Is this person from Mexico?", "Does that person come from Mexico?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Ми з Польщі.",
+    "en": ["We are from Poland.", "We come from Poland."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Туреччини?",
+    "en": ["Are you from Turkey?", "Do you come from Turkey?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато туристів з Індії.",
+    "en": ["Many tourists are from India.", "A lot of tourists come from India."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей чоловік з Греції.",
+    "en": ["This man is from Greece.", "That man comes from Greece."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей студент з Росії?",
+    "en": ["Is this student from Russia?", "Does that student come from Russia?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Швеції.",
+    "en": ["I am from Sweden.", "I come from Sweden."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі вчителі з Португалії.",
+    "en": ["Some teachers are from Portugal.", "Certain teachers come from Portugal."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Вона з Ірландії?",
+    "en": ["Is she from Ireland?", "Does she come from Ireland?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця жінка з Норвегії.",
+    "en": ["This woman is from Norway.", "That woman comes from Norway."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей музикант з Фінляндії?",
+    "en": ["Is this musician from Finland?", "Does that musician come from Finland?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Він з Данії.",
+    "en": ["He is from Denmark.", "He comes from Denmark."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато дітей з Австрії.",
+    "en": ["Many children are from Austria.", "A lot of children come from Austria."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Швейцарії?",
+    "en": ["Are you from Switzerland?", "Do you come from Switzerland?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей хлопець з Аргентини.",
+    "en": ["This boy is from Argentina.", "That boy comes from Argentina."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця дівчина з Чилі?",
+    "en": ["Is this girl from Chile?", "Does that girl come from Chile?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Єгипту.",
+    "en": ["I am from Egypt.", "I come from Egypt."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі друзі з Таїланду.",
+    "en": ["Some friends are from Thailand.", "Certain friends come from Thailand."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Вона з Нідерландів?",
+    "en": ["Is she from the Netherlands?", "Does she come from the Netherlands?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця людина з Бельгії.",
+    "en": ["This person is from Belgium.", "That person comes from Belgium."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей учитель з Угорщини?",
+    "en": ["Is this teacher from Hungary?", "Does that teacher come from Hungary?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Він з Чехії.",
+    "en": ["He is from the Czech Republic.", "He comes from the Czech Republic."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато туристів з Словаччини.",
+    "en": ["Many tourists are from Slovakia.", "A lot of tourists come from Slovakia."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Нової Зеландії?",
+    "en": ["Are you from New Zealand?", "Do you come from New Zealand?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця жінка з ПАР.",
+    "en": ["This woman is from South Africa.", "That woman comes from South Africa."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей студент з В’єтнаму?",
+    "en": ["Is this student from Vietnam?", "Does that student come from Vietnam?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Колумбії.",
+    "en": ["I am from Colombia.", "I come from Colombia."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі спортсмени з Перу.",
+    "en": ["Some athletes are from Peru.", "Certain athletes come from Peru."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Вона з Ісландії?",
+    "en": ["Is she from Iceland?", "Does she come from Iceland?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей чоловік з Ізраїлю.",
+    "en": ["This man is from Israel.", "That man comes from Israel."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця людина з Малайзії?",
+    "en": ["Is this person from Malaysia?", "Does that person come from Malaysia?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Він з Сінгапуру.",
+    "en": ["He is from Singapore.", "He comes from Singapore."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато відвідувачів з Марокко.",
+    "en": ["Many visitors are from Morocco.", "A lot of visitors come from Morocco."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Ти з Алжиру?",
+    "en": ["Are you from Algeria?", "Do you come from Algeria?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Ця дівчина з Нігерії.",
+    "en": ["This girl is from Nigeria.", "That girl comes from Nigeria."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Цей гість з Гани?",
+    "en": ["Is this guest from Ghana?", "Does that guest come from Ghana?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "PERSONAL_PRONOUNS", "PREP_PLACE"],
+    "ua": "Я з Кенії.",
+    "en": ["I am from Kenya.", "I come from Kenya."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі працівники з Уганди.",
+    "en": ["Some workers are from Uganda.", "Certain workers come from Uganda."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Вона з Індонезії?",
+    "en": ["Is she from Indonesia?", "Does she come from Indonesia?"]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
+    "ua": "Цей хлопець з Філіппін.",
+    "en": ["This boy is from the Philippines.", "That boy comes from the Philippines."]
+  },
+  {
+    "rules": ["BE_FROM_NATIONALITY", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Ця людина з Пакистану?",
+    "en": ["Is this person from Pakistan?", "Does that person come from Pakistan?"]
+  }
+] }

@@ -550,7 +550,6 @@ export const ALL_RULES_SAMPLES = {
   { "rules": ["THERE_IS_ARE", "QUANTIFIERS"], "ua": "Є трохи друзів у місті.", "en": ["There are some friends in the city."] },
   { "rules": ["THERE_IS_ARE", "QUANTIFIERS"], "ua": "Є трохи їжі на столі.", "en": ["There is some food on the table."] },
   { "rules": ["THERE_IS_ARE", "QUANTIFIERS"], "ua": "Є трохи місця у кімнаті.", "en": ["There is some space in the room."] },
-  { "rules": ["THERE_IS_ARE", "QUANTIFIERS"], "ua": "В радіо є якась музика.", "en": ["There is some music on the radio."] },
   { "rules": ["THERE_IS_ARE", "QUANTIFIERS"], "ua": "Є трохи зеленого чаю у чашці.", "en": ["There is some green tea in the cup."] },
   { "rules": ["THERE_IS_ARE", "QUANTIFIERS"], "ua": "Є трохи снігу на тротуарі.", "en": ["There is some snow on the pavement."] },
   { "rules": ["THERE_IS_ARE", "QUANTIFIERS"], "ua": "Є трохи дітей у парку зараз.", "en": ["There are some children in the park now."] },

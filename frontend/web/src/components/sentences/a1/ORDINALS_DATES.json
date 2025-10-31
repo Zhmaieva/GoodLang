@@ -1,0 +1,497 @@
+{ "ORDINALS_DATES": [
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я святкую першого січня.",
+    "en": ["I celebrate on the first of January.", "I always celebrate on the first of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ти готуєш вечерю другого лютого.",
+    "en": ["You are preparing dinner on the second of February.", "You’re currently preparing dinner on the second of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона відвідує музей третього березня.",
+    "en": ["She visits the museum on the third of March.", "She always visits the museum on the third of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі студенти здають іспити четвертого квітня.",
+    "en": ["Some students take exams on the fourth of April.", "Certain students take exams on the fourth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Цей учитель проводить урок п’ятого травня.",
+    "en": ["This teacher is holding a lesson on the fifth of May.", "This teacher is currently holding a lesson on the fifth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він читає книгу шостого червня.",
+    "en": ["He reads a book on the sixth of June.", "He always reads a book on the sixth of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми святкуємо сьомого липня.",
+    "en": ["We are celebrating on the seventh of July.", "We’re currently celebrating on the seventh of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Багато людей подорожують восьмого серпня.",
+    "en": ["Many people travel on the eighth of August.", "A lot of people travel on the eighth of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця команда грає дев’ятого вересня.",
+    "en": ["This team is playing on the ninth of September.", "This team is currently playing on the ninth of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я пишу лист десятого жовтня.",
+    "en": ["I write a letter on the tenth of October.", "I always write a letter on the tenth of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Вона співає одинадцятого листопада.",
+    "en": ["She is singing on the eleventh of November.", "She’s currently singing on the eleventh of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі туристи фотографують дванадцятого грудня.",
+    "en": ["Some tourists take photos on the twelfth of December.", "Certain tourists take photos on the twelfth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він читає газету тринадцятого січня.",
+    "en": ["He reads the newspaper on the thirteenth of January.", "He always reads the newspaper on the thirteenth of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми готуємо обід чотирнадцятого лютого.",
+    "en": ["We are preparing lunch on the fourteenth of February.", "We’re currently preparing lunch on the fourteenth of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Цей студент вчиться п’ятнадцятого березня.",
+    "en": ["This student studies on the fifteenth of March.", "This student always studies on the fifteenth of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато дітей грають шістнадцятого квітня.",
+    "en": ["Many children play on the sixteenth of April.", "A lot of children play on the sixteenth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Я танцюю сімнадцятого травня.",
+    "en": ["I am dancing on the seventeenth of May.", "I’m currently dancing on the seventeenth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона малює вісімнадцятого червня.",
+    "en": ["She paints on the eighteenth of June.", "She always paints on the eighteenth of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця група репетирує дев’ятнадцятого липня.",
+    "en": ["This group is rehearsing on the nineteenth of July.", "This group is currently rehearsing on the nineteenth of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі люди святкують двадцятого серпня.",
+    "en": ["Some people celebrate on the twentieth of August.", "Certain people celebrate on the twentieth of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він бігає двадцять першого вересня.",
+    "en": ["He runs on the twenty-first of September.", "He always runs on the twenty-first of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми готуємо вечерю двадцять другого жовтня.",
+    "en": ["We are preparing dinner on the twenty-second of October.", "We’re currently preparing dinner on the twenty-second of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато туристів приїжджають двадцять третього листопада.",
+    "en": ["Many tourists arrive on the twenty-third of November.", "A lot of tourists arrive on the twenty-third of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Цей учитель працює двадцять четвертого грудня.",
+    "en": ["This teacher is working on the twenty-fourth of December.", "This teacher is currently working on the twenty-fourth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я читаю книгу двадцять п’ятого січня.",
+    "en": ["I read a book on the twenty-fifth of January.", "I always read a book on the twenty-fifth of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Вона співає двадцять шостого лютого.",
+    "en": ["She is singing on the twenty-sixth of February.", "She’s currently singing on the twenty-sixth of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі студенти вчаться двадцять сьомого березня.",
+    "en": ["Some students study on the twenty-seventh of March.", "Certain students study on the twenty-seventh of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він малює двадцять восьмого квітня.",
+    "en": ["He paints on the twenty-eighth of April.", "He always paints on the twenty-eighth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця команда грає двадцять дев’ятого травня.",
+    "en": ["This team is playing on the twenty-ninth of May.", "This team is currently playing on the twenty-ninth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато людей святкують тридцятого червня.",
+    "en": ["Many people celebrate on the thirtieth of June.", "A lot of people celebrate on the thirtieth of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я пишу лист тридцять першого липня.",
+    "en": ["I write a letter on the thirty-first of July.", "I always write a letter on the thirty-first of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Вона готує обід першого серпня.",
+    "en": ["She is preparing lunch on the first of August.", "She’s currently preparing lunch on the first of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі туристи відвідують місто другого вересня.",
+    "en": ["Some tourists visit the city on the second of September.", "Certain tourists visit the city on the second of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він читає газету третього жовтня.",
+    "en": ["He reads the newspaper on the third of October.", "He always reads the newspaper on the third of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми бігаємо четвертого листопада.",
+    "en": ["We are running on the fourth of November.", "We’re currently running on the fourth of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Цей студент малює п’ятого грудня.",
+    "en": ["This student draws on the fifth of December.", "This student always draws on the fifth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато дітей грають шостого січня.",
+    "en": ["Many children play on the sixth of January.", "A lot of children play on the sixth of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Я співаю сьомого лютого.",
+    "en": ["I am singing on the seventh of February.", "I’m currently singing on the seventh of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона танцює восьмого березня.",
+    "en": ["She dances on the eighth of March.", "She always dances on the eighth of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі люди фотографують дев’ятого квітня.",
+    "en": ["Some people take photos on the ninth of April.", "Certain people take photos on the ninth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця команда тренується десятого травня.",
+    "en": ["This team is training on the tenth of May.", "This team is currently training on the tenth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він пише есе одинадцятого червня.",
+    "en": ["He writes an essay on the eleventh of June.", "He always writes an essay on the eleventh of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато студентів вчаться дванадцятого липня.",
+    "en": ["Many students study on the twelfth of July.", "A lot of students study on the twelfth of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Я читаю книгу тринадцятого серпня.",
+    "en": ["I am reading a book on the thirteenth of August.", "I’m currently reading a book on the thirteenth of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона готує вечерю чотирнадцятого вересня.",
+    "en": ["She prepares dinner on the fourteenth of September.", "She always prepares dinner on the fourteenth of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми святкуємо п’ятнадцятого жовтня.",
+    "en": ["We are celebrating on the fifteenth of October.", "We’re currently celebrating on the fifteenth of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі туристи фотографують шістнадцятого листопада.",
+    "en": ["Some tourists take photos on the sixteenth of November.", "Certain tourists take photos on the sixteenth of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Цей студент співає сімнадцятого грудня.",
+    "en": ["This student sings on the seventeenth of December.", "This student always sings on the seventeenth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Він малює вісімнадцятого січня.",
+    "en": ["He is painting on the eighteenth of January.", "He’s currently painting on the eighteenth of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Багато людей святкують дев’ятнадцятого лютого.",
+    "en": ["Many people celebrate on the nineteenth of February.", "A lot of people celebrate on the nineteenth of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я відвідую театр першого січня.",
+    "en": ["I visit the theater on the first of January.", "I always visit the theater on the first of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ти пишеш лист другого лютого.",
+    "en": ["You are writing a letter on the second of February.", "You’re currently writing a letter on the second of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона святкує третього березня.",
+    "en": ["She celebrates on the third of March.", "She always celebrates on the third of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі вчителі проводять уроки четвертого квітня.",
+    "en": ["Some teachers hold lessons on the fourth of April.", "Certain teachers hold lessons on the fourth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Цей студент читає книгу п’ятого травня.",
+    "en": ["This student is reading a book on the fifth of May.", "This student is currently reading a book on the fifth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він бігає шостого червня.",
+    "en": ["He runs on the sixth of June.", "He always runs on the sixth of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми готуємо вечерю сьомого липня.",
+    "en": ["We are preparing dinner on the seventh of July.", "We’re currently preparing dinner on the seventh of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато туристів приїжджають восьмого серпня.",
+    "en": ["Many tourists arrive on the eighth of August.", "A lot of tourists arrive on the eighth of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця команда тренується дев’ятого вересня.",
+    "en": ["This team is training on the ninth of September.", "This team is currently training on the ninth of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я малюю десятого жовтня.",
+    "en": ["I paint on the tenth of October.", "I always paint on the tenth of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Вона співає одинадцятого листопада.",
+    "en": ["She is singing on the eleventh of November.", "She’s currently singing on the eleventh of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі люди фотографують дванадцятого грудня.",
+    "en": ["Some people take photos on the twelfth of December.", "Certain people take photos on the twelfth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він читає газету тринадцятого січня.",
+    "en": ["He reads the newspaper on the thirteenth of January.", "He always reads the newspaper on the thirteenth of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми відвідуємо музей чотирнадцятого лютого.",
+    "en": ["We are visiting the museum on the fourteenth of February.", "We’re currently visiting the museum on the fourteenth of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Цей учитель працює п’ятнадцятого березня.",
+    "en": ["This teacher works on the fifteenth of March.", "This teacher always works on the fifteenth of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато дітей грають шістнадцятого квітня.",
+    "en": ["Many children play on the sixteenth of April.", "A lot of children play on the sixteenth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Я танцюю сімнадцятого травня.",
+    "en": ["I am dancing on the seventeenth of May.", "I’m currently dancing on the seventeenth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона пише есе вісімнадцятого червня.",
+    "en": ["She writes an essay on the eighteenth of June.", "She always writes an essay on the eighteenth of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця група репетирує дев’ятнадцятого липня.",
+    "en": ["This group is rehearsing on the nineteenth of July.", "This group is currently rehearsing on the nineteenth of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі люди святкують двадцятого серпня.",
+    "en": ["Some people celebrate on the twentieth of August.", "Certain people celebrate on the twentieth of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він бігає двадцять першого вересня.",
+    "en": ["He runs on the twenty-first of September.", "He always runs on the twenty-first of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми готуємо обід двадцять другого жовтня.",
+    "en": ["We are preparing lunch on the twenty-second of October.", "We’re currently preparing lunch on the twenty-second of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато туристів відвідують місто двадцять третього листопада.",
+    "en": ["Many tourists visit the city on the twenty-third of November.", "A lot of tourists visit the city on the twenty-third of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Цей студент малює двадцять четвертого грудня.",
+    "en": ["This student is drawing on the twenty-fourth of December.", "This student is currently drawing on the twenty-fourth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я читаю книгу двадцять п’ятого січня.",
+    "en": ["I read a book on the twenty-fifth of January.", "I always read a book on the twenty-fifth of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Вона співає двадцять шостого лютого.",
+    "en": ["She is singing on the twenty-sixth of February.", "She’s currently singing on the twenty-sixth of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі студенти пишуть тести двадцять сьомого березня.",
+    "en": ["Some students write tests on the twenty-seventh of March.", "Certain students write tests on the twenty-seventh of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він готує вечерю двадцять восьмого квітня.",
+    "en": ["He prepares dinner on the twenty-eighth of April.", "He always prepares dinner on the twenty-eighth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця команда грає двадцять дев’ятого травня.",
+    "en": ["This team is playing on the twenty-ninth of May.", "This team is currently playing on the twenty-ninth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато людей святкують тридцятого червня.",
+    "en": ["Many people celebrate on the thirtieth of June.", "A lot of people celebrate on the thirtieth of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Я пишу лист тридцять першого липня.",
+    "en": ["I write a letter on the thirty-first of July.", "I always write a letter on the thirty-first of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Вона читає книгу першого серпня.",
+    "en": ["She is reading a book on the first of August.", "She’s currently reading a book on the first of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі туристи фотографують другого вересня.",
+    "en": ["Some tourists take photos on the second of September.", "Certain tourists take photos on the second of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він відвідує музей третього жовтня.",
+    "en": ["He visits the museum on the third of October.", "He always visits the museum on the third of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми бігаємо четвертого листопада.",
+    "en": ["We are running on the fourth of November.", "We’re currently running on the fourth of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Цей студент співає п’ятого грудня.",
+    "en": ["This student sings on the fifth of December.", "This student always sings on the fifth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато дітей грають шостого січня.",
+    "en": ["Many children play on the sixth of January.", "A lot of children play on the sixth of January."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Я готую обід сьомого лютого.",
+    "en": ["I am preparing lunch on the seventh of February.", "I’m currently preparing lunch on the seventh of February."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона танцює восьмого березня.",
+    "en": ["She dances on the eighth of March.", "She always dances on the eighth of March."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі люди пишуть листи дев’ятого квітня.",
+    "en": ["Some people write letters on the ninth of April.", "Certain people write letters on the ninth of April."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ця команда тренується десятого травня.",
+    "en": ["This team is training on the tenth of May.", "This team is currently training on the tenth of May."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Він читає есе одинадцятого червня.",
+    "en": ["He reads an essay on the eleventh of June.", "He always reads an essay on the eleventh of June."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато студентів вчаться дванадцятого липня.",
+    "en": ["Many students study on the twelfth of July.", "A lot of students study on the twelfth of July."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Я співаю тринадцятого серпня.",
+    "en": ["I am singing on the thirteenth of August.", "I’m currently singing on the thirteenth of August."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Вона малює чотирнадцятого вересня.",
+    "en": ["She paints on the fourteenth of September.", "She always paints on the fourteenth of September."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Ми святкуємо п’ятнадцятого жовтня.",
+    "en": ["We are celebrating on the fifteenth of October.", "We’re currently celebrating on the fifteenth of October."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Деякі туристи відвідують театр шістнадцятого листопада.",
+    "en": ["Some tourists visit the theater on the sixteenth of November.", "Certain tourists visit the theater on the sixteenth of November."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
+    "ua": "Цей студент читає книгу сімнадцятого грудня.",
+    "en": ["This student reads a book on the seventeenth of December.", "This student always reads a book on the seventeenth of December."]
+  },
+  {
+    "rules": ["ORDINALS_DATES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "ua": "Він бігає вісімнадцятого січня.",
+    "en": ["He is running on the eighteenth of January.", "He’s currently running on the eighteenth of January."]
+  }
+] }

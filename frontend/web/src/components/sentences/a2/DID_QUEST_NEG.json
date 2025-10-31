@@ -1,0 +1,502 @@
+{ "DID_QUEST_NEG": [
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти відвідав музей вчора?",
+    "en": ["Did you visit the museum yesterday?", "Did you go to the museum yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не відвідав музей вчора.",
+    "en": ["I didn’t visit the museum yesterday.", "I didn’t go to the museum yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона прочитала книгу минулого тижня?",
+    "en": ["Did she read a book last week?", "Did she finish a book last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не прочитала книгу минулого тижня.",
+    "en": ["She didn’t read a book last week.", "She didn’t finish a book last week."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи ви відвідали деякі парки торік?",
+    "en": ["Did you visit some parks last year?", "Did you explore certain parks last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми не відвідали деякі парки торік.",
+    "en": ["We didn’t visit some parks last year.", "We didn’t explore certain parks last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи він пояснив цей урок вчора?",
+    "en": ["Did he explain this lesson yesterday?", "Did he teach this lesson yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Він не пояснив цей урок вчора.",
+    "en": ["He didn’t explain this lesson yesterday.", "He didn’t teach this lesson yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти грав у футбол минулого місяця?",
+    "en": ["Did you play football last month?", "Did you kick a football last month?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не грав у футбол минулого місяця.",
+    "en": ["I didn’t play football last month.", "I didn’t kick a football last month."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона готувала вечерю вчора?",
+    "en": ["Did she prepare dinner yesterday?", "Did she cook dinner yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не готувала вечерю вчора.",
+    "en": ["She didn’t prepare dinner yesterday.", "She didn’t cook dinner yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи вони відвідали багато країн торік?",
+    "en": ["Did they visit many countries last year?", "Did they travel to a lot of countries last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони не відвідали багато країн торік.",
+    "en": ["They didn’t visit many countries last year.", "They didn’t travel to a lot of countries last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи ви прочитали цю книгу минулого тижня?",
+    "en": ["Did you read this book last week?", "Did you study this book last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Ми не прочитали цю книгу минулого тижня.",
+    "en": ["We didn’t read this book last week.", "We didn’t study this book last week."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти намалював картину вчора?",
+    "en": ["Did you paint a picture yesterday?", "Did you draw a picture yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не намалював картину вчора.",
+    "en": ["I didn’t paint a picture yesterday.", "I didn’t draw a picture yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи він співав на концерті вчора?",
+    "en": ["Did he sing at the concert yesterday?", "Did he perform at the concert yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Він не співав на концерті вчора.",
+    "en": ["He didn’t sing at the concert yesterday.", "He didn’t perform at the concert yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи вони сфотографували деякі пейзажі торік?",
+    "en": ["Did they photograph some landscapes last year?", "Did they take photos of certain landscapes last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони не сфотографували деякі пейзажі торік.",
+    "en": ["They didn’t photograph some landscapes last year.", "They didn’t take photos of certain landscapes last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти прочитав газету вчора?",
+    "en": ["Did you read a newspaper yesterday?", "Did you check out a newspaper yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не прочитав газету вчора.",
+    "en": ["I didn’t read a newspaper yesterday.", "I didn’t check out a newspaper yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона відвідала галерею минулого тижня?",
+    "en": ["Did she visit the gallery last week?", "Did she explore the gallery last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не відвідала галерею минулого тижня.",
+    "en": ["She didn’t visit the gallery last week.", "She didn’t explore the gallery last week."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи ви зіграли в цю гру вчора?",
+    "en": ["Did you play this game yesterday?", "Did you compete in this game yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Ми не зіграли в цю гру вчора.",
+    "en": ["We didn’t play this game yesterday.", "We didn’t compete in this game yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи вони побачили багато птахів минулого літа?",
+    "en": ["Did they see many birds last summer?", "Did they observe a lot of birds last summer?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони не побачили багато птахів минулого літа.",
+    "en": ["They didn’t see many birds last summer.", "They didn’t observe a lot of birds last summer."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти танцював на вечірці вчора?",
+    "en": ["Did you dance at the party yesterday?", "Did you perform at the party yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не танцював на вечірці вчора.",
+    "en": ["I didn’t dance at the party yesterday.", "I didn’t perform at the party yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона написала вірш минулого тижня?",
+    "en": ["Did she write a poem last week?", "Did she compose a poem last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не написала вірш минулого тижня.",
+    "en": ["She didn’t write a poem last week.", "She didn’t compose a poem last week."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи він репетирував цю пісню вчора?",
+    "en": ["Did he rehearse this song yesterday?", "Did he practice this song yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Він не репетирував цю пісню вчора.",
+    "en": ["He didn’t rehearse this song yesterday.", "He didn’t practice this song yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи ви відвідали деякі театри торік?",
+    "en": ["Did you visit some theaters last year?", "Did you explore certain theaters last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми не відвідали деякі театри торік.",
+    "en": ["We didn’t visit some theaters last year.", "We didn’t explore certain theaters last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти біг у парку вчора?",
+    "en": ["Did you run in the park yesterday?", "Did you jog in the park yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не біг у парку вчора.",
+    "en": ["I didn’t run in the park yesterday.", "I didn’t jog in the park yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона готувала обід учора?",
+    "en": ["Did she prepare lunch yesterday?", "Did she cook lunch yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не готувала обід учора.",
+    "en": ["She didn’t prepare lunch yesterday.", "She didn’t cook lunch yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи вони побачили багато зірок минулої ночі?",
+    "en": ["Did they see many stars last night?", "Did they observe a lot of stars last night?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони не побачили багато зірок минулої ночі.",
+    "en": ["They didn’t see many stars last night.", "They didn’t observe a lot of stars last night."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи ви дивилися цей фільм учора?",
+    "en": ["Did you watch this movie yesterday?", "Did you see this movie yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Ми не дивилися цей фільм учора.",
+    "en": ["We didn’t watch this movie yesterday.", "We didn’t see this movie yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти прочитав роман минулого місяця?",
+    "en": ["Did you read a novel last month?", "Did you finish a novel last month?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не прочитав роман минулого місяця.",
+    "en": ["I didn’t read a novel last month.", "I didn’t finish a novel last month."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи ви вивчили деякі слова торік?",
+    "en": ["Did you learn some words last year?", "Did you study certain words last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми не вивчили деякі слова торік.",
+    "en": ["We didn’t learn some words last year.", "We didn’t study certain words last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти купив квиток вчора?",
+    "en": ["Did you buy a ticket yesterday?", "Did you purchase a ticket yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не купив квиток вчора.",
+    "en": ["I didn’t buy a ticket yesterday.", "I didn’t purchase a ticket yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона спекла торт минулого тижня?",
+    "en": ["Did she bake a cake last week?", "Did she make a cake last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не спекла торт минулого тижня.",
+    "en": ["She didn’t bake a cake last week.", "She didn’t make a cake last week."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи ви зібрали деякі квіти торік?",
+    "en": ["Did you collect some flowers last year?", "Did you pick certain flowers last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми не зібрали деякі квіти торік.",
+    "en": ["We didn’t collect some flowers last year.", "We didn’t pick certain flowers last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи він написав цю статтю вчора?",
+    "en": ["Did he write this article yesterday?", "Did he compose this article yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Він не написав цю статтю вчора.",
+    "en": ["He didn’t write this article yesterday.", "He didn’t compose this article yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти плавав у річці минулого літа?",
+    "en": ["Did you swim in the river last summer?", "Did you go swimming in the river last summer?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не плавав у річці минулого літа.",
+    "en": ["I didn’t swim in the river last summer.", "I didn’t go swimming in the river last summer."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона слухала радіо вчора?",
+    "en": ["Did she listen to the radio yesterday?", "Did she tune into the radio yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не слухала радіо вчора.",
+    "en": ["She didn’t listen to the radio yesterday.", "She didn’t tune into the radio yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи вони відвідали багато музеїв торік?",
+    "en": ["Did they visit many museums last year?", "Did they explore a lot of museums last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони не відвідали багато музеїв торік.",
+    "en": ["They didn’t visit many museums last year.", "They didn’t explore a lot of museums last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи ви подивилися цей спектакль минулого тижня?",
+    "en": ["Did you watch this play last week?", "Did you see this play last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Ми не подивилися цей спектакль минулого тижня.",
+    "en": ["We didn’t watch this play last week.", "We didn’t see this play last week."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти полагодив машину вчора?",
+    "en": ["Did you fix the car yesterday?", "Did you repair the car yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не полагодив машину вчора.",
+    "en": ["I didn’t fix the car yesterday.", "I didn’t repair the car yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи він малював портрет минулого місяця?",
+    "en": ["Did he paint a portrait last month?", "Did he draw a portrait last month?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Він не малював портрет минулого місяця.",
+    "en": ["He didn’t paint a portrait last month.", "He didn’t draw a portrait last month."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи ви прочитали деякі журнали торік?",
+    "en": ["Did you read some magazines last year?", "Did you check out certain magazines last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми не прочитали деякі журнали торік.",
+    "en": ["We didn’t read some magazines last year.", "We didn’t check out certain magazines last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи вона виконала це завдання вчора?",
+    "en": ["Did she complete this task yesterday?", "Did she finish this task yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Вона не виконала це завдання вчора.",
+    "en": ["She didn’t complete this task yesterday.", "She didn’t finish this task yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти катався на велосипеді вчора?",
+    "en": ["Did you ride a bicycle yesterday?", "Did you cycle yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не катався на велосипеді вчора.",
+    "en": ["I didn’t ride a bicycle yesterday.", "I didn’t cycle yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона шила сукню минулого тижня?",
+    "en": ["Did she sew a dress last week?", "Did she make a dress last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не шила сукню минулого тижня.",
+    "en": ["She didn’t sew a dress last week.", "She didn’t make a dress last week."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи вони намалювали багато картин торік?",
+    "en": ["Did they paint many pictures last year?", "Did they draw a lot of pictures last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони не намалювали багато картин торік.",
+    "en": ["They didn’t paint many pictures last year.", "They didn’t draw a lot of pictures last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи ви відвідали цей замок минулого літа?",
+    "en": ["Did you visit this castle last summer?", "Did you explore this castle last summer?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Ми не відвідали цей замок минулого літа.",
+    "en": ["We didn’t visit this castle last summer.", "We didn’t explore this castle last summer."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти сходив на ринок вчора?",
+    "en": ["Did you go to the market yesterday?", "Did you visit the market yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не сходив на ринок вчора.",
+    "en": ["I didn’t go to the market yesterday.", "I didn’t visit the market yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи він почистив взуття вчора?",
+    "en": ["Did he clean the shoes yesterday?", "Did he polish the shoes yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Він не почистив взуття вчора.",
+    "en": ["He didn’t clean the shoes yesterday.", "He didn’t polish the shoes yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи ви побачили деякі острови торік?",
+    "en": ["Did you see some islands last year?", "Did you visit certain islands last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми не побачили деякі острови торік.",
+    "en": ["We didn’t see some islands last year.", "We didn’t visit certain islands last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи вона прочитала цей журнал вчора?",
+    "en": ["Did she read this magazine yesterday?", "Did she check out this magazine yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Вона не прочитала цей журнал вчора.",
+    "en": ["She didn’t read this magazine yesterday.", "She didn’t check out this magazine yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти катався на лижах минулого місяця?",
+    "en": ["Did you ski last month?", "Did you go skiing last month?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не катався на лижах минулого місяця.",
+    "en": ["I didn’t ski last month.", "I didn’t go skiing last month."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи вона поливала квіти вчора?",
+    "en": ["Did she water the flowers yesterday?", "Did she tend to the flowers yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Вона не поливала квіти вчора.",
+    "en": ["She didn’t water the flowers yesterday.", "She didn’t tend to the flowers yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Чи вони відвідали багато міст торік?",
+    "en": ["Did they visit many cities last year?", "Did they explore a lot of cities last year?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони не відвідали багато міст торік.",
+    "en": ["They didn’t visit many cities last year.", "They didn’t explore a lot of cities last year."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "DEMONSTRATIVES"],
+    "ua": "Чи ви слухали цю музику вчора?",
+    "en": ["Did you listen to this music yesterday?", "Did you hear this music yesterday?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "DEMONSTRATIVES"],
+    "ua": "Ми не слухали цю музику вчора.",
+    "en": ["We didn’t listen to this music yesterday.", "We didn’t hear this music yesterday."]
+  },
+  {
+    "rules": ["DID_QUEST_NEG", "YES_NO_Q", "ARTICLES"],
+    "ua": "Чи ти купив подарунок минулого тижня?",
+    "en": ["Did you buy a gift last week?", "Did you purchase a gift last week?"]
+  },
+  {
+    "rules": ["DID_QUEST_NEG",     "ARTICLES"],
+    "ua": "Я не купив подарунок минулого тижня.",
+    "en": ["I didn’t buy a gift last week.", "I didn’t purchase a gift last week."]
+  }
+] }

@@ -1,0 +1,1082 @@
+{ "NOT_ONLY_BUT_ALSO": [
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "TOO_VERY"],
+    "ua": ["Вона не лише розумна, але й дуже добра (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She is not only intelligent but also very kind.",
+      "She's not only intelligent but also very kind."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "COUNT_UNCOUNT", "ARTICLES", "PREP_PLACE"],
+    "ua": ["У кімнаті не лише стіл, але й два стільці (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There is not only a table but also two chairs in the room.",
+      "There's not only a table but also two chairs in the room."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Він не лише любить співати, але й часто танцює (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only likes singing but also often dances.",
+      "He's not only fond of singing but also often dances."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "PREP_PLACE"],
+    "ua": ["Ми зустріли їх не лише в парку, але й у кав’ярні (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We met them not only in the park but also at the café.",
+      "We met them not only in the park but also at the cafe."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": ["Вона не лише закінчила проект, але й уже його представила (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She has not only finished the project but also already presented it.",
+      "She's not only finished the project but also already presented it."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_ENOUGH", "COMPARATIVES"],
+    "ua": ["Ця вправа не лише складніша, але й занадто довга (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This exercise is not only more difficult but also too long.",
+      "This exercise's not only more difficult but also too long."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT", "POSSESSIVE_ADJECTIVES"],
+    "ua": ["Ми не лише маємо свої квитки, але й документи (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only our tickets but also our documents.",
+      "We've not only our tickets but also our documents."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Він не лише написав листа, але й надіслав його вчасно (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only wrote the letter but also sent it on time.",
+      "He not only wrote the letter but also sent it in time."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT", "IN_ORDER_TO_SO_THAT"],
+    "ua": ["Вона не лише може співати, але й робить це, щоб надихати інших (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She can not only sing but also does it in order to inspire others.",
+      "She can not only sing but also to inspire others."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
+    "ua": ["Вони не лише запізнилися, але й прийшли без вибачень (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only arrived late but also came without apologies.",
+      "They not only arrived late but also came without saying sorry."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "TOO_VERY"],
+    "ua": ["Він не лише талановитий, але й дуже працьовитий (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He is not only talented but also very hardworking.",
+      "He's not only talented but also very hardworking."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "COUNT_UNCOUNT", "ARTICLES", "PREP_PLACE"],
+    "ua": ["У саду не лише дерева, але й квіти (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only trees but also flowers in the garden.",
+      "There’re not only trees but also flowers in the garden."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING"],
+    "ua": ["Вона не лише любить малювати, але й захоплюється фотографією (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only likes drawing but also enjoys photography.",
+      "She's not only into drawing but also into photography."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Вони не лише працюють разом, але й часто подорожують (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only work together but also travel often.",
+      "They not only work together but also often travel."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Він не лише приготував вечерю, але й помив посуд (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only cooked dinner but also washed the dishes.",
+      "He not only made dinner but also washed the dishes."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["Ми не лише маємо час, але й бажання допомогти (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only the time but also the desire to help.",
+      "We've not only the time but also the desire to help."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WILL_PREDICTIONS", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Він не лише приєднається до команди, але й буде її лідером (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He will not only join the team but also lead it.",
+      "He’ll not only join the team but also lead it."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_VERY", "COMPARATIVES"],
+    "ua": ["Цей тест не лише важчий, але й дуже довгий (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This test is not only harder but also very long.",
+      "This test's not only harder but also very long."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "TOO_VERY"],
+    "ua": ["Я не лише люблю читати, але й дуже люблю писати (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "I not only like reading but also love writing.",
+      "I not only enjoy reading but also really like writing."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT", "IN_ORDER_TO_SO_THAT"],
+    "ua": ["Вони не лише можуть співати, але й роблять це, щоб допомогти благодійності (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They can not only sing but also do it to support charity.",
+      "They can’t not only sing but also perform for charity."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": ["Вона не лише завершила роботу, але й уже здала звіт (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She has not only completed the work but also already submitted the report.",
+      "She's not only completed the work but also already submitted the report."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["У нас не лише є план, але й запасний варіант (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a plan but also a backup option.",
+      "We've not only a plan but also a backup option."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише розумний, але й працює наполегливо (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He is not only smart but also works hard.",
+      "He's not only smart but also works hard."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "PREP_PLACE"],
+    "ua": ["Ми бачили їх не лише в театрі, але й у ресторані (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We saw them not only at the theater but also at the restaurant.",
+      "We saw them not only in the theater but also in the restaurant."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE", "MAKE_DO_DIFFERENCE"],
+    "ua": ["Він не лише зробив помилку, але й не вибачився (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only made a mistake but also didn’t apologize.",
+      "He not only made a mistake but also failed to apologize."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Проєкт не лише був завершений, але й представлений публіці (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The project was not only completed but also presented to the public.",
+      "The project wasn’t only completed but also presented to the public."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_ENOUGH"],
+    "ua": ["Цей фільм не лише цікавий, але й достатньо довгий (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This movie is not only interesting but also long enough.",
+      "This movie's not only interesting but also long enough."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Вона не лише любить кататися на велосипеді, але й робить це щодня (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only likes cycling but also does it every day.",
+      "She's not only fond of cycling but also rides every day."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "THERE_IS_ARE"],
+    "ua": ["У цьому місті не лише гарні парки, але й чудові музеї (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only beautiful parks but also amazing museums in this city.",
+      "There’re not only beautiful parks but also amazing museums in this city."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE", "WAS_WERE"],
+    "ua": ["Вона не лише була в Парижі, але й жила там пів року (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She was not only in Paris but also lived there for half a year.",
+      "She wasn’t only in Paris but also lived there for six months."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_VERY", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише втомлений, але й дуже голодний (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He is not only tired but also very hungry.",
+      "He's not only tired but also very hungry."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "TOO_VERY"],
+    "ua": ["Я не лише люблю подорожувати, але й дуже люблю фотографувати (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "I not only like traveling but also love taking photos.",
+      "I not only enjoy traveling but also really love taking photos."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+    "ua": ["Ця книга не лише була написана швидко, але й видана минулого року (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The book was not only written quickly but also published last year.",
+      "The book wasn’t only written quickly but also published last year."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "HAVE_HAVE_GOT"],
+    "ua": ["Ми не лише маємо план, але й ресурси для його реалізації (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a plan but also the resources to carry it out.",
+      "We've not only a plan but also the resources to carry it out."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Вона не лише може готувати, але й робить це з любов’ю (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She can not only cook but also does it with love.",
+      "She can’t not only cook but also do it with love."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "TOO_VERY"],
+    "ua": ["Вона не лише талановита, але й дуже щира (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She is not only talented but also very sincere.",
+      "She's not only talented but also very sincere."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["У бібліотеці не лише книжки, але й комп’ютери (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only books but also computers in the library.",
+      "There’re not only books but also computers in the library."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "TOO_VERY"],
+    "ua": ["Він не лише любить грати у футбол, але й дуже добре грає (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only likes playing football but also plays very well.",
+      "He's not only fond of playing football but also plays very well."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["Ми не лише маємо машину, але й велосипед (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a car but also a bicycle.",
+      "We've not only a car but also a bike."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Вона не лише приготувала вечерю, але й накрила на стіл (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only cooked dinner but also set the table.",
+      "She not only made dinner but also set the table."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+    "ua": ["Фільм не лише був знятий у Парижі, але й отримав нагороду (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The movie was not only filmed in Paris but also won an award.",
+      "The movie wasn’t only filmed in Paris but also won an award."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Я не лише люблю плавати, але й роблю це щовихідних (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "I not only like swimming but also do it every weekend.",
+      "I not only enjoy swimming but also swim every weekend."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_VERY", "COMPARATIVES"],
+    "ua": ["Ця кімната не лише більша, але й набагато світліша (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This room is not only bigger but also much brighter.",
+      "This room's not only bigger but also much brighter."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT", "IN_ORDER_TO_SO_THAT"],
+    "ua": ["Він не лише може грати на гітарі, але й вчить інших (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He can not only play the guitar but also teaches others.",
+      "He can’t not only play the guitar but also teach others."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
+    "ua": ["Вони не лише запізнилися, але й забули документи (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only arrived late but also forgot the documents.",
+      "They not only came late but also forgot their papers."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WILL_PREDICTIONS"],
+    "ua": ["Ми не лише поїдемо в Італію, але й відвідаємо Іспанію (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We will not only go to Italy but also visit Spain.",
+      "We’ll not only go to Italy but also visit Spain."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": ["Вона не лише закінчила книгу, але й уже написала другу (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She has not only finished the book but also already written another one.",
+      "She's not only finished the book but also already written another one."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["Ми не лише маємо новий будинок, але й великий сад (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a new house but also a big garden.",
+      "We've not only a new house but also a big garden."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING"],
+    "ua": ["Вона не лише любить танцювати, але й навчає дітей танцям (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only likes dancing but also teaches children to dance.",
+      "She's not only fond of dancing but also teaches kids to dance."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES"],
+    "ua": ["Цей ресторан не лише має чудову кухню, але й приємну атмосферу (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This restaurant not only has great food but also a pleasant atmosphere.",
+      "This restaurant's not only got great food but also a pleasant atmosphere."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Він не лише купив квитки, але й забронював готель (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only bought the tickets but also booked the hotel.",
+      "He not only purchased the tickets but also booked the hotel."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT"],
+    "ua": ["Вона не лише може малювати, але й писати картини маслом (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She can not only draw but also paint with oils.",
+      "She can’t not only draw but also paint in oils."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "ARTICLES"],
+    "ua": ["У кімнаті не лише ліжко, але й диван (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There is not only a bed but also a sofa in the room.",
+      "There's not only a bed but also a sofa in the room."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише запізнився, але й не вибачився (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only was late but also didn’t apologize.",
+      "He wasn’t only late but also didn’t say sorry."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Цей проєкт не лише був затверджений, але й реалізований (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The project was not only approved but also implemented.",
+      "The project wasn’t only approved but also carried out."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_ENOUGH"],
+    "ua": ["Завдання не лише складне, але й достатньо довге (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The task is not only difficult but also long enough.",
+      "The task's not only difficult but also long enough."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Ми не лише любимо подорожувати, але й робимо це щоліта (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We not only like traveling but also do it every summer.",
+      "We not only enjoy traveling but also travel every summer."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "THERE_IS_ARE"],
+    "ua": ["У цьому музеї не лише картини, але й старовинні скульптури (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only paintings but also ancient sculptures in this museum.",
+      "There’re not only paintings but also ancient sculptures in this museum."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WAS_WERE", "PAST_SIMPLE"],
+    "ua": ["Вона не лише була в Лондоні, але й відвідала Оксфорд (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She was not only in London but also visited Oxford.",
+      "She wasn’t only in London but also visited Oxford."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише приніс подарунок, але й подякував за запрошення (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only brought a gift but also thanked them for the invitation.",
+      "He not only brought a present but also said thanks for the invitation."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "TOO_VERY"],
+    "ua": ["Вона не лише красива, але й дуже розумна (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She is not only beautiful but also very smart.",
+      "She's not only beautiful but also very smart."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["У парку не лише дерева, але й фонтани (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only trees but also fountains in the park.",
+      "There’re not only trees but also fountains in the park."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING"],
+    "ua": ["Я не лише люблю слухати музику, але й граю на гітарі (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "I not only like listening to music but also play the guitar.",
+      "I not only enjoy listening to music but also play the guitar."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["Ми не лише маємо собаку, але й кішку (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a dog but also a cat.",
+      "We've not only a dog but also a cat."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Він не лише зробив домашнє завдання, але й допоміг сестрі (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only did his homework but also helped his sister.",
+      "He not only did the homework but also helped his sister."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Будинок не лише був побудований швидко, але й гарно оздоблений (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The house was not only built quickly but also beautifully decorated.",
+      "The house wasn’t only built quickly but also beautifully decorated."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Вона не лише любить готувати, але й робить це щодня (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only likes cooking but also does it every day.",
+      "She's not only fond of cooking but also cooks every day."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_VERY", "COMPARATIVES"],
+    "ua": ["Ця гора не лише вища, але й набагато гарніша (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This mountain is not only higher but also much more beautiful.",
+      "This mountain's not only higher but also much more beautiful."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT", "IN_ORDER_TO_SO_THAT"],
+    "ua": ["Він не лише може писати вірші, але й робить це, щоб надихати інших (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He can not only write poems but also does it to inspire others.",
+      "He can’t not only write poems but also inspire others."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Вони не лише спізнилися, але й забули подарунок (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only arrived late but also forgot the gift.",
+      "They not only came late but also forgot the present."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WILL_PREDICTIONS"],
+    "ua": ["Ми не лише відвідаємо Францію, але й Іспанію (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We will not only visit France but also Spain.",
+      "We’ll not only visit France but also Spain."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT"],
+    "ua": ["Вона не лише закінчила проект, але й надіслала його вчасно (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She has not only finished the project but also sent it on time.",
+      "She's not only finished the project but also sent it on time."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["У нас не лише є новий будинок, але й великий сад (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a new house but also a big garden.",
+      "We've not only a new house but also a big garden."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING"],
+    "ua": ["Вона не лише любить кататися на ковзанах, але й навчає дітей (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only likes skating but also teaches children.",
+      "She's not only fond of skating but also teaches kids."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES"],
+    "ua": ["Цей магазин не лише продає одяг, але й взуття (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This shop not only sells clothes but also shoes.",
+      "This shop's not only selling clothes but also shoes."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Він не лише купив квитки, але й забронював столик у ресторані (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only bought the tickets but also reserved a table at the restaurant.",
+      "He not only purchased the tickets but also booked a table at the restaurant."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT"],
+    "ua": ["Вона не лише може співати, але й танцювати (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She can not only sing but also dance.",
+      "She can’t not only sing but also dance."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "ARTICLES"],
+    "ua": ["У кімнаті не лише стіл, але й лампа (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There is not only a table but also a lamp in the room.",
+      "There's not only a table but also a lamp in the room."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише спізнився, але й не приніс звіт (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only was late but also didn’t bring the report.",
+      "He wasn’t only late but also didn’t bring the report."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Концерт не лише був організований чудово, але й записаний (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The concert was not only well organized but also recorded.",
+      "The concert wasn’t only well organized but also recorded."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_ENOUGH"],
+    "ua": ["Ця вправа не лише складна, але й достатньо довга (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This exercise is not only difficult but also long enough.",
+      "This exercise's not only difficult but also long enough."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Ми не лише любимо бігати, але й робимо це щодня (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We not only like running but also do it every day.",
+      "We not only enjoy running but also run every day."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "THERE_IS_ARE"],
+    "ua": ["У музеї не лише картини, але й старовинні книги (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only paintings but also old books in the museum.",
+      "There’re not only paintings but also old books in the museum."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WAS_WERE"],
+    "ua": ["Він не лише був щасливий, але й здивований (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He was not only happy but also surprised.",
+      "He wasn’t only happy but also surprised."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Вона не лише принесла каву, але й печиво (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only brought coffee but also cookies.",
+      "She not only brought coffee but also some biscuits."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "TOO_VERY"],
+    "ua": ["Він не лише розумний, але й дуже скромний (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He is not only smart but also very humble.",
+      "He's not only smart but also very humble."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["На столі не лише книги, але й газети (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only books but also newspapers on the table.",
+      "There’re not only books but also newspapers on the table."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "TOO_VERY"],
+    "ua": ["Я не лише люблю готувати, але й дуже люблю пекти торти (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "I not only like cooking but also love baking cakes.",
+      "I not only enjoy cooking but also love baking cakes."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["Ми не лише маємо план, але й кілька ідей (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a plan but also a few ideas.",
+      "We've not only a plan but also a few ideas."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Вона не лише прочитала книгу, але й написала рецензію (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only read the book but also wrote a review.",
+      "She not only finished the book but also wrote a review."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Міст не лише був побудований, але й відкритий минулого року (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The bridge was not only built but also opened last year.",
+      "The bridge wasn’t only built but also opened last year."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Вони не лише люблять подорожувати, але й часто роблять це разом (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only like traveling but also often do it together.",
+      "They not only enjoy traveling but also travel together often."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_VERY", "COMPARATIVES"],
+    "ua": ["Цей урок не лише корисніший, але й цікавіший (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This lesson is not only more useful but also more interesting.",
+      "This lesson's not only more useful but also more interesting."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT", "IN_ORDER_TO_SO_THAT"],
+    "ua": ["Він не лише може грати на фортепіано, але й робить це, щоб розслабитися (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He can not only play the piano but also does it to relax.",
+      "He can’t not only play the piano but also do it to relax."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Вона не лише прийшла вчасно, але й принесла подарунки (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only arrived on time but also brought gifts.",
+      "She not only came on time but also brought presents."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WILL_PREDICTIONS"],
+    "ua": ["Ми не лише відвідаємо музей, але й залишимося на виставці (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We will not only visit the museum but also stay for the exhibition.",
+      "We’ll not only visit the museum but also stay for the exhibition."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT"],
+    "ua": ["Він не лише закінчив навчання, але й знайшов роботу (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He has not only finished his studies but also found a job.",
+      "He's not only finished his studies but also found a job."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["Ми не лише маємо комп’ютери, але й планшети (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only computers but also tablets.",
+      "We've not only computers but also tablets."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING"],
+    "ua": ["Вона не лише любить малювати, але й створює комікси (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only likes drawing but also creates comics.",
+      "She's not only fond of drawing but also creates comics."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES"],
+    "ua": ["Цей фільм не лише має хорошу історію, але й чудових акторів (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This movie not only has a good story but also great actors.",
+      "This movie's not only got a good story but also great actors."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Вони не лише відвідали Польщу, але й Угорщину (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only visited Poland but also Hungary.",
+      "They not only went to Poland but also to Hungary."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT"],
+    "ua": ["Вона не лише може керувати машиною, але й ремонтувати її (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She can not only drive a car but also repair it.",
+      "She can’t not only drive a car but also fix it."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "ARTICLES"],
+    "ua": ["У класі не лише вчитель, але й директор (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There is not only a teacher but also a headmaster in the classroom.",
+      "There's not only a teacher but also a headmaster in the classroom."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише забув ключі, але й телефон (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only forgot his keys but also his phone.",
+      "He not only forgot the keys but also his phone."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Стаття не лише була написана, але й опублікована в журналі (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The article was not only written but also published in the magazine.",
+      "The article wasn’t only written but also published in the magazine."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_ENOUGH"],
+    "ua": ["Завдання не лише важке, але й достатньо довге (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The task is not only hard but also long enough.",
+      "The task's not only hard but also long enough."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Вона не лише любить співати, але й робить це щопонеділка (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only likes singing but also does it every Monday.",
+      "She's not only fond of singing but also sings every Monday."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "THERE_IS_ARE"],
+    "ua": ["У цьому місті не лише гарні парки, але й цікаві музеї (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only beautiful parks but also interesting museums in this city.",
+      "There’re not only beautiful parks but also interesting museums in this city."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WAS_WERE"],
+    "ua": ["Вони не лише були щасливі, але й вдячні (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They were not only happy but also grateful.",
+      "They weren’t only happy but also grateful."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише написав листа, але й подзвонив (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only wrote a letter but also called.",
+      "He not only wrote a letter but also made a call."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_VERY", "ARTICLES"],
+    "ua": ["Вона не лише добра, але й дуже уважна (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She is not only kind but also very attentive.",
+      "She's not only kind but also very attentive."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE", "COUNT_UNCOUNT", "PREP_PLACE"],
+    "ua": ["На полиці не лише книги, але й іграшки (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only books but also toys on the shelf.",
+      "There’re not only books but also toys on the shelf."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING"],
+    "ua": ["Я не лише люблю плавати, але й навчати інших (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "I not only like swimming but also teaching others.",
+      "I not only enjoy swimming but also like teaching others."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["Ми не лише маємо будинок, але й дачу (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only a house but also a summer cottage.",
+      "We've not only a house but also a summer cottage."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Він не лише зробив завдання, але й пояснив його іншим (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only did the task but also explained it to others.",
+      "He not only completed the task but also explained it to others."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Школа не лише була побудована, але й відремонтована (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The school was not only built but also renovated.",
+      "The school wasn’t only built but also renovated."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Вони не лише люблять малювати, але й роблять це щодня (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only like drawing but also do it every day.",
+      "They not only enjoy drawing but also draw every day."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "COMPARATIVES"],
+    "ua": ["Цей телефон не лише кращий, але й дешевший (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This phone is not only better but also cheaper.",
+      "This phone's not only better but also cheaper."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT"],
+    "ua": ["Він не лише може співати, але й грати на барабанах (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He can not only sing but also play the drums.",
+      "He can’t not only sing but also play the drums."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Вона не лише принесла звіт, але й підготувала презентацію (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only brought the report but also prepared a presentation.",
+      "She not only brought the report but also made a presentation."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WILL_PREDICTIONS"],
+    "ua": ["Ми не лише поїдемо на море, але й відвідаємо гори (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We will not only go to the sea but also visit the mountains.",
+      "We’ll not only go to the sea but also visit the mountains."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT"],
+    "ua": ["Він не лише закінчив курс, але й отримав сертифікат (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He has not only completed the course but also received a certificate.",
+      "He's not only completed the course but also received a certificate."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "HAVE_HAVE_GOT"],
+    "ua": ["Ми не лише маємо квитки, але й запрошення (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We have not only tickets but also invitations.",
+      "We've not only tickets but also invitations."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING"],
+    "ua": ["Він не лише любить бігати, але й займається йогою (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only likes running but also does yoga.",
+      "He's not only fond of running but also practices yoga."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES"],
+    "ua": ["Ця компанія не лише має офіс у Варшаві, але й у Кракові (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This company not only has an office in Warsaw but also in Krakow.",
+      "This company's not only got an office in Warsaw but also in Krakow."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PAST_SIMPLE"],
+    "ua": ["Вони не лише приїхали вчасно, але й принесли подарунки (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They not only arrived on time but also brought gifts.",
+      "They not only came on time but also brought presents."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "CAN_CANT"],
+    "ua": ["Вона не лише може говорити англійською, але й французькою (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She can not only speak English but also French.",
+      "She can’t not only speak English but also French."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "THERE_IS_ARE"],
+    "ua": ["У місті не лише нові будинки, але й старі вулиці (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There are not only new buildings but also old streets in the city.",
+      "There’re not only new buildings but also old streets in the city."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Він не лише прийшов пізно, але й забув документи (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "He not only came late but also forgot the documents.",
+      "He not only arrived late but also forgot the papers."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Книга не лише була перекладена, але й екранізована (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "The book was not only translated but also made into a film.",
+      "The book wasn’t only translated but also turned into a movie."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "TOO_ENOUGH"],
+    "ua": ["Цей текст не лише довгий, але й достатньо складний (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "This text is not only long but also difficult enough.",
+      "This text's not only long but also difficult enough."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Ми не лише любимо кататися на велосипеді, але й робимо це щонеділі (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "We not only like cycling but also do it every Sunday.",
+      "We not only enjoy cycling but also ride every Sunday."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "ARTICLES", "THERE_IS_ARE"],
+    "ua": ["У парку не лише гарне озеро, але й велика ігрова зона (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "There is not only a beautiful lake but also a large playground in the park.",
+      "There's not only a beautiful lake but also a large playground in the park."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "WAS_WERE"],
+    "ua": ["Вони не лише були здивовані, але й щасливі (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "They were not only surprised but also happy.",
+      "They weren’t only surprised but also happy."
+    ]
+  },
+  {
+    "rules": ["NOT_ONLY_BUT_ALSO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Вона не лише принесла каву, але й зробила тост (use NOT ONLY … BUT ALSO)."],
+    "en": [
+      "She not only brought coffee but also made toast.",
+      "She not only brought coffee but also prepared toast."
+    ]
+  }
+] }

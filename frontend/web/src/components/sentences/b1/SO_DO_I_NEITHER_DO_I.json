@@ -1,0 +1,971 @@
+{ "SO_DO_I_NEITHER_DO_I": [
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "ua": ["Я люблю кататися на ковзанах. Я теж."],
+    "en": [
+      "I like skating. So do I.",
+      "I like going skating. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "ua": ["Я не п’ю каву вранці. Я теж."],
+    "en": [
+      "I don’t drink coffee in the morning. Neither do I.",
+      "I do not drink coffee in the morning. Neither do I.",
+      "I don’t drink coffee in the morning. Me neither.",
+      "I do not drink coffee in the morning. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": ["Я часто ходжу в спортзал. Я теж."],
+    "en": [
+      "I often go to the gym. So do I.",
+      "I usually go to the gym. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE", "ARTICLES"],
+    "ua": ["Я не їм м’яса. Я теж."],
+    "en": [
+      "I don’t eat meat. Neither do I.",
+      "I do not eat meat. Neither do I.",
+      "I don’t eat meat. Me neither.",
+      "I do not eat meat. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "ua": ["Я люблю дивитися фільми ввечері. Я теж."],
+    "en": [
+      "I like watching movies in the evening. So do I.",
+      "I enjoy watching movies in the evening. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "ua": ["Я не граю у відеоігри. Я теж."],
+    "en": [
+      "I don’t play video games. Neither do I.",
+      "I do not play video games. Neither do I.",
+      "I don’t play video games. Me neither.",
+      "I do not play video games. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE", "TOO_VERY"],
+    "ua": ["Я дуже люблю цю пісню. Я теж."],
+    "en": [
+      "I really like this song. So do I.",
+      "I like this song very much. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Я не снідаю вранці. Я теж."],
+    "en": [
+      "I don’t have breakfast in the morning. Neither do I.",
+      "I do not eat breakfast in the morning. Neither do I.",
+      "I don’t have breakfast in the morning. Me neither.",
+      "I do not eat breakfast in the morning. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "ua": ["Я люблю подорожувати. Я теж."],
+    "en": [
+      "I like traveling. So do I.",
+      "I love traveling. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE", "ARTICLES", "HAVE_HAVE_GOT"],
+    "ua": ["Я не маю машини. Я теж."],
+    "en": [
+      "I don’t have a car. Neither do I.",
+      "I do not have a car. Neither do I.",
+      "I don’t have a car. Me neither.",
+      "I do not have a car. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "BE_FROM", "TO_BE"],
+    "ua": ["Я з України. Я теж."],
+    "en": [
+      "I’m from Ukraine. So am I.",
+      "I am from Ukraine. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "CAN_CANT"],
+    "ua": ["Я не вмію плавати. Я теж."],
+    "en": [
+      "I can’t swim. Neither can I.",
+      "I cannot swim. Neither can I.",
+      "I can’t swim. Me neither.",
+      "I cannot swim. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_HAVE_GOT", "ARTICLES", "COUNT_UNCOUNT"],
+    "ua": ["У мене є кішка. Я теж."],
+    "en": [
+      "I’ve got a cat. So have I.",
+      "I have got a cat. So have I.",
+      "I have a cat. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "ua": ["Я не люблю гостру їжу. Я теж."],
+    "en": [
+      "I don’t like spicy food. Neither do I.",
+      "I do not like spicy food. Neither do I.",
+      "I don’t like spicy food. Me neither.",
+      "I do not like spicy food. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_PERFECT", "ALREADY_YET_JUST", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": ["Я вже бачив цей фільм. Я теж."],
+    "en": [
+      "I’ve already seen this movie. So have I.",
+      "I have already seen this movie. So have I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PAST_SIMPLE", "DID_QUEST_NEG", "PREP_TIME", "ARTICLES"],
+    "ua": ["Я вчора не ходив у спортзал. Я теж."],
+    "en": [
+      "I didn’t go to the gym yesterday. Neither did I.",
+      "I did not go to the gym yesterday. Neither did I.",
+      "I didn’t go to the gym yesterday. Me neither.",
+      "I did not go to the gym yesterday. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "WILL_PREDICTIONS", "PREP_TIME"],
+    "ua": ["Я завтра працюватиму з дому. Я теж."],
+    "en": [
+      "I’ll work from home tomorrow. So will I.",
+      "I will work from home tomorrow. So will I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+    "ua": ["Я сьогодні не вільна. Я теж."],
+    "en": [
+      "I’m not free today. Neither am I.",
+      "I am not free today. Neither am I.",
+      "I’m not free today. Me neither.",
+      "I am not free today. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "SHOULD_SHOULDNT"],
+    "ua": ["Мені слід більше відпочивати. Я теж."],
+    "en": [
+      "I should rest more. So should I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "MUST_MUSTNT"],
+    "ua": ["Мені не можна спізнюватися. Я теж."],
+    "en": [
+      "I mustn’t be late. Neither must I.",
+      "I must not be late. Neither must I.",
+      "I mustn’t be late. Me neither.",
+      "I must not be late. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "CAN_CANT", "PREP_TIME"],
+    "ua": ["Я можу приїхати о третій. Я теж."],
+    "en": [
+      "I can arrive at three. So can I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_TO_DONT_HAVE_TO", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+    "ua": ["Мені не потрібно працювати у вихідні. Я теж."],
+    "en": [
+      "I don’t have to work on weekends. Neither do I.",
+      "I do not have to work on weekends. Neither do I.",
+      "I don’t have to work on weekends. Me neither.",
+      "I do not have to work on weekends. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "WAS_WERE", "PREP_TIME", "PREP_PLACE"],
+    "ua": ["Я була в Лондоні торік. Я теж."],
+    "en": [
+      "I was in London last year. So was I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": ["Я ще не завершила проєкт. Я теж."],
+    "en": [
+      "I haven’t finished the project yet. Neither have I.",
+      "I have not finished the project yet. Neither have I.",
+      "I haven’t finished the project yet. Me neither.",
+      "I have not finished the project yet. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Я зазвичай бігаю вранці. Я теж."],
+    "en": [
+      "I usually run in the morning. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_HAVE_GOT", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "ua": ["У мене немає часу. Я теж."],
+    "en": [
+      "I don’t have time. Neither do I.",
+      "I do not have time. Neither do I.",
+      "I don’t have time. Me neither.",
+      "I do not have time. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_HAVE_GOT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": ["У мене є двоє дітей. Я теж."],
+    "en": [
+      "I have two children. So do I.",
+      "I’ve got two children. So have I.",
+      "I have got two children. So have I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT", "DEMONSTRATIVES", "PREP_PLACE"],
+    "ua": ["Я не в цій групі. Я теж."],
+    "en": [
+      "I’m not in this group. Neither am I.",
+      "I am not in this group. Neither am I.",
+      "I’m not in this group. Me neither.",
+      "I am not in this group. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "GOING_TO_PLANS", "PREP_TIME", "ARTICLES"],
+    "ua": ["Я збираюся почати курс наступного місяця. Я теж."],
+    "en": [
+      "I’m going to start a course next month. So am I.",
+      "I am going to start a course next month. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "ua": ["Я не люблю солодке. Я теж."],
+    "en": [
+      "I don’t like sweets. Neither do I.",
+      "I do not like sweets. Neither do I.",
+      "I don’t like sweets. Me neither.",
+      "I do not like sweets. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "POSSESSIVE_S", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
+    "ua": ["Мені подобається мамина ідея. Я теж."],
+    "en": [
+      "I like my mother’s idea. So do I.",
+      "I like our mother’s idea. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "WAS_WERE", "PREP_TIME"],
+    "ua": ["Я тоді не була готова. Я теж."],
+    "en": [
+      "I wasn’t ready then. Neither was I.",
+      "I was not ready then. Neither was I.",
+      "I wasn’t ready then. Me neither.",
+      "I was not ready then. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_CONT_NOW"],
+    "ua": ["Я зараз працюю. Я теж."],
+    "en": [
+      "I’m working right now. So am I.",
+      "I am working right now. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "WILL_PREDICTIONS", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+    "ua": ["Я сьогодні ввечері не буду там. Я теж."],
+    "en": [
+      "I won’t be there tonight. Neither will I.",
+      "I will not be there tonight. Neither will I.",
+      "I won’t be there tonight. Me neither.",
+      "I will not be there tonight. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": ["Мені подобається ця книга. Я теж."],
+    "en": [
+      "I like this book. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я вдома. Я теж."],
+    "en": [
+      "I’m at home. So am I.",
+      "I am at home. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "ua": ["Я не курю. Я теж."],
+    "en": [
+      "I don’t smoke. Neither do I.",
+      "I do not smoke. Neither do I.",
+      "I don’t smoke. Me neither.",
+      "I do not smoke. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "ua": ["Я люблю читати перед сном. Я теж."],
+    "en": [
+      "I like reading before bed. So do I.",
+      "I like reading before going to sleep. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "ua": ["Я не дивлюся телевізор. Я теж."],
+    "en": [
+      "I don’t watch TV. Neither do I.",
+      "I do not watch TV. Neither do I.",
+      "I don’t watch TV. Me neither.",
+      "I do not watch TV. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю слухати музику. Я теж."],
+    "en": [
+      "I like listening to music. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не голодна. Я теж."],
+    "en": [
+      "I’m not hungry. Neither am I.",
+      "I am not hungry. Neither am I.",
+      "I’m not hungry. Me neither.",
+      "I am not hungry. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["У мене є новий телефон. Я теж."],
+    "en": [
+      "I’ve got a new phone. So have I.",
+      "I have got a new phone. So have I.",
+      "I have a new phone. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не люблю холодну погоду. Я теж."],
+    "en": [
+      "I don’t like cold weather. Neither do I.",
+      "I do not like cold weather. Neither do I.",
+      "I don’t like cold weather. Me neither.",
+      "I do not like cold weather. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "CAN_CANT"],
+    "ua": ["Я можу співати. Я теж."],
+    "en": [
+      "I can sing. So can I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": ["Я щойно закінчила роботу. Я теж."],
+    "en": [
+      "I’ve just finished work. So have I.",
+      "I have just finished work. So have I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Мені не потрібно вставати рано. Я теж."],
+    "en": [
+      "I don’t have to get up early. Neither do I.",
+      "I do not have to get up early. Neither do I.",
+      "I don’t have to get up early. Me neither.",
+      "I do not have to get up early. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": ["Я цікавлюся фотографією. Я теж."],
+    "en": [
+      "I’m interested in photography. So am I.",
+      "I am interested in photography. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+    "ua": ["Я сьогодні не в офісі. Я теж."],
+    "en": [
+      "I’m not in the office today. Neither am I.",
+      "I am not in the office today. Neither am I.",
+      "I’m not in the office today. Me neither.",
+      "I am not in the office today. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю готувати. Я теж."],
+    "en": [
+      "I like cooking. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": ["Я часто п’ю чай. Я теж."],
+    "en": [
+      "I often drink tea. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "WAS_WERE", "PREP_PLACE"],
+    "ua": ["Я була в Італії. Я теж."],
+    "en": [
+      "I was in Italy. So was I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "LIKE_ING"],
+    "ua": ["Я не люблю вставати рано. Я теж."],
+    "en": [
+      "I don’t like getting up early. Neither do I.",
+      "I do not like getting up early. Neither do I.",
+      "I don’t like getting up early. Me neither.",
+      "I do not like getting up early. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я на кухні. Я теж."],
+    "en": [
+      "I’m in the kitchen. So am I.",
+      "I am in the kitchen. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_HAVE_GOT", "NEGATION_DONT_DOESNT"],
+    "ua": ["У мене немає братів чи сестер. Я теж."],
+    "en": [
+      "I don’t have any brothers or sisters. Neither do I.",
+      "I do not have any brothers or sisters. Neither do I.",
+      "I don’t have any brothers or sisters. Me neither.",
+      "I do not have any brothers or sisters. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не втомлена. Я теж."],
+    "en": [
+      "I’m not tired. Neither am I.",
+      "I am not tired. Neither am I.",
+      "I’m not tired. Me neither.",
+      "I am not tired. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "CAN_CANT"],
+    "ua": ["Я можу водити машину. Я теж."],
+    "en": [
+      "I can drive a car. So can I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "ua": ["Я люблю ходити в кіно. Я теж."],
+    "en": [
+      "I like going to the cinema. So do I.",
+      "I like going to the movies. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не їм цукру. Я теж."],
+    "en": [
+      "I don’t eat sugar. Neither do I.",
+      "I do not eat sugar. Neither do I.",
+      "I don’t eat sugar. Me neither.",
+      "I do not eat sugar. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": ["Я ще не бачила цей серіал. Я теж."],
+    "en": [
+      "I haven’t seen this series yet. Neither have I.",
+      "I have not seen this series yet. Neither have I.",
+      "I haven’t seen this series yet. Me neither.",
+      "I have not seen this series yet. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю плавати в морі. Я теж."],
+    "en": [
+      "I like swimming in the sea. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я на роботі. Я теж."],
+    "en": [
+      "I’m at work. So am I.",
+      "I am at work. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "ua": ["Я не п’ю алкоголь. Я теж."],
+    "en": [
+      "I don’t drink alcohol. Neither do I.",
+      "I do not drink alcohol. Neither do I.",
+      "I don’t drink alcohol. Me neither.",
+      "I do not drink alcohol. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "ua": ["Я люблю гуляти ввечері. Я теж."],
+    "en": [
+      "I like walking in the evening. So do I.",
+      "I love walking in the evening. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не готова. Я теж."],
+    "en": [
+      "I’m not ready. Neither am I.",
+      "I am not ready. Neither am I.",
+      "I’m not ready. Me neither.",
+      "I am not ready. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю подорожувати потягом. Я теж."],
+    "en": [
+      "I like traveling by train. So do I.",
+      "I love traveling by train. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "ua": ["Я не п’ю молока. Я теж."],
+    "en": [
+      "I don’t drink milk. Neither do I.",
+      "I do not drink milk. Neither do I.",
+      "I don’t drink milk. Me neither.",
+      "I do not drink milk. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я у парку. Я теж."],
+    "en": [
+      "I’m in the park. So am I.",
+      "I am in the park. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю танцювати. Я теж."],
+    "en": [
+      "I like dancing. So do I.",
+      "I love dancing. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не люблю дощ. Я теж."],
+    "en": [
+      "I don’t like rain. Neither do I.",
+      "I do not like rain. Neither do I.",
+      "I don’t like rain. Me neither.",
+      "I do not like rain. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE"],
+    "ua": ["Я втомлена. Я теж."],
+    "en": [
+      "I’m tired. So am I.",
+      "I am tired. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не дивлюся новини. Я теж."],
+    "en": [
+      "I don’t watch the news. Neither do I.",
+      "I do not watch the news. Neither do I.",
+      "I don’t watch the news. Me neither.",
+      "I do not watch the news. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "ua": ["Я люблю ходити в театр. Я теж."],
+    "en": [
+      "I like going to the theatre. So do I.",
+      "I like going to the theater. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["У мене є велосипед. Я теж."],
+    "en": [
+      "I’ve got a bike. So have I.",
+      "I have got a bike. So have I.",
+      "I have a bike. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "LIKE_ING"],
+    "ua": ["Я не люблю працювати вночі. Я теж."],
+    "en": [
+      "I don’t like working at night. Neither do I.",
+      "I do not like working at night. Neither do I.",
+      "I don’t like working at night. Me neither.",
+      "I do not like working at night. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я на кухні. Я теж."],
+    "en": [
+      "I’m in the kitchen. So am I.",
+      "I am in the kitchen. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": ["Я вже була там. Я теж."],
+    "en": [
+      "I’ve already been there. So have I.",
+      "I have already been there. So have I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не їм після 8 вечора. Я теж."],
+    "en": [
+      "I don’t eat after 8 p.m. Neither do I.",
+      "I do not eat after 8 p.m. Neither do I.",
+      "I don’t eat after 8 p.m. Me neither.",
+      "I do not eat after 8 p.m. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "ua": ["Я люблю спати довго у вихідні. Я теж."],
+    "en": [
+      "I like sleeping late on weekends. So do I.",
+      "I love sleeping late on weekends. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не злий. Я теж."],
+    "en": [
+      "I’m not angry. Neither am I.",
+      "I am not angry. Neither am I.",
+      "I’m not angry. Me neither.",
+      "I am not angry. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "ua": ["Я люблю дивитися фільми у кінотеатрі. Я теж."],
+    "en": [
+      "I like watching movies at the cinema. So do I.",
+      "I like watching movies at the theater. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "HAVE_HAVE_GOT"],
+    "ua": ["У мене немає домашніх тварин. Я теж."],
+    "en": [
+      "I don’t have any pets. Neither do I.",
+      "I do not have any pets. Neither do I.",
+      "I don’t have any pets. Me neither.",
+      "I do not have any pets. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я в офісі. Я теж."],
+    "en": [
+      "I’m in the office. So am I.",
+      "I am in the office. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_PLACE"],
+    "ua": ["Я люблю бігати в парку. Я теж."],
+    "en": [
+      "I like running in the park. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не п’ю газовану воду. Я теж."],
+    "en": [
+      "I don’t drink soda. Neither do I.",
+      "I do not drink soda. Neither do I.",
+      "I don’t drink soda. Me neither.",
+      "I do not drink soda. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "COUNT_UNCOUNT"],
+    "ua": ["Я люблю каву. Я теж."],
+    "en": [
+      "I like coffee. So do I.",
+      "I love coffee. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я у школі. Я теж."],
+    "en": [
+      "I’m at school. So am I.",
+      "I am at school. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не п’ю чай. Я теж."],
+    "en": [
+      "I don’t drink tea. Neither do I.",
+      "I do not drink tea. Neither do I.",
+      "I don’t drink tea. Me neither.",
+      "I do not drink tea. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю малювати. Я теж."],
+    "en": [
+      "I like drawing. So do I.",
+      "I love drawing. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не зайнята. Я теж."],
+    "en": [
+      "I’m not busy. Neither am I.",
+      "I am not busy. Neither am I.",
+      "I’m not busy. Me neither.",
+      "I am not busy. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "ua": ["Я люблю читати вранці. Я теж."],
+    "en": [
+      "I like reading in the morning. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "HAVE_HAVE_GOT"],
+    "ua": ["У мене немає грошей. Я теж."],
+    "en": [
+      "I don’t have any money. Neither do I.",
+      "I do not have any money. Neither do I.",
+      "I don’t have any money. Me neither.",
+      "I do not have any money. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я у супермаркеті. Я теж."],
+    "en": [
+      "I’m at the supermarket. So am I.",
+      "I am at the supermarket. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю бігати. Я теж."],
+    "en": [
+      "I like running. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не люблю каву. Я теж."],
+    "en": [
+      "I don’t like coffee. Neither do I.",
+      "I do not like coffee. Neither do I.",
+      "I don’t like coffee. Me neither.",
+      "I do not like coffee. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE"],
+    "ua": ["Я голодна. Я теж."],
+    "en": [
+      "I’m hungry. So am I.",
+      "I am hungry. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не їм м’яса. Я теж."],
+    "en": [
+      "I don’t eat meat. Neither do I.",
+      "I do not eat meat. Neither do I.",
+      "I don’t eat meat. Me neither.",
+      "I do not eat meat. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "ua": ["Я люблю дивитися фільми вночі. Я теж."],
+    "en": [
+      "I like watching movies at night. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не на роботі. Я теж."],
+    "en": [
+      "I’m not at work. Neither am I.",
+      "I am not at work. Neither am I.",
+      "I’m not at work. Me neither.",
+      "I am not at work. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_PLACE"],
+    "ua": ["Я люблю гуляти на природі. Я теж."],
+    "en": [
+      "I like walking in nature. So do I.",
+      "I love walking in nature. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["У мене є собака. Я теж."],
+    "en": [
+      "I’ve got a dog. So have I.",
+      "I have got a dog. So have I.",
+      "I have a dog. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "ua": ["Я не п’ю газованих напоїв. Я теж."],
+    "en": [
+      "I don’t drink fizzy drinks. Neither do I.",
+      "I do not drink fizzy drinks. Neither do I.",
+      "I don’t drink fizzy drinks. Me neither.",
+      "I do not drink fizzy drinks. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PREP_PLACE"],
+    "ua": ["Я в кафе. Я теж."],
+    "en": [
+      "I’m in the café. So am I.",
+      "I am in the café. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю готувати десерти. Я теж."],
+    "en": [
+      "I like cooking desserts. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не снідаю. Я теж."],
+    "en": [
+      "I don’t have breakfast. Neither do I.",
+      "I do not have breakfast. Neither do I.",
+      "I don’t have breakfast. Me neither.",
+      "I do not have breakfast. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE"],
+    "ua": ["Я щаслива. Я теж."],
+    "en": [
+      "I’m happy. So am I.",
+      "I am happy. So am I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "LIKE_ING"],
+    "ua": ["Я не люблю прибирання. Я теж."],
+    "en": [
+      "I don’t like cleaning. Neither do I.",
+      "I do not like cleaning. Neither do I.",
+      "I don’t like cleaning. Me neither.",
+      "I do not like cleaning. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "ua": ["Я люблю слухати музику в машині. Я теж."],
+    "en": [
+      "I like listening to music in the car. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не вдома. Я теж."],
+    "en": [
+      "I’m not at home. Neither am I.",
+      "I am not at home. Neither am I.",
+      "I’m not at home. Me neither.",
+      "I am not at home. Me neither."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "ua": ["Я люблю кататися на велосипеді. Я теж."],
+    "en": [
+      "I like riding a bike. So do I.",
+      "I love riding a bike. So do I."
+    ]
+  },
+  {
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "ua": ["Я не дивлюся серіали. Я теж."],
+    "en": [
+      "I don’t watch series. Neither do I.",
+      "I do not watch series. Neither do I.",
+      "I don’t watch series. Me neither.",
+      "I do not watch series. Me neither.",
+      "I don’t watch TV shows. Neither do I.",
+      "I do not watch TV shows. Neither do I.",
+      "I don’t watch TV shows. Me neither.",
+      "I do not watch TV shows. Me neither."
+    ]
+  }
+] }

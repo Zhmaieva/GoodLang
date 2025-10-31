@@ -1,0 +1,502 @@
+{ "MODAL_PERFECTS": [
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "en": "You should have told me the truth.",
+    "ua": "Тобі слід було сказати мені правду."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES", "ARTICLES"],
+    "en": "I should have studied harder for the exam.",
+    "ua": "Мені слід було вчитися старанніше до іспиту."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "They should have left earlier.",
+    "ua": "Їм слід було піти раніше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "He should have apologized to her.",
+    "ua": "Йому слід було вибачитися перед нею."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "We should have booked the tickets in advance.",
+    "ua": "Нам слід було забронювати квитки заздалегідь."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "BEFORE_AFTER_ING"],
+    "en": "You should have called before coming.",
+    "ua": "Тобі слід було подзвонити перед тим, як прийти."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "I should have taken an umbrella.",
+    "ua": "Мені слід було взяти парасолю."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "POSSESSIVE_ADJECTIVES"],
+    "en": "She should have listened to her parents.",
+    "ua": "Їй слід було послухати своїх батьків."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "We should have written down the address.",
+    "ua": "Нам слід було записати адресу."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "POSSESSIVE_ADJECTIVES"],
+    "en": "They should have helped their neighbors.",
+    "ua": "Їм слід було допомогти своїм сусідам."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "He should have checked the weather forecast.",
+    "ua": "Йому слід було перевірити прогноз погоди."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES", "COUNT_UNCOUNT"],
+    "en": "I should have saved more money.",
+    "ua": "Мені слід було заощадити більше грошей."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "en": "You should have thanked her for the gift.",
+    "ua": "Тобі слід було подякувати їй за подарунок."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES", "ARTICLES", "PREP_PLACE"],
+    "en": "We should have stayed longer at the party.",
+    "ua": "Нам слід було залишитися на вечірці довше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "She should have worn a coat.",
+    "ua": "Їй слід було вдягнути пальто."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "I should have gone to bed earlier.",
+    "ua": "Мені слід було лягти спати раніше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "They should have read the instructions.",
+    "ua": "Їм слід було прочитати інструкцію."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
+    "en": "He should have been more polite.",
+    "ua": "Йому слід було бути ввічливішим."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "You should have locked the door.",
+    "ua": "Тобі слід було замкнути двері."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "We should have waited for them.",
+    "ua": "Нам слід було їх почекати."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
+    "en": "I could have passed the test if I had studied.",
+    "ua": "Я міг би скласти тест, якби я вчився."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
+    "en": "She could have won the race with more training.",
+    "ua": "Вона могла б виграти забіг, якби більше тренувалася."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
+    "en": "They could have helped us, but they didn’t.",
+    "ua": "Вони могли б нам допомогти, але не зробили цього."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "He could have called, but he forgot.",
+    "ua": "Він міг би подзвонити, але забув."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "WITHOUT_ING"],
+    "en": "We could have arrived earlier without traffic.",
+    "ua": "Ми могли б приїхати раніше, якби не було заторів."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "You could have hurt yourself!",
+    "ua": "Ти міг би поранитися!"
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
+    "en": "I could have gone to Paris, but I chose Rome.",
+    "ua": "Я міг би поїхати до Парижа, але вибрав Рим."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "She could have taken the job offer.",
+    "ua": "Вона могла б прийняти пропозицію роботи."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "TIME_EXPRESSIONS"],
+    "en": "They could have bought that house last year.",
+    "ua": "Вони могли б купити той будинок минулого року."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "LEXICAL_COLLOCATION"],
+    "en": "He could have said something nicer.",
+    "ua": "Він міг би сказати щось приємніше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "TIME_EXPRESSIONS"],
+    "en": "I could have finished it yesterday.",
+    "ua": "Я міг би закінчити це вчора."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "You could have asked for help.",
+    "ua": "Ти міг би попросити про допомогу."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "We could have taken a taxi.",
+    "ua": "Ми могли б узяти таксі."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "She could have joined the team.",
+    "ua": "Вона могла б приєднатися до команди."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
+    "en": "They could have stayed longer.",
+    "ua": "Вони могли б залишитися довше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS", "LEXICAL_COLLOCATION"],
+    "en": "He could have told me the secret.",
+    "ua": "Він міг би сказати мені секрет."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
+    "en": "I could have done better.",
+    "ua": "Я міг би зробити краще."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
+    "en": "You could have been more careful.",
+    "ua": "Ти міг би бути обережнішим."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "We could have lost everything.",
+    "ua": "Ми могли б втратити все."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "She could have made a mistake.",
+    "ua": "Вона могла б зробити помилку."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL", "PERSONAL_PRONOUNS"],
+    "en": "I would have helped you if I had known.",
+    "ua": "Я б допоміг тобі, якби я знав."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "SECOND_CONDITIONAL"],
+    "en": "She would have come if she wasn’t sick.",
+    "ua": "Вона б прийшла, якби не була хвора."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "SECOND_CONDITIONAL"],
+    "en": "They would have joined us if they had time.",
+    "ua": "Вони б приєдналися до нас, якби мали час."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
+    "en": "He would have gone to the meeting, but he forgot.",
+    "ua": "Він би пішов на зустріч, але забув."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
+    "en": "We would have finished earlier with more people.",
+    "ua": "Ми б закінчили раніше, якби було більше людей."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES", "FIRST_CONDITIONAL"],
+    "en": "I would have bought it if it was cheaper.",
+    "ua": "Я б купив це, якби воно було дешевше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "You would have liked the movie.",
+    "ua": "Тобі б сподобався фільм."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
+    "en": "She would have called, but her phone died.",
+    "ua": "Вона б подзвонила, але в неї розрядився телефон."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
+    "en": "They would have stayed longer if it hadn’t rained.",
+    "ua": "Вони б залишилися довше, якби не було дощу."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
+    "en": "He would have taken the bus, but it was full.",
+    "ua": "Він би сів на автобус, але той був переповнений."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
+    "en": "I would have met you, but I was busy.",
+    "ua": "Я б зустрівся з тобою, але був зайнятий."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "SECOND_CONDITIONAL"],
+    "en": "You would have understood if you were there.",
+    "ua": "Ти б зрозумів, якби був там."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "We would have danced all night.",
+    "ua": "Ми б танцювали всю ніч."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "She would have accepted the offer.",
+    "ua": "Вона б прийняла пропозицію."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "They would have believed him.",
+    "ua": "Вони б йому повірили."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "SECOND_CONDITIONAL"],
+    "en": "He would have studied abroad if he had money.",
+    "ua": "Він би навчався за кордоном, якби мав гроші."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
+    "en": "I would have cooked dinner, but we ran out of food.",
+    "ua": "Я б приготував вечерю, але в нас закінчилася їжа."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "COMPARATIVES", "THIRD_CONDITIONAL"],
+    "en": "You would have passed if you had tried harder.",
+    "ua": "Ти б склав іспит, якби старався більше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "CONJUNCTIONS", "TIME_EXPRESSIONS"],
+    "en": "We would have called, but it was too late.",
+    "ua": "Ми б подзвонили, але було вже надто пізно."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "She would have recognized you instantly.",
+    "ua": "Вона б тебе впізнала миттєво."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PREP_PLACE"],
+    "en": "I might have left my phone at home.",
+    "ua": "Я, можливо, залишив свій телефон удома."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "She might have misunderstood what I said.",
+    "ua": "Вона, можливо, неправильно зрозуміла те, що я сказав."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "They might have arrived already.",
+    "ua": "Вони, можливо, вже прибули."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "He might have forgotten the meeting.",
+    "ua": "Він, можливо, забув про зустріч."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PREP_PLACE"],
+    "en": "We might have gone to the wrong place.",
+    "ua": "Ми, можливо, пішли не в те місце."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PREP_PLACE", "ARTICLES"],
+    "en": "I might have seen her at the station.",
+    "ua": "Я, можливо, бачив її на вокзалі."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "You might have heard the news.",
+    "ua": "Ти, можливо, чув новини."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "She might have lost her wallet.",
+    "ua": "Вона, можливо, загубила свій гаманець."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES", "COMPARATIVES"],
+    "en": "They might have taken the earlier train.",
+    "ua": "Вони, можливо, поїхали раннішим поїздом."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "He might have made a mistake.",
+    "ua": "Він, можливо, припустився помилки."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "TOO_ENOUGH"],
+    "en": "I might have been too harsh.",
+    "ua": "Я, можливо, був надто суворим."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "You might have scared him away.",
+    "ua": "Ти, можливо, його злякав і він утік."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "We might have chosen the wrong option.",
+    "ua": "Ми, можливо, обрали неправильний варіант."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "She might have gone home.",
+    "ua": "Вона, можливо, пішла додому."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "They might have thought we were joking.",
+    "ua": "Вони, можливо, подумали, що ми жартуємо."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "He might have deleted the file.",
+    "ua": "Він, можливо, видалив файл."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "PERSONAL_PRONOUNS"],
+    "en": "I might have offended her.",
+    "ua": "Я, можливо, образив її."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "POSSESSIVE_ADJECTIVES"],
+    "en": "You might have dropped your keys.",
+    "ua": "Ти, можливо, впустив свої ключі."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "ARTICLES"],
+    "en": "We might have missed the deadline.",
+    "ua": "Ми, можливо, пропустили дедлайн."
+  },
+  {
+    "rules": ["MODAL_PERFECTS"],
+    "en": "She might have been asleep.",
+    "ua": "Вона, можливо, спала."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "PREP_PLACE", "POSSESSIVE_ADJECTIVES"],
+    "en": "He must have been tired after that trip.",
+    "ua": "Він, напевно, був втомлений після тієї поїздки."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
+    "en": "She must have forgotten the appointment.",
+    "ua": "Вона, напевно, забула про зустріч."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
+    "en": "They must have arrived by now.",
+    "ua": "Вони, напевно, вже прибули."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "PERSONAL_PRONOUNS"],
+    "en": "You must have heard about it.",
+    "ua": "Ти, напевно, чув про це."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "PREP_PLACE", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
+    "en": "I must have left my bag at the café.",
+    "ua": "Я, напевно, залишив свою сумку в кафе."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
+    "en": "He must have known the answer.",
+    "ua": "Він, напевно, знав відповідь."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
+    "en": "She must have felt terrible.",
+    "ua": "Вона, напевно, почувалася жахливо."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
+    "en": "They must have taken the wrong turn.",
+    "ua": "Вони, напевно, повернули не туди."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
+    "en": "We must have made a mistake.",
+    "ua": "Ми, напевно, припустилися помилки."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "PERSONAL_PRONOUNS"],
+    "en": "I must have seen him before.",
+    "ua": "Я, напевно, бачив його раніше."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ADVERBS_OF_MANNER"],
+    "en": "He can’t have done it alone.",
+    "ua": "Він не міг зробити це сам."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
+    "en": "She can’t have said that!",
+    "ua": "Вона не могла таке сказати!"
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
+    "en": "They can’t have left already.",
+    "ua": "Вони не могли вже піти."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "TOO_ENOUGH_SO_SUCH", "ADVERBS_OF_MANNER"],
+    "en": "You can’t have finished so quickly.",
+    "ua": "Ти не міг закінчити так швидко."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "POSSESSIVE_ADJECTIVES"],
+    "en": "I can’t have forgotten your birthday.",
+    "ua": "Я не міг забути про твій день народження."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
+    "en": "He can’t have broken the window.",
+    "ua": "Він не міг розбити вікно."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "PERSONAL_PRONOUNS"],
+    "en": "She can’t have lied to us.",
+    "ua": "Вона не могла нам збрехати."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
+    "en": "They can’t have missed the train.",
+    "ua": "Вони не могли пропустити поїзд."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
+    "en": "We can’t have been that wrong.",
+    "ua": "Ми не могли так помилитися."
+  },
+  {
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "POSSESSIVE_ADJECTIVES"],
+    "en": "I can’t have lost my passport again!",
+    "ua": "Я не міг знову загубити свій паспорт!"
+  }
+  ] }

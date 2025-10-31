@@ -1,0 +1,861 @@
+{ "COMPLEX_PREPOSITIONS": [
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Через дощ подію скасували.",
+    "en": [
+      "The event was canceled due to the rain.",
+      "The event was canceled because of the rain."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "ARTICLES", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Завдяки його порадам я пройшла співбесіду.",
+    "en": [
+      "Thanks to his advice, I passed the interview.",
+      "Because of his advice, I passed the interview."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Перед будівлею є великий натовп.",
+    "en": [
+      "There is a big crowd in front of the building.",
+      "There is a large crowd before the building."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Він говорив від імені своєї команди.",
+    "en": ["He spoke on behalf of his team."]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "HAVE_HAVE_GOT"],
+    "ua": "Ми маємо новий план замість старого.",
+    "en": [
+      "We have got a new plan instead of the old one.",
+      "We have a new plan instead of the old one."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Згідно з прогнозом, завтра буде сніг.",
+    "en": [
+      "According to the forecast, it will snow tomorrow.",
+      "According to the weather report, it will snow tomorrow."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Окрім основної роботи, я викладаю англійську.",
+    "en": [
+      "In addition to my main job, I teach English.",
+      "Besides my main job, I teach English."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "IMPERATIVES"],
+    "ua": "У разі пожежі негайно вийдіть з будівлі.",
+    "en": [
+      "In case of fire, leave the building immediately.",
+      "In the event of a fire, leave the building immediately."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Вони вирішили спілкуватися за допомогою жестів.",
+    "en": [
+      "They decided to communicate by means of gestures.",
+      "They decided to communicate through gestures."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Ми залишилися вдома через погану погоду.",
+    "en": [
+      "We stayed at home because of the bad weather.",
+      "We stayed at home due to the bad weather."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+    "ua": "Урок було скасовано через відсутність викладача.",
+    "en": [
+      "The lesson was canceled due to the teacher’s absence.",
+      "The lesson was canceled because of the teacher’s absence."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Завдяки твоїй підтримці ми змогли виграти змагання.",
+    "en": [
+      "Thanks to your support, we managed to win the competition.",
+      "Because of your support, we managed to win the competition."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "HAVE_HAVE_GOT"],
+    "ua": "Ми маємо новий план замість старого проекту.",
+    "en": [
+      "We have got a new plan instead of the old project.",
+      "We have a new plan instead of the old project."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Згідно з угодою, вони повинні оплатити рахунок протягом трьох днів.",
+    "en": [
+      "According to the agreement, they must pay the bill within three days."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_CONT_NOW"],
+    "ua": "У разі дощу ми залишаємося вдома.",
+    "en": [
+      "In case of rain, we are staying at home.",
+      "If it rains, we are staying at home."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Він діяв від імені компанії.",
+    "en": [
+      "He acted on behalf of the company."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Вони спілкуються за допомогою електронної пошти.",
+    "en": [
+      "They communicate by means of email.",
+      "They communicate through email."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Ми досягли успіху завдяки нашим зусиллям.",
+    "en": [
+      "We have succeeded thanks to our efforts.",
+      "We have succeeded because of our efforts."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Перед школою є невеликий парк.",
+    "en": [
+      "There is a small park in front of the school."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Ми затрималися через пробку на дорозі.",
+    "en": [
+      "We were late because of a traffic jam.",
+      "We were late due to a traffic jam."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Попри втому, вона продовжувала працювати.",
+    "en": [
+      "In spite of being tired, she kept working.",
+      "Despite being tired, she kept working."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Окрім англійської, я вивчаю ще французьку.",
+    "en": [
+      "In addition to English, I’m learning French.",
+      "Besides English, I’m learning French."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "THERE_IS_ARE"],
+    "ua": "У центрі кімнати стояв стіл.",
+    "en": [
+      "In the middle of the room, there was a table.",
+      "There was a table in the middle of the room."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Він запізнився через те, що не почув будильник.",
+    "en": [
+      "He was late because of not hearing the alarm.",
+      "He was late due to not hearing the alarm."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_PERFECT"],
+    "ua": "Вони переїхали до міста перед тим, як народилася дитина.",
+    "en": [
+      "They had moved to the city prior to the baby’s birth.",
+      "They had moved to the city before the baby’s birth."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MUST_MUSTNT"],
+    "ua": "Заради миру ми маємо співпрацювати.",
+    "en": [
+      "For the sake of peace, we must cooperate."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Щодо цього питання, я повністю згоден.",
+    "en": [
+      "In relation to this issue, I completely agree.",
+      "Regarding this issue, I completely agree."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "COMPARATIVES"],
+    "ua": "У плані якості ця модель краща.",
+    "en": [
+      "In terms of quality, this model is better.",
+      "Regarding quality, this model is better."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Наскільки я знаю, вони вже поїхали.",
+    "en": [
+      "As far as I know, they have already left."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "На основі результатів ми зробили висновки.",
+    "en": [
+      "On the basis of the results, we drew conclusions.",
+      "Based on the results, we drew conclusions."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Порівняно з минулим роком, продажі зросли.",
+    "en": [
+      "In comparison with last year, sales have increased.",
+      "Compared to last year, sales have increased."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "З огляду на обставини, рішення було правильним.",
+    "en": [
+      "In view of the circumstances, the decision was correct.",
+      "Considering the circumstances, the decision was correct."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_SIMPLE"],
+    "ua": "Через погані умови дороги вони поїхали пізніше.",
+    "en": [
+      "On account of the bad road conditions, they left later.",
+      "Due to the bad road conditions, they left later.",
+      "Because of the bad road conditions, they left later."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_SIMPLE"],
+    "ua": "Вони проголосували на користь нового закону.",
+    "en": [
+      "They voted in favour of the new law.",
+      "They voted for the new law."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "WILL_PREDICTIONS"],
+    "ua": "Незалежно від ціни, ми купимо цю квартиру.",
+    "en": [
+      "Regardless of the price, we’ll buy this apartment.",
+      "No matter the price, we’ll buy this apartment."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "FIRST_CONDITIONAL"],
+    "ua": "Якщо поїзд затримається через сніг, ми запізнимося.",
+    "en": [
+      "If the train is delayed because of the snow, we’ll be late.",
+      "If the train is delayed due to the snow, we’ll be late."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "SECOND_CONDITIONAL"],
+    "ua": "Якби не дощ, ми б пішли на прогулянку.",
+    "en": [
+      "If it weren’t for the rain, we would go for a walk.",
+      "If it wasn’t for the rain, we’d go for a walk."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "THIRD_CONDITIONAL"],
+    "ua": "Якби не її порада, я б не склав іспит.",
+    "en": [
+      "If it hadn’t been for her advice, I wouldn’t have passed the exam.",
+      "Without her advice, I wouldn’t have passed the exam."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Ми досягли цього успіху завдяки командній роботі.",
+    "en": [
+      "We’ve achieved this success thanks to teamwork.",
+      "We’ve achieved this success because of teamwork."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "BE_GOING_TO_VS_WILL"],
+    "ua": "Ми залишимося вдома у разі грози.",
+    "en": [
+      "We’re going to stay home in case of a thunderstorm.",
+      "We’ll stay home in case of a thunderstorm."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "WILL_PREDICTIONS"],
+    "ua": "Через страйк рейси будуть скасовані.",
+    "en": [
+      "Due to the strike, the flights will be canceled.",
+      "Because of the strike, the flights will be canceled."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Вони зібрали гроші заради благодійності.",
+    "en": [
+      "They raised money for the sake of charity.",
+      "They raised money in order to support charity."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_SIMPLE"],
+    "ua": "Ми переїхали до міста через роботу батька.",
+    "en": [
+      "We moved to the city because of our father’s job.",
+      "We moved to the city due to our father’s job."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Він прийшов на роботу попри те, що почувався зле.",
+    "en": [
+      "He came to work in spite of feeling sick.",
+      "He came to work despite feeling sick."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_CONT_NOW"],
+    "ua": "Попри дощ, ми все одно граємо у футбол.",
+    "en": [
+      "In spite of the rain, we are still playing football.",
+      "Despite the rain, we are still playing football."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Концерт було перенесено через технічні проблеми.",
+    "en": [
+      "The concert was postponed because of technical issues.",
+      "The concert was postponed due to technical issues."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Вони не приїхали через затори на дорозі.",
+    "en": [
+      "They haven’t arrived because of the traffic jams.",
+      "They haven’t arrived due to the traffic jams."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Згідно з правилами, тут не можна палити.",
+    "en": [
+      "According to the rules, smoking is not allowed here."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_PERFECT"],
+    "ua": "Ми зустрілися перед тим, як він виїхав за кордон.",
+    "en": [
+      "We had met prior to his departure abroad.",
+      "We had met before his departure abroad."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT_CONT"],
+    "ua": "Ми працювали над проєктом за допомогою нової системи.",
+    "en": [
+      "We’ve been working on the project by means of a new system."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "У зв’язку з реконструкцією вулиця буде закрита.",
+    "en": [
+      "In view of the reconstruction, the street will be closed.",
+      "Because of the reconstruction, the street will be closed."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Порівняно з минулим роком, цього року менше подій.",
+    "en": [
+      "In comparison with last year, there are fewer events.",
+      "Compared to last year, there are fewer events."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Перед музеєм є довга черга.",
+    "en": [
+      "There is a long queue in front of the museum."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Вони зробили це замість нас.",
+    "en": [
+      "They did it instead of us."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "На основі фактів ми можемо зробити висновки.",
+    "en": [
+      "On the basis of the facts, we can draw conclusions.",
+      "Based on the facts, we can draw conclusions."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Через туман рейси можуть бути затримані.",
+    "en": [
+      "Due to the fog, the flights might be delayed.",
+      "Because of the fog, the flights might be delayed."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Він діє відповідно до інструкцій.",
+    "en": [
+      "He acts in accordance with the instructions.",
+      "He acts according to the instructions."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Попри ризик, вони погодилися продовжити.",
+    "en": [
+      "In spite of the risk, they agreed to continue.",
+      "Despite the risk, they agreed to continue."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": "Ми зустрінемось завтра, якщо не буде змін через погоду.",
+    "en": [
+      "We’re meeting tomorrow unless there are changes because of the weather.",
+      "We’re meeting tomorrow unless there are changes due to the weather."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "FIRST_CONDITIONAL"],
+    "ua": "Якщо ми запізнимося через затори, вони почнуть без нас.",
+    "en": [
+      "If we’re late because of traffic, they’ll start without us.",
+      "If we’re late due to traffic, they’ll start without us."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Через відсутність доказів він може бути виправданий.",
+    "en": [
+      "Due to the lack of evidence, he might be acquitted.",
+      "Because of the lack of evidence, he might be acquitted."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Рішення було прийнято на основі попередніх результатів.",
+    "en": [
+      "The decision was made on the basis of previous results.",
+      "The decision was made based on previous results."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "REPORTED_SPEECH"],
+    "ua": "Він сказав, що через нові правила потрібно бути обережнішими.",
+    "en": [
+      "He said that because of the new rules, we had to be more careful.",
+      "He said that due to the new rules, we had to be more careful."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Засідання було перенесено через погодні умови.",
+    "en": [
+      "The meeting was postponed because of the weather conditions.",
+      "The meeting was postponed due to the weather conditions."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "RELATIVE_CLAUSES"],
+    "ua": "Компанія, згідно з якою ми працюємо, базується в Лондоні.",
+    "en": [
+      "The company, according to which we work, is based in London.",
+      "The company we work for is based in London."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PARTICIPLE_CLAUSES"],
+    "ua": "Завдяки старанням команди, проект було завершено раніше.",
+    "en": [
+      "Thanks to the team’s efforts, the project was completed earlier.",
+      "Because of the team’s efforts, the project was completed earlier."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Через туман літак, мабуть, приземлиться пізніше.",
+    "en": [
+      "Due to the fog, the plane will probably land later.",
+      "Because of the fog, the plane will probably land later."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT_CONT"],
+    "ua": "Вони працювали над проектом за допомогою нового програмного забезпечення.",
+    "en": [
+      "They have been working on the project by means of new software."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Ймовірно, що через нестачу фінансування проект буде зупинено.",
+    "en": [
+      "It’s likely that due to a lack of funding, the project will be stopped.",
+      "It’s likely that because of a lack of funding, the project will be stopped."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Він прийшов на зустріч попри втому.",
+    "en": [
+      "He came to the meeting in spite of his tiredness.",
+      "He came to the meeting despite his tiredness."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "З огляду на час, ми маємо поспішати.",
+    "en": [
+      "In view of the time, we have to hurry.",
+      "Considering the time, we have to hurry."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Окрім головної теми, вони обговорили кілька другорядних.",
+    "en": [
+      "In addition to the main topic, they discussed several minor ones.",
+      "Besides the main topic, they discussed several minor ones."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_PERFECT"],
+    "ua": "Ми прибули перед тим, як почався дощ.",
+    "en": [
+      "We had arrived prior to the rain starting.",
+      "We had arrived before the rain started."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Вони зробили це заради власної безпеки.",
+    "en": [
+      "They did it for the sake of their own safety.",
+      "They did it in order to protect themselves."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "THERE_IS_ARE"],
+    "ua": "Перед будівлею є багато людей через концерт.",
+    "en": [
+      "There are many people in front of the building because of the concert.",
+      "There are many people in front of the building due to the concert."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Продажі зросли завдяки новій рекламі.",
+    "en": [
+      "Sales have increased thanks to the new advertisement.",
+      "Sales have increased because of the new advertisement."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODAL_PERFECTS"],
+    "ua": "Він міг успішно закінчити курс завдяки своїй наполегливості.",
+    "en": [
+      "He could have completed the course successfully thanks to his persistence.",
+      "He could have completed the course successfully because of his persistence."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Вони змінили план замість того, щоб чекати.",
+    "en": [
+      "They changed the plan instead of waiting."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Вони досягли мети завдяки співпраці з іншими.",
+    "en": [
+      "They have achieved their goal thanks to cooperation with others.",
+      "They have achieved their goal because of cooperation with others."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Порівняно з минулим роком, цього разу результати кращі.",
+    "en": [
+      "In comparison with last year, the results are better.",
+      "Compared to last year, the results are better."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "REPORTED_SPEECH"],
+    "ua": "Вона сказала, що через ремонт магазин буде зачинено.",
+    "en": [
+      "She said that due to the renovation, the shop would be closed.",
+      "She said that because of the renovation, the shop would be closed."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PARTICIPLE_CLAUSES"],
+    "ua": "Через втому, він заснув одразу після вечері.",
+    "en": [
+      "Being tired because of the long day, he fell asleep right after dinner.",
+      "Being tired due to the long day, he fell asleep right after dinner."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Незважаючи на затримку, подія пройшла успішно.",
+    "en": [
+      "In spite of the delay, the event went successfully.",
+      "Despite the delay, the event went successfully."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "На основі спостережень можна зробити висновок.",
+    "en": [
+      "On the basis of the observations, a conclusion can be drawn.",
+      "Based on the observations, a conclusion can be drawn."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "INVERSION_AFTER_NEGATIVE_ADVERBIALS"],
+    "ua": "Лише через втручання поліції ситуація була врегульована.",
+    "en": [
+      "Only because of the police’s intervention was the situation resolved.",
+      "Only due to the police’s intervention was the situation resolved."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+    "ua": "Доповідь була написана у відповідності до міжнародних стандартів.",
+    "en": [
+      "The report was written in accordance with international standards.",
+      "The report was written in line with international standards."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Рівень забруднення зріс внаслідок промислової діяльності.",
+    "en": [
+      "The pollution level has increased as a result of industrial activity.",
+      "The pollution level has increased in consequence of industrial activity."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+    "ua": "Дослідження було проведено у співпраці з університетом.",
+    "en": [
+      "The study was conducted in collaboration with the university.",
+      "The research was carried out in partnership with the university."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Через затримку фінансування проект може бути відкладено.",
+    "en": [
+      "Due to the delay in funding, the project might be postponed.",
+      "Because of the delay in funding, the project might be postponed."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Виробництво скоротилося через зниження попиту.",
+    "en": [
+      "Production has decreased because of lower demand.",
+      "Production has decreased due to lower demand."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES", "THERE_IS_ARE"],
+    "ua": "Є докази у зв’язку з недотриманням правил.",
+    "en": [
+      "There is evidence in connection with the violation of the rules."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Завдяки інноваціям компанія може стати лідером ринку.",
+    "en": [
+      "Thanks to innovation, the company may become a market leader.",
+      "Because of innovation, the company may become a market leader."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_SIMPLE"],
+    "ua": "Вони змінили політику у відповідь на скарги клієнтів.",
+    "en": [
+      "They changed the policy in response to customer complaints."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "COMPARATIVES"],
+    "ua": "На відміну від попереднього року, цього разу результати були кращими.",
+    "en": [
+      "In contrast to the previous year, the results were better.",
+      "Compared with the previous year, the results were better."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT_CONT"],
+    "ua": "Ми працюємо над проектом відповідно до нових вимог.",
+    "en": [
+      "We have been working on the project in accordance with the new requirements."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PAST_PERFECT"],
+    "ua": "Вони завершили роботу перед початком конференції.",
+    "en": [
+      "They had finished the work prior to the beginning of the conference.",
+      "They had finished the work before the conference began."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "ARTICLES"],
+    "ua": "У світлі останніх подій, рішення виглядає правильним.",
+    "en": [
+      "In the light of recent events, the decision seems correct.",
+      "In view of recent events, the decision seems correct."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Контракт було підписано у відповідності до закону.",
+    "en": [
+      "The contract was signed in compliance with the law."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Попри труднощі, дослідження було завершено вчасно.",
+    "en": [
+      "In spite of difficulties, the research was completed on time.",
+      "Despite the difficulties, the research was completed on time."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Рішення було прийнято на підставі результатів аудиту.",
+    "en": [
+      "The decision was made on the grounds of the audit results.",
+      "The decision was made based on the audit results."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Вони зібралися з метою обговорення нових можливостей.",
+    "en": [
+      "They gathered with a view to discussing new opportunities.",
+      "They met in order to discuss new opportunities."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Через технічні проблеми постачання може бути затримано.",
+    "en": [
+      "Owing to technical issues, the delivery might be delayed.",
+      "Due to technical issues, the delivery might be delayed."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Він діяв від імені організації.",
+    "en": [
+      "He acted on behalf of the organization."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT"],
+    "ua": "Рівень безробіття зріс у результаті економічної кризи.",
+    "en": [
+      "The unemployment rate has risen as a result of the economic crisis.",
+      "The unemployment rate has risen because of the economic crisis."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "Зарплати було підвищено пропорційно до інфляції.",
+    "en": [
+      "Salaries were increased in proportion to inflation."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Будівництво фінансується за рахунок державного бюджету.",
+    "en": [
+      "The construction is funded at the expense of the state budget."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "WILL_PREDICTIONS"],
+    "ua": "Відповідно до плану, зміни буде впроваджено наступного місяця.",
+    "en": [
+      "In line with the plan, the changes will be implemented next month.",
+      "According to the plan, the changes will be implemented next month."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES", "THERE_IS_ARE"],
+    "ua": "Є повідомлення у зв’язку з нещасним випадком.",
+    "en": [
+      "There are reports in connection with the accident."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS"],
+    "ua": "У відповідності до етичного кодексу, усі працівники мають дотримуватися правил.",
+    "en": [
+      "In accordance with the code of ethics, all employees must follow the rules.",
+      "In compliance with the code of ethics, all employees must follow the rules."
+    ]
+  },
+  {
+    "rules": ["COMPLEX_PREPOSITIONS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Результати були переглянуті з урахуванням нових даних.",
+    "en": [
+      "The results were revised in the light of new data.",
+      "The results were revised in view of new data."
+    ]
+  }
+] }

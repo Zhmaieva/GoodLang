@@ -1,0 +1,714 @@
+{ "TOO_ENOUGH": [
+  {
+    "rules": ["TOO_ENOUGH", "PERSONAL_PRONOUNS", "SIMPLE_ADJ"],
+    "ua": "Ти занадто швидкий для цієї гри.",
+    "en": [
+      "You are too fast for this game.",
+      "You are too quick for this game."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця кухня занадто мала для вечері.",
+    "en": [
+      "This kitchen is too small for dinner.",
+      "This kitchen is too tiny for dinner."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця кухня не досить велика для вечері.",
+    "en": [
+      "This kitchen is not big enough for dinner.",
+      "This kitchen is not large enough for dinner."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Деякі страви занадто гострі для дітей.",
+    "en": [
+      "Some dishes are too spicy for children.",
+      "Some dishes are too hot for children."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Деякі страви не досить м’які для дітей.",
+    "en": [
+      "Some dishes are not mild enough for children.",
+      "Some dishes are not soft enough for children."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "YES_NO_Q", "SIMPLE_ADJ"],
+    "ua": "Чи цей м’яч занадто твердий для гри?",
+    "en": [
+      "Is this ball too hard for the game?",
+      "Is this ball too firm for the game?"
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "YES_NO_Q", "SIMPLE_ADJ"],
+    "ua": "Чи цей м’яч не досить м’який для гри?",
+    "en": [
+      "Is this ball not soft enough for the game?",
+      "Is this ball not smooth enough for the game?"
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ця музика занадто гучна, бо сусіди скаржаться.",
+    "en": [
+      "This music is too loud because the neighbors are complaining.",
+      "This music is too noisy because the neighbors are complaining."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ця музика не досить тиха, бо сусіди скаржаться.",
+    "en": [
+      "This music is not quiet enough because the neighbors are complaining.",
+      "This music is not soft enough because the neighbors are complaining."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця кухня занадто мала для приготування вечері.",
+    "en": [
+      "This kitchen is too small for cooking dinner.",
+      "This kitchen is too tiny for cooking dinner."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця кухня не досить велика для приготування вечері.",
+    "en": [
+      "This kitchen is not big enough for cooking dinner.",
+      "This kitchen is not large enough for cooking dinner."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця дорога занадто крута для велосипеда.",
+    "en": [
+      "This road is too steep for the bike.",
+      "This road is too steep for a bicycle."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця дорога не досить рівна для велосипеда.",
+    "en": [
+      "This road is not flat enough for the bike.",
+      "This road is not smooth enough for a bicycle."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця шафа занадто висока для кімнати.",
+    "en": [
+      "This wardrobe is too tall for the room.",
+      "This wardrobe is too high for the room."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця шафа не досить низька для кімнати.",
+    "en": [
+      "This wardrobe is not low enough for the room.",
+      "This wardrobe is not short enough for the room."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Деякі страви занадто гострі для дітей.",
+    "en": [
+      "Some dishes are too spicy for children.",
+      "Some dishes are too hot for children."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Деякі страви не досить м’які для дітей.",
+    "en": [
+      "Some dishes are not mild enough for children.",
+      "Some dishes are not soft enough for children."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
+    "ua": "Деякі поїзди занадто повільні для цієї подорожі.",
+    "en": [
+      "Some trains are too slow for this trip.",
+      "Some trains are too slow for this journey."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
+    "ua": "Деякі поїзди не досить швидкі для цієї подорожі.",
+    "en": [
+      "Some trains are not fast enough for this trip.",
+      "Some trains are not quick enough for this journey."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
+    "ua": "Деякі маршрути занадто довгі для одного дня.",
+    "en": [
+      "Some routes are too long for one day.",
+      "Some routes are too long for a single day."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
+    "ua": "Деякі маршрути не досить короткі для одного дня.",
+    "en": [
+      "Some routes are not short enough for one day.",
+      "Some routes are not short enough for a single day."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Чи твій ніж занадто тупий для приготування їжі?",
+    "en": [
+      "Is your knife too dull for cooking?",
+      "Is your knife too blunt for cooking?"
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "ua": "Чи твій ніж не досить гострий для приготування їжі?",
+    "en": [
+      "Is your knife not sharp enough for cooking?",
+      "Is your knife not sharp enough to cook?"
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "WH_Q", "SIMPLE_ADJ"],
+    "ua": "Чому цей ніж занадто тупий для різання?",
+    "en": [
+      "Why is this knife too dull for cutting?",
+      "Why is this knife too blunt for cutting?"
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "WH_Q", "SIMPLE_ADJ"],
+    "ua": "Чому цей ніж не досить гострий для різання?",
+    "en": [
+      "Why is this knife not sharp enough for cutting?",
+      "Why is this knife not sharp enough to cut?"
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Цей вечір занадто холодний для барбекю.",
+    "en": [
+      "This evening is too cold for a barbecue.",
+      "This evening is too cold for a cookout."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Цей вечір не досить теплий для барбекю.",
+    "en": [
+      "This evening is not warm enough for a barbecue.",
+      "This evening is not warm enough for a cookout."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Цей день занадто спекотний для риболовлі.",
+    "en": [
+      "This day is too hot for fishing.",
+      "This day is too warm for fishing."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Цей день не досить прохолодний для риболовлі.",
+    "en": [
+      "This day is not cool enough for fishing.",
+      "This day is not cold enough for fishing."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "ua": "Він біжить занадто швидко, бо дорога слизька.",
+    "en": [
+      "He runs too fast because the road is slippery.",
+      "He runs too fast because the path is slippery."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "ua": "Він біжить не досить повільно, бо дорога слизька.",
+    "en": [
+      "He runs not slowly enough because the road is slippery.",
+      "He runs not slowly enough because the path is slippery."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "ua": "Він готує занадто швидко для вечері.",
+    "en": [
+      "He cooks too fast for dinner.",
+      "He cooks too quickly for dinner."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "ua": "Він готує не досить акуратно для вечері.",
+    "en": [
+      "He does not cook carefully enough for dinner.",
+      "He does not cook neatly enough for dinner."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ця куртка занадто велика для мене.",
+    "en": [
+      "This jacket is too big for me.",
+      "This coat is too big for me."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ця куртка не досить маленька для мене.",
+    "en": [
+      "This jacket is not small enough for me.",
+      "This coat is not small enough for me."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці штани занадто короткі для тебе.",
+    "en": [
+      "These trousers are too short for you.",
+      "These pants are too short for you."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці штани не досить довгі для тебе.",
+    "en": [
+      "These trousers are not long enough for you.",
+      "These pants are not long enough for you."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці черевики занадто вузькі для нього.",
+    "en": [
+      "These shoes are too tight for him.",
+      "These boots are too tight for him."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці черевики не досить широкі для нього.",
+    "en": [
+      "These shoes are not wide enough for him.",
+      "These boots are not wide enough for him."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці шкарпетки занадто теплі для літа.",
+    "en": [
+      "These socks are too warm for summer.",
+      "These socks are too hot for summer."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці шкарпетки не досить тонкі для літа.",
+    "en": [
+      "These socks are not thin enough for summer.",
+      "These socks are not light enough for summer."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей диван занадто довгий для цієї кімнати.",
+    "en": [
+      "This sofa is too long for this room.",
+      "This couch is too long for this room."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей диван не досить короткий для цієї кімнати.",
+    "en": [
+      "This sofa is not short enough for this room.",
+      "This couch is not short enough for this room."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей стіл занадто низький для мене.",
+    "en": [
+      "This table is too low for me.",
+      "This table is too short for me."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей стіл не досить високий для мене.",
+    "en": [
+      "This table is not high enough for me.",
+      "This table is not tall enough for me."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей стілець занадто твердий для сидіння.",
+    "en": [
+      "This chair is too hard to sit on.",
+      "This chair is too hard for sitting."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей стілець не досить м’який для сидіння.",
+    "en": [
+      "This chair is not soft enough to sit on.",
+      "This chair is not soft enough for sitting."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці полиці занадто високі для дитини.",
+    "en": [
+      "These shelves are too high for a child.",
+      "These shelves are too tall for a child."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці полиці не досить низькі для дитини.",
+    "en": [
+      "These shelves are not low enough for a child.",
+      "These shelves are not short enough for a child."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей клас занадто малий для всіх учнів.",
+    "en": [
+      "This classroom is too small for all the students.",
+      "This class is too small for all the students."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей клас не досить великий для всіх учнів.",
+    "en": [
+      "This classroom is not big enough for all the students.",
+      "This class is not big enough for all the students."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ця парта занадто висока для дитини.",
+    "en": [
+      "This desk is too high for a child.",
+      "This desk is too tall for a child."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ця парта не досить низька для дитини.",
+    "en": [
+      "This desk is not low enough for a child.",
+      "This desk is not short enough for a child."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей рюкзак занадто важкий для тебе.",
+    "en": [
+      "This backpack is too heavy for you.",
+      "This bag is too heavy for you."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей рюкзак не досить легкий для тебе.",
+    "en": [
+      "This backpack is not light enough for you.",
+      "This bag is not light enough for you."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей автобус занадто повний для нас.",
+    "en": [
+      "This bus is too full for us.",
+      "This bus is too crowded for us."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей автобус не досить вільний для нас.",
+    "en": [
+      "This bus is not empty enough for us.",
+      "This bus is not free enough for us."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей парк занадто шумний для пікніка.",
+    "en": [
+      "This park is too noisy for a picnic.",
+      "This park is too loud for a picnic."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Цей парк не досить тихий для пікніка.",
+    "en": [
+      "This park is not quiet enough for a picnic.",
+      "This park is not calm enough for a picnic."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця площа занадто вузька для ярмарку.",
+    "en": [
+      "This square is too narrow for a fair.",
+      "This square is too small for a fair."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця площа не досить широка для ярмарку.",
+    "en": [
+      "This square is not wide enough for a fair.",
+      "This square is not big enough for a fair."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей суп занадто гарячий для дитини.",
+    "en": [
+      "This soup is too hot for a child.",
+      "This soup is too hot for kids."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей суп не досить теплий для дитини.",
+    "en": [
+      "This soup is not warm enough for a child.",
+      "This soup is not warm enough for kids."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ця кава занадто міцна для мене.",
+    "en": [
+      "This coffee is too strong for me.",
+      "This coffee is too strong for my taste."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ця кава не досить міцна для мене.",
+    "en": [
+      "This coffee is not strong enough for me.",
+      "This coffee is not strong enough for my taste."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці печені яблука занадто солодкі для дієти.",
+    "en": [
+      "These baked apples are too sweet for a diet.",
+      "These apples are too sweet for a diet."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Ці печені яблука не досить солодкі для десерту.",
+    "en": [
+      "These baked apples are not sweet enough for dessert.",
+      "These apples are not sweet enough for dessert."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "ADVERBS_OF_MANNER"],
+    "ua": "Вона ріже занадто швидко для безпечного приготування.",
+    "en": [
+      "She cuts too fast for safe cooking.",
+      "She cuts too quickly for safe cooking."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "ADVERBS_OF_MANNER"],
+    "ua": "Вона ріже не досить повільно для безпечного приготування.",
+    "en": [
+      "She does not cut slowly enough for safe cooking.",
+      "She does not cut carefully enough for safe cooking."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Це літо занадто спекотне для бабусі.",
+    "en": [
+      "This summer is too hot for Grandma.",
+      "This summer is too hot for my grandma."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Це літо не досить прохолодне для бабусі.",
+    "en": [
+      "This summer is not cool enough for Grandma.",
+      "This summer is not cool enough for my grandma."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Ця осінь занадто дощова для фестивалю.",
+    "en": [
+      "This autumn is too rainy for the festival.",
+      "This fall is too rainy for the festival."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Ця осінь не досить суха для фестивалю.",
+    "en": [
+      "This autumn is not dry enough for the festival.",
+      "This fall is not dry enough for the festival."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Ця зима занадто холодна для пікніка.",
+    "en": [
+      "This winter is too cold for a picnic.",
+      "This winter is too cold for a picnic day."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_TIME"],
+    "ua": "Ця зима не досить тепла для пікніка.",
+    "en": [
+      "This winter is not warm enough for a picnic.",
+      "This winter is not mild enough for a picnic."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "PREP_PLACE"],
+    "ua": "Тут занадто вітряно для дітей.",
+    "en": [
+      "It is too windy here for children.",
+      "It's too windy here for kids."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "PREP_PLACE"],
+    "ua": "Тут не досить тихо для дітей.",
+    "en": [
+      "It is not quiet enough here for children.",
+      "It's not quiet enough here for kids."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця клюшка занадто важка для дитини.",
+    "en": [
+      "This stick is too heavy for a child.",
+      "This stick is too heavy for kids."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ", "PREP_PLACE"],
+    "ua": "Ця клюшка не досить легка для дитини.",
+    "en": [
+      "This stick is not light enough for a child.",
+      "This stick is not light enough for kids."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей м’яч занадто великий для тренування в приміщенні.",
+    "en": [
+      "This ball is too big for indoor practice.",
+      "This ball is too large for indoor practice."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей м’яч не досить маленький для тренування в приміщенні.",
+    "en": [
+      "This ball is not small enough for indoor practice.",
+      "This ball is not tiny enough for indoor practice."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей телефон занадто повільний для цієї гри.",
+    "en": [
+      "This phone is too slow for this game.",
+      "This smartphone is too slow for this game."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей телефон не досить швидкий для цієї гри.",
+    "en": [
+      "This phone is not fast enough for this game.",
+      "This smartphone is not fast enough for this game."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей ноутбук занадто важкий для роботи в дорозі.",
+    "en": [
+      "This laptop is too heavy for working on the way.",
+      "This laptop is too heavy for traveling."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "SIMPLE_ADJ"],
+    "ua": "Цей ноутбук не досить легкий для роботи в дорозі.",
+    "en": [
+      "This laptop is not light enough for working on the way.",
+      "This laptop is not light enough for traveling."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "PERSONAL_PRONOUNS"],
+    "ua": "Я занадто сором’язливий для цієї сцени.",
+    "en": [
+      "I am too shy for this stage.",
+      "I'm too shy for this stage."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "PERSONAL_PRONOUNS"],
+    "ua": "Я не досить сміливий для цієї сцени.",
+    "en": [
+      "I am not brave enough for this stage.",
+      "I'm not brave enough for this stage."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "PERSONAL_PRONOUNS"],
+    "ua": "Вона занадто тиха, щоб виступати.",
+    "en": [
+      "She is too quiet to perform.",
+      "She's too quiet to perform."
+    ]
+  },
+  {
+    "rules": ["TOO_ENOUGH", "PERSONAL_PRONOUNS"],
+    "ua": "Вона не досить впевнена, щоб виступати.",
+    "en": [
+      "She is not confident enough to perform.",
+      "She's not confident enough to perform."
+    ]
+  }
+] }

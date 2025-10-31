@@ -1,0 +1,653 @@
+{ "BE_GOOD_AT_INTERESTED_IN_ING": [
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Я добре малюю.",
+    "en": [
+      "I am good at drawing."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона добре співає.",
+    "en": [
+      "She is good at singing."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "NEGATION_DONT_DOESNT"],
+    "ua": "Він не дуже добре готує.",
+    "en": [
+      "He isn’t very good at cooking."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми добре граємо у футбол.",
+    "en": [
+      "We are good at playing football."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PLEX_SENTENCES"],
+    "ua": "Вона хороша в танцях, тому часто виступає.",
+    "en": [
+      "She is good at dancing, so she performs often."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я добре працюю з цифрами.",
+    "en": [
+      "I am good at working with numbers."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Він гарно грає на гітарі.",
+    "en": [
+      "He is good at playing the guitar."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона хороша в плаванні.",
+    "en": [
+      "She is good at swimming."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вони добре вирішують задачі.",
+    "en": [
+      "They are good at solving problems."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PAST_SIMPLE"],
+    "ua": "Я був хорошим у бігу в школі.",
+    "en": [
+      "I was good at running at school."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ти добре працюєш у команді.",
+    "en": [
+      "You are good at working in a team."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Мій брат добре грає в шахи.",
+    "en": [
+      "My brother is good at playing chess."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "ADVERBS_OF_MANNER"],
+    "ua": "Він дуже добре малює.",
+    "en": [
+      "He is very good at drawing."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "NEGATION_DONT_DOESNT"],
+    "ua": "Я не дуже добре розповідаю історії.",
+    "en": [
+      "I am not very good at telling stories."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PRESENT_PERFECT"],
+    "ua": "Вона стала хорошою в малюванні останнім часом.",
+    "en": [
+      "She has become good at drawing recently."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вони вміють добре слухати.",
+    "en": [
+      "They are good at listening."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я хороша у випіканні тортів.",
+    "en": [
+      "I am good at baking cakes."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": "Він буде хорошим в програмуванні, бо старається.",
+    "en": [
+      "He will be good at programming because he tries hard."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми хороші в організації подій.",
+    "en": [
+      "We are good at organizing events."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона добре фотографує.",
+    "en": [
+      "She is good at taking photos.",
+      "She is good at photography."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Він добрий у догляді за тваринами.",
+    "en": [
+      "He is good at taking care of animals."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Ти можеш стати хорошим у малюванні.",
+    "en": [
+      "You can become good at drawing."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми хороші в прибиранні.",
+    "en": [
+      "We are good at cleaning."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "COMPLEX_SENTENCES"],
+    "ua": "Я не хороший у плаванні, але намагаюся.",
+    "en": [
+      "I am not good at swimming, but I am trying."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона хороша у приготуванні пасти.",
+    "en": [
+      "She is good at cooking pasta."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PAST_SIMPLE"],
+    "ua": "Вони були хорошими у футболі раніше.",
+    "en": [
+      "They were good at playing football before."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я хороший у знаходженні рішень.",
+    "en": [
+      "I am good at finding solutions."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Він хороший у вивченні мов.",
+    "en": [
+      "He is good at learning languages."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми хороші в катанні на ковзанах.",
+    "en": [
+      "We are good at skating."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона хороша в плануванні подорожей.",
+    "en": [
+      "She is good at planning trips."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я гарно спілкуюся з дітьми.",
+    "en": [
+      "I am good at talking to children."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "NEGATION_DONT_DOESNT"],
+    "ua": "Він не дуже добре співає.",
+    "en": [
+      "He isn’t very good at singing."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми хороші у вирішенні конфліктів.",
+    "en": [
+      "We are good at solving conflicts."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона часто добра у розповіданні жартів.",
+    "en": [
+      "She is often good at telling jokes."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Мій брат гарний у роботі з комп’ютером.",
+    "en": [
+      "My brother is good at working with computers."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я добрий у складанні меблів.",
+    "en": [
+      "I am good at assembling furniture."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "COMPLEX_SENTENCES"],
+    "ua": "Я стаю кращим у плаванні, бо тренуюсь.",
+    "en": [
+      "I am becoming better at swimming because I practice."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": "Вони будуть гарні у співі після тренувань.",
+    "en": [
+      "They will be good at singing after training."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я хороший у приготуванні сніданку.",
+    "en": [
+      "I am good at making breakfast."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Він хороший у допомозі іншим людям.",
+    "en": [
+      "He is good at helping other people."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона хороша у вигадуванні історій.",
+    "en": [
+      "She is good at making up stories."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PRESENT_PERFECT_CONT"],
+    "ua": "Він стає кращим у грі на фортепіано з кожним днем.",
+    "en": [
+      "He has been getting better at playing the piano every day."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми хороші у підготовці вечірок.",
+    "en": [
+      "We are good at preparing parties."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я гарний у катанні на велосипеді.",
+    "en": [
+      "I am good at riding a bike."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": "Ти будеш добрий у роботі, якщо тренуватимешся.",
+    "en": [
+      "You will be good at working if you practice."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Я цікавлюся вивченням англійської.",
+    "en": [
+      "I am interested in learning English."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона цікавиться малюванням.",
+    "en": [
+      "She is interested in drawing."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Він цікавиться футболом.",
+    "en": [
+      "He is interested in playing football.",
+      "He is interested in football."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "NEGATION_DONT_DOESNT"],
+    "ua": "Вони не дуже цікавляться музикою.",
+    "en": [
+      "They aren’t very interested in music."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "COMPLEX_SENTENCES"],
+    "ua": "Я цікавлюся фотографуванням, тому часто роблю фото.",
+    "en": [
+      "I am interested in taking photos, so I take pictures often."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ти цікавишся танцями?",
+    "en": [
+      "Are you interested in dancing?"
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона зацікавлена у співі.",
+    "en": [
+      "She is interested in singing."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "COUNT_UNCOUNT"],
+    "ua": "Він цікавиться готуванням їжі.",
+    "en": [
+      "He is interested in cooking food."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Ми часто цікавимося подорожами.",
+    "en": [
+      "We are often interested in traveling."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "YES_NO_Q"],
+    "ua": "Ти ще цікавишся програмуванням?",
+    "en": [
+      "Are you still interested in programming?"
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона цікавиться читанням книжок.",
+    "en": [
+      "She is interested in reading books."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми цікавимося іншими культурами.",
+    "en": [
+      "We are interested in learning about other cultures."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PRESENT_CONT_NOW"],
+    "ua": "Я цікавлюся новими мовами зараз.",
+    "en": [
+      "I am interested in learning new languages now."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Він цікавиться грати на фортепіано.",
+    "en": [
+      "He is interested in playing the piano."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Вона може зацікавитися малюванням.",
+    "en": [
+      "She might become interested in drawing."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PAST_SIMPLE"],
+    "ua": "Я цікавився астрономією в школі.",
+    "en": [
+      "I was interested in studying astronomy at school.",
+      "I was interested in astronomy at school."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вони цікавляться грати в настільні ігри разом.",
+    "en": [
+      "They are interested in playing board games together."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми цікавимося плаванням у морі.",
+    "en": [
+      "We are interested in swimming in the sea."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Він зацікавлений у допомозі людям.",
+    "en": [
+      "He is interested in helping people."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я цікавлюся грою на скрипці.",
+    "en": [
+      "I am interested in playing the violin."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона цікавиться танцювальними виступами.",
+    "en": [
+      "She is interested in doing dance performances.",
+      "She is interested in performing dances."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "COMPLEX_SENTENCES"],
+    "ua": "Я цікавлюся програмуванням, бо хочу створювати ігри.",
+    "en": [
+      "I am interested in programming because I want to create games."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Він цікавиться українською культурою.",
+    "en": [
+      "He is interested in learning about Ukrainian culture."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Ми іноді цікавимося створенням відео.",
+    "en": [
+      "We are sometimes interested in making videos."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PRESENT_PERFECT_CONT"],
+    "ua": "Я останнім часом цікавлюся дизайном.",
+    "en": [
+      "I have been interested in studying design lately."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ти цікавишся читанням коміксів?",
+    "en": [
+      "Are you interested in reading comics?"
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "COUNT_UNCOUNT"],
+    "ua": "Він цікавиться приготуванням здорової їжі.",
+    "en": [
+      "He is interested in cooking healthy food."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "YES_NO_Q"],
+    "ua": "Вони ще цікавляться подорожами?",
+    "en": [
+      "Are they still interested in traveling?"
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я цікавлюся новими технологіями.",
+    "en": [
+      "I am interested in learning about new technology.",
+      "I am interested in new technologies."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Вона цікавиться доглядом за дітьми.",
+    "en": [
+      "She is interested in taking care of children."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PRESENT_CONT_NOW"],
+    "ua": "Він зараз цікавиться малюванням.",
+    "en": [
+      "He is interested in drawing now."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PAST_SIMPLE"],
+    "ua": "Ми цікавилися грою на барабанах.",
+    "en": [
+      "We were interested in playing the drums."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я цікавлюся танцювальними уроками.",
+    "en": [
+      "I am interested in taking dance classes."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PAST_SIMPLE"],
+    "ua": "Вона цікавилася малюванням у школі.",
+    "en": [
+      "She was interested in drawing at school."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Ми цікавимося допомогою тваринам.",
+    "en": [
+      "We are interested in helping animals."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я цікавлюся співом у хорі.",
+    "en": [
+      "I am interested in singing in the choir."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "MODALS_OF_PROBABILITY"],
+    "ua": "Він може зацікавитися спортом.",
+    "en": [
+      "He might become interested in doing sports."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона цікавиться історією мистецтва.",
+    "en": [
+      "She is interested in learning about art history."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "ADVERBS_OF_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Я завжди цікавлюся новим досвідом.",
+    "en": [
+      "I am always interested in trying new things."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вони цікавляться фотографуванням природи.",
+    "en": [
+      "They are interested in taking nature photos."
+    ]
+  },
+
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Ми цікавимося допомогою друзям.",
+    "en": [
+      "We are interested in helping our friends."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Я цікавлюсь грою на гітарі.",
+    "en": [
+      "I am interested in playing the guitar."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "COMPLEX_SENTENCES"],
+    "ua": "Я цікавлюся біологією, бо хочу бути лікарем.",
+    "en": [
+      "I am interested in studying biology because I want to be a doctor."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Він цікавиться написанням історій.",
+    "en": [
+      "He is interested in writing stories."
+    ]
+  },
+  {
+    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона цікавиться плаванням на відкритій воді.",
+    "en": [
+      "She is interested in swimming in open water."
+    ]
+  }
+] }

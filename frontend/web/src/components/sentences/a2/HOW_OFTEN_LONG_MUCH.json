@@ -1,0 +1,753 @@
+{ "HOW_OFTEN_LONG_MUCH": [
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "ua": "Як часто ти їси фрукти?",
+    "en": [
+      "How often do you eat fruit?",
+      "How often do you eat fruits?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "ua": "Як часто ти прибираєш у кімнаті?",
+    "en": [
+      "How often do you clean your room?",
+      "How often do you tidy your room?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Як часто ти граєшся з друзями?",
+    "en": [
+      "How often do you play with friends?",
+      "How often do you spend time with friends?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто вона читає книги?",
+    "en": [
+      "How often does she read books?",
+      "How often does she read?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто він ходить у басейн?",
+    "en": [
+      "How often does he go to the pool?",
+      "How often does he go swimming?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто вони зустрічаються?",
+    "en": [
+      "How often do they meet?",
+      "How often do they see each other?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти дивишся телевізор?",
+    "en": [
+      "How often do you watch TV?",
+      "How often do you watch television?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ви гуляєте в парку?",
+    "en": [
+      "How often do you walk in the park?",
+      "How often do you go for a walk in the park?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "ua": "Як часто ти телефонуєш мамі?",
+    "en": [
+      "How often do you call your mom?",
+      "How often do you phone your mom?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти п'єш воду?",
+    "en": [
+      "How often do you drink water?",
+      "How often do you stay hydrated?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти ходиш у магазин?",
+    "en": [
+      "How often do you go to the store?",
+      "How often do you go shopping?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти подорожуєш?",
+    "en": [
+      "How often do you travel?",
+      "How often do you go on trips?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто твій тато водить машину?",
+    "en": [
+      "How often does your dad drive a car?",
+      "How often does your father drive?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Як часто твій брат робить уроки?",
+    "en": [
+      "How often does your brother do homework?",
+      "How often does your brother study?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти граєш у відеоігри?",
+    "en": [
+      "How often do you play video games?",
+      "How often do you play games?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти танцюєш?",
+    "en": [
+      "How often do you dance?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти ходиш до школи пішки?",
+    "en": [
+      "How often do you walk to school?",
+      "How often do you go to school on foot?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+    "ua": "Як часто ти їси м'ясо?",
+    "en": [
+      "How often do you eat meat?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти ходиш у кафе?",
+    "en": [
+      "How often do you go to a café?",
+      "How often do you go to cafés?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти бігаєш зранку?",
+    "en": [
+      "How often do you run in the morning?",
+      "How often do you go running in the morning?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти слухаєш музику?",
+    "en": [
+      "How often do you listen to music?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "ua": "Як часто ти бачиш своїх друзів?",
+    "en": [
+      "How often do you see your friends?",
+      "How often do you meet your friends?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Як часто ти обідаєш у школі?",
+    "en": [
+      "How often do you have lunch at school?",
+      "How often do you eat lunch at school?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "ua": "Як часто ти відвідуєш бабусю?",
+    "en": [
+      "How often do you visit your grandma?",
+      "How often do you visit your grandmother?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "ua": "Як часто ти допомагаєш мамі?",
+    "en": [
+      "How often do you help your mom?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти ходиш у театр?",
+    "en": [
+      "How often do you go to the theatre?",
+      "How often do you go to the theater?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти встаєш рано?",
+    "en": [
+      "How often do you get up early?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти запізнюєшся?",
+    "en": [
+      "How often do you arrive late?",
+      "How often are you late?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як часто ти не снідаєш?",
+    "en": [
+      "How often don’t you have breakfast?",
+      "How often do you skip breakfast?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як часто ти купуєш морозиво?",
+    "en": [
+      "How often do you buy ice cream?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як часто ти смієшся?",
+    "en": [
+      "How often do you laugh?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як часто ти ходиш на свята?",
+    "en": [
+      "How often do you go to parties?",
+      "How often do you attend parties?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як довго триває урок?",
+    "en": [
+      "How long does the lesson last?",
+      "How long is the lesson?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Як довго ти чекаєш автобус?",
+    "en": [
+      "How long do you wait for the bus?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Як довго ти живеш тут?",
+    "en": [
+      "How long have you lived here?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "WILL_PREDICTIONS"],
+    "ua": "Як довго це буде тривати?",
+    "en": [
+      "How long will this take?",
+      "How long will it last?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Як довго ти був у школі вчора?",
+    "en": [
+      "How long were you at school yesterday?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT_CONT"],
+    "ua": "Як довго ти вчиш англійську?",
+    "en": [
+      "How long have you been learning English?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Як довго ти жив у тому місті?",
+    "en": [
+      "How long did you live in that city?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго ти був на канікулах?",
+    "en": [
+      "How long were you on holiday?",
+      "How long were you on vacation?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "SINCE_FOR", "PRESENT_PERFECT"],
+    "ua": "Як довго ти знаєш свого друга?",
+    "en": [
+      "How long have you known your friend?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Як довго ти чекаєш на нього?",
+    "en": [
+      "How long have you been waiting for him?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго триває фільм?",
+    "en": [
+      "How long is the movie?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Як довго ви були в Португалії?",
+    "en": [
+      "How long were you in Portugal?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго триває перерва?",
+    "en": [
+      "How long is the break?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PERSONAL_PRONOUNS", "PRESENT_CONT_NOW"],
+    "ua": "Як довго він спить зараз?",
+    "en": [
+      "How long has he been sleeping?",
+      "How long is he sleeping?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "WILL_PREDICTIONS"],
+    "ua": "Як довго ти будеш вдома?",
+    "en": [
+      "How long will you be at home?",
+      "How long will you stay at home?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго йти до зупинки?",
+    "en": [
+      "How long does it take to get to the bus stop?",
+      "How long is it to the bus stop?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго їхати до школи?",
+    "en": [
+      "How long does it take to get to school?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "SINCE_FOR", "PRESENT_PERFECT"],
+    "ua": "Як довго ти знаєш англійську?",
+    "en": [
+      "How long have you known English?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго ти чекав учора?",
+    "en": [
+      "How long did you wait yesterday?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго триває твоя подорож?",
+    "en": [
+      "How long does your trip last?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Як довго ви грали вчора?",
+    "en": [
+      "How long did you play yesterday?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго триває зима?",
+    "en": [
+      "How long does winter last?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго триває урок математики?",
+    "en": [
+      "How long is the math lesson?",
+      "How long does the math lesson last?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Як довго ти знаєш цю школу?",
+    "en": [
+      "How long have you known this school?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Як довго ти був у лікарні?",
+    "en": [
+      "How long were you in the hospital?",
+      "How long were you at the hospital?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_CONT_NOW"],
+    "ua": "Як довго він грає зараз?",
+    "en": [
+      "How long has he been playing?",
+      "How long is he playing?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Як довго тривав концерт?",
+    "en": [
+      "How long did the concert last?",
+      "How long was the concert?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "WILL_PREDICTIONS"],
+    "ua": "Як довго буде йти дощ?",
+    "en": [
+      "How long will it rain?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Як довго ти вчився вчора?",
+    "en": [
+      "How long did you study yesterday?",
+      "How long were you studying yesterday?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT_CONT"],
+    "ua": "Як довго ти граєш у футбол?",
+    "en": [
+      "How long have you been playing football?",
+      "How long have you played football?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "SINCE_FOR", "PRESENT_PERFECT_CONT"],
+    "ua": "Як довго ти чекаєш на автобус зараз?",
+    "en": [
+      "How long have you been waiting for the bus?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT_CONT"],
+    "ua": "Як довго ти смієшся?",
+    "en": [
+      "How long have you been laughing?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Скільки води у пляшці?",
+    "en": [
+      "How much water is in the bottle?",
+      "How much water do we have in the bottle?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Скільки яблук у тебе?",
+    "en": [
+      "How many apples do you have?",
+      "How many apples have you got?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки це коштує?",
+    "en": [
+      "How much is it?",
+      "How much does it cost?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Скільки часу нам потрібно?",
+    "en": [
+      "How much time do we need?",
+      "How long do we need?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "NEGATION_DONT_DOESNT"],
+    "ua": "Скільки грошей у тебе немає?",
+    "en": [
+      "How much money don’t you have?",
+      "How much money are you missing?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки у тебе книжок?",
+    "en": [
+      "How many books do you have?",
+      "How many books have you got?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки в тебе братів і сестер?",
+    "en": [
+      "How many brothers and sisters do you have?",
+      "How many siblings do you have?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки у нас тарілок?",
+    "en": [
+      "How many plates do we have?",
+      "How many plates are there?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки часу ти проводиш у школі?",
+    "en": [
+      "How much time do you spend at school?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки мандаринів ти з'їв?",
+    "en": [
+      "How many tangerines did you eat?",
+      "How many mandarins did you eat?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки автобусів приїжджає щодня?",
+    "en": [
+      "How many buses arrive every day?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Скільки молока треба купити?",
+    "en": [
+      "How much milk do we need to buy?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки дітей у класі?",
+    "en": [
+      "How many children are in the class?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "NEGATION_DONT_DOESNT"],
+    "ua": "Скільки уроків ти не зробив?",
+    "en": [
+      "How many lessons didn’t you do?",
+      "How many classes did you miss?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки хвилин ми маємо?",
+    "en": [
+      "How many minutes do we have?",
+      "How much time do we have?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки людей у твоїй сім’ї?",
+    "en": [
+      "How many people are in your family?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки ложок тобі потрібно?",
+    "en": [
+      "How many spoons do you need?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки сумок ти маєш?",
+    "en": [
+      "How many bags do you have?",
+      "How many bags have you got?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Скільки часу зайняла подорож?",
+    "en": [
+      "How much time did the trip take?",
+      "How long did the trip take?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки олівців у пеналі?",
+    "en": [
+      "How many pencils are in the pencil case?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "WILL_PREDICTIONS"],
+    "ua": "Скільки це буде коштувати?",
+    "en": [
+      "How much will it cost?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Скільки води ти п’єш щодня?",
+    "en": [
+      "How much water do you drink every day?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки часу ти хочеш?",
+    "en": [
+      "How much time do you want?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки готових завдань у тебе?",
+    "en": [
+      "How many finished tasks do you have?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Скільки соку ти хочеш?",
+    "en": [
+      "How much juice do you want?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PERSONAL_PRONOUNS"],
+    "ua": "Скільки домашніх тварин у тебе?",
+    "en": [
+      "How many pets do you have?",
+      "How many pets have you got?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки часу йде на уроки?",
+    "en": [
+      "How much time do you spend on homework?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "NEGATION_DONT_DOESNT"],
+    "ua": "Скільки води ти не п’єш щодня?",
+    "en": [
+      "How much water don’t you drink every day?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки іграшок у тебе вдома?",
+    "en": [
+      "How many toys do you have at home?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
+    "ua": "Скільки грошей ти витратив учора?",
+    "en": [
+      "How much money did you spend yesterday?"
+    ]
+  },
+
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки учнів у школі?",
+    "en": [
+      "How many students are at the school?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки часу тобі потрібно, щоб зібратися?",
+    "en": [
+      "How much time do you need to get ready?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH", "COUNT_UNCOUNT"],
+    "ua": "Скільки столів у класі?",
+    "en": [
+      "How many tables are in the classroom?"
+    ]
+  },
+  {
+    "rules": ["HOW_OFTEN_LONG_MUCH"],
+    "ua": "Скільки ти хочеш цукру?",
+    "en": [
+      "How much sugar do you want?"
+    ]
+  }
+] }

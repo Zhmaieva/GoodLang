@@ -1,0 +1,453 @@
+{ "WISH_PAST_PAST_PERFECT": [
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би вміти співати.",
+    "en": ["I wish I could sing.", "I wish I could not sing."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би не боятися літати.",
+    "en": ["I wish I weren’t afraid of flying.", "I wish I was not afraid of flying."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би бути добрим у математиці.",
+    "en": ["I wish I were good at math.", "I wish I was good at math."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би вміти танцювати, як вона.",
+    "en": ["I wish I could dance like her.", "I wish I could not dance like her."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб сьогодні було свято.",
+    "en": ["I wish today were a holiday.", "I wish today was a holiday."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб він був моїм сусідом.",
+    "en": ["I wish he were my neighbor.", "I wish he was my neighbor."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб мій інтернет був швидшим.",
+    "en": ["I wish my internet were faster.", "I wish my internet was faster."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би не потребувати окулярів.",
+    "en": ["I wish I didn’t need glasses.", "I wish I did not need glasses."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би працювати менше та заробляти більше.",
+    "en": ["I wish I worked less and earned more."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб вона жила ближче.",
+    "en": ["I wish she lived closer."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб тут не так часто падав сніг.",
+    "en": ["I wish it didn’t snow so much here.", "I wish it did not snow so much here."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би не мати головного болю.",
+    "en": ["I wish I didn’t have a headache.", "I wish I did not have a headache."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб він був терплячішим.",
+    "en": ["I wish he were more patient.", "I wish he was more patient."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би бути у відпустці.",
+    "en": ["I wish I were on vacation.", "I wish I was on vacation."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб ми не сварилися так часто.",
+    "en": ["I wish we didn’t argue so often.", "I wish we did not argue so often."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб ти краще говорив англійською.",
+    "en": ["I wish you spoke English better."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би бачити зорі чіткіше.",
+    "en": ["I wish I could see the stars clearly."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб уже була п’ятниця.",
+    "en": ["I wish it were Friday already.", "I wish it was Friday already."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би не забувати речі так легко.",
+    "en": ["I wish I didn’t forget things so easily.", "I wish I did not forget things so easily."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб він не говорив так голосно.",
+    "en": ["I wish he didn’t talk so loudly.", "I wish he did not talk so loudly."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб у нас був сад.",
+    "en": ["I wish we had a garden."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би бути впевненішим у собі.",
+    "en": ["I wish I were more confident.", "I wish I was more confident."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб батарея мого телефону тримала довше.",
+    "en": ["I wish my phone battery lasted longer."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб ти був моїм учителем.",
+    "en": ["I wish you were my teacher.", "I wish you was my teacher."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би мати собаку.",
+    "en": ["I wish I had a dog."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би знати відповідь.",
+    "en": ["I wish I knew the answer."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би бути вищим.",
+    "en": ["I wish I were taller.", "I wish I was taller."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би вміти водити машину.",
+    "en": ["I wish I could drive."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би сьогодні не працювати.",
+    "en": ["I wish I didn’t have to work today.", "I wish I did not have to work today."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб не йшов дощ.",
+    "en": ["I wish it weren’t raining.", "I wish it wasn’t raining."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би вільно розмовляти іспанською.",
+    "en": ["I wish I spoke Spanish fluently."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би мати більше вільного часу.",
+    "en": ["I wish I had more free time."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би жити біля моря.",
+    "en": ["I wish I lived near the sea."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би мати більший будинок.",
+    "en": ["I wish I had a bigger house."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би не жити так далеко.",
+    "en": ["I wish I didn’t live so far away.", "I wish I did not live so far away."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би бути багатим.",
+    "en": ["I wish I were rich.", "I wish I was rich."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб ти був тут.",
+    "en": ["I wish you were here.", "I wish you was here."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би вміти грати на гітарі.",
+    "en": ["I wish I could play the guitar."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб у нас була машина.",
+    "en": ["I wish we had a car."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб він був ввічливішим.",
+    "en": ["I wish he were more polite.", "I wish he was more polite."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб вона мене любила.",
+    "en": ["I wish she liked me."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би не відчувати такої втоми.",
+    "en": ["I wish I didn’t feel so tired.", "I wish I did not feel so tired."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би працювати з дому.",
+    "en": ["I wish I worked from home."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб зараз було літо.",
+    "en": ["I wish it were summer now.", "I wish it was summer now."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би мати блакитні очі.",
+    "en": ["I wish I had blue eyes."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би більше подорожувати.",
+    "en": ["I wish I could travel more."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб моя робота була легшою.",
+    "en": ["I wish my job were easier.", "I wish my job was easier."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би жити у більшому місті.",
+    "en": ["I wish we lived in a bigger city."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би не мати так багато рахунків.",
+    "en": ["I wish I didn’t have so many bills.", "I wish I did not have so many bills."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб мої батьки краще мене розуміли.",
+    "en": ["I wish my parents understood me better."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я старанніше вчився у школі.",
+    "en": ["I wish I had studied harder at school."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не витратив так багато грошей.",
+    "en": ["I wish I hadn’t spent so much money.", "I wish I had not spent so much money."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я сказав їй правду.",
+    "en": ["I wish I had told her the truth."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я пішов до коледжу.",
+    "en": ["I wish I had gone to college."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не втратив той шанс.",
+    "en": ["I wish I hadn’t missed that chance.", "I wish I had not missed that chance."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я прийняв ту пропозицію роботи.",
+    "en": ["I wish I had taken that job offer."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не сказав тих слів.",
+    "en": ["I wish I hadn’t said those words.", "I wish I had not said those words."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я прокинувся раніше.",
+    "en": ["I wish I had woken up earlier."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я заощадив більше грошей.",
+    "en": ["I wish I had saved more money."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я навчився плавати в дитинстві.",
+    "en": ["I wish I had learned to swim as a child."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я купив той будинок.",
+    "en": ["I wish I had bought that house."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не загубив ключі.",
+    "en": ["I wish I hadn’t lost my keys.", "I wish I had not lost my keys."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не забув про твій день народження.",
+    "en": ["I wish I hadn’t forgotten your birthday.", "I wish I had not forgotten your birthday."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я послухав твою пораду.",
+    "en": ["I wish I had listened to your advice."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не з’їв так багато торта.",
+    "en": ["I wish I hadn’t eaten so much cake.", "I wish I had not eaten so much cake."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я взяв парасольку.",
+    "en": ["I wish I had brought an umbrella."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не звільнився зі старої роботи.",
+    "en": ["I wish I hadn’t quit my old job.", "I wish I had not quit my old job."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я зустрів тебе раніше.",
+    "en": ["I wish I had met you earlier."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не розбив свій телефон.",
+    "en": ["I wish I hadn’t broken my phone.", "I wish I had not broken my phone."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я сказав йому, що я відчуваю.",
+    "en": ["I wish I had told him how I felt."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не засиджувався так пізно.",
+    "en": ["I wish I hadn’t stayed up so late.", "I wish I had not stayed up so late."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я зробив більше фото.",
+    "en": ["I wish I had taken more photos."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не був таким сором’язливим.",
+    "en": ["I wish I hadn’t been so shy.", "I wish I had not been so shy."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не витратив стільки часу даремно.",
+    "en": ["I wish I hadn’t wasted so much time.", "I wish I had not wasted so much time."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я пішов на концерт.",
+    "en": ["I wish I had gone to the concert."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не залишив свою сумку в автобусі.",
+    "en": ["I wish I hadn’t left my bag on the bus.", "I wish I had not left my bag on the bus."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не зробив тієї помилки.",
+    "en": ["I wish I hadn’t made that mistake.", "I wish I had not made that mistake."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я взяв свою камеру.",
+    "en": ["I wish I had brought my camera."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не втратив зв’язок зі своїми друзями.",
+    "en": ["I wish I hadn’t lost touch with my friends.", "I wish I had not lost touch with my friends."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я зберіг їхній номер.",
+    "en": ["I wish I had saved their number."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не провів цілий день онлайн.",
+    "en": ["I wish I hadn’t spent the whole day online.", "I wish I had not spent the whole day online."]
+  },
+
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я закінчив проєкт раніше.",
+    "en": ["I wish I had finished the project earlier."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не скасував поїздку.",
+    "en": ["I wish I hadn’t canceled the trip.", "I wish I had not canceled the trip."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не забув відповісти.",
+    "en": ["I wish I hadn’t forgotten to reply.", "I wish I had not forgotten to reply."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я розповів комусь про це.",
+    "en": ["I wish I had told someone about it."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не ходив туди сам.",
+    "en": ["I wish I hadn’t gone there alone.", "I wish I had not gone there alone."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я вибачився раніше.",
+    "en": ["I wish I had apologized sooner."]
+  },
+  {
+    "rules": ["WISH_PAST_PAST_PERFECT"],
+    "ua": "Я хотів би, щоб я не проігнорував попереджувальні знаки.",
+    "en": ["I wish I hadn’t ignored the warning signs.", "I wish I had not ignored the warning signs."]
+  }
+] }

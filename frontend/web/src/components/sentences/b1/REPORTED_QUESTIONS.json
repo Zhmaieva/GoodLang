@@ -1,0 +1,992 @@
+{ "REPORTED_QUESTIONS": [
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, де я був учора."],
+    "en": [
+      "She asked where I had been the day before.",
+      "She asked where I'd been the day before.",
+      "She asked where I had been yesterday."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він поцікавився, чи я закінчив роботу."],
+    "en": [
+      "He asked if I had finished the work.",
+      "He asked whether I had finished the work.",
+      "He asked if I'd finished the work."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WILL_PREDICTIONS"],
+    "ua": ["Вона хотіла знати, коли почнеться зустріч."],
+    "en": [
+      "She wanted to know when the meeting would start.",
+      "She wanted to know when the meeting was going to start.",
+      "She wanted to know when the meeting’d start."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, хто телефонував."],
+    "en": [
+      "He asked who had called.",
+      "He asked who'd called.",
+      "He asked who was calling."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони поцікавилися, чи я бачив фільм."],
+    "en": [
+      "They asked if I had seen the movie.",
+      "They asked whether I had seen the movie.",
+      "They asked if I'd seen the film."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, де я живу."],
+    "en": [
+      "She asked where I lived.",
+      "She asked where I was living.",
+      "She asked where I live."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "MODALS_OF_PROBABILITY"],
+    "ua": ["Він запитав, чи я можу йому допомогти."],
+    "en": [
+      "He asked if I could help him.",
+      "He asked whether I could help him.",
+      "He asked if I was able to help him."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона хотіла знати, чому я запізнився."],
+    "en": [
+      "She wanted to know why I had been late.",
+      "She wanted to know why I'd been late.",
+      "She wanted to know why I was late."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, що я роблю."],
+    "en": [
+      "He asked what I was doing.",
+      "He asked what I’d been doing.",
+      "He asked what I was up to."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Вона поцікавилася, чи я збираюся на вечірку."],
+    "en": [
+      "She asked if I was going to the party.",
+      "She asked whether I was going to the party.",
+      "She asked if I was planning to go to the party."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, коли я приїхав."],
+    "en": [
+      "He asked when I had arrived.",
+      "He asked when I'd arrived.",
+      "He asked when I came."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "MODALS_OF_PROBABILITY"],
+    "ua": ["Вона хотіла знати, чи я зможу прийти завтра."],
+    "en": [
+      "She wanted to know if I could come the next day.",
+      "She wanted to know whether I could come the next day.",
+      "She wanted to know if I'd be able to come tomorrow."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони запитали, де знаходиться найближча станція метро."],
+    "en": [
+      "They asked where the nearest subway station was.",
+      "They asked where the nearest metro station was.",
+      "They asked where the closest station was."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він поцікавився, скільки мені років."],
+    "en": [
+      "He asked how old I was.",
+      "He asked how old I am.",
+      "He asked about my age."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, хто це зробив."],
+    "en": [
+      "She asked who had done it.",
+      "She asked who’d done it.",
+      "She asked who did it."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, що я сказав."],
+    "en": [
+      "He wanted to know what I had said.",
+      "He wanted to know what I'd said.",
+      "He wanted to know what I said."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Вони поцікавилися, куди я збираюся поїхати у відпустку."],
+    "en": [
+      "They asked where I was going to go on holiday.",
+      "They asked where I was planning to go on vacation.",
+      "They asked where I’d planned to go on holiday."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, коли я прийду додому."],
+    "en": [
+      "She asked when I would come home.",
+      "She asked when I’d come home.",
+      "She asked when I was coming home."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "PRESENT_PERFECT"],
+    "ua": ["Він поцікавився, чи я коли-небудь був у Лондоні."],
+    "en": [
+      "He asked if I had ever been to London.",
+      "He asked whether I had ever been to London.",
+      "He asked if I'd ever been to London."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WILL_PREDICTIONS"],
+    "ua": ["Вона запитала, коли я піду спати."],
+    "en": [
+      "She asked when I would go to bed.",
+      "She asked when I'd go to bed.",
+      "She asked when I was going to sleep."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Він хотів знати, чи я вдома."],
+    "en": [
+      "He wanted to know if I was at home.",
+      "He wanted to know whether I was at home.",
+      "He wanted to know if I’m home."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "CAN_CANT"],
+    "ua": ["Вони запитали, чи я можу їм допомогти."],
+    "en": [
+      "They asked if I could help them.",
+      "They asked whether I could help them.",
+      "They asked if I can help them."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "LIKE_LOVE_HATE_ING"],
+    "ua": ["Він поцікавився, чи мені подобається моя нова робота."],
+    "en": [
+      "He asked if I liked my new job.",
+      "He asked whether I liked my new job.",
+      "He asked if I like my new job."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WAS_WERE"],
+    "ua": ["Вона запитала, чому я був сумний."],
+    "en": [
+      "She asked why I had been sad.",
+      "She asked why I'd been sad.",
+      "She asked why I was sad."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони хотіли знати, де я працюю."],
+    "en": [
+      "They wanted to know where I worked.",
+      "They wanted to know where I was working.",
+      "They wanted to know where I work."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "MODALS_OF_PROBABILITY"],
+    "ua": ["Він запитав, чи я можу приєднатися до них."],
+    "en": [
+      "He asked if I could join them.",
+      "He asked whether I could join them.",
+      "He asked if I was able to join them."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Вона запитала, чи я втомлений."],
+    "en": [
+      "She asked if I was tired.",
+      "She asked whether I was tired.",
+      "She asked if I’m tired."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, коли я востаннє бачив Анну."],
+    "en": [
+      "He wanted to know when I had last seen Anna.",
+      "He wanted to know when I'd last seen Anna.",
+      "He wanted to know when I last saw Anna."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Вони поцікавилися, чи я мушу йти."],
+    "en": [
+      "They asked if I had to leave.",
+      "They asked whether I had to go.",
+      "They asked if I must go."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, коли я купив цей телефон."],
+    "en": [
+      "She asked when I had bought that phone.",
+      "She asked when I'd bought that phone.",
+      "She asked when I bought this phone."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, як мене звати."],
+    "en": [
+      "He wanted to know what my name was.",
+      "He wanted to know what my name is.",
+      "He asked what my name was."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Вона запитала, чи я зайнятий."],
+    "en": [
+      "She asked if I was busy.",
+      "She asked whether I was busy.",
+      "She asked if I’m busy."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони хотіли знати, коли я народився."],
+    "en": [
+      "They wanted to know when I had been born.",
+      "They wanted to know when I'd been born.",
+      "They wanted to know when I was born."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він поцікавився, де я купив квитки."],
+    "en": [
+      "He asked where I had bought the tickets.",
+      "He asked where I'd bought the tickets.",
+      "He asked where I bought the tickets."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Вона хотіла знати, коли я збираюся виїжджати."],
+    "en": [
+      "She wanted to know when I was going to leave.",
+      "She wanted to know when I’d planned to leave.",
+      "She wanted to know when I was leaving."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, де я залишив ключі."],
+    "en": [
+      "She asked where I had left the keys.",
+      "She asked where I'd left the keys.",
+      "She asked where I left the keys."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, коли я почав працювати тут."],
+    "en": [
+      "He wanted to know when I had started working there.",
+      "He wanted to know when I'd started working there.",
+      "He wanted to know when I started working here."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони поцікавилися, що я робив у неділю."],
+    "en": [
+      "They asked what I had done on Sunday.",
+      "They asked what I'd done on Sunday.",
+      "They asked what I did on Sunday."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, чи я щось їв."],
+    "en": [
+      "She asked if I had eaten anything.",
+      "She asked whether I had eaten anything.",
+      "She asked if I'd eaten anything."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, чому я не відповів на повідомлення."],
+    "en": [
+      "He asked why I hadn’t replied to the message.",
+      "He asked why I had not replied to the message.",
+      "He asked why I didn’t reply to the message."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "CAN_CANT"],
+    "ua": ["Вони хотіли знати, чи я можу говорити англійською."],
+    "en": [
+      "They wanted to know if I could speak English.",
+      "They wanted to know whether I could speak English.",
+      "They wanted to know if I can speak English."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "PRESENT_PERFECT"],
+    "ua": ["Вона поцікавилася, чи я вже зробив домашнє завдання."],
+    "en": [
+      "She asked if I had already done my homework.",
+      "She asked whether I had already done my homework.",
+      "She asked if I'd already done my homework."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, коли я бачив її востаннє."],
+    "en": [
+      "He asked when I had last seen her.",
+      "He asked when I'd last seen her.",
+      "He asked when I last saw her."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WAS_WERE"],
+    "ua": ["Вона хотіла знати, де я був минулої ночі."],
+    "en": [
+      "She wanted to know where I had been the night before.",
+      "She wanted to know where I'd been the night before.",
+      "She wanted to know where I was last night."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Вони поцікавилися, коли я збираюся повернутися."],
+    "en": [
+      "They asked when I was going to come back.",
+      "They asked when I was planning to come back.",
+      "They asked when I'd be back."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Він запитав, чи я зайнятий завтра."],
+    "en": [
+      "He asked if I was busy the next day.",
+      "He asked whether I was busy the next day.",
+      "He asked if I'd be busy tomorrow."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WILL_PREDICTIONS"],
+    "ua": ["Вона хотіла знати, коли я поїду до Варшави."],
+    "en": [
+      "She wanted to know when I would go to Warsaw.",
+      "She wanted to know when I'd go to Warsaw.",
+      "She wanted to know when I was going to Warsaw."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Він запитав, чи мені довелося працювати в суботу."],
+    "en": [
+      "He asked if I had to work on Saturday.",
+      "He asked whether I had to work on Saturday.",
+      "He asked if I'd had to work on Saturday."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона поцікавилася, як довго я тут живу."],
+    "en": [
+      "She asked how long I had lived there.",
+      "She asked how long I'd lived there.",
+      "She asked how long I’d been living here."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "MODALS_OF_PROBABILITY"],
+    "ua": ["Вони хотіли знати, чи я міг би допомогти з проєктом."],
+    "en": [
+      "They wanted to know if I could help with the project.",
+      "They wanted to know whether I could help with the project.",
+      "They wanted to know if I'd be able to help with the project."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, хто ще прийшов на зустріч."],
+    "en": [
+      "He asked who else had come to the meeting.",
+      "He asked who’d come to the meeting.",
+      "He asked who came to the meeting."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Вона запитала, чи я вдома один."],
+    "en": [
+      "She asked if I was at home alone.",
+      "She asked whether I was at home alone.",
+      "She asked if I’m alone at home."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "LIKE_LOVE_HATE_ING"],
+    "ua": ["Він хотів знати, чи мені подобається ця пісня."],
+    "en": [
+      "He wanted to know if I liked that song.",
+      "He wanted to know whether I liked that song.",
+      "He wanted to know if I like this song."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WAS_WERE"],
+    "ua": ["Вона поцікавилася, чому я був сердитий."],
+    "en": [
+      "She asked why I had been angry.",
+      "She asked why I'd been angry.",
+      "She asked why I was angry."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Вони хотіли знати, коли я збираюся повернутися додому."],
+    "en": [
+      "They wanted to know when I was going to return home.",
+      "They wanted to know when I’d return home.",
+      "They wanted to know when I was coming back home."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WILL_PREDICTIONS"],
+    "ua": ["Він запитав, коли я приїду."],
+    "en": [
+      "He asked when I would arrive.",
+      "He asked when I'd arrive.",
+      "He asked when I was going to arrive."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона хотіла знати, як мене знайшли."],
+    "en": [
+      "She wanted to know how they had found me.",
+      "She wanted to know how they'd found me.",
+      "She wanted to know how they found me."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Вони поцікавилися, чи я вільний зараз."],
+    "en": [
+      "They asked if I was free at that moment.",
+      "They asked whether I was free at that moment.",
+      "They asked if I’m free now."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, коли я купив цей автомобіль."],
+    "en": [
+      "He asked when I had bought that car.",
+      "He asked when I'd bought that car.",
+      "He asked when I bought this car."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Вона запитала, чи мені потрібно було залишитися довше."],
+    "en": [
+      "She asked if I had to stay longer.",
+      "She asked whether I had to stay longer.",
+      "She asked if I'd needed to stay longer."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона хотіла знати, чому я так поспішав."],
+    "en": [
+      "She wanted to know why I was in such a hurry.",
+      "She wanted to know why I'd been in such a hurry.",
+      "She wanted to know what made me rush."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, як довго я тут жив."],
+    "en": [
+      "He asked how long I had lived there.",
+      "He asked how long I'd lived there.",
+      "He asked how long I was living here."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "CAN_CANT"],
+    "ua": ["Вона поцікавилася, чи я можу прийти завтра."],
+    "en": [
+      "She asked if I could come the next day.",
+      "She asked whether I could come the next day.",
+      "She asked if I'd be able to come tomorrow."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "PRESENT_PERFECT"],
+    "ua": ["Вони хотіли знати, чи я вже бачив цей фільм."],
+    "en": [
+      "They wanted to know if I had seen that movie.",
+      "They wanted to know whether I had seen that movie.",
+      "They wanted to know if I'd already seen it."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Він запитав, де я був тоді."],
+    "en": [
+      "He asked where I had been at that time.",
+      "He asked where I'd been at that time.",
+      "He asked where I was then."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Вона запитала, чи мені потрібно йти рано."],
+    "en": [
+      "She asked if I had to leave early.",
+      "She asked whether I had to leave early.",
+      "She asked if I must leave early."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "LIKE_LOVE_HATE_ING"],
+    "ua": ["Він хотів знати, чи мені подобається жити в цьому місті."],
+    "en": [
+      "He wanted to know if I liked living in that city.",
+      "He wanted to know whether I liked living there.",
+      "He wanted to know if I enjoy living here."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона поцікавилася, хто приходив учора."],
+    "en": [
+      "She asked who had come the day before.",
+      "She asked who’d come the day before.",
+      "She asked who came yesterday."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, де я купив цей светр."],
+    "en": [
+      "He wanted to know where I had bought that sweater.",
+      "He wanted to know where I'd bought that sweater.",
+      "He wanted to know where I got this jumper."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони запитали, чи я добре спав."],
+    "en": [
+      "They asked if I had slept well.",
+      "They asked whether I had slept well.",
+      "They asked if I'd slept well."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона хотіла знати, чому я нічого не сказав."],
+    "en": [
+      "She wanted to know why I hadn’t said anything.",
+      "She wanted to know why I had not said anything.",
+      "She wanted to know why I didn’t say anything."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WILL_PREDICTIONS"],
+    "ua": ["Він запитав, коли я повернуся."],
+    "en": [
+      "He asked when I would return.",
+      "He asked when I'd return.",
+      "He asked when I was going to come back."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони поцікавилися, як мене звати."],
+    "en": [
+      "They asked what my name was.",
+      "They asked what my name is.",
+      "They wanted to know my name."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, як я почуваюся сьогодні."],
+    "en": [
+      "She asked how I felt that day.",
+      "She asked how I was feeling that day.",
+      "She asked how I feel today."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Він хотів знати, коли я збираюся поїхати до Італії."],
+    "en": [
+      "He wanted to know when I was going to Italy.",
+      "He wanted to know when I’d planned to go to Italy.",
+      "He wanted to know when I was leaving for Italy."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона поцікавилася, чому я сміявся."],
+    "en": [
+      "She asked why I had been laughing.",
+      "She asked why I'd been laughing.",
+      "She asked why I laughed."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він запитав, що я робив у школі."],
+    "en": [
+      "He asked what I had done at school.",
+      "He asked what I'd done at school.",
+      "He asked what I was doing at school."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Вона запитала, чи я вільний після роботи."],
+    "en": [
+      "She asked if I was free after work.",
+      "She asked whether I was free after work.",
+      "She asked if I’m free after work."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "CAN_CANT"],
+    "ua": ["Вони хотіли знати, чи я можу приїхати на зустріч."],
+    "en": [
+      "They asked if I could come to the meeting.",
+      "They asked whether I could come to the meeting.",
+      "They asked if I'd be able to attend the meeting."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WAS_WERE"],
+    "ua": ["Він хотів знати, чи я був там один."],
+    "en": [
+      "He wanted to know if I had been there alone.",
+      "He wanted to know if I'd been there alone.",
+      "He wanted to know if I was there alone."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Вона поцікавилася, чи мені довелося платити."],
+    "en": [
+      "She asked if I had to pay.",
+      "She asked whether I had to pay.",
+      "She asked if I’d needed to pay."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони запитали, коли я вперше почув цю пісню."],
+    "en": [
+      "They asked when I had first heard that song.",
+      "They asked when I'd first heard that song.",
+      "They asked when I first heard this song."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, де я навчився англійської."],
+    "en": [
+      "He wanted to know where I had learned English.",
+      "He wanted to know where I'd learned English.",
+      "He wanted to know where I learned English."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "LIKE_LOVE_HATE_ING"],
+    "ua": ["Вона хотіла знати, чи мені подобається новий фільм."],
+    "en": [
+      "She wanted to know if I liked the new movie.",
+      "She wanted to know whether I liked the new film.",
+      "She wanted to know if I like the new movie."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Вони поцікавилися, коли я збираюся купити новий ноутбук."],
+    "en": [
+      "They asked when I was going to buy a new laptop.",
+      "They asked when I planned to buy a new laptop.",
+      "They asked when I was buying a new laptop."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона хотіла знати, коли я останній раз бачив його."],
+    "en": [
+      "She wanted to know when I had last seen him.",
+      "She wanted to know when I'd last seen him.",
+      "She wanted to know when I last saw him."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "CAN_CANT"],
+    "ua": ["Він запитав, чи я можу водити машину."],
+    "en": [
+      "He asked if I could drive a car.",
+      "He asked whether I could drive a car.",
+      "He asked if I can drive."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WAS_WERE"],
+    "ua": ["Вона поцікавилася, чи я був вдома вчора."],
+    "en": [
+      "She asked if I had been at home the day before.",
+      "She asked if I'd been home yesterday.",
+      "She asked if I was home yesterday."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони запитали, що я робив у вихідні."],
+    "en": [
+      "They asked what I had done at the weekend.",
+      "They asked what I'd done at the weekend.",
+      "They asked what I did on the weekend."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Він хотів знати, чи я щасливий на новій роботі."],
+    "en": [
+      "He wanted to know if I was happy at my new job.",
+      "He wanted to know whether I was happy at my new job.",
+      "He wanted to know if I’m happy at my new job."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, де я навчився грати на гітарі."],
+    "en": [
+      "She asked where I had learned to play the guitar.",
+      "She asked where I'd learned to play guitar.",
+      "She asked where I learned to play the guitar."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він поцікавився, чому я змінив адресу."],
+    "en": [
+      "He asked why I had changed my address.",
+      "He asked why I'd changed my address.",
+      "He asked why I changed my address."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "PRESENT_PERFECT"],
+    "ua": ["Вони хотіли знати, чи я вже приготував вечерю."],
+    "en": [
+      "They wanted to know if I had already made dinner.",
+      "They wanted to know if I'd already cooked dinner.",
+      "They wanted to know whether I had prepared dinner."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Вона запитала, чи мені потрібно було зателефонувати раніше."],
+    "en": [
+      "She asked if I had to call earlier.",
+      "She asked whether I had to call earlier.",
+      "She asked if I'd needed to call before."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, коли я зустрів свого друга."],
+    "en": [
+      "He wanted to know when I had met my friend.",
+      "He wanted to know when I'd met my friend.",
+      "He wanted to know when I met my friend."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона поцікавилася, де я купив цей годинник."],
+    "en": [
+      "She asked where I had bought that watch.",
+      "She asked where I'd bought that watch.",
+      "She asked where I bought this watch."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони запитали, коли я приїхав додому."],
+    "en": [
+      "They asked when I had come home.",
+      "They asked when I'd come home.",
+      "They asked when I got home."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "CAN_CANT"],
+    "ua": ["Він хотів знати, чи я можу розмовляти французькою."],
+    "en": [
+      "He asked if I could speak French.",
+      "He asked whether I could speak French.",
+      "He asked if I can speak French."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Вона запитала, чи я був в офісі вранці."],
+    "en": [
+      "She asked if I had been at the office in the morning.",
+      "She asked if I'd been at the office in the morning.",
+      "She asked if I was at the office in the morning."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "LIKE_LOVE_HATE_ING"],
+    "ua": ["Вони хотіли знати, чи мені подобається працювати в команді."],
+    "en": [
+      "They asked if I liked working in a team.",
+      "They asked whether I liked working in a team.",
+      "They asked if I enjoy working in a team."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він поцікавився, чому я не прийшов на зустріч."],
+    "en": [
+      "He asked why I hadn’t come to the meeting.",
+      "He asked why I had not come to the meeting.",
+      "He asked why I didn’t come to the meeting."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вона запитала, хто ще прийде на вечірку."],
+    "en": [
+      "She asked who else was coming to the party.",
+      "She asked who else would come to the party.",
+      "She asked who else’d come to the party."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він хотів знати, як довго триватиме подорож."],
+    "en": [
+      "He wanted to know how long the trip would take.",
+      "He wanted to know how long the journey’d take.",
+      "He wanted to know how long the travel would last."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони поцікавилися, де я був минулого літа."],
+    "en": [
+      "They asked where I had been last summer.",
+      "They asked where I'd been last summer.",
+      "They asked where I was last summer."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "WILL_PREDICTIONS"],
+    "ua": ["Вона хотіла знати, коли я приїду до неї."],
+    "en": [
+      "She wanted to know when I would visit her.",
+      "She wanted to know when I'd visit her.",
+      "She wanted to know when I was going to visit her."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "GOING_TO_PLANS"],
+    "ua": ["Він запитав, коли я збираюся купити будинок."],
+    "en": [
+      "He asked when I was going to buy a house.",
+      "He asked when I planned to buy a house.",
+      "He asked when I was buying a house."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Вони хотіли знати, хто мені допоміг."],
+    "en": [
+      "They wanted to know who had helped me.",
+      "They wanted to know who’d helped me.",
+      "They wanted to know who helped me."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE"],
+    "ua": ["Він поцікавився, коли я вийшов з дому."],
+    "en": [
+      "He asked when I had left the house.",
+      "He asked when I'd left the house.",
+      "He asked when I left home."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": ["Вона запитала, чи мені доведеться чекати довго."],
+    "en": [
+      "She asked if I would have to wait long.",
+      "She asked whether I’d have to wait long.",
+      "She asked if I had to wait long."
+    ]
+  },
+  {
+    "rules": ["REPORTED_QUESTIONS", "PAST_SIMPLE", "TO_BE"],
+    "ua": ["Вони хотіли знати, чи я був на вечірці минулої п’ятниці."],
+    "en": [
+      "They wanted to know if I had been at the party last Friday.",
+      "They wanted to know if I'd been at the party last Friday.",
+      "They wanted to know if I was at the party last Friday."
+    ]
+  }
+] }

@@ -1,0 +1,884 @@
+{ "MIXED_CONDITIONALS": [
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді вивчив англійську, зараз мав би кращу роботу."],
+    "en": [
+      "If I had learned English then, I would have a better job now.",
+      "If I'd learned English then, I'd have a better job now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби вона не запізнилася, вона була б зараз не така втомлена."],
+    "en": [
+      "If she hadn’t been late, she wouldn’t be so tired now.",
+      "If she hadn't been late, she wouldn't be so tired now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби ми поїхали на море, зараз були б щасливішими."],
+    "en": [
+      "If we had gone to the sea, we would be happier now.",
+      "If we'd gone to the sea, we'd be happier now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я не витратив усі гроші, зараз мав би машину."],
+    "en": [
+      "If I hadn’t spent all my money, I would have a car now.",
+      "If I hadn't spent all my money, I'd have a car now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби мене тоді запросили, я зараз був би на вечірці."],
+    "en": [
+      "If I had been invited then, I would be at the party now.",
+      "If I'd been invited then, I'd be at the party now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби він не працював всю ніч, зараз почувався б краще."],
+    "en": [
+      "If he hadn’t worked all night, he would feel better now.",
+      "If he hadn't worked all night, he'd feel better now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби ти більше тренувався, ти був би зараз сильнішим."],
+    "en": [
+      "If you had trained more, you would be stronger now.",
+      "If you'd trained more, you'd be stronger now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вони не посварилися, зараз були б друзями."],
+    "en": [
+      "If they hadn’t argued, they would be friends now.",
+      "If they hadn't argued, they'd be friends now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я народився в іншій країні, я б зараз говорив іншою мовою."],
+    "en": [
+      "If I had been born in another country, I would speak another language now.",
+      "If I'd been born in another country, I'd speak another language now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби вони тоді залишилися вдома, зараз були б у безпеці."],
+    "en": [
+      "If they had stayed at home, they would be safe now.",
+      "If they'd stayed at home, they'd be safe now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді більше навчався, зараз знав би англійську краще."],
+    "en": [
+      "If I had studied more then, I would know English better now.",
+      "If I'd studied more then, I'd know English better now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби він не був таким ледачим у школі, зараз мав би кращу кар'єру."],
+    "en": [
+      "If he hadn’t been so lazy at school, he would have a better career now.",
+      "If he hadn't been so lazy at school, he'd have a better career now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби вони не пропустили потяг вчора, зараз були б у Парижі."],
+    "en": [
+      "If they hadn’t missed the train yesterday, they would be in Paris now.",
+      "If they hadn't missed the train yesterday, they'd be in Paris now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби мене тоді не звільнили, я зараз працював би в тій компанії."],
+    "en": [
+      "If I hadn’t been fired then, I would be working at that company now.",
+      "If I hadn't been fired then, I'd be working at that company now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вона не втратила телефон, зараз мала б усі контакти."],
+    "en": [
+      "If she hadn’t lost her phone, she would have all her contacts now.",
+      "If she hadn't lost her phone, she'd have all her contacts now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби ми залишилися в тому готелі, зараз насолоджувалися б видом з вікна."],
+    "en": [
+      "If we had stayed in that hotel, we would be enjoying the view now.",
+      "If we'd stayed in that hotel, we'd be enjoying the view now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я тоді взяв мамину пораду, зараз не мав би проблем."],
+    "en": [
+      "If I had taken my mom’s advice then, I wouldn’t have problems now.",
+      "If I'd taken my mom’s advice then, I wouldn't have problems now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби вони пішли до лікаря раніше, зараз почувалися б краще."],
+    "en": [
+      "If they had gone to the doctor earlier, they would feel better now.",
+      "If they'd gone to the doctor earlier, they'd feel better now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді сказав правду, зараз не шкодував би."],
+    "en": [
+      "If I had told the truth then, I wouldn’t regret it now.",
+      "If I'd told the truth then, I wouldn't regret it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вона закінчила університет, зараз мала б стабільну роботу."],
+    "en": [
+      "If she had graduated from university, she would have a stable job now.",
+      "If she'd graduated from university, she'd have a stable job now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби ми не витратили гроші минулого місяця, зараз поїхали б у подорож."],
+    "en": [
+      "If we hadn’t spent the money last month, we would travel now.",
+      "If we hadn't spent the money last month, we'd travel now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби лист був доставлений вчасно, зараз ми мали б відповідь."],
+    "en": [
+      "If the letter had been delivered on time, we would have an answer now.",
+      "If the letter'd been delivered on time, we'd have an answer now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби він тоді погодився, зараз був би щасливим."],
+    "en": [
+      "If he had agreed then, he would be happy now.",
+      "If he'd agreed then, he'd be happy now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби я не був таким впертим, зараз мав би більше друзів."],
+    "en": [
+      "If I hadn’t been so stubborn, I would have more friends now.",
+      "If I hadn't been so stubborn, I'd have more friends now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби вона прочитала книгу, зараз знала б відповідь."],
+    "en": [
+      "If she had read the book, she would know the answer now.",
+      "If she'd read the book, she'd know the answer now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби ми залишилися вдома, зараз дивилися б фільм."],
+    "en": [
+      "If we had stayed at home, we would be watching a movie now.",
+      "If we'd stayed at home, we'd be watching a movie now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я послухав поради вчителя, зараз мав би кращі оцінки."],
+    "en": [
+      "If I had followed the teacher’s advice, I would have better grades now.",
+      "If I'd followed the teacher’s advice, I'd have better grades now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби ми не запізнилися на автобус, зараз були б на концерті."],
+    "en": [
+      "If we hadn’t missed the bus, we would be at the concert now.",
+      "If we hadn't missed the bus, we'd be at the concert now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби ти поїхав до Італії, зараз бачив би море."],
+    "en": [
+      "If you had gone to Italy, you would see the sea now.",
+      "If you'd gone to Italy, you'd see the sea now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби я тоді не працював ночами, зараз мав би більше енергії."],
+    "en": [
+      "If I hadn’t worked nights then, I would have more energy now.",
+      "If I hadn't worked nights then, I'd have more energy now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вони не переїхали, зараз жили б поруч."],
+    "en": [
+      "If they hadn’t moved away, they would live nearby now.",
+      "If they hadn't moved away, they'd live nearby now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби він не був таким впевненим, зараз не ризикував би так багато."],
+    "en": [
+      "If he hadn’t been so confident, he wouldn’t take so many risks now.",
+      "If he hadn't been so confident, he wouldn't take so many risks now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби проєкт був завершений раніше, зараз ми б його презентували."],
+    "en": [
+      "If the project had been finished earlier, we would be presenting it now.",
+      "If the project'd been finished earlier, we'd be presenting it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я знав про це, зараз не хвилювався б."],
+    "en": [
+      "If I had known about it, I wouldn’t be worried now.",
+      "If I'd known about it, I wouldn't be worried now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби вона виграла конкурс, зараз мала б нагороду."],
+    "en": [
+      "If she had won the competition, she would have the prize now.",
+      "If she'd won the competition, she'd have the prize now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді не помилився, зараз усе було б інакше."],
+    "en": [
+      "If I hadn’t made a mistake then, everything would be different now.",
+      "If I hadn't made a mistake then, everything'd be different now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби ми залишилися в місті, зараз бачили б наших друзів частіше."],
+    "en": [
+      "If we had stayed in the city, we would see our friends more often now.",
+      "If we'd stayed in the city, we'd see our friends more often now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби я тоді лягла спати раніше, зараз не почувалася б так втомлено."],
+    "en": [
+      "If I had gone to bed earlier then, I wouldn’t feel so tired now.",
+      "If I'd gone to bed earlier then, I wouldn't feel so tired now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби документи були підписані вчасно, зараз ми почали б проєкт."],
+    "en": [
+      "If the documents had been signed on time, we would start the project now.",
+      "If the documents'd been signed on time, we'd start the project now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я послухав татову пораду, зараз не мав би боргів."],
+    "en": [
+      "If I had listened to my dad’s advice, I wouldn’t have debts now.",
+      "If I'd listened to my dad’s advice, I wouldn't have debts now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вона тоді сказала правду, зараз ми довіряли б їй."],
+    "en": [
+      "If she had told the truth then, we would trust her now.",
+      "If she'd told the truth then, we'd trust her now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби він не був таким скромним, зараз мав би більше впевненості."],
+    "en": [
+      "If he hadn’t been so modest, he would have more confidence now.",
+      "If he hadn't been so modest, he'd have more confidence now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби ми не пропустили літак, зараз були б на острові."],
+    "en": [
+      "If we hadn’t missed the plane, we would be on the island now.",
+      "If we hadn't missed the plane, we'd be on the island now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби ти пішов до школи раніше, зараз не хвилювався б за оцінки."],
+    "en": [
+      "If you had gone to school earlier, you wouldn’t be worried about grades now.",
+      "If you'd gone to school earlier, you wouldn't be worried about grades now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби він тоді зробив вибачення, зараз вони спілкувалися б."],
+    "en": [
+      "If he had apologized then, they would be talking now.",
+      "If he'd apologized then, they'd be talking now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді не купив ту річ, зараз мав би більше грошей."],
+    "en": [
+      "If I hadn’t bought that thing then, I would have more money now.",
+      "If I hadn't bought that thing then, I'd have more money now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби ми тоді жили в іншій країні, зараз мали б інший спосіб життя."],
+    "en": [
+      "If we had lived in another country then, we would have a different lifestyle now.",
+      "If we'd lived in another country then, we'd have a different lifestyle now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби я тоді закінчив роботу раніше, зараз був би вільний."],
+    "en": [
+      "If I had finished work earlier then, I would be free now.",
+      "If I'd finished work earlier then, I'd be free now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби будинок був збудований минулого року, ми жили б у ньому зараз."],
+    "en": [
+      "If the house had been built last year, we would live in it now.",
+      "If the house'd been built last year, we'd live in it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вона тоді погодилася, зараз мала б щасливу сім’ю."],
+    "en": [
+      "If she had agreed then, she would have a happy family now.",
+      "If she'd agreed then, she'd have a happy family now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби він не був таким зайнятим, зараз подорожував би більше."],
+    "en": [
+      "If he hadn’t been so busy, he would travel more now.",
+      "If he hadn't been so busy, he'd travel more now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби вони переїхали до Іспанії, зараз насолоджувалися б сонцем."],
+    "en": [
+      "If they had moved to Spain, they would be enjoying the sun now.",
+      "If they'd moved to Spain, they'd be enjoying the sun now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді не залишив роботу, зараз мав би стабільний дохід."],
+    "en": [
+      "If I hadn’t quit my job then, I would have a stable income now.",
+      "If I hadn't quit my job then, I'd have a stable income now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби вона подала заявку, зараз мала б шанс виграти стипендію."],
+    "en": [
+      "If she had applied, she would have a chance to win the scholarship now.",
+      "If she'd applied, she'd have a chance to win the scholarship now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я тоді скористався братовою допомогою, зараз мав би успішний бізнес."],
+    "en": [
+      "If I had taken my brother’s help then, I would have a successful business now.",
+      "If I'd taken my brother’s help then, I'd have a successful business now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби вони залишилися вдома, зараз не мерзли б."],
+    "en": [
+      "If they had stayed at home, they wouldn’t be cold now.",
+      "If they'd stayed at home, they wouldn't be cold now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді не відмовився, зараз мав би цікаву пропозицію."],
+    "en": [
+      "If I hadn’t refused then, I would have an interesting offer now.",
+      "If I hadn't refused then, I'd have an interesting offer now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби проєкт був завершений вчасно, зараз усі були б задоволені."],
+    "en": [
+      "If the project had been completed on time, everyone would be satisfied now.",
+      "If the project'd been completed on time, everyone'd be satisfied now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби я тоді поїхав раніше, зараз був би вдома."],
+    "en": [
+      "If I had left earlier then, I would be home now.",
+      "If I'd left earlier then, I'd be home now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби я не був таким розсіяним, зараз не загубив би ключі."],
+    "en": [
+      "If I hadn’t been so careless, I wouldn’t have lost my keys now.",
+      "If I had not been so careless, I would not have lost my keys now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді не запізнився, зараз мав би роботу."],
+    "en": [
+      "If I hadn’t been late then, I would have a job now.",
+      "If I hadn't been late then, I'd have a job now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби він купив машину раніше, зараз їздив би на роботу."],
+    "en": [
+      "If he had bought a car earlier, he would drive to work now.",
+      "If he'd bought a car earlier, he'd drive to work now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби ми тоді не витратили всі гроші, зараз мали б заощадження."],
+    "en": [
+      "If we hadn’t spent all the money then, we would have savings now.",
+      "If we hadn't spent all the money then, we'd have savings now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я прийняв мамину допомогу, зараз почувався б краще."],
+    "en": [
+      "If I had accepted my mom’s help, I would feel better now.",
+      "If I'd accepted my mom’s help, I'd feel better now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби будинок був відремонтований раніше, зараз ми жили б там."],
+    "en": [
+      "If the house had been renovated earlier, we would live there now.",
+      "If the house'd been renovated earlier, we'd live there now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби вони залишилися в горах, зараз насолоджувалися б краєвидом."],
+    "en": [
+      "If they had stayed in the mountains, they would be enjoying the view now.",
+      "If they'd stayed in the mountains, they'd be enjoying the view now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби ми поїхали до Франції, зараз куштували б сир."],
+    "en": [
+      "If we had gone to France, we would be tasting cheese now.",
+      "If we'd gone to France, we'd be tasting cheese now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби я не був таким втомленим тоді, зараз почувався б краще."],
+    "en": [
+      "If I hadn’t been so tired then, I would feel better now.",
+      "If I hadn't been so tired then, I'd feel better now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вона тоді не відмовилась, зараз мала б шанс на успіх."],
+    "en": [
+      "If she hadn’t refused then, she would have a chance for success now.",
+      "If she hadn't refused then, she'd have a chance for success now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби я купив квиток, зараз сидів би у театрі."],
+    "en": [
+      "If I had bought the ticket, I would be sitting in the theatre now.",
+      "If I'd bought the ticket, I'd be sitting in the theatre now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби він тоді не переїхав, зараз працював би тут."],
+    "en": [
+      "If he hadn’t moved then, he would be working here now.",
+      "If he hadn't moved then, he'd be working here now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби вони тоді не посварилися, зараз були б друзями."],
+    "en": [
+      "If they hadn’t argued then, they would be friends now.",
+      "If they hadn't argued then, they'd be friends now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби лист був відправлений вчасно, зараз усі знали б новини."],
+    "en": [
+      "If the letter had been sent on time, everyone would know the news now.",
+      "If the letter'd been sent on time, everyone'd know the news now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я тоді почув поради вчителя, зараз говорив би краще."],
+    "en": [
+      "If I had listened to the teacher’s advice, I would speak better now.",
+      "If I'd listened to the teacher’s advice, I'd speak better now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби ми залишилися в парку, зараз грали б у футбол."],
+    "en": [
+      "If we had stayed in the park, we would be playing football now.",
+      "If we'd stayed in the park, we'd be playing football now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вона не змінила роботу, зараз була б керівником."],
+    "en": [
+      "If she hadn’t changed jobs, she would be a manager now.",
+      "If she hadn't changed jobs, she'd be a manager now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби він не був таким впертим, зараз мав би менше проблем."],
+    "en": [
+      "If he hadn’t been so stubborn, he would have fewer problems now.",
+      "If he hadn't been so stubborn, he'd have fewer problems now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби ми тоді не забули документи, зараз усе було б готово."],
+    "en": [
+      "If we hadn’t forgotten the documents then, everything would be ready now.",
+      "If we hadn't forgotten the documents then, everything'd be ready now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби я поїхав до Лондона, зараз мав би інший досвід."],
+    "en": [
+      "If I had gone to London, I would have a different experience now.",
+      "If I'd gone to London, I'd have a different experience now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби новини були опубліковані вчора, зараз усі обговорювали б це."],
+    "en": [
+      "If the news had been published yesterday, everyone would be discussing it now.",
+      "If the news'd been published yesterday, everyone'd be discussing it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби він знайшов роботу, зараз мав би стабільний дохід."],
+    "en": [
+      "If he had found a job, he would have a stable income now.",
+      "If he'd found a job, he'd have a stable income now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби ми тоді не поїхали, зараз не зустріли б цих людей."],
+    "en": [
+      "If we hadn’t left then, we wouldn’t have met those people now.",
+      "If we hadn't left then, we wouldn't have met those people now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби я тоді жив у Києві, зараз мав би більше друзів."],
+    "en": [
+      "If I had lived in Kyiv then, I would have more friends now.",
+      "If I'd lived in Kyiv then, I'd have more friends now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби я тоді прийшов вчасно, зараз не відчував би провини."],
+    "en": [
+      "If I had come on time then, I wouldn’t feel guilty now.",
+      "If I'd come on time then, I wouldn't feel guilty now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби я не був таким довірливим, зараз не мав би цих проблем."],
+    "en": [
+      "If I hadn’t been so trusting, I wouldn’t have these problems now.",
+      "If I had not been so trusting, I would not have these problems now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді більше вчився, зараз мав би кращу роботу."],
+    "en": [
+      "If I had studied more then, I would have a better job now.",
+      "If I'd studied more then, I'd have a better job now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби цей міст був збудований раніше, зараз ми користувалися б ним."],
+    "en": [
+      "If this bridge had been built earlier, we would be using it now.",
+      "If this bridge'd been built earlier, we'd be using it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби ми залишилися в Італії, зараз насолоджувалися б теплим кліматом."],
+    "en": [
+      "If we had stayed in Italy, we would be enjoying the warm climate now.",
+      "If we'd stayed in Italy, we'd be enjoying the warm climate now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я прислухався до татової поради, зараз не мав би проблем."],
+    "en": [
+      "If I had followed my dad’s advice, I wouldn’t have problems now.",
+      "If I'd followed my dad’s advice, I wouldn't have problems now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби він не був таким нетерплячим, зараз мав би кращі результати."],
+    "en": [
+      "If he hadn’t been so impatient, he would have better results now.",
+      "If he hadn't been so impatient, he'd have better results now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби вона прочитала книгу, зараз краще розуміла б сюжет."],
+    "en": [
+      "If she had read the book, she would understand the story better now.",
+      "If she'd read the book, she'd understand the story better now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді погодився, зараз був би частиною команди."],
+    "en": [
+      "If I had agreed then, I would be part of the team now.",
+      "If I'd agreed then, I'd be part of the team now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби ми поїхали до Португалії, зараз плавали б у морі."],
+    "en": [
+      "If we had gone to Portugal, we would be swimming in the sea now.",
+      "If we'd gone to Portugal, we'd be swimming in the sea now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби електрика була полагоджена вчора, зараз усе працювало б."],
+    "en": [
+      "If the electricity had been fixed yesterday, everything would be working now.",
+      "If the electricity'd been fixed yesterday, everything'd be working now.",
+      "If the electricity had been repaired yesterday, everything would be working now.",
+      "If the electricity'd been repaired yesterday, everything'd be working now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби я тоді вийшов раніше, зараз не запізнився б."],
+    "en": [
+      "If I had left earlier then, I wouldn’t be late now.",
+      "If I'd left earlier then, I wouldn't be late now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вони тоді не посперечалися, зараз були б у добрих стосунках."],
+    "en": [
+      "If they hadn’t argued then, they would be on good terms now.",
+      "If they hadn't argued then, they'd be on good terms now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби він отримав освіту, зараз мав би гарну кар’єру."],
+    "en": [
+      "If he had got an education, he would have a good career now.",
+      "If he'd got an education, he'd have a good career now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби ми жили ближче, зараз бачилися б частіше."],
+    "en": [
+      "If we had lived closer, we would see each other more often now.",
+      "If we'd lived closer, we'd see each other more often now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби я переїхав до Варшави, зараз мав би іншу роботу."],
+    "en": [
+      "If I had moved to Warsaw, I would have a different job now.",
+      "If I'd moved to Warsaw, I'd have a different job now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби цей проєкт був схвалений, зараз ми його реалізовували б."],
+    "en": [
+      "If this project had been approved, we would be implementing it now.",
+      "If this project'd been approved, we'd be implementing it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
+    "ua": ["Якби я тоді використав сестрину ідею, зараз мав би успіх."],
+    "en": [
+      "If I had used my sister’s idea, I would be successful now.",
+      "If I'd used my sister’s idea, I'd be successful now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби вона тоді прийшла на зустріч, зараз ми працювали б разом."],
+    "en": [
+      "If she had come to the meeting then, we would be working together now.",
+      "If she'd come to the meeting then, we'd be working together now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
+    "ua": ["Якби я не був таким впертим, зараз не шкодував би."],
+    "en": [
+      "If I hadn’t been so stubborn, I wouldn’t regret it now.",
+      "If I hadn't been so stubborn, I wouldn't regret it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
+    "ua": ["Якби ми тоді купили будинок, зараз не орендували б квартиру."],
+    "en": [
+      "If we had bought the house then, we wouldn’t be renting an apartment now.",
+      "If we'd bought the house then, we wouldn't be renting an apartment now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
+    "ua": ["Якби вона не запізнилася вчора, зараз не почувалася б винною."],
+    "en": [
+      "If she hadn’t been late yesterday, she wouldn’t feel guilty now.",
+      "If she hadn't been late yesterday, she wouldn't feel guilty now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді не переоцінив себе, зараз мав би кращий результат."],
+    "en": [
+      "If I hadn’t overestimated myself then, I would have a better result now.",
+      "If I hadn't overestimated myself then, I'd have a better result now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
+    "ua": ["Якби я тоді залишився вдома, зараз не хворів би."],
+    "en": [
+      "If I had stayed at home then, I wouldn’t be sick now.",
+      "If I'd stayed at home then, I wouldn't be sick now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
+    "ua": ["Якби вони поїхали до гір, зараз каталися б на лижах."],
+    "en": [
+      "If they had gone to the mountains, they would be skiing now.",
+      "If they'd gone to the mountains, they'd be skiing now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби звіт був підготовлений учора, зараз ми його обговорювали б."],
+    "en": [
+      "If the report had been prepared yesterday, we would be discussing it now.",
+      "If the report'd been prepared yesterday, we'd be discussing it now."
+    ]
+  },
+  {
+    "rules": ["MIXED_CONDITIONALS"],
+    "ua": ["Якби я тоді не поїхав, зараз шкодував би."],
+    "en": [
+      "If I hadn’t left then, I would regret it now.",
+      "If I hadn't left then, I'd regret it now."
+    ]
+  }
+] }

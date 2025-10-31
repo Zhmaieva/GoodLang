@@ -1,0 +1,633 @@
+{ "LET_MAKE_ALLOW": [
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q", "PREP_TIME"],
+    "ua": ["Батьки дозволяють дітям дивитися телевізор після 19:00 (use LET or MAKE or ALLOW)? Так, дозволяють."],
+    "en": ["Do parents allow children to watch TV after 7 p.m.? Yes, they do."]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Батьки змусили мене підписати угоду (use LET or MAKE or ALLOW)."],
+    "en": [
+      "My parents made me sign the agreement.",
+      "My parents made me sign an agreement."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Дозволь мені пояснити (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Let me explain.",
+      "Allow me to explain."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT", "ARTICLES", "PREP_PLACE"],
+    "ua": ["Вони не дозволяють приносити напої до бібліотеки (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They don’t allow people to bring drinks into the library.",
+      "They do not allow people to bring drinks into the library."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Вчитель змусив нас переписати роботу (use LET or MAKE or ALLOW)."],
+    "en": [
+      "The teacher made us rewrite the paper.",
+      "The teacher made us rewrite a paper."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "POSSESSIVE_ADJECTIVES", "PREP_TIME"],
+    "ua": ["Батьки дозволили йому залишатися надворі до десятої (use LET or MAKE or ALLOW)."],
+    "en": [
+      "His parents allowed him to stay out until ten.",
+      "His parents allowed him to stay outside until ten."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Не змушуй мене чекати (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Don’t make me wait.",
+      "Do not make me wait."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Чи дозволено тут робити фото (use LET or MAKE or ALLOW)? Так, дозволено."],
+    "en": ["Is it allowed to take photos here? Yes, it is."]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "TO_BE", "PASSIVE_VOICE_ALL_TENSES", "DEMONSTRATIVES"],
+    "ua": ["Мені не дозволено користуватися цим комп’ютером (use LET or MAKE or ALLOW)."],
+    "en": [
+      "I’m not allowed to use this computer.",
+      "I am not allowed to use this computer."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "TO_BE", "PASSIVE_VOICE_ALL_TENSES", "PREP_TIME"],
+    "ua": ["Нас змушували працювати по вихідних (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We were made to work on weekends.",
+      "We were made to work at weekends."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "TOO_ENOUGH"],
+    "ua": ["Вони дозволяють своїм дітям грати занадто довго на телефоні (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They allow their children to play on the phone for too long."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Вона не дозволяє мені користуватися її ноутбуком (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She doesn’t let me use her laptop.",
+      "She does not let me use her laptop."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": ["Мене змусили піти раніше, бо я погано себе почував (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They made me leave early because I didn’t feel well.",
+      "They made me leave early because I did not feel well."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Мені дозволили залишитися вдома вчора (use LET or MAKE or ALLOW)."],
+    "en": [
+      "I was allowed to stay home yesterday."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Його змусили вибачитися перед усіма (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was made to apologize to everyone."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q"],
+    "ua": ["Тебе хтось змушував це робити (use LET or MAKE or ALLOW)? Ні, я сам хотів."],
+    "en": [
+      "Did anyone make you do it? No, I wanted to."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Він дозволив мені скористатися його телефоном (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He let me use his phone."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо курити в цьому будинку (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow smoking in this house.",
+      "We do not allow smoking in this house."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Дозволь мені закінчити (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Let me finish.",
+      "Allow me to finish."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Мене не змусили брати участь у грі (use LET or MAKE or ALLOW)."],
+    "en": [
+      "I wasn’t made to take part in the game.",
+      "I was not made to take part in the game."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": ["Батьки часто дозволяють мені гуляти допізна (use LET or MAKE or ALLOW)."],
+    "en": [
+      "My parents often let me stay out late."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Твоя робота дозволяє тобі подорожувати (use LET or MAKE or ALLOW)? Так, іноді."],
+    "en": [
+      "Does your job allow you to travel? Yes, sometimes."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Його не змусили змінити рішення (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He wasn’t made to change his decision.",
+      "He was not made to change his decision."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Їм не дозволено паркуватися тут (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They aren’t allowed to park here.",
+      "They are not allowed to park here."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Вона змусила мене подзвонити йому (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She made me call him."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Вони не дозволяють дітям бігати в коридорі (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They don’t let the kids run in the corridor.",
+      "They do not let the kids run in the corridor."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Він дозволив нам скористатися його авто (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He allowed us to use his car."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Його батьки змусили його піти до лікаря (use LET or MAKE or ALLOW)."],
+    "en": [
+      "His parents made him go to the doctor."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Чи дозволено студентам залишатися після занять (use LET or MAKE or ALLOW)? Так, дозволено."],
+    "en": [
+      "Are students allowed to stay after class? Yes, they are."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Її змусили видалити публікацію (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She was made to delete the post."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Дозволь мені допомогти тобі (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Let me help you.",
+      "Allow me to help you."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Йому дозволили взяти додатковий вихідний (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was allowed to take an extra day off."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо їм користуватися цим програмним забезпеченням (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow them to use this software.",
+      "We do not allow them to use this software."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Її змусили прийняти рішення швидше (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She was made to make the decision faster."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Він завжди дозволяє своїй сестрі брати його книги (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He always lets his sister take his books."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Мене змусили переписати звіт (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They made me rewrite the report."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Вона не дозволяє нікому користуватися її телефоном (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She doesn’t allow anyone to use her phone.",
+      "She does not allow anyone to use her phone."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Мене не дозволили впустити до зали (use LET or MAKE or ALLOW)."],
+    "en": [
+      "I wasn’t allowed to enter the hall.",
+      "I was not allowed to enter the hall."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q"],
+    "ua": ["Вони дозволили тобі піти раніше (use LET or MAKE or ALLOW)? Так, дозволили."],
+    "en": [
+      "Did they let you leave early? Yes, they did."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Його змусили розповісти правду (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was made to tell the truth."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо фотографувати тут (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow taking photos here.",
+      "We do not allow taking photos here."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Дозволь мені спробувати ще раз (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Let me try again.",
+      "Allow me to try again."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Його батько змусив його допомогти у саду (use LET or MAKE or ALLOW)."],
+    "en": [
+      "His father made him help in the garden."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Вони часто дозволяють своїм дітям залишатися на вулиці до пізна (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They often let their children stay outside late."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Йому дозволено користуватися службовою машиною (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He is allowed to use the company car."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Чи дозволено відвідувачам користуватися Wi-Fi (use LET or MAKE or ALLOW)? Так, дозволено."],
+    "en": [
+      "Are visitors allowed to use Wi-Fi? Yes, they are."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо приносити їжу в аудиторію (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow food in the classroom.",
+      "We do not allow food in the classroom."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Вона дозволила мені скористатися її зошитом (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She let me use her notebook."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Його змусили знову пройти тест (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was made to take the test again."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q"],
+    "ua": ["Тебе хтось змусив піти звідти (use LET or MAKE or ALLOW)? Ні, я сам пішов."],
+    "en": [
+      "Did someone make you leave? No, I left myself."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Їм не дозволено залишатися після десятої (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They aren’t allowed to stay after ten.",
+      "They are not allowed to stay after ten."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Не змушуй мене повторювати це (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Don’t make me repeat it.",
+      "Do not make me repeat it."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Він дозволив мені піти додому раніше (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He let me go home early."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Батьки рідко дозволяють своїм дітям дивитися фільми пізно (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Parents rarely let their kids watch movies late."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо користуватися телефонами під час уроків (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow phones during lessons.",
+      "We do not allow phones during lessons."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Її змусили змінити тему виступу (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She was made to change the topic of her speech."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Мені дозволили скористатися інтернетом у бібліотеці (use LET or MAKE or ALLOW)."],
+    "en": [
+      "I was allowed to use the Internet in the library."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Дозволь мені сказати щось важливе (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Let me say something important.",
+      "Allow me to say something important."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Його змусили виконати обіцянку (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was made to keep his promise."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Вони не дозволяють фотографувати у музеї (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They don’t allow photography in the museum.",
+      "They do not allow photography in the museum."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Моя мама завжди дозволяє мені запрошувати друзів додому (use LET or MAKE or ALLOW)."],
+    "en": [
+      "My mom always lets me invite friends over.",
+      "My mother always allows me to invite friends over."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Вони не дозволяють залишати велосипеди біля входу (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They don’t allow bikes near the entrance.",
+      "They do not allow bikes near the entrance."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Мене змусили написати пояснення (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They made me write an explanation."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Дозволь мені висловити свою думку (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Let me express my opinion.",
+      "Allow me to express my opinion."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Йому дозволили залишитися ще на тиждень (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was allowed to stay for another week."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Мені не дозволено говорити про це публічно (use LET or MAKE or ALLOW)."],
+    "en": [
+      "I’m not allowed to talk about it publicly.",
+      "I am not allowed to talk about it publicly."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE", "NEGATION_DONT_DOESNT"],
+    "ua": ["Мене не змусили нічого підписувати (use LET or MAKE or ALLOW)."],
+    "en": [
+      "I wasn’t made to sign anything.",
+      "I was not made to sign anything."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q"],
+    "ua": ["Вони дозволили тобі скористатися їхнім авто (use LET or MAKE or ALLOW)? Так, дозволили."],
+    "en": [
+      "Did they let you use their car? Yes, they did."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Його змусили переписати свою заяву (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was made to rewrite his application."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо залишати сумки без нагляду (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow bags to be left unattended.",
+      "We do not allow bags to be left unattended."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Не змушуй мене повторювати одне й те саме (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Don’t make me repeat the same thing.",
+      "Do not make me repeat the same thing."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Наш офіс дозволяє працювати віддалено раз на тиждень (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Our office allows remote work once a week."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Її батьки дозволили їй піти на концерт (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Her parents let her go to the concert."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Йому не дозволено користуватися службовим комп’ютером (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He isn’t allowed to use the office computer.",
+      "He is not allowed to use the office computer."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q"],
+    "ua": ["Тебе змусили вибачитися (use LET or MAKE or ALLOW)? Так, змусили."],
+    "en": [
+      "Did they make you apologize? Yes, they did."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо відвідувачам заходити без бейджів (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow visitors to enter without badges.",
+      "We do not allow visitors to enter without badges."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Його змусили залишитися після уроків (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He was made to stay after class."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
+    "ua": ["Дозволь мені пояснити все спочатку (use LET or MAKE or ALLOW)."],
+    "en": [
+      "Let me explain everything from the beginning.",
+      "Allow me to explain everything from the beginning."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Мене змусили чекати пів години (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They made me wait for half an hour."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "TO_BE", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Йому дозволено працювати з дому (use LET or MAKE or ALLOW)."],
+    "en": [
+      "He is allowed to work from home."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Вона дозволила мені залишитися у неї на ніч (use LET or MAKE or ALLOW)."],
+    "en": [
+      "She allowed me to stay at her place overnight."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "NEGATION_DONT_DOESNT"],
+    "ua": ["Ми не дозволяємо використовувати цю кімнату без дозволу (use LET or MAKE or ALLOW)."],
+    "en": [
+      "We don’t allow using this room without permission.",
+      "We do not allow using this room without permission."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "YES_NO_Q"],
+    "ua": ["Чи дозволено тут курити (use LET or MAKE or ALLOW)? Ні, не дозволено."],
+    "en": [
+      "Is it allowed to smoke here? No, it isn’t.",
+      "Is it allowed to smoke here? No, it is not."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PAST_SIMPLE"],
+    "ua": ["Їх змусили прибрати кімнату перед вечіркою (use LET or MAKE or ALLOW)."],
+    "en": [
+      "They were made to clean the room before the party."
+    ]
+  },
+  {
+    "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
+    "ua": ["Компанія дозволяє працівникам працювати гнучко (use LET or MAKE or ALLOW)."],
+    "en": [
+      "The company allows employees to work flexibly."
+    ]
+  }
+] }

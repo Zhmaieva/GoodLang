@@ -1,0 +1,389 @@
+{ "USED_TO": [
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше жив у селі.",
+    "en": ["I used to live in the countryside."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона раніше щодня грала на фортепіано.",
+    "en": ["She used to play the piano every day."]
+  },
+  {
+    "rules": ["USED_TO", "ARTICLES"],
+    "ua": "У нас раніше був собака, коли я був малим.",
+    "en": ["We used to have a dog when I was little."]
+  },
+  {
+    "rules": ["USED_TO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Він раніше курив, але кинув минулого року.",
+    "en": ["He used to smoke, but he quit last year."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони раніше приїжджали до нас кожного літа.",
+    "en": ["They used to visit us every summer."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше носив брекети.",
+    "en": ["I used to wear braces."]
+  },
+  {
+    "rules": ["USED_TO", "BEFORE_AFTER_ING"],
+    "ua": "Вона раніше бігала вранці перед роботою.",
+    "en": ["She used to go jogging before work."]
+  },
+  {
+    "rules": ["USED_TO", "TIME_CLAUSE_FUTURE"],
+    "ua": "Ми раніше багато подорожували до пандемії.",
+    "en": ["We used to travel a lot before the pandemic."]
+  },
+  {
+    "rules": ["USED_TO", "ARTICLES"],
+    "ua": "Він раніше працював кухарем.",
+    "en": ["He used to work as a chef."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_PLACE"],
+    "ua": "Вони раніше жили по сусідству.",
+    "en": ["They used to live next door."]
+  },
+
+  {
+    "rules": ["USED_TO", "TOO_VERY"],
+    "ua": "Я раніше боявся павуків.",
+    "en": ["I used to be afraid of spiders."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше вірила у фей.",
+    "en": ["She used to believe in fairies."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_PLACE"],
+    "ua": "Ми раніше їздили до школи на велосипедах.",
+    "en": ["We used to ride bikes to school."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Він раніше грав у футбол на вихідних.",
+    "en": ["He used to play football on weekends."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вони раніше робили свої меблі самі.",
+    "en": ["They used to make their own furniture."]
+  },
+
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Я раніше дивився мультики щоранку.",
+    "en": ["I used to watch cartoons every morning."]
+  },
+  {
+    "rules": ["USED_TO", "SIMPLE_ADJ"],
+    "ua": "Вона раніше мала довге біляве волосся.",
+    "en": ["She used to have long blonde hair."]
+  },
+  {
+    "rules": ["USED_TO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ми раніше постійно сварилися.",
+    "en": ["We used to argue all the time."]
+  },
+  {
+    "rules": ["USED_TO", "TOO_ENOUGH"],
+    "ua": "Він раніше пив надто багато кави.",
+    "en": ["He used to drink too much coffee."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вони раніше разом ходили на риболовлю.",
+    "en": ["They used to go fishing together."]
+  },
+
+  {
+    "rules": ["USED_TO", "SIMPLE_ADJ"],
+    "ua": "Я раніше соромився незнайомців.",
+    "en": ["I used to be shy around strangers."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше колекціонувала марки.",
+    "en": ["She used to collect stamps."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Ми раніше засиджувалися допізна по п’ятницях.",
+    "en": ["We used to stay up late on Fridays."]
+  },
+  {
+    "rules": ["USED_TO", "LIKE_LOVE_HATE_ING"],
+    "ua": "Він раніше любив фільми жахів.",
+    "en": ["He used to love horror movies."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вони раніше святкували кожне свято разом з нами.",
+    "en": ["They used to celebrate every holiday with us."]
+  },
+  {
+    "rules": ["USED_TO", "LIKE_LOVE_HATE_ING"],
+    "ua": "Я раніше ненавидів овочі.",
+    "en": ["I used to hate vegetables."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше бігала марафони.",
+    "en": ["She used to run marathons."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_PLACE"],
+    "ua": "Ми раніше зустрічалися в парку після школи.",
+    "en": ["We used to meet at the park after school."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Він раніше допомагав татові в гаражі.",
+    "en": ["He used to help his dad in the garage."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони раніше щороку їздили в кемпінг.",
+    "en": ["They used to go camping every year."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше жив з дідусем і бабусею.",
+    "en": ["I used to live with my grandparents."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше була танцівницею.",
+    "en": ["She used to be a dancer."]
+  },
+  {
+    "rules": ["USED_TO", "ARTICLES"],
+    "ua": "У нас раніше був великий сад.",
+    "en": ["We used to have a big garden."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Він раніше співав у гурті.",
+    "en": ["He used to sing in a band."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони раніше щоранку купували свіжий хліб.",
+    "en": ["They used to buy fresh bread every morning."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше знав усіх у цьому районі.",
+    "en": ["I used to know everyone in this neighborhood."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше вивчала іспанську.",
+    "en": ["She used to study Spanish."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Ми раніше надсилали листи замість електронних.",
+    "en": ["We used to send letters instead of emails."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Він раніше часто потрапляв у халепу.",
+    "en": ["He used to get into trouble a lot."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вони раніше тримали курей.",
+    "en": ["They used to keep chickens."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше читав комікси.",
+    "en": ["I used to read comic books."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше носила окуляри.",
+    "en": ["She used to wear glasses."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_PLACE"],
+    "ua": "Ми раніше їздили на роботу автобусом.",
+    "en": ["We used to take the bus to work."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Він раніше рано лягав спати.",
+    "en": ["He used to go to bed early."]
+  },
+  {
+    "rules": ["USED_TO", "ARTICLES"],
+    "ua": "Вони раніше мали книжкову крамницю.",
+    "en": ["They used to own a bookstore."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше мав іграшкового робота, якого дуже любив.",
+    "en": ["I used to have a toy robot I loved."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше весь час малювала.",
+    "en": ["She used to draw all the time."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Ми раніше танцювали разом щоп’ятниці.",
+    "en": ["We used to dance together every Friday."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Він раніше легко губився.",
+    "en": ["He used to get lost easily."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вони раніше сміялися з усього.",
+    "en": ["They used to laugh at everything."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_PLACE"],
+    "ua": "Я раніше жив біля пляжу.",
+    "en": ["I used to live near the beach."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_PLACE"],
+    "ua": "Вона раніше працювала в лікарні.",
+    "en": ["She used to work in a hospital."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_TIME"],
+    "ua": "Ми раніше грали в шахи після вечері.",
+    "en": ["We used to play chess after dinner."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Він раніше писав вірші.",
+    "en": ["He used to write poetry."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_TIME"],
+    "ua": "Вони раніше їздили кататися на лижах взимку.",
+    "en": ["They used to go skiing in winter."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше носив шкільну форму.",
+    "en": ["I used to wear a school uniform."]
+  },
+  {
+    "rules": ["USED_TO", "SIMPLE_ADJ"],
+    "ua": "Вона раніше була дуже змагальною.",
+    "en": ["She used to be very competitive."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_TIME"],
+    "ua": "Ми раніше дивилися на зорі вночі.",
+    "en": ["We used to watch the stars at night."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Він раніше годинами грав у відеоігри.",
+    "en": ["He used to play video games for hours."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вони раніше влаштовували величезні вечірки.",
+    "en": ["They used to throw huge parties."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше їв пластівці на сніданок.",
+    "en": ["I used to eat cereal for breakfast."]
+  },
+  {
+    "rules": ["USED_TO", "SIMPLE_ADJ"],
+    "ua": "Вона раніше водила маленьку машину.",
+    "en": ["She used to drive a tiny car."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_PLACE"],
+    "ua": "Ми раніше зависали в торговому центрі.",
+    "en": ["We used to hang out at the mall."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_TIME"],
+    "ua": "Він раніше стрибав у озера влітку.",
+    "en": ["He used to jump into lakes in summer."]
+  },
+  {
+    "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони раніше ходили танцювати на вихідних.",
+    "en": ["They used to go dancing on weekends."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше вів щоденник.",
+    "en": ["I used to keep a diary."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше слухала гучну музику.",
+    "en": ["She used to listen to loud music."]
+  },
+  {
+    "rules": ["USED_TO", "PREP_TIME"],
+    "ua": "Ми раніше пили чай щодня по обіді.",
+    "en": ["We used to drink tea every afternoon."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Він раніше ганявся за метеликами у дворі.",
+    "en": ["He used to chase butterflies in the yard."]
+  },
+  {
+    "rules": ["USED_TO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Вони раніше сперечалися про все.",
+    "en": ["They used to argue about everything."]
+  },
+
+  {
+    "rules": ["USED_TO"],
+    "ua": "Я раніше пік печиво з мамою.",
+    "en": ["I used to bake cookies with my mom."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вона раніше відвідувала уроки карате.",
+    "en": ["She used to take karate lessons."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Ми раніше спали на двоярусному ліжку.",
+    "en": ["We used to sleep in a bunk bed."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Він раніше пропускав сніданок.",
+    "en": ["He used to skip breakfast."]
+  },
+  {
+    "rules": ["USED_TO"],
+    "ua": "Вони раніше дивилися футбол разом.",
+    "en": ["They used to watch football together."]
+  },
+] }

@@ -1,0 +1,938 @@
+{ "CAUSATIVE_HAVE_GET": [
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Мені пофарбували кімнату (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had my room painted.",
+      "I got my room painted."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Вона завжди робить манікюр у салоні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She has her nails done at the salon.",
+      "She gets her nails done at the salon."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Він учора відремонтував свою машину (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had his car repaired yesterday.",
+      "He got his car repaired yesterday."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
+    "ua": ["Ми зараз робимо ремонт у квартирі (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We are having our apartment renovated.",
+      "We are getting our apartment renovated."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Завтра я зроблю нову стрижку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my hair cut tomorrow.",
+      "I’m getting my hair cut tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Вона зробила так, щоб лист надіслали вчасно (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had the letter sent on time.",
+      "She got the letter sent on time."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Він щоразу миє машину в автомийці (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his car washed every time.",
+      "He gets his car washed every time."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Я вже встановив нові вікна (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’ve had new windows installed.",
+      "I’ve got new windows installed."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Ми зробили так, щоб документи підписали вчора (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had the documents signed yesterday.",
+      "We got the documents signed yesterday."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Бухгалтер готує мені податки щороку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I have my taxes done by an accountant every year.",
+      "I get my taxes done by an accountant every year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Я відремонтував телефон у сервісі (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had my phone repaired at the service center.",
+      "I got my phone repaired at the service center."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Вона завжди фарбує волосся у перукаря (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She always has her hair dyed at the hairdresser’s.",
+      "She always gets her hair dyed at the hairdresser’s."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Ми встановили нові двері минулого тижня (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had new doors installed last week.",
+      "We got new doors installed last week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Я вже почистив килим (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’ve had my carpet cleaned.",
+      "I’ve got my carpet cleaned.",
+      "I have had my carpet cleaned.",
+      "I have got my carpet cleaned."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Завтра я зроблю зуби в стоматолога (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my teeth fixed tomorrow.",
+      "I’m getting my teeth fixed tomorrow.",
+      "I am having my teeth fixed tomorrow.",
+      "I am getting my teeth fixed tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Він зробив фото для паспорта (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had his passport photo taken.",
+      "He got his passport photo taken."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Ми щомісяця миємо вікна (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We have our windows cleaned every month.",
+      "We get our windows cleaned every month."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Вона зробила нігті перед святом (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had her nails done before the holiday.",
+      "She got her nails done before the holiday."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Я мию машину щотижня (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I have my car washed every week.",
+      "I get my car washed every week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Ми зробили весільні фото у студії (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had our wedding photos taken in a studio.",
+      "We got our wedding photos taken in a studio."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Я зроблю ремонт у ванній наступного тижня (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my bathroom renovated next week.",
+      "I’m getting my bathroom renovated next week.",
+      "I am having my bathroom renovated next week.",
+      "I am getting my bathroom renovated next week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Він ремонтує взуття у майстра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his shoes repaired by a cobbler.",
+      "He gets his shoes repaired by a cobbler.",
+      "He has his shoes repaired at the cobbler’s.",
+      "He gets his shoes repaired at the cobbler’s."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Вона замінила екран на телефоні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had her phone screen replaced.",
+      "She got her phone screen replaced."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Ми вже почистили кондиціонер (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’ve had our air conditioner cleaned.",
+      "We’ve got our air conditioner cleaned.",
+      "We have had our air conditioner cleaned.",
+      "We have got our air conditioner cleaned."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Вони щороку фарбують будинок (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "They have their house painted every year.",
+      "They get their house painted every year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Я сфотографувався для водійських прав (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had my photo taken for my driver’s license.",
+      "I got my photo taken for my driver’s license."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
+    "ua": ["Вона зараз чистить зуби у стоматолога (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She’s having her teeth cleaned at the dentist’s.",
+      "She’s getting her teeth cleaned at the dentist’s.",
+      "She is having her teeth cleaned at the dentist’s.",
+      "She is getting her teeth cleaned at the dentist’s."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Ми зробимо ключі завтра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having new keys made tomorrow.",
+      "We’re getting new keys made tomorrow.",
+      "We are having new keys made tomorrow.",
+      "We are getting new keys made tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Він стриже волосся раз на два тижні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his hair cut every two weeks.",
+      "He gets his hair cut every two weeks."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Ми перевірили машину перед поїздкою (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had our car checked before the trip.",
+      "We got our car checked before the trip."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Я вже замінив замки на дверях (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’ve had the locks changed on my door.",
+      "I’ve got the locks changed on my door.",
+      "I have had the locks changed on my door.",
+      "I have got the locks changed on my door."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Вона вставила нові зуби минулого місяця (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had new teeth fitted last month.",
+      "She got new teeth fitted last month."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Ми перевіряємо систему опалення щоосені (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We have our heating system checked every autumn.",
+      "We get our heating system checked every autumn."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Він поміняв шини на машині вчора (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had his tires changed yesterday.",
+      "He got his tires changed yesterday."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Я зроблю генеральне прибирання будинку наступного тижня (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my house deep cleaned next week.",
+      "I’m getting my house deep cleaned next week.",
+      "I am having my house deep cleaned next week.",
+      "I am getting my house deep cleaned next week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Я відремонтував свій годинник (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had my watch repaired.",
+      "I got my watch repaired."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Вона завжди прибирає квартиру за допомогою клінінгової компанії (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She has her apartment cleaned by a cleaning company.",
+      "She gets her apartment cleaned by a cleaning company."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
+    "ua": ["Ми зараз встановлюємо новий бойлер (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having a new boiler installed.",
+      "We’re getting a new boiler installed.",
+      "We are having a new boiler installed.",
+      "We are getting a new boiler installed."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Я зроблю нові окуляри наступного тижня (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having new glasses made next week.",
+      "I’m getting new glasses made next week.",
+      "I am having new glasses made next week.",
+      "I am getting new glasses made next week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Він поміняв батарею в ноутбуці (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had the battery replaced in his laptop.",
+      "He got the battery replaced in his laptop."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Я вже перевстановив програму (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’ve had the software reinstalled.",
+      "I’ve got the software reinstalled.",
+      "I have had the software reinstalled.",
+      "I have got the software reinstalled."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Вона регулярно чистить килими (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She has her carpets cleaned regularly.",
+      "She gets her carpets cleaned regularly."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Ми поміняли дах на будинку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had the roof replaced.",
+      "We got the roof replaced."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Завтра я відполірую машину (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my car polished tomorrow.",
+      "I’m getting my car polished tomorrow.",
+      "I am having my car polished tomorrow.",
+      "I am getting my car polished tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Він щоразу ремонтує годинник у того самого майстра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his watches fixed by the same repairman.",
+      "He gets his watches fixed by the same repairman."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Вона почистила штори минулого місяця (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had her curtains cleaned last month.",
+      "She got her curtains cleaned last month."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Ми зробили ключі вчора (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had new keys made yesterday.",
+      "We got new keys made yesterday."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Він уже встановив нову антену (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He’s had a new antenna installed.",
+      "He’s got a new antenna installed.",
+      "He has had a new antenna installed.",
+      "He has got a new antenna installed."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
+    "ua": ["Ми зараз фарбуємо офіс (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having the office painted.",
+      "We’re getting the office painted.",
+      "We are having the office painted.",
+      "We are getting the office painted."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Я зроблю собі новий костюм на замовлення (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having a new suit made to order.",
+      "I’m getting a new suit made to order.",
+      "I am having a new suit made to order.",
+      "I am getting a new suit made to order."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Вона поміняла скло у вікні після бурі (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had the window glass replaced after the storm.",
+      "She got the window glass replaced after the storm."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Ми перевіряємо електрику щороку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We have our electrical system checked every year.",
+      "We get our electrical system checked every year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Я замінив замки після переїзду (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had the locks changed after I moved.",
+      "I got the locks changed after I moved."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
+    "ua": ["Він зараз лагодить комп’ютер (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He’s having his computer repaired.",
+      "He’s getting his computer repaired.",
+      "He is having his computer repaired.",
+      "He is getting his computer repaired."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Ми зробили новий паркет у вітальні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had new flooring installed in the living room.",
+      "We got new flooring installed in the living room."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Завтра я відправлю машину на сервіс (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my car serviced tomorrow.",
+      "I’m getting my car serviced tomorrow.",
+      "I am having my car serviced tomorrow.",
+      "I am getting my car serviced tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Вона чистить пальто у хімчистці (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She has her coat cleaned at the dry cleaner’s.",
+      "She gets her coat cleaned at the dry cleaner’s."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Я замовив установку нової сигналізації (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had a new alarm system installed.",
+      "I got a new alarm system installed."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Ми вже полагодили дах після дощу (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’ve had the roof fixed after the rain.",
+      "We’ve got the roof fixed after the rain.",
+      "We have had the roof fixed after the rain.",
+      "We have got the roof fixed after the rain."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Я відремонтував велосипед після падіння (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had my bike repaired after the fall.",
+      "I got my bike repaired after the fall."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Вона перевіряє зір у лікаря щороку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She has her eyes checked every year.",
+      "She gets her eyes checked every year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Ми зробимо нові жалюзі завтра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having new blinds installed tomorrow.",
+      "We’re getting new blinds installed tomorrow.",
+      "We are having new blinds installed tomorrow.",
+      "We are getting new blinds installed tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Він вставив нову батарею в годинник (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had a new battery put in his watch.",
+      "He got a new battery put in his watch."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Я вже зробив копії документів (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’ve had my documents copied.",
+      "I’ve got my documents copied.",
+      "I have had my documents copied.",
+      "I have got my documents copied."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
+    "ua": ["Ми зараз ремонтуємо дах (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having the roof repaired.",
+      "We’re getting the roof repaired.",
+      "We are having the roof repaired.",
+      "We are getting the roof repaired."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Завтра я зроблю нові штори (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having new curtains made tomorrow.",
+      "I’m getting new curtains made tomorrow.",
+      "I am having new curtains made tomorrow.",
+      "I am getting new curtains made tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Він миє килими раз на пів року (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his carpets cleaned twice a year.",
+      "He gets his carpets cleaned twice a year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Вона вставила нові вікна минулої весни (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had new windows fitted last spring.",
+      "She got new windows fitted last spring."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Ми вже замінили труби у ванній (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’ve had the pipes replaced in the bathroom.",
+      "We’ve got the pipes replaced in the bathroom.",
+      "We have had the pipes replaced in the bathroom.",
+      "We have got the pipes replaced in the bathroom."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Я регулярно стрижу волосся у свого перукаря (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I have my hair cut by my hairdresser regularly.",
+      "I get my hair cut by my hairdresser regularly."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Ми встановимо кондиціонер у вітальні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having an air conditioner installed in the living room.",
+      "We’re getting an air conditioner installed in the living room.",
+      "We are having an air conditioner installed in the living room.",
+      "We are getting an air conditioner installed in the living room."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Він полагодив телевізор учора (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had his TV repaired yesterday.",
+      "He got his TV repaired yesterday."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
+    "ua": ["Вона зараз встановлює нові жалюзі (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She’s having new blinds put up.",
+      "She’s getting new blinds put up.",
+      "She is having new blinds put up.",
+      "She is getting new blinds put up."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Ми чистимо меблі раз на рік (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We have our furniture cleaned once a year.",
+      "We get our furniture cleaned once a year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Я перевстановив операційну систему минулого тижня (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I had my operating system reinstalled last week.",
+      "I got my operating system reinstalled last week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Завтра я зроблю новий паспорт (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my passport renewed tomorrow.",
+      "I’m getting my passport renewed tomorrow.",
+      "I am having my passport renewed tomorrow.",
+      "I am getting my passport renewed tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "ua": ["Він лагодить годинник у майстерні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his watch repaired at the workshop.",
+      "He gets his watch repaired at the workshop."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT"],
+    "ua": ["Ми вже встановили новий паркет (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’ve had new parquet installed.",
+      "We’ve got new parquet installed.",
+      "We have had new parquet installed.",
+      "We have got new parquet installed."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Вона почистила диван у клінінговій компанії (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had her sofa cleaned by a cleaning company.",
+      "She got her sofa cleaned by a cleaning company."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE", "PREP_DIRECTION"],
+    "ua": ["Я завжди перевіряю зуби у того самого стоматолога (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I have my teeth checked by the same dentist.",
+      "I get my teeth checked by the same dentist."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": ["Ми відремонтуємо дах наступного місяця (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having the roof repaired next month.",
+      "We’re getting the roof repaired next month.",
+      "We are having the roof repaired next month.",
+      "We are getting the roof repaired next month."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE"],
+    "ua": ["Він вставив нові фари у свою машину (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had new headlights fitted in his car.",
+      "He got new headlights fitted in his car."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Я перевіряю комп’ютер на віруси щомісяця (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I have my computer checked for viruses every month.",
+      "I get my computer checked for viruses every month."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": ["Вона зробила макіяж у візажиста (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had her makeup done by a makeup artist.",
+      "She got her makeup done by a makeup artist."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": ["Ми вже замінили старі жалюзі (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’ve had the old blinds replaced.",
+      "We’ve got the old blinds replaced.",
+      "We have had the old blinds replaced.",
+      "We have got the old blinds replaced."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES", "PREP_TIME"],
+    "ua": ["Я зроблю новий сайт для бізнесу наступного місяця (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having a new website built for my business next month.",
+      "I’m getting a new website built for my business next month.",
+      "I am having a new website built for my business next month.",
+      "I am getting a new website built for my business next month."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": ["Він регулярно чистить взуття у майстра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his shoes polished by a shoemaker.",
+      "He gets his shoes polished by a shoemaker."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES", "PREP_TIME"],
+    "ua": ["Ми вставили нові замки після крадіжки (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had new locks installed after the burglary.",
+      "We got new locks installed after the burglary."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Я зараз лагоджу свій телефон (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my phone fixed right now.",
+      "I’m getting my phone fixed right now.",
+      "I am having my phone fixed right now.",
+      "I am getting my phone fixed right now."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Вона фарбує нігті раз на тиждень (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She has her nails painted once a week.",
+      "She gets her nails painted once a week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Ми завтра зробимо нову підлогу (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having new flooring laid tomorrow.",
+      "We’re getting new flooring laid tomorrow.",
+      "We are having new flooring laid tomorrow.",
+      "We are getting new flooring laid tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": ["Він сфотографувався для візи (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had his photo taken for the visa.",
+      "He got his photo taken for the visa."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET"],
+    "ua": ["Я вже встановив антивірус (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’ve had antivirus software installed.",
+      "I’ve got antivirus software installed.",
+      "I have had antivirus software installed.",
+      "I have got antivirus software installed."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET"],
+    "ua": ["Вона завжди готує звіти з допомогою помічника (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She has her reports prepared by her assistant.",
+      "She gets her reports prepared by her assistant."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": ["Ми зробили фото для нового каталогу (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had our photos taken for the new catalogue.",
+      "We got our photos taken for the new catalogue."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": ["Вони зараз миють фасад будинку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "They’re having the house facade cleaned.",
+      "They’re getting the house facade cleaned.",
+      "They are having the house facade cleaned.",
+      "They are getting the house facade cleaned."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Я зроблю стрижку в п’ятницю (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’m having my hair cut on Friday.",
+      "I’m getting my hair cut on Friday.",
+      "I am having my hair cut on Friday.",
+      "I am getting my hair cut on Friday."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Ми щороку перевіряємо кондиціонер (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We have our air conditioner checked every year.",
+      "We get our air conditioner checked every year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_PLACE"],
+    "ua": ["Він замінив гальма в машині (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He had the brakes replaced in his car.",
+      "He got the brakes replaced in his car."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": ["Ми вже полагодили кран на кухні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’ve had the kitchen tap fixed.",
+      "We’ve got the kitchen tap fixed.",
+      "We have had the kitchen tap fixed.",
+      "We have got the kitchen tap fixed."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Вона зробить нові фотографії завтра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She’s having new photos taken tomorrow.",
+      "She’s getting new photos taken tomorrow.",
+      "She is having new photos taken tomorrow.",
+      "She is getting new photos taken tomorrow."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_PLACE", "ARTICLES", "POSSESSIVE_S"],
+    "ua": ["Я регулярно чищу пальто у хімчистці (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I have my coat cleaned at the dry cleaner’s regularly.",
+      "I get my coat cleaned at the dry cleaner’s regularly."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES", "PREP_TIME"],
+    "ua": ["Ми зробили капітальний ремонт офісу минулого року (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We had the office fully renovated last year.",
+      "We got the office fully renovated last year."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_PLACE"],
+    "ua": ["Я вже перевстановив систему на комп’ютері (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "I’ve had my system reinstalled on my computer.",
+      "I’ve got my system reinstalled on my computer.",
+      "I have had my system reinstalled on my computer.",
+      "I have got my system reinstalled on my computer."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
+    "ua": ["Ми зробимо ремонт у спальні наступного місяця (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "We’re having our bedroom renovated next month.",
+      "We’re getting our bedroom renovated next month.",
+      "We are having our bedroom renovated next month.",
+      "We are getting our bedroom renovated next month."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_PLACE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Він щотижня миє машину на автомийці (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "He has his car washed at the car wash every week.",
+      "He gets his car washed at the car wash every week."
+    ]
+  },
+  {
+    "rules": ["CAUSATIVE_HAVE_GET", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Вона поставила новий замок на двері (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
+    "en": [
+      "She had a new lock fitted on the door.",
+      "She got a new lock fitted on the door."
+    ]
+  }
+] }

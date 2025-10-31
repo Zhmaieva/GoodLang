@@ -1019,15 +1019,6 @@
         ]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "В радіо є якась музика.",
-        "en": [
-            "There is some music on the radio.",
-            "There’s some music on the radio.",
-            "There is a little music on the radio."
-        ]
-    },
-    {
         "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
         "ua": "Є трохи зеленого чаю у чашці.",
         "en": [

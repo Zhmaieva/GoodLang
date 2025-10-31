@@ -1,0 +1,427 @@
+{ "GERUND_VS_INFINITIVE": [
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "I enjoy reading before bed.",
+    "ua": "Я отримую задоволення від читання перед сном."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "LIKE_LOVE_HATE_ING", "PREP_PLACE", "ARTICLES"],
+    "en": "She loves dancing in the rain.",
+    "ua": "Вона обожнює танцювати під дощем."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "They finished cleaning the kitchen.",
+    "ua": "Вони закінчили прибирати кухню."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "He avoided answering my question.",
+    "ua": "Він уникав відповіді на моє запитання."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We suggested going out for dinner.",
+    "ua": "Ми запропонували піти повечеряти."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "I don’t mind waiting a few minutes.",
+    "ua": "Я не проти почекати кілька хвилин."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "She stopped smoking last year.",
+    "ua": "Вона кинула палити минулого року."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They admitted cheating on the test.",
+    "ua": "Вони зізналися, що списували на тесті."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "He denied taking the money.",
+    "ua": "Він заперечував, що взяв гроші."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_PLACE", "ARTICLES"],
+    "en": "We discussed moving to another city.",
+    "ua": "Ми обговорювали переїзд до іншого міста."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "POSSESSIVE_ADJECTIVES"],
+    "en": "I miss spending time with my family.",
+    "ua": "Я сумую за спільним часом із родиною."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_PLACE", "ARTICLES"],
+    "en": "She imagined living by the sea.",
+    "ua": "Вона уявляла життя біля моря."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They delayed making the decision.",
+    "ua": "Вони відклали ухвалення рішення."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "He considered buying a new car.",
+    "ua": "Він розмірковував про купівлю нового автомобіля."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We enjoyed playing board games.",
+    "ua": "Ми насолоджувалися грою в настільні ігри."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "TOO_ENOUGH"],
+    "en": "I can’t stand being late.",
+    "ua": "Я терпіти не можу запізнюватися."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "POSSESSIVE_ADJECTIVES"],
+    "en": "She finished doing her homework.",
+    "ua": "Вона закінчила робити своє домашнє завдання."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They avoided talking about politics.",
+    "ua": "Вони уникали розмов про політику."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "He mentioned seeing her yesterday.",
+    "ua": "Він згадав, що бачив її вчора."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We practiced speaking English.",
+    "ua": "Ми практикували розмову англійською."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_PLACE", "ARTICLES"],
+    "en": "I suggested meeting at the park.",
+    "ua": "Я запропонував зустрітися в парку."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "She admitted breaking the window.",
+    "ua": "Вона зізналася, що розбила вікно."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "They continued working all night.",
+    "ua": "Вони працювали всю ніч безперервно."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "He dislikes waking up early.",
+    "ua": "Він не любить вставати рано."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We appreciate being invited.",
+    "ua": "Ми цінуємо, що нас запросили."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "I want to learn Spanish.",
+    "ua": "Я хочу вивчити іспанську мову."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "She needs to buy a new laptop.",
+    "ua": "Їй потрібно купити новий ноутбук."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_PLACE"],
+    "en": "They decided to move abroad.",
+    "ua": "Вони вирішили переїхати за кордон."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "He promised to call me later.",
+    "ua": "Він пообіцяв подзвонити мені пізніше."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We hope to see you soon.",
+    "ua": "Ми сподіваємося побачити тебе скоро."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "I forgot to lock the door.",
+    "ua": "Я забув замкнути двері."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "She agreed to help us.",
+    "ua": "Вона погодилася допомогти нам."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They offered to give me a ride.",
+    "ua": "Вони запропонували підвезти мене."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "He refused to answer the question.",
+    "ua": "Він відмовився відповідати на запитання."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "We plan to travel next summer.",
+    "ua": "Ми плануємо подорожувати наступного літа."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "TIME_CLAUSE_FUTURE"],
+    "en": "I expect to get the results soon.",
+    "ua": "Я очікую отримати результати незабаром."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "She learned to drive when she was 18.",
+    "ua": "Вона навчилася водити, коли їй було 18."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They managed to solve the problem.",
+    "ua": "Вони змогли розв’язати проблему."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "He pretended to be asleep.",
+    "ua": "Він прикинувся, що спить."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We can’t afford to buy a car now.",
+    "ua": "Ми не можемо дозволити собі купити машину зараз."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "I need to finish this report.",
+    "ua": "Мені потрібно закінчити цей звіт."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "She decided to stay home.",
+    "ua": "Вона вирішила залишитися вдома."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They hope to meet new people.",
+    "ua": "Вони сподіваються познайомитися з новими людьми."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "ARTICLES"],
+    "en": "He wanted to become a doctor.",
+    "ua": "Він хотів стати лікарем."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We agreed to share the bill.",
+    "ua": "Ми погодилися розділити рахунок."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "I promised to tell the truth.",
+    "ua": "Я пообіцяв говорити правду."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "She failed to notice the mistake.",
+    "ua": "Вона не помітила помилки."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "They arranged to meet at noon.",
+    "ua": "Вони домовилися зустрітися опівдні."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "He offered to cook dinner.",
+    "ua": "Він запропонував приготувати вечерю."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "POSSESSIVE_ADJECTIVES"],
+    "en": "We planned to visit our grandparents.",
+    "ua": "Ми планували відвідати наших дідусів і бабусь."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s easy to learn English.",
+    "ua": "Легко вивчати англійську."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s hard to wake up early.",
+    "ua": "Важко вставати рано."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s important to be honest.",
+    "ua": "Важливо бути чесним."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s nice to see you again.",
+    "ua": "Приємно знову тебе бачити."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_PLACE"],
+    "en": "It’s fun to play with friends.",
+    "ua": "Весело гратися з друзями."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It was difficult to hear anything.",
+    "ua": "Було важко щось почути."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_PLACE"],
+    "en": "It’s dangerous to swim here.",
+    "ua": "Небезпечно плавати тут."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "TOO_ENOUGH_SO_SUCH"],
+    "en": "It’s not safe to drive that fast.",
+    "ua": "Небезпечно їхати так швидко."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s strange to see him so quiet.",
+    "ua": "Дивно бачити його таким тихим."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "It’s impossible to finish on time.",
+    "ua": "Неможливо закінчити вчасно."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It was wonderful to meet you.",
+    "ua": "Було чудово зустріти тебе."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s boring to stay at home all day.",
+    "ua": "Нудно сидіти вдома весь день."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "COMPARATIVES"],
+    "en": "It’s better to be early than late.",
+    "ua": "Краще прийти раніше, ніж запізнитися."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s rude to interrupt people.",
+    "ua": "Грубо перебивати людей."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s polite to say thank you.",
+    "ua": "Ввічливо сказати «дякую»."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "I want you to listen carefully.",
+    "ua": "Я хочу, щоб ти уважно слухав."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_PLACE"],
+    "en": "She told me to wait outside.",
+    "ua": "Вона сказала мені почекати зовні."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They asked him to help.",
+    "ua": "Вони попросили його допомогти."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "He advised me to rest more.",
+    "ua": "Він порадив мені більше відпочивати."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We invited them to join us.",
+    "ua": "Ми запросили їх приєднатися до нас."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "I expected her to arrive earlier.",
+    "ua": "Я очікував, що вона приїде раніше."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "She reminded me to call my mom.",
+    "ua": "Вона нагадала мені подзвонити мамі."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "TOO_ENOUGH"],
+    "en": "They encouraged me to try again.",
+    "ua": "Вони підбадьорили мене спробувати ще раз."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "NEGATION_DONT_DOESNT"],
+    "en": "He warned us not to touch it.",
+    "ua": "Він попередив нас не чіпати це."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We allowed the kids to stay up late.",
+    "ua": "Ми дозволили дітям не лягати спати допізна."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "I need you to sign here.",
+    "ua": "Мені потрібно, щоб ти підписав тут."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "She taught me to drive.",
+    "ua": "Вона навчила мене водити."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "They told us to be quiet.",
+    "ua": "Вони сказали нам бути тихими."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "He persuaded her to come.",
+    "ua": "Він переконав її прийти."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "We helped them to move.",
+    "ua": "Ми допомогли їм переїхати."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s no use crying over spilled milk.",
+    "ua": "Немає сенсу плакати над пролитим молоком."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "It’s worth visiting that museum.",
+    "ua": "Варто відвідати той музей."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "PREP_TIME"],
+    "en": "I’m busy preparing for the trip.",
+    "ua": "Я зайнятий підготовкою до поїздки."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE"],
+    "en": "I can’t help laughing.",
+    "ua": "Я не можу втриматися від сміху."
+  },
+  {
+    "rules": ["GERUND_VS_INFINITIVE", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "en": "I look forward to meeting you.",
+    "ua": "Я з нетерпінням чекаю зустрічі з тобою."
+  }
+] }

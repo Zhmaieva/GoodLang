@@ -1,0 +1,512 @@
+{ "FUTURE_WITH_PRESENT_CONT": [
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Я зустрічаюся з друзями завтра ввечері.",
+    "en": ["I am meeting my friends tomorrow evening.", "I'm meeting my friends tomorrow evening."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Вона не відвідує концерт цього тижня.",
+    "en": ["She isn’t attending the concert this week.", "She is not attending the concert this week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми їдемо до парку в суботу.",
+    "en": ["We are going to the park on Saturday.", "We're going to the park on Saturday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони купують трохи подарунків на Різдво.",
+    "en": ["They are buying some gifts for Christmas.", "They're buying some gifts for Christmas."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Він рідко подорожує за кордон цього року.",
+    "en": ["He is rarely traveling abroad this year.", "He's rarely traveling abroad this year."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Я відвідую музей наступного понеділка.",
+    "en": ["I am visiting the museum next Monday.", "I'm visiting the museum next Monday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Моя сестра зустрічається зі своїм другом завтра.",
+    "en": ["My sister is meeting her friend tomorrow.", "My sister's meeting her friend tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Ці студенти виступають на конференції наступного тижня.",
+    "en": ["These students are presenting at the conference next week.", "These students're presenting at the conference next week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "LIKE_ING"],
+    "ua": "Вона готується до вечірки, яку дуже любить організовувати.",
+    "en": ["She is preparing for the party, which she loves organizing.", "She's preparing for the party, which she loves organizing."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми граємо у футбол на стадіоні в неділю.",
+    "en": ["We are playing football at the stadium on Sunday.", "We're playing football at the stadium on Sunday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони готують багато їжі на вечірку завтра.",
+    "en": ["They are preparing a lot of food for the party tomorrow.", "They're preparing a lot of food for the party tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Він не бере участі в змаганні цього місяця.",
+    "en": ["He isn’t participating in the competition this month.", "He is not participating in the competition this month."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Я їду до бабусі в п’ятницю.",
+    "en": ["I am going to my grandmother’s on Friday.", "I'm going to my grandmother’s on Friday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "TOO_VERY"],
+    "ua": "Вона дуже зайнята, готуючись до іспиту завтра.",
+    "en": ["She is very busy preparing for the exam tomorrow.", "She's very busy preparing for the exam tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони часто відвідують театр цього сезону.",
+    "en": ["They are often visiting the theater this season.", "They're often visiting the theater this season."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми обідаємо в ресторані сьогодні ввечері.",
+    "en": ["We are having lunch at the restaurant this evening.", "We're having lunch at the restaurant this evening."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "SHOULD_SHOULDNT"],
+    "ua": "Ти готується до презентації, чи не так?",
+    "en": ["You are preparing for the presentation, aren’t you?", "You're preparing for the presentation, aren’t you?"]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Я купую багато квитків на концерт наступного тижня.",
+    "en": ["I am buying many tickets for the concert next week.", "I'm buying many tickets for the concert next week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Мій друг приїжджає до міста завтра.",
+    "en": ["My friend is coming to the city tomorrow.", "My friend's coming to the city tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Вона відвідує виставку в суботу.",
+    "en": ["She is visiting the exhibition on Saturday.", "She's visiting the exhibition on Saturday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Цей учитель проводить урок завтра.",
+    "en": ["This teacher is holding a class tomorrow.", "This teacher's holding a class tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Ми не йдемо до кінотеатру цього вечора.",
+    "en": ["We aren’t going to the cinema this evening.", "We are not going to the cinema this evening."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Він тренується, щоб виступити на змаганні наступного місяця.",
+    "en": ["He is training in order to compete next month.", "He's training in order to compete next month."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Вони працюють у бібліотеці завтра вдень.",
+    "en": ["They are working in the library tomorrow afternoon.", "They're working in the library tomorrow afternoon."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Я беру трохи книг на відпустку.",
+    "en": ["I am taking some books for the vacation.", "I'm taking some books for the vacation."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона ніколи не подорожує цього літа.",
+    "en": ["She is never traveling this summer.", "She's never traveling this summer."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Ми вечеряємо разом наступної п’ятниці.",
+    "en": ["We are having dinner together next Friday.", "We're having dinner together next Friday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "TOO_VERY"],
+    "ua": "Він дуже зайнятий, готуючись до вечірки завтра.",
+    "en": ["He is too busy preparing for the party tomorrow.", "He's too busy preparing for the party tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Моя команда грає у фіналі наступного тижня.",
+    "en": ["My team is playing in the final next week.", "My team's playing in the final next week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Ці діти виступають на шкільному концерті завтра.",
+    "en": ["These children are performing at the school concert tomorrow.", "These children're performing at the school concert tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони купують багато продуктів на вечерю.",
+    "en": ["They are buying a lot of groceries for dinner.", "They're buying a lot of groceries for dinner."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Я не відвідую семінар цього тижня.",
+    "en": ["I am not attending the seminar this week.", "I'm not attending the seminar this week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Він іде до лікаря в понеділок.",
+    "en": ["He is going to the doctor on Monday.", "He's going to the doctor on Monday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона готується до танцювального шоу, яке їй подобається.",
+    "en": ["She is preparing for the dance show, which she is interested in.", "She's preparing for the dance show, which she's interested in."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми зустрічаємося в кафе завтра.",
+    "en": ["We are meeting at the café tomorrow.", "We're meeting at the café tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони часто беруть участь у заходах цього місяця.",
+    "en": ["They are often participating in events this month.", "They're often participating in events this month."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Я беру трохи книг на відпустку.",
+    "en": ["I am taking some books for the vacation.", "I'm taking some books for the vacation."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Мій брат приїжджає до нас наступного тижня.",
+    "en": ["My brother is coming to us next week.", "My brother's coming to us next week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Вона летить до Лондона в середу.",
+    "en": ["She is flying to London on Wednesday.", "She's flying to London on Wednesday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Цей актор знімається у новому фільмі наступного місяця.",
+    "en": ["This actor is starring in a new movie next month.", "This actor's starring in a new movie next month."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Вони не їдуть у відпустку цього літа.",
+    "en": ["They aren’t going on vacation this summer.", "They are not going on vacation this summer."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Я пакую валізу, щоб поїхати завтра.",
+    "en": ["I am packing my suitcase in order to leave tomorrow.", "I'm packing my suitcase in order to leave tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми замовляємо багато піци на вечірку.",
+    "en": ["We are ordering a lot of pizza for the party.", "We're ordering a lot of pizza for the party."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Він виступає на сцені завтра.",
+    "en": ["He is performing on stage tomorrow.", "He's performing on stage tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона рідко відвідує родину цього року.",
+    "en": ["She is rarely visiting family this year.", "She's rarely visiting family this year."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Моя подруга приїжджає на свято завтра.",
+    "en": ["My friend is coming for the holiday tomorrow.", "My friend's coming for the holiday tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Я відвідую театр наступної суботи.",
+    "en": ["I am visiting the theater next Saturday.", "I'm visiting the theater next Saturday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUESTION_TAGS"],
+    "ua": "Ти приїжджаєш завтра, чи не так?",
+    "en": ["You are coming tomorrow, aren’t you?", "You're coming tomorrow, aren’t you?"]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони готують багато страв на вечерю.",
+    "en": ["They are preparing many dishes for dinner.", "They're preparing many dishes for dinner."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Ця команда грає у фіналі завтра.",
+    "en": ["This team is playing in the final tomorrow.", "This team's playing in the final tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "TOO_ENOUGH"],
+    "ua": "Вона занадто зайнята, готуючись до поїздки завтра.",
+    "en": ["She is too busy preparing for the trip tomorrow.", "She's too busy preparing for the trip tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Я йду до кінотеатру завтра ввечері.",
+    "en": ["I am going to the cinema tomorrow evening.", "I'm going to the cinema tomorrow evening."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Він не бере участі у вечірці цього тижня.",
+    "en": ["He is not participating in the party this week.", "He isn’t participating in the party this week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми відвідуємо зоопарк у суботу.",
+    "en": ["We are visiting the zoo on Saturday.", "We're visiting the zoo on Saturday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони купують багато квітів на весілля.",
+    "en": ["They are buying many flowers for the wedding.", "They're buying many flowers for the wedding."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона рідко їде до моря цього літа.",
+    "en": ["She is rarely going to the sea this summer.", "She's rarely going to the sea this summer."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Я відвідую бібліотеку наступного вівторка.",
+    "en": ["I am visiting the library next Tuesday.", "I'm visiting the library next Tuesday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Мій друг приїжджає до нас у неділю.",
+    "en": ["My friend is coming to us on Sunday.", "My friend's coming to us on Sunday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Ці вчителі проводять семінар завтра.",
+    "en": ["These teachers are holding a seminar tomorrow.", "These teachers're holding a seminar tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "LIKE_ING"],
+    "ua": "Він готується до концерту, який він любить.",
+    "en": ["He is preparing for the concert, which he loves.", "He's preparing for the concert, which he loves."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми граємо в теніс на корті в суботу.",
+    "en": ["We are playing tennis at the court on Saturday.", "We're playing tennis at the court on Saturday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони замовляють трохи їжі на вечерю завтра.",
+    "en": ["They are ordering some food for dinner tomorrow.", "They're ordering some food for dinner tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Вона не відвідує музей цього місяця.",
+    "en": ["She is not visiting the museum this month.", "She isn’t visiting the museum this month."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Я зустрічаюся з братом у п’ятницю.",
+    "en": ["I am meeting my brother on Friday.", "I'm meeting my brother on Friday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "TOO_VERY"],
+    "ua": "Він дуже зайнятий, готуючись до іспиту завтра.",
+    "en": ["He is very busy preparing for the exam tomorrow.", "He's very busy preparing for the exam tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони часто подорожують цього сезону.",
+    "en": ["They are often traveling this season.", "They're often traveling this season."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми вечеряємо в ресторані сьогодні ввечері.",
+    "en": ["We are having dinner at the restaurant this evening.", "We're having dinner at the restaurant this evening."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "SHOULD_SHOULDNT"],
+    "ua": "Ти готується до виступу, чи не так?",
+    "en": ["You are preparing for the performance, aren’t you?", "You're preparing for the performance, aren’t you?"]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Я купую багато подарунків на день народження.",
+    "en": ["I am buying many gifts for the birthday.", "I'm buying many gifts for the birthday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Моя сестра приїжджає до міста завтра.",
+    "en": ["My sister is coming to the city tomorrow.", "My sister's coming to the city tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Вона відвідує галерею в неділю.",
+    "en": ["She is visiting the gallery on Sunday.", "She's visiting the gallery on Sunday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Цей студент виступає на конференції наступного тижня.",
+    "en": ["This student is presenting at the conference next week.", "This student's presenting at the conference next week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Ми не йдемо до театру цього вечора.",
+    "en": ["We are not going to the theater this evening.", "We aren’t going to the theater this evening."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Вона пакує речі, щоб поїхати завтра.",
+    "en": ["She is packing her things in order to leave tomorrow.", "She's packing her things in order to leave tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Вони працюють у парку завтра вдень.",
+    "en": ["They are working in the park tomorrow afternoon.", "They're working in the park tomorrow afternoon."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Я беру трохи фруктів на пікнік.",
+    "en": ["I am taking some fruit for the picnic.", "I'm taking some fruit for the picnic."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Він ніколи не відвідує концерти цього року.",
+    "en": ["He is never attending concerts this year.", "He's never attending concerts this year."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Ми зустрічаємося з друзями наступної суботи.",
+    "en": ["We are meeting friends next Saturday.", "We're meeting friends next Saturday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "TOO_VERY"],
+    "ua": "Вона дуже зайнята, готуючись до поїздки завтра.",
+    "en": ["She is very busy preparing for the trip tomorrow.", "She's very busy preparing for the trip tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Мій учитель проводить урок завтра.",
+    "en": ["My teacher is holding a lesson tomorrow.", "My teacher's holding a lesson tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Ці діти грають у парку завтра.",
+    "en": ["These children are playing in the park tomorrow.", "These children're playing in the park tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони готують багато десертів на свято.",
+    "en": ["They are preparing many desserts for the holiday.", "They're preparing many desserts for the holiday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Я не беру участі в семінарі цього тижня.",
+    "en": ["I am not participating in the seminar this week.", "I'm not participating in the seminar this week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Він відвідує лікаря в понеділок.",
+    "en": ["He is visiting the doctor on Monday.", "He's visiting the doctor on Monday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "ua": "Вона готується до виступу, який їй подобається.",
+    "en": ["She is preparing for the performance, which she is interested in.", "She's preparing for the performance, which she's interested in."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Ми обідаємо в кафе завтра.",
+    "en": ["We are having lunch at the café tomorrow.", "We're having lunch at the café tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вони часто ходять до музею цього місяця.",
+    "en": ["They are often going to the museum this month.", "They're often going to the museum this month."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Я купую трохи одягу на розпродажу.",
+    "en": ["I am buying some clothes at the sale.", "I'm buying some clothes at the sale."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Моя подруга приїжджає до нас у п’ятницю.",
+    "en": ["My friend is coming to us on Friday.", "My friend's coming to us on Friday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "ua": "Вона летить до Парижа в середу.",
+    "en": ["She is flying to Paris on Wednesday.", "She's flying to Paris on Wednesday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Цей актор знімається у фільмі наступного тижня.",
+    "en": ["This actor is filming a movie next week.", "This actor's filming a movie next week."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "NEGATION_DONT_DOESNT"],
+    "ua": "Вони не відвідують вечірку цього літа.",
+    "en": ["They are not attending the party this summer.", "They aren’t attending the party this summer."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Я бронюю квитки, щоб поїхати завтра.",
+    "en": ["I am booking tickets in order to travel tomorrow.", "I'm booking tickets in order to travel tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми замовляємо багато напоїв на вечірку.",
+    "en": ["We are ordering many drinks for the party.", "We're ordering many drinks for the party."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_PLACE"],
+    "ua": "Він виступає в театрі завтра.",
+    "en": ["He is performing at the theater tomorrow.", "He's performing at the theater tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона рідко бере участь у заходах цього сезону.",
+    "en": ["She is rarely participating in events this season.", "She's rarely participating in events this season."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Мій брат приїжджає на свято завтра.",
+    "en": ["My brother is coming for the holiday tomorrow.", "My brother's coming for the holiday tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "PREP_TIME", "ARTICLES"],
+    "ua": "Я відвідую концерт наступної п’ятниці.",
+    "en": ["I am attending the concert next Friday.", "I'm attending the concert next Friday."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUESTION_TAGS"],
+    "ua": "Ти приїжджаєш у понеділок, чи не так?",
+    "en": ["You are arriving on Monday, aren’t you?", "You're arriving on Monday, aren’t you?"]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Вони готують багато тортів на вечірку.",
+    "en": ["They are preparing many cakes for the party.", "They're preparing many cakes for the party."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "DEMONSTRATIVES"],
+    "ua": "Ця команда виступає на змаганні завтра.",
+    "en": ["This team is competing tomorrow.", "This team's competing tomorrow."]
+  },
+  {
+    "rules": ["FUTURE_WITH_PRESENT_CONT", "TOO_ENOUGH"],
+    "ua": "Він занадто зайнятий, готуючись до презентації завтра.",
+    "en": ["He is too busy preparing for the presentation tomorrow.", "He's too busy preparing for the presentation tomorrow."]
+  }
+] }

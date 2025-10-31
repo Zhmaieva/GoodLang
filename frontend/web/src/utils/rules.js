@@ -46,8 +46,9 @@ export const GrammarRule = Object.freeze({
     QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY: "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
     FUTURE_WITH_PRESENT_CONT: "FUTURE_WITH_PRESENT_CONT",
     LIKE_LOVE_HATE_ING: "LIKE_LOVE_HATE_ING",
+    ZERO_CONDITIONAL: "ZERO_CONDITIONAL",
     FIRST_CONDITIONAL: "FIRST_CONDITIONAL",
-    WHEN_PRESENT_FOR_FUTURE: "WHEN_PRESENT_FOR_FUTURE",
+    TIME_CLAUSE_FUTURE: "TIME_CLAUSE_FUTURE",
     HOW_OFTEN_LONG_MUCH: "HOW_OFTEN_LONG_MUCH",
     BECAUSE_SO_BUT_ALTHOUGH: "BECAUSE_SO_BUT_ALTHOUGH",
     BEFORE_AFTER_ING: "BEFORE_AFTER_ING",
@@ -137,6 +138,7 @@ export const RULE_LABELS = Object.freeze({
     WOULD_LIKE_TO: "Would like to + verb",
     LETS: "Let’s + verb",
     TOO_VERY: "Too / very",
+    POSSESSIVE_ADJECTIVES: "Possessive adjectives",
 
     // A2
     PAST_SIMPLE: "Past Simple (regular/irregular)",
@@ -157,8 +159,9 @@ export const RULE_LABELS = Object.freeze({
     QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY: "Quantifiers (some, any, a lot of, much, many)",
     FUTURE_WITH_PRESENT_CONT: "Future with Present Continuous (arrangements)",
     LIKE_LOVE_HATE_ING: "Like / love / hate + -ing",
+    ZERO_CONDITIONAL: "If + Present Simple, Present Simple (Zero Conditional)",
     FIRST_CONDITIONAL: "If + Present, will + V (1st Conditional)",
-    WHEN_PRESENT_FOR_FUTURE: "When + Present for future",
+    TIME_CLAUSE_FUTURE: "Time clause future",
     HOW_OFTEN_LONG_MUCH: "How often / How long / How much",
     BECAUSE_SO_BUT_ALTHOUGH: "Because / so / but / although",
     BEFORE_AFTER_ING: "Before / after + -ing",
@@ -218,6 +221,16 @@ export const RULE_LABELS = Object.freeze({
     FRONTING_FOR_EMPHASIS: "Fronting for emphasis",
     INDIRECT_SPEECH_QUESTION_FORMS: "Question forms in indirect speech",
     CONDITIONAL_INVERSION: "Conditional inversion",
+    COMPOUND_SENTENCES: "Compound sentences",
+    COMPLEX_SENTENCES: "Complex sentences",
+    COMPOUND_COMPLEX_SENTENCES: "Compound–complex sentences",
+    DECLARATIVE_SENTENCES: "Declarative sentences",
+    CORRELATIVE_CONJUNCTIONS: "Correlative conjunctions (either...or / neither...nor / both...and)",
+    WORD_FORMATION: "Word formation (prefixes, suffixes, roots)",
+    PARALLELISM: "Parallelism (balanced grammatical structures)",
+    MODIFIERS: "Modifiers (placement and clarity)",
+    ORDER_OF_ADJECTIVES: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",
+    PREP_DIRECTION: "Prepositions of direction (to, into, towards)"
 });
 
 // Group rules by CEFR level
@@ -268,8 +281,9 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY,
         GrammarRule.FUTURE_WITH_PRESENT_CONT,
         GrammarRule.LIKE_LOVE_HATE_ING,
+        GrammarRule.ZERO_CONDITIONAL,
         GrammarRule.FIRST_CONDITIONAL,
-        GrammarRule.WHEN_PRESENT_FOR_FUTURE,
+        GrammarRule.TIME_CLAUSE_FUTURE,
         GrammarRule.HOW_OFTEN_LONG_MUCH,
         GrammarRule.BECAUSE_SO_BUT_ALTHOUGH,
         GrammarRule.BEFORE_AFTER_ING,

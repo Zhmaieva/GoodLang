@@ -1,0 +1,1082 @@
+{ "EACH_OTHER_ONE_ANOTHER": [
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": ["Вони часто телефонують одне одному вечорами."],
+    "en": [
+      "They often call each other in the evenings.",
+      "They often call one another in the evenings."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми зустрілися й одразу сподобалися одне одному."],
+    "en": [
+      "We met and immediately liked each other.",
+      "We met and immediately liked one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Учні слухають одне одного під час обговорення."],
+    "en": [
+      "The students listen to each other during discussions.",
+      "The students listen to one another during discussions."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Вони образили одне одного під час суперечки."],
+    "en": [
+      "They hurt each other during the argument.",
+      "They hurt one another during the argument."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми читаємо книги, які рекомендуємо одне одному."],
+    "en": [
+      "We read books we recommend to each other.",
+      "We read books we recommend to one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW"],
+    "ua": ["Вони зараз посміхаються одне одному."],
+    "en": [
+      "They’re smiling at each other right now.",
+      "They are smiling at one another right now."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES"],
+    "ua": ["Брати підтримують одне одного в усьому."],
+    "en": [
+      "The brothers support each other in everything.",
+      "The brothers support one another in everything."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми обмінялися подарунками на день народження."],
+    "en": [
+      "We gave each other gifts for our birthdays.",
+      "We gave one another presents for our birthdays."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES", "PREP_PLACE"],
+    "ua": ["Діти граються одне з одним у дворі."],
+    "en": [
+      "The children play with each other in the yard.",
+      "The children play with one another in the yard."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони поцілували одне одного на прощання."],
+    "en": [
+      "They kissed each other goodbye.",
+      "They kissed one another goodbye."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES"],
+    "ua": ["Ми часто допомагаємо одне одному з домашніми справами."],
+    "en": [
+      "We often help each other with the housework.",
+      "We often help one another with the housework."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони розуміють одне одного без слів."],
+    "en": [
+      "They understand each other without words.",
+      "They understand one another without words."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Ми побажали одне одному удачі перед іспитом."],
+    "en": [
+      "We wished each other good luck before the exam.",
+      "We wished one another good luck before the exam."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Вони сидять поруч і шепочуться одне з одним."],
+    "en": [
+      "They sit next to each other and whisper.",
+      "They sit next to one another and whisper."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE", "PREP_TIME"],
+    "ua": ["Ми бачили одне одного на концерті минулого тижня."],
+    "en": [
+      "We saw each other at the concert last week.",
+      "We saw one another at the concert last week."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Колеги обмінюються ідеями на зустрічах."],
+    "en": [
+      "The colleagues share ideas with each other at meetings.",
+      "The colleagues share ideas with one another at meetings."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони сварилися, але потім вибачилися одне перед одним."],
+    "en": [
+      "They argued but later apologized to each other.",
+      "They argued but later apologized to one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Вони зараз розмовляють одне з одним телефоном."],
+    "en": [
+      "They’re talking to each other on the phone.",
+      "They are talking to one another on the phone."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо історії одне одного."],
+    "en": [
+      "We know each other’s stories.",
+      "We know one another’s stories."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони подарували одне одному книги на Новий рік."],
+    "en": [
+      "They gave each other books for New Year.",
+      "They gave one another books for New Year."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми часто надсилаємо одне одному повідомлення."],
+    "en": [
+      "We often send each other messages.",
+      "We often send one another messages."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони посварилися й більше не говорили одне з одним."],
+    "en": [
+      "They fell out and didn’t speak to each other again.",
+      "They fell out and didn’t speak to one another again."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Батьки і діти вчаться слухати одне одного."],
+    "en": [
+      "Parents and children learn to listen to each other.",
+      "Parents and children learn to listen to one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми підтримуємо одне одного у важкі часи."],
+    "en": [
+      "We support each other in hard times.",
+      "We support one another in hard times."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони надіслали одне одному листи подяки."],
+    "en": [
+      "They sent each other thank-you letters.",
+      "They sent one another thank-you letters."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми завжди допомагаємо одне одному."],
+    "en": [
+      "We always help each other.",
+      "We always help one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_DIRECTION"],
+    "ua": ["Вони подивилися одне на одного й засміялися."],
+    "en": [
+      "They looked at each other and laughed.",
+      "They looked at one another and laughed."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
+    "ua": ["Ми часто позичаємо речі одне одному."],
+    "en": [
+      "We often lend each other our things.",
+      "We often lend one another our things."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Вони обійняли одне одного перед від’їздом."],
+    "en": [
+      "They hugged each other before leaving.",
+      "They hugged one another before leaving."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми добре знаємо одне одного."],
+    "en": [
+      "We know each other well.",
+      "We know one another well."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Вони зараз допомагають одне одному з домашнім завданням."],
+    "en": [
+      "They’re helping each other with their homework.",
+      "They are helping one another with their homework."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Ми писали одне одному листи щотижня."],
+    "en": [
+      "We wrote letters to each other every week.",
+      "We wrote letters to one another every week."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони змагаються один з одним у бігу."],
+    "en": [
+      "They compete with each other in running.",
+      "They compete with one another in running."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Друзі подарували одне одному подарунки на Різдво."],
+    "en": [
+      "The friends gave each other presents for Christmas.",
+      "The friends gave one another presents for Christmas."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Ми часто бачимо одне одного в школі."],
+    "en": [
+      "We often see each other at school.",
+      "We often see one another at school."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми підтримуємо одне одного щодня."],
+    "en": [
+      "We support each other every day.",
+      "We support one another every day."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Вони побажали одне одному щасливого Нового року."],
+    "en": [
+      "They wished each other a happy New Year.",
+      "They wished one another a happy New Year."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми зустрічаємося одне з одним у парку щонеділі."],
+    "en": [
+      "We meet each other in the park every Sunday.",
+      "We meet one another in the park every Sunday."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Вони подарували одне одному квіти."],
+    "en": [
+      "They gave each other flowers.",
+      "They gave one another flowers."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми пам’ятаємо дні народження одне одного."],
+    "en": [
+      "We remember each other’s birthdays.",
+      "We remember one another’s birthdays."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW"],
+    "ua": ["Вони зараз слухають одне одного уважно."],
+    "en": [
+      "They’re listening to each other carefully.",
+      "They are listening to one another carefully."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми допомагали одне одному під час переїзду."],
+    "en": [
+      "We helped each other during the move.",
+      "We helped one another during the move."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Вони сидять поруч і розмовляють одне з одним."],
+    "en": [
+      "They sit next to each other and talk.",
+      "They sit next to one another and talk."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми побачили одне одного після багатьох років."],
+    "en": [
+      "We saw each other after many years.",
+      "We saw one another after many years."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони надихають одне одного працювати краще."],
+    "en": [
+      "They inspire each other to work better.",
+      "They inspire one another to work better."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Вони обмінялися листами подяки."],
+    "en": [
+      "They exchanged thank-you letters with each other.",
+      "They exchanged thank-you letters with one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми пишемо одне одному щотижня."],
+    "en": [
+      "We write to each other every week.",
+      "We write to one another every week."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Друзі подивилися одне на одного й засміялися."],
+    "en": [
+      "The friends looked at each other and laughed.",
+      "The friends looked at one another and laughed."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES"],
+    "ua": ["Ми обмінюємося порадами одне з одним."],
+    "en": [
+      "We share advice with each other.",
+      "We share advice with one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони часто сваряться, але завжди миряться одне з одним."],
+    "en": [
+      "They often argue but always make up with each other.",
+      "They often argue but always make up with one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми зустріли одне одного в кав’ярні."],
+    "en": [
+      "We met each other at the café.",
+      "We met one another at the café."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони обговорюють свої ідеї одне з одним."],
+    "en": [
+      "They discuss their ideas with each other.",
+      "They discuss their ideas with one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми подзвонили одне одному минулої ночі."],
+    "en": [
+      "We called each other last night.",
+      "We called one another last night."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Вони зараз дивляться одне на одного."],
+    "en": [
+      "They’re looking at each other.",
+      "They are looking at one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми поважаємо думки одне одного."],
+    "en": [
+      "We respect each other’s opinions.",
+      "We respect one another’s opinions."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Вони подарували одне одному маленькі подарунки на Різдво."],
+    "en": [
+      "They gave each other small gifts for Christmas.",
+      "They gave one another small presents for Christmas."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES", "PREP_PLACE"],
+    "ua": ["Ми бачимо одне одного в офісі кожного дня."],
+    "en": [
+      "We see each other in the office every day.",
+      "We see one another in the office every day."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Вони обмінялися подарунками на вечірці."],
+    "en": [
+      "They gave each other gifts at the party.",
+      "They gave one another presents at the party."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми нагадуємо одне одному про зустрічі."],
+    "en": [
+      "We remind each other about meetings.",
+      "We remind one another about meetings."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми побачили одне одного в театрі."],
+    "en": [
+      "We saw each other at the theater.",
+      "We saw one another at the theater."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Ми зустрічаємо одне одного в офісі кожного ранку."],
+    "en": [
+      "We meet each other in the office every morning.",
+      "We meet one another in the office every morning."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Вони подзвонили одне одному вчора ввечері."],
+    "en": [
+      "They called each other last night.",
+      "They called one another last night."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми цінуємо думки одне одного."],
+    "en": [
+      "We value each other’s opinions.",
+      "We value one another’s opinions."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони пообіцяли підтримувати одне одного."],
+    "en": [
+      "They promised to support each other.",
+      "They promised to support one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми часто бачимо одне одного в університеті."],
+    "en": [
+      "We often see each other at the university.",
+      "We often see one another at the university."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Друзі подзвонили одне одному перед святами."],
+    "en": [
+      "The friends called each other before the holidays.",
+      "The friends called one another before the holidays."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми цінуємо час одне одного."],
+    "en": [
+      "We appreciate each other’s time.",
+      "We appreciate one another’s time."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Вони зараз надсилають одне одному повідомлення."],
+    "en": [
+      "They’re sending each other messages right now.",
+      "They are sending one another messages right now."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми побачили одне одного на вокзалі."],
+    "en": [
+      "We saw each other at the station.",
+      "We saw one another at the station."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони розуміють емоції одне одного."],
+    "en": [
+      "They understand each other’s emotions.",
+      "They understand one another’s emotions."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми підтримували одне одного під час складних часів."],
+    "en": [
+      "We supported each other during hard times.",
+      "We supported one another during hard times."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Ми сидимо поруч і розмовляємо одне з одним."],
+    "en": [
+      "We sit next to each other and talk.",
+      "We sit next to one another and talk."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми бачили одне одного минулої п’ятниці."],
+    "en": [
+      "We saw each other last Friday.",
+      "We saw one another last Friday."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо слабкі сторони одне одного."],
+    "en": [
+      "We know each other’s weaknesses.",
+      "We know one another’s weaknesses."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони часто сперечаються, але все одно люблять одне одного."],
+    "en": [
+      "They often argue but still love each other.",
+      "They often argue but still love one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": ["Ми побажали одне одному щасливої подорожі."],
+    "en": [
+      "We wished each other a safe trip.",
+      "We wished one another a safe journey."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми ділимося ідеями одне з одним."],
+    "en": [
+      "We share ideas with each other.",
+      "We share ideas with one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми зустріли одне одного в бібліотеці."],
+    "en": [
+      "We met each other in the library.",
+      "We met one another in the library."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Вони бачать одне одного на роботі кожного дня."],
+    "en": [
+      "They see each other at work every day.",
+      "They see one another at work every day."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми допомогли одне одному завершити проект."],
+    "en": [
+      "We helped each other finish the project.",
+      "We helped one another complete the project."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо секрети одне одного."],
+    "en": [
+      "We know each other’s secrets.",
+      "We know one another’s secrets."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони поцілували одне одного на святі."],
+    "en": [
+      "They kissed each other at the celebration.",
+      "They kissed one another at the celebration."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW"],
+    "ua": ["Ми зараз допомагаємо одне одному з підготовкою."],
+    "en": [
+      "We’re helping each other with the preparation.",
+      "We are helping one another with the preparation."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми завжди надихаємо одне одного на успіх."],
+    "en": [
+      "We always inspire each other to succeed.",
+      "We always inspire one another to succeed."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Ми обмінялися фотографіями з поїздки."],
+    "en": [
+      "We exchanged travel photos with each other.",
+      "We exchanged travel pictures with one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Ми зустрічаємо одне одного у спортзалі тричі на тиждень."],
+    "en": [
+      "We meet each other at the gym three times a week.",
+      "We meet one another at the gym three times a week."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "ua": ["Вони подзвонили одне одному минулої ночі."],
+    "en": [
+      "They called each other last night.",
+      "They called one another last night."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми поважаємо особисті межі одне одного."],
+    "en": [
+      "We respect each other’s personal boundaries.",
+      "We respect one another’s personal boundaries."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми зустріли одне одного на конференції."],
+    "en": [
+      "We met each other at the conference.",
+      "We met one another at the conference."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES", "PREP_PLACE"],
+    "ua": ["Вони бачать одне одного у школі щодня."],
+    "en": [
+      "They see each other at school every day.",
+      "They see one another at school every day."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми писали одне одному кожного тижня."],
+    "en": [
+      "We wrote to each other every week.",
+      "We wrote to one another every week."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми надихаємо одне одного бути кращими."],
+    "en": [
+      "We inspire each other to be better.",
+      "We inspire one another to be better."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони обійняли одне одного на прощання."],
+    "en": [
+      "They hugged each other goodbye.",
+      "They hugged one another goodbye."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми часто бачимо одне одного на вулиці."],
+    "en": [
+      "We often see each other on the street.",
+      "We often see one another on the street."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони обмінялися подарунками на день народження."],
+    "en": [
+      "They gave each other presents for their birthdays.",
+      "They gave one another presents for their birthdays."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо родини одне одного."],
+    "en": [
+      "We know each other’s families.",
+      "We know one another’s families."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони завжди допомагають одне одному на роботі."],
+    "en": [
+      "They always help each other at work.",
+      "They always help one another at work."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми бачили одне одного минулого місяця."],
+    "en": [
+      "We saw each other last month.",
+      "We saw one another last month."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW"],
+    "ua": ["Ми зараз пишемо одне одному повідомлення."],
+    "en": [
+      "We’re writing messages to each other.",
+      "We are writing messages to one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо улюблені фільми одне одного."],
+    "en": [
+      "We know each other’s favorite movies.",
+      "We know one another’s favorite movies."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони підтримували одне одного під час війни."],
+    "en": [
+      "They supported each other during the war.",
+      "They supported one another during the war."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми часто допомагаємо одне одному з домашніми справами."],
+    "en": [
+      "We often help each other with housework.",
+      "We often help one another with housework."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Вони зараз дивляться одне на одного."],
+    "en": [
+      "They’re looking at each other.",
+      "They are looking at one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми обійняли одне одного після зустрічі."],
+    "en": [
+      "We hugged each other after the meeting.",
+      "We hugged one another after the meeting."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми бачимо одне одного у метро щоранку."],
+    "en": [
+      "We see each other on the metro every morning.",
+      "We see one another on the subway every morning."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Ми зустріли одне одного у кафе біля вокзалу."],
+    "en": [
+      "We met each other at the café near the station.",
+      "We met one another at the café near the station."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Вони знають звички одне одного."],
+    "en": [
+      "They know each other’s habits.",
+      "They know one another’s habits."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми поділилися історіями одне з одним."],
+    "en": [
+      "We shared stories with each other.",
+      "We shared stories with one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми завжди вітаємо одне одного зранку."],
+    "en": [
+      "We always greet each other in the morning.",
+      "We always greet one another in the morning."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони сміялися одне з одного після жарту."],
+    "en": [
+      "They laughed at each other after the joke.",
+      "They laughed at one another after the joke."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Ми зустрічаємо одне одного в парку щоранку."],
+    "en": [
+      "We meet each other in the park every morning.",
+      "We meet one another in the park every morning."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми писали одне одному кожного місяця."],
+    "en": [
+      "We wrote to each other every month.",
+      "We wrote to one another every month."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми поважаємо вибір одне одного."],
+    "en": [
+      "We respect each other’s choices.",
+      "We respect one another’s choices."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони допомогли одне одному під час проекту."],
+    "en": [
+      "They helped each other during the project.",
+      "They helped one another during the project."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми підтримуємо одне одного у складних ситуаціях."],
+    "en": [
+      "We support each other in difficult situations.",
+      "We support one another in difficult situations."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": ["Ми зустріли одне одного в кафе в центрі міста."],
+    "en": [
+      "We met each other at a café in the city center.",
+      "We met one another at a café in the city center."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми бачимо одне одного кожного вівторка."],
+    "en": [
+      "We see each other every Tuesday.",
+      "We see one another every Tuesday."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони поцілували одне одного перед від’їздом."],
+    "en": [
+      "They kissed each other before leaving.",
+      "They kissed one another before leaving."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо думки одне одного."],
+    "en": [
+      "We know each other’s thoughts.",
+      "We know one another’s thoughts."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Вони подарували одне одному листівки на Різдво."],
+    "en": [
+      "They gave each other cards for Christmas.",
+      "They gave one another cards for Christmas."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми часто навчаємо одне одного нових речей."],
+    "en": [
+      "We often teach each other new things.",
+      "We often teach one another new things."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Вони зараз слухають одне одного."],
+    "en": [
+      "They’re listening to each other.",
+      "They are listening to one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми бачили одне одного минулої весни."],
+    "en": [
+      "We saw each other last spring.",
+      "We saw one another last spring."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо улюблені місця одне одного."],
+    "en": [
+      "We know each other’s favorite places.",
+      "We know one another’s favorite places."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми зустріли одне одного біля театру."],
+    "en": [
+      "We met each other near the theater.",
+      "We met one another near the theater."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "ARTICLES"],
+    "ua": ["Ми допомагаємо одне одному з домашніми завданнями."],
+    "en": [
+      "We help each other with the homework.",
+      "We help one another with the homework."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Вони підтримували одне одного під час труднощів."],
+    "en": [
+      "They supported each other during hard times.",
+      "They supported one another during hard times."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми довіряємо одне одному."],
+    "en": [
+      "We trust each other.",
+      "We trust one another."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
+    "ua": ["Ми побажали одне одному гарної поїздки."],
+    "en": [
+      "We wished each other a good trip.",
+      "We wished one another a good trip."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "POSSESSIVE_S"],
+    "ua": ["Ми знаємо помилки одне одного."],
+    "en": [
+      "We know each other’s mistakes.",
+      "We know one another’s mistakes."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "ua": ["Ми часто бачимо одне одного у бібліотеці."],
+    "en": [
+      "We often see each other in the library.",
+      "We often see one another in the library."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Ми надіслали одне одному фотографії з відпочинку."],
+    "en": [
+      "We sent each other photos from the vacation.",
+      "We sent one another pictures from the vacation."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми завжди підтримуємо одне одного в роботі."],
+    "en": [
+      "We always support each other at work.",
+      "We always support one another at work."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": ["Ми бачили одне одного минулої зими."],
+    "en": [
+      "We saw each other last winter.",
+      "We saw one another last winter."
+    ]
+  },
+  {
+    "rules": ["EACH_OTHER_ONE_ANOTHER", "PRESENT_SIMPLE"],
+    "ua": ["Ми розуміємо почуття одне одного."],
+    "en": [
+      "We understand each other’s feelings.",
+      "We understand one another’s feelings."
+    ]
+  }
+] }

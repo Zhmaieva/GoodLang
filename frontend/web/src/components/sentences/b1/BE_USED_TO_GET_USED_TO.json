@@ -1,0 +1,518 @@
+{ "BE_USED_TO_GET_USED_TO": [
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик прокидатися рано.",
+    "en": ["I am used to waking up early."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вона звикла жити сама.",
+    "en": ["She is used to living alone."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "SIMPLE_ADJ"],
+    "ua": "Вони звикли до холодної погоди.",
+    "en": ["They are used to cold weather."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Він звик їздити на далекі відстані.",
+    "en": ["He is used to driving long distances."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "LIKE_LOVE_HATE_ING"],
+    "ua": "Ми звикли їсти гостру їжу.",
+    "en": ["We are used to eating spicy food."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик працювати під тиском.",
+    "en": ["I am used to working under pressure."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вона звикла носити окуляри.",
+    "en": ["She is used to wearing glasses."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "ARTICLES"],
+    "ua": "Вони звикли до життя у великому місті.",
+    "en": ["They are used to big city life."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Він звик виступати на публіці.",
+    "en": ["He is used to speaking in public."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Ми звикли лягати спати пізно.",
+    "en": ["We are used to staying up late."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Я звикаю до своєї нової роботи.",
+    "en": ["I am getting used to my new job."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вона звикає до брекетів.",
+    "en": ["She is getting used to her braces."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вони звикають до нового розкладу.",
+    "en": ["They are getting used to the new schedule."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Він звикає до клімату тут.",
+    "en": ["He is getting used to the climate here."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо до онлайн-занять.",
+    "en": ["We are getting used to online classes."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "WAS_WERE"],
+    "ua": "Я не звик готувати собі.",
+    "en": ["I was not used to cooking for myself.", "I wasn’t used to cooking for myself."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "WAS_WERE"],
+    "ua": "Вона не звикла прокидатися так рано.",
+    "en": ["She was not used to waking up so early.", "She wasn’t used to waking up so early."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "WAS_WERE", "ARTICLES"],
+    "ua": "Вони не звикли до заторів.",
+    "en": ["They were not used to the traffic.", "They weren’t used to the traffic."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "WAS_WERE", "ARTICLES"],
+    "ua": "Він не звик до шуму.",
+    "en": ["He was not used to the noise.", "He wasn’t used to the noise."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "WAS_WERE"],
+    "ua": "Ми не звикли користуватися смартфонами.",
+    "en": ["We were not used to using smartphones.", "We weren’t used to using smartphones."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_PLACE"],
+    "ua": "Я звикаю жити далеко від дому.",
+    "en": ["I’m getting used to living far from home.", "I am getting used to living far from home."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона звикає щодня говорити англійською.",
+    "en": ["She’s getting used to speaking English daily.", "She is getting used to speaking English daily."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "POSSESSIVE_S"],
+    "ua": "Вони звикають до свого немовляти.",
+    "en": ["They’re getting used to their new baby.", "They are getting used to their new baby."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_TIME"],
+    "ua": "Він звикає працювати вночі.",
+    "en": ["He’s getting used to working nights.", "He is getting used to working nights."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ми звикаємо до різниці в часі.",
+    "en": ["We’re getting used to the time difference.", "We are getting used to the time difference."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик подорожувати сам.",
+    "en": ["I’m used to traveling alone.", "I am used to traveling alone."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "LIKE_LOVE_HATE_ING"],
+    "ua": "Вона звикла їсти здорову їжу.",
+    "en": ["She’s used to eating healthy food.", "She is used to eating healthy food."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вони звикли ділити кімнату.",
+    "en": ["They’re used to sharing a room.", "They are used to sharing a room."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "ADVERBS_OF_MANNER"],
+    "ua": "Він звик залишатися спокійним під час стресу.",
+    "en": ["He’s used to staying calm under stress.", "He is used to staying calm under stress."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Ми звикли платити карткою.",
+    "en": ["We’re used to paying with a card.", "We are used to paying with a card."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Я звикаю до своєї нової стрижки.",
+    "en": ["I’m getting used to my new haircut.", "I am getting used to my new haircut."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Вона звикає до своїх нових колег.",
+    "en": ["She’s getting used to her new coworkers.", "She is getting used to her new coworkers."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вони звикають до життя за кордоном.",
+    "en": ["They’re getting used to life abroad.", "They are getting used to life abroad."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_PLACE", "PRESENT_CONT_NOW"],
+    "ua": "Він звикає їздити зліва на дорозі.",
+    "en": ["He’s getting used to driving on the left.", "He is getting used to driving on the left."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо носити форму.",
+    "en": ["We’re getting used to wearing uniforms.", "We are getting used to wearing uniforms."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик до холодного душу.",
+    "en": ["I’m used to cold showers.", "I am used to cold showers."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вона звикла готувати для великої родини.",
+    "en": ["She’s used to cooking for a big family.", "She is used to cooking for a big family."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_PLACE"],
+    "ua": "Вони звикли ходити до школи пішки.",
+    "en": ["They’re used to walking to school.", "They are used to walking to school."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Він звик бути на самоті.",
+    "en": ["He’s used to being alone.", "He is used to being alone."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_PLACE"],
+    "ua": "Ми звикли говорити тихо в бібліотеці.",
+    "en": ["We’re used to speaking softly in libraries.", "We are used to speaking softly in libraries."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_TIME"],
+    "ua": "Я звикаю їсти раніше.",
+    "en": ["I’m getting used to eating earlier.", "I am getting used to eating earlier."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вона звикає користуватися паличками.",
+    "en": ["She’s getting used to using chopsticks.", "She is getting used to using chopsticks."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вони звикають до натовпу.",
+    "en": ["They’re getting used to the crowds.", "They are getting used to the crowds."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Він звикає до нового програмного забезпечення.",
+    "en": ["He’s getting used to the new software.", "He is getting used to the new software."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо працювати з дому.",
+    "en": ["We’re getting used to working from home.", "We are getting used to working from home."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик до гучної музики.",
+    "en": ["I’m used to loud music.", "I am used to loud music."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_TIME"],
+    "ua": "Вона звикла до довгої дороги на роботу.",
+    "en": ["She’s used to long commute times.", "She is used to long commute times."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вони звикли доглядати за тваринами.",
+    "en": ["They’re used to caring for pets.", "They are used to caring for pets."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "ADVERBS_OF_MANNER"],
+    "ua": "Він звик працювати під тиском.",
+    "en": ["He’s used to handling pressure.", "He is used to handling pressure."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_PLACE"],
+    "ua": "Ми звикли до швидкого обслуговування тут.",
+    "en": ["We’re used to fast service here.", "We are used to fast service here."]
+  },
+
+  "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+  "ua": "Я звикаю до акценту.",
+  "en": ["I’m getting used to the accent.", "I am getting used to the accent."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_PLACE"],
+    "ua": "Вона звикає до свого нового міста.",
+    "en": ["She’s getting used to her new city.", "She is getting used to her new city."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вони звикають до того, що в них є вчитель.",
+    "en": ["They’re getting used to having a teacher.", "They are getting used to having a teacher."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Він звикає прокидатися рано.",
+    "en": ["He’s getting used to waking up early.", "He is getting used to waking up early."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо до повільного інтернету.",
+    "en": ["We’re getting used to the slow internet.", "We are getting used to the slow internet."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик їсти сам.",
+    "en": ["I’m used to eating alone.", "I am used to eating alone."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "SIMPLE_ADJ"],
+    "ua": "Вона звикла бути незалежною.",
+    "en": ["She’s used to being independent.", "She is used to being independent."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вони звикли святкувати важливі події.",
+    "en": ["They’re used to celebrating big occasions.", "They are used to celebrating big occasions."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Він звик навчатися вночі.",
+    "en": ["He’s used to studying at night.", "He is used to studying at night."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "SIMPLE_ADJ"],
+    "ua": "Ми звикли до довгих зим.",
+    "en": ["We’re used to long winters.", "We are used to long winters."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Я звикаю носити контактні лінзи.",
+    "en": ["I’m getting used to wearing contact lenses.", "I am getting used to wearing contact lenses."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вона звикає до своєї нової дієти.",
+    "en": ["She’s getting used to her new diet.", "She is getting used to her new diet."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "POSSESSIVE_S", "PRESENT_CONT_NOW"],
+    "ua": "Вони звикають до правил свого вчителя.",
+    "en": ["They’re getting used to their teacher’s rules.", "They are getting used to their teacher’s rules."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_TIME"],
+    "ua": "Він звикає до нового часового поясу.",
+    "en": ["He’s getting used to the time zone.", "He is getting used to the time zone."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо до того, що наша дитина спить краще.",
+    "en": ["We’re getting used to our baby sleeping better.", "We are getting used to our baby sleeping better."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик жити з сусідами по кімнаті.",
+    "en": ["I’m used to living with roommates.", "I am used to living with roommates."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "ADVERBS_OF_MANNER"],
+    "ua": "Вона звикла все робити швидко.",
+    "en": ["She’s used to doing everything quickly.", "She is used to doing everything quickly."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вони звикли виконувати суворі правила.",
+    "en": ["They’re used to following strict rules.", "They are used to following strict rules."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Він звик працювати у вихідні.",
+    "en": ["He’s used to working on weekends.", "He is used to working on weekends."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Ми звикли до здорової конкуренції.",
+    "en": ["We’re used to healthy competition.", "We are used to healthy competition."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Я звикаю керувати в дощ.",
+    "en": ["I’m getting used to driving in the rain.", "I am getting used to driving in the rain."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "SIMPLE_ADJ"],
+    "ua": "Вона звикає до холоднішої погоди.",
+    "en": ["She’s getting used to colder weather.", "She is getting used to colder weather."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_TIME"],
+    "ua": "Вони звикають оплачувати рахунки онлайн.",
+    "en": ["They’re getting used to paying bills online.", "They are getting used to paying bills online."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Він звикає жити без машини.",
+    "en": ["He’s getting used to living without a car.", "He is getting used to living without a car."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо до більшої кількості вільного часу.",
+    "en": ["We’re getting used to having more free time.", "We are getting used to having more free time."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_TIME"],
+    "ua": "Я звик вечеряти пізно.",
+    "en": ["I’m used to eating dinner late.", "I am used to eating dinner late."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_PLACE"],
+    "ua": "Вона звикла подорожувати поїздом.",
+    "en": ["She’s used to traveling by train.", "She is used to traveling by train."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вони звикли висловлюватися відкрито.",
+    "en": ["They’re used to speaking up.", "They are used to speaking up."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_TIME"],
+    "ua": "Він звик бігати щоранку.",
+    "en": ["He’s used to running every morning.", "He is used to running every morning."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "SIMPLE_ADJ"],
+    "ua": "Ми звикли до шумних сусідів.",
+    "en": ["We’re used to noisy neighbors.", "We are used to noisy neighbors."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Я звикаю доглядати за рослиною.",
+    "en": ["I’m getting used to caring for a plant.", "I am getting used to caring for a plant."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Вона звикає жити з сусідкою по кімнаті.",
+    "en": ["She’s getting used to living with a roommate.", "She is getting used to living with a roommate."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "SIMPLE_ADJ"],
+    "ua": "Вони звикають до повільнішого темпу.",
+    "en": ["They’re getting used to a slower pace.", "They are getting used to a slower pace."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Він звикає до своїх нових окулярів.",
+    "en": ["He’s getting used to his new glasses.", "He is getting used to his new glasses."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо до здоровіших звичок.",
+    "en": ["We’re getting used to healthier habits.", "We are getting used to healthier habits."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик бути постійно зайнятим.",
+    "en": ["I’m used to being busy all the time.", "I am used to being busy all the time."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_TIME"],
+    "ua": "Вона звикла читати перед сном.",
+    "en": ["She’s used to reading before bed.", "She is used to reading before bed."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вони звикли до холодного душу.",
+    "en": ["They’re used to cold showers.", "They are used to cold showers."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_TIME"],
+    "ua": "Він звик до довгих телефонних розмов.",
+    "en": ["He’s used to long phone calls.", "He is used to long phone calls."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Ми звикли все планувати заздалегідь.",
+    "en": ["We’re used to planning everything ahead.", "We are used to planning everything ahead."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Я звикаю до свого нового телефону.",
+    "en": ["I’m getting used to my new phone.", "I am getting used to my new phone."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Вона звикає до розпорядку своєї новонародженої дитини.",
+    "en": ["She’s getting used to her new baby’s routine.", "She is getting used to her new baby’s routine."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_PLACE", "POSSESSIVE_S"],
+    "ua": "Вони звикають до правил у школі.",
+    "en": ["They’re getting used to the rules at school.", "They are getting used to the rules at school."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Він звикає відкладати гроші.",
+    "en": ["He’s getting used to saving money.", "He is getting used to saving money."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Ми звикаємо їсти менше цукру.",
+    "en": ["We’re getting used to eating less sugar.", "We are getting used to eating less sugar."]
+  },
+
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Я звик слухати подкасти.",
+    "en": ["I’m used to listening to podcasts.", "I am used to listening to podcasts."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PREP_PLACE"],
+    "ua": "Вона звикла жити далеко від родини.",
+    "en": ["She’s used to living far from her family.", "She is used to living far from her family."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Вони звикли наполегливо вчитися.",
+    "en": ["They’re used to studying hard.", "They are used to studying hard."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Він звик бути відомим.",
+    "en": ["He’s used to being famous.", "He is used to being famous."]
+  },
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO"],
+    "ua": "Ми звикли постійно вчитися новому.",
+    "en": ["We’re used to learning new things.", "We are used to learning new things."]
+  }
+] }

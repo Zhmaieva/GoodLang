@@ -1,0 +1,256 @@
+{ "PRESENT_PERFECT_CONT": [
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я чекаю на тебе вже десять хвилин.",
+    "en": ["I have been waiting for you for ten minutes.", "I've been waiting for you for ten minutes."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вона читає цю книгу від самого ранку.",
+    "en": ["She has been reading this book since morning.", "She's been reading this book since morning."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Ми працюємо над цим проєктом вже тиждень.",
+    "en": ["We have been working on this project for a week.", "We've been working on this project for a week."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Він вчить англійську вже два роки.",
+    "en": ["He has been learning English for two years.", "He's been learning English for two years."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я граю у футбол з четвертої години.",
+    "en": ["I have been playing football since four o’clock.", "I've been playing football since four o’clock."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вони слухають музику весь день.",
+    "en": ["They have been listening to music all day.", "They've been listening to music all day."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "DEMONSTRATIVES"],
+    "ua": "Я дивлюся цей серіал вже тиждень.",
+    "en": ["I have been watching this show for a week.", "I've been watching this show for a week."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Він малює картину вже кілька годин.",
+    "en": ["He has been painting a picture for several hours.", "He's been painting a picture for several hours."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Ми готуємо вечерю з п’ятої.",
+    "en": ["We have been preparing dinner since five.", "We've been preparing dinner since five."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вона біжить уже пів години.",
+    "en": ["She has been running for half an hour.", "She's been running for half an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "ALREADY_YET_JUST"],
+    "ua": "Я щойно говорила з мамою.",
+    "en": ["I have just been talking to my mom.", "I've just been talking to my mom."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вони грають у настільні ігри вже годину.",
+    "en": ["They have been playing board games for an hour.", "They've been playing board games for an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я пишу тобі вже хвилину.",
+    "en": ["I have been texting you for a minute.", "I've been texting you for a minute."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "DEMONSTRATIVES"],
+    "ua": "Він читає ті статті весь день.",
+    "en": ["He has been reading those articles all day.", "He's been reading those articles all day."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Ми шукаємо нову квартиру вже місяць.",
+    "en": ["We have been looking for a new apartment for a month.", "We've been looking for a new apartment for a month."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "DEMONSTRATIVES"],
+    "ua": "Вона думає над цією проблемою зранку.",
+    "en": ["She has been thinking about this problem since morning.", "She's been thinking about this problem since morning."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я тренуюся до змагань уже тиждень.",
+    "en": ["I have been training for the competition for a week.", "I've been training for the competition for a week."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Мої друзі танцюють уже двадцять хвилин.",
+    "en": ["My friends have been dancing for twenty minutes."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Він шукає свої ключі вже пів години.",
+    "en": ["He has been looking for his keys for half an hour.", "He's been looking for his keys for half an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Ми прислухаємося до ваших порад уже деякий час.",
+    "en": ["We have been listening to your advice for a while.", "We've been listening to your advice for a while."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ARTICLES"],
+    "ua": "Я подорожую Європою вже два тижні.",
+    "en": ["I have been traveling around Europe for two weeks.", "I've been traveling around Europe for two weeks."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ALREADY_YET_JUST"],
+    "ua": "Вони вже говорять про це годину.",
+    "en": ["They have already been talking about it for an hour.", "They've already been talking about it for an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Він репетирує від самого ранку.",
+    "en": ["He has been rehearsing since morning.", "He's been rehearsing since morning."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Ми святкуємо вже пів вечора.",
+    "en": ["We have been celebrating for half the evening.", "We've been celebrating for half the evening."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я дивлюся його відео з учора.",
+    "en": ["I have been watching his videos since yesterday.", "I've been watching his videos since yesterday."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вона готується до іспиту вже три години.",
+    "en": ["She has been preparing for the exam for three hours.", "She's been preparing for the exam for three hours."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "DEMONSTRATIVES"],
+    "ua": "Я дивлюся це відео вже декілька хвилин.",
+    "en": ["I have been watching this video for a few minutes.", "I've been watching this video for a few minutes."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вони обідають уже півгодини.",
+    "en": ["They have been eating lunch for half an hour.", "They've been eating lunch for half an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ARTICLES"],
+    "ua": "Ми їздимо автобусом вже десять хвилин.",
+    "en": ["We have been traveling by bus for ten minutes.", "We've been traveling by bus for ten minutes."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я займаюся йогою зранку.",
+    "en": ["I have been doing yoga since morning.", "I've been doing yoga since morning."]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "PERSONAL_PRONOUNS"],
+    "ua": "Мій брат грає на гітарі вже годину.",
+    "en": ["My brother has been playing the guitar for an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Він дивиться телевізор весь вечір.",
+    "en": ["He has been watching TV all evening.", "He's been watching TV all evening."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Ми чекаємо автобуса вже двадцять хвилин.",
+    "en": ["We have been waiting for the bus for twenty minutes.", "We've been waiting for the bus for twenty minutes."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "DEMONSTRATIVES"],
+    "ua": "Вона носить ці окуляри з п’ятниці.",
+    "en": ["She has been wearing these glasses since Friday.", "She's been wearing these glasses since Friday."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я спілкуюся з цими новими людьми вже тиждень.",
+    "en": ["I have been talking to these new people for a week.", "I've been talking to these new people for a week."]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ARTICLES"],
+    "ua": "Ми живемо в Європі вже п’ять місяців.",
+    "en": ["We have been living in Europe for five months.", "We've been living in Europe for five months."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "PERSONAL_PRONOUNS"],
+    "ua": "Мої батьки чекають на нас уже пів години.",
+    "en": ["My parents have been waiting for us for half an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Він спить уже годину.",
+    "en": ["He has been sleeping for an hour.", "He's been sleeping for an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Я вчуся кермувати вже тиждень.",
+    "en": ["I have been learning to drive for a week.", "I've been learning to drive for a week."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вони вивчають історію весь день.",
+    "en": ["They have been studying history all day.", "They've been studying history all day."]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ALREADY_YET_JUST"],
+    "ua": "Я щойно думала про тебе.",
+    "en": ["I have just been thinking about you.", "I've just been thinking about you."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "DEMONSTRATIVES"],
+    "ua": "Він носить той светр з учора.",
+    "en": ["He has been wearing that sweater since yesterday.", "He's been wearing that sweater since yesterday."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "PERSONAL_PRONOUNS"],
+    "ua": "Моя сестра співає вже пів години.",
+    "en": ["My sister has been singing for half an hour."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ARTICLES"],
+    "ua": "Я ходжу на роботу пішки вже п’ять днів.",
+    "en": ["I have been walking to work for five days.", "I've been walking to work for five days."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Ми готуємося до уроку вже п’ятнадцять хвилин.",
+    "en": ["We have been getting ready for the lesson for fifteen minutes.", "We've been getting ready for the lesson for fifteen minutes."]
+  },
+
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "DEMONSTRATIVES"],
+    "ua": "Вона слухає ту пісню вже цілий день.",
+    "en": ["She has been listening to that song all day.", "She's been listening to that song all day."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ARTICLES"],
+    "ua": "Я навчаюся в університеті вже два роки.",
+    "en": ["I have been studying at university for two years.", "I've been studying at university for two years."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Вони грають у цю гру вже дві години.",
+    "en": ["They have been playing this game for two hours.", "They've been playing this game for two hours."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "ALREADY_YET_JUST"],
+    "ua": "Я вже розмовляю по телефону десять хвилин.",
+    "en": ["I have already been talking on the phone for ten minutes.", "I've already been talking on the phone for ten minutes."]
+  },
+  {
+    "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR"],
+    "ua": "Він працює над новою ідеєю зранку.",
+    "en": ["He has been working on a new idea since morning.", "He's been working on a new idea since morning."]
+  }
+] }
