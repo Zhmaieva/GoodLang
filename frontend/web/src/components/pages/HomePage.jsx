@@ -135,10 +135,12 @@ export default function HomePage({ theme }) {
 
     async function handleLevelChange(nextLevel) {
         if (loading) return;
+        if (nextLevel === level) return;
+
         setLevel(nextLevel);
         setDifficulty(randomDifficulty(nextLevel));
         setTextToTranslate("");
-        setRule(null);
+        //setRule(null);
         setMode("check");
         resetToLoadingPlaceholders();
         await loadNewTask();
