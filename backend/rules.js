@@ -1,4 +1,3 @@
-// rules.js
 export const GrammarRule = Object.freeze({
     // --- A1 ---
     TO_BE: "TO_BE",

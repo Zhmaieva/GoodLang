@@ -44,7 +44,7 @@ app.get('/translations/', async (req, res, next) => {
            const selectedRule = Array.isArray(rules) && rules.length > 0 ? rules[0] : randomRule(level ?? 'A1');
 
            const samples = shuffleBySeed(ALL_RULES_SAMPLES['THERE_IS_ARE'], seed ?? 1);
-           const skipNumber = Number.parseInt(skip ?? 0 % samples.length);
+           const skipNumber = Number.parseInt((skip ?? 0) % samples.length);
            const sample = samples[skipNumber];//todo: find selectedRule, shuffle by seed and skip
 
            return res.json({
