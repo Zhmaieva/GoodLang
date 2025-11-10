@@ -292,7 +292,7 @@
     "It’s the office’s entrance.", "It is the office’s entrance.", "It’s the entrance of the office.", "It is the entrance of the office."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це правила школи.", "en": [
-    "They’re the school’s "rules".", "They are the school’s "rules".", "They’re the "rules" of the school.", "They are the "rules" of the school."
+    "They’re the school’s rules.", "They are the school’s rules.", "They’re the rules of the school.", "They are the rules of the school."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це зустріч учорашнього дня.", "en": [
     "It’s yesterday’s meeting.", "It is yesterday’s meeting.", "It’s the meeting from yesterday.", "It is the meeting from yesterday."

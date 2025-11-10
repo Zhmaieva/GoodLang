@@ -1,6 +1,7 @@
-const express = require("express");
-const {randomRule, evaluateAndCoach, shuffleBySeed} = require("./сore");
-const {ALL_RULES_SAMPLES} = require("./allRulesSamples");
+import express from "express";
+import {randomRule, evaluateAndCoach, shuffleBySeed} from "./сore.js";
+import {ALL_RULES_SAMPLES} from "./allRulesSamples.js";
+import {LEVEL_RULES} from "./rules.js";
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
@@ -43,9 +44,9 @@ app.get('/translations/', async (req, res, next) => {
        if (!textToTranslate) {
            const selectedRule = Array.isArray(rules) && rules.length > 0 ? rules[0] : randomRule(level ?? 'A1');
 
-           const samples = shuffleBySeed(ALL_RULES_SAMPLES['THERE_IS_ARE'], seed ?? 1);
-           const skipNumber = Number.parseInt((skip ?? 0) % samples.length);
-           const sample = samples[skipNumber];//todo: find selectedRule, shuffle by seed and skip
+           const samples = shuffleBySeed(ALL_RULES_SAMPLES[selectedRule], seed ?? 1);
+           const skipNumber = Math.floor((skip ?? '0') % samples.length);
+           const sample = samples[skipNumber];
 
            return res.json({
                rules: sample.rules,

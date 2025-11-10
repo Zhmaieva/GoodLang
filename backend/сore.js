@@ -33,16 +33,20 @@ function sfc32(a, b, c, d) {
 
 // Shuffle using string or number seed
 export function shuffleBySeed(array, seedInput) {
-    const seedStr = String(seedInput);
-    const seedFn = xmur3(seedStr);
-    const rand = sfc32(seedFn(), seedFn(), seedFn(), seedFn());
-    const arr = [...array];
+    try {
+        const seedStr = String(seedInput);
+        const seedFn = xmur3(seedStr);
+        const rand = sfc32(seedFn(), seedFn(), seedFn(), seedFn());
+        const arr = [...array];
 
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(rand() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(rand() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    } catch (e) {
+        throw e;
     }
-    return arr;
 }
 
 export function randomRule(level) {

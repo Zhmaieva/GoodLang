@@ -13,6 +13,7 @@ export default function TaskCard({
         ua: { fontSize: 22, fontWeight: 700, color: theme.text },
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
         textarea: {
+            resize: "none",
             flex: 1, minHeight: 70, borderRadius: theme.radius, border: `3px solid ${theme.accent}`,
             background: "#fffaf3", padding: "12px 14px", fontSize: 16, color: theme.text,
             opacity: isInputDisabled ? 0.7 : 1,

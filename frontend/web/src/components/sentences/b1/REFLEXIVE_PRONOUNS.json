@@ -96,6 +96,5 @@
   { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він дивиться на себе в дзеркало кожного ранку.", "en": ["He looks at himself in the mirror every morning."] },
   { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми тримаємо себе спокійними в стресових ситуаціях.", "en": ["We keep ourselves calm in stressful situations."] },
   { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви навчили себе цьому без допомоги?", "en": ["Did you teach yourselves this without help?"] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони дозволили собі трохи відпочинку.", "en": ["They allowed themselves some rest."] },
-
+  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони дозволили собі трохи відпочинку.", "en": ["They allowed themselves some rest."] }
 ] }

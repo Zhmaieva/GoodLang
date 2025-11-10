@@ -282,5 +282,5 @@
   { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли він відкриє магазин, ми зайдемо.", "en": ["When he opens the shop, we will go in."] },
   { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли закінчиться гра, ми підемо додому.", "en": ["When the game ends, we will go home."] },
   { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти вивчиш це правило, тобі стане легше.", "en": ["When you learn this rule, it will get easier."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли я натисну кнопку, двері відкриються.", "en": ["When I press the button, the door will open."] },
+  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли я натисну кнопку, двері відкриються.", "en": ["When I press the button, the door will open."] }
 ] }

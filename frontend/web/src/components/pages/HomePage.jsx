@@ -56,7 +56,7 @@ export default function HomePage({ theme }) {
     }
     function setControlsDisabled(disabled) { setLoading(disabled); }
 
-    async function loadNewTask() {
+    async function loadNewTask(selectedDifficulty = difficulty) {
         try {
             setControlsDisabled(true);
             setAnswer("");
@@ -65,7 +65,7 @@ export default function HomePage({ theme }) {
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const data = await callAPI({ level: difficulty, seed, skip });
+                const data = await callAPI({ level: selectedDifficulty, seed, skip });
                 setTextToTranslate(data.textToTranslate || "");
                 setRules(data.rules || null);
                 setUaTask(data.textToTranslate || "—");
@@ -127,9 +127,10 @@ export default function HomePage({ theme }) {
     async function onMainButtonClick() {
         if (mode === "check") await evaluateAnswer();
         else {
-            setDifficulty(randomDifficulty(level));
+            const diff = randomDifficulty(level);
+            setDifficulty(diff);
             resetToLoadingPlaceholders();
-            await loadNewTask();
+            await loadNewTask(diff);
         }
     }
 
@@ -138,12 +139,13 @@ export default function HomePage({ theme }) {
         if (nextLevel === level) return;
 
         setLevel(nextLevel);
-        setDifficulty(randomDifficulty(nextLevel));
+        const diff = randomDifficulty(nextLevel)
+        setDifficulty(diff);
         setTextToTranslate("");
         //setRule(null);
         setMode("check");
         resetToLoadingPlaceholders();
-        await loadNewTask();
+        await loadNewTask(diff);
     }
 
     function handleKeyDown(e) {

@@ -257,10 +257,10 @@
     "ua": "Ми звикли до швидкого обслуговування тут.",
     "en": ["We’re used to fast service here.", "We are used to fast service here."]
   },
-
-  "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
-  "ua": "Я звикаю до акценту.",
-  "en": ["I’m getting used to the accent.", "I am getting used to the accent."]
+  {
+    "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW"],
+    "ua": "Я звикаю до акценту.",
+    "en": ["I’m getting used to the accent.", "I am getting used to the accent."]
   },
   {
     "rules": ["BE_USED_TO_GET_USED_TO", "PRESENT_CONT_NOW", "PREP_PLACE"],
