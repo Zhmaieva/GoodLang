@@ -41,7 +41,7 @@
   },
   {
     "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
-    "ua": "Сніг лежить на землі.",
+    "ua": "Сніг на землі.",
     "en": ["The snow is on the ground."]
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
-    "ua": "Ключ лежить на столі.",
+    "ua": "Ключ на столі.",
     "en": ["The key is on the table."]
   },
   {
@@ -173,11 +173,6 @@
     "rules": ["ARTICLES", "WAS_WERE"],
     "ua": "Море було спокійним.",
     "en": ["The sea was calm."]
-  },
-  {
-    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE", "PRESENT_CONTINUOUS"],
-    "ua": "Вони зараз у морі.",
-    "en": ["They are at sea."]
   },
   {
     "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
@@ -348,5 +343,322 @@
     "rules": ["ARTICLES", "TO_BE"],
     "ua": "Інтернет сьогодні дуже повільний.",
     "en": ["The Internet is very slow today."]
+  },
+  {
+    "ua": "Сонце сьогодні дуже яскраве.",
+    "en": [
+      "The sun is very bright today.",
+      "The sun is really bright today."
+    ],
+    "rules": ["ARTICLES", "TOO_VERY"]
+  },
+  {
+    "ua": "Ми відвідали Британський музей у Лондоні.",
+    "en": [
+      "We visited the British Museum in London.",
+      "We went to the British Museum in London."
+    ],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "У мене є собака і кішка.",
+    "en": [
+      "I have a dog and a cat.",
+      "I've got a dog and a cat."
+    ],
+    "rules": ["ARTICLES", "HAVE_HAVE_GOT", "COUNT_UNCOUNT"]
+  },
+  {
+    "ua": "Я не бачив тієї жінки біля дверей.",
+    "en": [
+      "I didn’t see the woman near the door.",
+      "I did not see the woman near the door.",
+      "I didn’t notice the woman by the door."
+    ],
+    "rules": ["ARTICLES", "NEGATION_DONT_DOESNT", "PREP_PLACE", "PAST_SIMPLE"]
+  },
+  {
+    "ua": "Чи є лікар у цьому будинку?",
+    "en": [
+      "Is there a doctor in this building?",
+      "Is there a doctor inside this building?"
+    ],
+    "rules": ["ARTICLES", "THERE_IS_ARE", "DEMONSTRATIVES", "PREP_PLACE"]
+  },
+  {
+    "ua": "Це найкраща книга, яку я коли-небудь читав.",
+    "en": [
+      "This is the best book I have ever read.",
+      "This is the best book I've ever read.",
+      "That's the best book I’ve ever read."
+    ],
+    "rules": ["ARTICLES", "DEMONSTRATIVES", "SUPERLATIVES", "PRESENT_PERFECT"]
+  },
+  {
+    "ua": "У холодильнику немає молока.",
+    "en": [
+      "There isn’t any milk in the fridge.",
+      "There is no milk in the fridge.",
+      "There’s not any milk in the fridge."
+    ],
+    "rules": ["ARTICLES", "THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT", "PREP_PLACE"]
+  },
+  {
+    "ua": "Біля школи є парк.",
+    "en": [
+      "There is a park next to the school.",
+      "There’s a park near the school.",
+      "There is a park close to the school."
+    ],
+    "rules": ["ARTICLES", "THERE_IS_ARE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Давай підемо до нового італійського ресторану сьогодні ввечері.",
+    "en": [
+      "Let’s go to the new Italian restaurant tonight.",
+      "Let's go to the new Italian place tonight.",
+      "Let us go to the new Italian restaurant this evening."
+    ],
+    "rules": ["ARTICLES", "LETS", "PREP_TIME", "PREP_DIRECTION"]
+  },
+  {
+    "ua": "Ніл є найдовшою річкою у світі.",
+    "en": ["The Nile is the longest river in the world.", "The Nile River is the longest in the world."],
+    "rules": ["ARTICLES", "SUPERLATIVES", "BE_SUPPOSED_TO"]
+  },
+  {
+    "ua": "Вони живуть біля Середземного моря.",
+    "en": ["They live near the Mediterranean Sea.", "They live close to the Mediterranean."],
+    "rules": ["ARTICLES", "PREP_PLACE", "PRESENT_SIMPLE_FREQ"]
+  },
+  {
+    "ua": "Панамський канал з’єднує два океани.",
+    "en": ["The Panama Canal connects two oceans.", "The Panama Canal joins the Atlantic and the Pacific."],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"]
+  },
+  {
+    "ua": "Ми бачили Гімалаї під час подорожі.",
+    "en": ["We saw the Himalayas during our trip.", "We visited the Himalayas on our journey."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
+  },
+  {
+    "ua": "Сахара — це величезна пустеля.",
+    "en": ["The Sahara is a huge desert.", "The Sahara Desert is enormous."],
+    "rules": ["ARTICLES", "BE_SUPPOSED_TO"]
+  },
+  {
+    "ua": "Ми відпочивали на Мальдівах минулої зими.",
+    "en": ["We stayed in the Maldives last winter.", "We were in the Maldives last winter."],
+    "rules": ["ARTICLES", "WAS_WERE", "PREP_TIME"]
+  },
+  {
+    "ua": "Вона піднімалася на Еверест у 2019 році.",
+    "en": ["She climbed Mount Everest in 2019.", "She reached the top of Mount Everest in 2019."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "ORDINALS_DATES"]
+  },
+  {
+    "ua": "Ми провели тиждень на Сицилії.",
+    "en": ["We spent a week in Sicily.", "We stayed in Sicily for a week."],
+    "rules": ["ARTICLES", "PREP_PLACE", "PAST_SIMPLE"]
+  },
+  {
+    "ua": "Я живу у Парижі вже два роки.",
+    "en": ["I have lived in Paris for two years.", "I've been living in Paris for two years."],
+    "rules": ["ARTICLES", "SINCE_FOR", "PRESENT_PERFECT_CONT"]
+  },
+  {
+    "ua": "Він народився в невеликому селі біля Варшави.",
+    "en": ["He was born in a small village near Warsaw.", "He was born in a little village close to Warsaw."],
+    "rules": ["ARTICLES", "WAS_WERE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Польща знаходиться в Європі.",
+    "en": ["Poland is in Europe.", "Poland lies in Europe."],
+    "rules": ["ARTICLES", "PREP_PLACE"]
+  },
+  {
+    "ua": "Сполучені Штати — дуже велика країна.",
+    "en": ["The United States is a very large country.", "The United States of America is huge."],
+    "rules": ["ARTICLES", "TOO_VERY"]
+  },
+  {
+    "ua": "Вона ніколи не була в Нідерландах.",
+    "en": ["She has never been to the Netherlands.", "She’s never visited the Netherlands."],
+    "rules": ["ARTICLES", "PRESENT_PERFECT"]
+  },
+  {
+    "ua": "Африка — другий за розміром континент.",
+    "en": ["Africa is the second largest continent.", "Africa is the second biggest continent in the world."],
+    "rules": ["ARTICLES", "ORDINALS_DATES", "COMPARATIVES"]
+  },
+  {
+    "ua": "Ми бачили Ейфелеву вежу вперше.",
+    "en": ["We saw the Eiffel Tower for the first time.", "We visited the Eiffel Tower for the first time."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
+  },
+  {
+    "ua": "Вони фотографувалися біля Колізею.",
+    "en": ["They took photos near the Colosseum.", "They were taking pictures by the Colosseum."],
+    "rules": ["ARTICLES", "PAST_CONTINUOUS", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми відвідали Велику китайську стіну під час поїздки.",
+    "en": ["We visited the Great Wall of China during our trip.", "We saw the Great Wall of China while traveling."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
+  },
+  {
+    "ua": "Вони забронювали номер у готелі Рітц.",
+    "en": ["They booked a room at the Ritz Hotel.", "They reserved a room in the Ritz."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми гуляли в Центральному парку.",
+    "en": ["We walked in Central Park.", "We took a walk in the Central Park."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Я бачив картину в Британському музеї.",
+    "en": ["I saw a painting in the British Museum.", "I looked at a painting at the British Museum."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми повечеряли в новому італійському ресторані.",
+    "en": ["We had dinner at the new Italian restaurant.", "We ate dinner in the new Italian restaurant."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Вони зупинилися в готелі з видом на море.",
+    "en": ["They stayed at a hotel with a view of the sea.", "They stayed in a hotel overlooking the sea."],
+    "rules": ["ARTICLES", "PREP_PLACE", "PAST_SIMPLE"]
+  },
+  {
+    "ua": "Він працює в театрі біля площі.",
+    "en": ["He works in a theater near the square.", "He works at the theater close to the square."],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми подивилися фільм у кінотеатрі на Оксфорд-стріт.",
+    "en": ["We watched a movie at the cinema on Oxford Street.", "We saw a film in the theater on Oxford Street."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Вона прибула до аеропорту Хітроу о сьомій.",
+    "en": ["She arrived at Heathrow Airport at seven.", "She got to Heathrow Airport at 7 o’clock."],
+    "rules": ["ARTICLES", "PREP_TIME", "PREP_PLACE", "PAST_SIMPLE"]
+  },
+  {
+    "ua": "Вони зустрілися на станції Вікторія.",
+    "en": ["They met at Victoria Station.", "They met at the Victoria Station."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми прогулялися площею Таймс-сквер увечері.",
+    "en": ["We walked through Times Square in the evening.", "We took a walk around Times Square at night."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
+  },
+  {
+    "ua": "Він летить до Великобританії завтра.",
+    "en": ["He is flying to the United Kingdom tomorrow.", "He’s going to the UK tomorrow."],
+    "rules": ["ARTICLES", "FUTURE_WITH_PRESENT_CONT", "PREP_DIRECTION"]
+  },
+  {
+    "ua": "Ми пливемо Темзою на човні.",
+    "en": ["We are sailing on the Thames by boat.", "We’re taking a boat trip on the River Thames."],
+    "rules": ["ARTICLES", "PRESENT_CONT_NOW", "PREP_PLACE"]
+  },
+  {
+    "ua": "Вона живе на Манхеттені, поруч з Бруклінським мостом.",
+    "en": ["She lives in Manhattan, near the Brooklyn Bridge.", "She lives close to the Brooklyn Bridge in Manhattan."],
+    "rules": ["ARTICLES", "PREP_PLACE", "PRESENT_SIMPLE_FREQ"]
+  },
+  {
+    "ua": "Ми побачили статую Свободи з човна.",
+    "en": ["We saw the Statue of Liberty from the boat.", "We looked at the Statue of Liberty while sailing."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Я поїду до Канарських островів цього літа.",
+    "en": ["I’m going to the Canary Islands this summer.", "I will travel to the Canary Islands this summer."],
+    "rules": ["ARTICLES", "BE_GOING_TO_VS_WILL", "PREP_TIME"]
+  },
+  {
+    "ua": "Ми відвідали Єгипет і бачили піраміди.",
+    "en": ["We visited Egypt and saw the pyramids.", "We went to Egypt and looked at the pyramids."],
+    "rules": ["ARTICLES", "PAST_SIMPLE"]
+  },
+  {
+    "ua": "Вона плакала, коли побачила Тадж-Махал.",
+    "en": ["She cried when she saw the Taj Mahal.", "She was amazed when she saw the Taj Mahal."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "TIME_CLAUSE_FUTURE"]
+  },
+  {
+    "ua": "Я хочу побачити Білий дім у Вашингтоні.",
+    "en": ["I want to see the White House in Washington.", "I’d like to visit the White House in D.C."],
+    "rules": ["ARTICLES", "WOULD_LIKE_TO"]
+  },
+  {
+    "ua": "Вони пройшлися по Лувру і зробили багато фото.",
+    "en": ["They walked through the Louvre and took many photos.", "They went around the Louvre taking pictures."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "COUNT_UNCOUNT"]
+  },
+  {
+    "ua": "Ми піднялися на Лондонське око.",
+    "en": ["We went on the London Eye.", "We rode the London Eye."],
+    "rules": ["ARTICLES", "PAST_SIMPLE"]
+  },
+  {
+    "ua": "Він працює в Музеї природознавства.",
+    "en": ["He works at the Natural History Museum.", "He’s employed at the Natural History Museum."],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"]
+  },
+  {
+    "ua": "Ми обідали в кафе біля площі.",
+    "en": ["We had lunch at a café near the square.", "We ate at a café close to the square."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Вона бачила виставу в театрі Глобус.",
+    "en": ["She saw a play at the Globe Theatre.", "She watched a performance in the Globe Theatre."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Вони ночували у готелі поблизу вокзалу.",
+    "en": ["They stayed in a hotel near the station.", "They spent the night at a hotel close to the station."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми вечеряли в ресторані біля Темзи.",
+    "en": ["We had dinner at a restaurant by the Thames.", "We ate dinner in a restaurant near the Thames."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Я гуляв по Оксфорд-стріт минулого тижня.",
+    "en": ["I walked along Oxford Street last week.", "I took a walk on Oxford Street last week."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
+  },
+  {
+    "ua": "Ми купили сувеніри біля Букінгемського палацу.",
+    "en": ["We bought souvenirs near the Buckingham Palace.", "We got souvenirs by Buckingham Palace."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Вона працює у маленькому музеї на узбережжі.",
+    "en": ["She works in a small museum on the coast.", "She’s employed at a little museum by the sea."],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми провели ніч у наметі в пустелі.",
+    "en": ["We spent a night in a tent in the desert.", "We slept in a tent in the desert."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
+  },
+  {
+    "ua": "Ми приїхали до Праги пізно ввечері.",
+    "en": ["We arrived in Prague late at night.", "We got to Prague late in the evening."],
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
+  },
+  {
+    "ua": "Вони фотографувалися на площі Святого Петра у Ватикані.",
+    "en": ["They took photos in St. Peter’s Square in the Vatican.", "They were taking pictures in St. Peter’s Square."],
+    "rules": ["ARTICLES", "PAST_CONTINUOUS", "POSSESSIVE_S", "PREP_PLACE"]
   }
 ] }
