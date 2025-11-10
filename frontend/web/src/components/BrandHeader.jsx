@@ -16,7 +16,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         display: "flex", alignItems: "center", justifyContent: "center",
         color: "#fff", fontWeight: 800
     };
-    const h1 = { margin: 0, fontSize: 28, color: theme.accentDark, letterSpacing: ".02em" };
+    const h1 = { margin: 0, fontSize: 28, color: theme.primaryText, letterSpacing: ".02em" };
     const sub = { color: theme.muted, fontSize: 14 };
 
     return (

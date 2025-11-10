@@ -1,11 +1,12 @@
 :root{
-  --bg:#fff3df; --accent:#ff6138; --accent-dark:#d74e2a; --green:#4ba36e; --blue:#3a6ea5;
+  --accent:#ff6138;--accent-dark:#d74e2a; --green:#4ba36e; --blue:#3a6ea5;
   --text:#3a2a1d; --muted:#a47856; --radius:20px;
 }
+
 *{box-sizing:border-box}
 html, body, #root { height: 100%; }
 body{
-  margin:0; font-family:'Poppins',system-ui,sans-serif; background:var(--bg); color:var(--text);
+  margin:0; font-family:'Poppins',system-ui,sans-serif; color:var(--text);
 }
 
 /* Layout */

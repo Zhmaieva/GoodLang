@@ -104,18 +104,16 @@ export default function RulePage({ data, theme }) {
     };
 
     return (
-        <AppShell theme={theme}>
-            <div style={container}>
-                <BrandHeader theme={theme} title={data.title} subtitle={<>{data.subtitle}</>} />
-                <section style={grid}>
-                    {data.sections.map((section, i) => (
-                        <div key={i}>{renderSection(section)}</div>
-                    ))}
-                </section>
-                <Footer theme={theme}>
-                    © 2025 StepLang • Пояснення правила <em>{data.title}</em>
-                </Footer>
-            </div>
-        </AppShell>
+        <div style={container}>
+            <BrandHeader theme={theme} title={data.title} subtitle={<>{data.subtitle}</>} />
+            <section style={grid}>
+                {data.sections.map((section, i) => (
+                    <div key={i}>{renderSection(section)}</div>
+                ))}
+            </section>
+            <Footer theme={theme}>
+                © 2025 StepLang • Пояснення правила <em>{data.title}</em>
+            </Footer>
+        </div>
     );
 }

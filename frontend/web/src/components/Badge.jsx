@@ -15,7 +15,7 @@ export default function Badge({ theme, tone, children }) {
     };
 
     const tones = {
-        good: { background: theme.good, borderColor: theme.greenDark, color: "#fff" },
+        good: { background: theme.good, borderColor: theme.unselected, color: "#fff" },
         warn: { background: theme.warn, borderColor: "#b8921d", color: theme.text },
         bad:  { background: theme.bad,  borderColor: "#ad2e49", color: "#fff" },
     };

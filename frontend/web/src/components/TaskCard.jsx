@@ -1,52 +1,67 @@
+import PrimaryButton from "./PrimaryButton.jsx";
+import Card from "./Card.jsx";
+
 export default function TaskCard({
                                      theme, uaTask, answer, setAnswer,
                                      isInputDisabled, mainBtnText, onMainButtonClick, loading, textareaRef, onKeyDown
                                  }) {
     const styles = {
-        card: {
-            background: "#fffdf8",
-            border: `3px solid ${theme.accent}`,
-            borderRadius: theme.radius,
-            boxShadow: `4px 4px 0 ${theme.accentDark}`,
-            padding: 20,
-        },
-        ua: { fontSize: 22, fontWeight: 700, color: theme.text },
-        inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
+        ua: { fontSize: 32, fontWeight: 700, color: theme.primaryText },
+        inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", alignItems:"center", gap: 12 },
         textarea: {
-            flex: 1, minHeight: 70, borderRadius: theme.radius, border: `3px solid ${theme.accent}`,
-            background: "#fffaf3", padding: "12px 14px", fontSize: 16, color: theme.text,
-            opacity: isInputDisabled ? 0.7 : 1,
+            width: "100%",
+            resize: 'none',
+            flex: 1,
+            minHeight: 70,
+
+            background: theme.backgroundGlass,
+            backdropFilter: "blur(3px) brightness(1) grayscale(0)",
+            border: theme.borderGlass,
+            boxShadow: `inset ${theme.boxShadowGlass}`,
+            borderRadius: 12,
+            padding: '8px 8px 18px 8px',
+            outline: 'none',
+
+            // fontFamily:
+            //     'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace',
+            fontSize: 16,
+            color: theme.primaryText,
         },
         btn: {
-            background: theme.accent, color: "#fff", fontWeight: 700, border: "none", borderRadius: 999,
-            padding: "12px 20px", fontSize: 15, cursor: loading ? "not-allowed" : "pointer",
-            boxShadow: `3px 3px 0 ${theme.accentDark}`, width: "100%", opacity: loading ? 0.7 : 1,
+            padding: "12px 20px",
+            width: "100%",
+            background: theme.backgroundGlassHighlightBtn,
         },
+        card: {
+            width: "100%",
+            padding: "12px 20px",
+            background: theme.backgroundGlassThick,
+            backdropFilter: "blur(8px) brightness(1) grayscale(0)",
+        }
     };
 
     return (
-        <div style={styles.card} aria-live="polite">
+        <Card style={styles.card} theme={theme} aria-live="polite">
             <div style={styles.ua}>{uaTask}</div>
             <div style={styles.inputWrap}>
-        <textarea
-            ref={textareaRef}
-            placeholder="Введіть переклад англійською…"
-            autoComplete="off"
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-            onKeyDown={onKeyDown}
-            disabled={isInputDisabled}
-            style={styles.textarea}
-        />
-                <button
-                    aria-label="Перевірити переклад"
-                    onClick={onMainButtonClick}
-                    disabled={loading}
-                    style={styles.btn}
-                >
-                    {mainBtnText}
-                </button>
+                <textarea
+                    className={'glass-textarea'}
+                    ref={textareaRef}
+                    placeholder="Введіть переклад англійською…"
+                    autoComplete="off"
+                    value={answer}
+                    onChange={(e) => setAnswer(e.target.value)}
+                    onKeyDown={onKeyDown}
+                    disabled={isInputDisabled}
+                    style={styles.textarea}
+                />
+                <PrimaryButton loading={loading}
+                               onPressed={onMainButtonClick}
+                               style={styles.btn}
+                               label={loading ? 'Перевіряємо...' : mainBtnText}
+                               selected={false}
+                               theme={theme} />
             </div>
-        </div>
+        </Card>
     );
 }

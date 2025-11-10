@@ -7,6 +7,7 @@ import ResultCard from "../ResultCard";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { callAPI } from "../../services/api";
 import {addAnswer, getSeed, saveSeed} from "../../services/dataService.js";
+import PrimaryButton from "../PrimaryButton.jsx";
 
 export default function HomePage({ theme }) {
     const LEVEL_TO_DIFFICULTY = useMemo(
@@ -56,7 +57,7 @@ export default function HomePage({ theme }) {
     }
     function setControlsDisabled(disabled) { setLoading(disabled); }
 
-    async function loadNewTask() {
+    async function loadNewTask(selectedDifficulty = difficulty) {
         try {
             setControlsDisabled(true);
             setAnswer("");
@@ -65,7 +66,7 @@ export default function HomePage({ theme }) {
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const data = await callAPI({ level: difficulty, seed, skip });
+                const data = await callAPI({ level: selectedDifficulty, seed, skip });
                 setTextToTranslate(data.textToTranslate || "");
                 setRules(data.rules || null);
                 setUaTask(data.textToTranslate || "—");
@@ -127,9 +128,10 @@ export default function HomePage({ theme }) {
     async function onMainButtonClick() {
         if (mode === "check") await evaluateAnswer();
         else {
-            setDifficulty(randomDifficulty(level));
+            const diff = randomDifficulty(level);
+            setDifficulty(diff);
             resetToLoadingPlaceholders();
-            await loadNewTask();
+            await loadNewTask(diff);
         }
     }
 
@@ -138,12 +140,13 @@ export default function HomePage({ theme }) {
         if (nextLevel === level) return;
 
         setLevel(nextLevel);
-        setDifficulty(randomDifficulty(nextLevel));
+        const diff = randomDifficulty(nextLevel)
+        setDifficulty(diff);
         setTextToTranslate("");
         //setRule(null);
         setMode("check");
         resetToLoadingPlaceholders();
-        await loadNewTask();
+        await loadNewTask(diff);
     }
 
     function handleKeyDown(e) {
@@ -154,35 +157,25 @@ export default function HomePage({ theme }) {
     const gridStyle = {
         display: "flex",
         flexDirection: "column",
-        gap: 24,
+        gap: 34,
+        alignItems: "center",
     };
 
     // Analytics button (LevelSwitch style)
-    const [hoveredAnalytics, setHoveredAnalytics] = useState(false);
     const analyticsButtonStyles = {
         container: { display: "flex", justifyContent: "center", margin: "16px 0 0", flexDirection: "row",},
-        button: (isHover) => ({
-            appearance: "none",
-            padding: "10px 18px",
-            fontWeight: 800,
-            fontSize: 14,
-            lineHeight: 1,
-            borderRadius: 999,
-            cursor: "pointer",
-            background: "#fffdf8",
-            color: theme.text,
-            border: `2px solid ${theme.accent}`,
-            boxShadow: `2px 2px 0 ${theme.accentDark}`,
-            transform: isHover ? "translateY(1px)" : "none",
-            transition: "transform 120ms ease",
-        }),
+        button: {
+            width: "95%",
+            fontSize: 24,
+            lineHeight: 2,
+            textTransform: "uppercase",
+        }
     };
 
     const navigate = useNavigate();
     const handleAnalyticsClick = () => navigate("/analytics");
 
     return (
-        <AppShell theme={theme}>
             <div ref={containerRef}>
                 <Header
                     theme={theme}
@@ -204,15 +197,14 @@ export default function HomePage({ theme }) {
                         textareaRef={textareaRef}
                         onKeyDown={handleKeyDown}
                     />
-                    <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer}/>
-                    <button
-                        onMouseEnter={() => setHoveredAnalytics(true)}
-                        onMouseLeave={() => setHoveredAnalytics(false)}
-                        style={analyticsButtonStyles.button(hoveredAnalytics)}
-                        onClick={handleAnalyticsClick}
-                    >
-                        Що мені підтягнути? →
-                    </button>
+                    <ResultCard loading={loading} theme={theme} hint={hint} correctAnswer={correctAnswer}/>
+                    <PrimaryButton
+                        label={"Що мені підтягнути? →"}
+                        selected={false}
+                        theme={theme}
+                        onPressed={handleAnalyticsClick}
+                        style={analyticsButtonStyles.button}
+                    />
                 </section>
 
                 <footer style={{
@@ -220,14 +212,12 @@ export default function HomePage({ theme }) {
                     textAlign: "center",
                     color: theme.muted,
                     fontSize: 13,
-                    borderTop: `2px solid ${theme.accent}`,
-                    paddingTop: 12
+                    border: 'none'
                 }}>
                     <div style={analyticsButtonStyles.container}>
                         <div>© 2025 StepLang</div>
                     </div>
                 </footer>
             </div>
-        </AppShell>
     );
 }

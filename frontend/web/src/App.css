@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+
+#root {
+  /* white to black linear noise gradient spanning from top to bottom */
+  background:
+          linear-gradient(rgba(255,255,255,.5), rgba(0,0,0,.5)),
+          url('./assets/noise.svg');
+}
