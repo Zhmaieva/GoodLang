@@ -1,519 +1,508 @@
-{
-  "YES_NO_Q": [
-    {
-      "rules": ["YES_NO_Q", "TO_BE", "SIMPLE_ADJ"],
-      "ua": "Ви готові?",
-      "en": ["Are you ready?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "TO_BE", "PREP_PLACE"],
-      "ua": "Вона вдома?",
-      "en": ["Is she at home?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
-      "ua": "Ти часто читаєш увечері?",
-      "en": ["Do you often read in the evening?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "THERE_IS_ARE", "ARTICLES"],
-      "ua": "Є книга на столі?",
-      "en": ["Is there a book on the table?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "HAVE_HAVE_GOT", "POSSESSIVE_ADJECTIVES"],
-      "ua": "У тебе є брат?",
-      "en": ["Do you have a brother?", "Have you got a brother?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "CAN_CANT", "PERSONAL_PRONOUNS"],
-      "ua": "Він може плавати?",
-      "en": ["Can he swim?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "TO_BE", "PREP_TIME"],
-      "ua": "Зустріч о третій?",
-      "en": ["Is the meeting at three?", "Is the meeting at 3?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_CONTINUOUS_NOW", "PREP_PLACE"],
-      "ua": "Вони зараз працюють в офісі?",
-      "en": ["Are they working in the office now?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "ARTICLES", "COUNT_UNCOUNT"],
-      "ua": "Ти п’єш каву вранці?",
-      "en": ["Do you drink coffee in the morning?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "TO_BE", "PREP_PLACE"],
-      "ua": "Твій телефон у сумці?",
-      "en": ["Is your phone in the bag?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "GOING_TO_PLANS", "PREP_PLACE"],
-      "ua": "Ти збираєшся подзвонити їй сьогодні?",
-      "en": ["Are you going to call her today?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "WILL_PREDICTIONS"],
-      "ua": "Він приїде завтра?",
-      "en": ["Will he come tomorrow?", "Will he arrive tomorrow?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "HAVE_TO_DONT_HAVE_TO"],
-      "ua": "Ви мусите носити форму?",
-      "en": ["Do you have to wear a uniform?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "SHOULD_SHOULDN'T"],
-      "ua": "Мені слід написати йому зараз?",
-      "en": ["Should I text him now?", "Should I write to him now?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "MAY_MIGHT"],
-      "ua": "Ми можемо сісти тут?",
-      "en": ["May we sit here?", "Can we sit here?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "COMPARATIVES", "ARTICLES"],
-      "ua": "Ця кімната більша?",
-      "en": ["Is this room bigger?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "SUPERLATIVES", "ARTICLES"],
-      "ua": "Це найкраще рішення?",
-      "en": ["Is this the best solution?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
-      "ua": "Твоя сестра лікар?",
-      "en": ["Is your sister a doctor?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "LIKE_ING", "PERSONAL_PRONOUNS"],
-      "ua": "Ти любиш готувати?",
-      "en": ["Do you like cooking?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
-      "ua": "Є люди в парку зараз?",
-      "en": ["Are there people in the park now?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_TIME", "ARTICLES"],
-      "ua": "Ти вільний у п’ятницю?",
-      "en": ["Are you free on Friday?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
-      "ua": "Ти бачив учора цей фільм?",
-      "en": ["Did you see that film yesterday?", "Did you see that movie yesterday?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "WAS_WERE", "PREP_PLACE"],
-      "ua": "Вона була в школі вчора?",
-      "en": ["Was she at school yesterday?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PAST_CONTINUOUS", "PREP_TIME"],
-      "ua": "Вони працювали о дев’ятій?",
-      "en": ["Were they working at nine?", "Were they working at 9?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
-      "ua": "Ти вже закінчив?",
-      "en": ["Have you finished yet?", "Have you finished already?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_PERFECT", "SINCE_FOR"],
-      "ua": "Вона тут зранку?",
-      "en": ["Has she been here since morning?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_PERFECT_CONTINUOUS", "SINCE_FOR"],
-      "ua": "Ви чекаєте вже годину?",
-      "en": ["Have you been waiting for an hour?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PAST_PERFECT"],
-      "ua": "Він уже поїв до того, як ти прийшов?",
-      "en": ["Had he eaten before you came?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "USED_TO", "ADVERBS_OF_FREQUENCY"],
-      "ua": "Ти колись грав у теніс регулярно?",
-      "en": ["Did you use to play tennis regularly?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "BE_USED_TO_GET_USED_TO"],
-      "ua": "Вона звикла вставати рано?",
-      "en": ["Is she used to getting up early?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "RELATIVE_CLAUSES", "ARTICLES"],
-      "ua": "Це книга, яку ти шукаєш?",
-      "en": ["Is this the book that you’re looking for?", "Is this the book you’re looking for?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "COUNT_UNCOUNT", "ARTICLES"],
-      "ua": "У нас є час?",
-      "en": ["Do we have time?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-      "ua": "Немає якихось запитань?",
-      "en": ["Aren’t there any questions?", "Are there no questions?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "POSSESSIVE_S", "ARTICLES"],
-      "ua": "Це машина Марка?",
-      "en": ["Is this Mark’s car?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "DEMONSTRATIVES"],
-      "ua": "Це твоя сумка на столі?",
-      "en": ["Is this your bag on the table?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_TIME", "ORDINALS_DATES"],
-      "ua": "Твій день народження першого червня?",
-      "en": ["Is your birthday on the first of June?", "Is your birthday on June 1st?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONTINUOUS", "PREP_TIME"],
-      "ua": "Ти зустрічаєшся з нею завтра?",
-      "en": ["Are you meeting her tomorrow?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "LIKE_LOVE_HATE_ING", "PERSONAL_PRONOUNS"],
-      "ua": "Він ненавидить прибирати?",
-      "en": ["Does he hate cleaning?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
-      "ua": "У холодильнику є молоко?",
-      "en": ["Is there any milk in the fridge?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "TO_BE", "BE_FROM_NATIONALITY"],
-      "ua": "Ви з Польщі?",
-      "en": ["Are you from Poland?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
-      "ua": "Є вільні місця у театрі?",
-      "en": ["Are there any seats in the theatre?", "Are there any seats in the theater?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "MAKE_DO_DIFFERENCE"],
-      "ua": "Це має значення?",
-      "en": ["Does it make a difference?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
-      "ua": "Цей будинок побудовано у 1990?",
-      "en": ["Was this house built in 1990?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "GET_PAST_PARTICIPLE"],
-      "ua": "Він часто потрапляє пораненим у матчах?",
-      "en": ["Does he often get injured in matches?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "QUESTION_TAGS", "TO_BE"],
-      "ua": "Вона вчитель, чи не так?",
-      "en": ["She is a teacher, isn’t she?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "MODAL_VERBS_OF_PROBABILITY", "TO_BE"],
-      "ua": "Це може бути важливо?",
-      "en": ["Could this be important?", "Might this be important?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "LET_MAKE_ALLOW", "PERSONAL_PRONOUNS"],
-      "ua": "Тебе дозволяють залишатися пізно?",
-      "en": ["Are you allowed to stay up late?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "CAUSATIVE_HAVE_GET", "ARTICLES"],
-      "ua": "Ти ремонтуєш машину (в сервісі) зараз?",
-      "en": ["Are you having the car repaired now?", "Are you getting the car repaired now?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PHRASAL_VERBS_COMMON", "PERSONAL_PRONOUNS"],
-      "ua": "Вони часто підбирають дітей зі школи?",
-      "en": ["Do they often pick up the kids from school?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "REFLEXIVE_PRONOUNS", "PERSONAL_PRONOUNS"],
-      "ua": "Ти можеш зробити це сам?",
-      "en": ["Can you do it yourself?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "IN_ORDER_TO_SO_THAT", "PERSONAL_PRONOUNS"],
-      "ua": "Ти вмикаєш будильник, щоб прокинутися вчасно?",
-      "en": ["Do you set an alarm in order to wake up on time?", "Do you set an alarm so that you wake up on time?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "REPORTED_SPEECH", "REPORTED_SPEECH"],
-      "ua": "Він сказав, що ти прийдеш?",
-      "en": ["Did he say you would come?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "TO_BE", "PREP_PLACE"],
-      "ua": "Він на роботі зараз?",
-      "en": ["Is he at work now?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "THERE_IS_ARE", "ARTICLES"],
-      "ua": "Є вільний стіл біля вікна?",
-      "en": ["Is there a free table by the window?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "HAVE_HAVE_GOT", "POSSESSIVE_ADJECTIVES"],
-      "ua": "У них є нова квартира?",
-      "en": ["Do they have a new apartment?", "Have they got a new flat?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-      "ua": "Ти часто бігаєш вранці?",
-      "en": ["Do you often run in the morning?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "ARTICLES", "SIMPLE_ADJ"],
-      "ua": "Це хороша ідея?",
-      "en": ["Is this a good idea?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "CAN_CANT", "PREP_TIME"],
-      "ua": "Ти можеш допомогти мені сьогодні?",
-      "en": ["Can you help me today?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_TIME", "TO_BE"],
-      "ua": "Зустріч у понеділок?",
-      "en": ["Is the meeting on Monday?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "LIKE_ING"],
-      "ua": "Вона любить танцювати?",
-      "en": ["Does she like dancing?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "THERE_IS_ARE"],
-      "ua": "Є люди в офісі після шостої?",
-      "en": ["Are there people in the office after six?", "Are there people in the office after 6?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "POSSESSIVE_S", "ARTICLES"],
-      "ua": "Це машина Іри?",
-      "en": ["Is this Ira’s car?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "GOING_TO_PLANS"],
-      "ua": "Ти збираєшся купити квитки сьогодні?",
-      "en": ["Are you going to buy the tickets today?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "WILL_PREDICTIONS"],
-      "ua": "Вони приїдуть вчасно?",
-      "en": ["Will they arrive on time?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "HAVE_TO_DONT_HAVE_TO"],
-      "ua": "Ти мусиш працювати у вихідні?",
-      "en": ["Do you have to work at the weekend?", "Do you have to work on weekends?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "SHOULD_SHOULDN'T"],
-      "ua": "Ми повинні замовити столик заздалегідь?",
-      "en": ["Should we book a table in advance?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "MAY_MIGHT"],
-      "ua": "Я можу зачинити вікно?",
-      "en": ["May I close the window?", "Can I close the window?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "COMPARATIVES", "ARTICLES"],
-      "ua": "Цей маршрут швидший?",
-      "en": ["Is this route faster?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "SUPERLATIVES", "ARTICLES"],
-      "ua": "Це найновіша версія?",
-      "en": ["Is this the newest version?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "POSSESSIVE_ADJECTIVES"],
-      "ua": "Твій паспорт у сумці?",
-      "en": ["Is your passport in the bag?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "COUNT_UNCOUNT", "ARTICLES"],
-      "ua": "У нас є вода?",
-      "en": ["Do we have any water?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "THERE_IS_ARE", "PREP_PLACE"],
-      "ua": "Є автобусна зупинка поруч?",
-      "en": ["Is there a bus stop nearby?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
-      "ua": "Ти купив хліб учора?",
-      "en": ["Did you buy bread yesterday?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "WAS_WERE", "PREP_PLACE"],
-      "ua": "Вони були вдома ввечері?",
-      "en": ["Were they at home in the evening?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PAST_CONTINUOUS", "PREP_TIME"],
-      "ua": "Ти працював о десятій?",
-      "en": ["Were you working at ten?", "Were you working at 10?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_CONTINUOUS_NOW", "PREP_PLACE"],
-      "ua": "Ти зараз їдеш у метро?",
-      "en": ["Are you riding the subway now?", "Are you on the metro now?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
-      "ua": "Ви вже оплатили рахунок?",
-      "en": ["Have you paid the bill yet?", "Have you already paid the bill?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_PERFECT", "SINCE_FOR"],
-      "ua": "Вона тут від вчора?",
-      "en": ["Has she been here since yesterday?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PRESENT_PERFECT_CONTINUOUS", "SINCE_FOR"],
-      "ua": "Ти чекаєш зранку?",
-      "en": ["Have you been waiting since morning?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PAST_PERFECT"],
-      "ua": "Він закінчив до дедлайну?",
-      "en": ["Had he finished before the deadline?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "USED_TO", "PREP_PLACE"],
-      "ua": "Ти раніше жив у Варшаві?",
-      "en": ["Did you use to live in Warsaw?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "BE_USED_TO_GET_USED_TO"],
-      "ua": "Ти звик вставати о шостій?",
-      "en": ["Are you used to getting up at six?", "Are you used to getting up at 6?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "RELATIVE_CLAUSES", "ARTICLES"],
-      "ua": "Це той ресторан, про який ти говорив?",
-      "en": ["Is this the restaurant that you talked about?", "Is this the restaurant you talked about?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
-      "ua": "Є парковка біля будівлі?",
-      "en": ["Is there parking near the building?", "Is there a car park near the building?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
-      "ua": "Твоя сестра студентка?",
-      "en": ["Is your sister a student?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "LIKE_LOVE_HATE_ING", "PERSONAL_PRONOUNS"],
-      "ua": "Вони люблять подорожувати?",
-      "en": ["Do they like travelling?", "Do they like traveling?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "THERE_IS_ARE", "COUNT_UNCOUNT"],
-      "ua": "Є ще хліб?",
-      "en": ["Is there any bread left?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "ORDINALS_DATES", "PREP_TIME"],
-      "ua": "Екзамен 12-го травня?",
-      "en": ["Is the exam on the twelfth of May?", "Is the exam on May 12th?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONTINUOUS", "PREP_TIME"],
-      "ua": "Ти зустрічаєшся з клієнтом у п’ятницю?",
-      "en": ["Are you meeting the client on Friday?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "MAKE_DO_DIFFERENCE"],
-      "ua": "Це щось змінює?",
-      "en": ["Does it make any difference?", "Does it make a difference?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
-      "ua": "Лист уже надіслано?",
-      "en": ["Has the letter been sent already?", "Has the letter been sent?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "GET_PAST_PARTICIPLE", "PRESENT_SIMPLE_FREQ"],
-      "ua": "Ти часто потрапляєш у затори?",
-      "en": ["Do you often get stuck in traffic?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "QUESTION_TAGS", "TO_BE"],
-      "ua": "Він твій брат, чи не так?",
-      "en": ["He is your brother, isn’t he?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "MODAL_VERBS_OF_PROBABILITY", "TO_BE"],
-      "ua": "Це може бути небезпечно?",
-      "en": ["Could this be dangerous?", "Might this be dangerous?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "LET_MAKE_ALLOW", "PASSIVE_VOICE_ALL_TENSES"],
-      "ua": "Вам дозволено фотографувати тут?",
-      "en": ["Are you allowed to take photos here?", "Are you allowed to take pictures here?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "CAUSATIVE_HAVE_GET", "ARTICLES"],
-      "ua": "Ти віддаєш телефон у ремонт сьогодні?",
-      "en": ["Are you having the phone repaired today?", "Are you getting the phone repaired today?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PHRASAL_VERBS_COMMON"],
-      "ua": "Вони часто підвозять тебе додому?",
-      "en": ["Do they often give you a lift home?", "Do they often drive you home?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "REFLEXIVE_PRONOUNS", "CAN_CANT"],
-      "ua": "Ти можеш зробити це самостійно?",
-      "en": ["Can you do it yourself?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "IN_ORDER_TO_SO_THAT"],
-      "ua": "Ти ставиш будильник, щоб встигнути на поїзд?",
-      "en": ["Do you set an alarm in order to catch the train?", "Do you set an alarm so that you catch the train?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "REPORTED_SPEECH", "REPORTED_SPEECH"],
-      "ua": "Вона сказала, що ти приїдеш?",
-      "en": ["Did she say you would come?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "BE_FROM_NATIONALITY", "TO_BE"],
-      "ua": "Вони з Іспанії?",
-      "en": ["Are they from Spain?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "QUANTIFIERS", "THERE_IS_ARE"],
-      "ua": "Є багато людей у черзі?",
-      "en": ["Are there many people in the queue?", "Are there many people in line?"]
-    },
-    {
-      "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
-      "ua": "Є кімнати в готелі на сьогодні?",
-      "en": ["Are there any rooms in the hotel for today?", "Are there any rooms available in the hotel today?"]
-    }
+{ "YES_NO_Q": [
+  {
+    "rules": ["YES_NO_Q", "TO_BE", "SIMPLE_ADJ"],
+    "ua": "Ви готові? Так, готова.",
+    "en": ["Are you ready? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "TO_BE", "PREP_PLACE"],
+    "ua": "Вона вдома? Так, вона вдома.",
+    "en": ["Is she at home? Yes, she is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+    "ua": "Ти часто читаєш ввечері? Так, читаю.",
+    "en": ["Do you often read in the evening? Yes, I do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Є книга на столі? Так, є.",
+    "en": ["Is there a book on the table? Yes, there is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "HAVE_HAVE_GOT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "У тебе є брат? Так, є.",
+    "en": ["Do you have a brother? Yes, I do.", "Have you got a brother? Yes, I have."]
+  },
+  {
+    "rules": ["YES_NO_Q", "CAN_CANT", "PERSONAL_PRONOUNS"],
+    "ua": "Він може плавати? Так, може.",
+    "en": ["Can he swim? Yes, he can."]
+  },
+  {
+    "rules": ["YES_NO_Q", "TO_BE", "PREP_TIME"],
+    "ua": "Зустріч о третій? Так, о третій.",
+    "en": ["Is the meeting at three? Yes, it is.", "Is the meeting at 3? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_CONTINUOUS_NOW", "PREP_PLACE"],
+    "ua": "Вони зараз працюють в офісі? Так, працюють.",
+    "en": ["Are they working in the office now? Yes, they are."]
+  },
+  {
+    "rules": ["YES_NO_Q", "TO_BE", "PREP_PLACE"],
+    "ua": "Твій телефон у сумці? Так, у сумці.",
+    "en": ["Is your phone in the bag? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "GOING_TO_PLANS", "PREP_PLACE"],
+    "ua": "Ти збираєшся подзвонити їй сьогодні? Так, збираюся.",
+    "en": ["Are you going to call her today? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "WILL_PREDICTIONS"],
+    "ua": "Він приїде завтра? Так, приїде.",
+    "en": ["Will he come tomorrow? Yes, he will.", "Will he arrive tomorrow? Yes, he will."]
+  },
+  {
+    "rules": ["YES_NO_Q", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ви мусите носити форму? Так, мусимо.",
+    "en": ["Do you have to wear a uniform? Yes, we do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "SHOULD_SHOULDN'T"],
+    "ua": "Мені слід написати йому зараз? Так, слід.",
+    "en": ["Should I text him now? Yes, you should.", "Should I write to him now? Yes, you should."]
+  },
+  {
+    "rules": ["YES_NO_Q", "MAY_MIGHT"],
+    "ua": "Ми можемо сісти тут? Так, можемо.",
+    "en": ["May we sit here? Yes, you may.", "Can we sit here? Yes, you can."]
+  },
+  {
+    "rules": ["YES_NO_Q", "COMPARATIVES", "ARTICLES"],
+    "ua": "Ця кімната більша? Так, більша.",
+    "en": ["Is this room bigger? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "SUPERLATIVES", "ARTICLES"],
+    "ua": "Це найкраще рішення? Так, найкраще.",
+    "en": ["Is this the best solution? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
+    "ua": "Твоя сестра лікар? Так, лікар.",
+    "en": ["Is your sister a doctor? Yes, she is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "LIKE_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Ти любиш готувати? Так, люблю.",
+    "en": ["Do you like cooking? Yes, I do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
+    "ua": "Є люди в парку зараз? Так, є.",
+    "en": ["Are there people in the park now? Yes, there are."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_TIME", "ARTICLES"],
+    "ua": "Ти вільний у п’ятницю? Так, я вільний.",
+    "en": ["Are you free on Friday? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
+    "ua": "Ти бачив учора цей фільм? Так, бачив.",
+    "en": ["Did you see that film yesterday? Yes, I did.", "Did you see that movie yesterday? Yes, I did."]
+  },
+  {
+    "rules": ["YES_NO_Q", "WAS_WERE", "PREP_PLACE"],
+    "ua": "Вона була в школі вчора? Так, вона була.",
+    "en": ["Was she at school yesterday? Yes, she was."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PAST_CONTINUOUS", "PREP_TIME"],
+    "ua": "Вони працювали о дев’ятій? Так, працювали.",
+    "en": ["Were they working at nine? Yes, they were.", "Were they working at 9? Yes, they were."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Ти вже закінчив? Так, закінчив.",
+    "en": ["Have you finished yet? Yes, I have.", "Have you finished already? Yes, I have."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Вона тут із самого ранку? Так, вона тут.",
+    "en": ["Has she been here since morning? Yes, she has."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_PERFECT_CONTINUOUS", "SINCE_FOR"],
+    "ua": "Ви чекаєте вже годину? Так, чекаємо.",
+    "en": ["Have you been waiting for an hour? Yes, we have."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PAST_PERFECT"],
+    "ua": "Він уже поїв до того, як ти прийшов? Так, він поїв.",
+    "en": ["Had he eaten before you came? Yes, he had."]
+  },
+  {
+    "rules": ["YES_NO_Q", "USED_TO", "ADVERBS_OF_FREQUENCY"],
+    "ua": "Ти раніше грав у теніс регулярно? Так, грав.",
+    "en": ["Did you use to play tennis regularly? Yes, I did."]
+  },
+  {
+    "rules": ["YES_NO_Q", "BE_USED_TO_GET_USED_TO"],
+    "ua": "Вона звикла вставати рано? Так, звикла.",
+    "en": ["Is she used to getting up early? Yes, she is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "RELATIVE_CLAUSES", "ARTICLES"],
+    "ua": "Це книга, яку ти шукаєш? Так, це вона.",
+    "en": ["Is this the book that you’re looking for? Yes, it is.", "Is this the book you’re looking for? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": "У нас є час? Так, є.",
+    "en": ["Do we have time? Yes, we do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
+    "ua": "Нема питань? Ні, немає.",
+    "en": ["Aren’t there any questions? No, there aren’t.", "Are there no questions? No, there aren’t."]
+  },
+  {
+    "rules": ["YES_NO_Q", "POSSESSIVE_S", "ARTICLES"],
+    "ua": "Це машина Марка? Так, його.",
+    "en": ["Is this Mark’s car? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "DEMONSTRATIVES"],
+    "ua": "Це твоя сумка на столі? Так, моя.",
+    "en": ["Is this your bag on the table? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_TIME", "ORDINALS_DATES"],
+    "ua": "Твій день народження першого червня? Так, першого червня.",
+    "en": ["Is your birthday on the first of June? Yes, it is.", "Is your birthday on June 1st? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONTINUOUS", "PREP_TIME"],
+    "ua": "Ти зустрічаєшся з нею завтра? Так, зустрічаюся.",
+    "en": ["Are you meeting her tomorrow? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "LIKE_LOVE_HATE_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Він ненавидить прибирати? Так, ненавидить.",
+    "en": ["Does he hate cleaning? Yes, he does."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
+    "ua": "У холодильнику є молоко? Так, є.",
+    "en": ["Is there any milk in the fridge? Yes, there is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "TO_BE", "BE_FROM_NATIONALITY"],
+    "ua": "Ви з Польщі? Так, з Польщі.",
+    "en": ["Are you from Poland? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
+    "ua": "Є вільні місця у театрі? Так, є.",
+    "en": ["Are there any seats in the theatre? Yes, there are.", "Are there any seats in the theater? Yes, there are."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+    "ua": "Цей будинок побудовано у 1990? Так.",
+    "en": ["Was this house built in 1990? Yes, it was."]
+  },
+  {
+    "rules": ["YES_NO_Q", "GET_PAST_PARTICIPLE"],
+    "ua": "Він часто травмується на матчах? Так, часто.",
+    "en": ["Does he often get injured in matches? Yes, he does."]
+  },
+  {
+    "rules": ["YES_NO_Q", "QUESTION_TAGS", "TO_BE"],
+    "ua": "Вона вчитель, чи не так? Так, вона.",
+    "en": ["She is a teacher, isn’t she? Yes, she is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "MODAL_VERBS_OF_PROBABILITY", "TO_BE"],
+    "ua": "Це може бути важливо? Так, може.",
+    "en": ["Could this be important? Yes, it could.", "Might this be important? Yes, it might."]
+  },
+  {
+    "rules": ["YES_NO_Q", "LET_MAKE_ALLOW", "PERSONAL_PRONOUNS"],
+    "ua": "Тобі дозволяють залишатися допізна? Так, дозволяють.",
+    "en": ["Are you allowed to stay up late? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": "Ти зараз ремонтуєш машину в сервісі? Так, ремонтую.",
+    "en": ["Are you having the car repaired now? Yes, I am.", "Are you getting the car repaired now? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PHRASAL_VERBS_COMMON", "PERSONAL_PRONOUNS"],
+    "ua": "Вони часто забирають дітей зі школи? Так, забирають.",
+    "en": ["Do they often pick up the kids from school? Yes, they do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "REFLEXIVE_PRONOUNS", "PERSONAL_PRONOUNS"],
+    "ua": "Ти можеш зробити це сам? Так, можу.",
+    "en": ["Can you do it yourself? Yes, I can."]
+  },
+  {
+    "rules": ["YES_NO_Q", "IN_ORDER_TO_SO_THAT", "PERSONAL_PRONOUNS"],
+    "ua": "Ти ставиш будильник, щоб прокинутися вчасно? Так, ставлю.",
+    "en": ["Do you set an alarm in order to wake up on time? Yes, I do.", "Do you set an alarm so that you wake up on time? Yes, I do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "REPORTED_SPEECH", "REPORTED_SPEECH"],
+    "ua": "Він сказав, що ти прийдеш? Так, сказав.",
+    "en": ["Did he say you would come? Yes, he did."]
+  },
+  {
+    "rules": ["YES_NO_Q", "TO_BE", "PREP_PLACE"],
+    "ua": "Він на роботі зараз? Так, на роботі.",
+    "en": ["Is he at work now? Yes, he is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Є вільний стіл біля вікна? Так, є.",
+    "en": ["Is there a free table by the window? Yes, there is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "HAVE_HAVE_GOT", "POSSESSIVE_ADJECTIVES"],
+    "ua": "У них є нова квартира? Так, є.",
+    "en": ["Do they have a new apartment? Yes, they do.", "Have they got a new flat? Yes, they have."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+    "ua": "Ти часто бігаєш вранці? Так, бігаю.",
+    "en": ["Do you often run in the morning? Yes, I do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "ARTICLES", "SIMPLE_ADJ"],
+    "ua": "Це хороша ідея? Так, хороша.",
+    "en": ["Is this a good idea? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "CAN_CANT", "PREP_TIME"],
+    "ua": "Ти можеш допомогти мені сьогодні? Так, можу.",
+    "en": ["Can you help me today? Yes, I can."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_TIME", "TO_BE"],
+    "ua": "Зустріч у понеділок? Так, у понеділок.",
+    "en": ["Is the meeting on Monday? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "LIKE_ING"],
+    "ua": "Вона любить танцювати? Так, любить.",
+    "en": ["Does she like dancing? Yes, she does."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "THERE_IS_ARE"],
+    "ua": "Є люди в офісі після шостої? Так, є.",
+    "en": ["Are there people in the office after six? Yes, there are.", "Are there people in the office after 6? Yes, there are."]
+  },
+  {
+    "rules": ["YES_NO_Q", "POSSESSIVE_S", "ARTICLES"],
+    "ua": "Це машина Іри? Так, її.",
+    "en": ["Is this Ira’s car? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "GOING_TO_PLANS"],
+    "ua": "Ти збираєшся купити квитки сьогодні? Так, збираюся.",
+    "en": ["Are you going to buy the tickets today? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "WILL_PREDICTIONS"],
+    "ua": "Вони приїдуть вчасно? Так, приїдуть.",
+    "en": ["Will they arrive on time? Yes, they will."]
+  },
+  {
+    "rules": ["YES_NO_Q", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти мусиш працювати у вихідні? Так, мушу.",
+    "en": ["Do you have to work at the weekend? Yes, I do.", "Do you have to work on weekends? Yes, I do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "SHOULD_SHOULDN'T"],
+    "ua": "Ми повинні замовити столик заздалегідь? Так, варто.",
+    "en": ["Should we book a table in advance? Yes, we should."]
+  },
+  {
+    "rules": ["YES_NO_Q", "MAY_MIGHT"],
+    "ua": "Я можу зачинити вікно? Так, можеш.",
+    "en": ["May I close the window? Yes, you may.", "Can I close the window? Yes, you can."]
+  },
+  {
+    "rules": ["YES_NO_Q", "COMPARATIVES", "ARTICLES"],
+    "ua": "Цей маршрут швидший? Так, швидший.",
+    "en": ["Is this route faster? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "SUPERLATIVES", "ARTICLES"],
+    "ua": "Це найновіша версія? Так, найновіша.",
+    "en": ["Is this the newest version? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Твій паспорт у сумці? Так, у сумці.",
+    "en": ["Is your passport in the bag? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "COUNT_UNCOUNT", "ARTICLES"],
+    "ua": "У нас є вода? Так, є.",
+    "en": ["Do we have any water? Yes, we do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "THERE_IS_ARE", "PREP_PLACE"],
+    "ua": "Є автобусна зупинка поруч? Так, є.",
+    "en": ["Is there a bus stop nearby? Yes, there is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
+    "ua": "Ти купив хліб учора? Так, купив.",
+    "en": ["Did you buy bread yesterday? Yes, I did."]
+  },
+  {
+    "rules": ["YES_NO_Q", "WAS_WERE", "PREP_PLACE"],
+    "ua": "Вони були вдома ввечері? Так, були.",
+    "en": ["Were they at home in the evening? Yes, they were."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PAST_CONTINUOUS", "PREP_TIME"],
+    "ua": "Ти працював о десятій? Так, працював.",
+    "en": ["Were you working at ten? Yes, I was.", "Were you working at 10? Yes, I was."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_CONTINUOUS_NOW", "PREP_PLACE"],
+    "ua": "Ти зараз їдеш у метро? Так, їду.",
+    "en": ["Are you riding the subway now? Yes, I am.", "Are you on the metro now? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Ви вже оплатили рахунок? Так, оплатили.",
+    "en": ["Have you paid the bill yet? Yes, we have.", "Have you already paid the bill? Yes, we have."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_PERFECT", "SINCE_FOR"],
+    "ua": "Вона тут від вчора? Так, вона тут.",
+    "en": ["Has she been here since yesterday? Yes, she has."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PRESENT_PERFECT_CONTINUOUS", "SINCE_FOR"],
+    "ua": "Ти чекаєш із самого ранку? Так, чекаю.",
+    "en": ["Have you been waiting since morning? Yes, I have."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PAST_PERFECT"],
+    "ua": "Він закінчив до дедлайну? Так, закінчив.",
+    "en": ["Had he finished before the deadline? Yes, he had."]
+  },
+  {
+    "rules": ["YES_NO_Q", "USED_TO", "PREP_PLACE"],
+    "ua": "Ти раніше жив у Варшаві? Так, жив.",
+    "en": ["Did you use to live in Warsaw? Yes, I did."]
+  },
+  {
+    "rules": ["YES_NO_Q", "BE_USED_TO_GET_USED_TO"],
+    "ua": "Ти звик вставати о шостій? Так, звик.",
+    "en": ["Are you used to getting up at six? Yes, I am.", "Are you used to getting up at 6? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "RELATIVE_CLAUSES", "ARTICLES"],
+    "ua": "Це той ресторан, про який ти говорив? Так, той самий.",
+    "en": ["Is this the restaurant that you talked about? Yes, it is.", "Is this the restaurant you talked about? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
+    "ua": "Є парковка біля будівлі? Так, є.",
+    "en": ["Is there parking near the building? Yes, there is.", "Is there a car park near the building? Yes, there is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
+    "ua": "Твоя сестра студентка? Так, студентка.",
+    "en": ["Is your sister a student? Yes, she is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "LIKE_LOVE_HATE_ING", "PERSONAL_PRONOUNS"],
+    "ua": "Вони люблять подорожувати? Так, люблять.",
+    "en": ["Do they like travelling? Yes, they do.", "Do they like traveling? Yes, they do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "THERE_IS_ARE", "COUNT_UNCOUNT"],
+    "ua": "Є ще хліб? Так, є.",
+    "en": ["Is there any bread left? Yes, there is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "ORDINALS_DATES", "PREP_TIME"],
+    "ua": "Екзамен 12-го травня? Так.",
+    "en": ["Is the exam on the twelfth of May? Yes, it is.", "Is the exam on May 12th? Yes, it is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONTINUOUS", "PREP_TIME"],
+    "ua": "Ти зустрічаєшся з клієнтом у п’ятницю? Так, зустрічаюся.",
+    "en": ["Are you meeting the client on Friday? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "MAKE_DO_DIFFERENCE"],
+    "ua": "Це щось змінює? Так, змінює.",
+    "en": ["Does it make any difference? Yes, it does.", "Does it make a difference? Yes, it does."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
+    "ua": "Лист уже надіслано? Так, надіслано.",
+    "en": ["Has the letter been sent already? Yes, it has.", "Has the letter been sent? Yes, it has."]
+  },
+  {
+    "rules": ["YES_NO_Q", "GET_PAST_PARTICIPLE", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ти часто потрапляєш у затори? Так, потрапляю.",
+    "en": ["Do you often get stuck in traffic? Yes, I do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "QUESTION_TAGS", "TO_BE"],
+    "ua": "Він твій брат, чи не так? Так, мій.",
+    "en": ["He is your brother, isn’t he? Yes, he is."]
+  },
+  {
+    "rules": ["YES_NO_Q", "MODAL_VERBS_OF_PROBABILITY", "TO_BE"],
+    "ua": "Це може бути небезпечно? Так, може.",
+    "en": ["Could this be dangerous? Yes, it could.", "Might this be dangerous? Yes, it might."]
+  },
+  {
+    "rules": ["YES_NO_Q", "LET_MAKE_ALLOW", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Вам дозволено фотографувати тут? Так, дозволено.",
+    "en": ["Are you allowed to take photos here? Yes, we are.", "Are you allowed to take pictures here? Yes, we are."]
+  },
+  {
+    "rules": ["YES_NO_Q", "CAUSATIVE_HAVE_GET", "ARTICLES"],
+    "ua": "Ти віддаєш телефон у ремонт сьогодні? Так, віддаю.",
+    "en": ["Are you having the phone repaired today? Yes, I am.", "Are you getting the phone repaired today? Yes, I am."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PHRASAL_VERBS_COMMON"],
+    "ua": "Вони часто підвозять тебе додому? Так, підвозять.",
+    "en": ["Do they often give you a lift home? Yes, they do.", "Do they often drive you home? Yes, they do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "REFLEXIVE_PRONOUNS", "CAN_CANT"],
+    "ua": "Ти можеш зробити це самостійно? Так, можу.",
+    "en": ["Can you do it yourself? Yes, I can."]
+  },
+  {
+    "rules": ["YES_NO_Q", "IN_ORDER_TO_SO_THAT"],
+    "ua": "Ти ставиш будильник, щоб встигнути на поїзд? Так, ставлю.",
+    "en": ["Do you set an alarm in order to catch the train? Yes, I do.", "Do you set an alarm so that you catch the train? Yes, I do."]
+  },
+  {
+    "rules": ["YES_NO_Q", "REPORTED_SPEECH", "REPORTED_SPEECH"],
+    "ua": "Вона сказала, що ти приїдеш? Так, сказала.",
+    "en": ["Did she say you would come? Yes, she did."]
+  },
+  {
+    "rules": ["YES_NO_Q", "BE_FROM_NATIONALITY", "TO_BE"],
+    "ua": "Вони з Іспанії? Так, з Іспанії.",
+    "en": ["Are they from Spain? Yes, they are."]
+  },
+  {
+    "rules": ["YES_NO_Q", "QUANTIFIERS", "THERE_IS_ARE"],
+    "ua": "Є багато людей у черзі? Так, багато.",
+    "en": ["Are there many people in the queue? Yes, there are.", "Are there many people in line? Yes, there are."]
+  },
+  {
+    "rules": ["YES_NO_Q", "PREP_PLACE", "ARTICLES"],
+    "ua": "Є кімнати в готелі на сьогодні? Так, є.",
+    "en": ["Are there any rooms in the hotel for today? Yes, there are.", "Are there any rooms available in the hotel today? Yes, there are."]
+  }
   ]
 }

@@ -1,0 +1,652 @@
+{ "COMPLEX_NOUN_PHRASES": [
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_INF", "SIMPLE_ADJ"],
+    "ua": "Рішення покинути місто було важким.",
+    "en": ["The decision to leave the city was difficult.", "It was a hard decision to leave the city."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_PLACE", "POSSESSIVE_S"],
+    "ua": "Мені подобається її спосіб спілкування з людьми.",
+    "en": ["I like her way of talking to people.", "Her way of speaking with others appeals to me."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Ми не мали шансу на успіх.",
+    "en": ["We had no chance of success.", "There was no chance of winning."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Ідея, яку він запропонував, була блискучою.",
+    "en": ["The idea that he suggested was brilliant.", "The idea proposed by him was excellent."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Причина, чому вони спізнилися, була очевидною.",
+    "en": ["The reason why they were late was obvious.", "The reason for their delay was clear."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "GERUND_VS_INFINITIVE"],
+    "ua": "Його звичка перебивати людей дратує мене.",
+    "en": ["His habit of interrupting people annoys me.", "I get annoyed by his habit of interrupting others."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_TIME"],
+    "ua": "Ідея раннього від’їзду мене не приваблює.",
+    "en": ["The idea of leaving early doesn’t appeal to me.", "I don’t like the idea of leaving so soon."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TOO_VERY"],
+    "ua": "Вона має дуже цікаву здатність розв’язувати складні проблеми.",
+    "en": ["She has a very interesting ability to solve complex problems.", "Her ability to solve difficult issues is impressive."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PERSONAL_PRONOUNS"],
+    "ua": "Мені не подобається його звичка запізнюватися.",
+    "en": ["I don’t like his habit of being late.", "His habit of arriving late annoys me."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],
+    "ua": "Найкраща річ у тому, щоб працювати з ним, — це атмосфера довіри.",
+    "en": ["The best thing about working with him is the atmosphere of trust.", "What’s great about working with him is the sense of trust."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_INF"],
+    "ua": "Ми обговорили план поїхати за кордон.",
+    "en": ["We discussed the plan to go abroad.", "We talked about the plan to travel overseas."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "GERUND_VS_INFINITIVE"],
+    "ua": "Вона висловила бажання навчатися в університеті.",
+    "en": ["She expressed a desire to study at university.", "She said she wanted to attend college."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Факт, що він прийшов пізно, нікого не здивував.",
+    "en": ["The fact that he came late didn’t surprise anyone.", "No one was surprised by the fact that he was late."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "SIMPLE_ADJ"],
+    "ua": "Вона має чудову здатність запам’ятовувати імена.",
+    "en": ["She has an amazing ability to remember names.", "Her ability to recall names is impressive."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Вони обговорили можливість співпраці.",
+    "en": ["They discussed the possibility of cooperation.", "They talked about the possibility of working together."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Причина, чому вона відмовилася, була зрозумілою.",
+    "en": ["The reason why she refused was clear.", "It was clear why she refused."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PERSONAL_PRONOUNS"],
+    "ua": "Мені подобається його ідея створити власний бізнес.",
+    "en": ["I like his idea to start his own business.", "I like the idea of him starting a company."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "GERUND_VS_INFINITIVE"],
+    "ua": "Їхня спроба вирішити проблему була вдалою.",
+    "en": ["Their attempt to solve the problem was successful.", "They succeeded in trying to solve the issue."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Вона не схвалила його рішення змінити роботу.",
+    "en": ["She didn’t approve of his decision to change jobs.", "She disagreed with his choice to leave the company."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TOO_VERY"],
+    "ua": "У нього дуже сильне бажання досягти успіху.",
+    "en": ["He has a very strong desire to succeed.", "His desire to achieve success is very strong."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_TIME"],
+    "ua": "Ми говорили про важливість раннього приїзду.",
+    "en": ["We talked about the importance of arriving early.", "We discussed how important it is to come on time."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "SIMPLE_ADJ"],
+    "ua": "Це була чудова можливість зустріти нових людей.",
+    "en": ["It was a great opportunity to meet new people.", "That was an excellent chance to make new friends."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Він не очікував її реакції на новину.",
+    "en": ["He didn’t expect her reaction to the news.", "Her reaction to the news surprised him."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_PLACE"],
+    "ua": "Його пояснення щодо ситуації було переконливим.",
+    "en": ["His explanation of the situation was convincing.", "The way he explained the situation was convincing."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ми обговорили його прохання допомогти з проєктом.",
+    "en": ["We discussed his request to help with the project.", "We talked about his request for assistance."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Мені сподобалася його пропозиція піти на вечерю.",
+    "en": ["I liked his suggestion to go out for dinner.", "I liked the idea of having dinner out."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ми здивувалися її відмові від участі.",
+    "en": ["We were surprised by her refusal to take part.", "Her refusal to participate surprised us."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Їхня домовленість працювати разом була вигідною для обох сторін.",
+    "en": ["Their agreement to work together was beneficial for both sides.", "Their deal to cooperate helped both."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ідея переїхати в інше місто виглядала привабливо.",
+    "en": ["The idea of moving to another city seemed attractive.", "The thought of relocating sounded appealing."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ми оцінили його пропозицію прийти раніше.",
+    "en": ["We appreciated his offer to come earlier.", "We were grateful for his offer to arrive sooner."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "GERUND_VS_INFINITIVE"],
+    "ua": "Її страх виступати публічно заважав кар’єрі.",
+    "en": ["Her fear of speaking in public affected her career.", "Her fear of public speaking held her back."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Факт, що вона отримала стипендію, усіх порадував.",
+    "en": ["The fact that she got a scholarship pleased everyone.", "Everyone was happy about her getting a scholarship."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Його прагнення допомагати іншим надихає.",
+    "en": ["His desire to help others is inspiring.", "His wish to support people motivates others."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Мені подобається її ідея створити спільноту для студентів.",
+    "en": ["I like her idea to create a community for students.", "Her idea of building a student community sounds great."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Їхня пропозиція знизити ціни була розумною.",
+    "en": ["Their proposal to lower the prices was reasonable.", "Their suggestion to reduce prices made sense."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_INF"],
+    "ua": "Ми обговорили їхнє рішення не продовжувати контракт.",
+    "en": ["We discussed their decision not to renew the contract.", "We talked about their choice to end the deal."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_TIME"],
+    "ua": "Ідея навчатися влітку мене не приваблює.",
+    "en": ["The idea of studying in summer doesn’t appeal to me.", "I don’t like the idea of taking classes in summer."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Він не погодився з пропозицією підвищити податки.",
+    "en": ["He disagreed with the proposal to raise taxes.", "He didn’t support the idea of increasing taxes."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Причина, з якої він це зробив, мені невідома.",
+    "en": ["The reason why he did it is unknown to me.", "I don’t know the reason he did that."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Ідея, що він може піти, мене здивувала.",
+    "en": ["The idea that he might leave surprised me.", "I was surprised by the idea that he could leave."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Факт, що вона нічого не сказала, мене здивував.",
+    "en": ["The fact that she said nothing surprised me.", "I was surprised by the fact that she stayed silent."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Питання, хто це зробив, залишається відкритим.",
+    "en": ["The question who did it remains open.", "The question of who was responsible is still unanswered."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ідея, що він може бути винен, була шокуючою.",
+    "en": ["The idea that he might be guilty was shocking.", "The thought that he could be guilty shocked everyone."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Причина, чому вона мовчала, тепер зрозуміла.",
+    "en": ["The reason why she kept silent is clear now.", "It’s clear now why she stayed quiet."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WILL_PREDICTIONS"],
+    "ua": "Ймовірність того, що завтра буде дощ, велика.",
+    "en": ["The probability that it will rain tomorrow is high.", "There’s a high chance that it will rain tomorrow."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "ZERO_CONDITIONAL"],
+    "ua": "Ідея, що кожен може змінитися, мені подобається.",
+    "en": ["The idea that everyone can change appeals to me.", "I like the thought that people are capable of change."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Факт, що він завжди запізнюється, дратує мене.",
+    "en": ["The fact that he’s always late annoys me.", "It annoys me that he’s constantly late."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Питання, чи він скаже правду, залишається відкритим.",
+    "en": ["The question whether he will tell the truth remains open.", "It’s still uncertain whether he’ll be honest."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Факт, що вони не відповіли, мене здивував.",
+    "en": ["The fact that they didn’t reply surprised me.", "I was surprised they didn’t respond."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "Ідея, що вона сказала правду, здавалася неправдоподібною.",
+    "en": ["The idea that she told the truth seemed unlikely.", "It didn’t seem possible that she was telling the truth."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_TIME"],
+    "ua": "Питання, коли це станеться, залишається невідомим.",
+    "en": ["The question when it will happen remains unknown.", "Nobody knows when it will happen."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Факт, що вони живуть поруч, полегшує співпрацю.",
+    "en": ["The fact that they live nearby makes cooperation easier.", "It’s easier to work together because they live close."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PERSONAL_PRONOUNS"],
+    "ua": "Мене потішила новина, що вона склала іспит.",
+    "en": ["I was pleased by the news that she passed the exam.", "The news that she succeeded made me happy."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Імовірність того, що він скасує зустріч, невелика.",
+    "en": ["The possibility that he will cancel the meeting is low.", "There’s little chance he’ll cancel the meeting."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WAS_WERE"],
+    "ua": "Факт, що вони були разом, ніхто не приховував.",
+    "en": ["The fact that they were together wasn’t hidden.", "No one tried to hide the fact that they were a couple."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Питання, чому він це зробив, залишилося без відповіді.",
+    "en": ["The question why he did it remained unanswered.", "Nobody answered the question of why he did it."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ідея, що він міг брехати, мене засмутила.",
+    "en": ["The idea that he could have lied upset me.", "I was upset by the thought that he might have lied."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Факт, що він не прийшов, не означає, що він байдужий.",
+    "en": ["The fact that he didn’t come doesn’t mean he doesn’t care.", "Just because he didn’t come doesn’t mean he’s indifferent."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TOO_ENOUGH"],
+    "ua": "Імовірність того, що вони знайдуть рішення, досить висока.",
+    "en": ["The probability that they will find a solution is quite high.", "There’s a good chance they’ll solve the problem."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],
+    "ua": "Факт, що це правда, мене радує.",
+    "en": ["The fact that it’s true makes me happy.", "I’m glad that it’s true."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "Ідея, що він колись працював тут, цікава.",
+    "en": ["The idea that he once worked here is interesting.", "It’s interesting that he used to work here."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Факт, що ми зараз говоримо про це, показує важливість теми.",
+    "en": ["The fact that we’re talking about it now shows the importance of the topic.", "Discussing it now proves how important it is."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Причина, чому вони вирішили піти, мені зрозуміла.",
+    "en": ["The reason why they decided to leave is clear to me.", "I understand the reason they chose to go."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Питання, чи вони залишаться надовго, мене цікавить.",
+    "en": ["The question whether they’ll stay long interests me.", "I’m curious whether they’ll stay for long."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_PERFECT"],
+    "ua": "Факт, що він уже поїхав, мене здивував.",
+    "en": ["The fact that he had already left surprised me.", "I was surprised to hear that he’d gone."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Імовірність того, що ми виграємо, дуже мала.",
+    "en": ["The probability that we’ll win is very small.", "There’s a very low chance of our winning."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Факт, що вона часто подорожує, мене надихає.",
+    "en": ["The fact that she often travels inspires me.", "Her frequent travels inspire me."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ідея, що вони могли помилитися, звучить правдоподібно.",
+    "en": ["The idea that they might have been wrong sounds plausible.", "It seems possible that they made a mistake."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_INF"],
+    "ua": "План, щоб усі працювали разом, був чудовим.",
+    "en": ["The plan for everyone to work together was great.", "The idea of everyone cooperating was excellent."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Факт, що діти швидко вчаться, завжди мене дивує.",
+    "en": ["The fact that children learn so quickly always amazes me.", "I’m always amazed that kids learn so fast."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],
+    "ua": "Те, що він прийшов так пізно, було дивним.",
+    "en": ["That he came so late was strange.", "It was strange that he arrived so late."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вона нічого не сказала, мене здивувало.",
+    "en": ["That she said nothing surprised me.", "It surprised me that she remained silent."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вони виграли, нікого не здивувало.",
+    "en": ["That they won surprised nobody.", "It wasn’t surprising that they won."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що він відмовився допомагати, мене розчарувало.",
+    "en": ["That he refused to help disappointed me.", "I was disappointed that he didn’t help."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вона запізнилася, не мало значення.",
+    "en": ["That she was late didn’t matter.", "It didn’t matter that she arrived late."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "Те, що він не подзвонив, мене засмутило.",
+    "en": ["That he didn’t call upset me.", "It upset me that he failed to call."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вони не погодилися, було очікувано.",
+    "en": ["That they disagreed was expected.", "It was expected that they would disagree."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TOO_VERY"],
+    "ua": "Те, що вона була надто зайнята, пояснює її мовчання.",
+    "en": ["That she was too busy explains her silence.", "The fact she was very busy explains why she said nothing."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Те, що він не довіряє нікому, мене непокоїть.",
+    "en": ["That he doesn’t trust anyone worries me.", "It worries me that he trusts nobody."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PERSONAL_PRONOUNS"],
+    "ua": "Те, що ти не послухав мене, було помилкою.",
+    "en": ["That you didn’t listen to me was a mistake.", "It was a mistake that you ignored me."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],
+    "ua": "Те, що це сталося так швидко, мене шокувало.",
+    "en": ["That it happened so quickly shocked me.", "I was shocked that it happened so fast."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що він поїхав без прощання, мене образило.",
+    "en": ["That he left without saying goodbye offended me.", "I felt hurt that he left without a word."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що ми запізнилися, було нашою провиною.",
+    "en": ["That we were late was our fault.", "It was our fault that we arrived late."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Те, що він пішов, не означає, що він слабкий.",
+    "en": ["That he left doesn’t mean he’s weak.", "The fact he left doesn’t imply weakness."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WAS_WERE"],
+    "ua": "Те, що вони були разом, усі знали.",
+    "en": ["That they were together was known to everyone.", "Everyone knew they were a couple."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що ми залишилися вдома, виявилося правильним рішенням.",
+    "en": ["That we stayed home turned out to be the right decision.", "Staying home proved to be the right choice."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що він говорив упевнено, переконало всіх.",
+    "en": ["That he spoke confidently convinced everyone.", "Everyone was convinced because he spoke confidently."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Те, що ми зараз обговорюємо це, уже крок уперед.",
+    "en": ["That we’re discussing it now is already a step forward.", "Talking about it now is progress."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "MAY_MIGHT"],
+    "ua": "Те, що це може статися знову, мене лякає.",
+    "en": ["That it might happen again scares me.", "I’m afraid it could happen again."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_PERFECT"],
+    "ua": "Те, що він уже поїхав, стало несподіванкою.",
+    "en": ["That he had already left came as a surprise.", "It was surprising that he’d already gone."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "FUTURE_WITH_PRESENT_CONT"],
+    "ua": "Те, що вона виїжджає завтра, мене засмучує.",
+    "en": ["That she’s leaving tomorrow makes me sad.", "It makes me sad that she’s leaving tomorrow."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WILL_PREDICTIONS"],
+    "ua": "Те, що ми переможемо, здається очевидним.",
+    "en": ["That we’ll win seems obvious.", "It seems clear that we are going to win."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "ZERO_CONDITIONAL"],
+    "ua": "Те, що якщо він працює — то багато, показує його відданість.",
+    "en": ["That when he works, he works hard, shows his dedication.", "It shows his commitment that he always gives his best."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Те, що він помилився, не означає, що він дурний.",
+    "en": ["That he made a mistake doesn’t mean he’s stupid.", "Making a mistake doesn’t make him foolish."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Те, що вона не відповідає, не означає, що вона сердиться.",
+    "en": ["That she doesn’t reply doesn’t mean she’s angry.", "Her silence doesn’t mean she’s upset."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_INF"],
+    "ua": "Те, що він вирішив піти, мене не дивує.",
+    "en": ["That he decided to leave doesn’t surprise me.", "I’m not surprised that he chose to go."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],
+    "ua": "Те, що це було її рішення, тепер очевидно.",
+    "en": ["That it was her decision is obvious now.", "It’s now clear that the decision was hers."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вони запізнилися, не вплинуло на результат.",
+    "en": ["That they were late didn’t affect the result.", "Their being late didn’t change the outcome."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_INF"],
+    "ua": "Те, що він наважився це сказати, заслуговує на повагу.",
+    "en": ["That he dared to say it deserves respect.", "It deserves respect that he had the courage to say it."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вона так швидко навчилася, вражає.",
+    "en": ["That she learned so quickly is impressive.", "It’s impressive how fast she learned."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],
+    "ua": "Очевидно, що він має рацію.",
+    "en": ["It’s obvious that he is right.", "It’s clear that he’s correct."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Мені здається, що вона не розуміє ситуації.",
+    "en": ["It seems that she doesn’t understand the situation.", "I think she doesn’t get what’s happening."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PERSONAL_PRONOUNS"],
+    "ua": "Я знаю, що ти сказав правду.",
+    "en": ["I know that you told the truth.", "I’m sure you were honest."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Ми розуміємо, що ти зараз переживаєш.",
+    "en": ["We understand that you’re going through a lot.", "We get that you’re struggling now."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона вірить, що все відбувається з якоїсь причини.",
+    "en": ["She believes that everything happens for a reason.", "She thinks there’s always a reason for things."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "MAY_MIGHT"],
+    "ua": "Можливо, що він помилився.",
+    "en": ["It’s possible that he might be wrong.", "Maybe he made a mistake."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WILL_PREDICTIONS"],
+    "ua": "Ймовірно, що завтра буде дощ.",
+    "en": ["It’s likely that it will rain tomorrow.", "There’s a good chance it’ll rain tomorrow."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ми щасливі, що він залишився, хоча міг поїхати.",
+    "en": ["We’re happy that he stayed even though he could have left.", "It makes us glad that he decided to stay."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Я шкодую, що сказав це.",
+    "en": ["I regret that I said it.", "I’m sorry that I said that."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Мені не подобається, що вони постійно сперечаються.",
+    "en": ["I don’t like that they’re always arguing.", "It bothers me that they argue all the time."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "Ми були здивовані, що він прийшов рано.",
+    "en": ["We were surprised that he came early.", "It surprised us that he arrived so soon."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WAS_WERE"],
+    "ua": "Мене тішить, що вони були чесними.",
+    "en": ["I’m glad that they were honest.", "It makes me happy that they told the truth."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Мене засмучує, що він не відповідає.",
+    "en": ["It upsets me that he doesn’t reply.", "I’m sad that he isn’t answering."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вона змінила роботу, мене не здивувало.",
+    "en": ["The fact that she changed her job didn’t surprise me.", "I wasn’t surprised that she switched careers."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_TIME"],
+    "ua": "Ми не знали, коли вони повернуться.",
+    "en": ["We didn’t know when they would come back.", "We weren’t sure about the time of their return."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Мені цікаво, чому він так сказав.",
+    "en": ["I wonder why he said that.", "It makes me curious why he spoke that way."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Те, як вона розповіла історію, вразило нас.",
+    "en": ["The way she told the story impressed us.", "We were impressed by how she told the story."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Мені не подобається, що вони забули про запрошення.",
+    "en": ["I don’t like that they forgot the invitation.", "I dislike the fact that they ignored the invite."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Він не може повірити, що вони це зробили.",
+    "en": ["He can’t believe that they did it.", "He refuses to believe they actually did it."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "MODALS_OF_PROBABILITY"],
+    "ua": "Ймовірно, що він не знав про це.",
+    "en": ["It’s probable that he didn’t know about it.", "He probably wasn’t aware of it."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ми впевнені, що вони прийдуть.",
+    "en": ["We’re sure that they’ll come.", "We’re certain that they will arrive."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_PERFECT"],
+    "ua": "Вона шкодувала, що не сказала цього раніше.",
+    "en": ["She regretted that she hadn’t said it earlier.", "She was sorry for not saying it before."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ми всі бачили, як він переміг.",
+    "en": ["We all saw how he won.", "Everyone saw the way he won."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],
+    "ua": "Очевидно, що це була її помилка.",
+    "en": ["It’s obvious that it was her mistake.", "It’s clear that she made an error."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Я не розумію, чому вони це приховують.",
+    "en": ["I don’t understand why they’re hiding it.", "I can’t figure out why they conceal it."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "THERE_IS_ARE"],
+    "ua": "Очевидно, що там було непорозуміння.",
+    "en": ["It’s clear that there was a misunderstanding.", "Apparently there was some confusion."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_INF"],
+    "ua": "Мені подобається, що він вирішив допомогти.",
+    "en": ["I like that he decided to help.", "I appreciate his decision to help."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ми щасливі, що вони залишилися, бо скучали б без них.",
+    "en": ["We’re happy that they stayed because we’d miss them.", "It’s good they stayed — we would’ve missed them."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
+    "ua": "Те, що він зробив, змінило мою думку.",
+    "en": ["What he did changed my mind.", "His action made me change my opinion."]
+  },
+  {
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Мені подобається, як вона розмовляє з людьми.",
+    "en": ["I like how she talks to people.", "Her way of talking to people appeals to me."]
+  }
+] }

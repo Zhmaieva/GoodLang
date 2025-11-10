@@ -1,0 +1,507 @@
+{ "CORRELATIVE_CONJUNCTIONS": [
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NOT_ONLY_BUT_ALSO"],
+    "ua": "Вона не лише розумна, але й дуже працьовита.",
+    "en": ["She is not only smart but also very hardworking.", "She’s not only intelligent but also diligent."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ми або підемо в кіно, або залишимось удома.",
+    "en": ["We will either go to the cinema or stay at home.", "Either we go to the movies or we stay in."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні він, ні його сестра не знають відповіді.",
+    "en": ["Neither he nor his sister knows the answer.", "Neither he nor his sister does know the answer."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "BOTH_AND"],
+    "ua": "Вона любить і каву, і чай.",
+    "en": ["She likes both coffee and tea.", "She enjoys both coffee and tea."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Як ти, так і я погоджуємось з цим рішенням.",
+    "en": ["Both you and I agree with this decision.", "You and I both agree with that decision."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "WILL_PREDICTIONS"],
+    "ua": "Я не впевнений, чи він прийде, чи ні.",
+    "en": ["I’m not sure whether he will come or not.", "I don’t know if he’ll come or not."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Він такий самий розумний, як і його брат.",
+    "en": ["He is as clever as his brother.", "He’s just as smart as his brother."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти поясни все, або я піду.",
+    "en": ["Either you explain everything or I’m leaving.", "You must either explain everything or I’ll go."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Не тільки дощ, але й вітер зробили прогулянку неприємною.",
+    "en": ["Not only the rain but also the wind made the walk unpleasant.", "It was not only raining but also windy, which spoiled the walk."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "THERE_IS_ARE"],
+    "ua": "Тут є і хороші, і погані новини.",
+    "en": ["There are both good and bad news here.", "We’ve got both good and bad news."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І моя мама, і тато підтримали моє рішення.",
+    "en": ["Both my mother and father supported my decision.", "My mom and dad both agreed with my choice."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ми можемо або піти на пляж, або залишитись удома.",
+    "en": ["We can either go to the beach or stay at home.", "Either we go to the beach or we stay in."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні Анна, ні Марія не відповіли на моє повідомлення.",
+    "en": ["Neither Anna nor Maria replied to my message.", "Neither Anna nor Maria answered my text."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "SIMPLE_ADJ"],
+    "ua": "Вона не лише красива, але й добра.",
+    "en": ["She is not only beautiful but also kind.", "She’s not only pretty but also kind-hearted."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Ця страва така ж смачна, як учора.",
+    "en": ["This dish is as delicious as yesterday.", "It’s just as tasty as it was yesterday."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Я не знаю, чи він прийде сьогодні, чи завтра.",
+    "en": ["I don’t know whether he will come today or tomorrow.", "I’m not sure if he’ll come today or tomorrow."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти зателефонуєш йому, або я це зроблю.",
+    "en": ["Either you call him or I will.", "You can either call him or I’ll do it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PREP_TIME"],
+    "ua": "Вона працює і вдень, і вночі.",
+    "en": ["She works both during the day and at night.", "She works day and night both."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Він не такий високий, як його брат.",
+    "en": ["He isn’t as tall as his brother.", "He’s not as tall as his brother."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ані погода, ані настрій не сприяли прогулянці.",
+    "en": ["Neither the weather nor the mood was good for a walk.", "Neither the weather nor the mood helped the walk."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І фільм, і актори були чудовими.",
+    "en": ["Both the movie and the actors were great.", "The film and the cast were both excellent."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Він або забув, або просто не захотів приходити.",
+    "en": ["He either forgot or just didn’t want to come.", "Either he forgot or he didn’t feel like coming."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише студенти, а й викладачі протестували.",
+    "en": ["Not only the students but also the teachers protested.", "Both students and teachers took part in the protest."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Моє місто таке ж старе, як і ваше.",
+    "en": ["My city is as old as yours.", "My town is just as old as yours."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ніхто з них не слухав і не відповідав.",
+    "en": ["Neither of them was listening nor answering.", "They were neither listening nor replying."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ми або переможемо, або навчимося чомусь новому.",
+    "en": ["We’ll either win or learn something new.", "Either we win or we gain experience."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "Вона не лише прочитала книгу, але й написала рецензію.",
+    "en": ["She not only read the book but also wrote a review.", "Not only did she read the book, but she also reviewed it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Його будинок такий самий великий, як і мій.",
+    "en": ["His house is as big as mine.", "His home is the same size as mine."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ні я, ні ти не були готові до цього.",
+    "en": ["Neither I nor you were ready for this.", "Neither of us was prepared for it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти вибачишся, або втратиш друга.",
+    "en": ["Either you apologize or you’ll lose your friend.", "You must either say sorry or lose your friend."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І книга, і фільм базуються на тій самій історії.",
+    "en": ["Both the book and the movie are based on the same story.", "The film and the book both share the same story."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Він не такий швидкий, як я думав.",
+    "en": ["He isn’t as fast as I thought."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не тільки я, але й усі інші помітили цю помилку.",
+    "en": ["Not only I but everyone else noticed the mistake.", "Everyone, not just me, saw the error."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Я не можу вирішити, чи купити червону, чи синю сорочку.",
+    "en": ["I can’t decide whether to buy the red or the blue shirt.", "I’m not sure if I should buy the red or the blue one."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні фільм, ні серіал мені не сподобалися.",
+    "en": ["Neither the movie nor the series appealed to me.", "I didn’t like either the film or the show."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PRESENT_PERFECT"],
+    "ua": "І він, і його сестра вже приїхали.",
+    "en": ["Both he and his sister have already arrived.", "He and his sister have both come."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Не тільки дорога, а й міст були пошкоджені.",
+    "en": ["Not only the road but also the bridge was damaged.", "Both the road and the bridge were destroyed."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "SIMPLE_ADJ"],
+    "ua": "Її голос такий же приємний, як і її усмішка.",
+    "en": ["Her voice is as pleasant as her smile.", "Her voice sounds just as nice as her smile looks."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ти або з нами, або проти нас.",
+    "en": ["You are either with us or against us.", "Either you’re on our side or you’re not."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ані я, ані мої друзі цього не розуміємо.",
+    "en": ["Neither I nor my friends understand this.", "We don’t understand it, neither I nor my friends."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І музика, і атмосфера були чудовими.",
+    "en": ["Both the music and the atmosphere were amazing.", "The atmosphere and the music both were wonderful."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І моя сестра, і брат живуть за кордоном.",
+    "en": ["Both my sister and my brother live abroad.", "My sister and brother both live overseas."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти закінчиш проєкт сьогодні, або втратиш клієнта.",
+    "en": ["Either you finish the project today or you’ll lose the client.", "You must either complete it today or lose your client."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні я, ні він цього не розуміємо.",
+    "en": ["Neither I nor he understands this.", "Neither he nor I get it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Вона одночасно і навчається, і працює.",
+    "en": ["She is both studying and working at the same time.", "She’s working and studying simultaneously."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Його авто таке ж швидке, як і твоє.",
+    "en": ["His car is as fast as yours.", "His car goes just as fast as yours."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише дощ, а й вітер зробив день жахливим.",
+    "en": ["Not only the rain but also the wind made the day terrible.", "It was not only rainy but also windy."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "І мама, і тато допомагали мені з домашнім завданням.",
+    "en": ["Both mom and dad helped me with my homework.", "My parents both helped me do my homework."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ми запізнимося, або все встигнемо в останню хвилину.",
+    "en": ["Either we’ll be late or we’ll make it at the last minute.", "We’ll either be late or barely on time."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ні її відповідь, ні поведінка не були переконливими.",
+    "en": ["Neither her answer nor her behavior was convincing.", "Both her reply and behavior were unconvincing."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Цей варіант такий самий ефективний, як і попередній.",
+    "en": ["This option is as effective as the previous one.", "It’s just as efficient as the earlier version."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Він не знає, чи залишатися тут, чи повертатися додому.",
+    "en": ["He doesn’t know whether to stay here or go back home.", "He’s unsure if he should stay or leave."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні один, ні другий варіант мені не підходить.",
+    "en": ["Neither option suits me.", "Neither of the two choices works for me."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І книга, і фільм засновані на реальних подіях.",
+    "en": ["Both the book and the movie are based on true events.", "The film and the book both come from real stories."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти кажеш правду, або я піду.",
+    "en": ["Either you tell the truth or I’m leaving.", "You’d better tell the truth, or I’ll go."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Його квартира така ж простора, як і наша.",
+    "en": ["His apartment is as spacious as ours.", "His flat is the same size as ours."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PRESENT_PERFECT"],
+    "ua": "І він, і його колега вже підписали контракт.",
+    "en": ["Both he and his colleague have already signed the contract.", "He and his coworker have both signed it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише я, але й усі інші помітили зміну.",
+    "en": ["Not only I but everyone else noticed the change.", "Everyone, not just me, saw the difference."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І менеджер, і працівники були задоволені результатом.",
+    "en": ["Both the manager and the employees were satisfied with the result.", "The boss and the staff were both happy with the outcome."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ми знайдемо інше рішення, або доведеться чекати.",
+    "en": ["Either we find another solution or we’ll have to wait.", "We’ll either find a new way or wait for it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ні одна команда не змогла виграти матч.",
+    "en": ["Neither team managed to win the match."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Мій будинок не такий старий, як твій.",
+    "en": ["My house isn’t as old as yours.", "My home is newer than yours."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Не лише міст, а й дорога був зруйнований бурею.",
+    "en": ["Not only the bridge but also the road was destroyed by the storm.", "Both the bridge and the road were damaged."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І коти, і собаки популярні домашні тварини.",
+    "en": ["Both cats and dogs are popular pets.", "Cats and dogs alike are popular pets."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні він, ні вона не хоче їхати.",
+    "en": ["Neither he nor she wants to go.", "Both of them don’t want to leave."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "І директор, і вчителі підтримали нову ідею.",
+    "en": ["Both the principal and the teachers supported the new idea.", "The head and the teachers both agreed with it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише гроші, але й час має значення.",
+    "en": ["Not only money but also time matters.", "Time as well as money is important."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Я не впевнений, чи залишитися тут, чи переїхати.",
+    "en": ["I’m not sure whether to stay here or move.", "I don’t know if I should stay or relocate."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "І діти, і дорослі часто дивляться цей серіал.",
+    "en": ["Both children and adults often watch this series.", "Kids and adults both watch it frequently."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти погоджуєшся, або ми завершуємо обговорення.",
+    "en": ["Either you agree or we end the discussion.", "You must either agree or stop talking about it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Його відповідь була такою ж короткою, як і її.",
+    "en": ["His answer was as short as hers.", "His reply was just as brief as hers."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише він приїхав пізно, але й забув документи.",
+    "en": ["Not only did he arrive late, but he also forgot the documents.", "He not only came late but also forgot his papers."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні я, ні моя сестра цього не знали.",
+    "en": ["Neither I nor my sister knew that.", "Neither my sister nor I was aware of it."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ми встигнемо на потяг, або доведеться чекати наступного.",
+    "en": ["Either we catch the train or we’ll have to wait for the next one.", "We’ll either catch this train or wait for another."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Цей метод такий самий ефективний, як і минулий.",
+    "en": ["This method is as effective as the previous one.", "It’s just as efficient as before."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І вчитель, і студенти погодились із новими правилами.",
+    "en": ["Both the teacher and the students agreed with the new rules.", "The teacher and students both accepted the new regulations."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише ціна, але й якість мають значення.",
+    "en": ["Not only the price but also the quality matters.", "Both price and quality are important."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "І Марія, і Петро прийшли на вечірку.",
+    "en": ["Both Maria and Petro came to the party.", "Maria and Petro both attended the party."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні один учень не відповів правильно.",
+    "en": ["Neither student answered correctly.", "No student gave the correct answer."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Вона не знає, чи прийти зараз, чи почекати до вечора.",
+    "en": ["She doesn’t know whether to come now or wait until evening.", "She’s unsure if she should come now or later."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PRESENT_PERFECT"],
+    "ua": "І він, і його дружина вже повернулися з відпустки.",
+    "en": ["Both he and his wife have already returned from vacation.", "He and his wife have both come back."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти зміниш підхід, або нічого не вийде.",
+    "en": ["Either you change your approach or nothing will work.", "You must either change your attitude or fail."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Не лише будинок, але й сад були зруйновані бурею.",
+    "en": ["Not only was the house destroyed, but the garden was too.", "Both the house and the garden were damaged by the storm."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Мій ноутбук не такий швидкий, як твій.",
+    "en": ["My laptop isn’t as fast as yours.", "My computer is slower than yours."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "І діти, і дорослі часто грають у цю гру.",
+    "en": ["Both children and adults often play this game.", "Kids and adults both play it frequently."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Ні одяг, ні взуття не були чистими після подорожі.",
+    "en": ["Neither the clothes nor the shoes were clean after the trip.", "Both the clothes and the shoes got dirty during the trip."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або він визнає помилку, або втратить довіру колег.",
+    "en": ["Either he admits the mistake or he’ll lose his colleagues’ trust.", "He’ll either confess or lose everyone’s respect."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише вона добре готує, але й гарно співає.",
+    "en": ["Not only does she cook well, but she also sings beautifully.", "She’s not only a good cook but also a good singer."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Його результат такий самий високий, як і твій.",
+    "en": ["His result is as high as yours.", "He scored just as much as you did."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І музика, і освітлення створюють атмосферу свята.",
+    "en": ["Both the music and the lighting create a festive atmosphere.", "Music and lights both make it feel like a celebration."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ми знайдемо рішення, або проект закриють.",
+    "en": ["Either we find a solution or the project will be closed.", "We’ll either solve the problem or lose the project."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "ua": "Ні він, ні його колеги не погоджуються з планом.",
+    "en": ["Neither he nor his colleagues agree with the plan.", "He doesn’t agree, and neither do his colleagues."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Не лише двері, але й вікна були зачинені.",
+    "en": ["Not only were the doors locked, but the windows were too.", "Both doors and windows were closed."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Він зараз і працює, і навчається одночасно.",
+    "en": ["He is both working and studying right now.", "He’s studying and working at the same time."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Її голос такий же ніжний, як і її усмішка.",
+    "en": ["Her voice is as gentle as her smile.", "Her tone is just as soft as her expression."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Не лише фільм, але й актори отримали нагороди.",
+    "en": ["Not only did the film win awards, but the actors did too.", "Both the movie and the cast received prizes."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Або ти скажеш правду зараз, або буде пізно.",
+    "en": ["Either you tell the truth now or it will be too late.", "You must either tell the truth now or regret it later."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Якщо ми не поспішимо, ми або запізнимося, або втратимо місця.",
+    "en": ["If we don’t hurry, we’ll either be late or lose our seats.", "We might either miss the show or lose our places."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "І я, і він були здивовані результатом.",
+    "en": ["Both he and I were surprised by the result.", "He and I both were shocked at the outcome."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "COMPARATIVES"],
+    "ua": "Це завдання не таке складне, як попереднє.",
+    "en": ["This task isn’t as difficult as the previous one.", "It’s easier than the last one."]
+  },
+  {
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
+    "ua": "Він не знає, чи приїде Марія, чи ні.",
+    "en": ["He doesn’t know whether Maria will come or not.", "He’s unsure if Maria is coming or not."]
+  }
+] }

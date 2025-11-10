@@ -1,0 +1,573 @@
+{ "HAD_BETTER": [
+  {
+    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "ua": "Тобі краще одягти пальто, надто холодно.",
+    "en": [
+      "You’d better put on a coat, it’s too cold.",
+      "You had better put on a coat, it’s too cold.",
+      "You’d better wear a coat, it’s too cold.",
+      "You had better wear a coat, it’s too cold."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Ти краще подзвони зараз, якщо хочеш застати його вдома.",
+    "en": [
+      "You’d better call him now if you want to catch him at home.",
+      "You had better call him now if you want to find him at home."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ми краще вийдемо раніше, бо може бути трафік.",
+    "en": [
+      "We’d better leave earlier because there might be traffic.",
+      "We had better leave earlier as there could be traffic."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "ua": "Тобі краще цього не робити.",
+    "en": [
+      "You’d better not do that.",
+      "You had better not do that."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PAST_SIMPLE"],
+    "ua": "Він сказав, що мені краще залишитися вдома.",
+    "en": [
+      "He said I’d better stay at home.",
+      "He said I had better stay at home."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ARTICLES"],
+    "ua": "Тобі краще взяти парасольку, може початися дощ.",
+    "en": [
+      "You’d better take an umbrella, it might start raining.",
+      "You had better take an umbrella, it could start raining."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Вам краще перевірити свої квитки перед від’їздом.",
+    "en": [
+      "You’d better check your tickets before leaving.",
+      "You had better check your tickets before departure."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ADVERBS_OF_MANNER_OFTEN_NEVER"],
+    "ua": "Він завжди каже, що краще говорити правду.",
+    "en": [
+      "He always says you’d better tell the truth.",
+      "He always says you had better be honest."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ти краще вибачся, бо вона справді сердита.",
+    "en": [
+      "You’d better apologize because she’s really angry.",
+      "You had better say sorry since she’s very upset."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PREP_TIME"],
+    "ua": "Нам краще піти о сьомій, щоб не запізнитися.",
+    "en": [
+      "We’d better leave at seven to avoid being late.",
+      "We had better go at seven so that we aren’t late."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER"],
+    "ua": "Тобі краще не спізнюватися на цю зустріч.",
+    "en": [
+      "You’d better not be late for this meeting.",
+      "You had better not be late for this meeting."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "ua": "Ти краще відпочинь, ти занадто виснажений.",
+    "en": [
+      "You’d better rest, you’re too exhausted.",
+      "You had better get some rest, you’re too tired."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Якщо ти хочеш скласти іспит, тобі краще більше практикуватися.",
+    "en": [
+      "If you want to pass the exam, you’d better practice more.",
+      "If you want to pass, you had better study harder."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "ua": "Вам краще цього не ігнорувати.",
+    "en": [
+      "You’d better not ignore this.",
+      "You had better not ignore that warning."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PAST_SIMPLE"],
+    "ua": "Він сказав, що мені краще бути обережним.",
+    "en": [
+      "He said I’d better be careful.",
+      "He told me I had better be careful."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PREP_TIME"],
+    "ua": "Ми краще вийдемо до шостої, щоб не запізнитись.",
+    "en": [
+      "We’d better leave by six to avoid being late.",
+      "We had better go by six so that we’re on time."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ARTICLES"],
+    "ua": "Тобі краще взяти парасольку, буде дощ.",
+    "en": [
+      "You’d better take an umbrella, it’s going to rain.",
+      "You had better take an umbrella, rain is expected."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ти краще вибачся, бо ти її образив.",
+    "en": [
+      "You’d better apologize because you hurt her.",
+      "You had better say sorry since you offended her."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "COMPARATIVES"],
+    "ua": "Ми краще підемо раніше, це буде безпечніше.",
+    "en": [
+      "We’d better leave earlier, it’ll be safer.",
+      "We had better go sooner, it’s a better idea."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "SECOND_CONDITIONAL"],
+    "ua": "Я б на твоєму місці перевірив ще раз",
+    "en": [
+      "If I were you, I’d better check again.",
+      "If I were in your place, I had better double-check it."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Тобі краще оновити своє резюме перед співбесідою.",
+    "en": [
+      "You’d better update your resume before the interview.",
+      "You had better revise your CV before the meeting."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона завжди каже, що краще бути чесною.",
+    "en": [
+      "She always says you’d better be honest.",
+      "She always says you had better tell the truth."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ви краще не сперечайтеся, бо він зараз злий.",
+    "en": [
+      "You’d better not argue because he’s angry.",
+      "You had better stay quiet since he’s upset."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "LIKE_LOVE_HATE_ING"],
+    "ua": "Ти краще припини жартувати, це вже не смішно.",
+    "en": [
+      "You’d better stop joking, it’s not funny anymore.",
+      "You had better quit making jokes, it’s getting annoying."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "ua": "Ти краще не їж це, воно занадто гостре.",
+    "en": [
+      "You’d better not eat that, it’s too spicy.",
+      "You had better avoid it, it’s too hot."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PAST_SIMPLE"],
+    "ua": "Він попередив, що мені краще не запізнюватися.",
+    "en": [
+      "He warned me that I’d better not be late.",
+      "He said I had better arrive on time."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "THERE_IS_ARE", "ARTICLES"],
+    "ua": "Тобі краще не ходити туди, там є небезпека.",
+    "en": [
+      "You’d better not go there, there is a danger.",
+      "You had better stay away, there’s a risk."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Тобі краще подзвонити, якщо він не відповість на лист.",
+    "en": [
+      "You’d better call if he doesn’t reply to the email.",
+      "You had better call him if he doesn’t answer your message."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ADVERBS_OF_MANNER_OFTEN_NEVER"],
+    "ua": "Він часто каже, що краще не сперечатись із начальником.",
+    "en": [
+      "He often says you’d better not argue with the boss.",
+      "He often says you had better stay polite."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ти краще не жартуй, бо вона сприйме це серйозно.",
+    "en": [
+      "You’d better not joke because she’ll take it seriously.",
+      "You had better be careful since she might misunderstand."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PREP_PLACE"],
+    "ua": "Нам краще залишитися тут, де безпечніше.",
+    "en": [
+      "We’d better stay here, where it’s safer.",
+      "We had better remain in this place, it’s more secure."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "COMPARATIVES"],
+    "ua": "Вам краще обрати дешевший варіант.",
+    "en": [
+      "You’d better choose a cheaper option.",
+      "You had better go for a more affordable choice."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "ua": "Вам краще поспішити, бо поїзд може ось-ось прибути.",
+    "en": [
+      "You’d better hurry, the train might arrive any minute.",
+      "You had better move fast, the train could come soon."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ти краще піди спати раніше, бо завтра важкий день.",
+    "en": [
+      "You’d better go to bed earlier because tomorrow will be tough.",
+      "You had better get some sleep since tomorrow is a busy day."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Ти краще перевір пошту, якщо чекаєш відповідь.",
+    "en": [
+      "You’d better check your email if you’re waiting for a reply.",
+      "You had better check your mail if you expect an answer."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ви краще підготуєте звіт сьогодні, бо завтра може бути запізно.",
+    "en": [
+      "You’d better finish the report today because tomorrow might be too late.",
+      "You had better prepare it now since tomorrow could be too late."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "ua": "Тобі краще цього не забувати.",
+    "en": [
+      "You’d better not forget this.",
+      "You had better not forget about it."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PAST_SIMPLE"],
+    "ua": "Він сказав, що їй краще прийти раніше.",
+    "en": [
+      "He said she’d better come earlier.",
+      "He told her she had better arrive sooner."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "ua": "Ти краще візьми куртку, може бути холодно.",
+    "en": [
+      "You’d better take a jacket, it might get cold.",
+      "You had better bring a coat, it could be chilly."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PREP_TIME"],
+    "ua": "Вам краще приїхати до восьмої.",
+    "en": [
+      "You’d better arrive by eight.",
+      "You had better come before eight o’clock."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "ua": "Тобі краще не казати нічого, ти надто злий.",
+    "en": [
+      "You’d better not say anything, you’re too angry.",
+      "You had better keep quiet, you’re too upset."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Ти краще надішли повідомлення, якщо він не відповість.",
+    "en": [
+      "You’d better send a message if he doesn’t reply.",
+      "You had better text him if he doesn’t answer."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "THERE_IS_ARE"],
+    "ua": "Ти краще не йди туди, там є небезпека.",
+    "en": [
+      "You’d better not go there, there is danger.",
+      "You had better stay away, there’s risk."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ARTICLES"],
+    "ua": "Вам краще взяти таксі, це швидший варіант.",
+    "en": [
+      "You’d better take a taxi, it’s the faster option.",
+      "You had better get a cab, it’s the quickest way."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ти краще не сперечайся, бо він має рацію.",
+    "en": [
+      "You’d better not argue because he’s right.",
+      "You had better listen since he’s correct."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Вам краще оновити свої документи перед поїздкою.",
+    "en": [
+      "You’d better update your documents before the trip.",
+      "You had better renew your papers before traveling."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "COMPARATIVES"],
+    "ua": "Ти краще вибери дешевший квиток.",
+    "en": [
+      "You’d better choose a cheaper ticket.",
+      "You had better buy the more affordable one."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона завжди каже, що краще мовчати, коли злишся.",
+    "en": [
+      "She always says you’d better stay silent when you’re angry.",
+      "She always says you had better not speak when upset."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "RELATIVE_CLAUSES"],
+    "ua": "Ти краще звернись до лікаря, який поруч із офісом.",
+    "en": [
+      "You’d better see the doctor who’s near your office.",
+      "You had better visit the one that’s close by."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "ua": "Вам краще вийти зараз, автобус може ось-ось прибути.",
+    "en": [
+      "You’d better leave now, the bus might arrive any minute.",
+      "You had better hurry, the bus could come soon."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ADVERBS_OF_MANNER"],
+    "ua": "Ти краще говори повільніше, щоб усі зрозуміли.",
+    "en": [
+      "You’d better speak more slowly so everyone understands.",
+      "You had better talk clearly so people get your point."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "THERE_ISNT_ARENT_ANY"],
+    "ua": "Тобі краще купити продукти, бо в холодильнику нічого немає.",
+    "en": [
+      "You’d better buy some groceries, there isn’t any food in the fridge.",
+      "You had better go shopping, there’s nothing to eat."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Якщо він не прийде, тобі краще почати без нього.",
+    "en": [
+      "If he doesn’t come, you’d better start without him.",
+      "If he doesn’t show up, you had better begin anyway."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "ua": "Ти краще не їдь так швидко, це надто небезпечно.",
+    "en": [
+      "You’d better not drive so fast, it’s too dangerous.",
+      "You had better slow down, it’s far too risky."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Якщо він ще не прийшов, тобі краще зателефонувати йому негайно.",
+    "en": [
+      "If he hasn’t arrived yet, you’d better call him right now.",
+      "If he’s still not here, you had better phone him immediately."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "ua": "Ти краще цього не торкайся.",
+    "en": [
+      "You’d better not touch that.",
+      "You had better keep your hands off it."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PREP_TIME"],
+    "ua": "Вам краще подати заявку до кінця тижня.",
+    "en": [
+      "You’d better submit the application by the end of the week.",
+      "You had better send it before Friday."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ти краще вибачся, бо вона справді ображена.",
+    "en": [
+      "You’d better apologize because she’s really offended.",
+      "You had better say sorry since she’s hurt."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "ua": "Тобі краще не їхати сьогодні, занадто небезпечно.",
+    "en": [
+      "You’d better not travel today, it’s too dangerous.",
+      "You had better stay home, it’s far too risky."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "ua": "Ти краще перевір це, бо це може бути помилка.",
+    "en": [
+      "You’d better check this, it might be a mistake.",
+      "You had better review it, it could be wrong."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "RELATIVE_CLAUSES"],
+    "ua": "Ти краще поговори з людиною, яка це вирішує.",
+    "en": [
+      "You’d better talk to the person who handles this.",
+      "You had better speak to the one who’s in charge."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "PRESENT_CONT_NOW"],
+    "ua": "Ти краще не жартуй зараз, я не в настрої.",
+    "en": [
+      "You’d better not be joking right now, I’m not in the mood.",
+      "You had better stop kidding around, I’m serious."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "ua": "Ти краще не пий більше кави, ти вже занадто нервовий.",
+    "en": [
+      "You’d better not drink more coffee, you’re already too nervous.",
+      "You had better stop, you’ve had enough caffeine."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Якщо він знову запізниться, тобі краще сказати йому прямо.",
+    "en": [
+      "If he’s late again, you’d better tell him directly.",
+      "If he’s late again, you had better confront him."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ARTICLES"],
+    "ua": "Вам краще знайти рішення до наради.",
+    "en": [
+      "You’d better find a solution before the meeting.",
+      "You had better come up with an answer before the discussion."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "THERE_IS_ARE"],
+    "ua": "Тобі краще не йти туди, там є проблема.",
+    "en": [
+      "You’d better not go there, there’s a problem.",
+      "You had better stay away, there is an issue."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "ADVERBS_OF_MANNER"],
+    "ua": "Ти краще поясни це чітко, щоб усі зрозуміли.",
+    "en": [
+      "You’d better explain it clearly so everyone understands.",
+      "You had better speak more precisely to avoid confusion."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES"],
+    "ua": "Тобі краще подбати про свої обов’язки до кінця дня.",
+    "en": [
+      "You’d better take care of your tasks by the end of the day.",
+      "You had better finish your work before evening."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "ua": "Якщо завтра буде дощ, тобі краще взяти плащ.",
+    "en": [
+      "If it rains tomorrow, you’d better take a raincoat.",
+      "If it rains, you had better bring an umbrella."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "ua": "Вам краще поспішити, бо літак може вилетіти раніше.",
+    "en": [
+      "You’d better hurry, the plane might depart earlier.",
+      "You had better move quickly, the flight could take off soon."
+    ]
+  },
+  {
+    "rules": ["HAD_BETTER", "THERE_ISNT_ARENT_ANY"],
+    "ua": "Ти краще зроби покупки, бо вдома немає їжі.",
+    "en": [
+      "You’d better go shopping because there's no food at home.",
+      "You had better buy something because there is no food at home.",
+      "You'd better do the shopping, because there's no food at home."
+    ]
+  }
+] }
