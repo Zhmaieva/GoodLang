@@ -1,8 +1,14 @@
 // console.js (Node 18+, console app)
 import OpenAI from "openai";
-import {GrammarRule, LEVEL_RULES} from "./rules.js";
+import {LEVEL_RULES} from "./rules.js";
+import {ALL_RULES_SAMPLES} from "./allRulesSamples.js";
 
 const client = new OpenAI({ apiKey: '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' });
+
+const languagesMap = {
+    "Ukrainian": "ua",
+    "English": "en",
+}
 
 // Hash function to convert any string/number into a good 32-bit seed
 function xmur3(str) {
@@ -54,9 +60,34 @@ export function randomRule(level) {
     return values[Math.floor(Math.random() * values.length)];
 }
 
-// Core function
+const clearText = (text) => text.toLowerCase()
+    .split('.').join('')
+    .split('’').join('');
+
+export function preEvaluate({
+                                      rules = [],
+                                      targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
+                                      userEnglish = "",                // learner's translation attempt (English)
+                                      textToTranslate = ""
+                                  }) {
+    const targetRule = rules[0];
+    const languageCode = languagesMap[targetLanguage];
+    const targetSample = ALL_RULES_SAMPLES[targetRule].find(x => x[languageCode] === textToTranslate);
+    const validTranslation = targetSample[languagesMap["English"]].find((expectedTranslation) => {
+        return clearText(expectedTranslation) === clearText(userEnglish);
+    });
+
+    const result = !!validTranslation;
+
+    return {
+        answer_is_correct: result,
+        scores: rules.map(() => (result ? 1 : 0))
+    };
+}
+
+
 export async function evaluateAndCoach({
-                                           rules = [GrammarRule.TO_BE],
+                                           rules = [],
                                            targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
                                            userEnglish = "",                // learner's translation attempt (English)
                                            textToTranslate = ""
@@ -94,7 +125,6 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
         model: "gpt-4.1-mini",
         temperature: 0.2,
 
-        // ✅ use a format object (not a plain string)
         text: { format: { type: "json_object" } },
 
         input: [

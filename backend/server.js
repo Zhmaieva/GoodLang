@@ -1,5 +1,5 @@
 import express from "express";
-import {randomRule, evaluateAndCoach, shuffleBySeed} from "./сore.js";
+import {randomRule, evaluateAndCoach, shuffleBySeed, preEvaluate} from "./сore.js";
 import {ALL_RULES_SAMPLES} from "./allRulesSamples.js";
 import {LEVEL_RULES} from "./rules.js";
 
@@ -59,12 +59,21 @@ app.get('/translations/', async (req, res, next) => {
            });
        }
 
-       const result = await evaluateAndCoach({
-           rules: Array.isArray(rules) ? rules : [rules],
+       let result = preEvaluate({
+           rules: Array.isArray(rules) ? rules : rules.split(','),
            targetLanguage: "Ukrainian",
            userEnglish: translation ?? "",
            textToTranslate: textToTranslate ?? ""
        });
+
+       if (!result.answer_is_correct) {
+           result = await evaluateAndCoach({
+               rules: Array.isArray(rules) ? rules : rules.split(','),
+               targetLanguage: "Ukrainian",
+               userEnglish: translation ?? "",
+               textToTranslate: textToTranslate ?? ""
+           });
+       }
 
        let newTextToTranslate = "";
        let newRules = rules;
