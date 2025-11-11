@@ -2,9 +2,8 @@ import React, {useMemo} from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AnalyticsPage from "./components/pages/AnalyticsPage";
-import RuleToBePage from "./components/pages/RuleToBePage.jsx";
 import {RULE_PAGE_TO_BE} from "./services/rulePages.jsx";
-import {GrammarRule} from "./utils/rules.js";
+import RulePage from "./components/pages/RulePage.jsx";
 
 export default function App() {
     // Theme lives here and is passed down
@@ -40,7 +39,7 @@ export default function App() {
         <Routes>
             <Route path="/" element={<HomePage theme={theme} />} />
             <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
-            <Route path="/rule/TO_BE" element={<RuleToBePage theme={ruleTheme} data={RULE_PAGE_TO_BE} />} />
+            <Route path="/rule/TO_BE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_TO_BE} />} />
         </Routes>
     );
 }

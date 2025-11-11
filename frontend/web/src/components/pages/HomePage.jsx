@@ -1,157 +1,17 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppShell from "../AppShell";
 import Header from "../Header";
-import TaskCard from "../TaskCard";
-import ResultCard from "../ResultCard";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
-import { callAPI } from "../../services/api";
-import {addAnswer, getSeed, saveSeed} from "../../services/dataService.js";
+import Trainer from "../training/Trainer.jsx";
 
 export default function HomePage({ theme }) {
-    const LEVEL_TO_DIFFICULTY = useMemo(
-        () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),
-        []
-    );
-    const randomDifficulty = (level) => {
-        const pool = LEVEL_TO_DIFFICULTY[level] || ["A1", "A2"];
-        return pool[Math.floor(Math.random() * pool.length)];
-    };
 
-    // State
-    const [level, setLevel] = useState("beginner");
-    const [difficulty, setDifficulty] = useState(() => randomDifficulty("beginner"));
-    const [textToTranslate, setTextToTranslate] = useState("");
-    const [nextTextToTranslate, setNextTextToTranslate] = useState("");
-    const [rules, setRules] = useState([]);
-    const [nextRules, setNextRules] = useState([]);
-    const [mode, setMode] = useState("check"); // 'check' | 'next'
     const [loading, setLoading] = useState(false);
-    const [hint, setHint] = useState('Порада: перекладіть і натисніть «Перевірити»');
-    const [correctAnswer, setCorrectAnswer] = useState("");
-    const [uaTask, setUaTask] = useState("Завантаження завдання…");
-    const [answer, setAnswer] = useState("");
-    const textareaRef = useRef(null);
+    const [level, setLevel] = useState("beginner");
 
     // Responsive grid (container-based)
     const { ref: containerRef, isWide: twoCols } = useBreakpoint(880);
-    const didInit = useRef(false);
-
-    useEffect(() => {
-        if (didInit.current) return;   // skip the 2nd StrictMode mount
-        didInit.current = true;
-
-        resetToLoadingPlaceholders();
-        loadNewTask().then();
-    }, []);
-
-    useEffect(() => {
-        if (mode === "check" && textareaRef.current && !loading) textareaRef.current.focus();
-    }, [mode, loading]);
-
-    function resetToLoadingPlaceholders() {
-        setUaTask("Завантаження завдання…");
-        setHint("Завантаження нового завдання…");
-        setCorrectAnswer("");
-    }
-    function setControlsDisabled(disabled) { setLoading(disabled); }
-
-    async function loadNewTask(selectedDifficulty = difficulty) {
-        try {
-            setControlsDisabled(true);
-            setAnswer("");
-
-            if (!nextRules || !nextTextToTranslate) {
-                const {seed, skip} = getSeed();
-                saveSeed({seed, skip});
-
-                const data = await callAPI({ level: selectedDifficulty, seed, skip });
-                setTextToTranslate(data.textToTranslate || "");
-                setRules(data.rules || null);
-                setUaTask(data.textToTranslate || "—");
-
-                saveSeed({seed, skip: data.skip ?? (skip+1) });
-            } else {
-                setTextToTranslate(nextTextToTranslate || "");
-                setRules(nextRules || null);
-                setUaTask(nextTextToTranslate || "—");
-            }
-
-            setNextTextToTranslate('');
-            setNextRules([]);
-
-            setHint('Порада: перекладіть і натисніть «Перевірити»');
-            setCorrectAnswer("");
-            setMode("check");
-        } catch (e) {
-            console.error(e);
-            setHint("❌ Сталася помилка при отриманні завдання. Спробуйте ще раз.");
-        } finally {
-            setControlsDisabled(false);
-        }
-    }
-
-    async function evaluateAnswer() {
-        const userAns = answer.trim();
-        if (!userAns) { setHint("Введіть переклад перед перевіркою."); return; }
-        try {
-            setControlsDisabled(true);
-
-            const {seed, skip} = getSeed();
-            const data = await callAPI({ level: difficulty, textToTranslate, translation: userAns, rules, seed, skip });
-
-            addAnswer(data.scores, rules, data.level);
-
-            if (data.isAnswerCorrect) {
-                setHint("✔ Правильно!");
-                setCorrectAnswer("");
-            } else {
-                const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
-                setHint("❌ Не зовсім." + tip);
-                setCorrectAnswer(data.correctAnswer || "");
-            }
-            setMode("next");
-
-            setNextTextToTranslate(data.textToTranslate || "");
-            setNextRules(data.rules);
-
-            saveSeed({seed, skip: data.skip ?? (skip+1) });
-        } catch (e) {
-            console.error(e);
-            setHint("❌ Помилка перевірки. Перевірте підключення до сервера.");
-        } finally {
-            setControlsDisabled(false);
-        }
-    }
-
-    async function onMainButtonClick() {
-        if (mode === "check") await evaluateAnswer();
-        else {
-            const diff = randomDifficulty(level);
-            setDifficulty(diff);
-            resetToLoadingPlaceholders();
-            await loadNewTask(diff);
-        }
-    }
-
-    async function handleLevelChange(nextLevel) {
-        if (loading) return;
-        if (nextLevel === level) return;
-
-        setLevel(nextLevel);
-        const diff = randomDifficulty(nextLevel)
-        setDifficulty(diff);
-        setTextToTranslate("");
-        //setRule(null);
-        setMode("check");
-        resetToLoadingPlaceholders();
-        await loadNewTask(diff);
-    }
-
-    function handleKeyDown(e) {
-        if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); onMainButtonClick(); }
-        if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); onMainButtonClick(); }
-    }
 
     const gridStyle = {
         display: "flex",
@@ -191,22 +51,13 @@ export default function HomePage({ theme }) {
                     level={level}
                     defaultLevel="beginner"
                     loading={loading}
-                    onLevelChange={handleLevelChange}
+                    onLevelChange={setLevel}
                 />
                 <section style={gridStyle}>
-                    <TaskCard
+                    <Trainer
                         theme={theme}
-                        uaTask={uaTask}
-                        answer={answer}
-                        setAnswer={setAnswer}
-                        isInputDisabled={loading || mode === "next"}
-                        mainBtnText={mode === "check" ? "Перевірити" : "Наступне речення"}
-                        onMainButtonClick={onMainButtonClick}
-                        loading={loading}
-                        textareaRef={textareaRef}
-                        onKeyDown={handleKeyDown}
-                    />
-                    <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer}/>
+                        onLoadingChange={setLoading}
+                        nextLevel={level}/>
                     <button
                         onMouseEnter={() => setHoveredAnalytics(true)}
                         onMouseLeave={() => setHoveredAnalytics(false)}

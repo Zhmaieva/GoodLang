@@ -1,5 +1,5 @@
 export default function TaskCard({
-                                     theme, uaTask, answer, setAnswer,
+                                     theme, taskText, answer, setAnswer,
                                      isInputDisabled, mainBtnText, onMainButtonClick, loading, textareaRef, onKeyDown
                                  }) {
     const styles = {
@@ -10,7 +10,7 @@ export default function TaskCard({
             boxShadow: `4px 4px 0 ${theme.accentDark}`,
             padding: 20,
         },
-        ua: { fontSize: 22, fontWeight: 700, color: theme.text },
+        taskText: { fontSize: 22, fontWeight: 700, color: theme.text },
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
         textarea: {
             resize: "none",
@@ -27,7 +27,7 @@ export default function TaskCard({
 
     return (
         <div style={styles.card} aria-live="polite">
-            <div style={styles.ua}>{uaTask}</div>
+            <div style={styles.taskText}>{taskText}</div>
             <div style={styles.inputWrap}>
         <textarea
             ref={textareaRef}

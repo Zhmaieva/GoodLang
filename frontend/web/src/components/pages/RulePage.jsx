@@ -7,7 +7,9 @@ import ConjugationTable from "../ConjugationTable";
 import Examples from "../Examples";
 import Note from "../Note";
 import Footer from "../Footer";
-import TrainerToBe from "../TrainerToBe";
+import TaskCard from "../training/TaskCard.jsx";
+import ResultCard from "../training/ResultCard.jsx";
+import Trainer from "../training/Trainer.jsx";
 
 export default function RulePage({ data, theme }) {
     const container = { maxWidth: 980, width: "100%", padding: "36px 20px 80px", margin: "0 auto" };
@@ -94,7 +96,7 @@ export default function RulePage({ data, theme }) {
                         <div style={{ marginTop: 7 }}>
                             <SectionTitle>{section.title}</SectionTitle>
                         </div>
-                        <TrainerToBe theme={theme} bank={section.bank} />
+                        <Trainer nextRule={data.id} theme={theme}/>
                     </>
                 );
 

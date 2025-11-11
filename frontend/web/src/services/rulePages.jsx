@@ -1,5 +1,5 @@
 export const RULE_PAGE_TO_BE = {
-    id: "to-be",
+    id: "TO_BE",
     title: "To be (am / is / are)",
     subtitle:
         "Стиль Essential Grammar in Use: просто, з прикладами і мінімумом термінів",
@@ -63,15 +63,6 @@ export const RULE_PAGE_TO_BE = {
         {
             type: "trainer",
             title: "Міні-тренажер (To be)",
-            bank: [
-                { ua: "Я у школі.", en: ["i am at school", "i'm at school"] },
-                { ua: "Вона лікар.", en: ["she is a doctor", "she's a doctor"] },
-                { ua: "Ми вдома.", en: ["we are at home", "we're at home"] },
-                { ua: "Він щасливий.", en: ["he is happy", "he's happy"] },
-                { ua: "Вони не готові.", en: ["they are not ready", "they aren't ready", "they're not ready"] },
-                { ua: "Чи ти з України?", en: ["are you from ukraine?"] },
-                { ua: "Мені 7 років.", en: ["i am 7", "i'm 7", "i am seven years old", "i'm seven years old"] },
-            ],
         },
     ],
 };

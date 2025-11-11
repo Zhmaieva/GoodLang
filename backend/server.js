@@ -1,7 +1,6 @@
 import express from "express";
 import {randomRule, evaluateAndCoach, shuffleBySeed, preEvaluate} from "./сore.js";
 import {ALL_RULES_SAMPLES} from "./allRulesSamples.js";
-import {LEVEL_RULES} from "./rules.js";
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
@@ -41,8 +40,10 @@ app.get('/translations/', async (req, res, next) => {
    try {
        const { level, rules, translation, textToTranslate, skip, seed } = req.query;
 
+       let rulesArr = Array.isArray(rules) ? (rules ?? []) : (rules.trim() ? rules.split(',') : []);
+
        if (!textToTranslate) {
-           const selectedRule = Array.isArray(rules) && rules.length > 0 ? rules[0] : randomRule(level ?? 'A1');
+           const selectedRule = rulesArr.length > 0 ? rulesArr[0] : randomRule(level ?? 'A1');
 
            const samples = shuffleBySeed(ALL_RULES_SAMPLES[selectedRule], seed ?? 1);
            const skipNumber = Math.floor((skip ?? '0') % samples.length);
@@ -60,7 +61,7 @@ app.get('/translations/', async (req, res, next) => {
        }
 
        let result = preEvaluate({
-           rules: Array.isArray(rules) ? rules : rules.split(','),
+           rules: rulesArr,
            targetLanguage: "Ukrainian",
            userEnglish: translation ?? "",
            textToTranslate: textToTranslate ?? ""
@@ -68,7 +69,7 @@ app.get('/translations/', async (req, res, next) => {
 
        if (!result.answer_is_correct) {
            result = await evaluateAndCoach({
-               rules: Array.isArray(rules) ? rules : rules.split(','),
+               rules: rulesArr,
                targetLanguage: "Ukrainian",
                userEnglish: translation ?? "",
                textToTranslate: textToTranslate ?? ""
@@ -76,17 +77,16 @@ app.get('/translations/', async (req, res, next) => {
        }
 
        let newTextToTranslate = "";
-       let newRules = rules;
+       let newRules = rulesArr;
        let newSkip = Number.parseInt(skip) + 1;
 
        const scores = result.scores;
        for (let i = 0; i < scores.length; i++) {
-           if (scores[i] < 1) {
-               const failedRule = rules[i];
-               //newTextToTranslate = ALL_RULES_SAMPLES[failedRule][0];//todo: find selectedRule, shuffle by seed and skip;
-               const newSample = shuffleBySeed(ALL_RULES_SAMPLES['THERE_IS_ARE'], seed ?? 1)[newSkip];
+           if (scores[i] < 1 || !level) { // keep training failed rule or if it is a dedicated per-rule training
+               const targetRule = rulesArr[i];
+               const newSample = shuffleBySeed(ALL_RULES_SAMPLES[targetRule], seed ?? 1)[newSkip];
                newRules = newSample.rules;
-               newTextToTranslate = newSample[locale];//todo: find selectedRule, shuffle by seed and skip;
+               newTextToTranslate = newSample[locale];
                break;
            }
        }
