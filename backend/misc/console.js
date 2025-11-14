@@ -1,7 +1,7 @@
 // index.js
 import readline from 'readline';
-import {evaluateAndCoach, randomRule} from './сore.js';
-import { GrammarRule } from './rules.js';
+import {evaluateAndCoach, randomRule} from '../core/сore.js';
+import { GrammarRule } from '../core/rules.js';
 
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 

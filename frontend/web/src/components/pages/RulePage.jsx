@@ -115,7 +115,7 @@ export default function RulePage({ data, theme }) {
                     ))}
                 </section>
                 <Footer theme={theme}>
-                    © 2025 StepLang • Пояснення правила <em>{data.title}</em>
+                    © 2025 GoodLang • Пояснення правила <em>{data.title}</em>
                 </Footer>
             </div>
         </AppShell>

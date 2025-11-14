@@ -22,7 +22,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
     return (
         <header style={wrap}>
             <div style={brand}>
-                <div style={logo}>SL</div>
+                <div style={logo}>GL</div>
                 <div>
                     <h1 style={h1}>{title}</h1>
                     <div style={sub}>{subtitle}</div>

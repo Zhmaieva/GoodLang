@@ -36,7 +36,7 @@ export default function AnalyticsPage() {
     const filteredRules = useMemo(() => {
         const q = query.trim().toLowerCase();
 
-        // Map StepLang levels → CEFR ranges
+        // Map GoodLang levels → CEFR ranges
         const LEVEL_TO_DIFFICULTY = {
             beginner: ["A1"],
             intermediate: ["A2", "B1"],
@@ -77,7 +77,7 @@ export default function AnalyticsPage() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "steplang-analytics.json";
+        a.download = "GoodLang-analytics.json";
         a.click();
         setTimeout(() => URL.revokeObjectURL(url), 4000);
     };

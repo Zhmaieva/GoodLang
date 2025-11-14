@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>StepLang — Аналітика</title>
+    <title>GoodLang — Аналітика</title>
     <style>
         :root{
             --bg:#fff3df; --accent:#ff6138; --accent-dark:#d74e2a; --green:#4ba36e; --blue:#3a6ea5; --text:#3a2a1d; --muted:#a47856; --radius:20px;
@@ -88,9 +88,9 @@
 <div class="container">
     <header>
         <div class="brand">
-            <div class="logo" aria-hidden="true">SL</div>
+            <div class="logo" aria-hidden="true">GL</div>
             <div>
-                <h1>Аналітика StepLang</h1>
+                <h1>Аналітика GoodLang</h1>
                 <div class="sub">Огляд прогресу за правилами та словами: що вже засвоєно, а що варто потренувати.</div>
             </div>
         </div>
@@ -166,7 +166,7 @@
     </div>
     <div class="queue-list" id="queueList"></div>
 
-    <footer>© 2025 StepLang • Дашборд аналітики (прототип)</footer>
+    <footer>© 2025 GoodLang • Дашборд аналітики (прототип)</footer>
 </div>
 
 <script>
@@ -522,7 +522,7 @@
         const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = url; a.download = 'steplang-analytics.json'; a.click();
+        a.href = url; a.download = 'GoodLang-analytics.json'; a.click();
         setTimeout(()=>URL.revokeObjectURL(url), 5000);
     });
 
@@ -560,7 +560,7 @@
     }
 
     // Public API (including translation setter)
-    window.StepLangAnalytics = {
+    window.GoodLangAnalytics = {
         updateRuleStat(ruleId, isCorrect){
             let rec = DATA.find(r=>r.id===ruleId);
             if(!rec){

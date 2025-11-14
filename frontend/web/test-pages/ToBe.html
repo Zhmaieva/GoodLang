@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>StepLang — Правило: To be (am / is / are)</title>
+    <title>GoodLang — Правило: To be (am / is / are)</title>
     <style>
         :root{
             --bg:#fff3df; --card:#fffdf8; --accent:#ff6138; --accent-dark:#d74e2a; --green:#4ba36e; --blue:#3a6ea5; --text:#3a2a1d; --muted:#a47856; --bad:#ef476f; --warn:#ffd166; --good:#4ba36e; --radius:20px;
@@ -96,7 +96,7 @@
 <div class="container">
     <header>
         <div class="brand">
-            <div class="logo">SL</div>
+            <div class="logo">GL</div>
             <div>
                 <h1>To be (am / is / are)</h1>
                 <div class="sub">Стиль <em>Essential Grammar in Use</em>: просто, з прикладами і мінімумом термінів</div>
@@ -191,7 +191,7 @@
 
     </section>
 
-    <footer>© 2025 StepLang • Пояснення правила <em>to be</em></footer>
+    <footer>© 2025 GoodLang • Пояснення правила <em>to be</em></footer>
 </div>
 
 <script>
@@ -248,18 +248,18 @@
             document.getElementById('correctBox').hidden = true;
 
             // Запис у аналітику, якщо є
-            if(window.StepLangAnalytics){
-                window.StepLangAnalytics.updateRuleStat?.(1, true); // id=1: To be (am/is/are)
-                ['am','is','are'].forEach(w => window.StepLangAnalytics.noteWordResult?.(w, true));
+            if(window.GoodLangAnalytics){
+                window.GoodLangAnalytics.updateRuleStat?.(1, true); // id=1: To be (am/is/are)
+                ['am','is','are'].forEach(w => window.GoodLangAnalytics.noteWordResult?.(w, true));
             }
         } else {
             document.getElementById('feedbackBox').innerHTML = '✘ Спробуй ще. Підказка: зверни увагу на форму <em>am / is / are</em> і порядок слів.';
             document.getElementById('correctText').textContent = CURRENT.en[0];
             document.getElementById('correctBox').hidden = false;
 
-            if(window.StepLangAnalytics){
-                window.StepLangAnalytics.updateRuleStat?.(1, false);
-                ['am','is','are'].forEach(w => window.StepLangAnalytics.noteWordResult?.(w, false));
+            if(window.GoodLangAnalytics){
+                window.GoodLangAnalytics.updateRuleStat?.(1, false);
+                ['am','is','are'].forEach(w => window.GoodLangAnalytics.noteWordResult?.(w, false));
             }
         }
     }

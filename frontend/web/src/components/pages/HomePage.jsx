@@ -77,7 +77,7 @@ export default function HomePage({ theme }) {
                     paddingTop: 12
                 }}>
                     <div style={analyticsButtonStyles.container}>
-                        <div>© 2025 StepLang</div>
+                        <div>© 2025 GoodLang</div>
                     </div>
                 </footer>
             </div>

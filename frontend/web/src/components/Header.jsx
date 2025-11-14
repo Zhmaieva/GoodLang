@@ -60,9 +60,9 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     return (
         <header style={styles.header}>
             <div style={styles.brand}>
-                <div style={styles.logo} aria-hidden="true">SL</div>
+                <div style={styles.logo} aria-hidden="true">GL</div>
                 <div style={styles.titleWrap}>
-                    <h1 style={styles.h1}>StepLang</h1>
+                    <h1 style={styles.h1}>GoodLang</h1>
                     <div style={styles.sub}>Переклад → короткий фідбек → нове речення згідно твого рівня</div>
                 </div>
             </div>

@@ -4,9 +4,9 @@ export default function AnalyticsHeader({ onBack, onExport }) {
     return (
         <header>
             <div className="brand">
-                <div className="logo" aria-hidden="true">SL</div>
+                <div className="logo" aria-hidden="true">GL</div>
                 <div>
-                    <h1>Аналітика StepLang</h1>
+                    <h1>Аналітика GoodLang</h1>
                     <div className="sub">
                         Огляд прогресу за правилами та словами: що вже засвоєно, а що варто потренувати.
                     </div>

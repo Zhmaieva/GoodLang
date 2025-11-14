@@ -72,7 +72,7 @@ export function preEvaluate({
                                   }) {
     const targetRule = rules[0];
     const languageCode = languagesMap[targetLanguage];
-    const targetSample = ALL_RULES_SAMPLES[targetRule].find(x => x[languageCode] === textToTranslate);
+    const targetSample = ALL_RULES_SAMPLES[targetRule].find(x => x[languageCode] === textToTranslate || Array.isArray(x) && x[languageCode].find(xx => xx === textToTranslate));
     const validTranslation = targetSample[languagesMap["English"]].find((expectedTranslation) => {
         return clearText(expectedTranslation) === clearText(userEnglish);
     });

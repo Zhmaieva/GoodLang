@@ -200,15 +200,15 @@ export function getLearnedRulesCount() {
 
 /**
  * Infer user's level from stored answers, collapsing CEFR bands (A1..B2)
- * into StepLang levels (beginner/intermediate/advanced).
+ * into GoodLang levels (beginner/intermediate/advanced).
  *
  * Options you can tweak:
- * - levelBands: mapping StepLang -> CEFR bands
+ * - levelBands: mapping GoodLang -> CEFR bands
  * - thresholds & weights (same as before)
  */
 export function inferUserLevel(options = {}) {
     const {
-        // Map StepLang levels → CEFR bands
+        // Map GoodLang levels → CEFR bands
         levelBands = {
             beginner: ["A1"],
             intermediate: ["A2", "B1"],
@@ -238,7 +238,7 @@ export function inferUserLevel(options = {}) {
         return { level: null, decidedBy: "noData", confidence: 0, levels: [] };
     }
 
-    // Build a CEFR → StepLang lookup (e.g. "A2" -> "intermediate")
+    // Build a CEFR → GoodLang lookup (e.g. "A2" -> "intermediate")
     const cefrToStep = {};
     for (const [step, bands] of Object.entries(levelBands || {})) {
         (bands || []).forEach((b) => { cefrToStep[b] = step; });
@@ -272,8 +272,8 @@ export function inferUserLevel(options = {}) {
         });
     }
 
-    // Group answers by StepLang level:
-    // 1) If answer.level is already a StepLang level → use it
+    // Group answers by GoodLang level:
+    // 1) If answer.level is already a GoodLang level → use it
     // 2) Else if answer.level is CEFR → collapse via cefrToStep
     // 3) Else infer by rule → credit to all step levels that contain that rule
     const byLevel = new Map(stepLevels.map((l) => [l, []]));
@@ -282,14 +282,14 @@ export function inferUserLevel(options = {}) {
         let targetLevel = null;
 
         if (raw && byLevel.has(raw)) {
-            // already a StepLang level
+            // already a GoodLang level
             targetLevel = raw;
             byLevel.get(targetLevel).push(a);
             continue;
         }
 
         if (raw && cefrToStep[raw]) {
-            // CEFR provided, collapse to StepLang
+            // CEFR provided, collapse to GoodLang
             targetLevel = cefrToStep[raw];
             if (byLevel.has(targetLevel)) byLevel.get(targetLevel).push(a);
             continue;

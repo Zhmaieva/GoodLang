@@ -2,7 +2,8 @@ import TaskCard from "./TaskCard.jsx";
 import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getSeed, saveSeed} from "../../services/dataService.js";
-import {callAPI} from "../../services/api.js";
+import {callTranslateAPI} from "../../services/api.js";
+import LimitModal from "../subscription/LimitModal.jsx";
 
 export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = null, nextRule = null}) {
     const LEVEL_TO_DIFFICULTY = useMemo(
@@ -38,6 +39,10 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
     const [hint, setHint] = useState('Порада: перекладіть і натисніть «Перевірити»');
     const [correctAnswer, setCorrectAnswer] = useState("");
     const textareaRef = useRef(null);
+
+    const [limitModalOpen, setLimitModalOpen] = useState(false);
+    const [subscribeModalOpen, setSubscribeModalOpen] = useState(false);
+
 
     useEffect(() => {
         if (didInit.current) return;
@@ -87,7 +92,7 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const data = await callAPI({ level: selectedDifficulty, rules: [nextRule], seed, skip });
+                const data = await callTranslateAPI({ level: selectedDifficulty, rules: [nextRule], seed, skip });
                 setTextToTranslate(data.textToTranslate || "");
                 setRules(data.rules || null);
                 setTaskText(data.textToTranslate || "—");
@@ -120,7 +125,13 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
             setControlsDisabled(true);
 
             const {seed, skip} = getSeed();
-            const data = await callAPI({ textToTranslate, translation: userAns, rules, seed, skip });
+            const data = await callTranslateAPI({ textToTranslate, translation: userAns, rules, seed, skip });
+
+            if (!data.isSuccess) {
+                setHint("Досягнуто ліміт користування, спробуйте пізніше.");
+                setLimitModalOpen(true);
+                return;
+            }
 
             addAnswer(data.scores, rules, data.level);
 
@@ -176,6 +187,11 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
                 onKeyDown={handleKeyDown}
             />
             <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer}/>
+            <LimitModal
+                theme={theme}
+                open={limitModalOpen}
+                onClose={() => setLimitModalOpen(false)}
+            />
         </section>
     );
 }

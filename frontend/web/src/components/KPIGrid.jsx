@@ -31,9 +31,9 @@ export default function KPIGrid({ accuracy, attempts, masteredRules, userLevel }
             </div>
             <div className="card kpi">
                 <div className="label">Рівень</div>
-                <div className="value">{levelInfo.label}</div>
+                <div className="value">{levelInfo?.label}</div>
                 <div className="spark">
-                    <i style={{width: `${levelInfo.percent}%`}}/>
+                    <i style={{width: `${levelInfo?.percent ?? 0}%`}}/>
                 </div>
             </div>
         </section>

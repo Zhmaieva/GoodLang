@@ -1,11 +1,11 @@
 {
   "name": "language",
   "version": "1.0.0",
-  "main": "сore.js",
+  "main": "core/сore.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node сore.js"
+    "start": "node core/сore.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,11 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "openai": "^6.3.0",
-    "readline": "^1.3.0"
+    "pg": "^8.16.3",
+    "raw-body": "^3.0.1",
+    "readline": "^1.3.0",
+    "stripe": "^19.3.1"
   }
 }
