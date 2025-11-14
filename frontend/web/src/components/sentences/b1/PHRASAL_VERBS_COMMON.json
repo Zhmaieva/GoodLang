@@ -1,6 +1,6 @@
 { "PHRASAL_VERBS_COMMON": [
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я завжди прокидаюся о сьомій ранку (use PHRASAL VERB)."],
     "en": [
       "I always wake up at seven in the morning.",
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він добре ладнає зі своїми колегами (use PHRASAL VERB)."],
     "en": [
       "He gets along well with his colleagues.",
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Ми повинні заповнити цю форму перед поїздкою (use PHRASAL VERB)."],
     "en": [
       "We have to fill out this form before the trip.",
@@ -81,7 +81,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_TIME"],
     "ua": ["Я завжди вимикаю світло перед тим, як вийти (use PHRASAL VERB)."],
     "en": [
       "I always turn off the light before I leave.",
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "ARTICLES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
     "ua": ["Будь ласка, зменш гучність музики (use PHRASAL VERB)."],
     "en": [
       "Please turn down the music.",
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я завжди прибираю кімнату перед сном (use PHRASAL VERB)."],
     "en": [
       "I always tidy up my room before bed.",
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
     "ua": ["Не забудь надіти цю куртку (use PHRASAL VERB)."],
     "en": [
       "Don’t forget to put on this jacket.",
@@ -161,7 +161,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
     "ua": ["Мені потрібно викинути це сміття (use PHRASAL VERB)."],
     "en": [
       "I need to throw away this trash.",
@@ -193,7 +193,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він завжди відкладає важливі справи (use PHRASAL VERB)."],
     "en": [
       "He always puts off important tasks.",
@@ -201,7 +201,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "DEMONSTRATIVES", "ARTICLES", "PREP_DIRECTION", "PREP_PLACE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES", "ARTICLES", "PREP_DIRECTION", "PREP_PLACE"],
     "ua": ["Ми повинні повернути цю книгу до бібліотеки (use PHRASAL VERB)."],
     "en": [
       "We have to take back this book to the library.",
@@ -217,7 +217,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "ARTICLES", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_TIME"],
     "ua": ["Будь ласка, вимкни комп’ютер перед тим, як підеш (use PHRASAL VERB)."],
     "en": [
       "Please shut down the computer before you leave.",
@@ -241,7 +241,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
     "ua": ["Він часто доглядає за своїм молодшим братом (use PHRASAL VERB)."],
     "en": [
       "He often looks after his younger brother.",
@@ -265,7 +265,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME", "POSSESSIVE_ADJECTIVES"],
     "ua": ["Ми завжди доглядаємо за нашим садом влітку (use PHRASAL VERB)."],
     "en": [
       "We always look after our garden in summer.",
@@ -281,7 +281,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я зазвичай прокидаюся о восьмій ранку (use PHRASAL VERB)."],
     "en": [
       "I usually wake up at eight in the morning.",
@@ -313,7 +313,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "ARTICLES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
     "ua": ["Будь ласка, запиши цю адресу (use PHRASAL VERB)."],
     "en": [
       "Please write down this address.",
@@ -329,7 +329,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона завжди вдягає пальто, коли холодно (use PHRASAL VERB)."],
     "en": [
       "She always puts on her coat when it’s cold.",
@@ -353,7 +353,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "ARTICLES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
     "ua": ["Він доглядає за своїм собакою кожен день (use PHRASAL VERB)."],
     "en": [
       "He looks after his dog every day.",
@@ -369,7 +369,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
     "ua": ["Будь ласка, віддай цей лист на пошту (use PHRASAL VERB)."],
     "en": [
       "Please drop off this letter at the post office.",
@@ -385,7 +385,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
     "ua": ["Не викидай ці газети (use PHRASAL VERB)."],
     "en": [
       "Don’t throw away these newspapers.",
@@ -393,7 +393,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він часто проводить час зі своїми друзями (use PHRASAL VERB)."],
     "en": [
       "He often hangs out with his friends.",
@@ -409,7 +409,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я завжди прибираю кімнату вранці (use PHRASAL VERB)."],
     "en": [
       "I always clean up my room in the morning.",
@@ -417,7 +417,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вони добре ладнають між собою (use PHRASAL VERB)."],
     "en": [
       "They get along well with each other.",
@@ -441,7 +441,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Будь ласка, вимкни телевізор (use PHRASAL VERB)."],
     "en": [
       "Please turn off the TV.",
@@ -457,7 +457,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я доглядаю за своїм садом щонеділі (use PHRASAL VERB)."],
     "en": [
       "I look after my garden every Sunday.",
@@ -481,7 +481,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я завжди вмикаю комп’ютер зранку (use PHRASAL VERB)."],
     "en": [
       "I always turn on the computer in the morning.",
@@ -513,7 +513,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
     "ua": ["Не підбирай ці гроші, вони не твої (use PHRASAL VERB)."],
     "en": [
       "Don’t pick up this money, it’s not yours.",
@@ -529,7 +529,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він завжди вимикає телевізор перед сном (use PHRASAL VERB)."],
     "en": [
       "He always turns off the TV before bed.",
@@ -545,7 +545,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона завжди проводить час зі своєю родиною (use PHRASAL VERB)."],
     "en": [
       "She always hangs out with her family.",
@@ -569,7 +569,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_PLACE", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE", "POSSESSIVE_ADJECTIVES"],
     "ua": ["Він часто залишає свій телефон на столі (use PHRASAL VERB)."],
     "en": [
       "He often leaves his phone on the table.",
@@ -585,7 +585,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я завжди підбираю іграшки після того, як граюся (use PHRASAL VERB)."],
     "en": [
       "I always pick up my toys after I play.",
@@ -593,7 +593,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Ми зазвичай лягаємо спати о десятій (use PHRASAL VERB)."],
     "en": [
       "We usually go to bed at ten o’clock.",
@@ -609,7 +609,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Не вимикай світло, будь ласка (use PHRASAL VERB)."],
     "en": [
       "Don’t turn off the light, please.",
@@ -633,7 +633,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я завжди прибираю квартиру у вихідні (use PHRASAL VERB)."],
     "en": [
       "I always clean up the flat on weekends.",
@@ -649,7 +649,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він завжди доглядає за своїм молодшим братом (use PHRASAL VERB)."],
     "en": [
       "He always looks after his younger brother.",
@@ -657,7 +657,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
     "ua": ["Ми залишаємо взуття біля дверей (use PHRASAL VERB)."],
     "en": [
       "We take off our shoes by the door.",
@@ -681,7 +681,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE", "ARTICLES"],
     "ua": ["Я часто заходжу до сусіда на чай (use PHRASAL VERB)."],
     "en": [
       "I often drop by the neighbor’s for tea.",
@@ -705,7 +705,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я зазвичай прокидаюся о сьомій ранку (use PHRASAL VERB)."],
     "en": [
       "I usually wake up at seven in the morning.",
@@ -721,7 +721,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він завжди доглядає за своїм котом (use PHRASAL VERB)."],
     "en": [
       "He always looks after his cat.",
@@ -737,7 +737,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_DIRECTION"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_DIRECTION"],
     "ua": ["Вона часто виходить на прогулянку після обіду (use PHRASAL VERB)."],
     "en": [
       "She often goes out for a walk after lunch.",
@@ -753,7 +753,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
     "ua": ["Я завжди залишаю взуття біля дверей (use PHRASAL VERB)."],
     "en": [
       "I always take off my shoes by the door.",
@@ -769,7 +769,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Не забудь заповнити анкету (use PHRASAL VERB)."],
     "en": [
       "Don’t forget to fill out the form.",
@@ -793,7 +793,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона завжди підбирає сміття на пляжі (use PHRASAL VERB)."],
     "en": [
       "She always picks up trash on the beach.",
@@ -809,7 +809,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
     "ua": ["Не викидай ці коробки (use PHRASAL VERB)."],
     "en": [
       "Don’t throw away these boxes.",
@@ -825,7 +825,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я прибираю свою кімнату щосуботи (use PHRASAL VERB)."],
     "en": [
       "I clean up my room every Saturday.",
@@ -833,7 +833,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він завжди повертає книги вчасно (use PHRASAL VERB)."],
     "en": [
       "He always gives back books on time.",
@@ -857,7 +857,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
     "ua": ["Я доглядаю за своїм садом кожного літа (use PHRASAL VERB)."],
     "en": [
       "I look after my garden every summer.",
@@ -873,7 +873,7 @@
     ]
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE"],
+    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Будь ласка, вимкни світло перед виходом (use PHRASAL VERB)."],
     "en": [
       "Please turn off the light before you leave.",

@@ -101,32 +101,32 @@
       "en": ["She is beautiful.", "She's beautiful."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
       "ua": "Я люблю каву.",
       "en": ["I like coffee."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
       "ua": "Він грає у футбол.",
       "en": ["He plays football.", "He plays soccer."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE", "PREP_PLACE"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
       "ua": "Ми живемо у Варшаві.",
       "en": ["We live in Warsaw."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE", "PREP_PLACE"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
       "ua": "Вони працюють у лікарні.",
       "en": ["They work in a hospital."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
       "ua": "Вона дивиться телевізор щовечора.",
       "en": ["She watches TV every evening."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ", "TO_BE"],
       "ua": "Він часто запізнюється.",
       "en": ["He is often late."]
     },
@@ -251,7 +251,7 @@
       "en": ["It was great."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
       "ua": "Ти добре співаєш.",
       "en": ["You sing well."]
     }

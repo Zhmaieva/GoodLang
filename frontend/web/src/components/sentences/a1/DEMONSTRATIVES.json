@@ -192,7 +192,12 @@
   {
     "rules": ["DEMONSTRATIVES", "TO_BE", "PERSONAL_PRONOUNS"],
     "ua": "Ці діти мої сусіди.",
-    "en": ["These children are my neighbours.", "These children are my neighbors.", "These kids are my neighbours.", "These kids are my neighbors."]
+    "en": [
+      "These children are my neighbours.",
+      "These children are my neighbors.",
+      "These kids are my neighbours.",
+      "These kids are my neighbors."
+    ]
   },
   {
     "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
@@ -277,7 +282,7 @@
   {
     "rules": ["DEMONSTRATIVES", "TO_BE", "TOO_VERY"],
     "ua": "Ця страва дуже смачна.",
-    "en": ["This dish is very tasty.", "This meal is very delicious."]
+    "en": ["This dish is very tasty."]
   },
   {
     "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
@@ -402,7 +407,7 @@
   {
     "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
     "ua": "Ці діти в садку.",
-    "en": ["These children are in the kindergarten."]
+    "en": ["These children are in kindergarten."]
   },
   {
     "rules": ["DEMONSTRATIVES", "TO_BE"],
@@ -477,7 +482,10 @@
   {
     "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
     "ua": "Ті фотографії на стіні.",
-    "en": ["Those photos are on the wall.", "Those pictures are on the wall."]
+    "en": [
+      "Those photos are on the wall.",
+      "Those pictures are on the wall."
+    ]
   },
   {
     "rules": ["DEMONSTRATIVES", "TO_BE"],

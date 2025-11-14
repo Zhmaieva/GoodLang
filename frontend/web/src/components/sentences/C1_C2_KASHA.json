@@ -4,7 +4,7 @@
   "en": ["The dog is a faithful friend of man.", "The dog is a loyal friend of humans."]
 },
 {
-"rules": ["ARTICLES", "PRESENT_SIMPLE", "LIKE_ING"],
+"rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "LIKE_ING"],
 "ua": "Коти люблять спати.",
 "en": ["Cats love sleeping.", "Cats like to sleep."]
 },
@@ -14,7 +14,7 @@
 "en": ["The sea was calm."]
 },
 {
-"rules": ["ARTICLES", "TO_BE", "PREP_PLACE", "PRESENT_CONTINUOUS"],
+"rules": ["ARTICLES", "TO_BE", "PREP_PLACE", "PRESENT_CONT_NOW"],
 "ua": "Вони зараз у морі.",
 "en": ["They are at sea."]
 },
@@ -24,17 +24,17 @@
 "en": ["The Internet is an important part of our life."]
 },
 {
-"rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_TIME", "ADVERBS_FREQUENCY"],
+"rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_TIME", "ADVERBS_FREQUENCY"],
 "ua": "Ми завжди п’ємо каву вранці.",
 "en": ["We always drink coffee in the morning."]
 },
 {
-"rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_TIME", "ADVERBS_FREQUENCY"],
+"rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_TIME", "ADVERBS_FREQUENCY"],
 "ua": "Вони зазвичай ходять у спортзал після роботи.",
 "en": ["They usually go to the gym after work."]
 },
 {
-"rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_PLACE"],
+"rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
 "ua": "Я обідаю в школі.",
 "en": ["I have lunch at school.", "I eat lunch at school."]
 },
@@ -79,7 +79,7 @@
 "en": ["The environment must be protected."]
 },
 {
-"rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY"],
+"rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY"],
 "ua": "Я граю на фортепіано щодня.",
 "en": ["I play the piano every day."]
 },
@@ -89,12 +89,12 @@
 "en": ["It was a real surprise."]
 },
 {
-"rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY", "PREP_TIME"],
+"rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY", "PREP_TIME"],
 "ua": "Ми часто дивимось телевізор увечері.",
 "en": ["We often watch TV in the evening.", "We often watch television in the evening."]
 },
 {
-"rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY", "PREP_TIME"],
+"rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY", "PREP_TIME"],
 "ua": "Вона іноді ходить до церкви в неділю.",
 "en": ["She sometimes goes to church on Sundays."]
 }

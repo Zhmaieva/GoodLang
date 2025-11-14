@@ -246,7 +246,7 @@
       "en": ["I don’t know his name.", "I do not know his name."]
     },
     {
-      "rules": ["NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "rules": ["NEGATION_DONT_DOESNT", "PREP_TIME", "PERSONAL_PRONOUNS"],
       "ua": "Вона не працює у п’ятницю.",
       "en": ["She doesn’t work on Friday.", "She does not work on Friday."]
     },
@@ -494,11 +494,6 @@
       "rules": ["NEGATION_DONT_DOESNT", "PERSONAL_PRONOUNS", "POSSESSIVE_ADJECTIVES"],
       "ua": "Я не знаю його імені.",
       "en": ["I don’t know his name.", "I do not know his name."]
-    },
-    {
-      "rules": ["NEGATION_DONT_DOESNT", "PREP_TIME"],
-      "ua": "Вона не працює у п’ятницю.",
-      "en": ["She doesn’t work on Friday.", "She does not work on Friday."]
     }
   ]
 }

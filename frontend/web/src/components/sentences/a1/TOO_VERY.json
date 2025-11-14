@@ -5,7 +5,7 @@
     "en": ["This museum is very interesting.", "This museum is really interesting."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "YES_NO_Q"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "YES_NO_Q"],
     "ua": "Цей суп надто гарячий зараз?",
     "en": ["Is this soup too hot now?", "Is this soup overly hot now?"]
   },
@@ -20,7 +20,7 @@
     "en": ["Some books are very expensive.", "Certain books are really expensive."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей фільм надто довгий сьогодні.",
     "en": ["This movie is too long today.", "This movie is overly long today."]
   },
@@ -30,7 +30,7 @@
     "en": ["He is very fast at running.", "He’s really fast at running."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ця книга надто складна для читання зараз.",
     "en": ["This book is too difficult to read now.", "This book is overly difficult to read now."]
   },
@@ -50,7 +50,7 @@
     "en": ["This concert is too loud.", "This concert is overly loud."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Вона дуже зайнята роботою зараз.",
     "en": ["She is very busy with work now.", "She’s really busy with work now."]
   },
@@ -65,7 +65,7 @@
     "en": ["This park is very beautiful.", "This park is really beautiful."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей урок надто нудний зараз.",
     "en": ["This lesson is too boring now.", "This lesson is overly boring now."]
   },
@@ -80,7 +80,7 @@
     "en": ["Many children are very active.", "A lot of children are really active."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я дуже голодний зараз.",
     "en": ["I am very hungry now.", "I’m really hungry now."]
   },
@@ -90,7 +90,7 @@
     "en": ["This picture is too bright.", "This picture is overly bright."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей театр дуже переповнений сьогодні.",
     "en": ["This theater is very crowded today.", "This theater is really crowded today."]
   },
@@ -105,7 +105,7 @@
     "en": ["He is very kind to friends.", "He’s really kind to friends."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ця гра надто складна зараз.",
     "en": ["This game is too difficult now.", "This game is overly difficult now."]
   },
@@ -125,7 +125,7 @@
     "en": ["I am very happy at school.", "I’m really happy at school."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей фільм надто страшний сьогодні.",
     "en": ["This movie is too scary today.", "This movie is overly scary today."]
   },
@@ -140,7 +140,7 @@
     "en": ["This park is too large.", "This park is overly large."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Вона дуже втомлена після танців зараз.",
     "en": ["She is very tired after dancing now.", "She’s really tired after dancing now."]
   },
@@ -155,7 +155,7 @@
     "en": ["Many tourists are very interested.", "A lot of tourists are really interested."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я дуже зайнятий роботою зараз.",
     "en": ["I am very busy with work now.", "I’m really busy with work now."]
   },
@@ -165,7 +165,7 @@
     "en": ["This concert is very fun.", "This concert is really fun."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця книга надто заплутана сьогодні.",
     "en": ["This book is too confusing today.", "This book is overly confusing today."]
   },
@@ -180,7 +180,7 @@
     "en": ["He is very calm in class.", "He’s really calm in class."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ця гра дуже цікава зараз.",
     "en": ["This game is very interesting now.", "This game is really interesting now."]
   },
@@ -200,7 +200,7 @@
     "en": ["I am very satisfied with the book.", "I’m really satisfied with the book."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей урок надто важкий зараз.",
     "en": ["This lesson is too difficult now.", "This lesson is overly difficult now."]
   },
@@ -215,7 +215,7 @@
     "en": ["She is very friendly to everyone.", "She’s really friendly to everyone."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей фільм дуже смішний сьогодні.",
     "en": ["This movie is very funny today.", "This movie is really funny today."]
   },
@@ -230,7 +230,7 @@
     "en": ["Many students are very tired.", "A lot of students are really tired."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я дуже схвильований концертом зараз.",
     "en": ["I am very excited about the concert now.", "I’m really excited about the concert now."]
   },
@@ -240,7 +240,7 @@
     "en": ["This park is too quiet.", "This park is overly quiet."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця гра дуже напружена сьогодні.",
     "en": ["This game is very intense today.", "This game is really intense today."]
   },
@@ -260,7 +260,7 @@
     "en": ["This movie is very exciting.", "This movie is really exciting."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "YES_NO_Q"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "YES_NO_Q"],
     "ua": "Ця книга надто заплутана зараз?",
     "en": ["Is this book too confusing now?", "Is this book overly confusing now?"]
   },
@@ -275,7 +275,7 @@
     "en": ["Some lessons are very difficult.", "Certain lessons are really difficult."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей концерт надто гучний сьогодні.",
     "en": ["This concert is too loud today.", "This concert is overly loud today."]
   },
@@ -285,7 +285,7 @@
     "en": ["He is very diligent in studies.", "He’s really diligent in studies."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ця гра дуже напружена зараз.",
     "en": ["This game is very intense now.", "This game is really intense now."]
   },
@@ -305,7 +305,7 @@
     "en": ["This picture is too complex.", "This picture is overly complex."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Вона дуже схвильована концертом зараз.",
     "en": ["She is very excited about the concert now.", "She’s really excited about the concert now."]
   },
@@ -320,7 +320,7 @@
     "en": ["This theater is very modern.", "This theater is really modern."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей урок надто довгий зараз.",
     "en": ["This lesson is too long now.", "This lesson is overly long now."]
   },
@@ -335,7 +335,7 @@
     "en": ["Many children are very energetic.", "A lot of children are really energetic."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я дуже зосереджений на роботі зараз.",
     "en": ["I am very focused on work now.", "I’m really focused on work now."]
   },
@@ -345,7 +345,7 @@
     "en": ["This game is too risky.", "This game is overly risky."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей музей дуже переповнений сьогодні.",
     "en": ["This museum is very crowded today.", "This museum is really crowded today."]
   },
@@ -360,7 +360,7 @@
     "en": ["He is very friendly to everyone.", "He’s really friendly to everyone."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ця книга дуже цікава зараз.",
     "en": ["This book is very interesting now.", "This book is really interesting now."]
   },
@@ -380,7 +380,7 @@
     "en": ["I am very pleased with the lesson.", "I’m really pleased with the lesson."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей фільм надто смішний сьогодні.",
     "en": ["This movie is too funny today.", "This movie is overly funny today."]
   },
@@ -395,7 +395,7 @@
     "en": ["This park is very spacious.", "This park is really spacious."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Вона дуже втомлена після роботи зараз.",
     "en": ["She is very tired after work now.", "She’s really tired after work now."]
   },
@@ -410,7 +410,7 @@
     "en": ["Many tourists are very impressed.", "A lot of tourists are really impressed."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я дуже стомлений уроком зараз.",
     "en": ["I am very exhausted by the lesson now.", "I’m really exhausted by the lesson now."]
   },
@@ -420,7 +420,7 @@
     "en": ["This theater is too expensive.", "This theater is overly expensive."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця картина дуже яскрава сьогодні.",
     "en": ["This picture is very bright today.", "This picture is really bright today."]
   },
@@ -435,7 +435,7 @@
     "en": ["He is very careful at work.", "He’s really careful at work."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей концерт дуже емоційний зараз.",
     "en": ["This concert is very emotional now.", "This concert is really emotional now."]
   },
@@ -455,7 +455,7 @@
     "en": ["I am very impressed with the book.", "I’m really impressed with the book."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ця гра надто швидка зараз.",
     "en": ["This game is too fast now.", "This game is overly fast now."]
   },
@@ -470,7 +470,7 @@
     "en": ["She is very generous to friends.", "She’s really generous to friends."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Цей фільм дуже зворушливий сьогодні.",
     "en": ["This movie is very touching today.", "This movie is really touching today."]
   },
@@ -485,7 +485,7 @@
     "en": ["Many students are very organized.", "A lot of students are really organized."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я дуже зацікавлений уроком зараз.",
     "en": ["I am very interested in the lesson now.", "I’m really interested in the lesson now."]
   },
@@ -495,7 +495,7 @@
     "en": ["This park is too crowded.", "This park is overly crowded."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця гра дуже весела сьогодні.",
     "en": ["This game is very fun today.", "This game is really fun today."]
   },

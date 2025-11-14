@@ -56,7 +56,7 @@
       "en": ["I always drink coffee at seven in the morning."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "PERSONAL_PRONOUNS"],
       "ua": "Вона часто обідає в офісі.",
       "en": ["She often has lunch at the office."]
     },
@@ -81,7 +81,7 @@
       "en": ["We don’t often go to restaurants.", "We do not often go to restaurants."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ", "POSSESSIVES"],
       "ua": "Мій брат завжди веселий вранці.",
       "en": ["My brother is always happy in the morning."]
     },
@@ -96,7 +96,7 @@
       "en": ["I am often tired after work."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "TO_BE"],
       "ua": "Він зазвичай у бібліотеці після обіду.",
       "en": ["He is usually in the library after lunch."]
     },
@@ -156,12 +156,12 @@
       "en": ["I often like reading before bed."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "TO_BE"],
       "ua": "Вона завжди на роботі в понеділок.",
       "en": ["She is always at work on Monday."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ", "POSSESSIVES"],
       "ua": "Мій тато завжди спокійний.",
       "en": ["My dad is always calm."]
     },
@@ -216,7 +216,7 @@
       "en": ["I am sometimes sad for no reason."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "POSSESSIVES"],
       "ua": "Він завжди у своїй кімнаті ввечері.",
       "en": ["He is always in his room in the evening."]
     },
@@ -226,12 +226,12 @@
       "en": ["Do you often play the guitar?"]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS", "POSSESSIVES"],
       "ua": "Вона ніколи не забуває свій телефон.",
       "en": ["She never forgets her phone."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "PERSONAL_PRONOUNS"],
       "ua": "Ми завжди у школі вчасно.",
       "en": ["We are always at school on time."]
     },
@@ -276,12 +276,12 @@
       "en": ["He is often at the office until late."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q", "POSSESSIVES"],
       "ua": "Вони часто відвідують своїх бабусь?",
       "en": ["Do they often visit their grandmothers?"]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "WH_Q", "POSSESSIVES"],
       "ua": "Коли ти зазвичай прибираєш свою кімнату?",
       "en": ["When do you usually clean your room?"]
     },
@@ -296,7 +296,7 @@
       "en": ["He never comes late to school.", "He is never late for school."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "SIMPLE_ADJ", "POSSESSIVES"],
       "ua": "Моя мама завжди добра до всіх.",
       "en": ["My mom is always kind to everyone."]
     },
@@ -341,7 +341,7 @@
       "en": ["She sometimes sings in the shower."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "PERSONAL_PRONOUNS"],
       "ua": "Вони часто у спортзалі після роботи.",
       "en": ["They are often at the gym after work."]
     },
@@ -361,7 +361,7 @@
       "en": ["Do you always wear glasses?"]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "PERSONAL_PRONOUNS", "POSSESSIVES"],
       "ua": "Моя сестра часто в кімнаті, коли я приходжу.",
       "en": ["My sister is often in her room when I come."]
     },
@@ -396,7 +396,7 @@
       "en": ["They usually watch TV after dinner."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q", "POSSESSIVES"],
       "ua": "Твій брат часто грає в комп’ютерні ігри?",
       "en": ["Does your brother often play computer games?"]
     },

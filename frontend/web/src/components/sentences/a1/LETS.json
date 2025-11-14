@@ -15,7 +15,7 @@
     "en": ["Let’s read some books.", "Let’s study some books."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте відвідаємо цей театр.",
     "en": ["Let’s visit this theater.", "Let’s be visiting this theater."]
   },
@@ -25,7 +25,7 @@
     "en": ["Let’s play chess.", "Let’s have a game of chess."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте готуємо вечерю зараз.",
     "en": ["Let’s prepare dinner now.", "Let’s be preparing dinner now."]
   },
@@ -45,7 +45,7 @@
     "en": ["Let’s write an article.", "Let’s compose an article."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте малюємо пейзаж сьогодні.",
     "en": ["Let’s paint a landscape today.", "Let’s be painting a landscape today."]
   },
@@ -60,7 +60,7 @@
     "en": ["Let’s read a magazine.", "Let’s check out a magazine."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай відвідаємо виставку зараз.",
     "en": ["Let’s visit an exhibition now.", "Let’s be visiting an exhibition now."]
   },
@@ -75,7 +75,7 @@
     "en": ["Let’s play with many children.", "Let’s play with a lot of children."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте танцюємо на вечірці сьогодні.",
     "en": ["Let’s dance at the party today.", "Let’s be dancing at the party today."]
   },
@@ -85,7 +85,7 @@
     "en": ["Let’s write a poem.", "Let’s compose a poem."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте репетируємо цю пісню зараз.",
     "en": ["Let’s rehearse this song now.", "Let’s be rehearsing this song now."]
   },
@@ -100,7 +100,7 @@
     "en": ["Let’s run in the park.", "Let’s go running in the park."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай готуємо десерт зараз.",
     "en": ["Let’s prepare a dessert now.", "Let’s be preparing a dessert now."]
   },
@@ -120,7 +120,7 @@
     "en": ["Let’s read a novel.", "Let’s dive into a novel."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай заспіваємо на концерті сьогодні.",
     "en": ["Let’s sing at the concert today.", "Let’s be singing at the concert today."]
   },
@@ -135,7 +135,7 @@
     "en": ["Let’s paint a portrait.", "Let’s create a portrait."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте відвідаємо музей сьогодні.",
     "en": ["Let’s visit the museum today.", "Let’s be visiting the museum today."]
   },
@@ -150,7 +150,7 @@
     "en": ["Let’s visit many parks.", "Let’s explore a lot of parks."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай потанцюємо на сцені зараз.",
     "en": ["Let’s dance on the stage now.", "Let’s be dancing on the stage now."]
   },
@@ -160,7 +160,7 @@
     "en": ["Let’s write a letter.", "Let’s compose a letter."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте вивчимо цю тему зараз.",
     "en": ["Let’s study this topic now.", "Let’s be studying this topic now."]
   },
@@ -175,7 +175,7 @@
     "en": ["Let’s play tennis.", "Let’s have a game of tennis."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай готуємо піцу зараз.",
     "en": ["Let’s prepare pizza now.", "Let’s be preparing pizza now."]
   },
@@ -195,7 +195,7 @@
     "en": ["Let’s read a book.", "Let’s dive into a book."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай намалюємо пейзаж зараз.",
     "en": ["Let’s paint a landscape now.", "Let’s be painting a landscape now."]
   },
@@ -210,7 +210,7 @@
     "en": ["Let’s visit the gallery.", "Let’s check out the gallery."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте послухаємо музику сьогодні.",
     "en": ["Let’s listen to music today.", "Let’s be listening to music today."]
   },
@@ -225,7 +225,7 @@
     "en": ["Let’s visit many museums.", "Let’s explore a lot of museums."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай готуємо обід зараз.",
     "en": ["Let’s prepare lunch now.", "Let’s be preparing lunch now."]
   },
@@ -235,7 +235,7 @@
     "en": ["Let’s dance in the theater.", "Let’s perform a dance in the theater."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте тренуємося в цій грі зараз.",
     "en": ["Let’s train in this game now.", "Let’s be training in this game now."]
   },
@@ -265,7 +265,7 @@
     "en": ["Let’s learn some languages.", "Let’s study certain languages."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте відвідаємо цю галерею.",
     "en": ["Let’s visit this gallery.", "Let’s be visiting this gallery."]
   },
@@ -275,7 +275,7 @@
     "en": ["Let’s read a book.", "Let’s dive into a book."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте готуємо обід зараз.",
     "en": ["Let’s prepare lunch now.", "Let’s be preparing lunch now."]
   },
@@ -295,7 +295,7 @@
     "en": ["Let’s write an essay.", "Let’s compose an essay."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте співаємо на сцені сьогодні.",
     "en": ["Let’s sing on the stage today.", "Let’s be singing on the stage today."]
   },
@@ -310,7 +310,7 @@
     "en": ["Let’s read a newspaper.", "Let’s check out a newspaper."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай відвідаємо парк зараз.",
     "en": ["Let’s visit the park now.", "Let’s be visiting the park now."]
   },
@@ -325,7 +325,7 @@
     "en": ["Let’s play with many friends.", "Let’s play with a lot of friends."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте танцюємо в клубі сьогодні.",
     "en": ["Let’s dance in the club today.", "Let’s be dancing in the club today."]
   },
@@ -335,7 +335,7 @@
     "en": ["Let’s write a letter.", "Let’s compose a letter."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте репетируємо цю п’єсу зараз.",
     "en": ["Let’s rehearse this play now.", "Let’s be rehearsing this play now."]
   },
@@ -350,7 +350,7 @@
     "en": ["Let’s run in the forest.", "Let’s go running in the forest."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай готуємо піцу зараз.",
     "en": ["Let’s prepare pizza now.", "Let’s be preparing pizza now."]
   },
@@ -370,7 +370,7 @@
     "en": ["Let’s read a novel.", "Let’s dive into a novel."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай намалюємо портрет зараз.",
     "en": ["Let’s paint a portrait now.", "Let’s be painting a portrait now."]
   },
@@ -385,7 +385,7 @@
     "en": ["Let’s play football.", "Let’s have a game of football."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте відвідаємо театр сьогодні.",
     "en": ["Let’s visit the theater today.", "Let’s be visiting the theater today."]
   },
@@ -400,7 +400,7 @@
     "en": ["Let’s visit many galleries.", "Let’s explore a lot of galleries."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай потанцюємо на вечірці зараз.",
     "en": ["Let’s dance at the party now.", "Let’s be dancing at the party now."]
   },
@@ -410,7 +410,7 @@
     "en": ["Let’s write an article.", "Let’s compose an article."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте вивчимо цю книгу зараз.",
     "en": ["Let’s study this book now.", "Let’s be studying this book now."]
   },
@@ -425,7 +425,7 @@
     "en": ["Let’s play basketball.", "Let’s have a game of basketball."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай готуємо десерт зараз.",
     "en": ["Let’s prepare a dessert now.", "Let’s be preparing a dessert now."]
   },
@@ -445,7 +445,7 @@
     "en": ["Let’s read a magazine.", "Let’s check out a magazine."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай співаємо на концерті зараз.",
     "en": ["Let’s sing at the concert now.", "Let’s be singing at the concert now."]
   },
@@ -460,7 +460,7 @@
     "en": ["Let’s visit the zoo.", "Let’s explore the zoo."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давайте послухаємо музику зараз.",
     "en": ["Let’s listen to music now.", "Let’s be listening to music now."]
   },
@@ -475,7 +475,7 @@
     "en": ["Let’s visit many theaters.", "Let’s explore a lot of theaters."]
   },
   {
-    "rules": ["LETS", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["LETS", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Давай готуємо суп зараз.",
     "en": ["Let’s prepare soup now.", "Let’s be preparing soup now."]
   },
@@ -485,7 +485,7 @@
     "en": ["Let’s dance in the hall.", "Let’s perform a dance in the hall."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["LETS", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Давайте тренуємося в цій грі сьогодні.",
     "en": ["Let’s train in this game today.", "Let’s be training in this game today."]
   },

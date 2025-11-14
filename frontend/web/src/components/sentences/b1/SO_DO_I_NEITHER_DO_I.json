@@ -1,6 +1,6 @@
 { "SO_DO_I_NEITHER_DO_I": [
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я люблю кататися на ковзанах. Я теж."],
     "en": [
       "I like skating. So do I.",
@@ -8,7 +8,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не п’ю каву вранці. Я теж."],
     "en": [
       "I don’t drink coffee in the morning. Neither do I.",
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": ["Я часто ходжу в спортзал. Я теж."],
     "en": [
       "I often go to the gym. So do I.",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE", "ARTICLES"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
     "ua": ["Я не їм м’яса. Я теж."],
     "en": [
       "I don’t eat meat. Neither do I.",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я люблю дивитися фільми ввечері. Я теж."],
     "en": [
       "I like watching movies in the evening. So do I.",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не граю у відеоігри. Я теж."],
     "en": [
       "I don’t play video games. Neither do I.",
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE", "TOO_VERY"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "TOO_VERY"],
     "ua": ["Я дуже люблю цю пісню. Я теж."],
     "en": [
       "I really like this song. So do I.",
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я не снідаю вранці. Я теж."],
     "en": [
       "I don’t have breakfast in the morning. Neither do I.",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я люблю подорожувати. Я теж."],
     "en": [
       "I like traveling. So do I.",
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE", "ARTICLES", "HAVE_HAVE_GOT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ", "ARTICLES", "HAVE_HAVE_GOT"],
     "ua": ["Я не маю машини. Я теж."],
     "en": [
       "I don’t have a car. Neither do I.",
@@ -214,7 +214,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я зазвичай бігаю вранці. Я теж."],
     "en": [
       "I usually run in the morning. So do I."
@@ -319,7 +319,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не курю. Я теж."],
     "en": [
       "I don’t smoke. Neither do I.",
@@ -337,7 +337,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не дивлюся телевізор. Я теж."],
     "en": [
       "I don’t watch TV. Neither do I.",
@@ -433,7 +433,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": ["Я часто п’ю чай. Я теж."],
     "en": [
       "I often drink tea. So do I."
@@ -535,7 +535,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не п’ю алкоголь. Я теж."],
     "en": [
       "I don’t drink alcohol. Neither do I.",
@@ -545,7 +545,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я люблю гуляти ввечері. Я теж."],
     "en": [
       "I like walking in the evening. So do I.",

@@ -5,7 +5,7 @@
     "en": ["My friend reads a book.", "My friend is reading a book."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "YES_NO_Q"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "YES_NO_Q"],
     "ua": "Твій брат дивиться фільм зараз?",
     "en": ["Is your brother watching a movie now?", "Is your brother seeing a movie now?"]
   },
@@ -20,7 +20,7 @@
     "en": ["Our friends visit some museums.", "Our friends go to certain museums."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його учитель пояснює цей урок зараз.",
     "en": ["His teacher is explaining this lesson now.", "His teacher is teaching this lesson now."]
   },
@@ -30,7 +30,7 @@
     "en": ["My brother plays football.", "My brother is playing football."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Твій друг готує вечерю зараз.",
     "en": ["Your friend is preparing dinner now.", "Your friend is cooking dinner now."]
   },
@@ -50,7 +50,7 @@
     "en": ["My mom paints a picture.", "My mom is painting a picture."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Її друг співає на концерті зараз.",
     "en": ["Her friend is singing at the concert now.", "Her friend is performing at the concert now."]
   },
@@ -65,7 +65,7 @@
     "en": ["Your father reads a newspaper.", "Your father is reading a newspaper."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Його сестра відвідує музей зараз.",
     "en": ["His sister is visiting the museum now.", "His sister is exploring the museum now."]
   },
@@ -80,7 +80,7 @@
     "en": ["Their children play with many toys.", "Their children play with a lot of toys."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Мій друг танцює на вечірці зараз.",
     "en": ["My friend is dancing at the party now.", "My friend is dancing at the party tonight."]
   },
@@ -90,7 +90,7 @@
     "en": ["Your sister writes a poem.", "Your sister is writing a poem."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його команда репетирує цю пісню зараз.",
     "en": ["His team is rehearsing this song now.", "His team is practicing this song now."]
   },
@@ -105,7 +105,7 @@
     "en": ["My teacher runs in the park.", "My teacher jogs in the park."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Твій брат готує обід зараз.",
     "en": ["Your brother is preparing lunch now.", "Your brother is cooking lunch now."]
   },
@@ -125,7 +125,7 @@
     "en": ["My sister reads a novel.", "My sister is reading a novel."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Його мама співає на сцені зараз.",
     "en": ["His mom is singing on the stage now.", "His mom is performing on the stage now."]
   },
@@ -140,7 +140,7 @@
     "en": ["My father paints a portrait.", "My father is painting a portrait."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Її брат відвідує галерею зараз.",
     "en": ["Her brother is visiting the gallery now.", "Her brother is exploring the gallery now."]
   },
@@ -155,7 +155,7 @@
     "en": ["Their children visit many zoos.", "Their children explore a lot of zoos."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Мій друг готує піцу зараз.",
     "en": ["My friend is preparing pizza now.", "My friend is cooking pizza now."]
   },
@@ -165,7 +165,7 @@
     "en": ["Your mom writes an article.", "Your mom is writing an article."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його сестра вивчає цю тему зараз.",
     "en": ["His sister is studying this topic now.", "His sister is learning this topic now."]
   },
@@ -180,7 +180,7 @@
     "en": ["My brother plays basketball.", "My brother is playing basketball."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Твій друг слухає музику зараз.",
     "en": ["Your friend is listening to music now.", "Your friend is enjoying music now."]
   },
@@ -200,7 +200,7 @@
     "en": ["My sister reads a magazine.", "My sister is reading a magazine."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Його друг танцює на сцені зараз.",
     "en": ["His friend is dancing on the stage now.", "His friend is performing on the stage now."]
   },
@@ -215,7 +215,7 @@
     "en": ["My father visits the park.", "My father goes to the park."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Її мама готує десерт зараз.",
     "en": ["Her mom is preparing a dessert now.", "Her mom is making a dessert now."]
   },
@@ -230,7 +230,7 @@
     "en": ["Their teachers read many articles.", "Their teachers study a lot of articles."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Мій брат слухає концерт зараз.",
     "en": ["My brother is listening to a concert now.", "My brother is attending a concert now."]
   },
@@ -240,7 +240,7 @@
     "en": ["Your sister paints a landscape.", "Your sister is painting a landscape."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його команда тренується в цій грі зараз.",
     "en": ["His team is training in this game now.", "His team is practicing this game now."]
   },
@@ -260,7 +260,7 @@
     "en": ["My teacher writes an article.", "My teacher is writing an article."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "YES_NO_Q"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "YES_NO_Q"],
     "ua": "Твій друг слухає музику зараз?",
     "en": ["Is your friend listening to music now?", "Is your friend enjoying music now?"]
   },
@@ -275,7 +275,7 @@
     "en": ["Our students read some novels.", "Our students study certain novels."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його сестра малює цю картину зараз.",
     "en": ["His sister is painting this picture now.", "His sister is creating this picture now."]
   },
@@ -285,7 +285,7 @@
     "en": ["My friend plays volleyball.", "My friend is playing volleyball."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Твоя мама готує суп зараз.",
     "en": ["Your mom is preparing soup now.", "Your mom is cooking soup now."]
   },
@@ -305,7 +305,7 @@
     "en": ["My sister reads a magazine.", "My sister is reading a magazine."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Його брат танцює на вечірці зараз.",
     "en": ["His brother is dancing at the party now.", "His brother is dancing at the party tonight."]
   },
@@ -320,7 +320,7 @@
     "en": ["My father visits the zoo.", "My father goes to the zoo."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Її друг дивиться концерт зараз.",
     "en": ["Her friend is watching a concert now.", "Her friend is attending a concert now."]
   },
@@ -335,7 +335,7 @@
     "en": ["Their students read many newspapers.", "Their students check out a lot of newspapers."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Мій брат готує десерт зараз.",
     "en": ["My brother is preparing a dessert now.", "My brother is making a dessert now."]
   },
@@ -345,7 +345,7 @@
     "en": ["Your sister writes an essay.", "Your sister is writing an essay."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його друг співає цю пісню зараз.",
     "en": ["His friend is singing this song now.", "His friend is performing this song now."]
   },
@@ -360,7 +360,7 @@
     "en": ["My friend runs in the forest.", "My friend jogs in the forest."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Твій учитель пояснює урок зараз.",
     "en": ["Your teacher is explaining a lesson now.", "Your teacher is teaching a lesson now."]
   },
@@ -380,7 +380,7 @@
     "en": ["My mom reads a book.", "My mom is reading a book."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Його сестра відвідує парк зараз.",
     "en": ["His sister is visiting the park now.", "His sister is exploring the park now."]
   },
@@ -395,7 +395,7 @@
     "en": ["My teacher paints a portrait.", "My teacher is painting a portrait."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Її друг готує піцу зараз.",
     "en": ["Her friend is preparing pizza now.", "Her friend is cooking pizza now."]
   },
@@ -410,7 +410,7 @@
     "en": ["Their teachers visit many museums.", "Their teachers explore a lot of museums."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Мій друг танцює на сцені зараз.",
     "en": ["My friend is dancing on the stage now.", "My friend is performing on the stage now."]
   },
@@ -420,7 +420,7 @@
     "en": ["Your sister reads a novel.", "Your sister is reading a novel."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його брат вивчає цю тему зараз.",
     "en": ["His brother is studying this topic now.", "His brother is learning this topic now."]
   },
@@ -435,7 +435,7 @@
     "en": ["My father plays tennis.", "My father is playing tennis."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Її мама слухає музику зараз.",
     "en": ["Her mom is listening to music now.", "Her mom is enjoying music now."]
   },
@@ -455,7 +455,7 @@
     "en": ["My sister visits the museum.", "My sister goes to the museum."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Його друг співає на концерті зараз.",
     "en": ["His friend is singing at the concert now.", "His friend is performing at the concert now."]
   },
@@ -470,7 +470,7 @@
     "en": ["My friend writes a poem.", "My friend is writing a poem."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Твоя мама готує обід зараз.",
     "en": ["Your mom is preparing lunch now.", "Your mom is cooking lunch now."]
   },
@@ -485,7 +485,7 @@
     "en": ["Their friends read many magazines.", "Their friends check out a lot of magazines."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONTINUOUS", "ARTICLES"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Мій брат дивиться фільм зараз.",
     "en": ["My brother is watching a movie now.", "My brother is seeing a movie now."]
   },
@@ -495,7 +495,7 @@
     "en": ["Your sister plays basketball.", "Your sister is playing basketball."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONTINUOUS"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Його учитель пояснює цю тему зараз.",
     "en": ["His teacher is explaining this topic now.", "His teacher is teaching this topic now."]
   },

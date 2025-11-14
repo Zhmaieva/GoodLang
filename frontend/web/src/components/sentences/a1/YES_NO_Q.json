@@ -35,7 +35,7 @@
     "en": ["Is the meeting at three? Yes, it is.", "Is the meeting at 3? Yes, it is."]
   },
   {
-    "rules": ["YES_NO_Q", "PRESENT_CONTINUOUS_NOW", "PREP_PLACE"],
+    "rules": ["YES_NO_Q", "PRESENT_CONT_NOW_NOW", "PREP_PLACE"],
     "ua": "Вони зараз працюють в офісі? Так, працюють.",
     "en": ["Are they working in the office now? Yes, they are."]
   },
@@ -175,7 +175,7 @@
     "en": ["Is your birthday on the first of June? Yes, it is.", "Is your birthday on June 1st? Yes, it is."]
   },
   {
-    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONTINUOUS", "PREP_TIME"],
+    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONT_NOW", "PREP_TIME"],
     "ua": "Ти зустрічаєшся з нею завтра? Так, зустрічаюся.",
     "en": ["Are you meeting her tomorrow? Yes, I am."]
   },
@@ -365,7 +365,7 @@
     "en": ["Were you working at ten? Yes, I was.", "Were you working at 10? Yes, I was."]
   },
   {
-    "rules": ["YES_NO_Q", "PRESENT_CONTINUOUS_NOW", "PREP_PLACE"],
+    "rules": ["YES_NO_Q", "PRESENT_CONT_NOW_NOW", "PREP_PLACE"],
     "ua": "Ти зараз їдеш у метро? Так, їду.",
     "en": ["Are you riding the subway now? Yes, I am.", "Are you on the metro now? Yes, I am."]
   },
@@ -430,7 +430,7 @@
     "en": ["Is the exam on the twelfth of May? Yes, it is.", "Is the exam on May 12th? Yes, it is."]
   },
   {
-    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONTINUOUS", "PREP_TIME"],
+    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONT_NOW", "PREP_TIME"],
     "ua": "Ти зустрічаєшся з клієнтом у п’ятницю? Так, зустрічаюся.",
     "en": ["Are you meeting the client on Friday? Yes, I am."]
   },

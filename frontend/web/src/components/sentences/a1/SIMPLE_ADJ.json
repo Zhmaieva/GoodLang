@@ -45,7 +45,7 @@
     "en": ["My child is small.", "My kid is small."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Ця вправа легка.",
     "en": ["This exercise is easy."]
   },
@@ -60,7 +60,7 @@
     "en": ["The weather is cold."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей чай гарячий.",
     "en": ["This tea is hot."]
   },
@@ -75,12 +75,12 @@
     "en": ["The moon is bright."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY", "DEMONSTRATIVES"],
     "ua": "Цей тест дуже складний.",
     "en": ["This test is very difficult."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S", "DEMONSTRATIVES"],
     "ua": "Це кімната моєї сестри, і вона гарна.",
     "en": ["This is my sister's room and it is nice."]
   },
@@ -100,12 +100,12 @@
     "en": ["Her voice is beautiful.", "Her voice is nice."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_PLACE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Моя кімната чиста, а твоя брудна.",
     "en": ["My room is clean and yours is dirty."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Ця кава гірка.",
     "en": ["This coffee is bitter."]
   },
@@ -125,12 +125,12 @@
     "en": ["His job is hard."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей урок короткий.",
     "en": ["This lesson is short."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "ARTICLES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "ARTICLES", "DEMONSTRATIVES"],
     "ua": "Це зручний стілець.",
     "en": ["This is a comfortable chair."]
   },
@@ -155,7 +155,7 @@
     "en": ["My dog is old."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Ця квітка гарна.",
     "en": ["This flower is beautiful."]
   },
@@ -190,22 +190,22 @@
     "en": ["Our park is nice and green."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "ARTICLES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "ARTICLES", "DEMONSTRATIVES"],
     "ua": "Це хороший ресторан.",
     "en": ["This is a good restaurant."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_PLACE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Море чисте сьогодні.",
     "en": ["The sea is clean today."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_PLACE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_TIME"],
     "ua": "Місто спокійне вночі.",
     "en": ["The city is quiet at night."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY", "DEMONSTRATIVES"],
     "ua": "Цей день дуже гарний.",
     "en": ["This day is very nice."]
   },
@@ -215,7 +215,7 @@
     "en": ["She is tired.", "She's tired."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY", "PERSONAL_PRONOUNS"],
     "ua": "Він занадто повільний.",
     "en": ["He is too slow.", "He's too slow."]
   },
@@ -225,7 +225,7 @@
     "en": ["I am happy.", "I'm happy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_PLACE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_PLACE", "PERSONAL_PRONOUNS"],
     "ua": "Вони вдома і спокійні.",
     "en": ["They are at home and calm.", "They're at home and calm."]
   },
@@ -240,12 +240,12 @@
     "en": ["His eyes are green."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Це питання просте.",
     "en": ["This question is simple."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Твоя ідея чудова.",
     "en": ["Your idea is wonderful."]
   },
@@ -260,12 +260,12 @@
     "en": ["My day is good."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей урок цікавий.",
     "en": ["This lesson is interesting."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей стіл великий.",
     "en": ["This table is large.", "This table is big."]
   },
@@ -280,7 +280,7 @@
     "en": ["My sister is young."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Це питання складне.",
     "en": ["This question is difficult."]
   },
@@ -310,27 +310,27 @@
     "en": ["His eyes are blue."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей парк зелений.",
     "en": ["This park is green."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
     "ua": "Він втомлений.",
     "en": ["He is tired.", "He's tired."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
     "ua": "Вона щаслива.",
     "en": ["She is happy.", "She's happy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
     "ua": "Ми готові.",
     "en": ["We are ready.", "We're ready."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
     "ua": "Вони зайняті.",
     "en": ["They are busy.", "They're busy."]
   },
@@ -340,7 +340,7 @@
     "en": ["My child is cheerful.", "My child is happy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей пес дружній.",
     "en": ["This dog is friendly."]
   },
@@ -355,7 +355,7 @@
     "en": ["Her voice is quiet."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Ця книга цікава.",
     "en": ["This book is interesting."]
   },
@@ -365,12 +365,12 @@
     "en": ["My bag is light."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей тест легкий.",
     "en": ["This test is easy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Твоє місто гарне.",
     "en": ["Your city is beautiful.", "Your town is beautiful."]
   },
@@ -380,12 +380,12 @@
     "en": ["Her room is spacious."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей день довгий.",
     "en": ["This day is long."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей хлопець веселий.",
     "en": ["This boy is funny."]
   },
@@ -400,112 +400,112 @@
     "en": ["My mother is caring."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Його тато добрий.",
     "en": ["His father is kind.", "His dad is kind."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей урок важливий.",
     "en": ["This lesson is important."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Ця кава смачна.",
     "en": ["This coffee is tasty."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Твоя ідея чудова.",
     "en": ["Your idea is wonderful."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Його план добрий.",
     "en": ["His plan is good."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Моя школа нова.",
     "en": ["My school is new."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Їхній будинок старий.",
     "en": ["Their house is old."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей ресторан дорогий.",
     "en": ["This restaurant is expensive."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Її сорочка біла.",
     "en": ["Her shirt is white."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Моя спальна тепла.",
     "en": ["My bedroom is warm."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Мій кіт чорний.",
     "en": ["My cat is black."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Її квіти красиві.",
     "en": ["Her flowers are beautiful."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Його друзі веселі.",
     "en": ["His friends are funny."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Мій дім затишний.",
     "en": ["My house is cozy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Мій пес милий.",
     "en": ["My dog is cute."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Моя бабуся стара.",
     "en": ["My grandmother is old."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей стіл круглий.",
     "en": ["This table is round."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Мій дідусь сильний.",
     "en": ["My grandfather is strong."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей магазин маленький.",
     "en": ["This shop is small."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Їхній сад зелений.",
     "en": ["Their garden is green."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Цей урок короткий.",
     "en": ["This lesson is short."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Мій зошит тонкий.",
     "en": ["My notebook is thin."]
   }

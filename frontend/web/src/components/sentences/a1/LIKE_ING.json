@@ -20,7 +20,7 @@
     "en": ["We like listening to a lot of music.", "We enjoy hearing plenty of music."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Йому подобається дивитися твій фільм?",
     "en": ["Does he like watching your movie?", "Does he enjoy viewing your film?"]
   },
@@ -46,8 +46,8 @@
   },
   {
     "rules": ["LIKE_ING", "DEMONSTRATIVES", "YES_NO_Q"],
-    "ua": "Мені подобається слухати цей подкаст?",
-    "en": ["Do I like listening to this podcast?", "Do I enjoy hearing this podcast?"]
+    "ua": "Тобі подобається слухати цей подкаст?",
+    "en": ["Do you like listening to this podcast?", "Do you enjoy listening to this podcast?"]
   },
   {
     "rules": ["LIKE_ING", "PREP_TIME", "YES_NO_Q"],
@@ -60,7 +60,7 @@
     "en": ["We like playing lots of games.", "We enjoy playing many games."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Тобі подобається готувати твій суп?",
     "en": ["Do you like cooking your soup?", "Do you enjoy making your soup?"]
   },
@@ -95,7 +95,7 @@
     "en": ["Do you like reading a lot of newspapers?", "Do you enjoy reading many papers?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
     "ua": "Вона любить слухати твою музику.",
     "en": ["She likes listening to your music.", "She enjoys hearing your songs."]
   },
@@ -135,7 +135,7 @@
     "en": ["We like watching a lot of movies.", "We enjoy viewing many films."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Тобі подобається грати в твої ігри?",
     "en": ["Do you like playing your games?", "Do you enjoy playing your video games?"]
   },
@@ -170,7 +170,7 @@
     "en": ["Do you like reading a lot of magazines?", "Do you enjoy reading many journals?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
     "ua": "Йому подобається дивитися твої відео.",
     "en": ["He likes watching your videos.", "He enjoys viewing your clips."]
   },
@@ -210,7 +210,7 @@
     "en": ["We like listening to a lot of podcasts.", "We enjoy hearing many podcasts."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Тобі подобається читати твої книги?",
     "en": ["Do you like reading your books?", "Do you enjoy reading your novels?"]
   },
@@ -245,7 +245,7 @@
     "en": ["Do you like watching a lot of series?", "Do you enjoy viewing many shows?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
     "ua": "Вона любить грати в твої шахи.",
     "en": ["She likes playing your chess.", "She enjoys playing your chess game."]
   },
@@ -270,7 +270,7 @@
     "en": ["We like reading lots of books.", "We enjoy reading many books."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Йому подобається грати в твою гру?",
     "en": ["Does he like playing your game?", "Does he enjoy playing your video game?"]
   },
@@ -296,8 +296,8 @@
   },
   {
     "rules": ["LIKE_ING", "DEMONSTRATIVES", "YES_NO_Q"],
-    "ua": "Мені подобається дивитися цей фільм?",
-    "en": ["Do I like watching this movie?", "Do I enjoy viewing that film?"]
+    "ua": "Тобі подобається дивитися цей фільм?",
+    "en": ["Do you like watching this movie?", "Do you enjoy viewing that film?"]
   },
   {
     "rules": ["LIKE_ING", "PREP_TIME", "YES_NO_Q"],
@@ -310,7 +310,7 @@
     "en": ["We like listening to lots of songs.", "We enjoy hearing many songs."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Тобі подобається читати твій журнал?",
     "en": ["Do you like reading your magazine?", "Do you enjoy reading your journal?"]
   },
@@ -345,7 +345,7 @@
     "en": ["Do you like watching a lot of videos?", "Do you enjoy viewing many clips?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
     "ua": "Вона любить грати в твої карти.",
     "en": ["She likes playing your cards.", "She enjoys playing your card game."]
   },
@@ -385,7 +385,7 @@
     "en": ["We like playing lots of games.", "We enjoy playing many games."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Тобі подобається слухати твій подкаст?",
     "en": ["Do you like listening to your podcast?", "Do you enjoy hearing your podcast?"]
   },
@@ -420,7 +420,7 @@
     "en": ["Do you like listening to a lot of albums?", "Do you enjoy hearing many albums?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
     "ua": "Йому подобається дивитися твої фільми.",
     "en": ["He likes watching your movies.", "He enjoys viewing your films."]
   },
@@ -460,7 +460,7 @@
     "en": ["We like watching lots of series.", "We enjoy viewing many shows."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "YES_NO_Q"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "YES_NO_Q"],
     "ua": "Тобі подобається грати в твої шахи?",
     "en": ["Do you like playing your chess?", "Do you enjoy playing your chess game?"]
   },
@@ -495,7 +495,7 @@
     "en": ["Do you like reading a lot of articles?", "Do you enjoy reading many articles?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_S", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
     "ua": "Вона любить слухати твої пісні.",
     "en": ["She likes listening to your songs.", "She enjoys hearing your music."]
   }

@@ -1,0 +1,690 @@
+{ "PRESENT_CONT_NOW": [
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_TIME", "ARTICLES"],
+    "ua": "Я зараз читаю книгу.",
+    "en": ["I am reading a book now.", "I’m currently reading a book."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ти зараз пишеш лист?",
+    "en": ["Are you writing a letter now?", "Are you currently writing a letter?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Вона зараз танцює в залі.",
+    "en": ["She is dancing in the hall now.", "She’s currently dancing in the room."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE", "ARTICLES"],
+    "ua": "Багато студентів зараз слухають музику.",
+    "en": ["Many students are listening to music now.", "A lot of students are currently listening to music."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей чоловік зараз готує на кухні?",
+    "en": ["Is this man cooking in the kitchen now?", "Is that man currently preparing food in the kitchen?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Він зараз бігає в парку.",
+    "en": ["He is running in the park now.", "He’s currently jogging in the park."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ви зараз дивитеся на екран?",
+    "en": ["Are you looking at the screen now?", "Are you currently watching the screen?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі діти зараз грають в ігри.",
+    "en": ["Some children are playing games now.", "Certain kids are currently playing games."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця дівчина зараз співає на сцені.",
+    "en": ["This girl is singing on the stage now.", "That girl is currently singing on stage."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця жінка зараз малює в студії?",
+    "en": ["Is this woman painting in the studio now?", "Is that woman currently drawing in the studio?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ми зараз готуємо на кухні.",
+    "en": ["We are cooking in the kitchen now.", "We’re currently preparing food in the kitchen."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ти зараз слухаєш радіо?",
+    "en": ["Are you listening to the radio now?", "Are you currently listening to the radio?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE", "ARTICLES"],
+    "ua": "Багато людей зараз дивляться на екран.",
+    "en": ["Many people are looking at the screen now.", "A lot of people are currently watching the screen."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей хлопець зараз пише на дошці.",
+    "en": ["This boy is writing on the board now.", "That boy is currently writing on the board."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей студент зараз вчиться в бібліотеці?",
+    "en": ["Is this student studying in the library now?", "Is that student currently learning in the library?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Я зараз плаваю в басейні.",
+    "en": ["I am swimming in the pool now.", "I’m currently swimming in the pool."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
+    "ua": "Деякі гості зараз дивляться на картини.",
+    "en": ["Some guests are looking at paintings now.", "Certain guests are currently viewing paintings."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Вона зараз шиє в кімнаті?",
+    "en": ["Is she sewing in the room now?", "Is she currently sewing in the room?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця людина зараз танцює на площі.",
+    "en": ["This person is dancing in the square now.", "That person is currently dancing in the plaza."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей музикант зараз грає на вулиці?",
+    "en": ["Is this musician playing on the street now?", "Is that musician currently playing on the street?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Він зараз працює в офісі.",
+    "en": ["He is working in the office now.", "He’s currently working at the office."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Багато дітей зараз малюють портрети.",
+    "en": ["Many children are painting portraits now.", "A lot of kids are currently drawing portraits."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти зараз читаєш на дивані?",
+    "en": ["Are you reading on the couch now?", "Are you currently reading on the sofa?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця вчителька зараз пояснює в класі.",
+    "en": ["This teacher is explaining in the classroom now.", "That teacher is currently teaching in the class."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Цей чоловік зараз слухає подкаст?",
+    "en": ["Is this man listening to a podcast now?", "Is that man currently listening to a podcast?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ми зараз гуляємо в лісі.",
+    "en": ["We are walking in the forest now.", "We’re currently strolling in the woods."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі друзі зараз грають у карти.",
+    "en": ["Some friends are playing cards now.", "Certain friends are currently playing card games."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Вона зараз готує на кухні?",
+    "en": ["Is she cooking in the kitchen now?", "Is she currently preparing food in the kitchen?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця дівчина зараз пише в зошиті.",
+    "en": ["This girl is writing in a notebook now.", "That girl is currently writing in a notebook."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей хлопець зараз бігає на полі?",
+    "en": ["Is this boy running on the field now?", "Is that boy currently jogging on the field?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_TIME"],
+    "ua": "Я зараз дивлюся на телевізор.",
+    "en": ["I am watching TV now.", "I’m currently watching television."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE", "ARTICLES"],
+    "ua": "Багато туристів зараз фотографують у парку.",
+    "en": ["Many tourists are photographing in the park now.", "A lot of tourists are currently taking photos in the park."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти зараз малюєш на полотні?",
+    "en": ["Are you painting on a canvas now?", "Are you currently drawing on a canvas?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця людина зараз читає в кафе.",
+    "en": ["This person is reading in a cafe now.", "That person is currently reading in a cafe."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей учитель зараз пише на столі?",
+    "en": ["Is this teacher writing on the desk now?", "Is that teacher currently writing on the desk?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE"],
+    "ua": "Він зараз катається на велосипеді.",
+    "en": ["He is cycling now.", "He’s currently riding a bike."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE", "ARTICLES"],
+    "ua": "Деякі спортсмени зараз тренуються на стадіоні.",
+    "en": ["Some athletes are training at the stadium now.", "Certain athletes are currently working out at the stadium."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW"],
+    "ua": "Вона зараз слухає концерт?",
+    "en": ["Is she listening to a concert now?", "Is she currently listening to a concert?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця жінка зараз готує в їдальні.",
+    "en": ["This woman is cooking in the dining room now.", "That woman is currently preparing food in the dining room."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей студент зараз читає в парку?",
+    "en": ["Is this student reading in the park now?", "Is that student currently reading in the park?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_TIME", "PREP_PLACE", "ARTICLES"],
+    "ua": "Я зараз пишу в зошиті.",
+    "en": ["I am writing in a notebook now.", "I’m currently writing in a notebook."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE", "ARTICLES"],
+    "ua": "Багато відвідувачів зараз дивляться на сцену.",
+    "en": ["Many visitors are watching the stage now.", "A lot of visitors are currently looking at the stage."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти зараз граєш на комп’ютері?",
+    "en": ["Are you playing on the computer now?", "Are you currently playing on the computer?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE"],
+    "ua": "Цей гість зараз співає в караоке.",
+    "en": ["This guest is singing at karaoke now.", "That guest is currently singing at karaoke."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця дівчина зараз танцює в клубі?",
+    "en": ["Is this girl dancing in the club now?", "Is that girl currently dancing at the club?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ми зараз плаваємо в річці.",
+    "en": ["We are swimming in the river now.", "We’re currently swimming in the river."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
+    "ua": "Деякі працівники зараз пишуть листи.",
+    "en": ["Some workers are writing letters now.", "Certain workers are currently writing letters."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW"],
+    "ua": "Він зараз дивиться на телевізор?",
+    "en": ["Is he watching TV now?", "Is he currently watching television?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця людина зараз малює в саду.",
+    "en": ["This person is painting in the garden now.", "That person is currently drawing in the garden."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей хлопець зараз грає на полі?",
+    "en": ["Is this boy playing on the field now?", "Is that boy currently playing on the field?"]
+  },
+
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Я зараз малюю в альбомі.",
+    "en": ["I am drawing in an album now.", "I’m currently sketching in an album."]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW"],
+    "ua": "Ти зараз слухаєш музику?",
+    "en": ["Are you listening to music now?", "Are you currently listening to music?"]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Вона зараз пише в бібліотеці.",
+    "en": ["She is writing in the library now.", "She’s currently writing in the library."]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PREP_PLACE",
+      "ARTICLES"
+    ],
+    "ua": "Багато учнів зараз дивляться на дошку.",
+    "en": [
+      "Many students are looking at the board now.",
+      "A lot of students are currently watching the board."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей хлопець зараз грає на майданчику?",
+    "en": [
+      "Is this boy playing on the playground now?",
+      "Is that boy currently playing on the playground?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Він зараз танцює в клубі.",
+    "en": [
+      "He is dancing in the club now.",
+      "He’s currently dancing at the club."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ви зараз читаєте на балконі?",
+    "en": [
+      "Are you reading on the balcony now?",
+      "Are you currently reading on the balcony?"
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "COUNT_UNCOUNT"
+    ],
+    "ua": "Деякі діти зараз малюють картини.",
+    "en": [
+      "Some children are drawing pictures now.",
+      "Certain kids are currently painting pictures."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця дівчина зараз готує на кухні.",
+    "en": [
+      "This girl is cooking in the kitchen now.",
+      "That girl is currently preparing food in the kitchen."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця людина зараз співає в студії?",
+    "en": [
+      "Is this person singing in the studio now?",
+      "Is that person currently singing in the studio?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_TIME"],
+    "ua": "Ми зараз дивимося телевізор.",
+    "en": [
+      "We are watching TV now.",
+      "We’re currently watching television."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти зараз пишеш на комп’ютері?",
+    "en": [
+      "Are you writing on the computer now?",
+      "Are you currently writing on the computer?"
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "ARTICLES"
+    ],
+    "ua": "Багато людей зараз слухають концерт.",
+    "en": [
+      "Many people are listening to a concert now.",
+      "A lot of people are currently listening to a concert."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей чоловік зараз бігає на доріжці.",
+    "en": [
+      "This man is running on the track now.",
+      "That man is currently jogging on the track."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей студент зараз читає в читальному залі?",
+    "en": [
+      "Is this student reading in the reading room now?",
+      "Is that student currently reading in the reading room?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Я зараз плаваю в морі.",
+    "en": [
+      "I am swimming in the sea now.",
+      "I’m currently swimming in the ocean."
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PREP_PLACE",
+      "ARTICLES"
+    ],
+    "ua": "Деякі гості зараз фотографують у музеї.",
+    "en": [
+      "Some guests are photographing in the museum now.",
+      "Certain guests are currently taking photos in the museum."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Вона зараз пише в щоденнику?",
+    "en": [
+      "Is she writing in a diary now?",
+      "Is she currently writing in a journal?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця людина зараз танцює на вечірці.",
+    "en": [
+      "This person is dancing at the party now.",
+      "That person is currently dancing at the party."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей музикант зараз грає на площі?",
+    "en": [
+      "Is this musician playing in the square now?",
+      "Is that musician currently playing in the plaza?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Він зараз готує в їдальні.",
+    "en": [
+      "He is cooking in the dining room now.",
+      "He’s currently preparing food in the dining room."
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "COUNT_UNCOUNT"
+    ],
+    "ua": "Багато дітей зараз грають у ігри.",
+    "en": [
+      "Many children are playing games now.",
+      "A lot of kids are currently playing games."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ти зараз дивишся на пейзаж?",
+    "en": [
+      "Are you looking at the landscape now?",
+      "Are you currently watching the scenery?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця вчителька зараз пише на дошці.",
+    "en": [
+      "This teacher is writing on the board now.",
+      "That teacher is currently writing on the board."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Цей чоловік зараз слухає радіо?",
+    "en": [
+      "Is this man listening to the radio now?",
+      "Is that man currently listening to the radio?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ми зараз гуляємо на пляжі.",
+    "en": [
+      "We are walking on the beach now.",
+      "We’re currently strolling on the beach."
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PREP_PLACE",
+      "ARTICLES"
+    ],
+    "ua": "Деякі друзі зараз дивляться на картини.",
+    "en": [
+      "Some friends are looking at paintings now.",
+      "Certain friends are currently viewing paintings."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Вона зараз співає в хорі?",
+    "en": [
+      "Is she singing in the choir now?",
+      "Is she currently singing in the choir?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця дівчина зараз читає в парку.",
+    "en": [
+      "This girl is reading in the park now.",
+      "That girl is currently reading in the park."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей хлопець зараз бігає в лісі?",
+    "en": [
+      "Is this boy running in the forest now?",
+      "Is that boy currently jogging in the woods?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_TIME", "PREP_PLACE", "ARTICLES"],
+    "ua": "Я зараз пишу на телефоні.",
+    "en": [
+      "I am writing on the phone now.",
+      "I’m currently typing on the phone."
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PREP_PLACE",
+      "ARTICLES"
+    ],
+    "ua": "Багато туристів зараз фотографують на площі.",
+    "en": [
+      "Many tourists are photographing in the square now.",
+      "A lot of tourists are currently taking photos in the plaza."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти зараз готуєш на кухні?",
+    "en": [
+      "Are you cooking in the kitchen now?",
+      "Are you currently preparing food in the kitchen?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця людина зараз малює на мольберті.",
+    "en": [
+      "This person is painting on an easel now.",
+      "That person is currently drawing on an easel."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей учитель зараз пояснює в аудиторії?",
+    "en": [
+      "Is this teacher explaining in the lecture hall now?",
+      "Is that teacher currently teaching in the auditorium?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Він зараз катається в парку.",
+    "en": [
+      "He is cycling in the park now.",
+      "He’s currently riding a bike in the park."
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PREP_PLACE",
+      "ARTICLES"
+    ],
+    "ua": "Деякі спортсмени зараз тренуються на корті.",
+    "en": [
+      "Some athletes are training on the court now.",
+      "Certain athletes are currently practicing on the court."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Вона зараз дивиться на екран?",
+    "en": [
+      "Is she looking at the screen now?",
+      "Is she currently watching the screen?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця жінка зараз співає в кафе.",
+    "en": [
+      "This woman is singing in a cafe now.",
+      "That woman is currently singing in a cafe."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей студент зараз пише в аудиторії?",
+    "en": [
+      "Is this student writing in the classroom now?",
+      "Is that student currently writing in the classroom?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_TIME", "ARTICLES"],
+    "ua": "Я зараз слухаю подкаст.",
+    "en": [
+      "I am listening to a podcast now.",
+      "I’m currently listening to a podcast."
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PREP_PLACE",
+      "ARTICLES"
+    ],
+    "ua": "Багато відвідувачів зараз дивляться на виставку.",
+    "en": [
+      "Many visitors are looking at the exhibition now.",
+      "A lot of visitors are currently viewing the exhibition."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ти зараз граєш на гітарі?",
+    "en": [
+      "Are you playing the guitar now?",
+      "Are you currently playing the guitar?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей гість зараз фотографує в саду.",
+    "en": [
+      "This guest is photographing in the garden now.",
+      "That guest is currently taking photos in the garden."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця дівчина зараз танцює на сцені?",
+    "en": [
+      "Is this girl dancing on the stage now?",
+      "Is that girl currently dancing on stage?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ми зараз плаваємо в басейні.",
+    "en": [
+      "We are swimming in the pool now.",
+      "We’re currently swimming in the pool."
+    ]
+  },
+  {
+    "rules": [
+      "PRESENT_CONT_NOW",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "COUNT_UNCOUNT"
+    ],
+    "ua": "Деякі працівники зараз пишуть повідомлення.",
+    "en": [
+      "Some workers are writing messages now.",
+      "Certain workers are currently typing messages."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
+    "ua": "Він зараз читає на терасі?",
+    "en": [
+      "Is he reading on the terrace now?",
+      "Is he currently reading on the terrace?"
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ця людина зараз готує в саду.",
+    "en": [
+      "This person is cooking in the garden now.",
+      "That person is currently preparing food in the garden."
+    ]
+  },
+  {
+    "rules": ["PRESENT_CONT_NOW", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Цей хлопець зараз грає на корті?",
+    "en": [
+      "Is this boy playing on the court now?",
+      "Is that boy currently playing on the court?"
+    ]
+  }
+] }

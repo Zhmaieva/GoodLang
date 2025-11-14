@@ -7,7 +7,7 @@
   {
     "rules": ["COUNT_UNCOUNT", "IMPERATIVES", "DEMONSTRATIVES"],
     "ua": "Візьми ці яблука з столу.",
-    "en": ["Take these apples from the table.", "Grab those apples off the table."]
+    "en": ["Take these apples from the table.", "Grab these apples off the table."]
   },
   {
     "rules": ["COUNT_UNCOUNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
@@ -17,7 +17,7 @@
   {
     "rules": ["COUNT_UNCOUNT", "IMPERATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Принеси багато книг із бібліотеки.",
-    "en": ["Bring many books from the library.", "Get a lot of books from the library."]
+    "en": ["Bring many books from the library.", "Bring a lot of books from the library.","Get a lot of books from the library."]
   },
   {
     "rules": ["COUNT_UNCOUNT", "IMPERATIVES", "POSSESSIVE_S"],
@@ -47,7 +47,11 @@
   {
     "rules": ["COUNT_UNCOUNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
     "ua": "Ці стільці потребують ремонту.",
-    "en": ["These chairs need repair.", "Those chairs require fixing."]
+    "en": ["These chairs need repair.",
+      "Those chairs require fixing.",
+      "These chairs need to be repaired.",
+      "These chairs need repairing.",
+      "These chairs need some repair work."]
   },
   {
     "rules": ["COUNT_UNCOUNT", "IMPERATIVES", "PREP_PLACE"],
@@ -498,5 +502,255 @@
     "rules": ["COUNT_UNCOUNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "POSSESSIVE_S"],
     "ua": "У твоїй сумці багато листів.",
     "en": ["There are many letters in your bag.", "Your bag has a lot of mail."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Поклади рушники у ванну.",
+    "en": ["Put the towels in the bathroom.", "Place the towels in the bathroom.", "Throw the towels in the bathroom."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","DEMONSTRATIVES"],
+    "ua": "Візьми цей шампунь із полиці.",
+    "en": ["Grab this shampoo from the shelf.", "Take this shampoo off the shelf."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY","PREP_TIME"],
+    "ua": "У нас мало часу до автобуса.",
+    "en": ["We have little time before the bus.", "There’s not much time until the bus arrives."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","PREP_PLACE"],
+    "ua": "На раковині стоїть стакан.",
+    "en": ["There’s a glass on the sink.", "A glass is sitting on the sink."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Додай трохи мила у воду.",
+    "en": ["Add some soap to the water.", "Put a bit of soap in the water."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES","SIMPLE_ADJ"],
+    "ua": "Цей рушник дуже м’який.",
+    "en": ["This towel is very soft.", "That towel is super soft."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Постав крем на полицю.",
+    "en": ["Put the cream on the shelf.", "Set the cream on the shelf."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY","POSSESSIVE_S"],
+    "ua": "У твоїй ванній немає шампуню.",
+    "en": ["There’s no shampoo in your bathroom.", "Your bathroom doesn’t have any shampoo."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","DEMONSTRATIVES"],
+    "ua": "Візьми ці серветки з шафки.",
+    "en": ["Take these wipes from the cabinet.", "Grab these wipes out of the cabinet."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","PREP_PLACE"],
+    "ua": "На підлозі лежить рушник.",
+    "en": ["There’s a towel on the floor.", "A towel is lying on the floor."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Поклади підручники в рюкзак.",
+    "en": ["Put the textbooks in the backpack.", "Throw the textbooks into your bag."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES"],
+    "ua": "Візьми ці крейди для дошки.",
+    "en": ["Take these chalks for the board.", "Grab these pieces of chalk for the board."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY","PREP_PLACE"],
+    "ua": "У класі немає паперу.",
+    "en": ["There’s no paper in the classroom.", "The classroom doesn’t have any paper."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","SIMPLE_ADJ"],
+    "ua": "На парті лежить нова ручка.",
+    "en": ["There’s a new pen on the desk.", "A new pen is on the desk."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","POSSESSIVE_S"],
+    "ua": "Передай мені твій маркер.",
+    "en": ["Pass me your marker.", "Give me your marker."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Візьми трохи паперу для вправ.",
+    "en": ["Take some paper for the exercises.", "Grab a bit of paper for the exercises."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES","SIMPLE_ADJ"],
+    "ua": "Ця книга дуже легка.",
+    "en": ["This book is very light.", "That book is really light."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Поклади олівці в коробку.",
+    "en": ["Put the pencils in the box.", "Drop the pencils into the box."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY","POSSESSIVE_S"],
+    "ua": "У твоєму рюкзаку багато паперів.",
+    "en": ["There are many papers in your backpack.", "Your backpack has a lot of papers."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","PREP_PLACE"],
+    "ua": "На вчительському столі стоїть стакан води.",
+    "en": ["There’s a glass of water on the teacher’s desk.", "A glass of water is on the teacher’s desk."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","DEMONSTRATIVES"],
+    "ua": "Візьми ці іграшкові кубики.",
+    "en": ["Grab these toy blocks.", "Take these toy blocks."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Поклади машинки у коробку.",
+    "en": ["Put the toy cars in the box.", "Throw the cars into the toy box."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Додай трохи піску у формочку.",
+    "en": ["Add some sand to the mold.", "Put a bit of sand in the mold."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES","SIMPLE_ADJ"],
+    "ua": "Ця іграшка дуже мила.",
+    "en": ["This toy is very cute.", "That toy is super cute."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","POSSESSIVE_S"],
+    "ua": "Передай мені твій м’яч.",
+    "en": ["Pass me your ball.", "Give me your ball."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","PREP_PLACE"],
+    "ua": "На підлозі лежить крокодильчик.",
+    "en": ["There’s a toy crocodile on the floor.", "A toy crocodile is lying on the floor."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY","PREP_PLACE"],
+    "ua": "У коробці багато кубиків.",
+    "en": ["There are a lot of blocks in the box.", "The box has plenty of blocks."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Візьми трохи фарби для малювання.",
+    "en": ["Take some paint for drawing.", "Grab a bit of paint for painting."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES"],
+    "ua": "Подивись на ці пазли.",
+    "en": ["Look at these puzzles.", "Check out these puzzles."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Постав конструктор на полицю.",
+    "en": ["Put the building set on the shelf.", "Place the building set on the shelf."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","DEMONSTRATIVES"],
+    "ua": "Візьми цей пакет молока.",
+    "en": ["Grab this carton of milk.", "Take this milk carton."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","SIMPLE_ADJ"],
+    "ua": "На полиці стоїть свіжа випічка.",
+    "en": ["There’s fresh pastry on the shelf.", "Fresh pastry is on the shelf."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY","PREP_PLACE"],
+    "ua": "У магазині немає яєць.",
+    "en": ["There are no eggs in the store.", "The shop doesn’t have any eggs."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","POSSESSIVE_S"],
+    "ua": "Передай мені твій список покупок.",
+    "en": ["Pass me your shopping list.", "Give me your shopping list."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Поклади фрукти в кошик.",
+    "en": ["Put the fruit in the basket.", "Throw the fruit into the basket."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES","SIMPLE_ADJ"],
+    "ua": "Ці яблука дуже солодкі.",
+    "en": ["These apples are very sweet.", "Those apples are really sweet."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Візьми трохи зелені для салату.",
+    "en": ["Take some greens for the salad.", "Grab a bit of greens for the salad."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","PREP_PLACE"],
+    "ua": "На вітрині стоїть новий торт.",
+    "en": ["There’s a new cake in the display.", "A new cake is in the display case."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","DEMONSTRATIVES"],
+    "ua": "Візьми цей корм для кота.",
+    "en": ["Grab this cat food.", "Take this food for the cat."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Поклади іграшку кота на килим.",
+    "en": ["Put the cat’s toy on the carpet.", "Place the cat toy on the carpet."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Додай трохи води у миску.",
+    "en": ["Add some water to the bowl.", "Put a bit of water in the bowl."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES","SIMPLE_ADJ"],
+    "ua": "Ця ковдра дуже тепла.",
+    "en": ["This blanket is very warm.", "That blanket is super warm."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","POSSESSIVE_S"],
+    "ua": "Передай мені твою щітку для волосся.",
+    "en": ["Pass me your hairbrush.", "Give me your hairbrush."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","PREP_PLACE"],
+    "ua": "На стільці лежить плед.",
+    "en": ["There’s a blanket on the chair.", "A blanket is lying on the chair."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Візьми трохи корму для собаки.",
+    "en": ["Take some dog food.", "Grab a bit of food for the dog."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","DEMONSTRATIVES"],
+    "ua": "Подивись на ці рушники.",
+    "en": ["Look at these towels.", "Check out these towels."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","PREP_PLACE"],
+    "ua": "Поклади зубну пасту в шафку.",
+    "en": ["Put the toothpaste in the cabinet.", "Place the toothpaste in the bathroom cabinet."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","ARTICLES","SIMPLE_ADJ"],
+    "ua": "На поличці лежить чиста губка.",
+    "en": ["There’s a clean sponge on the shelf.", "A clean sponge is on the shelf."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Додай трохи порошку в пральну машину.",
+    "en": ["Add some detergent to the washing machine.", "Put a bit of detergent in the washer."]
+  },
+  {
+    "rules": ["COUNT_UNCOUNT","IMPERATIVES","DEMONSTRATIVES"],
+    "ua": "Візьми цей гель для душу.",
+    "en": ["Grab this shower gel.", "Take this body wash."]
   }
 ] }

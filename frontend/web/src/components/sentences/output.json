@@ -192,7 +192,7 @@
     {
       "rules": [
         "ARTICLES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS"
       ],
       "ua": "Він дивиться телевізор.",
@@ -265,7 +265,7 @@
       "rules": [
         "ARTICLES",
         "PRESENT_SIMPLE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "SIMPLE_ADJ",
         "PREP_PLACE",
         "PERSONAL_PRONOUNS"
@@ -435,7 +435,7 @@
         "ARTICLES",
         "TO_BE",
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Вони зараз у морі.",
       "en": [
@@ -12721,7 +12721,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте відвідаємо цей театр.",
       "en": [
@@ -12744,7 +12744,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте готуємо вечерю зараз.",
@@ -12792,7 +12792,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте малюємо пейзаж сьогодні.",
@@ -12828,7 +12828,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай відвідаємо виставку зараз.",
@@ -12864,7 +12864,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте танцюємо на вечірці сьогодні.",
@@ -12889,7 +12889,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте репетируємо цю пісню зараз.",
       "en": [
@@ -12924,7 +12924,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай готуємо десерт зараз.",
@@ -12972,7 +12972,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай заспіваємо на концерті сьогодні.",
@@ -13008,7 +13008,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте відвідаємо музей сьогодні.",
@@ -13044,7 +13044,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай потанцюємо на сцені зараз.",
@@ -13069,7 +13069,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте вивчимо цю тему зараз.",
       "en": [
@@ -13104,7 +13104,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай готуємо піцу зараз.",
@@ -13152,7 +13152,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай намалюємо пейзаж зараз.",
@@ -13188,7 +13188,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте послухаємо музику сьогодні.",
@@ -13224,7 +13224,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай готуємо обід зараз.",
@@ -13249,7 +13249,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте тренуємося в цій грі зараз.",
       "en": [
@@ -13321,7 +13321,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте відвідаємо цю галерею.",
       "en": [
@@ -13344,7 +13344,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте готуємо обід зараз.",
@@ -13392,7 +13392,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте співаємо на сцені сьогодні.",
@@ -13428,7 +13428,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай відвідаємо парк зараз.",
@@ -13464,7 +13464,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте танцюємо в клубі сьогодні.",
@@ -13489,7 +13489,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте репетируємо цю п’єсу зараз.",
       "en": [
@@ -13524,7 +13524,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай готуємо піцу зараз.",
@@ -13572,7 +13572,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай намалюємо портрет зараз.",
@@ -13608,7 +13608,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте відвідаємо театр сьогодні.",
@@ -13644,7 +13644,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай потанцюємо на вечірці зараз.",
@@ -13669,7 +13669,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте вивчимо цю книгу зараз.",
       "en": [
@@ -13704,7 +13704,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай готуємо десерт зараз.",
@@ -13752,7 +13752,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай співаємо на концерті зараз.",
@@ -13788,7 +13788,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давайте послухаємо музику зараз.",
@@ -13824,7 +13824,7 @@
     {
       "rules": [
         "LETS",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Давай готуємо суп зараз.",
@@ -13849,7 +13849,7 @@
       "rules": [
         "LETS",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Давайте тренуємося в цій грі сьогодні.",
       "en": [
@@ -16185,7 +16185,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ти готуєш вечерю другого лютого.",
@@ -16221,7 +16221,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей учитель проводить урок п’ятого травня.",
@@ -16245,7 +16245,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми святкуємо сьомого липня.",
@@ -16269,7 +16269,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця команда грає дев’ятого вересня.",
@@ -16293,7 +16293,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона співає одинадцятого листопада.",
@@ -16329,7 +16329,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми готуємо обід чотирнадцятого лютого.",
@@ -16365,7 +16365,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я танцюю сімнадцятого травня.",
@@ -16389,7 +16389,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця група репетирує дев’ятнадцятого липня.",
@@ -16425,7 +16425,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми готуємо вечерю двадцять другого жовтня.",
@@ -16449,7 +16449,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей учитель працює двадцять четвертого грудня.",
@@ -16473,7 +16473,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона співає двадцять шостого лютого.",
@@ -16509,7 +16509,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця команда грає двадцять дев’ятого травня.",
@@ -16545,7 +16545,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона готує обід першого серпня.",
@@ -16581,7 +16581,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми бігаємо четвертого листопада.",
@@ -16617,7 +16617,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я співаю сьомого лютого.",
@@ -16653,7 +16653,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця команда тренується десятого травня.",
@@ -16689,7 +16689,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я читаю книгу тринадцятого серпня.",
@@ -16713,7 +16713,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми святкуємо п’ятнадцятого жовтня.",
@@ -16749,7 +16749,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він малює вісімнадцятого січня.",
@@ -16785,7 +16785,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ти пишеш лист другого лютого.",
@@ -16821,7 +16821,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей студент читає книгу п’ятого травня.",
@@ -16845,7 +16845,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми готуємо вечерю сьомого липня.",
@@ -16869,7 +16869,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця команда тренується дев’ятого вересня.",
@@ -16893,7 +16893,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона співає одинадцятого листопада.",
@@ -16929,7 +16929,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми відвідуємо музей чотирнадцятого лютого.",
@@ -16965,7 +16965,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я танцюю сімнадцятого травня.",
@@ -16989,7 +16989,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця група репетирує дев’ятнадцятого липня.",
@@ -17025,7 +17025,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми готуємо обід двадцять другого жовтня.",
@@ -17049,7 +17049,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей студент малює двадцять четвертого грудня.",
@@ -17073,7 +17073,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона співає двадцять шостого лютого.",
@@ -17109,7 +17109,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця команда грає двадцять дев’ятого травня.",
@@ -17145,7 +17145,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона читає книгу першого серпня.",
@@ -17181,7 +17181,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми бігаємо четвертого листопада.",
@@ -17217,7 +17217,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я готую обід сьомого лютого.",
@@ -17253,7 +17253,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця команда тренується десятого травня.",
@@ -17289,7 +17289,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я співаю тринадцятого серпня.",
@@ -17313,7 +17313,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми святкуємо п’ятнадцятого жовтня.",
@@ -17349,7 +17349,7 @@
     {
       "rules": [
         "ORDINALS_DATES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він бігає вісімнадцятого січня.",
@@ -17933,7 +17933,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q"
       ],
       "ua": "Твій брат дивиться фільм зараз?",
@@ -17970,7 +17970,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його учитель пояснює цей урок зараз.",
       "en": [
@@ -17993,7 +17993,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Твій друг готує вечерю зараз.",
@@ -18041,7 +18041,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Її друг співає на концерті зараз.",
@@ -18077,7 +18077,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Його сестра відвідує музей зараз.",
@@ -18113,7 +18113,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Мій друг танцює на вечірці зараз.",
@@ -18138,7 +18138,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його команда репетирує цю пісню зараз.",
       "en": [
@@ -18173,7 +18173,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Твій брат готує обід зараз.",
@@ -18221,7 +18221,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Його мама співає на сцені зараз.",
@@ -18257,7 +18257,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Її брат відвідує галерею зараз.",
@@ -18293,7 +18293,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Мій друг готує піцу зараз.",
@@ -18318,7 +18318,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його сестра вивчає цю тему зараз.",
       "en": [
@@ -18353,7 +18353,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Твій друг слухає музику зараз.",
@@ -18401,7 +18401,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Його друг танцює на сцені зараз.",
@@ -18437,7 +18437,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Її мама готує десерт зараз.",
@@ -18473,7 +18473,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Мій брат слухає концерт зараз.",
@@ -18498,7 +18498,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його команда тренується в цій грі зараз.",
       "en": [
@@ -18545,7 +18545,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q"
       ],
       "ua": "Твій друг слухає музику зараз?",
@@ -18582,7 +18582,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його сестра малює цю картину зараз.",
       "en": [
@@ -18605,7 +18605,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Твоя мама готує суп зараз.",
@@ -18653,7 +18653,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Його брат танцює на вечірці зараз.",
@@ -18689,7 +18689,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Її друг дивиться концерт зараз.",
@@ -18725,7 +18725,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Мій брат готує десерт зараз.",
@@ -18750,7 +18750,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його друг співає цю пісню зараз.",
       "en": [
@@ -18785,7 +18785,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Твій учитель пояснює урок зараз.",
@@ -18833,7 +18833,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Його сестра відвідує парк зараз.",
@@ -18869,7 +18869,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Її друг готує піцу зараз.",
@@ -18905,7 +18905,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Мій друг танцює на сцені зараз.",
@@ -18930,7 +18930,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його брат вивчає цю тему зараз.",
       "en": [
@@ -18965,7 +18965,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Її мама слухає музику зараз.",
@@ -19013,7 +19013,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Його друг співає на концерті зараз.",
@@ -19049,7 +19049,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Твоя мама готує обід зараз.",
@@ -19085,7 +19085,7 @@
     {
       "rules": [
         "POSSESSIVE_ADJECTIVES",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Мій брат дивиться фільм зараз.",
@@ -19110,7 +19110,7 @@
       "rules": [
         "POSSESSIVE_ADJECTIVES",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Його учитель пояснює цю тему зараз.",
       "en": [
@@ -19147,7 +19147,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я сиджу в кімнаті.",
@@ -19171,7 +19171,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона спить під ковдрою.",
@@ -19207,7 +19207,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він стоїть біля вікна.",
@@ -19232,7 +19232,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі діти грають на майданчику.",
       "en": [
@@ -19244,7 +19244,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця собака лежить під деревом.",
       "en": [
@@ -19267,7 +19267,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми сидимо в парку.",
@@ -19304,7 +19304,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей стілець стоїть біля стіни.",
       "en": [
@@ -19327,7 +19327,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я лежу на ліжку.",
@@ -19340,7 +19340,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі птахи сидять на дереві.",
       "en": [
@@ -19364,7 +19364,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця лампа стоїть на столі.",
       "en": [
@@ -19387,7 +19387,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він сидить в автобусі.",
@@ -19424,7 +19424,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця картина висить на стіні.",
       "en": [
@@ -19447,7 +19447,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми стоїмо біля фонтану.",
@@ -19460,7 +19460,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі студенти сидять в аудиторії.",
       "en": [
@@ -19484,7 +19484,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця ваза стоїть на підвіконні.",
       "en": [
@@ -19507,7 +19507,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я стою в черзі.",
@@ -19544,7 +19544,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця собака сидить в кутку.",
       "en": [
@@ -19567,7 +19567,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він лежить на траві.",
@@ -19580,7 +19580,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі люди стоять біля входу.",
       "en": [
@@ -19604,7 +19604,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця книга лежить під стільцем.",
       "en": [
@@ -19627,7 +19627,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я сиджу біля каміну.",
@@ -19664,7 +19664,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця лампа висить на стелі.",
       "en": [
@@ -19687,7 +19687,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми стоїмо в саду.",
@@ -19724,7 +19724,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця сумка стоїть під ліжком.",
       "en": [
@@ -19747,7 +19747,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я сиджу на стільці.",
@@ -19771,7 +19771,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона лежить в ліжку.",
@@ -19807,7 +19807,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він стоїть біля паркану.",
@@ -19832,7 +19832,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі діти грають в саду.",
       "en": [
@@ -19844,7 +19844,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей кіт лежить на матраці.",
       "en": [
@@ -19867,7 +19867,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми сидимо в кафе.",
@@ -19904,7 +19904,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця ваза стоїть біля дверей.",
       "en": [
@@ -19927,7 +19927,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я стою на балконі.",
@@ -19940,7 +19940,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі птахи сидять на гілці.",
       "en": [
@@ -19964,7 +19964,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця картина висить на стіні.",
       "en": [
@@ -19987,7 +19987,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він сидить в залі.",
@@ -20024,7 +20024,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця лампа стоїть на комоді.",
       "en": [
@@ -20047,7 +20047,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми стоїмо біля магазину.",
@@ -20060,7 +20060,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі студенти сидять на сходах.",
       "en": [
@@ -20084,7 +20084,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця книга лежить на полиці.",
       "en": [
@@ -20107,7 +20107,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я сиджу в автобусі.",
@@ -20144,7 +20144,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця собака лежить в кутку.",
       "en": [
@@ -20167,7 +20167,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він сидить на килимі.",
@@ -20180,7 +20180,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі люди стоять на платформі.",
       "en": [
@@ -20204,7 +20204,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця ваза стоїть на столі.",
       "en": [
@@ -20227,7 +20227,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я стою біля дерева.",
@@ -20264,7 +20264,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця лампа висить на стелі.",
       "en": [
@@ -20287,7 +20287,7 @@
     {
       "rules": [
         "PREP_PLACE",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми сидимо на балконі.",
@@ -20300,7 +20300,7 @@
       "rules": [
         "PREP_PLACE",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі гості стоять в холі.",
       "en": [
@@ -20324,7 +20324,7 @@
       "rules": [
         "PREP_PLACE",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця сумка лежить під диваном.",
       "en": [
@@ -20349,7 +20349,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я працюю вранці.",
@@ -20373,7 +20373,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона читає вночі.",
@@ -20386,7 +20386,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі студенти працюють влітку.",
       "en": [
@@ -20409,7 +20409,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він грає в п’ятницю.",
@@ -20434,7 +20434,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Багато людей гуляють у вихідні.",
       "en": [
@@ -20446,7 +20446,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда тренується вранці.",
       "en": [
@@ -20469,7 +20469,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми вчимося в серпні.",
@@ -20506,7 +20506,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учень читає ввечері.",
       "en": [
@@ -20529,7 +20529,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я готую о другій годині.",
@@ -20542,7 +20542,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі туристи приїжджають восени.",
       "en": [
@@ -20566,7 +20566,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця група співає вранці.",
       "en": [
@@ -20589,7 +20589,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він дивиться телевізор ввечері.",
@@ -20626,7 +20626,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця дівчина танцює в суботу.",
       "en": [
@@ -20649,7 +20649,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми гуляємо в парку вранці.",
@@ -20662,7 +20662,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі люди читають у вихідні.",
       "en": [
@@ -20686,7 +20686,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей хлопець бігає вранці.",
       "en": [
@@ -20709,7 +20709,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я пишу о десятій годині.",
@@ -20746,7 +20746,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда грає в четвер.",
       "en": [
@@ -20769,7 +20769,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він малює вранці.",
@@ -20782,7 +20782,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі діти співають у неділю.",
       "en": [
@@ -20806,7 +20806,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учень вчиться ввечері.",
       "en": [
@@ -20829,7 +20829,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я сплю вночі.",
@@ -20866,7 +20866,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця дівчина пише вранці.",
       "en": [
@@ -20889,7 +20889,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми тренуємося вранці.",
@@ -20902,7 +20902,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі гості приїжджають у вихідні.",
       "en": [
@@ -20926,7 +20926,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей хлопець читає вночі.",
       "en": [
@@ -20949,7 +20949,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я читаю ввечері.",
@@ -20973,7 +20973,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона готує обід опівдні.",
@@ -20986,7 +20986,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі вчителі працюють восени.",
       "en": [
@@ -21009,7 +21009,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він пише о дев’ятій годині.",
@@ -21034,7 +21034,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Багато людей подорожують у серпні.",
       "en": [
@@ -21046,7 +21046,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда грає в суботу.",
       "en": [
@@ -21069,7 +21069,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми дивимося фільм вночі.",
@@ -21106,7 +21106,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учень малює ввечері.",
       "en": [
@@ -21129,7 +21129,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я вчу уроки вранці.",
@@ -21142,7 +21142,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі туристи гуляють у вихідні.",
       "en": [
@@ -21166,7 +21166,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця група танцює вранці.",
       "en": [
@@ -21189,7 +21189,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він тренується вранці.",
@@ -21226,7 +21226,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця дівчина пише в суботу.",
       "en": [
@@ -21249,7 +21249,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми готуємося до іспиту вранці.",
@@ -21262,7 +21262,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі люди співають у неділю.",
       "en": [
@@ -21286,7 +21286,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей хлопець читає вранці.",
       "en": [
@@ -21309,7 +21309,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я малюю о десятій годині.",
@@ -21346,7 +21346,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда тренується в п’ятницю.",
       "en": [
@@ -21369,7 +21369,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він співає ввечері.",
@@ -21382,7 +21382,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі діти грають у вихідні.",
       "en": [
@@ -21406,7 +21406,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учень пише вранці.",
       "en": [
@@ -21429,7 +21429,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я готую вечерю ввечері.",
@@ -21466,7 +21466,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця дівчина малює вранці.",
       "en": [
@@ -21489,7 +21489,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми бігаємо вранці.",
@@ -21502,7 +21502,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі гості танцюють у неділю.",
       "en": [
@@ -21526,7 +21526,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей хлопець співає ввечері.",
       "en": [
@@ -21537,7 +21537,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я вивчаю математику вранці.",
@@ -21561,7 +21561,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона слухає музику вночі.",
@@ -21574,7 +21574,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі учні пишуть есе восени.",
       "en": [
@@ -21597,7 +21597,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він готує сніданок о сьомій годині.",
@@ -21622,7 +21622,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Багато людей купують подарунки взимку.",
       "en": [
@@ -21634,7 +21634,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця група репетирує ввечері.",
       "en": [
@@ -21657,7 +21657,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми вчимо англійську вранці.",
@@ -21694,7 +21694,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учень читає в суботу.",
       "en": [
@@ -21717,7 +21717,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я слухаю радіо ввечері.",
@@ -21730,7 +21730,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі туристи фотографують у вихідні.",
       "en": [
@@ -21754,7 +21754,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда тренується в понеділок.",
       "en": [
@@ -21777,7 +21777,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він читає газету вранці.",
@@ -21814,7 +21814,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця дівчина танцює в неділю.",
       "en": [
@@ -21837,7 +21837,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми готуємо обід опівдні.",
@@ -21850,7 +21850,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі люди читають у п’ятницю.",
       "en": [
@@ -21874,7 +21874,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей хлопець бігає вранці.",
       "en": [
@@ -21897,7 +21897,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я дивлюся телевізор ввечері.",
@@ -21934,7 +21934,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда грає в четвер.",
       "en": [
@@ -21957,7 +21957,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Він готує вечерю вночі.",
@@ -21970,7 +21970,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі діти співають у суботу.",
       "en": [
@@ -21994,7 +21994,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учень малює в неділю.",
       "en": [
@@ -22017,7 +22017,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я читаю книгу вранці.",
@@ -22054,7 +22054,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця дівчина співає ввечері.",
       "en": [
@@ -22077,7 +22077,7 @@
     {
       "rules": [
         "PREP_TIME",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми слухаємо музику вночі.",
@@ -22090,7 +22090,7 @@
       "rules": [
         "PREP_TIME",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Деякі гості танцюють у п’ятницю.",
       "en": [
@@ -22114,7 +22114,7 @@
       "rules": [
         "PREP_TIME",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей хлопець читає в суботу.",
       "en": [
@@ -22135,10 +22135,10 @@
       ]
     }
   ],
-  "PRESENT_CONTINUOUS": [
+  "PRESENT_CONT_NOW": [
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22150,7 +22150,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22162,7 +22162,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22174,7 +22174,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22186,7 +22186,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "YES_NO_Q"
       ],
@@ -22198,7 +22198,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22210,7 +22210,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22222,7 +22222,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
@@ -22234,7 +22234,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22246,7 +22246,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22258,7 +22258,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22270,7 +22270,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PREP_PLACE"
       ],
@@ -22282,7 +22282,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22294,7 +22294,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22306,7 +22306,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22318,7 +22318,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22330,7 +22330,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22342,7 +22342,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22354,7 +22354,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22366,7 +22366,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22378,7 +22378,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22390,7 +22390,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
@@ -22402,7 +22402,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22414,7 +22414,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22426,7 +22426,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22438,7 +22438,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22450,7 +22450,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
@@ -22462,7 +22462,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22474,7 +22474,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22486,7 +22486,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22498,7 +22498,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22510,7 +22510,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22522,7 +22522,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22534,7 +22534,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22546,7 +22546,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22558,7 +22558,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22570,7 +22570,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22582,7 +22582,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22594,7 +22594,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22606,7 +22606,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22618,7 +22618,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22630,7 +22630,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22642,7 +22642,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22654,7 +22654,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22666,7 +22666,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22678,7 +22678,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22690,7 +22690,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
@@ -22702,7 +22702,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22714,7 +22714,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22726,7 +22726,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22738,7 +22738,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22750,7 +22750,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22762,7 +22762,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22774,7 +22774,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22786,7 +22786,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "YES_NO_Q"
       ],
@@ -22798,7 +22798,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22810,7 +22810,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22822,7 +22822,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
@@ -22834,7 +22834,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22846,7 +22846,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22858,7 +22858,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22870,7 +22870,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PREP_PLACE"
       ],
@@ -22882,7 +22882,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22894,7 +22894,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22906,7 +22906,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22918,7 +22918,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -22930,7 +22930,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -22942,7 +22942,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -22954,7 +22954,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -22966,7 +22966,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -22978,7 +22978,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -22990,7 +22990,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
@@ -23002,7 +23002,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -23014,7 +23014,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -23026,7 +23026,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -23038,7 +23038,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -23050,7 +23050,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -23062,7 +23062,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -23074,7 +23074,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -23086,7 +23086,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -23098,7 +23098,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -23110,7 +23110,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -23122,7 +23122,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -23134,7 +23134,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -23146,7 +23146,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -23158,7 +23158,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -23170,7 +23170,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -23182,7 +23182,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -23194,7 +23194,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -23206,7 +23206,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -23218,7 +23218,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_TIME"
       ],
@@ -23230,7 +23230,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
@@ -23242,7 +23242,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -23254,7 +23254,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -23266,7 +23266,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -23278,7 +23278,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS",
         "PREP_PLACE"
       ],
@@ -23290,7 +23290,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
@@ -23302,7 +23302,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "PERSONAL_PRONOUNS"
       ],
@@ -23314,7 +23314,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "DEMONSTRATIVES",
         "PREP_PLACE"
       ],
@@ -23326,7 +23326,7 @@
     },
     {
       "rules": [
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q",
         "DEMONSTRATIVES"
       ],
@@ -32953,7 +32953,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q"
       ],
       "ua": "Цей суп надто гарячий зараз?",
@@ -32990,7 +32990,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей фільм надто довгий сьогодні.",
       "en": [
@@ -33013,7 +33013,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця книга надто складна для читання зараз.",
@@ -33061,7 +33061,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона дуже зайнята роботою зараз.",
@@ -33097,7 +33097,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей урок надто нудний зараз.",
@@ -33133,7 +33133,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я дуже голодний зараз.",
@@ -33158,7 +33158,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей театр дуже переповнений сьогодні.",
       "en": [
@@ -33193,7 +33193,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця гра надто складна зараз.",
@@ -33241,7 +33241,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей фільм надто страшний сьогодні.",
@@ -33277,7 +33277,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона дуже втомлена після танців зараз.",
@@ -33313,7 +33313,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я дуже зайнятий роботою зараз.",
@@ -33338,7 +33338,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця книга надто заплутана сьогодні.",
       "en": [
@@ -33373,7 +33373,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця гра дуже цікава зараз.",
@@ -33421,7 +33421,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей урок надто важкий зараз.",
@@ -33457,7 +33457,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей фільм дуже смішний сьогодні.",
@@ -33493,7 +33493,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я дуже схвильований концертом зараз.",
@@ -33518,7 +33518,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця гра дуже напружена сьогодні.",
       "en": [
@@ -33565,7 +33565,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q"
       ],
       "ua": "Ця книга надто заплутана зараз?",
@@ -33602,7 +33602,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей концерт надто гучний сьогодні.",
       "en": [
@@ -33625,7 +33625,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця гра дуже напружена зараз.",
@@ -33673,7 +33673,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона дуже схвильована концертом зараз.",
@@ -33709,7 +33709,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей урок надто довгий зараз.",
@@ -33745,7 +33745,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я дуже зосереджений на роботі зараз.",
@@ -33770,7 +33770,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей музей дуже переповнений сьогодні.",
       "en": [
@@ -33805,7 +33805,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця книга дуже цікава зараз.",
@@ -33853,7 +33853,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей фільм надто смішний сьогодні.",
@@ -33889,7 +33889,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона дуже втомлена після роботи зараз.",
@@ -33925,7 +33925,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я дуже стомлений уроком зараз.",
@@ -33950,7 +33950,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця картина дуже яскрава сьогодні.",
       "en": [
@@ -33985,7 +33985,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей концерт дуже емоційний зараз.",
@@ -34033,7 +34033,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ця гра надто швидка зараз.",
@@ -34069,7 +34069,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Цей фільм дуже зворушливий сьогодні.",
@@ -34105,7 +34105,7 @@
     {
       "rules": [
         "TOO_VERY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я дуже зацікавлений уроком зараз.",
@@ -34130,7 +34130,7 @@
       "rules": [
         "TOO_VERY",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця гра дуже весела сьогодні.",
       "en": [
@@ -42638,7 +42638,7 @@
     {
       "rules": [
         "WH_Q",
-        "PRESENT_CONTINUOUS_NOW",
+        "PRESENT_CONT_NOW_NOW",
         "PREP_PLACE"
       ],
       "ua": "Що вони зараз роблять?",
@@ -42717,7 +42717,7 @@
     {
       "rules": [
         "WH_Q",
-        "FUTURE_WITH_PRESENT_CONTINUOUS",
+        "FUTURE_WITH_PRESENT_CONT_NOW",
         "PREP_TIME"
       ],
       "ua": "Коли ти зустрічаєшся з Марком?",
@@ -43115,7 +43115,7 @@
     {
       "rules": [
         "WH_Q",
-        "PRESENT_CONTINUOUS_NOW"
+        "PRESENT_CONT_NOW_NOW"
       ],
       "ua": "Куди ти йдеш?",
       "en": [
@@ -43125,7 +43125,7 @@
     {
       "rules": [
         "WH_Q",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS"
       ],
       "ua": "Що ти робиш зараз?",
@@ -43161,7 +43161,7 @@
     {
       "rules": [
         "WH_Q",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PERSONAL_PRONOUNS"
       ],
       "ua": "Куди вони йдуть?",
@@ -43257,7 +43257,7 @@
     {
       "rules": [
         "WH_Q",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PREPOSITIONS_OF_PLACE"
       ],
       "ua": "Що вона готує на кухні?",
@@ -43282,7 +43282,7 @@
       "rules": [
         "WH_Q",
         "GOING_TO",
-        "FUTURE_WITH_PRESENT_CONTINUOUS"
+        "FUTURE_WITH_PRESENT_CONT_NOW"
       ],
       "ua": "Куди ти поїдеш наступного літа?",
       "en": [
@@ -43462,7 +43462,7 @@
       "rules": [
         "WH_Q",
         "WILL",
-        "FUTURE_WITH_PRESENT_CONTINUOUS"
+        "FUTURE_WITH_PRESENT_CONT_NOW"
       ],
       "ua": "Де вони будуть завтра ввечері?",
       "en": [
@@ -43738,7 +43738,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ти хотів би писати лист зараз?",
@@ -43773,7 +43773,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учитель хотів би проводити урок.",
       "en": [
@@ -43795,7 +43795,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б готувати вечерю зараз.",
@@ -43841,7 +43841,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона хотіла б співати на сцені.",
@@ -43875,7 +43875,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б відвідувати галерею сьогодні.",
@@ -43910,7 +43910,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я хотів би танцювати на вечірці.",
@@ -43934,7 +43934,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця група хотіла б репетирувати сьогодні.",
       "en": [
@@ -43967,7 +43967,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б готувати обід зараз.",
@@ -44013,7 +44013,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона хотіла б співати в хорі.",
@@ -44047,7 +44047,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б відвідувати концерт сьогодні.",
@@ -44082,7 +44082,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я хотів би танцювати на сцені.",
@@ -44106,7 +44106,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей студент хотів би вчитися зараз.",
       "en": [
@@ -44139,7 +44139,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б готувати піцу зараз.",
@@ -44185,7 +44185,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона хотіла б малювати на полотні.",
@@ -44219,7 +44219,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б слухати музику зараз.",
@@ -44254,7 +44254,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я хотів би готувати обід сьогодні.",
@@ -44278,7 +44278,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда хотіла б тренуватися зараз.",
       "en": [
@@ -44322,7 +44322,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "YES_NO_Q"
       ],
       "ua": "Ти хотів би готувати суп зараз?",
@@ -44357,7 +44357,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей учитель хотів би пояснювати урок.",
       "en": [
@@ -44379,7 +44379,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б слухати концерт сьогодні.",
@@ -44425,7 +44425,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона хотіла б малювати пейзаж.",
@@ -44459,7 +44459,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б відвідувати виставку зараз.",
@@ -44494,7 +44494,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я хотів би танцювати в клубі.",
@@ -44518,7 +44518,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця група хотіла б репетирувати зараз.",
       "en": [
@@ -44551,7 +44551,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б готувати десерт сьогодні.",
@@ -44597,7 +44597,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона хотіла б співати на концерті.",
@@ -44631,7 +44631,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б відвідувати музей сьогодні.",
@@ -44666,7 +44666,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я хотів би танцювати на вечірці.",
@@ -44690,7 +44690,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Цей студент хотів би вчитися сьогодні.",
       "en": [
@@ -44723,7 +44723,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б готувати піцу зараз.",
@@ -44769,7 +44769,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Вона хотіла б малювати портрет.",
@@ -44803,7 +44803,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Ми хотіли б слухати музику сьогодні.",
@@ -44838,7 +44838,7 @@
     {
       "rules": [
         "WOULD_LIKE_TO",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "ARTICLES"
       ],
       "ua": "Я хотів би готувати обід зараз.",
@@ -44862,7 +44862,7 @@
       "rules": [
         "WOULD_LIKE_TO",
         "DEMONSTRATIVES",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Ця команда хотіла б тренуватися сьогодні.",
       "en": [
@@ -44976,7 +44976,7 @@
     {
       "rules": [
         "YES_NO_Q",
-        "PRESENT_CONTINUOUS_NOW",
+        "PRESENT_CONT_NOW_NOW",
         "PREP_PLACE"
       ],
       "ua": "Вони зараз працюють в офісі?",
@@ -45298,7 +45298,7 @@
     {
       "rules": [
         "YES_NO_Q",
-        "FUTURE_WITH_PRESENT_CONTINUOUS",
+        "FUTURE_WITH_PRESENT_CONT_NOW",
         "PREP_TIME"
       ],
       "ua": "Ти зустрічаєшся з нею завтра?",
@@ -45728,7 +45728,7 @@
     {
       "rules": [
         "YES_NO_Q",
-        "PRESENT_CONTINUOUS_NOW",
+        "PRESENT_CONT_NOW_NOW",
         "PREP_PLACE"
       ],
       "ua": "Ти зараз їдеш у метро?",
@@ -45876,7 +45876,7 @@
     {
       "rules": [
         "YES_NO_Q",
-        "FUTURE_WITH_PRESENT_CONTINUOUS",
+        "FUTURE_WITH_PRESENT_CONT_NOW",
         "PREP_TIME"
       ],
       "ua": "Ти зустрічаєшся з клієнтом у п’ятницю?",
@@ -46071,7 +46071,7 @@
     {
       "rules": [
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Він рідко розмовляє по телефону зараз.",
       "en": [
@@ -46177,7 +46177,7 @@
     {
       "rules": [
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Вона рідко працює в саду зараз.",
       "en": [
@@ -46367,7 +46367,7 @@
     {
       "rules": [
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PREP_TIME"
       ],
       "ua": "Він рідко читає книгу ввечері.",
@@ -46694,7 +46694,7 @@
     {
       "rules": [
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Вона іноді співає в душі.",
       "en": [
@@ -46884,7 +46884,7 @@
     {
       "rules": [
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PREP_TIME"
       ],
       "ua": "Він часто готує вечерю ввечері.",
@@ -65650,7 +65650,7 @@
     {
       "rules": [
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Вони купують багато одягу зараз.",
       "en": [
@@ -65819,7 +65819,7 @@
     {
       "rules": [
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PREP_TIME"
       ],
       "ua": "Вона готує багато печива на вечір.",
@@ -66154,7 +66154,7 @@
     {
       "rules": [
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS"
+        "PRESENT_CONT_NOW"
       ],
       "ua": "Вони читають багато журналів зараз.",
       "en": [
@@ -66323,7 +66323,7 @@
     {
       "rules": [
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "PRESENT_CONTINUOUS",
+        "PRESENT_CONT_NOW",
         "PREP_TIME"
       ],
       "ua": "Він пише багато листів цього тижня.",

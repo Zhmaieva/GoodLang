@@ -1,178 +1,191 @@
 { "POSSESSIVE_S": [
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це книга Марії.", "en": [
-    "It’s Maria’s book.", "It is Maria’s book.", "It’s the book of Maria.", "It is the book of Maria."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це іграшка дитини.", "en": [
-    "It’s the child’s toy.", "It is the child’s toy.", "It’s the toy of the child.", "It is the toy of the child."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це будинок моїх батьків.", "en": [
-    "It’s my parents’ house.", "It is my parents’ house.", "It’s the house of my parents.", "It is the house of my parents."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це машина Джона.", "en": [
-    "It’s John’s car.", "It is John’s car.", "It’s the car of John.", "It is the car of John."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кімната дівчат.", "en": [
-    "It’s the girls’ room.", "It is the girls’ room.", "It’s the room of the girls.", "It is the room of the girls."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це брат моєї мами.", "en": [
-    "He’s my mother’s brother.", "He is my mother’s brother.", "He’s the brother of my mother.", "He is the brother of my mother."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це собака Тома і Лізи.", "en": [
-    "It’s Tom and Lisa’s dog.", "It is Tom and Lisa’s dog.", "It’s the dog of Tom and Lisa.", "It is the dog of Tom and Lisa."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Де ключ моєї машини?", "en": [
-    "Where’s my car’s key?", "Where is my car’s key?", "Where’s the key to my car?", "Where is the key to my car?"
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це ідея вчителя.", "en": [
-    "It’s the teacher’s idea.", "It is the teacher’s idea.", "It’s the idea of the teacher.", "It is the idea of the teacher."
-  ]},
-  { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Я бачив велосипед Джеймса.", "en": [
-    "I saw James’s bike.", "I saw James’ bike.", "I saw the bike of James."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це сумка Анни.", "en": [
-    "It’s Anna’s bag.", "It is Anna’s bag.", "It’s the bag of Anna.", "It is the bag of Anna."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це окуляри мого брата.", "en": [
-    "They’re my brother’s glasses.", "They are my brother’s glasses.", "They’re the glasses of my brother.", "They are the glasses of my brother."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кімната хлопців.", "en": [
-    "It’s the boys’ room.", "It is the boys’ room.", "It’s the room of the boys.", "It is the room of the boys."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проєкт нашої команди.", "en": [
-    "It’s our team’s project.", "It is our team’s project.", "It’s the project of our team.", "It is the project of our team."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це колір стін.", "en": [
-    "It’s the walls’ colour.", "It is the walls’ colour.", "It’s the colour of the walls.", "It is the colour of the walls."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це рішення директора.", "en": [
-    "It’s the director’s decision.", "It is the director’s decision.", "It’s the decision of the director.", "It is the decision of the director."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це собака наших сусідів.", "en": [
-    "It’s our neighbours’ dog.", "It is our neighbours’ dog.", "It’s the dog of our neighbours.", "It is the dog of our neighbours."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це капелюх мого дідуся.", "en": [
-    "It’s my grandfather’s hat.", "It is my grandfather’s hat.", "It’s the hat of my grandfather.", "It is the hat of my grandfather."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це голос співачки.", "en": [
-    "It’s the singer’s voice.", "It is the singer’s voice.", "It’s the voice of the singer.", "It is the voice of the singer."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це зошити учнів.", "en": [
-    "They’re the students’ notebooks.", "They are the students’ notebooks.", "They’re the notebooks of the students.", "They are the notebooks of the students."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Чия це ручка?", "en": [
-    "Whose pen is this?", "Whose is this pen?"
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Де машина твоїх батьків?", "en": [
-    "Where’s your parents’ car?", "Where is your parents’ car?", "Where’s the car of your parents?", "Where is the car of your parents?"
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Хто твій улюблений актор?", "en": [
-    "Who’s your favourite actor?", "Who is your favourite actor?"
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це телефон Тома чи Лізи?", "en": [
-    "Is it Tom’s or Lisa’s phone?", "Is this Tom’s or Lisa’s phone?"
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це діти вчителя?", "en": [
-    "Are these the teacher’s children?", "Are these the children of the teacher?"
-  ]},
-  { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Я знайшов сумку Сари.", "en": [
-    "I found Sarah’s bag.", "I found the bag of Sarah."
-  ]},
-  { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Ми відвідали виставку художника.", "en": [
-    "We visited the artist’s exhibition.", "We visited the exhibition of the artist."
-  ]},
-  { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Він полагодив машину друга.", "en": [
-    "He fixed his friend’s car.", "He fixed the car of his friend."
-  ]},
-  { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Вона взяла ручку своєї мами.", "en": [
-    "She took her mother’s pen.", "She took the pen of her mother."
-  ]},
-  { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Я побачив обличчя дитини.", "en": [
-    "I saw the child’s face.", "I saw the face of the child."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Хвіст кота чорний.", "en": [
-    "The cat’s tail is black.", "The tail of the cat is black."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Двері машини відкриті.", "en": [
-    "The car’s door is open.", "The door of the car is open."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Назва фільму цікава.", "en": [
-    "The film’s title is interesting.", "The title of the film is interesting."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це початок історії.", "en": [
-    "It’s the story’s beginning.", "It is the story’s beginning.", "It’s the beginning of the story.", "It is the beginning of the story."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Колір моря гарний.", "en": [
-    "The sea’s colour is beautiful.", "The colour of the sea is beautiful."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Він друг моєї сестри.", "en": [
-    "He’s a friend of my sister’s.", "He is a friend of my sister’s.",
-    "He’s my sister’s friend.", "He is my sister’s friend.",
-    "He’s a friend of my sister.", "He is a friend of my sister."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Вона колега мого чоловіка.", "en": [
-    "She’s a colleague of my husband’s.", "She is a colleague of my husband’s.",
-    "She’s my husband’s colleague.", "She is my husband’s colleague.",
-    "She’s a colleague of my husband.", "She is a colleague of my husband."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це улюблена пісня Джона.", "en": [
-    "It’s a favourite song of John’s.", "It is a favourite song of John’s.",
-    "It’s John’s favourite song.", "It is John’s favourite song.",
-    "It’s a favourite song of John.", "It is a favourite song of John."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Він студент нашого університету.", "en": [
-    "He’s a student of our university’s.", "He is a student of our university’s.",
-    "He’s a student at our university.", "He is a student at our university.",
-    "He’s our university’s student.", "He is our university’s student."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Вона подруга Марка.", "en": [
-    "She’s a friend of Mark’s.", "She is a friend of Mark’s.",
-    "She’s Mark’s friend.", "She is Mark’s friend.",
-    "She’s a friend of Mark.", "She is a friend of Mark."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кімната мого друга.", "en": [
-    "It’s my friend’s room.", "It is my friend’s room.", "It’s the room of my friend.", "It is the room of my friend."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це комп’ютер Антона.", "en": [
-    "It’s Anton’s computer.", "It is Anton’s computer.", "It’s the computer of Anton.", "It is the computer of Anton."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це діти наших друзів.", "en": [
-    "They’re our friends’ children.", "They are our friends’ children.", "They’re the children of our friends.", "They are the children of our friends."
-  ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це рюкзак мого брата.", "en": [
-    "It’s my brother’s backpack.", "It is my brother’s backpack.", "It’s the backpack of my brother.", "It is the backpack of my brother."
-  ]},
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це книга Марії.",
+    "en": ["It’s Maria’s book.", "It is Maria’s book."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це іграшка дитини.",
+    "en": ["It’s the child’s toy.", "It is the child’s toy."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це будинок моїх батьків.",
+    "en": ["It’s my parents’ house.", "It is my parents’ house."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це машина Джона.",
+    "en": ["It’s John’s car.", "It is John’s car."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це кімната дівчат.",
+    "en": ["It’s the girls’ room.", "It is the girls’ room."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це брат моєї мами.",
+    "en": ["He’s my mother’s brother.", "He is my mother’s brother."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це собака Тома і Лізи.",
+    "en": ["It’s Tom and Lisa’s dog.", "It is Tom and Lisa’s dog."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Де ключ моєї машини?",
+    "en": ["Where’s the key to my car?", "Where is the key to my car?"] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це ідея вчителя.",
+    "en": ["It’s the teacher’s idea.", "It is the teacher’s idea."] },
+
+  { "rules": ["POSSESSIVE_S","PAST_SIMPLE"], "ua": "Я бачив велосипед Джеймса.",
+    "en": ["I saw James’s bike.", "I saw James’ bike."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це сумка Анни.",
+    "en": ["It’s Anna’s bag.", "It is Anna’s bag."] },
+
+  { "rules": ["POSSEESSIVE_S","TO_BE"], "ua": "Це окуляри мого брата.",
+    "en": ["They’re my brother’s glasses.", "They are my brother’s glasses."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це кімната хлопців.",
+    "en": ["It’s the boys’ room.", "It is the boys’ room."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це проєкт нашої команди.",
+    "en": ["It’s our team’s project.", "It is our team’s project."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це колір стін.",
+    "en": ["It’s the colour of the walls.", "It is the colour of the walls."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це рішення директора.",
+    "en": ["It’s the director’s decision.", "It is the director’s decision."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це собака наших сусідів.",
+    "en": ["It’s our neighbours’ dog.", "It is our neighbours’ dog."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це капелюх мого дідуся.",
+    "en": ["It’s my grandfather’s hat.", "It is my grandfather’s hat."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це голос співачки.",
+    "en": ["It’s the singer’s voice.", "It is the singer’s voice."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це зошити учнів.",
+    "en": ["They’re the students’ notebooks.", "They are the students’ notebooks."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Чия це ручка?",
+    "en": ["Whose pen is this?", "Whose is this pen?"] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Де машина твоїх батьків?",
+    "en": ["Where’s your parents’ car?", "Where is your parents’ car?"] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Хто твій улюблений актор?",
+    "en": ["Who’s your favourite actor?", "Who is your favourite actor?"] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це телефон Тома чи Лізи?",
+    "en": ["Is it Tom’s or Lisa’s phone?", "Is this Tom’s or Lisa’s phone?"] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це діти вчителя?",
+    "en": ["Are these the teacher’s children?"] },
+
+  { "rules": ["POSSESSIVE_S","PAST_SIMPLE"], "ua": "Я знайшов сумку Сари.",
+    "en": ["I found Sarah’s bag."] },
+
+  { "rules": ["POSSESSIVE_S","PAST_SIMPLE"], "ua": "Ми відвідали виставку художника.",
+    "en": ["We visited the artist’s exhibition."] },
+
+  { "rules": ["POSSESSIVE_S","PAST_SIMPLE"], "ua": "Він полагодив машину друга.",
+    "en": ["He fixed his friend’s car."] },
+
+  { "rules": ["POSSESSIVE_S","PAST_SIMPLE"], "ua": "Вона взяла ручку своєї мами.",
+    "en": ["She took her mother’s pen."] },
+
+  { "rules": ["POSSESSIVE_S","PAST_SIMPLE"], "ua": "Я побачив обличчя дитини.",
+    "en": ["I saw the child’s face."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Хвіст кота чорний.",
+    "en": ["The cat’s tail is black."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Двері машини відкриті.",
+    "en": ["The car’s door is open.", "The door of the car is open."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Назва фільму цікава.",
+    "en": ["The film’s title is interesting.", "The title of the film is interesting."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це початок історії.",
+    "en": ["It’s the beginning of the story.", "It is the beginning of the story."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Колір моря гарний.",
+    "en": ["The colour of the sea is beautiful."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Він друг моєї сестри.",
+    "en": [
+      "He’s my sister’s friend.",
+      "He is my sister’s friend.",
+      "He’s a friend of my sister’s.",
+      "He is a friend of my sister’s."
+    ] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Вона колега мого чоловіка.",
+    "en": [
+      "She’s my husband’s colleague.",
+      "She is my husband’s colleague.",
+      "She’s a colleague of my husband’s.",
+      "She is a colleague of my husband’s."
+    ] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це улюблена пісня Джона.",
+    "en": [
+      "It’s John’s favourite song.",
+      "It is John’s favourite song.",
+      "It’s a favourite song of John’s.",
+      "It is a favourite song of John’s."
+    ] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Він студент нашого університету.",
+    "en": [
+      "He’s a student at our university.",
+      "He is a student at our university."
+    ] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Вона подруга Марка.",
+    "en": [
+      "She’s Mark’s friend.",
+      "She is Mark’s friend.",
+      "She’s a friend of Mark’s.",
+      "She is a friend of Mark’s."
+    ] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це кімната мого друга.",
+    "en": ["It’s my friend’s room.", "It is my friend’s room."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це комп’ютер Антона.",
+    "en": ["It’s Anton’s computer.", "It is Anton’s computer."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це діти наших друзів.",
+    "en": ["They’re our friends’ children.", "They are our friends’ children."] },
+
+  { "rules": ["POSSESSIVE_S","TO_BE"], "ua": "Це рюкзак мого брата.",
+    "en": ["It’s my brother’s backpack.", "It is my brother’s backpack."] },
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кіт Джеймса.", "en": [
-    "It’s James’s cat.", "It is James’s cat.", "It’s James’ cat.", "It’s the cat of James.", "It is the cat of James."
+    "It’s James’s cat.", "It is James’s cat.", "It’s James’ cat."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це собака моїх сусідів.", "en": [
-    "It’s my neighbours’ dog.", "It is my neighbours’ dog.", "It’s the dog of my neighbours.", "It is the dog of my neighbours."
+    "It’s my neighbours’ dog.", "It is my neighbours’ dog."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це голос співака.", "en": [
-    "It’s the singer’s voice.", "It is the singer’s voice.", "It’s the voice of the singer.", "It is the voice of the singer."
+    "It’s the singer’s voice.", "It is the singer’s voice."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кімната дівчаток.", "en": [
-    "It’s the girls’ room.", "It is the girls’ room.", "It’s the room of the girls.", "It is the room of the girls."
+    "It’s the girls’ room.", "It is the girls’ room."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це машина батьків.", "en": [
-    "It’s the parents’ car.", "It is the parents’ car.", "It’s the car of the parents.", "It is the car of the parents."
+    "It’s the parents’ car.", "It is the parents’ car."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кінь фермера.", "en": [
-    "It’s the farmer’s horse.", "It is the farmer’s horse.", "It’s the horse of the farmer.", "It is the horse of the farmer."
+    "It’s the farmer’s horse.", "It is the farmer’s horse."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це хата моєї бабусі.", "en": [
-    "It’s my grandmother’s house.", "It is my grandmother’s house.", "It’s the house of my grandmother.", "It is the house of my grandmother."
+    "It’s my grandmother’s house.", "It is my grandmother’s house."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це фото моїх друзів.", "en": [
-    "It’s my friends’ photo.", "It is my friends’ photo.", "It’s the photo of my friends.", "It is the photo of my friends."
+    "It’s my friends’ photo.", "It is my friends’ photo."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це сумка Кейт.", "en": [
-    "It’s Kate’s bag.", "It is Kate’s bag.", "It’s the bag of Kate.", "It is the bag of Kate."
+    "It’s Kate’s bag.", "It is Kate’s bag."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це чашка Джона.", "en": [
-    "It’s John’s cup.", "It is John’s cup.", "It’s the cup of John.", "It is the cup of John."
+    "It’s John’s cup.", "It is John’s cup."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це книга викладача.", "en": [
-    "It’s the teacher’s book.", "It is the teacher’s book.", "It’s the book of the teacher.", "It is the book of the teacher."
+    "It’s the teacher’s book.", "It is the teacher’s book."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Чия це чашка?", "en": [
     "Whose cup is this?", "Whose is this cup?"
@@ -181,7 +194,7 @@
     "Whose cat is this?", "Whose is this cat?"
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Де квартира твоїх друзів?", "en": [
-    "Where’s your friends’ apartment?", "Where is your friends’ apartment?", "Where’s the apartment of your friends?", "Where is the apartment of your friends?"
+    "Where’s your friends’ apartment?", "Where is your friends’ apartment?"
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це телефон Антона чи Іри?", "en": [
     "Is it Anton’s or Ira’s phone?", "Is this Anton’s or Ira’s phone?"
@@ -190,19 +203,19 @@
     "Whose child is this?", "Whose is this child?"
   ]},
   { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Я бачив собаку Пола.", "en": [
-    "I saw Paul’s dog.", "I saw the dog of Paul."
+    "I saw Paul’s dog."
   ]},
   { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Ми знайшли телефон Марії.", "en": [
-    "We found Maria’s phone.", "We found the phone of Maria."
+    "We found Maria’s phone."
   ]},
   { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Вона відкрила двері офісу.", "en": [
-    "She opened the office’s door.", "She opened the door of the office."
+    "She opened the office door.", "She opened the door of the office."
   ]},
   { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Він полагодив велосипед свого друга.", "en": [
-    "He repaired his friend’s bike.", "He repaired the bike of his friend."
+    "He repaired his friend’s bike."
   ]},
   { "rules": ["POSSESSIVE_S", "PAST_SIMPLE"], "ua": "Я взяв ручку сестри.", "en": [
-    "I took my sister’s pen.", "I took the pen of my sister."
+    "I took my sister’s pen."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Кінець фільму був сумним.", "en": [
     "The film’s ending was sad.", "The ending of the film was sad."
@@ -217,354 +230,577 @@
     "The ticket’s price is high.", "The price of the ticket is high."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Колір очей у неї зелений.", "en": [
-    "Her eyes’ colour is green.", "The colour of her eyes is green."
+    "Her eyes are green.", "The colour of her eyes is green."
   ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Він подруга моєї сестри.", "en": [
-    "He’s a friend of my sister’s.", "He is a friend of my sister’s.", "He’s my sister’s friend.", "He is my sister’s friend.", "He’s a friend of my sister.", "He is a friend of my sister."
+  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Він друг моєї сестри.", "en": [
+    "He’s my sister’s friend.", "He is my sister’s friend.",
+    "He’s a friend of my sister’s.", "He is a friend of my sister’s."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Вона колега мого чоловіка.", "en": [
-    "She’s a colleague of my husband’s.", "She is a colleague of my husband’s.", "She’s my husband’s colleague.", "She is my husband’s colleague.", "She’s a colleague of my husband.", "She is a colleague of my husband."
+    "She’s my husband’s colleague.", "She is my husband’s colleague.",
+    "She’s a colleague of my husband’s.", "She is a colleague of my husband’s."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це подруга Марка.", "en": [
-    "She’s a friend of Mark’s.", "She is a friend of Mark’s.", "She’s Mark’s friend.", "She is Mark’s friend.", "She’s a friend of Mark.", "She is a friend of Mark."
+    "She’s Mark’s friend.", "She is Mark’s friend.",
+    "She’s a friend of Mark’s.", "She is a friend of Mark’s."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це улюблена пісня Лізи.", "en": [
-    "It’s Lisa’s favourite song.", "It is Lisa’s favourite song.", "It’s a favourite song of Lisa’s.", "It is a favourite song of Lisa’s.", "It’s a favourite song of Lisa.", "It is a favourite song of Lisa."
+    "It’s Lisa’s favourite song.", "It is Lisa’s favourite song.",
+    "It’s a favourite song of Lisa’s.", "It is a favourite song of Lisa’s."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Він студент нашого університету.", "en": [
-    "He’s a student of our university’s.", "He is a student of our university’s.", "He’s our university’s student.", "He is our university’s student.", "He’s a student at our university.", "He is a student at our university."
+    "He’s a student at our university.", "He is a student at our university."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кімната Джонсонів.", "en": [
-    "It’s the Johnsons’ room.", "It is the Johnsons’ room.", "It’s the room of the Johnsons.", "It is the room of the Johnsons."
+    "It’s the Johnsons’ room.", "It is the Johnsons’ room."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це син Джеймса.", "en": [
-    "He’s James’s son.", "He is James’s son.", "He’s James’ son.", "He is James’ son.", "He’s the son of James.", "He is the son of James."
+    "He’s James’s son.", "He is James’s son.", "He’s James’ son.", "He is James’ son."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кімната класу 5A.", "en": [
-    "It’s Class 5A’s room.", "It is Class 5A’s room.", "It’s the room of Class 5A.", "It is the room of Class 5A."
+    "It’s Class 5A’s room.", "It is Class 5A’s room."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це двері магазину.", "en": [
-    "It’s the shop’s door.", "It is the shop’s door.", "It’s the door of the shop.", "It is the door of the shop."
+    "It’s the shop’s door.", "It is the shop’s door.",
+    "It’s the door of the shop.", "It is the door of the shop."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кінець дня.", "en": [
-    "It’s the day’s end.", "It is the day’s end.", "It’s the end of the day.", "It is the end of the day."
+    "It’s the end of the day.", "It is the end of the day."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це план компанії.", "en": [
-    "It’s the company’s plan.", "It is the company’s plan.", "It’s the plan of the company.", "It is the plan of the company."
+    "It’s the company’s plan.", "It is the company’s plan."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це історія міста.", "en": [
-    "It’s the city’s history.", "It is the city’s history.", "It’s the history of the city.", "It is the history of the city."
+    "It’s the city’s history.", "It is the city’s history.",
+    "It’s the history of the city.", "It is the history of the city."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це перемога команди.", "en": [
-    "It’s the team’s victory.", "It is the team’s victory.", "It’s the victory of the team.", "It is the victory of the team."
+    "It’s the team’s victory.", "It is the team’s victory."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це рішення уряду.", "en": [
-    "It’s the government’s decision.", "It is the government’s decision.", "It’s the decision of the government.", "It is the decision of the government."
+    "It’s the government’s decision.", "It is the government’s decision.",
+    "It’s the decision of the government.", "It is the decision of the government."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це думка експерта.", "en": [
-    "It’s the expert’s opinion.", "It is the expert’s opinion.", "It’s the opinion of the expert.", "It is the opinion of the expert."
+    "It’s the expert’s opinion.", "It is the expert’s opinion.",
+    "It’s the opinion of the expert.", "It is the opinion of the expert."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це картина художника.", "en": [
-    "It’s the artist’s painting.", "It is the artist’s painting.", "It’s the painting of the artist.", "It is the painting of the artist."
+    "It’s the artist’s painting.", "It is the artist’s painting.",
+    "It’s the painting of the artist.", "It is the painting of the artist."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це будинок друзів моїх батьків.", "en": [
-    "It’s my parents’ friends’ house.", "It is my parents’ friends’ house.", "It’s the house of my parents’ friends.", "It is the house of my parents’ friends."
+    "It’s my parents’ friends’ house.", "It is my parents’ friends’ house."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це фотографія подорожі.", "en": [
-    "It’s the trip’s photo.", "It is the trip’s photo.", "It’s the photo of the trip.", "It is the photo of the trip."
+    "It’s a photo of the trip.", "It is a photo of the trip."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це двері бібліотеки.", "en": [
-    "It’s the library’s door.", "It is the library’s door.", "It’s the door of the library.", "It is the door of the library."
+    "It’s the library’s door.", "It is the library’s door.",
+    "It’s the door of the library.", "It is the door of the library."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це вікна готелю.", "en": [
-    "They’re the hotel’s windows.", "They are the hotel’s windows.", "They’re the windows of the hotel.", "They are the windows of the hotel."
+    "They’re the hotel’s windows.", "They are the hotel’s windows.",
+    "They’re the windows of the hotel.", "They are the windows of the hotel."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це голос актора.", "en": [
-    "It’s the actor’s voice.", "It is the actor’s voice.", "It’s the voice of the actor.", "It is the voice of the actor."
+    "It’s the actor’s voice.", "It is the actor’s voice."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кінець тижня.", "en": [
-    "It’s the week’s end.", "It is the week’s end.", "It’s the end of the week.", "It is the end of the week."
+    "It’s the end of the week.", "It is the end of the week."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це назва ресторану.", "en": [
-    "It’s the restaurant’s name.", "It is the restaurant’s name.", "It’s the name of the restaurant.", "It is the name of the restaurant."
+    "It’s the restaurant’s name.", "It is the restaurant’s name.",
+    "It’s the name of the restaurant.", "It is the name of the restaurant."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це вхід офісу.", "en": [
-    "It’s the office’s entrance.", "It is the office’s entrance.", "It’s the entrance of the office.", "It is the entrance of the office."
+    "It’s the office’s entrance.", "It is the office’s entrance.",
+    "It’s the entrance of the office.", "It is the entrance of the office."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це правила школи.", "en": [
-    "They’re the school’s rules.", "They are the school’s rules.", "They’re the rules of the school.", "They are the rules of the school."
+    "They’re the school’s rules.", "They are the school’s rules.",
+    "They’re the rules of the school.", "They are the rules of the school."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це зустріч учорашнього дня.", "en": [
-    "It’s yesterday’s meeting.", "It is yesterday’s meeting.", "It’s the meeting from yesterday.", "It is the meeting from yesterday."
+    "It’s yesterday’s meeting.",
+    "It is yesterday’s meeting.",
+    "It’s the meeting from yesterday.",
+    "It is the meeting from yesterday."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це плани наступного тижня.", "en": [
-    "They’re next week’s plans.", "They are next week’s plans.", "They’re the plans for next week.", "They are the plans for next week."
+    "They’re next week’s plans.",
+    "They are next week’s plans.",
+    "They’re the plans for next week.",
+    "They are the plans for next week."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це сьогоднішня новина.", "en": [
-    "It’s today’s news.", "It is today’s news.", "It’s the news of today.", "It is the news of today."
+    "It’s today’s news.",
+    "It is today’s news."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це завтрашня зустріч.", "en": [
-    "It’s tomorrow’s meeting.", "It is tomorrow’s meeting.", "It’s the meeting of tomorrow.", "It is the meeting of tomorrow."
+    "It’s tomorrow’s meeting.",
+    "It is tomorrow’s meeting."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це минулорічний проєкт.", "en": [
-    "It’s last year’s project.", "It is last year’s project.", "It’s the project from last year.", "It is the project from last year."
+    "It’s last year’s project.",
+    "It is last year’s project.",
+    "It’s the project from last year.",
+    "It is the project from last year."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це брат мого друга.", "en": [
-    "He’s my friend’s brother.", "He is my friend’s brother.", "He’s the brother of my friend.", "He is the brother of my friend."
+    "He’s my friend’s brother.",
+    "He is my friend’s brother."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це донька лікаря.", "en": [
-    "She’s the doctor’s daughter.", "She is the doctor’s daughter.", "She’s the daughter of the doctor.", "She is the daughter of the doctor."
+    "She’s the doctor’s daughter.",
+    "She is the doctor’s daughter."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це подруга моєї сестри.", "en": [
-    "She’s my sister’s friend.", "She is my sister’s friend.", "She’s a friend of my sister.", "She is a friend of my sister."
+    "She’s my sister’s friend.",
+    "She is my sister’s friend."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це син Марка і Джулії.", "en": [
-    "He’s Mark and Julia’s son.", "He is Mark and Julia’s son.", "He’s the son of Mark and Julia.", "He is the son of Mark and Julia."
+    "He’s Mark and Julia’s son.",
+    "He is Mark and Julia’s son."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це колега Пола.", "en": [
-    "He’s Paul’s colleague.", "He is Paul’s colleague.", "He’s a colleague of Paul.", "He is a colleague of Paul."
+    "He’s Paul’s colleague.",
+    "He is Paul’s colleague."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кінець історії.", "en": [
-    "It’s the story’s end.", "It is the story’s end.", "It’s the end of the story.", "It is the end of the story."
+    "It’s the end of the story.",
+    "It is the end of the story."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це початок сезону.", "en": [
-    "It’s the season’s beginning.", "It is the season’s beginning.", "It’s the beginning of the season.", "It is the beginning of the season."
+    "It’s the beginning of the season.",
+    "It is the beginning of the season."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це головна ідея книги.", "en": [
-    "It’s the book’s main idea.", "It is the book’s main idea.", "It’s the main idea of the book.", "It is the main idea of the book."
+    "It’s the book’s main idea.",
+    "It is the book’s main idea.",
+    "It’s the main idea of the book.",
+    "It is the main idea of the book."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це суть питання.", "en": [
-    "It’s the question’s essence.", "It is the question’s essence.", "It’s the essence of the question.", "It is the essence of the question."
+    "It’s the essence of the question.",
+    "It is the essence of the question."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це значення слова.", "en": [
-    "It’s the word’s meaning.", "It is the word’s meaning.", "It’s the meaning of the word.", "It is the meaning of the word."
+    "It’s the word’s meaning.",
+    "It is the word’s meaning.",
+    "It’s the meaning of the word.",
+    "It is the meaning of the word."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це будинок Джорджа.", "en": [
-    "It’s George’s house.", "It is George’s house.", "It’s the house of George.", "It is the house of George."
+    "It’s George’s house.",
+    "It is George’s house."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це вечірка Емілі.", "en": [
-    "It’s Emily’s party.", "It is Emily’s party.", "It’s the party of Emily.", "It is the party of Emily."
+    "It’s Emily’s party.",
+    "It is Emily’s party."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це собака Кріса.", "en": [
-    "It’s Chris’s dog.", "It is Chris’s dog.", "It’s Chris’ dog.", "It’s the dog of Chris.", "It is the dog of Chris."
+    "It’s Chris’s dog.",
+    "It is Chris’s dog.",
+    "It’s Chris’ dog."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це робота Алекса.", "en": [
-    "It’s Alex’s job.", "It is Alex’s job.", "It’s the job of Alex.", "It is the job of Alex."
+    "It’s Alex’s job.",
+    "It is Alex’s job."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це квартира Джонсона.", "en": [
-    "It’s Johnson’s apartment.", "It is Johnson’s apartment.", "It’s the apartment of Johnson.", "It is the apartment of Johnson."
+    "It’s Johnson’s apartment.",
+    "It is Johnson’s apartment."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це офіс працівників.", "en": [
-    "It’s the workers’ office.", "It is the workers’ office.", "It’s the office of the workers.", "It is the office of the workers."
+    "It’s the workers’ office.",
+    "It is the workers’ office."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це нова політика компанії.", "en": [
-    "It’s the company’s new policy.", "It is the company’s new policy.", "It’s the new policy of the company.", "It is the new policy of the company."
+    "It’s the company’s new policy.",
+    "It is the company’s new policy."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це зарплати вчителів.", "en": [
-    "They’re the teachers’ salaries.", "They are the teachers’ salaries.", "They’re the salaries of the teachers.", "They are the salaries of the teachers."
+    "They’re the teachers’ salaries.",
+    "They are the teachers’ salaries."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це сторінка газети.", "en": [
-    "It’s the newspaper’s page.", "It is the newspaper’s page.", "It’s the page of the newspaper.", "It is the page of the newspaper."
+    "It’s the newspaper’s page.",
+    "It is the newspaper’s page."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це стаття журналу.", "en": [
-    "It’s the magazine’s article.", "It is the magazine’s article.", "It’s the article of the magazine.", "It is the article of the magazine."
+    "It’s the magazine’s article.",
+    "It is the magazine’s article."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Хто твій улюблений письменник?", "en": [
-    "Who’s your favourite writer?", "Who is your favourite writer?"
+    "Who’s your favourite writer?",
+    "Who is your favourite writer?"
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Де офіс директора?", "en": [
-    "Where’s the director’s office?", "Where is the director’s office?", "Where’s the office of the director?", "Where is the office of the director?"
+    "Where’s the director’s office?",
+    "Where is the director’s office?"
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Що це за робота менеджера?", "en": [
-    "What’s the manager’s job?", "What is the manager’s job?", "What’s the job of the manager?", "What is the job of the manager?"
+    "What’s the manager’s job?",
+    "What is the manager’s job?"
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Чий це зошит?", "en": [
-    "Whose notebook is this?", "Whose is this notebook?"
+    "Whose notebook is this?",
+    "Whose is this notebook?"
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Хто подруга Анни?", "en": [
-    "Who’s Anna’s friend?", "Who is Anna’s friend?"
+    "Who’s Anna’s friend?",
+    "Who is Anna’s friend?"
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це архітектура Лондона.", "en": [
-    "It’s London’s architecture.", "It is London’s architecture.", "It’s the architecture of London.", "It is the architecture of London."
+    "It’s London’s architecture.",
+    "It is London’s architecture.",
+    "It’s the architecture of London.",
+    "It is the architecture of London."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це погода Парижа.", "en": [
-    "It’s Paris’s weather.", "It is Paris’s weather.", "It’s Paris’ weather.", "It’s the weather of Paris.", "It is the weather of Paris."
+    "It’s Paris’ weather.",
+    "It is Paris’ weather.",
+    "It’s the weather of Paris.",
+    "It is the weather of Paris."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кухня Італії.", "en": [
-    "It’s Italy’s cuisine.", "It is Italy’s cuisine.", "It’s the cuisine of Italy.", "It is the cuisine of Italy."
+    "It’s Italy’s cuisine.",
+    "It is Italy’s cuisine.",
+    "It’s the cuisine of Italy.",
+    "It is the cuisine of Italy."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це культура Японії.", "en": [
-    "It’s Japan’s culture.", "It is Japan’s culture.", "It’s the culture of Japan.", "It is the culture of Japan."
+    "It’s Japan’s culture.",
+    "It is Japan’s culture.",
+    "It’s the culture of Japan.",
+    "It is the culture of Japan."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це прапор Канади.", "en": [
-    "It’s Canada’s flag.", "It is Canada’s flag.", "It’s the flag of Canada.", "It is the flag of Canada."
+    "It’s Canada’s flag.",
+    "It is Canada’s flag.",
+    "It’s the flag of Canada.",
+    "It is the flag of Canada."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це економіка США.", "en": [
-    "It’s the USA’s economy.", "It is the USA’s economy.", "It’s the economy of the USA.", "It is the economy of the USA."
+    "It’s the USA’s economy.",
+    "It is the USA’s economy.",
+    "It’s the economy of the USA.",
+    "It is the economy of the USA."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це транспортна система Берліна.", "en": [
-    "It’s Berlin’s transport system.", "It is Berlin’s transport system.", "It’s the transport system of Berlin.", "It is the transport system of Berlin."
+    "It’s Berlin’s transport system.",
+    "It is Berlin’s transport system.",
+    "It’s the transport system of Berlin.",
+    "It is the transport system of Berlin."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це історія України.", "en": [
-    "It’s Ukraine’s history.", "It is Ukraine’s history.", "It’s the history of Ukraine.", "It is the history of Ukraine."
+    "It’s Ukraine’s history.",
+    "It is Ukraine’s history.",
+    "It’s the history of Ukraine.",
+    "It is the history of Ukraine."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це краса Карпат.", "en": [
-    "It’s the Carpathians’ beauty.", "It is the Carpathians’ beauty.", "It’s the beauty of the Carpathians.", "It is the beauty of the Carpathians."
+    "It’s the beauty of the Carpathians.",
+    "It is the beauty of the Carpathians."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це новий продукт Apple.", "en": [
-    "It’s Apple’s new product.", "It is Apple’s new product.", "It’s the new product of Apple.", "It is the new product of Apple."
+    "It’s Apple’s new product.",
+    "It is Apple’s new product."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це стратегія Google.", "en": [
-    "It’s Google’s strategy.", "It is Google’s strategy.", "It’s the strategy of Google.", "It is the strategy of Google."
+    "It’s Google’s strategy.",
+    "It is Google’s strategy."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це сервіс Amazon.", "en": [
-    "It’s Amazon’s service.", "It is Amazon’s service.", "It’s the service of Amazon.", "It is the service of Amazon."
+    "It’s Amazon’s service.",
+    "It is Amazon’s service."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це фільм Netflix.", "en": [
-    "It’s Netflix’s film.", "It is Netflix’s film.", "It’s the film of Netflix.", "It is the film of Netflix."
+    "It’s Netflix’s film.",
+    "It is Netflix’s film."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це успіх Tesla.", "en": [
-    "It’s Tesla’s success.", "It is Tesla’s success.", "It’s the success of Tesla.", "It is the success of Tesla."
+    "It’s Tesla’s success.",
+    "It is Tesla’s success."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це рішення Spotify.", "en": [
-    "It’s Spotify’s decision.", "It is Spotify’s decision.", "It’s the decision of Spotify.", "It is the decision of Spotify."
+    "It’s Spotify’s decision.",
+    "It is Spotify’s decision."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це головна сторінка газети.", "en": [
-    "It’s the newspaper’s front page.", "It is the newspaper’s front page.", "It’s the front page of the newspaper.", "It is the front page of the newspaper."
+    "It’s the newspaper’s front page.",
+    "It is the newspaper’s front page.",
+    "It’s the front page of the newspaper.",
+    "It is the front page of the newspaper."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це програма університету.", "en": [
-    "It’s the university’s program.", "It is the university’s program.", "It’s the program of the university.", "It is the program of the university."
+    "It’s the university’s program.",
+    "It is the university’s program.",
+    "It’s the program of the university.",
+    "It is the program of the university."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це наслідок пандемії.", "en": [
-    "It’s the pandemic’s consequence.", "It is the pandemic’s consequence.", "It’s the consequence of the pandemic.", "It is the consequence of the pandemic."
+    "It’s the pandemic’s consequence.",
+    "It is the pandemic’s consequence.",
+    "It’s the consequence of the pandemic.",
+    "It is the consequence of the pandemic."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це результати конференції.", "en": [
-    "They’re the conference’s results.", "They are the conference’s results.", "They’re the results of the conference.", "They are the results of the conference."
+    "They’re the conference’s results.",
+    "They are the conference’s results.",
+    "They’re the results of the conference.",
+    "They are the results of the conference."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це вистава Шекспіра.", "en": [
-    "It’s Shakespeare’s play.", "It is Shakespeare’s play.", "It’s the play of Shakespeare.", "It is the play of Shakespeare."
+    "It’s Shakespeare’s play.",
+    "It is Shakespeare’s play."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це пам’ятник незалежності країни.", "en": [
-    "It’s the country’s independence monument.", "It is the country’s independence monument.", "It’s the monument of the country’s independence.", "It is the monument of the country’s independence."
+    "It’s the country’s independence monument.",
+    "It is the country’s independence monument."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це будинок наших друзів.", "en": [
-    "It’s our friends’ house.", "It is our friends’ house.", "It’s the house of our friends.", "It is the house of our friends."
+    "It’s our friends’ house.",
+    "It is our friends’ house."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це діти вчителів.", "en": [
-    "They’re the teachers’ children.", "They are the teachers’ children.", "They’re the children of the teachers.", "They are the children of the teachers."
+    "They’re the teachers’ children.",
+    "They are the teachers’ children."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це собака сусідів.", "en": [
-    "It’s the neighbors’ dog.", "It is the neighbors’ dog.", "It’s the dog of the neighbors.", "It is the dog of the neighbors."
+    "It’s the neighbors’ dog.",
+    "It is the neighbors’ dog."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це книги студентів.", "en": [
-    "They’re the students’ books.", "They are the students’ books.", "They’re the books of the students.", "They are the books of the students."
+    "They’re the students’ books.",
+    "They are the students’ books."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це кімната хлопців.", "en": [
-    "It’s the boys’ room.", "It is the boys’ room.", "It’s the room of the boys.", "It is the room of the boys."
+    "It’s the boys’ room.",
+    "It is the boys’ room."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це квартира наших батьків.", "en": [
-    "It’s our parents’ apartment.", "It is our parents’ apartment.", "It’s the apartment of our parents.", "It is the apartment of our parents."
+    "It’s our parents’ apartment.",
+    "It is our parents’ apartment."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це діти моїх друзів.", "en": [
-    "They’re my friends’ children.", "They are my friends’ children.", "They’re the children of my friends.", "They are the children of my friends."
+    "They’re my friends’ children.",
+    "They are my friends’ children."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це автомобіль моїх сусідів.", "en": [
-    "It’s my neighbors’ car.", "It is my neighbors’ car.", "It’s the car of my neighbors.", "It is the car of my neighbors."
+    "It’s my neighbors’ car.",
+    "It is my neighbors’ car."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це будинок батьків Марії.", "en": [
-    "It’s Maria’s parents’ house.", "It is Maria’s parents’ house.", "It’s the house of Maria’s parents.", "It is the house of Maria’s parents."
+    "It’s Maria’s parents’ house.",
+    "It is Maria’s parents’ house."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це собака дітей наших друзів.", "en": [
-    "It’s our friends’ children’s dog.", "It is our friends’ children’s dog.", "It’s the dog of our friends’ children.", "It is the dog of our friends’ children."
+    "It’s our friends’ children’s dog.",
+    "It is our friends’ children’s dog."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це зошити учнів.", "en": [
-    "They’re the students’ notebooks.", "They are the students’ notebooks.", "They’re the notebooks of the students.", "They are the notebooks of the students."
+    "They’re the students’ notebooks.",
+    "They are the students’ notebooks."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це оцінки студентів.", "en": [
-    "They’re the students’ grades.", "They are the students’ grades.", "They’re the grades of the students.", "They are the grades of the students."
+    "They’re the students’ grades.",
+    "They are the students’ grades."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проекти дизайнерів.", "en": [
-    "They’re the designers’ projects.", "They are the designers’ projects.", "They’re the projects of the designers.", "They are the projects of the designers."
+    "They’re the designers’ projects.",
+    "They are the designers’ projects."
   ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це офіс працівників.", "en": [
-    "It’s the workers’ office.", "It is the workers’ office.", "It’s the office of the workers.", "It is the office of the workers."
-  ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це графік лікарів.", "en": [
-    "It’s the doctors’ schedule.", "It is the doctors’ schedule.", "It’s the schedule of the doctors.", "It is the schedule of the doctors."
+    "It’s the doctors’ schedule.",
+    "It is the doctors’ schedule."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це результати компаній.", "en": [
-    "They’re the companies’ results.", "They are the companies’ results.", "They’re the results of the companies.", "They are the results of the companies."
+    "They’re the companies’ results.",
+    "They are the companies’ results."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це співробітники партнерів.", "en": [
-    "They’re the partners’ employees.", "They are the partners’ employees.", "They’re the employees of the partners.", "They are the employees of the partners."
+    "They’re the partners’ employees.",
+    "They are the partners’ employees."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це офіс клієнтів.", "en": [
-    "It’s the clients’ office.", "It is the clients’ office.", "It’s the office of the clients.", "It is the office of the clients."
+    "It’s the clients’ office.",
+    "It is the clients’ office."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це продажі брендів.", "en": [
-    "They’re the brands’ sales.", "They are the brands’ sales.", "They’re the sales of the brands.", "They are the sales of the brands."
+    "They’re the brands’ sales.",
+    "They are the brands’ sales."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це бюджети проектів.", "en": [
-    "They’re the projects’ budgets.", "They are the projects’ budgets.", "They’re the budgets of the projects.", "They are the budgets of the projects."
+    "They’re the projects’ budgets.",
+    "They are the projects’ budgets."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це приміщення університетів.", "en": [
-    "They’re the universities’ buildings.", "They are the universities’ buildings.", "They’re the buildings of the universities.", "They are the buildings of the universities."
+    "They’re the universities’ buildings.",
+    "They are the universities’ buildings."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це вчителі шкіл.", "en": [
-    "They’re the schools’ teachers.", "They are the schools’ teachers.", "They’re the teachers of the schools.", "They are the teachers of the schools."
+    "They’re the schools’ teachers.",
+    "They are the schools’ teachers."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це досягнення студентів.", "en": [
-    "They’re the students’ achievements.", "They are the students’ achievements.", "They’re the achievements of the students.", "They are the achievements of the students."
+    "They’re the students’ achievements.",
+    "They are the students’ achievements."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це зустріч лідерів країн.", "en": [
-    "It’s the countries’ leaders’ meeting.", "It is the countries’ leaders’ meeting.", "It’s the meeting of the leaders of the countries.", "It is the meeting of the leaders of the countries."
+    "It’s the meeting of the countries’ leaders.",
+    "It is the meeting of the countries’ leaders."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це рішення директорів компаній.", "en": [
-    "It’s the companies’ directors’ decision.", "It is the companies’ directors’ decision.", "It’s the decision of the companies’ directors.", "It is the decision of the companies’ directors."
+    "It’s the decision of the companies’ directors.",
+    "It is the decision of the companies’ directors."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це плани урядів країн.", "en": [
-    "They’re the countries’ governments’ plans.", "They are the countries’ governments’ plans.", "They’re the plans of the governments of the countries.", "They are the plans of the governments of the countries."
+    "They’re the plans of the countries’ governments.",
+    "They are the plans of the countries’ governments."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проблеми мешканців міст.", "en": [
-    "They’re the cities’ residents’ problems.", "They are the cities’ residents’ problems.", "They’re the problems of the residents of the cities.", "They are the problems of the residents of the cities."
+    "They’re the problems of the cities’ residents.",
+    "They are the problems of the cities’ residents."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це історії людей різних культур.", "en": [
-    "They’re the cultures’ people’s stories.", "They are the cultures’ people’s stories.", "They’re the stories of the people of different cultures.", "They are the stories of the people of different cultures."
+    "They’re the stories of people of different cultures.",
+    "They are the stories of people of different cultures."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це традиції народів світу.", "en": [
-    "They’re the world’s nations’ traditions.", "They are the world’s nations’ traditions.", "They’re the traditions of the nations of the world.", "They are the traditions of the nations of the world."
+    "They’re the traditions of the world’s nations.",
+    "They are the traditions of the world’s nations."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це будинки родин наших друзів.", "en": [
-    "They’re our friends’ families’ houses.", "They are our friends’ families’ houses.", "They’re the houses of our friends’ families.", "They are the houses of our friends’ families."
+    "They’re the houses of our friends’ families.",
+    "They are the houses of our friends’ families."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це розклад вихідних.", "en": [
-    "It’s the weekends’ schedule.", "It is the weekends’ schedule.", "It’s the schedule of the weekends.", "It is the schedule of the weekends."
+    "It’s the weekend schedule.",
+    "It is the weekend schedule."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це результати минулих ігор.", "en": [
-    "They’re the matches’ results.", "They are the matches’ results.", "They’re the results of the matches.", "They are the results of the matches."
+    "They’re the results of the previous matches.",
+    "They are the results of the previous matches."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це нагороди попередніх переможців.", "en": [
-    "They’re the winners’ prizes.", "They are the winners’ prizes.", "They’re the prizes of the winners.", "They are the prizes of the winners."
+    "They’re the prizes of the previous winners.",
+    "They are the prizes of the previous winners."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це відгуки клієнтів.", "en": [
-    "They’re the customers’ reviews.", "They are the customers’ reviews.", "They’re the reviews of the customers.", "They are the reviews of the customers."
+    "They’re the customers’ reviews.",
+    "They are the customers’ reviews."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це результати минулих тестів.", "en": [
-    "They’re the tests’ results.", "They are the tests’ results.", "They’re the results of the tests.", "They are the results of the tests."
+    "They’re the results of the previous tests.",
+    "They are the results of the previous tests."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це стільці учнів.", "en": [
-    "They’re the pupils’ chairs.", "They are the pupils’ chairs.", "They’re the chairs of the pupils.", "They are the chairs of the pupils."
+    "They’re the pupils’ chairs.",
+    "They are the pupils’ chairs."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це голоси співачок.", "en": [
-    "They’re the singers’ voices.", "They are the singers’ voices.", "They’re the voices of the singers.", "They are the voices of the singers."
+    "They’re the singers’ voices.",
+    "They are the singers’ voices."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це історії героїв.", "en": [
-    "They’re the heroes’ stories.", "They are the heroes’ stories.", "They’re the stories of the heroes.", "They are the stories of the heroes."
+    "They’re the heroes’ stories.",
+    "They are the heroes’ stories."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це картини художників.", "en": [
-    "They’re the artists’ paintings.", "They are the artists’ paintings.", "They’re the paintings of the artists.", "They are the paintings of the artists."
+    "They’re the artists’ paintings.",
+    "They are the artists’ paintings."
   ]},
+
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це голоси дітей.", "en": [
-    "They’re the children’s voices.", "They are the children’s voices.", "They’re the voices of the children.", "They are the voices of the children."
+    "They’re the children’s voices.",
+    "They are the children’s voices."
   ]}
 ] }

@@ -20,7 +20,7 @@
     "en": ["I bought a new computer.", "I've bought a new computer."]
   },
   {
-    "rules": ["ARTICLES", "PREP_PLACE", "PRESENT_SIMPLE", "PERSONAL_PRONOUNS"],
+    "rules": ["ARTICLES", "PREP_PLACE", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
     "ua": "Ми живемо біля річки.",
     "en": ["We live near the river.", "We live by the river."]
   },
@@ -75,7 +75,7 @@
     "en": ["We saw the Eiffel Tower.", "We’ve seen the Eiffel Tower."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_CONTINUOUS", "PERSONAL_PRONOUNS"],
+    "rules": ["ARTICLES", "PRESENT_CONT_NOW", "PERSONAL_PRONOUNS"],
     "ua": "Він дивиться телевізор.",
     "en": ["He is watching TV.", "He’s watching television."]
   },
@@ -105,7 +105,7 @@
     "en": ["I saw a rainbow after the rain."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PRESENT_CONTINUOUS", "SIMPLE_ADJ", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PRESENT_CONT_NOW", "SIMPLE_ADJ", "PREP_PLACE", "PERSONAL_PRONOUNS"],
     "ua": "Ми живемо у великому місті.",
     "en": ["We live in a big city.", "We’re living in a big city."]
   },
@@ -130,7 +130,7 @@
     "en": ["I have a toothache.", "I've got a toothache."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PERSONAL_PRONOUNS"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
     "ua": "Ми зазвичай снідаємо о восьмій.",
     "en": ["We usually have breakfast at eight.", "We usually eat breakfast at eight."]
   },
@@ -165,7 +165,7 @@
     "en": ["The dog is a faithful friend of man.", "The dog is a loyal friend of humans."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "LIKE_ING"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "LIKE_ING"],
     "ua": "Коти люблять спати.",
     "en": ["Cats love sleeping.", "Cats like to sleep."]
   },
@@ -180,17 +180,17 @@
     "en": ["The Internet is an important part of our life."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_TIME", "ADVERBS_FREQUENCY"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_TIME", "ADVERBS_FREQUENCY"],
     "ua": "Ми завжди п’ємо каву вранці.",
     "en": ["We always drink coffee in the morning."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_TIME", "ADVERBS_FREQUENCY"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_TIME", "ADVERBS_FREQUENCY"],
     "ua": "Вони зазвичай ходять у спортзал після роботи.",
     "en": ["They usually go to the gym after work."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "PREP_PLACE"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
     "ua": "Я обідаю в школі.",
     "en": ["I have lunch at school.", "I eat lunch at school."]
   },
@@ -235,7 +235,7 @@
     "en": ["The environment must be protected."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY"],
     "ua": "Я граю на фортепіано щодня.",
     "en": ["I play the piano every day."]
   },
@@ -245,12 +245,12 @@
     "en": ["It was a real surprise."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY", "PREP_TIME"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY", "PREP_TIME"],
     "ua": "Ми часто дивимось телевізор увечері.",
     "en": ["We often watch TV in the evening.", "We often watch television in the evening."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY", "PREP_TIME"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY", "PREP_TIME"],
     "ua": "Вона іноді ходить до церкви в неділю.",
     "en": ["She sometimes goes to church on Sundays."]
   },
@@ -330,12 +330,12 @@
     "en": ["She plays the violin."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми часто ходимо в кіно.",
     "en": ["We often go to the cinema.", "We often go to the movies."]
   },
   {
-    "rules": ["COUNT_UNCOUNT", "PRESENT_SIMPLE"],
+    "rules": ["COUNT_UNCOUNT", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони обідають удома.",
     "en": ["They have lunch at home.", "They eat lunch at home."]
   },

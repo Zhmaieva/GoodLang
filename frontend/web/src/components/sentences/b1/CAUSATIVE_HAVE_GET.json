@@ -8,7 +8,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона завжди робить манікюр у салоні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "She has her nails done at the salon.",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він щоразу миє машину в автомийці (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "He has his car washed every time.",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Бухгалтер готує мені податки щороку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "I have my taxes done by an accountant every year.",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона завжди фарбує волосся у перукаря (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "She always has her hair dyed at the hairdresser’s.",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Ми щомісяця миємо вікна (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "We have our windows cleaned every month.",
@@ -148,7 +148,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я мию машину щотижня (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "I have my car washed every week.",
@@ -174,7 +174,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він ремонтує взуття у майстра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "He has his shoes repaired by a cobbler.",
@@ -202,7 +202,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вони щороку фарбують будинок (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "They have their house painted every year.",
@@ -238,7 +238,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він стриже волосся раз на два тижні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "He has his hair cut every two weeks.",
@@ -272,7 +272,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Ми перевіряємо систему опалення щоосені (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "We have our heating system checked every autumn.",
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона завжди прибирає квартиру за допомогою клінінгової компанії (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "She has her apartment cleaned by a cleaning company.",
@@ -352,7 +352,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона регулярно чистить килими (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "She has her carpets cleaned regularly.",
@@ -378,7 +378,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він щоразу ремонтує годинник у того самого майстра (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "He has his watches fixed by the same repairman.",
@@ -440,7 +440,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Ми перевіряємо електрику щороку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "We have our electrical system checked every year.",
@@ -484,7 +484,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона чистить пальто у хімчистці (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "She has her coat cleaned at the dry cleaner’s.",
@@ -518,7 +518,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Вона перевіряє зір у лікаря щороку (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "She has her eyes checked every year.",
@@ -574,7 +574,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він миє килими раз на пів року (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "He has his carpets cleaned twice a year.",
@@ -600,7 +600,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я регулярно стрижу волосся у свого перукаря (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "I have my hair cut by my hairdresser regularly.",
@@ -636,7 +636,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Ми чистимо меблі раз на рік (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "We have our furniture cleaned once a year.",
@@ -662,7 +662,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Він лагодить годинник у майстерні (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "He has his watch repaired at the workshop.",
@@ -688,7 +688,7 @@
     ]
   },
   {
-    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE", "PREP_DIRECTION"],
+    "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_SIMPLE_FREQ", "PREP_DIRECTION"],
     "ua": ["Я завжди перевіряю зуби у того самого стоматолога (use HAVE / GET + OBJECT + PAST PARTICIPLE)."],
     "en": [
       "I have my teeth checked by the same dentist.",
