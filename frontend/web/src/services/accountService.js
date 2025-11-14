@@ -12,14 +12,15 @@ async function initCredentials() {
     return { token: savedToken, userId: savedId};
 }
 
+export async function getUserId() {
+    return (await initCredentials()).userId;
+}
+
 export async function getToken() {
     return (await initCredentials()).token;
 }
 
 /* todo:
-- get account status (free/paid)
-- show modal when limit reached on 'verify' button press
-- create account (activate subscription)
 - account not paid subscription
 - account return to paid subscription
 - change payment method

@@ -56,3 +56,20 @@ export async function callSignUpApi(params) {
 
     return res.json();
 }
+
+export async function callAccountStatusApi() {
+    const url = `${API_BASE}/accounts/status`;
+
+    const res = await fetch(url, {
+        headers: {
+            'Authorization': `Bearer ${await getToken()}`,
+        }
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) throw new Error("Server error: " + res.status);
+
+    return data; // {status: 'free'|'paid'|'attention'}
+}
+

@@ -1,4 +1,8 @@
+import React, { useEffect, useState } from "react";
 import LevelSwitch from "./LevelSwitch";
+import { callAccountStatusApi } from "../services/api.js";
+import LimitModal from "./subscription/LimitModal.jsx";
+import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const styles = {
@@ -58,24 +62,32 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     };
 
     return (
-        <header style={styles.header}>
-            <div style={styles.brand}>
-                <div style={styles.logo} aria-hidden="true">GL</div>
-                <div style={styles.titleWrap}>
-                    <h1 style={styles.h1}>GoodLang</h1>
-                    <div style={styles.sub}>Переклад → короткий фідбек → нове речення згідно твого рівня</div>
+        <>
+            <header style={styles.header}>
+                <div style={styles.brand}>
+                    <div style={styles.logo} aria-hidden="true">GL</div>
+                    <div style={styles.titleWrap}>
+                        <h1 style={styles.h1}>GoodLang</h1>
+                        <div style={styles.sub}>Переклад → короткий фідбек → нове речення згідно твого рівня</div>
+                    </div>
                 </div>
-            </div>
 
-            <div style={styles.right}>
-                <LevelSwitch
-                    level={level}
-                    loading={loading}
-                    onLevelChange={onLevelChange}
-                    theme={theme}
-                    compact
-                />
-            </div>
-        </header>
+                <div style={{display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center"}}>
+                    <div>
+                        <AccountStatusButton theme={theme} />
+                    </div>
+                    <div style={styles.right}>
+                        <LevelSwitch
+                            level={level}
+                            loading={loading}
+                            onLevelChange={onLevelChange}
+                            theme={theme}
+                            compact
+                        />
+                    </div>
+                </div>
+
+            </header>
+        </>
     );
 }

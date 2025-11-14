@@ -21,7 +21,7 @@ export async function createAccount() {
 /**
  * Get account status
  * @param {string} accountId
- * @returns {Promise<'free'|'paid'>}
+ * @returns {Promise<'free'|'paid'|'attention'>}
  */
 export async function getAccountStatus(accountId) {
     const { rows } = await pool.query(

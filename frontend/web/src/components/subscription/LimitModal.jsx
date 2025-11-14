@@ -2,10 +2,11 @@ import React, { useState, useRef } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { callCheckoutApi } from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
+import {getUserId} from "../../services/accountService.js";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
-export default function LimitModal({ theme, open, onClose, accountId }) {
+export default function LimitModal({ isLimitReached, theme, open, onClose }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -19,7 +20,7 @@ export default function LimitModal({ theme, open, onClose, accountId }) {
 
             const stripe = await stripePromise;
 
-            const { clientSecret, isSuccess } = await callCheckoutApi(accountId);
+            const { clientSecret, isSuccess } = await callCheckoutApi(getUserId());
             if (!isSuccess) {
                 navigate("/payment/cancel");
                 setLoading(false);
@@ -66,7 +67,7 @@ export default function LimitModal({ theme, open, onClose, accountId }) {
                 display: !isPaying ? "block" : "none",
             }}>
                 <h2 style={{ marginBottom: 16, color: theme.text, fontSize: "1.6rem", fontWeight: 800 }}>
-                    Ліміт вичерпано
+                    {isLimitReached ? "Ліміт вичерпано" : "Навчання в повну силу"}
                 </h2>
 
                 <p style={{ color: theme.muted, fontSize: "1.05rem", marginBottom: 24, lineHeight: "1.45" }}>

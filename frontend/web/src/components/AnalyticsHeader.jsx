@@ -14,7 +14,7 @@ export default function AnalyticsHeader({ onBack, onExport }) {
             </div>
             <nav className="actions">
                 <button className="btn secondary" onClick={onBack}>← Практика</button>
-                <button className="btn" onClick={onExport}>Роздрукувати результати</button>
+                {/*<button className="btn" onClick={onExport}>Роздрукувати результати</button>*/}
             </nav>
         </header>
     );

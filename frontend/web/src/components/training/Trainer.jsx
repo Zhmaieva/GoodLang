@@ -188,6 +188,7 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
             />
             <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer}/>
             <LimitModal
+                isLimitReached={true}
                 theme={theme}
                 open={limitModalOpen}
                 onClose={() => setLimitModalOpen(false)}
