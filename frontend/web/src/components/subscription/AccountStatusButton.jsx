@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { callAccountStatusApi } from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
@@ -9,7 +9,12 @@ export default function AccountStatusButton({ theme }) {
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
 
+    const effectRan = useRef(false); // <-- prevents double run
+
     useEffect(() => {
+        if (effectRan.current) return; // prevent second StrictMode call
+        effectRan.current = true;
+
         loadStatus().then();
 
         setInterval(() => {

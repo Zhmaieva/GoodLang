@@ -41,18 +41,11 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
     const textareaRef = useRef(null);
 
     const [limitModalOpen, setLimitModalOpen] = useState(false);
-    const [subscribeModalOpen, setSubscribeModalOpen] = useState(false);
-
 
     useEffect(() => {
         if (didInit.current) return;
         didInit.current = true;
 
-        resetToLoadingPlaceholders();
-        loadNewTask().then(_ => {})
-    }, []);
-
-    useEffect(() => {
         if (loading) return;
         if (nextLevel === level) return;
 
