@@ -23,13 +23,18 @@ export const paymentsController = {
                     ui_mode: "embedded",
                     mode: "subscription",
                     return_url: `${process.env.FRONTEND_URL}/payment/success`,
-                    client_reference_id: accountId, // identify the user in your DB
+                    client_reference_id: accountId,
                     line_items: [
                         {
                             price: process.env.STRIPE_PRICE_ID,
                             quantity: 1,
                         },
                     ],
+                    subscription_data: {
+                        metadata: {
+                            accountId: accountId,
+                        }
+                    }
                 });
 
                 return res.json({
@@ -72,6 +77,57 @@ export const paymentsController = {
                         email,
                         stripe_subscription_id: subscriptionId,
                     });
+                }
+
+                if (event.type === "customer.subscription.deleted") {
+                    const subscription = event.data.object;
+                    const accountId = subscription.metadata.accountId
+                        || subscription.client_reference_id;
+
+                    if (!accountId) {
+                        console.error("Missing accountId in subscription.deleted");
+                    } else {
+                        await updateSubscriptionForAccount(accountId, {
+                            status: "canceled",
+                            stripe_subscription_id: subscription.id,
+                        });
+                    }
+                }
+
+                if (event.type === "customer.subscription.updated") {
+                    const subscription = event.data.object;
+                    const status = subscription.status; // active, canceled, past_due, unpaid, etc.
+
+                    const accountId = subscription.metadata?.accountId;
+
+                    if (!accountId) {
+                        console.error("Missing metadata.accountId in subscription.updated");
+                    } else {
+                        await updateSubscriptionForAccount(accountId, {
+                            status,
+                            stripe_subscription_id: subscription.id,
+                        });
+                    }
+                }
+
+                if (event.type === "invoice.payment_failed") {
+                    const invoice = event.data.object;
+                    const subscriptionId = invoice.subscription;
+
+                    if (!subscriptionId) {
+                        console.warn("No subscription on failed invoice → skipping");
+                        return res.json({ received: true });
+                    }
+
+                    // Load subscription to get metadata
+                    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+                    const accountId = subscription.metadata?.accountId;
+
+                    if (accountId) {
+                        await updateSubscriptionForAccount(accountId, {
+                            status: "attention",
+                        });
+                    }
                 }
 
                 res.json({ received: true });

@@ -20,7 +20,7 @@ export default function KPIGrid({ accuracy, attempts, masteredRules, userLevel }
                 <div className="spark"><i style={{width: `${accuracy ?? 0}%`}}/></div>
             </div>
             <div className="card kpi">
-                <div className="label">Всього відповідей</div>
+                <div className="label">Всього результатів</div>
                 <div className="value">{attempts ?? 0}</div>
                 <div className="spark"><i style={{width: `${Math.min(100, attempts ?? 0)}%`}}/></div>
             </div>

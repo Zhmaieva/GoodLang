@@ -3,14 +3,18 @@ import { callAccountStatusApi } from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
 
-export default function AccountStatusButton({ theme, accountId }) {
+export default function AccountStatusButton({ theme }) {
     const [status, setStatus] = useState(null);
     const [hover, setHover] = useState(false);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
 
     useEffect(() => {
-        loadStatus();
+        loadStatus().then();
+
+        setInterval(() => {
+            loadStatus().then();
+        }, 5000);
     }, []);
 
     async function loadStatus() {
@@ -89,9 +93,9 @@ export default function AccountStatusButton({ theme, accountId }) {
                     onMouseLeave={() => setHover(false)}
                     onClick={handleClick}
                 >
-                    {status === "paid" && "Преміум підписка"}
-                    {status === "attention" && "Оплата потребує уваги"}
-                    {status === "free" && "Покращити результати"}
+                    {status === "paid" && "Преміум"}
+                    {status === "attention" && "Преміум закінчується"}
+                    {status === "free" && "Купити преміум"}
                 </div>
             )}
 

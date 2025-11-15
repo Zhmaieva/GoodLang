@@ -21,9 +21,8 @@ export async function getToken() {
 }
 
 /* todo:
-- account not paid subscription
-- account return to paid subscription
-- change payment method
-- cancel subscription
+- data sync
+- data sync of free after paid
+- data sync after return to paid subscription
 - sign in to another account
  */
