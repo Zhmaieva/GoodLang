@@ -139,3 +139,27 @@ $$
 $$;
 
 COMMIT;
+
+
+-- Migration: add_stripe_customer_id_to_accounts
+-- Description: Adds 'stripe_customer_id' to accounts to store the permanent Stripe customer identifier
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'add_stripe_customer_id_to_accounts'
+        ) THEN
+
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS stripe_customer_id VARCHAR(255);
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_stripe_customer_id_to_accounts', (NOW() AT TIME ZONE 'UTC'));
+        END IF;
+    END
+$$;
+
+COMMIT;

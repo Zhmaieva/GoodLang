@@ -1,4 +1,5 @@
 import React from "react";
+import {callManageSubscriptionApi} from "../../services/api.js";
 
 export default function AccountStatusModal({ theme, open, onClose, status }) {
     if (!open) return null;
@@ -25,6 +26,47 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
         "✔️ Синхронізація на всіх пристроях",
         "✔️ Пріоритетна підтримка"
     ];
+
+    // LevelSwitch-style small button
+    const manageBtnStyle = {
+        appearance: "none",
+        padding: "10px 18px",
+        fontWeight: 800,
+        fontSize: 14,
+        lineHeight: 1,
+        borderRadius: 999,
+
+        background: "#fffdf8",
+        color: theme.text,
+        border: `2px solid ${theme.accent}`,
+        boxShadow: `2px 2px 0 ${theme.accentDark}`,
+
+        cursor: "pointer",
+        marginTop: 20,
+        marginBottom: 6,
+        transition: "transform 120ms ease",
+    };
+
+    const closeBtnStyle = {
+        background: theme.accent,
+        color: "white",
+        padding: "12px 26px",
+        borderRadius: theme.radius,
+        border: "none",
+        cursor: "pointer",
+        fontSize: "1.1rem",
+        fontWeight: 700,
+        marginTop: 20
+    };
+
+    const onManage = async () => {
+        try {
+            const { url } = await callManageSubscriptionApi();
+            window.open(url, "_blank"); // open in new tab
+        } catch (e) {
+            console.error("Failed to open subscription management", e);
+        }
+    }
 
     return (
         <div style={{
@@ -80,20 +122,16 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                     </ul>
                 )}
 
-                <button
-                    onClick={onClose}
-                    style={{
-                        background: theme.accent,
-                        color: "white",
-                        padding: "12px 26px",
-                        borderRadius: theme.radius,
-                        border: "none",
-                        cursor: "pointer",
-                        fontSize: "1.1rem",
-                        fontWeight: 700,
-                        marginTop: 28
-                    }}
-                >
+                {(status === "paid" || status === "attention") && (
+                    <button
+                        style={manageBtnStyle}
+                        onClick={onManage} // open stripe portal
+                    >
+                        Керувати підпискою
+                    </button>
+                )}
+
+                <button onClick={onClose} style={closeBtnStyle}>
                     Закрити
                 </button>
             </div>

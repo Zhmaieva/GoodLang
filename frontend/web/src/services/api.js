@@ -73,3 +73,23 @@ export async function callAccountStatusApi() {
     return data; // {status: 'free'|'paid'|'attention'}
 }
 
+export async function callManageSubscriptionApi() {
+    const url = `${API_BASE}/payments/manage`;
+
+    const res = await fetch(url, {
+        headers: {
+            'Authorization': `Bearer ${await getToken()}`,
+        }
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+        throw new Error("Server error: " + res.status);
+    }
+
+    // backend should return: { url: "https://billing.stripe.com/..." }
+    return { ...data, isSuccess: true };
+}
+
+

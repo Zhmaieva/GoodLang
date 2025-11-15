@@ -3,6 +3,7 @@ import Stripe from "stripe";
 
 import express from "express";
 import {updateSubscriptionForAccount} from "../database/repositories/subscriptionRepository.js";
+import {getAccountById} from "../database/repositories/accountsRepository.js";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -10,6 +11,30 @@ const name = 'payments';
 
 export const paymentsController = {
     mapRoutes: function (app) {
+
+        app.get(`/${name}/manage`, authMiddleware, async (req, res) => {
+            try {
+                const accountId = req.user.id;
+
+                const account = await getAccountById(accountId);
+                const customerId = account.stripe_customer_id;
+
+                if (!customerId) {
+                    return res.status(400).json({ error: "Missing Stripe customer ID" });
+                }
+
+                const portalSession = await stripe.billingPortal.sessions.create({
+                    customer: customerId,
+                    return_url: `${process.env.FRONTEND_URL}`,
+                });
+
+                res.json({ url: portalSession.url });
+            } catch (error) {
+                console.error("Failed to create portal session:", error);
+                res.status(500).json({ error: "Could not create portal link" });
+            }
+        });
+
 
         app.post(`/${name}/create-checkout-session`, authMiddleware, async (req, res) => {
             try {
@@ -76,6 +101,7 @@ export const paymentsController = {
                         status: "active",
                         email,
                         stripe_subscription_id: subscriptionId,
+                        customer_id: session.customer,
                     });
                 }
 

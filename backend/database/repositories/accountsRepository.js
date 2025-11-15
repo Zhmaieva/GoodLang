@@ -30,3 +30,32 @@ export async function getAccountStatus(accountId) {
     );
     return rows[0]?.status || 'free';
 }
+
+export async function getAccountById(accountId) {
+    try {
+        const result = await pool.query(
+            `
+            SELECT 
+                id,
+                email,
+                status,
+                stripe_customer_id,
+                created_at
+            FROM accounts
+            WHERE id = $1
+            LIMIT 1
+            `,
+            [accountId]
+        );
+
+        if (result.rows.length === 0) {
+            return null;
+        }
+
+        return result.rows[0];
+    } catch (err) {
+        console.error("DB error in getAccountById:", err);
+        throw err;
+    }
+}
+
