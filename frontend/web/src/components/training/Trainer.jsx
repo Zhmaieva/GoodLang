@@ -43,9 +43,6 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
     const [limitModalOpen, setLimitModalOpen] = useState(false);
 
     useEffect(() => {
-        if (didInit.current) return;
-        didInit.current = true;
-
         if (loading) return;
         if (nextLevel === level) return;
 
@@ -55,7 +52,13 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
         setTextToTranslate("");
         setMode("check");
         resetToLoadingPlaceholders();
-        loadNewTask(diff).then(_=>{});
+
+        if (didInit.current) {
+            loadNewTask(diff).then(_=>{});
+            return;
+        }
+
+        didInit.current = true;
     }, [nextLevel]);
 
     useEffect(() => {
