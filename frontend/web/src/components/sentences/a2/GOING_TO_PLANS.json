@@ -1,6 +1,6 @@
 { "GOING_TO_PLANS": [
   {
-    "rules": ["GOING_TO_PLANS", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["GOING_TO_PLANS", "PREP_TIME"],
     "ua": "Я збираюся відвідати бабусю завтра.",
     "en": [
       "I’m going to visit my grandma tomorrow.",
@@ -25,7 +25,7 @@
   },
   {
     "rules": ["GOING_TO_PLANS", "WH_Q", "PREP_TIME"],
-    "ua": "Коли ти збираєшся закінчити цей проект?",
+    "ua": "Коли ти збираєшся закінчити цей проєкт?",
     "en": [
       "When are you going to finish this project?",
       "When are you planning to complete this project?"
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS",      "COUNT_UNCOUNT"],
+    "rules": ["GOING_TO_PLANS", "COUNT_UNCOUNT"],
     "ua": "Він не збирається пити каву сьогодні.",
     "en": [
       "He’s not going to drink coffee today.",
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "PREP_TIME"],
+    "rules": ["GOING_TO_PLANS", "PREP_TIME"],
     "ua": "Ти збираєшся піти в кіно ввечері?",
     "en": [
       "Are you going to go to the cinema this evening?",
@@ -88,8 +88,8 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Я ретельно готуюся до презентації завтра.",
+    "rules": ["GOING_TO_PLANS", "ADVERBS_OF_MANNER"],
+    "ua": "Я ретельно збираюся підготуватися до презентації завтра.",
     "en": [
       "I’m going to prepare carefully for the presentation tomorrow.",
       "I’m planning to get ready thoroughly for tomorrow’s presentation."
@@ -120,15 +120,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Вони дуже хочуть пограти у футбол на стадіоні.",
-    "en": [
-      "They’re really going to enjoy playing football at the stadium.",
-      "They’re very much planning to play soccer on the field."
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["GOING_TO_PLANS"],
     "ua": "Ви збираєтеся відвідати ярмарок завтра?",
     "en": [
       "Are you going to visit the fair tomorrow?",
@@ -144,7 +136,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS",      "PREP_TIME"],
+    "rules": ["GOING_TO_PLANS", "PREP_TIME"],
     "ua": "Він не збирається працювати в неділю.",
     "en": [
       "He’s not going to work on Sunday.",
@@ -161,14 +153,14 @@
   },
   {
     "rules": ["GOING_TO_PLANS", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Вона швидко планує організувати гарну вечірку.",
+    "ua": "Вона збирається швидко організувати гарну вечірку.",
     "en": [
       "She’s going to quickly organize a nice party.",
       "She’s planning to swiftly arrange a lovely party."
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["GOING_TO_PLANS", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми збираємося піти в кіно, але квитки дорогі.",
     "en": [
       "We’re going to go to the cinema, but the tickets are expensive.",
@@ -192,15 +184,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "PERSONAL_PRONOUNS"],
-    "ua": "Вони дуже хочуть відвідати фестиваль.",
-    "en": [
-      "They’re really going to enjoy visiting the festival.",
-      "They’re very much planning to attend the festival."
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "COUNT_UNCOUNT"],
+    "rules": ["GOING_TO_PLANS", "COUNT_UNCOUNT"],
     "ua": "Ти збираєшся готувати їжу сьогодні ввечері?",
     "en": [
       "Are you going to cook food this evening?",
@@ -215,6 +199,7 @@
       "She’s planning to compose a lengthy letter tomorrow."
     ]
   },
+
   {
     "rules": ["GOING_TO_PLANS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
     "ua": "Ці студенти збираються вчити нові слова.",
@@ -233,14 +218,14 @@
   },
   {
     "rules": ["GOING_TO_PLANS", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Вона ретельно планує прикрасити кімнату.",
+    "ua": "Вона збирається ретельно прикрасити кімнату.",
     "en": [
       "She’s going to carefully decorate the room.",
       "She’s planning to thoroughly decorate the space."
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["GOING_TO_PLANS", "ARTICLES"],
     "ua": "Я збираюся купити нову машину цього року.",
     "en": [
       "I’m going to buy a new car this year.",
@@ -248,7 +233,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS",      "PREP_TIME"],
+    "rules": ["GOING_TO_PLANS", "PREP_TIME"],
     "ua": "Вони не збираються їхати у відпустку цього літа.",
     "en": [
       "They’re not going to go on vacation this summer.",
@@ -264,15 +249,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Він дуже хоче приготувати смачну їжу.",
-    "en": [
-      "He’s really going to enjoy cooking tasty food.",
-      "He’s very much planning to prepare delicious food."
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "DEMONSTRATIVES"],
+    "rules": ["GOING_TO_PLANS", "DEMONSTRATIVES"],
     "ua": "Ці люди збираються піти на виставку?",
     "en": [
       "Are these people going to go to the exhibition?",
@@ -297,7 +274,7 @@
   },
   {
     "rules": ["GOING_TO_PLANS", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Він тихо планує організувати сюрприз, але це складно.",
+    "ua": "Він збирається тихо організувати сюрприз, але це складно.",
     "en": [
       "He’s going to quietly organize a surprise, but it’s difficult.",
       "He’s planning to discreetly arrange a surprise, though it’s challenging."
@@ -312,7 +289,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "PREP_PLACE"],
+    "rules": ["GOING_TO_PLANS", "PREP_PLACE"],
     "ua": "Ти збираєшся гуляти в парку завтра?",
     "en": [
       "Are you going to walk in the park tomorrow?",
@@ -329,7 +306,7 @@
   },
   {
     "rules": ["GOING_TO_PLANS", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей чоловік швидко планує завершити роботу.",
+    "ua": "Цей чоловік збирається швидко завершити роботу.",
     "en": [
       "This man is going to quickly finish the work.",
       "That man is planning to swiftly complete the task."
@@ -344,7 +321,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "WH_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["GOING_TO_PLANS", "WH_Q"],
     "ua": "Що ви збираєтеся робити на вихідних?",
     "en": [
       "What are you going to do on the weekend?",
@@ -352,15 +329,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Він дуже хоче пограти в теніс на корті.",
-    "en": [
-      "He’s really going to enjoy playing tennis on the court.",
-      "He’s very much planning to play tennis at the court."
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS",      "ARTICLES"],
+    "rules": ["GOING_TO_PLANS", "ARTICLES"],
     "ua": "Я не збираюся дивитися фільм сьогодні.",
     "en": [
       "I’m not going to watch a movie today.",
@@ -368,7 +337,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["GOING_TO_PLANS", "PREP_TIME"],
     "ua": "Я збираюся піти на ринок у суботу.",
     "en": [
       "I’m going to go to the market on Saturday.",
@@ -401,7 +370,7 @@
   },
   {
     "rules": ["GOING_TO_PLANS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-    "ua": "Ми збираємося пікнік у лісі, хоча може бути холодно.",
+    "ua": "Ми збираємося влаштувати пікнік у лісі, хоча може бути холодно.",
     "en": [
       "We’re going to have a picnic in the forest although it might be cold.",
       "We’re planning a picnic in the woods even though it could be chilly."
@@ -415,6 +384,7 @@
       "That girl is planning to paint her father’s car."
     ]
   },
+
   {
     "rules": ["GOING_TO_PLANS",      "COUNT_UNCOUNT"],
     "ua": "Вона не збирається готувати вечерю сьогодні.",
@@ -424,7 +394,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "PREP_TIME"],
+    "rules": ["GOING_TO_PLANS", "PREP_TIME"],
     "ua": "Ти збираєшся відвідати музей наступного тижня?",
     "en": [
       "Are you going to visit the museum next week?",
@@ -456,7 +426,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["GOING_TO_PLANS", "ADVERBS_OF_MANNER"],
     "ua": "Вона старанно планує підготувати звіт.",
     "en": [
       "She’s going to carefully prepare the report.",
@@ -488,15 +458,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Вони дуже хочуть покататися на велосипедах у парку.",
-    "en": [
-      "They’re really going to enjoy cycling in the park.",
-      "They’re very much planning to ride bikes in the park."
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["GOING_TO_PLANS"],
     "ua": "Ви збираєтеся піти на концерт цього вечора?",
     "en": [
       "Are you going to go to the concert this evening?",
@@ -536,7 +498,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["GOING_TO_PLANS", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми збираємося піти в парк, але погода погана.",
     "en": [
       "We’re going to go to the park, but the weather is bad.",
@@ -560,15 +522,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "PERSONAL_PRONOUNS"],
-    "ua": "Вони дуже хочуть подивитися новий фільм.",
-    "en": [
-      "They’re really going to enjoy watching a new movie.",
-      "They’re very much planning to see a new film."
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "COUNT_UNCOUNT"],
+    "rules": ["GOING_TO_PLANS", "COUNT_UNCOUNT"],
     "ua": "Ти збираєшся купити їжу для вечірки?",
     "en": [
       "Are you going to buy food for the party?",
@@ -608,7 +562,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["GOING_TO_PLANS", "ARTICLES"],
     "ua": "Я збираюся купити нову куртку.",
     "en": [
       "I’m going to buy a new jacket.",
@@ -632,15 +586,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Він дуже хоче приготувати смачну страву.",
-    "en": [
-      "He’s really going to enjoy cooking a tasty dish.",
-      "He’s very much planning to prepare a delicious meal."
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "DEMONSTRATIVES"],
+    "rules": ["GOING_TO_PLANS", "DEMONSTRATIVES"],
     "ua": "Ці студенти збираються вчитися в бібліотеці?",
     "en": [
       "Are these students going to study in the library?",
@@ -680,7 +626,7 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "YES_NO_Q", "PREP_PLACE"],
+    "rules": ["GOING_TO_PLANS", "PREP_PLACE"],
     "ua": "Ти збираєшся гуляти в лісі завтра?",
     "en": [
       "Are you going to walk in the forest tomorrow?",
@@ -712,19 +658,11 @@
     ]
   },
   {
-    "rules": ["GOING_TO_PLANS", "WH_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["GOING_TO_PLANS", "WH_Q"],
     "ua": "Що ти збираєшся робити після уроків?",
     "en": [
       "What are you going to do after classes?",
       "What are you planning to do after lessons?"
-    ]
-  },
-  {
-    "rules": ["GOING_TO_PLANS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Він дуже хоче пограти у футбол на полі.",
-    "en": [
-      "He’s really going to enjoy playing football on the field.",
-      "He’s very much planning to play soccer on the pitch."
     ]
   },
   {

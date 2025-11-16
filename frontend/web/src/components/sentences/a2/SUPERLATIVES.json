@@ -30,7 +30,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
+    "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
     "ua": "Чи цей телефон найдорожчий у каталозі?",
     "en": [
       "Is this phone the most expensive in the catalog?",

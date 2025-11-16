@@ -1,841 +1,220 @@
 {
   "SHOULD_SHOULDNT": [
     {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ти повинен перевірити свою роботу до завтра.",
-      "en": [
-        "You should check your work by tomorrow.",
-        "You ought to review your work before tomorrow."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_PLACE"],
-      "ua": "Ми не повинні бути гучними в залі.",
-      "en": [
-        "We shouldn’t be loud in the hall.",
-        "We ought not to be noisy in the venue.",
-        "We should not be loud in the hall."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі учні повинні прочитати цю книгу для заняття.",
-      "en": [
-        "Some students should read this book for the lesson.",
-        "Certain students ought to study this book for the class."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PREP_TIME"],
-      "ua": "Чи повинні ми приїхати на вокзал до вечора?",
-      "en": [
-        "Should we arrive at the station by evening?",
-        "Ought we to get to the station before tonight?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-      "ua": "Ви не повинні бігати в музеї, бо це може пошкодити експонати.",
-      "en": [
-        "You shouldn’t run in the museum because it might damage the exhibits.",
-        "You ought not to run in the museum since it could harm the displays.",
-        "You should not run in the museum because it might damage the exhibits."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "DEMONSTRATIVES", "POSSESSIVE_S"],
-      "ua": "Ця дівчина повинна допомогти братові з домашнім завданням.",
-      "en": [
-        "This girl should help her brother with homework.",
-        "That girl ought to assist her sibling with assignments."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Він не повинен бути пізно на уроці завтра.",
-      "en": [
-        "He shouldn’t be late for class tomorrow.",
-        "He ought not to arrive late to the lesson tomorrow.",
-        "He should not be late for class tomorrow."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинні ми подзвонити їй перед зустріччю?",
-      "en": [
-        "Should we call her before the meeting?",
-        "Ought we to phone her before the meeting?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти повинен бути дуже уважним під час експерименту.",
-      "en": [
-        "You should be very careful during the experiment.",
-        "You ought to be really cautious during the experiment."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-      "ua": "Вона не повинна готувати вечерю сама на кухні.",
-      "en": [
-        "She shouldn’t prepare dinner by herself in the kitchen.",
-        "She ought not to cook dinner on her own in the kitchen.",
-        "She should not prepare dinner by herself in the kitchen."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі гості повинні принести подарунки на свято.",
-      "en": [
-        "Some guests should bring gifts to the celebration.",
-        "Certain guests ought to bring presents to the event."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-      "ua": "Ми повинні почати, коли всі зберуться.",
-      "en": [
-        "We should start when everyone gathers.",
-        "We ought to begin once everyone arrives."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-      "ua": "Він повинен старанно вчити уроки.",
-      "en": [
-        "He should study lessons diligently.",
-        "He ought to learn lessons carefully."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-      "ua": "Вона не повинна кричати, бо це може бути неввічливо.",
-      "en": [
-        "She shouldn’t shout because it might be rude.",
-        "She ought not to yell since it could be impolite.",
-        "She should not shout because it might be rude."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "DEMONSTRATIVES"],
-      "ua": "Ці діти повинні бути вдома до восьмої вечора.",
-      "en": [
-        "These children should be home by eight in the evening.",
-        "Those kids ought to be home before eight p.m."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "COUNT_UNCOUNT"],
-      "ua": "Скільки часу ми повинні витратити на домашнє завдання?",
-      "en": [
-        "How much time should we spend on homework?",
-        "How long ought we to spend on assignments?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже шумними в бібліотеці.",
-      "en": [
-        "You shouldn’t be too noisy in the library.",
-        "You ought not to be overly loud in the library.",
-        "You should not be too noisy in the library."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинні ми допомогти йому з проєктом?",
-      "en": [
-        "Should we help him with the project?",
-        "Ought we to assist him with the project?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ARTICLES", "POSSESSIVE_S"],
-      "ua": "Я повинен полагодити мамин годинник.",
-      "en": [
-        "I should fix my mom’s watch.",
-        "I ought to repair my mother’s watch."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні запізнюватися на вечірку завтра.",
-      "en": [
-        "They shouldn’t be late for the party tomorrow.",
-        "They ought not to arrive late to the party tomorrow.",
-        "They should not be late for the party tomorrow."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі учні не повинні бігати в класі.",
-      "en": [
-        "Some students shouldn’t run in the classroom.",
-        "Certain students ought not to run in the class.",
-        "Some students should not run in the classroom."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-      "ua": "Він повинен акуратно написати звіт, щоб він був зрозумілим.",
-      "en": [
-        "He should write the report neatly so it’s clear.",
-        "He ought to write the report carefully to make it understandable."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-      "ua": "Ми повинні поспішити, бо поїзд скоро відправиться.",
-      "en": [
-        "We should hurry because the train will leave soon.",
-        "We ought to rush since the train is departing soon."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "DEMONSTRATIVES", "PREP_TIME"],
-      "ua": "Ті гості повинні прийти до обіду до полудня.",
-      "en": [
-        "Those guests should come to lunch by noon.",
-        "Those guests ought to arrive for lunch before noon."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "PREP_PLACE"],
-      "ua": "Куди ми повинні піти після концерту?",
-      "en": [
-        "Where should we go after the concert?",
-        "Where ought we to go after the concert?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти не повинен бути дуже поспішним під час тесту.",
-      "en": [
-        "You shouldn’t be too hasty during the test.",
-        "You ought not to be overly rushed during the exam.",
-        "You should not be too hasty during the test."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Вона повинна подзвонити другу до вечора.",
-      "en": [
-        "She should call her friend by evening.",
-        "She ought to phone her friend before tonight."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "COUNT_UNCOUNT"],
-      "ua": "Чи повинні ми купити багато фруктів для пікніка?",
-      "en": [
-        "Should we buy a lot of fruit for the picnic?",
-        "Ought we to purchase many fruits for the picnic?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "SIMPLE_ADJ"],
-      "ua": "Він повинен бути в школі вчасно, щоб не пропустити урок.",
-      "en": [
-        "He should be at school on time to not miss the lesson.",
-        "He ought to arrive at school promptly to avoid missing the class."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-      "ua": "Ці учні не повинні забувати свої книги.",
-      "en": [
-        "These students shouldn’t forget their books.",
-        "Those students ought not to leave their books behind.",
-        "These students should not forget their books."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Вона не повинна запізнюватися, бо тренування почнеться вчасно.",
-      "en": [
-        "She shouldn’t be late because the training will start on time.",
-        "She ought not to arrive late since the practice will begin promptly.",
-        "She should not be late because the training will start on time."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-      "ua": "Вони повинні тихо поводитися в театрі.",
-      "en": [
-        "They should behave quietly in the theater.",
-        "They ought to act silently in the theater."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "ARTICLES"],
-      "ua": "Я не повинен забути купити нову сумку.",
-      "en": [
-        "I shouldn’t forget to buy a new bag.",
-        "I ought not to forget to purchase a new bag.",
-        "I should not forget to buy a new bag."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Ми повинні бути обережними завтра на пікніку.",
-      "en": [
-        "We should be careful tomorrow at the picnic.",
-        "We ought to be cautious tomorrow during the picnic."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "SIMPLE_ADJ"],
-      "ua": "Чому ми повинні бути тихими в бібліотеці?",
-      "en": [
-        "Why should we be quiet in the library?",
-        "Why ought we to be silent in the library?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "COUNT_UNCOUNT"],
-      "ua": "Він повинен купити багато їжі для вечірки.",
-      "en": [
-        "He should buy a lot of food for the party.",
-        "He ought to purchase many groceries for the party."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "DEMONSTRATIVES"],
-      "ua": "Чи повинні ці гості залишитися на обід?",
-      "en": [
-        "Should these guests stay for lunch?",
-        "Ought these guests to stay for lunch?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "POSSESSIVE_S"],
-      "ua": "Він не повинен забути сестрину книгу до завтра.",
-      "en": [
-        "He shouldn’t forget his sister’s book by tomorrow.",
-        "He ought not to forget his sibling’s book before tomorrow.",
-        "He should not forget his sister’s book by tomorrow."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі діти повинні грати на майданчику.",
-      "en": [
-        "Some children should play on the playground.",
-        "Certain kids ought to play at the playground."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-      "ua": "Він не повинен поспішно малювати, бо це може бути неакуратно.",
-      "en": [
-        "He shouldn’t draw hastily because it might be messy.",
-        "He ought not to draw quickly since it could be untidy.",
-        "He should not draw hastily because it might be messy."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ми повинні приїхати на зупинку до п’ятої вечора.",
-      "en": [
-        "We should arrive at the stop by five in the evening.",
-        "We ought to get to the stop before five p.m."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "ARTICLES"],
-      "ua": "Я не повинен забути взяти квиток до вечора.",
-      "en": [
-        "I shouldn’t forget to take a ticket by evening.",
-        "I ought not to forget to bring a ticket before tonight.",
-        "I should not forget to take a ticket by evening."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PREP_PLACE"],
-      "ua": "Чи повинні ми залишатися в залі після вистави?",
-      "en": [
-        "Should we stay in the hall after the performance?",
-        "Ought we to remain in the venue after the show?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-      "ua": "Деякі вчителі не повинні бути суворими з учнями.",
-      "en": [
-        "Some teachers shouldn’t be strict with students.",
-        "Certain teachers ought not to be harsh with pupils.",
-        "Some teachers should not be strict with students."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-      "ua": "Цей учень повинен старанно працювати над проєктом.",
-      "en": [
-        "This student should work diligently on the project.",
-        "That student ought to work hard on the project."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Вона повинна поспішити, бо урок скоро почнеться.",
-      "en": [
-        "She should hurry because the lesson will start soon.",
-        "She ought to rush since the class will begin shortly."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Що ми повинні зробити для підготовки до свята?",
-      "en": [
-        "What should we do to prepare for the celebration?",
-        "What ought we to do to get ready for the event?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже шумними в театрі.",
-      "en": [
-        "You shouldn’t be too noisy in the theater.",
-        "You ought not to be overly loud in the theater.",
-        "You should not be too noisy in the theater."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "ARTICLES"],
-      "ua": "Я повинен купити нову книгу для уроку.",
-      "en": [
-        "I should buy a new book for the lesson.",
-        "I ought to purchase a new book for the class."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні запізнюватися на тренування завтра.",
-      "en": [
-        "They shouldn’t be late for training tomorrow.",
-        "They ought not to arrive late to practice tomorrow.",
-        "They should not be late for training tomorrow."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ти повинен відпочити перед іспитом.",
-      "en": [
-        "You should rest before the exam.",
-        "You ought to relax before the test."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_PLACE"],
-      "ua": "Ми не повинні бути неуважними в класі.",
-      "en": [
-        "We shouldn’t be inattentive in class.",
-        "We ought not to be distracted in the classroom.",
-        "We should not be inattentive in class."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі студенти повинні прочитати цю статтю для уроку.",
-      "en": [
-        "Some students should read this article for the lesson.",
-        "Certain students ought to study this article for the class."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PREP_TIME"],
-      "ua": "Чи повинні ми підготуватися до презентації завтра?",
-      "en": [
-        "Should we prepare for the presentation tomorrow?",
-        "Ought we to get ready for the presentation tomorrow?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-      "ua": "Ви не повинні розмовляти в бібліотеці, бо це заважає іншим.",
-      "en": [
-        "You shouldn’t talk in the library because it disturbs others.",
-        "You ought not to speak in the library since it bothers others.",
-        "You should not talk in the library because it disturbs others."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "DEMONSTRATIVES", "POSSESSIVE_S"],
-      "ua": "Цей хлопець повинен допомогти маминому другу з ремонтом.",
-      "en": [
-        "This boy should help his mom’s friend with the repair.",
-        "That boy ought to assist his mother’s friend with the fix."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вона не повинна запізнюватися, бо зустріч почнеться вчасно.",
-      "en": [
-        "She shouldn’t be late because the meeting will start on time.",
-        "She ought not to arrive late since the meeting will begin promptly.",
-        "She should not be late because the meeting will start on time."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинні ми запросити його на вечірку?",
-      "en": [
-        "Should we invite him to the party?",
-        "Ought we to ask him to the party?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти повинен бути дуже обережним під час походу.",
-      "en": [
-        "You should be very careful during the hike.",
-        "You ought to be really cautious during the trip."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-      "ua": "Він не повинен готуватися до іспиту сам у бібліотеці.",
-      "en": [
-        "He shouldn’t prepare for the exam by himself in the library.",
-        "He ought not to study for the test on his own in the library.",
-        "He should not prepare for the exam by himself in the library."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі гості повинні принести їжу на пікнік.",
-      "en": [
-        "Some guests should bring food to the picnic.",
-        "Certain guests ought to bring food for the picnic."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-      "ua": "Ми повинні піти, коли закінчиться дощ.",
-      "en": [
-        "We should leave when the rain stops.",
-        "We ought to go out once the rain ends."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-      "ua": "Вона повинна уважно перечитати свій твір.",
-      "en": [
-        "She should carefully reread her essay.",
-        "She ought to attentively review her composition."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-      "ua": "Він не повинен поспішити, бо це може бути небезпечно.",
-      "en": [
-        "He shouldn’t hurry because it might be dangerous.",
-        "He ought not to rush since it could be risky.",
-        "He should not hurry because it might be dangerous."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "DEMONSTRATIVES"],
-      "ua": "Ці діти повинні закінчити уроки до вечора.",
-      "en": [
-        "These children should finish their lessons by evening.",
-        "Those kids ought to complete their homework before tonight."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "COUNT_UNCOUNT"],
-      "ua": "Скільки часу ми повинні витратити на підготовку?",
-      "en": [
-        "How much time should we spend on preparation?",
-        "How long ought we to spend preparing?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже гучними на концерті.",
-      "en": [
-        "You shouldn’t be too loud at the concert.",
-        "You ought not to be overly noisy at the concert.",
-        "You should not be too loud at the concert."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинна вона подзвонити вчителю сьогодні?",
-      "en": [
-        "Should she call the teacher today?",
-        "Ought she to phone the teacher today?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ARTICLES", "POSSESSIVE_S"],
-      "ua": "Я повинен допомогти татовому другу з машиною.",
-      "en": [
-        "I should help my dad’s friend with the car.",
-        "I ought to assist my father’s friend with the vehicle."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні запізнюватися на тренування завтра.",
-      "en": [
-        "They shouldn’t be late for training tomorrow.",
-        "They ought not to arrive late to practice tomorrow.",
-        "They should not be late for training tomorrow."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі учні не повинні розмовляти в коридорі.",
-      "en": [
-        "Some students shouldn’t talk in the corridor.",
-        "Certain students ought not to speak in the hallway.",
-        "Some students should not talk in the corridor."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-      "ua": "Вона повинна акуратно написати записку, щоб вона була зрозумілою.",
-      "en": [
-        "She should write the note neatly so it’s clear.",
-        "She ought to write the note carefully to make it understandable."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-      "ua": "Ми повинні поспішити, бо автобус скоро відправиться.",
-      "en": [
-        "We should hurry because the bus will leave soon.",
-        "We ought to rush since the bus is departing soon."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "DEMONSTRATIVES", "PREP_TIME"],
-      "ua": "Ті гості не повинні запізнюватися на вечерю.",
-      "en": [
-        "Those guests shouldn’t be late for dinner.",
-        "Those guests ought not to arrive late to dinner.",
-        "Those guests should not be late for dinner."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "PREP_PLACE"],
-      "ua": "Куди ми повинні піти після уроків?",
-      "en": [
-        "Where should we go after lessons?",
-        "Where ought we to go after classes?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти не повинен бути дуже поспішним під час презентації.",
-      "en": [
-        "You shouldn’t be too hasty during the presentation.",
-        "You ought not to be overly rushed during the presentation.",
-        "You should not be too hasty during the presentation."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Він повинен повернутися додому до сьомої вечора.",
-      "en": [
-        "He should return home by seven in the evening.",
-        "He ought to get home before seven p.m."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "COUNT_UNCOUNT"],
-      "ua": "Чи повинні ми купити багато фруктів для пікніка?",
-      "en": [
-        "Should we buy a lot of fruit for the picnic?",
-        "Ought we to purchase many fruits for the picnic?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "SIMPLE_ADJ"],
-      "ua": "Вона повинна бути в офісі вчасно, щоб не виглядати непрофесійно.",
-      "en": [
-        "She should be at the office on time to not look unprofessional.",
-        "She ought to arrive at the office promptly to avoid seeming unprofessional."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-      "ua": "Ці учні не повинні забувати свої зошити.",
-      "en": [
-        "These students shouldn’t forget their notebooks.",
-        "Those students ought not to leave their notebooks behind.",
-        "These students should not forget their notebooks."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Він не повинен запізнюватися, бо концерт почнеться вчасно.",
-      "en": [
-        "He shouldn’t be late because the concert will start on time.",
-        "He ought not to arrive late since the concert will begin promptly.",
-        "He should not be late because the concert will start on time."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-      "ua": "Вони повинні тихо поводитися в музеї.",
-      "en": [
-        "They should behave quietly in the museum.",
-        "They ought to act silently in the museum."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "ARTICLES"],
-      "ua": "Я не повинен забути купити нову ручку.",
-      "en": [
-        "I shouldn’t forget to buy a new pen.",
-        "I ought not to forget to purchase a new pen.",
-        "I should not forget to buy a new pen."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Ми повинні бути обережними завтра на екскурсії.",
-      "en": [
-        "We should be careful tomorrow on the excursion.",
-        "We ought to be cautious tomorrow during the trip."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "SIMPLE_ADJ"],
-      "ua": "Чому ми повинні бути ввічливими на уроці?",
-      "en": [
-        "Why should we be polite in class?",
-        "Why ought we to be courteous in the lesson?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "COUNT_UNCOUNT"],
-      "ua": "Вона повинна купити багато продуктів для вечірки.",
-      "en": [
-        "She should buy a lot of groceries for the party.",
-        "She ought to purchase many groceries for the party."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "DEMONSTRATIVES"],
-      "ua": "Чи повинні ці гості залишитися на обід?",
-      "en": [
-        "Should these guests stay for lunch?",
-        "Ought these guests to stay for lunch?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "POSSESSIVE_S"],
-      "ua": "Він не повинен забути сестрину книгу до завтра.",
-      "en": [
-        "He shouldn’t forget his sister’s book by tomorrow.",
-        "He ought not to forget his sibling’s book before tomorrow.",
-        "He should not forget his sister’s book by tomorrow."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі діти повинні грати на майданчику.",
-      "en": [
-        "Some children should play on the playground.",
-        "Certain kids ought to play at the playground."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-      "ua": "Вона не повинна поспішно відповідати, бо це може бути неправильно.",
-      "en": [
-        "She shouldn’t answer hastily because it might be wrong.",
-        "She ought not to reply quickly since it could be incorrect.",
-        "She should not answer hastily because it might be wrong."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ми повинні приїхати на вокзал до шостої вечора.",
-      "en": [
-        "We should arrive at the station by six in the evening.",
-        "We ought to get to the station before six p.m."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_TIME", "ARTICLES"],
-      "ua": "Я не повинен забути взяти квиток до вечора.",
-      "en": [
-        "I shouldn’t forget to take a ticket by evening.",
-        "I ought not to forget to bring a ticket before tonight.",
-        "I should not forget to take a ticket by evening."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "YES_NO_Q", "PREP_PLACE"],
-      "ua": "Чи повинні ми залишатися в залі після вистави?",
-      "en": [
-        "Should we stay in the hall after the performance?",
-        "Ought we to remain in the venue after the show?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-      "ua": "Деякі вчителі не повинні бути суворими з учнями.",
-      "en": [
-        "Some teachers shouldn’t be strict with students.",
-        "Certain teachers ought not to be harsh with pupils.",
-        "Some teachers should not be strict with students."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-      "ua": "Цей учень повинен старанно працювати над проєктом.",
-      "en": [
-        "This student should work diligently on the project.",
-        "That student ought to work hard on the project."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Вона повинна поспішити, бо урок скоро почнеться.",
-      "en": [
-        "She should hurry because the lesson will start soon.",
-        "She ought to rush since the class will begin shortly."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "WH_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Що ми повинні зробити для підготовки до свята?",
-      "en": [
-        "What should we do to prepare for the celebration?",
-        "What ought we to do to get ready for the event?"
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже шумними в театрі.",
-      "en": [
-        "You shouldn’t be too noisy in the theater.",
-        "You ought not to be overly loud in the theater.",
-        "You should not be too noisy in the theater."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "ARTICLES"],
-      "ua": "Я повинен купити нову книгу для уроку.",
-      "en": [
-        "I should buy a new book for the lesson.",
-        "I ought to purchase a new book for the class."
-      ]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні запізнюватися на виставку завтра.",
-      "en": [
-        "They shouldn’t be late for the exhibition tomorrow.",
-        "They ought not to arrive late to the show tomorrow.",
-        "They should not be late for the exhibition tomorrow."
-      ]
+      "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
+      "ua": "Тобі варто купити місцеву SIM-карту, коли приїдеш у нову країну. (use SHOULD)",
+      "en": ["You should buy a local SIM card when you arrive in your new country."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH"],
+      "ua": "Тобі не варто пити воду з-під крана, якщо в новому місті вона небезпечна. (use SHOULDN'T)",
+      "en": ["You shouldn't drink tap water if it's not safe in the new city."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі не слід залишати паспорт удома, коли виходиш. (use SHOULDN'T)",
+      "en": ["You shouldn't leave your passport at home when you go out."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто їздити автобусом, щоб економити на транспорті. (use SHOULD)",
+      "en": ["You should take the bus to save money on transport."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі не можна викидати сміття на вулицю — користуйся урнами. (use SHOULDN'T)",
+      "en": ["You shouldn't throw trash on the street - use bins."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі варто купувати продукти на місцевих ринках, щоб мати свіже харчування. (use SHOULD)",
+      "en": ["You should shop at local markets for fresh food."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Ти не повинен забувати зачиняти двері, коли виходиш. (use SHOULDN'T)",
+      "en": ["You shouldn't forget to lock your door when you leave."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "TOO_VERY"],
+      "ua": "Тобі варто носити теплий одяг узимку тут. (use SHOULD)",
+      "en": ["You should wear warm clothes in winter here."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі не слід голосно говорити по телефону в публічних місцях. (use SHOULDN'T)",
+      "en": ["You shouldn't speak loudly on the phone in public."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PRESENT_SIMPLE_FREQ"],
+      "ua": "Тобі варто сортувати папір і пластик щотижня. (use SHOULD)",
+      "en": ["You should recycle paper and plastic every week."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі не можна переходити дорогу, коли світить червоне. (use SHOULDN'T)",
+      "en": ["You shouldn't cross the street when the light is red."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто брати парасольку. (use SHOULD)",
+      "en": ["You should bring an umbrella."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід залишати їжу відкритою. (use SHOULDN'T)",
+      "en": ["You shouldn't leave food out."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
+      "ua": "Тобі варто телефонувати родичам щовихідних. (use SHOULD)",
+      "en": ["You should call your relatives every weekend."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі варто гуляти в парку, щоб розслабитися після роботи. (use SHOULD)",
+      "en": ["You should walk in the park to relax after work."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід годувати птахів хлібом, це для них шкідливо. (use SHOULDN'T)",
+      "en": ["You shouldn't feed birds bread, it's bad for them."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто сплачувати рахунки вчасно, щоб уникнути штрафів. (use SHOULD)",
+      "en": ["You should pay bills on time to avoid fines."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "COUNT_UNCOUNT"],
+      "ua": "Тобі варто мити фрукти перед тим, як їх їсти. (use SHOULD)",
+      "en": ["You should wash fruits before you eat them."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі варто зачиняти вікна, коли стає холодно. (use SHOULD)",
+      "en": ["You should close windows when it gets cold."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
+      "ua": "Тобі не можна вмикати гучну музику після 22:00. (use SHOULDN'T)",
+      "en": ["You shouldn't play loud music after 10 PM."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто знімати взуття в будинку. (use SHOULD)",
+      "en": ["You should take shoes off inside the house."]
+    },
+
+    {
+      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Тобі не варто марнувати воду. (use SHOULDN'T)",
+      "en": ["You shouldn't waste water."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід залишати плиту ввімкненою без нагляду. (use SHOULDN'T)",
+      "en": ["You shouldn't leave the stove on alone."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто заряджати телефон щовечора. (use SHOULD)",
+      "en": ["You should charge your phone every night."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі не можна їсти в автобусі. (use SHOULDN'T)",
+      "en": ["You shouldn't eat on the bus."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід забувати ключі в дверях. (use SHOULDN'T)",
+      "en": ["You shouldn't forget your keys in the door."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто пити чай, якщо ти застудився. (use SHOULD)",
+      "en": ["You should drink tea if you have a cold."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі не можна паркуватися не в тому місці. (use SHOULDN'T)",
+      "en": ["You shouldn't park in the wrong spot."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто прибирати кухню після приготування їжі. (use SHOULD)",
+      "en": ["You should clean the kitchen after cooking."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід відчиняти двері незнайомцям. (use SHOULDN'T)",
+      "en": ["You shouldn't open the door to strangers."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто купувати свіжий хліб щоранку. (use SHOULD)",
+      "en": ["You should buy bread fresh every morning."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "COUNT_UNCOUNT"],
+      "ua": "Тобі не варто використовувати гарячу воду для всього прання. (use SHOULDN'T)",
+      "en": ["You shouldn't use hot water for all laundry."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі варто вимикати світло, коли виходиш із кімнати. (use SHOULD)",
+      "en": ["You should turn off lights when you leave a room."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід тримати стару їжу в холодильнику. (use SHOULDN'T)",
+      "en": ["You shouldn't keep old food in the fridge."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі варто ходити тротуаром, а не дорогою. (use SHOULD)",
+      "en": ["You should walk on the sidewalk, not the road."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
+      "ua": "Тобі не можна розмовляти під час фільму в кінотеатрі. (use SHOULDN'T)",
+      "en": ["You shouldn't talk during movies at the cinema."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PRESENT_SIMPLE_FREQ"],
+      "ua": "Тобі варто поливати рослини двічі на тиждень. (use SHOULD)",
+      "en": ["You should water plants twice a week."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід залишати мокрий одяг у кімнаті. (use SHOULDN'T)",
+      "en": ["You shouldn't leave wet clothes inside."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто перевіряти пошту щодня. (use SHOULD)",
+      "en": ["You should check the mail every day."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід бігати коридором. (use SHOULDN'T)",
+      "en": ["You shouldn't run in the hallway."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі варто користуватися кошиком, коли робиш покупки. (use SHOULD)",
+      "en": ["You should use a basket when shopping."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
+      "ua": "Тобі варто лягати спати рано, щоб добре почуватися. (use SHOULD)",
+      "en": ["You should sleep early to feel good."]
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід нікому говорити свій PIN-код. (use SHOULDN'T)",
+      "en": ["You shouldn't share your PIN with anyone."]
     }
   ]
 }

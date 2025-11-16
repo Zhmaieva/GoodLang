@@ -1,7 +1,7 @@
 { "BE_GOING_TO_VS_WILL": [
   {
     "rules": ["BE_GOING_TO_VS_WILL", "GOING_TO_PLANS", "BECAUSE_SO_BUT_ALTHOUGH", "WILL_PREDICTIONS"],
-    "ua": "Я збираюся піти в кіно, але, думаю, завтра буде дощ.",
+    "ua": "Я збираюся піти в кіно, але думаю, що завтра буде дощ.",
     "en": [
       "I’m going to go to the cinema, but I think it will rain tomorrow.",
       "I’m planning to go to the movies, but I believe it will be rainy tomorrow."
@@ -11,16 +11,16 @@
     "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES", "PREP_PLACE"],
     "ua": "Вона збирається купити нову книгу в магазині, але думає, що ціни будуть високими.",
     "en": [
-      "She’s going to buy a new book in the shop, but she thinks prices will be high.",
-      "She’s planning to purchase a new book at the store, but she believes costs will be steep."
+      "She’s going to buy a new book in the shop, but she thinks the prices will be high.",
+      "She’s planning to purchase a new book at the store, but she believes the costs will be steep."
     ]
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
     "ua": "Деякі студенти збираються вчити уроки, але я думаю, що іспит буде складним.",
     "en": [
-      "Some students are going to study lessons, but I think the exam will be difficult.",
-      "Certain students are planning to review lessons, but I believe the test will be tough."
+      "Some students are going to study their lessons, but I think the exam will be difficult.",
+      "Certain students are planning to review their lessons, but I believe the test will be tough."
     ]
   },
   {
@@ -28,14 +28,14 @@
     "ua": "Коли ти збираєшся закінчити проєкт, і коли, на твою думку, він буде готовий?",
     "en": [
       "When are you going to finish the project, and when do you think it will be ready?",
-      "When are you planning to complete the project, and when will it be done, in your opinion?"
+      "When are you planning to complete the project, and when do you think it will be done?"
     ]
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-    "ua": "Ми збираємося пікнік у парку, але, думаю, там буде людно.",
+    "ua": "Ми збираємося на пікнік у парку, але думаю, що там буде людно.",
     "en": [
-      "We’re going to have a picnic in the park, but I think it will be crowded.",
+      "We’re going to have a picnic in the park, but I think it will be crowded there.",
       "We’re planning a picnic in the park, but I believe it will be busy there."
     ]
   },
@@ -56,16 +56,16 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "PREP_TIME"],
+    "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
     "ua": "Ти збираєшся відвідати концерт, але чи думаєш, що він буде цікавим?",
     "en": [
-      "Are you going to attend the concert, but do you think it will be interesting?",
-      "Are you planning to go to the concert, but do you believe it will be exciting?"
+      "Are you going to attend the concert, and do you think it will be interesting?",
+      "Are you planning to go to the concert, and do you believe it will be exciting?"
     ]
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Я збираюся купити квитки, і впевнений, що концерт буде дуже веселим.",
+    "ua": "Я збираюся купити квитки і впевнений, що концерт буде дуже веселим.",
     "en": [
       "I’m going to buy tickets, and I’m sure the concert will be very fun.",
       "I’m planning to get tickets, and I believe the concert will be really enjoyable."
@@ -83,8 +83,8 @@
     "rules": ["BE_GOING_TO_VS_WILL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
     "ua": "Деякі друзі збираються відвідати новий музей, але думають, що там буде людно.",
     "en": [
-      "Some friends are going to visit a new museum, but they think it will be crowded.",
-      "Certain friends are planning to see a new museum, but they believe it will be busy."
+      "Some friends are going to visit the new museum, but they think it will be crowded.",
+      "Certain friends are planning to see the new museum, but they believe it will be busy."
     ]
   },
   {
@@ -96,11 +96,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "ADVERBS_OF_MANNER"],
     "ua": "Вона збирається старанно вчитися, але думає, що швидко здасть іспит.",
     "en": [
       "She’s going to study diligently, but she thinks she will pass the exam quickly.",
-      "She’s planning to learn carefully, but she believes she will pass the test fast."
+      "She’s planning to study carefully, but she believes she will pass the test fast."
     ]
   },
   {
@@ -124,7 +124,7 @@
     "ua": "Що ти збираєшся купити, і що, на твою думку, буде популярним?",
     "en": [
       "What are you going to buy, and what do you think will be popular?",
-      "What are you planning to purchase, and what will be trendy, in your opinion?"
+      "What are you planning to purchase, and what do you think will be trendy?"
     ]
   },
   {
@@ -136,11 +136,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["BE_GOING_TO_VS_WILL"],
     "ua": "Ти збираєшся піти в театр, але чи думаєш, що вистава буде цікавою?",
     "en": [
-      "Are you going to go to the theater, but do you think the play will be interesting?",
-      "Are you planning to visit the theater, but do you believe the performance will be engaging?"
+      "Are you going to go to the theater, and do you think the play will be interesting?",
+      "Are you planning to visit the theater, and do you believe the performance will be engaging?"
     ]
   },
   {
@@ -171,21 +171,21 @@
     "rules": ["BE_GOING_TO_VS_WILL", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
     "ua": "Він збирається повільно писати статтю, але думає, що вона буде цікавою.",
     "en": [
-      "He’s going to write an article slowly, but he thinks it will be interesting.",
-      "He’s planning to write a paper gradually, but he believes it will be engaging."
+      "He’s going to write the article slowly, but he thinks it will be interesting.",
+      "He’s planning to write the paper gradually, but he believes it will be engaging."
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми збираємося поїхати в гори, але думаємо, що там буде холодно.",
     "en": [
       "We’re going to go to the mountains, but we think it will be cold.",
-      "We’re planning to travel to the hills, but we believe it will be chilly."
+      "We’re planning to travel to the mountains, but we believe it will be chilly."
     ]
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ті діти збираються грати завтра, але думають, що дощ буде.",
+    "ua": "Ті діти збираються грати завтра, але думають, що буде дощ.",
     "en": [
       "Those children are going to play tomorrow, but they think it will rain.",
       "Those kids are planning to play tomorrow, but they believe it will be rainy."
@@ -196,7 +196,7 @@
     "ua": "Куди ти збираєшся поїхати, і де, на твою думку, буде цікаво?",
     "en": [
       "Where are you going to travel, and where do you think it will be interesting?",
-      "Where are you planning to go, and where will it be exciting, in your opinion?"
+      "Where are you planning to go, and where do you believe it will be exciting?"
     ]
   },
   {
@@ -208,7 +208,7 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
     "ua": "Ми збираємося відвідати музей, але думаємо, що він буде закритий у понеділок.",
     "en": [
       "We’re going to visit the museum, but we think it will be closed on Monday.",
@@ -216,11 +216,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "COUNT_UNCOUNT"],
+    "rules": ["BE_GOING_TO_VS_WILL", "COUNT_UNCOUNT"],
     "ua": "Ти збираєшся готувати їжу, але чи думаєш, що буде багато гостей?",
     "en": [
-      "Are you going to cook food, but do you think there will be many guests?",
-      "Are you planning to prepare food, but do you believe there will be a lot of guests?"
+      "Are you going to cook food, and do you think there will be many guests?",
+      "Are you planning to prepare food, and do you believe there will be a lot of guests?"
     ]
   },
   {
@@ -228,7 +228,7 @@
     "ua": "Вона збирається піти на ярмарок завтра, але думає, що він буде людним.",
     "en": [
       "She’s going to go to the fair tomorrow, but she thinks it will be crowded.",
-      "She’s planning to visit the market tomorrow, but she believes it will be busy."
+      "She’s planning to visit the fair tomorrow, but she believes it will be busy."
     ]
   },
   {
@@ -236,7 +236,7 @@
     "ua": "Ці студенти збираються вчитися, але думають, що буде багато завдань.",
     "en": [
       "These students are going to study, but they think there will be many tasks.",
-      "Those students are planning to learn, but they believe there will be a lot of assignments."
+      "Those students are planning to study, but they believe there will be a lot of assignments."
     ]
   },
   {
@@ -251,12 +251,12 @@
     "rules": ["BE_GOING_TO_VS_WILL", "ADVERBS_OF_MANNER", "PREP_PLACE"],
     "ua": "Вона збирається старанно готувати презентацію в офісі, але думає, що вона швидко закінчиться.",
     "en": [
-      "She’s going to prepare a presentation diligently in the office, but she thinks it will end quickly.",
-      "She’s planning to work on a presentation carefully at the office, but she believes it will finish fast."
+      "She’s going to prepare the presentation diligently in the office, but she thinks it will end quickly.",
+      "She’s planning to work on the presentation carefully at the office, but she believes it will finish fast."
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES"],
     "ua": "Я збираюся купити нову куртку, але думаю, що вона буде дорогою.",
     "en": [
       "I’m going to buy a new jacket, but I think it will be expensive.",
@@ -268,7 +268,7 @@
     "ua": "Вони не збираються їхати у відпустку, бо думають, що не буде тепло.",
     "en": [
       "They’re not going to go on vacation because they think it won’t be warm.",
-      "They’re not planning to take a holiday since they believe it won’t be hot."
+      "They’re not planning to take a holiday since they believe it won’t be warm."
     ]
   },
   {
@@ -276,7 +276,7 @@
     "ua": "Чому ти збираєшся купити телефон, і чому, на твою думку, він буде дорогим?",
     "en": [
       "Why are you going to buy a phone, and why do you think it will be expensive?",
-      "Why are you planning to purchase a phone, and why will it be costly, in your opinion?"
+      "Why are you planning to purchase a phone, and why do you believe it will be costly?"
     ]
   },
   {
@@ -288,11 +288,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "DEMONSTRATIVES"],
+    "rules": ["BE_GOING_TO_VS_WILL", "DEMONSTRATIVES"],
     "ua": "Ці люди збираються піти на концерт, але чи думаєш, що він буде гучним?",
     "en": [
-      "These people are going to go to the concert, but do you think it will be loud?",
-      "Those people are planning to attend the concert, but do you believe it will be noisy?"
+      "These people are going to go to the concert, and do you think it will be loud?",
+      "Those people are planning to attend the concert, and do you believe it will be noisy?"
     ]
   },
   {
@@ -320,7 +320,7 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
     "ua": "Ми збираємося відвідати ярмарок, але думаємо, що він буде переповненим у суботу.",
     "en": [
       "We’re going to visit the fair, but we think it will be crowded on Saturday.",
@@ -336,11 +336,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "PREP_PLACE"],
+    "rules": ["BE_GOING_TO_VS_WILL", "PREP_PLACE"],
     "ua": "Ти збираєшся гуляти в лісі, але чи думаєш, що там буде тихо?",
     "en": [
-      "Are you going to walk in the forest, but do you think it will be quiet?",
-      "Are you planning to stroll in the woods, but do you believe it will be peaceful?"
+      "Are you going to walk in the forest, and do you think it will be quiet?",
+      "Are you planning to stroll in the woods, and do you believe it will be peaceful?"
     ]
   },
   {
@@ -356,7 +356,7 @@
     "ua": "Цей чоловік збирається швидко закінчити роботу, але думає, що вона буде важкою.",
     "en": [
       "This man is going to quickly finish the work, but he thinks it will be hard.",
-      "That man is planning to fast complete the task, but he believes it will be tough."
+      "That man is planning to complete the task quickly, but he believes it will be tough."
     ]
   },
   {
@@ -368,7 +368,7 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "WH_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "WH_Q"],
     "ua": "Що ти збираєшся робити, і що, на твою думку, буде цікавим?",
     "en": [
       "What are you going to do, and what do you think will be interesting?",
@@ -396,7 +396,7 @@
     "ua": "Вона збирається поїхати в село, але думає, що там не буде тепло.",
     "en": [
       "She’s going to go to the village, but she thinks it won’t be warm.",
-      "She’s planning to visit the countryside, but she believes it won’t be hot."
+      "She’s planning to visit the countryside, but she believes it won’t be warm."
     ]
   },
   {
@@ -452,15 +452,15 @@
     "ua": "Вона не збирається гуляти в парку, бо думає, що завтра не буде сонячно.",
     "en": [
       "She’s not going to walk in the park because she thinks it won’t be sunny tomorrow.",
-      "She’s not planning to stroll in the park since she believes tomorrow won’t be bright."
+      "She’s not planning to stroll in the park since she believes it won’t be sunny tomorrow."
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "WILL_PREDICTIONS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "WILL_PREDICTIONS"],
     "ua": "Ти збираєшся піти на фестиваль, але чи думаєш, що він буде веселим?",
     "en": [
-      "Are you going to go to the festival, but do you think it will be fun?",
-      "Are you planning to attend the festival, but do you believe it will be enjoyable?"
+      "Are you going to go to the festival, and do you think it will be fun?",
+      "Are you planning to attend the festival, and do you believe it will be enjoyable?"
     ]
   },
   {
@@ -476,31 +476,31 @@
     "ua": "Він збирається готуватися до презентації сам у класі, але думає, що це буде складно.",
     "en": [
       "He’s going to prepare for the presentation by himself in the classroom, but he thinks it will be difficult.",
-      "He’s planning to study for the presentation on his own in the class, but he believes it will be tough."
+      "He’s planning to study for the presentation on his own in the classroom, but he believes it will be tough."
     ]
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
     "ua": "Деякі туристи збираються відвідати новий замок, але думають, що він буде переповнений.",
     "en": [
-      "Some tourists are going to visit a new castle, but they think it will be crowded.",
-      "Certain tourists are planning to see a new castle, but they believe it will be busy."
+      "Some tourists are going to visit the new castle, but they think it will be crowded.",
+      "Certain tourists are planning to see the new castle, but they believe it will be busy."
     ]
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
     "ua": "Я збираюся піти в похід, коли закінчу уроки, але думаю, що погода буде поганою.",
     "en": [
-      "I’m going to go hiking when I finish lessons, but I think the weather will be bad.",
-      "I’m planning to hike once I complete my lessons, but I believe the weather will be poor."
+      "I’m going to go hiking when I finish my lessons, but I think the weather will be bad.",
+      "I’m planning to hike once I finish my classes, but I believe the weather will be poor."
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "ADVERBS_OF_MANNER"],
     "ua": "Вона збирається уважно читати книгу, але думає, що швидко її закінчить.",
     "en": [
-      "She’s going to read a book carefully, but she thinks she will finish it quickly.",
-      "She’s planning to read a book attentively, but she believes she will complete it fast."
+      "She’s going to read the book carefully, but she thinks she will finish it quickly.",
+      "She’s planning to read the book attentively, but she believes she will complete it fast."
     ]
   },
   {
@@ -536,11 +536,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "WILL_PREDICTIONS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "WILL_PREDICTIONS"],
     "ua": "Ти збираєшся піти в бібліотеку, але чи думаєш, що там буде тихо?",
     "en": [
-      "Are you going to go to the library, but do you think it will be quiet?",
-      "Are you planning to visit the library, but do you believe it will be peaceful?"
+      "Are you going to go to the library, and do you think it will be quiet?",
+      "Are you planning to visit the library, and do you believe it will be peaceful?"
     ]
   },
   {
@@ -572,11 +572,11 @@
     "ua": "Він збирається повільно малювати картину, але думає, що вона буде красивою.",
     "en": [
       "He’s going to paint a picture slowly, but he thinks it will be beautiful.",
-      "He’s planning to draw a painting gradually, but he believes it will be lovely."
+      "He’s planning to paint slowly, but he believes the artwork will be lovely."
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми збираємося поїхати на море, але думаємо, що там буде людно.",
     "en": [
       "We’re going to go to the sea, but we think it will be crowded.",
@@ -608,7 +608,7 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "PERSONAL_PRONOUNS", "PASSIVE_VOICE_ALL_TENSES"],
+    "rules": ["BE_GOING_TO_VS_WILL", "PASSIVE_VOICE_ALL_TENSES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми збираємося організувати зустріч, але думаємо, що вона буде перенесена.",
     "en": [
       "We’re going to organize a meeting, but we think it will be postponed.",
@@ -616,11 +616,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "COUNT_UNCOUNT"],
+    "rules": ["BE_GOING_TO_VS_WILL", "COUNT_UNCOUNT"],
     "ua": "Ти збираєшся купити продукти, але чи думаєш, що буде багато людей у магазині?",
     "en": [
-      "Are you going to buy groceries, but do you think there will be many people in the shop?",
-      "Are you planning to purchase food, but do you believe there will be a lot of people in the store?"
+      "Are you going to buy groceries, and do you think there will be many people in the shop?",
+      "Are you planning to purchase food, and do you believe there will be a lot of people in the store?"
     ]
   },
   {
@@ -656,7 +656,7 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES"],
     "ua": "Я збираюся купити нову сумку, але думаю, що вона буде дорогою.",
     "en": [
       "I’m going to buy a new bag, but I think it will be expensive.",
@@ -684,15 +684,15 @@
     "ua": "Вона збирається готувати обід, і впевнена, що буде дуже багато їжі.",
     "en": [
       "She’s going to cook lunch, and she’s sure there will be a lot of food.",
-      "She’s planning to prepare lunch, and she believes there will be really much food."
+      "She’s planning to prepare lunch, and she believes there will be plenty of food."
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "DEMONSTRATIVES"],
+    "rules": ["BE_GOING_TO_VS_WILL", "DEMONSTRATIVES"],
     "ua": "Ці діти збираються грати в парку, але чи думаєш, що там буде безпечно?",
     "en": [
-      "These children are going to play in the park, but do you think it will be safe?",
-      "Those kids are planning to play in the park, but do you believe it will be safe?"
+      "These children are going to play in the park, and do you think it will be safe there?",
+      "Those kids are planning to play in the park, and do you believe it will be safe there?"
     ]
   },
   {
@@ -720,7 +720,7 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
     "ua": "Ми збираємося поїхати в село, але думаємо, що там буде дощ у суботу.",
     "en": [
       "We’re going to go to the village, but we think it will rain on Saturday.",
@@ -736,11 +736,11 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "YES_NO_Q", "PREP_PLACE"],
+    "rules": ["BE_GOING_TO_VS_WILL", "PREP_PLACE"],
     "ua": "Ти збираєшся тренуватися в залі, але чи думаєш, що там буде людно?",
     "en": [
-      "Are you going to train in the gym, but do you think it will be crowded?",
-      "Are you planning to work out in the gym, but do you believe it will be busy?"
+      "Are you going to train in the gym, and do you think it will be crowded?",
+      "Are you planning to work out in the gym, and do you believe it will be busy?"
     ]
   },
   {
@@ -756,7 +756,7 @@
     "ua": "Цей хлопець збирається швидко написати есе, але думає, що воно буде складним.",
     "en": [
       "This boy is going to quickly write an essay, but he thinks it will be difficult.",
-      "That boy is planning to fast write an essay, but he believes it will be challenging."
+      "That boy is planning to write an essay quickly, but he believes it will be challenging."
     ]
   },
   {
@@ -768,7 +768,7 @@
     ]
   },
   {
-    "rules": ["BE_GOING_TO_VS_WILL", "WH_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["BE_GOING_TO_VS_WILL", "WH_Q"],
     "ua": "Що ти збираєшся купити, і що, на твою думку, буде корисним?",
     "en": [
       "What are you going to buy, and what do you think will be useful?",

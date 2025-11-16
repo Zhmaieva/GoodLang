@@ -1,7 +1,7 @@
 { "WAS_WERE": [
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у школі вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у школі вчора?",
     "en": ["Were you at school yesterday?", "Were you in school yesterday?"]
   },
   {
@@ -9,9 +9,10 @@
     "ua": "Я не був у школі вчора.",
     "en": ["I wasn’t at school yesterday.", "I wasn’t in school yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була на вечірці минулого тижня?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була на вечірці минулого тижня?",
     "en": ["Was she at the party last week?", "Was she at the event last week?"]
   },
   {
@@ -19,19 +20,21 @@
     "ua": "Вона не була на вечірці минулого тижня.",
     "en": ["She wasn’t at the party last week.", "She wasn’t at the event last week."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи деякі студенти були на лекції торік?",
-    "en": ["Were some students at the lecture last year?", "Were certain students at the lecture last year?"]
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Якісь студенти були на лекції торік?",
+    "en": ["Were any students at the lecture last year?", "Were some students at the lecture last year?"]
   },
   {
     "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти не були на лекції торік.",
-    "en": ["Some students weren’t at the lecture last year.", "Certain students weren’t at the lecture last year."]
+    "ua": "Жодні студенти не були на лекції торік.",
+    "en": ["No students were at the lecture last year.", "There were no students at the lecture last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи цей учитель був у класі вчора?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Цей учитель був у класі вчора?",
     "en": ["Was this teacher in the classroom yesterday?", "Was this teacher at school yesterday?"]
   },
   {
@@ -39,9 +42,10 @@
     "ua": "Цей учитель не був у класі вчора.",
     "en": ["This teacher wasn’t in the classroom yesterday.", "This teacher wasn’t at school yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у парку минулого місяця?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у парку минулого місяця?",
     "en": ["Were you in the park last month?", "Were you at the park last month?"]
   },
   {
@@ -49,9 +53,10 @@
     "ua": "Я не був у парку минулого місяця.",
     "en": ["I wasn’t in the park last month.", "I wasn’t at the park last month."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була в бібліотеці вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була в бібліотеці вчора?",
     "en": ["Was she in the library yesterday?", "Was she at the library yesterday?"]
   },
   {
@@ -59,9 +64,10 @@
     "ua": "Вона не була в бібліотеці вчора.",
     "en": ["She wasn’t in the library yesterday.", "She wasn’t at the library yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи багато туристів були в місті торік?",
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Багато туристів були в місті торік?",
     "en": ["Were many tourists in the city last year?", "Were a lot of tourists in the city last year?"]
   },
   {
@@ -69,19 +75,21 @@
     "ua": "Багато туристів не були в місті торік.",
     "en": ["Many tourists weren’t in the city last year.", "A lot of tourists weren’t in the city last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ця книга була на столі вчора?",
-    "en": ["Was this book on the table yesterday?", "Was this book at the desk yesterday?"]
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Ця книга була на столі вчора?",
+    "en": ["Was this book on the table yesterday?", "Was this book on the desk yesterday?"]
   },
   {
     "rules": ["WAS_WERE", "DEMONSTRATIVES"],
     "ua": "Ця книга не була на столі вчора.",
-    "en": ["This book wasn’t on the table yesterday.", "This book wasn’t at the desk yesterday."]
+    "en": ["This book wasn’t on the table yesterday.", "This book wasn’t on the desk yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був на концерті вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був на концерті вчора?",
     "en": ["Were you at the concert yesterday?", "Were you at the show yesterday?"]
   },
   {
@@ -89,9 +97,10 @@
     "ua": "Я не був на концерті вчора.",
     "en": ["I wasn’t at the concert yesterday.", "I wasn’t at the show yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи він був у театрі минулого тижня?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Він був у театрі минулого тижня?",
     "en": ["Was he at the theater last week?", "Was he in the theater last week?"]
   },
   {
@@ -99,29 +108,32 @@
     "ua": "Він не був у театрі минулого тижня.",
     "en": ["He wasn’t at the theater last week.", "He wasn’t in the theater last week."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи деякі діти були в зоопарку торік?",
-    "en": ["Were some children at the zoo last year?", "Were certain children at the zoo last year?"]
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Якісь діти були в зоопарку торік?",
+    "en": ["Were any children at the zoo last year?", "Were some children at the zoo last year?"]
   },
   {
     "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі діти не були в зоопарку торік.",
-    "en": ["Some children weren’t at the zoo last year.", "Certain children weren’t at the zoo last year."]
+    "ua": "Жодні діти не були в зоопарку торік.",
+    "en": ["No children were at the zoo last year.", "There were no children at the zoo last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи цей лист був у поштовій скриньці вчора?",
-    "en": ["Was this letter in the mailbox yesterday?", "Was this letter at the mailbox yesterday?"]
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Цей лист був у поштовій скриньці вчора?",
+    "en": ["Was this letter in the mailbox yesterday?", "Was this letter inside the mailbox yesterday?"]
   },
   {
     "rules": ["WAS_WERE", "DEMONSTRATIVES"],
     "ua": "Цей лист не був у поштовій скриньці вчора.",
-    "en": ["This letter wasn’t in the mailbox yesterday.", "This letter wasn’t at the mailbox yesterday."]
+    "en": ["This letter wasn’t in the mailbox yesterday.", "This letter wasn’t inside the mailbox yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у магазині вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у магазині вчора?",
     "en": ["Were you at the store yesterday?", "Were you in the shop yesterday?"]
   },
   {
@@ -129,9 +141,10 @@
     "ua": "Я не був у магазині вчора.",
     "en": ["I wasn’t at the store yesterday.", "I wasn’t in the shop yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була на пляжі минулого літа?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була на пляжі минулого літа?",
     "en": ["Was she at the beach last summer?", "Was she on the beach last summer?"]
   },
   {
@@ -139,9 +152,10 @@
     "ua": "Вона не була на пляжі минулого літа.",
     "en": ["She wasn’t at the beach last summer.", "She wasn’t on the beach last summer."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи багато людей були на ярмарку торік?",
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Багато людей були на ярмарку торік?",
     "en": ["Were many people at the fair last year?", "Were a lot of people at the fair last year?"]
   },
   {
@@ -149,9 +163,10 @@
     "ua": "Багато людей не були на ярмарку торік.",
     "en": ["Many people weren’t at the fair last year.", "A lot of people weren’t at the fair last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ця картина була в галереї вчора?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Ця картина була в галереї вчора?",
     "en": ["Was this painting in the gallery yesterday?", "Was this painting at the gallery yesterday?"]
   },
   {
@@ -159,9 +174,10 @@
     "ua": "Ця картина не була в галереї вчора.",
     "en": ["This painting wasn’t in the gallery yesterday.", "This painting wasn’t at the gallery yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був на стадіоні минулого тижня?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був на стадіоні минулого тижня?",
     "en": ["Were you at the stadium last week?", "Were you in the stadium last week?"]
   },
   {
@@ -169,9 +185,10 @@
     "ua": "Я не був на стадіоні минулого тижня.",
     "en": ["I wasn’t at the stadium last week.", "I wasn’t in the stadium last week."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи він був у кафе вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Він був у кафе вчора?",
     "en": ["Was he at the café yesterday?", "Was he in the café yesterday?"]
   },
   {
@@ -179,19 +196,21 @@
     "ua": "Він не був у кафе вчора.",
     "en": ["He wasn’t at the café yesterday.", "He wasn’t in the café yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи деякі гості були на святі торік?",
-    "en": ["Were some guests at the celebration last year?", "Were certain guests at the celebration last year?"]
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Якісь гості були на святі торік?",
+    "en": ["Were any guests at the celebration last year?", "Were some guests at the celebration last year?"]
   },
   {
     "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі гості не були на святі торік.",
-    "en": ["Some guests weren’t at the celebration last year.", "Certain guests weren’t at the celebration last year."]
+    "ua": "Жодні гості не були на святі торік.",
+    "en": ["No guests were at the celebration last year.", "There were no guests at the celebration last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи цей фільм був у кінотеатрі минулого місяця?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Цей фільм був у кінотеатрі минулого місяця?",
     "en": ["Was this movie at the cinema last month?", "Was this movie in the theater last month?"]
   },
   {
@@ -199,9 +218,10 @@
     "ua": "Цей фільм не був у кінотеатрі минулого місяця.",
     "en": ["This movie wasn’t at the cinema last month.", "This movie wasn’t in the theater last month."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у ресторані вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у ресторані вчора?",
     "en": ["Were you at the restaurant yesterday?", "Were you in the restaurant yesterday?"]
   },
   {
@@ -209,9 +229,10 @@
     "ua": "Я не був у ресторані вчора.",
     "en": ["I wasn’t at the restaurant yesterday.", "I wasn’t in the restaurant yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була на вокзалі вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була на вокзалі вчора?",
     "en": ["Was she at the station yesterday?", "Was she at the train station yesterday?"]
   },
   {
@@ -219,9 +240,10 @@
     "ua": "Вона не була на вокзалі вчора.",
     "en": ["She wasn’t at the station yesterday.", "She wasn’t at the train station yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи багато машин були на дорозі вчора?",
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Багато машин були на дорозі вчора?",
     "en": ["Were many cars on the road yesterday?", "Were a lot of cars on the road yesterday?"]
   },
   {
@@ -229,9 +251,10 @@
     "ua": "Багато машин не були на дорозі вчора.",
     "en": ["Many cars weren’t on the road yesterday.", "A lot of cars weren’t on the road yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ця сукня була в магазині минулого тижня?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Ця сукня була в магазині минулого тижня?",
     "en": ["Was this dress in the store last week?", "Was this dress at the shop last week?"]
   },
   {
@@ -239,19 +262,21 @@
     "ua": "Ця сукня не була в магазині минулого тижня.",
     "en": ["This dress wasn’t in the store last week.", "This dress wasn’t at the shop last week."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був на ринку минулого місяця?",
-    "en": ["Were you at the market last month?", "Were you in the market last month?"]
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був на ринку минулого місяця?",
+    "en": ["Were you at the market last month?", "Were you at the local market last month?"]
   },
   {
     "rules": ["WAS_WERE", "ARTICLES"],
     "ua": "Я не був на ринку минулого місяця.",
-    "en": ["I wasn’t at the market last month.", "I wasn’t in the market last month."]
+    "en": ["I wasn’t at the market last month.", "I wasn’t at the local market last month."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у музеї вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у музеї вчора?",
     "en": ["Were you at the museum yesterday?", "Were you in the museum yesterday?"]
   },
   {
@@ -259,9 +284,10 @@
     "ua": "Я не був у музеї вчора.",
     "en": ["I wasn’t at the museum yesterday.", "I wasn’t in the museum yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була на виставці минулого тижня?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була на виставці минулого тижня?",
     "en": ["Was she at the exhibition last week?", "Was she at the show last week?"]
   },
   {
@@ -269,29 +295,32 @@
     "ua": "Вона не була на виставці минулого тижня.",
     "en": ["She wasn’t at the exhibition last week.", "She wasn’t at the show last week."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи деякі гості були на фестивалі торік?",
-    "en": ["Were some guests at the festival last year?", "Were certain guests at the festival last year?"]
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Якісь гості були на фестивалі торік?",
+    "en": ["Were any guests at the festival last year?", "Were some guests at the festival last year?"]
   },
   {
     "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі гості не були на фестивалі торік.",
-    "en": ["Some guests weren’t at the festival last year.", "Certain guests weren’t at the festival last year."]
+    "ua": "Жодні гості не були на фестивалі торік.",
+    "en": ["No guests were at the festival last year.", "There were no guests at the festival last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи цей документ був на столі вчора?",
-    "en": ["Was this document on the table yesterday?", "Was this document at the desk yesterday?"]
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Цей документ був на столі вчора?",
+    "en": ["Was this document on the table yesterday?", "Was this document on the desk yesterday?"]
   },
   {
     "rules": ["WAS_WERE", "DEMONSTRATIVES"],
     "ua": "Цей документ не був на столі вчора.",
-    "en": ["This document wasn’t on the table yesterday.", "This document wasn’t at the desk yesterday."]
+    "en": ["This document wasn’t on the table yesterday.", "This document wasn’t on the desk yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у кіно вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у кіно вчора?",
     "en": ["Were you at the cinema yesterday?", "Were you in the theater yesterday?"]
   },
   {
@@ -299,9 +328,10 @@
     "ua": "Я не був у кіно вчора.",
     "en": ["I wasn’t at the cinema yesterday.", "I wasn’t in the theater yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була в офісі минулого тижня?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була в офісі минулого тижня?",
     "en": ["Was she at the office last week?", "Was she in the office last week?"]
   },
   {
@@ -309,9 +339,10 @@
     "ua": "Вона не була в офісі минулого тижня.",
     "en": ["She wasn’t at the office last week.", "She wasn’t in the office last week."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи багато відвідувачів були в парку торік?",
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Багато відвідувачів були в парку торік?",
     "en": ["Were many visitors in the park last year?", "Were a lot of visitors in the park last year?"]
   },
   {
@@ -319,9 +350,10 @@
     "ua": "Багато відвідувачів не були в парку торік.",
     "en": ["Many visitors weren’t in the park last year.", "A lot of visitors weren’t in the park last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ця фотографія була в альбомі вчора?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Ця фотографія була в альбомі вчора?",
     "en": ["Was this photo in the album yesterday?", "Was this picture in the album yesterday?"]
   },
   {
@@ -329,9 +361,10 @@
     "ua": "Ця фотографія не була в альбомі вчора.",
     "en": ["This photo wasn’t in the album yesterday.", "This picture wasn’t in the album yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був на ярмарку минулого місяця?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був на ярмарку минулого місяця?",
     "en": ["Were you at the fair last month?", "Were you at the market last month?"]
   },
   {
@@ -339,9 +372,10 @@
     "ua": "Я не був на ярмарку минулого місяця.",
     "en": ["I wasn’t at the fair last month.", "I wasn’t at the market last month."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи він був у лікарні вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Він був у лікарні вчора?",
     "en": ["Was he at the hospital yesterday?", "Was he in the hospital yesterday?"]
   },
   {
@@ -349,19 +383,21 @@
     "ua": "Він не був у лікарні вчора.",
     "en": ["He wasn’t at the hospital yesterday.", "He wasn’t in the hospital yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи деякі вчителі були на семінарі торік?",
-    "en": ["Were some teachers at the seminar last year?", "Were certain teachers at the seminar last year?"]
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Якісь вчителі були на семінарі торік?",
+    "en": ["Were any teachers at the seminar last year?", "Were some teachers at the seminar last year?"]
   },
   {
     "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі вчителі не були на семінарі торік.",
-    "en": ["Some teachers weren’t at the seminar last year.", "Certain teachers weren’t at the seminar last year."]
+    "ua": "Жодні вчителі не були на семінарі торік.",
+    "en": ["No teachers were at the seminar last year.", "There were no teachers at the seminar last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи цей лист був у конверті вчора?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Цей лист був у конверті вчора?",
     "en": ["Was this letter in the envelope yesterday?", "Was this letter inside the envelope yesterday?"]
   },
   {
@@ -369,9 +405,10 @@
     "ua": "Цей лист не був у конверті вчора.",
     "en": ["This letter wasn’t in the envelope yesterday.", "This letter wasn’t inside the envelope yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у спортзалі вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у спортзалі вчора?",
     "en": ["Were you at the gym yesterday?", "Were you in the gym yesterday?"]
   },
   {
@@ -379,9 +416,10 @@
     "ua": "Я не був у спортзалі вчора.",
     "en": ["I wasn’t at the gym yesterday.", "I wasn’t in the gym yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була на вокзалі минулого тижня?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була на вокзалі минулого тижня?",
     "en": ["Was she at the station last week?", "Was she at the train station last week?"]
   },
   {
@@ -389,9 +427,10 @@
     "ua": "Вона не була на вокзалі минулого тижня.",
     "en": ["She wasn’t at the station last week.", "She wasn’t at the train station last week."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи багато студентів були на екскурсії торік?",
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Багато студентів були на екскурсії торік?",
     "en": ["Were many students on the excursion last year?", "Were a lot of students on the excursion last year?"]
   },
   {
@@ -399,9 +438,10 @@
     "ua": "Багато студентів не були на екскурсії торік.",
     "en": ["Many students weren’t on the excursion last year.", "A lot of students weren’t on the excursion last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ця картина була на виставці вчора?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Ця картина була на виставці вчора?",
     "en": ["Was this painting at the exhibition yesterday?", "Was this painting in the gallery yesterday?"]
   },
   {
@@ -409,9 +449,10 @@
     "ua": "Ця картина не була на виставці вчора.",
     "en": ["This painting wasn’t at the exhibition yesterday.", "This painting wasn’t in the gallery yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у парку атракціонів минулого літа?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у парку атракціонів минулого літа?",
     "en": ["Were you at the amusement park last summer?", "Were you in the amusement park last summer?"]
   },
   {
@@ -419,9 +460,10 @@
     "ua": "Я не був у парку атракціонів минулого літа.",
     "en": ["I wasn’t at the amusement park last summer.", "I wasn’t in the amusement park last summer."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи він був на конференції вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Він був на конференції вчора?",
     "en": ["Was he at the conference yesterday?", "Was he at the meeting yesterday?"]
   },
   {
@@ -429,29 +471,32 @@
     "ua": "Він не був на конференції вчора.",
     "en": ["He wasn’t at the conference yesterday.", "He wasn’t at the meeting yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи деякі книги були в бібліотеці торік?",
-    "en": ["Were some books in the library last year?", "Were certain books in the library last year?"]
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Якісь книги були в бібліотеці торік?",
+    "en": ["Were any books in the library last year?", "Were some books in the library last year?"]
   },
   {
     "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі книги не були в бібліотеці торік.",
-    "en": ["Some books weren’t in the library last year.", "Certain books weren’t in the library last year."]
+    "ua": "Жодні книги не були в бібліотеці торік.",
+    "en": ["No books were in the library last year.", "There were no books in the library last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи цей журнал був у кіоску вчора?",
-    "en": ["Was this magazine at the kiosk yesterday?", "Was this magazine in the newsstand yesterday?"]
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Цей журнал був у кіоску вчора?",
+    "en": ["Was this magazine at the kiosk yesterday?", "Was this magazine at the newsstand yesterday?"]
   },
   {
     "rules": ["WAS_WERE", "DEMONSTRATIVES"],
     "ua": "Цей журнал не був у кіоску вчора.",
-    "en": ["This magazine wasn’t at the kiosk yesterday.", "This magazine wasn’t in the newsstand yesterday."]
+    "en": ["This magazine wasn’t at the kiosk yesterday.", "This magazine wasn’t at the newsstand yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був на озері минулого літа?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був на озері минулого літа?",
     "en": ["Were you at the lake last summer?", "Were you by the lake last summer?"]
   },
   {
@@ -459,9 +504,10 @@
     "ua": "Я не був на озері минулого літа.",
     "en": ["I wasn’t at the lake last summer.", "I wasn’t by the lake last summer."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи вона була в аеропорту вчора?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Вона була в аеропорту вчора?",
     "en": ["Was she at the airport yesterday?", "Was she in the airport yesterday?"]
   },
   {
@@ -469,9 +515,10 @@
     "ua": "Вона не була в аеропорту вчора.",
     "en": ["She wasn’t at the airport yesterday.", "She wasn’t in the airport yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Чи багато дітей були в таборі торік?",
+    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Багато дітей були в таборі торік?",
     "en": ["Were many children at the camp last year?", "Were a lot of children at the camp last year?"]
   },
   {
@@ -479,9 +526,10 @@
     "ua": "Багато дітей не були в таборі торік.",
     "en": ["Many children weren’t at the camp last year.", "A lot of children weren’t at the camp last year."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи цей годинник був у коробці вчора?",
+    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+    "ua": "Цей годинник був у коробці вчора?",
     "en": ["Was this watch in the box yesterday?", "Was this clock in the box yesterday?"]
   },
   {
@@ -489,9 +537,10 @@
     "ua": "Цей годинник не був у коробці вчора.",
     "en": ["This watch wasn’t in the box yesterday.", "This clock wasn’t in the box yesterday."]
   },
+
   {
-    "rules": ["WAS_WERE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Чи ти був у готелі минулого місяця?",
+    "rules": ["WAS_WERE", "ARTICLES"],
+    "ua": "Ти був у готелі минулого місяця?",
     "en": ["Were you at the hotel last month?", "Were you in the hotel last month?"]
   },
   {
@@ -499,4 +548,5 @@
     "ua": "Я не був у готелі минулого місяця.",
     "en": ["I wasn’t at the hotel last month.", "I wasn’t in the hotel last month."]
   }
+
 ] }

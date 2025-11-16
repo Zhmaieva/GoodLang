@@ -1,802 +1,227 @@
 { "HAVE_TO_DONT_HAVE_TO": [
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ти повинен закінчити звіт до вечора.",
-    "en": [
-      "You have to finish the report by evening.",
-      "You need to complete the report before tonight."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ми не повинні бути гучними в бібліотеці.",
-    "en": [
-      "We don’t have to be loud in the library.",
-      "We don’t need to be noisy in the library."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі студенти повинні прочитати цю книгу до іспиту.",
-    "en": [
-      "Some students have to read this book before the exam.",
-      "Certain students need to study this book for the test."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PREP_TIME"],
-    "ua": "Чи повинні ми приїхати на зустріч до обіду?",
-    "en": [
-      "Do we have to arrive at the meeting by noon?",
-      "Do we need to get to the meeting before lunchtime?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-    "ua": "Ви не повинні паркуватися в парку, бо там є вільні місця деінде.",
-    "en": [
-      "You don’t have to park in the park because there are free spaces elsewhere.",
-      "You don’t need to park in the park since there are available spots elsewhere."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей учень повинен повернути татову книгу до бібліотеки.",
-    "en": [
-      "This student has to return his dad’s book to the library.",
-      "That student needs to give back his father’s book to the library."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вона не повинна поспішити завтра, бо урок починається пізно.",
-    "en": [
-      "She doesn’t have to hurry tomorrow because the lesson starts late.",
-      "She doesn’t need to rush tomorrow since the class begins later."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи повинні ми допомогти їй з домашнім завданням?",
-    "en": [
-      "Do we have to help her with homework?",
-      "Do we need to assist her with assignments?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти повинен бути дуже обережним під час поїздки.",
-    "en": [
-      "You have to be very careful during the trip.",
-      "You need to be really cautious during the journey."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-    "ua": "Він не повинен готуватися до тесту сам у класі.",
-    "en": [
-      "He doesn’t have to prepare for the test by himself in the classroom.",
-      "He doesn’t need to study for the test on his own in the class."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі гості повинні принести їжу на вечірку.",
-    "en": [
-      "Some guests have to bring food to the party.",
-      "Certain guests need to bring food for the party."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-    "ua": "Ми не повинні поспішити, коли закінчиться урок.",
-    "en": [
-      "We don’t have to hurry when the lesson ends.",
-      "We don’t need to rush once the class is over."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Вона повинна уважно перевірити документи.",
-    "en": [
-      "She has to check the documents carefully.",
-      "She needs to review the documents attentively."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Ти маєш поставити будильник на завтра зранку (use HAVE TO / DON'T HAVE TO).",
+    "en": ["You have to set the alarm for tomorrow morning."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Він не повинен кричати, бо це не обов’язково.",
-    "en": [
-      "He doesn’t have to shout because it’s not necessary.",
-      "He doesn’t need to yell since it’s not required."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Тобі не треба витирати пил зі стелажів сьогодні після обіду (use HAVE TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to dust the shelves this afternoon."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ці діти повинні бути в школі до дев’ятої ранку.",
-    "en": [
-      "These children have to be at school by nine in the morning.",
-      "Those kids need to arrive at school before nine a.m."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Ти маєш приймати ліки після їжі (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to take medicine after meals."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "COUNT_UNCOUNT"],
-    "ua": "Скільки часу ми повинні чекати на автобус?",
-    "en": [
-      "How much time do we have to wait for the bus?",
-      "How long do we need to wait for the bus?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Взимку тобі не треба косити траву (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to cut the grass in winter."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви не повинні бути дуже гучними на концерті.",
-    "en": [
-      "You don’t have to be too loud at the concert.",
-      "You don’t need to be overly noisy at the concert."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш повісити рушник після душу (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to hang the towel after showering."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи повинні ми подзвонити вчителю сьогодні?",
-    "en": [
-      "Do we have to call the teacher today?",
-      "Do we need to phone the teacher today?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Тобі не треба мити підлогу щовечора (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to mop the floor every evening."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Я повинен полагодити сестрину машину.",
-    "en": [
-      "I have to fix my sister’s car.",
-      "I need to repair my sibling’s car."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Ти маєш годувати кота двічі на день (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to feed the cat twice a day."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони не повинні поспішити завтра, бо захід починається пізно.",
-    "en": [
-      "They don’t have to hurry tomorrow because the event starts late.",
-      "They don’t need to rush tomorrow since the event begins later."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Тобі не треба міняти постіль щотижня (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to change the bedsheets weekly."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі учні не повинні розмовляти в класі.",
-    "en": [
-      "Some students don’t have to talk in the classroom.",
-      "Certain students don’t need to speak in the class."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Ти маєш спорожнити посудомийку зранку (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to empty the dishwasher in the morning."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Вона повинна акуратно написати лист, щоб він був зрозумілим.",
-    "en": [
-      "She has to write the letter neatly so it’s clear.",
-      "She needs to write the letter carefully to make it understandable."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба пекти печиво сьогодні (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to bake cookies today."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-    "ua": "Ми повинні поспішити, бо поїзд скоро відправиться.",
-    "en": [
-      "We have to hurry because the train will leave soon.",
-      "We need to rush since the train is departing soon."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш носити шкарпетки під взуттям (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to wear socks with shoes."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ті гості не повинні поспішити до вечері.",
-    "en": [
-      "Those guests don’t have to hurry to dinner.",
-      "Those guests don’t need to rush to dinner."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба пилососити килим щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to vacuum the carpet daily."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "PREP_PLACE"],
-    "ua": "Куди ми повинні піти після уроків?",
-    "en": [
-      "Where do we have to go after lessons?",
-      "Where do we need to go after classes?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY"],
+    "ua": "Ти маєш швидко зачиняти дверцята холодильника (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to close the fridge door quickly."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти не повинен бути дуже поспішним під час презентації.",
-    "en": [
-      "You don’t have to be too hasty during the presentation.",
-      "You don’t need to be overly rushed during the presentation."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба витирати стіл після кожного перекусу (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to wipe the table after every snack."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Він повинен подати документи до понеділка.",
-    "en": [
-      "He has to submit the documents by Monday.",
-      "He needs to hand in the documents before Monday."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "ua": "Ти маєш вмикати обігрівач, коли холодно (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to turn on the heater when it's cold."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "COUNT_UNCOUNT"],
-    "ua": "Чи повинні ми купити багато їжі для пікніка?",
-    "en": [
-      "Do we have to buy a lot of food for the picnic?",
-      "Do we need to purchase much food for the picnic?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Тобі не треба відкривати всі вікна зараз (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to open all the windows now."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Вона повинна бути в офісі вчасно, щоб не пропустити зустріч.",
-    "en": [
-      "She has to be at the office on time to not miss the meeting.",
-      "She needs to arrive at the office promptly to avoid missing the meeting."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE", "POSSESSIVE_S"],
+    "ua": "Ти маєш класти ключі на гачок (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to put the keys on the hook."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці учні не повинні приносити свої книги.",
-    "en": [
-      "These students don’t have to bring their books.",
-      "Those students don’t need to bring their books."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба чистити взуття щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to polish shoes every day."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він не повинен поспішити, бо концерт починається пізно.",
-    "en": [
-      "He doesn’t have to hurry because the concert starts late.",
-      "He doesn’t need to rush since the concert begins later."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш обполіскувати чашку після кави (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to rinse the cup after coffee."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Вони повинні тихо поводитися в музеї.",
-    "en": [
-      "They have to behave quietly in the museum.",
-      "They need to act silently in the museum."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
+    "ua": "Тобі не треба підмітати балкон цього тижня (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to sweep the balcony this week."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "ARTICLES"],
-    "ua": "Я не повинен забути купити нову парасолю.",
-    "en": [
-      "I don’t have to forget to buy a new umbrella.",
-      "I don’t need to forget to purchase a new umbrella."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
+    "ua": "Ти маєш увімкнути чайник для чаю (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to plug in the kettle for tea."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ми повинні бути обережними завтра на прогулянці.",
-    "en": [
-      "We have to be careful tomorrow on the walk.",
-      "We need to be cautious tomorrow during the stroll."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба сортувати пошту негайно (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to sort the mail right away."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому ми повинні бути тихими в класі?",
-    "en": [
-      "Why do we have to be quiet in the classroom?",
-      "Why do we need to be silent in the class?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
+    "ua": "Ти маєш знімати пальто біля дверей (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to take off your coat at the door."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Вона не повинна купувати дуже багато продуктів для вечірки.",
-    "en": [
-      "She doesn’t have to buy too many groceries for the party.",
-      "She doesn’t need to purchase too much food for the party."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба прасувати рушники (use HAVE TO / DON'T HAVE TO).",
+    "en": ["You don't have to iron the towels."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи повинні ці гості залишитися на обід?",
-    "en": [
-      "Do these guests have to stay for lunch?",
-      "Do these guests need to stay for lunch?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "POSSESSIVE_S"],
+    "ua": "Ти маєш поповнити дозатор мила (use HAVE TO / DON'T_HAVE_TO).",
+    "en": ["You have to refill the soap dispenser."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Він повинен повернути братові ключі до завтра.",
-    "en": [
-      "He has to return his brother’s keys by tomorrow.",
-      "He needs to give back his sibling’s keys before tomorrow."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба мити машину щомісяця (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to wash the car monthly."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі діти повинні грати на майданчику.",
-    "en": [
-      "Some children have to play on the playground.",
-      "Certain kids need to play at the playground."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Ти маєш вимикати вентилятор перед сном (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to switch off the fan before sleep."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона не повинна поспішно відповідати, бо це може бути неправильно.",
-    "en": [
-      "She doesn’t have to answer hastily because it might be wrong.",
-      "She doesn’t need to reply quickly since it could be incorrect."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба сьогодні впорядковувати шафу (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to organize the closet today."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ми повинні приїхати на вокзал до шостої вечора.",
-    "en": [
-      "We have to arrive at the station by six in the evening.",
-      "We need to get to the station before six p.m."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш чистити картоплю перед готуванням (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to peel the potatoes before cooking."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "ARTICLES"],
-    "ua": "Я не повинен забути взяти квиток до вечора.",
-    "en": [
-      "I don’t have to forget to take a ticket by evening.",
-      "I don’t need to forget to bring a ticket before tonight."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба витирати посуд вручну (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to dry the dishes by hand."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи повинні ми залишатися в залі після концерту?",
-    "en": [
-      "Do we have to stay in the hall after the concert?",
-      "Do we need to remain in the venue after the concert?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
+    "ua": "Ти маєш замикати велосипед надворі (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to lock the bike outside."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-    "ua": "Деякі вчителі не повинні бути суворими з учнями.",
-    "en": [
-      "Some teachers don’t have to be strict with students.",
-      "Certain teachers don’t need to be harsh with pupils."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Тобі не треба поливати кімнатні рослини щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to water the indoor plants daily."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей учень повинен старанно працювати над проєктом.",
-    "en": [
-      "This student has to work diligently on the project.",
-      "That student needs to work hard on the project."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш викидати старі газети (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to throw away old newspapers."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Вона повинна поспішити, бо урок скоро почнеться.",
-    "en": [
-      "She has to hurry because the lesson will start soon.",
-      "She needs to rush since the class will begin shortly."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Тобі не треба щодня мити дзеркало (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to clean the mirror every morning."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Що ми повинні зробити для підготовки до свята?",
-    "en": [
-      "What do we have to do to prepare for the celebration?",
-      "What do we need to do to get ready for the event?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш помішувати суп, поки він вариться (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to stir the soup while it cooks."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви не повинні бути дуже шумними в театрі.",
-    "en": [
-      "You don’t have to be too noisy in the theater.",
-      "You don’t need to be overly loud in the theater."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба складати ковдри щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to fold blankets each day."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Я повинен купити нову книгу для школи.",
-    "en": [
-      "I have to buy a new book for school.",
-      "I need to purchase a new book for school."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш заряджати електричну зубну щітку (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to charge the electric toothbrush."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони не повинні спішити на виставку завтра, бо вона триває весь день.",
-    "en": [
-      "They don’t have to hurry to the exhibition tomorrow because it lasts all day.",
-      "They don’t need to rush to the show tomorrow since it runs all day."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба розморожувати холодильник щотижня (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to defrost the fridge weekly."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ти повинен налаштувати камеру до початку зйомок.",
-    "en": [
-      "You have to set up the camera before the shoot starts.",
-      "You need to prepare the camera before filming begins."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
+    "ua": "Ти маєш зачиняти штори на заході сонця (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to close the curtains at sunset."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ми не повинні бути напруженими на фотосесії.",
-    "en": [
-      "We don’t have to be tense at the photo session.",
-      "We don’t need to be nervous during the photoshoot."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш ставити молоко назад у холодильник (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to put milk back in the fridge."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі волонтери повинні зібрати кошти для притулку.",
-    "en": [
-      "Some volunteers have to raise funds for the shelter.",
-      "Certain volunteers need to collect money for the sanctuary."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба щодня змінювати сторінку календаря (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to change the calendar page daily."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PREP_TIME"],
-    "ua": "Чи повинні ми оновити програму до кінця тижня?",
-    "en": [
-      "Do we have to update the software by the end of the week?",
-      "Do we need to upgrade the program before the week ends?"
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
+    "ua": "Ти маєш витирати ноги об килимок (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to wipe your feet on the mat."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-    "ua": "Ви не повинні поспішити в майстерні, бо інструменти вже готові.",
-    "en": [
-      "You don’t have to rush in the workshop because the tools are already prepared.",
-      "You don’t need to hurry in the studio since the equipment is ready."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
+    "ua": "Тобі не треба провітрювати кімнату під час дощу (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to air the room in the rain."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей хлопець повинен відремонтувати дідусів годинник.",
-    "en": [
-      "This boy has to repair his grandfather’s clock.",
-      "That boy needs to fix his grandpa’s watch."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Ти маєш розділяти білизну на світлу й кольорову (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You have to separate white and colored laundry."]
   },
   {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вона не повинна бути занадто втомленою перед походом.",
-    "en": [
-      "She doesn’t have to be too tired before the hike.",
-      "She doesn’t need to be overly exhausted before the trek."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи повинні ми принести фарби на заняття з мистецтва?",
-    "en": [
-      "Do we have to bring paints to the art class?",
-      "Do we need to bring supplies to the art lesson?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти повинен бути дуже точним під час експерименту.",
-    "en": [
-      "You have to be very precise during the experiment.",
-      "You need to be really accurate during the test."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-    "ua": "Він не повинен ремонтувати велосипед сам у гаражі.",
-    "en": [
-      "He doesn’t have to repair the bike by himself in the garage.",
-      "He doesn’t need to fix the bicycle on his own in the garage."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі туристи повинні забронювати готель заздалегідь.",
-    "en": [
-      "Some tourists have to book a hotel in advance.",
-      "Certain travelers need to reserve a hotel ahead of time."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-    "ua": "Ми не повинні поспішити, коли відкриється магазин.",
-    "en": [
-      "We don’t have to hurry when the shop opens.",
-      "We don’t need to rush once the store starts business."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Вона повинна ретельно перевірити код програми.",
-    "en": [
-      "She has to check the program code thoroughly.",
-      "She needs to review the software code carefully."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Він не повинен бути гучним, бо це не обов’язково в офісі.",
-    "en": [
-      "He doesn’t have to be loud because it’s not necessary in the office.",
-      "He doesn’t need to be noisy since it’s not required at work."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ці працівники повинні закінчити звіт до вечора.",
-    "en": [
-      "These workers have to finish the report by evening.",
-      "Those employees need to complete the report before tonight."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "COUNT_UNCOUNT"],
-    "ua": "Скільки матеріалів ми повинні зібрати для проєкту?",
-    "en": [
-      "How many materials do we have to gather for the project?",
-      "How much material do we need to collect for the project?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви не повинні бути дуже активними в саду.",
-    "en": [
-      "You don’t have to be too active in the garden.",
-      "You don’t need to be overly energetic in the yard."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи повинні ми надіслати лист до клієнта?",
-    "en": [
-      "Do we have to send the letter to the client?",
-      "Do we need to mail the letter to the client?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Я повинен полагодити бабусину лампу.",
-    "en": [
-      "I have to fix my grandma’s lamp.",
-      "I need to repair my grandmother’s lamp."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони не повинні поспішити на ярмарок завтра, бо він триває весь день.",
-    "en": [
-      "They don’t have to hurry to the fair tomorrow because it lasts all day.",
-      "They don’t need to rush to the market tomorrow since it runs all day."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі учасники повинні виступити на сцені.",
-    "en": [
-      "Some participants have to perform on the stage.",
-      "Certain participants need to present on the stage."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Вона повинна акуратно скласти одяг, щоб він був охайним.",
-    "en": [
-      "She has to fold the clothes neatly so they’re tidy.",
-      "She needs to arrange the clothes carefully to keep them neat."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-    "ua": "Ми не повинні поспішити, бо літак відлітає пізніше.",
-    "en": [
-      "We don’t have to hurry because the plane leaves later.",
-      "We don’t need to rush since the flight departs later."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ті фотографи не повинні поспішити до студії.",
-    "en": [
-      "Those photographers don’t have to hurry to the studio.",
-      "Those photographers don’t need to rush to the studio."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "PREP_PLACE"],
-    "ua": "Куди ми повинні доставити коробки після збору?",
-    "en": [
-      "Where do we have to deliver the boxes after collection?",
-      "Where do we need to take the boxes after gathering?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти не повинен бути дуже наполегливим під час переговорів.",
-    "en": [
-      "You don’t have to be too persistent during negotiations.",
-      "You don’t need to be overly insistent during talks."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Він повинен зарядити телефон до поїздки.",
-    "en": [
-      "He has to charge the phone before the trip.",
-      "He needs to charge the phone before traveling."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "COUNT_UNCOUNT"],
-    "ua": "Чи повинні ми купити багато декорацій для фестивалю?",
-    "en": [
-      "Do we have to buy a lot of decorations for the festival?",
-      "Do we need to purchase many decorations for the event?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Вона повинна бути готовою до виступу вчасно.",
-    "en": [
-      "She has to be ready for the performance on time.",
-      "She needs to be prepared for the show promptly."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці учасники не повинні приносити свої інструменти.",
-    "en": [
-      "These participants don’t have to bring their tools.",
-      "Those participants don’t need to bring their equipment."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він не повинен поспішити, бо семінар починається пізно.",
-    "en": [
-      "He doesn’t have to hurry because the seminar starts late.",
-      "He doesn’t need to rush since the workshop begins later."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Вони повинні обережно працювати в лабораторії.",
-    "en": [
-      "They have to work cautiously in the laboratory.",
-      "They need to operate carefully in the lab."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "ARTICLES"],
-    "ua": "Я не повинен забути купити новий рюкзак.",
-    "en": [
-      "I don’t have to forget to buy a new backpack.",
-      "I don’t need to forget to purchase a new backpack."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ми повинні бути організованими під час фестивалю.",
-    "en": [
-      "We have to be organized during the festival.",
-      "We need to be prepared during the event."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому ми повинні бути обережними на будівництві?",
-    "en": [
-      "Why do we have to be careful at the construction site?",
-      "Why do we need to be cautious on the building site?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Вона не повинна купувати дуже багато матеріалів для майстер-класу.",
-    "en": [
-      "She doesn’t have to buy too many materials for the workshop.",
-      "She doesn’t need to purchase too much material for the class."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи повинні ці художники принести свої картини на виставку?",
-    "en": [
-      "Do these artists have to bring their paintings to the exhibition?",
-      "Do these artists need to bring their artwork to the show?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Він повинен повернути татів ноутбук до вечора.",
-    "en": [
-      "He has to return his dad’s laptop by evening.",
-      "He needs to give back his father’s laptop before tonight."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі музиканти повинні репетирувати в студії.",
-    "en": [
-      "Some musicians have to rehearse in the studio.",
-      "Certain musicians need to practice in the studio."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона не повинна поспішно готувати, бо вечеря не термінова.",
-    "en": [
-      "She doesn’t have to cook hastily because dinner isn’t urgent.",
-      "She doesn’t need to prepare quickly since the meal isn’t pressing."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ми повинні налаштувати обладнання до початку презентації.",
-    "en": [
-      "We have to set up the equipment before the presentation starts.",
-      "We need to prepare the equipment before the presentation begins."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME", "ARTICLES"],
-    "ua": "Я не повинен забути купити новий блокнот до понеділка.",
-    "en": [
-      "I don’t have to forget to buy a new notebook by Monday.",
-      "I don’t need to forget to purchase a new notebook before Monday."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи повинні ми залишатися в офісі після наради?",
-    "en": [
-      "Do we have to stay in the office after the meeting?",
-      "Do we need to remain in the office after the discussion?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-    "ua": "Деякі дизайнери не повинні бути надто креативними в цьому проєкті.",
-    "en": [
-      "Some designers don’t have to be too creative in this project.",
-      "Certain designers don’t need to be overly imaginative in this project."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей програміст повинен уважно перевірити код.",
-    "en": [
-      "This programmer has to check the code carefully.",
-      "That coder needs to review the code attentively."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він не повинен поспішити, бо виставка відкривається пізніше.",
-    "en": [
-      "He doesn’t have to hurry because the exhibition opens later.",
-      "He doesn’t need to rush since the show starts later."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "WH_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Що ми повинні підготувати для майстер-класу?",
-    "en": [
-      "What do we have to prepare for the workshop?",
-      "What do we need to get ready for the class?"
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви не повинні бути дуже активними в галереї.",
-    "en": [
-      "You don’t have to be too active in the gallery.",
-      "You don’t need to be overly energetic in the gallery."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Я повинен купити нову камеру для зйомок.",
-    "en": [
-      "I have to buy a new camera for filming.",
-      "I need to purchase a new camera for shooting."
-    ]
-  },
-  {
-    "rules": ["HAVE_TO_DONT_HAVE_TO", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони не повинні спішити на тренінг завтра, бо він триває весь день.",
-    "en": [
-      "They don’t have to hurry to the training tomorrow because it lasts all day.",
-      "They don’t need to rush to the workshop tomorrow since it runs all day."
-    ]
+    "rules": ["HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Тобі не треба витирати книжкові полиці щомісяця (use HAVE_TO / DON'T_HAVE_TO).",
+    "en": ["You don't have to dust the bookshelves monthly."]
   }
 ] }

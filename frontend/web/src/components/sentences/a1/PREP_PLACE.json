@@ -1,38 +1,31 @@
 { "PREP_PLACE": [
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я сиджу в кімнаті.",
-    "en": ["I am sitting in the room.", "I’m currently sitting in the room."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ти стоїш на столі?",
-    "en": ["Are you standing on the table?", "Are you currently on the table?"]
-  },
-  {
-    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона спить під ковдрою.",
-    "en": ["She is sleeping under the blanket.", "She’s currently sleeping under the blanket."]
-  },
-  {
-    "rules": ["PREP_PLACE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Багато книг лежать на полиці.",
-    "en": ["Many books are lying on the shelf.", "A lot of books are currently on the shelf."]
-  },
-  {
-    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей кіт сидить під столом?",
-    "en": ["Is this cat sitting under the table?", "Is that cat currently under the table?"]
+    "ua": "Я зараз сиджу в кімнаті.",
+    "en": [
+      "I am sitting in the room now.",
+      "I’m currently sitting in the room.",
+      "I am sitting in the room.",
+      "I’m currently sitting in the room now."
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Він стоїть біля вікна.",
-    "en": ["He is standing next to the window.", "He’s currently next to the window."]
+    "ua": "Ти зараз стоїш на столі?",
+    "en": [
+      "Are you standing on the table now?",
+      "Are you currently standing on the table?",
+      "Are you standing on the table?"
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ви сидите в машині?",
-    "en": ["Are you sitting in the car?", "Are you currently in the car?"]
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Вона зараз спить під ковдрою.",
+    "en": [
+      "She is sleeping under the blanket now.",
+      "She’s currently sleeping under the blanket.",
+      "She is sleeping under the blanket."
+    ]
   },
   {
     "rules": [
@@ -41,48 +34,35 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі діти грають на майданчику.",
-    "en": ["Some children are playing on the playground.", "Certain kids are currently on the playground."]
+    "ua": "Багато книг зараз лежать на полиці.",
+    "en": [
+      "Many books are lying on the shelf now.",
+      "A lot of books are currently on the shelf."
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця собака лежить під деревом.",
-    "en": ["This dog is lying under the tree.", "That dog is currently under the tree."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ця книга лежить на столі?",
-    "en": ["Is this book lying on the table?", "Is that book currently on the table?"]
-  },
-  {
-    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми сидимо в парку.",
-    "en": ["We are sitting in the park.", "We’re currently sitting in the park."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ти стоїш біля дверей?",
-    "en": ["Are you standing next to the door?", "Are you currently next to the door?"]
-  },
-  {
-    "rules": ["PREP_PLACE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Багато людей стоять на площі.",
-    "en": ["Many people are standing in the square.", "A lot of people are currently in the square."]
-  },
-  {
-    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей стілець стоїть біля стіни.",
-    "en": ["This chair is standing next to the wall.", "That chair is currently next to the wall."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей пес сидить в коробці?",
-    "en": ["Is this dog sitting in the box?", "Is that dog currently in the box?"]
+    "ua": "Цей кіт зараз сидить під столом?",
+    "en": [
+      "Is this cat sitting under the table now?",
+      "Is that cat currently under the table?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я лежу на ліжку.",
-    "en": ["I am lying on the bed.", "I’m currently lying on the bed."]
+    "ua": "Він зараз стоїть біля вікна.",
+    "en": [
+      "He is standing next to the window now.",
+      "He’s currently next to the window."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ви зараз сидите в машині?",
+    "en": [
+      "Are you sitting in the car now?",
+      "Are you currently in the car?"
+    ]
   },
   {
     "rules": [
@@ -91,58 +71,171 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі птахи сидять на дереві.",
-    "en": ["Some birds are sitting on the tree.", "Certain birds are currently on the tree."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Вона стоїть під парасолькою?",
-    "en": ["Is she standing under the umbrella?", "Is she currently under the umbrella?"]
+    "ua": "Деякі діти зараз грають на майданчику.",
+    "en": [
+      "Some children are playing on the playground now.",
+      "Certain kids are currently on the playground."
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця лампа стоїть на столі.",
-    "en": ["This lamp is standing on the table.", "That lamp is currently on the table."]
+    "ua": "Ця собака зараз лежить під деревом.",
+    "en": [
+      "This dog is lying under the tree now.",
+      "That dog is currently under the tree."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ця сумка лежить під кріслом?",
-    "en": ["Is this bag lying under the chair?", "Is that bag currently under the chair?"]
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ця книга зараз лежить на столі?",
+    "en": [
+      "Is this book lying on the table now?",
+      "Is that book currently on the table?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Він сидить в автобусі.",
-    "en": ["He is sitting in the bus.", "He’s currently sitting in the bus."]
+    "ua": "Ми зараз сидимо в парку.",
+    "en": [
+      "We are sitting in the park now.",
+      "We’re currently sitting in the park."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ти зараз стоїш біля дверей?",
+    "en": [
+      "Are you standing next to the door now?",
+      "Are you currently next to the door?"
+    ]
+  },
+  {
+    "rules": [
+      "PREP_PLACE",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PRESENT_CONT_NOW",
+      "ARTICLES"
+    ],
+    "ua": "Багато людей зараз стоять на площі.",
+    "en": [
+      "Many people are standing in the square now.",
+      "A lot of people are currently in the square."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Цей стілець зараз стоїть біля стіни.",
+    "en": [
+      "This chair is standing next to the wall now.",
+      "That chair is currently next to the wall."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Цей пес зараз сидить в коробці?",
+    "en": [
+      "Is this dog sitting in the box now?",
+      "Is that dog currently in the box?"
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Я зараз лежу на ліжку.",
+    "en": [
+      "I am lying on the bed now.",
+      "I’m currently lying on the bed."
+    ]
+  },
+  {
+    "rules": [
+      "PREP_PLACE",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "PRESENT_CONT_NOW",
+      "ARTICLES"
+    ],
+    "ua": "Деякі птахи зараз сидять на дереві.",
+    "en": [
+      "Some birds are sitting on the tree now.",
+      "Certain birds are currently on the tree."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Вона зараз стоїть під парасолькою?",
+    "en": [
+      "Is she standing under the umbrella now?",
+      "Is she currently under the umbrella?"
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ця лампа зараз стоїть на столі.",
+    "en": [
+      "This lamp is standing on the table now.",
+      "That lamp is currently on the table."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ця сумка зараз лежить під кріслом?",
+    "en": [
+      "Is this bag lying under the chair now?",
+      "Is that bag currently under the chair?"
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Він зараз сидить в автобусі.",
+    "en": [
+      "He is sitting in the bus now.",
+      "He’s currently sitting in the bus."
+    ]
   },
   {
     "rules": [
       "PREP_PLACE",
       "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
       "COUNT_UNCOUNT",
+      "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Багато коробок стоять під полицею.",
-    "en": ["Many boxes are standing under the shelf.", "A lot of boxes are currently under the shelf."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ти сидиш на дивані?",
-    "en": ["Are you sitting on the couch?", "Are you currently on the couch?"]
-  },
-  {
-    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця картина висить на стіні.",
-    "en": ["This picture is hanging on the wall.", "That picture is currently on the wall."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей кіт лежить на килимі?",
-    "en": ["Is this cat lying on the carpet?", "Is that cat currently on the carpet?"]
+    "ua": "Багато коробок зараз стоять під полицею.",
+    "en": [
+      "Many boxes are standing under the shelf now.",
+      "A lot of boxes are currently under the shelf."
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми стоїмо біля фонтану.",
-    "en": ["We are standing next to the fountain.", "We’re currently standing next to the fountain."]
+    "ua": "Ти зараз сидиш на дивані?",
+    "en": [
+      "Are you sitting on the couch now?",
+      "Are you currently on the couch?"
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ця картина зараз висить на стіні.",
+    "en": [
+      "This picture is hanging on the wall now.",
+      "That picture is currently on the wall."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Цей кіт зараз лежить на килимі?",
+    "en": [
+      "Is this cat lying on the carpet now?",
+      "Is that cat currently on the carpet?"
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ми зараз стоїмо біля фонтану.",
+    "en": [
+      "We are standing next to the fountain now.",
+      "We’re currently standing next to the fountain."
+    ]
   },
   {
     "rules": [
@@ -151,58 +244,93 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі студенти сидять в аудиторії.",
-    "en": ["Some students are sitting in the classroom.", "Certain students are currently in the classroom."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Вона лежить під деревом?",
-    "en": ["Is she lying under the tree?", "Is she currently under the tree?"]
-  },
-  {
-    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця ваза стоїть на підвіконні.",
-    "en": ["This vase is standing on the windowsill.", "That vase is currently on the windowsill."]
-  },
-  {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей стіл стоїть біля вікна?",
-    "en": ["Is this table standing next to the window?", "Is that table currently next to the window?"]
+    "ua": "Деякі студенти зараз сидять в аудиторії.",
+    "en": [
+      "Some students are sitting in the classroom now.",
+      "Certain students are currently in the classroom."
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я стою в черзі.",
-    "en": ["I am standing in the queue.", "I’m currently standing in the line."]
+    "ua": "Вона зараз лежить під деревом?",
+    "en": [
+      "Is she lying under the tree now?",
+      "Is she currently under the tree?"
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ця ваза зараз стоїть на підвіконні.",
+    "en": [
+      "This vase is standing on the windowsill now.",
+      "That vase is currently on the windowsill."
+    ]
+  },
+  {
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Цей стіл зараз стоїть біля вікна?",
+    "en": [
+      "Is this table standing next to the window now?",
+      "Is that table currently next to the window?"
+    ]
+  },
+  {
+    "rules": [
+      "PREP_PLACE",
+      "PRESENT_CONT_NOW",
+      "ARTICLES"
+    ],
+    "ua": "Я зараз стою в черзі.",
+    "en": [
+      "I am standing in the queue now.",
+      "I’m currently standing in the line."
+    ]
   },
   {
     "rules": [
       "PREP_PLACE",
       "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
       "COUNT_UNCOUNT",
+      "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Багато іграшок лежать на підлозі.",
-    "en": ["Many toys are lying on the floor.", "A lot of toys are currently on the floor."]
+    "ua": "Багато іграшок зараз лежать на підлозі.",
+    "en": [
+      "Many toys are lying on the floor now.",
+      "A lot of toys are currently on the floor."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ти сидиш під деревом?",
-    "en": ["Are you sitting under the tree?", "Are you currently under the tree?"]
+    "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": "Ти зараз сидиш під деревом?",
+    "en": [
+      "Are you sitting under the tree now?",
+      "Are you currently under the tree?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця собака сидить в кутку.",
-    "en": ["This dog is sitting in the corner.", "That dog is currently in the corner."]
+    "ua": "Ця собака зараз сидить в кутку.",
+    "en": [
+      "This dog is sitting in the corner now.",
+      "That dog is currently in the corner."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Ця коробка лежить на полиці?",
-    "en": ["Is this box lying on the shelf?", "Is that box currently on the shelf?"]
+    "en": [
+      "Is this box lying on the shelf?",
+      "Is that box currently on the shelf?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Він лежить на траві.",
-    "en": ["He is lying on the grass.", "He’s currently lying on the grass."]
+    "ua": "Він зараз лежить на траві.",
+    "en": [
+      "He is lying on the grass now.",
+      "He’s currently lying on the grass."
+    ]
   },
   {
     "rules": [
@@ -211,28 +339,43 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі люди стоять біля входу.",
-    "en": ["Some people are standing next to the entrance.", "Certain people are currently next to the entrance."]
+    "ua": "Деякі люди зараз стоять біля входу.",
+    "en": [
+      "Some people are standing next to the entrance now.",
+      "Certain people are currently next to the entrance."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Вона сидить в кафе?",
-    "en": ["Is she sitting in the cafe?", "Is she currently in the cafe?"]
+    "en": [
+      "Is she sitting in the cafe?",
+      "Is she currently in the cafe?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця книга лежить під стільцем.",
-    "en": ["This book is lying under the chair.", "That book is currently under the chair."]
+    "ua": "Ця книга зараз лежить під стільцем.",
+    "en": [
+      "This book is lying under the chair now.",
+      "That book is currently under the chair."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Цей стілець стоїть на балконі?",
-    "en": ["Is this chair standing on the balcony?", "Is that chair currently on the balcony?"]
+    "en": [
+      "Is this chair standing on the balcony?",
+      "Is that chair currently on the balcony?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я сиджу біля каміну.",
-    "en": ["I am sitting next to the fireplace.", "I’m currently sitting next to the fireplace."]
+    "ua": "Я зараз сиджу біля каміну.",
+    "en": [
+      "I am sitting next to the fireplace now.",
+      "I’m currently sitting next to the fireplace."
+    ]
   },
   {
     "rules": [
@@ -242,27 +385,42 @@
       "ARTICLES"
     ],
     "ua": "Багато птахів сидять на даху.",
-    "en": ["Many birds are sitting on the roof.", "A lot of birds are currently on the roof."]
+    "en": [
+      "Many birds are sitting on the roof.",
+      "A lot of birds are currently on the roof."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Ти стоїш на мосту?",
-    "en": ["Are you standing on the bridge?", "Are you currently on the bridge?"]
+    "en": [
+      "Are you standing on the bridge?",
+      "Are you currently on the bridge?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця лампа висить на стелі.",
-    "en": ["This lamp is hanging on the ceiling.", "That lamp is currently on the ceiling."]
+    "ua": "Ця лампа зараз висить на стелі.",
+    "en": [
+      "This lamp is hanging on the ceiling now.",
+      "That lamp is currently on the ceiling."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Цей кіт сидить на дивані?",
-    "en": ["Is this cat sitting on the couch?", "Is that cat currently on the couch?"]
+    "en": [
+      "Is this cat sitting on the couch?",
+      "Is that cat currently on the couch?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми стоїмо в саду.",
-    "en": ["We are standing in the garden.", "We’re currently standing in the garden."]
+    "ua": "Ми зараз стоїмо в саду.",
+    "en": [
+      "We are standing in the garden now.",
+      "We’re currently standing in the garden."
+    ]
   },
   {
     "rules": [
@@ -272,58 +430,95 @@
       "ARTICLES"
     ],
     "ua": "Деякі коробки стоять на столі.",
-    "en": ["Some boxes are standing on the table.", "Certain boxes are currently on the table."]
+    "en": [
+      "Some boxes are standing on the table.",
+      "Certain boxes are currently on the table."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Вона лежить на пляжі?",
-    "en": ["Is she lying on the beach?", "Is she currently on the beach?"]
+    "en": [
+      "Is she lying on the beach?",
+      "Is she currently on the beach?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця сумка стоїть під ліжком.",
-    "en": ["This bag is standing under the bed.", "That bag is currently under the bed."]
+    "ua": "Ця сумка зараз стоїть під ліжком.",
+    "en": [
+      "This bag is standing under the bed now.",
+      "That bag is currently under the bed."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Цей пес лежить біля дверей?",
-    "en": ["Is this dog lying next to the door?", "Is that dog currently next to the door?"]
+    "en": [
+      "Is this dog lying next to the door?",
+      "Is that dog currently next to the door?"
+    ]
   },
 
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я сиджу на стільці.",
-    "en": ["I am sitting on the chair.", "I’m currently sitting on the chair."]
+    "ua": "Я зараз сиджу на стільці.",
+    "en": [
+      "I am sitting on the chair now.",
+      "I’m currently sitting on the chair."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Ти стоїш під лампою?",
-    "en": ["Are you standing under the lamp?", "Are you currently under the lamp?"]
+    "en": [
+      "Are you standing under the lamp?",
+      "Are you currently under the lamp?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона лежить в ліжку.",
-    "en": ["She is lying in the bed.", "She’s currently lying in the bed."]
+    "ua": "Вона зараз лежить в ліжку.",
+    "en": [
+      "She is lying in the bed now.",
+      "She’s currently lying in the bed."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
+    "rules": [
+      "PREP_PLACE",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "ARTICLES"
+    ],
     "ua": "Багато сумок стоять на полиці.",
-    "en": ["Many bags are standing on the shelf.", "A lot of bags are currently on the shelf."]
+    "en": [
+      "Many bags are standing on the shelf.",
+      "A lot of bags are currently on the shelf."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "DEMONSTRATIVES", "ARTICLES"],
     "ua": "Ця собака сидить в клітці?",
-    "en": ["Is this dog sitting in the cage?", "Is that dog currently in the cage?"]
+    "en": [
+      "Is this dog sitting in the cage?",
+      "Is that dog currently in the cage?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Він стоїть біля паркану.",
-    "en": ["He is standing next to the fence.", "He’s currently next to the fence."]
+    "ua": "Він зараз стоїть біля паркану.",
+    "en": [
+      "He is standing next to the fence now.",
+      "He’s currently next to the fence."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Ви сидите на лавці?",
-    "en": ["Are you sitting on the bench?", "Are you currently on the bench?"]
+    "en": [
+      "Are you sitting on the bench?",
+      "Are you currently on the bench?"
+    ]
   },
   {
     "rules": [
@@ -332,48 +527,79 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі діти грають в саду.",
-    "en": ["Some children are playing in the garden.", "Certain kids are currently in the garden."]
+    "ua": "Деякі діти зараз грають в саду.",
+    "en": [
+      "Some children are playing in the garden now.",
+      "Certain kids are currently in the garden."
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей кіт лежить на матраці.",
-    "en": ["This cat is lying on the mattress.", "That cat is currently on the mattress."]
+    "ua": "Цей кіт зараз лежить на матраці.",
+    "en": [
+      "This cat is lying on the mattress now.",
+      "That cat is currently on the mattress."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Ця ручка лежить на парті?",
-    "en": ["Is this pen lying on the desk?", "Is that pen currently on the desk?"]
+    "en": [
+      "Is this pen lying on the desk?",
+      "Is that pen currently on the desk?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми сидимо в кафе.",
-    "en": ["We are sitting in the cafe.", "We’re currently sitting in the cafe."]
+    "ua": "Ми зараз сидимо в кафе.",
+    "en": [
+      "We are sitting in the cafe now.",
+      "We’re currently sitting in the cafe."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Ти стоїш біля дзеркала?",
-    "en": ["Are you standing next to the mirror?", "Are you currently next to the mirror?"]
+    "en": [
+      "Are you standing next to the mirror?",
+      "Are you currently next to the mirror?"
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
+    "rules": [
+      "PREP_PLACE",
+      "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+      "ARTICLES"
+    ],
     "ua": "Багато туристів стоять на мосту.",
-    "en": ["Many tourists are standing on the bridge.", "A lot of tourists are currently on the bridge."]
+    "en": [
+      "Many tourists are standing on the bridge.",
+      "A lot of tourists are currently on the bridge."
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця ваза стоїть біля дверей.",
-    "en": ["This vase is standing next to the door.", "That vase is currently next to the door."]
+    "ua": "Ця ваза зараз стоїть біля дверей.",
+    "en": [
+      "This vase is standing next to the door now.",
+      "That vase is currently next to the door."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_PLACE", "ARTICLES"],
     "ua": "Цей пес лежить під столом?",
-    "en": ["Is this dog lying under the table?", "Is that dog currently under the table?"]
+    "en": [
+      "Is this dog lying under the table?",
+      "Is that dog currently under the table?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я стою на балконі.",
-    "en": ["I am standing on the balcony.", "I’m currently standing on the balcony."]
+    "ua": "Я зараз стою на балконі.",
+    "en": [
+      "I am standing on the balcony now.",
+      "I’m currently standing on the balcony."
+    ]
   },
   {
     "rules": [
@@ -382,58 +608,89 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі птахи сидять на гілці.",
-    "en": ["Some birds are sitting on the branch.", "Certain birds are currently on the branch."]
+    "ua": "Деякі птахи зараз сидять на гілці.",
+    "en": [
+      "Some birds are sitting on the branch.",
+      "Certain birds are currently on the branch."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Вона сидить під парасолькою?",
-    "en": ["Is she sitting under the umbrella?", "Is she currently under the umbrella?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Вона зараз сидить під парасолькою?",
+    "en": [
+      "Is she sitting under the umbrella now?",
+      "Is she currently under the umbrella?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця картина висить на стіні.",
-    "en": ["This picture is hanging on the wall.", "That picture is currently on the wall."]
+    "ua": "Ця картина зараз висить на стіні.",
+    "en": [
+      "This picture is hanging on the wall now.",
+      "That picture is currently on the wall."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ця сумка стоїть на підлозі?",
-    "en": ["Is this bag standing on the floor?", "Is that bag currently on the floor?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Ця сумка зараз стоїть на підлозі?",
+    "en": [
+      "Is this bag standing on the floor now?",
+      "Is that bag currently on the floor?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Він сидить в залі.",
-    "en": ["He is sitting in the hall.", "He’s currently sitting in the hall."]
+    "ua": "Він зараз сидить в залі.",
+    "en": [
+      "He is sitting in the hall now.",
+      "He’s currently sitting in the hall."
+    ]
   },
   {
     "rules": [
       "PREP_PLACE",
       "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
       "COUNT_UNCOUNT",
-      "ARTICLES"
+      "ARTICLES",
+      "PRESENT_CONT_NOW"
     ],
-    "ua": "Багато коробок лежать під ліжком.",
-    "en": ["Many boxes are lying under the bed.", "A lot of boxes are currently under the bed."]
+    "ua": "Багато коробок зараз лежать під ліжком.",
+    "en": [
+      "Many boxes are lying under the bed now.",
+      "A lot of boxes are currently under the bed."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ти лежиш на дивані?",
-    "en": ["Are you lying on the couch?", "Are you currently on the couch?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Ти зараз лежиш на дивані?",
+    "en": [
+      "Are you lying on the couch now?",
+      "Are you currently on the couch?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця лампа стоїть на комоді.",
-    "en": ["This lamp is standing on the dresser.", "That lamp is currently on the dresser."]
+    "ua": "Ця лампа зараз стоїть на комоді.",
+    "en": [
+      "This lamp is standing on the dresser now.",
+      "That lamp is currently on the dresser."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей кіт сидить на підвіконні?",
-    "en": ["Is this cat sitting on the windowsill?", "Is that cat currently on the windowsill?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW", "DEMONSTRATIVES"],
+    "ua": "Цей кіт зараз сидить на підвіконні?",
+    "en": [
+      "Is this cat sitting on the windowsill now?",
+      "Is that cat currently on the windowsill?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми стоїмо біля магазину.",
-    "en": ["We are standing next to the shop.", "We’re currently standing next to the shop."]
+    "ua": "Ми зараз стоїмо біля магазину.",
+    "en": [
+      "We are standing next to the shop now.",
+      "We’re currently standing next to the shop."
+    ]
   },
   {
     "rules": [
@@ -442,58 +699,89 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі студенти сидять на сходах.",
-    "en": ["Some students are sitting on the stairs.", "Certain students are currently on the stairs."]
+    "ua": "Деякі студенти зараз сидять на сходах.",
+    "en": [
+      "Some students are sitting on the stairs now.",
+      "Certain students are currently on the stairs."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Вона стоїть в коридорі?",
-    "en": ["Is she standing in the hallway?", "Is she currently in the hallway?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Вона зараз стоїть в коридорі?",
+    "en": [
+      "Is she standing in the hallway now?",
+      "Is she currently in the hallway?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця книга лежить на полиці.",
-    "en": ["This book is lying on the shelf.", "That book is currently on the shelf."]
+    "ua": "Ця книга зараз лежить на полиці.",
+    "en": [
+      "This book is lying on the shelf now.",
+      "That book is currently on the shelf."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей стіл стоїть під вікном?",
-    "en": ["Is this table standing under the window?", "Is that table currently under the window?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Цей стіл зараз стоїть під вікном?",
+    "en": [
+      "Is this table standing under the window now?",
+      "Is that table currently under the window?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я сиджу в автобусі.",
-    "en": ["I am sitting in the bus.", "I’m currently sitting in the bus."]
+    "ua": "Я зараз сиджу в автобусі.",
+    "en": [
+      "I am sitting in the bus now.",
+      "I’m currently sitting in the bus."
+    ]
   },
   {
     "rules": [
       "PREP_PLACE",
       "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
       "COUNT_UNCOUNT",
-      "ARTICLES"
+      "ARTICLES",
+      "PRESENT_CONT_NOW"
     ],
-    "ua": "Багато іграшок стоять на шафі.",
-    "en": ["Many toys are standing on the wardrobe.", "A lot of toys are currently on the wardrobe."]
+    "ua": "Багато іграшок зараз стоять на шафі.",
+    "en": [
+      "Many toys are standing on the wardrobe now.",
+      "A lot of toys are currently on the wardrobe."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ти стоїш на терасі?",
-    "en": ["Are you standing on the terrace?", "Are you currently on the terrace?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Ти зараз стоїш на терасі?",
+    "en": [
+      "Are you standing on the terrace now?",
+      "Are you currently on the terrace?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця собака лежить в кутку.",
-    "en": ["This dog is lying in the corner.", "That dog is currently in the corner."]
+    "ua": "Ця собака зараз лежить в кутку.",
+    "en": [
+      "This dog is lying in the corner now.",
+      "That dog is currently in the corner."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ця коробка стоїть біля стіни?",
-    "en": ["Is this box standing next to the wall?", "Is that box currently next to the wall?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Ця коробка зараз стоїть біля стіни?",
+    "en": [
+      "Is this box standing next to the wall now?",
+      "Is that box currently next to the wall?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Він сидить на килимі.",
-    "en": ["He is sitting on the carpet.", "He’s currently sitting on the carpet."]
+    "ua": "Він зараз сидить на килимі.",
+    "en": [
+      "He is sitting on the carpet now.",
+      "He’s currently sitting on the carpet."
+    ]
   },
   {
     "rules": [
@@ -502,58 +790,89 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі люди стоять на платформі.",
-    "en": ["Some people are standing on the platform.", "Certain people are currently on the platform."]
+    "ua": "Деякі люди зараз стоять на платформі.",
+    "en": [
+      "Some people are standing on the platform now.",
+      "Certain people are currently on the platform."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Вона лежить на траві?",
-    "en": ["Is she lying on the grass?", "Is she currently on the grass?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Вона зараз лежить на траві?",
+    "en": [
+      "Is she lying on the grass now?",
+      "Is she currently on the grass?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця ваза стоїть на столі.",
-    "en": ["This vase is standing on the table.", "That vase is currently on the table."]
+    "ua": "Ця ваза зараз стоїть на столі.",
+    "en": [
+      "This vase is standing on the table now.",
+      "That vase is currently on the table."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей пес сидить під кріслом?",
-    "en": ["Is this dog sitting under the chair?", "Is that dog currently under the chair?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Цей пес зараз сидить під кріслом?",
+    "en": [
+      "Is this dog sitting under the chair now?",
+      "Is that dog currently under the chair?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я стою біля дерева.",
-    "en": ["I am standing next to the tree.", "I’m currently standing next to the tree."]
+    "ua": "Я зараз стою біля дерева.",
+    "en": [
+      "I am standing next to the tree now.",
+      "I’m currently standing next to the tree."
+    ]
   },
   {
     "rules": [
       "PREP_PLACE",
       "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
       "COUNT_UNCOUNT",
-      "ARTICLES"
+      "ARTICLES",
+      "PRESENT_CONT_NOW"
     ],
-    "ua": "Багато книг лежать на підлозі.",
-    "en": ["Many books are lying on the floor.", "A lot of books are currently on the floor."]
+    "ua": "Багато книг зараз лежать на підлозі.",
+    "en": [
+      "Many books are lying on the floor now.",
+      "A lot of books are currently on the floor."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Ти сидиш в залі?",
-    "en": ["Are you sitting in the hall?", "Are you currently in the hall?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Ти зараз сидиш в залі?",
+    "en": [
+      "Are you sitting in the hall now?",
+      "Are you currently in the hall?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця лампа висить на стелі.",
-    "en": ["This lamp is hanging on the ceiling.", "That lamp is currently on the ceiling."]
+    "ua": "Ця лампа зараз висить на стелі.",
+    "en": [
+      "This lamp is hanging on the ceiling now.",
+      "That lamp is currently on the ceiling."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей кіт лежить на ліжку?",
-    "en": ["Is this cat lying on the bed?", "Is that cat currently on the bed?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Цей кіт зараз лежить на ліжку?",
+    "en": [
+      "Is this cat lying on the bed now?",
+      "Is that cat currently on the bed?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми сидимо на балконі.",
-    "en": ["We are sitting on the balcony.", "We’re currently sitting on the balcony."]
+    "ua": "Ми зараз сидимо на балконі.",
+    "en": [
+      "We are sitting on the balcony now.",
+      "We’re currently sitting on the balcony."
+    ]
   },
   {
     "rules": [
@@ -562,23 +881,34 @@
       "PRESENT_CONT_NOW",
       "ARTICLES"
     ],
-    "ua": "Деякі гості стоять в холі.",
-    "en": ["Some guests are standing in the lobby.", "Certain guests are currently in the lobby."]
+    "ua": "Деякі гості зараз стоять в холі.",
+    "en": [
+      "Some guests are standing in the lobby now.",
+      "Certain guests are currently in the lobby."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Вона стоїть на сходах?",
-    "en": ["Is she standing on the stairs?", "Is she currently on the stairs?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Вона зараз стоїть на сходах?",
+    "en": [
+      "Is she standing on the stairs now?",
+      "Is she currently on the stairs?"
+    ]
   },
   {
     "rules": ["PREP_PLACE", "DEMONSTRATIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця сумка лежить під диваном.",
-    "en": ["This bag is lying under the couch.", "That bag is currently under the couch."]
+    "ua": "Ця сумка зараз лежить під диваном.",
+    "en": [
+      "This bag is lying under the couch now.",
+      "That bag is currently under the couch."
+    ]
   },
   {
-    "rules": ["PREP_PLACE", "YES_NO_Q", "ARTICLES"],
-    "ua": "Цей стілець стоїть біля каміну?",
-    "en": ["Is this chair standing next to the fireplace?", "Is that chair currently next to the fireplace?"]
+    "rules": ["PREP_PLACE", "ARTICLES", "PRESENT_CONT_NOW"],
+    "ua": "Цей стілець зараз стоїть біля каміну?",
+    "en": [
+      "Is this chair standing next to the fireplace now?",
+      "Is that chair currently next to the fireplace?"
+    ]
   }
-
 ] }

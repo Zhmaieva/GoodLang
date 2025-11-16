@@ -1,747 +1,969 @@
 { "PREP_TIME": [
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE", "ARTICLES"],
     "ua": "Я працюю вранці.",
-    "en": ["I am working in the morning.", "I’m currently working in the morning."]
+    "en": [
+      "I work in the morning.",
+      "I usually work in the morning.",
+      "I work mornings."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти вчишся в понеділок?",
-    "en": ["Are you studying on Monday?", "Are you studying on Monday morning?"]
+    "en": [
+      "Do you study on Monday?",
+      "Are you studying on Monday?",
+      "Do you have classes on Monday?"
+    ]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE"],
     "ua": "Вона читає вночі.",
-    "en": ["She is reading at night.", "She’s currently reading at night."]
+    "en": [
+      "She reads at night.",
+      "She usually reads at night.",
+      "She reads during the night."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE"],
     "ua": "Деякі студенти працюють влітку.",
-    "en": ["Some students are working in the summer.", "Certain students are working in the summer."]
+    "en": [
+      "Some students work in the summer.",
+      "Some students work during the summer.",
+      "Some students work over the summer."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "YES_NO_Q"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей викладач працює в суботу?",
-    "en": ["Is this teacher working on Saturday?", "Does that teacher work on Saturday?"]
+    "en": [
+      "Does this teacher work on Saturday?",
+      "Is this teacher working on Saturday?"
+    ]
   },
+
+
+
+
+
+
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE", "ARTICLES"],
     "ua": "Він грає в п’ятницю.",
-    "en": ["He is playing on Friday.", "He’s currently playing on Friday."]
+    "en": ["He plays on Friday.", "He is playing on Friday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ви зустрічаєтесь о сьомій годині?",
-    "en": ["Are you meeting at seven o’clock?", "Are you meeting at seven?"]
+    "en": ["Do you meet at seven o’clock?", "Are you meeting at seven o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Багато людей гуляють у вихідні.",
-    "en": ["Many people are walking on the weekend.", "A lot of people are walking on the weekend."]
+    "en": ["Many people walk on the weekend.", "A lot of people walk on the weekend."]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця команда тренується вранці.",
-    "en": ["This team is training in the morning.", "That team is currently training in the morning."]
+    "en": ["This team trains in the morning.", "This team is training in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES", "DEMONSTRATIVES"],
     "ua": "Цей магазин відкритий у неділю?",
-    "en": ["Is this shop open on Sunday?", "Is that shop open on Sunday?"]
+    "en": ["Is this shop open on Sunday?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ми вчимося в серпні.",
-    "en": ["We are studying in August.", "We’re currently studying in August."]
+    "en": ["We study in August.", "We are studying in August."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти телефонуєш о восьмій годині?",
-    "en": ["Are you calling at eight o’clock?", "Are you calling at eight?"]
+    "en": ["Do you call at eight o’clock?", "Are you calling at eight o’clock?"]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато дітей грають улітку.",
-    "en": ["Many children play in the summer.", "A lot of children are playing in the summer."]
+    "en": ["Many children play in the summer.", "A lot of children play in the summer."]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей учень читає ввечері.",
-    "en": ["This student is reading in the evening.", "That student is currently reading in the evening."]
+    "en": ["This student reads in the evening.", "This student is reading in the evening."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ця лекція починається о десятій годині?",
-    "en": ["Does this lecture start at ten o’clock?", "Is this lecture starting at ten?"]
+    "en": ["Does this lecture start at ten o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Я готую о другій годині.",
-    "en": ["I am cooking at two o’clock.", "I’m currently cooking at two o’clock."]
+    "en": ["I cook at two o’clock.", "I am cooking at two o’clock."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі туристи приїжджають восени.",
-    "en": ["Some tourists are arriving in the fall.", "Certain tourists are arriving in the autumn."]
+    "en": ["Some tourists arrive in the fall.", "Some tourists arrive in the autumn."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона працює в середу?",
-    "en": ["Is she working on Wednesday?", "Does she work on Wednesday?"]
+    "en": ["Does she work on Wednesday?", "Is she working on Wednesday?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця група співає вранці.",
-    "en": ["This group is singing in the morning.", "That group is currently singing in the morning."]
+    "en": ["This group sings in the morning.", "This group is singing in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей автобус прибуває о п’ятій годині?",
-    "en": ["Does this bus arrive at five o’clock?", "Is this bus arriving at five?"]
+    "en": ["Does this bus arrive at five o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Він дивиться телевізор ввечері.",
-    "en": ["He is watching TV in the evening.", "He’s currently watching TV in the evening."]
+    "en": ["He watches TV in the evening.", "He is watching TV in the evening."]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато студентів навчаються взимку.",
-    "en": ["Many students study in the winter.", "A lot of students are studying in the winter."]
+    "en": ["Many students study in the winter.", "A lot of students study in the winter."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ти спиш опівдні?",
-    "en": ["Are you sleeping at noon?", "Are you sleeping at midday?"]
+    "en": ["Do you sleep at noon?", "Are you sleeping at noon?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця дівчина танцює в суботу.",
-    "en": ["This girl is dancing on Saturday.", "That girl is currently dancing on Saturday."]
+    "en": ["This girl dances on Saturday.", "This girl is dancing on Saturday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей фільм починається о дев’ятій годині?",
-    "en": ["Does this movie start at nine o’clock?", "Is this movie starting at nine?"]
+    "en": ["Does this movie start at nine o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ми гуляємо в парку вранці.",
-    "en": ["We are walking in the park in the morning.", "We’re currently walking in the park in the morning."]
+    "en": ["We walk in the park in the morning.", "We are walking in the park in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі люди читають у вихідні.",
-    "en": ["Some people are reading on the weekend.", "Certain people are reading on the weekend."]
+    "en": ["Some people read on the weekend.", "Some people are reading on the weekend."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона готує о шостій годині?",
-    "en": ["Is she cooking at six o’clock?", "Is she cooking at six?"]
+    "en": ["Does she cook at six o’clock?", "Is she cooking at six o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей хлопець бігає вранці.",
-    "en": ["This boy is running in the morning.", "That boy is currently running in the morning."]
+    "en": ["This boy runs in the morning.", "This boy is running in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ця зустріч починається в понеділок?",
-    "en": ["Does this meeting start on Monday?", "Is this meeting starting on Monday?"]
+    "en": ["Does this meeting start on Monday?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Я пишу о десятій годині.",
-    "en": ["I am writing at ten o’clock.", "I’m currently writing at ten o’clock."]
+    "en": ["I write at ten o’clock.", "I am writing at ten o’clock."]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато працівників відпочивають у серпні.",
-    "en": ["Many workers rest in August.", "A lot of workers are resting in August."]
+    "en": ["Many workers rest in August.", "A lot of workers rest in August."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ти їдеш о восьмій годині?",
-    "en": ["Are you leaving at eight o’clock?", "Are you leaving at eight?"]
+    "en": ["Do you leave at eight o’clock?", "Are you leaving at eight o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця команда грає в четвер.",
-    "en": ["This team is playing on Thursday.", "That team is currently playing on Thursday."]
+    "en": ["This team plays on Thursday.", "This team is playing on Thursday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей поїзд прибуває опівночі?",
-    "en": ["Does this train arrive at midnight?", "Is this train arriving at midnight?"]
+    "en": ["Does this train arrive at midnight?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Він малює вранці.",
-    "en": ["He is painting in the morning.", "He’s currently painting in the morning."]
+    "en": ["He paints in the morning.", "He is painting in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі діти співають у неділю.",
-    "en": ["Some children are singing on Sunday.", "Certain children are singing on Sunday."]
+    "en": ["Some children sing on Sunday.", "Some children are singing on Sunday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона читає вранці?",
-    "en": ["Is she reading in the morning?", "Does she read in the morning?"]
+    "en": ["Does she read in the morning?", "Is she reading in the morning?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей учень вчиться ввечері.",
-    "en": ["This student is studying in the evening.", "That student is currently studying in the evening."]
+    "en": ["This student studies in the evening.", "This student is studying in the evening."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей концерт починається о сьомій годині?",
-    "en": ["Does this concert start at seven o’clock?", "Is this concert starting at seven?"]
+    "en": ["Does this concert start at seven o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Я сплю вночі.",
-    "en": ["I am sleeping at night.", "I’m currently sleeping at night."]
+    "en": ["I sleep at night."]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато туристів приїжджають навесні.",
-    "en": ["Many tourists arrive in the spring.", "A lot of tourists are arriving in the spring."]
+    "en": ["Many tourists arrive in the spring.", "A lot of tourists arrive in the spring."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ти працюєш у вівторок?",
-    "en": ["Are you working on Tuesday?", "Do you work on Tuesday?"]
+    "en": ["Do you work on Tuesday?", "Are you working on Tuesday?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця дівчина пише вранці.",
-    "en": ["This girl is writing in the morning.", "That girl is currently writing in the morning."]
+    "en": ["This girl writes in the morning.", "This girl is writing in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей урок починається о другій годині?",
-    "en": ["Does this lesson start at two o’clock?", "Is this lesson starting at two?"]
+    "en": ["Does this lesson start at two o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ми тренуємося вранці.",
-    "en": ["We are training in the morning.", "We’re currently training in the morning."]
+    "en": ["We train in the morning.", "We are training in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі гості приїжджають у вихідні.",
-    "en": ["Some guests are arriving on the weekend.", "Certain guests are arriving on the weekend."]
+    "en": ["Some guests arrive on the weekend.", "Some guests are arriving on the weekend."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона малює опівдні?",
-    "en": ["Is she painting at noon?", "Does she paint at noon?"]
+    "en": ["Does she paint at noon?", "Is she painting at noon?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей хлопець читає вночі.",
-    "en": ["This boy is reading at night.", "That boy is currently reading at night."]
+    "en": ["This boy reads at night.", "This boy is reading at night."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ця вечірка починається о десятій годині?",
-    "en": ["Does this party start at ten o’clock?", "Is this party starting at ten?"]
+    "en": ["Does this party start at ten o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Я читаю ввечері.",
-    "en": ["I am reading in the evening.", "I’m currently reading in the evening."]
+    "en": ["I read in the evening.", "I am reading in the evening."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ти працюєш у четвер?",
-    "en": ["Are you working on Thursday?", "Do you work on Thursday?"]
+    "en": ["Do you work on Thursday?", "Are you working on Thursday?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона готує обід опівдні.",
-    "en": ["She is cooking lunch at noon.", "She’s currently cooking lunch at noon."]
+    "en": ["She cooks lunch at noon.", "She is cooking lunch at noon."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі вчителі працюють восени.",
-    "en": ["Some teachers are working in the fall.", "Certain teachers are working in the autumn."]
+    "en": ["Some teachers work in the fall.", "Some teachers work in the autumn."]
   },
+
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "YES_NO_Q"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей студент навчається в п’ятницю?",
-    "en": ["Is this student studying on Friday?", "Does that student study on Friday?"]
+    "en": ["Does this student study on Friday?", "Is this student studying on Friday?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Він пише о дев’ятій годині.",
-    "en": ["He is writing at nine o’clock.", "He’s currently writing at nine o’clock."]
+    "en": ["He writes at nine o’clock.", "He is writing at nine o’clock."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ви тренуєтесь о шостій годині?",
-    "en": ["Are you training at six o’clock?", "Are you training at six?"]
+    "en": ["Do you train at six o’clock?", "Are you training at six o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Багато людей подорожують у серпні.",
-    "en": ["Many people are traveling in August.", "A lot of people are traveling in August."]
+    "en": ["Many people travel in August.", "A lot of people travel in August."]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця команда грає в суботу.",
-    "en": ["This team is playing on Saturday.", "That team is currently playing on Saturday."]
+    "en": ["This team plays on Saturday.", "This team is playing on Saturday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES", "DEMONSTRATIVES"],
     "ua": "Ця кав’ярня відкрита вранці?",
-    "en": ["Is this cafe open in the morning?", "Is that cafe open in the morning?"]
+    "en": ["Is this cafe open in the morning?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ми дивимося фільм вночі.",
-    "en": ["We are watching a movie at night.", "We’re currently watching a movie at night."]
+    "en": ["We watch a movie at night.", "We are watching a movie at night."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ти бігаєш о сьомій годині?",
-    "en": ["Are you running at seven o’clock?", "Are you running at seven?"]
+    "en": ["Do you run at seven o’clock?", "Are you running at seven o’clock?"]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато дітей відпочивають улітку.",
-    "en": ["Many children rest in the summer.", "A lot of children are resting in the summer."]
+    "en": ["Many children rest in the summer.", "A lot of children rest in the summer."]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей учень малює ввечері.",
-    "en": ["This student is drawing in the evening.", "That student is currently drawing in the evening."]
+    "en": ["This student draws in the evening.", "This student is drawing in the evening."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ця вистава починається о восьмій годині?",
-    "en": ["Does this show start at eight o’clock?", "Is this show starting at eight?"]
+    "en": ["Does this show start at eight o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Я вчу уроки вранці.",
-    "en": ["I am studying lessons in the morning.", "I’m currently studying lessons in the morning."]
+    "en": ["I study in the morning.", "I am studying in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі туристи гуляють у вихідні.",
-    "en": ["Some tourists are walking on the weekend.", "Certain tourists are walking on the weekend."]
+    "en": ["Some tourists walk on the weekend.", "Some tourists are walking on the weekend."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона співає в середу?",
-    "en": ["Is she singing on Wednesday?", "Does she sing on Wednesday?"]
+    "en": ["Does she sing on Wednesday?", "Is she singing on Wednesday?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця група танцює вранці.",
-    "en": ["This group is dancing in the morning.", "That group is currently dancing in the morning."]
+    "en": ["This group dances in the morning.", "This group is dancing in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей літак вилітає о десятій годині?",
-    "en": ["Does this plane depart at ten o’clock?", "Is this plane departing at ten?"]
+    "en": ["Does this plane depart at ten o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Він тренується вранці.",
-    "en": ["He is training in the morning.", "He’s currently training in the morning."]
+    "en": ["He trains in the morning.", "He is training in the morning."]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато студентів читають взимку.",
-    "en": ["Many students read in the winter.", "A lot of students are reading in the winter."]
+    "en": ["Many students read in the winter.", "A lot of students read in the winter."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ти готуєш обід опівдні?",
-    "en": ["Are you cooking lunch at noon?", "Are you cooking lunch at midday?"]
+    "en": ["Do you cook lunch at noon?", "Are you cooking lunch at noon?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця дівчина пише в суботу.",
-    "en": ["This girl is writing on Saturday.", "That girl is currently writing on Saturday."]
+    "en": ["This girl writes on Saturday.", "This girl is writing on Saturday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ця конференція починається в понеділок?",
-    "en": ["Does this conference start on Monday?", "Is this conference starting on Monday?"]
+    "en": ["Does this conference start on Monday?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ми готуємося до іспиту вранці.",
-    "en": ["We are preparing for the exam in the morning.", "We’re currently preparing for the exam in the morning."]
+    "en": ["We prepare for the exam in the morning.", "We are preparing for the exam in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі люди співають у неділю.",
-    "en": ["Some people are singing on Sunday.", "Certain people are singing on Sunday."]
+    "en": ["Some people sing on Sunday.", "Some people are singing on Sunday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона пише о п’ятій годині?",
-    "en": ["Is she writing at five o’clock?", "Is she writing at five?"]
+    "en": ["Does she write at five o’clock?", "Is she writing at five o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей хлопець читає вранці.",
-    "en": ["This boy is reading in the morning.", "That boy is currently reading in the morning."]
+    "en": ["This boy reads in the morning.", "This boy is reading in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей семінар починається о другій годині?",
-    "en": ["Does this seminar start at two o’clock?", "Is this seminar starting at two?"]
+    "en": ["Does this seminar start at two o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Я малюю о десятій годині.",
-    "en": ["I am drawing at ten o’clock.", "I’m currently drawing at ten o’clock."]
+    "en": ["I draw at ten o’clock.", "I am drawing at ten o’clock."]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато працівників працюють у липні.",
-    "en": ["Many workers work in July.", "A lot of workers are working in July."]
+    "en": ["Many workers work in July.", "A lot of workers work in July."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Ти танцюєш о сьомій годині?",
-    "en": ["Are you dancing at seven o’clock?", "Are you dancing at seven?"]
+    "en": ["Do you dance at seven o’clock?", "Are you dancing at seven o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця команда тренується в п’ятницю.",
-    "en": ["This team is training on Friday.", "That team is currently training on Friday."]
+    "en": ["This team trains on Friday.", "This team is training on Friday."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Цей поїзд відправляється опівночі?",
-    "en": ["Does this train depart at midnight?", "Is this train departing at midnight?"]
+    "en": ["Does this train depart at midnight?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Він співає ввечері.",
-    "en": ["He is singing in the evening.", "He’s currently singing in the evening."]
+    "en": ["He sings in the evening.", "He is singing in the evening."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Деякі діти грають у вихідні.",
-    "en": ["Some children are playing on the weekend.", "Certain children are playing on the weekend."]
+    "en": ["Some children play on the weekend.", "Some children are playing on the weekend."]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME"],
     "ua": "Вона читає вночі?",
-    "en": ["Is she reading at night?", "Does she read at night?"]
+    "en": ["Does she read at night?", "Is she reading at night?"]
   },
+
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей учень пише вранці.",
-    "en": ["This student is writing in the morning.", "That student is currently writing in the morning."]
+    "en": [
+      "This student writes in the morning.",
+      "This student is writing in the morning."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ця лекція починається о шостій годині?",
-    "en": ["Does this lecture start at six o’clock?", "Is this lecture starting at six?"]
+    "en": [
+      "Does this lecture start at six o’clock?",
+      "Is this lecture starting at six?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я готую вечерю ввечері.",
-    "en": ["I am preparing dinner in the evening.", "I’m currently preparing dinner in the evening."]
+    "en": [
+      "I cook dinner in the evening.",
+      "I prepare dinner in the evening.",
+      "I am preparing dinner in the evening."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато туристів відвідують місто навесні.",
-    "en": ["Many tourists visit the city in the spring.", "A lot of tourists are visiting the city in the spring."]
+    "en": [
+      "Many tourists visit the city in the spring.",
+      "A lot of tourists visit the city in the spring.",
+      "A lot of tourists are visiting the city in the spring."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти працюєш у вівторок?",
-    "en": ["Are you working on Tuesday?", "Do you work on Tuesday?"]
+    "en": [
+      "Do you work on Tuesday?",
+      "Are you working on Tuesday?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця дівчина малює вранці.",
-    "en": ["This girl is drawing in the morning.", "That girl is currently drawing in the morning."]
+    "en": [
+      "This girl draws in the morning.",
+      "This girl is drawing in the morning."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Цей захід починається о дев’ятій годині?",
-    "en": ["Does this event start at nine o’clock?", "Is this event starting at nine?"]
+    "en": [
+      "Does this event start at nine o’clock?",
+      "Is this event starting at nine?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ми бігаємо вранці.",
-    "en": ["We are running in the morning.", "We’re currently running in the morning."]
+    "en": [
+      "We run in the morning.",
+      "We go running in the morning.",
+      "We are running in the morning."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
     "ua": "Деякі гості танцюють у неділю.",
-    "en": ["Some guests are dancing on Sunday.", "Certain guests are dancing on Sunday."]
+    "en": [
+      "Some guests dance on Sunday.",
+      "Some guests are dancing on Sunday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Вона готує о десятій годині?",
-    "en": ["Is she cooking at ten o’clock?", "Is she cooking at ten?"]
+    "en": [
+      "Does she cook at ten o’clock?",
+      "Is she cooking at ten o’clock?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей хлопець співає ввечері.",
-    "en": ["This boy is singing in the evening.", "That boy is currently singing in the evening."]
+    "en": [
+      "This boy sings in the evening.",
+      "This boy is singing in the evening."
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я вивчаю математику вранці.",
-    "en": ["I am studying math in the morning.", "I’m currently studying math in the morning."]
+    "en": [
+      "I study math in the morning.",
+      "I am studying math in the morning."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти граєш у футбол у п’ятницю?",
-    "en": ["Are you playing football on Friday?", "Do you play football on Friday?"]
+    "en": [
+      "Do you play football on Friday?",
+      "Are you playing football on Friday?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Вона слухає музику вночі.",
-    "en": ["She is listening to music at night.", "She’s currently listening to music at night."]
+    "en": [
+      "She listens to music at night.",
+      "She is listening to music at night."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
     "ua": "Деякі учні пишуть есе восени.",
-    "en": ["Some students are writing essays in the fall.", "Certain students are writing essays in the autumn."]
+    "en": [
+      "Some students write essays in the fall.",
+      "Some students write essays in the autumn.",
+      "Some students are writing essays in the fall."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES", "YES_NO_Q"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Цей тренер працює в суботу?",
-    "en": ["Is this coach working on Saturday?", "Does that coach work on Saturday?"]
+    "en": [
+      "Does this coach work on Saturday?",
+      "Is this coach working on Saturday?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Він готує сніданок о сьомій годині.",
-    "en": ["He is preparing breakfast at seven o’clock.", "He’s currently preparing breakfast at seven."]
+    "en": [
+      "He prepares breakfast at seven o’clock.",
+      "He makes breakfast at seven o’clock.",
+      "He is preparing breakfast at seven o’clock."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ви зустрічаєтесь у вівторок?",
-    "en": ["Are you meeting on Tuesday?", "Do you meet on Tuesday?"]
+    "en": [
+      "Do you meet on Tuesday?",
+      "Are you meeting on Tuesday?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
     "ua": "Багато людей купують подарунки взимку.",
-    "en": ["Many people are buying gifts in the winter.", "A lot of people are buying gifts in the winter."]
+    "en": [
+      "Many people buy gifts in the winter.",
+      "A lot of people buy gifts in the winter.",
+      "A lot of people are buying gifts in the winter."
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця група репетирує ввечері.",
-    "en": ["This group is rehearsing in the evening.", "That group is currently rehearsing in the evening."]
+    "en": [
+      "This group rehearses in the evening.",
+      "This group is rehearsing in the evening."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES", "DEMONSTRATIVES"],
     "ua": "Ця бібліотека відкрита в неділю?",
-    "en": ["Is this library open on Sunday?", "Is that library open on Sunday?"]
+    "en": [
+      "Is this library open on Sunday?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ми вчимо англійську вранці.",
-    "en": ["We are learning English in the morning.", "We’re currently learning English in the morning."]
+    "en": [
+      "We learn English in the morning.",
+      "We study English in the morning.",
+      "We are learning English in the morning."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти пишеш листа о дев’ятій годині?",
-    "en": ["Are you writing a letter at nine o’clock?", "Are you writing a letter at nine?"]
+    "en": [
+      "Are you writing a letter at nine o’clock?",
+      "Are you writing a letter at nine?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато дітей малюють улітку.",
-    "en": ["Many children draw in the summer.", "A lot of children are drawing in the summer."]
+    "en": [
+      "Many children draw in the summer.",
+      "A lot of children draw in the summer.",
+      "A lot of children are drawing in the summer."
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей учень читає в суботу.",
-    "en": ["This student is reading on Saturday.", "That student is currently reading on Saturday."]
+    "en": [
+      "This student reads on Saturday.",
+      "This student is reading on Saturday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ця зустріч починається о восьмій годині?",
-    "en": ["Does this meeting start at eight o’clock?", "Is this meeting starting at eight?"]
+    "en": [
+      "Does this meeting start at eight o’clock?",
+      "Is this meeting starting at eight?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я слухаю радіо ввечері.",
-    "en": ["I am listening to the radio in the evening.", "I’m currently listening to the radio in the evening."]
+    "en": [
+      "I listen to the radio in the evening.",
+      "I am listening to the radio in the evening."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
     "ua": "Деякі туристи фотографують у вихідні.",
-    "en": ["Some tourists are taking photos on the weekend.", "Certain tourists are taking photos on the weekend."]
+    "en": [
+      "Some tourists take photos on the weekend.",
+      "Some tourists are taking photos on the weekend."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Вона бігає вранці?",
-    "en": ["Is she running in the morning?", "Does she run in the morning?"]
+    "en": [
+      "Does she run in the morning?",
+      "Is she running in the morning?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця команда тренується в понеділок.",
-    "en": ["This team is training on Monday.", "That team is currently training on Monday."]
+    "en": [
+      "This team trains on Monday.",
+      "This team is training on Monday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Цей автобус відправляється о шостій годині?",
-    "en": ["Does this bus depart at six o’clock?", "Is this bus departing at six?"]
+    "en": [
+      "Does this bus depart at six o’clock?",
+      "Is this bus departing at six?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Він читає газету вранці.",
-    "en": ["He is reading the newspaper in the morning.", "He’s currently reading the newspaper in the morning."]
+    "en": [
+      "He reads the newspaper in the morning.",
+      "He is reading the newspaper in the morning."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато студентів подорожують навесні.",
-    "en": ["Many students travel in the spring.", "A lot of students are traveling in the spring."]
+    "en": [
+      "Many students travel in the spring.",
+      "A lot of students travel in the spring.",
+      "A lot of students are traveling in the spring."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти спиш о десятій годині?",
-    "en": ["Are you sleeping at ten o’clock?", "Are you sleeping at ten?"]
+    "en": [
+      "Do you sleep at ten o’clock?",
+      "Are you sleeping at ten o’clock?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця дівчина танцює в неділю.",
-    "en": ["This girl is dancing on Sunday.", "That girl is currently dancing on Sunday."]
+    "en": [
+      "This girl dances on Sunday.",
+      "This girl is dancing on Sunday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Цей урок починається о сьомій годині?",
-    "en": ["Does this lesson start at seven o’clock?", "Is this lesson starting at seven?"]
+    "en": [
+      "Does this lesson start at seven o’clock?",
+      "Is this lesson starting at seven?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ми готуємо обід опівдні.",
-    "en": ["We are preparing lunch at noon.", "We’re currently preparing lunch at noon."]
+    "en": [
+      "We prepare lunch at noon.",
+      "We make lunch at noon.",
+      "We are preparing lunch at noon."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
     "ua": "Деякі люди читають у п’ятницю.",
-    "en": ["Some people are reading on Friday.", "Certain people are reading on Friday."]
+    "en": [
+      "Some people read on Friday.",
+      "Some people are reading on Friday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Вона малює о восьмій годині?",
-    "en": ["Is she drawing at eight o’clock?", "Is she drawing at eight?"]
+    "en": [
+      "Does she draw at eight o’clock?",
+      "Is she drawing at eight o’clock?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей хлопець бігає вранці.",
-    "en": ["This boy is running in the morning.", "That boy is currently running in the morning."]
+    "en": [
+      "This boy runs in the morning.",
+      "This boy is running in the morning."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ця подія починається в середу?",
-    "en": ["Does this event start on Wednesday?", "Is this event starting on Wednesday?"]
+    "en": [
+      "Does this event start on Wednesday?",
+      "Is this event starting on Wednesday?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я дивлюся телевізор ввечері.",
-    "en": ["I am watching TV in the evening.", "I’m currently watching TV in the evening."]
+    "en": [
+      "I watch TV in the evening.",
+      "I am watching TV in the evening."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато вчителів працюють у серпні.",
-    "en": ["Many teachers work in August.", "A lot of teachers are working in August."]
+    "en": [
+      "Many teachers work in August.",
+      "A lot of teachers work in August.",
+      "A lot of teachers are working in August."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти пишеш о п’ятій годині?",
-    "en": ["Are you writing at five o’clock?", "Are you writing at five?"]
+    "en": [
+      "Are you writing at five o’clock?",
+      "Are you writing at five?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця команда грає в четвер.",
-    "en": ["This team is playing on Thursday.", "That team is currently playing on Thursday."]
+    "en": [
+      "This team plays on Thursday.",
+      "This team is playing on Thursday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Цей потяг прибуває опівночі?",
-    "en": ["Does this train arrive at midnight?", "Is this train arriving at midnight?"]
+    "en": [
+      "Does this train arrive at midnight?",
+      "Is this train arriving at midnight?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Він готує вечерю вночі.",
-    "en": ["He is preparing dinner at night.", "He’s currently preparing dinner at night."]
+    "en": [
+      "He prepares dinner at night.",
+      "He is preparing dinner at night."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
     "ua": "Деякі діти співають у суботу.",
-    "en": ["Some children are singing on Saturday.", "Certain children are singing on Saturday."]
+    "en": [
+      "Some children sing on Saturday.",
+      "Some children are singing on Saturday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Вона тренується вранці?",
-    "en": ["Is she training in the morning?", "Does she train in the morning?"]
+    "en": [
+      "Does she train in the morning?",
+      "Is she training in the morning?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей учень малює в неділю.",
-    "en": ["This student is drawing on Sunday.", "That student is currently drawing on Sunday."]
+    "en": [
+      "This student draws on Sunday.",
+      "This student is drawing on Sunday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ця конференція починається о десятій годині?",
-    "en": ["Does this conference start at ten o’clock?", "Is this conference starting at ten?"]
+    "en": [
+      "Does this conference start at ten o’clock?",
+      "Is this conference starting at ten?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Я читаю книгу вранці.",
-    "en": ["I am reading a book in the morning.", "I’m currently reading a book in the morning."]
+    "en": [
+      "I read a book in the morning.",
+      "I am reading a book in the morning."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
     "ua": "Багато туристів приїжджають у травні.",
-    "en": ["Many tourists arrive in May.", "A lot of tourists are arriving in May."]
+    "en": [
+      "Many tourists arrive in May.",
+      "A lot of tourists arrive in May.",
+      "A lot of tourists are arriving in May."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ти працюєш у понеділок?",
-    "en": ["Are you working on Monday?", "Do you work on Monday?"]
+    "en": [
+      "Do you work on Monday?",
+      "Are you working on Monday?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Ця дівчина співає ввечері.",
-    "en": ["This girl is singing in the evening.", "That girl is currently singing in the evening."]
+    "en": [
+      "This girl sings in the evening.",
+      "This girl is singing in the evening."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Цей семінар починається о сьомій годині?",
-    "en": ["Does this seminar start at seven o’clock?", "Is this seminar starting at seven?"]
+    "en": [
+      "Does this seminar start at seven o’clock?",
+      "Is this seminar starting at seven?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Ми слухаємо музику вночі.",
-    "en": ["We are listening to music at night.", "We’re currently listening to music at night."]
+    "en": [
+      "We listen to music at night.",
+      "We are listening to music at night."
+    ]
   },
   {
     "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW"],
     "ua": "Деякі гості танцюють у п’ятницю.",
-    "en": ["Some guests are dancing on Friday.", "Certain guests are dancing on Friday."]
+    "en": [
+      "Some guests dance on Friday.",
+      "Some guests are dancing on Friday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Вона пише вранці?",
-    "en": ["Is she writing in the morning?", "Does she write in the morning?"]
+    "en": [
+      "Does she write in the morning?",
+      "Is she writing in the morning?"
+    ]
   },
   {
     "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
     "ua": "Цей хлопець читає в суботу.",
-    "en": ["This boy is reading on Saturday.", "That boy is currently reading on Saturday."]
+    "en": [
+      "This boy reads on Saturday.",
+      "This boy is reading on Saturday."
+    ]
   },
   {
-    "rules": ["PREP_TIME", "YES_NO_Q", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES"],
     "ua": "Ця вистава починається о шостій годині?",
-    "en": ["Does this show start at six o’clock?", "Is this show starting at six?"]
+    "en": [
+      "Does this show start at six o’clock?",
+      "Is this show starting at six?"
+    ]
   }
+
 ] }

@@ -1,504 +1,272 @@
 {
   "MUST_MUSTNT": [
     {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ти повинен закінчити домашнє завдання до вечора.",
-      "en": ["You must finish your homework by evening."]
-    },
-    {
       "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_PLACE"],
-      "ua": "Ми не повинні бути гучними в бібліотеці.",
-      "en": ["We mustn’t be loud in the library.", "We must not be loud in the library."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі студенти повинні прочитати цю книгу для іспиту.",
-      "en": ["Some students must read this book for the exam."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PREP_TIME"],
-      "ua": "Чи повинні ми прийти на зустріч завтра?",
-      "en": ["Must we come to the meeting tomorrow?"]
+      "ua": "У бібліотеці не можна кричати. (use MUST / MUSTN'T)",
+      "en": [
+        "You mustn’t shout in the library.",
+        "You must not shout in the library."
+      ]
     },
     {
       "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-      "ua": "Ви не повинні паркуватися тут, бо це приватна територія.",
-      "en": ["You mustn’t park here because it’s private property.", "You must not park here because it’s private property."]
+      "ua": "Паркуватися тут заборонено, тому що це приватна територія. (use MUST / MUSTN'T)",
+      "en": [
+        "You mustn’t park here because this is private property.",
+        "You must not park here because this is private property."
+      ]
     },
     {
-      "rules": ["MUST_MUSTNT", "DEMONSTRATIVES", "POSSESSIVE_S"],
-      "ua": "Цей учень повинен повернути татову книгу до бібліотеки.",
-      "en": ["This student must return his dad’s book to the library."]
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Цей учень повинен повернути книгу до бібліотеки. (use MUST / MUSTN'T)",
+      "en": ["This student must return the book to the library."]
     },
     {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вона не повинна запізнюватися, бо урок почнеться вчасно.",
-      "en": ["She mustn’t be late because the lesson will start on time.", "She must not be late because the lesson will start on time."]
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Ти повинен закінчити домашнє завдання до вечора. (use MUST / MUSTN'T)",
+      "en": ["You must finish your homework by this evening."]
     },
     {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинні ми допомогти йому з проєктом?",
-      "en": ["Must we help him with the project?"]
+      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
+      "ua": "Студенти повинні прочитати цю книгу для іспиту. (use MUST / MUSTN'T)",
+      "en": ["Students must read this book for the exam."]
     },
     {
       "rules": ["MUST_MUSTNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти повинен бути дуже обережним під час експерименту.",
+      "ua": "Ти повинен бути дуже обережним під час експерименту. (use MUST / MUSTN'T)",
       "en": ["You must be very careful during the experiment."]
     },
     {
-      "rules": ["MUST_MUSTNT", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-      "ua": "Він не повинен готуватися до іспиту сам у класі.",
-      "en": ["He mustn’t prepare for the exam by himself in the classroom.", "He must not prepare for the exam by himself in the classroom."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі гості повинні принести їжу на вечірку.",
-      "en": ["Some guests must bring food to the party."]
-    },
-    {
       "rules": ["MUST_MUSTNT", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-      "ua": "Ми повинні закінчити роботу, коли настане вечір.",
-      "en": ["We must finish the work when evening comes."]
+      "ua": "Ми повинні закінчити роботу сьогодні ввечері. (use MUST / MUSTN'T)",
+      "en": ["We must finish the work this evening."]
     },
     {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-      "ua": "Вона повинна уважно перевірити документи.",
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Під час поїздки ти повинен пристібати ремінь безпеки. (use MUST / MUSTN'T)",
+      "en": ["You must wear a seatbelt when driving to ensure your safety."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Студенти повинні виконати домашнє завдання до дедлайну. (use MUST / MUSTN'T)",
+      "en": ["Students must complete their homework before the deadline."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "У цій зоні не можна курити. (use MUST / MUSTN'T)",
+      "en": ["You mustn't smoke in this area as it is prohibited."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Водіям заборонено користуватися телефоном під час руху. (use MUST / MUSTN'T)",
+      "en": ["Drivers mustn't use their phones while operating a vehicle."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Ми повинні прибути в аеропорт за дві години до міжнародного рейсу. (use MUST / MUSTN'T)",
+      "en": ["We must arrive at the airport two hours early for international flights."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "Ти повинен показати посвідчення особи, щоб увійти до будівлі. (use MUST / MUSTN'T)",
+      "en": ["You must show your ID to enter the building."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "Працівники повинні носити захисні шоломи на будівництві. (use MUST / MUSTN'T)",
+      "en": ["Employees must wear safety helmets on the construction site."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "У зоопарку не можна годувати тварин. (use MUST / MUSTN'T)",
+      "en": ["You mustn't feed the animals in the zoo."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "Туристи повинні поважати місцеві звичаї під час відвідування храмів. (use MUST / MUSTN'T)",
+      "en": ["Tourists must respect local customs while visiting temples."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "POSSESSIVE_S"],
+      "ua": "Діти повинні тримати дорослого за руку, переходячи дорогу. (use MUST / MUSTN'T)",
+      "en": ["Children must hold an adult's hand when crossing the street."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Під час іспиту потрібно вимикати телефон. (use MUST / MUSTN'T)",
+      "en": ["You must turn off your phone during the exam."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Пасажирам не можна відкривати аварійний вихід без вказівки. (use MUST / MUSTN'T)",
+      "en": ["Passengers mustn't open the emergency exit unless instructed."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Ти повинен заздалегідь бронювати квитки на концерт. (use MUST / MUSTN'T)",
+      "en": ["You must book tickets in advance for the concert."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Водії повинні зупинятися на червоне світло без винятків. (use MUST / MUSTN'T)",
+      "en": ["Drivers must stop at red lights without exception."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Студенти повинні відвідувати всі обов’язкові лекції. (use MUST / MUSTN'T)",
+      "en": ["Students must attend all mandatory lectures."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE", "ARTICLES"],
+      "ua": "Відвідувачам не можна торкатися експонатів у музеї. (use MUST / MUSTN'T)",
+      "en": ["Visitors mustn't touch the artworks in the museum."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Ти повинен подати заявку до п’ятниці. (use MUST / MUSTN'T)",
+      "en": ["You must submit your application by Friday."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "POSSESSIVE_S"],
+      "ua": "Спортсмени повинні виконувати вказівки тренера під час тренування. (use MUST / MUSTN'T)",
+      "en": ["Athletes must follow the coach's instructions during training."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Ти не можеш розголошувати конфіденційну інформацію стороннім. (use MUST / MUSTN'T)",
+      "en": ["You mustn't reveal confidential information to outsiders."]
+    },
+
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "Покупці повинні оплатити товар перед виходом із магазину. (use MUST / MUSTN'T)",
+      "en": ["Customers must pay before leaving the store."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Працівникам заборонено використовувати робочі комп’ютери для ігор. (use MUST / MUSTN'T)",
+      "en": ["Employees mustn't use company computers for personal gaming."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Ти повинен приходити вчасно на прийом до лікаря. (use MUST / MUSTN'T)",
+      "en": ["You must arrive on time for your doctor's appointment."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Мандрівники повинні декларувати товари, що перевищують норму. (use MUST / MUSTN'T)",
+      "en": ["Travelers must declare goods over the allowance at customs."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Потрібно носити захисні окуляри під час роботи з хімікатами. (use MUST / MUSTN'T)",
+      "en": ["You must wear goggles when handling chemicals."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Ти повинен оновити програмне забезпечення до останньої версії. (use MUST / MUSTN'T)",
+      "en": ["You must update your software to the latest version."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Гравці повинні потиснути руки після матчу. (use MUST / MUSTN'T)",
+      "en": ["Players must shake hands after the match."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Не можна копіювати чужу роботу без посилання. (use MUST / MUSTN'T)",
+      "en": ["You mustn't copy someone else's work without citation."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "Потрібно замикати двері, виходячи з офісу. (use MUST / MUSTN'T)",
+      "en": ["You must lock the door when leaving the office."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Велосипедисти повинні користуватися велодоріжками там, де вони є. (use MUST / MUSTN'T)",
+      "en": ["Cyclists must use bike lanes where available."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Ти повинен надати рекомендації для своєї заявки на роботу. (use MUST / MUSTN'T)",
+      "en": ["You must provide references for your job application."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Покупці повинні правильно сканувати товари на самообслуговуванні. (use MUST / MUSTN'T)",
+      "en": ["Shoppers must scan items at self-checkout correctly."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "Волонтери повинні зареєструватися на стійці реєстрації. (use MUST / MUSTN'T)",
+      "en": ["Volunteers must sign in at the registration desk."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Потрібно пристебнути ремінь безпеки перед зльотом. (use MUST / MUSTN'T)",
+      "en": ["You must fasten your seatbelt before takeoff."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_PLACE"],
+      "ua": "Глядачі повинні вимикати пристрої в театрі. (use MUST / MUSTN'T)",
+      "en": ["Audience members must silence their devices in the theater."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Ти повинен отримати дозвіл, щоб знімати у публічних місцях. (use MUST / MUSTN'T)",
+      "en": [
+        "You must obtain permission to film in public areas.",
+        "You must get permission to film in public places."
+      ]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Водіям не можна вживати алкоголь перед керуванням технікою. (use MUST / MUSTN'T)",
+      "en": ["Drivers mustn't drink alcohol before operating machinery."]
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "ua": "Ти повинен підписувати всі контейнери з їжею в спільному холодильнику. (use MUST / MUSTN'T)",
+      "en": ["You must label all food containers in the shared fridge."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Учасники повинні розігрітися перед початком забігу. (use MUST / MUSTN'T)",
+      "en": ["Participants must warm up before the race starts."]
+    },
+    {
+      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER"],
+      "ua": "Вона повинна уважно перевірити документи. (use MUST / MUSTN'T)",
       "en": ["She must check the documents carefully."]
     },
     {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-      "ua": "Він не повинен кричати, бо це буде неввічливо.",
-      "en": ["He mustn’t shout because it will be rude.", "He must not shout because it will be rude."]
-    },
-    {
       "rules": ["MUST_MUSTNT", "PREP_TIME", "DEMONSTRATIVES"],
-      "ua": "Ці діти повинні прийти до школи до восьмої ранку.",
-      "en": ["These children must come to school by eight in the morning."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "COUNT_UNCOUNT"],
-      "ua": "Скільки часу ми повинні чекати на автобус?",
-      "en": ["How much time must we wait for the bus?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже гучними на концерті.",
-      "en": ["You mustn’t be too loud at the concert.", "You must not be too loud at the concert."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинна вона подзвонити вчителю?",
-      "en": ["Must she call the teacher?"]
+      "ua": "Діти повинні прийти до школи до восьмої ранку. (use MUST / MUSTN'T)",
+      "en": [
+        "Children must come to school by eight in the morning.",
+        "Children must arrive at school by eight in the morning."
+      ]
     },
     {
       "rules": ["MUST_MUSTNT", "ARTICLES", "POSSESSIVE_S"],
-      "ua": "Я повинен полагодити братову машину.",
+      "ua": "Я повинен полагодити машину брата. (use MUST / MUSTN'T)",
       "en": ["I must fix my brother’s car."]
     },
     {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні бути пізно на вечірці.",
-      "en": ["They mustn’t be late for the party.", "They must not be late for the party."]
+      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER"],
+      "ua": "Він повинен швидко написати звіт, щоб усе було готово. (use MUST / MUSTN'T)",
+      "en": ["He must write the report quickly so everything is ready."]
     },
     {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі учні не повинні розмовляти в класі.",
-      "en": ["Some students mustn’t talk in the classroom.", "Some students must not talk in the classroom."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-      "ua": "Він повинен швидко написати звіт, щоб він був готовим.",
-      "en": ["He must write the report quickly so it’s ready."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-      "ua": "Ми повинні поспішити, бо поїзд скоро відправиться.",
-      "en": ["We must hurry because the train will leave soon."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "DEMONSTRATIVES", "PREP_TIME"],
-      "ua": "Ті гості не повинні запізнюватися на вечерю.",
-      "en": ["Those guests mustn’t be late for dinner.", "Those guests must not be late for dinner."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "PREP_PLACE"],
-      "ua": "Куди ми повинні піти після уроків?",
-      "en": ["Where must we go after lessons?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти не повинен бути дуже гучним під час презентації.",
-      "en": ["You mustn’t be too loud during the presentation.", "You must not be too loud during the presentation."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Вона повинна подати документи до понеділка.",
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
+      "ua": "Вона повинна подати документи до понеділка. (use MUST / MUSTN'T)",
       "en": ["She must submit the documents by Monday."]
     },
     {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "COUNT_UNCOUNT"],
-      "ua": "Чи повинні ми принести багато їжі на пікнік?",
-      "en": ["Must we bring a lot of food to the picnic?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PREP_TIME", "SIMPLE_ADJ"],
-      "ua": "Він повинен бути в школі вчасно, щоб не пропустити урок.",
-      "en": ["He must be at school on time to not miss the lesson."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-      "ua": "Ці студенти не повинні забувати свої книги.",
-      "en": ["These students mustn’t forget their books.", "These students must not forget their books."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Вона не повинна запізнюватися, бо концерт почнеться вчасно.",
-      "en": ["She mustn’t be late because the concert will start on time.", "She must not be late because the concert will start on time."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-      "ua": "Вони повинні тихо поводитися в музеї.",
-      "en": ["They must behave quietly in the museum."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "ARTICLES"],
-      "ua": "Я не повинен забути принести нову ручку.",
-      "en": ["I mustn’t forget to bring a new pen.", "I must not forget to bring a new pen."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Ми повинні бути обережними завтра на екскурсії.",
-      "en": ["We must be careful tomorrow on the excursion."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "SIMPLE_ADJ"],
-      "ua": "Чому ми повинні бути тихими в класі?",
-      "en": ["Why must we be quiet in the classroom?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "COUNT_UNCOUNT"],
-      "ua": "Він повинен купити багато продуктів для вечірки.",
-      "en": ["He must buy a lot of groceries for the party."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "DEMONSTRATIVES"],
-      "ua": "Чи повинні ці гості залишитися на вечерю?",
-      "en": ["Must these guests stay for dinner?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PREP_TIME", "POSSESSIVE_S"],
-      "ua": "Вона не повинна забути мамин подарунок до завтра.",
-      "en": ["She mustn’t forget her mom’s gift by tomorrow.", "She must not forget her mom’s gift by tomorrow."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі діти повинні грати на майданчику.",
-      "en": ["Some children must play on the playground."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-      "ua": "Він не повинен поспішно відповідати, бо це може бути неправильно.",
-      "en": ["He mustn’t answer hastily because it might be wrong.", "He must not answer hastily because it might be wrong."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ми повинні приїхати на вокзал до шостої вечора.",
+      "rules": ["MUST_MUSTNT", "PREP_PLACE", "PREP_TIME"],
+      "ua": "Ми повинні приїхати на вокзал до шостої вечора. (use MUST / MUSTN'T)",
       "en": ["We must arrive at the station by six in the evening."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PREP_TIME", "ARTICLES"],
-      "ua": "Я не повинен забути взяти квиток до завтра.",
-      "en": ["I mustn’t forget to take a ticket by tomorrow.", "I must not forget to take a ticket by tomorrow."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PREP_PLACE"],
-      "ua": "Чи повинні ми залишатися в класі після уроків?",
-      "en": ["Must we stay in the classroom after lessons?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-      "ua": "Деякі вчителі не повинні бути суворими з учнями.",
-      "en": ["Some teachers mustn’t be strict with students.", "Some teachers must not be strict with students."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-      "ua": "Цей учень повинен старанно працювати над проєктом.",
-      "en": ["This student must work diligently on the project."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Вона повинна поспішити, бо урок скоро почнеться.",
-      "en": ["She must hurry because the lesson will start soon."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Що ми повинні зробити для підготовки до іспиту?",
-      "en": ["What must we do to prepare for the exam?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже шумними в театрі.",
-      "en": ["You mustn’t be too noisy in the theater.", "You must not be too noisy in the theater."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "ARTICLES"],
-      "ua": "Я повинен купити нову книгу для школи.",
-      "en": ["I must buy a new book for school."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні бути пізно на тренування завтра.",
-      "en": ["They mustn’t be late for training tomorrow.", "They must not be late for training tomorrow."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ти повинен подзвонити вчителю до обіду.",
-      "en": ["You must call the teacher by noon."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_PLACE"],
-      "ua": "Ми не повинні бути неуважними на уроці.",
-      "en": ["We mustn’t be inattentive in class.", "We must not be inattentive in class."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі учні повинні принести нову дошку до класу.",
-      "en": ["Some students must bring a new board to the class."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PREP_TIME"],
-      "ua": "Чи повинні ми закінчити проєкт до п’ятниці?",
-      "en": ["Must we finish the project by Friday?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-      "ua": "Ви не повинні курити в парку, бо це заборонено.",
-      "en": ["You mustn’t smoke in the park because it’s forbidden.", "You must not smoke in the park because it’s forbidden."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "DEMONSTRATIVES", "POSSESSIVE_S"],
-      "ua": "Ця дівчина повинна повернути сестрину книгу до бібліотеки.",
-      "en": ["This girl must return her sister’s book to the library."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Він не повинен бути грубим на зустрічі завтра.",
-      "en": ["He mustn’t be rude at the meeting tomorrow.", "He must not be rude at the meeting tomorrow."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинні ми прибирати клас після уроків?",
-      "en": ["Must we clean the classroom after lessons?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти повинен бути дуже уважним на дорозі.",
-      "en": ["You must be very careful on the road."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-      "ua": "Вона не повинна готуватися до тесту сама в кімнаті.",
-      "en": ["She mustn’t prepare for the test by herself in the room.", "She must not prepare for the test by herself in the room."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Деякі гості повинні замовити квитки на концерт.",
-      "en": ["Some guests must book tickets for the concert."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-      "ua": "Ми повинні вийти, коли закінчиться дощ.",
-      "en": ["We must leave when the rain stops."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-      "ua": "Він повинен старанно працювати над домашнім завданням.",
-      "en": ["He must work diligently on the homework."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-      "ua": "Вона не повинна кричати, бо це буде неввічливо.",
-      "en": ["She mustn’t shout because it will be rude.", "She must not shout because it will be rude."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PREP_TIME", "DEMONSTRATIVES"],
-      "ua": "Ці учні повинні бути в школі до дев’ятої ранку.",
-      "en": ["These students must be at school by nine in the morning."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "COUNT_UNCOUNT"],
-      "ua": "Скільки книг ми повинні прочитати для іспиту?",
-      "en": ["How many books must we read for the exam?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже гучними в театрі.",
-      "en": ["You mustn’t be too loud in the theater.", "You must not be too loud in the theater."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Чи повинні ми допомогти їй з презентацією?",
-      "en": ["Must we help her with the presentation?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ARTICLES", "POSSESSIVE_S"],
-      "ua": "Я повинен почистити татів велосипед.",
-      "en": ["I must clean my dad’s bike."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні запізнюватися на концерт завтра.",
-      "en": ["They mustn’t be late for the concert tomorrow.", "They must not be late for the concert tomorrow."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі діти не повинні бігати в коридорі.",
-      "en": ["Some children mustn’t run in the corridor.", "Some children must not run in the corridor."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-      "ua": "Вона повинна акуратно написати лист, щоб він був зрозумілим.",
-      "en": ["She must write the letter neatly so it’s clear."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-      "ua": "Ми повинні поспішити, бо автобус скоро відправиться.",
-      "en": ["We must hurry because the bus will leave soon."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "DEMONSTRATIVES", "PREP_TIME"],
-      "ua": "Ті гості повинні прийти до вечері до сьомої.",
-      "en": ["Those guests must come to dinner by seven."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "PREP_PLACE"],
-      "ua": "Куди ми повинні піти після зустрічі?",
-      "en": ["Where must we go after the meeting?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "SIMPLE_ADJ"],
-      "ua": "Ти не повинен бути дуже поспішним під час тесту.",
-      "en": ["You mustn’t be too hasty during the test.", "You must not be too hasty during the test."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Він повинен повернутися додому до восьмої вечора.",
-      "en": ["He must return home by eight in the evening."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "COUNT_UNCOUNT"],
-      "ua": "Чи повинні ми купити багато напоїв для вечірки?",
-      "en": ["Must we buy a lot of drinks for the party?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PREP_TIME", "SIMPLE_ADJ"],
-      "ua": "Вона повинна бути в офісі вчасно, щоб не пропустити зустріч.",
-      "en": ["She must be at the office on time to not miss the meeting."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-      "ua": "Ці учні не повинні забувати свої зошити.",
-      "en": ["These students mustn’t forget their notebooks.", "These students must not forget their notebooks."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Він не повинен запізнюватися, бо тренування почнеться вчасно.",
-      "en": ["He mustn’t be late because the training will start on time.", "He must not be late because the training will start on time."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-      "ua": "Вони повинні тихо поводитися в бібліотеці.",
-      "en": ["They must behave quietly in the library."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "ARTICLES"],
-      "ua": "Я не повинен забути взяти нову парасолю.",
-      "en": ["I mustn’t forget to bring a new umbrella.", "I must not forget to bring a new umbrella."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Ми повинні бути обережними завтра на прогулянці.",
-      "en": ["We must be careful tomorrow on the walk."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "SIMPLE_ADJ"],
-      "ua": "Чому ми повинні бути ввічливими на уроці?",
-      "en": ["Why must we be polite in class?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "COUNT_UNCOUNT"],
-      "ua": "Вона повинна купити багато фруктів для пікніка.",
-      "en": ["She must buy a lot of fruit for the picnic."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "DEMONSTRATIVES"],
-      "ua": "Чі повинні ці гості принести подарунки на свято?",
-      "en": ["Must these guests bring gifts to the celebration?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PREP_TIME", "POSSESSIVE_S"],
-      "ua": "Він не повинен забути братові ключі до завтра.",
-      "en": ["He mustn’t forget his brother’s keys by tomorrow.", "He must not forget his brother’s keys by tomorrow."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-      "ua": "Деякі учні повинні вчитися в бібліотеці.",
-      "en": ["Some students must study in the library."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-      "ua": "Вона не повинна поспішно відповідати, бо це може бути неправильно.",
-      "en": ["She mustn’t answer hastily because it might be wrong.", "She must not answer hastily because it might be wrong."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-      "ua": "Ми повинні приїхати на зупинку до п’ятої вечора.",
-      "en": ["We must arrive at the stop by five in the evening."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "PREP_TIME", "ARTICLES"],
-      "ua": "Я не повинен забути взяти квиток до вечора.",
-      "en": ["I mustn’t forget to take a ticket by evening.", "I must not forget to take a ticket by evening."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "YES_NO_Q", "PREP_PLACE"],
-      "ua": "Чи повинні ми залишатися в залі після концерту?",
-      "en": ["Must we stay in the hall after the concert?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-      "ua": "Деякі гості не повинні бути гучними на вечірці.",
-      "en": ["Some guests mustn’t be loud at the party.", "Some guests must not be loud at the party."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-      "ua": "Ця дівчина повинна акуратно працювати над малюнком.",
-      "en": ["This girl must work neatly on the drawing."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-      "ua": "Він повинен поспішити, бо поїзд скоро відправиться.",
-      "en": ["He must hurry because the train will leave soon."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "WH_Q", "PERSONAL_PRONOUNS"],
-      "ua": "Що ми повинні зробити для підготовки до свята?",
-      "en": ["What must we do to prepare for the celebration?"]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "TOO_VERY", "PREP_PLACE"],
-      "ua": "Ви не повинні бути дуже шумними в музеї.",
-      "en": ["You mustn’t be too noisy in the museum.", "You must not be too noisy in the museum."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "ARTICLES"],
-      "ua": "Я повинен купити нову папку для документів.",
-      "en": ["I must buy a new folder for documents."]
-    },
-    {
-      "rules": ["MUST_MUSTNT", "SIMPLE_ADJ", "PREP_TIME"],
-      "ua": "Вони не повинні бути пізно на виставку завтра.",
-      "en": ["They mustn’t be late for the exhibition tomorrow.", "They must not be late for the exhibition tomorrow."]
     }
   ]
 }
