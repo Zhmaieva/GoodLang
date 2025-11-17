@@ -78,21 +78,22 @@ export async function callSignUpApi(params) {
     return res.json();
 }
 
-export async function callAccountStatusApi() {
-    const url = `${API_BASE}/accounts/status`;
+export async function callAccountInfoApi() {
+    const url = `${API_BASE}/accounts/info`;
 
     const res = await fetch(url, {
         headers: {
             'Authorization': `Bearer ${await getToken()}`,
-        }
+        },
     });
 
     const data = await res.json();
 
     if (!res.ok) throw new Error("Server error: " + res.status);
 
-    return data; // {status: 'free'|'paid'|'attention'}
+    return data;
 }
+
 
 export async function callManageSubscriptionApi() {
     const url = `${API_BASE}/payments/manage`;
@@ -111,6 +112,30 @@ export async function callManageSubscriptionApi() {
 
     // backend should return: { url: "https://billing.stripe.com/..." }
     return { ...data, isSuccess: true };
+}
+
+export async function callSendCodeApi({ email }) {
+    const res = await fetch(`${API_BASE}/accounts/send-code`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data?.error || "Failed to send code");
+    return data;
+}
+
+export async function callVerifyCodeApi({ email, code }) {
+    const res = await fetch(`${API_BASE}/accounts/verify-code`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, code }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data?.error || "Failed to verify code");
+    return data; // { token: "..." }
 }
 
 

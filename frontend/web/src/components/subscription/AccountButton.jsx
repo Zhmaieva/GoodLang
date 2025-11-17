@@ -1,0 +1,61 @@
+import React, { useEffect, useState } from "react";
+import LoginModal from "./LoginModal.jsx";
+import { callAccountInfoApi } from "../../services/api.js";
+
+export default function AccountButton({ theme }) {
+    const [account, setAccount] = useState(null);
+    const [hover, setHover] = useState(false);
+    const [loginModalOpen, setLoginModalOpen] = useState(false);
+
+    useEffect(() => {
+        loadAccountInfo();
+        const interval = setInterval(loadAccountInfo, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
+    async function loadAccountInfo() {
+        try {
+            const data = await callAccountInfoApi();
+            setAccount(data);
+        } catch (e) {
+            console.error("Failed to load account info", e);
+            setAccount(null); // user not logged in
+        }
+    }
+
+    function handleClick() {
+        setLoginModalOpen(true);
+    }
+
+    const btnStyle = {
+        appearance: "none",
+        padding: "10px 16px",
+        fontWeight: 800,
+        fontSize: 14,
+        lineHeight: 1,
+        borderRadius: 999,
+        cursor: "pointer",
+        background: account?.status === "free" ? theme.green : theme.accent,
+        color: "#fff",
+        border: `2px solid ${account?.status === "free" ? theme.greenDark : theme.accent}`,
+        boxShadow: `2px 2px 0 ${account?.status === "free" ? theme.greenDark : theme.accentDark}`,
+        transform: hover ? "translateY(1px)" : "none",
+        transition: "transform 120ms ease",
+    };
+
+    return (
+        <>
+            <button
+                style={btnStyle}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                onClick={handleClick}
+            >
+                {!account?.email && "Sign In"}
+                {account?.email}
+            </button>
+
+            <LoginModal theme={theme} account={account} open={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
+        </>
+    );
+}

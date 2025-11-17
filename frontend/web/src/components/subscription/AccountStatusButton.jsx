@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import { callAccountStatusApi } from "../../services/api.js";
+import {callAccountInfoApi} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
 
@@ -24,7 +24,7 @@ export default function AccountStatusButton({ theme }) {
 
     async function loadStatus() {
         try {
-            const data = await callAccountStatusApi();
+            const data = await callAccountInfoApi();
             setStatus(data.status);
         } catch (e) {
             console.error("Failed to load account status", e);

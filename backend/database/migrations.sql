@@ -163,3 +163,31 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: add_sign_in_links
+-- Description: Creates the sign_in_links table for email verification codes
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'add_sign_in_links'
+        ) THEN
+            DROP TABLE sign_in_links;
+            CREATE TABLE IF NOT EXISTS sign_in_links (
+                 account_id UUID NOT NULL UNIQUE REFERENCES accounts(id) ON DELETE CASCADE,
+                 email VARCHAR(255) NOT NULL UNIQUE,
+                 code VARCHAR(255) NOT NULL,
+                 created_at TIMESTAMPTZ NOT NULL DEFAULT (NOW() AT TIME ZONE 'UTC'),
+                 expires_at TIMESTAMPTZ NOT NULL DEFAULT (NOW() + interval '10 minutes')
+            );
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_sign_in_links', (NOW() AT TIME ZONE 'UTC'));
+        END IF;
+    END
+$$;
+
+COMMIT;

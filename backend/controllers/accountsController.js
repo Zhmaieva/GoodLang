@@ -1,4 +1,9 @@
-import {createAccount, getAccountStatus} from "../database/repositories/accountsRepository.js";
+import {
+    createAccount,
+    getAccountInfo,
+    sendVerificationCode,
+    verifyCode
+} from "../database/repositories/accountsRepository.js";
 import jwt from "jsonwebtoken";
 import {SECRET_KEY} from "../core/constants.js";
 import {authMiddleware} from "../middleware/authMiddleware.js";
@@ -28,11 +33,41 @@ export const accountsController = {
             }
         });
 
-        app.get(`/${name}/status`, authMiddleware, async (req, res, next) => {
+        app.get(`/accounts/info`, authMiddleware, async (req, res, next) => {
             try {
-                const status = await getAccountStatus(req.user.id);
+                const account = await getAccountInfo(req.user.id);
+                res.json(account);
+            } catch (e) {
+                next(e);
+            }
+        });
 
-                res.json({status});
+        // Request a verification code
+        app.post(`/accounts/send-code`, async (req, res, next) => {
+            try {
+                const { email } = req.body;
+                if (!email) return res.status(400).json({ error: "Email required" });
+
+                await sendVerificationCode(email);
+
+                res.json({ message: "Verification code sent" });
+            } catch (e) {
+                next(e);
+            }
+        });
+
+        // Verify the code and return a JWT token
+        app.post(`/accounts/verify-code`, async (req, res, next) => {
+            try {
+                const { email, code } = req.body;
+                if (!email || !code) return res.status(400).json({ error: "Email and code required" });
+
+                const accountId = await verifyCode(email, code);
+                if (!accountId) return res.status(400).json({ error: "Invalid or expired code" });
+
+                const token = jwt.sign({ id: accountId }, SECRET_KEY);
+
+                res.json({ message: "Logged in successfully", userId: accountId, token });
             } catch (e) {
                 next(e);
             }

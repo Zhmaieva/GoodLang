@@ -1,6 +1,6 @@
 import { pool } from '../pool.js';
 import { ACTION_TYPES } from '../../core/constants.js';
-import {getAccountStatus} from "./accountsRepository.js";
+import {getAccountInfo} from "./accountsRepository.js";
 
 /**
  * Check translation usage limit
@@ -10,7 +10,7 @@ import {getAccountStatus} from "./accountsRepository.js";
  * @returns {Promise<{ allowed: boolean, waitTimeSeconds: number }>}
  */
 export async function checkTranslationLimit(accountId, limit = 10, hours = 3) {
-    const status = await getAccountStatus(accountId);
+    const status = (await getAccountInfo(accountId)).status;
 
     if (status === 'paid') {
         return { allowed: true, waitTimeSeconds: 0 }; // no limit for paid users

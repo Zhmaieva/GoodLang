@@ -21,8 +21,7 @@ export async function getToken() {
 }
 
 /* todo:
-- data sync
-- data sync of free after paid
-- data sync after return to paid subscription
-- sign in to another account
+- disable sync for free accounts
+- add GoodLang mail account with pass
+- update rules dictionary
  */

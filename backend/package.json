@@ -15,6 +15,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^7.0.0",
+    "nodemailer": "^7.0.10",
     "openai": "^6.3.0",
     "pg": "^8.16.3",
     "raw-body": "^3.0.1",

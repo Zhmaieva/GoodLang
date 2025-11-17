@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import LevelSwitch from "./LevelSwitch";
-import { callAccountStatusApi } from "../services/api.js";
-import LimitModal from "./subscription/LimitModal.jsx";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
+import AccountButton from "./subscription/AccountButton.jsx";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const styles = {
@@ -41,7 +40,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         h1: {
             margin: 0,
             fontWeight: 900,
-            fontSize: 40,               // big like in the screenshot
+            fontSize: 40,
             lineHeight: 1,
             letterSpacing: ".01em",
             color: theme.accentDark,
@@ -59,35 +58,40 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             gap: 10,
             marginLeft: "auto",
         },
+
+        accountButtonsWrapper: {
+            display: "flex",
+            alignItems: "center",
+            gap: 8, // gap between AccountStatusButton and AccountButton
+        },
     };
 
     return (
-        <>
-            <header style={styles.header}>
-                <div style={styles.brand}>
-                    <div style={styles.logo} aria-hidden="true">GL</div>
-                    <div style={styles.titleWrap}>
-                        <h1 style={styles.h1}>GoodLang</h1>
-                        <div style={styles.sub}>Переклад → короткий фідбек → нове речення згідно твого рівня</div>
-                    </div>
+        <header style={styles.header}>
+            <div style={styles.brand}>
+                <div style={styles.logo} aria-hidden="true">GL</div>
+                <div style={styles.titleWrap}>
+                    <h1 style={styles.h1}>GoodLang</h1>
+                    <div style={styles.sub}>Переклад → короткий фідбек → нове речення згідно твого рівня</div>
+                </div>
+            </div>
+
+            <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                <div style={styles.accountButtonsWrapper}>
+                    <AccountStatusButton theme={theme} />
+                    <AccountButton theme={theme} />
                 </div>
 
-                <div style={{display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center"}}>
-                    <div>
-                        <AccountStatusButton theme={theme} />
-                    </div>
-                    <div style={styles.right}>
-                        <LevelSwitch
-                            level={level}
-                            loading={loading}
-                            onLevelChange={onLevelChange}
-                            theme={theme}
-                            compact
-                        />
-                    </div>
+                <div style={styles.right}>
+                    <LevelSwitch
+                        level={level}
+                        loading={loading}
+                        onLevelChange={onLevelChange}
+                        theme={theme}
+                        compact
+                    />
                 </div>
-
-            </header>
-        </>
+            </div>
+        </header>
     );
 }
