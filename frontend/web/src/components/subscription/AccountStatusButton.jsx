@@ -2,11 +2,14 @@ import React, {useEffect, useRef, useState} from "react";
 import {callAccountInfoApi} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
+import LoginForm from "./LoginForm.jsx";
+import LoginModal from "./LoginModal.jsx";
 
 export default function AccountStatusButton({ theme }) {
-    const [status, setStatus] = useState(null);
+    const [account, setAccount] = useState(null);
     const [hover, setHover] = useState(false);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
+    const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
 
     const effectRan = useRef(false); // <-- prevents double run
@@ -15,7 +18,11 @@ export default function AccountStatusButton({ theme }) {
         if (effectRan.current) return; // prevent second StrictMode call
         effectRan.current = true;
 
-        loadStatus().then();
+        loadStatus().then((data) => {
+            console.log(data);
+            if (data?.status === 'free' && data?.email)
+                setLimitModalOpen(true);
+        });
 
         setInterval(() => {
             loadStatus().then();
@@ -25,16 +32,23 @@ export default function AccountStatusButton({ theme }) {
     async function loadStatus() {
         try {
             const data = await callAccountInfoApi();
-            setStatus(data.status);
+            setAccount(data);
+
+            return data;
         } catch (e) {
             console.error("Failed to load account status", e);
         }
     }
 
     function handleClick() {
-        if (!status) return;
+        if (!account?.status) return;
 
-        if (status === "free") {
+        if (!account?.email) {
+            setLoginModalOpen(true);
+            return;
+        }
+
+        if (account?.status === "free") {
             setLimitModalOpen(true);
         } else {
             setStatusModalOpen(true);
@@ -44,26 +58,26 @@ export default function AccountStatusButton({ theme }) {
     // --- LevelSwitch-style button ---
     const btnStyle = (() => {
         // map to same semantic colors
-        const isPaid = status === "paid";
-        const isAttention = status === "attention";
-        const isFree = status === "free";
+        const isPaid = account?.status === "paid";
+        const isAttention = account?.status === "attention";
+        const isFree = account?.status === "free";
 
         let background = "#fffdf8";
         let border = theme.accent;
         let shadow = theme.accentDark;
         let color = theme.text;
 
-        if (isFree) {
+        if (isPaid) {
             background = theme.green;
             border = theme.greenDark;
             shadow = theme.greenDark;
             color = "#fff";
         } else if (isAttention) {
-            background = "#e6b800";
-            border = "#c99f00";
-            shadow = "#907000";
-            color = "#fff";
-        } else if (isPaid) {
+            background = "#fff";
+            border = theme.accent;
+            shadow = theme.accentDark;
+            color = theme.accent;
+        } else if (isFree) {
             background = theme.accent;
             color = "#fff";
             shadow = theme.accentDark;
@@ -85,22 +99,22 @@ export default function AccountStatusButton({ theme }) {
 
             transform: hover ? "translateY(1px)" : "none",
             transition: "transform 120ms ease",
-            opacity: status ? 1 : 0.65,
+            opacity: account?.status ? 1 : 0.65,
         };
     })();
 
     return (
         <>
-            {status && (
+            {account?.status && (
                 <div
                     style={btnStyle}
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
                     onClick={handleClick}
                 >
-                    {status === "paid" && "Преміум"}
-                    {status === "attention" && "Преміум закінчується"}
-                    {status === "free" && "Купити преміум"}
+                    {account?.status === "paid" && "Преміум"}
+                    {account?.status === "attention" && "Преміум закінчується"}
+                    {account?.status === "free" && "Купити преміум"}
                 </div>
             )}
 
@@ -115,8 +129,14 @@ export default function AccountStatusButton({ theme }) {
                 theme={theme}
                 open={statusModalOpen}
                 onClose={() => setStatusModalOpen(false)}
-                status={status}
+                status={account?.status}
             />
+
+            {
+                loginModalOpen &&
+                <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
+            }
+
         </>
     );
 }

@@ -23,5 +23,6 @@ export async function getToken() {
 /* todo:
 - disable sync for free accounts
 - add GoodLang mail account with pass
+- show timer when quota reached
 - update rules dictionary
  */

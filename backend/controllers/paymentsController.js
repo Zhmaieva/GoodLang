@@ -39,6 +39,7 @@ export const paymentsController = {
         app.post(`/${name}/create-checkout-session`, authMiddleware, async (req, res) => {
             try {
                 const accountId = req.user.id;
+                const account = await getAccountById(accountId);
 
                 if (!accountId) {
                     return res.status(400).json({error: "Missing accountId"});
@@ -49,6 +50,7 @@ export const paymentsController = {
                     mode: "subscription",
                     return_url: `${process.env.FRONTEND_URL}/payment/success`,
                     client_reference_id: accountId,
+                    customer_email: account.email,
                     line_items: [
                         {
                             price: process.env.STRIPE_PRICE_ID,
@@ -99,7 +101,6 @@ export const paymentsController = {
 
                     await updateSubscriptionForAccount(accountId, {
                         status: "active",
-                        email,
                         stripe_subscription_id: subscriptionId,
                         customer_id: session.customer,
                     });

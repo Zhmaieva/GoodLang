@@ -58,7 +58,7 @@ export async function updateSubscriptionForAccount(accountId, stripeSubscription
 
         // Load current account status
         const acc = await client.query(
-            "SELECT status, email FROM accounts WHERE id = $1 LIMIT 1;",
+            "SELECT status, stripe_customer_id FROM accounts WHERE id = $1 LIMIT 1;",
             [accountId]
         );
 
@@ -67,7 +67,7 @@ export async function updateSubscriptionForAccount(accountId, stripeSubscription
         }
 
         const oldStatus = acc.rows[0].status;
-        const email = acc.rows[0].email;
+        const customerId = acc.rows[0].stripe_customer_id;
         let newStatus = oldStatus;
 
         // --- RULES ---
@@ -88,10 +88,10 @@ export async function updateSubscriptionForAccount(accountId, stripeSubscription
             newStatus = "free";
         }
 
-        if (!email) {
+        if (!customerId) {
             await client.query(
-                "UPDATE accounts SET email = $1, stripe_customer_id = $2 WHERE id = $3;",
-                [stripeSubscription.email, stripeSubscription.customer_id, accountId]
+                "UPDATE accounts SET stripe_customer_id = $1 WHERE id = $2;",
+                [stripeSubscription.customer_id, accountId]
             );
         }
 

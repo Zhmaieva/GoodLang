@@ -191,3 +191,25 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: make_account_id_nullable_in_sign_in_links
+-- Description: Makes account_id nullable in sign_in_links
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'make_account_id_nullable_in_sign_in_links'
+        ) THEN
+            ALTER TABLE sign_in_links
+                ALTER COLUMN account_id DROP NOT NULL;
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('make_account_id_nullable_in_sign_in_links', (NOW() AT TIME ZONE 'UTC'));
+        END IF;
+    END
+$$;
+
+COMMIT;

@@ -81,12 +81,7 @@ export async function sendVerificationCode(email) {
         [email]
     );
 
-    if (!accounts[0]) {
-        // account not found → do not generate code
-        return null;
-    }
-
-    const accountId = accounts[0].id;
+    const accountId = !accounts[0] ? null : accounts[0].id;
 
     const code = (Math.floor(100000 + Math.random() * 900000)).toString(); // 6-digit code
     const expiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 min
@@ -109,7 +104,7 @@ export async function sendVerificationCode(email) {
  */
 export async function verifyCode(email, code) {
     const { rows } = await pool.query(
-        `SELECT account_id, expires_at FROM sign_in_links 
+        `SELECT account_id, expires_at FROM sign_in_links
          WHERE email=$1 AND code=$2`,
         [email, code]
     );
@@ -117,7 +112,38 @@ export async function verifyCode(email, code) {
     if (!rows[0]) return null;
 
     const now = new Date();
-    if (rows[0].expires_at < now) return null; // expired
+    if (rows[0].expires_at < now) return null;
 
-    return rows[0].account_id;
+    // CASE 1: Existing account
+    if (rows[0].account_id) {
+
+        // Optional: delete the code after use
+        await pool.query(`DELETE FROM sign_in_links WHERE email=$1`, [email]);
+
+        return rows[0].account_id;
+    }
+
+    // CASE 2: No account yet → create one
+    const { rows: accountRows } = await pool.query(
+        `INSERT INTO accounts (email)
+         VALUES ($1)
+         RETURNING id`,
+        [email]
+    );
+
+    const newAccountId = accountRows[0].id;
+
+    // Attach the new account_id to the link row
+    await pool.query(
+        `UPDATE sign_in_links
+         SET account_id=$1
+         WHERE email=$2`,
+        [newAccountId, email]
+    );
+
+    // Optional: delete the sign_in_link now that it's used
+    await pool.query(`DELETE FROM sign_in_links WHERE email=$1`, [email]);
+
+    return newAccountId;
 }
+

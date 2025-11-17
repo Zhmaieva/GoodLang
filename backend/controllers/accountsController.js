@@ -45,7 +45,7 @@ export const accountsController = {
         // Request a verification code
         app.post(`/accounts/send-code`, async (req, res, next) => {
             try {
-                const { email } = req.body;
+                const { email } = req.body.toLowerCase().trim();
                 if (!email) return res.status(400).json({ error: "Email required" });
 
                 await sendVerificationCode(email);

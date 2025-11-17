@@ -29,6 +29,20 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
 
     // LevelSwitch-style small button
     const manageBtnStyle = {
+        background: theme.accent,
+        border: `2px solid ${theme.accent}`,
+        boxShadow: `2px 2px 0 ${theme.accentDark}`,
+
+        color: "white",
+        padding: "12px 26px",
+        borderRadius: theme.radius,
+        cursor: "pointer",
+        fontSize: "1.1rem",
+        fontWeight: 700,
+        marginTop: 20
+    };
+
+    const closeBtnStyle = {
         appearance: "none",
         padding: "10px 18px",
         fontWeight: 800,
@@ -45,18 +59,6 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
         marginTop: 20,
         marginBottom: 6,
         transition: "transform 120ms ease",
-    };
-
-    const closeBtnStyle = {
-        background: theme.accent,
-        color: "white",
-        padding: "12px 26px",
-        borderRadius: theme.radius,
-        border: "none",
-        cursor: "pointer",
-        fontSize: "1.1rem",
-        fontWeight: 700,
-        marginTop: 20
     };
 
     const onManage = async () => {
@@ -122,18 +124,20 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                     </ul>
                 )}
 
-                {(status === "paid" || status === "attention") && (
-                    <button
-                        style={manageBtnStyle}
-                        onClick={onManage} // open stripe portal
-                    >
-                        Керувати підпискою
-                    </button>
-                )}
+                <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+                    {(status === "paid" || status === "attention") && (
+                        <button
+                            style={manageBtnStyle}
+                            onClick={onManage} // open stripe portal
+                        >
+                            Керувати підпискою
+                        </button>
+                    )}
 
-                <button onClick={onClose} style={closeBtnStyle}>
-                    Закрити
-                </button>
+                    <button onClick={onClose} style={closeBtnStyle}>
+                        Закрити
+                    </button>
+                </div>
             </div>
         </div>
     );

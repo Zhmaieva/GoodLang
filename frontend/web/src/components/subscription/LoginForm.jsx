@@ -132,29 +132,29 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     }, [step]);
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        <div style={{display: "flex", flexDirection: "column", gap: 12}}>
             {step === "email" && (
                 <>
-                    <h3>Login</h3>
+                    <h3>Введіть свій імейл</h3>
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="goodlang@example.com"
                         value={emailInput}
                         onChange={(e) => setEmailInput(e.target.value)}
-                        style={{ ...inputStyle, width: "100%" }}
+                        style={{...inputStyle, width: "100%"}}
                         required
                         disabled={loading}
                     />
                     <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
-                        {loading ? "Sending..." : "Send Verification Code"}
+                        {loading ? "Відправляю..." : "Підтвердити"}
                     </button>
                 </>
             )}
 
             {step === "code" && (
                 <>
-                    <h3>Enter Verification Code</h3>
-                    <div style={{ display: "flex", gap: 8 }}>
+                    <h3>Введіть код з імейлу</h3>
+                    <div style={{display: "flex", gap: 8}}>
                         {code.map((digit, i) => (
                             <input
                                 key={i}
@@ -169,15 +169,26 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                         ))}
                     </div>
                     <button style={buttonStyle} onClick={handleVerify} disabled={loading}>
-                        {loading ? "Verifying..." : "Verify"}
+                        {loading ? "Перевіряю..." : "Увійти"}
                     </button>
                 </>
             )}
 
-            {error && <div style={{ color: "red" }}>{error}</div>}
+            {error && <div style={{color: "red"}}>{error}</div>}
 
-            <button type="button" style={buttonCancelStyle} onClick={onClose} disabled={loading}>
-                Cancel
+            <button
+                onClick={onClose}
+                style={{
+                    background: "transparent",
+                    border: "none",
+                    color: theme.muted,
+                    fontSize: "0.95rem",
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                    opacity: 1
+                }}
+            >
+                Назад
             </button>
         </div>
     );
