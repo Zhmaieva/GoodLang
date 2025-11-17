@@ -20,6 +20,27 @@ export async function callCheckoutApi(accountId) {
     return  { ...data, isSuccess: true };
 }
 
+export async function callDataSyncApi(payload) {
+    const url = `${API_BASE}/data-sync`;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+        throw new Error("Sync failed: " + res.status);
+    }
+
+    return data;
+}
+
 export async function callTranslateAPI(params) {
     const qs = new URLSearchParams(params);
     const url = `${API_BASE}/translations?${qs.toString()}`;

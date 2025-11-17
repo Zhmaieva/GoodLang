@@ -1,49 +1,118 @@
-
 import { LEVEL_RULES, RULE_LABELS } from "../utils/rules";
+import {callDataSyncApi} from "./api.js";
 
 const STORAGE_KEY = "answers_data";
 const STORAGE_KEY_SEED = "samples_seed";
 const STORAGE_KEY_SKIP = "samples_skip";
+const STORAGE_KEY_LAST_SYNC = "answers_lastSync";
+const STORAGE_KEY_SEED_UPDATED = "seed_updatedAt";
+const STORAGE_KEY_DEVICE_ID = "device_id";
 
-export class AnswerData {
-    constructor() {
-        this.score = 0;
-        this.date = new Date();
-        this.rule = '';
-        this.level = '';
+export async function syncWithServer() {
+    const lastSync = localStorage.getItem(STORAGE_KEY_LAST_SYNC) || "1970-01-01T00:00:00Z";
+    const all = getAnswers();
+
+    // local answers since lastSync
+    const recent = all.filter(a => new Date(a.date) > new Date(lastSync));
+
+    // local seed state
+    const seedLocal = {
+        seed: Number(localStorage.getItem(STORAGE_KEY_SEED)),
+        skip: Number(localStorage.getItem(STORAGE_KEY_SKIP)),
+        updatedAt: localStorage.getItem(STORAGE_KEY_SEED_UPDATED)
+    };
+
+    const payload = {
+        since: lastSync,
+        deviceId: getDeviceId(),
+        answers: recent,
+        seedState: seedLocal,
+    };
+
+    const server = await callDataSyncApi(payload);
+
+    // merge answers
+    const merged = [...all, ...server.answers];
+    merged.sort((a, b) => new Date(a.date) - new Date(b.date));
+    saveAnswers(merged);
+
+    // merge seed/skip with "newest wins"
+    if (
+        server.seedState?.updatedAt &&
+        (!seedLocal.updatedAt || new Date(server.seedState.updatedAt) > new Date(seedLocal.updatedAt))
+    ) {
+        saveSeed(
+            { seed: server.seedState.seed, skip: server.seedState.skip },
+            true // keep timestamp
+        );
+        localStorage.setItem(STORAGE_KEY_SEED_UPDATED, server.seedState.updatedAt);
     }
+
+    // update last sync time
+    localStorage.setItem(STORAGE_KEY_LAST_SYNC, server.serverTime);
+}
+
+function getDeviceId() {
+    let id = localStorage.getItem(STORAGE_KEY_DEVICE_ID);
+    if (!id) {
+        id = crypto.randomUUID();
+        localStorage.setItem(STORAGE_KEY_DEVICE_ID, id);
+    }
+    return id;
 }
 
 let _answersCache = null;
 
 export function saveAnswers(data) {
+    _answersCache = data; // important
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
-export function saveSeed({seed, skip}) {
+export function saveSeed({seed, skip}, keepTimestamp = false) {
     localStorage.setItem(STORAGE_KEY_SEED, seed);
     localStorage.setItem(STORAGE_KEY_SKIP, skip);
+
+    if (!keepTimestamp) {
+        const updatedAt = new Date().toISOString();
+        localStorage.setItem(STORAGE_KEY_SEED_UPDATED, updatedAt);
+    }
 }
+
 
 export function getSeed() {
-   const seed = Number.parseInt(localStorage.getItem(STORAGE_KEY_SEED) ?? (Math.random() * 1000));
-   const skip = Number.parseInt(localStorage.getItem(STORAGE_KEY_SKIP) ?? 0);
-   return {seed, skip};
+    let seed = localStorage.getItem(STORAGE_KEY_SEED);
+    let skip = localStorage.getItem(STORAGE_KEY_SKIP);
+
+    if (seed == null) {
+        // deterministic seed per device
+        seed = Math.floor(Math.random() * 1000000);
+        localStorage.setItem(STORAGE_KEY_SEED, seed);
+        localStorage.setItem(STORAGE_KEY_SEED_UPDATED, new Date().toISOString());
+    }
+
+    if (skip == null) skip = 0;
+
+    return { seed: Number(seed), skip: Number(skip) };
 }
 
-export function addAnswer(scores, rules, level) {
-    const data = [...getAnswers()];
-    for (let i = 0; i < rules.length; i++) {
-        const answer = new AnswerData();
-        answer.score = scores[i];
-        answer.rule = rules[i];
-        answer.level = level;
 
-        data.push(answer);
+export function addAnswer(scores, rules, level) {
+    const deviceId = getDeviceId();
+    const now = new Date().toISOString();
+
+    const data = [...getAnswers()];
+
+    for (let i = 0; i < rules.length; i++) {
+        data.push({
+            score: scores[i] * 100,
+            rule: rules[i],
+            level,
+            date: now,
+            deviceId,
+        });
     }
 
     _answersCache = data;
-
     saveAnswers(data);
 }
 
@@ -62,17 +131,13 @@ function getAnswers() {
 }
 
 // --- Helpers ---
-function scoresArePercents(arr) {
-    return arr.some((x) => typeof x.score === "number" && x.score > 1);
+function toPercent(score) {
+    return typeof score === "number" ? score : 0;
 }
-function toPercent(score, asPercents) {
-    if (typeof score !== "number") return 0;
-    return asPercents ? score : score * 100;
-}
+
 function averageAccuracyPercent(items) {
     if (!items.length) return 0;
-    const perc = scoresArePercents(items);
-    const sum = items.reduce((acc, x) => acc + toPercent(x.score, perc), 0);
+    const sum = items.reduce((acc, x) => acc + toPercent(x.score), 0);
     return Math.round((sum / items.length) * 100) / 100;
 }
 function latestDateISO(items) {

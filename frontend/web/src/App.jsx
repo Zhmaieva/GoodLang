@@ -1,11 +1,12 @@
 import React, {useMemo} from "react";
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route, BrowserRouter} from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AnalyticsPage from "./components/pages/AnalyticsPage";
 import {RULE_PAGE_TO_BE} from "./services/rulePages.jsx";
 import RulePage from "./components/pages/RulePage.jsx";
 import PaymentSuccess from "./components/subscription/PaymentSuccess.jsx";
 import PaymentCancel from "./components/subscription/PaymentCancel.jsx";
+import SyncOnRouteChange from "./components/SyncOnRouteChange.jsx";
 
 export default function App() {
     // Theme lives here and is passed down
@@ -38,12 +39,15 @@ export default function App() {
     }), []);
 
     return (
-        <Routes>
-            <Route path="/" element={<HomePage theme={theme} />} />
-            <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
-            <Route path="/rule/TO_BE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_TO_BE} />} />
-            <Route path="/payment/success" element={<PaymentSuccess />} />
-            <Route path="/payment/cancel" element={<PaymentCancel />} />
-        </Routes>
+        <section>
+            <SyncOnRouteChange />
+            <Routes>
+                <Route path="/" element={<HomePage theme={theme} />} />
+                <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
+                <Route path="/rule/TO_BE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_TO_BE} />} />
+                <Route path="/payment/success" element={<PaymentSuccess />} />
+                <Route path="/payment/cancel" element={<PaymentCancel />} />
+            </Routes>
+        </section>
     );
 }

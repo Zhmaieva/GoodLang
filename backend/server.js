@@ -3,6 +3,7 @@ import {translationsController} from "./controllers/translationController.js";
 import {healthController} from "./controllers/healthController.js";
 import {accountsController} from "./controllers/accountsController.js";
 import {paymentsController} from "./controllers/paymentsController.js";
+import {dataSyncController} from "./controllers/dataSyncController.js";
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
@@ -32,6 +33,7 @@ translationsController.mapRoutes(app);
 healthController.mapRoutes(app);
 accountsController.mapRoutes(app);
 paymentsController.mapRoutes(app);
+dataSyncController.mapRoutes(app);
 
 // Catch-all handler for undefined routes
 app.use(async (req, res) => {
