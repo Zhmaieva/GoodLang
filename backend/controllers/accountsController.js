@@ -45,10 +45,10 @@ export const accountsController = {
         // Request a verification code
         app.post(`/accounts/send-code`, async (req, res, next) => {
             try {
-                const { email } = req.body.toLowerCase().trim();
+                const { email } = req.body;
                 if (!email) return res.status(400).json({ error: "Email required" });
 
-                await sendVerificationCode(email);
+                await sendVerificationCode(email.toLowerCase().trim());
 
                 res.json({ message: "Verification code sent" });
             } catch (e) {

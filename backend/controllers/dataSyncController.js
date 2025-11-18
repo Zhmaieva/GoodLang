@@ -2,9 +2,9 @@ import {authMiddleware} from "../middleware/authMiddleware.js";
 import {
     getAnswersSince,
     getSeedState,
-    insertAnswers,
-    saveSeedState
+    saveSeedState, upsertAnswers
 } from "../database/repositories/scoresRepository.js";
+import {getAccountInfo} from "../database/repositories/accountsRepository.js";
 
 const name = 'data-sync';
 
@@ -22,8 +22,14 @@ export const dataSyncController = {
                     deviceId
                 } = req.body;
 
+                const accountInfo = await getAccountInfo(userId);
+                if (accountInfo?.status !== 'paid' && accountInfo?.status !== 'attention') {
+                    res.status(400).json({ error: "Can't sync free account" });
+                }
+
+                const updatedOn = new Date();
                 // 1. Save incoming answers (ignore duplicates)
-                await insertAnswers(userId, deviceId, answers);
+                await upsertAnswers(userId, deviceId, answers, updatedOn);
 
                 // 2. Save seed/skip if provided
                 if (seedState?.updatedAt) {
@@ -37,7 +43,7 @@ export const dataSyncController = {
                 res.json({
                     answers: serverAnswers,
                     seedState: serverSeed,
-                    serverTime: new Date().toISOString(),
+                    serverTime: updatedOn.toISOString(),
                 });
             } catch (err) {
                 next(err);

@@ -35,10 +35,10 @@ export async function callDataSyncApi(payload) {
     const data = await res.json();
 
     if (!res.ok) {
-        throw new Error("Sync failed: " + res.status);
+        return { isSuccess: false }
     }
 
-    return data;
+    return { isSuccess: true, ...data };
 }
 
 export async function callTranslateAPI(params) {

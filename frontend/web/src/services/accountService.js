@@ -21,8 +21,12 @@ export async function getToken() {
 }
 
 /* todo:
-- disable sync for free accounts
 - add GoodLang mail account with pass
 - show timer when quota reached
 - update rules dictionary
+- add to dashboard: improvements rate over week or less
+- add to dashboard: days to the next level/learning streak
+- add to dashboard: current level
+- automatically suggest level
+- fix analytics accuracy with weight distribution
  */

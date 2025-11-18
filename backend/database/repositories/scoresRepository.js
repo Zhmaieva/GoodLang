@@ -1,51 +1,60 @@
 import { connectDB } from "../mongo.js";
 
-export async function insertAnswers(userId, deviceId, answers) {
+export async function upsertAnswers(userId, deviceId, answers, updatedOn) {
     if (!answers?.length) return;
-
     const db = await connectDB();
+    const bulk = db.collection("good_lang_scores").initializeUnorderedBulkOp();
 
     for (const a of answers) {
-        await db.collection("good_lang_scores").updateOne(
-            {
-                userId,
-                rule: a.rule,
-                score: a.score,
-                date: a.date,
-                deviceId: a.deviceId,
-            },
-            {
-                $setOnInsert: {
+        // expect client to send `id`. If not, ignore this record (or generate server id)
+        if (!a.id) continue;
+
+        // ensure date field gets stored as proper Date
+        const createdDate = a.date ? new Date(a.date) : updatedOn;
+
+        bulk.find({ userId, id: a.id })
+            .upsert()
+            .updateOne({
+                $set: {
                     userId,
+                    id: a.id,
                     rule: a.rule,
-                    level: a.level,
+                    level: a.level ?? null,
                     score: a.score,
-                    date: new Date(a.date),
-                    deviceId: a.deviceId,
-                    updatedAt: new Date(),
+                    date: createdDate,
+                    deviceId: a.deviceId ?? deviceId,
+                    updatedAt: updatedOn, // server authoritative
+                },
+                $setOnInsert: {
+                    createdAt: updatedOn
                 }
-            },
-            { upsert: true }
-        );
+            });
+    }
+
+    if (bulk.length) {
+        await bulk.execute();
     }
 }
 
 export async function getAnswersSince(userId, since) {
     const db = await connectDB();
+    const sinceDate = new Date(since || 0);
 
     const docs = await db.collection("good_lang_scores")
         .find({
             userId,
-            updatedAt: { $gt: new Date(since) }
+            updatedAt: { $gt: sinceDate }
         })
         .toArray();
 
     return docs.map(d => ({
+        id: d.id,
         rule: d.rule,
         level: d.level,
         score: d.score,
-        date: d.date.toISOString(),
-        deviceId: d.deviceId
+        date: d.date instanceof Date ? d.date.toISOString() : d.date,
+        deviceId: d.deviceId,
+        updatedAt: d.updatedAt instanceof Date ? d.updatedAt.toISOString() : d.updatedAt,
     }));
 }
 

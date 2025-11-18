@@ -8,48 +8,79 @@ const STORAGE_KEY_LAST_SYNC = "answers_lastSync";
 const STORAGE_KEY_SEED_UPDATED = "seed_updatedAt";
 const STORAGE_KEY_DEVICE_ID = "device_id";
 
-export async function syncWithServer() {
+async function showPendingItems() {
     const lastSync = localStorage.getItem(STORAGE_KEY_LAST_SYNC) || "1970-01-01T00:00:00Z";
     const all = getAnswers();
 
     // local answers since lastSync
     const recent = all.filter(a => new Date(a.date) > new Date(lastSync));
 
-    // local seed state
+    console.log(recent);
+}
+
+export async function syncWithServer() {
+    const lastServerSync = localStorage.getItem(STORAGE_KEY_LAST_SYNC) || "1970-01-01T00:00:00.000Z";
+    const all = getAnswers();
+
+    // only send local answers that the server hasn't seen yet by updatedAt
+    // We conservatively send all locally created answers (they are idempotent upserts by id on server)
+    // Optionally filter by date if you want to avoid re-sending old answers:
+    const recentLocal = all.filter(a => !a._syncedAt || new Date(a._syncedAt) > new Date(lastServerSync) ? true : false);
+    // (Above: _syncedAt is optional local metadata — not required. Safe to send all local answers.)
+
     const seedLocal = {
-        seed: Number(localStorage.getItem(STORAGE_KEY_SEED)),
-        skip: Number(localStorage.getItem(STORAGE_KEY_SKIP)),
-        updatedAt: localStorage.getItem(STORAGE_KEY_SEED_UPDATED)
+        seed: Number(localStorage.getItem(STORAGE_KEY_SEED)) || 0,
+        skip: Number(localStorage.getItem(STORAGE_KEY_SKIP)) || 0,
+        updatedAt: localStorage.getItem(STORAGE_KEY_SEED_UPDATED) || null
     };
 
     const payload = {
-        since: lastSync,
+        since: lastServerSync,       // server timestamp
         deviceId: getDeviceId(),
-        answers: recent,
+        answers: recentLocal,
         seedState: seedLocal,
     };
 
     const server = await callDataSyncApi(payload);
+    if (!server?.isSuccess) return;
 
-    // merge answers
-    const merged = [...all, ...server.answers];
-    merged.sort((a, b) => new Date(a.date) - new Date(b.date));
+    // MERGE answers by id: server.answers are authoritative for content
+    const map = new Map();
+    // keep insertion order by time: load local first, then server (server overwrites local by id)
+    for (const a of all) {
+        if (a?.id) map.set(a.id, a);
+    }
+    for (const a of server.answers || []) {
+        if (!a?.id) continue;
+        // normalize server answer: ensure same fields as we expect
+        map.set(a.id, {
+            id: a.id,
+            rule: a.rule,
+            score: a.score,
+            level: a.level ?? null,
+            date: a.date,
+            deviceId: a.deviceId ?? null,
+            // optional metadata
+            _serverUpdatedAt: server.serverTime,
+        });
+    }
+    const merged = [...map.values()].sort((x, y) => new Date(x.date) - new Date(y.date));
     saveAnswers(merged);
 
-    // merge seed/skip with "newest wins"
-    if (
-        server.seedState?.updatedAt &&
-        (!seedLocal.updatedAt || new Date(server.seedState.updatedAt) > new Date(seedLocal.updatedAt))
-    ) {
-        saveSeed(
-            { seed: server.seedState.seed, skip: server.seedState.skip },
-            true // keep timestamp
-        );
-        localStorage.setItem(STORAGE_KEY_SEED_UPDATED, server.seedState.updatedAt);
+    // Merge seed/skip with newest-wins (serverState.updatedAt is authoritative)
+    if (server.seedState?.updatedAt) {
+        const serverUpdated = new Date(server.seedState.updatedAt);
+        const localUpdated = localStorage.getItem(STORAGE_KEY_SEED_UPDATED) ? new Date(localStorage.getItem(STORAGE_KEY_SEED_UPDATED)) : null;
+        if (!localUpdated || serverUpdated > localUpdated) {
+            saveSeed({ seed: server.seedState.seed, skip: server.seedState.skip }, true);
+            localStorage.setItem(STORAGE_KEY_SEED_UPDATED, server.seedState.updatedAt);
+        }
     }
 
-    // update last sync time
-    localStorage.setItem(STORAGE_KEY_LAST_SYNC, server.serverTime);
+    // update lastServerSync with server-provided time (authoritative)
+    if (server.serverTime) {
+        localStorage.setItem(STORAGE_KEY_LAST_SYNC, server.serverTime);
+    }
 }
 
 function getDeviceId() {
@@ -61,10 +92,7 @@ function getDeviceId() {
     return id;
 }
 
-let _answersCache = null;
-
 export function saveAnswers(data) {
-    _answersCache = data; // important
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
@@ -103,31 +131,28 @@ export function addAnswer(scores, rules, level) {
     const data = [...getAnswers()];
 
     for (let i = 0; i < rules.length; i++) {
-        data.push({
-            score: scores[i] * 100,
+        const answer = {
+            id: crypto.randomUUID(),    // stable unique id for this answer
             rule: rules[i],
-            level,
-            date: now,
+            score: Number(scores[i]) * 100,
+            level: level ?? null,
+            date: now,                  // original creation time
             deviceId,
-        });
+        };
+        data.push(answer);
     }
 
-    _answersCache = data;
     saveAnswers(data);
 }
 
 // --- Cached loader mirroring your pattern ---
 function getAnswers() {
     try {
-        if (!_answersCache) {
-            const data = localStorage.getItem(STORAGE_KEY);
-            _answersCache = JSON.parse(data) || [];
-        }
+        const data = localStorage.getItem(STORAGE_KEY);
+        return JSON.parse(data) ?? [];
     } catch (error) {
-        console.error("Error parsing answers data from localStorage:", error);
-        _answersCache = [];
+        return []
     }
-    return _answersCache;
 }
 
 // --- Helpers ---
