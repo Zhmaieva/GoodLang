@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
     port: 587, // Use 465 for SSL
     secure: false, // Set to true for port 465
     auth: {
-        user: 'votum.contact@gmail.com', // Your custom domain email on iCloud
+        user: 'goodlang.app@gmail.com', // Your custom domain email on iCloud
         pass: MAIL_PASS, // App-specific password
     },
     socketTimeout: 10000,

@@ -30,7 +30,7 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick })
                             <div>{idx + 1}</div>
                             <div>
                                 <div className="rule-name">{r.ruleName}</div>
-                                <div className="sub">Рівень: {LEVEL_MAP[Object.keys(LEVEL_MAP).find(x => LEVEL_MAP[x.level] === r.level)]?.label}</div>
+                                <div className="sub">Рівень: {LEVEL_MAP[Object.keys(LEVEL_MAP).find(x => x === r.level)]?.label}</div>
                             </div>
                             <div>
                                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
