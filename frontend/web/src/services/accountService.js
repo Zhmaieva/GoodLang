@@ -21,7 +21,6 @@ export async function getToken() {
 }
 
 /* todo:
-- show timer when quota reached
 - add to dashboard: improvements rate over week or less
 - add to dashboard: days to the next level/learning streak
 - add to dashboard: current level

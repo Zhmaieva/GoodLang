@@ -1,22 +1,64 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { callCheckoutApi } from "../../services/api.js";
+import {callAccountInfoApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
-import {getUserId} from "../../services/accountService.js";
+import { getUserId } from "../../services/accountService.js";
+import LoginModal from "./LoginModal.jsx";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
-export default function LimitModal({ isLimitReached, theme, open, onClose }) {
+export default function LimitModal({ isLimitReached, theme, open, onClose, waitTimeSeconds }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
-    const checkoutRef = useRef(null); // store single checkout instance
+    const checkoutRef = useRef(null);
+
+    const [timeLeft, setTimeLeft] = useState(0);
+    const [loginModalOpen, setLoginModalOpen] = useState(false);
+    const [account, setAccount] = useState(null);
+
+
+    // ⏳ Countdown timer — only when limit is reached
+    useEffect(() => {
+        if (!open || !isLimitReached) return;
+
+        setTimeLeft(waitTimeSeconds || 0);
+
+        const interval = setInterval(() => {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(interval);
+                    onClose();
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [open, isLimitReached, waitTimeSeconds, onClose]);
+
+    function formatTime(sec) {
+        const h = Math.floor(sec / 3600);
+        const m = Math.floor((sec % 3600) / 60);
+        const s = sec % 60;
+        return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+    }
 
     if (!open) return null;
 
     async function handleSubscribe() {
         try {
             setLoading(true);
+
+            if (isLimitReached) {
+                const account = await callAccountInfoApi();
+                if (!account.email) {
+                    setAccount(account);
+                    setLoginModalOpen(true);
+                    return;
+                }
+            }
 
             const stripe = await stripePromise;
 
@@ -27,14 +69,12 @@ export default function LimitModal({ isLimitReached, theme, open, onClose }) {
                 return;
             }
 
-            // Only initialize checkout if not already created
             if (!checkoutRef.current) {
                 setIsPaying(true);
                 checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
                 checkoutRef.current.mount("#embedded-checkout-container");
             }
 
-            // Optionally, you can show the container if hidden
             document.getElementById("embedded-checkout-container").style.display = "block";
             setLoading(false);
         } catch (err) {
@@ -69,6 +109,27 @@ export default function LimitModal({ isLimitReached, theme, open, onClose }) {
                 <h2 style={{ marginBottom: 16, color: theme.text, fontSize: "1.6rem", fontWeight: 800 }}>
                     {isLimitReached ? "Ліміт вичерпано" : "Навчання в повну силу"}
                 </h2>
+
+                {isLimitReached && timeLeft > 0 && (
+                    <div
+                        style={{
+                            marginBottom: 16,
+                            fontSize: "1.2rem",
+                            fontWeight: 700,
+                            color: theme.accent,
+                            fontFamily: "monospace",
+                            letterSpacing: "0.5px",
+                            width: "100%",
+                            display: "inline-block",
+                            textAlign: "center"
+                        }}
+                    >
+                        Залишилось чекати:{" "}
+                        <span style={{ display: "inline-block", minWidth: "110px", textAlign: "center" }}>
+            {formatTime(timeLeft)}
+        </span>
+                    </div>
+                )}
 
                 <p style={{ color: theme.muted, fontSize: "1.05rem", marginBottom: 24, lineHeight: "1.45" }}>
                     Щоб продовжити тренуватися без обмежень
@@ -129,8 +190,14 @@ export default function LimitModal({ isLimitReached, theme, open, onClose }) {
                     Пізніше
                 </button>
             </div>
-            {/* Stripe Embedded Checkout container */}
+
             <div id="embedded-checkout-container" style={{ display: "none", marginTop: 24 }}></div>
+
+            <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen} onClose={() => {
+                setLoginModalOpen(false);
+                setLoading(false);
+                onClose();
+            }}/>
         </div>
     );
 }

@@ -41,6 +41,7 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
     const textareaRef = useRef(null);
 
     const [limitModalOpen, setLimitModalOpen] = useState(false);
+    const [waitTimeSeconds, setWaitTimeSeconds] = useState(false);
 
     useEffect(() => {
         if (loading) return;
@@ -125,6 +126,7 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
 
             if (!data.isSuccess) {
                 setHint("Досягнуто ліміт користування, спробуйте пізніше.");
+                setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
                 return;
             }
@@ -184,6 +186,7 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
             />
             <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer}/>
             <LimitModal
+                waitTimeSeconds={waitTimeSeconds}
                 isLimitReached={true}
                 theme={theme}
                 open={limitModalOpen}
