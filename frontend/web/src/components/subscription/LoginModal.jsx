@@ -2,141 +2,194 @@ import React, { useState } from "react";
 import LimitModal from "../subscription/LimitModal.jsx";
 import LoginForm from "./LoginForm.jsx";
 
-export default function LoginModal({ theme, open, onClose, account, forceLogin=false }) {
+export default function LoginModal({ theme, open, onClose, account, forceLogin = false }) {
     const [loginMode, setLoginMode] = useState(false);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
 
     if (!open) return null;
 
-    const modalStyle = {
+    const wrapperStyle = {
         position: "fixed",
         top: 0,
         left: 0,
         width: "100vw",
         height: "100vh",
-        background: "rgba(0,0,0,0.5)",
+        background: "rgba(0,0,0,0.35)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        zIndex: 1000,
+        zIndex: 9999,
     };
 
-    const contentStyle = {
-        background: "#fff",
-        padding: 24,
-        borderRadius: 12,
-        minWidth: 320,
-        display: "flex",
-        flexDirection: "column",
-        gap: 16,
-        boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+    const boxStyle = {
+        background: theme.bg,
+        padding: "36px",
+        borderRadius: theme.radius * 1.2,
+        border: `4px solid ${theme.accent}`,
+        width: "90%",
+        maxWidth: 480,
+        textAlign: "center",
+        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
     };
 
-    const buttonStyle = {
-        appearance: "none",
-        padding: "10px 16px",
-        fontWeight: 800,
-        fontSize: 14,
-        lineHeight: 1,
-        borderRadius: 999,
-        cursor: "pointer",
+    const primaryButton = {
         background: theme.accent,
-        color: "#fff",
         border: `2px solid ${theme.accent}`,
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
+        color: "white",
+        padding: "12px 26px",
+        borderRadius: theme.radius,
+        cursor: "pointer",
+        fontSize: "1.1rem",
+        fontWeight: 700,
+        marginTop: 20,
+    };
+
+    const outlineButton = {
+        appearance: "none",
+        padding: "12px 20px",
+        fontWeight: 800,
+        fontSize: "1rem",
+        lineHeight: 1,
+        borderRadius: 999,
+        background: "#fffdf8",
+        color: theme.text,
+        border: `2px solid ${theme.accent}`,
+        boxShadow: `2px 2px 0 ${theme.accentDark}`,
+        cursor: "pointer",
+        marginTop: 16,
         transition: "transform 120ms ease",
     };
 
-    const buttonStyleSignIn = {
-        appearance: "none",
-        padding: "10px 16px",
-        fontWeight: 800,
-        fontSize: 14,
-        lineHeight: 1,
-        borderRadius: 999,
+    const textButton = {
+        background: "transparent",
+        border: "none",
+        color: theme.muted,
+        fontSize: "0.95rem",
         cursor: "pointer",
-        background: "#fff",
-        color: theme.accent,
-        border: `2px solid ${theme.accent}`,
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
-        transition: "transform 120ms ease",
+        marginTop: 16,
+        textDecoration: "underline",
     };
 
     return (
-        <div style={modalStyle}>
-            <div style={contentStyle} onClick={(e) => e.stopPropagation()}>
+        <div style={wrapperStyle} onClick={() => {
+                setLoginMode(false);
+                if (forceLogin)
+                    onClose();
+                onClose(); }}>
+            <div style={boxStyle} onClick={e => e.stopPropagation()}>
                 {!loginMode && !forceLogin ? (
                     <>
-                        {account?.email ? (
-                            <div>
-                                <h3>Користувач:</h3>
-                                <p>{account.email}</p>
-                            </div>
-                        ) : (<></>)}
+                        {/* Logged-in user email */}
+                        {account?.email && (
+                            <div style={{ marginBottom: 24 }}>
+                                <h2 style={{
+                                    marginBottom: 8,
+                                    color: theme.text,
+                                    fontSize: "1.6rem",
+                                    fontWeight: 800
+                                }}>
+                                    Ваш акаунт
+                                </h2>
 
+                                <p style={{ color: theme.muted, fontSize: "1.05rem" }}>
+                                    {account.email}
+                                </p>
+                            </div>
+                        )}
+
+                        {/* Account status block */}
                         {account?.status !== 'paid' ? (
-                            <div>
-                                <h3>Без синхронізації</h3>
-                                <p>Активуйте преміум, щоб ввімкнути синхронізацію, та ще багато іншого!</p>
+                            <>
+                                <h3 style={{
+                                    marginBottom: 12,
+                                    color: theme.text,
+                                    fontSize: "1.3rem",
+                                    fontWeight: 800
+                                }}>
+                                    Без синхронізації
+                                </h3>
+
+                                <p style={{
+                                    color: theme.muted,
+                                    fontSize: "1.05rem",
+                                    lineHeight: "1.45",
+                                    marginBottom: 12
+                                }}>
+                                    Активуйте преміум, щоб увімкнути синхронізацію
+                                    та отримати всі можливості GoodLang!
+                                </p>
+
                                 <button
-                                    style={buttonStyle}
+                                    style={primaryButton}
                                     onClick={() => setLimitModalOpen(true)}
                                 >
                                     Хочу преміум
                                 </button>
-                            </div>
+                            </>
                         ) : (
-                            <div>
-                                <h3>Прогрес синхронізовано</h3>
-                                <p>Ви можете продовжити навчання на будь-якому пристрої</p>
-                            </div>
+                            <>
+                                <h3 style={{
+                                    marginBottom: 12,
+                                    color: theme.text,
+                                    fontSize: "1.3rem",
+                                    fontWeight: 800
+                                }}>
+                                    Прогрес синхронізовано
+                                </h3>
+
+                                <p style={{
+                                    color: theme.muted,
+                                    fontSize: "1.05rem",
+                                    lineHeight: "1.45",
+                                }}>
+                                    Ви можете продовжити навчання на будь-якому пристрої
+                                </p>
+                            </>
                         )}
 
-                        <button
-                            style={{...buttonStyleSignIn, marginTop: 12,}}
-                            onClick={() => setLoginMode(true)}
-                        >
-                            {account.email ? "Увійти в інший профіль" : "Увійти або зареєструватися"}
-                        </button>
-
-                        <button
-                            onClick={onClose}
-                            style={{
-                                background: "transparent",
-                                border: "none",
-                                color: theme.muted,
-                                fontSize: "0.95rem",
-                                cursor: "pointer",
-                                textDecoration: "underline",
-                                opacity: 1
-                            }}
-                        >
-                            Назад
-                        </button>
+                        <div style={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
+                            {/* Login / switch account */}
+                            <button
+                                style={outlineButton}
+                                onClick={() => setLoginMode(true)}
+                            >
+                                {account.email ? "Увійти в інший профіль" : "Увійти або зареєструватися"}
+                            </button>
+                        </div>
                     </>
                 ) : (
-                    <LoginForm theme={theme} account={account} onClose={() => {
-                        setLoginMode(false)
-                        if (forceLogin)
-                            onClose();
-                    }}/>
+                    <LoginForm
+                        theme={theme}
+                        account={account}
+                        onClose={() => {
+                            setLoginMode(false);
+                            if (forceLogin) onClose();
+                        }}
+                    />
                 )}
             </div>
 
-            {
-                limitModalOpen && account.email &&
+            {/* Limit modal */}
+            {limitModalOpen && account.email && (
                 <LimitModal
                     isLimitReached={false}
                     theme={theme}
                     open={limitModalOpen}
                     onClose={() => setLimitModalOpen(false)}
                 />
-            }
+            )}
 
-            {
-                limitModalOpen && !account.email &&
-                <LoginModal forceLogin={true} theme={theme} account={account} open={limitModalOpen} onClose={() => setLimitModalOpen(false)} />
-            }
+            {/* Force login inside modal */}
+            {limitModalOpen && !account.email && (
+                <LoginModal
+                    forceLogin={true}
+                    theme={theme}
+                    account={account}
+                    open={limitModalOpen}
+                    onClose={() => setLimitModalOpen(false)}
+                />
+            )}
         </div>
     );
 }

@@ -9,20 +9,11 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [error, setError] = useState("");
     const inputsRef = useRef([]);
 
-    const inputStyle = {
-        width: 40,
-        height: 50,
-        fontSize: 24,
-        textAlign: "center",
-        borderRadius: 6,
-        border: `1px solid ${theme?.muted || "#ccc"}`,
-    };
-
     const buttonStyle = {
         appearance: "none",
         padding: "10px 16px",
         fontWeight: 800,
-        fontSize: 14,
+        fontSize: "1rem",
         lineHeight: 1,
         borderRadius: 999,
         cursor: "pointer",
@@ -33,13 +24,29 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         transition: "transform 120ms ease",
     };
 
-    const buttonCancelStyle = {
-        ...buttonStyle,
-        background: "#fff",
-        color: theme?.text || "#000",
-        border: `2px solid ${theme?.accent || "#007bff"}`,
-        boxShadow: `2px 2px 0 ${theme?.accentDark || "#0056b3"}`,
+    const baseInputStyle = {
+        resize: "none",
+        flex: 1,
+        minHeight: 70,
+        borderRadius: theme.radius,
+        border: `3px solid ${theme.accent}`,
+        background: "#fffaf3",
+        padding: "12px 14px",
+        fontSize: "2rem",
+        color: theme.text,
+        textAlign: "center",
+        caretColor: "grey"
     };
+
+    const codeInputStyle = {
+        ...baseInputStyle,
+        width: 48,
+        height: 58,
+        textAlign: "center",
+        padding: 0,
+        fontSize: 26,
+    };
+
 
     // --- Email Step ---
     async function handleEmailSubmit(e) {
@@ -52,7 +59,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
             await callSendCodeApi({ email: emailInput });
             setStep("code");
         } catch (err) {
-            setError(err.message || "Failed to send code");
+            setError(err.message || "Не вдалося відправити код");
         } finally {
             setLoading(false);
         }
@@ -141,10 +148,14 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                         placeholder="goodlang@example.com"
                         value={emailInput}
                         onChange={(e) => setEmailInput(e.target.value)}
-                        style={{...inputStyle, width: "100%"}}
+                        style={{
+                            ...baseInputStyle,
+                            width: "100%",
+                        }}
                         required
                         disabled={loading}
                     />
+
                     <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
                         {loading ? "Відправляю..." : "Підтвердити"}
                     </button>
@@ -162,7 +173,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                 value={digit}
                                 onChange={(e) => handleCodeChange(e, i)}
                                 onKeyDown={(e) => handleCodeKeyDown(e, i)}
-                                style={inputStyle}
+                                style={codeInputStyle}
                                 maxLength={1}
                                 disabled={loading}
                             />
@@ -176,20 +187,14 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
             {error && <div style={{color: "red"}}>{error}</div>}
 
-            <button
-                onClick={onClose}
-                style={{
-                    background: "transparent",
-                    border: "none",
-                    color: theme.muted,
-                    fontSize: "0.95rem",
-                    cursor: "pointer",
-                    textDecoration: "underline",
-                    opacity: 1
-                }}
-            >
-                Назад
-            </button>
+            <style>
+                {`
+        input::placeholder,
+        textarea::placeholder {
+            text-align: center;
+        }
+    `}
+            </style>
         </div>
     );
 }

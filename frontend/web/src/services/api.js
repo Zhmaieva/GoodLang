@@ -122,7 +122,7 @@ export async function callSendCodeApi({ email }) {
     });
 
     const data = await res.json();
-    if (!res.ok) throw new Error(data?.error || "Failed to send code");
+    if (!res.ok) throw new Error(data?.error || "Не вдалося відправити код");
     return data;
 }
 

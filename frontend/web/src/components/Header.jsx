@@ -88,7 +88,6 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         loading={loading}
                         onLevelChange={onLevelChange}
                         theme={theme}
-                        compact
                     />
                 </div>
             </div>
