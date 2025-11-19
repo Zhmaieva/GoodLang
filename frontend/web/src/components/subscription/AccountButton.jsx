@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoginModal from "./LoginModal.jsx";
 import { callAccountInfoApi } from "../../services/api.js";
+import {syncWithServer} from "../../services/dataService.js";
 
 export default function AccountButton({ theme }) {
     const [account, setAccount] = useState(null);
@@ -24,6 +25,7 @@ export default function AccountButton({ theme }) {
     }
 
     function handleClick() {
+        syncWithServer().then();
         setLoginModalOpen(true);
     }
 

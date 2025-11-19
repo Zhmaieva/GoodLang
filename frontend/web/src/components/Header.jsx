@@ -2,13 +2,13 @@ import React from "react";
 import LevelSwitch from "./LevelSwitch";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 import AccountButton from "./subscription/AccountButton.jsx";
+import {WeeklyProgress} from "./training/WeeklyProgress.jsx";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const styles = {
-        // one row: brand left, levels right; wraps nicely on narrow widths
         header: {
             display: "flex",
-            alignItems: "flex-end",
+            alignItems: "flex-start",
             justifyContent: "space-between",
             flexWrap: "wrap",
             gap: 16,
@@ -16,12 +16,13 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             borderBottom: `3px solid ${theme.accent}`,
             marginBottom: 25,
         },
-
         brand: {
             display: "flex",
-            alignItems: "center",
-            gap: 12,
-            minWidth: 240, // keeps logo+title stable
+            flexDirection: "column",
+            gap: 8,
+            minWidth: 240,
+            width: '100%',
+            height: "64px",
         },
         logo: {
             width: 64,
@@ -36,7 +37,11 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             fontSize: 28,
             boxShadow: `0 2px 0 ${theme.accentDark}`,
         },
-        titleWrap: { display: "grid", gap: 4 },
+        titleWrap: {
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
+        },
         h1: {
             margin: 0,
             fontWeight: 900,
@@ -50,45 +55,42 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             fontSize: 14,
             letterSpacing: ".02em",
         },
-
-        // right area with pills; aligns to the bottom like in the pic
         right: {
             display: "flex",
             alignItems: "center",
             gap: 10,
             marginLeft: "auto",
         },
-
         accountButtonsWrapper: {
             display: "flex",
             alignItems: "center",
-            gap: 8, // gap between AccountStatusButton and AccountButton
+            gap: 8,
         },
     };
 
     return (
         <header style={styles.header}>
             <div style={styles.brand}>
-                <div style={styles.logo} aria-hidden="true">GL</div>
-                <div style={styles.titleWrap}>
-                    <h1 style={styles.h1}>GoodLang</h1>
-                    <div style={styles.sub}>Переклад → короткий фідбек → нове речення згідно твого рівня</div>
+                <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between", width: "100%"}}>
+                    <div style={{display: "flex", alignItems: "center", gap: 12}}>
+                        <div style={styles.logo} aria-hidden="true">GL</div>
+                        <div style={styles.titleWrap}>
+                            <h1 style={styles.h1}>GoodLang</h1>
+                            <div style={styles.sub}>Переклад → короткий фідбек → нове речення згідно твого рівня</div>
+                        </div>
+                    </div>
+
+                    <WeeklyProgress theme={theme}/>
                 </div>
             </div>
 
-            <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+            <div style={{display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center"}}>
                 <div style={styles.accountButtonsWrapper}>
-                    <AccountStatusButton theme={theme} />
-                    <AccountButton theme={theme} />
+                    <AccountStatusButton theme={theme}/>
+                    <AccountButton theme={theme}/>
                 </div>
-
                 <div style={styles.right}>
-                    <LevelSwitch
-                        level={level}
-                        loading={loading}
-                        onLevelChange={onLevelChange}
-                        theme={theme}
-                    />
+                    <LevelSwitch level={level} loading={loading} onLevelChange={onLevelChange} theme={theme} />
                 </div>
             </div>
         </header>

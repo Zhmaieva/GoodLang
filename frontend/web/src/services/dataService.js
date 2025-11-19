@@ -8,16 +8,6 @@ const STORAGE_KEY_LAST_SYNC = "answers_lastSync";
 const STORAGE_KEY_SEED_UPDATED = "seed_updatedAt";
 const STORAGE_KEY_DEVICE_ID = "device_id";
 
-async function showPendingItems() {
-    const lastSync = localStorage.getItem(STORAGE_KEY_LAST_SYNC) || "1970-01-01T00:00:00Z";
-    const all = getAnswers();
-
-    // local answers since lastSync
-    const recent = all.filter(a => new Date(a.date) > new Date(lastSync));
-
-    console.log(recent);
-}
-
 export async function syncWithServer() {
     const lastServerSync = localStorage.getItem(STORAGE_KEY_LAST_SYNC) || "1970-01-01T00:00:00.000Z";
     const all = getAnswers();
@@ -146,7 +136,7 @@ export function addAnswer(scores, rules, level) {
 }
 
 // --- Cached loader mirroring your pattern ---
-function getAnswers() {
+export function getAnswers() {
     try {
         const data = localStorage.getItem(STORAGE_KEY);
         return JSON.parse(data) ?? [];
@@ -160,7 +150,7 @@ function toPercent(score) {
     return typeof score === "number" ? score : 0;
 }
 
-function averageAccuracyPercent(items) {
+export function averageAccuracyPercent(items) {
     if (!items.length) return 0;
     const sum = items.reduce((acc, x) => acc + toPercent(x.score), 0);
     return Math.round((sum / items.length) * 100) / 100;
