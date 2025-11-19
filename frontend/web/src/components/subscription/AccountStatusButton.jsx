@@ -100,6 +100,7 @@ export default function AccountStatusButton({ theme }) {
             transform: hover ? "translateY(1px)" : "none",
             transition: "transform 120ms ease",
             opacity: account?.status ? 1 : 0.65,
+            display: isFree ? "none" : "flex",
         };
     })();
 

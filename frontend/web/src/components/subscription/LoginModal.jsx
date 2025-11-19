@@ -107,7 +107,7 @@ export default function LoginModal({ theme, open, onClose, account, forceLogin =
                                     fontSize: "1.3rem",
                                     fontWeight: 800
                                 }}>
-                                    Без синхронізації
+                                    ❌ Без синхронізації
                                 </h3>
 
                                 <p style={{
@@ -135,7 +135,7 @@ export default function LoginModal({ theme, open, onClose, account, forceLogin =
                                     fontSize: "1.3rem",
                                     fontWeight: 800
                                 }}>
-                                    Прогрес синхронізовано
+                                    ✅ Прогрес синхронізовано
                                 </h3>
 
                                 <p style={{

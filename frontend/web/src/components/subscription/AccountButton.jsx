@@ -35,39 +35,24 @@ export default function AccountButton({ theme }) {
         lineHeight: 1,
         borderRadius: 999,
         cursor: "pointer",
-        background: account?.email ? theme.green : theme.accent,
+        background: account?.email && account?.status === 'paid' ? theme.green : theme.accent,
         color: "#fff",
-        border: `2px solid ${account?.email ? theme.greenDark : theme.accent}`,
-        boxShadow: `2px 2px 0 ${account?.email ? theme.greenDark : theme.accentDark}`,
+        border: `2px solid ${account?.email && account?.status === 'paid' ? theme.greenDark : theme.accent}`,
+        boxShadow: `2px 2px 0 ${account?.email && account?.status === 'paid' ? theme.greenDark : theme.accentDark}`,
         transform: hover ? "translateY(1px)" : "none",
         transition: "transform 120ms ease",
     };
 
-    const btnStyleNotSyncing = {
-        appearance: "none",
-        padding: "10px 16px",
-        fontWeight: 800,
-        fontSize: 14,
-        lineHeight: 1,
-        borderRadius: 999,
-        cursor: "pointer",
-        background: "#fff",
-        border: `2px solid ${theme.accent}`,
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
-        color: theme.accent,
-        transform: hover ? "translateY(1px)" : "none",
-        transition: "transform 120ms ease",
-    }
-
     return (
         <>
             <button
-                style={account?.email && account?.status === 'free' ? btnStyleNotSyncing : btnStyle}
+                style={btnStyle}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
                 onClick={handleClick}
             >
-                {account?.status === 'free' && "Увімкнути синхронізацію"}
+                {account?.email && account?.status === 'free' && `⚠️ ${account?.email}`}
+                {!account?.email && account?.status === 'free' && "⚠️ Увімкнути синхронізацію"}
                 {account?.status !== 'free' && account?.email}
             </button>
 
