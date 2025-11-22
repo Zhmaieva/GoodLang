@@ -21,11 +21,8 @@ export async function getToken() {
 }
 
 /* todo:
-- add to dashboard: improvements rate over week or less
-- add to dashboard: days to the next level/learning streak
-- add to dashboard: current level
 - automatically suggest level
-- fix analytics accuracy with weight distribution
+- fix analytics accuracy with weight distr  ibution
 - rule practice in analytics page
 
 - update rules dictionary

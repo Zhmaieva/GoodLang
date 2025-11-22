@@ -22,7 +22,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             gap: 8,
             minWidth: 240,
             width: '100%',
-            height: "64px",
+            height: "80px",
         },
         logo: {
             width: 64,
