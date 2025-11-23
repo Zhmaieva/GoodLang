@@ -1,7 +1,14 @@
 import { useState } from "react";
 
-export default function LevelSwitch({ level, loading, onLevelChange, theme, compact = false }) {
+export default function LevelSwitch({
+                                        level,
+                                        loading,
+                                        onLevelChange,
+                                        theme,
+                                        compact = false
+                                    }) {
     const [hovered, setHovered] = useState(null);
+    const [expanded, setExpanded] = useState(false);
 
     const wrap = {
         display: "flex",
@@ -19,25 +26,43 @@ export default function LevelSwitch({ level, loading, onLevelChange, theme, comp
         lineHeight: 1,
         borderRadius: 999,
         cursor: loading ? "not-allowed" : "pointer",
-
-        // outline + tiny drop shadow like in the image
         background: selected ? theme.green : "#fffdf8",
         color: selected ? "#fff" : theme.text,
         border: `2px solid ${selected ? theme.greenDark : theme.accent}`,
         boxShadow: `2px 2px 0 ${selected ? theme.greenDark : theme.accentDark}`,
-
         transform: isHover ? "translateY(1px)" : "none",
         opacity: loading ? 0.65 : 1,
         transition: "transform 120ms ease",
     });
 
+    const options = [
+        { value: "managed", label: "Прокачування" },
+        { value: "beginner", label: "Початківець" },
+        { value: "intermediate", label: "Середній" },
+        { value: "advanced", label: "Просунутий" },
+    ];
+
+    const selectedOption = options.find(o => o.value === level);
+
+    const handleClick = (value) => {
+        if (!expanded) {
+            // First click → expand
+            setExpanded(true);
+            return;
+        }
+
+        // If expanded, selecting an option → collapse + apply
+        if (!loading) {
+            onLevelChange(value);
+        }
+        setExpanded(false);
+    };
+
+    const visibleOptions = expanded ? options : [selectedOption];
+
     return (
         <div style={wrap} role="group" aria-label="Вибір рівня">
-            {[
-                {value: "beginner", label: "Початківець"},
-                {value: "intermediate", label: "Середній"},
-                {value: "advanced", label: "Просунутий"},
-            ].map(({value, label}) => (
+            {visibleOptions.map(({ value, label }) => (
                 <button
                     key={value}
                     onMouseEnter={() => setHovered(value)}
@@ -45,12 +70,13 @@ export default function LevelSwitch({ level, loading, onLevelChange, theme, comp
                     style={btn(level === value, hovered === value)}
                     aria-pressed={level === value}
                     disabled={loading}
-                    onClick={() => !loading && onLevelChange(value)}
+                    onClick={() => handleClick(value)}
                 >
-                    {label}
+                    {label !== 'Прокачування' && !expanded && `Рівень завдань: ${label}`}
+                    {label === 'Прокачування' && !expanded && `Прокачування рівня`}
+                    {expanded && label}
                 </button>
             ))}
         </div>
-
     );
 }

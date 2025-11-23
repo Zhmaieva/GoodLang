@@ -21,9 +21,12 @@ export async function getToken() {
 }
 
 /* todo:
-- automatically suggest level
-- fix analytics accuracy with weight distr  ibution
 - rule practice in analytics page
+- fix level progress estimation logic
+- add weights to favour more recent results in global analytics
+- add weights to favour more recent results in training director
+- mobile page
+- fix indents
 
 - update rules dictionary
  */

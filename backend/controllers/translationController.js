@@ -12,7 +12,7 @@ export const translationsController = {
             try {
                 const accountId = req.user.id;
 
-                const { level, rules, translation, textToTranslate, skip, seed } = req.query;
+                const { level, rules, translation, textToTranslate, skip, seed, freeTraining } = req.query;
 
                 let rulesArr = Array.isArray(rules) ? (rules ?? []) : (rules.trim() ? rules.split(',') : []);
 
@@ -65,7 +65,7 @@ export const translationsController = {
 
                 const scores = result.scores;
                 for (let i = 0; i < scores.length; i++) {
-                    if (scores[i] < 1 || !level) { // keep training failed rule or if it is a dedicated per-rule training
+                    if (scores[i] < 1 || (!level && !freeTraining)) { // keep training failed rule or if it is a dedicated per-rule training
                         const targetRule = rulesArr[i];
                         const newSample = shuffleBySeed(ALL_RULES_SAMPLES[targetRule], seed ?? 1)[newSkip];
                         newRules = newSample.rules;

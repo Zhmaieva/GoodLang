@@ -4,8 +4,9 @@ import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getSeed, saveSeed} from "../../services/dataService.js";
 import {callTranslateAPI} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
+import {getTrainingLevel} from "../../services/trainingDirector.js";
 
-export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = null, nextRule = null}) {
+export default function Trainer({theme, onLoadingChange = _ => {}, freeTraining = false, nextLevel = null, nextRule = null}) {
     const LEVEL_TO_DIFFICULTY = useMemo(
         () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),
         []
@@ -48,6 +49,7 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
         if (nextLevel === level) return;
 
         setLevel(nextLevel);
+
         const diff = randomDifficulty(nextLevel)
         setDifficulty(diff);
         setTextToTranslate("");
@@ -89,7 +91,10 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const data = await callTranslateAPI({ level: selectedDifficulty, rules: [nextRule], seed, skip });
+                const currentLevel = nextLevel === 'managed' ? getTrainingLevel() : selectedDifficulty;
+
+                console.log('getting training sentence...');
+                const data = await callTranslateAPI({ level: currentLevel, rules: [nextRule], seed, skip });
                 setTextToTranslate(data.textToTranslate || "");
                 setRules(data.rules || null);
                 setTaskText(data.textToTranslate || "—");
@@ -122,7 +127,8 @@ export default function Trainer({theme, onLoadingChange = _ => {}, nextLevel = n
             setControlsDisabled(true);
 
             const {seed, skip} = getSeed();
-            const data = await callTranslateAPI({ textToTranslate, translation: userAns, rules, seed, skip });
+            console.log('evaluating answer...');
+            const data = await callTranslateAPI({ freeTraining, textToTranslate, translation: userAns, rules, seed, skip });
 
             if (!data.isSuccess) {
                 setHint("Досягнуто ліміт користування, спробуйте пізніше.");

@@ -8,7 +8,7 @@ import Trainer from "../training/Trainer.jsx";
 export default function HomePage({ theme }) {
 
     const [loading, setLoading] = useState(false);
-    const [level, setLevel] = useState("beginner");
+    const [level, setLevel] = useState("managed");
 
     // Responsive grid (container-based)
     const { ref: containerRef, isWide: twoCols } = useBreakpoint(880);
@@ -49,12 +49,13 @@ export default function HomePage({ theme }) {
                 <Header
                     theme={theme}
                     level={level}
-                    defaultLevel="beginner"
+                    defaultLevel="managed"
                     loading={loading}
                     onLevelChange={setLevel}
                 />
                 <section style={gridStyle}>
                     <Trainer
+                        freeTraining
                         theme={theme}
                         onLoadingChange={setLoading}
                         nextLevel={level}/>
