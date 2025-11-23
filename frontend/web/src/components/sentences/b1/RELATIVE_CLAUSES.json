@@ -13,7 +13,6 @@
   { "rules": ["RELATIVE_CLAUSES"], "ua": "Я не знаю людину, яка це зробила.", "en": ["I don’t know the person who did it.", "I don’t know the person that did it."] },
   { "rules": ["RELATIVE_CLAUSES"], "ua": "Це тварина, яка живе в Африці.", "en": ["It’s an animal that lives in Africa.", "It’s an animal which lives in Africa."] },
   { "rules": ["RELATIVE_CLAUSES"], "ua": "Хлопець, чий телефон дзвонить, — мій брат.", "en": ["The boy whose phone is ringing is my brother.", "The guy whose phone is ringing is my brother."] },
-  { "rules": ["RELATIVE_CLAUSES"], "ua": "Це компанія, яка виготовляє ці автомобілі.", "en": ["This is the company that makes these cars.", "This is the company which produces these cars."] },
   { "rules": ["RELATIVE_CLAUSES"], "ua": "Музика, яку ти слухаєш, дуже гучна.", "en": ["The music that you’re listening to is very loud.", "The music which you’re listening to is very loud."] },
   { "rules": ["RELATIVE_CLAUSES"], "ua": "Це люди, з якими я працюю.", "en": ["These are the people I work with.", "These are the people who I work with."] },
   { "rules": ["RELATIVE_CLAUSES"], "ua": "Я бачив фільм, який ти мені радив.", "en": ["I saw the movie you recommended.", "I watched the film that you recommended."] },

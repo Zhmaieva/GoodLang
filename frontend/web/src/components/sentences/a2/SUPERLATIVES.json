@@ -1,6 +1,6 @@
 { "SUPERLATIVES": [
   {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "SIMPLE_ADJ"],
+    "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
     "ua": "Ти найрозумніший у нашому класі.",
     "en": [
       "You are the smartest in our class.",
@@ -11,7 +11,7 @@
   },
   {
     "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ця бібліотека найтиша в місті.",
+    "ua": "Ця бібліотека найтихіша в місті.",
     "en": [
       "This library is the quietest in the city.",
       "This library is the calmest in the city.",
@@ -31,7 +31,7 @@
   },
   {
     "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
-    "ua": "Чи цей телефон найдорожчий у каталозі?",
+    "ua": "Цей телефон найдорожчий у каталозі?",
     "en": [
       "Is this phone the most expensive in the catalog?",
       "Is this phone the costliest in the catalog?",
@@ -50,16 +50,6 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей стілець найзручніший з татиних.",
-    "en": [
-      "This chair is the most comfortable of dad’s.",
-      "This chair is the comfiest of dad’s.",
-      "That chair is the coziest of my father’s.",
-      "That chair is the most pleasant of my father’s."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_TIME"],
     "ua": "Цей день найтепліший цього місяця.",
     "en": [
@@ -70,23 +60,13 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твій проєкт найкреативніший у групі?",
+    "rules": ["SUPERLATIVES"],
+    "ua": "Твій проєкт найкреативніший у групі?",
     "en": [
       "Is your project the most creative in the group?",
       "Is your project the most imaginative in the group?",
       "Is your project the most innovative in the team?",
       "Is your project the most original in the team?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ця лампа набагато найяскравіша в будинку.",
-    "en": [
-      "This lamp is by far the brightest in the house.",
-      "This lamp is by far the most radiant in the house.",
-      "This lamp is much the most luminous in the house.",
-      "This lamp is much the most glowing in the house."
     ]
   },
   {
@@ -120,33 +100,13 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER"],
     "ua": "Він пише найакуратніше в класі.",
     "en": [
       "He writes the most neatly in the class.",
       "He writes the most carefully in the class.",
       "He writes the most precisely in the class.",
       "He writes the most tidily in the class."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMILE_ADJ"],
-    "ua": "Цей стіл не найміцніший, бо він пластиковий.",
-    "en": [
-      "This table isn’t the strongest because it’s plastic.",
-      "This table isn’t the sturdiest because it’s plastic.",
-      "This table isn’t the most durable since it’s made of plastic.",
-      "This table isn’t the toughest since it’s made of plastic."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ця весна найбарвистіша за останні роки.",
-    "en": [
-      "This spring is the most colorful in recent years.",
-      "This spring is the brightest in recent years.",
-      "This spring is the most vibrant in recent years.",
-      "This spring is the most radiant in recent years."
     ]
   },
   {
@@ -160,33 +120,13 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ця аудиторія набагато найзатишніша в школі.",
+    "rules": ["SUPERLATIVES"],
+    "ua": "Твій ноутбук найшвидший?",
     "en": [
-      "This auditorium is by far the coziest in the school.",
-      "This auditorium is by far the warmest in the school.",
-      "This auditorium is much the most comfortable in the school.",
-      "This auditorium is much the snuggest in the school."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твій ноутбук найшвидший у нас?",
-    "en": [
-      "Is your laptop the fastest we have?",
-      "Is your laptop the quickest we have?",
-      "Is your laptop the most rapid we have?",
-      "Is your laptop the speediest we have?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Цей годинник найточніший з маминих.",
-    "en": [
-      "This watch is the most accurate of mom’s.",
-      "This watch is the most precise of mom’s.",
-      "This watch is the most exact of my mother’s.",
-      "This watch is the truest of my mother’s."
+      "Is your laptop the fastest?",
+      "Is your laptop the quickest?",
+      "Is your laptop the most rapid?",
+      "Is your laptop the speediest?"
     ]
   },
   {
@@ -220,7 +160,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ти найенергійніший, бо багато відпочиваєш.",
     "en": [
       "You are the most energetic because you rest a lot.",
@@ -240,27 +180,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "WH_Q", "PREP_PLACE"],
-    "ua": "Чому ця крамниця найдорожча в районі?",
-    "en": [
-      "Why is this shop the most expensive in the district?",
-      "Why is this shop the costliest in the district?",
-      "Why is this store the priciest in the area?",
-      "Why is this store the most costly in the area?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ця презентація набагато найцікавіша в курсі.",
-    "en": [
-      "This presentation is by far the most interesting in the course.",
-      "This presentation is by far the most engaging in the course.",
-      "This presentation is much the most captivating in the course.",
-      "This presentation is much the most fascinating in the course."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["SUPERLATIVES", "PREP_TIME"],
     "ua": "Вона найстаранніша в нашій групі цього семестру.",
     "en": [
       "She is the most diligent in our group this semester.",
@@ -270,8 +190,8 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
-    "ua": "Чи цей диван найм’якший у магазині?",
+    "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
+    "ua": "Цей диван найм’якший у магазині?",
     "en": [
       "Is this sofa the softest in the store?",
       "Is this sofa the smoothest in the store?",
@@ -310,17 +230,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Він читає найголосніше в бібліотеці.",
-    "en": [
-      "He reads the loudest in the library.",
-      "He reads the most audibly in the library.",
-      "He reads the most clearly in the library.",
-      "He reads the most distinctly in the library."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["SUPERLATIVES", "ARTICLES"],
     "ua": "Мій планшет найзручніший у класі.",
     "en": [
       "My tablet is the most convenient in the class.",
@@ -340,28 +250,8 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому цей проєкт найкреативніший у конкурсі?",
-    "en": [
-      "Why is this project the most creative in the contest?",
-      "Why is this project the most imaginative in the contest?",
-      "Why is this project the most innovative in the competition?",
-      "Why is this project the most original in the competition?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Ця страва набагато найсмачніша в меню.",
-    "en": [
-      "This dish is by far the tastiest in the menu.",
-      "This dish is by far the most delicious in the menu.",
-      "This dish is much the most flavorful in the menu.",
-      "This dish is much the yummiest in the menu."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ці навушники найгучніші в магазині?",
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES"],
+    "ua": "Ці навушники найгучніші в магазині?",
     "en": [
       "Are these headphones the loudest in the store?",
       "Are these headphones the noisiest in the store?",
@@ -400,7 +290,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["SUPERLATIVES", "PREP_TIME"],
     "ua": "Він найвеселіший у нашій команді цього року.",
     "en": [
       "He is the funniest in our team this year.",
@@ -417,16 +307,6 @@
       "This morning is the brightest this week.",
       "This morning is the most radiant this week.",
       "This morning is the sunniest this week."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи ця аудиторія найпросторіша в університеті?",
-    "en": [
-      "Is this auditorium the most spacious in the university?",
-      "Is this auditorium the roomiest in the university?",
-      "Is this auditorium the most expansive in the university?",
-      "Is this auditorium the largest in the university?"
     ]
   },
   {
@@ -460,26 +340,6 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "WH_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чому твій телефон найдорожчий у групі?",
-    "en": [
-      "Why is your phone the most expensive in the group?",
-      "Why is your phone the costliest in the group?",
-      "Why is your phone the priciest in the team?",
-      "Why is your phone the most costly in the team?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ця кімната набагато найзатишніша в будинку.",
-    "en": [
-      "This room is by far the coziest in the house.",
-      "This room is by far the warmest in the house.",
-      "This room is much the most comfortable in the house.",
-      "This room is much the snuggest in the house."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "ARTICLES"],
     "ua": "Цей килим найм’якший у магазині.",
     "en": [
@@ -490,17 +350,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ця осінь найбарвистіша за останні роки.",
-    "en": [
-      "This autumn is the most colorful in recent years.",
-      "This autumn is the brightest in recent years.",
-      "This fall is the most vibrant in recent years.",
-      "This fall is the most radiant in recent years."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "SIMPLE_ADJ"],
+    "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
     "ua": "Ти найшвидший у нашій команді з бігу.",
     "en": [
       "You are the fastest in our running team.",
@@ -527,16 +377,6 @@
       "This camera is the clearest among all in the store.",
       "This camera is the most precise of all in the shop.",
       "This camera is the most accurate of all in the shop."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
-    "ua": "Чи цей торт найсмачніший на святі?",
-    "en": [
-      "Is this cake the tastiest at the party?",
-      "Is this cake the most delicious at the party?",
-      "Is this cake the yummiest at the celebration?",
-      "Is this cake the most flavorful at the celebration?"
     ]
   },
   {
@@ -570,23 +410,13 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твій велосипед найшвидший у нас?",
+    "rules": ["SUPERLATIVES"],
+    "ua": "Твій велосипед найшвидший?",
     "en": [
-      "Is your bike the fastest we have?",
-      "Is your bike the quickest we have?",
-      "Is your bicycle the most rapid we have?",
-      "Is your bicycle the speediest we have?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ця гра набагато найзахопливіша в колекції.",
-    "en": [
-      "This game is by far the most exciting in the collection.",
-      "This game is by far the most thrilling in the collection.",
-      "This game is much the most engaging in the collection.",
-      "This game is much the most captivating in the collection."
+      "Is your bike the fastest?",
+      "Is your bike the quickest?",
+      "Is your bicycle the most rapid?",
+      "Is your bicycle the speediest?"
     ]
   },
   {
@@ -610,43 +440,13 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
-    "ua": "Коли настане вечір, він буде найяснішим цього місяця.",
-    "en": [
-      "When evening comes, it will be the clearest this month.",
-      "When evening comes, it will be the brightest this month.",
-      "When night arrives, it will be the most radiant this month.",
-      "When night arrives, it will be the sunniest this month."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER"],
     "ua": "Вона грає найенергійніше в команді.",
     "en": [
       "She plays the most energetically in the team.",
       "She plays the most vigorously in the team.",
       "She performs the most lively in the team.",
       "She performs the most dynamically in the team."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Цей стіл не найміцніший, бо він дерев’яний.",
-    "en": [
-      "This table isn’t the strongest because it’s wooden.",
-      "This table isn’t the sturdiest because it’s wooden.",
-      "This table isn’t the most durable since it’s made of wood.",
-      "This table isn’t the toughest since it’s made of wood."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ця зима найхолодніша за останні роки.",
-    "en": [
-      "This winter is the coldest in recent years.",
-      "This winter is the chilliest in recent years.",
-      "This winter is the most freezing in recent years.",
-      "This winter is the iciest in recent years."
     ]
   },
   {
@@ -660,23 +460,13 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ця тераса набагато найзатишніша в будинку.",
+    "rules": ["SUPERLATIVES"],
+    "ua": "Твій рюкзак найлегший?",
     "en": [
-      "This terrace is by far the coziest in the house.",
-      "This terrace is by far the warmest in the house.",
-      "This terrace is much the most comfortable in the house.",
-      "This terrace is much the snuggest in the house."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твій рюкзак найлегший у нас?",
-    "en": [
-      "Is your backpack the lightest we have?",
-      "Is your backpack the least heavy we have?",
-      "Is your backpack the most weightless we have?",
-      "Is your backpack the easiest to carry we have?"
+      "Is your backpack the lightest?",
+      "Is your backpack the least heavy?",
+      "Is your backpack the most weightless?",
+      "Is your backpack the easiest to carry?"
     ]
   },
   {
@@ -720,7 +510,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ти найщасливіший, бо виграв приз.",
     "en": [
       "You are the happiest because you won a prize.",
@@ -750,17 +540,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ця книга набагато найзахопливіша в бібліотеці.",
-    "en": [
-      "This book is by far the most exciting in the library.",
-      "This book is by far the most thrilling in the library.",
-      "This book is much the most engaging in the library.",
-      "This book is much the most captivating in the library."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["SUPERLATIVES", "PREP_TIME"],
     "ua": "Вона найспритніша в нашій групі цього сезону.",
     "en": [
       "She is the most agile in our group this season.",
@@ -770,8 +550,8 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
-    "ua": "Чи ця страва найсмачніша в меню?",
+    "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
+    "ua": "Ця страва найсмачніша в меню?",
     "en": [
       "Is this dish the tastiest in the menu?",
       "Is this dish the most delicious in the menu?",
@@ -820,7 +600,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["SUPERLATIVES", "ARTICLES"],
     "ua": "Мій телефон найчіткіший у класі.",
     "en": [
       "My phone is the sharpest in the class.",
@@ -850,36 +630,6 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Ця кава набагато найсмачніша в кафе.",
-    "en": [
-      "This coffee is by far the tastiest in the café.",
-      "This coffee is by far the most delicious in the café.",
-      "This coffee is much the most flavorful in the café.",
-      "This coffee is much the yummiest in the café."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ці навушники найзручніші в магазині?",
-    "en": [
-      "Are these headphones the most convenient in the store?",
-      "Are these headphones the handiest in the store?",
-      "Are these earphones the most user-friendly in the shop?",
-      "Are these earphones the easiest in the shop?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Ця вечірка найвеселіша в братовій пам’яті.",
-    "en": [
-      "This party is the funniest in my brother’s memory.",
-      "This party is the most amusing in my brother’s memory.",
-      "This party is the liveliest in my sibling’s memory.",
-      "This party is the most entertaining in my sibling’s memory."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
     "ua": "Цей сад найзеленіший серед усіх у районі.",
     "en": [
@@ -900,7 +650,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
+    "rules": ["SUPERLATIVES", "PREP_TIME"],
     "ua": "Він найвеселіший у нашій групі цього місяця.",
     "en": [
       "He is the funniest in our group this month.",
@@ -920,8 +670,8 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи цей пляж найчистіший у регіоні?",
+    "rules": ["SUPERLATIVES", "PREP_PLACE"],
+    "ua": "Цей пляж найчистіший у регіоні?",
     "en": [
       "Is this beach the cleanest in the region?",
       "Is this beach the tidiest in the region?",
@@ -960,43 +710,13 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "WH_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["SUPERLATIVES", "WH_Q"],
     "ua": "Чому твій фотоапарат найчіткіший у групі?",
     "en": [
       "Why is your camera the sharpest in the group?",
       "Why is your camera the clearest in the group?",
       "Why is your camera the most precise in the team?",
       "Why is your camera the most accurate in the team?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ця кімната набагато найзатишніша в будинку.",
-    "en": [
-      "This room is by far the coziest in the house.",
-      "This room is by far the warmest in the house.",
-      "This room is much the most comfortable in the house.",
-      "This room is much the snuggest in the house."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Цей напій найосвіжаючий у меню.",
-    "en": [
-      "This drink is the most refreshing in the menu.",
-      "This drink is the coolest in the menu.",
-      "This drink is the freshest in the menu.",
-      "This drink is the most invigorating in the menu."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ця весна найтепліша за останні роки.",
-    "en": [
-      "This spring is the warmest in recent years.",
-      "This spring is the mildest in recent years.",
-      "This spring is the most pleasant in recent years.",
-      "This spring is the coziest in recent years."
     ]
   }
 ] }

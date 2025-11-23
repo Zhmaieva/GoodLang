@@ -2,350 +2,466 @@
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо я закінчу роботу рано, я піду в кіно.",
-    "en": ["If I finish work early, I will go to the cinema.",
-      "If I finish work early, I'll go to the cinema.",
-      "If I finish work early, I will go to the movies.",
-      "If I finish work early, I'll go to the movies."]
+    "en": [
+      "If I finish work early, I will go to the cinema.",
+      "If I finish work early, I will go to the movies."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
-    "ua": "Якщо вона не вивчить урок, вона не складе іспит.",
-    "en": ["If she does not study the lesson, she will not pass the exam.", "If she doesn't study the lesson, she won't pass the exam."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо вона не готуватиметься до іспиту, вона його не складе.",
+    "en": [
+      "If she does not study for the exam, she will not pass it.",
+      "If she doesn't study for the exam, she won't pass it."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо ми поїдемо в парк, ми пограємо у фризбі.",
-    "en": ["If we go to the park, we will play frisbee.", "If we go to the park, we'll play frisbee."]
+    "en": [
+      "If we go to the park, we will play frisbee.",
+      "If we go to the park, we'll play frisbee."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо він купить трохи фруктів, ми приготуємо салат.",
-    "en": ["If he buys some fruit, we will make a salad.", "If he buys some fruit, we'll make a salad."]
+    "en": [
+      "If he buys vegetables, we will make a salad."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо я часто тренуюся, я ніколи не втомлюся.",
-    "en": ["If I train often, I will never get tired.", "If I train often, I'll never get tired."]
+    "ua": "Якщо я часто тренуватимуся, я не буду так швидко втомлюватися.",
+    "en": [
+      "If I train often, I will not get tired so fast.",
+      "If I train often, I won't get tired so easily."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо я прийду в бібліотеку завтра, я візьму книгу.",
-    "en": ["If I go to the library tomorrow, I will borrow a book.", "If I go to the library tomorrow, I'll borrow a book."]
+    "en": [
+      "If I go to the library tomorrow, I will borrow a book.",
+      "If I go to the library tomorrow, I'll borrow a book."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо мій друг зателефонує, я запрошу його на вечерю.",
-    "en": ["If my friend calls, I will invite him to dinner.", "If my friend calls, I'll invite him to dinner."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці студенти підготуються, вони складуть тест.",
-    "en": ["If these students prepare, they will pass the test.", "If these students prepare, they'll pass the test."]
+    "en": [
+      "If my friend calls, I will invite him to dinner.",
+      "If my friend calls, I'll invite him to dinner."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо вона піде в кафе, вона замовить каву.",
-    "en": ["If she goes to the café, she will order coffee.", "If she goes to the café, she'll order coffee."]
+    "en": [
+      "If she goes to the café, she will order coffee.",
+      "If she goes to the café, she'll order coffee."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо він не поспішить, він не встигне на автобус.",
-    "en": ["If he does not hurry, he will not catch the bus.", "If he doesn't hurry, he won't catch the bus."]
+    "en": [
+      "If he does not hurry, he will not catch the bus.",
+      "If he doesn't hurry, he won't catch the bus."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо ми купимо багато квитків, ми підемо на концерт.",
-    "en": ["If we buy many tickets, we will go to the concert.", "If we buy many tickets, we'll go to the concert."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вони часто практикуються, вони ніколи не програють.",
-    "en": ["If they practice often, they will never lose.", "If they practice often, they'll never lose."]
+    "en": [
+      "If we buy the tickets, we will go to the concert."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ARTICLES"],
     "ua": "Якщо я побачу її, я скажу правду.",
-    "en": ["If I see her, I will tell the truth.", "If I see her, I'll tell the truth."]
+    "en": [
+      "If I see her, I will tell the truth.",
+      "If I see her, I'll tell the truth."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо вона закінчить роботу до вечора, вона піде на прогулянку.",
-    "en": ["If she finishes work by evening, she will go for a walk.", "If she finishes work by evening, she'll go for a walk."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Якщо мій брат допоможе, ми швидко закінчимо ремонт.",
-    "en": ["If my brother helps, we will finish the repair quickly.", "If my brother helps, we'll finish the repair quickly."]
+    "en": [
+      "If she finishes work by evening, she will go for a walk.",
+      "If she finishes work by evening, she'll go for a walk."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
     "ua": "Якщо цей учитель пояснить, ми зрозуміємо тему.",
-    "en": ["If this teacher explains, we will understand the topic.", "If this teacher explains, we'll understand the topic."]
+    "en": [
+      "If this teacher explains, we will understand the topic.",
+      "If this teacher explains, we'll understand the topic."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо ми не купимо продукти, ми не приготуємо вечерю.",
-    "en": ["If we do not buy groceries, we will not cook dinner.", "If we don't buy groceries, we won't cook dinner."]
+    "en": [
+      "If we do not buy groceries, we will not cook dinner.",
+      "If we don't buy groceries, we won't cook dinner."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він візьме трохи грошей, він купить подарунок.",
-    "en": ["If he takes some money, he will buy a gift.", "If he takes some money, he'll buy a gift."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо він візьме гроші, він купить подарунок.",
+    "en": [
+      "If he takes the money, he will buy a gift."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо я поїду в гори, я покатаюся на лижах.",
-    "en": ["If I go to the mountains, I will ski.", "If I go to the mountains, I'll ski."]
+    "en": [
+      "If I go to the mountains, I will ski.",
+      "If I go to the mountains, I'll ski."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вона рідко тренується, вона не виграє змагання.",
-    "en": ["If she rarely trains, she will not win the competition.", "If she rarely trains, she won't win the competition."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо вона рідко тренуватиметься, вона не виграє змагання.",
+    "en": [
+      "If she trains rarely, she will not win the competition."
+    ]
   },
-  {
-    "rules": ["FIRST_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти вивчиш матеріал, ти повинен скласти іспит.",
-    "en": ["If you study the material, you should pass the exam.", "If you study the material, you should pass the exam."]
-  },
+
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо ми приїдемо до обіду, ми пограємо в теніс.",
-    "en": ["If we arrive by noon, we will play tennis.", "If we arrive by noon, we'll play tennis."]
+    "en": [
+      "If we arrive by noon, we will play tennis.",
+      "If we arrive by noon, we'll play tennis."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "TOO_VERY"],
-    "ua": "Якщо він дуже втомиться, він не піде на вечірку.",
-    "en": ["If he is too tired, he will not go to the party.", "If he's too tired, he won't go to the party."]
+    "ua": "Якщо він занадто втомиться, він не піде на вечірку.",
+    "en": [
+      "If he is too tired, he will not go to the party.",
+      "If he gets too tired, he will not go to the party."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо моя сестра зателефонує, я допоможу їй із завданням.",
-    "en": ["If my sister calls, I will help her with the task.", "If my sister calls, I'll help her with the task."]
+    "en": [
+      "If my sister calls, I will help her with the task.",
+      "If my sister calls, I'll help her with the task."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці діти будуть уважними, вони навчаться малювати.",
-    "en": ["If these children are attentive, they will learn to draw.", "If these children are attentive, they'll learn to draw."]
+    "ua": "Якщо я багато практикуватимуся, я навчуся малювати професійно.",
+    "en": [
+      "If I practise a lot, I will learn to draw professionally.",
+      "If I practise a lot, I will learn to draw like a professional."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо вона не поспішить, вона не встигне на поїзд.",
-    "en": ["If she does not hurry, she will not catch the train.", "If she doesn't hurry, she won't catch the train."]
+    "en": [
+      "If she does not hurry, she will not catch the train.",
+      "If she doesn't hurry, she won't catch the train."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо я куплю трохи квітів, я прикрашу кімнату.",
-    "en": ["If I buy some flowers, I will decorate the room.", "If I buy some flowers, I'll decorate the room."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо я куплю квіти, я прикрашу кімнату.",
+    "en": [
+      "If I buy flowers, I will decorate the room."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо він прийде до вечора, ми підемо в ресторан.",
-    "en": ["If he arrives by evening, we will go to the restaurant.", "If he arrives by evening, we'll go to the restaurant."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вони часто тренуються, вони ніколи не травмуються.",
-    "en": ["If they train often, they will never get injured.", "If they train often, they'll never get injured."]
+    "en": [
+      "If he arrives by evening, we will go to the restaurant.",
+      "If he arrives by evening, we'll go to the restaurant."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо ми поїдемо на пляж, ми поплаваємо.",
-    "en": ["If we go to the beach, we will swim.", "If we go to the beach, we'll swim."]
+    "en": [
+      "If we go to the beach, we will swim.",
+      "If we go to the beach, we'll swim."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо мій друг приїде, ми підемо в кіно.",
-    "en": ["If my friend arrives, we will go to the cinema.", "If my friend arrives, we'll go to the cinema."]
+    "en": [
+      "If my friend arrives, we will go to the cinema.",
+      "If my friend arrives, we'll go to the cinema."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
     "ua": "Якщо цей актор зіграє добре, він отримає нагороду.",
-    "en": ["If this actor performs well, he will win an award.", "If this actor performs well, he'll win an award."]
+    "en": [
+      "If this actor performs well, he will win an award.",
+      "If this actor performs well, he'll win an award."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо ми не забронюємо квитки, ми не підемо на концерт.",
-    "en": ["If we do not book tickets, we will not go to the concert.", "If we don't book tickets, we won't go to the concert."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо вона купить багато продуктів, ми влаштуємо вечірку.",
-    "en": ["If she buys a lot of groceries, we will throw a party.", "If she buys a lot of groceries, we'll throw a party."]
+    "en": [
+      "If we do not book tickets, we will not go to the concert.",
+      "If we don't book tickets, we won't go to the concert."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
-    "ua": "Якщо я закінчу проект до п’ятниці, я відпочину на вихідних.",
-    "en": ["If I finish the project by Friday, I will rest on the weekend.", "If I finish the project by Friday, I'll rest on the weekend."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо він рідко вчиться, він не отримає хорошу оцінку.",
-    "en": ["If he rarely studies, he will not get a good grade.", "If he rarely studies, he won't get a good grade."]
+    "ua": "Якщо я закінчу проєкт до п’ятниці, я відпочину на вихідних.",
+    "en": [
+      "If I finish the project by Friday, I will rest on the weekend.",
+      "If I finish the project by Friday, I'll rest on the weekend."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ARTICLES"],
     "ua": "Якщо ми поспішимо, ми встигнемо на фільм.",
-    "en": ["If we hurry, we will catch the movie.", "If we hurry, we'll catch the movie."]
+    "en": [
+      "If we hurry, we will catch the movie.",
+      "If we hurry, we'll catch the movie."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Якщо моя мама приготує вечерю, я допоможу їй.",
-    "en": ["If my mom cooks dinner, I will help her.", "If my mom cooks dinner, I'll help her."]
+    "ua": "Якщо моя мама приготує вечерю, я допоможу їй з прибиранням.",
+    "en": [
+      "If my mom cooks dinner, I will help her with the cleaning."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
     "ua": "Якщо ця команда виграє, вони отримають кубок.",
-    "en": ["If this team wins, they will get the trophy.", "If this team wins, they'll get the trophy."]
+    "en": [
+      "If this team wins, they will get the trophy.",
+      "If this team wins, they'll get the trophy."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо він не зателефонує, я не піду на зустріч.",
-    "en": ["If he does not call, I will not go to the meeting.", "If he doesn't call, I won't go to the meeting."]
+    "en": [
+      "If he does not call, I will not go to the meeting.",
+      "If he doesn't call, I won't go to the meeting."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо ми зберемо трохи грошей, ми поїдемо у відпустку.",
-    "en": ["If we save some money, we will go on vacation.", "If we save some money, we'll go on vacation."]
+    "rules": ["FIRST_CONDITIONAL", "TOO_ENOUGH"],
+    "ua": "Якщо ми накопимо достатньо грошей, ми поїдемо у відпустку.",
+    "en": [
+      "If we save enough money, we will go on vacation."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо я поїду в ліс, я зберу гриби.",
-    "en": ["If I go to the forest, I will pick mushrooms.", "If I go to the forest, I'll pick mushrooms."]
+    "en": [
+      "If I go to the forest, I will pick mushrooms.",
+      "If I go to the forest, I'll pick mushrooms."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "TOO_VERY"],
-    "ua": "Якщо вона дуже втомиться, вона не піде на прогулянку.",
-    "en": ["If she is too tired, she will not go for a walk.", "If she's too tired, she won't go for a walk."]
+    "ua": "Якщо вона занадто втомиться, вона не піде на прогулянку.",
+    "en": [
+      "If she is too tired, she will not go for a walk.",
+      "If she's too tired, she won't go for a walk."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо ми закінчимо до вечора, ми подивимося фільм.",
-    "en": ["If we finish by evening, we will watch a movie.", "If we finish by evening, we'll watch a movie."]
+    "en": [
+      "If we finish by evening, we will watch a movie.",
+      "If we finish by evening, we'll watch a movie."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо я часто читаю, я ніколи не забуду слова.",
-    "en": ["If I read often, I will never forget the words.", "If I read often, I'll never forget the words."]
+    "ua": "Якщо я часто читатиму англійською, я не буду так легко забувати слова.",
+    "en": [
+      "If I read in English often, I will not forget words so easily.",
+      "If I read in English often, I will not forget words that easily."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Якщо мій друг приїде, я покажу йому місто.",
-    "en": ["If my friend arrives, I will show him the city.", "If my friend arrives, I'll show him the city."]
+    "ua": "Якщо приїде мій друг, я покажу йому місто.",
+    "en": [
+      "If my friend arrives, I will show him the city.",
+      "If my friend arrives, I'll show him the city."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці учні будуть старанними, вони отримають нагороди.",
-    "en": ["If these students are diligent, they will receive awards.", "If these students are diligent, they'll receive awards."]
+    "ua": "Якщо вони виграють, вони отримають нагороду.",
+    "en": [
+      "If they win, they will receive a prize."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо вона не підготує презентацію, вона не виступить.",
-    "en": ["If she does not prepare the presentation, she will not perform.", "If she doesn't prepare the presentation, she won't perform."]
+    "en": [
+      "If she does not prepare the presentation, she will not perform.",
+      "If she doesn't prepare the presentation, she won't perform."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він купить багато книг, він відкриє бібліотеку.",
-    "en": ["If he buys many books, he will open a library.", "If he buys many books, he'll open a library."]
+    "ua": "Якщо він купить багато книг, він відкриє домашню бібліотеку.",
+    "en": [
+      "If he buys many books, he will start a home library.",
+      "If he buys many books, he will open a home library."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо я прокинуся рано, я піду на пробіжку.",
-    "en": ["If I wake up early, I will go for a run.", "If I wake up early, I'll go for a run."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти потренуєшся, ти повинен виграти матч.",
-    "en": ["If you practice, you should win the match.", "If you practice, you should win the match."]
+    "en": [
+      "If I wake up early, I will go for a run.",
+      "If I wake up early, I'll go for a run."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
-    "ua": "Якщо я прокинуся рано завтра, я піду на пробіжку.",
-    "en": ["If I wake up early tomorrow, I will go for a run.", "If I wake up early tomorrow, I'll go for a run."]
+    "ua": "Якщо я прокинуся рано, я піду на пробіжку.",
+    "en": [
+      "If I wake up early, I will go for a run.",
+      "If I wake up early, I'll go for a run."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо він не зателефонує, ми не підемо на зустріч.",
-    "en": ["If he does not call, we will not go to the meeting.", "If he doesn't call, we won't go to the meeting."]
+    "en": [
+      "If he does not call, we will not go to the meeting.",
+      "If he doesn't call, we won't go to the meeting."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо ми поїдемо на озеро, ми поплаваємо.",
-    "en": ["If we go to the lake, we will swim.", "If we go to the lake, we'll swim."]
+    "en": [
+      "If we go to the lake, we will swim.",
+      "If we go to the lake, we'll swim."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо вона купить трохи овочів, ми приготуємо суп.",
-    "en": ["If she buys some vegetables, we will cook soup.", "If she buys some vegetables, we'll cook soup."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо вона купить мʼясо, ми приготуємо суп.",
+    "en": [
+      "If she buys meat, we will make soup."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо я часто читаю, я ніколи не забуду граматику.",
-    "en": ["If I read often, I will never forget grammar.", "If I read often, I'll never forget grammar."]
+    "ua": "Якщо я часто читатиму англійською, я не буду забувати граматику.",
+    "en": [
+      "If I read in English often, I will not forget the grammar."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо я відвідаю музей цього тижня, я побачу нову виставку.",
-    "en": ["If I visit the museum this week, I will see the new exhibition.", "If I visit the museum this week, I'll see the new exhibition."]
+    "en": [
+      "If I visit the museum this week, I will see the new exhibition.",
+      "If I visit the museum this week, I'll see the new exhibition."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо мій друг прийде, ми пограємо у відеоігри.",
-    "en": ["If my friend comes, we will play video games.", "If my friend comes, we'll play video games."]
+    "en": [
+      "If my friend comes, we will play video games.",
+      "If my friend comes, we'll play video games."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці учні вивчать урок, вони складуть тест.",
-    "en": ["If these students learn the lesson, they will pass the test.", "If these students learn the lesson, they'll pass the test."]
+    "ua": "Якщо вони вивчать матеріал, вони складуть тест.",
+    "en": [
+      "If they learn the material, they will pass the test."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо вона поїде в парк, вона покатається на велосипеді.",
-    "en": ["If she goes to the park, she will ride a bike.", "If she goes to the park, she'll ride a bike."]
+    "en": [
+      "If she goes to the park, she will ride a bike.",
+      "If she goes to the park, she'll ride a bike."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
-    "ua": "Якщо він не закінчить проект, він не отримає премію.",
-    "en": ["If he does not finish the project, he will not get a bonus.", "If he doesn't finish the project, he won't get a bonus."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо він не закінчить проєкт, він не отримає премію.",
+    "en": [
+      "If he does not finish the project, he will not get a bonus.",
+      "If he doesn't finish the project, he won't get a bonus."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо ми купимо багато квітів, ми прикрасимо зал.",
-    "en": ["If we buy many flowers, we will decorate the hall.", "If we buy many flowers, we'll decorate the hall."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вони часто тренуються, вони ніколи не програють матч.",
-    "en": ["If they train often, they will never lose the match.", "If they train often, they'll never lose the match."]
+    "en": [
+      "If we buy a lot of flowers, we will decorate the hall.",
+      "If we buy a lot of flowers, we'll decorate the hall."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ARTICLES"],
     "ua": "Якщо я побачу його, я запрошу його на вечірку.",
-    "en": ["If I see him, I will invite him to the party.", "If I see him, I'll invite him to the party."]
+    "en": [
+      "If I see him, I will invite him to the party.",
+      "If I see him, I'll invite him to the party."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо вона закінчить до вечора, вона піде в театр.",
-    "en": ["If she finishes by evening, she will go to the theater.", "If she finishes by evening, she'll go to the theater."]
+    "en": [
+      "If she finishes by evening, she will go to the theater.",
+      "If she finishes by evening, she'll go to the theater."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо моя сестра допоможе, ми швидко приберемо будинок.",
-    "en": ["If my sister helps, we will clean the house quickly.", "If my sister helps, we'll clean the house quickly."]
+    "en": [
+      "If my sister helps, we will clean the house quickly.",
+      "If my sister helps, we'll clean the house quickly."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
     "ua": "Якщо цей учитель дасть завдання, ми виконаємо його.",
-    "en": ["If this teacher gives an assignment, we will complete it.", "If this teacher gives an assignment, we'll complete it."]
+    "en": [
+      "If this teacher gives an assignment, we will complete it.",
+      "If this teacher gives an assignment, we'll complete it."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
-    "ua": "Якщо ми не купимо квитки, ми не підемо на фільм.",
-    "en": ["If we do not buy tickets, we will not go to the movie.", "If we don't buy tickets, we won't go to the movie."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо ми не купимо квитки, ми не підемо в кінотеатр.",
+    "en": ["If we don’t buy the tickets, we will not go to the cinema."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він візьме трохи грошей, він купить книгу.",
-    "en": ["If he takes some money, he will buy a book.", "If he takes some money, he'll buy a book."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо він матиме гроші, він купить квартиру.",
+    "en": ["If he has money, he will buy an apartment."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
@@ -353,24 +469,14 @@
     "en": ["If I go to the mountains, I will take many photos.", "If I go to the mountains, I'll take many photos."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вона рідко готує, вона не навчиться готувати добре.",
-    "en": ["If she rarely cooks, she will not learn to cook well.", "If she rarely cooks, she won't learn to cook well."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти потренуєшся, ти повинен виграти гру.",
-    "en": ["If you practice, you should win the game.", "If you practice, you should win the game."]
-  },
-  {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо ми приїдемо до обіду, ми пограємо в шахи.",
     "en": ["If we arrive by noon, we will play chess.", "If we arrive by noon, we'll play chess."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "TOO_VERY"],
-    "ua": "Якщо він дуже втомиться, він не поїде на вечірку.",
-    "en": ["If he is too tired, he will not go to the party.", "If he's too tired, he won't go to the party."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо він дуже втомиться, він не поїде до родичів.",
+    "en": ["If he gets very tired, he will not go to his relatives."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
@@ -378,29 +484,14 @@
     "en": ["If my brother calls, I will help him with homework.", "If my brother calls, I'll help him with homework."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці діти будуть старанними, вони отримають похвалу.",
-    "en": ["If these children are diligent, they will get praise.", "If these children are diligent, they'll get praise."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
-    "ua": "Якщо вона не підготує промову, вона не виступить.",
-    "en": ["If she does not prepare the speech, she will not perform.", "If she doesn't prepare the speech, she won't perform."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо я куплю трохи фарб, я намалюю картину.",
-    "en": ["If I buy some paints, I will paint a picture.", "If I buy some paints, I'll paint a picture."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо вона не підготує промову, вона не виступить добре.",
+    "en": ["If she doesn’t prepare her speech, she will not perform well."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо він приїде до вечора, ми підемо в кафе.",
     "en": ["If he arrives by evening, we will go to the café.", "If he arrives by evening, we'll go to the café."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вони часто читають, вони ніколи не забудуть історію.",
-    "en": ["If they read often, they will never forget the story.", "If they read often, they'll never forget the story."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
@@ -413,19 +504,14 @@
     "en": ["If my friend arrives, we will go to the park.", "If my friend arrives, we'll go to the park."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо цей співак виступить, ми підемо на концерт.",
-    "en": ["If this singer performs, we will go to the concert.", "If this singer performs, we'll go to the concert."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
-    "ua": "Якщо ми не зберемо грошей, ми не поїдемо у відпустку.",
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо ми не накопимо грошей, ми не поїдемо у відпустку.",
     "en": ["If we do not save money, we will not go on vacation.", "If we don't save money, we won't go on vacation."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо вона купить багато прикрас, вона відкриє магазин.",
-    "en": ["If she buys a lot of decorations, she will open a shop.", "If she buys a lot of decorations, she'll open a shop."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо вона купить багато прикрас, вона матиме велику колекцію.",
+    "en": ["If she buys many ornaments, she will have a big collection."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
@@ -433,19 +519,9 @@
     "en": ["If I finish my homework by noon, I will go for a walk.", "If I finish my homework by noon, I'll go for a walk."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо він рідко тренується, він не стане сильнішим.",
-    "en": ["If he rarely trains, he will not get stronger.", "If he rarely trains, he won't get stronger."]
-  },
-  {
     "rules": ["FIRST_CONDITIONAL", "ARTICLES"],
     "ua": "Якщо ми поспішимо, ми встигнемо на автобус.",
     "en": ["If we hurry, we will catch the bus.", "If we hurry, we'll catch the bus."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Якщо моя мама приготує обід, я допоможу їй.",
-    "en": ["If my mom cooks lunch, I will help her.", "If my mom cooks lunch, I'll help her."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
@@ -453,14 +529,9 @@
     "en": ["If this team plays well, they will win the tournament.", "If this team plays well, they'll win the tournament."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо він не відповість, я не надішлю повідомлення.",
     "en": ["If he does not reply, I will not send a message.", "If he doesn't reply, I won't send a message."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо ми зберемо трохи фруктів, ми зробимо смузі.",
-    "en": ["If we collect some fruit, we will make a smoothie.", "If we collect some fruit, we'll make a smoothie."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
@@ -469,7 +540,7 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL", "TOO_VERY"],
-    "ua": "Якщо вона дуже зайнята, вона не прийде на вечірку.",
+    "ua": "Якщо вона буде дуже зайнята, вона не прийде на вечірку.",
     "en": ["If she is too busy, she will not come to the party.", "If she's too busy, she won't come to the party."]
   },
   {
@@ -478,9 +549,9 @@
     "en": ["If we finish by evening, we will go to the cinema.", "If we finish by evening, we'll go to the cinema."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо я часто малюю, я ніколи не втрачу навички.",
-    "en": ["If I paint often, I will never lose my skills.", "If I paint often, I'll never lose my skills."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо я регулярно малюватиму, я не втрачатиму навички.",
+    "en": ["If I draw regularly, I will not lose my skills."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
@@ -489,18 +560,18 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці учні будуть уважними, вони зрозуміють урок.",
-    "en": ["If these students are attentive, they will understand the lesson.", "If these students are attentive, they'll understand the lesson."]
+    "ua": "Якщо вони будуть уважними, вони зрозуміють урок.",
+    "en": ["If they are attentive, they will understand the lesson.", "If they are attentive, they'll understand the lesson."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо вона не підготує звіт, вона не отримає підвищення.",
     "en": ["If she does not prepare the report, she will not get a promotion.", "If she doesn't prepare the report, she won't get a promotion."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він купить багато матеріалів, він побудує будинок.",
-    "en": ["If he buys a lot of materials, he will build a house.", "If he buys a lot of materials, he'll build a house."]
+    "rules": ["FIRST_CONDITIONAL", "TOO_ENOUGH"],
+    "ua": "Якщо він купить достатньо матеріалів, він побудує будинок.",
+    "en": ["If he buys enough materials, he will build a house."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
@@ -508,9 +579,11 @@
     "en": ["If I wake up before dawn, I will see the sunrise.", "If I wake up before dawn, I'll see the sunrise."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти вивчиш слова, ти повинен скласти тест.",
-    "en": ["If you learn the words, you should pass the test.", "If you learn the words, you should pass the test."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо ти вивчиш слова, ти складеш тест.",
+    "en": [
+      "If you learn the words, you will pass the test."
+    ]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
@@ -518,7 +591,7 @@
     "en": ["If I finish work by evening, I will go to the concert.", "If I finish work by evening, I'll go to the concert."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо вона не відповість, я не надішлю запрошення.",
     "en": ["If she does not reply, I will not send the invitation.", "If she doesn't reply, I won't send the invitation."]
   },
@@ -528,14 +601,14 @@
     "en": ["If we go to the forest, we will make a campfire.", "If we go to the forest, we'll make a campfire."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він купить трохи фарб, ми намалюємо стіну.",
-    "en": ["If he buys some paint, we will paint the wall.", "If he buys some paint, we'll paint the wall."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо він купить фарби, ми пофарбуємо стіну.",
+    "en": ["If he buys the paint, we will paint the wall."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо я часто тренуюся, я ніколи не втрачу форму.",
-    "en": ["If I train often, I will never lose shape.", "If I train often, I'll never lose shape."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо я часто тренуватимуся, я буду в формі.",
+    "en": ["If I train often, I will be in shape."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
@@ -548,29 +621,19 @@
     "en": ["If my friend arrives, we will go for a walk.", "If my friend arrives, we'll go for a walk."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці учні підготуються, вони складуть іспит.",
-    "en": ["If these students prepare, they will pass the exam.", "If these students prepare, they'll pass the exam."]
-  },
-  {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо вона поїде на пляж, вона поплаває.",
     "en": ["If she goes to the beach, she will swim.", "If she goes to the beach, she'll swim."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо він не поспішить, він не встигне на літак.",
     "en": ["If he does not hurry, he will not catch the plane.", "If he doesn't hurry, he won't catch the plane."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо ми купимо багато продуктів, ми влаштуємо вечірку.",
-    "en": ["If we buy a lot of groceries, we will throw a party.", "If we buy a lot of groceries, we'll throw a party."]
-  },
-  {
     "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вони часто практикуються, вони ніколи не зроблять помилки.",
-    "en": ["If they practice often, they will never make mistakes.", "If they practice often, they'll never make mistakes."]
+    "ua": "Якщо вони часто практикуватимуться, вони робитимуть менше помилок.",
+    "en": ["If they practise often, they will make fewer mistakes."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ARTICLES"],
@@ -584,8 +647,8 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Якщо мій брат допоможе, ми закінчимо ремонт швидше.",
-    "en": ["If my brother helps, we will finish the repair faster.", "If my brother helps, we'll finish the repair faster."]
+    "ua": "Якщо мій брат допоможе, ми швидше зробимо ремонт.",
+    "en": ["If my brother helps, we will finish the renovation faster."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
@@ -593,14 +656,14 @@
     "en": ["If this teacher explains the topic, we will understand everything.", "If this teacher explains the topic, we'll understand everything."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо ми не забронюємо столик, ми не повечеряємо в ресторані.",
     "en": ["If we do not book a table, we will not dine at the restaurant.", "If we don't book a table, we won't dine at the restaurant."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він візьме трохи грошей, він купить квиток.",
-    "en": ["If he takes some money, he will buy a ticket.", "If he takes some money, he'll buy a ticket."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо він матиме гроші, він купить квиток.",
+    "en": ["If he has money, he will buy a ticket."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
@@ -608,14 +671,9 @@
     "en": ["If I go to the park, I will ride a bike.", "If I go to the park, I'll ride a bike."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вона рідко вчиться, вона не складе тест.",
-    "en": ["If she rarely studies, she will not pass the test.", "If she rarely studies, she won't pass the test."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти потренуєшся, ти повинен виграти змагання.",
-    "en": ["If you practice, you should win the competition.", "If you practice, you should win the competition."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо вона не буде вчитися, вона не складе тест.",
+    "en": ["If she doesn’t study, she won’t pass the test."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
@@ -634,28 +692,26 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці діти будуть уважними, вони вивчать нове.",
-    "en": ["If these children are attentive, they will learn something new.", "If these children are attentive, they'll learn something new."]
+    "ua": "Якщо ми зосередимося, ми швидко вивчимо нові слова.",
+    "en": [
+      "If we are careful, we will learn the new words quickly.",
+      "If we pay attention, we will learn the new words quickly."
+    ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо вона не купить подарунок, вона не піде на день народження.",
     "en": ["If she does not buy a gift, she will not go to the birthday party.", "If she doesn't buy a gift, she won't go to the birthday party."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо я куплю трохи солодощів, я поділюся з друзями.",
-    "en": ["If I buy some sweets, I will share with friends.", "If I buy some sweets, I'll share with friends."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо я куплю солодощі, я поділюся з друзями.",
+    "en": ["If I buy sweets, I will share with friends."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо він приїде до обіду, ми підемо в парк.",
     "en": ["If he arrives by noon, we will go to the park.", "If he arrives by noon, we'll go to the park."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо вони часто грають, вони ніколи не програють.",
-    "en": ["If they play often, they will never lose.", "If they play often, they'll never lose."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
@@ -669,28 +725,18 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо цей актор зіграє добре, він отримає похвалу.",
-    "en": ["If this actor performs well, he will get praise.", "If this actor performs well, he'll get praise."]
+    "ua": "Якщо цей актор зіграє добре, він отримає добрі відгуки.",
+    "en": ["If this actor performs well, he will receive good reviews."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
-    "ua": "Якщо ми не замовимо піцу, ми не повечеряємо.",
-    "en": ["If we do not order pizza, we will not have dinner.", "If we don't order pizza, we won't have dinner."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо вона купить багато книг, вона відкриє бібліотеку.",
-    "en": ["If she buys many books, she will open a library.", "If she buys many books, she'll open a library."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо ми не замовимо піцу, ми готуватимемо вечерю самі.",
+    "en": ["If we don’t order pizza, we will cook dinner ourselves."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
-    "ua": "Якщо я прокинуся до світанку, я побачу зорі.",
-    "en": ["If I wake up before dawn, I will see the stars.", "If I wake up before dawn, I'll see the stars."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо він рідко читає, він не дізнається нове.",
-    "en": ["If he rarely reads, he will not learn anything new.", "If he rarely reads, he won't learn anything new."]
+    "ua": "Якщо я прокинуся до світанку, я побачу зірки.",
+    "en": ["If I wake up before dawn, I will see the stars."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "ARTICLES"],
@@ -699,8 +745,8 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Якщо моя мама приготує торт, я допоможу їй.",
-    "en": ["If my mom bakes a cake, I will help her.", "If my mom bakes a cake, I'll help her."]
+    "ua": "Якщо мій тато приготує торт, я допоможу йому помити посуд.",
+    "en": ["If my dad makes a cake, I will help him wash the dishes."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
@@ -708,14 +754,14 @@
     "en": ["If this team plays well, they will get medals.", "If this team plays well, they'll get medals."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо він не напише звіт, він не отримає оцінку.",
     "en": ["If he does not write the report, he will not get a grade.", "If he doesn't write the report, he won't get a grade."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо ми зберемо трохи ягід, ми зробимо варення.",
-    "en": ["If we collect some berries, we will make jam.", "If we collect some berries, we'll make jam."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо ми зберемо ягоди, ми зробимо варення.",
+    "en": ["If we pick the berries, we will make jam."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_PLACE"],
@@ -723,19 +769,14 @@
     "en": ["If I go to the mountains, I will snowboard.", "If I go to the mountains, I'll snowboard."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "TOO_VERY"],
-    "ua": "Якщо вона дуже зайнята, вона не приїде на свято.",
-    "en": ["If she is too busy, she will not come to the celebration.", "If she's too busy, she won't come to the celebration."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо вона буде дуже зайнята, вона не приїде на свято.",
+    "en": ["If she is very busy, she will not come to the celebration."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME", "ARTICLES"],
     "ua": "Якщо ми закінчимо до обіду, ми підемо в кіно.",
     "en": ["If we finish by noon, we will go to the cinema.", "If we finish by noon, we'll go to the cinema."]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якщо я часто пишу, я ніколи не забуду правила.",
-    "en": ["If I write often, I will never forget the rules.", "If I write often, I'll never forget the rules."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
@@ -744,18 +785,18 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці учні будуть старанними, вони отримають сертифікати.",
-    "en": ["If these students are diligent, they will receive certificates.", "If these students are diligent, they'll receive certificates."]
+    "ua": "Якщо вони складуть іспит, вони отримають сертифікати.",
+    "en": ["If they pass the exam, they will receive certificates."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["FIRST_CONDITIONAL"],
     "ua": "Якщо вона не закінчить есе, вона не отримає балів.",
     "en": ["If she does not finish the essay, she will not get points.", "If she doesn't finish the essay, she won't get points."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він купить багато іграшок, він подарує їх дітям.",
-    "en": ["If he buys many toys, he will give them to children.", "If he buys many toys, he'll give them to children."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо він купить іграшки, він подарує їх дітям.",
+    "en": ["If he buys the toys, he will give them to the children."]
   },
   {
     "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
@@ -763,8 +804,8 @@
     "en": ["If I wake up early, I will make breakfast.", "If I wake up early, I'll make breakfast."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти вивчиш матеріал, ти повинен отримати хорошу оцінку.",
-    "en": ["If you study the material, you should get a good grade.", "If you study the material, you should get a good grade."]
+    "rules": ["FIRST_CONDITIONAL"],
+    "ua": "Якщо ти вивчиш всі слова, ти отримаєш хорошу оцінку.",
+    "en": ["If you learn all the words, you will get a good grade."]
   }
 ] }

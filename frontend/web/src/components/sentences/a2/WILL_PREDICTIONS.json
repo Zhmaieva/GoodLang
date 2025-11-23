@@ -270,9 +270,9 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES"],
-    "ua": "Чи думаєш ти, що ці люди приїдуть на вечірку?",
+    "ua": "Ти думаєш, що вони приїдуть на вечірку?",
     "en": [
-      "Do you think these people will come to the party?"
+      "Do you think they will come to the party?"
     ]
   },
   {
@@ -637,16 +637,16 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES"],
-    "ua": "Чи думаєш ти, що ці гості прийдуть на свято?",
+    "ua": "Думаєш, ці гості прийдуть на свято?",
     "en": [
-      "Do you think these guests will come to the celebration?",
-      "Do you believe those guests will attend the celebration?"
+      "Do you think these guests will come to the party?",
+      "Do you believe these guests will attend the celebration?"
     ]
   },
 
   {
     "rules": ["WILL_PREDICTIONS", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Він думає, що картина мами буде готова завтра.",
+    "ua": "Він думає, що мамина картина буде готова завтра.",
     "en": [
       "He thinks his mom’s painting will be ready tomorrow.",
       "He believes his mother’s artwork will be finished tomorrow."

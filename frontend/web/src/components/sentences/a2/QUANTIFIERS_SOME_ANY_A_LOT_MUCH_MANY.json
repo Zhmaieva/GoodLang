@@ -20,14 +20,14 @@
     "en": ["I want to buy some apples in the shop."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE", "PREP_PLACE"],
     "ua": "Вчора ми знайшли багато грибів у лісі.",
     "en": ["We found many mushrooms in the forest yesterday."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_PERFECT", "SINCE_FOR"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_PERFECT"],
     "ua": "Я прочитав багато книг за останні два роки.",
-    "en": ["I have read many books for the last two years."]
+    "en": ["I have read many books in the last two years."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
@@ -35,17 +35,7 @@
     "en": ["There is some bread on the table."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "FUTURE_WITH_PRESENT_CONT", "PREP_TIME"],
-    "ua": "Ми купуємо багато квітів на свято.",
-    "en": ["We are buying many flowers for the holiday."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "CAN_CANT"],
-    "ua": "Вона може з’їсти багато морозива.",
-    "en": ["She can eat a lot of ice cream."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми бачимо багато зірок у небі.",
     "en": ["We see many stars in the sky."]
   },
@@ -63,11 +53,6 @@
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "GOING_TO_PLANS"],
     "ua": "Він збирається купити трохи кави.",
     "en": ["He is going to buy some coffee."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "WILL_PREDICTIONS"],
-    "ua": "Багато туристів, напевно, приїде цього літа.",
-    "en": ["Many tourists will probably come this summer."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
@@ -96,13 +81,8 @@
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE", "DID_QUEST_NEG"],
-    "ua": "Чи купили вони багато квитків?",
-    "en": ["Did they buy many tickets?"]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "LIKE_ING"],
-    "ua": "Деякі діти люблять малювати багато картин.",
-    "en": ["Some children like drawing many pictures."]
+    "ua": "Вони вчора купили багато квитків?",
+    "en": ["Did they buy many tickets yesterday?"]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "FIRST_CONDITIONAL"],
@@ -111,8 +91,8 @@
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "TOO_VERY"],
-    "ua": "У неї дуже багато взуття.",
-    "en": ["She has too much footwear."]
+    "ua": "У неї занадто багато взуття.",
+    "en": ["She has too much shoes."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "USED_TO"],
@@ -135,16 +115,6 @@
     "en": ["This shop has the most goods in the city."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "WH_Q"],
-    "ua": "Скільки часу ти витрачаєш на багато завдань?",
-    "en": ["How much time do you spend on many tasks?"]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_PERFECT"],
-    "ua": "Вони не відвідали багато країн до цього року.",
-    "en": ["They hadn’t visited many countries before this year."]
-  },
-  {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "MODAL_PERFECTS"],
     "ua": "Вона могла б купити трохи більше квітів.",
     "en": ["She could have bought some more flowers."]
@@ -165,12 +135,7 @@
     "en": ["Many letters were read yesterday."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "RELATIVE_CLAUSES"],
-    "ua": "Книги, які мають багато сторінок, цікаві.",
-    "en": ["Books that have many pages are interesting."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ADVERBS_OF_MANNER"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ADVERBS_OF_MANNER", "PREP_PLACE"],
     "ua": "Він обережно поклав трохи монет на стіл.",
     "en": ["He carefully put some coins on the table."]
   },
@@ -178,11 +143,6 @@
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "IN_ORDER_TO_SO_THAT"],
     "ua": "Ми купили багато матеріалів, щоб завершити проект.",
     "en": ["We bought a lot of materials in order to finish the project."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "BE_GOOD_AT_INTERESTED_IN_ING"],
-    "ua": "Вона хороша у збиранні багатьох пазлів.",
-    "en": ["She is good at solving many puzzles."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SECOND_CONDITIONAL"],
@@ -205,11 +165,6 @@
     "en": ["We have too many tasks to finish them."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "WOULD_RATHER_PREFER"],
-    "ua": "Я волію купити трохи менше одягу.",
-    "en": ["I prefer buying a bit less clothing."]
-  },
-  {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "HAD_BETTER"],
     "ua": "Тобі краще мати трохи більше терпіння.",
     "en": ["You had better have some more patience."]
@@ -218,11 +173,6 @@
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COMPLEX_PREPOSITIONS"],
     "ua": "Ми купили багато їжі завдяки знижкам.",
     "en": ["We bought a lot of food thanks to the discounts."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PARTICIPLE_CLAUSES"],
-    "ua": "Маючи багато роботи, вона поспішала.",
-    "en": ["Having a lot of work, she was hurrying."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ORDER_OF_ADJECTIVES"],
@@ -243,11 +193,6 @@
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Багато людей ніколи не відвідують музеї.",
     "en": ["Many people never visit museums."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "MODALS_OF_PROBABILITY"],
-    "ua": "У шафі, можливо, є трохи одягу.",
-    "en": ["There might be some clothes in the wardrobe."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "NEGATION_DONT_DOESNT"],
@@ -272,7 +217,7 @@
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_PERFECT", "SINCE_FOR"],
     "ua": "Він з’їв багато піци за останній місяць.",
-    "en": ["He has eaten a lot of pizza for the last month."]
+    "en": ["He has eaten a lot of pizza in the last month."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
@@ -282,7 +227,7 @@
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "FUTURE_WITH_PRESENT_CONT", "PREP_TIME"],
     "ua": "Ми купуємо багато іграшок на день народження.",
-    "en": ["We are buying many toys for the birthday."]
+    "en": ["We are buying a lot of toys for the birthday."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "CAN_CANT"],
@@ -290,28 +235,28 @@
     "en": ["I can’t drink much juice at once."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони мають багато домашніх тварин.",
-    "en": ["They have many pets."]
+    "en": ["They have a lot of pets."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_CONTINUOUS"],
-    "ua": "Вчора ми малювали багато картин.",
-    "en": ["We were painting many pictures yesterday."]
+    "ua": "Учора ми малювали багато картин.",
+    "en": ["We were painting a lot of pictures yesterday."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Моя мама купила багато овочів.",
-    "en": ["My mom bought a lot of vegetables."]
+    "ua": "Учора моя мама купила багато овочів.",
+    "en": ["My mom bought a lot of vegetables yesterday."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "GOING_TO_PLANS"],
-    "ua": "Вона збирається прочитати трохи книг.",
+    "ua": "Вона збирається прочитати трохи книжок.",
     "en": ["She is going to read some books."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "WILL_PREDICTIONS"],
-    "ua": "Багато студентів, напевно, здасть іспит.",
+    "ua": "Багато студентів, напевно, складе іспит.",
     "en": ["Many students will probably pass the exam."]
   },
   {
@@ -337,56 +282,51 @@
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW", "PREP_TIME"],
     "ua": "Він пише багато листів цього тижня.",
-    "en": ["He is writing many letters this week."]
+    "en": ["He is writing a lot of letters this week."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE", "DID_QUEST_NEG"],
-    "ua": "Чи отримали вони багато подарунків?",
+    "ua": "Вони отримали багато подарунків?",
     "en": ["Did they receive many gifts?"]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "LIKE_ING"],
-    "ua": "Деякі люди люблять купувати багато гаджетів.",
-    "en": ["Some people like buying many gadgets."]
+    "ua": "Деякі люди люблять купувати багато ґаджетів.",
+    "en": ["Some people like buying a lot of gadgets."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "FIRST_CONDITIONAL"],
     "ua": "Якщо ми запросимо багато гостей, вечірка буде веселою.",
-    "en": ["If we invite many guests, the party will be fun."]
+    "en": ["If we invite a lot of guests, the party will be fun."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "TOO_VERY"],
-    "ua": "У нього дуже багато обов’язків.",
+    "ua": "У нього занадто багато обов’язків.",
     "en": ["He has too many duties."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "USED_TO"],
-    "ua": "Я раніше збирав багато марок.",
-    "en": ["I used to collect many stamps."]
+    "ua": "Раніше я збирав багато марок.",
+    "en": ["I used to collect a lot of stamps."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_PERFECT_CONT"],
-    "ua": "Вона працювала над багатьма картинами останнім часом.",
-    "en": ["She has been working on many paintings lately."]
+    "ua": "Вона працює над багатьма картинами останнім часом.",
+    "en": ["She has been working on a lot of paintings lately."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COMPARATIVES"],
     "ua": "У нас більше ідей, ніж у них.",
-    "en": ["We have more ideas than them."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SUPERLATIVES"],
-    "ua": "Цей парк має найбільше дерев у регіоні.",
-    "en": ["This park has the most trees in the region."]
+    "en": ["We have more ideas than they do."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "WH_Q"],
-    "ua": "Скільки цукерок ти з’їдаєш щодня?",
-    "en": ["How many candies do you eat every day?"]
+    "ua": "Скільки цукерок ти їси щодня?",
+    "en": ["How many sweets do you eat every day?"]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_PERFECT"],
-    "ua": "Вони не прочитали багато книг до іспиту.",
+    "ua": "Вони не прочитали багато книжок до іспиту.",
     "en": ["They hadn’t read many books before the exam."]
   },
   {
@@ -411,17 +351,17 @@
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "RELATIVE_CLAUSES"],
-    "ua": "Студенти, які мають багато нотаток, добре вчаться.",
-    "en": ["Students who have many notes study well."]
+    "ua": "Студенти, які мають багато конспектів, добре вчаться.",
+    "en": ["Students who have a lot of notes study well."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ADVERBS_OF_MANNER"],
-    "ua": "Вона обережно відкрила трохи подарунків.",
-    "en": ["She carefully opened some gifts."]
+    "ua": "Вона обережно відкрила кілька подарунків.",
+    "en": ["She carefully opened a few gifts."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "IN_ORDER_TO_SO_THAT"],
-    "ua": "Я купив багато матеріалів, щоб побудувати будинок.",
+    "ua": "Я купив багато матеріалів, щоб збудувати будинок.",
     "en": ["I bought a lot of materials in order to build a house."]
   },
   {
@@ -431,8 +371,8 @@
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SECOND_CONDITIONAL"],
-    "ua": "Якби у мене було багато книг, я б читав щодня.",
-    "en": ["If I had many books, I would read every day."]
+    "ua": "Якби в мене було багато книжок, я б читав щодня.",
+    "en": ["If I had a lot of books, I would read every day."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PHRASAL_VERBS_COMMON"],
@@ -462,17 +402,12 @@
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COMPLEX_PREPOSITIONS"],
     "ua": "Ми отримали багато знижок завдяки розпродажу.",
-    "en": ["We got many discounts thanks to the sale."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PARTICIPLE_CLAUSES"],
-    "ua": "Маючи багато ідей, вона швидко працювала.",
-    "en": ["Having many ideas, she worked quickly."]
+    "en": ["We got a lot of discounts thanks to the sale."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ORDER_OF_ADJECTIVES"],
-    "ua": "Я купив багато нових цікавих журналів.",
-    "en": ["I bought many new interesting magazines."]
+    "ua": "Я купив багато цікавих нових журналів.",
+    "en": ["I bought many interesting new magazines."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "CLEFT_SENTENCES"],
@@ -482,12 +417,7 @@
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "MIXED_CONDITIONALS"],
     "ua": "Якби ми мали багато ресурсів, ми б зараз були успішними.",
-    "en": ["If we had had many resources, we would be successful now."]
-  },
-  {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Деякі люди часто купують багато одягу.",
-    "en": ["Some people often buy a lot of clothes."]
+    "en": ["If we had had a lot of resources, we would be successful now."]
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "MODALS_OF_PROBABILITY"],

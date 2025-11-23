@@ -14,7 +14,7 @@
 "en": ["The sea was calm."]
 },
 {
-"rules": ["ARTICLES", "TO_BE", "PREP_PLACE", "PRESENT_CONT_NOW"],
+"rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
 "ua": "Вони зараз у морі.",
 "en": ["They are at sea."]
 },

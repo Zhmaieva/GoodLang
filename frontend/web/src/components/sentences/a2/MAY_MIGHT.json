@@ -1,37 +1,7 @@
 { "MAY_MIGHT": [
   {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ти можеш закінчити проєкт до вечора.",
-    "en": [
-      "You may finish the project by evening.",
-      "You might finish the project by evening.",
-      "You may complete the project before tonight.",
-      "You might complete the project before tonight."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ми можемо бути втомленими після походу.",
-    "en": [
-      "We may be tired after the hike.",
-      "We might be tired after the hike.",
-      "We may be exhausted after the trek.",
-      "We might be exhausted after the trek."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі туристи можуть відвідати цей музей завтра.",
-    "en": [
-      "Some tourists may visit this museum tomorrow.",
-      "Some tourists might visit this museum tomorrow.",
-      "Certain tourists may explore this museum tomorrow.",
-      "Certain tourists might explore this museum tomorrow."
-    ]
-  },
-  {
     "rules": ["MAY_MIGHT", "YES_NO_Q", "PREP_TIME"],
-    "ua": "Чи можемо ми приїхати на семінар до обіду?",
+    "ua": "Ми можемо приїхати на семінар до обіду? (use MAY / MIGHT)",
     "en": [
       "May we arrive at the seminar by noon?",
       "Might we arrive at the seminar by noon?",
@@ -40,338 +10,8 @@
     ]
   },
   {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-    "ua": "Ви можете не поспішити в офісі, бо зустріч скасовано.",
-    "en": [
-      "You may not hurry in the office because the meeting is canceled.",
-      "You might not hurry in the office because the meeting is canceled.",
-      "You may not rush at work since the meeting was called off.",
-      "You might not rush at work since the meeting was called off."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей фотограф може використати татову камеру для зйомок.",
-    "en": [
-      "This photographer may use his dad’s camera for the shoot.",
-      "This photographer might use his dad’s camera for the shoot.",
-      "That photographer may use his father’s camera for filming.",
-      "That photographer might use his father’s camera for filming."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вона може бути зайнятою завтра через презентацію.",
-    "en": [
-      "She may be busy tomorrow due to the presentation.",
-      "She might be busy tomorrow due to the presentation.",
-      "She may be occupied tomorrow because of the talk.",
-      "She might be occupied tomorrow because of the talk."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи можемо ми використати твої інструменти для ремонту?",
-    "en": [
-      "May we use your tools for the repair?",
-      "Might we use your tools for the repair?",
-      "May we borrow your tools for the fix?",
-      "Might we borrow your tools for the fix?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти можеш бути дуже втомленим після тренування.",
-    "en": [
-      "You may be very tired after training.",
-      "You might be very tired after training.",
-      "You may be really exhausted after practice.",
-      "You might be really exhausted after practice."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-    "ua": "Він може не готуватися до конкурсу сам у студії.",
-    "en": [
-      "He may not prepare for the contest by himself in the studio.",
-      "He might not prepare for the contest by himself in the studio.",
-      "He may not train for the competition on his own in the studio.",
-      "He might not train for the competition on his own in the studio."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі волонтери можуть зібрати багато пожертв для ярмарку.",
-    "en": [
-      "Some volunteers may collect a lot of donations for the fair.",
-      "Some volunteers might collect a lot of donations for the fair.",
-      "Certain volunteers may gather many donations for the market.",
-      "Certain volunteers might gather many donations for the market."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-    "ua": "Ми можемо почати, коли закінчиться дощ.",
-    "en": [
-      "We may start when the rain stops.",
-      "We might start when the rain stops.",
-      "We may begin when the rain ends.",
-      "We might begin when the rain ends."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Вона може обережно налаштувати обладнання.",
-    "en": [
-      "She may set up the equipment carefully.",
-      "She might set up the equipment carefully.",
-      "She may adjust the equipment cautiously.",
-      "She might adjust the equipment cautiously."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Він може не бути пунктуальним, бо транспорт затримався.",
-    "en": [
-      "He may not be punctual because the transport was delayed.",
-      "He might not be punctual because the transport was delayed.",
-      "He may not be on time since the transport was late.",
-      "He might not be on time since the transport was late."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ці дизайнери можуть завершити макет до понеділка.",
-    "en": [
-      "These designers may finish the layout by Monday.",
-      "These designers might finish the layout by Monday.",
-      "Those designers may complete the design before Monday.",
-      "Those designers might complete the design before Monday."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WH_Q", "COUNT_UNCOUNT"],
-    "ua": "Скільки часу ми можемо витратити на підготовку до конференції?",
-    "en": [
-      "How much time may we spend preparing for the conference?",
-      "How much time might we spend preparing for the conference?",
-      "How long may we take to get ready for the conference?",
-      "How long might we take to get ready for the conference?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви можете не бути дуже активними на виставці.",
-    "en": [
-      "You may not be too active at the exhibition.",
-      "You might not be too active at the exhibition.",
-      "You may not be overly energetic at the show.",
-      "You might not be overly energetic at the show."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи можемо ми принести свої ноутбуки на заняття?",
-    "en": [
-      "May we bring our laptops to the class?",
-      "Might we bring our laptops to the class?",
-      "May we bring our computers to the lesson?",
-      "Might we bring our computers to the lesson?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Я можу використати мамин планшет для презентації.",
-    "en": [
-      "I may use my mom’s tablet for the presentation.",
-      "I might use my mom’s tablet for the presentation.",
-      "I may use my mother’s tablet for the talk.",
-      "I might use my mother’s tablet for the talk."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони можуть бути зайнятими завтра через тренінг.",
-    "en": [
-      "They may be busy tomorrow due to the training.",
-      "They might be busy tomorrow due to the training.",
-      "They may be occupied tomorrow because of the workshop.",
-      "They might be occupied tomorrow because of the workshop."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі музиканти можуть виступити в парку.",
-    "en": [
-      "Some musicians may perform in the park.",
-      "Some musicians might perform in the park.",
-      "Certain musicians may play in the park.",
-      "Certain musicians might play in the park."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Вона може акуратно намалювати ескіз, щоб він був зрозумілим.",
-    "en": [
-      "She may draw the sketch neatly so it’s clear.",
-      "She might draw the sketch neatly so it’s clear.",
-      "She may create the sketch carefully to make it understandable.",
-      "She might create the sketch carefully to make it understandable."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-    "ua": "Ми можемо запізнитися, бо дорога перекрита.",
-    "en": [
-      "We may be late because the road is blocked.",
-      "We might be late because the road is blocked.",
-      "We may be delayed since the street is closed.",
-      "We might be delayed since the street is closed."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ті художники можуть закінчити картину до вечора.",
-    "en": [
-      "Those artists may finish the painting by evening.",
-      "Those artists might finish the painting by evening.",
-      "Those painters may complete the artwork before tonight.",
-      "Those painters might complete the artwork before tonight."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WH_Q", "PREP_PLACE"],
-    "ua": "Куди ми можемо піти після фестивалю?",
-    "en": [
-      "Where may we go after the festival?",
-      "Where might we go after the festival?",
-      "Where may we go after the event?",
-      "Where might we go after the event?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти можеш не бути дуже наполегливим під час дискусії.",
-    "en": [
-      "You may not be too persistent during the discussion.",
-      "You might not be too persistent during the discussion.",
-      "You may not be overly insistent during the talk.",
-      "You might not be overly insistent during the talk."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Він може перевірити електронну пошту до обіду.",
-    "en": [
-      "He may check his email by noon.",
-      "He might check his email by noon.",
-      "He may review his email before lunchtime.",
-      "He might review his email before lunchtime."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "COUNT_UNCOUNT"],
-    "ua": "Чи можемо ми використати багато матеріалів для проєкту?",
-    "en": [
-      "May we use a lot of materials for the project?",
-      "Might we use a lot of materials for the project?",
-      "May we use many materials for the project?",
-      "Might we use many materials for the project?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Вона може бути готовою до виступу до вечора.",
-    "en": [
-      "She may be ready for the performance by evening.",
-      "She might be ready for the performance by evening.",
-      "She may be prepared for the show before tonight.",
-      "She might be prepared for the show before tonight."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці волонтери можуть не принести свої плакати.",
-    "en": [
-      "These volunteers may not bring their posters.",
-      "These volunteers might not bring their posters.",
-      "Those volunteers may not bring their signs.",
-      "Those volunteers might not bring their signs."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він може не поспішити, бо конференція починається пізніше.",
-    "en": [
-      "He may not hurry because the conference starts later.",
-      "He might not hurry because the conference starts later.",
-      "He may not rush since the conference begins later.",
-      "He might not rush since the conference begins later."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Вони можуть обережно працювати в майстерні.",
-    "en": [
-      "They may work cautiously in the workshop.",
-      "They might work cautiously in the workshop.",
-      "They may operate carefully in the studio.",
-      "They might operate carefully in the studio."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "ARTICLES"],
-    "ua": "Я можу купити новий фотоапарат для подорожі.",
-    "en": [
-      "I may buy a new camera for the trip.",
-      "I might buy a new camera for the trip.",
-      "I may purchase a new camera for the journey.",
-      "I might purchase a new camera for the journey."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ми можемо бути втомленими після майстер-класу.",
-    "en": [
-      "We may be tired after the workshop.",
-      "We might be tired after the workshop.",
-      "We may be exhausted after the class.",
-      "We might be exhausted after the class."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому ми можемо бути зайнятими завтра?",
-    "en": [
-      "Why may we be busy tomorrow?",
-      "Why might we be busy tomorrow?",
-      "Why may we be occupied tomorrow?",
-      "Why might we be occupied tomorrow?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Вона може не використовувати дуже багато фарб для картини.",
-    "en": [
-      "She may not use too many paints for the painting.",
-      "She might not use too many paints for the painting.",
-      "She may not use too much paint for the artwork.",
-      "She might not use too much paint for the artwork."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи можуть ці учасники принести свої інструменти на заняття?",
-    "en": [
-      "May these participants bring their tools to the class?",
-      "Might these participants bring their tools to the class?",
-      "May these participants bring their equipment to the lesson?",
-      "Might these participants bring their equipment to the lesson?"
-    ]
-  },
-  {
     "rules": ["MAY_MIGHT", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Він може повернути сестрину камеру до вечора.",
+    "ua": "Він може повернути камеру сестри до вечора. (use MAY / MIGHT)",
     "en": [
       "He may return his sister’s camera by evening.",
       "He might return his sister’s camera by evening.",
@@ -380,48 +20,19 @@
     ]
   },
   {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі фотографи можуть працювати в студії.",
+    "rules": ["MAY_MIGHT", "PREP_PLACE"],
+    "ua": "Фотографи можуть працювати в студії. (use MAY / MIGHT)",
     "en": [
-      "Some photographers may work in the studio.",
-      "Some photographers might work in the studio.",
-      "Certain photographers may work in the studio.",
-      "Certain photographers might work in the studio."
+      "Photographers may work in the studio.",
+      "Photographers might work in the studio.",
+      "Photographers may work in the studio.",
+      "Photographers might work in the studio."
     ]
   },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона може не поспішно готувати, бо вечеря не термінова.",
-    "en": [
-      "She may not cook hastily because dinner isn’t urgent.",
-      "She might not cook hastily because dinner isn’t urgent.",
-      "She may not prepare quickly since the meal isn’t pressing.",
-      "She might not prepare quickly since the meal isn’t pressing."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ми можемо оновити програму до кінця тижня.",
-    "en": [
-      "We may update the software by the end of the week.",
-      "We might update the software by the end of the week.",
-      "We may upgrade the program before the week ends.",
-      "We might upgrade the program before the week ends."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "ARTICLES"],
-    "ua": "Я можу купити новий ноутбук до поїздки.",
-    "en": [
-      "I may buy a new laptop before the trip.",
-      "I might buy a new laptop before the trip.",
-      "I may purchase a new laptop before traveling.",
-      "I might purchase a new laptop before traveling."
-    ]
-  },
+
   {
     "rules": ["MAY_MIGHT", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи можемо ми залишитися в галереї після виставки?",
+    "ua": "Ми можемо залишитися в галереї після виставки? (use MAY / MIGHT)",
     "en": [
       "May we stay in the gallery after the exhibition?",
       "Might we stay in the gallery after the exhibition?",
@@ -430,28 +41,8 @@
     ]
   },
   {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-    "ua": "Деякі дизайнери можуть бути креативними в цьому проєкті.",
-    "en": [
-      "Some designers may be creative in this project.",
-      "Some designers might be creative in this project.",
-      "Certain designers may be imaginative in this project.",
-      "Certain designers might be imaginative in this project."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей програміст може ретельно перевірити програму.",
-    "en": [
-      "This programmer may check the program thoroughly.",
-      "This programmer might check the program thoroughly.",
-      "That coder may review the software carefully.",
-      "That coder might review the software carefully."
-    ]
-  },
-  {
     "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він може запізнитися, бо поїзд затримався.",
+    "ua": "Він може запізнитися, бо поїзд затримався. (use MAY / MIGHT)",
     "en": [
       "He may be late because the train was delayed.",
       "He might be late because the train was delayed.",
@@ -460,368 +51,8 @@
     ]
   },
   {
-    "rules": ["MAY_MIGHT", "WH_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Що ми можемо підготувати для ярмарку?",
-    "en": [
-      "What may we prepare for the fair?",
-      "What might we prepare for the fair?",
-      "What may we get ready for the market?",
-      "What might we get ready for the market?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви можете не бути дуже гучними в майстерні.",
-    "en": [
-      "You may not be too loud in the workshop.",
-      "You might not be too loud in the workshop.",
-      "You may not be overly noisy in the studio.",
-      "You might not be overly noisy in the studio."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Я можу купити нову сумку для подорожі.",
-    "en": [
-      "I may buy a new bag for the trip.",
-      "I might buy a new bag for the trip.",
-      "I may purchase a new bag for the journey.",
-      "I might purchase a new bag for the journey."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони можуть бути втомленими після семінару.",
-    "en": [
-      "They may be tired after the seminar.",
-      "They might be tired after the seminar.",
-      "They may be exhausted after the workshop.",
-      "They might be exhausted after the workshop."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ти можеш підготувати сад до весни.",
-    "en": [
-      "You may prepare the garden by spring.",
-      "You might prepare the garden by spring.",
-      "You may ready the garden before spring.",
-      "You might ready the garden before spring."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ми можемо бути задоволеними після турніру.",
-    "en": [
-      "We may be satisfied after the tournament.",
-      "We might be satisfied after the tournament.",
-      "We may be pleased after the competition.",
-      "We might be pleased after the competition."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі садівники можуть посадити багато дерев цього тижня.",
-    "en": [
-      "Some gardeners may plant many trees this week.",
-      "Some gardeners might plant many trees this week.",
-      "Certain gardeners may sow a lot of trees this week.",
-      "Certain gardeners might sow a lot of trees this week."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "PREP_TIME"],
-    "ua": "Чи можемо ми завершити експеримент до вечора?",
-    "en": [
-      "May we finish the experiment by evening?",
-      "Might we finish the experiment by evening?",
-      "May we complete the test before tonight?",
-      "Might we complete the test before tonight?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-    "ua": "Ви можете не поспішити в лабораторії, бо обладнання вже готове.",
-    "en": [
-      "You may not hurry in the lab because the equipment is ready.",
-      "You might not hurry in the lab because the equipment is ready.",
-      "You may not rush in the laboratory since the tools are prepared.",
-      "You might not rush in the laboratory since the tools are prepared."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей спортсмен може використати братову ракетку для гри.",
-    "en": [
-      "This athlete may use his brother’s racket for the game.",
-      "This athlete might use his brother’s racket for the game.",
-      "That athlete may use his sibling’s racket for the match.",
-      "That athlete might use his sibling’s racket for the match."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вона може бути виснаженою після марафону.",
-    "en": [
-      "She may be exhausted after the marathon.",
-      "She might be exhausted after the marathon.",
-      "She may be tired after the race.",
-      "She might be tired after the race."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи можемо ми принести свої рослини на ярмарок?",
-    "en": [
-      "May we bring our plants to the fair?",
-      "Might we bring our plants to the fair?",
-      "May we bring our flowers to the market?",
-      "Might we bring our flowers to the market?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти можеш бути дуже зосередженим під час змагання.",
-    "en": [
-      "You may be very focused during the competition.",
-      "You might be very focused during the competition.",
-      "You may be really concentrated during the contest.",
-      "You might be really concentrated during the contest."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-    "ua": "Він може не тренуватися сам на стадіоні.",
-    "en": [
-      "He may not train by himself at the stadium.",
-      "He might not train by himself at the stadium.",
-      "He may not practice on his own at the arena.",
-      "He might not practice on his own at the arena."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі вчені можуть провести багато дослідів цього місяця.",
-    "en": [
-      "Some scientists may conduct many experiments this month.",
-      "Some scientists might conduct many experiments this month.",
-      "Certain researchers may perform a lot of tests this month.",
-      "Certain researchers might perform a lot of tests this month."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-    "ua": "Ми можемо почати, коли закінчиться гра.",
-    "en": [
-      "We may start when the game ends.",
-      "We might start when the game ends.",
-      "We may begin when the match finishes.",
-      "We might begin when the match finishes."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Вона може ретельно перевірити результати аналізу.",
-    "en": [
-      "She may check the analysis results thoroughly.",
-      "She might check the analysis results thoroughly.",
-      "She may review the test results carefully.",
-      "She might review the test results carefully."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Він може не бути втомленим, бо тренування було легким.",
-    "en": [
-      "He may not be tired because the training was light.",
-      "He might not be tired because the training was light.",
-      "He may not be exhausted since the practice was easy.",
-      "He might not be exhausted since the practice was easy."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ці організатори можуть завершити підготовку до вечора.",
-    "en": [
-      "These organizers may finish the preparations by evening.",
-      "These organizers might finish the preparations by evening.",
-      "Those planners may complete the setup before tonight.",
-      "Those planners might complete the setup before tonight."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WH_Q", "COUNT_UNCOUNT"],
-    "ua": "Скільки насіння ми можемо посадити в саду?",
-    "en": [
-      "How much seed may we plant in the garden?",
-      "How much seed might we plant in the garden?",
-      "How many seeds may we sow in the yard?",
-      "How many seeds might we sow in the yard?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви можете не бути дуже гучними на стадіоні.",
-    "en": [
-      "You may not be too loud at the stadium.",
-      "You might not be too loud at the stadium.",
-      "You may not be overly noisy at the arena.",
-      "You might not be overly noisy at the arena."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи можемо ми використати твої інструменти для садівництва?",
-    "en": [
-      "May we use your tools for gardening?",
-      "Might we use your tools for gardening?",
-      "May we borrow your equipment for planting?",
-      "Might we borrow your equipment for planting?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Я можу використати татові кросівки для пробіжки.",
-    "en": [
-      "I may use my dad’s sneakers for the run.",
-      "I might use my dad’s sneakers for the run.",
-      "I may use my father’s shoes for the jog.",
-      "I might use my father’s shoes for the jog."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони можуть бути зайнятими після турніру.",
-    "en": [
-      "They may be busy after the tournament.",
-      "They might be busy after the tournament.",
-      "They may be occupied after the competition.",
-      "They might be occupied after the competition."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі гравці можуть тренуватися на полі.",
-    "en": [
-      "Some players may train on the field.",
-      "Some players might train on the field.",
-      "Certain athletes may practice on the pitch.",
-      "Certain athletes might practice on the pitch."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Вона може обережно посадити квіти, щоб вони росли рівно.",
-    "en": [
-      "She may plant the flowers carefully so they grow evenly.",
-      "She might plant the flowers carefully so they grow evenly.",
-      "She may sow the flowers cautiously to ensure they grow straight.",
-      "She might sow the flowers cautiously to ensure they grow straight."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-    "ua": "Ми можемо запізнитися, бо поле далеко.",
-    "en": [
-      "We may be late because the field is far away.",
-      "We might be late because the field is far away.",
-      "We may be delayed since the pitch is distant.",
-      "We might be delayed since the pitch is distant."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ті садівники можуть закінчити посадку до вечора.",
-    "en": [
-      "Those gardeners may finish planting by evening.",
-      "Those gardeners might finish planting by evening.",
-      "Those gardeners may complete sowing before tonight.",
-      "Those gardeners might complete sowing before tonight."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WH_Q", "PREP_PLACE"],
-    "ua": "Куди ми можемо піти після змагання?",
-    "en": [
-      "Where may we go after the competition?",
-      "Where might we go after the competition?",
-      "Where may we go after the contest?",
-      "Where might we go after the contest?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ти можеш не бути дуже напруженим під час гри.",
-    "en": [
-      "You may not be too tense during the game.",
-      "You might not be too tense during the game.",
-      "You may not be overly nervous during the match.",
-      "You might not be overly nervous during the match."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Він може підготувати обладнання до матчу.",
-    "en": [
-      "He may prepare the equipment by the match.",
-      "He might prepare the equipment by the match.",
-      "He may ready the gear before the game.",
-      "He might ready the gear before the game."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "COUNT_UNCOUNT"],
-    "ua": "Чи можемо ми використати багато води для поливу?",
-    "en": [
-      "May we use a lot of water for watering?",
-      "Might we use a lot of water for watering?",
-      "May we use much water for irrigation?",
-      "Might we use much water for irrigation?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Вона може бути готовою до забігу до обіду.",
-    "en": [
-      "She may be ready for the race by noon.",
-      "She might be ready for the race by noon.",
-      "She may be prepared for the run before lunchtime.",
-      "She might be prepared for the run before lunchtime."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці гравці можуть не принести свої м’ячі.",
-    "en": [
-      "These players may not bring their balls.",
-      "These players might not bring their balls.",
-      "Those athletes may not bring their equipment.",
-      "Those athletes might not bring their equipment."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він може не поспішити, бо матч починається пізніше.",
-    "en": [
-      "He may not hurry because the match starts later.",
-      "He might not hurry because the match starts later.",
-      "He may not rush since the game begins later.",
-      "He might not rush since the game begins later."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Вони можуть обережно працювати в саду.",
-    "en": [
-      "They may work cautiously in the garden.",
-      "They might work cautiously in the garden.",
-      "They may operate carefully in the yard.",
-      "They might operate carefully in the yard."
-    ]
-  },
-  {
     "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "ARTICLES"],
-    "ua": "Я можу купити новий м’яч для гри.",
+    "ua": "Я можу купити новий м’яч для гри. (use MAY / MIGHT)",
     "en": [
       "I may buy a new ball for the game.",
       "I might buy a new ball for the game.",
@@ -830,158 +61,8 @@
     ]
   },
   {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ми можемо бути втомленими після ярмарку.",
-    "en": [
-      "We may be tired after the fair.",
-      "We might be tired after the fair.",
-      "We may be exhausted after the market.",
-      "We might be exhausted after the market."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому ми можемо бути зайнятими після турніру?",
-    "en": [
-      "Why may we be busy after the tournament?",
-      "Why might we be busy after the tournament?",
-      "Why may we be occupied after the competition?",
-      "Why might we be occupied after the competition?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Вона може не використовувати дуже багато добрив для саду.",
-    "en": [
-      "She may not use too many fertilizers for the garden.",
-      "She might not use too many fertilizers for the garden.",
-      "She may not use too much fertilizer for the yard.",
-      "She might not use too much fertilizer for the yard."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи можуть ці організатори принести свої плакати на ярмарок?",
-    "en": [
-      "May these organizers bring their posters to the fair?",
-      "Might these organizers bring their posters to the fair?",
-      "May these planners bring their signs to the market?",
-      "Might these planners bring their signs to the market?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Він може повернути мамин садовий інструмент до вечора.",
-    "en": [
-      "He may return his mom’s gardening tool by evening.",
-      "He might return his mom’s gardening tool by evening.",
-      "He may give back his mother’s garden equipment before tonight.",
-      "He might give back his mother’s garden equipment before tonight."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі вчені можуть працювати в лабораторії.",
-    "en": [
-      "Some scientists may work in the laboratory.",
-      "Some scientists might work in the laboratory.",
-      "Certain researchers may work in the lab.",
-      "Certain researchers might work in the lab."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона може не поспішно тренуватися, бо гра не термінова.",
-    "en": [
-      "She may not train hastily because the game isn’t urgent.",
-      "She might not train hastily because the game isn’t urgent.",
-      "She may not practice quickly since the match isn’t pressing.",
-      "She might not practice quickly since the match isn’t pressing."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Ми можемо організувати захід до кінця тижня.",
-    "en": [
-      "We may organize the event by the end of the week.",
-      "We might organize the event by the end of the week.",
-      "We may arrange the activity before the week ends.",
-      "We might arrange the activity before the week ends."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "ARTICLES"],
-    "ua": "Я можу купити новий рюкзак до походу.",
-    "en": [
-      "I may buy a new backpack before the hike.",
-      "I might buy a new backpack before the hike.",
-      "I may purchase a new backpack before the trek.",
-      "I might purchase a new backpack before the trek."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи можемо ми залишитися на полі після гри?",
-    "en": [
-      "May we stay on the field after the game?",
-      "Might we stay on the field after the game?",
-      "May we remain on the pitch after the match?",
-      "Might we remain on the pitch after the match?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-    "ua": "Деякі учасники можуть бути активними на заході.",
-    "en": [
-      "Some participants may be active at the event.",
-      "Some participants might be active at the event.",
-      "Certain attendees may be energetic at the activity.",
-      "Certain attendees might be energetic at the activity."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей садівник може ретельно перевірити рослини.",
-    "en": [
-      "This gardener may check the plants thoroughly.",
-      "This gardener might check the plants thoroughly.",
-      "That gardener may inspect the plants carefully.",
-      "That gardener might inspect the plants carefully."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він може запізнитися, бо дорога мокра.",
-    "en": [
-      "He may be late because the road is wet.",
-      "He might be late because the road is wet.",
-      "He may be delayed since the path is slippery.",
-      "He might be delayed since the path is slippery."
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "WH_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Що ми можемо підготувати для змагання?",
-    "en": [
-      "What may we prepare for the competition?",
-      "What might we prepare for the competition?",
-      "What may we get ready for the contest?",
-      "What might we get ready for the contest?"
-    ]
-  },
-  {
-    "rules": ["MAY_MIGHT", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ви можете не бути дуже активними в саду.",
-    "en": [
-      "You may not be too active in the garden.",
-      "You might not be too active in the garden.",
-      "You may not be overly energetic in the yard.",
-      "You might not be overly energetic in the yard."
-    ]
-  },
-  {
     "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Я можу купити нову форму для тренувань.",
+    "ua": "Я можу купити нову форму для тренувань. (use MAY / MIGHT)",
     "en": [
       "I may buy a new uniform for training.",
       "I might buy a new uniform for training.",
@@ -990,13 +71,238 @@
     ]
   },
   {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони можуть бути виснаженими після експерименту.",
-    "en": [
-      "They may be exhausted after the experiment.",
-      "They might be exhausted after the experiment.",
-      "They may be tired after the test.",
-      "They might be tired after the test."
-    ]
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш поїхати автобусом, якщо пропустиш поїзд. (use MAY / MIGHT)",
+    "en": ["You may take the bus if you miss the train."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Тобі, можливо, знадобиться парасолька. (use MAY / MIGHT)",
+    "en": ["You might need an umbrella."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Ти можеш пити чай або каву вранці. (use MAY / MIGHT)",
+    "en": ["You may drink tea or coffee in the morning."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "PREP_TIME", "ARTICLES"],
+    "ua": "Ти, можливо, побачиш квіти в парку сьогодні. (use MAY / MIGHT)",
+    "en": ["You might see flowers in the park today."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш відчинити вікно, якщо спекотно. (use MAY / MIGHT)",
+    "en": ["You may open the window if it is hot."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти, можливо, знайдеш хліб у маленькому магазині. (use MAY / MIGHT)",
+    "en": ["You might find bread at the small shop."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти можеш піти пішки до магазину. (use MAY / MIGHT)",
+    "en": ["You may walk to the store."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Ти, можливо, почуєш пташок ранком. (use MAY / MIGHT)",
+    "en": ["You might hear birds early in the morning."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш користуватися чайником для гарячої води. (use MAY / MIGHT)",
+    "en": ["You may use the kettle for hot water."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Тобі, можливо, сподобається нове кафе неподалік. (use MAY / MIGHT)",
+    "en": ["You might like the new cafe nearby."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш сісти тут, якщо стілець вільний. (use MAY / MIGHT)",
+    "en": ["You may sit here if the chair is free."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти можеш узяти молоко з холодильника. (use MAY / MIGHT)",
+    "en": ["You might get milk from the fridge."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Ти можеш подзвонити своєму другові після вечері. (use MAY / MIGHT)",
+    "en": ["You may call your friend after dinner."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME", "DEMONSTRATIVES"],
+    "ua": "Можливо, сьогодні пообіді буде дощ. (use MAY / MIGHT)",
+    "en": ["It might rain later this afternoon."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
+    "ua": "Ти можеш почитати книжку перед сном. (use MAY / MIGHT)",
+    "en": ["You may read a book before sleep."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
+    "ua": "Ти, можливо, побачиш місяць сьогодні вночі. (use MAY / MIGHT)",
+    "en": ["You might see the moon tonight."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш увімкнути світло, якщо темно. (use MAY / MIGHT)",
+    "en": ["You may turn on the light if it is dark."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти, можливо, купиш фрукти на ринку. (use MAY / MIGHT)",
+    "en": ["You might buy fruit at the market."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш одягнути куртку. (use MAY / MIGHT)",
+    "en": ["You may wear a jacket."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "POSSESSIVE_S"],
+    "ua": "Ти, можливо, почуєш музику свого сусіда. (use MAY / MIGHT)",
+    "en": ["You might hear your neighbor's music."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш тихо зачинити двері. (use MAY / MIGHT)",
+    "en": ["You may close the door quietly."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти, можливо, знайдеш ключі на столі. (use MAY / MIGHT)",
+    "en": ["You might find keys on the table."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
+    "ua": "Ти можеш з’їсти яблуко після обіду. (use MAY / MIGHT)",
+    "en": ["You may eat an apple after lunch."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Ти можеш подивитися телевізор одну годину. (use MAY / MIGHT)",
+    "en": ["You may watch TV for one hour."]
+  },
+  {
+    "rules": ["MAY_MIGHT"],
+    "ua": "Ти, можливо, відчуєш запах свіжого хліба надворі. (use MAY / MIGHT)",
+    "en": ["You might smell fresh bread outside."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
+    "ua": "Ти можеш трохи подрімати сьогодні. (use MAY / MIGHT)",
+    "en": ["You may take a short nap today."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_PLACE"],
+    "ua": "Ти, можливо, побачиш кота у дворі. (use MAY / MIGHT)",
+    "en": ["You might see a cat in the yard."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти можеш пити воду з пляшки. (use MAY / MIGHT)",
+    "en": ["You may drink water from the bottle."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти, можливо, скоро почуєш дзвінок. (use MAY / MIGHT)",
+    "en": ["You might hear the bell soon."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти можеш поставити чашку в раковину. (use MAY / MIGHT)",
+    "en": ["You may put the cup in the sink."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Ти, можливо, почуватимешся втомленим після роботи. (use MAY / MIGHT)",
+    "en": ["You might feel tired after work."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
+    "ua": "Ти можеш відкрити пошту завтра. (use MAY / MIGHT)",
+    "en": ["You may open the mail tomorrow."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти можеш посміхнутися сусідові. (use MAY / MIGHT)",
+    "en": ["You may smile at the neighbor."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_PLACE"],
+    "ua": "Ти, можливо, знайдеш ручку в шухляді. (use MAY / MIGHT)",
+    "en": ["You might find a pen in the drawer."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Ти можеш вимкнути вентилятор зараз. (use MAY / MIGHT)",
+    "en": ["You may turn off the fan now."]
+  },
+  {
+    "rules": ["MAY_MIGHT"],
+    "ua": "Ти, можливо, побачиш зорі, якщо небо буде ясним. (use MAY / MIGHT)",
+    "en": ["You might see stars if it is clear."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Ти можеш помити одну тарілку сьогодні. (use MAY / MIGHT)",
+    "en": ["You may wash one plate today."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти, можливо, почуєш, як дощ стукає у вікно. (use MAY / MIGHT)",
+    "en": ["You might hear rain on the window."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES"],
+    "ua": "Ти можеш піти сходами або ліфтом. (use MAY / MIGHT)",
+    "en": ["You may take the stairs or the lift."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_TIME"],
+    "ua": "Тобі, можливо, сподобається цей чай. (use MAY / MIGHT)",
+    "en": ["You might like this tea."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
+    "ua": "Ти можеш закрити книжку після читання. (use MAY / MIGHT)",
+    "en": ["You may close the book after reading."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти, можливо, відчуєш запах кави на кухні. (use MAY / MIGHT)",
+    "en": ["You might smell coffee in the kitchen."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти можеш сісти на диван, щоб відпочити. (use MAY / MIGHT)",
+    "en": ["You may sit on the sofa to rest."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
+    "ua": "Ти, можливо, побачиш людей на вулиці. (use MAY / MIGHT)",
+    "en": ["You might see people in the street."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
+    "ua": "Ти можеш поставити телефон на зарядку сьогодні вночі. (use MAY / MIGHT)",
+    "en": ["You may charge the phone tonight."]
+  },
+  {
+    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_PLACE"],
+    "ua": "Ти, можливо, почуєш собаку надворі. (use MAY / MIGHT)",
+    "en": ["You might hear a dog outside."]
+  },
+  {
+    "rules": ["MAY_MIGHT"],
+    "ua": "Ти можеш їсти хліб з маслом. (use MAY / MIGHT)",
+    "en": ["You may eat bread with butter."]
   }
 ] }

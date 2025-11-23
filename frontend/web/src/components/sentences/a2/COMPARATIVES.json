@@ -1,7 +1,7 @@
 { "COMPARATIVES": [
   {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "SIMPLE_ADJ"],
-    "ua": "Ти виглядаєш вищим за брата.",
+    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+    "ua": "Ти виглядаєш вищим, ніж брат.",
     "en": [
       "You look taller than your brother.",
       "You seem taller than your sibling.",
@@ -30,8 +30,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
-    "ua": "Чи твій телефон швидший за мій?",
+    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+    "ua": "Твій телефон швидший за мій?",
     "en": [
       "Is your phone faster than mine?",
       "Is your phone quicker than mine?",
@@ -61,7 +61,7 @@
   },
   {
     "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Сьогодні вечір тихіший, ніж учора.",
+    "ua": "Сьогоднішній вечір тихіший, ніж учорашній.",
     "en": [
       "This evening is quieter than yesterday.",
       "This evening is calmer than yesterday.",
@@ -70,8 +70,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твоя картина яскравіша за мою?",
+    "rules": ["COMPARATIVES"],
+    "ua": "Твоя картина яскравіша за мою?",
     "en": [
       "Is your painting brighter than mine?",
       "Is your painting more vibrant than mine?",
@@ -120,23 +120,13 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER"],
     "ua": "Вона малює акуратніше за нього.",
     "en": [
       "She paints more neatly than him.",
       "She paints more carefully than him.",
       "She draws more precisely than he does.",
       "She draws more tidily than he does."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Цей стіл не міцніший, бо він дерев’яний.",
-    "en": [
-      "This table isn’t stronger because it’s wooden.",
-      "This table isn’t sturdier because it’s wooden.",
-      "This table isn’t more durable since it’s made of wood.",
-      "This table isn’t tougher since it’s made of wood."
     ]
   },
   {
@@ -170,8 +160,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твоя сумка важча за мою?",
+    "rules": ["COMPARATIVES"],
+    "ua": "Твоя сумка важча за мою?",
     "en": [
       "Is your bag heavier than mine?",
       "Is your bag weightier than mine?",
@@ -220,7 +210,7 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ти виглядаєш щасливішим, бо сьогодні вихідний.",
     "en": [
       "You look happier because it’s a day off.",
@@ -250,18 +240,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ця гра набагато веселіша за попередню.",
-    "en": [
-      "This game is much funnier than the previous one.",
-      "This game is much more entertaining than the previous one.",
-      "This game is far more amusing than the last one.",
-      "This game is far livelier than the last one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Вона бігає швидше за мене цього тижня.",
+    "rules": ["COMPARATIVES", "PREP_TIME"],
+    "ua": "Вона бігає швидше ніж я цього тижня.",
     "en": [
       "She runs faster than me this week.",
       "She runs quicker than me this week.",
@@ -270,8 +250,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
-    "ua": "Чи цей стіл міцніший за той?",
+    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+    "ua": "Цей стіл міцніший за той?",
     "en": [
       "Is this table stronger than that one?",
       "Is this table sturdier than that one?",
@@ -281,7 +261,7 @@
   },
   {
     "rules": ["COMPARATIVES", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Сьогодні ранок прохолодніший, ніж учора.",
+    "ua": "Сьогоднішній ранок прохолодніший, ніж учорашній.",
     "en": [
       "This morning is cooler than yesterday.",
       "This morning is chillier than yesterday.",
@@ -320,7 +300,7 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["COMPARATIVES", "ARTICLES"],
     "ua": "Мій годинник точніший за твій.",
     "en": [
       "My watch is more accurate than yours.",
@@ -360,23 +340,13 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ці туфлі зручніші за ті?",
+    "rules": ["COMPARATIVES", "DEMONSTRATIVES"],
+    "ua": "Ці туфлі зручніші за ті?",
     "en": [
       "Are these shoes more comfortable than those?",
       "Are these shoes comfier than those?",
       "Do these shoes feel more pleasant than those?",
       "Do these shoes feel cozier than those?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Ця осінь яскравіша за сестрину улюблену.",
-    "en": [
-      "This autumn is brighter than my sister’s favorite.",
-      "This autumn is more vibrant than my sister’s favorite.",
-      "This fall is more colorful than my sibling’s favorite.",
-      "This fall is livelier than my sibling’s favorite."
     ]
   },
   {
@@ -400,8 +370,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Він грає краще за мене цього сезону.",
+    "rules": ["COMPARATIVES", "PREP_TIME"],
+    "ua": "Він грає краще ніж я цього сезону.",
     "en": [
       "He plays better than me this season.",
       "He plays more skillfully than me this season.",
@@ -420,8 +390,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи цей парк зеленіший за той у місті?",
+    "rules": ["COMPARATIVES", "PREP_PLACE"],
+    "ua": "Цей парк зеленіший за той у місті?",
     "en": [
       "Is this park greener than the one in the city?",
       "Is this park lusher than the one in the city?",
@@ -460,7 +430,7 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "WH_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["COMPARATIVES", "WH_Q"],
     "ua": "Чому твій ноутбук швидший за мій?",
     "en": [
       "Why is your laptop faster than mine?",
@@ -500,7 +470,7 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "SIMPLE_ADJ"],
+    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
     "ua": "Ти готуєш смачніше за сестру.",
     "en": [
       "You cook tastier than your sister.",
@@ -520,18 +490,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі пісні мелодійніші за ці альбоми.",
-    "en": [
-      "Some songs are more melodic than these albums.",
-      "Some songs are more tuneful than these albums.",
-      "Certain songs are more harmonious than these records.",
-      "Certain songs are more musical than these records."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
-    "ua": "Чи твій чемодан легший за мій?",
+    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+    "ua": "Твій чемодан легший за мій?",
     "en": [
       "Is your suitcase lighter than mine?",
       "Is your suitcase less heavy than mine?",
@@ -570,8 +530,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твоя гітара звучніша за мою?",
+    "rules": ["COMPARATIVES"],
+    "ua": "Твоя гітара звучніша за мою?",
     "en": [
       "Is your guitar louder than mine?",
       "Is your guitar more resonant than mine?",
@@ -620,26 +580,6 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Він танцює енергійніше за неї.",
-    "en": [
-      "He dances more energetically than her.",
-      "He dances more vigorously than her.",
-      "He moves more lively than she does.",
-      "He moves more dynamically than she does."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Ця подушка не м’якша, бо вона стара.",
-    "en": [
-      "This pillow isn’t softer because it’s old.",
-      "This pillow isn’t smoother because it’s old.",
-      "This pillow isn’t more comfortable since it’s worn out.",
-      "This pillow isn’t silkier since it’s worn out."
-    ]
-  },
-  {
     "rules": ["COMPARATIVES", "PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Ця подорож цікавіша за минулу.",
     "en": [
@@ -670,8 +610,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Чи твій рюкзак міцніший за мій?",
+    "rules": ["COMPARATIVES"],
+    "ua": "Твій рюкзак міцніший за мій?",
     "en": [
       "Is your backpack stronger than mine?",
       "Is your backpack sturdier than mine?",
@@ -720,7 +660,7 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
+    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ти виглядаєш бадьорішим, бо добре виспався.",
     "en": [
       "You look more cheerful because you slept well.",
@@ -760,8 +700,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Він грає голосніше за мене цього вечора.",
+    "rules": ["COMPARATIVES", "PREP_TIME"],
+    "ua": "Він грає голосніше ніж я цього вечора.",
     "en": [
       "He plays louder than me this evening.",
       "He plays more noisily than me this evening.",
@@ -770,8 +710,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "SIMPLE_ADJ"],
-    "ua": "Чи цей десерт солодший за той?",
+    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+    "ua": "Цей десерт солодший за той?",
     "en": [
       "Is this dessert sweeter than that one?",
       "Is this dessert more sugary than that one?",
@@ -820,7 +760,7 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "ARTICLES"],
+    "rules": ["COMPARATIVES", "ARTICLES"],
     "ua": "Мій квиток дешевший за твій.",
     "en": [
       "My ticket is cheaper than yours.",
@@ -860,8 +800,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "DEMONSTRATIVES"],
-    "ua": "Чи ці навушники гучніші за ті?",
+    "rules": ["COMPARATIVES", "DEMONSTRATIVES"],
+    "ua": "Ці навушники гучніші за ті?",
     "en": [
       "Are these headphones louder than those?",
       "Are these headphones noisier than those?",
@@ -900,8 +840,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "PERSONAL_PRONOUNS", "PREP_TIME"],
-    "ua": "Вона співає краще за мене цього місяця.",
+    "rules": ["COMPARATIVES", "PREP_TIME"],
+    "ua": "Вона співає краще ніж я цього місяця.",
     "en": [
       "She sings better than me this month.",
       "She sings more beautifully than me this month.",
@@ -920,8 +860,8 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "YES_NO_Q", "PREP_PLACE"],
-    "ua": "Чи цей ресторан затишніший за той у центрі?",
+    "rules": ["COMPARATIVES", "PREP_PLACE"],
+    "ua": "Цей ресторан затишніший за той у центрі?",
     "en": [
       "Is this restaurant cozier than the one in the center?",
       "Is this restaurant warmer than the one in the center?",
@@ -960,7 +900,7 @@
     ]
   },
   {
-    "rules": ["COMPARATIVES", "WH_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["COMPARATIVES", "WH_Q"],
     "ua": "Чому твій салат смачніший за мій?",
     "en": [
       "Why is your salad tastier than mine?",
@@ -977,26 +917,6 @@
       "This terrace is much warmer than the balcony.",
       "This terrace is far more comfortable than the balcony.",
       "This terrace is far snugger than the balcony."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Цей напій більш освіжаючий за лимонад.",
-    "en": [
-      "This drink is more refreshing than lemonade.",
-      "This drink is cooler than lemonade.",
-      "This beverage is fresher than lemonade.",
-      "This beverage is more invigorating than lemonade."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ця осінь барвистіша за минулу.",
-    "en": [
-      "This autumn is more colorful than last autumn.",
-      "This autumn is brighter than last autumn.",
-      "This fall is more vibrant than the previous one.",
-      "This fall is livelier than the previous one."
     ]
   }
 ] }

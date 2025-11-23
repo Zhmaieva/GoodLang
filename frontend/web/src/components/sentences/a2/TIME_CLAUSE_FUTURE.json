@@ -1,286 +1,682 @@
 { "TIME_CLAUSE_FUTURE": [
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Коли я закінчу роботу завтра, я піду в кіно.",
-    "en": ["When I finish work tomorrow, I will go to the cinema.", "When I finish work tomorrow, I'll go to the cinema."]
+    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Коли я повернуся додому, я зроблю чай.",
+    "en": [
+      "When I get home, I’ll make some tea.",
+      "When I come home, I’ll make some tea."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "NEGATION_DONT_DOESNT"],
-    "ua": "Коли вона не приходить вчасно, ми не починаємо зустріч.",
-    "en": ["When she does not come on time, we do not start the meeting.", "When she doesn't come on time, we don't start the meeting."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Коли вона закінчить роботу, вона зателефонує мені.",
+    "en": [
+      "When she finishes work, she’ll call me.",
+      "When she gets off work, she’ll call me."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Коли діти прокинуться, ми поснідаємо.",
+    "en": [
+      "When the kids wake up, we’ll have breakfast.",
+      "When the kids get up, we’ll have breakfast."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES", "PREP_PLACE"],
+    "ua": "Коли дощ припиниться, ми підемо на прогулянку.",
+    "en": [
+      "When it stops raining, we’ll go for a walk.",
+      "When the rain stops, we’ll go for a walk."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "IMPERATIVES"],
+    "ua": "Коли ти приїдеш, напиши мені.",
+    "en": [
+      "When you arrive, text me.",
+      "When you get here, text me."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Коли він одужає, ми відвідаємо його батьків.",
+    "en": [
+      "When he gets better, we’ll visit his parents.",
+      "When he feels better, we’ll visit his parents."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES", "ADVERBS_OF_MANNER"],
+    "ua": "Коли фільм закінчиться, ми підемо додому.",
+    "en": [
+      "When the movie ends, we’ll go straight home.",
+      "When the movie is over, we’ll go straight home."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ENOUGH_TOO_MUCH_MANY", "ARTICLES"],
+    "ua": "Коли я накопичу достатньо грошей, я куплю новий телефон.",
+    "en": [
+      "When I save enough money, I’ll buy a new phone.",
+      "When I have enough savings, I’ll buy a new phone."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE", "ARTICLES"],
+    "ua": "Коли вони переїдуть у нову квартиру, ми допоможемо їм розпакувати речі.",
+    "en": [
+      "When they move to the new apartment, we’ll help them unpack.",
+      "When they move into the new apartment, we’ll help them unpack.",
+      "When they move to the new apartment, we’ll help them get everything unpacked.",
+      "When they move into the new apartment, we’ll help them unpack their things.",
+      "When they move to the new flat, we’ll help them unpack.",
+      "When they move into the new flat, we’ll help them unpack.",
+      "When they move to the new flat, we’ll help them get everything unpacked.",
+      "When they move into the new flat, we’ll help them unpack their things."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "TO_BE"],
+    "ua": "Коли вечеря буде готова, я покличу всіх.",
+    "en": [
+      "When dinner is ready, I’ll call everyone."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "CAN_CANT"],
+    "ua": "Коли ти закінчиш домашнє завдання, ти зможеш подивитися телевізор.",
+    "en": [
+      "When you finish your homework, you can watch TV.",
+      "When you’re done with your homework, you can watch TV."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "LET_MAKE_ALLOW"],
+    "ua": "Коли моя посилка прийде, я повідомлю тобі.",
+    "en": [
+      "When my package arrives, I’ll let you know."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Коли ми зустрінемося завтра, я принесу документи.",
+    "en": [
+      "When we meet tomorrow, I’ll bring the documents."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES", "ADVERBS_OF_MANNER"],
+    "ua": "Коли дитина засне, ми нарешті відпочинемо.",
+    "en": [
+      "When the baby falls asleep, we’ll finally relax."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES", "PHRASAL_VERBS_COMMON"],
+    "ua": "Коли автобус приїде, ми зайдемо всередину.",
+    "en": [
+      "When the bus comes, we’ll get on.",
+      "When the bus arrives, we’ll get on."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Після того як я закінчу роботу, я приготую вечерю.",
+    "en": [
+      "After I finish work, I'll cook dinner.",
+      "After I’m done with work, I'll cook dinner."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ADVERBS_OF_MANNER"],
+    "ua": "Після того як вона прийме душ, їй стане краще.",
+    "en": [
+      "After she takes a shower, she’ll feel better."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Після того як діти поїдять, вони підуть спати.",
+    "en": [
+      "After the kids eat, they’ll go to bed."
+    ]
   },
   {
     "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
-    "ua": "Коли ми приїдемо в парк, ми пограємо у фризбі.",
-    "en": ["When we arrive at the park, we will play frisbee.", "When we arrive at the park, we'll play frisbee."]
+    "ua": "Після того як сніг припиниться, ми почистимо машину.",
+    "en": [
+      "After it stops snowing, we’ll clean the car."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Коли він купить трохи продуктів, ми приготуємо вечерю.",
-    "en": ["When he buys some groceries, we will cook dinner.", "When he buys some groceries, we'll cook dinner."]
+    "rules": ["TIME_CLAUSE_FUTURE", "IMPERATIVES"],
+    "ua": "Після того як ти прочитаєш повідомлення, передзвони мені.",
+    "en": [
+      "After you read the message, call me back."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Коли я часто тренуюся, я ніколи не відчуватиму втоми.",
-    "en": ["When I train often, I will never feel tired.", "When I train often, I'll never feel tired."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME", "ARTICLES"],
-    "ua": "Коли я відвідаю бібліотеку цього тижня, я візьму нову книгу.",
-    "en": ["When I visit the library this week, I will borrow a new book.", "When I visit the library this week, I'll borrow a new book."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Коли мій друг приїде, я покажу йому місто.",
-    "en": ["When my friend arrives, I will show him the city.", "When my friend arrives, I'll show him the city."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "DEMONSTRATIVES"],
-    "ua": "Коли ці студенти здають іспит, вони отримають сертифікати.",
-    "en": ["When these students pass the exam, they will receive certificates.", "When these students pass the exam, they'll receive certificates."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Після того як він отримає зарплату, він купить новий диван.",
+    "en": [
+      "After he gets paid, he’ll buy a new sofa.",
+      "After he gets his paycheck, he’ll buy a new couch.",
+      "After he gets paid, he’ll buy a new couch.",
+      "After he gets his paycheck, he’ll buy a new sofa."
+    ]
   },
   {
     "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
-    "ua": "Коли вона приїде на пляж, вона поплаває.",
-    "en": ["When she arrives at the beach, she will swim.", "When she arrives at the beach, she'll swim."]
+    "ua": "Після того як ми переїдемо, ми пофарбуємо вітальню.",
+    "en": [
+      "After we move in, we’ll paint the living room."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "NEGATION_DONT_DOESNT"],
-    "ua": "Коли він не телефонує, я не знаю його планів.",
-    "en": ["When he does not call, I do not know his plans.", "When he doesn't call, I don't know his plans."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Після того як я вип’ю каву, я почну працювати.",
+    "en": [
+      "After I drink my coffee, I’ll start working.",
+      "After I finish my coffee, I’ll start working."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Коли ми купимо багато квітів, ми прикрасимо будинок.",
-    "en": ["When we buy many flowers, we will decorate the house.", "When we buy many flowers, we'll decorate the house."]
+    "rules": ["TIME_CLAUSE_FUTURE", "CAN_CANT"],
+    "ua": "Після того як ти закінчиш домашнє завдання, ми пограємо в гру.",
+    "en": [
+      "After you finish your homework, we’ll play a game.",
+      "After you’re done with your homework, we’ll play a game."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Коли вони часто практикуються, вони ніколи не програють.",
-    "en": ["When they practice often, they will never lose.", "When they practice often, they'll never lose."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Після того як я надішлю лист, я піду на прогулянку.",
+    "en": [
+      "After I send the email, I’ll go for a walk."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "PERSONAL_PRONOUNS"],
-    "ua": "Коли я побачу її, я запрошу її на вечерю.",
-    "en": ["When I see her, I will invite her to dinner.", "When I see her, I'll invite her to dinner."]
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Після того як зустріч закінчиться, ми обговоримо план.",
+    "en": [
+      "After the meeting ends, we’ll discuss the plan.",
+      "After the meeting is over, we’ll discuss the plan."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Після того як ми приберемо кухню, ми подивимося фільм.",
+    "en": [
+      "After we clean the kitchen, we’ll watch a movie.",
+      "After we finish cleaning the kitchen, we’ll watch a movie."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE", "ARTICLES"],
+    "ua": "Після того як моя посилка приїде, я заберу її з пошти.",
+    "en": [
+      "After my package arrives, I’ll pick it up from the post office."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Перш ніж я вийду з дому, я перевірю погоду.",
+    "en": [
+      "Before I leave the house, I’ll check the weather."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Перш ніж вона піде на роботу, вона вип’є кави.",
+    "en": [
+      "Before she goes to work, she’ll drink some coffee.",
+      "Before she leaves for work, she’ll drink some coffee."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Перш ніж діти підуть до школи, вони поснідають.",
+    "en": [
+      "Before the kids go to school, they’ll eat breakfast."
+    ]
   },
   {
     "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME"],
-    "ua": "Коли вона закінчить роботу до вечора, вона піде в театр.",
-    "en": ["When she finishes work by evening, she will go to the theater.", "When she finishes work by evening, she'll go to the theater."]
+    "ua": "Перш ніж стемніє, ми вигуляємо собаку.",
+    "en": [
+      "Before it gets dark, we’ll walk the dog."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Коли мій брат приїде, ми пограємо в шахи.",
-    "en": ["When my brother arrives, we will play chess.", "When my brother arrives, we'll play chess."]
+    "rules": ["TIME_CLAUSE_FUTURE", "IMPERATIVES"],
+    "ua": "Перш ніж ти підеш спати, почисти зуби.",
+    "en": [
+      "Before you go to bed, brush your teeth."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "DEMONSTRATIVES"],
-    "ua": "Коли цей учитель пояснить урок, ми все зрозуміємо.",
-    "en": ["When this teacher explains the lesson, we will understand everything.", "When this teacher explains the lesson, we'll understand everything."]
+    "rules": ["TIME_CLAUSE_FUTURE", "COMPARATIVES"],
+    "ua": "Перш ніж він купить новий ноутбук, він порівняє ціни.",
+    "en": [
+      "Before he buys a new laptop, he’ll compare prices."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "NEGATION_DONT_DOESNT"],
-    "ua": "Коли ми не бронюємо квитки, ми не йдемо на концерт.",
-    "en": ["When we do not book tickets, we do not go to the concert.", "When we don't book tickets, we don't go to the concert."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Коли він купить трохи фарб, ми намалюємо стіну.",
-    "en": ["When he buys some paint, we will paint the wall.", "When he buys some paint, we'll paint the wall."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
-    "ua": "Коли я приїду в гори, я покатаюся на лижах.",
-    "en": ["When I arrive in the mountains, I will ski.", "When I arrive in the mountains, I'll ski."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Коли вона рідко тренується, вона не виграє змагання.",
-    "en": ["When she rarely trains, she will not win the competition.", "When she rarely trains, she won't win the competition."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "SHOULD_SHOULDNT"],
-    "ua": "Коли ти вивчиш матеріал, ти повинен скласти іспит.",
-    "en": ["When you study the material, you should pass the exam.", "When you study the material, you should pass the exam."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Коли ми приїдемо до обіду, ми пограємо в теніс.",
-    "en": ["When we arrive by noon, we will play tennis.", "When we arrive by noon, we'll play tennis."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "TOO_VERY"],
-    "ua": "Коли він дуже втомиться, він не піде на вечірку.",
-    "en": ["When he is too tired, he will not go to the party.", "When he's too tired, he won't go to the party."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Коли моя сестра приїде, я допоможу їй із багажем.",
-    "en": ["When my sister arrives, I will help her with luggage.", "When my sister arrives, I'll help her with luggage."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "DEMONSTRATIVES"],
-    "ua": "Коли ці діти закінчать малювати, вони покажуть картини.",
-    "en": ["When these children finish drawing, they will show their pictures.", "When these children finish drawing, they'll show their pictures."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "NEGATION_DONT_DOESNT"],
-    "ua": "Коли вона не готує презентацію, вона не виступає.",
-    "en": ["When she does not prepare the presentation, she does not perform.", "When she doesn't prepare the presentation, she doesn't perform."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Коли я куплю трохи солодощів, я поділюся з друзями.",
-    "en": ["When I buy some sweets, I will share with friends.", "When I buy some sweets, I'll share with friends."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME", "ARTICLES"],
-    "ua": "Коли він приїде до вечора, ми підемо в ресторан.",
-    "en": ["When he arrives by evening, we will go to the restaurant.", "When he arrives by evening, we'll go to the restaurant."]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Коли вони часто грають, вони ніколи не програють.",
-    "en": ["When they play often, they will never lose.", "When they play often, they'll never lose."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Перш ніж ми почнемо зустріч, ми зачекаємо Анну.",
+    "en": [
+      "Before we start the meeting, we’ll wait for Anna.",
+      "Before we begin the meeting, we’ll wait for Anna."
+    ]
   },
   {
     "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
-    "ua": "Коли ми приїдемо на море, ми побудуємо замок із піску.",
-    "en": ["When we arrive at the sea, we will build a sandcastle.", "When we arrive at the sea, we'll build a sandcastle."]
+    "ua": "Перш ніж вони поїдуть за кордон, вони поновлять свої паспорти.",
+    "en": [
+      "Before they travel abroad, they’ll renew their passports."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Коли мій друг напише, я відповім йому.",
-    "en": ["When my friend writes, I will reply to him.", "When my friend writes, I'll reply to him."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Перш ніж я приготую вечерю, я помию овочі.",
+    "en": [
+      "Before I make dinner, I’ll wash the vegetables."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "DEMONSTRATIVES"],
-    "ua": "Коли цей співак виступить, ми підемо на концерт.",
-    "en": ["When this singer performs, we will go to the concert.", "When this singer performs, we'll go to the concert."]
+    "rules": ["TIME_CLAUSE_FUTURE", "IMPERATIVES"],
+    "ua": "Перш ніж ти підеш, закрий вікна.",
+    "en": [
+      "Before you leave, close the windows."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "NEGATION_DONT_DOESNT"],
-    "ua": "Коли ми не замовляємо їжу, ми не вечеряємо вдома.",
-    "en": ["When we do not order food, we do not eat at home.", "When we don't order food, we don't eat at home."]
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Перш ніж прийдуть гості, ми приберемо вітальню.",
+    "en": [
+      "Before the guests arrive, we’ll clean the living room."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Коли вона купить багато книг, вона відкриє бібліотеку.",
-    "en": ["When she buys many books, she will open a library.", "When she buys many books, she'll open a library."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Перш ніж я зателефоную йому, я закінчу це завдання.",
+    "en": [
+      "Before I call him, I’ll finish this task."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Перш ніж ми поїдемо в аеропорт, ми ще раз перевіримо квитки.",
+    "en": [
+      "Before we go to the airport, we’ll double-check the tickets."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Перш ніж почнеться фільм, ми купимо попкорн.",
+    "en": [
+      "Before the movie starts, we’ll buy popcorn.",
+      "Before the movie begins, we’ll buy popcorn."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Перш ніж вона складе тест, вона повторить свої нотатки.",
+    "en": [
+      "Before she takes the test, she’ll review her notes."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Щойно я повернуся додому, я напишу тобі.",
+    "en": [
+      "As soon as I get home, I’ll message you.",
+      "As soon as I get home, I’ll text you."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Щойно вона закінчить зустріч, вона зателефонує нам.",
+    "en": [
+      "As soon as she finishes her meeting, she’ll call us.",
+      "As soon as she finishes her meeting, she’ll give us a call."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Щойно дитина засне, ми почнемо готувати.",
+    "en": [
+      "As soon as the baby falls asleep, we’ll start cooking."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Щойно дощ припиниться, ми вийдемо надвір.",
+    "en": [
+      "As soon as it stops raining, we’ll go outside.",
+      "As soon as the rain stops, we’ll go outside."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Щойно ти приїдеш, ми почнемо.",
+    "en": [
+      "As soon as you arrive, we’ll begin."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Щойно він прокинеться, він поснідає.",
+    "en": [
+      "As soon as he wakes up, he’ll eat breakfast.",
+      "As soon as he gets up, he’ll eat breakfast."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Щойно вони переїдуть, ми відвідаємо їх.",
+    "en": [
+      "As soon as they move in, we’ll visit them.",
+      "As soon as they move into the new place, we’ll visit them."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Щойно я знайду ключі, ми підемо.",
+    "en": [
+      "As soon as I find my keys, we’ll leave.",
+      "As soon as I find my keys, we’ll head out."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "TO_BE", "ARTICLES"],
+    "ua": "Щойно їжа буде готова, я накрию на стіл.",
+    "en": [
+      "As soon as the food is ready, I’ll set the table.",
+      "As soon as the food is ready, I’ll lay the table."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Щойно ми закінчимо прибирання, ми подивимося фільм.",
+    "en": [
+      "As soon as we finish cleaning, we’ll watch a movie.",
+      "As soon as we finish cleaning, we’ll watch a film."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Щойно твоя посилка приїде, ти отримаєш сповіщення.",
+    "en": [
+      "As soon as your package arrives, you’ll get a notification."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ENOUGH_TOO_MUCH_MANY", "ARTICLES"],
+    "ua": "Щойно я заощаджу достатньо грошей, я куплю новий ноутбук.",
+    "en": [
+      "As soon as I save enough money, I’ll buy a new laptop.",
+      "As soon as I have enough money, I’ll buy a new laptop."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Щойно їй стане краще, ми підемо на прогулянку.",
+    "en": [
+      "As soon as she gets better, we’ll go for a walk."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Щойно урок закінчиться, діти вибіжать надвір.",
+    "en": [
+      "As soon as the lesson ends, the kids will run outside.",
+      "As soon as the class finishes, the kids will run outside."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Щойно ми його побачимо, ми розповімо йому новину.",
+    "en": [
+      "As soon as we see him, we’ll tell him the news."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Я залишуся тут, доки ти не повернешся.",
+    "en": [
+      "I’ll stay here until you come back.",
+      "I’ll stay here until you return."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Вона не піде, доки дощ не припиниться.",
+    "en": [
+      "She won’t leave until the rain stops.",
+      "She won’t leave until it stops raining."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Ми чекатимемо, доки автобус не приїде.",
+    "en": [
+      "We’ll wait until the bus arrives.",
+      "We’ll wait until the bus comes."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Він не їстиме, доки не закінчить роботу.",
+    "en": [
+      "He won’t eat until he finishes his work."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Я продовжуватиму дзвонити, доки ти не відповіси.",
+    "en": [
+      "I’ll keep calling until you answer."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Вони не почнуть зустріч, доки всі не прийдуть.",
+    "en": [
+      "They won’t start the meeting until everyone arrives."
+    ]
   },
   {
     "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME"],
-    "ua": "Коли я закінчу проект до п’ятниці, я відпочину на вихідних.",
-    "en": ["When I finish the project by Friday, I will rest on the weekend.", "When I finish the project by Friday, I'll rest on the weekend."]
+    "ua": "Ми залишимося надворі, доки не стемніє.",
+    "en": [
+      "We’ll stay outside until it gets dark."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Коли він рідко вчиться, він не отримає хорошу оцінку.",
-    "en": ["When he rarely studies, he will not get a good grade.", "When he rarely studies, he won't get a good grade."]
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Вона не ляже спати, доки дитина не засне.",
+    "en": [
+      "She won’t go to bed until the baby sleeps.",
+      "She won’t go to bed until the baby falls asleep."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "PERSONAL_PRONOUNS"],
-    "ua": "Коли ми закінчимо уроки, ми пограємо на вулиці.",
-    "en": ["When we finish our lessons, we will play outside.", "When we finish our lessons, we'll play outside."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Я працюватиму над цим, доки не зроблю це правильно.",
+    "en": [
+      "I’ll work on this until I get it right."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Коли моя мама приготує вечерю, я допоможу їй.",
-    "en": ["When my mom cooks dinner, I will help her.", "When my mom cooks dinner, I'll help her."]
+    "rules": ["TIME_CLAUSE_FUTURE", "COMPARATIVES"],
+    "ua": "Він нічого не купить, доки не порівняє ціни.",
+    "en": [
+      "He won’t buy anything until he checks the prices.",
+      "He won’t buy anything until he compares the prices."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "DEMONSTRATIVES"],
-    "ua": "Коли ця команда виграє, вони отримають кубок.",
-    "en": ["When this team wins, they will get the trophy.", "When this team wins, they'll get the trophy."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Ми гулятимемо, доки магазин не відкриється.",
+    "en": [
+      "We’ll walk around until the shop opens.",
+      "We’ll walk around until the store opens."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "NEGATION_DONT_DOESNT"],
-    "ua": "Коли він не відповідає на повідомлення, я не пишу знову.",
-    "en": ["When he does not reply to messages, I do not write again.", "When he doesn't reply to messages, I don't write again."]
+    "rules": ["TIME_CLAUSE_FUTURE", "TO_BE"],
+    "ua": "Я не відпочину, доки будинок не буде чистим.",
+    "en": [
+      "I won’t relax until the house is clean."
+    ]
   },
-
-
-
-
-
-  
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Коли ми зберемо трохи грошей, ми поїдемо у відпустку.",
-    "en": ["When we save some money, we will go on vacation.", "When we save some money, we'll go on vacation."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Вони гратимуть, доки їхня мама не прийде додому.",
+    "en": [
+      "They’ll keep playing until their mom comes home."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Я чекатиму тут, доки ти не будеш готовий.",
+    "en": [
+      "I’ll wait here until you’re ready."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Вона не перестане намагатися, доки не досягне успіху.",
+    "en": [
+      "She won’t stop trying until she succeeds."
+    ]
   },
   {
     "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
-    "ua": "Коли я приїду в ліс, я зберу гриби.",
-    "en": ["When I arrive in the forest, I will pick mushrooms.", "When I arrive in the forest, I'll pick mushrooms."]
+    "ua": "Як тільки я повернуся додому, я переодягнуся.",
+    "en": [
+      "Once I get home, I’ll change my clothes.",
+      "As soon as I get home, I’ll change my clothes."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Коли мій друг зателефонує, я зустрінуся з ним.",
-    "en": ["When my friend calls, I will meet him.", "When my friend calls, I'll meet him."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Як тільки вона закінчить роботу, вона приєднається до нас.",
+    "en": [
+      "Once she finishes work, she’ll join us.",
+      "As soon as she finishes work, she’ll join us.",
+      "Once she’s done with work, she’ll join us."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "DEMONSTRATIVES"],
-    "ua": "Коли ці учні закінчать проект, вони отримають похвалу.",
-    "en": ["When these students finish the project, they will receive praise.", "When these students finish the project, they'll receive praise."]
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Як тільки діти заснуть, ми подивимося фільм.",
+    "en": [
+      "Once the kids fall asleep, we’ll watch a movie.",
+      "As soon as the kids fall asleep, we’ll watch a movie."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Коли він купить багато матеріалів, він побудує будинок.",
-    "en": ["When he buys many materials, he will build a house.", "When he buys many materials, he'll build a house."]
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME"],
+    "ua": "Як тільки потеплішає, ми відкриємо вікна.",
+    "en": [
+      "Once it gets warmer, we’ll open the windows.",
+      "As soon as it gets warmer, we’ll open the windows."
+    ]
   },
   {
-    "rules": ["TIME_CLAUSE_FUTURE", "SHOULD_SHOULDNT"],
-    "ua": "Коли ти вивчиш слова, тобі варто скласти тест.",
-    "en": ["When you learn the words, you should take the test.", "When you learn the words, you should take the test."]
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Як тільки ти приїдеш, ми почнемо зустріч.",
+    "en": [
+      "Once you arrive, we’ll start the meeting.",
+      "As soon as you arrive, we’ll start the meeting."
+    ]
   },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли сонце зійде, ми почнемо.", "en": ["When the sun rises, we will start."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли дощ закінчиться, вони підуть гуляти.", "en": ["When the rain stops, they will go for a walk."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли він подзвонить, я відповім.", "en": ["When he calls, I will answer."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ми приїдемо, буде темно.", "en": ["When we arrive, it will be dark."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли вона прокинеться, приготуємо сніданок.", "en": ["When she wakes up, we will make breakfast."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти будеш готовий, ми підемо.", "en": ["When you are ready, we will leave."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли я повернуся, ми поговоримо.", "en": ["When I come back, we will talk."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли вони зустрінуться, все зміниться.", "en": ["When they meet, everything will change."] },
-
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти побачиш її, передай привіт.", "en": ["When you see her, say hello."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли він повернеться додому, він поїсть.", "en": ["When he gets home, he will eat."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли відкриються двері, ми зайдемо.", "en": ["When the doors open, we will go in."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли стане тепло, ми поїдемо на море.", "en": ["When it gets warm, we will go to the sea."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти отримаєш відповідь, покажи її мені.", "en": ["When you get the answer, show it to me.", "When you receive the answer, show it to me."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли я знайду ключі, ми підемо.", "en": ["When I find the keys, we will go."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти підеш спати, вимкни світло.", "en": ["When you go to bed, turn off the light."] },
-
-
-
-
-
-
-
-
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли сніг розтане, ми підемо в парк.", "en": ["When the snow melts, we will go to the park."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли вона повернеться, я запитаю її.", "en": ["When she returns, I will ask her."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти відкриєш коробку, ти побачиш сюрприз.", "en": ["When you open the box, you will see a surprise."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли він одужає, ми відсвяткуємо.", "en": ["When he gets better, we will celebrate."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли прийде літо, я куплю велосипед.", "en": ["When summer comes, I will buy a bike."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ми переїдемо, я буду щаслива.", "en": ["When we move, I will be happy."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли будеш у Польщі, напиши мені.", "en": ["When you are in Poland, text me."] },
-
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли вони повернуться, ми підемо додому.", "en": ["When they come back, we will go home."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти будеш мати час, ми поговоримо.", "en": ["When you have time, we will talk."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли він зайде всередину, ми почнемо.", "en": ["When he comes in, we will start."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли годинник проб'є дванадцять, почнеться новий рік.", "en": ["When the clock strikes twelve, the new year will begin."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли я закінчу школу, я поїду за кордон.", "en": ["When I finish school, I will go abroad."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти прибереш кімнату, ми підемо гратися.", "en": ["When you clean your room, we will go play."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли вони знайдуть рішення, вони скажуть.", "en": ["When they find a solution, they will tell us."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли я отримаю гроші, я заплачу.", "en": ["When I get the money, I will pay."] },
-
-  { "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"], "ua": "Коли ми будемо в ресторані, я замовлю піцу.", "en": ["When we are at the restaurant, I will order pizza."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли вони піднімуть прапор, ми заспіваємо.", "en": ["When they raise the flag, we will sing."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти одягнеш куртку, ми підемо на вулицю.", "en": ["When you put on your jacket, we will go outside."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли він відкриє магазин, ми зайдемо.", "en": ["When he opens the shop, we will go in."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли закінчиться гра, ми підемо додому.", "en": ["When the game ends, we will go home."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли ти вивчиш це правило, тобі стане легше.", "en": ["When you learn this rule, it will get easier."] },
-  { "rules": ["TIME_CLAUSE_FUTURE"], "ua": "Коли я натисну кнопку, двері відкриються.", "en": ["When I press the button, the door will open."] }
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Як тільки він вивчить маршрут, він поїде сам.",
+    "en": [
+      "Once he learns the route, he’ll drive by himself.",
+      "As soon as he learns the route, he’ll drive by himself."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Як тільки ми переїдемо, ми купимо нові меблі.",
+    "en": [
+      "Once we move in, we’ll buy new furniture.",
+      "As soon as we move in, we’ll buy new furniture.",
+      "Once we move into the new place, we’ll buy new furniture."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE", "ARTICLES"],
+    "ua": "Як тільки вони зареєструються, вони підуть до свого номера.",
+    "en": [
+      "Once they check in, they’ll go to their room.",
+      "As soon as they check in, they’ll go to their room."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Як тільки я доп’ю каву, я тобі зателефоную.",
+    "en": [
+      "Once I finish my coffee, I’ll call you.",
+      "As soon as I finish my coffee, I’ll call you.",
+      "Once I’m done with my coffee, I’ll call you."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Як тільки приїде посилка, я її заберу.",
+    "en": [
+      "Once the package arrives, I’ll pick it up.",
+      "As soon as the package arrives, I’ll pick it up."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Як тільки ти прибереш свою кімнату, ти зможеш пограти в ігри.",
+    "en": [
+      "Once you clean your room, you can play games.",
+      "As soon as you clean your room, you can play games."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE"],
+    "ua": "Як тільки їй стане краще, ми підемо на прогулянку.",
+    "en": [
+      "Once she gets better, we’ll go for a walk.",
+      "As soon as she gets better, we’ll go for a walk."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "PREP_PLACE"],
+    "ua": "Як тільки ми відремонтуємо машину, ми відвідаємо моїх батьків.",
+    "en": [
+      "Once we fix the car, we’ll visit my parents.",
+      "As soon as we fix the car, we’ll visit my parents."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ARTICLES"],
+    "ua": "Як тільки зустріч закінчиться, ми підемо на ланч.",
+    "en": [
+      "Once the meeting ends, we’ll go for lunch.",
+      "As soon as the meeting ends, we’ll go for lunch.",
+      "Once the meeting is over, we’ll go for lunch."
+    ]
+  },
+  {
+    "rules": ["TIME_CLAUSE_FUTURE", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Як тільки він збере достатньо грошей, він купить новий велосипед.",
+    "en": [
+      "Once he saves enough money, he’ll buy a new bike.",
+      "As soon as he saves enough money, he’ll buy a new bike.",
+      "As soon as he saves up enough money, he’ll buy a new bike."
+    ]
+  }
 ] }

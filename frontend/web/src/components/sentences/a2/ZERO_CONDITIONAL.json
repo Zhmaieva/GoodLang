@@ -1,472 +1,686 @@
 { "ZERO_CONDITIONAL": [
   {
-    "rules": ["ZERO_CONDITIONAL", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Якщо я голодний, я їм сніданок вранці.",
-    "en": ["If I am hungry, I eat breakfast in the morning.", "If I'm hungry, I eat breakfast in the morning."]
+    "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
+    "ua": "Якщо я голодний вранці, я їм сніданок.",
+    "en": [
+      "If I am hungry in the morning, I eat breakfast.",
+      "If I'm hungry in the morning, I have breakfast."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо він п’є багато води, він почувається краще.",
-    "en": ["If he drinks a lot of water, he feels better.", "If he drinks a lot of water, he feels better."]
+    "en": [
+      "If he drinks a lot of water, he feels better.",
+      "If he drinks plenty of water, he feels better."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо я часто читаю, я ніколи не забуваю слова.",
-    "en": ["If I read often, I never forget words.", "If I read often, I never forget words."]
+    "en": [
+      "If I read a lot, I never forget words.",
+      "If I often read, I never forget words."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо мій друг телефонує, я завжди відповідаю.",
-    "en": ["If my friend calls, I always answer.", "If my friend calls, I always answer."]
+    "en": [
+      "If my friend calls, I always answer.",
+      "If my friend calls, I always pick up the phone."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо вона сидить у саду, вона чує спів птахів.",
-    "en": ["If she sits in the garden, she hears birds singing.", "If she sits in the garden, she hears birds singing."]
+    "en": [
+      "If she sits in the garden, she hears birds singing.",
+      "If she sits in the garden, she hears the birds singing."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо він не вчиться, він не розуміє матеріал.",
-    "en": ["If he does not study, he does not understand the material.", "If he doesn't study, he doesn't understand the material."]
+    "en": [
+      "If he does not study, he does not understand the material.",
+      "If he doesn't study, he doesn't understand the material."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо ми їмо трохи фруктів, ми почуваємося здоровішими.",
-    "en": ["If we eat some fruit, we feel healthier.", "If we eat some fruit, we feel healthier."]
+    "en": [
+      "If we eat some fruit, we feel healthier."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо я втомлююся, я відпочиваю.",
-    "en": ["If I get tired, I rest.", "If I get tired, I rest."]
+    "en": [
+      "If I get tired, I rest.",
+      "If I get tired, I take a rest."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо вона читає перед сном, вона швидко засинає.",
-    "en": ["If she reads before bed, she falls asleep quickly.", "If she reads before bed, she falls asleep quickly."]
+    "en": [
+      "If she reads before bed, she falls asleep quickly.",
+      "If she reads before going to bed, she falls asleep fast."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо мій брат грає в шахи, він завжди виграє.",
-    "en": ["If my brother plays chess, he always wins.", "If my brother plays chess, he always wins."]
+    "en": [
+      "If my brother plays chess, he always wins.",
+      "If my brother plays chess, he always wins the game."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо ми не прибираємо, будинок виглядає брудним.",
-    "en": ["If we do not clean, the house looks dirty.", "If we don't clean, the house looks dirty."]
+    "en": [
+      "If we do not clean, the house looks dirty.",
+      "If we don't clean, the house looks dirty."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо він купує багато кави, він п’є її щодня.",
-    "en": ["If he buys a lot of coffee, he drinks it every day.", "If he buys a lot of coffee, he drinks it every day."]
+    "en": [
+      "If he buys a lot of coffee, he drinks it every day.",
+      "If he buys lots of coffee, he drinks it every day."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
+    "rules": ["ZERO_CONDITIONAL", "PREP_PLACE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я гуляю в лісі, я бачу багато дерев.",
-    "en": ["If I walk in the forest, I see many trees.", "If I walk in the forest, I see many trees."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти вчиш англійську, ти повинен знати граматику.",
-    "en": ["If you learn English, you should know grammar.", "If you learn English, you should know grammar."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Якщо ми гуляємо ввечері, ми бачимо захід сонця.",
-    "en": ["If we walk in the evening, we see the sunset.", "If we walk in the evening, we see the sunset."]
+    "en": [
+      "If I walk in the forest, I see many trees.",
+      "If I walk through the forest, I see lots of trees."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо моя сестра співає, усі слухають.",
-    "en": ["If my sister sings, everyone listens.", "If my sister sings, everyone listens."]
+    "en": [
+      "If my sister sings, everyone listens.",
+      "If my sister sings, everybody listens."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо вона не п’є воду, вона відчуває спрагу.",
-    "en": ["If she does not drink water, she feels thirsty.", "If she doesn't drink water, she feels thirsty."]
+    "en": [
+      "If she does not drink water, she feels thirsty.",
+      "If she doesn't drink water, she feels thirsty."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я їм трохи шоколаду, я почуваюся щасливішим.",
-    "en": ["If I eat some chocolate, I feel happier.", "If I eat some chocolate, I feel happier."]
+    "en": [
+      "If I eat some chocolate, I feel happier.",
+      "If I eat a bit of chocolate, I feel happier."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вони часто бігають, вони ніколи не хворіють.",
-    "en": ["If they run often, they never get sick.", "If they run often, they never get sick."]
+    "en": [
+      "If they run regularly, they never get sick.",
+      "If they often run, they never get ill."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо ми сидимо на пляжі, ми чуємо шум моря.",
-    "en": ["If we sit on the beach, we hear the sound of the sea.", "If we sit on the beach, we hear the sound of the sea."]
+    "en": [
+      "If we sit on the beach, we hear the sound of the sea.",
+      "If we sit on the beach, we can hear the sea."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо мій друг малює, він щасливий.",
-    "en": ["If my friend paints, he is happy.", "If my friend paints, he's happy."]
+    "en": [
+      "If my friend paints, he is happy.",
+      "If my friend paints, he's happy."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо він не читає інструкцію, він не знає, що робити.",
-    "en": ["If he does not read the instructions, he does not know what to do.", "If he doesn't read the instructions, he doesn't know what to do."]
+    "en": [
+      "If he does not read the instructions, he does not know what to do.",
+      "If he doesn't read the instructions, he doesn't know what to do."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо вона купує багато овочів, вона готує салат.",
-    "en": ["If she buys many vegetables, she makes a salad.", "If she buys many vegetables, she makes a salad."]
+    "en": [
+      "If she buys many vegetables, she makes a salad.",
+      "If she buys a lot of vegetables, she prepares a salad."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо я бігаю, я почуваюся енергійніше.",
-    "en": ["If I run, I feel more energetic.", "If I run, I feel more energetic."]
+    "en": [
+      "If I run, I feel more energetic.",
+      "If I go running, I feel more energetic."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вони часто співають, вони ніколи не сумують.",
-    "en": ["If they sing often, they never feel sad.", "If they sing often, they never feel sad."]
+    "en": [
+      "If they sing often, they never feel sad.",
+      "If they often sing, they never feel sad."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо він працює вночі, він спить удень.",
-    "en": ["If he works at night, he sleeps during the day.", "If he works at night, he sleeps during the day."]
+    "en": [
+      "If he works at night, he sleeps during the day.",
+      "If he works during the night, he sleeps in the daytime."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо моя мама готує, їжа завжди смачна.",
-    "en": ["If my mom cooks, the food is always delicious.", "If my mom cooks, the food is always delicious."]
+    "en": [
+      "If my mom cooks, the food is always delicious.",
+      "If my mom cooks, the food is always very tasty."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо ми не поливаємо рослини, вони в’януть.",
-    "en": ["If we do not water the plants, they wilt.", "If we don't water the plants, they wilt."]
+    "en": [
+      "If we do not water the plants, they wilt.",
+      "If we don't water the plants, they dry out.",
+      "If we don't water the plants, they die."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я п’ю трохи чаю, я почуваюся спокійніше.",
-    "en": ["If I drink some tea, I feel calmer.", "If I drink some tea, I feel calmer."]
+    "en": [
+      "If I drink some tea, I feel calmer.",
+      "If I drink a little tea, I feel calmer."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо я в кафе, я замовляю каву.",
-    "en": ["If I am in a cafe, I order coffee.", "If I am in a cafe, I order coffee."]
+    "en": [
+      "If I am in a cafe, I order coffee.",
+      "If I'm in a cafe, I order coffee."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо вона не слухає музику, вона не розслабляється.",
-    "en": ["If she does not listen to music, she does not relax.", "If she doesn't listen to music, she doesn't relax."]
+    "en": [
+      "If she does not listen to music, she does not relax.",
+      "If she doesn't listen to music, she doesn't relax."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо ми купуємо багато квітів, ми прикрашаємо будинок.",
-    "en": ["If we buy many flowers, we decorate the house.", "If we buy many flowers, we decorate the house."]
+    "en": [
+      "If we buy many flowers, we decorate the house.",
+      "If we buy a lot of flowers, we decorate our home."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо я гуляю вранці, я почуваюся бадьоріше.",
-    "en": ["If I walk in the morning, I feel more energetic.", "If I walk in the morning, I feel more energetic."]
+    "en": [
+      "If I walk in the morning, I feel more energetic.",
+      "If I go for a walk in the morning, I feel more energetic."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти вчиш математику, ти повинен розуміти формули.",
-    "en": ["If you study math, you should understand formulas.", "If you study math, you should understand formulas."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо я втомлююся ввечері, я рано лягаю спати.",
-    "en": ["If I get tired in the evening, I go to bed early.", "If I get tired in the evening, I go to bed early."]
+    "en": [
+      "If I get tired in the evening, I go to bed early.",
+      "If I get tired in the evening, I go to sleep early."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо ми гуляємо на пляжі, ми бачимо хвилі.",
-    "en": ["If we walk on the beach, we see waves.", "If we walk on the beach, we see waves."]
+    "en": [
+      "If we walk on the beach, we see waves.",
+      "If we walk along the beach, we see the waves."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо вона їсть багато фруктів, вона почувається здоровою.",
-    "en": ["If she eats a lot of fruit, she feels healthy.", "If she eats a lot of fruit, she feels healthy."]
+    "en": [
+      "If she eats a lot of fruit, she feels healthy.",
+      "If she eats plenty of fruit, she feels healthy."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо мій друг грає в теніс, він завжди перемагає.",
-    "en": ["If my friend plays tennis, he always wins.", "If my friend plays tennis, he always wins."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці діти співають, усі радіють.",
-    "en": ["If these children sing, everyone is happy.", "If these children sing, everyone is happy."]
+    "en": [
+      "If my friend plays tennis, he always wins.",
+      "If my friend plays tennis, he always wins the match."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вони часто малюють, вони ніколи не втрачають натхнення.",
-    "en": ["If they paint often, they never lose inspiration.", "If they paint often, they never lose inspiration."]
+    "en": [
+      "If they paint often, they never lose inspiration.",
+      "If they often paint, they never lose their inspiration."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо я голодний, я готую їжу.",
-    "en": ["If I am hungry, I cook food.", "If I'm hungry, I cook food."]
+    "en": [
+      "If I am hungry, I cook food.",
+      "If I'm hungry, I cook something to eat."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо вона читає вночі, вона погано спить.",
-    "en": ["If she reads at night, she sleeps poorly.", "If she reads at night, she sleeps poorly."]
+    "en": [
+      "If she reads at night, she sleeps poorly.",
+      "If she reads late at night, she sleeps badly."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо ми не поливаємо квіти, вони гинуть.",
-    "en": ["If we do not water the flowers, they die.", "If we don't water the flowers, they die."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якщо він купує багато чаю, він п’є його щовечора.",
-    "en": ["If he buys a lot of tea, he drinks it every evening.", "If he buys a lot of tea, he drinks it every evening."]
+    "en": [
+      "If we do not water the flowers, they die.",
+      "If we don't water the flowers, they die."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо я гуляю в горах, я бачу гарні краєвиди.",
-    "en": ["If I walk in the mountains, I see beautiful views.", "If I walk in the mountains, I see beautiful views."]
+    "en": [
+      "If I walk in the mountains, I see beautiful views.",
+      "If I walk in the mountains, I see lovely views."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "TOO_VERY"],
     "ua": "Якщо він дуже зайнятий, він не телефонує друзям.",
-    "en": ["If he is too busy, he does not call friends.", "If he's too busy, he doesn't call friends."]
+    "en": [
+      "If he is too busy, he does not call friends.",
+      "If he's too busy, he doesn't call his friends."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "DEMONSTRATIVES"],
-    "ua": "Якщо ці діти грають на вулиці, вони завжди брудні.",
-    "en": ["If these children play outside, they are always dirty.", "If these children play outside, they are always dirty."]
+    "rules": ["ZERO_CONDITIONAL", "DEMONSTRATIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Якщо діти граються на вулиці, вони завжди повертаються брудні.",
+    "en": [
+      "If children play outside, they always come back dirty.",
+      "If children play outside, they are always very dirty."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо вона не слухає вчителя, вона не розуміє урок.",
-    "en": ["If she does not listen to the teacher, she does not understand the lesson.", "If she doesn't listen to the teacher, she doesn't understand the lesson."]
+    "en": [
+      "If she does not listen to the teacher, she does not understand the lesson.",
+      "If she doesn't listen to the teacher, she doesn't understand the lesson."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я їм трохи меду, я почуваюся краще.",
-    "en": ["If I eat some honey, I feel better.", "If I eat some honey, I feel better."]
+    "en": [
+      "If I eat some honey, I feel better.",
+      "If I eat a little honey, I feel better."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо ми сидимо в кафе, ми п’ємо каву.",
-    "en": ["If we sit in a café, we drink coffee.", "If we sit in a café, we drink coffee."]
+    "en": [
+      "If we sit in a cafe, we drink coffee.",
+      "If we sit in a cafe, we usually drink coffee."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо моя мама співає, усі радіють.",
-    "en": ["If my mom sings, everyone is happy.", "If my mom sings, everyone is happy."]
+    "en": [
+      "If my mom sings, everyone is happy.",
+      "If my mom sings, everyone feels happy."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо він не чистить взуття, воно виглядає брудним.",
-    "en": ["If he does not clean his shoes, they look dirty.", "If he doesn't clean his shoes, they look dirty."]
+    "en": [
+      "If he does not clean his shoes, they look dirty.",
+      "If he doesn't clean his shoes, they look dirty."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо вона купує багато спецій, їжа стає смачнішою.",
-    "en": ["If she buys many spices, the food tastes better.", "If she buys many spices, the food tastes better."]
+    "en": [
+      "If she buys many spices, the food tastes better.",
+      "If she buys a lot of spices, the food tastes better."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "COMPARATIVES"],
     "ua": "Якщо я танцюю, я почуваюся вільніше.",
-    "en": ["If I dance, I feel freer.", "If I dance, I feel freer."]
+    "en": [
+      "If I dance, I feel freer.",
+      "If I dance, I feel more free."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вони часто пишуть, вони ніколи не забувають правила.",
-    "en": ["If they write often, they never forget the rules.", "If they write often, they never forget the rules."]
+    "en": [
+      "If they write often, they never forget the rules.",
+      "If they often write, they never forget the rules."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо він працює вдень, він відпочиває ввечері.",
-    "en": ["If he works during the day, he rests in the evening.", "If he works during the day, he rests in the evening."]
+    "en": [
+      "If he works during the day, he rests in the evening.",
+      "If he works during the day, he relaxes in the evening."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо моя сестра готує, кухня завжди пахне смачно.",
-    "en": ["If my sister cooks, the kitchen always smells good.", "If my sister cooks, the kitchen always smells good."]
+    "en": [
+      "If my sister cooks, the kitchen always smells good.",
+      "If my sister cooks, the kitchen always smells delicious."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо ми не прибираємо кухню, вона виглядає безладною.",
-    "en": ["If we do not clean the kitchen, it looks messy.", "If we don't clean the kitchen, it looks messy."]
+    "en": [
+      "If we do not clean the kitchen, it looks messy.",
+      "If we don't clean the kitchen, it looks messy."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я п’ю трохи кави, я почуваюся бадьоріше.",
-    "en": ["If I drink some coffee, I feel more energetic.", "If I drink some coffee, I feel more energetic."]
+    "en": [
+      "If I drink some coffee, I feel more energetic.",
+      "If I drink some coffee, I feel more awake."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо я сиджу на балконі, я бачу захід сонця.",
-    "en": ["If I sit on the balcony, I see the sunset.", "If I sit on the balcony, I see the sunset."]
+    "en": [
+      "If I sit on the balcony, I see the sunset."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вона рідко читає, вона не розширює словниковий запас.",
-    "en": ["If she rarely reads, she does not expand her vocabulary.", "If she rarely reads, she doesn't expand her vocabulary."]
+    "en": [
+      "If she rarely reads, she does not expand her vocabulary.",
+      "If she rarely reads, she doesn't expand her vocabulary."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "TOO_VERY"],
     "ua": "Якщо він дуже голодний, він їсть швидко.",
-    "en": ["If he is very hungry, he eats quickly.", "If he's very hungry, he eats quickly."]
+    "en": [
+      "If he is very hungry, he eats quickly.",
+      "If he's very hungry, he eats very fast."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо вона не співає, вона не почувається щасливою.",
-    "en": ["If she does not sing, she does not feel happy.", "If she doesn't sing, she doesn't feel happy."]
+    "en": [
+      "If she does not sing, she does not feel happy.",
+      "If she doesn't sing, she doesn't feel happy."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо я прокидаюся рано, я бачу схід сонця.",
-    "en": ["If I wake up early, I see the sunrise.", "If I wake up early, I see the sunrise."]
+    "en": [
+      "If I wake up early, I see the sunrise."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти вчиш науку, ти повинен знати факти.",
-    "en": ["If you study science, you should know facts.", "If you study science, you should know facts."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо я прокидаюся рано вранці, я п’ю каву.",
-    "en": ["If I wake up early in the morning, I drink coffee.", "If I wake up early in the morning, I drink coffee."]
+    "en": [
+      "If I wake up early in the morning, I drink coffee.",
+      "If I wake up early in the morning, I have coffee."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо він не спить достатньо, він не почувається добре.",
-    "en": ["If he does not sleep enough, he does not feel good.", "If he doesn't sleep enough, he doesn't feel good."]
+    "en": [
+      "If he does not sleep enough, he does not feel good.",
+      "If he doesn't sleep enough, he doesn't feel well."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо вона їсть багато овочів, вона залишається здоровою.",
-    "en": ["If she eats a lot of vegetables, she stays healthy.", "If she eats a lot of vegetables, she stays healthy."]
+    "en": [
+      "If she eats a lot of vegetables, she stays healthy.",
+      "If she eats plenty of vegetables, she stays healthy."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо я часто пишу, я ніколи не втрачаю навички.",
-    "en": ["If I write often, I never lose my skills.", "If I write often, I never lose my skills."]
+    "en": [
+      "If I write often, I never lose my skills.",
+      "If I often write, I never lose my skills."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо мій друг бігає регулярно, він завжди енергійний.",
-    "en": ["If my friend runs regularly, he is always energetic.", "If my friend runs regularly, he's always energetic."]
+    "en": [
+      "If my friend runs regularly, he is always energetic.",
+      "If my friend runs regularly, he's always full of energy."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо вона гуляє на набережній, вона бачить річку.",
-    "en": ["If she walks on the promenade, she sees the river.", "If she walks on the promenade, she sees the river."]
+    "en": [
+      "If she walks on the promenade, she sees the river.",
+      "If she walks along the promenade, she sees the river."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо він не слухає музику, він не розслабляється.",
-    "en": ["If he does not listen to music, he does not relax.", "If he doesn't listen to music, he doesn't relax."]
+    "en": [
+      "If he does not listen to music, he does not relax.",
+      "If he doesn't listen to music, he doesn't relax."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вони часто танцюють, вони ніколи не сумують.",
-    "en": ["If they dance often, they never feel sad.", "If they dance often, they never feel sad."]
+    "en": [
+      "If they dance often, they never feel sad.",
+      "If they often dance, they never feel sad."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо я читаю, я почуваюся спокійніше.",
-    "en": ["If I read, I feel calmer.", "If I read, I feel calmer."]
+    "en": [
+      "If I read, I feel calmer.",
+      "If I read, I feel more relaxed."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо вона працює вранці, вона відпочиває ввечері.",
-    "en": ["If she works in the morning, she rests in the evening.", "If she works in the morning, she rests in the evening."]
+    "en": [
+      "If she works in the morning, she rests in the evening.",
+      "If she works in the morning, she has a rest in the evening."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо моя сестра малює, вона завжди щаслива.",
-    "en": ["If my sister paints, she is always happy.", "If my sister paints, she's always happy."]
+    "en": [
+      "If my sister paints, she is always happy.",
+      "If my sister paints, she's always happy."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "DEMONSTRATIVES"],
     "ua": "Якщо цей учитель говорить, учні завжди слухають.",
-    "en": ["If this teacher speaks, students always listen.", "If this teacher speaks, students always listen."]
+    "en": [
+      "If this teacher speaks, students always listen.",
+      "If this teacher speaks, the students always listen."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо ми не чистимо будинок, він виглядає брудним.",
-    "en": ["If we do not clean the house, it looks dirty.", "If we don't clean the house, it looks dirty."]
+    "en": [
+      "If we do not clean the house, it looks dirty.",
+      "If we don't clean the house, it looks dirty."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо він купує багато фруктів, він їсть їх щодня.",
-    "en": ["If he buys a lot of fruit, he eats it every day.", "If he buys a lot of fruit, he eats it every day."]
+    "en": [
+      "If he buys a lot of fruit, he eats it every day.",
+      "If he buys a lot of fruit, he eats fruit every day."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо я сиджу в лісі, я чую птахів.",
-    "en": ["If I sit in the forest, I hear birds.", "If I sit in the forest, I hear birds."]
+    "en": [
+      "If I sit in the forest, I hear birds.",
+      "If I sit in the forest, I can hear birds singing."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вона рідко бігає, вона не стає швидшою.",
-    "en": ["If she rarely runs, she does not get faster.", "If she rarely runs, she doesn't get faster."]
+    "en": [
+      "If she rarely runs, she does not get faster.",
+      "If she rarely runs, she doesn't get faster."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "SHOULD_SHOULDNT"],
-    "ua": "Якщо ти вчиш математику, тобі варто знати числа.",
-    "en": ["If you study math, you should know numbers.", "If you study math, you should know numbers."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL", "PREP_TIME"],
     "ua": "Якщо ми гуляємо ввечері, ми бачимо зорі.",
-    "en": ["If we walk in the evening, we see stars.", "If we walk in the evening, we see stars."]
+    "en": [
+      "If we walk in the evening, we see stars."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "TOO_VERY"],
     "ua": "Якщо він дуже втомлений, він не працює ефективно.",
-    "en": ["If he is too tired, he does not work efficiently.", "If he's too tired, he doesn't work efficiently."]
+    "en": [
+      "If he is too tired, he does not work efficiently.",
+      "If he's too tired, he doesn't work efficiently."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо мій брат грає в футбол, він завжди щасливий.",
-    "en": ["If my brother plays football, he is always happy.", "If my brother plays football, he's always happy."]
+    "en": [
+      "If my brother plays football, he is always happy.",
+      "If my brother plays football, he's always happy."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я їм трохи йогурту, я почуваюся ситим.",
-    "en": ["If I eat some yogurt, I feel full.", "If I eat some yogurt, I feel full."]
+    "en": [
+      "If I eat some yogurt, I feel full.",
+      "If I eat some yogurt, I feel satisfied."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якщо вони часто читають, вони ніколи не забувають факти.",
-    "en": ["If they read often, they never forget facts.", "If they read often, they never forget facts."]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
-    "ua": "Якщо ми сидимо на озері, ми бачимо рибу.",
-    "en": ["If we sit by the lake, we see fish.", "If we sit by the lake, we see fish."]
+    "en": [
+      "If they read often, they never forget facts.",
+      "If they often read, they never forget any facts."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
     "ua": "Якщо моя мама пече, будинок пахне пирогами.",
-    "en": ["If my mom bakes, the house smells of pies.", "If my mom bakes, the house smells of pies."]
+    "en": [
+      "If my mom bakes, the house smells of pies.",
+      "If my mom bakes, the house smells like pies."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо він не прибирає кімнату, вона виглядає безладною.",
-    "en": ["If he does not clean the room, it looks messy.", "If he doesn't clean the room, it looks messy."]
+    "en": [
+      "If he does not clean the room, it looks messy.",
+      "If he doesn't clean the room, it looks messy."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "PERSONAL_PRONOUNS"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо я співаю, я почуваюся щасливішим.",
-    "en": ["If I sing, I feel happier.", "If I sing, I feel happier."]
+    "en": [
+      "If I sing, I feel happier.",
+      "If I sing, I feel much happier."
+    ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL", "NEGATION_DONT_DOESNT"],
+    "rules": ["ZERO_CONDITIONAL"],
     "ua": "Якщо вона не готує, вона не їсть домашньої їжі.",
-    "en": ["If she does not cook, she does not eat homemade food.", "If she doesn't cook, she doesn't eat homemade food."]
+    "en": [
+      "If she does not cook, she does not eat homemade food.",
+      "If she doesn't cook, she doesn't eat homemade food."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я п’ю трохи молока, я почуваюся краще.",
-    "en": ["If I drink some milk, I feel better.", "If I drink some milk, I feel better."]
+    "en": [
+      "If I drink some milk, I feel better.",
+      "If I drink some milk, I start to feel better."
+    ]
   },
   {
     "rules": ["ZERO_CONDITIONAL", "PREP_PLACE"],
     "ua": "Якщо я сиджу в кафе, я замовляю десерт.",
-    "en": ["If I sit in a café, I order dessert.", "If I sit in a café, I order dessert."]
+    "en": [
+      "If I sit in a café, I order dessert."
+    ]
   }
 ] }
