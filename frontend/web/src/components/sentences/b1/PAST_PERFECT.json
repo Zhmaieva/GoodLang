@@ -1,794 +1,152 @@
 { "PAST_PERFECT": [
   {
-    "rules": ["PAST_PERFECT"],
+    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Коли ми зайшли до класу, урок уже почався.",
-    "en": ["When we walked into the classroom, the lesson had already started.", "When we walked into the classroom, the lesson'd already started."]
+    "en": "When we walked into the classroom, the lesson had already started."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того часу, як він подзвонив, ми вже все знали.",
-    "en": ["By the time he called, we had already known everything.", "By the time he called, we'd already known everything."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
+    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Коли я вийшла на вулицю, сніг уже припинився.",
-    "en": ["When I went outside, the snow had already stopped.", "When I went outside, the snow'd already stopped."]
+    "en": "When I went outside, the snow had already stopped."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того, як вони прибули, хтось уже відкрив двері.",
-    "en": ["Before they arrived, someone had already opened the door.", "Before they arrived, someone'd already opened the door."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
+    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Коли я прокинувся, бабуся вже пішла до магазину.",
-    "en": ["When I woke up, grandma had already gone to the store.", "When I woke up, grandma'd already gone to the store."]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того часу, як ми прийшли в музей, він уже зачинявся.",
-    "en": ["By the time we got to the museum, it had already been closing."]
+    "en": "When I woke up, grandma had already gone to the store."
   },
   {
-    "rules": ["PAST_PERFECT"],
+    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Коли він зателефонував, я вже підготувала документи.",
-    "en": ["When he called, I had already prepared the documents.", "When he called, I'd already prepared the documents."]
+    "en": "When he called, I had already prepared the documents."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того часу, як ми знайшли їхній будинок, вони вже поїхали.",
-    "en": ["By the time we found their house, they had already left.", "By the time we found their house, they'd already left."]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Коли я перевірив цю задачу, учень уже зробив помилку.",
-    "en": ["When I checked the exercise, the student had already made a mistake.", "When I checked the exercise, the student'd already made a mistake."]
-  },
-  {
-    "rules": ["PAST_PERFECT", "DEMONSTRATIVES"],
+    "rules": ["PAST_PERFECT", "DEMONSTRATIVES", "ALREADY_YET_JUST"],
     "ua": "Коли я повернулася, той хлопець уже зник.",
-    "en": ["When I returned, that boy had already disappeared.", "When I returned, that boy'd already disappeared."]
+    "en": "When I returned, that boy had already disappeared."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того часу, як вони знайшли рішення, було вже надто пізно.",
-    "en": ["By the time they found the solution, it had already been too late."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Коли я зрозумів питання, вчитель уже відповів.",
-    "en": ["When I understood the question, the teacher had already answered.", "When I understood the question, the teacher'd already answered."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того, як я прокинулася, мама вже поснідала.",
-    "en": ["Before I woke up, mom had already had breakfast.", "Before I woke up, mom'd already had breakfast."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
+    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Коли ми вийшли, автобус уже від’їхав.",
-    "en": ["When we went out, the bus had already left.", "When we went out, the bus'd already left."]
+    "en": "When we went out, the bus had already left."
   },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того часу, як я прийшов, вони вже все обговорили.",
-    "en": ["By the time I arrived, they had already discussed everything.", "By the time I arrived, they'd already discussed everything."]
-  },
-
   {
     "rules": ["PAST_PERFECT"],
     "ua": "Коли вона заговорила, я вже забув питання.",
-    "en": ["When she started speaking, I had already forgotten the question.", "When she started speaking, I'd already forgotten the question."]
+    "en": "When she started speaking, I had already forgotten the question."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Before ми зустрілися, я вже чув про неї багато.",
-    "en": ["Before we met, I had already heard a lot about her.", "Before we met, I'd already heard a lot about her."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
+    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Коли ми приїхали, вечірка вже закінчилася.",
-    "en": ["When we arrived, the party had already ended.", "When we arrived, the party'd already ended."]
-  },
-  {
-    "rules": ["PAST_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Коли я відкрив коробку, той подарунок уже зник.",
-    "en": ["When I opened the box, that present had already disappeared.", "When I opened the box, that present'd already disappeared."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того, як він сказав правду, я вже знав усе.",
-    "en": ["Before he told the truth, I had already known everything.", "Before he told the truth, I'd already known everything."]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того часу, як я знайшов фото, вона вже вставила його в рамку.",
-    "en": ["By the time I found the photo, she had already put it into a frame.", "By the time I found the photo, she'd already put it into a frame."]
+    "en": "When we arrived, the party had already ended."
   },
   {
     "rules": ["PAST_PERFECT"],
     "ua": "Коли ми повернулися, гості вже пішли.",
-    "en": ["When we returned, the guests had already left.", "When we returned, the guests'd already left."]
+    "en": "When we returned, the guests had already left."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того, як він закінчив говорити, я вже все зрозумів.",
-    "en": ["Before he finished speaking, I had already understood everything.", "Before he finished speaking, I'd already understood everything."]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
+    "rules": ["PAST_PERFECT", "ARTICLES", "ALREADY_YET_JUST"],
     "ua": "Коли я зайшов, пес уже з’їв кекс.",
-    "en": ["When I came in, the dog had already eaten the cake.", "When I came in, the dog'd already eaten the cake."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "До того часу, як лікар приїхав, пацієнт уже почувався краще.",
-    "en": ["By the time the doctor arrived, the patient had already felt better.", "By the time the doctor arrived, the patient'd already felt better."]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Я закінчив домашнє завдання перед вечерею.",
-    "en": [
-      "I had finished my homework before dinner.",
-      "I'd finished my homework before dinner."
-    ]
+    "en": "When I came in, the dog had already eaten the cake."
   },
   {
     "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Вона вже пішла, коли я прийшов.",
-    "en": [
-      "She had already left when I arrived.",
-      "She'd already left when I arrived."
-    ]
+    "en": "She had already left when I arrived."
   },
   {
     "rules": ["PAST_PERFECT", "ARTICLES"],
     "ua": "Вони відвідали Лондон двічі до того, як переїхали туди.",
-    "en": [
-      "They had visited London twice before they moved there.",
-      "They'd visited London twice before they moved there."
-    ]
+    "en": "They had visited London twice before they moved there."
   },
   {
     "rules": ["PAST_PERFECT", "EVER_NEVER"],
     "ua": "Він ніколи не бачив снігу до того дня.",
-    "en": [
-      "He had never seen snow before that day.",
-      "He'd never seen snow before that day."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Ми жили в Парижі два роки до того, як почалася війна.",
-    "en": [
-      "We had lived in Paris for two years before the war started.",
-      "We'd lived in Paris for two years before the war started."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Я загубив телефон, тож не зміг тобі подзвонити.",
-    "en": [
-      "I had lost my phone, so I couldn’t call you.",
-      "I'd lost my phone, so I couldn't call you."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона приготувала вечерю до того, як він прийшов додому.",
-    "en": [
-      "She had cooked dinner before he got home.",
-      "She'd cooked dinner before he got home."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони продали будинок, перш ніж ціни піднялися.",
-    "en": [
-      "They had sold the house before prices went up.",
-      "They'd sold the house before prices went up."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Він вивчав французьку до того, як відвідав Францію.",
-    "en": [
-      "He had studied French before he visited France.",
-      "He'd studied French before he visited France."
-    ]
+    "en": "He had never seen snow before that day."
   },
   {
     "rules": ["PAST_PERFECT", "ARTICLES"],
     "ua": "Ми прибрали кімнату до того, як прийшли гості.",
-    "en": [
-      "We had cleaned the room before the guests arrived.",
-      "We'd cleaned the room before the guests arrived."
-    ]
+    "en": "We had cleaned the room before the guests arrived."
   },
   {
     "rules": ["PAST_PERFECT", "DEMONSTRATIVES"],
     "ua": "Я вже чув ту пісню до того, як ти її поставив.",
-    "en": [
-      "I had heard that song before you played it.",
-      "I'd heard that song before you played it."
-    ]
+    "en": "I had heard that song before you played it."
   },
   {
     "rules": ["PAST_PERFECT", "BEFORE_AFTER_ING"],
     "ua": "Вона прочитала книгу перед тим, як подивитися фільм.",
-    "en": [
-      "She had read the book before watching the movie.",
-      "She'd read the book before watching the movie."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони не закінчили свою роботу, коли прийшов начальник.",
-    "en": [
-      "They had not finished their work when the boss came.",
-      "They hadn't finished their work when the boss came."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH", "PERSONAL_PRONOUNS"],
-    "ua": "Він забув про її день народження, і вона засмутилася.",
-    "en": [
-      "He had forgotten her birthday, and she was upset.",
-      "He'd forgotten her birthday, and she was upset."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "EVER_NEVER"],
-    "ua": "Ми ніколи не подорожували за кордон до минулого року.",
-    "en": [
-      "We had never traveled abroad until last year.",
-      "We'd never traveled abroad until last year."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
-    "ua": "Я щойно зачинив двері, коли хтось постукав.",
-    "en": [
-      "I had just closed the door when someone knocked.",
-      "I'd just closed the door when someone knocked."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Вона вигуляла собаку перед сніданком.",
-    "en": [
-      "She had taken the dog for a walk before breakfast.",
-      "She'd taken the dog for a walk before breakfast."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Вони працювали разом до того, як компанія змінила власників.",
-    "en": [
-      "They had worked together before the company changed owners.",
-      "They'd worked together before the company changed owners."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Він спакував валізу до того, як приїхало таксі.",
-    "en": [
-      "He had packed his suitcase before the taxi arrived.",
-      "He'd packed his suitcase before the taxi arrived."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
-    "ua": "Ми пропустили автобус, тому що вийшли пізно.",
-    "en": [
-      "We had missed the bus because we left late.",
-      "We'd missed the bus because we left late."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Я зламав окуляри, тож погано бачив.",
-    "en": [
-      "I had broken my glasses, so I couldn’t see well.",
-      "I'd broken my glasses, so I couldn't see well."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Вона прибрала кухню перед вечіркою.",
-    "en": [
-      "She had cleaned the kitchen before the party.",
-      "She'd cleaned the kitchen before the party."
-    ]
+    "en": "She had read the book before watching the movie."
   },
   {
     "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Вони вже почали їсти, коли я до них приєднався.",
-    "en": [
-      "They had already started eating when I joined them.",
-      "They'd already started eating when I joined them."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "SINCE_FOR", "ARTICLES"],
-    "ua": "Він грав на фортепіано з дитинства.",
-    "en": [
-      "He had played the piano since childhood.",
-      "He'd played the piano since childhood."
-    ]
+    "en": "They had already started eating when I joined them."
   },
   {
     "rules": ["PAST_PERFECT", "EVER_NEVER"],
     "ua": "Я ніколи не пробував суші до того вечора.",
-    "en": [
-      "I had never tried sushi before that night.",
-      "I'd never tried sushi before that night."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона змінила свою зачіску перед весіллям.",
-    "en": [
-      "She had changed her hairstyle before the wedding.",
-      "She'd changed her hairstyle before the wedding."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони зустрічалися один раз до співбесіди.",
-    "en": [
-      "They had met once before the interview.",
-      "They'd met once before the interview."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Він не їв увесь день, тому сильно зголоднів.",
-    "en": [
-      "He had not eaten all day, so he was starving.",
-      "He hadn't eaten all day, so he was starving."
-    ]
+    "en": "I had never tried sushi before that night."
   },
   {
     "rules": ["PAST_PERFECT"],
     "ua": "Ми витратили надто багато грошей до дня зарплати.",
-    "en": [
-      "We had spent too much money before payday.",
-      "We'd spent too much money before payday."
-    ]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Я залишив свій гаманець вдома.",
-    "en": [
-      "I had left my wallet at home.",
-      "I'd left my wallet at home."
-    ]
+    "en": "We had spent too much money before payday."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона зробила помилку у формі.",
-    "en": [
-      "She had made a mistake on the form.",
-      "She'd made a mistake on the form."
-    ]
+    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Вони вже заснули, коли почалася буря.",
+    "en": "They had already fallen asleep when the storm began."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони вже спали, коли почалася буря.",
-    "en": [
-      "They had gone to sleep when the storm began.",
-      "They'd gone to sleep when the storm began."
-    ]
+    "rules": ["PAST_PERFECT", "EVER_NEVER"],
+    "ua": "Ми ніколи не подорожували за кордон до минулого року.",
+    "en": "We had never travelled abroad before last year."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Він прибрав свою кімнату перед тим, як подивитися телевізор.",
-    "en": [
-      "He had cleaned his room before watching TV.",
-      "He'd cleaned his room before watching TV."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "SINCE_FOR"],
-    "ua": "Ми пройшли десять миль до полудня.",
-    "en": [
-      "We had walked ten miles by noon.",
-      "We'd walked ten miles by noon."
-    ]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Я чекав годинами, перш ніж він нарешті приїхав.",
-    "en": [
-      "I had waited for hours before he finally arrived.",
-      "I'd waited for hours before he finally arrived."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона спланувала всю подорож сама.",
-    "en": [
-      "She had planned the whole trip by herself.",
-      "She'd planned the whole trip by herself."
-    ]
+    "rules": ["PAST_PERFECT", "ARTICLES"],
+    "ua": "Вони працювали разом до того, як компанія змінила власників.",
+    "en": "They had worked together before the company changed owners."
   },
   {
     "rules": ["PAST_PERFECT"],
     "ua": "Вони вже виїхали, коли ми прибули.",
-    "en": [
-      "They had moved out by the time we arrived.",
-      "They'd moved out by the time we arrived."
-    ]
+    "en": "They had already moved out by the time we arrived."
   },
   {
     "rules": ["PAST_PERFECT"],
     "ua": "Він телефонував їй кілька разів, перш ніж вона відповіла.",
-    "en": [
-      "He had called her several times before she answered.",
-      "He'd called her several times before she answered."
-    ]
+    "en": "He had called her several times before she answered."
   },
-  {
-    "rules": ["PAST_PERFECT", "SINCE_FOR"],
-    "ua": "Ми знали одне одного багато років.",
-    "en": [
-      "We had known each other for years.",
-      "We'd known each other for years."
-    ]
-  },
-
   {
     "rules": ["PAST_PERFECT"],
     "ua": "Я зробив багато фотографій перед тим, як камера вимкнулася.",
-    "en": [
-      "I had taken many photos before my camera died.",
-      "I'd taken many photos before my camera died."
-    ]
+    "en": ["I had taken many photos before my camera died.", "I had taken many photos before the camera turned off."]
   },
   {
     "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Вона вже закінчила навчання, коли я подзвонив.",
-    "en": [
-      "She had already finished studying when I called.",
-      "She'd already finished studying when I called."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони забули замкнути двері.",
-    "en": [
-      "They had forgotten to lock the door.",
-      "They'd forgotten to lock the door."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Він пообіцяв допомогти, але не прийшов.",
-    "en": [
-      "He had promised to help, but he didn’t come.",
-      "He'd promised to help, but he didn’t come."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми вже обговорювали цю тему раніше.",
-    "en": [
-      "We had discussed this topic before.",
-      "We'd discussed this topic before."
-    ]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Я написав листа, але не відправив його.",
-    "en": [
-      "I had written a letter, but I didn’t send it.",
-      "I'd written a letter, but I didn’t send it."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона розв’язала проблему раніше за всіх.",
-    "en": [
-      "She had solved the problem before anyone else.",
-      "She'd solved the problem before anyone else."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони планували подорожувати, але передумали.",
-    "en": [
-      "They had planned to travel, but they changed their mind.",
-      "They'd planned to travel, but they changed their mind."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Він повністю довіряв їм.",
-    "en": [
-      "He had trusted them completely.",
-      "He'd trusted them completely."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона запакувала все перед поїздкою.",
-    "en": [
-      "She had packed everything before the trip.",
-      "She'd packed everything before the trip."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "SINCE_FOR"],
-    "ua": "Вони працювали над проєктом всю ніч.",
-    "en": [
-      "They had worked on the project all night.",
-      "They'd worked on the project all night."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Він зламав руку перед матчем.",
-    "en": [
-      "He had broken his arm before the match.",
-      "He'd broken his arm before the match."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми відсвяткували її день народження раніше того тижня.",
-    "en": [
-      "We had celebrated her birthday earlier that week.",
-      "We'd celebrated her birthday earlier that week."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BEFORE_AFTER_ING"],
-    "ua": "Я подивився новини перед тим, як лягти спати.",
-    "en": [
-      "I had watched the news before going to bed.",
-      "I'd watched the news before going to bed."
-    ]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона попереджала його багато разів.",
-    "en": [
-      "She had warned him many times.",
-      "She'd warned him many times."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони сіли не в той автобус.",
-    "en": [
-      "They had taken the wrong bus.",
-      "They'd taken the wrong bus."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Він зробив домашнє перед тим, як грати в ігри.",
-    "en": [
-      "He had done his homework before playing games.",
-      "He'd done his homework before playing games."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми зустрічалися двічі до того, як подружилися.",
-    "en": [
-      "We had met twice before we became friends.",
-      "We'd met twice before we became friends."
-    ]
+    "en": "She had already finished studying when I called."
   },
   {
     "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Я вже заплатив рахунок, коли вони принесли десерт.",
-    "en": [
-      "I had already paid the bill when they brought the dessert.",
-      "I'd already paid the bill when they brought the dessert."
-    ]
+    "en": "I had already paid the bill when they brought the dessert."
   },
-
   {
     "rules": ["PAST_PERFECT", "EVER_NEVER"],
     "ua": "Вона ніколи не танцювала балет до того уроку.",
-    "en": [
-      "She had never danced ballet before the class.",
-      "She'd never danced ballet before the class."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони написали сценарій до того, як приїхали актори.",
-    "en": [
-      "They had written the script before the actors arrived.",
-      "They'd written the script before the actors arrived."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "SINCE_FOR"],
-    "ua": "Він ходив на роботу пішки багато років, перш ніж купив машину.",
-    "en": [
-      "He had walked to work for years before buying a car.",
-      "He'd walked to work for years before buying a car."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми відремонтували дах перед тим, як пішов дощ.",
-    "en": [
-      "We had repaired the roof before the rain came.",
-      "We'd repaired the roof before the rain came."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "У мене сіла батарея.",
-    "en": [
-      "I had run out of battery.",
-      "I'd run out of battery."
-    ]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона бачила, як сталася аварія.",
-    "en": [
-      "She had seen the accident happen.",
-      "She'd seen the accident happen."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони забули надіслати запрошення.",
-    "en": [
-      "They had forgotten to send the invitation.",
-      "They'd forgotten to send the invitation."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "SINCE_FOR"],
-    "ua": "Він мріяв про цей момент багато років.",
-    "en": [
-      "He had dreamed of that moment for years.",
-      "He'd dreamed of that moment for years."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ми пішли рано, щоб уникнути заторів.",
-    "en": [
-      "We had left early to avoid traffic.",
-      "We'd left early to avoid traffic."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Я знав відповідь, але забув її.",
-    "en": [
-      "I had known the answer, but I forgot it.",
-      "I'd known the answer, but I forgot it."
-    ]
-  },
-
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона одягала ту сукню лише один раз до того.",
-    "en": [
-      "She had worn that dress only once before.",
-      "She'd worn that dress only once before."
-    ]
+    "en": "She had never danced ballet before that class."
   },
   {
     "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Вони вже лягли спати, коли ми подзвонили.",
-    "en": [
-      "They had already gone to bed when we called.",
-      "They'd already gone to bed when we called."
-    ]
+    "en": "They had already gone to bed when we called."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Він прибрав сад перед зимою.",
-    "en": [
-      "He had cleaned the garden before winter.",
-      "He'd cleaned the garden before winter."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми вивчили весь матеріал перед тестом.",
-    "en": [
-      "We had studied all the material before the test.",
-      "We'd studied all the material before the test."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT", "EVER_NEVER"],
+    "rules": ["PAST_PERFECT", "EVER_NEVER", "DEMONSTRATIVES"],
     "ua": "Я ніколи не чув про нього до того шоу.",
-    "en": [
-      "I had never heard of him before that show.",
-      "I'd never heard of him before that show."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона знайшла нову роботу перед тим, як звільнилася зі старої.",
-    "en": [
-      "She had found a new job before quitting the old one.",
-      "She'd found a new job before quitting the old one."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони відкрили подарунок, перш ніж він приїхав.",
-    "en": [
-      "They had opened the gift before he arrived.",
-      "They'd opened the gift before he arrived."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Він помив посуд перед обідом.",
-    "en": [
-      "He had washed the dishes before lunch.",
-      "He'd washed the dishes before lunch."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми поснідали раніше того дня.",
-    "en": [
-      "We had eaten breakfast earlier that day.",
-      "We'd eaten breakfast earlier that day."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Я зберіг документ перед тим, як комп’ютер завис.",
-    "en": [
-      "I had saved the document before the computer crashed.",
-      "I'd saved the document before the computer crashed."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вона втратила голос до кінця концерту.",
-    "en": [
-      "She had lost her voice by the end of the concert.",
-      "She'd lost her voice by the end of the concert."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Вони чекали днями без відповіді.",
-    "en": [
-      "They had waited for days with no answer.",
-      "They'd waited for days with no answer."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Він тренувався щодня перед виступом.",
-    "en": [
-      "He had practiced every day before the show.",
-      "He'd practiced every day before the show."
-    ]
-  },
-  {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми закінчили проєкт перед літом.",
-    "en": [
-      "We had finished the project before summer.",
-      "We'd finished the project before summer."
-    ]
+    "en": "I had never heard of him before that show."
   }
 ] }

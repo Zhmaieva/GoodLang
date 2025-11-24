@@ -2,51 +2,51 @@
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я вже зробила домашнє завдання.",
-    "en": ["I have already done my homework.", "I've already done my homework."]
+    "en": ["I have already done my homework."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ти вже бачив цей фільм?",
     "en": ["Have you already seen this movie?"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він ще не поїв.",
-    "en": ["He hasn’t eaten yet.", "He has not eaten yet."]
+    "en": ["He hasn’t eaten yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона щойно подзвонила мені.",
-    "en": ["She has just called me.", "She's just called me."]
+    "en": ["She has just called me."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ми вже бачили цю виставу.",
-    "en": ["We have already seen this show.", "We've already seen this show."]
+    "en": ["We have already seen this show."]
   },
 
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ви вже прибули?",
     "en": ["Have you arrived yet?"]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Я ще не прочитав цю книжку.",
-    "en": ["I haven’t read this book yet.", "I have not read this book yet."]
+    "en": ["I haven’t read this book yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони щойно вийшли з дому.",
-    "en": ["They have just left home.", "They've just left home."]
+    "en": ["They have just left home."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Я вже закінчила уроки.",
-    "en": ["I have already finished my classes.", "I've already finished my classes."]
+    "ua": "Я вже закінчила домашнє завдання.",
+    "en": ["I have already finished my homework."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він уже повернувся?",
     "en": ["Has he already returned?"]
   },
@@ -54,25 +54,25 @@
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона ще не відправила повідомлення.",
-    "en": ["She hasn’t sent the message yet.", "She has not sent the message yet."]
+    "en": ["She hasn’t sent the message yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно прибіг додому.",
-    "en": ["I have just arrived home.", "I've just arrived home."]
+    "en": ["I’ve just run home.", "I’ve just got home"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ми вже спробували ті страви.",
-    "en": ["We have already tried those dishes.", "We've already tried those dishes."]
+    "en": ["We have already tried those dishes."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Він уже зробив каву.",
-    "en": ["He has already made coffee.", "He's already made coffee."]
+    "ua": "Він уже зробив сніданок.",
+    "en": ["He has already made breakfast."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ти вже погодував кота?",
     "en": ["Have you fed the cat yet?"]
   },
@@ -80,216 +80,157 @@
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я ще не знайшла свої ключі.",
-    "en": ["I haven’t found my keys yet.", "I have not found my keys yet."]
+    "en": ["I haven’t found my keys yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона щойно прокинулася.",
-    "en": ["She has just woken up.", "She's just woken up."]
+    "en": ["She has just woken up."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Моя сестра вже приготувала вечерю.",
-    "en": ["My sister has already made dinner.", "My sister's already made dinner."]
+    "en": ["My sister has already made dinner."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони ще не почали зустріч.",
-    "en": ["They haven’t started the meeting yet.", "They have not started the meeting yet."]
+    "en": ["They haven’t started the meeting yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно закрив двері.",
-    "en": ["I have just closed the door.", "I've just closed the door."]
+    "en": ["I have just closed the door."]
   },
 
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q", "DEMONSTRATIVES"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ти вже відкрив той подарунок?",
     "en": ["Have you already opened that present?"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він ще не закінчив роботу.",
-    "en": ["He hasn’t finished the work yet.", "He has not finished the work yet."]
+    "en": ["He hasn’t finished the work yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона щойно повернулася додому.",
-    "en": ["She has just come home.", "She's just come home."]
+    "en": ["She has just come home."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "ARTICLES"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я вже випив каву.",
-    "en": ["I have already had coffee.", "I've already had coffee."]
+    "en": ["I have already had coffee."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ми ще не обрали місце.",
-    "en": ["We haven’t chosen a place yet.", "We have not chosen a place yet."]
+    "en": ["We haven’t chosen a place yet."]
   },
+
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона вже прибрала свою кімнату.",
-    "en": [
-      "She has already cleaned her room.",
-      "She's already cleaned her room."
-    ]
+    "en": ["She has already cleaned her room."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ти вже заплатив за обід?",
-    "en": [
-      "Have you already paid for lunch?",
-      "Have you paid for lunch yet?"
-    ]
+    "en": ["Have you already paid for lunch?"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ми ще не спробували ті десерти.",
-    "en": [
-      "We haven’t tried those desserts yet.",
-      "We have not tried those desserts yet."
-    ]
+    "en": ["We haven’t tried those desserts yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно закрив вікно.",
-    "en": [
-      "I have just closed the window.",
-      "I've just closed the window."
-    ]
+    "en": ["I have just closed the window."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він уже пішов до школи.",
-    "en": [
-      "He has already gone to school.",
-      "He's already gone to school."
-    ]
+    "en": ["He has already gone to school."]
   },
 
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ви вже прибрали на кухні?",
-    "en": [
-      "Have you already cleaned the kitchen?",
-      "Have you cleaned the kitchen yet?"
-    ]
+    "en": ["Have you already cleaned the kitchen?"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони ще не повернулися.",
-    "en": [
-      "They haven’t returned yet.",
-      "They have not returned yet."
-    ]
+    "en": ["They haven’t returned yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я вже випив воду.",
-    "en": [
-      "I have already drunk the water.",
-      "I've already drunk the water."
-    ]
+    "en": ["I’ve already drunk some water.", "I’ve already had water."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона щойно відправила листа.",
-    "en": [
-      "She has just sent the letter.",
-      "She's just sent the letter."
-    ]
+    "en": ["She has just sent the letter."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Мій брат уже зіграв у футбол.",
-    "en": [
-      "My brother has already played football.",
-      "My brother's already played football."
-    ]
+    "en": ["My brother has already played football.", "My brother has already played soccer."]
   },
 
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ми ще не почали вечерю.",
-    "en": [
-      "We haven’t started dinner yet.",
-      "We have not started dinner yet."
-    ]
+    "en": ["We haven’t started dinner yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно прокинувся.",
-    "en": [
-      "I have just woken up.",
-      "I've just woken up."
-    ]
+    "en": ["I have just woken up."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "ARTICLES"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона вже випила каву.",
-    "en": [
-      "She has already had coffee.",
-      "She's already had coffee."
-    ]
+    "en": ["She has already had coffee."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Ми вже бачили ті новини.",
-    "en": [
-      "We have already seen those news.",
-      "We've already seen those news."
-    ]
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
+    "ua": "Ми вже бачили новини.",
+    "en": ["We have already seen the news.", "We have already heard the news."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ти вже зробила уроки?",
-    "en": [
-      "Have you already done your homework?",
-      "Have you done your homework yet?"
-    ]
+    "en": ["Have you already done your homework?"]
   },
 
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він ще не прочитав статтю.",
-    "en": [
-      "He hasn’t read the article yet.",
-      "He has not read the article yet."
-    ]
+    "en": ["He hasn’t read the article yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно вийшов з душу.",
-    "en": [
-      "I have just come out of the shower.",
-      "I've just come out of the shower."
-    ]
+    "en": ["I have just come out of the shower.", "I’ve just got out of the shower", "I’ve just had a shower."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Моя сестра вже купила квитки.",
-    "en": [
-      "My sister has already bought the tickets.",
-      "My sister's already bought the tickets."
-    ]
+    "en": ["My sister has already bought the tickets."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони щойно підійшли до дверей.",
-    "en": [
-      "They have just come to the door.",
-      "They've just come to the door."
-    ]
+    "en": ["They’ve just come up to the door.", "They’ve just walked up to the door."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ти вже отримав посилку?",
-    "en": [
-      "Have you already received the package?",
-      "Have you received the package yet?"
-    ]
+    "en": ["Have you already received the package?"]
   },
 
   {
@@ -297,325 +238,194 @@
     "ua": "Ми ще не дістались місця.",
     "en": [
       "We haven’t arrived yet.",
-      "We have not arrived yet."
+      "We haven’t got there yet.",
+      "We haven’t reached the place yet."
     ]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "ARTICLES"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я вже пообідав.",
-    "en": [
-      "I have already had lunch.",
-      "I've already had lunch."
-    ]
+    "en": ["I have already had lunch."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Мій друг ще не написав мені.",
-    "en": [
-      "My friend hasn’t written to me yet.",
-      "My friend has not written to me yet."
-    ]
+    "en": ["My friend hasn’t written to me yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона щойно вийшла.",
-    "en": [
-      "She has just left.",
-      "She's just left."
-    ]
+    "en": ["She has just left."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ми вже купили ті квіти.",
-    "en": [
-      "We have already bought those flowers.",
-      "We've already bought those flowers."
-    ]
+    "en": ["We have already bought those flowers."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я вже поїла.",
-    "en": [
-      "I have already eaten.",
-      "I've already eaten."
-    ]
-  },
-  {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
-    "ua": "Ти вже сплатив рахунок?",
-    "en": [
-      "Have you already paid the bill?",
-      "Have you paid the bill yet?"
-    ]
+    "en": ["I have already eaten."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Він щойно прибіг.",
-    "en": [
-      "He has just arrived.",
-      "He's just arrived."
-    ]
+    "ua": "Ти вже сплатив рахунок?",
+    "en": ["Have you already paid the bill?"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона ще не зробила своє завдання.",
-    "en": [
-      "She hasn’t done her task yet.",
-      "She has not done her task yet."
-    ]
+    "en": ["She hasn’t done her task yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ми вже бачили той фільм.",
-    "en": [
-      "We have already seen that movie.",
-      "We've already seen that movie."
-    ]
+    "en": ["We have already seen that movie."]
   },
 
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ви вже замовили їжу?",
-    "en": [
-      "Have you already ordered the food?",
-      "Have you ordered the food yet?"
-    ]
+    "en": ["Have you already ordered the food?"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я ще не розпаковувала валізу.",
-    "en": [
-      "I haven’t unpacked my suitcase yet.",
-      "I have not unpacked my suitcase yet."
-    ]
+    "en": ["I haven’t unpacked my suitcase yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони щойно сіли за стіл.",
-    "en": [
-      "They have just sat down at the table.",
-      "They've just sat down at the table."
-    ]
+    "en": ["They have just sat down at the table."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "ARTICLES"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він уже випив чай.",
-    "en": [
-      "He has already had tea.",
-      "He's already had tea."
-    ]
+    "en": ["He has already had tea."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q", "PERSONAL_PRONOUNS"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Моя сестра вже лягла спати?",
-    "en": [
-      "Has my sister already gone to bed?"
-    ]
+    "en": ["Has my sister already gone to bed?"]
   },
 
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ми ще не забронювали квитки.",
-    "en": [
-      "We haven’t booked the tickets yet.",
-      "We have not booked the tickets yet."
-    ]
+    "en": ["We haven’t booked the tickets yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно закінчив роботу.",
-    "en": [
-      "I have just finished work.",
-      "I've just finished work."
-    ]
+    "en": ["I have just finished work."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ми вже спробували ці напої.",
-    "en": [
-      "We have already tried these drinks.",
-      "We've already tried these drinks."
-    ]
+    "en": ["We have already tried these drinks."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона вже приготувала сніданок.",
-    "en": [
-      "She has already made breakfast.",
-      "She's already made breakfast."
-    ]
+    "en": ["She has already made breakfast."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ти вже почав читати книгу?",
-    "en": [
-      "Have you already started reading the book?",
-      "Have you started reading the book yet?"
-    ]
+    "en": ["Have you already started reading the book?"]
   },
 
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він ще не зателефонував мені.",
-    "en": [
-      "He hasn’t called me yet.",
-      "He has not called me yet."
-    ]
+    "en": ["He hasn’t called me yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно погодувала кота.",
-    "en": [
-      "I have just fed the cat.",
-      "I've just fed the cat."
-    ]
+    "en": ["I have just fed the cat."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Мій брат уже помив посуд.",
-    "en": [
-      "My brother has already washed the dishes.",
-      "My brother's already washed the dishes."
-    ]
+    "en": ["My brother has already washed the dishes."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони щойно приїхали додому.",
-    "en": [
-      "They have just come home.",
-      "They've just come home."
-    ]
+    "en": ["They have just come home."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ви вже здали завдання?",
-    "en": [
-      "Have you already submitted the task?",
-      "Have you submitted the task yet?"
-    ]
+    "en": ["Have you already submitted the task?"]
   },
 
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ми ще не купили продуктів.",
-    "en": [
-      "We haven’t bought groceries yet.",
-      "We have not bought groceries yet."
-    ]
+    "en": ["We haven’t bought groceries yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно дописав повідомлення.",
-    "en": [
-      "I have just finished writing the message.",
-      "I've just finished writing the message."
-    ]
+    "en": ["I have just finished writing the message."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Вона вже прочитала цей лист.",
-    "en": [
-      "She has already read this letter.",
-      "She's already read this letter."
-    ]
+    "en": ["She has already read this letter."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони ще не повернулися додому.",
-    "en": [
-      "They haven’t come back home yet.",
-      "They have not come back home yet."
-    ]
+    "en": ["They haven’t come back home yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я вже замовив піцу.",
-    "en": [
-      "I have already ordered pizza.",
-      "I've already ordered pizza."
-    ]
+    "en": ["I have already ordered pizza."]
   },
 
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ти вже подзвонила татові?",
-    "en": [
-      "Have you already called dad?",
-      "Have you called dad yet?"
-    ]
+    "en": ["Have you already called dad?"]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Моя подруга ще не приїхала.",
-    "en": [
-      "My friend hasn’t arrived yet.",
-      "My friend has not arrived yet."
-    ]
+    "en": ["My friend hasn’t arrived yet."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Він щойно відкрив двері.",
-    "en": [
-      "He has just opened the door.",
-      "He's just opened the door."
-    ]
+    "en": ["He has just opened the door."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
     "ua": "Ми вже бачили ті фотографії.",
-    "en": [
-      "We have already seen those photos.",
-      "We've already seen those photos."
-    ]
+    "en": ["We have already seen those photos."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q", "ARTICLES"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ти вже випив чай?",
-    "en": [
-      "Have you already had tea?",
-      "Have you had tea yet?"
-    ]
-  },
-
-  {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Я ще не взув черевики.",
-    "en": [
-      "I haven’t put on my shoes yet.",
-      "I have not put on my shoes yet."
-    ]
+    "en": ["Have you had tea yet?"]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Він щойно посміхнувся.",
-    "en": [
-      "He has just smiled.",
-      "He's just smiled."
-    ]
-  },
-  {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
     "ua": "Моя сестра вже вимкнула світло.",
-    "en": [
-      "My sister has already turned off the light.",
-      "My sister's already turned off the light."
-    ]
+    "en": ["My sister has already turned off the light."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вони щойно приєдналися до нашої розмови.",
-    "en": [
-      "They have just joined our conversation.",
-      "They've just joined our conversation."
-    ]
+    "en": ["They have just joined our conversation."]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "YES_NO_Q"],
+    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ви вже перевірили електронну пошту?",
-    "en": [
-      "Have you already checked your email?",
-      "Have you checked your email yet?"
-    ]
+    "en": ["Have you already checked your email?"]
   }
 ]
 }
