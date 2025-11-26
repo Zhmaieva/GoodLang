@@ -5,7 +5,7 @@
     "en": ["He must have seen the movie already.", "He must've already seen the movie."]
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION",, "ARTICLES"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
     "ua": "Вона не могла забути ключі вдома. (use MODAL + HAVE + PAST PARTICIPLE)",
     "en": ["She can’t have left the keys at home.", "She couldn't have forgotten the keys at home."]
   },
@@ -315,7 +315,7 @@
     "en": ["She must have been in the office when it happened.", "She might have been there at the time."]
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION",, "TOO_VERY"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "TOO_VERY"],
     "ua": "Він, мабуть, був занадто злий, щоб щось пояснювати. (use MODAL + HAVE + PAST PARTICIPLE)",
     "en": ["He must have been too angry to explain anything.", "He might have been too upset to talk."]
   },
