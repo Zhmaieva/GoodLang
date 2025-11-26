@@ -2,7 +2,7 @@
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би вміти співати.",
-    "en": ["I wish I could sing.", "I wish I could not sing."]
+    "en": ["I wish I could sing."]
   },
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
@@ -17,7 +17,7 @@
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би вміти танцювати, як вона.",
-    "en": ["I wish I could dance like her.", "I wish I could not dance like her."]
+    "en": ["I wish I could dance like her."]
   },
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
@@ -84,13 +84,8 @@
   },
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
-    "ua": "Я хотів би бачити зорі чіткіше.",
-    "en": ["I wish I could see the stars clearly."]
-  },
-  {
-    "rules": ["WISH_PAST_PAST_PERFECT"],
-    "ua": "Я хотів би, щоб уже була п’ятниця.",
-    "en": ["I wish it were Friday already.", "I wish it was Friday already."]
+    "ua": "Я хотів би, щоб вже була п’ятниця.",
+    "en": ["I wish it were Friday already."]
   },
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
@@ -121,7 +116,7 @@
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб ти був моїм учителем.",
-    "en": ["I wish you were my teacher.", "I wish you was my teacher."]
+    "en": ["I wish you were my teacher."]
   },
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
@@ -151,7 +146,7 @@
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб не йшов дощ.",
-    "en": ["I wish it weren’t raining.", "I wish it wasn’t raining."]
+    "en": ["I wish it weren’t raining."]
   },
 
   {
@@ -188,7 +183,7 @@
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб ти був тут.",
-    "en": ["I wish you were here.", "I wish you was here."]
+    "en": ["I wish you were here."]
   },
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
@@ -224,12 +219,12 @@
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб зараз було літо.",
-    "en": ["I wish it were summer now.", "I wish it was summer now."]
+    "en": ["I wish it were summer now."]
   },
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
-    "ua": "Я хотів би мати блакитні очі.",
-    "en": ["I wish I had blue eyes."]
+    "ua": "Я хотів би мати зелені очі.",
+    "en": ["I wish I had green eyes."]
   },
 
   {
@@ -247,6 +242,7 @@
     "ua": "Я хотів би жити у більшому місті.",
     "en": ["I wish we lived in a bigger city."]
   },
+
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би не мати так багато рахунків.",
@@ -272,6 +268,7 @@
     "ua": "Я хотів би, щоб я сказав їй правду.",
     "en": ["I wish I had told her the truth."]
   },
+
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб я пішов до коледжу.",
@@ -297,6 +294,7 @@
     "ua": "Я хотів би, щоб я прокинувся раніше.",
     "en": ["I wish I had woken up earlier."]
   },
+
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб я заощадив більше грошей.",
@@ -369,6 +367,7 @@
     "ua": "Я хотів би, щоб я зробив більше фото.",
     "en": ["I wish I had taken more photos."]
   },
+
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб я не був таким сором’язливим.",
@@ -394,6 +393,7 @@
     "ua": "Я хотів би, щоб я не зробив тієї помилки.",
     "en": ["I wish I hadn’t made that mistake.", "I wish I had not made that mistake."]
   },
+
   {
     "rules": ["WISH_PAST_PAST_PERFECT"],
     "ua": "Я хотів би, щоб я взяв свою камеру.",

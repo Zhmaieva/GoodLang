@@ -101,7 +101,7 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": ["У мене недостатньо часу, щоб закінчити проект."],
+    "ua": ["У мене недостатньо часу, щоб закінчити проєкт."],
     "en": [
       "I don’t have enough time to finish the project.",
       "I do not have enough time to finish the project."
@@ -458,7 +458,7 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "HAVE_HAVE_GOT"],
-    "ua": ["Вона має занадто багато ідей для одного проекту."],
+    "ua": ["Вона має занадто багато ідей для одного проєкту."],
     "en": [
       "She has too many ideas for one project.",
       "She’s too many ideas for one project."
@@ -829,5 +829,46 @@
       "There are too many old books in the library.",
       "There’re too many old books in the library."
     ]
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Вона не має достатньо грошей.",
+    "en": ["She doesn’t have enough money.", "She does not have enough money."]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Ти не спиш достатньо.",
+    "en": ["You don’t sleep enough.", "You do not sleep enough."]
+  },
+  {
+    "rules": ["TO_BE", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Він недостатньо високий, щоб грати в баскетбол.",
+    "en": ["He isn’t tall enough to play basketball.", "He is not tall enough to play basketball."]
+  },
+
+  {
+    "rules": ["TO_BE", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Це було досить цікаво.",
+    "en": ["It was interesting enough.", "It was quite interesting."]
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Ми маємо достатньо часу.",
+    "en": ["We have enough time.", "We’ve got enough time."]
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Вони не мають достатньо місця.",
+    "en": ["They don’t have enough space.", "They do not have enough room."]
+  },
+  {
+    "rules": ["TO_BE", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "Вона недостатньо сильна, щоб підняти це.",
+    "en": ["She isn’t strong enough to lift it.", "She is not strong enough to lift it."]
+  },
+  {
+    "rules": ["TO_BE", "HAVE_HAVE_GOT", "ENOUGH_TOO_MUCH_MANY"],
+    "ua": "У мене недостатньо грошей, щоб купити це.",
+    "en": ["I don’t have enough money to buy it.", "I do not have enough money to buy it."]
   }
 ] }

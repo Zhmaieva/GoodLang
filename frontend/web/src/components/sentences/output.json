@@ -2485,7 +2485,7 @@
         "SIMPLE_ADJ",
         "YES_NO_Q"
       ],
-      "ua": "Ти можеш зробити цей проект цікавим?",
+      "ua": "Ти можеш зробити цей проєкт цікавим?",
       "en": [
         "Can you make this project interesting?",
         "Are you able to make this project engaging?"
@@ -46433,7 +46433,7 @@
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
         "PRESENT_PERFECT_CONT"
       ],
-      "ua": "Вони часто працювали над проектом останнім часом.",
+      "ua": "Вони часто працювали над проєктом останнім часом.",
       "en": [
         "They have often been working on the project lately."
       ]
@@ -53999,7 +53999,7 @@
         "FIRST_CONDITIONAL",
         "PREP_TIME"
       ],
-      "ua": "Якщо я закінчу проект до п’ятниці, я відпочину на вихідних.",
+      "ua": "Якщо я закінчу проєкт до п’ятниці, я відпочину на вихідних.",
       "en": [
         "If I finish the project by Friday, I will rest on the weekend.",
         "If I finish the project by Friday, I'll rest on the weekend."
@@ -54288,7 +54288,7 @@
         "FIRST_CONDITIONAL",
         "NEGATION_DONT_DOESNT"
       ],
-      "ua": "Якщо він не закінчить проект, він не отримає премію.",
+      "ua": "Якщо він не закінчить проєкт, він не отримає премію.",
       "en": [
         "If he does not finish the project, he will not get a bonus.",
         "If he doesn't finish the project, he won't get a bonus."
@@ -63954,7 +63954,7 @@
         "BECAUSE_SO_BUT_ALTHOUGH",
         "PREP_TIME"
       ],
-      "ua": "Я працював над проектом, тому не відповідав на дзвінки вчора.",
+      "ua": "Я працював над проєктом, тому не відповідав на дзвінки вчора.",
       "en": [
         "I was working on a project, so I didn’t answer calls yesterday.",
         "I was working on a project, which is why I wasn’t answering calls yesterday."
@@ -65996,7 +65996,7 @@
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "IN_ORDER_TO_SO_THAT"
       ],
-      "ua": "Ми купили багато матеріалів, щоб завершити проект.",
+      "ua": "Ми купили багато матеріалів, щоб завершити проєкт.",
       "en": [
         "We bought a lot of materials in order to finish the project."
       ]
@@ -71512,7 +71512,7 @@
         "WH_Q",
         "PREP_TIME"
       ],
-      "ua": "Коли, на твою думку, він закінчить проект?",
+      "ua": "Коли, на твою думку, він закінчить проєкт?",
       "en": [
         "When do you think he will finish the project?",
         "When will he complete the project, in your opinion?"
@@ -71632,7 +71632,7 @@
         "BECAUSE_SO_BUT_ALTHOUGH",
         "SIMPLE_ADJ"
       ],
-      "ua": "Він думає, що новий проект буде успішним, хоча це складно.",
+      "ua": "Він думає, що новий проєкт буде успішним, хоча це складно.",
       "en": [
         "He thinks the new project will be successful although it’s challenging.",
         "He believes the new project will succeed even though it’s difficult."
@@ -120734,7 +120734,7 @@
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це оцінки студентів.", "en": [
     "They’re the students’ grades.", "They are the students’ grades.", "They’re the grades of the students.", "They are the grades of the students."
   ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проекти дизайнерів.", "en": [
+  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проєкти дизайнерів.", "en": [
     "They’re the designers’ projects.", "They are the designers’ projects.", "They’re the projects of the designers.", "They are the projects of the designers."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це офіс працівників.", "en": [
@@ -120755,7 +120755,7 @@
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це продажі брендів.", "en": [
     "They’re the brands’ sales.", "They are the brands’ sales.", "They’re the sales of the brands.", "They are the sales of the brands."
   ]},
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це бюджети проектів.", "en": [
+  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це бюджети проєктів.", "en": [
     "They’re the projects’ budgets.", "They are the projects’ budgets.", "They’re the budgets of the projects.", "They are the budgets of the projects."
   ]},
   { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це приміщення університетів.", "en": [

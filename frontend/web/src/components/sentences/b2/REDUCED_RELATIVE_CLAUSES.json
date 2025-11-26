@@ -113,7 +113,7 @@
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Будівля, спроектована відомим архітектором, коштує мільйони."],
+    "ua": ["Будівля, спроєктована відомим архітектором, коштує мільйони."],
     "en": [
       "The building designed by a famous architect costs millions.",
       "The building that was designed by a famous architect costs millions."

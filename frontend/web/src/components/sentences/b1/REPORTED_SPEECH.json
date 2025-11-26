@@ -1,507 +1,571 @@
 { "REPORTED_SPEECH": [
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона сказала, що вона втомилася.",
-    "en": ["She said she was tired.", "She said that she was tired."]
+    "rules": ["REPORTED_SPEECH", "TO_BE"],
+    "ua": "Вона сказала, що втомилася.",
+    "en": [
+      "She said she was tired.",
+      "She said that she was tired."
+    ]
+  },
+  {
+    "rules": ["REPORTED_SPEECH", "LIKE_LOVE_HATE_ING"],
+    "ua": "Він сказав, що не любить каву.",
+    "en": [
+      "He said he didn’t like coffee.",
+      "He said that he didn’t like coffee."
+    ]
+  },
+  {
+    "rules": ["REPORTED_SPEECH", "PREP_PLACE", "GOING_TO_PLANS"],
+    "ua": "Вони сказали, що збираються до парку.",
+    "en": [
+      "They said they were going to the park.",
+      "They said that they were going to the park."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
-    "ua": "Він сказав, що він не любить каву.",
-    "en": ["He said he didn’t like coffee.", "He said that he didn’t like coffee.", "He said he did not like coffee."]
+    "ua": "Я сказав, що закінчив домашнє завдання.",
+    "en": [
+      "I said I had finished my homework.",
+      "I said that I had finished my homework."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони сказали, що збираються в парк.",
-    "en": ["They said they were going to the park.", "They said that they were going to the park."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Я сказав, що вже закінчив домашнє завдання.",
-    "en": ["I said I had already finished my homework.", "I said that I had already finished my homework."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "LIKE_LOVE_HATE_ING", "ARTICLES"],
     "ua": "Вона сказала мені, що любить Париж.",
-    "en": ["She told me she loved Paris.", "She told me that she loved Paris."]
+    "en": [
+      "She told me she loved Paris.",
+      "She told me that she loved Paris."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "CAN_CANT"],
     "ua": "Він сказав їй, що не може прийти.",
-    "en": ["He told her he couldn’t come.", "He told her that he couldn’t come.", "He told her he could not come."]
+    "en": [
+      "He told her he couldn’t come.",
+      "He told her that he couldn’t come."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_PLACE"],
     "ua": "Вони сказали нам, що переїхали до Лондона.",
-    "en": ["They told us they had moved to London.", "They told us that they had moved to London."]
+    "en": [
+      "They told us they had moved to London.",
+      "They told us that they had moved to London."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Я сказав йому, що подзвоню пізніше.",
-    "en": ["I told him I would call later.", "I told him that I would call later."]
+    "en": [
+      "I told him I would call later.",
+      "I told him that I would call later."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
     "ua": "Вона сказала, що бачила цей фільм раніше.",
-    "en": ["She said she had seen that movie before.", "She said that she had seen that movie before."]
+    "en": [
+      "She said she had seen that movie before.",
+      "She said that she had seen that movie before."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "ARTICLES", "TO_BE"],
     "ua": "Він сказав, що хоче бути вчителем.",
-    "en": ["He said he wanted to be a teacher.", "He said that he wanted to be a teacher."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони сказали, що зайняті того дня.",
-    "en": ["They said they were busy that day.", "They said that they were busy that day."]
+    "en": [
+      "He said he wanted to be a teacher.",
+      "He said that he wanted to be a teacher."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Я сказав, що не розумію питання.",
-    "en": ["I said I didn’t understand the question.", "I said that I didn’t understand the question."]
+    "en": [
+      "I said I didn’t understand the question.",
+      "I said that I didn’t understand the question."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вона сказала мені, що загубила ключі.",
-    "en": ["She told me she had lost her keys.", "She told me that she had lost her keys."]
+    "en": [
+      "She told me she had lost her keys.",
+      "She told me that she had lost her keys."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_PLACE"],
     "ua": "Він сказав їм, що працює з дому.",
-    "en": ["He told them he was working from home.", "He told them that he was working from home."]
+    "en": [
+      "He told them he was working from home.",
+      "He told them that he was working from home."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вони сказали мені, що ще не поїли.",
-    "en": ["They told me they hadn’t eaten yet.", "They told me that they hadn’t eaten yet."]
+    "en": [
+      "They told me they hadn’t eaten yet.",
+      "They told me that they hadn’t eaten yet."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Я сказав, що мені потрібно більше часу.",
-    "en": ["I said I needed more time.", "I said that I needed more time."]
+    "en": [
+      "I said I needed more time.",
+      "I said that I needed more time."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона сказала, що допоможе мені завтра.",
-    "en": ["She said she would help me tomorrow.", "She said that she would help me tomorrow."]
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
+    "ua": "Вона сказала, що допоможе мені наступного дня.",
+    "en": [
+      "She said she would help me the next day.",
+      "She said that she would help me the next day."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав, що не може знайти телефон.",
-    "en": ["He said he couldn’t find his phone.", "He said that he couldn’t find his phone."]
+    "en": [
+      "He said he couldn’t find his phone.",
+      "He said that he couldn’t find his phone."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вони сказали, що не бачили новин.",
-    "en": ["They said they hadn’t seen the news.", "They said that they hadn’t seen the news."]
+    "en": [
+      "They said they hadn’t seen the news.",
+      "They said that they hadn’t seen the news."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Я сказав, що вже був там раніше.",
-    "en": ["I said I had been there before.", "I said that I had been there before."]
+    "rules": ["REPORTED_SPEECH", "PREP_PLACE"],
+    "ua": "Я сказав, що був там раніше.",
+    "en": [
+      "I said I had been there before.",
+      "I said that I had been there before."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вона сказала мені, що подзвонила лікарю.",
-    "en": ["She told me she had called the doctor.", "She told me that she had called the doctor."]
+    "en": [
+      "She told me she had called the doctor.",
+      "She told me that she had called the doctor."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Він сказав їй, що запізнився через затори.",
-    "en": ["He told her he was late because of traffic.", "He told her that he was late because of traffic."]
+    "en": [
+      "He told her he was late because of the traffic.",
+      "He told her that he was late because of the traffic."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вони сказали мені, що не знають відповіді.",
-    "en": ["They told me they didn’t know the answer.", "They told me that they didn’t know the answer."]
+    "en": [
+      "They told me they didn’t know the answer.",
+      "They told me that they didn’t know the answer."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "TO_BE"],
     "ua": "Я сказав йому, що почуваюся погано.",
-    "en": ["I told him I wasn’t feeling well.", "I told him that I wasn’t feeling well."]
+    "en": [
+      "I told him I wasn’t feeling well.",
+      "I told him that I wasn’t feeling well."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "LIKE_LOVE_HATE_ING"],
     "ua": "Вона сказала, що їй подобається моя ідея.",
-    "en": ["She said she liked my idea.", "She said that she liked my idea."]
+    "en": [
+      "She said she liked my idea.",
+      "She said that she liked my idea."
+    ]
   },
+
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Він сказав, що не вірить у це.",
-    "en": ["He said he didn’t believe it.", "He said that he didn’t believe it."]
+    "en": [
+      "He said he didn’t believe it.",
+      "He said that he didn’t believe it."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "LIKE_LOVE_HATE_ING"],
     "ua": "Вони сказали, що хочуть спробувати щось нове.",
-    "en": ["They said they wanted to try something new.", "They said that they wanted to try something new."]
+    "en": [
+      "They said they wanted to try something new.",
+      "They said that they wanted to try something new."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Я сказав, що зустрічав її одного разу.",
-    "en": ["I said I had met her once.", "I said that I had met her once."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона сказала мені, що вивчає іспанську зараз.",
-    "en": ["She told me she was learning Spanish now.", "She told me that she was learning Spanish now."]
+    "en": [
+      "I said I had met her once.",
+      "I said that I had met her once."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав їй, що ще не закінчив.",
-    "en": ["He told her he hadn’t finished yet.", "He told her that he hadn’t finished yet."]
+    "en": [
+      "He told her he hadn’t finished yet.",
+      "He told her that he hadn’t finished yet."
+    ]
   },
+
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона запитала мене, де я живу.",
-    "en": ["She asked me where I lived."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він запитав, чи можу я допомогти йому.",
-    "en": ["He asked if I could help him.", "He asked whether I could help him."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони запитали, де знаходиться вокзал.",
-    "en": ["They asked where the station was."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Я запитав її, що вона хоче.",
-    "en": ["I asked her what she wanted."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона запитала мене, коли починається зустріч.",
-    "en": ["She asked me when the meeting started."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він запитав, чи був я коли-небудь в Італії.",
-    "en": ["He asked if I had ever been to Italy.", "He asked whether I had ever been to Italy."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони запитали, чи я люблю суші.",
-    "en": ["They asked whether I liked sushi.", "They asked if I liked sushi."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Я запитав його, чому він злий.",
-    "en": ["I asked him why he was angry."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона запитала, скільки це коштує.",
-    "en": ["She asked how much it cost."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він запитав, хто телефонував раніше.",
-    "en": ["He asked who had called earlier."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони запитали, коли ми поїдемо.",
-    "en": ["They asked when we would leave."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Я запитав, чи йому потрібна поїздка.",
-    "en": ["I asked if he needed a ride.", "I asked whether he needed a ride."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона запитала мене, котра година.",
-    "en": ["She asked me what time it was."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він запитав, чи вона вдома.",
-    "en": ["He asked whether she was at home.", "He asked if she was at home."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони запитали, куди ми йдемо.",
-    "en": ["They asked where we were going."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Я запитав, чи він зробив домашнє.",
-    "en": ["I asked if he had done his homework.", "I asked whether he had done his homework."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона запитала мене, як я себе почуваю.",
-    "en": ["She asked me how I felt."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він запитав, що я роблю.",
-    "en": ["He asked what I was doing."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони запитали, чи я бачив їхнього собаку.",
-    "en": ["They asked if I had seen their dog.", "They asked whether I had seen their dog."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Я запитав, чи вона розмовляє англійською.",
-    "en": ["I asked whether she spoke English.", "I asked if she spoke English."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він сказав мені, що прийде трохи пізніше.",
-    "en": ["He told me he would come a bit later.", "He told me that he would come a bit later."]
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
+    "ua": "Він сказав мені, що прийде трошки пізніше.",
+    "en": [
+      "He told me he would come a bit later.",
+      "He told me that he would come a bit later."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вона сказала мені, що їй потрібно більше часу.",
-    "en": ["She told me she needed more time.", "She told me that she needed more time."]
+    "en": [
+      "She told me she needed more time.",
+      "She told me that she needed more time."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вони сказали мені, що не можуть знайти документи.",
-    "en": ["They told me they couldn’t find the documents.", "They told me that they couldn’t find the documents."]
+    "en": [
+      "They told me they couldn’t find the documents.",
+      "They told me that they couldn’t find the documents."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що щойно закінчив роботу.",
-    "en": ["He told me he had just finished work.", "He told me that he had just finished work."]
+    "en": [
+      "He told me he had just finished work.",
+      "He told me that he had just finished work."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
     "ua": "Вона сказала мені, що бачила його вчора.",
-    "en": ["She told me she had seen him yesterday.", "She told me that she had seen him yesterday."]
+    "en": [
+      "She told me she had seen him the day before.",
+      "She told me that she had seen him the day before."
+    ]
   },
+
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що не розуміє питання.",
-    "en": ["He told me he didn’t understand the question.", "He told me that he didn’t understand the question."]
+    "en": [
+      "He told me he didn’t understand the question.",
+      "He told me that he didn’t understand the question."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
     "ua": "Вона сказала мені, що може допомогти завтра.",
-    "en": ["She told me she could help tomorrow.", "She told me that she could help tomorrow."]
+    "en": [
+      "She told me she could help the next day.",
+      "She told me that she could help the next day."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вони сказали мені, що вже бачили цей фільм.",
-    "en": ["They told me they had already seen that movie.", "They told me that they had already seen that movie."]
+    "en": [
+      "They told me they had already seen that movie.",
+      "They told me that they had already seen that movie."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "LIKE_LOVE_HATE_ING"],
     "ua": "Він сказав мені, що хоче вивчити англійську.",
-    "en": ["He told me he wanted to learn English.", "He told me that he wanted to learn English."]
+    "en": [
+      "He told me he wanted to learn English.",
+      "He told me that he wanted to learn English."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "LIKE_LOVE_HATE_ING"],
     "ua": "Вона сказала мені, що їй подобається її нова робота.",
-    "en": ["She told me she liked her new job.", "She told me that she liked her new job."]
+    "en": [
+      "She told me she liked her new job.",
+      "She told me that she liked her new job."
+    ]
   },
+
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Він сказав мені не спізнюватися.",
     "en": ["He told me not to be late."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вона сказала мені бути обережним.",
     "en": ["She told me to be careful."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вони сказали мені не турбуватися про це.",
     "en": ["They told me not to worry about it."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Він сказав мені закрити вікно.",
     "en": ["He told me to close the window."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вона сказала мені не забувати ключі.",
     "en": ["She told me not to forget the keys."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Він сказав мені перевірити електронну пошту.",
     "en": ["He told me to check my email."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вона сказала мені не йти туди.",
     "en": ["She told me not to go there."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вони сказали мені приєднатися до них.",
     "en": ["They told me to join them."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він сказав мені залишитися вдома, якщо йде дощ.",
-    "en": ["He told me to stay home if it rained."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вона сказала мені спробувати ще раз.",
     "en": ["She told me to try again."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
     "ua": "Він сказав мені, що може почати завтра.",
-    "en": ["He told me he could start tomorrow.", "He told me that he could start tomorrow."]
+    "en": [
+      "He told me he could start the next day.",
+      "He told me that he could start the next day."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона сказала мені, що повинна закінчити проект сьогодні.",
-    "en": ["She told me she had to finish the project today.", "She told me that she had to finish the project today."]
+    "rules": ["REPORTED_SPEECH", "PREP_TIME", "HAVE_TO_DONT_HAVE_TO"],
+    "ua": "Вона сказала мені, що повинна закінчити проєкт сьогодні.",
+    "en": [
+      "She told me she had to finish the project that day.",
+      "She told me that she had to finish the project that day."
+    ]
   },
+
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "MAY_MIGHT"],
     "ua": "Вони сказали мені, що можуть запізнитися.",
-    "en": ["They told me they might be late.", "They told me that they might be late."]
+    "en": [
+      "They told me they might be late.",
+      "They told me that they might be late."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Він сказав мені, що мав піти раніше.",
-    "en": ["He told me he had had to leave earlier.", "He told me that he had had to leave earlier."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "MAY_MIGHT"],
     "ua": "Вона сказала мені, що, можливо, приєднається.",
-    "en": ["She told me she might join.", "She told me that she might join."]
+    "en": [
+      "She told me she might join.",
+      "She told me that she might join."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "SHOULD_SHOULDNT"],
     "ua": "Він сказав мені, що повинен був подзвонити мамі.",
-    "en": ["He told me he should have called his mom.", "He told me that he should have called his mom."]
+    "en": [
+      "He told me he should have called his mom.",
+      "He told me that he should have called his mom."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "SHOULD_SHOULDNT"],
     "ua": "Вона сказала мені, що не мала б робити цього.",
-    "en": ["She told me she shouldn’t have done it.", "She told me that she shouldn’t have done it."]
+    "en": [
+      "She told me she shouldn’t have done it.",
+      "She told me that she shouldn’t have done it."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "HAVE_TO_DONT_HAVE_TO"],
     "ua": "Вони сказали мені, що їм потрібно було поїхати.",
-    "en": ["They told me they had needed to leave.", "They told me that they had needed to leave."]
+    "en": [
+      "They told me they had needed to leave.",
+      "They told me that they had needed to leave.",
+      "They told me they’d had to go."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що він завжди мріяв про подорож до Японії.",
-    "en": ["He told me he had always dreamed of traveling to Japan.", "He told me that he had always dreamed of traveling to Japan."]
+    "en": [
+      "He told me he had always dreamed of traveling to Japan.",
+      "He told me that he had always dreamed of traveling to Japan.",
+      "He told me he had always dreamed of going to Japan.",
+      "He told me that he had always dreamed of going to Japan."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_TIME", "ARTICLES"],
     "ua": "Вона сказала мені, що вона вчора бачила старого друга.",
-    "en": ["She told me she had seen an old friend yesterday.", "She told me that she had seen an old friend yesterday."]
+    "en": [
+      "She told me she had seen an old friend the day before.",
+      "She told me that she had seen an old friend the day before.",
+      "She told me she’d run into an old friend yesterday.",
+      "She told me she’d bumped into an old friend yesterday."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що він ще не вирішив.",
-    "en": ["He told me he hadn’t decided yet.", "He told me that he hadn’t decided yet."]
+    "en": [
+      "He told me he hadn’t decided yet.",
+      "He told me that he hadn’t decided yet."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона сказала мені, що працює над новим проектом зараз.",
-    "en": ["She told me she was working on a new project now.", "She told me that she was working on a new project now."]
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
+    "ua": "Вона сказала мені, що працює над новим проєктом зараз.",
+    "en": [
+      "She told me she was working on a new project then.",
+      "She told me that she was working on a new project then."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_TIME"],
     "ua": "Він сказав мені, що завтра буде зайнятий.",
-    "en": ["He told me he would be busy the next day.", "He told me that he would be busy the next day."]
+    "en": [
+      "He told me he would be busy the next day.",
+      "He told me that he would be busy the next day."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона сказала мені, що не розмовляла з ним тиждень.",
-    "en": ["She told me she hadn’t spoken to him for a week.", "She told me that she hadn’t spoken to him for a week."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Він сказав мені залишити йому повідомлення.",
     "en": ["He told me to leave him a message."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вона сказала мені не відкривати двері.",
     "en": ["She told me not to open the door."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вони сказали мені не торкатися цього.",
     "en": ["They told me not to touch it."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES", "PREP_PLACE"],
     "ua": "Він сказав мені триматися подалі від вікна.",
     "en": ["He told me to stay away from the window."]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "IMPERATIVES"],
     "ua": "Вона сказала мені не говорити нікому.",
     "en": ["She told me not to tell anyone."]
   },
+
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що пояснив їм ситуацію.",
-    "en": ["He told me he had explained the situation to them.", "He told me that he had explained the situation to them."]
+    "en": [
+      "He told me he had explained the situation to them.",
+      "He told me that he had explained the situation to them."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вона сказала мені, що попередила його заздалегідь.",
-    "en": ["She told me she had warned him in advance.", "She told me that she had warned him in advance."]
+    "en": [
+      "She told me she had warned him in advance.",
+      "She told me that she had warned him in advance."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вони сказали мені, що порадили їй залишитися вдома.",
-    "en": ["They told me they had advised her to stay home.", "They told me that they had advised her to stay home."]
+    "en": [
+      "They told me they had advised her to stay home.",
+      "They told me that they had advised her to stay home."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що пообіцяв допомогти.",
-    "en": ["He told me he had promised to help.", "He told me that he had promised to help."]
+    "en": [
+      "He told me he had promised to help.",
+      "He told me that he had promised to help."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Вона сказала мені, що наполягала на своїй правоті.",
-    "en": ["She told me she had insisted she was right.", "She told me that she had insisted she was right."]
+    "en": [
+      "She told me she had insisted she was right.",
+      "She told me that she had insisted she was right."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що запропонував поїхати раніше.",
-    "en": ["He told me he had suggested leaving earlier.", "He told me that he had suggested leaving earlier."]
+    "en": [
+      "He told me he had suggested leaving earlier.",
+      "He told me that he had suggested leaving earlier."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Вона сказала мені, що пояснила, як це працює.",
-    "en": ["She told me she had explained how it worked.", "She told me that she had explained how it worked."]
+    "en": [
+      "She told me she had explained how it worked.",
+      "She told me that she had explained how it worked."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_PLACE"],
     "ua": "Вони сказали мені, що згадали про мене на зустрічі.",
-    "en": ["They told me they had mentioned me at the meeting.", "They told me that they had mentioned me at the meeting."]
+    "en": [
+      "They told me they had mentioned me at the meeting.",
+      "They told me that they had mentioned me at the meeting."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що вибачився перед нею.",
-    "en": ["He told me he had apologized to her.", "He told me that he had apologized to her."]
+    "en": [
+      "He told me he had apologized to her.",
+      "He told me that he had apologized to her."
+    ]
   },
   {
-    "rules": ["REPORTED_SPEECH"],
+    "rules": ["REPORTED_SPEECH", "PREP_PLACE"],
     "ua": "Вона сказала мені, що нагадала йому про дедлайн.",
-    "en": ["She told me she had reminded him about the deadline.", "She told me that she had reminded him about the deadline."]
+    "en": [
+      "She told me she had reminded him about the deadline.",
+      "She told me that she had reminded him about the deadline."
+    ]
   },
   {
     "rules": ["REPORTED_SPEECH"],
     "ua": "Він сказав мені, що попередив їх про небезпеку.",
-    "en": ["He told me he had warned them about the danger.", "He told me that he had warned them about the danger."]
-  },
-  {
-    "rules": ["REPORTED_SPEECH"],
-    "ua": "Вона сказала мені, що запевнила всіх, що все добре.",
-    "en": ["She told me she had assured everyone everything was fine.", "She told me that she had assured everyone everything was fine."]
+    "en": [
+      "He told me he had warned them about the danger.",
+      "He told me that he had warned them about the danger."
+    ]
   }
 ] }

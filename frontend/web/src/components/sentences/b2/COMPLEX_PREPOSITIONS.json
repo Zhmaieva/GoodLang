@@ -94,7 +94,7 @@
   },
   {
     "rules": ["COMPLEX_PREPOSITIONS", "HAVE_HAVE_GOT"],
-    "ua": "Ми маємо новий план замість старого проекту.",
+    "ua": "Ми маємо новий план замість старого проєкту.",
     "en": [
       "We have got a new plan instead of the old project.",
       "We have a new plan instead of the old project."
@@ -510,7 +510,7 @@
   },
   {
     "rules": ["COMPLEX_PREPOSITIONS", "PARTICIPLE_CLAUSES"],
-    "ua": "Завдяки старанням команди, проект було завершено раніше.",
+    "ua": "Завдяки старанням команди, проєкт було завершено раніше.",
     "en": [
       "Thanks to the team’s efforts, the project was completed earlier.",
       "Because of the team’s efforts, the project was completed earlier."
@@ -526,14 +526,14 @@
   },
   {
     "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT_CONT"],
-    "ua": "Вони працювали над проектом за допомогою нового програмного забезпечення.",
+    "ua": "Вони працювали над проєктом за допомогою нового програмного забезпечення.",
     "en": [
       "They have been working on the project by means of new software."
     ]
   },
   {
     "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
-    "ua": "Ймовірно, що через нестачу фінансування проект буде зупинено.",
+    "ua": "Ймовірно, що через нестачу фінансування проєкт буде зупинено.",
     "en": [
       "It’s likely that due to a lack of funding, the project will be stopped.",
       "It’s likely that because of a lack of funding, the project will be stopped."
@@ -692,7 +692,7 @@
   },
   {
     "rules": ["COMPLEX_PREPOSITIONS", "MODALS_OF_PROBABILITY"],
-    "ua": "Через затримку фінансування проект може бути відкладено.",
+    "ua": "Через затримку фінансування проєкт може бути відкладено.",
     "en": [
       "Due to the delay in funding, the project might be postponed.",
       "Because of the delay in funding, the project might be postponed."
@@ -738,7 +738,7 @@
   },
   {
     "rules": ["COMPLEX_PREPOSITIONS", "PRESENT_PERFECT_CONT"],
-    "ua": "Ми працюємо над проектом відповідно до нових вимог.",
+    "ua": "Ми працюємо над проєктом відповідно до нових вимог.",
     "en": [
       "We have been working on the project in accordance with the new requirements."
     ]

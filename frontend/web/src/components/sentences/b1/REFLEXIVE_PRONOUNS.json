@@ -1,100 +1,494 @@
 { "REFLEXIVE_PRONOUNS": [
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я порізався, коли готував вечерю.", "en": ["I cut myself while cooking dinner."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона подивилася на себе в дзеркало.", "en": ["She looked at herself in the mirror."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він навчився грати на гітарі сам.", "en": ["He taught himself to play the guitar."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми пишаємося собою.", "en": ["We are proud of ourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ти повинен подбати про себе.", "en": ["You should take care of yourself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони розважали себе піснями.", "en": ["They entertained themselves with songs."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я випадково нашкодив собі.", "en": ["I accidentally hurt myself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона зробила собі чашку чаю.", "en": ["She made herself a cup of tea."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він звинувачує себе у помилці.", "en": ["He blames himself for the mistake."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми вирішили все самостійно.", "en": ["We decided everything ourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви повинні пишатися собою.", "en": ["You should be proud of yourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Кішка вмилася сама.", "en": ["The cat cleaned itself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я представив себе аудиторії.", "en": ["I introduced myself to the audience."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона сказала собі зосередитися.", "en": ["She told herself to focus."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він сфотографував себе новим телефоном.", "en": ["He photographed himself with his new phone."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми змусили себе рано встати.", "en": ["We forced ourselves to get up early."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони ховалися, щоб захистити себе.", "en": ["They hid to protect themselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я знову нашкодив собі.", "en": ["I hurt myself again."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона насолоджується собою на відпустці.", "en": ["She is enjoying herself on vacation."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він зробив це сам.", "en": ["He did it himself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми самі приготували вечерю.", "en": ["We cooked dinner ourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ти повинен захистити себе.", "en": ["You must protect yourself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони звинувачують себе у невдачі.", "en": ["They blame themselves for the failure."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я не можу уявити себе без роботи.", "en": ["I can’t imagine myself without a job."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона навчила себе малювати.", "en": ["She taught herself to paint."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він стриже себе сам.", "en": ["He cuts his hair himself.", "He cuts himself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми сфотографували себе біля пам’ятника.", "en": ["We took a picture of ourselves near the monument."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви маєте поводитися як дорослі.", "en": ["You should behave yourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Собака дряпає себе.", "en": ["The dog is scratching itself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я нагадую собі не здаватися.", "en": ["I remind myself not to give up."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона втішила себе шоколадом.", "en": ["She comforted herself with chocolate."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він завжди розмовляє сам із собою.", "en": ["He always talks to himself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми відчували себе щасливими.", "en": ["We felt proud of ourselves.", "We felt happy with ourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони хвалять себе за успіх.", "en": ["They praise themselves for success."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я дозволив собі відпочити.", "en": ["I allowed myself to rest."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона запитала себе, чи зробила правильно.", "en": ["She asked herself if she did the right thing."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він нагадує собі про свої цілі.", "en": ["He reminds himself of his goals."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми мотивуємо себе щодня.", "en": ["We motivate ourselves every day."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви можете навчити себе цьому.", "en": ["You can teach yourselves this."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я маю трохи часу для себе.", "en": ["I have some time for myself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона пишається собою.", "en": ["She is proud of herself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він часто запитує себе, що пішло не так.", "en": ["He often asks himself what went wrong."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми називаємо себе командою.", "en": ["We call ourselves a team."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони вважають себе щасливими.", "en": ["They consider themselves lucky."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я знайшов собі нове хобі.", "en": ["I found myself a new hobby."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона побачила себе на фото.", "en": ["She saw herself in the photo."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він переконав себе, що має рацію.", "en": ["He convinced himself he was right."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми розважали себе настільними іграми.", "en": ["We amused ourselves with board games."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви повинні подбати про себе краще.", "en": ["You need to take better care of yourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Кіт грівся сам на сонці.", "en": ["The cat warmed itself in the sun."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я насолоджувався самотою.", "en": ["I enjoyed myself alone.", "I enjoyed my time by myself."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона підбадьорила себе перед виступом.", "en": ["She encouraged herself before the performance."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він звик жити самостійно.", "en": ["He’s used to living by himself.", "He’s used to living alone."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми навчили себе програмуванню.", "en": ["We taught ourselves programming."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви поводилися не дуже добре, правда?", "en": ["You didn’t behave yourselves very well, did you?"] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони сфотографували себе на пляжі.", "en": ["They took photos of themselves on the beach."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я обіцяю собі більше відпочивати.", "en": ["I promise myself to rest more."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона приготувала собі сніданок.", "en": ["She prepared herself breakfast."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він навчив себе говорити англійською.", "en": ["He taught himself to speak English."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми не повинні звинувачувати себе надто сильно.", "en": ["We shouldn’t blame ourselves too much."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви повинні бути чесними з собою.", "en": ["You should be honest with yourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони часто ставлять себе на перше місце.", "en": ["They often put themselves first."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я часто знаходжу себе в дивних ситуаціях.", "en": ["I often find myself in strange situations."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона дозволила собі день відпочинку.", "en": ["She allowed herself a day off."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він часто повторює собі, що все буде добре.", "en": ["He often tells himself everything will be fine."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми відчули себе щасливими після поїздки.", "en": ["We felt happy with ourselves after the trip."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви можете пишатися собою за цю роботу.", "en": ["You can be proud of yourselves for this work."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони підготували себе до найгіршого.", "en": ["They prepared themselves for the worst."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я запитую себе, чи це правильне рішення.", "en": ["I ask myself if it’s the right decision."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона загубила себе в натовпі.", "en": ["She lost herself in the crowd."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він часто чує себе в записах.", "en": ["He often hears himself in recordings."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми захоплюємо себе роботою.", "en": ["We keep ourselves busy with work."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви завжди поводитеся чемно, правда?", "en": ["You always behave yourselves, don’t you?"] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони почуваються впевнено в собі.", "en": ["They feel confident in themselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я часто говорю сам до себе, коли думаю.", "en": ["I often talk to myself when I think."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона записала себе на відео.", "en": ["She recorded herself on video."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він зробив собі бутерброд.", "en": ["He made himself a sandwich."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми підбадьорили себе після поразки.", "en": ["We cheered ourselves up after the loss."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви повинні дбати про себе, коли подорожуєте.", "en": ["You must look after yourselves when you travel."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони дивилися на себе у дзеркало.", "en": ["They looked at themselves in the mirror."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я відчуваю себе набагато краще сьогодні.", "en": ["I feel much better about myself today."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона часто сварить себе за дрібниці.", "en": ["She often blames herself for small things."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він поранив себе під час ремонту.", "en": ["He injured himself while doing repairs."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми навчили себе бути терплячими.", "en": ["We taught ourselves to be patient."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви маєте повірити в себе.", "en": ["You have to believe in yourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони насолоджуються собою на вечірці.", "en": ["They’re enjoying themselves at the party."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я бачу себе у майбутньому як вчителя.", "en": ["I see myself as a teacher in the future."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона змусила себе посміхнутися.", "en": ["She forced herself to smile."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він утримує себе у формі.", "en": ["He keeps himself in shape."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми змусили себе продовжувати.", "en": ["We pushed ourselves to keep going."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви не повинні знецінювати себе.", "en": ["You shouldn’t underestimate yourselves."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони переконали себе, що зможуть це зробити.", "en": ["They convinced themselves they could do it."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Я завжди кажу собі правду.", "en": ["I always tell myself the truth."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вона купила собі квіти.", "en": ["She bought herself some flowers."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Він дивиться на себе в дзеркало кожного ранку.", "en": ["He looks at himself in the mirror every morning."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ми тримаємо себе спокійними в стресових ситуаціях.", "en": ["We keep ourselves calm in stressful situations."] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Ви навчили себе цьому без допомоги?", "en": ["Did you teach yourselves this without help?"] },
-  { "rules": ["REFLEXIVE_PRONOUNS"], "ua": "Вони дозволили собі трохи відпочинку.", "en": ["They allowed themselves some rest."] }
-] }
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_TIME"],
+  "ua": "Я порізався, коли готував вечерю.",
+  "en": [
+   "I cut myself while cooking dinner.",
+   "I cut myself when I was making dinner."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Вона подивилася на себе в дзеркало.",
+  "en": [
+   "She looked at herself in the mirror.",
+   "She was looking at herself in the mirror."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "SHOULD_SHOULDNT"],
+  "ua": "Ти повинен подбати про себе.",
+  "en": [
+   "You should take care of yourself.",
+   "You need to take care of yourself."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ARTICLES"],
+  "ua": "Вона зробила собі чашку чаю.",
+  "en": [
+   "She made herself a cup of tea.",
+   "She prepared herself a cup of tea."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "SHOULD_SHOULDNT"],
+  "ua": "Ви повинні пишатися собою.",
+  "en": [
+   "You should be proud of yourselves.",
+   "You can be proud of yourselves."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Я представив себе аудиторії.",
+  "en": [
+   "I introduced myself to the audience.",
+   "I introduced myself in front of the audience."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Вона сказала собі зосередитися.",
+  "en": [
+   "She told herself to focus.",
+   "She kept telling herself to focus."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Він сфотографував себе новим телефоном.",
+  "en": [
+   "He photographed himself with his new phone.",
+   "He took a photo of himself with his new phone.",
+   "He took a picture of himself with his new phone."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
+  "ua": "Ми змусили себе рано встати.",
+  "en": [
+   "We forced ourselves to get up early.",
+   "We made ourselves get up early."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Він зробив це сам.",
+  "en": [
+   "He did it himself.",
+   "He handled it himself."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Ми самі приготували вечерю.",
+  "en": [
+   "We cooked dinner ourselves.",
+   "We made dinner ourselves."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "MUST_MUSTNT"],
+  "ua": "Ти повинен захистити себе.",
+  "en": [
+   "You must protect yourself.",
+   "You have to protect yourself."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Вони звинувачують себе у невдачі.",
+  "en": [
+   "They blame themselves for the failure.",
+   "They keep blaming themselves for the failure."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Я не можу уявити себе без роботи.",
+  "en": [
+   "I can’t imagine myself without a job.",
+   "I can’t see myself without a job."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Ми сфотографували себе біля пам’ятника.",
+  "en": [
+   "We took a picture of ourselves near the monument.",
+   "We took photos of ourselves near the monument."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Собака дряпає себе.",
+  "en": [
+   "The dog is scratching itself.",
+   "The dog keeps scratching itself."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Я нагадую собі не здаватися.",
+  "en": [
+   "I remind myself not to give up.",
+   "I always remind myself not to give up."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Вона втішила себе шоколадом.",
+  "en": [
+   "She comforted herself with chocolate.",
+   "She cheered herself up with some chocolate."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+  "ua": "Він завжди розмовляє сам із собою.",
+  "en": [
+   "He always talks to himself.",
+   "He is always talking to himself."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Вони хвалять себе за успіх.",
+  "en": [
+   "They praise themselves for their success.",
+   "They congratulate themselves on their success."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
+  "ua": "Я дозволив собі відпочити.",
+  "en": [
+   "I allowed myself to rest.",
+   "I let myself rest."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "REPORTED_QUESTIONS"],
+  "ua": "Вона запитала себе, чи зробила правильно.",
+  "en": [
+   "She asked herself if she did the right thing.",
+   "She wondered to herself if she had done the right thing."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Він нагадує себе про свої цілі.",
+  "en": [
+   "He reminds himself of his goals.",
+   "He constantly reminds himself of his goals."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+  "ua": "Ми мотивуємо себе щодня.",
+  "en": [
+   "We motivate ourselves every day.",
+   "We try to motivate ourselves every day."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Ви можете навчити себе цьому.",
+  "en": [
+   "You can teach yourselves this.",
+   "You are able to teach yourselves this."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+  "ua": "Я маю трохи часу для себе.",
+  "en": [
+   "I have some time for myself.",
+   "I finally have some time for myself."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Вона побачила себе на фото.",
+  "en": [
+   "She saw herself in the photo.",
+   "She recognized herself in the photo."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Він переконав себе, що має рацію.",
+  "en": [
+   "He convinced himself he was right.",
+   "He persuaded himself that he was right."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Вона підбадьорила себе перед виступом.",
+  "en": [
+   "She encouraged herself before the performance.",
+   "She cheered herself up before the performance."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Вони сфотографували себе на пляжі.",
+  "en": [
+   "They took photos of themselves on the beach.",
+   "They photographed themselves on the beach.",
+   "They took pictures of themselves on the beach."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Я обіцяю собі більше відпочивати.",
+  "en": [
+   "I promise myself to rest more.",
+   "I’m promising myself to rest more."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ARTICLES"],
+  "ua": "Вона приготувала собі сніданок.",
+  "en": [
+   "She made herself breakfast.",
+   "She prepared herself some breakfast.",
+   "She fixed herself breakfast."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "SHOULD_SHOULDNT"],
+  "ua": "Ми не повинні звинувачувати себе надто сильно.",
+  "en": [
+   "We shouldn’t blame ourselves too much.",
+   "We should avoid blaming ourselves too much."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "SHOULD_SHOULDNT", "MUST_MUSTNT"],
+  "ua": "Ви повинні бути чесними з собою.",
+  "en": [
+   "You should be honest with yourselves.",
+   "You must be honest with yourselves."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+  "ua": "Вони часто ставлять себе на перше місце.",
+  "en": [
+   "They often put themselves first.",
+   "They frequently put themselves first."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
+  "ua": "Вона дозволила собі день відпочинку.",
+  "en": [
+   "She allowed herself a day off.",
+   "She gave herself a day off."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+  "ua": "Він часто повторює собі, що все буде добре.",
+  "en": [
+   "He often tells himself everything will be fine.",
+   "He frequently reminds himself that everything will be fine."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Вони підготували себе до найгіршого.",
+  "en": [
+   "They prepared themselves for the worst.",
+   "They readied themselves for the worst."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "REPORTED_QUESTIONS"],
+  "ua": "Я запитую себе, чи це правильне рішення.",
+  "en": [
+   "I ask myself if it’s the right decision.",
+   "I keep asking myself if it’s the right decision."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+  "ua": "Він часто чує себе в записах.",
+  "en": [
+   "He often hears himself in recordings.",
+   "He frequently hears himself on recordings."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Вони почуваються впевнено в собі.",
+  "en": [
+   "They feel confident in themselves.",
+   "They feel sure of themselves."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PREP_TIME"],
+  "ua": "Я часто говорю сам до себе, коли думаю.",
+  "en": [
+   "I often talk to myself when I think.",
+   "I frequently talk to myself while thinking."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Вона записала себе на відео.",
+  "en": [
+   "She recorded herself on video.",
+   "She recorded a video of herself.",
+   "She filmed herself."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ARTICLES"],
+  "ua": "Він зробив собі бутерброд.",
+  "en": [
+   "He made himself a sandwich.",
+   "He fixed himself a sandwich."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "MUST_MUSTNT", "SHOULD_SHOULDNT"],
+  "ua": "Ви повинні дбати про себе, коли подорожуєте.",
+  "en": [
+   "You must look after yourselves when you travel.",
+   "You should take care of yourselves when you travel."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "ua": "Вони дивилися на себе у дзеркало.",
+  "en": [
+   "They looked at themselves in the mirror.",
+   "They were looking at themselves in the mirror."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+  "ua": "Вона часто сварить себе за дрібниці.",
+  "en": [
+   "She often blames herself for small things.",
+   "She frequently criticizes herself for small things."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_TIME"],
+  "ua": "Він поранив себе під час ремонту.",
+  "en": [
+   "He injured himself while doing repairs.",
+   "He hurt himself while doing repairs."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "MUST_MUSTNT", "HAVE_TO_DONT_HAVE_TO"],
+  "ua": "Ви маєте повірити в себе.",
+  "en": [
+   "You have to believe in yourselves.",
+   "You must believe in yourselves."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ARTICLES"],
+  "ua": "Я бачу себе у майбутньому як вчителя.",
+  "en": [
+   "I see myself as a teacher in the future.",
+   "I imagine myself as a teacher in the future."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
+  "ua": "Вона змусила себе посміхнутися.",
+  "en": [
+   "She forced herself to smile.",
+   "She made herself smile."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Він утримує себе у формі.",
+  "en": [
+   "He keeps himself in shape.",
+   "He maintains himself in good shape."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
+  "ua": "Ми змусили себе продовжувати.",
+  "en": [
+   "We pushed ourselves to keep going.",
+   "We forced ourselves to keep going."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "SHOULD_SHOULDNT"],
+  "ua": "Ви не повинні знецінювати себе.",
+  "en": [
+   "You shouldn’t underestimate yourselves.",
+   "You shouldn’t undervalue yourselves."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Вони переконали себе, що зможуть це зробити.",
+  "en": [
+   "They convinced themselves they could do it.",
+   "They assured themselves they could do it."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+  "ua": "Я завжди кажу собі правду.",
+  "en": [
+   "I always tell myself the truth.",
+   "I always remind myself of the truth."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+  "ua": "Вона купила собі квіти.",
+  "en": [
+   "She bought herself some flowers.",
+   "She got herself some flowers."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PREP_PLACE"],
+  "ua": "Він дивиться на себе в дзеркало кожного ранку.",
+  "en": [
+   "He looks at himself in the mirror every morning.",
+   "He checks himself in the mirror every morning."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS"],
+  "ua": "Ми тримаємо себе спокійними в стресових ситуаціях.",
+  "en": [
+   "We keep ourselves calm in stressful situations.",
+   "We control ourselves in stressful situations."
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "REPORTED_QUESTIONS"],
+  "ua": "Ви навчили себе цьому без допомоги?",
+  "en": [
+   "Did you teach yourselves this without help?",
+   "Did you learn this yourselves without help?"
+  ]
+ },
+ {
+  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
+  "ua": "Вони дозволили собі трохи відпочинку.",
+  "en": [
+   "They allowed themselves some rest.",
+   "They gave themselves some rest."
+  ]
+ }
+ ] }

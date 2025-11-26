@@ -81,7 +81,7 @@
   },
   {
     "rules": ["DESPITE_IN_SPITE_OF_ING", "PRESENT_PERFECT"],
-    "ua": "Попри те, що він працював цілий день, він ще не завершив проект. (use DESPITE / IN SPITE OF ...)",
+    "ua": "Попри те, що він працював цілий день, він ще не завершив проєкт. (use DESPITE / IN SPITE OF ...)",
     "en": [
       "Despite working all day, he hasn’t finished the project yet.",
       "In spite of working all day, he hasn’t finished the project yet."

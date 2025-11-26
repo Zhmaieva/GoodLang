@@ -545,7 +545,7 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "FIRST_CONDITIONAL", "TIME_CLAUSE_FUTURE"],
-    "ua": ["Саме коли ми закінчимо проект, ми святкуватимемо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме коли ми закінчимо проєкт, ми святкуватимемо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
     "en": [
       "It is when we finish the project that we will celebrate.",
       "It’s when we finish the project that we’ll celebrate."
@@ -809,7 +809,7 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW"],
-    "ua": ["Саме вони зараз працюють над новим проектом (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме вони зараз працюють над новим проєктом (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
     "en": [
       "It is they who are working on the new project right now.",
       "It’s they who’re working on the new project right now."

@@ -451,7 +451,7 @@
   },
   {
     "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
-    "ua": "Або ми знайдемо рішення, або проект закриють.",
+    "ua": "Або ми знайдемо рішення, або проєкт закриють.",
     "en": ["Either we find a solution or the project will be closed.", "We’ll either solve the problem or lose the project."]
   },
   {

@@ -669,7 +669,7 @@
     "They are the students’ grades."
   ]},
 
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проекти дизайнерів.", "en": [
+  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проєкти дизайнерів.", "en": [
     "They’re the designers’ projects.",
     "They are the designers’ projects."
   ]},
@@ -699,7 +699,7 @@
     "They are the brands’ sales."
   ]},
 
-  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це бюджети проектів.", "en": [
+  { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це бюджети проєктів.", "en": [
     "They’re the projects’ budgets.",
     "They are the projects’ budgets."
   ]},

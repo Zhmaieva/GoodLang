@@ -297,7 +297,7 @@
   },
   {
     "rules": ["PAST_CONTINUOUS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Я працював над проектом, тому не відповідав на дзвінки вчора.",
+    "ua": "Я працював над проєктом, тому не відповідав на дзвінки вчора.",
     "en": [
       "I was working on a project, so I didn’t answer calls yesterday.",
       "I was working on a project, which is why I wasn’t answering calls yesterday."

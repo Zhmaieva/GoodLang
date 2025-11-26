@@ -2485,7 +2485,7 @@ export const ALL_RULES_SAMPLES = {
         "SIMPLE_ADJ",
         "YES_NO_Q"
       ],
-      "ua": "Ти можеш зробити цей проект цікавим?",
+      "ua": "Ти можеш зробити цей проєкт цікавим?",
       "en": [
         "Can you make this project interesting?",
         "Are you able to make this project engaging?"
@@ -46433,7 +46433,7 @@ export const ALL_RULES_SAMPLES = {
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
         "PRESENT_PERFECT_CONT"
       ],
-      "ua": "Вони часто працювали над проектом останнім часом.",
+      "ua": "Вони часто працювали над проєктом останнім часом.",
       "en": [
         "They have often been working on the project lately."
       ]
@@ -53999,7 +53999,7 @@ export const ALL_RULES_SAMPLES = {
         "FIRST_CONDITIONAL",
         "PREP_TIME"
       ],
-      "ua": "Якщо я закінчу проект до п’ятниці, я відпочину на вихідних.",
+      "ua": "Якщо я закінчу проєкт до п’ятниці, я відпочину на вихідних.",
       "en": [
         "If I finish the project by Friday, I will rest on the weekend.",
         "If I finish the project by Friday, I'll rest on the weekend."
@@ -54288,7 +54288,7 @@ export const ALL_RULES_SAMPLES = {
         "FIRST_CONDITIONAL",
         "NEGATION_DONT_DOESNT"
       ],
-      "ua": "Якщо він не закінчить проект, він не отримає премію.",
+      "ua": "Якщо він не закінчить проєкт, він не отримає премію.",
       "en": [
         "If he does not finish the project, he will not get a bonus.",
         "If he doesn't finish the project, he won't get a bonus."
@@ -63954,7 +63954,7 @@ export const ALL_RULES_SAMPLES = {
         "BECAUSE_SO_BUT_ALTHOUGH",
         "PREP_TIME"
       ],
-      "ua": "Я працював над проектом, тому не відповідав на дзвінки вчора.",
+      "ua": "Я працював над проєктом, тому не відповідав на дзвінки вчора.",
       "en": [
         "I was working on a project, so I didn’t answer calls yesterday.",
         "I was working on a project, which is why I wasn’t answering calls yesterday."
@@ -65996,7 +65996,7 @@ export const ALL_RULES_SAMPLES = {
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "IN_ORDER_TO_SO_THAT"
       ],
-      "ua": "Ми купили багато матеріалів, щоб завершити проект.",
+      "ua": "Ми купили багато матеріалів, щоб завершити проєкт.",
       "en": [
         "We bought a lot of materials in order to finish the project."
       ]
@@ -71512,7 +71512,7 @@ export const ALL_RULES_SAMPLES = {
         "WH_Q",
         "PREP_TIME"
       ],
-      "ua": "Коли, на твою думку, він закінчить проект?",
+      "ua": "Коли, на твою думку, він закінчить проєкт?",
       "en": [
         "When do you think he will finish the project?",
         "When will he complete the project, in your opinion?"
@@ -71632,7 +71632,7 @@ export const ALL_RULES_SAMPLES = {
         "BECAUSE_SO_BUT_ALTHOUGH",
         "SIMPLE_ADJ"
       ],
-      "ua": "Він думає, що новий проект буде успішним, хоча це складно.",
+      "ua": "Він думає, що новий проєкт буде успішним, хоча це складно.",
       "en": [
         "He thinks the new project will be successful although it’s challenging.",
         "He believes the new project will succeed even though it’s difficult."
@@ -80475,7 +80475,7 @@ export const ALL_RULES_SAMPLES = {
         "PAST_SIMPLE"
       ],
       "ua": [
-        "Ми допомогли одне одному завершити проект."
+        "Ми допомогли одне одному завершити проєкт."
       ],
       "en": [
         "We helped each other finish the project.",
@@ -80940,7 +80940,7 @@ export const ALL_RULES_SAMPLES = {
         "PAST_SIMPLE"
       ],
       "ua": [
-        "Вони допомогли одне одному під час проекту."
+        "Вони допомогли одне одному під час проєкту."
       ],
       "en": [
         "They helped each other during the project.",
@@ -81441,7 +81441,7 @@ export const ALL_RULES_SAMPLES = {
         "COUNT_UNCOUNT"
       ],
       "ua": [
-        "У мене недостатньо часу, щоб закінчити проект."
+        "У мене недостатньо часу, щоб закінчити проєкт."
       ],
       "en": [
         "I don’t have enough time to finish the project.",
@@ -82079,7 +82079,7 @@ export const ALL_RULES_SAMPLES = {
         "HAVE_HAVE_GOT"
       ],
       "ua": [
-        "Вона має занадто багато ідей для одного проекту."
+        "Вона має занадто багато ідей для одного проєкту."
       ],
       "en": [
         "She has too many ideas for one project.",
@@ -92559,7 +92559,7 @@ export const ALL_RULES_SAMPLES = {
       "rules": [
         "PREP_DIRECTION"
       ],
-      "ua": "Ми занурилися у деталі проекту.",
+      "ua": "Ми занурилися у деталі проєкту.",
       "en": [
         "We dived into the details of the project.",
         "We went into the details of the project."
@@ -96228,7 +96228,7 @@ export const ALL_RULES_SAMPLES = {
       "rules": [
         "RELATIVE_CLAUSES"
       ],
-      "ua": "Ми залишили повідомлення для людини, яка відповідала за проект.",
+      "ua": "Ми залишили повідомлення для людини, яка відповідала за проєкт.",
       "en": [
         "We left a message for the person who was in charge of the project.",
         "We left a message for the person that was responsible for the project."
@@ -98608,7 +98608,7 @@ export const ALL_RULES_SAMPLES = {
       "rules": [
         "REPORTED_SPEECH"
       ],
-      "ua": "Вона сказала мені, що повинна закінчити проект сьогодні.",
+      "ua": "Вона сказала мені, що повинна закінчити проєкт сьогодні.",
       "en": [
         "She told me she had to finish the project today.",
         "She told me that she had to finish the project today."
@@ -98708,7 +98708,7 @@ export const ALL_RULES_SAMPLES = {
       "rules": [
         "REPORTED_SPEECH"
       ],
-      "ua": "Вона сказала мені, що працює над новим проектом зараз.",
+      "ua": "Вона сказала мені, що працює над новим проєктом зараз.",
       "en": [
         "She told me she was working on a new project now.",
         "She told me that she was working on a new project now."
@@ -108136,7 +108136,7 @@ export const ALL_RULES_SAMPLES = {
         "TIME_CLAUSE_FUTURE"
       ],
       "ua": [
-        "Саме коли ми закінчимо проект, ми святкуватимемо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."
+        "Саме коли ми закінчимо проєкт, ми святкуватимемо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."
       ],
       "en": [
         "It is when we finish the project that we will celebrate.",
@@ -108580,7 +108580,7 @@ export const ALL_RULES_SAMPLES = {
         "PRESENT_CONT_NOW"
       ],
       "ua": [
-        "Саме вони зараз працюють над новим проектом (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."
+        "Саме вони зараз працюють над новим проєктом (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."
       ],
       "en": [
         "It is they who are working on the new project right now.",
@@ -108830,7 +108830,7 @@ export const ALL_RULES_SAMPLES = {
         "COMPLEX_PREPOSITIONS",
         "HAVE_HAVE_GOT"
       ],
-      "ua": "Ми маємо новий план замість старого проекту.",
+      "ua": "Ми маємо новий план замість старого проєкту.",
       "en": [
         "We have got a new plan instead of the old project.",
         "We have a new plan instead of the old project."
@@ -109390,7 +109390,7 @@ export const ALL_RULES_SAMPLES = {
         "COMPLEX_PREPOSITIONS",
         "PARTICIPLE_CLAUSES"
       ],
-      "ua": "Завдяки старанням команди, проект було завершено раніше.",
+      "ua": "Завдяки старанням команди, проєкт було завершено раніше.",
       "en": [
         "Thanks to the team’s efforts, the project was completed earlier.",
         "Because of the team’s efforts, the project was completed earlier."
@@ -109412,7 +109412,7 @@ export const ALL_RULES_SAMPLES = {
         "COMPLEX_PREPOSITIONS",
         "PRESENT_PERFECT_CONT"
       ],
-      "ua": "Вони працювали над проектом за допомогою нового програмного забезпечення.",
+      "ua": "Вони працювали над проєктом за допомогою нового програмного забезпечення.",
       "en": [
         "They have been working on the project by means of new software."
       ]
@@ -109422,7 +109422,7 @@ export const ALL_RULES_SAMPLES = {
         "COMPLEX_PREPOSITIONS",
         "MODALS_OF_PROBABILITY"
       ],
-      "ua": "Ймовірно, що через нестачу фінансування проект буде зупинено.",
+      "ua": "Ймовірно, що через нестачу фінансування проєкт буде зупинено.",
       "en": [
         "It’s likely that due to a lack of funding, the project will be stopped.",
         "It’s likely that because of a lack of funding, the project will be stopped."
@@ -109637,7 +109637,7 @@ export const ALL_RULES_SAMPLES = {
         "COMPLEX_PREPOSITIONS",
         "MODALS_OF_PROBABILITY"
       ],
-      "ua": "Через затримку фінансування проект може бути відкладено.",
+      "ua": "Через затримку фінансування проєкт може бути відкладено.",
       "en": [
         "Due to the delay in funding, the project might be postponed.",
         "Because of the delay in funding, the project might be postponed."
@@ -109703,7 +109703,7 @@ export const ALL_RULES_SAMPLES = {
         "COMPLEX_PREPOSITIONS",
         "PRESENT_PERFECT_CONT"
       ],
-      "ua": "Ми працюємо над проектом відповідно до нових вимог.",
+      "ua": "Ми працюємо над проєктом відповідно до нових вимог.",
       "en": [
         "We have been working on the project in accordance with the new requirements."
       ]
@@ -109984,7 +109984,7 @@ export const ALL_RULES_SAMPLES = {
         "DESPITE_IN_SPITE_OF_ING",
         "PRESENT_PERFECT"
       ],
-      "ua": "Попри те, що він працював цілий день, він ще не завершив проект. (use DESPITE / IN SPITE OF ...)",
+      "ua": "Попри те, що він працював цілий день, він ще не завершив проєкт. (use DESPITE / IN SPITE OF ...)",
       "en": [
         "Despite working all day, he hasn’t finished the project yet.",
         "In spite of working all day, he hasn’t finished the project yet."
@@ -112576,7 +112576,7 @@ export const ALL_RULES_SAMPLES = {
         "ALREADY_YET_JUST"
       ],
       "ua": [
-        "Вона не лише закінчила проект, але й уже його представила (use NOT ONLY … BUT ALSO)."
+        "Вона не лише закінчила проєкт, але й уже його представила (use NOT ONLY … BUT ALSO)."
       ],
       "en": [
         "She has not only finished the project but also already presented it.",
@@ -113494,7 +113494,7 @@ export const ALL_RULES_SAMPLES = {
         "PRESENT_PERFECT"
       ],
       "ua": [
-        "Вона не лише закінчила проект, але й надіслала його вчасно (use NOT ONLY … BUT ALSO)."
+        "Вона не лише закінчила проєкт, але й надіслала його вчасно (use NOT ONLY … BUT ALSO)."
       ],
       "en": [
         "She has not only finished the project but also sent it on time.",
@@ -115256,7 +115256,7 @@ export const ALL_RULES_SAMPLES = {
         "ARTICLES"
       ],
       "ua": [
-        "Закінчивши проект, вони відсвяткували успіх (use PARTICIPLE CLAUSES)."
+        "Закінчивши проєкт, вони відсвяткували успіх (use PARTICIPLE CLAUSES)."
       ],
       "en": [
         "Having finished the project, they celebrated their success.",
@@ -115616,7 +115616,7 @@ export const ALL_RULES_SAMPLES = {
         "PASSIVE_VOICE_ALL_TENSES"
       ],
       "ua": [
-        "Будівля, спроектована відомим архітектором, коштує мільйони."
+        "Будівля, спроєктована відомим архітектором, коштує мільйони."
       ],
       "en": [
         "The building designed by a famous architect costs millions.",
@@ -119405,7 +119405,7 @@ export const ALL_RULES_SAMPLES = {
     },
     {
       "rules": ["TIME_CLAUSE_FUTURE", "PREP_TIME"],
-      "ua": "Коли я закінчу проект до п’ятниці, я відпочину на вихідних.",
+      "ua": "Коли я закінчу проєкт до п’ятниці, я відпочину на вихідних.",
       "en": ["When I finish the project by Friday, I will rest on the weekend.", "When I finish the project by Friday, I'll rest on the weekend."]
     },
     {
@@ -119456,7 +119456,7 @@ export const ALL_RULES_SAMPLES = {
     },
     {
       "rules": ["TIME_CLAUSE_FUTURE", "DEMONSTRATIVES"],
-      "ua": "Коли ці учні закінчать проект, вони отримають похвалу.",
+      "ua": "Коли ці учні закінчать проєкт, вони отримають похвалу.",
       "en": ["When these students finish the project, they will receive praise.", "When these students finish the project, they'll receive praise."]
     },
     {
@@ -119538,7 +119538,7 @@ export const ALL_RULES_SAMPLES = {
     },
     {
       "rules": ["GOING_TO_PLANS", "WH_Q", "PREP_TIME"],
-      "ua": "Коли ти збираєшся закінчити цей проект?",
+      "ua": "Коли ти збираєшся закінчити цей проєкт?",
       "en": [
         "When are you going to finish this project?",
         "When are you planning to complete this project?"
@@ -120734,7 +120734,7 @@ export const ALL_RULES_SAMPLES = {
     { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це оцінки студентів.", "en": [
         "They’re the students’ grades.", "They are the students’ grades.", "They’re the grades of the students.", "They are the grades of the students."
       ]},
-    { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проекти дизайнерів.", "en": [
+    { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це проєкти дизайнерів.", "en": [
         "They’re the designers’ projects.", "They are the designers’ projects.", "They’re the projects of the designers.", "They are the projects of the designers."
       ]},
     { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це офіс працівників.", "en": [
@@ -120755,7 +120755,7 @@ export const ALL_RULES_SAMPLES = {
     { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це продажі брендів.", "en": [
         "They’re the brands’ sales.", "They are the brands’ sales.", "They’re the sales of the brands.", "They are the sales of the brands."
       ]},
-    { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це бюджети проектів.", "en": [
+    { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це бюджети проєктів.", "en": [
         "They’re the projects’ budgets.", "They are the projects’ budgets.", "They’re the budgets of the projects.", "They are the budgets of the projects."
       ]},
     { "rules": ["POSSESSIVE_S", "TO_BE"], "ua": "Це приміщення університетів.", "en": [

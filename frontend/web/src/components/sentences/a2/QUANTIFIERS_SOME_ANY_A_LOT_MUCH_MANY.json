@@ -141,7 +141,7 @@
   },
   {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "IN_ORDER_TO_SO_THAT"],
-    "ua": "Ми купили багато матеріалів, щоб завершити проект.",
+    "ua": "Ми купили багато матеріалів, щоб завершити проєкт.",
     "en": ["We bought a lot of materials in order to finish the project."]
   },
   {

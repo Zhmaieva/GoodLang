@@ -417,7 +417,7 @@
   },
   {
     "rules": ["SO_THAT_IN_ORDER_THAT", "FUTURE_WITH_PRESENT_CONT"],
-    "ua": "Ми зустрічаємось завтра, щоб спланувати проект. (use SO THAT / IN ORDER THAT)",
+    "ua": "Ми зустрічаємось завтра, щоб спланувати проєкт. (use SO THAT / IN ORDER THAT)",
     "en": [
       "We are meeting tomorrow so that we can plan the project.",
       "We are meeting tomorrow in order that we can plan the project."

@@ -33,7 +33,7 @@
   },
   {
     "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
-    "ua": ["Вона не лише закінчила проект, але й уже його представила (use NOT ONLY … BUT ALSO)."],
+    "ua": ["Вона не лише закінчила проєкт, але й уже його представила (use NOT ONLY … BUT ALSO)."],
     "en": [
       "She has not only finished the project but also already presented it.",
       "She's not only finished the project but also already presented it."
@@ -569,7 +569,7 @@
   },
   {
     "rules": ["NOT_ONLY_BUT_ALSO", "PRESENT_PERFECT"],
-    "ua": ["Вона не лише закінчила проект, але й надіслала його вчасно (use NOT ONLY … BUT ALSO)."],
+    "ua": ["Вона не лише закінчила проєкт, але й надіслала його вчасно (use NOT ONLY … BUT ALSO)."],
     "en": [
       "She has not only finished the project but also sent it on time.",
       "She's not only finished the project but also sent it on time."

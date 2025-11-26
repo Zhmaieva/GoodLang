@@ -1,326 +1,644 @@
 { "QUESTION_TAGS": [
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Ти любиш каву, чи не так?",
-    "en": ["You like coffee, don’t you?", "You like coffee, do you not?"]
+    "en": [
+      "You like coffee, don’t you?",
+      "You enjoy coffee, don’t you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Він працює тут, чи не так?",
-    "en": ["He works here, doesn’t he?", "He works here, does he not?"]
+    "en": [
+      "He works here, doesn’t he?",
+      "He works at this place, doesn’t he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
-    "ua": "Вона не спізнилася, чи не так ж?",
-    "en": ["She isn’t late, is she?", "She is not late, is she not?"]
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "ua": "Вона не спізнилася, чи не так?",
+    "en": [
+      "She isn’t late, is she?",
+      "She’s not late, is she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT"],
     "ua": "Ми зустрічалися раніше, чи не так?",
-    "en": ["We’ve met before, haven’t we?", "We have met before, have we not?"]
+    "en": [
+      "We’ve met before, haven’t we?",
+      "We have met before, haven’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Вони не живуть тут, чи не так?",
-    "en": ["They don’t live here, do they?", "They do not live here, do they not?"]
+    "en": [
+      "They don’t live here, do they?",
+      "They don’t live around here, do they?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Ти не знаєш його, чи не так?",
-    "en": ["You don’t know him, do you?", "You do not know him, do you not?"]
+    "en": [
+      "You don’t know him, do you?",
+      "You don’t know that guy, do you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Він прийшов рано, чи не так?",
-    "en": ["He came early, didn’t he?", "He came early, did he not?"]
+    "en": [
+      "He came early, didn’t he?",
+      "He arrived early, didn’t he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Вона виграла конкурс, чи не так?",
-    "en": ["She won the competition, didn’t she?", "She won the competition, did she not?"]
+    "en": [
+      "She won the competition, didn’t she?",
+      "She won the contest, didn’t she?",
+      "She won the event, didn’t she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE", "PREP_TIME"],
     "ua": "Ти не був удома вчора, чи не так?",
-    "en": ["You weren’t at home yesterday, were you?", "You were not at home yesterday, were you not?"]
+    "en": [
+      "You weren’t at home yesterday, were you?",
+      "You weren’t home yesterday, were you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "MODALS_CAN"],
     "ua": "Ми можемо піти зараз, чи не так?",
-    "en": ["We can leave now, can’t we?", "We can leave now, can we not?"]
+    "en": [
+      "We can leave now, can’t we?",
+      "We can go now, can’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "MODALS_CAN"],
     "ua": "Ти не міг знайти ключ, чи не так?",
-    "en": ["You couldn’t find the key, could you?", "You could not find the key, could you not?"]
+    "en": [
+      "You couldn’t find the key, could you?",
+      "You couldn’t find your key, could you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE", "ARTICLES"],
     "ua": "Він був учителем, чи не так?",
-    "en": ["He was a teacher, wasn’t he?", "He was a teacher, was he not?"]
+    "en": [
+      "He was a teacher, wasn’t he?",
+      "He was a school teacher, wasn’t he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Вона не бачила нас, чи не так?",
-    "en": ["She didn’t see us, did she?", "She did not see us, did she not?"]
+    "en": [
+      "She didn’t see us, did she?",
+      "She didn’t notice us, did she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Ми вже говорили про це, чи не так?",
-    "en": ["We’ve already talked about it, haven’t we?", "We have already talked about it, have we not?"]
+    "en": [
+      "We’ve already talked about it, haven’t we?",
+      "We’ve already discussed it, haven’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL", "PREP_TIME"],
     "ua": "Вони не поїдуть завтра, чи не так?",
-    "en": ["They won’t go tomorrow, will they?", "They will not go tomorrow, will they not?"]
+    "en": [
+      "They won’t go tomorrow, will they?",
+      "They won’t leave tomorrow, will they?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT"],
     "ua": "Ти був у Парижі, чи не так?",
-    "en": ["You’ve been to Paris, haven’t you?", "You have been to Paris, have you not?"]
+    "en": [
+      "You’ve been to Paris, haven’t you?",
+      "You’ve visited Paris, haven’t you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Вона не любить шоколад, чи не так?",
-    "en": ["She doesn’t like chocolate, does she?", "She does not like chocolate, does she not?"]
+    "en": [
+      "She doesn’t like chocolate, does she?",
+      "She doesn’t like sweets, does she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Ми запізнилися, чи не так?",
-    "en": ["We’re late, aren’t we?", "We are late, are we not?"]
+    "en": [
+      "We’re late, aren’t we?",
+      "We are late, aren’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Він не розуміє, чи не так?",
-    "en": ["He doesn’t understand, does he?", "He does not understand, does he not?"]
+    "en": [
+      "He doesn’t understand, does he?",
+      "He doesn’t get it, does he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT"],
     "ua": "Ти вивчив англійську, чи не так?",
-    "en": ["You’ve learned English, haven’t you?", "You have learned English, have you not?"]
+    "en": [
+      "You’ve learned English, haven’t you?",
+      "You’ve studied English, haven’t you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Вона не була готова, чи не так?",
-    "en": ["She wasn’t ready, was she?", "She was not ready, was she not?"]
+    "en": [
+      "She wasn’t ready, was she?",
+      "She wasn’t prepared, was she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Ми зробили все правильно, чи не так?",
-    "en": ["We did everything right, didn’t we?", "We did everything right, did we not?"]
+    "en": [
+      "We did everything right, didn’t we?",
+      "We did it all correctly, didn’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Вони не прийшли, чи не так?",
-    "en": ["They didn’t come, did they?", "They did not come, did they not?"]
+    "en": [
+      "They didn’t come, did they?",
+      "They didn’t show up, did they?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Ти не розсердився, чи не так?",
-    "en": ["You weren’t angry, were you?", "You were not angry, were you not?"]
+    "en": [
+      "You weren’t angry, were you?",
+      "You weren’t upset, were you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL"],
     "ua": "Він допоможе нам, чи не так?",
-    "en": ["He’ll help us, won’t he?", "He will help us, will he not?"]
+    "en": [
+      "He’ll help us, won’t he?",
+      "He will help us, won’t he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL"],
     "ua": "Вона не зможе прийти, чи не так?",
-    "en": ["She won’t be able to come, will she?", "She will not be able to come, will she not?"]
+    "en": [
+      "She won’t be able to come, will she?",
+      "She won’t manage to come, will she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "SHOULD_SHOULDNT"],
     "ua": "Ми повинні спробувати ще раз, чи не так?",
-    "en": ["We should try again, shouldn’t we?", "We should try again, should we not?"]
+    "en": [
+      "We should try again, shouldn’t we?",
+      "We should give it another try, shouldn’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "SHOULD_SHOULDNT"],
     "ua": "Ти не повинен здаватися, чи не так?",
-    "en": ["You shouldn’t give up, should you?", "You should not give up, should you not?"]
+    "en": [
+      "You shouldn’t give up, should you?",
+      "You shouldn’t quit, should you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
-    "ua": "Він мусить піти зараз, чи не так?",
-    "en": ["He must go now, mustn’t he?", "He must go now, must he not?"]
-  },
-  {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "MODAL_PERFECTS", "SHOULD_SHOULDNT"],
     "ua": "Вона не повинна була казати це, чи не так?",
-    "en": ["She shouldn’t have said that, should she?", "She should not have said that, should she not?"]
+    "en": [
+      "She shouldn’t have said that, should she?",
+      "She shouldn’t have told him that, should she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Ми зробили помилку, чи не так?",
-    "en": ["We made a mistake, didn’t we?", "We made a mistake, did we not?"]
+    "en": [
+      "We made a mistake, didn’t we?",
+      "We messed up, didn’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT"],
     "ua": "Вони не бачили цього фільму, чи не так?",
-    "en": ["They haven’t seen this movie, have they?", "They have not seen this movie, have they not?"]
+    "en": [
+      "They haven’t seen this movie, have they?",
+      "They haven’t watched this movie, have they?"
+    ]
   },
   {
     "rules": ["QUESTION_TAGS"],
     "ua": "Ти втомився, чи не так?",
-    "en": ["You’re tired, aren’t you?", "You are tired, are you not?"]
+    "en": [
+      "You’re tired, aren’t you?",
+      "You’re exhausted, aren’t you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Вона не знає відповіді, чи не так?",
-    "en": ["She doesn’t know the answer, does she?", "She does not know the answer, does she not?"]
+    "en": [
+      "She doesn’t know the answer, does she?",
+      "She doesn’t know the solution, does she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL"],
     "ua": "Ми знову зустрінемось, чи не так?",
-    "en": ["We’ll meet again, won’t we?", "We will meet again, will we not?"]
+    "en": [
+      "We’ll meet again, won’t we?",
+      "We’ll see each other again, won’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Вони не закінчили ще, чи не так?",
-    "en": ["They haven’t finished yet, have they?", "They have not finished yet, have they not?"]
+    "en": [
+      "They haven’t finished yet, have they?",
+      "They haven’t completed it yet, have they?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT"],
     "ua": "Ти не бачив мого телефону, чи не так?",
-    "en": ["You haven’t seen my phone, have you?", "You have not seen my phone, have you not?"]
+    "en": [
+      "You haven’t seen my phone, have you?",
+      "You haven’t noticed my phone anywhere, have you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Він живе поруч, чи не так?",
-    "en": ["He lives nearby, doesn’t he?", "He lives nearby, does he not?"]
+    "en": [
+      "He lives nearby, doesn’t he?",
+      "He lives close by, doesn’t he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Вона не поїхала додому, чи не так?",
-    "en": ["She didn’t go home, did she?", "She did not go home, did she not?"]
+    "en": [
+      "She didn’t go home, did she?",
+      "She didn’t head home, did she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
-    "ua": "Ми не повинні спізнюватися, чи не так?",
-    "en": ["We mustn’t be late, must we?", "We must not be late, must we not?"]
-  },
-  {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Вони розуміють, чи не так?",
-    "en": ["They understand, don’t they?", "They understand, do they not?"]
+    "en": [
+      "They understand, don’t they?",
+      "They get it, don’t they?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL"],
     "ua": "Ти не будеш зайнятий завтра, чи не так?",
-    "en": ["You won’t be busy tomorrow, will you?", "You will not be busy tomorrow, will you not?"]
+    "en": [
+      "You won’t be busy tomorrow, will you?",
+      "You won’t be occupied tomorrow, will you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Вона працює з нами, чи не так?",
-    "en": ["She works with us, doesn’t she?", "She works with us, does she not?"]
+    "en": [
+      "She works with us, doesn’t she?",
+      "She’s part of our team, isn’t she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Він не був там, чи не так?",
-    "en": ["He wasn’t there, was he?", "He was not there, was he not?"]
+    "en": [
+      "He wasn’t there, was he?",
+      "He wasn’t present there, was he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Ми ще не зустрічалися, чи не так?",
-    "en": ["We haven’t met yet, have we?", "We have not met yet, have we not?"]
+    "en": [
+      "We haven’t met yet, have we?",
+      "We haven’t seen each other yet, have we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Ти не забув, чи не так?",
-    "en": ["You didn’t forget, did you?", "You did not forget, did you not?"]
+    "en": [
+      "You didn’t forget, did you?",
+      "You didn’t forget about it, did you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Вона зателефонувала йому, чи не так?",
-    "en": ["She called him, didn’t she?", "She called him, did she not?"]
+    "en": [
+      "She called him, didn’t she?",
+      "She phoned him, didn’t she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Він не поспішає, чи не так?",
-    "en": ["He isn’t in a hurry, is he?", "He is not in a hurry, is he not?"]
+    "en": [
+      "He isn’t in a hurry, is he?",
+      "He isn’t rushing, is he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "MODALS_CAN"],
     "ua": "Ми можемо допомогти, чи не так?",
-    "en": ["We can help, can’t we?", "We can help, can we not?"]
+    "en": [
+      "We can help, can’t we?",
+      "We’re able to help, aren’t we?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Ти не згоден, чи не так?",
-    "en": ["You don’t agree, do you?", "You do not agree, do you not?"]
+    "en": [
+      "You don’t agree, do you?",
+      "You don’t think so, do you?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Вона знала про це, чи не так?",
-    "en": ["She knew about it, didn’t she?", "She knew about it, did she not?"]
+    "en": [
+      "She knew about it, didn’t she?",
+      "She was aware of it, wasn’t she?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
     "ua": "Він не відчуває себе добре, чи не так?",
-    "en": ["He doesn’t feel well, does he?", "He does not feel well, does he not?"]
+    "en": [
+      "He doesn’t feel well, does he?",
+      "He doesn’t feel good, does he?"
+    ]
   },
   {
-    "rules": ["QUESTION_TAGS"],
+    "rules": ["QUESTION_TAGS", "PAST_SIMPLE"],
     "ua": "Ми приїхали рано, чи не так?",
-    "en": ["We arrived early, didn’t we?", "We arrived early, did we not?"]
+    "en": [
+      "We arrived early, didn’t we?",
+      "We got there early, didn’t we?"
+    ]
   },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ви допоможете мені, чи не так?", "en": ["You’ll help me, won’t you?", "You will help me, will you not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Не підкажеш дорогу, гаразд?", "en": ["You’ll show me the way, won’t you?", "You will show me the way, will you not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це була гарна ідея, чи не так?", "en": ["It was a good idea, wasn’t it?", "It was a good idea, was it not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вони приєднаються пізніше, чи не так?", "en": ["They’ll join later, won’t they?", "They will join later, will they not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вона зараз працює, чи не так?", "en": ["She’s working now, isn’t she?", "She is working now, is she not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Він чекав довго, чи не так?", "en": ["He’d been waiting for a long time, hadn’t he?", "He had been waiting for a long time, had he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ми ще не закінчили, правда?", "en": ["We haven’t finished yet, have we?", "We have not finished yet, have we not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ти добре розумієш, чи не так?", "en": ["You understand well, don’t you?", "You understand well, do you not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Він не проти допомогти, правда?", "en": ["He doesn’t mind helping, does he?", "He does not mind helping, does he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вона щойно пішла, чи не так?", "en": ["She’s just left, hasn’t she?", "She has just left, has she not?"] },
-
-  { "rules": ["QUESTION_TAGS"], "ua": "Ти міг би допомогти, чи не так?", "en": ["You could help, couldn’t you?", "You could help, could you not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ви повинні спробувати ще раз, чи не так?", "en": ["You should try again, shouldn’t you?", "You should try again, should you not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Він мусить піти зараз, чи не так?", "en": ["He must leave now, mustn’t he?", "He must leave now, must he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вона може чекати, чи не так?", "en": ["She can wait, can’t she?", "She can wait, can she not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вони могли б приїхати раніше, чи не так?", "en": ["They could arrive earlier, couldn’t they?", "They could arrive earlier, could they not?"] },
-
-  { "rules": ["QUESTION_TAGS"], "ua": "Він ніколи не бреше, правда?", "en": ["He never lies, does he?", "He never lies, does he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ти інколи забуваєш ключі, чи не так?", "en": ["You sometimes forget your keys, don’t you?", "You sometimes forget your keys, do you not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ми завжди вчимося з помилок, чи не так?", "en": ["We always learn from mistakes, don’t we?", "We always learn from mistakes, do we not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вони рідко скаржаться, правда?", "en": ["They rarely complain, do they?", "They rarely complain, do they not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вона часто бігає вранці, чи не так?", "en": ["She often runs in the morning, doesn’t she?", "She often runs in the morning, does she not?"] },
-
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це правильна відповідь, чи не так?", "en": ["That’s the right answer, isn’t it?", "That is the right answer, is it not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це була помилка, чи не так?", "en": ["It was a mistake, wasn’t it?", "It was a mistake, was it not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Вона написала листа, чи не так?", "en": ["She wrote a letter, didn’t she?", "She wrote a letter, did she not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Він купив новий телефон, чи не так?", "en": ["He bought a new phone, didn’t he?", "He bought a new phone, did he not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Вони прочитали статтю, чи не так?", "en": ["They read the article, didn’t they?", "They read the article, did they not?"] },
-
-  { "rules": ["QUESTION_TAGS"], "ua": "Він був повідомлений, чи не так?", "en": ["He was informed, wasn’t he?", "He was informed, was he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Їй дали відповідь, чи не так?", "en": ["She was given an answer, wasn’t she?", "She was given an answer, was she not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Авто вже відремонтували, чи не так?", "en": ["The car was repaired, wasn’t it?", "The car was repaired, was it not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Документи відправлено, чи не так?", "en": ["The documents were sent, weren’t they?", "The documents were sent, were they not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Завдання виконано вчасно, чи не так?", "en": ["The task was completed on time, wasn’t it?", "The task was completed on time, was it not?"] },
-
-  { "rules": ["QUESTION_TAGS"], "ua": "Він уже поїв, чи не так?", "en": ["He’s already eaten, hasn’t he?", "He has already eaten, has he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вона щось забула, чи не так?", "en": ["She’s forgotten something, hasn’t she?", "She has forgotten something, has she not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вони приїхали вчасно, чи не так?", "en": ["They arrived on time, didn’t they?", "They arrived on time, did they not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ми вже зустрічалися, чи не так?", "en": ["We’ve met before, haven’t we?", "We have met before, have we not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ти зробив резервну копію, чи не так?", "en": ["You’ve made a backup, haven’t you?", "You have made a backup, have you not?"] },
-
-  { "rules": ["QUESTION_TAGS"], "ua": "Він чекає на нас, чи не так?", "en": ["He’s waiting for us, isn’t he?", "He is waiting for us, is he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вона працювала над цим годинами, чи не так?", "en": ["She’d been working on it for hours, hadn’t she?", "She had been working on it for hours, had she not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вони вже обговорювали це, чи не так?", "en": ["They’d discussed it already, hadn’t they?", "They had discussed it already, had they not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ти був зайнятий учора, правда?", "en": ["You were busy yesterday, weren’t you?", "You were busy yesterday, were you not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ми не зробили помилку, правда?", "en": ["We didn’t make a mistake, did we?", "We did not make a mistake, did we not?"] },
-
-  { "rules": ["QUESTION_TAGS"], "ua": "Він подзвонить їй, чи не так?", "en": ["He’ll call her, won’t he?", "He will call her, will he not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вона не забуде, правда?", "en": ["She won’t forget, will she?", "She will not forget, will she not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Вони приїдуть завтра, чи не так?", "en": ["They’ll arrive tomorrow, won’t they?", "They will arrive tomorrow, will they not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ти не заперечуєш, правда?", "en": ["You don’t mind, do you?", "You do not mind, do you not?"] },
-  { "rules": ["QUESTION_TAGS"], "ua": "Ми зустрінемось о п’ятій, чи не так?", "en": ["We’ll meet at five, won’t we?", "We will meet at five, will we not?"] },
-
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це правильний номер, чи не так?", "en": ["This is the right number, isn’t it?", "This is the right number, is it not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це був складний тест, чи не так?", "en": ["It was a difficult test, wasn’t it?", "It was a difficult test, was it not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це хороша можливість, чи не так?", "en": ["It’s a good opportunity, isn’t it?", "It is a good opportunity, is it not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це найкраще рішення, чи не так?", "en": ["It’s the best solution, isn’t it?", "It is the best solution, is it not?"] },
-  { "rules": ["QUESTION_TAGS", "ARTICLES"], "ua": "Це була помилка в рахунку, чи не так?", "en": ["It was an error in the bill, wasn’t it?", "It was an error in the bill, was it not?"] }
+  {
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL"],
+    "ua": "Ви допоможете мені, чи не так?",
+    "en": [
+      "You’ll help me, won’t you?",
+      "You’ll give me a hand, won’t you?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL"],
+    "ua": "Не підкажеш дорогу, гаразд?",
+    "en": [
+      "You’ll show me the way, won’t you?",
+      "You’ll point me in the right direction, won’t you?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "ARTICLES", "PAST_SIMPLE"],
+    "ua": "Це була гарна ідея, чи не так?",
+    "en": [
+      "It was a good idea, wasn’t it?",
+      "It was a great idea, wasn’t it?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "FUTURE_WITH_WILL"],
+    "ua": "Вони приєднаються пізніше, чи не так?",
+    "en": [
+      "They’ll join later, won’t they?",
+      "They’ll join us later, won’t they?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_CONTINUOUS"],
+    "ua": "Вона зараз працює, чи не так?",
+    "en": [
+      "She’s working now, isn’t she?",
+      "She’s busy working right now, isn’t she?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PAST_PERFECT_CONT"],
+    "ua": "Він чекав довго, чи не так?",
+    "en": [
+      "He’d been waiting for a long time, hadn’t he?",
+      "He had been waiting for ages, hadn’t he?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Ми ще не закінчили, правда?",
+    "en": [
+      "We haven’t finished yet, have we?",
+      "We haven’t completed it yet, have we?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "ua": "Ти добре розумієш, чи не так?",
+    "en": [
+      "You understand well, don’t you?",
+      "You understand it clearly, don’t you?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "ua": "Він не проти допомогти, правда?",
+    "en": [
+      "He doesn’t mind helping, does he?",
+      "He doesn’t mind giving a hand, does he?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
+    "ua": "Вона щойно пішла, чи не так?",
+    "en": [
+      "She’s just left, hasn’t she?",
+      "She just went out, hasn’t she?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "MODALS_CAN"],
+    "ua": "Ти міг би допомогти, чи не так?",
+    "en": [
+      "You could help, couldn’t you?",
+      "You could lend a hand, couldn’t you?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "SHOULD_SHOULDNT"],
+    "ua": "Ви повинні спробувати ще раз, чи не так?",
+    "en": [
+      "You should try again, shouldn’t you?",
+      "You should give it another try, shouldn’t you?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "MODALS_CAN"],
+    "ua": "Вона може чекати, чи не так?",
+    "en": [
+      "She can wait, can’t she?",
+      "She’s able to wait, isn’t she?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "MODALS_CAN"],
+    "ua": "Вони могли б приїхати раніше, чи не так?",
+    "en": [
+      "They could arrive earlier, couldn’t they?",
+      "They could have come earlier, couldn’t they?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Він ніколи не бреше, правда?",
+    "en": [
+      "He never lies, does he?",
+      "He never tells lies, does he?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Ти інколи забуваєш ключі, чи не так?",
+    "en": [
+      "You sometimes forget your keys, don’t you?",
+      "You sometimes leave your keys behind, don’t you?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "ua": "Ми завжди вчимося з помилок, чи не так?",
+    "en": [
+      "We always learn from mistakes, don’t we?",
+      "We always learn through mistakes, don’t we?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "ua": "Вони рідко скаржаться, правда?",
+    "en": [
+      "They rarely complain, do they?",
+      "They seldom complain, do they?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Вона часто бігає вранці, чи не так?",
+    "en": [
+      "She often runs in the morning, doesn’t she?",
+      "She often goes jogging in the morning, doesn’t she?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "ARTICLES"],
+    "ua": "Це правильна відповідь, чи не так?",
+    "en": [
+      "That’s the right answer, isn’t it?",
+      "That’s the correct answer, isn’t it?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "ARTICLES"],
+    "ua": "Це була помилка, чи не так?",
+    "en": [
+      "It was a mistake, wasn’t it?",
+      "It was an error, wasn’t it?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "ARTICLES"],
+    "ua": "Вона написала листа, чи не так?",
+    "en": [
+      "She wrote a letter, didn’t she?",
+      "She wrote the letter, didn’t she?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "ARTICLES"],
+    "ua": "Він купив новий телефон, чи не так?",
+    "en": [
+      "He bought a new phone, didn’t he?",
+      "He got a new phone, didn’t he?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "ARTICLES"],
+    "ua": "Вони прочитали статтю, чи не так?",
+    "en": [
+      "They read the article, didn’t they?",
+      "They went through the article, didn’t they?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Він був повідомлений, чи не так?",
+    "en": [
+      "He was informed, wasn’t he?",
+      "He was notified, wasn’t he?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Їй дали відповідь, чи не так?",
+    "en": [
+      "She was given an answer, wasn’t she?",
+      "She was given a reply, wasn’t she?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Авто вже відремонтували, чи не так?",
+    "en": [
+      "The car was repaired, wasn’t it?",
+      "The car was fixed, wasn’t it?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Документи відправлено, чи не так?",
+    "en": [
+      "The documents were sent, weren’t they?",
+      "The documents were shipped, weren’t they?"
+    ]
+  },
+  {
+    "rules": ["QUESTION_TAGS", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": "Завдання виконано вчасно, чи не так?",
+    "en": [
+      "The task was completed on time, wasn’t it?",
+      "The task was finished on time, wasn’t it?"
+    ]
+  }
 ]
 }

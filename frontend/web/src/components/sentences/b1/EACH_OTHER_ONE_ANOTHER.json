@@ -633,7 +633,7 @@
   },
   {
     "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
-    "ua": ["Ми допомогли одне одному завершити проект."],
+    "ua": ["Ми допомогли одне одному завершити проєкт."],
     "en": [
       "We helped each other finish the project.",
       "We helped one another complete the project."
@@ -905,7 +905,7 @@
   },
   {
     "rules": ["EACH_OTHER_ONE_ANOTHER", "PAST_SIMPLE"],
-    "ua": ["Вони допомогли одне одному під час проекту."],
+    "ua": ["Вони допомогли одне одному під час проєкту."],
     "en": [
       "They helped each other during the project.",
       "They helped one another during the project."

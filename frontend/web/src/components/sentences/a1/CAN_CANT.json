@@ -191,7 +191,7 @@
   },
   {
     "rules": ["CAN_CANT", "SIMPLE_ADJ", "YES_NO_Q"],
-    "ua": "Ти можеш зробити цей проект цікавим?",
+    "ua": "Ти можеш зробити цей проєкт цікавим?",
     "en": ["Can you make this project interesting?", "Are you able to make this project engaging?"]
   },
   {

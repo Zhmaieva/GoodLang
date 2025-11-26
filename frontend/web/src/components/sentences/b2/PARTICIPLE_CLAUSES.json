@@ -571,7 +571,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Закінчивши проект, вони відсвяткували успіх (use PARTICIPLE CLAUSES)."],
+    "ua": ["Закінчивши проєкт, вони відсвяткували успіх (use PARTICIPLE CLAUSES)."],
     "en": [
       "Having finished the project, they celebrated their success.",
       "After finishing the project, they celebrated the success."
