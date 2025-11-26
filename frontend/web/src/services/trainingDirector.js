@@ -53,7 +53,7 @@ export function getTrainingLevel() {
                 }
             }
             // Move DOWN if accuracy <75% and not already at A1
-            else if ((lvlStats.accuracy < 75 && lvlStats.total > 6) || (lvlStats.accuracy < 25 && lvlStats.total > 1) && levelIdx > 0) {
+            else if (((lvlStats.accuracy < 75 && lvlStats.total > 6) || (lvlStats.accuracy < 25 && lvlStats.total > 1)) && levelIdx > 0) {
                 levelIdx--;
             }
             else {

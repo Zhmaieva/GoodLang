@@ -2,6 +2,7 @@ import {evaluateAndCoach, preEvaluate, randomRule, shuffleBySeed} from "../core/
 import {ALL_RULES_SAMPLES} from "../core/allRulesSamples.js";
 import {authMiddleware} from "../middleware/authMiddleware.js";
 import {checkTranslationLimit, recordTranslationUsage} from "../database/repositories/accountLogRepository.js";
+import {GrammarRule} from "../core/rules.js";
 
 const name = 'translations';
 const locale = 'ua';
@@ -17,7 +18,7 @@ export const translationsController = {
                 let rulesArr = Array.isArray(rules) ? (rules ?? []) : (rules.trim() ? rules.split(',') : []);
 
                 if (!textToTranslate) {
-                    const selectedRule = rulesArr.length > 0 ? rulesArr[0] : randomRule(level ?? 'A1');
+                    const selectedRule = rulesArr.length > 0 ? GrammarRule[rulesArr[0]] : randomRule(level ?? 'A1');
 
                     const samples = shuffleBySeed(ALL_RULES_SAMPLES[selectedRule], seed ?? 1);
                     const skipNumber = Math.floor((skip ?? '0') % samples.length);

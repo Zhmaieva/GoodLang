@@ -5,7 +5,7 @@ export default function PaymentSuccess() {
     const navigate = useNavigate();
 
     return (
-        <div style={{ padding: 40, textAlign: "center" }}>
+        <div style={{ padding: 40, textAlign: "center", display: "flex", flexDirection: "column" }}>
             <h1 style={{ color: "#4ba36e" }}>Оплата успішна!</h1>
             <p>Ви отримали преміум доступ з наступними можливостями:</p>
             <ul style={{ textAlign: "left", display: "inline-block", marginTop: 20 }}>

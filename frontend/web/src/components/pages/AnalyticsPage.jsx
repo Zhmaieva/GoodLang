@@ -15,15 +15,16 @@ import "./analytics.css";
 import AnalyticsHeader from "../AnalyticsHeader";
 import KPIGrid from "../KPIGrid";
 import FiltersBar from "../FiltersBar";
-import RulesTable from "../RulesTable";
+import RulesTable from "../training/RulesTable.jsx";
 import WeakFocus from "../WeakFocus";
 import QueueSection from "../QueueSection";
 import FooterBar from "../FooterBar";
 import {useNavigate} from "react-router-dom";
 import {getAllStatistics, inferUserLevel} from "../../services/dataService.js";
 import {GrammarRule, LEVEL_RULES, RULE_LABELS} from "../../utils/rules.js";
+import AppShell from "../AppShell.jsx";
 
-export default function AnalyticsPage() {
+export default function AnalyticsPage({theme}) {
     // ----- State (mirrors your script) -----
     const [rules, setRules] = useState([...getAllStatistics()]);
     const [words, setWords] = useState(seedWordsMap());
@@ -86,44 +87,52 @@ export default function AnalyticsPage() {
     const handlePracticeClick = () => history.back();
 
     return (
-        <div className="container">
-            <AnalyticsHeader onBack={handlePracticeClick} onExport={onExportJSON} />
-            <KPIGrid
-                accuracy={kpis.accuracy}
-                attempts={kpis.totalAttempts}
-                masteredRules={kpis.mastered}
-                userLevel={inferUserLevel({
-                    minAttemptsPerRule: 1,
-                    minRulesWithAttempts: 6,
-                    minTotalAttemptsPerLevel: 6,
-                    minAccuracy: 80
-                })}
-            />
-            <FiltersBar
-                filterLevel={filterLevel}
-                onLevelChange={setFilterLevel}
-                query={query}
-                onQueryChange={setQuery}
-                showWeakOnly={showWeakOnly}
-                onToggleWeak={() => setShowWeakOnly(v => !v)}
-            />
-            <RulesTable
-                rows={tableRows}
-                pct={pct}
-                statusOf={statusOf}
-                fmtDate={fmtDate}
-                onRowClick={(rule) => {
-                    navigate(`/rule/${rule.rule}`);
-                }}
-            />
-            <WeakFocus rows={filteredRules} pct={pct} statusOf={statusOf} fmtDate={fmtDate} />
-            {/*<QueueSection*/}
-            {/*    queue={queue}*/}
-            {/*    onGenerate={onGenerateQueue}*/}
-            {/*    onStartPractice={onStartPractice}*/}
-            {/*    fmtDateEnShort={fmtDateEnShort}*/}
-            {/*/>*/}
-            <FooterBar />
-        </div>
+        <AppShell theme={theme}>
+            <div style={{height: "100vh"}}>
+                <AnalyticsHeader onBack={handlePracticeClick} onExport={onExportJSON} />
+                <KPIGrid
+                    accuracy={kpis.accuracy}
+                    attempts={kpis.totalAttempts}
+                    masteredRules={kpis.mastered}
+                    userLevel={inferUserLevel({
+                        minAttemptsPerRule: 1,
+                        minRulesWithAttempts: 6,
+                        minTotalAttemptsPerLevel: 6,
+                        minAccuracy: 80
+                    })}
+                />
+                <FiltersBar
+                    filterLevel={filterLevel}
+                    onLevelChange={setFilterLevel}
+                    query={query}
+                    onQueryChange={setQuery}
+                    showWeakOnly={showWeakOnly}
+                    onToggleWeak={() => setShowWeakOnly(v => !v)}
+                />
+                <div style={{height: '50%'}}>
+                    <RulesTable
+                        rows={tableRows}
+                        pct={pct}
+                        statusOf={statusOf}
+                        fmtDate={fmtDate}
+                        onRowClick={(rule) => {
+                            navigate(`/rule/${rule.rule}`);
+                        }}
+                    />
+                </div>
+
+                <WeakFocus rows={filteredRules} pct={pct} statusOf={statusOf} fmtDate={fmtDate} theme={theme}
+                           onTrainingComplete={(statistics) => setRules(statistics)}
+                />
+                {/*<QueueSection*/}
+                {/*    queue={queue}*/}
+                {/*    onGenerate={onGenerateQueue}*/}
+                {/*    onStartPractice={onStartPractice}*/}
+                {/*    fmtDateEnShort={fmtDateEnShort}*/}
+                {/*/>*/}
+                <FooterBar />
+            </div>
+
+        </AppShell>
     );
 }

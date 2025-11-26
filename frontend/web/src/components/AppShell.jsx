@@ -13,7 +13,7 @@ export default function AppShell({ children, theme }) {
         },
         container: {
             width: "100%",
-            maxWidth: 960,
+            maxWidth: 1060,
             boxSizing: "border-box",
             padding: "40px 24px 80px",
             margin: "0 auto",

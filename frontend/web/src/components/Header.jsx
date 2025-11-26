@@ -1,5 +1,5 @@
 import React from "react";
-import LevelSwitch from "./LevelSwitch";
+import LevelSwitch from "./training/LevelSwitch.jsx";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 import AccountButton from "./subscription/AccountButton.jsx";
 import {WeeklyProgress} from "./training/WeeklyProgress.jsx";

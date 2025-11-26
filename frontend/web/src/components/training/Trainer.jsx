@@ -6,7 +6,14 @@ import {callTranslateAPI} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import {getTrainingLevel} from "../../services/trainingDirector.js";
 
-export default function Trainer({theme, onLoadingChange = _ => {}, freeTraining = false, nextLevel = null, nextRule = null}) {
+export default function Trainer({
+                                    theme,
+                                    onLoadingChange = _ => {},
+                                    freeTraining = false,
+                                    nextLevel = null,
+                                    nextRule = null,
+                                    onAnswerEvaluated = _ => {}
+                                }) {
     const LEVEL_TO_DIFFICULTY = useMemo(
         () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),
         []
@@ -46,7 +53,7 @@ export default function Trainer({theme, onLoadingChange = _ => {}, freeTraining 
 
     useEffect(() => {
         if (loading) return;
-        if (nextLevel === level) return;
+        if (nextLevel === level && !nextRule) return;
 
         setLevel(nextLevel);
 
@@ -153,6 +160,8 @@ export default function Trainer({theme, onLoadingChange = _ => {}, freeTraining 
             setNextRules(data.rules);
 
             saveSeed({seed, skip: data.skip ?? (skip+1) });
+
+            onAnswerEvaluated();
         } catch (e) {
             console.error(e);
             setHint("❌ Помилка перевірки. Перевірте підключення до сервера.");

@@ -43246,7 +43246,7 @@ export const ALL_RULES_SAMPLES = {
       "rules": [
         "WH_Q",
         "PRESENT_PERFECT_CONTINUOUS",
-        "HOW_LONG"
+        "HOW_OFTEN_LONG_MUCH"
       ],
       "ua": "Як довго ти вчиш англійську?",
       "en": [
@@ -43474,7 +43474,7 @@ export const ALL_RULES_SAMPLES = {
       "rules": [
         "WH_Q",
         "PAST_SIMPLE",
-        "HOW_LONG"
+        "HOW_OFTEN_LONG_MUCH"
       ],
       "ua": "Скільки часу ти провів там?",
       "en": [
@@ -43654,7 +43654,7 @@ export const ALL_RULES_SAMPLES = {
       "rules": [
         "WH_Q",
         "PAST_SIMPLE",
-        "HOW_LONG"
+        "HOW_OFTEN_LONG_MUCH"
       ],
       "ua": "Як довго ти чекав автобуса?",
       "en": [

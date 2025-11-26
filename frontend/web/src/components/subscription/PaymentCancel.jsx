@@ -5,8 +5,8 @@ export default function PaymentCancel() {
     const navigate = useNavigate();
 
     return (
-        <div style={{ padding: 40, textAlign: "center" }}>
-            <h1 style={{ color: "#ef476f" }}>Сталася помилка 😕</h1>
+        <div style={{ padding: 40, textAlign: "center", display: "flex", flexDirection: "column"}}>
+            <h1 style={{color: "#ef476f"}}>Сталася помилка 😕</h1>
             <p>
                 Оплата не пройшла, але ви все ще можете користуватися безкоштовною версією.
             </p>
