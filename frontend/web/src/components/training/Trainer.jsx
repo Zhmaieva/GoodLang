@@ -1,10 +1,12 @@
 import TaskCard from "./TaskCard.jsx";
 import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
-import {addAnswer, getSeed, saveSeed} from "../../services/dataService.js";
+import {addAnswer, getAllStatistics, getSeed, saveSeed} from "../../services/dataService.js";
 import {callTranslateAPI} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import {getTrainingLevel} from "../../services/trainingDirector.js";
+import {LEVEL_RULES} from "../../utils/rules.js";
+import {emit} from "../../services/events.js";
 
 export default function Trainer({
                                     theme,
@@ -86,6 +88,74 @@ export default function Trainer({
         setCorrectAnswer("");
     }
 
+    async function fetchNextSentence({ nextLevel, nextRule, selectedDifficulty, seed, skip }) {
+        let ruleToSend = nextRule;
+
+        if (nextLevel === "managed") {
+            const allStats = getAllStatistics(); // full list of {rule, accuracy, attemptsNumber}
+
+            // Filter only rules belonging to the real CEFR current level
+            const level = getTrainingLevel();
+            const allowedRules = LEVEL_RULES[level] ?? [];
+
+            const stats = allStats.filter(s => allowedRules.includes(s.rule));
+
+            // If no nextRule → pick one based on stats
+            if (!ruleToSend) {
+                // 1. Rules never answered
+                const noAttempts = stats.filter(r => r.attemptsNumber === 0);
+
+                if (noAttempts.length > 0) {
+                    ruleToSend = noAttempts[Math.floor(Math.random() * noAttempts.length)].rule;
+
+                } else {
+                    // 2. Weighted selection
+                    const lowestAcc = stats.reduce((a, b) =>
+                        a.accuracy < b.accuracy ? a : b
+                    );
+
+                    const below75 = stats.filter(r => r.accuracy < 75);
+
+                    const rnd = Math.random() * 100;
+
+                    if (rnd < 60) {
+                        // 60% lowest accuracy
+                        ruleToSend = lowestAcc.rule;
+
+                    } else if (rnd < 90 && below75.length > 0) {
+                        // 30% random among <75%
+                        const pick = below75[Math.floor(Math.random() * below75.length)];
+                        ruleToSend = pick.rule;
+
+                    } else {
+                        // 10% any rule
+                        const pick = stats[Math.floor(Math.random() * stats.length)];
+                        ruleToSend = pick.rule;
+                    }
+                }
+            }
+
+            // Managed mode → DO NOT send level
+            console.log("getting training sentence...");
+            return await callTranslateAPI({
+                rules: [ruleToSend],
+                seed,
+                skip
+            });
+        }
+
+        // --- Old logic for non-managed ---
+        const currentLevel = selectedDifficulty;
+
+        console.log("getting training sentence...");
+        return await callTranslateAPI({
+            level: currentLevel,
+            rules: [ruleToSend],
+            seed,
+            skip
+        });
+    }
+
     async function loadNewTask(selectedDifficulty = difficulty) {
         if (!selectedDifficulty && !nextRule)
             return;
@@ -98,10 +168,7 @@ export default function Trainer({
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const currentLevel = nextLevel === 'managed' ? getTrainingLevel() : selectedDifficulty;
-
-                console.log('getting training sentence...');
-                const data = await callTranslateAPI({ level: currentLevel, rules: [nextRule], seed, skip });
+                const data = await fetchNextSentence({ nextLevel, nextRule, seed, skip });
                 setTextToTranslate(data.textToTranslate || "");
                 setRules(data.rules || null);
                 setTaskText(data.textToTranslate || "—");
@@ -154,6 +221,7 @@ export default function Trainer({
                 setHint("❌ Не зовсім." + tip);
                 setCorrectAnswer(data.correctAnswer || "");
             }
+            emit("weeklyProgressUpdate");
             setMode("next");
 
             setNextTextToTranslate(data.textToTranslate || "");

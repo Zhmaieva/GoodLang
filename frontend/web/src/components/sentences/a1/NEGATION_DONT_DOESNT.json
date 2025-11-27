@@ -62,7 +62,7 @@
     },
     {
       "rules": ["NEGATION_DONT_DOESNT", "SIMPLE_ADJ"],
-      "ua": "Моя кімната не велика.",
+      "ua": "Моя кімната невелика.",
       "en": ["My room isn’t big.", "My room is not big."]
     },
     {
@@ -312,7 +312,7 @@
     },
     {
       "rules": ["NEGATION_DONT_DOESNT", "SIMPLE_ADJ", "POSSESSIVE_ADJECTIVES"],
-      "ua": "Моя кімната не велика.",
+      "ua": "Моя кімната невелика.",
       "en": ["My room isn’t big.", "My room is not big."]
     },
     {

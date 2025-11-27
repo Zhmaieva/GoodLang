@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react";
 import {estimateTimeToNextLevelText, getProgressSummary} from "../../services/insightsService.js";
+import {off, on} from "../../services/events.js";
 
 export function WeeklyProgress({ theme }) {
     const [summary, setSummary] = useState("");
     const [daysLeft, setDaysLeft] = useState("");
 
-    useEffect(() => {
+    function refresh() {
         setSummary(getProgressSummary());
         setDaysLeft(estimateTimeToNextLevelText());
+    }
+
+    useEffect(() => {
+        refresh();
+
+        // subscribe to event
+        on("weeklyProgressUpdate", refresh);
+        return () => off("weeklyProgressUpdate", refresh);
     }, []);
 
     return (

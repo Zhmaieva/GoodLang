@@ -16508,7 +16508,7 @@ export const ALL_RULES_SAMPLES = {
             "NEGATION_DONT_DOESNT",
             "SIMPLE_ADJ"
         ],
-        "ua": "Моя кімната не велика.",
+        "ua": "Моя кімната невелика.",
         "en": [
             "My room isn’t big.",
             "My room is not big."
@@ -17053,7 +17053,7 @@ export const ALL_RULES_SAMPLES = {
             "SIMPLE_ADJ",
             "POSSESSIVE_ADJECTIVES"
         ],
-        "ua": "Моя кімната не велика.",
+        "ua": "Моя кімната невелика.",
         "en": [
             "My room isn’t big.",
             "My room is not big."
@@ -59658,7 +59658,7 @@ export const ALL_RULES_SAMPLES = {
     },
     {
         "rules": [
-            "HOW_OФTEN_LONG_MUCH",
+            "HOW_OFTEN_LONG_MUCH",
             "PRESENT_PERFECT_CONT"
         ],
         "ua": "Як довго він спить зараз?",

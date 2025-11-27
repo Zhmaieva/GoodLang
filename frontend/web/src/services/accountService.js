@@ -21,10 +21,7 @@ export async function getToken() {
 }
 
 /* todo:
-- fix level progress estimation logic
 - add weights to favour more recent results in global analytics
 - add weights to favour more recent results in training director
 - mobile page
-
-- update rules dictionary
  */

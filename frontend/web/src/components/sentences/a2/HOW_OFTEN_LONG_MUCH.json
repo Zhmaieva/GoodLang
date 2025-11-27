@@ -586,7 +586,7 @@
   },
 
   {
-    "rules": ["HOW_OФTEN_LONG_MUCH", "PRESENT_PERFECT_CONT"],
+    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT_CONT"],
     "ua": "Як довго він спить зараз?",
     "en": ["How long has he been sleeping?"]
   },
