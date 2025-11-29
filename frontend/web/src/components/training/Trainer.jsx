@@ -123,10 +123,12 @@ export default function Trainer({
                         ruleToSend = lowestAcc.rule;
 
                     } else if (rnd < 90 && below75.length > 0) {
-                        // 30% random among <75%
-                        const pick = below75[Math.floor(Math.random() * below75.length)];
-                        ruleToSend = pick.rule;
-
+                        // // 30% random among <75%
+                        // const pick = below75[Math.floor(Math.random() * below75.length)];
+                        // ruleToSend = pick.rule;
+                        // 30% random with a few data
+                        ruleToSend = stats.filter(r => r.attemptsLast7Days <= 4)
+                            [Math.floor(Math.random() * noAttempts.length)].rule;
                     } else {
                         // 10% any rule
                         const pick = stats[Math.floor(Math.random() * stats.length)];

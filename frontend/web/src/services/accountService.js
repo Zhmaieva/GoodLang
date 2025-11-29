@@ -21,7 +21,5 @@ export async function getToken() {
 }
 
 /* todo:
-- add weights to favour more recent results in global analytics
-- add weights to favour more recent results in training director
 - mobile page
  */

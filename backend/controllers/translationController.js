@@ -87,6 +87,7 @@ export const translationsController = {
                     skip: newSkip
                 });
             }  catch (e) {
+                console.log(e);
                 next(e);
             }
         });

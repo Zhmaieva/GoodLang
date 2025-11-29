@@ -152,9 +152,41 @@ function toPercent(score) {
 
 export function averageAccuracyPercent(items) {
     if (!items.length) return 0;
-    const sum = items.reduce((acc, x) => acc + toPercent(x.score), 0);
-    return Math.round((sum / items.length) * 100) / 100;
+
+    const now = Date.now();
+
+    // thresholds
+    const MS2W  = 14 * 24 * 60 * 60 * 1000;
+    const MS1M  = 30 * 24 * 60 * 60 * 1000;
+    const MS3M  = 90 * 24 * 60 * 60 * 1000;
+
+    let weightedSum = 0;
+    let weightTotal = 0;
+
+    for (const x of items) {
+        if (!x?.date) continue;
+
+        const age = now - new Date(x.date).getTime();
+        const score = toPercent(x.score);
+
+        let w = 1; // default
+
+        if (age > MS3M) w = 0.1;
+        else if (age > MS1M) w = 0.25;
+        else if (age > MS2W) w = 0.5;
+        else w = 1;
+
+        weightedSum += score * w;
+        weightTotal += w;
+    }
+
+    if (weightTotal === 0) return 0;
+
+    const avg = weightedSum / weightTotal;
+
+    return Math.round(avg * 100) / 100;
 }
+
 function latestDateISO(items) {
     if (!items.length) return null;
     const ts = items
@@ -218,6 +250,17 @@ export function getAllStatistics() {
         return lvls[0] || null;
     };
 
+    const now = Date.now();
+    const MS7 = 7 * 24 * 60 * 60 * 1000;
+
+    const attemptsLast7DaysForRule = (ruleId) =>
+        allAnswers.filter(a =>
+            a.rule === ruleId &&
+            a.date &&
+            now - new Date(a.date).getTime() <= MS7
+        );
+
+
     return ruleIds.map((ruleId) => {
         const attempts = attemptsForRule(ruleId);
         const attemptsNumber = attempts.length;
@@ -234,12 +277,11 @@ export function getAllStatistics() {
             levelName,                                            // alias for display
             accuracy,                                             // 0 if no records
             attemptsNumber,
-            lastAttemptDate,                                      // ISO or null
+            lastAttemptDate,
+            attemptsLast7Days: attemptsLast7DaysForRule(ruleId),
             status: statusFor(accuracy, attemptsNumber),
         };
-    })
-        // (optional) sort by label
-        .sort((a, b) => String(a.ruleName).localeCompare(String(b.ruleName)));
+    }).sort((a, b) => String(a.ruleName).localeCompare(String(b.ruleName)));
 }
 
 

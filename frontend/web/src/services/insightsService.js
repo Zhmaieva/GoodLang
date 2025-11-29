@@ -100,8 +100,6 @@ function getWeightedAccuracyProgress() {
 
     return {
         weightedGrowth: weighted,
-        hasWeekData: lastWeek.length > 0,
-        has3WeekData: last3Weeks.length > 0
     };
 }
 
@@ -109,7 +107,7 @@ export function rawEstimate() {
     const accuracy = getWeightedAccuracyProgress();
     if (!accuracy) return null;
 
-    const { weightedGrowth, hasWeekData, has3WeekData } = accuracy;
+    const { weightedGrowth } = accuracy;
     const answers = getAnswers();
     if (!answers.length) return null;
 
@@ -200,13 +198,21 @@ export function estimateTimeToNextLevelText() {
     } else if (d < 7) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
-        text = `за ${fmt} ${pluralDays(fmt)}`;
+        text = `${fmt} ${pluralDays(fmt)}`;
 
         // точно 7 → "за тиждень"
     } else if (d === 7) {
         text = "тиждень";
-
         // >7 → округлюємо тижні догори
+    }
+    else if (d % 7 === 0) {
+        text = `${d / 7} тижнів`;
+        // >7 → округлюємо тижні догори
+    }
+    else if (d < 60) {
+        const fraction = d - Math.floor(d);
+        const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
+        text = `${fmt} ${pluralDays(fmt)}`;
     } else {
         const weeks = Math.ceil(d / 7);
         text = `приблизно ${weeks} ${pluralWeeks(weeks)}`;
