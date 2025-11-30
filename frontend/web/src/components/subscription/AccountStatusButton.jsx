@@ -55,24 +55,6 @@ export default function AccountStatusButton({ theme, mobile }) {
         }
     }
 
-    const styles = {
-        logoMobile: size => ({
-            flex: "0 0 auto",        // НЕ СТИСКАЄТЬСЯ
-            width: size,
-            height: size,
-            borderRadius: 12,
-            background: theme.accent,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontWeight: 800,
-            fontSize: size * 0.45,
-            boxShadow: `0 2px 0 ${theme.accentDark}`,
-            flexDirection: "column",
-        }),
-    }
-
     // --- LevelSwitch-style button ---
     const btnStyle = (() => {
         // map to same semantic colors
@@ -85,17 +67,17 @@ export default function AccountStatusButton({ theme, mobile }) {
         let shadow = theme.accentDark;
         let color = theme.text;
 
-        if (isPaid) {
+        if (isPaid && !mobile) {
             background = theme.green;
             border = theme.greenDark;
             shadow = theme.greenDark;
             color = "#fff";
-        } else if (isAttention) {
+        } else if (isAttention && !mobile) {
             background = "#fff";
             border = theme.accent;
             shadow = theme.accentDark;
             color = theme.accent;
-        } else if (isFree) {
+        } else if (isFree || mobile) {
             background = theme.accent;
             color = "#fff";
             shadow = theme.accentDark;
@@ -115,26 +97,18 @@ export default function AccountStatusButton({ theme, mobile }) {
             border: `2px solid ${border}`,
             boxShadow: `2px 2px 0 ${shadow}`,
 
-            transform: hover ? "translateY(1px)" : "none",
-            transition: "transform 120ms ease",
-            opacity: account?.status ? 1 : 0.65,
-            display: isFree ? "none" : "flex",
+            // transform: hover ? "translateY(1px)" : "none",
+            // transition: "transform 120ms ease",
+            // opacity: account?.status ? 1 : 0.65,
+            // display: isFree ? "none" : "flex",
+
+            justifyContent: "center",
         };
     })();
 
     return (
-        mobile ?
-            <div style={styles.logoMobile(48)}>
-                <div>GL</div>
-                { account?.status !== "free" &&
-                    <div style={{fontSize: 9}}>
-                        Преміум
-                    </div>
-                }
-            </div>
-            :
             <>
-                {account?.status && (
+                {!mobile && account?.status && (
                     <div
                         style={btnStyle}
                         onMouseEnter={() => setHover(true)}
@@ -143,6 +117,18 @@ export default function AccountStatusButton({ theme, mobile }) {
                     >
                         {account?.status === "paid" && "Преміум"}
                         {account?.status === "attention" && "Преміум закінчується"}
+                        {account?.status === "free" && "Купити преміум"}
+                    </div>
+                )}
+
+                {mobile && account?.status && (
+                    <div
+                        style={btnStyle}
+                        onMouseEnter={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                        onClick={handleClick}
+                    >
+                        {account?.status !== "free" && "Деталі підписки"}
                         {account?.status === "free" && "Купити преміум"}
                     </div>
                 )}

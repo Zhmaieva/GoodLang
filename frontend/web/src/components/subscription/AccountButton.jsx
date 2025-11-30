@@ -90,7 +90,7 @@ export default function AccountButton({ theme, mobile }) {
                 {account?.status !== 'free' && "Аккаунт"}
             </button>}
 
-            <LoginModal theme={theme} account={account} open={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
+            <LoginModal mobile={mobile} theme={theme} account={account} open={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
         </>
     );
 }

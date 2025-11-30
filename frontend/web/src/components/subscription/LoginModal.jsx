@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import LimitModal from "../subscription/LimitModal.jsx";
 import LoginForm from "./LoginForm.jsx";
+import AccountStatusButton from "./AccountStatusButton.jsx";
 
-export default function LoginModal({ theme, open, onClose, account, forceLogin = false }) {
+export default function LoginModal({ mobile, theme, open, onClose, account, forceLogin = false }) {
     const [loginMode, setLoginMode] = useState(false);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
 
@@ -47,19 +48,21 @@ export default function LoginModal({ theme, open, onClose, account, forceLogin =
 
     const outlineButton = {
         appearance: "none",
-        padding: "12px 20px",
+        padding: "10px 16px",
         fontWeight: 800,
-        fontSize: "1rem",
+        fontSize: 14,
         lineHeight: 1,
         borderRadius: 999,
+        cursor: "pointer",
+
         background: "#fffdf8",
         color: theme.text,
         border: `2px solid ${theme.accent}`,
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
-        cursor: "pointer",
-        marginTop: 16,
-        transition: "transform 120ms ease",
+
+        justifyContent: "center",
     };
+
 
     const textButton = {
         background: "transparent",
@@ -148,7 +151,8 @@ export default function LoginModal({ theme, open, onClose, account, forceLogin =
                             </>
                         )}
 
-                        <div style={{display: "flex", justifyContent: "space-between", flexDirection: "column"}}>
+                        <div style={{display: "flex", gap: "12px", justifyContent: "space-between", flexDirection: "column"}}>
+                            {mobile && <AccountStatusButton mobile theme={theme} />}
                             {/* Login / switch account */}
                             <button
                                 style={outlineButton}

@@ -29,18 +29,23 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
 
     // LevelSwitch-style small button
     const manageBtnStyle = {
+        appearance: "none",
+        padding: "10px 16px",
+        fontWeight: 800,
+        fontSize: 14,
+        lineHeight: 1,
+        borderRadius: 999,
+        cursor: "pointer",
+
         background: theme.accent,
         border: `2px solid ${theme.accent}`,
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
-
         color: "white",
-        padding: "12px 26px",
-        borderRadius: theme.radius,
-        cursor: "pointer",
-        fontSize: "1.1rem",
-        fontWeight: 700,
-        marginTop: 20
+
+        justifyContent: "center",
     };
+
+
 
     const closeBtnStyle = {
         appearance: "none",
@@ -56,8 +61,6 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
 
         cursor: "pointer",
-        marginTop: 20,
-        marginBottom: 6,
         transition: "transform 120ms ease",
     };
 
@@ -91,6 +94,7 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                 maxWidth: 480,
                 textAlign: "center",
                 boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                gap: "12px"
             }}>
                 <h2 style={{ marginBottom: 16, color: theme.text, fontSize: "1.7rem", fontWeight: 800 }}>
                     {titleMap[status]}
@@ -124,7 +128,7 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                     </ul>
                 )}
 
-                <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+                <div style={{display: "flex", marginTop: "12px", flexDirection: "column", gap: "12px", justifyContent: "space-between"}}>
                     {(status === "paid" || status === "attention") && (
                         <button
                             style={manageBtnStyle}
