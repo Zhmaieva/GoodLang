@@ -1,37 +1,58 @@
+import { useState, useEffect } from "react";
 import { statusOf } from "../pages/analyticsLogic.js";
 
 export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick }) {
+
     const LEVEL_MAP = {
-        A1: { label: "Початківець", percent: 33 },
-        A2: { label: "Середній", percent: 66 },
-        B1: { label: "Середній", percent: 66 },
-        B2: { label: "Просунутий", percent: 100 },
+        A1: { label: "Початківець" },
+        A2: { label: "Середній" },
+        B1: { label: "Середній" },
+        B2: { label: "Просунутий" },
+    };
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const onResize = () => setIsMobile(window.innerWidth < 893);
+        onResize();
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
+    const truncate = {
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis"
     };
 
     return (
-        <div className="table" aria-live="polite" style={{height:'100%'}}>
-            <div className="thead">
-                <div>#</div>
-                <div>Правило</div>
-                <div>Точність</div>
-                <div>Спроби</div>
-                <div>Остання практика</div>
-                <div className="col-last">Статус</div>
-            </div>
+        <div className="table" style={{ height: "100%" }} aria-live="polite">
 
-            {/* NEW SCROLL WRAPPER */}
+            {/* DESKTOP HEADERS — залишаємо */}
+            {!isMobile && (
+                <div className="thead">
+                    <div>#</div>
+                    <div>Правило</div>
+                    <div>Точність</div>
+                    <div>Спроби</div>
+                    <div>Остання практика</div>
+                    <div className="col-last">Статус</div>
+                </div>
+            )}
+
             <div
                 style={{
                     height: "100%",
                     overflowY: "auto",
-                    WebkitOverflowScrolling: "touch", // smooth momentum on iOS
-                    paddingBottom: 36 // або більше, залежно від висоти рядка
+                    WebkitOverflowScrolling: "touch",
+                    paddingBottom: 36,
                 }}
             >
                 <div id="tbody">
                     {rows.map((r, idx) => {
                         const a = r.accuracy;
-                        let st = statusOf(r);
+                        const st = statusOf(r);
+
                         const barColor =
                             r.status === "needs practice"
                                 ? "#ef476f"
@@ -39,29 +60,81 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick })
                                     ? "#ffd166"
                                     : "#4ba36e";
 
+                        /* ---------------- MOBILE CARD ---------------- */
+                        if (isMobile) {
+                            return (
+                                <div
+                                    key={r.ruleName}
+                                    onClick={() => onRowClick(r)}
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        gap: 6,
+                                        padding: "18px 14px 10px 14px",
+                                        borderBottom: "1px solid rgba(0,0,0,0.1)",
+                                        cursor: "pointer",
+                                        textAlign: "left"
+                                    }}
+                                >
+
+
+                                    <div
+                                        style={{
+                                            fontWeight: 600,
+                                            fontSize: 18,
+                                            ...truncate
+                                        }}
+                                    >
+                                        {r.ruleName}
+                                    </div>
+
+
+                                    {/* ACCURACY + BAR */}
+                                    <div style={{marginTop: 4, maxWidth: '200px'}}>
+                                        <strong>{a}%</strong>
+                                        <div className="bar" aria-label="bar">
+                                            <i style={{
+                                                width: `${a}%`,
+                                                background: barColor
+                                            }}/>
+                                        </div>
+                                    </div>
+
+                                    {/* LEVEL */}
+                                    <div style={{fontSize: 13, opacity: 0.7}}>
+                                        Рівень: {LEVEL_MAP[r.level]?.label}
+                                    </div>
+                                    {/* ATTEMPTS */}
+                                    <div style={{fontSize: 13, opacity: 0.7}}>
+                                        Спроби: {r.attemptsNumber}
+                                    </div>
+                                    {/* ATTEMPTS */}
+                                    <div style={{fontSize: 13, opacity: 0.7}}>
+                                        Oстання практика: {fmtDate(r.lastAttemptDate)}
+                                    </div>
+
+                                </div>
+                            );
+                        }
+
+                        /* ---------------- DESKTOP ROW ---------------- */
                         return (
                             <div
                                 className="trow"
-                                onClick={() => onRowClick(r)}
                                 key={r.ruleName}
+                                onClick={() => onRowClick(r)}
                             >
                                 <div>{idx + 1}</div>
                                 <div>
                                     <div className="rule-name">{r.ruleName}</div>
                                     <div className="sub">
-                                        Рівень: {
-                                        LEVEL_MAP[
-                                            Object.keys(LEVEL_MAP).find(x => x === r.level)
-                                            ]?.label
-                                    }
+                                        Рівень: {LEVEL_MAP[r.level]?.label}
                                     </div>
                                 </div>
                                 <div>
-                                    <div style={{display: "flex", alignItems: "center", gap: 8}}>
-                                        <strong>{a}%</strong>
-                                    </div>
-                                    <div className="bar" aria-label="Прогрес">
-                                        <i style={{width: `${a}%`, background: barColor}}/>
+                                    <strong>{a}%</strong>
+                                    <div className="bar">
+                                        <i style={{ width: `${a}%`, background: barColor }} />
                                     </div>
                                 </div>
                                 <div>{r.attemptsNumber}</div>
@@ -75,6 +148,5 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick })
                 </div>
             </div>
         </div>
-
     );
 }

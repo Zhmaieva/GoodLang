@@ -1,18 +1,15 @@
-import React, { useMemo, useState } from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {
-    SAMPLE_RULES,
     seedWordsMap,
     computeKPIs,
     computeVocab,
     statusOf,
     pct,
     fmtDate,
-    fmtDateEnShort,
     getSmartQueue,
 } from "./analyticsLogic";
 import "./analytics.css";
 
-import AnalyticsHeader from "../AnalyticsHeader";
 import KPIGrid from "../KPIGrid";
 import FiltersBar from "../FiltersBar";
 import RulesTable from "../training/RulesTable.jsx";
@@ -23,6 +20,7 @@ import {useNavigate} from "react-router-dom";
 import {getAllStatistics, inferUserLevel} from "../../services/dataService.js";
 import {GrammarRule, LEVEL_RULES, RULE_LABELS} from "../../utils/rules.js";
 import AppShell from "../AppShell.jsx";
+import BrandHeader from "../BrandHeader.jsx";
 
 export default function AnalyticsPage({theme}) {
     // ----- State (mirrors your script) -----
@@ -32,6 +30,17 @@ export default function AnalyticsPage({theme}) {
     const [showWeakOnly, setShowWeakOnly] = useState(false);
     const [query, setQuery] = useState("");
     const [queue, setQueue] = useState([]);
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 893);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 893);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
 
     // ----- Derived -----
     const filteredRules = useMemo(() => {
@@ -89,7 +98,7 @@ export default function AnalyticsPage({theme}) {
     return (
         <AppShell theme={theme}>
             <div style={{height: "100vh"}}>
-                <AnalyticsHeader onBack={handlePracticeClick} onExport={onExportJSON} />
+                <BrandHeader theme={theme} title={"Аналітика GoodLang"} subtitle={"Огляд прогресу за правилами та словами: що вже засвоєно, а що варто потренувати."} onBack={handlePracticeClick} onExport={onExportJSON} />
                 <KPIGrid
                     accuracy={kpis.accuracy}
                     attempts={kpis.totalAttempts}

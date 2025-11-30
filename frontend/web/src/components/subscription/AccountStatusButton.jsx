@@ -5,7 +5,7 @@ import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginForm from "./LoginForm.jsx";
 import LoginModal from "./LoginModal.jsx";
 
-export default function AccountStatusButton({ theme }) {
+export default function AccountStatusButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
     const [hover, setHover] = useState(false);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
@@ -53,6 +53,24 @@ export default function AccountStatusButton({ theme }) {
         } else {
             setStatusModalOpen(true);
         }
+    }
+
+    const styles = {
+        logoMobile: size => ({
+            flex: "0 0 auto",        // НЕ СТИСКАЄТЬСЯ
+            width: size,
+            height: size,
+            borderRadius: 12,
+            background: theme.accent,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            fontWeight: 800,
+            fontSize: size * 0.45,
+            boxShadow: `0 2px 0 ${theme.accentDark}`,
+            flexDirection: "column",
+        }),
     }
 
     // --- LevelSwitch-style button ---
@@ -105,39 +123,50 @@ export default function AccountStatusButton({ theme }) {
     })();
 
     return (
-        <>
-            {account?.status && (
-                <div
-                    style={btnStyle}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                    onClick={handleClick}
-                >
-                    {account?.status === "paid" && "Преміум"}
-                    {account?.status === "attention" && "Преміум закінчується"}
-                    {account?.status === "free" && "Купити преміум"}
-                </div>
-            )}
+        mobile ?
+            <div style={styles.logoMobile(48)}>
+                <div>GL</div>
+                { account?.status !== "free" &&
+                    <div style={{fontSize: 9}}>
+                        Преміум
+                    </div>
+                }
+            </div>
+            :
+            <>
+                {account?.status && (
+                    <div
+                        style={btnStyle}
+                        onMouseEnter={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                        onClick={handleClick}
+                    >
+                        {account?.status === "paid" && "Преміум"}
+                        {account?.status === "attention" && "Преміум закінчується"}
+                        {account?.status === "free" && "Купити преміум"}
+                    </div>
+                )}
 
-            <LimitModal
-                isLimitReached={false}
-                theme={theme}
-                open={limitModalOpen}
-                onClose={() => setLimitModalOpen(false)}
-            />
+                <LimitModal
+                    isLimitReached={false}
+                    theme={theme}
+                    open={limitModalOpen}
+                    onClose={() => setLimitModalOpen(false)}
+                />
 
-            <AccountStatusModal
-                theme={theme}
-                open={statusModalOpen}
-                onClose={() => setStatusModalOpen(false)}
-                status={account?.status}
-            />
+                <AccountStatusModal
+                    theme={theme}
+                    open={statusModalOpen}
+                    onClose={() => setStatusModalOpen(false)}
+                    status={account?.status}
+                />
 
-            {
-                loginModalOpen &&
-                <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
-            }
+                {
+                    loginModalOpen &&
+                    <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen}
+                                onClose={() => setLoginModalOpen(false)}/>
+                }
 
-        </>
+            </>
     );
 }

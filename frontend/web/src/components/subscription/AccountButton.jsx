@@ -3,10 +3,11 @@ import LoginModal from "./LoginModal.jsx";
 import { callAccountInfoApi } from "../../services/api.js";
 import {syncWithServer} from "../../services/dataService.js";
 
-export default function AccountButton({ theme }) {
+export default function AccountButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
     const [hover, setHover] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         loadAccountInfo();
@@ -22,6 +23,7 @@ export default function AccountButton({ theme }) {
             console.error("Failed to load account info", e);
             setAccount(null); // user not logged in
         }
+        setIsLoading(false);
     }
 
     function handleClick() {
@@ -45,9 +47,28 @@ export default function AccountButton({ theme }) {
         transition: "transform 120ms ease",
     };
 
+    const btnStyleMobile = {
+        appearance: "none",
+        padding: mobile ? "10px 14px" : "10px 16px",
+        fontWeight: 800,
+        fontSize: 14,
+        width: "90px",
+        lineHeight: .3,
+        borderRadius: 999,
+        cursor: "pointer",
+        background: account?.email && account?.status === 'paid' ? theme.green : theme.accent,
+        color: "#fff",
+        border: `2px solid ${account?.email && account?.status === 'paid' ? theme.greenDark : theme.accent}`,
+        boxShadow: `2px 2px 0 ${account?.email && account?.status === 'paid' ? theme.greenDark : theme.accentDark}`,
+        transform: hover ? "translateY(1px)" : "none",
+        transition: "transform 120ms ease",
+    };
+
     return (
-        <>
-            <button
+        isLoading
+        ? <></>
+        : <>
+            {!mobile && <button
                 style={btnStyle}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
@@ -56,7 +77,18 @@ export default function AccountButton({ theme }) {
                 {account?.email && account?.status === 'free' && `⚠️ ${account?.email}`}
                 {!account?.email && account?.status === 'free' && "⚠️ Увімкнути синхронізацію"}
                 {account?.status !== 'free' && account?.email}
-            </button>
+            </button>}
+
+            {mobile && <button
+                style={btnStyleMobile}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                onClick={handleClick}
+            >
+                {account?.email && account?.status === 'free' && `Аккаунт`}
+                {!account?.email && account?.status === 'free' && "Увійти"}
+                {account?.status !== 'free' && "Аккаунт"}
+            </button>}
 
             <LoginModal theme={theme} account={account} open={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
         </>

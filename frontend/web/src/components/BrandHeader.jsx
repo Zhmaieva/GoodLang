@@ -1,34 +1,90 @@
 import React from "react";
 
+import "./pages/analytics.css";
+
 export default function BrandHeader({ theme, title, subtitle, right }) {
     const wrap = {
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "end",
+        alignItems: "center",
         gap: 16,
         borderBottom: `3px solid ${theme.accent}`,
         paddingBottom: 12,
         marginBottom: 20,
+        flexWrap: "wrap",
+
+        /* ✔ На мобільних — кнопка падає вниз */
+        rowGap: 12,
     };
-    const brand = { display: "flex", alignItems: "center", gap: 12 };
-    const logo = {
-        width: 48, height: 48, borderRadius: 12, background: theme.accent,
-        display: "flex", alignItems: "center", justifyContent: "center",
-        color: "#fff", fontWeight: 800
+
+    const leftWrap = {
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        flex: "1 1 auto",
+        minWidth: 0,
     };
-    const h1 = { margin: 0, fontSize: 28, color: theme.accentDark, letterSpacing: ".02em" };
-    const sub = { color: theme.muted, fontSize: 14 };
+
+    const logo = (size) => ({
+        flex: "0 0 auto",        // НЕ СТИСКАЄТЬСЯ
+        width: size,
+        height: size,
+        borderRadius: 12,
+        background: theme.accent,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#fff",
+        fontWeight: 800,
+        fontSize: size * 0.45,
+        boxShadow: `0 2px 0 ${theme.accentDark}`,
+    });
+
+    const titleBox = {
+        display: "flex",
+        flexDirection: "column",
+        minWidth: 0,
+    };
+
+    const h1 = {
+        margin: 0,
+        color: theme.accentDark,
+        letterSpacing: ".02em",
+        fontSize: "clamp(18px, 4vw, 28px)",
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    };
+
+    const sub = {
+        color: theme.muted,
+        fontSize: "clamp(12px, 2.8vw, 14px)",
+    };
+
+    const rightWrap = {
+        flexShrink: 0,
+
+        /* На мобільних — повна ширина */
+        width: "100%",
+        display: "flex",
+        justifyContent: "flex-start",  // кнопка під заголовком
+    };
 
     return (
         <header style={wrap}>
-            <div style={brand}>
-                <div style={logo}>GL</div>
-                <div>
+            <div style={leftWrap}>
+                <div style={logo(64)}>GL</div>
+
+                <div style={titleBox}>
                     <h1 style={h1}>{title}</h1>
                     <div style={sub}>{subtitle}</div>
                 </div>
             </div>
-            {right}
+
+            <nav className="actions">
+                <button className="btn secondary" onClick={()=>{history.back()}}>← Тренування</button>
+                {/*<button className="btn" onClick={onExport}>Роздрукувати результати</button>*/}
+            </nav>
         </header>
     );
 }

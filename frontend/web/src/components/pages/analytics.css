@@ -1,3 +1,70 @@
+.brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 3px solid;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+.left-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+h1 {
+    margin: 0;
+    letter-spacing: 0.02em;
+    font-size: clamp(18px, 4vw, 28px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subtitle {
+    font-size: clamp(12px, 2.8vw, 14px);
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 893px) {
+    .actions {
+        width: 100% !important;
+        justify-content: end; /* кнопка під заголовком */
+    }
+}
+
+@media (min-width: 893px) {
+    .actions {
+        width: auto;
+        justify-content: flex-end; /* кнопка справа */
+    }
+}
+
+
 :root{
     --bg:#fff3df; --accent:#ff6138; --accent-dark:#d74e2a; --green:#4ba36e; --blue:#3a6ea5; --text:#3a2a1d; --muted:#a47856; --radius:20px;
 }

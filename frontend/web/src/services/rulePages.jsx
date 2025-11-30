@@ -2,7 +2,7 @@ export const RULE_PAGE_TO_BE = {
     id: "TO_BE",
     title: "To be (am / is / are)",
     subtitle:
-        "Стиль Essential Grammar in Use: просто, з прикладами і мінімумом термінів",
+        "Вивчення правила",
 
     sections: [
         {

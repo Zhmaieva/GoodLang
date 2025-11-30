@@ -154,7 +154,7 @@ export default function LoginModal({ theme, open, onClose, account, forceLogin =
                                 style={outlineButton}
                                 onClick={() => setLoginMode(true)}
                             >
-                                {account.email ? "Увійти в інший профіль" : "Увійти або зареєструватися"}
+                                {account.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
                             </button>
                         </div>
                     </>

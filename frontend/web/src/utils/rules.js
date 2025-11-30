@@ -104,9 +104,7 @@ export const GrammarRule = Object.freeze({
     ADVANCED_MODALS_OF_DEDUCTION: "ADVANCED_MODALS_OF_DEDUCTION",
     COMPLEX_NOUN_PHRASES: "COMPLEX_NOUN_PHRASES",
     EMPHATIC_DO: "EMPHATIC_DO",
-    FRONTING_FOR_EMPHASIS: "FRONTING_FOR_EMPHASIS",
-    INDIRECT_SPEECH_QUESTION_FORMS: "INDIRECT_SPEECH_QUESTION_FORMS",
-    CONDITIONAL_INVERSION: "CONDITIONAL_INVERSION",
+    INDIRECT_SPEECH_QUESTION_FORMS: "INDIRECT_SPEECH_QUESTION_FORMS"
 });
 
 // Human-readable labels (exactly as in your list)
@@ -216,9 +214,7 @@ export const RULE_LABELS = Object.freeze({
     ADVANCED_MODALS_OF_DEDUCTION: "Advanced modals of deduction",
     COMPLEX_NOUN_PHRASES: "Complex noun phrases",
     EMPHATIC_DO: "Emphatic do",
-    FRONTING_FOR_EMPHASIS: "Fronting for emphasis",
     INDIRECT_SPEECH_QUESTION_FORMS: "Question forms in indirect speech",
-    CONDITIONAL_INVERSION: "Conditional inversion",
     COMPOUND_SENTENCES: "Compound sentences",
     COMPLEX_SENTENCES: "Complex sentences",
     COMPOUND_COMPLEX_SENTENCES: "Compound–complex sentences",
@@ -337,8 +333,6 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.ADVANCED_MODALS_OF_DEDUCTION,
         GrammarRule.COMPLEX_NOUN_PHRASES,
         GrammarRule.EMPHATIC_DO,
-        GrammarRule.FRONTING_FOR_EMPHASIS,
         GrammarRule.INDIRECT_SPEECH_QUESTION_FORMS,
-        GrammarRule.CONDITIONAL_INVERSION,
     ],
 });

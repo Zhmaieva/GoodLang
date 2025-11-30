@@ -7,33 +7,45 @@ import ConjugationTable from "../ConjugationTable";
 import Examples from "../Examples";
 import Note from "../Note";
 import Footer from "../Footer";
-import TaskCard from "../training/TaskCard.jsx";
-import ResultCard from "../training/ResultCard.jsx";
 import Trainer from "../training/Trainer.jsx";
 
 export default function RulePage({ data, theme }) {
-    const container = { maxWidth: 980, width: "100%", padding: "36px 20px 80px", margin: "0 auto" };
-    const grid = { display: "grid", gridTemplateColumns: "1fr", gap: 16 };
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
+
+    const container = {
+        maxWidth: 980,
+        width: "100%",
+        padding: isMobile ? "20px 14px 60px" : "36px 20px 80px",
+        margin: "0 auto"
+    };
 
     const SectionTitle = ({ children }) => (
-        <div style={{
-            margin: "4px 2px 8px",
-            fontSize: 16,
-            letterSpacing: ".05em",
-            textTransform: "uppercase",
-            fontWeight: 800
-        }}>
+        <div
+            style={{
+                margin: "4px 2px 8px",
+                fontSize: isMobile ? 15 : 16,
+                letterSpacing: ".05em",
+                textTransform: "uppercase",
+                fontWeight: 800
+            }}
+        >
             {children}
         </div>
     );
 
+    const textStyle = {
+        fontSize: isMobile ? 14 : 15,
+        lineHeight: 1.45
+    };
+
     const renderSection = (section) => {
         switch (section.type) {
+
             case "meaning":
                 return (
                     <Card theme={theme}>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <p dangerouslySetInnerHTML={{ __html: section.html }} />
+                        <p style={textStyle} dangerouslySetInnerHTML={{ __html: section.html }} />
                     </Card>
                 );
 
@@ -41,7 +53,13 @@ export default function RulePage({ data, theme }) {
                 return (
                     <Card theme={theme}>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                        <div
+                            style={{
+                                display: "flex",
+                                gap: 10,
+                                flexWrap: "wrap",
+                            }}
+                        >
                             {section.badges.map((b, i) => (
                                 <Badge key={i} theme={theme}>
                                     <span dangerouslySetInnerHTML={{ __html: b }} />
@@ -49,7 +67,14 @@ export default function RulePage({ data, theme }) {
                             ))}
                         </div>
                         {section.hint && (
-                            <p style={{ color: theme.muted, fontSize: 13 }} dangerouslySetInnerHTML={{ __html: section.hint }} />
+                            <p
+                                style={{
+                                    color: theme.muted,
+                                    fontSize: isMobile ? 12 : 13,
+                                    marginTop: 6
+                                }}
+                                dangerouslySetInnerHTML={{ __html: section.hint }}
+                            />
                         )}
                     </Card>
                 );
@@ -58,9 +83,20 @@ export default function RulePage({ data, theme }) {
                 return (
                     <Card theme={theme}>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <ConjugationTable theme={theme} headers={section.headers} rows={section.rows} />
+                        <ConjugationTable
+                            theme={theme}
+                            headers={section.headers}
+                            rows={section.rows}
+                        />
                         {section.hint && (
-                            <div style={{ color: theme.muted, fontSize: 13 }} dangerouslySetInnerHTML={{ __html: section.hint }} />
+                            <div
+                                style={{
+                                    color: theme.muted,
+                                    fontSize: isMobile ? 12 : 13,
+                                    marginTop: 6
+                                }}
+                                dangerouslySetInnerHTML={{ __html: section.hint }}
+                            />
                         )}
                     </Card>
                 );
@@ -69,7 +105,10 @@ export default function RulePage({ data, theme }) {
                 return (
                     <Card theme={theme}>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <Examples theme={theme} items={section.items} />
+                        <Examples
+                            theme={theme}
+                            items={section.items}
+                        />
                     </Card>
                 );
 
@@ -77,11 +116,13 @@ export default function RulePage({ data, theme }) {
                 return (
                     <Card theme={theme}>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <ul>
+
+                        <ul style={{ ...textStyle, paddingLeft: 20 }}>
                             {section.bullets.map((b, i) => (
                                 <li key={i} dangerouslySetInnerHTML={{ __html: b }} />
                             ))}
                         </ul>
+
                         {section.note && (
                             <Note theme={theme}>
                                 <span dangerouslySetInnerHTML={{ __html: section.note }} />
@@ -93,10 +134,8 @@ export default function RulePage({ data, theme }) {
             case "trainer":
                 return (
                     <>
-                        <div style={{ marginTop: 7 }}>
-                            <SectionTitle>{section.title}</SectionTitle>
-                        </div>
-                        <Trainer nextRule={data.id} theme={theme}/>
+                        <SectionTitle>{section.title}</SectionTitle>
+                        <Trainer nextRule={data.id} theme={theme} />
                     </>
                 );
 
@@ -108,12 +147,23 @@ export default function RulePage({ data, theme }) {
     return (
         <AppShell theme={theme}>
             <div style={container}>
-                <BrandHeader theme={theme} title={data.title} subtitle={<>{data.subtitle}</>} />
-                <section style={grid}>
+                <BrandHeader
+                    theme={theme}
+                    title={data.title}
+                    subtitle={<>{data.subtitle}</>}
+                    right={
+                        <button className="btn secondary" onClick={() => history.back()}>
+                            ← Назад
+                        </button>
+                    }
+                />
+
+                <section style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                     {data.sections.map((section, i) => (
                         <div key={i}>{renderSection(section)}</div>
                     ))}
                 </section>
+
                 <Footer theme={theme}>
                     © 2025 GoodLang • Пояснення правила <em>{data.title}</em>
                 </Footer>
