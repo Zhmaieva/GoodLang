@@ -1,883 +1,946 @@
 { "PHRASAL_VERBS_COMMON": [
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я завжди прокидаюся о сьомій ранку (use PHRASAL VERB)."],
+    "ua": ["Я завжди прокидаюся о сьомій ранку."],
     "en": [
       "I always wake up at seven in the morning.",
       "I always get up at seven in the morning."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Вона вимкнула телевізор і пішла спати (use PHRASAL VERB)."],
+    "ua": ["Вона вимкнула телевізор і пішла спати."],
     "en": [
       "She turned off the TV and went to bed.",
       "She switched off the TV and went to bed."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "IMPERATIVES"],
-    "ua": ["Будь ласка, зніми взуття перед входом (use PHRASAL VERB)."],
+    "ua": ["Будь ласка, зніми взуття перед входом."],
     "en": [
       "Please take off your shoes before coming in.",
-      "Please put off your shoes before entering."
-    ]
+      "Please take your shoes off before entering."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Вони посварилися, але потім помирилися (use PHRASAL VERB)."],
+    "ua": ["Вони посварилися, але потім помирилися."],
     "en": [
       "They argued but then made up.",
       "They fought but then made up later.",
       "They had a fight, but then they made up."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я зараз намагаюся з’ясувати, що сталося (use PHRASAL VERB)."],
+    "ua": ["Я зараз намагаюся з’ясувати, що сталося."],
     "en": [
       "I’m trying to find out what happened.",
       "I am trying to figure out what happened."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
-    "ua": ["Ми відклали зустріч на понеділок (use PHRASAL VERB)."],
+    "ua": ["Ми відклали зустріч на понеділок."],
     "en": [
       "We put off the meeting until Monday.",
       "We pushed back the meeting until Monday."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Він добре ладнає зі своїми колегами (use PHRASAL VERB)."],
+    "ua": ["Він добре ладнає зі своїми колегами."],
     "en": [
       "He gets along well with his colleagues.",
       "He gets on well with his colleagues."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
-    "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
-    "ua": ["Я натрапив на старі фотографії вчора (use PHRASAL VERB)."],
+    "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
+    "ua": ["Вчора я натрапив на старі фотографії."],
     "en": [
       "I came across some old photos yesterday.",
       "I ran across some old photos yesterday."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Ми повинні заповнити цю форму перед поїздкою (use PHRASAL VERB)."],
+    "ua": ["Ми повинні заповнити цю форму перед поїздкою."],
     "en": [
       "We have to fill out this form before the trip.",
       "We have to fill in this form before the trip."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Він придумав чудову ідею для проєкту (use PHRASAL VERB)."],
+    "ua": ["Він придумав чудову ідею для проєкту."],
     "en": [
       "He came up with a great idea for the project.",
       "He thought up a great idea for the project."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_TIME"],
-    "ua": ["Я завжди вимикаю світло перед тим, як вийти (use PHRASAL VERB)."],
+    "ua": ["Я завжди вимикаю світло перед тим, як вийти."],
     "en": [
       "I always turn off the light before I leave.",
       "I always switch off the light before I leave."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE", "PREP_DIRECTION"],
-    "ua": ["Він підняв ручку, що впала на підлогу (use PHRASAL VERB)."],
+    "ua": ["Він підняв ручку, що впала на підлогу."],
     "en": [
       "He picked up the pen that had fallen on the floor.",
       "He picked it up from the floor."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": ["Ми зараз шукаємо рішення проблеми (use PHRASAL VERB)."],
+    "ua": ["Ми зараз шукаємо рішення проблеми."],
     "en": [
       "We’re looking for a solution to the problem.",
       "We are looking for a solution to the problem."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Вона здалася після кількох спроб (use PHRASAL VERB)."],
+    "ua": ["Вона здалася після кількох спроб."],
     "en": [
       "She gave up after a few attempts.",
       "She gave it up after a few tries."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": ["Будь ласка, зменш гучність музики (use PHRASAL VERB)."],
+    "ua": ["Будь ласка, зменши гучність музики."],
     "en": [
       "Please turn down the music.",
       "Please turn the music down."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Ми випадково зустрілися в торговому центрі (use PHRASAL VERB)."],
+    "ua": ["Ми випадково зустрілися в торговому центрі."],
     "en": [
       "We ran into each other at the mall.",
       "We bumped into each other at the mall."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я завжди прибираю кімнату перед сном (use PHRASAL VERB)."],
+    "ua": ["Я завжди прибираю кімнату перед сном."],
     "en": [
       "I always tidy up my room before bed.",
       "I always clean up my room before bed."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Вони скасували зустріч через дощ (use PHRASAL VERB)."],
+    "ua": ["Вони скасували зустріч через дощ."],
     "en": [
       "They called off the meeting because of the rain.",
-      "They put off the meeting because of the rain."
-    ]
+      "They called the meeting off because of the rain."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
-    "ua": ["Не забудь надіти цю куртку (use PHRASAL VERB)."],
+    "ua": ["Не забудь надіти цю куртку."],
     "en": [
       "Don’t forget to put on this jacket.",
       "Do not forget to put on this jacket."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_TIME", "POSSESSIVE_ADJECTIVES"],
-    "ua": ["Я зараз наздоганяю роботу після відпустки (use PHRASAL VERB)."],
+    "ua": ["Я зараз наздоганяю роботу після відпустки."],
     "en": [
       "I’m catching up on work after my vacation.",
       "I am catching up on work after my vacation."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
-    "ua": ["Мені потрібно викинути це сміття (use PHRASAL VERB)."],
+    "ua": ["Мені потрібно викинути це сміття."],
     "en": [
       "I need to throw away this trash.",
       "I need to throw this trash away."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Вона вигадала чудову історію (use PHRASAL VERB)."],
+    "ua": ["Вона вигадала чудову історію."],
     "en": [
       "She made up a wonderful story.",
       "She came up with a wonderful story."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я намагаюся зменшити витрати (use PHRASAL VERB)."],
+    "ua": ["Я намагаюся зменшити витрати."],
     "en": [
       "I’m trying to cut down on expenses.",
       "I am trying to cut down on my spending."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_DIRECTION"],
-    "ua": ["Ми повернули гроші клієнту (use PHRASAL VERB)."],
+    "ua": ["Ми повернули гроші клієнту."],
     "en": [
       "We gave the money back to the customer.",
       "We paid the money back to the customer."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Він завжди відкладає важливі справи (use PHRASAL VERB)."],
+    "ua": ["Він завжди відкладає важливі справи."],
     "en": [
       "He always puts off important tasks.",
       "He always puts important things off."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES", "ARTICLES", "PREP_DIRECTION", "PREP_PLACE"],
-    "ua": ["Ми повинні повернути цю книгу до бібліотеки (use PHRASAL VERB)."],
+    "ua": ["Ми повинні повернути цю книгу до бібліотеки."],
     "en": [
-      "We have to take back this book to the library.",
-      "We need to bring back this book to the library."
-    ]
+      "We have to take this book back to the library.",
+      "We need to bring this book back to the library."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE", "PREP_DIRECTION"],
-    "ua": ["Вона підібрала листа, що впав (use PHRASAL VERB)."],
+    "ua": ["Вона підібрала листа, що впав на підлогу."],
     "en": [
       "She picked up the letter that had fallen on the floor.",
       "She picked it up from the floor."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_TIME"],
-    "ua": ["Будь ласка, вимкни комп’ютер перед тим, як підеш (use PHRASAL VERB)."],
+    "ua": ["Будь ласка, вимкни комп’ютер перед тим, як підеш."],
     "en": [
       "Please shut down the computer before you leave.",
       "Please turn off the computer before you go."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Ми зараз шукаємо нових співробітників (use PHRASAL VERB)."],
+    "ua": ["Ми зараз шукаємо нових співробітників."],
     "en": [
       "We’re looking for new employees.",
       "We are looking for new workers."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Я відмовився від цієї пропозиції (use PHRASAL VERB)."],
+    "ua": ["Я відмовився від цієї пропозиції."],
     "en": [
       "I turned down the offer.",
       "I passed up the offer."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
-    "ua": ["Він часто доглядає за своїм молодшим братом (use PHRASAL VERB)."],
+    "ua": ["Він часто доглядає за своїм молодшим братом."],
     "en": [
       "He often looks after his younger brother.",
       "He often looks out for his younger brother."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Ми відключили інтернет, щоб зекономити гроші (use PHRASAL VERB)."],
+    "ua": ["Ми відключили інтернет, щоб зекономити гроші."],
     "en": [
       "We cut off the internet to save money.",
       "We turned off the internet to save money."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
+
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я зараз чекаю, поки він передзвонить (use PHRASAL VERB)."],
+    "ua": ["Я (зараз) чекаю, поки він передзвонить."],
     "en": [
       "I’m waiting for him to call back.",
       "I am waiting for him to call me back."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME", "POSSESSIVE_ADJECTIVES"],
-    "ua": ["Ми завжди доглядаємо за нашим садом влітку (use PHRASAL VERB)."],
+    "ua": ["Ми завжди доглядаємо за нашим садом влітку."],
     "en": [
       "We always look after our garden in summer.",
       "We always look after our garden in the summer."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
-    "ua": ["Вона розірвала договір учора (use PHRASAL VERB)."],
+    "ua": ["Учора вона розірвала договір."],
     "en": [
       "She tore up the contract yesterday.",
       "She ripped up the contract yesterday."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я зазвичай прокидаюся о восьмій ранку (use PHRASAL VERB)."],
+    "ua": ["Я зазвичай прокидаюся о восьмій ранку."],
     "en": [
       "I usually wake up at eight in the morning.",
       "I usually get up at eight in the morning."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE"],
-    "ua": ["Вона забрала дітей зі школи (use PHRASAL VERB)."],
+    "ua": ["Вона забрала дітей зі школи."],
     "en": [
       "She picked up the kids from school.",
       "She picked them up from school."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": ["Ми зараз шукаємо нову квартиру (use PHRASAL VERB)."],
+    "ua": ["Ми зараз шукаємо нову квартиру."],
     "en": [
       "We’re looking for a new apartment.",
       "We are looking for a new flat."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
-    "ua": ["Він вимкнув світло перед сном (use PHRASAL VERB)."],
+    "ua": ["Він вимкнув світло перед сном."],
     "en": [
       "He turned off the light before going to bed.",
       "He switched off the light before sleeping."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": ["Будь ласка, запиши цю адресу (use PHRASAL VERB)."],
+    "ua": ["Будь ласка, запиши цю адресу."],
     "en": [
       "Please write down this address.",
       "Please note down this address."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Ми повернулися додому пізно вночі (use PHRASAL VERB)."],
+    "ua": ["Ми повернулися додому пізно вночі."],
     "en": [
       "We came back home late at night.",
       "We got back home late at night."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Вона завжди вдягає пальто, коли холодно (use PHRASAL VERB)."],
+    "ua": ["Вона завжди вдягає пальто, коли холодно."],
     "en": [
       "She always puts on her coat when it’s cold.",
       "She always puts her coat on when it’s cold."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Я натрапив на стару книжку на горищі (use PHRASAL VERB)."],
+    "ua": ["Я натрапив на стару книжку на горищі."],
     "en": [
       "I came across an old book in the attic.",
       "I ran across an old book in the attic."
-    ]
-  },
-  {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я зараз доганяю свої завдання (use PHRASAL VERB)."],
-    "en": [
-      "I’m catching up on my tasks.",
-      "I am catching up on my work."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": ["Він доглядає за своїм собакою кожен день (use PHRASAL VERB)."],
+    "ua": ["Він доглядає за своїм собакою кожен день."],
     "en": [
-      "He looks after his dog every day.",
-      "He takes care of his dog every day."
-    ]
+      "He looks after his dog every day."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Ми скасували подорож через дощ (use PHRASAL VERB)."],
+    "ua": ["Ми скасували подорож через дощ."],
     "en": [
-      "We called off the trip because of the rain.",
-      "We put off the trip because of the rain."
-    ]
+      "We called off the trip because of the rain."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
-    "ua": ["Будь ласка, віддай цей лист на пошту (use PHRASAL VERB)."],
+    "ua": ["Будь ласка, віддай цей лист на пошту."],
     "en": [
-      "Please drop off this letter at the post office.",
-      "Please take this letter to the post office."
-    ]
-  },
-  {
-    "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Вона вигадала чудову ідею (use PHRASAL VERB)."],
-    "en": [
-      "She came up with a great idea.",
-      "She thought up a great idea."
-    ]
+      "Please drop off this letter at the post office."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
-    "ua": ["Не викидай ці газети (use PHRASAL VERB)."],
+    "ua": ["Не викидай ці газети."],
     "en": [
       "Don’t throw away these newspapers.",
       "Do not throw these newspapers away."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Він часто проводить час зі своїми друзями (use PHRASAL VERB)."],
+    "ua": ["Він часто проводить час зі своїми друзями."],
     "en": [
-      "He often hangs out with his friends.",
-      "He spends time with his friends."
-    ]
+      "He often hangs out with his friends."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Я заповнив анкету на роботу (use PHRASAL VERB)."],
+    "ua": ["Я заповнив анкету на роботу."],
     "en": [
       "I filled out the job application.",
       "I filled in the job form."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я завжди прибираю кімнату вранці (use PHRASAL VERB)."],
+    "ua": ["Я завжди прибираю кімнату вранці."],
     "en": [
       "I always clean up my room in the morning.",
       "I always tidy up my room in the morning."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Вони добре ладнають між собою (use PHRASAL VERB)."],
+    "ua": ["Вони добре ладнають між собою."],
     "en": [
       "They get along well with each other.",
       "They get on well with each other."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Ми зупинилися біля кафе, щоб випити кави (use PHRASAL VERB)."],
+    "ua": ["Ми зупинилися біля кафе, щоб випити кави."],
     "en": [
       "We stopped by the café to have a coffee.",
       "We dropped by the café for a drink."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_DIRECTION"],
-    "ua": ["Я зараз прямую до школи (use PHRASAL VERB)."],
+    "ua": ["Я прямую до школи."],
     "en": [
       "I’m heading out to school.",
-      "I am heading to school."
-    ]
+      "I am heading out to school."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Будь ласка, вимкни телевізор (use PHRASAL VERB)."],
+    "ua": ["Будь ласка, вимкни телевізор."],
     "en": [
       "Please turn off the TV.",
       "Please switch off the TV."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Вона зламала свої навушники і викинула їх (use PHRASAL VERB)."],
+    "ua": ["Вона зламала свої навушники і викинула їх."],
     "en": [
       "She broke her headphones and threw them away.",
       "She broke her headphones and got rid of them."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Я доглядаю за своїм садом щонеділі (use PHRASAL VERB)."],
+    "ua": ["Я доглядаю за своїм садом щонеділі."],
     "en": [
-      "I look after my garden every Sunday.",
-      "I take care of my garden every Sunday."
-    ]
+      "I look after my garden every Sunday."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
-    "ua": ["Ми зустрілися минулого тижня і поговорили (use PHRASAL VERB)."],
+    "ua": ["Ми зустрілися минулого тижня і поговорили."],
     "en": [
       "We met up last week and talked.",
       "We caught up last week and talked."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я зараз шукаю свою зарядку (use PHRASAL VERB)."],
+    "ua": ["Я шукаю свою зарядку."],
     "en": [
       "I’m looking for my charger.",
       "I am looking for my phone charger."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я завжди вмикаю комп’ютер зранку (use PHRASAL VERB)."],
+    "ua": ["Я завжди вмикаю комп’ютер зранку."],
     "en": [
       "I always turn on the computer in the morning.",
       "I always switch on the computer in the morning."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE"],
-    "ua": ["Вона залишила ключі на столі (use PHRASAL VERB)."],
+    "ua": ["Вона поклала ключі на стіл."],
     "en": [
-      "She left her keys on the table.",
-      "She put down her keys on the table."
-    ]
+      "She put down her keys on the table.",
+      "She put her keys down on the table."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "ARTICLES", "PREP_PLACE"],
-    "ua": ["Ми зараз прибираємо на кухні (use PHRASAL VERB)."],
+    "ua": ["Ми зараз прибираємо на кухні."],
     "en": [
       "We’re cleaning up the kitchen right now.",
       "We are tidying up the kitchen right now."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Він вимкнув кондиціонер перед виходом (use PHRASAL VERB)."],
+    "ua": ["Він вимкнув кондиціонер перед виходом."],
     "en": [
       "He turned off the air conditioner before leaving.",
       "He switched off the AC before leaving."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
-    "ua": ["Не підбирай ці гроші, вони не твої (use PHRASAL VERB)."],
+    "ua": ["Не підбирай ці гроші, вони не твої."],
     "en": [
       "Don’t pick up this money, it’s not yours.",
       "Do not pick up this cash, it’s not yours."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Ми продовжили роботу після перерви (use PHRASAL VERB)."],
+    "ua": ["Ми продовжили роботу після перерви."],
     "en": [
       "We carried on working after the break.",
       "We went on working after the break."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Він завжди вимикає телевізор перед сном (use PHRASAL VERB)."],
+    "ua": ["Він завжди вимикає телевізор перед сном."],
     "en": [
       "He always turns off the TV before bed.",
       "He always switches off the TV before bed."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
+
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Я зайшов до магазину по хліб (use PHRASAL VERB)."],
+    "ua": ["Я зайшов до магазину по хліб."],
     "en": [
       "I dropped by the shop to buy some bread.",
       "I stopped by the store to buy some bread."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Вона завжди проводить час зі своєю родиною (use PHRASAL VERB)."],
+    "ua": ["Вона часто проводить час зі своєю родиною."],
     "en": [
-      "She always hangs out with her family.",
-      "She always spends time with her family."
-    ]
+      "She often hangs out with her family."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я зараз розбираю свої речі (use PHRASAL VERB)."],
+    "ua": ["Я (зараз) розбираю свої речі."],
     "en": [
       "I’m sorting out my things.",
       "I am clearing up my stuff."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Ми вимкнули світло перед виходом (use PHRASAL VERB)."],
+    "ua": ["Ми вимкнули світло перед виходом."],
     "en": [
       "We turned off the lights before we left.",
       "We switched off the lights before leaving."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE", "POSSESSIVE_ADJECTIVES"],
-    "ua": ["Він часто залишає свій телефон на столі (use PHRASAL VERB)."],
+    "ua": ["Він часто залишає свій телефон на столі."],
     "en": [
-      "He often leaves his phone on the table.",
-      "He often puts down his phone on the table."
-    ]
+      "He often puts his phone down on the table.",
+      "He often sets his phone down on the table."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
-    "ua": ["Вона прокинулася о шостій ранку (use PHRASAL VERB)."],
+    "ua": ["Вона прокинулася о шостій ранку."],
     "en": [
       "She woke up at six in the morning.",
       "She got up at six in the morning."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Я завжди підбираю іграшки після того, як граюся (use PHRASAL VERB)."],
+    "ua": ["Я завжди підбираю іграшки після того, як граюся."],
     "en": [
       "I always pick up my toys after I play.",
       "I always tidy up my toys after I play."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Ми зазвичай лягаємо спати о десятій (use PHRASAL VERB)."],
+    "ua": ["Ми зазвичай лягаємо спати о десятій."],
     "en": [
       "We usually go to bed at ten o’clock.",
       "We usually turn in at ten o’clock."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE"],
-    "ua": ["Він залишив сумку біля дверей (use PHRASAL VERB)."],
+    "ua": ["Він залишив сумку біля дверей."],
     "en": [
       "He put down his bag near the door.",
       "He set down his bag by the door."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Не вимикай світло, будь ласка (use PHRASAL VERB)."],
+    "ua": ["Не вимикай світло, будь ласка."],
     "en": [
       "Don’t turn off the light, please.",
       "Do not switch off the light, please."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я зараз готуюся до зустрічі (use PHRASAL VERB)."],
+    "ua": ["Я зараз готуюся до зустрічі."],
     "en": [
-      "I’m getting ready for the meeting.",
-      "I am preparing for the meeting."
-    ]
+      "I’m getting ready for the meeting now.",
+      "I am preparing for the meeting now."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
-    "ua": ["Ми зустрілися минулого тижня (use PHRASAL VERB)."],
+    "ua": ["Ми зустрілися минулого тижня."],
     "en": [
       "We met up last week.",
       "We caught up last week."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я завжди прибираю квартиру у вихідні (use PHRASAL VERB)."],
+    "ua": ["Я завжди прибираю квартиру у вихідні."],
     "en": [
       "I always clean up the flat on weekends.",
       "I always tidy up the apartment on weekends."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Ми зайшли до кав’ярні по каву (use PHRASAL VERB)."],
+    "ua": ["Ми зайшли до кав’ярні по каву."],
     "en": [
       "We stopped by the coffee shop for a coffee.",
-      "We dropped by the café for a drink."
-    ]
-  },
-  {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Він завжди доглядає за своїм молодшим братом (use PHRASAL VERB)."],
-    "en": [
-      "He always looks after his younger brother.",
-      "He always takes care of his younger brother."
-    ]
+      "We dropped by the cafe for a drink."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
-    "ua": ["Ми залишаємо взуття біля дверей (use PHRASAL VERB)."],
+    "ua": ["Ми залишаємо взуття біля дверей."],
     "en": [
       "We take off our shoes by the door.",
       "We leave our shoes by the door."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_DIRECTION"],
-    "ua": ["Вона вийшла з дому о восьмій (use PHRASAL VERB)."],
+    "ua": ["Вона вийшла з дому о восьмій."],
     "en": [
       "She went out of the house at eight.",
       "She headed out of the house at eight."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_DIRECTION"],
-    "ua": ["Я зараз прямую на роботу (use PHRASAL VERB)."],
+    "ua": ["Я зараз прямую на роботу."],
     "en": [
-      "I’m heading to work right now.",
-      "I am heading out to work right now."
-    ]
+      "I am heading out to work right now.",
+      "I am heading out to work now."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Я часто заходжу до сусіда на чай (use PHRASAL VERB)."],
+    "ua": ["Я часто заходжу до сусіда на чай."],
     "en": [
       "I often drop by the neighbor’s for tea.",
       "I often stop by the neighbor’s for tea."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_DIRECTION"],
-    "ua": ["Вона вийшла з кімнати без слів (use PHRASAL VERB)."],
+    "ua": ["Вона вийшла з кімнати без слів."],
     "en": [
       "She walked out of the room without a word.",
       "She went out of the room silently."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_DIRECTION"],
-    "ua": ["Ми зараз вирушаємо до школи (use PHRASAL VERB)."],
+    "ua": ["Ми зараз вирушаємо до школи."],
     "en": [
       "We’re heading to school now.",
       "We are heading out to school now."
-    ]
-  },
-  {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я зазвичай прокидаюся о сьомій ранку (use PHRASAL VERB)."],
-    "en": [
-      "I usually wake up at seven in the morning.",
-      "I usually get up at seven in the morning."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Ми відклали зустріч на наступний тиждень (use PHRASAL VERB)."],
+    "ua": ["Ми відклали зустріч на наступний тиждень."],
     "en": [
       "We put off the meeting until next week.",
       "We pushed back the meeting until next week."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Він завжди доглядає за своїм котом (use PHRASAL VERB)."],
+    "ua": ["Він завжди доглядає за своїм котом."],
     "en": [
       "He always looks after his cat.",
       "He always takes care of his cat."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Я натрапив на старі листи в ящику (use PHRASAL VERB)."],
+    "ua": ["Я натрапив на старі листи в ящику."],
     "en": [
       "I came across old letters in the drawer.",
       "I ran across old letters in the drawer."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_DIRECTION"],
-    "ua": ["Вона часто виходить на прогулянку після обіду (use PHRASAL VERB)."],
+    "ua": ["Вона часто виходить на прогулянку після обіду."],
     "en": [
       "She often goes out for a walk after lunch.",
       "She often heads out for a walk after lunch."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
-    "ua": ["Ми зустрілися минулої суботи (use PHRASAL VERB)."],
+    "ua": ["Ми зустрілися минулої суботи."],
     "en": [
       "We met up last Saturday.",
       "We caught up last Saturday."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
-    "ua": ["Я завжди залишаю взуття біля дверей (use PHRASAL VERB)."],
+    "ua": ["Я завжди залишаю взуття біля дверей."],
     "en": [
       "I always take off my shoes by the door.",
       "I always leave my shoes by the door."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Він відключив інтернет на вихідні (use PHRASAL VERB)."],
+    "ua": ["Він відключив інтернет на вихідні."],
     "en": [
       "He cut off the internet for the weekend.",
       "He turned off the internet for the weekend."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Не забудь заповнити анкету (use PHRASAL VERB)."],
+    "ua": ["Не забудь заповнити анкету."],
     "en": [
       "Don’t forget to fill out the form.",
       "Do not forget to fill in the form."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Ми зупинилися біля ресторану на обід (use PHRASAL VERB)."],
+    "ua": ["Ми зупинилися біля ресторану на обід."],
     "en": [
       "We stopped by the restaurant for lunch.",
       "We dropped by the restaurant for lunch."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
-    "ua": ["Я зараз розбираю документи (use PHRASAL VERB)."],
+    "ua": ["Я зараз розбираю документи."],
     "en": [
-      "I’m sorting out my documents.",
-      "I am clearing up my paperwork."
-    ]
+      "I’m sorting out my documents now.",
+      "I am clearing up my paperwork now.",
+      "I’m sorting out my documents right now.",
+      "I am clearing up my paperwork right now."
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Вона завжди підбирає сміття на пляжі (use PHRASAL VERB)."],
+    "ua": ["Вона завжди підбирає сміття на пляжі."],
     "en": [
       "She always picks up trash on the beach.",
       "She always cleans up trash on the beach."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Я придумав гарне рішення (use PHRASAL VERB)."],
+    "ua": ["Я придумав гарне рішення."],
     "en": [
       "I came up with a good solution.",
       "I thought up a good solution."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
-    "ua": ["Не викидай ці коробки (use PHRASAL VERB)."],
+    "ua": ["Не викидай ці коробки."],
     "en": [
       "Don’t throw away these boxes.",
       "Do not throw these boxes away."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Ми з’ясували причину проблеми (use PHRASAL VERB)."],
+    "ua": ["Ми з’ясували причину проблеми."],
     "en": [
       "We found out the cause of the problem.",
       "We figured out the reason for the issue."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": ["Я прибираю свою кімнату щосуботи (use PHRASAL VERB)."],
+    "ua": ["Я прибираю свою кімнату щосуботи."],
     "en": [
       "I clean up my room every Saturday.",
       "I tidy up my room every Saturday."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Він завжди повертає книги вчасно (use PHRASAL VERB)."],
+    "ua": ["Він завжди повертає книги вчасно."],
     "en": [
       "He always gives back books on time.",
       "He always brings back books on time."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_DIRECTION"],
-    "ua": ["Вона вийшла з офісу о п’ятій (use PHRASAL VERB)."],
+    "ua": ["Вона вийшла з офісу о п’ятій."],
     "en": [
       "She went out of the office at five.",
       "She headed out of the office at five."
-    ]
-  },
-  {
-    "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_DIRECTION"],
-    "ua": ["Я зараз пряму до магазину (use PHRASAL VERB)."],
-    "en": [
-      "I’m heading to the store.",
-      "I am heading out to the shop."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
-    "ua": ["Я доглядаю за своїм садом кожного літа (use PHRASAL VERB)."],
+    "ua": ["Я доглядаю за своїм садом кожного літа."],
     "en": [
       "I look after my garden every summer.",
       "I take care of my garden every summer."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
-    "ua": ["Вони помирилися після сварки (use PHRASAL VERB)."],
+    "ua": ["Вони помирилися після сварки."],
     "en": [
       "They made up after the argument.",
       "They patched things up after the fight."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Будь ласка, вимкни світло перед виходом (use PHRASAL VERB)."],
+    "ua": ["Будь ласка, вимкни світло перед виходом."],
     "en": [
       "Please turn off the light before you leave.",
       "Please switch off the light before you go."
-    ]
+    ],
+    "hint": "use PHRASAL VERB"
   }
 ] }

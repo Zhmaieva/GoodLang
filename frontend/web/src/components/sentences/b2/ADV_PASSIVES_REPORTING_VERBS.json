@@ -1,884 +1,931 @@
 { "ADV_PASSIVES_REPORTING_VERBS": [
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що він живе у Лондоні (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що він живе у Лондоні.",
     "en": [
       "He is said to live in London.",
       "It is said that he lives in London."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Повідомляють, що зустріч відбудеться завтра (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що зустріч відбудеться завтра.",
     "en": [
       "The meeting is reported to take place tomorrow.",
       "It is reported that the meeting will take place tomorrow."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Вважається, що вона має добру освіту (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що вона має добру освіту.",
     "en": [
       "She is believed to have a good education.",
       "It is believed that she has a good education."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що проєкт буде завершено наступного місяця (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що проєкт буде завершено наступного місяця.",
     "en": [
       "The project is expected to be completed next month.",
       "It is expected that the project will be completed next month."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Кажуть, що вони мешкають у Варшаві (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вони мешкають у Варшаві.",
     "en": [
       "They are said to live in Warsaw.",
       "It is said that they live in Warsaw."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що компанія збільшила свій прибуток (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що компанія збільшила свій прибуток.",
     "en": [
       "The company is reported to have increased its profits.",
       "It is reported that the company has increased its profits."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що він був одним з найкращих акторів свого часу (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що він був одним з найкращих акторів свого часу.",
     "en": [
       "He is said to have been one of the best actors of his time.",
       "It is said that he was one of the best actors of his time."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Вважається, що ця книга дуже цікава (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що ця книга дуже цікава.",
     "en": [
       "The book is thought to be very interesting.",
       "It is thought that the book is very interesting."
-    ]
+    ],
+    "hint": "use “... thought to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Очікується, що команда поїде до Іспанії на тренування (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що команда поїде до Іспанії на тренування.",
     "en": [
       "The team is expected to travel to Spain for training.",
       "It is expected that the team will travel to Spain for training."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Кажуть, що актор знявся у новому фільмі (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що актор знявся у новому фільмі.",
     "en": [
       "The actor is said to have appeared in a new movie.",
       "It is said that the actor has appeared in a new movie.",
       "The actor is said to have appeared in a new film.",
       "It is said that the actor has appeared in a new film."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що вона виграла головну нагороду (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вона виграла головну нагороду.",
     "en": [
       "She is said to have won the main prize.",
       "It is said that she won the main prize."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Повідомляють, що подію буде проведено наступного тижня (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що подію буде проведено наступного тижня.",
     "en": [
       "The event is reported to be held next week.",
       "It is reported that the event will be held next week."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Вважається, що цей фільм має глибокий зміст (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що цей фільм має глибокий зміст.",
     "en": [
       "The film is believed to have a deep meaning.",
       "It is believed that the film has a deep meaning."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що будівництво буде завершене у грудні (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що будівництво буде завершене у грудні.",
     "en": [
       "The construction is expected to be finished in December.",
       "It is expected that the construction will be finished in December."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Кажуть, що співак мешкає у Парижі (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що співак мешкає у Парижі.",
     "en": [
       "The singer is said to live in Paris.",
       "It is said that the singer lives in Paris."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що уряд змінив свою політику (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що уряд змінив свою політику.",
     "en": [
       "The government is reported to have changed its policy.",
       "It is reported that the government has changed its policy."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що команда добре підготовлена (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що команда добре підготовлена.",
     "en": [
       "The team is believed to be well-prepared.",
       "It is believed that the team is well-prepared."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Кажуть, що цей фільм дуже довгий (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що цей фільм дуже довгий.",
     "en": [
       "The movie is said to be very long.",
       "It is said that the movie is very long."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Очікується, що президент поїде до Італії з офіційним візитом (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що президент поїде до Італії з офіційним візитом.",
     "en": [
       "The president is expected to travel to Italy on an official visit.",
       "It is expected that the president will travel to Italy on an official visit."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Кажуть, що учень написав чудове есе (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що учень написав чудове есе.",
     "en": [
       "The student is said to have written an excellent essay.",
       "It is said that the student has written an excellent essay."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що він є найкращим лікарем у місті (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що він є найкращим лікарем у місті.",
     "en": [
       "He is believed to be the best doctor in the city.",
       "It is believed that he is the best doctor in the city."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Повідомляють, що концерт розпочнеться о сьомій (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що концерт розпочнеться о сьомій.",
     "en": [
       "The concert is reported to start at seven.",
       "It is reported that the concert will start at seven."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що новий закон буде прийнято завтра (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що новий закон буде прийнято завтра.",
     "en": [
       "The new law is expected to be passed tomorrow.",
       "It is expected that the new law will be passed tomorrow."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Кажуть, що письменник мешкає у невеликому містечку (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що письменник мешкає у невеликому містечку.",
     "en": [
       "The writer is said to live in a small town.",
       "It is said that the writer lives in a small town."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що компанія збільшила свої прибутки у два рази (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що компанія збільшила свої прибутки у два рази.",
     "en": [
       "The company is reported to have doubled its profits.",
       "It is reported that the company has doubled its profits."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Вважається, що це завдання занадто складне (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що це завдання занадто складне.",
     "en": [
       "The task is thought to be too difficult.",
       "It is thought that the task is too difficult."
-    ]
+    ],
+    "hint": "use “... thought to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Кажуть, що актор знявся у новому серіалі (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що цей актор знявся у новому серіалі.",
     "en": [
       "The actor is said to have appeared in a new series.",
       "It is said that the actor has appeared in a new series."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Очікується, що делегація відправиться до США (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що делегація відправиться до США.",
     "en": [
       "The delegation is expected to leave for the USA.",
       "It is expected that the delegation will leave for the USA."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Повідомляють, що виставку проведуть у музеї (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що виставку проведуть у музеї.",
     "en": [
       "The exhibition is reported to be held in the museum.",
       "It is reported that the exhibition will be held in the museum."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що вона отримала нагороду за найкращу роль (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вона отримала нагороду за найкращу роль.",
     "en": [
       "She is said to have received an award for best role.",
       "It is said that she received an award for best role."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Очікується, що прем'єра відбудеться наступного місяця (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що прем'єра відбудеться наступного місяця.",
     "en": [
       "The premiere is expected to take place next month.",
       "It is expected that the premiere will take place next month."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Вважається, що компанія втратила частину своїх інвестицій (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що компанія втратила частину своїх інвестицій.",
     "en": [
       "The company is believed to have lost part of its investments.",
       "It is believed that the company has lost part of its investments."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Кажуть, що рішення було прийнято минулого тижня (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що рішення було прийнято минулого тижня.",
     "en": [
       "The decision is said to have been made last week.",
       "It is said that the decision was made last week."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Повідомляють, що вчений відкрив новий вид рослин (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що вчений відкрив новий вид рослин.",
     "en": [
       "The scientist is reported to have discovered a new species of plants.",
       "It is reported that the scientist has discovered a new species of plants."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що він допоміг багатьом людям (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що він допоміг багатьом людям.",
     "en": [
       "He is believed to have helped many people.",
       "It is believed that he has helped many people."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що вона залишила країну минулого року (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вона залишила країну минулого року.",
     "en": [
       "She is said to have left the country last year.",
       "It is said that she left the country last year."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що новий міст буде відкрито у квітні (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що новий міст буде відкрито у квітні.",
     "en": [
       "The new bridge is expected to be opened in April.",
       "It is expected that the new bridge will be opened in April."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Повідомляють, що конференцію проведуть у Берліні (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що конференцію проведуть у Берліні.",
     "en": [
       "The conference is reported to be held in Berlin.",
       "It is reported that the conference will be held in Berlin."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Кажуть, що делегація вирушить до Японії наступного тижня (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що делегація вирушить до Японії наступного тижня.",
     "en": [
       "The delegation is said to leave for Japan next week.",
       "It is said that the delegation will leave for Japan next week."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Вважається, що ця пісня стала хітом року (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що ця пісня стала хітом року.",
     "en": [
       "The song is believed to have become the hit of the year.",
       "It is believed that the song has become the hit of the year."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Очікується, що економіка почне відновлюватися скоро (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що економіка почне відновлюватися скоро.",
     "en": [
       "The economy is expected to start recovering soon.",
       "It is expected that the economy will start recovering soon."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Кажуть, що компанія змінила свої плани (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що компанія змінила свої плани.",
     "en": [
       "The company is said to have changed its plans.",
       "It is said that the company has changed its plans."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Вважається, що цей проєкт дуже важливий для країни (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що цей проєкт дуже важливий для країни.",
     "en": [
       "The project is thought to be very important for the country.",
       "It is thought that the project is very important for the country."
-    ]
+    ],
+    "hint": "use “... thought to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Повідомляють, що фільм вийде цього літа (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що фільм вийде цього літа.",
     "en": [
       "The movie is reported to be released this summer.",
       "It is reported that the movie will be released this summer."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Кажуть, що актор отримав Оскар за головну роль (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що актор отримав Оскар за головну роль.",
     "en": [
       "The actor is said to have won an Oscar for the leading role.",
       "It is said that the actor has won an Oscar for the leading role."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що вона допомагає безпритульним тваринам (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що вона допомагає безпритульним тваринам.",
     "en": [
       "She is believed to help homeless animals.",
       "It is believed that she helps homeless animals."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що нову програму буде запущено найближчим часом (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що нову програму буде запущено найближчим часом.",
     "en": [
       "The new program is expected to be launched soon.",
       "It is expected that the new program will be launched soon."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Повідомляють, що конференцію перенесли до Лондона (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що конференцію перенесли до Лондона.",
     "en": [
       "The conference is reported to have been moved to London.",
       "It is reported that the conference has been moved to London."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Кажуть, що компанія розширює свою діяльність (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що компанія розширює свою діяльність.",
     "en": [
       "The company is said to be expanding its operations.",
       "It is said that the company is expanding its operations."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Вважається, що цей фільм занадто довгий (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що цей фільм занадто довгий.",
     "en": [
       "The film is thought to be too long.",
       "It is thought that the film is too long."
-    ]
+    ],
+    "hint": "use “... thought to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Очікується, що міністр поїде до США на переговори (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що міністр поїде до США на переговори.",
     "en": [
       "The minister is expected to travel to the USA for negotiations.",
       "It is expected that the minister will travel to the USA for negotiations."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Повідомляють, що учень написав чудову роботу (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що учень написав чудову роботу.",
     "en": [
       "The student is reported to have written an excellent paper.",
       "It is reported that the student has written an excellent paper."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що вона добре володіє англійською мовою (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вона добре володіє англійською мовою.",
     "en": [
       "She is said to speak English well.",
       "It is said that she speaks English well."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Очікується, що результати будуть опубліковані завтра (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що результати будуть опубліковані завтра.",
     "en": [
       "The results are expected to be published tomorrow.",
       "It is expected that the results will be published tomorrow."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Вважається, що будівля була збудована у XVIII столітті (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що будівля була збудована у XVIII столітті.",
     "en": [
       "The building is believed to have been built in the 18th century.",
       "It is believed that the building was built in the 18th century."
-    ]
-  },
-  {
-    "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що компанія збільшила свій капітал (use ADVANCED PASSIVES)."],
-    "en": [
-      "The company is reported to have increased its capital.",
-      "It is reported that the company has increased its capital."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що вони вже завершили проєкт (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вони вже завершили проєкт.",
     "en": [
       "They are said to have finished the project.",
       "It is said that they have finished the project."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Вважається, що це питання дуже складне (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що це питання дуже складне.",
     "en": [
       "The issue is thought to be very complicated.",
       "It is thought that the issue is very complicated."
-    ]
+    ],
+    "hint": "use “... thought to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Очікується, що фестиваль відбудеться у центрі міста (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що фестиваль відбудеться у центрі міста.",
     "en": [
       "The festival is expected to take place in the city center.",
       "It is expected that the festival will take place in the city center."
-    ]
-  },
-  {
-    "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Повідомляють, що науковець зробив важливе відкриття (use ADVANCED PASSIVES)."],
-    "en": [
-      "The scientist is reported to have made an important discovery.",
-      "It is reported that the scientist has made an important discovery."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що вона працює над новим романом (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вона працює над новим романом.",
     "en": [
       "She is said to be working on a new novel.",
       "It is said that she is working on a new novel."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що новий стадіон буде відкрито цього літа (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що новий стадіон буде відкрито цього літа.",
     "en": [
       "The new stadium is expected to be opened this summer.",
       "It is expected that the new stadium will be opened this summer."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Повідомляють, що компанія відкриє офіс у Празі (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що компанія відкриє офіс у Празі.",
     "en": [
       "The company is reported to open an office in Prague.",
       "It is reported that the company will open an office in Prague."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Вважається, що фільм має глибокий сенс (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що фільм має глибокий сенс.",
     "en": [
       "The film is believed to have a deep meaning.",
       "It is believed that the film has a deep meaning."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Кажуть, що президент вирушить до Німеччини на переговори (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що президент вирушить до Німеччини на переговори.",
     "en": [
       "The president is said to go to Germany for negotiations.",
       "It is said that the president will go to Germany for negotiations."
-    ]
-  },
-  {
-    "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що компанія оновила свій сайт (use ADVANCED PASSIVES)."],
-    "en": [
-      "The company is reported to have updated its website.",
-      "It is reported that the company has updated its website."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що він один із найкращих архітекторів у світі (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що він один із найкращих архітекторів у світі.",
     "en": [
       "He is believed to be one of the best architects in the world.",
       "It is believed that he is one of the best architects in the world."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Кажуть, що ця історія дуже сумна (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що ця історія дуже сумна.",
     "en": [
       "The story is said to be very sad.",
       "It is said that the story is very sad."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Очікується, що зустріч розпочнеться о восьмій ранку (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що зустріч розпочнеться о восьмій ранку.",
     "en": [
       "The meeting is expected to start at eight in the morning.",
       "It is expected that the meeting will start at eight in the morning."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Повідомляють, що вчений отримав важливу премію (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що вчений отримав важливу премію.",
     "en": [
       "The scientist is reported to have received an important award.",
       "It is reported that the scientist has received an important award."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що актор знявся у десяти фільмах за останній рік (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що актор знявся у десяти фільмах за останній рік.",
     "en": [
       "The actor is believed to have appeared in ten films over the last year.",
       "It is believed that the actor has appeared in ten films over the last year."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Кажуть, що будівля була зруйнована під час бурі (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що будівля була зруйнована під час бурі.",
     "en": [
       "The building is said to have been destroyed during the storm.",
       "It is said that the building was destroyed during the storm."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Очікується, що концерт відбудеться у головному театрі міста (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що концерт відбудеться у головному театрі міста.",
     "en": [
       "The concert is expected to take place in the city’s main theatre.",
       "It is expected that the concert will take place in the city’s main theatre."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що компанія втратила частину своїх акцій (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що компанія втратила частину своїх акцій.",
     "en": [
       "The company is reported to have lost part of its shares.",
       "It is reported that the company has lost part of its shares."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Вважається, що ця вправа занадто складна для новачків (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що ця вправа занадто складна для новачків.",
     "en": [
       "The exercise is thought to be too difficult for beginners.",
       "It is thought that the exercise is too difficult for beginners."
-    ]
+    ],
+    "hint": "use “... thought to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що актриса живе у старовинному будинку біля моря (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що актриса живе у старовинному будинку біля моря.",
     "en": [
       "The actress is said to live in an old house by the sea.",
       "It is said that the actress lives in an old house by the sea."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Очікується, що команда вирушить на змагання до Канади (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що команда вирушить на змагання до Канади.",
     "en": [
       "The team is expected to travel to Canada for the competition.",
       "It is expected that the team will travel to Canada for the competition."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Повідомляють, що письменник опублікував нову книгу (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що письменник опублікував нову книгу.",
     "en": [
       "The writer is reported to have published a new book.",
       "It is reported that the writer has published a new book."
-    ]
-  },
-  {
-    "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Кажуть, що фільм з’явиться у прокаті наступного місяця (use ADVANCED PASSIVES)."],
-    "en": [
-      "The movie is said to be released next month.",
-      "It is said that the movie will be released next month."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Вважається, що компанія змінила свій головний офіс (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що компанія змінила свій головний офіс.",
     "en": [
       "The company is believed to have moved its headquarters.",
       "It is believed that the company has moved its headquarters."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Кажуть, що цей ресторан дуже популярний серед туристів (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що цей ресторан дуже популярний серед туристів.",
     "en": [
       "The restaurant is said to be very popular among tourists.",
       "It is said that the restaurant is very popular among tourists."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що школа буде відкрита восени (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що школа буде відкрита восени.",
     "en": [
       "The school is expected to be opened in the fall.",
       "It is expected that the school will be opened in the fall."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Повідомляють, що фестиваль відбудеться на головній площі (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що фестиваль відбудеться на головній площі.",
     "en": [
       "The festival is reported to take place in the main square.",
       "It is reported that the festival will take place in the main square."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що вона має великий вплив у своїй галузі (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що вона має великий вплив у своїй галузі.",
     "en": [
       "She is believed to have great influence in her field.",
       "It is believed that she has great influence in her field."
-    ]
-  },
-  {
-    "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Кажуть, що вчений зробив відкриття у галузі біології (use ADVANCED PASSIVES)."],
-    "en": [
-      "The scientist is said to have made a discovery in biology.",
-      "It is said that the scientist has made a discovery in biology."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що вона отримала підвищення на роботі (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що вона отримала підвищення на роботі.",
     "en": [
       "She is said to have been promoted at work.",
       "It is said that she was promoted at work."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що новий аеропорт буде відкритий у липні (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що новий аеропорт буде відкритий у липні.",
     "en": [
       "The new airport is expected to be opened in July.",
       "It is expected that the new airport will be opened in July."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Повідомляють, що вчитель отримав нагороду за найкраще викладання (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що вчитель отримав нагороду за найкраще викладання.",
     "en": [
       "The teacher is reported to have received an award for best teaching.",
       "It is reported that the teacher has received an award for best teaching."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Кажуть, що письменник живе у маленькому селі (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що письменник живе у маленькому селі.",
     "en": [
       "The writer is said to live in a small village.",
       "It is said that the writer lives in a small village."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Вважається, що цей курс дуже ефективний (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що цей курс дуже ефективний.",
     "en": [
       "The course is thought to be very effective.",
       "It is thought that the course is very effective."
-    ]
+    ],
+    "hint": "use “... thought to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Очікується, що делегація вирушить до Франції наступного місяця (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що делегація вирушить до Франції наступного місяця.",
     "en": [
       "The delegation is expected to travel to France next month.",
       "It is expected that the delegation will travel to France next month."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що компанія змінила свої цілі (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що компанія змінила свої цілі.",
     "en": [
       "The company is reported to have changed its goals.",
       "It is reported that the company has changed its goals."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що музикант грає у новому гурті (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що музикант грає у новому гурті.",
     "en": [
       "The musician is believed to play in a new band.",
       "It is believed that the musician plays in a new band."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Кажуть, що результати будуть оголошені завтра (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що результати будуть оголошені завтра.",
     "en": [
       "The results are said to be announced tomorrow.",
       "It is said that the results will be announced tomorrow."
-    ]
-  },
-  {
-    "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Очікується, що фільм отримає премію (use ADVANCED PASSIVES)."],
-    "en": [
-      "The film is expected to win an award.",
-      "It is expected that the film will win an award."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Повідомляють, що учень склав усі іспити успішно (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що учень склав усі іспити успішно.",
     "en": [
       "The student is reported to have passed all exams successfully.",
       "It is reported that the student has passed all exams successfully."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Кажуть, що музей був відкритий минулого року (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що музей був відкритий минулого року.",
     "en": [
       "The museum is said to have been opened last year.",
       "It is said that the museum was opened last year."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Вважається, що компанія відкриє новий офіс у центрі міста (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що компанія відкриє новий офіс у центрі міста.",
     "en": [
       "The company is believed to open a new office in the city center.",
       "It is believed that the company will open a new office in the city center."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Кажуть, що цей продукт дуже корисний для здоров’я (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що цей продукт дуже корисний для здоров’я.",
     "en": [
       "The product is said to be very good for health.",
       "It is said that the product is very good for health."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
-    "ua": ["Очікується, що спортсмени поїдуть на змагання до Польщі (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що спортсмени поїдуть на змагання до Польщі.",
     "en": [
       "The athletes are expected to go to Poland for the competition.",
       "It is expected that the athletes will go to Poland for the competition."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Повідомляють, що фірма збільшила свої доходи (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що фірма збільшила свої доходи.",
     "en": [
       "The firm is reported to have increased its income.",
       "It is reported that the firm has increased its income."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що письменник створює новий роман (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що письменник створює новий роман.",
     "en": [
       "The writer is believed to be working on a new novel.",
       "It is believed that the writer is working on a new novel."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
-    "ua": ["Кажуть, що подія відбудеться наступного тижня (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що подія відбудеться наступного тижня.",
     "en": [
       "The event is said to take place next week.",
       "It is said that the event will take place next week."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Очікується, що нову лінію метро буде відкрито цього року (use ADVANCED PASSIVES)."],
+    "ua": "Очікується, що нову лінію метро буде відкрито цього року.",
     "en": [
       "The new metro line is expected to be opened this year.",
       "It is expected that the new metro line will be opened this year."
-    ]
-  },
-  {
-    "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
-    "ua": ["Повідомляють, що виставку проведуть у галереї мистецтв (use ADVANCED PASSIVES)."],
-    "en": [
-      "The exhibition is reported to be held in the art gallery.",
-      "It is reported that the exhibition will be held in the art gallery."
-    ]
+    ],
+    "hint": "use “... expected to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Кажуть, що він має великий досвід у цій сфері (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що він має великий досвід у цій сфері.",
     "en": [
       "He is said to have great experience in this field.",
       "It is said that he has great experience in this field."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
-    "ua": ["Вважається, що цей проєкт має велике значення (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що цей проєкт має велике значення.",
     "en": [
       "The project is believed to have great importance.",
       "It is believed that the project has great importance."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
-    "ua": ["Повідомляють, що лекція була дуже цікавою (use ADVANCED PASSIVES)."],
+    "ua": "Повідомляють, що лекція була дуже цікавою.",
     "en": [
       "The lecture is reported to have been very interesting.",
       "It is reported that the lecture was very interesting."
-    ]
+    ],
+    "hint": "use “... reported to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
-    "ua": ["Кажуть, що компанія збільшила свій капітал на 20% (use ADVANCED PASSIVES)."],
+    "ua": "Кажуть, що компанія збільшила свій капітал на 20%.",
     "en": [
       "The company is said to have increased its capital by 20%.",
       "It is said that the company has increased its capital by 20%."
-    ]
+    ],
+    "hint": "use “... said to/that …”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
-    "ua": ["Вважається, що уряд розробляє нову реформу (use ADVANCED PASSIVES)."],
+    "ua": "Вважається, що уряд розробляє нову реформу.",
     "en": [
       "The government is believed to be developing a new reform.",
       "It is believed that the government is developing a new reform."
-    ]
+    ],
+    "hint": "use “... believed to/that …”"
   }
 ] }

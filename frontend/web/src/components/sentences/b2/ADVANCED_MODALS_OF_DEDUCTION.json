@@ -661,11 +661,6 @@
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PERSONAL_PRONOUNS"],
-    "ua": "Я міг забути закрити вікно? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could I have forgotten to close the window?", "Might I have left it open?"]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PERSONAL_PRONOUNS"],
     "ua": "Я не міг залишити документи вдома. (use MODAL + HAVE + PAST PARTICIPLE)",
     "en": ["I can’t have left the documents at home.", "I couldn’t have forgotten them."]
   },

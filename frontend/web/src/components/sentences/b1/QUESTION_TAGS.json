@@ -1,6 +1,6 @@
 { "QUESTION_TAGS": [
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти любиш каву, чи не так?",
     "en": [
       "You like coffee, don’t you?",
@@ -8,7 +8,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він працює тут, чи не так?",
     "en": [
       "He works here, doesn’t he?",
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона не спізнилася, чи не так?",
     "en": [
       "She isn’t late, is she?",
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони не живуть тут, чи не так?",
     "en": [
       "They don’t live here, do they?",
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти не знаєш його, чи не так?",
     "en": [
       "You don’t know him, do you?",
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона не любить шоколад, чи не так?",
     "en": [
       "She doesn’t like chocolate, does she?",
@@ -137,7 +137,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми запізнилися, чи не так?",
     "en": [
       "We’re late, aren’t we?",
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він не розуміє, чи не так?",
     "en": [
       "He doesn’t understand, does he?",
@@ -257,7 +257,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона не знає відповіді, чи не так?",
     "en": [
       "She doesn’t know the answer, does she?",
@@ -289,7 +289,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він живе поруч, чи не так?",
     "en": [
       "He lives nearby, doesn’t he?",
@@ -305,7 +305,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони розуміють, чи не так?",
     "en": [
       "They understand, don’t they?",
@@ -321,7 +321,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона працює з нами, чи не так?",
     "en": [
       "She works with us, doesn’t she?",
@@ -361,7 +361,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він не поспішає, чи не так?",
     "en": [
       "He isn’t in a hurry, is he?",
@@ -377,7 +377,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти не згоден, чи не так?",
     "en": [
       "You don’t agree, do you?",
@@ -393,7 +393,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він не відчуває себе добре, чи не так?",
     "en": [
       "He doesn’t feel well, does he?",
@@ -465,7 +465,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти добре розумієш, чи не так?",
     "en": [
       "You understand well, don’t you?",
@@ -473,7 +473,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він не проти допомогти, правда?",
     "en": [
       "He doesn’t mind helping, does he?",
@@ -521,7 +521,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Він ніколи не бреше, правда?",
     "en": [
       "He never lies, does he?",
@@ -529,7 +529,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Ти інколи забуваєш ключі, чи не так?",
     "en": [
       "You sometimes forget your keys, don’t you?",
@@ -537,7 +537,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми завжди вчимося з помилок, чи не так?",
     "en": [
       "We always learn from mistakes, don’t we?",
@@ -545,7 +545,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони рідко скаржаться, правда?",
     "en": [
       "They rarely complain, do they?",
@@ -553,7 +553,7 @@
     ]
   },
   {
-    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["QUESTION_TAGS", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Вона часто бігає вранці, чи не так?",
     "en": [
       "She often runs in the morning, doesn’t she?",

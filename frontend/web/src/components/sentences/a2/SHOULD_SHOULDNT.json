@@ -37,8 +37,8 @@
     },
     {
       "rules": ["SHOULD_SHOULDNT", "TOO_VERY"],
-      "ua": "Тобі варто носити теплий одяг узимку тут. (use SHOULD)",
-      "en": ["You should wear warm clothes in winter here."]
+      "ua": "Тобі варто носити теплий одяг узимку. (use SHOULD)",
+      "en": ["You should wear warm clothes in winter."]
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],

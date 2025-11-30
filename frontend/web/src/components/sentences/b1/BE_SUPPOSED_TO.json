@@ -1,134 +1,562 @@
-{ "BE_SUPPOSED_TO": [
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти повинен зробити домашнє завдання (use BE SUPPOSED TO).", "en": ["You’re supposed to do your homework.", "You are supposed to do your homework."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми повинні зустрітися о сьомій (use BE SUPPOSED TO).", "en": ["We’re supposed to meet at seven.", "We are supposed to meet at seven."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут не можна палити (use BE SUPPOSED TO).", "en": ["You’re not supposed to smoke here.", "You are not supposed to smoke here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він мав приїхати вчора (use BE SUPPOSED TO).", "en": ["He was supposed to arrive yesterday.", "He was supposed to come yesterday."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Це мав бути сюрприз (use BE SUPPOSED TO).", "en": ["It was supposed to be a surprise.", "It was supposed to be surprising."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона має бути на роботі зараз (use BE SUPPOSED TO).", "en": ["She’s supposed to be at work now.", "She is supposed to be at work now."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вони повинні допомогти нам (use BE SUPPOSED TO).", "en": ["They’re supposed to help us.", "They are supposed to help us."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні тут бути (use BE SUPPOSED TO).", "en": ["We’re not supposed to be here.", "We are not supposed to be here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти мав зателефонувати мені (use BE SUPPOSED TO).", "en": ["You were supposed to call me.", "You were supposed to phone me."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Кажуть, цей фільм має бути дуже гарним (use BE SUPPOSED TO).", "en": ["This movie is supposed to be really good.", "The film is supposed to be really good."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я не повинен це робити (use BE SUPPOSED TO).", "en": ["I’m not supposed to do that.", "I am not supposed to do that."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона мала зустріти нас біля входу (use BE SUPPOSED TO).", "en": ["She was supposed to meet us at the entrance.", "She was supposed to meet us by the entrance."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми повинні прийти вчасно (use BE SUPPOSED TO).", "en": ["We’re supposed to arrive on time.", "We are supposed to arrive on time."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут слід мати чисті руки (use BE SUPPOSED TO).", "en": ["You’re supposed to have clean hands here.", "You are supposed to have clean hands here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він не мав знати про це (use BE SUPPOSED TO).", "en": ["He wasn’t supposed to know about it.", "He was not supposed to know about it."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти мав принести документи (use BE SUPPOSED TO).", "en": ["You were supposed to bring the documents.", "You were supposed to bring the papers."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні говорити про це (use BE SUPPOSED TO).", "en": ["We’re not supposed to talk about it.", "We are not supposed to talk about it."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Цей ресторан має бути дуже популярним (use BE SUPPOSED TO).", "en": ["This restaurant is supposed to be very popular.", "It’s supposed to be a very popular restaurant."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона мала надіслати листа (use BE SUPPOSED TO).", "en": ["She was supposed to send the email.", "She was supposed to email it."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут треба носити маску (use BE SUPPOSED TO).", "en": ["You’re supposed to wear a mask here.", "You are supposed to wear a mask here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він не повинен був казати цього (use BE SUPPOSED TO).", "en": ["He wasn’t supposed to say that.", "He was not supposed to say that."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми повинні бути там о дев’ятій (use BE SUPPOSED TO).", "en": ["We’re supposed to be there at nine.", "We are supposed to be there at nine."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти маєш закінчити роботу сьогодні (use BE SUPPOSED TO).", "en": ["You’re supposed to finish the work today.", "You are supposed to finish the work today."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона не повинна відповідати на це (use BE SUPPOSED TO).", "en": ["She’s not supposed to answer that.", "She is not supposed to answer that."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Фільм мав бути смішним (use BE SUPPOSED TO).", "en": ["The movie was supposed to be funny.", "The film was supposed to be funny."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не мали це бачити (use BE SUPPOSED TO).", "en": ["We weren’t supposed to see that.", "We were not supposed to see that."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти повинен бути вдома до десятої (use BE SUPPOSED TO).", "en": ["You’re supposed to be home by ten.", "You are supposed to be home by ten."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він мав залишитися після роботи (use BE SUPPOSED TO).", "en": ["He was supposed to stay after work.", "He was supposed to stay late."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вони повинні дотримуватися правил (use BE SUPPOSED TO).", "en": ["They’re supposed to follow the rules.", "They are supposed to follow the rules."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я не маю нікому розповідати (use BE SUPPOSED TO).", "en": ["I’m not supposed to tell anyone.", "I am not supposed to tell anyone."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Автобус мав приїхати десять хвилин тому (use BE SUPPOSED TO).", "en": ["The bus was supposed to arrive ten minutes ago.", "The bus was supposed to be here ten minutes ago."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона мала зателефонувати мені (use BE SUPPOSED TO).", "en": ["She was supposed to call me.", "She was supposed to ring me."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо допомогти новим учням (use BE SUPPOSED TO).", "en": ["We’re supposed to help new students.", "We are supposed to help new students."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти не повинен сюди заходити (use BE SUPPOSED TO).", "en": ["You’re not supposed to go in there.", "You are not supposed to go in there."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Кажуть, він має бути хорошим учителем (use BE SUPPOSED TO).", "en": ["He’s supposed to be a good teacher.", "He is supposed to be a good teacher."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона не мала знати цю інформацію (use BE SUPPOSED TO).", "en": ["She wasn’t supposed to know this information.", "She was not supposed to know this information."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми повинні бути готові до десятої (use BE SUPPOSED TO).", "en": ["We’re supposed to be ready by ten.", "We are supposed to be ready by ten."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він не мав це бачити (use BE SUPPOSED TO).", "en": ["He wasn’t supposed to see it.", "He was not supposed to see it."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона повинна прийти завтра (use BE SUPPOSED TO).", "en": ["She’s supposed to come here tomorrow.", "She is supposed to come here tomorrow."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не маємо відкривати цей файл (use BE SUPPOSED TO).", "en": ["We’re not supposed to open this file.", "We are not supposed to open this file."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти маєш зробити це сам (use BE SUPPOSED TO).", "en": ["You’re supposed to do it yourself.", "You are supposed to do it yourself."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Це має бути легко (use BE SUPPOSED TO).", "en": ["It’s supposed to be easy.", "It is supposed to be easy."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він мав прийти вчора, але не прийшов (use BE SUPPOSED TO).", "en": ["He was supposed to come yesterday, but he didn’t.", "He was supposed to show up yesterday, but he didn’t."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми повинні були отримати листа (use BE SUPPOSED TO).", "en": ["We were supposed to get an email.", "We were supposed to receive an email."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти не повинен торкатися цього (use BE SUPPOSED TO).", "en": ["You’re not supposed to touch that.", "You are not supposed to touch that."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона мала бути на зустрічі (use BE SUPPOSED TO).", "en": ["She was supposed to be at the meeting.", "She was supposed to attend the meeting."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Це мало бути просто (use BE SUPPOSED TO).", "en": ["It was supposed to be simple.", "It was supposed to be straightforward."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вони мають приїхати завтра (use BE SUPPOSED TO).", "en": ["They’re supposed to arrive tomorrow.", "They are supposed to arrive tomorrow."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я не мав цього знати (use BE SUPPOSED TO).", "en": ["I wasn’t supposed to know that.", "I was not supposed to know that."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Магазин мав бути відкритий (use BE SUPPOSED TO).", "en": ["This shop was supposed to be open.", "The store was supposed to be open."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо приходити сюди щопонеділка (use BE SUPPOSED TO).", "en": ["We’re supposed to come here every Monday.", "We are supposed to come here every Monday."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти не повинен їсти тут (use BE SUPPOSED TO).", "en": ["You’re not supposed to eat here.", "You are not supposed to eat here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він мав заплатити за вечерю (use BE SUPPOSED TO).", "en": ["He was supposed to pay for dinner.", "He was supposed to cover dinner."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Документ має бути готовим сьогодні (use BE SUPPOSED TO).", "en": ["This document is supposed to be ready today.", "The document is supposed to be ready today."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона мала написати звіт (use BE SUPPOSED TO).", "en": ["She was supposed to write the report.", "She was supposed to prepare the report."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні залишати двері відчиненими (use BE SUPPOSED TO).", "en": ["We’re not supposed to leave the door open.", "We are not supposed to leave the door open."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти маєш відповідати чесно (use BE SUPPOSED TO).", "en": ["You’re supposed to answer honestly.", "You are supposed to answer honestly."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він не повинен був приходити сюди (use BE SUPPOSED TO).", "en": ["He wasn’t supposed to come here.", "He was not supposed to come here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми повинні були взяти квитки онлайн (use BE SUPPOSED TO).", "en": ["We were supposed to get the tickets online.", "We were supposed to buy the tickets online."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Фільм має бути заснований на реальній історії (use BE SUPPOSED TO).", "en": ["This film is supposed to be based on a true story.", "The movie is supposed to be based on a true story."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона має бути хорошою дизайнеркою (use BE SUPPOSED TO).", "en": ["She’s supposed to be a good designer.", "She is supposed to be a good designer."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні нікому про це розповідати (use BE SUPPOSED TO).", "en": ["We’re not supposed to tell anyone about this.", "We are not supposed to tell anyone about this."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти мав мені нагадати (use BE SUPPOSED TO).", "en": ["You were supposed to remind me.", "You were supposed to give me a reminder."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він мав бути вдома до опівночі (use BE SUPPOSED TO).", "en": ["He was supposed to be home by midnight.", "He was supposed to get home by midnight."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо надіслати звіт завтра (use BE SUPPOSED TO).", "en": ["We’re supposed to send the report tomorrow.", "We are supposed to submit the report tomorrow."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона не має сюди заходити (use BE SUPPOSED TO).", "en": ["She’s not supposed to come in here.", "She is not supposed to come in here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Фільм мав бути коротшим (use BE SUPPOSED TO).", "en": ["This movie was supposed to be shorter.", "The film was supposed to be shorter."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він має бути в офісі сьогодні (use BE SUPPOSED TO).", "en": ["He’s supposed to be at the office today.", "He is supposed to be at the office today."] },
-
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні приносити телефони на урок (use BE SUPPOSED TO).", "en": ["We’re not supposed to bring phones to class.", "We are not supposed to bring phones to class."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти мав мені допомогти (use BE SUPPOSED TO).", "en": ["You were supposed to help me.", "You were supposed to give me a hand."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він не повинен був бачити цей документ (use BE SUPPOSED TO).", "en": ["He wasn’t supposed to see that document.", "He was not supposed to see that document."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо залишатися тут до кінця зустрічі (use BE SUPPOSED TO).", "en": ["We’re supposed to stay here until the meeting ends.", "We are supposed to stay here until the meeting is over."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона має підготувати презентацію (use BE SUPPOSED TO).", "en": ["She’s supposed to prepare a presentation.", "She is supposed to prepare a presentation."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Курс має тривати три місяці (use BE SUPPOSED TO).", "en": ["This course is supposed to last three months.", "The course is supposed to last three months."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вони не мали нікому розповідати (use BE SUPPOSED TO).", "en": ["They weren’t supposed to tell anyone.", "They were not supposed to tell anyone."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми мали вже виїхати (use BE SUPPOSED TO).", "en": ["We were supposed to leave by now.", "We were supposed to have left by now."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти не повинен залишати двері відчиненими (use BE SUPPOSED TO).", "en": ["You’re not supposed to leave the door open.", "You are not supposed to leave the door open."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона мала приїхати літаком (use BE SUPPOSED TO).", "en": ["She was supposed to come by plane.", "She was supposed to fly here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми повинні мати посвідчення особи (use BE SUPPOSED TO).", "en": ["We’re supposed to have ID cards.", "We are supposed to carry ID cards."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Захід мав початися о восьмій (use BE SUPPOSED TO).", "en": ["The event was supposed to start at eight.", "The event was supposed to begin at eight."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут потрібно тихо говорити (use BE SUPPOSED TO).", "en": ["You’re supposed to speak quietly here.", "You are supposed to speak quietly here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Квитки мали бути дешевшими (use BE SUPPOSED TO).", "en": ["The tickets were supposed to be cheaper.", "Tickets were supposed to be cheaper."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона має бути відповідальною за проєкт (use BE SUPPOSED TO).", "en": ["She’s supposed to be in charge of the project.", "She is supposed to be responsible for the project."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Нам не слід залишатися після десятої (use BE SUPPOSED TO).", "en": ["We’re not supposed to stay after ten.", "We are not supposed to stay past ten."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вони мають прийти раніше (use BE SUPPOSED TO).", "en": ["They’re supposed to come earlier.", "They are supposed to arrive earlier."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я маю повідомити адміністратора (use BE SUPPOSED TO).", "en": ["I’m supposed to inform the administrator.", "I am supposed to inform the admin."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут не повинні паркуватися машини (use BE SUPPOSED TO).", "en": ["Cars aren’t supposed to park here.", "Cars are not supposed to park here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Гості мають бути розсаджені до сьомої (use BE SUPPOSED TO).", "en": ["Guests are supposed to be seated by seven.", "Guests are supposed to be in their seats by seven."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я мав отримати повідомлення (use BE SUPPOSED TO).", "en": ["I was supposed to get a message.", "I was supposed to receive a message."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він має відповідати на листи протягом дня (use BE SUPPOSED TO).", "en": ["He’s supposed to reply to emails during the day.", "He is supposed to answer emails during the day."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні використовувати телефони під час іспиту (use BE SUPPOSED TO).", "en": ["We’re not supposed to use phones during the exam.", "We are not supposed to use phones in the exam."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Це має бути найкраща кімната в готелі (use BE SUPPOSED TO).", "en": ["This is supposed to be the best room in the hotel.", "It’s supposed to be the best room in the hotel."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вони мали надіслати запрошення минулого тижня (use BE SUPPOSED TO).", "en": ["They were supposed to send the invitations last week.", "They were supposed to mail the invitations last week."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ти маєш увімкнути камеру під час зустрічі (use BE SUPPOSED TO).", "en": ["You’re supposed to turn your camera on during the meeting.", "You are supposed to keep your camera on during the meeting."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона не має відповідати на особисті питання (use BE SUPPOSED TO).", "en": ["She’s not supposed to answer personal questions.", "She is not supposed to answer personal questions."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо чекати зовні (use BE SUPPOSED TO).", "en": ["We’re supposed to wait outside.", "We are supposed to wait outside."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Діти мають лягати спати о дев’ятій (use BE SUPPOSED TO).", "en": ["Children are supposed to go to bed at nine.", "Kids are supposed to go to bed at nine."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я не повинен відповідати без дозволу (use BE SUPPOSED TO).", "en": ["I’m not supposed to reply without permission.", "I am not supposed to respond without permission."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Пакунок мав бути доставлений учора (use BE SUPPOSED TO).", "en": ["The package was supposed to be delivered yesterday.", "The parcel was supposed to be delivered yesterday."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Команда має прийти раніше для підготовки (use BE SUPPOSED TO).", "en": ["The team is supposed to arrive early for setup.", "The team is supposed to come early for setup."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні виходити під час презентації (use BE SUPPOSED TO).", "en": ["We’re not supposed to leave during the presentation.", "We are not supposed to step out during the presentation."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він має бути онлайн о десятій (use BE SUPPOSED TO).", "en": ["He’s supposed to be online at ten.", "He is supposed to be online at ten."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Студенти мають здати роботи до п’ятниці (use BE SUPPOSED TO).", "en": ["Students are supposed to submit their work by Friday.", "Students are supposed to hand in their work by Friday."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я мав уже отримати відповідь (use BE SUPPOSED TO).", "en": ["I was supposed to have an answer by now.", "I was supposed to get a reply by now."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо бути тихими в бібліотеці (use BE SUPPOSED TO).", "en": ["We’re supposed to be quiet in the library.", "We are supposed to keep quiet in the library."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона має приносити бейдж щодня (use BE SUPPOSED TO).", "en": ["She’s supposed to bring her badge every day.", "She is supposed to carry her badge every day."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Відвідувачі мають зареєструватися на ресепшені (use BE SUPPOSED TO).", "en": ["Visitors are supposed to check in at reception.", "Visitors are supposed to register at the front desk."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я не повинен логінитися з особистого пристрою (use BE SUPPOSED TO).", "en": ["I’m not supposed to log in from a personal device.", "I am not supposed to log in using a personal device."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми мали закінчити раніше (use BE SUPPOSED TO).", "en": ["We were supposed to finish earlier.", "We were supposed to wrap up earlier."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він має відповідати за безпеку (use BE SUPPOSED TO).", "en": ["He’s supposed to be responsible for safety.", "He is supposed to be in charge of safety."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут не повинні залишатися речі без нагляду (use BE SUPPOSED TO).", "en": ["Items aren’t supposed to be left unattended here.", "Things are not supposed to be left unattended here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Клієнти мають підписати угоду перед початком (use BE SUPPOSED TO).", "en": ["Clients are supposed to sign the agreement before starting.", "Clients are supposed to sign the contract before starting."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я маю бути на зустрічі о другій (use BE SUPPOSED TO).", "en": ["I’m supposed to be in a meeting at two.", "I am supposed to be in a meeting at two."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні відповідати у вихідні (use BE SUPPOSED TO).", "en": ["We’re not supposed to reply on weekends.", "We are not supposed to respond on weekends."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона мала приготувати список питань (use BE SUPPOSED TO).", "en": ["She was supposed to prepare a list of questions.", "She was supposed to make a list of questions."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Команда має бути на місці о сьомій ранку (use BE SUPPOSED TO).", "en": ["The team is supposed to be on site at 7 a.m.", "The team is supposed to be onsite at 7 a.m."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Особисті електроприлади не мають тут використовуватися (use BE SUPPOSED TO).", "en": ["Personal appliances aren’t supposed to be used here.", "Personal devices are not supposed to be used here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми мали отримати оновлення вчора (use BE SUPPOSED TO).", "en": ["We were supposed to get an update yesterday.", "We were supposed to receive an update yesterday."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Він має супроводжувати гостей (use BE SUPPOSED TO).", "en": ["He’s supposed to escort the guests.", "He is supposed to accompany the guests."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Стаття мала бути опублікована минулого місяця (use BE SUPPOSED TO).", "en": ["The article was supposed to be published last month.", "The article was supposed to get published last month."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо дотримуватися черги (use BE SUPPOSED TO).", "en": ["We’re supposed to keep the line.", "We are supposed to stay in line."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут мають вимикати світло при виході (use BE SUPPOSED TO).", "en": ["You’re supposed to turn off the lights when you leave.", "You are supposed to switch off the lights when you leave."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Я не повинен ділитися цим файлом (use BE SUPPOSED TO).", "en": ["I’m not supposed to share this file.", "I am not supposed to share this file."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вони мали перевірити обладнання заздалегідь (use BE SUPPOSED TO).", "en": ["They were supposed to check the equipment in advance.", "They were supposed to test the equipment beforehand."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Відвідувачі мають залишатися у виділеній зоні (use BE SUPPOSED TO).", "en": ["Visitors are supposed to stay in the designated area.", "Visitors are supposed to remain in the designated area."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми не повинні змінювати налаштування без дозволу (use BE SUPPOSED TO).", "en": ["We’re not supposed to change settings without permission.", "We are not supposed to alter settings without permission."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Квитки мали бути підготовлені заздалегідь (use BE SUPPOSED TO).", "en": ["Tickets were supposed to be prepared in advance.", "The tickets were supposed to be prepared ahead of time."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Вона має відповідати за реєстрацію гостей (use BE SUPPOSED TO).", "en": ["She’s supposed to handle guest registration.", "She is supposed to be responsible for guest registration."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Ми маємо чекати на підтвердження (use BE SUPPOSED TO).", "en": ["We’re supposed to wait for confirmation.", "We are supposed to await confirmation."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Тут не повинні залишатися особисті речі (use BE SUPPOSED TO).", "en": ["Personal items aren’t supposed to be left here.", "Personal belongings are not supposed to be left here."] },
-  { "rules": ["BE_SUPPOSED_TO"], "ua": "Звіт мав бути надісланий до обіду (use BE SUPPOSED TO).", "en": ["The report was supposed to be sent by noon.", "The report was supposed to be emailed by noon."] }
-] }
+{
+  "BE_SUPPOSED_TO": [
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ти повинен зробити домашнє завдання.",
+      "en": ["You’re supposed to do your homework.", "You are supposed to do your homework."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Ми повинні зустрітися о сьомій.",
+      "en": ["We’re supposed to meet at seven.", "We are supposed to meet at seven."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Тут не можна палити.",
+      "en": ["You’re not supposed to smoke here.", "You are not supposed to smoke here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Він мав приїхати вчора.",
+      "en": ["He was supposed to arrive yesterday.", "He was supposed to come yesterday."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Це повинен був бути сюрприз.",
+      "en": ["It was supposed to be a surprise."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "PREP_TIME"],
+      "ua": "Вона має бути на роботі зараз.",
+      "en": ["She’s supposed to be at work now.", "She is supposed to be at work now."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Вони повинні допомогти нам.",
+      "en": ["They’re supposed to help us.", "They are supposed to help us."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Ми не повинні тут бути.",
+      "en": ["We’re not supposed to be here.", "We are not supposed to be here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ти мав зателефонувати мені.",
+      "en": ["You were supposed to call me.", "You were supposed to phone me."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Кажуть, цей фільм має бути дуже гарним.",
+      "en": ["This movie is supposed to be really good.", "The film is supposed to be really good."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Я не повинен це робити.",
+      "en": ["I’m not supposed to do that.", "I am not supposed to do that."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES", "PREP_PLACE"],
+      "ua": "Вона мала зустріти нас біля входу.",
+      "en": ["She was supposed to meet us at the entrance.", "She was supposed to meet us by the entrance."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ми повинні прийти вчасно.",
+      "en": ["We’re supposed to arrive on time.", "We are supposed to arrive on time."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Він не мав знати про це.",
+      "en": ["He wasn’t supposed to know about it.", "He was not supposed to know about it."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ти мав принести документи.",
+      "en": ["You were supposed to bring the documents.", "You were supposed to bring the papers."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ми не повинні говорити про це.",
+      "en": ["We’re not supposed to talk about it.", "We are not supposed to talk about it."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Цей ресторан має бути дуже популярним.",
+      "en": ["This restaurant is supposed to be very popular.", "It’s supposed to be a very popular restaurant."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Вона мала надіслати листа.",
+      "en": ["She was supposed to send the email.", "She was supposed to email it."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Тут треба носити маску.",
+      "en": ["You’re supposed to wear a mask here.", "You are supposed to wear a mask here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Він не повинен був казати цього.",
+      "en": ["He wasn’t supposed to say that.", "He was not supposed to say that."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ти маєш закінчити роботу сьогодні.",
+      "en": ["You’re supposed to finish the work today.", "You are supposed to finish the work today."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Вона не повинна відповідати на це.",
+      "en": ["She’s not supposed to answer that.", "She is not supposed to answer that."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Фільм мав бути смішним.",
+      "en": ["The movie was supposed to be funny.", "The film was supposed to be funny."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ми не мали це бачити.",
+      "en": ["We weren’t supposed to see that.", "We were not supposed to see that."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "PREP_TIME"],
+      "ua": "Ти повинен бути вдома до десятої.",
+      "en": ["You’re supposed to be home by ten.", "You are supposed to be home by ten."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Він мав залишитися після роботи.",
+      "en": ["He was supposed to stay after work.", "He was supposed to stay late."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Вони повинні дотримуватися правил.",
+      "en": ["They’re supposed to follow the rules.", "They are supposed to follow the rules."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Автобус мав приїхати десять хвилин тому.",
+      "en": ["The bus was supposed to arrive ten minutes ago.", "The bus was supposed to be here ten minutes ago."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Вона мала зателефонувати мені.",
+      "en": ["She was supposed to call me.", "She was supposed to ring me."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ми маємо допомогти новим учням.",
+      "en": ["We’re supposed to help new students.", "We are supposed to help new students."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ти не повинен сюди заходити.",
+      "en": ["You’re not supposed to go in there.", "You are not supposed to go in there."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Кажуть, він має бути хорошим учителем.",
+      "en": ["He’s supposed to be a good teacher.", "He is supposed to be a good teacher."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "DEMONSTRATIVES"],
+      "ua": "Вона не мала знати цю інформацію.",
+      "en": ["She wasn’t supposed to know this information.", "She was not supposed to know this information."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Ми повинні бути готові до десятої.",
+      "en": ["We’re supposed to be ready by ten.", "We are supposed to be ready by ten."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Він не мав це бачити.",
+      "en": ["He wasn’t supposed to see it.", "He was not supposed to see it."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "PREP_TIME"],
+      "ua": "Вона повинна прийти завтра.",
+      "en": ["She’s supposed to come here tomorrow.", "She is supposed to come here tomorrow."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "REFLEXIVE_PRONOUNS"],
+      "ua": "Ти маєш зробити це сам.",
+      "en": ["You’re supposed to do it yourself.", "You are supposed to do it by yourself.", "You are supposed to do it on your own."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Це має бути легко.",
+      "en": ["It’s supposed to be easy.", "It is supposed to be easy."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Він мав прийти вчора, але не прийшов.",
+      "en": ["He was supposed to come yesterday, but he didn’t.", "He was supposed to show up yesterday, but he didn’t."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ти не повинен торкатися цього.",
+      "en": ["You’re not supposed to touch that.", "You are not supposed to touch that."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "ARTICLES"],
+      "ua": "Вона мала бути на зустрічі.",
+      "en": ["She was supposed to be at the meeting.", "She was supposed to attend the meeting."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Це мало бути просто.",
+      "en": ["It was supposed to be simple.", "It was supposed to be straightforward."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Вони мають приїхати завтра.",
+      "en": ["They’re supposed to arrive tomorrow.", "They are supposed to arrive tomorrow."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Я не мав цього знати.",
+      "en": ["I wasn’t supposed to know that.", "I was not supposed to know that."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Магазин мав бути відкритий.",
+      "en": ["This shop was supposed to be open.", "The store was supposed to be open."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "PRESENT_SIMPLE_FREQ"],
+      "ua": "Ми маємо приходити сюди щопонеділка.",
+      "en": ["We’re supposed to come here every Monday.", "We are supposed to come here every Monday."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Ти не повинен їсти тут.",
+      "en": ["You’re not supposed to eat here.", "You are not supposed to eat here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Він мав заплатити за вечерю.",
+      "en": ["He was supposed to pay for dinner.", "He was supposed to cover dinner."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES", "PREP_TIME"],
+      "ua": "Документ має бути готовим сьогодні.",
+      "en": ["This document is supposed to be ready today.", "The document is supposed to be ready today."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Вона мала написати звіт.",
+      "en": ["She was supposed to write the report.", "She was supposed to prepare the report."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "ARTICLES"],
+      "ua": "Ми не повинні залишати двері відчиненими.",
+      "en": ["We’re not supposed to leave the door open.", "We are not supposed to leave the door open."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ADVERBS_OF_MANNER"],
+      "ua": "Ти маєш відповідати чесно.",
+      "en": ["You’re supposed to answer honestly.", "You are supposed to answer honestly."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Він не повинен був приходити сюди.",
+      "en": ["He wasn’t supposed to come here.", "He was not supposed to come here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "ARTICLES"],
+      "ua": "Ми не повинні приносити телефони на урок.",
+      "en": ["We’re not supposed to bring phones to class.", "We are not supposed to bring phones to class."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ти мав мені допомогти.",
+      "en": ["You were supposed to help me.", "You were supposed to give me a hand."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES", "DEMONSTRATIVES"],
+      "ua": "Курс має тривати три місяці.",
+      "en": ["This course is supposed to last three months.", "The course is supposed to last three months."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "DEMONSTRATIVES"],
+      "ua": "Вони не мали нікому розповідати.",
+      "en": ["They weren’t supposed to tell anyone.", "They were not supposed to tell anyone."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Ми мали вже виїхати.",
+      "en": ["We were supposed to leave by now.", "We were supposed to have left by now."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "ARTICLES"],
+      "ua": "Ти не повинен залишати двері відчиненими.",
+      "en": ["You’re not supposed to leave the door open.", "You are not supposed to leave the door open."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Ми повинні мати посвідчення особи.",
+      "en": ["We’re supposed to have ID cards.", "We are supposed to carry ID cards."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME", "ARTICLES"],
+      "ua": "Захід мав початися о восьмій.",
+      "en": ["The event was supposed to start at eight.", "The event was supposed to begin at eight."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ADVERBS_OF_MANNER", "PREP_PLACE"],
+      "ua": "Тут потрібно тихо говорити.",
+      "en": ["You’re supposed to speak quietly here.", "You are supposed to speak quietly here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES", "COMPARATIVES"],
+      "ua": "Квитки мали бути дешевшими.",
+      "en": ["The tickets were supposed to be cheaper.", "Tickets were supposed to be cheaper."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Вона має бути відповідальною за проєкт.",
+      "en": ["She’s supposed to be in charge of the project.", "She is supposed to be responsible for the project."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "COMPARATIVES"],
+      "ua": "Вони мають прийти раніше.",
+      "en": ["They’re supposed to come earlier.", "They are supposed to arrive earlier."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Я маю повідомити адміністратора.",
+      "en": ["I’m supposed to inform the administrator.", "I am supposed to inform the admin."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Тут не повинні паркуватися машини.",
+      "en": ["Cars aren’t supposed to park here.", "Cars are not supposed to park here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Гості мають бути розсаджені до сьомої.",
+      "en": ["Guests are supposed to be seated by seven.", "Guests are supposed to be in their seats by seven."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Я мав отримати повідомлення.",
+      "en": ["I was supposed to get a message.", "I was supposed to receive a message."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME", "ARTICLES"],
+      "ua": "Він має відповідати на листи протягом дня.",
+      "en": ["He’s supposed to reply to emails during the day.", "He is supposed to answer emails during the day."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "SUPERLATIVES", "ARTICLES", "PREP_PLACE", "DEMONSTRATIVES"],
+      "ua": "Це має бути найкраща кімната в готелі.",
+      "en": ["This is supposed to be the best room in the hotel.", "It’s supposed to be the best room in the hotel."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES", "PREP_TIME"],
+      "ua": "Вони мали надіслати запрошення минулого тижня.",
+      "en": ["They were supposed to send the invitations last week.", "They were supposed to mail the invitations last week."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME", "ARTICLES"],
+      "ua": "Ти маєш увімкнути камеру під час зустрічі.",
+      "en": ["You’re supposed to turn your camera on during the meeting.", "You are supposed to keep your camera on during the meeting."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Вона не має відповідати на особисті питання.",
+      "en": ["She’s not supposed to answer personal questions.", "She is not supposed to answer personal questions."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Діти мають лягати спати о дев’ятій.",
+      "en": ["Children are supposed to go to bed at nine.", "Kids are supposed to go to bed at nine."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Я не повинен відповідати без дозволу.",
+      "en": ["I’m not supposed to reply without permission.", "I am not supposed to respond without permission."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME", "ARTICLES"],
+      "ua": "Пакунок мав бути доставлений учора.",
+      "en": ["The package was supposed to be delivered yesterday.", "The parcel was supposed to be delivered yesterday."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Команда має прийти раніше для підготовки.",
+      "en": ["The team is supposed to arrive early for setup.", "The team is supposed to come early for setup."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "ARTICLES"],
+      "ua": "Ми маємо бути тихими в бібліотеці.",
+      "en": ["We’re supposed to be quiet in the library.", "We are supposed to keep quiet in the library."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "ARTICLES"],
+      "ua": "Відвідувачі мають зареєструватися на ресепшені.",
+      "en": ["Visitors are supposed to check in at reception.", "Visitors are supposed to register at the front desk."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES", "DEMONSTRATIVES"],
+      "ua": "Я не повинен логінитися з особистого пристрою.",
+      "en": ["I’m not supposed to log in from a personal device.", "I am not supposed to log in using a personal device."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "COMPARATIVES"],
+      "ua": "Ми мали закінчити раніше.",
+      "en": ["We were supposed to finish earlier.", "We were supposed to wrap up earlier."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "ua": "Він має відповідати за безпеку.",
+      "en": ["He’s supposed to be responsible for safety.", "He is supposed to be in charge of safety."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE"],
+      "ua": "Тут не повинні залишатися речі без нагляду.",
+      "en": ["Items aren’t supposed to be left unattended here.", "Things are not supposed to be left unattended here."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES", "BEFORE_AFTER_ING"],
+      "ua": "Клієнти мають підписати угоду перед початком.",
+      "en": ["Clients are supposed to sign the agreement before starting.", "Clients are supposed to sign the contract before starting."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME"],
+      "ua": "Ми не повинні відповідати у вихідні.",
+      "en": ["We’re not supposed to reply on weekends.", "We are not supposed to respond on weekends."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Вона мала приготувати список питань.",
+      "en": ["She was supposed to prepare a list of questions.", "She was supposed to make a list of questions."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME", "ARTICLES"],
+      "ua": "Стаття мала бути опублікована минулого місяця.",
+      "en": ["The article was supposed to be published last month.", "The article was supposed to get published last month."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Тут мають вимикати світло при виході.",
+      "en": ["You’re supposed to turn off the lights when you leave.", "You are supposed to switch off the lights when you leave."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "DEMONSTRATIVES"],
+      "ua": "Я не повинен ділитися цим файлом.",
+      "en": ["I’m not supposed to share this file.", "I am not supposed to share this file."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "ARTICLES"],
+      "ua": "Вони мали перевірити обладнання заздалегідь.",
+      "en": ["They were supposed to check the equipment in advance.", "They were supposed to test the equipment beforehand."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_PLACE", "ARTICLES"],
+      "ua": "Відвідувачі мають залишатися у виділеній зоні.",
+      "en": ["Visitors are supposed to stay in the designated area.", "Visitors are supposed to remain in the designated area."],
+      "hint": "use BE SUPPOSED TO."
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO", "PREP_TIME", "ARTICLES"],
+      "ua": "Звіт мав бути надісланий до обіду.",
+      "en": ["The report was supposed to be sent by noon.", "The report was supposed to be emailed by noon."],
+      "hint": "use BE SUPPOSED TO."
+    }
+  ]
+}

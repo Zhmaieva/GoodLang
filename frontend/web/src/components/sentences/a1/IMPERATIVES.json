@@ -6,7 +6,7 @@
       "en": ["Open the door quietly.", "Quietly open the door."]
     },
     {
-      "rules": ["IMPERATIVES", "PREP_PLACE", "COMPOUND_SENTENCES"],
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
       "ua": "Сядь за стіл і їж.",
       "en": ["Sit at the table and eat.", "Take a seat at the table and eat."]
     },
@@ -56,7 +56,7 @@
       "en": ["Take an umbrella, it’s raining.", "Grab an umbrella because it’s raining."]
     },
     {
-      "rules": ["IMPERATIVES", "SIMPLE_ADJ", "COMPOUND_SENTENCES"],
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ"],
       "ua": "Закрий вікно, холодно.",
       "en": ["Close the window, it’s cold.", "Shut the window, it’s chilly."]
     },
@@ -96,7 +96,7 @@
       "en": ["Don’t run through puddles.", "Avoid running in puddles."]
     },
     {
-      "rules": ["IMPERATIVES", "DEMONSTRATIVES", "SIMPLE_ADJ", "COMPOUND_SENTENCES"],
+      "rules": ["IMPERATIVES", "DEMONSTRATIVES", "SIMPLE_ADJ"],
       "ua": "Подивись цей фільм, він цікавий.",
       "en": ["Watch this movie, it’s interesting.", "Check out this film, it’s engaging."]
     },
@@ -261,7 +261,7 @@
       "en": ["Give me a pen, please.", "Hand me a pen, please."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "COMPOUND_SENTENCES"],
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
       "ua": "Не шуми, діти сплять.",
       "en": ["Don’t make noise, the kids are sleeping.", "Keep quiet, the children are asleep."]
     },
@@ -496,7 +496,7 @@
       "en": ["Apologize to your sister.", "Say sorry to your sister."]
     },
     {
-      "rules": ["IMPERATIVES", "TO_BE", "COMPOUND_SENTENCES"],
+      "rules": ["IMPERATIVES", "TO_BE"],
       "ua": "Будь собою і не бійся.",
       "en": ["Be yourself and don’t be afraid.", "Stay true to yourself and fear not."]
     }

@@ -5,11 +5,6 @@
     "en": ["She is good at cooking."]
   },
   {
-    "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
-    "ua": "Він добре водить машину. (use BE GOOD AT + GERUND)",
-    "en": ["He is good at driving."]
-  },
-  {
     "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "ARTICLES"],
     "ua": "Вони добре прибирають вдома. (use BE GOOD AT + GERUND)",
     "en": ["They are good at cleaning the house."]
