@@ -48,7 +48,7 @@ async function runTutor() {
             console.log("\n--- Feedback ---");
             if (result.answer_is_correct) {
                 console.log("✅ Correct!");
-                if (result.correct_answer) console.log("✔️ Model's version:", result.correct_answer);
+                if (result.correct_answer) console.log("✅ Model's version:", result.correct_answer);
 
                 // ✅ End this thread and start a brand-new random rule next loop
                 currentRule = null;

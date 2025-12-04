@@ -9,6 +9,15 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [error, setError] = useState("");
     const inputsRef = useRef([]);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const onResize = () => setIsMobile(window.innerWidth < 893);
+        onResize();
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
     const buttonStyle = {
         appearance: "none",
         padding: "10px 16px",
@@ -32,7 +41,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         border: `3px solid ${theme.accent}`,
         background: "#fffaf3",
         padding: "12px 14px",
-        fontSize: "2rem",
+        fontSize: isMobile ? "1.3rem" : "2rem",
         color: theme.text,
         textAlign: "center",
         caretColor: "grey"
@@ -40,11 +49,11 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
     const codeInputStyle = {
         ...baseInputStyle,
-        width: 48,
+        width: isMobile ? 40 : 48,
         height: 58,
         textAlign: "center",
         padding: 0,
-        fontSize: 26,
+        fontSize: isMobile ? "1.3rem" : "2rem",
     };
 
 
@@ -117,7 +126,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
             onClose();
         } catch (err) {
-            setError(err.message || "Verification failed");
+            setError("Невірний код");
         } finally {
             setLoading(false);
         }
@@ -189,12 +198,21 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
             <style>
                 {`
-        input::placeholder,
-        textarea::placeholder {
-            text-align: center;
-        }
-    `}
+                    input::placeholder,
+                    textarea::placeholder {
+                        text-align: center;
+                    }
+                `}
             </style>
+
+            {isMobile && <style>
+                {`
+                    input::placeholder,
+                    textarea::placeholder {
+                        font-size: 1.3rem
+                    }
+                `}
+            </style>}
         </div>
     );
 }
