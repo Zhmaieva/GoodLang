@@ -1,227 +1,274 @@
 { "HAVE_TO_DONT_HAVE_TO": [
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Ти маєш поставити будильник на завтра зранку (use HAVE TO / DON'T HAVE TO).",
+    "ua": "Ти маєш поставити будильник на завтра зранку.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to set the alarm for tomorrow morning."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Тобі не треба витирати пил зі стелажів сьогодні після обіду (use HAVE TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба витирати пил зі стелажів сьогодні після обіду.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to dust the shelves this afternoon."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Ти маєш приймати ліки після їжі (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш приймати ліки після їжі.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to take medicine after meals."]
   },
+
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Взимку тобі не треба косити траву (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Взимку тобі не треба косити траву.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to cut the grass in winter."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш повісити рушник після душу (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш повісити рушник після душу.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to hang the towel after showering."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Тобі не треба мити підлогу щовечора (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба мити підлогу щовечора.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to mop the floor every evening."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Ти маєш годувати кота двічі на день (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш годувати кота двічі на день.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to feed the cat twice a day."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Тобі не треба міняти постіль щотижня (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба міняти постіль щотижня.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to change the bedsheets weekly."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Ти маєш спорожнити посудомийку зранку (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш спорожнити посудомийку зранку.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to empty the dishwasher in the morning."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба пекти печиво сьогодні (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба пекти печиво сьогодні.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to bake cookies today."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш носити шкарпетки під взуттям (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш носити шкарпетки під взуттям.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to wear socks with shoes."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба пилососити килим щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба пилососити килим щодня.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to vacuum the carpet daily."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "TOO_VERY"],
-    "ua": "Ти маєш швидко зачиняти дверцята холодильника (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш швидко зачиняти дверцята холодильника.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to close the fridge door quickly."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба витирати стіл після кожного перекусу (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба витирати стіл після кожного перекусу.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to wipe the table after every snack."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ти маєш вмикати обігрівач, коли холодно (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш вмикати обігрівач, коли холодно.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to turn on the heater when it's cold."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Тобі не треба відкривати всі вікна зараз (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба відкривати всі вікна зараз.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to open all the windows now."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE", "POSSESSIVE_S"],
-    "ua": "Ти маєш класти ключі на гачок (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш класти ключі на гачок.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to put the keys on the hook."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба чистити взуття щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба чистити взуття щодня.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to polish shoes every day."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш обполіскувати чашку після кави (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш обполіскувати чашку після кави.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to rinse the cup after coffee."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
-    "ua": "Тобі не треба підмітати балкон цього тижня (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба підмітати балкон цього тижня.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to sweep the balcony this week."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
-    "ua": "Ти маєш увімкнути чайник для чаю (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш увімкнути чайник для чаю.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to plug in the kettle for tea."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба сортувати пошту негайно (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба сортувати пошту негайно.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to sort the mail right away."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
-    "ua": "Ти маєш знімати пальто біля дверей (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш знімати пальто біля дверей.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to take off your coat at the door."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба прасувати рушники (use HAVE TO / DON'T HAVE TO).",
+    "ua": "Тобі не треба прасувати рушники.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to iron the towels."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "POSSESSIVE_S"],
-    "ua": "Ти маєш поповнити дозатор мила (use HAVE TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш поповнити дозатор мила.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to refill the soap dispenser."]
   },
+
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба мити машину щомісяця (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба мити машину щомісяця.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to wash the car monthly."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Ти маєш вимикати вентилятор перед сном (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш вимикати вентилятор перед сном.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to switch off the fan before sleep."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба сьогодні впорядковувати шафу (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба сьогодні впорядковувати шафу.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to organize the closet today."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш чистити картоплю перед готуванням (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш чистити картоплю перед готуванням.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to peel the potatoes before cooking."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба витирати посуд вручну (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба витирати посуд вручну.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to dry the dishes by hand."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
-    "ua": "Ти маєш замикати велосипед надворі (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш замикати велосипед надворі.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to lock the bike outside."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Тобі не треба поливати кімнатні рослини щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба поливати кімнатні рослини щодня.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to water the indoor plants daily."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш викидати старі газети (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш викидати старі газети.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to throw away old newspapers."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Тобі не треба щодня мити дзеркало (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба щодня мити дзеркало.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to clean the mirror every morning."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш помішувати суп, поки він вариться (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш помішувати суп, поки він вариться.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to stir the soup while it cooks."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба складати ковдри щодня (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба складати ковдри щодня.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to fold blankets each day."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш заряджати електричну зубну щітку (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш заряджати електричну зубну щітку.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to charge the electric toothbrush."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба розморожувати холодильник щотижня (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба розморожувати холодильник щотижня.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to defrost the fridge weekly."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_TIME"],
-    "ua": "Ти маєш зачиняти штори на заході сонця (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш зачиняти штори на заході сонця.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to close the curtains at sunset."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш ставити молоко назад у холодильник (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш ставити молоко назад у холодильник.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to put milk back in the fridge."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба щодня змінювати сторінку календаря (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба щодня змінювати сторінку календаря.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to change the calendar page daily."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
-    "ua": "Ти маєш витирати ноги об килимок (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш витирати ноги об килимок.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to wipe your feet on the mat."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO", "PREP_PLACE"],
-    "ua": "Тобі не треба провітрювати кімнату під час дощу (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба провітрювати кімнату під час дощу.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to air the room in the rain."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Ти маєш розділяти білизну на світлу й кольорову (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Ти маєш розділяти білизну на світлу й кольорову.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You have to separate white and colored laundry."]
   },
   {
     "rules": ["HAVE_TO_DONT_HAVE_TO"],
-    "ua": "Тобі не треба витирати книжкові полиці щомісяця (use HAVE_TO / DON'T_HAVE_TO).",
+    "ua": "Тобі не треба витирати книжкові полиці щомісяця.",
+    "hint": "use HAVE TO / DON'T HAVE TO",
     "en": ["You don't have to dust the bookshelves monthly."]
   }
 ] }

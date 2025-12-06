@@ -1,1237 +1,500 @@
 { "THERE_ISNT_ARENT_ANY": [
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У шині немає повітря. (use THERE ISN'T / AREN'T ANY)",
-    "en": [
-      "There isn’t any air in the tire.",
-      "There is no air in the tire."
-    ]
-  },
-  {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У бібліотеці немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": [
-      "There aren’t any people in the library."
-    ]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На столі немає хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There is no bread on the table.", "There isn’t any bread on the table."]
+    "ua": "У бібліотеці немає людей.",
+    "en": ["There aren’t any people in the library."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У шафі немає місця. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any space in the wardrobe.", "There is no space in the wardrobe."]
+    "ua": "У шафі немає місця.",
+    "en": ["There isn’t any space in the wardrobe.", "There is no space in the wardrobe."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У чашці немає молока. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any milk in the cup.", "There is no milk in the cup."]
+    "ua": "У чашці немає молока.",
+    "en": ["There isn’t any milk in the cup.", "There is no milk in the cup."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "На зупинці немає людей.",
+    "en": ["There aren’t any people at the bus stop."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У холодильнику немає сиру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any cheese in the fridge.", "There is no cheese in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На зупинці немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people at the bus stop."]
+    "ua": "У кімнаті немає світла.",
+    "en": ["There isn’t any light in the room.", "There is no light in the room."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У кімнаті немає світла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any light in the room.", "There is no light in the room."]
+    "ua": "У холодильнику немає зелені.",
+    "en": ["There isn’t any parsley in the fridge.", "There is no parsley in the fridge."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У холодильнику немає зелені. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any parsley in the fridge.", "There is no parsley in the fridge."]
+    "ua": "У пляшці немає води.",
+    "en": ["There isn’t any water in the bottle.", "There is no water in the bottle."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У магазині немає людей.",
+    "en": ["There aren’t any people in the shop."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "На парковці немає машин.",
+    "en": ["There aren’t any cars in the parking lot."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "На столі немає комп’ютера.",
+    "en": ["There is no computer on the desk.", "There isn’t any computer on the desk."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "На столі немає хліба.",
+    "en": ["There isn’t any bread on the table.", "There is no bread on the table."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У пляшці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bottle.", "There is no water in the bottle."]
+    "ua": "У чашці немає цукру.",
+    "en": ["There isn’t any sugar in the cup.", "There is no sugar in the cup."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У черзі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in line.", "There aren’t any people in the line."]
+    "ua": "Сьогодні в школі немає дітей.",
+    "en": ["There aren’t any children at school today."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У магазині немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the shop."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У спортзалі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the gym."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На парковці немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars in the parking lot."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На столі немає комп’ютера. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There is no computer on the desk.", "There isn’t any computer on the desk."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На столі немає хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any bread on the table.", "There is no bread on the table."]
+    "ua": "У класі немає стільців.",
+    "en": ["There aren’t any chairs in the classroom."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Зараз немає часу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any time now.", "There is no time now."]
+    "ua": "У принтері немає паперу.",
+    "en": ["There isn’t any paper in the printer.", "There is no paper in the printer."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У спальні немає лампи.",
+    "en": ["There is no lamp in the bedroom.", "There isn’t any lamp in the bedroom."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У чашці немає цукру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any sugar in the cup.", "There is no sugar in the cup."]
+    "ua": "Немає часу відпочити.",
+    "en": ["There isn’t any time to rest.", "There is no time to rest."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Сьогодні в школі немає дітей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any children at school today."]
+    "ua": "На столі немає їжі.",
+    "en": ["There isn’t any food on the table.", "There is no food on the table."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У класі немає стільців. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any chairs in the classroom."]
+    "ua": "У склянці немає води.",
+    "en": ["There isn’t any water in the glass.", "There is no water in the glass."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає яблук. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any apples.", "There are no apples."]
+    "ua": "У банці немає кави.",
+    "en": ["There isn’t any coffee in the jar.", "There is no coffee in the jar."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У принтері немає паперу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any paper in the printer.", "There is no paper in the printer."]
+    "ua": "У машині немає місця.",
+    "en": ["There isn’t any space in the car.", "There is no space in the car."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У кафе немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the cafe."]
+    "ua": "У холодильнику немає яєць.",
+    "en": ["There are no eggs in the fridge.", "There aren’t any eggs in the fridge."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У спальні немає лампи. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There is no lamp in the bedroom.", "There isn’t any lamp in the bedroom."]
+    "ua": "У ванній немає дзеркала.",
+    "en": ["There is no mirror in the bathroom.", "There isn’t any mirror in the bathroom."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У вазі немає квітів.",
+    "en": ["There aren’t any flowers in the vase.", "There are no flowers in the vase."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У холодильнику немає сиру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any cheese in the fridge.", "There is no cheese in the fridge."]
+    "ua": "Не залишилося хліба.",
+    "en": ["There isn’t any bread left."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У парку немає людей.",
+    "en": ["There aren’t any people in the park."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У шафі немає одягу.",
+    "en": ["There aren’t any clothes in the wardrobe."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає часу відпочити. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any time to rest.", "There is no time to rest."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На столі немає їжі. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any food on the table.", "There is no food on the table."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У склянці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the glass.", "There is no water in the glass."]
+    "ua": "Немає нових повідомлень.",
+    "en": ["There aren’t any new messages."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У банці немає кави. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any coffee in the jar.", "There is no coffee in the jar."]
+    "ua": "Немає молока для кави.",
+    "en": ["There isn’t any milk for coffee."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Зараз у парку немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the park now."]
+    "ua": "У тесті немає відповідей.",
+    "en": ["There aren’t any answers in the test."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "Вдома немає інтернету.",
+    "en": ["There isn’t any internet at home."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У цьому лісі немає тварин.",
+    "en": ["There aren’t any animals in this forest."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У машині немає місця. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any space in the car.", "There is no space in the car."]
+    "ua": "Немає часу на обід.",
+    "en": ["There isn’t any time for lunch."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У холодильнику немає яєць. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There are no eggs in the fridge.", "There aren’t any eggs in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У ванній немає дзеркала. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There is no mirror in the bathroom.", "There isn’t any mirror in the bathroom."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У вазі немає квітів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any flowers in the vase.", "There are no flowers in the vase."]
+    "ua": "У дворі немає дерев.",
+    "en": ["There aren’t any trees in the yard."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Не залишилося хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any bread left."]
+    "ua": "Сьогодні вранці не було дзвінків.",
+    "en": ["There aren’t any calls this morning."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "На небі немає хмар.",
+    "en": ["There aren’t any clouds in the sky."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У холодильнику немає соку.",
+    "en": ["There isn’t any juice in the fridge."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У ресторані немає вільних місць.",
+    "en": ["There aren’t any free tables in the restaurant."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У банці немає печива.",
+    "en": ["There aren’t any cookies in the jar."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "Сьогодні в музеї немає людей.",
+    "en": ["There aren’t any people in the museum today."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У склянці немає молока.",
+    "en": ["There isn’t any milk in the glass."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У кишені немає ключів.",
+    "en": ["There aren’t any keys in the pocket."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У будинку немає людей.",
+    "en": ["There aren’t any people in the house."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У пляшці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bottle."]
+    "ua": "Тут немає проблем.",
+    "en": ["There aren’t any problems here."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У парку немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the park."]
+    "ua": "Вдома немає цукру.",
+    "en": ["There isn’t any sugar at home."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У шафі немає одягу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any clothes in the wardrobe."]
+    "ua": "У підвалі немає світла.",
+    "en": ["There isn’t any light in the basement."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "Біля магазину немає людей.",
+    "en": ["There aren’t any people near the shop."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У кімнаті немає комп’ютера.",
+    "en": ["There isn’t a computer in the room."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Вночі немає шуму. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any noise at night."]
+    "ua": "Сьогодні немає автобусів.",
+    "en": ["There aren’t any buses today."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "На полицях немає пилу.",
+    "en": ["There isn’t any dust on the shelves."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає нових повідомлень. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any new messages."]
+    "ua": "Немає планів на завтра.",
+    "en": ["There aren’t any plans for tomorrow."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У літаку немає місць.",
+    "en": ["There aren’t any seats on the plane."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає молока для кави. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any milk for coffee."]
+    "ua": "На рахунку немає грошей.",
+    "en": ["There isn’t any money in the account."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У тесті немає відповідей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any answers in the test."]
+    "ua": "У кімнаті немає вікон.",
+    "en": ["There aren’t any windows in the room."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає місця для помилок. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any room for mistakes."]
+    "ua": "Немає часу чекати.",
+    "en": ["There isn’t any time to wait."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Вдома немає інтернету. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any internet at home."]
+    "ua": "На вулиці немає дітей.",
+    "en": ["There aren’t any children on the street."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У холодильнику немає сирів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cheeses in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У цьому лісі немає тварин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any animals in this forest."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає часу на обід. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any time for lunch."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У дворі немає дерев. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any trees in the yard."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає друзів поруч. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any friends nearby."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Сьогодні вранці не було дзвінків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any calls this morning."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На небі немає хмар. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any clouds in the sky."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У холодильнику немає соку. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any juice in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У ресторані немає вільних місць. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any free tables in the restaurant."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У банці немає печива. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cookies in the jar."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Сьогодні в музеї немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the museum today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У склянці немає молока. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any milk in the glass."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Зараз немає музики. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any music right now."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У кишені немає ключів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any keys in the pocket."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У будинку немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the house."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Тут немає проблем. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any problems here."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Вдома немає цукру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any sugar at home."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У підвалі немає світла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any light in the basement."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля магазину немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people near the shop."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У кімнаті немає комп’ютера. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a computer in the room."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У бібліотеці немає студентів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any students in the library."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Сьогодні немає автобусів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any buses today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У пляшці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bottle."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На полицях немає пилу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any dust on the shelves."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає планів на завтра. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any plans for tomorrow."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У літаку немає місць. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any seats on the plane."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "На рахунку немає грошей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any money in the account."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У кімнаті немає вікон. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any windows in the room."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "Немає часу чекати. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any time to wait."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На вулиці немає дітей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any children on the street."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У відрі немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bucket."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У відрі немає води.",
+    "en": ["There isn’t any water in the bucket."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає варіантів для вибору. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any options to choose from."]
+    "ua": "Немає варіантів для вибору.",
+    "en": ["There aren’t any options to choose from."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES", "PREP_PLACE"],
-    "ua": "У спальні немає телевізора. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a TV in the bedroom."]
+    "ua": "У спальні немає телевізора.",
+    "en": ["There isn’t a TV in the bedroom."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає уроків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any lessons today."]
+    "ua": "Сьогодні немає уроків.",
+    "en": ["There aren’t any lessons today."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає причин турбуватись. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any reasons to worry."]
+    "ua": "Немає причин турбуватись.",
+    "en": ["There aren’t any reasons to worry."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP.Place"],
+    "ua": "Біля школи немає машин.",
+    "en": ["There aren’t any cars near the school."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У каструлі немає масла.",
+    "en": ["There isn’t any oil in the pan."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На дахах немає снігу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any snow on the roofs."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля школи немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars near the school."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У каструлі немає масла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any oil in the pan."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля столу немає стільців. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any chairs near the table."]
+    "ua": "Біля столу немає стільців.",
+    "en": ["There aren’t any chairs near the table."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає планів на сьогодні. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any plans for today."]
+    "ua": "Немає планів на сьогодні.",
+    "en": ["There aren’t any plans for today."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У місті немає електрики. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any electricity in the city."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На небі немає зірок. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any stars in the sky."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У місті немає електрики.",
+    "en": ["There isn’t any electricity in the city."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає сумнівів у цьому. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any doubts about it."]
+    "ua": "Немає сумнівів у цьому.",
+    "en": ["There aren’t any doubts about it."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У відрі немає фарби. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any paint in the bucket."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У відрі немає фарби.",
+    "en": ["There isn’t any paint in the bucket."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У сумці немає гаманця. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any wallet in the bag."]
+    "ua": "У сумці немає гаманця.",
+    "en": ["There isn’t any wallet in the bag."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "В офісі немає комп’ютера. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a computer in the office."]
+    "ua": "В офісі немає комп’ютера.",
+    "en": ["There isn’t a computer in the office."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає шансів виграти. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any chances to win."]
+    "ua": "Немає шансів виграти.",
+    "en": ["There aren’t any chances to win."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У кімнаті немає повітря. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any air in the room."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У кімнаті немає повітря.",
+    "en": ["There isn’t any air in the room."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На столі немає книжок. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any books on the desk."]
+    "ua": "На столі немає книжок.",
+    "en": ["There aren’t any books on the desk."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У супі немає солі. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any salt in the soup."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У супі немає солі.",
+    "en": ["There isn’t any salt in the soup."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Завтра немає зустрічей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any meetings tomorrow."]
+    "ua": "Завтра немає зустрічей.",
+    "en": ["There aren’t any meetings tomorrow."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає кави. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any coffee in the cup."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У чашці немає кави.",
+    "en": ["There isn’t any coffee in the cup."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
+    "ua": "Немає ідей для подарунка.",
+    "en": ["There aren’t any ideas for a gift."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
+    "ua": "На картці немає грошей.",
+    "en": ["There isn’t any money on the card."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
+    "ua": "Сьогодні немає новин.",
+    "en": ["There aren’t any news today."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
+  },
+  {
+    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
+    "ua": "У зоопарку немає тварин.",
+    "en": ["There aren’t any animals in the zoo."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
     "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У ванній немає дзеркала. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a mirror in the bathroom."]
+    "ua": "На тумбі немає лампи.",
+    "en": ["There isn’t a lamp on the nightstand."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає ідей для подарунка. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any ideas for a gift."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "В акваріумі немає води.",
+    "en": ["There isn’t any water in the aquarium."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   },
   {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "Надворі немає шуму. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any noise outside."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "На картці немає грошей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any money on the card."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Зараз у парку немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the park now."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У холодильнику немає молока. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any milk in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Сьогодні немає новин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any news today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У зоопарку немає тварин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any animals in the zoo."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "На тумбі немає лампи. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a lamp on the nightstand."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "В акваріумі немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the aquarium."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У школі немає дітей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any children at school."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля парку немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars near the park."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає меду. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any honey in the jar."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "На стіні немає телевізора. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a TV on the wall."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає уроків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any classes today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "Вдома немає хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any bread at home."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "У мене немає запитань. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any questions for me."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає фарби. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any paint in the can."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У квартирі немає меблів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any furniture in the apartment."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У музеї немає туристів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tourists in the museum."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У склянці немає соку. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any juice in the glass."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає квитків на концерт. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tickets for the concert."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У коридорі немає дзеркала. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a mirror in the hall."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "У понеділок немає зустрічей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any meetings on Monday."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У кафе немає друзів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any friends in the cafe."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У домі немає тепла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any heat in the house."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На полиці немає книжок. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any books on the shelf."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У вікні немає світла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any light in the window."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У бібліотеці немає студентів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any students in the library."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні ввечері немає подій. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any events tonight."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У склянці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the glass."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Не залишилось варіантів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any options left."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У холодильнику немає масла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any butter in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У підвалі немає вікон. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any windows in the basement."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає цукру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any sugar in the jar."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Зараз на дорозі немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars on the road now."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У кімнаті немає телевізора. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a TV in the room."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає відповідей на запитання. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any answers to the question."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На пляжі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people on the beach."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У баку немає бензину. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any gas in the tank."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У вазі немає квітів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any flowers in the vase."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У місті немає туристів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tourists in the city."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає кави. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any coffee in the cup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У залі немає телевізора. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a TV in the hall."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На стоянці немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars in the parking lot."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У кімнаті немає повітря. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any air in the room."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає завдань. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tasks today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У кошику немає хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any bread in the basket."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "На столі немає лампи. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a lamp on the table."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У холодильнику немає сиру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any cheese in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля станції немає автобусів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any buses near the station."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "Зараз немає часу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any time now."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У залі немає глядачів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any viewers in the hall."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У відрі немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bucket."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Завтра немає занять. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any classes tomorrow."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На мосту немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people on the bridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає цукру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any sugar in the cup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У парку немає собак. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any dogs in the park."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "ARTICLES"],
-    "ua": "У кімнаті немає телевізора. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t a TV in the room."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На зупинці немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people at the bus stop."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля будинку немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars near the house."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У квартирі немає тепла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any heat in the apartment."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "У середу немає зустрічей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any meetings on Wednesday."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У пляшці немає соку. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any juice in the bottle."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На подвір’ї немає дітей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any children in the yard."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чайнику немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the kettle."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля музею немає туристів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tourists near the museum."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "На підлозі немає пилу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any dust on the floor."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У черзі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the queue."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає вільних місць. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any free seats."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_CONCOUNT"],
-    "ua": "У коридорі немає світла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any light in the hallway."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Вранці немає дзвінків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any calls in the morning."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля вікна немає квітів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any flowers near the window."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає меду. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any honey in the jar."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У магазині немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the shop."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "У п’ятницю немає уроків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any classes on Friday."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У холодильнику немає сиру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any cheese in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На пагорбі немає дерев. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any trees on the hill."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля дому немає собак. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any dogs near the house."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "У чаті немає нових повідомлень. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any new messages in the chat."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На полиці немає книжок. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any books on the shelf."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У пакеті немає хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any bread in the bag."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Після обіду немає занять. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any lessons after lunch."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У кухлі немає молока. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any milk in the mug."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На зупинці немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people at the bus stop."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає кави. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any coffee in the cup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У класі немає учнів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any students in the classroom."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У пляшці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bottle."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля входу немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars by the entrance."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає цукру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any sugar in the jar."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На пляжі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people on the beach."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає дзвінків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any calls today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У шині немає повітря. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any air in the tire."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У саду немає квітів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any flowers in the garden."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У баку немає бензину. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any gas in the tank."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У музеї немає туристів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tourists in the museum."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "Зараз немає часу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any time now."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля магазину немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people near the shop."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У будинку немає електрики. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any electricity in the house."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає зустрічей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any meetings today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У крані немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the tap."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На вокзалі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people at the station."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає цукру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any sugar in the cup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На парковці немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars in the parking lot."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У холодильнику немає молока. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any milk in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Завтра немає уроків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any classes tomorrow."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає кави. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any coffee in the cup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У черзі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in line."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "QUANTIFIERS"],
-    "ua": "Немає нових ідей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any new ideas."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У підвалі немає світла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any light in the basement."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У вазі немає квітів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any flowers in the vase."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У кошику немає хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any bread in the basket."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У класі немає дітей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any children in the classroom."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У пляшці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bottle."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля музею немає туристів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tourists near the museum."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає меду. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any honey in the jar."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На вулиці немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people on the street."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У баку немає бензину. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any gas in the tank."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля дому немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars near the house."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У місті немає електрики. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any electricity in the city."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "У понеділок немає зустрічей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any meetings on Monday."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У шині немає повітря. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any air in the tire."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У кафе немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the cafe."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У холодильнику немає сиру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any cheese in the fridge."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає дзвінків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any calls today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає цукру. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any sugar in the jar."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля станції немає автобусів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any buses near the station."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає молока. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any milk in the cup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На полиці немає книжок. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any books on the shelf."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У банці немає фарби. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any paint in the can."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У парку немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the park."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У склянці немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the glass."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає уроків. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any lessons today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У кімнаті немає світла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any light in the room."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля магазину немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people near the shop."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У квартирі немає тепла. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any heat in the apartment."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні ввечері немає зустрічей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any meetings tonight."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У чашці немає кави. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any coffee in the cup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У місті немає туристів. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any tourists in the city."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "Зараз немає часу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any time now."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "Біля входу немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people by the entrance."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У будинку немає електрики. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any electricity in the house."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_TIME"],
-    "ua": "Сьогодні немає подій. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any events today."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У відрі немає води. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any water in the bucket."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На дитячому майданчику немає дітей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any children on the playground."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "На полицях немає пилу. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any dust on the shelves."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "У театрі немає людей. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any people in the theatre."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "У супі немає солі. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any salt in the soup."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "PREP_PLACE"],
-    "ua": "На вулиці немає машин. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There aren’t any cars on the street."]
-  },
-  {
-    "rules": ["THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT"],
-    "ua": "На столі немає хліба. (use THERE ISN'T / AREN'T ANY)",
-    "en": ["There isn’t any bread on the table."]
+    "rules": ["THERE_ISNT_ARENT_ANY"],
+    "ua": "У банці немає меду.",
+    "en": ["There isn’t any honey in the jar."],
+    "hint": "use THERE ISN'T / AREN'T ANY"
   }
 ] }

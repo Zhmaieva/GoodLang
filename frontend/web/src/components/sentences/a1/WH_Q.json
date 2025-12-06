@@ -176,11 +176,6 @@
       "en": ["When does the lesson start?"]
     },
     {
-      "rules": ["WH_Q", "MAKE_DO_DIFFERENCE"],
-      "ua": "Що робить різницю у цьому випадку?",
-      "en": ["What makes a difference in this case?"]
-    },
-    {
       "rules": ["WH_Q", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
       "ua": "Коли було побудовано цей будинок?",
       "en": ["When was this house built?"]

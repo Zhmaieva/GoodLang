@@ -10,14 +10,9 @@
     "en": ["He is in the hospital.", "He's in the hospital.", "He is in hospital.", "He's in hospital."]
   },
   {
-    "rules": ["COUNT_UNCOUNT", "THERE_IS_ARE"],
-    "ua": "На столі є хліб.",
-    "en": ["There is some bread on the table.", "There's some bread on the table.", "There is bread on the table.", "There's bread on the table."]
-  },
-  {
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
-    "ua": "Я купив новий комп’ютер.",
-    "en": ["I bought a new computer.", "I've bought a new computer."]
+    "rules": ["ARTICLES", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+    "ua": "Це новий комп’ютер.",
+    "en": ["This is a new computer."]
   },
   {
     "rules": ["ARTICLES", "PREP_PLACE", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
@@ -25,24 +20,14 @@
     "en": ["We live near the river.", "We live by the river."]
   },
   {
-    "rules": ["ARTICLES", "THERE_IS_ARE", "PREP_PLACE"],
-    "ua": "На полиці є пляшка води.",
-    "en": ["There is a bottle of water on the shelf.", "There's a bottle of water on the shelf."]
-  },
-  {
     "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
     "ua": "Він — хороший учень.",
     "en": ["He is a good student.", "He's a good student."]
   },
   {
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PRESENT_PERFECT", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
-    "ua": "Ми бачили старий міст.",
-    "en": ["We saw an old bridge.", "We’ve seen an old bridge."]
-  },
-  {
-    "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
-    "ua": "Сніг на землі.",
-    "en": ["The snow is on the ground."]
+    "rules": ["ARTICLES", "PAST_SIMPLE", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
+    "ua": "Вчора ми бачили старий міст.",
+    "en": ["We saw an old bridge."]
   },
   {
     "rules": ["ARTICLES", "SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES", "PERSONAL_PRONOUNS"],
@@ -50,9 +35,9 @@
     "en": ["It’s an interesting idea.", "This is an interesting idea."]
   },
   {
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
-    "ua": "Вона відчинила вікно.",
-    "en": ["She opened the window."]
+    "rules": ["ARTICLES", "PERSONAL_PRONOUNS"],
+    "ua": "Вона щойно відчинила вікно.",
+    "en": ["She has just opened the window."]
   },
   {
     "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE", "PERSONAL_PRONOUNS"],
@@ -110,11 +95,6 @@
     "en": ["We live in a big city.", "We’re living in a big city."]
   },
   {
-    "rules": ["ARTICLES", "PAST_SIMPLE", "SUPERLATIVES", "PERSONAL_PRONOUNS"],
-    "ua": "Це була найкраща вечеря в моєму житті.",
-    "en": ["It was the best dinner of my life."]
-  },
-  {
     "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ", "PERSONAL_PRONOUNS"],
     "ua": "Вона — архітектор.",
     "en": ["She is an architect.", "She's an architect."]
@@ -140,11 +120,6 @@
     "en": ["We went to the doctor yesterday."]
   },
   {
-    "rules": ["ARTICLES", "TO_BE", "SUPERLATIVES", "PERSONAL_PRONOUNS"],
-    "ua": "Це був найщасливіший день у моєму житті.",
-    "en": ["It was the happiest day of my life."]
-  },
-  {
     "rules": ["ARTICLES", "TO_BE", "PREP_PLACE", "PERSONAL_PRONOUNS"],
     "ua": "Моя сестра в бібліотеці.",
     "en": ["My sister is at the library."]
@@ -153,11 +128,6 @@
     "rules": ["ARTICLES", "TO_BE", "DEMONSTRATIVES", "SIMPLE_ADJ"],
     "ua": "Це була гарна ідея.",
     "en": ["That was a good idea.", "It was a good idea."]
-  },
-  {
-    "rules": ["ARTICLES", "PAST_SIMPLE", "RELATIVE_CLAUSES"],
-    "ua": "Ми відвідали музей, який був дуже цікавий.",
-    "en": ["We visited the museum that was very interesting.", "We visited the museum which was very interesting."]
   },
   {
     "rules": ["ARTICLES", "TO_BE"],
@@ -190,11 +160,6 @@
     "en": ["They usually go to the gym after work."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
-    "ua": "Я обідаю в школі.",
-    "en": ["I have lunch at school.", "I eat lunch at school."]
-  },
-  {
     "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"],
     "ua": "Ми поїхали на море минулого літа.",
     "en": ["We went to the sea last summer."]
@@ -205,29 +170,9 @@
     "en": ["The weather is nice today.", "The weather is good today."]
   },
   {
-    "rules": ["ARTICLES", "SUPERLATIVES", "TO_BE"],
-    "ua": "Вода — це найцінніший ресурс на Землі.",
-    "en": ["Water is the most valuable resource on Earth."]
-  },
-  {
-    "rules": ["ARTICLES", "TO_BE"],
-    "ua": "Бідні часто потребують допомоги.",
-    "en": ["The poor often need help."]
-  },
-  {
-    "rules": ["ARTICLES", "TO_BE"],
-    "ua": "Багаті мають більше можливостей.",
-    "en": ["The rich have more opportunities."]
-  },
-  {
     "rules": ["ARTICLES", "TO_BE"],
     "ua": "Діти — наше майбутнє.",
     "en": ["Children are our future."]
-  },
-  {
-    "rules": ["ARTICLES", "TO_BE"],
-    "ua": "Освіта — це ключ до успіху.",
-    "en": ["Education is the key to success."]
   },
   {
     "rules": ["ARTICLES", "MUST_MUSTNT", "PASSIVE_VOICE"],
@@ -271,18 +216,13 @@
   },
   {
     "rules": ["ARTICLES", "SIMPLE_ADJ"],
-    "ua": "Сонце сьогодні яскраве.",
+    "ua": "Cьогодні яскраве cонце.",
     "en": ["The sun is bright today.", "The sun is very bright today.", "The sun is shining brightly today."]
   },
   {
     "rules": ["ARTICLES", "DEMONSTRATIVES", "SIMPLE_ADJ"],
     "ua": "Це питання дуже важливе.",
     "en": ["This is an important question.", "It's an important question.", "This question is very important."]
-  },
-  {
-    "rules": ["ARTICLES", "POSSESSIVE_S"],
-    "ua": "Ми відвідали музей Лондона.",
-    "en": ["We visited the Museum of London.", "We visited London’s museum."]
   },
   {
     "rules": ["COUNT_UNCOUNT", "TO_BE"],
@@ -303,11 +243,6 @@
     "rules": ["ARTICLES", "TO_BE", "PREP_PLACE"],
     "ua": "Місяць у небі дуже яскравий.",
     "en": ["The moon in the sky is very bright."]
-  },
-  {
-    "rules": ["ARTICLES", "PREP_PLACE", "THERE_IS_ARE"],
-    "ua": "На підлозі є килим.",
-    "en": ["There is a carpet on the floor.", "There's a carpet on the floor."]
   },
   {
     "rules": ["COUNT_UNCOUNT"],
@@ -353,14 +288,6 @@
     "rules": ["ARTICLES", "TOO_VERY"]
   },
   {
-    "ua": "Ми відвідали Британський музей у Лондоні.",
-    "en": [
-      "We visited the British Museum in London.",
-      "We went to the British Museum in London."
-    ],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
-  },
-  {
     "ua": "У мене є собака і кішка.",
     "en": [
       "I have a dog and a cat.",
@@ -369,72 +296,9 @@
     "rules": ["ARTICLES", "HAVE_HAVE_GOT", "COUNT_UNCOUNT"]
   },
   {
-    "ua": "Я не бачив тієї жінки біля дверей.",
-    "en": [
-      "I didn’t see the woman near the door.",
-      "I did not see the woman near the door.",
-      "I didn’t notice the woman by the door."
-    ],
-    "rules": ["ARTICLES", "NEGATION_DONT_DOESNT", "PREP_PLACE", "PAST_SIMPLE"]
-  },
-  {
-    "ua": "Чи є лікар у цьому будинку?",
-    "en": [
-      "Is there a doctor in this building?",
-      "Is there a doctor inside this building?"
-    ],
-    "rules": ["ARTICLES", "THERE_IS_ARE", "DEMONSTRATIVES", "PREP_PLACE"]
-  },
-  {
-    "ua": "Це найкраща книга, яку я коли-небудь читав.",
-    "en": [
-      "This is the best book I have ever read.",
-      "This is the best book I've ever read.",
-      "That's the best book I’ve ever read."
-    ],
-    "rules": ["ARTICLES", "DEMONSTRATIVES", "SUPERLATIVES", "PRESENT_PERFECT"]
-  },
-  {
-    "ua": "У холодильнику немає молока.",
-    "en": [
-      "There isn’t any milk in the fridge.",
-      "There is no milk in the fridge.",
-      "There’s not any milk in the fridge."
-    ],
-    "rules": ["ARTICLES", "THERE_ISNT_ARENT_ANY", "COUNT_UNCOUNT", "PREP_PLACE"]
-  },
-  {
-    "ua": "Біля школи є парк.",
-    "en": [
-      "There is a park next to the school.",
-      "There’s a park near the school.",
-      "There is a park close to the school."
-    ],
-    "rules": ["ARTICLES", "THERE_IS_ARE", "PREP_PLACE"]
-  },
-  {
-    "ua": "Давай підемо до нового італійського ресторану сьогодні ввечері.",
-    "en": [
-      "Let’s go to the new Italian restaurant tonight.",
-      "Let's go to the new Italian place tonight.",
-      "Let us go to the new Italian restaurant this evening."
-    ],
-    "rules": ["ARTICLES", "LETS", "PREP_TIME", "PREP_DIRECTION"]
-  },
-  {
-    "ua": "Ніл є найдовшою річкою у світі.",
-    "en": ["The Nile is the longest river in the world.", "The Nile River is the longest in the world."],
-    "rules": ["ARTICLES", "SUPERLATIVES", "BE_SUPPOSED_TO"]
-  },
-  {
     "ua": "Вони живуть біля Середземного моря.",
     "en": ["They live near the Mediterranean Sea.", "They live close to the Mediterranean."],
     "rules": ["ARTICLES", "PREP_PLACE", "PRESENT_SIMPLE_FREQ"]
-  },
-  {
-    "ua": "Панамський канал з’єднує два океани.",
-    "en": ["The Panama Canal connects two oceans.", "The Panama Canal joins the Atlantic and the Pacific."],
-    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"]
   },
   {
     "ua": "Ми бачили Гімалаї під час подорожі.",
@@ -442,19 +306,9 @@
     "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
   },
   {
-    "ua": "Сахара — це величезна пустеля.",
-    "en": ["The Sahara is a huge desert.", "The Sahara Desert is enormous."],
-    "rules": ["ARTICLES", "BE_SUPPOSED_TO"]
-  },
-  {
     "ua": "Ми відпочивали на Мальдівах минулої зими.",
     "en": ["We stayed in the Maldives last winter.", "We were in the Maldives last winter."],
     "rules": ["ARTICLES", "WAS_WERE", "PREP_TIME"]
-  },
-  {
-    "ua": "Вона піднімалася на Еверест у 2019 році.",
-    "en": ["She climbed Mount Everest in 2019.", "She reached the top of Mount Everest in 2019."],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "ORDINALS_DATES"]
   },
   {
     "ua": "Ми провели тиждень на Сицилії.",
@@ -462,34 +316,14 @@
     "rules": ["ARTICLES", "PREP_PLACE", "PAST_SIMPLE"]
   },
   {
-    "ua": "Я живу у Парижі вже два роки.",
-    "en": ["I have lived in Paris for two years.", "I've been living in Paris for two years."],
-    "rules": ["ARTICLES", "SINCE_FOR", "PRESENT_PERFECT_CONT"]
-  },
-  {
     "ua": "Він народився в невеликому селі біля Варшави.",
     "en": ["He was born in a small village near Warsaw.", "He was born in a little village close to Warsaw."],
     "rules": ["ARTICLES", "WAS_WERE", "PREP_PLACE"]
   },
   {
-    "ua": "Польща знаходиться в Європі.",
-    "en": ["Poland is in Europe.", "Poland lies in Europe."],
-    "rules": ["ARTICLES", "PREP_PLACE"]
-  },
-  {
     "ua": "Сполучені Штати — дуже велика країна.",
     "en": ["The United States is a very large country.", "The United States of America is huge."],
     "rules": ["ARTICLES", "TOO_VERY"]
-  },
-  {
-    "ua": "Вона ніколи не була в Нідерландах.",
-    "en": ["She has never been to the Netherlands.", "She’s never visited the Netherlands."],
-    "rules": ["ARTICLES", "PRESENT_PERFECT"]
-  },
-  {
-    "ua": "Африка — другий за розміром континент.",
-    "en": ["Africa is the second largest continent.", "Africa is the second biggest continent in the world."],
-    "rules": ["ARTICLES", "ORDINALS_DATES", "COMPARATIVES"]
   },
   {
     "ua": "Ми бачили Ейфелеву вежу вперше.",
@@ -505,31 +339,6 @@
     "ua": "Ми відвідали Велику китайську стіну під час поїздки.",
     "en": ["We visited the Great Wall of China during our trip.", "We saw the Great Wall of China while traveling."],
     "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
-  },
-  {
-    "ua": "Вони забронювали номер у готелі Рітц.",
-    "en": ["They booked a room at the Ritz Hotel.", "They reserved a room in the Ritz."],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
-  },
-  {
-    "ua": "Ми гуляли в Центральному парку.",
-    "en": ["We walked in Central Park.", "We took a walk in the Central Park."],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
-  },
-  {
-    "ua": "Я бачив картину в Британському музеї.",
-    "en": ["I saw a painting in the British Museum.", "I looked at a painting at the British Museum."],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
-  },
-  {
-    "ua": "Ми повечеряли в новому італійському ресторані.",
-    "en": ["We had dinner at the new Italian restaurant.", "We ate dinner in the new Italian restaurant."],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
-  },
-  {
-    "ua": "Вони зупинилися в готелі з видом на море.",
-    "en": ["They stayed at a hotel with a view of the sea.", "They stayed in a hotel overlooking the sea."],
-    "rules": ["ARTICLES", "PREP_PLACE", "PAST_SIMPLE"]
   },
   {
     "ua": "Він працює в театрі біля площі.",
@@ -602,23 +411,8 @@
     "rules": ["ARTICLES", "PAST_SIMPLE", "COUNT_UNCOUNT"]
   },
   {
-    "ua": "Ми піднялися на Лондонське око.",
-    "en": ["We went on the London Eye.", "We rode the London Eye."],
-    "rules": ["ARTICLES", "PAST_SIMPLE"]
-  },
-  {
-    "ua": "Він працює в Музеї природознавства.",
-    "en": ["He works at the Natural History Museum.", "He’s employed at the Natural History Museum."],
-    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"]
-  },
-  {
     "ua": "Ми обідали в кафе біля площі.",
     "en": ["We had lunch at a café near the square.", "We ate at a café close to the square."],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
-  },
-  {
-    "ua": "Вона бачила виставу в театрі Глобус.",
-    "en": ["She saw a play at the Globe Theatre.", "She watched a performance in the Globe Theatre."],
     "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
   },
   {
@@ -647,18 +441,228 @@
     "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"]
   },
   {
-    "ua": "Ми провели ніч у наметі в пустелі.",
-    "en": ["We spent a night in a tent in the desert.", "We slept in a tent in the desert."],
-    "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_PLACE"]
-  },
-  {
     "ua": "Ми приїхали до Праги пізно ввечері.",
     "en": ["We arrived in Prague late at night.", "We got to Prague late in the evening."],
     "rules": ["ARTICLES", "PAST_SIMPLE", "PREP_TIME"]
   },
   {
-    "ua": "Вони фотографувалися на площі Святого Петра у Ватикані.",
-    "en": ["They took photos in St. Peter’s Square in the Vatican.", "They were taking pictures in St. Peter’s Square."],
-    "rules": ["ARTICLES", "PAST_CONTINUOUS", "POSSESSIVE_S", "PREP_PLACE"]
+    "rules": ["ARTICLES"],
+    "ua": "Він носить форму в школі.",
+    "en": ["He wears a uniform at school."]
+  },
+  {
+    "rules": ["ARTICLES", "COUNT_UNCOUNT", "PREP_TIME"],
+    "ua": "Птахи будують гнізда навесні.",
+    "en": ["Birds build nests in spring."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE"],
+    "ua": "Гніздо на дереві.",
+    "en": ["The nest is in the tree."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "У неї гарна усмішка.",
+    "en": ["She has a beautiful smile."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Ця усмішка робить усіх щасливими.",
+    "en": ["The smile makes everyone happy."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_TIME"],
+    "ua": "Ми відвідуємо бабусю й дідуся в неділю.",
+    "en": ["We visit grandparents on Sunday."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Бабуся й дідусь живуть у селі.",
+    "en": ["The grandparents live in the village."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE"],
+    "ua": "Я бачу слона в зоопарку.",
+    "en": ["I see an elephant at the zoo."]
+  },
+  {
+    "rules": ["ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Слон їсть траву.",
+    "en": ["The elephant eats grass."]
+  },
+  {
+    "rules": ["ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Він п’є склянку води.",
+    "en": ["He drinks a glass of water."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Склянка зараз порожня.",
+    "en": ["The glass is empty now."]
+  },
+  {
+    "rules": ["ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Студенти вчать математику в школі.",
+    "en": ["Students learn maths at school."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Учитель математики строгий.",
+    "en": ["The maths teacher is strict."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона щодня грає на піаніно.",
+    "en": ["She plays the piano every day."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Піаніно стоїть у вітальні.",
+    "en": ["A piano is in the living room."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Мені потрібна відпустка.",
+    "en": ["I need a holiday."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE"],
+    "ua": "Коти сплять на дивані.",
+    "en": ["Cats sleep on the sofa."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Кіт — незалежна тварина.",
+    "en": ["A cat is an independent animal."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Він їздить до школи велосипедом.",
+    "en": ["He rides a bike to school."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Цей велосипед швидкий.",
+    "en": ["The bike is fast."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_TIME"],
+    "ua": "Ми снідаємо о восьмій годині.",
+    "en": ["We eat breakfast at 8 o’clock.", "We eat breakfast at eight o’clock."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Сьогоднішній сніданок смачний.",
+    "en": ["The breakfast today is delicious."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_PLACE"],
+    "ua": "Лист лежить на столі.",
+    "en": ["The letter is on the desk."]
+  },
+  {
+    "rules": ["ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Діти люблять морозиво.",
+    "en": ["Children love ice cream."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Це морозиво холодне.",
+    "en": ["The ice cream is cold."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Двері на кухні білі.",
+    "en": ["A door in the kitchen is white."]
+  },
+  {
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Він читає новини щоранку.",
+    "en": ["He reads the news every morning."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Новини сьогодні погані.",
+    "en": ["The news is bad today."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Ця сукня рожева.",
+    "en": ["The dress is pink."]
+  },
+  {
+    "rules": ["ARTICLES", "PREP_TIME"],
+    "ua": "Ми граємо в теніс у суботу.",
+    "en": ["We play tennis on Saturday."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Тенісний м’яч жовтий.",
+    "en": ["The tennis ball is yellow."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Я купую квиток у кіно.",
+    "en": ["I buy a ticket to the cinema.", "I am buying a ticket to the cinema."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Квиток коштує десять доларів.",
+    "en": ["The ticket costs 10 dollars.", "The ticket costs ten dollars."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Собаки ганяються за котами.",
+    "en": ["Dogs chase cats."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Кіт бігає дуже швидко.",
+    "en": ["The cat runs very fast."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Вона готує вечерю щовечора.",
+    "en": ["She cooks dinner every evening."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Ця вечеря пахне смачно.",
+    "en": ["The dinner smells good."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Ця гора висока.",
+    "en": ["The mountain is high."]
+  },
+  {
+    "rules": ["ARTICLES", "COUNT_UNCOUNT", "PREP_TIME"],
+    "ua": "Мені подобається кава вранці.",
+    "en": ["I like coffee in the morning."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Ця кава міцна.",
+    "en": ["The coffee is strong."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Студенти ставлять запитання.",
+    "en": ["Students ask a question."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Це запитання складне.",
+    "en": ["The question is difficult."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Ми живемо у великому будинку.",
+    "en": ["We live in a big house."]
+  },
+  {
+    "rules": ["ARTICLES"],
+    "ua": "Цей будинок має гарний сад.",
+    "en": ["The house has a beautiful garden."]
   }
 ] }

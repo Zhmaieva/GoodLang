@@ -1,212 +1,251 @@
 { "BEFORE_AFTER_ING": [
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Помий руки перед тим, як їсти. (use BEFORE + GERUND)",
+    "ua": "Помий руки перед тим, як їсти.",
     "en": [
       "Wash your hands before eating.",
       "Before eating, wash your hands."
-    ]
+    ],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Почекай трохи перед тим, як виходити. (use BEFORE + GERUND)",
-    "en": ["Wait a little before leaving."]
+    "ua": "Почекай трохи перед тим, як виходити.",
+    "en": ["Wait a little before leaving."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Вона розчісує волосся перед тим, як виходити з дому. (use BEFORE + GERUND)",
-    "en": ["She brushes her hair before leaving the house."]
+    "ua": "Вона розчісує волосся перед тим, як виходити з дому.",
+    "en": ["She brushes her hair before leaving the house."],
+    "hint": "use BEFORE + GERUND"
   },
   {
-    "rules": ["BEFORE_AFTER_ING", "COUNT_UNCOUNT"],
-    "ua": "Порахуй гроші перед тим, як щось купувати. (use BEFORE + GERUND)",
+    "rules": ["BEFORE_AFTER_ING"],
+    "ua": "Порахуй гроші перед тим, як щось купувати.",
     "en": [
       "Count the money before buying anything.",
       "Count the money before making a purchase."
-    ]
+    ],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Зачекай перед тим, як пірнати. (use BEFORE + GERUND)",
-    "en": ["Wait before diving."]
+    "ua": "Зачекай перед тим, як пірнати.",
+    "en": ["Wait before diving."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я перевіряю квитки перед тим, як заходити. (use BEFORE + GERUND)",
-    "en": ["I check the tickets before entering."]
+    "ua": "Я перевіряю квитки перед тим, як заходити.",
+    "en": ["I check the tickets before entering."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Він миє руки перед тим, як готувати. (use BEFORE + GERUND)",
-    "en": ["He washes his hands before cooking."]
+    "ua": "Він миє руки перед тим, як готувати.",
+    "en": ["He washes his hands before cooking."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING", "PAST_SIMPLE"],
-    "ua": "Вони поговорили перед тим, як піти додому. (use BEFORE + GERUND)",
-    "en": ["They talked before going home."]
+    "ua": "Вони поговорили перед тим, як піти додому.",
+    "en": ["They talked before going home."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Вона робить розтяжку перед тим, як тренуватися. (use BEFORE + GERUND)",
-    "en": ["She stretches before working out."]
+    "ua": "Вона робить розтяжку перед тим, як тренуватися.",
+    "en": ["She stretches before working out."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Зніми взуття перед тим, як заходити. (use BEFORE + GERUND)",
-    "en": ["Take off your shoes before entering."]
+    "ua": "Зніми взуття перед тим, як заходити.",
+    "en": ["Take off your shoes before entering."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Подивись наліво й направо, перш ніж переходити дорогу. (use BEFORE + GERUND)",
+    "ua": "Подивись наліво й направо, перш ніж переходити дорогу.",
     "en": [
       "Look left and right before crossing the road.",
       "Make sure to look left and right before crossing."
-    ]
+    ],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING", "PAST_SIMPLE"],
-    "ua": "Ми перевірили все перед тим, як вирушити. (use BEFORE + GERUND)",
-    "en": ["We checked everything before leaving."]
+    "ua": "Ми перевірили все перед тим, як вирушити.",
+    "en": ["We checked everything before leaving."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я глибоко вдихаю перед тим, як виступати. (use BEFORE + GERUND)",
-    "en": ["I take a deep breath before performing."]
+    "ua": "Я глибоко вдихаю перед тим, як виступати.",
+    "en": ["I take a deep breath before performing."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Перевір погоду перед тим, як виходити. (use BEFORE + GERUND)",
-    "en": ["Check the weather before going out."]
+    "ua": "Перевір погоду перед тим, як виходити.",
+    "en": ["Check the weather before going out."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я читаю книгу перед тим, як заснути. (use BEFORE + GERUND)",
-    "en": ["I read a book before falling asleep."]
-  },
-
-  {
-    "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Вимкни світло перед тим, як виходити. (use BEFORE + GERUND)",
-    "en": ["Turn off the light before leaving."]
+    "ua": "Я читаю книгу перед тим, як заснути.",
+    "en": ["I read a book before falling asleep."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Зроби перерву перед тим, як продовжити. (use BEFORE + GERUND)",
-    "en": ["Take a break before continuing."]
+    "ua": "Вимкни світло перед тим, як виходити.",
+    "en": ["Turn off the light before leaving."],
+    "hint": "use BEFORE + GERUND"
+  },
+  {
+    "rules": ["BEFORE_AFTER_ING"],
+    "ua": "Зроби перерву перед тим, як продовжити.",
+    "en": ["Take a break before continuing."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING", "PREP_TIME"],
-    "ua": "Погодуй кота перед тим, як іти до школи. (use BEFORE + GERUND)",
-    "en": ["Feed the cat before going to school."]
+    "ua": "Погодуй кота перед тим, як іти до школи.",
+    "en": ["Feed the cat before going to school."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я чищу зуби перед тим, як лягати спати. (use BEFORE + GERUND)",
-    "en": ["I brush my teeth before going to bed."]
+    "ua": "Я чищу зуби перед тим, як лягати спати.",
+    "en": ["I brush my teeth before going to bed."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Хоча я нервую, я усміхаюсь перед виступом. (use BEFORE + GERUND)",
-    "en": ["Although I am nervous, I smile before performing."]
+    "ua": "Хоча я нервую, я усміхаюсь перед виступом.",
+    "en": ["Although I am nervous, I smile before performing."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Зніми шапку перед тим, як увійти. (use BEFORE + GERUND)",
-    "en": ["Take off your hat before entering."]
+    "ua": "Зніми шапку перед тим, як увійти.",
+    "en": ["Take off your hat before entering."],
+    "hint": "use BEFORE + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Наведи порядок перед тим, як йти на вечірку. (use BEFORE + GERUND)",
+    "ua": "Наведи порядок перед тим, як йти на вечірку.",
     "en": [
       "Clean up before heading to the party.",
       "Tidy up before heading to the party."
-    ]
-  },
-  {
-    "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я п’ю воду перед тим, як йти на тренування. (use BEFORE + GERUND)",
-    "en": [
-      "I drink water before working out.",
-      "I drink water before going to the gym."
-    ]
-  },
-  {
-    "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я обіймаю маму перед тим, як йти спати. (use BEFORE + GERUND)",
-    "en": [
-      "I hug my mom before going to bed.",
-      "I hug my mom before going to sleep."
-    ]
-  },
-  {
-    "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Ми закриваємо двері перед виходом. (use BEFORE + GERUND)",
-    "en": ["We close the door before leaving."]
+    ],
+    "hint": "use BEFORE + GERUND"
   },
 
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я все зрозумів після того, як поговорив з учителем. (use AFTER + GERUND)",
-    "en": ["I understood everything after talking to the teacher."]
+    "ua": "Я п’ю воду перед тим, як йти на тренування.",
+    "en": [
+      "I drink water before working out.",
+      "I drink water before going to the gym."
+    ],
+    "hint": "use BEFORE + GERUND"
+  },
+  {
+    "rules": ["BEFORE_AFTER_ING"],
+    "ua": "Я обіймаю маму перед тим, як йти спати.",
+    "en": [
+      "I hug my mom before going to bed.",
+      "I hug my mom before going to sleep."
+    ],
+    "hint": "use BEFORE + GERUND"
+  },
+  {
+    "rules": ["BEFORE_AFTER_ING"],
+    "ua": "Ми закриваємо двері перед виходом.",
+    "en": ["We close the door before leaving."],
+    "hint": "use BEFORE + GERUND"
+  },
+
+  {
+    "rules": ["BEFORE_AFTER_ING"],
+    "ua": "Я все зрозумів після того, як поговорив з учителем.",
+    "en": ["I understood everything after talking to the teacher."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Я не їм відразу після того, як потренуюся. (use AFTER + GERUND)",
-    "en": ["I don’t eat right after working out."]
+    "ua": "Я не їм відразу після того, як потренуюся.",
+    "en": ["I don’t eat right after working out."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я приймаю душ після того, як повертаюся додому. (use AFTER + GERUND)",
-    "en": ["I take a shower after coming home."]
+    "ua": "Я приймаю душ після того, як повертаюся додому.",
+    "en": ["I take a shower after coming home."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING", "PAST_SIMPLE"],
-    "ua": "Я зробив нотатки після того, як закінчив читати. (use AFTER + GERUND)",
-    "en": ["I took notes after finishing reading."]
+    "ua": "Я зробив нотатки після того, як закінчив читати.",
+    "en": ["I took notes after finishing reading."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я п’ю воду після того, як покатаюся на велосипеді. (use AFTER + GERUND)",
-    "en": ["I drink water after cycling."]
+    "ua": "Я п’ю воду після того, як покатаюся на велосипеді.",
+    "en": ["I drink water after cycling."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я граю після того, як зроблю домашнє завдання. (use AFTER + GERUND)",
-    "en": ["I play games after doing homework."]
+    "ua": "Я граю після того, як зроблю домашнє завдання.",
+    "en": ["I play games after doing homework."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Спробуй суп після того, як приготуєш його. (use AFTER + GERUND)",
-    "en": ["Taste the soup after cooking it."]
+    "ua": "Спробуй суп після того, як приготуєш його.",
+    "en": ["Taste the soup after cooking it."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Він розтягується після того, як потренується. (use AFTER + GERUND)",
-    "en": ["He stretches after working out."]
+    "ua": "Він розтягується після того, як потренується.",
+    "en": ["He stretches after working out."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Помий тарілку після того, як поїси. (use AFTER + GERUND)",
-    "en": ["Wash your plate after eating."]
+    "ua": "Помий тарілку після того, як поїси.",
+    "en": ["Wash your plate after eating."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Ми пішли в клас після того, як продзвенів дзвоник. (use AFTER + GERUND)",
-    "en": ["We went to class after the bell ringing."]
+    "ua": "Ми пішли в клас після того, як продзвенів дзвоник.",
+    "en": ["We went to class after the bell ringing."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Я розтягуюсь після того, як побігаю. (use AFTER + GERUND)",
-    "en": ["I stretch after running."]
+    "ua": "Я розтягуюсь після того, як побігаю.",
+    "en": ["I stretch after running."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Повтори слова після того, як вивчиш їх. (use AFTER + GERUND)",
-    "en": ["Repeat the words after learning them."]
+    "ua": "Повтори слова після того, як вивчиш їх.",
+    "en": ["Repeat the words after learning them."],
+    "hint": "use AFTER + GERUND"
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Ми прибираємо стіл після того, як пообідаємо. (use AFTER + GERUND)",
-    "en": ["We clean the table after eating lunch."]
+    "ua": "Ми прибираємо стіл після того, як пообідаємо.",
+    "en": ["We clean the table after eating lunch."],
+    "hint": "use AFTER + GERUND"
   }
+
 ] }

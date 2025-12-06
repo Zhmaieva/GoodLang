@@ -1,1672 +1,858 @@
 { "THERE_IS_ARE": [
     {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі є яблуко (use THERE IS / THERE ARE).",
-        "en": ["There is an apple on the table.", "There’s an apple on the table."]
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Яблуко лежить на столі.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is an apple on the table."]
     },
     {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На полиці стоять дві чашки (use THERE IS / THERE ARE).",
-        "en": ["There are two cups on the shelf.", "There’re two cups on the shelf."]
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На полиці стоять дві чашки.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are two cups on the shelf."]
     },
     {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кімнаті є кіт (use THERE IS / THERE ARE).",
-        "en": ["There is a cat in the room.", "There’s a cat in the room."]
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Кіт у кімнаті.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cat in the room."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У парку багато людей (use THERE IS / THERE ARE).",
-        "en": ["There are a lot of people in the park.", "There are many people in the park.", "There’re lots of people in the park."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У парку є люди (use THERE IS / THERE ARE).",
-        "en": ["There are people in the park.", "There’re people in the park."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Біля вікна стоїть стілець (use THERE IS / THERE ARE).",
-        "en": ["There is a chair near the window.", "There’s a chair near the window."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У склянці трохи води (use THERE IS / THERE ARE).",
-        "en": ["There is some water in the glass.", "There’s some water in the glass."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику є молоко (use THERE IS / THERE ARE).",
-        "en": ["There is milk in the fridge.", "There’s milk in the fridge."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На полиці кілька книжок (use THERE IS / THERE ARE).",
-        "en": ["There are some books on the shelf.", "There’re a few books on the shelf."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У нашому місті є річка (use THERE IS / THERE ARE).",
-        "en": ["There is a river in our city.", "There’s a river in our city."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На підлозі лежать іграшки (use THERE IS / THERE ARE).",
-        "en": ["There are toys on the floor.", "There’re toys on the floor."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Біля школи стоїть автобус (use THERE IS / THERE ARE).",
-        "en": ["There is a bus near the school.", "There’s a bus near the school."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кімнаті є телевізор (use THERE IS / THERE ARE).",
-        "en": ["There is a TV in the room.", "There’s a TV in the room."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі трохи цукру (use THERE IS / THERE ARE).",
-        "en": ["There is some sugar on the table.", "There’s some sugar on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На пляжі багато людей (use THERE IS / THERE ARE).",
-        "en": ["There are many people on the beach.", "There’re lots of people on the beach.", "There are a lot of people on the beach."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кутку стоїть лампа (use THERE IS / THERE ARE).",
-        "en": ["There is a lamp in the corner.", "There’s a lamp in the corner."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У ванній висить дзеркало (use THERE IS / THERE ARE).",
-        "en": ["There is a mirror in the bathroom.", "There’s a mirror in the bathroom."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На кухні є стіл і два стільці (use THERE IS / THERE ARE).",
-        "en": ["There is a table and two chairs in the kitchen.", "There’s a table and two chairs in the kitchen."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На дереві сидять птахи (use THERE IS / THERE ARE).",
-        "en": ["There are birds in the tree.", "There’re birds in the tree."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У небі є хмари (use THERE IS / THERE ARE).",
-        "en": ["There are clouds in the sky.", "There’re clouds in the sky."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Поруч із будинком є школа (use THERE IS / THERE ARE).",
-        "en": ["There is a school near the house.", "There’s a school near the house."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "За рогом є кафе (use THERE IS / THERE ARE).",
-        "en": ["There is a cafe around the corner.", "There’s a cafe around the corner."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У пляшці трохи соку (use THERE IS / THERE ARE).",
-        "en": ["There is some juice in the bottle.", "There’s some juice in the bottle."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У моїй кімнаті є килим (use THERE IS / THERE ARE).",
-        "en": ["There is a carpet in my room.", "There’s a carpet in my room."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі стоїть комп’ютер (use THERE IS / THERE ARE).",
-        "en": ["There is a computer on the table.", "There’s a computer on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У класі кілька учнів (use THERE IS / THERE ARE).",
-        "en": ["There are a few students in the class.", "There’re some students in the class."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У поштовій скриньці є лист (use THERE IS / THERE ARE).",
-        "en": ["There is a letter in the mailbox.", "There’s a letter in the mailbox."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "Є трохи часу (use THERE IS / THERE ARE).",
-        "en": ["There is some time.", "There’s some time."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На малюнку зображено собаку (use THERE IS / THERE ARE).",
-        "en": ["There is a dog in the picture.", "There’s a dog in the picture."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На вулиці багато машин (use THERE IS / THERE ARE).",
-        "en": ["There are many cars in the street.", "There’re lots of cars on the street.", "There are a lot of cars in the street."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На вікні стоїть квітка (use THERE IS / THERE ARE).",
-        "en": ["There is a flower on the window.", "There’s a flower on the window."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі стоїть пляшка води (use THERE IS / THERE ARE).",
-        "en": ["There is a bottle of water on the table.", "There’s a bottle of water on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кошику лежать яблука (use THERE IS / THERE ARE).",
-        "en": ["There are apples in the basket.", "There’re apples in the basket."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику трохи сиру (use THERE IS / THERE ARE).",
-        "en": ["There is some cheese in the fridge.", "There’s some cheese in the fridge."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Під диваном сидить кіт (use THERE IS / THERE ARE).",
-        "en": ["There is a cat under the sofa.", "There’s a cat under the sofa."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На даху сидить птах (use THERE IS / THERE ARE).",
-        "en": ["There is a bird on the roof.", "There’s a bird on the roof."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У чашці трохи кави (use THERE IS / THERE ARE).",
-        "en": ["There is some coffee in the cup.", "There’s some coffee in the cup."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У парку багато дітей (use THERE IS / THERE ARE).",
-        "en": ["There are many children in the park.", "There are a lot of children in the park.", "There’re lots of children in the park."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Біля дверей сидить собака (use THERE IS / THERE ARE).",
-        "en": ["There is a dog near the door.", "There’s a dog near the door."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику є сир і масло (use THERE IS / THERE ARE).",
-        "en": ["There is cheese and butter in the fridge.", "There’s cheese and butter in the fridge."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кімнаті багато людей (use THERE IS / THERE ARE).",
-        "en": ["There are many people in the room.", "There are a lot of people in the room.", "There’re lots of people in the room."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На тарілці лежить один помідор (use THERE IS / THERE ARE).",
-        "en": ["There is one tomato on the plate.", "There’s one tomato on the plate."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У каструлі трохи рису (use THERE IS / THERE ARE).",
-        "en": ["There is some rice in the pot.", "There’s some rice in the pot."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі лежить книжка (use THERE IS / THERE ARE).",
-        "en": ["There is a book on the table.", "There’s a book on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "У банці трохи меду (use THERE IS / THERE ARE).",
-        "en": ["There is some honey in the jar.", "There’s some honey in the jar."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У дворі кіт і собака (use THERE IS / THERE ARE).",
-        "en": ["There is a cat and a dog in the yard.", "There’s a cat and a dog in the yard."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У саду ростуть квіти (use THERE IS / THERE ARE).",
-        "en": ["There are flowers in the garden.", "There’re flowers in the garden."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кутку кімнати стоїть стіл (use THERE IS / THERE ARE).",
-        "en": ["There is a table in the corner of the room.", "There’s a table in the corner of the room."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "Є трохи хліба (use THERE IS / THERE ARE).",
-        "en": ["There is some bread.", "There’s some bread."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У школі є діти (use THERE IS / THERE ARE).",
-        "en": ["There are children at school.", "There’re children at school."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На вечірці багато їжі (use THERE IS / THERE ARE).",
-        "en": ["There is a lot of food at the party.", "There’s a lot of food at the party.", "There’s lots of food at the party."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На стіні висить дзеркало (use THERE IS / THERE ARE).",
-        "en": ["There is a mirror on the wall.", "There’s a mirror on the wall."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Біля ліжка є вікно (use THERE IS / THERE ARE).",
-        "en": ["There is a window near the bed.", "There’s a window near the bed."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "Поруч є новий магазин (use THERE IS / THERE ARE).",
-        "en": ["There is a new shop nearby.", "There’s a new shop nearby."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "У чайнику трохи чаю (use THERE IS / THERE ARE).",
-        "en": ["There is some tea in the teapot.", "There’s some tea in the teapot."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У дворі граються діти (use THERE IS / THERE ARE).",
-        "en": ["There are kids in the yard.", "There’re kids in the yard."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На землі лежить трохи снігу (use THERE IS / THERE ARE).",
-        "en": ["There is some snow on the ground.", "There’s some snow on the ground."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "В акваріумі плаває риба (use THERE IS / THERE ARE).",
-        "en": ["There is a fish in the aquarium.", "There’s a fish in the aquarium."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У машині багато місця (use THERE IS / THERE ARE).",
-        "en": ["There is a lot of space in the car.", "There’s a lot of space in the car.", "There’s plenty of space in the car."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "У чашці трохи цукру (use THERE IS / THERE ARE).",
-        "en": ["There is some sugar in the cup.", "There’s some sugar in the cup."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Поруч із домом є парк (use THERE IS / THERE ARE).",
-        "en": ["There is a park near the house.", "There’s a park near the house."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У тексті кілька помилок (use THERE IS / THERE ARE).",
-        "en": ["There are a few mistakes in the text.", "There’re a few mistakes in the text.", "There are some mistakes in the text."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі трохи пилу (use THERE IS / THERE ARE).",
-        "en": ["There is some dust on the table.", "There’s some dust on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику стоїть пляшка соку (use THERE IS / THERE ARE).",
-        "en": ["There is a bottle of juice in the fridge.", "There’s a bottle of juice in the fridge."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На піці трохи сиру (use THERE IS / THERE ARE).",
-        "en": ["There is some cheese on the pizza.", "There’s some cheese on the pizza."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На даху сидять птахи (use THERE IS / THERE ARE).",
-        "en": ["There are birds on the roof.", "There’re birds on the roof."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кінотеатрі показують новий фільм (use THERE IS / THERE ARE).",
-        "en": ["There is a new movie at the cinema.", "There’s a new movie at the cinema."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кімнаті кілька стільців (use THERE IS / THERE ARE).",
-        "en": ["There are a few chairs in the room.", "There’re some chairs in the room."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У чашці трохи молока (use THERE IS / THERE ARE).",
-        "en": ["There is some milk in the cup.", "There’s some milk in the cup."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У нашому класі є новий студент (use THERE IS / THERE ARE).",
-        "en": ["There is a new student in our class.", "There’s a new student in our class."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "На небі трохи хмар (use THERE IS / THERE ARE).",
-        "en": ["There are some clouds in the sky.", "There’re clouds in the sky."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "У банці кілька цукерок (use THERE IS / THERE ARE).",
-        "en": ["There are some candies in the jar.", "There’re candies in the jar."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі стоїть комп’ютер (use THERE IS / THERE ARE).",
-        "en": ["There is a computer on the desk.", "There’s a computer on the desk."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Біля вікна сидить кішка (use THERE IS / THERE ARE).",
-        "en": ["There is a cat near the window.", "There’s a cat near the window."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кафе є люди (use THERE IS / THERE ARE).",
-        "en": ["There are people in the cafe.", "There’re people in the cafe."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У пляшці трохи води (use THERE IS / THERE ARE).",
-        "en": ["There is some water in the bottle.", "There’s some water in the bottle."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На дереві сидить птах (use THERE IS / THERE ARE).",
-        "en": ["There is a bird in the tree.", "There’s a bird in the tree."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "До обіду трохи часу (use THERE IS / THERE ARE).",
-        "en": ["There is some time before lunch.", "There’s some time before lunch."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У вазі є квітка (use THERE IS / THERE ARE).",
-        "en": ["There is a flower in the vase.", "There’s a flower in the vase."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "На вулиці трохи снігу (use THERE IS / THERE ARE).",
-        "en": ["There is some snow outside.", "There’s some snow outside."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "У гаманці трохи грошей (use THERE IS / THERE ARE).",
-        "en": ["There is some money in the wallet.", "There’s some money in the wallet."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У місті є новий парк (use THERE IS / THERE ARE).",
-        "en": ["There is a new park in the city.", "There’s a new park in the city."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Перед будинком стоять три машини (use THERE IS / THERE ARE).",
-        "en": ["There are three cars in front of the house.", "There’re three cars in front of the house."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На тарілці трохи масла (use THERE IS / THERE ARE).",
-        "en": ["There is some butter on the plate.", "There’s some butter on the plate."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На ліжку лежать дві подушки (use THERE IS / THERE ARE).",
-        "en": ["There are two pillows on the bed.", "There’re two pillows on the bed."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі стоїть пляшка вина (use THERE IS / THERE ARE).",
-        "en": ["There is a bottle of wine on the table.", "There’s a bottle of wine on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У районі є нова школа (use THERE IS / THERE ARE).",
-        "en": ["There is a new school in the area.", "There’s a new school in the area."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У коробці трохи шоколаду (use THERE IS / THERE ARE).",
-        "en": ["There is some chocolate in the box.", "There’s some chocolate in the box."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У черзі кілька людей (use THERE IS / THERE ARE).",
-        "en": ["There are some people in the line.", "There’re people in the line."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі лежить один лист (use THERE IS / THERE ARE).",
-        "en": ["There is one letter on the table.", "There’s one letter on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кошику трохи фруктів (use THERE IS / THERE ARE).",
-        "en": ["There is some fruit in the basket.", "There’s some fruit in the basket."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику трохи морозива (use THERE IS / THERE ARE).",
-        "en": ["There is some ice cream in the fridge.", "There’s some ice cream in the fridge."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "У кімнаті трохи світла (use THERE IS / THERE ARE).",
-        "en": ["There is some light in the room.", "There’s some light in the room."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "На вулиці трохи шуму (use THERE IS / THERE ARE).",
-        "en": ["There is some noise in the street.", "There’s some noise in the street."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "Сьогодні трохи роботи (use THERE IS / THERE ARE).",
-        "en": ["There is some work today.", "There’s some work today."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "Біля школи є кафе (use THERE IS / THERE ARE).",
-        "en": ["There is a cafe near the school.", "There’s a cafe near the school."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На тарілці три яблука (use THERE IS / THERE ARE).",
-        "en": ["There are three apples on the plate.", "There’re three apples on the plate."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У чашці трохи кави (use THERE IS / THERE ARE).",
-        "en": ["There is some coffee in the cup.", "There’s some coffee in the cup."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У відрі трохи води (use THERE IS / THERE ARE).",
-        "en": ["There is some water in the bucket.", "There’s some water in the bucket."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "Ліворуч є двері (use THERE IS / THERE ARE).",
-        "en": ["There is a door on the left.", "There’s a door on the left."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "Праворуч є вікно (use THERE IS / THERE ARE).",
-        "en": ["There is a window on the right.", "There’s a window on the right."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На склі трохи інею (use THERE IS / THERE ARE).",
-        "en": ["There is some frost on the glass.", "There’s some frost on the glass."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На стіні висять кілька картин (use THERE IS / THERE ARE).",
-        "en": ["There are several pictures on the wall.", "There’re a few pictures on the wall."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику трохи сиру (use THERE IS / THERE ARE).",
-        "en": ["There is some cheese in the fridge.", "There’s some cheese in the fridge."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У моїй кишені є квиток (use THERE IS / THERE ARE).",
-        "en": ["There is a ticket in my pocket.", "There’s a ticket in my pocket."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На дереві ростуть яблука (use THERE IS / THERE ARE).",
-        "en": ["There are apples on the tree.", "There’re apples on the tree."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На дивані сидить кішка (use THERE IS / THERE ARE).",
-        "en": ["There is a cat on the sofa.", "There’s a cat on the sofa."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На даху трохи снігу (use THERE IS / THERE ARE).",
-        "en": ["There is some snow on the roof.", "There’s some snow on the roof."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У дворі є собака (use THERE IS / THERE ARE).",
-        "en": ["There is a dog in the yard.", "There’s a dog in the yard."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На столі стоїть чашка (use THERE IS / THERE ARE).",
-        "en": ["There is a cup on the table.", "There’s a cup on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У банці трохи цукру (use THERE IS / THERE ARE).",
-        "en": ["There is some sugar in the jar.", "There’s some sugar in the jar."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "Біля парку є новий магазин (use THERE IS / THERE ARE).",
-        "en": ["There is a new shop near the park.", "There’s a new shop near the park."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На полиці стоять три книжки (use THERE IS / THERE ARE).",
-        "en": ["There are three books on the shelf.", "There’re three books on the shelf."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У банці трохи меду (use THERE IS / THERE ARE).",
-        "en": ["There is some honey in the jar.", "There’s some honey in the jar."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику трохи молока (use THERE IS / THERE ARE).",
-        "en": ["There is some milk in the fridge.", "There’s some milk in the fridge."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На тумбочці стоїть лампа (use THERE IS / THERE ARE).",
-        "en": ["There is a lamp on the nightstand.", "There’s a lamp on the nightstand."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У ванній висить дзеркало (use THERE IS / THERE ARE).",
-        "en": ["There is a mirror in the bathroom.", "There’s a mirror in the bathroom."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На тарілці трохи сиру (use THERE IS / THERE ARE).",
-        "en": ["There is some cheese on the plate.", "There’s some cheese on the plate."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "На дитячому майданчику є діти (use THERE IS / THERE ARE).",
-        "en": ["There are children on the playground.", "There’re children on the playground."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У чашці трохи кави (use THERE IS / THERE ARE).",
-        "en": ["There is some coffee in the cup.", "There’s some coffee in the cup."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У кімнаті три вікна (use THERE IS / THERE ARE).",
-        "en": ["There are three windows in the room.", "There’re three windows in the room."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У пляшці трохи води (use THERE IS / THERE ARE).",
-        "en": ["There is some water in the bottle.", "There’s some water in the bottle."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У місті є новий парк (use THERE IS / THERE ARE).",
-        "en": ["There is a new park in the city.", "There’s a new park in the city."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У саду ростуть квіти (use THERE IS / THERE ARE).",
-        "en": ["There are flowers in the garden.", "There’re flowers in the garden."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"],
-        "ua": "На столі трохи хліба (use THERE IS / THERE ARE).",
-        "en": ["There is some bread on the table.", "There’s some bread on the table."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Біля дверей стоїть великий собака (use THERE IS / THERE ARE).",
-        "en": ["There is a big dog near the door.", "There’s a big dog near the door."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "У склянці трохи соку (use THERE IS / THERE ARE).",
-        "en": ["There is some juice in the glass.", "There’s some juice in the glass."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "COUNT_UNCOUNT"],
-        "ua": "Перед будинком стоять три машини (use THERE IS / THERE ARE).",
-        "en": ["There are three cars in front of the house.", "There’re three cars in front of the house."]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У кінотеатрі показують новий фільм (use THERE IS / THERE ARE).",
-        "en": ["There is a new movie at the cinema.", "There’s a new movie at the cinema."]
-    },
-    { "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT"], "ua": "У черзі є кілька людей (use THERE IS / THERE ARE).", "en": ["There are some people in the line.", "There’re people in the line."] },
-    { "rules": ["THERE_IS_ARE", "ARTICLES", "COUNT_UNCOUNT"], "ua": "Поруч з офісом є кафе (use THERE IS / THERE ARE).", "en": ["There is a cafe next to the office.", "There’s a cafe next to the office."] },
-    { "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT"], "ua": "На вулиці трохи снігу (use THERE IS / THERE ARE).", "en": ["There is some snow outside.", "There’s some snow outside."] },
-    { "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "COUNT_UNCOUNT"], "ua": "У коробці трохи шоколаду (use THERE IS / THERE ARE).", "en": ["There is some chocolate in the box.", "There’s some chocolate in the box."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У сковороді трохи масла (use THERE IS / THERE ARE).", "en": ["There is some oil in the pan.", "There’s some oil in the pan."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "Сьогодні в школі кілька дітей (use THERE IS / THERE ARE).", "en": ["There are a few children at school today.", "There’re a few children at school today.", "There are some kids at school today."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У кімнаті трохи світла (use THERE IS / THERE ARE).", "en": ["There is some light in the room.", "There’s some light in the room.", "There’s a bit of light in the room."] },
-    { "rules": ["THERE_IS_ARE","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На підвіконні є квітка (use THERE IS / THERE ARE).", "en": ["There is a flower on the windowsill.", "There’s a flower on the windowsill."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У машині трохи місця (use THERE IS / THERE ARE).", "en": ["There is some space in the car.", "There’s some space in the car.", "There’s plenty of space in the car."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У гаманці трохи грошей (use THERE IS / THERE ARE).", "en": ["There is some money in the wallet.", "There’s some money in the wallet."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "На вулиці трохи шуму (use THERE IS / THERE ARE).", "en": ["There is some noise in the street.", "There’s some noise in the street.", "There’s a bit of noise in the street."] },
-    { "rules": ["THERE_IS_ARE","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У класі три столи (use THERE IS / THERE ARE).", "en": ["There are three tables in the classroom.", "There’re three tables in the classroom."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У каструлі трохи рису (use THERE IS / THERE ARE).", "en": ["There is some rice in the pot.", "There’s some rice in the pot."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У мисці трохи цукерок (use THERE IS / THERE ARE).", "en": ["There are some candies in the bowl.", "There’re some candies in the bowl."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У супі трохи солі (use THERE IS / THERE ARE).", "en": ["There is some salt in the soup.", "There’s some salt in the soup."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У холодильнику трохи зелені (use THERE IS / THERE ARE).", "en": ["There is some parsley in the fridge.", "There’s some parsley in the fridge.", "There’s some herbs in the fridge."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На бутерброді трохи сиру (use THERE IS / THERE ARE).", "en": ["There is some cheese on the sandwich.", "There’s some cheese on the sandwich."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У склянці трохи апельсинового соку (use THERE IS / THERE ARE).", "en": ["There is some orange juice in the glass.", "There’s some orange juice in the glass."] },
-    { "rules": ["THERE_IS_ARE","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На столі дві ложки (use THERE IS / THERE ARE).", "en": ["There are two spoons on the table.", "There’re two spoons on the table."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На полицях трохи пилу (use THERE IS / THERE ARE).", "en": ["There is some dust on the shelves.", "There’s some dust on the shelves."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У небі кілька хмар (use THERE IS / THERE ARE).", "en": ["There are some clouds in the sky.", "There’re clouds in the sky."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У принтері трохи паперу (use THERE IS / THERE ARE).", "en": ["There is some paper in the printer.", "There’s some paper in the printer."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У баку трохи бензину (use THERE IS / THERE ARE).", "en": ["There is some petrol in the tank.", "There’s some petrol in the tank."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У шафі трохи місця (use THERE IS / THERE ARE).", "en": ["There is some space in the wardrobe.", "There’s some space in the wardrobe."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У ванній трохи мила (use THERE IS / THERE ARE).", "en": ["There is some soap in the bathroom.", "There’s some soap in the bathroom."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У пляшці трохи шампуню (use THERE IS / THERE ARE).", "en": ["There is some shampoo in the bottle.", "There’s some shampoo in the bottle."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У кавомашині трохи кави (use THERE IS / THERE ARE).", "en": ["There is some coffee in the coffee maker.", "There’s some coffee in the coffee maker."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "До поїзда ще трохи часу (use THERE IS / THERE ARE).", "en": ["There is some time before the train.", "There’s some time before the train."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У парку кілька людей (use THERE IS / THERE ARE).", "en": ["There are some people in the park.", "There’re people in the park."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У склянці трохи молока (use THERE IS / THERE ARE).", "en": ["There is some milk in the glass.", "There’s some milk in the glass."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У холодильнику трохи масла (use THERE IS / THERE ARE).", "en": ["There is some butter in the fridge.", "There’s some butter in the fridge."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У морозильнику трохи морозива (use THERE IS / THERE ARE).", "en": ["There is some ice cream in the freezer.", "There’s some ice cream in the freezer."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "На тарілці трохи хліба (use THERE IS / THERE ARE).", "en": ["There is some bread on the plate.", "There’s some bread on the plate."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У чашці трохи зеленого чаю (use THERE IS / THERE ARE).", "en": ["There is some green tea in the cup.", "There’s some green tea in the cup."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У вазі кілька квітів (use THERE IS / THERE ARE).", "en": ["There are some flowers in the vase.", "There’re flowers in the vase."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У пляшці трохи лимонаду (use THERE IS / THERE ARE).", "en": ["There is some lemonade in the bottle.", "There’s some lemonade in the bottle."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "На ложці трохи меду (use THERE IS / THERE ARE).", "en": ["There is some honey on the spoon.", "There’s some honey on the spoon."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У холодильнику трохи сиру (use THERE IS / THERE ARE).", "en": ["There is some cheese in the fridge.", "There’s some cheese in the fridge."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На вулиці кілька людей (use THERE IS / THERE ARE).", "en": ["There are some people on the street.", "There’re people on the street."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У пакеті трохи соку (use THERE IS / THERE ARE).", "en": ["There is some juice in the carton.", "There’s some juice in the carton."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У холодильнику трохи моркви (use THERE IS / THERE ARE).", "en": ["There are some carrots in the fridge.", "There’re carrots in the fridge."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У холодильнику трохи риби (use THERE IS / THERE ARE).", "en": ["There is some fish in the fridge.", "There’s some fish in the fridge."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У горах трохи снігу (use THERE IS / THERE ARE).", "en": ["There is some snow in the mountains.", "There’s some snow in the mountains."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У небі кілька птахів (use THERE IS / THERE ARE).", "en": ["There are some birds in the sky.", "There’re birds in the sky."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У садочку кілька дітей (use THERE IS / THERE ARE).", "en": ["There are some children in the kindergarten.", "There’re children in the kindergarten."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У кімнаті трохи меблів (use THERE IS / THERE ARE).", "en": ["There is some furniture in the room.", "There’s some furniture in the room."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "На тарілці трохи їжі (use THERE IS / THERE ARE).", "en": ["There is some food on the plate.", "There’s some food on the plate."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У мисці трохи супу (use THERE IS / THERE ARE).", "en": ["There is some soup in the bowl.", "There’s some soup in the bowl."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У кошику трохи фруктів (use THERE IS / THERE ARE).", "en": ["There is some fruit in the basket.", "There’s some fruit in the basket."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У салаті трохи зелені (use THERE IS / THERE ARE).", "en": ["There are some herbs in the salad.", "There’re herbs in the salad."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У відрі трохи води (use THERE IS / THERE ARE).", "en": ["There is some water in the bucket.", "There’s some water in the bucket."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У банці трохи кави (use THERE IS / THERE ARE).", "en": ["There is some coffee in the jar.", "There’s some coffee in the jar."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У відрі трохи сміття (use THERE IS / THERE ARE).", "en": ["There is some garbage in the bin.", "There’s some garbage in the bin."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У магазині кілька людей (use THERE IS / THERE ARE).", "en": ["There are some people in the shop.", "There’re people in the shop."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "Біля дому кілька квітів (use THERE IS / THERE ARE).", "en": ["There are some flowers near the house.", "There’re flowers near the house."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "З вікна трохи світла (use THERE IS / THERE ARE).", "en": ["There is some light from the window.", "There’s some light from the window."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У кімнаті трохи повітря (use THERE IS / THERE ARE).", "en": ["There is some air in the room.", "There’s some air in the room."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "Зараз трохи тиші (use THERE IS / THERE ARE).", "en": ["There is some silence now.", "There’s some silence now.", "There’s a bit of silence now."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "На дивані трохи місця (use THERE IS / THERE ARE).", "en": ["There is some space on the sofa.", "There’s some space on the sofa.", "There’s a little space on the sofa."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У кінотеатрі кілька людей (use THERE IS / THERE ARE).", "en": ["There are some people in the cinema.", "There’re a few people in the cinema."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На стіні трохи тіней (use THERE IS / THERE ARE).", "en": ["There are some shadows on the wall.", "There’re shadows on the wall."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На підлозі трохи іграшок (use THERE IS / THERE ARE).", "en": ["There are some toys on the floor.", "There’re toys on the floor."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У ванні трохи води (use THERE IS / THERE ARE).", "en": ["There is some water in the bath.", "There’s some water in the bath."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У шафі трохи одягу (use THERE IS / THERE ARE).", "en": ["There are some clothes in the wardrobe.", "There’re clothes in the wardrobe."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На полиці трохи книжок (use THERE IS / THERE ARE).", "en": ["There are some books on the shelf.", "There’re books on the shelf."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На дереві трохи зеленого листя (use THERE IS / THERE ARE).", "en": ["There are some green leaves on the tree.", "There’re some green leaves on the tree."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На столі трохи сиру (use THERE IS / THERE ARE).", "en": ["There is some cheese on the table.", "There’s some cheese on the table."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У мисці трохи винограду (use THERE IS / THERE ARE).", "en": ["There are some grapes in the bowl.", "There’re grapes in the bowl."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На підлозі трохи піску (use THERE IS / THERE ARE).", "en": ["There is some sand on the floor.", "There’s some sand on the floor."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "До початку ще трохи часу (use THERE IS / THERE ARE).", "en": ["There is some time before the start.", "There’s some time before the start."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У пакеті трохи хліба (use THERE IS / THERE ARE).", "en": ["There is some bread in the bag.", "There’s some bread in the bag."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На парковці кілька машин (use THERE IS / THERE ARE).", "en": ["There are some cars in the parking lot.", "There’re a few cars in the parking lot."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На столі трохи кави (use THERE IS / THERE ARE).", "en": ["There is some coffee on the table.", "There’s some coffee on the table."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "Сьогодні в парку є трохи людей (use THERE IS / THERE ARE).", "en": ["There are some people in the park today.", "There’re a few people in the park today."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У пляшці трохи води (use THERE IS / THERE ARE).", "en": ["There is some water in the bottle.", "There’s some water in the bottle."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У вазі кілька квітів (use THERE IS / THERE ARE).", "en": ["There are some flowers in the vase.", "There’re flowers in the vase."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "На полиці трохи хліба (use THERE IS / THERE ARE).", "en": ["There is some bread on the shelf.", "There’s some bread on the shelf."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "За вікном трохи снігу (use THERE IS / THERE ARE).", "en": ["There is some snow outside the window.", "There’s some snow outside the window."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У супермаркеті є трохи людей (use THERE IS / THERE ARE).", "en": ["There are some people in the supermarket.", "There’re people in the supermarket."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У кульці трохи повітря (use THERE IS / THERE ARE).", "en": ["There is some air in the balloon.", "There’s some air in the balloon."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У каві трохи цукру (use THERE IS / THERE ARE).", "en": ["There is some sugar in the coffee.", "There’s some sugar in the coffee."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У кімнаті трохи світла (use THERE IS / THERE ARE).", "en": ["There is some light in the room.", "There’s some light in the room."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У садочку є трохи дітей (use THERE IS / THERE ARE).", "en": ["There are some kids in the kindergarten.", "There’re children in the kindergarten."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У кошику трохи фруктів (use THERE IS / THERE ARE).", "en": ["There is some fruit in the basket.", "There’s some fruit in the basket."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У зоопарку є кілька тварин (use THERE IS / THERE ARE).", "en": ["There are some animals in the zoo.", "There’re animals in the zoo."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "До обіду ще трохи часу (use THERE IS / THERE ARE).", "en": ["There is some time before lunch.", "There’s some time before lunch."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На підлозі трохи іграшок (use THERE IS / THERE ARE).", "en": ["There are some toys on the floor.", "There’re toys on the floor."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У чашці трохи чаю (use THERE IS / THERE ARE).", "en": ["There is some tea in the cup.", "There’s some tea in the cup."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У черзі є кілька людей (use THERE IS / THERE ARE).", "en": ["There are some people in the line.", "There’re a few people in the line."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У шафі є трохи місця (use THERE IS / THERE ARE).", "en": ["There is some space in the closet.", "There’s some space in the closet."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У холодильнику трохи сиру (use THERE IS / THERE ARE).", "en": ["There is some cheese in the fridge.", "There’s some cheese in the fridge."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","SIMPLE_ADJ","PREP_PLACE","COUNT_UNCOUNT"], "ua": "На дереві трохи зеленого листя (use THERE IS / THERE ARE).", "en": ["There are some green leaves on the tree.", "There’re green leaves on the tree."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "На небі трохи сонця (use THERE IS / THERE ARE).", "en": ["There is some sunshine in the sky.", "There is some sunlight in the sky.", "There’s some sunshine in the sky."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"], "ua": "У гаманці трохи грошей (use THERE IS / THERE ARE).", "en": ["There is some money in the wallet.", "There’s some money in the wallet."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У кімнаті кілька людей (use THERE IS / THERE ARE).", "en": ["There are some people in the room.", "There’re a few people in the room."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У склянці трохи води (use THERE IS / THERE ARE).", "en": ["There is some water in the glass.", "There’s some water in the glass."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"], "ua": "У школі сьогодні є трохи дітей (use THERE IS / THERE ARE).", "en": ["There are some children at school.", "There’re some kids at school."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"], "ua": "У коробці трохи шоколаду (use THERE IS / THERE ARE).", "en": ["There is some chocolate in the box.", "There’s some chocolate in the box."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT","ARTICLES"], "ua": "У повітрі трохи музики (use THERE IS / THERE ARE).", "en": ["There is some music in the air.", "There’s some music in the air."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT","ARTICLES"], "ua": "У шафі трохи одягу (use THERE IS / THERE ARE).", "en": ["There are some clothes in the wardrobe.", "There’re clothes in the wardrobe."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT","ARTICLES"], "ua": "На землі трохи снігу (use THERE IS / THERE ARE).", "en": ["There is some snow on the ground.", "There’s some snow on the ground."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT","ARTICLES"], "ua": "У кафе є трохи людей (use THERE IS / THERE ARE).", "en": ["There are some people in the cafe.", "There’re some people in the cafe."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT","ARTICLES"], "ua": "На парковці кілька машин (use THERE IS / THERE ARE).", "en": ["There are some cars in the parking lot.", "There’re a few cars in the parking lot."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT","ARTICLES"], "ua": "На вікнах трохи інею (use THERE IS / THERE ARE).", "en": ["There is some frost on the windows.", "There’s some frost on the windows."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT","ARTICLES"], "ua": "У класі є трохи учнів (use THERE IS / THERE ARE).", "en": ["There are some students in the class.", "There’re some students in the class."] },
-    { "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT","ARTICLES"], "ua": "В акваріумі трохи води (use THERE IS / THERE ARE).", "en": ["There is some water in the aquarium.", "There’s some water in the aquarium."] },
-    { "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT","ARTICLES"], "ua": "У річці трохи риби (use THERE IS / THERE ARE).", "en": ["There are some fish in the river.", "There’re some fish in the river.", "There are a few fish in the river."] },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "Біля озера є кілька дерев (use THERE IS / THERE ARE).",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У парку багато людей.",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "There are some trees near the lake.",
-            "There’re some trees by the lake.",
-            "There are a few trees beside the lake."
+            "There are a lot of people in the park.",
+            "There are many people in the park."
         ]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "На вулиці є кілька будинків (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some houses on the street.",
-            "There’re some houses on the street.",
-            "There are a few houses along the street."
-        ]
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "Люди у парку.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are people in the park."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У холодильнику трохи соку (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some juice in the fridge.",
-            "There’s some juice in the fridge.",
-            "There is a little juice in the fridge."
-        ]
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Біля вікна стоїть стілець.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a chair near the window."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У вітальні є трохи меблів (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some furniture in the living room.",
-            "There’s some furniture in the living room."
-        ]
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У склянці є трохи води.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some water in the glass."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У парку є кілька квітів (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some flowers in the park.",
-            "There’re some flowers in the park.",
-            "There are a few flowers in the park."
-        ]
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "Молоко в холодильнику.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is milk in the fridge."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У пакеті трохи молока (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some milk in the carton.",
-            "There’s some milk in the carton.",
-            "There is a little milk in the carton."
-        ]
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "На полиці кілька книжок.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are some books on the shelf."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У театрі є кілька людей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some people in the theatre.",
-            "There’re some people in the theater.",
-            "There are a few people in the theatre."
-        ]
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У нашому місті є річка.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a river in our city."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У горах трохи снігу (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some snow in the mountains.",
-            "There’s some snow in the mountains.",
-            "There is a little snow in the mountains."
-        ]
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На підлозі лежать іграшки.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are toys on the floor."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У бібліотеці є кілька людей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some people in the library.",
-            "There’re some people in the library.",
-            "There are a few people in the library."
-        ]
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Біля школи стоїть автобус.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a bus near the school."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "На прилавку є кілька гаманців (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some wallets on the counter.",
-            "There’re some wallets on the counter.",
-            "There are a few wallets on the counter."
-        ]
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У кімнаті стоїть телевізор.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a TV in the room."]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "На столі трохи паперу (use THERE IS / THERE ARE).",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "На пляжі багато людей.",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "There is some paper on the desk.",
-            "There’s some paper on the desk.",
-            "There is a little paper on the table."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У газеті є трохи новин (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some news stories in the newspaper.",
-            "There’re some news stories in the newspaper.",
-            "There is some news in the paper."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У пакеті є кілька цукерок (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some candies in the bag.",
-            "There’re some candies in the bag.",
-            "There are a few sweets in the bag."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У дворі трохи снігу (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some snow in the yard.",
-            "There’s some snow in the yard.",
-            "There is a little snow in the garden."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "На концерті є кілька людей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some people at the concert.",
-            "There’re some people at the concert.",
-            "There are a few people at the concert."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У банці трохи кави (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some coffee in the jar.",
-            "There’s some coffee in the jar.",
-            "There is a little coffee in the jar."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У пакеті трохи соку (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some juice in the pack.",
-            "There’s some juice in the pack.",
-            "There is some juice in the carton.",
-            "There is a little juice in the carton."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
-        "ua": "У супі трохи зелені (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some herbs in the soup.",
-            "There’re some herbs in the soup.",
-            "There are some greens in the soup.",
-            "There’s some parsley in the soup."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
-        "ua": "Біля вікна є кілька квітів (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some flowers near the window.",
-            "There’re some flowers by the window.",
-            "There are a few flowers beside the window."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "На даху трохи снігу (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some snow on the roof.",
-            "There’s some snow on the roof.",
-            "There is a little snow on the roof."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
-        "ua": "На пляжі є кілька людей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some people on the beach.",
-            "There’re some people on the beach.",
-            "There are a few people at the beach."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "COUNT_UNCOUNT", "ARTICLES"],
-        "ua": "У шині трохи повітря (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some air in the tire.",
-            "There’s some air in the tire.",
-            "There is a little air in the tire."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "COUNT_UNCOUNT"],
-        "ua": "У річці трохи води (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some water in the river.",
-            "There’s some water in the river.",
-            "There is a little water in the river."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT","ARTICLES"],
-        "ua": "У небі є трохи хмар (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some clouds in the sky.",
-            "There’re some clouds in the sky.",
-            "There are a few clouds in the sky."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT","ARTICLES"],
-        "ua": "У кімнаті є трохи тепла (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some warmth in the room.",
-            "There’s some warmth in the room.",
-            "There is a little warmth in the room."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "У спортзалі є кілька людей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some people in the gym.",
-            "There’re some people in the gym.",
-            "There are a few people at the gym."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "На дорозі є кілька машин (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some cars on the road.",
-            "There’re some cars on the road.",
-            "There are a few cars on the street."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "У класі сьогодні є кілька дітей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some children in the class today.",
-            "There’re some children in the class today.",
-            "There are a few kids in the classroom today."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES"],
-        "ua": "До поїзда ще є трохи часу (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some time before the train.",
-            "There’s some time before the train.",
-            "There is a little time before the train leaves."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES"],
-        "ua": "Від лампи йде трохи світла (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some light from the lamp.",
-            "There’s some light from the lamp.",
-            "There is a little light from the lamp."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "На телевізорі трохи пилу (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some dust on the TV.",
-            "There’s some dust on the TV.",
-            "There is a little dust on the television."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "У пляшці зліва є трохи води (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some water in the bottle on the left.",
-            "There’s some water in the bottle on the left.",
-            "There is a little water in the bottle on the left side."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES"],
-        "ua": "У місті є кілька друзів (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some friends in the city.",
-            "There’re some friends in the city.",
-            "There are a few friends in the city."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "На столі є трохи їжі (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some food on the table.",
-            "There’s some food on the table.",
-            "There is a little food on the table."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES"],
-        "ua": "У кімнаті є трохи місця (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some space in the room.",
-            "There’s some space in the room.",
-            "There is a little space in the room."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES"],
-        "ua": "На тротуарі трохи снігу (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some snow on the pavement.",
-            "There’s some snow on the pavement.",
-            "There is a little snow on the sidewalk."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "У парку зараз є кілька дітей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some children in the park now.",
-            "There’re some children in the park now.",
-            "There are a few kids in the park now."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES"],
-        "ua": "У кімнаті чути трохи сміху (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some laughter in the room.",
-            "There’s some laughter in the room.",
-            "There is a little laughter in the room."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "У черзі за кавою є кілька людей (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some people in the line for coffee.",
-            "There’re some people in the line for coffee.",
-            "There are a few people waiting for coffee."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","ARTICLES"],
-        "ua": "Біля паркану є кілька кішок (use THERE IS / THERE ARE).",
-        "en": [
-            "There are some cats near the fence.",
-            "There’re some cats near the fence.",
-            "There are a few cats by the fence."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE"],
-        "ua": "У мисці для собаки є трохи води (use THERE IS / THERE ARE).",
-        "en": [
-            "There is some water in the dog’s bowl.",
-            "There’s some water in the dog’s bowl.",
-            "There is a little water in the dog’s bowl."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
-        "ua": "Чи є на кухні чай? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any tea in the kitchen?",
-            "Is there some tea in the kitchen?",
-            "Is there a bit of tea in the kitchen?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES"],
-        "ua": "Чи є хтось у кімнаті? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there anyone in the room?",
-            "Is anybody in the room?"
+            "There are many people on the beach.",
+            "There are a lot of people on the beach."
         ]
     },
     {
         "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
-        "ua": "Чи є автобус біля школи? (use THERE IS / THERE ARE)",
+        "ua": "Лампа стоїть у кутку.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a lamp in the corner."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У ванній висить дзеркало.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a mirror in the bathroom."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На кухні є стіл і два стільці.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a table and two chairs in the kitchen."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "Птахи сидять на дереві.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are birds in the tree."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "Хмари на небі.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are clouds in the sky."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Поруч із будинком є школа.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a school near the house."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "За рогом є кафе.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cafe around the corner."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У моїй кімнаті є килим.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a carpet in my room."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На столі стоїть комп’ютер.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a computer on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У класі є кілька учнів.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are a few students in the class."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У поштовій скриньці є лист.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a letter in the mailbox."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На малюнку зображена собака.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a dog in the picture."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "На вулиці багато машин.",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "Is there a bus near the school?",
-            "Is there a bus by the school?",
-            "Is there a bus at the school?"
+            "There are many cars in the street.",
+            "There are a lot of cars in the street."
+        ]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На підвіконні стоїть квітка.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a flower on the windowsill."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На столі стоїть пляшка води.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a bottle of water on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "Яблука лежать у кошику.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are apples in the basket."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У холодильнику є трохи сиру.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some cheese in the fridge."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Під диваном сидить кіт.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cat under the sofa."]
+    },
+
+
+
+
+
+
+
+
+
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На даху сидить птах.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a bird on the roof."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У парку багато дітей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": [
+            "There are many children in the park.",
+            "There are a lot of children in the park."
+        ]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Біля дверей сидить собака.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a dog near the door."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "У холодильнику є сир і масло.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is cheese and butter in the fridge."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У кімнаті багато людей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": [
+            "There are many people in the room.",
+            "There are a lot of people in the room."
+        ]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На тарілці лежить один помідор.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is one tomato on the plate."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У каструлі є трохи рису.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some rice in the pot."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На столі лежить книжка.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a book on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "У банці є трохи меду.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some honey in the jar."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У дворі кіт і собака.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cat and a dog in the yard."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У кутку кімнати стоїть стіл.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a table in the corner of the room."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "На вечірці буде багато їжі.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There will be a lot of food at the party."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На стіні висить дзеркало.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a mirror on the wall."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Біля ліжка є вікно.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a window near the bed."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "Поруч є новий магазин.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new shop nearby."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "У чайнику було трохи чаю.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some tea in the kettle."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "У дворі граються діти.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are kids in the yard."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "На землі лежить трохи снігу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some snow on the ground."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "В акваріумі плаває риба.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a fish in the aquarium."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У машині багато місця.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a lot of space in the car."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "У чашці було трохи цукру.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some sugar in the cup.", "There was a little sugar in the cup."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Поруч із домом є парк.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a park near the house."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У тексті є кілька помилок.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are a few mistakes in the text.", "There are some mistakes in the text."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "На столі є трохи пилу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some dust on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У холодильнику стоїть пляшка соку.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a bottle of juice in the fridge."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На даху сидять птахи.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are birds on the roof."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У кінотеатрі показують новий фільм.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new movie at the cinema."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У кімнаті є кілька стільців.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are a few chairs in the room."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У чашці було трохи молока.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some milk in the cup.", "There was a little milk in the cup."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У нашому класі є новий студент.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new student in our class."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "У банці є кілька цукерок.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are some candies in the jar."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На столі стоїть комп’ютер.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a computer on the desk."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Біля вікна сидить кішка.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cat near the window."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "У кафе буде багато людей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There will be a lot of people in the cafe."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На дереві сидить птах.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a bird in the tree."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "До обіду є трохи часу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some time before lunch."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "На вулиці лежить трохи снігу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some snow outside."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "У гаманці є трохи грошей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some money in the wallet."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "У місті є новий парк.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new park in the city."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "Перед будинком стоять три машини.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are three cars in front of the house."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "На тарілці є трохи масла.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some butter on the plate."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На ліжку лежать дві подушки.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are two pillows on the bed."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На столі стоїть пляшка вина.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a bottle of wine on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "У районі є нова школа.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new school in the area."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "У коробці було трохи шоколаду.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some chocolate in the box.", "There was a little chocolate in the box."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У черзі було кілька людей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There were a few people in the queue.", "There were several people in line."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На столі лежать чотири листи.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are four letters on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "У холодильнику було трохи морозива.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some ice cream in the fridge.", "There was a little ice cream left in the fridge."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "Біля школи є кафе.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cafe near the school."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На тарілці три яблука.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are three apples on the plate."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "У відрі було трохи води.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some water in the bucket.", "There was a little water in the bucket."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "На склі є трохи інею.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some frost on the glass."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "На стіні висять кілька картин.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are several pictures on the wall."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У моїй кишені є квиток.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a ticket in my pocket."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На дереві ростуть яблука.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are apples on the tree."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На дивані сидить кішка.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cat on the sofa."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "На даху було трохи снігу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some snow on the roof."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У дворі є собака.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a dog in the yard."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На столі стоїть чашка.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cup on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "У банці було трохи цукру.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some sugar in the jar.", "There was a little sugar in the jar."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "Біля парку є новий магазин.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new shop near the park."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На полиці стоять три книжки.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are three books on the shelf."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
+        "ua": "У банці є трохи меду.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some honey in the jar."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
+        "ua": "У холодильнику було трохи молока.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some milk in the fridge.", "There was a little milk in the fridge."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "На тумбочці стоїть лампа.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a lamp on the nightstand."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "У ванній висить дзеркало.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a mirror in the bathroom."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "На тарілці є трохи сиру.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some cheese on the plate."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "На дитячому майданчику були діти.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There were children at the playground.", "There were kids on the playground."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "У чашці було трохи кави.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some coffee in the cup.", "There was a little coffee left in the cup."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "У кімнаті є три вікна.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are three windows in the room."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "У місті є новий парк.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new park in the city."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "У саду ростуть квіти.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are flowers in the garden."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "На столі було трохи хліба.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some bread on the table.", "There was a little coffee left in the cup."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
+        "ua": "Біля дверей стоїть великий пес.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a big dog near the door."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
+        "ua": "У склянці було трохи соку.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some juice in the glass.", "There was a little juice in the glass."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "PREP_PLACE"],
+        "ua": "Перед будинком стоять три машини.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are three cars in front of the house."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "У кінотеатрі показують новий фільм.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a new movie at the cinema."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE"],
+        "ua": "У черзі було кілька людей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There were several people in line.", "There were a few people in the queue."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "ARTICLES"],
+        "ua": "Поруч з офісом є кафе.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a cafe next to the office."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS"],
+        "ua": "На вулиці було трохи снігу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There was some snow outside.", "There was a little snow on the street."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "У шафі є багато одягу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is a lot of clothing in the wardrobe.", "There are lots of clothes in the wardrobe."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "На полиці є трохи книжок.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are some books on the shelf."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "На столі є трохи сиру.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some cheese on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "У мисці є трохи винограду.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are some grapes in the bowl."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "На підлозі є трохи піску.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some sand on the floor."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","COUNT_UNCOUNT"],
+        "ua": "До початку ще є трохи часу.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some time before the start."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","COUNT_UNCOUNT"],
+        "ua": "У пакеті є трохи хліба.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some bread in the bag."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "На парковці стоять кілька машин.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There are some cars in the parking lot."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "На столі є трохи кави.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some coffee on the table."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "Сьогодні в парку було трохи людей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There were a few people in the park today.", "There were some people in the park today."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","ARTICLES","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "У пляшці є трохи води.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There is some water in the bottle."]
+    },
+    {
+        "rules": ["THERE_IS_ARE","QUANTIFIERS","PREP_PLACE","COUNT_UNCOUNT"],
+        "ua": "У супермаркеті було багато людей.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": ["There were a lot of people in the supermarket.", "There were lots of people at the supermarket."]
+    },
+    {
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "COUNT_UNCOUNT", "ARTICLES"],
+        "ua": "На парковці було кілька машин.",
+        "hint": "use THERE IS / THERE ARE",
+        "en": [
+            "There were a few cars in the parking lot.",
+            "There were several cars in the car park."
         ]
     },
     {
         "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
-        "ua": "Чи є магазини поруч із домом? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any shops near the house?",
-            "Are there any stores near the house?",
-            "Are there shops close to the house?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "PREP_PLACE", "ARTICLES"],
-        "ua": "Чи є квіти в саду? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there flowers in the garden?",
-            "Are there any flowers in the garden?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
-        "ua": "Чи є стіл у кімнаті? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there a table in the room?",
-            "Is there any table in the room?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
-        "ua": "Чи є трохи хліба? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any bread?",
-            "Is there some bread?",
-            "Is there a bit of bread?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES"],
-        "ua": "Чи є люди в парку? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there people in the park?",
-            "Are there any people in the park?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
-        "ua": "Чи є квитки на потяг? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any tickets for the train?",
-            "Are there tickets for the train?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES"],
-        "ua": "Чи є магазин поблизу? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there a shop nearby?",
-            "Is there a store nearby?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
-        "ua": "Чи є яблуко в кошику? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there an apple in the basket?",
-            "Is there one apple in the basket?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
-        "ua": "Чи є трохи молока в холодильнику? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any milk in the fridge?",
-            "Is there some milk in the fridge?",
-            "Is there a bit of milk in the fridge?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES"],
-        "ua": "Чи є автобуси біля станції? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there buses near the station?",
-            "Are there any buses at the station?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES"],
-        "ua": "Чи є телевізор у кімнаті? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there a TV in the room?",
-            "Is there any television in the room?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "ARTICLES"],
-        "ua": "Чи є коти у дворі? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there cats in the yard?",
-            "Are there any cats in the yard?",
-            "Are there cats outside?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є в холодильнику трохи соку? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any juice in the fridge?",
-            "Is there some juice in the fridge?",
-            "Is there a bit of juice in the fridge?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є в бібліотеці трохи людей? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any people in the library?",
-            "Are there some people in the library?",
-            "Are there a few people in the library?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи риби в акваріумі? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any fish in the aquarium?",
-            "Is there some fish in the aquarium?",
-            "Are there any fish in the aquarium?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи зелені в салаті? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any greens in the salad?",
-            "Is there any parsley in the salad?",
-            "Is there some greenery in the salad?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є в парку трохи дітей? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any kids in the park?",
-            "Are there some children in the park?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи часу до фільму? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any time before the movie?",
-            "Is there a little time before the movie?",
-            "Is there some time before the movie starts?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи людей у музеї? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any people in the museum?",
-            "Are there some people in the museum?",
-            "Are there a few visitors in the museum?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи кави в чашці? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any coffee in the cup?",
-            "Is there some coffee in the cup?",
-            "Is there a bit of coffee in the cup?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "Немає дітей удома. (use THERE IS / THERE ARE)",
-        "en": [
-            "There aren’t any children at home.",
-            "There’re no kids at home.",
-            "There are no children at home."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи води у відрі? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any water in the bucket?",
-            "Is there some water in the bucket?",
-            "Is there a little water in the bucket?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "Чи є трохи музики? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any music?",
-            "Is there some music?",
-            "Is there a bit of music?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "Немає людей у театрі. (use THERE IS / THERE ARE)",
-        "en": [
-            "There aren’t any people in the theatre.",
-            "There’re no people in the theater.",
-            "There are no people in the theatre."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи машин на вулиці? (use THERE IS / THERE ARE)",
+        "ua": "На вулиці є машини?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
             "Are there any cars on the street?",
-            "Are there some cars on the street?",
-            "Are there a few cars on the road?"
+            "Are there cars on the street?"
         ]
     },
     {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "Немає місця в кімнаті. (use THERE IS / THERE ARE)",
-        "en": [
-            "There isn’t any space in the room.",
-            "There’s no space in the room.",
-            "There isn’t much room inside."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи квітів у саду? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any flowers in the garden?",
-            "Are there some flowers in the garden?",
-            "Are there a few flowers in the garden?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи чаю в чайнику? (use THERE IS / THERE ARE)",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
+        "ua": "В чайнику є трохи чаю?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
             "Is there any tea in the teapot?",
-            "Is there some tea in the teapot?",
             "Is there a bit of tea in the teapot?"
         ]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи снігу на даху? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any snow on the roof?",
-            "Is there some snow on the roof?",
-            "Is there a little snow on the roof?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "Сьогодні немає сонця. (use THERE IS / THERE ARE)",
-        "en": [
-            "There isn’t any sun today.",
-            "There isn’t any sunshine today.",
-            "There’s no sunlight today."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи людей у ресторані? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any people in the restaurant?",
-            "Are there some people in the restaurant?",
-            "Are there a few customers in the restaurant?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "Немає жодного олівця на столі. (use THERE IS / THERE ARE)",
-        "en": [
-            "There aren’t any pencils on the table.",
-            "There are no pencils on the table.",
-            "There’re no pencils on the desk."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи зелені в холодильнику? (use THERE IS / THERE ARE)",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
+        "ua": "У холодильнику є зелень?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
             "Is there any parsley in the fridge?",
-            "Are there any greens in the fridge?",
-            "Is there some greenery in the fridge?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи дітей у школі сьогодні? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any children at school today?",
-            "Are there some kids at school today?",
-            "Are there a few students at school today?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "У пакеті немає хліба. (use THERE IS / THERE ARE)",
-        "en": [
-            "There isn’t any bread in the bag.",
-            "There’s no bread in the bag.",
-            "There isn’t any loaf left in the bag."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи людей у кінотеатрі? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any people in the cinema?",
-            "Are there some people in the cinema?",
-            "Are there a few people at the movies?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи повітря у кульці? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any air in the balloon?",
-            "Is there some air in the balloon?",
-            "Is there a bit of air in the balloon?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE","ARTICLES"],
-        "ua": "У банці немає меду. (use THERE IS / THERE ARE)",
-        "en": [
-            "There isn’t any honey in the jar.",
-            "There’s no honey in the jar.",
-            "There isn’t much honey in the jar."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи часу до поїзда? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any time before the train?",
-            "Is there some time before the train?",
-            "Is there a little time before the train leaves?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "На столі немає паперу. (use THERE IS / THERE ARE)",
-        "en": [
-            "There isn’t any paper on the desk.",
-            "There’s no paper on the desk.",
-            "There isn’t any paper on the table."
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи птахів у небі? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any birds in the sky?",
-            "Are there some birds in the sky?",
-            "Are there a few birds in the sky?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є трохи води у відрі? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any water in the bucket?",
-            "Is there some water in the bucket?",
-            "Is there a little water in the bucket?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи зелені біля вікна? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any plants near the window?",
-            "Are there some plants near the window?",
-            "Are there a few plants by the window?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є трохи машин на дорозі? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any cars on the road?",
-            "Are there some cars on the road?",
-            "Are there a few cars on the road?"
+            "Are there any greens in the fridge?"
         ]
     },
     {
         "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
-        "ua": "Чи є в кошику трохи яблук? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any apples in the basket?",
-            "Are there some apples in the basket?",
-            "Are there a few apples in the basket?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є в черзі трохи людей? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any people in the line?",
-            "Are there some people in the line?",
-            "Are there a few people waiting in line?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
-        "ua": "Чи є в мисці трохи цукру? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any sugar in the bowl?",
-            "Is there some sugar in the bowl?",
-            "Is there a little sugar in the bowl?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є поруч трохи друзів? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any friends nearby?",
-            "Are there some friends nearby?",
-            "Are there a few friends nearby?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "TIME","ARTICLES"],
-        "ua": "Чи є сьогодні в парку трохи людей? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any people in the park today?",
-            "Are there some people in the park today?",
-            "Are there a few people in the park today?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "TIME","ARTICLES"],
-        "ua": "Чи є сьогодні в садочку трохи дітей? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any kids in the kindergarten today?",
-            "Are there some children in the kindergarten today?",
-            "Are there a few kids at kindergarten today?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES", "PREP_PLACE"],
-        "ua": "Чи є в чашці трохи молока? (use THERE IS / THERE ARE)",
-        "en": [
-            "Is there any milk in the cup?",
-            "Is there some milk in the cup?",
-            "Is there a little milk in the cup?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є в супі трохи зелені? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any greens in the soup?",
-            "Is there any parsley in the soup?",
-            "Is there some greenery in the soup?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є в кінотеатрі трохи людей? (use THERE IS / THERE ARE)",
+        "ua": "В кінотеатрі є люди?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
             "Are there any people in the cinema?",
-            "Are there some people in the cinema?",
             "Are there a few people at the movies?"
         ]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є в річці трохи риби? (use THERE IS / THERE ARE)",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
+        "ua": "В кошику є яблука?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "Are there any fish in the river?",
-            "Is there any fish in the river?",
-            "Are there some fish in the river?"
+            "Are there any apples in the basket?",
+            "Are there a few apples in the basket?"
         ]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є в гаманці трохи грошей? (use THERE IS / THERE ARE)",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
+        "ua": "В супі є перець?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "Is there any money in the wallet?",
-            "Is there some money in the wallet?",
-            "Is there a bit of money in the wallet?"
+            "Is there any pepper in the soup?"
         ]
     },
     {
         "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
-        "ua": "Чи є в холодильнику трохи молока? (use THERE IS / THERE ARE)",
+        "ua": "В гаманці є гроші?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "Is there any milk in the fridge?",
-            "Is there some milk in the fridge?",
-            "Is there a little milk in the fridge?"
+            "Is there any money in the wallet?",
+            "Is there money in the wallet?"
         ]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є в класі трохи місця? (use THERE IS / THERE ARE)",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "ARTICLES"],
+        "ua": "В холодильнику є їжа?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "Is there any space in the classroom?",
-            "Is there some space in the classroom?",
-            "Is there a little room in the classroom?"
+            "Is there any food in the fridge?"
         ]
     },
     {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS","ARTICLES"],
-        "ua": "Чи є в холодильнику трохи їжі? (use THERE IS / THERE ARE)",
+        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE", "ARTICLES"],
+        "ua": "На майданчику були діти?",
+        "hint": "use THERE IS / THERE ARE",
         "en": [
-            "Is there any food in the fridge?",
-            "Is there some food in the fridge?",
-            "Is there a bit of food in the fridge?"
-        ]
-    },
-    {
-        "rules": ["THERE_IS_ARE", "QUANTIFIERS", "PREP_PLACE","ARTICLES"],
-        "ua": "Чи є на майданчику трохи дітей? (use THERE IS / THERE ARE)",
-        "en": [
-            "Are there any children on the playground?",
-            "Are there some kids on the playground?",
-            "Are there a few children at the playground?"
+            "Were there any children on the playground?",
+            "Were there kids on the playground?"
         ]
     }
 ] }

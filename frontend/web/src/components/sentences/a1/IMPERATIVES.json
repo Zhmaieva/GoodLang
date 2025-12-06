@@ -176,7 +176,7 @@
       "en": ["Don’t eat sweets before dinner.", "Avoid sweets before supper."]
     },
     {
-      "rules": ["IMPERATIVES", "COUNT_UNCOUNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Принеси мені склянку води.",
       "en": ["Bring me a glass of water.", "Get me a glass of water."]
     },
@@ -356,7 +356,7 @@
       "en": ["Clean the trash from the yard.", "Remove the garbage from the courtyard."]
     },
     {
-      "rules": ["IMPERATIVES", "COUNT_UNCOUNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Зроби копію документів.",
       "en": ["Make a copy of the documents.", "Duplicate the documents."]
     },
@@ -371,7 +371,7 @@
       "en": ["Ask for a discount at the store.", "Request a discount in the shop."]
     },
     {
-      "rules": ["IMPERATIVES", "COUNT_UNCOUNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Візьми з собою перекус.",
       "en": ["Take a snack with you.", "Bring a snack along."]
     },

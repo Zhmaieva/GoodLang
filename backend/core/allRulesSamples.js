@@ -116820,7 +116820,7 @@ export const ALL_RULES_SAMPLES = {
       ]
     }
   ],
-  "SO_THAT_IN_ORDER_THAT": [],
+  "SO_THAT": [],
   "THIRD_CONDITIONAL_VARIATIONS": [
     {
       "rules": [

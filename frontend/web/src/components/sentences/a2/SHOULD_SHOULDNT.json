@@ -2,219 +2,268 @@
   "SHOULD_SHOULDNT": [
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
-      "ua": "Тобі варто купити місцеву SIM-карту, коли приїдеш у нову країну. (use SHOULD)",
-      "en": ["You should buy a local SIM card when you arrive in your new country."]
+      "ua": "Тобі варто купити місцеву SIM-карту.",
+      "en": ["You should buy a local SIM card."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "BECAUSE_SO_BUT_ALTHOUGH"],
-      "ua": "Тобі не варто пити воду з-під крана, якщо в новому місті вона небезпечна. (use SHOULDN'T)",
-      "en": ["You shouldn't drink tap water if it's not safe in the new city."]
+      "ua": "Тобі не варто пити воду з-під крана.",
+      "en": ["You shouldn't drink tap water."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі не слід залишати паспорт удома, коли виходиш. (use SHOULDN'T)",
-      "en": ["You shouldn't leave your passport at home when you go out."]
+      "ua": "Тобі не слід залишати паспорт удома, коли виходиш.",
+      "en": ["You shouldn't leave your passport at home when you go out."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто їздити автобусом, щоб економити на транспорті. (use SHOULD)",
-      "en": ["You should take the bus to save money on transport."]
+      "ua": "Тобі варто їздити автобусом, щоб економити на транспорті.",
+      "en": ["You should take the bus to save money on transport."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі не можна викидати сміття на вулицю — користуйся урнами. (use SHOULDN'T)",
-      "en": ["You shouldn't throw trash on the street - use bins."]
+      "ua": "Тобі не варто викидати сміття на вулицю.",
+      "en": ["You shouldn't throw trash on the street."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі варто купувати продукти на місцевих ринках, щоб мати свіже харчування. (use SHOULD)",
-      "en": ["You should shop at local markets for fresh food."]
+      "ua": "Тобі варто купувати продукти на місцевих ринках.",
+      "en": ["You should shop at local markets."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Ти не повинен забувати зачиняти двері, коли виходиш. (use SHOULDN'T)",
-      "en": ["You shouldn't forget to lock your door when you leave."]
+      "ua": "Ти не повинен забувати зачиняти двері, коли виходиш.",
+      "en": ["You shouldn't forget to lock your door when you leave."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "TOO_VERY"],
-      "ua": "Тобі варто носити теплий одяг узимку. (use SHOULD)",
-      "en": ["You should wear warm clothes in winter."]
+      "ua": "Тобі варто носити теплий одяг узимку.",
+      "en": ["You should wear warm clothes in winter."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі не слід голосно говорити по телефону в публічних місцях. (use SHOULDN'T)",
-      "en": ["You shouldn't speak loudly on the phone in public."]
+      "ua": "Тобі не слід голосно говорити по телефону в публічних місцях.",
+      "en": ["You shouldn't speak loudly on the phone in public."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PRESENT_SIMPLE_FREQ"],
-      "ua": "Тобі варто сортувати папір і пластик щотижня. (use SHOULD)",
-      "en": ["You should recycle paper and plastic every week."]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі не можна переходити дорогу, коли світить червоне. (use SHOULDN'T)",
-      "en": ["You shouldn't cross the street when the light is red."]
+      "ua": "Тобі варто сортувати папір і пластик щотижня.",
+      "en": ["You should recycle paper and plastic every week."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто брати парасольку. (use SHOULD)",
-      "en": ["You should bring an umbrella."]
+      "ua": "Тобі варто взяти парасольку.",
+      "en": ["You should bring an umbrella.", "You should take an umbrella."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід залишати їжу відкритою. (use SHOULDN'T)",
-      "en": ["You shouldn't leave food out."]
+      "ua": "Тобі не слід залишати їжу відкритою.",
+      "en": ["You shouldn't leave food uncovered."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
-      "ua": "Тобі варто телефонувати родичам щовихідних. (use SHOULD)",
-      "en": ["You should call your relatives every weekend."]
+      "ua": "Тобі варто телефонувати родичам щовихідних.",
+      "en": ["You should call your relatives every weekend."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі варто гуляти в парку, щоб розслабитися після роботи. (use SHOULD)",
-      "en": ["You should walk in the park to relax after work."]
+      "ua": "Тобі варто гуляти в парку, щоб розслабитися після роботи.",
+      "en": ["You should walk in the park to relax after work."],
+      "hint": "use SHOULD"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "TO_BE"],
+      "ua": "Тобі не слід годувати птахів хлібом, це для них шкідливо.",
+      "en": ["You shouldn't feed birds bread, it's bad for them."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід годувати птахів хлібом, це для них шкідливо. (use SHOULDN'T)",
-      "en": ["You shouldn't feed birds bread, it's bad for them."]
+      "ua": "Тобі варто сплачувати рахунки вчасно, щоб уникнути штрафів.",
+      "en": ["You should pay bills on time to avoid fines."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто сплачувати рахунки вчасно, щоб уникнути штрафів. (use SHOULD)",
-      "en": ["You should pay bills on time to avoid fines."]
-    },
-    {
-      "rules": ["SHOULD_SHOULDNT", "COUNT_UNCOUNT"],
-      "ua": "Тобі варто мити фрукти перед тим, як їх їсти. (use SHOULD)",
-      "en": ["You should wash fruits before you eat them."]
+      "ua": "Тобі варто мити фрукти перед тим, як їх їсти.",
+      "en": ["You should wash fruits before you eat them."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі варто зачиняти вікна, коли стає холодно. (use SHOULD)",
-      "en": ["You should close windows when it gets cold."]
+      "ua": "Тобі варто зачиняти вікна, коли стає холодно.",
+      "en": ["You should close windows when it gets cold."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
-      "ua": "Тобі не можна вмикати гучну музику після 22:00. (use SHOULDN'T)",
-      "en": ["You shouldn't play loud music after 10 PM."]
+      "ua": "Тобі не варто вмикати гучну музику після 22:00.",
+      "en": ["You shouldn't play loud music after 10 PM."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто знімати взуття в будинку. (use SHOULD)",
-      "en": ["You should take shoes off inside the house."]
+      "ua": "Тобі варто знімати взуття в будинку.",
+      "en": ["You should take shoes off inside the house."],
+      "hint": "use SHOULD"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Тобі не варто марнувати воду.",
+      "en": ["You shouldn't waste water."],
+      "hint": "use SHOULDN'T"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "ua": "Тобі не слід залишати плиту ввімкненою без нагляду.",
+      "en": ["You shouldn't leave the stove on alone."],
+      "hint": "use SHOULDN'T"
     },
 
     {
       "rules": ["SHOULD_SHOULDNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-      "ua": "Тобі не варто марнувати воду. (use SHOULDN'T)",
-      "en": ["You shouldn't waste water."]
+      "ua": "Тобі не варто марнувати воду.",
+      "en": ["You shouldn't waste water."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід залишати плиту ввімкненою без нагляду. (use SHOULDN'T)",
-      "en": ["You shouldn't leave the stove on alone."]
+      "ua": "Тобі не слід залишати плиту ввімкненою без нагляду.",
+      "en": ["You shouldn't leave the stove on alone."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто заряджати телефон щовечора. (use SHOULD)",
-      "en": ["You should charge your phone every night."]
+      "ua": "Тобі варто заряджати телефон щовечора.",
+      "en": ["You should charge your phone every night."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі не можна їсти в автобусі. (use SHOULDN'T)",
-      "en": ["You shouldn't eat on the bus."]
+      "ua": "Тобі не можна їсти в автобусі.",
+      "en": ["You shouldn't eat on the bus."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід забувати ключі в дверях. (use SHOULDN'T)",
-      "en": ["You shouldn't forget your keys in the door."]
+      "ua": "Тобі не слід забувати ключі в дверях.",
+      "en": ["You shouldn't forget your keys in the door."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто пити чай, якщо ти застудився. (use SHOULD)",
-      "en": ["You should drink tea if you have a cold."]
+      "ua": "Тобі варто пити чай, якщо ти застудився.",
+      "en": ["You should drink tea if you have a cold."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі не можна паркуватися не в тому місці. (use SHOULDN'T)",
-      "en": ["You shouldn't park in the wrong spot."]
+      "ua": "Тобі не можна паркуватися не в тому місці.",
+      "en": ["You shouldn't park in the wrong spot."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто прибирати кухню після приготування їжі. (use SHOULD)",
-      "en": ["You should clean the kitchen after cooking."]
+      "ua": "Тобі варто прибирати кухню після приготування їжі.",
+      "en": ["You should clean the kitchen after cooking."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід відчиняти двері незнайомцям. (use SHOULDN'T)",
-      "en": ["You shouldn't open the door to strangers."]
+      "ua": "Тобі не слід відчиняти двері незнайомцям.",
+      "en": ["You shouldn't open the door to strangers."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто купувати свіжий хліб щоранку. (use SHOULD)",
-      "en": ["You should buy bread fresh every morning."]
+      "ua": "Тобі варто купувати свіжий хліб щоранку.",
+      "en": ["You should buy bread fresh every morning."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "COUNT_UNCOUNT"],
-      "ua": "Тобі не варто використовувати гарячу воду для всього прання. (use SHOULDN'T)",
-      "en": ["You shouldn't use hot water for all laundry."]
+      "ua": "Тобі не варто використовувати гарячу воду для всього прання.",
+      "en": ["You shouldn't use hot water for all laundry."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі варто вимикати світло, коли виходиш із кімнати. (use SHOULD)",
-      "en": ["You should turn off lights when you leave a room."]
+      "ua": "Тобі варто вимикати світло, коли виходиш із кімнати.",
+      "en": ["You should turn off lights when you leave a room."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід тримати стару їжу в холодильнику. (use SHOULDN'T)",
-      "en": ["You shouldn't keep old food in the fridge."]
+      "ua": "Тобі не слід тримати стару їжу в холодильнику.",
+      "en": ["You shouldn't keep old food in the fridge."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі варто ходити тротуаром, а не дорогою. (use SHOULD)",
-      "en": ["You should walk on the sidewalk, not the road."]
+      "ua": "Тобі варто ходити тротуаром, а не дорогою.",
+      "en": ["You should walk on the sidewalk, not the road."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_PLACE"],
-      "ua": "Тобі не можна розмовляти під час фільму в кінотеатрі. (use SHOULDN'T)",
-      "en": ["You shouldn't talk during movies at the cinema."]
+      "ua": "Тобі не можна розмовляти під час фільму в кінотеатрі.",
+      "en": ["You shouldn't talk during movies at the cinema."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PRESENT_SIMPLE_FREQ"],
-      "ua": "Тобі варто поливати рослини двічі на тиждень. (use SHOULD)",
-      "en": ["You should water plants twice a week."]
+      "ua": "Тобі варто поливати рослини двічі на тиждень.",
+      "en": ["You should water plants twice a week."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід залишати мокрий одяг у кімнаті. (use SHOULDN'T)",
-      "en": ["You shouldn't leave wet clothes inside."]
+      "ua": "Тобі не слід залишати мокрий одяг у кімнаті.",
+      "en": ["You shouldn't leave wet clothes inside."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто перевіряти пошту щодня. (use SHOULD)",
-      "en": ["You should check the mail every day."]
+      "ua": "Тобі варто перевіряти пошту щодня.",
+      "en": ["You should check the mail every day."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід бігати коридором. (use SHOULDN'T)",
-      "en": ["You shouldn't run in the hallway."]
+      "ua": "Тобі не слід бігати коридором.",
+      "en": ["You shouldn't run in the hallway."],
+      "hint": "use SHOULDN'T"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі варто користуватися кошиком, коли робиш покупки. (use SHOULD)",
-      "en": ["You should use a basket when shopping."]
+      "ua": "Тобі варто користуватися кошиком, коли робиш покупки.",
+      "en": ["You should use a basket when shopping."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT", "PREP_TIME"],
-      "ua": "Тобі варто лягати спати рано, щоб добре почуватися. (use SHOULD)",
-      "en": ["You should sleep early to feel good."]
+      "ua": "Тобі варто лягати спати рано, щоб добре почуватися.",
+      "en": ["You should sleep early to feel good."],
+      "hint": "use SHOULD"
     },
     {
       "rules": ["SHOULD_SHOULDNT"],
-      "ua": "Тобі не слід нікому говорити свій PIN-код. (use SHOULDN'T)",
-      "en": ["You shouldn't share your PIN with anyone."]
+      "ua": "Тобі не слід нікому говорити свій PIN-код.",
+      "en": ["You shouldn't share your PIN with anyone."],
+      "hint": "use SHOULDN'T"
     }
   ]
 }

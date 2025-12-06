@@ -656,16 +656,6 @@
   },
 
   {
-    "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
-    "ua": "Ми підняли голос, щоб нас почули через шум.",
-    "en": [
-      "We spoke louder so that we could be heard.",
-      "We spoke louder so we could be heard."
-    ],
-    "hint": "use ... SO (THAT) ..."
-  },
-
-  {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
     "ua": "Я залишив лампу ввімкненою, щоб було видно вночі.",
     "en": [

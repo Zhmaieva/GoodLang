@@ -41,7 +41,7 @@
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей хлопець збирається полагодити татів велосипед, але думає, що це буде складно.",
+    "ua": "Цей хлопець збирається полагодити велосипед тата, але думає, що це буде складно.",
     "en": [
       "This boy is going to fix his dad’s bike, but he thinks it will be difficult.",
       "That boy is planning to repair his father’s bicycle, but he believes it will be tough."
@@ -545,7 +545,7 @@
   },
   {
     "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Я збираюся відремонтувати татів годинник, але думаю, що це буде складно.",
+    "ua": "Я збираюся відремонтувати годинник тата, але думаю, що це буде складно.",
     "en": [
       "I’m going to repair my dad’s watch, but I think it will be difficult.",
       "I’m planning to fix my father’s watch, but I believe it will be challenging."

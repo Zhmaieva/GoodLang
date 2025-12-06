@@ -3,882 +3,413 @@
     "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Книга, написана моїм братом, стала популярною."],
     "en": [
-      "The book written by my brother became popular.",
-      "The book that was written by my brother became popular."
+      "The book written by my brother became popular."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Люди, що живуть у цьому місті, дуже доброзичливі."],
     "en": [
-      "People living in this city are very friendly.",
-      "People who live in this city are very friendly."
+      "People living in this city are very friendly."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_DIRECTION"],
     "ua": ["Хлопець, що стоїть біля дверей, — мій брат."],
     "en": [
-      "The boy standing by the door is my brother.",
-      "The boy who is standing by the door is my brother."
+      "The boy standing by the door is my brother."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Дівчина, яка тримає свій телефон, — моя подруга."],
+    "ua": ["Дівчина, яка тримає телефон, — моя подруга."],
     "en": [
-      "The girl holding her phone is my friend.",
-      "The girl who is holding her phone is my friend."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Будинок, побудований у 19 столітті, виглядає чудово."],
-    "en": [
-      "The house built in the 19th century looks wonderful.",
-      "The house that was built in the 19th century looks wonderful."
+      "The girl holding her phone is my friend.", "The girl holding the phone is my friend."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Лист, надісланий вчора, ще не прибув."],
     "en": [
-      "The letter sent yesterday hasn’t arrived yet.",
-      "The letter that was sent yesterday hasn’t arrived yet."
+      "The letter sent yesterday hasn’t arrived yet."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Студенти, що навчаються англійської, здають тест завтра."],
+    "ua": ["Студенти, що вивчають англійську, здають тест завтра."],
     "en": [
-      "Students studying English are taking the test tomorrow.",
-      "Students who study English are taking the test tomorrow."
+      "Students studying English are taking the test tomorrow."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Кафе, розташоване біля станції, дуже популярне."],
     "en": [
-      "The café located near the station is very popular.",
-      "The café that is located near the station is very popular."
+      "The café located near the station is very popular."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Люди, що сидять за тим столом, — наші колеги."],
     "en": [
-      "The people sitting at that table are our colleagues.",
-      "The people who are sitting at that table are our colleagues."
+      "The people sitting at that table are our colleagues."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_TIME"],
     "ua": ["Фільм, знятий минулого року, отримав нагороду."],
     "en": [
-      "The movie made last year won an award.",
-      "The movie that was made last year won an award."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Книга, перекладена з французької, вийшла минулого місяця."],
-    "en": [
-      "The book translated from French was published last month.",
-      "The book that was translated from French was published last month."
+      "The movie made last year won an award."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Люди, що працюють у цій компанії, мають великий досвід."],
     "en": [
-      "People working in this company have great experience.",
-      "People who work in this company have great experience."
+      "People working in this company have great experience."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Дівчина, що стоїть біля вікна, — нова студентка."],
     "en": [
-      "The girl standing by the window is a new student.",
-      "The girl who is standing by the window is a new student."
+      "The girl standing by the window is a new student."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
     "ua": ["Чоловік, що несе свій чемодан, виглядає втомленим."],
     "en": [
-      "The man carrying his suitcase looks tired.",
-      "The man who is carrying his suitcase looks tired."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Будівля, спроєктована відомим архітектором, коштує мільйони."],
-    "en": [
-      "The building designed by a famous architect costs millions.",
-      "The building that was designed by a famous architect costs millions."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Студенти, що сидять у першому ряду, слухають уважно."],
-    "en": [
-      "The students sitting in the first row are listening carefully.",
-      "The students who are sitting in the first row are listening carefully."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Фільм, знятий у Лондоні, став хітом."],
-    "en": [
-      "The film shot in London became a hit.",
-      "The film that was shot in London became a hit."
+      "The man carrying his suitcase looks tired."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Люди, що живуть поруч, завжди допомагають нам."],
     "en": [
-      "People living nearby always help us.",
-      "People who live nearby always help us."
+      "People living nearby always help us."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_TIME"],
     "ua": ["Концерт, організований у травні, зібрав тисячі людей."],
     "en": [
-      "The concert held in May gathered thousands of people.",
-      "The concert that was held in May gathered thousands of people."
+      "The concert held in May gathered thousands of people."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Діти, що граються у дворі, наші сусіди."],
     "en": [
-      "The children playing in the yard are our neighbors.",
-      "The children who are playing in the yard are our neighbors."
+      "The children playing in the yard are our neighbors."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Крамниця, розташована на розі, завжди відкрита."],
     "en": [
-      "The shop located on the corner is always open.",
-      "The shop that is located on the corner is always open."
+      "The shop located on the corner is always open."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Хлопець, що сидить поруч зі мною, мій брат."],
     "en": [
-      "The boy sitting next to me is my brother.",
-      "The boy who is sitting next to me is my brother."
+      "The boy sitting next to me is my brother."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
     "ua": ["Жінка, що тримає свою дитину, виглядає щасливою."],
     "en": [
-      "The woman holding her baby looks happy.",
-      "The woman who is holding her baby looks happy."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Пісня, написана співачкою, стала хітом."],
-    "en": [
-      "The song written by the singer became a hit.",
-      "The song that was written by the singer became a hit."
+      "The woman holding her baby looks happy."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Автомобіль, припаркований перед будинком, належить моєму батькові."],
     "en": [
-      "The car parked in front of the house belongs to my father.",
-      "The car that is parked in front of the house belongs to my father."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Фільм, знятий Стівеном Спілбергом, отримав Оскар."],
-    "en": [
-      "The movie directed by Steven Spielberg won an Oscar.",
-      "The movie that was directed by Steven Spielberg won an Oscar."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Дівчина, що сміється, — моя сестра."],
-    "en": [
-      "The girl laughing is my sister.",
-      "The girl who is laughing is my sister."
+      "The car parked in front of the house belongs to my father."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Школа, розташована поруч із парком, має великий стадіон."],
     "en": [
-      "The school situated next to the park has a large stadium.",
-      "The school that is situated next to the park has a large stadium."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Кішка, що спить на дивані, виглядає мирно."],
-    "en": [
-      "The cat sleeping on the sofa looks peaceful.",
-      "The cat that is sleeping on the sofa looks peaceful."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Лист, надісланий поштою, загубився."],
-    "en": [
-      "The letter sent by mail got lost.",
-      "The letter that was sent by mail got lost."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Люди, що йдуть до вокзалу, поспішають."],
-    "en": [
-      "People walking to the station are in a hurry.",
-      "People who are walking to the station are in a hurry."
+      "The school situated next to the park has a large stadium."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Хлопець, що грає на гітарі, — мій сусід."],
     "en": [
-      "The boy playing the guitar is my neighbor.",
-      "The boy who is playing the guitar is my neighbor."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Квартира, орендована студентами, дуже простора."],
-    "en": [
-      "The apartment rented by students is very spacious.",
-      "The apartment that was rented by students is very spacious."
+      "The boy playing the guitar is my neighbor."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Чоловік, що працює в банку, любить свою роботу."],
     "en": [
-      "The man working in a bank loves his job.",
-      "The man who works in a bank loves his job."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_TIME"],
-    "ua": ["Подія, що сталася вночі, налякала всіх."],
-    "en": [
-      "The event happening at night scared everyone.",
-      "The event that happened at night scared everyone.",
-      "The event happening at night frightened everyone.",
-      "The event that happened at night frightened everyone."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Книга, написана відомим автором, продається у всьому світі."],
-    "en": [
-      "The book written by a famous author is sold worldwide.",
-      "The book that was written by a famous author is sold worldwide."
+      "The man working in a bank loves his job."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Ресторан, розташований біля моря, пропонує свіжі морепродукти."],
     "en": [
-      "The restaurant located by the sea offers fresh seafood.",
-      "The restaurant that is located by the sea offers fresh seafood."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Люди, що очікують автобус, виглядають втомленими."],
-    "en": [
-      "People waiting for the bus look tired.",
-      "People who are waiting for the bus look tired."
+      "The restaurant located by the sea offers fresh seafood."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
     "ua": ["Хлопець, що тримає свій рюкзак, збирається піти."],
     "en": [
-      "The boy holding his backpack is about to leave.",
-      "The boy who is holding his backpack is about to leave."
+      "The boy holding his backpack is about to leave."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
     "ua": ["Міст, побудований кілька років тому, досі міцний."],
     "en": [
-      "The bridge built a few years ago is still strong.",
-      "The bridge that was built a few years ago is still strong."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Діти, що граються на пляжі, виглядають щасливими."],
-    "en": [
-      "Children playing on the beach look happy.",
-      "Children who are playing on the beach look happy."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Фільм, знятий минулого літа, отримав схвальні відгуки."],
-    "en": [
-      "The movie filmed last summer received positive reviews.",
-      "The movie that was filmed last summer received positive reviews."
+      "The bridge built a few years ago is still strong."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Чоловік, що сидить у парку, читає газету."],
     "en": [
-      "The man sitting in the park is reading a newspaper.",
-      "The man who is sitting in the park is reading a newspaper."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_TIME"],
-    "ua": ["Зустріч, призначена на завтра, відбудеться в офісі."],
-    "en": [
-      "The meeting scheduled for tomorrow will take place in the office.",
-      "The meeting that is scheduled for tomorrow will take place in the office."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Дівчина, що навчається в університеті, отримає стипендію."],
-    "en": [
-      "The girl studying at the university will receive a scholarship.",
-      "The girl who studies at the university will receive a scholarship."
+      "The man sitting in the park is reading a newspaper."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Будинок, розташований у центрі міста, дуже дорогий."],
     "en": [
-      "The house situated in the city center is very expensive.",
-      "The house that is situated in the city center is very expensive."
+      "The house situated in the city center is very expensive."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Хлопець, що грає на піаніно, мій брат."],
     "en": [
-      "The boy playing the piano is my brother.",
-      "The boy who is playing the piano is my brother."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Жінка, що читає свої нотатки, — викладач."],
-    "en": [
-      "The woman reading her notes is a teacher.",
-      "The woman who is reading her notes is a teacher."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Пісня, написана минулого року, стала хітом."],
-    "en": [
-      "The song written last year became a hit.",
-      "The song that was written last year became a hit."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Автобус, що прямує до центру, щойно прибув."],
-    "en": [
-      "The bus going to the center has just arrived.",
-      "The bus that is going to the center has just arrived."
+      "The boy playing the piano is my brother."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Фотографія, зроблена під час поїздки, вийшла чудовою."],
     "en": [
-      "The photo taken during the trip turned out great.",
-      "The photo that was taken during the trip turned out great."
+      "The photo taken during the trip turned out great."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Люди, що працюють уночі, потребують більше відпочинку."],
     "en": [
-      "People working at night need more rest.",
-      "People who work at night need more rest."
+      "People working at night need more rest."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Готель, розташований біля озера, має чудовий краєвид."],
     "en": [
-      "The hotel located near the lake has a wonderful view.",
-      "The hotel that is located near the lake has a wonderful view."
+      "The hotel located near the lake has a wonderful view."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Хлопець, що чекає біля дверей, виглядає знайомо."],
     "en": [
-      "The boy waiting by the door looks familiar.",
-      "The boy who is waiting by the door looks familiar."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Міст, збудований раніше, потребує ремонту."],
-    "en": [
-      "The bridge built earlier needs repair.",
-      "The bridge that was built earlier needs repair."
+      "The boy waiting by the door looks familiar."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Квартира, продана минулого тижня, була дуже дорогою."],
     "en": [
-      "The apartment sold last week was very expensive.",
-      "The apartment that was sold last week was very expensive."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Діти, що бігають у саду, голосно сміються."],
-    "en": [
-      "Children running in the garden are laughing loudly.",
-      "Children who are running in the garden are laughing loudly."
+      "The apartment sold last week was very expensive."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Офіс, розташований на п’ятому поверсі, належить нашій компанії."],
     "en": [
-      "The office located on the fifth floor belongs to our company.",
-      "The office that is located on the fifth floor belongs to our company."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Викладач, що перевіряє зошити, виглядає втомлено."],
-    "en": [
-      "The teacher checking the notebooks looks tired.",
-      "The teacher who is checking the notebooks looks tired."
+      "The office located on the fifth floor belongs to our company."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_TIME"],
     "ua": ["Подія, запланована на вечір, буде онлайн."],
     "en": [
-      "The event planned for the evening will be online.",
-      "The event that is planned for the evening will be online."
+      "The event planned for the evening will be online."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Книга, видана цього року, вже стала бестселером."],
     "en": [
-      "The book published this year has already become a bestseller.",
-      "The book that was published this year has already become a bestseller."
+      "The book published this year has already become a bestseller."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Ресторан, розташований у центрі міста, завжди повний."],
     "en": [
-      "The restaurant located in the city center is always full.",
-      "The restaurant that is located in the city center is always full."
+      "The restaurant located in the city center is always full."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Хлопець, що грає у футбол, — мій брат."],
     "en": [
-      "The boy playing football is my brother.",
-      "The boy who is playing football is my brother."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Дівчина, що тримає свою сумку, поспішає."],
-    "en": [
-      "The girl holding her bag is in a hurry.",
-      "The girl who is holding her bag is in a hurry."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Фільм, знятий у Парижі, отримав премію."],
-    "en": [
-      "The film shot in Paris won an award.",
-      "The film that was shot in Paris won an award."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Діти, що граються на вулиці, шумлять."],
-    "en": [
-      "Children playing in the street are making noise.",
-      "Children who are playing in the street are making noise."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Будинок, побудований нещодавно, дуже сучасний."],
-    "en": [
-      "The house built recently is very modern.",
-      "The house that was built recently is very modern."
+      "The boy playing football is my brother."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Люди, що живуть поруч із нами, дуже добрі."],
     "en": [
-      "People living next to us are very kind.",
-      "People who live next to us are very kind."
+      "People living next to us are very kind."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_TIME"],
     "ua": ["Зустріч, запланована на понеділок, буде короткою."],
     "en": [
-      "The meeting planned for Monday will be short.",
-      "The meeting that is planned for Monday will be short."
+      "The meeting planned for Monday will be short."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Жінка, що працює в бібліотеці, допомогла мені."],
     "en": [
-      "The woman working in the library helped me.",
-      "The woman who works in the library helped me."
+      "The woman working in the library helped me."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Магазин, розташований поруч із школою, продає канцелярію."],
     "en": [
-      "The shop located near the school sells stationery.",
-      "The shop that is located near the school sells stationery."
+      "The shop located near the school sells stationery."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Студенти, що навчаються тут, складають іспити взимку."],
     "en": [
-      "Students studying here take exams in winter.",
-      "Students who study here take exams in winter."
+      "Students studying here take exams in winter."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
     "ua": ["Чоловік, що несе свій ноутбук, працює в IT."],
     "en": [
-      "The man carrying his laptop works in IT.",
-      "The man who is carrying his laptop works in IT."
+      "The man carrying his laptop works in IT."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
     "ua": ["Пісня, написана нею, стала популярною у всьому світі."],
     "en": [
-      "The song written by her became popular worldwide.",
-      "The song that was written by her became popular worldwide."
+      "The song written by her became popular worldwide."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Автобус, що прямує до вокзалу, скоро прибуде."],
     "en": [
-      "The bus going to the station will arrive soon.",
-      "The bus that is going to the station will arrive soon."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Картина, намальована художником, вражає кольорами."],
-    "en": [
-      "The painting created by the artist impresses with its colors.",
-      "The painting that was created by the artist impresses with its colors."
+      "The bus going to the station will arrive soon."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Люди, що працюють у лікарні, роблять важливу справу."],
     "en": [
-      "People working in the hospital do an important job.",
-      "People who work in the hospital do an important job."
+      "People working in the hospital do an important job."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Готель, розташований біля пляжу, має власний басейн."],
     "en": [
-      "The hotel located near the beach has its own pool.",
-      "The hotel that is located near the beach has its own pool."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Кішка, що спить на стільці, належить моїй бабусі."],
-    "en": [
-      "The cat sleeping on the chair belongs to my grandmother.",
-      "The cat that is sleeping on the chair belongs to my grandmother."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Будівля, зведена минулого року, ще не відкрита."],
-    "en": [
-      "The building constructed last year hasn’t been opened yet.",
-      "The building that was constructed last year hasn’t been opened yet."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Хлопець, що слухає музику, не почув мене."],
-    "en": [
-      "The boy listening to music didn’t hear me.",
-      "The boy who is listening to music didn’t hear me."
+      "The hotel located near the beach has its own pool."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Фільм, заснований на реальних подіях, зворушив глядачів."],
     "en": [
-      "The film based on real events moved the audience.",
-      "The film that was based on real events moved the audience."
+      "The film based on real events moved the audience."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Діти, що стоять у черзі, чекають морозиво."],
     "en": [
-      "Children waiting in line are waiting for ice cream.",
-      "Children who are waiting in line are waiting for ice cream."
+      "Children standing in line are waiting for ice cream."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Школа, розташована на пагорбі, має чудовий краєвид."],
     "en": [
-      "The school located on the hill has a beautiful view.",
-      "The school that is located on the hill has a beautiful view."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Жінка, що посміхається, здається знайомою."],
-    "en": [
-      "The woman smiling seems familiar.",
-      "The woman who is smiling seems familiar."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Фільм, знятий цього року, отримав багато нагород."],
-    "en": [
-      "The film released this year received many awards.",
-      "The film that was released this year received many awards."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Музей, розташований у центрі міста, щодня відкритий."],
-    "en": [
-      "The museum located in the city center is open every day.",
-      "The museum that is located in the city center is open every day."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Люди, що сидять у кафе, насолоджуються кавою."],
-    "en": [
-      "People sitting in the café are enjoying their coffee.",
-      "People who are sitting in the café are enjoying their coffee."
+      "The school located on the hill has a beautiful view."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
     "ua": ["Хлопець, що тримає свій телефон, чекає дзвінка."],
     "en": [
-      "The boy holding his phone is waiting for a call.",
-      "The boy who is holding his phone is waiting for a call."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Міст, збудований минулого століття, вражає своїм дизайном."],
-    "en": [
-      "The bridge built last century impresses with its design.",
-      "The bridge that was built last century impresses with its design."
+      "The boy holding his phone is waiting for a call."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Діти, що граються в саду, виглядають радісними."],
+    "ua": ["Люди, що працюють на заводі, прокидаються о 5 ранку."],
     "en": [
-      "Children playing in the garden look joyful.",
-      "Children who are playing in the garden look joyful."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Книга, написана вченим, пояснює складні ідеї просто."],
-    "en": [
-      "The book written by the scientist explains complex ideas simply.",
-      "The book that was written by the scientist explains complex ideas simply."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Люди, що працюють на заводі, починають о 7 ранку."],
-    "en": [
-      "People working at the factory start at 7 a.m.",
-      "People who work at the factory start at 7 a.m."
+      "People working at the factory wake up at 5 a.m."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_TIME"],
     "ua": ["Концерт, запланований на суботу, скасували."],
     "en": [
-      "The concert planned for Saturday was canceled.",
-      "The concert that was planned for Saturday was canceled."
+      "The concert planned for Saturday was canceled."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Жінка, що готує на кухні, моя мама."],
     "en": [
-      "The woman cooking in the kitchen is my mother.",
-      "The woman who is cooking in the kitchen is my mother."
+      "The woman cooking in the kitchen is my mother."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Будівля, розташована поруч із музеєм, дуже стара."],
     "en": [
-      "The building located next to the museum is very old.",
-      "The building that is located next to the museum is very old."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Студенти, що здають іспит, виглядають напруженими."],
-    "en": [
-      "Students taking the exam look nervous.",
-      "Students who are taking the exam look nervous."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Чоловік, що тримає свій капелюх, стоїть біля дверей."],
-    "en": [
-      "The man holding his hat is standing by the door.",
-      "The man who is holding his hat is standing by the door."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Лист, написаний від руки, був дуже щирим."],
-    "en": [
-      "The letter written by hand was very sincere.",
-      "The letter that was written by hand was very sincere."
+      "The building located next to the museum is very old."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES"],
     "ua": ["Дівчина, що співає на сцені, має чудовий голос."],
     "en": [
-      "The girl singing on the stage has a wonderful voice.",
-      "The girl who is singing on the stage has a wonderful voice."
+      "The girl singing on the stage has a wonderful voice."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Будинок, збудований її батьком, великий і затишний."],
     "en": [
-      "The house built by her father is large and cozy.",
-      "The house that was built by her father is large and cozy."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Люди, що стоять біля входу, чекають автобуса."],
-    "en": [
-      "People standing near the entrance are waiting for the bus.",
-      "People who are standing near the entrance are waiting for the bus."
+      "The house built by her father is large and cozy."
     ]
   },
   {
     "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": ["Готель, розташований у горах, ідеальний для відпочинку."],
     "en": [
-      "The hotel located in the mountains is perfect for relaxation.",
-      "The hotel that is located in the mountains is perfect for relaxation."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Кішка, що лежить на ліжку, виглядає задоволеною."],
-    "en": [
-      "The cat lying on the bed looks content.",
-      "The cat that is lying on the bed looks content."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Будівля, побудована сто років тому, досі стоїть."],
-    "en": [
-      "The building built a hundred years ago still stands.",
-      "The building that was built a hundred years ago still stands."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Хлопець, що слухає лекцію, робить нотатки."],
-    "en": [
-      "The boy listening to the lecture is taking notes.",
-      "The boy who is listening to the lecture is taking notes."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Фільм, заснований на книзі, отримав схвальні рецензії."],
-    "en": [
-      "The film based on the book received positive reviews.",
-      "The film that was based on the book received positive reviews."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Діти, що стоять під деревом, ховаються від дощу."],
-    "en": [
-      "Children standing under the tree are hiding from the rain.",
-      "Children who are standing under the tree are hiding from the rain."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Школа, розташована біля річки, має великий двір."],
-    "en": [
-      "The school located near the river has a large yard.",
-      "The school that is located near the river has a large yard."
-    ]
-  },
-  {
-    "rules": ["REDUCED_RELATIVE_CLAUSES"],
-    "ua": ["Жінка, що сміється, виглядає щасливою."],
-    "en": [
-      "The woman laughing looks happy.",
-      "The woman who is laughing looks happy."
+      "The hotel located in the mountains is perfect for relaxation."
     ]
   }
 ] }

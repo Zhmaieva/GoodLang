@@ -1,674 +1,479 @@
 { "WOULD_RATHER_PREFER": [
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Я б радше залишився вдома, ніж пішов у кіно. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше залишився вдома, ніж пішов у кіно.",
     "en": [
       "I’d rather stay at home than go to the cinema.",
       "I would rather stay at home than go to the cinema.",
       "I prefer staying at home to going to the cinema.",
       "I prefer to stay at home rather than go to the cinema."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "PAST_SIMPLE"],
-    "ua": "Вона б воліла, щоб ти сказав їй правду. (use WOULD RATHER / PREFER)",
+    "ua": "Вона б воліла, щоб ти сказав їй правду.",
     "en": [
       "She’d rather you told her the truth.",
-      "She would rather you told her the truth.",
-      "She would prefer you to tell her the truth."
-    ]
+      "She would rather you told her the truth."
+    ],
+    "hint": "use WOULD RATHER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "FUTURE_WITH_PRESENT_CONT"],
-    "ua": "Ми б краще зустрілися завтра, якщо тобі зручно. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б краще зустрілися завтра, якщо тобі зручно.",
     "en": [
       "We’d rather meet tomorrow if it’s convenient for you.",
       "We would rather meet tomorrow if that is convenient for you.",
       "We would prefer to meet tomorrow if that is convenient for you."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "LIKE_LOVE_HATE_ING"],
-    "ua": "Я віддаю перевагу пити чай замість кави. (use WOULD RATHER / PREFER)",
-    "en": [
-      "I prefer drinking tea to coffee.",
-      "I prefer to drink tea rather than coffee.",
-      "I’d rather drink tea than coffee.",
-      "I would rather drink tea than coffee."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Він зазвичай воліє працювати один. (use WOULD RATHER / PREFER)",
+    "ua": "Він зазвичай воліє працювати один.",
     "en": [
       "He usually prefers working alone.",
-      "He usually prefers to work alone.",
-      "He’d rather work alone.",
-      "He would rather work alone."
-    ]
+      "He usually prefers to work alone."
+    ],
+    "hint": "use PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Я б радше не робив цього прямо зараз. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше не робив цього прямо зараз.",
     "en": [
       "I’d rather not do this right now.",
       "I would rather not do this right now.",
       "I’d prefer not to do this at the moment.",
       "I would prefer not to do this at the moment."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
-    "ua": "Мені надто холодно, я б краще залишився всередині. (use WOULD RATHER / PREFER)",
+    "ua": "Мені надто холодно, я б краще залишився всередині.",
     "en": [
       "I’m too cold; I’d rather stay inside.",
       "I am too cold; I would rather stay inside.",
       "I’m too cold; I prefer staying inside.",
       "I am too cold; I prefer to stay inside."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
-    "ua": "Я б радше обрав дешевший готель. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше обрав дешевший готель.",
     "en": [
       "I’d rather choose a cheaper hotel.",
       "I would rather choose a cheaper hotel.",
       "I’d prefer to choose a cheaper hotel.",
       "I prefer choosing a cheaper hotel."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Вона б воліла, щоб її брат залишився вдома. (use WOULD RATHER / PREFER)",
+    "ua": "Вона б воліла, щоб її брат залишився вдома.",
     "en": [
       "She’d rather her brother stayed at home.",
-      "She would rather her brother stayed at home.",
-      "She would prefer her brother to stay at home."
-    ]
+      "She would rather her brother stayed at home."
+    ],
+    "hint": "use WOULD RATHER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE", "ARTICLES", "RELATIVE_CLAUSES"],
-    "ua": "Я б радше пішов у кав’ярню, де є тихе місце. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше пішов у кав’ярню, де є тихе місце.",
     "en": [
       "I’d rather go to a café where there is a quiet place.",
       "I would rather go to a café where there is a quiet place.",
       "I would prefer to go to a café where there is a quiet place."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
+
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Я б радше почекав кілька хвилин, ніж поспішав. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше почекав кілька хвилин, ніж поспішав.",
     "en": [
       "I’d rather wait a few minutes than hurry.",
       "I would rather wait a few minutes than hurry.",
       "I prefer waiting a few minutes to hurrying."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вона зазвичай віддає перевагу читати книги замість перегляду фільмів. (use WOULD RATHER / PREFER)",
-    "en": [
-      "She usually prefers reading books to watching movies.",
-      "She usually prefers to read books rather than watch movies.",
-      "She’d rather read a book than watch a movie."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
-    "ua": "Ми б краще обрали спокійніше місце. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б краще обрали спокійніше місце.",
     "en": [
       "We’d rather choose a quieter place.",
       "We would rather choose a quieter place.",
       "We’d prefer a quieter place."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Я б радше залишився вдома, бо надворі холодно. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше залишився вдома, бо надворі холодно.",
     "en": [
       "I’d rather stay at home because it’s cold outside.",
       "I would rather stay at home because it’s cold outside.",
       "I prefer staying at home because it’s cold outside."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
-    "ua": "Вона занадто втомлена, тому воліла б відпочити. (use WOULD RATHER / PREFER)",
+    "ua": "Вона занадто втомлена, тому воліла б відпочити.",
     "en": [
       "She’s too tired, so she’d rather rest.",
       "She’s too tired, so she would rather rest.",
-      "She prefers to rest when she’s tired."
-    ]
+      "She’d prefer to rest because she’s too tired."
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "NEGATION_DONT_DOESNT"],
-    "ua": "Я б радше не говорив про це зараз. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше не говорив про це зараз.",
     "en": [
       "I’d rather not talk about it now.",
       "I would rather not talk about it now.",
       "I’d prefer not to talk about it now."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "FIRST_CONDITIONAL"],
-    "ua": "Якщо ти не проти, я б радше поїхав завтра. (use WOULD RATHER / PREFER)",
+    "ua": "Якщо ти не проти, я б радше поїхав завтра.",
     "en": [
       "If you don’t mind, I’d rather go tomorrow.",
       "If you don’t mind, I would rather go tomorrow.",
       "If you don’t mind, I’d prefer to go tomorrow."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Він б волів, щоб його колега зробив це завдання. (use WOULD RATHER / PREFER)",
-    "en": [
-      "He’d rather his colleague did this task.",
-      "He would rather his colleague did this task.",
-      "He would prefer his colleague to do this task."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "LIKE_LOVE_HATE_ING"],
-    "ua": "Я віддаю перевагу готувати вдома, а не їсти в ресторанах. (use WOULD RATHER / PREFER)",
-    "en": [
-      "I prefer cooking at home to eating out.",
-      "I’d rather cook at home than eat out.",
-      "I would rather cook at home than eat at restaurants."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Він часто каже, що воліє працювати вночі. (use WOULD RATHER / PREFER)",
+    "ua": "Він часто каже, що воліє працювати вночі.",
     "en": [
-      "He often says he prefers working at night.",
-      "He often says he’d rather work at night.",
-      "He often says he would rather work at night."
-    ]
+      "He often says he prefers working at night."
+    ],
+    "hint": "use PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "PREP_PLACE"],
-    "ua": "Ми б радше сіли біля вікна. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б радше сіли біля вікна.",
     "en": [
       "We’d rather sit by the window.",
       "We would rather sit by the window.",
       "We prefer sitting by the window."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE", "ARTICLES"],
-    "ua": "Я б радше пішов у кафе, де є гарна кава. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше пішов у кафе, де є гарна кава.",
     "en": [
       "I’d rather go to a café where there is good coffee.",
       "I would rather go to a café where there is good coffee.",
       "I’d prefer to go to a café where there is good coffee."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "WILL_PREDICTIONS"],
-    "ua": "Вона б радше залишилася, ніж поїхала завтра. (use WOULD RATHER / PREFER)",
-    "en": [
-      "She’d rather stay than leave tomorrow.",
-      "She would rather stay than leave tomorrow.",
-      "She would prefer to stay instead of leaving tomorrow."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "SECOND_CONDITIONAL"],
-    "ua": "Я б радше жив біля моря, якби міг. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше жив біля моря, якби міг.",
     "en": [
       "I’d rather live by the sea if I could.",
       "I would rather live by the sea if I could.",
       "I’d prefer to live by the sea if I could."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Ми б радше замовили щось легке на вечерю. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б радше замовили щось легке на вечерю.",
     "en": [
       "We’d rather order something light for dinner.",
       "We would rather order something light for dinner.",
       "We’d prefer to order something light for dinner."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
-    "ua": "Він б радше поїхав на коротший відпочинок, ніж на довший. (use WOULD RATHER / PREFER)",
+    "ua": "Він би радше поїхав на коротший відпочинок, ніж на довший.",
     "en": [
       "He’d rather go on a shorter vacation than a longer one.",
       "He would rather go on a shorter vacation than a longer one.",
       "He prefers shorter trips to longer ones."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "NEGATION_DONT_DOESNT"],
-    "ua": "Вона б радше не зустрічалась сьогодні. (use WOULD RATHER / PREFER)",
-    "en": [
-      "She’d rather not meet today.",
-      "She would rather not meet today.",
-      "She’d prefer not to meet today."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "ARTICLES"],
-    "ua": "Я б радше взяв таксі, ніж автобус. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше взяв таксі, ніж автобус.",
     "en": [
       "I’d rather take a taxi than a bus.",
       "I would rather take a taxi than a bus.",
       "I’d prefer taking a taxi to taking a bus."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Я зазвичай віддаю перевагу ранковим зустрічам. (use WOULD RATHER / PREFER)",
+    "ua": "Я зазвичай віддаю перевагу ранковим зустрічам.",
     "en": [
       "I usually prefer morning meetings.",
-      "I usually prefer to have meetings in the morning.",
-      "I’d rather have meetings in the morning."
-    ]
+      "I usually prefer to have meetings in the morning."
+    ],
+    "hint": "use PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "LIKE_LOVE_HATE_ING"],
-    "ua": "Вона воліє гуляти ввечері, коли менше людей. (use WOULD RATHER / PREFER)",
+    "ua": "Вона воліє гуляти ввечері, коли менше людей.",
     "en": [
       "She prefers walking in the evening when there are fewer people.",
       "She’d rather walk in the evening when there are fewer people.",
       "She would rather walk in the evening when there are fewer people."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Він б радше залишився вдома, хоча всі йшли святкувати. (use WOULD RATHER / PREFER)",
-    "en": [
-      "He’d rather stay at home although everyone was going to celebrate.",
-      "He would rather stay at home although everyone was going to celebrate.",
-      "He prefers staying at home even when others go out."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
-    "ua": "Вона надто зайнята, тому б радше перенесла зустріч. (use WOULD RATHER / PREFER)",
-    "en": [
-      "She’s too busy, so she’d rather postpone the meeting.",
-      "She is too busy, so she would rather postpone the meeting.",
-      "She prefers postponing meetings when she’s busy."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Я б радше залишив це між нами. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше залишив це між нами.",
     "en": [
       "I’d rather keep it between us.",
       "I would rather keep it between us.",
       "I prefer to keep it between us."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "NEGATION_DONT_DOESNT"],
-    "ua": "Вона б радше не відповідала на це запитання. (use WOULD RATHER / PREFER)",
-    "en": [
-      "She’d rather not answer that question.",
-      "She would rather not answer that question.",
-      "She’d prefer not to answer that question."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "FIRST_CONDITIONAL"],
-    "ua": "Якщо погода буде гарна, я б радше поїхав на пікнік. (use WOULD RATHER / PREFER)",
+    "ua": "Якщо погода буде гарна, я б радше поїхав на пікнік.",
     "en": [
       "If the weather is nice, I’d rather go for a picnic.",
       "If the weather is nice, I would rather go for a picnic.",
-      "If the weather is nice, I prefer going for a picnic."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "LIKE_LOVE_HATE_ING"],
-    "ua": "Я віддаю перевагу працювати в тиші. (use WOULD RATHER / PREFER)",
-    "en": [
-      "I prefer working in silence.",
-      "I prefer to work in silence.",
-      "I’d rather work in silence."
-    ]
+      "If the weather is nice, I’d prefer to go for a picnic."
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
-    "ua": "Ми б радше вибрали коротший шлях. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б радше вибрали коротший шлях.",
     "en": [
       "We’d rather take a shorter route.",
       "We would rather take a shorter route.",
       "We prefer taking the shorter way."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Він зазвичай воліє працювати рано вранці. (use WOULD RATHER / PREFER)",
+    "ua": "Він зазвичай воліє працювати рано вранці.",
     "en": [
       "He usually prefers working early in the morning.",
       "He usually prefers to work early in the morning.",
       "He’d rather work early in the morning."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Вона б воліла, щоб її діти лягали спати раніше. (use WOULD RATHER / PREFER)",
+    "ua": "Вона б воліла, щоб її діти лягали спати раніше.",
     "en": [
       "She’d rather her children went to bed earlier.",
-      "She would rather her children went to bed earlier.",
-      "She prefers her kids to go to bed earlier."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
-    "ua": "Ми занадто втомлені, ми б радше залишились удома. (use WOULD RATHER / PREFER)",
-    "en": [
-      "We’re too tired; we’d rather stay at home.",
-      "We’re too tired; we would rather stay at home.",
-      "We prefer staying at home when we’re tired."
-    ]
+      "She would rather her children went to bed earlier."
+    ],
+    "hint": "use WOULD RATHER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "SECOND_CONDITIONAL"],
-    "ua": "Я б радше жив у горах, якби мав вибір. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше жив у горах, якби мав вибір.",
     "en": [
       "I’d rather live in the mountains if I had a choice.",
       "I would rather live in the mountains if I had a choice.",
       "I’d prefer to live in the mountains if I had a choice."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE", "ARTICLES"],
-    "ua": "Я б радше пішов у місце, де є спокійна атмосфера. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше пішов у місце, де є спокійна атмосфера.",
     "en": [
       "I’d rather go to a place where there is a calm atmosphere.",
       "I would rather go to a place where there is a calm atmosphere.",
       "I’d prefer to go somewhere with a calm atmosphere."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Він б радше не відповідав, бо це складне питання. (use WOULD RATHER / PREFER)",
-    "en": [
-      "He’d rather not answer because it’s a difficult question.",
-      "He would rather not answer because it’s a difficult question.",
-      "He prefers not to answer because the question is difficult."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "NEGATION_DONT_DOESNT"],
-    "ua": "Я б радше не бачив цього знову. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше не бачив цього знову.",
     "en": [
       "I’d rather not see that again.",
       "I would rather not see that again.",
       "I prefer not to see that again."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
-    "ua": "Ми б радше поїхали туди, де дешевше. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б радше поїхали туди, де дешевше.",
     "en": [
       "We’d rather go somewhere cheaper.",
       "We would rather go somewhere cheaper.",
       "We’d prefer a cheaper destination."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Вона завжди каже, що б радше жила в селі. (use WOULD RATHER / PREFER)",
-    "en": [
-      "She always says she’d rather live in the countryside.",
-      "She always says she would rather live in the countryside.",
-      "She always says she prefers living in the countryside."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Я б радше обговорив це особисто. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше обговорив це особисто.",
     "en": [
       "I’d rather discuss it in person.",
       "I would rather discuss it in person.",
       "I prefer to discuss it face to face."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "PAST_SIMPLE"],
-    "ua": "Вона б радше, щоб я залишився вдома. (use WOULD RATHER / PREFER)",
+    "ua": "Вона б воліла, щоб я залишився вдома.",
     "en": [
       "She’d rather I stayed at home.",
-      "She would rather I stayed at home.",
-      "She would prefer me to stay at home."
-    ]
+      "She would rather I stayed at home."
+    ],
+    "hint": "use WOULD RATHER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "ARTICLES"],
-    "ua": "Я б радше випив чашку чаю, ніж кави. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше випив чашку чаю, ніж кави.",
     "en": [
       "I’d rather have a cup of tea than coffee.",
       "I would rather have a cup of tea than coffee.",
       "I prefer drinking tea to coffee."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
-    "rules": ["WOULD_RATHER_PREFER", "BE_GOOD_AT_INTERESTED_IN_ING"],
-    "ua": "Він б радше займався спортом, ніж дивився телевізор. (use WOULD RATHER / PREFER)",
+    "rules": ["WOULD_RATHER_PREFER"],
+    "ua": "Він би радше займався спортом, ніж дивився телевізор.",
     "en": [
       "He’d rather do sports than watch TV.",
       "He would rather do sports than watch TV.",
       "He prefers doing sports to watching TV."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE"],
-    "ua": "Я б радше жив у місті, де є гарний транспорт. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше жив у місті, де є гарний транспорт.",
     "en": [
       "I’d rather live in a city where there is good transport.",
       "I would rather live in a city where there is good transport.",
       "I prefer to live in cities with good public transport."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ми б радше залишилися вдома, хоча друзі нас запрошували. (use WOULD RATHER / PREFER)",
-    "en": [
-      "We’d rather stay at home although our friends invited us.",
-      "We would rather stay at home although our friends invited us.",
-      "We prefer staying at home even when invited out."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
-    "ua": "Він надто зайнятий, тому б радше переніс зустріч. (use WOULD RATHER / PREFER)",
-    "en": [
-      "He’s too busy, so he’d rather postpone the meeting.",
-      "He is too busy, so he would rather postpone the meeting.",
-      "He prefers postponing meetings when he’s busy."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Я б радше зараз помовчав. (use WOULD RATHER / PREFER)",
-    "en": [
-      "I’d rather stay silent now.",
-      "I would rather stay silent now.",
-      "I prefer keeping quiet right now."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "SECOND_CONDITIONAL"],
-    "ua": "Ми б радше подорожували потягом, якби це було дешевше. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б радше подорожували потягом, якби це було дешевше.",
     "en": [
       "We’d rather travel by train if it were cheaper.",
       "We would rather travel by train if it were cheaper.",
       "We’d prefer to travel by train if it were cheaper."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
-    "rules": ["WOULD_RATHER_PREFER", "FIRST_CONDITIONAL"],
-    "ua": "Якщо ви не заперечуєте, ми б радше перенесли зустріч на п’ятницю. (use WOULD RATHER / PREFER)",
-    "en": [
-      "If you don’t mind, we’d rather move the meeting to Friday.",
-      "If you don’t mind, we would rather move the meeting to Friday.",
-      "If possible, we’d prefer to reschedule the meeting for Friday."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Я б радше не відповідав зараз, оскільки мені потрібно перевірити дані. (use WOULD RATHER / PREFER)",
-    "en": [
-      "I’d rather not reply now because I need to verify the data.",
-      "I would rather not respond now as I need to check the figures.",
-      "I prefer to wait until I verify the data before replying."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "MODALS_OF_PROBABILITY"],
-    "ua": "Ми б радше зачекали на підтвердження, перш ніж продовжити. (use WOULD RATHER / PREFER)",
+    "rules": ["WOULD_RATHER_PREFER"],
+    "ua": "Ми б радше зачекали на підтвердження, перш ніж продовжити.",
     "en": [
       "We’d rather wait for confirmation before proceeding.",
       "We would rather wait for confirmation before proceeding.",
-      "We prefer to wait for confirmation before we continue."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": "Клієнт б радше, щоб документи були підписані сьогодні. (use WOULD RATHER / PREFER)",
-    "en": [
-      "The client would rather the documents were signed today.",
-      "The client would prefer the documents to be signed today.",
-      "The client’d rather we signed the documents today."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Ми б радше почали презентацію без затримок. (use WOULD RATHER / PREFER)",
-    "en": [
-      "We’d rather start the presentation without delay.",
-      "We would rather start the presentation on time.",
-      "We’d prefer to start the presentation without any delay."
-    ]
+      "We’d prefer to wait for confirmation before we continue."
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
-    "ua": "Зараз надто пізно, я б радше обговорив це завтра. (use WOULD RATHER / PREFER)",
+    "ua": "Зараз надто пізно, я б радше обговорив це завтра.",
     "en": [
       "It’s too late now; I’d rather discuss it tomorrow.",
       "It’s too late now; I would rather talk about it tomorrow.",
-      "I prefer discussing such matters during working hours."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "PAST_SIMPLE"],
-    "ua": "Ми б радше, щоб ви пояснили умови докладніше. (use WOULD RATHER / PREFER)",
-    "en": [
-      "We’d rather you explained the terms in more detail.",
-      "We would rather you explained the conditions in more detail.",
-      "We’d prefer you to clarify the terms further."
-    ]
+      "It’s too late now; I’d prefer to discuss it tomorrow."
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Я б радше отримав письмове підтвердження. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше отримав письмове підтвердження.",
     "en": [
       "I’d rather receive written confirmation.",
       "I would rather receive written confirmation.",
       "I’d prefer to get confirmation in writing."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Вони б радше підписали угоду після наради. (use WOULD RATHER / PREFER)",
+    "ua": "Вони б радше підписали угоду після наради.",
     "en": [
       "They’d rather sign the agreement after the meeting.",
       "They would rather sign the contract once the meeting is over.",
       "They’d prefer to finalize the contract after the discussion."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "FIRST_CONDITIONAL"],
-    "ua": "Якщо дозволите, я б радше залишив це на потім. (use WOULD RATHER / PREFER)",
+    "ua": "Якщо дозволите, я б радше залишив це на потім.",
     "en": [
       "If you allow, I’d rather leave it for later.",
       "If it’s okay, I would rather postpone this issue.",
       "If possible, I’d prefer to return to it later."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
-    "ua": "Ми б радше обрали вигіднішу пропозицію. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б радше обрали вигіднішу пропозицію.",
     "en": [
       "We’d rather choose a more favorable offer.",
       "We would rather select a better deal.",
       "We prefer choosing more beneficial options."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": "Керівництво б радше, щоб усі звіти були подані до кінця тижня. (use WOULD RATHER / PREFER)",
-    "en": [
-      "Management would rather all reports were submitted by the end of the week.",
-      "Management would prefer the reports to be submitted by the week’s end.",
-      "The management’d rather reports were sent in before Friday."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ми б радше не приймали рішення сьогодні, оскільки бракує інформації. (use WOULD RATHER / PREFER)",
-    "en": [
-      "We’d rather not make a decision today because we lack information.",
-      "We would rather postpone the decision as there isn’t enough data.",
-      "We prefer to wait until we receive all necessary details."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "SECOND_CONDITIONAL"],
-    "ua": "Я б радше погодився, якби умови були чіткіші. (use WOULD RATHER / PREFER)",
-    "en": [
-      "I’d rather agree if the terms were clearer.",
-      "I would rather accept if the conditions were clearer.",
-      "I’d prefer to agree under more transparent conditions."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "PRESENT_PERFECT"],
-    "ua": "Ми б радше вже отримали відповідь до цього моменту. (use WOULD RATHER / PREFER)",
-    "en": [
-      "We’d rather have received an answer by now.",
-      "We would rather have had a response by now.",
-      "We’d prefer to have received feedback earlier."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER"],
-    "ua": "Ми б радше зосередилися на якості, а не кількості. (use WOULD RATHER / PREFER)",
+    "ua": "Ми б радше зосередилися на якості, а не кількості.",
     "en": [
       "We’d rather focus on quality than quantity.",
       "We would rather focus on quality than quantity.",
       "We prefer focusing on quality instead of quantity."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
     "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE"],
-    "ua": "Я б радше домовився, якщо є така можливість. (use WOULD RATHER / PREFER)",
+    "ua": "Я б радше домовився, якщо є така можливість.",
     "en": [
       "I’d rather make an arrangement if there is a possibility.",
       "I would rather make a deal if there is such an option.",
       "I prefer to reach an agreement when possible."
-    ]
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   },
   {
-    "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
-    "ua": "Він надто обережний, тому б радше перевірив усі документи ще раз. (use WOULD RATHER / PREFER)",
-    "en": [
-      "He’s too cautious, so he’d rather check all the documents again.",
-      "He is too cautious, so he would rather review everything once more.",
-      "He prefers double-checking important papers."
-    ]
-  },
-  {
-    "rules": ["WOULD_RATHER_PREFER", "MODALS_OF_PROBABILITY"],
-    "ua": "Ми б радше почекали, щоб побачити результати. (use WOULD RATHER / PREFER)",
+    "rules": ["WOULD_RATHER_PREFER"],
+    "ua": "Ми б радше почекали, щоб побачити результати.",
     "en": [
       "We’d rather wait to see the results.",
       "We would rather wait until we can see the outcome.",
-      "We prefer to wait before making conclusions."
-    ]
+      "We’d prefer to wait before making conclusions."
+    ],
+    "hint": "use WOULD RATHER / PREFER"
   }
 ] }

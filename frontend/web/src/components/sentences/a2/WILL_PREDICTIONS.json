@@ -33,7 +33,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей хлопець думає, що татів бізнес зросте.",
+    "ua": "Цей хлопець думає, що бізнес тата зростатиме.",
     "en": [
       "This boy thinks his dad’s business will grow.",
       "This boy believes his father’s business will expand."
@@ -50,7 +50,7 @@
 
   {
     "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
-    "ua": "Чи думаєш ти, що вони приїдуть завтра?",
+    "ua": "Ти думаєш, що вони приїдуть завтра?",
     "en": [
       "Do you think they will arrive tomorrow?",
       "Do you believe they will come tomorrow?"
@@ -123,7 +123,7 @@
 
   {
     "rules": ["WILL_PREDICTIONS"],
-    "ua": "Чи думаєш ти, що ми виграємо матч?",
+    "ua": "Ти думаєш, що ми виграємо матч?",
     "en": [
       "Do you think we will win the match?",
       "Do you believe we will win the game?"
@@ -196,7 +196,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "COUNT_UNCOUNT"],
-    "ua": "Чи думаєш ти, що буде багато їжі на вечірці?",
+    "ua": "Ти думаєш, що буде багато їжі на вечірці?",
     "en": [
       "Do you think there will be a lot of food at the party?",
       "Do you believe there will be plenty of food at the party?"
@@ -319,7 +319,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "PREP_PLACE"],
-    "ua": "Чи думаєш ти, що вони гратимуть у парку?",
+    "ua": "Ти думаєш, що вони гратимуть у парку?",
     "en": [
       "Do you think they will play in the park?",
       "Do you believe they will play in the park?"
@@ -419,7 +419,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
-    "ua": "Чи думаєш ти, що матч відбудеться в суботу?",
+    "ua": "Ти думаєш, що матч відбудеться в суботу?",
     "en": [
       "Do you think the match will take place on Saturday?",
       "Do you believe the match will take place on Saturday?"
@@ -500,7 +500,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS"],
-    "ua": "Чи думаєш ти, що ми закінчимо роботу вчасно?",
+    "ua": "Ти думаєш, що ми закінчимо роботу вчасно?",
     "en": [
       "Do you think we will finish the work on time?",
       "Do you believe we will complete the task on time?"
@@ -564,7 +564,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "COUNT_UNCOUNT"],
-    "ua": "Чи думаєш ти, що буде багато гостей на вечірці?",
+    "ua": "Ти думаєш, що буде багато гостей на вечірці?",
     "en": [
       "Do you think there will be many guests at the party?",
       "Do you believe there will be a lot of guests at the event?"
@@ -686,7 +686,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "PREP_PLACE"],
-    "ua": "Чи думаєш ти, що вони танцюватимуть у залі?",
+    "ua": "Ти думаєш, вони танцюватимуть у залі?",
     "en": [
       "Do you think they will dance in the hall?",
       "Do you believe they will dance in the venue?"

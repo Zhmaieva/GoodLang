@@ -206,7 +206,7 @@
   },
   {
     "rules": ["CAN_CANT", "PREP_PLACE", "YES_NO_Q"],
-    "ua": "Ти можеш чекати мене біля входу?",
+    "ua": "Ти можеш почекати мене біля входу?",
     "en": ["Can you wait for me at the entrance?", "Could you wait for me by the door?"]
   },
   {

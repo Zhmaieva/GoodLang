@@ -89,7 +89,6 @@ export const GrammarRule = Object.freeze({
 
     // --- B2 ---
     INVERSION_AFTER_NEGATIVE_ADVERBIALS: "INVERSION_AFTER_NEGATIVE_ADVERBIALS",
-    NOT_ONLY_BUT_ALSO: "NOT_ONLY_BUT_ALSO",
     CLEFT_SENTENCES: "CLEFT_SENTENCES",
     MIXED_CONDITIONALS: "MIXED_CONDITIONALS",
     THIRD_CONDITIONAL_VARIATIONS: "THIRD_CONDITIONAL_VARIATIONS",
@@ -98,7 +97,7 @@ export const GrammarRule = Object.freeze({
     REDUCED_RELATIVE_CLAUSES: "REDUCED_RELATIVE_CLAUSES",
     COMPLEX_PREPOSITIONS: "COMPLEX_PREPOSITIONS",
     DESPITE_IN_SPITE_OF_ING: "DESPITE_IN_SPITE_OF_ING",
-    SO_THAT_IN_ORDER_THAT: "SO_THAT_IN_ORDER_THAT",
+    SO_THAT: "SO_THAT",
     WOULD_RATHER_PREFER: "WOULD_RATHER_PREFER",
     HAD_BETTER: "HAD_BETTER",
     ADVANCED_MODALS_OF_DEDUCTION: "ADVANCED_MODALS_OF_DEDUCTION",
@@ -199,7 +198,6 @@ export const RULE_LABELS = Object.freeze({
 
     // B2
     INVERSION_AFTER_NEGATIVE_ADVERBIALS: "Inversion after negative adverbials",
-    NOT_ONLY_BUT_ALSO: "Not only … but also",
     CLEFT_SENTENCES: "Cleft sentences (It is / What … is …)",
     MIXED_CONDITIONALS: "Mixed conditionals",
     THIRD_CONDITIONAL_VARIATIONS: "Third conditional variations",
@@ -208,7 +206,7 @@ export const RULE_LABELS = Object.freeze({
     REDUCED_RELATIVE_CLAUSES: "Reduced relative clauses",
     COMPLEX_PREPOSITIONS: "Complex prepositions (due to, thanks to)",
     DESPITE_IN_SPITE_OF_ING: "Despite / in spite of + -ing",
-    SO_THAT_IN_ORDER_THAT: "So that / in order that",
+    SO_THAT: "So that / in order that",
     WOULD_RATHER_PREFER: "Would rather / prefer",
     HAD_BETTER: "Had better + verb",
     ADVANCED_MODALS_OF_DEDUCTION: "Advanced modals of deduction",
@@ -318,7 +316,6 @@ export const LEVEL_RULES = Object.freeze({
     ],
     B2: [
         GrammarRule.INVERSION_AFTER_NEGATIVE_ADVERBIALS,
-        GrammarRule.NOT_ONLY_BUT_ALSO,
         GrammarRule.CLEFT_SENTENCES,
         GrammarRule.MIXED_CONDITIONALS,
         GrammarRule.THIRD_CONDITIONAL_VARIATIONS,
@@ -327,7 +324,7 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.REDUCED_RELATIVE_CLAUSES,
         GrammarRule.COMPLEX_PREPOSITIONS,
         GrammarRule.DESPITE_IN_SPITE_OF_ING,
-        GrammarRule.SO_THAT_IN_ORDER_THAT,
+        GrammarRule.SO_THAT,
         GrammarRule.WOULD_RATHER_PREFER,
         GrammarRule.HAD_BETTER,
         GrammarRule.ADVANCED_MODALS_OF_DEDUCTION,

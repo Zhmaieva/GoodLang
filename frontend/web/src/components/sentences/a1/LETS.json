@@ -1,34 +1,10 @@
 { "LETS": [
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай відвідаємо музей.",
-    "en": [
-      "Let’s visit the museum.",
-      "Let’s go to the museum."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
     "ua": "Давайте подивимося фільм.",
     "en": [
       "Let’s watch a movie.",
       "Let’s see a movie."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай почитаємо деякі книги.",
-    "en": [
-      "Let’s read some books.",
-      "Let’s study some books."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте відвідаємо цей театр.",
-    "en": [
-      "Let’s visit this theater.",
-      "Let’s be visiting this theater."
     ]
   },
   {
@@ -41,30 +17,6 @@
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте готуємо вечерю зараз.",
-    "en": [
-      "Let’s prepare dinner now.",
-      "Let’s be preparing dinner now."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давай відвідаємо багато замків.",
-    "en": [
-      "Let’s visit many castles.",
-      "Let’s explore a lot of castles."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте пограємо в цю гру щотижня.",
-    "en": [
-      "Let’s play this game every week.",
-      "Let’s play this game weekly."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
     "ua": "Давай напишемо статтю.",
     "en": [
       "Let’s write an article.",
@@ -73,82 +25,10 @@
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте малюємо пейзаж сьогодні.",
-    "en": [
-      "Let’s paint a landscape today.",
-      "Let’s be painting a landscape today."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай сфотографуємо деякі пейзажі.",
-    "en": [
-      "Let’s photograph some landscapes.",
-      "Let’s take photos of some landscapes."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте прочитаємо журнал.",
-    "en": [
-      "Let’s read a magazine.",
-      "Let’s check out a magazine."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай відвідаємо виставку зараз.",
-    "en": [
-      "Let’s visit an exhibition now.",
-      "Let’s be visiting an exhibition now."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте вивчимо цю книгу щовечора.",
-    "en": [
-      "Let’s study this book every evening.",
-      "Let’s read this book nightly."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давай пограємо з багатьма дітьми.",
-    "en": [
-      "Let’s play with many children.",
-      "Let’s play with a lot of children."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте танцюємо на вечірці сьогодні.",
-    "en": [
-      "Let’s dance at the party today.",
-      "Let’s be dancing at the party today."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
     "ua": "Давай напишемо вірш.",
     "en": [
       "Let’s write a poem.",
       "Let’s compose a poem."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте репетируємо цю пісню зараз.",
-    "en": [
-      "Let’s rehearse this song now.",
-      "Let’s be rehearsing this song now."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай відсвяткуємо з деякими друзями.",
-    "en": [
-      "Let’s celebrate with some friends.",
-      "Let’s have a party with some friends."
     ]
   },
   {
@@ -161,179 +41,10 @@
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай готуємо десерт зараз.",
+    "ua": "Давай намалюємо пейзаж.",
     "en": [
-      "Let’s prepare a dessert now.",
-      "Let’s be preparing a dessert now."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте подивимося на багато зірок.",
-    "en": [
-      "Let’s look at many stars.",
-      "Let’s observe a lot of stars."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай пограємо в цю гру щодня.",
-    "en": [
-      "Let’s play this game every day.",
-      "Let’s play this game daily."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте прочитаємо роман.",
-    "en": [
-      "Let’s read a novel.",
-      "Let’s dive into a novel."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай заспіваємо на концерті сьогодні.",
-    "en": [
-      "Let’s sing at the concert today.",
-      "Let’s be singing at the concert today."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давайте вивчимо деякі слова.",
-    "en": [
-      "Let’s learn some words.",
-      "Let’s study some words."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай намалюємо портрет.",
-    "en": [
-      "Let’s paint a portrait.",
-      "Let’s create a portrait."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте відвідаємо музей сьогодні.",
-    "en": [
-      "Let’s visit the museum today.",
-      "Let’s be visiting the museum today."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай пограємо в цю гру щотижня.",
-    "en": [
-      "Let’s play this game every week.",
-      "Let’s play this game weekly."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте відвідаємо багато парків.",
-    "en": [
-      "Let’s visit many parks.",
-      "Let’s explore a lot of parks."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай потанцюємо на сцені зараз.",
-    "en": [
-      "Let’s dance on stage now.",
-      "Let’s be dancing on stage now."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте напишемо лист.",
-    "en": [
-      "Let’s write a letter.",
-      "Let’s compose a letter."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте вивчимо цю тему зараз.",
-    "en": [
-      "Let’s study this topic now.",
-      "Let’s be studying this topic now."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай сфотографуємо деякі квіти.",
-    "en": [
-      "Let’s photograph some flowers.",
-      "Let’s take photos of some flowers."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте пограємо в теніс.",
-    "en": [
-      "Let’s play tennis.",
-      "Let’s have a game of tennis."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай готуємо піцу зараз.",
-    "en": [
-      "Let’s prepare pizza now.",
-      "Let’s be preparing pizza now."
-    ]
-  },
-
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте подивимося на багато птахів.",
-    "en": [
-      "Let’s look at many birds.",
-      "Let’s observe a lot of birds."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай заспіваємо цю пісню щовечора.",
-    "en": [
-      "Let’s sing this song every evening.",
-      "Let’s sing this song nightly."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте прочитаємо книгу.",
-    "en": [
-      "Let’s read a book.",
-      "Let’s dive into a book."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай намалюємо пейзаж зараз.",
-    "en": [
-      "Let’s paint a landscape now.",
-      "Let’s be painting a landscape now."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давайте вивчимо деякі факти.",
-    "en": [
-      "Let’s learn some facts.",
-      "Let’s study some facts."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай відвідаємо галерею.",
-    "en": [
-      "Let’s visit the gallery.",
-      "Let’s check out the gallery."
+      "Let’s paint a landscape.",
+      "Let’s be painting a landscape."
     ]
   },
   {
@@ -346,58 +57,10 @@
   },
   {
     "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай вивчимо цю мову щотижня.",
+    "ua": "Давай вчити іспанську мову щотижня.",
     "en": [
-      "Let’s learn this language every week.",
-      "Let’s study this language weekly."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте відвідаємо багато музеїв.",
-    "en": [
-      "Let’s visit many museums.",
-      "Let’s explore a lot of museums."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай готуємо обід зараз.",
-    "en": [
-      "Let’s prepare lunch now.",
-      "Let’s be preparing lunch now."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте потанцюємо в театрі.",
-    "en": [
-      "Let’s dance in the theater.",
-      "Let’s perform a dance in the theater."
-    ]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте тренуємося в цій грі зараз.",
-    "en": [
-      "Let’s practice this game now.",
-      "Let’s be practicing this game now."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай прочитаємо деякі журнали.",
-    "en": [
-      "Let’s read some magazines.",
-      "Let’s check out some magazines."
-    ]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте пограємо в баскетбол.",
-    "en": [
-      "Let’s play basketball.",
-      "Let’s have a game of basketball."
+      "Let’s learn Spanish every week.",
+      "Let’s study Spanish weekly."
     ]
   },
   {
@@ -417,14 +80,6 @@
     ]
   },
   {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай вивчимо деякі мови.",
-    "en": [
-      "Let’s learn some languages.",
-      "Let’s study some languages."
-    ]
-  },
-  {
     "rules": ["LETS", "DEMONSTRATIVES"],
     "ua": "Давайте відвідаємо цю галерею.",
     "en": [
@@ -434,123 +89,51 @@
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай почитаємо книгу.",
+    "ua": "Давайте почитаємо книгу.",
     "en": [
       "Let’s read a book.",
       "Let’s dive into a book."
     ]
   },
   {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте готуємо обід зараз.",
-    "en": [
-      "Let’s prepare lunch now.",
-      "Let’s be preparing lunch now."
-    ]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давай відвідаємо багато міст.",
-    "en": [
-      "Let’s visit many cities.",
-      "Let’s explore a lot of cities."
-    ]
-  },
-
-  {
     "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте пограємо в цю гру щодня.",
+    "ua": "Давайте грати в цю гру щодня.",
     "en": ["Let’s play this game every day.", "Let’s play this game daily."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай напишемо есе.",
+    "ua": "Давайте напишемо есе.",
     "en": ["Let’s write an essay.", "Let’s compose an essay."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте співаємо на сцені сьогодні.",
-    "en": ["Let’s sing on the stage today.", "Let’s be singing on the stage today."]
+    "ua": "Давайте заспіваємо на сцені.",
+    "en": ["Let’s sing on the stage.", "Let’s be singing on the stage."]
   },
   {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай сфотографуємо деякі дерева.",
-    "en": ["Let’s photograph some trees.", "Let’s take photos of some trees."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте прочитаємо газету.",
-    "en": ["Let’s read a newspaper.", "Let’s check out a newspaper."]
+    "rules": ["LETS"],
+    "ua": "Давай сфотографуємо ці квіти.",
+    "en": ["Let’s photograph these flowers.", "Let’s take photos of these flowers."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай відвідаємо парк зараз.",
-    "en": ["Let’s visit the park now.", "Let’s be visiting the park now."]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте вивчимо цю тему щотижня.",
-    "en": ["Let’s study this topic every week.", "Let’s review this topic weekly."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давай пограємо з багатьма друзями.",
-    "en": ["Let’s play with many friends.", "Let’s play with a lot of friends."]
+    "ua": "Давайте сходимо в парк.",
+    "en": ["Let’s visit the park.", "Let’s go to the park."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте танцюємо в клубі сьогодні.",
-    "en": ["Let’s dance in the club today.", "Let’s be dancing in the club today."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай напишемо лист.",
+    "ua": "Давайте напишемо лист.",
     "en": ["Let’s write a letter.", "Let’s compose a letter."]
   },
   {
     "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте репетируємо цю п’єсу зараз.",
+    "ua": "Давайте порепетируємо цю п’єсу зараз.",
     "en": ["Let’s rehearse this play now.", "Let’s be rehearsing this play now."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай відсвяткуємо з деякими студентами.",
-    "en": ["Let’s celebrate with some students.", "Let’s party with some students."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
     "ua": "Давайте побігаємо в лісі.",
     "en": ["Let’s run in the forest.", "Let’s go running in the forest."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай готуємо піцу зараз.",
-    "en": ["Let’s prepare pizza now.", "Let’s be preparing pizza now."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте подивимося на багато озер.",
-    "en": ["Let’s look at many lakes.", "Let’s observe a lot of lakes."]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай заспіваємо цю пісню щодня.",
-    "en": ["Let’s sing this song every day.", "Let’s sing this song daily."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте прочитаємо роман.",
-    "en": ["Let’s read a novel.", "Let’s dive into a novel."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай намалюємо портрет зараз.",
-    "en": ["Let’s paint a portrait now.", "Let’s be painting a portrait now."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давайте вивчимо деякі правила.",
-    "en": ["Let’s learn some rules.", "Let’s study some rules."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
@@ -563,19 +146,9 @@
     "en": ["Let’s visit the theater today.", "Let’s be visiting the theater today."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай пограємо в цю гру щотижня.",
-    "en": ["Let’s play this game every week.", "Let’s play this game weekly."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте відвідаємо багато галерей.",
-    "en": ["Let’s visit many galleries.", "Let’s explore a lot of galleries."]
-  },
-  {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай потанцюємо на вечірці зараз.",
-    "en": ["Let’s dance at the party now.", "Let’s be dancing at the party now."]
+    "ua": "Давай потанцюємо на вечірці.",
+    "en": ["Let’s dance at the party.", "Let’s be dancing at the party."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
@@ -583,54 +156,9 @@
     "en": ["Let’s write an article.", "Let’s compose an article."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте вивчимо цю книгу зараз.",
-    "en": ["Let’s study this book now.", "Let’s be studying this book now."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай сфотографуємо деякі пейзажі.",
-    "en": ["Let’s photograph some landscapes.", "Let’s take photos of some landscapes."]
-  },
-  {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте пограємо в баскетбол.",
-    "en": ["Let’s play basketball.", "Let’s have a game of basketball."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай готуємо десерт зараз.",
-    "en": ["Let’s prepare a dessert now.", "Let’s be preparing a dessert now."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте подивимося на багато гір.",
-    "en": ["Let’s look at many mountains.", "Let’s observe a lot of mountains."]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай заспіваємо цю мелодію щовечора.",
-    "en": ["Let’s sing this melody every evening.", "Let’s sing this melody nightly."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давайте прочитаємо журнал.",
-    "en": ["Let’s read a magazine.", "Let’s check out a magazine."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай співаємо на концерті зараз.",
-    "en": ["Let’s sing at the concert now.", "Let’s be singing at the concert now."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давайте вивчимо деякі терміни.",
-    "en": ["Let’s learn some terms.", "Let’s study some terms."]
-  },
-  {
-    "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай відвідаємо зоопарк.",
-    "en": ["Let’s visit the zoo.", "Let’s explore the zoo."]
+    "ua": "Давай сходимо в зоопарк.",
+    "en": ["Let’s visit the zoo.", "Let’s go to the zoo."]
   },
   {
     "rules": ["LETS", "ARTICLES"],
@@ -638,34 +166,21 @@
     "en": ["Let’s listen to music now.", "Let’s be listening to music now."]
   },
   {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давай вивчимо цю історію щотижня.",
-    "en": ["Let’s study this history every week.", "Let’s review this history weekly."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Давайте відвідаємо багато театрів.",
-    "en": ["Let’s visit many theaters.", "Let’s explore a lot of theaters."]
-  },
-  {
     "rules": ["LETS", "ARTICLES"],
-    "ua": "Давай готуємо суп зараз.",
-    "en": ["Let’s prepare soup now.", "Let’s be preparing soup now."]
+    "ua": "Давай приготуємо суп зараз.",
+    "en": [
+      "Let’s prepare some soup now.",
+      "Let’s make some soup now.",
+      "Let’s cook some soup now.",
+      "Let’s prepare soup now.",
+      "Let’s make soup now.",
+      "Let’s cook soup now."
+    ]
   },
   {
     "rules": ["LETS", "ARTICLES"],
     "ua": "Давайте потанцюємо в залі.",
     "en": ["Let’s dance in the hall.", "Let’s perform a dance in the hall."]
-  },
-  {
-    "rules": ["LETS", "DEMONSTRATIVES"],
-    "ua": "Давайте тренуємося в цій грі сьогодні.",
-    "en": ["Let’s practice this game today.", "Let’s be practicing this game today."]
-  },
-  {
-    "rules": ["LETS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Давай прочитаємо деякі книги.",
-    "en": ["Let’s read some books.", "Let’s study some books."]
   },
   {
     "rules": ["LETS", "ARTICLES"],

@@ -1,8 +1,8 @@
 { "LET_MAKE_ALLOW": [
   {
     "rules": ["LET_MAKE_ALLOW", "PREP_TIME"],
-    "ua": ["Батьки дозволяють дітям дивитися телевізор після 19:00? Так, дозволяють."],
-    "en": ["Do parents allow children to watch TV after 7 p.m.? Yes, they do."],
+    "ua": ["Батьки дозволяють дітям дивитися телевізор після 19:00?"],
+    "en": ["Do parents allow children to watch TV after 7 p.m.?"],
     "hint": "use LET / MAKE / ALLOW."
   },
   {
@@ -52,8 +52,8 @@
   },
   {
     "rules": ["LET_MAKE_ALLOW"],
-    "ua": ["Чи дозволено тут робити фото? Так, дозволено."],
-    "en": ["Is it allowed to take photos here? Yes, it is."],
+    "ua": ["Тут дозволено робити фото?"],
+    "en": ["Is it allowed to take photos here?"],
     "hint": "use LET / MAKE / ALLOW."
   },
   {
@@ -145,8 +145,8 @@
   },
   {
     "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": ["Твоя робота дозволяє тобі подорожувати? Так, іноді."],
-    "en": ["Does your job allow you to travel? Yes, sometimes."],
+    "ua": ["Твоя робота дозволяє тобі подорожувати?"],
+    "en": ["Does your job allow you to travel?"],
     "hint": "use LET / MAKE / ALLOW."
   },
   {
@@ -196,8 +196,8 @@
   },
   {
     "rules": ["LET_MAKE_ALLOW"],
-    "ua": ["Чи дозволено студентам залишатися після занять? Так, дозволено."],
-    "en": ["Are students allowed to stay after class? Yes, they are."],
+    "ua": ["Студентам дозволено залишатися після занять?"],
+    "en": ["Are students allowed to stay after class?"],
     "hint": "use LET / MAKE / ALLOW."
   },
   {
@@ -259,8 +259,8 @@
   },
   {
     "rules": ["LET_MAKE_ALLOW"],
-    "ua": ["Вони дозволили тобі піти раніше? Так, дозволили."],
-    "en": ["Did they let you leave early? Yes, they did."],
+    "ua": ["Вони дозволили тобі піти раніше?"],
+    "en": ["Did they let you leave early?"],
     "hint": "use LET / MAKE / ALLOW."
   },
   {
@@ -301,8 +301,8 @@
   },
   {
     "rules": ["LET_MAKE_ALLOW"],
-    "ua": ["Чи дозволено відвідувачам користуватися Wi-Fi? Так, дозволено."],
-    "en": ["Are visitors allowed to use Wi-Fi? Yes, they are."],
+    "ua": ["Відвідувачам дозволено користуватися Wi-Fi?"],
+    "en": ["Are visitors allowed to use Wi-Fi?"],
     "hint": "use LET / MAKE / ALLOW."
   },
   {
@@ -325,8 +325,8 @@
   },
   {
     "rules": ["LET_MAKE_ALLOW"],
-    "ua": ["Тебе хтось змусив піти звідти? Ні, я сам пішов."],
-    "en": ["Did someone make you leave? No, I left myself."],
+    "ua": ["Тебе хтось змусив піти звідти?"],
+    "en": ["Did someone make you leave?"],
     "hint": "use LET / MAKE / ALLOW."
   },
   {
@@ -472,9 +472,9 @@
   },
   {
     "rules": ["LET_MAKE_ALLOW"],
-    "ua": ["Вони дозволили тобі скористатися їхнім авто? Так, дозволили."],
+    "ua": ["Вони дозволили тобі скористатися їхнім авто?"],
     "en": [
-      "Did they let you use their car? Yes, they did."
+      "Did they let you use their car?"
     ],
     "hint": "use LET / MAKE / ALLOW."
   },
@@ -547,9 +547,9 @@
     "rules": [
       "LET_MAKE_ALLOW"
     ],
-    "ua": ["Тебе змусили вибачитися? Так, змусили."],
+    "ua": ["Тебе змусили вибачитися?"],
     "en": [
-      "Did they make you apologize? Yes, they did."
+      "Did they make you apologize?"
     ],
     "hint": "use LET / MAKE / ALLOW."
   },
@@ -636,10 +636,10 @@
     "rules": [
       "LET_MAKE_ALLOW"
     ],
-    "ua": ["Чи дозволено тут курити? Ні, не дозволено."],
+    "ua": ["Тут дозволено курити?"],
     "en": [
-      "Is it allowed to smoke here? No, it isn’t.",
-      "Is it allowed to smoke here? No, it is not."
+      "Is it allowed to smoke here?",
+      "Is it allowed to smoke here?"
     ],
     "hint": "use LET / MAKE / ALLOW."
   },

@@ -41,7 +41,7 @@
   },
   {
     "rules": ["GOING_TO_PLANS", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей хлопець збирається полагодити татів велосипед.",
+    "ua": "Цей хлопець збирається полагодити велосипед тата.",
     "en": [
       "This boy is going to fix his dad’s bike.",
       "That boy is planning to repair his father’s bicycle."

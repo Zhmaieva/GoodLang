@@ -5,7 +5,8 @@
       "You should have told me the truth.",
       "You should have been honest with me."
     ],
-    "ua": "Тобі слід було сказати мені правду. (use SHOULD)"
+    "ua": "Тобі слід було сказати мені правду.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
@@ -13,7 +14,8 @@
       "I should have studied harder for the exam.",
       "I should have put more effort into studying for the exam."
     ],
-    "ua": "Мені слід було вчитися старанніше до іспиту. (use SHOULD)"
+    "ua": "Мені слід було вчитися старанніше до іспиту.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -21,7 +23,8 @@
       "They should have left earlier.",
       "They should have gone earlier."
     ],
-    "ua": "Їм слід було піти раніше. (use SHOULD)"
+    "ua": "Їм слід було піти раніше.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -29,7 +32,8 @@
       "He should have apologized to her.",
       "He should have said sorry to her."
     ],
-    "ua": "Йому слід було вибачитися перед нею. (use SHOULD)"
+    "ua": "Йому слід було вибачитися перед нею.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -37,7 +41,8 @@
       "We should have booked the tickets in advance.",
       "We should have reserved the tickets ahead of time."
     ],
-    "ua": "Нам слід було забронювати квитки заздалегідь. (use SHOULD)"
+    "ua": "Нам слід було забронювати квитки заздалегідь.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "BEFORE_AFTER_ING"],
@@ -45,7 +50,8 @@
       "You should have called before coming.",
       "You should have phoned before you came."
     ],
-    "ua": "Тобі слід було подзвонити перед тим, як прийти. (use SHOULD)"
+    "ua": "Тобі слід було подзвонити перед тим, як прийти.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -53,7 +59,8 @@
       "I should have taken an umbrella.",
       "I should have brought an umbrella."
     ],
-    "ua": "Мені слід було взяти парасолю. (use SHOULD)"
+    "ua": "Мені слід було взяти парасолю.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "POSSESSIVE_ADJECTIVES"],
@@ -61,7 +68,8 @@
       "She should have listened to her parents.",
       "She should have paid attention to her parents' advice."
     ],
-    "ua": "Їй слід було послухати своїх батьків. (use SHOULD)"
+    "ua": "Їй слід було послухати своїх батьків.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -69,7 +77,8 @@
       "We should have written down the address.",
       "We should have noted the address."
     ],
-    "ua": "Нам слід було записати адресу. (use SHOULD)"
+    "ua": "Нам слід було записати адресу.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "POSSESSIVE_ADJECTIVES"],
@@ -77,7 +86,8 @@
       "They should have helped their neighbors.",
       "They should have given their neighbors a hand."
     ],
-    "ua": "Їм слід було допомогти своїм сусідам. (use SHOULD)"
+    "ua": "Їм слід було допомогти своїм сусідам.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -85,7 +95,8 @@
       "He should have checked the weather forecast.",
       "He should have looked at the weather forecast."
     ],
-    "ua": "Йому слід було перевірити прогноз погоди. (use SHOULD)"
+    "ua": "Йому слід було перевірити прогноз погоди.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES", "COUNT_UNCOUNT"],
@@ -93,7 +104,8 @@
       "I should have saved more money.",
       "I should have put aside more money."
     ],
-    "ua": "Мені слід було заощадити більше грошей. (use SHOULD)"
+    "ua": "Мені слід було заощадити більше грошей.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -101,7 +113,8 @@
       "You should have thanked her for the gift.",
       "You should have expressed your gratitude to her for the gift."
     ],
-    "ua": "Тобі слід було подякувати їй за подарунок. (use SHOULD)"
+    "ua": "Тобі слід було подякувати їй за подарунок.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
@@ -109,7 +122,8 @@
       "We should have stayed longer at the party.",
       "We should have spent more time at the party."
     ],
-    "ua": "Нам слід було залишитися на вечірці довше. (use SHOULD)"
+    "ua": "Нам слід було залишитися на вечірці довше.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -117,7 +131,8 @@
       "She should have worn a coat.",
       "She should have put on a coat."
     ],
-    "ua": "Їй слід було вдягнути пальто. (use SHOULD)"
+    "ua": "Їй слід було вдягнути пальто.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -125,7 +140,8 @@
       "I should have gone to bed earlier.",
       "I should have gone to sleep earlier."
     ],
-    "ua": "Мені слід було лягти спати раніше. (use SHOULD)"
+    "ua": "Мені слід було лягти спати раніше.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -133,7 +149,8 @@
       "They should have read the instructions.",
       "They should have gone through the instructions."
     ],
-    "ua": "Їм слід було прочитати інструкцію. (use SHOULD)"
+    "ua": "Їм слід було прочитати інструкцію.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
@@ -141,7 +158,8 @@
       "He should have been more polite.",
       "He should have behaved more politely."
     ],
-    "ua": "Йому слід було бути ввічливішим. (use SHOULD)"
+    "ua": "Йому слід було бути ввічливішим.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -149,7 +167,8 @@
       "You should have locked the door.",
       "You should have secured the door."
     ],
-    "ua": "Тобі слід було замкнути двері. (use SHOULD)"
+    "ua": "Тобі слід було замкнути двері.",
+    "hint": "use SHOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -157,9 +176,9 @@
       "We should have waited for them.",
       "We should have stayed and waited for them."
     ],
-    "ua": "Нам слід було їх почекати. (use SHOULD)"
+    "ua": "Нам слід було їх почекати.",
+    "hint": "use SHOULD"
   },
-
 
   {
     "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
@@ -167,7 +186,8 @@
       "I could have passed the test if I had studied.",
       "I could have succeeded on the test if I had studied."
     ],
-    "ua": "Я міг би скласти тест, якби я вчився. (use COULD)"
+    "ua": "Я міг би скласти тест, якби я вчився.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
@@ -175,7 +195,8 @@
       "She could have won the race with more training.",
       "She could have won the race if she had trained more."
     ],
-    "ua": "Вона могла б виграти забіг, якби більше тренувалася. (use COULD)"
+    "ua": "Вона могла б виграти забіг, якби більше тренувалася.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
@@ -183,7 +204,8 @@
       "They could have helped us, but they didn’t.",
       "They could have offered us help, but they chose not to."
     ],
-    "ua": "Вони могли б нам допомогти, але не зробили цього. (use COULD)"
+    "ua": "Вони могли б нам допомогти, але не зробили цього.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -191,7 +213,8 @@
       "He could have called, but he forgot.",
       "He could have made a call, but he forgot."
     ],
-    "ua": "Він міг би подзвонити, але забув. (use COULD)"
+    "ua": "Він міг би подзвонити, але забув.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -199,7 +222,8 @@
       "We could have arrived earlier without getting stuck in traffic.",
       "We could have arrived earlier if we had not been stuck in traffic."
     ],
-    "ua": "Ми могли б приїхати раніше, якби не застрягли в заторах. (use COULD)"
+    "ua": "Ми могли б приїхати раніше, якби не застрягли в заторах.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -207,7 +231,8 @@
       "You could have hurt yourself!",
       "You could have injured yourself!"
     ],
-    "ua": "Ти міг би поранитися! (use COULD)"
+    "ua": "Ти міг би поранитися!",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
@@ -215,15 +240,18 @@
       "I could have gone to Paris, but I chose Rome.",
       "I could have travelled to Paris, but I chose Rome instead."
     ],
-    "ua": "Я міг би поїхати до Парижа, але вибрав Рим. (use COULD)"
+    "ua": "Я міг би поїхати до Парижа, але вибрав Рим.",
+    "hint": "use COULD"
   },
+
   {
     "rules": ["MODAL_PERFECTS"],
     "en": [
       "She could have taken the job offer.",
       "She could have accepted the job offer."
     ],
-    "ua": "Вона могла б прийняти пропозицію роботи. (use COULD)"
+    "ua": "Вона могла б прийняти пропозицію роботи.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "TIME_EXPRESSIONS"],
@@ -231,7 +259,8 @@
       "They could have bought that house last year.",
       "They could have purchased that house last year."
     ],
-    "ua": "Вони могли б купити той будинок минулого року. (use COULD)"
+    "ua": "Вони могли б купити той будинок минулого року.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -239,7 +268,8 @@
       "He could have said something nicer.",
       "He could have said something more pleasant."
     ],
-    "ua": "Він міг би сказати щось приємніше. (use COULD)"
+    "ua": "Він міг би сказати щось приємніше.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "TIME_EXPRESSIONS"],
@@ -247,7 +277,8 @@
       "I could have finished it yesterday.",
       "I could have completed it yesterday."
     ],
-    "ua": "Я міг би закінчити це вчора. (use COULD)"
+    "ua": "Я міг би закінчити це вчора.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -255,7 +286,8 @@
       "You could have asked for help.",
       "You could have requested help."
     ],
-    "ua": "Ти міг би попросити про допомогу. (use COULD)"
+    "ua": "Ти міг би попросити про допомогу.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -263,7 +295,8 @@
       "We could have taken a taxi.",
       "We could have used a taxi."
     ],
-    "ua": "Ми могли б узяти таксі. (use COULD)"
+    "ua": "Ми могли б узяти таксі.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -271,7 +304,8 @@
       "She could have joined the team.",
       "She could have become part of the team."
     ],
-    "ua": "Вона могла б приєднатися до команди. (use COULD)"
+    "ua": "Вона могла б приєднатися до команди.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
@@ -279,7 +313,8 @@
       "They could have stayed longer.",
       "They could have remained longer."
     ],
-    "ua": "Вони могли б залишитися довше. (use COULD)"
+    "ua": "Вони могли б залишитися довше.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -287,7 +322,8 @@
       "He could have told me the secret.",
       "He could have shared the secret with me."
     ],
-    "ua": "Він міг би сказати мені секрет. (use COULD)"
+    "ua": "Він міг би сказати мені секрет.",
+    "hint": "use COULD"
   },
 
   {
@@ -296,7 +332,8 @@
       "I could have done better.",
       "I could have performed better."
     ],
-    "ua": "Я міг би зробити краще. (use COULD)"
+    "ua": "Я міг би зробити краще.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
@@ -304,7 +341,8 @@
       "You could have been more careful.",
       "You could have acted more carefully."
     ],
-    "ua": "Ти міг би бути обережнішим. (use COULD)"
+    "ua": "Ти міг би бути обережнішим.",
+    "hint": "use COULD"
   },
 
   {
@@ -313,7 +351,8 @@
       "We could have lost everything.",
       "We could have lost it all."
     ],
-    "ua": "Ми могли б втратити все. (use COULD)"
+    "ua": "Ми могли б втратити все.",
+    "hint": "use COULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -321,9 +360,9 @@
       "She could have made a mistake.",
       "She could have got it wrong."
     ],
-    "ua": "Вона могла б зробити помилку. (use COULD)"
+    "ua": "Вона могла б зробити помилку.",
+    "hint": "use COULD"
   },
-
 
   {
     "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
@@ -331,7 +370,8 @@
       "I would have helped you if I had known.",
       "If I had known, I would have helped you."
     ],
-    "ua": "Я б допоміг тобі, якби я знав. (use WOULD)"
+    "ua": "Я б допоміг тобі, якби я знав.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
@@ -339,7 +379,8 @@
       "She would have come if she had not been sick.",
       "If she had not been sick, she would have come."
     ],
-    "ua": "Вона б прийшла, якби не була хвора. (use WOULD)"
+    "ua": "Вона б прийшла, якби не була хвора.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
@@ -347,9 +388,9 @@
       "They would have joined us if they had had time.",
       "If they had had time, they would have joined us."
     ],
-    "ua": "Вони б приєдналися до нас, якби мали час. (use WOULD)"
+    "ua": "Вони б приєдналися до нас, якби мали час.",
+    "hint": "use WOULD"
   },
-
 
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
@@ -357,7 +398,8 @@
       "He would have gone to the meeting, but he forgot.",
       "He would have attended the meeting, but he forgot."
     ],
-    "ua": "Він би пішов на зустріч, але забув. (use WOULD)"
+    "ua": "Він би пішов на зустріч, але забув.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
@@ -365,7 +407,8 @@
       "We would have finished earlier with more people.",
       "With more people, we would have finished earlier."
     ],
-    "ua": "Ми б закінчили раніше, якби було більше людей. (use WOULD)"
+    "ua": "Ми б закінчили раніше, якби було більше людей.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES", "THIRD_CONDITIONAL"],
@@ -373,9 +416,9 @@
       "I would have bought it if it had been cheaper.",
       "If it had been cheaper, I would have bought it."
     ],
-    "ua": "Я б купив це, якби воно було дешевше. (use WOULD)"
+    "ua": "Я б купив це, якби воно було дешевше.",
+    "hint": "use WOULD"
   },
-
 
   {
     "rules": ["MODAL_PERFECTS"],
@@ -383,7 +426,8 @@
       "You would have liked the movie.",
       "You would have enjoyed the movie."
     ],
-    "ua": "Тобі б сподобався фільм. (use WOULD)"
+    "ua": "Тобі б сподобався фільм.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
@@ -391,7 +435,8 @@
       "She would have called, but her phone died.",
       "She would have called, but her phone battery died."
     ],
-    "ua": "Вона б подзвонила, але в неї розрядився телефон. (use WOULD)"
+    "ua": "Вона б подзвонила, але в неї розрядився телефон.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
@@ -399,7 +444,8 @@
       "They would have stayed longer if it had not rained.",
       "If it had not rained, they would have stayed longer."
     ],
-    "ua": "Вони б залишилися довше, якби не було дощу. (use WOULD)"
+    "ua": "Вони б залишилися довше, якби не було дощу.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
@@ -407,15 +453,18 @@
       "He would have taken the bus, but it was full.",
       "He would have got on the bus, but it was full."
     ],
-    "ua": "Він би сів на автобус, але той був переповнений. (use WOULD)"
+    "ua": "Він би сів на автобус, але той був переповнений.",
+    "hint": "use WOULD"
   },
+
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
     "en": [
       "I would have met you, but I was busy.",
       "I would have met you, but I was too busy."
     ],
-    "ua": "Я б зустрівся з тобою, але був зайнятий. (use WOULD)"
+    "ua": "Я б зустрівся з тобою, але був зайнятий.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
@@ -423,9 +472,9 @@
       "You would have understood if you had been there.",
       "If you had been there, you would have understood."
     ],
-    "ua": "Ти б зрозумів, якби був там. (use WOULD)"
+    "ua": "Ти б зрозумів, якби був там.",
+    "hint": "use WOULD"
   },
-
 
   {
     "rules": ["MODAL_PERFECTS"],
@@ -433,7 +482,8 @@
       "We would have danced all night.",
       "We would have danced for the whole night."
     ],
-    "ua": "Ми б танцювали всю ніч. (use WOULD)"
+    "ua": "Ми б танцювали всю ніч.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -441,7 +491,8 @@
       "She would have accepted the offer.",
       "She would have agreed to the offer."
     ],
-    "ua": "Вона б прийняла пропозицію. (use WOULD)"
+    "ua": "Вона б прийняла пропозицію.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -449,7 +500,8 @@
       "They would have believed him.",
       "They would have trusted what he said."
     ],
-    "ua": "Вони б йому повірили. (use WOULD)"
+    "ua": "Вони б йому повірили.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
@@ -457,7 +509,8 @@
       "He would have studied abroad if he had had money.",
       "If he had had money, he would have studied abroad."
     ],
-    "ua": "Він би навчався за кордоном, якби мав гроші. (use WOULD)"
+    "ua": "Він би навчався за кордоном, якби мав гроші.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS"],
@@ -465,7 +518,8 @@
       "I would have cooked dinner, but we ran out of food.",
       "I would have made dinner, but we ran out of food."
     ],
-    "ua": "Я б приготував вечерю, але в нас закінчилася їжа. (use WOULD)"
+    "ua": "Я б приготував вечерю, але в нас закінчилася їжа.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES", "THIRD_CONDITIONAL"],
@@ -473,7 +527,8 @@
       "You would have passed if you had tried harder.",
       "If you had tried harder, you would have passed."
     ],
-    "ua": "Ти б склав іспит, якби старався більше. (use WOULD)"
+    "ua": "Ти б склав іспит, якби старався більше.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS", "CONJUNCTIONS", "TIME_EXPRESSIONS"],
@@ -481,7 +536,8 @@
       "We would have called, but it was too late.",
       "We would have called, but it was already too late."
     ],
-    "ua": "Ми б подзвонили, але було вже надто пізно. (use WOULD)"
+    "ua": "Ми б подзвонили, але було вже надто пізно.",
+    "hint": "use WOULD"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -489,7 +545,8 @@
       "She would have recognized you instantly.",
       "She would have recognized you immediately."
     ],
-    "ua": "Вона б тебе впізнала миттєво. (use WOULD)"
+    "ua": "Вона б тебе впізнала миттєво.",
+    "hint": "use WOULD"
   },
 
   {
@@ -498,7 +555,8 @@
       "I might have left my phone at home.",
       "I might have forgotten my phone at home."
     ],
-    "ua": "Я, можливо, залишив свій телефон удома. (use MIGHT)"
+    "ua": "Я, можливо, залишив свій телефон удома.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -506,7 +564,8 @@
       "She might have misunderstood what I said.",
       "She might have taken what I said the wrong way."
     ],
-    "ua": "Вона, можливо, неправильно зрозуміла те, що я сказав. (use MIGHT)"
+    "ua": "Вона, можливо, неправильно зрозуміла те, що я сказав.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -514,7 +573,8 @@
       "They might have arrived already.",
       "They might have already arrived."
     ],
-    "ua": "Вони, можливо, вже прибули. (use MIGHT)"
+    "ua": "Вони, можливо, вже прибули.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -522,7 +582,8 @@
       "He might have forgotten the meeting.",
       "He might have forgotten about the meeting."
     ],
-    "ua": "Він, можливо, забув про зустріч. (use MIGHT)"
+    "ua": "Він, можливо, забув про зустріч.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS", "PREP_PLACE"],
@@ -530,7 +591,8 @@
       "We might have gone to the wrong place.",
       "We might have gone to the wrong location."
     ],
-    "ua": "Ми, можливо, пішли не в те місце. (use MIGHT)"
+    "ua": "Ми, можливо, пішли не в те місце.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS", "PREP_PLACE", "ARTICLES"],
@@ -538,9 +600,9 @@
       "I might have seen her at the station.",
       "I might have spotted her at the station."
     ],
-    "ua": "Я, можливо, бачив її на вокзалі. (use MIGHT)"
+    "ua": "Я, можливо, бачив її на вокзалі.",
+    "hint": "use MIGHT"
   },
-
 
   {
     "rules": ["MODAL_PERFECTS"],
@@ -548,7 +610,8 @@
       "You might have heard the news.",
       "You might have heard the latest news."
     ],
-    "ua": "Ти, можливо, чув новини. (use MIGHT)"
+    "ua": "Ти, можливо, чув новини.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -556,7 +619,8 @@
       "She might have lost her wallet.",
       "She might have misplaced her wallet."
     ],
-    "ua": "Вона, можливо, загубила свій гаманець. (use MIGHT)"
+    "ua": "Вона, можливо, загубила свій гаманець.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES", "COMPARATIVES"],
@@ -564,7 +628,8 @@
       "They might have taken the earlier train.",
       "They might have caught the earlier train."
     ],
-    "ua": "Вони, можливо, поїхали раннішим поїздом. (use MIGHT)"
+    "ua": "Вони, можливо, поїхали раннішим поїздом.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -572,7 +637,8 @@
       "He might have made a mistake.",
       "He might have got something wrong."
     ],
-    "ua": "Він, можливо, припустився помилки. (use MIGHT)"
+    "ua": "Він, можливо, припустився помилки.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS", "TOO_ENOUGH"],
@@ -580,7 +646,8 @@
       "I might have been too harsh.",
       "I might have been overly harsh."
     ],
-    "ua": "Я, можливо, був надто суворим. (use MIGHT)"
+    "ua": "Я, можливо, був надто суворим.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -588,7 +655,8 @@
       "You might have scared him away.",
       "You might have frightened him away."
     ],
-    "ua": "Ти, можливо, його злякав і він утік. (use MIGHT)"
+    "ua": "Ти, можливо, його злякав і він утік.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -596,7 +664,8 @@
       "We might have chosen the wrong option.",
       "We might have selected the wrong option."
     ],
-    "ua": "Ми, можливо, обрали неправильний варіант. (use MIGHT)"
+    "ua": "Ми, можливо, обрали неправильний варіант.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -604,7 +673,8 @@
       "She might have gone home.",
       "She might have headed home."
     ],
-    "ua": "Вона, можливо, пішла додому. (use MIGHT)"
+    "ua": "Вона, можливо, пішла додому.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -612,7 +682,8 @@
       "They might have thought we were joking.",
       "They might have believed we were joking."
     ],
-    "ua": "Вони, можливо, подумали, що ми жартуємо. (use MIGHT)"
+    "ua": "Вони, можливо, подумали, що ми жартуємо.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -620,7 +691,8 @@
       "He might have deleted the file.",
       "He might have removed the file."
     ],
-    "ua": "Він, можливо, видалив файл. (use MIGHT)"
+    "ua": "Він, можливо, видалив файл.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -628,7 +700,8 @@
       "I might have offended her.",
       "I might have upset her."
     ],
-    "ua": "Я, можливо, образив її. (use MIGHT)"
+    "ua": "Я, можливо, образив її.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS", "POSSESSIVE_ADJECTIVES"],
@@ -636,7 +709,8 @@
       "You might have dropped your keys.",
       "You might have lost your keys."
     ],
-    "ua": "Ти, можливо, впустив свої ключі. (use MIGHT)"
+    "ua": "Ти, можливо, впустив свої ключі.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS", "ARTICLES"],
@@ -644,7 +718,8 @@
       "We might have missed the deadline.",
       "We might have failed to meet the deadline."
     ],
-    "ua": "Ми, можливо, пропустили дедлайн. (use MIGHT)"
+    "ua": "Ми, можливо, пропустили дедлайн.",
+    "hint": "use MIGHT"
   },
   {
     "rules": ["MODAL_PERFECTS"],
@@ -652,17 +727,17 @@
       "She might have been asleep.",
       "She might have been sleeping."
     ],
-    "ua": "Вона, можливо, спала. (use MIGHT)"
+    "ua": "Вона, можливо, спала.",
+    "hint": "use MIGHT"
   },
-
-
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "PREP_PLACE"],
     "en": [
       "He must have been tired after that trip.",
       "He must have felt exhausted after that trip."
     ],
-    "ua": "Він, напевно, був втомлений після тієї поїздки. (use MUST)"
+    "ua": "Він, напевно, був втомлений після тієї поїздки.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -670,7 +745,8 @@
       "She must have forgotten the appointment.",
       "She must have forgotten about the appointment."
     ],
-    "ua": "Вона, напевно, забула про зустріч. (use MUST)"
+    "ua": "Вона, напевно, забула про зустріч.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -678,7 +754,8 @@
       "They must have arrived by now.",
       "They must have got here by now."
     ],
-    "ua": "Вони, напевно, вже прибули. (use MUST)"
+    "ua": "Вони, напевно, вже прибули.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -686,7 +763,8 @@
       "You must have heard about it.",
       "You must have heard of it."
     ],
-    "ua": "Ти, напевно, чув про це. (use MUST)"
+    "ua": "Ти, напевно, чув про це.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "PREP_PLACE"],
@@ -694,7 +772,8 @@
       "I must have left my bag at the café.",
       "I must have forgotten my bag at the café."
     ],
-    "ua": "Я, напевно, залишив свою сумку в кафе. (use MUST)"
+    "ua": "Я, напевно, залишив свою сумку в кафе.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -702,7 +781,8 @@
       "He must have known the answer.",
       "He must have been aware of the answer."
     ],
-    "ua": "Він, напевно, знав відповідь. (use MUST)"
+    "ua": "Він, напевно, знав відповідь.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -710,7 +790,8 @@
       "She must have felt terrible.",
       "She must have felt awful."
     ],
-    "ua": "Вона, напевно, почувалася жахливо. (use MUST)"
+    "ua": "Вона, напевно, почувалася жахливо.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
@@ -718,7 +799,8 @@
       "They must have taken the wrong turn.",
       "They must have gone the wrong way."
     ],
-    "ua": "Вони, напевно, повернули не туди. (use MUST)"
+    "ua": "Вони, напевно, повернули не туди.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -726,7 +808,8 @@
       "We must have made a mistake.",
       "We must have done something wrong."
     ],
-    "ua": "Ми, напевно, припустилися помилки. (use MUST)"
+    "ua": "Ми, напевно, припустилися помилки.",
+    "hint": "use MUST"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -734,15 +817,18 @@
       "I must have seen him before.",
       "I must have met him before."
     ],
-    "ua": "Я, напевно, бачив його раніше. (use MUST)"
+    "ua": "Я, напевно, бачив його раніше.",
+    "hint": "use MUST"
   },
+
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
     "en": [
       "He cannot have done it alone.",
       "He cannot have managed it alone."
     ],
-    "ua": "Він не міг зробити це сам. (use CANNOT)"
+    "ua": "Він не міг зробити це сам.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -750,7 +836,8 @@
       "She cannot have said that!",
       "She cannot have made such a statement!"
     ],
-    "ua": "Вона не могла таке сказати! (use CANNOT)"
+    "ua": "Вона не могла таке сказати!",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -758,7 +845,8 @@
       "They cannot have left already.",
       "They cannot have gone already."
     ],
-    "ua": "Вони не могли вже піти. (use CANNOT)"
+    "ua": "Вони не могли вже піти.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "TOO_ENOUGH_SO_SUCH"],
@@ -766,7 +854,8 @@
       "You cannot have finished so quickly.",
       "You cannot have completed it so quickly."
     ],
-    "ua": "Ти не міг закінчити так швидко. (use CANNOT)"
+    "ua": "Ти не міг закінчити так швидко.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "POSSESSIVE_ADJECTIVES"],
@@ -774,7 +863,8 @@
       "I cannot have forgotten your birthday.",
       "I cannot have forgotten about your birthday."
     ],
-    "ua": "Я не міг забути про твій день народження. (use CANNOT)"
+    "ua": "Я не міг забути про твій день народження.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
@@ -782,7 +872,8 @@
       "He cannot have broken the window.",
       "He cannot have been the one who broke the window."
     ],
-    "ua": "Він не міг розбити вікно. (use CANNOT)"
+    "ua": "Він не міг розбити вікно.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -790,7 +881,8 @@
       "She cannot have lied to us.",
       "She cannot have told us a lie."
     ],
-    "ua": "Вона не могла нам збрехати. (use CANNOT)"
+    "ua": "Вона не могла нам збрехати.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ARTICLES"],
@@ -798,7 +890,8 @@
       "They cannot have missed the train.",
       "They cannot have failed to catch the train."
     ],
-    "ua": "Вони не могли пропустити поїзд. (use CANNOT)"
+    "ua": "Вони не могли пропустити поїзд.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY"],
@@ -806,7 +899,8 @@
       "We cannot have been that wrong.",
       "We cannot have made such a big mistake."
     ],
-    "ua": "Ми не могли так помилитися. (use CANNOT)"
+    "ua": "Ми не могли так помилитися.",
+    "hint": "use CANNOT"
   },
   {
     "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "POSSESSIVE_ADJECTIVES"],
@@ -814,6 +908,7 @@
       "I cannot have lost my passport again!",
       "I cannot have misplaced my passport again!"
     ],
-    "ua": "Я не міг знову загубити свій паспорт! (use CANNOT)"
+    "ua": "Я не міг знову загубити свій паспорт!",
+    "hint": "use CANNOT"
   }
 ] }

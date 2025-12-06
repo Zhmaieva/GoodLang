@@ -498,10 +498,10 @@
   },
   {
     "rules": ["REPORTED_SPEECH"],
-    "ua": "Вони сказали мені, що порадили їй залишитися вдома.",
+    "ua": "Вони сказали мені, що він порадив їй залишитися вдома.",
     "en": [
-      "They told me they had advised her to stay home.",
-      "They told me that they had advised her to stay home."
+      "They told me he had advised her to stay home.",
+      "They told me that he had advised her to stay home."
     ]
   },
   {

@@ -1,7 +1,8 @@
 { "PARTICIPLE_CLAUSES": [
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Бачачи, що йде дощ, ми залишилися вдома (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши, що йде дощ, ми залишилися вдома.",
     "en": [
       "Seeing that it was raining, we stayed at home.",
       "Seeing the rain, we stayed at home."
@@ -9,31 +10,32 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Закінчивши роботу, він пішов додому (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Закінчивши роботу, він пішов додому.",
     "en": [
-      "Having finished his work, he went home.",
-      "After finishing his work, he went home."
+      "Having finished his work, he went home."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Не знаючи відповіді, вона залишила питання без відповіді (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не знаючи відповіді, вона залишила питання без відповіді.",
     "en": [
-      "Not knowing the answer, she left the question unanswered.",
-      "Since she didn’t know the answer, she left the question unanswered."
+      "Not knowing the answer, she left the question unanswered."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Стоячи біля вікна, він дивився на вулицю (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Стоячи біля вікна, він дивився на вулицю.",
     "en": [
-      "Standing by the window, he looked out at the street.",
-      "While he was standing by the window, he looked at the street."
+      "Standing by the window, he looked out at the street."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Будучи побудованим у XIX столітті, цей будинок має історичну цінність (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побудований у XIX столітті, цей будинок має історичну цінність.",
     "en": [
       "Built in the 19th century, the house has historical value.",
       "Having been built in the 19th century, the house has historical value."
@@ -41,15 +43,16 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Йдучи до школи, я зустрів старого друга (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Йдучи до школи, я зустрів старого друга.",
     "en": [
-      "Walking to school, I met an old friend.",
-      "While walking to school, I met an old friend."
+      "Walking to school, I met an old friend."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Здивований новиною, він не міг сказати ні слова (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Здивований новиною, він не міг сказати ні слова.",
     "en": [
       "Surprised by the news, he couldn’t say a word.",
       "Being surprised by the news, he couldn’t say a word."
@@ -57,25 +60,25 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Побачивши свого брата, він посміхнувся (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши свого брата, він посміхнувся.",
     "en": [
-      "Seeing his brother, he smiled.",
-      "When he saw his brother, he smiled."
+      "Seeing his brother, he smiled."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Закінчивши вечерю, вони подивилися фільм (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Закінчивши вечерю, вони подивилися фільм.",
     "en": [
       "Having finished dinner, they watched a movie.",
-      "After finishing dinner, they watched a movie.",
-      "Having finished dinner, they watched a film.",
-      "After finishing dinner, they watched a film."
+      "Having finished dinner, they watched a film."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "ua": ["Втомившись після довгого дня, вона лягла спати дуже рано (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Втомившись після довгого дня, вона лягла спати дуже рано.",
     "en": [
       "Tired after a long day, she went to bed very early.",
       "Being tired after a long day, she went to bed very early."
@@ -83,39 +86,24 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Йдучи до магазину, я зустрів свого колегу (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Йдучи до магазину, я зустрів свого колегу.",
     "en": [
-      "Walking to the shop, I met my colleague.",
-      "While walking to the shop, I met my colleague."
+      "Walking to the shop, I met my colleague."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Сидячи у парку, ми спостерігали за дітьми (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Сидячи у парку, ми спостерігали за дітьми.",
     "en": [
-      "Sitting in the park, we watched the children.",
-      "While sitting in the park, we watched the children."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Почувши сигнал, солдати почали рух (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Hearing the signal, the soldiers started moving.",
-      "When they heard the signal, the soldiers started moving."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Не маючи грошей, він не міг купити подарунок (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Not having any money, he couldn’t buy a gift.",
-      "Since he didn’t have money, he couldn’t buy a gift."
+      "Sitting in the park, we watched the children."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Побудований з каменю, цей міст стоїть вже 200 років (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побудований з каменю, цей міст стоїть вже 200 років.",
     "en": [
       "Built of stone, the bridge has stood for 200 years.",
       "Having been built of stone, the bridge has stood for 200 years."
@@ -123,159 +111,128 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Бачачи усмішку своєї доньки, він відчув щастя (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Бачачи усмішку своєї доньки, він відчув щастя.",
     "en": [
-      "Seeing his daughter’s smile, he felt happy.",
-      "When he saw his daughter’s smile, he felt happy."
+      "Seeing his daughter’s smile, he felt happy."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "ua": ["Будучи дуже втомленим, він пропустив вечерю (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Дуже втомившись, він пропустив вечерю.",
     "en": [
-      "Being very tired, he skipped dinner.",
-      "As he was very tired, he skipped dinner."
+      "Being very tired, he skipped dinner."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Не маючи часу, вона зробила все поспіхом (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не маючи часу, вона зробила все поспіхом.",
     "en": [
-      "Not having time, she did everything in a hurry.",
-      "Since she didn’t have time, she did everything quickly."
+      "Not having time, she did everything in a hurry."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Повертаючись додому, я почув дивний звук (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Повертаючись додому, я почув дивний звук.",
     "en": [
-      "Returning home, I heard a strange noise.",
-      "While returning home, I heard a strange noise."
+      "Returning home, I heard a strange noise."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Не розуміючи питання, студент попросив пояснення (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не розуміючи питання, студент попросив пояснення.",
     "en": [
-      "Not understanding the question, the student asked for clarification.",
-      "Since the student didn’t understand the question, he asked for clarification."
+      "Not understanding the question, the student asked for clarification."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Побачивши сонце, що сходить, ми зробили фото (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши сонце, що сходить, ми зробили фото.",
     "en": [
-      "Seeing the sun rising, we took a photo.",
-      "When we saw the sun rise, we took a photo."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Побудований архітектором, цей будинок став відомим (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Designed by an architect, this house became famous.",
-      "Having been designed by an architect, this house became famous."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Знаючи про наміри свого брата, вона не здивувалася (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Knowing her brother’s intentions, she wasn’t surprised.",
-      "Since she knew her brother’s intentions, she wasn’t surprised."
+      "Seeing the sun rising, we took a photo."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Отримавши листа, він відразу відповів (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Отримавши листа, він відразу відповів.",
     "en": [
-      "Having received the letter, he replied immediately.",
-      "After receiving the letter, he replied at once."
+      "Having received the letter, he replied immediately."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Працюючи в офісі, він часто розмовляв з клієнтами (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Працюючи в офісі, він часто розмовляв з клієнтами.",
     "en": [
-      "Working in an office, he often talked to clients.",
-      "While working in the office, he often talked to clients."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Втративши ключі, він не міг відкрити двері (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Having lost the keys, he couldn’t open the door.",
-      "Since he lost the keys, he couldn’t open the door."
+      "Working in an office, he often talked to clients."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Побачивши помилку, вчитель її виправив (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши помилку, вчитель її виправив.",
     "en": [
-      "Noticing the mistake, the teacher corrected it.",
-      "When the teacher noticed the mistake, he corrected it."
+      "Noticing the mistake, the teacher corrected it."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "ua": ["Будучи занадто втомленою, вона не пішла на вечірку (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Будучи занадто втомленою, вона не пішла на вечірку.",
     "en": [
-      "Being too tired, she didn’t go to the party.",
-      "As she was too tired, she didn’t go to the party."
+      "Being too tired, she didn’t go to the party."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Закінчивши навчання, він поїхав подорожувати (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Закінчивши навчання, він поїхав подорожувати.",
     "en": [
-      "Having finished his studies, he went traveling.",
-      "After finishing his studies, he went traveling."
+      "Having finished his studies, he went traveling."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Йдучи до виходу, вона попрощалася з усіма (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Йдучи до виходу, вона попрощалася з усіма.",
     "en": [
-      "Walking to the exit, she said goodbye to everyone.",
-      "While walking to the exit, she said goodbye to everyone."
+      "Walking to the exit, she said goodbye to everyone."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Побачивши поліцейського, він зупинив машину (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши поліцейського, він зупинив машину.",
     "en": [
-      "Seeing the policeman, he stopped the car.",
-      "When he saw the policeman, he stopped the car."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Написаний відомим автором, цей роман став класикою (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Written by a famous author, this novel became a classic.",
-      "Having been written by a famous author, this novel became a classic."
+      "Seeing the policeman, he stopped the car."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Не отримавши відповіді, він вирішив подзвонити ще раз (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не отримавши відповіді, він вирішив подзвонити ще раз.",
     "en": [
-      "Not having received an answer, he decided to call again.",
-      "Since he didn’t receive an answer, he decided to call again."
+      "Not having received an answer, he decided to call again."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Стоячи біля дверей, вона чекала на автобус (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Стоячи біля дверей, вона чекала на автобус.",
     "en": [
-      "Standing by the door, she waited for the bus.",
-      "While standing by the door, she waited for the bus."
+      "Standing by the door, she waited for the bus."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Втомившись від очікування, він пішов додому (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Втомившись від очікування, він пішов додому.",
     "en": [
       "Tired of waiting, he went home.",
       "Being tired of waiting, he went home."
@@ -283,402 +240,307 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Їдучи до роботи, я почув цікаву пісню по радіо (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Їдучи до роботи, я почув цікаву пісню по радіо.",
     "en": [
-      "Driving to work, I heard an interesting song on the radio.",
-      "While driving to work, I heard an interesting song on the radio."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Стоячи на зупинці, вони чекали автобус (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Standing at the bus stop, they waited for the bus.",
-      "While standing at the bus stop, they waited for the bus."
+      "Driving to work, I heard an interesting song on the radio."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Зробивши помилку, він спробував її виправити (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Зробивши помилку, він спробував її виправити.",
     "en": [
-      "Having made a mistake, he tried to correct it.",
-      "After making a mistake, he tried to correct it."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Бачачи, що діти граються, вона посміхнулася (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Seeing the children playing, she smiled.",
-      "When she saw the children playing, she smiled."
+      "Having made a mistake, he tried to correct it."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Пошитий вручну, цей костюм виглядає чудово (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Пошитий вручну, цей костюм виглядає чудово.",
     "en": [
-      "Made by hand, this suit looks amazing.",
-      "Having been made by hand, this suit looks amazing."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "ua": ["Будучи дуже зайнятим, він не міг прийти (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Being very busy, he couldn’t come.",
-      "As he was very busy, he couldn’t come."
+      "Made by hand, this suit looks amazing."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Не маючи плану, ми вирішили імпровізувати (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не маючи плану, ми вирішили імпровізувати.",
     "en": [
-      "Not having a plan, we decided to improvise.",
-      "Since we didn’t have a plan, we decided to improvise."
+      "Not having a plan, we decided to improvise."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Почувши шум, він подивився у вікно (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Почувши шум, він подивився у вікно.",
     "en": [
-      "Hearing a noise, he looked out of the window.",
-      "When he heard a noise, he looked out of the window."
+      "Hearing a noise, he looked out of the window."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Йдучи до школи, діти співали пісню (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Йдучи до школи, діти співали пісню.",
     "en": [
-      "Walking to school, the children sang a song.",
-      "While walking to school, the children sang a song."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Побачивши обличчя свого друга, він відразу зрадів (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Seeing his friend’s face, he immediately felt happy.",
-      "When he saw his friend’s face, he immediately felt happy."
+      "Walking to school, the children sang a song."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Зрозумівши свою помилку, вона вибачилась (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Зрозумівши свою помилку, вона вибачилась.",
     "en": [
-      "Realizing her mistake, she apologized.",
-      "When she realized her mistake, she apologized."
+      "Realizing her mistake, she apologized."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Працюючи у бібліотеці, він познайомився з нею (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Працюючи у бібліотеці, він познайомився з Марією.",
     "en": [
-      "Working in the library, he met her.",
-      "While working in the library, he met her."
+      "Working in the library, he met Marry.", "Working in the library, he met Maria.", "Working in the library, he met Mariia."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Не знаючи, що сказати, він мовчав (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не знаючи, що сказати, він мовчав.",
     "en": [
-      "Not knowing what to say, he stayed silent.",
-      "Since he didn’t know what to say, he stayed silent."
+      "Not knowing what to say, he stayed silent."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Закінчивши завдання, учні пішли додому (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Закінчивши завдання, учні пішли додому.",
     "en": [
-      "Having finished the task, the students went home.",
-      "After finishing the task, the students went home."
+      "Having finished the task, the students went home."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Отримавши відповідь, він заспокоївся (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Отримавши відповідь, він заспокоївся.",
     "en": [
-      "Having received an answer, he felt calm.",
-      "After receiving an answer, he calmed down."
+      "Having received an answer, he felt calm."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Побачивши вогонь, усі почали тікати (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши вогонь, усі почали тікати.",
     "en": [
-      "Seeing the fire, everyone started running.",
-      "When they saw the fire, everyone started running."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Написаний багато років тому, цей лист має велику цінність (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Written many years ago, this letter is very valuable.",
-      "Having been written long ago, this letter is very valuable."
+      "Seeing the fire, everyone started running."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Бачачи реакцію свого вчителя, він зрозумів помилку (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Бачачи реакцію свого вчителя, він зрозумів помилку.",
     "en": [
-      "Seeing his teacher’s reaction, he realized his mistake.",
-      "When he saw his teacher’s reaction, he realized his mistake."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "ua": ["Будучи дуже збудженими, діти не могли заснути (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Being very excited, the children couldn’t fall asleep.",
-      "As the children were very excited, they couldn’t sleep."
+      "Seeing his teacher’s reaction, he realized his mistake."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Побачивши результат, команда зраділа (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши результат, команда зраділа.",
     "en": [
-      "Seeing the result, the team cheered.",
-      "When the team saw the result, they cheered."
+      "Seeing the result, the team cheered."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Повернувшись із подорожі, він написав книгу (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Повернувшись із подорожі, він написав книгу.",
     "en": [
-      "Having returned from the trip, he wrote a book.",
-      "After returning from the trip, he wrote a book."
+      "Having returned from the trip, he wrote a book."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Стоячи біля річки, вони милувалися краєвидом (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Стоячи біля річки, вони милувалися краєвидом.",
     "en": [
-      "Standing by the river, they admired the view.",
-      "While standing by the river, they admired the view."
+      "Standing by the river, they admired the view."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Втомившись після роботи, він вирішив відпочити (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Втомившись після роботи, він вирішив відпочити.",
     "en": [
       "Tired after work, he decided to rest.",
-      "Being tired after work, he decided to take a rest."
+      "Being tired after work, he decided to rest."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Йдучи до дверей, вона зупинилася, щоб подивитись ще раз (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Йдучи до дверей, вона зупинилася, щоб подивитись ще раз.",
     "en": [
-      "Walking to the door, she stopped to look once more.",
-      "While walking to the door, she stopped to look again."
+      "Walking to the door, she stopped to look once more."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Побачивши знайому людину, він привітався (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши знайому людину, він привітався до неї.",
     "en": [
-      "Seeing a familiar person, he said hello.",
-      "When he saw a familiar person, he greeted them."
+      "Seeing a familiar person, he said hello."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Їдучи до міста, ми побачили старий замок (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Їдучи до міста, ми побачили старий замок.",
     "en": [
-      "Driving to the city, we saw an old castle.",
-      "While driving to the city, we saw an old castle."
+      "Driving to the city, we saw an old castle."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Стоячи на балконі, вона дивилася на захід сонця (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Стоячи на балконі, вона дивилася на захід сонця.",
     "en": [
-      "Standing on the balcony, she watched the sunset.",
-      "While standing on the balcony, she watched the sunset."
+      "Standing on the balcony, she watched the sunset."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Не маючи телефону, він не міг подзвонити (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не маючи телефону, він не міг подзвонити.",
     "en": [
-      "Not having a phone, he couldn’t make a call.",
-      "Since he didn’t have a phone, he couldn’t call."
+      "Not having a phone, he couldn’t make a call."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Побачивши помилку, вона виправила її негайно (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши помилку, вона виправила її негайно.",
     "en": [
-      "Having noticed the mistake, she corrected it immediately.",
-      "After noticing the mistake, she corrected it right away."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Знаючи відповідь, він підняв руку (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Knowing the answer, he raised his hand.",
-      "Since he knew the answer, he raised his hand."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Побудований на горі, будинок має чудовий краєвид (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Built on a hill, the house has a beautiful view.",
-      "Having been built on a hill, the house has a great view."
+      "Having noticed the mistake, she corrected it immediately."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Прокинувшись рано, він вирішив піти на пробіжку (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Прокинувшись рано, він вирішив піти на пробіжку.",
     "en": [
-      "Waking up early, he decided to go for a run.",
-      "After waking up early, he decided to go jogging."
+      "Waking up early, he decided to go for a run."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "ua": ["Будучи занадто втомленим, він заснув на дивані (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Занадто втомившись, він заснув на дивані.",
     "en": [
-      "Being too tired, he fell asleep on the sofa.",
-      "As he was too tired, he fell asleep on the couch."
+      "Being too tired, he fell asleep on the sofa."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Бачачи успіх свого друга, він відчував гордість (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Бачачи успіх свого друга, він відчував гордість.",
     "en": [
-      "Seeing his friend’s success, he felt proud.",
-      "When he saw his friend’s success, he felt proud."
+      "Seeing his friend’s success, he felt proud."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Йдучи до лікарні, вона зустріла знайому жінку (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Йдучи до лікарні, вона зустріла знайому жінку.",
     "en": [
-      "Walking to the hospital, she met a familiar woman.",
-      "While walking to the hospital, she met someone she knew."
+      "Walking to the hospital, she met a familiar woman."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Не розуміючи жарту, він не засміявся (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не розуміючи жарту, він не засміявся.",
     "en": [
-      "Not understanding the joke, he didn’t laugh.",
-      "Since he didn’t understand the joke, he didn’t laugh."
+      "Not understanding the joke, he didn’t laugh."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Закінчивши проєкт, вони відсвяткували успіх (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Закінчивши проєкт, вони відсвяткували успіх.",
     "en": [
-      "Having finished the project, they celebrated their success.",
-      "After finishing the project, they celebrated the success."
+      "Having finished the project, they celebrated their success."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Працюючи у кав’ярні, вона часто бачила туристів (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Працюючи у кав’ярні, вона часто бачила туристів.",
     "en": [
-      "Working in a café, she often saw tourists.",
-      "While working in the café, she often saw tourists."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Написаний у XIX столітті, цей роман досі популярний (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Written in the 19th century, this novel is still popular.",
-      "Having been written in the 19th century, this novel remains popular."
+      "Working in a café, she often saw tourists."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Побачивши сигнал, водій зупинив машину (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши сигнал, водій зупинив машину.",
     "en": [
-      "Seeing the signal, the driver stopped the car.",
-      "When the driver saw the signal, he stopped the car."
+      "Seeing the signal, the driver stopped the car."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Повертаючись із роботи, він купив хліб (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Повертаючись із роботи, він купив хліб.",
     "en": [
-      "Returning from work, he bought some bread.",
-      "While returning from work, he bought bread."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "ua": ["Побачивши реакцію своєї матері, він пошкодував (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Seeing his mother’s reaction, he felt sorry.",
-      "When he saw his mother’s reaction, he regretted it."
+      "Returning from work, he bought some bread."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Не маючи ключів, вона залишилася надворі (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не маючи ключів, вона залишилася надворі.",
     "en": [
-      "Not having the keys, she stayed outside.",
-      "Since she didn’t have the keys, she stayed outside."
+      "Not having the keys, she stayed outside."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "ua": ["Закінчивши роботу рано, ми пішли в кіно (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Закінчивши роботу рано, ми пішли в кіно.",
     "en": [
-      "Having finished work early, we went to the cinema.",
-      "After finishing work early, we went to the movies."
+      "Having finished work early, we went to the cinema."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Побачивши листа, він відкрив його відразу (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Побачивши лист, він відразу відкрив його.",
     "en": [
-      "Seeing the letter, he opened it immediately.",
-      "When he saw the letter, he opened it right away."
+      "Seeing the letter, he opened it immediately."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "ua": ["Не отримавши відповідь, вона вирішила подзвонити (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Не отримавши відповідь, вона вирішила подзвонити.",
     "en": [
-      "Not having received an answer, she decided to call.",
-      "Since she didn’t get an answer, she decided to call."
+      "Not having received an answer, she decided to call."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "ua": ["Сидячи в саду, він читав книгу (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Сидячи в саду, він читав книгу.",
     "en": [
-      "Sitting in the garden, he was reading a book.",
-      "While sitting in the garden, he read a book."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES"],
-    "ua": ["Бачачи, що запізнюється, він побіг швидше (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Seeing that he was late, he ran faster.",
-      "Realizing he was late, he ran faster."
-    ]
-  },
-  {
-    "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Створений талановитим дизайнером, цей сайт виглядає чудово (use PARTICIPLE CLAUSES)."],
-    "en": [
-      "Created by a talented designer, this website looks great.",
-      "Having been created by a talented designer, this website looks amazing."
+      "Sitting in the garden, he was reading a book."
     ]
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "ua": ["Йдучи вгору схилом, ми побачили гарне озеро (use PARTICIPLE CLAUSES)."],
+    "hint": "start with an -ing/-ed word",
+    "ua": "Йдучи вгору схилом, ми побачили гарне озеро.",
     "en": [
-      "Walking up the hill, we saw a beautiful lake.",
-      "While walking up the hill, we saw a beautiful lake."
+      "Walking up the hill, we saw a beautiful lake."
     ]
   }
 ] }

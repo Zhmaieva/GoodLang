@@ -2,7 +2,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
     "ua": ["Мені пофарбували кімнату вчора."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I had my room painted yesterday.",
       "I got my room painted yesterday."
@@ -11,7 +11,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES", "PREP_PLACE"],
     "ua": ["Їй роблять манікюр у салоні."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She has her nails done at the salon.",
       "She gets her nails done at the salon."
@@ -20,7 +20,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "ARTICLES"],
     "ua": ["Йому вчора відремонтували машину."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He had his car repaired yesterday.",
       "He got his car repaired yesterday."
@@ -29,7 +29,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": ["Нам зараз ремонтують квартиру."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having our apartment renovated.",
       "We’re getting our apartment renovated.",
@@ -42,7 +42,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES", "PREP_TIME"],
     "ua": ["Мені завтра підстрижуть волосся."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my hair cut tomorrow.",
       "I’m getting my hair cut tomorrow."
@@ -51,7 +51,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY", "ARTICLES"],
     "ua": ["Йому щодня миють машину в автомийці."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has his car washed every day.",
       "He gets his car washed every day."
@@ -60,7 +60,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
     "ua": ["Мені вже встановили нові вікна."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’ve had new windows installed.",
       "I’ve got new windows installed.",
@@ -71,7 +71,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Мені щороку готують податкову звітність."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I have my taxes done every year.",
       "I get my taxes done every year."
@@ -80,7 +80,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE"],
     "ua": ["Мені відремонтували телефон у сервісному центрі."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I had my phone repaired at the service center.",
       "I got my phone repaired at the service center."
@@ -89,7 +89,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY", "ARTICLES"],
     "ua": ["Їй завжди фарбують волосся у перукарні."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She always has her hair dyed at the hairdresser’s.",
       "She always gets her hair dyed at the hairdresser’s."
@@ -98,7 +98,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "ARTICLES"],
     "ua": ["Нам минулого тижня встановили нові двері."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had new doors installed last week.",
       "We got new doors installed last week."
@@ -107,7 +107,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
     "ua": ["Мені вже почистили килим."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’ve had my carpet cleaned.",
       "I’ve got my carpet cleaned.",
@@ -118,7 +118,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME", "ARTICLES"],
     "ua": ["Мені завтра будуть лікувати зуби."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my teeth fixed tomorrow.",
       "I’m getting my teeth fixed tomorrow.",
@@ -129,7 +129,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
     "ua": ["Йому зробили фото на паспорт."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He had his passport photo taken.",
       "He got his passport photo taken."
@@ -138,7 +138,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Нам щомісяця миють вікна."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We have our windows cleaned every month.",
       "We get our windows cleaned every month."
@@ -147,7 +147,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Їй зробили нігті перед святом."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She had her nails done before the holiday.",
       "She got her nails done before the holiday."
@@ -156,7 +156,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Мені щотижня миють машину."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I have my car washed every week.",
       "I get my car washed every week."
@@ -165,7 +165,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES", "PREP_PLACE"],
     "ua": ["Нам зробили весільні фото у студії."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had our wedding photos taken in a studio.",
       "We got our wedding photos taken in a studio."
@@ -174,7 +174,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені наступного тижня відремонтують ванну."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my bathroom renovated next week.",
       "I’m getting my bathroom renovated next week."
@@ -183,7 +183,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Йому кожного року ремонтують взуття."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has his shoes repaired every year.",
       "He gets his shoes repaired every year."
@@ -192,7 +192,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET"],
     "ua": ["Їй замінили екран на телефоні."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She had her phone screen replaced.",
       "She got her phone screen replaced."
@@ -201,7 +201,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Нам вже почистили кондиціонер."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’ve had our air conditioner cleaned.",
       "We’ve got our air conditioner cleaned.",
@@ -212,7 +212,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Їм щороку фарбують будинок."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "They have their house painted every year.",
       "They get their house painted every year."
@@ -221,7 +221,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені зробили фото на водійські права."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I had my photo taken for my driver’s license.",
       "I got my photo taken for my driver’s license."
@@ -230,7 +230,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW", "PREP_PLACE"],
     "ua": ["Їй зараз чистять зуби у стоматолога."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She’s having her teeth cleaned at the dentist’s.",
       "She’s getting her teeth cleaned at the dentist’s.",
@@ -243,7 +243,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Нам завтра зроблять нові ключі."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having new keys made tomorrow.",
       "We’re getting new keys made tomorrow."
@@ -252,7 +252,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Йому раз на два тижні стрижуть волосся."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has his hair cut every two weeks.",
       "He gets his hair cut every two weeks."
@@ -261,7 +261,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Нам перед поїздкою перевірили машину."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had our car checked before the trip.",
       "We got our car checked before the trip."
@@ -270,7 +270,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Мені вже поміняли замки на дверях."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’ve had the locks changed on my door.",
       "I’ve got the locks changed on my door.",
@@ -281,7 +281,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Їй минулого місяця вставили нові зуби."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She had new teeth fitted last month.",
       "She got new teeth fitted last month.",
@@ -292,7 +292,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Нам щоосені перевіряють систему опалення."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We have our heating system checked every autumn.",
       "We get our heating system checked every autumn."
@@ -301,7 +301,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Йому вчора поміняли шини на машині."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He had his tires changed yesterday.",
       "He got his tires changed yesterday."
@@ -310,7 +310,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені наступного тижня зроблять генеральне прибирання будинку."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my house deep cleaned next week.",
       "I’m getting my house deep cleaned next week."
@@ -319,7 +319,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Мені щойно відремонтували годинник."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I have just had my watch repaired.",
       "I have just got my watch repaired."
@@ -328,7 +328,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Їй щосуботи прибирають квартиру."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She has her apartment cleaned every Saturday.",
       "She gets her apartment cleaned every Saturday."
@@ -337,7 +337,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": ["Нам зараз встановлюють новий бойлер."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having a new boiler installed.",
       "We’re getting a new boiler installed.",
@@ -350,7 +350,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені наступного тижня зроблять нові окуляри."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having new glasses made next week.",
       "I’m getting new glasses made next week."
@@ -359,7 +359,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Вчора йому поміняли батарею в ноутбуці."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He had the battery replaced in his laptop yesterday.",
       "He got the battery replaced in his laptop yesterday."
@@ -368,7 +368,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Їй регулярно чистять килими."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She has her carpets cleaned regularly.",
       "She gets her carpets cleaned regularly."
@@ -377,7 +377,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Нам поміняли дах на будинку минулого вівторка."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had the roof replaced last Tuesday.",
       "We got the roof replaced last Tuesday.",
@@ -388,7 +388,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені завтра відполірують машину."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my car polished tomorrow.",
       "I’m getting my car polished tomorrow."
@@ -397,7 +397,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Їй минулого місяця почистили штори."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She had her curtains cleaned last month.",
       "She got her curtains cleaned last month."
@@ -406,7 +406,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Нам вчора зробили нові ключі."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had new keys made yesterday.",
       "We got new keys made yesterday."
@@ -415,7 +415,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
     "ua": ["Йому вже встановили нову антену."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He’s had a new antenna installed.",
       "He’s got a new antenna installed.",
@@ -426,7 +426,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": ["Нам зараз фарбують офіс."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having the office painted.",
       "We’re getting the office painted.",
@@ -439,7 +439,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ARTICLES"],
     "ua": ["Мені шиють новий костюм на замовлення."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having a new suit made to order.",
       "I’m getting a new suit made to order."
@@ -448,7 +448,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Їй після бурі замінили скло у вікні."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She had the window glass replaced after the storm.",
       "She got the window glass replaced after the storm."
@@ -457,7 +457,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Нам щороку перевіряють електрику."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We have our electrical system checked every year.",
       "We get our electrical system checked every year."
@@ -466,7 +466,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Мені після переїзду поміняли замки."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I had the locks changed after I moved.",
       "I got the locks changed after I moved."
@@ -475,7 +475,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
     "ua": ["Йому зараз лагодять комп’ютер."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He’s having his computer repaired.",
       "He’s getting his computer repaired.",
@@ -488,7 +488,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_PLACE", "ARTICLES"],
     "ua": ["Нам у вітальні поклали новий паркет."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had new flooring installed in the living room.",
       "We got new flooring installed in the living room."
@@ -497,7 +497,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_PLACE"],
     "ua": ["Їй почистили пальто у хімчистці."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She has her coat cleaned at the dry cleaner’s.",
       "She gets her coat cleaned at the dry cleaner’s."
@@ -506,7 +506,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Мені встановили нову сигналізацію два дні тому."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I had a new alarm system installed two days ago.",
       "I got a new alarm system installed two days ago."
@@ -515,7 +515,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Нам полагодили дах після дощу."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had the roof repaired after the rain.",
       "We got the roof repaired after the rain."
@@ -524,7 +524,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Мені відремонтували велосипед після падіння."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I had my bike repaired after the fall.",
       "I got my bike repaired after the fall."
@@ -533,7 +533,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Їй щороку перевіряють зір."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She has her eyes checked every year.",
       "She gets her eyes checked every year."
@@ -542,7 +542,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Нам завтра встановлять нові жалюзі."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having new blinds installed tomorrow.",
       "We’re getting new blinds installed tomorrow."
@@ -551,7 +551,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
     "ua": ["Йому вже вставили нову батарейку в годинник."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has already had a new battery put in his watch.",
       "He has already got a new battery put in his watch.",
@@ -562,7 +562,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Мені вже зробили копії документів."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’ve already had my documents copied.",
       "I’ve already got my documents copied.",
@@ -573,7 +573,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": ["Нам зараз ремонтують дах."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having the roof repaired right now.",
       "We’re getting the roof repaired right now.",
@@ -586,7 +586,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені завтра зроблять нові штори."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having new curtains made tomorrow.",
       "I’m getting new curtains made tomorrow."
@@ -595,7 +595,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Йому два рази на рік чистять килими."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has his carpets cleaned twice a year.",
       "He gets his carpets cleaned twice a year."
@@ -604,7 +604,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Їй минулої весни вставили нові вікна."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She had new windows fitted last spring.",
       "She got new windows fitted last spring."
@@ -613,7 +613,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Нам уже замінили труби у ванній."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’ve already had the pipes replaced in the bathroom.",
       "We’ve already got the pipes replaced in the bathroom."
@@ -622,7 +622,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Мені регулярно стрижуть волосся."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I have my hair cut regularly.",
       "I get my hair cut regularly."
@@ -631,7 +631,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW", "PREP_PLACE"],
     "ua": ["Нам зараз встановлюють кондиціонер у вітальні."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having an air conditioner installed in the living room.",
       "We’re getting an air conditioner installed in the living room."
@@ -640,7 +640,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Йому вчора полагодили телевізор."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He had his TV repaired yesterday.",
       "He got his TV repaired yesterday."
@@ -649,7 +649,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
     "ua": ["Їй зараз встановлюють нові жалюзі."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She’s having new blinds put up.",
       "She’s getting new blinds put up.",
@@ -662,7 +662,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Нам раз на рік чистять меблі."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We have our furniture cleaned once a year.",
       "We get our furniture cleaned once a year."
@@ -671,7 +671,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME"],
     "ua": ["Мені минулого тижня перевстановили операційну систему."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I had my operating system reinstalled last week.",
       "I got my operating system reinstalled last week."
@@ -680,7 +680,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені завтра продовжать паспорт."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my passport renewed tomorrow.",
       "I’m getting my passport renewed tomorrow."
@@ -689,7 +689,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY", "PREP_PLACE"],
     "ua": ["Йому зазвичай лагодять годинник у майстерні."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has his watch repaired at the workshop.",
       "He gets his watch repaired at the workshop."
@@ -698,7 +698,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Нам уже встановили новий паркет."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’ve already had new parquet installed.",
       "We’ve already got new parquet installed."
@@ -707,7 +707,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Їй щойно почистили диван."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She has just had her sofa cleaned.",
       "She has just got her sofa cleaned."
@@ -716,7 +716,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Нам наступного місяця відремонтують дах."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having the roof repaired next month.",
       "We’re getting the roof repaired next month."
@@ -725,7 +725,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Йому вчора вставили нові фари в машину."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He had new headlights fitted in his car yesterday.",
       "He got new headlights fitted in his car yesterday."
@@ -734,7 +734,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Їй щойно зробили макіяж."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She has just had her makeup done.",
       "She has just got her makeup done."
@@ -743,7 +743,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
     "ua": ["Нам уже замінили старі жалюзі."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’ve already had the old blinds replaced.",
       "We’ve already got the old blinds replaced."
@@ -752,7 +752,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME", "ARTICLES"],
     "ua": ["Мені наступного місяця зроблять новий сайт для бізнесу."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having a new website built for my business next month.",
       "I’m getting a new website built for my business next month."
@@ -761,7 +761,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Нам після крадіжки встановили нові замки."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had new locks installed after the burglary.",
       "We got new locks installed after the burglary."
@@ -770,7 +770,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
     "ua": ["Мені зараз лагодять телефон."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my phone fixed right now.",
       "I’m getting my phone fixed right now.",
@@ -783,7 +783,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Нам завтра покладуть нову підлогу."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having new flooring laid tomorrow.",
       "We’re getting new flooring laid tomorrow."
@@ -792,7 +792,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
     "ua": ["Йому вже зробили фото на візу."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has already had his photo taken for the visa.",
       "He has already got his photo taken for the visa.",
@@ -803,7 +803,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Мені вже встановили антивірус."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’ve already had antivirus software installed.",
       "I’ve already got antivirus software installed.",
@@ -814,7 +814,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Нам вже зробили фото для нового каталогу."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We have already had our photos taken for the new catalogue.",
       "We have already got our photos taken for the new catalogue.",
@@ -825,7 +825,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_CONT_NOW"],
     "ua": ["Їм зараз миють фасад будинку."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "They’re having the house facade cleaned now.",
       "They’re getting the house facade cleaned now.",
@@ -838,7 +838,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Мені в п’ятницю підстрижуть волосся."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’m having my hair cut on Friday.",
       "I’m getting my hair cut on Friday."
@@ -847,7 +847,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY"],
     "ua": ["Нам щороку перевіряють кондиціонер."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We have our air conditioner checked every year.",
       "We get our air conditioner checked every year."
@@ -856,7 +856,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Йому вже замінили гальма в машині."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has already had the brakes replaced in his car.",
       "He has already got the brakes replaced in his car.",
@@ -867,7 +867,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Нам уже полагодили кран на кухні."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’ve already had the kitchen tap fixed.",
       "We’ve already got the kitchen tap fixed."
@@ -876,7 +876,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Їй завтра зроблять нові фотографії."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "She’s having new photos taken tomorrow.",
       "She’s getting new photos taken tomorrow."
@@ -885,7 +885,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY", "PREP_PLACE"],
     "ua": ["Мені регулярно чистять пальто у хімчистці."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I have my coat cleaned at the dry cleaner’s regularly.",
       "I get my coat cleaned at the dry cleaner’s regularly."
@@ -894,7 +894,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PAST_SIMPLE", "PREP_TIME", "PREP_PLACE"],
     "ua": ["Нам минулого року зробили капітальний ремонт офісу."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We had the office fully renovated last year.",
       "We got the office fully renovated last year."
@@ -903,7 +903,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": ["Мені вже перевстановили систему на комп’ютері."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "I’ve already had my system reinstalled on my computer.",
       "I’ve already got my system reinstalled on my computer.",
@@ -914,7 +914,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "PREP_TIME"],
     "ua": ["Нам наступного місяця відремонтують спальню."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "We’re having our bedroom renovated next month.",
       "We’re getting our bedroom renovated next month."
@@ -923,7 +923,7 @@
   {
     "rules": ["CAUSATIVE_HAVE_GET", "ADVERBS_FREQUENCY", "PREP_PLACE"],
     "ua": ["Йому щотижня миють машину на автомийці."],
-    "hint": "(use HAVE/GET SOMETHING DONE)",
+    "hint": "use HAVE/GET SOMETHING DONE",
     "en": [
       "He has his car washed at the car wash every week.",
       "He gets his car washed at the car wash every week."

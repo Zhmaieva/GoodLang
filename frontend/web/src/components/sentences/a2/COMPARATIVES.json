@@ -171,7 +171,7 @@
   },
   {
     "rules": ["COMPARATIVES", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Цей светр м’якший за татів.",
+    "ua": "Цей светр м’якший за светр тата.",
     "en": [
       "This sweater is softer than dad’s.",
       "This sweater is smoother than dad’s.",

@@ -1,39 +1,36 @@
 { "CLEFT_SENTENCES": [
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PAST_SIMPLE"],
-    "ua": ["Це Марія принесла торт на вечірку (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Це Марія принесла торт на вечірку."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It was Maria who brought the cake to the party.",
       "It’s Maria who brought the cake to the party."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "ARTICLES", "THERE_IS_ARE"],
-    "ua": ["Це був сад, де ми зустрілися вперше (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "ARTICLES"],
+    "ua": ["Це був сад, де ми зустрілися вперше."],
+    "hint": "Make a cleft sentence: It was ... where ...",
     "en": [
       "It was the garden where we met for the first time.",
       "It’s the garden where we met for the first time."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE"],
-    "ua": ["Це вранці я отримав твоє повідомлення (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was in the morning that I received your message.",
-      "It’s in the morning that I received your message."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": ["Це через тебе ми запізнилися (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Це через тебе ми запізнилися."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was because of you that we were late.",
       "It’s because of you that we were late."
     ]
   },
+
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Саме мій брат часто допомагає мені з домашнім завданням (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме мій брат часто допомагає мені з домашнім завданням."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is my brother who often helps me with my homework.",
       "It’s my brother who often helps me with my homework."
@@ -41,71 +38,53 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Це в Лондоні я вперше зустрів її (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Це в Лондоні я вперше зустрів її."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in London that I first met her.",
       "It’s in London that I first met her."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "WAS_WERE", "PRESENT_CONT_NOW"],
-    "ua": ["Це ти був тим, хто говорив із нею (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was you who was talking to her.",
-      "It’s you who was talking to her."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": ["Саме твоя ідея зробила це можливим (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме твоя ідея зробила це можливим."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was your idea that made it possible.",
       "It’s your idea that made it possible."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "ARTICLES", "PREP_TIME"],
-    "ua": ["Це ввечері ми поїдемо в кіно (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is in the evening that we will go to the cinema.",
-      "It’s in the evening that we’ll go to the cinema."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "LIKE_ING"],
-    "ua": ["Це танці приносять їй найбільше радості (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме танці приносять їй найбільше радості."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is dancing that brings her the most joy.",
       "It’s dancing that brings her the most joy."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "ARTICLES", "PAST_SIMPLE"],
-    "ua": ["Саме Джон зателефонував мені вчора ввечері (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was John who called me last night.",
-      "It’s John who called me last night."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Саме в парку ми втратили ключі (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в парку ми втратили ключі."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in the park that we lost the keys.",
       "It’s in the park that we lost the keys."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE"],
-    "ua": ["Саме в понеділок почався курс (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Саме в понеділок почався курс."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It was on Monday that the course started.",
       "It’s on Monday that the course started."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": ["Саме через затори ми запізнилися (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
+    "ua": ["Саме через затори ми запізнилися."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was because of the traffic that we were late.",
       "It’s because of the traffic that we were late."
@@ -113,7 +92,8 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": ["Саме читання найбільше допомагає моїй англійській (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме читання найбільше допомагає моїй англійській."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is reading that helps my English the most.",
       "It’s reading that helps my English the most."
@@ -121,7 +101,8 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Саме мій брат завжди миє посуд вдома (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме мій брат завжди миє посуд вдома."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is my brother who always washes the dishes at home.",
       "It’s my brother who always washes the dishes at home."
@@ -129,39 +110,27 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Саме цей лист ми отримали останнім (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме цей лист ми отримали останнім."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was this letter that we received last.",
       "It’s this letter that we received last."
     ]
   },
+
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме в офісі він залишив свій паспорт (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в офісі він залишив свій паспорт."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was at the office that he left his passport.",
       "It’s at the office that he left his passport."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS"],
-    "ua": ["Саме ввечері ми підпишемо угоду (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is in the evening that we will sign the contract.",
-      "It’s in the evening that we’ll sign the contract."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Саме той викладач, про якого я тобі казала, проведе лекцію (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is the teacher who I told you about that will give the lecture.",
-      "It’s the teacher who I told you about that will give the lecture."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
-    "ua": ["Саме цей проєкт був обраний комісією (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме цей проєкт був обраний комісією."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was this project that was selected by the committee.",
       "It’s this project that was selected by the committee."
@@ -169,87 +138,43 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "HAVE_HAVE_GOT"],
-    "ua": ["Саме в нас є потрібні інструменти (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в нас є потрібні інструменти."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is we who have the necessary tools.",
-      "It’s we who have the necessary tools."
+      "It’s us who have the necessary tools."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
-    "ua": ["Саме вона щойно надіслала звіт (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is she who has just sent the report.",
-      "It’s she who has just sent the report."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "MAKE_DO_DIFFERENCE", "ARTICLES"],
-    "ua": ["Саме твоя порада зробила різницю (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was your advice that made the difference.",
-      "It’s your advice that made the difference."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "ZERO_CONDITIONAL"],
-    "ua": ["Саме коли він втомлений, він робить помилки (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES"],
+    "ua": ["Саме коли він втомлений, він робить помилки."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is when he is tired that he makes mistakes.",
       "It’s when he is tired that he makes mistakes."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "FIRST_CONDITIONAL", "TIME_CLAUSE_FUTURE"],
-    "ua": ["Саме коли ми закінчимо, ми підемо додому (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is when we finish that we will go home.",
-      "It’s when we finish that we’ll go home."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме у квартирі на третьому поверсі ми житимемо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is in the apartment on the third floor that we will live.",
-      "It’s in the apartment on the third floor that we’ll live."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "COMPARATIVES", "ARTICLES"],
-    "ua": ["Саме ця версія краща за попередню (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ця версія краща за іншу."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
-      "It is this version that is better than the previous one.",
-      "It’s this version that’s better than the previous one."
+      "It is this version that is better than the other one."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW"],
-    "ua": ["Саме ти зараз допомагаєш команді найбільше (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Саме ти зараз допомагаєш команді найбільше."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
-      "It is you who is helping the team the most right now.",
-      "It’s you who’s helping the team the most right now."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY"],
-    "ua": ["Саме вона, мабуть, відповідальна за проєкт (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is she who must be responsible for the project.",
-      "It’s she who must be responsible for the project."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PREP_TIME"],
-    "ua": ["Саме о сьомій ми зазвичай вечеряємо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is at seven that we usually have dinner.",
-      "It’s at seven that we usually have dinner."
+      "It is you who are helping the team the most right now.",
+      "It’s you who’re helping the team the most right now."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES", "ARTICLES"],
-    "ua": ["Саме та книга, яку ти порадив, мені найбільше сподобалася (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме та книга, яку ти порадив, мені найбільше сподобалася."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is the book that you recommended that I liked the most.",
       "It’s the book that you recommended that I liked the most."
@@ -257,15 +182,16 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
-    "ua": ["Саме ця стаття була опублікована вчора (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ця стаття була опублікована вчора."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
-      "It was this article that was published yesterday.",
-      "It’s this article that was published yesterday."
+      "It was this article that was published yesterday."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PREP_PLACE"],
-    "ua": ["Саме на кухні ти знайдеш чай (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме на кухні ти знайдеш чай."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is in the kitchen that you will find the tea.",
       "It’s in the kitchen that you’ll find the tea."
@@ -273,23 +199,25 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO", "ARTICLES"],
-    "ua": ["Саме ти маєш підписати цей документ (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ти маєш підписати цей документ."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
-      "It is you who has to sign this document.",
-      "It’s you who has to sign this document."
+      "It is you who have to sign this document.",
+      "It’s you who have to sign this document."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PAST_SIMPLE"],
-    "ua": ["Саме Анна приготувала вечерю вчора (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме Анна приготувала вечерю вчора."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
-      "It was Anna who cooked dinner yesterday.",
-      "It’s Anna who cooked dinner yesterday."
+      "It was Anna who cooked dinner yesterday."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме в цьому кафе ми зустрілися вперше (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в цьому кафе ми зустрілися вперше."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in this café that we met for the first time.",
       "It’s in this café that we met for the first time."
@@ -297,7 +225,8 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "ARTICLES"],
-    "ua": ["Саме влітку я планую відпочинок (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме влітку я планую відпочинок."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is in summer that I plan my vacation.",
       "It’s in summer that I plan my vacation."
@@ -305,39 +234,27 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "LIKE_ING"],
-    "ua": ["Саме спів приносить їй найбільше радості (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме спів приносить їй найбільше радості."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is singing that brings her the most joy.",
       "It’s singing that brings her the most joy."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": ["Саме через помилку система зламалася (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was because of a mistake that the system crashed.",
-      "It’s because of a mistake that the system crashed."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Саме він завжди прибирає після обіду (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме він завжди прибирає після обіду."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is he who always cleans up after lunch.",
-      "It’s he who always cleans up after lunch."
+      "It’s him who always cleans up after lunch."
     ]
   },
-  {
-    "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_PERFECT"],
-    "ua": ["Саме вони вже завершили проєкт (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is they who have already finished the project.",
-      "It’s they who have already finished the project."
-    ]
-  },
+
   {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Саме у Франції він навчився готувати (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме у Франції він навчився готувати."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in France that he learned to cook.",
       "It’s in France that he learned to cook."
@@ -345,7 +262,8 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "FIRST_CONDITIONAL", "TIME_CLAUSE_FUTURE"],
-    "ua": ["Саме коли вона повернеться, ми розпочнемо зустріч (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме коли вона повернеться, ми розпочнемо зустріч."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is when she returns that we will start the meeting.",
       "It’s when she returns that we’ll start the meeting."
@@ -353,7 +271,8 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "COMPARATIVES"],
-    "ua": ["Саме цей шлях коротший, ніж інший (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме цей шлях коротший, ніж інший."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is this route that is shorter than the other one.",
       "It’s this route that’s shorter than the other one."
@@ -361,7 +280,8 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS"],
-    "ua": ["Саме завтра ми отримаємо результати (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме завтра ми отримаємо результати."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is tomorrow that we will get the results.",
       "It’s tomorrow that we’ll get the results."
@@ -369,31 +289,26 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "HAVE_HAVE_GOT"],
-    "ua": ["Саме ми маємо ключ від офісу (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ми маємо ключ від офісу."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is we who have the key to the office.",
-      "It’s we who have the key to the office."
+      "It’s us who have the key to the office."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY"],
-    "ua": ["Саме він, мабуть, зробив це (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме він, мабуть, зробив це."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is he who must have done it.",
-      "It’s he who must have done it."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PAST_PERFECT"],
-    "ua": ["Саме я вже закінчив роботу до твого дзвінка (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was I who had finished the work before you called.",
-      "It’s I who had finished the work before you called."
+      "It’s him who must have done it."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES"],
-    "ua": ["Саме той фільм, який ти порадив, був найкращим (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме той фільм, який ти порадив, був найкращим."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was the movie that you recommended that was the best.",
       "It’s the movie that you recommended that was the best."
@@ -401,71 +316,43 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме в саду ми проводимо більшість вихідних (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в саду ми проводимо більшість вихідних."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is in the garden that we spend most weekends.",
       "It’s in the garden that we spend most weekends."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW"],
-    "ua": ["Саме вони зараз ремонтують дах (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is they who are repairing the roof right now.",
-      "It’s they who are repairing the roof right now."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Саме ця будівля була зруйнована під час бурі (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ця будівля була зруйнована під час бурі."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was this building that was destroyed during the storm.",
       "It’s this building that was destroyed during the storm."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "TOO_VERY"],
-    "ua": ["Саме він занадто втомлений, щоб продовжувати (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is he who is too tired to continue.",
-      "It’s he who’s too tired to continue."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "THERE_IS_ARE", "ARTICLES"],
-    "ua": ["Саме тут є найкраща кава в місті (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is here that there is the best coffee in town.",
-      "It’s here that there’s the best coffee in town."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE"],
-    "ua": ["Саме вчора він купив новий ноутбук (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме вчора він купив новий ноутбук."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
-      "It was yesterday that he bought a new laptop.",
-      "It’s yesterday that he bought a new laptop."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PREP_DIRECTION"],
-    "ua": ["Саме до школи вони зараз ідуть (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is to school that they are going now.",
-      "It’s to school that they’re going now."
+      "It was yesterday that he bought a new laptop."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO"],
-    "ua": ["Саме ти маєш написати цей лист (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ти маєш написати цей лист."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
-      "It is you who has to write this letter.",
-      "It’s you who has to write this letter."
+      "It is you who have to write this letter.",
+      "It’s you who have to write this letter."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "FUTURE_WITH_PRESENT_CONT"],
-    "ua": ["Саме завтра вони вирушають у відпустку (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме завтра вони вирушають у відпустку."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is tomorrow that they are leaving for vacation.",
       "It’s tomorrow that they’re leaving for vacation."
@@ -473,23 +360,25 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY", "ARTICLES"],
-    "ua": ["Саме вона може бути новим керівником (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме вона може бути новим керівником."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is she who might be the new manager.",
-      "It’s she who might be the new manager."
+      "It’s her who might be the new manager."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PAST_SIMPLE"],
-    "ua": ["Саме Том написав цей лист учора (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме Том написав цей лист учора."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
-      "It was Tom who wrote this letter yesterday.",
-      "It’s Tom who wrote this letter yesterday."
+      "It was Tom who wrote this letter yesterday."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме в бібліотеці вона готувалася до іспиту (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в бібліотеці вона готувалася до іспиту."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in the library that she prepared for the exam.",
       "It’s in the library that she prepared for the exam."
@@ -497,7 +386,8 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "ARTICLES"],
-    "ua": ["Саме вранці він зазвичай бігає (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме вранці він зазвичай бігає."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is in the morning that he usually goes jogging.",
       "It’s in the morning that he usually goes jogging."
@@ -505,63 +395,54 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "LIKE_ING"],
-    "ua": ["Саме малювання допомагає їй розслабитися (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме малювання допомагає їй розслабитися."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is painting that helps her relax.",
       "It’s painting that helps her relax."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": ["Саме через холодну погоду ми залишилися вдома (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
+    "ua": ["Саме через холодну погоду ми залишилися вдома."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was because of the cold weather that we stayed at home.",
       "It’s because of the cold weather that we stayed at home."
     ]
   },
+
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
-    "ua": ["Саме мама завжди будить мене зранку (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме мама завжди будить мене зранку."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is my mother who always wakes me up in the morning.",
       "It’s my mother who always wakes me up in the morning."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_PERFECT"],
-    "ua": ["Саме вони щойно прибули до офісу (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is they who have just arrived at the office.",
-      "It’s they who’ve just arrived at the office."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "PREP_PLACE"],
-    "ua": ["Саме в Італії вона познайомилася зі своїм чоловіком (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в Італії вона познайомилася зі своїм чоловіком."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in Italy that she met her husband.",
       "It’s in Italy that she met her husband."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "FIRST_CONDITIONAL", "TIME_CLAUSE_FUTURE"],
-    "ua": ["Саме коли ми закінчимо проєкт, ми святкуватимемо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is when we finish the project that we will celebrate.",
-      "It’s when we finish the project that we’ll celebrate."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "COMPARATIVES"],
-    "ua": ["Саме цей спосіб кращий за інший (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "COMPARATIVES", "ARTICLES"],
+    "ua": ["Саме цей спосіб кращий за інший."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is this method that is better than the other one.",
       "It’s this method that’s better than the other one."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS"],
-    "ua": ["Саме завтра ми почнемо новий проєкт (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS", "ARTICLES"],
+    "ua": ["Саме завтра ми почнемо новий проєкт."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is tomorrow that we will start the new project.",
       "It’s tomorrow that we’ll start the new project."
@@ -569,31 +450,17 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "HAVE_HAVE_GOT"],
-    "ua": ["Саме він має найкраще рішення (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме він має найкраще рішення."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is he who has the best solution.",
-      "It’s he who’s got the best solution."
+      "It’s him who’s got the best solution."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY"],
-    "ua": ["Саме вона, мабуть, забула документи (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is she who must have forgotten the documents.",
-      "It’s she who must’ve forgotten the documents."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PAST_PERFECT"],
-    "ua": ["Саме ми вже прибрали, коли вони прийшли (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was we who had cleaned up before they arrived.",
-      "It’s we who had cleaned up before they arrived."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES"],
-    "ua": ["Саме той учень, який запізнився, пояснював причину (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES", "ARTICLES"],
+    "ua": ["Саме той учень, який запізнився, пояснював причину."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It was the student who was late that explained the reason.",
       "It’s the student who was late that explained the reason."
@@ -601,23 +468,26 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме в офісі він залишив телефон (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в офісі він залишив телефон."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in the office that he left his phone.",
       "It’s in the office that he left his phone."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW"],
-    "ua": ["Саме ти зараз допомагаєш найбільше (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW", "ARTICLES"],
+    "ua": ["Саме ти зараз допомагаєш найбільше."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
-      "It is you who is helping the most right now.",
-      "It’s you who’s helping the most right now."
+      "It is you who are helping the most right now.",
+      "It’s you who’re helping the most right now."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Саме ця кімната була відремонтована минулого тижня (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ця кімната була відремонтована минулого тижня."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was this room that was renovated last week.",
       "It’s this room that was renovated last week."
@@ -625,79 +495,53 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "TOO_VERY"],
-    "ua": ["Саме він занадто зайнятий, щоб прийти (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме він занадто зайнятий, щоб прийти."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is he who is too busy to come.",
-      "It’s he who’s too busy to come."
+      "It’s him who’s too busy to come."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "THERE_IS_ARE", "ARTICLES"],
-    "ua": ["Саме тут є найкраща піца в місті (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE", "ARTICLES"],
+    "ua": ["Саме вчора вони купили нову машину."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
-      "It is here that there is the best pizza in town.",
-      "It’s here that there’s the best pizza in town."
+      "It was yesterday that they bought a new car."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE"],
-    "ua": ["Саме вчора вони купили нову машину (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was yesterday that they bought a new car.",
-      "It’s yesterday that they bought a new car."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PREP_DIRECTION"],
-    "ua": ["Саме до магазину вона зараз іде (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is to the shop that she is going now.",
-      "It’s to the shop that she’s going now."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO"],
-    "ua": ["Саме вони мають підготувати звіт (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO", "ARTICLES"],
+    "ua": ["Саме вони мають підготувати звіт."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is they who have to prepare the report.",
-      "It’s they who have to prepare the report."
+      "It’s them who have to prepare the report."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "FUTURE_WITH_PRESENT_CONT"],
-    "ua": ["Саме у п’ятницю ми вирушаємо у відрядження (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "FUTURE_WITH_PRESENT_CONT", "ARTICLES"],
+    "ua": ["Саме у п’ятницю ми вирушаємо у відрядження."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is on Friday that we are leaving on a business trip.",
       "It’s on Friday that we’re leaving on a business trip."
     ]
   },
+
   {
     "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY", "ARTICLES"],
-    "ua": ["Саме він може бути новим директором (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме він може бути новим директором."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is he who might be the new director.",
-      "It’s he who might be the new director."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "ARTICLES"],
-    "ua": ["Саме Марія принесла торт на вечірку (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was Maria who brought the cake to the party.",
-      "It’s Maria who brought the cake to the party."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме в цій кімнаті ми проводимо зустрічі (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is in this room that we hold meetings.",
-      "It’s in this room that we hold meetings."
+      "It’s him who might be the new director."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "ARTICLES"],
-    "ua": ["Саме в неділю ми зазвичай відпочиваємо (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме в неділю ми зазвичай відпочиваємо."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is on Sunday that we usually rest.",
       "It’s on Sunday that we usually rest."
@@ -705,119 +549,80 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "LIKE_ING"],
-    "ua": ["Саме танці роблять її щасливою (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме танці роблять її щасливою."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is dancing that makes her happy.",
       "It’s dancing that makes her happy."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": ["Саме через дощ ми не поїхали на пікнік (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
+    "ua": ["Саме через дощ ми не поїхали на пікнік."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was because of the rain that we didn’t go on a picnic.",
       "It’s because of the rain that we didn’t go on a picnic."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
-    "ua": ["Саме моя сестра завжди готує найсмачніше (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
+    "ua": ["Саме моя сестра завжди готує найсмачніше."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is my sister who always cooks the best meals.",
       "It’s my sister who always cooks the best meals."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
-    "ua": ["Саме вони вже зробили замовлення (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is they who have already placed the order.",
-      "It’s they who’ve already placed the order."
-    ]
-  },
-  {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
-    "ua": ["Саме у цьому будинку вона виросла (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме у цьому будинку вона виросла."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was in this house that she grew up.",
       "It’s in this house that she grew up."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "FIRST_CONDITIONAL", "TIME_CLAUSE_FUTURE"],
-    "ua": ["Саме коли він прийде, ми підемо додому (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is when he arrives that we will go home.",
-      "It’s when he arrives that we’ll go home."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "COMPARATIVES"],
-    "ua": ["Саме цей план ефективніший за попередній (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "COMPARATIVES", "ARTICLES"],
+    "ua": ["Саме цей план ефективніший за попередній."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is this plan that is more effective than the previous one.",
       "It’s this plan that’s more effective than the previous one."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS"],
-    "ua": ["Саме ввечері ми побачимо фінальні результати (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS", "ARTICLES"],
+    "ua": ["Саме ввечері ми побачимо фінальні результати."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is in the evening that we will see the final results.",
       "It’s in the evening that we’ll see the final results."
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "HAVE_HAVE_GOT"],
-    "ua": ["Саме він має останню копію документа (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "rules": ["CLEFT_SENTENCES", "HAVE_HAVE_GOT", "ARTICLES"],
+    "ua": ["Саме він має останню копію документа."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is he who has the last copy of the document.",
-      "It’s he who’s got the last copy of the document."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY"],
-    "ua": ["Саме вона, мабуть, залишила вікно відчиненим (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is she who might have left the window open.",
-      "It’s she who might’ve left the window open."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PAST_PERFECT"],
-    "ua": ["Саме ми вже приготували вечерю до їхнього приходу (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It was we who had prepared dinner before they arrived.",
-      "It’s we who had prepared dinner before they arrived."
+      "It’s him who’s got the last copy of the document."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES"],
-    "ua": ["Саме та книга, яку я купив учора, тепер моя улюблена (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме та книга, яку я купив учора, тепер моя улюблена."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
-      "It is the book that I bought yesterday that is now my favorite.",
-      "It’s the book that I bought yesterday that’s now my favorite."
+      "It is the book that I bought yesterday that is now my favorite."
     ]
   },
-  {
-    "rules": ["CLEFT_SENTENCES", "PREP_PLACE"],
-    "ua": ["Саме в саду ми проводимо більшість часу (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is in the garden that we spend most of our time.",
-      "It’s in the garden that we spend most of our time."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW"],
-    "ua": ["Саме вони зараз працюють над новим проєктом (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is they who are working on the new project right now.",
-      "It’s they who’re working on the new project right now."
-    ]
-  },
+
   {
     "rules": ["CLEFT_SENTENCES", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
-    "ua": ["Саме цей звіт був опублікований минулого місяця (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме цей звіт був опублікований минулого місяця."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It was this report that was published last month.",
       "It’s this report that was published last month."
@@ -825,31 +630,25 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "TOO_VERY"],
-    "ua": ["Саме він надто сором’язливий, щоб говорити публічно (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме він надто сором’язливий, щоб говорити публічно."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
       "It is he who is too shy to speak in public.",
-      "It’s he who’s too shy to speak in public."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "THERE_IS_ARE"],
-    "ua": ["Саме тут є найкраще морозиво (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is here that there is the best ice cream.",
-      "It’s here that there’s the best ice cream."
+      "It’s him who’s too shy to speak in public."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE"],
-    "ua": ["Саме минулої суботи ми зустріли старих друзів (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме минулої суботи ми зустріли старих друзів."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
-      "It was last Saturday that we met our old friends.",
-      "It’s last Saturday that we met our old friends."
+      "It was last Saturday that we met our old friends."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "PREP_DIRECTION"],
-    "ua": ["Саме до університету він зараз прямує (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме до університету він зараз прямує."],
+    "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
       "It is to the university that he is heading now.",
       "It’s to the university that he’s heading now."
@@ -857,26 +656,20 @@
   },
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO"],
-    "ua": ["Саме ти маєш вирішити цю проблему (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме ти маєш вирішити цю проблему."],
+    "hint": "Make a cleft sentence: It was ... who ...",
     "en": [
-      "It is you who has to solve this problem.",
-      "It’s you who has to solve this problem."
+      "It is you who have to solve this problem.",
+      "It’s you who have to solve this problem."
     ]
   },
   {
     "rules": ["CLEFT_SENTENCES", "FUTURE_WITH_PRESENT_CONT"],
-    "ua": ["Саме наступного тижня ми вирушаємо у подорож (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
+    "ua": ["Саме наступного тижня ми вирушаємо у подорож."],
+    "hint": "Make a cleft sentence: It was ... when ...",
     "en": [
       "It is next week that we are leaving for our trip.",
       "It’s next week that we’re leaving for our trip."
-    ]
-  },
-  {
-    "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY", "ARTICLES"],
-    "ua": ["Саме він може бути автором цієї ідеї (use IT + BE ... THAT/WHO/WHEN/WHERE ...)."],
-    "en": [
-      "It is he who might be the author of this idea.",
-      "It’s he who might be the author of this idea."
     ]
   }
 ] }

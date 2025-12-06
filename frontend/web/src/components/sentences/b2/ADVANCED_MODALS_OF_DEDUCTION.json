@@ -1,697 +1,1121 @@
 { "ADVANCED_MODALS_OF_DEDUCTION": [
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, уже бачив цей фільм. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have seen the movie already.", "He must've already seen the movie."]
+    "ua": "Він, мабуть, уже бачив цей фільм.",
+    "en": [
+      "He must have seen the movie already.",
+      "He must've already seen the movie."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона не могла забути ключі вдома. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She can’t have left the keys at home.", "She couldn't have forgotten the keys at home."]
+    "ua": "Вона не могла забути ключі вдома.",
+    "en": [
+      "She can’t have left the keys at home.",
+      "She couldn't have forgotten the keys at home."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "DEMONSTRATIVES"],
-    "ua": "Це, мабуть, було її рішення. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["That must have been her decision.", "It must've been her choice."]
+    "ua": "Це, мабуть, було її рішення.",
+    "en": [
+      "That must have been her decision.",
+      "It must've been her choice."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він міг бути втомленим після роботи. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He might have been tired after work.", "He could have been tired after work."]
+    "ua": "Вони, мабуть, не чули дзвінка.",
+    "en": [
+      "They can’t have heard the phone.",
+      "They must not have heard the bell."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, не чули дзвінка. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They can’t have heard the phone.", "They must not have heard the bell."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ти, мабуть, неправильно зрозумів мене. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["You must have misunderstood me.", "You must've got me wrong."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Було б дивно, якщо він не знав про це. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He can’t have been unaware of it.", "He must have known about it."]
+    "ua": "Ти, мабуть, неправильно зрозумів мене.",
+    "en": [
+      "You must have misunderstood me.",
+      "You must've got me wrong."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, забула купити молоко. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have forgotten to buy milk.", "She might have forgotten to buy the milk."]
+    "ua": "Було б дивно, якщо б він не знав про це.",
+    "en": [
+      "He can’t have been unaware of it.",
+      "He must have known about it."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
+    "ua": "Вона, мабуть, забула купити молоко.",
+    "en": [
+      "She must have forgotten to buy milk.",
+      "She might have forgotten to buy the milk."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "THERE_IS_ARE"],
-    "ua": "Там, мабуть, не було світла минулої ночі. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There can’t have been any light last night.", "There must have been a power cut last night."]
+    "ua": "Там, мабуть, не було світла минулої ночі.",
+    "en": [
+      "There can’t have been any light last night.",
+      "There must have been a power cut last night."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "TOO_ENOUGH"],
-    "ua": "Він, мабуть, був занадто зайнятий, щоб відповісти. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been too busy to reply.", "He might have been too busy to answer."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, вже закінчила звіт учора. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have finished the report yesterday.", "She might have completed the report yesterday."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES",
+      "TOO_ENOUGH"
+    ],
+    "ua": "Він, мабуть, був занадто зайнятий, щоб відповісти.",
+    "en": [
+      "He must have been too busy to reply.",
+      "He might have been too busy to answer."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "THERE_IS_ARE"],
-    "ua": "Там, мабуть, було дуже шумно. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There must have been a lot of noise.", "There might have been too much noise."]
+    "ua": "Там, мабуть, було дуже шумно.",
+    "en": [
+      "There must have been a lot of noise.",
+      "There might have been too much noise."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він не міг сказати це навмисно. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He can’t have said that on purpose.", "He couldn’t have meant it."]
+    "ua": "Він не міг сказати це навмисно.",
+    "en": [
+      "He can’t have said that on purpose.",
+      "He couldn’t have meant it."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES"
+    ],
+    "ua": "Ти, мабуть, зробив це випадково.",
+    "en": [
+      "You must have done it by accident.",
+      "You might have done it unintentionally."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES",
+      "COUNT_UNCOUNT"
+    ],
+    "ua": "Вона, мабуть, витратила всі гроші на подорож.",
+    "en": [
+      "She must have spent all the money on the trip.",
+      "She could have used all her savings for the trip."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
+    "ua": "Вони, мабуть, не бачили повідомлення.",
+    "en": [
+      "They can’t have seen the message.",
+      "They might not have noticed the message."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "PREP_TIME"
+    ],
+    "ua": "Вона, мабуть, поїхала до школи рано вранці.",
+    "en": [
+      "She must have gone to school early in the morning.",
+      "She might have left for school at dawn."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він, мабуть, був щасливим, коли почув цю новину. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been happy when he heard the news.", "He might have been pleased about the news."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ти, мабуть, зробив це випадково. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["You must have done it by accident.", "You might have done it unintentionally."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COUNT_UNCOUNT"],
-    "ua": "Вона, мабуть, витратила всі гроші на подорож. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have spent all the money on the trip.", "She could have used all her savings for the trip."]
+    "ua": "Він, мабуть, був дуже зайнятий цілий день.",
+    "en": [
+      "He must have been very busy all day.",
+      "He might have been working all day."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, не бачили повідомлення. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They can’t have seen the message.", "They might not have noticed the message."]
+    "ua": "Вони, мабуть, забули забронювати квитки.",
+    "en": [
+      "They must have forgotten to book the tickets.",
+      "They might have missed the reservation."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PREP_TIME"],
-    "ua": "Вона, мабуть, поїхала до школи рано вранці. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have gone to school early in the morning.", "She might have left for school at dawn."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES",
+      "DEMONSTRATIVES"
+    ],
+    "ua": "Це, мабуть, було найгірше рішення.",
+    "en": [
+      "That must have been the worst decision.",
+      "It might have been a terrible choice."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES",
+      "BECAUSE_SO_BUT_ALTHOUGH"
+    ],
+    "ua": "Він, мабуть, не почув, бо музика була надто гучна.",
+    "en": [
+      "He must not have heard because the music was too loud.",
+      "He might not have heard since it was noisy."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "THERE_ISNT_ARENT_ANY"
+    ],
+    "ua": "Там, мабуть, не було жодного вільного місця.",
+    "en": [
+      "There can’t have been any free seats.",
+      "There might not have been any empty spots."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES",
+      "SIMPLE_ADJ"
+    ],
+    "ua": "Вона, мабуть, була дуже втомленою після подорожі.",
+    "en": [
+      "She must have been very tired after the trip.",
+      "She might have been exhausted after traveling."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він, мабуть, був дуже зайнятий цілий день. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been very busy all day.", "He might have been working all day."]
+    "ua": "Ми, мабуть, пропустили правильний поворот.",
+    "en": [
+      "We must have missed the right turn.",
+      "We might have taken the wrong road."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, забули забронювати квитки. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must have forgotten to book the tickets.", "They might have missed the reservation."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "DEMONSTRATIVES"],
-    "ua": "Це, мабуть, було найгірше рішення. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["That must have been the worst decision.", "It might have been a terrible choice."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Він, мабуть, не почув, бо музика була надто гучна. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must not have heard because the music was too loud.", "He might not have heard since it was noisy."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "THERE_ISNT_ARENT_ANY"],
-    "ua": "Там, мабуть, не було жодного вільного місця. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There can’t have been any free seats.", "There might not have been any empty spots."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "SIMPLE_ADJ"],
-    "ua": "Вона, мабуть, була дуже втомленою після подорожі. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have been very tired after the trip.", "She might have been exhausted after traveling."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "TOO_VERY"],
-    "ua": "Він, мабуть, був занадто стурбований, щоб спати. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been too worried to sleep.", "He might have been too anxious to rest."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ми, мабуть, пропустили правильний поворот. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["We must have missed the right turn.", "We might have taken the wrong road."]
+    "ua": "Він, мабуть, часто забував про ці зустрічі раніше.",
+    "en": [
+      "He must have often forgotten about these meetings before.",
+      "He might have missed them regularly."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, часто забував про ці зустрічі раніше. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have often forgotten about these meetings before.", "He might have missed them regularly."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, була на вечірці вчора. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have been at the party yesterday.", "She might have gone to the party."]
+    "ua": "Вона, мабуть, була на вечірці вчора.",
+    "en": [
+      "She must have been at the party yesterday.",
+      "She might have gone to the party."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PREP_PLACE"],
-    "ua": "Він, мабуть, залишив свій телефон у машині. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have left his phone in the car.", "He might have forgotten his phone in the car."]
+    "ua": "Він, мабуть, залишив свій телефон у машині.",
+    "en": [
+      "He must have left his phone in the car.",
+      "He might have forgotten his phone in the car."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони не могли зробити це самостійно. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They can’t have done it on their own.", "They couldn’t have managed it alone."]
+    "ua": "Хтось, мабуть, розповів їй секрет.",
+    "en": [
+      "Someone must have told her the secret.",
+      "Somebody might have revealed it to her."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Я, мабуть, забув надіслати листа.",
+    "en": [
+      "I must have forgotten to send the letter.",
+      "I might have missed sending it."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Хтось, мабуть, розповів їй секрет. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Someone must have told her the secret.", "Somebody might have revealed it to her."]
+    "ua": "Він, мабуть, був дуже щедрим.",
+    "en": [
+      "He must have been very generous.",
+      "He might have been kind-hearted."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PERSONAL_PRONOUNS"],
-    "ua": "Я, мабуть, забув надіслати листа. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["I must have forgotten to send the letter.", "I might have missed sending it."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, був дуже щедрим. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been very generous.", "He might have been kind-hearted."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, вже виїхали, коли ми прибули. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must have left before we arrived.", "They might have gone earlier."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Було б дивно, якщо вона не бачила цього. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She can’t have missed it.", "She must have seen it."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COUNT_UNCOUNT"],
-    "ua": "Він, мабуть, витратив багато часу на цей проєкт. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have spent a lot of time on this project.", "He might have worked on it for hours."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES",
+      "COUNT_UNCOUNT"
+    ],
+    "ua": "Він, мабуть, витратив багато часу на цей проєкт.",
+    "en": [
+      "He must have spent a lot of time on this project.",
+      "He might have worked on it for hours."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "THERE_IS_ARE"],
-    "ua": "Там, мабуть, було багато людей. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There must have been many people.", "There might have been a big crowd."]
+    "ua": "Там, мабуть, було багато людей.",
+    "en": [
+      "There must have been many people.",
+      "There might have been a big crowd."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, переплутала дати. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have mixed up the dates.", "She might have got the day wrong."]
+    "ua": "Вона, мабуть, переплутала дати.",
+    "en": [
+      "She must have mixed up the dates.",
+      "She might have got the day wrong."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, втратили інтерес до теми. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must have lost interest in the topic.", "They might have become bored."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Він, мабуть, не прийшов, бо захворів. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must not have come because he was ill.", "He might have stayed home because of illness."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Хтось, мабуть, зламав вікно. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Someone must have broken the window.", "It might have been broken accidentally."]
+    "ua": "Вони, мабуть, втратили інтерес до теми.",
+    "en": [
+      "They must have lost interest in the topic.",
+      "They might have become bored."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, сказав правду. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have told the truth.", "He might have been honest."]
+    "ua": "Хтось, мабуть, зламав вікно.",
+    "en": [
+      "Someone must have broken the window.",
+      "It might have been broken accidentally."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, пішла додому раніше. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have gone home earlier.", "She might have left before everyone else."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ми, мабуть, неправильно зрозуміли завдання. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["We must have misunderstood the task.", "We might have read it wrong."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PREP_PLACE"],
-    "ua": "Він, мабуть, залишив документи в офісі. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have left the documents in the office.", "He might have forgotten them at work."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "TOO_VERY"],
-    "ua": "Вона, мабуть, була занадто втомленою, щоб вийти. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have been too tired to go out.", "She might have been too exhausted to leave."]
+    "ua": "Він, мабуть, сказав правду.",
+    "en": [
+      "He must have told the truth.",
+      "He might have been honest."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, був дуже задоволений результатом. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been pleased with the result.", "He might have been happy about the outcome."]
+    "ua": "Вона, мабуть, пішла додому раніше.",
+    "en": [
+      "She must have gone home earlier.",
+      "She might have left before everyone else."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "LIKE_ING"],
-    "ua": "Вона, мабуть, завжди любила читати детективи. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have always liked reading detective stories.", "She might have enjoyed mysteries for years."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ми, мабуть, неправильно зрозуміли завдання.",
+    "en": [
+      "We must have misunderstood the task.",
+      "We might have read it wrong."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, мав ідею, як це зробити. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have had an idea how to do it.", "He might have had a plan in mind."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "PREP_PLACE"
+    ],
+    "ua": "Він, мабуть, залишив документи в офісі.",
+    "en": [
+      "He must have left the documents in the office.",
+      "He might have forgotten them at work."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, не зрозуміли інструкцію. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must not have understood the instruction.", "They might have missed the details."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COUNT_UNCOUNT"],
-    "ua": "Він, мабуть, випив занадто багато кави. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have drunk too much coffee.", "He might have had too much caffeine."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COMPARATIVES"],
-    "ua": "Вона, мабуть, працювала більше, ніж інші. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have worked more than others.", "She might have been busier than everyone else."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "ZERO_CONDITIONAL"],
-    "ua": "Якщо він так зробив, він, мабуть, мав вагому причину. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["If he did that, he must have had a good reason.", "He might have had no choice."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "FIRST_CONDITIONAL"],
-    "ua": "Якщо вони спізнилися, вони, мабуть, потрапили в затор. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["If they were late, they must have been stuck in traffic.", "They might have been delayed on the road."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PREP_TIME"],
-    "ua": "Він, мабуть, поїхав на роботу рано вранці. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have left for work early in the morning.", "He might have gone before sunrise."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, зателефонувала йому вчора. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have called him yesterday.", "She might have phoned him last night."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "THERE_IS_ARE"],
-    "ua": "Там, мабуть, була сильна буря. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There must have been a strong storm.", "There might have been bad weather."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PREP_PLACE"],
-    "ua": "Він, мабуть, загубив гаманець у метро. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have lost his wallet in the subway.", "He might have dropped it on the train."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "ARTICLES",
+      "TOO_VERY"
+    ],
+    "ua": "Вона, мабуть, була занадто втомленою, щоб вийти.",
+    "en": [
+      "She must have been too tired to go out.",
+      "She might have been too exhausted to leave."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, завжди забували ключі раніше. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must have always forgotten their keys before.", "They might have been forgetful in the past."]
+    "ua": "Він, мабуть, був дуже задоволений результатом.",
+    "en": [
+      "He must have been pleased with the result.",
+      "He might have been happy about the outcome."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "LIKE_ING"
+    ],
+    "ua": "Вона, мабуть, завжди любила читати детективи.",
+    "en": [
+      "She must have always liked reading detective stories.",
+      "She might have enjoyed mysteries for years."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, не почула свій будильник. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must not have heard her alarm.", "She might have slept through it."]
+    "ua": "Він, мабуть, мав ідею, як це зробити.",
+    "en": [
+      "He must have had an idea how to do it.",
+      "He might have had a plan in mind."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, втратив свій паспорт у літаку. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have lost his passport on the plane.", "He might have left his passport on the flight."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вони, мабуть, не зрозуміли інструкцію.",
+    "en": [
+      "They must not have understood the instruction.",
+      "They might have missed the details."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "THERE_IS_ARE"],
-    "ua": "Там, мабуть, було якесь непорозуміння. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There must have been some misunderstanding.", "There might have been a mistake."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "COUNT_UNCOUNT"
+    ],
+    "ua": "Він, мабуть, випив занадто багато кави.",
+    "en": [
+      "He must have drunk too much coffee.",
+      "He might have had too much caffeine."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, була в офісі, коли це сталося. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have been in the office when it happened.", "She might have been there at the time."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "COMPARATIVES"
+    ],
+    "ua": "Вона, мабуть, працювала більше, ніж інші.",
+    "en": [
+      "She must have worked more than others.",
+      "She might have been busier than everyone else."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Якщо він так зробив, він, мабуть, мав вагому причину.",
+    "en": [
+      "If he did that, he must have had a good reason.",
+      "He might have had no choice."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PREP_TIME"],
+    "ua": "Він, мабуть, поїхав на роботу рано вранці.",
+    "en": [
+      "He must have left for work early in the morning.",
+      "He might have gone before sunrise."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона, мабуть, зателефонувала йому вчора.",
+    "en": [
+      "She must have called him yesterday.",
+      "She might have phoned him last night."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "THERE_IS_ARE"],
+    "ua": "Там, мабуть, була сильна буря.",
+    "en": [
+      "There must have been a strong storm.",
+      "There might have been bad weather."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PREP_PLACE"],
+    "ua": "Він, мабуть, загубив гаманець у метро.",
+    "en": [
+      "He must have lost his wallet in the subway.",
+      "He might have dropped it on the train."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона, мабуть, не почула свій будильник.",
+    "en": [
+      "She must not have heard her alarm.",
+      "She might have slept through it."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Він, мабуть, загубив свій паспорт у літаку.",
+    "en": [
+      "He must have lost his passport on the plane.",
+      "He might have left his passport on the flight."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "TOO_VERY"],
-    "ua": "Він, мабуть, був занадто злий, щоб щось пояснювати. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been too angry to explain anything.", "He might have been too upset to talk."]
+    "ua": "Він, мабуть, був занадто злий, щоб щось пояснювати.",
+    "en": [
+      "He must have been too angry to explain anything.",
+      "He might have been too upset to talk."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ми, мабуть, пропустили автобус. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["We must have missed the bus.", "We might have been late for the bus."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ми, мабуть, пропустили автобус.",
+    "en": [
+      "We must have missed the bus.",
+      "We might have been late for the bus."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COUNT_UNCOUNT"],
-    "ua": "Вона, мабуть, з'їла весь торт. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have eaten the whole cake.", "She might have finished the cake herself."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "COUNT_UNCOUNT"
+    ],
+    "ua": "Вона, мабуть, з'їла весь торт.",
+    "en": [
+      "She must have eaten the whole cake.",
+      "She might have finished the cake herself."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, забув вимкнути світло. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have forgotten to turn off the light.", "He might have left the light on."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Він, мабуть, забув вимкнути світло.",
+    "en": [
+      "He must have forgotten to turn off the light.",
+      "He might have left the light on."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, бачила його на вечірці. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have seen him at the party.", "She might have met him last night."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона, мабуть, бачила його на вечірці.",
+    "en": [
+      "She must have seen him at the party.",
+      "She might have met him last night."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PREP_PLACE"],
-    "ua": "Він, мабуть, залишив свій гаманець у кафе. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have left his wallet in the café.", "He might have forgotten it there."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PREP_PLACE"],
+    "ua": "Він, мабуть, залишив свій гаманець у кафе.",
+    "en": [
+      "He must have left his wallet in the café.",
+      "He might have forgotten it there."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PREP_TIME"],
-    "ua": "Вона, мабуть, повернулася пізно вночі. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have come back late at night.", "She might have arrived after midnight."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PREP_TIME"],
+    "ua": "Вона, мабуть, повернулася пізно вночі.",
+    "en": [
+      "She must have come back late at night.",
+      "She might have arrived after midnight."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ти, мабуть, бачив це у новинах. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["You must have seen it on the news.", "You might have read about it online."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ти, мабуть, бачив це у новинах.",
+    "en": [
+      "You must have seen it on the news.",
+      "You might have read about it online."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, не почули попередження. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They can’t have heard the warning.", "They might not have noticed it."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вони, мабуть, не почули попередження.",
+    "en": [
+      "They can’t have heard the warning.",
+      "They might not have noticed it."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "THERE_ISNT_ARENT_ANY"],
-    "ua": "Там, мабуть, не було ніякої інформації про це. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There can’t have been any information about it.", "There might not have been any details."]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "THERE_ISNT_ARENT_ANY"
+    ],
+    "ua": "Там, мабуть, не було ніякої інформації про це.",
+    "en": [
+      "There can’t have been any information about it.",
+      "There might not have been any details."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COMPARATIVES"],
-    "ua": "Вона, мабуть, працювала важче за інших. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have worked harder than the others.", "She might have been more dedicated."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "SUPERLATIVES"],
+    "ua": "Він, мабуть, був найкращим студентом у групі.",
+    "en": [
+      "He must have been the best student in the group.",
+      "He might have been the top one in class."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "SUPERLATIVES"],
-    "ua": "Він, мабуть, був найкращим студентом у групі. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have been the best student in the group.", "He might have been the top one in class."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, випадково видалила файл. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have deleted the file by mistake.", "She might have removed it accidentally."]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона, мабуть, випадково видалила файл.",
+    "en": [
+      "She must have deleted the file by mistake.",
+      "She might have removed it accidentally."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "THERE_IS_ARE"],
-    "ua": "Там, мабуть, була черга біля входу. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There must have been a line at the entrance.", "There might have been many people waiting."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, переплутав адресу. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have mixed up the address.", "He might have gone to the wrong place."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "TOO_ENOUGH"],
-    "ua": "Вона, мабуть, була занадто втомлена, щоб йти в кіно. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have been too tired to go to the cinema.", "She might have stayed home because of fatigue."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ми, мабуть, забули ключі вдома. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["We must have left the keys at home.", "We might have forgotten them on the table."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, мав зустріч у той час. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have had a meeting at that time.", "He might have been in an appointment."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ти, мабуть, чув про це раніше. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["You must have heard about it before.", "You might have known it already."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, не зрозуміли питання. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must not have understood the question.", "They might have misheard it."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, не взяла парасолю. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must not have taken an umbrella.", "She might have left it at home."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Хтось, мабуть, залишив двері відчиненими. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Someone must have left the door open.", "Somebody might have forgotten to close it."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "DEMONSTRATIVES"],
-    "ua": "Це, мабуть, було його перше інтерв’ю. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["That must have been his first interview.", "It might have been his first time."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, завжди забував дні народження. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have always forgotten birthdays.", "He might have been forgetful for years."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Вона, мабуть, не прийшла, бо почувалася погано. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must not have come because she felt sick.", "She might have stayed home since she wasn’t well."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COMPARATIVES"],
-    "ua": "Він, мабуть, заплатив більше, ніж очікував. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have paid more than he expected.", "He might have spent extra money."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, не почули сигнал будильника. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must not have heard the alarm.", "They might have slept through it."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Я, мабуть, залишив телефон у сумці. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["I must have left my phone in the bag.", "I might have forgotten it there."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, купила це вчора. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have bought it yesterday.", "She might have picked it up after work."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "THERE_IS_ARE"],
-    "ua": "Там, мабуть, було багато туристів. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["There must have been many tourists.", "There might have been a big crowd."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "COUNT_UNCOUNT"],
-    "ua": "Він, мабуть, випив забагато вина. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have drunk too much wine.", "He might have had one glass too many."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, була розчарована результатом. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have been disappointed with the result.", "She might have felt upset."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він, мабуть, не зрозумів жарту. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must not have understood the joke.", "He might have missed the meaning."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PERSONAL_PRONOUNS"],
-    "ua": "Ми, мабуть, прийшли надто пізно. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["We must have arrived too late.", "We might have missed the beginning."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "PREP_PLACE"],
-    "ua": "Вона, мабуть, залишила парасольку в автобусі. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must have left her umbrella on the bus.", "She might have forgotten it there."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES", "LIKE_ING"],
-    "ua": "Він, мабуть, завжди любив подорожувати сам. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He must have always liked travelling alone.", "He might have preferred solo trips."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона, мабуть, не отримала повідомлення. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She must not have received the message.", "She might have missed the email."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вони, мабуть, уже бачили цей фільм. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They must have seen this movie already.", "They might have watched it before."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він міг зробити це навмисно? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could he have done it on purpose?", "Might he have done it intentionally?"]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PERSONAL_PRONOUNS"],
-    "ua": "Вона могла забути про зустріч? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could she have forgotten about the meeting?", "Might she have missed it?"]
+    "ua": "Там, мабуть, була черга біля входу.",
+    "en": [
+      "There must have been a line at the entrance.",
+      "There might have been many people waiting."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Вони могли вже піти, коли ти прийшов? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could they have left when you arrived?", "Might they have gone before you came?"]
+    "ua": "Він, мабуть, переплутав адресу.",
+    "en": [
+      "He must have mixed up the address.",
+      "He might have gone to the wrong place."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Ми могли зробити помилку у звіті? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could we have made a mistake in the report?", "Might we have been wrong in the report?"]
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "TOO_VERY"
+    ],
+    "ua": "Вона, мабуть, була занадто втомлена, щоб йти в кіно.",
+    "en": [
+      "She must have been too tired to go to the cinema.",
+      "She might have stayed home because of fatigue."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ми, мабуть, забули ключі вдома.",
+    "en": [
+      "We must have left the keys at home.",
+      "We might have forgotten them on the table."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він міг бачити тебе вчора в супермаркеті? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could he have seen you at the supermarket yesterday?", "Might he have noticed you there?"]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ти, мабуть, чув про це раніше.",
+    "en": [
+      "You must have heard about it before.",
+      "You might have known it already."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вони, мабуть, не зрозуміли питання.",
+    "en": [
+      "They must not have understood the question.",
+      "They might have misheard it."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона, мабуть, не взяла парасолю.",
+    "en": [
+      "She must not have taken an umbrella.",
+      "She might have left it at home."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Хтось, мабуть, залишив двері відчиненими.",
+    "en": [
+      "Someone must have left the door open.",
+      "Somebody might have forgotten to close it."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "DEMONSTRATIVES"],
+    "ua": "Це, мабуть, було його перше інтерв’ю.",
+    "en": [
+      "That must have been his first interview.",
+      "It might have been his first time."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": [
+      "ADVANCED_MODALS_OF_DEDUCTION",
+      "COMPARATIVES"
+    ],
+    "ua": "Він, мабуть, заплатив більше, ніж очікував.",
+    "en": [
+      "He must have paid more than he expected.",
+      "He might have spent extra money."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Я, мабуть, залишив телефон у сумці.",
+    "en": [
+      "I must have left my phone in the bag.",
+      "I might have forgotten it there."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона, мабуть, купила це вчора.",
+    "en": [
+      "She must have bought it yesterday.",
+      "She might have picked it up after work."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "THERE_IS_ARE"],
-    "ua": "Там могло бути більше людей, ніж ми бачили? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could there have been more people than we saw?", "Might there have been a bigger crowd?"]
+    "ua": "Там, мабуть, було багато туристів.",
+    "en": [
+      "There must have been many tourists.",
+      "There might have been a big crowd."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "COUNT_UNCOUNT"],
+    "ua": "Він, мабуть, випив забагато вина.",
+    "en": [
+      "He must have drunk too much wine.",
+      "He might have had one glass too many."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він міг бути вдома, коли це сталося? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could he have been at home when it happened?", "Might he have been there then?"]
+    "ua": "Він, мабуть, не зрозумів жарту.",
+    "en": [
+      "He must not have understood the joke.",
+      "He might have missed the meaning."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ми, мабуть, прийшли надто пізно.",
+    "en": [
+      "We must have arrived too late.",
+      "We might have missed the beginning."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PREP_PLACE"],
+    "ua": "Вона, мабуть, залишила парасольку в автобусі.",
+    "en": [
+      "She must have left her umbrella on the bus.",
+      "She might have forgotten it there."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Вона могла щось приховувати від нас? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could she have hidden something from us?", "Might she have kept something secret?"]
+    "ua": "Вона, мабуть, не отримала повідомлення.",
+    "en": [
+      "She must not have received the message.",
+      "She might have missed the email."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він міг сказати правду після всього цього? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could he have told the truth after all that?", "Might he have been honest at last?"]
+    "ua": "Вони, мабуть, уже бачили цей фільм.",
+    "en": [
+      "They must have seen this movie already.",
+      "They might have watched it before."
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Хтось міг забрати документи з офісу? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could someone have taken the documents from the office?", "Might somebody have removed them?"]
+    "ua": "Він міг зробити це навмисно?",
+    "en": [
+      "Could he have done it on purpose?",
+      "Might he have done it intentionally?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він не міг не знати про це. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He can’t not have known about it.", "He couldn’t have been unaware of it."]
+    "ua": "Вона могла забути про зустріч?",
+    "en": [
+      "Could she have forgotten about the meeting?",
+      "Might she have missed it?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона не могла зробити таку помилку. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She can’t have made such a mistake.", "She couldn’t have done that error."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Вони не могли так швидко приїхати. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They can’t have arrived that fast.", "They couldn’t have come so soon."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Ти не міг бачити привид. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["You can’t have seen a ghost.", "You couldn’t have imagined that."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PERSONAL_PRONOUNS"],
-    "ua": "Ми не могли забути про це запрошення. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["We can’t have forgotten about the invitation.", "We couldn’t have ignored it."]
-  },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Вона не могла не знати його раніше. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She can’t have not known him before.", "She couldn’t have met him for the first time."]
+    "ua": "Вони могли вже піти, коли ти прийшов?",
+    "en": [
+      "Could they have left when you arrived?",
+      "Might they have gone before you came?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він не міг залишити двері відчиненими. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He can’t have left the door open.", "He couldn’t have forgotten to close it."]
+    "ua": "Ми могли зробити помилку у звіті?",
+    "en": [
+      "Could we have made a mistake in the report?",
+      "Might we have been wrong in the report?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Вони не могли пропустити цей шанс. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They can’t have missed this chance.", "They couldn’t have ignored the opportunity."]
+    "ua": "Він міг бачити тебе вчора в супермаркеті?",
+    "en": [
+      "Could he have seen you at the supermarket yesterday?",
+      "Might he have noticed you there?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Він не міг отримати такого листа. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He can’t have received that letter.", "He couldn’t have got such an email."]
-  },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Вона не могла не почути, як її покликали. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["She can’t have failed to hear her name.", "She couldn’t have missed that call."]
+    "ua": "Він міг бути вдома, коли це сталося?",
+    "en": [
+      "Could he have been at home when it happened?",
+      "Might he have been there then?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
   },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона могла щось приховувати від нас?",
+    "en": [
+      "Could she have hidden something from us?",
+      "Might she have kept something secret?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+  
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Хтось міг забрати документи з офісу?",
+    "en": [
+      "Could someone have taken the documents from the office?",
+      "Might somebody have removed them?"
+    ],
+    "hint": "use MODAL + HAVE + PAST PARTICIPLE"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Він не міг не знати про це.",
+    "en": [
+      "He can’t have been unaware of it.",
+      "He must have known about it."
+    ],
+    "hint": "use CAN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона не могла зробити таку помилку.",
+    "en": [
+      "She can’t have made such a mistake.",
+      "She couldn’t have made that error."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вони не могли так швидко приїхати.",
+    "en": [
+      "They can’t have arrived that fast.",
+      "They couldn’t have come so soon."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ти не міг бачити привида.",
+    "en": [
+      "You can’t have seen a ghost.",
+      "You couldn’t have seen a ghost."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Ми не могли забути про це запрошення.",
+    "en": [
+      "We can’t have forgotten about the invitation.",
+      "We couldn’t have ignored it."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона не могла не знати його раніше.",
+    "en": [
+      "She can’t have been unfamiliar with him before.",
+      "She couldn’t have met him for the first time."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Він не міг залишити двері відчиненими.",
+    "en": [
+      "He can’t have left the door open.",
+      "He couldn’t have forgotten to close it."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вони не могли пропустити цей шанс.",
+    "en": [
+      "They can’t have missed this chance.",
+      "They couldn’t have ignored the opportunity."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Він не міг отримати такого листа.",
+    "en": [
+      "He can’t have received that letter.",
+      "He couldn’t have got such an email."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона не могла не почути, як її покликали.",
+    "en": [
+      "She can’t have failed to hear her name.",
+      "She couldn’t have missed that call."
+    ],
+    "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+  },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Чому він міг піти, не сказавши ні слова? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Why could he have left without saying a word?", "Why might he have walked away silently?"]
+    "ua": "Чому він пішов, не сказавши ні слова?",
+    "en": [
+      "Why might he have left without saying a word?",
+      "Why might he have walked away silently?"
+    ],
+    "hint": "use MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Хто міг відкрити вікно посеред ночі? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Who could have opened the window in the middle of the night?", "Who might have done it?"]
+    "ua": "Хто міг відкрити вікно посеред ночі?",
+    "en": [
+      "Who could have opened the window in the middle of the night?",
+      "Who might have done it?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Куди вона могла зникнути після вечірки? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Where could she have gone after the party?", "Where might she have disappeared?"]
+    "ua": "Куди вона могла зникнути після вечірки?",
+    "en": [
+      "Where could she have gone after the party?",
+      "Where might she have disappeared?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Коли вони могли дізнатися про це? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["When could they have found out about it?", "When might they have learned the news?"]
+    "ua": "Коли вони могли дізнатися про це?",
+    "en": [
+      "When could they have found out about it?",
+      "When might they have learned the news?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q", "PERSONAL_PRONOUNS"],
-    "ua": "Як ти міг забути її ім’я? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["How could you have forgotten her name?", "How might you have mixed up her name?"]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Що він міг сказати, щоб її образити? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["What could he have said to offend her?", "What might he have done to upset her?"]
-  },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Хто міг бути з ним у той момент? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Who could have been with him at that moment?", "Who might have been there too?"]
+    "ua": "Як ти міг забути її ім’я?",
+    "en": [
+      "How could you have forgotten her name?",
+      "How might you have mixed up her name?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
+
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q", "THERE_IS_ARE"],
-    "ua": "Чому там могло бути так темно? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Why could there have been so much darkness?", "Why might there have been no light?"]
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "ua": "Що він міг сказати, щоб її образити?",
+    "en": [
+      "What could he have said to offend her?",
+      "What might he have done to upset her?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "ua": "Хто міг бути з ним у той момент?",
+    "en": [
+      "Who could have been with him at that moment?",
+      "Who might have been there too?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+  },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q", "ARTICLES"],
-    "ua": "Хто міг розбити цю вазу? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Who could have broken the vase?", "Who might have dropped it?"]
+    "ua": "Хто міг розбити цю вазу?",
+    "en": [
+      "Who could have broken the vase?",
+      "Who might have dropped it?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Чому вона могла піти без прощання? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Why could she have left without saying goodbye?", "Why might she have gone so suddenly?"]
+    "ua": "Як він міг не помітити помилку?",
+    "en": [
+      "How could he have missed the mistake?",
+      "How might he have overlooked the error?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
-    "ua": "Як він міг не помітити помилку? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["How could he have missed the mistake?", "How might he have overlooked the error?"]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "PERSONAL_PRONOUNS"],
-    "ua": "Я не міг залишити документи вдома. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["I can’t have left the documents at home.", "I couldn’t have forgotten them."]
-  },
+  
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Вона могла виграти конкурс? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could she have won the competition?", "Might she have taken first place?"]
+    "ua": "Вона могла виграти конкурс?",
+    "en": [
+      "Could she have won the competition?",
+      "Might she have taken first place?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE"
   },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він міг сказати це їй прямо? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could he have told her directly?", "Might he have confessed it himself?"]
+    "ua": "Він міг сказати це їй прямо?",
+    "en": [
+      "Could he have told her directly?",
+      "Might he have confessed it himself?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE"
   },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "NEGATION_DONT_DOESNT"],
-    "ua": "Вони не могли цього планувати. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["They can’t have planned this.", "They couldn’t have intended it."]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Де він міг бути весь цей час? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Where could he have been all this time?", "Where might he have stayed so long?"]
-  },
-  {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
-    "ua": "Вона могла зробити це випадково? (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["Could she have done it by accident?", "Might she have made that mistake unintentionally?"]
-  },
+
   {
     "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
-    "ua": "Він не міг не почути цю новину. (use MODAL + HAVE + PAST PARTICIPLE)",
-    "en": ["He can’t have failed to hear the news.", "He couldn’t have missed that information."]
+    "ua": "Де він міг бути весь цей час?",
+    "en": [
+      "Where could he have been all this time?",
+      "Where might he have stayed so long?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+  },
+
+  {
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+    "ua": "Вона могла зробити це випадково?",
+    "en": [
+      "Could she have done it by accident?",
+      "Might she have made that mistake unintentionally?"
+    ],
+    "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE"
   }
 ] }

@@ -34,7 +34,6 @@
       "If we had brought an umbrella, we would not have gotten wet."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я побачив тебе, я б привітався.",
@@ -71,7 +70,6 @@
       "If we had saved more money, we would have bought a bigger house."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я знав правду, я б йому не повірив.",
@@ -88,9 +86,9 @@
   },
   {
     "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони послухали пораду, вони б не зазнали невдачі.",
+    "ua": "Якби вони прислухалися до моєї поради, вони б не зазнали невдачі.",
     "en": [
-      "If they had listened to the advice, they would not have failed."
+      "If they had listened to my advice, they wouldn’t have failed."
     ]
   },
   {
@@ -107,7 +105,6 @@
       "If we had locked the door, the bike would not have been stolen."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я прокинувся раніше, я б не запізнився.",
@@ -143,7 +140,6 @@
       "If we had taken a taxi, we would have arrived on time."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я згадав про твій день народження, я б купив подарунок.",
@@ -180,7 +176,6 @@
       "If I had seen the sign, I would not have parked there."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби вона вивчила французьку, вона б зрозуміла фільм.",
@@ -210,7 +205,6 @@
       "If we had taken the map, we would not have gotten lost."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я зберіг файл, я б не втратив роботу.",
@@ -247,7 +241,6 @@
       "If we had listened to you, things would have been different."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я купив квиток, я б пішов на концерт.",
@@ -283,7 +276,6 @@
       "If we had rehearsed more, the show would have been perfect."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я перевірив електронну пошту, я б відповів раніше.",
@@ -319,7 +311,6 @@
       "If we had packed warmer clothes, we would not have been cold."
     ]
   },
-
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби я запитав дорогу, я б не заплутався.",
@@ -328,14 +319,14 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL", "PASSIVE_VOICE_ALL_TENSES"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби вона зробила резервну копію фото, вона б їх не втратила.",
     "en": [
       "If she had backed up the photos, she would not have lost them."
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES", "ADVERBS_OF_MANNER"],
     "ua": "Якби вони навчили собаку, він би поводився краще.",
     "en": [
       "If they had trained the dog, it would have behaved better."
@@ -365,28 +356,28 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби вона побачила попередження, вона була б обережнішою.",
     "en": [
       "If she had seen the warning, she would have been careful."
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ADVERBS_OF_MANNER"],
     "ua": "Якби вони їхали швидше, вони б приїхали раніше.",
     "en": [
       "If they had driven faster, they would have arrived earlier."
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "COUNT_UNCOUNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якби він купив страховку, він би не заплатив так багато.",
     "en": [
       "If he had bought insurance, he would not have paid so much."
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES", "COUNT_UNCOUNT"],
     "ua": "Якби ми перевірили ціну, ми б заощадили гроші.",
     "en": [
       "If we had checked the price, we would have saved money."
@@ -394,28 +385,28 @@
   },
 
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби я впізнав пісню, я б підспівав.",
     "en": [
       "If I had recognized the song, I would have sung along."
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Якби вони частіше навідували нас, ми б підтримували зв’язок.",
     "en": [
       "If they had visited more often, we would have stayed in touch."
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби він відреагував раніше, він би уникнув аварії.",
     "en": [
       "If he had reacted sooner, he would have avoided the accident."
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби ми зробили фото, ми б пам’ятали той момент.",
     "en": [
       "If we had taken a photo, we would have remembered the moment."
@@ -430,7 +421,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ADVERBS_OF_MANNER"],
     "ua": "Якби вона принесла свої нотатки, вона б відповіла правильно.",
     "en": [
       "If she had brought her notes, she would have answered correctly."
@@ -438,7 +429,7 @@
   },
 
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ADVERBS_OF_MANNER", "ARTICLES"],
     "ua": "Якби вони краще спланували, поїздка пройшла б гладко.",
     "en": [
       "If they had planned better, the trip would have gone smoothly.",
@@ -446,13 +437,14 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES", "ADVERBS_OF_MANNER"],
     "ua": "Якби він дотримувався рецепту, торт був би смачнішим.",
     "en": [
       "If he had followed the recipe, the cake would have tasted better.",
       "If he had followed the recipe, the cake would have turned out better."
     ]
   },
+
   {
     "rules": ["THIRD_CONDITIONAL"],
     "ua": "Якби ми лягли спати раніше, ми б не були стомлені.",
@@ -468,7 +460,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби вона зберегла чек, вона б повернула покупку.",
     "en": [
       "If she had kept the receipt, she would have returned it.",
@@ -516,7 +508,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "COUNT_UNCOUNT"],
     "ua": "Якби вони уважніше слухали, вони б не зробили помилок.",
     "en": [
       "If they had listened carefully, they would not have made mistakes.",
@@ -531,7 +523,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби ми зробили фото, ми б ними поділилися.",
     "en": [
       "If we had taken photos, we would have shared them.",
@@ -540,7 +532,7 @@
   },
 
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "COUNT_UNCOUNT"],
     "ua": "Якби я купив більше перекусів, усі були б щасливі.",
     "en": [
       "If I had bought more snacks, everyone would have been happy."
@@ -554,7 +546,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби вони прибрали будинок, він би виглядав гарно.",
     "en": [
       "If they had cleaned the house, it would have looked nice.",
@@ -621,7 +613,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби вона вдягла пальто, вона б не застудилася.",
     "en": [
       "If she had worn a coat, she would not have caught a cold.",
@@ -636,7 +628,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби ми знали відповідь, ми б підняли руки.",
     "en": [
       "If we had known the answer, we would have raised our hands."
@@ -688,7 +680,7 @@
     ]
   },
   {
-    "rules": ["THIRD_CONDITIONAL"],
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
     "ua": "Якби вона згадала гаманець, вона б купила це.",
     "en": [
       "If she had remembered her wallet, she would have bought it."
@@ -713,6 +705,118 @@
     "ua": "Якби ми спробували ще раз, ми б досягли успіху.",
     "en": [
       "If we had tried one more time, we would have succeeded."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "TOO_VERY"],
+    "ua": ["Якби вона не була такою зайнятою, вона б допомогла нам."],
+    "en": [
+      "If she hadn’t been so busy, she would have helped us.",
+      "Had she not been so busy, she would have helped us."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "PREP_TIME"],
+    "ua": ["Якби ми приїхали вранці, ми б застали його вдома."],
+    "en": [
+      "If we had arrived in the morning, we would have found him at home.",
+      "Had we arrived in the morning, we would have found him at home."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
+    "ua": ["Якби він купив квиток, він би потрапив у театр."],
+    "en": [
+      "If he had bought the ticket, he would have gone to the theatre.",
+      "Had he bought the ticket, he would have gone to the theatre."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "PREP_DIRECTION"],
+    "ua": ["Якби ми поїхали до Німеччини, ми б зустріли старих друзів."],
+    "en": [
+      "If we had gone to Germany, we would have met our old friends.",
+      "Had we gone to Germany, we would have met our old friends."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "PREP_PLACE"],
+    "ua": ["Якби вони залишилися вдома, вони б уникнули неприємностей."],
+    "en": [
+      "If they had stayed at home, they would have avoided trouble.",
+      "Had they stayed at home, they would have avoided trouble."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL"],
+    "ua": ["Якби я не запізнився, я б зустрів її."],
+    "en": [
+      "If I hadn’t been late, I would have met her.",
+      "Had I not been late, I would have met her."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL"],
+    "ua": ["Якби він не був таким повільним, він би встиг на потяг."],
+    "en": [
+      "If he hadn’t been so slow, he would have caught the train.",
+      "Had he not been so slow, he would have caught the train."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "PREP_TIME"],
+    "ua": ["Якби вона прийшла вчасно, ми б не чекали так довго."],
+    "en": [
+      "If she had come on time, we wouldn’t have waited so long.",
+      "Had she come on time, we wouldn’t have waited so long."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
+    "ua": ["Якби він купив цю книгу, він би дізнався більше про океан."],
+    "en": [
+      "If he had bought this book, he would have learned more about the ocean.",
+      "Had he bought this book, he would have learned more about the ocean."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "PREP_PLACE"],
+    "ua": ["Якби ми залишилися на площі, ми б побачили парад."],
+    "en": [
+      "If we had stayed in the square, we would have seen the parade.",
+      "Had we stayed in the square, we would have seen the parade."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "PASSIVE_VOICE_ALL_TENSES"],
+    "ua": ["Якби помилка була знайдена, її б виправили."],
+    "en": [
+      "If the error had been found, it would have been corrected.",
+      "Had the error been found, it would have been corrected."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL"],
+    "ua": ["Якби я не відклав цю задачу, я б уже завершив роботу."],
+    "en": [
+      "If I hadn’t put off this task, I would have already finished the work.",
+      "Had I not put off this task, I would have already finished the work."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "PREP_DIRECTION"],
+    "ua": ["Якби вони поїхали до Лісабона, вони б побачили океан."],
+    "en": [
+      "If they had gone to Lisbon, they would have seen the ocean.",
+      "Had they gone to Lisbon, they would have seen the ocean."
+    ]
+  },
+  {
+    "rules": ["THIRD_CONDITIONAL", "POSSESSIVE_S"],
+    "ua": ["Якби я скористався цією підказкою, я б відповів правильно."],
+    "en": [
+      "If I had used this hint, I would have answered correctly.",
+      "Had I used this hint, I would have answered correctly."
     ]
   }
 ] }
