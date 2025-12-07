@@ -230,7 +230,7 @@
     "en": ["Those movies were boring.", "Those films were boring."]
   },
   {
-    "rules": ["DEMONSTRATIVES", "TO_BE", "BE_FROM"],
+    "rules": ["DEMONSTRATIVES", "TO_BE", "BE_FROM_NATIONALITY"],
     "ua": "Ці хлопці з мого класу.",
     "en": ["These boys are from my class."]
   },
@@ -320,7 +320,7 @@
     "en": ["That is a good plan.", "That's a good plan."]
   },
   {
-    "rules": ["DEMONSTRATIVES", "TO_BE", "BE_FROM"],
+    "rules": ["DEMONSTRATIVES", "TO_BE", "BE_FROM_NATIONALITY"],
     "ua": "Ці люди з Італії.",
     "en": ["These people are from Italy."]
   },

@@ -47,8 +47,8 @@ export const translationsController = {
 
                 const samples = shuffleBySeed(ALL_RULES_SAMPLES[selectedRule], seed ?? 1);
                 const skipRaw = typeof skip === "string" ? skip : "0";
-                const skipNumber = Math.floor(Number(skipRaw || "0") % samples.length);
-                const sample = samples[skipNumber];
+                const adjustedSkip = Math.floor(Number(skipRaw || "0") % samples.length);
+                const sample = samples[adjustedSkip];
 
                 return res.json({
                     rules: sample.rules,
@@ -57,7 +57,7 @@ export const translationsController = {
                     correctAnswer: "",
                     tipIfWrong: "",
                     score: 0,
-                    skip: skipNumber + 1,
+                    skip: adjustedSkip + 1,
                 });
             }
 
@@ -108,7 +108,8 @@ export const translationsController = {
                     if (ruleSamples.length === 0) break;
 
                     const shuffled = shuffleBySeed(ruleSamples, seed ?? 1);
-                    const nextSample = shuffled[newSkip];
+                    const adjustedSkip = Math.floor(Number(currentSkip + 1 || "0") % shuffled.length);
+                    const nextSample = shuffled[adjustedSkip];
 
                     if (nextSample) {
                         newRules = nextSample.rules;
@@ -119,8 +120,8 @@ export const translationsController = {
                 }
             }
 
-            // запис використання
-            await recordTranslationUsage(accountId);
+            if (!skipCoach)
+                await recordTranslationUsage(accountId);
 
             return res.json({
                 rules: newRules,

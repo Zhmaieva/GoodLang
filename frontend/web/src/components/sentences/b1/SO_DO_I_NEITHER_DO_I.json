@@ -90,7 +90,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "BE_FROM", "TO_BE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "BE_FROM_NATIONALITY", "TO_BE"],
     "ua": ["Я з України. — Я теж."],
     "en": [
       "I’m from Ukraine. — So am I.",

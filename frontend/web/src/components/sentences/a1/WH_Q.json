@@ -206,7 +206,7 @@
       "en": ["What will you do if you leave early?"]
     },
     {
-      "rules": ["WH_Q", "BE_FROM", "TO_BE"],
+      "rules": ["WH_Q", "BE_FROM_NATIONALITY", "TO_BE"],
       "ua": "Звідки ти?",
       "en": ["Where are you from?"]
     },

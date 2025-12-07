@@ -4216,50 +4216,6 @@ export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
 };
 
 /* ============================
-   B2 — INVERSION AFTER NEGATIVE ADVERBIALS
-============================ */
-export const RULE_PAGE_INVERSION_AFTER_NEGATIVE_ADVERBIALS = {
-    id: "INVERSION_AFTER_NEGATIVE_ADVERBIALS",
-    title: "Inversion after negative adverbials",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що таке інверсія після негативних прислівників",
-            html: "Це зміна порядку слів (як у питанні) після виразів типу <strong>never, rarely, hardly ever, not only</strong>, щоб зробити фразу більш формальною / емоційною."
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
-            badges: [
-                "<strong>Never have I seen such a film.</strong>",
-                "<strong>Rarely do we go out.</strong>",
-                "<strong>Hardly had he arrived when it started to rain.</strong>"
-            ],
-            hint: "Після негативного/обмежувального прислівника → <strong>допоміжне дієслово + підмет</strong>."
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["Never have I been so surprised.", "Ніколи я не був таким здивованим."],
-                ["Seldom do they agree on anything.", "Рідко вони в чомусь погоджуються."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: [
-                "❌ Звичайний порядок слів після негативного прислівника в формальному стилі.",
-                "❌ Інверсія в розмовних, простих реченнях без потреби."
-            ]
-        },
-        { type: "trainer", title: "Міні-тренажер (Inversion after negative adverbials)" }
-    ]
-};
-
-
-/* ============================
    NOT ONLY … BUT ALSO
 ============================ */
 export const RULE_PAGE_NOT_ONLY_BUT_ALSO = {
@@ -4633,48 +4589,6 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
     ]
 };
 
-
-/* ============================
-   SO THAT / IN ORDER THAT
-============================ */
-export const RULE_PAGE_SO_THAT_IN_ORDER_THAT = {
-    id: "SO_THAT_IN_ORDER_THAT",
-    title: "So that / in order that",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що означають so that / in order that",
-            html: "Більш формальні варіанти для вираження мети: <strong>щоб</strong> + ціле речення."
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
-            badges: [
-                "<strong>so that + clause</strong>",
-                "<strong>in order that + clause</strong> (дуже формально)",
-                "Часто з модальними: <strong>can, could, will, would</strong>"
-            ],
-            hint: "Плутай їх із <strong>in order to + V</strong> (інфінітив, без підмета)."
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["He spoke slowly so that everyone could understand.", "Він говорив повільно, щоб усі могли зрозуміти."],
-                ["They left early in order that they would arrive on time.", "Вони пішли рано, щоб прибути вчасно."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Непотрібне дублювання: <em>in order that to</em>."]
-        },
-        { type: "trainer", title: "Міні-тренажер (So that / In order that)" }
-    ]
-};
-
-
 /* ============================
    WOULD RATHER / PREFER
 ============================ */
@@ -4833,47 +4747,6 @@ export const RULE_PAGE_COMPLEX_NOUN_PHRASES = {
         { type: "trainer", title: "Міні-тренажер (Complex noun phrases)" }
     ]
 };
-
-
-/* ============================
-   EMPHATIC DO
-============================ */
-export const RULE_PAGE_EMPHATIC_DO = {
-    id: "EMPHATIC_DO",
-    title: "Emphatic do",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що таке emphatic do",
-            html: "Використовуємо <strong>do/does/did</strong> у ствердженнях, щоб підкреслити або заперечити щось."
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
-            badges: [
-                "<strong>I do understand.</strong>",
-                "<strong>He did call you.</strong>"
-            ],
-            hint: "Наголос голосом + <strong>do/does/did</strong> → підсилення."
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["I do like this place.", "Мені справді тут подобається."],
-                ["He did try to help.", "Він справді намагався допомогти."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Подвійне do: <em>He did called</em> → <strong>He did call</strong>."]
-        },
-        { type: "trainer", title: "Міні-тренажер (Emphatic do)" }
-    ]
-};
-
 
 /* ============================
    INDIRECT SPEECH QUESTION FORMS

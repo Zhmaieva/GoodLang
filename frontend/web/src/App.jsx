@@ -96,7 +96,6 @@ import {
     RULE_PAGE_ENOUGH_TOO_MUCH_MANY,
 
     // --- B2 ---
-    RULE_PAGE_INVERSION_AFTER_NEGATIVE_ADVERBIALS,
     RULE_PAGE_NOT_ONLY_BUT_ALSO,
     RULE_PAGE_CLEFT_SENTENCES,
     RULE_PAGE_MIXED_CONDITIONALS,
@@ -106,12 +105,10 @@ import {
     RULE_PAGE_REDUCED_RELATIVE_CLAUSES,
     RULE_PAGE_COMPLEX_PREPOSITIONS,
     RULE_PAGE_DESPITE_IN_SPITE_OF_ING,
-    RULE_PAGE_SO_THAT_IN_ORDER_THAT,
     RULE_PAGE_WOULD_RATHER_PREFER,
     RULE_PAGE_HAD_BETTER,
     RULE_PAGE_ADVANCED_MODALS_OF_DEDUCTION,
     RULE_PAGE_COMPLEX_NOUN_PHRASES,
-    RULE_PAGE_EMPHATIC_DO,
     RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS,
     RULE_PAGE_COMPOUND_SENTENCES,
     RULE_PAGE_COMPLEX_SENTENCES,
@@ -255,7 +252,6 @@ export default function App() {
                 <Route path="/rule/ENOUGH_TOO_MUCH_MANY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ENOUGH_TOO_MUCH_MANY} />} />
 
                 {/* B2 RULES */}
-                <Route path="/rule/INVERSION_AFTER_NEGATIVE_ADVERBIALS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_INVERSION_AFTER_NEGATIVE_ADVERBIALS} />} />
                 <Route path="/rule/NOT_ONLY_BUT_ALSO" element={<RulePage theme={ruleTheme} data={RULE_PAGE_NOT_ONLY_BUT_ALSO} />} />
                 <Route path="/rule/CLEFT_SENTENCES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_CLEFT_SENTENCES} />} />
                 <Route path="/rule/MIXED_CONDITIONALS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_MIXED_CONDITIONALS} />} />
@@ -265,12 +261,10 @@ export default function App() {
                 <Route path="/rule/REDUCED_RELATIVE_CLAUSES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_REDUCED_RELATIVE_CLAUSES} />} />
                 <Route path="/rule/COMPLEX_PREPOSITIONS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COMPLEX_PREPOSITIONS} />} />
                 <Route path="/rule/DESPITE_IN_SPITE_OF_ING" element={<RulePage theme={ruleTheme} data={RULE_PAGE_DESPITE_IN_SPITE_OF_ING} />} />
-                <Route path="/rule/SO_THAT_IN_ORDER_THAT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_SO_THAT_IN_ORDER_THAT} />} />
                 <Route path="/rule/WOULD_RATHER_PREFER" element={<RulePage theme={ruleTheme} data={RULE_PAGE_WOULD_RATHER_PREFER} />} />
                 <Route path="/rule/HAD_BETTER" element={<RulePage theme={ruleTheme} data={RULE_PAGE_HAD_BETTER} />} />
                 <Route path="/rule/ADVANCED_MODALS_OF_DEDUCTION" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ADVANCED_MODALS_OF_DEDUCTION} />} />
                 <Route path="/rule/COMPLEX_NOUN_PHRASES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COMPLEX_NOUN_PHRASES} />} />
-                <Route path="/rule/EMPHATIC_DO" element={<RulePage theme={ruleTheme} data={RULE_PAGE_EMPHATIC_DO} />} />
                 <Route path="/rule/INDIRECT_SPEECH_QUESTION_FORMS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS} />} />
                 <Route path="/rule/COMPOUND_SENTENCES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COMPOUND_SENTENCES} />} />
                 <Route path="/rule/COMPLEX_SENTENCES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COMPLEX_SENTENCES} />} />

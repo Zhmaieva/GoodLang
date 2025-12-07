@@ -17,7 +17,7 @@ export const GrammarRule = Object.freeze({
     THERE_ISNT_ARENT_ANY: "THERE_ISNT_ARENT_ANY",
     COUNT_UNCOUNT: "COUNT_UNCOUNT",
     LIKE_ING: "LIKE_ING",
-    BE_FROM: "BE_FROM",
+    BE_FROM_NATIONALITY: "BE_FROM_NATIONALITY",
     PRESENT_CONT_NOW: "PRESENT_CONT_NOW",
     PREP_PLACE: "PREP_PLACE",
     PREP_TIME: "PREP_TIME",
@@ -87,7 +87,6 @@ export const GrammarRule = Object.freeze({
     ENOUGH_TOO_MUCH_MANY: "ENOUGH_TOO_MUCH_MANY",
 
     // --- B2 ---
-    INVERSION_AFTER_NEGATIVE_ADVERBIALS: "INVERSION_AFTER_NEGATIVE_ADVERBIALS",
     CLEFT_SENTENCES: "CLEFT_SENTENCES",
     MIXED_CONDITIONALS: "MIXED_CONDITIONALS",
     THIRD_CONDITIONAL_VARIATIONS: "THIRD_CONDITIONAL_VARIATIONS",
@@ -96,12 +95,10 @@ export const GrammarRule = Object.freeze({
     REDUCED_RELATIVE_CLAUSES: "REDUCED_RELATIVE_CLAUSES",
     COMPLEX_PREPOSITIONS: "COMPLEX_PREPOSITIONS",
     DESPITE_IN_SPITE_OF_ING: "DESPITE_IN_SPITE_OF_ING",
-    SO_THAT: "SO_THAT",
     WOULD_RATHER_PREFER: "WOULD_RATHER_PREFER",
     HAD_BETTER: "HAD_BETTER",
     ADVANCED_MODALS_OF_DEDUCTION: "ADVANCED_MODALS_OF_DEDUCTION",
     COMPLEX_NOUN_PHRASES: "COMPLEX_NOUN_PHRASES",
-    EMPHATIC_DO: "EMPHATIC_DO",
     INDIRECT_SPEECH_QUESTION_FORMS: "INDIRECT_SPEECH_QUESTION_FORMS"
 });
 
@@ -125,7 +122,7 @@ export const RULE_LABELS = Object.freeze({
     THERE_ISNT_ARENT_ANY: "There isn’t / aren’t any",
     COUNT_UNCOUNT: "Countable / uncountable nouns",
     LIKE_ING: "Like + -ing",
-    BE_FROM: "Be from (nationality)",
+    BE_FROM_NATIONALITY: "Be from (nationality)",
     PRESENT_CONT_NOW: "Present Continuous (now)",
     PREP_PLACE: "Prepositions of place (in/on/under/next to)",
     PREP_TIME: "Prepositions of time (in/on/at)",
@@ -196,7 +193,6 @@ export const RULE_LABELS = Object.freeze({
     ENOUGH_TOO_MUCH_MANY: "Enough / too much / too many",
 
     // B2
-    INVERSION_AFTER_NEGATIVE_ADVERBIALS: "Inversion after negative adverbials",
     CLEFT_SENTENCES: "Cleft sentences (It is / What … is …)",
     MIXED_CONDITIONALS: "Mixed conditionals",
     THIRD_CONDITIONAL_VARIATIONS: "Third conditional variations",
@@ -205,12 +201,10 @@ export const RULE_LABELS = Object.freeze({
     REDUCED_RELATIVE_CLAUSES: "Reduced relative clauses",
     COMPLEX_PREPOSITIONS: "Complex prepositions (due to, thanks to)",
     DESPITE_IN_SPITE_OF_ING: "Despite / in spite of + -ing",
-    SO_THAT: "So that / in order that",
     WOULD_RATHER_PREFER: "Would rather / prefer",
     HAD_BETTER: "Had better + verb",
     ADVANCED_MODALS_OF_DEDUCTION: "Advanced modals of deduction",
     COMPLEX_NOUN_PHRASES: "Complex noun phrases",
-    EMPHATIC_DO: "Emphatic do",
     INDIRECT_SPEECH_QUESTION_FORMS: "Question forms in indirect speech",
     COMPOUND_SENTENCES: "Compound sentences",
     COMPLEX_SENTENCES: "Complex sentences",
@@ -244,7 +238,7 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.THERE_ISNT_ARENT_ANY,
         GrammarRule.COUNT_UNCOUNT,
         GrammarRule.LIKE_ING,
-        GrammarRule.BE_FROM,
+        GrammarRule.BE_FROM_NATIONALITY,
         GrammarRule.PRESENT_CONT_NOW,
         GrammarRule.PREP_PLACE,
         GrammarRule.PREP_TIME,
@@ -314,7 +308,6 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.ENOUGH_TOO_MUCH_MANY,
     ],
     B2: [
-        GrammarRule.INVERSION_AFTER_NEGATIVE_ADVERBIALS,
         GrammarRule.CLEFT_SENTENCES,
         GrammarRule.MIXED_CONDITIONALS,
         GrammarRule.THIRD_CONDITIONAL_VARIATIONS,
@@ -323,12 +316,10 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.REDUCED_RELATIVE_CLAUSES,
         GrammarRule.COMPLEX_PREPOSITIONS,
         GrammarRule.DESPITE_IN_SPITE_OF_ING,
-        GrammarRule.SO_THAT,
         GrammarRule.WOULD_RATHER_PREFER,
         GrammarRule.HAD_BETTER,
         GrammarRule.ADVANCED_MODALS_OF_DEDUCTION,
         GrammarRule.COMPLEX_NOUN_PHRASES,
-        GrammarRule.EMPHATIC_DO,
         GrammarRule.INDIRECT_SPEECH_QUESTION_FORMS,
     ],
 });
