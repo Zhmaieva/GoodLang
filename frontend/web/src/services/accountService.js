@@ -21,6 +21,5 @@ export async function getToken() {
 }
 
 /* todo:
-- verify & fix all rules
 - check each rule learning page
  */

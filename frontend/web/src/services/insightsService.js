@@ -1,52 +1,148 @@
-import {averageAccuracyPercent, getAnswers, inferUserLevel} from "./dataService.js";
+import {averageAccuracyPercent, getAnswers, inferUserLevel, statusFor} from "./dataService.js";
+import {LEVEL_RULES} from "../utils/rules.js";
 
-function getWeeklyProgress(days = 7) {
-    const all = getAnswers();
-    if (!all.length) return null;
+const DAY_MS = 24 * 60 * 60 * 1000;
+const PENALTY_FACTOR = 1.5; // can tweak to 1.3 / 2.0 later
+
+function computeRuleLearningDurations() {
+    const answers = getAnswers();
+    if (!answers.length) return [];
+
+    const byRule = new Map();
+    for (const a of answers) {
+        if (!a?.rule || !a?.date) continue;
+        if (!byRule.has(a.rule)) byRule.set(a.rule, []);
+        byRule.get(a.rule).push(a);
+    }
+
+    const durations = [];
+
+    for (const [ruleId, list] of byRule.entries()) {
+        if (!list.length) continue;
+
+        // Sort attempts by real timestamp
+        const sorted = [...list].sort(
+            (x, y) => new Date(x.date).getTime() - new Date(y.date).getTime()
+        );
+
+        const firstTs = new Date(sorted[0].date).getTime();
+        if (!Number.isFinite(firstTs)) continue;
+
+        // --- group attempts by day ---
+        const byDay = new Map(); // day string -> { attempts: [], lastTs }
+        for (const a of sorted) {
+            const ts = new Date(a.date).getTime();
+            if (!Number.isFinite(ts)) continue;
+            const day = a.date.slice(0, 10); // YYYY-MM-DD
+
+            if (!byDay.has(day)) {
+                byDay.set(day, { attempts: [], lastTs: ts });
+            }
+            const bucket = byDay.get(day);
+            bucket.attempts.push(a);
+            if (ts > bucket.lastTs) bucket.lastTs = ts;
+        }
+
+        // process days in chronological order
+        const days = [...byDay.entries()].sort(
+            (a, b) => a[1].lastTs - b[1].lastTs
+        );
+
+        let cumulative = [];
+        let lastStatus = null;
+
+        // we keep only the **latest** stable learned moment
+        let latestLearned = null; // { rule, days, learnedAt }
+
+        for (const [, info] of days) {
+            const { attempts, lastTs } = info;
+
+            // accumulate all attempts up to this day
+            cumulative.push(...attempts);
+
+            // accuracy based on all attempts so far
+            const acc = averageAccuracyPercent(cumulative);
+            const status = statusFor(acc, cumulative.length);
+
+            // transition: non-learned -> learned
+            if (status === "learned" && lastStatus !== "learned") {
+                let diffDays = (lastTs - firstTs) / DAY_MS;
+                if (!Number.isFinite(diffDays) || diffDays < 0) diffDays = 0;
+
+                // overwrite previous candidate: we only need the **latest** one
+                latestLearned = {
+                    rule: ruleId,
+                    days: diffDays,
+                    learnedAt: lastTs,
+                };
+            }
+
+            lastStatus = status;
+        }
+
+        // overall last timestamp for this rule (last day)
+        const lastGlobalTs = days.length
+            ? days[days.length - 1][1].lastTs
+            : firstTs;
+
+        // CASE 1: rule is currently learned → use the last stable learned moment
+        if (latestLearned && lastStatus === "learned") {
+            durations.push(latestLearned);
+            continue;
+        }
+
+        // CASE 2: rule has attempts but is NOT learned enough → include with penalty
+        if (sorted.length > 0 && Number.isFinite(lastGlobalTs)) {
+            let daysSoFar = (lastGlobalTs - firstTs) / DAY_MS;
+            if (!Number.isFinite(daysSoFar) || daysSoFar < 0) daysSoFar = 0;
+
+            const penalizedDays = daysSoFar * PENALTY_FACTOR;
+
+            durations.push({
+                rule: ruleId,
+                days: penalizedDays,
+                learnedAt: lastGlobalTs, // "current horizon"
+            });
+        }
+    }
+
+    return durations;
+}
+
+
+// 2) Знаходимо медіанний час до "learned" для правил,
+//    спочатку дивимося лише на ті, що стали learned за останні N днів,
+//    якщо таких немає — беремо весь час.
+function medianLearningTimeDays(lastNDays = 30) {
+    const durations = computeRuleLearningDurations();
+    if (!durations.length) return null;
 
     const now = Date.now();
-    const weekAgo = now - days * 24 * 60 * 60 * 1000;
+    const from = now - lastNDays * DAY_MS;
 
-    const recent = all.filter(a => new Date(a.date).getTime() >= weekAgo);
-    if (!recent.length) return null;
+    let sample = durations.filter(d => d.learnedAt >= from);
 
-    const byDay = new Map();
-    for (let i = 0; i < days; i++) {
-        const day = new Date(now - i * 24*60*60*1000).toISOString().slice(0,10);
-        byDay.set(day, []);
+    // Якщо за останні N днів немає нових "learned" → використовуємо all-time
+    if (!sample.length) {
+        sample = durations;
     }
 
-    for (const a of recent) {
-        const day = a.date.slice(0,10);
-        if (byDay.has(day)) byDay.get(day).push(a);
+    const values = sample
+        .map(d => d.days)
+        .filter(n => Number.isFinite(n) && n > 0)
+        .sort((a, b) => a - b);
+
+    if (!values.length) return null;
+
+    const mid = Math.floor(values.length / 2);
+    if (values.length % 2 === 1) {
+        return values[mid];
+    } else {
+        return (values[mid - 1] + values[mid]) / 2;
     }
-
-    const dailyAccuracy = [...byDay.entries()].map(([day, items]) => ({
-        day,
-        avg: items.length ? averageAccuracyPercent(items) : 0
-    }));
-
-    const avgs = dailyAccuracy.map(d => d.avg);
-    const minAvg = Math.min(...avgs);
-    const maxAvg = Math.max(...avgs);
-    const delta = maxAvg - minAvg;
-
-    return { delta, minAvg, maxAvg, dailyAccuracy };
 }
 
-export function getProgressSummary(days = 7) {
-    const weekly = getWeeklyProgress(days);
-    if (!weekly) return "";
 
-    const rawPercent = weekly.delta > 0 ? weekly.delta : weekly.maxAvg || 0;
-
-    const fraction = rawPercent - Math.floor(rawPercent);
-    const percent = (fraction < 0.1) ? rawPercent.toFixed(0) : rawPercent.toFixed(1);
-
-    const period = days === 7 ? "тиждень" : `останні ${days} дні`;
-
-    return `Об'єм знань: +${percent}% за ${period}`;
-}
 
 
 // Utility: group answers by day
@@ -60,101 +156,79 @@ function groupByDay(answers) {
     return map;
 }
 
-// Weighted progress calculator
-function getWeightedAccuracyProgress() {
-    const all = getAnswers();
-    if (!all.length) return null;
-
-    const now = Date.now();
-    const dayMs = 24 * 60 * 60 * 1000;
-
-    const weekAgo = now - 7 * dayMs;
-    const threeWeeksAgo = now - 21 * dayMs;
-
-    const lastWeek = all.filter(a => new Date(a.date).getTime() >= weekAgo);
-    const last3Weeks = all.filter(a => {
-        const t = new Date(a.date).getTime();
-        return t < weekAgo && t >= threeWeeksAgo;
-    });
-    const older = all.filter(a => new Date(a.date).getTime() < threeWeeksAgo);
-
-    const lastWeekMap = groupByDay(lastWeek);
-    const last3WeeksMap = groupByDay(last3Weeks);
-    const olderMap = groupByDay(older);
-
-    function avg(map) {
-        if (map.size === 0) return 0;
-        let sum = 0, count = 0;
-        for (const list of map.values()) {
-            sum += averageAccuracyPercent(list);
-            count++;
-        }
-        return count ? sum / count : 0;
-    }
-
-    const a1 = avg(lastWeekMap);
-    const a05 = avg(last3WeeksMap);
-    const a01 = avg(olderMap);
-
-    const weighted = (a1 * 1 + a05 * 0.5 + a01 * 0.1) / (1 + 0.5 + 0.1);
-
-    return {
-        weightedGrowth: weighted,
-    };
-}
-
 export function rawEstimate() {
-    const accuracy = getWeightedAccuracyProgress();
-    if (!accuracy) return null;
-
-    const { weightedGrowth } = accuracy;
     const answers = getAnswers();
     if (!answers.length) return null;
 
-    // Determine current level
-    const level = inferUserLevel(answers);
-    const currentLevel = level?.name || "A1";
-
-    // Precision at current level
-    const currentAccuracy = level?.accuracy || 0;
-
-    // Determine target level accuracy
-    const nextLevel = level?.next || null;
-
-    let targetAccuracy;
-    let hasNextLevelData = !!nextLevel && nextLevel.accuracyHistory?.length > 0;
-
-    if (hasNextLevelData) {
-        // Actual required accuracy for next level
-        targetAccuracy = nextLevel.requiredAccuracy ?? 85;
-    } else {
-        // Use 85% for current level if no next-level data or no progress
-        targetAccuracy = 85;
-    }
-
-    // Delta needed to reach target
-    const delta = targetAccuracy - currentAccuracy;
-    if (delta <= 0) return 0; // already above requirement
-
-    // Progress speed per day (very simplified)
-    const dailyIncrease = weightedGrowth / 7; // growth normalized
-
-    if (dailyIncrease <= 0) {
-        // No progress at all — return infinity or large number
+    // 1) Швидкість навчання: медіанний час до "learned" для одного правила
+    const medianDays = medianLearningTimeDays(30); // спочатку 30 днів, потім all-time
+    if (medianDays == null || !Number.isFinite(medianDays) || medianDays <= 0) {
+        // Немає адекватних даних — формально "немає прогресу"
         return Infinity;
     }
 
-    // Days required
-    let days = delta / dailyIncrease;
+    // 2) Поточний рівень та порядок рівнів
+    const levelInfo = inferUserLevel(); // твоя функція знизу файла
+    const currentStepLevel = levelInfo?.level || "beginner";
 
-    // 🔥 If there is no data or progress in the next level → multiply by 2
-    if (!hasNextLevelData) {
-        days *= 2;
+    const stepLevelsOrder = Object.keys(LEVEL_RULES || {}); // наприклад ["beginner","intermediate","advanced"]
+    if (!stepLevelsOrder.length) return null;
+
+    const currentIndex = stepLevelsOrder.indexOf(currentStepLevel);
+    const nextLevelId = currentIndex >= 0 ? stepLevelsOrder[currentIndex + 1] : null;
+
+    // Якщо наступного рівня немає — вважай, що ми вже на максимумі
+    if (!nextLevelId) {
+        return null; // estimateTimeToNextLevelText поверне "Недостатньо даних..."
     }
 
-    return Math.ceil(days);
-}
+    const rulesInNextLevel = LEVEL_RULES[nextLevelId] || [];
+    if (!rulesInNextLevel.length) {
+        return null;
+    }
 
+    // 3) Поточний статус правил наступного рівня
+    const byRule = new Map();
+    for (const a of answers) {
+        if (!a?.rule) continue;
+        if (!rulesInNextLevel.includes(a.rule)) continue;
+
+        if (!byRule.has(a.rule)) byRule.set(a.rule, []);
+        byRule.get(a.rule).push(a);
+    }
+
+    let learnedNow = 0;
+    for (const ruleId of rulesInNextLevel) {
+        const attempts = byRule.get(ruleId) || [];
+        const acc = averageAccuracyPercent(attempts);
+        const st = statusFor(acc, attempts.length);
+        if (st === "learned") learnedNow++;
+    }
+
+    const totalRules = rulesInNextLevel.length;
+
+    // 🎯 Цільова частка вивчених правил на наступному рівні.
+    // Це пов'язано з тим, як inferUserLevel використовує learnedShare у score.
+    const TARGET_LEARNED_SHARE_FOR_NEXT_LEVEL = 0.6; // 60% правил рівня у статусі "learned"
+    const targetLearned = Math.min(
+        totalRules,
+        Math.ceil(totalRules * TARGET_LEARNED_SHARE_FOR_NEXT_LEVEL)
+    );
+
+    const remainingRules = Math.max(0, targetLearned - learnedNow);
+
+    // Уже досягли цілі за кількістю "learned" правил
+    if (remainingRules <= 0) {
+        return 0;
+    }
+
+    // 4) Прогноз: скільки днів потрібно, якщо кожне нове правило "долернюється"
+    // за медіанний час (days/rule)
+    const daysNeeded = remainingRules * medianDays;
+
+    // Округляємо вгору — бо "ще трохи" це все одно плюс день :)
+    return Math.ceil(daysNeeded);
+}
 
 function pluralDays(n) {
     const i = Math.floor(n);
@@ -184,32 +258,21 @@ export function estimateTimeToNextLevelText() {
 
     let text;
 
-    // < 0.1 → менше ніж за день
     if (d < 0.1) {
         text = "менше ніж за день";
-
-        // 0.1–1 → приблизно за X дня (2.5 -> "2.5 дня")
     } else if (d < 1) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
         text = `приблизно ${fmt} ${pluralDays(fmt)}`;
-
-        // 1–6 днів
     } else if (d < 7) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
         text = `${fmt} ${pluralDays(fmt)}`;
-
-        // точно 7 → "за тиждень"
     } else if (d === 7) {
         text = "тиждень";
-        // >7 → округлюємо тижні догори
-    }
-    else if (d % 7 === 0) {
+    } else if (d % 7 === 0) {
         text = `${d / 7} тижнів`;
-        // >7 → округлюємо тижні догори
-    }
-    else if (d < 60) {
+    } else if (d < 60) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
         text = `${fmt} ${pluralDays(fmt)}`;
@@ -220,3 +283,4 @@ export function estimateTimeToNextLevelText() {
 
     return `До наступного рівня: ${text}.`;
 }
+

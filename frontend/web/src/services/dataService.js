@@ -195,7 +195,8 @@ function latestDateISO(items) {
     if (!ts.length) return null;
     return new Date(Math.max(...ts)).toISOString();
 }
-function statusFor(accuracy, attempts) {
+
+export function statusFor(accuracy, attempts) {
     if (attempts === 0)
         return "not defined";
     // needs practice: (<5 attempts AND accuracy < 75) OR accuracy < 30
@@ -369,7 +370,7 @@ export function inferUserLevel(options = {}) {
     const answers = getAnswers(); // [{score, rule, level, date}, ...]
     if (!answers.length) {
         return {
-            level: "beginner",
+            level: "a1",
             decidedBy: "noData",
             confidence: 0,
             levels: stepLevels.map((l) => ({
@@ -495,7 +496,7 @@ export function inferUserLevel(options = {}) {
     )[0];
 
     return {
-        level: bestOverall?.level ?? "beginner",
+        level: bestOverall?.level ?? "a1",
         decidedBy: answers.length ? "bestScore" : "noData",
         confidence: clamp01(bestOverall?.score ?? 0),
         levels: levelStats,

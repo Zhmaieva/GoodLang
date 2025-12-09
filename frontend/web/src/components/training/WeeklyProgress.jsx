@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {estimateTimeToNextLevelText, getProgressSummary} from "../../services/insightsService.js";
+import {estimateTimeToNextLevelText} from "../../services/insightsService.js";
 import {off, on} from "../../services/events.js";
 
 export function WeeklyProgress({ theme, mobile }) {
-    const [summary, setSummary] = useState("");
     const [daysLeft, setDaysLeft] = useState("");
 
-    function refresh() {
-        setSummary(getProgressSummary());
-        setDaysLeft(estimateTimeToNextLevelText());
+    function refresh() {setDaysLeft(estimateTimeToNextLevelText());
     }
 
     useEffect(() => {
@@ -28,23 +25,8 @@ export function WeeklyProgress({ theme, mobile }) {
             flexDirection: "column",
             justifyContent: "center",
         }}>
-            {/*<div style={{*/}
-            {/*    margin: "6px 0px",*/}
-            {/*    padding: "6px 12px",*/}
-            {/*    borderRadius: 8,*/}
-            {/*    background: "#fff",*/}
-            {/*    color: theme.accentDark,*/}
-            {/*    border: `2px solid ${theme.accent}`,*/}
-            {/*    fontWeight: 600,*/}
-            {/*    fontSize: 14,*/}
-            {/*    marginLeft: 12,*/}
-
-            {/*}}>*/}
-            {/*    {summary}*/}
-            {/*</div>*/}
-
             <div style={{
-                visibility: summary ? "visible" : "hidden",
+                visibility: daysLeft ? "visible" : "hidden",
                 padding: "6px 12px",
                 borderRadius: 8,
                 background: "#fff",
