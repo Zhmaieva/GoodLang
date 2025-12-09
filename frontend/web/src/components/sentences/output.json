@@ -9845,10 +9845,10 @@
         "LIKE_ING",
         "POSSESSIVE_ADJECTIVES"
       ],
-      "ua": "Тобі подобається читати твій журнал?",
+      "ua": "Тобі подобається читати цей журнал?",
       "en": [
-        "Do you like reading your magazine?",
-        "Do you enjoy reading your journal?"
+        "Do you like reading this magazine?",
+        "Do you enjoy reading this journal?"
       ]
     },
     {
@@ -9872,17 +9872,6 @@
       "en": [
         "I like writing letters.",
         "I enjoy composing letters."
-      ]
-    },
-    {
-      "rules": [
-        "LIKE_ING",
-        "ADVERBS_OF_MANNER"
-      ],
-      "ua": "Ти любиш танцювати плавно?",
-      "en": [
-        "Do you like dancing smoothly?",
-        "Do you enjoy dancing gracefully?"
       ]
     },
     {

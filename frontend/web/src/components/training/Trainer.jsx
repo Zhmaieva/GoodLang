@@ -226,8 +226,10 @@ export default function Trainer({
             emit("weeklyProgressUpdate");
             setMode("next");
 
-            setNextTextToTranslate(data.textToTranslate || "");
-            setNextRules(data.rules);
+            if (freeTraining) {
+                setNextTextToTranslate(data.textToTranslate || "");
+                setNextRules(data.rules);
+            }
 
             saveSeed({seed, skip: data.skip ?? (skip+1) });
 
