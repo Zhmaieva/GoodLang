@@ -5,7 +5,7 @@
     "en": ["He asked where she was.", "He wanted to know where she had been."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона поцікавилася, чи він бачив фільм.",
     "en": ["She asked if he had seen the movie.", "She wanted to know whether he had watched the film."]
   },
@@ -50,7 +50,7 @@
     "en": ["He asked why she went home so early.", "He wanted to know why she had left so soon."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона хотіла знати, чи він прийде завтра.",
     "en": ["She wanted to know if he would come tomorrow.", "She asked whether he was coming the next day."]
   },
@@ -85,7 +85,7 @@
     "en": ["I don’t remember who we met at the station.", "I can’t recall whom we met at the train station."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона запитала, чи вони вже прибули.",
     "en": ["She asked if they had arrived.", "She wanted to know whether they’d come."]
   },
@@ -150,7 +150,7 @@
     "en": ["I wondered why he didn’t come to the meeting.", "I wanted to know why he had missed it."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він запитав, чи я бачив його листа.",
     "en": ["He asked if I had seen his letter.", "He wanted to know whether I’d read his message."]
   },
@@ -195,152 +195,152 @@
     "en": ["I wanted to know how often they see each other.", "I asked how frequently they meet."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він спитав, чи я бачив її раніше.",
     "en": ["He asked if I had seen her before.", "He wanted to know whether I’d met her before."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона поцікавилася, чи я вже закінчив роботу.",
     "en": ["She asked if I had already finished the work.", "She wanted to know whether I’d completed it."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "PAST_PERFECT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PAST_PERFECT"],
     "ua": "Він хотів знати, чи вони вже були вдома, коли він подзвонив.",
     "en": ["He wanted to know if they had been home when he called.", "He asked whether they were already home at that moment."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "WILL_PREDICTIONS"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WILL_PREDICTIONS"],
     "ua": "Ми запитали, чи вони повернуться завтра.",
     "en": ["We asked if they would return the next day.", "We wanted to know whether they’d be back the following day."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона спитала, чи я не шкодую про це.",
     "en": ["She asked if I didn’t regret it.", "She wanted to know whether I had any regrets about it."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "CAN_CANT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "CAN_CANT"],
     "ua": "Він поцікавився, чи я можу йому допомогти.",
     "en": ["He asked if I could help him.", "He wanted to know whether I was able to assist."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "MUST_MUSTNT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "MUST_MUSTNT"],
     "ua": "Я спитав, чи мені потрібно заповнювати форму.",
     "en": ["I asked if I had to fill out the form.", "I wanted to know whether it was necessary for me to complete the form."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "SHOULD_SHOULDNT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "SHOULD_SHOULDNT"],
     "ua": "Вона хотіла знати, чи їм слід чекати довше.",
     "en": ["She wanted to know if they should wait longer.", "She asked whether they were supposed to wait more."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "BE_GOING_TO_VS_WILL"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "BE_GOING_TO_VS_WILL"],
     "ua": "Він запитав, чи ми збираємося залишитися тут надовго.",
     "en": ["He asked if we were going to stay here for long.", "He wanted to know whether we planned to stay for a while."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "TO_BE"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "TO_BE"],
     "ua": "Вона поцікавилася, чи це було важливо.",
     "en": ["She asked if it was important.", "She wanted to know whether it mattered."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Мене спитали, чи я живу сам.",
     "en": ["They asked if I lived alone.", "They wanted to know whether I was living by myself."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "THERE_IS_ARE"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "THERE_IS_ARE"],
     "ua": "Він хотів знати, чи є тут поблизу ресторан.",
     "en": ["He wanted to know if there was a restaurant nearby.", "He asked whether there was any place to eat around here."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "PREP_PLACE"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PREP_PLACE"],
     "ua": "Вона спитала, чи ми були в Італії раніше.",
     "en": ["She asked if we had been to Italy before.", "She wanted to know whether we’d ever visited Italy."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Ми поцікавилися, чи він був на роботі вчора.",
     "en": ["We asked if he was at work yesterday.", "We wanted to know whether he’d gone to work."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "HAVE_HAVE_GOT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "HAVE_HAVE_GOT"],
     "ua": "Я спитав, чи вони мають достатньо часу.",
     "en": ["I asked if they had enough time.", "I wanted to know whether they’d got enough time."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "PRESENT_CONT_NOW"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PRESENT_CONT_NOW"],
     "ua": "Він хотів знати, чи я зараз вільний.",
     "en": ["He wanted to know if I was free now.", "He asked whether I was available at the moment."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона запитала, чи я часто дивлюсь фільми.",
     "en": ["She asked if I often watch movies.", "She wanted to know whether I watch films frequently."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "LIKE_ING"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "LIKE_ING"],
     "ua": "Мене спитали, чи мені подобається готувати.",
     "en": ["They asked if I like cooking.", "They wanted to know whether I enjoy cooking."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він хотів знати, чи я колись був у Парижі.",
     "en": ["He wanted to know if I had ever been to Paris.", "He asked whether I’d visited Paris before."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "TO_INF"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "TO_INF"],
     "ua": "Вона поцікавилася, чи мені потрібно платити готівкою.",
     "en": ["She asked if I had to pay in cash.", "She wanted to know whether payment had to be in cash."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми запитали, чи він залишився вдома, бо почувався погано.",
     "en": ["We asked if he stayed home because he felt ill.", "We wanted to know whether he stayed in because he was unwell."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Я спитав, чи вони працювали в той час.",
     "en": ["I asked if they were working at that time.", "I wanted to know whether they’d been working then."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "TOO_VERY"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "TOO_VERY"],
     "ua": "Він поцікавився, чи я був занадто втомлений, щоб продовжити.",
     "en": ["He asked if I was too tired to continue.", "He wanted to know whether I was very tired to go on."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "MAY_MIGHT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "MAY_MIGHT"],
     "ua": "Вона хотіла знати, чи вони можуть запізнитися.",
     "en": ["She wanted to know if they might be late.", "She asked whether they could arrive late."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Мене спитали, чи я зможу прийти завтра.",
     "en": ["They asked if I would be able to come tomorrow.", "They wanted to know whether I could come the next day."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він спитав, чи це справді правда.",
     "en": ["He asked if it was really true.", "He wanted to know whether that was actually true."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона поцікавилася, чи вони купили нову машину.",
     "en": ["She asked if they had bought a new car.", "She wanted to know whether they’d got a new vehicle."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Я хотів знати, чи він уже відправив лист.",
     "en": ["I wanted to know if he had already sent the letter.", "I asked whether the letter had been sent yet."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "BE_GOOD_AT_INTERESTED_IN_ING"],
     "ua": "Ми запитали, чи вона цікавиться музикою.",
     "en": ["We asked if she was interested in music.", "We wanted to know whether she liked music."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "YES_NO_Q", "THERE_ISNT_ARENT_ANY"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "THERE_ISNT_ARENT_ANY"],
     "ua": "Він спитав, чи немає поруч банку.",
     "en": ["He asked if there wasn’t a bank nearby.", "He wanted to know whether there were no banks around."]
   },

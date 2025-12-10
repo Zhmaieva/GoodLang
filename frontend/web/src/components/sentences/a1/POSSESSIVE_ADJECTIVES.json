@@ -1,517 +1,342 @@
 { "POSSESSIVE_ADJECTIVES": [
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Мій друг читає книгу кожного вечора.",
-    "en": ["My friend reads a book every evening."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "DEMONSTRATIVES"],
+    "ua": "Це твоя куртка?",
+    "en": ["Is that your jacket?", "Is this your jacket?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Твій брат зараз дивиться фільм?",
-    "en": ["Is your brother watching a movie now?"]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Він загубив свій гаманець?",
+    "en": ["Did he lose his wallet?", "Did he misplace his wallet?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Її сестра пише лист щотижня.",
-    "en": ["Her sister writes a letter every week."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
+    "ua": "Вона чекає на свою подругу?",
+    "en": ["Is she waiting for her friend?", "Is she waiting for her girlfriend?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наші друзі часто відвідують деякі музеї.",
-    "en": ["Our friends often visit some museums."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "PREP_PLACE"],
+    "ua": "Собака у своїй будці?",
+    "en": ["Is the dog in its house?", "Is the dog in its kennel?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його учитель зараз пояснює цей урок.",
-    "en": ["His teacher is explaining this lesson now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Ми забули наші квитки?",
+    "en": ["Did we forget our tickets?", "Did we leave our tickets behind?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Мій брат часто грає у футбол.",
-    "en": ["My brother often plays football."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Вони продали свою машину?",
+    "en": ["Did they sell their car?", "Did they sell their vehicle?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Твій друг зараз готує вечерю.",
-    "en": ["Your friend is preparing dinner now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "DEMONSTRATIVES"],
+    "ua": "Це моє місце?",
+    "en": ["Is this my seat?", "Is this my spot?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні батьки відвідують багато країн.",
-    "en": ["Their parents visit many countries."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Ти взяв свій паспорт?",
+    "en": ["Did you bring your passport?", "Did you take your passport?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наш учитель читає цю книгу щотижня.",
-    "en": ["Our teacher reads this book every week."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_PERFECT"],
+    "ua": "Він закінчив свою роботу?",
+    "en": ["Has he finished his work?", "Has he completed his work?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Моя мама часто малює картину ввечері.",
-    "en": ["My mom often paints a picture in the evening."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
+    "ua": "Вона пишається своїм сином?",
+    "en": ["Is she proud of her son?", "Is she proud of her child?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Її друг зараз співає на концерті.",
-    "en": ["Her friend is singing at the concert now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Кіт поранив свою лапу?",
+    "en": ["Did the cat hurt its paw?", "Did the cat injure its paw?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мої брати часто фотографують деякі пейзажі.",
-    "en": ["My brothers often photograph some landscapes."]
-  },
-
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Твій батько щоранку читає газету.",
-    "en": ["Your father reads a newspaper every morning."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Ми тут залишили наші сумки?",
+    "en": ["Did we leave our bags here?", "Did we leave our backpacks here?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Його сестра зараз відвідує музей.",
-    "en": ["His sister is visiting the museum now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Вони запросили своїх сусідів?",
+    "en": ["Did they invite their neighbors?", "Did they invite their neighbours?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наша команда грає в цю гру щодня.",
-    "en": ["Our team plays this game every day."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
+    "ua": "Це моя проблема?",
+    "en": ["Is this my problem?", "Is this my issue?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні діти грають з багатьма іграшками.",
-    "en": ["Their children play with many toys."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "DEMONSTRATIVES"],
+    "ua": "Це твоє рішення?",
+    "en": ["Is that your decision?", "Is this your decision?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Мій друг зараз танцює на вечірці.",
-    "en": ["My friend is dancing at the party now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Він розбив свій телефон?",
+    "en": ["Did he break his phone?", "Did he smash his phone?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Твоя сестра пише вірш щовечора.",
-    "en": ["Your sister writes a poem every evening."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Вона помила волосся?",
+    "en": ["Did she wash her hair?", "Did she wash her hair already?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його команда зараз репетирує цю пісню.",
-    "en": ["His team is rehearsing this song now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Компанія змінила свою назву?",
+    "en": ["Did the company change its name?", "Did the company rename itself?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наші друзі часто відвідують деякі парки.",
-    "en": ["Our friends often visit some parks."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Вони забули свої ключі?",
+    "en": ["Did they forget their keys?", "Did they lose their keys?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Мій учитель щодня бігає в парку.",
-    "en": ["My teacher runs in the park every day."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
+    "ua": "Це моя помилка?",
+    "en": ["Is this my mistake?", "Is this my fault?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Твій брат зараз готує обід.",
-    "en": ["Your brother is preparing lunch now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "POSSESSIVE_S", "TO_BE"],
+    "ua": "Це машина твого брата?",
+    "en": ["Is that your brother’s car?", "Is this your brother’s car?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні студенти читають багато книг.",
-    "en": ["Their students read many books."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Він зустрівся зі своїми батьками?",
+    "en": ["Did he meet his parents?", "Did he see his parents?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наш друг дивиться цей фільм щотижня.",
-    "en": ["Our friend watches this movie every week."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "ua": "Вона загубила свою каблучку?",
+    "en": ["Did she lose her ring?", "Did she misplace her ring?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Моя сестра читає роман кожного вечора.",
-    "en": ["My sister reads a novel every evening."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": "Це не моя сумка.",
+    "en": ["This is not my bag.", "This isn’t my bag."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Його мама зараз співає на сцені.",
-    "en": ["His mom is singing on the stage now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": "Це не твоя провина.",
+    "en": ["That is not your fault.", "That isn’t your fault."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Твої друзі зазвичай вивчають деякі мови.",
-    "en": ["Your friends usually study some languages."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Він не знайшов свій паспорт.",
+    "en": ["He didn’t find his passport.", "He couldn’t find his passport."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Мій батько зараз малює портрет.",
-    "en": ["My father is painting a portrait."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Вона не взяла свій ноутбук.",
+    "en": ["She didn’t bring her laptop.", "She didn’t take her laptop."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Її брат зараз відвідує галерею.",
-    "en": ["Her brother is visiting the gallery now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Собака не з’їв свою їжу.",
+    "en": ["The dog didn’t eat its food.", "The dog didn’t finish its food."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наша команда грає в цю гру щотижня.",
-    "en": ["Our team plays this game every week."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Ми не закінчили наш проєкт.",
+    "en": ["We didn’t finish our project.", "We didn’t complete our project."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні діти відвідують багато зоопарків.",
-    "en": ["Their children visit many zoos."]
-  },
-
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Мій друг зараз готує піцу.",
-    "en": ["My friend is preparing pizza now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Вони не прибрали свою кімнату.",
+    "en": ["They didn’t clean their room.", "They didn’t tidy their room."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Твоя мама пише статтю щомісяця.",
-    "en": ["Your mom writes an article every month."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": "Це не моя ідея.",
+    "en": ["This is not my idea.", "This isn’t my idea."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його сестра зараз вивчає цю тему.",
-    "en": ["His sister is studying this topic now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Він не одягнув свою куртку.",
+    "en": ["He didn’t wear his jacket.", "He didn’t put on his jacket."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Наші вчителі читають деякі журнали.",
-    "en": ["Our teachers read some magazines."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Вона не подзвонила своїй мамі.",
+    "en": ["She didn’t call her mother.", "She didn’t phone her mother."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Компанія не покращила свій сервіс.",
+    "en": ["The company didn’t improve its service.", "The company didn’t upgrade its service."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Вони не продали свій дім.",
+    "en": ["They didn’t sell their house.", "They didn’t sell their home."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": "Це не моя відповідальність.",
+    "en": ["This is not my responsibility.", "This isn’t my responsibility."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Ти не зарядив свій телефон.",
+    "en": ["You didn’t charge your phone.", "You didn’t recharge your phone."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Він не виконав своє завдання.",
+    "en": ["He didn’t complete his task.", "He didn’t finish his task."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Вона не полюбила свою нову роботу.",
+    "en": ["She didn’t like her new job.", "She didn’t enjoy her new job."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Ми не запросили наших друзів.",
+    "en": ["We didn’t invite our friends.", "We didn’t invite our guests."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Вони не принесли свої документи.",
+    "en": ["They didn’t bring their documents.", "They didn’t bring their papers."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "ua": "Це не моя адреса.",
+    "en": ["This is not my address.", "This isn’t my address."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Ти не оновив свій профіль.",
+    "en": ["You didn’t update your profile.", "You didn’t refresh your profile."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Він не впізнав свого вчителя.",
+    "en": ["He didn’t recognize his teacher.", "He didn’t recognize his lecturer."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "ua": "Вона не перевірила свою електронну пошту.",
+    "en": ["She didn’t check her email.", "She didn’t check her mailbox."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Я залишив свої ключі на столі.",
+    "en": ["I left my keys on the table.", "I put my keys on the table."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Ти забув свій рюкзак у школі.",
+    "en": ["You forgot your backpack at school.", "You left your backpack at school."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Він полагодив свій велосипед у гаражі.",
+    "en": ["He fixed his bike in the garage.", "He repaired his bike in the garage."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Вчора вона змінила свою зачіску.",
+    "en": ["She changed her hairstyle yesterday.", "She changed her hair yesterday."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": "Собака знайшов свою іграшку під диваном.",
+    "en": ["The dog found its toy under the sofa.", "The dog found its toy beneath the sofa."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Ми запланували нашу відпустку вчора ввечері.",
+    "en": ["We planned our vacation last night.", "We planned our holiday last night."]
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Вони прикрасили свою квартиру до свят.",
+    "en": ["They decorated their apartment for the holidays.", "They decorated their flat for the holidays."]
   },
   {
     "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій брат грає в баскетбол щовихідних.",
-    "en": ["My brother plays basketball every weekend."]
+    "ua": "Мені подобається мій новий робочий простір.",
+    "en": ["I love my new workspace.", "I really like my new workspace."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Твій друг зараз слухає музику.",
-    "en": ["Your friend is listening to music now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ADVERBS_OF_MANNER", "TOO_VERY"],
+    "ua": "Ти дуже охайно ведеш свої нотатки.",
+    "en": ["You keep your notes very organized.", "You keep your notes really organized."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні студенти відвідують багато театрів.",
-    "en": ["Their students visit many theaters."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "ua": "Він завжди перевіряє свій розклад зранку.",
+    "en": ["He always checks his schedule in the morning.", "He always checks his timetable in the morning."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наш учитель пояснює цей предмет щодня.",
-    "en": ["Our teacher explains this subject every day."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
+    "ua": "Вона поділилася своїми ідеями з командою.",
+    "en": ["She shared her ideas with the team.", "She shared her ideas with her team."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Моя сестра читає журнал кожного ранку.",
-    "en": ["My sister reads a magazine every morning."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
+    "ua": "Ми запросили всіх на наше весілля.",
+    "en": ["We invited everyone to our wedding.", "We invited everyone to the wedding."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його друг зараз танцює на сцені.",
-    "en": ["His friend is dancing on the stage now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
+    "ua": "Вони відремонтували свій дах після бурі.",
+    "en": ["They repaired their roof after the storm.", "They fixed their roof after the storm."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Твої брати фотографують деяких птахів.",
-    "en": ["Your brothers photograph some birds."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+    "ua": "Я пишаюся своїм прогресом цього року.",
+    "en": ["I’m proud of my progress this year.", "I am proud of my progress this year."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій батько відвідує парк щосуботи.",
-    "en": ["My father visits the park every Saturday."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ти значно покращив свою англійську.",
+    "en": ["You improved your English a lot.", "You improved your English greatly."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Її мама зараз готує десерт.",
-    "en": ["Her mom is preparing a dessert now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
+    "ua": "Він познайомив мене зі своїм кузеном.",
+    "en": ["He introduced me to his cousin.", "He introduced me to one of his cousins."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наш друг читає цю книгу щотижня.",
-    "en": ["Our friend reads this book every week."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "ADVERBS_OF_MANNER"],
+    "ua": "Вона швидко спакувала свою валізу.",
+    "en": ["She packed her suitcase quickly.", "She packed her bag quickly."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Їхні вчителі читають багато статей.",
-    "en": ["Their teachers read many articles."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Ми вчора переставили наші меблі.",
+    "en": ["We moved our furniture yesterday.", "We rearranged our furniture yesterday."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Мій брат зараз слухає концерт.",
-    "en": ["My brother is listening to a concert now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Вони відкрили свою кав’ярню біля парку.",
+    "en": ["They opened their café near the park.", "They opened their coffee shop near the park."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Твоя сестра малює пейзаж щотижня.",
-    "en": ["Your sister paints a landscape every week."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
+    "ua": "Я видалив свої старі фотографії.",
+    "en": ["I deleted my old photos.", "I removed my old photos."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його команда зараз тренується в цій грі.",
-    "en": ["His team is practicing this game now."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Ти нещодавно оновив свій пароль.",
+    "en": ["You updated your password recently.", "You changed your password recently."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Наші студенти відвідують деякі виставки.",
-    "en": ["Our students visit some exhibitions."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Він загубив свої навушники в автобусі.",
+    "en": ["He lost his headphones on the bus.", "He misplaced his headphones on the bus."]
   },
-
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій друг щовихідних грає в теніс.",
-    "en": ["My friend plays tennis every weekend."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Мій учитель пише статтю кожного місяця.",
-    "en": ["My teacher writes an article every month."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Твій друг зараз слухає музику?",
-    "en": ["Is your friend listening to music now?"]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Її брат щосуботи відвідує театр.",
-    "en": ["Her brother visits the theater every Saturday."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Наші студенти читають деякі романи.",
-    "en": ["Our students read some novels."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його сестра зараз малює цю картину.",
-    "en": ["His sister is painting this picture now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій друг часто грає у волейбол.",
-    "en": ["My friend often plays volleyball."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Твоя мама зараз готує суп.",
-    "en": ["Your mom is cooking soup now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Їхні друзі відвідують багато парків.",
-    "en": ["Their friends visit many parks."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наш учитель пояснює цей предмет щотижня.",
-    "en": ["Our teacher explains this subject every week."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Моя сестра читає журнал кожного ранку.",
-    "en": ["My sister reads a magazine every morning."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його брат зараз танцює на вечірці.",
-    "en": ["His brother is dancing at the party now."]
-  },
-
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Твої друзі фотографують деякі квіти.",
-    "en": ["Your friends photograph some flowers."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій батько відвідує зоопарк кожного місяця.",
-    "en": ["My father visits the zoo every month."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Її друг зараз дивиться концерт.",
-    "en": ["Her friend is watching a concert now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наша команда грає в цю гру щодня.",
-    "en": ["Our team plays this game every day."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні студенти читають багато газет.",
-    "en": ["Their students read many newspapers."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Мій брат зараз готує десерт.",
-    "en": ["My brother is preparing a dessert now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Твоя сестра щотижня пише есе.",
-    "en": ["Your sister writes an essay every week."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його друг зараз співає цю пісню.",
-    "en": ["His friend is singing this song now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Наші вчителі відвідують деякі виставки.",
-    "en": ["Our teachers visit some exhibitions."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій друг щоранку бігає в лісі.",
-    "en": ["My friend runs in the forest every morning."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Твій учитель зараз пояснює урок.",
-    "en": ["Your teacher is explaining the lesson now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні друзі фотографують багато птахів.",
-    "en": ["Their friends photograph many birds."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наш брат дивиться цей фільм щотижня.",
-    "en": ["Our brother watches this movie every week."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Моя мама читає книгу кожного вечора.",
-    "en": ["My mom reads a book every evening."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його сестра зараз відвідує парк.",
-    "en": ["His sister is visiting the park now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Твої студенти вивчають деякі слова.",
-    "en": ["Your students study some words."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Мій учитель малює портрет кожного місяця.",
-    "en": ["My teacher paints a portrait every month."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Її друг зараз готує піцу.",
-    "en": ["Her friend is preparing pizza now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наша команда грає в цю гру щотижня.",
-    "en": ["Our team plays this game every week."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні вчителі відвідують багато музеїв.",
-    "en": ["Their teachers visit many museums."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Мій друг зараз танцює на сцені.",
-    "en": ["My friend is dancing on the stage now."]
-  },
-
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Твоя сестра читає роман кожного вечора.",
-    "en": ["Your sister reads a novel every evening."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його брат зараз вивчає цю тему.",
-    "en": ["His brother is studying this topic now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Наші друзі читають деякі статті.",
-    "en": ["Our friends read some articles."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій батько грає в теніс щовихідних.",
-    "en": ["My father plays tennis every weekend."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Її мама зараз слухає музику.",
-    "en": ["Her mom is listening to music now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Їхні студенти відвідують багато галерей.",
-    "en": ["Their students visit many galleries."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наш учитель читає цю книгу щодня.",
-    "en": ["Our teacher reads this book every day."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Моя сестра часто відвідує музей.",
-    "en": ["My sister often visits the museum."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його друг зараз співає на концерті.",
-    "en": ["His friend is singing at the concert now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Твої брати фотографують деякі пейзажі.",
-    "en": ["Your brothers photograph some landscapes."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій друг щотижня пише вірш.",
-    "en": ["My friend writes a poem every week."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Твоя мама зараз готує обід.",
-    "en": ["Your mom is preparing lunch now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Наша команда тренується в цій грі щотижня.",
-    "en": ["Our team trains in this game every week."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Їхні друзі читають багато журналів.",
-    "en": ["Their friends read many magazines."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_CONT_NOW"],
-    "ua": "Мій брат зараз дивиться фільм.",
-    "en": ["My brother is watching a movie now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Твоя сестра грає в баскетбол щовихідних.",
-    "en": ["Your sister plays basketball every weekend."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Його учитель зараз пояснює цю тему.",
-    "en": ["His teacher is explaining this topic now."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Наші студенти відвідують деякі театри.",
-    "en": ["Our students visit some theaters."]
-  },
-  {
-    "rules": ["POSSESSIVE_ADJECTIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Мій друг щотижня малює пейзаж.",
-    "en": ["My friend paints a landscape every week."]
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE"],
+    "ua": "Вона опублікувала свої результати онлайн.",
+    "en": ["She posted her results online.", "She published her results online."]
   }
 ] }

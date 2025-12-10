@@ -4,846 +4,979 @@
     "ua": "Я вчуся щодня, щоб покращити англійську.",
     "en": [
       "I study every day so that I can improve my English.",
-      "I study every day so I can improve my English."
+      "I study every day so I can improve my English.",
+      "I study every day in order to improve my English.",
+      "I study every day to improve my English."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
     "ua": "Вона встала рано, щоб не запізнитися.",
     "en": [
       "She got up early so that she wouldn’t be late.",
-      "She got up early so she wouldn’t be late."
+      "She got up early so she wouldn’t be late.",
+      "She got up early in order not to be late.",
+      "She got up early not to be late."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
     "ua": "Вони поїхали в місто, щоб купити продукти.",
     "en": [
       "They went to the city so that they could buy groceries.",
-      "They went to the city so they could buy groceries."
+      "They went to the city so they could buy groceries.",
+      "They went to the city in order to buy groceries.",
+      "They went to the city to buy groceries.",
+      "They went to town so that they could buy groceries.",
+      "They went to town so they could buy groceries.",
+      "They went to town in order to buy groceries.",
+      "They went to town to buy groceries.",
+      "They drove to the city so that they could buy groceries.",
+      "They drove to the city so they could buy groceries.",
+      "They drove to the city in order to buy groceries.",
+      "They drove to the city to buy groceries.",
+      "They drove to town so that they could buy groceries.",
+      "They drove to town so they could buy groceries.",
+      "They drove to town in order to buy groceries.",
+      "They drove to town to buy groceries."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Я подзвонив їй, щоб дізнатися новини.",
     "en": [
-      "I called her so that I could hear the news.",
-      "I called her so I could hear the news."
+      "I called her so that I could find out the news.",
+      "I called her so I could find out the news.",
+      "I called her in order to find out the news.",
+      "I called her to find out the news."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
     "ua": "Вона записалася на курси, щоб знайти нову роботу.",
     "en": [
-      "She went to classes so that she could find a new job.",
-      "She went to classes so she could find a new job."
+      "She signed up for courses so that she could find a new job.",
+      "She signed up for courses so she could find a new job.",
+      "She signed up for courses in order to find a new job.",
+      "She signed up for courses to find a new job."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я взяв парасолю, щоб не промокнути.",
     "en": [
       "I took an umbrella so that I wouldn’t get wet.",
-      "I took an umbrella so I wouldn’t get wet."
+      "I took an umbrella so I wouldn’t get wet.",
+      "I took an umbrella in order not to get wet.",
+      "I took an umbrella not to get wet."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він зупинився, щоб відпочити.",
     "en": [
       "He stopped so that he could rest.",
-      "He stopped so he could rest."
+      "He stopped so he could rest.",
+      "He stopped in order to rest.",
+      "He stopped to rest."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Вони прийшли рано, щоб зайняти хороші місця.",
     "en": [
       "They came early so that they could get good seats.",
-      "They came early so they could get good seats."
+      "They came early so they could get good seats.",
+      "They came early in order to get good seats.",
+      "They came early to get good seats."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
     "ua": "Ми вимкнули телевізор, щоб було тихо.",
     "en": [
       "We turned off the TV so that it would be quiet.",
-      "We turned off the TV so it would be quiet."
+      "We turned off the TV so it would be quiet.",
+      "We turned off the TV in order to keep it quiet.",
+      "We turned off the TV to keep it quiet."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я записав це, щоб не забути.",
     "en": [
       "I wrote it down so that I wouldn’t forget.",
-      "I wrote it down so I wouldn’t forget."
+      "I wrote it down so I wouldn’t forget.",
+      "I wrote it down in order not to forget.",
+      "I wrote it down not to forget."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона відкладала гроші, щоб купити новий телефон.",
     "en": [
       "She saved money so that she could buy a new phone.",
-      "She saved money so she could buy a new phone."
+      "She saved money so she could buy a new phone.",
+      "She saved money in order to buy a new phone.",
+      "She saved money to buy a new phone."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Я зробив копію, щоб мати запасний варіант.",
     "en": [
       "I made a copy so that I'd have a spare one.",
-      "I made a copy so I'd have a spare one."
+      "I made a copy so I'd have a spare one.",
+      "I made a copy in order to have a spare one.",
+      "I made a copy to have a spare one."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
     "ua": "Він залишив вікно відчиненим, щоб кіт міг вийти.",
     "en": [
       "He left the window open so that the cat could get outside.",
-      "He left the window open so the cat could get outside."
+      "He left the window open so the cat could get outside.",
+      "He left the window open in order to let the cat get outside.",
+      "He left the window open to let the cat get outside."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "PREP_PLACE"],
     "ua": "Ми приїхали раніше, щоб уникнути заторів.",
     "en": [
-      "We came early so that we wouldn’t get stuck in traffic.",
-      "We came early so we wouldn’t get stuck in traffic."
+      "We arrived early so that we wouldn’t get stuck in traffic.",
+      "We arrived early so we wouldn’t get stuck in traffic.",
+      "We arrived early in order to avoid traffic.",
+      "We arrived early to avoid traffic."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Я зберіг чек, щоб мати підтвердження покупки.",
     "en": [
-      "I kept the receipt so that I’d have proof of buying it.",
-      "I kept the receipt so I'd have proof of buying it."
+      "I kept the receipt so that I’d have proof of purchase.",
+      "I kept the receipt so I'd have proof of purchase.",
+      "I kept the receipt in order to have proof of purchase.",
+      "I kept the receipt to have proof of purchase."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона залишилась удома, щоб доглядати дитину.",
     "en": [
       "She stayed home so that she could look after the baby.",
-      "She stayed home so she could look after the baby."
+      "She stayed home so she could look after the baby.",
+      "She stayed home in order to look after the baby.",
+      "She stayed home to look after the baby."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Вони пішли тихо, щоб нікого не розбудити.",
     "en": [
       "They left quietly so that no one would wake up.",
-      "They left quietly so no one would wake up."
+      "They left quietly so no one would wake up.",
+      "They left quietly in order not to wake anyone up.",
+      "They left quietly not to wake anyone up."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
     "ua": "Я купив квіти, щоб зробити їй приємно.",
     "en": [
       "I bought flowers so that she’d be happy.",
-      "I bought flowers so she'd be happy."
+      "I bought flowers so she'd be happy.",
+      "I bought flowers in order to make her happy.",
+      "I bought flowers to make her happy."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Ми перенесли зустріч, щоб усі могли прийти.",
     "en": [
       "We rescheduled the meeting so that everyone could come.",
-      "We rescheduled the meeting so everyone could come."
+      "We rescheduled the meeting so everyone could come.",
+      "We rescheduled the meeting in order to let everyone come.",
+      "We rescheduled the meeting to let everyone come."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
     "ua": "Вона наділа окуляри, щоб краще бачити.",
     "en": [
       "She wore her glasses so that she could see better.",
-      "She wore her glasses so she could see better."
+      "She wore her glasses so she could see better.",
+      "She wore her glasses in order to see better.",
+      "She wore her glasses to see better."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Я прибрав у кімнаті, щоб вона виглядала акуратно.",
     "en": [
       "I cleaned the room so that it would look neat.",
-      "I cleaned the room so it would look neat."
+      "I cleaned the room so it would look neat.",
+      "I cleaned the room in order to make it look neat.",
+      "I cleaned the room to make it look neat."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Він узяв додаткову ковдру, щоб не змерзнути.",
     "en": [
       "He took an extra blanket so that he wouldn’t get cold.",
-      "He took an extra blanket so he wouldn’t get cold."
+      "He took an extra blanket so he wouldn’t get cold.",
+      "He took an extra blanket in order not to get cold.",
+      "He took an extra blanket not to get cold."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
     "ua": "Ми поїхали раніше, щоб не потрапити під дощ.",
     "en": [
       "We left early so that we wouldn’t get caught in the rain.",
-      "We left early so we wouldn’t get caught in the rain."
+      "We left early so we wouldn’t get caught in the rain.",
+      "We left early in order not to get caught in the rain.",
+      "We left early not to get caught in the rain."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
     "ua": "Вони приготували вечерю, щоб ми могли поїсти разом.",
     "en": [
       "They made dinner so that we could eat together.",
-      "They made dinner so we could eat together."
+      "They made dinner so we could eat together.",
+      "They made dinner in order for us to eat together.",
+      "They made dinner for us to eat together."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Я залишив записку, щоб він знав, де я.",
     "en": [
       "I left a note so that he’d know where I was.",
-      "I left a note so he'd know where I was."
+      "I left a note so he'd know where I was.",
+      "I left a note in order for him to know where I was.",
+      "I left a note for him to know where I was."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він прийшов рано, щоб допомогти мені.",
     "en": [
       "He came early so that he could help me.",
-      "He came early so he could help me."
+      "He came early so he could help me.",
+      "He came early in order to help me.",
+      "He came early to help me."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
     "ua": "Ми тихо говорили, щоб не заважати іншим.",
     "en": [
       "We spoke quietly so that we wouldn’t disturb anyone.",
-      "We spoke quietly so we wouldn’t disturb anyone."
+      "We spoke quietly so we wouldn’t disturb anyone.",
+      "We spoke quietly in order not to disturb anyone.",
+      "We spoke quietly not to disturb anyone."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я зробив це, щоб довести свою правоту.",
     "en": [
       "I did it so that I could prove I was right.",
-      "I did it so I could prove I was right."
+      "I did it so I could prove I was right.",
+      "I did it in order to prove I was right.",
+      "I did it to prove I was right."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Вона запізнилася навмисно, щоб не зустріти його.",
     "en": [
       "She came late so that she wouldn’t run into him.",
-      "She came late so she wouldn’t run into him."
+      "She came late so she wouldn’t run into him.",
+      "She came late in order not to run into him.",
+      "She came late not to run into him."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вони подзвонили заздалегідь, щоб підтвердити бронювання.",
     "en": [
-      "They called early so that the reservation would be confirmed.",
-      "They called early so the reservation would be confirmed."
+      "They called early so that they could confirm the reservation.",
+      "They called early so they could confirm the reservation.",
+      "They called early in order to confirm the reservation.",
+      "They called early to confirm the reservation."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE", "COMPARATIVES"],
     "ua": "Я закрив вікно, щоб було тихіше.",
     "en": [
       "I closed the window so that it would be quieter.",
-      "I closed the window so it would be quieter."
+      "I closed the window so it would be quieter.",
+      "I closed the window in order to make it quieter.",
+      "I closed the window to make it quieter."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
     "ua": "Ми тренуємося, щоб бути сильнішими.",
     "en": [
       "We work out so that we can get stronger.",
-      "We work out so we can get stronger."
+      "We work out so we can get stronger.",
+      "We work out in order to get stronger.",
+      "We work out to get stronger."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я відкладаю гроші, щоб поїхати у відпустку.",
     "en": [
       "I'm saving so that I can go on a trip.",
-      "I'm saving so I can go on a trip."
+      "I'm saving so I can go on a trip.",
+      "I'm saving in order to go on a trip.",
+      "I'm saving to go on a trip."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона наділа пальто, щоб не змерзнути.",
     "en": [
       "She wore a coat so that she wouldn’t freeze.",
-      "She wore a coat so she wouldn’t freeze."
+      "She wore a coat so she wouldn’t freeze.",
+      "She wore a coat in order not to freeze.",
+      "She wore a coat not to freeze."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Я приніс воду, щоб ти міг попити.",
     "en": [
       "I brought some water so that you could drink.",
-      "I brought some water so you could drink."
+      "I brought some water so you could drink.",
+      "I brought some water in order for you to drink.",
+      "I brought some water for you to drink."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Ми заощаджуємо, щоб купити дім.",
     "en": [
       "We're saving so that we can buy a house.",
-      "We're saving so we can buy a house."
+      "We're saving so we can buy a house.",
+      "We're saving in order to buy a house.",
+      "We're saving to buy a house."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
     "ua": "Вона говорить голосніше, щоб її краще чули.",
     "en": [
-      "She speaks louder so that people can hear her.",
-      "She speaks louder so people can hear her."
+      "She speaks louder so that people can hear her better.",
+      "She speaks louder so people can hear her better.",
+      "She speaks louder in order to be heard better.",
+      "She speaks louder to be heard better."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він тренується щодня, щоб виграти змагання.",
     "en": [
-      "He works out daily so that he can win.",
-      "He works out daily so he can win."
+      "He works out daily so that he can win the competition.",
+      "He works out daily so he can win the competition.",
+      "He works out daily in order to win the competition.",
+      "He works out daily to win the competition."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
     "ua": "Ми змінили план, щоб усім було зручно.",
     "en": [
       "We changed the plan so that it would suit everyone.",
-      "We changed the plan so it would suit everyone."
+      "We changed the plan so it would suit everyone.",
+      "We changed the plan in order to make it convenient for everyone.",
+      "We changed the plan to make it convenient for everyone."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я написав листа, щоб подякувати.",
     "en": [
       "I wrote a letter so that I could thank them.",
-      "I wrote a letter so I could thank them."
+      "I wrote a letter so I could thank them.",
+      "I wrote a letter in order to thank them.",
+      "I wrote a letter to thank them."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
-
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
-    "ua": "Вони залишили світло, щоб дорогу було видно.",
+    "ua": "Вони залишили світло, щоб було видно дорогу.",
     "en": [
       "They left the light on so that the road would be visible.",
-      "They left the light on so the road would be visible."
+      "They left the light on so the road would be visible.",
+      "They left the light on in order to make the road visible.",
+      "They left the light on to make the road visible."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона взяла карту, щоб не заблукати.",
     "en": [
       "She took a map so that she wouldn’t get lost.",
-      "She took a map so she wouldn’t get lost."
+      "She took a map so she wouldn’t get lost.",
+      "She took a map in order not to get lost.",
+      "She took a map not to get lost."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Ми записали відео, щоб запам’ятати цей момент.",
     "en": [
       "We made a video so that we wouldn’t forget the moment.",
-      "We made a video so we wouldn’t forget the moment."
+      "We made a video so we wouldn’t forget the moment.",
+      "We made a video in order not to forget the moment.",
+      "We made a video not to forget the moment."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
     "ua": "Я працюю багато, щоб заробити більше.",
     "en": [
       "I work hard so that I can earn more.",
-      "I work hard so I can earn more."
+      "I work hard so I can earn more.",
+      "I work hard in order to earn more.",
+      "I work hard to earn more."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона приготувала сніданок, щоб усі мали що їсти.",
     "en": [
       "She made breakfast so that everyone could eat.",
-      "She made breakfast so everyone could eat."
+      "She made breakfast so everyone could eat.",
+      "She made breakfast in order for everyone to eat.",
+      "She made breakfast for everyone to eat."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Ми купили подарунок, щоб зробити сюприз.",
     "en": [
       "We bought a present so that we could surprise them.",
-      "We bought a present so we could surprise them."
+      "We bought a present so we could surprise them.",
+      "We bought a present in order to surprise them.",
+      "We bought a present to surprise them."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
     "ua": "Він узяв ліхтарик, щоб бачити в темряві.",
     "en": [
       "He brought a flashlight so that he could see in the dark.",
-      "He brought a flashlight so he could see in the dark."
+      "He brought a flashlight so he could see in the dark.",
+      "He brought a flashlight in order to see in the dark.",
+      "He brought a flashlight to see in the dark."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE", "PREP_PLACE"],
     "ua": "Ми залишили світло увімкненим, щоб його було видно здалеку.",
     "en": [
       "We left the light on so that it would be visible from afar.",
-      "We left the light on so it would be visible from afar."
+      "We left the light on so it would be visible from afar.",
+      "We left the light on in order to make it visible from afar.",
+      "We left the light on to make it visible from afar."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
     "ua": "Вона говорила тихо, щоб ніхто не почув.",
     "en": [
       "She spoke quietly so that nobody would hear her.",
-      "She spoke quietly so nobody would hear her."
+      "She spoke quietly so nobody would hear her.",
+      "She spoke quietly in order not to be heard.",
+      "She spoke quietly not to be heard."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я відклав гроші, щоб купити машину наступного року.",
     "en": [
       "I saved up so that I could buy a car next year.",
-      "I saved up so I could buy a car next year."
+      "I saved up so I could buy a car next year.",
+      "I saved up in order to buy a car next year.",
+      "I saved up to buy a car next year."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Ми залишили записку, щоб він знав, де ми.",
     "en": [
       "We left a note so that he would know where we were.",
-      "We left a note so he would know where we were."
+      "We left a note so he would know where we were.",
+      "We left a note in order for him to know where we were.",
+      "We left a note for him to know where we were."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він зробив це навмисно, щоб звернути увагу на проблему.",
     "en": [
       "He did it on purpose so that people would notice the problem.",
-      "He did it on purpose so people would notice the problem."
+      "He did it on purpose so people would notice the problem.",
+      "He did it on purpose in order to draw attention to the problem.",
+      "He did it on purpose to draw attention to the problem."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Я відкрив вікно, щоб кімната провітрилася.",
     "en": [
       "I opened the window so that the room could air out.",
-      "I opened the window so the room could air out."
+      "I opened the window so the room could air out.",
+      "I opened the window in order to air out the room.",
+      "I opened the window to air out the room."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Вона вивчила текст, щоб не забути слова на сцені.",
     "en": [
       "She memorized the text so that she wouldn’t forget it on stage.",
-      "She memorized the text so she wouldn’t forget it on stage."
+      "She memorized the text so she wouldn’t forget it on stage.",
+      "She memorized the text in order not to forget it on stage.",
+      "She memorized the text not to forget it on stage."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Ми приїхали заздалегідь, щоб підготувати приміщення.",
     "en": [
       "We came early so that we could set up the place.",
-      "We came early so we could set up the place."
+      "We came early so we could set up the place.",
+      "We came early in order to set up the place.",
+      "We came early to set up the place."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він підняв руку, щоб поставити запитання.",
     "en": [
       "He raised his hand so that he could ask a question.",
-      "He raised his hand so he could ask a question."
+      "He raised his hand so he could ask a question.",
+      "He raised his hand in order to ask a question.",
+      "He raised his hand to ask a question."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я надів навушники, щоб не чути шуму.",
     "en": [
       "I wore headphones so that I wouldn’t hear the noise.",
-      "I wore headphones so I wouldn’t hear the noise."
+      "I wore headphones so I wouldn’t hear the noise.",
+      "I wore headphones in order not to hear the noise.",
+      "I wore headphones not to hear the noise."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона відкрила ноутбук, щоб перевірити пошту.",
     "en": [
-      "She opened her laptop in order to check her email.",
       "She opened her laptop so that she could check her email.",
-      "She opened her laptop so she could check her email."
+      "She opened her laptop so she could check her email.",
+      "She opened her laptop in order to check her email.",
+      "She opened her laptop to check her email."
     ],
-    "hint": "use ... SO (THAT) ... / ... IN ORDER TO ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
     "ua": "Ми поїхали швидше, щоб не запізнитися на зустріч.",
     "en": [
-      "We drove faster in order not to be late for the meeting.",
-      "We went faster so that we wouldn’t be late.",
-      "We went faster so we wouldn’t be late."
+      "We went faster so that we wouldn’t be late for the meeting.",
+      "We went faster so we wouldn’t be late for the meeting.",
+      "We went faster in order not to be late for the meeting.",
+      "We went faster not to be late for the meeting."
     ],
-    "hint": "use ... SO (THAT) ... / ... IN ORDER TO ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
     "ua": "Я зробив глибокий вдих, щоб заспокоїтись.",
     "en": [
+      "I took a deep breath so that I could calm down.",
+      "I took a deep breath so I could calm down.",
       "I took a deep breath in order to calm down.",
-      "I breathed deeply so that I could relax.",
-      "I breathed deeply so I could relax."
+      "I took a deep breath to calm down."
     ],
-    "hint": "use ... SO (THAT) ... / ... IN ORDER TO ..."
-  },
-  {
-    "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
-    "ua": "Вона підняла голос, щоб усі почули.",
-    "en": [
-      "She spoke louder so that everyone could hear her.",
-      "She spoke louder so everyone could hear her."
-    ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
     "ua": "Ми перевірили все двічі, щоб не було помилок.",
     "en": [
       "We double-checked so that there would be no mistakes.",
-      "We double-checked so there would be no mistakes."
+      "We double-checked so there would be no mistakes.",
+      "We double-checked in order to avoid mistakes.",
+      "We double-checked to avoid mistakes."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Він зачинив двері, щоб не втекла кішка.",
     "en": [
       "He shut the door so that the cat wouldn’t run away.",
-      "He shut the door so the cat wouldn’t run away."
+      "He shut the door so the cat wouldn’t run away.",
+      "He shut the door in order to keep the cat from running away.",
+      "He shut the door to keep the cat from running away."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я залишив телефон вдома, щоб не відволікатися.",
     "en": [
-      "I left my phone so that I wouldn’t get distracted.",
-      "I left my phone so I wouldn’t get distracted."
+      "I left my phone at home so that I wouldn’t get distracted.",
+      "I left my phone at home so I wouldn’t get distracted.",
+      "I left my phone at home in order not to get distracted.",
+      "I left my phone at home not to get distracted."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона зробила копію, щоб ніхто не загубив оригінал.",
     "en": [
       "She made a copy so that the original wouldn’t get lost.",
-      "She made a copy so the original wouldn’t get lost."
+      "She made a copy so the original wouldn’t get lost.",
+      "She made a copy in order to keep the original from getting lost.",
+      "She made a copy to keep the original from getting lost."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я вимкнув звук, щоб ніхто не почув дзвінка.",
     "en": [
       "I muted it so that nobody would hear the ringtone.",
-      "I muted it so nobody would hear the ringtone."
+      "I muted it so nobody would hear the ringtone.",
+      "I muted it in order to make sure nobody would hear the ringtone.",
+      "I muted it to make sure nobody would hear the ringtone."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Ми вимкнули телефони, щоб зосередитися.",
     "en": [
       "We turned our phones off so that we could concentrate.",
-      "We turned our phones off so we could concentrate."
+      "We turned our phones off so we could concentrate.",
+      "We turned our phones off in order to concentrate.",
+      "We turned our phones off to concentrate."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я підготував усе, щоб не поспішати вранці.",
     "en": [
-      "I got everything ready so that I wouldn’t be in a hurry.",
-      "I got everything ready so I wouldn’t be in a hurry."
+      "I got everything ready so that I wouldn’t be in a hurry in the morning.",
+      "I got everything ready so I wouldn’t be in a hurry in the morning.",
+      "I got everything ready in order not to be in a hurry in the morning.",
+      "I got everything ready not to be in a hurry in the morning."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Вона принесла воду, щоб ми могли напоїти собаку.",
     "en": [
-      "She brought water so that we could give the dog some.",
-      "She brought water so we could give the dog some."
+      "She brought water so that we could give the dog a drink.",
+      "She brought water so we could give the dog a drink.",
+      "She brought water in order for us to give the dog a drink.",
+      "She brought water for us to give the dog a drink."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я зробив паузу, щоб подумати.",
     "en": [
       "I stopped for a moment so that I could think.",
-      "I stopped for a moment so I could think."
+      "I stopped for a moment so I could think.",
+      "I stopped for a moment in order to think.",
+      "I stopped for a moment to think."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Вона одягла рукавички, щоб не змерзли руки.",
     "en": [
       "She wore gloves so that her hands wouldn’t freeze.",
-      "She wore gloves so her hands wouldn’t freeze."
+      "She wore gloves so her hands wouldn’t freeze.",
+      "She wore gloves in order to keep her hands from freezing.",
+      "She wore gloves to keep her hands from freezing."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
     "ua": "Я залишив лампу ввімкненою, щоб було видно вночі.",
     "en": [
       "I left the lamp on so that it wouldn’t be dark at night.",
-      "I left the lamp on so it wouldn’t be dark at night."
+      "I left the lamp on so it wouldn’t be dark at night.",
+      "I left the lamp on in order to see at night.",
+      "I left the lamp on to see at night."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона принесла парасольку, щоб ми не промокли.",
     "en": [
       "She brought an umbrella so that we wouldn’t get wet.",
-      "She brought an umbrella so we wouldn’t get wet."
+      "She brought an umbrella so we wouldn’t get wet.",
+      "She brought an umbrella in order to keep us from getting wet.",
+      "She brought an umbrella to keep us from getting wet."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
     "ua": "Він говорив повільно, щоб його могли зрозуміти навіть діти.",
     "en": [
       "He spoke slowly so that even children could understand him.",
-      "He spoke slowly so even children could understand him."
+      "He spoke slowly so even children could understand him.",
+      "He spoke slowly in order to be understood even by children.",
+      "He spoke slowly to be understood even by children."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE", "COMPARATIVES"],
     "ua": "Ми оновили систему, щоб вона працювала ефективніше.",
     "en": [
       "We updated the system so that it would run more efficiently.",
-      "We updated the system so it would run more efficiently."
+      "We updated the system so it would run more efficiently.",
+      "We updated the system in order to make it run more efficiently.",
+      "We updated the system to make it run more efficiently."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він залишив повідомлення, щоб ніхто не сумнівався в його намірах.",
     "en": [
       "He left a message so that nobody would doubt his intentions.",
-      "He left a message so nobody would doubt his intentions."
+      "He left a message so nobody would doubt his intentions.",
+      "He left a message in order to avoid any doubt about his intentions.",
+      "He left a message to avoid any doubt about his intentions."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона відклала зустріч, щоб усі могли взяти участь.",
     "en": [
       "She delayed the meeting so that everyone could attend.",
-      "She delayed the meeting so everyone could attend."
+      "She delayed the meeting so everyone could attend.",
+      "She delayed the meeting in order to let everyone attend.",
+      "She delayed the meeting to let everyone attend."
     ],
-    "hint": "use ... SO (THAT) ..."
-  },
-  {
-    "rules": ["IN_ORDER_TO_SO_THAT"],
-    "ua": "Ми зберегли копії документів, щоб у майбутньому їх можна було перевірити.",
-    "en": [
-      "We saved copies so that they could be checked later.",
-      "We saved copies so they could be checked later."
-    ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
     "ua": "Він підвищив голос, щоб його слова почули всі.",
     "en": [
       "He spoke louder so that everyone could hear him.",
-      "He spoke louder so everyone could hear him."
+      "He spoke louder so everyone could hear him.",
+      "He spoke louder in order to be heard by everyone.",
+      "He spoke louder to be heard by everyone."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Ми створили резервну копію, щоб не втратити дані.",
     "en": [
       "We made a backup so that we wouldn’t lose any data.",
-      "We made a backup so we wouldn’t lose any data."
+      "We made a backup so we wouldn’t lose any data.",
+      "We made a backup in order not to lose any data.",
+      "We made a backup not to lose any data."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
     "ua": "Вона написала звіт, щоб керівництво було проінформоване.",
     "en": [
       "She wrote a report so that the management would be aware.",
-      "She wrote a report so the management would be aware."
+      "She wrote a report so the management would be aware.",
+      "She wrote a report in order to inform the management.",
+      "She wrote a report to inform the management."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Ми організували навчання, щоб працівники краще розуміли процеси.",
     "en": [
       "We arranged training so that employees could better understand the workflow.",
-      "We arranged training so employees could better understand the workflow."
+      "We arranged training so employees could better understand the workflow.",
+      "We arranged training in order to help employees better understand the workflow.",
+      "We arranged training to help employees better understand the workflow."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Я залишив вікно зачиненим, щоб жоден комар не залетів.",
     "en": [
       "I closed the window so that no mosquitoes would come in.",
-      "I closed the window so no mosquitoes would come in."
+      "I closed the window so no mosquitoes would come in.",
+      "I closed the window in order to keep mosquitoes out.",
+      "I closed the window to keep mosquitoes out."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
     "ua": "Вони підписали угоду, щоб уникнути юридичних проблем.",
     "en": [
       "They signed the agreement so that there would be no legal problems.",
-      "They signed the agreement so there would be no legal problems."
+      "They signed the agreement so there would be no legal problems.",
+      "They signed the agreement in order to avoid legal problems.",
+      "They signed the agreement to avoid legal problems."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він підготував презентацію, щоб вразити інвесторів.",
     "en": [
       "He made a presentation so that he could impress the investors.",
-      "He made a presentation so he could impress the investors."
+      "He made a presentation so he could impress the investors.",
+      "He made a presentation in order to impress the investors.",
+      "He made a presentation to impress the investors."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Ми провели тест, щоб підтвердити результати.",
     "en": [
       "We ran a test so that we could confirm the results.",
-      "We ran a test so we could confirm the results."
+      "We ran a test so we could confirm the results.",
+      "We ran a test in order to confirm the results.",
+      "We ran a test to confirm the results."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
     "ua": "Вона говорила чітко, щоб уникнути непорозумінь.",
     "en": [
       "She spoke clearly so that there would be no misunderstanding.",
-      "She spoke clearly so there would be no misunderstanding."
+      "She spoke clearly so there would be no misunderstanding.",
+      "She spoke clearly in order to avoid misunderstandings.",
+      "She spoke clearly to avoid misunderstandings."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
     "ua": "Він змінив пароль, щоб ніхто не мав доступу.",
     "en": [
       "He changed the password so that nobody could log in.",
-      "He changed the password so nobody could log in."
+      "He changed the password so nobody could log in.",
+      "He changed the password in order to block unauthorized access.",
+      "He changed the password to block unauthorized access."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "COMPARATIVES"],
     "ua": "Я підготував документи, щоб процес проходив швидше.",
     "en": [
       "I prepared the papers so that the process would be quicker.",
-      "I prepared the papers so the process would be quicker."
+      "I prepared the papers so the process would be quicker.",
+      "I prepared the papers in order to speed up the process.",
+      "I prepared the papers to speed up the process."
     ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   },
-
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
     "ua": "Вона записала лекцію, щоб потім переглянути її ще раз.",
     "en": [
       "She recorded the lecture so that she could watch it again later.",
-      "She recorded the lecture so she could watch it again later."
+      "She recorded the lecture so she could watch it again later.",
+      "She recorded the lecture in order to watch it again later.",
+      "She recorded the lecture to watch it again later."
     ],
-    "hint": "use ... SO (THAT) ..."
-  },
-  {
-    "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
-    "ua": "Ми залишили попередження, щоб жоден відвідувач не заходив у небезпечну зону.",
-    "en": [
-      "We put up a warning sign so that visitors wouldn’t enter the restricted area.",
-      "We put up a warning sign so visitors wouldn’t enter the restricted area."
-    ],
-    "hint": "use ... SO (THAT) ..."
+    "hint": "use TO / SO (THAT) / IN ORDER TO"
   }
 ] }

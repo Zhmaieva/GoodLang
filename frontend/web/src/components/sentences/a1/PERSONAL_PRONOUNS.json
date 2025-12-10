@@ -191,21 +191,6 @@
       "en": ["We don't like waiting."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_CONT_NOW"],
-      "ua": "Я зараз працюю.",
-      "en": ["I am working now.", "I'm working now."]
-    },
-    {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_CONT_NOW"],
-      "ua": "Вона зараз читає.",
-      "en": ["She is reading now.", "She's reading now."]
-    },
-    {
-      "rules": ["PERSONAL_PRONOUNS", "PRESENT_CONT_NOW"],
-      "ua": "Вони зараз дивляться фільм.",
-      "en": ["They are watching a movie now.", "They're watching a film now."]
-    },
-    {
       "rules": ["PERSONAL_PRONOUNS", "HAVE_HAVE_GOT"],
       "ua": "У мене є собака.",
       "en": ["I have a dog.", "I've got a dog."]

@@ -8,12 +8,9 @@
   ]
  },
  {
-  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE", "PAST_SIMPLE"],
   "ua": "Вона подивилася на себе в дзеркало.",
-  "en": [
-   "She looked at herself in the mirror.",
-   "She was looking at herself in the mirror."
-  ]
+  "en": ["She looked at herself in the mirror."]
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS", "SHOULD_SHOULDNT"],
@@ -50,10 +47,7 @@
  {
   "rules": ["REFLEXIVE_PRONOUNS"],
   "ua": "Вона сказала собі зосередитися.",
-  "en": [
-   "She told herself to focus.",
-   "She kept telling herself to focus."
-  ]
+  "en": ["She told herself to focus."]
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
@@ -121,12 +115,9 @@
   ]
  },
  {
-  "rules": ["REFLEXIVE_PRONOUNS"],
+  "rules": ["REFLEXIVE_PRONOUNS", "PRESENT_CONT_NOW"],
   "ua": "Собака дряпає себе.",
-  "en": [
-   "The dog is scratching itself.",
-   "The dog keeps scratching itself."
-  ]
+  "en": ["The dog is scratching itself."]
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS"],
@@ -244,18 +235,14 @@
  {
   "rules": ["REFLEXIVE_PRONOUNS"],
   "ua": "Я обіцяю собі більше відпочивати.",
-  "en": [
-   "I promise myself to rest more.",
-   "I’m promising myself to rest more."
-  ]
+  "en": ["I promise myself to rest more."]
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS", "ARTICLES"],
   "ua": "Вона приготувала собі сніданок.",
   "en": [
    "She made herself breakfast.",
-   "She prepared herself some breakfast.",
-   "She fixed herself breakfast."
+   "She prepared herself some breakfast."
   ]
  },
  {
@@ -364,12 +351,9 @@
   ]
  },
  {
-  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
+  "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE", "PAST_CONTINUOUS"],
   "ua": "Вони дивилися на себе у дзеркало.",
-  "en": [
-   "They looked at themselves in the mirror.",
-   "They were looking at themselves in the mirror."
-  ]
+  "en": ["They were looking at themselves in the mirror."]
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],

@@ -24,14 +24,6 @@
     ]
   },
   {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі книги дуже дорогі.",
-    "en": [
-      "Some books are very expensive.",
-      "Some books are really expensive."
-    ]
-  },
-  {
     "rules": ["TOO_VERY", "DEMONSTRATIVES"],
     "ua": "Цей фільм надто довгий.",
     "en": [
@@ -42,26 +34,17 @@
 
   {
     "rules": ["TOO_VERY"],
-    "ua": "Він дуже швидкий у бігу.",
+    "ua": "Він дуже швидкий.",
     "en": [
-      "He is very fast at running.",
-      "He’s really fast at running."
+      "He is very fast.",
+      "He’s really fast."
     ]
   },
   {
     "rules": ["TOO_VERY"],
     "ua": "Ця книга надто складна для читання.",
     "en": [
-      "This book is too difficult to read.",
-      "This book is very difficult to read."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато туристів дуже втомлені.",
-    "en": [
-      "Many tourists are very tired.",
-      "A lot of tourists are really tired."
+      "This book is too difficult to read."
     ]
   },
   {
@@ -74,26 +57,10 @@
   },
   {
     "rules": ["TOO_VERY"],
-    "ua": "Цей концерт надто гучний.",
-    "en": [
-      "This concert is too loud.",
-      "This concert is very loud."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY"],
     "ua": "Вона дуже зайнята роботою.",
     "en": [
       "She is very busy with work.",
       "She’s really busy with work."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти дуже розумні.",
-    "en": [
-      "Some students are very smart.",
-      "Some students are really smart."
     ]
   },
   {
@@ -108,8 +75,7 @@
     "rules": ["TOO_VERY"],
     "ua": "Цей урок надто нудний.",
     "en": [
-      "This lesson is too boring.",
-      "This lesson is very boring."
+      "This lesson is too boring."
     ]
   },
   {
@@ -121,11 +87,11 @@
     ]
   },
   {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато дітей дуже активні.",
+    "rules": ["TOO_VERY"],
+    "ua": "Більшість дітей дуже активні.",
     "en": [
-      "Many children are very active.",
-      "A lot of children are really active."
+      "Most children are very active.",
+      "Most kids are very active.", "The majority of children are very active."
     ]
   },
   {
@@ -140,48 +106,22 @@
     "rules": ["TOO_VERY"],
     "ua": "Ця картина надто яскрава.",
     "en": [
-      "This picture is too bright.",
-      "This picture is very bright."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES"],
-    "ua": "Цей театр дуже переповнений сьогодні.",
-    "en": [
-      "This theater is very crowded today.",
-      "This theater is really crowded today."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі пейзажі дуже мальовничі.",
-    "en": [
-      "Some landscapes are very picturesque.",
-      "Some landscapes are really picturesque."
+      "This picture is too bright."
     ]
   },
   {
     "rules": ["TOO_VERY"],
-    "ua": "Він дуже добрий до друзів.",
+    "ua": "Він дуже добрий.",
     "en": [
-      "He is very kind to friends.",
-      "He’s really kind to friends."
+      "He is very kind.",
+      "He’s really kind."
     ]
   },
   {
     "rules": ["TOO_VERY"],
     "ua": "Ця гра надто складна.",
     "en": [
-      "This game is too difficult.",
-      "This game is very difficult."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато студентів дуже зайняті.",
-    "en": [
-      "Many students are very busy.",
-      "A lot of students are really busy."
+      "This game is too difficult."
     ]
   },
   {
@@ -194,56 +134,32 @@
   },
   {
     "rules": ["TOO_VERY"],
-    "ua": "Я дуже щасливий у школі.",
-    "en": [
-      "I am very happy at school.",
-      "I’m really happy at school."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY"],
     "ua": "Цей фільм надто страшний.",
     "en": [
-      "This movie is too scary.",
-      "This film is very scary."
-    ]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі вчителі дуже суворі.",
-    "en": [
-      "Some teachers are very strict.",
-      "Some teachers are really strict."
+      "This movie is too scary."
     ]
   },
   {
     "rules": ["TOO_VERY"],
     "ua": "Цей парк надто великий.",
     "en": [
-      "This park is too large.",
-      "This park is very large."
+      "This park is too large."
     ]
   },
-
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона дуже втомлена після танців зараз.",
-    "en": ["She is very tired now after dancing.", "She’s really tired now after dancing."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Вона дуже втомлена після танців.",
+    "en": ["She is very tired after dancing.", "She’s really tired after dancing."]
   },
   {
     "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Ця гра дуже захоплива щодня.",
-    "en": ["This game is very exciting every day.", "This game is really exciting daily."]
+    "ua": "Ця гра дуже захоплива.",
+    "en": ["This game is very exciting.", "This game is really exciting."]
   },
   {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів дуже зацікавлені.",
-    "en": ["Many tourists are very interested.", "A lot of tourists are really interested."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я дуже зайнятий роботою зараз.",
-    "en": ["I am very busy with work now.", "I’m really busy with work now."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Я дуже зайнятий.",
+    "en": ["I am very busy.", "I’m really busy."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -251,33 +167,23 @@
     "en": ["This concert is very fun.", "This concert is really fun."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця книга надто заплутана сьогодні.",
-    "en": ["This book is too confusing today.", "This book is overly confusing today."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі студенти дуже талановиті.",
-    "en": ["Some students are very talented.", "Certain students are really talented."]
+    "rules": ["TOO_VERY", "DEMONSTRATIVES"],
+    "ua": "Ця книга надто заплутана.",
+    "en": ["This book is too confusing.", "This book is overly confusing."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Він дуже спокійний у класі.",
-    "en": ["He is very calm in class.", "He’s really calm in class."]
+    "ua": "Він дуже спокійний.",
+    "en": ["He is very calm.", "He’s really calm."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця гра дуже цікава зараз.",
-    "en": ["This game is very interesting now.", "This game is really interesting now."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей дуже веселі.",
-    "en": ["Many children are very cheerful.", "A lot of children are really cheerful."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Ця гра дуже цікава.",
+    "en": ["This game is very interesting.", "This game is really interesting."]
   },
   {
     "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Цей театр дуже відомий щотижня.",
+    "ua": "Цей театр дуже відомий.",
     "en": ["This theater is very famous.", "This theater is really famous."]
   },
   {
@@ -286,14 +192,9 @@
     "en": ["I am very satisfied with the book.", "I’m really satisfied with the book."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей урок надто важкий зараз.",
-    "en": ["This lesson is too difficult now.", "This lesson is overly difficult now."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі пейзажі дуже гарні.",
-    "en": ["Some landscapes are very beautiful.", "Certain landscapes are really beautiful."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Цей урок надто важкий.",
+    "en": ["This lesson is too difficult.", "This lesson is overly difficult."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -301,24 +202,14 @@
     "en": ["She is very friendly to everyone.", "She’s really friendly to everyone."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей фільм дуже смішний сьогодні.",
-    "en": ["This movie is very funny today.", "This movie is really funny today."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Цей фільм дуже смішний.",
+    "en": ["This movie is very funny.", "This movie is really funny."]
   },
   {
     "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Ця картина дуже оригінальна щодня.",
+    "ua": "Ця картина дуже оригінальна.",
     "en": ["This picture is very original.", "This picture is really original."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато студентів дуже втомлені.",
-    "en": ["Many students are very tired.", "A lot of students are really tired."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я дуже схвильований концертом зараз.",
-    "en": ["I am very excited about the concert now.", "I’m really excited about the concert now."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -326,14 +217,9 @@
     "en": ["This park is too quiet.", "This park is overly quiet."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця гра дуже напружена сьогодні.",
-    "en": ["This game is very intense today.", "This game is really intense today."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі вчителі дуже терплячі.",
-    "en": ["Some teachers are very patient.", "Certain teachers are really patient."]
+    "rules": ["TOO_VERY", "DEMONSTRATIVES"],
+    "ua": "Ця гра дуже напружена.",
+    "en": ["This game is very intense.", "This game is really intense."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -346,25 +232,19 @@
     "en": ["This movie is very exciting.", "This movie is really exciting."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "YES_NO_Q"],
-    "ua": "Ця книга надто заплутана зараз?",
-    "en": ["Is this book too confusing now?", "Is this book overly confusing now?"]
+    "rules": ["TOO_VERY", "YES_NO_Q"],
+    "ua": "Ця книга надто заплутана?",
+    "en": ["Is this book too confusing?", "Is this book overly confusing?"]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Я дуже радий у школі.",
-    "en": ["I am very glad at school.", "I’m really glad at school."]
-  },
-
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі уроки дуже складні.",
-    "en": ["Some lessons are very difficult.", "Certain lessons are really difficult."]
+    "ua": "Я дуже радий.",
+    "en": ["I am very glad.", "I’m really glad."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Цей концерт надто гучний сьогодні.",
-    "en": ["This concert is too loud today.", "This concert is overly loud today."]
+    "rules": ["TOO_VERY", "DEMONSTRATIVES"],
+    "ua": "Цей концерт надто гучний.",
+    "en": ["This concert is too loud.", "This concert is overly loud."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -372,59 +252,24 @@
     "en": ["He is very diligent in his studies.", "He’s really diligent in his studies."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця гра дуже напружена зараз.",
-    "en": ["This game is very intense now.", "This game is really intense now."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів дуже здивовані.",
-    "en": ["Many tourists are very surprised.", "A lot of tourists are really surprised."]
-  },
-  {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Цей парк дуже тихий щодня.",
-    "en": ["This park is very quiet every day.", "This park is really quiet every day."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Ця картина надто складна.",
-    "en": ["This picture is too complex.", "This picture is overly complex."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона дуже схвильована концертом зараз.",
-    "en": ["She is very excited about the concert now.", "She’s really excited about the concert now."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі студенти дуже уважні.",
-    "en": ["Some students are very attentive.", "Certain students are really attentive."]
-  },
-  {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
     "ua": "Цей театр дуже сучасний.",
     "en": ["This theater is very modern.", "This theater is really modern."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей урок надто довгий зараз.",
-    "en": ["This lesson is too long now.", "This lesson is overly long now."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Цей урок надто довгий.",
+    "en": ["This lesson is too long.", "This lesson is overly long."]
   },
   {
     "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Ця книга дуже інформативна щодня.",
+    "ua": "Ця книга дуже інформативна.",
     "en": ["This book is very informative.", "This book is really informative."]
   },
   {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей дуже енергійні.",
-    "en": ["Many children are very energetic.", "A lot of children are really energetic."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я дуже зосереджений на роботі зараз.",
-    "en": ["I am very focused on work now.", "I’m really focused on work now."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Я дуже зосереджений на роботі.",
+    "en": ["I am very focused on work.", "I’m really focused on work."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -432,34 +277,14 @@
     "en": ["This game is too risky.", "This game is overly risky."]
   },
   {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Цей музей дуже переповнений сьогодні.",
-    "en": ["This museum is very crowded today.", "This museum is really crowded today."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі пейзажі дуже спокійні.",
-    "en": ["Some landscapes are very peaceful.", "Certain landscapes are really peaceful."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Він дуже привітний до всіх.",
-    "en": ["He is very friendly to everyone.", "He’s really friendly to everyone."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця книга дуже цікава зараз.",
-    "en": ["This book is very interesting now.", "This book is really interesting now."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато студентів дуже мотивовані.",
-    "en": ["Many students are very motivated.", "A lot of students are really motivated."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Ця книга дуже цікава.",
+    "en": ["This book is very interesting.", "This book is really interesting."]
   },
   {
     "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Цей концерт дуже популярний щотижня.",
-    "en": ["This concert is very popular every week.", "This concert is really popular every week."]
+    "ua": "Цей концерт дуже популярний.",
+    "en": ["This concert is very popular.", "This concert is really popular."]
   },
   {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -467,134 +292,13 @@
     "en": ["I am very pleased with the lesson.", "I’m really pleased with the lesson."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей фільм надто смішний сьогодні.",
-    "en": ["This movie is too funny today.", "This movie is overly funny today."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі вчителі дуже креативні.",
-    "en": ["Some teachers are very creative.", "Certain teachers are really creative."]
-  },
-  {
     "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
     "ua": "Цей парк дуже просторий.",
     "en": ["This park is very spacious.", "This park is really spacious."]
   },
   {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона дуже втомлена після роботи зараз.",
-    "en": ["She is very tired after work now.", "She’s really tired after work now."]
-  },
-  {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Ця гра дуже складна щодня.",
-    "en": ["This game is very challenging every day.", "This game is really challenging every day."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів дуже вражені.",
-    "en": ["Many tourists are very impressed.", "A lot of tourists are really impressed."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я дуже стомлений уроком зараз.",
-    "en": ["I am very exhausted by the lesson now.", "I’m really exhausted by the lesson now."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Цей театр надто дорогий.",
-    "en": ["This theater is too expensive.", "This theater is overly expensive."]
-  },
-  {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця картина дуже яскрава сьогодні.",
-    "en": ["This picture is very bright today.", "This picture is really bright today."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі книги дуже пізнавальні.",
-    "en": ["Some books are very educational.", "Certain books are really educational."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Він дуже обережний у роботі.",
-    "en": ["He is very careful at work.", "He’s really careful at work."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей концерт дуже емоційний зараз.",
-    "en": ["This concert is very emotional now.", "This concert is really emotional now."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей дуже допитливі.",
-    "en": ["Many children are very curious.", "A lot of children are really curious."]
-  },
-  {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Цей музей дуже відомий щотижня.",
-    "en": ["This museum is very famous every week.", "This museum is really famous every week."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Я дуже вражений книгою.",
-    "en": ["I am very impressed with the book.", "I’m really impressed with the book."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ця гра надто швидка зараз.",
-    "en": ["This game is too fast now.", "This game is overly fast now."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі уроки дуже легкі.",
-    "en": ["Some lessons are very easy.", "Certain lessons are really easy."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Вона дуже щедра до друзів.",
-    "en": ["She is very generous to friends.", "She’s really generous to friends."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Цей фільм дуже зворушливий сьогодні.",
-    "en": ["This movie is very touching today.", "This movie is really touching today."]
-  },
-  {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Ця картина дуже унікальна щодня.",
-    "en": ["This picture is very unique.", "This picture is really unique."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато студентів дуже організовані.",
-    "en": ["Many students are very organized.", "A lot of students are really organized."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я дуже зацікавлений уроком зараз.",
-    "en": ["I am very interested in the lesson now.", "I’m really interested in the lesson now."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Цей парк надто людний.",
-    "en": ["This park is too crowded.", "This park is overly crowded."]
-  },
-  {
-    "rules": ["TOO_VERY", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця гра дуже весела сьогодні.",
-    "en": ["This game is very fun today.", "This game is really fun today."]
-  },
-  {
-    "rules": ["TOO_VERY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі вчителі дуже вимогливі.",
-    "en": ["Some teachers are very demanding.", "Certain teachers are really demanding."]
-  },
-  {
-    "rules": ["TOO_VERY", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Він дуже пунктуальний на роботі.",
-    "en": ["He is very punctual at work.", "He’s really punctual at work."]
+    "rules": ["TOO_VERY", "ARTICLES"],
+    "ua": "Вона дуже втомлена після роботи.",
+    "en": ["She is very tired after work.", "She’s really tired after work."]
   }
-
 ] }

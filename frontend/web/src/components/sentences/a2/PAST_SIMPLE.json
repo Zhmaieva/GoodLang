@@ -1,572 +1,432 @@
 { "PAST_SIMPLE": [
   {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
     "ua": "Я відвідав музей учора.",
-    "en": ["I visited the museum yesterday.", "I went to the museum yesterday."]
+    "en": [
+      "I visited the museum yesterday.",
+      "I went to the museum yesterday."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
     "ua": "Вона прочитала книгу минулого тижня.",
-    "en": ["She read a book last week."]
+    "en": [
+      "She read a book last week."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми відвідали деякі парки минулого місяця.",
-    "en": ["We visited some parks last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Він пояснив цей урок учора.",
-    "en": ["He explained this lesson yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я грав у футбол минулого року.",
-    "en": ["I played football last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
     "ua": "Вона приготувала вечерю вчора ввечері.",
-    "en": ["She prepared dinner yesterday evening.", "She cooked dinner yesterday evening."]
+    "en": [
+      "She prepared dinner yesterday evening.",
+      "She cooked dinner yesterday evening."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони відвідали багато країн торік.",
-    "en": ["They visited many countries last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES", "PREP_TIME"],
     "ua": "Ми прочитали цю книгу минулого тижня.",
-    "en": ["We read this book last week."]
+    "en": [
+      "We read this book last week."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я намалював картину минулого місяця.",
-    "en": ["I painted a picture last month.", "I drew a picture last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Він співав на концерті вчора.",
-    "en": ["He sang at the concert yesterday.", "He performed at the concert yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Вони сфотографували деякі пейзажі торік.",
-    "en": ["They photographed some landscapes last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
     "ua": "Я прочитав газету вчора.",
-    "en": ["I read a newspaper yesterday."]
+    "en": [
+      "I read a newspaper yesterday.",
+      "I read the paper yesterday."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
     "ua": "Вона відвідала галерею минулого тижня.",
-    "en": ["She visited the gallery last week."]
+    "en": [
+      "She visited the gallery last week.",
+      "She went to the gallery last week."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES", "PREP_TIME"],
     "ua": "Ми зіграли в цю гру вчора.",
-    "en": ["We played this game yesterday."]
+    "en": [
+      "We played this game yesterday."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони побачили багато птахів минулого літа.",
-    "en": ["They saw many birds last summer."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
     "ua": "Вона написала вірш минулого тижня.",
-    "en": ["She wrote a poem last week.", "She composed a poem last week."]
+    "en": [
+      "She wrote a poem last week.",
+      "She composed a poem last week."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми відвідали деякі театри торік.",
-    "en": ["We visited some theaters last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона приготувала обід учора.",
-    "en": ["She prepared lunch yesterday.", "She cooked lunch yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони побачили багато зірок минулої ночі.",
-    "en": ["They saw many stars last night."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми подивилися цей фільм учора.",
-    "en": ["We watched this movie yesterday.", "We saw this movie yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я прочитав роман минулого місяця.",
-    "en": ["I read a novel last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Він заспівав на сцені вчора.",
-    "en": ["He sang on the stage yesterday.", "He performed on the stage yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми вивчили деякі слова торік.",
-    "en": ["We learned some words last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона намалювала портрет учора.",
-    "en": ["She painted a portrait yesterday.", "She drew a portrait yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я відвідав зоопарк минулого тижня.",
-    "en": ["I visited the zoo last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Вони зіграли в цю гру минулого місяця.",
-    "en": ["They played this game last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Ми відвідали багато міст торік.",
-    "en": ["We visited many cities last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я написав лист учора.",
-    "en": ["I wrote a letter yesterday.", "I composed a letter yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Він вивчив цю тему минулого тижня.",
-    "en": ["He studied this topic last week.", "He learned this topic last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми сфотографували деякі квіти торік.",
-    "en": ["We photographed some flowers last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона приготувала піцу вчора.",
-    "en": ["She prepared pizza yesterday.", "She cooked pizza yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони побачили багато озер минулого літа.",
-    "en": ["They saw many lakes last summer."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми заспівали цю пісню вчора.",
-    "en": ["We sang this song yesterday.", "We performed this song yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я прочитав журнал учора.",
-    "en": ["I read a magazine yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми вивчили деякі факти торік.",
-    "en": ["We learned some facts last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я відвідав театр минулого тижня.",
-    "en": ["I visited the theater last week.", "I went to the theater last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Він намалював пейзаж учора.",
-    "en": ["He painted a landscape yesterday.", "He drew a landscape yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми прочитали цю книгу минулого місяця.",
-    "en": ["We read this book last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони відвідали багато замків торік.",
-    "en": ["They visited many castles last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я приготував суп учора.",
-    "en": ["I prepared soup yesterday.", "I cooked soup yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми прочитали деякі журнали торік.",
-    "en": ["We read some magazines last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я відвідав галерею вчора.",
-    "en": ["I visited the gallery yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона подивилася фільм минулого тижня.",
-    "en": ["She watched a movie last week.", "She saw a movie last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми сфотографували деякі птахи торік.",
-    "en": ["We photographed some birds last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Він зіграв у цю гру вчора.",
-    "en": ["He played this game yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я приготував суп минулого вечора.",
-    "en": ["I prepared soup last evening.", "I cooked soup last evening."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони відвідали багато островів торік.",
-    "en": ["They visited many islands last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми вивчили цю тему минулого місяця.",
-    "en": ["We studied this topic last month.", "We learned this topic last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я написав есе вчора.",
-    "en": ["I wrote an essay yesterday.", "I composed an essay yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Він відвідав парк минулого тижня.",
-    "en": ["He visited the park last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми прочитали деякі статті торік.",
-    "en": ["We read some articles last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона приготувала десерт учора.",
-    "en": ["She prepared a dessert yesterday.", "She made a dessert yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми подивилися цей спектакль учора.",
-    "en": ["We watched this play yesterday.", "We saw this play yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони побачили багато тварин минулого літа.",
-    "en": ["They saw many animals last summer."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона написала лист минулого тижня.",
-    "en": ["She wrote a letter last week.", "She composed a letter last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Він прочитав цю книгу вчора.",
-    "en": ["He read this book yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми відвідали деякі замки торік.",
-    "en": ["We visited some castles last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона відвідала зоопарк минулого місяця.",
-    "en": ["She visited the zoo last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони сфотографували багато квітів торік.",
-    "en": ["They photographed many flowers last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми заспівали цю пісню вчора.",
-    "en": ["We sang this song yesterday.", "We performed this song yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я намалював пейзаж учора.",
-    "en": ["I painted a landscape yesterday.", "I drew a landscape yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми вивчили деякі терміни торік.",
-    "en": ["We learned some terms last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона приготувала піцу минулого вечора.",
-    "en": ["She prepared pizza last evening.", "She cooked pizza last evening."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони відвідали багато музеїв торік.",
-    "en": ["They visited many museums last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я відвідав театр учора.",
-    "en": ["I visited the theater yesterday.", "I went to the theater yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми прочитали цей журнал вчора.",
-    "en": ["We read this magazine yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми відвідали деякі озера торік.",
-    "en": ["We visited some lakes last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я написав статтю вчора.",
-    "en": ["I wrote an article yesterday.", "I composed an article yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
     "ua": "Він приготував обід учора.",
-    "en": ["He prepared lunch yesterday.", "He cooked lunch yesterday."]
+    "en": [
+      "He prepared lunch yesterday.",
+      "He cooked lunch yesterday."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони побачили багато річок минулого літа.",
-    "en": ["They saw many rivers last summer."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона відвідала бібліотеку вчора.",
-    "en": ["She visited the library yesterday.", "She went to the library yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми прочитали деякі романи торік.",
-    "en": ["We read some novels last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Він пояснив цей предмет вчора.",
-    "en": ["He explained this subject yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я сфотографував пейзаж учора.",
-    "en": ["I photographed a landscape yesterday.", "I took a photo of a landscape yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Вони відвідали багато парків торік.",
-    "en": ["They visited many parks last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми зіграли в цю гру минулого тижня.",
-    "en": ["We played this game last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми вивчили деякі правила торік.",
-    "en": ["We learned some rules last year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вона написала роман минулого місяця.",
-    "en": ["She wrote a novel last month.", "She composed a novel last month."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Він прочитав цю статтю вчора.",
-    "en": ["He read this article yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Я відвідав виставку вчора.",
-    "en": ["I visited the exhibition yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Він прочитав цю статтю вчора.",
-    "en": ["He read this article yesterday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "LIKE_ING"],
-    "ua": "Вона полюбила кататися на велосипеді минулого літа.",
-    "en": ["She liked riding a bike last summer."]
+    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES", "PREP_TIME"],
+    "ua": "Ми подивилися цей фільм учора.",
+    "en": [
+      "We watched this movie yesterday.",
+      "We saw this movie yesterday."
+    ]
   },
   {
     "rules": ["PAST_SIMPLE", "PREP_TIME"],
-    "ua": "Він прийшов о десятій годині ранку.",
-    "en": ["He arrived at ten o'clock in the morning."]
+    "ua": "Вчора я закінчив роботу до шостої години.",
+    "en": [
+      "I finished work by six o'clock yesterday."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "SUPERLATIVES"],
-    "ua": "Це був найдовший фільм, який я бачив.",
-    "en": ["It was the longest movie I saw."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Вони купили багато книг на ярмарку.",
-    "en": ["They bought many books at the fair."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Вона купила ті яблука на ринку.",
-    "en": ["She bought those apples at the market."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "PREP_PLACE"],
-    "ua": "Діти гралися на подвір’ї після школи.",
-    "en": ["The children played in the yard after school."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "PREP_TIME"],
-    "ua": "Ми зустрілися в неділю ввечері.",
-    "en": ["We met on Sunday evening."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "SUPERLATIVES"],
-    "ua": "Вона приготувала найсмачніший торт на день народження.",
-    "en": ["She made the tastiest cake for the birthday."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
-    "ua": "Сестра мого друга поїхала до Лондона.",
-    "en": ["My friend's sister went to London."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "TOO_VERY"],
-    "ua": "Фільм був занадто довгим для дітей.",
-    "en": ["The movie was too long for the children."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Ми побачили того птаха в лісі.",
-    "en": ["We saw that bird in the forest."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "LIKE_ING"],
-    "ua": "Він любив грати в шахи щовихідних.",
-    "en": ["He liked playing chess every weekend."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "PREP_PLACE"],
-    "ua": "Вона знайшла ключі під столом.",
-    "en": ["She found the keys under the table."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "PREP_TIME"],
-    "ua": "Я закінчив роботу до шостої години.",
-    "en": ["I finished work by six o'clock."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "SUPERLATIVES"],
+    "rules": ["PAST_SIMPLE", "SUPERLATIVES", "WAS_WERE"],
     "ua": "Це був найщасливіший день у моєму житті.",
-    "en": ["It was the happiest day of my life."]
+    "en": [
+      "It was the happiest day of my life."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми з’їли трохи піци ввечері.",
-    "en": ["We ate some pizza in the evening."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
+    "rules": ["PAST_SIMPLE", "POSSESSIVE_S", "ARTICLES"],
     "ua": "Батьки моїх учнів прийшли на зустріч.",
-    "en": ["My students' parents came to the meeting."]
+    "en": [
+      "My students' parents came to the meeting."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "TOO_VERY"],
+    "rules": ["PAST_SIMPLE", "TOO_VERY", "WAS_WERE"],
     "ua": "Вода була дуже гарячою.",
-    "en": ["The water was very hot."]
+    "en": [
+      "The water was very hot.",
+      "The water was really hot."
+    ]
   },
   {
     "rules": ["PAST_SIMPLE", "PREP_TIME"],
     "ua": "Вони прилетіли в п’ятницю вранці.",
-    "en": ["They arrived on Friday morning."]
+    "en": [
+      "They arrived on Friday morning.",
+      "They came on Friday morning."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "SUPERLATIVES"],
+    "rules": ["PAST_SIMPLE", "SUPERLATIVES", "WAS_WERE"],
     "ua": "Це був найгірший матч сезону.",
-    "en": ["It was the worst match of the season."]
+    "en": [
+      "It was the worst match of the season."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
+    "rules": ["PAST_SIMPLE", "POSSESSIVE_S", "PHRASAL_VERBS_COMMON", "PREP_TIME"],
     "ua": "Машина мого сусіда зламалася вчора.",
-    "en": ["My neighbor's car broke down yesterday."]
+    "en": [
+      "My neighbor's car broke down yesterday."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "TOO_VERY"],
+    "rules": ["PAST_SIMPLE", "TOO_VERY", "WAS_WERE"],
     "ua": "Кава була занадто солодкою.",
-    "en": ["The coffee was too sweet."]
+    "en": [
+      "The coffee was too sweet."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
+    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES", "PREP_PLACE"],
     "ua": "Я знайшов той ключ під дверима.",
-    "en": ["I found that key under the door."]
+    "en": [
+      "I found that key under the door."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "LIKE_ING"],
+    "rules": ["PAST_SIMPLE", "LIKE_ING", "PREP_TIME", "PREP_PLACE"],
     "ua": "Ми любили гуляти в парку восени.",
-    "en": ["We liked walking in the park in autumn."]
+    "en": [
+      "We liked walking in the park in autumn."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "PASSIVE_VOICE_ALL_TENSES", "WAS_WERE"],
     "ua": "Вона народилася в 1995 році.",
-    "en": ["She was born in 1995."]
+    "en": [
+      "She was born in 1995."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "SUPERLATIVES"],
-    "ua": "Це була найцікавіша книга року.",
-    "en": ["It was the most interesting book of the year."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Вони випили багато води після тренування.",
-    "en": ["They drank a lot of water after the workout."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
+    "rules": ["PAST_SIMPLE", "POSSESSIVE_S", "PHRASAL_VERBS_COMMON"],
     "ua": "Ідея мого колеги виявилася чудовою.",
-    "en": ["My colleague's idea turned out great."]
+    "en": [
+      "My colleague's idea turned out great."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "TOO_VERY"],
+    "rules": ["PAST_SIMPLE", "TOO_VERY", "WAS_WERE", "PREP_PLACE"],
     "ua": "Музика була дуже гучною на вечірці.",
-    "en": ["The music was very loud at the party."]
+    "en": [
+      "The music was very loud at the party.",
+      "The music was really loud at the party."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "DEMONSTRATIVES"],
-    "ua": "Дівчина намалювала цю картину минулого тижня.",
-    "en": ["The girl painted this picture last week."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "PHRASAL_VERBS_COMMON"],
     "ua": "Я прокинувся о сьомій годині.",
-    "en": ["I woke up at seven o'clock."]
+    "en": [
+      "I woke up at seven o'clock."
+    ]
   },
   {
-    "rules": ["PAST_SIMPLE", "SUPERLATIVES"],
+    "rules": ["PAST_SIMPLE", "SUPERLATIVES", "WAS_WERE"],
     "ua": "Вона була найвищою в класі.",
-    "en": ["She was the tallest in the class."]
+    "en": [
+      "She was the tallest in the class."
+    ]
   },
   {
     "rules": ["PAST_SIMPLE", "LIKE_ING"],
     "ua": "Діти любили малювати кольоровими олівцями.",
-    "en": ["The children liked drawing with colored pencils."]
+    "en": [
+      "The children liked drawing with colored pencils."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Я відвідав своїх дідусів і бабусь минулих вихідних.",
+    "en": [
+      "I visited my grandparents last weekend.",
+      "I went to see my grandparents last weekend."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": "Вони подивилися новий фільм у п’ятницю.",
+    "en": [
+      "They watched a new movie on Friday.",
+      "They watched a new film on Friday."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "POSSESSIVE_S", "ARTICLES"],
+    "ua": "Він прибрав свою кімнату вранці.",
+    "en": ["He cleaned his room in the morning."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Ми пограли в теніс після школи.",
+    "en": ["We played tennis after school."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "POSSESSIVE_S"],
+    "ua": "Я закінчив домашнє завдання годину тому.",
+    "en": ["I finished my homework an hour ago."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Вона подзвонила мені вчора ввечері.",
+    "en": [
+      "She called me last night.",
+      "She rang me last night."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "PREP_PLACE"],
+    "ua": "Вони подорожували до Франції у 2021 році.",
+    "en": [
+      "They traveled to France in 2021.",
+      "They travelled to France in 2021."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
+    "ua": "Він відкрив вікно, бо було жарко.",
+    "en": ["He opened the window because it was hot."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
+    "ua": "Ми купили трохи снеків для вечірки.",
+    "en": [
+      "We bought some snacks for the party.",
+      "We bought some food for the party."
+    ]
+  },
+
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": "Я бачив оголошення учора.",
+    "en": [
+      "I saw the advertisement yesterday.",
+      "I saw the announcement yesterday.",
+      "I saw an ad yesterday."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Мені сподобався концерт.",
+    "en": ["I liked the concert.", "I enjoyed the concert."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Вони знайшли ключі.",
+    "en": ["They found the keys.", "They found their keys."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_PLACE", "ARTICLES"],
+    "ua": "Я зустрів свого найкращого друга в кафе.",
+    "en": [
+      "I met my best friend at the café.",
+      "I met my best friend at the coffee shop."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_PLACE", "POSSESSIVE_S"],
+    "ua": "Вона загубила свою парасольку в парку.",
+    "en": ["She lost her umbrella in the park."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Вони виявили маленьку помилку в звіті.",
+    "en": [
+      "They discovered a small mistake in the report.",
+      "They found a small mistake in the report."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "POSSESSIVE_S"],
+    "ua": "Він полагодив свій велосипед минулих вихідних.",
+    "en": ["He repaired his bike last weekend."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_PLACE", "POSSESSIVE_S"],
+    "ua": "Ми відсвяткували його день народження вдома.",
+    "en": ["We celebrated his birthday at home."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Я вчора вранці прочитав три статті.",
+    "en": ["I read three articles yesterday morning.", "Yesterday morning, I read three articles.", "I read three articles in the morning yesterday."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
+    "ua": "Вона написала довге повідомлення своїй подрузі.",
+    "en": [
+      "She wrote a long message to her friend.",
+      "She sent a long message to her friend."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Вони збудували будиночок на дереві, коли були дітьми.",
+    "en": ["They built a treehouse when they were kids."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "POSSESSIVE_S"],
+    "ua": "Він розбив свій телефон минулого місяця.",
+    "en": ["He broke his phone last month."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Я добре спав минулої ночі.",
+    "en": ["I slept well last night."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Він дотримувався інструкцій.",
+    "en": [
+      "He followed the instructions.",
+      "He followed the directions."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE"],
+    "ua": "Ми запланували щось на вихідні.",
+    "en": [
+      "We planned something for the weekend.",
+      "We made plans for the weekend."
+    ]
+  },
+
+  {
+    "rules": ["PAST_SIMPLE"],
+    "ua": "Я зрозумів жарт.",
+    "en": [
+      "I understood the joke.",
+      "I got the joke."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
+    "ua": "Вона принесла свій ноутбук.",
+    "en": ["She brought her laptop."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
+    "ua": "Вони відповіли на мій імейл.",
+    "en": [
+      "They answered my email.",
+      "They replied to my email."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Йому сподобався новий ресторан.",
+    "en": ["He liked the new restaurant."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "ua": "Ми зробили кілька фотографій.",
+    "en": [
+      "We took some photos.",
+      "We took a few pictures.",
+      "We took some pictures.",
+      "We took a few photos."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Я вчора ходив до спортзалу.",
+    "en": [
+      "I went to the gym yesterday.",
+      "I went to the fitness center yesterday."
+    ]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Вона поснідала сьогодні вранці.",
+    "en": ["She ate breakfast this morning."]
+  },
+  {
+    "rules": ["PAST_SIMPLE"],
+    "ua": "Він передзвонив мені вчора.",
+    "en": ["He called me back yesterday."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": "Він рано прийшов на зустріч.",
+    "en": ["He arrived early to the meeting."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Я почув той дивний шум.",
+    "en": ["I heard that strange noise."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Вона повернула книгу до бібліотеки.",
+    "en": ["She returned the book to the library."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES"],
+    "ua": "Вони виграли гру.",
+    "en": ["They won the game."]
+  },
+  {
+    "rules": ["PAST_SIMPLE"],
+    "ua": "Він передумав.",
+    "en": [
+      "He changed his mind.",
+      "He changed his decision."
+    ]
   }
 ] }

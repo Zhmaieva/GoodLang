@@ -11,7 +11,7 @@
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
-                "ua": "Вони мають машину.",
+                "ua": "У них є машина.",
                 "en": ["They have a car.", "They’ve got a car.", "They have got a car."]
         },
         {
@@ -119,11 +119,6 @@
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
-                "ua": "Він має фотоапарат.",
-                "en": ["We have a camera.", "We’ve got a camera.", "We have got a camera."]
-        },
-        {
-                "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У нього немає велосипеда.",
                 "en": [
                         "He doesn’t have a bike.",
@@ -185,12 +180,6 @@
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
-                "ua": "У тебе сьогодні гарний день?",
-                "en": ["Do you have a nice day?", "Have you got a nice day?"],
-                "hint": "use HAVE / HAVE GOT"
-        },
-        {
-                "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У мене новий годинник.",
                 "en": [
                         "I have a new watch.",
@@ -200,7 +189,7 @@
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES", "PREP_PLACE"],
-                "ua": "У нього дві кімнати в квартирі.",
+                "ua": "У нього в квартирі дві кімнати.",
                 "en": [
                         "He has two rooms in his flat.",
                         "He’s got two rooms in his flat.",
@@ -620,11 +609,6 @@
                 "en": ["He has a strong voice.", "He’s got a strong voice."]
         },
         {
-                "rules": ["HAVE_HAVE_GOT", "ARTICLES", "PREP_PLACE"],
-                "ua": "У мене в телефоні є фото сім’ї.",
-                "en": ["I have a family photo on my phone.", "I’ve got a family photo on my phone."]
-        },
-        {
                 "rules": ["HAVE_HAVE_GOT", "PREP_TIME"],
                 "ua": "У нас щотижня уроки англійської.",
                 "en": ["We have English lessons every week.", "We’ve got English lessons every week."],
@@ -825,20 +809,8 @@
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
-                "ua": "У нас кашель.",
-                "en": ["We have a cough.", "We’ve got a cough."],
-                "hint": "use HAVE / HAVE GOT"
-        },
-        {
-                "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У нього температура.",
                 "en": ["He has a fever.", "He’s got a fever."],
-                "hint": "use HAVE / HAVE GOT"
-        },
-        {
-                "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
-                "ua": "У них нежить.",
-                "en": ["They have a cold.", "They’ve got a cold."],
                 "hint": "use HAVE / HAVE GOT"
         },
         {

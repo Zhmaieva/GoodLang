@@ -16,21 +16,6 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "У них достатньо стільців.",
-    "en": "They have enough chairs."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Я сплю достатньо годин.",
-    "en": "I sleep enough hours."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вона отримує достатньо підтримки.",
-    "en": "She gets enough support."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми їмо достатньо овочів.",
     "en": "We eat enough vegetables."
   },
@@ -55,24 +40,9 @@
     "en": "We have enough work today."
   },
   {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "У нього достатньо друзів.",
-    "en": "He has enough friends."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вони роблять достатньо перерв.",
-    "en": "They take enough breaks."
-  },
-  {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": "У нас достатньо їжі на обід.",
     "en": "We have enough food for lunch."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "У нього достатньо енергії.",
-    "en": "He has enough energy."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
@@ -80,29 +50,9 @@
     "en": "She has enough experience."
   },
   {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
-    "ua": "Тут достатньо світла.",
-    "en": "We have enough light here."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Він отримує достатньо сну.",
-    "en": "He gets enough sleep."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Я роблю достатньо фото.",
-    "en": "I take enough photos."
-  },
-  {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона отримує достатньо допомоги.",
     "en": "She gets enough help."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": "У нас достатньо завдань сьогодні.",
-    "en": "We have enough tasks today."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
@@ -128,21 +78,6 @@
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "У неї достатньо терпіння?",
     "en": "Does she have enough patience?"
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Ми робимо достатньо нотаток?",
-    "en": "Do we take enough notes?"
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_CONT_NOW", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Він достатньо тренується?",
-    "en": ["Is he training enough?", "Does he train enough?"]
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "У них достатньо енергії?",
-    "en": "Do they have enough energy?"
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_CONT_NOW", "PRESENT_SIMPLE_FREQ"],
@@ -182,16 +117,6 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вони дивляться надто багато телевізора.",
-    "en": "They watch too much TV."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Я відчуваю надто багато стресу.",
-    "en": "I feel too much stress."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "У неї надто багато домашнього завдання.",
     "en": "She has too much homework."
   },
@@ -212,16 +137,6 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вона отримує надто багато сонця.",
-    "en": "She gets too much sun."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Він витрачає надто багато енергії.",
-    "en": "He spends too much energy."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони надто багато говорять.",
     "en": "They talk too much."
   },
@@ -232,28 +147,18 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "У нього надто багато речей.",
-    "en": "He has too much stuff."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони використовують надто багато паперу.",
     "en": "They use too much paper."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Я кладу надто багато цукру в каву.",
+    "ua": "Я додаю занадто багато цукру в каву.",
     "en": "I take too much sugar in my coffee."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона готує надто багато рису.",
     "en": "She cooks too much rice."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Він дає надто багато інформації.",
-    "en": "He gives too much information."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
@@ -272,18 +177,8 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Він займає надто багато місця.",
-    "en": "He takes too much space."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони п’ють надто багато молока.",
     "en": "They drink too much milk."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Я відчуваю надто багато тиску.",
-    "en": "I feel too much pressure."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
@@ -294,11 +189,6 @@
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він додає надто багато солі.",
     "en": "He adds too much salt."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "У неї надто багато сумок.",
-    "en": "She has too many bags."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PRESENT_CONT_NOW"],
@@ -331,11 +221,6 @@
     "en": ["Are they making too many mistakes?", "Do they make too many mistakes?"]
   },
   {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": "У мене надто багато завдань сьогодні.",
-    "en": "I have too many tasks today."
-  },
-  {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "У неї надто багато взуття.",
     "en": "She owns too many shoes."
@@ -357,18 +242,8 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вона готує надто багато страв.",
-    "en": "She cooks too many meals."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "У нього надто багато сорочок.",
     "en": "He has too many shirts."
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вони садять надто багато квітів.",
-    "en": "They plant too many flowers."
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],

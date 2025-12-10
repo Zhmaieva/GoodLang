@@ -1,181 +1,170 @@
 { "PREP_TIME": [
   {
     "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Я зазвичай працюю вранці.",
-    "en": ["I usually work in the morning.", "I work in the morning."]
+    "ua": "Я завжди працюю вранці.",
+    "en": ["I always work in the morning.", "I work in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "ARTICLES"],
-    "ua": "Ти зазвичай вчишся в понеділок?",
-    "en": ["Do you usually study on Monday?"]
+    "rules": ["PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ти часто вчишся в понеділок?",
+    "en": ["Do you often study on Monday?"]
   },
   {
     "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Вона зазвичай читає вночі.",
-    "en": ["She usually reads at night.", "She reads at night."]
+    "ua": "Вона часто читає вночі.",
+    "en": ["She often reads at night.", "She reads at night."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Деякі студенти зазвичай працюють влітку.",
-    "en": ["Some students usually work in the summer.", "Some students work in the summer."]
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Студенти зазвичай працюють влітку.",
+    "en": ["Students usually work in the summer.", "Students work in the summer."]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Цей викладач зазвичай працює в суботу?",
-    "en": ["Does this teacher usually work on Saturday?"]
+    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Цей викладач часто працює в суботу?",
+    "en": ["Does this teacher often work on Saturday?"]
   },
   {
-    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
-    "ua": "Він зазвичай грає по п’ятницях.",
-    "en": ["He usually plays on Fridays.", "He plays on Fridays."]
-  },
-  {
-    "rules": ["PREP_TIME", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES", "PRESENT_CONT_NOW"],
     "ua": "Ви зустрічаєтеся сьогодні о сьомій?",
-    "en": ["Are you meeting at seven tonight?"]
+    "en": ["Are you meeting at seven tonight?", "Are you meeting at 7 tonight?", "Are you meeting at 7 p.m. tonight?"]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато людей зазвичай гуляють на вихідних.",
-    "en": ["Many people usually walk on weekends.", "A lot of people walk on weekends."]
-  },
-  {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
+    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ця команда зазвичай тренується вранці.",
     "en": ["This team usually trains in the morning.", "This team trains in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "ARTICLES", "DEMONSTRATIVES"],
+    "rules": ["PREP_TIME", "ARTICLES", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Цей магазин відкритий у неділю?",
     "en": ["Is this shop open on Sunday?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми зазвичай вчимося в серпні.",
     "en": ["We usually study in August.", "We study in August."]
   },
   {
-    "rules": ["PREP_TIME", "ARTICLES"],
+    "rules": ["PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ця лекція починається о десятій годині?",
     "en": ["Does this lecture start at ten o’clock?"]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато туристів зазвичай приїжджають восени.",
-    "en": ["Many tourists usually arrive in the fall.", "Many tourists arrive in the autumn."]
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Туристи рідко приїжджають восени.",
+    "en": ["Tourists rarely come in autumn.", "Tourists rarely arrive in autumn.", "Tourists don’t often come in the autumn."]
   },
   {
-    "rules": ["PREP_TIME"],
-    "ua": "Вона зазвичай працює в середу.",
-    "en": ["Does she usually work on Wednesday?", "Does she work on Wednesday?"]
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона ніколи не працює в середу.",
+    "en": ["She never works on Wednesdays.", "She doesn’t work on Wednesdays at all.", "She never works on a Wednesday."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Цей автобус прибуває о п’ятій годині за розкладом.",
     "en": ["Does this bus arrive at five o’clock?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він зазвичай дивиться телевізор ввечері.",
     "en": ["He usually watches TV in the evening.", "He watches TV in the evening."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми зазвичай навчаємось узимку.",
     "en": ["We usually study in winter.", "We study in winter."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти спиш удень?",
     "en": ["Do you sleep during the day?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Фільм починається рівно о дев’ятій.",
     "en": ["Does this movie start at nine o’clock?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми зазвичай гуляємо в парку вранці.",
     "en": ["We usually walk in the park in the morning.", "We walk in the park in the morning."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я зазвичай читаю книги на вихідних.",
     "en": ["I usually read books on weekends.", "I read books on weekends."]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Цей хлопець зазвичай бігає вранці.",
-    "en": ["This boy usually runs in the morning.", "This boy runs in the morning."]
+    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Цей хлопець часто бігає вранці.",
+    "en": ["This boy often runs in the morning.", "This boy runs in the morning."]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато працівників зазвичай відпочивають у серпні.",
-    "en": ["Many workers usually rest in August.", "A lot of workers rest in August."]
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Працівники цієї компанії зазвичай відпочивають у серпні.",
+    "en": [
+      "The employees of this company usually take a break in August.",
+      "The employees at this company usually have their vacation in August.",
+      "This company’s employees usually go on holiday in August."
+    ]
   },
   {
-    "rules": ["PREP_TIME"],
-    "ua": "Ти зазвичай їдеш о восьмій годині?",
-    "en": ["Do you usually leave at eight o’clock?"]
+    "rules": ["PREP_TIME", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ця команда грає наступного четверга.",
+    "en": ["This team plays next Thursday.", "The team is playing next Thursday.", "This team will play next Thursday."]
   },
   {
-    "rules": ["PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ця команда грає цього четверга.",
-    "en": ["This team is playing this Thursday.", "This team is playing on Thursday."]
-  },
-  {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Цей поїзд прибуває опівночі.",
     "en": ["Does this train arrive at midnight?"]
   },
   {
-    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Зазвичай, навесні приїжджають багато туристів.",
+    "rules": ["PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Зазвичай, навесні приїжджає багато туристів.",
     "en": ["Many tourists usually arrive in the spring.", "A lot of tourists arrive in the spring."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Ти зазвичай працюєш у вівторок?",
-    "en": ["Do you usually work on Tuesday?"]
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ти часто працюєш у вівторок?",
+    "en": ["Do you often work on Tuesday?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Цей урок починається о другій годині?",
     "en": ["Does this lesson start at two o’clock?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_CONT_NOW"],
     "ua": "Ми тренуємося цього ранку.",
     "en": ["We’re training this morning."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Зазвичай на вихідних приїжджають гості.",
     "en": ["Guests usually arrive on weekends."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вечірка починається о десятій годині?",
     "en": ["Does the party start at ten o’clock?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_CONT_NOW"],
     "ua": "Ти працюєш цього четверга?",
     "en": ["Are you working this Thursday?"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я прокидаюся о сьомій годині.",
     "en": ["I wake up at seven o’clock.", "I wake up at 7 o’clock."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "У нас зазвичай урок англійської в понеділок.",
     "en": ["We usually have English class on Monday."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PAST_SIMPLE", "WAS_WERE"],
     "ua": "Вона народилася у 2005 році.",
     "en": ["She was born in 2005."]
   },
@@ -185,22 +174,22 @@
     "en": ["I’ll call you in ten minutes."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Магазин відкривається о дев’ятій ранку.",
     "en": ["The shop opens at nine a.m.", "The shop opens at 9 a.m."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_CONT_NOW"],
     "ua": "Ми їдемо у відпустку цього липня.",
     "en": ["We’re going on vacation this July."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він завжди приходить вчасно.",
     "en": ["He always arrives on time."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PAST_SIMPLE"],
     "ua": "Я зустрів її два роки тому.",
     "en": ["I met her two years ago."]
   },
@@ -210,7 +199,7 @@
     "en": ["See you at lunchtime!"]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Фільм починається о восьмій вечора.",
     "en": ["The movie starts at eight p.m.", "The movie starts at eight."]
   },
@@ -220,7 +209,7 @@
     "en": ["I’ll finish the work by Friday."]
   },
   {
-    "rules": ["PREP_TIME", "PREP_PLACE"],
+    "rules": ["PREP_TIME", "PREP_PLACE", "PAST_SIMPLE"],
     "ua": "Ми жили в Лондоні у 2019 році.",
     "en": ["We lived in London in 2019."]
   },
@@ -230,17 +219,17 @@
     "en": ["Don’t eat after nine p.m.", "Don’t eat after 9 p.m."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Поїзд вирушає опівдні.",
     "en": ["The train leaves at noon."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я зазвичай лягаю спати об одинадцятій.",
     "en": ["I usually go to bed at eleven."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "У нас перерва о десятій тридцять.",
     "en": ["We have a break at 10:30."]
   },
@@ -255,7 +244,7 @@
     "en": ["I’ll be ready in five minutes."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_PERFECT_CONT"],
     "ua": "Вона тут із понеділка.",
     "en": ["She’s been here since Monday."]
   },
@@ -270,12 +259,12 @@
     "en": ["Please come ten minutes before the meeting."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PAST_SIMPLE", "WAS_WERE"],
     "ua": "Я був дуже втомлений після роботи.",
     "en": ["I was very tired after work."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Магазин зазвичай зачинений по неділях.",
     "en": ["The store is closed on Sundays."]
   },
@@ -285,7 +274,7 @@
     "en": ["He’s going to call at midnight."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми зазвичай подорожуємо влітку.",
     "en": ["We usually travel in summer."]
   },
@@ -295,19 +284,14 @@
     "en": ["I’ll wait until six o’clock."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Концерт починається рівно о сьомій.",
     "en": ["The concert starts at seven sharp."]
   },
   {
-    "rules": ["PREP_TIME"],
-    "ua": "Я вчу англійську з двадцятого року.",
+    "rules": ["PREP_TIME", "PRESENT_PERFECT_CONT"],
+    "ua": "Я вчу англійську з 2020.",
     "en": ["I’ve been learning English since 2020."]
-  },
-  {
-    "rules": ["PREP_TIME"],
-    "ua": "У нас тест цього п’ятниці.",
-    "en": ["We have a test this Friday."]
   },
   {
     "rules": ["PREP_TIME", "CAN_CANT"],
@@ -315,27 +299,27 @@
     "en": ["Can you finish it by tomorrow?"]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я завжди чищу зуби перед сном.",
     "en": ["I always brush my teeth before bed."]
   },
   {
-    "rules": ["PREP_TIME"],
-    "ua": "Рейс прибуває о п’ятнадцятій сорок п’ять.",
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Рейс прибуває о 15:45.",
     "en": ["The flight arrives at 3:45 p.m."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона працює з дев’ятої до п’ятої.",
     "en": ["She works from nine to five.", "She works from 9 to 5."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PAST_SIMPLE"],
     "ua": "Ми зустрілися три місяці тому.",
     "en": ["We met three months ago."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Музей відкритий до восьмої вечора.",
     "en": ["The museum is open until eight p.m.", "The museum is open until 8 p.m."]
   },
@@ -345,22 +329,22 @@
     "en": ["Let’s meet this weekend."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PAST_SIMPLE", "WAS_WERE"],
     "ua": "Він народився на Новий рік.",
     "en": ["He was born on New Year’s Day."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_CONT_NOW"],
     "ua": "Я зараз зайнятий.",
     "en": ["I’m busy at the moment.", "I’m busy right now."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Розпродаж почнеться через два дні.",
     "en": ["The sale starts in two days."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PAST_SIMPLE"],
     "ua": "Ми переїхали сюди в грудні.",
     "en": ["We moved here in December."]
   },
@@ -370,12 +354,12 @@
     "en": ["I’ll be home by seven.", "I’ll be home by 7."]
   },
   {
-    "rules": ["PREP_TIME"],
+    "rules": ["PREP_TIME", "PRESENT_PERFECT_CONT"],
     "ua": "Вона хворіє з минулого тижня.",
     "en": ["She’s been sick since last week."]
   },
   {
-    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["PREP_TIME", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "У нас зазвичай канікули в серпні.",
     "en": ["We usually have holidays in August."]
   },

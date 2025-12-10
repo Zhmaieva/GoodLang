@@ -19,12 +19,6 @@
       "hint": "Use MUST HAVE/MIGHT HAVE for past probability."
     },
     {
-      "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
-      "ua": "Вона не може жити одна.",
-      "en": ["She can’t be living alone.", "She can’t live alone."],
-      "hint": "Use CAN'T for impossibility."
-    },
-    {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT", "SINCE_FOR"],
       "ua": "Вони, мабуть, давно знайомі.",
       "en": ["They must have known each other for a long time.", "They might have known each other for a long time."],
@@ -32,7 +26,7 @@
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT_CONT", "SINCE_FOR"],
-      "ua": "Він, мабуть, тут недавно працює.",
+      "ua": "Він, мабуть, працює тут недавно.",
       "en": ["He must have been working here for a short time.", "He might have been working here for a short time."],
       "hint": "Use MUST/MIGHT for assumptions about duration."
     },
@@ -89,12 +83,6 @@
       "ua": "Вона, напевно, не очікувала нас побачити.",
       "en": ["She must not have expected to see us.", "She might not have expected to see us."],
       "hint": "Use MUST NOT/MIGHT NOT for negative past probability."
-    },
-    {
-      "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
-      "ua": "Він, напевно, знову щось забув.",
-      "en": ["He must have forgotten again.", "He might have forgotten again."],
-      "hint": "Use MUST/MIGHT for past probability."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
@@ -236,12 +224,6 @@
       "hint": "Use MUST/MIGHT for deduction."
     },
     {
-      "rules": ["MODALS_OF_PROBABILITY"],
-      "ua": "Він не може знати правду.",
-      "en": ["He can’t know the truth."],
-      "hint": "Use CAN’T for strong negative deduction."
-    },
-    {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Вона, мабуть, забула.",
       "en": ["She must have forgotten.", "She might have forgotten."],
@@ -291,7 +273,7 @@
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
-      "ua": "Тут має бути якась помилка.",
+      "ua": "Тут, напевно, є помилка.",
       "en": ["There must be a mistake.", "There might be a mistake."],
       "hint": "Use MUST for confident deduction."
     },

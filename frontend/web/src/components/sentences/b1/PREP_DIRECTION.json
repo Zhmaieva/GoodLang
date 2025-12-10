@@ -140,9 +140,9 @@
     "en": ["We walked along the shore.", "We strolled along the shore."]
   },
   {
-    "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "PAST_CONTINUOUS", "ARTICLES"],
+    "rules": ["PREP_DIRECTION", "PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Вони бігли вздовж річки.",
-    "en": ["They ran along the river.", "They were running along the river."]
+    "en": ["They were running along the river."]
   },
   {
     "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "ARTICLES"],
@@ -175,9 +175,9 @@
     "en": ["We climbed onto the roof.", "We went up onto the roof."]
   },
   {
-    "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PREP_DIRECTION", "PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Ми рухалися від півночі до півдня.",
-    "en": ["We traveled from north to south.", "We moved from the north to the south."]
+    "en": ["We were moving from north to south.", "We were traveling from north to south."]
   },
   {
     "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "ARTICLES"],
@@ -190,14 +190,9 @@
     "en": ["He got out of the water.", "He climbed out of the water."]
   },
   {
-    "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "ARTICLES"],
+    "rules": ["PREP_DIRECTION", "PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Ми йшли по дорозі.",
-    "en": ["We walked along the road.", "We strolled along the road."]
-  },
-  {
-    "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "ARTICLES"],
-    "ua": "Кіт пройшов під столом.",
-    "en": ["The cat walked under the table.", "The cat went under the table."]
+    "en": ["We were walking along the road."]
   },
   {
     "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "ARTICLES"],

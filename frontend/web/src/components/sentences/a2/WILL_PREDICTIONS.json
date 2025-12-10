@@ -9,7 +9,7 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "ARTICLES", "PREP_PLACE"],
-    "ua": "Вона думає, що новий магазин відкриється в центрі.",
+    "ua": "Вона думає, що в центрі відкриється новий магазин.",
     "en": [
       "She thinks a new shop will open in the city center.",
       "She believes a new store will open downtown."
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "rules": ["WILL_PREDICTIONS"],
     "ua": "Вона думає, що завтра не буде дощу.",
     "en": [
       "She thinks it won’t rain tomorrow.",
@@ -65,14 +65,6 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "PREP_PLACE"],
-    "ua": "Він думає, що сам впорається в новій школі.",
-    "en": [
-      "He thinks he will manage by himself in the new school.",
-      "He believes he will cope on his own at the new school."
-    ]
-  },
-  {
     "rules": ["WILL_PREDICTIONS", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
     "ua": "Я думаю, що ми поїдемо, коли погода покращиться.",
     "en": [
@@ -89,23 +81,7 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Він думає, що новий проєкт буде успішним, хоча це складно.",
-    "en": [
-      "He thinks the new project will be successful although it’s challenging.",
-      "He believes the new project will succeed even though it’s difficult."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ці студенти думають, що іспит буде наступного тижня.",
-    "en": [
-      "These students think the exam will be next week.",
-      "Those students believe the test will be next week."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "COUNT_UNCOUNT"],
+    "rules": ["WILL_PREDICTIONS"],
     "ua": "Що, на твою думку, вона купить на ярмарку?",
     "en": [
       "What do you think she will buy at the fair?",
@@ -114,10 +90,10 @@
   },
   {
     "rules": ["WILL_PREDICTIONS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Я впевнений, що гра буде дуже цікавою на стадіоні.",
+    "ua": "Я впевнений, що гра буде дуже цікавою.",
     "en": [
-      "I’m sure the game will be very exciting at the stadium.",
-      "I believe the match will be really thrilling on the field."
+      "I’m sure the game will be very exciting.",
+      "I believe the match will be really thrilling."
     ]
   },
 
@@ -138,7 +114,7 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
     "ua": "Він думає, що завтра не буде холодно.",
     "en": [
       "He thinks it won’t be cold tomorrow.",
@@ -152,22 +128,6 @@
       "She thinks he will write his new novel slowly.",
       "She believes he will work on his new book slowly.",
       "She thinks he’ll take his time writing his new book."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ми думаємо, що вони приїдуть, але дорога буде довгою.",
-    "en": [
-      "We think they will arrive, but the journey will be long.",
-      "We believe they will come, although the trip will be long."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ті діти думають, що гра буде завтра.",
-    "en": [
-      "Those children think the game will be tomorrow.",
-      "Those kids believe the match will be tomorrow."
     ]
   },
   {
@@ -195,7 +155,7 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "COUNT_UNCOUNT"],
+    "rules": ["WILL_PREDICTIONS"],
     "ua": "Ти думаєш, що буде багато їжі на вечірці?",
     "en": [
       "Do you think there will be a lot of food at the party?",
@@ -211,41 +171,7 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці студенти думають, що буде багато нових студентів.",
-    "en": [
-      "These students think there will be many new students.",
-      "These students believe there will be a lot of new students."
-    ]
-  },
-
-  {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він думає, що не піде на вечірку, тому що буде зайнятий.",
-    "en": [
-      "He thinks he won’t go to the party because he will be busy."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Вона думає, що він швидко оселиться в новому місті.",
-    "en": [
-      "She thinks he will quickly settle in the new city.",
-      "She believes he will settle in the new city quickly."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "ARTICLES"],
-    "ua": "Я думаю, що ми побачимо новий фільм.",
-    "en": [
-      "I think we will watch a new movie.",
-      "I believe we will watch a new film.",
-      "I think we will watch a new film.",
-      "I believe we will watch a new movie."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
     "ua": "Вони думають, що цього тижня не буде дощу.",
     "en": [
       "They think it won’t rain this week.",
@@ -253,42 +179,11 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "SIMPLE_ADJ"],
-    "ua": "Чому, на твою думку, вона купить дорогий телефон?",
-    "en": [
-      "Why do you think she will buy an expensive phone?",
-      "Why, in your opinion, will she buy an expensive phone?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "COUNT_UNCOUNT"],
+    "rules": ["WILL_PREDICTIONS", "TOO_VERY"],
     "ua": "Він думає, що буде дуже багато роботи.",
     "en": [
       "He thinks there will be a lot of work.",
       "He believes there will be a lot of work."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES"],
-    "ua": "Ти думаєш, що вони приїдуть на вечірку?",
-    "en": [
-      "Do you think they will come to the party?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Вона думає, що братове авто буде готове завтра.",
-    "en": [
-      "She thinks her brother’s car will be ready tomorrow.",
-      "She believes her brother’s car will be ready tomorrow."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Багато людей відвідає парк у вихідні.",
-    "en": [
-      "Many people will visit the park on the weekend.",
-      "A lot of people will go to the park on the weekend."
     ]
   },
   {
@@ -299,7 +194,6 @@
       "He believes he will pass the exam easily."
     ]
   },
-
   {
     "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
     "ua": "Ми думаємо, що вони приїдуть наступного тижня.",
@@ -318,14 +212,6 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "PREP_PLACE"],
-    "ua": "Ти думаєш, що вони гратимуть у парку?",
-    "en": [
-      "Do you think they will play in the park?",
-      "Do you believe they will play in the park?"
-    ]
-  },
-  {
     "rules": ["WILL_PREDICTIONS", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
     "ua": "Цей чоловік думає, що швидко закінчить роботу.",
     "en": [
@@ -333,78 +219,10 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Вона думає, що не піде в кіно, тому що буде зайнята.",
-    "en": [
-      "She thinks she won’t go to the cinema because she will be busy."
-    ]
-  },
-  {
     "rules": ["WILL_PREDICTIONS"],
     "ua": "Що, на твою думку, вони робитимуть завтра?",
     "en": [
       "What do you think they will do tomorrow?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Я впевнений, що матч буде дуже цікавим на стадіоні.",
-    "en": [
-      "I’m sure the match will be very exciting at the stadium.",
-      "I believe the game will be really thrilling at the stadium."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "ARTICLES", "SIMPLE_ADJ"],
-    "ua": "Він думає, що новий фільм не буде цікавим.",
-    "en": [
-      "He thinks the new movie won’t be interesting."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Я думаю, що погода буде холодною завтра.",
-    "en": [
-      "I think the weather will be cold tomorrow.",
-      "I think the weather will be chilly tomorrow."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
-    "ua": "Я думаю, що ми зустрінемося в понеділок.",
-    "en": [
-      "I think we will meet on Monday."
-    ]
-  },
-
-  {
-    "rules": ["WILL_PREDICTIONS", "ARTICLES", "PREP_PLACE"],
-    "ua": "Він думає, що новий ресторан відкриється в місті.",
-    "en": [
-      "He thinks a new restaurant will open in the city.",
-      "He believes a new restaurant will open in the city."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
-    "ua": "Коли, на твою думку, почнеться концерт?",
-    "en": [
-      "When do you think the concert will start?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
-    "ua": "Ми думаємо, що фестиваль відбудеться на пляжі, хоча погода непередбачувана.",
-    "en": [
-      "We think the festival will take place on the beach although the weather might be unpredictable.",
-      "We believe the festival will happen at the beach even though the weather may be uncertain."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Ця дівчина думає, що проєкт її сестри буде успішним.",
-    "en": [
-      "This girl thinks her sister’s project will be successful."
     ]
   },
   {
@@ -418,327 +236,92 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
-    "ua": "Ти думаєш, що матч відбудеться в суботу?",
-    "en": [
-      "Do you think the match will take place on Saturday?",
-      "Do you believe the match will take place on Saturday?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Я впевнений, що нова книга буде дуже популярною.",
-    "en": [
-      "I’m sure the new book will be very popular.",
-      "I believe the new book will be really well-liked."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_PLACE"],
-    "ua": "Він думає, що сам впорається в новому офісі.",
-    "en": [
-      "He thinks he will manage by himself in the new office.",
-      "He believes he will cope on his own at the new workplace."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Багато відвідувачів прийде на нову виставку.",
-    "en": [
-      "Many visitors will come to the new exhibition.",
-      "A lot of visitors will attend the new show."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
-    "ua": "Я думаю, що ми поїдемо, коли закінчиться дощ.",
-    "en": [
-      "I think we will go when the rain stops.",
-      "I believe we will leave once the rain ends."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "ADVERBS_OF_MANNER"],
-    "ua": "Вона думає, що він швидко навчиться нової гри.",
-    "en": [
-      "She thinks he will quickly learn the new game.",
-      "She believes he will learn the new game quickly."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Він думає, що проєкт буде складним, але успішним.",
-    "en": [
-      "He thinks the project will be difficult but successful.",
-      "He believes the project will be challenging yet successful."
-    ]
-  },
-
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ці вчителі думають, що семінар буде наступного місяця.",
-    "en": [
-      "These teachers think the seminar will be next month.",
-      "Those teachers believe the workshop will happen next month."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "COUNT_UNCOUNT"],
-    "ua": "Що, на твою думку, вони куплять на ринку?",
-    "en": [
-      "What do you think they will buy at the market?",
-      "What will they purchase at the market, in your opinion?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Я впевнений, що концерт буде дуже гучним у залі.",
-    "en": [
-      "I’m sure the concert will be very loud in the hall.",
-      "I believe the concert will be really noisy in the venue."
-    ]
+    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "MODALS_OF_PROBABILITY"],
+    "ua": "Вона, ймовірно, запізниться через затори.",
+    "en": ["She will probably be late because of the traffic."]
   },
   {
     "rules": ["WILL_PREDICTIONS"],
-    "ua": "Ти думаєш, що ми закінчимо роботу вчасно?",
+    "ua": "Не хвилюйся, все буде добре.",
+    "en": ["Don’t worry, everything will be fine."]
+  },
+  {
+    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "DEMONSTRATIVES"],
+    "ua": "Цей фільм буде дуже популярним.",
     "en": [
-      "Do you think we will finish the work on time?",
-      "Do you believe we will complete the task on time?"
+      "This movie will be very popular.",
+      "This film will be very popular."
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Він думає, що сад тата буде гарним.",
-    "en": [
-      "He thinks his dad’s garden will be beautiful.",
-      "He believes his father’s garden will look lovely."
-    ]
+    "rules": ["WILL_PREDICTIONS", "MODALS_OF_PROBABILITY"],
+    "ua": "Я впевнений, що він зрозуміє твоє рішення.",
+    "en": ["I’m sure he will understand your decision."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вона думає, що завтра не буде вітряно.",
-    "en": [
-      "She thinks it won’t be windy tomorrow.",
-      "She believes it won’t be windy tomorrow."
-    ]
+    "rules": ["WILL_PREDICTIONS", "COMPARATIVES", "PREP_TIME"],
+    "ua": "Завтра погода стане холоднішою.",
+    "en": ["The weather will get colder tomorrow."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ми думаємо, що вони приїдуть, але будуть втомлені.",
-    "en": [
-      "We think they will arrive, but they will be tired.",
-      "We believe they will come, though they will be exhausted."
-    ]
+    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
+    "ua": "Ціни знову зростуть наступного року.",
+    "en": ["Prices will rise again next year."]
   },
   {
     "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ті діти думають, що свято буде завтра.",
-    "en": [
-      "Those children think the holiday will be tomorrow.",
-      "Those kids think the celebration will happen tomorrow."
-    ]
+    "ua": "Ця дитина колись стане великим музикантом.",
+    "en": ["That child will become a great musician one day."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "PREP_PLACE"],
-    "ua": "Куди, на твою думку, вона поїде цього літа?",
-    "en": [
-      "Where do you think she will go this summer?",
-      "Where will she travel this summer, in your opinion?"
-    ]
+    "rules": ["WILL_PREDICTIONS", "ADVERBS_OF_MANNER"],
+    "ua": "Команда легко виграє цей матч.",
+    "en": ["The team will win this match easily."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Я впевнений, що гра буде дуже захоплюючою.",
-    "en": [
-      "I’m sure the game will be very exciting.",
-      "I believe the match will be really thrilling."
-    ]
+    "rules": ["WILL_PREDICTIONS", "NEGATION_DONT_DOESNT", "DEMONSTRATIVES"],
+    "ua": "Я не думаю, що вони погодяться з цією ідеєю.",
+    "en": ["I don’t think they will agree with this idea."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
-    "ua": "Вона думає, що ми приїдемо в п’ятницю.",
-    "en": [
-      "She thinks we will arrive on Friday.",
-      "She believes we will come on Friday."
-    ]
+    "rules": ["WILL_PREDICTIONS"],
+    "ua": "Знадобиться багато часу, щоб вирішити цю проблему.",
+    "en": ["It will take a long time to fix this problem."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "COUNT_UNCOUNT"],
-    "ua": "Ти думаєш, що буде багато гостей на вечірці?",
+    "rules": ["WILL_PREDICTIONS", "LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
+    "ua": "Їй сподобається цей подарунок.",
     "en": [
-      "Do you think there will be many guests at the party?",
-      "Do you believe there will be a lot of guests at the event?"
-    ]
-  },
-
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Він думає, що погода буде прохолодною завтра.",
-    "en": [
-      "He thinks the weather will be cool tomorrow.",
-      "He believes it will be cool tomorrow."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Вчителі думають, що буде багато нових учнів.",
-    "en": [
-      "The teachers think there will be many new students.",
-      "Teachers believe there will be a lot of new pupils."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Вона думає, що не піде на прогулянку, тому що буде дощ.",
-    "en": [
-      "She thinks she won’t go for a walk because it will rain.",
-      "She believes she won’t go for a walk since it will be rainy."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Він думає, що вона швидко адаптується в новій школі.",
-    "en": [
-      "He thinks she will adapt quickly in the new school.",
-      "He believes she will adjust quickly at the new school."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "ARTICLES"],
-    "ua": "Я думаю, що ми побачимо цікавий фільм.",
-    "en": [
-      "I think we will see an interesting movie.",
-      "I believe we will watch a fascinating film."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Вони думають, що цього тижня не буде тепло.",
-    "en": [
-      "They think it won’t be warm this week.",
-      "They believe it won’t be warm this week."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "SIMPLE_ADJ"],
-    "ua": "Чому, на твою думку, він купить дорогий автомобіль?",
-    "en": [
-      "Why do you think he will buy an expensive car?",
-      "Why, in your opinion, will he buy an expensive car?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Вона думає, що буде дуже багато роботи.",
-    "en": [
-      "She thinks there will be a lot of work.",
-      "She believes there will be a great deal of work."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "DEMONSTRATIVES"],
-    "ua": "Думаєш, ці гості прийдуть на свято?",
-    "en": [
-      "Do you think these guests will come to the party?",
-      "Do you believe these guests will attend the celebration?"
-    ]
-  },
-
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Він думає, що мамина картина буде готова завтра.",
-    "en": [
-      "He thinks his mom’s painting will be ready tomorrow.",
-      "He believes his mother’s artwork will be finished tomorrow."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Багато дітей гратимуть на майданчику.",
-    "en": [
-      "Many children will play at the playground.",
-      "A lot of kids will play on the playground."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона думає, що він тихо виступить, але це буде вражаюче.",
-    "en": [
-      "She thinks he will perform quietly, but it will be impressive.",
-      "She believes he will give a quiet performance, though it will be striking."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
-    "ua": "Ми думаємо, що вони приїдуть у неділю.",
-    "en": [
-      "We think they will arrive on Sunday.",
-      "We believe they will come on Sunday."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "ARTICLES"],
-    "ua": "Я думаю, що фестиваль відбудеться наступного тижня.",
-    "en": [
-      "I think the festival will take place next week.",
-      "I believe the festival will happen next week."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "PREP_PLACE"],
-    "ua": "Ти думаєш, вони танцюватимуть у залі?",
-    "en": [
-      "Do you think they will dance in the hall?",
-      "Do you believe they will dance in the venue?"
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Ця дівчина думає, що швидко закінчить завдання.",
-    "en": [
-      "This girl thinks she will finish the task quickly.",
-      "That girl believes she will complete the assignment quickly."
-    ]
-  },
-  {
-    "rules": ["WILL_PREDICTIONS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він думає, що не поїде, тому що буде зайнятий.",
-    "en": [
-      "He thinks he won’t go because he will be busy.",
-      "He believes he won’t travel since he will be occupied."
+      "She will love this gift.",
+      "She will love this present."
     ]
   },
   {
     "rules": ["WILL_PREDICTIONS"],
-    "ua": "Що, на твою думку, вони готуватимуть завтра?",
-    "en": [
-      "What do you think they will cook tomorrow?",
-      "What will they prepare tomorrow, in your opinion?"
-    ]
+    "ua": "Іспит буде складним.",
+    "en": ["The exam will be difficult."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Я впевнений, що вистава буде дуже цікавою в театрі.",
-    "en": [
-      "I’m sure the play will be very interesting in the theater.",
-      "I believe the performance will be really engaging at the theater."
-    ]
+    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "DEMONSTRATIVES"],
+    "ua": "Про це говоритимуть ще довго.",
+    "en": ["People will talk about this for a long time."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Вона думає, що новий концерт не буде гучним.",
-    "en": [
-      "She thinks the new concert won’t be loud.",
-      "She believes the new concert won’t be noisy."
-    ]
+    "rules": ["WILL_PREDICTIONS"],
+    "ua": "Я вірю, що цей додаток змінить спосіб голосування.",
+    "en": ["I believe this app will change the way people vote."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Я думаю, що погода буде вологою завтра.",
+    "rules": ["WILL_PREDICTIONS", "PREP_TIME", "DEMONSTRATIVES"],
+    "ua": "Він пошкодує про це рішення пізніше.",
+    "en": ["He will regret this decision later."]
+  },
+  {
+    "rules": ["WILL_PREDICTIONS", "COMPARATIVES"],
+    "ua": "Зустріч буде коротшою, ніж ми очікуємо.",
     "en": [
-      "I think the weather will be wet tomorrow.",
-      "I think it will be rainy tomorrow."
+      "The meeting will be shorter than we expect.",
+      "The appointment will be shorter than we expect."
     ]
   }
-
 ] }

@@ -16,7 +16,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ні він, ні його сестра не знають відповіді.",
     "en": [
       "Neither he nor his sister knows the answer."
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ні Анна, ні Марія не відповіли на моє повідомлення.",
     "en": [
       "Neither Anna nor Maria replied to my message.",
@@ -183,7 +183,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ніхто з них не слухав і не відповідав.",
     "en": [
       "They were neither listening nor replying.",
@@ -263,7 +263,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ні фільм, ні серіал мені не сподобалися.",
     "en": [
       "Neither the movie nor the series appealed to me.",
@@ -303,7 +303,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ні я, ні мої друзі цього не розуміємо.",
     "en": [
       "Neither I nor my friends understand this.",
@@ -319,7 +319,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Він або забув, або просто не захотів приходити.",
     "en": [
       "He either forgot or just didn’t want to come.",
@@ -351,7 +351,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ні він, ні його колеги не погоджуються з планом.",
     "en": [
       "Neither he nor his colleagues agree with the plan.",
@@ -447,7 +447,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ні він, ні вона не хоче їхати.",
     "en": [
       "Neither he nor she wants to go.",
@@ -511,7 +511,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ні я, ні моя сестра цього не знали.",
     "en": [
       "Neither I nor my sister knew that.",
@@ -559,7 +559,7 @@
     ]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ARTICLES"],
     "ua": "Ніхто з учнів не відповів правильно.",
     "en": [
       "Neither student answered correctly.",

@@ -10,9 +10,14 @@
     "en": ["I like her way of talking to people.", "Her way of speaking with others appeals to me."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "COUNT_UNCOUNT"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
     "ua": "Ми не мали шансу на успіх.",
-    "en": ["We had no chance of success.", "There was no chance of winning."]
+    "en": [
+      "We had no chance of success.",
+      "There was no chance of winning.",
+      "We didn’t have a chance to succeed.",
+      "We had no chance to succeed."
+    ]
   },
   {
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "RELATIVE_CLAUSES"],
@@ -33,11 +38,6 @@
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PREP_TIME"],
     "ua": "Ідея раннього від’їзду мене не приваблює.",
     "en": ["The idea of leaving early doesn’t appeal to me.", "I don’t like the idea of leaving so soon."]
-  },
-  {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TOO_VERY"],
-    "ua": "Вона має дуже цікаву здатність розв’язувати складні проблеми.",
-    "en": ["She has a very interesting ability to solve complex problems.", "Her ability to solve difficult issues is impressive."]
   },
   {
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PERSONAL_PRONOUNS"],
@@ -70,7 +70,7 @@
     "en": ["She has an amazing ability to remember names.", "Her ability to recall names is impressive."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "COUNT_UNCOUNT"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
     "ua": "Вони обговорили можливість співпраці.",
     "en": ["They discussed the possibility of cooperation.", "They talked about the possibility of working together."]
   },

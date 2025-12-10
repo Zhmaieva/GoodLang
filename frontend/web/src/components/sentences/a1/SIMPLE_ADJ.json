@@ -5,7 +5,7 @@
     "en": ["This room is big."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Вона гарна.",
     "en": ["She is beautiful.", "She's beautiful."]
   },
@@ -25,7 +25,7 @@
     "en": ["This movie is interesting.", "This film is interesting."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Мій телефон новий.",
     "en": ["My phone is new."]
   },
@@ -175,7 +175,7 @@
     "en": ["Their apartment is spacious."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Вони щасливі.",
     "en": ["They are happy.", "They're happy."]
   },
@@ -210,22 +210,22 @@
     "en": ["This day is very nice."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Вона втомлена.",
     "en": ["She is tired.", "She's tired."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "TOO_VERY"],
     "ua": "Він занадто повільний.",
     "en": ["He is too slow.", "He's too slow."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Я задоволений.",
     "en": ["I am happy.", "I'm happy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "PREP_PLACE"],
     "ua": "Вони вдома і спокійні.",
     "en": ["They are at home and calm.", "They're at home and calm."]
   },
@@ -315,22 +315,22 @@
     "en": ["This park is green."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Він втомлений.",
     "en": ["He is tired.", "He's tired."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Вона щаслива.",
     "en": ["She is happy.", "She's happy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Ми готові.",
     "en": ["We are ready.", "We're ready."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "PERSONAL_PRONOUNS"],
+    "rules": ["SIMPLE_ADJ", "TO_BE"],
     "ua": "Вони зайняті.",
     "en": ["They are busy.", "They're busy."]
   },
@@ -426,11 +426,6 @@
   },
   {
     "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
-    "ua": "Моя школа нова.",
-    "en": ["My school is new."]
-  },
-  {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Їхній будинок старий.",
     "en": ["Their house is old."]
   },
@@ -453,11 +448,6 @@
     "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
     "ua": "Мій кіт чорний.",
     "en": ["My cat is black."]
-  },
-  {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
-    "ua": "Її квіти красиві.",
-    "en": ["Her flowers are beautiful."]
   },
   {
     "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],

@@ -52,7 +52,7 @@
     },
     {
       "rules": ["IMPERATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
-      "ua": "Візьми парасольку, бо дощ.",
+      "ua": "Візьми парасольку, бо йде дощ.",
       "en": ["Take an umbrella, it’s raining.", "Grab an umbrella because it’s raining."]
     },
     {
@@ -487,7 +487,7 @@
     },
     {
       "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
-      "ua": "Не їж чипси перед обідом.",
+      "ua": "Не їж чіпси перед обідом.",
       "en": ["Don’t eat chips before lunch.", "Avoid eating chips before the meal."]
     },
     {

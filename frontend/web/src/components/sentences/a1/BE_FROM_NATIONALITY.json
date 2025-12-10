@@ -15,11 +15,6 @@
     "en": ["She is from France.", "She comes from France."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато студентів з Італії.",
-    "en": ["Many students are from Italy.", "A lot of students come from Italy."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
     "ua": "Цей чоловік з Японії?",
     "en": ["Is this man from Japan?", "Does that man come from Japan?"]
@@ -33,11 +28,6 @@
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Ви з Канади?",
     "en": ["Are you from Canada?", "Do you come from Canada?"]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі вчителі з Іспанії.",
-    "en": ["Some teachers are from Spain.", "Certain teachers come from Spain."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
@@ -60,19 +50,9 @@
     "en": ["Are you from England?", "Do you come from England?"]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато людей з Індії.",
-    "en": ["Many people are from India.", "A lot of people come from India."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
     "ua": "Цей хлопець з Мексики.",
     "en": ["This boy is from Mexico.", "That boy comes from Mexico."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Цей актор з Росії?",
-    "en": ["Is this actor from Russia?", "Does that actor come from Russia?"]
   },
   {
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
@@ -80,19 +60,9 @@
     "en": ["I am from Turkey.", "I come from Turkey."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі гості з Греції.",
-    "en": ["Some guests are from Greece.", "Certain guests come from Greece."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Вона з Швеції?",
     "en": ["Is she from Sweden?", "Does she come from Sweden?"]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Ця людина з Португалії.",
-    "en": ["This person is from Portugal.", "That person comes from Portugal."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
@@ -103,11 +73,6 @@
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
     "ua": "Він з Ірландії.",
     "en": ["He is from Ireland.", "He comes from Ireland."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей з Норвегії.",
-    "en": ["Many children are from Norway.", "A lot of children come from Norway."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -130,11 +95,6 @@
     "en": ["We are from Switzerland.", "We come from Switzerland."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі друзі з Аргентини.",
-    "en": ["Some friends are from Argentina.", "Certain friends come from Argentina."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Вона з Чилі?",
     "en": ["Is she from Chile?", "Does she come from Chile?"]
@@ -155,19 +115,9 @@
     "en": ["I am from the Netherlands.", "I come from the Netherlands."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів з Бельгії.",
-    "en": ["Many tourists are from Belgium.", "A lot of tourists come from Belgium."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Ти з Угорщини?",
     "en": ["Are you from Hungary?", "Do you come from Hungary?"]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Ця людина з Чехії.",
-    "en": ["This person is from the Czech Republic.", "That person comes from the Czech Republic."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
@@ -178,11 +128,6 @@
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
     "ua": "Він з Нової Зеландії.",
     "en": ["He is from New Zealand.", "He comes from New Zealand."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі спортсмени з ПАР.",
-    "en": ["Some athletes are from South Africa.", "Certain athletes come from South Africa."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -205,11 +150,6 @@
     "en": ["I am from Iceland.", "I come from Iceland."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато працівників з Ізраїлю.",
-    "en": ["Many workers are from Israel.", "A lot of workers come from Israel."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Ти з Малайзії?",
     "en": ["Are you from Malaysia?", "Do you come from Malaysia?"]
@@ -220,19 +160,9 @@
     "en": ["This student is from Singapore.", "That student comes from Singapore."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Ця людина з Марокко?",
-    "en": ["Is this person from Morocco?", "Does that person come from Morocco?"]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
     "ua": "Вона з Алжиру.",
     "en": ["She is from Algeria.", "She comes from Algeria."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі відвідувачі з Нігерії.",
-    "en": ["Some visitors are from Nigeria.", "Certain visitors come from Nigeria."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -265,11 +195,6 @@
     "en": ["She is from Japan.", "She comes from Japan."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато учнів з Франції.",
-    "en": ["Many students are from France.", "A lot of students come from France."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
     "ua": "Цей хлопець з Канади?",
     "en": ["Is this boy from Canada?", "Does that boy come from Canada?"]
@@ -285,19 +210,9 @@
     "en": ["Are you from Germany?", "Do you come from Germany?"]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі гості з Китаю.",
-    "en": ["Some guests are from China.", "Certain guests come from China."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
     "ua": "Ця дівчина з Австралії.",
     "en": ["This girl is from Australia.", "That girl comes from Australia."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Ця людина з Мексики?",
-    "en": ["Is this person from Mexico?", "Does that person come from Mexico?"]
   },
   {
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
@@ -310,29 +225,14 @@
     "en": ["Are you from Turkey?", "Do you come from Turkey?"]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів з Індії.",
-    "en": ["Many tourists are from India.", "A lot of tourists come from India."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
     "ua": "Цей чоловік з Греції.",
     "en": ["This man is from Greece.", "That man comes from Greece."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Цей студент з Росії?",
-    "en": ["Is this student from Russia?", "Does that student come from Russia?"]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
     "ua": "Я з Швеції.",
     "en": ["I am from Sweden.", "I come from Sweden."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі вчителі з Португалії.",
-    "en": ["Some teachers are from Portugal.", "Certain teachers come from Portugal."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -355,11 +255,6 @@
     "en": ["He is from Denmark.", "He comes from Denmark."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей з Австрії.",
-    "en": ["Many children are from Austria.", "A lot of children come from Austria."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Ти з Швейцарії?",
     "en": ["Are you from Switzerland?", "Do you come from Switzerland?"]
@@ -380,19 +275,9 @@
     "en": ["I am from Egypt.", "I come from Egypt."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі друзі з Таїланду.",
-    "en": ["Some friends are from Thailand.", "Certain friends come from Thailand."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Вона з Нідерландів?",
     "en": ["Is she from the Netherlands?", "Does she come from the Netherlands?"]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Ця людина з Бельгії.",
-    "en": ["This person is from Belgium.", "That person comes from Belgium."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
@@ -403,11 +288,6 @@
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
     "ua": "Він з Чехії.",
     "en": ["He is from the Czech Republic.", "He comes from the Czech Republic."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів з Словаччини.",
-    "en": ["Many tourists are from Slovakia.", "A lot of tourists come from Slovakia."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -430,11 +310,6 @@
     "en": ["I am from Colombia.", "I come from Colombia."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі спортсмени з Перу.",
-    "en": ["Some athletes are from Peru.", "Certain athletes come from Peru."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Вона з Ісландії?",
     "en": ["Is she from Iceland?", "Does she come from Iceland?"]
@@ -445,19 +320,9 @@
     "en": ["This man is from Israel.", "That man comes from Israel."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Ця людина з Малайзії?",
-    "en": ["Is this person from Malaysia?", "Does that person come from Malaysia?"]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY", "PREP_PLACE"],
     "ua": "Він з Сінгапуру.",
     "en": ["He is from Singapore.", "He comes from Singapore."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато відвідувачів з Марокко.",
-    "en": ["Many visitors are from Morocco.", "A lot of visitors come from Morocco."]
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -480,11 +345,6 @@
     "en": ["I am from Kenya.", "I come from Kenya."]
   },
   {
-    "rules": ["BE_FROM_NATIONALITY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Деякі працівники з Уганди.",
-    "en": ["Some workers are from Uganda.", "Certain workers come from Uganda."]
-  },
-  {
     "rules": ["BE_FROM_NATIONALITY"],
     "ua": "Вона з Індонезії?",
     "en": ["Is she from Indonesia?", "Does she come from Indonesia?"]
@@ -493,10 +353,5 @@
     "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
     "ua": "Цей хлопець з Філіппін.",
     "en": ["This boy is from the Philippines.", "That boy comes from the Philippines."]
-  },
-  {
-    "rules": ["BE_FROM_NATIONALITY", "DEMONSTRATIVES"],
-    "ua": "Ця людина з Пакистану?",
-    "en": ["Is this person from Pakistan?", "Does that person come from Pakistan?"]
   }
 ] }

@@ -11,7 +11,7 @@
       "en": ["Where is my phone?", "Where's my phone?"]
     },
     {
-      "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ"],
       "ua": "Коли ти зазвичай прокидаєшся?",
       "en": ["When do you usually wake up?"]
     },
@@ -26,7 +26,7 @@
       "en": ["How many brothers and sisters do you have?", "How many brothers and sisters have you got?"]
     },
     {
-      "rules": ["WH_Q", "CAN_CANT", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "CAN_CANT"],
       "ua": "Що ти можеш зробити сьогодні?",
       "en": ["What can you do today?"]
     },
@@ -41,12 +41,12 @@
       "en": ["What are they doing now?"]
     },
     {
-      "rules": ["WH_Q", "COUNT_UNCOUNT", "ARTICLES"],
+      "rules": ["WH_Q", "ARTICLES"],
       "ua": "Скільки води в пляшці?",
       "en": ["How much water is there in the bottle?"]
     },
     {
-      "rules": ["WH_Q", "LIKE_ING", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "LIKE_ING"],
       "ua": "Що ти любиш робити у вільний час?",
       "en": ["What do you like doing in your free time?"]
     },
@@ -56,7 +56,7 @@
       "en": ["Where is the restaurant you talked about?", "Where’s the restaurant you talked about?"]
     },
     {
-      "rules": ["WH_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
+      "rules": ["WH_Q", "PAST_SIMPLE"],
       "ua": "Коли ти поїхав у Лондон?",
       "en": ["When did you go to London?"]
     },
@@ -76,7 +76,7 @@
       "en": ["When are you meeting Mark?"]
     },
     {
-      "rules": ["WH_Q", "GOING_TO_PLANS", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "GOING_TO_PLANS"],
       "ua": "Що ти збираєшся купити завтра?",
       "en": ["What are you going to buy tomorrow?"]
     },
@@ -146,7 +146,7 @@
       "en": ["What are you used to?"]
     },
     {
-      "rules": ["WH_Q", "COUNT_UNCOUNT", "ARTICLES"],
+      "rules": ["WH_Q", "ARTICLES"],
       "ua": "Скільки молока залишилося?",
       "en": ["How much milk is left?"]
     },
@@ -161,7 +161,7 @@
       "en": ["When is your next meeting?", "When’s your next meeting?"]
     },
     {
-      "rules": ["WH_Q", "LIKE_LOVE_HATE_ING", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "LIKE_LOVE_HATE_ING"],
       "ua": "Що ти ненавидиш робити?",
       "en": ["What do you hate doing?"]
     },
@@ -179,16 +179,6 @@
       "rules": ["WH_Q", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
       "ua": "Коли було побудовано цей будинок?",
       "en": ["When was this house built?"]
-    },
-    {
-      "rules": ["WH_Q", "GET_PAST_PARTICIPLE"],
-      "ua": "Як він зазвичай травмується?",
-      "en": ["How does he usually get hurt?"]
-    },
-    {
-      "rules": ["WH_Q", "RELATIVE_CLAUSES", "ARTICLES"],
-      "ua": "Яка книга, про яку ти казав?",
-      "en": ["Which is the book that you mentioned?", "Which book did you mention?"]
     },
     {
       "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ", "HOW_OFTEN_LONG_MUCH"],
@@ -221,7 +211,7 @@
       "en": ["How often does she go to the gym?"]
     },
     {
-      "rules": ["WH_Q", "PAST_SIMPLE", "DID_BASE_FORM"],
+      "rules": ["WH_Q", "PAST_SIMPLE"],
       "ua": "Що ти сказав?",
       "en": ["What did you say?"]
     },
@@ -231,12 +221,12 @@
       "en": ["Who could that be?", "Who might that be?"]
     },
     {
-      "rules": ["WH_Q", "REPORTED_SPEECH", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "REPORTED_SPEECH"],
       "ua": "Що він сказав тобі?",
       "en": ["What did he say to you?"]
     },
     {
-      "rules": ["WH_Q", "PHRASAL_VERBS_COMMON", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PHRASAL_VERBS_COMMON"],
       "ua": "Коли ти прокинувся сьогодні?",
       "en": ["When did you wake up today?"]
     },
@@ -251,12 +241,12 @@
       "en": ["Where are you going?"]
     },
     {
-      "rules": ["WH_Q", "PRESENT_CONT_NOW", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PRESENT_CONT_NOW"],
       "ua": "Що ти робиш зараз?",
       "en": ["What are you doing now?"]
     },
     {
-      "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PRESENT_SIMPLE_FREQ"],
       "ua": "Де вона живе?",
       "en": ["Where does she live?", "Where’s she living?"]
     },
@@ -266,7 +256,7 @@
       "en": ["Why didn’t he come?"]
     },
     {
-      "rules": ["WH_Q", "PRESENT_CONT_NOW", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PRESENT_CONT_NOW"],
       "ua": "Куди вони йдуть?",
       "en": ["Where are they going?", "Where are they headed?"]
     },
@@ -281,7 +271,7 @@
       "en": ["How often do you go to the gym?"]
     },
     {
-      "rules": ["WH_Q", "COUNT_UNCOUNT", "HAVE_HAVE_GOT"],
+      "rules": ["WH_Q", "HAVE_HAVE_GOT"],
       "ua": "Скільки у тебе є книг?",
       "en": ["How many books do you have?", "How many books have you got?"]
     },
@@ -296,7 +286,7 @@
       "en": ["What do you want to do?"]
     },
     {
-      "rules": ["WH_Q", "PAST_SIMPLE", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PAST_SIMPLE"],
       "ua": "Де ти був учора?",
       "en": ["Where were you yesterday?"]
     },
@@ -366,7 +356,7 @@
       "en": ["Who taught you to play the guitar?"]
     },
     {
-      "rules": ["WH_Q", "PRESENT_PERFECT", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PRESENT_PERFECT"],
       "ua": "Як довго ти знаєш її?",
       "en": ["How long have you known her?"]
     },
@@ -441,12 +431,12 @@
       "en": ["Where do you usually park your car?", "Where do you normally park the car?"]
     },
     {
-      "rules": ["WH_Q", "PAST_CONTINUOUS", "PERSONAL_PRONOUNS"],
+      "rules": ["WH_Q", "PAST_CONTINUOUS"],
       "ua": "Чому вона плакала вчора?",
       "en": ["Why was she crying yesterday?"]
     },
     {
-      "rules": ["WH_Q", "PAST_SIMPLE", "COUNT_UNCOUNT"],
+      "rules": ["WH_Q", "PAST_SIMPLE"],
       "ua": "Скільки людей було на вечірці?",
       "en": ["How many people were at the party?", "How many people attended the party?"]
     },
@@ -472,7 +462,7 @@
     },
     {
       "rules": ["WH_Q", "PAST_SIMPLE", "HOW_OFTEN_LONG_MUCH"],
-      "ua": "Як довго ти чекав автобуса?",
+      "ua": "Як довго ти чекав на автобус?",
       "en": ["How long did you wait for the bus?", "How long were you waiting for the bus?"]
     },
     {

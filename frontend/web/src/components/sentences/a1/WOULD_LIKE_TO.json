@@ -1,820 +1,247 @@
-{ "WOULD_LIKE_TO": [
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би відвідати музей.",
-    "en": [
-      "I would like to visit the museum.",
-      "I’d like to visit the museum."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ти хотів би писати лист зараз?",
-    "en": [
-      "Would you like to write a letter now?",
-      "Would you like to be writing a letter now?"
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б прочитати книгу.",
-    "en": [
-      "She would like to read a book.",
-      "She’d like to read a book."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти хотіли б здати іспити.",
-    "en": [
-      "Some students would like to take exams.",
-      "Certain students would like to take exams."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Цей учитель хотів би проводити урок.",
-    "en": [
-      "This teacher would like to teach a lesson.",
-      "This teacher would like to be teaching a lesson."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би побігати в парку.",
-    "en": [
-      "He would like to run in the park.",
-      "He’d like to run in the park."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б готувати вечерю зараз.",
-    "en": [
-      "We would like to prepare dinner now.",
-      "We’d like to be preparing dinner now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів хотіли б приїхати до міста.",
-    "en": [
-      "Many tourists would like to visit the city.",
-      "A lot of tourists would like to visit the city."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Ця команда хотіла б тренуватися щодня.",
-    "en": [
-      "This team would like to train every day.",
-      "This team would like to train daily."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би намалювати картину.",
-    "en": [
-      "I would like to paint a picture.",
-      "I’d like to paint a picture."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона хотіла б співати на сцені.",
-    "en": [
-      "She would like to sing on the stage.",
-      "She’d like to be singing on the stage."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б фотографувати природу.",
-    "en": [
-      "Some people would like to photograph nature.",
-      "Certain people would like to photograph nature."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би прочитати газету.",
-    "en": [
-      "He would like to read the newspaper.",
-      "He’d like to read the newspaper."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б відвідувати галерею сьогодні.",
-    "en": [
-      "We would like to visit the gallery today.",
-      "We’d like to be visiting the gallery today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Цей студент хотів би вчитися щовечора.",
-    "en": [
-      "This student would like to study every evening.",
-      "This student would like to study nightly."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей хотіли б грати у футбол.",
-    "en": [
-      "Many children would like to play football.",
-      "A lot of children would like to play football."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я хотів би танцювати на вечірці.",
-    "en": [
-      "I would like to dance at the party.",
-      "I’d like to be dancing at the party."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б написати есе.",
-    "en": [
-      "She would like to write an essay.",
-      "She’d like to write an essay."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця група хотіла б репетирувати сьогодні.",
-    "en": [
-      "This group would like to rehearse today.",
-      "This group would like to be rehearsing today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б святкувати разом.",
-    "en": [
-      "Some people would like to celebrate together.",
-      "Certain people would like to celebrate together."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би побігати в лісі.",
-    "en": [
-      "He would like to run in the forest.",
-      "He’d like to run in the forest."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б готувати обід зараз.",
-    "en": [
-      "We would like to prepare lunch now.",
-      "We’d like to be preparing lunch now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів хотіли б побачити море.",
-    "en": [
-      "Many tourists would like to see the sea.",
-      "A lot of tourists would like to see the sea."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Цей учитель хотів би працювати щодня.",
-    "en": [
-      "This teacher would like to work every day.",
-      "This teacher would like to work daily."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би прочитати журнал.",
-    "en": [
-      "I would like to read a magazine.",
-      "I’d like to read a magazine."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона хотіла б співати в хорі.",
-    "en": [
-      "She would like to sing in the choir.",
-      "She’d like to be singing in the choir."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти хотіли б вчити англійську.",
-    "en": [
-      "Some students would like to learn English.",
-      "Certain students would like to learn English."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би намалювати портрет.",
-    "en": [
-      "He would like to paint a portrait.",
-      "He’d like to paint a portrait."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б відвідувати концерт сьогодні.",
-    "en": [
-      "We would like to attend a concert today.",
-      "We’d like to be attending a concert today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Ця команда хотіла б грати у футбол щотижня.",
-    "en": [
-      "This team would like to play football every week.",
-      "This team would like to play football weekly."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей хотіли б відвідати зоопарк.",
-    "en": [
-      "Many children would like to visit the zoo.",
-      "A lot of children would like to visit the zoo."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я хотів би танцювати на сцені.",
-    "en": [
-      "I would like to dance on the stage.",
-      "I’d like to be dancing on the stage."
-    ]
-  },
-
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б написати лист.",
-    "en": [
-      "She would like to write a letter.",
-      "She’d like to write a letter."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Цей студент хотів би вчитися зараз.",
-    "en": [
-      "This student would like to study now.",
-      "This student would like to be studying now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б подорожувати світом.",
-    "en": [
-      "Some people would like to travel the world.",
-      "Certain people would like to travel the world."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би побігати в парку.",
-    "en": [
-      "He would like to run in the park.",
-      "He’d like to run in the park."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б готувати піцу зараз.",
-    "en": [
-      "We would like to prepare pizza now.",
-      "We’d like to be preparing pizza now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів хотіли б побачити гори.",
-    "en": [
-      "Many tourists would like to see the mountains.",
-      "A lot of tourists would like to see the mountains."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Ця група хотіла б співати щовечора.",
-    "en": [
-      "This group would like to sing every evening.",
-      "This group would like to sing nightly."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би прочитати роман.",
-    "en": [
-      "I would like to read a novel.",
-      "I’d like to read a novel."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона хотіла б малювати на полотні.",
-    "en": [
-      "She would like to paint on a canvas.",
-      "She’d like to be painting on a canvas."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти хотіли б вчити математику.",
-    "en": [
-      "Some students would like to learn math.",
-      "Certain students would like to learn math."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би відвідати бібліотеку.",
-    "en": [
-      "He would like to visit the library.",
-      "He’d like to visit the library."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б слухати музику зараз.",
-    "en": [
-      "We would like to listen to music now.",
-      "We’d like to be listening to music now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Цей учитель хотів би викладати щодня.",
-    "en": [
-      "This teacher would like to teach every day.",
-      "This teacher would like to teach daily."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей хотіли б грати в парку.",
-    "en": [
-      "Many children would like to play in the park.",
-      "A lot of children would like to play in the park."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я хотів би готувати обід сьогодні.",
-    "en": [
-      "I would like to prepare lunch today.",
-      "I’d like to be preparing lunch today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б танцювати в театрі.",
-    "en": [
-      "She would like to dance in the theater.",
-      "She’d like to dance in the theater."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця команда хотіла б тренуватися зараз.",
-    "en": [
-      "This team would like to train now.",
-      "This team would like to be training now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б читати книги.",
-    "en": [
-      "Some people would like to read books.",
-      "Certain people would like to read books."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би відвідати парк.",
-    "en": [
-      "He would like to visit the park.",
-      "He’d like to visit the park."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би подивитися фільм.",
-    "en": [
-      "I would like to watch a movie.",
-      "I’d like to watch a movie."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW"],
-    "ua": "Ти хотів би готувати суп зараз?",
-    "en": [
-      "Would you like to cook soup now?",
-      "Would you like to be cooking soup now?"
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б відвідати театр.",
-    "en": [
-      "She would like to visit the theater.",
-      "She’d like to visit the theater."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти хотіли б вивчати історію.",
-    "en": [
-      "Some students would like to study history.",
-      "Certain students would like to study history."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Цей учитель хотів би пояснювати урок.",
-    "en": [
-      "This teacher would like to explain the lesson.",
-      "This teacher would like to be explaining the lesson."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би пограти в шахи.",
-    "en": [
-      "He would like to play chess.",
-      "He’d like to play chess."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б слухати концерт сьогодні.",
-    "en": [
-      "We would like to listen to a concert today.",
-      "We’d like to be listening to a concert today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів хотіли б відвідати замок.",
-    "en": [
-      "Many tourists would like to visit the castle.",
-      "A lot of tourists would like to visit the castle."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Ця команда хотіла б грати в баскетбол щотижня.",
-    "en": [
-      "This team would like to play basketball every week.",
-      "This team would like to play basketball weekly."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би написати статтю.",
-    "en": [
-      "I would like to write an article.",
-      "I’d like to write an article."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона хотіла б малювати пейзаж.",
-    "en": [
-      "She would like to paint a landscape.",
-      "She’d like to be painting a landscape."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б фотографувати птахів.",
-    "en": [
-      "Some people would like to photograph birds.",
-      "Certain people would like to photograph birds."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би прочитати журнал.",
-    "en": [
-      "He would like to read a magazine.",
-      "He’d like to read a magazine."
-    ]
-  },
-
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б відвідувати виставку зараз.",
-    "en": [
-      "We would like to visit an exhibition now.",
-      "We’d like to be visiting an exhibition now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Цей студент хотів би вчити французьку щодня.",
-    "en": [
-      "This student would like to learn French every day.",
-      "This student would like to learn French daily."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей хотіли б грати в теніс.",
-    "en": [
-      "Many children would like to play tennis.",
-      "A lot of children would like to play tennis."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я хотів би танцювати в клубі.",
-    "en": [
-      "I would like to dance in the club.",
-      "I’d like to be dancing in the club."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б написати вірш.",
-    "en": [
-      "She would like to write a poem.",
-      "She’d like to write a poem."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця група хотіла б репетирувати зараз.",
-    "en": [
-      "This group would like to rehearse now.",
-      "This group would like to be rehearsing now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б святкувати на пляжі.",
-    "en": [
-      "Some people would like to celebrate on the beach.",
-      "Certain people would like to celebrate on the beach."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би пограти в футбол.",
-    "en": [
-      "He would like to play football.",
-      "He’d like to play football."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б готувати десерт сьогодні.",
-    "en": [
-      "We would like to prepare a dessert today.",
-      "We’d like to be preparing a dessert today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів хотіли б побачити річку.",
-    "en": [
-      "Many tourists would like to see the river.",
-      "A lot of tourists would like to see the river."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Цей учитель хотів би викладати математику щотижня.",
-    "en": [
-      "This teacher would like to teach math every week.",
-      "This teacher would like to teach math weekly."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би прочитати книгу.",
-    "en": [
-      "I would like to read a book.",
-      "I’d like to read a book."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона хотіла б співати на концерті.",
-    "en": [
-      "She would like to sing at the concert.",
-      "She’d like to be singing at the concert."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти хотіли б вчити іспанську.",
-    "en": [
-      "Some students would like to learn Spanish.",
-      "Certain students would like to learn Spanish."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би намалювати картину.",
-    "en": [
-      "He would like to paint a picture.",
-      "He’d like to paint a picture."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б відвідувати музей сьогодні.",
-    "en": [
-      "We would like to visit the museum today.",
-      "We’d like to be visiting the museum today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Ця команда хотіла б грати в волейбол щотижня.",
-    "en": [
-      "This team would like to play volleyball every week.",
-      "This team would like to play volleyball weekly."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей хотіли б відвідати парк.",
-    "en": [
-      "Many children would like to visit the park.",
-      "A lot of children would like to visit the park."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я хотів би танцювати на вечірці.",
-    "en": [
-      "I would like to dance at the party.",
-      "I’d like to be dancing at the party."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б написати лист.",
-    "en": [
-      "She would like to write a letter.",
-      "She’d like to write a letter."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Цей студент хотів би вчитися сьогодні.",
-    "en": [
-      "This student would like to study today.",
-      "This student would like to be studying today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б подорожувати Європою.",
-    "en": [
-      "Some people would like to travel around Europe.",
-      "Certain people would like to travel around Europe."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би пограти в теніс.",
-    "en": [
-      "He would like to play tennis.",
-      "He’d like to play tennis."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б готувати піцу зараз.",
-    "en": [
-      "We would like to prepare pizza now.",
-      "We’d like to be preparing pizza now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато туристів хотіли б побачити озеро.",
-    "en": [
-      "Many tourists would like to see the lake.",
-      "A lot of tourists would like to see the lake."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Ця група хотіла б співати щодня.",
-    "en": [
-      "This group would like to sing every day.",
-      "This group would like to sing daily."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Я хотів би прочитати роман.",
-    "en": [
-      "I would like to read a novel.",
-      "I’d like to read a novel."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Вона хотіла б малювати портрет.",
-    "en": [
-      "She would like to paint a portrait.",
-      "She’d like to be painting a portrait."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі студенти хотіли б вчити німецьку.",
-    "en": [
-      "Some students would like to learn German.",
-      "Certain students would like to learn German."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би відвідати галерею.",
-    "en": [
-      "He would like to visit the gallery.",
-      "He’d like to visit the gallery."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Ми хотіли б слухати музику сьогодні.",
-    "en": [
-      "We would like to listen to music today.",
-      "We’d like to be listening to music today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES"],
-    "ua": "Цей учитель хотів би викладати історію щотижня.",
-    "en": [
-      "This teacher would like to teach history every week.",
-      "This teacher would like to teach history weekly."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "COUNT_UNCOUNT"],
-    "ua": "Багато дітей хотіли б грати в зоопарку.",
-    "en": [
-      "Many children would like to play at the zoo.",
-      "A lot of children would like to play at the zoo."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Я хотів би готувати обід зараз.",
-    "en": [
-      "I would like to prepare lunch now.",
-      "I’d like to be preparing lunch now."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Вона хотіла б танцювати на сцені.",
-    "en": [
-      "She would like to dance on stage.",
-      "She’d like to dance on stage."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PRESENT_CONT_NOW"],
-    "ua": "Ця команда хотіла б тренуватися сьогодні.",
-    "en": [
-      "This team would like to train today.",
-      "This team would like to be training today."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі люди хотіли б читати журнали.",
-    "en": [
-      "Some people would like to read magazines.",
-      "Certain people would like to read magazines."
-    ]
-  },
-  {
-    "rules": ["WOULD_LIKE_TO", "ARTICLES"],
-    "ua": "Він хотів би пограти в баскетбол.",
-    "en": [
-      "He would like to play basketball.",
-      "He’d like to play basketball."
-    ]
-  }
-] }
+{
+  "WOULD_LIKE_TO": [
+    {
+      "rules": ["WOULD_LIKE_TO", "PREP_TIME"],
+      "ua": "Мені хотілося б вивчити іспанську цього року.",
+      "en": ["I would like to learn Spanish this year."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "PREP_PLACE", "PREP_TIME"],
+      "ua": "Вона хотіла б одного дня поїхати до Італії.",
+      "en": ["She would like to travel to Italy someday."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Вони хотіли б купити нову машину.",
+      "en": ["They would like to buy a new car.", "They would like to purchase a new car."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Він хотів би змінити свою роботу.",
+      "en": ["He would like to change his job."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Мені хотілося б випити чашку чаю.",
+      "en": ["I would like to drink a cup of tea."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Вона хотіла б познайомитися з твоїми батьками.",
+      "en": ["She would like to meet your parents."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES", "COMPARATIVES"],
+      "ua": "Вони хотіли б переїхати в більшу квартиру.",
+      "en": ["They would like to move to a bigger apartment."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES", "PREP_TIME"],
+      "ua": "Ми хотіли б розпочати зустріч зараз.",
+      "en": ["We would like to start the meeting now.", "We would like to begin the meeting now."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Він хотів би запросити тебе на вечірку.",
+      "en": ["He would like to invite you to the party."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "COMPARATIVES"],
+      "ua": "Мені хотілося б краще зрозуміти це правило.",
+      "en": ["I would like to understand this rule better."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES", "PREP_TIME"],
+      "ua": "Вона хотіла б подивитися фільм сьогодні ввечері.",
+      "en": ["She would like to watch a movie tonight."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Вони хотіли б відкрити власне кафе.",
+      "en": ["They would like to open their own café."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES", "PREP_TIME"],
+      "ua": "Ми хотіли б закінчити проєкт вчасно.",
+      "en": ["We would like to finish the project on time.", "We would like to complete the project on time."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Він хотів би поговорити з менеджером.",
+      "en": ["He would like to speak to the manager.", "He would like to talk to the manager."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Мені хотілося б покращити свою вимову.",
+      "en": ["I would like to improve my pronunciation."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Вона хотіла б допомогти своїм друзям.",
+      "en": ["She would like to help her friends."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Вони хотіли б зробити невелику перерву.",
+      "en": ["They would like to take a short break.", "They would like to have a short break."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Ми хотіли б відвідати наших дідусів і бабусь.",
+      "en": ["We would like to visit our grandparents."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Він хотів би заощаджувати більше грошей.",
+      "en": ["He would like to save more money."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "WH_Q"],
+      "ua": "Мені хотілося б поставити тобі запитання.",
+      "en": ["I would like to ask you a question."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Вона хотіла б записатися до спортзалу.",
+      "en": ["She would like to join the gym."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES", "PREP_TIME"],
+      "ua": "Вони хотіли б відсвяткувати свою річницю.",
+      "en": ["They would like to celebrate their anniversary."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Ми хотіли б замовити десерт.",
+      "en": ["We would like to order some dessert."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Він хотів би поспати трохи довше.",
+      "en": ["He would like to sleep a little longer."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Мені хотілося б змінити свій пароль.",
+      "en": ["I would like to change my password."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Вона хотіла б почати тренуватися щодня.",
+      "en": ["She would like to start practising every day.", "She would like to begin practising every day."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "PREP_PLACE"],
+      "ua": "Вони хотіли б орендувати будинок біля моря.",
+      "en": ["They would like to rent a house near the sea."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Ми хотіли б навчитися готувати суші.",
+      "en": ["We would like to learn how to cook sushi."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Він хотів би покращити свою англійську.",
+      "en": ["He would like to improve his English."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Мені хотілося б надіслати цей лист зараз.",
+      "en": ["I would like to send this email now."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "PREP_PLACE"],
+      "ua": "Вона хотіла б працювати з дому.",
+      "en": ["She would like to work from home."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES", "PREP_TIME"],
+      "ua": "Вони хотіли б забронювати номер на дві ночі.",
+      "en": [
+        "They would like to book a room for two nights.",
+        "They would like to reserve a room for two nights."
+      ]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Ми хотіли б подякувати тобі за допомогу.",
+      "en": ["We would like to thank you for your help."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES", "POSSESSIVE_S"],
+      "ua": "Він хотів би купити квіти для своєї мами.",
+      "en": ["He would like to buy flowers for his mother."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "PREP_TIME"],
+      "ua": "Мені хотілося б прогулятися після вечері.",
+      "en": ["I would like to take a walk after dinner.", "I would like to go for a walk after dinner."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "POSSESSIVE_S"],
+      "ua": "Вона хотіла б створити власний бізнес.",
+      "en": ["She would like to create her own business.", "She would like to start her own business."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Вони хотіли б змінити свої плани подорожі.",
+      "en": ["They would like to change their travel plans."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Ми хотіли б подивитися нову виставку.",
+      "en": ["We would like to see the new exhibition.", "We would like to visit the new exhibition."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "ua": "Він хотів би навчитися водити машину.",
+      "en": ["He would like to learn how to drive."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "PREP_TIME"],
+      "ua": "Мені хотілося б спробувати сьогодні щось нове.",
+      "en": ["I would like to try something new today."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "PREP_TIME"],
+      "ua": "Вона хотіла б відпочити після роботи.",
+      "en": ["She would like to relax after work."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "EACH_OTHER_ONE_ANOTHER", "PREP_TIME"],
+      "ua": "Вони хотіли б провести вихідні разом.",
+      "en": ["They would like to spend the weekend together.", "They would like to spend the weekend with each other."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "POSSESSIVE_S"],
+      "ua": "Ми хотіли б почути твою думку.",
+      "en": ["We would like to hear your opinion.", "We would like to get your opinion."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "POSSESSIVE_S"],
+      "ua": "Він хотів би полагодити свій комп’ютер.",
+      "en": ["He would like to fix his computer.", "He would like to repair his computer."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "ARTICLES"],
+      "ua": "Мені хотілося б почати відкладати гроші на подорож.",
+      "en": ["I would like to start saving for a trip."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "POSSESSIVE_S"],
+      "ua": "Вона хотіла б покращити свої кулінарні навички.",
+      "en": ["She would like to improve her cooking skills.", "She would like to enhance her cooking skills."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "DEMONSTRATIVES", "COMPARATIVES"],
+      "ua": "Вони хотіли б залишитися тут трохи довше.",
+      "en": ["They would like to stay here a little longer.", "They would like to remain here a little longer."]
+    },
+    {
+      "rules": ["WOULD_LIKE_TO", "POSSESSIVE_S"],
+      "ua": "Він хотів би здивувати свою сестру.",
+      "en": ["He would like to surprise his sister."]
+    }
+  ]
+}

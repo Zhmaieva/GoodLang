@@ -1,497 +1,328 @@
 { "LIKE_ING": [
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Мені подобається плавати швидко.",
-    "en": ["I like swimming fast.", "I enjoy swimming quickly."]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона любить слухати спокійну музику.",
+    "en": ["She likes listening to calm music.", "She enjoys listening to relaxing music.", "She likes listening to peaceful music."]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
-    "ua": "Тобі подобається читати цю книгу?",
-    "en": ["Do you like reading this book?", "Do you enjoy reading that book?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить малювати ввечері.",
-    "en": ["She likes painting in the evening.", "She enjoys drawing at night."]
-  },
-  {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми любимо слухати багато музики.",
-    "en": ["We like listening to a lot of music.", "We enjoy hearing plenty of music."]
-  },
-  {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Йому подобається дивитися твій фільм?",
-    "en": ["Does he like watching your movie?", "Does he enjoy viewing your film?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
-    "ua": "Мені подобається гуляти в парку.",
-    "en": ["I like walking in the park.", "I enjoy strolling in the park."]
-  },
-  {
-    "rules": ["LIKE_ING"],
-    "ua": "Тобі подобається готувати їжу?",
-    "en": ["Do you like cooking food?", "Do you enjoy preparing meals?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить танцювати.",
-    "en": ["She likes dancing.", "She enjoys dancing."]
-  },
-  {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Йому подобається співати голосно.",
-    "en": ["He likes singing loudly.", "He enjoys singing in a loud voice."]
-  },
-  {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
-    "ua": "Тобі подобається слухати цей подкаст?",
-    "en": ["Do you like listening to this podcast?", "Do you enjoy listening to this podcast?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_TIME"],
-    "ua": "Ти любиш читати перед сном?",
-    "en": ["Do you like reading before bed?", "Do you enjoy reading at bedtime?"]
-  },
-  {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми любимо грати в багато ігор.",
-    "en": ["We like playing lots of games.", "We enjoy playing many games."]
-  },
-  {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Тобі подобається готувати твій суп?",
-    "en": ["Do you like cooking your soup?", "Do you enjoy making your soup?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить бігати на стадіоні.",
-    "en": ["She likes running at the stadium.", "She enjoys jogging on the track."]
-  },
-  {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
-    "ua": "Мені подобається малювати картини.",
-    "en": ["I like painting pictures.", "I enjoy creating artworks."]
-  },
-  {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER"],
-    "ua": "Ти любиш працювати тихо?",
-    "en": ["Do you like working quietly?", "Do you enjoy working silently?"]
-  },
-  {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
-    "ua": "Йому подобається дивитися цей серіал?",
-    "en": ["Does he like watching this series?", "Does he enjoy viewing that show?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Ми любимо співати після уроків.",
-    "en": ["We like singing after classes.", "We enjoy singing after lessons."]
-  },
-  {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Тобі подобається читати багато газет?",
-    "en": ["Do you like reading a lot of newspapers?", "Do you enjoy reading many papers?"]
-  },
-  {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить слухати твою музику.",
-    "en": ["She likes listening to your music.", "She enjoys hearing your songs."]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
-    "ua": "Мені подобається кататися в лісі.",
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Мені подобається кататися (на велосипеді) в лісі.",
     "en": ["I like cycling in the forest.", "I enjoy biking in the woods."]
   },
   {
-    "rules": ["LIKE_ING"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти любиш писати листи?",
     "en": ["Do you like writing letters?", "Do you enjoy composing letters?"]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається грати в шахи.",
     "en": ["He likes playing chess.", "He enjoys playing chess."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається танцювати повільно.",
     "en": ["I like dancing slowly.", "I enjoy dancing in a slow way."]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Тобі подобається готувати цю страву?",
     "en": ["Do you like cooking this dish?", "Do you enjoy preparing that meal?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить читати вранці.",
     "en": ["She likes reading in the morning.", "She enjoys reading in the mornings."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми любимо дивитися багато фільмів.",
-    "en": ["We like watching a lot of movies.", "We enjoy viewing many films."]
+    "rules": ["LIKE_ING", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ми любимо дивитися романтичні комедії.",
+    "en": [
+      "We like watching romantic comedies.",
+      "We enjoy watching romantic comedies.",
+      "We love watching rom-coms.",
+      "We like watching rom-coms.",
+      "We enjoy watching rom-coms."
+    ]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Тобі подобається грати в твої ігри?",
-    "en": ["Do you like playing your games?", "Do you enjoy playing your video games?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається плавати в озері.",
     "en": ["I like swimming in the lake.", "I enjoy swimming in the lake."]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
-    "ua": "Йому подобається малювати малюнки.",
-    "en": ["He likes drawing pictures.", "He enjoys creating drawings."]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Йому подобається малювати.",
+    "en": ["He likes drawing.", "He enjoys drawing."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER"],
-    "ua": "Ти любиш співати тихо?",
-    "en": ["Do you like singing quietly?", "Do you enjoy singing softly?"]
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ти любиш співати гучно?",
+    "en": ["Do you like singing loudly?", "Do you enjoy singing loudly?", "Do you like to sing loudly?"]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
-    "ua": "Вона любить слухати цей альбом?",
-    "en": ["Does she like listening to this album?", "Does she enjoy hearing that album?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається працювати до обіду.",
     "en": ["I like working until lunch.", "I enjoy working before lunchtime."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Тобі подобається читати багато журналів?",
-    "en": ["Do you like reading a lot of magazines?", "Do you enjoy reading many journals?"]
-  },
-  {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається дивитися твої відео.",
     "en": ["He likes watching your videos.", "He enjoys viewing your clips."]
   },
   {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми любимо гуляти в саду.",
     "en": ["We like walking in the garden.", "We enjoy strolling in the yard."]
   },
   {
-    "rules": ["LIKE_ING"],
-    "ua": "Ти любиш готувати страви?",
-    "en": ["Do you like cooking dishes?", "Do you enjoy preparing meals?"]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ти любиш готувати?",
+    "en": ["Do you like cooking?", "Do you enjoy cooking?"]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить шити.",
     "en": ["She likes sewing.", "She enjoys sewing."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається писати акуратно.",
     "en": ["I like writing neatly.", "I enjoy writing carefully."]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Тобі подобається грати в цю гру?",
     "en": ["Do you like playing this game?", "Do you enjoy playing that game?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається малювати після обіду.",
     "en": ["He likes painting after lunch.", "He enjoys drawing after the meal."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми любимо слухати багато подкастів.",
-    "en": ["We like listening to a lot of podcasts.", "We enjoy hearing many podcasts."]
+    "rules": ["LIKE_ING", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Тобі подобається читати класичну літературу?",
+    "en": ["Do you like reading classic literature?", "Do you enjoy reading classical literature?", "Do you like classic literature?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Тобі подобається читати твої книги?",
-    "en": ["Do you like reading your books?", "Do you enjoy reading your novels?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається бігати в лісі.",
     "en": ["I like running in the forest.", "I enjoy jogging in the woods."]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить писати листи.",
     "en": ["She likes writing letters.", "She enjoys composing letters."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER"],
-    "ua": "Ти любиш малювати обережно?",
-    "en": ["Do you like painting carefully?", "Do you enjoy drawing cautiously?"]
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ти любиш малювати маслом?",
+    "en": ["Do you like painting in oil?", "Do you like oil painting?", "Do you enjoy oil painting?"]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається дивитися цей матч?",
     "en": ["Does he like watching this match?", "Does he enjoy viewing that game?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається співати вранці.",
     "en": ["I like singing in the morning.", "I enjoy singing in the mornings."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Тобі подобається дивитися багато серіалів?",
-    "en": ["Do you like watching a lot of series?", "Do you enjoy viewing many shows?"]
-  },
-  {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить грати в твої шахи.",
-    "en": ["She likes playing your chess.", "She enjoys playing your chess game."]
-  },
-  {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається готувати швидко.",
     "en": ["I like cooking quickly.", "I enjoy preparing food fast."]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
-    "ua": "Тобі подобається слухати цей концерт?",
-    "en": ["Do you like listening to this concert?", "Do you enjoy hearing that concert?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить писати після обіду.",
-    "en": ["She likes writing after lunch.", "She enjoys writing after the meal."]
-  },
-  {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми любимо читати багато книг.",
     "en": ["We like reading lots of books.", "We enjoy reading many books."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Йому подобається грати в твою гру?",
-    "en": ["Does he like playing your game?", "Does he enjoy playing your video game?"]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Йому подобається грати в настільні ігри?",
+    "en": ["Does he like playing board games?", "Does he enjoy playing board games?", "Is he into board games?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
-    "ua": "Мені подобається танцювати в залі.",
-    "en": ["I like dancing in the hall.", "I enjoy dancing in the room."]
-  },
-  {
-    "rules": ["LIKE_ING"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Тобі подобається малювати портрети?",
     "en": ["Do you like painting portraits?", "Do you enjoy drawing portraits?"]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить співати.",
     "en": ["She likes singing.", "She enjoys singing."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається бігати швидко.",
     "en": ["He likes running fast.", "He enjoys jogging quickly."]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
-    "ua": "Тобі подобається дивитися цей фільм?",
-    "en": ["Do you like watching this movie?", "Do you enjoy viewing that film?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_TIME"],
+    "rules": ["LIKE_ING", "PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти любиш готувати вранці?",
     "en": ["Do you like cooking in the morning?", "Do you enjoy preparing food in the mornings?"]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми любимо слухати багато пісень.",
     "en": ["We like listening to lots of songs.", "We enjoy hearing many songs."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Тобі подобається читати цей журнал?",
     "en": ["Do you like reading this magazine?", "Do you enjoy reading this journal?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить плавати в басейні.",
     "en": ["She likes swimming in the pool.", "She enjoys swimming in the pool."]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається писати листи.",
     "en": ["I like writing letters.", "I enjoy composing letters."]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається слухати цю музику?",
     "en": ["Does he like listening to this music?", "Does he enjoy hearing that music?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми любимо малювати ввечері.",
     "en": ["We like painting in the evening.", "We enjoy drawing at night."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Тобі подобається дивитися багато відео?",
-    "en": ["Do you like watching a lot of videos?", "Do you enjoy viewing many clips?"]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона любить грати в карти.",
+    "en": ["She likes playing cards.", "She enjoys playing card game."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить грати в твої карти.",
-    "en": ["She likes playing your cards.", "She enjoys playing your card game."]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається бігати в парку.",
     "en": ["I like running in the park.", "I enjoy jogging in the park."]
   },
   {
-    "rules": ["LIKE_ING"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти любиш читати книги?",
     "en": ["Do you like reading books?", "Do you enjoy reading novels?"]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається готувати.",
     "en": ["He likes cooking.", "He enjoys preparing food."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається співати тихо.",
     "en": ["I like singing quietly.", "I enjoy singing softly."]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Тобі подобається дивитися цей матч?",
     "en": ["Do you like watching this match?", "Do you enjoy viewing that game?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить танцювати після уроків.",
     "en": ["She likes dancing after classes.", "She enjoys dancing after lessons."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми любимо грати в багато ігор.",
-    "en": ["We like playing lots of games.", "We enjoy playing many games."]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Тобі подобається слухати цей подкаст?",
+    "en": ["Do you like listening to this podcast?", "Do you enjoy hearing this podcast?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Тобі подобається слухати твій подкаст?",
-    "en": ["Do you like listening to your podcast?", "Do you enjoy hearing your podcast?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається малювати в саду.",
     "en": ["I like painting in the garden.", "I enjoy drawing in the yard."]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається писати тексти.",
     "en": ["He likes writing texts.", "He enjoys composing texts."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER"],
+    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти любиш бігати швидко?",
     "en": ["Do you like running fast?", "Do you enjoy jogging quickly?"]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить читати цю газету?",
     "en": ["Does she like reading this newspaper?", "Does she enjoy reading that paper?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
-    "ua": "Мені подобається готувати до вечері.",
-    "en": ["I like cooking before dinner.", "I enjoy preparing food before supper."]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Мені подобається готувати вечерю.",
+    "en": ["I like cooking dinner.", "I like cooking supper.", "I like preparing dinner.", "I like preparing supper.", "I like making dinner.", "I like making supper."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Тобі подобається слухати багато альбомів?",
-    "en": ["Do you like listening to a lot of albums?", "Do you enjoy hearing many albums?"]
+    "rules": ["LIKE_ING", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Йому подобається дивитися старі фільми.",
+    "en": ["He likes watching old movies.", "He enjoys viewing old films."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
-    "ua": "Йому подобається дивитися твої фільми.",
-    "en": ["He likes watching your movies.", "He enjoys viewing your films."]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми любимо танцювати на площі.",
     "en": ["We like dancing in the square.", "We enjoy dancing in the plaza."]
   },
   {
-    "rules": ["LIKE_ING"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ти любиш малювати картини?",
     "en": ["Do you like painting pictures?", "Do you enjoy drawing artworks?"]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить кататися.",
-    "en": ["She likes cycling.", "She enjoys biking."]
-  },
-  {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER", "PERSONAL_PRONOUNS"],
-    "ua": "Мені подобається писати чітко.",
-    "en": ["I like writing clearly.", "I enjoy writing legibly."]
-  },
-  {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
-    "ua": "Тобі подобається слухати цей виступ?",
-    "en": ["Do you like listening to this performance?", "Do you enjoy hearing that show?"]
-  },
-  {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається читати до сніданку.",
     "en": ["He likes reading before breakfast.", "He enjoys reading before the meal."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми любимо дивитися багато серіалів.",
-    "en": ["We like watching lots of series.", "We enjoy viewing many shows."]
+    "rules": ["LIKE_ING", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ми любимо дивитися нові серіали.",
+    "en": ["We like watching new TV series.", "We enjoy watching new series.", "We love watching new shows."]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Тобі подобається грати в твої шахи?",
-    "en": ["Do you like playing your chess?", "Do you enjoy playing your chess game?"]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Тобі подобається грати в шахи?",
+    "en": ["Do you like playing chess?", "Do you enjoy playing chess game?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_PLACE", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_PLACE", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається співати в парку.",
     "en": ["I like singing in the park.", "I enjoy singing in the park."]
   },
   {
-    "rules": ["LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона любить писати нотатки.",
     "en": ["She likes writing notes.", "She enjoys composing notes."]
   },
   {
-    "rules": ["LIKE_ING", "ADVERBS_OF_MANNER"],
-    "ua": "Ти любиш танцювати енергійно?",
-    "en": ["Do you like dancing energetically?", "Do you enjoy dancing vigorously?"]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Ти любиш танцювати?",
+    "en": ["Do you like dancing?", "Do you enjoy dancing?"]
   },
   {
-    "rules": ["LIKE_ING", "DEMONSTRATIVES"],
+    "rules": ["LIKE_ING", "DEMONSTRATIVES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Йому подобається дивитися цей концерт?",
     "en": ["Does he like watching this concert?", "Does he enjoy viewing that performance?"]
   },
   {
-    "rules": ["LIKE_ING", "PREP_TIME", "PERSONAL_PRONOUNS"],
+    "rules": ["LIKE_ING", "PREP_TIME", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Мені подобається малювати вранці.",
     "en": ["I like painting in the morning.", "I enjoy drawing in the mornings."]
   },
   {
-    "rules": ["LIKE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Тобі подобається читати багато статей?",
-    "en": ["Do you like reading a lot of articles?", "Do you enjoy reading many articles?"]
+    "rules": ["LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Тобі подобається читати статті про птахів?",
+    "en": ["Do you like reading articles about birds?", "Do you enjoy reading articles about birds?", "Do you like reading about birds?"]
   },
   {
-    "rules": ["LIKE_ING", "POSSESSIVE_ADJECTIVES", "PERSONAL_PRONOUNS"],
-    "ua": "Вона любить слухати твої пісні.",
-    "en": ["She likes listening to your songs.", "She enjoys hearing your music."]
+    "rules": ["LIKE_ING", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Вона любить слухати пісні Нірвани (Nirvana).",
+    "en": ["She likes listening to Nirvana songs.", "She likes listening to songs by Nirvana.", "She enjoys listening to Nirvana."]
   }
 ] }

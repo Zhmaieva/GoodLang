@@ -1,552 +1,318 @@
-{ "WAS_WERE": [
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у школі вчора?",
-    "en": ["Were you at school yesterday?", "Were you in school yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у школі вчора.",
-    "en": ["I wasn’t at school yesterday.", "I wasn’t in school yesterday."]
-  },
+{
+  "WAS_WERE": [
+    { "rules": ["WAS_WERE", "TOO_VERY"], "ua": "Я був дуже втомлений після роботи.", "en": ["I was very tired after work.", "I was exhausted after work."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була на вечірці минулого тижня?",
-    "en": ["Was she at the party last week?", "Was she at the event last week?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була на вечірці минулого тижня.",
-    "en": ["She wasn’t at the party last week.", "She wasn’t at the event last week."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE", "PREP_TIME"], "ua": "Вона була вдома весь вечір.", "en": ["She was at home all evening.", "She stayed at home all evening."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якісь студенти були на лекції торік?",
-    "en": ["Were any students at the lecture last year?", "Were some students at the lecture last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Жодні студенти не були на лекції торік.",
-    "en": ["No students were at the lecture last year.", "There were no students at the lecture last year."]
-  },
+    { "rules": ["WAS_WERE", "ARTICLES"], "ua": "Він запізнився на зустріч.", "en": ["He was late for the meeting."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей учитель був у класі вчора?",
-    "en": ["Was this teacher in the classroom yesterday?", "Was this teacher at school yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей учитель не був у класі вчора.",
-    "en": ["This teacher wasn’t in the classroom yesterday.", "This teacher wasn’t at school yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Учора було холодно.", "en": ["It was cold yesterday."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у парку минулого місяця?",
-    "en": ["Were you in the park last month?", "Were you at the park last month?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у парку минулого місяця.",
-    "en": ["I wasn’t in the park last month.", "I wasn’t at the park last month."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Ми були раді тебе бачити.", "en": ["We were happy to see you."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була в бібліотеці вчора?",
-    "en": ["Was she in the library yesterday?", "Was she at the library yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була в бібліотеці вчора.",
-    "en": ["She wasn’t in the library yesterday.", "She wasn’t at the library yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE"], "ua": "Вони були в парку весь день.", "en": ["They were in the park all afternoon."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато туристів були в місті торік?",
-    "en": ["Were many tourists in the city last year?", "Were a lot of tourists in the city last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато туристів не були в місті торік.",
-    "en": ["Many tourists weren’t in the city last year.", "A lot of tourists weren’t in the city last year."]
-  },
+    { "rules": ["WAS_WERE", "ARTICLES"], "ua": "Фільм був цікавий.", "en": ["The movie was interesting.", "The film was interesting."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця книга була на столі вчора?",
-    "en": ["Was this book on the table yesterday?", "Was this book on the desk yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця книга не була на столі вчора.",
-    "en": ["This book wasn’t on the table yesterday.", "This book wasn’t on the desk yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE", "ARTICLES"], "ua": "Мій телефон був на столі.", "en": ["My phone was on the table.", "My cellphone was on the table."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був на концерті вчора?",
-    "en": ["Were you at the concert yesterday?", "Were you at the show yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був на концерті вчора.",
-    "en": ["I wasn’t at the concert yesterday.", "I wasn’t at the show yesterday."]
-  },
+    { "rules": ["WAS_WERE", "POSSESSIVE_S"], "ua": "Її відповідь була правильною.", "en": ["Her answer was correct."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він був у театрі минулого тижня?",
-    "en": ["Was he at the theater last week?", "Was he in the theater last week?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він не був у театрі минулого тижня.",
-    "en": ["He wasn’t at the theater last week.", "He wasn’t in the theater last week."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Я не був готовий до тесту.", "en": ["I was not ready for the test.", "I wasn’t ready for the test."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якісь діти були в зоопарку торік?",
-    "en": ["Were any children at the zoo last year?", "Were some children at the zoo last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Жодні діти не були в зоопарку торік.",
-    "en": ["No children were at the zoo last year.", "There were no children at the zoo last year."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE", "PREP_TIME"], "ua": "Вона не була в школі вчора.", "en": ["She wasn’t at school yesterday."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей лист був у поштовій скриньці вчора?",
-    "en": ["Was this letter in the mailbox yesterday?", "Was this letter inside the mailbox yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей лист не був у поштовій скриньці вчора.",
-    "en": ["This letter wasn’t in the mailbox yesterday.", "This letter wasn’t inside the mailbox yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE"], "ua": "Він не був зацікавлений у проєкті.", "en": ["He was not interested in the project."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у магазині вчора?",
-    "en": ["Were you at the store yesterday?", "Were you in the shop yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у магазині вчора.",
-    "en": ["I wasn’t at the store yesterday.", "I wasn’t in the shop yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Вони не були зайняті вдень.", "en": ["They weren’t busy in the afternoon."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була на пляжі минулого літа?",
-    "en": ["Was she at the beach last summer?", "Was she on the beach last summer?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була на пляжі минулого літа.",
-    "en": ["She wasn’t at the beach last summer.", "She wasn’t on the beach last summer."]
-  },
+    { "rules": ["WAS_WERE", "ARTICLES"], "ua": "Їжа не була свіжою.", "en": ["The food was not fresh."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато людей були на ярмарку торік?",
-    "en": ["Were many people at the fair last year?", "Were a lot of people at the fair last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато людей не були на ярмарку торік.",
-    "en": ["Many people weren’t at the fair last year.", "A lot of people weren’t at the fair last year."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE", "POSSESSIVE_S"], "ua": "Мої ключі були не в сумці.", "en": ["My keys were not in my bag."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця картина була в галереї вчора?",
-    "en": ["Was this painting in the gallery yesterday?", "Was this painting at the gallery yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця картина не була в галереї вчора.",
-    "en": ["This painting wasn’t in the gallery yesterday.", "This painting wasn’t at the gallery yesterday."]
-  },
+    { "rules": ["WAS_WERE", "ARTICLES"], "ua": "Відповіді були неправильні.", "en": ["The answers were not correct."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був на стадіоні минулого тижня?",
-    "en": ["Were you at the stadium last week?", "Were you in the stadium last week?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був на стадіоні минулого тижня.",
-    "en": ["I wasn’t at the stadium last week.", "I wasn’t in the stadium last week."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Я запізнився на заняття?", "en": ["Was I late for the class?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він був у кафе вчора?",
-    "en": ["Was he at the café yesterday?", "Was he in the café yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він не був у кафе вчора.",
-    "en": ["He wasn’t at the café yesterday.", "He wasn’t in the café yesterday."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Вона була задоволена результатом?", "en": ["Was she happy with the result?"] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якісь гості були на святі торік?",
-    "en": ["Were any guests at the celebration last year?", "Were some guests at the celebration last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Жодні гості не були на святі торік.",
-    "en": ["No guests were at the celebration last year.", "There were no guests at the celebration last year."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Він був втомлений після роботи?", "en": ["Was he tired after work?"] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей фільм був у кінотеатрі минулого місяця?",
-    "en": ["Was this movie at the cinema last month?", "Was this movie in the theater last month?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей фільм не був у кінотеатрі минулого місяця.",
-    "en": ["This movie wasn’t at the cinema last month.", "This movie wasn’t in the theater last month."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Це було важко зрозуміти?", "en": ["Was it difficult to understand?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у ресторані вчора?",
-    "en": ["Were you at the restaurant yesterday?", "Were you in the restaurant yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у ресторані вчора.",
-    "en": ["I wasn’t at the restaurant yesterday.", "I wasn’t in the restaurant yesterday."]
-  },
+    { "rules": ["WAS_WERE", "TOO_VERY"], "ua": "Ми були надто галасливими?", "en": ["Were we too noisy?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була на вокзалі вчора?",
-    "en": ["Was she at the station yesterday?", "Was she at the train station yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була на вокзалі вчора.",
-    "en": ["She wasn’t at the station yesterday.", "She wasn’t at the train station yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE", "PREP_TIME"], "ua": "Вони були на вечірці вчора?", "en": ["Were they at the party yesterday?"] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато машин були на дорозі вчора?",
-    "en": ["Were many cars on the road yesterday?", "Were a lot of cars on the road yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато машин не були на дорозі вчора.",
-    "en": ["Many cars weren’t on the road yesterday.", "A lot of cars weren’t on the road yesterday."]
-  },
+    { "rules": ["WAS_WERE", "ARTICLES", "PREP_TIME"], "ua": "Кафе було відкрите ввечері?", "en": ["Was the café open in the evening?"] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця сукня була в магазині минулого тижня?",
-    "en": ["Was this dress in the store last week?", "Was this dress at the shop last week?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця сукня не була в магазині минулого тижня.",
-    "en": ["This dress wasn’t in the store last week.", "This dress wasn’t at the shop last week."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE"], "ua": "Діти були вдома?", "en": ["Were the children at home?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був на ринку минулого місяця?",
-    "en": ["Were you at the market last month?", "Were you at the local market last month?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був на ринку минулого місяця.",
-    "en": ["I wasn’t at the market last month.", "I wasn’t at the local market last month."]
-  },
+    { "rules": ["WAS_WERE", "POSSESSIVE_S"], "ua": "Твій телефон був заряджений?", "en": ["Was your phone charged?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у музеї вчора?",
-    "en": ["Were you at the museum yesterday?", "Were you in the museum yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у музеї вчора.",
-    "en": ["I wasn’t at the museum yesterday.", "I wasn’t in the museum yesterday."]
-  },
+    { "rules": ["WAS_WERE", "ARTICLES"], "ua": "Квитки були дорогі?", "en": ["Were the tickets expensive?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була на виставці минулого тижня?",
-    "en": ["Was she at the exhibition last week?", "Was she at the show last week?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була на виставці минулого тижня.",
-    "en": ["She wasn’t at the exhibition last week.", "She wasn’t at the show last week."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Я боявся запитати.", "en": ["I was afraid to ask."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якісь гості були на фестивалі торік?",
-    "en": ["Were any guests at the festival last year?", "Were some guests at the festival last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Жодні гості не були на фестивалі торік.",
-    "en": ["No guests were at the festival last year.", "There were no guests at the festival last year."]
-  },
+    { "rules": ["WAS_WERE", "PREP_TIME", "POSSESSIVE_S"], "ua": "Вона пишалася своїм прогресом у той момент.", "en": ["She was proud of her progress at that moment."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей документ був на столі вчора?",
-    "en": ["Was this document on the table yesterday?", "Was this document on the desk yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей документ не був на столі вчора.",
-    "en": ["This document wasn’t on the table yesterday.", "This document wasn’t on the desk yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Тоді він не був упевнений у відповіді.", "en": ["He wasn’t sure about the answer then."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у кіно вчора?",
-    "en": ["Were you at the cinema yesterday?", "Were you in the theater yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у кіно вчора.",
-    "en": ["I wasn’t at the cinema yesterday.", "I wasn’t in the theater yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Ми були здивовані новиною того вечора.", "en": ["We were surprised by the news that evening."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була в офісі минулого тижня?",
-    "en": ["Was she at the office last week?", "Was she in the office last week?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була в офісі минулого тижня.",
-    "en": ["She wasn’t at the office last week.", "She wasn’t in the office last week."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Вони не були готові до подорожі.", "en": ["They were not ready for the trip."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато відвідувачів були в парку торік?",
-    "en": ["Were many visitors in the park last year?", "Were a lot of visitors in the park last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато відвідувачів не були в парку торік.",
-    "en": ["Many visitors weren’t in the park last year.", "A lot of visitors weren’t in the park last year."]
-  },
+    { "rules": ["WAS_WERE", "ARTICLES"], "ua": "Ресторан був переповнений?", "en": ["Was the restaurant crowded?"] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця фотографія була в альбомі вчора?",
-    "en": ["Was this photo in the album yesterday?", "Was this picture in the album yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця фотографія не була в альбомі вчора.",
-    "en": ["This photo wasn’t in the album yesterday.", "This picture wasn’t in the album yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Ти нервував перед співбесідою?", "en": ["Were you nervous before the interview?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був на ярмарку минулого місяця?",
-    "en": ["Were you at the fair last month?", "Were you at the market last month?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був на ярмарку минулого місяця.",
-    "en": ["I wasn’t at the fair last month.", "I wasn’t at the market last month."]
-  },
+    { "rules": ["WAS_WERE", "POSSESSIVE_S"], "ua": "Його руки були холодні.", "en": ["His hands were cold."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він був у лікарні вчора?",
-    "en": ["Was he at the hospital yesterday?", "Was he in the hospital yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він не був у лікарні вчора.",
-    "en": ["He wasn’t at the hospital yesterday.", "He wasn’t in the hospital yesterday."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Я не був злий, просто втомлений.", "en": ["I wasn’t angry, just tired."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якісь вчителі були на семінарі торік?",
-    "en": ["Were any teachers at the seminar last year?", "Were some teachers at the seminar last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Жодні вчителі не були на семінарі торік.",
-    "en": ["No teachers were at the seminar last year.", "There were no teachers at the seminar last year."]
-  },
+    { "rules": ["WAS_WERE", "SUPERLATIVES", "PREP_TIME", "ARTICLES"], "ua": "Тоді вона була найкращою ученицею в класі.", "en": ["She was the best student in class at that time."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей лист був у конверті вчора?",
-    "en": ["Was this letter in the envelope yesterday?", "Was this letter inside the envelope yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей лист не був у конверті вчора.",
-    "en": ["This letter wasn’t in the envelope yesterday.", "This letter wasn’t inside the envelope yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE", "PREP_TIME"], "ua": "Я був удома весь день.", "en": ["I was at home all day."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у спортзалі вчора?",
-    "en": ["Were you at the gym yesterday?", "Were you in the gym yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у спортзалі вчора.",
-    "en": ["I wasn’t at the gym yesterday.", "I wasn’t in the gym yesterday."]
-  },
+    { "rules": ["WAS_WERE", "TOO_VERY"], "ua": "Вона була дуже схвильована, коли побачила результат.", "en": ["She was very excited when she saw the result."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була на вокзалі минулого тижня?",
-    "en": ["Was she at the station last week?", "Was she at the train station last week?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була на вокзалі минулого тижня.",
-    "en": ["She wasn’t at the station last week.", "She wasn’t at the train station last week."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Він не був готовий до розмови.", "en": ["He was not ready for the conversation."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато студентів були на екскурсії торік?",
-    "en": ["Were many students on the excursion last year?", "Were a lot of students on the excursion last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато студентів не були на екскурсії торік.",
-    "en": ["Many students weren’t on the excursion last year.", "A lot of students weren’t on the excursion last year."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Погода була ідеальною.", "en": ["The weather was perfect.", "The weather was ideal."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця картина була на виставці вчора?",
-    "en": ["Was this painting at the exhibition yesterday?", "Was this painting in the gallery yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Ця картина не була на виставці вчора.",
-    "en": ["This painting wasn’t at the exhibition yesterday.", "This painting wasn’t in the gallery yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Ми були втомлені після дороги.", "en": ["We were tired after the trip.", "We were exhausted after the trip."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у парку атракціонів минулого літа?",
-    "en": ["Were you at the amusement park last summer?", "Were you in the amusement park last summer?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у парку атракціонів минулого літа.",
-    "en": ["I wasn’t at the amusement park last summer.", "I wasn’t in the amusement park last summer."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Вони не були здивовані новиною.", "en": ["They were not surprised by the news."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він був на конференції вчора?",
-    "en": ["Was he at the conference yesterday?", "Was he at the meeting yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Він не був на конференції вчора.",
-    "en": ["He wasn’t at the conference yesterday.", "He wasn’t at the meeting yesterday."]
-  },
+    { "rules": ["WAS_WERE", "POSSESSIVE_S"], "ua": "Моя відповідь була неправильною.", "en": ["My answer was wrong.", "My answer was incorrect."] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якісь книги були в бібліотеці торік?",
-    "en": ["Were any books in the library last year?", "Were some books in the library last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Жодні книги не були в бібліотеці торік.",
-    "en": ["No books were in the library last year.", "There were no books in the library last year."]
-  },
+    { "rules": ["WAS_WERE", "TOO_VERY", "ARTICLES"], "ua": "Кімната була дуже маленькою.", "en": ["The room was very small.", "The room was tiny."] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей журнал був у кіоску вчора?",
-    "en": ["Was this magazine at the kiosk yesterday?", "Was this magazine at the newsstand yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей журнал не був у кіоску вчора.",
-    "en": ["This magazine wasn’t at the kiosk yesterday.", "This magazine wasn’t at the newsstand yesterday."]
-  },
+    { "rules": ["WAS_WERE", "POSSESSIVE_S", "PREP_TIME"], "ua": "Наші плани були простими на початку.", "en": ["Our plans were simple in the beginning."] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був на озері минулого літа?",
-    "en": ["Were you at the lake last summer?", "Were you by the lake last summer?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був на озері минулого літа.",
-    "en": ["I wasn’t at the lake last summer.", "I wasn’t by the lake last summer."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Ти був упевнений у своєму рішенні?", "en": ["Were you sure about your decision?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона була в аеропорту вчора?",
-    "en": ["Was she at the airport yesterday?", "Was she in the airport yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Вона не була в аеропорту вчора.",
-    "en": ["She wasn’t at the airport yesterday.", "She wasn’t in the airport yesterday."]
-  },
+    { "rules": ["WAS_WERE", "PREP_PLACE", "PREP_TIME"], "ua": "Вона була на роботі вчора?", "en": ["Was she at work yesterday?"] },
 
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато дітей були в таборі торік?",
-    "en": ["Were many children at the camp last year?", "Were a lot of children at the camp last year?"]
-  },
-  {
-    "rules": ["WAS_WERE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато дітей не були в таборі торік.",
-    "en": ["Many children weren’t at the camp last year.", "A lot of children weren’t at the camp last year."]
-  },
+    { "rules": ["WAS_WERE"], "ua": "Вони були готові почати?", "en": ["Were they ready to start?"] },
 
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей годинник був у коробці вчора?",
-    "en": ["Was this watch in the box yesterday?", "Was this clock in the box yesterday?"]
-  },
-  {
-    "rules": ["WAS_WERE", "DEMONSTRATIVES"],
-    "ua": "Цей годинник не був у коробці вчора.",
-    "en": ["This watch wasn’t in the box yesterday.", "This clock wasn’t in the box yesterday."]
-  },
+    { "rules": ["WAS_WERE", "THERE_IS_ARE", "PREP_PLACE"], "ua": "Було чути шум із вулиці?", "en": ["Was there noise from the street?"] },
 
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Ти був у готелі минулого місяця?",
-    "en": ["Were you at the hotel last month?", "Were you in the hotel last month?"]
-  },
-  {
-    "rules": ["WAS_WERE", "ARTICLES"],
-    "ua": "Я не був у готелі минулого місяця.",
-    "en": ["I wasn’t at the hotel last month.", "I wasn’t in the hotel last month."]
-  }
+    { "rules": ["WAS_WERE", "TOO_ENOUGH"], "ua": "Ми були надто повільні?", "en": ["Were we too slow?"] },
 
-] }
+    { "rules": ["WAS_WERE"], "ua": "Я не був задоволений результатом.", "en": ["I was not satisfied with the result.", "I wasn’t satisfied with the result."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Вона не була готова до змін.", "en": ["She was not ready for changes."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Він не був уважним.", "en": ["He was not attentive."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Ми не були впевнені в цьому.", "en": ["We were not sure about it."] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Вони не були на зв’язку тоді.", "en": ["They were not in touch back then."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Я був гордий за неї.", "en": ["I was proud of her."] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Вона була розчарована після зустрічі.", "en": ["She was disappointed after the meeting."] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Він був чесним зі мною того вечора.", "en": ["He was honest with me that evening."] },
+
+    { "rules": ["WAS_WERE", "TOO_ENOUGH"], "ua": "Вони були занадто втомлені, щоб продовжувати.", "en": ["They were too tired to continue.", "They were too exhausted to continue."] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Тоді я був упевнений у результаті.", "en": ["I was confident about the result back then."] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Вона була засмучена після дзвінка.", "en": ["She was upset after the call."] },
+
+    { "rules": ["WAS_WERE", "TOO_VERY"], "ua": "Він був дуже терплячим під час тієї розмови.", "en": ["He was very patient during that conversation."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Ми були здивовані ціною.", "en": ["We were surprised at the price.", "We were shocked by the price."] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Вони були в гарному настрої того ранку.", "en": ["They were in a good mood that morning."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Я не був упевнений у відповіді.", "en": ["I was not sure about the answer."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Вона не була готова до екзамену.", "en": ["She was not ready for the exam."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Він не був задоволений сервісом.", "en": ["He was not satisfied with the service."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Ми не були знайомі з цією людиною.", "en": ["We were not familiar with this person."] },
+
+    { "rules": ["WAS_WERE", "PREP_PLACE"], "ua": "Вони не були присутні на зустрічі.", "en": ["They were not present at the meeting."] },
+
+    { "rules": ["WAS_WERE", "PREP_PLACE", "PREP_TIME"], "ua": "Вона була вдома пізно ввечері?", "en": ["Was she at home late in the evening?"] },
+
+    { "rules": ["WAS_WERE"], "ua": "Він був здивований цією новиною?", "en": ["Was he surprised by this news?"] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Вони були втомлені після роботи?", "en": ["Were they tired after work?"] },
+
+    { "rules": ["WAS_WERE"], "ua": "Я був радий твоєму повідомленню.", "en": ["I was glad about your message.", "I was happy about your message."] },
+
+    { "rules": ["WAS_WERE"], "ua": "Вона була вдячна за допомогу.", "en": ["She was grateful for the help."] },
+
+    { "rules": ["WAS_WERE", "ARTICLES"], "ua": "Він був уважним слухачем.", "en": ["He was an attentive listener."] },
+
+    { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "На той момент ми були впевнені у своєму виборі.", "en": ["We were confident in our choice at the time."] },
+
+    { "rules": ["WAS_WERE", "TOO_ENOUGH"], "ua": "Я був надто втомлений, щоб говорити.", "en": ["I was too tired to talk."] },
+
+    { "rules": ["WAS_WERE", "TOO_ENOUGH", "PREP_TIME"], "ua": "Вона була надто зайнята вчора.", "en": ["She was too busy yesterday."] },
+
+    { "rules": ["WAS_WERE", "TOO_VERY"], "ua": "Він був дуже ввічливим.", "en": ["He was very polite."] },
+
+    {
+      "rules": ["WAS_WERE", "ADVERBS_OF_MANNER", "PREP_TIME"],
+      "ua": "Ми були на диво спокійні того вечора.",
+      "en": [
+        "We were surprisingly calm that evening.",
+        "We were unexpectedly calm that evening."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "TOO_VERY", "PREP_TIME"],
+      "ua": "Вони були абсолютно щасливі того дня.",
+      "en": [
+        "They were absolutely happy on that day.",
+        "They were completely happy on that day."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "POSSESSIVE_S"],
+      "ua": "Я був здивований її реакцією.",
+      "en": [
+        "I was surprised by her reaction.",
+        "I was surprised at her reaction."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "ua": "Він був не в настрої для розмов.",
+      "en": [
+        "He was not in the mood to talk."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "PREP_TIME"],
+      "ua": "Ми були задоволені результатом після презентації.",
+      "en": [
+        "We were satisfied with the result after the presentation.",
+        "We were pleased with the result after the presentation."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "DEMONSTRATIVES", "PREP_TIME"],
+      "ua": "Вони були знайомі з цими правилами ще тоді.",
+      "en": [
+        "They were familiar with these rules even back then."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "POSSESSIVE_S"],
+      "ua": "Вона не була впевнена у своєму рішенні.",
+      "en": [
+        "She was not confident about her decision."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ARTICLES"],
+      "ua": "Він не був зацікавлений у пропозиції.",
+      "en": [
+        "He was not interested in the offer."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+      "ua": "Ми не були підготовлені до цього.",
+      "en": [
+        "We were not prepared for this."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ARTICLES"],
+      "ua": "Ти був задоволений відповіддю?",
+      "en": [
+        "Were you satisfied with the answer?",
+        "Were you pleased with the answer?"
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ARTICLES", "PREP_PLACE"],
+      "ua": "Вона була присутня на зустрічі?",
+      "en": [
+        "Was she present at the meeting?"
+      ]
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "ua": "Він був чесний із тобою?",
+      "en": [
+        "Was he honest with you?"
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "POSSESSIVE_S"],
+      "ua": "Вони були впевнені у своїй перемозі?",
+      "en": [
+        "Were they confident in their victory?"
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "DEMONSTRATIVES"],
+      "ua": "Я був радий бути частиною цієї команди.",
+      "en": [
+        "I was glad to be part of that team.",
+        "I was happy to be part of that team."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ADVERBS_OF_MANNER", "PREP_TIME"],
+      "ua": "Вона була щиро щаслива за тебе в той момент.",
+      "en": [
+        "She was genuinely happy for you at that moment."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ARTICLES"],
+      "ua": "Він був роздратований затримкою.",
+      "en": [
+        "He was annoyed by the delay.",
+        "He was frustrated by the delay."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ADVERBS_OF_MANNER", "PREP_TIME", "ARTICLES"],
+      "ua": "Ми були повністю зосереджені під час тесту.",
+      "en": [
+        "We were fully focused during the test.",
+        "We were completely focused during the test."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "POSSESSIVE_S"],
+      "ua": "Вони були здивовані нашими словами.",
+      "en": [
+        "They were surprised by our words."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ADVERBS_OF_MANNER", "PREP_TIME"],
+      "ua": "Я був на диво спокійний того вечора.",
+      "en": [
+        "I was surprisingly calm that evening.",
+        "I was unexpectedly calm that evening."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "REFLEXIVE_PRONOUNS", "PREP_TIME", "ARTICLES"],
+      "ua": "Він був гордий за себе після виступу.",
+      "en": [
+        "He was proud of himself after the performance."
+      ]
+    },
+    {
+      "rules": ["WAS_WERE", "ARTICLES"],
+      "ua": "Ми були готові ризикнути.",
+      "en": [
+        "We were ready to take a risk."
+      ]
+    }
+  ]
+}

@@ -9,7 +9,6 @@
     "ua": "Я не читав книгу вчора о п’ятій годині.",
     "en": ["I wasn’t reading a book yesterday at five o’clock.", "I wasn’t studying a book yesterday at five o’clock."]
   },
-
   {
     "rules": ["PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Вона готувала вечерю вчора ввечері?",
@@ -20,19 +19,6 @@
     "ua": "Вона не готувала вечерю вчора ввечері.",
     "en": ["She wasn’t cooking dinner yesterday evening.", "She wasn’t preparing dinner yesterday evening."]
   },
-
-
-  {
-    "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
-    "ua": "Цей учень писав твір вчора вранці?",
-    "en": ["Was this student writing an essay yesterday morning?", "Was this student composing an essay yesterday morning?"]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
-    "ua": "Цей учень не писав твір вчора вранці.",
-    "en": ["This student wasn’t writing an essay yesterday morning.", "This student wasn’t composing an essay yesterday morning."]
-  },
-
   {
     "rules": ["PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Ти дивився телевізор вчора ввечері?",
@@ -54,18 +40,6 @@
     "ua": "Він не малював картину минулого тижня.",
     "en": ["He wasn’t painting a picture last week.", "He wasn’t drawing a picture last week."]
   },
-
-  {
-    "rules": ["PAST_CONTINUOUS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато людей танцювали на вечірці торік?",
-    "en": ["Were many people dancing at the party last year?", "Were a lot of people dancing at the party last year?"]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато людей не танцювали на вечірці торік.",
-    "en": ["Many people weren’t dancing at the party last year.", "A lot of people weren’t dancing at the party last year."]
-  },
-
   {
     "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
     "ua": "Ця дівчина співала цю пісню вчора?",
@@ -98,18 +72,6 @@
     "ua": "Вона не прибирала кімнату вчора вдень.",
     "en": ["She wasn’t cleaning the room yesterday afternoon.", "She wasn’t tidying the room yesterday afternoon."]
   },
-
-  {
-    "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
-    "ua": "Цей хлопець грав у цю гру вчора?",
-    "en": ["Was this boy playing this game yesterday?", "Was this boy competing in this game yesterday?"]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
-    "ua": "Цей хлопець не грав у цю гру вчора.",
-    "en": ["This boy wasn’t playing this game yesterday.", "This boy wasn’t competing in this game yesterday."]
-  },
-
   {
     "rules": ["PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Ти писав лист вчора ввечері?",
@@ -133,17 +95,6 @@
   },
 
   {
-    "rules": ["PAST_CONTINUOUS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато студентів робили уроки вчора ввечері?",
-    "en": ["Were many students studying lessons yesterday evening?", "Were a lot of students preparing lessons yesterday evening?"]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато студентів не вчили уроки вчора ввечері.",
-    "en": ["Many students weren’t studying lessons yesterday evening.", "A lot of students weren’t preparing lessons yesterday evening."]
-  },
-
-  {
     "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
     "ua": "Ця команда тренувалася на стадіоні вчора?",
     "en": ["Was this team training at the stadium yesterday?", "Was this team practicing at the stadium yesterday?"]
@@ -164,31 +115,6 @@
     "ua": "Я не слухав музику вчора о десятій годині.",
     "en": ["I wasn’t listening to music yesterday at ten o’clock.", "I wasn’t listening to loud music yesterday at ten o’clock."]
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {
-    "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
-    "ua": "Цей художник малював цю картину вчора?",
-    "en": ["Was this artist painting this picture yesterday?", "Was this artist drawing this picture yesterday?"]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
-    "ua": "Цей художник не малював цю картину вчора.",
-    "en": ["This artist wasn’t painting this picture yesterday.", "This artist wasn’t drawing this picture yesterday."]
-  },
   {
     "rules": ["PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Ти катався на велосипеді вчора вдень?",
@@ -201,23 +127,8 @@
   },
   {
     "rules": ["PAST_CONTINUOUS", "ARTICLES"],
-    "ua": "Він працював у саду вчора вранці?",
-    "en": ["Was he working in the garden yesterday morning?", "Was he tending the garden yesterday morning?"]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "ARTICLES"],
-    "ua": "Він не працював у саду вчора вранці.",
-    "en": ["He wasn’t working in the garden yesterday morning.", "He wasn’t tending the garden yesterday morning."]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Багато машин не їхали по дорозі вчора.",
-    "en": ["Many cars weren’t driving on the road yesterday.", "A lot of cars weren’t traveling on the road yesterday."]
-  },
-  {
-    "rules": ["PAST_CONTINUOUS", "DEMONSTRATIVES"],
-    "ua": "Ця дівчинка не читала цю книгу вчора.",
-    "en": ["This girl wasn’t reading this book yesterday.", "This girl wasn’t studying this book yesterday."]
+    "ua": "Ти працював у саду вчора вранці?",
+    "en": ["Were you working in the garden yesterday morning?", "Were you tending the garden yesterday morning?"]
   },
   {
     "rules": ["PAST_CONTINUOUS", "ARTICLES"],
@@ -246,11 +157,11 @@
     ]
   },
   {
-    "rules": ["PAST_CONTINUOUS", "WH_Q", "PREP_TIME"],
-    "ua": "Що ти робив учора вдень, коли я тобі зателефонував?",
+    "rules": ["PAST_CONTINUOUS", "PREP_TIME"],
+    "ua": "Що ти робив учора, коли я тобі зателефонував?",
     "en": [
-      "What were you doing yesterday afternoon when I called you?",
-      "What were you doing in the afternoon yesterday when I phoned you?"
+      "What were you doing yesterday when I called you?",
+      "What were you doing in the afternoon when I phoned you?"
     ]
   },
   {
@@ -288,7 +199,7 @@
   },
 
   {
-    "rules": ["PAST_CONTINUOUS", "WH_Q", "ADVERBS_OF_MANNER"],
+    "rules": ["PAST_CONTINUOUS", "ADVERBS_OF_MANNER"],
     "ua": "Як швидко вони бігли, коли ти їх побачив?",
     "en": [
       "How fast were they running when you saw them?",
@@ -395,7 +306,7 @@
     ]
   },
   {
-    "rules": ["PAST_CONTINUOUS", "WH_Q", "PREP_PLACE"],
+    "rules": ["PAST_CONTINUOUS", "PREP_PLACE"],
     "ua": "Де ти гуляв, коли пішов дощ?",
     "en": [
       "Where were you walking when it started to rain?",
@@ -419,15 +330,14 @@
     ]
   },
   {
-    "rules": ["PAST_CONTINUOUS", "COUNT_UNCOUNT"],
-    "ua": "Ти готував їжу, коли я прийшов?",
+    "rules": ["PAST_CONTINUOUS"],
+    "ua": "Ти готував вечерю, коли я прийшов?",
     "en": [
-      "Were you cooking food when I arrived?",
+      "Were you cooking dinner when I arrived?",
+      "Were you preparing dinner when I arrived?",
       "Were you preparing a meal when I got there?"
     ]
   },
-
-
   {
     "rules": ["PAST_CONTINUOUS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
     "ua": "Він сидів у парку, хоча було холодно.",
@@ -477,7 +387,6 @@
       "I was drawing a painting the whole morning."
     ]
   },
-
   {
     "rules": ["PAST_CONTINUOUS", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
     "ua": "Вона читала, тому не чула дзвінок учора.",
@@ -487,7 +396,7 @@
     ]
   },
   {
-    "rules": ["PAST_CONTINUOUS", "WH_Q"],
+    "rules": ["PAST_CONTINUOUS"],
     "ua": "Що ви робили, коли я зайшов?",
     "en": [
       "What were you doing when I came in?",
