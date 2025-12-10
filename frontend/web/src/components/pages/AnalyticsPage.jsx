@@ -125,7 +125,8 @@ export default function AnalyticsPage({theme}) {
                         statusOf={statusOf}
                         fmtDate={fmtDate}
                         onRowClick={(rule) => {
-                            navigate(`/rule/${rule.rule}`);
+                            const url = `/rule/${rule.rule}`;
+                            window.open(url, "_blank", "noopener,noreferrer");
                         }}
                     />
                 </div>

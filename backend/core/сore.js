@@ -60,9 +60,10 @@ export function randomRule(level) {
     return values[Math.floor(Math.random() * values.length)];
 }
 
-const clearText = (text) => text.toLowerCase()
+export const clearText = (text) => text?.toLowerCase()
     .split('.').join('')
-    .split('’').join('');
+    .split('’').join('\'')
+    .split(',').join('');
 
 export function preEvaluate({
                                       rules = [],

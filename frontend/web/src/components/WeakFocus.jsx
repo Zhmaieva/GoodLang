@@ -76,10 +76,12 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                     </div>
                     <div className="focus-actions" style={{margin: '16px 0px'}}>
                         <button onClick={() => {
-                            navigate(`/rule/${rule.rule}`);
+                            const url = `/rule/${rule.rule}`;
+                            window.open(url, "_blank", "noopener,noreferrer");
                         }} className="pill">Пояснення правила</button>
                     </div>
                     <Trainer
+                        notFocused
                         nextRule={rule.rule}
                         theme={theme}
                         onAnswerEvaluated={() => {

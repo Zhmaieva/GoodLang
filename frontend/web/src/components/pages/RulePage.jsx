@@ -135,7 +135,7 @@ export default function RulePage({ data, theme }) {
                 return (
                     <>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <Trainer nextRule={data.id} theme={theme} />
+                        <Trainer notFocused nextRule={data.id} theme={theme} />
                     </>
                 );
 

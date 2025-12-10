@@ -1,4 +1,6 @@
-export default function ResultCard({ theme, hint, correctAnswer }) {
+import {RULE_LABELS} from "../../utils/rules.js";
+
+export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] }) {
     const styles = {
         card: {
             background: "#fffdf8",
@@ -29,18 +31,79 @@ export default function ResultCard({ theme, hint, correctAnswer }) {
             fontSize: 15, background: "#f4fff7", border: `1.5px dashed ${theme.green}`,
             borderRadius: 12, padding: "8px 10px", display: "inline-block",
         },
+        rulesOuterWrap: {
+            marginTop: 12,
+            display: "flex",
+            flexDirection: "column",
+            flexWrap: "wrap",
+            gap: 8,
+        },
+        rulesWrap: {
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 8,
+            maxWidth: 420,
+        },
+        ruleButton: {
+            cursor: "pointer",
+            borderRadius: theme.radius,
+            border: `2px solid ${theme.accent}`,
+            background: "#fffef6",
+            padding: "6px 10px",
+            fontSize: 13,
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: ".04em",
+            color: theme.text,
+            boxShadow: `2px 2px 0 ${theme.accentDark}`,
+        },
+        rulesTitle: {
+            fontSize: 13,
+            fontWeight: 700,
+            textTransform: "uppercase",
+            letterSpacing: ".04em",
+            color: theme.text,
+            marginBottom: 4,
+        },
+    };
+
+    const openRuleInNewTab = (rule) => {
+        // 🔹 adjust URL pattern if your routing is different
+        const url = `/rule/${rule}`;
+        window.open(url, "_blank", "noopener,noreferrer");
     };
 
     return (
         <div style={styles.card}>
             <h2 style={styles.title}>Результат</h2>
             <div style={styles.feedback}>{hint}</div>
+
             {correctAnswer ? (
                 <div style={styles.correctWrap}>
                     <div style={styles.correctTitle}>Правильна відповідь</div>
                     <div style={styles.correctText}>{correctAnswer}</div>
                 </div>
             ) : null}
+
+            {weakRules.length > 0 && (
+                <div style={styles.rulesOuterWrap}>
+                    <div style={styles.rulesTitle}>
+                        Повторіть ці правила:
+                    </div>
+                    <div style={styles.rulesWrap}>
+                        {weakRules.map((rule) => (
+                            <button
+                                key={rule}
+                                type="button"
+                                style={styles.ruleButton}
+                                onClick={() => openRuleInNewTab(rule)}
+                            >
+                                {RULE_LABELS[rule]}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -21,5 +21,7 @@ export async function getToken() {
 }
 
 /* todo:
+- chunk / do not send data sync data
+- back buttons (to training) in new tab lead to blank tab
 - check each rule learning page
  */

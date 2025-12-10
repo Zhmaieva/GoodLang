@@ -1,4 +1,4 @@
-import { evaluateAndCoach, preEvaluate, randomRule, shuffleBySeed } from "../core/сore.js";
+import {clearText, evaluateAndCoach, preEvaluate, randomRule, shuffleBySeed} from "../core/сore.js";
 import { ALL_RULES_SAMPLES } from "../core/allRulesSamples.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import { checkTranslationLimit, recordTranslationUsage } from "../database/repositories/accountLogRepository.js";
@@ -98,7 +98,7 @@ export const translationsController = {
             const currentSkip = Number.parseInt(skip || "0", 10) || 0;
             const newSkip = currentSkip + 1;
 
-            const scores = result.scores || [];
+            let scores = result.scores || [];
 
             for (let i = 0; i < scores.length; i++) {
                 if (scores[i] < 1 || (!level && !freeTraining)) {
@@ -122,6 +122,13 @@ export const translationsController = {
 
             if (!skipCoach)
                 await recordTranslationUsage(accountId);
+
+            if (!result.answer_is_correct && clearText(result.correct_answer) === clearText(translation)) {
+                scores = rulesArr.map(_ => 1);
+                result.tip_if_wrong = null;
+                result.correct_answer = null;
+                result.answer_is_correct = true;
+            }
 
             return res.json({
                 rules: newRules,

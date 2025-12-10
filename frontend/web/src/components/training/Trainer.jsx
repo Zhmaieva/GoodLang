@@ -14,7 +14,8 @@ export default function Trainer({
                                     freeTraining = false,
                                     nextLevel = null,
                                     nextRule = null,
-                                    onAnswerEvaluated = _ => {}
+                                    onAnswerEvaluated = _ => {},
+                                    notFocused = false,
                                 }) {
     const LEVEL_TO_DIFFICULTY = useMemo(
         () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),
@@ -53,6 +54,9 @@ export default function Trainer({
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [waitTimeSeconds, setWaitTimeSeconds] = useState(false);
 
+    // 🔹 NEW: rules that need attention (score < 1)
+    const [weakRules, setWeakRules] = useState([]);
+
     useEffect(() => {
         if (loading) return;
         if (nextLevel === level && !nextRule) return;
@@ -74,7 +78,7 @@ export default function Trainer({
     }, [nextLevel]);
 
     useEffect(() => {
-        if (mode === "check" && textareaRef.current && !loading) textareaRef.current.focus();
+        if (mode === "check" && !notFocused && textareaRef.current && !loading) textareaRef.current.focus();
     }, [mode, loading]);
 
     function setControlsDisabled(disabled) {
@@ -86,6 +90,7 @@ export default function Trainer({
         setTaskText("Завантаження завдання…");
         setHint("Завантаження нового завдання…");
         setCorrectAnswer("");
+        setWeakRules([]); // 🔹 reset list of weak rules
     }
 
     async function fetchNextSentence({ nextLevel, nextRule, selectedDifficulty, seed, skip }) {
@@ -123,9 +128,6 @@ export default function Trainer({
                         ruleToSend = lowestAcc.rule;
 
                     } else if (rnd < 90 && below75.length > 0) {
-                        // // 30% random among <75%
-                        // const pick = below75[Math.floor(Math.random() * below75.length)];
-                        // ruleToSend = pick.rule;
                         // 30% random with a few data
                         ruleToSend = stats.filter(r => r.attemptsLast7Days <= 4)
                             [Math.floor(Math.random() * noAttempts.length)].rule;
@@ -165,12 +167,13 @@ export default function Trainer({
         try {
             setControlsDisabled(true);
             setAnswer("");
+            setWeakRules([]); // 🔹 clear when loading a fresh task
 
             if (!nextRules || !nextTextToTranslate) {
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const data = await fetchNextSentence({ nextLevel, nextRule, seed, skip });
+                const data = await fetchNextSentence({ nextLevel, nextRule, selectedDifficulty, seed, skip });
                 setTextToTranslate(data.textToTranslate || "");
                 setRules(data.rules || null);
                 setTaskText(data.textToTranslate || "—");
@@ -201,6 +204,7 @@ export default function Trainer({
         if (!userAns) { setHint("Введіть переклад перед перевіркою."); return; }
         try {
             setControlsDisabled(true);
+            setWeakRules([]); // 🔹 reset before new evaluation
 
             const {seed, skip} = getSeed();
             console.log('evaluating answer...');
@@ -212,6 +216,20 @@ export default function Trainer({
                 setLimitModalOpen(true);
                 return;
             }
+
+            // 🔹 Detect rules with score < 1 for this evaluation
+            const nextWeakRules = [];
+            if (Array.isArray(data.scores)) {
+                data.scores.forEach(s => {
+                    const index = data.scores.indexOf(s);
+                    if (s < 1 && (rules.length - 1 >= index)) {
+                        nextWeakRules.push(rules[index]);
+                    }
+                });
+            }
+            const uniqueWeakRules = [...new Set(nextWeakRules)];
+
+            setWeakRules(uniqueWeakRules);
 
             addAnswer(data.scores, rules, data.level);
 
@@ -271,7 +289,12 @@ export default function Trainer({
                 textareaRef={textareaRef}
                 onKeyDown={handleKeyDown}
             />
-            <ResultCard theme={theme} hint={hint} correctAnswer={correctAnswer}/>
+            <ResultCard
+                theme={theme}
+                hint={hint}
+                correctAnswer={correctAnswer}
+                weakRules={weakRules} // 🔹 pass down
+            />
             <LimitModal
                 waitTimeSeconds={waitTimeSeconds}
                 isLimitReached={true}
