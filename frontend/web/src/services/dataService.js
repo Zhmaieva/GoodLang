@@ -8,41 +8,24 @@ const STORAGE_KEY_LAST_SYNC = "answers_lastSync";
 const STORAGE_KEY_SEED_UPDATED = "seed_updatedAt";
 const STORAGE_KEY_DEVICE_ID = "device_id";
 
-export async function syncWithServer() {
-    const lastServerSync = localStorage.getItem(STORAGE_KEY_LAST_SYNC) || "1970-01-01T00:00:00.000Z";
-    const all = getAnswers();
+const CHUNK_SIZE = 100;
 
-    // only send local answers that the server hasn't seen yet by updatedAt
-    // We conservatively send all locally created answers (they are idempotent upserts by id on server)
-    // Optionally filter by date if you want to avoid re-sending old answers:
-    const recentLocal = all.filter(a => !a._syncedAt || new Date(a._syncedAt) > new Date(lastServerSync) ? true : false);
-    // (Above: _syncedAt is optional local metadata — not required. Safe to send all local answers.)
+function chunkArray(arr, size) {
+    const out = [];
+    for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+    return out;
+}
 
-    const seedLocal = {
-        seed: Number(localStorage.getItem(STORAGE_KEY_SEED)) || 0,
-        skip: Number(localStorage.getItem(STORAGE_KEY_SKIP)) || 0,
-        updatedAt: localStorage.getItem(STORAGE_KEY_SEED_UPDATED) || null
-    };
-
-    const payload = {
-        since: lastServerSync,       // server timestamp
-        deviceId: getDeviceId(),
-        answers: recentLocal,
-        seedState: seedLocal,
-    };
-
-    const server = await callDataSyncApi(payload);
-    if (!server?.isSuccess) return;
-
-    // MERGE answers by id: server.answers are authoritative for content
+function mergeAnswersById(localAll, serverAnswers, serverTime) {
     const map = new Map();
-    // keep insertion order by time: load local first, then server (server overwrites local by id)
-    for (const a of all) {
+
+    for (const a of localAll) {
         if (a?.id) map.set(a.id, a);
     }
-    for (const a of server.answers || []) {
+
+    for (const a of serverAnswers || []) {
         if (!a?.id) continue;
-        // normalize server answer: ensure same fields as we expect
+
         map.set(a.id, {
             id: a.id,
             rule: a.rule,
@@ -50,33 +33,116 @@ export async function syncWithServer() {
             level: a.level ?? null,
             date: a.date,
             deviceId: a.deviceId ?? null,
-            // optional metadata
-            _serverUpdatedAt: server.serverTime,
+            _serverUpdatedAt: serverTime ?? null,
         });
     }
-    const merged = [...map.values()].sort((x, y) => new Date(x.date) - new Date(y.date));
-    saveAnswers(merged);
 
-    // Merge seed/skip with newest-wins (serverState.updatedAt is authoritative)
-    if (server.seedState?.updatedAt) {
-        const serverUpdated = new Date(server.seedState.updatedAt);
-        const localUpdated = localStorage.getItem(STORAGE_KEY_SEED_UPDATED) ? new Date(localStorage.getItem(STORAGE_KEY_SEED_UPDATED)) : null;
-        if (!localUpdated || serverUpdated > localUpdated) {
-            saveSeed({ seed: server.seedState.seed, skip: server.seedState.skip }, true);
-            localStorage.setItem(STORAGE_KEY_SEED_UPDATED, server.seedState.updatedAt);
+    return [...map.values()].sort((x, y) => new Date(x.date) - new Date(y.date));
+}
+
+export async function syncWithServer() {
+    let lastServerSync =
+        localStorage.getItem(STORAGE_KEY_LAST_SYNC) || "1970-01-01T00:00:00.000Z";
+
+    const all = getAnswers();
+
+    // Send only local answers that server hasn't seen yet
+    const recentLocal = all.filter(a => !a._serverUpdatedAt);
+
+    const seedLocal = {
+        seed: Number(localStorage.getItem(STORAGE_KEY_SEED)) || 0,
+        skip: Number(localStorage.getItem(STORAGE_KEY_SKIP)) || 0,
+        updatedAt: localStorage.getItem(STORAGE_KEY_SEED_UPDATED) || null,
+    };
+
+    const chunks = chunkArray(recentLocal, CHUNK_SIZE);
+
+    let mergedAll = all;
+
+    // If there are no answers to send, still do a "pull" once (optional but recommended)
+    if (chunks.length === 0) {
+        const payload = {
+            since: lastServerSync,
+            deviceId: getDeviceId(),
+            answers: [],
+            seedState: seedLocal,
+        };
+
+        const server = await callDataSyncApi(payload);
+        if (!server?.isSuccess) return;
+
+        mergedAll = mergeAnswersById(mergedAll, server.answers, server.serverTime);
+        saveAnswers(mergedAll);
+
+        // seed merge (same logic you had)
+        if (server.seedState?.updatedAt) {
+            const serverUpdated = new Date(server.seedState.updatedAt);
+            const localUpdated = localStorage.getItem(STORAGE_KEY_SEED_UPDATED)
+                ? new Date(localStorage.getItem(STORAGE_KEY_SEED_UPDATED))
+                : null;
+
+            if (!localUpdated || serverUpdated > localUpdated) {
+                saveSeed({ seed: server.seedState.seed, skip: server.seedState.skip }, true);
+                localStorage.setItem(STORAGE_KEY_SEED_UPDATED, server.seedState.updatedAt);
+            }
+        }
+
+        if (server.serverTime) {
+            localStorage.setItem(STORAGE_KEY_LAST_SYNC, server.serverTime);
+        }
+
+        return;
+    }
+
+    // Send chunks sequentially
+    for (const answersChunk of chunks) {
+        const payload = {
+            since: lastServerSync,
+            deviceId: getDeviceId(),
+            answers: answersChunk,
+            seedState: seedLocal,
+        };
+
+        const server = await callDataSyncApi(payload);
+        if (!server?.isSuccess) return;
+
+        // merge and persist after each chunk
+        mergedAll = mergeAnswersById(mergedAll, server.answers, server.serverTime);
+        saveAnswers(mergedAll);
+
+        // update lastServerSync as we go (authoritative)
+        if (server.serverTime) {
+            lastServerSync = server.serverTime;
+            localStorage.setItem(STORAGE_KEY_LAST_SYNC, server.serverTime);
+        }
+
+        // seed merge (same logic; safe to run each time)
+        if (server.seedState?.updatedAt) {
+            const serverUpdated = new Date(server.seedState.updatedAt);
+            const localUpdated = localStorage.getItem(STORAGE_KEY_SEED_UPDATED)
+                ? new Date(localStorage.getItem(STORAGE_KEY_SEED_UPDATED))
+                : null;
+
+            if (!localUpdated || serverUpdated > localUpdated) {
+                saveSeed({ seed: server.seedState.seed, skip: server.seedState.skip }, true);
+                localStorage.setItem(STORAGE_KEY_SEED_UPDATED, server.seedState.updatedAt);
+            }
         }
     }
+}
 
-    // update lastServerSync with server-provided time (authoritative)
-    if (server.serverTime) {
-        localStorage.setItem(STORAGE_KEY_LAST_SYNC, server.serverTime);
-    }
+export function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
 }
 
 function getDeviceId() {
     let id = localStorage.getItem(STORAGE_KEY_DEVICE_ID);
     if (!id) {
-        id = crypto.randomUUID();
+        id = uuidv4();
         localStorage.setItem(STORAGE_KEY_DEVICE_ID, id);
     }
     return id;
@@ -122,7 +188,7 @@ export function addAnswer(scores, rules, level) {
 
     for (let i = 0; i < rules.length; i++) {
         const answer = {
-            id: crypto.randomUUID(),    // stable unique id for this answer
+            id: uuidv4(),    // stable unique id for this answer
             rule: rules[i],
             score: Number(scores[i]) * 100,
             level: level ?? null,

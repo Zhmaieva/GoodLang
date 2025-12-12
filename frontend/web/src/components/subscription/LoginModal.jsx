@@ -82,7 +82,7 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
                 onClose(); }}>
             <div style={boxStyle} onClick={e => e.stopPropagation()}>
                 {!loginMode && !forceLogin ? (
-                    <>
+                    <div style={{display: "flex", flexDirection: "column", gap: 12}}>
                         {/* Logged-in user email */}
                         {account?.email && (
                             <div style={{ marginBottom: 24 }}>
@@ -103,7 +103,7 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
 
                         {/* Account status block */}
                         {account?.status !== 'paid' ? (
-                            <>
+                            <div style={{ display: "flex", flexDirection: "column", gap: "18" }}>
                                 <h3 style={{
                                     marginBottom: 12,
                                     color: theme.text,
@@ -129,7 +129,7 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
                                 >
                                     Хочу преміум
                                 </button>
-                            </>
+                            </div>
                         ) : (
                             <>
                                 <h3 style={{
@@ -161,7 +161,7 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
                                 {account.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
                             </button>
                         </div>
-                    </>
+                    </div>
                 ) : (
                     <LoginForm
                         theme={theme}

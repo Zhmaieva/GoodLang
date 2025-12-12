@@ -42,7 +42,6 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             display: "flex",
             flexWrap: "wrap",
             gap: 8,
-            maxWidth: 420,
         },
         ruleButton: {
             cursor: "pointer",
@@ -88,7 +87,7 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             {weakRules.length > 0 && (
                 <div style={styles.rulesOuterWrap}>
                     <div style={styles.rulesTitle}>
-                        Повторіть ці правила:
+                        Важливі правила:
                     </div>
                     <div style={styles.rulesWrap}>
                         {weakRules.map((rule) => (

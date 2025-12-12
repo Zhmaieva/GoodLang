@@ -123,14 +123,13 @@ export default function Trainer({
 
                     const rnd = Math.random() * 100;
 
+                    const fewDataRules = stats.filter(r => r.attemptsLast7Days <= 4);
                     if (rnd < 60) {
                         // 60% lowest accuracy
                         ruleToSend = lowestAcc.rule;
-
-                    } else if (rnd < 90 && below75.length > 0) {
+                    } else if (rnd < 90 && below75.length > 0 && fewDataRules.length > 0) {
                         // 30% random with a few data
-                        ruleToSend = stats.filter(r => r.attemptsLast7Days <= 4)
-                            [Math.floor(Math.random() * noAttempts.length)].rule;
+                        ruleToSend = fewDataRules[Math.floor(Math.random() * noAttempts.length)].rule;
                     } else {
                         // 10% any rule
                         const pick = stats[Math.floor(Math.random() * stats.length)];
@@ -218,15 +217,17 @@ export default function Trainer({
             }
 
             // 🔹 Detect rules with score < 1 for this evaluation
-            const nextWeakRules = [];
-            if (Array.isArray(data.scores)) {
-                data.scores.forEach(s => {
-                    const index = data.scores.indexOf(s);
-                    if (s < 1 && (rules.length - 1 >= index)) {
-                        nextWeakRules.push(rules[index]);
-                    }
-                });
-            }
+            let nextWeakRules = [];
+            if (!data.isAnswerCorrect)
+                nextWeakRules = rules.map(r => r);
+            // if (Array.isArray(data.scores)) {
+            //     data.scores.forEach(s => {
+            //         const index = data.scores.indexOf(s);
+            //         if (s < 1 && (rules.length - 1 >= index)) {
+            //             nextWeakRules.push(rules[index]);
+            //         }
+            //     });
+            // }
             const uniqueWeakRules = [...new Set(nextWeakRules)];
 
             setWeakRules(uniqueWeakRules);

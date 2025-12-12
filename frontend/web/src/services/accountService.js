@@ -23,5 +23,6 @@ export async function getToken() {
 /* todo:
 - chunk / do not send data sync data
 - back buttons (to training) in new tab lead to blank tab
+- fix switching from managed mode to a specific one
 - check each rule learning page
  */
