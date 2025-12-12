@@ -49,7 +49,6 @@ import {
     RULE_PAGE_MAY_MIGHT,
     RULE_PAGE_COMPARATIVES,
     RULE_PAGE_SUPERLATIVES,
-    RULE_PAGE_ENOUGH_TOO_MUCH_MANY,
     RULE_PAGE_ADVERBS_FREQUENCY_OFTEN_NEVER,
     RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY,
     RULE_PAGE_FUTURE_WITH_PRESENT_CONT,
@@ -115,7 +114,6 @@ import {
     RULE_PAGE_COMPOUND_COMPLEX_SENTENCES,
     RULE_PAGE_DECLARATIVE_SENTENCES,
     RULE_PAGE_CORRELATIVE_CONJUNCTIONS,
-    RULE_PAGE_WORD_FORMATION,
     RULE_PAGE_PARALLELISM,
     RULE_PAGE_MODIFIERS,
     RULE_PAGE_ORDER_OF_ADJECTIVES,
@@ -271,7 +269,6 @@ export default function App() {
                 <Route path="/rule/COMPOUND_COMPLEX_SENTENCES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COMPOUND_COMPLEX_SENTENCES} />} />
                 <Route path="/rule/DECLARATIVE_SENTENCES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_DECLARATIVE_SENTENCES} />} />
                 <Route path="/rule/CORRELATIVE_CONJUNCTIONS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_CORRELATIVE_CONJUNCTIONS} />} />
-                <Route path="/rule/WORD_FORMATION" element={<RulePage theme={ruleTheme} data={RULE_PAGE_WORD_FORMATION} />} />
                 <Route path="/rule/PARALLELISM" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PARALLELISM} />} />
                 <Route path="/rule/MODIFIERS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_MODIFIERS} />} />
                 <Route path="/rule/ORDER_OF_ADJECTIVES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ORDER_OF_ADJECTIVES} />} />

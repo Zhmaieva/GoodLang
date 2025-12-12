@@ -27,6 +27,10 @@ export const dataSyncController = {
                     res.status(400).json({ error: "Can't sync free account" });
                 }
 
+                if (process.env.DATA_SYNC_DISABLE) {
+                    res.json({});
+                }
+
                 const updatedOn = new Date();
                 // 1. Save incoming answers (ignore duplicates)
                 await upsertAnswers(userId, deviceId, answers, updatedOn);

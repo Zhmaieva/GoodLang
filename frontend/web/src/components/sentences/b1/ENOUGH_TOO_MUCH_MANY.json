@@ -113,7 +113,7 @@
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "У нього надто багато роботи.",
-    "en": "He gets too much work."
+    "en": ["He gets too much work.", "He has too much work."]
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],

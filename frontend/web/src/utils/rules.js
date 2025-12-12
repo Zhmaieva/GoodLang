@@ -211,7 +211,6 @@ export const RULE_LABELS = Object.freeze({
     COMPOUND_COMPLEX_SENTENCES: "Compound–complex sentences",
     DECLARATIVE_SENTENCES: "Declarative sentences",
     CORRELATIVE_CONJUNCTIONS: "Correlative conjunctions (either...or / neither...nor / both...and)",
-    WORD_FORMATION: "Word formation (prefixes, suffixes, roots)",
     PARALLELISM: "Parallelism (balanced grammatical structures)",
     MODIFIERS: "Modifiers (placement and clarity)",
     ORDER_OF_ADJECTIVES: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",

@@ -67856,14 +67856,6 @@
         "ENOUGH_TOO_MUCH_MANY",
         "PRESENT_SIMPLE_FREQ"
       ],
-      "ua": "Він отримує достатньо сну.",
-      "en": "He gets enough sleep."
-    },
-    {
-      "rules": [
-        "ENOUGH_TOO_MUCH_MANY",
-        "PRESENT_SIMPLE_FREQ"
-      ],
       "ua": "Я роблю достатньо фото.",
       "en": "I take enough photos."
     },

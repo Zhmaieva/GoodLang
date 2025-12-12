@@ -1924,12 +1924,7 @@ export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
             badges: [
                 "⚠️ Занадто багато/мало: <strong>This bag is too heavy.</strong>",
                 "✅ Достатньо: <strong>It’s warm enough.</strong>",
-                "📌 Порядок: <strong>too + adj/adv</strong>, <strong>adj + enough</strong>, <strong>enough + noun</strong>",
-            ],
-            hint:
-                "<strong>Too + adj</strong>: too cold. <strong>Adj + enough</strong>: warm enough. " +
-                "<strong>Enough + noun</strong>: enough money.",
-        },
+                ]},
         {
             type: "forms",
             title: "Порядок слів",
@@ -1966,17 +1961,19 @@ export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
             items: [
                 ["The coffee is too hot.", "Кава занадто гаряча."],
                 ["This room isn’t big enough.", "Ця кімната недостатньо велика."],
-                ["We have enough chairs.", "У нас достатньо стільців."],
-                ["He doesn’t sleep enough.", "Він недостатньо спить."],
+                ["We have enough chairs.", "У нас достатньо стільців."]
             ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>enough big</em> → ✅ <strong>big enough</strong>",
-                "❌ <em>too enough</em> (разом) — таких конструкцій нема.",
-            ],
+                "❌ <em><strong style='color:red'>too enough</strong></em> (разом) — таких конструкцій нема.",
+                "❌ <em>This chair is <strong style='color:red'>enough big.</strong></em> → ✅ <strong>big enough</strong>",
+                "❌ <em>She spoke English <strong style='color:red'>enough well</strong> to get the job.</em> → ✅ well enough",
+                "❌ <em>This coffee is <strong style='color:red'>enough hot</strong> to drink.</em> → ✅ hot enough",
+                "❌ <em>We have <strong style='color:red'>money enough</strong> to buy a car.</em> → ✅ enough money",
+                ],
             note:
                 "Подумай: це «надто» (too) чи «достатньо» (enough)? І вже тоді обирай структуру.",
         },
@@ -3279,14 +3276,15 @@ export const RULE_PAGE_SECOND_CONDITIONAL = {
         {
             type: "meaning",
             title: "Що означає 2nd Conditional",
-            html: "Використовуємо для нереальних або малоймовірних ситуацій у теперішньому чи майбутньому."
+            html: "Використовуємо для нереальних, уявних або малоймовірних ситуацій у теперішньому чи майбутньому."
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
                 "<strong>If I had more time, I would travel.</strong>",
-                "<strong>If he were taller, he would play basketball.</strong>"
+                "<strong>If he were taller, he would play basketball.</strong>",
+                "<strong>If I won a billion dollars tomorrow, I would quit my job immediately.</strong> - малоймовірна ситуація"
             ],
             hint: "У всіх особах можливе <strong>were</strong>."
         },
@@ -3295,7 +3293,7 @@ export const RULE_PAGE_SECOND_CONDITIONAL = {
             title: "Форми",
             headers: ["If-clause", "Result"],
             rows: [
-                ["If + Past Simple", "would + V"]
+                ["If + Past Simple", "would / could / might + V (infinitive)"]
             ]
         },
         {
@@ -4173,48 +4171,6 @@ export const RULE_PAGE_SO_DO_I_NEITHER_DO_I = {
     ]
 };
 
-
-/* ============================
-   ENOUGH / TOO MUCH / TOO MANY
-============================ */
-export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
-    id: "ENOUGH_TOO_MUCH_MANY",
-    title: "Enough / too much / too many",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що означають ці слова",
-            html: "<strong>Enough</strong> = достатньо. <strong>Too much</strong> = забагато (незліч.). <strong>Too many</strong> = забагато (зліч.)."
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
-            badges: [
-                "<strong>enough</strong> після прикметників",
-                "<strong>enough</strong> перед іменниками",
-                "<strong>too much</strong> + незлічувані",
-                "<strong>too many</strong> + злічувані"
-            ]
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["There isn’t enough time.", "Немає достатньо часу."],
-                ["He eats too much sugar.", "Він їсть забагато цукру."],
-                ["We have too many tasks.", "У нас забагато завдань."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Плутання much / many."]
-        },
-        { type: "trainer", title: "Міні-тренажер (Enough / too much / too many)" }
-    ]
-};
-
 /* ============================
    NOT ONLY … BUT ALSO
 ============================ */
@@ -4984,47 +4940,6 @@ export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
         { type: "trainer", title: "Міні-тренажер (Correlative conjunctions)" }
     ]
 };
-
-
-/* ============================
-   WORD FORMATION
-============================ */
-export const RULE_PAGE_WORD_FORMATION = {
-    id: "WORD_FORMATION",
-    title: "Word formation (prefixes, suffixes, roots)",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що таке word formation",
-            html: "Створення нових слів за допомогою <strong>prefixes</strong> (префіксів), <strong>suffixes</strong> (суфіксів) та зміни частини мови."
-        },
-        {
-            type: "usage",
-            title: "Приклади",
-            badges: [
-                "<strong>happy → unhappy</strong>",
-                "<strong>help → helpful → helpless</strong>",
-                "<strong>success → successful → unsuccessfully</strong>"
-            ]
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["care → careful → careless → carefully", "care → обережний → необережний → обережно"],
-                ["comfort → uncomfortable", "comfort → незручний"]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Неправильний суфікс: <em>interestful</em> замість <strong>interesting</strong>."]
-        },
-        { type: "trainer", title: "Міні-тренажер (Word formation)" }
-    ]
-};
-
 
 /* ============================
    PARALLELISM

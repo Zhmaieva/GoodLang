@@ -191,18 +191,8 @@
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PAST_SIMPLE"],
-    "ua": "Ця сукня була надто дорогою, тому я її не купила.",
-    "en": ["The dress was too expensive, so I didn’t buy it."]
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PAST_SIMPLE"],
     "ua": "Фільм був занадто довгим, і я занудьгувала.",
     "en": ["The film was too long, and I got bored."]
-  },
-  {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "TO_BE"],
-    "ua": "Валіза надто повна, тому вона не закривається.",
-    "en": ["The suitcase is too full, so it doesn’t close."]
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "TO_BE"],
@@ -248,5 +238,15 @@
     "rules": ["ENOUGH_TOO_MUCH_MANY", "TO_BE"],
     "ua": "Інтернет тут достатньо швидкий для відеодзвінків.",
     "en": ["The internet here is fast enough for video calls."]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "PAST_SIMPLE"],
+    "ua": "Ця сукня була надто дорогою, тому я її не купила.",
+    "en": ["The dress was too expensive, so I didn’t buy it."]
+  },
+  {
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "TO_BE"],
+    "ua": "Валіза надто повна, тому вона не закривається.",
+    "en": ["The suitcase is too full, so it doesn’t close."]
   }
 ] }
