@@ -181,12 +181,12 @@
       "en": ["He can't sing.", "He cannot sing."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "LIKE_ING"],
+      "rules": ["PERSONAL_PRONOUNS"],
       "ua": "Вона любить плавати.",
       "en": ["She likes swimming."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "LIKE_ING"],
+      "rules": ["PERSONAL_PRONOUNS"],
       "ua": "Ми не любимо чекати.",
       "en": ["We don't like waiting."]
     },

@@ -17,7 +17,7 @@
   },
   {
     "rules": ["PRESENT_PERFECT_CONT", "HOW_OFTEN_LONG_MUCH", "PREP_PLACE"],
-    "ua": "Як довго ти тут чекаєш? Тут же страшенно холодно!",
+    "ua": "Скільки ти вже тут чекаєш? Тут же страшенно холодно!",
     "en": [
       "How long have you been waiting here? It's freezing!",
       "How long have you been standing here? It's so cold!"
@@ -81,7 +81,7 @@
   },
   {
     "rules": ["PRESENT_PERFECT_CONT", "SINCE_FOR", "PREP_TIME"],
-    "ua": "Дощ не припиняється з учора.",
+    "ua": "Дощ не припиняється від учора.",
     "en": [
       "It's been raining since yesterday.",
       "It hasn't stopped raining since yesterday."
@@ -300,7 +300,7 @@
   },
   {
     "rules": ["PRESENT_PERFECT_CONT", "PREP_TIME"],
-    "ua": "Він кашляє без зупинки усю ніч.",
+    "ua": "Він кашляє без упину усю ніч.",
     "en": [
       "He's been coughing all night.",
       "He's been coughing non-stop all night.",

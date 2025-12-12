@@ -25,7 +25,7 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL"],
-    "ua": "Якщо він купить трохи фруктів, ми приготуємо салат.",
+    "ua": "Якщо він купить овочі, ми приготуємо салат.",
     "en": [
       "If he buys vegetables, we will make a salad."
     ]
@@ -259,7 +259,7 @@
     ]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "TOO_ENOUGH"],
+    "rules": ["FIRST_CONDITIONAL", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Якщо ми накопимо достатньо грошей, ми поїдемо у відпустку.",
     "en": [
       "If we save enough money, we will go on vacation."
@@ -326,14 +326,6 @@
     "en": [
       "If he buys many books, he will start a home library.",
       "If he buys many books, he will open a home library."
-    ]
-  },
-  {
-    "rules": ["FIRST_CONDITIONAL", "PREP_TIME"],
-    "ua": "Якщо я прокинуся рано, я піду на пробіжку.",
-    "en": [
-      "If I wake up early, I will go for a run.",
-      "If I wake up early, I'll go for a run."
     ]
   },
   {
@@ -460,7 +452,7 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL"],
-    "ua": "Якщо він матиме гроші, він купить квартиру.",
+    "ua": "Якщо в нього будуть гроші, він купить квартиру.",
     "en": ["If he has money, he will buy an apartment."]
   },
   {
@@ -505,7 +497,7 @@
   },
   {
     "rules": ["FIRST_CONDITIONAL"],
-    "ua": "Якщо ми не накопимо грошей, ми не поїдемо у відпустку.",
+    "ua": "Якщо ми не заощадимо достатньо грошей, ми не поїдемо у відпустку.",
     "en": ["If we do not save money, we will not go on vacation.", "If we don't save money, we won't go on vacation."]
   },
   {
@@ -554,11 +546,6 @@
     "en": ["If I draw regularly, I will not lose my skills."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Якщо мій друг напише, я відповім йому.",
-    "en": ["If my friend writes, I will reply to him.", "If my friend writes, I'll reply to him."]
-  },
-  {
     "rules": ["FIRST_CONDITIONAL", "DEMONSTRATIVES"],
     "ua": "Якщо вони будуть уважними, вони зрозуміють урок.",
     "en": ["If they are attentive, they will understand the lesson.", "If they are attentive, they'll understand the lesson."]
@@ -569,7 +556,7 @@
     "en": ["If she does not prepare the report, she will not get a promotion.", "If she doesn't prepare the report, she won't get a promotion."]
   },
   {
-    "rules": ["FIRST_CONDITIONAL", "TOO_ENOUGH"],
+    "rules": ["FIRST_CONDITIONAL", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Якщо він купить достатньо матеріалів, він побудує будинок.",
     "en": ["If he buys enough materials, he will build a house."]
   },

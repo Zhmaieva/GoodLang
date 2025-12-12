@@ -55,7 +55,7 @@
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "ARTICLES", "LIKE_ING"],
+    "rules": ["CLEFT_SENTENCES", "ARTICLES"],
     "ua": ["Саме танці приносять їй найбільше радості."],
     "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "LIKE_ING", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["CLEFT_SENTENCES", "POSSESSIVE_ADJECTIVES"],
     "ua": ["Саме читання найбільше допомагає моїй англійській."],
     "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
@@ -233,7 +233,7 @@
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "LIKE_ING"],
+    "rules": ["CLEFT_SENTENCES"],
     "ua": ["Саме спів приносить їй найбільше радості."],
     "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
@@ -394,7 +394,7 @@
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "LIKE_ING"],
+    "rules": ["CLEFT_SENTENCES"],
     "ua": ["Саме малювання допомагає їй розслабитися."],
     "hint": "Make a cleft sentence: It was ... that ...",
     "en": [
@@ -548,7 +548,7 @@
     ]
   },
   {
-    "rules": ["CLEFT_SENTENCES", "LIKE_ING"],
+    "rules": ["CLEFT_SENTENCES"],
     "ua": ["Саме танці роблять її щасливою."],
     "hint": "Make a cleft sentence: It was ... that ...",
     "en": [

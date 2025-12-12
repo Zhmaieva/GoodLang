@@ -27,7 +27,7 @@
 
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Я маю цей телефон вже два роки.",
+    "ua": "У мене цей телефон вже два роки.",
     "en": ["I have had this phone for two years.", "I've had this phone for two years."]
   },
   {
@@ -47,7 +47,7 @@
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Я маю ці квитки вже тиждень.",
+    "ua": "У мене ці квитки вже тиждень.",
     "en": ["I have had these tickets for a week.", "I've had these tickets for a week."]
   },
   {
@@ -62,14 +62,10 @@
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
-    "ua": "Він чекає автобуса від третьої години.",
+    "ua": "Він чекає автобуса з третьої години.",
     "en": ["He has waited for the bus since 3 o’clock.", "He's waited for the bus since 3 o’clock."]
   },
-  {
-    "rules": ["SINCE_FOR", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Я маю той рюкзак уже багато років.",
-    "en": ["I have had that backpack for many years.", "I've had that backpack for many years."]
-  },
+
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
     "ua": "Мій брат у Франції вже два тижні.",
@@ -120,12 +116,12 @@
 
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
-    "ua": "Ми не були вдома від ранку.",
+    "ua": "Ми не були вдома з ранку.",
     "en": ["We haven’t been home since morning.", "We haven’t been home since this morning."]
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT"],
-    "ua": "Я маю велосипед уже три роки.",
+    "ua": "У мене є велосипед уже три роки.",
     "en": ["I have had a bicycle for three years.", "I've had a bicycle for three years."]
   },
   {
@@ -174,19 +170,13 @@
     "en": ["They haven’t attended the class for several weeks.", "They have not attended the class for several weeks."]
   },
   {
-    "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
-    "ua": "Вона вдома вже весь день.",
-    "en": ["She has been at home all day."]
-  },
-
-  {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Ми стоїмо в черзі півгодини.",
     "en": ["We have been in line for half an hour.", "We've been in line for half an hour."]
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
-    "ua": "Мій тато на роботі від ранку.",
+    "ua": "Мій тато на роботі з ранку.",
     "en": ["My dad has been at work since morning.",
       "My dad has been at work since this morning."]
   },
@@ -194,11 +184,6 @@
     "rules": ["SINCE_FOR", "PRESENT_PERFECT"],
     "ua": "Я на дієті вже два тижні.",
     "en": ["I have been on a diet for two weeks.", "I've been on a diet for two weeks."]
-  },
-  {
-    "rules": ["SINCE_FOR", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Він має той телефон уже три місяці.",
-    "en": ["He has had that phone for three months.", "He's had that phone for three months."]
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT"],
@@ -213,7 +198,7 @@
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
-    "ua": "Ми в цій школі вже пів року.",
+    "ua": "Ми в цій школі вже півроку.",
     "en": ["We have been at this school for half a year.", "We've been at this school for half a year."]
   },
   {
@@ -239,14 +224,7 @@
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
     "ua": "Він в університеті з 2023 року.",
-    "en": ["He has been at university since 2022.", "He's been at university since 2022."]
-  },
-  {
-    "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
-    "ua": "Вона не снідала від сьомої ранку.",
-    "en": ["She hasn’t had breakfast since seven a.m.",
-      "She has not had breakfast since seven o’clock.",
-      "She hasn’t had breakfast since 7 this morning."]
+    "en": ["He has been at university since 2023.", "He's been at university since 2023."]
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "DEMONSTRATIVES"],
@@ -316,29 +294,18 @@
     "en": ["I have lived in Europe for six months.", "I've lived in Europe for six months."]
   },
   {
-    "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ALREADY_YET_JUST", "ARTICLES"],
-    "ua": "Вона у батьків з червня.",
-    "en": ["She has been with her parents since June.", "She's been with her parents since June."]
-  },
-
-  {
-    "rules": ["SINCE_FOR", "PRESENT_PERFECT"],
-    "ua": "Ми без інтернету від учорашньої бурі.",
-    "en": ["We’ve been without internet since yesterday’s storm."]
-  },
-  {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "ARTICLES"],
     "ua": "Я в ліжку з полудня.",
     "en": ["I have been in bed since noon.", "I've been in bed since noon."]
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT"],
-    "ua": "Вони удома з вихідних.",
+    "ua": "Вони вдома з вихідних.",
     "en": ["They have been at home since the weekend.", "They've been at home since the weekend."]
   },
   {
     "rules": ["SINCE_FOR", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Я маю ці фото вже багато років.",
+    "ua": "Ці фото в мене вже багато років.",
     "en": ["I have had these photos for many years.", "I've had these photos for many years."]
   },
   {

@@ -131,7 +131,7 @@
       "en": ["He often uses his mother’s phone."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "LIKE_ING"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Я часто люблю читати перед сном.",
       "en": ["I often like reading before bed."]
     },

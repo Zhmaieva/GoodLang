@@ -10,17 +10,7 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ця бібліотека найтихіша в місті.",
-    "en": [
-      "This library is the quietest in the city.",
-      "This library is the calmest in the city.",
-      "This library is the most peaceful in the town.",
-      "This library is the most tranquil in the town."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
+    "rules": ["SUPERLATIVES", "ARTICLES"],
     "ua": "Цей ноутбук найшвидший серед усіх у магазині.",
     "en": [
       "This laptop is the fastest among all in the store.",
@@ -30,53 +20,12 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
-    "ua": "Цей телефон найдорожчий у каталозі?",
-    "en": [
-      "Is this phone the most expensive in the catalog?",
-      "Is this phone the costliest in the catalog?",
-      "Is this phone the priciest in the catalog?",
-      "Is this phone the most costly in the catalog?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Цей фестиваль найяскравіший, бо є багато світла.",
-    "en": [
-      "This festival is the brightest because there are many lights.",
-      "This festival is the most vibrant because there are many lights.",
-      "This festival is the most colorful since there’s lots of lighting.",
-      "This festival is the most radiant since there’s lots of lighting."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Цей день найтепліший цього місяця.",
+    "ua": "Цей день найтепліший в цьому місяці.",
     "en": [
       "This day is the warmest this month.",
       "This day is the mildest this month.",
-      "This day is the most pleasant this month.",
-      "This day is the coziest this month."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES"],
-    "ua": "Твій проєкт найкреативніший у групі?",
-    "en": [
-      "Is your project the most creative in the group?",
-      "Is your project the most imaginative in the group?",
-      "Is your project the most innovative in the team?",
-      "Is your project the most original in the team?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "REFLEXIVE_PRONOUNS", "SIMPLE_ADJ"],
-    "ua": "Вона почувається найспокійнішою серед друзів.",
-    "en": [
-      "She feels the calmest among her friends.",
-      "She feels the most peaceful among her friends.",
-      "She feels the most relaxed among her peers.",
-      "She feels the quietest among her peers."
+      "This day is the most pleasant this month."
     ]
   },
   {
@@ -87,96 +36,6 @@
       "This classroom is the tidiest among all in the school.",
       "This classroom is the most spotless of all in the school.",
       "This classroom is the neatest of all in the school."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
-    "ua": "Коли настане літо, це буде найспекотніший сезон.",
-    "en": [
-      "When summer arrives, it will be the hottest season.",
-      "When summer arrives, it will be the warmest season.",
-      "When summer comes, it will be the most sweltering season.",
-      "When summer comes, it will be the most scorching season."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER"],
-    "ua": "Він пише найакуратніше в класі.",
-    "en": [
-      "He writes the most neatly in the class.",
-      "He writes the most carefully in the class.",
-      "He writes the most precisely in the class.",
-      "He writes the most tidily in the class."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому цей додаток найзручніший у магазині?",
-    "en": [
-      "Why is this app the most convenient in the store?",
-      "Why is this app the handiest in the store?",
-      "Why is this application the most user-friendly in the store?",
-      "Why is this application the easiest in the store?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES"],
-    "ua": "Твій ноутбук найшвидший?",
-    "en": [
-      "Is your laptop the fastest?",
-      "Is your laptop the quickest?",
-      "Is your laptop the most rapid?",
-      "Is your laptop the speediest?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Сьогодні найвітряніший день цього тижня.",
-    "en": [
-      "Today is the windiest day this week.",
-      "Today is the breeziest day this week.",
-      "Today is the most blustery day this week.",
-      "Today is the stormiest day this week."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Цей ярмарок найвеселіший серед усіх у місті.",
-    "en": [
-      "This fair is the funniest among all in the city.",
-      "This fair is the most amusing among all in the city.",
-      "This fair is the liveliest of all in the town.",
-      "This fair is the most entertaining of all in the town."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Вона виступає найвпевненіше на сцені.",
-    "en": [
-      "She performs the most confidently on stage.",
-      "She performs the most assuredly on stage.",
-      "She acts the most boldly on stage.",
-      "She acts the most decisively on stage."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ти найенергійніший, бо багато відпочиваєш.",
-    "en": [
-      "You are the most energetic because you rest a lot.",
-      "You are the liveliest because you rest a lot.",
-      "You are the most vibrant since you relax a lot.",
-      "You are the most dynamic since you relax a lot."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Цей концерт найгучніший цього сезону.",
-    "en": [
-      "This concert is the loudest this season.",
-      "This concert is the noisiest this season.",
-      "This concert is the most vibrant this season.",
-      "This concert is the most dynamic this season."
     ]
   },
   {
@@ -194,9 +53,7 @@
     "ua": "Цей диван найм’якший у магазині?",
     "en": [
       "Is this sofa the softest in the store?",
-      "Is this sofa the smoothest in the store?",
-      "Is this sofa the most comfortable in the shop?",
-      "Is this sofa the silkiest in the shop?"
+      "Is this sofa the most comfortable in the shop?"
     ]
   },
   {
@@ -207,36 +64,6 @@
       "This evening is the chilliest this week.",
       "Tonight is the most refreshing this week.",
       "Tonight is the coldest this week."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці плакати найяскравіші серед усіх на виставці.",
-    "en": [
-      "These posters are the brightest among all at the exhibition.",
-      "These posters are the most vibrant among all at the exhibition.",
-      "Those posters are the most colorful of all at the show.",
-      "Those posters are the most radiant of all at the show."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Сьогодні найсонячніший день, бо небо ясне.",
-    "en": [
-      "Today is the sunniest day because the sky is clear.",
-      "Today is the brightest day because the sky is clear.",
-      "Today is the most radiant day since the sky is clear.",
-      "Today is the clearest day since the sky is clear."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ARTICLES"],
-    "ua": "Мій планшет найзручніший у класі.",
-    "en": [
-      "My tablet is the most convenient in the class.",
-      "My tablet is the handiest in the class.",
-      "My tablet is the most user-friendly in the class.",
-      "My tablet is the easiest in the class."
     ]
   },
   {
@@ -253,40 +80,17 @@
     "rules": ["SUPERLATIVES", "DEMONSTRATIVES"],
     "ua": "Ці навушники найгучніші в магазині?",
     "en": [
-      "Are these headphones the loudest in the store?",
-      "Are these headphones the noisiest in the store?",
-      "Are these earphones the most vibrant in the shop?",
-      "Are these earphones the most dynamic in the shop?"
+      "Are these headphones the loudest in the store?"
     ]
   },
   {
     "rules": ["SUPERLATIVES", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Цей урок найцікавіший у братовому розкладі.",
+    "ua": "Цей урок найцікавіший у розкладі мого брата.",
     "en": [
       "This lesson is the most interesting in my brother’s schedule.",
       "This lesson is the most engaging in my brother’s schedule.",
       "This lesson is the most fascinating in my sibling’s timetable.",
       "This lesson is the most captivating in my sibling’s timetable."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Ця крамниця наймодніша серед усіх у районі.",
-    "en": [
-      "This shop is the trendiest among all in the district.",
-      "This shop is the most stylish among all in the district.",
-      "This store is the most fashionable of all in the area.",
-      "This store is the chicest of all in the area."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона танцює найграціозніше, бо тренується щодня.",
-    "en": [
-      "She dances the most gracefully because she trains daily.",
-      "She dances the most elegantly because she trains daily.",
-      "She moves the most beautifully since she practices every day.",
-      "She moves the most stylishly since she practices every day."
     ]
   },
   {
@@ -320,21 +124,10 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей учень відповідає найвпевненіше в класі.",
-    "en": [
-      "This student answers the most confidently in the class.",
-      "This student answers the most assuredly in the class.",
-      "That student responds the most boldly in the class.",
-      "That student responds the most decisively in the class."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
     "ua": "Цей вечір найтепліший, бо немає вітру.",
     "en": [
       "This evening is the warmest because there’s no wind.",
-      "This evening is the coziest because there’s no wind.",
       "Tonight is the most pleasant since there’s no breeze.",
       "Tonight is the mildest since there’s no breeze."
     ]
@@ -344,9 +137,7 @@
     "ua": "Цей килим найм’якший у магазині.",
     "en": [
       "This carpet is the softest in the store.",
-      "This carpet is the smoothest in the store.",
-      "This carpet is the most comfortable in the shop.",
-      "This carpet is the silkiest in the shop."
+      "This carpet is the most comfortable in the shop."
     ]
   },
   {
@@ -360,56 +151,6 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ця річка найспокійніша в області.",
-    "en": [
-      "This river is the calmest in the region.",
-      "This river is the quietest in the region.",
-      "This river is the most peaceful in the area.",
-      "This river is the most tranquil in the area."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Цей фотоапарат найчіткіший серед усіх у магазині.",
-    "en": [
-      "This camera is the sharpest among all in the store.",
-      "This camera is the clearest among all in the store.",
-      "This camera is the most precise of all in the shop.",
-      "This camera is the most accurate of all in the shop."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Ця вечірка найвеселіша, бо є багато музики.",
-    "en": [
-      "This party is the funniest because there’s lots of music.",
-      "This party is the most amusing because there’s lots of music.",
-      "This party is the liveliest since there’s plenty of music.",
-      "This party is the most entertaining since there’s plenty of music."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей альбом найяскравіший із сестриних.",
-    "en": [
-      "This album is the brightest of my sister’s.",
-      "This album is the most vibrant of my sister’s.",
-      "That album is the most colorful of my sibling’s.",
-      "That album is the most radiant of my sibling’s."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Цей ранок найпрохолодніший цього тижня.",
-    "en": [
-      "This morning is the coolest this week.",
-      "This morning is the chilliest this week.",
-      "This morning is the most refreshing this week.",
-      "This morning is the coldest this week."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES"],
     "ua": "Твій велосипед найшвидший?",
     "en": [
@@ -417,76 +158,6 @@
       "Is your bike the quickest?",
       "Is your bicycle the most rapid?",
       "Is your bicycle the speediest?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "REFLEXIVE_PRONOUNS", "SIMPLE_ADJ"],
-    "ua": "Він почувається найвеселішим серед друзів.",
-    "en": [
-      "He feels the funniest among his friends.",
-      "He feels the most cheerful among his friends.",
-      "He feels the most joyful among his peers.",
-      "He feels the liveliest among his peers."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Цей парк найзеленіший серед усіх у місті.",
-    "en": [
-      "This park is the greenest among all in the city.",
-      "This park is the lushest among all in the city.",
-      "This park is the most vibrant of all in the town.",
-      "This park is the most verdant of all in the town."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER"],
-    "ua": "Вона грає найенергійніше в команді.",
-    "en": [
-      "She plays the most energetically in the team.",
-      "She plays the most vigorously in the team.",
-      "She performs the most lively in the team.",
-      "She performs the most dynamically in the team."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому цей гаджет найзручніший у магазині?",
-    "en": [
-      "Why is this gadget the most convenient in the store?",
-      "Why is this gadget the handiest in the store?",
-      "Why is this device the most user-friendly in the shop?",
-      "Why is this device the easiest in the shop?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES"],
-    "ua": "Твій рюкзак найлегший?",
-    "en": [
-      "Is your backpack the lightest?",
-      "Is your backpack the least heavy?",
-      "Is your backpack the most weightless?",
-      "Is your backpack the easiest to carry?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Цей шарф найтепліший з маминих.",
-    "en": [
-      "This scarf is the warmest of mom’s.",
-      "This scarf is the coziest of mom’s.",
-      "This scarf is the most comfortable of my mother’s.",
-      "This scarf is the snuggest of my mother’s."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Сьогодні найсонячніший день цього тижня.",
-    "en": [
-      "Today is the sunniest day this week.",
-      "Today is the brightest day this week.",
-      "Today is the most radiant day this week.",
-      "Today is the most cheerful day this week."
     ]
   },
   {
@@ -500,16 +171,6 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Він фотографує найакуратніше в групі.",
-    "en": [
-      "He photographs the most neatly in the group.",
-      "He photographs the most carefully in the group.",
-      "He takes pictures the most precisely in the team.",
-      "He takes pictures the most tidily in the team."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ти найщасливіший, бо виграв приз.",
     "en": [
@@ -517,16 +178,6 @@
       "You are the most joyful because you won a prize.",
       "You are the most delighted since you won an award.",
       "You are the cheeriest since you won an award."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Ця подія найяскравіша цього року.",
-    "en": [
-      "This event is the brightest this year.",
-      "This event is the most vibrant this year.",
-      "This event is the most colorful this year.",
-      "This event is the most radiant this year."
     ]
   },
   {
@@ -540,183 +191,121 @@
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "PREP_TIME"],
-    "ua": "Вона найспритніша в нашій групі цього сезону.",
-    "en": [
-      "She is the most agile in our group this season.",
-      "She is the nimblest in our group this season.",
-      "She is the most athletic in our team this season.",
-      "She is the quickest in our team this season."
-    ]
-  },
-  {
     "rules": ["SUPERLATIVES", "SIMPLE_ADJ"],
-    "ua": "Ця страва найсмачніша в меню?",
+    "ua": "Ви кажете, що ця страва найсмачніша в меню?",
     "en": [
-      "Is this dish the tastiest in the menu?",
-      "Is this dish the most delicious in the menu?",
-      "Is this dish the yummiest in the menu?",
-      "Is this dish the most flavorful in the menu?"
+      "Are you saying that this dish is the most delicious on the menu?",
+      "Are you saying that this dish is the yummiest on the menu?",
+      "Are you saying that this dish is the most flavorful on the menu?",
+      "Are you saying that this dish is the tastiest on the menu?"
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Цей вечір найтепліший цього тижня.",
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES"],
+    "ua": "Це найгарніші квіти на ринку.",
     "en": [
-      "This evening is the warmest this week.",
-      "This evening is the coziest this week.",
-      "Tonight is the most pleasant this week.",
-      "Tonight is the mildest this week."
+      "These are the most beautiful flowers at the market.",
+      "These flowers are the most beautiful at the market.",
+      "These flowers are the most stunning at the market."
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці квіти найгарніші серед усіх на ярмарку.",
+    "rules": ["SUPERLATIVES", "TO_BE", "ARTICLES", "POSSESSIVE_S"],
+    "ua": "Вона — найрозумніша студентка в групі.",
+    "en": ["She is the smartest student in the group.", "She's the smartest student in the group."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "PAST_SIMPLE", "ARTICLES", "POSSESSIVE_S"],
+    "ua": "Це був найщасливіший день у моєму житті.",
+    "en": ["It was the happiest day of my life."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "TO_BE", "ARTICLES"],
+    "ua": "Він найвищий хлопець у класі.",
+    "en": ["He is the tallest boy in the class.", "He's the tallest boy in the class."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "PAST_SIMPLE", "ARTICLES"],
+    "ua": "Це була найскладніша задача на тесті.",
+    "en": ["It was the most difficult task on the test.", "It was the hardest task on the test."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES", "PREP_PLACE"],
+    "ua": "Це найменша кімната в нашому домі.",
+    "en": ["This is the smallest room in our house."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Це — найдешевший квиток, який я зміг знайти.",
+    "en": ["This is the cheapest ticket I could find."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "HAVE_HAVE_GOT", "POSSESSIVE_S", "PREP_PLACE"],
+    "ua": "У нього найсильніший голос у хорі.",
+    "en": ["He has the strongest voice in the choir."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES", "PREP_PLACE"],
+    "ua": "Це найяскравіша зірка на небі.",
+    "en": ["This is the brightest star in the sky."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "PAST_SIMPLE", "POSSESSIVE_S"],
+    "ua": "Це був найважчий вибір у моєму житті.",
     "en": [
-      "These flowers are the prettiest among all at the fair.",
-      "These flowers are the most beautiful among all at the fair.",
-      "Those flowers are the most stunning of all at the market.",
-      "Those flowers are the loveliest of all at the market."
+      "It was the hardest choice of my life.",
+      "It was the most difficult choice of my life."
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Цей день найясніший, бо немає хмар.",
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Це найтепліше місце в домі.",
+    "en": ["This is the warmest place in the house."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "MODALS_OF_PROBABILITY"],
+    "ua": "Це найсміливіше рішення, яке ти міг прийняти.",
     "en": [
-      "This day is the clearest because there are no clouds.",
-      "This day is the brightest because there are no clouds.",
-      "Today is the most radiant since there are no clouds.",
-      "Today is the sunniest since there are no clouds."
+      "This is the bravest decision you could have made.",
+      "This is the boldest decision you could have made."
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Він танцює найграціозніше в залі.",
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES", "PREP_PLACE"],
+    "ua": "Це найсухіша пустеля у світі.",
+    "en": ["This is the driest desert in the world."]
+  },
+  {
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "PREP_PLACE", "ARTICLES"],
+    "ua": "Це найвужча вуличка в центрі міста.",
     "en": [
-      "He dances the most gracefully in the hall.",
-      "He dances the most elegantly in the hall.",
-      "He moves the most beautifully in the room.",
-      "He moves the most stylishly in the room."
+      "This is the narrowest street in the city centre.",
+      "This is the narrowest street in downtown."
     ]
   },
   {
-    "rules": ["SUPERLATIVES", "ARTICLES"],
-    "ua": "Мій телефон найчіткіший у класі.",
-    "en": [
-      "My phone is the sharpest in the class.",
-      "My phone is the clearest in the class.",
-      "My phone is the most precise in the class.",
-      "My phone is the most accurate in the class."
-    ]
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Це найкоротша глава у книжці.",
+    "en": ["This is the shortest chapter in the book."]
   },
   {
-    "rules": ["SUPERLATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ця вулиця найжвавіша в місті.",
-    "en": [
-      "This street is the liveliest in the city.",
-      "This street is the busiest in the city.",
-      "This street is the most bustling in the town.",
-      "This street is the most vibrant in the town."
-    ]
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES", "PREP_PLACE"],
+    "ua": "Це найдовший міст у країні.",
+    "en": ["This is the longest bridge in the country."]
   },
   {
-    "rules": ["SUPERLATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому цей фільм найсмішніший у кінотеатрі?",
-    "en": [
-      "Why is this film the funniest in the cinema?",
-      "Why is this film the most amusing in the cinema?",
-      "Why is this movie the most entertaining in the theater?",
-      "Why is this movie the liveliest in the theater?"
-    ]
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES"],
+    "ua": "Це найважливіше питання на сьогодні.",
+    "en": ["This is the most important question for today."]
   },
   {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Цей сад найзеленіший серед усіх у районі.",
-    "en": [
-      "This garden is the greenest among all in the district.",
-      "This garden is the lushest among all in the district.",
-      "This garden is the most vibrant of all in the area.",
-      "This garden is the most verdant of all in the area."
-    ]
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Це найвеселіша частина фільму.",
+    "en": ["This is the funniest part of the movie."]
   },
   {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона співає наймелодійніше, бо тренується щодня.",
-    "en": [
-      "She sings the most melodiously because she trains daily.",
-      "She sings the most tunefully because she trains daily.",
-      "She sings the most harmoniously since she practices every day.",
-      "She sings the most musically since she practices every day."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PREP_TIME"],
-    "ua": "Він найвеселіший у нашій групі цього місяця.",
-    "en": [
-      "He is the funniest in our group this month.",
-      "He is the most amusing in our group this month.",
-      "He is the liveliest in our group this month.",
-      "He is the most entertaining in our group this month."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PREP_TIME", "ARTICLES"],
-    "ua": "Цей ранок найясніший цього тижня.",
-    "en": [
-      "This morning is the clearest this week.",
-      "This morning is the brightest this week.",
-      "This morning is the most radiant this week.",
-      "This morning is the sunniest this week."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "PREP_PLACE"],
-    "ua": "Цей пляж найчистіший у регіоні?",
-    "en": [
-      "Is this beach the cleanest in the region?",
-      "Is this beach the tidiest in the region?",
-      "Is this beach the most spotless in the area?",
-      "Is this beach the neatest in the area?"
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-    "ua": "Ця пісня наймелодійніша серед усіх в альбомі.",
-    "en": [
-      "This song is the most melodic among all in the album.",
-      "This song is the most tuneful among all in the album.",
-      "This song is the most harmonious of all in the album.",
-      "This song is the most musical of all in the album."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей фотограф знімає найкреативніше в студії.",
-    "en": [
-      "This photographer shoots the most creatively in the studio.",
-      "This photographer shoots the most imaginatively in the studio.",
-      "That photographer works the most originally in the studio.",
-      "That photographer works the most innovatively in the studio."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Сьогодні найтепліший день, бо сонце світить.",
-    "en": [
-      "Today is the warmest day because the sun is shining.",
-      "Today is the coziest day because the sun is shining.",
-      "Today is the most pleasant day since the sun shines.",
-      "Today is the mildest day since the sun shines."
-    ]
-  },
-  {
-    "rules": ["SUPERLATIVES", "WH_Q"],
-    "ua": "Чому твій фотоапарат найчіткіший у групі?",
-    "en": [
-      "Why is your camera the sharpest in the group?",
-      "Why is your camera the clearest in the group?",
-      "Why is your camera the most precise in the team?",
-      "Why is your camera the most accurate in the team?"
-    ]
+    "rules": ["SUPERLATIVES", "DEMONSTRATIVES", "ARTICLES"],
+    "ua": "Це найсерйозніша помилка в звіті.",
+    "en": ["This is the most serious mistake in the report."]
   }
 ] }

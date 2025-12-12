@@ -7,14 +7,6 @@
     ]
   },
   {
-    "rules": ["ARTICLES", "SECOND_CONDITIONAL"],
-    "ua": "Якби вона знала відповідь, вона б нам сказала.",
-    "en": [
-      "If she knew the answer, she would tell us.",
-      "If she knew the answer, she would let us know."
-    ]
-  },
-  {
     "rules": ["SECOND_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER", "COMPARATIVES"],
     "ua": "Якби вони жили ближче, ми б бачилися частіше.",
     "en": [
@@ -57,7 +49,7 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби вони запросили мене, яб пішов.",
+    "ua": "Якби вони запросили мене, я б пішов.",
     "en": [
       "If they invited me, I would go.",
       "If they invited me, I'd come."
@@ -65,7 +57,7 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL", "COMPARATIVES"],
-    "ua": "Якби він харчувався здоровіше, він би краще почувався.",
+    "ua": "Якби він здоровіше харчувався, він би краще почувався.",
     "en": [
       "If he ate healthier, he would feel better.",
       "If he ate more healthily, he would feel better."
@@ -85,14 +77,6 @@
     "en": [
       "If she were taller, she would play basketball.",
       "If she was taller, she would play basketball."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби вони були тут, ми б почали зустріч.",
-    "en": [
-      "If they were here, we would start the meeting.",
-      "If they were here, we would begin the meeting."
     ]
   },
   {
@@ -127,16 +111,8 @@
     ]
   },
   {
-    "rules": ["SECOND_CONDITIONAL", "COMPARATIVES"],
-    "ua": "Якби він частіше посміхався, люди б його більше любили.",
-    "en": [
-      "If he smiled more, people would like him more.",
-      "If he smiled more, people would like him better."
-    ]
-  },
-  {
     "rules": ["SECOND_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми заощаджували гроші, ми б купили новий телевізор.",
+    "ua": "Якби ми відкладали гроші, ми б купили новий телевізор.",
     "en": [
       "If we saved money, we would buy a new TV.",
       "If we saved money, we would buy a new television."
@@ -144,7 +120,7 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми розбили вікно, ми б полагодили його.",
+    "ua": "Якби ми розбили вікно, ми б відремонтували його.",
     "en": [
       "If we broke the window, we would fix it.",
       "If we broke the window, we would repair it."
@@ -160,7 +136,7 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL", "COMPARATIVES"],
-    "ua": "Якби в неї було більше друзів, вона була б щасливішою.",
+    "ua": "Якби в неї було більше друзів, вона б почувалася щасливішою.",
     "en": [
       "If she had more friends, she would feel happier.",
       "If she had more friends, she would be happier."
@@ -175,16 +151,8 @@
     ]
   },
   {
-    "rules": ["SECOND_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби в нього була робота, він би переїхав.",
-    "en": [
-      "If he had a job, he would move out.",
-      "If he had a job, he would move."
-    ]
-  },
-  {
     "rules": ["SECOND_CONDITIONAL", "COMPARATIVES"],
-    "ua": "Якби була краща погода, ми б пішли на пікнік.",
+    "ua": "Якби погода була кращою, ми б пішли на пікнік.",
     "en": [
       "If we had better weather, we would go for a picnic.",
       "If the weather were better, we would go for a picnic."
@@ -272,21 +240,6 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL", "MODALS_OF_PROBABILITY"],
-    "ua": "Якби вони вміли плавати, вони б пірнали.",
-    "en": [
-      "If they could swim, they would go diving.",
-      "If they could swim, they would dive."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL", "MODALS_OF_PROBABILITY"],
-    "ua": "Якби він умів співати, він би приєднався до гурту.",
-    "en": [
-      "If he could sing, he would join a band."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL", "MODALS_OF_PROBABILITY"],
     "ua": "Якби ми могли телепортуватися, ми б ніколи не їздили автобусом.",
     "en": [
       "If we could teleport, we would never take the bus.",
@@ -295,10 +248,12 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби я вмів програмувати, я б створив застосунок.",
+    "ua": "Якби я вмів програмувати, я б створив додаток.",
     "en": [
       "If I knew how to code, I would build an app.",
-      "If I could code, I would build an app."
+      "If I could code, I would build an app.",
+      "If I knew how to code, I would build an application.",
+      "If I could code, I would build an application."
     ]
   },
   {
@@ -318,7 +273,7 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби ми знали його номер, ми б подзвонили йому.",
+    "ua": "Якби ми знали його номер, ми зателефонували б йому.",
     "en": [
       "If we knew his number, we would call him.",
       "If we knew his number, we would give him a call."
@@ -337,14 +292,6 @@
     "en": [
       "If she got a raise, she would buy a new laptop.",
       "If she got a raise, she would buy herself a new laptop."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби ми мали вихідний, ми б відпочили.",
-    "en": [
-      "If we got a day off, we would relax.",
-      "If we had a day off, we would relax."
     ]
   },
   {
@@ -373,27 +320,10 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби він згадав про мій день народження, я був би щасливим.",
+    "ua": "Якби він згадав про мій день народження, я б зрадів.",
     "en": [
       "If he remembered my birthday, I would be happy.",
       "If he remembered my birthday, I would feel happy."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми пам’ятали купити молоко, ми б зробили млинці.",
-    "en": [
-      "If we remembered to buy milk, we would make pancakes.",
-      "If we remembered to buy milk, we would make some pancakes."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL", "COMPARATIVES"],
-    "ua": "Якби я не був таким втомленим, я б продовжив.",
-    "en": [
-      "If I weren’t so tired, I would continue.",
-      "If I was not so tired, I would continue.",
-      "If I weren’t so tired, I would keep going."
     ]
   },
   {
@@ -425,7 +355,7 @@
   },
   {
     "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби ми не запізнювалися, ми б встигли на поїзд.",
+    "ua": "Якби ми не запізнилися, ми б встигли на поїзд.",
     "en": [
       "If we weren’t late, we would catch the train.",
       "If we were not late, we would catch the train.",
@@ -525,14 +455,6 @@
     ]
   },
   {
-    "rules": ["SECOND_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби в них була машина часу, вони б відвідали майбутнє.",
-    "en": [
-      "If they had a time machine, they would visit the future.",
-      "If they had a time machine, they would travel to the future."
-    ]
-  },
-  {
     "rules": ["SECOND_CONDITIONAL"],
     "ua": "Якби в нього були суперсили, він би рятував людей.",
     "en": [
@@ -556,17 +478,8 @@
     ]
   },
   {
-    "rules": ["SECOND_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби вона не була втомленою, вона б побігла.",
-    "en": [
-      "If she weren’t tired, she would go for a run.",
-      "If she was not tired, she would go for a run.",
-      "If she weren’t tired, she would go running."
-    ]
-  },
-  {
     "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби вони не боялися, вони б спробували стрибок із парашутом.",
+    "ua": "Якби вони не боялися, вони б спробували стрибнути з парашутом.",
     "en": [
       "If they weren’t scared, they would try skydiving.",
       "If they were not scared, they would try skydiving.",
@@ -580,15 +493,6 @@
       "If he weren’t busy, he would join us for dinner.",
       "If he was not busy, he would join us for dinner.",
       "If he weren’t busy, he would have dinner with us."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL"],
-    "ua": "Якби ми не були без грошей, ми б повечеряли в ресторані сьогодні.",
-    "en": [
-      "If we weren’t broke, we would eat out tonight.",
-      "If we were not broke, we would eat out tonight.",
-      "If we weren’t broke, we would go out for dinner tonight."
     ]
   },
   {
@@ -644,14 +548,6 @@
     "en": [
       "If he learned to drive, he would buy a car.",
       "If he learned to drive, he would get a car."
-    ]
-  },
-  {
-    "rules": ["SECOND_CONDITIONAL", "COMPARATIVES"],
-    "ua": "Якби ми навчалися швидше, ми б закінчили раніше.",
-    "en": [
-      "If we learned faster, we would finish earlier.",
-      "If we learned faster, we would finish sooner."
     ]
   },
   {

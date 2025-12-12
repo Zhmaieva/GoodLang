@@ -225,7 +225,7 @@
   },
   {
     "rules": ["PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Я читав цю книгу двічі.",
+    "ua": "Я прочитав цю книгу двічі.",
     "en": [
       "I have read this book twice.",
       "I've read this book twice."
@@ -256,7 +256,7 @@
   },
 
   {
-    "rules": ["PRESENT_PERFECT", "TOO_ENOUGH"],
+    "rules": ["PRESENT_PERFECT", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Вона випила забагато кави.",
     "en": [
       "She has drunk too much coffee.",
@@ -289,7 +289,7 @@
   },
   {
     "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST", "POSSESSIVE_S"],
-    "ua": "Ти вже прибирав свою кімнату?",
+    "ua": "Ти вже прибрав свою кімнату?",
     "en": [
       "Have you cleaned your room yet?"
     ]
@@ -458,7 +458,7 @@
   },
   {
     "rules": ["PRESENT_PERFECT", "ALREADY_YET_JUST", "PREP_TIME"],
-    "ua": "Ми тільки що купили квитки на концерт.",
+    "ua": "Ми щойно купили квитки на концерт.",
     "en": [
       "We have just bought concert tickets.",
       "We've just bought tickets for the concert."
@@ -491,15 +491,6 @@
     "ua": "Ти коли-небудь куштував манго?",
     "en": ["Have you ever tasted mango?"]
   },
-  {
-    "rules": ["PRESENT_PERFECT"],
-    "ua": "Ми зловили таксі.",
-    "en": [
-      "We have caught a taxi.",
-      "We've caught a taxi."
-    ]
-  },
-
   {
     "rules": ["PRESENT_PERFECT", "EVER_NEVER", "DEMONSTRATIVES"],
     "ua": "Він ніколи не читав цю книгу.",

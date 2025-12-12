@@ -67,7 +67,7 @@
   },
   {
     "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ_FREQ", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Як часто твій тато їздить машиною?",
+    "ua": "Як часто твій тато їздить на машині?",
     "en": ["How often does your dad drive a car?", "How often does your dad drive?"]
   },
   {
@@ -268,12 +268,6 @@
     ]
   },
   {
-    "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_PERFECT_CONT"],
-    "ua": "Як довго ти смієшся?",
-    "en": ["How long have you been laughing?"]
-  },
-
-  {
     "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
     "ua": "Скільки води у пляшці?",
     "en": [
@@ -361,7 +355,6 @@
       "How much time do we have?"
     ]
   },
-
   {
     "rules": ["HOW_OFTEN_LONG_MUCH", "PRESENT_SIMPLE_FREQ"],
     "ua": "Скільки людей у твоїй сім’ї?",
@@ -373,14 +366,6 @@
     "en": [
       "How many bags do you have?",
       "How many bags have you got?"
-    ]
-  },
-  {
-    "rules": ["HOW_OFTEN_LONG_MUCH", "PAST_SIMPLE"],
-    "ua": "Скільки часу зайняла поїздка?",
-    "en": [
-      "How much time did the trip take?",
-      "How long did the trip take?"
     ]
   },
   {

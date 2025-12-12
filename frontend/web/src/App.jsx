@@ -49,7 +49,7 @@ import {
     RULE_PAGE_MAY_MIGHT,
     RULE_PAGE_COMPARATIVES,
     RULE_PAGE_SUPERLATIVES,
-    RULE_PAGE_TOO_ENOUGH,
+    RULE_PAGE_ENOUGH_TOO_MUCH_MANY,
     RULE_PAGE_ADVERBS_FREQUENCY_OFTEN_NEVER,
     RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY,
     RULE_PAGE_FUTURE_WITH_PRESENT_CONT,
@@ -80,7 +80,7 @@ import {
     RULE_PAGE_GET_PAST_PARTICIPLE,
     RULE_PAGE_REPORTED_SPEECH,
     RULE_PAGE_QUESTION_TAGS,
-    RULE_PAGE_TOO_ENOUGH_SO_SUCH,
+    RULE_PAGE_ENOUGH_TOO_MUCH_MANY_SO_SUCH,
     RULE_PAGE_RELATIVE_CLAUSES,
     RULE_PAGE_REFLEXIVE_PRONOUNS,
     RULE_PAGE_ADVERBS_OF_MANNER,
@@ -205,7 +205,7 @@ export default function App() {
                 <Route path="/rule/MAY_MIGHT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_MAY_MIGHT} />} />
                 <Route path="/rule/COMPARATIVES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COMPARATIVES} />} />
                 <Route path="/rule/SUPERLATIVES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_SUPERLATIVES} />} />
-                <Route path="/rule/TOO_ENOUGH" element={<RulePage theme={ruleTheme} data={RULE_PAGE_TOO_ENOUGH} />} />
+                <Route path="/rule/ENOUGH_TOO_MUCH_MANY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ENOUGH_TOO_MUCH_MANY} />} />
                 <Route path="/rule/ADVERBS_FREQUENCY_OFTEN_NEVER" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ADVERBS_FREQUENCY_OFTEN_NEVER} />} />
                 <Route path="/rule/QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY} />} />
                 <Route path="/rule/FUTURE_WITH_PRESENT_CONT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_FUTURE_WITH_PRESENT_CONT} />} />
@@ -236,7 +236,7 @@ export default function App() {
                 <Route path="/rule/GET_PAST_PARTICIPLE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_GET_PAST_PARTICIPLE} />} />
                 <Route path="/rule/REPORTED_SPEECH" element={<RulePage theme={ruleTheme} data={RULE_PAGE_REPORTED_SPEECH} />} />
                 <Route path="/rule/QUESTION_TAGS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_QUESTION_TAGS} />} />
-                <Route path="/rule/TOO_ENOUGH_SO_SUCH" element={<RulePage theme={ruleTheme} data={RULE_PAGE_TOO_ENOUGH_SO_SUCH} />} />
+                <Route path="/rule/ENOUGH_TOO_MUCH_MANY_SO_SUCH" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ENOUGH_TOO_MUCH_MANY_SO_SUCH} />} />
                 <Route path="/rule/RELATIVE_CLAUSES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_RELATIVE_CLAUSES} />} />
                 <Route path="/rule/REFLEXIVE_PRONOUNS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_REFLEXIVE_PRONOUNS} />} />
                 <Route path="/rule/ADVERBS_OF_MANNER" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ADVERBS_OF_MANNER} />} />

@@ -1,454 +1,554 @@
-{ "LIKE_LOVE_HATE_ING": [
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Я люблю слухати класичну музику вечорами.",
-    "en": [
-      "I love listening to classical music in the evenings."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Він не любить писати листи.",
-    "en": [
-      "He doesn't like writing letters."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "PREP_PLACE"],
-    "ua": "Ми любимо гуляти в лісі щосуботи.",
-    "en": [
-      "We love walking in the forest every Saturday.",
-      "We love walking in the woods every Saturday."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Вона любить готувати багато страв.",
-    "en": [
-      "She loves cooking a lot of dishes."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Я ніколи не любив чистити взуття.",
-    "en": [
-      "I’ve never liked polishing shoes."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "ARTICLES"],
-    "ua": "Я люблю відвідувати театр щомісяця.",
-    "en": [
-      "I love visiting the theater every month.",
-      "I love visiting the theatre every month."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Мій брат ненавидить читати довгі книги.",
-    "en": [
-      "My brother hates reading long books."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Ці діти люблять грати в ігри на вулиці.",
-    "en": [
-      "These children love playing games outside."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Вона любить малювати на балконі.",
-    "en": [
-      "She loves painting on the balcony."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
-    "ua": "Він не любить бігати в парку.",
-    "en": [
-      "He doesn't like running in the park."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми любимо їсти трохи фруктів щодня.",
-    "en": [
-      "We love eating some fruit every day."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Я ненавиджу мити посуд.",
-    "en": [
-      "I hate washing dishes."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Вона любить читати перед сном.",
-    "en": [
-      "She loves reading before bed.",
-      "She loves reading before bedtime."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Мій друг любить грати в баскетбол.",
-    "en": [
-      "My friend loves playing basketball."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Цей учень ненавидить вирішувати задачі.",
-    "en": [
-      "This student hates solving problems."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Ми не любимо співати на сцені.",
-    "en": [
-      "We don't like singing on stage."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Він любить купувати багато іграшок.",
-    "en": [
-      "He loves buying a lot of toys."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Я люблю кататися на ковзанах на арені.",
-    "en": [
-      "I love skating at the rink.",
-      "I love ice skating at the rink."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Ми любимо плавати влітку.",
-    "en": [
-      "We love swimming in summer.",
-      "We love swimming during the summer."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Моя сестра ненавидить прибирати квартиру.",
-    "en": [
-      "My sister hates cleaning the apartment.",
-      "My sister hates cleaning the flat."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Ці діти люблять малювати пейзажі.",
-    "en": [
-      "These children love painting landscapes."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Вона не любить дивитися фільми жахів.",
-    "en": [
-      "She doesn't like watching horror movies."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Я люблю пити трохи соку вранці.",
-    "en": [
-      "I love drinking some juice in the morning."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "ARTICLES"],
-    "ua": "Він любить відвідувати зоопарк щороку.",
-    "en": [
-      "He loves visiting the zoo every year."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Ми не любимо плавати в озері.",
-    "en": [
-      "We don't like swimming in the lake."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Він любить купувати багато гаджетів.",
-    "en": [
-      "He loves buying a lot of gadgets."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Я люблю малювати на пляжі.",
-    "en": [
-      "I love painting on the beach.",
-      "I love painting at the beach."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Мій брат любить кататися на роликах.",
-    "en": [
-      "My brother loves rollerblading."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Ці діти ненавидять вчити математику.",
-    "en": [
-      "These children hate learning math."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Вона не любить шити одяг.",
-    "en": [
-      "She doesn't like sewing clothes."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Ми любимо гуляти на набережній.",
-    "en": [
-      "We love walking on the promenade.",
-      "We love walking along the promenade."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Він любить читати багато коміксів.",
-    "en": [
-      "He loves reading a lot of comics."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "ARTICLES"],
-    "ua": "Я із задоволенням відвідую галерею щомісяця.",
-    "en": [
-      "I enjoy visiting the gallery every month."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Мій друг терпіти не може писати довгі листи.",
-    "en": [
-      "My friend can't stand writing long letters."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Ці діти обожнюють грати в шахи.",
-    "en": [
-      "These children love playing chess."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Вона обожнює малювати в саду.",
-    "en": [
-      "She loves painting in the garden."
-    ]
-  },
-
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Він не дуже любить плавати в річці.",
-    "en": ["He doesn't really like swimming in the river."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Ми залюбки їмо піцу щотижня.",
-    "en": ["We enjoy eating pizza every week."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Я ненавиджу довго чекати поїзда.",
-    "en": [
-      "I hate waiting for the train for a long time.",
-      "I hate waiting a long time for the train."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Вона із задоволенням читає після обіду.",
-    "en": ["She enjoys reading after lunch."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Моя сестра обожнює танцювати балет.",
-    "en": [
-      "My sister loves dancing ballet.",
-      "My sister loves to dance ballet."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Цей учень дуже не любить вивчати хімію.",
-    "en": [
-      "This student really hates studying chemistry."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Ми не в захваті від катання на лижах.",
-    "en": ["We don't enjoy skiing."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Він обожнює купувати сувеніри.",
-    "en": ["He loves buying souvenirs."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Я дуже люблю фотографувати в лісі.",
-    "en": [
-      "I really love taking photos in the forest.",
-      "I really love taking photos in the woods."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Ми любимо гуляти вечорами.",
-    "en": ["We love walking in the evenings."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Мій брат терпіти не може мити машину.",
-    "en": ["My brother can't stand washing the car."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Ці діти обожнюють малювати тварин.",
-    "en": ["These children love drawing animals."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Вона не любить дивитися спортивні програми.",
-    "en": [
-      "She doesn't like watching sports shows.",
-      "She doesn't like watching sports programs."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Я із задоволенням п’ю чай увечері.",
-    "en": ["I enjoy drinking tea in the evening."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "ARTICLES", "PREP_TIME"],
-    "ua": "Він обожнює відвідувати музей щоліта.",
-    "en": ["He loves visiting the museum every summer."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Вони не в захваті від прибирання дому.",
-    "en": [
-      "They don't enjoy cleaning the house.",
-      "They don't enjoy cleaning the home."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Ми любимо кататися на велосипеді в парку.",
-    "en": [
-      "We love riding a bike in the park.",
-      "We love cycling in the park."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Мій друг обожнює слухати джаз.",
-    "en": ["My friend loves listening to jazz."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Цей учитель обожнює пояснювати граматику.",
-    "en": ["This teacher loves explaining grammar."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Він не дуже любить волейбол.",
-    "en": ["He doesn't really like playing volleyball."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Вона обожнює читати поезію.",
-    "en": [
-      "She loves reading poetry.",
-      "She loves reading poems."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Я люблю слухати радіо ввечері.",
-    "en": ["I love listening to the radio in the evening."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Ми часто катаємося на роликах.",
-    "en": ["We often go rollerblading."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Він із задоволенням готує вранці.",
-    "en": ["He enjoys cooking in the morning."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
-    "ua": "Моя мама терпіти не може прати.",
-    "en": [
-      "My mom can't stand doing the laundry.",
-      "My mother can't stand doing the laundry."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
-    "ua": "Ці студенти із задоволенням пишуть статті.",
-    "en": ["These students enjoy writing articles."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
-    "ua": "Ми не особливо любимо плавати в морі.",
-    "en": [
-      "We don't really like swimming in the sea.",
-      "We don't particularly like swimming in the sea."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Він обожнює купувати взуття.",
-    "en": ["He loves buying shoes."]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
-    "ua": "Я дуже люблю малювати в горах.",
-    "en": [
-      "I really love painting in the mountains.",
-      "I really love painting in the mountain area."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING"],
-    "ua": "Я ненавиджу застрягати в трафіку.",
-    "en": [
-      "I hate being stuck in traffic.",
-      "I hate getting stuck in traffic."
-    ]
-  },
-  {
-    "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
-    "ua": "Вони люблять гуляти після сніданку.",
-    "en": ["They love walking after breakfast."]
-  }
-
-] }
+{
+  "LIKE_LOVE_HATE_ING": [
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Я люблю слухати класичну музику вечорами.",
+      "en": [
+        "I love listening to classical music in the evenings.",
+        "I like listening to classical music in the evenings.",
+        "I enjoy listening to classical music in the evenings."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Він не любить писати листи.",
+      "en": [
+        "He doesn't like writing letters.",
+        "He doesn't enjoy writing letters."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "PREP_PLACE"],
+      "ua": "Ми любимо гуляти в лісі щосуботи.",
+      "en": [
+        "We love walking in the forest every Saturday.",
+        "We love walking in the woods every Saturday.",
+        "We like walking in the forest every Saturday.",
+        "We enjoy walking in the forest every Saturday."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Вона любить готувати багато страв.",
+      "en": [
+        "She loves cooking a lot of dishes.",
+        "She likes cooking a lot of dishes.",
+        "She enjoys cooking lots of dishes."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Я ніколи не любив чистити взуття.",
+      "en": [
+        "I've never liked polishing shoes.",
+        "I've never liked cleaning shoes.",
+        "I've never enjoyed polishing shoes."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "ARTICLES"],
+      "ua": "Я люблю відвідувати театр щомісяця.",
+      "en": [
+        "I love visiting the theater every month.",
+        "I love visiting the theatre every month.",
+        "I like going to the theatre every month.",
+        "I enjoy going to the theatre every month."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Мій брат ненавидить читати довгі книги.",
+      "en": [
+        "My brother hates reading long books.",
+        "My brother really hates reading long books.",
+        "My brother doesn't like reading long books."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Вона любить малювати на балконі.",
+      "en": [
+        "She loves painting on the balcony.",
+        "She likes painting on the balcony.",
+        "She enjoys painting on the balcony."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "ua": "Він не любить бігати в парку.",
+      "en": [
+        "He doesn't like running in the park.",
+        "He doesn't enjoy running in the park.",
+        "He doesn't like going for a run in the park."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Ми любимо їсти трохи фруктів щодня.",
+      "en": [
+        "We love eating some fruit every day.",
+        "We like eating fruit every day.",
+        "We enjoy eating fruit every day."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Я ненавиджу мити посуд.",
+      "en": [
+        "I hate washing dishes.",
+        "I really hate washing the dishes.",
+        "I can't stand washing the dishes."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Вона любить читати перед сном.",
+      "en": [
+        "She loves reading before bed.",
+        "She loves reading before bedtime.",
+        "She likes reading before bed.",
+        "She enjoys reading before bed."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Мій друг любить грати в баскетбол.",
+      "en": [
+        "My friend loves playing basketball.",
+        "My friend likes playing basketball.",
+        "My friend enjoys playing basketball."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Ми не любимо співати на сцені.",
+      "en": [
+        "We don't like singing on stage.",
+        "We don't enjoy singing on stage."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Він любить купувати багато іграшок.",
+      "en": [
+        "He loves buying a lot of toys.",
+        "He likes buying lots of toys.",
+        "He enjoys buying toys."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Я люблю кататися на ковзанах на арені.",
+      "en": [
+        "I love skating at the rink.",
+        "I love ice skating at the rink.",
+        "I like ice skating at the rink.",
+        "I enjoy skating at the rink."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Ми любимо плавати влітку.",
+      "en": [
+        "We love swimming in summer.",
+        "We love swimming during the summer.",
+        "We like swimming in the summer.",
+        "We enjoy swimming in the summer."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Моя сестра ненавидить прибирати квартиру.",
+      "en": [
+        "My sister hates cleaning the apartment.",
+        "My sister hates cleaning the flat.",
+        "My sister really hates cleaning the apartment.",
+        "My sister doesn't like cleaning the apartment."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Вона не любить дивитися фільми жахів.",
+      "en": [
+        "She doesn't like watching horror movies.",
+        "She doesn't enjoy watching horror movies."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Я люблю пити трохи соку вранці.",
+      "en": [
+        "I love drinking some juice in the morning.",
+        "I like drinking juice in the morning.",
+        "I enjoy drinking juice in the morning."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "ARTICLES"],
+      "ua": "Він любить відвідувати зоопарк щороку.",
+      "en": [
+        "He loves visiting the zoo every year.",
+        "He likes going to the zoo every year.",
+        "He enjoys visiting the zoo every year."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Ми не любимо плавати в озері.",
+      "en": [
+        "We don't like swimming in the lake.",
+        "We don't enjoy swimming in the lake."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Він любить купувати багато гаджетів.",
+      "en": [
+        "He loves buying a lot of gadgets.",
+        "He likes buying lots of gadgets.",
+        "He enjoys buying gadgets."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Я люблю малювати на пляжі.",
+      "en": [
+        "I love painting on the beach.",
+        "I love painting at the beach.",
+        "I like painting on the beach.",
+        "I enjoy painting on the beach."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Мій брат любить кататися на роликах.",
+      "en": [
+        "My brother loves rollerblading.",
+        "My brother likes rollerblading.",
+        "My brother enjoys rollerblading."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
+      "ua": "Ці діти ненавидять вчити математику.",
+      "en": [
+        "These children hate learning math.",
+        "These children really hate studying math.",
+        "These children don't like studying math."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Вона не любить шити одяг.",
+      "en": [
+        "She doesn't like sewing clothes.",
+        "She doesn't enjoy sewing clothes."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Ми любимо гуляти на набережній.",
+      "en": [
+        "We love walking on the promenade.",
+        "We love walking along the promenade.",
+        "We like walking along the promenade.",
+        "We enjoy walking along the promenade."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "ua": "Він любить читати багато коміксів.",
+      "en": [
+        "He loves reading a lot of comics.",
+        "He likes reading lots of comics.",
+        "He enjoys reading comics."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME", "ARTICLES"],
+      "ua": "Я із задоволенням відвідую галерею щомісяця.",
+      "en": [
+        "I enjoy visiting the gallery every month.",
+        "I love visiting the gallery every month.",
+        "I like visiting the gallery every month."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Мій друг терпіти не може писати довгі листи.",
+      "en": [
+        "My friend can't stand writing long letters.",
+        "My friend hates writing long letters.",
+        "My friend really hates writing long letters."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "DEMONSTRATIVES"],
+      "ua": "Ці діти обожнюють грати в шахи.",
+      "en": [
+        "These children love playing chess.",
+        "These children really love playing chess.",
+        "These children enjoy playing chess."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Вона обожнює малювати в саду.",
+      "en": [
+        "She loves painting in the garden.",
+        "She really loves painting in the garden.",
+        "She enjoys painting in the garden."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Він не дуже любить плавати в річці.",
+      "en": [
+        "He doesn't really like swimming in the river.",
+        "He doesn't particularly like swimming in the river.",
+        "He doesn't enjoy swimming in the river."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Ми залюбки їмо піцу щотижня.",
+      "en": [
+        "We enjoy eating pizza every week.",
+        "We love eating pizza every week.",
+        "We like eating pizza every week."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Я ненавиджу довго чекати поїзда.",
+      "en": [
+        "I hate waiting for the train for a long time.",
+        "I hate waiting a long time for the train.",
+        "I really hate waiting a long time for the train.",
+        "I can't stand waiting a long time for the train."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Вона із задоволенням читає після обіду.",
+      "en": [
+        "She enjoys reading after lunch.",
+        "She loves reading after lunch.",
+        "She likes reading after lunch."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Моя сестра обожнює танцювати балет.",
+      "en": [
+        "My sister loves dancing ballet.",
+        "My sister loves to dance ballet.",
+        "My sister really loves dancing ballet.",
+        "My sister enjoys dancing ballet."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Нам подобається кататися на лижах.",
+      "en": [
+        "We enjoy skiing.",
+        "We like skiing.",
+        "We love skiing."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Він обожнює купувати сувеніри.",
+      "en": [
+        "He loves buying souvenirs.",
+        "He really loves buying souvenirs.",
+        "He enjoys buying souvenirs."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Я дуже люблю фотографувати в лісі.",
+      "en": [
+        "I really love taking photos in the forest.",
+        "I really love taking photos in the woods.",
+        "I really enjoy taking photos in the forest.",
+        "I really like taking photos in the forest."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Ми любимо гуляти вечорами.",
+      "en": [
+        "We love walking in the evenings.",
+        "We like walking in the evenings.",
+        "We enjoy walking in the evenings."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Мій брат терпіти не може мити машину.",
+      "en": [
+        "My brother can't stand washing the car.",
+        "My brother hates washing the car.",
+        "My brother really hates washing the car."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Вона не любить дивитися спортивні програми.",
+      "en": [
+        "She doesn't like watching sports shows.",
+        "She doesn't like watching sports programs.",
+        "She doesn't enjoy watching sports on TV."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Я із задоволенням п’ю чай увечері.",
+      "en": [
+        "I enjoy drinking tea in the evening.",
+        "I love drinking tea in the evening.",
+        "I like drinking tea in the evening."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "ARTICLES", "PREP_TIME"],
+      "ua": "Він обожнює відвідувати музей щоліта.",
+      "en": [
+        "He loves visiting the museum every summer.",
+        "He likes visiting the museum every summer.",
+        "He enjoys visiting the museum every summer."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Їм не подобається прибирати вдома.",
+      "en": [
+        "They don't enjoy cleaning the house.",
+        "They don't enjoy cleaning the home.",
+        "They don't like cleaning the house."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Ми любимо кататися на велосипеді в парку.",
+      "en": [
+        "We love riding a bike in the park.",
+        "We love cycling in the park.",
+        "We like cycling in the park.",
+        "We enjoy cycling in the park."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Мій друг обожнює слухати джаз.",
+      "en": [
+        "My friend loves listening to jazz.",
+        "My friend really loves listening to jazz.",
+        "My friend enjoys listening to jazz."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Він не дуже любить волейбол.",
+      "en": [
+        "He doesn't really like playing volleyball.",
+        "He doesn't enjoy playing volleyball.",
+        "He doesn't particularly like playing volleyball."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Вона обожнює читати поезію.",
+      "en": [
+        "She loves reading poetry.",
+        "She loves reading poems.",
+        "She enjoys reading poetry."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Я люблю слухати радіо ввечері.",
+      "en": [
+        "I love listening to the radio in the evening.",
+        "I like listening to the radio in the evening.",
+        "I enjoy listening to the radio in the evening."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Ми часто катаємося на роликах.",
+      "en": [
+        "We often go rollerblading.",
+        "We love going rollerblading.",
+        "We like going rollerblading.",
+        "We enjoy going rollerblading."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Він із задоволенням готує вранці.",
+      "en": [
+        "He enjoys cooking in the morning.",
+        "He loves cooking in the morning.",
+        "He likes cooking in the morning."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Моя мама терпіти не може прати.",
+      "en": [
+        "My mom can't stand doing the laundry.",
+        "My mother can't stand doing the laundry.",
+        "My mom hates doing the laundry."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "ua": "Ми не особливо любимо плавати в морі.",
+      "en": [
+        "We don't really like swimming in the sea.",
+        "We don't particularly like swimming in the sea.",
+        "We don't enjoy swimming in the sea."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Він обожнює купувати взуття.",
+      "en": [
+        "He loves buying shoes.",
+        "He really loves buying shoes.",
+        "He enjoys buying shoes."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "ua": "Я дуже люблю малювати в горах.",
+      "en": [
+        "I really love painting in the mountains.",
+        "I really love painting in the mountain area.",
+        "I really enjoy painting in the mountains.",
+        "I really like painting in the mountains."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "ua": "Я ненавиджу застрягати в трафіку.",
+      "en": [
+        "I hate being stuck in traffic.",
+        "I hate getting stuck in traffic.",
+        "I really hate getting stuck in traffic.",
+        "I can't stand being stuck in traffic."
+      ]
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_TIME"],
+      "ua": "Вони люблять гуляти після сніданку.",
+      "en": [
+        "They love walking after breakfast.",
+        "They like walking after breakfast.",
+        "They enjoy walking after breakfast."
+      ]
+    }
+  ]
+}

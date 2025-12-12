@@ -659,12 +659,12 @@
     "en": ["We will not only visit Paris but also spend a whole week there.", "We’ll not only visit Paris but also spend a whole week there."]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "TOO_ENOUGH"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS", "ENOUGH_TOO_MUCH_MANY"],
     "ua": ["Цей рюкзак не тільки легкий, але й достатньо місткий для подорожі."],
     "en": ["This backpack is not only light but also spacious enough for a trip."]
   },
   {
-    "rules": ["CORRELATIVE_CONJUNCTIONS", "LIKE_ING"],
+    "rules": ["CORRELATIVE_CONJUNCTIONS"],
     "ua": ["Я не лише люблю читати детективи, але й пишу власні історії."],
     "en": ["I not only love reading detective stories but also write my own."]
   },

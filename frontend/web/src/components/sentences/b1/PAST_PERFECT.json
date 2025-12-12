@@ -90,11 +90,6 @@
     "en": "I had never tried sushi before that night."
   },
   {
-    "rules": ["PAST_PERFECT"],
-    "ua": "Ми витратили надто багато грошей до дня зарплати.",
-    "en": "We had spent too much money before payday."
-  },
-  {
     "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
     "ua": "Вони вже заснули, коли почалася буря.",
     "en": "They had already fallen asleep when the storm began."
@@ -105,29 +100,19 @@
     "en": "We had never travelled abroad before last year."
   },
   {
-    "rules": ["PAST_PERFECT", "ARTICLES"],
-    "ua": "Вони працювали разом до того, як компанія змінила власників.",
-    "en": "They had worked together before the company changed owners."
-  },
-  {
     "rules": ["PAST_PERFECT"],
     "ua": "Вони вже виїхали, коли ми прибули.",
     "en": "They had already moved out by the time we arrived."
   },
   {
     "rules": ["PAST_PERFECT"],
-    "ua": "Він телефонував їй кілька разів, перш ніж вона відповіла.",
+    "ua": "Він подзвонив їй кілька разів, перш ніж вона відповіла.",
     "en": "He had called her several times before she answered."
   },
   {
     "rules": ["PAST_PERFECT"],
     "ua": "Я зробив багато фотографій перед тим, як камера вимкнулася.",
     "en": ["I had taken many photos before my camera died.", "I had taken many photos before the camera turned off."]
-  },
-  {
-    "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],
-    "ua": "Вона вже закінчила навчання, коли я подзвонив.",
-    "en": "She had already finished studying when I called."
   },
   {
     "rules": ["PAST_PERFECT", "ALREADY_YET_JUST"],

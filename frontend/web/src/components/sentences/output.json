@@ -5945,7 +5945,7 @@
       "rules": [
         "DEMONSTRATIVES",
         "TO_BE",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ці черевики занадто великі.",
       "en": [
@@ -8394,7 +8394,7 @@
       "rules": [
         "IMPERATIVES",
         "NEGATION_DONT_DOESNT",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Не їж багато солоного.",
       "en": [
@@ -8505,7 +8505,7 @@
       "rules": [
         "IMPERATIVES",
         "NEGATION_DONT_DOESNT",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Не гуляй довго на холоді.",
       "en": [
@@ -8549,7 +8549,7 @@
       "rules": [
         "IMPERATIVES",
         "NEGATION_DONT_DOESNT",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Не бери занадто важкий рюкзак.",
       "en": [
@@ -37711,7 +37711,7 @@
     {
       "rules": [
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "У нього рідко є достатньо часу для відпочинку.",
       "en": [
@@ -38185,7 +38185,7 @@
     {
       "rules": [
         "ADVERBS_FREQUENCY_OFTEN_NEVER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Він часто занадто втомлений, щоб працювати.",
       "en": [
@@ -44158,7 +44158,7 @@
     {
       "rules": [
         "FIRST_CONDITIONAL",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Якщо ми накопимо достатньо грошей, ми поїдемо у відпустку.",
       "en": [
@@ -44668,7 +44668,7 @@
     {
       "rules": [
         "FIRST_CONDITIONAL",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Якщо він купить достатньо матеріалів, він побудує будинок.",
       "en": [
@@ -53174,7 +53174,7 @@
     {
       "rules": [
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "У нас занадто багато завдань, щоб завершити їх.",
       "en": [
@@ -53637,7 +53637,7 @@
     {
       "rules": [
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "У нас недостатньо місця для багатьох гостей.",
       "en": [
@@ -56087,10 +56087,10 @@
       ]
     }
   ],
-  "TOO_ENOUGH": [
+  "ENOUGH_TOO_MUCH_MANY": [
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "ARTICLES",
         "DEMONSTRATIVES"
@@ -56105,7 +56105,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "ARTICLES",
         "DEMONSTRATIVES"
@@ -56118,7 +56118,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES"
       ],
@@ -56130,7 +56130,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Деякі страви не достатньо м’які для дітей.",
@@ -56141,7 +56141,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Цей м’яч занадто твердий для гри?",
@@ -56152,7 +56152,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Цей м’яч не достатньо м’який для гри?",
@@ -56162,7 +56162,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "BECAUSE_SO_BUT_ALTHOUGH",
         "DEMONSTRATIVES"
       ],
@@ -56174,7 +56174,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES",
         "ARTICLES"
@@ -56187,7 +56187,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES"
       ],
@@ -56199,7 +56199,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES"
       ],
@@ -56211,7 +56211,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Деякі страви занадто гострі для дітей.",
@@ -56222,7 +56222,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Деякі страви не достатньо м’які для дітей.",
@@ -56233,7 +56233,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Твій ніж занадто тупий для приготування їжі?",
       "en": [
@@ -56243,7 +56243,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME",
         "DEMONSTRATIVES",
         "ARTICLES"
@@ -56256,7 +56256,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME",
         "DEMONSTRATIVES",
         "ARTICLES"
@@ -56269,7 +56269,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME",
         "DEMONSTRATIVES"
       ],
@@ -56281,7 +56281,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME",
         "DEMONSTRATIVES"
       ],
@@ -56293,7 +56293,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Ця куртка занадто велика для мене.",
@@ -56304,7 +56304,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Ці штани занадто короткі для тебе.",
@@ -56315,7 +56315,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Ці штани не достатньо довгі для тебе.",
@@ -56326,7 +56326,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Ці черевики занадто вузькі для нього.",
@@ -56337,7 +56337,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Ці черевики не достатньо широкі для нього.",
@@ -56348,7 +56348,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ці шкарпетки занадто теплі для літа.",
       "en": [
@@ -56358,7 +56358,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES"
       ],
@@ -56370,7 +56370,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES"
       ],
@@ -56382,7 +56382,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей стілець занадто твердий для сидіння.",
       "en": [
@@ -56392,7 +56392,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей стілець не достатньо м’який для сидіння.",
       "en": [
@@ -56402,7 +56402,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ці полиці занадто високі для дитини.",
       "en": [
@@ -56412,7 +56412,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES"
       ],
@@ -56424,7 +56424,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES"
       ],
@@ -56436,7 +56436,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Ця парта занадто висока для дитини.",
@@ -56447,7 +56447,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Ця парта не достатньо низька для дитини.",
@@ -56458,7 +56458,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Цей рюкзак занадто важкий для тебе.",
@@ -56469,7 +56469,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Цей рюкзак не достатньо легкий для тебе.",
@@ -56480,7 +56480,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES"
       ],
@@ -56492,7 +56492,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE",
         "DEMONSTRATIVES",
         "ARTICLES"
@@ -56505,7 +56505,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "Цей парк не достатньо тихий для пікніка.",
@@ -56515,7 +56515,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "Ця площа занадто вузька для ярмарку.",
@@ -56526,7 +56526,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "Ця площа не достатньо широка для ярмарку.",
@@ -56537,7 +56537,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей суп занадто гарячий для дитини.",
       "en": [
@@ -56547,7 +56547,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей суп не достатньо теплий для дитини.",
       "en": [
@@ -56557,7 +56557,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ця кава занадто міцна для мене.",
       "en": [
@@ -56567,7 +56567,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ця кава не достатньо міцна для мене.",
       "en": [
@@ -56577,7 +56577,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ці печені яблука занадто солодкі.",
       "en": [
@@ -56587,7 +56587,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ці печені яблука не достатньо солодкі для десерту.",
       "en": [
@@ -56597,7 +56597,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME"
       ],
       "ua": "Це літо занадто спекотне для бабусі.",
@@ -56608,7 +56608,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME"
       ],
       "ua": "Це літо не достатньо прохолодне для бабусі.",
@@ -56619,7 +56619,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME"
       ],
       "ua": "Ця осінь занадто дощова для фестивалю.",
@@ -56630,7 +56630,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME"
       ],
       "ua": "Ця осінь не достатньо суха для фестивалю.",
@@ -56641,7 +56641,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME",
         "ARTICLES"
       ],
@@ -56652,7 +56652,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_TIME",
         "ARTICLES"
       ],
@@ -56664,7 +56664,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "Тут занадто вітряно для дітей.",
@@ -56675,7 +56675,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "Тут не достатньо тихо для дітей.",
@@ -56686,7 +56686,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей м’яч занадто великий для тренування в приміщенні.",
       "en": [
@@ -56696,7 +56696,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей м’яч не достатньо маленький для тренування в приміщенні.",
       "en": [
@@ -56705,7 +56705,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Цей телефон занадто повільний для цієї гри.",
@@ -56716,7 +56716,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH",
+        "ENOUGH_TOO_MUCH_MANY",
         "DEMONSTRATIVES"
       ],
       "ua": "Цей телефон не достатньо швидкий для цієї гри.",
@@ -56727,7 +56727,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей ноутбук занадто важкий для роботи в дорозі.",
       "en": [
@@ -56737,7 +56737,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Цей ноутбук не достатньо легкий для роботи в дорозі.",
       "en": [
@@ -56747,7 +56747,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Я занадто сором’язливий щоб виступати на сцені.",
       "en": [
@@ -56757,7 +56757,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Я не достатньо сміливий, щоб виступати на сцені.",
       "en": [
@@ -56767,7 +56767,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Вона занадто тиха, щоб виступати.",
       "en": [
@@ -56777,7 +56777,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Вона не достатньо впевнена, щоб виступати.",
       "en": [
@@ -65805,7 +65805,7 @@
     {
       "rules": [
         "CORRELATIVE_CONJUNCTIONS",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": [
         "Цей рюкзак не тільки легкий, але й достатньо місткий для подорожі."
@@ -73282,7 +73282,7 @@
     {
       "rules": [
         "MODAL_PERFECTS",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "en": [
         "I might have been too harsh.",
@@ -73556,7 +73556,7 @@
       "rules": [
         "MODAL_PERFECTS",
         "MODALS_OF_PROBABILITY",
-        "TOO_ENOUGH_SO_SUCH"
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH"
       ],
       "en": [
         "You cannot have finished so quickly.",
@@ -77406,7 +77406,7 @@
     {
       "rules": [
         "PRESENT_PERFECT",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Вона випила забагато кави.",
       "en": [
@@ -87119,10 +87119,10 @@
       ]
     }
   ],
-  "TOO_ENOUGH_SO_SUCH": [
+  "ENOUGH_TOO_MUCH_MANY_SO_SUCH": [
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це занадто важко для мене.",
@@ -87133,7 +87133,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Вона надто втомлена, щоб працювати.",
@@ -87144,7 +87144,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ADVERBS_OF_MANNER"
       ],
       "ua": "Вони говорять занадто швидко.",
@@ -87155,7 +87155,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Він надто молодий, щоб керувати.",
@@ -87166,7 +87166,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це занадто дорого для нас.",
@@ -87177,7 +87177,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "PREP_PLACE"
       ],
@@ -87189,7 +87189,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ADVERBS_OF_MANNER"
       ],
       "ua": "Вона говорить занадто голосно.",
@@ -87200,7 +87200,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH"
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH"
       ],
       "ua": "Вони прийшли надто пізно.",
       "en": [
@@ -87210,7 +87210,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Я занадто зайнятий сьогодні.",
@@ -87221,7 +87221,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Цей фільм надто довгий.",
@@ -87232,7 +87232,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ти достатньо дорослий, щоб це зрозуміти.",
@@ -87243,7 +87243,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ми не досить швидкі.",
@@ -87254,7 +87254,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87266,7 +87266,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87278,7 +87278,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87290,7 +87290,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87302,7 +87302,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES"
       ],
       "ua": "Ми мали таку гарну поїздку!",
@@ -87313,7 +87313,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87325,7 +87325,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87337,7 +87337,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87349,7 +87349,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це такі гарні новини!",
@@ -87360,7 +87360,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Він був такий втомлений, що заснув одразу.",
@@ -87371,7 +87371,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Вони були такі щасливі, що почали танцювати.",
@@ -87382,7 +87382,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ми були такі голодні, що замовили піцу.",
@@ -87393,7 +87393,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Вона була така гарна, що всі звертали увагу.",
@@ -87404,7 +87404,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Було так спекотно, що я не міг спати.",
@@ -87415,7 +87415,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Діти були такі гучні, що вчитель не чув себе.",
@@ -87426,7 +87426,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ми були такі зайняті, що забули поїсти.",
@@ -87437,7 +87437,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Цей чай надто гарячий, щоб його пити.",
@@ -87448,7 +87448,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ця кімната достатньо велика для нас.",
@@ -87459,7 +87459,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Було надто пізно, щоб щось робити.",
@@ -87470,7 +87470,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Цей рюкзак занадто важкий для неї.",
@@ -87481,7 +87481,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Твоє пояснення достатньо чітке.",
@@ -87492,7 +87492,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Така тиша, що я чую, як цокає годинник.",
@@ -87503,7 +87503,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "ARTICLES"
       ],
@@ -87515,7 +87515,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "HAVE_HAVE_GOT"
       ],
@@ -87527,7 +87527,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "HAVE_HAVE_GOT"
       ],
@@ -87539,7 +87539,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87551,7 +87551,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Було так темно, що ми нічого не бачили.",
@@ -87562,7 +87562,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Він був такий нервовий, що не міг говорити.",
@@ -87573,7 +87573,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Цей фільм такий смішний, що я плакав.",
@@ -87584,7 +87584,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ти такий талановитий!",
@@ -87595,7 +87595,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87607,7 +87607,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це надто гаряче, щоб їсти.",
@@ -87618,7 +87618,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87630,7 +87630,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ми були такі втомлені після подорожі.",
@@ -87641,7 +87641,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це було так нудно, що я заснув.",
@@ -87652,7 +87652,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87664,7 +87664,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Вода була занадто холодна для купання.",
@@ -87675,7 +87675,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87687,7 +87687,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Твоя кава занадто солодка.",
@@ -87698,7 +87698,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Він був таким добрим до мене.",
@@ -87709,7 +87709,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE",
         "THERE_IS_ARE"
@@ -87722,7 +87722,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ADVERBS_OF_MANNER"
       ],
       "ua": "Вона говорить занадто голосно.",
@@ -87733,7 +87733,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "PREP_PLACE"
       ],
@@ -87745,7 +87745,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Він недостатньо уважний до деталей.",
@@ -87756,7 +87756,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87768,7 +87768,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Мені занадто холодно, щоб виходити.",
@@ -87779,7 +87779,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це було так несподівано!",
@@ -87790,7 +87790,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87802,7 +87802,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Їжа була занадто гостра для мене.",
@@ -87813,7 +87813,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "ARTICLES",
         "CAN_CANT"
@@ -87826,7 +87826,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Він надто зайнятий, щоб допомогти нам сьогодні.",
@@ -87837,7 +87837,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87849,7 +87849,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ми були занадто втомлені, щоб продовжувати працювати.",
@@ -87860,7 +87860,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87872,7 +87872,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Цей ресторан надто дорогий для звичайного обіду.",
@@ -87883,7 +87883,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "CAN_CANT"
       ],
@@ -87895,7 +87895,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87907,7 +87907,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Погода була надто погана, щоб виходити з дому.",
@@ -87918,7 +87918,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "CAN_CANT"
       ],
@@ -87930,7 +87930,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "ENOUGH_TOO_MUCH_MANY"
       ],
@@ -87942,7 +87942,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87954,7 +87954,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Тут надто темно, щоб читати.",
@@ -87965,7 +87965,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Було так шумно, що я не чув власних думок.",
@@ -87976,7 +87976,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -87988,7 +87988,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "HAVE_HAVE_GOT",
         "ENOUGH_TOO_MUCH_MANY"
       ],
@@ -88000,7 +88000,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це занадто ризиковано, щоб пробувати.",
@@ -88011,7 +88011,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -88023,7 +88023,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Було так холодно, що вода замерзла за хвилини.",
@@ -88034,7 +88034,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Вже занадто пізно, щоб щось змінювати.",
@@ -88047,7 +88047,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "ENOUGH_TOO_MUCH_MANY"
       ],
@@ -88059,7 +88059,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "ARTICLES",
         "TO_BE"
       ],
@@ -88071,7 +88071,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Ми були настільки здивовані результатами.",
@@ -88082,7 +88082,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це занадто шумне місце для зустрічі.",
@@ -88093,7 +88093,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Тобі не здається, що кава занадто гаряча?",
@@ -88104,7 +88104,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Фільм був такий довгий, що я заснув.",
@@ -88115,7 +88115,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Цей рюкзак занадто важкий для мене.",
@@ -88126,7 +88126,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "HAVE_HAVE_GOT",
         "ENOUGH_TOO_MUCH_MANY"
       ],
@@ -88138,7 +88138,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це така смачна піца!",
@@ -88149,7 +88149,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Мені надто холодно, щоб залишатися тут.",
@@ -88160,7 +88160,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Це було так смішно, що я не міг зупинитися сміятися.",
@@ -88171,7 +88171,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Твоя кімната така чиста сьогодні!",
@@ -88182,7 +88182,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Було так темно, що я ледве бачив дорогу.",
@@ -88193,7 +88193,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE"
       ],
       "ua": "Цей тест був надто складним.",
@@ -88204,7 +88204,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88216,7 +88216,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88228,7 +88228,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88240,7 +88240,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88252,7 +88252,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88264,7 +88264,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "COMPARATIVES"
       ],
       "ua": "Ми отримали таку ж оцінку, як і вони.",
@@ -88275,7 +88275,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88287,7 +88287,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88299,7 +88299,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88311,7 +88311,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88323,7 +88323,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88335,7 +88335,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88347,7 +88347,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88359,7 +88359,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88371,7 +88371,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "COMPARATIVES"
       ],
       "ua": "Він не спить так добре, як раніше.",
@@ -88382,7 +88382,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88394,7 +88394,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88406,7 +88406,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88418,7 +88418,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "COMPARATIVES"
       ],
       "ua": "Ми заплатили стільки ж, скільки й минулого разу.",
@@ -88429,7 +88429,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88441,7 +88441,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "COMPARATIVES"
       ],
       "ua": "Він говорить так само швидко, як і викладач.",
@@ -88452,7 +88452,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88464,7 +88464,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88476,7 +88476,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88488,7 +88488,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88500,7 +88500,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88512,7 +88512,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88524,7 +88524,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88536,7 +88536,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88548,7 +88548,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88560,7 +88560,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -88572,7 +88572,7 @@
     },
     {
       "rules": [
-        "TOO_ENOUGH_SO_SUCH",
+        "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
         "TO_BE",
         "COMPARATIVES"
       ],
@@ -90034,7 +90034,7 @@
       "rules": [
         "ADVANCED_MODALS_OF_DEDUCTION",
         "ARTICLES",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Він, мабуть, був занадто зайнятий, щоб відповісти.",
       "en": [
@@ -94257,7 +94257,7 @@
       "rules": [
         "COMPLEX_NOUN_PHRASES",
         "ARTICLES",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Імовірність того, що вони знайдуть рішення, досить висока.",
       "en": [
@@ -96499,7 +96499,7 @@
     {
       "rules": [
         "HAD_BETTER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Тобі краще одягти пальто, надто холодно.",
       "en": [
@@ -96621,7 +96621,7 @@
     {
       "rules": [
         "HAD_BETTER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ти краще відпочинь, ти занадто виснажений.",
       "en": [
@@ -96764,7 +96764,7 @@
     {
       "rules": [
         "HAD_BETTER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ти краще не їж це, воно занадто гостре.",
       "en": [
@@ -96941,7 +96941,7 @@
     {
       "rules": [
         "HAD_BETTER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Тобі краще не казати нічого, ти надто злий.",
       "en": [
@@ -97084,7 +97084,7 @@
     {
       "rules": [
         "HAD_BETTER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ти краще не їдь так швидко, це надто небезпечно.",
       "en": [
@@ -97139,7 +97139,7 @@
     {
       "rules": [
         "HAD_BETTER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Тобі краще не їхати сьогодні, занадто небезпечно.",
       "en": [
@@ -97183,7 +97183,7 @@
     {
       "rules": [
         "HAD_BETTER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Ти краще не пий більше кави, ти вже занадто нервовий.",
       "en": [
@@ -102473,7 +102473,7 @@
     {
       "rules": [
         "WOULD_RATHER_PREFER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Мені надто холодно, я б краще залишився всередині.",
       "en": [
@@ -102566,7 +102566,7 @@
     {
       "rules": [
         "WOULD_RATHER_PREFER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Вона занадто втомлена, тому воліла б відпочити.",
       "en": [
@@ -102922,7 +102922,7 @@
     {
       "rules": [
         "WOULD_RATHER_PREFER",
-        "TOO_ENOUGH"
+        "ENOUGH_TOO_MUCH_MANY"
       ],
       "ua": "Зараз надто пізно, я б радше обговорив це завтра.",
       "en": [

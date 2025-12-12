@@ -311,7 +311,7 @@
       "en": ["Check the class schedule.", "Look at the timetable for classes."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "TOO_ENOUGH"],
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "ENOUGH_TOO_MUCH_MANY"],
       "ua": "Не їж багато солоного.",
       "en": ["Don’t eat too much salty food.", "Avoid eating a lot of salty snacks."]
     },
@@ -361,7 +361,7 @@
       "en": ["Make a copy of the documents.", "Duplicate the documents."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "TOO_ENOUGH"],
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "ENOUGH_TOO_MUCH_MANY"],
       "ua": "Не гуляй довго на холоді.",
       "en": ["Don’t walk outside for too long in the cold.", "Avoid staying out in the cold for long."]
     },
@@ -381,7 +381,7 @@
       "en": ["Turn off the tap after washing.", "Close the faucet after cleaning."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "TOO_ENOUGH"],
+      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "ENOUGH_TOO_MUCH_MANY"],
       "ua": "Не бери занадто важкий рюкзак.",
       "en": ["Don’t take too heavy a backpack.", "Don’t pick up too heavy a backpack."]
     },

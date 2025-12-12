@@ -314,7 +314,7 @@
     ]
   },
   {
-    "rules": ["PAST_CONTINUOUS", "LIKE_ING", "ARTICLES"],
+    "rules": ["PAST_CONTINUOUS", "ARTICLES"],
     "ua": "Я насолоджувався читанням книги в парку.",
     "en": [
       "I was enjoying reading a book in the park.",
@@ -372,7 +372,7 @@
     ]
   },
   {
-    "rules": ["PAST_CONTINUOUS", "LIKE_ING"],
+    "rules": ["PAST_CONTINUOUS"],
     "ua": "Ми насолоджувалися плаванням у річці вчора.",
     "en": [
       "We were enjoying swimming in the river yesterday.",

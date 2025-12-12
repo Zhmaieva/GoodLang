@@ -79,14 +79,6 @@
     ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL"],
-    "ua": "Якщо ми не прибираємо, будинок виглядає брудним.",
-    "en": [
-      "If we do not clean, the house looks dirty.",
-      "If we don't clean, the house looks dirty."
-    ]
-  },
-  {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо він купує багато кави, він п’є її щодня.",
     "en": [
@@ -199,15 +191,6 @@
     ]
   },
   {
-    "rules": ["ZERO_CONDITIONAL"],
-    "ua": "Якщо ми не поливаємо рослини, вони в’януть.",
-    "en": [
-      "If we do not water the plants, they wilt.",
-      "If we don't water the plants, they dry out.",
-      "If we don't water the plants, they die."
-    ]
-  },
-  {
     "rules": ["ZERO_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Якщо я п’ю трохи чаю, я почуваюся спокійніше.",
     "en": [
@@ -301,14 +284,6 @@
     "en": [
       "If she reads at night, she sleeps poorly.",
       "If she reads late at night, she sleeps badly."
-    ]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL"],
-    "ua": "Якщо ми не поливаємо квіти, вони гинуть.",
-    "en": [
-      "If we do not water the flowers, they die.",
-      "If we don't water the flowers, they die."
     ]
   },
   {
@@ -413,14 +388,6 @@
     "en": [
       "If my sister cooks, the kitchen always smells good.",
       "If my sister cooks, the kitchen always smells delicious."
-    ]
-  },
-  {
-    "rules": ["ZERO_CONDITIONAL"],
-    "ua": "Якщо ми не прибираємо кухню, вона виглядає безладною.",
-    "en": [
-      "If we do not clean the kitchen, it looks messy.",
-      "If we don't clean the kitchen, it looks messy."
     ]
   },
   {
@@ -662,7 +629,7 @@
   },
   {
     "rules": ["ZERO_CONDITIONAL"],
-    "ua": "Якщо вона не готує, вона не їсть домашньої їжі.",
+    "ua": "Якщо вона не готує, вона не їсть домашню їжу.",
     "en": [
       "If she does not cook, she does not eat homemade food.",
       "If she doesn't cook, she doesn't eat homemade food."

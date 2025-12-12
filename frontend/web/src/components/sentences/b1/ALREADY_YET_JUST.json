@@ -63,8 +63,8 @@
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Ми вже спробували ті страви.",
-    "en": ["We have already tried those dishes."]
+    "ua": "Ми вже спробували ці страви.",
+    "en": ["We have already tried these dishes."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
@@ -140,11 +140,6 @@
     "en": ["Have you already paid for lunch?"]
   },
   {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Ми ще не спробували ті десерти.",
-    "en": ["We haven’t tried those desserts yet."]
-  },
-  {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я щойно закрив вікно.",
     "en": ["I have just closed the window."]
@@ -175,12 +170,6 @@
     "ua": "Вона щойно відправила листа.",
     "en": ["She has just sent the letter."]
   },
-  {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Мій брат уже зіграв у футбол.",
-    "en": ["My brother has already played football.", "My brother has already played soccer."]
-  },
-
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Ми ще не почали вечерю.",
@@ -232,16 +221,6 @@
     "ua": "Ти вже отримав посилку?",
     "en": ["Have you already received the package?"]
   },
-
-  {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Ми ще не дістались місця.",
-    "en": [
-      "We haven’t arrived yet.",
-      "We haven’t got there yet.",
-      "We haven’t reached the place yet."
-    ]
-  },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Я вже пообідав.",
@@ -256,11 +235,6 @@
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
     "ua": "Вона щойно вийшла.",
     "en": ["She has just left."]
-  },
-  {
-    "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Ми вже купили ті квіти.",
-    "en": ["We have already bought those flowers."]
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
@@ -279,8 +253,8 @@
   },
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT", "DEMONSTRATIVES"],
-    "ua": "Ми вже бачили той фільм.",
-    "en": ["We have already seen that movie."]
+    "ua": "Ми вже бачили цей фільм.",
+    "en": ["We have already seen this movie."]
   },
 
   {
@@ -363,7 +337,7 @@
 
   {
     "rules": ["ALREADY_YET_JUST", "PRESENT_PERFECT"],
-    "ua": "Ми ще не купили продуктів.",
+    "ua": "Ми ще не купили продукти.",
     "en": ["We haven’t bought groceries yet."]
   },
   {

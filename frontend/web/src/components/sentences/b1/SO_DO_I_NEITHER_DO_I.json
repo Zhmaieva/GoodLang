@@ -1,6 +1,6 @@
 { "SO_DO_I_NEITHER_DO_I": [
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю кататися на ковзанах. — Я теж."],
     "en": [
       "I like skating. — So do I.",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PREP_TIME"],
     "ua": ["Я люблю дивитися фільми ввечері. — Я теж."],
     "en": [
       "I like watching movies in the evening. — So do I.",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю подорожувати. — Я теж."],
     "en": [
       "I like traveling. — So do I.",
@@ -310,7 +310,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PREP_TIME"],
     "ua": ["Я люблю читати перед сном. — Я теж."],
     "en": [
       "I like reading before bed. — So do I.",
@@ -328,7 +328,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю слухати музику. — Я теж."],
     "en": [
       "I like listening to music. — So do I."
@@ -407,7 +407,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю готувати. — Я теж."],
     "en": [
       "I like cooking. — So do I."
@@ -421,7 +421,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
     "ua": ["Я не люблю вставати рано. — Я теж."],
     "en": [
       "I don’t like getting up early. — Neither do I.",
@@ -458,7 +458,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "ARTICLES"],
     "ua": ["Я люблю ходити в кіно. — Я теж."],
     "en": [
       "I like going to the cinema. — So do I.",
@@ -486,7 +486,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю плавати в морі. — Я теж."],
     "en": [
       "I like swimming in the sea. — So do I."
@@ -511,7 +511,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я люблю гуляти ввечері. — Я теж."],
     "en": [
       "I like walking in the evening. — So do I.",
@@ -519,7 +519,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю подорожувати потягом. — Я теж."],
     "en": [
       "I like traveling by train. — So do I.",
@@ -545,7 +545,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю танцювати. — Я теж."],
     "en": [
       "I like dancing. — So do I.",
@@ -581,7 +581,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "ARTICLES"],
     "ua": ["Я люблю ходити в театр. — Я теж."],
     "en": [
       "I like going to the theatre. — So do I.",
@@ -598,7 +598,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
     "ua": ["Я не люблю працювати вночі. — Я теж."],
     "en": [
       "I don’t like working at night. — Neither do I.",
@@ -634,7 +634,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PREP_TIME"],
     "ua": ["Я люблю спати довго у вихідні. — Я теж."],
     "en": [
       "I like sleeping late on weekends. — So do I.",
@@ -642,7 +642,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "ARTICLES"],
     "ua": ["Я люблю дивитися фільми у кінотеатрі. — Я теж."],
     "en": [
       "I like watching movies at the cinema. — So do I.",
@@ -668,7 +668,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_PLACE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PREP_PLACE"],
     "ua": ["Я люблю бігати в парку. — Я теж."],
     "en": [
       "I like running in the park. — So do I."
@@ -711,7 +711,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю малювати. — Я теж."],
     "en": [
       "I like drawing. — So do I.",
@@ -729,7 +729,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PREP_TIME"],
     "ua": ["Я люблю читати вранці. — Я теж."],
     "en": [
       "I like reading in the morning. — So do I."
@@ -754,7 +754,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю бігати. — Я теж."],
     "en": [
       "I like running. — So do I."
@@ -779,7 +779,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PREP_TIME"],
     "ua": ["Я люблю дивитися фільми вночі. — Я теж."],
     "en": [
       "I like watching movies at night. — So do I."
@@ -796,7 +796,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "PREP_PLACE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PREP_PLACE"],
     "ua": ["Я люблю гуляти на природі. — Я теж."],
     "en": [
       "I like walking in nature. — So do I.",
@@ -831,7 +831,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю готувати десерти. — Я теж."],
     "en": [
       "I like cooking desserts. — So do I."
@@ -856,7 +856,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
     "ua": ["Я не люблю прибирання. — Я теж."],
     "en": [
       "I don’t like cleaning. — Neither do I.",
@@ -866,7 +866,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING", "ARTICLES"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "ARTICLES"],
     "ua": ["Я люблю слухати музику в машині. — Я теж."],
     "en": [
       "I like listening to music in the car. — So do I."
@@ -883,7 +883,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "LIKE_ING"],
+    "rules": ["SO_DO_I_NEITHER_DO_I"],
     "ua": ["Я люблю кататися на велосипеді. — Я теж."],
     "en": [
       "I like riding a bike. — So do I.",

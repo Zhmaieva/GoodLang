@@ -142,7 +142,7 @@
     ]
   },
   {
-    "rules": ["PAST_SIMPLE", "LIKE_ING", "PREP_TIME", "PREP_PLACE"],
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "PREP_PLACE"],
     "ua": "Ми любили гуляти в парку восени.",
     "en": [
       "We liked walking in the park in autumn."
@@ -185,7 +185,7 @@
     ]
   },
   {
-    "rules": ["PAST_SIMPLE", "LIKE_ING"],
+    "rules": ["PAST_SIMPLE"],
     "ua": "Діти любили малювати кольоровими олівцями.",
     "en": [
       "The children liked drawing with colored pencils."

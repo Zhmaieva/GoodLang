@@ -38,20 +38,15 @@
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-  "ua": "Я представив себе аудиторії.",
+  "ua": "Я представився перед аудиторією.",
   "en": [
    "I introduced myself to the audience.",
    "I introduced myself in front of the audience."
   ]
  },
  {
-  "rules": ["REFLEXIVE_PRONOUNS"],
-  "ua": "Вона сказала собі зосередитися.",
-  "en": ["She told herself to focus."]
- },
- {
   "rules": ["REFLEXIVE_PRONOUNS", "PREP_PLACE"],
-  "ua": "Він сфотографував себе новим телефоном.",
+  "ua": "Він сфотографував себе на свій новий телефон.",
   "en": [
    "He photographed himself with his new phone.",
    "He took a photo of himself with his new phone.",
@@ -129,7 +124,7 @@
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS"],
-  "ua": "Вона втішила себе шоколадом.",
+  "ua": "Вона потішила себе шоколадом.",
   "en": [
    "She comforted herself with chocolate.",
    "She cheered herself up with some chocolate."
@@ -169,7 +164,7 @@
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS"],
-  "ua": "Він нагадує себе про свої цілі.",
+  "ua": "Він нагадує собі про свої цілі.",
   "en": [
    "He reminds himself of his goals.",
    "He constantly reminds himself of his goals."
@@ -193,7 +188,7 @@
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-  "ua": "Я маю трохи часу для себе.",
+  "ua": "У мене є трохи часу для себе.",
   "en": [
    "I have some time for myself.",
    "I finally have some time for myself."
@@ -302,22 +297,6 @@
   ]
  },
  {
-  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-  "ua": "Він часто чує себе в записах.",
-  "en": [
-   "He often hears himself in recordings.",
-   "He frequently hears himself on recordings."
-  ]
- },
- {
-  "rules": ["REFLEXIVE_PRONOUNS"],
-  "ua": "Вони почуваються впевнено в собі.",
-  "en": [
-   "They feel confident in themselves.",
-   "They feel sure of themselves."
-  ]
- },
- {
   "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PREP_TIME"],
   "ua": "Я часто говорю сам до себе, коли думаю.",
   "en": [
@@ -380,14 +359,6 @@
   ]
  },
  {
-  "rules": ["REFLEXIVE_PRONOUNS", "ARTICLES"],
-  "ua": "Я бачу себе у майбутньому як вчителя.",
-  "en": [
-   "I see myself as a teacher in the future.",
-   "I imagine myself as a teacher in the future."
-  ]
- },
- {
   "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
   "ua": "Вона змусила себе посміхнутися.",
   "en": [
@@ -397,23 +368,15 @@
  },
  {
   "rules": ["REFLEXIVE_PRONOUNS"],
-  "ua": "Він утримує себе у формі.",
+  "ua": "Він підтримує себе в хорошій формі.",
   "en": [
-   "He keeps himself in shape.",
+   "He keeps himself in good shape.",
    "He maintains himself in good shape."
   ]
  },
  {
-  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
-  "ua": "Ми змусили себе продовжувати.",
-  "en": [
-   "We pushed ourselves to keep going.",
-   "We forced ourselves to keep going."
-  ]
- },
- {
   "rules": ["REFLEXIVE_PRONOUNS", "SHOULD_SHOULDNT"],
-  "ua": "Ви не повинні знецінювати себе.",
+  "ua": "Ви не повинні недооцінювати себе.",
   "en": [
    "You shouldn’t underestimate yourselves.",
    "You shouldn’t undervalue yourselves."
@@ -425,14 +388,6 @@
   "en": [
    "They convinced themselves they could do it.",
    "They assured themselves they could do it."
-  ]
- },
- {
-  "rules": ["REFLEXIVE_PRONOUNS", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-  "ua": "Я завжди кажу собі правду.",
-  "en": [
-   "I always tell myself the truth.",
-   "I always remind myself of the truth."
   ]
  },
  {
@@ -449,30 +404,6 @@
   "en": [
    "He looks at himself in the mirror every morning.",
    "He checks himself in the mirror every morning."
-  ]
- },
- {
-  "rules": ["REFLEXIVE_PRONOUNS"],
-  "ua": "Ми тримаємо себе спокійними в стресових ситуаціях.",
-  "en": [
-   "We keep ourselves calm in stressful situations.",
-   "We control ourselves in stressful situations."
-  ]
- },
- {
-  "rules": ["REFLEXIVE_PRONOUNS", "REPORTED_QUESTIONS"],
-  "ua": "Ви навчили себе цьому без допомоги?",
-  "en": [
-   "Did you teach yourselves this without help?",
-   "Did you learn this yourselves without help?"
-  ]
- },
- {
-  "rules": ["REFLEXIVE_PRONOUNS", "LET_MAKE_ALLOW"],
-  "ua": "Вони дозволили собі трохи відпочинку.",
-  "en": [
-   "They allowed themselves some rest.",
-   "They gave themselves some rest."
   ]
  }
  ] }

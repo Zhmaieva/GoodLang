@@ -20,19 +20,14 @@
     "en": ["The city where I was born is very beautiful.", "The town where I was born is very beautiful."]
   },
   {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Це фільм, який усім сподобався.",
-    "en": ["That's the movie that everyone liked.", "That's the movie which everyone liked."]
-  },
-  {
     "rules": ["RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": "Дім, у якому вони живуть, дуже старий.",
     "en": ["The house where they live is very old.", "The house that they live in is very old."]
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Це люди, які врятували собаку.",
-    "en": ["These are the people who rescued the dog.", "These are the people who saved the dog."]
+    "ua": "Це люди, які врятували мого собаку.",
+    "en": ["These are the people who rescued my dog.", "These are the people who saved my dog."]
   },
   {
     "rules": ["RELATIVE_CLAUSES", "PREP_TIME"],
@@ -50,18 +45,8 @@
     "en": ["I don't know who did it."]
   },
   {
-    "rules": ["RELATIVE_CLAUSES", "POSSESSIVE_S"],
-    "ua": "Хлопець, чий телефон дзвонить, — мій брат.",
-    "en": ["The boy whose phone is ringing is my brother."]
-  },
-  {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Музика, яку ти слухаєш, дуже гучна.",
-    "en": ["The music you're listening to is very loud.", "The music that you're listening to is very loud."]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Я бачив фільм, який ти мені радив.",
+    "ua": "Я подивився фільм, який ти мені порадив.",
     "en": ["I saw the movie you recommended.", "I watched the film that you recommended."]
   },
   {
@@ -111,16 +96,6 @@
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Моя сестра, яка працює лікарем, дуже зайнята.",
-    "en": ["My sister, who works as a doctor, is very busy."]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Мій тато, який боїться літати, ніколи не літає літаком.",
-    "en": ["My dad, who is afraid of flying, never travels by plane."]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
     "ua": "Ця компанія, яку заснували у 1990 році, зараз дуже успішна.",
     "en": ["This company, which was founded in 1990, is very successful now."]
   },
@@ -133,11 +108,6 @@
     "rules": ["RELATIVE_CLAUSES", "PREP_PLACE"],
     "ua": "Київ, де я виріс, мені дуже дорогий.",
     "en": ["Kyiv, where I grew up, is very dear to me."]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Мій викладач, який завжди допомагає студентам, дуже добрий.",
-    "en": ["My teacher, who always helps students, is very kind."]
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
@@ -158,18 +128,8 @@
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Мій кіт, який завжди спить на дивані, зараз на кухні.",
-    "en": ["My cat, which always sleeps on the sofa, is in the kitchen now.", "My cat, who always sleeps on the sofa, is in the kitchen now."]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
     "ua": "Музей, який ми відвідали минулого тижня, був вражаючим.",
     "en": ["The museum, which we visited last week, was impressive."]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "POSSESSIVE_S"],
-    "ua": "Мій друг, чия сестра живе в Канаді, планує поїхати туди.",
-    "en": ["My friend, whose sister lives in Canada, plans to go there."]
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
@@ -208,42 +168,10 @@
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Лист, надісланий учора, лежить на столі.",
-    "en": [
-      "The letter sent yesterday is on the table.",
-      "The letter that was sent yesterday is on the table."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Книга, написана цим автором, стала популярною.",
-    "en": [
-      "The book written by this author became popular.",
-      "The book that was written by this author became popular."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Студенти, що навчаються англійської, сидять у другому ряду.",
+    "ua": "Студенти, які вивчають англійську, сидять у другому ряду.",
     "en": [
       "The students studying English are sitting in the second row.",
       "The students who are studying English are sitting in the second row."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Дім, збудований у 1920 році, досі стоїть.",
-    "en": [
-      "The house built in 1920 is still standing.",
-      "The house that was built in 1920 is still standing."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Фільм, знятий у Парижі, отримав нагороду.",
-    "en": [
-      "The movie filmed in Paris won an award.",
-      "The movie that was filmed in Paris won an award."
     ]
   },
   {
@@ -256,14 +184,6 @@
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Квитки, куплені заздалегідь, дешевші.",
-    "en": [
-      "Tickets bought in advance are cheaper.",
-      "Tickets that are bought in advance are cheaper."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
     "ua": "Хлопець, який розмовляє з Анною, мій брат.",
     "en": [
       "The boy talking to Anna is my brother.",
@@ -272,43 +192,10 @@
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Місто, зруйноване війною, було відбудоване.",
-    "en": [
-      "The city destroyed by the war was rebuilt.",
-      "The city that was destroyed by the war was rebuilt."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Фільм, що йде зараз у кіно, дуже цікавий.",
+    "ua": "Фільм, який зараз іде в кіно, дуже цікавий.",
     "en": [
       "The movie showing at the cinema now is very interesting.",
       "The movie that is showing at the cinema now is very interesting."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "PREP_PLACE"],
-    "ua": "Автомобілі, зроблені в Японії, дуже надійні.",
-    "en": [
-      "Cars made in Japan are very reliable.",
-      "Cars that are made in Japan are very reliable.",
-      "Cars manufactured in Japan are very reliable."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Люди, які чекають на автобус, виглядають втомленими.",
-    "en": [
-      "The people waiting for the bus look tired.",
-      "The people who are waiting for the bus look tired."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "PREP_TIME"],
-    "ua": "Будинок, що ремонтується, буде готовий у червні.",
-    "en": [
-      "The building being repaired will be ready in June.",
-      "The building that is being repaired will be ready in June."
     ]
   },
   {
@@ -321,75 +208,11 @@
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Листи, написані від руки, виглядають щиріше.",
-    "en": [
-      "Letters written by hand feel more personal.",
-      "Letters that are written by hand look more personal."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Кімната, яку прибирають зараз, — моя.",
-    "en": [
-      "The room being cleaned right now is mine.",
-      "The room that is being cleaned right now is mine."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "PREP_PLACE"],
-    "ua": "Квіти, що ростуть у саду, пахнуть чудово.",
-    "en": [
-      "The flowers growing in the garden smell wonderful.",
-      "The flowers that grow in the garden smell wonderful."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "PREP_TIME"],
-    "ua": "Дім, проданий минулого місяця, тепер порожній.",
-    "en": [
-      "The house sold last month is empty now.",
-      "The house that was sold last month is empty now."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Студенти, що складають іспит, виглядають нервовими.",
-    "en": [
-      "The students taking the exam look nervous.",
-      "The students who are taking the exam look nervous."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Міст, збудований інженерами, з’єднує два міста.",
-    "en": [
-      "The bridge built by engineers connects the two cities.",
-      "The bridge that was built by engineers connects the two cities."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Коли я зустрів того, хто врятував мого собаку, я заплакав.",
+    "ua": "Коли я зустрів людину, яка врятувала мого собаку, я заплакав.",
     "en": [
       "When I met the man who saved my dog, I cried.",
       "When I met the man that saved my dog, I cried.",
       "When I met the person who saved my dog, I cried."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "COMPARATIVES"],
-    "ua": "Вона купила машину, яка була дешевшою, ніж очікувала.",
-    "en": [
-      "She bought a car that was cheaper than she expected.",
-      "She bought a car which was cheaper than she expected."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "PREP_TIME"],
-    "ua": "Я бачив будинок, який згорів минулого року.",
-    "en": [
-      "I saw the house that burned down last year.",
-      "I saw the house which burned down last year."
     ]
   },
   {
@@ -425,15 +248,6 @@
     ]
   },
   {
-    "rules": ["RELATIVE_CLAUSES", "PREP_PLACE"],
-    "ua": "Ми залишилися в готелі, що біля моря.",
-    "en": [
-      "We stayed at a hotel that is near the sea.",
-      "We stayed at a hotel which is close to the beach.",
-      "We stayed at a hotel that is by the sea."
-    ]
-  },
-  {
     "rules": ["RELATIVE_CLAUSES", "POSSESSIVE_S"],
     "ua": "Я зустрів дівчину, чия мама працює з моєю сестрою.",
     "en": [
@@ -443,10 +257,10 @@
   },
   {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Він знайшов лист, який шукав тижнями.",
+    "ua": "Він знайшов лист, який я шукав тижнями.",
     "en": [
-      "He found the letter that he had been looking for for weeks.",
-      "He found the letter which he had been searching for for weeks."
+      "He found the letter that I had been looking for for weeks.",
+      "He found the letter which I had been searching for for weeks."
     ]
   },
   {
@@ -474,44 +288,12 @@
     ]
   },
   {
-    "rules": ["RELATIVE_CLAUSES", "PREP_TIME"],
-    "ua": "Вона одягнула сукню, яку отримала на день народження.",
-    "en": [
-      "She wore the dress that she got for her birthday.",
-      "She wore the dress which she received for her birthday."
-    ]
-  },
-  {
     "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Ми залишили повідомлення для людини, яка відповідала за проєкт.",
+    "ua": "Вона заснувала компанію, яка стала лідером на ринку.",
     "en": [
-      "We left a message for the person who was in charge of the project.",
-      "We left a message for the person that was responsible for the project."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Він заснував компанію, яка стала лідером на ринку.",
-    "en": [
-      "He started a company that became a market leader.",
-      "He founded a company that became a market leader.",
-      "He founded a company which became a leader on the market."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES"],
-    "ua": "Я побачив дитину, яка втратила іграшку.",
-    "en": [
-      "I saw a child who lost their toy.",
-      "I saw a child that had lost their toy."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "PREP_TIME"],
-    "ua": "Ми відвідали парк, який закривається о восьмій вечора.",
-    "en": [
-      "We visited the park that closes at eight p.m.",
-      "We visited the park which closes at eight in the evening."
+      "She started a company that became a market leader.",
+      "She founded a company that became a market leader.",
+      "She founded a company which became a leader on the market."
     ]
   },
   {
@@ -544,14 +326,6 @@
     "en": [
       "He remembers the day when he got his first job.",
       "He remembers the day that he got his first job."
-    ]
-  },
-  {
-    "rules": ["RELATIVE_CLAUSES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми бачили міст, який будували багато років.",
-    "en": [
-      "We saw the bridge that took many years to build.",
-      "We saw the bridge which took years to build."
     ]
   }
 ] }

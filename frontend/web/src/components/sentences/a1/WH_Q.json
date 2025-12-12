@@ -46,7 +46,7 @@
       "en": ["How much water is there in the bottle?"]
     },
     {
-      "rules": ["WH_Q", "LIKE_ING"],
+      "rules": ["WH_Q"],
       "ua": "Що ти любиш робити у вільний час?",
       "en": ["What do you like doing in your free time?"]
     },
@@ -336,7 +336,7 @@
       "en": ["How do you get to school?", "How do you travel to school?"]
     },
     {
-      "rules": ["WH_Q", "LIKE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["WH_Q", "NEGATION_DONT_DOESNT"],
       "ua": "Чому ти не любиш читати?",
       "en": ["Why don’t you like reading?", "Why do you dislike reading?"]
     },

@@ -10,16 +10,6 @@
     "en": ["I never drink coffee in the morning."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Зараз він рідко розмовляє по телефону.",
-    "en": ["He rarely talks on the phone now."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
-    "ua": "Цей студент завжди робить домашнє завдання.",
-    "en": ["This student always does their homework."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "MODALS_OF_PROBABILITY"],
     "ua": "Іноді вона може забути свій телефон удома.",
     "en": ["She might sometimes forget her phone at home."]
@@ -30,14 +20,9 @@
     "en": ["We never visited that city before."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_PERFECT", "SINCE_FOR"],
-    "ua": "З дитинства я часто подорожував за кордон.",
-    "en": ["I have often traveled abroad since childhood."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "LIKE_ING"],
-    "ua": "Після школи вони зазвичай люблять грати у футбол.",
-    "en": ["They usually like playing football after school."]
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
+    "ua": "Після школи вони зазвичай грають у футбол.",
+    "en": ["They usually play football after school."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "CAN_CANT"],
@@ -60,19 +45,9 @@
     "en": ["He never eats sweets."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Зараз вона рідко працює в саду.",
-    "en": ["She rarely works in the garden now."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вони часто ходять до кінотеатру.",
     "en": ["They often go to the cinema.", "They often go to the movies."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "CAN_CANT"],
-    "ua": "Ми завжди можемо відвідати музей.",
-    "en": ["We can always visit the museum."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_PERFECT"],
@@ -80,12 +55,7 @@
     "en": ["They have never been to London."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_PERFECT", "SINCE_FOR"],
-    "ua": "Від минулого року я часто відвідую бабусю.",
-    "en": ["I have often visited my grandmother since last year."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "LIKE_ING", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він зазвичай любить слухати музику.",
     "en": ["He usually likes listening to music."]
   },
@@ -110,29 +80,9 @@
     "en": ["My brother always forgets his phone."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "GOING_TO_PLANS"],
-    "ua": "Ми ніколи не збираємося купувати цю машину.",
-    "en": ["We are never going to buy that car."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PREP_PLACE"],
-    "ua": "Вона часто сидить на дивані.",
-    "en": ["She often sits on the sofa."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "WILL_PREDICTIONS"],
-    "ua": "Напевно, він завжди працюватиме вдома.",
-    "en": ["He will probably always work from home."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_PERFECT"],
     "ua": "Я ніколи не бачив цей фільм.",
     "en": ["I have never seen this movie before."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PAST_SIMPLE", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ми часто ходили в гори, але цього разу залишилися вдома.",
-    "en": ["We often went to the mountains, but this time we stayed home."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "DEMONSTRATIVES", "PRESENT_SIMPLE_FREQ"],
@@ -155,7 +105,7 @@
     "en": ["She never answered that question."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "COUNT_UNCOUNT", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я часто п’ю воду протягом дня.",
     "en": ["I often drink water during the day."]
   },
@@ -163,11 +113,6 @@
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "FIRST_CONDITIONAL"],
     "ua": "Якщо ти постійно поспішатимеш, ти робитимеш помилки.",
     "en": ["If you always hurry, you will make mistakes."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "TOO_VERY"],
-    "ua": "Вона дуже часто запізнюється.",
-    "en": ["She is very often late."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_PERFECT_CONT"],
@@ -230,21 +175,6 @@
     "en": ["She often wakes up early."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "SO_DO_I_NEITHER_DO_I"],
-    "ua": "Я ніколи не п’ю чаю.",
-    "en": ["I never drink tea."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "TOO_ENOUGH"],
-    "ua": "У нього рідко є достатньо часу для відпочинку.",
-    "en": ["He rarely has enough time to rest."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "WOULD_RATHER_PREFER"],
-    "ua": "Зазвичай я волію залишатися вдома.",
-    "en": ["I usually prefer staying at home."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "HAD_BETTER"],
     "ua": "Тобі краще завжди приходити вчасно.",
     "en": ["You had better always come on time."]
@@ -258,11 +188,6 @@
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Вона завжди носить гарний червоний шарф.",
     "en": ["She always wears a beautiful red scarf."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "MIXED_CONDITIONALS"],
-    "ua": "Якби вона завжди старалася, то зараз була б успішною.",
-    "en": ["If she had always tried, she would be successful now."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
@@ -290,19 +215,9 @@
     "en": ["I can rarely find free time."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PAST_SIMPLE"],
-    "ua": "Ми часто ходили до театру минулого року.",
-    "en": ["We often went to the theater last year."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_PERFECT"],
     "ua": "Вона ніколи не була за кордоном.",
     "en": ["She has never been abroad."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "LIKE_ING"],
-    "ua": "Я зазвичай люблю гуляти ввечері.",
-    "en": ["I usually like walking in the evening."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
@@ -325,11 +240,6 @@
     "en": ["My sister always wears her favorite dress."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Я іноді думаю навчитися грати на гітарі.",
-    "en": ["I sometimes think about learning to play the guitar."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
     "ua": "Він зазвичай сидить біля вікна.",
     "en": ["He usually sits by the window."]
@@ -340,29 +250,9 @@
     "en": ["She will probably never change her mind."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_PERFECT", "ALREADY_YET_JUST", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Я вже багато разів бачив цей спектакль.",
-    "en": ["I have already seen this play many times."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PAST_SIMPLE", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ми рідко подорожували, тому що не мали грошей.",
-    "en": ["Ми рідко подорожували, бо не мали грошей."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
-    "ua": "Ці студенти завжди готуються до іспитів.",
-    "en": ["These students always prepare for exams."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "SHOULD_SHOULDNT"],
     "ua": "Ти ніколи не повинен брехати.",
     "en": ["You should never lie."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
-    "ua": "Увечері він часто готує вечерю.",
-    "en": ["He often cooks dinner in the evening."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PAST_SIMPLE"],
@@ -370,14 +260,9 @@
     "en": ["She rarely asked about it."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я завжди їм фрукти на сніданок.",
     "en": ["I always eat fruit for breakfast."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "FIRST_CONDITIONAL"],
-    "ua": "Якщо ти завжди вчишся, ти складеш іспит.",
-    "en": ["If you always study, you will pass the exam."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "TOO_VERY"],
@@ -415,29 +300,9 @@
     "en": ["She had never cooked dinner before we arrived."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "MODAL_PERFECTS", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Він, можливо, часто міг би вигравати, якби більше тренувався.",
-    "en": ["He might often have won if he had trained more."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "REPORTED_SPEECH"],
-    "ua": "Вона сказала, що завжди любить читати.",
-    "en": ["She said she always loved reading."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "QUESTION_TAGS"],
-    "ua": "Вони рідко приходять вчасно, чи не так?",
-    "en": ["They rarely come on time, do they?"]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PASSIVE_VOICE_ALL_TENSES"],
     "ua": "Цю пісню часто співають на вечірках.",
     "en": ["This song is often sung at parties."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "RELATIVE_CLAUSES"],
-    "ua": "Друг, який завжди жартує, дуже веселий.",
-    "en": ["The friend who always jokes is very funny."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "ADVERBS_OF_MANNER"],
@@ -450,34 +315,19 @@
     "en": ["I often exercise in order to stay healthy."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "SECOND_CONDITIONAL"],
-    "ua": "Якби я часто подорожував, я б знав більше мов.",
-    "en": ["If I often traveled, I would know more languages."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PHRASAL_VERBS_COMMON"],
     "ua": "Вона ніколи не здається.",
     "en": ["She never gives up."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "SO_DO_I_NEITHER_DO_I"],
-    "ua": "Я часто бігаю вранці. – Я також.",
-    "en": ["I often run in the morning. – So do I."]
+    "ua": "Я часто бігаю вранці.",
+    "en": ["I often run in the morning."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "TOO_ENOUGH"],
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Він часто занадто втомлений, щоб працювати.",
     "en": ["He is often too tired to work."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "WOULD_RATHER_PREFER"],
-    "ua": "Я зазвичай волію читати, а не дивитися телевізор.",
-    "en": ["I usually prefer reading to watching TV."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "HAD_BETTER"],
-    "ua": "Тобі краще завжди слухати вчителя.",
-    "en": ["You had better always listen to the teacher."]
   },
   {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "COMPLEX_PREPOSITIONS"],
@@ -485,23 +335,8 @@
     "en": ["He often misses classes due to illness."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PARTICIPLE_CLAUSES"],
-    "ua": "Завжди поспішаючи, вона втрачає речі.",
-    "en": ["Always rushing, she loses things."]
-  },
-  {
     "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "SIMPLE_ADJ"],
     "ua": "Він завжди купує дорогі машини.",
     "en": ["He always buys expensive cars."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "CLEFT_SENTENCES"],
-    "ua": "Саме він завжди виграє змагання.",
-    "en": ["It is he who always wins the competition."]
-  },
-  {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "MIXED_CONDITIONALS"],
-    "ua": "Якби вона завжди вчилася, вона б зараз мала роботу.",
-    "en": ["If she had always studied, she would have a job now."]
   }
 ] }

@@ -90,7 +90,7 @@
     "en": ["The dog is a faithful friend of man.", "The dog is a loyal friend of humans."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "LIKE_ING"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": "Коти люблять спати.",
     "en": ["Cats love sleeping.", "Cats like to sleep."]
   },

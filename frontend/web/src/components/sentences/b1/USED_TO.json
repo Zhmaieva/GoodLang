@@ -66,7 +66,7 @@
   },
   {
     "rules": ["USED_TO"],
-    "ua": "Вони раніше разом ходили на риболовлю.",
+    "ua": "Вони раніше разом ходили на рибалку.",
     "en": ["They used to go fishing together."]
   },
   {
@@ -131,8 +131,8 @@
   },
   {
     "rules": ["USED_TO"],
-    "ua": "Ми раніше надсилали листи замість електронних.",
-    "en": ["We used to send letters instead of emails."]
+    "ua": "Ми раніше надсилали паперові листи замість електронних.",
+    "en": ["We used to send paper letters instead of emails.", "We used to send paper letters instead of electronic ones."]
   },
   {
     "rules": ["USED_TO"],
@@ -151,7 +151,7 @@
   },
   {
     "rules": ["USED_TO"],
-    "ua": "Вона раніше постійно малювала.",
+    "ua": "Вона постійно малювала раніше.",
     "en": ["She used to draw all the time."]
   },
   {
@@ -161,13 +161,8 @@
   },
   {
     "rules": ["USED_TO"],
-    "ua": "Він раніше легко губився.",
-    "en": ["He used to get lost easily."]
-  },
-  {
-    "rules": ["USED_TO"],
-    "ua": "Вони раніше сміялися з усього.",
-    "en": ["They used to laugh at everything."]
+    "ua": "Він раніше часто губився.",
+    "en": ["He used to get lost often.", "He used to get lost often before."]
   },
   {
     "rules": ["USED_TO", "PREP_PLACE"],
@@ -195,14 +190,9 @@
     "en": ["They used to go skiing in winter."]
   },
   {
-    "rules": ["USED_TO"],
-    "ua": "Я раніше носив шкільну форму.",
-    "en": ["I used to wear a school uniform."]
-  },
-  {
     "rules": ["USED_TO", "PREP_TIME"],
-    "ua": "Ми раніше дивилися на зорі вночі.",
-    "en": ["We used to watch the stars at night."]
+    "ua": "Ми раніше часто дивилися на зорі вночі.",
+    "en": ["We used to often watch the stars at night.", "We used to often gaze at the stars at night."]
   },
   {
     "rules": ["USED_TO", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
@@ -246,7 +236,7 @@
   },
   {
     "rules": ["USED_TO"],
-    "ua": "Вони раніше сперечалися про все.",
+    "ua": "Вони раніше сперечалися через будь-що.",
     "en": ["They used to argue about everything."]
   },
   {

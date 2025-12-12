@@ -290,7 +290,7 @@
     "en": ["The fact that he didn’t come doesn’t mean he doesn’t care.", "Just because he didn’t come doesn’t mean he’s indifferent."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TOO_ENOUGH"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Імовірність того, що вони знайдуть рішення, досить висока.",
     "en": ["The probability that they will find a solution is quite high.", "There’s a good chance they’ll solve the problem."]
   },

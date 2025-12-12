@@ -245,7 +245,7 @@
     "en": ["Those flowers are more expensive."]
   },
   {
-    "rules": ["DEMONSTRATIVES", "LIKE_ING"],
+    "rules": ["DEMONSTRATIVES"],
     "ua": "Ці туфлі мені не подобаються.",
     "en": ["I don't like these shoes."]
   },
@@ -360,7 +360,7 @@
     "en": ["Those days were hard.", "Those days were difficult."]
   },
   {
-    "rules": ["DEMONSTRATIVES", "TO_BE", "TOO_ENOUGH"],
+    "rules": ["DEMONSTRATIVES", "TO_BE", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Ці черевики занадто великі.",
     "en": ["These shoes are too big."]
   },

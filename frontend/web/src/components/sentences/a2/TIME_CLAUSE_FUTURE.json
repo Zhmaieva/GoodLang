@@ -520,7 +520,7 @@
   },
   {
     "rules": ["TIME_CLAUSE_FUTURE"],
-    "ua": "Ми гулятимемо, доки магазин не відкриється.",
+    "ua": "Ми погуляємо, доки магазин не відкриється.",
     "en": [
       "We’ll walk around until the shop opens.",
       "We’ll walk around until the store opens."
@@ -643,14 +643,6 @@
     "en": [
       "Once you clean your room, you can play games.",
       "As soon as you clean your room, you can play games."
-    ]
-  },
-  {
-    "rules": ["TIME_CLAUSE_FUTURE"],
-    "ua": "Як тільки їй стане краще, ми підемо на прогулянку.",
-    "en": [
-      "Once she gets better, we’ll go for a walk.",
-      "As soon as she gets better, we’ll go for a walk."
     ]
   },
   {

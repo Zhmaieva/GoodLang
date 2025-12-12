@@ -181,15 +181,6 @@
   },
 
   {
-    "rules": ["MODAL_PERFECTS", "THIRD_CONDITIONAL"],
-    "en": [
-      "I could have passed the test if I had studied.",
-      "I could have succeeded on the test if I had studied."
-    ],
-    "ua": "Я міг би скласти тест, якби я вчився.",
-    "hint": "use COULD"
-  },
-  {
     "rules": ["MODAL_PERFECTS", "COMPARATIVES"],
     "en": [
       "She could have won the race with more training.",
@@ -223,15 +214,6 @@
       "We could have arrived earlier if we had not been stuck in traffic."
     ],
     "ua": "Ми могли б приїхати раніше, якби не застрягли в заторах.",
-    "hint": "use COULD"
-  },
-  {
-    "rules": ["MODAL_PERFECTS"],
-    "en": [
-      "You could have hurt yourself!",
-      "You could have injured yourself!"
-    ],
-    "ua": "Ти міг би поранитися!",
     "hint": "use COULD"
   },
   {
@@ -641,7 +623,7 @@
     "hint": "use MIGHT"
   },
   {
-    "rules": ["MODAL_PERFECTS", "TOO_ENOUGH"],
+    "rules": ["MODAL_PERFECTS", "ENOUGH_TOO_MUCH_MANY"],
     "en": [
       "I might have been too harsh.",
       "I might have been overly harsh."
@@ -710,15 +692,6 @@
       "You might have lost your keys."
     ],
     "ua": "Ти, можливо, впустив свої ключі.",
-    "hint": "use MIGHT"
-  },
-  {
-    "rules": ["MODAL_PERFECTS", "ARTICLES"],
-    "en": [
-      "We might have missed the deadline.",
-      "We might have failed to meet the deadline."
-    ],
-    "ua": "Ми, можливо, пропустили дедлайн.",
     "hint": "use MIGHT"
   },
   {
@@ -849,7 +822,7 @@
     "hint": "use CANNOT"
   },
   {
-    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "TOO_ENOUGH_SO_SUCH"],
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ENOUGH_TOO_MUCH_MANY_SO_SUCH"],
     "en": [
       "You cannot have finished so quickly.",
       "You cannot have completed it so quickly."

@@ -1,922 +1,259 @@
-{ "COMPARATIVES": [
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
-    "ua": "Ти виглядаєш вищим, ніж брат.",
-    "en": [
-      "You look taller than your brother.",
-      "You seem taller than your sibling.",
-      "You look higher than your brother.",
-      "You seem higher than your sibling."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Цей парк красивіший, ніж той у центрі.",
-    "en": [
-      "This park is prettier than the one in the center.",
-      "This park is more beautiful than the one in the center.",
-      "This park is lovelier than the one downtown.",
-      "This park is more attractive than the one downtown."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі книги цікавіші за фільми.",
-    "en": [
-      "Some books are more interesting than films.",
-      "Some books are more engaging than films.",
-      "Certain books are more captivating than movies.",
-      "Certain books are more fascinating than movies."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
-    "ua": "Твій телефон швидший за мій?",
-    "en": [
-      "Is your phone faster than mine?",
-      "Is your phone quicker than mine?",
-      "Does your phone work faster than mine?",
-      "Does your phone work quicker than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Ця куртка тепліша, бо вона вовняна.",
-    "en": [
-      "This jacket is warmer because it’s woolen.",
-      "This jacket is cozier because it’s woolen.",
-      "This jacket is more comfortable because it’s made of wool.",
-      "This jacket is snugger because it’s made of wool."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей рюкзак міцніший за мамин.",
-    "en": [
-      "This backpack is stronger than mom’s.",
-      "This backpack is sturdier than mom’s.",
-      "That backpack is more durable than my mother’s.",
-      "That backpack is tougher than my mother’s."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Сьогоднішній вечір тихіший, ніж учорашній.",
-    "en": [
-      "This evening is quieter than yesterday.",
-      "This evening is calmer than yesterday.",
-      "Tonight is more peaceful than last night.",
-      "Tonight is more tranquil than last night."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES"],
-    "ua": "Твоя картина яскравіша за мою?",
-    "en": [
-      "Is your painting brighter than mine?",
-      "Is your painting more vibrant than mine?",
-      "Does your artwork look brighter than mine?",
-      "Does your artwork look more vibrant than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Цей ноутбук набагато швидший за старий.",
-    "en": [
-      "This laptop is much faster than the old one.",
-      "This laptop is much quicker than the old one.",
-      "This laptop is far more rapid than the old one.",
-      "This laptop is far speedier than the old one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "REFLEXIVE_PRONOUNS", "SIMPLE_ADJ"],
-    "ua": "Він відчуває себе впевненішим, ніж раніше.",
-    "en": [
-      "He feels more confident than before.",
-      "He feels surer than before.",
-      "He feels more assured than he did earlier.",
-      "He feels more certain than he did earlier."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі міста чистіші за наше.",
-    "en": [
-      "Some cities are cleaner than ours.",
-      "Some cities are tidier than ours.",
-      "Certain cities are more spotless than our city.",
-      "Certain cities are neater than our city."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
-    "ua": "Коли сонце зійде, день стане теплішим.",
-    "en": [
-      "When the sun rises, the day will become warmer.",
-      "When the sun rises, the day will get warmer.",
-      "When the sun comes up, the day will become cozier.",
-      "When the sun comes up, the day will get cozier."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER"],
-    "ua": "Вона малює акуратніше за нього.",
-    "en": [
-      "She paints more neatly than him.",
-      "She paints more carefully than him.",
-      "She draws more precisely than he does.",
-      "She draws more tidily than he does."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ця зима холодніша за минулу.",
-    "en": [
-      "This winter is colder than last winter.",
-      "This winter is chillier than last winter.",
-      "This winter is more freezing than the previous one.",
-      "This winter is icier than the previous one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому твій велосипед швидший за мій?",
-    "en": [
-      "Why is your bike faster than mine?",
-      "Why is your bike quicker than mine?",
-      "Why is your bicycle speedier than mine?",
-      "Why is your bicycle more rapid than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Цей будинок набагато затишніший, ніж той у селі.",
-    "en": [
-      "This house is much cozier than the one in the village.",
-      "This house is much warmer than the one in the village.",
-      "This house is far more comfortable than the one in the countryside.",
-      "This house is far snugger than the one in the countryside."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES"],
-    "ua": "Твоя сумка важча за мою?",
-    "en": [
-      "Is your bag heavier than mine?",
-      "Is your bag weightier than mine?",
-      "Does your bag feel heavier than mine?",
-      "Does your bag feel weightier than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Цей светр м’якший за светр тата.",
-    "en": [
-      "This sweater is softer than dad’s.",
-      "This sweater is smoother than dad’s.",
-      "This sweater is more comfortable than my father’s.",
-      "This sweater is silkier than my father’s."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Завтра буде сонячніше, ніж сьогодні.",
-    "en": [
-      "Tomorrow will be sunnier than today.",
-      "Tomorrow will be brighter than today.",
-      "Tomorrow will be more radiant than today.",
-      "Tomorrow will be more cheerful than today."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі кафе затишніші за ресторани.",
-    "en": [
-      "Some cafés are cozier than restaurants.",
-      "Some cafés are warmer than restaurants.",
-      "Certain cafés are more comfortable than dining places.",
-      "Certain cafés are snugger than dining places."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Він пише швидше за сестру.",
-    "en": [
-      "He writes faster than his sister.",
-      "He writes more quickly than his sister.",
-      "He writes speedier than his sibling.",
-      "He writes more rapidly than his sibling."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ти виглядаєш щасливішим, бо сьогодні вихідний.",
-    "en": [
-      "You look happier because it’s a day off.",
-      "You seem happier because it’s a day off.",
-      "You look more joyful since it’s a holiday.",
-      "You seem more joyful since it’s a holiday."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Цей місяць тепліший за попередній.",
-    "en": [
-      "This month is warmer than the previous one.",
-      "This month is milder than the previous one.",
-      "This month is more pleasant than the last one.",
-      "This month is cozier than the last one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q", "PREP_PLACE"],
-    "ua": "Чому цей магазин дорожчий за той на розі?",
-    "en": [
-      "Why is this shop more expensive than the one on the corner?",
-      "Why is this store more expensive than the one on the corner?",
-      "Why is this shop pricier than the one nearby?",
-      "Why is this store costlier than the one nearby?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME"],
-    "ua": "Вона бігає швидше ніж я цього тижня.",
-    "en": [
-      "She runs faster than me this week.",
-      "She runs quicker than me this week.",
-      "She runs more rapidly than I do this week.",
-      "She runs speedier than I do this week."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
-    "ua": "Цей стіл міцніший за той?",
-    "en": [
-      "Is this table stronger than that one?",
-      "Is this table sturdier than that one?",
-      "Is this table more durable than that one?",
-      "Is this table tougher than that one?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Сьогоднішній ранок прохолодніший, ніж учорашній.",
-    "en": [
-      "This morning is cooler than yesterday.",
-      "This morning is chillier than yesterday.",
-      "Today’s morning is more refreshing than yesterday’s.",
-      "Today’s morning is colder than yesterday’s."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці квіти яскравіші за деякі в саду.",
-    "en": [
-      "These flowers are brighter than some in the garden.",
-      "These flowers are more vibrant than some in the garden.",
-      "Those flowers are more colorful than certain ones in the yard.",
-      "Those flowers are livelier than certain ones in the yard."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Цей вечір спокійніший, бо дощ припинився.",
-    "en": [
-      "This evening is calmer because the rain stopped.",
-      "This evening is quieter because the rain stopped.",
-      "Tonight is more peaceful since the rain ended.",
-      "Tonight is more tranquil since the rain ended."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Він працює швидше в офісі, ніж удома.",
-    "en": [
-      "He works faster in the office than at home.",
-      "He works more quickly in the office than at home.",
-      "He works speedier at work than at home.",
-      "He works more rapidly at work than at home."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ARTICLES"],
-    "ua": "Мій годинник точніший за твій.",
-    "en": [
-      "My watch is more accurate than yours.",
-      "My watch is more precise than yours.",
-      "My clock is more exact than yours.",
-      "My clock is truer than yours."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ця вулиця шумніша, ніж та біля парку.",
-    "en": [
-      "This street is noisier than the one near the park.",
-      "This street is louder than the one near the park.",
-      "This street is more bustling than the one by the park.",
-      "This street is busier than the one by the park."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому твоя книга цікавіша за мою?",
-    "en": [
-      "Why is your book more interesting than mine?",
-      "Why is your book more engaging than mine?",
-      "Why is your book more captivating than mine?",
-      "Why is your book more fascinating than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Цей суп набагато смачніший за той.",
-    "en": [
-      "This soup is much tastier than that one.",
-      "This soup is much more delicious than that one.",
-      "This soup is far more flavorful than that one.",
-      "This soup is far yummier than that one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "DEMONSTRATIVES"],
-    "ua": "Ці туфлі зручніші за ті?",
-    "en": [
-      "Are these shoes more comfortable than those?",
-      "Are these shoes comfier than those?",
-      "Do these shoes feel more pleasant than those?",
-      "Do these shoes feel cozier than those?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі пляжі чистіші за цей.",
-    "en": [
-      "Some beaches are cleaner than this one.",
-      "Some beaches are tidier than this one.",
-      "Certain beaches are more spotless than this one.",
-      "Certain beaches are neater than this one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Вона співає мелодійніше, бо тренується щодня.",
-    "en": [
-      "She sings more melodiously because she practices daily.",
-      "She sings more tunefully because she practices daily.",
-      "She sings more harmoniously since she trains every day.",
-      "She sings more musically since she trains every day."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME"],
-    "ua": "Він грає краще ніж я цього сезону.",
-    "en": [
-      "He plays better than me this season.",
-      "He plays more skillfully than me this season.",
-      "He performs better than I do this season.",
-      "He performs more skillfully than I do this season."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "ARTICLES"],
-    "ua": "Цей ранок спокійніший за вчорашній.",
-    "en": [
-      "This morning is calmer than yesterday’s.",
-      "This morning is quieter than yesterday’s.",
-      "This morning is more peaceful than the last one.",
-      "This morning is more tranquil than the last one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_PLACE"],
-    "ua": "Цей парк зеленіший за той у місті?",
-    "en": [
-      "Is this park greener than the one in the city?",
-      "Is this park lusher than the one in the city?",
-      "Is this park more verdant than the one in town?",
-      "Is this park more vibrant than the one in town?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-    "ua": "Деякі фільми веселіші за цей.",
-    "en": [
-      "Some films are funnier than this one.",
-      "Some films are more amusing than this one.",
-      "Certain movies are more entertaining than this one.",
-      "Certain movies are livelier than this one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей учень вчиться старанніше за того.",
-    "en": [
-      "This student studies harder than that one.",
-      "This student studies more diligently than that one.",
-      "That student works more earnestly than the other one.",
-      "That student works more seriously than the other one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Сьогодні день ясніший, бо хмари зникли.",
-    "en": [
-      "Today is clearer because the clouds disappeared.",
-      "Today is brighter because the clouds disappeared.",
-      "Today is more radiant since the clouds are gone.",
-      "Today is sunnier since the clouds are gone."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q"],
-    "ua": "Чому твій ноутбук швидший за мій?",
-    "en": [
-      "Why is your laptop faster than mine?",
-      "Why is your laptop quicker than mine?",
-      "Why is your laptop speedier than mine?",
-      "Why is your laptop more rapid than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ця кімната набагато світліша за ту в підвалі.",
-    "en": [
-      "This room is much brighter than the one in the basement.",
-      "This room is much lighter than the one in the basement.",
-      "This room is far more radiant than the one downstairs.",
-      "This room is far more illuminated than the one downstairs."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Цей чай смачніший за каву.",
-    "en": [
-      "This tea is tastier than coffee.",
-      "This tea is more delicious than coffee.",
-      "This tea is yummier than coffee.",
-      "This tea is more flavorful than coffee."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Ця весна тепліша за минулу.",
-    "en": [
-      "This spring is warmer than last spring.",
-      "This spring is milder than last spring.",
-      "This spring is more pleasant than the previous one.",
-      "This spring is cozier than the previous one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
-    "ua": "Ти готуєш смачніше за сестру.",
-    "en": [
-      "You cook tastier than your sister.",
-      "You cook more deliciously than your sister.",
-      "You prepare food more flavorful than your sibling.",
-      "You prepare food yummier than your sibling."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Цей пляж спокійніший, ніж той біля міста.",
-    "en": [
-      "This beach is calmer than the one near the city.",
-      "This beach is quieter than the one near the city.",
-      "This beach is more peaceful than the one by town.",
-      "This beach is more tranquil than the one by town."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
-    "ua": "Твій чемодан легший за мій?",
-    "en": [
-      "Is your suitcase lighter than mine?",
-      "Is your suitcase less heavy than mine?",
-      "Does your bag feel lighter than mine?",
-      "Does your bag feel less heavy than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
-    "ua": "Ця страва гостріша, бо в ній більше перцю.",
-    "en": [
-      "This dish is spicier because it has more pepper.",
-      "This dish is hotter because it has more pepper.",
-      "This meal is more fiery since it contains more spice.",
-      "This meal is zestier since it contains more spice."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "DEMONSTRATIVES", "POSSESSIVE_S"],
-    "ua": "Цей плейлист цікавіший за татів.",
-    "en": [
-      "This playlist is more interesting than dad’s.",
-      "This playlist is more engaging than dad’s.",
-      "That playlist is more captivating than my father’s.",
-      "That playlist is more fascinating than my father’s."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Цей вечір прохолодніший, ніж учорашній.",
-    "en": [
-      "This evening is cooler than yesterday’s.",
-      "This evening is chillier than yesterday’s.",
-      "Tonight is more refreshing than last night’s.",
-      "Tonight is colder than last night’s."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES"],
-    "ua": "Твоя гітара звучніша за мою?",
-    "en": [
-      "Is your guitar louder than mine?",
-      "Is your guitar more resonant than mine?",
-      "Does your guitar sound louder than mine?",
-      "Does your guitar sound more resonant than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Цей поїзд набагато швидший за автобус.",
-    "en": [
-      "This train is much faster than the bus.",
-      "This train is much quicker than the bus.",
-      "This train is far more rapid than the bus.",
-      "This train is far speedier than the bus."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "REFLEXIVE_PRONOUNS", "SIMPLE_ADJ"],
-    "ua": "Вона відчуває себе спокійнішою, ніж раніше.",
-    "en": [
-      "She feels calmer than before.",
-      "She feels more peaceful than before.",
-      "She feels more relaxed than she did earlier.",
-      "She feels quieter than she did earlier."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-    "ua": "Деякі готелі комфортніші за наш.",
-    "en": [
-      "Some hotels are more comfortable than ours.",
-      "Some hotels are cozier than ours.",
-      "Certain hotels are more pleasant than our hotel.",
-      "Certain hotels are comfier than our hotel."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
-    "ua": "Коли настане літо, дні стануть теплішими.",
-    "en": [
-      "When summer arrives, the days will become warmer.",
-      "When summer arrives, the days will get warmer.",
-      "When summer comes, the days will become milder.",
-      "When summer comes, the days will get milder."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "DEMONSTRATIVES"],
-    "ua": "Ця подорож цікавіша за минулу.",
-    "en": [
-      "This trip is more interesting than the last one.",
-      "This trip is more engaging than the last one.",
-      "This journey is more fascinating than the previous one.",
-      "This journey is more captivating than the previous one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому твій суп смачніший за мій?",
-    "en": [
-      "Why is your soup tastier than mine?",
-      "Why is your soup more delicious than mine?",
-      "Why is your soup yummier than mine?",
-      "Why is your soup more flavorful than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ця кімната набагато затишніша за ту в готелі.",
-    "en": [
-      "This room is much cozier than the one in the hotel.",
-      "This room is much warmer than the one in the hotel.",
-      "This room is far more comfortable than the one at the hotel.",
-      "This room is far snugger than the one at the hotel."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES"],
-    "ua": "Твій рюкзак міцніший за мій?",
-    "en": [
-      "Is your backpack stronger than mine?",
-      "Is your backpack sturdier than mine?",
-      "Does your backpack seem more durable than mine?",
-      "Does your backpack seem tougher than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ARTICLES", "POSSESSIVE_S"],
-    "ua": "Цей торт солодший за мамин.",
-    "en": [
-      "This cake is sweeter than mom’s.",
-      "This cake is more sugary than mom’s.",
-      "This cake is tastier than my mother’s.",
-      "This cake is more delicious than my mother’s."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
-    "ua": "Завтра буде вітряніше, ніж сьогодні.",
-    "en": [
-      "Tomorrow will be windier than today.",
-      "Tomorrow will be breezier than today.",
-      "Tomorrow will be more blustery than today.",
-      "Tomorrow will be stormier than today."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі ресторани гучніші за цей.",
-    "en": [
-      "Some restaurants are louder than this one.",
-      "Some restaurants are noisier than this one.",
-      "Certain restaurants are more bustling than this one.",
-      "Certain restaurants are busier than this one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
-    "ua": "Вона співає мелодійніше за брата.",
-    "en": [
-      "She sings more melodiously than her brother.",
-      "She sings more tunefully than her brother.",
-      "She sings more harmoniously than her sibling.",
-      "She sings more musically than her sibling."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
-    "ua": "Ти виглядаєш бадьорішим, бо добре виспався.",
-    "en": [
-      "You look more cheerful because you slept well.",
-      "You look livelier because you slept well.",
-      "You seem more energetic since you rested well.",
-      "You seem brighter since you rested well."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "DEMONSTRATIVES", "PREP_TIME"],
-    "ua": "Цей концерт гучніший за той минулого тижня.",
-    "en": [
-      "This concert is louder than last week’s.",
-      "This concert is noisier than last week’s.",
-      "This concert is more vibrant than the one last week.",
-      "This concert is more dynamic than the one last week."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q", "PREP_PLACE"],
-    "ua": "Чому цей готель дорожчий за той на узбережжі?",
-    "en": [
-      "Why is this hotel more expensive than the one on the coast?",
-      "Why is this hotel pricier than the one on the coast?",
-      "Why is this hotel costlier than the one by the sea?",
-      "Why is this hotel more costly than the one by the sea?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "SIMPLE_ADJ"],
-    "ua": "Ця музика набагато спокійніша за ту.",
-    "en": [
-      "This music is much calmer than that one.",
-      "This music is much quieter than that one.",
-      "This music is far more peaceful than that one.",
-      "This music is far more tranquil than that one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME"],
-    "ua": "Він грає голосніше ніж я цього вечора.",
-    "en": [
-      "He plays louder than me this evening.",
-      "He plays more noisily than me this evening.",
-      "He performs more loudly than I do tonight.",
-      "He performs more boisterously than I do tonight."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
-    "ua": "Цей десерт солодший за той?",
-    "en": [
-      "Is this dessert sweeter than that one?",
-      "Is this dessert more sugary than that one?",
-      "Does this dessert taste sweeter than that one?",
-      "Does this dessert taste more sugary than that one?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "SIMPLE_ADJ"],
-    "ua": "Сьогодні море спокійніше, ніж учора.",
-    "en": [
-      "The sea is calmer today than yesterday.",
-      "The sea is quieter today than yesterday.",
-      "The sea is more peaceful today than yesterday.",
-      "The sea is more tranquil today than yesterday."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "DEMONSTRATIVES"],
-    "ua": "Ці страви смачніші за деякі в ресторані.",
-    "en": [
-      "These dishes are tastier than some in the restaurant.",
-      "These dishes are more delicious than some in the restaurant.",
-      "Those meals are yummier than certain ones at the restaurant.",
-      "Those meals are more flavorful than certain ones at the restaurant."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Цей день сонячніший, бо хмари зникли.",
-    "en": [
-      "This day is sunnier because the clouds disappeared.",
-      "This day is brighter because the clouds disappeared.",
-      "Today is more radiant since the clouds are gone.",
-      "Today is clearer since the clouds are gone."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "PREP_PLACE"],
-    "ua": "Вона готує акуратніше в кухні, ніж у їдальні.",
-    "en": [
-      "She cooks more neatly in the kitchen than in the dining room.",
-      "She cooks more carefully in the kitchen than in the dining room.",
-      "She prepares food more tidily in the kitchen than in the dining area.",
-      "She prepares food more precisely in the kitchen than in the dining area."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ARTICLES"],
-    "ua": "Мій квиток дешевший за твій.",
-    "en": [
-      "My ticket is cheaper than yours.",
-      "My ticket is less expensive than yours.",
-      "My ticket is more affordable than yours.",
-      "My ticket is budget-friendlier than yours."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
-    "ua": "Ця дорога ширша, ніж та в селі.",
-    "en": [
-      "This road is wider than the one in the village.",
-      "This road is broader than the one in the village.",
-      "This road is more spacious than the one in the countryside.",
-      "This road is larger than the one in the countryside."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q", "SIMPLE_ADJ"],
-    "ua": "Чому твій напій холодніший за мій?",
-    "en": [
-      "Why is your drink colder than mine?",
-      "Why is your drink chillier than mine?",
-      "Why is your beverage cooler than mine?",
-      "Why is your beverage icier than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "COUNT_UNCOUNT"],
-    "ua": "Ця кава набагато міцніша за чай.",
-    "en": [
-      "This coffee is much stronger than tea.",
-      "This coffee is much bolder than tea.",
-      "This coffee is far more robust than tea.",
-      "This coffee is far richer than tea."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "DEMONSTRATIVES"],
-    "ua": "Ці навушники гучніші за ті?",
-    "en": [
-      "Are these headphones louder than those?",
-      "Are these headphones noisier than those?",
-      "Do these earphones sound louder than those?",
-      "Do these earphones sound noisier than those?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Ця відпустка цікавіша за братову.",
-    "en": [
-      "This vacation is more interesting than my brother’s.",
-      "This vacation is more engaging than my brother’s.",
-      "This holiday is more fascinating than my sibling’s.",
-      "This holiday is more captivating than my sibling’s."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
-    "ua": "Деякі парки зеленіші за цей.",
-    "en": [
-      "Some parks are greener than this one.",
-      "Some parks are lusher than this one.",
-      "Certain parks are more verdant than this one.",
-      "Certain parks are more vibrant than this one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
-    "ua": "Він грає енергійніше, бо тренується щодня.",
-    "en": [
-      "He plays more energetically because he trains daily.",
-      "He plays more vigorously because he trains daily.",
-      "He performs more lively since he practices every day.",
-      "He performs more dynamically since he practices every day."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME"],
-    "ua": "Вона співає краще ніж я цього місяця.",
-    "en": [
-      "She sings better than me this month.",
-      "She sings more beautifully than me this month.",
-      "She performs better than I do this month.",
-      "She performs more beautifully than I do this month."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_TIME", "ARTICLES"],
-    "ua": "Ця зима м’якша за попередню.",
-    "en": [
-      "This winter is milder than the previous one.",
-      "This winter is softer than the previous one.",
-      "This winter is more gentle than the last one.",
-      "This winter is warmer than the last one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "PREP_PLACE"],
-    "ua": "Цей ресторан затишніший за той у центрі?",
-    "en": [
-      "Is this restaurant cozier than the one in the center?",
-      "Is this restaurant warmer than the one in the center?",
-      "Is this restaurant more comfortable than the one downtown?",
-      "Is this restaurant snugger than the one downtown?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "SIMPLE_ADJ"],
-    "ua": "Деякі мелодії спокійніші за цю.",
-    "en": [
-      "Some melodies are calmer than this one.",
-      "Some melodies are quieter than this one.",
-      "Certain melodies are more peaceful than this one.",
-      "Certain melodies are more tranquil than this one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
-    "ua": "Цей турист подорожує сміливіше за того.",
-    "en": [
-      "This tourist travels more boldly than that one.",
-      "This tourist travels more bravely than that one.",
-      "That traveler journeys more courageously than the other one.",
-      "That traveler journeys more daringly than the other one."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Сьогодні вечір ясніший, бо небо чисте.",
-    "en": [
-      "This evening is clearer because the sky is clear.",
-      "This evening is brighter because the sky is clear.",
-      "Tonight is more radiant since the sky is clean.",
-      "Tonight is sunnier since the sky is clean."
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "WH_Q"],
-    "ua": "Чому твій салат смачніший за мій?",
-    "en": [
-      "Why is your salad tastier than mine?",
-      "Why is your salad more delicious than mine?",
-      "Why is your salad yummier than mine?",
-      "Why is your salad more flavorful than mine?"
-    ]
-  },
-  {
-    "rules": ["COMPARATIVES", "TOO_VERY", "PREP_PLACE"],
-    "ua": "Ця тераса набагато затишніша за балкон.",
-    "en": [
-      "This terrace is much cozier than the balcony.",
-      "This terrace is much warmer than the balcony.",
-      "This terrace is far more comfortable than the balcony.",
-      "This terrace is far snugger than the balcony."
-    ]
-  }
-] }
+{
+  "COMPARATIVES": [
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
+      "ua": "Цей парк красивіший, ніж той у центрі.",
+      "en": ["This park is more beautiful than the one in the center."]
+    },
+    {
+      "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
+      "ua": "Деякі книги цікавіші за фільми.",
+      "en": ["Some books are more interesting than films."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+      "ua": "Твій телефон швидший за мій?",
+      "en": ["Is your phone faster than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
+      "ua": "Ця куртка тепліша, бо вона вовняна.",
+      "en": ["This jacket is warmer because it’s made of wool."]
+    },
+    {
+      "rules": ["COMPARATIVES", "DEMONSTRATIVES", "POSSESSIVE_S"],
+      "ua": "Цей рюкзак міцніший за мамин.",
+      "en": ["This backpack is stronger than mom’s.", "This backpack is stronger than my mom's."]
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "ua": "Твоя картина яскравіша за мою?",
+      "en": ["Is your painting brighter than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "TOO_VERY", "SIMPLE_ADJ"],
+      "ua": "Цей ноутбук набагато швидший за старий.",
+      "en": ["This laptop is much faster than the old one."]
+    },
+    {
+      "rules": ["COMPARATIVES", "REFLEXIVE_PRONOUNS", "SIMPLE_ADJ"],
+      "ua": "Він відчуває себе впевненішим, ніж раніше.",
+      "en": ["He feels more confident than before."]
+    },
+    {
+      "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
+      "ua": "Багато міст чистіші за наше.",
+      "en": ["Many cities are cleaner than ours."]
+    },
+    {
+      "rules": ["COMPARATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
+      "ua": "Коли сонце зійде, день стане теплішим.",
+      "en": ["When the sun rises, the day will become warmer."]
+    },
+    {
+      "rules": ["COMPARATIVES", "PREP_TIME", "DEMONSTRATIVES"],
+      "ua": "Ця зима холодніша за минулу.",
+      "en": ["This winter is colder than last winter."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+      "ua": "Чому твій велосипед швидший за мій?",
+      "en": ["Why is your bike faster than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "ua": "Твоя сумка важча за мою?",
+      "en": ["Is your bag heavier than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "ARTICLES", "POSSESSIVE_S"],
+      "ua": "Цей светр м’якший за светр тата.",
+      "en": ["This sweater is softer than dad’s."]
+    },
+    {
+      "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PREP_PLACE"],
+      "ua": "Деякі кафе затишніші за ресторани.",
+      "en": ["Some cafés are cozier than restaurants."]
+    },
+    {
+      "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "SIMPLE_ADJ"],
+      "ua": "Він пише швидше за сестру.",
+      "en": ["He writes faster than his sister."]
+    },
+    {
+      "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
+      "ua": "Ти виглядаєш щасливішим, бо сьогодні вихідний.",
+      "en": ["You look happier because it’s a day off."]
+    },
+    {
+      "rules": ["COMPARATIVES", "DEMONSTRATIVES", "PREP_TIME"],
+      "ua": "Цей місяць тепліший за попередній.",
+      "en": ["This month is warmer than the previous one."]
+    },
+    {
+      "rules": ["COMPARATIVES", "PREP_PLACE"],
+      "ua": "Чому цей магазин дорожчий за той на розі?",
+      "en": ["Why is this shop more expensive than the one on the corner?"]
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "ua": "Вона бігає швидше ніж я.",
+      "en": ["She runs faster than me."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+      "ua": "Цей стіл міцніший за той?",
+      "en": ["Is this table stronger than that one?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "PREP_PLACE"],
+      "ua": "Він працює швидше в офісі, ніж удома.",
+      "en": ["He works faster in the office than at home."]
+    },
+    {
+      "rules": ["COMPARATIVES", "ARTICLES"],
+      "ua": "Мій годинник точніший за твій.",
+      "en": ["My watch is more accurate than yours."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+      "ua": "Твоя книга цікавіша за мою?",
+      "en": ["Is your book more interesting than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "TOO_VERY"],
+      "ua": "Цей суп набагато смачніший за попередній.",
+      "en": ["This soup is much tastier than the previous one."]
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "ua": "Твої туфлі зручніші за мої?",
+      "en": ["Are your shoes more comfortable than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
+      "ua": "Вона краще співає, бо тренується щодня.",
+      "en": ["She sings better because she practices every day."]
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "ua": "Він грає краще ніж я.",
+      "en": ["He plays better than me."]
+    },
+    {
+      "rules": ["COMPARATIVES", "PREP_TIME", "ARTICLES"],
+      "ua": "Цей ранок спокійніший за вчорашній.",
+      "en": ["This morning is calmer than yesterday’s."]
+    },
+    {
+      "rules": ["COMPARATIVES", "ADVERBS_OF_MANNER", "DEMONSTRATIVES"],
+      "ua": "Цей учень вчиться старанніше за того.",
+      "en": ["This student studies harder than that one."]
+    },
+    {
+      "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
+      "ua": "Сьогодні день ясніший, бо хмари зникли.",
+      "en": ["Today is brighter because the clouds disappeared."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ", "ARTICLES"],
+      "ua": "Цей чай смачніший за каву.",
+      "en": ["This tea is tastier than coffee."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
+      "ua": "Ця весна тепліша за минулу.",
+      "en": ["This spring is warmer than last spring."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_PLACE"],
+      "ua": "Цей пляж спокійніший, ніж той біля міста.",
+      "en": ["This beach is calmer than the one near the city."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+      "ua": "Твій чемодан легший за мій?",
+      "en": ["Is your suitcase lighter than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH", "SIMPLE_ADJ"],
+      "ua": "Ця страва гостріша, бо в ній більше перцю.",
+      "en": ["This dish is spicier because it has more pepper."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
+      "ua": "Цей вечір прохолодніший, ніж учорашній.",
+      "en": ["This evening is cooler than yesterday evening."]
+    },
+    {
+      "rules": ["COMPARATIVES", "TOO_VERY", "SIMPLE_ADJ"],
+      "ua": "Цей поїзд набагато швидший за автобус.",
+      "en": ["This train is much faster than the bus."]
+    },
+    {
+      "rules": ["COMPARATIVES", "REFLEXIVE_PRONOUNS", "SIMPLE_ADJ"],
+      "ua": "Вона відчуває себе спокійнішою, ніж раніше.",
+      "en": ["She feels calmer than before."]
+    },
+    {
+      "rules": ["COMPARATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
+      "ua": "Коли настане літо, дні стануть теплішими.",
+      "en": ["When summer comes, the days will become warmer."]
+    },
+    {
+      "rules": ["COMPARATIVES", "PREP_TIME", "DEMONSTRATIVES"],
+      "ua": "Ця подорож цікавіша за минулу.",
+      "en": ["This trip is more interesting than the last one."]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+      "ua": "Чому твій суп смачніший за мій?",
+      "en": ["Why is your soup tastier than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "TOO_VERY", "PREP_PLACE"],
+      "ua": "Ця кімната набагато затишніша за ту в готелі.",
+      "en": ["This room is much cozier than the one in the hotel."]
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "ua": "Твій рюкзак міцніший за мій?",
+      "en": ["Is your backpack stronger than mine?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ", "PREP_TIME"],
+      "ua": "Завтра буде вітряніше, ніж сьогодні.",
+      "en": ["Tomorrow will be windier than today."]
+    },
+    {
+      "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
+      "ua": "Ти виглядаєш бадьорішим, бо добре виспався.",
+      "en": ["You look more energetic because you slept well."]
+    },
+    {
+      "rules": ["COMPARATIVES", "PREP_PLACE"],
+      "ua": "Чому цей готель дорожчий за той на узбережжі?",
+      "en": ["Why is this hotel more expensive than the one on the coast?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
+      "ua": "Цей десерт солодший за той?",
+      "en": ["Is this dessert sweeter than that one?"]
+    },
+    {
+      "rules": ["COMPARATIVES", "PREP_TIME", "SIMPLE_ADJ"],
+      "ua": "Сьогодні море спокійніше, ніж учора.",
+      "en": ["The sea is calmer today than it was yesterday."]
+    },
+    {
+      "rules": ["COMPARATIVES", "ARTICLES"],
+      "ua": "Мій квиток дешевший за твій.",
+      "en": ["My ticket is cheaper than yours."]
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "ua": "Вона співає краще ніж я",
+      "en": ["She sings better than me."]
+    }
+  ]
+}

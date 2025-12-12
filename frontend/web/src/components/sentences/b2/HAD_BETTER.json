@@ -1,6 +1,6 @@
 { "HAD_BETTER": [
   {
-    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Тобі краще одягти пальто, надто холодно.",
     "en": [
       "You’d better put on a coat, it’s too cold.",
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Ти краще відпочинь, ти занадто виснажений.",
     "en": [
       "You’d better rest, you’re too exhausted.",
@@ -178,7 +178,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Ти краще не їж це, воно занадто гостре.",
     "en": [
       "You’d better not eat that, it’s too spicy.",
@@ -298,7 +298,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Тобі краще не казати нічого, ти надто злий.",
     "en": [
       "You’d better not say anything, you’re too angry.",
@@ -378,7 +378,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Ти краще не їдь так швидко, це надто небезпечно.",
     "en": [
       "You’d better not drive so fast, it’s too dangerous.",
@@ -410,7 +410,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "TOO_ENOUGH"],
+    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Тобі краще не їхати сьогодні, занадто небезпечно.",
     "en": [
       "You’d better not travel today, it’s too dangerous.",

@@ -98,7 +98,7 @@
 
     { "rules": ["WAS_WERE", "THERE_IS_ARE", "PREP_PLACE"], "ua": "Було чути шум із вулиці?", "en": ["Was there noise from the street?"] },
 
-    { "rules": ["WAS_WERE", "TOO_ENOUGH"], "ua": "Ми були надто повільні?", "en": ["Were we too slow?"] },
+    { "rules": ["WAS_WERE", "ENOUGH_TOO_MUCH_MANY"], "ua": "Ми були надто повільні?", "en": ["Were we too slow?"] },
 
     { "rules": ["WAS_WERE"], "ua": "Я не був задоволений результатом.", "en": ["I was not satisfied with the result.", "I wasn’t satisfied with the result."] },
 
@@ -116,7 +116,7 @@
 
     { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Він був чесним зі мною того вечора.", "en": ["He was honest with me that evening."] },
 
-    { "rules": ["WAS_WERE", "TOO_ENOUGH"], "ua": "Вони були занадто втомлені, щоб продовжувати.", "en": ["They were too tired to continue.", "They were too exhausted to continue."] },
+    { "rules": ["WAS_WERE", "ENOUGH_TOO_MUCH_MANY"], "ua": "Вони були занадто втомлені, щоб продовжувати.", "en": ["They were too tired to continue.", "They were too exhausted to continue."] },
 
     { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "Тоді я був упевнений у результаті.", "en": ["I was confident about the result back then."] },
 
@@ -152,9 +152,9 @@
 
     { "rules": ["WAS_WERE", "PREP_TIME"], "ua": "На той момент ми були впевнені у своєму виборі.", "en": ["We were confident in our choice at the time."] },
 
-    { "rules": ["WAS_WERE", "TOO_ENOUGH"], "ua": "Я був надто втомлений, щоб говорити.", "en": ["I was too tired to talk."] },
+    { "rules": ["WAS_WERE", "ENOUGH_TOO_MUCH_MANY"], "ua": "Я був надто втомлений, щоб говорити.", "en": ["I was too tired to talk."] },
 
-    { "rules": ["WAS_WERE", "TOO_ENOUGH", "PREP_TIME"], "ua": "Вона була надто зайнята вчора.", "en": ["She was too busy yesterday."] },
+    { "rules": ["WAS_WERE", "ENOUGH_TOO_MUCH_MANY", "PREP_TIME"], "ua": "Вона була надто зайнята вчора.", "en": ["She was too busy yesterday."] },
 
     { "rules": ["WAS_WERE", "TOO_VERY"], "ua": "Він був дуже ввічливим.", "en": ["He was very polite."] },
 

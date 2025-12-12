@@ -185,7 +185,7 @@
     "en": ["We asked why they hadn’t come although they had promised.", "We wanted to know why they didn’t show up despite their promise."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "LIKE_ING"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона спитала, що мені подобається робити у вільний час.",
     "en": ["She asked what I like doing in my free time.", "She wanted to know what I enjoy doing when I’m free."]
   },
@@ -280,7 +280,7 @@
     "en": ["She asked if I often watch movies.", "She wanted to know whether I watch films frequently."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "LIKE_ING"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Мене спитали, чи мені подобається готувати.",
     "en": ["They asked if I like cooking.", "They wanted to know whether I enjoy cooking."]
   },
@@ -395,7 +395,7 @@
     "en": ["She asked how many people would come to the meeting.", "She wanted to know how many guests were expected."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "LIKE_ING"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
     "ua": "Він хотів знати, що мені подобається робити у вільний час.",
     "en": ["He wanted to know what I like doing in my free time.", "He asked what hobbies I enjoy."]
   },

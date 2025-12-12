@@ -75,7 +75,7 @@
     "rules": [
       "ADVANCED_MODALS_OF_DEDUCTION",
       "ARTICLES",
-      "TOO_ENOUGH"
+      "ENOUGH_TOO_MUCH_MANY"
     ],
     "ua": "Він, мабуть, був занадто зайнятий, щоб відповісти.",
     "en": [
@@ -392,8 +392,7 @@
   },
   {
     "rules": [
-      "ADVANCED_MODALS_OF_DEDUCTION",
-      "LIKE_ING"
+      "ADVANCED_MODALS_OF_DEDUCTION"
     ],
     "ua": "Вона, мабуть, завжди любила читати детективи.",
     "en": [

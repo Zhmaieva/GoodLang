@@ -1906,8 +1906,8 @@ export const RULE_PAGE_SUPERLATIVES = {
     ],
 };
 
-export const RULE_PAGE_TOO_ENOUGH = {
-    id: "TOO_ENOUGH",
+export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
+    id: "ENOUGH_TOO_MUCH_MANY",
     title: "Too / enough",
     subtitle: "Вивчення правила",
     sections: [
@@ -3659,8 +3659,8 @@ export const RULE_PAGE_QUESTION_TAGS = {
 /* ============================
    TOO / ENOUGH / SO / SUCH
 ============================ */
-export const RULE_PAGE_TOO_ENOUGH_SO_SUCH = {
-    id: "TOO_ENOUGH_SO_SUCH",
+export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY_SO_SUCH = {
+    id: "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
     title: "Too / enough / so / such",
     subtitle: "Вивчення правила",
     sections: [

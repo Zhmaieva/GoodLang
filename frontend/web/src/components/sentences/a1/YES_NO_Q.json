@@ -89,7 +89,7 @@
     "en": ["Is your sister a doctor? No, she isn’t."]
   },
   {
-    "rules": ["YES_NO_Q", "LIKE_ING", "PERSONAL_PRONOUNS"],
+    "rules": ["YES_NO_Q", "PERSONAL_PRONOUNS"],
     "ua": "Ти любиш готувати? Ні.",
     "en": ["Do you like cooking? No, I don’t."]
   },
@@ -292,7 +292,7 @@
     "en": ["Is the meeting on Monday? Yes, it is."]
   },
   {
-    "rules": ["YES_NO_Q", "LIKE_ING"],
+    "rules": ["YES_NO_Q"],
     "ua": "Вона любить танцювати? Так.",
     "en": ["Does she like dancing? Yes, she does."]
   },

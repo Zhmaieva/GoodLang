@@ -50,7 +50,7 @@
     "hint": "use WOULD RATHER / PREFER"
   },
   {
-    "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
+    "rules": ["WOULD_RATHER_PREFER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Мені надто холодно, я б краще залишився всередині.",
     "en": [
       "I’m too cold; I’d rather stay inside.",
@@ -122,7 +122,7 @@
     "hint": "use WOULD RATHER / PREFER"
   },
   {
-    "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
+    "rules": ["WOULD_RATHER_PREFER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Вона занадто втомлена, тому воліла б відпочити.",
     "en": [
       "She’s too tired, so she’d rather rest.",
@@ -397,7 +397,7 @@
     "hint": "use WOULD RATHER / PREFER"
   },
   {
-    "rules": ["WOULD_RATHER_PREFER", "TOO_ENOUGH"],
+    "rules": ["WOULD_RATHER_PREFER", "ENOUGH_TOO_MUCH_MANY"],
     "ua": "Зараз надто пізно, я б радше обговорив це завтра.",
     "en": [
       "It’s too late now; I’d rather discuss it tomorrow.",
