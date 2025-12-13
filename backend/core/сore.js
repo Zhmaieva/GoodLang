@@ -116,10 +116,10 @@ GRAMMAR_RULES: [${rules.join(', ')}]
 TEXT_TO_TRANSLATE: ${textToTranslate}
 
 TASKS:
-1) Evaluate if LEARNER_ENGLISH is correct according to English rules and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
+1) Evaluate if LEARNER_ENGLISH is correct according to English rules or casual speech and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
 2) If wrong, give a helpful human tip in TARGET_LANGUAGE
 3) Also, give correct translation from TARGET_LANGUAGE to English.
-4) For each of GRAMMAR_RULES exactly, give score in output array accordingly: 1 - correct, 0.75 - 1 spelling mistake, 0.5 - 2-3 spelling mistakes, 0.25 - 3+ spelling mistakes, but grammatically correct, 0 - wrong. If the LEARNER_ENGLISH is complete mismatch of translation, then give 0 to every rule.
+4) For each of GRAMMAR_RULES, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLIS -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
 
 LEARNER_ENGLISH: ${userEnglish || "(none)"}
 `;

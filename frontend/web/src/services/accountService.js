@@ -25,6 +25,7 @@ export async function getToken() {
 - fix analytics trainer suggestion mismatch
 - fix dates translation
 - fix declarative sentences absent level and others
+
 - fix strictness of side rules check
 
 - add progress bar to rule page
