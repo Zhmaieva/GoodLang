@@ -82,8 +82,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
             </div>
 
             <nav className="actions">
-                <button className="btn secondary" onClick={()=>{history.back()}}>← Тренування</button>
-                {/*<button className="btn" onClick={onExport}>Роздрукувати результати</button>*/}
+                {right}
             </nav>
         </header>
     );

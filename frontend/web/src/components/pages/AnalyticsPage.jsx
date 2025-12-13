@@ -93,12 +93,18 @@ export default function AnalyticsPage({theme}) {
     };
 
     const navigate = useNavigate();
-    const handlePracticeClick = () => history.back();
+    const handlePracticeClick = () => navigate('/');
 
     return (
         <AppShell theme={theme}>
             <div style={{height: "100vh"}}>
-                <BrandHeader theme={theme} title={"Аналітика GoodLang"} subtitle={"Огляд прогресу за правилами та словами: що вже засвоєно, а що варто потренувати."} onBack={handlePracticeClick} onExport={onExportJSON} />
+                <BrandHeader theme={theme} title={"Аналітика GoodLang"} subtitle={"Огляд прогресу за правилами та словами: що вже засвоєно, а що варто потренувати."}  onExport={onExportJSON}
+                             right={
+                                 <button className="btn secondary" onClick={handlePracticeClick}>
+                                     ← До тренування
+                                 </button>
+                             }
+                />
                 <KPIGrid
                     accuracy={kpis.accuracy}
                     attempts={kpis.totalAttempts}

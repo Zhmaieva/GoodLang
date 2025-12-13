@@ -21,8 +21,13 @@ export async function getToken() {
 }
 
 /* todo:
-- chunk / do not send data sync data
-- back buttons (to training) in new tab lead to blank tab
 - fix switching from managed mode to a specific one
-- check each rule learning page
+- fix analytics trainer suggestion mismatch
+- fix dates translation
+- fix declarative sentences absent level and others
+- fix strictness of side rules check
+
+- add progress bar to rule page
+- add floating trainer on rule page
+- tooltips for analytics chips
  */

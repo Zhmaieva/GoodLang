@@ -8,6 +8,7 @@ import Examples from "../Examples";
 import Note from "../Note";
 import Footer from "../Footer";
 import Trainer from "../training/Trainer.jsx";
+import {useNavigate} from "react-router-dom";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -144,6 +145,9 @@ export default function RulePage({ data, theme }) {
         }
     };
 
+    const navigate = useNavigate();
+    const handleAnalyticsClick = () => navigate('/analytics');
+
     return (
         <AppShell theme={theme}>
             <div style={container}>
@@ -152,8 +156,8 @@ export default function RulePage({ data, theme }) {
                     title={data.title}
                     subtitle={<>{data.subtitle}</>}
                     right={
-                        <button className="btn secondary" onClick={() => history.back()}>
-                            ← Назад
+                        <button className="btn secondary" onClick={handleAnalyticsClick}>
+                            ← До аналітики
                         </button>
                     }
                 />
