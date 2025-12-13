@@ -100,7 +100,7 @@
     "en": ["Her voice is beautiful.", "Her voice is nice."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Моя кімната чиста, а твоя брудна.",
     "en": ["My room is clean and yours is dirty."]
   },
@@ -245,7 +245,7 @@
     "en": ["This question is simple."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Твоя ідея чудова.",
     "en": ["Your idea is wonderful."]
   },
@@ -281,8 +281,8 @@
   },
   {
     "rules": ["SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
-    "ua": "Це питання складне.",
-    "en": ["This question is difficult."]
+    "ua": "Це складне питання.",
+    "en": ["This question is difficult.", "This is a difficult question."]
   },
   {
     "rules": ["SIMPLE_ADJ", "TO_BE"],
@@ -370,7 +370,7 @@
     "en": ["This test is easy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Твоє місто гарне.",
     "en": ["Your city is beautiful.", "Your town is beautiful."]
   },
@@ -400,7 +400,7 @@
     "en": ["My mother is caring."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Його тато добрий.",
     "en": ["His father is kind.", "His dad is kind."]
   },
@@ -415,17 +415,17 @@
     "en": ["This coffee is tasty."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Твоя ідея чудова.",
     "en": ["Your idea is wonderful."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Його план добрий.",
     "en": ["His plan is good."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Їхній будинок старий.",
     "en": ["Their house is old."]
   },
@@ -435,37 +435,37 @@
     "en": ["This restaurant is expensive."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Її сорочка біла.",
     "en": ["Her shirt is white."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Моя спальна тепла.",
     "en": ["My bedroom is warm."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Мій кіт чорний.",
     "en": ["My cat is black."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Його друзі веселі.",
     "en": ["His friends are funny."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Мій дім затишний.",
     "en": ["My house is cozy."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Мій пес милий.",
     "en": ["My dog is cute."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Моя бабуся стара.",
     "en": ["My grandmother is old."]
   },
@@ -475,7 +475,7 @@
     "en": ["This table is round."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Мій дідусь сильний.",
     "en": ["My grandfather is strong."]
   },
@@ -485,7 +485,7 @@
     "en": ["This shop is small."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Їхній сад зелений.",
     "en": ["Their garden is green."]
   },
@@ -495,7 +495,7 @@
     "en": ["This lesson is short."]
   },
   {
-    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVES"],
+    "rules": ["SIMPLE_ADJ", "TO_BE", "POSSESSIVE_S"],
     "ua": "Мій зошит тонкий.",
     "en": ["My notebook is thin."]
   }

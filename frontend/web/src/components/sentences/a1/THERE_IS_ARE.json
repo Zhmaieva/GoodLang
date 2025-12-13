@@ -200,15 +200,6 @@
         "hint": "use THERE IS / THERE ARE",
         "en": ["There is a cat under the sofa."]
     },
-
-
-
-
-
-
-
-
-
     {
         "rules": ["THERE_IS_ARE", "ARTICLES", "PREP_PLACE"],
         "ua": "На даху сидить птах.",

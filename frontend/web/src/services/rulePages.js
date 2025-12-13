@@ -20,10 +20,7 @@ export const RULE_PAGE_TO_BE = {
                 "🙂 Який(а): <strong>She’s happy.</strong>",
                 "📍 Де: <strong>We’re at home.</strong>",
                 "🕰️ Час/погода/вік: <strong>It’s Monday. I’m 7.</strong>",
-            ],
-            hint:
-                "Про вік англійською кажуть із <em>to be</em>: <strong>I’m 7 (years old)</strong>, а не <em>I have 7 years</em>.",
-        },
+            ]},
         {
             type: "forms",
             title: "Форми в Present Simple",
@@ -130,7 +127,7 @@ export const RULE_PAGE_HAVE_HAVE_GOT = {
         {
             type: "meaning",
             title: "Що означає",
-            html: "<strong>Have / have got</strong> — спосіб говорити про володіння (I have a car / I've got a car)."
+            html: "<strong>Have / have got</strong> — спосіб говорити про наявність або приналежність (I have a car / I've got a car)."
         },
         {
             type: "usage",
@@ -240,8 +237,7 @@ export const RULE_PAGE_ARTICLES = {
             title: "Коли вживаємо",
             badges: [
                 "Новий/будь-який: <strong>a dog / an apple</strong>",
-                "Відомий/особливий: <strong>the sun / the book I read</strong>",
-                "Перед голосним звуком: <strong>an hour</strong> (звук важливіший за букву)."
+                "Відомий/особливий: <strong>the sun / the book I read</strong>"
             ],
             hint: "'a' перед приголосним звуком, 'an' перед голосним звуком."
         },
@@ -285,7 +281,8 @@ export const RULE_PAGE_DEMONSTRATIVES = {
         {
             type: "meaning",
             title: "Що означають",
-            html: "<strong>this / these</strong> — близько до мовця; <strong>that / those</strong> — далеко від мовця."
+            html: "Вказівні займенники використовуються, щоб вказувати на предмети, людей або ідеї і показувати, <strong>які саме</strong> ми маємо на увазі.\n" +
+                "Вони залежать від <strong>відстані</strong> (близько / далеко) та <strong>кількості</strong> (однина / множина).\n"
         },
         {
             type: "usage",
@@ -332,21 +329,23 @@ export const RULE_PAGE_PERSONAL_PRONOUNS = {
             type: "usage",
             title: "Коли вживаються",
             badges: [
-                "Підмет: <strong>I/you/he/she/it/we/they</strong>",
-                "Об'єкт: <strong>me/you/him/her/it/us/them</strong>"
+                "Вживаються коли потрібно замінити іменник, щоб не повторювати його."
             ],
             hint: "Пам'ятай розрізняти форму підмета й форму об'єкта (I → me, he → him)."
         },
         {
             type: "forms",
             title: "Форми",
-            headers: ["Підмет", "Об'єкт", "Присвійна"],
+            headers: ["Підмет", "Об'єкт"],
             rows: [
-                ["I", "me", "my"],
-                ["you", "you", "your"],
-                ["he", "him", "his"]
-            ],
-            hint: "There are also possessive adjectives (my, your, his...)."
+                ["I", "me"],
+                ["you", "you"],
+                ["he", "him"],
+                ["she", "her"],
+                ["it", "it"],
+                ["we", "us"],
+                ["they", "them"]
+            ]
         },
         {
             type: "examples",
@@ -387,57 +386,69 @@ export const RULE_PAGE_SIMPLE_ADJ = {
                 ["He is tall.", "Він високий."]
             ]
         },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: [
-                "❌ <em>She very pretty</em> → ✅ <strong>She is very pretty</strong>."
-            ]
-        },
+
         { type: "trainer", title: "Міні-тренажер (Simple adjectives)" }
     ]
 };
 
 export const RULE_PAGE_PRESENT_SIMPLE_FREQ = {
     id: "PRESENT_SIMPLE_FREQ",
-    title: "Present Simple + frequency adverbs",
-    subtitle: "Вивчення правила",
+    title: "Present Simple",
+    subtitle: "Час для звичок, фактів і регулярних дій",
     sections: [
         {
             type: "meaning",
             title: "Що це",
-            html: "Present Simple описує звички; прислівники частоти (always, often, sometimes) показують, як часто."
+            html: "<strong>Present Simple — це граматичний час в англійській мові.</strong> Він використовується, щоб говорити про факти, звички, регулярні дії та розклад."
         },
+
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
                 "Звички: <strong>I get up at 7.</strong>",
-                "Частота: <strong>She often goes to work.</strong>"
+                "Регулярні дії: <strong>She works every day.</strong>",
+                "Частота: <strong>They often travel.</strong>"
             ],
-            hint: "Прислівники частоти стоять перед основним дієсловом, але після 'to be'."
+            hint: "Прислівники частоти зазвичай стоять перед основним дієсловом, але після 'to be'."
         },
+
         {
             type: "forms",
-            title: "Форми",
-            headers: ["Підмет", "Ствердження"],
+            title: "Форми Present Simple",
+            headers: ["Тип", "I / You / We / They", "He / She / It"],
             rows: [
-                ["I/You/We/They", "I eat breakfast."],
-                ["He/She/It", "He eats breakfast."]
+                ["Ствердження", "I work.", "She works."],
+                ["Заперечення", "I do not (don't) work.", "She does not (doesn't) work."],
+                ["Питання", "Do you work?", "Does she work?"]
             ],
-            hint: "Додаємо -s для 3-ї особи однини."
+            hint: "У запереченнях і питаннях після do/does дієслово завжди в базовій формі (без -s)."
         },
+
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["I always brush my teeth.", "Я завжди чищу зуби."],
-                ["They sometimes go to the cinema.", "Вони іноді ходять у кіно."]
+                ["I always drink water in the morning.", "Я завжди пʼю воду вранці."],
+                ["She doesn't eat meat.", "Вона не їсть мʼяса."],
+                ["Do they work on Sundays?", "Вони працюють по неділях?"]
             ]
         },
-        { type: "trainer", title: "Міні-тренажер (Present Simple + frequency)" }
+
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>He don't work</em> → ✅ <strong>He doesn't work</strong>",
+                "❌ <em>She doesn't works</em> → ✅ <strong>She doesn't work</strong>",
+                "❌ <em>Does she works?</em> → ✅ <strong>Does she work?</strong>"
+            ]
+        },
+
+        { type: "trainer", title: "Міні-тренажер (Present Simple)" }
     ]
 };
+``
 
 export const RULE_PAGE_NEGATION_DONT_DOESNT = {
     id: "NEGATION_DONT_DOESNT",
@@ -501,8 +512,8 @@ export const RULE_PAGE_YES_NO_Q = {
             type: "examples",
             title: "Приклади",
             items: [
-                ["Do you like pizza?", "Ти любиш піцу?"],
-                ["Is he at home?", "Він вдома?"]
+                ["Do you like pizza? — Yes, I do.", "Ти любиш піцу? — Так."],
+                ["Is he at home? — No, he isn't.", "Він вдома? — Ні."]
             ]
         },
         { type: "trainer", title: "Міні-тренажер (Yes/No questions)" }
@@ -526,7 +537,7 @@ export const RULE_PAGE_WH_Q = {
                 "Who — особа, What — що, Where — де, When — коли",
                 "How — як / скільки"
             ],
-            hint: "Після wh-слова часто йде допоміжне дієслово (Do/Does/Is/Are)."
+            hint: "Після wh-слова йде допоміжне дієслово (Do/Does/Is/Are) крім випадків коли wh-слово є підметом."
         },
         {
             type: "examples",
