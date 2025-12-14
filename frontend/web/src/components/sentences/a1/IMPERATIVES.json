@@ -16,7 +16,7 @@
       "en": ["Write the report by Monday.", "Finish the report before Monday."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "GERUND_VS_INFINITIVE"],
+      "rules": ["IMPERATIVES", "GERUND_VS_INFINITIVE"],
       "ua": "Не забудь полити квіти.",
       "en": ["Don’t forget to water the flowers.", "Make sure to water the flowers."]
     },
@@ -41,7 +41,7 @@
       "en": ["Call me in the evening.", "Give me a call tonight."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
       "ua": "Не кричи на вулиці.",
       "en": ["Don’t shout on the street.", "Don’t yell outside."]
     },
@@ -66,7 +66,7 @@
       "en": ["Come to the meeting on time.", "Arrive at the meeting punctually."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "SIMPLE_ADJ"],
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ"],
       "ua": "Не пий холодну воду.",
       "en": ["Don’t drink cold water.", "Avoid drinking cold water."]
     },
@@ -91,7 +91,7 @@
       "en": ["Do your homework now.", "Complete your homework right now."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
       "ua": "Не бігай по калюжах.",
       "en": ["Don’t run through puddles.", "Avoid running in puddles."]
     },
@@ -111,7 +111,7 @@
       "en": ["Keep your phone in your pocket.", "Put your phone in your pocket."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
       "ua": "Не кури в приміщенні.",
       "en": ["Don’t smoke indoors.", "Avoid smoking inside."]
     },
@@ -131,7 +131,7 @@
       "en": ["Turn off the TV before bed.", "Switch off the television before sleeping."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "SIMPLE_ADJ"],
+      "rules": ["IMPERATIVES", "SIMPLE_ADJ"],
       "ua": "Не чіпай гарячу плиту.",
       "en": ["Don’t touch the hot stove.", "Avoid touching the hot stove."]
     },
@@ -151,7 +151,7 @@
       "en": ["Put the kettle on the stove.", "Place the kettle on the burner."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не спізнися на автобус.",
       "en": ["Don’t be late for the bus.", "Don’t miss the bus."]
     },
@@ -171,7 +171,7 @@
       "en": ["Listen to the teacher carefully.", "Pay close attention to the teacher."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "rules": ["IMPERATIVES", "PREP_TIME"],
       "ua": "Не їж солодке перед вечерею.",
       "en": ["Don’t eat sweets before dinner.", "Avoid sweets before supper."]
     },
@@ -196,7 +196,7 @@
       "en": ["Write down important notes.", "Take note of important points."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не розмовляй із повним ротом.",
       "en": ["Don’t talk with your mouth full.", "Avoid speaking with food in your mouth."]
     },
@@ -211,7 +211,7 @@
       "en": ["Pack your things quickly.", "Gather your belongings fast."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_WITH"],
+      "rules": ["IMPERATIVES", "PREP_WITH"],
       "ua": "Не грайся з ножем.",
       "en": ["Don’t play with the knife.", "Avoid playing with the knife."]
     },
@@ -226,7 +226,7 @@
       "en": ["Take your documents with you.", "Bring your documents along."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "GERUND_VS_INFINITIVE"],
+      "rules": ["IMPERATIVES", "GERUND_VS_INFINITIVE"],
       "ua": "Не забудь зарядити телефон.",
       "en": ["Don’t forget to charge your phone.", "Make sure to charge your phone."]
     },
@@ -246,7 +246,7 @@
       "en": ["Invite your friends to the party.", "Call your friends to the gathering."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не залишай двері відчиненими.",
       "en": ["Don’t leave the door open.", "Avoid leaving the door unlocked."]
     },
@@ -261,7 +261,7 @@
       "en": ["Give me a pen, please.", "Hand me a pen, please."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не шуми, діти сплять.",
       "en": ["Don’t make noise, the kids are sleeping.", "Keep quiet, the children are asleep."]
     },
@@ -281,7 +281,7 @@
       "en": ["Take your medicine on time.", "Use your medication punctually."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "rules": ["IMPERATIVES", "PREP_TIME"],
       "ua": "Не дивись у телефон під час їжі.",
       "en": ["Don’t look at your phone during meals.", "Avoid using your phone while eating."]
     },
@@ -296,7 +296,7 @@
       "en": ["Brush your teeth before bed.", "Clean your teeth before sleeping."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не бери чужі речі.",
       "en": ["Don’t take other people’s things.", "Avoid taking others’ belongings."]
     },
@@ -311,7 +311,7 @@
       "en": ["Check the class schedule.", "Look at the timetable for classes."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "ENOUGH_TOO_MUCH_MANY"],
+      "rules": ["IMPERATIVES", "ENOUGH_TOO_MUCH_MANY"],
       "ua": "Не їж багато солоного.",
       "en": ["Don’t eat too much salty food.", "Avoid eating a lot of salty snacks."]
     },
@@ -331,7 +331,7 @@
       "en": ["Ask the teacher to explain again.", "Request the teacher to clarify once more."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "rules": ["IMPERATIVES", "PREP_TIME"],
       "ua": "Не забудь про зустріч завтра.",
       "en": ["Don’t forget about tomorrow’s meeting.", "Remember the meeting tomorrow."]
     },
@@ -346,7 +346,7 @@
       "en": ["Check the weather for tomorrow.", "Look up tomorrow’s weather."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "rules": ["IMPERATIVES", "PREP_TIME"],
       "ua": "Не пий каву перед сном.",
       "en": ["Don’t drink coffee before bed.", "Avoid coffee before sleeping."]
     },
@@ -361,7 +361,7 @@
       "en": ["Make a copy of the documents.", "Duplicate the documents."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "ENOUGH_TOO_MUCH_MANY"],
+      "rules": ["IMPERATIVES", "ENOUGH_TOO_MUCH_MANY"],
       "ua": "Не гуляй довго на холоді.",
       "en": ["Don’t walk outside for too long in the cold.", "Avoid staying out in the cold for long."]
     },
@@ -381,7 +381,7 @@
       "en": ["Turn off the tap after washing.", "Close the faucet after cleaning."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "ENOUGH_TOO_MUCH_MANY"],
+      "rules": ["IMPERATIVES", "ENOUGH_TOO_MUCH_MANY"],
       "ua": "Не бери занадто важкий рюкзак.",
       "en": ["Don’t take too heavy a backpack.", "Don’t pick up too heavy a backpack."]
     },
@@ -396,7 +396,7 @@
       "en": ["Write a message to your friend.", "Send a text to your friend."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
       "ua": "Не залишай їжу на столі.",
       "en": ["Don’t leave food on the table.", "Avoid leaving food out on the table."]
     },
@@ -411,7 +411,7 @@
       "en": ["Wash your hands before eating.", "Clean your hands before meals."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не забудь про день народження мами.",
       "en": ["Don’t forget about Mom’s birthday.", "Remember Mom’s birthday."]
     },
@@ -426,7 +426,7 @@
       "en": ["Bring me the book from the shelf.", "Get me the book off the shelf."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не розмовляй із незнайомцями.",
       "en": ["Don’t talk to strangers.", "Avoid speaking with strangers."]
     },
@@ -441,7 +441,7 @@
       "en": ["Do morning exercises.", "Work out in the morning."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "rules": ["IMPERATIVES", "PREP_PLACE"],
       "ua": "Не ходи босоніж по холодній підлозі.",
       "en": ["Don’t walk barefoot on a cold floor.", "Avoid going barefoot on the cold floor."]
     },
@@ -456,7 +456,7 @@
       "en": ["Call the dog back home.", "Bring the dog inside."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT"],
+      "rules": ["IMPERATIVES"],
       "ua": "Не пий газовані напої.",
       "en": ["Don’t drink fizzy drinks.", "Avoid drinking soda."]
     },
@@ -471,7 +471,7 @@
       "en": ["Take your headphones with you.", "Bring your earphones along."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "GERUND_VS_INFINITIVE"],
+      "rules": ["IMPERATIVES", "GERUND_VS_INFINITIVE"],
       "ua": "Не забудь повернути книгу в бібліотеку.",
       "en": ["Don’t forget to return the book to the library.", "Make sure to return the book to the library."]
     },
@@ -486,7 +486,7 @@
       "en": ["Pick up the toys from the floor.", "Clear the toys off the floor."]
     },
     {
-      "rules": ["IMPERATIVES", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+      "rules": ["IMPERATIVES", "PREP_TIME"],
       "ua": "Не їж чіпси перед обідом.",
       "en": ["Don’t eat chips before lunch.", "Avoid eating chips before the meal."]
     },

@@ -28,13 +28,12 @@
   },
 
   {
-    "rules": ["PRESENT_CONT_NOW"],
+    "rules": ["PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Діти зараз грають у дворі.",
     "en": ["The children are playing in the yard now.", "The kids are playing outside in the yard."]
   },
-
   {
-    "rules": ["PRESENT_CONT_NOW"],
+    "rules": ["PRESENT_CONT_NOW", "ARTICLES"],
     "ua": "Вона зараз співає на сцені.",
     "en": ["She is singing on the stage now.", "She is currently singing on stage."]
   },
@@ -115,7 +114,7 @@
     "en": ["Are you painting on a canvas now?", "Are you currently drawing on a canvas?"]
   },
   {
-    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE"],
+    "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
     "ua": "Вона зараз читає в кафе.",
     "en": ["She is reading in a cafe now.", "She is currently reading in a cafe."]
   },
@@ -214,10 +213,9 @@
 
   {
     "rules": ["PRESENT_CONT_NOW", "PREP_PLACE", "ARTICLES"],
-    "ua": "Вона зараз пише на дошці.",
+    "ua": "Вона зараз пише щось на дошці.",
     "en": [
-      "She is writing on the board now.",
-      "She is currently writing on the board."
+      "She is writing something on the board now."
     ]
   },
   {

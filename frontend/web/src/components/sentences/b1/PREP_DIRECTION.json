@@ -25,11 +25,6 @@
     "en": ["The children ran to the park.", "The kids ran toward the park."]
   },
   {
-    "rules": ["PREP_DIRECTION", "PRESENT_CONT_NOW", "ARTICLES"],
-    "ua": "Пташка летить до моря.",
-    "en": ["The bird is flying toward the sea.", "The bird is flying to the sea."]
-  },
-  {
     "rules": ["PREP_DIRECTION", "PAST_SIMPLE", "ARTICLES"],
     "ua": "Ми рушили до станції.",
     "en": ["We headed toward the station.", "We went to the station."]

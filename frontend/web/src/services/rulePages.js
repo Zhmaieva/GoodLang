@@ -532,21 +532,28 @@ export const RULE_PAGE_WH_Q = {
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Як вживається",
             badges: [
-                "Who — особа, What — що, Where — де, When — коли",
-                "How — як / скільки"
-            ],
-            hint: "Після wh-слова йде допоміжне дієслово (Do/Does/Is/Are) крім випадків коли wh-слово є підметом."
-        },
+                "Коли wh-слово не є підметом, ми використовуємо допоміжне дієслово: do / does / did / is / are / was / were",
+                "Якщо wh-слово є підметом — допоміжне дієслово не використовується"
+            ]},
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["Where do you live?", "Де ти живеш?"],
-                ["What is your name?", "Як тебе звати?"]
+                ["Where do you live? (wh-слово НЕ є підметом)", "Де ти живеш?"],
+                ["What is your name? (wh-слово НЕ є підметом)", "Як тебе звати?"],
+                ["Who called you yesterday? (wh-слово Є підметом)", "Хто подзвонив тобі вчора?"],
+                ["What makes you happy? (wh-слово Є підметом)", "Що робить тебе щасливим?"]
             ]
         },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>Who did call you?</em> → ✅ <strong>Who called you?</strong>",
+                "❌ <em>What does make you happy?</em> → ✅ <strong>What makes you happy?</strong>"
+            ]},
         { type: "trainer", title: "Міні-тренажер (Wh-questions)" }
     ]
 };
@@ -559,7 +566,7 @@ export const RULE_PAGE_IMPERATIVES = {
         {
             type: "meaning",
             title: "Що це",
-            html: "Наказовий спосіб: інструкції, поради, прохання (Be quiet! Open the door!)."
+            html: "Наказовий спосіб: інструкції, поради, прохання."
         },
         {
             type: "usage",
@@ -579,6 +586,13 @@ export const RULE_PAGE_IMPERATIVES = {
                 ["Don't smoke here.", "Не паліть тут."]
             ]
         },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>You close the door.</em> → ✅ <strong>Close the door.</strong>",
+                "❌ <em>You don’t be late.</em> → ✅ <strong>Don’t be late.</strong>"
+            ]},
         { type: "trainer", title: "Міні-тренажер (Imperatives)" }
     ]
 };
@@ -610,6 +624,13 @@ export const RULE_PAGE_CAN_CANT = {
                 ["No, you can't park here.", "Ні, тут паркуватися не можна."]
             ]
         },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>I can to swim.</em> → ✅ <strong>I can swim.</strong>",
+                "❌ <em>He cans drive.</em> → ✅ <strong>He can drive.</strong>"
+            ]},
         { type: "trainer", title: "Міні-тренажер (Can / can't)" }
     ]
 };
@@ -658,7 +679,7 @@ export const RULE_PAGE_COUNT_UNCOUNT = {
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Як вживати",
             badges: [
                 "Countable: many / a few / two apples",
                 "Uncountable: much / a little / some water"
@@ -673,6 +694,14 @@ export const RULE_PAGE_COUNT_UNCOUNT = {
                 ["There is some sugar.", "Є трохи цукру."]
             ]
         },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>I need a advice.</em> → ✅ <strong>I need advice.</strong>",
+                "❌ <em>Two advices</em> → ✅ <strong>Two pieces of advice</strong>",
+                "❌ <em>Many money</em> → ✅ <strong>Much money</strong>"
+            ]},
         { type: "trainer", title: "Міні-тренажер (Countable / Uncountable)" }
     ]
 };
@@ -709,7 +738,7 @@ export const RULE_PAGE_LIKE_ING = {
 };
 
 export const RULE_PAGE_BE_FROM = {
-    id: "BE_FROM",
+    id: "BE_FROM_NATIONALITY",
     title: "Be from (nationality)",
     subtitle: "Вивчення правила",
     sections: [
@@ -722,8 +751,8 @@ export const RULE_PAGE_BE_FROM = {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "Країна/місто: <strong>She is from Poland.</strong>",
-                "Національність через 'be' + adjective: <strong>He is Polish.</strong>"
+                "Країна/місто: <strong>She is from Ukraine.</strong>",
+                "Національність через 'be' + adjective: <strong>He is Ukrainian.</strong>"
             ],
             hint: "Для національності можна використовувати 'from' або прикметник (I'm Ukrainian)."
         },
@@ -741,37 +770,77 @@ export const RULE_PAGE_BE_FROM = {
 
 export const RULE_PAGE_PRESENT_CONT_NOW = {
     id: "PRESENT_CONT_NOW",
-    title: "Present Continuous (now)",
+    title: "Present Continuous",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що це",
-            html: "Present Continuous описує дію, що відбувається зараз: <strong>I am reading now.</strong>"
+            html: [
+                "<strong>Present Continuous</strong> описує <strong>дію</strong>, що відбувається <strong>зараз</strong>.<br>" +
+                "<strong>Present Continuous</strong> також використовують для <strong>запланованих майбутніх планів</strong>, " +
+                "якщо це вже <strong>точні домовленості</strong> (arrangements)."
+            ]
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "Дія зараз: <strong>She is talking on the phone.</strong>",
-                "План на майбутнє (короткі домовленості): <strong>I'm meeting him tomorrow.</strong>"
+                "⏳ Дія зараз: <strong>She is talking on the phone.</strong>",
+                "📅 Особисті плани: <strong>I’m meeting my friend tomorrow.</strong>",
+                "🚂 Розклад, якщо це «моя» організована подія: <strong>We’re leaving at 6.</strong>",
+                "👥 Домовленість з кимось: <strong>She’s having dinner with her parents on Sunday.</strong>",
             ],
-            hint: "Форма: am/is/are + V-ing."
+            hint:
+                "Контекст (future time) робить Present Continuous «майбутнім»."
         },
         {
             type: "forms",
             title: "Форми",
             headers: ["Ствердження", "Заперечення", "Питання"],
             rows: [
-                ["I am working.", "I am not working.", "Are you working?"]
+                ["I am working.", "I am not working.", "Am I working?"],
+                ["You are working.", "You are not working.", "Are you working?"],
+                ["He is working.", "He is not working.", "Is he working?"],
+                ["She is working.", "She is not working.", "Is she working?"],
+                ["It is working.", "It is not working.", "Is it working?"],
+                ["We are working.", "We are not working.", "Are we working?"],
+                ["They are working.", "They are not working.", "Are they working?"]
             ]
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["They are playing football now.", "Вони зараз грають у футбол."]
+                ["They are playing football now.", "Вони зараз грають у футбол."],
+                ["We’re having a party on Friday.", "У нас вечірка в п’ятницю."],
+                ["Are you meeting him tomorrow?", "Ти зустрічаєшся з ним завтра?"],
+                ["She isn’t working this weekend.", "Вона не працює цього вікенду."],
             ]
+        },
+        {
+            type: "mistakes",
+            title: "Present Continuous VS will",
+            bullets: [
+                "<em>Дія вже йде?</em> → ✅ <strong>Present Continuous</strong>",
+                "<em>Це спонтанне рішення / обіцянка?</em> → ✅ <strong>will</strong>",
+                "<em>Є домовленість на майбутнє?</em> → ✅ <strong>Present Continuous</strong>",
+                "<em>Є слово now?</em> → ✅ <strong>Present Continuous</strong>"
+            ],
+            note:
+                "Завжди додавай <strong>future time</strong> (tomorrow, next week…), щоб було зрозуміло, що це про майбутнє.",},
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>I read now.</em> → ✅ <strong>I am reading now.</strong>",
+                "❌ <em>I can reading.</em> → ✅ <strong>I can read.</strong>",
+                "❌ <em>She is liking this movie.</em> → ✅ <strong>She likes this movie.</strong>",
+                "❌ <em>You are working now?</em> → ✅ <strong>Are you working now?</strong>",
+                "❌ <em>I am living in Ukraine.</em> → ✅ <strong>I live in Ukraine.</strong>",
+                "❌ <em>You are working now?</em> → ✅ <strong>Are you working now?</strong>",
+                "❌ <em>I meet my friend tomorrow.</em> → ✅ <strong>I’m meeting my friend tomorrow.</strong>.",
+            ],
         },
         { type: "trainer", title: "Міні-тренажер (Present Continuous)" }
     ]
@@ -779,24 +848,36 @@ export const RULE_PAGE_PRESENT_CONT_NOW = {
 
 export const RULE_PAGE_PREP_PLACE = {
     id: "PREP_PLACE",
-    title: "Prepositions of place (in/on/under/next to)",
+    title: "Prepositions of place",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що це",
-            html: "Прийменники місця вказують розташування: in, on, under, next to, between, behind тощо."
+            html: "Прийменники місця вказують розташування."
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "in — всередині (in the box)",
-                "on — поверхня (on the table)",
-                "under — під (under the bed)",
-                "next to — поряд (next to the school)"
-            ],
-            hint: "Візуалізація допомагає краще запам'ятати різницю (in vs on)."
+                "Межі всередині → IN (in the box)",
+                "Контакт із поверхнею → ON (on the table)",
+                "Де саме відбувається дія, не “всередині” і не “на поверхні” → AT (at the door)",
+                "Два об’єкти поруч (безпосередньо, майже впритул) → NEXT TO / BESIDE (next to the house)",
+                "Два об’єкти поруч (є відстань, але це все ще близько) → NEAR / CLOSE TO (near the park)",
+                "Між двома об’єктами → BETWEEN (between the houses)",
+                "Серед багатьох / серед натовпу → AMONG (among the people)",
+                "Вище об’єкта → ABOVE (above the clouds)",
+                "Нижче об’єкта → BELOW (below the surface)",
+                "Над об’єктом → OVER (over the bridge)",
+                "Під об’єктом → UNDER (under the table)",
+                "Перед об’єктом → IN FRONT OF (in front of the house)",
+                "Позаду об’єкта → BEHIND (behind the car)",
+                "Всередині з чіткими межами → WITHIN (within the city limits)",
+                "Рух усередину (уяви вхід у межі) → INTO (go into the room)",
+                "Рух на поверхню (уяви приземлення) → ONTO (jump onto the bed)",
+                "Рух назовні (уяви вихід із меж) → OUT OF (out of the box)"
+            ]
         },
         {
             type: "examples",
@@ -806,36 +887,78 @@ export const RULE_PAGE_PREP_PLACE = {
                 ["The keys are in my bag.", "Ключі в моїй сумці."]
             ]
         },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>I am in the street.</em> → ✅ <strong>I am on the street.</strong>",
+                "❌ <em>The picture is in the wall.</em> → ✅ <strong>The picture is on the wall.</strong>",
+                "❌ <em>I am at the room.</em> → ✅ <strong>I am in the room.</strong>",
+                "❌ <em>She is in the bus.</em> → ✅ <strong>She is on the bus.</strong> ON the bus, train, plane = публічний транспорт як платформа / сервіс, а не “коробка”.",
+                "❌ <em>He is on the car.</em> → ✅ <strong>He is in the car.</strong> IN the car, taxi = контейнер.",
+                "❌ <em>The keys are on my bag.</em> → ✅ <strong>The keys are in my bag.</strong>",
+                "❌ <em>The shop is in the corner.</em> → ✅ <strong>The shop is at the corner.</strong>",
+                "❌ <em>There is a mirror at the wall.</em> → ✅ <strong>There is a mirror on the wall.</strong>",
+                "❌ <em>I live at Poland.</em> → ✅ <strong>I live in Ukraine.</strong>",
+                "❌ <em>The cat is under of the table.</em> → ✅ <strong>The cat is under the table.</strong>"
+            ]
+        },
         { type: "trainer", title: "Міні-тренажер (Prepositions of place)" }
     ]
 };
 
 export const RULE_PAGE_PREP_TIME = {
     id: "PREP_TIME",
-    title: "Prepositions of time (in/on/at)",
+    title: "Prepositions of time",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що це",
-            html: "Прийменники часу: <strong>in</strong> (місяці, роки, частини дня), <strong>on</strong> (дні, дати), <strong>at</strong> (точний час, свята як point)."
+            html: "Прийменники часу вказують, <strong>коли</strong> щось відбувається."
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "in July / in 2020 / in the morning",
-                "on Monday / on 1st May",
-                "at 7 o'clock / at night"
-            ],
-            hint: "Запам'ятай шаблони: in (longer periods), on (days), at (specific time)."
+                "Точний момент / година / конкретний час → AT (at 5 o’clock, at night)",
+                "Дні, дати, конкретні дні тижня → ON (on Monday, on July 5th)",
+                "Довгі періоди часу → IN (in the morning, in 2025, in summer)",
+                "Через певний час від зараз → IN (in two hours)",
+                "Початок періоду → FROM (from Monday)",
+                "Кінець періоду → TO / TILL / UNTIL (to Friday, until 6 pm)",
+                "Тривалість (як довго) → FOR (for two hours)",
+                "Початок і тривалість до тепер → SINCE (since 2020)",
+                "До певного моменту (не пізніше) → BY (by tomorrow)",
+                "Під час процесу / події → DURING (during the meeting)",
+                "Одразу після → AFTER (after work)",
+                "Раніше ніж → BEFORE (before lunch)",
+                "Приблизний час → AROUND / ABOUT (around 7 pm)"
+            ]
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["I was born in 1990.", "Я народився в 1990."],
-                ["My birthday is on June 5th.", "Мій день народження — 5 червня."]
+                ["The meeting starts at 9.", "Зустріч починається о 9."],
+                ["I work on Mondays.", "Я працюю по понеділках."],
+                ["She was born in 1998.", "Вона народилася у 1998 році."],
+                ["We will finish in two hours.", "Ми закінчимо через дві години."],
+                ["He has lived here since 2015.", "Він живе тут з 2015 року."]
+            ]
+        },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>In Monday</em> → ✅ <strong>On Monday</strong>",
+                "❌ <em>On 5 o’clock</em> → ✅ <strong>At 5 o’clock</strong>",
+                "❌ <em>At the morning</em> → ✅ <strong>In the morning</strong>",
+                "❌ <em>I will call you after 2 hours.</em> → ✅ <strong>I will call you in 2 hours.</strong>",
+                "❌ <em>I live here from 5 years.</em> → ✅ <strong>I have lived here for 5 years.</strong>",
+                "❌ <em>I study here since two years.</em> → ✅ <strong>I have studied here for two years.</strong>",
+                "❌ <em>We finished until 6 pm.</em> → ✅ <strong>We finished by 6 pm.</strong>",
+                "❌ <em>I was tired on the meeting.</em> → ✅ <strong>I was tired during the meeting.</strong>"
             ]
         },
         { type: "trainer", title: "Міні-тренажер (Prepositions of time)" }
@@ -856,8 +979,8 @@ export const RULE_PAGE_ORDINALS_DATES = {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "Dates: <strong>May 1st / the first of May</strong>",
-                "Position: <strong>She is first in line.</strong>"
+                "Дати: <strong>May 1st / the first of May</strong>",
+                "Місце: <strong>She is first in line.</strong>"
             ],
             hint: "Зверни увагу на написання 1st, 2nd, 3rd у англійському форматі."
         },
@@ -866,6 +989,16 @@ export const RULE_PAGE_ORDINALS_DATES = {
             title: "Приклади",
             items: [
                 ["My exam is on the 21st of June.", "Мій іспит — 21 червня."]
+            ]
+        },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>My birthday is on 21 May</em> → ✅ <strong>My birthday is on the 21st of May</strong>",
+                "❌ <em>Today is 1 May</em> → ✅ <strong>Today is the 1st of May</strong>",
+                "❌ <em>He was born in 3 July</em> → ✅ <strong>He was born on 3rd July</strong>",
+                "❌ <em>We met on May the five</em> → ✅ <strong>We met on May the fifth</strong>"
             ]
         },
         { type: "trainer", title: "Міні-тренажер (Ordinals & dates)" }
@@ -880,7 +1013,7 @@ export const RULE_PAGE_WOULD_LIKE_TO = {
         {
             type: "meaning",
             title: "Що це",
-            html: "<strong>Would like to</strong> — ввічливе бажання або прохання (I would like to have coffee)."
+            html: "<strong>Would like to</strong> — ввічливе бажання або прохання."
         },
         {
             type: "usage",
@@ -899,6 +1032,16 @@ export const RULE_PAGE_WOULD_LIKE_TO = {
                 ["Would you like to come?", "Хочеш прийти?"]
             ]
         },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>I would like eat.</em> → ✅ <strong>I would like to eat.</strong>",
+                "❌ <em>I want to order coffee.</em> → ✅ <strong>I would like to order coffee.</strong> - граматично ок, але want = факт бажання, would like - ввічливо замовити",
+                "❌ <em>I would like that you come.</em> → ✅ <strong>I would like you to come.</strong>",
+                "❌ <em>Would you like come with us?</em> → ✅ <strong>Would you like to come with us?</strong>"
+            ]
+        },
         { type: "trainer", title: "Міні-тренажер (Would like to)" }
     ]
 };
@@ -911,7 +1054,7 @@ export const RULE_PAGE_LETS = {
         {
             type: "meaning",
             title: "Що це",
-            html: "<strong>Let's</strong> використовується для пропозицій: <em>Let's go!</em> — Давайте підемо!"
+            html: "<strong>Let's</strong> використовується для пропозицій."
         },
         {
             type: "usage",
@@ -928,6 +1071,17 @@ export const RULE_PAGE_LETS = {
             items: [
                 ["Let's watch a movie.", "Давайте подивимося фільм."],
                 ["Let's not argue.", "Давайте не сперечатися."]
+            ]
+        },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>Let’s to go home.</em> → ✅ <strong>Let’s go home.</strong>",
+                "❌ <em>Let’s going to the park.</em> → ✅ <strong>Let’s go to the park.</strong>",
+                "❌ <em>Let us go?</em> → ✅ <strong>Let’s go.</strong>",
+                "❌ <em>Let’s we start now.</em> → ✅ <strong>Let’s start now.</strong>",
+                "❌ <em>Let’s don’t talk about it.</em> → ✅ <strong>Let’s not talk about it.</strong>"
             ]
         },
         { type: "trainer", title: "Міні-тренажер (Let's)" }
@@ -961,6 +1115,17 @@ export const RULE_PAGE_TOO_VERY = {
                 ["This soup is too salty.", "Цей суп занадто солоний."]
             ]
         },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>It’s too cold for me, I like it.</em> → ✅ <strong>It’s very cold, but I like it.</strong>",
+                "❌ <em>This coffee is very hot to drink.</em> → ✅ <strong>This coffee is too hot to drink.</strong>",
+                "❌ <em>She is too beautiful.</em> → ✅ <strong>She is very beautiful.</strong>",
+                "❌ <em>The bag is very heavy to carry.</em> → ✅ <strong>The bag is too heavy to carry.</strong>",
+                "❌ <em>It’s too interesting!</em> → ✅ <strong>It’s very interesting!</strong>"
+            ]
+        },
         { type: "trainer", title: "Міні-тренажер (Too / Very)" }
     ]
 };
@@ -969,42 +1134,61 @@ export const RULE_PAGE_TOO_VERY = {
 
 export const RULE_PAGE_PAST_SIMPLE = {
     id: "PAST_SIMPLE",
-    title: "Past Simple (regular/irregular)",
+    title: "Past Simple",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що таке Past Simple",
             html:
-                "<strong>Past Simple</strong> використовуємо для <em>завершених дій у минулому</em>. " +
-                "Подія сталася і закінчилась: <em>вчора, минулого тижня, у 2010</em> тощо.",
+                "<strong>Past Simple</strong> — це граматичний час для <em>завершених дій у минулому</em>. " +
+                "Подія відбулася і закінчилася в конкретний момент у минулому. " +
+                "Для <strong>питань і заперечень</strong> у Past Simple зазвичай використовується допоміжне дієслово <strong>did</strong>.",
         },
         {
             type: "usage",
             title: "Коли вживаємо Past Simple",
             badges: [
-                "📅 Завершені події в минулому: <strong>I watched a film yesterday.</strong>",
+                "📅 Завершені події: <strong>I watched a film yesterday.</strong>",
                 "🕰️ Чіткий час у минулому: <strong>She visited Rome last year.</strong>",
-                "🔁 Події одна за одною: <strong>He came home, had dinner and went to bed.</strong>",
+                "🔁 Послідовність подій: <strong>He came home, ate dinner and went to bed.</strong>",
+                "❓ Питання про минуле: <strong>Did you call him?</strong>",
+                "🚫 Заперечення в минулому: <strong>I didn’t understand the question.</strong>",
             ],
             hint:
-                "Типові маркери: <em>yesterday, last week, two days ago, in 2010, when I was a child</em>.",
+                "Типові маркери часу: <em>yesterday, last week, two days ago, in 2010, when I was a child</em>.",
         },
         {
             type: "forms",
             title: "Форми Past Simple",
-            headers: ["Особа", "Ствердження", "Заперечення", "Питання", "Короткі відповіді"],
+            headers: ["Тип", "Структура", "Приклад", "Переклад", "Примітка"],
             rows: [
                 [
-                    "Усі особи",
-                    "V2 / V-ed: <strong>worked, played, went, saw</strong>",
-                    "did not (didn’t) + V1: <strong>didn’t go</strong>",
-                    "Did + підмет + V1?: <strong>Did you see?</strong>",
-                    "Yes, I did. / No, I didn’t.",
+                    "Ствердження",
+                    "Підмет + V2 / V-ed",
+                    "She worked yesterday.",
+                    "Вона працювала вчора.",
+                    "Неправильні дієслова мають V2 (went, saw).",
+                ],
+                [
+                    "Питання",
+                    "Did + підмет + V1?",
+                    "Did they arrive on time?",
+                    "Вони приїхали вчасно?",
+                    "Після did завжди базова форма.",
+                ],
+                [
+                    "Заперечення",
+                    "Підмет + didn’t + V1",
+                    "She didn’t like the movie.",
+                    "Їй не сподобався фільм.",
+                    "Без -ed і без V2.",
                 ],
             ],
             hint:
-                "У запереченнях і запитаннях завжди беремо <strong>базову форму (V1)</strong> після <strong>did/didn’t</strong>.",
+                "⚠️ Дієслово <strong>to be</strong> має <strong>окремі форми</strong> у Past Simple — <strong>was / were</strong> " +
+                "(без <strong>did</strong>). " +
+                "Для інших дієслів: <strong>V2 / V-ed</strong> — лише у ствердженнях, а з <strong>did / didn’t</strong> завжди <strong>V1</strong>.",
         },
         {
             type: "examples",
@@ -1020,12 +1204,14 @@ export const RULE_PAGE_PAST_SIMPLE = {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
+                "❌ <em>Did you finished?</em> → ✅ <strong>Did you finish?</strong>",
                 "❌ <em>He didn’t went</em> → ✅ <strong>He didn’t go</strong>",
-                "❌ <em>I was go</em> → ✅ <strong>I went</strong>",
                 "❌ <em>She not worked yesterday</em> → ✅ <strong>She didn’t work yesterday</strong>",
+                "❌ <em>Did you were at home?</em> → ✅ <strong>Were you at home?</strong>",
             ],
             note:
-                "Не забувай: після <strong>did / didn’t</strong> дієслово завжди в <strong>V1</strong> (без -ed).",
+                "Пам’ятай: <strong>did / didn’t</strong> використовуються з усіма дієсловами, <strong>крім to be</strong>. " +
+                "Для <strong>to be</strong> у минулому вживаємо <strong>was / were</strong>.",
         },
         {
             type: "trainer",
@@ -1189,8 +1375,7 @@ export const RULE_PAGE_PAST_CONTINUOUS = {
             type: "meaning",
             title: "Що таке Past Continuous",
             html:
-                "<strong>Past Continuous</strong> описує <em>тривалу дію в певний момент у минулому</em>. " +
-                "Структура: <strong>was / were + V-ing</strong>.",
+                "<strong>Past Continuous</strong> описує <em>тривалу дію в певний момент у минулому.",
         },
         {
             type: "usage",
@@ -1262,8 +1447,7 @@ export const RULE_PAGE_GOING_TO_PLANS = {
             type: "meaning",
             title: "Що таке be going to",
             html:
-                "<strong>Be going to</strong> використовуємо для <em>планів на майбутнє</em> і <em>очевидних прогнозів</em>. " +
-                "Структура: <strong>am/is/are going to + V</strong>.",
+                "<strong>Be going to</strong> використовуємо для <em>планів на майбутнє</em> і <em>очевидних прогнозів</em>. ",
         },
         {
             type: "usage",
@@ -1274,33 +1458,30 @@ export const RULE_PAGE_GOING_TO_PLANS = {
                 "🔮 Очевидний прогноз: <strong>Look at the clouds – it’s going to rain.</strong>",
             ],
             hint:
-                "Важливо: рішення зазвичай прийнято <em>до моменту мовлення</em>.",
+                "Важливо: рішення прийнято <em>до моменту мовлення</em>.",
         },
         {
             type: "forms",
             title: "Форми be going to",
-            headers: ["Особа", "Ствердження", "Заперечення", "Питання", "Короткі відповіді"],
+            headers: ["Особа", "Ствердження", "Заперечення", "Питання"],
             rows: [
                 [
                     "I",
                     "I’m going to go",
                     "I’m not going to go",
                     "Am I going to go?",
-                    "Yes, I am. / No, I’m not.",
                 ],
                 [
                     "He / She / It",
                     "He’s going to travel",
                     "He isn’t going to travel",
                     "Is he going to travel?",
-                    "Yes, he is. / No, he isn’t.",
                 ],
                 [
                     "You / We / They",
                     "They’re going to study",
                     "They aren’t going to study",
                     "Are they going to study?",
-                    "Yes, they are. / No, they aren’t.",
                 ],
             ],
             hint:
@@ -1341,8 +1522,7 @@ export const RULE_PAGE_WILL_PREDICTIONS = {
             type: "meaning",
             title: "Що таке will",
             html:
-                "<strong>Will</strong> використовуємо для <em>рішень у момент мовлення</em>, <em>простих прогнозів</em> і <em>обіцянок</em>. " +
-                "Структура: <strong>will + V</strong>.",
+                "<strong>Will</strong> використовуємо для <em>рішень у момент мовлення</em>, <em>простих прогнозів</em> і <em>обіцянок</em>. ",
         },
         {
             type: "usage",
@@ -1358,17 +1538,16 @@ export const RULE_PAGE_WILL_PREDICTIONS = {
         {
             type: "forms",
             title: "Форми з will",
-            headers: ["Особа", "Ствердження", "Заперечення", "Питання", "Короткі відповіді"],
+            headers: ["Особа", "Ствердження", "Заперечення", "Питання"],
             rows: [
                 [
                     "Усі особи",
-                    "will + V: <strong>She will come.</strong>",
-                    "will not (won’t) + V: <strong>She won’t come.</strong>",
-                    "Will + підмет + V?: <strong>Will she come?</strong>",
-                    "Yes, she will. / No, she won’t.",
+                    "will + V: She will come.",
+                    "will not (won’t) + V: She won’t come.",
+                    "Will + підмет + V?: Will she come?",
                 ],
             ],
-            hint: "<strong>Will</strong> не змінюється за особами.",
+            hint: "Will не змінюється за особами.",
         },
         {
             type: "examples",

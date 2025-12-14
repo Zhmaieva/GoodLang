@@ -213,7 +213,7 @@
     {
       "rules": ["NEGATION_DONT_DOESNT", "PREP_TIME"],
       "ua": "Я не працюю у вихідні.",
-      "en": ["I don’t work at weekends.", "I do not work at weekends."]
+      "en": ["I don’t work at weekends.", "I don’t work on weekends.", "I don’t work on the weekends."]
     },
     {
       "rules": ["NEGATION_DONT_DOESNT"],

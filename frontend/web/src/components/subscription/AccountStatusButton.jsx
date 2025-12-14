@@ -117,7 +117,7 @@ export default function AccountStatusButton({ theme, mobile }) {
                     >
                         {account?.status === "paid" && "Преміум"}
                         {account?.status === "attention" && "Преміум закінчується"}
-                        {account?.status === "free" && "Купити преміум"}
+                        {account?.status === "free" && "Придбати преміум"}
                     </div>
                 )}
 
@@ -129,7 +129,7 @@ export default function AccountStatusButton({ theme, mobile }) {
                         onClick={handleClick}
                     >
                         {account?.status !== "free" && "Деталі підписки"}
-                        {account?.status === "free" && "Купити преміум"}
+                        {account?.status === "free" && "Придбрати преміум"}
                     </div>
                 )}
 
