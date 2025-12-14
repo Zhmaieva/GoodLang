@@ -4,7 +4,7 @@ import {LEVEL_RULES} from "../utils/rules.js";
 const DAY_MS = 24 * 60 * 60 * 1000;
 const PENALTY_FACTOR = 1.5; // can tweak to 1.3 / 2.0 later
 
-const LEVEL_MAP_TO = {
+export const LEVEL_MAP_TO = {
     A1: { label: "початкового", percent: 33 },
     A2: { label: "середнього", percent: 66 },
     B1: { label: "середнього", percent: 66 },
@@ -155,13 +155,22 @@ function medianLearningTimeDays(lastNDays = 30) {
 
 export function getLearningState() {
     const answers = getAnswers();
-    if (!answers.length) return null;
+    if (!answers.length)
+        return {
+            medianDays: null,
+            nextLevels: null,
+            answers: null,
+        }
 
     // 1) Швидкість навчання: медіанний час до "learned" для одного правила
     const medianDays = medianLearningTimeDays(30); // спочатку 30 днів, потім all-time
     if (medianDays == null || !Number.isFinite(medianDays) || medianDays <= 0) {
         // Немає адекватних даних — формально "немає прогресу"
-        return Infinity;
+        return {
+            medianDays: null,
+            nextLevels: null,
+            answers: null,
+        }
     }
 
     // 2) Поточний рівень та порядок рівнів
@@ -175,7 +184,12 @@ export function getLearningState() {
     const currentStepLevel = levelInfo?.level || "beginner";
 
     const stepLevelsOrder = Object.keys(LEVEL_RULES || {}); // наприклад ["beginner","intermediate","advanced"]
-    if (!stepLevelsOrder.length) return null;
+    if (!stepLevelsOrder.length)
+        return {
+            medianDays: null,
+            nextLevels: null,
+            answers: null,
+        }
 
     const nextLevels = [];
 
@@ -197,16 +211,16 @@ export function rawEstimate() {
     const { answers, medianDays, nextLevels } = getLearningState();
 
     // Якщо наступного рівня немає — вважай, що ми вже на максимумі
-    if (nextLevels.length === 0) {
-        return null; // estimateTimeToNextLevelText поверне "Недостатньо даних..."
+    if ((nextLevels?.length ?? 0) === 0) {
+        return { nextLevels: null, days: null };
     }
 
     let rulesInNextLevel = []
-    nextLevels.forEach(n => {
+    nextLevels?.forEach(n => {
         rulesInNextLevel = rulesInNextLevel.concat(LEVEL_RULES[n] || [])
     })
     if (!rulesInNextLevel.length) {
-        return null;
+        return { nextLevels: null, days: null };
     }
 
     // 3) Поточний статус правил наступного рівня
@@ -272,6 +286,21 @@ function pluralWeeks(n) {
 
 export function estimateTimeToNextLevelText() {
     const {days, nextLevels} = rawEstimate();
+    const nextLevel = nextLevels?.length > 0 ? nextLevels[0] : 'B2';
+
+    // 2) Поточний рівень та порядок рівнів
+    const levelInfo = inferUserLevel({
+        minAttemptsPerRule: 1,
+        minRulesWithAttempts: 6,
+        minTotalAttemptsPerLevel: 6,
+        minAccuracy: 85
+    });
+
+    const totalAttempts = levelInfo.levels.reduce((acc, level) => acc + level.attempts, 0);
+
+    if (totalAttempts < 40) {
+        return  { levelNameTo: LEVEL_MAP_TO[nextLevel]?.label, text: "Оцінка рівня - продовжуйте практику" };
+    }
 
     if (days === null) return "Недостатньо даних для оцінки.";
     if (days === Infinity) return "Поки немає прогресу для підвищення рівня.";
@@ -304,7 +333,7 @@ export function estimateTimeToNextLevelText() {
     }
 
     return  {
-        levelNameTo: LEVEL_MAP_TO[nextLevels[0]].label,
+        levelNameTo: LEVEL_MAP_TO[nextLevel].label,
         text: `До ${LEVEL_MAP_TO[nextLevels[0]].label} рівня: ${text}.`
     };
 }

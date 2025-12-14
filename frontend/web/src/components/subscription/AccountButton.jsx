@@ -62,6 +62,7 @@ export default function AccountButton({ theme, mobile }) {
         boxShadow: `2px 2px 0 ${account?.email && account?.status === 'paid' ? theme.greenDark : theme.accentDark}`,
         transform: hover ? "translateY(1px)" : "none",
         transition: "transform 120ms ease",
+        height: '100%'
     };
 
     return (

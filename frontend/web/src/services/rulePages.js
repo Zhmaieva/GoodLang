@@ -706,37 +706,6 @@ export const RULE_PAGE_COUNT_UNCOUNT = {
     ]
 };
 
-export const RULE_PAGE_LIKE_ING = {
-    id: "LIKE_ING",
-    title: "Like + -ing",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що це",
-            html: "<strong>Like + -ing</strong> використовується для опису захоплень / діяльності, що подобається (I like swimming)."
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
-            badges: [
-                "Після like: <strong>I like reading.</strong>",
-                "Після enjoy, love, hate також: <strong>She enjoys dancing.</strong>"
-            ],
-            hint: "Після 'like' можна ставити і інфінітив, але з іншим відтінком значення."
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["He likes playing football.", "Він любить грати у футбол."],
-                ["Do you like cooking?", "Ти любиш готувати?"]
-            ]
-        },
-        { type: "trainer", title: "Міні-тренажер (Like + -ing)" }
-    ]
-};
-
 export const RULE_PAGE_BE_FROM = {
     id: "BE_FROM_NATIONALITY",
     title: "Be from (nationality)",

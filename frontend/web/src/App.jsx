@@ -25,7 +25,6 @@ import {
     RULE_PAGE_CAN_CANT,
     RULE_PAGE_THERE_ISNT_ARENT_ANY,
     RULE_PAGE_COUNT_UNCOUNT,
-    RULE_PAGE_LIKE_ING,
     RULE_PAGE_BE_FROM,
     RULE_PAGE_PRESENT_CONT_NOW,
     RULE_PAGE_PREP_PLACE,
@@ -179,7 +178,6 @@ export default function App() {
                 <Route path="/rule/CAN_CANT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_CAN_CANT} />} />
                 <Route path="/rule/THERE_ISNT_ARENT_ANY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_THERE_ISNT_ARENT_ANY} />} />
                 <Route path="/rule/COUNT_UNCOUNT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COUNT_UNCOUNT} />} />
-                <Route path="/rule/LIKE_ING" element={<RulePage theme={ruleTheme} data={RULE_PAGE_LIKE_ING} />} />
                 <Route path="/rule/BE_FROM_NATIONALITY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_BE_FROM} />} />
                 <Route path="/rule/PRESENT_CONT_NOW" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PRESENT_CONT_NOW} />} />
                 <Route path="/rule/PREP_PLACE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PREP_PLACE} />} />

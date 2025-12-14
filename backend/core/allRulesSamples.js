@@ -6137,7 +6137,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "GERUND_VS_INFINITIVE"
             ],
             "ua": "Не забудь полити квіти.",
@@ -6195,7 +6194,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_PLACE"
             ],
             "ua": "Не кричи на вулиці.",
@@ -6252,7 +6250,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "SIMPLE_ADJ"
             ],
             "ua": "Не пий холодну воду.",
@@ -6308,7 +6305,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_PLACE"
             ],
             "ua": "Не бігай по калюжах.",
@@ -6354,7 +6350,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_PLACE"
             ],
             "ua": "Не кури в приміщенні.",
@@ -6399,7 +6394,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "SIMPLE_ADJ"
             ],
             "ua": "Не чіпай гарячу плиту.",
@@ -6443,8 +6437,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не спізнися на автобус.",
             "en": [
@@ -6488,7 +6481,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_TIME"
             ],
             "ua": "Не їж солодке перед вечерею.",
@@ -6542,8 +6534,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не розмовляй із повним ротом.",
             "en": [
@@ -6578,7 +6569,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_WITH"
             ],
             "ua": "Не грайся з ножем.",
@@ -6612,7 +6602,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "GERUND_VS_INFINITIVE"
             ],
             "ua": "Не забудь зарядити телефон.",
@@ -6656,8 +6645,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не залишай двері відчиненими.",
             "en": [
@@ -6688,8 +6676,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не шуми, діти сплять.",
             "en": [
@@ -6733,7 +6720,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_TIME"
             ],
             "ua": "Не дивись у телефон під час їжі.",
@@ -6765,8 +6751,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не бери чужі речі.",
             "en": [
@@ -6798,7 +6783,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "ENOUGH_TOO_MUCH_MANY"
             ],
             "ua": "Не їж багато солоного.",
@@ -6842,7 +6826,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_TIME"
             ],
             "ua": "Не забудь про зустріч завтра.",
@@ -6876,7 +6859,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_TIME"
             ],
             "ua": "Не пий каву перед сном.",
@@ -6909,7 +6891,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "ENOUGH_TOO_MUCH_MANY"
             ],
             "ua": "Не гуляй довго на холоді.",
@@ -6953,7 +6934,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "ENOUGH_TOO_MUCH_MANY"
             ],
             "ua": "Не бери занадто важкий рюкзак.",
@@ -6987,7 +6967,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_PLACE"
             ],
             "ua": "Не залишай їжу на столі.",
@@ -7020,8 +6999,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не забудь про день народження мами.",
             "en": [
@@ -7053,8 +7031,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не розмовляй із незнайомцями.",
             "en": [
@@ -7088,7 +7065,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_PLACE"
             ],
             "ua": "Не ходи босоніж по холодній підлозі.",
@@ -7120,8 +7096,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "IMPERATIVES",
-                "NEGATION_DONT_DOESNT"
+                "IMPERATIVES"
             ],
             "ua": "Не пий газовані напої.",
             "en": [
@@ -7154,7 +7129,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "GERUND_VS_INFINITIVE"
             ],
             "ua": "Не забудь повернути книгу в бібліотеку.",
@@ -7187,7 +7161,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "IMPERATIVES",
-                "NEGATION_DONT_DOESNT",
                 "PREP_TIME"
             ],
             "ua": "Не їж чіпси перед обідом.",
@@ -7998,7 +7971,8 @@ export const ALL_RULES_SAMPLES = {
             "ua": "Я не працюю у вихідні.",
             "en": [
                 "I don’t work at weekends.",
-                "I do not work at weekends."
+                "I don’t work on weekends.",
+                "I don’t work on the weekends."
             ]
         },
         {
@@ -10536,7 +10510,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Магазин (знаходиться) біля мого будинку.",
+            "ua": "Магазин (знаходиться поруч, але не впритул) біля мого будинку.",
             "en": [
                 "The shop is near my house."
             ],
@@ -10558,7 +10532,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Лампа (стоїть) біля ліжка.",
+            "ua": "Лампа (знаходиться безпосередньо, майже впритул) біля ліжка.",
             "en": [
                 "The lamp is next to the bed."
             ],
@@ -10646,7 +10620,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Кафе (знаходиться) біля парку.",
+            "ua": "Кафе (знаходиться поруч, але не прямо) біля парку.",
             "en": [
                 "The café is near the park."
             ],
@@ -10701,7 +10675,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Магазин (знаходиться) поруч із банком.",
+            "ua": "Магазин (знаходиться безпосередньо, майже впритул) поруч із банком.",
             "en": [
                 "The shop is next to the bank."
             ],
@@ -10756,7 +10730,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Стілець (стоїть) біля вікна.",
+            "ua": "Стілець (стоїть поруч, але не впритул) біля вікна.",
             "en": [
                 "The chair is near the window."
             ],
@@ -10904,7 +10878,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PREP_PLACE"
             ],
-            "ua": "Книга (лежить) біля краю.",
+            "ua": "Книга (лежить поруч, але не прямо) біля краю.",
             "en": [
                 "The book is near the edge."
             ],
@@ -10926,17 +10900,6 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Лампа (стоїть) біля дивана.",
-            "en": [
-                "The lamp is beside the sofa."
-            ],
-            "hint": "текст у круглих дужках не потребує перекладу"
-        },
-        {
-            "rules": [
-                "PREP_PLACE",
-                "ARTICLES"
-            ],
             "ua": "Велосипед (стоїть) за гаражем.",
             "en": [
                 "The bike is behind the garage."
@@ -10948,9 +10911,9 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Магазин (знаходиться) поруч із кафе.",
+            "ua": "Магазин (знаходиться безпосередньо, майже впритул) поруч із кафе.",
             "en": [
-                "The store is next to the café."
+                "The store is next to the cafe."
             ],
             "hint": "текст у круглих дужках не потребує перекладу"
         },
@@ -11002,7 +10965,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PREP_PLACE"
             ],
-            "ua": "Парк (знаходиться) біля мого офісу.",
+            "ua": "Парк (знаходиться поруч, але не прямо) біля мого офісу.",
             "en": [
                 "The park is near my office."
             ],
@@ -11134,7 +11097,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Ресторан (знаходиться) біля річки.",
+            "ua": "Ресторан (знаходиться поруч, але не прямо) біля річки.",
             "en": [
                 "The restaurant is near the river."
             ],
@@ -11255,7 +11218,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Автовокзал (знаходиться) поруч із торговим центром.",
+            "ua": "Автовокзал (знаходиться безпосередньо, майже впритул) поруч із торговим центром.",
             "en": [
                 "The bus station is next to the mall."
             ],
@@ -11310,7 +11273,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Магазин (знаходиться) біля автобусної зупинки.",
+            "ua": "Магазин (знаходиться поруч, але не впритул) біля автобусної зупинки.",
             "en": [
                 "The shop is near the bus stop."
             ],
@@ -11354,11 +11317,11 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Телефон (лежить) біля ліжка.",
+            "ua": "Телефон поруч із ліжком.",
             "en": [
-                "The phone is beside the bed."
-            ],
-            "hint": "текст у круглих дужках не потребує перекладу"
+                "The phone is beside the bed.",
+                "The phone is by the bed."
+            ]
         },
         {
             "rules": [
@@ -11431,7 +11394,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Стілець (стоїть) біля вікна.",
+            "ua": "Стілець (стоїть поруч, але не впритул) біля вікна.",
             "en": [
                 "The chair is near the window."
             ],
@@ -11445,17 +11408,6 @@ export const ALL_RULES_SAMPLES = {
             "ua": "Лампа (висить) над столом.",
             "en": [
                 "The lamp is above the desk."
-            ],
-            "hint": "текст у круглих дужках не потребує перекладу"
-        },
-        {
-            "rules": [
-                "PREP_PLACE",
-                "ARTICLES"
-            ],
-            "ua": "Велосипед (стоїть) біля паркану.",
-            "en": [
-                "The bike is next to the fence."
             ],
             "hint": "текст у круглих дужках не потребує перекладу"
         },
@@ -12351,7 +12303,8 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "PRESENT_CONT_NOW"
+                "PRESENT_CONT_NOW",
+                "ARTICLES"
             ],
             "ua": "Діти зараз грають у дворі.",
             "en": [
@@ -12361,7 +12314,8 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "PRESENT_CONT_NOW"
+                "PRESENT_CONT_NOW",
+                "ARTICLES"
             ],
             "ua": "Вона зараз співає на сцені.",
             "en": [
@@ -12537,7 +12491,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "PRESENT_CONT_NOW",
-                "PREP_PLACE"
+                "PREP_PLACE",
+                "ARTICLES"
             ],
             "ua": "Вона зараз читає в кафе.",
             "en": [
@@ -12738,10 +12693,9 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE",
                 "ARTICLES"
             ],
-            "ua": "Вона зараз пише на дошці.",
+            "ua": "Вона зараз пише щось на дошці.",
             "en": [
-                "She is writing on the board now.",
-                "She is currently writing on the board."
+                "She is writing something on the board now."
             ]
         },
         {
@@ -12988,7 +12942,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
                 "SIMPLE_ADJ",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Мій брат завжди веселий вранці.",
             "en": [
@@ -13137,11 +13091,12 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
                 "SIMPLE_ADJ",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Мій тато завжди спокійний.",
             "en": [
-                "My dad is always calm."
+                "My dad is always calm.",
+                "My father is always calm."
             ]
         },
         {
@@ -13235,7 +13190,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
                 "PREP_PLACE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Він завжди у своїй кімнаті ввечері.",
             "en": [
@@ -13255,7 +13210,7 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Вона ніколи не забуває свій телефон.",
             "en": [
@@ -13333,7 +13288,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
                 "YES_NO_Q",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Вони часто відвідують своїх бабусь?",
             "en": [
@@ -13343,7 +13298,7 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Коли ти зазвичай прибираєш свою кімнату?",
             "en": [
@@ -13364,7 +13319,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
                 "SIMPLE_ADJ",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Моя мама завжди добра до всіх.",
             "en": [
@@ -13481,7 +13436,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
                 "PREP_PLACE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Моя сестра часто в кімнаті, коли я приходжу.",
             "en": [
@@ -13539,7 +13494,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "PRESENT_SIMPLE_FREQ",
                 "YES_NO_Q",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Твій брат часто грає в комп’ютерні ігри?",
             "en": [
@@ -13957,7 +13912,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Моя кімната чиста, а твоя брудна.",
             "en": [
@@ -14267,7 +14222,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Твоя ідея чудова.",
             "en": [
@@ -14343,9 +14298,10 @@ export const ALL_RULES_SAMPLES = {
                 "TO_BE",
                 "DEMONSTRATIVES"
             ],
-            "ua": "Це питання складне.",
+            "ua": "Це складне питання.",
             "en": [
-                "This question is difficult."
+                "This question is difficult.",
+                "This is a difficult question."
             ]
         },
         {
@@ -14531,7 +14487,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Твоє місто гарне.",
             "en": [
@@ -14596,7 +14552,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Його тато добрий.",
             "en": [
@@ -14630,7 +14586,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Твоя ідея чудова.",
             "en": [
@@ -14641,7 +14597,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Його план добрий.",
             "en": [
@@ -14652,7 +14608,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Їхній будинок старий.",
             "en": [
@@ -14674,7 +14630,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Її сорочка біла.",
             "en": [
@@ -14685,7 +14641,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Моя спальна тепла.",
             "en": [
@@ -14696,7 +14652,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Мій кіт чорний.",
             "en": [
@@ -14707,7 +14663,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Його друзі веселі.",
             "en": [
@@ -14718,7 +14674,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Мій дім затишний.",
             "en": [
@@ -14729,7 +14685,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Мій пес милий.",
             "en": [
@@ -14740,7 +14696,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Моя бабуся стара.",
             "en": [
@@ -14762,7 +14718,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Мій дідусь сильний.",
             "en": [
@@ -14784,7 +14740,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Їхній сад зелений.",
             "en": [
@@ -14806,7 +14762,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "SIMPLE_ADJ",
                 "TO_BE",
-                "POSSESSIVES"
+                "POSSESSIVE_S"
             ],
             "ua": "Мій зошит тонкий.",
             "en": [
@@ -28164,7 +28120,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
+                "PREP_PLACE",
+                "ARTICLES"
             ],
             "ua": "Ми їдемо до парку в суботу.",
             "en": [
@@ -28187,7 +28144,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "POSSESSIVE_ADJECTIVES"
+                "POSSESSIVE_ADJECTIVES",
+                "ARTICLES"
             ],
             "ua": "Моя сестра зустрічається зі своїм другом завтра.",
             "en": [
@@ -28198,7 +28156,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
+                "PREP_PLACE",
+                "ARTICLES"
             ],
             "ua": "Ми гратимемо у футбол на стадіоні в неділю.",
             "en": [
@@ -28209,7 +28168,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
+                "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+                "ARTICLES"
             ],
             "ua": "Вони готують багато їжі на вечірку завтра.",
             "en": [
@@ -28219,7 +28179,8 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "FUTURE_WITH_PRESENT_CONT"
+                "FUTURE_WITH_PRESENT_CONT",
+                "ARTICLES"
             ],
             "ua": "Він не бере участі в змаганні цього місяця.",
             "en": [
@@ -28242,9 +28203,10 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
+                "PREP_PLACE",
+                "ARTICLES"
             ],
-            "ua": "Ми пообідаємо в ресторані сьогодні ввечері.",
+            "ua": "Ми обідаємо в ресторані сьогодні ввечері.",
             "en": [
                 "We are having lunch at the restaurant this evening.",
                 "We're having lunch at the restaurant this evening."
@@ -28253,18 +28215,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "SHOULD_SHOULDNT"
-            ],
-            "ua": "Ти готуєшся до презентації, чи не так?",
-            "en": [
-                "You are preparing for the presentation, aren’t you?",
-                "You're preparing for the presentation, aren’t you?"
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
+                "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+                "ARTICLES"
             ],
             "ua": "Я буду купувати багато квитків на концерт наступного тижня.",
             "en": [
@@ -28287,7 +28239,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "DEMONSTRATIVES"
+                "DEMONSTRATIVES",
+                "ARTICLES"
             ],
             "ua": "Цей учитель проводить урок завтра.",
             "en": [
@@ -28297,7 +28250,8 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "FUTURE_WITH_PRESENT_CONT"
+                "FUTURE_WITH_PRESENT_CONT",
+                "ARTICLES"
             ],
             "ua": "Ми не йдемо до кінотеатру цього вечора.",
             "en": [
@@ -28319,7 +28273,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
+                "PREP_PLACE",
+                "ARTICLES"
             ],
             "ua": "Вони працюють у бібліотеці завтра вдень.",
             "en": [
@@ -28330,7 +28285,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
+                "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
+                "ARTICLES"
             ],
             "ua": "Я беру трохи книг у відпустку.",
             "en": [
@@ -28341,19 +28297,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_TIME",
-                "PERSONAL_PRONOUNS"
-            ],
-            "ua": "Ми повечеряємо разом наступної п’ятниці.",
-            "en": [
-                "We are having dinner together next Friday.",
-                "We're having dinner together next Friday."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "POSSESSIVE_ADJECTIVES"
+                "POSSESSIVE_ADJECTIVES",
+                "ARTICLES"
             ],
             "ua": "Моя команда гратиме у фіналі наступного тижня.",
             "en": [
@@ -28364,7 +28309,8 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "DEMONSTRATIVES"
+                "DEMONSTRATIVES",
+                "ARTICLES"
             ],
             "ua": "Ці діти виступлять на шкільному концерті завтра.",
             "en": [
@@ -28374,7 +28320,8 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "FUTURE_WITH_PRESENT_CONT"
+                "FUTURE_WITH_PRESENT_CONT",
+                "ARTICLES"
             ],
             "ua": "Я не відвідаю семінар цього тижня.",
             "en": [
@@ -28397,12 +28344,108 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
+                "PREP_PLACE",
+                "ARTICLES"
             ],
             "ua": "Ми зустрічаємося в кафе завтра.",
             "en": [
                 "We are meeting at the café tomorrow.",
                 "We're meeting at the café tomorrow."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "DEMONSTRATIVES",
+                "ARTICLES"
+            ],
+            "ua": "Цей актор знімається у новому фільмі наступного місяця.",
+            "en": [
+                "This actor is starring in a new movie next month.",
+                "This actor's starring in a new movie next month."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "ARTICLES"
+            ],
+            "ua": "Ми не йдемо до театру цього вечора.",
+            "en": [
+                "We are not going to the theater this evening.",
+                "We aren’t going to the theater this evening."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "PREP_PLACE",
+                "ARTICLES"
+            ],
+            "ua": "Він виступає в театрі завтра.",
+            "en": [
+                "He is performing at the theater tomorrow.",
+                "He's performing at the theater tomorrow."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "PREP_PLACE",
+                "ARTICLES"
+            ],
+            "ua": "Ми відвідаємо зоопарк у суботу.",
+            "en": [
+                "We are visiting the zoo on Saturday.",
+                "We're visiting the zoo on Saturday."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "PREP_TIME",
+                "ARTICLES"
+            ],
+            "ua": "Я відвідаю бібліотеку наступного вівторка.",
+            "en": [
+                "I am visiting the library next Tuesday.",
+                "I'm visiting the library next Tuesday."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "DEMONSTRATIVES",
+                "ARTICLES"
+            ],
+            "ua": "Ця команда гратиме у фіналі завтра.",
+            "en": [
+                "This team is playing in the final tomorrow.",
+                "This team's playing in the final tomorrow."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "DEMONSTRATIVES",
+                "ARTICLES"
+            ],
+            "ua": "Цей актор знімається у фільмі наступного тижня.",
+            "en": [
+                "This actor is filming a movie next week.",
+                "This actor's filming a movie next week."
+            ]
+        },
+        {
+            "rules": [
+                "FUTURE_WITH_PRESENT_CONT",
+                "PREP_TIME",
+                "PERSONAL_PRONOUNS"
+            ],
+            "ua": "Ми повечеряємо разом наступної п’ятниці.",
+            "en": [
+                "We are having dinner together next Friday.",
+                "We're having dinner together next Friday."
             ]
         },
         {
@@ -28415,17 +28458,6 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is flying to London on Wednesday.",
                 "She's flying to London on Wednesday."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Цей актор знімається у новому фільмі наступного місяця.",
-            "en": [
-                "This actor is starring in a new movie next month.",
-                "This actor's starring in a new movie next month."
             ]
         },
         {
@@ -28464,40 +28496,6 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
                 "PREP_TIME",
-                "ARTICLES"
-            ],
-            "ua": "Я відвідаю театр наступної суботи.",
-            "en": [
-                "I am visiting the theater next Saturday.",
-                "I'm visiting the theater next Saturday."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "QUESTION_TAGS"
-            ],
-            "ua": "Ти приїжджаєш завтра, чи не так?",
-            "en": [
-                "You are coming tomorrow, aren’t you?",
-                "You're coming tomorrow, aren’t you?"
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Ця команда гратиме у фіналі завтра.",
-            "en": [
-                "This team is playing in the final tomorrow.",
-                "This team's playing in the final tomorrow."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "PREP_TIME",
                 "PERSONAL_PRONOUNS"
             ],
             "ua": "Я йду до кінотеатру завтра ввечері.",
@@ -28509,56 +28507,13 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
-            ],
-            "ua": "Ми відвідаємо зоопарк у суботу.",
-            "en": [
-                "We are visiting the zoo on Saturday.",
-                "We're visiting the zoo on Saturday."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
                 "PREP_TIME",
-                "ARTICLES"
+                "PERSONAL_PRONOUNS"
             ],
-            "ua": "Я відвідаю бібліотеку наступного вівторка.",
+            "ua": "Вона летить до Парижа в середу.",
             "en": [
-                "I am visiting the library next Tuesday.",
-                "I'm visiting the library next Tuesday."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
-            ],
-            "ua": "Ми вечеряємо в ресторані сьогодні ввечері.",
-            "en": [
-                "We are having dinner at the restaurant this evening.",
-                "We're having dinner at the restaurant this evening."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "SHOULD_SHOULDNT"
-            ],
-            "ua": "Ти готуєшся до виступу, чи не так?",
-            "en": [
-                "You are preparing for the performance, aren’t you?",
-                "You're preparing for the performance, aren’t you?"
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT"
-            ],
-            "ua": "Ми не йдемо до театру цього вечора.",
-            "en": [
-                "We are not going to the theater this evening.",
-                "We aren’t going to the theater this evening."
+                "She is flying to Paris on Wednesday.",
+                "She's flying to Paris on Wednesday."
             ]
         },
         {
@@ -28566,21 +28521,10 @@ export const ALL_RULES_SAMPLES = {
                 "FUTURE_WITH_PRESENT_CONT",
                 "IN_ORDER_TO_SO_THAT"
             ],
-            "ua": "Вона пакує речі, щоб поїхати завтра.",
+            "ua": "Я бронюю квитки, щоб поїхати завтра.",
             "en": [
-                "She is packing her things in order to leave tomorrow.",
-                "She's packing her things in order to leave tomorrow."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "PREP_PLACE"
-            ],
-            "ua": "Вони працюють у парку завтра вдень.",
-            "en": [
-                "They are working in the park tomorrow afternoon.",
-                "They're working in the park tomorrow afternoon."
+                "I am booking tickets in order to travel tomorrow.",
+                "I'm booking tickets in order to travel tomorrow."
             ]
         },
         {
@@ -28607,35 +28551,12 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "FUTURE_WITH_PRESENT_CONT",
-                "PREP_TIME",
-                "PERSONAL_PRONOUNS"
-            ],
-            "ua": "Вона летить до Парижа в середу.",
-            "en": [
-                "She is flying to Paris on Wednesday.",
-                "She's flying to Paris on Wednesday."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Цей актор знімається у фільмі наступного тижня.",
-            "en": [
-                "This actor is filming a movie next week.",
-                "This actor's filming a movie next week."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
                 "IN_ORDER_TO_SO_THAT"
             ],
-            "ua": "Я бронюю квитки, щоб поїхати завтра.",
+            "ua": "Вона пакує речі, щоб поїхати завтра.",
             "en": [
-                "I am booking tickets in order to travel tomorrow.",
-                "I'm booking tickets in order to travel tomorrow."
+                "She is packing her things in order to leave tomorrow.",
+                "She's packing her things in order to leave tomorrow."
             ]
         },
         {
@@ -28643,21 +28564,10 @@ export const ALL_RULES_SAMPLES = {
                 "FUTURE_WITH_PRESENT_CONT",
                 "PREP_PLACE"
             ],
-            "ua": "Він виступає в театрі завтра.",
+            "ua": "Вони працюють у парку завтра вдень.",
             "en": [
-                "He is performing at the theater tomorrow.",
-                "He's performing at the theater tomorrow."
-            ]
-        },
-        {
-            "rules": [
-                "FUTURE_WITH_PRESENT_CONT",
-                "QUESTION_TAGS"
-            ],
-            "ua": "Ти приїжджаєш у понеділок, чи не так?",
-            "en": [
-                "You are arriving on Monday, aren’t you?",
-                "You're arriving on Monday, aren’t you?"
+                "They are working in the park tomorrow afternoon.",
+                "They're working in the park tomorrow afternoon."
             ]
         },
         {
@@ -52379,18 +52289,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "PREP_DIRECTION",
-                "PRESENT_CONT_NOW",
-                "ARTICLES"
-            ],
-            "ua": "Пташка летить до моря.",
-            "en": [
-                "The bird is flying toward the sea.",
-                "The bird is flying to the sea."
-            ]
-        },
-        {
-            "rules": [
-                "PREP_DIRECTION",
                 "PAST_SIMPLE",
                 "ARTICLES"
             ],
@@ -73960,7 +73858,7 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "PAST_SIMPLE"
             ],
-            "ua": "Вона б воліла, щоб ти сказав їй правду.",
+            "ua": "Вона б хотіла, щоб ти сказав їй правду.",
             "en": [
                 "She’d rather you told her the truth.",
                 "She would rather you told her the truth."
@@ -73970,22 +73868,9 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "WOULD_RATHER_PREFER",
-                "FUTURE_WITH_PRESENT_CONT"
-            ],
-            "ua": "Ми б краще зустрілися завтра, якщо тобі зручно.",
-            "en": [
-                "We’d rather meet tomorrow if it’s convenient for you.",
-                "We would rather meet tomorrow if that is convenient for you.",
-                "We would prefer to meet tomorrow if that is convenient for you."
-            ],
-            "hint": "use WOULD RATHER / PREFER"
-        },
-        {
-            "rules": [
-                "WOULD_RATHER_PREFER",
                 "PRESENT_SIMPLE_FREQ"
             ],
-            "ua": "Він зазвичай воліє працювати один.",
+            "ua": "Він зазвичай воліє працювати сам.",
             "en": [
                 "He usually prefers working alone.",
                 "He usually prefers to work alone."
@@ -74038,7 +73923,7 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "POSSESSIVE_ADJECTIVES"
             ],
-            "ua": "Вона б воліла, щоб її брат залишився вдома.",
+            "ua": "Вона б хотіла, щоб її брат залишився вдома.",
             "en": [
                 "She’d rather her brother stayed at home.",
                 "She would rather her brother stayed at home."
@@ -74047,24 +73932,9 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "WOULD_RATHER_PREFER",
-                "THERE_IS_ARE",
-                "ARTICLES",
-                "RELATIVE_CLAUSES"
-            ],
-            "ua": "Я б радше пішов у кав’ярню, де є тихе місце.",
-            "en": [
-                "I’d rather go to a café where there is a quiet place.",
-                "I would rather go to a café where there is a quiet place.",
-                "I would prefer to go to a café where there is a quiet place."
-            ],
-            "hint": "use WOULD RATHER / PREFER"
-        },
-        {
-            "rules": [
                 "WOULD_RATHER_PREFER"
             ],
-            "ua": "Я б радше почекав кілька хвилин, ніж поспішав.",
+            "ua": "Краще я почекаю кілька хвилин, ніж поспішатиму.",
             "en": [
                 "I’d rather wait a few minutes than hurry.",
                 "I would rather wait a few minutes than hurry.",
@@ -74101,19 +73971,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "WOULD_RATHER_PREFER",
-                "ENOUGH_TOO_MUCH_MANY"
-            ],
-            "ua": "Вона занадто втомлена, тому воліла б відпочити.",
-            "en": [
-                "She’s too tired, so she’d rather rest.",
-                "She’s too tired, so she would rather rest.",
-                "She’d prefer to rest because she’s too tired."
-            ],
-            "hint": "use WOULD RATHER / PREFER"
-        },
-        {
-            "rules": [
-                "WOULD_RATHER_PREFER",
                 "NEGATION_DONT_DOESNT"
             ],
             "ua": "Я б радше не говорив про це зараз.",
@@ -74142,7 +73999,7 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "ADVERBS_FREQUENCY_OFTEN_NEVER"
             ],
-            "ua": "Він часто каже, що воліє працювати вночі.",
+            "ua": "Він часто каже, що надає перевагу роботі вночі.",
             "en": [
                 "He often says he prefers working at night."
             ],
@@ -74243,7 +74100,7 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "LIKE_LOVE_HATE_ING"
             ],
-            "ua": "Вона воліє гуляти ввечері, коли менше людей.",
+            "ua": "Вона надає перевагу прогулянкам увечері, коли менше людей.",
             "en": [
                 "She prefers walking in the evening when there are fewer people.",
                 "She’d rather walk in the evening when there are fewer people.",
@@ -74294,25 +74151,13 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "PRESENT_SIMPLE_FREQ"
             ],
-            "ua": "Він зазвичай воліє працювати рано вранці.",
+            "ua": "Він зазвичай надає перевагу роботі рано-вранці.",
             "en": [
                 "He usually prefers working early in the morning.",
                 "He usually prefers to work early in the morning.",
                 "He’d rather work early in the morning."
             ],
             "hint": "use WOULD RATHER / PREFER"
-        },
-        {
-            "rules": [
-                "WOULD_RATHER_PREFER",
-                "POSSESSIVE_ADJECTIVES"
-            ],
-            "ua": "Вона б воліла, щоб її діти лягали спати раніше.",
-            "en": [
-                "She’d rather her children went to bed earlier.",
-                "She would rather her children went to bed earlier."
-            ],
-            "hint": "use WOULD RATHER"
         },
         {
             "rules": [
@@ -74324,20 +74169,6 @@ export const ALL_RULES_SAMPLES = {
                 "I’d rather live in the mountains if I had a choice.",
                 "I would rather live in the mountains if I had a choice.",
                 "I’d prefer to live in the mountains if I had a choice."
-            ],
-            "hint": "use WOULD RATHER / PREFER"
-        },
-        {
-            "rules": [
-                "WOULD_RATHER_PREFER",
-                "THERE_IS_ARE",
-                "ARTICLES"
-            ],
-            "ua": "Я б радше пішов у місце, де є спокійна атмосфера.",
-            "en": [
-                "I’d rather go to a place where there is a calm atmosphere.",
-                "I would rather go to a place where there is a calm atmosphere.",
-                "I’d prefer to go somewhere with a calm atmosphere."
             ],
             "hint": "use WOULD RATHER / PREFER"
         },
@@ -74384,7 +74215,7 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "PAST_SIMPLE"
             ],
-            "ua": "Вона б воліла, щоб я залишився вдома.",
+            "ua": "Вона б хотіла, щоб я залишився вдома.",
             "en": [
                 "She’d rather I stayed at home.",
                 "She would rather I stayed at home."
@@ -74506,19 +74337,6 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "WOULD_RATHER_PREFER",
-                "COMPARATIVES"
-            ],
-            "ua": "Ми б радше обрали вигіднішу пропозицію.",
-            "en": [
-                "We’d rather choose a more favorable offer.",
-                "We would rather select a better deal.",
-                "We prefer choosing more beneficial options."
-            ],
-            "hint": "use WOULD RATHER / PREFER"
-        },
-        {
-            "rules": [
                 "WOULD_RATHER_PREFER"
             ],
             "ua": "Ми б радше зосередилися на якості, а не кількості.",
@@ -74539,18 +74357,6 @@ export const ALL_RULES_SAMPLES = {
                 "I’d rather make an arrangement if there is a possibility.",
                 "I would rather make a deal if there is such an option.",
                 "I prefer to reach an agreement when possible."
-            ],
-            "hint": "use WOULD RATHER / PREFER"
-        },
-        {
-            "rules": [
-                "WOULD_RATHER_PREFER"
-            ],
-            "ua": "Ми б радше почекали, щоб побачити результати.",
-            "en": [
-                "We’d rather wait to see the results.",
-                "We would rather wait until we can see the outcome.",
-                "We’d prefer to wait before making conclusions."
             ],
             "hint": "use WOULD RATHER / PREFER"
         }

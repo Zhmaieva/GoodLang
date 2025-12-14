@@ -1,6 +1,6 @@
 import {getAllStatistics, inferUserLevel} from "./dataService"; // adjust path
 import { LEVEL_RULES } from "../utils/rules";
-import {getLearningState} from "./insightsService.js";
+import {getLearningState, LEVEL_MAP_TO} from "./insightsService.js";
 
 const CEFR_ORDER = ["A1", "A2", "B1", "B2"];
 
@@ -33,18 +33,22 @@ export function getProgress() {
 
     const { answers, medianDays, nextLevels } = getLearningState();
 
-    if (nextLevels.length === 0) {
-        return null;
-    }
+    const next = (nextLevels?.length ?? 0) > 0 ? nextLevels : ['B2'];
+
+    const currentLevelStat = leveStats?.levels.find(x => x.level === leveStats.level)
+    const recommendedLevel = currentLevelStat.eligible ? next : [leveStats.level];
 
     let combinedAccuracy = 0;
-    nextLevels.forEach(n => {
-        combinedAccuracy += (leveStats.levels.find(l => l.level === n)?.score * 100) ?? 0;
+    recommendedLevel.forEach(n => {
+        const level = leveStats.levels.find(l => l.level === n)
+        combinedAccuracy += level?.attempts > 0 ? (level?.accuracy ?? 0) : 0;
     })
-    combinedAccuracy = combinedAccuracy / nextLevels.length;
+    combinedAccuracy = combinedAccuracy / recommendedLevel.length;
+
 
     return {
-        nextLevel: nextLevels[0],
+        levelNameTo: LEVEL_MAP_TO[recommendedLevel[0]].label,
+        nextLevel: recommendedLevel[0],
         accuracy: combinedAccuracy
     }
 }
@@ -76,19 +80,19 @@ export function getTrainingLevel() {
             if (!lvlStats || lvlStats.attempts === 0) break;
 
             // Move UP if accuracy >85%
-            if (lvlStats.score >= 85) {
+            if (lvlStats.accuracy >= 85) {
                 if (levelIdx < CEFR_ORDER.length - 1) levelIdx++;
                 else  {
-                    console.log(`CALIBRATION ${lvl}: ${lvlStats.score}%`);
+                    console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
                     break;
                 }
             }
             // Move DOWN if accuracy <75% and not already at A1
-            else if (((lvlStats.score < 75 && lvlStats.attempts > 6) || (lvlStats.score < 25 && lvlStats.attempts > 1)) && levelIdx > 0) {
+            else if (((lvlStats.accuracy < 75 && lvlStats.attempts > 6) || (lvlStats.accuracy < 25 && lvlStats.attempts > 1)) && levelIdx > 0) {
                 levelIdx--;
             }
             else {
-                console.log(`CALIBRATION ${lvl}: ${lvlStats.score}%`);
+                console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
                 break;
             }
         }
@@ -109,7 +113,7 @@ export function getTrainingLevel() {
             const currentLevelIndex = allStats.levels.indexOf(allStats.levels.find(l => l.level === allStats.level));
             const levelTooHigh = levelIndex - currentLevelIndex > 1;
 
-            return (levelData?.score ?? 0) < 95 && !levelTooHigh;
+            return ((levelData?.score ?? 0) * 100) < 95 && !levelTooHigh;
         }) || "B2";
 
     console.log('current managed level: ', current);

@@ -26,9 +26,6 @@ export async function getToken() {
 - fix dates translation
 - fix declarative sentences absent level and others
 
--- LIKE_ING fetch error
-
-
 - add progress bar to rule page
 - add floating trainer on rule page
 - tooltips for analytics chips

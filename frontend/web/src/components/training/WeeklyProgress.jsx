@@ -11,12 +11,14 @@ export function WeeklyProgress({ theme, mobile }) {
     function refresh() {
         const estimate = estimateTimeToNextLevelText();
         setDaysLeft(estimate.text);
-        setNextLevelTo(estimate.levelNameTo);
 
-        const accuracy = getProgress()?.accuracy;
-        if (!accuracy) {
+        const {accuracy, levelNameTo} = getProgress();
+
+        if (!accuracy || accuracy <= 0) {
+            setNextLevelTo(null);
             setNextLevelAccuracy(null);
         } else {
+            setNextLevelTo(levelNameTo);
             setNextLevelAccuracy(accuracy.toFixed(2))
         }
     }
@@ -54,20 +56,24 @@ export function WeeklyProgress({ theme, mobile }) {
                 {daysLeft}
             </div>
 
-            <div style={{
-                visibility: daysLeft ? "visible" : "hidden",
-                padding: "6px 12px",
-                borderRadius: 8,
-                background: "#fff",
-                border: `2px solid ${theme.accent}`,
-                color: theme.accentDark,
-                fontWeight: 600,
-                fontSize: mobile ? 12 : 14,
-                marginLeft: mobile ? 0 : 12,
+            {
+                daysLeft !== 'Оцінка рівня - продовжуйте практику' && nextLevelAccuracy &&
+                <div style={{
+                    visibility: daysLeft ? "visible" : "hidden",
+                    padding: "6px 12px",
+                    borderRadius: 8,
+                    background: "#fff",
+                    border: `2px solid ${theme.accent}`,
+                    color: theme.accentDark,
+                    fontWeight: 600,
+                    fontSize: mobile ? 12 : 14,
+                    marginLeft: mobile ? 0 : 12,
 
-            }}>
-                Точність {nextLevelTo} рівня: {nextLevelAccuracy}%
-            </div>
+                }}>
+                    Точність {nextLevelTo} рівня: {nextLevelAccuracy}%
+                </div>
+            }
+
         </div>
     );
 }
