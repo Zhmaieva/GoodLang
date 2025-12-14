@@ -48,6 +48,8 @@ export default function Trainer({
 
     const [taskText, setTaskText] = useState("Завантаження завдання…");
     const [hint, setHint] = useState('Порада: перекладіть і натисніть «Перевірити»');
+    const [taskHint, setTaskHint] = useState(null);
+    const [nextHint, setNextHint] = useState(null);
     const [correctAnswer, setCorrectAnswer] = useState("");
     const textareaRef = useRef(null);
 
@@ -176,12 +178,14 @@ export default function Trainer({
                 setTextToTranslate(data.textToTranslate || "");
                 setRules(data.rules || null);
                 setTaskText(data.textToTranslate || "—");
+                setTaskHint(data.hint || null);
 
                 saveSeed({seed, skip: data.skip ?? (skip+1) });
             } else {
                 setTextToTranslate(nextTextToTranslate || "");
                 setRules(nextRules || null);
                 setTaskText(nextTextToTranslate || "—");
+                setTaskHint(nextHint || null);
             }
 
             setNextTextToTranslate('');
@@ -248,6 +252,7 @@ export default function Trainer({
             if (freeTraining) {
                 setNextTextToTranslate(data.textToTranslate || "");
                 setNextRules(data.rules);
+                setNextHint(data.hint || null);
             }
 
             saveSeed({seed, skip: data.skip ?? (skip+1) });
@@ -279,6 +284,7 @@ export default function Trainer({
     return (
         <section id="trainer" style={gridStyle}>
             <TaskCard
+                hint={freeTraining ? taskHint : null}
                 theme={theme}
                 taskText={taskText}
                 answer={answer}

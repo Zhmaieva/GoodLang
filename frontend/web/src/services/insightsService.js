@@ -25,7 +25,7 @@ function computeRuleLearningDurations() {
             (x, y) => new Date(x.date).getTime() - new Date(y.date).getTime()
         );
 
-        const firstTs = new Date(sorted[0].date).getTime();
+        let firstTs = new Date(sorted[0].date).getTime();
         if (!Number.isFinite(firstTs)) continue;
 
         // --- group attempts by day ---
@@ -63,6 +63,11 @@ function computeRuleLearningDurations() {
             // accuracy based on all attempts so far
             const acc = averageAccuracyPercent(cumulative);
             const status = statusFor(acc, cumulative.length);
+
+            // if 'forgot' the rule, then reset learning clock
+            if (status !== "learned" && lastStatus === "learned") {
+                firstTs = lastTs;
+            }
 
             // transition: non-learned -> learned
             if (status === "learned" && lastStatus !== "learned") {
@@ -174,15 +179,24 @@ export function rawEstimate() {
     const stepLevelsOrder = Object.keys(LEVEL_RULES || {}); // наприклад ["beginner","intermediate","advanced"]
     if (!stepLevelsOrder.length) return null;
 
-    const currentIndex = stepLevelsOrder.indexOf(currentStepLevel);
-    const nextLevelId = currentIndex >= 0 ? stepLevelsOrder[currentIndex + 1] : null;
+    const nextLevels = [];
+
+    if (currentStepLevel === 'A1') {
+        nextLevels.push('A2');
+        nextLevels.push('B1');
+    } else if (currentStepLevel !== 'B2') {
+        nextLevels.push('B2');
+    }
 
     // Якщо наступного рівня немає — вважай, що ми вже на максимумі
-    if (!nextLevelId) {
+    if (nextLevels.length === 0) {
         return null; // estimateTimeToNextLevelText поверне "Недостатньо даних..."
     }
 
-    const rulesInNextLevel = LEVEL_RULES[nextLevelId] || [];
+    let rulesInNextLevel = []
+    nextLevels.forEach(n => {
+        rulesInNextLevel = rulesInNextLevel.concat(LEVEL_RULES[n] || [])
+    })
     if (!rulesInNextLevel.length) {
         return null;
     }
@@ -263,7 +277,7 @@ export function estimateTimeToNextLevelText() {
     } else if (d < 1) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
-        text = `приблизно ${fmt} ${pluralDays(fmt)}`;
+        text = `${fmt} ${pluralDays(fmt)}`;
     } else if (d < 7) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
@@ -278,7 +292,7 @@ export function estimateTimeToNextLevelText() {
         text = `${fmt} ${pluralDays(fmt)}`;
     } else {
         const weeks = Math.ceil(d / 7);
-        text = `приблизно ${weeks} ${pluralWeeks(weeks)}`;
+        text = `${weeks} ${pluralWeeks(weeks)}`;
     }
 
     return `До наступного рівня: ${text}.`;

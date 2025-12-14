@@ -57,6 +57,7 @@ export const translationsController = {
                     correctAnswer: "",
                     tipIfWrong: "",
                     score: 0,
+                    hint: sample.hint,
                     skip: adjustedSkip + 1,
                 });
             }
@@ -94,6 +95,7 @@ export const translationsController = {
             // --- підбір наступного прикладу ---
             let newTextToTranslate = "";
             let newRules = rulesArr;
+            let newHint = null;
 
             const currentSkip = Number.parseInt(skip || "0", 10) || 0;
             const newSkip = currentSkip + 1;
@@ -114,6 +116,7 @@ export const translationsController = {
                     if (nextSample) {
                         newRules = nextSample.rules;
                         newTextToTranslate = nextSample[locale];
+                        newHint = nextSample.hint;
                     }
 
                     break;

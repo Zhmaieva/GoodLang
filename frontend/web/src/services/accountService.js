@@ -26,7 +26,7 @@ export async function getToken() {
 - fix dates translation
 - fix declarative sentences absent level and others
 
-- fix strictness of side rules check
+-- after adding an answer, it increased remaining days
 
 - add progress bar to rule page
 - add floating trainer on rule page

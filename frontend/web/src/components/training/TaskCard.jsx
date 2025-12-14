@@ -1,6 +1,7 @@
 export default function TaskCard({
                                      theme, taskText, answer, setAnswer,
-                                     isInputDisabled, mainBtnText, onMainButtonClick, loading, textareaRef, onKeyDown
+                                     isInputDisabled, mainBtnText, onMainButtonClick, loading, textareaRef, onKeyDown,
+                                     hint
                                  }) {
     const styles = {
         card: {
@@ -23,11 +24,21 @@ export default function TaskCard({
             padding: "12px 20px", fontSize: 15, cursor: loading ? "not-allowed" : "pointer",
             boxShadow: `3px 3px 0 ${theme.accentDark}`, width: "100%", opacity: loading ? 0.7 : 1,
         },
+        hintText: {
+            background: "#fffaf3", border: `2px dashed ${theme.accent}`,
+            padding: "2px 14px", borderRadius: theme.radius, color: theme.text, whiteSpace: "pre-wrap",
+        },
     };
 
     return (
         <div style={styles.card} aria-live="polite">
-            <div style={styles.taskText}>{taskText}</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+                <div style={styles.taskText}>{taskText}</div>
+                {hint && <div style={styles.hintText}>
+                    {hint}
+                </div>}
+            </div>
+
             <div style={styles.inputWrap}>
         <textarea
             ref={textareaRef}
