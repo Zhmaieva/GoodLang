@@ -113,7 +113,7 @@ export default function AnalyticsPage({theme}) {
                         minAttemptsPerRule: 1,
                         minRulesWithAttempts: 6,
                         minTotalAttemptsPerLevel: 6,
-                        minAccuracy: 80
+                        minAccuracy: 85
                     })}
                 />
                 <FiltersBar

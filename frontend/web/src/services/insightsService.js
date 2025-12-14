@@ -4,6 +4,13 @@ import {LEVEL_RULES} from "../utils/rules.js";
 const DAY_MS = 24 * 60 * 60 * 1000;
 const PENALTY_FACTOR = 1.5; // can tweak to 1.3 / 2.0 later
 
+const LEVEL_MAP_TO = {
+    A1: { label: "початкового", percent: 33 },
+    A2: { label: "середнього", percent: 66 },
+    B1: { label: "середнього", percent: 66 },
+    B2: { label: "просунутого", percent: 100 },
+};
+
 function computeRuleLearningDurations() {
     const answers = getAnswers();
     if (!answers.length) return [];
@@ -18,6 +25,7 @@ function computeRuleLearningDurations() {
     const durations = [];
 
     for (const [ruleId, list] of byRule.entries()) {
+
         if (!list.length) continue;
 
         // Sort attempts by real timestamp
@@ -86,9 +94,7 @@ function computeRuleLearningDurations() {
         }
 
         // overall last timestamp for this rule (last day)
-        const lastGlobalTs = days.length
-            ? days[days.length - 1][1].lastTs
-            : firstTs;
+        const lastGlobalTs = Date.now();
 
         // CASE 1: rule is currently learned → use the last stable learned moment
         if (latestLearned && lastStatus === "learned") {
@@ -147,21 +153,7 @@ function medianLearningTimeDays(lastNDays = 30) {
     }
 }
 
-
-
-
-// Utility: group answers by day
-function groupByDay(answers) {
-    const map = new Map();
-    for (const a of answers) {
-        const day = a.date.slice(0, 10);
-        if (!map.has(day)) map.set(day, []);
-        map.get(day).push(a);
-    }
-    return map;
-}
-
-export function rawEstimate() {
+export function getLearningState() {
     const answers = getAnswers();
     if (!answers.length) return null;
 
@@ -173,7 +165,13 @@ export function rawEstimate() {
     }
 
     // 2) Поточний рівень та порядок рівнів
-    const levelInfo = inferUserLevel(); // твоя функція знизу файла
+    const levelInfo = inferUserLevel({
+        minAttemptsPerRule: 1,
+        minRulesWithAttempts: 6,
+        minTotalAttemptsPerLevel: 6,
+        minAccuracy: 85
+    });
+
     const currentStepLevel = levelInfo?.level || "beginner";
 
     const stepLevelsOrder = Object.keys(LEVEL_RULES || {}); // наприклад ["beginner","intermediate","advanced"]
@@ -187,6 +185,16 @@ export function rawEstimate() {
     } else if (currentStepLevel !== 'B2') {
         nextLevels.push('B2');
     }
+
+    return {
+        medianDays: medianDays,
+        nextLevels: nextLevels,
+        answers: answers,
+    }
+}
+
+export function rawEstimate() {
+    const { answers, medianDays, nextLevels } = getLearningState();
 
     // Якщо наступного рівня немає — вважай, що ми вже на максимумі
     if (nextLevels.length === 0) {
@@ -233,7 +241,7 @@ export function rawEstimate() {
 
     // Уже досягли цілі за кількістю "learned" правил
     if (remainingRules <= 0) {
-        return 0;
+        return { nextLevels, days: 0 };
     }
 
     // 4) Прогноз: скільки днів потрібно, якщо кожне нове правило "долернюється"
@@ -241,7 +249,7 @@ export function rawEstimate() {
     const daysNeeded = remainingRules * medianDays;
 
     // Округляємо вгору — бо "ще трохи" це все одно плюс день :)
-    return Math.ceil(daysNeeded);
+    return {nextLevels, days: Math.ceil(daysNeeded) };
 }
 
 function pluralDays(n) {
@@ -263,7 +271,7 @@ function pluralWeeks(n) {
 }
 
 export function estimateTimeToNextLevelText() {
-    const days = rawEstimate();
+    const {days, nextLevels} = rawEstimate();
 
     if (days === null) return "Недостатньо даних для оцінки.";
     if (days === Infinity) return "Поки немає прогресу для підвищення рівня.";
@@ -295,6 +303,9 @@ export function estimateTimeToNextLevelText() {
         text = `${weeks} ${pluralWeeks(weeks)}`;
     }
 
-    return `До наступного рівня: ${text}.`;
+    return  {
+        levelNameTo: LEVEL_MAP_TO[nextLevels[0]].label,
+        text: `До ${LEVEL_MAP_TO[nextLevels[0]].label} рівня: ${text}.`
+    };
 }
 

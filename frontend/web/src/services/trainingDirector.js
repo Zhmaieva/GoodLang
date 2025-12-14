@@ -1,5 +1,6 @@
-import { getAllStatistics } from "./dataService"; // adjust path
+import {getAllStatistics, inferUserLevel} from "./dataService"; // adjust path
 import { LEVEL_RULES } from "../utils/rules";
+import {getLearningState} from "./insightsService.js";
 
 const CEFR_ORDER = ["A1", "A2", "B1", "B2"];
 
@@ -27,14 +28,42 @@ function computeLevelStats(stats) {
 /**
  * Main function to get user's training level
  */
-export function getTrainingLevel() {
-    const stats = getAllStatistics();
-    const per = computeLevelStats(stats);
+export function getProgress() {
+    const leveStats = inferUserLevel();
 
-    console.log(per);
+    const { answers, medianDays, nextLevels } = getLearningState();
+
+    if (nextLevels.length === 0) {
+        return null;
+    }
+
+    let combinedAccuracy = 0;
+    nextLevels.forEach(n => {
+        combinedAccuracy += (leveStats.levels.find(l => l.level === n)?.score * 100) ?? 0;
+    })
+    combinedAccuracy = combinedAccuracy / nextLevels.length;
+
+    return {
+        nextLevel: nextLevels[0],
+        accuracy: combinedAccuracy
+    }
+}
+
+/**
+ * Main function to get user's training level
+ */
+export function getTrainingLevel() {
+    const allStats = inferUserLevel({
+        minAttemptsPerRule: 1,
+        minRulesWithAttempts: 6,
+        minTotalAttemptsPerLevel: 6,
+        minAccuracy: 85
+    });
+
+    console.log(allStats);
 
     // Total attempts across all levels
-    const totalScores = CEFR_ORDER.reduce((acc, lvl) => acc + (per[lvl]?.total || 0), 0);
+    const totalScores = CEFR_ORDER.reduce((acc, lvl) => acc + (allStats.levels.find(l => l.level === lvl)?.attempts || 0), 0);
 
     // --- CALIBRATION MODE: total scores < 40 ---
     if (totalScores < 40) {
@@ -42,24 +71,24 @@ export function getTrainingLevel() {
 
         while (true) {
             const lvl = CEFR_ORDER[levelIdx];
-            const lvlStats = per[lvl];
+            const lvlStats = allStats.levels.find(l => l.level === lvl);
 
-            if (!lvlStats || lvlStats.total === 0) break;
+            if (!lvlStats || lvlStats.attempts === 0) break;
 
             // Move UP if accuracy >85%
-            if (lvlStats.accuracy >= 85) {
+            if (lvlStats.score >= 85) {
                 if (levelIdx < CEFR_ORDER.length - 1) levelIdx++;
                 else  {
-                    console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
+                    console.log(`CALIBRATION ${lvl}: ${lvlStats.score}%`);
                     break;
                 }
             }
             // Move DOWN if accuracy <75% and not already at A1
-            else if (((lvlStats.accuracy < 75 && lvlStats.total > 6) || (lvlStats.accuracy < 25 && lvlStats.total > 1)) && levelIdx > 0) {
+            else if (((lvlStats.score < 75 && lvlStats.attempts > 6) || (lvlStats.score < 25 && lvlStats.attempts > 1)) && levelIdx > 0) {
                 levelIdx--;
             }
             else {
-                console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
+                console.log(`CALIBRATION ${lvl}: ${lvlStats.score}%`);
                 break;
             }
         }
@@ -68,45 +97,20 @@ export function getTrainingLevel() {
         return CEFR_ORDER[levelIdx];
     }
 
-    // // --- NORMAL MODE: enough data (≥40 scores) ---
-    // // Best mastered level (accuracy ≥85%)
-    // let current = "A1";
-    // const mastered = CEFR_ORDER.filter(lvl => per[lvl].accuracy >= 85);
-    // if (mastered.length) {
-    //     current = mastered[mastered.length - 1]; // hardest mastered level
-    // } else {
-    //     // fallback: best overall accuracy
-    //     current = CEFR_ORDER.reduce((best, lvl) =>
-    //         per[lvl].accuracy > per[best].accuracy ? lvl : best, "A1"
-    //     );
-    // }
-    //
-    // // Next level logic
-    // const idx = CEFR_ORDER.indexOf(current);
-    // const next = idx < CEFR_ORDER.length - 1 ? CEFR_ORDER[idx + 1] : null;
-    //
-    // console.log(per);
-    // if (next) {
-    //     // Promote if next level accuracy > 40%
-    //     if (per[next].accuracy > 40 && per[current].total > 40) {
-    //         console.log('current managed level: ', next);
-    //         return next;
-    //     }
-    //
-    //     // Promote if current level accuracy ≥85%
-    //     if (per[current].accuracy >= 85 && per[current].total > 40) {
-    //         console.log('current managed level: ', next);
-    //         return next;
-    //     }
-    // }
-
     // --- NORMAL MODE: enough data (≥40 scores) ---
     // Randomize level order, then pick the first level with accuracy < 85 as `next`.
     // If all are >= 85, default to "B2".
     const shuffled = [...CEFR_ORDER].sort(() => Math.random() - 0.5);
 
     const current =
-        shuffled.find(lvl => (per?.[lvl]?.accuracy ?? 0) < 85) || "B2";
+        shuffled.find(lvl => {
+            const levelData = allStats.levels.find(l => l.level === lvl);
+            const levelIndex = allStats.levels.indexOf(levelData);
+            const currentLevelIndex = allStats.levels.indexOf(allStats.levels.find(l => l.level === allStats.level));
+            const levelTooHigh = levelIndex - currentLevelIndex > 1;
+
+            return (levelData?.score ?? 0) < 95 && !levelTooHigh;
+        }) || "B2";
 
     console.log('current managed level: ', current);
     return current;

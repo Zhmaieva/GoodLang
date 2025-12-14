@@ -492,54 +492,93 @@ export function inferUserLevel(options = {}) {
         }
     }
 
-    // Compute per-level stats (same logic as before)
-    const levelStats = stepLevels.map((lvl) => {
-        const lvlAnswers = byLevel.get(lvl) || [];
-        const rulesInLevel = LEVEL_RULES[lvl] || [];
+// Compute per-level stats (same logic as before)
+    const levelStats = (() => {
+        // how much previous level affects NEXT level
+        const wAcc = weights.prevToNextAccuracy ?? 0.2; // 0..1 (blends accuracy)
+        const wScore = weights.prevToNextScore ?? 0.15; // nudges score
+        const wEligAcc = weights.prevToNextEligibilityAccuracy ?? wAcc; // usually same as wAcc
 
-        // Per-rule grouping (within this level)
-        const byRule = new Map();
-        for (const a of lvlAnswers) {
-            const r = a.rule;
-            if (!r || !rulesInLevel.includes(r)) continue; // only rules that belong to this level
-            if (!byRule.has(r)) byRule.set(r, []);
-            byRule.get(r).push(a);
+        // 1) compute raw stats per level
+        const raw = stepLevels.map((lvl) => {
+            const lvlAnswers = byLevel.get(lvl) || [];
+            const rulesInLevel = LEVEL_RULES[lvl] || [];
+
+            // Per-rule grouping (within this level)
+            const byRule = new Map();
+            for (const a of lvlAnswers) {
+                const r = a.rule;
+                if (!r || !rulesInLevel.includes(r)) continue; // only rules that belong to this level
+                if (!byRule.has(r)) byRule.set(r, []);
+                byRule.get(r).push(a);
+            }
+
+            // Coverage: rules that meet minAttemptsPerRule & learned count
+            let rulesWithMinAttempts = 0;
+            let learnedCount = 0;
+
+            for (const r of rulesInLevel) {
+                const attempts = byRule.get(r) || [];
+                if (attempts.length >= minAttemptsPerRule) rulesWithMinAttempts++;
+                const accR = averageAccuracyPercent(attempts);
+                const statusR = statusFor(accR, attempts.length);
+                if (statusR === "learned") learnedCount++;
+            }
+
+            const attempts = lvlAnswers.length;
+            const accuracy = averageAccuracyPercent(lvlAnswers);
+            const coverage = rulesInLevel.length ? (rulesWithMinAttempts / rulesInLevel.length) : 0;
+            const learnedShare = rulesInLevel.length ? (learnedCount / rulesInLevel.length) : 0;
+
+            // Volume bonus: gentle log boost
+            const volume = Math.log10(Math.max(1, attempts)) / 2; // ~0..1
+            const acc01 = Math.max(0, Math.min(1, accuracy / 100));
+
+            const score =
+                weights.accuracy * acc01 +
+                weights.coverage * coverage +
+                weights.learned * learnedShare +
+                weights.volumeBonus * volume;
+
+            const eligible =
+                attempts >= minTotalAttemptsPerLevel &&
+                rulesWithMinAttempts >= minRulesWithAttempts &&
+                accuracy >= minAccuracy;
+
+            return { level: lvl, attempts, accuracy, rulesWithMinAttempts, coverage, learnedShare, score, eligible };
+        });
+
+        // 2) influence NEXT level using previous level's accuracy
+        for (let i = 1; i < raw.length; i++) {
+            const prev = raw[i - 1];
+            const cur = raw[i];
+
+            const prevAcc = Number.isFinite(prev.accuracy) ? prev.accuracy : 0;
+
+            // (a) accuracy: blend current with previous
+            const blendedAcc = (1 - wAcc) * (cur.accuracy ?? 0) + wAcc * prevAcc;
+            cur.accuracy = Math.max(0, Math.min(100, blendedAcc));
+
+            // (b) score: nudge based on previous accuracy (85% = neutral)
+            const prevAcc01 = Math.max(0, Math.min(1, prevAcc / 100));
+            cur.score = clamp01((cur.score ?? 0) + wScore * (prevAcc01 - 0.85));
+
+            // (c) eligibility: recompute using influenced accuracy (optionally blend with separate weight)
+            // If you want eligibility to use the same blendedAcc, just set wEligAcc = wAcc.
+            const eligAcc = Math.max(
+                0,
+                Math.min(100, (1 - wEligAcc) * (cur.accuracy ?? 0) + wEligAcc * prevAcc)
+            );
+
+            cur.eligible =
+                cur.attempts >= minTotalAttemptsPerLevel &&
+                cur.rulesWithMinAttempts >= minRulesWithAttempts &&
+                eligAcc >= minAccuracy;
         }
 
-        // Coverage: rules that meet minAttemptsPerRule & learned count
-        let rulesWithMinAttempts = 0;
-        let learnedCount = 0;
+        return raw;
+    })();
 
-        for (const r of rulesInLevel) {
-            const attempts = byRule.get(r) || [];
-            if (attempts.length >= minAttemptsPerRule) rulesWithMinAttempts++;
-            const accR = averageAccuracyPercent(attempts);
-            const statusR = statusFor(accR, attempts.length);
-            if (statusR === "learned") learnedCount++;
-        }
-
-        const attempts = lvlAnswers.length;
-        const accuracy = averageAccuracyPercent(lvlAnswers);
-        const coverage = rulesInLevel.length ? (rulesWithMinAttempts / rulesInLevel.length) : 0;
-        const learnedShare = rulesInLevel.length ? (learnedCount / rulesInLevel.length) : 0;
-
-        // Volume bonus: gentle log boost
-        const volume = Math.log10(Math.max(1, attempts)) / 2; // ~0..1
-        const acc01 = Math.max(0, Math.min(1, accuracy / 100));
-
-        const score =
-            weights.accuracy * acc01 +
-            weights.coverage * coverage +
-            weights.learned * learnedShare +
-            weights.volumeBonus * volume;
-
-        const eligible =
-            attempts >= minTotalAttemptsPerLevel &&
-            rulesWithMinAttempts >= minRulesWithAttempts &&
-            accuracy >= minAccuracy;
-
-        return { level: lvl, attempts, accuracy, rulesWithMinAttempts, coverage, learnedShare, score, eligible };
-    });
 
     // Prefer best eligible (ties → harder level wins)
     const eligible = levelStats.filter((s) => s.eligible);
