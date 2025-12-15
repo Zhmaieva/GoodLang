@@ -9,7 +9,7 @@ import {getAccountInfo} from "./accountsRepository.js";
  * @param {number} hours Time window in hours
  * @returns {Promise<{ allowed: boolean, waitTimeSeconds: number }>}
  */
-export async function checkTranslationLimit(accountId, limit = 10, hours = 3) {
+export async function checkTranslationLimit(accountId, limit = 10, hours = 12) {
     const status = (await getAccountInfo(accountId)).status;
 
     if (status === 'paid') {
@@ -52,8 +52,9 @@ export async function checkTranslationLimit(accountId, limit = 10, hours = 3) {
  */
 export async function recordTranslationUsage(accountId) {
     const query = `
-        INSERT INTO account_log (account_id, action_type)
-        VALUES ($1, $2)
+        INSERT INTO account_log (account_id, action_type, created_at)
+        VALUES ($1, $2, $3)
     `;
-    await pool.query(query, [accountId, ACTION_TYPES.TRANSLATION_CALL]);
+    const date = new Date();
+    await pool.query(query, [accountId, ACTION_TYPES.TRANSLATION_CALL, date]);
 }

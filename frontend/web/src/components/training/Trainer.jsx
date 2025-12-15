@@ -63,6 +63,12 @@ export default function Trainer({
         if (loading) return;
         if (nextLevel === level && !nextRule) return;
 
+        if (level !== nextLevel) {
+            setRules([])
+            setNextRules([])
+            setNextHint(null)
+        }
+
         setLevel(nextLevel);
 
         const diff = randomDifficulty(nextLevel)

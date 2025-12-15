@@ -32,7 +32,7 @@ export function WeeklyProgress({ theme, mobile }) {
     }, []);
 
     return (
-        (daysLeft || mobile) &&
+        (daysLeft || mobile || nextLevelAccuracy) &&
         <div style={{
             alignItems: mobile ? "start" : "end",      // vertically centers content
             height: "100%",
@@ -41,25 +41,25 @@ export function WeeklyProgress({ theme, mobile }) {
             justifyContent: "center",
             gap: 12,
         }}>
-            <div style={{
-                visibility: daysLeft ? "visible" : "hidden",
-                padding: "6px 12px",
-                borderRadius: 8,
-                background: "#fff",
-                border: `2px solid ${theme.accent}`,
-                color: theme.accentDark,
-                fontWeight: 600,
-                fontSize: mobile ? 12 : 14,
-                marginLeft: mobile ? 0 : 12,
+            {
+                daysLeft && <div style={{
+                    padding: "6px 12px",
+                    borderRadius: 8,
+                    background: "#fff",
+                    border: `2px solid ${theme.accent}`,
+                    color: theme.accentDark,
+                    fontWeight: 600,
+                    fontSize: mobile ? 12 : 14,
+                    marginLeft: mobile ? 0 : 12,
 
-            }}>
-                {daysLeft}
-            </div>
+                }}>
+                    {daysLeft}
+                </div>
+            }
 
             {
                 daysLeft !== 'Оцінка рівня - продовжуйте практику' && nextLevelAccuracy &&
                 <div style={{
-                    visibility: daysLeft ? "visible" : "hidden",
                     padding: "6px 12px",
                     borderRadius: 8,
                     background: "#fff",

@@ -36,7 +36,7 @@ export function getProgress() {
     const next = (nextLevels?.length ?? 0) > 0 ? nextLevels : ['B2'];
 
     const currentLevelStat = leveStats?.levels.find(x => x.level === leveStats.level)
-    const recommendedLevel = currentLevelStat.eligible ? next : [leveStats.level];
+    const recommendedLevel = (currentLevelStat?.eligible ?? false) ? next : [leveStats.level];
 
     let combinedAccuracy = 0;
     recommendedLevel.forEach(n => {
@@ -47,7 +47,7 @@ export function getProgress() {
 
 
     return {
-        levelNameTo: LEVEL_MAP_TO[recommendedLevel[0]].label,
+        levelNameTo: LEVEL_MAP_TO[recommendedLevel[0].toUpperCase()].label,
         nextLevel: recommendedLevel[0],
         accuracy: combinedAccuracy
     }

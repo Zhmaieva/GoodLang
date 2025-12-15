@@ -94,7 +94,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
             alignItems: "center",
             justifyContent: "center",
             zIndex: 9999
-        }}>
+        }} onClick={onClose}>
             <div style={{
                 background: theme.bg,
                 padding: "32px",
@@ -105,9 +105,9 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                 textAlign: "center",
                 boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                 display: !isPaying ? "block" : "none",
-            }}>
-                <h2 style={{ marginBottom: 16, color: theme.text, fontSize: "1.6rem", fontWeight: 800 }}>
-                    {isLimitReached ? "Ліміт вичерпано" : "Навчання в повну силу"}
+            }} onClick={e => e.stopPropagation()}>
+                <h2 style={{marginBottom: 16, color: theme.text, fontSize: "1.6rem", fontWeight: 800}}>
+                    {isLimitReached ? "Повернись до навчання за:" : "Навчання в повну силу"}
                 </h2>
 
                 {isLimitReached && timeLeft > 0 && (
@@ -124,20 +124,20 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                             textAlign: "center"
                         }}
                     >
-                        Залишилось чекати:{" "}
-                        <span style={{ display: "inline-block", minWidth: "110px", textAlign: "center" }}>
+                        {" "}
+                        <span style={{display: "inline-block", minWidth: "110px", textAlign: "center"}}>
             {formatTime(timeLeft)}
         </span>
                     </div>
                 )}
 
-                <p style={{ color: theme.muted, fontSize: "1.05rem", marginBottom: 24, lineHeight: "1.45" }}>
-                    Щоб продовжити тренуватися без обмежень
+                <p style={{color: theme.muted, fontSize: "1.05rem", marginBottom: 24, lineHeight: "1.45"}}>
+                    Щоб тренуватися у повну силу
                     та відкрити всі можливості GoodLang —
-                    оформіть підписку.
+                    активуй підписку.
                 </p>
 
-                <div style={{ textAlign: "left", margin: "0 auto 28px", maxWidth: 340 }}>
+                <div style={{textAlign: "left", margin: "0 auto 28px", maxWidth: 340}}>
                     <ul style={{
                         listStyle: "none",
                         padding: 0,
@@ -154,44 +154,59 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                     </ul>
                 </div>
 
-                <button
-                    onClick={handleSubscribe}
-                    disabled={loading}
-                    style={{
-                        background: loading ? "#999" : theme.accent,
-                        color: "white",
-                        padding: "14px 28px",
-                        borderRadius: theme.radius,
-                        border: "none",
-                        cursor: loading ? "default" : "pointer",
-                        fontSize: "1.15rem",
-                        fontWeight: 700,
-                        marginBottom: 16,
-                        width: "100%",
-                        opacity: loading ? 0.7 : 1
-                    }}
-                >
-                    {loading ? "Завантаження…" : "Оформити підписку"}
-                </button>
+                <div style={{display: "flex", flexDirection: "column", gap: 12}}>
+                    <button
+                        onClick={handleSubscribe}
+                        disabled={loading}
+                        style={{
+                            background: loading ? "#999" : theme.accent,
+                            color: "white",
+                            padding: "14px 28px",
+                            borderRadius: theme.radius,
+                            border: "none",
+                            cursor: loading ? "default" : "pointer",
+                            fontSize: "1.15rem",
+                            fontWeight: 700,
+                            width: "100%",
+                            opacity: loading ? 0.7 : 1
+                        }}
+                    >
+                        {loading ? "Завантаження…" : "Активувати підписку"}
+                    </button>
 
-                <button
-                    onClick={onClose}
-                    disabled={loading}
-                    style={{
-                        background: "transparent",
-                        border: "none",
-                        color: theme.muted,
-                        fontSize: "0.95rem",
-                        cursor: loading ? "default" : "pointer",
-                        textDecoration: "underline",
-                        opacity: loading ? 0.5 : 1
-                    }}
-                >
-                    Пізніше
-                </button>
+                    <button
+                        onClick={() => {
+                            const url = `/analytics`;
+                            window.open(url, "_blank", "noopener,noreferrer");
+                        }}
+                        disabled={loading}
+                        style={{
+
+                            appearance: "none",
+                            padding: "10px 16px",
+                            fontWeight: 800,
+                            fontSize: 14,
+                            lineHeight: 1,
+                            borderRadius: 999,
+                            cursor: "pointer",
+
+                            background: "#fffdf8",
+                            color: theme.text,
+                            border: `2px solid ${theme.accent}`,
+                            boxShadow: `2px 2px 0 ${theme.accentDark}`,
+
+                            justifyContent: "center",
+                            width: "100%",
+
+                        }}
+                    >
+                        {"Оцінити прогрес"}
+                    </button>
+                </div>
+
             </div>
 
-            <div id="embedded-checkout-container" style={{ display: "none", marginTop: 24 }}></div>
+            <div id="embedded-checkout-container" style={{display: "none", marginTop: 24}}></div>
 
             <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen} onClose={() => {
                 setLoginModalOpen(false);

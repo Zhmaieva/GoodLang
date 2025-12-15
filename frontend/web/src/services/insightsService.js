@@ -302,8 +302,11 @@ export function estimateTimeToNextLevelText() {
         return  { levelNameTo: LEVEL_MAP_TO[nextLevel]?.label, text: "Оцінка рівня - продовжуйте практику" };
     }
 
-    if (days === null) return "Недостатньо даних для оцінки.";
-    if (days === Infinity) return "Поки немає прогресу для підвищення рівня.";
+    if (levelInfo.level === 'B2')
+        return { text: null };
+
+    if (days === null) return { text: "Недостатньо даних для оцінки." };
+    if (days === Infinity) return { text: "Поки немає прогресу для підвищення рівня." };
 
     const d = Number(days);
 

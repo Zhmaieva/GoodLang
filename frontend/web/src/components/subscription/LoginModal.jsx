@@ -110,7 +110,7 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
                                     fontSize: "1.3rem",
                                     fontWeight: 800
                                 }}>
-                                    ❌ Без синхронізації
+                                    ❌ Прогрес збережено локально
                                 </h3>
 
                                 <p style={{
@@ -119,8 +119,8 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
                                     lineHeight: "1.45",
                                     marginBottom: 12
                                 }}>
-                                    Активуйте преміум, щоб увімкнути синхронізацію
-                                    та отримати всі можливості GoodLang!
+                                    Активуй преміум, щоб мати доступ до навчання де і коли завгодно
+                                    та навчатися на повну з GoodLang!
                                 </p>
 
                                 <button

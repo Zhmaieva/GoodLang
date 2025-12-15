@@ -21,8 +21,6 @@ export async function getToken() {
 }
 
 /* todo:
-- fix switching from managed mode to a specific one
-- fix analytics trainer suggestion mismatch
 - fix dates translation
 - fix declarative sentences absent level and others
 

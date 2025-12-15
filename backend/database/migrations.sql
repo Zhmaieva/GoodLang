@@ -213,3 +213,156 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: alter_accounts_created_at_no_tz
+-- Description: Changes accounts.created_at from TIMESTAMPTZ to TIMESTAMP (no timezone) stored in UTC
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'alter_accounts_created_at_no_tz'
+        ) THEN
+
+            -- 1) Convert column type safely (keep the same moment in time)
+            ALTER TABLE accounts
+                ALTER COLUMN created_at
+                    TYPE TIMESTAMP WITHOUT TIME ZONE
+                    USING created_at AT TIME ZONE 'UTC';
+
+            -- 2) Update default to UTC (but without timezone type)
+            ALTER TABLE accounts
+                ALTER COLUMN created_at
+                    SET DEFAULT (NOW() AT TIME ZONE 'UTC');
+
+            -- 3) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_accounts_created_at_no_tz', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+-- Migration: alter_sign_in_links_timestamps_no_tz
+-- Description: Convert sign_in_links created_at and expires_at to TIMESTAMP WITHOUT TIME ZONE (UTC)
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'alter_sign_in_links_timestamps_no_tz'
+        ) THEN
+
+            -- 1) created_at → TIMESTAMP WITHOUT TIME ZONE (UTC)
+            ALTER TABLE sign_in_links
+                ALTER COLUMN created_at
+                    TYPE TIMESTAMP WITHOUT TIME ZONE
+                    USING created_at AT TIME ZONE 'UTC';
+
+            ALTER TABLE sign_in_links
+                ALTER COLUMN created_at
+                    SET DEFAULT (NOW() AT TIME ZONE 'UTC');
+
+            -- 2) expires_at → TIMESTAMP WITHOUT TIME ZONE (UTC)
+            ALTER TABLE sign_in_links
+                ALTER COLUMN expires_at
+                    TYPE TIMESTAMP WITHOUT TIME ZONE
+                    USING expires_at AT TIME ZONE 'UTC';
+
+            ALTER TABLE sign_in_links
+                ALTER COLUMN expires_at
+                    SET DEFAULT ((NOW() AT TIME ZONE 'UTC') + INTERVAL '10 minutes');
+
+            -- 3) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_sign_in_links_timestamps_no_tz', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+
+-- Migration: fix_timestamp_defaults_use_now
+-- Description: Fix defaults for TIMESTAMPTZ columns to use NOW() without AT TIME ZONE
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'fix_timestamp_defaults_use_now'
+        ) THEN
+
+            -- accounts.created_at
+            ALTER TABLE accounts
+                ALTER COLUMN created_at
+                    SET DEFAULT NOW();
+
+            -- sign_in_links timestamps
+            ALTER TABLE sign_in_links
+                ALTER COLUMN created_at
+                    SET DEFAULT NOW(),
+                ALTER COLUMN expires_at
+                    SET DEFAULT (NOW() + INTERVAL '10 minutes');
+
+            -- record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('fix_timestamp_defaults_use_now', NOW());
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+
+-- Migration: alter_sign_in_links_timestamps_tz
+-- Description: Convert sign_in_links created_at and expires_at to TIMESTAMP WITHOUT TIME ZONE (UTC)
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'alter_sign_in_links_timestamps_tz'
+        ) THEN
+
+            -- 1) created_at → TIMESTAMP WITHOUT TIME ZONE (UTC)
+            ALTER TABLE sign_in_links
+                ALTER COLUMN created_at
+                    TYPE TIMESTAMP WITH TIME ZONE
+                    USING created_at AT TIME ZONE 'UTC';
+
+            ALTER TABLE sign_in_links
+                ALTER COLUMN created_at
+                    SET DEFAULT (NOW() AT TIME ZONE 'UTC');
+
+            -- 2) expires_at → TIMESTAMP WITHOUT TIME ZONE (UTC)
+            ALTER TABLE sign_in_links
+                ALTER COLUMN expires_at
+                    TYPE TIMESTAMP WITH TIME ZONE
+                    USING expires_at AT TIME ZONE 'UTC';
+
+            ALTER TABLE sign_in_links
+                ALTER COLUMN expires_at
+                    SET DEFAULT ((NOW() AT TIME ZONE 'UTC') + INTERVAL '10 minutes');
+
+            -- 3) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_sign_in_links_timestamps_tz', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
