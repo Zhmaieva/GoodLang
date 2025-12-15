@@ -1,6 +1,6 @@
 { "HAD_BETTER": [
   {
-    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY"],
+    "rules": ["HAD_BETTER", "ENOUGH_TOO_MUCH_MANY", "ARTICLES"],
     "ua": "Тобі краще одягти пальто, надто холодно.",
     "en": [
       "You’d better put on a coat, it’s too cold.",
@@ -74,7 +74,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER"],
+    "rules": ["HAD_BETTER", "ARTICLES"],
     "ua": "Тобі краще не спізнюватися на цю зустріч.",
     "en": [
       "You’d better not be late for this meeting.",
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL", "ARTICLES"],
     "ua": "Якщо ти хочеш скласти іспит, тобі краще більше практикуватися.",
     "en": [
       "If you want to pass the exam, you’d better practice more.",
@@ -154,7 +154,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
     "ua": "Тобі краще оновити своє резюме перед співбесідою.",
     "en": [
       "You’d better update your resume before the interview.",
@@ -202,7 +202,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "ADVERBS_OF_MANNER_OFTEN_NEVER"],
+    "rules": ["HAD_BETTER", "ADVERBS_OF_MANNER_OFTEN_NEVER", "ARTICLES"],
     "ua": "Він часто каже, що краще не сперечатись із начальником.",
     "en": [
       "He often says you’d better not argue with the boss.",
@@ -226,7 +226,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "COMPARATIVES"],
+    "rules": ["HAD_BETTER", "COMPARATIVES", "ARTICLES"],
     "ua": "Вам краще обрати дешевший варіант.",
     "en": [
       "You’d better choose a cheaper option.",
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY", "ARTICLES"],
     "ua": "Вам краще поспішити, бо поїзд може ось-ось прибути.",
     "en": [
       "You’d better hurry, the train might arrive any minute.",
@@ -258,7 +258,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "rules": ["HAD_BETTER", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
     "ua": "Ви краще підготуєте звіт сьогодні, бо завтра може бути запізно.",
     "en": [
       "You’d better finish the report today because tomorrow might be too late.",
@@ -282,7 +282,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY", "ARTICLES"],
     "ua": "Ти краще візьми куртку, може бути холодно.",
     "en": [
       "You’d better take a jacket, it might get cold.",
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL", "ARTICLES"],
     "ua": "Ти краще надішли повідомлення, якщо він не відповість.",
     "en": [
       "You’d better send a message if he doesn’t reply.",
@@ -322,7 +322,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES"],
+    "rules": ["HAD_BETTER", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
     "ua": "Вам краще оновити свої документи перед поїздкою.",
     "en": [
       "You’d better update your documents before the trip.",
@@ -330,7 +330,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "COMPARATIVES"],
+    "rules": ["HAD_BETTER", "COMPARATIVES", "ARTICLES"],
     "ua": "Ти краще вибери дешевший квиток.",
     "en": [
       "You’d better choose a cheaper ticket.",
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "RELATIVE_CLAUSES"],
+    "rules": ["HAD_BETTER", "RELATIVE_CLAUSES", "ARTICLES"],
     "ua": "Ти краще звернись до лікаря, який поруч із офісом.",
     "en": [
       "You’d better see the doctor who’s near your office.",
@@ -346,7 +346,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY", "ARTICLES"],
     "ua": "Вам краще вийти зараз, автобус може ось-ось прибути.",
     "en": [
       "You’d better leave now, the bus might arrive any minute.",
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "THERE_ISNT_ARENT_ANY"],
+    "rules": ["HAD_BETTER", "THERE_ISNT_ARENT_ANY", "ARTICLES"],
     "ua": "Тобі краще купити продукти, бо в холодильнику нічого немає.",
     "en": [
       "You’d better buy some groceries, there isn’t any food in the fridge.",
@@ -394,7 +394,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "PREP_TIME"],
+    "rules": ["HAD_BETTER", "PREP_TIME", "ARTICLES"],
     "ua": "Вам краще подати заявку до кінця тижня.",
     "en": [
       "You’d better submit the application by the end of the week.",
@@ -418,7 +418,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY", "ARTICLES"],
     "ua": "Ти краще перевір це, бо це може бути помилка.",
     "en": [
       "You’d better check this, it might be a mistake.",
@@ -426,7 +426,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "RELATIVE_CLAUSES"],
+    "rules": ["HAD_BETTER", "RELATIVE_CLAUSES", "ARTICLES"],
     "ua": "Ти краще поговори з людиною, яка це вирішує.",
     "en": [
       "You’d better talk to the person who handles this.",
@@ -442,7 +442,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL"],
+    "rules": ["HAD_BETTER", "FIRST_CONDITIONAL", "ARTICLES"],
     "ua": "Якщо завтра буде дощ, тобі краще взяти плащ.",
     "en": [
       "If it rains tomorrow, you’d better take a raincoat.",
@@ -450,7 +450,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY"],
+    "rules": ["HAD_BETTER", "MODALS_OF_PROBABILITY", "ARTICLES"],
     "ua": "Вам краще поспішити, бо літак може вилетіти раніше.",
     "en": [
       "You’d better hurry, the plane might depart earlier.",

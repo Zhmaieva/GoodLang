@@ -205,13 +205,8 @@ export const RULE_LABELS = Object.freeze({
     ADVANCED_MODALS_OF_DEDUCTION: "Advanced modals of deduction",
     COMPLEX_NOUN_PHRASES: "Complex noun phrases",
     INDIRECT_SPEECH_QUESTION_FORMS: "Question forms in indirect speech",
-    COMPOUND_SENTENCES: "Compound sentences",
-    COMPLEX_SENTENCES: "Complex sentences",
-    COMPOUND_COMPLEX_SENTENCES: "Compound–complex sentences",
     DECLARATIVE_SENTENCES: "Declarative sentences",
     CORRELATIVE_CONJUNCTIONS: "Correlative conjunctions (either...or / neither...nor / both...and)",
-    PARALLELISM: "Parallelism (balanced grammatical structures)",
-    MODIFIERS: "Modifiers (placement and clarity)",
     ORDER_OF_ADJECTIVES: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",
     PREP_DIRECTION: "Prepositions of direction"
 });

@@ -83,7 +83,6 @@ export const GrammarRule = Object.freeze({
     PHRASAL_VERBS_COMMON: "PHRASAL_VERBS_COMMON",
     EACH_OTHER_ONE_ANOTHER: "EACH_OTHER_ONE_ANOTHER",
     SO_DO_I_NEITHER_DO_I: "SO_DO_I_NEITHER_DO_I",
-    ENOUGH_TOO_MUCH_MANY: "ENOUGH_TOO_MUCH_MANY",
 
     // --- B2 ---
     CLEFT_SENTENCES: "CLEFT_SENTENCES",
@@ -188,7 +187,6 @@ export const RULE_LABELS = Object.freeze({
     PHRASAL_VERBS_COMMON: "Phrasal verbs (common)",
     EACH_OTHER_ONE_ANOTHER: "Each other / one another",
     SO_DO_I_NEITHER_DO_I: "So do I / Neither do I",
-    ENOUGH_TOO_MUCH_MANY: "Enough / too much / too many",
 
     // B2
     CLEFT_SENTENCES: "Cleft sentences (It is / What … is …)",
@@ -204,13 +202,8 @@ export const RULE_LABELS = Object.freeze({
     ADVANCED_MODALS_OF_DEDUCTION: "Advanced modals of deduction",
     COMPLEX_NOUN_PHRASES: "Complex noun phrases",
     INDIRECT_SPEECH_QUESTION_FORMS: "Question forms in indirect speech",
-    COMPOUND_SENTENCES: "Compound sentences",
-    COMPLEX_SENTENCES: "Complex sentences",
-    COMPOUND_COMPLEX_SENTENCES: "Compound–complex sentences",
     DECLARATIVE_SENTENCES: "Declarative sentences",
     CORRELATIVE_CONJUNCTIONS: "Correlative conjunctions (either...or / neither...nor / both...and)",
-    PARALLELISM: "Parallelism (balanced grammatical structures)",
-    MODIFIERS: "Modifiers (placement and clarity)",
     ORDER_OF_ADJECTIVES: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",
     PREP_DIRECTION: "Prepositions of direction"
 });

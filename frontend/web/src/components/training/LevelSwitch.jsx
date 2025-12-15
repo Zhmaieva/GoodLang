@@ -36,10 +36,10 @@ export default function LevelSwitch({
     });
 
     const options = [
-        { value: "managed", label: "Прокачування" },
-        { value: "beginner", label: "Початківець" },
-        { value: "intermediate", label: "Середній" },
-        { value: "advanced", label: "Просунутий" },
+        { value: "managed", label: "адаптивний" },
+        { value: "beginner", label: "початківець" },
+        { value: "intermediate", label: "середній" },
+        { value: "advanced", label: "просунутий" },
     ];
 
     const selectedOption = options.find(o => o.value === level);
@@ -72,8 +72,8 @@ export default function LevelSwitch({
                     disabled={loading}
                     onClick={() => handleClick(value)}
                 >
-                    {label !== 'Прокачування' && !expanded && `Рівень завдань: ${label}`}
-                    {label === 'Прокачування' && !expanded && `Прокачування рівня`}
+                    {label !== 'Рівень' && !expanded && `Рівень складності: ${label}`}
+                    {label === 'Рівень' && !expanded && `Рівень складності`}
                     {expanded && label}
                 </button>
             ))}

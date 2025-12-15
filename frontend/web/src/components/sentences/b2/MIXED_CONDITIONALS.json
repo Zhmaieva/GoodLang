@@ -5,7 +5,8 @@
     "en": [
       "If I had learned English then, I would have a better job now.",
       "If I'd learned English then, I'd have a better job now."
-    ]
+    ],
+    "hint": "Умова — МИНУЛЕ («тоді» не вивчив), результат — ЗАРАЗ («зараз» мав би)."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -13,7 +14,8 @@
     "en": [
       "If she hadn’t been late, she wouldn’t be so tired now.",
       "If she hadn't been late, she wouldn't be so tired now."
-    ]
+    ],
+    "hint": "Спочатку про МИНУЛУ дію (запізнилася/не запізнилася), а наслідок — стан ЗАРАЗ."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -21,7 +23,8 @@
     "en": [
       "If we had gone to the sea, we would be happier now.",
       "If we'd gone to the sea, we'd be happier now."
-    ]
+    ],
+    "hint": "Поїхали/не поїхали — це МИНУЛЕ рішення, а «зараз» — теперішній результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
@@ -29,7 +32,8 @@
     "en": [
       "If I hadn’t spent all my money, I would have a car now.",
       "If I hadn't spent all my money, I'd have a car now."
-    ]
+    ],
+    "hint": "Минуле рішення (витратив/не витратив) → теперішній стан (зараз мав би)."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -37,7 +41,8 @@
     "en": [
       "If I had been invited then, I would be at the party now.",
       "If I'd been invited then, I'd be at the party now."
-    ]
+    ],
+    "hint": "Умова — пасив у МИНУЛОМУ, результат — місце/стан ЗАРАЗ."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -45,7 +50,8 @@
     "en": [
       "If he hadn’t worked all night, he would feel better now.",
       "If he hadn't worked all night, he'd feel better now."
-    ]
+    ],
+    "hint": "Минуле («all night» — вже минула ніч) → теперішнє самопочуття («now»)."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -53,7 +59,8 @@
     "en": [
       "If you had trained more, you would be stronger now.",
       "If you'd trained more, you'd be stronger now."
-    ]
+    ],
+    "hint": "Тренувався (колись/раніше) — МИНУЛИЙ вклад, а сила — результат ЗАРАЗ."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -61,7 +68,8 @@
     "en": [
       "If they hadn’t argued, they would be friends now.",
       "If they hadn't argued, they'd be friends now."
-    ]
+    ],
+    "hint": "Сварка — минула подія, дружба — стан ЗАРАЗ."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -69,7 +77,8 @@
     "en": [
       "If I had been born in another country, I would speak another language now.",
       "If I'd been born in another country, I'd speak another language now."
-    ]
+    ],
+    "hint": "Минуле → теперішня здатність/реальність."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -77,7 +86,8 @@
     "en": [
       "If they had stayed at home, they would be safe now.",
       "If they'd stayed at home, they'd be safe now."
-    ]
+    ],
+    "hint": "Залишилися/не залишилися — МИНУЛЕ («тоді»), безпека — стан ЗАРАЗ."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -85,7 +95,8 @@
     "en": [
       "If I had studied more then, I would know English better now.",
       "If I'd studied more then, I'd know English better now."
-    ]
+    ],
+    "hint": "Минулі зусилля («тоді») → знання ЗАРАЗ."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -93,7 +104,8 @@
     "en": [
       "If they hadn’t missed the train yesterday, they would be in Paris now.",
       "If they hadn't missed the train yesterday, they'd be in Paris now."
-    ]
+    ],
+    "hint": "Є явний маркер минулого («yesterday») + результат «now»."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -101,7 +113,8 @@
     "en": [
       "If I hadn’t been fired then, I would be working at that company now.",
       "If I hadn't been fired then, I'd be working at that company now."
-    ]
+    ],
+    "hint": "Минуле → теперішня тривала дія."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -109,7 +122,8 @@
     "en": [
       "If she hadn’t lost her phone, she would have all her contacts now.",
       "If she hadn't lost her phone, she'd have all her contacts now."
-    ]
+    ],
+    "hint": "Втрата — минула подія, контакти — те, що було б у неї ЗАРАЗ."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -117,7 +131,8 @@
     "en": [
       "If we had stayed in that hotel, we would be enjoying the view now.",
       "If we'd stayed in that hotel, we'd be enjoying the view now."
-    ]
+    ],
+    "hint": "Минуле рішення → теперішня дія прямо зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
@@ -125,7 +140,8 @@
     "en": [
       "If I had taken my mom’s advice then, I wouldn’t have problems now.",
       "If I'd taken my mom’s advice then, I wouldn't have problems now."
-    ]
+    ],
+    "hint": "Минуле рішення («тоді») → наслідок у теперішньому (проблеми зараз)."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
@@ -133,7 +149,8 @@
     "en": [
       "If they had gone to the doctor earlier, they would feel better now.",
       "If they'd gone to the doctor earlier, they'd feel better now."
-    ]
+    ],
+    "hint": "Раніше — минулий момент, а самопочуття — зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -141,7 +158,8 @@
     "en": [
       "If I had told the truth then, I wouldn’t regret it now.",
       "If I'd told the truth then, I wouldn't regret it now."
-    ]
+    ],
+    "hint": "Минуле («then» сказав/не сказав) → емоція/стан зараз («now»)."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -149,7 +167,8 @@
     "en": [
       "If she had graduated from university, she would have a stable job now.",
       "If she'd graduated from university, she'd have a stable job now."
-    ]
+    ],
+    "hint": "Диплом — подія в минулому, робота — стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -157,7 +176,8 @@
     "en": [
       "If we hadn’t spent the money last month, we would travel now.",
       "If we hadn't spent the money last month, we'd travel now."
-    ]
+    ],
+    "hint": "Є явний маркер минулого («last month») + результат «now»."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -165,7 +185,8 @@
     "en": [
       "If he had agreed then, he would be happy now.",
       "If he'd agreed then, he'd be happy now."
-    ]
+    ],
+    "hint": "Минуле рішення («then») → теперішній стан («now»)."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -173,7 +194,8 @@
     "en": [
       "If I hadn’t been so stubborn, I would have more friends now.",
       "If I hadn't been so stubborn, I'd have more friends now."
-    ]
+    ],
+    "hint": "Причина в минулому → результат у теперішньому."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
@@ -181,7 +203,8 @@
     "en": [
       "If she had read the book, she would know the answer now.",
       "If she'd read the book, she'd know the answer now."
-    ]
+    ],
+    "hint": "Читання книги — минуле, знання відповіді — зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -189,7 +212,8 @@
     "en": [
       "If we had stayed at home, we would be watching a movie now.",
       "If we'd stayed at home, we'd be watching a movie now."
-    ]
+    ],
+    "hint": "Минуле рішення → дія, яка відбувалася б зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
@@ -197,7 +221,8 @@
     "en": [
       "If I had followed the teacher’s advice, I would have better grades now.",
       "If I'd followed the teacher’s advice, I'd have better grades now."
-    ]
+    ],
+    "hint": "Минулі дії/старання → теперішній результат (оцінки зараз)."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -205,7 +230,8 @@
     "en": [
       "If we hadn’t missed the bus, we would be at the concert now.",
       "If we hadn't missed the bus, we'd be at the concert now."
-    ]
+    ],
+    "hint": "Пропустили/не пропустили — минула подія, а місце зараз — результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -213,7 +239,8 @@
     "en": [
       "If I hadn’t worked nights then, I would have more energy now.",
       "If I hadn't worked nights then, I'd have more energy now."
-    ]
+    ],
+    "hint": "Минулі звички («then») → стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -221,7 +248,8 @@
     "en": [
       "If they hadn’t moved away, they would live nearby now.",
       "If they hadn't moved away, they'd live nearby now."
-    ]
+    ],
+    "hint": "Переїзд — минула подія, а «жили б поруч зараз» — теперішній результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -229,7 +257,8 @@
     "en": [
       "If he hadn’t been so confident, he wouldn’t take so many risks now.",
       "If he hadn't been so confident, he wouldn't take so many risks now."
-    ]
+    ],
+    "hint": "Причина в минулому → поведінка зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -237,7 +266,8 @@
     "en": [
       "If the project had been finished earlier, we would be presenting it now.",
       "If the project'd been finished earlier, we'd be presenting it now."
-    ]
+    ],
+    "hint": "Умова — пасив у минулому, результат — дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -245,7 +275,8 @@
     "en": [
       "If I had known about it, I wouldn’t be worried now.",
       "If I'd known about it, I wouldn't be worried now."
-    ]
+    ],
+    "hint": "Знання/незнання в минулому → стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
@@ -253,7 +284,8 @@
     "en": [
       "If she had won the competition, she would have the prize now.",
       "If she'd won the competition, she'd have the prize now."
-    ]
+    ],
+    "hint": "Перемога — минуле, нагорода — те, що було б у неї зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -261,7 +293,8 @@
     "en": [
       "If I hadn’t made a mistake then, everything would be different now.",
       "If I hadn't made a mistake then, everything'd be different now."
-    ]
+    ],
+    "hint": "Помилка — минула подія («then»), а «зараз» — результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -269,7 +302,8 @@
     "en": [
       "If we had stayed in the city, we would see our friends more often.",
       "If we'd stayed in the city, we'd see our friends more often."
-    ]
+    ],
+    "hint": "Минуле рішення → теперішня звичка/частота."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -277,7 +311,8 @@
     "en": [
       "If I had gone to bed earlier then, I wouldn’t feel so tired.",
       "If I'd gone to bed earlier then, I wouldn't feel so tired."
-    ]
+    ],
+    "hint": "Минуле («then» лягла) → самопочуття зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -285,7 +320,8 @@
     "en": [
       "If the documents had been signed on time, we would start the project now.",
       "If the documents'd been signed on time, we'd start the project now."
-    ]
+    ],
+    "hint": "Умова — пасив у минулому, результат — теперішня дія/стан."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
@@ -293,7 +329,8 @@
     "en": [
       "If I had listened to my dad’s advice, I wouldn’t have debts.",
       "If I'd listened to my dad’s advice, I wouldn't have debts."
-    ]
+    ],
+    "hint": "Минуле рішення → стан зараз (борги зараз/тепер)."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -301,7 +338,8 @@
     "en": [
       "If she had told the truth then, we would trust her now.",
       "If she'd told the truth then, we'd trust her now."
-    ]
+    ],
+    "hint": "Минуле («then» сказала/не сказала) → довіра зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
@@ -309,7 +347,8 @@
     "en": [
       "If we hadn’t missed the plane, we would be on the island now.",
       "If we hadn't missed the plane, we'd be on the island now."
-    ]
+    ],
+    "hint": "Пропущений літак — минуле, місце зараз — результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
@@ -317,14 +356,17 @@
     "en": [
       "If you had gone to school earlier, you wouldn’t be worried about grades now.",
       "If you'd gone to school earlier, you wouldn't be worried about grades now."
-    ]
+    ],
+    "hint": "Минуле («earlier» пішов) → стан зараз (worried now)."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
     "ua": ["Якби він тоді вибачився, вони б мали добрі стосунки зараз."],
     "en": [
-      "If he had apologized then, they would have a good relationship now."
-    ]
+      "If he had apologized then, they would have a good relationship now.",
+      "If he'd apologized then, they'd have a good relationship now."
+    ],
+    "hint": "Минуле вибачення (або його не було) → стосунки зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -332,7 +374,8 @@
     "en": [
       "If I hadn’t bought that thing then, I would have more money now.",
       "If I hadn't bought that thing then, I'd have more money now."
-    ]
+    ],
+    "hint": "Минуле рішення (купив/не купив) → гроші зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -340,7 +383,8 @@
     "en": [
       "If we had lived in another country then, we would have a different lifestyle now.",
       "If we'd lived in another country then, we'd have a different lifestyle now."
-    ]
+    ],
+    "hint": "Минуле «тоді» → теперішній результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -348,7 +392,8 @@
     "en": [
       "If I had finished work earlier then, I would be free now.",
       "If I'd finished work earlier then, I'd be free now."
-    ]
+    ],
+    "hint": "Раніше тоді (минуле) → стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -356,15 +401,8 @@
     "en": [
       "If the house had been built last year, we would live in it now.",
       "If the house'd been built last year, we'd live in it now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
-    "ua": ["Якби він не був таким зайнятим, він би більше подорожував."],
-    "en": [
-      "If he hadn’t been so busy, he would travel more.",
-      "If he hadn't been so busy, he'd travel more."
-    ]
+    ],
+    "hint": "Будівництво — минуле, проживання — зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
@@ -372,7 +410,8 @@
     "en": [
       "If they had moved to Spain, they would be enjoying the sun now.",
       "If they'd moved to Spain, they'd be enjoying the sun now."
-    ]
+    ],
+    "hint": "Переїзд — минуле рішення, насолода — дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -380,15 +419,8 @@
     "en": [
       "If I hadn’t quit my job then, I would have a stable income now.",
       "If I hadn't quit my job then, I'd have a stable income now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
-    "ua": ["Якби вона подала заявку, вона мала б шанс виграти стипендію."],
-    "en": [
-      "If she had applied, she would have a chance to win the scholarship.",
-      "If she'd applied, she'd have a chance to win the scholarship."
-    ]
+    ],
+    "hint": "Минуле («then» звільнився/не звільнився) → дохід зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
@@ -396,15 +428,8 @@
     "en": [
       "If I had taken my brother’s help then, I would have a successful business now.",
       "If I'd taken my brother’s help then, I'd have a successful business now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
-    "ua": ["Якби вони залишилися вдома, вони не мерзли б."],
-    "en": [
-      "If they had stayed at home, they wouldn’t be cold now.",
-      "If they'd stayed at home, they wouldn't be cold now."
-    ]
+    ],
+    "hint": "Умова в МИНУЛОМУ («тоді» не скористався), результат — ЗАРАЗ («зараз» мав би бізнес)."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -412,15 +437,8 @@
     "en": [
       "If I hadn’t refused then, I would have an interesting offer now.",
       "If I hadn't refused then, I'd have an interesting offer now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": ["Якби проєкт був завершений вчасно, усі були б задоволені."],
-    "en": [
-      "If the project had been completed on time, everyone would be satisfied.",
-      "If the project'd been completed on time, everyone'd be satisfied."
-    ]
+    ],
+    "hint": "Минуле рішення → теперішній результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -428,7 +446,8 @@
     "en": [
       "If I had left earlier then, I would be home now.",
       "If I'd left earlier then, I'd be home now."
-    ]
+    ],
+    "hint": "Минуле → місце зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -436,15 +455,8 @@
     "en": [
       "If I hadn’t been late then, I would have a job now.",
       "If I hadn't been late then, I'd have a job now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
-    "ua": ["Якби він купив машину раніше, він їздив би на роботу."],
-    "en": [
-      "If he had bought a car earlier, he would drive to work.",
-      "If he'd bought a car earlier, he'd drive to work."
-    ]
+    ],
+    "hint": "Минуле → теперішній результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -452,7 +464,8 @@
     "en": [
       "If we hadn’t spent all the money then, we would have savings now.",
       "If we hadn't spent all the money then, we'd have savings now."
-    ]
+    ],
+    "hint": "Минуле рішення → стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
@@ -460,7 +473,8 @@
     "en": [
       "If I had accepted my mom’s help, I would feel better now.",
       "If I'd accepted my mom’s help, I'd feel better now."
-    ]
+    ],
+    "hint": "Минуле рішення → самопочуття зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -468,7 +482,8 @@
     "en": [
       "If the house had been renovated earlier, we would live there now.",
       "If the house'd been renovated earlier, we'd live there now."
-    ]
+    ],
+    "hint": "Умова — пасив у минулому, результат — теперішнє."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -476,7 +491,8 @@
     "en": [
       "If they had stayed in the mountains, they would be enjoying the view now.",
       "If they'd stayed in the mountains, they'd be enjoying the view now."
-    ]
+    ],
+    "hint": "Минуле рішення → дія, яка тривала б зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
@@ -484,7 +500,8 @@
     "en": [
       "If we had gone to France, we would be tasting cheese now.",
       "If we'd gone to France, we'd be tasting cheese now."
-    ]
+    ],
+    "hint": "Поїхали/не поїхали — минуле, «зараз» — теперішня дія."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -492,7 +509,8 @@
     "en": [
       "If I hadn’t been so tired then, I would feel better now.",
       "If I hadn't been so tired then, I'd feel better now."
-    ]
+    ],
+    "hint": "Причина в минулому → самопочуття зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -500,7 +518,8 @@
     "en": [
       "If she hadn’t refused then, she would have a chance for success now.",
       "If she hadn't refused then, she'd have a chance for success now."
-    ]
+    ],
+    "hint": "Минуле рішення → шанс зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
@@ -508,7 +527,8 @@
     "en": [
       "If I had bought the ticket, I would be sitting in the theatre now.",
       "If I'd bought the ticket, I'd be sitting in the theatre now."
-    ]
+    ],
+    "hint": "Купівля — минуле → дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -516,7 +536,8 @@
     "en": [
       "If he hadn’t moved then, he would be working here now.",
       "If he hadn't moved then, he'd be working here now."
-    ]
+    ],
+    "hint": "Переїзд — минуле, робота — тепер."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -524,7 +545,8 @@
     "en": [
       "If they hadn’t argued then, they would be friends now.",
       "If they hadn't argued then, they'd be friends now."
-    ]
+    ],
+    "hint": "Сварка — минуле («then»), дружба — стан зараз («now»)."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -532,14 +554,17 @@
     "en": [
       "If the letter had been sent on time, everyone would know the news now.",
       "If the letter'd been sent on time, everyone'd know the news now."
-    ]
+    ],
+    "hint": "Умова — пасив у минулому, результат — знання зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
     "ua": ["Якби я тоді прислухався до порад вчителя, я говорив би краще зараз."],
     "en": [
-      "If I had listened to the teacher’s advice then, I would speak better now."
-    ]
+      "If I had listened to the teacher’s advice then, I would speak better now.",
+      "If I'd listened to the teacher’s advice then, I'd speak better now."
+    ],
+    "hint": "Минулі дії → теперішня навичка."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -547,7 +572,8 @@
     "en": [
       "If we had stayed in the park, we would be playing football now.",
       "If we'd stayed in the park, we'd be playing football now."
-    ]
+    ],
+    "hint": "Минуле рішення → дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -555,7 +581,8 @@
     "en": [
       "If she hadn’t changed jobs, she would be a manager now.",
       "If she hadn't changed jobs, she'd be a manager now."
-    ]
+    ],
+    "hint": "Зміна роботи — минула подія, посада — стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -563,7 +590,8 @@
     "en": [
       "If he hadn’t been so stubborn, he would have fewer problems now.",
       "If he hadn't been so stubborn, he'd have fewer problems now."
-    ]
+    ],
+    "hint": "Причина в минулому  → проблеми зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -571,15 +599,8 @@
     "en": [
       "If we hadn’t forgotten the documents then, everything would be ready now.",
       "If we hadn't forgotten the documents then, everything'd be ready now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
-    "ua": ["Якби я поїхав до Лондона, я мав би інший досвід."],
-    "en": [
-      "If I had gone to London, I would have a different experience.",
-      "If I'd gone to London, I'd have a different experience."
-    ]
+    ],
+    "hint": "Забули/не забули — минуле («then»), готовність — результат зараз («now»)."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -587,7 +608,8 @@
     "en": [
       "If the news had been published yesterday, everyone would be discussing it now.",
       "If the news'd been published yesterday, everyone'd be discussing it now."
-    ]
+    ],
+    "hint": "Є «yesterday» + «now»: умова минула, результат — дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
@@ -595,7 +617,8 @@
     "en": [
       "If he had found a job, he would have a stable income now.",
       "If he'd found a job, he'd have a stable income now."
-    ]
+    ],
+    "hint": "Знайшов/не знайшов — минуле, дохід — стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -603,7 +626,8 @@
     "en": [
       "If I had lived in Kyiv then, I would have more friends now.",
       "If I'd lived in Kyiv then, I'd have more friends now."
-    ]
+    ],
+    "hint": "Минуле проживання («then») → теперішній результат."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -611,7 +635,8 @@
     "en": [
       "If I had come on time then, I wouldn’t feel guilty now.",
       "If I'd come on time then, I wouldn't feel guilty now."
-    ]
+    ],
+    "hint": "Минуле («then» прийшов/не прийшов) → емоція зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -619,7 +644,8 @@
     "en": [
       "If I hadn’t been so trusting, I wouldn’t have these problems now.",
       "If I had not been so trusting, I would not have these problems now."
-    ]
+    ],
+    "hint": "Причина в минулому → проблеми зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -627,7 +653,8 @@
     "en": [
       "If we had stayed in Italy, we would be enjoying the warm climate now.",
       "If we'd stayed in Italy, we'd be enjoying the warm climate now."
-    ]
+    ],
+    "hint": "Минуле рішення → дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "POSSESSIVE_S"],
@@ -635,7 +662,8 @@
     "en": [
       "If I had followed my dad’s advice, I wouldn’t have problems now.",
       "If I'd followed my dad’s advice, I wouldn't have problems now."
-    ]
+    ],
+    "hint": "Порада/рішення у минулому → наслідок зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -643,15 +671,8 @@
     "en": [
       "If he hadn’t been so impatient, he would have better results now.",
       "If he hadn't been so impatient, he'd have better results now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
-    "ua": ["Якби вона прочитала книгу, вона краще розуміла б сюжет."],
-    "en": [
-      "If she had read the book, she would understand the story better now.",
-      "If she'd read the book, she'd understand the story better now."
-    ]
+    ],
+    "hint": "Причина в минулому → результати зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -659,7 +680,8 @@
     "en": [
       "If I had agreed then, I would be part of the team now.",
       "If I'd agreed then, I'd be part of the team now."
-    ]
+    ],
+    "hint": "Минуле рішення («then») → статус зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
@@ -667,7 +689,8 @@
     "en": [
       "If we had gone to Portugal, we would be swimming in the sea now.",
       "If we'd gone to Portugal, we'd be swimming in the sea now."
-    ]
+    ],
+    "hint": "Поїздка — минуле, плавання — дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -677,7 +700,8 @@
       "If the electricity'd been fixed yesterday, everything'd be working now.",
       "If the electricity had been repaired yesterday, everything would be working now.",
       "If the electricity'd been repaired yesterday, everything'd be working now."
-    ]
+    ],
+    "hint": "Є «yesterday» + «now»: умова — минула (пасив), результат — процес зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -685,7 +709,8 @@
     "en": [
       "If I had left earlier then, I wouldn’t be late now.",
       "If I'd left earlier then, I wouldn't be late now."
-    ]
+    ],
+    "hint": "Минуле («then» left earlier) → стан зараз («late now»)."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -693,31 +718,8 @@
     "en": [
       "If they hadn’t argued then, they would be on good terms now.",
       "If they hadn't argued then, they'd be on good terms now."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
-    "ua": ["Якби він отримав освіту, він мав би гарну кар’єру."],
-    "en": [
-      "If he had got an education, he would have a good career.",
-      "If he'd got an education, he'd have a good career."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
-    "ua": ["Якби ми жили ближче, ми бачилися б частіше."],
-    "en": [
-      "If we had lived closer, we would see each other more often.",
-      "If we'd lived closer, we'd see each other more often."
-    ]
-  },
-  {
-    "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
-    "ua": ["Якби я переїхав до Варшави, я мав би іншу роботу."],
-    "en": [
-      "If I had moved to Warsaw, I would have a different job.",
-      "If I'd moved to Warsaw, I'd have a different job."
-    ]
+    ],
+    "hint": "Сварка — минуле («then»), стосунки — стан зараз («now»)."
   },
   {
     "rules": ["MIXED_CONDITIONALS"],
@@ -725,7 +727,8 @@
     "en": [
       "If she had come to the meeting then, we would be working together now.",
       "If she'd come to the meeting then, we'd be working together now."
-    ]
+    ],
+    "hint": "Минуле («then» прийшла/не прийшла) → теперішня тривала дія."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "TOO_VERY"],
@@ -733,7 +736,8 @@
     "en": [
       "If I hadn’t been so stubborn, I wouldn’t regret it now.",
       "If I hadn't been so stubborn, I wouldn't regret it now."
-    ]
+    ],
+    "hint": "Причина в минулому → стан зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "ARTICLES"],
@@ -741,7 +745,8 @@
     "en": [
       "If we had bought the house then, we wouldn’t be renting an apartment now.",
       "If we'd bought the house then, we wouldn't be renting an apartment now."
-    ]
+    ],
+    "hint": "Минуле рішення → ситуація зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_TIME"],
@@ -749,7 +754,8 @@
     "en": [
       "If she hadn’t been late yesterday, she wouldn’t feel guilty now.",
       "If she hadn't been late yesterday, she wouldn't feel guilty now."
-    ]
+    ],
+    "hint": "Є «yesterday» + «now»: минула подія → емоція зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_PLACE"],
@@ -757,7 +763,8 @@
     "en": [
       "If I had stayed at home then, I wouldn’t be sick now.",
       "If I'd stayed at home then, I wouldn't be sick now."
-    ]
+    ],
+    "hint": "Минуле рішення («then» stayed) → стан здоров’я зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PREP_DIRECTION"],
@@ -765,7 +772,8 @@
     "en": [
       "If they had gone to the mountains, they would be skiing now.",
       "If they'd gone to the mountains, they'd be skiing now."
-    ]
+    ],
+    "hint": "Поїздка — минуле, катання — дія зараз."
   },
   {
     "rules": ["MIXED_CONDITIONALS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -773,6 +781,7 @@
     "en": [
       "If the report had been prepared yesterday, we would be discussing it now.",
       "If the report'd been prepared yesterday, we'd be discussing it now."
-    ]
+    ],
+    "hint": "Є «yesterday» + «now»: умова — пасив у минулому, результат — процес зараз."
   }
 ] }

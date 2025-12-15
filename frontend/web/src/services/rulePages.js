@@ -935,6 +935,76 @@ export const RULE_PAGE_PREP_TIME = {
     ]
 };
 
+
+export const RULE_PAGE_POSSESSIVE_ADJECTIVES = {
+    id: "POSSESSIVE_ADJECTIVES",
+    title: "Possessive adjectives",
+    subtitle: "Вивчення правила",
+    sections: [
+        {
+            type: "meaning",
+            title: "Що таке possessive adjectives",
+            html:
+                "<strong>Possessive adjectives</strong> показують, <em>кому щось належить</em>. " +
+                "Вони <em>завжди стоять перед іменником</em> і не вживаються самостійно.",
+        },
+        {
+            type: "usage",
+            title: "Коли й як вживаємо",
+            badges: [
+                "👤 Належність → <strong>my book, her phone</strong>",
+                "🧍 Залежить від власника, не від предмета",
+                "📍 Стоять <em>перед</em> іменником: <strong>my house</strong>",
+            ],
+            hint:
+                "Не плутай з <em>possessive pronouns</em> (mine, yours) — " +
+                "вони використовуються <em>без іменника</em>.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Особа", "Присвійний прикметник", "Приклад"],
+            rows: [
+                ["I", "my", "my bag"],
+                ["you", "your", "your keys"],
+                ["he", "his", "his car"],
+                ["she", "her", "her idea"],
+                ["it", "its", "its color"],
+                ["we", "our", "our plan"],
+                ["they", "their", "their friends"],
+            ],
+            hint:
+                "<strong>Its</strong> — присвійний прикметник. " +
+                "<strong>It’s</strong> = <em>it is</em> (❌ не плутати).",
+        },
+        {
+            type: "examples",
+            title: "Приклади",
+            items: [
+                ["This is my laptop.", "Це мій ноутбук."],
+                ["She forgot her keys.", "Вона забула свої ключі."],
+                ["The dog hurt its leg.", "Собака поранив свою лапу."],
+                ["We like our new apartment.", "Нам подобається наша нова квартира."],
+            ],
+        },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>He lost his phone</em> → правильно (НЕ <em>her</em>) — залежить від власника",
+                "❌ <em>its</em> vs <em>it’s</em> → <strong>its</strong> (присвійний), <strong>it’s</strong> = it is",
+                "❌ Подвійна належність → <em>my the book</em> → ❌",
+                "❌ Використання без іменника → <em>This is my.</em> → ❌ (потрібно <em>mine</em>)",
+            ],
+        },
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Possessive adjectives)",
+        },
+    ],
+};
+
+
 export const RULE_PAGE_ORDINALS_DATES = {
     id: "ORDINALS_DATES",
     title: "Ordinal numbers + dates",
@@ -6763,88 +6833,6 @@ export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
         },
     ],
 };
-
-/* ============================
-   PARALLELISM
-============================ */
-export const RULE_PAGE_PARALLELISM = {
-    id: "PARALLELISM",
-    title: "Parallelism (balanced grammatical structures)",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що таке parallelism",
-            html: "Коли однорідні елементи мають <strong>однакову граматичну форму</strong>: списки, порівняння, парні структури."
-        },
-        {
-            type: "usage",
-            title: "Приклади",
-            badges: [
-                "<strong>She likes reading, writing, and painting.</strong>",
-                "<strong>to learn, to grow, and to improve</strong>"
-            ]
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["He wants to study hard and to get good grades.", "Він хоче наполегливо вчитися і отримувати хороші оцінки."],
-                ["They were exhausted but happy and proud.", "Вони були виснажені, але щасливі й горді."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: [
-                "❌ Змішування форм: <em>to read, writing and to listen</em>.",
-                "❌ Непослідовність у довгих списках."
-            ]
-        },
-        { type: "trainer", title: "Міні-тренажер (Parallelism)" }
-    ]
-};
-
-
-/* ============================
-   MODIFIERS
-============================ */
-export const RULE_PAGE_MODIFIERS = {
-    id: "MODIFIERS",
-    title: "Modifiers (placement and clarity)",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Хто такі modifiers",
-            html: "Це слова/фрази, які уточнюють інші: прикметники, прислівники, фрази. Важливо їх <strong>правильно розміщувати</strong>."
-        },
-        {
-            type: "usage",
-            title: "Приклади правильного розміщення",
-            badges: [
-                "<strong>She almost failed every exam.</strong> (майже провалила всі)",
-                "<strong>She failed almost every exam.</strong> (провалила майже всі)"
-            ],
-            hint: "Розташування modifier може змінити сенс."
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["Only I saw him yesterday.", "Лише я бачив його вчора."],
-                ["I only saw him yesterday.", "Я лише бачив його вчора (і більше нічого не робив)."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Dangling modifiers — коли незрозуміло, що саме описується."]
-        },
-        { type: "trainer", title: "Міні-тренажер (Modifiers)" }
-    ]
-};
-
 
 /* ============================
    ORDER OF ADJECTIVES

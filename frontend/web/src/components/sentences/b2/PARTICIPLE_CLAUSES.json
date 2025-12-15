@@ -458,7 +458,7 @@
   {
     "rules": ["PARTICIPLE_CLAUSES"],
     "hint": "start with an -ing/-ed word",
-    "ua": "Не розуміючи жарту, він не засміявся.",
+    "ua": "Не зрозумівши жарту, він не засміявся.",
     "en": [
       "Not understanding the joke, he didn’t laugh."
     ]

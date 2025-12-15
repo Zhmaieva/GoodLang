@@ -990,7 +990,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Чому він пішов, не сказавши ні слова?",
     "en": [
       "Why might he have left without saying a word?",
@@ -1000,7 +1000,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Хто міг відкрити вікно посеред ночі?",
     "en": [
       "Who could have opened the window in the middle of the night?",
@@ -1010,7 +1010,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Куди вона могла зникнути після вечірки?",
     "en": [
       "Where could she have gone after the party?",
@@ -1020,7 +1020,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Коли вони могли дізнатися про це?",
     "en": [
       "When could they have found out about it?",
@@ -1030,7 +1030,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Як ти міг забути її ім’я?",
     "en": [
       "How could you have forgotten her name?",
@@ -1040,7 +1040,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Що він міг сказати, щоб її образити?",
     "en": [
       "What could he have said to offend her?",
@@ -1050,7 +1050,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Хто міг бути з ним у той момент?",
     "en": [
       "Who could have been with him at that moment?",
@@ -1060,7 +1060,7 @@
   },
 
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q", "ARTICLES"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "ARTICLES"],
     "ua": "Хто міг розбити цю вазу?",
     "en": [
       "Who could have broken the vase?",
@@ -1069,7 +1069,7 @@
     "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
   },
   {
-    "rules": ["ADVANCED_MODALS_OF_DEDUCTION", "WH_Q"],
+    "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
     "ua": "Як він міг не помітити помилку?",
     "en": [
       "How could he have missed the mistake?",
