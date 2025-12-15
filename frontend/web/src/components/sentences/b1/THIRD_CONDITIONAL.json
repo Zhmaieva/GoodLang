@@ -1,725 +1,352 @@
-{ "THIRD_CONDITIONAL": [
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я знав про вечірку, я б пішов.",
-    "en": [
-      "If I had known about the party, I would have gone."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона вчилася старанніше, вона б склала іспит.",
-    "en": [
-      "If she had studied harder, she would have passed the exam."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони поїхали раніше, вони б встигли на автобус.",
-    "en": [
-      "If they had left earlier, they would have caught the bus."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він подзвонив мені, я б допоміг йому.",
-    "en": [
-      "If he had called me, I would have helped him."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми взяли парасолю, ми б не промокли.",
-    "en": [
-      "If we had brought an umbrella, we would not have gotten wet."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я побачив тебе, я б привітався.",
-    "en": [
-      "If I had seen you, I would have said hello.",
-      "If I had seen you, I would have said hi."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона поснідала, їй би не стало зле.",
-    "en": [
-      "If she had eaten breakfast, she would not have felt sick."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони забронювали квитки раніше, вони б знайшли кращі місця.",
-    "en": [
-      "If they had booked tickets sooner, they would have found better seats."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він вибачився, вона б пробачила його.",
-    "en": [
-      "If he had apologized, she would have forgiven him."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми заощадили більше грошей, ми б купили більший будинок.",
-    "en": [
-      "If we had saved more money, we would have bought a bigger house."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я знав правду, я б йому не повірив.",
-    "en": [
-      "If I had known the truth, I would not have believed him."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона перевірила погоду, вона б узяла куртку.",
-    "en": [
-      "If she had checked the weather, she would have taken a jacket."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він тренувався більше, він би виграв гонку.",
-    "en": [
-      "If he had trained more, he would have won the race."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "PASSIVE_VOICE_ALL_TENSES"],
-    "ua": "Якби ми зачинили двері, велосипед би не вкрали.",
-    "en": [
-      "If we had locked the door, the bike would not have been stolen."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я прокинувся раніше, я б не запізнився.",
-    "en": [
-      "If I had woken up earlier, I would not have been late."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона сказала правду, вона б не мала проблем.",
-    "en": [
-      "If she had told the truth, she would not have gotten into trouble."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони принесли більше їжі, ми б не були голодними.",
-    "en": [
-      "If they had brought more food, we would not have been hungry."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він знав адресу, він би не заблукав.",
-    "en": [
-      "If he had known the address, he would not have gotten lost."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми взяли таксі, ми б приїхали вчасно.",
-    "en": [
-      "If we had taken a taxi, we would have arrived on time."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я згадав про твій день народження, я б купив подарунок.",
-    "en": [
-      "If I had remembered your birthday, I would have bought a gift.",
-      "If I had remembered your birthday, I would have bought you a present."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони потренувалися, вони б виступили краще.",
-    "en": [
-      "If they had practiced, they would have performed better."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він працював старанніше, він би зберіг роботу.",
-    "en": [
-      "If he had worked harder, he would have kept his job."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми вийшли вчасно, ми б не запізнилися на літак.",
-    "en": [
-      "If we had left on time, we would not have missed the plane."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я побачив знак, я б там не припаркувався.",
-    "en": [
-      "If I had seen the sign, I would not have parked there."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона вивчила французьку, вона б зрозуміла фільм.",
-    "en": [
-      "If she had learned French, she would have understood the movie.",
-      "If she had learned French, she would have understood the film."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони знали про розпродаж, вони б купили більше.",
-    "en": [
-      "If they had known about the sale, they would have bought more."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми взяли карту, ми б не заблукали.",
-    "en": [
-      "If we had taken the map, we would not have gotten lost."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона почекала трохи довше, вона б його зустріла.",
-    "en": [
-      "If she had waited a bit longer, she would have met him."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони обрали інший маршрут, вони б уникнули заторів.",
-    "en": [
-      "If they had chosen another route, they would have avoided traffic."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він випив менше, йому б не було так погано.",
-    "en": [
-      "If he had drunk less, he would not have felt so bad."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми послухали тебе, усе було б інакше.",
-    "en": [
-      "If we had listened to you, things would have been different."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я купив квиток, я б пішов на концерт.",
-    "en": [
-      "If I had bought the ticket, I would have gone to the concert."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона була сміливіша, вона б поставила запитання.",
-    "en": [
-      "If she had had more courage, she would have asked the question."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони вимкнули духовку, їжа б не згоріла.",
-    "en": [
-      "If they had turned off the oven, the food would not have burned."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він знав її краще, він би їй не довірив.",
-    "en": [
-      "If he had known her better, he would not have trusted her."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я перевірив електронну пошту, я б відповів раніше.",
-    "en": [
-      "If I had checked the email, I would have replied sooner."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона взула зручне взуття, вона б не натерла мозолі.",
-    "en": [
-      "If she had worn comfortable shoes, she would not have gotten blisters."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони знали правила, вони б їх не порушили.",
-    "en": [
-      "If they had known the rules, they would not have broken them."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він звернувся до лікаря раніше, він би одужав швидше.",
-    "en": [
-      "If he had seen the doctor earlier, he would have recovered faster."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми взяли тепліший одяг, нам би не було так холодно.",
-    "en": [
-      "If we had packed warmer clothes, we would not have been that cold."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES", "ADVERBS_OF_MANNER"],
-    "ua": "Якби вони дресирували собаку, він би поводився краще.",
-    "en": [
-      "If they had trained the dog, it would have behaved better."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він навчався за кордоном, він би вивчив іншу мову.",
-    "en": [
-      "If he had studied abroad, he would have learned another language."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми приїхали першими, ми б вибрали кращі місця.",
-    "en": [
-      "If we had arrived first, we would have chosen better seats."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я знав, що це твоє улюблене, я б залишив трохи.",
-    "en": [
-      "If I had known it was your favorite, I would have saved some.",
-      "If I had known it was your favorite, I would have left some."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби вона побачила попередження, вона була б обережнішою.",
-    "en": [
-      "If she had seen the warning, she would have been careful."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ADVERBS_OF_MANNER"],
-    "ua": "Якби вони їхали швидше, вони б приїхали раніше.",
-    "en": [
-      "If they had driven faster, they would have arrived earlier."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Якби він купив страховку, він би не заплатив так багато.",
-    "en": [
-      "If he had bought insurance, he would not have paid so much."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми перевірили ціну, ми заощадили б грошей.",
-    "en": [
-      "If we had checked the price, we would have saved money."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби я впізнав пісню, я б підспівав.",
-    "en": [
-      "If I had recognized the song, I would have sung along."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
-    "ua": "Якби вони частіше навідували нас, ми б підтримували зв’язок.",
-    "en": [
-      "If they had visited more often, we would have stayed in touch."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби він відреагував раніше, він би уникнув аварії.",
-    "en": [
-      "If he had reacted sooner, he would have avoided the accident."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я знав, як це полагодити, я б зробив це сам.",
-    "en": [
-      "If I had known how to fix it, I would have done it myself."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ADVERBS_OF_MANNER"],
-    "ua": "Якби вона принесла свої нотатки, вона б відповіла правильно.",
-    "en": [
-      "If she had brought her notes, she would have answered correctly."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL", "ADVERBS_OF_MANNER", "ARTICLES"],
-    "ua": "Якби вони краще спланували, поїздка пройшла б гладко.",
-    "en": [
-      "If they had planned better, the trip would have gone smoothly.",
-      "If they had planned better, the trip would have gone well."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми лягли спати раніше, ми б не були стомлені.",
-    "en": [
-      "If we had gone to bed earlier, we would not have been tired."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я прийняв ту роботу, моє життя змінилося б.",
-    "en": [
-      "If I had taken that job, my life would have changed."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби вона зберегла чек, вона б повернула покупку.",
-    "en": [
-      "If she had kept the receipt, she would have returned it.",
-      "If she had kept the receipt, she would have taken it back."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони попросили про допомогу, ми б їм допомогли.",
-    "en": [
-      "If they had asked for help, we would have helped them."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він залишив повідомлення, я б передзвонив.",
-    "en": [
-      "If he had left a message, I would have called back."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми знали, що буде дощ, ми б залишилися вдома.",
-    "en": [
-      "If we had known it would rain, we would have stayed home.",
-      "If we had known it would rain, we would have stayed at home."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я довірився своїй інтуїції, я б уникнув проблем.",
-    "en": [
-      "If I had trusted my intuition, I would have avoided trouble.",
-      "If I had trusted my intuition, I would have avoided problems."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона скористалася сонцезахисним кремом, вона б не згоріла.",
-    "en": [
-      "If she had worn sunscreen, she would not have gotten burned.",
-      "If she had worn sunscreen, she would not have gotten sunburned."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони уважніше слухали, вони б не зробили помилок.",
-    "en": [
-      "If they had listened carefully, they would not have made mistakes.",
-      "If they had listened carefully, they would not have made any mistakes."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він перевірив карту, він би не заблукав.",
-    "en": [
-      "If he had checked the map, he would not have gotten lost."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми зробили фото, ми б ними поділилися.",
-    "en": [
-      "If we had taken photos, we would have shared them.",
-      "If we had taken pictures, we would have shared them."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я купив більше перекусів, усі були б щасливі.",
-    "en": [
-      "If I had bought more snacks, everyone would have been happy."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона прийняла ліки, їй би не стало гірше.",
-    "en": [
-      "If she had taken her medicine, she would not have gotten worse."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби вони прибрали будинок, він би виглядав гарно.",
-    "en": [
-      "If they had cleaned the house, it would have looked nice.",
-      "If they had cleaned the house, it would have looked good."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він відповів на дзвінок, він би почув новину.",
-    "en": [
-      "If he had answered the phone, he would have heard the news."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми полили рослини, вони б не загинули.",
-    "en": [
-      "If we had watered the plants, they would not have died."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона знала його таємницю, вона б йому не довіряла.",
-    "en": [
-      "If she had known his secret, she would not have trusted him."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони поставили будильник, вони б не проспали.",
-    "en": [
-      "If they had set an alarm, they would not have overslept."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він перевірив час, він би не запізнився.",
-    "en": [
-      "If he had checked the time, he would not have arrived late.",
-      "If he had checked the time, he would not have been late."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми вибрали інший готель, ми б виспалися краще.",
-    "en": [
-      "If we had chosen another hotel, we would have slept better."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я послухав інструкції, я б нічого не зламав.",
-    "en": [
-      "If I had listened to the instructions, I would not have broken it."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби вона вдягла пальто, вона б не застудилася.",
-    "en": [
-      "If she had worn a coat, she would not have caught a cold.",
-      "If she had worn a coat, she would not have gotten sick."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби ми знали відповідь, ми б підняли руки.",
-    "en": [
-      "If we had known the answer, we would have raised our hands."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я прийняв пропозицію роботи, я б переїхав до Канади.",
-    "en": [
-      "If I had taken the job offer, I would have moved to Canada."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вона почула будильник, вона б прокинулася.",
-    "en": [
-      "If she had heard the alarm, she would have woken up."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він більше тренувався, він би отримав роль.",
-    "en": [
-      "If he had trained more, he would have gotten the role.",
-      "If he had trained more, he would have got the role."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми полагодили машину раніше, вона б знову не зламалася.",
-    "en": [
-      "If we had fixed the car earlier, it would not have broken down again."
-    ]
-  },
-
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби я зачекав на тебе, ми б пішли разом.",
-    "en": [
-      "If I had waited for you, we would have gone together."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": "Якби вона згадала гаманець, вона б купила це.",
-    "en": [
-      "If she had remembered her wallet, she would have bought it."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби вони приїхали раніше, вони б побачили феєрверки.",
-    "en": [
-      "If they had arrived sooner, they would have seen the fireworks."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби він вибачився раніше, вона б залишилася.",
-    "en": [
-      "If he had apologized sooner, she would have stayed."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": "Якби ми спробували ще раз, ми б досягли успіху.",
-    "en": [
-      "If we had tried one more time, we would have succeeded."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "TOO_VERY"],
-    "ua": ["Якби вона не була такою зайнятою, вона б допомогла нам."],
-    "en": [
-      "If she hadn’t been so busy, she would have helped us.",
-      "Had she not been so busy, she would have helped us."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "PREP_TIME"],
-    "ua": ["Якби ми приїхали вранці, ми б застали його вдома."],
-    "en": [
-      "If we had arrived in the morning, we would have found him at home.",
-      "Had we arrived in the morning, we would have found him at home."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "PREP_DIRECTION"],
-    "ua": ["Якби ми поїхали до Німеччини, ми б зустріли старих друзів."],
-    "en": [
-      "If we had gone to Germany, we would have met our old friends.",
-      "Had we gone to Germany, we would have met our old friends."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "PREP_PLACE"],
-    "ua": ["Якби вони залишилися вдома, вони б уникнули неприємностей."],
-    "en": [
-      "If they had stayed at home, they would have avoided trouble.",
-      "Had they stayed at home, they would have avoided trouble."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": ["Якби я не запізнився, я б зустрів її."],
-    "en": [
-      "If I hadn’t been late, I would have met her.",
-      "Had I not been late, I would have met her."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": ["Якби він не був таким повільним, він би встиг на потяг."],
-    "en": [
-      "If he hadn’t been so slow, he would have caught the train.",
-      "Had he not been so slow, he would have caught the train."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "PREP_TIME"],
-    "ua": ["Якби вона прийшла вчасно, ми б не чекали так довго."],
-    "en": [
-      "If she had come on time, we wouldn’t have waited so long.",
-      "Had she come on time, we wouldn’t have waited so long."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "ARTICLES"],
-    "ua": ["Якби він купив цю книгу, він би дізнався більше про океан."],
-    "en": [
-      "If he had bought this book, he would have learned more about the ocean.",
-      "Had he bought this book, he would have learned more about the ocean."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "PREP_PLACE"],
-    "ua": ["Якби ми залишилися на площі, ми б побачили парад."],
-    "en": [
-      "If we had stayed in the square, we would have seen the parade.",
-      "Had we stayed in the square, we would have seen the parade."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL"],
-    "ua": ["Якби я не відклав цю задачу, я б уже завершив роботу."],
-    "en": [
-      "If I hadn’t put off this task, I would have already finished the work.",
-      "Had I not put off this task, I would have already finished the work."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "PREP_DIRECTION"],
-    "ua": ["Якби вони поїхали до Лісабона, вони б побачили океан."],
-    "en": [
-      "If they had gone to Lisbon, they would have seen the ocean.",
-      "Had they gone to Lisbon, they would have seen the ocean."
-    ]
-  },
-  {
-    "rules": ["THIRD_CONDITIONAL", "POSSESSIVE_S"],
-    "ua": ["Якби я скористався цією підказкою, я б відповів правильно."],
-    "en": [
-      "If I had used this hint, I would have answered correctly.",
-      "Had I used this hint, I would have answered correctly."
-    ]
-  }
-] }
+{
+  "THIRD_CONDITIONAL": [
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони поїхали раніше, вони б встигли на автобус.",
+      "en": ["If they had left earlier, they would have caught the bus."],
+      "hint": "вони тоді поїхали пізно, і автобус уже поїхав."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він подзвонив мені, я б допоміг йому.",
+      "en": ["If he had called me, I would have helped him."],
+      "hint": "У минулому він не подзвонив, тож допомоги не було. Момент уже минув."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми взяли парасолю, ми б не промокли.",
+      "en": ["If we had taken an umbrella, we wouldn't have gotten wet."],
+      "hint": "Минулий випадок: парасолю тоді не взяли, і вже намокли."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я побачив тебе, я б привітався.",
+      "en": ["If I had seen you, I would have said hello."],
+      "hint": "Про той момент у минулому: я тоді тебе не побачив(ла)."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона поснідала, їй би не стало зле.",
+      "en": ["If she had had breakfast, she wouldn't have felt sick."],
+      "hint": "вона тоді не поснідала, і їй стало зле."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони забронювали квитки раніше, вони б знайшли кращі місця.",
+      "en": ["If they had booked the tickets earlier, they would have found better seats."],
+      "hint": "Минуле рішення: не забронювали раніше, і кращих місць уже не було."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він вибачився, вона б пробачила його.",
+      "en": ["If he had apologized, she would have forgiven him."],
+      "hint": "Про минулу ситуацію: він тоді не вибачився."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я прокинувся раніше, я б не запізнився.",
+      "en": ["If I had woken up earlier, I wouldn't have been late."],
+      "hint": "я прокинувся пізно і вже запізнився."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона сказала правду, вона б не мала проблем.",
+      "en": ["If she had told the truth, she wouldn't have had problems."],
+      "hint": "вона тоді не сказала правду, і проблеми вже з’явилися."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми вийшли вчасно, ми б не запізнилися на літак.",
+      "en": ["If we had left on time, we wouldn't have missed the plane."],
+      "hint": "ми вийшли пізно, і літак уже відлетів."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я побачив знак, я б там не припаркувався.",
+      "en": ["If I had seen the sign, I wouldn't have parked there."],
+      "hint": "знак тоді не помітив(ла), і вже припаркувався(лась)."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона вивчила французьку, вона б зрозуміла фільм.",
+      "en": ["If she had learned French, she would have understood the film."],
+      "hint": "фільм уже подивилися, але французьку тоді не знала."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми зачинили двері, велосипед би не вкрали.",
+      "en": ["If we had locked the door, the bike wouldn't have been stolen."],
+      "hint": "двері тоді не зачинили, і велосипед уже вкрали."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він випив менше, йому б не було так погано.",
+      "en": ["If he had drunk less, he wouldn't have felt so bad."],
+      "hint": "він тоді випив багато, і наслідок уже стався."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я перевірив електронну пошту, я б відповів раніше.",
+      "en": ["If I had checked my email, I would have replied earlier."],
+      "hint": "тоді не перевірив(ла) пошту і відповів(ла) пізно."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона взула зручне взуття, вона б не натерла мозолі.",
+      "en": ["If she had worn comfortable shoes, she wouldn't have gotten blisters."],
+      "hint": "взула незручне і вже натерла мозолі."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони знали правила, вони б їх не порушили.",
+      "en": ["If they had known the rules, they wouldn't have broken them."],
+      "hint": "тоді не знали правил, тому вже порушили."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він звернувся до лікаря раніше, він би одужав швидше.",
+      "en": ["If he had gone to the doctor earlier, he would have recovered faster."],
+      "hint": "звернувся пізно, і це вже вплинуло на одужання."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми взяли тепліший одяг, нам би не було так холодно.",
+      "en": ["If we had brought warmer clothes, we wouldn't have been so cold."],
+      "hint": "тоді не взяли теплий одяг, і вже замерзли."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми приїхали першими, ми б вибрали кращі місця.",
+      "en": ["If we had arrived first, we would have chosen better seats."],
+      "hint": "приїхали не першими, і кращі місця вже зайняли."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я знав, що це твоє улюблене, я б залишив трохи.",
+      "en": ["If I had known it was your favorite, I would have left some."],
+      "hint": "тоді не знав(ла), і вже не залишив(ла)."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона побачила попередження, вона була б обережнішою.",
+      "en": ["If she had seen the warning, she would have been more careful."],
+      "hint": "попередження тоді не помітила, наслідок уже стався."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він купив страховку, він би не заплатив так багато.",
+      "en": ["If he had bought insurance, he wouldn't have paid so much."],
+      "hint": "страховку тоді не купив, і вже заплатив багато."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми перевірили ціну, ми заощадили б грошей.",
+      "en": ["If we had checked the price, we would have saved money."],
+      "hint": "не перевірили, і вже переплатили."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я впізнав пісню, я б підспівав.",
+      "en": ["If I had recognized the song, I would have sung along."],
+      "hint": "тоді не впізнав(ла) пісню."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він відреагував раніше, він би уникнув аварії.",
+      "en": ["If he had reacted earlier, he would have avoided the accident."],
+      "hint": "відреагував пізно, аварія вже сталася."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона принесла свої нотатки, вона б відповіла правильно.",
+      "en": ["If she had brought her notes, she would have answered correctly."],
+      "hint": "нотатки не принесла, відповідь уже була неправильною."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони краще спланували, поїздка пройшла б гладко.",
+      "en": ["If they had planned better, the trip would have gone smoothly."],
+      "hint": "спланували погано, поїздка вже пройшла з проблемами."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми лягли спати раніше, ми б не були стомлені.",
+      "en": ["If we had gone to bed earlier, we wouldn't have been tired."],
+      "hint": "лягли пізно, і вже втомлені."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я прийняв ту роботу, моє життя змінилося б.",
+      "en": ["If I had taken that job, my life would have changed."],
+      "hint": "Минуле рішення: роботу тоді не прийняв(ла), і життя пішло інакше."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона зберегла чек, вона б повернула покупку.",
+      "en": ["If she had kept the receipt, she would have returned the purchase."],
+      "hint": "чек не зберегла, повернення вже не вийшло."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він залишив повідомлення, я б передзвонив.",
+      "en": ["If he had left a message, I would have called back."],
+      "hint": "повідомлення не залишив, і я не передзвонив(ла)."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми знали, що буде дощ, ми б залишилися вдома.",
+      "en": ["If we had known it would rain, we would have stayed at home."],
+      "hint": "тоді не знали про дощ і вже вийшли."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я довірився своїй інтуїції, я б уникнув проблем.",
+      "en": ["If I had trusted my intuition, I would have avoided problems."],
+      "hint": "не довірився(лась), проблеми вже сталися."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона скористалася сонцезахисним кремом, вона б не згоріла.",
+      "en": ["If she had used sunscreen, she wouldn't have gotten sunburned."],
+      "hint": "крем не використала, і вже згоріла."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми зробили фото, ми б ними поділилися.",
+      "en": ["If we had taken photos, we would have shared them."],
+      "hint": "фото тоді не зробили."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я купив більше перекусів, усі були б щасливі.",
+      "en": ["If I had bought more snacks, everyone would have been happy."],
+      "hint": "перекусів купив(ла) мало, момент уже минув."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона прийняла ліки, їй би не стало гірше.",
+      "en": ["If she had taken the medicine, she wouldn't have gotten worse."],
+      "hint": "ліки тоді не прийняла, і стало гірше."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він відповів на дзвінок, він би почув новину.",
+      "en": ["If he had answered the call, he would have heard the news."],
+      "hint": "він не відповів, новину пропустив."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони поставили будильник, вони б не проспали.",
+      "en": ["If they had set an alarm, they wouldn't have overslept."],
+      "hint": "будильник не поставили, і вже проспали."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він перевірив час, він би не запізнився.",
+      "en": ["If he had checked the time, he wouldn't have been late."],
+      "hint": "час не перевірив, і вже запізнився."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми вибрали інший готель, ми б виспалися краще.",
+      "en": ["If we had chosen a different hotel, we would have slept better."],
+      "hint": "готель уже обрали, ніч уже була."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я послухав інструкції, я б нічого не зламав.",
+      "en": ["If I had followed the instructions, I wouldn't have broken anything."],
+      "hint": "інструкції не послухав(ла), і вже зламав(ла)."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона вдягла пальто, вона б не застудилася.",
+      "en": ["If she had put on a coat, she wouldn't have caught a cold."],
+      "hint": "пальто не вдягла, і вже застудилася."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона почула будильник, вона б прокинулася.",
+      "en": ["If she had heard the alarm, she would have woken up."],
+      "hint": "будильник не почула, і вже проспала."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми полагодили машину раніше, вона б знову не зламалася.",
+      "en": ["If we had fixed the car earlier, it wouldn't have broken down again."],
+      "hint": "не полагодили вчасно, і вона вже зламалася знову."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я зачекав на тебе, ми б пішли разом.",
+      "en": ["If I had waited for you, we would have gone together."],
+      "hint": "я не зачекав(ла), і ми вже не пішли разом."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона згадала гаманець, вона б купила це.",
+      "en": ["If she had remembered her wallet, she would have bought it."],
+      "hint": "гаманець забула, покупку вже не зробила."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони приїхали раніше, вони б побачили феєрверки.",
+      "en": ["If they had arrived earlier, they would have seen the fireworks."],
+      "hint": "приїхали пізно, феєрверки вже закінчилися."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він вибачився раніше, вона б залишилася.",
+      "en": ["If he had apologized earlier, she would have stayed."],
+      "hint": "вибачився запізно/не вибачився, вона вже пішла."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми приїхали вранці, ми б застали його вдома.",
+      "en": ["If we had arrived in the morning, we would have found him at home."],
+      "hint": "приїхали не вранці, і вже не застали."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми поїхали до Німеччини, ми б зустріли старих друзів.",
+      "en": ["If we had gone to Germany, we would have met old friends."],
+      "hint": "поїздка не відбулася, шанс уже минув."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони залишилися вдома, вони б уникнули неприємностей.",
+      "en": ["If they had stayed at home, they would have avoided trouble."],
+      "hint": "вони не залишилися, і неприємності вже сталися."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби я не запізнився, я б зустрів її.",
+      "en": ["If I hadn't been late, I would have met her."],
+      "hint": "я запізнився(лась), зустріч уже пропустив(ла)."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вона прийшла вчасно, ми б не чекали так довго.",
+      "en": ["If she had come on time, we wouldn't have waited so long."],
+      "hint": "вона запізнилася, ми вже чекали довго."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби він купив цю книгу, він би дізнався більше про океан.",
+      "en": ["If he had bought this book, he would have learned more about the ocean."],
+      "hint": "книгу не купив, можливість уже минула."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби ми залишилися на площі, ми б побачили парад.",
+      "en": ["If we had stayed in the square, we would have seen the parade."],
+      "hint": "ми пішли, парад уже пройшов."
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "ua": "Якби вони поїхали до Лісабона, вони б побачили океан.",
+      "en": ["If they had gone to Lisbon, they would have seen the ocean."],
+      "hint": "поїздка не відбулася, шанс уже минув."
+    }
+  ]
+}

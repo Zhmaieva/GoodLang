@@ -123,7 +123,7 @@ export const RULE_LABELS = Object.freeze({
     BE_FROM_NATIONALITY: "Be from (nationality)",
     PRESENT_CONT_NOW: "Present Continuous (now)",
     PREP_PLACE: "Prepositions of place (in/on/under/next to)",
-    PREP_TIME: "Prepositions of time (in/on/at)",
+    PREP_TIME: "Prepositions of time",
     ORDINALS_DATES: "Ordinal numbers + dates",
     WOULD_LIKE_TO: "Would like to + verb",
     LETS: "Let’s + verb",
@@ -149,8 +149,8 @@ export const RULE_LABELS = Object.freeze({
     QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY: "Quantifiers (some, any, a lot of, much, many)",
     FUTURE_WITH_PRESENT_CONT: "Future with Present Continuous (arrangements)",
     LIKE_LOVE_HATE_ING: "Like / love / hate + -ing",
-    ZERO_CONDITIONAL: "If + Present Simple, Present Simple (Zero Conditional)",
-    FIRST_CONDITIONAL: "If + Present, will + V (1st Conditional)",
+    ZERO_CONDITIONAL: "Zero Conditional",
+    FIRST_CONDITIONAL: "1st Conditional",
     TIME_CLAUSE_FUTURE: "Time clause future",
     HOW_OFTEN_LONG_MUCH: "How often / How long / How much",
     BECAUSE_SO_BUT_ALTHOUGH: "Because / so / but / although",
@@ -166,14 +166,14 @@ export const RULE_LABELS = Object.freeze({
     PAST_PERFECT: "Past Perfect",
     USED_TO: "Used to + V",
     BE_USED_TO_GET_USED_TO: "Be used to / get used to",
-    SECOND_CONDITIONAL: "2nd Conditional (If + Past, would + V)",
+    SECOND_CONDITIONAL: "2nd Conditional",
     THIRD_CONDITIONAL: "3rd Conditional",
     WISH_PAST_PAST_PERFECT: "Wish + Past / Past Perfect",
     MODAL_PERFECTS: "Modal perfects (should have, could have)",
     GERUND_VS_INFINITIVE: "Gerund vs infinitive",
-    PASSIVE_VOICE_ALL_TENSES: "Passive Voice (all tenses)",
+    PASSIVE_VOICE_ALL_TENSES: "Passive Voice",
     GET_PAST_PARTICIPLE: "Get + past participle",
-    REPORTED_SPEECH: "Reported speech (say, tell, ask)",
+    REPORTED_SPEECH: "Reported speech",
     QUESTION_TAGS: "Question tags",
     ENOUGH_TOO_MUCH_MANY_SO_SUCH: "Too / enough / so / such",
     RELATIVE_CLAUSES: "Relative clauses (who, which, that, where)",
@@ -193,7 +193,7 @@ export const RULE_LABELS = Object.freeze({
     // B2
     CLEFT_SENTENCES: "Cleft sentences (It is / What … is …)",
     MIXED_CONDITIONALS: "Mixed conditionals",
-    THIRD_CONDITIONAL_VARIATIONS: "Third conditional variations",
+    THIRD_CONDITIONAL_VARIATIONS: "3rd Conditional variations",
     ADV_PASSIVES_REPORTING_VERBS: "Advanced passives (with reporting verbs)",
     PARTICIPLE_CLAUSES: "Participle clauses",
     REDUCED_RELATIVE_CLAUSES: "Reduced relative clauses",
@@ -212,7 +212,7 @@ export const RULE_LABELS = Object.freeze({
     PARALLELISM: "Parallelism (balanced grammatical structures)",
     MODIFIERS: "Modifiers (placement and clarity)",
     ORDER_OF_ADJECTIVES: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",
-    PREP_DIRECTION: "Prepositions of direction (to, into, towards)"
+    PREP_DIRECTION: "Prepositions of direction"
 });
 
 // Group rules by CEFR level

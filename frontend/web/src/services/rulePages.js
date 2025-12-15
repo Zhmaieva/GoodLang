@@ -797,7 +797,8 @@ export const RULE_PAGE_PRESENT_CONT_NOW = {
                 "<em>Є слово now?</em> → ✅ <strong>Present Continuous</strong>"
             ],
             note:
-                "Завжди додавай <strong>future time</strong> (tomorrow, next week…), щоб було зрозуміло, що це про майбутнє.",},
+                "Завжди додавай <strong>future time</strong> (tomorrow, next week…), щоб було зрозуміло, що це про майбутнє.",
+        },
         {
             type: "mistakes",
             title: "Типові помилки",
@@ -1769,28 +1770,23 @@ export const RULE_PAGE_HAVE_TO_DONT_HAVE_TO = {
                 "📏 Правила/закони: <strong>We have to wear uniforms at school.</strong>",
                 "📅 Повсякденні обов’язки: <strong>I have to get up early.</strong>",
                 "😌 Відсутність необхідності: <strong>You don’t have to come.</strong>",
-            ],
-            hint:
-                "У Present Simple: <strong>I/you/we/they have to</strong>, <strong>he/she/it has to</strong>.",
-        },
+            ]},
         {
             type: "forms",
             title: "Форми have to",
-            headers: ["Особа", "Ствердження", "Заперечення", "Питання", "Короткі відповіді"],
+            headers: ["Особа", "Ствердження", "Заперечення", "Питання"],
             rows: [
                 [
                     "I / You / We / They",
                     "have to work",
                     "don’t have to work",
-                    "Do you have to work?",
-                    "Yes, I do. / No, I don’t.",
+                    "Do you have to work?"
                 ],
                 [
                     "He / She / It",
                     "has to work",
                     "doesn’t have to work",
-                    "Does he have to work?",
-                    "Yes, he does. / No, he doesn’t.",
+                    "Does he have to work?"
                 ],
             ],
             hint:
@@ -1841,27 +1837,22 @@ export const RULE_PAGE_MAY_MIGHT = {
                 "🤔 Невпевнені прогнози: <strong>It may rain later.</strong>",
                 "🔮 Ще менш впевнено: <strong>It might rain later.</strong>",
                 "🙏 Ввічливий дозвіл (частіше may): <strong>May I open the window?</strong>",
-            ],
-            hint:
-                "Структура: <strong>may / might + V1</strong>. Не додаємо <em>to</em>.",
-        },
+            ]},
         {
             type: "forms",
             title: "Форми may / might",
-            headers: ["Тип", "Ствердження / Заперечення", "Питання", "Короткі відповіді", "Примітка"],
+            headers: ["Тип", "Ствердження / Заперечення", "Питання", "Примітка"],
             rows: [
                 [
                     "Можливість",
                     "She may be at home.",
                     "May she be at home?",
-                    "Yes, she may. / No, she may not.",
                     "May = можливо.",
                 ],
                 [
                     "Можливість (менш ймовірно)",
                     "He might come later.",
                     "Might he come later?",
-                    "Yes, he might. / No, he might not.",
                     "Might = ще менш впевнено.",
                 ],
             ],
@@ -1930,7 +1921,7 @@ export const RULE_PAGE_COMPARATIVES = {
                     "",
                 ],
                 [
-                    "На -y",
+                    "Закінчується на -y",
                     "y → ier",
                     "happy → happier",
                     "щасливий → щасливіший",
@@ -1989,7 +1980,7 @@ export const RULE_PAGE_SUPERLATIVES = {
             title: "Що таке найвищий ступінь",
             html:
                 "<strong>Superlative</strong> (найвищий ступінь прикметника) використовуємо, коли говоримо про <em>най-</em> серед " +
-                "більш ніж двох предметів/людей: <strong>the tallest, the most interesting</strong>.",
+                "більш ніж двох предметів/людей.",
         },
         {
             type: "usage",
@@ -2015,7 +2006,7 @@ export const RULE_PAGE_SUPERLATIVES = {
                     "",
                 ],
                 [
-                    "На -y",
+                    "Закінчується на -y",
                     "y → iest",
                     "happy → the happiest",
                     "щасливий → найщасливіший",
@@ -2093,7 +2084,7 @@ export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
                     "too + adj / adv",
                     "too big",
                     "занадто великий",
-                    "Негативний відтінок.",
+                    "негативний відтінок",
                     "too quickly",
                 ],
                 [
@@ -2412,28 +2403,22 @@ export const RULE_PAGE_LIKE_LOVE_HATE_ING = {
         {
             type: "forms",
             title: "Форми",
-            headers: ["Структура", "Приклад", "Переклад", "Примітка", "Ще приклад"],
+            headers: ["Структура", "Приклад", "Переклад"],
             rows: [
                 [
                     "like + V-ing",
                     "I like swimming.",
-                    "Мені подобається плавати.",
-                    "",
-                    "We like cooking.",
+                    "Мені подобається плавати."
                 ],
                 [
                     "love + V-ing",
                     "She loves singing.",
-                    "Вона обожнює співати.",
-                    "",
-                    "They love playing football.",
+                    "Вона обожнює співати."
                 ],
                 [
                     "hate + V-ing",
                     "He hates getting up early.",
-                    "Він ненавидить рано вставати.",
-                    "",
-                    "I hate waiting in queues.",
+                    "Він ненавидить рано вставати."
                 ],
             ],
             hint:
@@ -2467,7 +2452,7 @@ export const RULE_PAGE_LIKE_LOVE_HATE_ING = {
 
 export const RULE_PAGE_ZERO_CONDITIONAL = {
     id: "ZERO_CONDITIONAL",
-    title: "If + Present Simple, Present Simple (Zero Conditional)",
+    title: "Zero Conditional",
     subtitle: "Вивчення правила",
     sections: [
         {
@@ -2538,7 +2523,7 @@ export const RULE_PAGE_ZERO_CONDITIONAL = {
 
 export const RULE_PAGE_FIRST_CONDITIONAL = {
     id: "FIRST_CONDITIONAL",
-    title: "If + Present, will + V (1st Conditional)",
+    title: "1st Conditional",
     subtitle: "Вивчення правила",
     sections: [
         {
@@ -2555,10 +2540,7 @@ export const RULE_PAGE_FIRST_CONDITIONAL = {
                 "🔮 Реальні плани: <strong>If it is sunny, we’ll go to the park.</strong>",
                 "⚠️ Попередження: <strong>If you are late, you’ll miss the bus.</strong>",
                 "💬 Обіцянки: <strong>If you help me, I’ll help you.</strong>",
-            ],
-            hint:
-                "Структура: <strong>If + Present Simple, will + V</strong>. If-частина в Present, результат — з will.",
-        },
+            ]},
         {
             type: "forms",
             title: "Структура First Conditional",
@@ -2623,12 +2605,13 @@ export const RULE_PAGE_TIME_CLAUSE_FUTURE = {
             type: "usage",
             title: "Коли й як",
             badges: [
-                "🕒 Після <strong>when</strong>: <strong>When I get home, I’ll call you.</strong>",
-                "⏳ Після <strong>before/after</strong>: <strong>Before you go to bed, brush your teeth.</strong>",
-                "⚡ Після <strong>as soon as</strong>: <strong>I’ll text you as soon as I arrive.</strong>",
+                "🔎 Шукай в українській зв’язку: <em>«коли…», «перед тим як…», «після того як…», «як тільки…», «поки не…», «доки…»</em> — це сигнал <strong>time clause</strong>.",
+                "🧩 Це зазвичай <strong>2 частини</strong>: (1) часова умова + (2) головна дія. Часова умова відповідає на питання <em>«коли?»</em>.",
+                "📌 Time clause може стояти <strong>на початку</strong> або <strong>в кінці</strong>: <em>Коли я прийду додому, …</em> / <em>… коли я прийду додому</em>.",
+                "⚠️ Не плутай з питанням <em>«Коли ти прийдеш?»</em> — це вже <strong>просто питання</strong>, не time clause в реченні з двох частин.",
             ],
             hint:
-                "Часова частина: <strong>when/while/before/after + Present</strong>. Головна частина: часто <strong>will + V</strong>.",
+                "Якщо в українській є «коли/після того як/перед тим як…» і далі ще одна дія — значить це конструкція з <strong>time clause</strong>.",
         },
         {
             type: "forms",
@@ -2692,58 +2675,61 @@ export const RULE_PAGE_HOW_OFTEN_LONG_MUCH = {
     sections: [
         {
             type: "meaning",
-            title: "Питання про кількість, тривалість, частоту",
+            title: "Про що ці питання",
             html:
-                "<strong>How often</strong> — «як часто», <strong>How long</strong> — «як довго», " +
-                "<strong>How much</strong> — «скільки» (незлічуване / гроші / ціна).",
+                "Ці фрази допомагають уточнити: <strong>частоту</strong> (how often), <strong>тривалість</strong> (how long) " +
+                "або <strong>кількість/ціну</strong> (how much).",
         },
         {
             type: "usage",
-            title: "Коли що використовувати",
+            title: "Як обрати правильне how… (з української)",
             badges: [
-                "📅 Частота: <strong>How often do you go to the gym?</strong>",
-                "⏱️ Тривалість: <strong>How long does the lesson last?</strong>",
-                "💰 Кількість/ціна: <strong>How much water / money / is it?</strong>",
+                "📅 Якщо в українській «<em>як часто</em>» / «<em>скільки разів</em>» → ✅ <strong>How often</strong>",
+                "⏱️ Якщо «<em>як довго</em>» / «<em>скільки триває</em>» → ✅ <strong>How long</strong>",
+                "🥛 Якщо «<em>скільки</em>» про речовину/масу (вода, молоко, час, гроші) → ✅ <strong>How much</strong>",
+                "💸 Якщо «<em>скільки коштує</em>» → ✅ <strong>How much</strong> + <strong>is/are</strong>",
             ],
             hint:
-                "Пам’ятай: <strong>How much</strong> + uncountable / money / price, <strong>How many</strong> + countable.",
+                "Якщо «скільки» про предмети, які можна порахувати (яблука, книги) — це вже <strong>How many</strong>, не <strong>How much</strong>.",
         },
         {
             type: "forms",
             title: "Структура запитань",
-            headers: ["Питання", "Структура", "Приклад", "Переклад", "Примітка"],
+            headers: ["Тип", "Структура", "Приклад", "Переклад"],
             rows: [
                 [
                     "How often",
                     "How often + do/does + S + V?",
                     "How often do you travel?",
                     "Як часто ти подорожуєш?",
-                    "",
                 ],
                 [
-                    "How long",
+                    "How long (тривалість дії)",
                     "How long + do/does + S + V?",
                     "How long does the film last?",
                     "Як довго триває фільм?",
-                    "",
+                ],
+                [
+                    "How long (довжина)",
+                    "How long + is/are + …?",
+                    "How long is the bridge?",
+                    "Яка довжина мосту?",
                 ],
                 [
                     "How much (кількість)",
-                    "How much + uncountable noun",
+                    "How much + uncountable noun + …?",
                     "How much sugar do you need?",
                     "Скільки цукру тобі потрібно?",
-                    "",
                 ],
                 [
                     "How much (ціна)",
                     "How much + is/are + …?",
                     "How much is this T-shirt?",
                     "Скільки коштує ця футболка?",
-                    "",
                 ],
             ],
             hint:
-                "Після <strong>How often/How long</strong> часто йде <strong>Present Simple</strong>.",
+                "У <strong>How much is…?</strong> ми питаємо ціну. У <strong>How much … do/does …?</strong> — кількість.",
         },
         {
             type: "examples",
@@ -2759,10 +2745,12 @@ export const RULE_PAGE_HOW_OFTEN_LONG_MUCH = {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Використовувати <em>how much</em> з злічуваними: <em>How much apples?</em> → ✅ <strong>How many apples?</strong>",
+                "❌ <em>How much apples?</em> → ✅ <strong>How many apples?</strong>",
+                "❌ <em>How often does the lesson last?</em> → ✅ <strong>How long does the lesson last?</strong>",
+                "❌ <em>How long do you go to the gym?</em> (про частоту) → ✅ <strong>How often do you go to the gym?</strong>",
             ],
             note:
-                "Спершу виріши: це частота, тривалість чи кількість/ціна — і обери правильне <strong>how…</strong>.",
+                "Спочатку визнач: <strong>частота</strong> / <strong>тривалість</strong> / <strong>кількість або ціна</strong> — і лише потім обирай <strong>how…</strong>.",
         },
         {
             type: "trainer",
@@ -2868,19 +2856,19 @@ export const RULE_PAGE_BEFORE_AFTER_ING = {
             type: "meaning",
             title: "Події до і після",
             html:
-                "Після <strong>before</strong> та <strong>after</strong> ми можемо використовувати <strong>V-ing</strong>, " +
-                "щоб коротко описати дію: <strong>Before going to bed…</strong>.",
+                "<strong>Before</strong> і <strong>after</strong> показують порядок подій. " +
+                "Після них можна сказати або <strong>повне речення</strong>, або коротку форму з <strong>V-ing</strong>.",
         },
         {
             type: "usage",
-            title: "Коли + -ing, коли речення",
+            title: "Коли -ing, а коли повне речення",
             badges: [
-                "🧾 Повне речення: <strong>Before I go to bed, I read.</strong>",
-                "✂ Коротше: <strong>Before going to bed, I read.</strong>",
-                "⏳ Те саме з <strong>after</strong>: <strong>After having dinner, we watch TV.</strong>",
+                "✅ Якщо <strong>той самий виконавець</strong> у двох діях → можна <strong>before/after + V-ing</strong>.",
+                "✅ Якщо <strong>виконавці різні</strong> → краще <strong>повне речення</strong> (before/after + S + V).",
+                "🧠 Тест: можна підставити «<em>я</em>» у обидві дії? Якщо так — V-ing ок.",
             ],
             hint:
-                "<strong>Before/after + V-ing</strong> = той самий підмет, що й у головному реченні.",
+                "<strong>Before/after + V-ing</strong> зазвичай означає: «перед/після того як <em>я/вона/ми</em> зробили…» (той самий підмет).",
         },
         {
             type: "forms",
@@ -2888,34 +2876,36 @@ export const RULE_PAGE_BEFORE_AFTER_ING = {
             headers: ["Спосіб", "Структура", "Приклад", "Переклад", "Примітка"],
             rows: [
                 [
-                    "Повне речення",
-                    "Before + S + V",
+                    "Повне речення (same/different subject)",
+                    "Before + S + V, ...",
                     "Before I go out, I check the weather.",
-                    "Перед тим як вийти, я перевіряю погоду.",
-                    "",
+                    "Перед тим як я виходжу, я перевіряю погоду.",
+                    "Підходить завжди.",
                 ],
                 [
-                    "V-ing",
-                    "Before + V-ing",
+                    "Коротко (same subject)",
+                    "Before + V-ing, ...",
                     "Before going out, I check the weather.",
                     "Перед виходом я перевіряю погоду.",
-                    "",
+                    "Той самий виконавець.",
                 ],
                 [
-                    "After + S + V",
+                    "Повне речення (same/different subject)",
+                    "After + S + V, ...",
                     "After we finished, we went home.",
                     "Після того як ми закінчили, ми пішли додому.",
-                    "",
+                    "Підходить завжди.",
                 ],
                 [
-                    "After + V-ing",
+                    "Коротко (same subject)",
+                    "After + V-ing, ...",
                     "After finishing, we went home.",
                     "Після завершення ми пішли додому.",
-                    "",
+                    "Той самий виконавець.",
                 ],
             ],
             hint:
-                "Якщо підмет різний — краще використовувати повне речення (<strong>Before he arrives, I’ll…</strong>).",
+                "Якщо підмет різний, не скорочуй: ✅ <strong>Before he arrives, I’ll…</strong> (а не <em>Before arriving…</em>, бо незрозуміло хто).",
         },
         {
             type: "examples",
@@ -2924,6 +2914,7 @@ export const RULE_PAGE_BEFORE_AFTER_ING = {
                 ["Before going to bed, I brush my teeth.", "Перед тим як лягти спати, я чищу зуби."],
                 ["After having breakfast, she goes to work.", "Після сніданку вона йде на роботу."],
                 ["Before you start, read the instructions.", "Перед тим як почати, прочитай інструкцію."],
+                ["After he arrives, we’ll start.", "Після того як він приїде, ми почнемо."],
             ],
         },
         {
@@ -2931,9 +2922,12 @@ export const RULE_PAGE_BEFORE_AFTER_ING = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>Before go to bed</em> → ✅ <strong>Before going to bed</strong> / <strong>Before I go to bed</strong>",
+                "❌ <em>After eat, we left</em> → ✅ <strong>After eating, we left</strong> / <strong>After we ate, we left</strong>",
+                "❌ <em>Before arriving, I’ll call him</em> (хто прибуває?) → ✅ <strong>Before he arrives, I’ll call him</strong>",
             ],
             note:
-                "Після <strong>before/after</strong> потрібен або <strong>V-ing</strong>, або повне речення з підметом.",
+                "Після <strong>before/after</strong> має бути або <strong>V-ing</strong>, або <strong>повне речення з підметом</strong>. " +
+                "V-ing використовуй тільки коли виконавець очевидно той самий.",
         },
         {
             type: "trainer",
@@ -2968,27 +2962,24 @@ export const RULE_PAGE_BE_GOOD_AT_INTERESTED_IN_ING = {
         {
             type: "forms",
             title: "Форми з be good at / interested in",
-            headers: ["Структура", "Приклад", "Переклад", "Примітка", "Ще приклад"],
+            headers: ["Структура", "Приклад", "Переклад", "Ще приклад"],
             rows: [
                 [
                     "be good at + V-ing",
                     "I’m good at singing.",
                     "Я добре співаю.",
-                    "",
                     "She’s good at using computers.",
                 ],
                 [
                     "be bad at + V-ing",
                     "He’s bad at drawing.",
                     "Він погано малює.",
-                    "",
                     "I’m bad at remembering names.",
                 ],
                 [
                     "be interested in + V-ing",
                     "We’re interested in travelling.",
                     "Нас цікавлять подорожі.",
-                    "",
                     "She’s interested in learning Spanish.",
                 ],
             ],
@@ -3023,58 +3014,59 @@ export const RULE_PAGE_BE_GOOD_AT_INTERESTED_IN_ING = {
 
 export const RULE_PAGE_MAKE_DO_DIFFERENCE = {
     id: "MAKE_DO_DIFFERENCE",
-    title: "Make / do difference",
+    title: "Make / do (difference)",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
-            title: "Коли make, а коли do",
+            title: "Короткий сенс",
             html:
-                "Обидва дієслова можуть означати «робити», але вживаються з різними словами. " +
-                "<strong>Do</strong> — про <em>дії/роботу/завдання</em>. <strong>Make</strong> — про <em>створення/результат</em>.",
+                "<strong>Do</strong> = виконувати дію / роботу. " +
+                "<strong>Make</strong> = створювати результат або «робити так, що щось стається».",
         },
         {
             type: "usage",
-            title: "Типові поєднання",
+            title: "Як швидко обрати",
             badges: [
-                "🧹 <strong>do</strong> homework, the dishes, the shopping, a job",
-                "🎂 <strong>make</strong> a cake, a mistake, a decision, a plan",
-                "😊 <strong>make</strong> friends, money, a phone call",
+                "✅ Якщо це <strong>завдання/робота/рутина</strong> → <strong>do</strong> (homework, chores, work).",
+                "✅ Якщо це <strong>результат</strong> (щось «готове») → <strong>make</strong> (a cake, a plan, a decision).",
+                "✅ Якщо це <strong>ефект/вплив</strong> → <strong>make</strong>: <strong>make a difference</strong>.",
             ],
             hint:
-                "<strong>Do</strong> — «виконувати»; <strong>make</strong> — «створювати / спричиняти щось нове».",
+                "Не перекладай буквально «робити». Думай: <em>виконую</em> (do) чи <em>створюю/спричиняю</em> (make).",
         },
         {
             type: "forms",
-            title: "Порівняння make vs do",
-            headers: ["Дієслово", "Тип поєднань", "Приклади", "Переклад", "Примітка"],
+            title: "Найчастіші зв’язки (якорі)",
+            headers: ["Do (виконувати)", "Make (створювати/спричиняти)", "Коментар"],
             rows: [
                 [
-                    "do",
-                    "робота/завдання",
-                    "do homework, do the dishes, do sport",
-                    "робити домашнє, мити посуд, займатися спортом",
-                    "",
+                    "do homework / do the dishes / do the shopping",
+                    "make a cake / make a plan / make a decision",
+                    "Рутина vs результат",
                 ],
                 [
-                    "make",
-                    "створення/результат",
-                    "make a cake, make a plan, make a mistake",
-                    "спекти торт, скласти план, зробити помилку",
-                    "",
+                    "do a job / do some work / do exercise",
+                    "make a mistake / make money / make a call",
+                    "Типові стійкі фрази",
+                ],
+                [
+                    "—",
+                    "make a difference",
+                    "Коли говоримо про вплив",
                 ],
             ],
             hint:
-                "Багато виразів потрібно просто запам’ятати як готові фрази.",
+                "Це <strong>готові поєднання</strong> (collocations) — їх краще вчити як слова-«пари».",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I always do my homework in the evening.", "Я завжди роблю домашнє ввечері."],
-                ["She’s making a cake for her friend.", "Вона готує торт для подруги."],
-                ["Don’t make the same mistake again.", "Не роби ту саму помилку знову."],
                 ["We did the shopping yesterday.", "Ми зробили покупки вчора."],
+                ["Don’t make the same mistake again.", "Не роби ту саму помилку знову."],
+                ["Even small actions can make a difference.", "Навіть маленькі дії можуть змінити ситуацію."],
             ],
         },
         {
@@ -3083,9 +3075,10 @@ export const RULE_PAGE_MAKE_DO_DIFFERENCE = {
             bullets: [
                 "❌ <em>make homework</em> → ✅ <strong>do homework</strong>",
                 "❌ <em>do a mistake</em> → ✅ <strong>make a mistake</strong>",
+                "❌ <em>do a difference</em> → ✅ <strong>make a difference</strong>",
             ],
             note:
-                "Якщо сумніваєшся, перевір у словнику типові <strong>collocations</strong> із make/do.",
+                "Якщо бачиш іменник типу <em>mistake / decision / plan / difference</em> — майже завжди це <strong>make</strong>.",
         },
         {
             type: "trainer",
@@ -3139,6 +3132,19 @@ export const RULE_PAGE_PRESENT_PERFECT = {
         },
         {
             type: "mistakes",
+            title: "Present Perfect vs Past Simple — як обрати",
+            bullets: [
+                "<em>Є конкретний час у минулому?</em><br/>(вчора, минулого року, у 2020, дві години тому) → ✅ <strong>Past Simple</strong>",
+                "<em>Важливо, що це означає зараз, а не коли саме?</em> → ✅ <strong>Present Perfect</strong>",
+                "<em>Мова про життєвий досвід?</em><br/>(колись / ніколи / вже / ще не) → ✅ <strong>Present Perfect</strong>",
+                "<em>Просто розповідаю подію в минулому?</em> → ✅ <strong>Past Simple</strong>",
+                "<em>Можна додати «і це важливо зараз»?</em> → ✅ <strong>Present Perfect</strong>"
+            ],
+            note:
+                "Коротко: <strong>коли саме в минулому → Past Simple</strong>, <strong>результат або досвід зараз → Present Perfect</strong>.",
+        },
+        {
+            type: "mistakes",
             title: "Типові помилки",
             bullets: [
                 "❌ <em>I have saw</em> → ✅ <strong>I have seen</strong>",
@@ -3162,40 +3168,69 @@ export const RULE_PAGE_SINCE_FOR = {
     sections: [
         {
             type: "meaning",
-            title: "Що означає since / for",
-            html: "<strong>Since</strong> = з конкретного моменту. <strong>For</strong> = протягом певного періоду."
+            title: "Що означають since і for",
+            html:
+                "<strong>Since</strong> вказує на <em>початковий момент у часі</em> (коли щось почалося).<br/>" +
+                "<strong>For</strong> вказує на <em>тривалість</em> (як довго це триває).",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>Since 2010</strong> — з 2010 року",
-                "<strong>Since Monday</strong> — з понеділка",
-                "<strong>For two years</strong> — протягом двох років",
-                "<strong>For a long time</strong> — тривалий час"
+                "📍 Початкова точка → <strong>since 2010 / since Monday / since I was a child</strong>",
+                "⏳ Період часу → <strong>for two years / for a long time / for three hours</strong>",
+                "🕒 Часто разом із <strong>Present Perfect</strong>: <strong>I’ve lived here since 2015.</strong>",
             ],
-            hint: "Часто вживається з Present Perfect."
+            hint:
+                "Запитай себе: <em>коли почалося?</em> → <strong>since</strong>; " +
+                "<em>як довго?</em> → <strong>for</strong>.",
+        },
+        {
+            type: "forms",
+            title: "Типові структури",
+            headers: ["Конструкція", "Приклад", "Пояснення"],
+            rows: [
+                [
+                    "Present Perfect + since + момент",
+                    "She has worked here <strong>since 2018</strong>.",
+                    "З 2018 року (точка початку).",
+                ],
+                [
+                    "Present Perfect + for + період",
+                    "They have lived here <strong>for five years</strong>.",
+                    "Протягом 5 років (тривалість).",
+                ],
+            ],
+            hint:
+                "<strong>Since</strong> не використовується з періодами часу, " +
+                "а <strong>for</strong> — з конкретними датами.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["We’ve lived here since 2015.", "Ми живемо тут з 2015 року."],
-                ["I’ve known her for years.", "Я знаю її багато років."]
-            ]
+                ["I’ve known her for years.", "Я знаю її багато років."],
+                ["He has been tired since the morning.", "Він втомлений з ранку."],
+                ["She has worked here for a long time.", "Вона працює тут уже давно."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>for 2010</em> → конкретний момент → <strong>since 2010</strong>",
-                "❌ <em>since two years</em> → період → <strong>for two years</strong>"
-            ]
+                "❌ <em>for 2010</em> → це конкретний момент → ✅ <strong>since 2010</strong>",
+                "❌ <em>since two years</em> → це період → ✅ <strong>for two years</strong>",
+                "❌ <em>I live here since 2015.</em> → бракує Perfect → ✅ <strong>I have lived here since 2015.</strong>",
+                "❌ <em>for Monday</em> → день = точка → ✅ <strong>since Monday</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Since / For)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Since / For)",
+        },
+    ],
 };
-
 
 /* ============================
    PRESENT PERFECT CONTINUOUS
@@ -3208,38 +3243,71 @@ export const RULE_PAGE_PRESENT_PERFECT_CONT = {
         {
             type: "meaning",
             title: "Що означає Present Perfect Continuous",
-            html: "Описує дію, що почалась у минулому і триває до тепер або щойно завершилася."
+            html:
+                "<strong>Present Perfect Continuous</strong> описує <em>дію, що почалася в минулому</em> " +
+                "і <em>триває до теперішнього моменту</em> або <em>щойно закінчилась</em>, " +
+                "але її результат або ефект усе ще помітний.",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "⏳ Тривалість: <strong>I’ve been studying for 3 hours.</strong>",
-                "😓 Нещодавня дія: <strong>She’s been crying.</strong>",
-                "🏃 Дії, що тривають: <strong>They’ve been working all day.</strong>"
+                "⏳ Тривалість дії → <strong>I’ve been studying for three hours.</strong>",
+                "😓 Нещодавня дія з видимим результатом → <strong>She’s been crying.</strong>",
+                "🏃 Процес (фокус на дії, не на результаті) → <strong>They’ve been working all day.</strong>",
             ],
-            hint: "Форма: <strong>have/has been + -ing</strong>"
+            hint:
+                "Фокус не на <em>результаті</em>, а на <em>процесі</em> або <em>тривалості</em> дії.",
+        },
+        {
+            type: "forms",
+            title: "Форма часу",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Ствердження",
+                    "have / has + been + V-ing",
+                    "I <strong>have been working</strong> all day.",
+                ],
+                [
+                    "Заперечення",
+                    "have / has + not + been + V-ing",
+                    "She <strong>hasn’t been sleeping</strong> well.",
+                ],
+                [
+                    "Питання",
+                    "Have / Has + підмет + been + V-ing?",
+                    "<strong>Have</strong> you <strong>been waiting</strong> long?",
+                ],
+            ],
+            hint:
+                "<strong>Been</strong> — це форма дієслова <em>be</em>, а не <em>being</em>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["I’ve been waiting for you.", "Я чекаю на тебе (вже тривалий час)."],
-                ["Has he been running?", "Він бігав?"]
-            ]
+                ["I’ve been waiting for you.", "Я чекаю на тебе вже деякий час."],
+                ["She has been studying since morning.", "Вона навчається з ранку."],
+                ["They’ve been arguing all evening.", "Вони сперечаються весь вечір."],
+                ["Have you been working here long?", "Ти давно тут працюєш?"],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>He has being working</em> → <strong>He has been working</strong>",
-                "❌ Використання з дієсловами стану (know, love)."
-            ]
+                "❌ <em>He has being working</em> → ✅ <strong>He has been working</strong>",
+                "❌ <em>I am working here for 5 years</em> → ✅ <strong>I have been working here for 5 years</strong>",
+                "❌ Використання зі <em>стативними дієсловами</em> (know, like, love) → ✅ <strong>I’ve known her for years</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Present Perfect Continuous)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Present Perfect Continuous)",
+        },
+    ],
 };
-
 
 /* ============================
    ALREADY / YET / JUST
@@ -3252,39 +3320,62 @@ export const RULE_PAGE_ALREADY_YET_JUST = {
         {
             type: "meaning",
             title: "Що означають already / yet / just",
-            html: "<strong>Already</strong> — вже. <strong>Yet</strong> — вже? / ще не. <strong>Just</strong> — щойно."
+            html:
+                "<strong>Already</strong> = <em>вже</em> (раніше, ніж очікували).<br/>" +
+                "<strong>Yet</strong> = <em>вже?</em> (у питанні) / <em>ще не</em> (у запереченні).<br/>" +
+                "<strong>Just</strong> = <em>щойно</em> (дуже недавно).",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>Already</strong> у ствердженнях",
-                "<strong>Yet</strong> у запереченнях і питаннях",
-                "<strong>Just</strong> = щойно"
+                "✅ <strong>Already</strong> — переважно у ствердженнях: <strong>I’ve already eaten.</strong>",
+                "✅ <strong>Yet</strong> — у питаннях і запереченнях: <strong>Have you finished yet?</strong> / <strong>I haven’t finished yet.</strong>",
+                "✅ <strong>Just</strong> — «щойно» (дуже недавно): <strong>She’s just left.</strong>",
+                "🧠 Найчастіше разом із <strong>Present Perfect</strong> (have/has + V3).",
             ],
-            hint: "Часто вживається з Present Perfect."
+            hint:
+                "Типове місце в реченні: <strong>already / just</strong> — між <em>have/has</em> і <em>V3</em>; " +
+                "<strong>yet</strong> — зазвичай <em>в кінці</em> речення.",
+        },
+        {
+            type: "forms",
+            title: "Позиція в реченні",
+            headers: ["Слово", "Де стоїть", "Приклад"],
+            rows: [
+                ["already", "have/has + already + V3", "I have <strong>already</strong> finished."],
+                ["just", "have/has + just + V3", "She has <strong>just</strong> arrived."],
+                ["yet", "зазвичай у кінці (questions/negatives)", "Have you finished <strong>yet</strong>? / I haven’t finished <strong>yet</strong>."],
+            ],
+            hint:
+                "У розмовній мові <strong>already</strong> інколи буває наприкінці: <strong>Have you finished already?</strong> (здивування).",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I’ve already finished.", "Я вже закінчив."],
-                ["Have you finished yet?", "Ти вже закінчив?"],
-                ["She’s just left.", "Вона щойно пішла."]
-            ]
+                ["We haven’t decided yet.", "Ми ще не вирішили."],
+                ["Have you called her yet?", "Ти вже їй подзвонив?"],
+                ["She’s just left.", "Вона щойно пішла."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>Did you finish yet?</em> → Present Perfect",
-                "❌ <em>I just have finished</em> → <strong>I’ve just finished</strong>"
-            ]
+                "❌ <em>Did you finish yet?</em> → ✅ <strong>Have you finished yet?</strong> (коли важливий результат «вже/ще ні»)",
+                "❌ <em>I just have finished</em> → ✅ <strong>I’ve just finished</strong>",
+                "❌ <em>I haven’t already done it.</em> → ✅ <strong>I haven’t done it yet.</strong> (ще не)",
+                "❌ <em>She has left just.</em> → ✅ <strong>She has just left.</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Already / Yet / Just)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Already / Yet / Just)",
+        },
+    ],
 };
-
 
 /* ============================
    PAST PERFECT
@@ -3297,37 +3388,84 @@ export const RULE_PAGE_PAST_PERFECT = {
         {
             type: "meaning",
             title: "Що означає Past Perfect",
-            html: "<strong>Past Perfect</strong> описує дію, яка сталася <em>до</em> іншої дії в минулому."
+            html:
+                "<strong>Past Perfect</strong> використовується, щоб показати, що одна дія " +
+                "відбулася <em>раніше за іншу дію в минулому</em>. " +
+                "Це «минуле до минулого».",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "⏱️ Раніше минулої дії: <strong>She had left before I arrived.</strong>",
-                "📚 Причина: <strong>I was tired because I had worked all day.</strong>"
+                "⏱️ Дія, що сталася раніше іншої минулої дії: <strong>She had left before I arrived.</strong>",
+                "📚 Причина / передумова: <strong>I was tired because I had worked all day.</strong>",
+                "📖 Розповіді, історії (коли важливо показати порядок подій).",
             ],
-            hint: "Форма: <strong>had + V3</strong>"
+            hint:
+                "Форма: <strong>had + V3</strong>. " +
+                "Часто використовується з <em>before, after, when, by the time</em>.",
+        },
+        {
+            type: "forms",
+            title: "Форма часу",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Ствердження",
+                    "had + V3",
+                    "They <strong>had finished</strong> the project.",
+                ],
+                [
+                    "Заперечення",
+                    "had not (hadn’t) + V3",
+                    "She <strong>hadn’t seen</strong> him before.",
+                ],
+                [
+                    "Питання",
+                    "Had + підмет + V3?",
+                    "<strong>Had</strong> you <strong>met</strong> her before?",
+                ],
+            ],
+            hint:
+                "<strong>Had</strong> однакове для всіх осіб.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["They had finished the project before Monday.", "Вони завершили проєкт до понеділка."],
-                ["Had you seen him before?", "Ти бачив його раніше?"]
-            ]
+                [
+                    "They had finished the project before Monday.",
+                    "Вони завершили проєкт до понеділка.",
+                ],
+                [
+                    "By the time we arrived, the movie had started.",
+                    "На момент нашого приходу фільм уже почався.",
+                ],
+                [
+                    "I realized I had left my phone at home.",
+                    "Я зрозумів, що залишив телефон удома.",
+                ],
+                [
+                    "Had you seen him before?",
+                    "Ти бачив його раніше?",
+                ],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Плутанина з Past Simple без контексту часу.",
-                "❌ <em>had went</em> → <strong>had gone</strong>"
-            ]
+                "❌ Використання <em>Past Perfect</em> без другої минулої дії або чіткого контексту.",
+                "❌ <em>had went</em> → ✅ <strong>had gone</strong>",
+                "❌ <em>After she had arrived, he left.</em> → зайве <em>had</em> → ✅ <strong>After she arrived, he left.</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Past Perfect)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Past Perfect)",
+        },
+    ],
 };
-
 
 /* ============================
    USED TO
@@ -3340,46 +3478,73 @@ export const RULE_PAGE_USED_TO = {
         {
             type: "meaning",
             title: "Що означає used to",
-            html: "<strong>Used to</strong> описує минулі звички або стани, які більше не актуальні."
+            html:
+                "<strong>Used to</strong> використовується, щоб говорити про <em>звички або стани в минулому</em>, " +
+                "які <em>більше не є правдою зараз</em>.",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "🧒 Минулі звички: <strong>I used to play outside.</strong>",
-                "🏠 Минулі стани: <strong>We used to live in Kyiv.</strong>"
+                "🧒 Минулі звички (які припинились): <strong>I used to play outside every day.</strong>",
+                "🏠 Минулі стани: <strong>We used to live in Kyiv.</strong>",
+                "🚬 Контраст «раніше vs зараз»: <strong>I used to smoke, but I don’t anymore.</strong>",
             ],
-            hint: "Форма ствердження: <strong>used to + V</strong>"
+            hint:
+                "Якщо можна додати в думках <em>«але тепер — ні»</em>, " +
+                "це хороший кандидат для <strong>used to</strong>.",
         },
         {
             type: "forms",
             title: "Форми",
-            headers: ["Форма", "Ствердження", "Заперечення", "Питання"],
+            headers: ["Тип", "Структура", "Приклад"],
             rows: [
-                ["—", "I used to smoke.", "I didn’t use to smoke.", "Did you use to smoke?"]
+                [
+                    "Ствердження",
+                    "used to + V1",
+                    "I <strong>used to work</strong> at night.",
+                ],
+                [
+                    "Заперечення",
+                    "did not (didn’t) + use to + V1",
+                    "I <strong>didn’t use to like</strong> coffee.",
+                ],
+                [
+                    "Питання",
+                    "Did + підмет + use to + V1?",
+                    "<strong>Did</strong> you <strong>use to live</strong> here?",
+                ],
             ],
-            hint: "У негативі та питанні — <strong>use</strong> без -d."
+            hint:
+                "У запереченнях і питаннях пишемо <strong>use</strong> без <em>-d</em>, " +
+                "бо <strong>did</strong> уже показує минулий час.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I used to have long hair.", "У мене раніше було довге волосся."],
-                ["Did you use to swim?", "Ти раніше плавав?"]
-            ]
+                ["She used to be very shy.", "Вона раніше була дуже сором’язливою."],
+                ["We didn’t use to eat out often.", "Раніше ми нечасто їли поза домом."],
+                ["Did you use to play football?", "Ти раніше грав у футбол?"],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>didn’t used to</em> → <strong>didn’t use to</strong>",
-                "❌ Плутання з <em>be used to</em>."
-            ]
+                "❌ <em>didn’t used to</em> → ✅ <strong>didn’t use to</strong>",
+                "❌ <em>Did you used to…?</em> → ✅ <strong>Did you use to…?</strong>",
+                "❌ Плутанина з <em>be used to</em> → ✅ <strong>I am used to waking up early.</strong> (це вже про «звик»)",
+                "❌ Використання для теперішніх звичок → ❌ <em>I use to drink coffee every day.</em>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Used to)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Used to)",
+        },
+    ],
 };
-
 
 /* ============================
    BE USED TO / GET USED TO
@@ -3392,87 +3557,162 @@ export const RULE_PAGE_BE_USED_TO_GET_USED_TO = {
         {
             type: "meaning",
             title: "Що означають be used to / get used to",
-            html: "<strong>Be used to</strong> = бути звиклим. <strong>Get used to</strong> = звикати."
+            html:
+                "<strong>Be used to</strong> означає <em>бути звиклим</em> до чогось (стан).<br/>" +
+                "<strong>Get used to</strong> означає <em>процес звикання</em> (зміна стану).",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>I'm used to cold weather.</strong> — я звик до холоду",
-                "<strong>She's getting used to her new job.</strong> — вона звикає"
+                "🟢 Стан («вже звик») → <strong>I’m used to cold weather.</strong>",
+                "🔄 Процес («звикаю») → <strong>She’s getting used to her new job.</strong>",
+                "🕒 Можуть вживатися в різних часах: <strong>I was used to… / I will get used to…</strong>",
             ],
-            hint: "Після to → іменник або <strong>V-ing</strong>."
+            hint:
+                "Слово <strong>to</strong> тут — це <em>прийменник</em>, " +
+                "тому після нього вживаємо <strong>іменник</strong> або <strong>V-ing</strong>.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Конструкція", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Be used to",
+                    "be (am/is/are/was/were) + used to + N / V-ing",
+                    "I am used to waking up early.",
+                ],
+                [
+                    "Get used to",
+                    "get (get / gets / got / getting) + used to + N / V-ing",
+                    "He got used to driving on the left.",
+                ],
+            ],
+            hint:
+                "<strong>Be used to</strong> ≠ <strong>used to + V</strong> (минула звичка).",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I’m used to waking up early.", "Я звик рано прокидатися."],
-                ["He got used to driving on the left.", "Він звик їздити лівою стороною."]
-            ]
+                ["She isn’t used to spicy food.", "Вона не звикла до гострої їжі."],
+                ["He got used to driving on the left.", "Він звик їздити лівою стороною."],
+                ["You’ll get used to it.", "Ти до цього звикнеш."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Плутання з used to (минула звичка).",
-                "❌ <em>I'm used to eat</em> → <strong>I'm used to eating</strong>"
-            ]
+                "❌ <em>I’m used to eat early.</em> → ✅ <strong>I’m used to eating early.</strong>",
+                "❌ <em>I used to waking up early.</em> → ✅ <strong>I used to wake up early.</strong>",
+                "❌ Плутанина значень: <em>used to</em> (раніше) vs <em>be/get used to</em> (звик / звикаю).",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Be used to / Get used to)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Be used to / Get used to)",
+        },
+    ],
 };
-
 
 /* ============================
    SECOND CONDITIONAL
 ============================ */
 export const RULE_PAGE_SECOND_CONDITIONAL = {
     id: "SECOND_CONDITIONAL",
-    title: "2nd Conditional (If + Past, would + V)",
+    title: "If + Past, would + V (2nd Conditional)",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
-            title: "Що означає 2nd Conditional",
-            html: "Використовуємо для нереальних, уявних або малоймовірних ситуацій у теперішньому чи майбутньому."
+            title: "Що таке Second Conditional",
+            html:
+                "<strong>Second Conditional</strong> використовують для <em>нереальних</em>, <em>уявних</em> або <em>малоймовірних</em> ситуацій " +
+                "в <strong>теперішньому</strong> або <strong>майбутньому</strong>.",
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Коли використовувати 2nd Conditional",
             badges: [
-                "<strong>If I had more time, I would travel.</strong>",
-                "<strong>If he were taller, he would play basketball.</strong>",
-                "<strong>If I won a billion dollars tomorrow, I would quit my job immediately.</strong> - малоймовірна ситуація"
+                "💭 Уявна ситуація: <strong>If I had more time, I would travel.</strong>",
+                "🎯 Порада / мрія: <strong>If I were you, I’d talk to her.</strong>",
+                "🎲 Малоймовірне: <strong>If I won the lottery, I’d buy a house.</strong>",
             ],
-            hint: "У всіх особах можливе <strong>were</strong>."
+            hint:
+                "Форма <strong>were</strong> можлива для всіх осіб, особливо після <em>If I / If he / If she</em>.",
         },
         {
             type: "forms",
-            title: "Форми",
-            headers: ["If-clause", "Result"],
+            title: "Структура Second Conditional",
+            headers: ["Позиція if", "Структура", "Приклад", "Переклад", "Примітка"],
             rows: [
-                ["If + Past Simple", "would / could / might + V (infinitive)"]
-            ]
+                [
+                    "If на початку",
+                    "If + Past Simple, would + V",
+                    "If I knew her number, I’d call her.",
+                    "Якби я знав її номер, я б їй подзвонив.",
+                    "Кома після if-частини.",
+                ],
+                [
+                    "If в середині",
+                    "Would + V if + Past Simple",
+                    "I’d call her if I knew her number.",
+                    "Я б їй подзвонив, якби знав її номер.",
+                    "Коми немає.",
+                ],
+            ],
+            hint:
+                "Після <strong>if</strong> не використовуємо <em>would</em>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["If I won the lottery, I’d buy a house.", "Якби я виграв у лотерею..."],
-                ["Would you help me if I asked?", "Допоміг би ти мені?"]
-            ]
+                [
+                    "If I were rich, I’d travel around the world.",
+                    "Якби я був багатий, я б подорожував світом.",
+                ],
+                [
+                    "Would you help me if I asked?",
+                    "Ти б допоміг мені, якби я попросив?",
+                ],
+                [
+                    "She wouldn’t be so tired if she slept more.",
+                    "Вона б не була такою втомленою, якби більше спала.",
+                ],
+            ],
+        },
+        {
+            type: "mistakes",
+            title: "Second vs Third Conditional — як обрати",
+            bullets: [
+                "<em>Це про тепер або майбутнє?</em><br/>(уявляю іншу ситуацію зараз / потім) → ✅ <strong>Second Conditional</strong>",
+                "<em>Це про минуле, яке вже не змінити?</em> → ✅ <strong>Third Conditional</strong>",
+                "<em>Можна подумки додати фразу «але цього вже не можна змінити»?</em> → ✅ <strong>Third Conditional</strong>",
+                "<em>Є відчуття жалю або докору?</em> → ✅ <strong>Third Conditional</strong>",
+                "<em>Це просто фантазія або уява, без жалю?</em> → ✅ <strong>Second Conditional</strong>"
+            ],
+            note:
+                "Коротко: <strong>уявляю інше тепер / майбутнє → Second</strong>, <strong>шкодую про минуле → Third</strong>.",
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>If I will...</em> → <strong>If + Past</strong>",
-                "❌ <em>would</em> в обох частинах речення."
-            ]
+                "❌ <em>If I will have time…</em> → ✅ <strong>If I had time…</strong>",
+                "❌ <em>If I would know…</em> → ✅ <strong>If I knew…</strong>",
+            ],
+            note:
+                "Умовна частина завжди в <strong>Past Simple</strong>, навіть якщо мова про теперішнє або майбутнє.",
         },
-        { type: "trainer", title: "Міні-тренажер (2nd Conditional)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Second Conditional)",
+        },
+    ],
 };
 
 
@@ -3481,43 +3721,98 @@ export const RULE_PAGE_SECOND_CONDITIONAL = {
 ============================ */
 export const RULE_PAGE_THIRD_CONDITIONAL = {
     id: "THIRD_CONDITIONAL",
-    title: "3rd Conditional",
+    title: "If + Past Perfect, would have + V3 (3rd Conditional)",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
-            title: "Що означає 3rd Conditional",
-            html: "Говоримо про нереальні ситуації у минулому (жаль, альтернативи)."
+            title: "Що таке Third Conditional",
+            html:
+                "<strong>Third Conditional</strong> використовують, щоб говорити про <em>минуле</em>, яке вже <strong>неможливо змінити</strong>. " +
+                "Ми уявляємо інший результат: <em>«якби тоді…», «я шкодую», «могло бути інакше»</em>.",
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Коли використовувати 3rd Conditional",
             badges: [
-                "<strong>If I had known, I would have helped.</strong>",
-                "<strong>If they had left earlier, they wouldn’t have missed the bus.</strong>"
+                "😔 Жаль: <strong>If I had known, I would have helped.</strong>",
+                "🔍 Аналіз помилки: <strong>If we had left earlier, we wouldn’t have missed the bus.</strong>",
+                "🎯 Альтернатива: <strong>If she had studied, she would have passed the exam.</strong>",
             ],
-            hint: "Форма: <strong>If + Past Perfect → would have + V3</strong>"
+            hint:
+                "Простий сенс: <strong>умова в минулому</strong> → <strong>інший результат у минулому</strong> (але вже пізно змінювати).",
+        },
+        {
+            type: "forms",
+            title: "Структура Third Conditional",
+            headers: ["Позиція if", "Структура", "Приклад", "Переклад", "Примітка"],
+            rows: [
+                [
+                    "If на початку",
+                    "If + Past Perfect, would have + V3",
+                    "If I had studied, I would have passed.",
+                    "Якби я вчився, я б склав (іспит).",
+                    "Кома після if-частини.",
+                ],
+                [
+                    "If в середині",
+                    "Would have + V3 if + Past Perfect",
+                    "I would have passed if I had studied.",
+                    "Я б склав (іспит), якби я вчився.",
+                    "Коми немає.",
+                ],
+            ],
+            hint:
+                "У if-частині не використовуємо <em>would</em>: ✅ <strong>If I had…</strong> (не <em>If I would have…</em>).",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["If she had studied, she would have passed.", "Якби вона вчилася..."],
-                ["Would you have gone if I had invited you?", "Ти б пішов, якби я запросив?"]
-            ]
+                [
+                    "If I had known about the meeting, I would have come.",
+                    "Якби я знав про зустріч, я б прийшов.",
+                ],
+                [
+                    "She wouldn’t have been late if she had taken a taxi.",
+                    "Вона б не запізнилась, якби взяла таксі.",
+                ],
+                [
+                    "Would you have gone if I had invited you?",
+                    "Ти б пішов, якби я тебе запросив?",
+                ],
+            ],
+        },
+        {
+            type: "mistakes",
+            title: "Second vs Third Conditional — як обрати",
+            bullets: [
+                "<em>Це про тепер або майбутнє?</em><br/>(уявляю іншу ситуацію зараз / потім) → ✅ <strong>Second Conditional</strong>",
+                "<em>Це про минуле, яке вже не змінити?</em> → ✅ <strong>Third Conditional</strong>",
+                "<em>Можна подумки додати фразу «але цього вже не можна змінити»?</em> → ✅ <strong>Third Conditional</strong>",
+                "<em>Є відчуття жалю або докору?</em> → ✅ <strong>Third Conditional</strong>",
+                "<em>Це просто фантазія або уява, без жалю?</em> → ✅ <strong>Second Conditional</strong>"
+            ],
+            note:
+                "Коротко: <strong>уявляю інше тепер / майбутнє → Second</strong>, <strong>шкодую про минуле → Third</strong>.",
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Переплутання з 2nd Conditional.",
-                "❌ <em>would had</em> → <strong>would have</strong>"
-            ]
+                "❌ <em>If I would have known…</em> → ✅ <strong>If I had known…</strong>",
+                "❌ <em>would had</em> → ✅ <strong>would have</strong>",
+                "❌ Плутанина з 2nd Conditional (уявне тепер/майбутнє) → ✅ 3rd Conditional = <strong>жаль про минуле</strong>",
+            ],
+            note:
+                "Як перевірка: якщо це про минуле і вже нічого не зміниш — майже завжди це <strong>Third Conditional</strong>.",
         },
-        { type: "trainer", title: "Міні-тренажер (3rd Conditional)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (3rd Conditional)",
+        },
+    ],
 };
-
 
 /* ============================
    WISH + PAST / PAST PERFECT
@@ -3530,36 +3825,72 @@ export const RULE_PAGE_WISH_PAST_PAST_PERFECT = {
         {
             type: "meaning",
             title: "Що означає конструкція wish",
-            html: "<strong>Wish + Past</strong> = жаль про теперішнє. <strong>Wish + Past Perfect</strong> = жаль про минуле."
+            html:
+                "<strong>Wish + Past Simple</strong> використовується, щоб висловити <em>жаль або нереальну ситуацію в теперішньому</em>.<br/>" +
+                "<strong>Wish + Past Perfect</strong> — щоб висловити <em>жаль про минуле</em> (те, що вже неможливо змінити).",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>I wish I knew.</strong> — шкода, що не знаю",
-                "<strong>I wish I had studied.</strong> — шкода, що не вчився"
-            ]
+                "😔 Жаль про теперішнє → <strong>I wish I knew the answer.</strong>",
+                "⏳ Жаль про минуле → <strong>I wish I had studied more.</strong>",
+                "⚠️ Часто з емоціями: regret, disappointment, sadness.",
+            ],
+            hint:
+                "<strong>Wish</strong> не описує реальність — після нього вживаємо форми минулого, " +
+                "навіть якщо говоримо про тепер.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Тип жалю", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Теперішнє",
+                    "wish + Past Simple",
+                    "I wish I knew what to do.",
+                ],
+                [
+                    "Теперішнє (to be)",
+                    "wish + were",
+                    "I wish I were taller.",
+                ],
+                [
+                    "Минуле",
+                    "wish + had + V3",
+                    "She wishes she had told him the truth.",
+                ],
+            ],
+            hint:
+                "У формальній та нейтральній англійській після <strong>wish</strong> часто використовують <strong>were</strong> для всіх осіб.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I wish I were taller.", "Шкода, що я не вищий."],
-                ["I wish I hadn’t said that.", "Шкода, що я це сказав."]
-            ]
+                ["I wish I knew her phone number.", "Шкода, що я не знаю її номер."],
+                ["I wish I had studied harder.", "Шкода, що я вчився недостатньо."],
+                ["He wishes he hadn’t said that.", "Він шкодує, що це сказав."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>I wish I would know</em> → <strong>I wish I knew</strong>",
-                "❌ <em>wish + will</em> у таких реченнях не використовується."
-            ]
+                "❌ <em>I wish I would know.</em> → ✅ <strong>I wish I knew.</strong>",
+                "❌ <em>I wish I will go there.</em> → ✅ <strong>I wish I could go there.</strong>",
+                "❌ <em>I wish I didn’t say that yesterday.</em> → для минулого → ✅ <strong>I wish I hadn’t said that.</strong>",
+                "❌ <em>wish + will</em> для жалю → не використовується.",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Wish)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Wish + Past / Past Perfect)",
+        },
+    ],
 };
-
 
 /* ============================
    MODAL PERFECTS (should have / could have)
@@ -3572,34 +3903,72 @@ export const RULE_PAGE_MODAL_PERFECTS = {
         {
             type: "meaning",
             title: "Що означають modal perfects",
-            html: "<strong>Should have</strong> = треба було. <strong>Could have</strong> = міг би, але не сталося."
+            html:
+                "<strong>Modal perfects</strong> — це модальні дієслова з <em>have + V3</em>, " +
+                "які використовуються, щоб говорити про <em>минулі події, що не відбулися або оцінюються після факту</em>.<br/>" +
+                "<strong>Should have</strong> = «треба було, але не зробив».<br/>" +
+                "<strong>Could have</strong> = «могло статися / міг би, але не сталося».",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>You should have told me.</strong> — треба було сказати",
-                "<strong>He could have won.</strong> — він міг би виграти"
-            ]
+                "🧭 Порада або жаль про минуле → <strong>You should have told me.</strong>",
+                "🎯 Нереалізована можливість → <strong>He could have won.</strong>",
+                "⚠️ Критика після факту → <strong>They should have known better.</strong>",
+            ],
+            hint:
+                "Форма: <strong>modal + have + V3</strong> " +
+                "(should / could / might + have + V3).",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Модальне", "Структура", "Приклад"],
+            rows: [
+                [
+                    "should have",
+                    "should + have + V3",
+                    "You should have called me.",
+                ],
+                [
+                    "could have",
+                    "could + have + V3",
+                    "She could have missed the train.",
+                ],
+                [
+                    "might have",
+                    "might + have + V3",
+                    "He might have forgotten about it.",
+                ],
+            ],
+            hint:
+                "<strong>Have</strong> завжди в базовій формі, незалежно від часу.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I should have studied more.", "Мені треба було більше вчитися."],
-                ["She could have been hurt.", "Вона могла постраждати."]
-            ]
+                ["She could have been hurt.", "Вона могла постраждати."],
+                ["We might have made a mistake.", "Ми, можливо, зробили помилку."],
+                ["You shouldn’t have said that.", "Тобі не варто було цього казати."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>should had</em> → <strong>should have</strong>",
-                "❌ Плутанина з простими модальними формами."
-            ]
+                "❌ <em>should had</em> → ✅ <strong>should have</strong>",
+                "❌ <em>could had gone</em> → ✅ <strong>could have gone</strong>",
+                "❌ Плутанина з теперішніми модальними: <em>You should go</em> ≠ <strong>You should have gone</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Modal Perfects)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Modal Perfects)",
+        },
+    ],
 };
 
 
@@ -3608,41 +3977,80 @@ export const RULE_PAGE_MODAL_PERFECTS = {
 ============================ */
 export const RULE_PAGE_GERUND_VS_INFINITIVE = {
     id: "GERUND_VS_INFINITIVE",
-    title: "Gerund vs infinitive",
+    title: "Gerund vs Infinitive",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
-            title: "Що означає gerund / infinitive",
-            html: "Герундій = <strong>V-ing</strong>. Інфінітив = <strong>to + V</strong>."
+            title: "Що таке gerund і infinitive",
+            html:
+                "<strong>Gerund</strong> — це форма дієслова з <em>-ing</em> (<strong>V-ing</strong>), " +
+                "яка поводиться як іменник.<br/>" +
+                "<strong>Infinitive</strong> — це форма <strong>to + V</strong>, яка часто показує мету, намір або рішення.",
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Коли що вживати",
             badges: [
-                "Після деяких дієслів — V-ing: <strong>enjoy, mind, finish</strong>",
-                "Після інших — to + V: <strong>want, need, plan</strong>",
-                "Після stop / remember — різний зміст"
-            ]
+                "🟢 Після деяких дієслів — <strong>V-ing</strong>: <strong>enjoy, mind, finish, suggest, avoid</strong>",
+                "🔵 Після інших — <strong>to + V</strong>: <strong>want, need, decide, plan, hope</strong>",
+                "⚠️ Після деяких дієслів форма змінює значення: <strong>stop / remember / try</strong>",
+            ],
+            hint:
+                "Форму <strong>не вибирають «за відчуттям»</strong> — її потрібно запам’ятовувати разом із дієсловом.",
+        },
+        {
+            type: "forms",
+            title: "Типові моделі",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Gerund",
+                    "verb + V-ing",
+                    "I enjoy reading before bed.",
+                ],
+                [
+                    "Infinitive",
+                    "verb + to + V",
+                    "She decided to leave early.",
+                ],
+                [
+                    "Різний зміст",
+                    "stop / remember / try + V-ing / to + V",
+                    "He stopped smoking / He stopped to smoke.",
+                ],
+            ],
+            hint:
+                "<strong>V-ing</strong> часто говорить про саму дію або досвід, " +
+                "а <strong>to + V</strong> — про мету або наступну дію.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I enjoy reading.", "Я люблю читати."],
-                ["She wants to go home.", "Вона хоче піти додому."]
-            ]
+                ["She wants to go home.", "Вона хоче піти додому."],
+                ["He stopped smoking.", "Він кинув курити."],
+                ["He stopped to smoke.", "Він зупинився, щоб покурити."],
+                ["I remember meeting her.", "Я пам’ятаю, як зустрів її."],
+                ["Remember to lock the door.", "Не забудь зачинити двері."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>He suggested to go</em> → <strong>going</strong>",
-                "❌ <em>I decided going</em> → <strong>to go</strong>"
-            ]
+                "❌ <em>He suggested to go.</em> → ✅ <strong>He suggested going.</strong>",
+                "❌ <em>I decided going.</em> → ✅ <strong>I decided to go.</strong>",
+                "❌ <em>She enjoys to read.</em> → ✅ <strong>She enjoys reading.</strong>",
+                "❌ Плутанина значень: <em>stop doing</em> ≠ <em>stop to do</em>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Gerund vs Infinitive)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Gerund vs Infinitive)",
+        },
+    ],
 };
 
 
@@ -3651,41 +4059,90 @@ export const RULE_PAGE_GERUND_VS_INFINITIVE = {
 ============================ */
 export const RULE_PAGE_PASSIVE_VOICE_ALL_TENSES = {
     id: "PASSIVE_VOICE_ALL_TENSES",
-    title: "Passive Voice (all tenses)",
+    title: "Passive Voice",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що означає Passive Voice",
-            html: "Акцент на <strong>дії</strong> або її <strong>результаті</strong>, а не на виконавці."
+            html:
+                "<strong>Passive Voice</strong> використовується, коли важливі <em>дія</em> або її <em>результат</em>, " +
+                "а не той, хто її виконує. Підмет <em>отримує</em> дію.",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "📦 Продукція: <strong>The phones are made in China.</strong>",
-                "📌 Невідомий виконавець: <strong>The window was broken.</strong>"
+                "📦 Загальні факти, виробництво: <strong>The phones are made in China.</strong>",
+                "❓ Виконавець невідомий або неважливий: <strong>The window was broken.</strong>",
+                "📑 Офіційний / формальний стиль: <strong>The document has been signed.</strong>",
+                "🎯 Фокус на результаті: <strong>The work is done.</strong>",
             ],
-            hint: "Форма: <strong>be + V3</strong>"
+            hint:
+                "Базова формула пасиву: <strong>be + V3</strong>. " +
+                "Час визначається формою <em>be</em>.",
+        },
+        {
+            type: "forms",
+            title: "Форми в різних часах",
+            headers: ["Час", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Present Simple",
+                    "am / is / are + V3",
+                    "The room is cleaned every day.",
+                ],
+                [
+                    "Past Simple",
+                    "was / were + V3",
+                    "The letter was sent yesterday.",
+                ],
+                [
+                    "Future (will)",
+                    "will be + V3",
+                    "The results will be announced tomorrow.",
+                ],
+                [
+                    "Present Perfect",
+                    "have / has been + V3",
+                    "The work has been finished.",
+                ],
+                [
+                    "Modal verbs",
+                    "modal + be + V3",
+                    "The problem can be solved.",
+                ],
+            ],
+            hint:
+                "Актив → пасив: <em>object</em> стає <em>subject</em>. " +
+                "Виконавця додаємо через <strong>by</strong>, лише якщо це важливо.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["The room is cleaned every day.", "Кімнату прибирають щодня."],
-                ["The letter was sent yesterday.", "Листа відправили вчора."]
-            ]
+                ["The letter was sent yesterday.", "Листа відправили вчора."],
+                ["The house has been built recently.", "Будинок нещодавно збудували."],
+                ["The rules must be followed.", "Правил потрібно дотримуватися."],
+                ["The book was written by Orwell.", "Книгу написав Орвелл."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Неправильна форма be.",
-                "❌ Забувають додати by + виконавець (коли потрібно)."
-            ]
+                "❌ Неправильна форма <em>be</em> → час не узгоджений.",
+                "❌ <em>is build</em> → ✅ <strong>is built</strong> (потрібен V3).",
+                "❌ Зайвий <strong>by</strong>, коли виконавець очевидний або неважливий.",
+                "❌ Неможливо утворити пасив від неперехідних дієслів (<em>arrive, happen</em>).",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Passive Voice)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Passive Voice)",
+        },
+    ],
 };
 
 
@@ -3700,34 +4157,68 @@ export const RULE_PAGE_GET_PAST_PARTICIPLE = {
         {
             type: "meaning",
             title: "Що означає конструкція get + V3",
-            html: "<strong>Get + V3</strong> = стати / потрапити в стан (часто неформально)."
+            html:
+                "<strong>Get + past participle (V3)</strong> використовується, щоб показати, " +
+                "що хтось <em>стає</em> або <em>потрапляє в певний стан</em>. " +
+                "Часто має <em>неформальний</em> або <em>розмовний</em> відтінок.",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>get married</strong> — одружитися",
-                "<strong>get lost</strong> — загубитися",
-                "<strong>get dressed</strong> — вдягатися"
-            ]
+                "🔄 Зміна стану: <strong>get married / get lost / get dressed</strong>",
+                "⚠️ Часто несподіваний або небажаний результат: <strong>get hurt / get fired</strong>",
+                "🗣️ Розмовна альтернатива пасиву: <strong>She got hired.</strong>",
+            ],
+            hint:
+                "На відміну від класичного пасиву (<em>be + V3</em>), " +
+                "<strong>get + V3</strong> звучить менш формально і динамічніше.",
+        },
+        {
+            type: "forms",
+            title: "Форма",
+            headers: ["Структура", "Приклад", "Пояснення"],
+            rows: [
+                [
+                    "get + V3",
+                    "He got injured.",
+                    "Став травмованим (результат).",
+                ],
+                [
+                    "get + V3 (у різних часах)",
+                    "She is getting promoted.",
+                    "Форма get змінюється за часами.",
+                ],
+            ],
+            hint:
+                "<strong>Get</strong> може стояти в будь-якому часі: " +
+                "<em>get / gets / got / is getting / has got</em> тощо.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["She got hired last month.", "Вона отримала роботу минулого місяця."],
-                ["Don’t get hurt.", "Не поранись."]
-            ]
+                ["Don’t get hurt.", "Не поранись."],
+                ["He got fired because he was late.", "Його звільнили, бо він запізнювався."],
+                ["The kids got excited.", "Діти збудилися."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутанина з пасивом: це окрема конструкція."]
+            bullets: [
+                "❌ Плутанина з класичним пасивом → <em>get + V3</em> ≠ <em>be + V3</em> (різний стиль).",
+                "❌ <em>get married with</em> → ✅ <strong>get married to</strong>",
+                "❌ Використання в офіційних текстах → краще <strong>be + V3</strong>.",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Get + V3)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Get + past participle)",
+        },
+    ],
 };
-
 
 /* ============================
    REPORTED SPEECH
@@ -3740,38 +4231,77 @@ export const RULE_PAGE_REPORTED_SPEECH = {
         {
             type: "meaning",
             title: "Що таке reported speech",
-            html: "Коли передаємо чиїсь слова без цитування."
+            html:
+                "<strong>Reported speech</strong> (непряма мова) використовується, " +
+                "коли ми <em>передаємо чиїсь слова</em> без точного цитування.",
         },
         {
             type: "usage",
             title: "Основні правила",
             badges: [
-                "Часи зсуваються назад",
-                "<strong>say</strong> / <strong>tell</strong>",
-                "Зміна займенників"
+                "⏪ Зсув часів назад (backshift): <em>am → was, did → had done</em>",
+                "🗣️ <strong>say</strong> / <strong>tell</strong> (tell + object)",
+                "👤 Зміна займенників і присвійних",
+                "🕒 Зміна слів часу й місця (now → then, today → that day)",
             ],
-            hint: "Напр.: “I am tired” → He said he was tired."
+            hint:
+                "Приклад: <em>“I am tired.”</em> → <strong>He said he was tired.</strong>",
+        },
+        {
+            type: "forms",
+            title: "Типові зміни",
+            headers: ["Пряма мова", "Непряма мова", "Коментар"],
+            rows: [
+                [
+                    "Present Simple",
+                    "Past Simple",
+                    "I work → he said he worked",
+                ],
+                [
+                    "Present Continuous",
+                    "Past Continuous",
+                    "I am working → he said he was working",
+                ],
+                [
+                    "Past Simple",
+                    "Past Perfect",
+                    "I finished → he said he had finished",
+                ],
+                [
+                    "will",
+                    "would",
+                    "I will call → he said he would call",
+                ],
+            ],
+            hint:
+                "Зсув часу зазвичай відбувається, якщо дієслово повідомлення стоїть у минулому.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["She said she was busy.", "Вона сказала, що була зайнята."],
-                ["He told me he had finished.", "Він сказав мені, що закінчив."]
-            ]
+                ["He told me he had finished.", "Він сказав мені, що закінчив."],
+                ["They said they would come later.", "Вони сказали, що прийдуть пізніше."],
+                ["I told her I didn’t know.", "Я сказав їй, що не знаю."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ say + object → використовуємо <strong>tell</strong>",
-                "❌ Не зсовують часи"
-            ]
+                "❌ <em>He said me</em> → ✅ <strong>He told me</strong>",
+                "❌ Відсутній зсув часу → <em>He said he is tired</em> → ✅ <strong>he was tired</strong>",
+                "❌ Не змінюють займенники → <em>She said I was late</em> (коли треба <em>he / she</em>)",
+                "❌ Механічний backshift, коли він не потрібен (загальні факти).",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Reported Speech)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Reported Speech)",
+        },
+    ],
 };
-
 
 /* ============================
    QUESTION TAGS
@@ -3784,34 +4314,76 @@ export const RULE_PAGE_QUESTION_TAGS = {
         {
             type: "meaning",
             title: "Що таке question tags",
-            html: "Короткі запитання в кінці речення для уточнення."
+            html:
+                "<strong>Question tags</strong> — це короткі запитання в кінці речення, " +
+                "які використовуються для <em>підтвердження, уточнення або перевірки інформації</em>.",
         },
         {
             type: "usage",
-            title: "Правило",
+            title: "Основне правило",
             badges: [
-                "Позитивне речення → негативний tag",
-                "Негативне речення → позитивний tag"
+                "➕ Ствердження → ❓ негативний tag: <strong>You’re tired, aren’t you?</strong>",
+                "➖ Заперечення → ❓ позитивний tag: <strong>You aren’t tired, are you?</strong>",
+                "🧩 Допоміжне дієслово в tag залежить від часу та форми речення",
             ],
-            hint: "You’re tired, <strong>aren’t you?</strong>"
+            hint:
+                "Tag = <em>допоміжне дієслово + займенник</em>.",
+        },
+        {
+            type: "forms",
+            title: "Типові моделі",
+            headers: ["Речення", "Question tag", "Приклад"],
+            rows: [
+                [
+                    "Present Simple",
+                    "do / does",
+                    "You like coffee, don’t you?",
+                ],
+                [
+                    "Past Simple",
+                    "did",
+                    "She finished early, didn’t she?",
+                ],
+                [
+                    "To be",
+                    "am / is / are / was / were",
+                    "He’s a doctor, isn’t he?",
+                ],
+                [
+                    "Modal verbs",
+                    "will / can / should тощо",
+                    "You can drive, can’t you?",
+                ],
+            ],
+            hint:
+                "Якщо в реченні вже є допоміжне або модальне дієслово — " +
+                "воно ж використовується і в tag.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["He’s a doctor, isn’t he?", "Він лікар, чи не так?"],
-                ["They aren’t ready, are they?", "Вони не готові, так?"]
-            ]
+                ["They aren’t ready, are they?", "Вони не готові, так?"],
+                ["You finished the report, didn’t you?", "Ти закінчив звіт, так?"],
+                ["She can swim, can’t she?", "Вона вміє плавати, правда?"],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Неправильний допоміжний дієслово."]
+            bullets: [
+                "❌ Неправильне допоміжне дієслово → <em>You like it, isn’t you?</em> → ✅ <strong>don’t you</strong>",
+                "❌ Неправильний займенник → <em>Anna is here, isn’t Anna?</em> → ✅ <strong>isn’t she</strong>",
+                "❌ Забувають інверсію позитив/негатив у tag",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Question Tags)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Question tags)",
+        },
+    ],
 };
-
 
 /* ============================
    TOO / ENOUGH / SO / SUCH
@@ -3824,34 +4396,86 @@ export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY_SO_SUCH = {
         {
             type: "meaning",
             title: "Що означають ці слова",
-            html: "<strong>Too</strong> = надто. <strong>Enough</strong> = достатньо. <strong>So / such</strong> = дуже."
+            html:
+                "<strong>Too</strong> означає <em>надмір</em> (більше, ніж потрібно, часто з негативним результатом).<br/>" +
+                "<strong>Enough</strong> означає <em>достатню кількість або ступінь</em>.<br/>" +
+                "<strong>So / such</strong> використовуються для <em>підсилення</em> значення («дуже / такий»).",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "too + adj",
-                "adj + enough",
-                "so + adj",
-                "such + (adj) + noun"
-            ]
+                "⚠️ Надмір → <strong>too + adjective / adverb</strong>: <strong>too expensive</strong>",
+                "✅ Достатність → <strong>adjective + enough</strong>: <strong>old enough</strong>",
+                "📏 Кількість → <strong>too much / too many</strong>",
+                "🔥 Підсилення → <strong>so + adjective</strong>, <strong>such + (adjective) + noun</strong>",
+            ],
+            hint:
+                "Якщо значення = «проблема / занадто» → <strong>too</strong>. " +
+                "Якщо «достатньо» → <strong>enough</strong>. " +
+                "Якщо «наскільки сильно» → <strong>so / such</strong>.",
+        },
+        {
+            type: "forms",
+            title: "Типові структури",
+            headers: ["Конструкція", "Приклад", "Пояснення"],
+            rows: [
+                [
+                    "too + adj / adv",
+                    "It’s too late.",
+                    "Надто пізно (проблема).",
+                ],
+                [
+                    "adj / adv + enough",
+                    "He isn’t tall enough.",
+                    "Недостатній ступінь.",
+                ],
+                [
+                    "too much / too many",
+                    "Too much work / too many people.",
+                    "Much — з незлічуваними, many — зі злічуваними.",
+                ],
+                [
+                    "so + adjective",
+                    "She is so tired.",
+                    "Підсилення прикметника.",
+                ],
+                [
+                    "such + (adj) + noun",
+                    "It’s such a good idea.",
+                    "Підсилення іменника.",
+                ],
+            ],
+            hint:
+                "<strong>Enough</strong> стоїть <em>після</em> прикметника, " +
+                "а <strong>too / so</strong> — <em>перед</em> ним.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["It’s too late.", "Занадто пізно."],
-                ["He isn’t tall enough.", "Він недостатньо високий."],
-                ["She is such a good friend.", "Вона така хороша подруга."]
-            ]
+                ["It’s too cold to swim.", "Надто холодно, щоб плавати."],
+                ["She doesn’t have enough time.", "У неї недостатньо часу."],
+                ["There are too many people here.", "Тут занадто багато людей."],
+                ["The movie was so interesting.", "Фільм був дуже цікавий."],
+                ["He is such a kind person.", "Він така добра людина."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутанина між so / such."]
+            bullets: [
+                "❌ <em>enough big</em> → ✅ <strong>big enough</strong>",
+                "❌ <em>too many money</em> → ✅ <strong>too much money</strong>",
+                "❌ <em>so a good idea</em> → ✅ <strong>such a good idea</strong>",
+                "❌ Плутанина значень: <em>too</em> (негатив) ≠ <em>very</em> (нейтральне підсилення)",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Too / enough / so / such)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Too / enough / so / such)",
+        },
+    ],
 };
 
 
@@ -3866,32 +4490,71 @@ export const RULE_PAGE_RELATIVE_CLAUSES = {
         {
             type: "meaning",
             title: "Що таке relative clauses",
-            html: "Описують людей, речі або місця за допомогою <strong>who, which, that</strong>."
+            html:
+                "<strong>Relative clauses</strong> — це підрядні речення, які <em>описують або уточнюють</em> " +
+                "людей, речі чи місця. Вони відповідають на питання <em>який? яка? яке?</em>",
         },
         {
             type: "usage",
-            title: "Приклади вживання",
+            title: "Коли і як вживаємо",
             badges: [
-                "<strong>who</strong> — для людей",
-                "<strong>which</strong> — для речей",
-                "<strong>that</strong> — універсальне"
-            ]
+                "👤 <strong>who</strong> — для людей: <strong>The woman who lives next door.</strong>",
+                "📦 <strong>which</strong> — для речей і тварин: <strong>The book which I bought.</strong>",
+                "🔗 <strong>that</strong> — універсальне (people + things): <strong>The movie that we watched.</strong>",
+                "✂️ <strong>that / who / which</strong> можна пропустити, якщо це не підмет",
+            ],
+            hint:
+                "Relative clause зазвичай стоїть <em>одразу після слова</em>, яке вона описує.",
+        },
+        {
+            type: "forms",
+            title: "Базова структура",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Для людей",
+                    "noun + who / that + verb",
+                    "She is the teacher who helped me.",
+                ],
+                [
+                    "Для речей",
+                    "noun + which / that + verb",
+                    "This is the phone that I lost.",
+                ],
+                [
+                    "Можна пропустити",
+                    "noun + (that / who / which) + subject + verb",
+                    "The book I’m reading is interesting.",
+                ],
+            ],
+            hint:
+                "Якщо <strong>who / which / that</strong> є <em>підметом</em> підрядного речення — " +
+                "його <strong>не можна</strong> пропускати.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["This is the man who helped us.", "Це чоловік, який нам допоміг."],
-                ["I like the book that you gave me.", "Мені подобається книга, яку ти дав."]
-            ]
+                ["I like the book that you gave me.", "Мені подобається книга, яку ти дав."],
+                ["She’s the person who knows the answer.", "Вона та людина, яка знає відповідь."],
+                ["The house we bought is old.", "Будинок, який ми купили, старий."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Пропускають who / which у середині речення."]
+            bullets: [
+                "❌ Пропускають <em>who / which</em>, коли це підмет → <em>The man helped us</em>",
+                "❌ <em>which</em> для людей → ✅ <strong>who</strong>",
+                "❌ Relative clause далеко від іменника → незрозуміло, що саме описується",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Relative Clauses)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Relative Clauses)",
+        },
+    ],
 };
 
 
@@ -3906,33 +4569,62 @@ export const RULE_PAGE_REFLEXIVE_PRONOUNS = {
         {
             type: "meaning",
             title: "Що означають reflexive pronouns",
-            html: "Вказують, що дія повертається на того самого виконавця."
+            html:
+                "<strong>Reflexive pronouns</strong> використовуються, коли <em>дія повертається на того самого виконавця</em>. " +
+                "Тобто суб’єкт і об’єкт дії — одна й та сама особа.",
         },
         {
             type: "usage",
-            title: "Приклади вживання",
+            title: "Коли вживаємо",
             badges: [
-                "<strong>He hurt himself.</strong>",
-                "<strong>We enjoyed ourselves.</strong>"
-            ]
+                "🔁 Дія спрямована на себе: <strong>He hurt himself.</strong>",
+                "😊 Дія для власного задоволення: <strong>We enjoyed ourselves.</strong>",
+                "🧍‍♂️ Після деяких дієслів (hurt, blame, introduce, enjoy)",
+                "⚠️ Для підсилення («сам»): <strong>I did it myself.</strong>",
+            ],
+            hint:
+                "Reflexive pronoun зазвичай стоїть <em>після дієслова</em> або <em>після об’єкта</em>.",
+        },
+        {
+            type: "forms",
+            title: "Форми займенників",
+            headers: ["Особа", "Займенник", "Приклад"],
+            rows: [
+                ["I", "myself", "I taught myself English."],
+                ["you (singular)", "yourself", "Take care of yourself."],
+                ["he / she / it", "himself / herself / itself", "She hurt herself."],
+                ["we", "ourselves", "We prepared ourselves."],
+                ["you (plural)", "yourselves", "Help yourselves."],
+                ["they", "themselves", "They introduced themselves."],
+            ],
+            hint:
+                "<strong>-self</strong> — однина, <strong>-selves</strong> — множина.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["Be careful! Don’t cut yourself.", "Обережно! Не поріж себе."],
-                ["They introduced themselves.", "Вони представилися."]
-            ]
+                ["They introduced themselves.", "Вони представилися."],
+                ["I don’t want to blame myself.", "Я не хочу звинувачувати себе."],
+                ["She made the cake herself.", "Вона сама зробила торт."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Не використовують -self/-selves коли треба."]
+            bullets: [
+                "❌ Відсутній reflexive pronoun → <em>He hurt.</em> → ✅ <strong>He hurt himself.</strong>",
+                "❌ Зайвий reflexive pronoun → <em>I washed myself my hands.</em> → ✅ <strong>I washed my hands.</strong>",
+                "❌ Плутанина з особовими займенниками → <em>She blamed her.</em> (не себе)",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Reflexive Pronouns)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Reflexive Pronouns)",
+        },
+    ],
 };
-
 
 /* ============================
    ADVERBS OF MANNER
@@ -3945,33 +4637,72 @@ export const RULE_PAGE_ADVERBS_OF_MANNER = {
         {
             type: "meaning",
             title: "Що таке adverbs of manner",
-            html: "Показують, <strong>як</strong> відбувається дія (quickly, slowly)."
+            html:
+                "<strong>Adverbs of manner</strong> показують, <em>як саме</em> виконується дія. " +
+                "Вони відповідають на питання <em>«як?»</em>.",
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Коли й як вживаємо",
             badges: [
-                "Додаємо -ly до прикметників",
-                "<strong>fast</strong>, <strong>hard</strong> — винятки"
-            ]
+                "🧩 Найчастіше утворюємо від прикметників: <strong>quick → quickly</strong>",
+                "⚠️ Деякі слова не змінюються: <strong>fast, hard, late, early</strong>",
+                "📍 Зазвичай стоять <em>після дієслова</em> або <em>після обʼєкта</em>",
+            ],
+            hint:
+                "Adverb of manner описує <em>дію</em>, а не іменник.",
+        },
+        {
+            type: "forms",
+            title: "Утворення",
+            headers: ["Тип", "Правило", "Приклад"],
+            rows: [
+                [
+                    "Regular",
+                    "adjective + -ly",
+                    "slow → slowly",
+                ],
+                [
+                    "Ending in -y",
+                    "y → i + -ly",
+                    "easy → easily",
+                ],
+                [
+                    "Irregular / same form",
+                    "без -ly",
+                    "fast / hard / late",
+                ],
+            ],
+            hint:
+                "Не всі слова з <strong>-ly</strong> — прислівники способу " +
+                "(friendly, lovely — це прикметники).",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["She sings beautifully.", "Вона красиво співає."],
-                ["He works hard.", "Він багато працює."]
-            ]
+                ["He works hard.", "Він багато / наполегливо працює."],
+                ["They spoke quietly.", "Вони говорили тихо."],
+                ["The driver was driving fast.", "Водій їхав швидко."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутають adj та adv."]
+            bullets: [
+                "❌ <em>She sings beautiful.</em> → ✅ <strong>beautifully</strong>",
+                "❌ <em>He works hardly.</em> → ✅ <strong>hard</strong> (hardly = «ледве»)",
+                "❌ <em>He runs fastly.</em> → ✅ <strong>fast</strong>",
+                "❌ Використання прикметника замість прислівника після дієслова",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Adverbs of manner)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Adverbs of manner)",
+        },
+    ],
 };
-
 
 /* ============================
    IN ORDER TO / SO THAT
@@ -3984,34 +4715,65 @@ export const RULE_PAGE_IN_ORDER_TO_SO_THAT = {
         {
             type: "meaning",
             title: "Що означають ці конструкції",
-            html: "<strong>In order to + V</strong> = щоб. <strong>So that + clause</strong> = щоб (з підметом)."
+            html:
+                "<strong>In order to + V</strong> використовується, щоб показати <em>мету дії</em> без окремого підмета.<br/>" +
+                "<strong>So that + clause</strong> використовується, коли потрібне <em>повне речення з підметом</em>.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Коли що вживати",
             badges: [
-                "<strong>I work to earn money.</strong>",
-                "<strong>I work in order to earn money.</strong>",
-                "<strong>I left early so that I wouldn’t be late.</strong>"
-            ]
+                "🎯 Мета без підмета → <strong>(in order) to + V</strong>: <strong>I work to earn money.</strong>",
+                "👥 Мета з підметом → <strong>so that + subject + verb</strong>: <strong>I left early so that I wouldn’t be late.</strong>",
+                "🗣️ <strong>To</strong> — нейтрально; <strong>in order to</strong> — формальніше",
+            ],
+            hint:
+                "Якщо після «щоб» в українській <em>є підмет</em> → використовуй <strong>so that</strong>.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Конструкція", "Структура", "Приклад"],
+            rows: [
+                [
+                    "to / in order to",
+                    "to + V / in order to + V",
+                    "She studies hard to pass the exam.",
+                ],
+                [
+                    "so that",
+                    "so that + subject + verb",
+                    "He spoke loudly so that everyone could hear.",
+                ],
+            ],
+            hint:
+                "Після <strong>to / in order to</strong> не ставимо підмет.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["She studies hard to pass the exam.", "Вона вчиться, щоб скласти іспит."],
-                ["He spoke loudly so that everyone could hear.", "Він говорив голосно, щоб всі чули."]
-            ]
+                ["She studies hard in order to pass the exam.", "Вона вчиться, щоб скласти іспит."],
+                ["He spoke loudly so that everyone could hear.", "Він говорив голосно, щоб усі чули."],
+                ["I’m whispering so that the baby doesn’t wake up.", "Я шепочу, щоб дитина не прокинулась."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутання in order to / so that."]
+            bullets: [
+                "❌ <em>I work in order to I earn money.</em> → ✅ <strong>I work in order to earn money.</strong>",
+                "❌ <em>I left early to I wouldn’t be late.</em> → ✅ <strong>I left early so that I wouldn’t be late.</strong>",
+                "❌ Плутанина формальності: <em>in order to</em> у простій розмові — зайве",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (In order to / So that)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (In order to / So that)",
+        },
+    ],
 };
-
 
 /* ============================
    MODALS OF PROBABILITY (must, might, can't)
@@ -4024,34 +4786,80 @@ export const RULE_PAGE_MODALS_OF_PROBABILITY = {
         {
             type: "meaning",
             title: "Що означають модальні дієслова ймовірності",
-            html: "<strong>must</strong> = впевненість; <strong>might</strong> = можливо; <strong>can’t</strong> = неможливо."
+            html:
+                "<strong>Modals of probability</strong> використовуються, щоб висловити <em>ступінь впевненості</em> " +
+                "у припущенні.<br/>" +
+                "<strong>must</strong> — майже впевнені (логічний висновок).<br/>" +
+                "<strong>might / may / could</strong> — можливо (є шанс).<br/>" +
+                "<strong>can’t</strong> — неможливо (логічно виключено).",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Коли вживаємо",
             badges: [
-                "<strong>He must be tired.</strong>",
-                "<strong>She might come.</strong>",
-                "<strong>He can’t be serious.</strong>"
-            ]
+                "🔍 Логічний висновок → <strong>He must be tired.</strong>",
+                "🤔 Невпевнене припущення → <strong>She might be at work.</strong>",
+                "🚫 Неможливість → <strong>He can’t be serious.</strong>",
+                "🕒 Для теперішнього та минулого (з have + V3)",
+            ],
+            hint:
+                "Це <em>припущення</em>, а не факт. Ми оцінюємо ситуацію за наявними доказами.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Значення", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Висока ймовірність",
+                    "must + V / must + be",
+                    "She must be at home.",
+                ],
+                [
+                    "Можливість",
+                    "might / may / could + V",
+                    "They might arrive late.",
+                ],
+                [
+                    "Неможливо",
+                    "can’t + V / can’t + be",
+                    "It can’t be true.",
+                ],
+                [
+                    "Про минуле",
+                    "modal + have + V3",
+                    "He must have forgotten.",
+                ],
+            ],
+            hint:
+                "Для минулих припущень завжди використовуємо <strong>have + V3</strong>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["It must be cold outside.", "Напевно холодно."],
-                ["She might be at work.", "Вона можливо на роботі."]
-            ]
+                ["It must be cold outside.", "Напевно надворі холодно."],
+                ["She might be at work.", "Вона, можливо, на роботі."],
+                ["They could be wrong.", "Вони можуть помилятися."],
+                ["He can’t be serious.", "Це не може бути серйозно."],
+                ["She must have left already.", "Вона, напевно, вже пішла."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ mustn't = заборона, НЕ ймовірність!"]
+            bullets: [
+                "❌ <em>mustn’t</em> як припущення → ❌ ні (це заборона) → ✅ <strong>can’t</strong> для «неможливо»",
+                "❌ <em>He must to be tired</em> → ✅ <strong>He must be tired</strong>",
+                "❌ Пропускають <em>have</em> у минулому → <em>must forgot</em> → ✅ <strong>must have forgotten</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Modals of Probability)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Modals of Probability)",
+        },
+    ],
 };
-
 
 /* ============================
    BE SUPPOSED TO
@@ -4064,33 +4872,71 @@ export const RULE_PAGE_BE_SUPPOSED_TO = {
         {
             type: "meaning",
             title: "Що означає be supposed to",
-            html: "Означає <strong>повинність / очікування</strong>."
+            html:
+                "<strong>Be supposed to</strong> використовується, щоб говорити про <em>очікування, правило або домовленість</em>, " +
+                "а не про особисту волю мовця. Часто має відтінок «так було заплановано».",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Коли вживаємо",
             badges: [
-                "<strong>I’m supposed to start at 9.</strong>",
-                "<strong>He wasn’t supposed to be here.</strong>"
-            ]
+                "📅 Розклад / план: <strong>I’m supposed to start at 9.</strong>",
+                "📜 Правило / інструкція: <strong>You’re supposed to wear a helmet.</strong>",
+                "⚠️ Порушене очікування: <strong>He wasn’t supposed to be here.</strong>",
+            ],
+            hint:
+                "<strong>Be supposed to</strong> ≠ <strong>must</strong>: " +
+                "тут немає тиску чи наказу, лише очікування.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Час", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Present",
+                    "am / is / are supposed to + V",
+                    "I am supposed to finish today.",
+                ],
+                [
+                    "Past",
+                    "was / were supposed to + V",
+                    "We were supposed to meet at 6.",
+                ],
+                [
+                    "Negative",
+                    "be not supposed to + V",
+                    "You aren’t supposed to park here.",
+                ],
+            ],
+            hint:
+                "Після <strong>to</strong> завжди базова форма дієслова (V1).",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["You’re supposed to clean your room.", "Ти повинен прибрати кімнату."],
-                ["We weren’t supposed to leave early.", "Ми не мали йти рано."]
-            ]
+                ["We weren’t supposed to leave early.", "Ми не мали йти рано."],
+                ["She’s supposed to call me later.", "Вона має подзвонити пізніше."],
+                ["I was supposed to be there by noon.", "Я мав бути там до обіду."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутанина з must / have to."]
+            bullets: [
+                "❌ <em>I suppose to go now.</em> → ✅ <strong>I’m supposed to go now.</strong>",
+                "❌ <em>You are supposed for do this.</em> → ✅ <strong>You’re supposed to do this.</strong>",
+                "❌ Плутанина з <em>must / have to</em> → <em>be supposed to</em> = очікування, не наказ",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Be supposed to)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Be supposed to)",
+        },
+    ],
 };
-
 
 /* ============================
    LET / MAKE / ALLOW
@@ -4103,37 +4949,66 @@ export const RULE_PAGE_LET_MAKE_ALLOW = {
         {
             type: "meaning",
             title: "Різниця між let / make / allow",
-            html: "<strong>let</strong> = дозволяти, <strong>make</strong> = змушувати, <strong>allow</strong> = дозволяти (формально)."
+            html:
+                "<strong>Let</strong> означає <em>дозволяти</em> (неформально, без примусу).<br/>" +
+                "<strong>Make</strong> означає <em>змушувати</em> (примус, тиск).<br/>" +
+                "<strong>Allow</strong> означає <em>дозволяти</em> (більш формально, правила).",
         },
         {
-            type: "usage",
-            title: "Приклади",
-            badges: [
-                "<strong>Let me go.</strong>",
-                "<strong>They made me do it.</strong>",
-                "<strong>Smoking isn’t allowed.</strong>"
-            ]
+            type: "forms",
+            title: "Форми",
+            headers: ["Дієслово", "Структура", "Приклад"],
+            rows: [
+                [
+                    "let",
+                    "let + object + V1",
+                    "My parents let me stay out late.",
+                ],
+                [
+                    "make",
+                    "make + object + V1",
+                    "The teacher made us repeat it.",
+                ],
+                [
+                    "allow",
+                    "allow + object + to + V1",
+                    "They allowed him to leave early.",
+                ],
+                [
+                    "allow (passive)",
+                    "be allowed to + V1",
+                    "Smoking is not allowed here.",
+                ],
+            ],
+            hint:
+                "Після <strong>let / make</strong> <em>ніколи</em> не ставимо <strong>to</strong>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["My parents let me stay out late.", "Батьки дозволяли мені гуляти довше."],
-                ["The teacher made us repeat it.", "Вчитель змусив нас повторити."]
-            ]
+                ["The teacher made us repeat it.", "Вчитель змусив нас повторити."],
+                ["They allowed her to work from home.", "Вони дозволили їй працювати з дому."],
+                ["Smoking isn’t allowed here.", "Тут не дозволено палити."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>allowed to me</em> → <strong>allowed me</strong>",
-                "❌ let без to"
-            ]
+                "❌ <em>They allowed me go.</em> → ✅ <strong>allowed me to go</strong>",
+                "❌ <em>He made me to do it.</em> → ✅ <strong>made me do it</strong>",
+                "❌ <em>Let to go.</em> → ✅ <strong>Let me go.</strong>",
+                "❌ <em>allowed to me</em> → ✅ <strong>allowed me</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Let / Make / Allow)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Let / Make / Allow)",
+        },
+    ],
 };
-
 
 /* ============================
    REPORTED QUESTIONS
@@ -4146,70 +5021,151 @@ export const RULE_PAGE_REPORTED_QUESTIONS = {
         {
             type: "meaning",
             title: "Що таке reported questions",
-            html: "Запитання у непрямій мові, без <strong>do/does/did</strong>."
+            html:
+                "<strong>Reported questions</strong> — це <em>запитання в непрямій мові</em>. " +
+                "Ми передаємо питання як частину речення, <em>без питального порядку слів</em> " +
+                "і <em>без do / does / did</em>.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Основні правила",
             badges: [
-                "<strong>Where is he?</strong> → He asked where he was.",
-                "<strong>Do you like it?</strong> → She asked if I liked it."
-            ]
+                "❓ Wh-питання → <strong>asked + wh-word</strong>: <strong>He asked where I lived.</strong>",
+                "❓ Yes/No → <strong>asked if / whether</strong>: <strong>She asked if I liked it.</strong>",
+                "⏪ Часто відбувається зсув часу (backshift)",
+                "🔀 Порядок слів як у ствердженні",
+            ],
+            hint:
+                "У reported questions <em>немає інверсії</em>: " +
+                "<strong>where he was</strong>, а не <em>where was he</em>.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Тип питання", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Wh-question",
+                    "asked + wh-word + subject + verb",
+                    "He asked where she lived.",
+                ],
+                [
+                    "Yes / No",
+                    "asked + if / whether + subject + verb",
+                    "She asked if I could help.",
+                ],
+                [
+                    "З backshift",
+                    "present → past",
+                    "Where is he? → He asked where he was.",
+                ],
+            ],
+            hint:
+                "<strong>If</strong> і <strong>whether</strong> означають «чи». " +
+                "У більшості випадків вони взаємозамінні.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["He asked where I lived.", "Він запитав, де я живу."],
-                ["She asked if I could help.", "Вона запитала, чи можу я допомогти."]
-            ]
+                ["She asked if I could help.", "Вона запитала, чи можу я допомогти."],
+                ["They asked what time it was.", "Вони запитали, котра година."],
+                ["I asked whether she had finished.", "Я запитав, чи вона закінчила."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Питальний порядок слів не використовується."]
+            bullets: [
+                "❌ <em>He asked where did I live.</em> → ✅ <strong>where I lived</strong>",
+                "❌ <em>She asked do I like it.</em> → ✅ <strong>if I liked it</strong>",
+                "❌ Залишають питальний порядок слів → ❌",
+                "❌ Забувають про backshift, коли він потрібен",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Reported Questions)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Reported Questions)",
+        },
+    ],
 };
-
 
 /* ============================
    CAUSATIVE HAVE/GET
 ============================ */
 export const RULE_PAGE_CAUSATIVE_HAVE_GET = {
     id: "CAUSATIVE_HAVE_GET",
-    title: "Causative have/get",
+    title: "Causative have / get",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що означає causative",
-            html: "Ми організовуємо, щоб інші зробили щось для нас."
+            html:
+                "<strong>Causative have / get</strong> використовується, коли <em>ми організовуємо або домовляємося</em>, " +
+                "щоб <em>хтось інший</em> зробив щось для нас. Ми <em>не виконуємо дію самі</em>.",
         },
         {
             type: "usage",
-            title: "Форми",
+            title: "Коли вживаємо",
             badges: [
-                "<strong>have + object + V3</strong>",
-                "<strong>get + object + V3</strong>"
-            ]
+                "✂️ Послуги / сервіс: <strong>I had my hair cut.</strong>",
+                "🔧 Ремонт / технічні роботи: <strong>We got the car repaired.</strong>",
+                "🗣️ <strong>have</strong> — нейтрально; <strong>get</strong> — більш розмовно",
+            ],
+            hint:
+                "Фокус не на виконавці, а на <em>результаті</em> дії.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Конструкція", "Структура", "Приклад"],
+            rows: [
+                [
+                    "have (causative)",
+                    "have + object + V3",
+                    "I had my hair cut.",
+                ],
+                [
+                    "get (causative)",
+                    "get + object + V3",
+                    "We got the car repaired.",
+                ],
+                [
+                    "З виконавцем",
+                    "have / get + object + V3 + by",
+                    "I had my phone fixed by a technician.",
+                ],
+            ],
+            hint:
+                "<strong>Have / get</strong> змінюються за часами: " +
+                "<em>have / had / will have; get / got / will get</em>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I had my hair cut.", "Мені підстригли волосся."],
-                ["We got the car repaired.", "Ми відремонтували авто (для нас)."]
-            ]
+                ["We got the car repaired.", "Ми відремонтували авто (для нас)."],
+                ["She is getting her house painted.", "Їй фарбують будинок."],
+                ["He had his laptop fixed yesterday.", "Йому полагодили ноутбук учора."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутанина з пасивом."]
+            bullets: [
+                "❌ Плутанина з пасивом → <em>I had my hair cut</em> ≠ <em>My hair was cut</em> (різний фокус).",
+                "❌ <em>I cut my hair</em> (інше значення: зробив сам).",
+                "❌ <em>have my hair to cut</em> → ✅ <strong>have my hair cut</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Causative)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Causative have / get)",
+        },
+    ],
 };
 
 
@@ -4224,32 +5180,74 @@ export const RULE_PAGE_PHRASAL_VERBS_COMMON = {
         {
             type: "meaning",
             title: "Що таке phrasal verbs",
-            html: "Дієслова + частки (up, out, off), що мають нове значення."
+            html:
+                "<strong>Phrasal verbs</strong> — це поєднання <em>дієслова</em> з <em>часткою</em> " +
+                "(up, out, off, on тощо), яке утворює <em>нове значення</em>, " +
+                "часто <em>нелогічне з дослівного перекладу</em>.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Як вони працюють",
             badges: [
-                "<strong>look after</strong> — доглядати",
-                "<strong>turn off</strong> — вимкнути",
-                "<strong>pick up</strong> — підняти"
-            ]
+                "🔗 Значення ≠ сума частин: <strong>give up</strong> = здатися",
+                "↔️ Деякі розділяються: <strong>turn off the light / turn the light off</strong>",
+                "🚫 Деякі НЕ розділяються: <strong>look after the child</strong>",
+                "🧍‍♂️ Займенник завжди між: <strong>pick it up</strong>",
+            ],
+            hint:
+                "Phrasal verbs — це <em>лексика</em>, їх потрібно вчити як окремі слова.",
+        },
+        {
+            type: "forms",
+            title: "Типи phrasal verbs",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Нероздільні",
+                    "verb + particle + object",
+                    "look after the baby",
+                ],
+                [
+                    "Роздільні",
+                    "verb + object + particle / verb + particle + object",
+                    "turn off the TV / turn the TV off",
+                ],
+                [
+                    "Займенник",
+                    "verb + pronoun + particle",
+                    "pick it up (НЕ pick up it)",
+                ],
+            ],
+            hint:
+                "Якщо обʼєкт — <em>займенник</em> (me, it, them) — " +
+                "він <strong>завжди</strong> стоїть між дієсловом і часткою.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["Can you pick me up?", "Підвезеш мене?"],
-                ["Turn off the light.", "Вимкни світло."]
-            ]
+                ["Turn off the light.", "Вимкни світло."],
+                ["She looks after her little brother.", "Вона доглядає за молодшим братом."],
+                ["He gave up smoking.", "Він кинув курити."],
+                ["Please put it down.", "Будь ласка, поклади це."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Дослівний переклад не працює."]
+            bullets: [
+                "❌ Дослівний переклад → значення неправильне",
+                "❌ <em>pick up it</em> → ✅ <strong>pick it up</strong>",
+                "❌ Розділяють нероздільні → <em>look the child after</em> → ❌",
+                "❌ Вважають phrasal verb «тимчасовим» → його треба вчити як одне слово",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Phrasal Verbs)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Phrasal Verbs)",
+        },
+    ],
 };
 
 
@@ -4263,34 +5261,72 @@ export const RULE_PAGE_EACH_OTHER_ONE_ANOTHER = {
     sections: [
         {
             type: "meaning",
-            title: "Що означають ці фрази",
-            html: "Позначають взаємну дію: <strong>один одного</strong>."
+            title: "Що означають each other / one another",
+            html:
+                "<strong>Each other</strong> і <strong>one another</strong> використовуються, " +
+                "щоб показати <em>взаємну дію</em> між двома або більше людьми — «<em>один одного</em>».",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Коли вживаємо",
             badges: [
-                "<strong>They love each other.</strong>",
-                "<strong>They talked to one another.</strong>"
-            ]
+                "🤝 Взаємна дія → <strong>They help each other.</strong>",
+                "👥 Традиційно: <strong>each other</strong> — для двох, <strong>one another</strong> — для багатьох",
+                "🗣️ У сучасній англійській часто взаємозамінні",
+            ],
+            hint:
+                "Якщо дія <em>не повертається на ту саму особу</em>, а відбувається між людьми — " +
+                "це <strong>each other / one another</strong>.",
+        },
+        {
+            type: "forms",
+            title: "Форма в реченні",
+            headers: ["Конструкція", "Приклад", "Пояснення"],
+            rows: [
+                [
+                    "verb + each other",
+                    "They respect each other.",
+                    "Взаємна дія між двома.",
+                ],
+                [
+                    "verb + one another",
+                    "The team members trust one another.",
+                    "Взаємна дія між кількома.",
+                ],
+                [
+                    "з прийменником",
+                    "They talked to each other.",
+                    "Прийменник залишається перед фразою.",
+                ],
+            ],
+            hint:
+                "<strong>Each other / one another</strong> — це <em>обʼєкт</em> у реченні.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["We help each other.", "Ми допомагаємо один одному."],
-                ["The students listened to one another.", "Учні слухали одне одного."]
-            ]
+                ["The students listened to one another.", "Учні слухали одне одного."],
+                ["They looked at each other and smiled.", "Вони подивилися один на одного й усміхнулися."],
+                ["The two friends support each other.", "Двоє друзів підтримують один одного."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутання з reflexive pronouns."]
+            bullets: [
+                "❌ Плутанина з reflexive pronouns → <em>They helped themselves</em> ≠ <strong>each other</strong>",
+                "❌ <em>each others</em> → ❌ (без множини)",
+                "❌ Пропуск прийменника → <em>They talked each other</em> → ✅ <strong>talked to each other</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Each other)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Each other / one another)",
+        },
+    ],
 };
-
 
 /* ============================
    SO DO I / NEITHER DO I
@@ -4303,31 +5339,75 @@ export const RULE_PAGE_SO_DO_I_NEITHER_DO_I = {
         {
             type: "meaning",
             title: "Що означають ці конструкції",
-            html: "<strong>So do I</strong> = я теж (позитив). <strong>Neither do I</strong> = я теж ні."
+            html:
+                "<strong>So do I</strong> означає <em>«я теж»</em> після <em>позитивного</em> твердження.<br/>" +
+                "<strong>Neither do I</strong> означає <em>«я теж ні»</em> після <em>негативного</em> твердження.",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>I like coffee. — So do I.</strong>",
-                "<strong>I don’t like tea. — Neither do I.</strong>"
-            ]
+                "➕ Позитив → <strong>So + auxiliary + subject</strong>: <strong>I like coffee. — So do I.</strong>",
+                "➖ Негатив → <strong>Neither + auxiliary + subject</strong>: <strong>I don’t like tea. — Neither do I.</strong>",
+                "🔁 Допоміжне дієслово залежить від часу та форми",
+            ],
+            hint:
+                "Це інверсія: <em>auxiliary + subject</em> (do/am/can/have тощо).",
+        },
+        {
+            type: "forms",
+            title: "Типові моделі",
+            headers: ["Тип речення", "Модель відповіді", "Приклад"],
+            rows: [
+                [
+                    "Present Simple",
+                    "So do I / Neither do I",
+                    "I work here. — So do I.",
+                ],
+                [
+                    "To be",
+                    "So am I / Neither am I",
+                    "I’m tired. — So am I.",
+                ],
+                [
+                    "Past Simple",
+                    "So did I / Neither did I",
+                    "I finished early. — So did I.",
+                ],
+                [
+                    "Modal verbs",
+                    "So can I / Neither can I",
+                    "I can drive. — So can I.",
+                ],
+            ],
+            hint:
+                "Використовуй <em>те саме допоміжне дієслово</em>, що й у першому реченні.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I’m tired. — So am I.", "Я втомлений — я теж."],
-                ["I’m not ready. — Neither am I.", "Я не готовий — я теж ні."]
-            ]
+                ["I’m not ready. — Neither am I.", "Я не готовий — я теж ні."],
+                ["I don’t like fish. — Neither do I.", "Я не люблю рибу — я теж ні."],
+                ["She can swim. — So can I.", "Вона вміє плавати — я теж."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Використання me too / me neither у формальних ситуаціях."]
+            bullets: [
+                "❌ <em>So I do.</em> → ✅ <strong>So do I.</strong> (потрібна інверсія)",
+                "❌ <em>Neither I do.</em> → ✅ <strong>Neither do I.</strong>",
+                "❌ Неправильний auxiliary → <em>I’m tired. — So do I.</em> → ✅ <strong>So am I.</strong>",
+                "⚠️ <em>Me too / Me neither</em> — розмовно; <em>So do I / Neither do I</em> — нейтрально/формальніше",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (So do I)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (So do I / Neither do I)",
+        },
+    ],
 };
 
 /* ============================
@@ -4384,37 +5464,72 @@ export const RULE_PAGE_CLEFT_SENTENCES = {
         {
             type: "meaning",
             title: "Що таке cleft sentences",
-            html: "Це конструкції для виділення важливої інформації: <strong>It is/was … that …</strong> або <strong>What … is …</strong>."
+            html:
+                "<strong>Cleft sentences</strong> — це спеціальні конструкції, які використовуються, " +
+                "щоб <em>виділити або підкреслити</em> певну частину речення (особу, час, місце, причину тощо).<br/>" +
+                "Найпоширеніші типи: <strong>It is/was … that/who …</strong> та <strong>What … is …</strong>.",
         },
         {
             type: "usage",
-            title: "Типові структури",
+            title: "Коли вживаємо",
             badges: [
-                "<strong>It was John who called.</strong>",
-                "<strong>What I need is a break.</strong>"
+                "🎯 Фокус на конкретній частині → <strong>It was John who called.</strong>",
+                "🧩 Фокус на ідеї / дії → <strong>What I need is a break.</strong>",
+                "✍️ Письмова та нейтральна розмовна мова (для наголосу без інтонації)",
             ],
-            hint: "Використовуються для наголосу і більш природні в розмовній та письмовій мові, ніж просте підкреслення голосом."
+            hint:
+                "Cleft sentences відповідають на приховане питання: <em>хто саме? коли саме? що саме?</em>",
+        },
+        {
+            type: "forms",
+            title: "Основні типи",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "It-cleft",
+                    "It + is/was + focus + that/who + clause",
+                    "It was John who called.",
+                ],
+                [
+                    "It-cleft (time/place)",
+                    "It + is/was + time/place + that + clause",
+                    "It was yesterday that we met.",
+                ],
+                [
+                    "What-cleft",
+                    "What + clause + is/was + focus",
+                    "What I need is a break.",
+                ],
+            ],
+            hint:
+                "<strong>Who</strong> використовується для людей, <strong>that</strong> — універсальне. " +
+                "Час у cleft-реченні залежить від основної події.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["It was yesterday that we met.", "Саме вчора ми зустрілися."],
-                ["What I like most is your honesty.", "Найбільше мені подобається твоя чесність."]
-            ]
+                ["It’s her voice that I remember.", "Саме її голос я пам’ятаю."],
+                ["What I like most is your honesty.", "Найбільше мені подобається твоя чесність."],
+                ["What surprised me was his reaction.", "Мене здивувала саме його реакція."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Занадто часте використання — текст стає важким.",
-                "❌ Неправильний час після <em>It was</em>."
-            ]
+                "❌ Неправильний час → <em>It is yesterday that we met</em> → ✅ <strong>It was yesterday that we met</strong>",
+                "❌ Зайвий cleft без потреби → текст звучить перевантажено",
+                "❌ Плутанина з простим порядком слів → cleft потрібен лише для наголосу",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Cleft sentences)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Cleft sentences)",
+        },
+    ],
 };
-
 
 /* ============================
    MIXED CONDITIONALS
@@ -4427,44 +5542,87 @@ export const RULE_PAGE_MIXED_CONDITIONALS = {
         {
             type: "meaning",
             title: "Що таке mixed conditionals",
-            html: "Це умовні речення, де час у <strong>if-clause</strong> і результаті різний (минуле + теперішнє або теперішнє + минуле)."
+            html:
+                "<strong>Mixed conditionals</strong> — це умовні речення, у яких " +
+                "<em>час в умові (if-clause)</em> і <em>час у результаті</em> різні. " +
+                "Вони поєднують логіку <strong>2nd</strong> і <strong>3rd conditional</strong>.",
         },
         {
             type: "usage",
             title: "Основні типи",
             badges: [
-                "Минуле → теперішнє: <strong>If I had studied, I would speak better now.</strong>",
-                "Теперішнє → минуле: <strong>If I were taller, I would have become a pilot.</strong>"
+                "⏳ Минуле → теперішнє (причина в минулому, результат зараз): " +
+                "<strong>If I had studied, I would speak better now.</strong>",
+                "⏳ Теперішнє → минуле (постійна риса, наслідок у минулому): " +
+                "<strong>If I were taller, I would have become a pilot.</strong>",
             ],
-            hint: "Змішуємо 2nd і 3rd conditional, щоб показати різні часові площини."
+            hint:
+                "Подумай: <em>коли сталася причина?</em> і <em>коли бачимо результат?</em>",
+        },
+        {
+            type: "forms",
+            title: "Структури",
+            headers: ["Тип", "If-clause", "Main clause"],
+            rows: [
+                [
+                    "Past → Present",
+                    "if + Past Perfect",
+                    "would + V (now / today)",
+                ],
+                [
+                    "Present → Past",
+                    "if + Past Simple / were",
+                    "would have + V3",
+                ],
+            ],
+            hint:
+                "<strong>Now / today / at the moment</strong> часто сигналізують " +
+                "результат у теперішньому.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["If she had left earlier, she wouldn’t be late now.", "Якби вона пішла раніше, зараз не запізнилася б."],
-                ["If I were more careful, I wouldn’t have made that mistake.", "Якби я був уважнішим, не зробив би тієї помилки."]
-            ]
+                [
+                    "If she had left earlier, she wouldn’t be late now.",
+                    "Якби вона пішла раніше, зараз не запізнилася б.",
+                ],
+                [
+                    "If I were more careful, I wouldn’t have made that mistake.",
+                    "Якби я був уважнішим, не зробив би тієї помилки.",
+                ],
+                [
+                    "If he hadn’t missed the bus, he would be here now.",
+                    "Якби він не пропустив автобус, він був би тут зараз.",
+                ],
+                [
+                    "If we were more organized, we would have finished on time.",
+                    "Якби ми були більш організовані, ми б закінчили вчасно.",
+                ],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Використання однакових часів там, де потрібні різні.",
-                "❌ Плутанина з простим 2nd / 3rd conditional."
-            ]
+                "❌ Однакові часи в обох частинах → ❌ не mixed conditional",
+                "❌ <em>If I had studied, I would have a job now.</em> → ✅ <strong>would have had</strong> / або перебудувати речення",
+                "❌ Забувають, що <em>were</em> використовується для всіх осіб у нереальних умовах",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Mixed conditionals)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Mixed conditionals)",
+        },
+    ],
 };
-
 
 /* ============================
    THIRD CONDITIONAL VARIATIONS
 ============================ */
 export const RULE_PAGE_THIRD_CONDITIONAL_VARIATIONS = {
     id: "THIRD_CONDITIONAL_VARIATIONS",
-    title: "Third conditional variations",
+    title: "3rd Conditional variations",
     subtitle: "Вивчення правила",
     sections: [
         {
@@ -4498,7 +5656,7 @@ export const RULE_PAGE_THIRD_CONDITIONAL_VARIATIONS = {
                 "❌ Неправильний порядок слів після інверсії з <em>Had</em>."
             ]
         },
-        { type: "trainer", title: "Міні-тренажер (Third conditional variations)" }
+        { type: "trainer", title: "Міні-тренажер (3rd Conditional variations)" }
     ]
 };
 
@@ -4514,35 +5672,72 @@ export const RULE_PAGE_ADV_PASSIVES_REPORTING_VERBS = {
         {
             type: "meaning",
             title: "Що це за конструкції",
-            html: "Пасивні структури з дієсловами <strong>say, believe, think, report, expect</strong> тощо."
+            html:
+                "<strong>Advanced passives with reporting verbs</strong> — це пасивні структури з дієсловами " +
+                "<em>say, think, believe, report, expect, know, consider</em>, " +
+                "які використовують, коли <em>важлива інформація</em>, а не джерело.",
         },
         {
             type: "usage",
             title: "Два основні типи",
             badges: [
-                "<strong>It is said that…</strong>",
-                "<strong>He is said to…</strong>"
+                "📰 Загальна думка / чутки → <strong>It is said that…</strong>",
+                "👤 Фокус на людині → <strong>He is said to…</strong>",
+                "✍️ Формальний стиль (новини, звіти, академічні тексти)",
             ],
-            hint: "Часто використовується в новинах та формальному стилі."
+            hint:
+                "Обидві конструкції передають <em>непряму інформацію</em> без називання автора.",
+        },
+        {
+            type: "forms",
+            title: "Типові структури",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "It-passive",
+                    "It + be + V3 + that + clause",
+                    "It is believed that the crisis is over.",
+                ],
+                [
+                    "Person-passive (present)",
+                    "subject + be + V3 + to + V",
+                    "He is said to be very rich.",
+                ],
+                [
+                    "Person-passive (past)",
+                    "subject + be + V3 + to have + V3",
+                    "She is thought to have left early.",
+                ],
+            ],
+            hint:
+                "Для теперішнього значення — <strong>to + V</strong>, " +
+                "для минулого — <strong>to have + V3</strong>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["It is believed that the crisis is over.", "Вважається, що криза закінчилася."],
-                ["He is said to be very rich.", "Кажуть, що він дуже багатий."]
-            ]
+                ["The minister is expected to resign.", "Очікується, що міністр піде у відставку."],
+                ["She is reported to have won the election.", "Повідомляють, що вона виграла вибори."],
+                ["The company is said to be expanding.", "Кажуть, що компанія розширюється."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Забувають інфінітив після <em>be said / thought</em>.",
-                "❌ Неправильний час у підрядному реченні."
-            ]
+                "❌ <em>He is said that he is rich.</em> → ❌ (потрібна інфінітивна форма)",
+                "❌ <em>He is said to is rich.</em> → ✅ <strong>to be rich</strong>",
+                "❌ Неправильний час → <em>is said to leave yesterday</em> → ✅ <strong>to have left</strong>",
+                "❌ Надмірне використання в розмовній мові — звучить неприродно",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Advanced passives with reporting verbs)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Advanced passives with reporting verbs)",
+        },
+    ],
 };
 
 
@@ -4557,34 +5752,83 @@ export const RULE_PAGE_PARTICIPLE_CLAUSES = {
         {
             type: "meaning",
             title: "Що таке participle clauses",
-            html: "Скорочені підрядні речення з <strong>V-ing</strong> або <strong>V3</strong>, які дають додаткову інформацію."
+            html:
+                "<strong>Participle clauses</strong> — це <em>скорочені підрядні речення</em>, " +
+                "які використовують форму <strong>V-ing</strong> або <strong>V3</strong>, " +
+                "щоб додати інформацію про <em>час, причину, умову або результат</em>.",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "Причина / час: <strong>Feeling tired, he went to bed.</strong>",
-                "Пасивне значення: <strong>Built in 1990, the house…</strong>"
+                "⏱️ Час / причина → <strong>Feeling tired, he went to bed.</strong>",
+                "📄 Пасивне значення → <strong>Built in 1990, the house looks old.</strong>",
+                "✂️ Скорочення підрядних речень (when / because / if)",
             ],
-            hint: "Підмет участкового звороту = підмет головного речення."
+            hint:
+                "Підмет participle clause має бути <em>тим самим</em>, що й підмет головного речення.",
+        },
+        {
+            type: "forms",
+            title: "Основні типи",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Active",
+                    "V-ing, + main clause",
+                    "Walking down the street, she met an old friend.",
+                ],
+                [
+                    "Passive",
+                    "V3, + main clause",
+                    "Seen from above, the city looks tiny.",
+                ],
+                [
+                    "Perfect",
+                    "Having + V3, + main clause",
+                    "Having finished the work, he went home.",
+                ],
+            ],
+            hint:
+                "<strong>Having + V3</strong> підкреслює, що одна дія <em>завершилася раніше</em> за іншу.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["Walking down the street, she met an old friend.", "Ідучи вулицею, вона зустріла старого друга."],
-                ["Seen from above, the city looks tiny.", "Якщо дивитися згори, місто здається крихітним."]
-            ]
+                [
+                    "Walking down the street, she met an old friend.",
+                    "Ідучи вулицею, вона зустріла старого друга.",
+                ],
+                [
+                    "Seen from above, the city looks tiny.",
+                    "Якщо дивитися згори, місто здається крихітним.",
+                ],
+                [
+                    "Having missed the bus, he was late for work.",
+                    "Пропустивши автобус, він запізнився на роботу.",
+                ],
+                [
+                    "Not knowing what to say, she stayed silent.",
+                    "Не знаючи, що сказати, вона мовчала.",
+                ],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Dangling participles — коли підмет не збігається."]
+            bullets: [
+                "❌ Dangling participle → <em>Walking down the street, the house appeared.</em>",
+                "❌ Різні підмети в частинах речення → participle clause стає нелогічним",
+                "❌ Надмірне використання — краще іноді повне підрядне речення",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Participle clauses)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Participle clauses)",
+        },
+    ],
 };
-
 
 /* ============================
    REDUCED RELATIVE CLAUSES
@@ -4596,72 +5840,169 @@ export const RULE_PAGE_REDUCED_RELATIVE_CLAUSES = {
     sections: [
         {
             type: "meaning",
-            title: "Скорочені відносні речення",
-            html: "Можемо скоротити <strong>who is/that are</strong> до <strong>V-ing</strong> або <strong>V3</strong>."
+            title: "Що таке reduced relative clauses",
+            html:
+                "<strong>Reduced relative clauses</strong> — це <em>скорочені відносні речення</em>, " +
+                "у яких ми прибираємо <em>relative pronoun</em> та <em>форму дієслова to be</em>, " +
+                "залишаючи <strong>V-ing</strong> (актив) або <strong>V3</strong> (пасив).",
         },
         {
             type: "usage",
-            title: "Приклади скорочення",
+            title: "Як скорочуємо",
             badges: [
-                "<strong>People who live here</strong> → <strong>People living here</strong>",
-                "<strong>The cars that were produced</strong> → <strong>The cars produced</strong>"
-            ]
+                "🟢 Актив: <strong>who / that + V</strong> → <strong>V-ing</strong>",
+                "🔵 Пасив: <strong>which / that + be + V3</strong> → <strong>V3</strong>",
+                "⚠️ Підмет залишається тим самим",
+            ],
+            hint:
+                "Скорочуємо лише тоді, коли відносне речення <em>описує іменник</em>, " +
+                "а не ціле речення.",
+        },
+        {
+            type: "forms",
+            title: "Типові перетворення",
+            headers: ["Повна форма", "Скорочена форма", "Тип"],
+            rows: [
+                [
+                    "People who live here",
+                    "People living here",
+                    "Active",
+                ],
+                [
+                    "The cars that were produced",
+                    "The cars produced",
+                    "Passive",
+                ],
+                [
+                    "The woman who is talking",
+                    "The woman talking",
+                    "Active (to be)",
+                ],
+            ],
+            hint:
+                "Якщо у relative clause <em>немає to be</em>, " +
+                "можемо скоротити лише relative pronoun.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["Students living in the dorm must register.", "Студенти, які живуть у гуртожитку, мають зареєструватися."],
-                ["The book written by my friend is popular.", "Книга, написана моїм другом, популярна."]
-            ]
+                [
+                    "Students living in the dorm must register.",
+                    "Студенти, які живуть у гуртожитку, мають зареєструватися.",
+                ],
+                [
+                    "The book written by my friend is popular.",
+                    "Книга, написана моїм другом, популярна.",
+                ],
+                [
+                    "Anyone interested in the job should apply.",
+                    "Усі, хто зацікавлений у роботі, мають подати заявку.",
+                ],
+                [
+                    "The documents sent yesterday are missing.",
+                    "Документи, надіслані вчора, зникли.",
+                ],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Неправильний час або дієвідмінювання при скороченні."]
+            bullets: [
+                "❌ Неправильний час → <em>The people lived here</em> (інше значення)"
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Reduced relative clauses)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Reduced relative clauses)",
+        },
+    ],
 };
-
 
 /* ============================
    COMPLEX PREPOSITIONS
 ============================ */
 export const RULE_PAGE_COMPLEX_PREPOSITIONS = {
     id: "COMPLEX_PREPOSITIONS",
-    title: "Complex prepositions (due to, thanks to)",
+    title: "Complex prepositions (due to, thanks to, because of)",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що таке complex prepositions",
-            html: "Це прийменникові фрази: <strong>due to, thanks to, in front of, in spite of, because of</strong> тощо."
+            html:
+                "<strong>Complex prepositions</strong> — це <em>стійкі прийменникові фрази</em>, " +
+                "які складаються з двох або більше слів і працюють як один прийменник. " +
+                "Вони пояснюють <em>причину, позицію або обставини</em>.",
         },
         {
             type: "usage",
-            title: "Приклади вживання",
+            title: "Коли й як вживаємо",
             badges: [
-                "<strong>Due to</strong> = через (нейтрально/негативно)",
-                "<strong>Thanks to</strong> = завдяки (позитивно)",
-                "<strong>Because of</strong> = через (нейтрально)"
-            ]
+                "⚠️ Причина (часто формально) → <strong>due to</strong>",
+                "😊 Позитивна причина → <strong>thanks to</strong>",
+                "🔹 Нейтральна причина → <strong>because of</strong>",
+                "📍 Місце / позиція → <strong>in front of, next to, on top of</strong>",
+                "🚫 Контраст → <strong>in spite of</strong>",
+            ],
+            hint:
+                "Після complex prepositions завжди йде <em>іменник</em> або <em>V-ing</em>, " +
+                "а не повне речення.",
+        },
+        {
+            type: "forms",
+            title: "Типові моделі",
+            headers: ["Прийменник", "Значення", "Приклад"],
+            rows: [
+                [
+                    "due to",
+                    "через (часто формально)",
+                    "The delay was due to bad weather.",
+                ],
+                [
+                    "thanks to",
+                    "завдяки (позитив)",
+                    "Thanks to her advice, we succeeded.",
+                ],
+                [
+                    "because of",
+                    "через (нейтрально)",
+                    "The flight was cancelled because of fog.",
+                ],
+                [
+                    "in spite of",
+                    "незважаючи на",
+                    "In spite of the rain, we went out.",
+                ],
+            ],
+            hint:
+                "<strong>Because of</strong> ≠ <strong>because</strong>: " +
+                "<em>because of</em> + noun / V-ing, <em>because</em> + clause.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["The match was cancelled due to the rain.", "Матч скасували через дощ."],
-                ["Thanks to your help, we finished on time.", "Завдяки твоїй допомозі ми встигли."]
-            ]
+                ["Thanks to your help, we finished on time.", "Завдяки твоїй допомозі ми встигли."],
+                ["She stayed at home because of the flu.", "Вона залишилася вдома через грип."],
+                ["In spite of the traffic, they arrived early.", "Незважаючи на затори, вони приїхали рано."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Заміна <em>thanks to</em> у негативних ситуаціях."]
+            bullets: [
+                "❌ <em>Thanks to the accident, he was late.</em> → ❌ (негативна ситуація)",
+                "❌ <em>Because of he was tired</em> → ✅ <strong>because of being tired</strong>",
+                "❌ <em>Due to he missed the train</em> → ❌ (потрібен іменник або V-ing)",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Complex prepositions)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Complex prepositions)",
+        },
+    ],
 };
 
 
@@ -4675,33 +6016,84 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
     sections: [
         {
             type: "meaning",
-            title: "Різниця despite / in spite of",
-            html: "<strong>Despite</strong> і <strong>in spite of</strong> означають «незважаючи на» і вживаються з іменником або <strong>V-ing</strong>."
+            title: "Що означають despite / in spite of",
+            html:
+                "<strong>Despite</strong> і <strong>in spite of</strong> означають <em>«незважаючи на»</em> " +
+                "і використовуються, щоб показати <em>контраст</em>: щось сталося всупереч обставинам.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Як вживаємо",
             badges: [
-                "<strong>Despite being tired</strong>, he worked late.",
-                "<strong>In spite of the rain</strong>, we went out."
+                "📌 Перед іменником → <strong>despite the rain</strong>",
+                "📌 Перед дієсловом → <strong>despite / in spite of + V-ing</strong>",
+                "🟰 <strong>Despite</strong> і <strong>in spite of</strong> мають однакове значення",
+                "✍️ <strong>Despite</strong> — трохи коротше й частіше вживається",
             ],
-            hint: "Після них <u>не</u> використовуємо <strong>of</strong> з despite: ❌ despite of."
+            hint:
+                "Після <strong>despite / in spite of</strong> НЕ може стояти повне речення з підметом і присудком.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Конструкція", "Структура", "Приклад"],
+            rows: [
+                [
+                    "despite + noun",
+                    "despite + noun",
+                    "Despite the rain, we went out.",
+                ],
+                [
+                    "in spite of + noun",
+                    "in spite of + noun",
+                    "In spite of the rain, we went out.",
+                ],
+                [
+                    "despite / in spite of + -ing",
+                    "despite / in spite of + V-ing",
+                    "Despite being tired, he worked late.",
+                ],
+            ],
+            hint:
+                "<strong>Despite</strong> ≠ <strong>despite of</strong> (❌). " +
+                "<strong>In spite of</strong> — завжди з <strong>of</strong>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["Despite feeling ill, she went to work.", "Незважаючи на те, що почувалася погано, вона пішла на роботу."],
-                ["In spite of losing, they were happy.", "Незважаючи на поразку, вони були щасливі."]
-            ]
+                [
+                    "Despite feeling ill, she went to work.",
+                    "Незважаючи на те, що почувалася погано, вона пішла на роботу.",
+                ],
+                [
+                    "In spite of losing, they were happy.",
+                    "Незважаючи на поразку, вони були щасливі.",
+                ],
+                [
+                    "Despite his age, he runs marathons.",
+                    "Незважаючи на вік, він бігає марафони.",
+                ],
+                [
+                    "In spite of the traffic, we arrived on time.",
+                    "Незважаючи на затори, ми приїхали вчасно.",
+                ],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ despite of, ❌ in spite of that + full clause (краще: although)."]
+            bullets: [
+                "❌ <em>despite of the rain</em> → ✅ <strong>despite the rain</strong>",
+                "❌ <em>despite she was tired</em> → ✅ <strong>despite being tired</strong> / <strong>although she was tired</strong>",
+                "❌ <em>in spite that</em> → ❌ (краще <strong>although</strong>)",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Despite / In spite of)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Despite / In spite of)",
+        },
+    ],
 };
 
 /* ============================
@@ -4715,16 +6107,56 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
         {
             type: "meaning",
             title: "Що означають would rather / prefer",
-            html: "<strong>Would rather</strong> і <strong>prefer</strong> виражають уподобання, але по-різному будують речення."
+            html:
+                "<strong>Would rather</strong> і <strong>prefer</strong> використовуються, щоб говорити про <em>уподобання</em>, " +
+                "але мають <em>різні структури</em> та відтінки значення.",
         },
         {
             type: "usage",
-            title: "Основні структури",
+            title: "Коли й що вживати",
             badges: [
-                "<strong>I’d rather + V</strong>",
-                "<strong>I prefer + noun/V-ing</strong>",
-                "<strong>I’d rather you + Past Simple</strong> (я б хотів, щоб ти...)"
-            ]
+                "🎯 Конкретна ситуація → <strong>would rather</strong>",
+                "🔁 Загальні вподобання → <strong>prefer</strong>",
+                "👥 Бажання щодо іншої людини → <strong>would rather + subject + Past Simple</strong>",
+            ],
+            hint:
+                "<strong>Would rather</strong> частіше про <em>зараз або конкретний вибір</em>, " +
+                "<strong>prefer</strong> — про <em>загальні смаки</em>.",
+        },
+        {
+            type: "forms",
+            title: "Основні структури",
+            headers: ["Конструкція", "Структура", "Приклад"],
+            rows: [
+                [
+                    "would rather (self)",
+                    "would rather + V1",
+                    "I’d rather stay at home.",
+                ],
+                [
+                    "would rather (other)",
+                    "would rather + subject + Past Simple",
+                    "I’d rather you didn’t smoke here.",
+                ],
+                [
+                    "prefer (noun)",
+                    "prefer + noun + to + noun",
+                    "I prefer coffee to tea.",
+                ],
+                [
+                    "prefer (verb)",
+                    "prefer + V-ing",
+                    "She prefers working at night.",
+                ],
+                [
+                    "prefer (choice)",
+                    "prefer + to V + rather than + V",
+                    "I prefer to walk rather than drive.",
+                ],
+            ],
+            hint:
+                "Після <strong>would rather</strong> ніколи не ставимо <em>to</em>. " +
+                "Після <strong>prefer</strong> можливі різні моделі.",
         },
         {
             type: "examples",
@@ -4732,18 +6164,27 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
             items: [
                 ["I’d rather stay at home.", "Я краще залишуся вдома."],
                 ["I’d rather you didn’t smoke here.", "Я б волів, щоб ти тут не курив."],
-                ["I prefer coffee to tea.", "Я більше люблю каву, ніж чай."]
-            ]
+                ["I prefer coffee to tea.", "Я більше люблю каву, ніж чай."],
+                ["She prefers working from home.", "Вона віддає перевагу роботі з дому."],
+                ["I prefer to read rather than watch TV.", "Я краще почитаю, ніж дивитимусь телевізор."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ <em>I’d rather you to go</em> → <strong>I’d rather you went</strong>."]
+            bullets: [
+                "❌ <em>I’d rather you to go.</em> → ✅ <strong>I’d rather you went.</strong>",
+                "❌ <em>I’d rather to stay.</em> → ✅ <strong>I’d rather stay.</strong>",
+                "❌ <em>I prefer coffee than tea.</em> → ✅ <strong>prefer coffee to tea</strong>",
+                "❌ Змішування структур <em>would rather</em> і <em>prefer</em>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Would rather / prefer)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Would rather / prefer)",
+        },
+    ],
 };
-
 
 /* ============================
    HAD BETTER
@@ -4756,34 +6197,71 @@ export const RULE_PAGE_HAD_BETTER = {
         {
             type: "meaning",
             title: "Що означає had better",
-            html: "<strong>Had better</strong> = краще зробити (інакше будуть наслідки)."
+            html:
+                "<strong>Had better</strong> використовується, щоб дати <em>сильну пораду або попередження</em>. " +
+                "Ідея така: <em>якщо цього не зробити, можливі негативні наслідки</em>.",
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "<strong>You’d better leave now.</strong>",
-                "Часто про поради з попередженням"
+                "⚠️ Попередження → <strong>You’d better leave now.</strong>",
+                "⏰ Нагальна порада → <strong>We’d better hurry.</strong>",
+                "🚨 Потенційні наслідки (часто не сказані прямо)",
             ],
-            hint: "Форма: <strong>had better + V (без to)</strong>. У розмові — <strong>'d better</strong>."
+            hint:
+                "<strong>Had better</strong> звучить сильніше, ніж <em>should</em>, " +
+                "і може сприйматись як наполягання.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Тип", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Ствердження",
+                    "had better + V1",
+                    "You had better tell the truth.",
+                ],
+                [
+                    "Заперечення",
+                    "had better not + V1",
+                    "You’d better not be late.",
+                ],
+                [
+                    "Розмовна форма",
+                    "’d better + V1",
+                    "We’d better call them.",
+                ],
+            ],
+            hint:
+                "Після <strong>had better</strong> завжди базова форма дієслова (V1), <em>без to</em>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["You’d better not be late.", "Краще не спізнюйся."],
-                ["We’d better call them.", "Нам краще їм подзвонити."]
-            ]
+                ["We’d better call them.", "Нам краще їм подзвонити."],
+                ["He’d better see a doctor.", "Йому краще звернутися до лікаря."],
+                ["You had better back up your files.", "Тобі краще зробити резервну копію файлів."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ <em>had better to go</em> → <strong>had better go</strong>."]
+            bullets: [
+                "❌ <em>had better to go</em> → ✅ <strong>had better go</strong>",
+                "❌ <em>had better went</em> → ✅ <strong>had better go</strong>",
+                "❌ Плутанина з <em>should</em> → <strong>had better</strong> = сильніше, з наслідками",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Had better)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Had better)",
+        },
+    ],
 };
-
 
 /* ============================
    ADVANCED MODALS OF DEDUCTION
@@ -4796,32 +6274,81 @@ export const RULE_PAGE_ADVANCED_MODALS_OF_DEDUCTION = {
         {
             type: "meaning",
             title: "Модальні дієслова для припущень",
-            html: "Використовуємо <strong>must, may, might, can’t, could</strong> у різних часах для вираження ступеня впевненості."
+            html:
+                "<strong>Advanced modals of deduction</strong> використовуються, щоб висловити " +
+                "<em>логічні припущення</em> з різним ступенем впевненості про теперішнє або минуле.<br/>" +
+                "Основні дієслова: <strong>must</strong> (майже впевнені), " +
+                "<strong>may / might / could</strong> (можливо), " +
+                "<strong>can’t</strong> (логічно неможливо).",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Коли вживаємо",
             badges: [
-                "<strong>He must have left.</strong> — напевно пішов (минуле)",
-                "<strong>She can’t have done it.</strong> — вона точно цього не робила",
-                "<strong>They may/might have forgotten.</strong> — можливо, забули"
-            ]
+                "🔍 Логічний висновок → <strong>must</strong>",
+                "🤔 Можливість → <strong>may / might / could</strong>",
+                "🚫 Неможливість → <strong>can’t</strong>",
+                "🕒 Для минулого → <strong>modal + have + V3</strong>",
+            ],
+            hint:
+                "Це <em>не факти</em>, а припущення на основі доказів.",
+        },
+        {
+            type: "forms",
+            title: "Форми за часами",
+            headers: ["Час", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Теперішнє",
+                    "modal + V / modal + be",
+                    "She must be tired.",
+                ],
+                [
+                    "Теперішнє (процес)",
+                    "modal + be + V-ing",
+                    "He may be sleeping.",
+                ],
+                [
+                    "Минуле",
+                    "modal + have + V3",
+                    "They might have forgotten.",
+                ],
+                [
+                    "Неможливо (минуле)",
+                    "can’t + have + V3",
+                    "She can’t have done it.",
+                ],
+            ],
+            hint:
+                "<strong>Mustn’t</strong> ≠ deduction. " +
+                "Для «неможливо» завжди використовуємо <strong>can’t</strong>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["She must be working now.", "Вона, напевно, зараз працює."],
-                ["He might have missed the bus.", "Можливо, він пропустив автобус."]
-            ]
+                ["He could be at home.", "Він може бути вдома."],
+                ["They might have missed the train.", "Можливо, вони пропустили потяг."],
+                ["He can’t have said that.", "Він не міг цього сказати."],
+                ["It must have rained last night.", "Напевно, вночі був дощ."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Переклад <em>mustn’t</em> як «напевно ні» (це заборона, а не припущення)."]
+            bullets: [
+                "❌ <em>mustn’t</em> як припущення → ❌ (це заборона)",
+                "❌ <em>He must have to leave</em> → ❌ (змішування значень)",
+                "❌ <em>He must left</em> → ✅ <strong>must have left</strong>",
+                "❌ Неправильний час → для минулого завжди <strong>have + V3</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Advanced modals of deduction)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Advanced modals of deduction)",
+        },
+    ],
 };
 
 
@@ -4835,32 +6362,85 @@ export const RULE_PAGE_COMPLEX_NOUN_PHRASES = {
     sections: [
         {
             type: "meaning",
-            title: "Що таке складні іменникові фрази",
-            html: "Іменник з кількома прикметниками, додатками, прийменниковими фразами та відносними реченнями."
+            title: "Що таке complex noun phrases",
+            html:
+                "<strong>Complex noun phrases</strong> — це іменникові фрази, у яких <em>головний іменник</em> " +
+                "уточнюється кількома елементами: <em>прикметниками, іншими іменниками, прийменниковими фразами</em> " +
+                "та <em>відносними реченнями</em>.",
         },
         {
             type: "usage",
-            title: "Приклади структури",
+            title: "Як вони будуються",
             badges: [
-                "det + adj + noun + prep phrase",
-                "noun + relative clause"
-            ]
+                "🧩 Перед іменником → <strong>det + adj + noun</strong>",
+                "🔗 Після іменника → <strong>prepositional phrase / relative clause</strong>",
+                "📚 Часто вживаються в письмовій та формальній мові",
+            ],
+            hint:
+                "В англійській більшість опису стоїть <em>перед</em> іменником, " +
+                "а деталі — <em>після</em> нього.",
+        },
+        {
+            type: "forms",
+            title: "Типові структури",
+            headers: ["Структура", "Пояснення", "Приклад"],
+            rows: [
+                [
+                    "det + adj + noun + prep phrase",
+                    "базовий опис + уточнення",
+                    "The long, narrow road to the village",
+                ],
+                [
+                    "noun + V3 phrase",
+                    "пасивне уточнення",
+                    "The decision made by the committee",
+                ],
+                [
+                    "noun + relative clause",
+                    "додаткова інформація",
+                    "The book that you recommended",
+                ],
+            ],
+            hint:
+                "Коми залежать від того, чи інформація <em>обмежувальна</em> (без ком) " +
+                "чи <em>додаткова</em> (з комами).",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["The long, narrow road to the village was empty.", "Довга вузька дорога до села була порожньою."],
-                ["The decision made by the committee was unexpected.", "Рішення, ухвалене комітетом, було неочікуваним."]
-            ]
+                [
+                    "The long, narrow road to the village was empty.",
+                    "Довга вузька дорога до села була порожньою.",
+                ],
+                [
+                    "The decision made by the committee was unexpected.",
+                    "Рішення, ухвалене комітетом, було неочікуваним.",
+                ],
+                [
+                    "A small wooden house with a red roof stood near the river.",
+                    "Невеликий дерев’яний будинок з червоним дахом стояв біля річки.",
+                ],
+                [
+                    "The report that was published last week caused debate.",
+                    "Звіт, опублікований минулого тижня, викликав дискусію.",
+                ],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Надто складні фрази без ком або без чіткої структури."]
+            bullets: [
+                "❌ Занадто багато прикметників без логічного порядку",
+                "❌ Відсутність ком у переліку прикметників",
+                "❌ Перевантажені фрази, які важко читати",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Complex noun phrases)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Complex noun phrases)",
+        },
+    ],
 };
 
 /* ============================
@@ -4874,36 +6454,74 @@ export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
         {
             type: "meaning",
             title: "Запитання в непрямій мові",
-            html: "У непрямій мові запитання мають <strong>звичайний порядок слів</strong>, без інверсії."
+            html:
+                "<strong>Indirect questions</strong> — це запитання, вбудовані в речення. " +
+                "У них використовується <em>звичайний порядок слів</em> (як у ствердженні) " +
+                "і <em>немає інверсії</em> або допоміжних <em>do / does / did</em>.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Основні правила",
             badges: [
-                "<strong>Where is he?</strong> → She asked where he was.",
-                "<strong>Did you see her?</strong> → He asked if I had seen her."
-            ]
+                "❓ Wh-запитання → <strong>wh-word + subject + verb</strong>",
+                "❓ Yes/No → <strong>if / whether + subject + verb</strong>",
+                "⏪ Часто відбувається зсув часу (backshift)",
+                "🔗 Часто після <em>ask, wonder, want to know</em>",
+            ],
+            hint:
+                "Уяви, що ти робиш <em>ствердження</em>, а не питання.",
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Тип питання", "Структура", "Приклад"],
+            rows: [
+                [
+                    "Wh-question",
+                    "… + wh-word + subject + verb",
+                    "She asked where he was.",
+                ],
+                [
+                    "Yes / No",
+                    "… + if / whether + subject + verb",
+                    "He asked if I had seen her.",
+                ],
+                [
+                    "Present → Past",
+                    "backshift",
+                    "Where is he? → where he was",
+                ],
+            ],
+            hint:
+                "<strong>If</strong> і <strong>whether</strong> зазвичай взаємозамінні; " +
+                "<strong>whether</strong> частіше вживається у формальному стилі.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["She wondered what he was doing.", "Вона цікавилася, що він робить."],
-                ["He asked whether we could wait.", "Він запитав, чи можемо ми почекати."]
-            ]
+                ["He asked whether we could wait.", "Він запитав, чи можемо ми почекати."],
+                ["I don’t know where she lives.", "Я не знаю, де вона живе."],
+                ["Can you tell me if this is correct?", "Ти можеш сказати, чи це правильно?"],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Залишають інверсію: <em>She asked where was he</em>.",
-                "❌ Плутають if / whether."
-            ]
+                "❌ <em>She asked where was he.</em> → ✅ <strong>where he was</strong>",
+                "❌ <em>He asked did I see her.</em> → ✅ <strong>if I had seen her</strong>",
+                "❌ Інверсія після <em>if / whether</em> → ❌",
+                "❌ Зайві допоміжні дієслова <em>do / did</em>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Indirect speech question forms)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Indirect speech question forms)",
+        },
+    ],
 };
-
 
 /* ============================
    COMPOUND SENTENCES
@@ -5066,38 +6684,84 @@ export const RULE_PAGE_DECLARATIVE_SENTENCES = {
 ============================ */
 export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
     id: "CORRELATIVE_CONJUNCTIONS",
-    title: "Correlative conjunctions (either...or / neither...nor / both...and)",
+    title: "Correlative conjunctions (either…or / neither…nor / both…and)",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
             title: "Що таке correlative conjunctions",
-            html: "Парні сполучники, які працюють разом: <strong>either … or, neither … nor, both … and, not only … but also</strong>."
+            html:
+                "<strong>Correlative conjunctions</strong> — це <em>парні сполучники</em>, " +
+                "які завжди працюють разом і з’єднують рівноправні частини речення:<br/>" +
+                "<strong>either … or</strong>, <strong>neither … nor</strong>, <strong>both … and</strong>, <strong>not only … but also</strong>.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Коли й як вживаємо",
             badges: [
-                "<strong>Either you come, or I go.</strong>",
-                "<strong>Neither he nor she was there.</strong>",
-                "<strong>Both Tom and Anna are here.</strong>"
-            ]
+                "🔀 Вибір між двома → <strong>either … or</strong>",
+                "🚫 Заперечення обох → <strong>neither … nor</strong>",
+                "➕ Обидва варіанти → <strong>both … and</strong>",
+                "✨ Підсилення → <strong>not only … but also</strong>",
+            ],
+            hint:
+                "Частини після обох елементів пари мають бути <em>граматично однаковими</em> " +
+                "(іменник + іменник, дієслово + дієслово тощо).",
+        },
+        {
+            type: "forms",
+            title: "Типові моделі",
+            headers: ["Конструкція", "Структура", "Приклад"],
+            rows: [
+                [
+                    "either … or",
+                    "either + A + or + B",
+                    "Either you come or I go.",
+                ],
+                [
+                    "neither … nor",
+                    "neither + A + nor + B",
+                    "Neither he nor she was there.",
+                ],
+                [
+                    "both … and",
+                    "both + A + and + B",
+                    "Both Tom and Anna are here.",
+                ],
+                [
+                    "not only … but also",
+                    "not only + A + but also + B",
+                    "She is not only smart but also kind.",
+                ],
+            ],
+            hint:
+                "У <strong>either…or</strong> та <strong>neither…nor</strong> " +
+                "дієслово узгоджується з <em>найближчим підметом</em>.",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["Either call me or send a message.", "Або подзвони мені, або напиши повідомлення."],
-                ["Neither my parents nor my friends knew about it.", "Ні батьки, ні друзі про це не знали."]
-            ]
+                ["Neither my parents nor my friends knew about it.", "Ні батьки, ні друзі про це не знали."],
+                ["Both the manager and the staff agree.", "І менеджер, і персонал згодні."],
+                ["She is not only talented but also hardworking.", "Вона не лише талановита, а й працьовита."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Порушення узгодження дієслова з найближчим підметом у neither…nor."]
+            bullets: [
+                "❌ Порушення паралельної структури → <em>both reading and to write</em> → ❌",
+                "❌ Неправильне узгодження → <em>Neither you nor I is ready</em> → ✅ <strong>am ready</strong>",
+                "❌ Пропуск другої частини → <em>either you come</em> → потрібно <strong>or</strong>",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Correlative conjunctions)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Correlative conjunctions)",
+        },
+    ],
 };
 
 /* ============================
@@ -5226,36 +6890,80 @@ export const RULE_PAGE_ORDER_OF_ADJECTIVES = {
 ============================ */
 export const RULE_PAGE_PREP_DIRECTION = {
     id: "PREP_DIRECTION",
-    title: "Prepositions of direction (to, into, towards)",
+    title: "Prepositions of direction",
     subtitle: "Вивчення правила",
     sections: [
         {
             type: "meaning",
-            title: "Прийменники напрямку",
-            html: "<strong>To</strong> — у напрямку до; <strong>into</strong> — всередину; <strong>towards</strong> — у бік."
+            title: "Що таке prepositions of direction",
+            html:
+                "<strong>Prepositions of direction</strong> показують <em>рух і напрямок</em> — " +
+                "куди хтось або щось рухається.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Основні прийменники",
             badges: [
-                "<strong>go to school</strong>",
-                "<strong>walk into the room</strong>",
-                "<strong>run towards the park</strong>"
-            ]
+                "➡️ <strong>to</strong> — рух у напрямку місця (без акценту на «всередину»): <strong>go to school</strong>",
+                "⬇️ <strong>into</strong> — рух <em>всередину</em>: <strong>walk into the room</strong>",
+                "↗️ <strong>towards</strong> — у бік, у напрямку (не обовʼязково досягти): <strong>run towards the park</strong>",
+                "↘️ <strong>onto</strong> — рух <em>на поверхню</em>: <strong>jump onto the table</strong>",
+            ],
+            hint:
+                "Постав питання: <em>чи є рух?</em> і <em>чи є вхід всередину / на поверхню?</em>",
+        },
+        {
+            type: "forms",
+            title: "Типові моделі",
+            headers: ["Прийменник", "Коли вживаємо", "Приклад"],
+            rows: [
+                [
+                    "to",
+                    "напрямок до місця",
+                    "She went to the office.",
+                ],
+                [
+                    "into",
+                    "рух всередину",
+                    "He walked into the room.",
+                ],
+                [
+                    "towards",
+                    "рух у бік (напрямок)",
+                    "They moved towards the exit.",
+                ],
+                [
+                    "onto",
+                    "рух на поверхню",
+                    "The cat jumped onto the sofa.",
+                ],
+            ],
+            hint:
+                "<strong>To</strong> ≠ <strong>into</strong>: " +
+                "<em>to</em> — просто напрямок, <em>into</em> — обовʼязково «всередину».",
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["He threw the ball into the basket.", "Він кинув м’яч у кошик."],
-                ["She walked towards the station.", "Вона пішла в напрямку вокзалу."]
-            ]
+                ["She walked towards the station.", "Вона пішла в напрямку вокзалу."],
+                ["We went to the cinema.", "Ми пішли до кінотеатру."],
+                ["The child ran into the house.", "Дитина забігла в будинок."],
+            ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: ["❌ Плутанина to / into, коли є або немає руху всередину."]
+            bullets: [
+                "❌ <em>go into school</em> (як звичайний напрямок) → ✅ <strong>go to school</strong>",
+                "❌ <em>walk to the room</em> (коли мається на увазі «всередину») → ✅ <strong>walk into the room</strong>",
+                "❌ Плутанина <em>towards</em> (напрямок) з <em>to</em> (ціль)",
+            ],
         },
-        { type: "trainer", title: "Міні-тренажер (Prepositions of direction)" }
-    ]
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Prepositions of direction)",
+        },
+    ],
 };

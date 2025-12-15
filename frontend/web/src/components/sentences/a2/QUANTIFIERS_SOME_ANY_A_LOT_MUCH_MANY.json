@@ -255,11 +255,6 @@
     "en": ["How many sweets do you eat every day?"]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "MODAL_PERFECTS"],
-    "ua": "Він міг би взяти трохи більше багажу.",
-    "en": ["He could have taken some more luggage."]
-  },
-  {
     "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "REPORTED_SPEECH"],
     "ua": "Вона сказала, що купила багато їжі.",
     "en": ["She said she had bought a lot of food."]

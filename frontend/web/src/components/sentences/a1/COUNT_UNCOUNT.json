@@ -90,11 +90,6 @@
     "en": ["They buy new shoes every year."]
   },
   {
-    "rules": ["COUNT_UNCOUNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Я хочу трохи сиру.",
-    "en": ["I want some cheese."]
-  },
-  {
     "rules": ["COUNT_UNCOUNT", "HAVE_HAVE_GOT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "У нього багато хороших друзів.",
     "en": ["He has many good friends."]
@@ -348,11 +343,6 @@
     "rules": ["COUNT_UNCOUNT"],
     "ua": "Я отримав гарну новину.",
     "en": ["I received good news."]
-  },
-  {
-    "rules": ["COUNT_UNCOUNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Нам потрібно ще трохи меблів.",
-    "en": ["We need some more furniture."]
   },
   {
     "rules": ["COUNT_UNCOUNT"],

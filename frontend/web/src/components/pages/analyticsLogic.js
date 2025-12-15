@@ -8,7 +8,7 @@ export const SAMPLE_RULES = [
     { id:51, name:'Present Perfect', level:'B1', attempts:28, correct:22, lastSeen:'2025-10-09T18:30:00Z' },
     { id:1,  name:'To be (am/is/are)', level:'A1', attempts:40, correct:38, lastSeen:'2025-10-10T16:11:00Z' },
     { id:26, name:'Past Simple (regular/irregular)', level:'A2', attempts:31, correct:21, lastSeen:'2025-10-08T09:02:00Z' },
-    { id:63, name:'Passive Voice (all tenses)', level:'B1', attempts:14, correct:7, lastSeen:'2025-10-07T21:02:00Z' },
+    { id:63, name:'Passive Voice', level:'B1', attempts:14, correct:7, lastSeen:'2025-10-07T21:02:00Z' },
     { id:58, name:'2nd Conditional', level:'B1', attempts:12, correct:5, lastSeen:'2025-10-05T08:12:00Z' },
     { id:59, name:'3rd Conditional', level:'B1', attempts:9,  correct:3, lastSeen:'2025-10-03T10:11:00Z' },
     { id:18, name:'Be from (nationality)', level:'A1', attempts:7,  correct:7, lastSeen:'2025-10-09T07:45:00Z' },

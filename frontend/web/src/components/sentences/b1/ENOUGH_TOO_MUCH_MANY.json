@@ -309,14 +309,6 @@
     ]
   },
   {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Деякі страви занадто гострі для дітей.",
-    "en": [
-      "Some dishes are too spicy for children.",
-      "Some dishes are too hot for children."
-    ]
-  },
-  {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PREP_TIME", "DEMONSTRATIVES", "ARTICLES"],
     "ua": "Цей вечір занадто холодний для барбекю.",
     "en": [

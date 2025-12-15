@@ -41,11 +41,6 @@
       "en": ["He feels more confident than before."]
     },
     {
-      "rules": ["COMPARATIVES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
-      "ua": "Багато міст чистіші за наше.",
-      "en": ["Many cities are cleaner than ours."]
-    },
-    {
       "rules": ["COMPARATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
       "ua": "Коли сонце зійде, день стане теплішим.",
       "en": ["When the sun rises, the day will become warmer."]
