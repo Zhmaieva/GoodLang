@@ -299,7 +299,7 @@ export function estimateTimeToNextLevelText() {
     const totalAttempts = levelInfo.levels.reduce((acc, level) => acc + level.attempts, 0);
 
     if (totalAttempts < 40) {
-        return  { levelNameTo: LEVEL_MAP_TO[nextLevel]?.label, text: "Оцінка рівня - продовжуйте практику" };
+        return  { levelNameTo: LEVEL_MAP_TO[nextLevel]?.label, text: "Оцінка рівня - продовжуй практику" };
     }
 
     if (levelInfo.level === 'B2')

@@ -155,7 +155,7 @@ export const RULE_LABELS = Object.freeze({
     BECAUSE_SO_BUT_ALTHOUGH: "Because / so / but / although",
     BEFORE_AFTER_ING: "Before / after + -ing",
     BE_GOOD_AT_INTERESTED_IN_ING: "Be good at / interested in + -ing",
-    MAKE_DO_DIFFERENCE: "Make / do difference",
+    MAKE_DO_DIFFERENCE: "Make / do / take difference",
 
     // B1
     PRESENT_PERFECT: "Present Perfect (have + V3)",

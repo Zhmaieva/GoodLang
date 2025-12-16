@@ -6,7 +6,7 @@
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Моя сестра добре малює.", "en": ["My sister is good at drawing.", "My sister is good at painting."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "ARTICLES"], "ua": "Мій брат добре грає на гітарі.", "en": ["My brother is good at playing the guitar."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Вона добре заощаджує гроші.", "en": ["She is good at saving money."], "hint": "use BE GOOD AT" },
-    { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Я добре фотографую.", "en": ["I am good at taking photos."], "hint": "use BE GOOD AT" },
+    { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "MAKE_DO_DIFFERENCE"], "ua": "Я добре фотографую.", "en": ["I am good at taking photos."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Він добре пояснює.", "en": ["He is good at explaining things."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Ми добре плануємо поїздки.", "en": ["We are good at planning trips."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Вона добре обирає подарунки.", "en": ["She is good at choosing gifts."], "hint": "use BE GOOD AT" },
@@ -17,7 +17,7 @@
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Мій тато добре ремонтує речі.", "en": ["My dad is good at repairing things."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Вона добре дотримується обіцянок.", "en": ["She is good at keeping promises."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Вони добре розв’язують конфлікти.", "en": ["They are good at solving conflicts."], "hint": "use BE GOOD AT" },
-    { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Я добре доглядаю за дітьми.", "en": ["I am good at taking care of kids."], "hint": "use BE GOOD AT" },
+    { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "MAKE_DO_DIFFERENCE"], "ua": "Я добре доглядаю за дітьми.", "en": ["I am good at taking care of kids."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Ми добре опановуємо нові навички.", "en": ["We are good at learning new skills."], "hint": "use BE GOOD AT" },
 
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Мені цікаво вчити англійську.", "en": ["I am interested in learning English."], "hint": "use BE INTERESTED IN" },
@@ -44,7 +44,7 @@
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Він цікавиться розвитком особистого бренду.", "en": ["He is interested in building a personal brand."], "hint": "use BE INTERESTED IN" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Вона цікавиться саморозвитком.", "en": ["She is interested in self-development."], "hint": "use BE INTERESTED IN" },
 
-    { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Вона гарно робить макіяж.", "en": ["She is good at doing makeup."], "hint": "use BE GOOD AT" },
+    { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING", "MAKE_DO_DIFFERENCE"], "ua": "Вона гарно робить макіяж.", "en": ["She is good at doing makeup."], "hint": "use BE GOOD AT" },
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Я добре керую своїм часом.", "en": ["I am good at managing my time."], "hint": "use BE GOOD AT" },
 
     { "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"], "ua": "Вона вміє залишатися позитивною.", "en": ["She is good at staying positive."], "hint": "use BE GOOD AT" }

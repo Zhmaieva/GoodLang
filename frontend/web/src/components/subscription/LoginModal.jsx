@@ -3,7 +3,14 @@ import LimitModal from "../subscription/LimitModal.jsx";
 import LoginForm from "./LoginForm.jsx";
 import AccountStatusButton from "./AccountStatusButton.jsx";
 
-export default function LoginModal({ mobile, theme, open, onClose, account, forceLogin = false }) {
+export default function LoginModal({
+                                       mobile,
+                                       theme,
+                                       open,
+                                       onClose,
+                                       account,
+                                       forceLogin = false,
+                                   }) {
     const [loginMode, setLoginMode] = useState(false);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
 
@@ -31,6 +38,8 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
         maxWidth: 480,
         textAlign: "center",
         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+        fontFamily: "'Poppins', system-ui, sans-serif",
+        lineHeight: 1.4,
     };
 
     const primaryButton = {
@@ -38,10 +47,10 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
         border: `2px solid ${theme.accent}`,
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
         color: "white",
-        padding: "12px 26px",
+        padding: "8px 14px",
         borderRadius: theme.radius,
         cursor: "pointer",
-        fontSize: "1.1rem",
+        fontSize: "1.03rem",
         fontWeight: 700,
         marginTop: 20,
     };
@@ -50,19 +59,16 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
         appearance: "none",
         padding: "10px 16px",
         fontWeight: 800,
-        fontSize: 14,
+        fontSize: "1rem",
         lineHeight: 1,
         borderRadius: 999,
         cursor: "pointer",
-
         background: "#fffdf8",
         color: theme.text,
         border: `2px solid ${theme.accent}`,
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
-
         justifyContent: "center",
     };
-
 
     const textButton = {
         background: "transparent",
@@ -75,90 +81,115 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
     };
 
     return (
-        <div style={wrapperStyle} onClick={() => {
+        <div
+            style={wrapperStyle}
+            onClick={() => {
                 setLoginMode(false);
-                if (forceLogin)
-                    onClose();
-                onClose(); }}>
-            <div style={boxStyle} onClick={e => e.stopPropagation()}>
+                if (forceLogin) onClose();
+                onClose();
+            }}
+        >
+            <div style={boxStyle} onClick={(e) => e.stopPropagation()}>
                 {!loginMode && !forceLogin ? (
-                    <div style={{display: "flex", flexDirection: "column", gap: 12}}>
+                    // ✅ No global gap here — we control spacing per section
+                    <div style={{ display: "flex", flexDirection: "column" }}>
                         {/* Logged-in user email */}
                         {account?.email && (
-                            <div style={{ marginBottom: 24 }}>
-                                <h2 style={{
-                                    marginBottom: 8,
-                                    color: theme.text,
-                                    fontSize: "1.6rem",
-                                    fontWeight: 800
-                                }}>
+                            <div style={{ marginBottom: 8 }}>
+                                <h2
+                                    style={{
+                                        marginBottom: 10,
+                                        color: theme.text,
+                                        fontSize: "1.6rem",
+                                        fontWeight: 800,
+                                    }}
+                                >
                                     Ваш акаунт
                                 </h2>
 
-                                <p style={{ color: theme.muted, fontSize: "1.05rem" }}>
+                                <p
+                                    style={{
+                                        color: theme.muted,
+                                        fontSize: "1.05rem",
+                                        marginBottom: 20, // ✅ prevents extra space
+                                    }}
+                                >
                                     {account.email}
                                 </p>
                             </div>
                         )}
 
                         {/* Account status block */}
-                        {account?.status !== 'paid' ? (
-                            <div style={{ display: "flex", flexDirection: "column", gap: "18" }}>
-                                <h3 style={{
-                                    marginBottom: 12,
-                                    color: theme.text,
-                                    fontSize: "1.3rem",
-                                    fontWeight: 800
-                                }}>
+                        {account?.status !== "paid" ? (
+                            <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+                                <h3
+                                    style={{
+                                        margin: 0,
+                                        color: theme.text,
+                                        fontSize: "1.3rem",
+                                        fontWeight: 800,
+                                    }}
+                                >
                                     ❌ Прогрес збережено локально
                                 </h3>
 
-                                <p style={{
-                                    color: theme.muted,
-                                    fontSize: "1.05rem",
-                                    lineHeight: "1.45",
-                                    marginBottom: 12
-                                }}>
-                                    Активуй преміум, щоб мати доступ до навчання де і коли завгодно
-                                    та навчатися на повну з GoodLang!
+                                <p
+                                    style={{
+                                        color: theme.muted,
+                                        fontSize: "1.05rem",
+                                        lineHeight: "1.45",
+                                        margin: 0,
+                                    }}
+                                >
+                                    Активуй преміум, щоб мати доступ до навчання де і коли завгодно та
+                                    навчатися на повну з GoodLang!
                                 </p>
 
-                                <button
-                                    style={primaryButton}
-                                    onClick={() => setLimitModalOpen(true)}
-                                >
+                                <button style={primaryButton} onClick={() => setLimitModalOpen(true)}>
                                     Хочу преміум
                                 </button>
                             </div>
                         ) : (
-                            <>
-                                <h3 style={{
-                                    marginBottom: 12,
-                                    color: theme.text,
-                                    fontSize: "1.3rem",
-                                    fontWeight: 800
-                                }}>
+                            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                                <h3
+                                    style={{
+                                        margin: 0,
+                                        color: theme.text,
+                                        fontSize: "1.3rem",
+                                        fontWeight: 800,
+                                    }}
+                                >
                                     ✅ Прогрес синхронізовано
                                 </h3>
 
-                                <p style={{
-                                    color: theme.muted,
-                                    fontSize: "1.05rem",
-                                    lineHeight: "1.45",
-                                }}>
+                                <p
+                                    style={{
+                                        color: theme.muted,
+                                        fontSize: "1.05rem",
+                                        lineHeight: "1.45",
+                                        margin: 0,
+                                    }}
+                                >
                                     Ви можете продовжити навчання на будь-якому пристрої
                                 </p>
-                            </>
+                            </div>
                         )}
 
-                        <div style={{display: "flex", gap: "12px", justifyContent: "space-between", flexDirection: "column"}}>
+                        {/* ✅ Separate bottom actions block with its own spacing */}
+                        <div
+                            style={{
+                                marginTop: 12,
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: 12, // ✅ number, not "12px" string required but ok either way
+                                justifyContent: "space-between",
+                            }}
+                        >
                             {mobile && <AccountStatusButton mobile theme={theme} />}
+
                             {/* Login / switch account */}
-                            <button
-                                style={outlineButton}
-                                onClick={() => setLoginMode(true)}
-                            >
-                                {account.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
+                            <button style={outlineButton} onClick={() => setLoginMode(true)}>
+                                {account?.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
                             </button>
                         </div>
                     </div>
@@ -175,7 +206,7 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
             </div>
 
             {/* Limit modal */}
-            {limitModalOpen && account.email && (
+            {limitModalOpen && account?.email && (
                 <LimitModal
                     isLimitReached={false}
                     theme={theme}
@@ -185,7 +216,7 @@ export default function LoginModal({ mobile, theme, open, onClose, account, forc
             )}
 
             {/* Force login inside modal */}
-            {limitModalOpen && !account.email && (
+            {limitModalOpen && !account?.email && (
                 <LoginModal
                     forceLogin={true}
                     theme={theme}

@@ -147,10 +147,22 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                         fontSize: "1.05rem",
                         fontWeight: 500
                     }}>
-                        <li>✅ Необмежена кількість завдань</li>
-                        <li>✅ Хмарне збереження прогресу</li>
-                        <li>✅ Синхронізація на всіх пристроях</li>
-                        <li>✅ Пріоритетна підтримка</li>
+                        <li>
+                            <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                            Необмежена кількість завдань
+                        </li>
+                        <li>
+                            <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                            Хмарне збереження прогресу
+                        </li>
+                        <li>
+                            <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                            Синхронізація на всіх пристроях
+                        </li>
+                        <li>
+                            <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                            Пріоритетна підтримка
+                        </li>
                     </ul>
                 </div>
 
@@ -161,11 +173,11 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                         style={{
                             background: loading ? "#999" : theme.accent,
                             color: "white",
-                            padding: "14px 28px",
+                            padding: "10px 20px",
                             borderRadius: theme.radius,
                             border: "none",
                             cursor: loading ? "default" : "pointer",
-                            fontSize: "1.15rem",
+                            fontSize: "1rem",
                             fontWeight: 700,
                             width: "100%",
                             opacity: loading ? 0.7 : 1
@@ -185,7 +197,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                             appearance: "none",
                             padding: "10px 16px",
                             fontWeight: 800,
-                            fontSize: 14,
+                            fontSize: "1rem",
                             lineHeight: 1,
                             borderRadius: 999,
                             cursor: "pointer",

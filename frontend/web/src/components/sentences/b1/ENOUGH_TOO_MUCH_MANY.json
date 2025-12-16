@@ -251,7 +251,7 @@
     "en": "I buy too many snacks."
   },
   {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "MAKE_DO_DIFFERENCE"],
     "ua": "Вона робить надто багато селфі.",
     "en": "She takes too many selfies."
   },

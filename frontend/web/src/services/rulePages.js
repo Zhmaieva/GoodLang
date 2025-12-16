@@ -3084,7 +3084,7 @@ export const RULE_PAGE_BE_GOOD_AT_INTERESTED_IN_ING = {
 
 export const RULE_PAGE_MAKE_DO_DIFFERENCE = {
     id: "MAKE_DO_DIFFERENCE",
-    title: "Make / do (difference)",
+    title: "Make / do / take (difference)",
     subtitle: "Вивчення правила",
     sections: [
         {

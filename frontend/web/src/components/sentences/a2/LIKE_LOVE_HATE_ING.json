@@ -366,7 +366,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PREP_PLACE", "MAKE_DO_DIFFERENCE"],
       "ua": "Я дуже люблю фотографувати в лісі.",
       "en": [
         "I really love taking photos in the forest.",

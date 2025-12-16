@@ -49,7 +49,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                             <strong>Немає правил у «червоній зоні» 🎉</strong>
                         </div>
                         <div className="focus-meta">
-                            Продовжуйте практику — система підсвітить правило, яке потребує уваги, щойно воно зʼявиться.
+                            Продовжуй практику — система підсвітить правило, що потребує уваги, щойно воно зʼявиться.
                         </div>
                     </div>
                 </div>
