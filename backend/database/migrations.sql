@@ -175,7 +175,7 @@ $$
         IF NOT EXISTS (
             SELECT 1 FROM migrations_history WHERE id = 'add_sign_in_links'
         ) THEN
-            DROP TABLE sign_in_links;
+            DROP TABLE IF EXISTS sign_in_links;
             CREATE TABLE IF NOT EXISTS sign_in_links (
                  account_id UUID NOT NULL UNIQUE REFERENCES accounts(id) ON DELETE CASCADE,
                  email VARCHAR(255) NOT NULL UNIQUE,
