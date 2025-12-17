@@ -33,8 +33,6 @@ export default function Trainer({
         return pool[Math.floor(Math.random() * pool.length)];
     };
 
-    const didInit = useRef(false);
-
     // State
     const [level, setLevel] = useState(null);
     const [difficulty, setDifficulty] = useState(() => null);
@@ -77,12 +75,7 @@ export default function Trainer({
         setMode("check");
         resetToLoadingPlaceholders();
 
-        if (didInit.current) {
-            loadNewTask(diff).then(_=>{});
-            return;
-        }
-
-        didInit.current = true;
+        loadNewTask(diff).then(_=>{});
     }, [nextLevel]);
 
     useEffect(() => {
