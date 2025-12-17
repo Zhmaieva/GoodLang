@@ -89,7 +89,7 @@ export async function sendVerificationCode(email) {
     await pool.query(
         `INSERT INTO sign_in_links (account_id, email, code, created_at, expires_at)
          VALUES ($1,$2,$3,NOW(),$4)
-         ON CONFLICT (account_id, email) DO UPDATE SET code=$3, created_at=NOW(), expires_at=$4`,
+         ON CONFLICT (email) DO UPDATE SET code=$3, created_at=NOW(), expires_at=$4`,
         [accountId, email, code, expiresAt]
     );
 

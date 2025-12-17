@@ -366,3 +366,29 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: alter_sign_in_links_unique_email
+-- Description: Add UNIQUE index to email of sign_in_links table
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'alter_sign_in_links_unique_email'
+        ) THEN
+
+            -- 1) Add index
+            CREATE UNIQUE INDEX IF NOT EXISTS sign_in_links_unique_email
+                ON sign_in_links (email);
+
+            -- 2) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_sign_in_links_unique_email', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
