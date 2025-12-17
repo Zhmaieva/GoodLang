@@ -7,11 +7,12 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const [accuracy, setAccuracy] = React.useState(0);
     const [attemptsLeft, setAttemptsLeft] = React.useState(0);
     const [isMobile, setIsMobile] = React.useState(mobile);
+    const [isLoading, setIsLoading] = React.useState(true);
 
     const refresh = () => {
         const overall = getOverallAccuracy();
         setAccuracy(Number.isFinite(overall?.accuracy) ? overall.accuracy : 0);
-        setAttemptsLeft(Number.isFinite(overall?.accuracy) ? overall.accuracy : 0);
+        setAttemptsLeft(overall.attemptsLeft ?? 0);
     }
 
     useEffect(() => {
@@ -20,6 +21,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
+
+        setIsLoading(false);
+
         window.addEventListener("resize", onResize);
         return () => {
             off("weeklyProgressUpdate", refresh);
@@ -27,9 +31,10 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         }
     }, []);
 
-    const showEmpty = !attemptsLeft > 0;
+    const showEmpty = attemptsLeft > 0;
 
     const cardStyle = {
+        visibility: !isLoading ? "visible" : "hidden",
         background: "#fffdf8",
         border: "3px solid #ff6138",
         borderRadius: "20px",
@@ -78,19 +83,20 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         <div style={cardStyle}>
             {showEmpty ? (
                 <>
-                    <div style={valueStyle}>Ще кілька речень до оцінки</div>
+                    {!header && (<div style={labelStyle}>Знання правил</div>)}
+                    <div style={valueStyle}>{attemptsLeft} {attemptsLeft > 4 ? 'речень' : 'речення'} до оцінки{header ? ' рівня' : ''}</div>
                 </>
             ) : (
                 <>
-                    {
+                {
                         header ? (
                             <>
-                                <div style={valueStyle}>Точність {accuracy.toFixed(2)}%</div>
+                                <div style={valueStyle}>Знання правил {accuracy.toFixed(2)}%</div>
                                 <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, accuracy ?? 0))}/></div>
                             </>
                         ) : (
                             <>
-                                <div style={labelStyle}>Точність</div>
+                                <div style={labelStyle}>Знання правил</div>
                                 <div style={valueStyle}>{accuracy.toFixed(2)}%</div>
                                 <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, accuracy ?? 0))}/></div>
                             </>

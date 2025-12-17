@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LevelSwitch from "./training/LevelSwitch.jsx";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
-import AccountButton from "./subscription/AccountButton.jsx";
-import { WeeklyProgress } from "./training/WeeklyProgress.jsx";
 import AccuracyKpi from "./training/AccuracyKpi.jsx";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
@@ -185,16 +183,17 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         gap: 8,
                     }}
                 >
-                    <AccountStatusButton theme={theme} />
-                </div>
-
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <LevelSwitch
                         level={level}
                         loading={loading}
                         onLevelChange={onLevelChange}
                         theme={theme}
                     />
+                </div>
+
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <AccountStatusButton theme={theme} />
+
                 </div>
             </div>
         </header>

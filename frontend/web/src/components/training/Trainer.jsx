@@ -101,7 +101,7 @@ export default function Trainer({
             const allStats = getAllStatistics(); // full list of {rule, accuracy, attemptsNumber}
 
             // Filter only rules belonging to the real CEFR current level
-            const level = getTrainingLevel();
+            const {level, isCalibration} = getTrainingLevel();
             const allowedRules = LEVEL_RULES[level] ?? [];
 
             const stats = allStats.filter(s => allowedRules.includes(s.rule));
@@ -248,10 +248,16 @@ export default function Trainer({
             emit("weeklyProgressUpdate");
             setMode("next");
 
-            if (freeTraining) {
+            const {isCalibration} = getTrainingLevel();
+            if (freeTraining && !(nextLevel === 'managed' && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
                 setNextRules(data.rules);
                 setNextHint(data.hint || null);
+            } else if (nextLevel === 'managed' && isCalibration) {
+                setNextRules([]);
+                setNextTextToTranslate("");
+                setNextRules(data.rules);
+                setNextHint(null);
             }
 
             saveSeed({seed, skip: data.skip ?? (skip+1) });

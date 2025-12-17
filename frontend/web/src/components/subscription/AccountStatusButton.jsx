@@ -92,6 +92,8 @@ export default function AccountStatusButton({ theme, mobile }) {
             borderRadius: 999,
             cursor: "pointer",
             height: "100%",
+            minWidth: "160px",
+            textAlign: "center",
 
             background,
             color,

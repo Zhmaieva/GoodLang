@@ -84,7 +84,10 @@ export function preEvaluate({
 
     return {
         answer_is_correct: result,
-        scores: rules.map(() => (result ? 1 : 0))
+        scores: rules.map(() => (result ? 1 : 0)),
+        hint: targetSample.hint || '',
+        sampleTranslation: Array.isArray(targetSample[languagesMap["English"]])
+            ? targetSample[languagesMap["English"]][0] : targetSample[languagesMap["English"]]
     };
 }
 
@@ -93,12 +96,14 @@ export async function evaluateAndCoach({
                                            rules = [],
                                            targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
                                            userEnglish = "",                // learner's translation attempt (English)
-                                           textToTranslate = ""
+                                           textToTranslate = "",
+                                           hint = "",
+                                           sampleTranslation = ""
                                        }) {
 
 
     const systemPrompt = `
-You are a friendly but precise ESL grammar tutor. You accept informal speech.
+You are a friendly but precise ESL grammar tutor. You never invalidate informal speech.
 Return JSON only.
 Schema:
 {
@@ -114,9 +119,11 @@ Schema:
 TARGET_LANGUAGE: ${targetLanguage}
 GRAMMAR_RULES: [${rules.join(', ')}]
 TEXT_TO_TRANSLATE: ${textToTranslate}
+HINT: ${hint}
+SAMPLE_TRANSLATION: ${sampleTranslation}
 
 TASKS:
-1) Evaluate if LEARNER_ENGLISH is correct according to English rules and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
+1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if present, first and foremost according to HINT, and secondly, referring to SAMPLE_TRANSLATION as the ideal translation, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
 2) If wrong, give a helpful human tip in TARGET_LANGUAGE
 3) Also, give correct translation from TARGET_LANGUAGE to English.
 4) For each of GRAMMAR_RULES, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLIS -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75

@@ -21,10 +21,10 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
     };
 
     const benefits = [
-        "✅ Необмежена кількість завдань",
-        "✅ Хмарне збереження прогресу",
-        "✅ Синхронізація на всіх пристроях",
-        "✅ Пріоритетна підтримка"
+        "Необмежена кількість завдань",
+        "Хмарне збереження прогресу",
+        "Синхронізація на всіх пристроях",
+        "Пріоритетна підтримка"
     ];
 
     // LevelSwitch-style small button
@@ -115,7 +115,7 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                         listStyle: "none",
                         padding: 0,
                         margin: "0 auto",
-                        maxWidth: 340,
+                        maxWidth: 280,
                         textAlign: "left",
                         fontSize: "1.05rem",
                         lineHeight: "1.6",
@@ -123,7 +123,10 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                         fontWeight: 500
                     }}>
                         {benefits.map(b => (
-                            <li key={b}>{b}</li>
+
+                            <li key={b}>
+                                <span style={{marginRight: 8, opacity: 0.5}}>•</span> {b}
+                            </li>
                         ))}
                     </ul>
                 )}

@@ -352,30 +352,37 @@ export function getAllStatistics() {
 }
 
 
-// Overall accuracy across ALL answers
 export function getOverallAccuracy() {
     const answers = getAnswers();
-    const total = answers.length;
 
-    if (total < 7) {
+    const uniqueAttempts = new Set(
+        answers
+            .map(a => a.date) // or a.timestamp — adjust field name if needed
+            .filter(Boolean)
+    );
+
+    const total = uniqueAttempts.size;
+    const required = 10;
+
+    if (total < required) {
         return {
-            attemptsLeft: Math.max(0, 7 - total),
+            attemptsLeft: Math.max(0, required - total),
             accuracy: 0
-        }
+        };
     }
 
-    const rawOverall = averageAccuracyPercent(answers); // 0..100
     const inf = inferUserLevel(); // { level, levels }
-
     const curLvl = String(inf?.level ?? "a1").toLowerCase();
 
-    const accOf = (lvl) => {
+    const accOf = (lvl, withCoverage = false) => {
         const want = String(lvl).toLowerCase();
         const hit = (inf?.levels ?? []).find(
             x => String(x?.level ?? "").toLowerCase() === want
         );
-        return Number.isFinite(hit?.accuracy) ? hit.accuracy : 0;
+        return Number.isFinite(hit?.accuracy) ? hit.accuracy * (withCoverage ? hit.coverage : 1) : 0; // 0..100
     };
+
+    const levelAcc = accOf(curLvl); // 0..100
 
     const BANDS = {
         a1: { low: 0,  cap: 30 },
@@ -390,11 +397,13 @@ export function getOverallAccuracy() {
     // (4) lower border
     let bandAcc = band.low;
 
-    // (5) within-band contribution
+    // ✅ (5) within-band contribution uses ONLY 75% of band width
+    const effectiveWidth = bandWidth * 0.75;
+
     if (curLvl === "a1") {
-        bandAcc += clamp01(rawOverall / 100) * bandWidth;
+        bandAcc += clamp01(levelAcc / 100) * effectiveWidth;
     } else {
-        bandAcc += clamp01(Math.max(0, rawOverall - 85) / 15) * bandWidth;
+        bandAcc += clamp01(Math.max(0, levelAcc - 85) / 15) * effectiveWidth;
     }
 
     // (6) pull from higher levels
@@ -409,7 +418,7 @@ export function getOverallAccuracy() {
         const diff = band.cap - bandAcc;
         if (diff <= 0) break;
 
-        bandAcc += clamp01(accOf(lvlAbove) / 100) * diff;
+        bandAcc += clamp01(accOf(lvlAbove, true) / 100) * diff;
     }
 
     // (3) enforce band limits
@@ -423,8 +432,9 @@ export function getOverallAccuracy() {
     return {
         attemptsLeft: 0,
         accuracy: Math.round(bandAcc * 100) / 100
-    }
+    };
 }
+
 
 // Count of all answers
 export function getAllAnswersCount() {
@@ -473,11 +483,11 @@ export function inferUserLevel() {
         },
 
         // Minimum total attempts required to "trust" a level
-        minTotalAttemptsPerLevel = 4,
+        minTotalAttemptsPerLevel = 8,
         // A rule counts toward coverage if it has at least this many attempts
         minAttemptsPerRule = 1,
         // Need at least this many covered rules in a level
-        minRulesWithAttempts = 3,
+        minRulesWithAttempts = 6,
         // Minimum overall accuracy (percent) in the level to consider it "proficient"
         minAccuracy = 85,
 
@@ -675,8 +685,8 @@ export function inferUserLevel() {
 
     // Otherwise best overall (soft fallback)
     const bestOverall = [...levelStats].sort(
-        (a, b) => (b.score - a.score) || (stepLevels.indexOf(b.level) - stepLevels.indexOf(a.level))
-    )[0];
+        (a, b) => (b.accuracy * b.score - a.accuracy * a.score) || (stepLevels.indexOf(b.level) - stepLevels.indexOf(a.level))
+    ).filter(x => x.accuracy >= 85).find(_=>true);
 
     return {
         level: bestOverall?.level ?? "a1",

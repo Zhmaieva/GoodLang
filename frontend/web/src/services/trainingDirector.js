@@ -1,4 +1,4 @@
-import {getAllStatistics, inferUserLevel} from "./dataService"; // adjust path
+import {getAllStatistics, getOverallAccuracy, inferUserLevel} from "./dataService"; // adjust path
 import { LEVEL_RULES } from "../utils/rules";
 import {getLearningState, LEVEL_MAP_TO} from "./insightsService.js";
 
@@ -61,11 +61,10 @@ export function getTrainingLevel() {
 
     console.log(allStats);
 
-    // Total attempts across all levels
-    const totalScores = CEFR_ORDER.reduce((acc, lvl) => acc + (allStats.levels.find(l => l.level === lvl)?.attempts || 0), 0);
+    const overall = getOverallAccuracy();
 
     // --- CALIBRATION MODE: total scores < 40 ---
-    if (totalScores < 40) {
+    if (overall.attemptsLeft > 0) {
         let levelIdx = 0; // start at A1
 
         while (true) {
@@ -85,6 +84,7 @@ export function getTrainingLevel() {
             // Move DOWN if accuracy <75% and not already at A1
             else if (((lvlStats.accuracy < 75 && lvlStats.attempts > 6) || (lvlStats.accuracy < 25 && lvlStats.attempts > 1)) && levelIdx > 0) {
                 levelIdx--;
+                break;
             }
             else {
                 console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
@@ -93,7 +93,10 @@ export function getTrainingLevel() {
         }
 
         console.log('current managed level: ', CEFR_ORDER[levelIdx]);
-        return CEFR_ORDER[levelIdx];
+        return {
+            isCalibration: true,
+            level: CEFR_ORDER[levelIdx]
+        };
     }
 
     // --- NORMAL MODE: enough data (≥40 scores) ---
@@ -112,5 +115,8 @@ export function getTrainingLevel() {
         }) || "B2";
 
     console.log('current managed level: ', current);
-    return current;
+    return {
+        isCalibration: false,
+        level: current
+    };
 }

@@ -137,7 +137,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                     активуй підписку.
                 </p>
 
-                <div style={{textAlign: "left", margin: "0 auto 28px", maxWidth: 340}}>
+                <div style={{textAlign: "left", margin: "0 auto 28px", maxWidth: 280}}>
                     <ul style={{
                         listStyle: "none",
                         padding: 0,

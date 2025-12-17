@@ -392,3 +392,30 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: alter_accounts_add_translations_quota
+-- Description: Add translations_quota column to accounts table
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history
+            WHERE id = 'alter_accounts_add_translations_quota'
+        ) THEN
+
+            -- 1) Add column
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS translations_quota INTEGER DEFAULT 10;
+
+            -- 2) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_accounts_add_translations_quota', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

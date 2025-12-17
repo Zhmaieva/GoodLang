@@ -107,7 +107,6 @@ export default function AnalyticsPage({theme}) {
                     theme={theme}
                     attempts={kpis.totalAttempts}
                     masteredRules={kpis.mastered}
-                    userLevel={inferUserLevel()}
                 />
                 <FiltersBar
                     filterLevel={filterLevel}

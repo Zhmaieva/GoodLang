@@ -3,19 +3,38 @@ import { ACTION_TYPES } from '../../core/constants.js';
 import {getAccountInfo} from "./accountsRepository.js";
 
 /**
- * Check translation usage limit
+ * Check translation usage limit (race-safe)
  * @param {string} accountId
- * @param {number} limit Maximum calls in window
- * @param {number} hours Time window in hours
+ * @param {number} limit Maximum calls in window (fallback)
+ * @param {number} hours Time window in hours (fallback)
  * @returns {Promise<{ allowed: boolean, waitTimeSeconds: number }>}
  */
-export async function checkTranslationLimit(accountId, limit = 10, hours = 12) {
-    const status = (await getAccountInfo(accountId)).status;
+export async function checkTranslationLimit(accountId, limit = 10, hours = 24) {
+    const account = await getAccountInfo(accountId);
 
-    if (status === 'paid') {
-        return { allowed: true, waitTimeSeconds: 0 }; // no limit for paid users
+    // 0️⃣ Paid users → unlimited
+    if (account.status === 'paid') {
+        return { allowed: true, waitTimeSeconds: 0 };
     }
 
+    // 1️⃣ Atomic quota decrement (single round-trip)
+    const { rowCount } = await pool.query(
+        `
+            UPDATE accounts
+            SET translations_quota = translations_quota - 1
+            WHERE id = $1
+              AND translations_quota > 0
+            RETURNING translations_quota
+        `,
+        [accountId]
+    );
+
+    // If quota was successfully consumed → allow immediately
+    if (rowCount === 1) {
+        return { allowed: true, waitTimeSeconds: 0 };
+    }
+
+    // 2️⃣ Quota exhausted → fallback to time window logic
     const { rows } = await pool.query(
         `
         SELECT created_at
@@ -35,7 +54,6 @@ export async function checkTranslationLimit(accountId, limit = 10, hours = 12) {
         return { allowed: true, waitTimeSeconds: 0 };
     }
 
-    // Oldest timestamp in the current window
     const oldestTimestamp = timestamps[timestamps.length - limit];
     const waitTimeMs = windowMs - (now - oldestTimestamp);
     const waitTimeSeconds = Math.max(Math.ceil(waitTimeMs / 1000), 0);
@@ -45,7 +63,6 @@ export async function checkTranslationLimit(accountId, limit = 10, hours = 12) {
         waitTimeSeconds
     };
 }
-
 
 /**
  * Record a translation usage
