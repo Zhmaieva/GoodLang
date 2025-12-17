@@ -76,7 +76,6 @@ export default function AccountButton({ theme, mobile }) {
                 onClick={handleClick}
             >
                 {account?.email && account?.status === 'free' && `⚠️ ${account?.email}`}
-                {!account?.email && account?.status === 'free' && "⚠️ Увімкнути синхронізацію"}
                 {account?.status !== 'free' && account?.email}
             </button>}
 
