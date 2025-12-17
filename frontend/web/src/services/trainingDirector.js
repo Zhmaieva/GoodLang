@@ -57,12 +57,7 @@ export function getProgress() {
  * Main function to get user's training level
  */
 export function getTrainingLevel() {
-    const allStats = inferUserLevel({
-        minAttemptsPerRule: 1,
-        minRulesWithAttempts: 6,
-        minTotalAttemptsPerLevel: 6,
-        minAccuracy: 85
-    });
+    const allStats = inferUserLevel();
 
     console.log(allStats);
 
@@ -113,7 +108,7 @@ export function getTrainingLevel() {
             const currentLevelIndex = allStats.levels.indexOf(allStats.levels.find(l => l.level === allStats.level));
             const levelTooHigh = levelIndex - currentLevelIndex > 1;
 
-            return ((levelData?.score ?? 0) * 100) < 95 && !levelTooHigh;
+            return (levelData?.accuracy ?? 0) < 85 && !levelTooHigh;
         }) || "B2";
 
     console.log('current managed level: ', current);

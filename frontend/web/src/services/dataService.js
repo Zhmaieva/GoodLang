@@ -354,8 +354,76 @@ export function getAllStatistics() {
 
 // Overall accuracy across ALL answers
 export function getOverallAccuracy() {
-    const all = getAnswers();
-    return averageAccuracyPercent(all);
+    const answers = getAnswers();
+    const total = answers.length;
+
+    if (total < 7) {
+        return {
+            attemptsLeft: Math.max(0, 7 - total),
+            accuracy: 0
+        }
+    }
+
+    const rawOverall = averageAccuracyPercent(answers); // 0..100
+    const inf = inferUserLevel(); // { level, levels }
+
+    const curLvl = String(inf?.level ?? "a1").toLowerCase();
+
+    const accOf = (lvl) => {
+        const want = String(lvl).toLowerCase();
+        const hit = (inf?.levels ?? []).find(
+            x => String(x?.level ?? "").toLowerCase() === want
+        );
+        return Number.isFinite(hit?.accuracy) ? hit.accuracy : 0;
+    };
+
+    const BANDS = {
+        a1: { low: 0,  cap: 30 },
+        a2: { low: 30, cap: 55 },
+        b1: { low: 55, cap: 80 },
+        b2: { low: 80, cap: 100 },
+    };
+
+    const band = BANDS[curLvl] ?? BANDS.a1;
+    const bandWidth = band.cap - band.low;
+
+    // (4) lower border
+    let bandAcc = band.low;
+
+    // (5) within-band contribution
+    if (curLvl === "a1") {
+        bandAcc += clamp01(rawOverall / 100) * bandWidth;
+    } else {
+        bandAcc += clamp01(Math.max(0, rawOverall - 85) / 15) * bandWidth;
+    }
+
+    // (6) pull from higher levels
+    const ABOVE = {
+        a1: ["b2", "b1", "a2"],
+        a2: ["b2", "b1"],
+        b1: ["b2"],
+        b2: [],
+    };
+
+    for (const lvlAbove of ABOVE[curLvl] ?? []) {
+        const diff = band.cap - bandAcc;
+        if (diff <= 0) break;
+
+        bandAcc += clamp01(accOf(lvlAbove) / 100) * diff;
+    }
+
+    // (3) enforce band limits
+    bandAcc =
+        curLvl === "a1"
+            ? Math.min(bandAcc, band.cap - 0.0001)
+            : Math.min(bandAcc, band.cap);
+
+    bandAcc = Math.max(band.low, bandAcc);
+
+    return {
+        attemptsLeft: 0,
+        accuracy: Math.round(bandAcc * 100) / 100
+    }
 }
 
 // Count of all answers
@@ -395,7 +463,7 @@ export function getLearnedRulesCount() {
  * - levelBands: mapping GoodLang -> CEFR bands
  * - thresholds & weights (same as before)
  */
-export function inferUserLevel(options = {}) {
+export function inferUserLevel() {
     const {
         // Map GoodLang levels → CEFR bands
         levelBands = {
@@ -405,13 +473,13 @@ export function inferUserLevel(options = {}) {
         },
 
         // Minimum total attempts required to "trust" a level
-        minTotalAttemptsPerLevel = 12,
+        minTotalAttemptsPerLevel = 4,
         // A rule counts toward coverage if it has at least this many attempts
-        minAttemptsPerRule = 2,
+        minAttemptsPerRule = 1,
         // Need at least this many covered rules in a level
         minRulesWithAttempts = 3,
         // Minimum overall accuracy (percent) in the level to consider it "proficient"
-        minAccuracy = 70,
+        minAccuracy = 85,
 
         // Composite scoring weights (tune as you like)
         weights = {
@@ -420,7 +488,7 @@ export function inferUserLevel(options = {}) {
             learned: 0.2,      // share of rules with status "learned"
             volumeBonus: 0.05, // bonus for more attempts (log-scaled)
         },
-    } = options;
+    } = {};
 
     const stepLevels = Object.keys(LEVEL_RULES || {}); // e.g. ["beginner","intermediate","advanced"]
     if (!stepLevels.length) {
@@ -554,27 +622,37 @@ export function inferUserLevel(options = {}) {
             const cur = raw[i];
 
             const prevAcc = Number.isFinite(prev.accuracy) ? prev.accuracy : 0;
+            const prevAcc01 = clamp01(prevAcc / 100);
 
-            // (a) accuracy: blend current with previous
-            const blendedAcc = (1 - wAcc) * (cur.accuracy ?? 0) + wAcc * prevAcc;
-            cur.accuracy = Math.max(0, Math.min(100, blendedAcc));
+            // penaltyStrength: 0..1 (0 = no penalty, 1 = max penalty)
+            // Only active when prevAcc01 < 0.85
+            const penaltyStrength = clamp01((0.85 - prevAcc01) / 0.85);
 
-            // (b) score: nudge based on previous accuracy (85% = neutral)
-            const prevAcc01 = Math.max(0, Math.min(1, prevAcc / 100));
-            cur.score = clamp01((cur.score ?? 0) + wScore * (prevAcc01 - 0.85));
+            // (a) accuracy: only pull DOWN (never raise)
+            const curAcc0 = cur.accuracy ?? 0;
+            const blendedAcc = (1 - wAcc) * curAcc0 + wAcc * prevAcc;
 
-            // (c) eligibility: recompute using influenced accuracy (optionally blend with separate weight)
-            // If you want eligibility to use the same blendedAcc, just set wEligAcc = wAcc.
-            const eligAcc = Math.max(
+            // apply only if it would decrease accuracy
+            cur.accuracy = Math.max(
                 0,
-                Math.min(100, (1 - wEligAcc) * (cur.accuracy ?? 0) + wEligAcc * prevAcc)
+                Math.min(100, Math.min(curAcc0, blendedAcc))
             );
+
+            // (b) score: only punish (never boost)
+            // previous formula: + wScore * (prevAcc01 - 0.85)
+            // punishment-only version:
+            cur.score = clamp01((cur.score ?? 0) - wScore * penaltyStrength);
+
+            // (c) eligibility: use influenced accuracy, but also penalty-only
+            const eligBlended = (1 - wEligAcc) * curAcc0 + wEligAcc * prevAcc;
+            const eligAcc = Math.max(0, Math.min(100, Math.min(curAcc0, eligBlended)));
 
             cur.eligible =
                 cur.attempts >= minTotalAttemptsPerLevel &&
                 cur.rulesWithMinAttempts >= minRulesWithAttempts &&
                 eligAcc >= minAccuracy;
         }
+
 
         return raw;
     })();

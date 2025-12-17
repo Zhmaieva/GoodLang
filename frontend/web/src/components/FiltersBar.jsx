@@ -18,7 +18,7 @@ export default function FiltersBar({
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const onResize = () => setIsMobile(window.innerWidth < 893);
+        const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);

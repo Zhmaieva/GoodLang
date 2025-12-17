@@ -3,12 +3,13 @@ import LevelSwitch from "./training/LevelSwitch.jsx";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 import AccountButton from "./subscription/AccountButton.jsx";
 import { WeeklyProgress } from "./training/WeeklyProgress.jsx";
+import AccuracyKpi from "./training/AccuracyKpi.jsx";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const update = () => setIsMobile(window.innerWidth < 893);
+        const update = () => setIsMobile(window.innerWidth < 915);
         update();
         window.addEventListener("resize", update);
         return () => window.removeEventListener("resize", update);
@@ -99,7 +100,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     };
 
     // ---------------------------------------------------------------------
-    // MOBILE LAYOUT (<893px)
+    // MOBILE LAYOUT (<915px)
     // ---------------------------------------------------------------------
     if (isMobile) {
         return (
@@ -119,7 +120,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     {/* Under the header: sub + weekly progress */}
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
                         <div style={{display: "flex", flexDirection: "row", gap: 16, justifyContent: "space-between"}}>
-                            <WeeklyProgress mobile theme={theme}/>
+                            <AccuracyKpi header mobile theme={theme} />
                             <AccountStatusButton mobile theme={theme} />
                         </div>
 
@@ -152,7 +153,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     flexWrap: "wrap",
                     gap: 16,
                     width: "100%",
-                    height: "80px",
+                    height: "100px",
                 }}
             >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
@@ -166,7 +167,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     </div>
                 </div>
 
-                <WeeklyProgress theme={theme} />
+                <AccuracyKpi header mobile theme={theme} />
             </div>
 
             <div

@@ -13,7 +13,7 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick })
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const onResize = () => setIsMobile(window.innerWidth < 893);
+        const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);

@@ -67,17 +67,17 @@ export default function AccountStatusButton({ theme, mobile }) {
         let shadow = theme.accentDark;
         let color = theme.text;
 
-        if (isPaid && !mobile) {
+        if (isPaid) {
             background = theme.green;
             border = theme.greenDark;
             shadow = theme.greenDark;
             color = "#fff";
-        } else if (isAttention && !mobile) {
+        } else if (isAttention) {
             background = "#fff";
             border = theme.accent;
             shadow = theme.accentDark;
             color = theme.accent;
-        } else if (isFree || mobile) {
+        } else if (isFree) {
             background = theme.accent;
             color = "#fff";
             shadow = theme.accentDark;
@@ -91,6 +91,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             lineHeight: 1,
             borderRadius: 999,
             cursor: "pointer",
+            height: "100%",
 
             background,
             color,
@@ -117,7 +118,7 @@ export default function AccountStatusButton({ theme, mobile }) {
                     >
                         {account?.status === "paid" && "Преміум"}
                         {account?.status === "attention" && "Преміум закінчується"}
-                        {account?.status === "free" && "Придбати преміум"}
+                        {account?.status === "free" && "Хочу преміум"}
                     </div>
                 )}
 
@@ -128,8 +129,9 @@ export default function AccountStatusButton({ theme, mobile }) {
                         onMouseLeave={() => setHover(false)}
                         onClick={handleClick}
                     >
-                        {account?.status !== "free" && "Деталі підписки"}
-                        {account?.status === "free" && "Придбрати преміум"}
+                        {account?.status !== "free" && "Преміум"}
+                        {account?.status === "attention" && "Преміум (увага)"}
+                        {account?.status === "free" && "Хочу преміум"}
                     </div>
                 )}
 

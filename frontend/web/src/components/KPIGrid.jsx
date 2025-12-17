@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import AccuracyKpi from "./training/AccuracyKpi.jsx";
 
-export default function KPIGrid({ accuracy, attempts, masteredRules, userLevel }) {
+export default function KPIGrid({ theme, attempts, masteredRules, userLevel }) {
     const LEVEL_MAP = {
         A1: { label: "Початківець", percent: 33 },
         A2: { label: "Середній", percent: 66 },
@@ -11,11 +12,11 @@ export default function KPIGrid({ accuracy, attempts, masteredRules, userLevel }
     const inferred = userLevel?.level || "A1";
     const levelInfo = LEVEL_MAP[inferred] || LEVEL_MAP.A1;
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 893);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 915);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 893);
+            setIsMobile(window.innerWidth < 915);
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
@@ -69,18 +70,14 @@ export default function KPIGrid({ accuracy, attempts, masteredRules, userLevel }
         position: "absolute",
         height: "100%",
         width: `${width}%`,
-        background: "#4ba36e",
+        background: theme.accent,
         left: 0,
         top: 0,
     });
 
     return (
         <section style={gridStyle} id="kpis">
-            <div style={cardStyle}>
-                <div style={labelStyle}>Загальна точність</div>
-                <div style={valueStyle}>{accuracy ?? 0}%</div>
-                <div style={sparkStyle}><i style={sparkFillStyle(accuracy ?? 0)} /></div>
-            </div>
+            <AccuracyKpi mobile={isMobile} theme={theme} />
             <div style={cardStyle}>
                 <div style={labelStyle}>Всього результатів</div>
                 <div style={valueStyle}>{attempts ?? 0}</div>

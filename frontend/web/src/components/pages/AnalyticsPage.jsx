@@ -14,11 +14,9 @@ import KPIGrid from "../KPIGrid";
 import FiltersBar from "../FiltersBar";
 import RulesTable from "../training/RulesTable.jsx";
 import WeakFocus from "../WeakFocus";
-import QueueSection from "../QueueSection";
 import FooterBar from "../FooterBar";
 import {useNavigate} from "react-router-dom";
 import {getAllStatistics, inferUserLevel} from "../../services/dataService.js";
-import {GrammarRule, LEVEL_RULES, RULE_LABELS} from "../../utils/rules.js";
 import AppShell from "../AppShell.jsx";
 import BrandHeader from "../BrandHeader.jsx";
 
@@ -31,11 +29,11 @@ export default function AnalyticsPage({theme}) {
     const [query, setQuery] = useState("");
     const [queue, setQueue] = useState([]);
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 893);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 915);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 893);
+            setIsMobile(window.innerWidth < 915);
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
@@ -106,15 +104,10 @@ export default function AnalyticsPage({theme}) {
                              }
                 />
                 <KPIGrid
-                    accuracy={kpis.accuracy}
+                    theme={theme}
                     attempts={kpis.totalAttempts}
                     masteredRules={kpis.mastered}
-                    userLevel={inferUserLevel({
-                        minAttemptsPerRule: 1,
-                        minRulesWithAttempts: 6,
-                        minTotalAttemptsPerLevel: 6,
-                        minAccuracy: 85
-                    })}
+                    userLevel={inferUserLevel()}
                 />
                 <FiltersBar
                     filterLevel={filterLevel}

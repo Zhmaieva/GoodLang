@@ -50,14 +50,14 @@ h1 {
 }
 
 /* Адаптивність для мобільних */
-@media (max-width: 893px) {
+@media (max-width: 915px) {
     .actions {
         width: 100% !important;
         justify-content: end; /* кнопка під заголовком */
     }
 }
 
-@media (min-width: 893px) {
+@media (min-width: 915px) {
     .actions {
         width: auto;
         justify-content: flex-end; /* кнопка справа */

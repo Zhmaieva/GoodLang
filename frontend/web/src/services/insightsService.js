@@ -174,12 +174,7 @@ export function getLearningState() {
     }
 
     // 2) Поточний рівень та порядок рівнів
-    const levelInfo = inferUserLevel({
-        minAttemptsPerRule: 1,
-        minRulesWithAttempts: 6,
-        minTotalAttemptsPerLevel: 6,
-        minAccuracy: 85
-    });
+    const levelInfo = inferUserLevel();
 
     const currentStepLevel = levelInfo?.level || "beginner";
 
@@ -289,12 +284,7 @@ export function estimateTimeToNextLevelText() {
     const nextLevel = nextLevels?.length > 0 ? nextLevels[0] : 'B2';
 
     // 2) Поточний рівень та порядок рівнів
-    const levelInfo = inferUserLevel({
-        minAttemptsPerRule: 1,
-        minRulesWithAttempts: 6,
-        minTotalAttemptsPerLevel: 6,
-        minAccuracy: 85
-    });
+    const levelInfo = inferUserLevel();
 
     const totalAttempts = levelInfo.levels.reduce((acc, level) => acc + level.attempts, 0);
 
