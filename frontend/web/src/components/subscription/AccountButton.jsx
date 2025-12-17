@@ -69,7 +69,7 @@ export default function AccountButton({ theme, mobile }) {
         isLoading
         ? <></>
         : <>
-            {!mobile && <button
+            {!mobile && account?.email && <button
                 style={btnStyle}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}

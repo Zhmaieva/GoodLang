@@ -120,7 +120,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
                         <div style={{display: "flex", flexDirection: "row", gap: 16, justifyContent: "space-between"}}>
                             <WeeklyProgress mobile theme={theme}/>
-                            <AccountButton mobile theme={theme}/>
+                            <AccountStatusButton mobile theme={theme} />
                         </div>
 
                     </div>
@@ -185,7 +185,6 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     }}
                 >
                     <AccountStatusButton theme={theme} />
-                    <AccountButton theme={theme} />
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
