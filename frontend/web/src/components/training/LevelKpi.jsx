@@ -1,11 +1,16 @@
 
 import React, {useEffect} from "react";
 import {getOverallAccuracy, inferUserLevel} from "../../services/dataService.js";
+import {off, on} from "../../services/events.js";
 
 export default function LevelKpi({ mobile, theme }) {
     const [isMobile, setIsMobile] = React.useState(mobile);
+    const [accuracy, setAccuracy] = React.useState(0)
+    const [attemptsLeft, setAttemptsLeft] = React.useState(0);
+    const [levelInfo, setLevelInfo] = React.useState(0);
+    const [isLoading, setIsLoading] = React.useState(true);
 
-    const userLevel = inferUserLevel();
+
     const LEVEL_MAP = {
         A1: { label: "Початківець", percent: 33 },
         A2: { label: "Середній", percent: 66 },
@@ -13,19 +18,26 @@ export default function LevelKpi({ mobile, theme }) {
         B2: { label: "Просунутий", percent: 100 },
     };
 
-    const inferred = userLevel?.level || "A1";
-    const levelInfo = LEVEL_MAP[inferred] || LEVEL_MAP.A1;
+    const onRefresh = () => {
+        const userLevel = inferUserLevel();
+        const inferred = userLevel?.level || "A1";
+        setLevelInfo(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
 
-    const overall = getOverallAccuracy();
-    const accuracy = Number.isFinite(overall?.accuracy) ? overall.accuracy : 0;
-    const attemptsLeft = overall.attemptsLeft ?? 0;
+        const overall = getOverallAccuracy();
+        setAccuracy(Number.isFinite(overall?.accuracy) ? overall.accuracy : 0);
+        setAttemptsLeft(overall.attemptsLeft ?? 0);
+    }
+    const onResize = () => setIsMobile(window.innerWidth < 915);
 
     useEffect(() => {
-        const onResize = () => setIsMobile(window.innerWidth < 915);
+        onRefresh();
         onResize();
 
+        on("weeklyProgressUpdate", onRefresh);
         window.addEventListener("resize", onResize);
+
         return () => {
+            off("weeklyProgressUpdate", onRefresh);
             window.removeEventListener("resize", onResize);
         }
     }, []);
