@@ -24,10 +24,9 @@ export async function getToken() {
 - fix dates translation
 - fix declarative sentences absent level and others
 
-- setup stripe listener on prod
-- setup stripe account
-
 - TOU
 
-- add progress bar to rule page
+- add email/number input type and enter
+- add a progress bar to the rule page
+- add ordering in the rules table
  */

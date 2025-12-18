@@ -18,6 +18,12 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
     const [account, setAccount] = useState(null);
 
 
+    const onCloseHandler = () => {
+        if (isPaying)
+            window.location.reload();
+        onClose();
+    }
+
     // ⏳ Countdown timer — only when limit is reached
     useEffect(() => {
         if (!open || !isLimitReached) return;
@@ -28,7 +34,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(interval);
-                    onClose();
+                    onCloseHandler();
                     return 0;
                 }
                 return prev - 1;
@@ -36,7 +42,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [open, isLimitReached, waitTimeSeconds, onClose]);
+    }, [open, isLimitReached, waitTimeSeconds, onCloseHandler]);
 
     function formatTime(sec) {
         const h = Math.floor(sec / 3600);
@@ -96,7 +102,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                     alignItems: "center",
                     justifyContent: "center",
                     zIndex: 9999
-                }} onClick={onClose}>
+                }} onClick={onCloseHandler}>
                     <div style={{
                         background: theme.bg,
                         padding: "32px",
@@ -219,7 +225,24 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
 
                     </div>
 
-                    <div id="embedded-checkout-container" style={{display: "none", marginTop: 24}}></div>
+                    <div
+                        id="embedded-checkout-container"
+                        style={{
+                            display: "none",
+
+                            width: "92vw",
+                            maxWidth: 720,          // 👈 makes it feel much better
+                            margin: "0 auto",
+                            background: theme.bg,
+                            borderRadius: theme.radius * 1.2,
+                            border: `4px solid ${theme.accent}`,
+                            boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                            padding: 16,
+
+                            maxHeight: "92vh",      // 👈 prevents “super long” look
+                            overflow: "auto",
+                        }}
+                    />
                 </div>
             }
             {
@@ -227,7 +250,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                 <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen} onClose={() => {
                     setLoginModalOpen(false);
                     setLoading(false);
-                    onClose();
+                    onCloseHandler();
                 }}/>
             }
         </>
