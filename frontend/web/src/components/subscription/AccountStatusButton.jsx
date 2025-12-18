@@ -2,8 +2,8 @@ import React, {useEffect, useRef, useState} from "react";
 import {callAccountInfoApi} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
-import LoginForm from "./LoginForm.jsx";
 import LoginModal from "./LoginModal.jsx";
+import {getOverallAccuracy} from "../../services/dataService.js";
 
 export default function AccountStatusButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
@@ -19,8 +19,9 @@ export default function AccountStatusButton({ theme, mobile }) {
         effectRan.current = true;
 
         loadStatus().then((data) => {
+            const {attemptsLeft} = getOverallAccuracy();
             console.log(data);
-            if (data?.status === 'free' && data?.email)
+            if (data?.status === 'free' && attemptsLeft <= 0)
                 setLimitModalOpen(true);
         });
 

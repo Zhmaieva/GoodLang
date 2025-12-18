@@ -95,8 +95,8 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                 !loginModalOpen && <div style={{
                     position: "fixed",
                     top: 0, left: 0,
-                    width: "100vw",
-                    height: "100vh",
+                    width: "100%",
+                    height: "100%",
                     background: "rgba(0,0,0,0.35)",
                     display: "flex",
                     alignItems: "center",
@@ -115,7 +115,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                         display: !isPaying ? "block" : "none",
                     }} onClick={e => e.stopPropagation()}>
                         <h2 style={{marginBottom: 16, color: theme.text, fontSize: "24pt", fontWeight: 800}}>
-                            {isLimitReached ? "Повернись до навчання за:" : "Навчання в повну силу"}
+                            {isLimitReached ? "Повернись до навчання за:" : "Навчання у повну силу"}
                         </h2>
 
                         {isLimitReached && timeLeft > 0 && (
@@ -237,9 +237,8 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                             borderRadius: theme.radius * 1.2,
                             border: `4px solid ${theme.accent}`,
                             boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                            padding: 16,
 
-                            maxHeight: "92vh",      // 👈 prevents “super long” look
+                            maxHeight: "75%",      // 👈 prevents “super long” look
                             overflow: "auto",
                         }}
                     />
