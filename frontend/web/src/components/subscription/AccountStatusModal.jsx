@@ -23,7 +23,7 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
     const benefits = [
         "Необмежена кількість завдань",
         "Хмарне збереження прогресу",
-        "Синхронізація на всіх пристроях",
+        "Доступ з усіх пристроїв",
         "Пріоритетна підтримка"
     ];
 

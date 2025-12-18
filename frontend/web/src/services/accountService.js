@@ -24,6 +24,9 @@ export async function getToken() {
 - fix dates translation
 - fix declarative sentences absent level and others
 
+- setup stripe listener on prod
+- setup stripe account
+
 - add progress bar to rule page
 - add floating trainer on rule page
 - tooltips for analytics chips

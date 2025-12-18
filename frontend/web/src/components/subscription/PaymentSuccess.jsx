@@ -9,10 +9,10 @@ export default function PaymentSuccess() {
             <h1 style={{ color: "#4ba36e" }}>Оплата успішна!</h1>
             <p>Ви отримали преміум доступ з наступними можливостями:</p>
             <ul style={{ textAlign: "left", display: "inline-block", marginTop: 20 }}>
-                <li><span style={{marginRight: 8, opacity: 0.5}}>•</span> Необмежена кількість завдань та перевірок</li>
-                <li><span style={{marginRight: 8, opacity: 0.5}}>•</span> Хмарне збереження прогресу</li>
-                <li><span style={{marginRight: 8, opacity: 0.5}}>•</span> Синхронізація на всіх пристроях</li>
-                <li><span style={{marginRight: 8, opacity: 0.5}}>•</span> Пріорітетна підтримка</li>
+                <li>Необмежена кількість завдань та перевірок</li>
+                <li>Хмарне збереження прогресу</li>
+                <li>Доступ з усіх пристроїв</li>
+                <li>Пріоритетна підтримка</li>
             </ul>
             <button
                 onClick={() => navigate("/")}

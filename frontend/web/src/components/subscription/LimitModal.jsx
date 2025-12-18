@@ -157,7 +157,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                         </li>
                         <li>
                             <span style={{marginRight: 8, opacity: 0.5}}>•</span>
-                            Синхронізація на всіх пристроях
+                            Доступ з усіх пристроїв
                         </li>
                         <li>
                             <span style={{marginRight: 8, opacity: 0.5}}>•</span>
