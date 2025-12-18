@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import {callManageSubscriptionApi} from "../../services/api.js";
+import LoginModal from "./LoginModal.jsx";
 
 export default function AccountStatusModal({ theme, open, onClose, status }) {
+    const [loginModalOpen, setLoginModalOpen] = useState(false);
+    const [account, setAccount] = useState(null);
+
     if (!open) return null;
 
     const titleMap = {
@@ -74,78 +78,102 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
     }
 
     return (
-        <div style={{
-            position: "fixed",
-            top: 0, left: 0,
-            width: "100vw",
-            height: "100vh",
-            background: "rgba(0,0,0,0.35)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 9999
-        }}>
-            <div style={{
-                background: theme.bg,
-                padding: "36px",
-                borderRadius: theme.radius * 1.2,
-                border: `4px solid ${theme.accent}`,
-                width: "90%",
-                maxWidth: 480,
-                textAlign: "center",
-                boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                gap: "12px"
-            }}>
-                <h2 style={{ marginBottom: 16, color: theme.text, fontSize: "1.7rem", fontWeight: 800 }}>
-                    {titleMap[status]}
-                </h2>
-
-                <p style={{
-                    whiteSpace: "pre-line",
-                    color: theme.muted,
-                    fontSize: "1.1rem",
-                    marginBottom: 20,
-                    lineHeight: "1.45"
+        <div>
+            {
+                !loginModalOpen &&
+                <div onClick={onClose} style={{
+                    position: "fixed",
+                    top: 0, left: 0,
+                    width: "100vw",
+                    height: "100vh",
+                    background: "rgba(0,0,0,0.35)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    zIndex: 9999
                 }}>
-                    {textMap[status]}
-                </p>
-
-                {status === "paid" && (
-                    <ul style={{
-                        listStyle: "none",
-                        padding: 0,
-                        margin: "0 auto",
-                        maxWidth: 280,
-                        textAlign: "left",
-                        fontSize: "1.05rem",
-                        lineHeight: "1.6",
-                        color: theme.text,
-                        fontWeight: 500
+                    <div onClick={(e) => e.stopPropagation()} style={{
+                        background: theme.bg,
+                        padding: "36px",
+                        borderRadius: theme.radius * 1.2,
+                        border: `4px solid ${theme.accent}`,
+                        width: "90%",
+                        maxWidth: 480,
+                        textAlign: "center",
+                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                        gap: "12px"
                     }}>
-                        {benefits.map(b => (
+                        <h2 style={{marginBottom: 16, color: theme.text, fontSize: "1.7rem", fontWeight: 800}}>
+                            {titleMap[status]}
+                        </h2>
 
-                            <li key={b}>
-                                <span style={{marginRight: 8, opacity: 0.5}}>•</span> {b}
-                            </li>
-                        ))}
-                    </ul>
-                )}
+                        <p style={{
+                            whiteSpace: "pre-line",
+                            color: theme.muted,
+                            fontSize: "1.1rem",
+                            marginBottom: 20,
+                            lineHeight: "1.45"
+                        }}>
+                            {textMap[status]}
+                        </p>
 
-                <div style={{display: "flex", marginTop: "12px", flexDirection: "column", gap: "12px", justifyContent: "space-between"}}>
-                    {(status === "paid" || status === "attention") && (
-                        <button
-                            style={manageBtnStyle}
-                            onClick={onManage} // open stripe portal
-                        >
-                            Керувати підпискою
-                        </button>
-                    )}
+                        {status === "paid" && (
+                            <ul style={{
+                                listStyle: "none",
+                                padding: 0,
+                                margin: "0 auto",
+                                maxWidth: 280,
+                                textAlign: "left",
+                                fontSize: "1.05rem",
+                                lineHeight: "1.6",
+                                color: theme.text,
+                                fontWeight: 500
+                            }}>
+                                {benefits.map(b => (
 
-                    <button onClick={onClose} style={closeBtnStyle}>
-                        Закрити
-                    </button>
+                                    <li key={b}>
+                                        <span style={{marginRight: 8, opacity: 0.5}}>•</span> {b}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+
+                        <div style={{
+                            display: "flex",
+                            marginTop: "12px",
+                            flexDirection: "column",
+                            gap: "12px",
+                            justifyContent: "space-between"
+                        }}>
+                            {(status === "paid" || status === "attention") && (
+                                <button
+                                    style={manageBtnStyle}
+                                    onClick={onManage} // open stripe portal
+                                >
+                                    Керувати підпискою
+                                </button>
+                            )}
+
+                            <button onClick={() => {
+                                setLoginModalOpen(true)
+                            }} style={closeBtnStyle}>
+                                Увійти в інший акаунт
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            }
+            {
+                loginModalOpen &&
+                <div onClick={(e) => e.stopPropagation()}>
+                    <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen}
+                                onClose={() => {
+                                    setLoginModalOpen(false);
+                                    onClose();
+                                }
+                                }/>
+                </div>
+            }
         </div>
     );
 }

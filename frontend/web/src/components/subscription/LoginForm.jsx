@@ -36,12 +36,11 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     const baseInputStyle = {
         resize: "none",
         flex: 1,
-        minHeight: 70,
         borderRadius: theme.radius,
         border: `3px solid ${theme.accent}`,
         background: "#fffaf3",
         padding: "12px 14px",
-        fontSize: isMobile ? "1.3rem" : "2rem",
+        fontSize: "1.3rem",
         color: theme.text,
         textAlign: "center",
         caretColor: "grey"
@@ -151,7 +150,9 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         <div style={{display: "flex", flexDirection: "column", gap: 12}}>
             {step === "email" && (
                 <>
-                    <h3>Введіть свій імейл</h3>
+                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "24pt", fontWeight: 800}}>Введіть свій
+                        імейл
+                    </h2>
                     <input
                         type="email"
                         placeholder="goodlang.app@example.com"
@@ -173,9 +174,11 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
             {step === "code" && (
                 <>
-                    <h3>Введіть код з імейлу</h3>
+                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "24pt", fontWeight: 800}}>Введіть код з
+                        імейлу
+                    </h2>
                     <div style={{display: "flex", gap: 8}}>
-                        {code.map((digit, i) => (
+                    {code.map((digit, i) => (
                             <input
                                 key={i}
                                 ref={(el) => (inputsRef.current[i] = el)}
@@ -201,6 +204,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                     input::placeholder,
                     textarea::placeholder {
                         text-align: center;
+                        font-size: 1.3rem
                     }
                 `}
             </style>
