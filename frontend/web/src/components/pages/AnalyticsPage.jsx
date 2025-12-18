@@ -138,7 +138,7 @@ export default function AnalyticsPage({theme}) {
                 {/*    onStartPractice={onStartPractice}*/}
                 {/*    fmtDateEnShort={fmtDateEnShort}*/}
                 {/*/>*/}
-                <FooterBar />
+                <FooterBar theme={theme}/>
             </div>
 
         </AppShell>

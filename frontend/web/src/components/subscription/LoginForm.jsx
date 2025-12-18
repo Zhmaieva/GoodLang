@@ -154,7 +154,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                     <h3>Введіть свій імейл</h3>
                     <input
                         type="email"
-                        placeholder="goodlang@example.com"
+                        placeholder="goodlang.app@example.com"
                         value={emailInput}
                         onChange={(e) => setEmailInput(e.target.value)}
                         style={{

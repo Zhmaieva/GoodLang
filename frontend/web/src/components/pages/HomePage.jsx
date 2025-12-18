@@ -4,6 +4,7 @@ import AppShell from "../AppShell";
 import Header from "../Header";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import Trainer from "../training/Trainer.jsx";
+import FooterBar from "../FooterBar.jsx";
 
 export default function HomePage({ theme }) {
 
@@ -69,18 +70,7 @@ export default function HomePage({ theme }) {
                     </button>
                 </section>
 
-                <footer style={{
-                    marginTop: 32,
-                    textAlign: "center",
-                    color: theme.muted,
-                    fontSize: 13,
-                    borderTop: `2px solid ${theme.accent}`,
-                    paddingTop: 12
-                }}>
-                    <div style={analyticsButtonStyles.container}>
-                        <div>© 2025 GoodLang</div>
-                    </div>
-                </footer>
+                <FooterBar theme={theme} />
             </div>
         </AppShell>
     );

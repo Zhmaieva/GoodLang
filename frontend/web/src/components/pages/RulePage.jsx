@@ -9,6 +9,7 @@ import Note from "../Note";
 import Footer from "../Footer";
 import Trainer from "../training/Trainer.jsx";
 import {useNavigate} from "react-router-dom";
+import FooterBar from "../FooterBar.jsx";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -168,9 +169,7 @@ export default function RulePage({ data, theme }) {
                     ))}
                 </section>
 
-                <Footer theme={theme}>
-                    © 2025 GoodLang • Пояснення правила <em>{data.title}</em>
-                </Footer>
+                <FooterBar theme={theme} />
             </div>
         </AppShell>
     );
