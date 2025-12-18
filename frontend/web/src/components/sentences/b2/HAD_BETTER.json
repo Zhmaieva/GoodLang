@@ -18,7 +18,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "rules": ["HAD_BETTER"],
     "ua": "Тобі краще цього не робити.",
     "en": [
       "You’d better not do that.",
@@ -98,7 +98,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "rules": ["HAD_BETTER"],
     "ua": "Вам краще цього не ігнорувати.",
     "en": [
       "You’d better not ignore this.",
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["HAD_BETTER"],
     "ua": "Вона завжди каже, що краще бути чесною.",
     "en": [
       "She always says you’d better be honest.",
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "rules": ["HAD_BETTER"],
     "ua": "Тобі краще цього не забувати.",
     "en": [
       "You’d better not forget this.",
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "THERE_ISNT_ARENT_ANY", "ARTICLES"],
+    "rules": ["HAD_BETTER", "THERE_IS_ARE", "ARTICLES"],
     "ua": "Тобі краще купити продукти, бо в холодильнику нічого немає.",
     "en": [
       "You’d better buy some groceries, there isn’t any food in the fridge.",
@@ -386,7 +386,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "NEGATION_DONT_DOESNT"],
+    "rules": ["HAD_BETTER"],
     "ua": "Ти краще цього не торкайся.",
     "en": [
       "You’d better not touch that.",
@@ -458,7 +458,7 @@
     ]
   },
   {
-    "rules": ["HAD_BETTER", "THERE_ISNT_ARENT_ANY"],
+    "rules": ["HAD_BETTER", "THERE_IS_ARE"],
     "ua": "Ти краще зроби покупки, бо вдома немає їжі.",
     "en": [
       "You’d better go shopping because there's no food at home.",

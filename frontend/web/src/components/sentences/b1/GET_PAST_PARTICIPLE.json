@@ -4,235 +4,235 @@
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Я швидко одягаюся вранці.",
       "en": ["I get dressed quickly in the morning."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Вона вийшла заміж минулого літа.",
       "en": ["She got married last summer."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Вони розлучилися два роки тому.",
       "en": ["They got divorced two years ago."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Ми заблукали в місті.",
       "en": ["We got lost in the city."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Вона обпеклася гарячою сковорідкою.",
       "en": ["She got burned by the hot pan."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Вони застрягли в заторі.",
       "en": ["They got stuck in traffic."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Його вкусив комар.",
       "en": ["He got bitten by a mosquito."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Я потрапив під дощ.",
       "en": ["I got caught in the rain."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Йому платять щоп’ятниці.",
       "en": ["He gets paid every Friday."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Нас запросили на їхнє весілля.",
       "en": ["We got invited to their wedding."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Нам запропонували безкоштовні квитки.",
       "en": ["We got offered free tickets."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Їх обдурив шахрай.",
       "en": ["They got tricked by a scammer."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Його пограбували дорогою додому.",
       "en": ["He got robbed on his way home."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Нас ошукали онлайн.",
       "en": ["We got scammed online."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Їх спіймали на крадіжці.",
       "en": ["They got caught stealing."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "На нього накричав учитель.",
       "en": ["He got yelled at by the teacher."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Нас проігнорував офіціант.",
       "en": ["We got ignored by the waiter."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Мене вдарили сніжкою.",
       "en": ["I got hit by a snowball."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Її звільнили несправедливо.",
       "en": ["She got fired unfairly."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Їх звинуватили у брехні.",
       "en": ["They got accused of lying."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Його образив незнайомець.",
       "en": ["He got insulted by a stranger."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Нам відмовили у вході.",
       "en": ["We got denied entry."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "З мене взяли забагато в магазині.",
       "en": ["I got overcharged at the store."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Її залишили позаду.",
       "en": ["She got left behind."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Він обгорів на сонці.",
       "en": ["He got burned by the sun."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Вікна розбилися під час бурі.",
       "en": ["The windows got broken during the storm."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Проєкт завершився вчасно.",
       "en": ["The project got finished on time."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Машина пошкодилась в аварії.",
       "en": ["The car got damaged in the accident."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Двері закрились помилково.",
       "en": ["The door got locked by mistake."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Файли видалили.",
       "en": ["The files got deleted."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Будинок пофарбували минулого тижня.",
       "en": ["The house got painted last week."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Фото завантажили.",
       "en": ["The photo got uploaded."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Зустріч скасували.",
       "en": ["The meeting got canceled."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "План знову змінили.",
       "en": ["The plan got changed again."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Концерт перенесли.",
       "en": ["The concert got postponed."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Машину полагодили.",
       "en": ["The car got fixed."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Повідомлення доставили.",
       "en": ["The message got delivered."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Ідею схвалили.",
       "en": ["The idea got approved."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     },
     {
       "rules": ["GET_PAST_PARTICIPLE"],
       "ua": "Правило оновили.",
       "en": ["The rule got updated."],
-      "hint": "use GET + PAST PARTICIPLE"
+      "hint": "використовуй GET + PAST PARTICIPLE"
     }
   ]
 }

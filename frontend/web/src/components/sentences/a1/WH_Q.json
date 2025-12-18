@@ -71,7 +71,7 @@
       "en": ["What were you doing at eight?", "What were you doing at 8?"]
     },
     {
-      "rules": ["WH_Q", "FUTURE_WITH_PRESENT_CONT", "PREP_TIME"],
+      "rules": ["WH_Q", "PRESENT_CONT_NOW", "PREP_TIME"],
       "ua": "Коли ти зустрічаєшся з Марком?",
       "en": ["When are you meeting Mark?"]
     },
@@ -251,7 +251,7 @@
       "en": ["Where does she live?", "Where’s she living?"]
     },
     {
-      "rules": ["WH_Q", "PAST_SIMPLE", "DID_QUEST_NEG"],
+      "rules": ["WH_Q", "PAST_SIMPLE"],
       "ua": "Чому він не прийшов?",
       "en": ["Why didn’t he come?"]
     },
@@ -306,7 +306,7 @@
       "en": ["Who are your best friends?", "Who are your closest friends?"]
     },
     {
-      "rules": ["WH_Q", "GOING_TO_PLANS", "FUTURE_WITH_PRESENT_CONT"],
+      "rules": ["WH_Q", "GOING_TO_PLANS"],
       "ua": "Куди ти поїдеш наступного літа?",
       "en": ["Where are you going next summer?", "Where will you go next summer?"]
     },
@@ -336,7 +336,7 @@
       "en": ["How do you get to school?", "How do you travel to school?"]
     },
     {
-      "rules": ["WH_Q", "NEGATION_DONT_DOESNT"],
+      "rules": ["WH_Q"],
       "ua": "Чому ти не любиш читати?",
       "en": ["Why don’t you like reading?", "Why do you dislike reading?"]
     },
@@ -381,7 +381,7 @@
       "en": ["Who wrote this book?"]
     },
     {
-      "rules": ["WH_Q", "WILL_PREDICTIONS", "FUTURE_WITH_PRESENT_CONT"],
+      "rules": ["WH_Q", "WILL_PREDICTIONS"],
       "ua": "Де вони будуть завтра ввечері?",
       "en": ["Where will they be tomorrow evening?", "Where are they going to be tomorrow night?"]
     },
@@ -456,7 +456,7 @@
       "en": ["Where did you find these keys?", "Where did you get those keys?"]
     },
     {
-      "rules": ["WH_Q", "PAST_SIMPLE", "DID_QUEST_NEG"],
+      "rules": ["WH_Q", "PAST_SIMPLE"],
       "ua": "Чому ти не пішов до школи?",
       "en": ["Why didn’t you go to school?"]
     },

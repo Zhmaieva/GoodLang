@@ -5,7 +5,7 @@
     "en": ["She often goes to the park."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я ніколи не п’ю каву вранці.",
     "en": ["I never drink coffee in the morning."]
   },
@@ -40,7 +40,7 @@
     "en": ["I always read a book before bed."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він ніколи не їсть солодкого.",
     "en": ["He never eats sweets."]
   },
@@ -195,7 +195,7 @@
     "en": ["He always comes to work on time."]
   },
   {
-    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+    "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Я ніколи не забуваю годувати кота.",
     "en": ["I never forget to feed the cat."]
   },

@@ -155,7 +155,7 @@
     "en": ["Those cars are in the parking lot.", "Those cars are in the car park."]
   },
   {
-    "rules": ["DEMONSTRATIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "rules": ["DEMONSTRATIVES", "TO_BE"],
     "ua": "Це не моя чашка.",
     "en": ["This is not my cup.", "This isn't my cup."]
   },

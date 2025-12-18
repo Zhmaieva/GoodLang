@@ -8,7 +8,7 @@
       "I study every day in order to improve my English.",
       "I study every day to improve my English."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
@@ -19,7 +19,7 @@
       "She got up early in order not to be late.",
       "She got up early not to be late."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
@@ -42,7 +42,7 @@
       "They drove to town in order to buy groceries.",
       "They drove to town to buy groceries."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -53,7 +53,7 @@
       "I called her in order to find out the news.",
       "I called her to find out the news."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
@@ -64,7 +64,7 @@
       "She signed up for courses in order to find a new job.",
       "She signed up for courses to find a new job."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -75,7 +75,7 @@
       "I took an umbrella in order not to get wet.",
       "I took an umbrella not to get wet."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -86,7 +86,7 @@
       "He stopped in order to rest.",
       "He stopped to rest."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -97,7 +97,7 @@
       "They came early in order to get good seats.",
       "They came early to get good seats."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
@@ -108,7 +108,7 @@
       "We turned off the TV in order to keep it quiet.",
       "We turned off the TV to keep it quiet."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -119,7 +119,7 @@
       "I wrote it down in order not to forget.",
       "I wrote it down not to forget."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -130,7 +130,7 @@
       "She saved money in order to buy a new phone.",
       "She saved money to buy a new phone."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -141,7 +141,7 @@
       "I made a copy in order to have a spare one.",
       "I made a copy to have a spare one."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
@@ -152,7 +152,7 @@
       "He left the window open in order to let the cat get outside.",
       "He left the window open to let the cat get outside."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "PREP_PLACE"],
@@ -163,7 +163,7 @@
       "We arrived early in order to avoid traffic.",
       "We arrived early to avoid traffic."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -174,7 +174,7 @@
       "I kept the receipt in order to have proof of purchase.",
       "I kept the receipt to have proof of purchase."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -185,7 +185,7 @@
       "She stayed home in order to look after the baby.",
       "She stayed home to look after the baby."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -196,7 +196,7 @@
       "They left quietly in order not to wake anyone up.",
       "They left quietly not to wake anyone up."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
@@ -207,7 +207,7 @@
       "I bought flowers in order to make her happy.",
       "I bought flowers to make her happy."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -218,7 +218,7 @@
       "We rescheduled the meeting in order to let everyone come.",
       "We rescheduled the meeting to let everyone come."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
@@ -229,7 +229,7 @@
       "She wore her glasses in order to see better.",
       "She wore her glasses to see better."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -240,7 +240,7 @@
       "I cleaned the room in order to make it look neat.",
       "I cleaned the room to make it look neat."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -251,7 +251,7 @@
       "He took an extra blanket in order not to get cold.",
       "He took an extra blanket not to get cold."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
@@ -262,7 +262,7 @@
       "We left early in order not to get caught in the rain.",
       "We left early not to get caught in the rain."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
@@ -273,7 +273,7 @@
       "They made dinner in order for us to eat together.",
       "They made dinner for us to eat together."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -284,7 +284,7 @@
       "I left a note in order for him to know where I was.",
       "I left a note for him to know where I was."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -295,7 +295,7 @@
       "He came early in order to help me.",
       "He came early to help me."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
@@ -306,7 +306,7 @@
       "We spoke quietly in order not to disturb anyone.",
       "We spoke quietly not to disturb anyone."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -317,7 +317,7 @@
       "I did it in order to prove I was right.",
       "I did it to prove I was right."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -328,7 +328,7 @@
       "She came late in order not to run into him.",
       "She came late not to run into him."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -339,7 +339,7 @@
       "They called early in order to confirm the reservation.",
       "They called early to confirm the reservation."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE", "COMPARATIVES"],
@@ -350,7 +350,7 @@
       "I closed the window in order to make it quieter.",
       "I closed the window to make it quieter."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
@@ -361,7 +361,7 @@
       "We work out in order to get stronger.",
       "We work out to get stronger."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -372,7 +372,7 @@
       "I'm saving in order to go on a trip.",
       "I'm saving to go on a trip."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -383,7 +383,7 @@
       "She wore a coat in order not to freeze.",
       "She wore a coat not to freeze."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
@@ -394,7 +394,7 @@
       "I brought some water in order for you to drink.",
       "I brought some water for you to drink."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -405,7 +405,7 @@
       "We're saving in order to buy a house.",
       "We're saving to buy a house."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
@@ -416,7 +416,7 @@
       "She speaks louder in order to be heard better.",
       "She speaks louder to be heard better."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -427,7 +427,7 @@
       "He works out daily in order to win the competition.",
       "He works out daily to win the competition."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
@@ -438,7 +438,7 @@
       "We changed the plan in order to make it convenient for everyone.",
       "We changed the plan to make it convenient for everyone."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -449,7 +449,7 @@
       "I wrote a letter in order to thank them.",
       "I wrote a letter to thank them."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
@@ -460,7 +460,7 @@
       "They left the light on in order to make the road visible.",
       "They left the light on to make the road visible."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -471,7 +471,7 @@
       "She took a map in order not to get lost.",
       "She took a map not to get lost."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -482,7 +482,7 @@
       "We made a video in order not to forget the moment.",
       "We made a video not to forget the moment."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
@@ -493,7 +493,7 @@
       "I work hard in order to earn more.",
       "I work hard to earn more."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -504,7 +504,7 @@
       "She made breakfast in order for everyone to eat.",
       "She made breakfast for everyone to eat."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -515,7 +515,7 @@
       "We bought a present in order to surprise them.",
       "We bought a present to surprise them."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "PREP_PLACE"],
@@ -526,7 +526,7 @@
       "He brought a flashlight in order to see in the dark.",
       "He brought a flashlight to see in the dark."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE", "PREP_PLACE"],
@@ -537,7 +537,7 @@
       "We left the light on in order to make it visible from afar.",
       "We left the light on to make it visible from afar."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
@@ -548,7 +548,7 @@
       "She spoke quietly in order not to be heard.",
       "She spoke quietly not to be heard."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -559,7 +559,7 @@
       "I saved up in order to buy a car next year.",
       "I saved up to buy a car next year."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -570,7 +570,7 @@
       "We left a note in order for him to know where we were.",
       "We left a note for him to know where we were."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -581,7 +581,7 @@
       "He did it on purpose in order to draw attention to the problem.",
       "He did it on purpose to draw attention to the problem."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -592,7 +592,7 @@
       "I opened the window in order to air out the room.",
       "I opened the window to air out the room."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -603,7 +603,7 @@
       "She memorized the text in order not to forget it on stage.",
       "She memorized the text not to forget it on stage."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -614,7 +614,7 @@
       "We came early in order to set up the place.",
       "We came early to set up the place."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -625,7 +625,7 @@
       "He raised his hand in order to ask a question.",
       "He raised his hand to ask a question."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -636,7 +636,7 @@
       "I wore headphones in order not to hear the noise.",
       "I wore headphones not to hear the noise."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -647,7 +647,7 @@
       "She opened her laptop in order to check her email.",
       "She opened her laptop to check her email."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
@@ -658,7 +658,7 @@
       "We went faster in order not to be late for the meeting.",
       "We went faster not to be late for the meeting."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
@@ -669,7 +669,7 @@
       "I took a deep breath in order to calm down.",
       "I took a deep breath to calm down."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
@@ -680,7 +680,7 @@
       "We double-checked in order to avoid mistakes.",
       "We double-checked to avoid mistakes."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -691,7 +691,7 @@
       "He shut the door in order to keep the cat from running away.",
       "He shut the door to keep the cat from running away."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -702,7 +702,7 @@
       "I left my phone at home in order not to get distracted.",
       "I left my phone at home not to get distracted."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -713,7 +713,7 @@
       "She made a copy in order to keep the original from getting lost.",
       "She made a copy to keep the original from getting lost."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -724,7 +724,7 @@
       "I muted it in order to make sure nobody would hear the ringtone.",
       "I muted it to make sure nobody would hear the ringtone."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -735,7 +735,7 @@
       "We turned our phones off in order to concentrate.",
       "We turned our phones off to concentrate."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -746,7 +746,7 @@
       "I got everything ready in order not to be in a hurry in the morning.",
       "I got everything ready not to be in a hurry in the morning."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -757,7 +757,7 @@
       "She brought water in order for us to give the dog a drink.",
       "She brought water for us to give the dog a drink."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -768,7 +768,7 @@
       "I stopped for a moment in order to think.",
       "I stopped for a moment to think."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -779,7 +779,7 @@
       "She wore gloves in order to keep her hands from freezing.",
       "She wore gloves to keep her hands from freezing."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
@@ -790,7 +790,7 @@
       "I left the lamp on in order to see at night.",
       "I left the lamp on to see at night."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -801,7 +801,7 @@
       "She brought an umbrella in order to keep us from getting wet.",
       "She brought an umbrella to keep us from getting wet."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
@@ -812,7 +812,7 @@
       "He spoke slowly in order to be understood even by children.",
       "He spoke slowly to be understood even by children."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE", "COMPARATIVES"],
@@ -823,7 +823,7 @@
       "We updated the system in order to make it run more efficiently.",
       "We updated the system to make it run more efficiently."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -834,7 +834,7 @@
       "He left a message in order to avoid any doubt about his intentions.",
       "He left a message to avoid any doubt about his intentions."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -845,7 +845,7 @@
       "She delayed the meeting in order to let everyone attend.",
       "She delayed the meeting to let everyone attend."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "COMPARATIVES"],
@@ -856,7 +856,7 @@
       "He spoke louder in order to be heard by everyone.",
       "He spoke louder to be heard by everyone."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -867,7 +867,7 @@
       "We made a backup in order not to lose any data.",
       "We made a backup not to lose any data."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "TO_BE"],
@@ -878,7 +878,7 @@
       "She wrote a report in order to inform the management.",
       "She wrote a report to inform the management."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -889,7 +889,7 @@
       "We arranged training in order to help employees better understand the workflow.",
       "We arranged training to help employees better understand the workflow."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -900,7 +900,7 @@
       "I closed the window in order to keep mosquitoes out.",
       "I closed the window to keep mosquitoes out."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "TO_BE"],
@@ -911,7 +911,7 @@
       "They signed the agreement in order to avoid legal problems.",
       "They signed the agreement to avoid legal problems."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -922,7 +922,7 @@
       "He made a presentation in order to impress the investors.",
       "He made a presentation to impress the investors."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -933,7 +933,7 @@
       "We ran a test in order to confirm the results.",
       "We ran a test to confirm the results."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ADVERBS_OF_MANNER"],
@@ -944,7 +944,7 @@
       "She spoke clearly in order to avoid misunderstandings.",
       "She spoke clearly to avoid misunderstandings."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT"],
@@ -955,7 +955,7 @@
       "He changed the password in order to block unauthorized access.",
       "He changed the password to block unauthorized access."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES", "COMPARATIVES"],
@@ -966,7 +966,7 @@
       "I prepared the papers in order to speed up the process.",
       "I prepared the papers to speed up the process."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   },
   {
     "rules": ["IN_ORDER_TO_SO_THAT", "ARTICLES"],
@@ -977,6 +977,6 @@
       "She recorded the lecture in order to watch it again later.",
       "She recorded the lecture to watch it again later."
     ],
-    "hint": "use TO / SO (THAT) / IN ORDER TO"
+    "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
   }
 ] }

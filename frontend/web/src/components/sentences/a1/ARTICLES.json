@@ -20,12 +20,12 @@
     "en": ["We live near the river.", "We live by the river."]
   },
   {
-    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES", "TO_BE"],
     "ua": "Він — хороший учень.",
     "en": ["He is a good student.", "He's a good student."]
   },
   {
-    "rules": ["ARTICLES", "SIMPLE_ADJ", "TO_BE", "DEMONSTRATIVES"],
+    "rules": ["ARTICLES", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Це цікава ідея.",
     "en": ["It’s an interesting idea.", "This is an interesting idea."]
   },
@@ -50,12 +50,12 @@
     "en": ["He is watching TV.", "He’s watching television."]
   },
   {
-    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PRESENT_CONT_NOW", "SIMPLE_ADJ", "PREP_PLACE"],
+    "rules": ["ARTICLES", "PRESENT_SIMPLE_FREQ", "PRESENT_CONT_NOW", "PREP_PLACE"],
     "ua": "Ми живемо у великому місті.",
     "en": ["We live in a big city.", "We’re living in a big city."]
   },
   {
-    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES", "TO_BE"],
     "ua": "Вона — архітектор.",
     "en": ["She is an architect.", "She's an architect."]
   },
@@ -80,7 +80,7 @@
     "en": ["My sister is at the library."]
   },
   {
-    "rules": ["ARTICLES", "TO_BE", "DEMONSTRATIVES", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES", "TO_BE", "DEMONSTRATIVES"],
     "ua": "Це була гарна ідея.",
     "en": ["That was a good idea.", "It was a good idea."]
   },
@@ -100,7 +100,7 @@
     "en": ["The sea was calm."]
   },
   {
-    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES", "TO_BE"],
     "ua": "Інтернет — важлива частина нашого життя.",
     "en": ["The Internet is an important part of our life."]
   },
@@ -115,7 +115,7 @@
     "en": ["They usually go to the gym after work."]
   },
   {
-    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES", "TO_BE"],
     "ua": "Погода сьогодні гарна.",
     "en": ["The weather is nice today.", "The weather is good today."]
   },
@@ -130,7 +130,7 @@
     "en": ["I play the piano every day."]
   },
   {
-    "rules": ["ARTICLES", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES"],
     "ua": "Це справжній сюрприз.",
     "en": ["It is a real surprise."]
   },
@@ -160,12 +160,12 @@
     "en": ["She is at work.", "She's at work."]
   },
   {
-    "rules": ["ARTICLES", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES"],
     "ua": "Сонце сьогодні яскраве.",
     "en": ["The sun is bright today.", "The sun is very bright today.", "The sun is shining brightly today."]
   },
   {
-    "rules": ["ARTICLES", "DEMONSTRATIVES", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES", "DEMONSTRATIVES"],
     "ua": "Це питання дуже важливе.",
     "en": ["This is an important question.", "It's an important question.", "This question is very important."]
   },
@@ -190,7 +190,7 @@
     "en": ["The door is open."]
   },
   {
-    "rules": ["ARTICLES", "TO_BE", "SIMPLE_ADJ"],
+    "rules": ["ARTICLES", "TO_BE"],
     "ua": "Це те саме питання.",
     "en": ["This is the same question.", "It’s the same question."]
   },
@@ -248,7 +248,7 @@
   {
     "ua": "Він летить до Великобританії завтра.",
     "en": ["He is flying to the United Kingdom tomorrow.", "He’s going to the UK tomorrow."],
-    "rules": ["ARTICLES", "FUTURE_WITH_PRESENT_CONT", "PREP_DIRECTION"]
+    "rules": ["ARTICLES", "PRESENT_CONT_NOW", "PREP_DIRECTION"]
   },
   {
     "ua": "Ми пливемо Темзою на човні.",

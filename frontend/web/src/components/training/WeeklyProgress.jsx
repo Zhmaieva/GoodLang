@@ -47,7 +47,7 @@ export function WeeklyProgress({ theme, mobile }) {
                     <div
                         style={{
                             padding: "6px 12px",
-                            borderRadius: isAssessment ? 20 : 8,
+                            borderRadius: isAssessment ? 20 : 20,
                             background: "#fff",
                             border: `2px solid ${theme.accent}`,
                             color: theme.accentDark,

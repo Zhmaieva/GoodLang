@@ -232,7 +232,7 @@
     "en": ["This movie is very exciting.", "This movie is really exciting."]
   },
   {
-    "rules": ["TOO_VERY", "YES_NO_Q"],
+    "rules": ["TOO_VERY"],
     "ua": "Ця книга надто заплутана?",
     "en": ["Is this book too confusing?", "Is this book overly confusing?"]
   },

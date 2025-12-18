@@ -76,11 +76,6 @@
       "en": ["He writes faster than his sister."]
     },
     {
-      "rules": ["COMPARATIVES", "BECAUSE_SO_BUT_ALTHOUGH"],
-      "ua": "Ти виглядаєш щасливішим, бо сьогодні вихідний.",
-      "en": ["You look happier because it’s a day off."]
-    },
-    {
       "rules": ["COMPARATIVES", "DEMONSTRATIVES", "PREP_TIME"],
       "ua": "Цей місяць тепліший за попередній.",
       "en": ["This month is warmer than the previous one."]

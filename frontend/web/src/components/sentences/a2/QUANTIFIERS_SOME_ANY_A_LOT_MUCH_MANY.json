@@ -5,7 +5,7 @@
     "en": ["There is some milk in the fridge."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "NEGATION_DONT_DOESNT"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він не має багато часу сьогодні.",
     "en": ["He doesn’t have much time today."]
   },
@@ -75,7 +75,7 @@
     "en": ["She is baking a lot of cookies for the evening."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE", "DID_QUEST_NEG"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE"],
     "ua": "Вони вчора купили багато квитків?",
     "en": ["Did they buy many tickets yesterday?"]
   },
@@ -160,7 +160,7 @@
     "en": ["If we had had a lot of money, we would be traveling now."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "NEGATION_DONT_DOESNT"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона не має жодних проблем із навчанням.",
     "en": ["She doesn’t have any problems with studying."]
   },
@@ -185,7 +185,7 @@
     "en": ["There are many flowers in the garden."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "FUTURE_WITH_PRESENT_CONT", "PREP_TIME"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_CONT_NOW", "PREP_TIME"],
     "ua": "Ми купуємо багато іграшок на день народження.",
     "en": ["We are buying a lot of toys for the birthday."]
   },
@@ -220,7 +220,7 @@
     "en": ["You should take some fruit for the picnic."]
   },
   {
-    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE", "DID_QUEST_NEG"],
+    "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PAST_SIMPLE"],
     "ua": "Вони отримали багато подарунків?",
     "en": ["Did they receive many gifts?"]
   },

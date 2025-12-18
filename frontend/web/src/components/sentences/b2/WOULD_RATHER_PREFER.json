@@ -9,7 +9,7 @@
         "I prefer staying at home to going to the cinema.",
         "I prefer to stay at home rather than go to the cinema."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "PAST_SIMPLE"],
@@ -18,7 +18,7 @@
         "She’d rather you told her the truth.",
         "She would rather you told her the truth."
       ],
-      "hint": "use WOULD RATHER"
+      "hint": "використовуй WOULD RATHER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "PRESENT_SIMPLE_FREQ"],
@@ -27,7 +27,7 @@
         "He usually prefers working alone.",
         "He usually prefers to work alone."
       ],
-      "hint": "use PREFER"
+      "hint": "використовуй PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -38,7 +38,7 @@
         "I’d prefer not to do this at the moment.",
         "I would prefer not to do this at the moment."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "ENOUGH_TOO_MUCH_MANY"],
@@ -49,7 +49,7 @@
         "I’m too cold; I prefer staying inside.",
         "I am too cold; I prefer to stay inside."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
@@ -60,7 +60,7 @@
         "I’d prefer to choose a cheaper hotel.",
         "I prefer choosing a cheaper hotel."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "POSSESSIVE_ADJECTIVES"],
@@ -69,7 +69,7 @@
         "She’d rather her brother stayed at home.",
         "She would rather her brother stayed at home."
       ],
-      "hint": "use WOULD RATHER"
+      "hint": "використовуй WOULD RATHER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -79,7 +79,7 @@
         "I would rather wait a few minutes than hurry.",
         "I prefer waiting a few minutes to hurrying."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
@@ -89,7 +89,7 @@
         "We would rather choose a quieter place.",
         "We’d prefer a quieter place."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "BECAUSE_SO_BUT_ALTHOUGH"],
@@ -99,17 +99,17 @@
         "I would rather stay at home because it’s cold outside.",
         "I prefer staying at home because it’s cold outside."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
-      "rules": ["WOULD_RATHER_PREFER", "NEGATION_DONT_DOESNT"],
+      "rules": ["WOULD_RATHER_PREFER"],
       "ua": "Я б радше не говорив про це зараз.",
       "en": [
         "I’d rather not talk about it now.",
         "I would rather not talk about it now.",
         "I’d prefer not to talk about it now."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "FIRST_CONDITIONAL"],
@@ -119,7 +119,7 @@
         "If you don’t mind, I would rather go tomorrow.",
         "If you don’t mind, I’d prefer to go tomorrow."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
@@ -127,7 +127,7 @@
       "en": [
         "He often says he prefers working at night."
       ],
-      "hint": "use PREFER"
+      "hint": "використовуй PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "PREP_PLACE"],
@@ -137,7 +137,7 @@
         "We would rather sit by the window.",
         "We prefer sitting by the window."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE", "ARTICLES"],
@@ -147,7 +147,7 @@
         "I would rather go to a café where there is good coffee.",
         "I’d prefer to go to a café where there is good coffee."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "SECOND_CONDITIONAL"],
@@ -157,7 +157,7 @@
         "I would rather live by the sea if I could.",
         "I’d prefer to live by the sea if I could."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -167,7 +167,7 @@
         "We would rather order something light for dinner.",
         "We’d prefer to order something light for dinner."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
@@ -177,7 +177,7 @@
         "He would rather go on a shorter vacation than a longer one.",
         "He prefers shorter trips to longer ones."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "ARTICLES"],
@@ -187,7 +187,7 @@
         "I would rather take a taxi than a bus.",
         "I’d prefer taking a taxi to taking a bus."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "PRESENT_SIMPLE_FREQ"],
@@ -196,7 +196,7 @@
         "I usually prefer morning meetings.",
         "I usually prefer to have meetings in the morning."
       ],
-      "hint": "use PREFER"
+      "hint": "використовуй PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "LIKE_LOVE_HATE_ING"],
@@ -206,7 +206,7 @@
         "She’d rather walk in the evening when there are fewer people.",
         "She would rather walk in the evening when there are fewer people."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -216,7 +216,7 @@
         "I would rather keep it between us.",
         "I prefer to keep it between us."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "FIRST_CONDITIONAL"],
@@ -226,7 +226,7 @@
         "If the weather is nice, I would rather go for a picnic.",
         "If the weather is nice, I’d prefer to go for a picnic."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
@@ -236,7 +236,7 @@
         "We would rather take a shorter route.",
         "We prefer taking the shorter way."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "PRESENT_SIMPLE_FREQ"],
@@ -246,7 +246,7 @@
         "He usually prefers to work early in the morning.",
         "He’d rather work early in the morning."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "SECOND_CONDITIONAL"],
@@ -256,29 +256,17 @@
         "I would rather live in the mountains if I had a choice.",
         "I’d prefer to live in the mountains if I had a choice."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
-
-
-
-
-
-
-
-
-
-
-
-
     {
-      "rules": ["WOULD_RATHER_PREFER", "NEGATION_DONT_DOESNT"],
+      "rules": ["WOULD_RATHER_PREFER"],
       "ua": "Я б радше не бачив цього знову.",
       "en": [
         "I’d rather not see that again.",
         "I would rather not see that again.",
         "I prefer not to see that again."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "COMPARATIVES"],
@@ -288,7 +276,7 @@
         "We would rather go somewhere cheaper.",
         "We’d prefer a cheaper destination."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -298,7 +286,7 @@
         "I would rather discuss it in person.",
         "I prefer to discuss it face to face."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "PAST_SIMPLE"],
@@ -307,7 +295,7 @@
         "She’d rather I stayed at home.",
         "She would rather I stayed at home."
       ],
-      "hint": "use WOULD RATHER"
+      "hint": "використовуй WOULD RATHER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "ARTICLES"],
@@ -317,7 +305,7 @@
         "I would rather have a cup of tea than coffee.",
         "I prefer drinking tea to coffee."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -327,7 +315,7 @@
         "He would rather do sports than watch TV.",
         "He prefers doing sports to watching TV."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE"],
@@ -337,7 +325,7 @@
         "I would rather live in a city where there is good transport.",
         "I prefer to live in cities with good public transport."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "SECOND_CONDITIONAL"],
@@ -347,7 +335,7 @@
         "We would rather travel by train if it were cheaper.",
         "We’d prefer to travel by train if it were cheaper."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -357,7 +345,7 @@
         "We would rather wait for confirmation before proceeding.",
         "We’d prefer to wait for confirmation before we continue."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "ENOUGH_TOO_MUCH_MANY"],
@@ -367,7 +355,7 @@
         "It’s too late now; I would rather talk about it tomorrow.",
         "It’s too late now; I’d prefer to discuss it tomorrow."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -377,7 +365,7 @@
         "I would rather receive written confirmation.",
         "I’d prefer to get confirmation in writing."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -387,7 +375,7 @@
         "They would rather sign the contract once the meeting is over.",
         "They’d prefer to finalize the contract after the discussion."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "FIRST_CONDITIONAL"],
@@ -397,7 +385,7 @@
         "If it’s okay, I would rather postpone this issue.",
         "If possible, I’d prefer to return to it later."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER"],
@@ -407,7 +395,7 @@
         "We would rather focus on quality than quantity.",
         "We prefer focusing on quality instead of quantity."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     },
     {
       "rules": ["WOULD_RATHER_PREFER", "THERE_IS_ARE"],
@@ -417,7 +405,7 @@
         "I would rather make a deal if there is such an option.",
         "I prefer to reach an agreement when possible."
       ],
-      "hint": "use WOULD RATHER / PREFER"
+      "hint": "використовуй WOULD RATHER / PREFER"
     }
   ]
 }

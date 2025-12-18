@@ -1,7 +1,7 @@
 { "PARTICIPLE_CLAUSES": [
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши, що йде дощ, ми залишилися вдома.",
     "en": [
       "Seeing that it was raining, we stayed at home.",
@@ -10,7 +10,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Закінчивши роботу, він пішов додому.",
     "en": [
       "Having finished his work, he went home."
@@ -18,7 +18,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не знаючи відповіді, вона залишила питання без відповіді.",
     "en": [
       "Not knowing the answer, she left the question unanswered."
@@ -26,7 +26,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Стоячи біля вікна, він дивився на вулицю.",
     "en": [
       "Standing by the window, he looked out at the street."
@@ -34,7 +34,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побудований у XIX столітті, цей будинок має історичну цінність.",
     "en": [
       "Built in the 19th century, the house has historical value.",
@@ -43,7 +43,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Йдучи до школи, я зустрів старого друга.",
     "en": [
       "Walking to school, I met an old friend."
@@ -51,7 +51,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Здивований новиною, він не міг сказати ні слова.",
     "en": [
       "Surprised by the news, he couldn’t say a word.",
@@ -60,7 +60,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши свого брата, він посміхнувся.",
     "en": [
       "Seeing his brother, he smiled."
@@ -68,7 +68,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Закінчивши вечерю, вони подивилися фільм.",
     "en": [
       "Having finished dinner, they watched a movie.",
@@ -77,7 +77,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Втомившись після довгого дня, вона лягла спати дуже рано.",
     "en": [
       "Tired after a long day, she went to bed very early.",
@@ -86,7 +86,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Йдучи до магазину, я зустрів свого колегу.",
     "en": [
       "Walking to the shop, I met my colleague."
@@ -94,7 +94,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Сидячи у парку, ми спостерігали за дітьми.",
     "en": [
       "Sitting in the park, we watched the children."
@@ -102,7 +102,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побудований з каменю, цей міст стоїть вже 200 років.",
     "en": [
       "Built of stone, the bridge has stood for 200 years.",
@@ -111,7 +111,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Бачачи усмішку своєї доньки, він відчув щастя.",
     "en": [
       "Seeing his daughter’s smile, he felt happy."
@@ -119,7 +119,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Дуже втомившись, він пропустив вечерю.",
     "en": [
       "Being very tired, he skipped dinner."
@@ -127,7 +127,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не маючи часу, вона зробила все поспіхом.",
     "en": [
       "Not having time, she did everything in a hurry."
@@ -135,7 +135,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Повертаючись додому, я почув дивний звук.",
     "en": [
       "Returning home, I heard a strange noise."
@@ -143,7 +143,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не розуміючи питання, студент попросив пояснення.",
     "en": [
       "Not understanding the question, the student asked for clarification."
@@ -151,7 +151,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши сонце, що сходить, ми зробили фото.",
     "en": [
       "Seeing the sun rising, we took a photo."
@@ -159,7 +159,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Отримавши листа, він відразу відповів.",
     "en": [
       "Having received the letter, he replied immediately."
@@ -167,7 +167,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Працюючи в офісі, він часто розмовляв з клієнтами.",
     "en": [
       "Working in an office, he often talked to clients."
@@ -175,7 +175,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши помилку, вчитель її виправив.",
     "en": [
       "Noticing the mistake, the teacher corrected it."
@@ -183,7 +183,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Будучи занадто втомленою, вона не пішла на вечірку.",
     "en": [
       "Being too tired, she didn’t go to the party."
@@ -191,7 +191,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Закінчивши навчання, він поїхав подорожувати.",
     "en": [
       "Having finished his studies, he went traveling."
@@ -199,7 +199,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Йдучи до виходу, вона попрощалася з усіма.",
     "en": [
       "Walking to the exit, she said goodbye to everyone."
@@ -207,7 +207,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши поліцейського, він зупинив машину.",
     "en": [
       "Seeing the policeman, he stopped the car."
@@ -215,7 +215,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не отримавши відповіді, він вирішив подзвонити ще раз.",
     "en": [
       "Not having received an answer, he decided to call again."
@@ -223,7 +223,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Стоячи біля дверей, вона чекала на автобус.",
     "en": [
       "Standing by the door, she waited for the bus."
@@ -231,7 +231,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Втомившись від очікування, він пішов додому.",
     "en": [
       "Tired of waiting, he went home.",
@@ -240,7 +240,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Їдучи до роботи, я почув цікаву пісню по радіо.",
     "en": [
       "Driving to work, I heard an interesting song on the radio."
@@ -248,7 +248,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Зробивши помилку, він спробував її виправити.",
     "en": [
       "Having made a mistake, he tried to correct it."
@@ -256,7 +256,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PASSIVE_VOICE_ALL_TENSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Пошитий вручну, цей костюм виглядає чудово.",
     "en": [
       "Made by hand, this suit looks amazing."
@@ -264,7 +264,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не маючи плану, ми вирішили імпровізувати.",
     "en": [
       "Not having a plan, we decided to improvise."
@@ -272,7 +272,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Почувши шум, він подивився у вікно.",
     "en": [
       "Hearing a noise, he looked out of the window."
@@ -280,7 +280,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Йдучи до школи, діти співали пісню.",
     "en": [
       "Walking to school, the children sang a song."
@@ -288,7 +288,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Зрозумівши свою помилку, вона вибачилась.",
     "en": [
       "Realizing her mistake, she apologized."
@@ -296,7 +296,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Працюючи у бібліотеці, він познайомився з Марією.",
     "en": [
       "Working in the library, he met Marry.", "Working in the library, he met Maria.", "Working in the library, he met Mariia."
@@ -304,7 +304,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не знаючи, що сказати, він мовчав.",
     "en": [
       "Not knowing what to say, he stayed silent."
@@ -312,7 +312,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Закінчивши завдання, учні пішли додому.",
     "en": [
       "Having finished the task, the students went home."
@@ -320,7 +320,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Отримавши відповідь, він заспокоївся.",
     "en": [
       "Having received an answer, he felt calm."
@@ -328,7 +328,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши вогонь, усі почали тікати.",
     "en": [
       "Seeing the fire, everyone started running."
@@ -336,7 +336,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Бачачи реакцію свого вчителя, він зрозумів помилку.",
     "en": [
       "Seeing his teacher’s reaction, he realized his mistake."
@@ -344,7 +344,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши результат, команда зраділа.",
     "en": [
       "Seeing the result, the team cheered."
@@ -352,7 +352,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Повернувшись із подорожі, він написав книгу.",
     "en": [
       "Having returned from the trip, he wrote a book."
@@ -360,7 +360,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Стоячи біля річки, вони милувалися краєвидом.",
     "en": [
       "Standing by the river, they admired the view."
@@ -368,7 +368,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Втомившись після роботи, він вирішив відпочити.",
     "en": [
       "Tired after work, he decided to rest.",
@@ -377,7 +377,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Йдучи до дверей, вона зупинилася, щоб подивитись ще раз.",
     "en": [
       "Walking to the door, she stopped to look once more."
@@ -385,7 +385,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши знайому людину, він привітався до неї.",
     "en": [
       "Seeing a familiar person, he said hello."
@@ -393,7 +393,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Їдучи до міста, ми побачили старий замок.",
     "en": [
       "Driving to the city, we saw an old castle."
@@ -401,7 +401,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Стоячи на балконі, вона дивилася на захід сонця.",
     "en": [
       "Standing on the balcony, she watched the sunset."
@@ -409,7 +409,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не маючи телефону, він не міг подзвонити.",
     "en": [
       "Not having a phone, he couldn’t make a call."
@@ -417,7 +417,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши помилку, вона виправила її негайно.",
     "en": [
       "Having noticed the mistake, she corrected it immediately."
@@ -425,7 +425,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Прокинувшись рано, він вирішив піти на пробіжку.",
     "en": [
       "Waking up early, he decided to go for a run."
@@ -433,7 +433,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "TOO_VERY"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Занадто втомившись, він заснув на дивані.",
     "en": [
       "Being too tired, he fell asleep on the sofa."
@@ -441,7 +441,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "POSSESSIVE_S"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Бачачи успіх свого друга, він відчував гордість.",
     "en": [
       "Seeing his friend’s success, he felt proud."
@@ -449,7 +449,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Йдучи до лікарні, вона зустріла знайому жінку.",
     "en": [
       "Walking to the hospital, she met a familiar woman."
@@ -457,7 +457,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не зрозумівши жарту, він не засміявся.",
     "en": [
       "Not understanding the joke, he didn’t laugh."
@@ -465,7 +465,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Закінчивши проєкт, вони відсвяткували успіх.",
     "en": [
       "Having finished the project, they celebrated their success."
@@ -473,7 +473,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Працюючи у кав’ярні, вона часто бачила туристів.",
     "en": [
       "Working in a café, she often saw tourists."
@@ -481,7 +481,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши сигнал, водій зупинив машину.",
     "en": [
       "Seeing the signal, the driver stopped the car."
@@ -489,7 +489,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Повертаючись із роботи, він купив хліб.",
     "en": [
       "Returning from work, he bought some bread."
@@ -497,7 +497,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не маючи ключів, вона залишилася надворі.",
     "en": [
       "Not having the keys, she stayed outside."
@@ -505,7 +505,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_TIME"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Закінчивши роботу рано, ми пішли в кіно.",
     "en": [
       "Having finished work early, we went to the cinema."
@@ -513,7 +513,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Побачивши лист, він відразу відкрив його.",
     "en": [
       "Seeing the letter, he opened it immediately."
@@ -521,7 +521,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "ARTICLES"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Не отримавши відповідь, вона вирішила подзвонити.",
     "en": [
       "Not having received an answer, she decided to call."
@@ -529,7 +529,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_PLACE"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Сидячи в саду, він читав книгу.",
     "en": [
       "Sitting in the garden, he was reading a book."
@@ -537,7 +537,7 @@
   },
   {
     "rules": ["PARTICIPLE_CLAUSES", "PREP_DIRECTION"],
-    "hint": "start with an -ing/-ed word",
+    "hint": "починай з -ing/-ed слова",
     "ua": "Йдучи вгору схилом, ми побачили гарне озеро.",
     "en": [
       "Walking up the hill, we saw a beautiful lake."

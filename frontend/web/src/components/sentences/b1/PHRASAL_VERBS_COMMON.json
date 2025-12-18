@@ -6,7 +6,7 @@
       "She turned off the TV and went to bed.",
       "She switched off the TV and went to bed."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "IMPERATIVES"],
@@ -15,7 +15,7 @@
       "Please take off your shoes before coming in.",
       "Please take your shoes off before entering."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -25,7 +25,7 @@
       "They fought but then made up later.",
       "They had a fight, but then they made up."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
@@ -34,7 +34,7 @@
       "I’m trying to find out what happened.",
       "I am trying to figure out what happened."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
@@ -43,7 +43,7 @@
       "We put off the meeting until Monday.",
       "We pushed back the meeting until Monday."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -52,7 +52,7 @@
       "He gets along well with his colleagues.",
       "He gets on well with his colleagues."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -61,7 +61,7 @@
       "I came across some old photos yesterday.",
       "I ran across some old photos yesterday."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -70,7 +70,7 @@
       "We have to fill out this form before the trip.",
       "We have to fill in this form before the trip."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -79,7 +79,7 @@
       "He came up with a great idea for the project.",
       "He thought up a great idea for the project."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_TIME"],
@@ -88,7 +88,7 @@
       "I always turn off the light before I leave.",
       "I always switch off the light before I leave."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE", "PREP_DIRECTION"],
@@ -97,7 +97,7 @@
       "He picked up the pen that had fallen on the floor.",
       "He picked it up from the floor."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "ARTICLES"],
@@ -106,7 +106,7 @@
       "We’re looking for a solution to the problem.",
       "We are looking for a solution to the problem."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -115,7 +115,7 @@
       "She gave up after a few attempts.",
       "She gave it up after a few tries."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -124,7 +124,7 @@
       "Please turn down the music.",
       "Please turn the music down."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE", "ARTICLES"],
@@ -133,7 +133,7 @@
       "We ran into each other at the mall.",
       "We bumped into each other at the mall."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
@@ -142,7 +142,7 @@
       "I always tidy up my room before bed.",
       "I always clean up my room before bed."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
@@ -151,7 +151,7 @@
       "Don’t forget to put on this jacket.",
       "Do not forget to put on this jacket."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_TIME", "POSSESSIVE_ADJECTIVES"],
@@ -160,7 +160,7 @@
       "I’m catching up on work after my vacation.",
       "I am catching up on work after my vacation."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
@@ -169,7 +169,7 @@
       "I need to throw away this trash.",
       "I need to throw this trash away."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
@@ -178,7 +178,7 @@
       "She made up a wonderful story.",
       "She came up with a wonderful story."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
@@ -187,7 +187,7 @@
       "I’m trying to cut down on expenses.",
       "I am trying to cut down on my spending."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_DIRECTION"],
@@ -196,7 +196,7 @@
       "We gave the money back to the customer.",
       "We paid the money back to the customer."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -205,7 +205,7 @@
       "He always puts off important tasks.",
       "He always puts important things off."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES", "ARTICLES", "PREP_DIRECTION", "PREP_PLACE"],
@@ -214,7 +214,7 @@
       "We have to take this book back to the library.",
       "We need to bring this book back to the library."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE", "PREP_DIRECTION"],
@@ -223,7 +223,7 @@
       "She picked up the letter that had fallen on the floor.",
       "She picked it up from the floor."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_TIME"],
@@ -232,7 +232,7 @@
       "Please shut down the computer before you leave.",
       "Please turn off the computer before you go."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
@@ -241,7 +241,7 @@
       "We’re looking for new employees.",
       "We are looking for new workers."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
@@ -250,7 +250,7 @@
       "I turned down the offer.",
       "I passed up the offer."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
@@ -259,7 +259,7 @@
       "He often looks after his younger brother.",
       "He often looks out for his younger brother."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
@@ -268,7 +268,7 @@
       "We cut off the internet to save money.",
       "We turned off the internet to save money."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
 
   {
@@ -278,7 +278,7 @@
       "I’m waiting for him to call back.",
       "I am waiting for him to call me back."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_TIME"],
@@ -287,7 +287,7 @@
       "She tore up the contract yesterday.",
       "She ripped up the contract yesterday."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
@@ -296,7 +296,7 @@
       "I usually wake up at eight in the morning.",
       "I usually get up at eight in the morning."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE"],
@@ -305,7 +305,7 @@
       "She picked up the kids from school.",
       "She picked them up from school."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "ARTICLES"],
@@ -314,7 +314,7 @@
       "We’re looking for a new apartment.",
       "We are looking for a new flat."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
@@ -323,7 +323,7 @@
       "He turned off the light before going to bed.",
       "He switched off the light before sleeping."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "ARTICLES"],
@@ -332,7 +332,7 @@
       "Please write down this address.",
       "Please note down this address."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -341,7 +341,7 @@
       "We came back home late at night.",
       "We got back home late at night."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -350,7 +350,7 @@
       "She always puts on her coat when it’s cold.",
       "She always puts her coat on when it’s cold."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -358,7 +358,7 @@
     "en": [
       "We called off the trip because of the rain."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
@@ -367,7 +367,7 @@
       "Don’t throw away these newspapers.",
       "Do not throw these newspapers away."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -375,7 +375,7 @@
     "en": [
       "He often hangs out with his friends."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -384,7 +384,7 @@
       "I filled out the job application.",
       "I filled in the job form."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -393,7 +393,7 @@
       "They get along well with each other.",
       "They get on well with each other."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
@@ -402,7 +402,7 @@
       "We stopped by the café to have a coffee.",
       "We dropped by the café for a drink."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -411,7 +411,7 @@
       "Please turn off the TV.",
       "Please switch off the TV."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
@@ -420,7 +420,7 @@
       "She broke her headphones and threw them away.",
       "She broke her headphones and got rid of them."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -428,7 +428,7 @@
     "en": [
       "I look after my garden every Sunday."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
@@ -437,7 +437,7 @@
       "We met up last week and talked.",
       "We caught up last week and talked."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
@@ -446,7 +446,7 @@
       "I’m looking for my charger.",
       "I am looking for my phone charger."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
@@ -455,7 +455,7 @@
       "I always turn on the computer in the morning.",
       "I always switch on the computer in the morning."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE"],
@@ -464,7 +464,7 @@
       "She put down her keys on the table.",
       "She put her keys down on the table."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "ARTICLES", "PREP_PLACE"],
@@ -473,7 +473,7 @@
       "We’re cleaning up the kitchen right now.",
       "We are tidying up the kitchen right now."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
@@ -482,7 +482,7 @@
       "He turned off the air conditioner before leaving.",
       "He switched off the AC before leaving."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -491,7 +491,7 @@
       "We carried on working after the break.",
       "We went on working after the break."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -500,7 +500,7 @@
       "He always turns off the TV before bed.",
       "He always switches off the TV before bed."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
 
   {
@@ -510,7 +510,7 @@
       "I dropped by the shop to buy some bread.",
       "I stopped by the store to buy some bread."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
@@ -519,7 +519,7 @@
       "I’m sorting out my things.",
       "I am clearing up my stuff."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
@@ -528,7 +528,7 @@
       "We turned off the lights before we left.",
       "We switched off the lights before leaving."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE", "POSSESSIVE_ADJECTIVES"],
@@ -537,7 +537,7 @@
       "He often puts his phone down on the table.",
       "He often sets his phone down on the table."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
@@ -546,7 +546,7 @@
       "She woke up at six in the morning.",
       "She got up at six in the morning."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
@@ -555,7 +555,7 @@
       "We usually go to bed at ten o’clock.",
       "We usually turn in at ten o’clock."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES", "PREP_PLACE"],
@@ -564,7 +564,7 @@
       "He put down his bag near the door.",
       "He set down his bag by the door."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -573,7 +573,7 @@
       "Don’t turn off the light, please.",
       "Do not switch off the light, please."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
@@ -582,7 +582,7 @@
       "I’m getting ready for the meeting now.",
       "I am preparing for the meeting now."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
@@ -591,7 +591,7 @@
       "We met up last week.",
       "We caught up last week."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
@@ -600,7 +600,7 @@
       "I always clean up the flat on weekends.",
       "I always tidy up the apartment on weekends."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
@@ -609,7 +609,7 @@
       "We stopped by the coffee shop for a coffee.",
       "We dropped by the cafe for a drink."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
@@ -618,7 +618,7 @@
       "We take off our shoes by the door.",
       "We leave our shoes by the door."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_DIRECTION"],
@@ -627,7 +627,7 @@
       "She went out of the house at eight.",
       "She headed out of the house at eight."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_DIRECTION"],
@@ -636,7 +636,7 @@
       "I am heading out to work right now.",
       "I am heading out to work now."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_PLACE", "ARTICLES"],
@@ -645,7 +645,7 @@
       "I often drop by the neighbor’s for tea.",
       "I often stop by the neighbor’s for tea."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_DIRECTION"],
@@ -654,7 +654,7 @@
       "She walked out of the room without a word.",
       "She went out of the room silently."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW", "PREP_DIRECTION"],
@@ -663,7 +663,7 @@
       "We’re heading to school now.",
       "We are heading out to school now."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -672,7 +672,7 @@
       "He always looks after his cat.",
       "He always takes care of his cat."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "PREP_DIRECTION"],
@@ -681,7 +681,7 @@
       "She often goes out for a walk after lunch.",
       "She often heads out for a walk after lunch."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_TIME"],
@@ -690,7 +690,7 @@
       "We met up last Saturday.",
       "We caught up last Saturday."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_PLACE"],
@@ -699,7 +699,7 @@
       "We stopped by the restaurant for lunch.",
       "We dropped by the restaurant for lunch."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_CONT_NOW"],
@@ -710,7 +710,7 @@
       "I’m sorting out my documents right now.",
       "I am clearing up my paperwork right now."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -719,7 +719,7 @@
       "She always picks up trash on the beach.",
       "She always cleans up trash on the beach."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "ARTICLES"],
@@ -728,7 +728,7 @@
       "I came up with a good solution.",
       "I thought up a good solution."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
@@ -737,7 +737,7 @@
       "Don’t throw away these boxes.",
       "Do not throw these boxes away."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -746,7 +746,7 @@
       "We found out the cause of the problem.",
       "We figured out the reason for the issue."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -755,7 +755,7 @@
       "He always gives back books on time.",
       "He always brings back books on time."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE", "PREP_DIRECTION"],
@@ -764,7 +764,7 @@
       "She went out of the office at five.",
       "She headed out of the office at five."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PAST_SIMPLE"],
@@ -773,7 +773,7 @@
       "They made up after the argument.",
       "They patched things up after the fight."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   },
   {
     "rules": ["PHRASAL_VERBS_COMMON", "PRESENT_SIMPLE_FREQ"],
@@ -782,6 +782,6 @@
       "Please turn off the light before you leave.",
       "Please switch off the light before you go."
     ],
-    "hint": "use PHRASAL VERB"
+    "hint": "використовуй PHRASAL VERB"
   }
 ] }

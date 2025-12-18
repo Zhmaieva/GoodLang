@@ -1,80 +1,211 @@
 {
   "BE_GOING_TO_VS_WILL": [
 
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Я зателефоную їй після роботи.", "en": ["I’m going to call her after work.", "I’m going to phone her after work."], "hint": "I decided this earlier." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "PREP_PLACE"], "ua": "Вони переїдуть в інше місто наступного року.", "en": ["They are going to move to another city next year.", "They are going to relocate next year."], "hint": "They already have this plan." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "ARTICLES"], "ua": "Вона почне нову роботу у вересні.", "en": ["She’s going to start a new job in September.", "She’s going to begin a new job in September."], "hint": "The decision was made before." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "POSSESSIVE_S"], "ua": "Ми поїдемо до бабусі й дідуся в ці вихідні.", "en": ["We’re going to visit our grandparents this weekend."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_PLACE"], "ua": "Він збирається вивчати медицину в університеті.", "en": ["He’s going to study medicine at university.", "He’s going to study medicine at college."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Я готуватиму пасту на вечерю сьогодні.", "en": ["I’m going to cook pasta for dinner tonight."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES"], "ua": "Вона скоро купить новий ноутбук.", "en": ["She’s going to buy a new laptop soon."], "hint": "She already chose what to buy." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Вони фарбуватимуть кухню завтра.", "en": ["They’re going to paint the kitchen tomorrow."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Цього року я вивчатиму іспанську.", "en": ["I’m going to learn Spanish this year."], "hint": "This is a personal plan." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Він відремонтує велосипед сьогодні після обіду.", "en": ["He’s going to fix the bike this afternoon.", "He’s going to repair the bike this afternoon."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "ARTICLES"], "ua": "У нас буде зустріч о десятій ранку.", "en": ["We’re going to have a meeting at 10 a.m."], "hint": "The meeting is scheduled." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "PREP_PLACE"], "ua": "Вона поїде до Італії влітку.", "en": ["She’s going to travel to Italy in summer.", "She’s going to go to Italy in summer."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Я прибиратиму вдома після обіду.", "en": ["I’m going to clean the house after lunch."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES", "PREP_PLACE"], "ua": "Вони відкриють кафе біля парку.", "en": ["They’re going to open a café near the park."], "hint": "All documents are ready." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Він сьогодні запросить її на побачення.", "en": ["He’s going to ask her out tonight."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "ARTICLES"], "ua": "Ми подивимось фільм після вечері.", "en": ["We’re going to watch a movie after dinner."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Вона скоро змінить зачіску.", "en": ["She’s going to change her hairstyle soon."], "hint": "She already booked the hairdresser." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES"], "ua": "Тут збудують нову школу.", "en": ["They’re going to build a new school here."], "hint": "The project is officially approved." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "POSSESSIVE_S", "ARTICLES"], "ua": "Він продасть свою стару машину.", "en": ["He’s going to sell his old car."], "hint": "He already put it up for sale." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Телефон дзвонить — я відповім.", "en": ["The phone is ringing — I’ll answer it."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Думаю, пізніше піде дощ.", "en": ["I think it will rain later."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "IMPERATIVES"], "ua": "Не хвилюйся, я допоможу.", "en": ["Don’t worry, I’ll help you."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Я понесу цю сумку.", "en": ["I’ll carry that bag for you."], "hint": "I just decided this now." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Вона, ймовірно, запізниться.", "en": ["She’ll probably be late."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Я подзвоню, коли приїду.", "en": ["I’ll call you when I arrive."], "hint": "This is a promise made now." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Побачимо, що буде.", "en": ["We’ll see what happens."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "TOO_VERY"], "ua": "Я відкрию вікно — тут дуже спекотно.", "en": ["I’ll open the window, it’s too hot here."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Думаю, цей тест буде легким.", "en": ["I think this test will be easy."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Усе буде добре.", "en": ["Everything will be fine."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "IMPERATIVES", "ARTICLES"], "ua": "Я візьму каву, будь ласка.", "en": ["I’ll have a coffee, please."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Вони тебе зрозуміють.", "en": ["They’ll understand you."], "hint": "This is just my opinion now." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Я нікому не скажу, обіцяю.", "en": ["I won’t tell anyone, I promise."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Я залишуся тут і почекаю.", "en": ["I’ll stay here and wait."], "hint": "This is a spontaneous decision." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Думаю, він погодиться.", "en": ["I think he will agree."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Я спробую ще раз завтра.", "en": ["I’ll try again tomorrow."], "hint": "This decision is made right now." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Поговоримо про це пізніше.", "en": ["We’ll talk about it later."] },
-
-    { "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"], "ua": "Я надішлю файл сьогодні ввечері.", "en": ["I’ll send you the file tonight."], "hint": "This is a promise now." },
-
-    { "rules": ["BE_GOING_TO_VS_WILL"], "ua": "Це буде цікаво.", "en": ["That will be interesting."], "hint": "This is a prediction." }
-  ]
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Я зателефоную їй після роботи.",
+      "en": ["I’m going to call her after work.", "I’m going to phone her after work."],
+      "hint": "Рішення було прийняте раніше."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "PREP_PLACE"],
+      "ua": "Вони переїдуть в інше місто наступного року.",
+      "en": ["They are going to move to another city next year.", "They are going to relocate next year."],
+      "hint": "У них уже є цей план."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "ARTICLES"],
+      "ua": "Вона почне нову роботу у вересні.",
+      "en": ["She’s going to start a new job in September.", "She’s going to begin a new job in September."],
+      "hint": "Рішення було прийняте заздалегідь."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "POSSESSIVE_S"],
+      "ua": "Ми поїдемо до бабусі й дідуся в ці вихідні.",
+      "en": ["We’re going to visit our grandparents this weekend."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_PLACE"],
+      "ua": "Він збирається вивчати медицину в університеті.",
+      "en": ["He’s going to study medicine at university.", "He’s going to study medicine at college."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Я готуватиму пасту на вечерю сьогодні.",
+      "en": ["I’m going to cook pasta for dinner tonight."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES"],
+      "ua": "Вона скоро купить новий ноутбук.",
+      "en": ["She’s going to buy a new laptop soon."],
+      "hint": "Вона вже вибрала, що купити."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Вони фарбуватимуть кухню завтра.",
+      "en": ["They’re going to paint the kitchen tomorrow."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Цього року я вивчатиму іспанську.",
+      "en": ["I’m going to learn Spanish this year."],
+      "hint": "Це особистий план."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Він відремонтує велосипед сьогодні після обіду.",
+      "en": ["He’s going to fix the bike this afternoon.", "He’s going to repair the bike this afternoon."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "ARTICLES"],
+      "ua": "У нас буде зустріч о десятій ранку.",
+      "en": ["We’re going to have a meeting at 10 a.m."],
+      "hint": "Зустріч уже запланована."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "PREP_PLACE"],
+      "ua": "Вона поїде до Італії влітку.",
+      "en": ["She’s going to travel to Italy in summer.", "She’s going to go to Italy in summer."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Я прибиратиму вдома після обіду.",
+      "en": ["I’m going to clean the house after lunch."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES", "PREP_PLACE"],
+      "ua": "Вони відкриють кафе біля парку.",
+      "en": ["They’re going to open a café near the park."],
+      "hint": "Усі документи вже готові."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Він сьогодні запросить її на побачення.",
+      "en": ["He’s going to ask her out tonight."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME", "ARTICLES"],
+      "ua": "Ми подивимось фільм після вечері.",
+      "en": ["We’re going to watch a movie after dinner."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Вона скоро змінить зачіску.",
+      "en": ["She’s going to change her hairstyle soon."],
+      "hint": "Вона вже записалася до перукаря."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "ARTICLES"],
+      "ua": "Тут збудують нову школу.",
+      "en": ["They’re going to build a new school here."],
+      "hint": "Проєкт офіційно затверджено."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "POSSESSIVE_S", "ARTICLES"],
+      "ua": "Він продасть свою стару машину.",
+      "en": ["He’s going to sell his old car."],
+      "hint": "Він уже виставив її на продаж."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Телефон дзвонить — я відповім.",
+      "en": ["The phone is ringing — I’ll answer it."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Думаю, пізніше піде дощ.",
+      "en": ["I think it will rain later."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "IMPERATIVES"],
+      "ua": "Не хвилюйся, я допоможу.",
+      "en": ["Don’t worry, I’ll help you."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Я понесу цю сумку.",
+      "en": ["I’ll carry that bag for you."],
+      "hint": "Я щойно вирішив це зараз."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Вона, ймовірно, запізниться.",
+      "en": ["She’ll probably be late."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Я подзвоню, коли приїду.",
+      "en": ["I’ll call you when I arrive."],
+      "hint": "Це обіцянка, дана зараз."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Побачимо, що буде.",
+      "en": ["We’ll see what happens."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "TOO_VERY"],
+      "ua": "Я відкрию вікно — тут дуже спекотно.",
+      "en": ["I’ll open the window, it’s too hot here."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Думаю, цей тест буде легким.",
+      "en": ["I think this test will be easy."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Усе буде добре.",
+      "en": ["Everything will be fine."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "IMPERATIVES", "ARTICLES"],
+      "ua": "Я візьму каву, будь ласка.",
+      "en": ["I’ll have a coffee, please."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Вони тебе зрозуміють.",
+      "en": ["They’ll understand you."],
+      "hint": "Це лише моя думка зараз."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Я нікому не скажу, обіцяю.",
+      "en": ["I won’t tell anyone, I promise."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Я залишуся тут і почекаю.",
+      "en": ["I’ll stay here and wait."],
+      "hint": "Це спонтанне рішення."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Думаю, він погодиться.",
+      "en": ["I think he will agree."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Я спробую ще раз завтра.",
+      "en": ["I’ll try again tomorrow."],
+      "hint": "Рішення прийняте просто зараз."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Поговоримо про це пізніше.",
+      "en": ["We’ll talk about it later."]
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL", "PREP_TIME"],
+      "ua": "Я надішлю файл сьогодні ввечері.",
+      "en": ["I’ll send you the file tonight."],
+      "hint": "Це обіцянка, дана зараз."
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "ua": "Це буде цікаво.",
+      "en": ["That will be interesting."],
+      "hint": "Це прогноз."
+    } ]
 }

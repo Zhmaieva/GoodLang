@@ -36,8 +36,9 @@
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
-      "ua": "Весілля шостого червня.",
-      "en": ["The wedding is on the sixth of June."]
+      "ua": "Весілля (відбудеться) шостого червня.",
+      "en": ["The wedding is on the sixth of June."],
+      "hint": "текст у круглих дужках не потребує перекладу"
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME", "PAST_SIMPLE"],
@@ -62,8 +63,9 @@
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
-      "ua": "Іспит одинадцятого листопада.",
-      "en": ["The exam is on the eleventh of November."]
+      "ua": "Іспит (відбудеться) одинадцятого листопада.",
+      "en": ["The exam is on the eleventh of November."],
+      "hint": "текст у круглих дужках не потребує перекладу"
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
@@ -146,7 +148,7 @@
       "en": ["The baby was born on the twenty-second of December."]
     },
     {
-      "rules": ["ORDINALS_DATES", "PREP_TIME", "FUTURE_WITH_PRESENT_CONT"],
+      "rules": ["ORDINALS_DATES", "PREP_TIME"],
       "ua": "Ми повертаємося додому двадцять третього січня.",
       "en": [
         "We return home on the twenty-third of January.",
@@ -155,11 +157,12 @@
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
-      "ua": "Співбесіда двадцять четвертого лютого.",
+      "ua": "Співбесіда (відбудеться) двадцять четвертого лютого.",
       "en": [
         "The interview is on the twenty-fourth of February.",
         "The job interview is on the twenty-fourth of February."
-      ]
+      ],
+      "hint": "текст у круглих дужках не потребує перекладу"
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
@@ -186,7 +189,7 @@
       ]
     },
     {
-      "rules": ["ORDINALS_DATES", "PREP_TIME", "FUTURE_WITH_PRESENT_CONT"],
+      "rules": ["ORDINALS_DATES", "PREP_TIME"],
       "ua": "Виставка відкривається двадцять восьмого червня.",
       "en": [
         "The exhibition opens on the twenty-eighth of June.",
@@ -211,8 +214,9 @@
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
-      "ua": "Парад тридцять першого жовтня.",
-      "en": ["The parade is on the thirty-first of October."]
+      "ua": "Парад (відбудеться) тридцять першого жовтня.",
+      "en": ["The parade is on the thirty-first of October."],
+      "hint": "текст у круглих дужках не потребує перекладу"
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME", "PAST_SIMPLE"],
@@ -223,7 +227,7 @@
       ]
     },
     {
-      "rules": ["ORDINALS_DATES", "PREP_TIME", "FUTURE_WITH_PRESENT_CONT"],
+      "rules": ["ORDINALS_DATES", "PREP_TIME"],
       "ua": "Вона летить до Парижа другого травня.",
       "en": [
         "She travels to Paris on the second of May.",
@@ -240,14 +244,15 @@
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
-      "ua": "Тест четвертого вересня.",
+      "ua": "Тест (відбудеться) четвертого вересня.",
       "en": [
         "The test is on the fourth of September.",
         "The exam is on the fourth of September."
-      ]
+      ],
+      "hint": "текст у круглих дужках не потребує перекладу"
     },
     {
-      "rules": ["ORDINALS_DATES", "PREP_TIME", "FUTURE_WITH_PRESENT_CONT"],
+      "rules": ["ORDINALS_DATES", "PREP_TIME"],
       "ua": "Він повертається з-за кордону п’ятого листопада.",
       "en": [
         "He returns from abroad on the fifth of November.",
@@ -256,11 +261,12 @@
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME"],
-      "ua": "Вистава шостого лютого.",
+      "ua": "Вистава (відбудеться) шостого лютого.",
       "en": [
         "The performance is on the sixth of February.",
         "The show is on the sixth of February."
-      ]
+      ],
+      "hint": "текст у круглих дужках не потребує перекладу"
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME", "PRESENT_SIMPLE_FREQ"],
@@ -280,11 +286,12 @@
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME", "PRESENT_SIMPLE_FREQ"],
-      "ua": "Семінар дев’ятого травня.",
+      "ua": "Семінар (відбудеться) дев’ятого травня.",
       "en": [
         "The seminar is on the ninth of May.",
         "The workshop is on the ninth of May."
-      ]
+      ],
+      "hint": "текст у круглих дужках не потребує перекладу"
     },
     {
       "rules": ["ORDINALS_DATES", "PREP_TIME", "PRESENT_SIMPLE_FREQ"],

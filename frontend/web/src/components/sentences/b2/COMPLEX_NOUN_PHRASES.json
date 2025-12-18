@@ -240,7 +240,7 @@
     "en": ["The question whether he will tell the truth remains open.", "It’s still uncertain whether he’ll be honest."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
     "ua": "Факт, що вони не відповіли, мене здивував.",
     "en": ["The fact that they didn’t reply surprised me.", "I was surprised they didn’t respond."]
   },
@@ -390,7 +390,7 @@
     "en": ["That she was too busy explains her silence.", "The fact she was very busy explains why she said nothing."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
     "ua": "Те, що він не довіряє нікому, мене непокоїть.",
     "en": ["That he doesn’t trust anyone worries me.", "It worries me that he trusts nobody."]
   },
@@ -450,7 +450,7 @@
     "en": ["That he had already left came as a surprise.", "It was surprising that he’d already gone."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "FUTURE_WITH_PRESENT_CONT"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PRESENT_CONT_NOW"],
     "ua": "Те, що вона виїжджає завтра, мене засмучує.",
     "en": ["That she’s leaving tomorrow makes me sad.", "It makes me sad that she’s leaving tomorrow."]
   },
@@ -470,7 +470,7 @@
     "en": ["That he made a mistake doesn’t mean he’s stupid.", "Making a mistake doesn’t make him foolish."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
     "ua": "Те, що вона не відповідає, не означає, що вона сердиться.",
     "en": ["That she doesn’t reply doesn’t mean she’s angry.", "Her silence doesn’t mean she’s upset."]
   },
@@ -560,7 +560,7 @@
     "en": ["I’m glad that they were honest.", "It makes me happy that they told the truth."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "NEGATION_DONT_DOESNT"],
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
     "ua": "Мене засмучує, що він не відповідає.",
     "en": ["It upsets me that he doesn’t reply.", "I’m sad that he isn’t answering."]
   },

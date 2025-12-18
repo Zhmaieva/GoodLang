@@ -279,7 +279,7 @@
     "en": ["The team will win this match easily."]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "NEGATION_DONT_DOESNT", "DEMONSTRATIVES"],
+    "rules": ["WILL_PREDICTIONS", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
     "ua": "Я не думаю, що вони погодяться з цією ідеєю.",
     "en": ["I don’t think they will agree with this idea."]
   },

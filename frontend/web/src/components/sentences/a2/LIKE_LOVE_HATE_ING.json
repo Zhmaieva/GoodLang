@@ -10,7 +10,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Він не любить писати листи.",
       "en": [
         "He doesn't like writing letters.",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
       "ua": "Він не любить бігати в парку.",
       "en": [
         "He doesn't like running in the park.",
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Ми не любимо співати на сцені.",
       "en": [
         "We don't like singing on stage.",
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Вона не любить дивитися фільми жахів.",
       "en": [
         "She doesn't like watching horror movies.",
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Ми не любимо плавати в озері.",
       "en": [
         "We don't like swimming in the lake.",
@@ -238,7 +238,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Вона не любить шити одяг.",
       "en": [
         "She doesn't like sewing clothes.",
@@ -301,7 +301,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Він не дуже любить плавати в річці.",
       "en": [
         "He doesn't really like swimming in the river.",
@@ -394,7 +394,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Вона не любить дивитися спортивні програми.",
       "en": [
         "She doesn't like watching sports shows.",
@@ -449,7 +449,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Він не дуже любить волейбол.",
       "en": [
         "He doesn't really like playing volleyball.",
@@ -504,7 +504,7 @@
       ]
     },
     {
-      "rules": ["LIKE_LOVE_HATE_ING", "NEGATION_DONT_DOESNT"],
+      "rules": ["LIKE_LOVE_HATE_ING", "PRESENT_SIMPLE_FREQ"],
       "ua": "Ми не особливо любимо плавати в морі.",
       "en": [
         "We don't really like swimming in the sea.",

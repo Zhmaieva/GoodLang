@@ -96,7 +96,7 @@ export default function AnalyticsPage({theme}) {
     return (
         <AppShell theme={theme}>
             <div style={{height: "100vh"}}>
-                <BrandHeader theme={theme} title={"Аналітика GoodLang"} subtitle={"Огляд прогресу за правилами та словами: що вже засвоєно, а що варто потренувати."}  onExport={onExportJSON}
+                <BrandHeader theme={theme} title={"Аналітика GoodLang"} subtitle={"Огляд прогресу за правилами: що вже засвоєно, а що варто потренувати."}  onExport={onExportJSON}
                              right={
                                  <button className="btn secondary" onClick={handlePracticeClick}>
                                      ← До тренування

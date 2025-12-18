@@ -56,7 +56,7 @@
       "en": ["We are ready.", "We're ready."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "SIMPLE_ADJ"],
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
       "ua": "Вони розумні.",
       "en": ["They are smart.", "They're smart."]
     },
@@ -96,7 +96,7 @@
       "en": ["He is a teacher.", "He's a teacher."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "TO_BE", "SIMPLE_ADJ"],
+      "rules": ["PERSONAL_PRONOUNS", "TO_BE"],
       "ua": "Вона гарна.",
       "en": ["She is beautiful.", "She's beautiful."]
     },
@@ -136,27 +136,27 @@
       "en": ["We always have breakfast together."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "NEGATION_DONT_DOESNT"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
       "ua": "Я не розумію.",
       "en": ["I don't understand."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "NEGATION_DONT_DOESNT"],
+      "rules": ["PERSONAL_PRONOUNS", "PRESENT_SIMPLE_FREQ"],
       "ua": "Вона не любить каву.",
       "en": ["She doesn't like coffee."]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "YES_NO_Q"],
+      "rules": ["PERSONAL_PRONOUNS"],
       "ua": "Ти втомився?",
       "en": ["Are you tired?"]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "YES_NO_Q", "PREP_PLACE"],
+      "rules": ["PERSONAL_PRONOUNS", "PREP_PLACE"],
       "ua": "Він вдома?",
       "en": ["Is he at home?"]
     },
     {
-      "rules": ["PERSONAL_PRONOUNS", "YES_NO_Q"],
+      "rules": ["PERSONAL_PRONOUNS"],
       "ua": "Вони готові?",
       "en": ["Are they ready?"]
     },

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 export default function FooterBar(theme) {
@@ -24,4 +25,8 @@ export default function FooterBar(theme) {
             }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a></div>
         </footer>
     )
+=======
+export default function FooterBar() {
+    return <footer>© 2025 GoodLang • Дашборд аналітики</footer>;
+>>>>>>> 98ccf44 (rules update)
 }

@@ -3,67 +3,67 @@
     "rules": ["MAKE_DO_DIFFERENCE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми робимо багато фото під час подорожей.",
     "en": ["We take a lot of photos when we travel."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він часто помиляється.",
     "en": ["He often makes mistakes."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "ARTICLES"],
     "ua": "Я хочу зробити торт.",
     "en": ["I want to make a cake."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Я хочу зробити фото.",
     "en": ["I want to take a picture."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
-    "rules": ["MAKE_DO_DIFFERENCE", "NEGATION_DONT_DOESNT"],
+    "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
     "ua": "Не зроби помилку.",
     "en": ["Don’t make a mistake."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "ARTICLES"],
     "ua": "Він зробив правильний вибір.",
     "en": ["He made the right choice."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Ми зробили вечерю разом.",
     "en": ["We made dinner together."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Я хочу завести друзів у новій школі.",
     "en": ["I want to make friends at my new school."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "ARTICLES"],
     "ua": "Вона зробила список покупок.",
     "en": ["She made a shopping list."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Ми склали план на вихідні.",
     "en": ["We made a plan for the weekend."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_CONT_NOW"],
     "ua": "Я роблю чай зараз.",
     "en": ["I am making tea now."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -74,103 +74,103 @@
       "They make accessories by hand.",
       "They are making accessories by hand."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_CONT_NOW"],
     "ua": "Я зараз готую сніданок.",
     "en": ["I am making breakfast right now."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Вона зробила мені чай.",
     "en": ["She made me some tea."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми зробили помилку, але навчилися.",
     "en": ["We made a mistake, but we learned."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "COMPARATIVES", "ARTICLES"],
     "ua": "Він зробив кращу презентацію цього разу.",
     "en": ["He made a better presentation this time."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "ARTICLES"],
     "ua": "Сфотографуєш мене?",
     "en": ["Will you take a picture of me?"],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Я зробив вибір.",
     "en": ["I have made my choice.", "I have made a choice."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Ми багато запланували на літо.",
     "en": ["We made many plans for the summer."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Вона зробила перерву.",
     "en": ["She took a break."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Я зроблю все, що можу.",
     "en": ["I will do my best."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Ми досягаємо прогресу.",
     "en": ["We are making progress."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Це зробило мене щасливим.",
     "en": ["It made me happy."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Це справді має велике значення.",
     "en": ["It makes a big difference."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Я хочу внести позитивні зміни.",
     "en": ["I want to make positive changes."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Волонтери роблять світ кращим.",
     "en": ["Volunteers make the world better."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
     "ua": "Щоранку він застеляє своє ліжко.",
     "en": ["He makes his bed every morning."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "ARTICLES"],
     "ua": "Ми доклали зусиль, щоб допомогти.",
     "en": ["We made an effort to help."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
@@ -179,7 +179,7 @@
       "I do my homework every day.",
       "I do homework every day."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
@@ -188,22 +188,22 @@
       "He does exercise in the morning.",
       "He does his exercises in the morning."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
-    "rules": ["MAKE_DO_DIFFERENCE", "NEGATION_DONT_DOESNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Вона не робить багато помилок.",
     "en": [
       "She doesn’t make many mistakes.",
       "She doesn’t make a lot of mistakes."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
     "ua": "Ми робимо прибирання щосуботи.",
     "en": ["We do the cleaning every Saturday."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
@@ -212,13 +212,13 @@
       "I do sport three times a week.",
       "I exercise three times a week."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Вони роблять чудову роботу.",
     "en": ["They do a great job."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -227,28 +227,28 @@
       "Who does the dishes in your family?",
       "Who washes the dishes in your family?"
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Я роблю все можливе.",
     "en": ["I do my best."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
-    "rules": ["MAKE_DO_DIFFERENCE", "NEGATION_DONT_DOESNT"],
+    "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
     "ua": "Не роби дурниць.",
     "en": [
       "Don’t do silly things.",
       "Don't do anything stupid."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
-    "rules": ["MAKE_DO_DIFFERENCE", "ADVERBS_FREQUENCY_OFTEN_NEVER", "NEGATION_DONT_DOESNT"],
+    "rules": ["MAKE_DO_DIFFERENCE", "ADVERBS_FREQUENCY_OFTEN_NEVER", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він ніколи не робить нічого поганого.",
     "en": ["He never does anything bad."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
 
   {
@@ -258,7 +258,7 @@
       "We do the shopping after work.",
       "We go shopping after work."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -267,13 +267,13 @@
       "I do back exercises.",
       "I do exercises for my back."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Хто робить каву сьогодні?",
     "en": ["Who is making coffee today?"],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PAST_SIMPLE"],
@@ -282,7 +282,7 @@
       "We did a project together at school.",
       "We worked on a project together at school."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -291,22 +291,22 @@
       "I will do my part.",
       "I’ll do my part."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
-    "rules": ["MAKE_DO_DIFFERENCE", "NEGATION_DONT_DOESNT", "PRESENT_SIMPLE_FREQ"],
+    "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
     "ua": "Він не робить домашнє завдання вчасно.",
     "en": [
       "He doesn’t do his homework on time.",
       "He does not do his homework on time."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
     "ua": "Я роблю все повільно, коли втомлений.",
     "en": ["I do everything slowly when I am tired."],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
@@ -315,7 +315,7 @@
       "My brother does household chores.",
       "My brother does the chores."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "MODALS_OF_PROBABILITY"],
@@ -324,7 +324,7 @@
       "He can do better.",
       "He could do better."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
@@ -333,7 +333,7 @@
       "I do my homework and then I play games.",
       "I do homework and then I play games."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PAST_SIMPLE"],
@@ -342,7 +342,7 @@
       "She did a great job last week.",
       "She did an excellent job last week."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ"],
@@ -351,7 +351,7 @@
       "We do projects at school.",
       "We work on projects at school."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
@@ -361,7 +361,7 @@
       "He makes a lot of mistakes in dictation.",
       "He makes a lot of mistakes in spelling tests."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -371,7 +371,7 @@
       "Who does the homework with you?",
       "Who studies with you?"
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -380,7 +380,7 @@
       "I do what is needed.",
       "I do everything that is needed."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "BECAUSE_SO_BUT_ALTHOUGH"],
@@ -389,7 +389,7 @@
       "He does exercises because he wants to be strong.",
       "He works out because he wants to be strong."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_CONT_NOW"],
@@ -398,7 +398,7 @@
       "I am making coffee for everyone.",
       "I'm making coffee for everyone."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "WILL_PREDICTIONS"],
@@ -407,7 +407,7 @@
       "He will do a good job with this project.",
       "He will do a great job with this project."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -416,7 +416,7 @@
       "We do our part for the team.",
       "We contribute to the team."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE"],
@@ -425,16 +425,16 @@
       "They do the work better together.",
       "They work better together."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
-    "rules": ["MAKE_DO_DIFFERENCE", "NEGATION_DONT_DOESNT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+    "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Я не завжди роблю те, що обіцяю.",
     "en": [
       "I don’t always do what I promise.",
       "I do not always do what I promise."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   },
   {
     "rules": ["MAKE_DO_DIFFERENCE", "PRESENT_PERFECT"],
@@ -443,6 +443,6 @@
       "We have already done our homework.",
       "We've already done our homework."
     ],
-    "hint": "use MAKE / DO / TAKE"
+    "hint": "використовуй MAKE / DO / TAKE"
   }
 ] }

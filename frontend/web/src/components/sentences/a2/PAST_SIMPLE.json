@@ -185,13 +185,6 @@
     ]
   },
   {
-    "rules": ["PAST_SIMPLE"],
-    "ua": "Діти любили малювати кольоровими олівцями.",
-    "en": [
-      "The children liked drawing with colored pencils."
-    ]
-  },
-  {
     "rules": ["PAST_SIMPLE", "PREP_TIME"],
     "ua": "Я відвідав своїх дідусів і бабусь минулих вихідних.",
     "en": [
@@ -262,16 +255,6 @@
     ]
   },
   {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Мені сподобався концерт.",
-    "en": ["I liked the concert.", "I enjoyed the concert."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Вони знайшли ключі.",
-    "en": ["They found the keys.", "They found their keys."]
-  },
-  {
     "rules": ["PAST_SIMPLE", "PREP_PLACE", "ARTICLES"],
     "ua": "Я зустрів свого найкращого друга в кафе.",
     "en": [
@@ -331,70 +314,12 @@
     "en": ["I slept well last night."]
   },
   {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Він дотримувався інструкцій.",
-    "en": [
-      "He followed the instructions.",
-      "He followed the directions."
-    ]
-  },
-  {
-    "rules": ["PAST_SIMPLE"],
-    "ua": "Ми запланували щось на вихідні.",
-    "en": [
-      "We planned something for the weekend.",
-      "We made plans for the weekend."
-    ]
-  },
-
-  {
-    "rules": ["PAST_SIMPLE"],
-    "ua": "Я зрозумів жарт.",
-    "en": [
-      "I understood the joke.",
-      "I got the joke."
-    ]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
-    "ua": "Вона принесла свій ноутбук.",
-    "en": ["She brought her laptop."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "POSSESSIVE_S"],
-    "ua": "Вони відповіли на мій імейл.",
-    "en": [
-      "They answered my email.",
-      "They replied to my email."
-    ]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "ARTICLES"],
-    "ua": "Йому сподобався новий ресторан.",
-    "en": ["He liked the new restaurant."]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
-    "ua": "Ми зробили кілька фотографій.",
-    "en": [
-      "We took some photos.",
-      "We took a few pictures.",
-      "We took some pictures.",
-      "We took a few photos."
-    ]
-  },
-  {
     "rules": ["PAST_SIMPLE", "PREP_TIME"],
     "ua": "Я вчора ходив до спортзалу.",
     "en": [
       "I went to the gym yesterday.",
       "I went to the fitness center yesterday."
     ]
-  },
-  {
-    "rules": ["PAST_SIMPLE", "PREP_TIME"],
-    "ua": "Вона поснідала сьогодні вранці.",
-    "en": ["She ate breakfast this morning."]
   },
   {
     "rules": ["PAST_SIMPLE"],
@@ -422,11 +347,104 @@
     "en": ["They won the game."]
   },
   {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "PREP_PLACE"],
+    "ua": "Ти був удома вчора ввечері?",
+    "en": ["Were you at home last night?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Ти подзвонив їй після роботи вчора?",
+    "en": ["Did you call her after work yesterday?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "COUNT_UNCOUNT", "DEMONSTRATIVES"],
+    "ua": "Вони купили ці квитки минулого тижня?",
+    "en": ["Did they buy these tickets last week?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Він закінчив проєкт у п’ятницю?",
+    "en": ["Did he finish the project on Friday?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": "Ти бачив цей фільм минулого року?",
+    "en": ["Did you see this movie last year?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Ви зустрілися з ним учора?",
+    "en": ["Did you meet him yesterday?"]
+  },
+  {
     "rules": ["PAST_SIMPLE"],
-    "ua": "Він передумав.",
-    "en": [
-      "He changed his mind.",
-      "He changed his decision."
-    ]
+    "ua": "Вона прийшла вчасно того дня?",
+    "en": ["Did she arrive on time that day?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Ви жили в цій квартирі у 2022 році?",
+    "en": ["Did you live in this apartment in 2022?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "ARTICLES", "COUNT_UNCOUNT"],
+    "ua": "Він забув ключі вранці?",
+    "en": ["Did he forget the keys in the morning?"]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "DEMONSTRATIVES"],
+    "ua": "Ти написав цей лист учора ввечері?",
+    "en": ["Did you write this letter last night?"]
+  },
+
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Я не бачив його вчора.",
+    "en": ["I didn’t see him yesterday."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Вона не відповіла на повідомлення минулої ночі.",
+    "en": ["She didn’t reply to the message last night."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": "Ми не ходили в ресторан минулого тижня.",
+    "en": ["We didn’t go to a restaurant last week."]
+  },
+  {
+    "rules": ["PAST_SIMPLE"],
+    "ua": "Він не купив новий телефон тоді.",
+    "en": ["He didn’t buy a new phone then."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME"],
+    "ua": "Я не працювала в п’ятницю.",
+    "en": ["I didn’t work on Friday."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "PREP_PLACE"],
+    "ua": "Вони не залишилися вдома вчора ввечері.",
+    "en": ["They didn’t stay at home last night."]
+  },
+  {
+    "rules": ["PAST_SIMPLE"],
+    "ua": "Вона не зрозуміла завдання того дня.",
+    "en": ["She didn’t understand the task that day."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "COUNT_UNCOUNT"],
+    "ua": "Ми не дивилися новини вчора.",
+    "en": ["We didn’t watch the news yesterday."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
+    "ua": "Він не прийшов на зустріч минулого понеділка.",
+    "en": ["He didn’t come to the meeting last Monday."]
+  },
+  {
+    "rules": ["PAST_SIMPLE", "PREP_TIME", "DEMONSTRATIVES", "COUNT_UNCOUNT"],
+    "ua": "Я не зробив цю помилку вчора.",
+    "en": ["I didn’t make this mistake yesterday."]
   }
 ] }

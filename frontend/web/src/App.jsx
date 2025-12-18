@@ -18,12 +18,10 @@ import {
     RULE_PAGE_PERSONAL_PRONOUNS,
     RULE_PAGE_SIMPLE_ADJ,
     RULE_PAGE_PRESENT_SIMPLE_FREQ,
-    RULE_PAGE_NEGATION_DONT_DOESNT,
     RULE_PAGE_YES_NO_Q,
     RULE_PAGE_WH_Q,
     RULE_PAGE_IMPERATIVES,
     RULE_PAGE_CAN_CANT,
-    RULE_PAGE_THERE_ISNT_ARENT_ANY,
     RULE_PAGE_COUNT_UNCOUNT,
     RULE_PAGE_BE_FROM,
     RULE_PAGE_PRESENT_CONT_NOW,
@@ -36,7 +34,6 @@ import {
 
     // --- A2 ---
     RULE_PAGE_PAST_SIMPLE,
-    RULE_PAGE_DID_QUEST_NEG,
     RULE_PAGE_WAS_WERE,
     RULE_PAGE_PAST_CONTINUOUS,
     RULE_PAGE_GOING_TO_PLANS,
@@ -50,7 +47,6 @@ import {
     RULE_PAGE_SUPERLATIVES,
     RULE_PAGE_ADVERBS_FREQUENCY_OFTEN_NEVER,
     RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY,
-    RULE_PAGE_FUTURE_WITH_PRESENT_CONT,
     RULE_PAGE_LIKE_LOVE_HATE_ING,
     RULE_PAGE_ZERO_CONDITIONAL,
     RULE_PAGE_FIRST_CONDITIONAL,
@@ -170,12 +166,10 @@ export default function App() {
                 <Route path="/rule/PERSONAL_PRONOUNS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PERSONAL_PRONOUNS} />} />
                 <Route path="/rule/SIMPLE_ADJ" element={<RulePage theme={ruleTheme} data={RULE_PAGE_SIMPLE_ADJ} />} />
                 <Route path="/rule/PRESENT_SIMPLE_FREQ" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PRESENT_SIMPLE_FREQ} />} />
-                <Route path="/rule/NEGATION_DONT_DOESNT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_NEGATION_DONT_DOESNT} />} />
                 <Route path="/rule/YES_NO_Q" element={<RulePage theme={ruleTheme} data={RULE_PAGE_YES_NO_Q} />} />
                 <Route path="/rule/WH_Q" element={<RulePage theme={ruleTheme} data={RULE_PAGE_WH_Q} />} />
                 <Route path="/rule/IMPERATIVES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_IMPERATIVES} />} />
                 <Route path="/rule/CAN_CANT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_CAN_CANT} />} />
-                <Route path="/rule/THERE_ISNT_ARENT_ANY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_THERE_ISNT_ARENT_ANY} />} />
                 <Route path="/rule/COUNT_UNCOUNT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COUNT_UNCOUNT} />} />
                 <Route path="/rule/BE_FROM_NATIONALITY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_BE_FROM} />} />
                 <Route path="/rule/PRESENT_CONT_NOW" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PRESENT_CONT_NOW} />} />
@@ -188,7 +182,6 @@ export default function App() {
 
                 {/* A2 RULES */}
                 <Route path="/rule/PAST_SIMPLE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PAST_SIMPLE} />} />
-                <Route path="/rule/DID_QUEST_NEG" element={<RulePage theme={ruleTheme} data={RULE_PAGE_DID_QUEST_NEG} />} />
                 <Route path="/rule/WAS_WERE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_WAS_WERE} />} />
                 <Route path="/rule/PAST_CONTINUOUS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PAST_CONTINUOUS} />} />
                 <Route path="/rule/GOING_TO_PLANS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_GOING_TO_PLANS} />} />
@@ -203,7 +196,6 @@ export default function App() {
                 <Route path="/rule/ENOUGH_TOO_MUCH_MANY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ENOUGH_TOO_MUCH_MANY} />} />
                 <Route path="/rule/ADVERBS_FREQUENCY_OFTEN_NEVER" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ADVERBS_FREQUENCY_OFTEN_NEVER} />} />
                 <Route path="/rule/QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY} />} />
-                <Route path="/rule/FUTURE_WITH_PRESENT_CONT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_FUTURE_WITH_PRESENT_CONT} />} />
                 <Route path="/rule/LIKE_LOVE_HATE_ING" element={<RulePage theme={ruleTheme} data={RULE_PAGE_LIKE_LOVE_HATE_ING} />} />
                 <Route path="/rule/ZERO_CONDITIONAL" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ZERO_CONDITIONAL} />} />
                 <Route path="/rule/FIRST_CONDITIONAL" element={<RulePage theme={ruleTheme} data={RULE_PAGE_FIRST_CONDITIONAL} />} />

@@ -23,7 +23,7 @@ export default function HomePage({ theme }) {
     // Analytics button (LevelSwitch style)
     const [hoveredAnalytics, setHoveredAnalytics] = useState(false);
     const analyticsButtonStyles = {
-        container: { display: "flex", justifyContent: "center", margin: "16px 0 0", flexDirection: "row",},
+        container: { display: "flex", justifyContent: "center", margin: "10px 0 0", flexDirection: "row",},
         button: (isHover) => ({
             appearance: "none",
             padding: "10px 18px",

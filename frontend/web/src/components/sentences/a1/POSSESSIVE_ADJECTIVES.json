@@ -5,7 +5,7 @@
     "en": ["Is that your jacket?", "Is this your jacket?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Він загубив свій гаманець?",
     "en": ["Did he lose his wallet?", "Did he misplace his wallet?"]
   },
@@ -20,12 +20,12 @@
     "en": ["Is the dog in its house?", "Is the dog in its kennel?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Ми забули наші квитки?",
     "en": ["Did we forget our tickets?", "Did we leave our tickets behind?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вони продали свою машину?",
     "en": ["Did they sell their car?", "Did they sell their vehicle?"]
   },
@@ -35,7 +35,7 @@
     "en": ["Is this my seat?", "Is this my spot?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Ти взяв свій паспорт?",
     "en": ["Did you bring your passport?", "Did you take your passport?"]
   },
@@ -50,17 +50,17 @@
     "en": ["Is she proud of her son?", "Is she proud of her child?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Кіт поранив свою лапу?",
     "en": ["Did the cat hurt its paw?", "Did the cat injure its paw?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE", "PREP_PLACE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE", "PREP_PLACE"],
     "ua": "Ми тут залишили наші сумки?",
     "en": ["Did we leave our bags here?", "Did we leave our backpacks here?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вони запросили своїх сусідів?",
     "en": ["Did they invite their neighbors?", "Did they invite their neighbours?"]
   },
@@ -75,22 +75,22 @@
     "en": ["Is that your decision?", "Is this your decision?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Він розбив свій телефон?",
     "en": ["Did he break his phone?", "Did he smash his phone?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вона помила волосся?",
     "en": ["Did she wash her hair?", "Did she wash her hair already?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Компанія змінила свою назву?",
     "en": ["Did the company change its name?", "Did the company rename itself?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вони забули свої ключі?",
     "en": ["Did they forget their keys?", "Did they lose their keys?"]
   },
@@ -105,122 +105,122 @@
     "en": ["Is that your brother’s car?", "Is this your brother’s car?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Він зустрівся зі своїми батьками?",
     "en": ["Did he meet his parents?", "Did he see his parents?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "DID_QUEST_NEG", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вона загубила свою каблучку?",
     "en": ["Did she lose her ring?", "Did she misplace her ring?"]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
     "ua": "Це не моя сумка.",
     "en": ["This is not my bag.", "This isn’t my bag."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
     "ua": "Це не твоя провина.",
     "en": ["That is not your fault.", "That isn’t your fault."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Він не знайшов свій паспорт.",
     "en": ["He didn’t find his passport.", "He couldn’t find his passport."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вона не взяла свій ноутбук.",
     "en": ["She didn’t bring her laptop.", "She didn’t take her laptop."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Собака не з’їв свою їжу.",
     "en": ["The dog didn’t eat its food.", "The dog didn’t finish its food."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Ми не закінчили наш проєкт.",
     "en": ["We didn’t finish our project.", "We didn’t complete our project."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вони не прибрали свою кімнату.",
     "en": ["They didn’t clean their room.", "They didn’t tidy their room."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
     "ua": "Це не моя ідея.",
     "en": ["This is not my idea.", "This isn’t my idea."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Він не одягнув свою куртку.",
     "en": ["He didn’t wear his jacket.", "He didn’t put on his jacket."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вона не подзвонила своїй мамі.",
     "en": ["She didn’t call her mother.", "She didn’t phone her mother."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Компанія не покращила свій сервіс.",
     "en": ["The company didn’t improve its service.", "The company didn’t upgrade its service."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вони не продали свій дім.",
     "en": ["They didn’t sell their house.", "They didn’t sell their home."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
     "ua": "Це не моя відповідальність.",
     "en": ["This is not my responsibility.", "This isn’t my responsibility."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Ти не зарядив свій телефон.",
     "en": ["You didn’t charge your phone.", "You didn’t recharge your phone."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Він не виконав своє завдання.",
     "en": ["He didn’t complete his task.", "He didn’t finish his task."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вона не полюбила свою нову роботу.",
     "en": ["She didn’t like her new job.", "She didn’t enjoy her new job."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Ми не запросили наших друзів.",
     "en": ["We didn’t invite our friends.", "We didn’t invite our guests."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вони не принесли свої документи.",
     "en": ["They didn’t bring their documents.", "They didn’t bring their papers."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "TO_BE"],
     "ua": "Це не моя адреса.",
     "en": ["This is not my address.", "This isn’t my address."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Ти не оновив свій профіль.",
     "en": ["You didn’t update your profile.", "You didn’t refresh your profile."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Він не впізнав свого вчителя.",
     "en": ["He didn’t recognize his teacher.", "He didn’t recognize his lecturer."]
   },
   {
-    "rules": ["POSSESSIVE_ADJECTIVES", "NEGATION_DONT_DOESNT", "PAST_SIMPLE"],
+    "rules": ["POSSESSIVE_ADJECTIVES", "PAST_SIMPLE"],
     "ua": "Вона не перевірила свою електронну пошту.",
     "en": ["She didn’t check her email.", "She didn’t check her mailbox."]
   },

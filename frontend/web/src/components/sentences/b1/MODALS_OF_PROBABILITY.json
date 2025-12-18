@@ -4,284 +4,284 @@
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Вона, мабуть, працює над проєктом зараз.",
       "en": ["She must be working on the project now.", "She might be working on the project now."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Вони, мабуть, чекають на нас біля входу.",
       "en": ["They must be waiting for us at the entrance.", "They might be waiting for us at the entrance."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT_CONT"],
       "ua": "Він, мабуть, пожартував.",
       "en": ["He must have been joking.", "He might have been joking."],
-      "hint": "Use MUST HAVE/MIGHT HAVE for past probability."
+      "hint": "використовуй MUST HAVE/MIGHT HAVE для ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT", "SINCE_FOR"],
       "ua": "Вони, мабуть, давно знайомі.",
       "en": ["They must have known each other for a long time.", "They might have known each other for a long time."],
-      "hint": "Use MUST HAVE/MIGHT HAVE for past probability."
+      "hint": "використовуй MUST HAVE/MIGHT HAVE для ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT_CONT", "SINCE_FOR"],
       "ua": "Він, мабуть, працює тут недавно.",
       "en": ["He must have been working here for a short time.", "He might have been working here for a short time."],
-      "hint": "Use MUST/MIGHT for assumptions about duration."
+      "hint": "використовуй MUST/MIGHT для припущень щодо тривалості."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
       "ua": "Вона, мабуть, щойно приїхала.",
       "en": ["She must have just arrived.", "She might have just arrived."],
-      "hint": "Use MUST/MIGHT for recent past."
+      "hint": "використовуй MUST/MIGHT для подій у недавньому минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Він, мабуть, думав, що ми запізнимось.",
       "en": ["He must have thought we would be late.", "He might have thought we would be late."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Це не може бути збігом.",
       "en": ["It can’t be a coincidence."],
-      "hint": "Use CAN’T for strong impossibility."
+      "hint": "використовуй CAN’T для логічних припущень про минуле."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Вона, напевно, готується до іспиту.",
       "en": ["She must be preparing for the exam.", "She might be preparing for the exam."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Він, напевно, не чув запитання.",
       "en": ["He must not have heard the question.", "He might not have heard the question."],
-      "hint": "Use MUST NOT/MIGHT NOT for negative probability."
+      "hint": "використовуй MUST NOT/MIGHT NOT для логічних припущень про минуле."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT_CONT"],
       "ua": "Вони, напевно, працювали всю ніч.",
       "en": ["They must have been working all night.", "They might have been working all night."],
-      "hint": "Use MUST/MIGHT for past continuous probability."
+      "hint": "використовуй MUST/MIGHT для ймовірності тривалої дії в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Це, мабуть, була її ідея.",
       "en": ["It must have been her idea.", "It might have been her idea."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Він не може бути таким наївним.",
       "en": ["He can’t be that naive."],
-      "hint": "Use CAN’T for strong present impossibility."
+      "hint": "використовуй CAN’T для сильної неможливості в теперішньому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Вона, напевно, не очікувала нас побачити.",
       "en": ["She must not have expected to see us.", "She might not have expected to see us."],
-      "hint": "Use MUST NOT/MIGHT NOT for negative past probability."
+      "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Це, мабуть, було дуже страшно.",
       "en": ["That must have been very scary.", "That might have been very scary."],
-      "hint": "Use MUST/MIGHT for past evaluation."
+      "hint": "використовуй MUST/MIGHT ля оцінки минулих подій / дій."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Вона, напевно, думає про нас.",
       "en": ["She must be thinking about us.", "She might be thinking about us."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Він, мабуть, щось приховує.",
       "en": ["He must be hiding something.", "He might be hiding something."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Вона не може бути задоволена результатом.",
       "en": ["She can’t be satisfied with the result."],
-      "hint": "Use CAN’T for strong present impossibility."
+      "hint": "використовуй CAN’T для сильної неможливості в теперішньому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Він, напевно, не бачив попередження.",
       "en": ["He must not have seen the warning.", "He might not have seen the warning."],
-      "hint": "Use MUST NOT/MIGHT NOT for negative past probability."
+      "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Це, напевно, було велике розчарування.",
       "en": ["That must have been a big disappointment.", "That might have been a big disappointment."],
-      "hint": "Use MUST/MIGHT for past evaluation."
+      "hint": "використовуй MUST/MIGHT ля оцінки минулих подій / дій."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Вони, мабуть, не зрозуміли інструкції.",
       "en": ["They must not have understood the instructions.", "They might not have understood the instructions."],
-      "hint": "Use MUST NOT/MIGHT NOT for negative past probability."
+      "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
     },
 
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT_CONT"],
       "ua": "Він, напевно, шукав ключі.",
       "en": ["He must have been looking for his keys.", "He might have been looking for his keys."],
-      "hint": "Use MUST/MIGHT for past continuous probability."
+      "hint": "використовуй MUST/MIGHT для ймовірності тривалої дії в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Вона, мабуть, чула про це по телевізору.",
       "en": ["She must have heard about it on TV.", "She might have heard about it on TV."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Він, напевно, не зрозумів питання.",
       "en": ["He must not have understood the question.", "He might not have understood the question."],
-      "hint": "Use MUST NOT/MIGHT NOT for negative past probability."
+      "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Це, мабуть, найкраще рішення.",
       "en": ["That must be the best solution.", "That might be the best solution."],
-      "hint": "Use MUST/MIGHT for present evaluation."
+      "hint": "використовуй MUST/MIGHT для оцінки теперішньої ситуації."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT_CONT"],
       "ua": "Вона, мабуть, плакала.",
       "en": ["She must have been crying.", "She might have been crying."],
-      "hint": "Use MUST/MIGHT for past continuous probability."
+      "hint": "використовуй MUST/MIGHT для ймовірності тривалої дії в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Він, мабуть, зараз готує вечерю.",
       "en": ["He must be cooking dinner now.", "He might be cooking dinner now."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Вони, мабуть, не бачили цього фільму.",
       "en": ["They must not have seen this movie.", "They might not have seen this movie."],
-      "hint": "Use MUST NOT/MIGHT NOT for uncertain past."
+      "hint": "використовуй MUST NOT/MIGHT NOT для невпевнених припущень про минуле."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Він, мабуть, бреше.",
       "en": ["He must be lying.", "He might be lying."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Він, напевно, почув шум.",
       "en": ["He must have heard the noise.", "He might have heard the noise."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Вона, мабуть, хвилюється через іспит.",
       "en": ["She must be nervous about the exam.", "She might be nervous about the exam."],
-      "hint": "Use MUST/MIGHT for present state."
+      "hint": "використовуй MUST/MIGHT для припущень про теперішній стан."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Вони, напевно, були друзями у школі.",
       "en": ["They must have been friends at school.", "They might have been friends at school."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Вона, мабуть, вдома.",
       "en": ["She must be at home.", "She might be at home."],
-      "hint": "Use MUST/MIGHT for present location."
+      "hint": "використовуй MUST/MIGHT для визначення місцезнаходження в теперішньому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Він, напевно, зайнятий зараз.",
       "en": ["He must be busy right now.", "He might be busy right now."],
-      "hint": "Use MUST/MIGHT for current state."
+      "hint": "використовуй MUST/MIGHT для поточного стану."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Вони, мабуть, запізнилися.",
       "en": ["They must be late.", "They might be late."],
-      "hint": "Use MUST/MIGHT for present deduction."
+      "hint": "використовуй MUST/MIGHT для логічного висновку в теперішньому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Тут не може бути помилки.",
       "en": ["There can’t be a mistake."],
-      "hint": "Use CAN’T for impossibility."
+      "hint": "використовуй CAN’T для неможливості."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Це, напевно, її сумка.",
       "en": ["That must be her bag.", "That might be her bag."],
-      "hint": "Use MUST/MIGHT for deduction."
+      "hint": "використовуй MUST/MIGHT для логічного висновку."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Вона, мабуть, забула.",
       "en": ["She must have forgotten.", "She might have forgotten."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT", "ALREADY_YET_JUST"],
       "ua": "Вони, напевно, вже пішли.",
       "en": ["They must have left already.", "They might have left already."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Він, мабуть, бачив це.",
       "en": ["He must have seen it.", "He might have seen it."],
-      "hint": "Use MUST/MIGHT for past probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Це не може бути правда.",
       "en": ["That can’t be true."],
-      "hint": "Use CAN’T for strong impossibility."
+      "hint": "використовуй CAN’T для логічних припущень про минуле."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Вона, мабуть, спить.",
       "en": ["She must be sleeping.", "She might be sleeping."],
-      "hint": "Use MUST/MIGHT for present probability."
+      "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Це, напевно, його сестра.",
       "en": ["That must be his sister.", "That might be his sister."],
-      "hint": "Use MUST/MIGHT to guess identity."
+      "hint": "використовуй MUST/MIGHT для припущення особи."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_CONT_NOW"],
       "ua": "Ти, мабуть, жартуєш.",
       "en": ["You must be joking."],
-      "hint": "Use MUST for strong assumption."
+      "hint": "використовуй MUST для сильного припущення."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Вони, напевно, у відпустці.",
       "en": ["They must be on vacation.", "They might be on vacation."],
-      "hint": "Use MUST/MIGHT for present guesses."
+      "hint": "використовуй MUST/MIGHT для припущень про теперішнє."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY"],
       "ua": "Тут, напевно, є помилка.",
       "en": ["There must be a mistake.", "There might be a mistake."],
-      "hint": "Use MUST for confident deduction."
+      "hint": "використовуй MUST для впевненого логічного висновку."
     },
     {
       "rules": ["MODALS_OF_PROBABILITY", "PRESENT_PERFECT"],
       "ua": "Він, мабуть, зателефонував раніше.",
       "en": ["He must have called earlier.", "He might have called earlier."],
-      "hint": "Use MUST/MIGHT for past assumptions."
+      "hint": "використовуй MUST/MIGHT для припущень про минуле."
     }
 
   ]

@@ -340,7 +340,7 @@
     "en": ["We asked if she was interested in music.", "We wanted to know whether she liked music."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "THERE_ISNT_ARENT_ANY"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "THERE_IS_ARE"],
     "ua": "Він спитав, чи немає поруч банку.",
     "en": ["He asked if there wasn’t a bank nearby.", "He wanted to know whether there were no banks around."]
   },

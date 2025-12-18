@@ -1,6 +1,6 @@
 { "YES_NO_Q": [
   {
-    "rules": ["YES_NO_Q", "TO_BE", "SIMPLE_ADJ"],
+    "rules": ["YES_NO_Q", "TO_BE"],
     "ua": "Ви готові? Ні.",
     "en": ["Are you ready? No, I’m not."]
   },
@@ -181,7 +181,7 @@
     ]
   },
   {
-    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONT_NOW", "PREP_TIME"],
+    "rules": ["YES_NO_Q", "PRESENT_CONT_NOW", "PREP_TIME"],
     "ua": "Ти зустрічаєшся з нею завтра? Ні.",
     "en": ["Are you meeting her tomorrow? No, I’m not."]
   },
@@ -277,7 +277,7 @@
     "en": ["Do you often run in the morning? Yes, I do."]
   },
   {
-    "rules": ["YES_NO_Q", "ARTICLES", "SIMPLE_ADJ"],
+    "rules": ["YES_NO_Q", "ARTICLES"],
     "ua": "Це хороша ідея? Так.",
     "en": ["Is this a good idea? Yes, it is."]
   },
@@ -433,7 +433,7 @@
     "en": ["Is the exam on the twelfth of May? Yes, it is.", "Is the exam on May 12th? Yes, it is."]
   },
   {
-    "rules": ["YES_NO_Q", "FUTURE_WITH_PRESENT_CONT_NOW", "PREP_TIME"],
+    "rules": ["YES_NO_Q", "PRESENT_CONT_NOW", "PREP_TIME"],
     "ua": "Ти зустрічаєшся з клієнтом у п’ятницю? Так.",
     "en": ["Are you meeting the client on Friday? Yes, I am."]
   },

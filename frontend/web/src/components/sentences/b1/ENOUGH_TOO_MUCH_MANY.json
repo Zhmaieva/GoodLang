@@ -95,7 +95,7 @@
     "en": "We bought too many groceries."
   },
   {
-    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "NEGATION_DONT_DOESNT"],
+    "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],
     "ua": "Вона не спить достатньо.",
     "en": "She doesn't sleep enough."
   },
@@ -103,7 +103,7 @@
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ", "THERE_IS_ARE", "PREP_PLACE"],
     "ua": "Тут надто багато людей.",
     "en": "There are too many people here.",
-    "hint": "use THERE IS/THERE ARE"
+    "hint": "використовуй THERE IS/THERE ARE"
   },
   {
     "rules": ["ENOUGH_TOO_MUCH_MANY", "PRESENT_SIMPLE_FREQ"],

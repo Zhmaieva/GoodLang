@@ -11,7 +11,7 @@
       "en": ["She often drinks tea in the morning."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Ти часто ходиш до спортзалу?",
       "en": ["Do you often go to the gym?"]
     },
@@ -96,7 +96,7 @@
       "en": ["They sometimes play football in the park."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Твоя сестра часто готує вдома?",
       "en": ["Does your sister often cook at home?"]
     },
@@ -196,7 +196,7 @@
       "en": ["He is always in his room in the evening."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Ти часто граєш на гітарі?",
       "en": ["Do you often play the guitar?"]
     },
@@ -241,9 +241,9 @@
       "en": ["He is often at the office until late."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q", "POSSESSIVE_S"],
-      "ua": "Вони часто відвідують своїх бабусь?",
-      "en": ["Do they often visit their grandmothers?"]
+      "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_S"],
+      "ua": "Вони часто відвідують свою бабусю?",
+      "en": ["Do they often visit their grandmother?", "Do they visit their grandmother often?"]
     },
     {
       "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_S"],
@@ -281,7 +281,7 @@
       "en": ["Why are you always in a hurry?"]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Ти часто дивишся фільми англійською?",
       "en": ["Do you often watch movies in English?"]
     },
@@ -311,7 +311,7 @@
       "en": ["We usually have dinner together."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Ти завжди носиш окуляри?",
       "en": ["Do you always wear glasses?"]
     },
@@ -346,7 +346,7 @@
       "en": ["They usually watch TV after dinner."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q", "POSSESSIVE_S"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_S"],
       "ua": "Твій брат часто грає в комп’ютерні ігри?",
       "en": ["Does your brother often play computer games?"]
     },
@@ -396,7 +396,7 @@
       "en": ["She often reads a book before sleep."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Ти завжди посміхаєшся?",
       "en": ["Do you always smile?"]
     },
@@ -431,7 +431,7 @@
       "en": ["We sometimes walk by the river."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "YES_NO_Q"],
+      "rules": ["PRESENT_SIMPLE_FREQ"],
       "ua": "Вони часто грають у настільні ігри?",
       "en": ["Do they often play board games?"]
     },
@@ -444,6 +444,311 @@
       "rules": ["PRESENT_SIMPLE_FREQ", "TO_BE"],
       "ua": "Я часто втомлений після тренування.",
       "en": ["I am often tired after training."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "HAVE_HAVE_GOT"],
+      "ua": "Він не має машини.",
+      "en": ["He doesn’t have a car.", "He does not have a car."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Я не п’ю молока.",
+      "en": ["I don’t drink milk.", "I do not drink milk."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Вони не живуть у Польщі.",
+      "en": ["They don’t live in Poland.", "They do not live in Poland."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "ARTICLES"],
+      "ua": "Я не живу біля школи.",
+      "en": ["I don’t live near the school.", "I do not live near the school."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Вона не носить окуляри.",
+      "en": ["She doesn’t wear glasses.", "She does not wear glasses."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Ми не працюємо вночі.",
+      "en": ["We don’t work at night.", "We do not work at night."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Я не знаю його імені.",
+      "en": ["I don’t know his name.", "I do not know his name."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Вона не працює у п’ятницю.",
+      "en": ["She doesn’t work on Friday.", "She does not work on Friday."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Я не люблю холодну погоду.",
+      "en": ["I don’t like cold weather.", "I do not like cold weather."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Вона не дивиться телевізор щодня.",
+      "en": ["She doesn’t watch TV every day.", "She does not watch TV every day."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Ми не часто ходимо в кіно.",
+      "en": ["We don’t often go to the cinema.", "We do not often go to the cinema."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Він не працює у вихідні.",
+      "en": ["He doesn’t work on weekends.", "He does not work on weekends."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Чому ти не їси м’яса?",
+      "en": ["Why don’t you eat meat?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Ми не снідаємо вранці.",
+      "en": ["We don’t have breakfast in the morning.", "We do not have breakfast in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Вона не знає відповіді.",
+      "en": ["She doesn’t know the answer.", "She does not know the answer."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "HAVE_HAVE_GOT"],
+      "ua": "Я не маю собаки.",
+      "en": ["I don’t have a dog.", "I do not have a dog."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "ARTICLES"],
+      "ua": "Він не працює в офісі.",
+      "en": ["He doesn’t work in an office.", "He does not work in an office."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Моя кімната невелика.",
+      "en": ["My room isn’t big.", "My room is not big."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES"],
+      "ua": "Ми не розуміємо це правило.",
+      "en": ["We don’t understand this rule.", "We do not understand this rule."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Чому він не слухає тебе?",
+      "en": ["Why doesn’t he listen to you?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Я не їм рису.",
+      "en": ["I don’t eat rice.", "I do not eat rice."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Вона не завжди каже правду.",
+      "en": ["She doesn’t always tell the truth.", "She does not always tell the truth."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Вони не люблять зиму.",
+      "en": ["They don’t like winter.", "They do not like winter."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_TIME"],
+      "ua": "Він не читає газету вранці.",
+      "en": ["He doesn’t read the newspaper in the morning.", "He does not read the newspaper in the morning."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Що ти не розумієш?",
+      "en": ["What don’t you understand?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "HAVE_HAVE_GOT"],
+      "ua": "Він не має брата.",
+      "en": ["He doesn’t have a brother.", "He does not have a brother."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Ми не хочемо їхати зараз.",
+      "en": ["We don’t want to go now.", "We do not want to go now."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Вона не п’є кави.",
+      "en": ["She doesn’t drink coffee.", "She does not drink coffee."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Я не часто телефоную своїм друзям.",
+      "en": ["I don’t often call my friends.", "I do not often call my friends."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Вони не живуть у центрі міста.",
+      "en": ["They don’t live in the city centre.", "They do not live in the city centre."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Він не любить собак.",
+      "en": ["He doesn’t like dogs.", "He does not like dogs."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "HAVE_HAVE_GOT"],
+      "ua": "Ми не маємо телевізора.",
+      "en": ["We don’t have a TV.", "We do not have a TV."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Я не лягаю спати рано.",
+      "en": ["I don’t go to bed early.", "I do not go to bed early."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Коли ти не працюєш?",
+      "en": ["When don’t you work?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Вона не завжди готує вечерю.",
+      "en": ["She doesn’t always cook dinner.", "She does not always cook dinner."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Я не розмовляю французькою.",
+      "en": ["I don’t speak French.", "I do not speak French."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE", "ARTICLES"],
+      "ua": "Ми не працюємо в офісі.",
+      "en": ["We don’t work in an office.", "We do not work in an office."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Цей фільм не цікавий.",
+      "en": ["This film isn’t interesting.", "This film is not interesting."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Хто не прийшов на урок?",
+      "en": ["Who didn’t come to class?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "HAVE_HAVE_GOT"],
+      "ua": "Він не має велосипеда.",
+      "en": ["He doesn’t have a bike.", "He does not have a bike."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Ми не дивимось серіали.",
+      "en": ["We don’t watch series.", "We do not watch series."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Я не працюю у вихідні.",
+      "en": ["I don’t work at weekends.", "I don’t work on weekends.", "I don’t work on the weekends."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
+      "ua": "Вона не їсть хліба.",
+      "en": ["She doesn’t eat bread.", "She does not eat bread."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "EACH_OTHER_ONE_ANOTHER"],
+      "ua": "Вони не завжди погоджуються один з одним.",
+      "en": ["They don’t always agree with each other.", "They do not always agree with each other."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Він не грає на гітарі.",
+      "en": ["He doesn’t play the guitar.", "He does not play the guitar."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_PLACE"],
+      "ua": "Я не бачу кішку у саду.",
+      "en": ["I don’t see a cat in the garden.", "I do not see a cat in the garden."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
+      "ua": "Вони не живуть біля моря.",
+      "en": ["They don’t live near the sea.", "They do not live near the sea."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Чому вона не слухає музику?",
+      "en": ["Why doesn’t she listen to music?"]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Ми не часто ходимо в парк.",
+      "en": ["We don’t often go to the park.", "We do not often go to the park."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
+      "ua": "Я не знаю його імені.",
+      "en": ["I don’t know his name.", "I do not know his name."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Він не завжди розуміє мене.",
+      "en": ["He doesn’t always understand me.", "He does not always understand me."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Я ніколи не їм м’яса.",
+      "en": ["I never eat meat."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Ми не часто ходимо в ресторани.",
+      "en": ["We don’t often go to restaurants.", "We do not often go to restaurants."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Він майже ніколи не читає книжок.",
+      "en": ["He hardly ever reads books.", "He almost never reads books."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Ми ніколи не спізнюємось.",
+      "en": ["We never come late.", "We are never late."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Я не часто їм солодке.",
+      "en": ["I don’t often eat sweets.", "I do not often eat sweets."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "ua": "Він ніколи не дивиться новини.",
+      "en": ["He never watches the news."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "PREP_TIME"],
+      "ua": "Він ніколи не запізнюється до школи.",
+      "en": ["He never comes late to school.", "He is never late for school."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Ми рідко їмо фастфуд.",
+      "en": ["We rarely eat fast food.", "We don’t often eat fast food."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "ua": "Вона не часто виходить з дому.",
+      "en": ["She doesn’t often go out.", "She does not often go out."]
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ", "ARTICLES"],
+      "ua": "Він ніколи не дивиться новини по телевізору.",
+      "en": ["He never watches the news on TV."]
     }
   ]
 }

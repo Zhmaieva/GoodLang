@@ -8,7 +8,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я не п’ю каву вранці. — Я теж."],
     "en": [
       "I don’t drink coffee in the morning. — Neither do I.",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не їм м’яса. — Я теж."],
     "en": [
       "I don’t eat meat. — Neither do I.",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не граю у відеоігри. — Я теж."],
     "en": [
       "I don’t play video games. — Neither do I.",
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PREP_TIME"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "PREP_TIME"],
     "ua": ["Я не снідаю вранці. — Я теж."],
     "en": [
       "I don’t have breakfast in the morning. — Neither do I.",
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "ARTICLES", "HAVE_HAVE_GOT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "ARTICLES", "HAVE_HAVE_GOT"],
     "ua": ["В мене немає машини. — У мене теж."],
     "en": [
       "I don’t have a car. — Neither do I.",
@@ -117,7 +117,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
     "ua": ["Я не люблю гостру їжу. — Я теж."],
     "en": [
       "I don’t like spicy food. — Neither do I.",
@@ -135,7 +135,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "PAST_SIMPLE", "DID_QUEST_NEG", "PREP_TIME", "ARTICLES"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PAST_SIMPLE", "PREP_TIME", "ARTICLES"],
     "ua": ["Я вчора не ходив у спортзал. — Я теж."],
     "en": [
       "I didn’t go to the gym yesterday. — Neither did I.",
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
     "ua": ["У мене немає часу. — У мене теж."],
     "en": [
       "I don’t have time. — Neither do I.",
@@ -221,7 +221,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT", "DEMONSTRATIVES", "PREP_PLACE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PRESENT_SIMPLE_FREQ", "DEMONSTRATIVES", "PREP_PLACE"],
     "ua": ["Я не в цій групі. — Я теж."],
     "en": [
       "I’m not in this group. — Neither am I.",
@@ -239,7 +239,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
     "ua": ["Я не люблю солодке. — Я теж."],
     "en": [
       "I don’t like sweets. — Neither do I.",
@@ -300,7 +300,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не курю. — Я теж."],
     "en": [
       "I don’t smoke. — Neither do I.",
@@ -318,7 +318,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не дивлюся телевізор. — Я теж."],
     "en": [
       "I don’t watch TV. — Neither do I.",
@@ -335,7 +335,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "TO_BE", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не голодна. — Я теж."],
     "en": [
       "I’m not hungry. — Neither am I.",
@@ -354,7 +354,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не люблю холодну погоду. — Я теж."],
     "en": [
       "I don’t like cold weather. — Neither do I.",
@@ -397,7 +397,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "PREP_PLACE"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
     "ua": ["Я сьогодні не в офісі. — Я теж."],
     "en": [
       "I’m not in the office today. — Neither am I.",
@@ -421,7 +421,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не люблю вставати рано. — Я теж."],
     "en": [
       "I don’t like getting up early. — Neither do I.",
@@ -431,7 +431,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["У мене немає братів чи сестер. — У мене теж."],
     "en": [
       "I don’t have any brothers or sisters. — Neither do I.",
@@ -441,7 +441,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не втомлена. — Я теж."],
     "en": [
       "I’m not tired. — Neither am I.",
@@ -466,7 +466,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не їм цукру. — Я теж."],
     "en": [
       "I don’t eat sugar. — Neither do I.",
@@ -501,7 +501,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не п’ю алкоголь. — Я теж."],
     "en": [
       "I don’t drink alcohol. — Neither do I.",
@@ -527,7 +527,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
     "ua": ["Я не п’ю молока. — Я теж."],
     "en": [
       "I don’t drink milk. — Neither do I.",
@@ -553,7 +553,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не люблю дощ. — Я теж."],
     "en": [
       "I don’t like rain. — Neither do I.",
@@ -571,7 +571,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не дивлюся новини. — Я теж."],
     "en": [
       "I don’t watch the news. — Neither do I.",
@@ -598,7 +598,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не люблю працювати вночі. — Я теж."],
     "en": [
       "I don’t like working at night. — Neither do I.",
@@ -624,7 +624,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не їм після 8 вечора. — Я теж."],
     "en": [
       "I don’t eat after 8 p.m. — Neither do I.",
@@ -650,7 +650,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["У мене немає домашніх тварин. — У мене теж."],
     "en": [
       "I don’t have any pets. — Neither do I.",
@@ -675,7 +675,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не п’ю газовану воду. — Я теж."],
     "en": [
       "I don’t drink soda. — Neither do I.",
@@ -701,7 +701,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не п’ю чай. — Я теж."],
     "en": [
       "I don’t drink tea. — Neither do I.",
@@ -719,7 +719,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не зайнята. — Я теж."],
     "en": [
       "I’m not busy. — Neither am I.",
@@ -736,7 +736,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["У мене немає грошей. — У мене теж."],
     "en": [
       "I don’t have any money. — Neither do I.",
@@ -761,7 +761,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не люблю каву. — Я теж."],
     "en": [
       "I don’t like coffee. — Neither do I.",
@@ -786,7 +786,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не на роботі. — Я теж."],
     "en": [
       "I’m not at work. — Neither am I.",
@@ -813,7 +813,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT", "COUNT_UNCOUNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ", "COUNT_UNCOUNT"],
     "ua": ["Я не п’ю газованих напоїв. — Я теж."],
     "en": [
       "I don’t drink fizzy drinks. — Neither do I.",
@@ -838,7 +838,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не снідаю. — Я теж."],
     "en": [
       "I don’t have breakfast. — Neither do I.",
@@ -856,7 +856,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не люблю прибирання. — Я теж."],
     "en": [
       "I don’t like cleaning. — Neither do I.",
@@ -873,7 +873,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не вдома. — Я теж."],
     "en": [
       "I’m not at home. — Neither am I.",
@@ -891,7 +891,7 @@
     ]
   },
   {
-    "rules": ["SO_DO_I_NEITHER_DO_I", "NEGATION_DONT_DOESNT"],
+    "rules": ["SO_DO_I_NEITHER_DO_I", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Я не дивлюся серіали. — Я теж."],
     "en": [
       "I don’t watch series. — Neither do I.",
