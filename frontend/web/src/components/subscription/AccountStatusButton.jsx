@@ -118,7 +118,7 @@ export default function AccountStatusButton({ theme, mobile }) {
                         onMouseLeave={() => setHover(false)}
                         onClick={handleClick}
                     >
-                        {account?.status === "paid" && "Преміум"}
+                        {account?.status === "paid" && `${account?.email ?? ''} - преміум`}
                         {account?.status === "attention" && "Преміум закінчується"}
                         {account?.status === "free" && "Хочу преміум"}
                     </div>
