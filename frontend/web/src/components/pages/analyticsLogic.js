@@ -1,23 +1,6 @@
 // ----- Colors/thresholds match your original -----
 import {getAllAnswersCount, getLearnedRulesCount, getOverallAccuracy} from "../../services/dataService.js";
 
-export const MASTERED_ACC = 0.85;
-export const WEAK_ACC = 0.6;
-
-export const SAMPLE_RULES = [
-    { id:51, name:'Present Perfect', level:'B1', attempts:28, correct:22, lastSeen:'2025-10-09T18:30:00Z' },
-    { id:1,  name:'To be (am/is/are)', level:'A1', attempts:40, correct:38, lastSeen:'2025-10-10T16:11:00Z' },
-    { id:26, name:'Past Simple (regular/irregular)', level:'A2', attempts:31, correct:21, lastSeen:'2025-10-08T09:02:00Z' },
-    { id:63, name:'Passive Voice', level:'B1', attempts:14, correct:7, lastSeen:'2025-10-07T21:02:00Z' },
-    { id:58, name:'2nd Conditional', level:'B1', attempts:12, correct:5, lastSeen:'2025-10-05T08:12:00Z' },
-    { id:59, name:'3rd Conditional', level:'B1', attempts:9,  correct:3, lastSeen:'2025-10-03T10:11:00Z' },
-    { id:18, name:'Be from (nationality)', level:'A1', attempts:7,  correct:7, lastSeen:'2025-10-09T07:45:00Z' },
-    { id:37, name:'Comparatives', level:'A2', attempts:15, correct:11,lastSeen:'2025-10-06T12:00:00Z' },
-    { id:81, name:'Inversion after negative adverbials', level:'B2', attempts:6, correct:1,lastSeen:'2025-10-04T22:10:00Z' },
-    { id:67, name:'Too / enough / so / such', level:'B1', attempts:10, correct:6,lastSeen:'2025-10-09T12:00:00Z' },
-    { id:32, name:'Be going to vs will', level:'A2', attempts:16, correct:9,lastSeen:'2025-10-10T15:10:00Z' }
-];
-
 const TRANSLATE_UA = new Map(Object.entries({
     enough: 'досить',
     although: 'хоча',
@@ -61,8 +44,6 @@ export const acc = (nCorrect, nAll) => (nAll ? (nCorrect/nAll) : 0);
 export const fmtDate = (iso) =>
     iso ? new Date(iso).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) : "—";
 
-export const fmtDateEnShort = (iso) =>
-    iso ? new Date(iso).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : "—";
 
 export const daysSince = (iso) => {
     if (!iso) return 999;
@@ -89,7 +70,7 @@ export function computeKPIs(rows) {
 function isWordLearned(w){
     if(!w.hadError) return false;
     const last3ok = (w.last3 && w.last3.length===3 && w.last3.every(v=>v===1));
-    const goodAcc = (w.attempts >= 2 && acc(w.correct, w.attempts) >= 0.85);
+    const goodAcc = (w.attempts >= 2 && acc(w.correct, w.attempts) >= 0.75);
     return last3ok || goodAcc;
 }
 
@@ -110,7 +91,7 @@ function bucketOf(w){
     if (accuracy < 0.6 && w.attempts>=2) return 'risk';
     if ((w.last3 && w.last3.length>0 && w.last3[w.last3.length-1]===0)) return 'risk';
     if (w.attempts<=1) return 'new';
-    if (!w.learned && w.attempts>=2 && accuracy<0.85) return 'learn';
+    if (!w.learned && w.attempts>=2 && accuracy<0.75) return 'learn';
     return 'other';
 }
 function priorityOf(w){

@@ -268,7 +268,7 @@ export function statusFor(accuracy, attempts) {
     // needs practice: (<5 attempts AND accuracy < 75) OR accuracy < 30
     if (accuracy < 50) return "needs practice";
     // learned: accuracy > 80 AND attempts > 5
-    if (accuracy > 85) return "learned";
+    if (accuracy > 75) return "learned";
     return "in progress";
 }
 
@@ -403,7 +403,7 @@ export function getOverallAccuracy() {
     if (curLvl === "a1") {
         bandAcc += clamp01(levelAcc / 100) * effectiveWidth;
     } else {
-        bandAcc += clamp01(Math.max(0, levelAcc - 85) / 15) * effectiveWidth;
+        bandAcc += clamp01(Math.max(0, levelAcc - 75) / 25) * effectiveWidth;
     }
 
     // (6) pull from higher levels
@@ -489,7 +489,7 @@ export function inferUserLevel() {
         // Need at least this many covered rules in a level
         minRulesWithAttempts = 6,
         // Minimum overall accuracy (percent) in the level to consider it "proficient"
-        minAccuracy = 85,
+        minAccuracy = 75,
 
         // Composite scoring weights (tune as you like)
         weights = {
@@ -635,8 +635,8 @@ export function inferUserLevel() {
             const prevAcc01 = clamp01(prevAcc / 100);
 
             // penaltyStrength: 0..1 (0 = no penalty, 1 = max penalty)
-            // Only active when prevAcc01 < 0.85
-            const penaltyStrength = clamp01((0.85 - prevAcc01) / 0.85);
+            // Only active when prevAcc01 < 0.75
+            const penaltyStrength = clamp01((0.75 - prevAcc01) / 0.75);
 
             // (a) accuracy: only pull DOWN (never raise)
             const curAcc0 = cur.accuracy ?? 0;
@@ -649,7 +649,7 @@ export function inferUserLevel() {
             );
 
             // (b) score: only punish (never boost)
-            // previous formula: + wScore * (prevAcc01 - 0.85)
+            // previous formula: + wScore * (prevAcc01 - 0.75)
             // punishment-only version:
             cur.score = clamp01((cur.score ?? 0) - wScore * penaltyStrength);
 
@@ -686,7 +686,7 @@ export function inferUserLevel() {
     // Otherwise best overall (soft fallback)
     const bestOverall = [...levelStats].sort(
         (a, b) => (b.accuracy * b.score - a.accuracy * a.score) || (stepLevels.indexOf(b.level) - stepLevels.indexOf(a.level))
-    ).filter(x => x.accuracy >= 85).find(_=>true);
+    ).filter(x => x.accuracy >= 75).find(_=>true);
 
     return {
         level: bestOverall?.level ?? "a1",

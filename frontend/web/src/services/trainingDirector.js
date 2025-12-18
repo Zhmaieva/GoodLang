@@ -73,8 +73,8 @@ export function getTrainingLevel() {
 
             if (!lvlStats || lvlStats.attempts === 0) break;
 
-            // Move UP if accuracy >85%
-            if (lvlStats.accuracy >= 85) {
+            // Move UP if accuracy >75%
+            if (lvlStats.accuracy >= 75) {
                 if (levelIdx < CEFR_ORDER.length - 1) levelIdx++;
                 else  {
                     console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
@@ -100,8 +100,8 @@ export function getTrainingLevel() {
     }
 
     // --- NORMAL MODE: enough data (≥40 scores) ---
-    // Randomize level order, then pick the first level with accuracy < 85 as `next`.
-    // If all are >= 85, default to "B2".
+    // Randomize level order, then pick the first level with accuracy < 75 as `next`.
+    // If all are >= 80, default to "B2".
     const shuffled = [...CEFR_ORDER].sort(() => Math.random() - 0.5);
 
     const current =
@@ -111,7 +111,7 @@ export function getTrainingLevel() {
             const currentLevelIndex = allStats.levels.indexOf(allStats.levels.find(l => l.level === allStats.level));
             const levelTooHigh = levelIndex - currentLevelIndex > 1;
 
-            return (levelData?.accuracy ?? 0) < 85 && !levelTooHigh;
+            return (levelData?.accuracy ?? 0) < 80 && !levelTooHigh;
         }) || "B2";
 
     console.log('current managed level: ', current);
