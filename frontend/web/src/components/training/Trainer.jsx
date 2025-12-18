@@ -43,6 +43,7 @@ export default function Trainer({
     const [answer, setAnswer] = useState("");
     const [loading, setLoading] = useState(false);
     const [mode, setMode] = useState("check"); // 'check' | 'next'
+    const [isError, setIsError] = useState(false);
 
     const [taskText, setTaskText] = useState("Завантаження завдання…");
     const [hint, setHint] = useState('Порада: перекладіть і натисніть «Перевірити»');
@@ -195,7 +196,7 @@ export default function Trainer({
             setMode("check");
         } catch (e) {
             console.error(e);
-            setHint("❌ Сталася помилка при отриманні завдання. Спробуйте ще раз.");
+            setIsError(true);
         } finally {
             setControlsDisabled(false);
         }
@@ -265,7 +266,7 @@ export default function Trainer({
             onAnswerEvaluated();
         } catch (e) {
             console.error(e);
-            setHint("❌ Помилка перевірки. Перевірте підключення до сервера.");
+            setIsError(true);
         } finally {
             setControlsDisabled(false);
         }
@@ -286,7 +287,18 @@ export default function Trainer({
         }
     }
 
-    return (
+    return (isError) ? (
+        <div style={{
+            fontSize: "24px",
+            alignSelf: "center",
+            width: "100%",
+            fontWeight: 800,
+            textAlign: "center"
+        }}>Ой, помилка :( <br/> Напишіть до <a style={{
+            color: theme.accent,
+            textDecoration: "none",
+        }} href="mailto:goodlang@gmail.com">goodlang@gmail.com</a> і ми допоможемо.</div>
+    ) : (
         <section id="trainer" style={gridStyle}>
             <TaskCard
                 hint={freeTraining ? taskHint : null}

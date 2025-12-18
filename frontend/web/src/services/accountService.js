@@ -27,6 +27,7 @@ export async function getToken() {
 - setup stripe listener on prod
 - setup stripe account
 
+- set score band threshold to 80 instead of 85
 - add progress bar to rule page
 - add floating trainer on rule page
 - tooltips for analytics chips
