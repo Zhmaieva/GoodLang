@@ -118,6 +118,7 @@ export default function AnalyticsPage({theme}) {
                 />
                 <div style={{height: '50%'}}>
                     <RulesTable
+                        theme={theme}
                         rows={tableRows}
                         pct={pct}
                         statusOf={statusOf}

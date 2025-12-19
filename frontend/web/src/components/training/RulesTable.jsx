@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { statusOf } from "../pages/analyticsLogic.js";
 
-export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick }) {
+export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick, theme }) {
 
     const LEVEL_MAP = {
         A1: { label: "Початківець" },
@@ -53,12 +53,7 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick })
                         const a = r.accuracy;
                         const st = statusOf(r);
 
-                        const barColor =
-                            r.status === "needs practice"
-                                ? "#ef476f"
-                                : r.status === "in progress"
-                                    ? "#ffd166"
-                                    : "#4ba36e";
+                        const barColor = theme.accent
 
                         /* ---------------- MOBILE CARD ---------------- */
                         if (isMobile) {
