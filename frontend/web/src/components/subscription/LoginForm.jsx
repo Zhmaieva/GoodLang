@@ -8,7 +8,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
-    const [termsOpen, setTermsOpen] = useState(true);
+    const [termsOpen, setTermsOpen] = useState(false);
     const [error, setError] = useState("");
     const inputsRef = useRef([]);
 
