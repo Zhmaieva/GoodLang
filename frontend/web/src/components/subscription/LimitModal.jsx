@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import {callAccountInfoApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
-import { getUserId } from "../../services/accountService.js";
 import LoginModal from "./LoginModal.jsx";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
@@ -17,11 +16,15 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [account, setAccount] = useState(null);
 
-
     const onCloseHandler = () => {
         if (isPaying)
             window.location.reload();
         onClose();
+    }
+
+    const loadAccountInfo = async () => {
+        const account = await callAccountInfoApi();
+        setAccount(account);
     }
 
     // ⏳ Countdown timer — only when limit is reached
@@ -58,9 +61,10 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
             setLoading(true);
 
             if (isLimitReached) {
-                const account = await callAccountInfoApi();
+                if (!account)
+                    await loadAccountInfo();
+
                 if (!account.email) {
-                    setAccount(account);
                     setLoginModalOpen(true);
                     return;
                 }
@@ -68,7 +72,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
 
             const stripe = await stripePromise;
 
-            const { clientSecret, isSuccess } = await callCheckoutApi(getUserId());
+            const { clientSecret, isSuccess } = await callCheckoutApi();
             if (!isSuccess) {
                 navigate("/payment/cancel");
                 setLoading(false);
@@ -139,8 +143,15 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                             </div>
                         )}
 
-                        <p style={{color: theme.muted, marginBottom: 16, lineHeight: "1.45", fontSize: "16px", textAlign: "left"}}>
-                            Щоб тренуватися у повну силу та відкрити всі можливості GoodLang — активуй підписку.
+                        <p style={{color: theme.muted,
+                            marginBottom: 16,
+                            lineHeight: "1.45",
+                            fontSize: "16px",
+                            textAlign: "left"
+                        }}>
+                            Щоб тренуватися у повну силу
+                            та відкрити всі можливості GoodLang —
+                            придбай преміум підписку.
                         </p>
 
                         <div style={{textAlign: "left", margin: "0 0 28px 0", maxWidth: 280}}>
@@ -189,11 +200,13 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                                     opacity: loading ? 0.7 : 1
                                 }}
                             >
-                                {loading ? "Завантаження…" : "Активувати підписку"}
+                                {loading ? "Завантаження…" : "Придбати преміум"}
                             </button>
 
                             <button
-                                onClick={() => {
+                                onClick={async () => {
+                                    if (!account)
+                                        await loadAccountInfo().then();
                                     setLoginModalOpen(true)
                                 }}
                                 disabled={loading}

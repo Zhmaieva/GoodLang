@@ -102,17 +102,25 @@ export async function sendVerificationCode(email) {
 /**
  * Verify code for email and return account id if valid
  */
-export async function verifyCode(email, code) {
+export async function verifyCode(email, code, termsAccepted) {
     const { rows } = await pool.query(
         `SELECT account_id, expires_at FROM sign_in_links
          WHERE email=$1 AND code=$2`,
         [email, code]
     );
 
-    if (!rows[0]) return null;
+    if (!rows[0])
+        return {
+            codeAccepted: false,
+            accountId: null
+        }
 
     const now = new Date();
-    if (rows[0].expires_at < now) return null;
+    if (rows[0].expires_at < now)
+        return {
+            codeAccepted: false,
+            accountId: null
+        }
 
     // CASE 1: Existing account
     if (rows[0].account_id) {
@@ -120,7 +128,17 @@ export async function verifyCode(email, code) {
         // Optional: delete the code after use
         await pool.query(`DELETE FROM sign_in_links WHERE email=$1`, [email]);
 
-        return rows[0].account_id;
+        return {
+            codeAccepted: true,
+            accountId: rows[0].account_id
+        }
+    }
+
+    if (!termsAccepted) {
+        return {
+            codeAccepted: true,
+            accountId: null
+        }
     }
 
     // CASE 2: No account yet → create one
@@ -144,6 +162,9 @@ export async function verifyCode(email, code) {
     // Optional: delete the sign_in_link now that it's used
     await pool.query(`DELETE FROM sign_in_links WHERE email=$1`, [email]);
 
-    return newAccountId;
+    return {
+        codeAccepted: true,
+        accountId: newAccountId
+    }
 }
 

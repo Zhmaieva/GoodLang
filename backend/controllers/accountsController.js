@@ -59,15 +59,15 @@ export const accountsController = {
         // Verify the code and return a JWT token
         app.post(`/accounts/verify-code`, async (req, res, next) => {
             try {
-                const { email, code } = req.body;
+                const { email, code, termsAccepted } = req.body;
                 if (!email || !code) return res.status(400).json({ error: "Email and code required" });
 
-                const accountId = await verifyCode(email, code);
-                if (!accountId) return res.status(400).json({ error: "Invalid or expired code" });
+                const { accountId, codeAccepted } = await verifyCode(email, code, termsAccepted);
+                if (!codeAccepted) return res.status(400).json({ error: "Invalid or expired code" });
 
-                const token = jwt.sign({ id: accountId }, SECRET_KEY);
+                const token = accountId ? generateToken({id: accountId}) : "";
 
-                res.json({ message: "Logged in successfully", userId: accountId, token });
+                res.json({ message: "Logged in successfully", mustAcceptTerms: !accountId, token });
             } catch (e) {
                 next(e);
             }

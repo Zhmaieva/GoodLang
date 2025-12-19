@@ -2,15 +2,14 @@ import {getToken} from "./accountService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
-export async function callCheckoutApi(accountId) {
+export async function callCheckoutApi() {
     const url = `${API_BASE}/payments/create-checkout-session`;
 
     const res = await fetch(url, {
         method: "POST",
         headers: {
             'Authorization': `Bearer ${await getToken()}`,
-        },
-        body: JSON.stringify({accountId})
+        }
     });
 
     const data = await res.json();
@@ -126,11 +125,11 @@ export async function callSendCodeApi({ email }) {
     return data;
 }
 
-export async function callVerifyCodeApi({ email, code }) {
+export async function callVerifyCodeApi({ email, code, termsAccepted = false }) {
     const res = await fetch(`${API_BASE}/accounts/verify-code`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, code }),
+        body: JSON.stringify({ email, code, termsAccepted }),
     });
 
     const data = await res.json();

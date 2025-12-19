@@ -2,18 +2,12 @@ import {callSignUpApi} from "./api.js";
 
 async function initCredentials() {
     const savedToken = localStorage.getItem("token");
-    const savedId = localStorage.getItem("userId");
-    if (!savedToken || !savedId) {
-        const { userId, token } = await callSignUpApi();
+    if (!savedToken) {
+        const { token } = await callSignUpApi();
         localStorage.setItem("token", token);
-        localStorage.setItem("userId", userId);
-        return { userId, token };
+        return { token };
     }
-    return { token: savedToken, userId: savedId};
-}
-
-export async function getUserId() {
-    return (await initCredentials()).userId;
+    return { token: savedToken };
 }
 
 export async function getToken() {
@@ -23,8 +17,6 @@ export async function getToken() {
 /* todo:
 - fix dates translation
 - fix declarative sentences absent level and others
-
-- TOU
 
 - add email/number input type and enter
 - add a progress bar to the rule page

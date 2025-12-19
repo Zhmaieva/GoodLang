@@ -88,7 +88,7 @@ export async function updateSubscriptionForAccount(accountId, stripeSubscription
             newStatus = "free";
         }
 
-        if (!customerId) {
+        if (stripeSubscription.customer_id) {
             await client.query(
                 "UPDATE accounts SET stripe_customer_id = $1 WHERE id = $2;",
                 [stripeSubscription.customer_id, accountId]

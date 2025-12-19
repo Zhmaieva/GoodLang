@@ -110,7 +110,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         <div style={styles.titleBox}>
                             <h1 style={styles.h1Brand}>GoodLang</h1>
                             <div style={styles.subBrand}>
-                                Переклад → короткий фідбек → нове речення згідно твого рівня
+                                Перекладай речення за реченням, поки не вивчиш правила
                             </div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={styles.titleWrap}>
                         <h1 style={styles.h1(40)}>GoodLang</h1>
                         <div style={styles.sub}>
-                            Переклад → короткий фідбек → нове речення згідно твого рівня
+                            Перекладай речення за реченням, поки не вивчиш правила
                         </div>
                     </div>
                 </div>

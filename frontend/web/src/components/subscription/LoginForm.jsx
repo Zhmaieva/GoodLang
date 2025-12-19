@@ -1,11 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import {callAccountInfoApi, callDataSyncApi, callSendCodeApi, callVerifyCodeApi} from "../../services/api.js";
+import TermsOfUseModal from "./TermsOfUseModal.jsx";
+import {setPaymentIntent} from "../../services/dataService.js";
 
 export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [step, setStep] = useState("email"); // "email" | "code"
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
+    const [termsOpen, setTermsOpen] = useState(true);
     const [error, setError] = useState("");
     const inputsRef = useRef([]);
 
@@ -105,21 +108,28 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         setError("");
         try {
             const oldAccount = await callAccountInfoApi();
-            const { token, userId } = await callVerifyCodeApi({ email: emailInput, code: enteredCode });
+            const { token, mustAcceptTerms } = await callVerifyCodeApi({ email: emailInput, code: enteredCode });
+
+            if (mustAcceptTerms) {
+                setTermsOpen(true);
+                return;
+            }
 
             localStorage.setItem("token", token);
-            localStorage.setItem("userId", userId);
 
             const newAccount = await callAccountInfoApi();
 
             if (oldAccount.email && oldAccount.status !== 'free') {//purge old data if it was synced account
                 localStorage.clear();
                 localStorage.setItem("token", token);
-                localStorage.setItem("userId", userId);
             }
 
             if (newAccount.status !== 'free') // old data will be synced to new account if possible
                 await syncData();
+
+            if (newAccount.status === "free") {
+                setPaymentIntent(true);
+            }
 
             window.location.reload();
 
@@ -147,71 +157,89 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     }, [step]);
 
     return (
-        <div style={{display: "flex", flexDirection: "column", gap: 12}}>
-            {step === "email" && (
-                <>
-                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "18pt", fontWeight: 800}}>Введіть свій імейл</h2>
-                    <input
-                        type="email"
-                        placeholder="goodlang.app@example.com"
-                        value={emailInput}
-                        onChange={(e) => setEmailInput(e.target.value)}
-                        style={{
-                            ...baseInputStyle,
-                            width: "100%",
-                        }}
-                        required
-                        disabled={loading}
-                    />
-                    <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
-                        {loading ? "Відправляю..." : "Підтвердити"}
-                    </button>
-                </>
-            )}
-
-            {step === "code" && (
-                <>
-                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "14pt", fontWeight: 800}}>Введіть код з імейлу</h2>
-                    <div style={{display: "flex", gap: 8}}>
-                    {code.map((digit, i) => (
+        <>
+            {
+                !termsOpen && <div style={{display: "flex", flexDirection: "column", gap: 12}}>
+                    {step === "email" && (
+                        <>
+                            <h2 style={{marginBottom: 16, color: theme.text, fontSize: "18pt", fontWeight: 800}}>Введіть
+                                свій імейл</h2>
                             <input
-                                key={i}
-                                ref={(el) => (inputsRef.current[i] = el)}
-                                value={digit}
-                                onChange={(e) => handleCodeChange(e, i)}
-                                onKeyDown={(e) => handleCodeKeyDown(e, i)}
-                                style={codeInputStyle}
-                                maxLength={1}
+                                type="email"
+                                placeholder="goodlang.app@example.com"
+                                value={emailInput}
+                                onChange={(e) => setEmailInput(e.target.value)}
+                                style={{
+                                    ...baseInputStyle,
+                                    width: "100%",
+                                }}
+                                required
                                 disabled={loading}
                             />
-                        ))}
-                    </div>
-                    <button style={buttonStyle} onClick={handleVerify} disabled={loading}>
-                        {loading ? "Перевіряю..." : "Увійти"}
-                    </button>
-                </>
-            )}
+                            <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
+                                {loading ? "Відправляю..." : "Підтвердити"}
+                            </button>
+                        </>
+                    )}
 
-            {error && <div style={{color: "red"}}>{error}</div>}
+                    {step === "code" && (
+                        <>
+                            <h2 style={{marginBottom: 16, color: theme.text, fontSize: "14pt", fontWeight: 800}}>Введіть код
+                                з імейлу</h2>
+                            <div style={{display: "flex", gap: 8}}>
+                                {code.map((digit, i) => (
+                                    <input
+                                        key={i}
+                                        ref={(el) => (inputsRef.current[i] = el)}
+                                        value={digit}
+                                        onChange={(e) => handleCodeChange(e, i)}
+                                        onKeyDown={(e) => handleCodeKeyDown(e, i)}
+                                        style={codeInputStyle}
+                                        maxLength={1}
+                                        disabled={loading}
+                                    />
+                                ))}
+                            </div>
+                            <button style={buttonStyle} onClick={handleVerify} disabled={loading}>
+                                {loading ? "Перевіряю..." : "Увійти"}
+                            </button>
+                        </>
+                    )}
 
-            <style>
-                {`
+                    {error && <div style={{color: "red"}}>{error}</div>}
+
+                    <style>
+                        {`
                     input::placeholder,
                     textarea::placeholder {
                         text-align: center;
                         font-size: 1.3rem
                     }
                 `}
-            </style>
+                    </style>
 
-            {isMobile && <style>
-                {`
+                    {isMobile && <style>
+                        {`
                     input::placeholder,
                     textarea::placeholder {
                         font-size: 1.3rem
                     }
                 `}
-            </style>}
-        </div>
+                    </style>}
+                </div>
+            }
+            {
+                termsOpen && <TermsOfUseModal
+                    theme={theme}
+                    onClose={() => {
+                        setTermsOpen(false);
+                        onClose();
+                    }}
+                    email={emailInput}
+                    verificationCode={code.join("")}
+                />
+
+            }
+        </>
     );
 }

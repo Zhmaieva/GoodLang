@@ -7,8 +7,18 @@ const STORAGE_KEY_SKIP = "samples_skip";
 const STORAGE_KEY_LAST_SYNC = "answers_lastSync";
 const STORAGE_KEY_SEED_UPDATED = "seed_updatedAt";
 const STORAGE_KEY_DEVICE_ID = "device_id";
+const STORAGE_KEY_PAYMENT_INTENT_ENABLED = "payment_intent_enabled";
 
 const CHUNK_SIZE = 100;
+
+export function setPaymentIntent(value) {
+    localStorage.setItem(STORAGE_KEY_PAYMENT_INTENT_ENABLED, value);
+}
+
+export function getPaymentIntent() {
+    const value = localStorage.getItem(STORAGE_KEY_PAYMENT_INTENT_ENABLED);
+    return value === "true";
+}
 
 function chunkArray(arr, size) {
     const out = [];

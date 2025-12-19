@@ -3,7 +3,7 @@ import {callAccountInfoApi} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
-import {getOverallAccuracy} from "../../services/dataService.js";
+import {getOverallAccuracy, getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 
 export default function AccountStatusButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
@@ -21,8 +21,10 @@ export default function AccountStatusButton({ theme, mobile }) {
         loadStatus().then((data) => {
             const {attemptsLeft} = getOverallAccuracy();
             console.log(data);
-            if (data?.status === 'free' && attemptsLeft <= 0)
+            if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
+                setPaymentIntent(false);
                 setLimitModalOpen(true);
+            }
         });
 
         setInterval(() => {
