@@ -150,9 +150,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         <div style={{display: "flex", flexDirection: "column", gap: 12}}>
             {step === "email" && (
                 <>
-                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "24pt", fontWeight: 800}}>Введіть свій
-                        імейл
-                    </h2>
+                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "18pt", fontWeight: 800}}>Введіть свій імейл</h2>
                     <input
                         type="email"
                         placeholder="goodlang.app@example.com"
@@ -165,7 +163,6 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                         required
                         disabled={loading}
                     />
-
                     <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
                         {loading ? "Відправляю..." : "Підтвердити"}
                     </button>
@@ -174,9 +171,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
             {step === "code" && (
                 <>
-                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "24pt", fontWeight: 800}}>Введіть код з
-                        імейлу
-                    </h2>
+                    <h2 style={{marginBottom: 16, color: theme.text, fontSize: "14pt", fontWeight: 800}}>Введіть код з імейлу</h2>
                     <div style={{display: "flex", gap: 8}}>
                     {code.map((digit, i) => (
                             <input

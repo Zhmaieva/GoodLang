@@ -99,7 +99,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             background,
             color,
             border: `2px solid ${border}`,
-            boxShadow: `2px 2px 0 ${shadow}`,
+            boxShadow: `4px 4px 0 ${shadow}`,
 
             // transform: hover ? "translateY(1px)" : "none",
             // transition: "transform 120ms ease",

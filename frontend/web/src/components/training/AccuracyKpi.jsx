@@ -55,7 +55,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const valueStyle = {
-        fontSize: header || isMobile ? "20px" : "28px",
+        fontSize: header || isMobile ? "16px" : "24px",
         fontWeight: 800,
     };
 

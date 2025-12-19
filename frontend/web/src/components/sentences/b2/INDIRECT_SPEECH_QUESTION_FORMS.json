@@ -55,7 +55,7 @@
     "en": ["She wanted to know if he would come tomorrow.", "She asked whether he was coming the next day."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Мене цікавить, хто дзвонив учора ввечері.",
     "en": ["I wonder who called last night.", "I’d like to know who phoned yesterday evening."]
   },
@@ -345,157 +345,157 @@
     "en": ["He asked if there wasn’t a bank nearby.", "He wanted to know whether there were no banks around."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він спитав, куди вона пішла після уроків.",
     "en": ["He asked where she went after class.", "He wanted to know where she had gone after school."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона хотіла знати, хто був на вечірці.",
     "en": ["She wanted to know who was at the party.", "She asked who had attended the party."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Мене цікавить, скільки часу він уже тут живе.",
     "en": ["I wonder how long he has lived here.", "I’d like to know how long he’s been living here."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "PREP_PLACE"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PREP_PLACE"],
     "ua": "Він спитав, де знаходиться автобусна зупинка.",
     "en": ["He asked where the bus stop was.", "He wanted to know where to find the bus stop."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "PAST_PERFECT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PAST_PERFECT"],
     "ua": "Вона поцікавилася, чому вони вже поїхали.",
     "en": ["She asked why they had already left.", "She wanted to know why they’d gone so soon."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Я не знаю, коли він зазвичай прокидається.",
     "en": ["I don’t know when he usually gets up.", "I’m not sure what time he normally wakes up."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він запитав, що вони робили, коли він прийшов.",
     "en": ["He asked what they were doing when he arrived.", "He wanted to know what they had been doing at that moment."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Ми хотіли знати, чому він не відповів на повідомлення.",
     "en": ["We wanted to know why he hadn’t replied to the message.", "We asked why he didn’t answer the text."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "COUNT_UNCOUNT"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "COUNT_UNCOUNT"],
     "ua": "Я поцікавився, скільки грошей їм потрібно.",
     "en": ["I asked how much money they needed.", "I wanted to know how much cash they required."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "ua": "Вона спитала, скільки людей прийде на зустріч.",
     "en": ["She asked how many people would come to the meeting.", "She wanted to know how many guests were expected."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він хотів знати, що мені подобається робити у вільний час.",
     "en": ["He wanted to know what I like doing in my free time.", "He asked what hobbies I enjoy."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "PRESENT_CONT_NOW"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PRESENT_CONT_NOW"],
     "ua": "Ми запитали, що він зараз робить.",
     "en": ["We asked what he was doing now.", "We wanted to know what he was busy with at that moment."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "PREP_TIME"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PREP_TIME"],
     "ua": "Я спитав, коли починається концерт.",
     "en": ["I asked when the concert started.", "I wanted to know what time the concert began."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Вона спитала, як далеко до найближчого метро.",
     "en": ["She asked how far it was to the nearest subway station.", "She wanted to know the distance to the closest metro stop."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "TO_INF"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "TO_INF"],
     "ua": "Він хотів знати, як дістатися до готелю.",
     "en": ["He wanted to know how to get to the hotel.", "He asked for directions to the hotel."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Я не пам’ятаю, який фільм ми дивилися минулого тижня.",
     "en": ["I don’t remember which movie we watched last week.", "I can’t recall what film we saw last week."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "TOO_VERY"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "TOO_VERY"],
     "ua": "Вона спитала, чому я був такий засмучений.",
     "en": ["She asked why I was so upset.", "She wanted to know what made me very sad."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Ми поцікавилися, яка в нього була професія.",
     "en": ["We asked what his job was.", "We wanted to know what he worked as."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він хотів знати, який вид спорту я люблю найбільше.",
     "en": ["He wanted to know which sport I liked most.", "He asked what kind of sport I preferred."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "ZERO_CONDITIONAL"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Я спитав, що вона робить, коли нервує.",
     "en": ["I asked what she does when she’s nervous.", "I wanted to know how she behaves when she gets anxious."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "BECAUSE_SO_BUT_ALTHOUGH"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Він поцікавився, чому вони пішли, хоча концерт ще не закінчився.",
     "en": ["He asked why they had left although the concert wasn’t over.", "He wanted to know why they left before the show ended."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "ORDINALS_DATES"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "ORDINALS_DATES"],
     "ua": "Вона хотіла знати, коли саме він народився.",
     "en": ["She wanted to know when exactly he was born.", "She asked for the exact date of his birth."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Ми спитали, якого кольору була машина.",
     "en": ["We asked what color the car was.", "We wanted to know which color the car had been."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він хотів знати, у кого вона позичила гроші.",
     "en": ["He wanted to know who she had borrowed the money from.", "He asked from whom she borrowed the money."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Я не розумів, чому він поводився так дивно.",
     "en": ["I didn’t understand why he was acting so strangely.", "I couldn’t figure out why he behaved in that odd way."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "BE_GOOD_AT_INTERESTED_IN_ING"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "BE_GOOD_AT_INTERESTED_IN_ING"],
     "ua": "Вона спитала, чим я цікавлюся.",
     "en": ["She asked what I’m interested in.", "She wanted to know what my interests are."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "PREP_PLACE"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PREP_PLACE"],
     "ua": "Ми поцікавилися, де саме вони зустрілися вперше.",
     "en": ["We asked where exactly they met for the first time.", "We wanted to know the place where they first met."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він хотів знати, як часто вона бачить свою сім’ю.",
     "en": ["He wanted to know how often she sees her family.", "He asked how frequently she visits her relatives."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "COMPARATIVES"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "COMPARATIVES"],
     "ua": "Я спитав, чому цей варіант кращий за інший.",
     "en": ["I asked why this option was better than the other one.", "I wanted to know why this choice was more suitable."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "SUPERLATIVES"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "SUPERLATIVES"],
     "ua": "Вона хотіла знати, який був найкращий момент подорожі.",
     "en": ["She wanted to know what the best part of the trip was.", "She asked which moment was the most memorable."]
   },
   {
-    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "WH_Q", "HOW_OFTEN_LONG_MUCH"],
+    "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "HOW_OFTEN_LONG_MUCH"],
     "ua": "Ми поцікавилися, як довго триватиме зустріч.",
     "en": ["We asked how long the meeting would last.", "We wanted to know the duration of the meeting."]
   }

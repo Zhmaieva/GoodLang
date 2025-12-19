@@ -95,8 +95,8 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                 !loginModalOpen && <div style={{
                     position: "fixed",
                     top: 0, left: 0,
-                    width: "100%",
-                    height: "100%",
+                    width: "100vw",
+                    height: "100vh",
                     background: "rgba(0,0,0,0.35)",
                     display: "flex",
                     alignItems: "center",
@@ -114,7 +114,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                         display: !isPaying ? "block" : "none",
                     }} onClick={e => e.stopPropagation()}>
-                        <h2 style={{marginBottom: 16, color: theme.text, fontSize: "24pt", fontWeight: 800}}>
+                        <h2 style={{marginBottom: 16, color: theme.text, fontSize: "18pt", fontWeight: 800}}>
                             {isLimitReached ? "Повернись до навчання за:" : "Навчання у повну силу"}
                         </h2>
 
@@ -139,24 +139,22 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                             </div>
                         )}
 
-                        <p style={{color: theme.muted, fontSize: "1.05rem", marginBottom: 24, lineHeight: "1.45"}}>
-                            Щоб тренуватися у повну силу
-                            та відкрити всі можливості GoodLang —
-                            активуй підписку.
+                        <p style={{color: theme.muted, marginBottom: 16, lineHeight: "1.45", fontSize: "16px", textAlign: "left"}}>
+                            Щоб тренуватися у повну силу та відкрити всі можливості GoodLang — активуй підписку.
                         </p>
 
-                        <div style={{textAlign: "left", margin: "0 auto 28px", maxWidth: 280}}>
+                        <div style={{textAlign: "left", margin: "0 0 28px 0", maxWidth: 280}}>
                             <ul style={{
                                 listStyle: "none",
                                 padding: 0,
                                 margin: 0,
                                 lineHeight: "1.6",
                                 color: theme.text,
-                                fontSize: "1.05rem",
+                                fontSize: "16px",
                                 fontWeight: 500
                             }}>
                                 <li>
-                                    <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                                    <span style={{marginRight: 8, opacity: 0.5, color: "black",}}>•</span>
                                     Необмежена кількість завдань
                                 </li>
                                 <li>
