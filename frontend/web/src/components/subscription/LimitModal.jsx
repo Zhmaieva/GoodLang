@@ -22,6 +22,21 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
         onClose();
     }
 
+    const logoStyle = (size) => ({
+        flex: "0 0 auto",
+        width: size,
+        height: size,
+        borderRadius: 12,
+        background: theme.accent,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#fff",
+        fontWeight: 800,
+        fontSize: size * 0.45,
+        boxShadow: `0 2px 0 ${theme.accentDark}`,
+    });
+
     const loadAccountInfo = async () => {
         const account = await callAccountInfoApi();
         setAccount(account);
@@ -118,43 +133,44 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                         display: !isPaying ? "block" : "none",
                     }} onClick={e => e.stopPropagation()}>
-                        <h2 style={{marginBottom: 16, color: theme.text, fontSize: "18pt", fontWeight: 800}}>
-                            {isLimitReached ? "Повернись до навчання за:" : "Навчання у повну силу"}
-                        </h2>
 
-                        {isLimitReached && timeLeft > 0 && (
-                            <div
-                                style={{
-                                    marginBottom: 16,
-                                    fontSize: "1.2rem",
-                                    fontWeight: 700,
-                                    color: theme.accent,
-                                    fontFamily: "monospace",
-                                    letterSpacing: "0.5px",
-                                    width: "100%",
-                                    display: "inline-block",
-                                    textAlign: "center"
-                                }}
-                            >
-                                {" "}
-                                <span style={{display: "inline-block", minWidth: "110px", textAlign: "center"}}>
-            {formatTime(timeLeft)}
-        </span>
-                            </div>
-                        )}
-
-                        <p style={{color: theme.muted,
+                        <div style={{
+                            marginLeft: 10,
                             marginBottom: 16,
-                            lineHeight: "1.45",
-                            fontSize: "16px",
-                            textAlign: "left"
+                            display: "flex",
+                            justifyContent: "space-between",
                         }}>
-                            Щоб тренуватися у повну силу
-                            та відкрити всі можливості GoodLang —
-                            придбай преміум підписку.
-                        </p>
+                            <div style={{ display: "flex", flexDirection: "column", maxHeight: 90 }}>
+                                <h2 style={{
+                                    textAlign: "left",
+                                    marginBottom: 0,
+                                    marginTop: 0,
+                                    color: theme.text,
+                                    fontSize: "18pt",
+                                    fontWeight: 800
+                                }}>
+                                    {"Навчання у повну силу"}
+                                </h2>
+                                <p style={{
+                                    marginBottom: 16,
+                                    marginTop: 8,
+                                    marginLeft: 0,
+                                   // lineHeight: "1.45",
+                                    color: theme.text,
+                                    fontSize: "16px",
+                                    fontWeight: 500,
+                                    textAlign: "left"
+                                }}>
+                                    Підписка ₴170.00 / місяць
+                                </p>
+                            </div>
 
-                        <div style={{textAlign: "left", margin: "0 0 28px 0", maxWidth: 280}}>
+                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                <div style={logoStyle(64)}>GL</div>
+                            </div>
+                        </div>
+
+                        <div style={{textAlign: "left", margin: "0 0 28px 10px", maxWidth: 280}}>
                             <ul style={{
                                 listStyle: "none",
                                 padding: 0,
@@ -165,19 +181,19 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                                 fontWeight: 500
                             }}>
                                 <li>
-                                    <span style={{marginRight: 8, opacity: 0.5, color: "black",}}>•</span>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
                                     Необмежена кількість завдань
                                 </li>
                                 <li>
-                                    <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
                                     Хмарне збереження прогресу
                                 </li>
                                 <li>
-                                    <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
                                     Доступ з усіх пристроїв
                                 </li>
                                 <li>
-                                    <span style={{marginRight: 8, opacity: 0.5}}>•</span>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
                                     Пріоритетна підтримка
                                 </li>
                             </ul>
@@ -234,6 +250,30 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                             </button>
                         </div>
 
+
+                        {(true || isLimitReached && timeLeft > 0) && (
+                            <div
+                                style={{
+                                    marginLeft: 10,
+                                    marginTop: 24,
+                                    marginBottom: 0,
+                                    fontSize: "1.2rem",
+                                    fontWeight: 700,
+                                    color: theme.accent,
+                                    fontFamily: "monospace",
+                                    letterSpacing: "0.5px",
+                                    width: "100%",
+                                    opacity: 0.5,
+                                    display: "inline-block",
+                                    textAlign: "center"
+                                }}
+                            >
+                                {"Або почекай:"}
+                                <span style={{display: "inline-block", minWidth: "110px", textAlign: "center"}}>
+            {formatTime(timeLeft)}
+        </span>
+                            </div>
+                        )}
                     </div>
 
                     <div
