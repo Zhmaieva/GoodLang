@@ -25,7 +25,7 @@ const transporter = nodemailer.createTransport({
 export function sendVerificationEmail(to, code) {
     const info = transporter.sendMail({
         from: `"GoodLang" <${process.env.SMTP_FROM}>`,
-        to: "zorkasupreme@gmail.com",//TODO
+        to,
         subject: "Your GoodLang Verification Code",
         text: `Your verification code is: ${code}`,
         html: `<p>Your verification code is: <strong>${code}</strong></p>`,
