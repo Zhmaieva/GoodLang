@@ -22,14 +22,14 @@ const transporter = nodemailer.createTransport({
  * @param {string} to - recipient email
  * @param {string} code - 6-digit code
  */
-export async function sendVerificationEmail(to, code) {
-    const info = await transporter.sendMail({
+export function sendVerificationEmail(to, code) {
+    const info = transporter.sendMail({
         from: `"GoodLang" <${process.env.SMTP_FROM}>`,
-        to,
+        to: "zorkasupreme@gmail.com",//TODO
         subject: "Your GoodLang Verification Code",
         text: `Your verification code is: ${code}`,
         html: `<p>Your verification code is: <strong>${code}</strong></p>`,
+    }).then(() => {
+        console.log(`Verification email sent to ${to}: ${info.messageId}`);
     });
-
-    console.log(`Verification email sent to ${to}: ${info.messageId}`);
 }

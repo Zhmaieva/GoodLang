@@ -11,7 +11,6 @@ export default function AccountStatusButton({ theme, mobile }) {
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
-    const [paymentEnable, setPaymentEnable] = useState(false);
 
     const effectRan = useRef(false); // <-- prevents double run
 
@@ -23,10 +22,6 @@ export default function AccountStatusButton({ theme, mobile }) {
             const {attemptsLeft} = getOverallAccuracy();
             console.log(data);
             if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
-                if (getPaymentIntent() === true) {
-                    setPaymentEnable(true);
-                    setPaymentIntent(false);
-                }
                 setLimitModalOpen(true);
                 setTimeout(() => {
                     setPaymentEnable(false);
@@ -52,11 +47,6 @@ export default function AccountStatusButton({ theme, mobile }) {
 
     function handleClick() {
         if (!account?.status) return;
-
-        // if (!account?.email) {
-        //     setLoginModalOpen(true);
-        //     return;
-        // }
 
         if (account?.status === "free") {
             setLimitModalOpen(true);
@@ -146,7 +136,6 @@ export default function AccountStatusButton({ theme, mobile }) {
             )}
 
             <LimitModal
-                startPayment={paymentEnable}
                 accountInfo={account}
                 isLimitReached={false}
                 theme={theme}
@@ -155,6 +144,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             />
 
             <AccountStatusModal
+                accountInfo={account}
                 theme={theme}
                 open={statusModalOpen}
                 onClose={() => setStatusModalOpen(false)}

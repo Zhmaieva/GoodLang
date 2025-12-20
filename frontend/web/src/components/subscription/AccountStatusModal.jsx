@@ -3,54 +3,16 @@ import {callManageSubscriptionApi} from "../../services/api.js";
 import LoginModal from "./LoginModal.jsx";
 import {logoStyle} from "./LimitModal.jsx";
 
-export default function AccountStatusModal({ theme, open, onClose, status }) {
+export default function AccountStatusModal({ accountInfo, theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
-    const [account, setAccount] = useState(null);
+    const [account, setAccount] = useState(accountInfo);
 
     if (!open) return null;
 
     const titleMap = {
         paid: "Преміум акаунт",
-        attention: "Потрібна увага"
+        attention: "Преміум закінчується"
     };
-
-    const textMap = {
-        paid: `
-            Ви користуєтеся преміум-підпискою GoodLang!
-            Дякуємо за підтримку ❤️
-        `,
-        attention: `
-            Ваш акаунт потребує уваги.
-            Можливо, виникла проблема з оплатою або завершився період підписки. Незабаром ви отримаєте листа з інструкціями оплати від goodlang.billing@gmail.com"
-        `
-    };
-
-    const benefits = [
-        "Необмежена кількість завдань",
-        "Хмарне збереження прогресу",
-        "Доступ з усіх пристроїв",
-        "Пріоритетна підтримка"
-    ];
-
-    // LevelSwitch-style small button
-    const manageBtnStyle = {
-        appearance: "none",
-        padding: "10px 16px",
-        fontWeight: 800,
-        fontSize: 14,
-        lineHeight: 1,
-        borderRadius: 999,
-        cursor: "pointer",
-
-        background: theme.accent,
-        border: `2px solid ${theme.accent}`,
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
-        color: "white",
-
-        justifyContent: "center",
-    };
-
-
 
     const closeBtnStyle = {
         appearance: "none",
@@ -79,7 +41,7 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
     }
 
     return (
-        <div>
+        <>
             {
                 !loginModalOpen &&
                 <div onClick={onClose} style={{
@@ -104,6 +66,21 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                         gap: "12px"
                     }}>
+                        {
+                            account?.email &&
+                            <p style={{
+                                marginBottom: 16,
+                                marginTop: 0,
+                                marginLeft: 10,
+                                color: theme.muted,
+                                fontSize: "16px",
+                                fontWeight: 500,
+                                textAlign: "left"
+                            }}>
+                                {account?.email}
+                            </p>
+                        }
+
                         <div style={{
                             marginLeft: 10,
                             marginBottom: 16,
@@ -179,6 +156,7 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                                 <button
                                     style={{
                                         background: theme.accent,
+                                        boxShadow: `2px 2px 0 ${theme.accentDark}`,
                                         color: "white",
                                         padding: "10px 20px",
                                         borderRadius: theme.radius,
@@ -215,6 +193,6 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                                 }/>
                 </div>
             }
-        </div>
+        </>
     );
 }

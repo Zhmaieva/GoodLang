@@ -4,7 +4,7 @@ import {callAccountInfoApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
 import {theme} from "../../App.jsx";
-import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
+import {setPaymentIntent} from "../../services/dataService.js";
 
 export const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
@@ -23,7 +23,7 @@ export const logoStyle = (size) => ({
     boxShadow: `0 2px 0 ${theme.accentDark}`,
 });
 
-export default function LimitModal({ startPayment, accountInfo, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
+export default function LimitModal({ accountInfo, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -34,6 +34,7 @@ export default function LimitModal({ startPayment, accountInfo, isLimitReached, 
     const [account, setAccount] = useState(accountInfo);
 
     const onCloseHandler = () => {
+        setPaymentIntent(false);
         if (isPaying)
             window.location.reload();
         onClose();
@@ -46,11 +47,6 @@ export default function LimitModal({ startPayment, accountInfo, isLimitReached, 
 
     // ⏳ Countdown timer — only when limit is reached
     useEffect(() => {
-        if (startPayment) {
-            handleSubscribe().then();
-            return;
-        }
-
         if (!open || !isLimitReached) return;
 
         setTimeLeft(waitTimeSeconds || 0);
@@ -86,6 +82,7 @@ export default function LimitModal({ startPayment, accountInfo, isLimitReached, 
                 await loadAccountInfo();
 
             if (!account?.email) {
+                setPaymentIntent(true);
                 setLoginModalOpen(true);
                 return;
             }
@@ -139,13 +136,28 @@ export default function LimitModal({ startPayment, accountInfo, isLimitReached, 
                         display: !isPaying ? "block" : "none",
                     }} onClick={e => e.stopPropagation()}>
 
+                        {
+                            account?.email &&
+                            <p style={{
+                                marginBottom: 16,
+                                marginTop: 0,
+                                marginLeft: 10,
+                                color: theme.muted,
+                                fontSize: "16px",
+                                fontWeight: 500,
+                                textAlign: "left"
+                            }}>
+                                {account?.email}
+                            </p>
+                        }
+
                         <div style={{
                             marginLeft: 10,
                             marginBottom: 16,
                             display: "flex",
                             justifyContent: "space-between",
                         }}>
-                            <div style={{ display: "flex", flexDirection: "column", maxHeight: 90 }}>
+                            <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
                                 <h2 style={{
                                     textAlign: "left",
                                     marginBottom: 0,
@@ -209,6 +221,7 @@ export default function LimitModal({ startPayment, accountInfo, isLimitReached, 
                                 disabled={loading}
                                 style={{
                                     background: loading ? "#999" : theme.accent,
+                                    boxShadow: `2px 2px 0 ${theme.accentDark}`,
                                     color: "white",
                                     padding: "10px 20px",
                                     borderRadius: theme.radius,
@@ -261,10 +274,9 @@ export default function LimitModal({ startPayment, accountInfo, isLimitReached, 
                                     marginLeft: 10,
                                     marginTop: 24,
                                     marginBottom: 0,
-                                    fontSize: "1.2rem",
+                                    fontSize: "1rem",
                                     fontWeight: 700,
                                     color: theme.accent,
-                                    fontFamily: "monospace",
                                     letterSpacing: "0.5px",
                                     width: "100%",
                                     opacity: 0.5,

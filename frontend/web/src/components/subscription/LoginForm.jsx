@@ -1,7 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
-import {callAccountInfoApi, callDataSyncApi, callSendCodeApi, callVerifyCodeApi} from "../../services/api.js";
+import {
+    callAccountInfoApi,
+    callCheckoutApi,
+    callDataSyncApi,
+    callSendCodeApi,
+    callVerifyCodeApi
+} from "../../services/api.js";
 import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import {setPaymentIntent} from "../../services/dataService.js";
+import {logoStyle, stripePromise} from "./LimitModal.jsx";
+import {useNavigate} from "react-router-dom";
+import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 
 export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [step, setStep] = useState("email"); // "email" | "code"
@@ -10,9 +18,14 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [loading, setLoading] = useState(false);
     const [termsOpen, setTermsOpen] = useState(false);
     const [error, setError] = useState("");
-    const inputsRef = useRef([]);
-
     const [isMobile, setIsMobile] = useState(false);
+    const [isPaying, setIsPaying] = useState(false);
+
+    const inputsRef = useRef([]);
+    const checkoutRef = useRef(null);
+
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const onResize = () => setIsMobile(window.innerWidth < 915);
@@ -22,18 +35,17 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     }, []);
 
     const buttonStyle = {
-        appearance: "none",
-        padding: "10px 16px",
-        fontWeight: 800,
-        fontSize: "1rem",
-        lineHeight: 1,
-        borderRadius: 999,
+        background: theme.accent,
+        boxShadow: `2px 2px 0 ${theme.accentDark}`,
+        color: "white",
+        padding: "10px 20px",
+        borderRadius: theme.radius,
+        border: "none",
         cursor: "pointer",
-        background: theme?.accent || "#007bff",
-        color: "#fff",
-        border: `2px solid ${theme?.accent || "#007bff"}`,
-        boxShadow: `2px 2px 0 ${theme?.accentDark || "#0056b3"}`,
-        transition: "transform 120ms ease",
+        fontSize: "1rem",
+        fontWeight: 700,
+        width: "100%",
+        opacity: 1
     };
 
     const baseInputStyle = {
@@ -43,19 +55,23 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         border: `3px solid ${theme.accent}`,
         background: "#fffaf3",
         padding: "12px 14px",
-        fontSize: "1.3rem",
+        fontSize: "18pt",
+        fontWeight: 700,
         color: theme.text,
         textAlign: "center",
-        caretColor: "grey"
+        caretColor: "grey",
+        marginBottom: 16
     };
 
     const codeInputStyle = {
         ...baseInputStyle,
-        width: isMobile ? 40 : 48,
+        width: 48,
         height: 58,
         textAlign: "center",
         padding: 0,
-        fontSize: isMobile ? "1.3rem" : "2rem",
+        fontSize: "18pt",
+        border: "none",
+        marginBottom: 0
     };
 
 
@@ -127,8 +143,36 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
             if (newAccount.status !== 'free') // old data will be synced to new account if possible
                 await syncData();
 
-            if (newAccount.status === "free") {
-                setPaymentIntent(true);
+            if (newAccount.status === "free" && getPaymentIntent()) {
+                setPaymentIntent(false);
+                try {
+                    setLoading(true);
+
+                    const stripe = await stripePromise;
+
+                    const { clientSecret, isSuccess } = await callCheckoutApi();
+                    if (!isSuccess) {
+                        navigate("/payment/cancel");
+                        setLoading(false);
+                        return;
+                    }
+
+                    setIsPaying(true);
+
+                    setTimeout(async () => {
+                        if (!checkoutRef.current) {
+                            checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
+                            checkoutRef.current.mount("#embedded-checkout-container-login-form");
+                        }
+
+                        document.getElementById("embedded-checkout-container-login-form").style.display = "block";
+                        setLoading(false);
+                    }, 200)
+                } catch (err) {
+                    console.error("Stripe error:", err);
+                    setLoading(false);
+                }
+                return;
             }
 
             window.location.reload();
@@ -159,11 +203,43 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     return (
         <>
             {
-                !termsOpen && <div style={{display: "flex", flexDirection: "column", gap: 12}}>
+                !termsOpen && !isPaying && <div style={{display: "flex", flexDirection: "column", gap: 12}}>
                     {step === "email" && (
                         <>
-                            <h2 style={{marginBottom: 16, color: theme.text, fontSize: "18pt", fontWeight: 800}}>Введіть
-                                свій імейл</h2>
+                            <div style={{
+                                marginLeft: 10,
+                                marginBottom: 16,
+                                display: "flex",
+                                justifyContent: "space-between",
+                            }}>
+                                <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
+                                    <h2 style={{
+                                        textAlign: "left",
+                                        marginBottom: 0,
+                                        marginTop: 0,
+                                        color: theme.text,
+                                        fontSize: "18pt",
+                                        fontWeight: 800
+                                    }}>
+                                        Введіть свій імейл
+                                    </h2>
+                                    <p style={{
+                                        marginBottom: 16,
+                                        marginTop: 8,
+                                        marginLeft: 0,
+                                        color: theme.text,
+                                        fontSize: "16px",
+                                        fontWeight: 500,
+                                        textAlign: "left"
+                                    }}>
+                                        На пошту надійде підтвердження
+                                    </p>
+                                </div>
+
+                                <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                    <div style={logoStyle(64)}>GL</div>
+                                </div>
+                            </div>
                             <input
                                 type="email"
                                 placeholder="goodlang.app@example.com"
@@ -184,9 +260,43 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
                     {step === "code" && (
                         <>
-                            <h2 style={{marginBottom: 16, color: theme.text, fontSize: "14pt", fontWeight: 800}}>Введіть код
-                                з імейлу</h2>
-                            <div style={{display: "flex", gap: 8}}>
+                            <div style={{
+                                marginLeft: 10,
+                                marginBottom: 16,
+                                display: "flex",
+                                justifyContent: "space-between",
+                            }}>
+                                <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
+                                    <h2 style={{
+                                        textAlign: "left",
+                                        marginBottom: 0,
+                                        marginTop: 0,
+                                        color: theme.text,
+                                        fontSize: "18pt",
+                                        fontWeight: 800
+                                    }}>
+                                        Введіть код з імейлу
+                                    </h2>
+                                    <p style={{
+                                        marginBottom: 16,
+                                        marginTop: 8,
+                                        marginLeft: 0,
+                                        color: theme.text,
+                                        fontSize: "16px",
+                                        fontWeight: 500,
+                                        textAlign: "left",
+                                        overflow: "clip",
+                                        maxWidth: 310
+                                    }}>
+                                        Відправлено на: {emailInput}
+                                    </p>
+                                </div>
+
+                                <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                    <div style={logoStyle(64)}>GL</div>
+                                </div>
+                            </div>
+                            <div style={{display: "flex", gap: 8, ...baseInputStyle}}>
                                 {code.map((digit, i) => (
                                     <input
                                         key={i}
@@ -213,23 +323,13 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                     input::placeholder,
                     textarea::placeholder {
                         text-align: center;
-                        font-size: 1.3rem
                     }
                 `}
                     </style>
-
-                    {isMobile && <style>
-                        {`
-                    input::placeholder,
-                    textarea::placeholder {
-                        font-size: 1.3rem
-                    }
-                `}
-                    </style>}
                 </div>
             }
             {
-                termsOpen && <TermsOfUseModal
+                termsOpen && !isPaying && <TermsOfUseModal
                     theme={theme}
                     onClose={() => {
                         setTermsOpen(false);
@@ -239,6 +339,36 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                     verificationCode={code.join("")}
                 />
 
+            }
+
+            {
+                isPaying && <div style={{
+                    position: "fixed",
+                    top: 0, left: 0,
+                    width: "100vw",
+                    height: "100vh",
+                    background: "rgba(0,0,0,0.35)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    zIndex: 9999
+                }}>
+                    <div
+                        id="embedded-checkout-container-login-form"
+                        style={{
+                            display: "none",
+                            width: "92vw",
+                            maxWidth: 720,
+                            margin: "0 auto",
+                            background: theme.bg,
+                            borderRadius: theme.radius * 1.2,
+                            border: `4px solid ${theme.accent}`,
+                            boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                            maxHeight: "75%",
+                            overflow: "auto",
+                        }}
+                    />
+                </div>
             }
         </>
     );
