@@ -2,7 +2,7 @@ import TaskCard from "./TaskCard.jsx";
 import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getAllStatistics, getSeed, saveSeed} from "../../services/dataService.js";
-import {callTranslateAPI} from "../../services/api.js";
+import {callAccountInfoApi, callTranslateAPI} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import {getTrainingLevel} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
@@ -49,6 +49,7 @@ export default function Trainer({
     const [hint, setHint] = useState('Порада: перекладіть і натисніть «Перевірити»');
     const [taskHint, setTaskHint] = useState(null);
     const [nextHint, setNextHint] = useState(null);
+    const [account, setAccount] = useState(null);
     const [correctAnswer, setCorrectAnswer] = useState("");
     const textareaRef = useRef(null);
 
@@ -57,6 +58,15 @@ export default function Trainer({
 
     // 🔹 NEW: rules that need attention (score < 1)
     const [weakRules, setWeakRules] = useState([]);
+
+    const loadAccount = async () => {
+        const data = await callAccountInfoApi();
+        setAccount(data);
+    }
+
+    useEffect(() => {
+        loadAccount().then()
+    }, []);
 
     useEffect(() => {
         if (loading) return;
@@ -320,6 +330,7 @@ export default function Trainer({
                 weakRules={weakRules} // 🔹 pass down
             />
             <LimitModal
+                accountInfo={account}
                 waitTimeSeconds={waitTimeSeconds}
                 isLimitReached={true}
                 theme={theme}

@@ -1,27 +1,5 @@
 { "MAY_MIGHT": [
   {
-    "rules": ["MAY_MIGHT", "PREP_TIME"],
-    "ua": "Ми можемо приїхати на семінар до обіду?",
-    "en": [
-      "May we arrive at the seminar by noon?",
-      "Might we arrive at the seminar by noon?",
-      "May we get to the workshop before lunchtime?",
-      "Might we get to the workshop before lunchtime?"
-    ],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME", "POSSESSIVE_S"],
-    "ua": "Він може повернути камеру сестри до вечора.",
-    "en": [
-      "He may return his sister’s camera by evening.",
-      "He might return his sister’s camera by evening.",
-      "He may give back his sibling’s camera before tonight.",
-      "He might give back his sibling’s camera before tonight."
-    ],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
     "rules": ["MAY_MIGHT", "PREP_PLACE"],
     "ua": "Фотографи можуть працювати в студії.",
     "en": [
@@ -41,39 +19,6 @@
       "Might we stay in the gallery after the exhibition?",
       "May we remain in the gallery after the show?",
       "Might we remain in the gallery after the show?"
-    ],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_TIME"],
-    "ua": "Він може запізнитися, бо поїзд затримався.",
-    "en": [
-      "He may be late because the train was delayed.",
-      "He might be late because the train was delayed.",
-      "He may be delayed since the train was late.",
-      "He might be delayed since the train was late."
-    ],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "PERSONAL_PRONOUNS", "ARTICLES"],
-    "ua": "Я можу купити новий м’яч для гри.",
-    "en": [
-      "I may buy a new ball for the game.",
-      "I might buy a new ball for the game.",
-      "I may purchase a new ball for the match.",
-      "I might purchase a new ball for the match."
-    ],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "SIMPLE_ADJ", "ARTICLES"],
-    "ua": "Я можу купити нову форму для тренувань.",
-    "en": [
-      "I may buy a new uniform for training.",
-      "I might buy a new uniform for training.",
-      "I may purchase a new kit for practice.",
-      "I might purchase a new kit for practice."
     ],
     "hint": "використовуй MAY / MIGHT"
   },
@@ -138,12 +83,6 @@
     "hint": "використовуй MAY / MIGHT"
   },
   {
-    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
-    "ua": "Ти можеш узяти молоко з холодильника.",
-    "en": ["You might get milk from the fridge."],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
     "rules": ["MAY_MIGHT", "PREP_TIME"],
     "ua": "Ти можеш подзвонити своєму другові після вечері.",
     "en": ["You may call your friend after dinner."],
@@ -153,12 +92,6 @@
     "rules": ["MAY_MIGHT", "PREP_TIME", "DEMONSTRATIVES"],
     "ua": "Можливо, сьогодні пообіді буде дощ.",
     "en": ["It might rain later this afternoon."],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
-    "ua": "Ти можеш почитати книжку перед сном.",
-    "en": ["You may read a book before sleep."],
     "hint": "використовуй MAY / MIGHT"
   },
   {
@@ -235,21 +168,9 @@
     "hint": "використовуй MAY / MIGHT"
   },
   {
-    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
-    "ua": "Ти можеш пити воду з пляшки.",
-    "en": ["You may drink water from the bottle."],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
     "rules": ["MAY_MIGHT", "ARTICLES"],
     "ua": "Ти, можливо, скоро почуєш дзвінок.",
     "en": ["You might hear the bell soon."],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
-    "ua": "Ти можеш поставити чашку в раковину.",
-    "en": ["You may put the cup in the sink."],
     "hint": "використовуй MAY / MIGHT"
   },
   {
@@ -288,24 +209,7 @@
     "en": ["You might see stars if it is clear."],
     "hint": "використовуй MAY / MIGHT"
   },
-  {
-    "rules": ["MAY_MIGHT", "PREP_TIME"],
-    "ua": "Ти можеш помити одну тарілку сьогодні.",
-    "en": ["You may wash one plate today."],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "PREP_PLACE", "ARTICLES"],
-    "ua": "Ти, можливо, почуєш, як дощ стукає у вікно.",
-    "en": ["You might hear rain on the window."],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "ARTICLES"],
-    "ua": "Ти можеш піти сходами або ліфтом.",
-    "en": ["You may take the stairs or the lift."],
-    "hint": "використовуй MAY / MIGHT"
-  },
+
   {
     "rules": ["MAY_MIGHT", "PREP_TIME"],
     "ua": "Тобі, можливо, сподобається цей чай.",
@@ -334,12 +238,6 @@
     "rules": ["MAY_MIGHT", "ARTICLES", "PREP_TIME"],
     "ua": "Ти можеш поставити телефон на зарядку сьогодні вночі.",
     "en": ["You may charge the phone tonight."],
-    "hint": "використовуй MAY / MIGHT"
-  },
-  {
-    "rules": ["MAY_MIGHT", "ARTICLES", "PREP_PLACE"],
-    "ua": "Ти, можливо, почуєш собаку надворі.",
-    "en": ["You might hear a dog outside."],
     "hint": "використовуй MAY / MIGHT"
   },
   {

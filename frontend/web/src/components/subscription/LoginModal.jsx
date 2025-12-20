@@ -208,6 +208,7 @@ export default function LoginModal({
             {/* Limit modal */}
             {limitModalOpen && account?.email && (
                 <LimitModal
+                    accountInfo={account}
                     isLimitReached={false}
                     theme={theme}
                     open={limitModalOpen}

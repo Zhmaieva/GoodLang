@@ -113,19 +113,19 @@ import {
     RULE_PAGE_PREP_DIRECTION, RULE_PAGE_POSSESSIVE_ADJECTIVES,
 } from "./services/rulePages.js";
 
-export default function App() {
-    const theme = {
-        bg: "#fff3df",
-        accent: "#ff6138",
-        accentDark: "#d74e2a",
-        green: "#4ba36e",
-        greenDark: "#2d6f48",
-        blue: "#3a6ea5",
-        text: "#3a2a1d",
-        muted: "#a47856",
-        radius: 20,
-    };
+export const theme = {
+    bg: "#fff3df",
+    accent: "#ff6138",
+    accentDark: "#d74e2a",
+    green: "#4ba36e",
+    greenDark: "#2d6f48",
+    blue: "#3a6ea5",
+    text: "#3a2a1d",
+    muted: "#a47856",
+    radius: 20,
+};
 
+export default function App() {
     const ruleTheme = useMemo(
         () => ({
             bg: "#fff3df",

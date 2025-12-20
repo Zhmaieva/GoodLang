@@ -3,10 +3,27 @@ import { loadStripe } from "@stripe/stripe-js";
 import {callAccountInfoApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
+import {theme} from "../../App.jsx";
+import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+export const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
-export default function LimitModal({ isLimitReached, theme, open, onClose, waitTimeSeconds }) {
+export const logoStyle = (size) => ({
+    flex: "0 0 auto",
+    width: size,
+    height: size,
+    borderRadius: 12,
+    background: theme.accent,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#fff",
+    fontWeight: 800,
+    fontSize: size * 0.45,
+    boxShadow: `0 2px 0 ${theme.accentDark}`,
+});
+
+export default function LimitModal({ startPayment, accountInfo, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -14,28 +31,13 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
 
     const [timeLeft, setTimeLeft] = useState(0);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
-    const [account, setAccount] = useState(null);
+    const [account, setAccount] = useState(accountInfo);
 
     const onCloseHandler = () => {
         if (isPaying)
             window.location.reload();
         onClose();
     }
-
-    const logoStyle = (size) => ({
-        flex: "0 0 auto",
-        width: size,
-        height: size,
-        borderRadius: 12,
-        background: theme.accent,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "#fff",
-        fontWeight: 800,
-        fontSize: size * 0.45,
-        boxShadow: `0 2px 0 ${theme.accentDark}`,
-    });
 
     const loadAccountInfo = async () => {
         const account = await callAccountInfoApi();
@@ -44,6 +46,11 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
 
     // ⏳ Countdown timer — only when limit is reached
     useEffect(() => {
+        if (startPayment) {
+            handleSubscribe().then();
+            return;
+        }
+
         if (!open || !isLimitReached) return;
 
         setTimeLeft(waitTimeSeconds || 0);
@@ -75,14 +82,12 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
         try {
             setLoading(true);
 
-            if (isLimitReached) {
-                if (!account)
-                    await loadAccountInfo();
+            if (!account)
+                await loadAccountInfo();
 
-                if (!account.email) {
-                    setLoginModalOpen(true);
-                    return;
-                }
+            if (!account?.email) {
+                setLoginModalOpen(true);
+                return;
             }
 
             const stripe = await stripePromise;
@@ -149,19 +154,18 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                                     fontSize: "18pt",
                                     fontWeight: 800
                                 }}>
-                                    {"Навчання у повну силу"}
+                                    {"Навчання на повну силу"}
                                 </h2>
                                 <p style={{
                                     marginBottom: 16,
                                     marginTop: 8,
                                     marginLeft: 0,
-                                   // lineHeight: "1.45",
                                     color: theme.text,
                                     fontSize: "16px",
                                     fontWeight: 500,
                                     textAlign: "left"
                                 }}>
-                                    Підписка ₴170.00 / місяць
+                                    Підписка ₴149.99 / місяць
                                 </p>
                             </div>
 
@@ -246,7 +250,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
 
                                 }}
                             >
-                                Увійти в інший акаунт
+                                {accountInfo?.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися" }
                             </button>
                         </div>
 

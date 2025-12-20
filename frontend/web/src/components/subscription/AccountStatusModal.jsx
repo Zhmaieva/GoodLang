@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {callManageSubscriptionApi} from "../../services/api.js";
 import LoginModal from "./LoginModal.jsx";
+import {logoStyle} from "./LimitModal.jsx";
 
 export default function AccountStatusModal({ theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -103,40 +104,69 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                         gap: "12px"
                     }}>
-                        <h2 style={{marginBottom: 16, color: theme.text, fontSize: "1.7rem", fontWeight: 800}}>
-                            {titleMap[status]}
-                        </h2>
-
-                        <p style={{
-                            whiteSpace: "pre-line",
-                            color: theme.muted,
-                            fontSize: "1.1rem",
-                            marginBottom: 20,
-                            lineHeight: "1.45"
+                        <div style={{
+                            marginLeft: 10,
+                            marginBottom: 16,
+                            display: "flex",
+                            justifyContent: "space-between",
                         }}>
-                            {textMap[status]}
-                        </p>
+                            <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
+                                <h2 style={{
+                                    textAlign: "left",
+                                    marginBottom: 0,
+                                    marginTop: 0,
+                                    color: theme.text,
+                                    fontSize: "18pt",
+                                    fontWeight: 800
+                                }}>
+                                    {titleMap[status]}
+                                </h2>
+                                <p style={{
+                                    marginBottom: 16,
+                                    marginTop: 8,
+                                    marginLeft: 0,
+                                    color: theme.text,
+                                    fontSize: "16px",
+                                    fontWeight: 500,
+                                    textAlign: "left"
+                                }}>
+                                    Підписка ₴149.99 / місяць
+                                </p>
+                            </div>
 
-                        {status === "paid" && (
+                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                <div style={logoStyle(64)}>GL</div>
+                            </div>
+                        </div>
+
+                        <div style={{textAlign: "left", margin: "0 0 28px 10px", maxWidth: 280}}>
                             <ul style={{
                                 listStyle: "none",
                                 padding: 0,
-                                margin: "0 auto",
-                                maxWidth: 280,
-                                textAlign: "left",
-                                fontSize: "1.05rem",
+                                margin: 0,
                                 lineHeight: "1.6",
                                 color: theme.text,
+                                fontSize: "16px",
                                 fontWeight: 500
                             }}>
-                                {benefits.map(b => (
-
-                                    <li key={b}>
-                                        <span style={{marginRight: 8, opacity: 0.5}}>•</span> {b}
-                                    </li>
-                                ))}
+                                <li>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
+                                    Необмежена кількість завдань
+                                </li>
+                                <li>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
+                                    Хмарне збереження прогресу
+                                </li>
+                                <li>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
+                                    Доступ з усіх пристроїв
+                                </li>
+                                <li>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
+                                    Пріоритетна підтримка
+                                </li>
                             </ul>
-                        )}
+                        </div>
 
                         <div style={{
                             display: "flex",
@@ -147,7 +177,18 @@ export default function AccountStatusModal({ theme, open, onClose, status }) {
                         }}>
                             {(status === "paid" || status === "attention") && (
                                 <button
-                                    style={manageBtnStyle}
+                                    style={{
+                                        background: theme.accent,
+                                        color: "white",
+                                        padding: "10px 20px",
+                                        borderRadius: theme.radius,
+                                        border: "none",
+                                        cursor: "pointer",
+                                        fontSize: "1rem",
+                                        fontWeight: 700,
+                                        width: "100%",
+                                        opacity: 1
+                                    }}
                                     onClick={onManage} // open stripe portal
                                 >
                                     Керувати підпискою

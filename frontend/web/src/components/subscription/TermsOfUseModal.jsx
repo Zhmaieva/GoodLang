@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { callAccountInfoApi, callDataSyncApi, callVerifyCodeApi } from "../../services/api.js";
 import {setPaymentIntent} from "../../services/dataService.js";
+import {theme} from "../../App.jsx";
+import {logoStyle} from "./LimitModal.jsx";
 
 export default function TermsOfUseModal({
                                             theme,
@@ -136,13 +138,40 @@ export default function TermsOfUseModal({
     return (
         <div style={overlayStyle} onClick={() => !loading && onClose()}>
             <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
-                <h2 style={{ marginBottom: 10, color: theme.text, fontSize: "22pt", fontWeight: 900 }}>
-                    Умови користування
-                </h2>
+                <div style={{
+                    marginLeft: 10,
+                    marginBottom: 16,
+                    display: "flex",
+                    justifyContent: "space-between",
+                }}>
+                    <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
+                        <h2 style={{
+                            textAlign: "left",
+                            marginBottom: 0,
+                            marginTop: 0,
+                            color: theme.text,
+                            fontSize: "18pt",
+                            fontWeight: 800
+                        }}>
+                            Умови використання
+                        </h2>
+                        <p style={{
+                            marginBottom: 16,
+                            marginTop: 8,
+                            marginLeft: 0,
+                            color: theme.text,
+                            fontSize: "16px",
+                            fontWeight: 500,
+                            textAlign: "left"
+                        }}>
+                            Перш ніж зареєструватися, підтвердіть, що ви погоджуєтесь з умовами.
+                        </p>
+                    </div>
 
-                <p style={{ color: theme.muted, fontSize: "1.02rem", marginBottom: 14, lineHeight: "1.45" }}>
-                    Перш ніж зареєструватися, підтвердіть, що ви погоджуєтесь з умовами.
-                </p>
+                    <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                        <div style={logoStyle(64)}>GL</div>
+                    </div>
+                </div>
 
                 <div style={termsBoxStyle}>
                     <h3 style={{marginTop: 0}}>1. Загальні положення</h3>
@@ -238,6 +267,25 @@ export default function TermsOfUseModal({
                         У разі скасування підписки кошти за вже оплачений період не повертаються,
                         однак оплачений функціонал залишається доступним до завершення поточного
                         циклу оплати.
+                    </p>
+
+                    <p>
+                        Ми залишаємо за собою право у будь-який момент змінювати вартість підписки в
+                        національній валюті України — гривні, яка є основною валютою сервісу. У разі
+                        оплати в іншій валюті конвертація здійснюється платіжним сервісом Stripe, і ми
+                        не несемо відповідальності за курс конвертації або додаткові комісії, які можуть
+                        застосовуватися.
+                    </p>
+
+                    <p>
+                        У разі зміни вартості підписки ми зобов’язуємося повідомити про це електронною
+                        поштою користувачів з активною підпискою до набуття таких змін чинності.
+                    </p>
+
+                    <p>
+                        У разі зміни вартості підписки нова ціна застосовується лише з початку
+                        наступного платіжного циклу, а ціна для користувача з активною підпискою
+                        залишається незмінною до завершення поточного періоду платежу.
                     </p>
 
                     <h3>6. Сповіщення</h3>

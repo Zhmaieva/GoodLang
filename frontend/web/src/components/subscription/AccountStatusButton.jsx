@@ -11,6 +11,7 @@ export default function AccountStatusButton({ theme, mobile }) {
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
+    const [paymentEnable, setPaymentEnable] = useState(false);
 
     const effectRan = useRef(false); // <-- prevents double run
 
@@ -22,8 +23,14 @@ export default function AccountStatusButton({ theme, mobile }) {
             const {attemptsLeft} = getOverallAccuracy();
             console.log(data);
             if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
-                setPaymentIntent(false);
+                if (getPaymentIntent() === true) {
+                    setPaymentEnable(true);
+                    setPaymentIntent(false);
+                }
                 setLimitModalOpen(true);
+                setTimeout(() => {
+                    setPaymentEnable(false);
+                }, 200)
             }
         });
 
@@ -46,10 +53,10 @@ export default function AccountStatusButton({ theme, mobile }) {
     function handleClick() {
         if (!account?.status) return;
 
-        if (!account?.email) {
-            setLoginModalOpen(true);
-            return;
-        }
+        // if (!account?.email) {
+        //     setLoginModalOpen(true);
+        //     return;
+        // }
 
         if (account?.status === "free") {
             setLimitModalOpen(true);
@@ -103,62 +110,62 @@ export default function AccountStatusButton({ theme, mobile }) {
             border: `2px solid ${border}`,
             boxShadow: `4px 4px 0 ${shadow}`,
 
-            // transform: hover ? "translateY(1px)" : "none",
-            // transition: "transform 120ms ease",
-            // opacity: account?.status ? 1 : 0.65,
-            // display: isFree ? "none" : "flex",
-
             justifyContent: "center",
         };
     })();
 
+    if (!account)
+        return (<></>)
+
     return (
-            <>
-                {!mobile && account?.status && (
-                    <div
-                        style={btnStyle}
-                        onMouseEnter={() => setHover(true)}
-                        onMouseLeave={() => setHover(false)}
-                        onClick={handleClick}
-                    >
-                        {account?.status === "paid" && `${account?.email ?? ''} - преміум`}
-                        {account?.status === "attention" && "Преміум закінчується"}
-                        {account?.status === "free" && "Хочу преміум"}
-                    </div>
-                )}
+        <>
+            {!mobile && account?.status && (
+                <div
+                    style={btnStyle}
+                    onMouseEnter={() => setHover(true)}
+                    onMouseLeave={() => setHover(false)}
+                    onClick={handleClick}
+                >
+                    {account?.status === "paid" && `${account?.email ?? ''} - преміум`}
+                    {account?.status === "attention" && "Преміум закінчується"}
+                    {account?.status === "free" && "Хочу преміум"}
+                </div>
+            )}
 
-                {mobile && account?.status && (
-                    <div
-                        style={btnStyle}
-                        onMouseEnter={() => setHover(true)}
-                        onMouseLeave={() => setHover(false)}
-                        onClick={handleClick}
-                    >
-                        {account?.status !== "free" && "Преміум"}
-                        {account?.status === "attention" && "Преміум (увага)"}
-                        {account?.status === "free" && "Хочу преміум"}
-                    </div>
-                )}
+            {mobile && account?.status && (
+                <div
+                    style={btnStyle}
+                    onMouseEnter={() => setHover(true)}
+                    onMouseLeave={() => setHover(false)}
+                    onClick={handleClick}
+                >
+                    {account?.status !== "free" && "Преміум"}
+                    {account?.status === "attention" && "Преміум (увага)"}
+                    {account?.status === "free" && "Хочу преміум"}
+                </div>
+            )}
 
-                <LimitModal
-                    isLimitReached={false}
-                    theme={theme}
-                    open={limitModalOpen}
-                    onClose={() => setLimitModalOpen(false)}
-                />
+            <LimitModal
+                startPayment={paymentEnable}
+                accountInfo={account}
+                isLimitReached={false}
+                theme={theme}
+                open={limitModalOpen}
+                onClose={() => setLimitModalOpen(false)}
+            />
 
-                <AccountStatusModal
-                    theme={theme}
-                    open={statusModalOpen}
-                    onClose={() => setStatusModalOpen(false)}
-                    status={account?.status}
-                />
+            <AccountStatusModal
+                theme={theme}
+                open={statusModalOpen}
+                onClose={() => setStatusModalOpen(false)}
+                status={account?.status}
+            />
 
-                {
-                    loginModalOpen &&
-                    <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen}
-                                onClose={() => setLoginModalOpen(false)}/>
-                }
+            {
+                loginModalOpen &&
+                <LoginModal фсс forceLogin={true} theme={theme} account={account} open={loginModalOpen}
+                            onClose={() => setLoginModalOpen(false)}/>
+            }
 
             </>
     );
