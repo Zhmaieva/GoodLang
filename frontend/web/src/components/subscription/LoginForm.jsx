@@ -296,7 +296,17 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                     <div style={logoStyle(64)}>GL</div>
                                 </div>
                             </div>
-                            <div style={{display: "flex", gap: 8, ...baseInputStyle}}>
+                            <div style={{display: "flex", gap: 8, resize: "none",
+                                flex: 1,
+                                borderRadius: theme.radius,
+                                border: `3px solid ${theme.accent}`,
+                                background: "#fffaf3",
+                                fontSize: "18pt",
+                                fontWeight: 700,
+                                color: theme.text,
+                                textAlign: "center",
+                                caretColor: "grey",
+                                marginBottom: 16}}>
                                 {code.map((digit, i) => (
                                     <input
                                         key={i}
