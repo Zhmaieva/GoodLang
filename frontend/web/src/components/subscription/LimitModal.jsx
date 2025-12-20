@@ -251,7 +251,7 @@ export default function LimitModal({ isLimitReached, theme, open, onClose, waitT
                         </div>
 
 
-                        {(true || isLimitReached && timeLeft > 0) && (
+                        {(isLimitReached && timeLeft > 0) && (
                             <div
                                 style={{
                                     marginLeft: 10,
