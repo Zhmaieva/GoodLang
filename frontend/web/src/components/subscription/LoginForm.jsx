@@ -12,7 +12,7 @@ import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 
 export default function LoginForm({ theme, account, onClose = () => {} }) {
-    const [step, setStep] = useState("code"); // "email" | "code"
+    const [step, setStep] = useState("email"); // "email" | "code"
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
