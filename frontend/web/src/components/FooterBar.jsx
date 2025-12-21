@@ -14,7 +14,7 @@ export default function FooterBar(theme) {
               `}
             </style>
             <div style={{
-                fontSize: "1rem",
+                fontSize: "0.8rem",
                 alignSelf: "center",
                 width: "100%",
                 textAlign: "center"
