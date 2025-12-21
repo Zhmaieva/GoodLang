@@ -65,13 +65,14 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
     const codeInputStyle = {
         ...baseInputStyle,
-        width: 48,
+        width: 34,
         height: 58,
         textAlign: "center",
         padding: 0,
         fontSize: "18pt",
         border: "none",
-        marginBottom: 0
+        marginBottom: 0,
+        backgroundColor: "transparent"
     };
 
 
@@ -296,8 +297,10 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                     <div style={logoStyle(64)}>GL</div>
                                 </div>
                             </div>
-                            <div style={{display: "flex", gap: 8, resize: "none",
-                                flex: 1,
+                            <div style={{
+                                display: "flex",
+                                resize: "none",
+                                justifyContent: "space-between",
                                 borderRadius: theme.radius,
                                 border: `3px solid ${theme.accent}`,
                                 background: "#fffaf3",
