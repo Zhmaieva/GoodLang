@@ -16,7 +16,6 @@ export async function getToken() {
 
 /* todo:
 - fix declarative sentences absent level and others
-- fix dates translation
 
 - add a progress bar to the rule page
 - add ordering in the rules table
