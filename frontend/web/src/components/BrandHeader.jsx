@@ -50,7 +50,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         margin: 0,
         color: theme.accentDark,
         letterSpacing: ".02em",
-        fontSize: "2rem",
+        fontSize: "clamp(1.5rem, 4vw, 2rem)",
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
