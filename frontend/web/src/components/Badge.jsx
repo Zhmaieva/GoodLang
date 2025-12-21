@@ -5,7 +5,7 @@ export default function Badge({ theme, tone, children }) {
         display: "inline-flex",
         alignItems: "center",
         gap: 6,
-        fontSize: 12,
+        fontSize: "1rem",
         fontWeight: 700,
         padding: "6px 10px",
         borderRadius: 999,

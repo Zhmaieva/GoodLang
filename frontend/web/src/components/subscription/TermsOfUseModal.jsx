@@ -135,7 +135,7 @@ export default function TermsOfUseModal({
         overflowY: "auto",
         lineHeight: 1.55,
         color: theme.text,
-        fontSize: "1.02rem",
+        fontSize: "1rem",
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
     };
 
@@ -185,7 +185,7 @@ export default function TermsOfUseModal({
                                     marginBottom: 0,
                                     marginTop: 0,
                                     color: theme.text,
-                                    fontSize: "18pt",
+                                    fontSize: "1.5rem",
                                     fontWeight: 800
                                 }}>
                                     Умови використання
@@ -195,7 +195,7 @@ export default function TermsOfUseModal({
                                     marginTop: 8,
                                     marginLeft: 0,
                                     color: theme.text,
-                                    fontSize: "16px",
+                                    fontSize: "1rem",
                                     fontWeight: 500,
                                     textAlign: "left"
                                 }}>

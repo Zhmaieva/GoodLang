@@ -10,29 +10,28 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             padding: 20,
         },
         title: {
-            fontSize: 16, textTransform: "uppercase", color: theme.text,
-            fontWeight: 700, marginBottom: 10, letterSpacing: ".05em",
+            fontSize: "1rem", color: theme.text,
+            fontWeight: 700, marginBottom: 10, letterSpacing: ".05em", marginTop: 0
         },
         feedback: {
             background: "#fffaf3", border: `2px dashed ${theme.accent}`,
             padding: "12px 14px", borderRadius: theme.radius, color: theme.text, minHeight: 44, whiteSpace: "pre-wrap",
         },
         correctWrap: {
-            marginTop: 8, background: "#fff", border: `2px solid ${theme.green}`,
+            marginTop: 18, background: "#fff", border: `2px solid ${theme.green}`,
             borderRadius: theme.radius, boxShadow: `2px 2px 0 ${theme.green}`, padding: "10px 12px",
         },
         correctTitle: {
-            fontSize: 13, fontWeight: 800, color: theme.green, marginBottom: 6,
+            fontSize: "1rem", fontWeight: 800, color: theme.green, marginBottom: 6,
             textTransform: "uppercase", letterSpacing: ".04em",
         },
         correctText: {
-            fontFamily:
-                'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace',
-            fontSize: 15, background: "#f4fff7", border: `1.5px dashed ${theme.green}`,
+            fontSize: "1rem", background: "#f4fff7", border: `1.5px dashed ${theme.green}`,
+            fontWeight: 700,
             borderRadius: 12, padding: "8px 10px", display: "inline-block",
         },
         rulesOuterWrap: {
-            marginTop: 12,
+            marginTop: 16,
             display: "flex",
             flexDirection: "column",
             flexWrap: "wrap",
@@ -50,14 +49,14 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             background: "#fffef6",
             padding: "6px 10px",
             fontSize: 13,
-            fontWeight: 600,
+            fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: ".04em",
             color: theme.text,
             boxShadow: `2px 2px 0 ${theme.accentDark}`,
         },
         rulesTitle: {
-            fontSize: 13,
+            fontSize: "1rem",
             fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: ".04em",

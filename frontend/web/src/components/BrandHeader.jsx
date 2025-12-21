@@ -50,7 +50,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         margin: 0,
         color: theme.accentDark,
         letterSpacing: ".02em",
-        fontSize: "clamp(18px, 4vw, 28px)",
+        fontSize: "2rem",
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
@@ -58,7 +58,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
 
     const sub = {
         color: theme.muted,
-        fontSize: "clamp(12px, 2.8vw, 14px)",
+        fontSize: "1rem"
     };
 
     const rightWrap = {

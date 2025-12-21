@@ -56,14 +56,14 @@ export default function LevelKpi({ mobile, theme }) {
     };
 
     const labelStyle = {
-        fontSize: (isMobile) ? "11px" : "12px",
+        fontSize: (isMobile) ? "0.6rem" : "1rem",
         color: "#a47856",
         textTransform: "uppercase",
         letterSpacing: ".06em",
     };
 
     const valueStyle = {
-        fontSize: isMobile ? "20px" : "28px",
+        fontSize: isMobile ? "1rem" : "2rem",
         fontWeight: 800,
     };
 
@@ -93,14 +93,14 @@ export default function LevelKpi({ mobile, theme }) {
         <div style={cardStyle}>
             {showEmpty ? (
                 <>
-                    <div style={labelStyle}>Рекомендований рівень</div>
+                    <div style={labelStyle}>Рівень</div>
                     <div style={valueStyle}>{attemptsLeft} {attemptsLeft > 4 ? 'речень' : 'речення'} до оцінки</div>
                 </>
             ) : (
                 <>
                     {(
                         <>
-                            <div style={labelStyle}>Рекомендований рівень</div>
+                            <div style={labelStyle}>Рівень</div>
                             <div style={valueStyle}>{levelInfo?.label}</div>
                             <div style={sparkStyle}><i style={sparkFillStyle(accuracy ?? 0)}/></div>
                         </>

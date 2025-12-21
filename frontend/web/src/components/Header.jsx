@@ -53,14 +53,14 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             display: "flex",
             flexDirection: "column",
         },
-        h1: size => ({
+        h1: {
             margin: 0,
             fontWeight: 900,
-            fontSize: size,
+            fontSize: "2rem",
             lineHeight: 1.2,
             letterSpacing: ".01em",
             color: theme.accentDark,
-        }),
+        },
         sub: {
             color: theme.muted,
             fontSize: "1rem",
@@ -83,7 +83,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             margin: 0,
             color: theme.accentDark,
             letterSpacing: ".02em",
-            fontSize: "28px",
+            fontSize: "2rem",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
@@ -108,7 +108,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         <div style={styles.logo(64)}>GL</div>
 
                         <div style={styles.titleWrap}>
-                            <h1 style={styles.h1(40)}>GoodLang</h1>
+                            <h1 style={styles.h1}>GoodLang</h1>
                             <div style={styles.sub}>
                                 Перекладай, поки не вивчиш
                             </div>
@@ -158,7 +158,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={styles.logo(64)}>GL</div>
 
                     <div style={styles.titleWrap}>
-                        <h1 style={styles.h1(40)}>GoodLang</h1>
+                        <h1 style={styles.h1}>GoodLang</h1>
                         <div style={styles.sub}>
                             Перекладай, поки не вивчиш
                         </div>

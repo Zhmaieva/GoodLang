@@ -55,11 +55,6 @@ export default function HomePage({ theme }) {
                     onLevelChange={setLevel}
                 />
                 <section style={gridStyle}>
-                    <Trainer
-                        freeTraining
-                        theme={theme}
-                        onLoadingChange={setLoading}
-                        nextLevel={level}/>
                     <button
                         onMouseEnter={() => setHoveredAnalytics(true)}
                         onMouseLeave={() => setHoveredAnalytics(false)}
@@ -68,9 +63,14 @@ export default function HomePage({ theme }) {
                     >
                         Що мені підтягнути? →
                     </button>
+                    <Trainer
+                        freeTraining
+                        theme={theme}
+                        onLoadingChange={setLoading}
+                        nextLevel={level}/>
                 </section>
 
-                <FooterBar theme={theme} />
+                <FooterBar theme={theme}/>
             </div>
         </AppShell>
     );

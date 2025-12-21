@@ -35,14 +35,14 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
     };
 
     const labelStyle = {
-        fontSize: isMobile ? "11px" : "12px",
+        fontSize: isMobile ? "0.6rem" : "1rem",
         color: "#a47856",
         textTransform: "uppercase",
         letterSpacing: ".06em",
     };
 
     const valueStyle = {
-        fontSize: isMobile ? "20px" : "28px",
+        fontSize: isMobile ? "1rem" : "2rem",
         fontWeight: 800,
     };
 

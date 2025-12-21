@@ -164,7 +164,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                     marginBottom: 0,
                                     marginTop: 0,
                                     color: theme.text,
-                                    fontSize: "18pt",
+                                    fontSize: "1.5rem",
                                     fontWeight: 800
                                 }}>
                                     {"Навчання на повну силу"}
@@ -174,7 +174,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                     marginTop: 8,
                                     marginLeft: 0,
                                     color: theme.text,
-                                    fontSize: "16px",
+                                    fontSize: "1rem",
                                     fontWeight: 500,
                                     textAlign: "left"
                                 }}>

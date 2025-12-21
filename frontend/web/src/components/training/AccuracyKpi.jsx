@@ -48,14 +48,14 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const labelStyle = {
-        fontSize: (header || isMobile) ? "11px" : "12px",
+        fontSize: (header || isMobile) ? "0.6rem" : "1rem",
         color: "#a47856",
         textTransform: "uppercase",
         letterSpacing: ".06em",
     };
 
     const valueStyle = {
-        fontSize: header || isMobile ? "16px" : "24px",
+        fontSize: header || isMobile ? "1rem" : "2rem",
         fontWeight: 800,
     };
 

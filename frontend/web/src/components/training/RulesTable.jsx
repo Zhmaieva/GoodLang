@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { statusOf } from "../pages/analyticsLogic.js";
+import {logoStyle} from "../subscription/LimitModal.jsx";
 
 export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick, theme }) {
 
@@ -72,42 +73,49 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick, t
                                     }}
                                 >
 
-
-                                    <div
-                                        style={{
-                                            fontWeight: 600,
-                                            fontSize: 18,
-                                            ...truncate
-                                        }}
-                                    >
-                                        {r.ruleName}
-                                    </div>
-
-
-                                    {/* ACCURACY + BAR */}
-                                    <div style={{marginTop: 4, maxWidth: '200px'}}>
-                                        <strong>{a}%</strong>
-                                        <div className="bar" aria-label="bar">
-                                            <i style={{
-                                                width: `${a}%`,
-                                                background: barColor
-                                            }}/>
+                                    <div style={{
+                                        marginLeft: 0,
+                                        marginBottom: 16,
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                    }}>
+                                        <div style={{display: "flex", flexDirection: "column"}}>
+                                            <h2 style={{
+                                                textAlign: "left",
+                                                marginBottom: 0,
+                                                marginTop: 0,
+                                                color: theme.text,
+                                                fontSize: "1.5rem",
+                                                fontWeight: 800
+                                            }}>
+                                                {r.ruleName}
+                                            </h2>
+                                            <div style={{fontSize: "1rem"}}>
+                                                Рівень: {LEVEL_MAP[r.level]?.label}
+                                            </div>
+                                            {/* ATTEMPTS */}
+                                            <div style={{fontSize: "1rem"}}>
+                                                Спроби: {r.attemptsNumber}
+                                            </div>
+                                            {/* ATTEMPTS */}
+                                            <div style={{fontSize: "1rem"}}>
+                                                Oстання практика: {fmtDate(r.lastAttemptDate)}
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    {/* LEVEL */}
-                                    <div style={{fontSize: 13, opacity: 0.7}}>
-                                        Рівень: {LEVEL_MAP[r.level]?.label}
-                                    </div>
-                                    {/* ATTEMPTS */}
-                                    <div style={{fontSize: 13, opacity: 0.7}}>
-                                        Спроби: {r.attemptsNumber}
-                                    </div>
-                                    {/* ATTEMPTS */}
-                                    <div style={{fontSize: 13, opacity: 0.7}}>
-                                        Oстання практика: {fmtDate(r.lastAttemptDate)}
-                                    </div>
+                                        <div style={{display: "flex", flexDirection: "column"}}>
+                                            <div style={{marginTop: 4, width: '80px'}}>
+                                                <strong>{a}%</strong>
+                                                <div className="bar" aria-label="bar">
+                                                    <i style={{
+                                                        width: `${a}%`,
+                                                        background: barColor
+                                                    }}/>
+                                                </div>
+                                            </div>
+                                        </div>
 
+                                    </div>
                                 </div>
                             );
                         }
@@ -121,7 +129,7 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick, t
                             >
                                 <div>{idx + 1}</div>
                                 <div>
-                                    <div className="rule-name">{r.ruleName}</div>
+                                <div className="rule-name">{r.ruleName}</div>
                                     <div className="sub">
                                         Рівень: {LEVEL_MAP[r.level]?.label}
                                     </div>
@@ -129,7 +137,7 @@ export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick, t
                                 <div>
                                     <strong>{a}%</strong>
                                     <div className="bar">
-                                        <i style={{ width: `${a}%`, background: barColor }} />
+                                        <i style={{width: `${a}%`, background: barColor}}/>
                                     </div>
                                 </div>
                                 <div>{r.attemptsNumber}</div>

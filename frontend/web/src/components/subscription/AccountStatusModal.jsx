@@ -74,7 +74,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 marginTop: 0,
                                 marginLeft: 0,
                                 color: theme.muted,
-                                fontSize: "16px",
+                                fontSize: "1rem",
                                 fontWeight: 500,
                                 textAlign: "left"
                             }}>
@@ -94,7 +94,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                     marginBottom: 0,
                                     marginTop: 0,
                                     color: theme.text,
-                                    fontSize: "18pt",
+                                    fontSize: "1.5rem",
                                     fontWeight: 800
                                 }}>
                                     {titleMap[status]}
@@ -104,8 +104,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                     marginTop: 8,
                                     marginLeft: 0,
                                     color: theme.text,
-                                    fontSize: "16px",
-                                    fontWeight: 500,
+                                    fontSize: "1rem",
                                     textAlign: "left"
                                 }}>
                                     Підписка ₴149.99 / місяць

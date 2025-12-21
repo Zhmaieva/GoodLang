@@ -51,7 +51,7 @@ export default function LoginModal({
         padding: "8px 14px",
         borderRadius: theme.radius,
         cursor: "pointer",
-        fontSize: "1.03rem",
+        fontSize: "1rem",
         fontWeight: 700,
         marginTop: 20,
     };
@@ -69,16 +69,6 @@ export default function LoginModal({
         border: `2px solid ${theme.accent}`,
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
         justifyContent: "center",
-    };
-
-    const textButton = {
-        background: "transparent",
-        border: "none",
-        color: theme.muted,
-        fontSize: "0.95rem",
-        cursor: "pointer",
-        marginTop: 16,
-        textDecoration: "underline",
     };
 
     return (
@@ -111,7 +101,7 @@ export default function LoginModal({
                                 <p
                                     style={{
                                         color: theme.muted,
-                                        fontSize: "1.05rem",
+                                        fontSize: "1rem",
                                         marginBottom: 20, // ✅ prevents extra space
                                     }}
                                 >
@@ -137,7 +127,7 @@ export default function LoginModal({
                                 <p
                                     style={{
                                         color: theme.muted,
-                                        fontSize: "1.05rem",
+                                        fontSize: "1rem",
                                         lineHeight: "1.45",
                                         margin: 0,
                                     }}
@@ -166,7 +156,7 @@ export default function LoginModal({
                                 <p
                                     style={{
                                         color: theme.muted,
-                                        fontSize: "1.05rem",
+                                        fontSize: "1rem",
                                         lineHeight: "1.45",
                                         margin: 0,
                                     }}
