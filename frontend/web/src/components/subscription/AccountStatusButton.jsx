@@ -23,9 +23,6 @@ export default function AccountStatusButton({ theme, mobile }) {
             console.log(data);
             if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
                 setLimitModalOpen(true);
-                setTimeout(() => {
-                    setPaymentEnable(false);
-                }, 200)
             }
         });
 
@@ -94,6 +91,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             height: "100%",
             minWidth: "160px",
             textAlign: "center",
+            visibility: account?.status? "visible" : "hidden",
 
             background,
             color,
@@ -104,36 +102,19 @@ export default function AccountStatusButton({ theme, mobile }) {
         };
     })();
 
-    if (!account)
-        return (<></>)
-
     return (
         <>
-            {!mobile && account?.status && (
-                <div
-                    style={btnStyle}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                    onClick={handleClick}
-                >
-                    {account?.status === "paid" && `${account?.email ?? ''} - преміум`}
-                    {account?.status === "attention" && "Преміум закінчується"}
-                    {account?.status === "free" && "Хочу преміум"}
-                </div>
-            )}
+            <div
+                style={btnStyle}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                onClick={handleClick}
+            >
+                {account?.status !== "free" && "Преміум"}
+                {account?.status === "attention" && "Преміум (увага)"}
+                {account?.status === "free" && "Хочу преміум"}
+            </div>
 
-            {mobile && account?.status && (
-                <div
-                    style={btnStyle}
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                    onClick={handleClick}
-                >
-                    {account?.status !== "free" && "Преміум"}
-                    {account?.status === "attention" && "Преміум (увага)"}
-                    {account?.status === "free" && "Хочу преміум"}
-                </div>
-            )}
 
             <LimitModal
                 accountInfo={account}
@@ -152,8 +133,8 @@ export default function AccountStatusButton({ theme, mobile }) {
             />
 
             {
-                loginModalOpen &&
-                <LoginModal фсс forceLogin={true} theme={theme} account={account} open={loginModalOpen}
+                account && loginModalOpen &&
+                <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen}
                             onClose={() => setLoginModalOpen(false)}/>
             }
 

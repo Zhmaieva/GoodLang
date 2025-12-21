@@ -72,8 +72,20 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         fontSize: "18pt",
         border: "none",
         marginBottom: 0,
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
     };
+
+    function focusLastFilled(newCode) {
+        const lastFilledIndex = newCode.findLastIndex(d => d !== "");
+
+        const nextIndex =
+            lastFilledIndex === -1
+                ? 0
+                : Math.min(lastFilledIndex + 1, newCode.length - 1);
+
+        inputsRef.current[nextIndex]?.focus();
+    }
+
 
 
     // --- Email Step ---
@@ -98,24 +110,61 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         const val = e.target.value.replace(/\D/g, "").slice(0, 1);
         if (!val) return;
 
+        setError("");
+
         const newCode = [...code];
         newCode[index] = val;
         setCode(newCode);
 
-        if (index < 5) inputsRef.current[index + 1].focus();
+        requestAnimationFrame(() => {
+            focusLastFilled(newCode);
+        });
     }
 
     function handleCodeKeyDown(e, index) {
         if (e.key === "Backspace") {
+            e.preventDefault();
+
+            setError("");
+
             const newCode = [...code];
+
             if (newCode[index]) {
                 newCode[index] = "";
-                setCode(newCode);
             } else if (index > 0) {
-                inputsRef.current[index - 1].focus();
+                newCode[index - 1] = "";
             }
+
+            setCode(newCode);
+
+            requestAnimationFrame(() => {
+                focusLastFilled(newCode);
+            });
         }
     }
+
+    function handlePaste(e) {
+        e.preventDefault();
+
+        const pasted = (e.clipboardData?.getData("text") || "")
+            .replace(/\D/g, "")
+            .slice(0, 6);
+
+        if (!pasted) return;
+
+        // replace every input (reset all first)
+        const newCode = new Array(6).fill("");
+        pasted.split("").forEach((ch, i) => {
+            newCode[i] = ch;
+        });
+
+        setCode(newCode);
+
+        requestAnimationFrame(() => {
+            focusLastFilled(newCode);
+        });
+    }
+
 
     async function handleVerify() {
         const enteredCode = code.join("");
@@ -297,7 +346,9 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                     <div style={logoStyle(64)}>GL</div>
                                 </div>
                             </div>
-                            <div style={{
+                            <div
+                                onPaste={handlePaste}
+                                style={{
                                 display: "flex",
                                 resize: "none",
                                 justifyContent: "space-between",
@@ -312,6 +363,9 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                 marginBottom: 16}}>
                                 {code.map((digit, i) => (
                                     <input
+                                        type="text"
+                                        inputMode="numeric"
+                                        autoComplete="one-time-code"
                                         key={i}
                                         ref={(el) => (inputsRef.current[i] = el)}
                                         value={digit}
@@ -329,7 +383,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                         </>
                     )}
 
-                    {error && <div style={{color: "red"}}>{error}</div>}
+                    {error && <div style={{color: theme.text}}>{error}</div>}
 
                     <style>
                         {`
@@ -362,7 +416,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                     height: "100vh",
                     background: "rgba(0,0,0,0.35)",
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: isMobile ? "top" : "center",
                     justifyContent: "center",
                     zIndex: 9999
                 }}>
