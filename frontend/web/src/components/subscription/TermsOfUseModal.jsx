@@ -178,7 +178,7 @@ export default function TermsOfUseModal({
                             display: "flex",
                             justifyContent: "space-between",
                         }}>
-                            <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
+                            <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
                                 <h2 style={{
                                     textAlign: "left",
                                     marginBottom: 0,

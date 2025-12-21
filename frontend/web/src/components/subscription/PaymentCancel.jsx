@@ -7,8 +7,8 @@ export default function PaymentCancel() {
     const navigate = useNavigate();
 
     return (
-        <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <div style={{textAlign: "center", maxWidth: 400, width: "100%", padding: "20px 0px"}}>
+        <div className="container" style={{ maxWidth: 380, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{textAlign: "center", width: "90%", padding: "20px 36px"}}>
                 <div style={{display: "flex", justifyContent: "center", gap: 12, marginBottom: 16}}>
                     <div style={logoStyle(64)}>GL</div>
                 </div>

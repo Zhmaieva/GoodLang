@@ -12,7 +12,7 @@ import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 
 export default function LoginForm({ theme, account, onClose = () => {} }) {
-    const [step, setStep] = useState("email"); // "email" | "code"
+    const [step, setStep] = useState("code"); // "email" | "code"
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
@@ -213,7 +213,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                 display: "flex",
                                 justifyContent: "space-between",
                             }}>
-                                <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
+                                <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
                                     <h2 style={{
                                         textAlign: "left",
                                         marginBottom: 0,
@@ -267,7 +267,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                 display: "flex",
                                 justifyContent: "space-between",
                             }}>
-                                <div style={{display: "flex", flexDirection: "column", maxHeight: 90}}>
+                                <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
                                     <h2 style={{
                                         textAlign: "left",
                                         marginBottom: 0,
