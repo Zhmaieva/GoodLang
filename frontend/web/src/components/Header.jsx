@@ -52,7 +52,6 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         titleWrap: {
             display: "flex",
             flexDirection: "column",
-            gap: 4,
         },
         h1: size => ({
             margin: 0,
@@ -64,7 +63,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         }),
         sub: {
             color: theme.muted,
-            fontSize: 14,
+            fontSize: "1rem",
             letterSpacing: ".02em",
         },
         leftColumn: {
@@ -92,7 +91,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
 
         subBrand: {
             color: theme.muted,
-            fontSize: "clamp(12px, 1.8vw, 14px)",
+            fontSize: "1rem",
         },
 
     };
@@ -105,12 +104,13 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             <div>
                 <div style={styles.headerMobile}>
                     {/* Row: logo + title ONLY */}
-                    <div style={styles.brandRowMobile}>
+                    <div style={{display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8}}>
                         <div style={styles.logo(64)}>GL</div>
-                        <div style={styles.titleBox}>
-                            <h1 style={styles.h1Brand}>GoodLang</h1>
-                            <div style={styles.subBrand}>
-                                Перекладай речення за реченням, поки не вивчиш правила
+
+                        <div style={styles.titleWrap}>
+                            <h1 style={styles.h1(40)}>GoodLang</h1>
+                            <div style={styles.sub}>
+                                Перекладай, поки не вивчиш
                             </div>
                         </div>
                     </div>
@@ -118,8 +118,8 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     {/* Under the header: sub + weekly progress */}
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
                         <div style={{display: "flex", flexDirection: "row", gap: 16, justifyContent: "space-between"}}>
-                            <AccuracyKpi header mobile theme={theme} />
-                            <AccountStatusButton mobile theme={theme} />
+                            <AccuracyKpi header mobile theme={theme}/>
+                            <AccountStatusButton mobile theme={theme}/>
                         </div>
 
                     </div>
@@ -160,7 +160,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={styles.titleWrap}>
                         <h1 style={styles.h1(40)}>GoodLang</h1>
                         <div style={styles.sub}>
-                            Перекладай речення за реченням, поки не вивчиш правила
+                            Перекладай, поки не вивчиш
                         </div>
                     </div>
                 </div>
