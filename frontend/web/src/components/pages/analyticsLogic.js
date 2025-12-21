@@ -42,7 +42,7 @@ export const pct = (num, den) => (den ? Math.round((num/den)*100) : 0);
 export const acc = (nCorrect, nAll) => (nAll ? (nCorrect/nAll) : 0);
 
 export const fmtDate = (iso) =>
-    iso ? new Date(iso).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) : "—";
+    iso ? new Date(iso).toLocaleDateString('uk-UA',{year:'numeric',month:'short',day:'numeric'}) : "—";
 
 
 export const daysSince = (iso) => {
