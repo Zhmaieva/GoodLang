@@ -10,7 +10,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
     if (!open) return null;
 
     const titleMap = {
-        paid: "Підписка",
+        paid: "Все супер",
         attention: "Підписка закінчується"
     };
 
