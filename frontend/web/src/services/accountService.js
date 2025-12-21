@@ -15,10 +15,10 @@ export async function getToken() {
 }
 
 /* todo:
-- fix dates translation
 - fix declarative sentences absent level and others
+- fix dates translation
 
-- add email/number input type and enter
 - add a progress bar to the rule page
 - add ordering in the rules table
+- add email/number input type and enter
  */
