@@ -20,7 +20,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             gap: 16,
             paddingBottom: 12,
             borderBottom: `3px solid ${theme.accent}`,
-            marginBottom: 25,
+            marginBottom: 20,
         },
         headerMobile: {
             display: "flex",
@@ -58,13 +58,11 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             fontWeight: 900,
             fontSize: "2rem",
             lineHeight: 1.2,
-            letterSpacing: ".01em",
             color: theme.accentDark,
         },
         sub: {
             color: theme.muted,
             fontSize: "1rem",
-            letterSpacing: ".02em",
         },
         leftColumn: {
             display: "flex",
@@ -82,7 +80,6 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         h1Brand: {
             margin: 0,
             color: theme.accentDark,
-            letterSpacing: ".02em",
             fontSize: "2rem",
             whiteSpace: "nowrap",
             overflow: "hidden",

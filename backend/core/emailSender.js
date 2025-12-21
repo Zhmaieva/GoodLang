@@ -26,9 +26,64 @@ export function sendVerificationEmail(to, code) {
     const info = transporter.sendMail({
         from: `"GoodLang" <${process.env.SMTP_FROM}>`,
         to,
-        subject: "Your GoodLang Verification Code",
-        text: `Your verification code is: ${code}`,
-        html: `<p>Your verification code is: <strong>${code}</strong></p>`,
+        subject: "Перевірка імейлу в GoodLang",
+        text: `Твій код доступу до GoodLang: ${code}`,
+        html: `
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+  <tr>
+    <td style="padding-bottom:16px;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td valign="top" style="font-family:Arial, sans-serif;">
+            <h2 style="
+              margin:0;
+              font-size:24px;
+              font-weight:800;
+              color:#3a2a1d;
+            ">
+              ${code}
+            </h2>
+
+            <p style="
+              margin:8px 0 16px 0;
+              font-size:16px;
+              font-weight:500;
+              color:#3a2a1d;
+            ">
+              Твій код доступу до <strong>GoodLang</strong>
+            </p>
+          </td>
+
+          <td width="64" valign="top" align="right">
+            <table width="64" height="64" cellpadding="0" cellspacing="0" role="presentation"
+              style="
+                background:#ff6138;
+                border-radius:12px;
+                text-align:center;
+              ">
+              <tr>
+                <td style="
+                  color:#ffffff;
+                  font-weight:800;
+                  font-size:28px;
+                  font-family:Arial, sans-serif;
+                  line-height:64px;
+                ">
+                  GL
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p style="font-family:Arial, sans-serif; opacity: 0.5">
+  Якщо це були не ви, будь ласка, надішліть нам листа на <a href="mailto:goodlang@mail.com">goodlang@mail.com</a>
+</p>
+`,
     }).then(() => {
         console.log(`Verification email sent to ${to}: ${info.messageId}`);
     });

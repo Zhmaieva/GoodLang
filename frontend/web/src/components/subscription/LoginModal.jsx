@@ -39,7 +39,7 @@ export default function LoginModal({
         maxWidth: 480,
         textAlign: "center",
         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-        fontFamily: "'Poppins', system-ui, sans-serif",
+        fontFamily: "Nunito, system-ui, sans-serif",
         lineHeight: 1.4,
     };
 
@@ -74,11 +74,6 @@ export default function LoginModal({
     return (
         <div
             style={wrapperStyle}
-            onClick={() => {
-                setLoginMode(false);
-                if (forceLogin) onClose();
-                onClose();
-            }}
         >
             <div style={boxStyle} onClick={(e) => e.stopPropagation()}>
                 {!loginMode && !forceLogin ? (
@@ -132,12 +127,11 @@ export default function LoginModal({
                                         margin: 0,
                                     }}
                                 >
-                                    Активуй преміум, щоб мати доступ до навчання де і коли завгодно та
-                                    навчатися на повну з GoodLang!
+                                    Активуй підписку, щоб мати доступ до навчання де і коли завгодно - на повну з GoodLang!
                                 </p>
 
                                 <button style={primaryButton} onClick={() => setLimitModalOpen(true)}>
-                                    Хочу преміум
+                                    Хочу підписку
                                 </button>
                             </div>
                         ) : (

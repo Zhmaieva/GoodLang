@@ -165,6 +165,41 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         });
     }
 
+    function getFirstEmptyIndex(codeArr) {
+        const idx = codeArr.findIndex(d => d === "");
+        return idx === -1 ? codeArr.length - 1 : idx;
+    }
+
+
+    function forceFocusFirstEmpty() {
+        const firstEmpty = getFirstEmptyIndex(code);
+        const el = inputsRef.current[firstEmpty];
+        if (!el) return;
+
+        // iOS інколи краще реагує на "пізніший" фокус
+        setTimeout(() => {
+            el.focus({ preventScroll: true });
+
+            // щоб точно було в кінці (на випадок автозаповнення/вставки)
+            try {
+                el.setSelectionRange(1, 1);
+            } catch {}
+        }, 0);
+    }
+
+    function focusIndex(idx) {
+        const el = inputsRef.current[idx];
+        if (!el) return;
+
+        el.focus({ preventScroll: true });
+
+        // щоб каретка точно стала в кінець (1 символ)
+        try { el.setSelectionRange(1, 1); } catch {}
+    }
+
+    function focusFirstEmpty() {
+        focusIndex(getFirstEmptyIndex(code));
+    }
 
     async function handleVerify() {
         const enteredCode = code.join("");
@@ -371,10 +406,33 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                         value={digit}
                                         onChange={(e) => handleCodeChange(e, i)}
                                         onKeyDown={(e) => handleCodeKeyDown(e, i)}
+                                        onClick={() => focusFirstEmpty()}
+                                        onTouchEnd={() => focusFirstEmpty()}
+                                        onPointerDown={(e) => {
+                                            const firstEmpty = getFirstEmptyIndex(code);
+                                            if (i !== firstEmpty) {
+                                                e.preventDefault();     // важливо
+                                                forceFocusFirstEmpty();
+                                            }
+                                        }}
+                                        onTouchStart={(e) => {      // fallback для iOS, якщо pointer events десь вимкнені
+                                            const firstEmpty = getFirstEmptyIndex(code);
+                                            if (i !== firstEmpty) {
+                                                e.preventDefault();
+                                                forceFocusFirstEmpty();
+                                            }
+                                        }}
+                                        onFocus={() => {            // додатковий захист
+                                            const firstEmpty = getFirstEmptyIndex(code);
+                                            if (i !== firstEmpty) {
+                                                forceFocusFirstEmpty();
+                                            }
+                                        }}
                                         style={codeInputStyle}
                                         maxLength={1}
                                         disabled={loading}
                                     />
+
                                 ))}
                             </div>
                             <button style={buttonStyle} onClick={handleVerify} disabled={loading}>

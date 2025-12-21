@@ -6,7 +6,7 @@ export default function AnalyticsHeader({ onBack, onExport }) {
             <div className="brand">
                 <div className="logo" aria-hidden="true">GL</div>
                 <div>
-                    <h1>Аналітика GoodLang</h1>
+                    <h1>GoodLang</h1>
                     <div className="sub">
                         Огляд прогресу
                     </div>

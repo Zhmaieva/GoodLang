@@ -154,8 +154,8 @@ export default function RulePage({ data, theme }) {
             <div style={container}>
                 <BrandHeader
                     theme={theme}
-                    title={data.title}
-                    subtitle={<>{data.subtitle}</>}
+                    title={"GoodLang"}
+                    subtitle={<>{data.title}</>}
                     right={
                         <button className="btn secondary" onClick={handleAnalyticsClick}>
                             ← До аналітики

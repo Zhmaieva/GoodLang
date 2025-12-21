@@ -8,7 +8,7 @@ export default function AppShell({ children, theme }) {
             justifyContent: "center",   // horizontal center
             background: theme.bg,
             color: theme.text,
-            fontFamily: "Poppins, system-ui, sans-serif",
+            fontFamily: "'Nunito', system-ui, sans-serif",
             overflowX: "hidden",
         },
         container: {

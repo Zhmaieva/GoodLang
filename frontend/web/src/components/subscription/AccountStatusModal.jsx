@@ -10,8 +10,8 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
     if (!open) return null;
 
     const titleMap = {
-        paid: "Преміум акаунт",
-        attention: "Преміум закінчується"
+        paid: "Підписка",
+        attention: "Підписка закінчується"
     };
 
     const closeBtnStyle = {
@@ -107,7 +107,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                     fontSize: "1rem",
                                     textAlign: "left"
                                 }}>
-                                    Підписка ₴149.99 / місяць
+                                    Підписка <strong>₴149.99 / місяць</strong>
                                 </p>
                             </div>
 

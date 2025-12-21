@@ -115,15 +115,14 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
             {
                 !loginModalOpen && <div style={{
                     position: "fixed",
-                    top: 0, left: 0,
-                    width: "100vw",
                     inset: 0,
-                    height: "100dvh",
                     background: "rgba(0,0,0,0.35)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    zIndex: 9999
+                    zIndex: 9999,
+                    paddingBottom: "env(safe-area-inset-bottom)",
+                    paddingTop: "env(safe-area-inset-top)",
                 }} onClick={onCloseHandler}>
                     <div style={{
                         background: theme.bg,
@@ -178,7 +177,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                     fontWeight: 500,
                                     textAlign: "left"
                                 }}>
-                                    Підписка ₴149.99 / місяць
+                                    Підписка <strong>₴149.99 / місяць</strong>
                                 </p>
                             </div>
 
@@ -234,7 +233,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                     opacity: loading ? 0.7 : 1
                                 }}
                             >
-                                {loading ? "Завантаження…" : "Придбати преміум"}
+                                {loading ? "Завантаження…" : "Придбати підписку"}
                             </button>
 
                             <button
