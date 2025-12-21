@@ -126,13 +126,15 @@ export default function AccountStatusButton({ theme, mobile }) {
                 />
             }
 
-            <AccountStatusModal
-                accountInfo={account}
-                theme={theme}
-                open={statusModalOpen}
-                onClose={() => setStatusModalOpen(false)}
-                status={account?.status}
-            />
+            {
+                account && <AccountStatusModal
+                    accountInfo={account}
+                    theme={theme}
+                    open={statusModalOpen}
+                    onClose={() => setStatusModalOpen(false)}
+                    status={account?.status}
+                />
+            }
 
             {
                 account && loginModalOpen &&
