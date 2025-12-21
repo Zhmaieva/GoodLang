@@ -116,13 +116,15 @@ export default function AccountStatusButton({ theme, mobile }) {
             </div>
 
 
-            <LimitModal
-                accountInfo={account}
-                isLimitReached={false}
-                theme={theme}
-                open={limitModalOpen}
-                onClose={() => setLimitModalOpen(false)}
-            />
+            {
+                account && <LimitModal
+                    accountInfo={account}
+                    isLimitReached={false}
+                    theme={theme}
+                    open={limitModalOpen}
+                    onClose={() => setLimitModalOpen(false)}
+                />
+            }
 
             <AccountStatusModal
                 accountInfo={account}
