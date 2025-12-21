@@ -141,7 +141,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                             <p style={{
                                 marginBottom: 16,
                                 marginTop: 0,
-                                marginLeft: 10,
+                                marginLeft: 0,
                                 color: theme.muted,
                                 fontSize: "16px",
                                 fontWeight: 500,
@@ -152,12 +152,12 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                         }
 
                         <div style={{
-                            marginLeft: 10,
+                            marginLeft: 0,
                             marginBottom: 16,
                             display: "flex",
                             justifyContent: "space-between",
                         }}>
-                            <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
+                            <div style={{display: "flex", flexDirection: "column"}}>
                                 <h2 style={{
                                     textAlign: "left",
                                     marginBottom: 0,
@@ -271,7 +271,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                         {(isLimitReached && timeLeft > 0) && (
                             <div
                                 style={{
-                                    marginLeft: 10,
+                                    marginLeft: 0,
                                     marginTop: 24,
                                     marginBottom: 0,
                                     fontSize: "1rem",

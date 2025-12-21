@@ -173,12 +173,12 @@ export default function TermsOfUseModal({
                 !isPaying && <div style={overlayStyle}>
                     <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
                         <div style={{
-                            marginLeft: 10,
+                            marginLeft: 0,
                             marginBottom: 16,
                             display: "flex",
                             justifyContent: "space-between",
                         }}>
-                            <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
+                            <div style={{display: "flex", flexDirection: "column"}}>
                                 <h2 style={{
                                     textAlign: "left",
                                     marginBottom: 0,

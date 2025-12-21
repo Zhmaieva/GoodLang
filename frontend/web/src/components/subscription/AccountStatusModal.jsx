@@ -71,7 +71,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             <p style={{
                                 marginBottom: 16,
                                 marginTop: 0,
-                                marginLeft: 10,
+                                marginLeft: 0,
                                 color: theme.muted,
                                 fontSize: "16px",
                                 fontWeight: 500,
@@ -82,12 +82,12 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                         }
 
                         <div style={{
-                            marginLeft: 10,
+                            marginLeft: 0,
                             marginBottom: 16,
                             display: "flex",
                             justifyContent: "space-between",
                         }}>
-                            <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
+                            <div style={{display: "flex", flexDirection: "column"}}>
                                 <h2 style={{
                                     textAlign: "left",
                                     marginBottom: 0,
@@ -116,7 +116,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             </div>
                         </div>
 
-                        <div style={{textAlign: "left", margin: "0 0 28px 10px", maxWidth: 280}}>
+                        <div style={{textAlign: "left", margin: "0 0 28px 0", maxWidth: 280}}>
                             <ul style={{
                                 listStyle: "none",
                                 padding: 0,

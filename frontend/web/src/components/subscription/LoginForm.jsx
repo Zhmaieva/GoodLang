@@ -208,12 +208,12 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                     {step === "email" && (
                         <>
                             <div style={{
-                                marginLeft: 10,
+                                marginLeft: 0,
                                 marginBottom: 16,
                                 display: "flex",
                                 justifyContent: "space-between",
                             }}>
-                                <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
+                                <div style={{display: "flex", flexDirection: "column"}}>
                                     <h2 style={{
                                         textAlign: "left",
                                         marginBottom: 0,
@@ -225,7 +225,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                         Введіть свій імейл
                                     </h2>
                                     <p style={{
-                                        marginBottom: 16,
+                                        marginBottom: 0,
                                         marginTop: 8,
                                         marginLeft: 0,
                                         color: theme.text,
@@ -262,12 +262,12 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                     {step === "code" && (
                         <>
                             <div style={{
-                                marginLeft: 10,
+                                marginLeft: 0,
                                 marginBottom: 16,
                                 display: "flex",
                                 justifyContent: "space-between",
                             }}>
-                                <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
+                                <div style={{display: "flex", flexDirection: "column"}}>
                                     <h2 style={{
                                         textAlign: "left",
                                         marginBottom: 0,
@@ -279,7 +279,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                         Введіть код з імейлу
                                     </h2>
                                     <p style={{
-                                        marginBottom: 16,
+                                        marginBottom: 0,
                                         marginTop: 8,
                                         marginLeft: 0,
                                         color: theme.text,

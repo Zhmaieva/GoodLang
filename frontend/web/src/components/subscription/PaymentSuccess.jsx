@@ -12,12 +12,12 @@ export default function PaymentSuccess() {
              style={{maxWidth: 380, display: "flex", alignItems: "center", justifyContent: "center"}}>
             <div style={{textAlign: "center", width: "100%", padding: "20px 36px"}}>
                 <div style={{
-                    marginLeft: 10,
+                    marginLeft: 0,
                     marginBottom: 16,
                     display: "flex",
                     justifyContent: "space-between",
                 }}>
-                    <div style={{display: "flex", flexDirection: "column", maxHeight: 105}}>
+                    <div style={{display: "flex", flexDirection: "column"}}>
                         <h2 style={{
                             textAlign: "left",
                             marginBottom: 0,
