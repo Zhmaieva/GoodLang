@@ -10,6 +10,7 @@ import TermsOfUseModal from "./TermsOfUseModal.jsx";
 import {logoStyle, stripePromise} from "./LimitModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
+import {logError} from "../../services/logger.js";
 
 export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [step, setStep] = useState("email"); // "email" | "code"
@@ -274,7 +275,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         try {
             await callDataSyncApi();
         } catch (e) {
-            console.log(e);
+            logError(e);
         }
     }
 

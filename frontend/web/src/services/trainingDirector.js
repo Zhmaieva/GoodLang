@@ -1,29 +1,8 @@
-import {getAllStatistics, getOverallAccuracy, inferUserLevel} from "./dataService"; // adjust path
-import { LEVEL_RULES } from "../utils/rules";
+import {getOverallAccuracy, inferUserLevel} from "./dataService"; // adjust path
 import {getLearningState, LEVEL_MAP_TO} from "./insightsService.js";
+import {logInfo} from "./logger.js";
 
 const CEFR_ORDER = ["A1", "A2", "B1", "B2"];
-
-/**
- * Compute per-level stats: average accuracy among answered rules, plus total answers
- */
-function computeLevelStats(stats) {
-    const per = {};
-    for (const lvl of CEFR_ORDER) {
-        const rules = LEVEL_RULES[lvl] || [];
-        // only consider rules that have answers
-        const lvlRulesWithAnswers = stats.filter(s => rules.includes(s.rule) && s.attemptsNumber > 0);
-
-        const accuracy = lvlRulesWithAnswers.length
-            ? lvlRulesWithAnswers.reduce((a, r) => a + r.accuracy, 0) / lvlRulesWithAnswers.length
-            : 0;
-
-        const total = lvlRulesWithAnswers.reduce((a, r) => a + r.attemptsNumber, 0);
-
-        per[lvl] = { accuracy, total };
-    }
-    return per;
-}
 
 /**
  * Main function to get user's training level
@@ -59,7 +38,7 @@ export function getProgress() {
 export function getTrainingLevel() {
     const allStats = inferUserLevel();
 
-    console.log(allStats);
+    logInfo(allStats);
 
     const overall = getOverallAccuracy();
 
@@ -77,7 +56,7 @@ export function getTrainingLevel() {
             if (lvlStats.accuracy >= 75) {
                 if (levelIdx < CEFR_ORDER.length - 1) levelIdx++;
                 else  {
-                    console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
+                    logInfo(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
                     break;
                 }
             }
@@ -87,12 +66,12 @@ export function getTrainingLevel() {
                 break;
             }
             else {
-                console.log(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
+                logInfo(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
                 break;
             }
         }
 
-        console.log('current managed level: ', CEFR_ORDER[levelIdx]);
+        logInfo('current managed level: ', CEFR_ORDER[levelIdx]);
         return {
             isCalibration: true,
             level: CEFR_ORDER[levelIdx]
@@ -114,7 +93,7 @@ export function getTrainingLevel() {
             return (levelData?.accuracy ?? 0) < 80 && !levelTooHigh;
         }) || "B2";
 
-    console.log('current managed level: ', current);
+    logInfo('current managed level: ', current);
     return {
         isCalibration: false,
         level: current

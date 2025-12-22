@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import {logError, logInfo, logWarning} from "../../services/logger.js";
 
 // --- CONFIG ---
 const inputDir = './b2';       // Directory with source JSON files
@@ -30,15 +31,15 @@ for (const file of files) {
         if (keys.length > 0) {
             const key = keys[0];
             mergedData[key] = data[key];
-            console.log(`✅ Added "${key}" from ${file}`);
+            logInfo(`✅ Added "${key}" from ${file}`);
         } else {
-            console.warn(`⚠️ Skipping ${file} — no top-level keys.`);
+            logWarning(`⚠️ Skipping ${file} — no top-level keys.`);
         }
     } catch (err) {
-        console.error(`❌ Error reading ${file}:`, err.message);
+        logError(`❌ Error reading ${file}:`, err.message);
     }
 }
 
 // Write back to output.json
 fs.writeFileSync(outputFile, JSON.stringify(mergedData, null, 2), 'utf8');
-console.log(`✨ Done! Merged ${files.length} file(s) into ${outputFile}`);
+logInfo(`✨ Done! Merged ${files.length} file(s) into ${outputFile}`);

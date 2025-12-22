@@ -7,6 +7,7 @@ import LimitModal from "../subscription/LimitModal.jsx";
 import {getTrainingLevel} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
+import {logInfo} from "../../services/logger.js";
 
 export default function Trainer({
                                     theme,
@@ -151,7 +152,7 @@ export default function Trainer({
             }
 
             // Managed mode → DO NOT send level
-            console.log("getting training sentence...");
+            logInfo("getting training sentence...");
             return await callTranslateAPI({
                 rules: [ruleToSend],
                 seed,
@@ -162,7 +163,7 @@ export default function Trainer({
         // --- Old logic for non-managed ---
         const currentLevel = selectedDifficulty;
 
-        console.log("getting training sentence...");
+        logInfo("getting training sentence...");
         return await callTranslateAPI({
             level: currentLevel,
             rules: [ruleToSend],
@@ -220,7 +221,7 @@ export default function Trainer({
             setWeakRules([]); // 🔹 reset before new evaluation
 
             const {seed, skip} = getSeed();
-            console.log('evaluating answer...');
+            logInfo('evaluating answer...');
             const data = await callTranslateAPI({ freeTraining, textToTranslate, translation: userAns, rules, seed, skip });
 
             if (!data.isSuccess) {

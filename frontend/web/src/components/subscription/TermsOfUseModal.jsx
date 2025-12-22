@@ -3,6 +3,7 @@ import {callAccountInfoApi, callCheckoutApi, callDataSyncApi, callVerifyCodeApi}
 import {logoStyle, stripePromise} from "./LimitModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
+import {logError} from "../../services/logger.js";
 
 export default function TermsOfUseModal({
                                             theme,
@@ -21,7 +22,7 @@ export default function TermsOfUseModal({
         try {
             await callDataSyncApi();
         } catch (e) {
-            console.log(e);
+            logError(e);
         }
     }
 

@@ -4,6 +4,7 @@ import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
 import {getOverallAccuracy, getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
+import {logInfo} from "../../services/logger.js";
 
 export default function AccountStatusButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
@@ -20,7 +21,7 @@ export default function AccountStatusButton({ theme, mobile }) {
 
         loadStatus().then((data) => {
             const {attemptsLeft} = getOverallAccuracy();
-            console.log(data);
+            logInfo(data);
             if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
                 setLimitModalOpen(true);
             }
