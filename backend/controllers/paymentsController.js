@@ -52,7 +52,6 @@ export const paymentsController = {
                     client_reference_id: accountId,
                     customer_email: account.email,
                     allow_promotion_codes: true,
-                    preferred_locales: ['ua-UK'],
                     line_items: [
                         {
                             price: process.env.STRIPE_PRICE_ID,
