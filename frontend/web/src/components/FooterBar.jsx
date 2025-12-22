@@ -18,7 +18,7 @@ export default function FooterBar(theme) {
                 alignSelf: "center",
                 width: "100%",
                 textAlign: "center"
-            }}>© 2025-2026 GoodLang • з питань підтримки та співпраці пишіть до <br/> <a style={{
+            }}>© 2025-2026 GoodLang • з питань підтримки та співпраці пиши до <br/> <a style={{
                 color: "#ff6138",
                 textDecoration: "none",
             }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a></div>

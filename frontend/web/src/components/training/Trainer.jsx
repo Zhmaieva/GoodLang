@@ -304,7 +304,7 @@ export default function Trainer({
             width: "100%",
             fontWeight: 800,
             textAlign: "center"
-        }}>Ой, помилка :( <br/> Напишіть до <a style={{
+        }}>Ой, помилка :( <br/> Напиши до <a style={{
             color: theme.accent,
             textDecoration: "none",
         }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a> і ми допоможемо.</div>
