@@ -935,76 +935,6 @@ export const RULE_PAGE_PREP_TIME = {
     ]
 };
 
-
-export const RULE_PAGE_POSSESSIVE_ADJECTIVES = {
-    id: "POSSESSIVE_ADJECTIVES",
-    title: "Possessive adjectives",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що таке possessive adjectives",
-            html:
-                "<strong>Possessive adjectives</strong> показують, <em>кому щось належить</em>. " +
-                "Вони <em>завжди стоять перед іменником</em> і не вживаються самостійно.",
-        },
-        {
-            type: "usage",
-            title: "Коли й як вживаємо",
-            badges: [
-                "👤 Належність → <strong>my book, her phone</strong>",
-                "🧍 Залежить від власника, не від предмета",
-                "📍 Стоять <em>перед</em> іменником: <strong>my house</strong>",
-            ],
-            hint:
-                "Не плутай з <em>possessive pronouns</em> (mine, yours) — " +
-                "вони використовуються <em>без іменника</em>.",
-        },
-        {
-            type: "forms",
-            title: "Форми",
-            headers: ["Особа", "Присвійний прикметник", "Приклад"],
-            rows: [
-                ["I", "my", "my bag"],
-                ["you", "your", "your keys"],
-                ["he", "his", "his car"],
-                ["she", "her", "her idea"],
-                ["it", "its", "its color"],
-                ["we", "our", "our plan"],
-                ["they", "their", "their friends"],
-            ],
-            hint:
-                "<strong>Its</strong> — присвійний прикметник. " +
-                "<strong>It’s</strong> = <em>it is</em> (❌ не плутати).",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["This is my laptop.", "Це мій ноутбук."],
-                ["She forgot her keys.", "Вона забула свої ключі."],
-                ["The dog hurt its leg.", "Собака поранив свою лапу."],
-                ["We like our new apartment.", "Нам подобається наша нова квартира."],
-            ],
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: [
-                "❌ <em>He lost his phone</em> → правильно (НЕ <em>her</em>) — залежить від власника",
-                "❌ <em>its</em> vs <em>it’s</em> → <strong>its</strong> (присвійний), <strong>it’s</strong> = it is",
-                "❌ Подвійна належність → <em>my the book</em> → ❌",
-                "❌ Використання без іменника → <em>This is my.</em> → ❌ (потрібно <em>mine</em>)",
-            ],
-        },
-        {
-            type: "trainer",
-            title: "Міні-тренажер (Possessive adjectives)",
-        },
-    ],
-};
-
-
 export const RULE_PAGE_ORDINALS_DATES = {
     id: "ORDINALS_DATES",
     title: "Ordinal numbers + dates",
@@ -6709,46 +6639,6 @@ export const RULE_PAGE_COMPOUND_COMPLEX_SENTENCES = {
     ]
 };
 
-
-/* ============================
-   DECLARATIVE SENTENCES
-============================ */
-export const RULE_PAGE_DECLARATIVE_SENTENCES = {
-    id: "DECLARATIVE_SENTENCES",
-    title: "Declarative sentences",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що таке declarative sentences",
-            html: "Звичайні <strong>стверджувальні/заперечні</strong> речення, які просто дають інформацію."
-        },
-        {
-            type: "usage",
-            title: "Приклади",
-            badges: [
-                "Порядок слів: <strong>підмет + присудок</strong>",
-                "Інтонація вниз у кінці речення"
-            ]
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["She works in a bank.", "Вона працює в банку."],
-                ["They don’t like coffee.", "Вони не люблять каву."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Інверсія без потреби, наче в питанні."]
-        },
-        { type: "trainer", title: "Міні-тренажер (Declarative sentences)" }
-    ]
-};
-
-
 /* ============================
    CORRELATIVE CONJUNCTIONS
 ============================ */
@@ -6833,45 +6723,6 @@ export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
         },
     ],
 };
-
-/* ============================
-   ORDER OF ADJECTIVES
-============================ */
-export const RULE_PAGE_ORDER_OF_ADJECTIVES = {
-    id: "ORDER_OF_ADJECTIVES",
-    title: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Порядок прикметників перед іменником",
-            html: "Типовий порядок: <strong>opinion → size → age → shape → color → origin → material → purpose → noun</strong>."
-        },
-        {
-            type: "usage",
-            title: "Приклади",
-            badges: [
-                "<strong>a nice small old brown Italian leather bag</strong>",
-                "<strong>a beautiful big new white wooden table</strong>"
-            ]
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["She bought a lovely little red French car.", "Вона купила чудову маленьку червону французьку машину."],
-                ["He lives in a big modern grey apartment building.", "Він живе у великому сучасному сірому багатоквартирному будинку."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Неприродний порядок, який звучить «по-іноземному», хоч і граматично можливий."]
-        },
-        { type: "trainer", title: "Міні-тренажер (Order of adjectives)" }
-    ]
-};
-
 
 /* ============================
    PREPOSITIONS OF DIRECTION

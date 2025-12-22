@@ -95,7 +95,8 @@ export const GrammarRule = Object.freeze({
     ADVANCED_MODALS_OF_DEDUCTION: "ADVANCED_MODALS_OF_DEDUCTION",
     COMPLEX_NOUN_PHRASES: "COMPLEX_NOUN_PHRASES",
     INDIRECT_SPEECH_QUESTION_FORMS: "INDIRECT_SPEECH_QUESTION_FORMS",
-    PREP_DIRECTION: "PREP_DIRECTION"
+    PREP_DIRECTION: "PREP_DIRECTION",
+    CORRELATIVE_CONJUNCTIONS: "CORRELATIVE_CONJUNCTIONS"
 });
 
 // Human-readable labels (exactly as in your list)
@@ -123,7 +124,6 @@ export const RULE_LABELS = Object.freeze({
     WOULD_LIKE_TO: "Would like to + verb",
     LETS: "Let’s + verb",
     TOO_VERY: "Too / very",
-    POSSESSIVE_ADJECTIVES: "Possessive adjectives",
 
     // A2
     PAST_SIMPLE: "Past Simple (regular/irregular)",
@@ -197,9 +197,7 @@ export const RULE_LABELS = Object.freeze({
     ADVANCED_MODALS_OF_DEDUCTION: "Advanced modals of deduction",
     COMPLEX_NOUN_PHRASES: "Complex noun phrases",
     INDIRECT_SPEECH_QUESTION_FORMS: "Question forms in indirect speech",
-    DECLARATIVE_SENTENCES: "Declarative sentences",
     CORRELATIVE_CONJUNCTIONS: "Correlative conjunctions (either...or / neither...nor / both...and)",
-    ORDER_OF_ADJECTIVES: "Order of adjectives (opinion, size, age, color, origin, material, purpose)",
     PREP_DIRECTION: "Prepositions of direction"
 });
 
@@ -301,6 +299,7 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.ADVANCED_MODALS_OF_DEDUCTION,
         GrammarRule.COMPLEX_NOUN_PHRASES,
         GrammarRule.INDIRECT_SPEECH_QUESTION_FORMS,
-        GrammarRule.PREP_DIRECTION
+        GrammarRule.PREP_DIRECTION,
+        GrammarRule.CORRELATIVE_CONJUNCTIONS
     ],
 });
