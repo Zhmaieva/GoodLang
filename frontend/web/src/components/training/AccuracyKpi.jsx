@@ -1,6 +1,6 @@
 
 import React, {useEffect} from "react";
-import {getOverallAccuracy} from "../../services/dataService.js";
+import {getOverallAccuracy, syncWithServer} from "../../services/dataService.js";
 import {off, on} from "../../services/events.js";
 
 export default function AccuracyKpi({ header, mobile, theme }) {
@@ -9,7 +9,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const [isMobile, setIsMobile] = React.useState(mobile);
     const [isLoading, setIsLoading] = React.useState(true);
 
-    const refresh = () => {
+    const refresh = async () => {
+        await syncWithServer();
         const overall = getOverallAccuracy();
         setAccuracy(Number.isFinite(overall?.accuracy) ? overall.accuracy : 0);
         setAttemptsLeft(overall.attemptsLeft ?? 0);
