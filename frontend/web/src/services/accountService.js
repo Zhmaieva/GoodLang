@@ -15,8 +15,6 @@ export async function getToken() {
 }
 
 /* todo:
-- fix declarative sentences absent level and others
-
 - add a progress bar to the rule page
 - add ordering in the rules table
 - add email/number input type and enter
