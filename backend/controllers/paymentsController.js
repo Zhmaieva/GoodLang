@@ -51,6 +51,7 @@ export const paymentsController = {
                     return_url: `${process.env.FRONTEND_URL}/payment/success`,
                     client_reference_id: accountId,
                     customer_email: account.email,
+                    allow_promotion_codes: true,
                     line_items: [
                         {
                             price: process.env.STRIPE_PRICE_ID,
