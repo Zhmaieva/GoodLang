@@ -1,5 +1,6 @@
 import { LEVEL_RULES, RULE_LABELS } from "../utils/rules";
 import {callDataSyncApi} from "./api.js";
+import {emit} from "./events.js";
 
 const STORAGE_KEY = "answers_data";
 const STORAGE_KEY_SEED = "samples_seed";
@@ -139,6 +140,8 @@ export async function syncWithServer() {
             }
         }
     }
+
+    emit("weeklyProgressUpdate");
 }
 
 export function uuidv4() {
