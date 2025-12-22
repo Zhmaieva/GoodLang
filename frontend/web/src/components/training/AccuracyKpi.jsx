@@ -14,16 +14,16 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         const overall = getOverallAccuracy();
         setAccuracy(Number.isFinite(overall?.accuracy) ? overall.accuracy : 0);
         setAttemptsLeft(overall.attemptsLeft ?? 0);
+
+        setIsLoading(false);
     }
 
     useEffect(() => {
-        refresh();
+        refresh().then();
         on("weeklyProgressUpdate", refresh);
 
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
-
-        setIsLoading(false);
 
         window.addEventListener("resize", onResize);
         return () => {
