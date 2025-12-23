@@ -15,6 +15,8 @@ export async function getToken() {
 }
 
 /* todo:
+- ти можливо відчуєш запах кави у кухні - error?
+
 - add a progress bar to the rule page
 - add ordering in the rules table
 - add email/number input type and enter
