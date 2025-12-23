@@ -42,12 +42,12 @@ export default function TaskCard({
             <div style={styles.inputWrap}>
         <textarea
             ref={textareaRef}
-            placeholder="Введіть переклад англійською…"
+            placeholder="Введи переклад англійською…"
             autoComplete="off"
             value={answer}
             onChange={(e) => setAnswer(e.target.value)}
             onKeyDown={onKeyDown}
-            disabled={isInputDisabled}
+            readOnly={isInputDisabled}
             style={styles.textarea}
         />
                 <button

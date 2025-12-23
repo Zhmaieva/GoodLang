@@ -47,7 +47,7 @@ export default function Trainer({
     const [isError, setIsError] = useState(false);
 
     const [taskText, setTaskText] = useState("Завантаження завдання…");
-    const [hint, setHint] = useState('Порада: перекладіть і натисніть «Перевірити»');
+    const [hint, setHint] = useState('Порада: переклади і натисни «Перевірити»');
     const [taskHint, setTaskHint] = useState(null);
     const [nextHint, setNextHint] = useState(null);
     const [account, setAccount] = useState(null);
@@ -215,7 +215,7 @@ export default function Trainer({
 
     async function evaluateAnswer() {
         const userAns = answer.trim();
-        if (!userAns) { setHint("Введіть переклад перед перевіркою."); return; }
+        if (!userAns) { setHint("Введи переклад перед перевіркою."); return; }
         try {
             setControlsDisabled(true);
             setWeakRules([]); // 🔹 reset before new evaluation

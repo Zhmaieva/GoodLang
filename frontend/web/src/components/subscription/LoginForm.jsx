@@ -307,7 +307,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                         fontSize: "18pt",
                                         fontWeight: 800
                                     }}>
-                                        Введіть свій імейл
+                                        Введи свій імейл
                                     </h2>
                                     <p style={{
                                         marginBottom: 0,
@@ -361,7 +361,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                         fontSize: "18pt",
                                         fontWeight: 800
                                     }}>
-                                        Введіть код з імейлу
+                                        Введи код з імейлу
                                     </h2>
                                     <p style={{
                                         marginBottom: 0,

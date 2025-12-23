@@ -27,7 +27,7 @@ export default function PaymentCancel() {
                     fontWeight: 500
                 }}>
 
-                    Напишіть до <a style={{
+                    Напиши до <a style={{
                         color: theme.accent,
                         textDecoration: "none",
                     }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a> і ми допоможемо.

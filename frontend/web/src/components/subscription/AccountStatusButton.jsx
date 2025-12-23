@@ -85,7 +85,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             appearance: "none",
             padding: "10px 16px",
             fontWeight: 800,
-            fontSize: 14,
+            fontSize: "1rem",
             lineHeight: 1,
             borderRadius: 999,
             cursor: "pointer",
