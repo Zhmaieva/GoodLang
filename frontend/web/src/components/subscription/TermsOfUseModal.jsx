@@ -8,6 +8,7 @@ import {logError} from "../../services/logger.js";
 export default function TermsOfUseModal({
                                             theme,
                                             onClose = () => {},
+                                            readOnly = false,
                                             email,                 // required for verify
                                             verificationCode,      // 6-digit code passed from parent
                                         }) {
@@ -189,7 +190,7 @@ export default function TermsOfUseModal({
                                     fontSize: "1.5rem",
                                     fontWeight: 800
                                 }}>
-                                    Умови використання
+                                    Умови використання і політика приватності
                                 </h2>
                                 <p style={{
                                     marginBottom: 16,
@@ -200,7 +201,7 @@ export default function TermsOfUseModal({
                                     fontWeight: 500,
                                     textAlign: "left"
                                 }}>
-                                    Перш ніж зареєструватися, підтвердіть, що ви погоджуєтесь з умовами.
+                                    { readOnly ? 'Будь ласка, ознайомся' : 'Перш ніж зареєструватися, підтвердь, що погоджуєшся з умовами.'}
                                 </p>
                             </div>
 
@@ -385,12 +386,14 @@ export default function TermsOfUseModal({
                         </div>
 
                         <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 16}}>
-                            <button onClick={handleAgree} disabled={loading} style={primaryBtn}>
-                                {loading ? "Підтверджую…" : "Погоджуюсь"}
-                            </button>
+                            {!readOnly &&
+                                <button onClick={handleAgree} disabled={loading} style={primaryBtn}>
+                                    {loading ? "Підтверджую…" : "Погоджуюсь"}
+                                </button>
+                            }
 
                             <button onClick={onClose} disabled={loading} style={secondaryBtn}>
-                                Не погоджуюсь
+                                {readOnly ? 'Добре' : 'Не погоджуюсь'}
                             </button>
 
                             {error && <div style={{color: "red", fontWeight: 700}}>{error}</div>}
