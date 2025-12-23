@@ -33,6 +33,7 @@ export default function HomePage({ theme }) {
             borderRadius: 999,
             cursor: "pointer",
             background: "#fffdf8",
+            fontFamily: "Nunito, system-ui, sans-serif",
             color: theme.text,
             border: `2px solid ${theme.accent}`,
             boxShadow: `2px 2px 0 ${theme.accentDark}`,

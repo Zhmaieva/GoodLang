@@ -29,7 +29,7 @@ export default function LevelSwitch({
         cursor: loading ? "not-allowed" : "pointer",
         background: selected ? theme.green : "#fffdf8",
         color: selected ? "#fff" : theme.text,
-        border: `2px solid ${selected ? theme.greenDark : theme.accent}`,
+        border: `2px solid ${selected ? theme.green : theme.accent}`,
         boxShadow: `2px 2px 0 ${selected ? theme.greenDark : theme.accentDark}`,
         transform: isHover ? "translateY(1px)" : "none",
         opacity: loading ? 0.65 : 1,

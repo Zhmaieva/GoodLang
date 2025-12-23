@@ -97,7 +97,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             background,
             color,
             border: `2px solid ${border}`,
-            boxShadow: `4px 4px 0 ${shadow}`,
+            boxShadow: `2px 2px 0 ${shadow}`,
 
             justifyContent: "center",
         };

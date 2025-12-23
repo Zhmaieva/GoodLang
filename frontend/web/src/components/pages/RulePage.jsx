@@ -157,7 +157,9 @@ export default function RulePage({ data, theme }) {
                     title={"GoodLang"}
                     subtitle={<>{data.title}</>}
                     right={
-                        <button className="btn secondary" onClick={handleAnalyticsClick}>
+                        <button style={{
+                            fontFamily: "Nunito, system-ui, sans-serif",
+                        }} className="btn secondary" onClick={handleAnalyticsClick}>
                             ← До аналітики
                         </button>
                     }

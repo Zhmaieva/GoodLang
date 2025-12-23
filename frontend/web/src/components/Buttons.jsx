@@ -7,8 +7,10 @@ export function PrimaryButton({ theme, children, ...props }) {
         border: "none",
         borderRadius: 999,
         padding: "10px 16px",
-        fontWeight: 700,
-        boxShadow: `3px 3px 0 ${theme.accentDark}`,
+        fontWeight: 800,
+        fontSize: "1rem",
+        fontFamily: "Nunito, system-ui, sans-serif",
+        boxShadow: `2px 2px 0 ${theme.accentDark}`,
         cursor: "pointer",
         transition: "transform .1s, background .15s",
     };

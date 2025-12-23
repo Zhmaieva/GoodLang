@@ -155,6 +155,7 @@ export default function TermsOfUseModal({
     };
 
     const secondaryBtn = {
+        fontFamily: "Nunito, system-ui, sans-serif",
         appearance: "none",
         padding: "10px 16px",
         fontWeight: 800,

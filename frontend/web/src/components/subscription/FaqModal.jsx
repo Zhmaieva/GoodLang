@@ -45,6 +45,7 @@ export default function FaqModal({
     };
 
     const closeBtn = {
+        fontFamily: "Nunito, system-ui, sans-serif",
         appearance: "none",
         padding: "10px 16px",
         fontWeight: 800,

@@ -14,14 +14,15 @@ export default function TaskCard({
         taskText: { fontSize: "1.5rem", fontWeight: 700, color: theme.text },
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
         textarea: {
+            fontFamily: "Nunito, system-ui, sans-serif",
             resize: "none",
             flex: 1, minHeight: 70, borderRadius: theme.radius, border: `3px solid ${theme.accent}`,
             background: "#fffaf3", padding: "12px 14px", fontWeight: 700, fontSize: "1rem", color: theme.text,
             opacity: isInputDisabled ? 0.7 : 1,
         },
         btn: {
-            background: theme.accent, color: "#fff", fontWeight: 700, border: "none", borderRadius: 999,
-            padding: "12px 20px", fontSize: "1rem", cursor: loading ? "not-allowed" : "pointer",
+            background: theme.accent, color: "#fff", fontWeight: 800, border: "none", borderRadius: 999,
+            padding: "12px 20px", fontFamily: "Nunito, system-ui, sans-serif", fontSize: "1rem", cursor: loading ? "not-allowed" : "pointer",
             boxShadow: `3px 3px 0 ${theme.accentDark}`, width: "100%", opacity: loading ? 0.7 : 1,
         },
         hintText: {

@@ -98,7 +98,9 @@ export default function AnalyticsPage({theme}) {
             <div style={{height: "100vh"}}>
                 <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Огляд прогресу"}  onExport={onExportJSON}
                              right={
-                                 <button className="btn secondary" onClick={handlePracticeClick}>
+                                 <button style={{
+                                     fontFamily: "Nunito, system-ui, sans-serif",
+                                 }} className="btn secondary" onClick={handlePracticeClick}>
                                      ← До тренування
                                  </button>
                              }

@@ -21,6 +21,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
         fontSize: 14,
         lineHeight: 1,
         borderRadius: 999,
+        fontFamily: "Nunito, system-ui, sans-serif",
 
         background: "#fffdf8",
         color: theme.text,

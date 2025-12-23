@@ -226,6 +226,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                     padding: "10px 20px",
                                     borderRadius: theme.radius,
                                     border: "none",
+                                    fontFamily: "Nunito, system-ui, sans-serif",
                                     cursor: loading ? "default" : "pointer",
                                     fontSize: "1rem",
                                     fontWeight: 700,
@@ -244,7 +245,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                 }}
                                 disabled={loading}
                                 style={{
-
+                                    fontFamily: "Nunito, system-ui, sans-serif",
                                     appearance: "none",
                                     padding: "10px 16px",
                                     fontWeight: 800,

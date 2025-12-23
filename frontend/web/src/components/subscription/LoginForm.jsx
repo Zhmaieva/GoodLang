@@ -36,6 +36,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     }, []);
 
     const buttonStyle = {
+        fontFamily: "Nunito, system-ui, sans-serif",
         background: theme.accent,
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
         color: "white",
