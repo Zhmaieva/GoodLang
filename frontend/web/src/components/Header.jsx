@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import LevelSwitch from "./training/LevelSwitch.jsx";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 import AccuracyKpi from "./training/AccuracyKpi.jsx";
+import {PrimaryButton} from "./Buttons.jsx";
+import TermsOfUseModal from "./subscription/TermsOfUseModal.jsx";
+import FaqModal from "./subscription/FaqModal.jsx";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
+    const [faqVisible, setFaqVisible] = useState(false);
 
     useEffect(() => {
         const update = () => setIsMobile(window.innerWidth < 915);
@@ -99,13 +103,25 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     if (isMobile) {
         return (
             <div>
+                {faqVisible && (
+                    <FaqModal
+                        theme={theme}
+                        onClose={() => setFaqVisible(false)}
+                    />
+                )}
                 <div style={styles.headerMobile}>
                     {/* Row: logo + title ONLY */}
                     <div style={{display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 8}}>
                         <div style={styles.logo(64)}>GL</div>
 
                         <div style={styles.titleWrap}>
-                            <h1 style={styles.h1}>GoodLang</h1>
+                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                <h1 style={styles.h1}>GoodLang</h1>
+                                <PrimaryButton theme={theme} onClick={() => {
+                                    setFaqVisible(true);
+                                }}>FAQ</PrimaryButton>
+                            </div>
+
                             <div style={styles.sub}>
                                 Перекладай, поки не вивчиш
                             </div>
@@ -140,6 +156,12 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     // ---------------------------------------------------------------------
     return (
         <header style={styles.header}>
+            {faqVisible && (
+                <FaqModal
+                    theme={theme}
+                    onClose={() => setFaqVisible(false)}
+                />
+            )}
             <div
                 style={{
                     display: "flex",
@@ -155,14 +177,19 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={styles.logo(64)}>GL</div>
 
                     <div style={styles.titleWrap}>
-                        <h1 style={styles.h1}>GoodLang</h1>
+                        <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                            <h1 style={styles.h1}>GoodLang</h1>
+                            <PrimaryButton theme={theme} onClick={() => {
+                                setFaqVisible(true);
+                            }}>FAQ</PrimaryButton>
+                        </div>
                         <div style={styles.sub}>
                             Перекладай, поки не вивчиш
                         </div>
                     </div>
                 </div>
 
-                <AccuracyKpi header mobile theme={theme} />
+                <AccuracyKpi header mobile theme={theme}/>
             </div>
 
             <div

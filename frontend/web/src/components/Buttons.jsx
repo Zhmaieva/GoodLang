@@ -16,8 +16,8 @@ export function PrimaryButton({ theme, children, ...props }) {
         <button
             {...props}
             style={base}
-            onMouseOver={(e) => (e.currentTarget.style.background = theme.accentDark)}
-            onMouseOut={(e) => (e.currentTarget.style.background = theme.accent)}
+            //onMouseOver={(e) => (e.currentTarget.style.background = theme.accentDark)}
+            //onMouseOut={(e) => (e.currentTarget.style.background = theme.accent)}
         >
             {children}
         </button>
