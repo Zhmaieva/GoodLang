@@ -1,8 +1,12 @@
+import {useState} from "react";
+
 export default function TaskCard({
                                      theme, taskText, answer, setAnswer,
                                      isInputDisabled, mainBtnText, onMainButtonClick, loading, textareaRef, onKeyDown,
                                      hint
                                  }) {
+    const [hovered, setHovered] = useState(null);
+
     const styles = {
         card: {
             background: "#fffdf8",
@@ -23,7 +27,7 @@ export default function TaskCard({
         btn: {
             background: theme.accent, color: "#fff", fontWeight: 800, border: "none", borderRadius: 999,
             padding: "12px 20px", fontFamily: "Nunito, system-ui, sans-serif", fontSize: "1rem", cursor: loading ? "not-allowed" : "pointer",
-            boxShadow: `3px 3px 0 ${theme.accentDark}`, width: "100%", opacity: loading ? 0.7 : 1,
+            boxShadow: `3px 3px 0 ${theme.accentDark}`, width: "100%", opacity: loading ? 0.7 : 1,transform: hovered ? "translateY(1px)" : "none",
         },
         hintText: {
             background: "#fffaf3", border: `2px dashed ${theme.accent}`,
@@ -52,6 +56,8 @@ export default function TaskCard({
             style={styles.textarea}
         />
                 <button
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
                     aria-label="Перевірити переклад"
                     onClick={onMainButtonClick}
                     disabled={loading}

@@ -9,7 +9,7 @@ import {acc} from "../pages/analyticsLogic.js";
 
 export default function AccountStatusButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
-    const [hover, setHover] = useState(false);
+    const [hovered, setHovered] = useState(null);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
@@ -71,12 +71,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             border = theme.green;
             shadow = theme.greenDark;
             color = "#fff";
-        } else if (isAttention) {
-            background = "#fff";
-            border = theme.accent;
-            shadow = theme.accentDark;
-            color = theme.accent;
-        } else if (isFree) {
+        } else  {
             background = theme.accent;
             color = "#fff";
             shadow = theme.accentDark;
@@ -99,7 +94,7 @@ export default function AccountStatusButton({ theme, mobile }) {
             color,
             border: `2px solid ${border}`,
             boxShadow: `2px 2px 0 ${shadow}`,
-
+            transform: hovered ? "translateY(1px)" : "none",
             justifyContent: "center",
         };
     })();
@@ -107,15 +102,15 @@ export default function AccountStatusButton({ theme, mobile }) {
     return (
         <>
             <div
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
                 style={btnStyle}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
                 onClick={handleClick}
             >
-                {account?.status !== "free" && "Підписка"}
+                {account?.status === "paid" && "Моя підписка"}
                 {account?.status === "attention" && "Підписка (увага)"}
                 {account?.status === "free" && account?.email && "Хочу підписку"}
-                {account?.status === "free" && !account?.email && "Хочу підписку / Увійти"}
+                {account?.status === "free" && !account?.email && "Підписка / Увійти"}
             </div>
 
 
