@@ -130,9 +130,9 @@ export default function Header({ theme, level, loading, onLevelChange }) {
 
                     {/* Under the header: sub + weekly progress */}
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
-                        <div style={{display: "flex", flexDirection: "row", gap: 16, justifyContent: "space-between"}}>
+                        <div style={{display: "flex", flexDirection: "row", gap: 12, justifyContent: "space-between"}}>
                             <AccuracyKpi header mobile theme={theme}/>
-                            <AccountStatusButton mobile theme={theme}/>
+                            <AccountStatusButton theme={theme}/>
                         </div>
 
                     </div>

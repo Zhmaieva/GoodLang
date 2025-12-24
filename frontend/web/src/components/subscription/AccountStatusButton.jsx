@@ -3,11 +3,9 @@ import {callAccountInfoApi} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
-import {getOverallAccuracy, getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import {logInfo} from "../../services/logger.js";
-import {acc} from "../pages/analyticsLogic.js";
 
-export default function AccountStatusButton({ theme, mobile }) {
+export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
     const [hovered, setHovered] = useState(null);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
