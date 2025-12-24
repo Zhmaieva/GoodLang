@@ -191,7 +191,7 @@ export default function TermsOfUseModal({
                                     fontSize: "1.5rem",
                                     fontWeight: 800
                                 }}>
-                                    Умови використання і політика приватності
+                                    Умови використання
                                 </h2>
                                 <p style={{
                                     marginBottom: 16,
@@ -202,7 +202,7 @@ export default function TermsOfUseModal({
                                     fontWeight: 500,
                                     textAlign: "left"
                                 }}>
-                                    { readOnly ? 'Будь ласка, ознайомся' : 'Перш ніж зареєструватися, підтвердь, що погоджуєшся з умовами.'}
+                                    { readOnly ? 'Будь ласка, ознайомся' : 'Перш ніж зареєструватися, підтвердь, що погоджуєшся з умовами використання і політикою приватності.'}
                                 </p>
                             </div>
 
