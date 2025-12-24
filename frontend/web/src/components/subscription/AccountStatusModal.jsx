@@ -98,6 +98,8 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 textAlign: "left",
                                 cursor: "pointer",
                                 userSelect: "none",
+                                WebkitUserSelect: "none",
+                                WebkitTouchCallout: "none",
                             }}>
                                 ✕
                             </p>

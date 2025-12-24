@@ -168,6 +168,8 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                 textAlign: "left",
                                 cursor: "pointer",
                                 userSelect: "none",
+                                WebkitUserSelect: "none",
+                                WebkitTouchCallout: "none",
                             }}>
                                 ✕
                             </p>

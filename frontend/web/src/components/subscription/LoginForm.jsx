@@ -308,6 +308,8 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                     textAlign: "left",
                                     cursor: "pointer",
                                     userSelect: "none",
+                                    WebkitUserSelect: "none",
+                                    WebkitTouchCallout: "none",
                                 }}>
                                     ✕
                                 </p>
@@ -381,6 +383,8 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                     textAlign: "left",
                                     cursor: "pointer",
                                     userSelect: "none",
+                                    WebkitUserSelect: "none",
+                                    WebkitTouchCallout: "none",
                                 }}>
                                     ✕
                                 </p>
