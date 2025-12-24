@@ -307,6 +307,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                     fontWeight: 500,
                                     textAlign: "left",
                                     cursor: "pointer",
+                                    userSelect: "none",
                                 }}>
                                     ✕
                                 </p>
@@ -379,6 +380,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                                     fontWeight: 500,
                                     textAlign: "left",
                                     cursor: "pointer",
+                                    userSelect: "none",
                                 }}>
                                     ✕
                                 </p>

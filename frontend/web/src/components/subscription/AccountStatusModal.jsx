@@ -97,6 +97,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 fontWeight: 500,
                                 textAlign: "left",
                                 cursor: "pointer",
+                                userSelect: "none",
                             }}>
                                 ✕
                             </p>

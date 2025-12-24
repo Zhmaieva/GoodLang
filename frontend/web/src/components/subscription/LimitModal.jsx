@@ -167,6 +167,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                 fontWeight: 500,
                                 textAlign: "left",
                                 cursor: "pointer",
+                                userSelect: "none",
                             }}>
                                 ✕
                             </p>
