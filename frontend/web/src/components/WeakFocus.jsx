@@ -75,7 +75,11 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                         <i style={{ width: `${accuracy}%`, background: barColor }} />
                     </div>
                     <div className="focus-actions" style={{margin: '16px 0px'}}>
-                        <button onClick={() => {
+                        <button style={{
+                            fontSize: "1rem",
+                            fontWeight: "800",
+                            fontFamily: "Nunito, system-ui, sans-serif",
+                        }} onClick={() => {
                             const url = `/rule/${rule.rule}`;
                             window.open(url, "_blank", "noopener,noreferrer");
                         }} className="pill">Пояснення правила</button>

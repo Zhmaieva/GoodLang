@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { statusOf } from "../pages/analyticsLogic.js";
-import {logoStyle} from "../subscription/LimitModal.jsx";
 
 export default function RulesTable({ rows, pct, statusOf, fmtDate, onRowClick, theme }) {
 

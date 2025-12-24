@@ -419,3 +419,105 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: add_trial_fields_to_accounts
+-- Description: Adds trial flags and start timestamp to accounts
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_trial_fields_to_accounts'
+        ) THEN
+
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS is_trial BOOLEAN NOT NULL DEFAULT FALSE,
+                ADD COLUMN IF NOT EXISTS trial_started_at TIMESTAMPTZ;
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_trial_fields_to_accounts', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+-- Migration: rename_trial_started_at_to_trial_ended_at
+-- Description: Renames trial_started_at column to trial_ended_at in accounts
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'rename_trial_started_at_to_trial_ended_at'
+        ) THEN
+
+            -- Rename column only if old one exists and new one does not
+            IF EXISTS (
+                SELECT 1
+                FROM information_schema.columns
+                WHERE table_name = 'accounts'
+                  AND column_name = 'trial_started_at'
+            ) AND NOT EXISTS (
+                SELECT 1
+                FROM information_schema.columns
+                WHERE table_name = 'accounts'
+                  AND column_name = 'trial_ended_at'
+            ) THEN
+                ALTER TABLE accounts
+                    RENAME COLUMN trial_started_at TO trial_ended_at;
+            END IF;
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('rename_trial_started_at_to_trial_ended_at', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+-- Migration: alter_accounts_trial_ended_at_tz
+-- Description: Convert accounts.trial_ended_at to TIMESTAMP WITH TIME ZONE (UTC)
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'alter_accounts_trial_ended_at_tz'
+        ) THEN
+
+            -- Convert column type (preserve moment in time)
+            ALTER TABLE accounts
+                ALTER COLUMN trial_ended_at
+                    TYPE TIMESTAMP WITH TIME ZONE
+                    USING trial_ended_at AT TIME ZONE 'UTC';
+
+            -- Set default to UTC
+            ALTER TABLE accounts
+                ALTER COLUMN trial_ended_at
+                    SET DEFAULT (NOW() AT TIME ZONE 'UTC');
+
+            -- Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_accounts_trial_ended_at_tz', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+

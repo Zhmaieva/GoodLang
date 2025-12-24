@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {callManageSubscriptionApi} from "../../services/api.js";
 import LoginModal from "./LoginModal.jsx";
 import {logoStyle} from "./LimitModal.jsx";
+import {fmtDate} from "../pages/analyticsLogic.js";
 
 export default function AccountStatusModal({ accountInfo, theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -68,20 +69,38 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                         gap: "12px"
                     }}>
-                        {
-                            account?.email &&
-                            <p style={{
+                        <div style={{display: "flex", justifyContent: "space-between"}}>
+                            {
+                                account?.email &&
+                                <p style={{
+                                    marginBottom: 16,
+                                    marginTop: 0,
+                                    marginLeft: 0,
+                                    color: theme.muted,
+                                    fontSize: "1rem",
+                                    fontWeight: 500,
+                                    textAlign: "left",
+                                }}>
+                                    {account?.email}
+                                </p>
+                            }
+                            {
+                                !account?.email && <div></div>
+                            }
+                            <p onClick={onClose} style={{
                                 marginBottom: 16,
-                                marginTop: 0,
+                                marginTop: -22,
                                 marginLeft: 0,
-                                color: theme.muted,
-                                fontSize: "1rem",
+                                marginRight: -18,
+                                color: theme.accent,
+                                fontSize: "1.3rem",
                                 fontWeight: 500,
-                                textAlign: "left"
+                                textAlign: "left",
+                                cursor: "pointer",
                             }}>
-                                {account?.email}
+                                ✕
                             </p>
-                        }
+                        </div>
 
                         <div style={{
                             marginLeft: 0,
@@ -100,16 +119,30 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 }}>
                                     {titleMap[status]}
                                 </h2>
-                                <p style={{
-                                    marginBottom: 16,
-                                    marginTop: 8,
-                                    marginLeft: 0,
-                                    color: theme.text,
-                                    fontSize: "1rem",
-                                    textAlign: "left"
-                                }}>
-                                    Підписка <strong>₴149.99 / місяць</strong>
-                                </p>
+                                {
+                                    !account?.isTrial && <p style={{
+                                        marginBottom: 16,
+                                        marginTop: 8,
+                                        marginLeft: 0,
+                                        color: theme.text,
+                                        fontSize: "1rem",
+                                        textAlign: "left"
+                                    }}>
+                                        Підписка <strong>₴149.99 / місяць</strong>
+                                    </p>
+                                }
+                                {
+                                    account?.isTrial && <p style={{
+                                        marginBottom: 16,
+                                        marginTop: 8,
+                                        marginLeft: 0,
+                                        color: theme.text,
+                                        fontSize: "1rem",
+                                        textAlign: "left"
+                                    }}>
+                                        Пробний період до {fmtDate(account?.trialEndsOn)}
+                                    </p>
+                                }
                             </div>
 
                             <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
@@ -153,7 +186,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             gap: "12px",
                             justifyContent: "space-between"
                         }}>
-                            {(status === "paid" || status === "attention") && (
+                            {(status === "paid" || status === "attention") && !account?.isTrial && (
                                 <button
                                     style={{
                                         background: theme.accent,

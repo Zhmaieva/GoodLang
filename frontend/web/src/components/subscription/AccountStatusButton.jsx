@@ -5,6 +5,7 @@ import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
 import {getOverallAccuracy, getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import {logInfo} from "../../services/logger.js";
+import {acc} from "../pages/analyticsLogic.js";
 
 export default function AccountStatusButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
@@ -20,11 +21,11 @@ export default function AccountStatusButton({ theme, mobile }) {
         effectRan.current = true;
 
         loadStatus().then((data) => {
-            const {attemptsLeft} = getOverallAccuracy();
+            //const {attemptsLeft} = getOverallAccuracy();
             logInfo(data);
-            if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
-                setLimitModalOpen(true);
-            }
+            // if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
+            //     setLimitModalOpen(true);
+            // }
         });
 
         setInterval(() => {
@@ -67,7 +68,7 @@ export default function AccountStatusButton({ theme, mobile }) {
 
         if (isPaid) {
             background = theme.green;
-            border = theme.greenDark;
+            border = theme.green;
             shadow = theme.greenDark;
             color = "#fff";
         } else if (isAttention) {
@@ -113,7 +114,8 @@ export default function AccountStatusButton({ theme, mobile }) {
             >
                 {account?.status !== "free" && "Підписка"}
                 {account?.status === "attention" && "Підписка (увага)"}
-                {account?.status === "free" && "Хочу підписку"}
+                {account?.status === "free" && account?.email && "Хочу підписку"}
+                {account?.status === "free" && !account?.email && "Хочу підписку / Увійти"}
             </div>
 
 

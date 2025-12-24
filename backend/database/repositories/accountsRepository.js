@@ -26,7 +26,7 @@ export async function createAccount() {
  */
 export async function getAccountInfo(accountId) {
     const { rows } = await pool.query(
-        'SELECT email, status FROM accounts WHERE id = $1',
+        'SELECT email, status, is_trial, trial_ended_at FROM accounts WHERE id = $1',
         [accountId]
     );
 
@@ -34,12 +34,16 @@ export async function getAccountInfo(accountId) {
         return {
             email: null,
             status: 'free', // default fallback
+            isTrial: false,
+            trialEndsOn: null,
         };
     }
 
     return {
         email: rows[0].email,
         status: rows[0].status || 'free',
+        isTrial: rows[0].is_trial || false,
+        trialEndsOn: rows[0].trial_ended_at,
     };
 }
 

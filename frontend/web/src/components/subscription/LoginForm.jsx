@@ -59,6 +59,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         padding: "12px 14px",
         fontSize: "18pt",
         fontWeight: 700,
+        fontFamily: "Nunito, system-ui, sans-serif",
         color: theme.text,
         textAlign: "center",
         caretColor: "grey",
@@ -293,6 +294,24 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                 !termsOpen && !isPaying && <div style={{display: "flex", flexDirection: "column", gap: 12}}>
                     {step === "email" && (
                         <>
+                            <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
+                                <div></div>
+
+                                <p onClick={onClose} style={{
+                                    marginBottom: 16,
+                                    marginTop: -26,
+                                    marginLeft: 0,
+                                    marginRight: -22,
+                                    color: theme.accent,
+                                    fontSize: "1.3rem",
+                                    fontWeight: 500,
+                                    textAlign: "left",
+                                    cursor: "pointer",
+                                }}>
+                                    ✕
+                                </p>
+                            </div>
+
                             <div style={{
                                 marginLeft: 0,
                                 marginBottom: 16,
@@ -347,6 +366,24 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
                     {step === "code" && (
                         <>
+                            <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
+                                <div></div>
+
+                                <p onClick={onClose} style={{
+                                    marginBottom: 16,
+                                    marginTop: -26,
+                                    marginLeft: 0,
+                                    marginRight: -22,
+                                    color: theme.accent,
+                                    fontSize: "1.3rem",
+                                    fontWeight: 500,
+                                    textAlign: "left",
+                                    cursor: "pointer",
+                                }}>
+                                    ✕
+                                </p>
+                            </div>
+
                             <div style={{
                                 marginLeft: 0,
                                 marginBottom: 16,
@@ -386,18 +423,19 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                             <div
                                 onPaste={handlePaste}
                                 style={{
-                                display: "flex",
-                                resize: "none",
-                                justifyContent: "space-between",
-                                borderRadius: theme.radius,
-                                border: `3px solid ${theme.accent}`,
-                                background: "#fffaf3",
-                                fontSize: "18pt",
-                                fontWeight: 700,
-                                color: theme.text,
-                                textAlign: "center",
-                                caretColor: "grey",
-                                marginBottom: 16}}>
+                                    display: "flex",
+                                    resize: "none",
+                                    justifyContent: "space-between",
+                                    borderRadius: theme.radius,
+                                    border: `3px solid ${theme.accent}`,
+                                    background: "#fffaf3",
+                                    fontSize: "18pt",
+                                    fontWeight: 700,
+                                    color: theme.text,
+                                    textAlign: "center",
+                                    caretColor: "grey",
+                                    marginBottom: 16
+                                }}>
                                 {code.map((digit, i) => (
                                     <input
                                         type="text"

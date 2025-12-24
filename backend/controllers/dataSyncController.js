@@ -25,10 +25,12 @@ export const dataSyncController = {
                 const accountInfo = await getAccountInfo(userId);
                 if (accountInfo?.status !== 'paid' && accountInfo?.status !== 'attention') {
                     res.status(400).json({ error: "Can't sync free account" });
+                    return;
                 }
 
                 if (process.env.DATA_SYNC_DISABLE) {
                     res.json({});
+                    return;
                 }
 
                 const updatedOn = new Date();

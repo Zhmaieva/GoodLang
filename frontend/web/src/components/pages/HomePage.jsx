@@ -27,8 +27,8 @@ export default function HomePage({ theme }) {
         button: (isHover) => ({
             appearance: "none",
             padding: "10px 18px",
-            fontWeight: 700,
-            fontSize: 14,
+            fontWeight: 800,
+            fontSize: "1rem",
             lineHeight: 1,
             borderRadius: 999,
             cursor: "pointer",

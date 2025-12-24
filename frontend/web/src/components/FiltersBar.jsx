@@ -44,6 +44,9 @@ export default function FiltersBar({
                         aria-pressed={filterLevel === lvl.id}
                         onClick={() => onLevelChange(lvl.id)}
                         style={{
+                            fontSize: "1rem",
+                            fontWeight: 800,
+                            fontFamily: "Nunito, system-ui, sans-serif",
                             flexShrink: 1,          // дозволяємо стискатися
                             whiteSpace: "nowrap",   // текст в один рядок
                             overflow: "hidden",     // обрізати, що не влазить
@@ -58,6 +61,11 @@ export default function FiltersBar({
 
             <div className="search">
                 <input
+                    style={{
+                        fontSize: "1rem",
+                        fontWeight: 700,
+                        fontFamily: "Nunito, system-ui, sans-serif",
+                    }}
                     type="search"
                     placeholder={`Пошук правила…${isMobile ? '' : '(наприклад, Present Perfect, or, wish)'}`}
                     aria-label="Пошук правила"
@@ -69,6 +77,11 @@ export default function FiltersBar({
             <button
                 className={`pill ${showWeakOnly ? "selected" : ""}`}
                 onClick={onToggleWeak}
+                style={{
+                    fontSize: "1rem",
+                    fontWeight: 800,
+                    fontFamily: "Nunito, system-ui, sans-serif",
+                }}
             >
                 {showWeakOnly ? "Показати всі" : "Лише слабкі"}
             </button>

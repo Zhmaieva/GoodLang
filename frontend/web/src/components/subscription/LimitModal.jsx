@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
+import {fmtDate} from "../pages/analyticsLogic.js";
 
 export const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
@@ -136,20 +137,40 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                         display: !isPaying ? "block" : "none",
                     }} onClick={e => e.stopPropagation()}>
 
-                        {
-                            account?.email &&
-                            <p style={{
+                        <div style={{display: "flex", justifyContent: "space-between"}}>
+                            {
+                                account?.email &&
+                                <p style={{
+                                    marginBottom: 16,
+                                    marginTop: 0,
+                                    marginLeft: 0,
+                                    color: theme.muted,
+                                    fontSize: "16px",
+                                    fontWeight: 500,
+                                    textAlign: "left"
+                                }}>
+                                    {account?.email}
+                                </p>
+                            }
+
+                            {
+                                !account?.email && <div></div>
+                            }
+
+                            <p onClick={onClose} style={{
                                 marginBottom: 16,
-                                marginTop: 0,
+                                marginTop: -22,
                                 marginLeft: 0,
-                                color: theme.muted,
-                                fontSize: "16px",
+                                marginRight: -18,
+                                color: theme.accent,
+                                fontSize: "1.3rem",
                                 fontWeight: 500,
-                                textAlign: "left"
+                                textAlign: "left",
+                                cursor: "pointer",
                             }}>
-                                {account?.email}
+                                ✕
                             </p>
-                        }
+                        </div>
 
                         <div style={{
                             marginLeft: 0,
@@ -168,13 +189,12 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                 }}>
                                     {"Навчання на повну силу"}
                                 </h2>
-                                <p style={{
+                                 <p style={{
                                     marginBottom: 16,
                                     marginTop: 8,
                                     marginLeft: 0,
                                     color: theme.text,
                                     fontSize: "1rem",
-                                    fontWeight: 500,
                                     textAlign: "left"
                                 }}>
                                     Підписка <strong>₴149.99 / місяць</strong>
