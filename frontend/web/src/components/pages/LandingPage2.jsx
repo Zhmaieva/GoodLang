@@ -125,8 +125,8 @@ ${brand} створений для україномовних учнів, яки
                                                           emailPlaceholder = "you@example.com",
 
                                                           heroScreens = [
-                                                              { src: "../../../public/shot1.png", alt: "Екран застосунку 1" },
-                                                              { src: "../../../public/shot2.png", alt: "Екран застосунку 2" },
+                                                              { src: "../../../shot1.png", alt: "Екран застосунку 1" },
+                                                              { src: "../../../shot2.png", alt: "Екран застосунку 2" },
                                                               // { src: "../../../public/shot3.png", alt: "Екран застосунку 3" },
                                                           ],
 
