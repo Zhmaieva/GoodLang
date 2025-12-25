@@ -686,7 +686,7 @@ ${brand} створений для україномовних учнів, яки
                             {...pressHandlers("joinPrimary")}
                             onClick={handleStart}
                         >
-                            {primaryCtaText}
+                            Почати навчання
                         </button>
                     </div>
 
