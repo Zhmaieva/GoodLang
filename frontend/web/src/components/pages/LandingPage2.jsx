@@ -546,7 +546,7 @@ ${brand} створений для україномовних учнів, яки
                                 <div style={styles.stat}>{communityCount}</div>
                                 <div style={styles.statSmall}>{subStat}</div>
                             </div>
-                            <div style={styles.freeBadge}>{heroBadge}</div>
+                            {/*<div style={styles.freeBadge}>{heroBadge}</div>*/}
                         </div>
 
                         <div style={styles.ctaRow}>
