@@ -18,19 +18,30 @@ export default function FooterBar({theme}) {
               `}
                 </style>
                 <div style={{
-                    fontSize: "0.8rem",
-                    alignSelf: "center",
                     width: "100%",
-                    textAlign: "center"
-                }}>© 2025-2026 GoodLang • з питань підтримки та співпраці пиши до <br/> <a style={{
-                    color: "#ff6138",
-                    textDecoration: "none",
-                }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a> <br/> <a onClick={() => {
-                    setTouOpen(true);
-                }} style={{
-                    color: "#ff6138",
-                    textDecoration: "none",
-                }} href="#">Умови використання і політика приватності</a></div>
+                    display: "flex",
+                    justifyContent: "space-between",
+                }}>
+                    <div style={{
+                        fontWeight: 900,
+                        fontSize: "1rem",
+                        alignSelf: "center",
+                        textAlign: "center"
+                    }}>© 2025-2026 GoodLang • <a style={{
+                        color: "#ff6138",
+                        textDecoration: "none",
+                    }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
+                    </div>
+
+                    <a onClick={() => {
+                            setTouOpen(true);
+                        }} style={{
+                            fontWeight: 900,
+                            fontSize: "1rem",
+                            color: "#ff6138",
+                            textDecoration: "none",
+                        }} href="#">Умови використання і політика приватності</a>
+                </div>
             </footer>
             {touOpen && (
                 <TermsOfUseModal
@@ -40,5 +51,5 @@ export default function FooterBar({theme}) {
                 />
             )}
         </>
-    )
+)
 }

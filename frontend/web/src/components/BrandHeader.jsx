@@ -65,15 +65,6 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         whiteSpace: "nowrap",
     };
 
-    const rightWrap = {
-        flexShrink: 0,
-
-        /* На мобільних — повна ширина */
-        width: "100%",
-        display: "flex",
-        justifyContent: "flex-start",  // кнопка під заголовком
-    };
-
     return (
         <header style={wrap}>
             <div style={leftWrap}>

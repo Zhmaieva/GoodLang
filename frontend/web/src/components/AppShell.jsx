@@ -1,4 +1,4 @@
-export default function AppShell({ children, theme }) {
+export default function AppShell({ children, theme, noPadding = false }) {
     const styles = {
         app: {
             minHeight: "100vh",
@@ -15,7 +15,7 @@ export default function AppShell({ children, theme }) {
             width: "100%",
             maxWidth: 1060,
             boxSizing: "border-box",
-            padding: "40px 24px 80px",
+            padding: noPadding ? "0px" : "40px 24px 80px",
             margin: "0 auto",
         },
     };

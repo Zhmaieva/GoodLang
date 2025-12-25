@@ -110,6 +110,9 @@ import {
     RULE_PAGE_CORRELATIVE_CONJUNCTIONS,
     RULE_PAGE_PREP_DIRECTION,
 } from "./services/rulePages.js";
+import LandingPage from "./components/pages/LandingPage.jsx";
+import GoodLangLandingPage from "./components/pages/LandingPage2.jsx";
+import GoodLangLandingTeaStyle from "./components/pages/LandingPage2.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -149,6 +152,7 @@ export default function App() {
             <Routes>
                 {/* Core pages */}
                 <Route path="/" element={<HomePage theme={theme} />} />
+                <Route path="/welcome" element={<GoodLangLandingTeaStyle theme={theme} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />
                 <Route path="/payment/cancel" element={<PaymentCancel />} />
