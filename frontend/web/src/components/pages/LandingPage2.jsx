@@ -3,6 +3,7 @@ import FooterBar from "../FooterBar.jsx";
 import {PrimaryButton} from "../Buttons.jsx";
 import FaqModal from "../subscription/FaqModal.jsx";
 import {useNavigate} from "react-router-dom";
+import {logInfo} from "../../services/logger.js";
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -124,9 +125,9 @@ ${brand} створений для україномовних учнів, яки
                                                           emailPlaceholder = "you@example.com",
 
                                                           heroScreens = [
-                                                              { src: "", alt: "Екран застосунку 1" },
-                                                              { src: "", alt: "Екран застосунку 2" },
-                                                              { src: "", alt: "Екран застосунку 3" },
+                                                              { src: "../../../public/shot1.png", alt: "Екран застосунку 1" },
+                                                              { src: "../../../public/shot2.png", alt: "Екран застосунку 2" },
+                                                              // { src: "../../../public/shot3.png", alt: "Екран застосунку 3" },
                                                           ],
 
                                                           maxWidth = 1120,
@@ -293,19 +294,24 @@ ${brand} створений для україномовних учнів, яки
             // Screens
             screensRow: {
                 display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: 10,
+                gridTemplateColumns: "repeat(2, 1fr)",
+                gap: 14,              // a bit more air
+                maxWidth: 520,        // keeps them big but not crazy
+                margin: "0 auto",
             },
             screen: {
                 aspectRatio: "9 / 16",
                 borderRadius: theme.radius,
                 border: `3px solid ${theme.accent}`,
-                background: softBg,
+                background: theme.bg,
                 boxShadow: shadowSmall,
                 overflow: "hidden",
                 position: "relative",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
             },
-            screenImg: { width: "100%", height: "100%", objectFit: "cover", display: "block" },
+            screenImg: { width: "95%", height: "95%",  objectFit: "contain", display: "block" },
             screenPlaceholder: {
                 position: "absolute",
                 inset: 0,
@@ -570,19 +576,21 @@ ${brand} створений для україномовних учнів, яки
 
                     <div>
                         <div style={styles.screensRow}>
-                            {heroScreens.slice(0, 3).map((s, i) => (
-                                <div key={i} style={styles.screen}>
-                                    {s?.src ? (
-                                        <img src={s.src} alt={s.alt || `Screen ${i + 1}`} style={styles.screenImg} />
-                                    ) : (
-                                        <div style={styles.screenPlaceholder}>
-                                            Add screenshot {i + 1}
-                                            <br />
-                                            <span style={{ fontSize: 12, fontWeight: 800 }}>(heroScreens[{i}].src)</span>
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
+                            {heroScreens.slice(0, 3).map((s, i) => {
+                                return (
+                                    <div key={i} style={styles.screen}>
+                                        {s?.src ? (
+                                            <img src={s.src} alt={s.alt || `Screen ${i + 1}`} style={styles.screenImg} />
+                                        ) : (
+                                            <div style={styles.screenPlaceholder}>
+                                                Add screenshot {i + 1}
+                                                <br />
+                                                <span style={{ fontSize: 12, fontWeight: 800 }}>(heroScreens[{i}].src)</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
