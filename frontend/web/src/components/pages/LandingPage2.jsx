@@ -688,14 +688,6 @@ ${brand} створений для україномовних учнів, яки
                         >
                             {primaryCtaText}
                         </button>
-                        <button
-                            type="button"
-                            style={styles.secondaryBtn(pressedId === "joinSecondary")}
-                            {...pressHandlers("joinSecondary")}
-                            onClick={() => scrollTo("tools")}
-                        >
-                            Наш підхід
-                        </button>
                     </div>
 
                     {showEmailCapture && (
