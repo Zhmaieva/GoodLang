@@ -247,8 +247,12 @@ ${brand} створений для україномовних учнів, яки
             },
             dot: { width: 10, height: 10, borderRadius: 999, background: theme.green },
             heroStack: { marginTop: 14, lineHeight: 0.92, letterSpacing: -0.8 },
-            heroLine: (size) => ({ margin: 0, fontSize: size, fontWeight: 900 }),
-            accentWord: { color: theme.accent },
+            heroLine: () => ({
+                margin: 0,
+                fontWeight: 900,
+                // ✅ адаптивний розмір: на iPhone буде менше, на desktop — як було
+                fontSize: "clamp(38px, 8.5vw, 58px)",
+            }),            accentWord: { color: theme.accent },
             heroMetaRow: {
                 marginTop: 14,
                 paddingTop: 14,
@@ -508,9 +512,6 @@ ${brand} створений для україномовних учнів, яки
                                 {l.label}
                             </button>
                         ))}
-                        <button style={styles.navBtn} onClick={() => scrollTo("join")} type="button">
-                            Приєднатися
-                        </button>
                     </div>
                 </div>
 
