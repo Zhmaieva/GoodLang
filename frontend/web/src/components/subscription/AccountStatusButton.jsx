@@ -34,7 +34,6 @@ export default function AccountStatusButton({ theme }) {
 
 
         if (shouldOpenSubscribe && account) {
-            console.log(account)
             if (account?.status !== 'paid')
                 setLimitModalOpen(true);
 
