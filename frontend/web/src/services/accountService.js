@@ -1,21 +1,41 @@
 import {callSignUpApi} from "./api.js";
 import {emit} from "./events.js";
 
+let initPromise = null;
+
 async function initCredentials() {
+    // fast path
     const savedToken = localStorage.getItem("token");
-    if (!savedToken) {
+    if (savedToken) return { token: savedToken };
+
+    // if already initializing, wait for it
+    if (initPromise) return initPromise;
+
+    // create single in-flight init
+    initPromise = (async () => {
+        // re-check inside the lock (important)
+        const again = localStorage.getItem("token");
+        if (again) return { token: again };
+
         const { token } = await callSignUpApi();
         localStorage.setItem("token", token);
 
-        emit('onFirstOpen', {})
+        emit("onFirstOpen", {});
 
         return { token };
+    })();
+
+    try {
+        return await initPromise;
+    } finally {
+        // allow future re-init attempts if needed
+        initPromise = null;
     }
-    return { token: savedToken };
 }
 
 export async function getToken() {
-    return (await initCredentials()).token;
+    const { token } = await initCredentials();
+    return token;
 }
 
 /* todo:
