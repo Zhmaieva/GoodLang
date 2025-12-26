@@ -21,15 +21,30 @@ export default function AccountStatusButton({ theme }) {
         loadStatus().then((data) => {
             //const {attemptsLeft} = getOverallAccuracy();
             logInfo(data);
-            // if (data?.status === 'free' && (attemptsLeft <= 0 || (getPaymentIntent() === true))) {
-            //     setLimitModalOpen(true);
-            // }
         });
 
         setInterval(() => {
             loadStatus().then();
         }, 5000);
     }, []);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const shouldOpenSubscribe = params.get("subscribe") === "true";
+
+
+        if (shouldOpenSubscribe && account) {
+            console.log(account)
+            if (account?.status !== 'paid')
+                setLimitModalOpen(true);
+
+            // Optional: remove param so it doesn't reopen on refresh
+            params.delete("subscribe");
+            const next = params.toString();
+            const newUrl = `${window.location.pathname}${next ? `?${next}` : ""}${window.location.hash || ""}`;
+            window.history.replaceState({}, "", newUrl);
+        }
+    }, [account])
 
     async function loadStatus() {
         try {

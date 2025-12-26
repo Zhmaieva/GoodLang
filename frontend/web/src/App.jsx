@@ -1,5 +1,5 @@
-import React, { useMemo } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, {useEffect, useMemo} from "react";
+import {Routes, Route, useNavigate} from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AnalyticsPage from "./components/pages/AnalyticsPage";
 import RulePage from "./components/pages/RulePage.jsx";
@@ -111,6 +111,7 @@ import {
     RULE_PAGE_PREP_DIRECTION,
 } from "./services/rulePages.js";
 import GoodLangLandingTeaStyle from "./components/pages/LandingPage2.jsx";
+import {off, on} from "./services/events.js";
 
 export const theme = {
     bg: "#fff3df",
@@ -143,6 +144,20 @@ export default function App() {
         }),
         []
     );
+
+    const navigate = useNavigate();
+
+    const goToLanding = () => {
+        navigate("/welcome");
+    }
+
+    useEffect(() => {
+        on("onFirstOpen", goToLanding);
+
+        return () => {
+            off("onFirstOpen", goToLanding);
+        }
+    })
 
     return (
         <section>

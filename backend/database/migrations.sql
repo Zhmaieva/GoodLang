@@ -521,3 +521,30 @@ $$;
 
 COMMIT;
 
+-- Migration: add_inquiries_table
+-- Description: Creates inquiries table to store early interest emails
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_inquiries_table'
+        ) THEN
+
+            CREATE TABLE IF NOT EXISTS inquiries (
+                                                     email VARCHAR(255) PRIMARY KEY,
+                                                     created_at TIMESTAMPTZ NOT NULL DEFAULT (NOW() AT TIME ZONE 'UTC')
+            );
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_inquiries_table', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

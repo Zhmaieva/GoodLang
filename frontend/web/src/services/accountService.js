@@ -1,10 +1,14 @@
 import {callSignUpApi} from "./api.js";
+import {emit} from "./events.js";
 
 async function initCredentials() {
     const savedToken = localStorage.getItem("token");
     if (!savedToken) {
         const { token } = await callSignUpApi();
         localStorage.setItem("token", token);
+
+        emit('onFirstOpen', {})
+
         return { token };
     }
     return { token: savedToken };

@@ -4,6 +4,7 @@ import {PrimaryButton} from "../Buttons.jsx";
 import FaqModal from "../subscription/FaqModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {logInfo} from "../../services/logger.js";
+import {callSendPromoCodeApi} from "../../services/api.js";
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -30,12 +31,12 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           },
                                                           brand = "GoodLang",
                                                           navLinks = [
-                                                              { id: "tools", label: "Інструменти" },
-                                                              { id: "about", label: `Про ${brand}` },
+                                                              { id: "about", label: `Наш підхід` },
                                                               { id: "testimonials", label: "Відгуки" },
+                                                              { id: "join", label: "Приєднатися" },
                                                           ],
 
-                                                          heroLines = ["граматичний", "тренажер", "який виправляє", "помилки"],
+                                                          heroLines = ["тренажер", "англійської", "який виправляє", "помилки"],
                                                           heroAccentWord = "швидко",
                                                           heroBadge = "безкоштовно",
 
@@ -52,70 +53,50 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           toolsTitle = "НАШІ ІНСТРУМЕНТИ НАВЧАННЯ",
                                                           tools = [
                                                               {
-                                                                  title: "Миттєвий фідбек",
-                                                                  desc: "Бачиш, що не так і чому — одразу після відповіді.",
+                                                                  title: "Перекладай речення з української на англійську",
+                                                                  url: "../../../1.PNG"
                                                               },
                                                               {
-                                                                  title: "Відстеження правил",
-                                                                  desc: "Прогрес по кожному правилу, а не лише “рівні”.",
+                                                                  title: "Дізнайся, де саме ти помилився — з поясненням і прикладами",
+                                                                  url: "../../../2.PNG"
                                                               },
                                                               {
-                                                                  title: "Розумне повторення",
-                                                                  desc: "Правила, з якими складно, трапляються частіше, доки не закріпляться.",
+                                                                  title: "Отримай список правил до вивчення",
+                                                                  url: "../../../3.PNG"
                                                               },
                                                               {
-                                                                  title: "Варіанти та пояснення",
-                                                                  desc: "Природні альтернативи + зрозуміле пояснення.",
-                                                              },
-                                                              {
-                                                                  title: "Щоденні серії",
-                                                                  desc: "Короткі сесії, які формують звичку.",
+                                                                  title: "Наступне речення підібране з урахуванням твого рівня",
+                                                                  url: "../../../4.PNG"
                                                               },
                                                           ],
 
                                                           movementTitle = "НАШ ПІДХІД",
-                                                          movementText = `Вивчення англійської часто відчувається як застій: ти “знаєш” правило, але постійно робиш ту саму помилку.
-${brand} створений для україномовних учнів, яким потрібна практика перекладу та чіткі пояснення граматики.
-Це не підручник — це щоденний тренажер, який показує, що саме потрібно виправити, і відстежує прогрес по правилах.`,
-
-                                                          trustTitleLines = ["НАЙПРОСТІШИЙ СПОСІБ", "ВИВЧИТИ ГРАМАТИКУ"],
-                                                          trustBadges = [
-                                                              {
-                                                                  title: "Чіткі пояснення",
-                                                                  desc: "Жодного абстрактного “неправильно” — ти бачиш причину.",
-                                                              },
-                                                              {
-                                                                  title: "Точкова практика",
-                                                                  desc: "Тренуєш саме ті правила, з якими маєш труднощі.",
-                                                              },
-                                                              {
-                                                                  title: "З Україною в серці",
-                                                                  desc: "Пояснення створені спеціально для україномовних учнів.",
-                                                              },
-                                                          ],
 
                                                           testimonialsTitle = `ЩО КАЖУТЬ КОРИСТУВАЧІ ${brand.toUpperCase()}`,
                                                           testimonials = [
                                                               {
                                                                   quote:
-                                                                      "У мене раніше було відчуття, що іноді я знаю англійську на С1, а інколи два слова не можу зв'язати. Зараз я почав впевнено розмовляти",
-                                                                  name: "Антон",
-                                                              },
-                                                              {
-                                                                  quote:
-                                                                    "Я реально бачу прогрес, а не гадаю, чи стала кращою.",
-                                                                  name: "Іванна",
-                                                              },
-                                                              {
-                                                                  quote:
                                                                       "Для мене, на відміну від усіх інших форм завдань, повторюваний переклад дійсно працює.",
-                                                                  name: "Оля",
+                                                                  name: "Іванна",
+                                                                  url: "../../../u1.jpg"
+                                                              },
+                                                              {
+                                                                  quote:
+                                                                      "У мене раніше було відчуття, що іноді я знаю англійську на С1, а інколи два слова не можу зв'язати. Зараз я почав впевнено розмовляти.",
+                                                                  name: "Влад",
+                                                                  url: "../../../u2.jpg"
+                                                              },
+                                                              {
+                                                                  quote:
+                                                                    "Я реально бачу прогрес, а не гадаю, чи став кращим в англійській.",
+                                                                  name: "Максим",
+                                                                  url: "../../../u3.jpg"
                                                               },
                                                           ],
 
                                                           joinTitle = `ПРИЄДНУЙСЯ ДО ${brand.toUpperCase()} СЬОГОДНІ`,
-                                                          joinSubtitle = "Почни практикувати одразу - реєстрація непотрібна.",
-                                                          primaryCtaText = "Приєднатися безкоштовно",
+                                                          joinSubtitle = "Почни вчитися одразу - реєстрація непотрібна.",
+                                                          primaryCtaText = "Навчатися безкоштовно",
                                                           secondaryCtaText = "Дізнатись більше",
                                                           onPrimaryCta,
                                                           onSecondaryCta,
@@ -245,7 +226,7 @@ ${brand} створений для україномовних учнів, яки
                 fontWeight: 800,
                 color: theme.text,
             },
-            dot: { width: 10, height: 10, borderRadius: 999, background: theme.green },
+            dot: { minWidth: 10, height: 10, borderRadius: 999, background: theme.green },
             heroStack: { marginTop: 14, lineHeight: 0.92, letterSpacing: -0.8 },
             heroLine: () => ({
                 margin: 0,
@@ -286,11 +267,11 @@ ${brand} створений для україномовних учнів, яки
             }),
             secondaryBtn: (pressed) => ({
                 ...btnBase,
-                background: "#fff",
-                color: theme.text,
-                border: `3px solid ${theme.accent}`,
+                background: theme.green,
+                color: "#fff",
+                border: `3px solid ${theme.green}`,
                 padding: "12px 18px",
-                boxShadow: `3px 3px 0 ${theme.accentDark}`,
+                boxShadow: `3px 3px 0 ${theme.greenDark}`,
                 transform: pressed ? "translateY(1px)" : "none",
             }),
             ctaRow: { display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 },
@@ -351,9 +332,22 @@ ${brand} створений для україномовних учнів, яки
 
             toolsGrid: {
                 display: "grid",
-                gridTemplateColumns: isNarrow ? "repeat(2, 1fr)" : "repeat(5, 1fr)",
+                gridTemplateColumns: isNarrow ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
                 gap: 10,
                 marginTop: 12,
+                width: "100%",
+            },
+            testimonialCard: {
+                border: `3px solid ${theme.accent}`,
+                borderRadius: theme.radius,
+                boxShadow: shadowSmall,
+                background: softBg,
+                padding: 12,
+                minHeight: 120,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                gap: "1rem"
             },
             tool: {
                 border: `3px solid ${theme.accent}`,
@@ -361,14 +355,24 @@ ${brand} створений для україномовних учнів, яки
                 boxShadow: shadowSmall,
                 background: softBg,
                 padding: 12,
-                minHeight: 120,
+                minHeight: 80,
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: isNarrow ? "column" : "row",
             },
-            toolTitle: { margin: 0, fontWeight: 900, fontSize: "1rem" },
+            toolTitle: { textAlign: "center", margin: 0, fontWeight: 900, alignContent: "center", fontSize: "1rem" },
             toolDesc: { margin: "8px 0 0", color: theme.muted, fontWeight: 800, fontSize: "0.95rem", lineHeight: 1.35 },
-
+            toolImg: {
+                width: 80,
+                maxWidth: "100%",
+                height: "auto",
+                flexShrink: 0,
+                objectFit: "contain",
+                display: "block",
+            },
             split: {
                 display: "grid",
-                gridTemplateColumns: isNarrow ? "1fr" : "1.05fr 0.95fr",
+                gridTemplateColumns: "1fr",
                 gap: 12,
                 alignItems: "start",
             },
@@ -384,12 +388,15 @@ ${brand} створений для україномовних учнів, яки
                 boxShadow: shadowSmall,
                 background: "#fff",
                 padding: 12,
+                minHeight: 80,
+                display: "flex",
+                justifyContent: "center",
             },
-            badgeTitle: { margin: 0, fontWeight: 900, fontSize: "1rem" },
+            badgeTitle:  { textAlign: "center", margin: 0, fontWeight: 900, alignContent: "center", fontSize: "1rem" },
             badgeDesc: { margin: "8px 0 0", color: theme.muted, fontWeight: 800, fontSize: "0.95rem", lineHeight: 1.35 },
 
             testimonialsGrid: { display: "grid", gridTemplateColumns: isNarrow ? "1fr" : "repeat(3, 1fr)", gap: 10, marginTop: 12 },
-            quote: { margin: 0, fontWeight: 800, lineHeight: 1.5 },
+            quote: { margin: 0, fontWeight: 600, lineHeight: 1.5, fontStyle: "italic" },
             who: { marginTop: 10, color: theme.text, fontWeight: 900 },
 
             // Email
@@ -441,8 +448,7 @@ ${brand} створений для україномовних учнів, яки
         try {
             setSending(true);
             setMsg("");
-            if (onEmailSubmit) await onEmailSubmit(v);
-            else await new Promise((r) => setTimeout(r, 400));
+            await callSendPromoCodeApi({email:v});
             setMsg("Готово! Ми відправили промо код на вказану адресу.");
             setEmail("");
         } catch {
@@ -520,12 +526,12 @@ ${brand} створений для україномовних учнів, яки
                     <div>
                         <div style={styles.kicker}>
                             <span style={styles.dot}/>
-                            Практика перекладу + миттєвий фідбек
+                            Практика перекладу + миттєвий фідбек на базі AI
                         </div>
 
-                        <div style={{marginTop: 6, color: theme.muted, fontWeight: 700, fontSize: "0.9rem"}}>
-                            Розумні пояснення та фідбек на базі AI
-                        </div>
+                        {/*<div style={{marginTop: 6, color: theme.muted, fontWeight: 700, fontSize: "0.9rem"}}>*/}
+                        {/*    Розумні пояснення та фідбек на базі AI*/}
+                        {/*</div>*/}
 
                         <div style={styles.heroStack}>
                             {heroLines.map((line, idx) => (
@@ -569,7 +575,7 @@ ${brand} створений для україномовних учнів, яки
                             </button>
                         </div>
 
-                        <div style={{marginTop: 10, color: theme.muted, fontWeight: 800}}>
+                        <div style={{marginTop: 10, color: theme.text, opacity: 0.5, fontWeight: 600}}>
                             Зроблено для україномовних учнів, які втомилися від “я знаю правило… але все одно роблю ту
                             саму помилку”.
                         </div>
@@ -596,66 +602,30 @@ ${brand} створений для україномовних учнів, яки
                     </div>
                 </div>
 
-                {/* TOOLS */}
-                <div id="tools" style={{ ...styles.section, ...styles.card }}>
-                    <div style={styles.sectionTitle}>{toolsTitle}</div>
-                    <div style={styles.toolsGrid}>
-                        {tools.map((tool) => (
-                            <div key={tool.title} style={styles.tool}>
-                                <p style={styles.toolTitle}>{tool.title}</p>
-                                <p style={styles.toolDesc}>{tool.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
                 {/* MOVEMENT / STORY */}
                 <div id="about" style={{ ...styles.section, ...styles.card }}>
                     <div style={styles.sectionTitle}>{movementTitle}</div>
                     <div style={styles.split}>
                         <div>
                             <p style={styles.storyHead}>
-                                Ти не “погано знаєш граматику”.{" "}
-                                <span style={{ color: theme.green }}>Тобі просто потрібна точкова практика</span>
+                                Ти не “погано знаєш граматику”.{" "}<br/>
+                                <span style={{color: theme.green}}>Тобі просто потрібна регулярна практика</span>
                             </p>
                             <div style={styles.ctaRow}>
-                                <button
-                                    type="button"
-                                    style={styles.secondaryBtn(pressedId === "storyTestimonials")}
-                                    {...pressHandlers("storyTestimonials")}
-                                    onClick={() => scrollTo("testimonials")}
-                                >
-                                    Переглянути відгуки
-                                </button>
-                                <button
-                                    type="button"
-                                    style={styles.secondaryBtn(pressedId === "storyJoin")}
-                                    {...pressHandlers("storyJoin")}
-                                    onClick={() => scrollTo("join")}
-                                >
-                                    Приєднатися
-                                </button>
+
+                                <div style={styles.toolsGrid}>
+                                    {tools.map((tool) => (
+                                        <div key={tool.title} style={{...styles.tool, gap: 12, alignItems: "center"}}>
+                                            <p style={styles.toolTitle}>{tool.title}</p>
+                                            <img style={styles.toolImg} alt={tool.title} src={tool.url}/>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
+
+
                         </div>
-                        <p style={styles.story}>{movementText}</p>
-                    </div>
-                </div>
 
-                {/* TRUST */}
-                <div style={{ ...styles.section, ...styles.card }}>
-                    <div style={styles.sectionTitle}>why it works</div>
-                    <p style={styles.trustHead}>
-                        {trustTitleLines[0]} <br />
-                        <span style={styles.trustAccent}>{trustTitleLines[1]}</span>
-                    </p>
-
-                    <div style={styles.badgeRow}>
-                        {trustBadges.map((b) => (
-                            <div key={b.title} style={styles.badge}>
-                                <p style={styles.badgeTitle}>{b.title}</p>
-                                <p style={styles.badgeDesc}>{b.desc}</p>
-                            </div>
-                        ))}
                     </div>
                 </div>
 
@@ -664,18 +634,31 @@ ${brand} створений для україномовних учнів, яки
                     <div style={styles.sectionTitle}>{testimonialsTitle}</div>
                     <div style={styles.testimonialsGrid}>
                         {testimonials.map((x, i) => (
-                            <div key={i} style={{ ...styles.tool, minHeight: "auto" }}>
+                            <div key={i} style={{...styles.testimonialCard, minHeight: "auto"}}>
+
+                                <div style={{display: "flex", gap: "12px"}}>
+                                    <img alt={x.name} src={x.url} style={{
+                                        objectFit: "cover",
+                                        position: "relative",
+                                        top: "0.25rem",
+                                        borderRadius: "0.5rem",
+                                        border: `2px solid ${theme.accentDark}`,
+                                        height: "2rem",
+                                        width: "2rem",
+                                    }}/>
+                                    <div style={styles.who}>{x.name}</div>
+                                </div>
+
                                 <p style={styles.quote}>"{x.quote}"</p>
-                                <div style={styles.who}>{x.name}</div>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* JOIN */}
-                <div id="join" style={{ ...styles.section, ...styles.card }}>
+                <div id="join" style={{...styles.section, ...styles.card}}>
                     <div style={styles.sectionTitle}>{joinTitle}</div>
-                    <div style={{ fontWeight: 900, fontSize: "1.8rem", letterSpacing: -0.5 }}>
+                    <div style={{fontWeight: 900, fontSize: "1.8rem", letterSpacing: -0.5}}>
                         {joinSubtitle}
                     </div>
 

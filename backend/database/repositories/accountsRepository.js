@@ -1,5 +1,5 @@
 import { pool } from '../pool.js';
-import {sendVerificationEmail} from "../../core/emailSender.js";
+import {sendPromoEmail, sendVerificationEmail} from "../../core/emailSender.js";
 
 /**
  * Creates a new account without requiring an email.
@@ -102,6 +102,39 @@ export async function sendVerificationCode(email) {
 
     return accountId;
 };
+
+/**
+ * Send promo code email.
+ * Soft-saves email to inquiries.
+ * Does NOT create sign-in links.
+ */
+export async function sendPromoCode(email) {
+    // 0) Basic email validation
+    if (typeof email !== 'string') return;
+
+    const normalizedEmail = email.trim().toLowerCase();
+
+    // Simple, safe email regex (good enough for promo flows)
+    const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!EMAIL_REGEX.test(normalizedEmail)) {
+        return;
+    }
+
+    // 1) Soft write to inquiries (lead capture)
+    await pool.query(
+        `
+            INSERT INTO inquiries (email)
+            VALUES ($1)
+            ON CONFLICT (email) DO NOTHING
+        `,
+        [normalizedEmail]
+    );
+
+    // 2) Send promo email (marketing only)
+    await sendPromoEmail(normalizedEmail);
+}
+
 
 /**
  * Verify code for email and return account id if valid

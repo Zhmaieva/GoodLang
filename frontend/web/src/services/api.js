@@ -113,6 +113,18 @@ export async function callManageSubscriptionApi() {
     return { ...data, isSuccess: true };
 }
 
+export async function callSendPromoCodeApi({ email }) {
+    const res = await fetch(`${API_BASE}/accounts/send-promo-code`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data?.error || "Не вдалося відправити код");
+    return data;
+}
+
 export async function callSendCodeApi({ email }) {
     const res = await fetch(`${API_BASE}/accounts/send-code`, {
         method: "POST",

@@ -88,3 +88,107 @@ export function sendVerificationEmail(to, code) {
         console.log(`Verification email sent to ${to}: ${info.messageId}`);
     });
 }
+
+/**
+ * Send promo code email
+ * @param {string} to - recipient email
+ */
+export function sendPromoEmail(to) {
+    const SUBSCRIBE_URL = `${process.env.FRONTEND_URL}?subscribe=true`;
+    const PROMO_CODE = "WELCOME26";
+
+    return transporter.sendMail({
+        from: `"GoodLang" <${process.env.SMTP_FROM}>`,
+        to,
+        subject: "🎁 Твій промо-код для GoodLang",
+        text: `Твій промо-код: ${PROMO_CODE}\nАктивуй тут: ${SUBSCRIBE_URL}`,
+        html: `
+<table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+  <tr>
+    <td style="padding-bottom:16px;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+          <td valign="top" style="font-family:Arial, sans-serif;">
+            <h2 style="
+              margin:0;
+              font-size:24px;
+              font-weight:800;
+              color:#3a2a1d;
+            ">
+              🎁 ${PROMO_CODE}
+            </h2>
+
+            <p style="
+              margin:8px 0 16px 0;
+              font-size:16px;
+              font-weight:500;
+              color:#3a2a1d;
+            ">
+              Це твій персональний промо-код для <strong>GoodLang</strong>
+            </p>
+
+            <p style="
+              margin:0 0 12px 0;
+              font-size:15px;
+              color:#3a2a1d;
+            ">
+              Активуй доступ за посиланням:
+            </p>
+
+            <a
+              href="${SUBSCRIBE_URL}"
+              style="
+                color:#ff6138;
+                font-weight:900;
+                font-size:15px;
+                text-decoration:none;
+              "
+            >
+              ${SUBSCRIBE_URL}
+            </a>
+          </td>
+
+          <td width="64" valign="top" align="right">
+            <table width="64" height="64" cellpadding="0" cellspacing="0" role="presentation"
+              style="
+                background:#ff6138;
+                border-radius:12px;
+                text-align:center;
+              ">
+              <tr>
+                <td style="
+                  color:#ffffff;
+                  font-weight:800;
+                  font-size:28px;
+                  font-family:Arial, sans-serif;
+                  line-height:64px;
+                ">
+                  GL
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p style="
+  font-family:Arial, sans-serif;
+  opacity:0.5;
+  font-size:13px;
+">
+  Якщо ти не реєструвався(-лась) у GoodLang — просто проігноруй цей лист або напиши нам на
+  <a
+    href="mailto:goodlang.app@gmail.com"
+    style="color:#ff6138; text-decoration:none;"
+  >
+    goodlang.app@gmail.com
+  </a>
+</p>
+`
+    }).then(info => {
+        console.log(`Promo email sent to ${to}: ${info.messageId}`);
+    });
+}

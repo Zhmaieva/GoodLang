@@ -158,6 +158,8 @@ export default function RulePage({ data, theme }) {
                     subtitle={<>{data.title}</>}
                     right={
                         <button style={{
+                            fontWeight: 800,
+                            fontSize: "1rem",
                             fontFamily: "Nunito, system-ui, sans-serif",
                         }} className="btn secondary" onClick={handleAnalyticsClick}>
                             ← До аналітики

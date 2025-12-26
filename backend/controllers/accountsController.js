@@ -1,6 +1,6 @@
 import {
     createAccount,
-    getAccountInfo,
+    getAccountInfo, sendPromoCode,
     sendVerificationCode,
     verifyCode
 } from "../database/repositories/accountsRepository.js";
@@ -37,6 +37,20 @@ export const accountsController = {
             try {
                 const account = await getAccountInfo(req.user.id);
                 res.json(account);
+            } catch (e) {
+                next(e);
+            }
+        });
+
+        // Request a verification code
+        app.post(`/accounts/send-promo-code`, async (req, res, next) => {
+            try {
+                const { email } = req.body;
+                if (!email) return res.status(400).json({ error: "Email required" });
+
+                await sendPromoCode(email.toLowerCase().trim());
+
+                res.json({ message: "Verification code sent" });
             } catch (e) {
                 next(e);
             }
