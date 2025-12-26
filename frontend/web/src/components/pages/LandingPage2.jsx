@@ -95,7 +95,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           ],
 
                                                           joinTitle = `ПРИЄДНУЙСЯ ДО ${brand.toUpperCase()} СЬОГОДНІ`,
-                                                          joinSubtitle = "Почни вчитися одразу - реєстрація непотрібна.",
+                                                          joinSubtitle = "Почни вчитися зараз - реєстрація непотрібна.",
                                                           primaryCtaText = "Навчатися безкоштовно",
                                                           secondaryCtaText = "Дізнатись більше",
                                                           onPrimaryCta,
