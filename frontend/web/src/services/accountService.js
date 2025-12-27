@@ -40,6 +40,7 @@ export async function getToken() {
 
 /* todo:
 - ти можливо відчуєш запах кави у кухні - error?
+Ця вправа легка.
 
 - add a progress bar to the rule page
 - add ordering in the rules table

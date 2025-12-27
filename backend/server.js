@@ -44,6 +44,7 @@ app.use(async (req, res) => {
 // Global error handler (Catches all unhandled exceptions)
 app.use(async (err, req, res, next) => {
     console.error(err.stack);  // Log the error stack for debugging (optional)
+    console.log(`REQUEST FAILED: ${req.url}`);
     res.status(500).json({ message: 'Something went wrong, please try again later.' });
 });
 
