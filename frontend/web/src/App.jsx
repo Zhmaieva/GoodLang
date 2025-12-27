@@ -13,6 +13,7 @@ import {
     RULE_PAGE_THERE_IS_ARE,
     RULE_PAGE_HAVE_HAVE_GOT,
     RULE_PAGE_POSSESSIVE_S,
+    RULE_PAGE_POSSESSIVE_ADJECTIVES,
     RULE_PAGE_ARTICLES,
     RULE_PAGE_DEMONSTRATIVES,
     RULE_PAGE_PERSONAL_PRONOUNS,
@@ -175,6 +176,7 @@ export default function App() {
                 <Route path="/rule/THERE_IS_ARE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_THERE_IS_ARE} />} />
                 <Route path="/rule/HAVE_HAVE_GOT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_HAVE_HAVE_GOT} />} />
                 <Route path="/rule/POSSESSIVE_S" element={<RulePage theme={ruleTheme} data={RULE_PAGE_POSSESSIVE_S} />} />
+                <Route path="/rule/POSSESSIVE_ADJECTIVES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_POSSESSIVE_ADJECTIVES} />} />
                 <Route path="/rule/ARTICLES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ARTICLES} />} />
                 <Route path="/rule/DEMONSTRATIVES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_DEMONSTRATIVES} />} />
                 <Route path="/rule/PERSONAL_PRONOUNS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PERSONAL_PRONOUNS} />} />

@@ -15,13 +15,13 @@ export default function TaskCard({
             boxShadow: `4px 4px 0 ${theme.accentDark}`,
             padding: 20,
         },
-        taskText: { fontSize: "1.5rem", fontWeight: 700, color: theme.text },
+        taskText: { fontSize: "1.5rem", fontWeight: 800, color: theme.text },
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
         textarea: {
             fontFamily: "Nunito, system-ui, sans-serif",
             resize: "none",
             flex: 1, minHeight: 70, borderRadius: theme.radius, border: `3px solid ${theme.accent}`,
-            background: "#fffaf3", padding: "12px 14px", fontWeight: 700, fontSize: "1rem", color: theme.text,
+            background: "#fffaf3", padding: "12px 14px", fontWeight: 800, fontSize: "1rem", color: theme.text,
             opacity: isInputDisabled ? 0.7 : 1,
         },
         btn: {

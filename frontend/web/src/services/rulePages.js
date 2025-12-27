@@ -222,6 +222,65 @@ export const RULE_PAGE_POSSESSIVE_S = {
     ]
 };
 
+export const RULE_PAGE_POSSESSIVE_ADJECTIVES = {
+    id: "POSSESSIVE_ADJECTIVES",
+    title: "Possessive Adjectives",
+    subtitle: "Вивчення правила",
+    sections: [
+        {
+            type: "meaning",
+            title: "Що означає",
+            html: "<strong>Possessive adjectives</strong> показують, кому щось належить і завжди стоять <strong>перед іменником</strong>: <em>my book</em>, <em>her bag</em>."
+        },
+        {
+            type: "usage",
+            title: "Коли вживаємо",
+            badges: [
+                "Про власність: <strong>my phone</strong>",
+                "Про людей і речі: <strong>his sister</strong>, <strong>their house</strong>",
+                "Коли важливо, <em>чия</em> це річ, а не <em>яка</em>: <strong>our plan</strong>"
+            ],
+            hint: "Possessive adjective завжди залежить від <strong>власника</strong>, а не від предмета."
+        },
+        {
+            type: "forms",
+            title: "Форми",
+            headers: ["Особа", "Форма", "Приклад"],
+            rows: [
+                ["I", "my", "my bag"],
+                ["you", "your", "your idea"],
+                ["he", "his", "his jacket"],
+                ["she", "her", "her phone"],
+                ["it", "its", "its tail"],
+                ["we", "our", "our home"],
+                ["they", "their", "their car"]
+            ],
+            hint: "<strong>Its</strong> — без апострофа. <em>It's</em> = <em>it is</em>."
+        },
+        {
+            type: "examples",
+            title: "Приклади",
+            items: [
+                ["This is my seat.", "Це моє місце."],
+                ["Her English is very good.", "Її англійська дуже хороша."],
+                ["They sold their house.", "Вони продали свій будинок."]
+            ]
+        },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>She lost his keys</em> → ✅ <strong>She lost her keys</strong>.",
+                "❌ <em>Its a problem</em> → ✅ <strong>It's a problem</strong>.",
+                "❌ <em>my is book</em> → ✅ <strong>my book</strong>."
+            ],
+            note: "Possessive adjectives <strong>ніколи не вживаються самі</strong> — після них завжди має бути іменник."
+        },
+        { type: "trainer", title: "Міні-тренажер (Possessive Adjectives)" }
+    ]
+};
+
+
 export const RULE_PAGE_ARTICLES = {
     id: "ARTICLES",
     title: "Articles (a / an / the)",

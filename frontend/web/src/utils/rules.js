@@ -4,6 +4,7 @@ export const GrammarRule = Object.freeze({
     THERE_IS_ARE: "THERE_IS_ARE",
     HAVE_HAVE_GOT: "HAVE_HAVE_GOT",
     POSSESSIVE_S: "POSSESSIVE_S",
+    POSSESSIVE_ADJECTIVES: "POSSESSIVE_ADJECTIVES",
     ARTICLES: "ARTICLES",
     DEMONSTRATIVES: "DEMONSTRATIVES",
     PERSONAL_PRONOUNS: "PERSONAL_PRONOUNS",
@@ -36,7 +37,7 @@ export const GrammarRule = Object.freeze({
     MAY_MIGHT: "MAY_MIGHT",
     COMPARATIVES: "COMPARATIVES",
     SUPERLATIVES: "SUPERLATIVES",
-    ENOUGH_TOO_MUCH_MANY: "ENOUGH_TOO_MUCH_MANY",
+    TOO_ENOUGH: "TOO_ENOUGH",
     ADVERBS_FREQUENCY_OFTEN_NEVER: "ADVERBS_FREQUENCY_OFTEN_NEVER",
     QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY: "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
     LIKE_LOVE_HATE_ING: "LIKE_LOVE_HATE_ING",
@@ -79,6 +80,7 @@ export const GrammarRule = Object.freeze({
     PHRASAL_VERBS_COMMON: "PHRASAL_VERBS_COMMON",
     EACH_OTHER_ONE_ANOTHER: "EACH_OTHER_ONE_ANOTHER",
     SO_DO_I_NEITHER_DO_I: "SO_DO_I_NEITHER_DO_I",
+    ENOUGH_TOO_MUCH_MANY: "ENOUGH_TOO_MUCH_MANY",
 
     // --- B2 ---
     CLEFT_SENTENCES: "CLEFT_SENTENCES",
@@ -94,8 +96,8 @@ export const GrammarRule = Object.freeze({
     ADVANCED_MODALS_OF_DEDUCTION: "ADVANCED_MODALS_OF_DEDUCTION",
     COMPLEX_NOUN_PHRASES: "COMPLEX_NOUN_PHRASES",
     INDIRECT_SPEECH_QUESTION_FORMS: "INDIRECT_SPEECH_QUESTION_FORMS",
-    CORRELATIVE_CONJUNCTIONS: "CORRELATIVE_CONJUNCTIONS",
-    PREP_DIRECTION: "PREP_DIRECTION"
+    PREP_DIRECTION: "PREP_DIRECTION",
+    CORRELATIVE_CONJUNCTIONS: "CORRELATIVE_CONJUNCTIONS"
 });
 
 // Human-readable labels (exactly as in your list)
@@ -105,6 +107,7 @@ export const RULE_LABELS = Object.freeze({
     THERE_IS_ARE: "There is / There are",
     HAVE_HAVE_GOT: "Have / have got",
     POSSESSIVE_S: "Possessive 's",
+    POSSESSIVE_ADJECTIVES: "Possessive adjectives",
     ARTICLES: "Articles (a / an / the)",
     DEMONSTRATIVES: "Demonstratives (this, that, these, those)",
     PERSONAL_PRONOUNS: "Personal pronouns",
@@ -137,7 +140,7 @@ export const RULE_LABELS = Object.freeze({
     MAY_MIGHT: "May / might",
     COMPARATIVES: "Comparatives (adj + -er / more)",
     SUPERLATIVES: "Superlatives (adj + -est / most)",
-    ENOUGH_TOO_MUCH_MANY: "Too / enough",
+    TOO_ENOUGH: "Too / enough",
     ADVERBS_FREQUENCY_OFTEN_NEVER: "Adverbs of frequency (often, never)",
     QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY: "Quantifiers (some, any, a lot of, much, many)",
     LIKE_LOVE_HATE_ING: "Like / love / hate + -ing",
@@ -180,6 +183,7 @@ export const RULE_LABELS = Object.freeze({
     PHRASAL_VERBS_COMMON: "Phrasal verbs (common)",
     EACH_OTHER_ONE_ANOTHER: "Each other / one another",
     SO_DO_I_NEITHER_DO_I: "So do I / Neither do I",
+    ENOUGH_TOO_MUCH_MANY: "Enough / too much / too many",
 
     // B2
     CLEFT_SENTENCES: "Cleft sentences (It is / What … is …)",
@@ -206,6 +210,7 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.THERE_IS_ARE,
         GrammarRule.HAVE_HAVE_GOT,
         GrammarRule.POSSESSIVE_S,
+        GrammarRule.POSSESSIVE_ADJECTIVES,
         GrammarRule.ARTICLES,
         GrammarRule.DEMONSTRATIVES,
         GrammarRule.PERSONAL_PRONOUNS,
@@ -238,7 +243,7 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.MAY_MIGHT,
         GrammarRule.COMPARATIVES,
         GrammarRule.SUPERLATIVES,
-        GrammarRule.ENOUGH_TOO_MUCH_MANY,
+        GrammarRule.TOO_ENOUGH,
         GrammarRule.ADVERBS_FREQUENCY_OFTEN_NEVER,
         GrammarRule.QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY,
         GrammarRule.LIKE_LOVE_HATE_ING,
@@ -297,7 +302,7 @@ export const LEVEL_RULES = Object.freeze({
         GrammarRule.ADVANCED_MODALS_OF_DEDUCTION,
         GrammarRule.COMPLEX_NOUN_PHRASES,
         GrammarRule.INDIRECT_SPEECH_QUESTION_FORMS,
-        GrammarRule.CORRELATIVE_CONJUNCTIONS,
         GrammarRule.PREP_DIRECTION,
+        GrammarRule.CORRELATIVE_CONJUNCTIONS
     ],
 });
