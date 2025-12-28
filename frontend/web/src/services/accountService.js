@@ -38,6 +38,10 @@ export async function getToken() {
     return token;
 }
 
+setInterval(() => {
+    emit("refreshAccount")
+}, 5000);
+
 /* todo:
 - ти можливо відчуєш запах кави у кухні - error?
 Ця вправа легка.

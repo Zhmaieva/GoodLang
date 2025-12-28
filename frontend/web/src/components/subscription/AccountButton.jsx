@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LoginModal from "./LoginModal.jsx";
 import { callAccountInfoApi } from "../../services/api.js";
 import {syncWithServer} from "../../services/dataService.js";
+import {emit, off} from "../../services/events.js";
 
 export default function AccountButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
@@ -10,9 +11,12 @@ export default function AccountButton({ theme, mobile }) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        loadAccountInfo();
-        const interval = setInterval(loadAccountInfo, 5000);
-        return () => clearInterval(interval);
+        loadAccountInfo().then(_ => {});
+
+        emit.on("refreshAccount", loadAccountInfo);
+        return () => {
+            off("refreshAccount");
+        }
     }, []);
 
     async function loadAccountInfo() {

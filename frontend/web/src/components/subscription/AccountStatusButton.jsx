@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import {callAccountInfoApi} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
@@ -14,19 +14,43 @@ export default function AccountStatusButton({ theme }) {
 
     const effectRan = useRef(false); // <-- prevents double run
 
+    const intervalRef = useRef(null);
+    const mountedRef = useRef(false);
+
+    const loadStatus = useCallback(async () => {
+        try {
+            const data = await callAccountInfoApi();
+            if (!mountedRef.current) return null;
+            setAccount(data);
+            return data;
+        } catch (e) {
+            console.error("Failed to load account status", e);
+            return null;
+        }
+    }, []);
+
     useEffect(() => {
-        if (effectRan.current) return; // prevent second StrictMode call
-        effectRan.current = true;
+        mountedRef.current = true;
+
+        // ensure no duplicates (StrictMode/dev remount or parent toggles)
+        if (intervalRef.current) clearInterval(intervalRef.current);
 
         loadStatus().then((data) => {
-            //const {attemptsLeft} = getOverallAccuracy();
-            logInfo(data);
+            if (data) logInfo(data);
         });
 
-        setInterval(() => {
-            loadStatus().then();
+        intervalRef.current = setInterval(() => {
+            loadStatus().catch(() => {});
         }, 5000);
-    }, []);
+
+        return () => {
+            mountedRef.current = false;
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+                intervalRef.current = null;
+            }
+        };
+    }, [loadStatus]);
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -44,17 +68,6 @@ export default function AccountStatusButton({ theme }) {
             window.history.replaceState({}, "", newUrl);
         }
     }, [account])
-
-    async function loadStatus() {
-        try {
-            const data = await callAccountInfoApi();
-            setAccount(data);
-
-            return data;
-        } catch (e) {
-            console.error("Failed to load account status", e);
-        }
-    }
 
     function handleClick() {
         if (!account?.status) return;
