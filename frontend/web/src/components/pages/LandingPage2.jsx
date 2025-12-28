@@ -5,6 +5,8 @@ import FaqModal from "../subscription/FaqModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {logInfo} from "../../services/logger.js";
 import {callSendPromoCodeApi} from "../../services/api.js";
+import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
+import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -120,6 +122,17 @@ export default function GoodLangLandingTeaStyleThemed({
     const [pressedId, setPressedId] = useState(null);
     const [faqVisible, setFaqVisible] = useState(false);
 
+    const [cookieOpen, setCookieOpen] = useState(false);
+
+    useEffect(() => {
+        if (getCookieConsent()) return;
+
+        const t = setTimeout(() => {
+            setCookieOpen(true);
+        }, 4000); // ⏱ 4 seconds after load
+
+        return () => clearTimeout(t);
+    }, []);
 
     useEffect(() => {
         const onResize = () => setW(window.innerWidth);
@@ -705,9 +718,32 @@ export default function GoodLangLandingTeaStyleThemed({
                     />
                 )}
 
+                {cookieOpen && !faqVisible && (
+                    <CookieConsentModal
+                        theme={theme}
+                        onAccept={() => {
+                            acceptCookies();
+                            setCookieOpen(false);
+                            // ⬇️ load analytics here if you use them
+                            // loadGoogleAnalytics();
+                        }}
+                        onReject={() => {
+                            rejectCookies();
+                            setCookieOpen(false);
+                        }}
+                        onOpenPolicy={() => {
+                            // reuse your existing Terms modal
+                            // this keeps UX consistent
+                            setFaqVisible(true);
+                            // or open TermsOfUseModal if you prefer
+                        }}
+                    />
+                )}
+
                 {/* FOOTER */}
                 <FooterBar theme={theme} />
             </div>
+
         </div>
     );
 }
