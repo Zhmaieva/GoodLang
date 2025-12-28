@@ -20,7 +20,7 @@ async function initCredentials() {
         const { token } = await callSignUpApi();
         localStorage.setItem("token", token);
 
-        emit("onFirstOpen", {});
+        //emit("onFirstOpen", {});
 
         return { token };
     })();
