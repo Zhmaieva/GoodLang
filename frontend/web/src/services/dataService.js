@@ -306,25 +306,22 @@ function levelsForRule(rule, LEVEL_RULES) {
  * @param {string|null} levelOpt - (optional) limit to a specific level; pass null/undefined to get ALL rules across levels.
  */
 export function getAllStatistics() {
-    const allAnswers = getAnswers(); // [{ rule, isCorrect, ts, ...}, ...]
-    // Build a comprehensive set of rule IDs
-    const set = new Set([
-        // from labels
-        ...Object.keys(RULE_LABELS || {}),
-        // from per-level mapping
-        ...allRulesFromLevels(LEVEL_RULES),
-        // from actual answer history
-        ...allAnswers.map(a => a.rule).filter(Boolean),
-    ]);
+    const allAnswers = getAnswers(); // [{ rule, isCorrect, date, ... }]
 
-    // If a level is specified, keep only rules that belong to that level
-    const ruleIds = [...set];
+    // 1️⃣ Canonical rule set (single source of truth)
+    const KNOWN_RULES = new Set(allRulesFromLevels(LEVEL_RULES));
 
-    // Helper: attempts per rule (optionally you could also filter by level if answers have level)
+    // 2️⃣ Filter answers to known rules only
+    const validAnswers = allAnswers.filter(
+        a => a && a.rule && KNOWN_RULES.has(a.rule)
+    );
+
+    // 3️⃣ Final list of rules to report on
+    const ruleIds = [...KNOWN_RULES];
+
     const attemptsForRule = (ruleId) =>
-        allAnswers.filter(a => a && a.rule === ruleId);
+        validAnswers.filter(a => a.rule === ruleId);
 
-    // Choose a primary level for display (if a rule belongs to many, take the first)
     const primaryLevelFor = (ruleId) => {
         const lvls = levelsForRule(ruleId, LEVEL_RULES);
         return lvls[0] || null;
@@ -334,35 +331,38 @@ export function getAllStatistics() {
     const MS7 = 7 * 24 * 60 * 60 * 1000;
 
     const attemptsLast7DaysForRule = (ruleId) =>
-        allAnswers.filter(a =>
+        validAnswers.filter(a =>
             a.rule === ruleId &&
             a.date &&
             now - new Date(a.date).getTime() <= MS7
         );
 
+    return ruleIds
+        .map((ruleId) => {
+            const attempts = attemptsForRule(ruleId);
+            const attemptsNumber = attempts.length;
+            const accuracy = averageAccuracyPercent(attempts);
+            const lastAttemptDate = latestDateISO(attempts);
 
-    return ruleIds.map((ruleId) => {
-        const attempts = attemptsForRule(ruleId);
-        const attemptsNumber = attempts.length;
-        const accuracy = averageAccuracyPercent(attempts);     // should return 0 if empty
-        const lastAttemptDate = latestDateISO(attempts);       // should return null if empty
+            const primaryLevel = primaryLevelFor(ruleId);
 
-        const primaryLevel = primaryLevelFor(ruleId);
-        const levelName = primaryLevel ?? "—";
-
-        return {
-            rule: ruleId,                                        // rule id
-            ruleName: RULE_LABELS?.[ruleId] || ruleId,           // human label
-            level: primaryLevel,                                  // level id (or null)
-            levelName,                                            // alias for display
-            accuracy,                                             // 0 if no records
-            attemptsNumber,
-            lastAttemptDate,
-            attemptsLast7Days: attemptsLast7DaysForRule(ruleId),
-            status: statusFor(accuracy, attemptsNumber),
-        };
-    }).sort((a, b) => String(a.ruleName).localeCompare(String(b.ruleName)));
+            return {
+                rule: ruleId,
+                ruleName: RULE_LABELS?.[ruleId] ?? ruleId,
+                level: primaryLevel,
+                levelName: primaryLevel ?? "—",
+                accuracy,
+                attemptsNumber,
+                lastAttemptDate,
+                attemptsLast7Days: attemptsLast7DaysForRule(ruleId),
+                status: statusFor(accuracy, attemptsNumber),
+            };
+        })
+        .sort((a, b) =>
+            String(a.ruleName).localeCompare(String(b.ruleName))
+        );
 }
+
 
 
 export function getOverallAccuracy() {
