@@ -87,6 +87,7 @@ export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPo
                             borderRadius: theme.radius,
                             padding: "10px 16px",
                             fontWeight: 800,
+                            fontSize: "1rem",
                             cursor: "pointer",
                             boxShadow: `2px 2px 0 ${theme.accentDark}`,
                         }}
@@ -103,6 +104,7 @@ export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPo
                             border: "none",
                             borderRadius: theme.radius,
                             padding: "10px 16px",
+                            fontSize: "1rem",
                             fontWeight: 800,
                             cursor: "pointer",
                             boxShadow: `2px 2px 0 ${theme.accentDark}`,

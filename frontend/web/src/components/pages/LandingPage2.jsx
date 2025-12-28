@@ -7,6 +7,7 @@ import {logInfo} from "../../services/logger.js";
 import {callSendPromoCodeApi} from "../../services/api.js";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
+import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -120,9 +121,10 @@ export default function GoodLangLandingTeaStyleThemed({
     const [sending, setSending] = useState(false);
     const [msg, setMsg] = useState("");
     const [pressedId, setPressedId] = useState(null);
-    const [faqVisible, setFaqVisible] = useState(false);
 
+    const [faqVisible, setFaqVisible] = useState(false);
     const [cookieOpen, setCookieOpen] = useState(false);
+    const [touOpen, setTouOpen] = useState(false);
 
     useEffect(() => {
         if (getCookieConsent()) return;
@@ -711,14 +713,22 @@ export default function GoodLangLandingTeaStyleThemed({
                     )}
                 </div>
 
-                {faqVisible && (
+                {faqVisible && !cookieOpen && (
                     <FaqModal
                         theme={theme}
                         onClose={() => setFaqVisible(false)}
                     />
                 )}
 
-                {cookieOpen && !faqVisible && (
+                {touOpen && (
+                    <TermsOfUseModal
+                        readOnly
+                        theme={theme}
+                        onClose={() => setTouOpen(false)}
+                    />
+                )}
+
+                {cookieOpen && !touOpen && (
                     <CookieConsentModal
                         theme={theme}
                         onAccept={() => {
@@ -734,7 +744,7 @@ export default function GoodLangLandingTeaStyleThemed({
                         onOpenPolicy={() => {
                             // reuse your existing Terms modal
                             // this keeps UX consistent
-                            setFaqVisible(true);
+                            setTouOpen(true);
                             // or open TermsOfUseModal if you prefer
                         }}
                     />
