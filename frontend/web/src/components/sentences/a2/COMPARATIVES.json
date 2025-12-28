@@ -41,7 +41,7 @@
       "en": ["He feels more confident than before."]
     },
     {
-      "rules": ["COMPARATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
       "ua": "Коли сонце зійде, день стане теплішим.",
       "en": ["When the sun rises, the day will become warmer."]
     },
@@ -186,7 +186,7 @@
       "en": ["She feels calmer than before."]
     },
     {
-      "rules": ["COMPARATIVES", "WHEN_PRESENT_FOR_FUTURE", "SIMPLE_ADJ"],
+      "rules": ["COMPARATIVES", "SIMPLE_ADJ"],
       "ua": "Коли настане літо, дні стануть теплішими.",
       "en": ["When summer comes, the days will become warmer."]
     },

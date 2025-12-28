@@ -1,13 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
-import { loadStripe } from "@stripe/stripe-js";
 import {callAccountInfoApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
-import {fmtDate} from "../pages/analyticsLogic.js";
 
-export const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+let stripeLoaded = null;
+export async function getStripe() {
+    if (stripeLoaded)
+        return stripeLoaded;
+
+    const { loadStripe } = await import("@stripe/stripe-js");
+    stripeLoaded = await loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+
+    return stripeLoaded;
+}
 
 export const logoStyle = (size) => ({
     flex: "0 0 auto",
@@ -88,7 +95,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                 return;
             }
 
-            const stripe = await stripePromise;
+            const stripe = await getStripe();
 
             const { clientSecret, isSuccess } = await callCheckoutApi();
             if (!isSuccess) {

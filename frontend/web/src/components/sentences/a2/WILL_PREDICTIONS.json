@@ -65,7 +65,7 @@
     ]
   },
   {
-    "rules": ["WILL_PREDICTIONS", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
+    "rules": ["WILL_PREDICTIONS", "PREP_TIME"],
     "ua": "Я думаю, що ми поїдемо, коли погода покращиться.",
     "en": [
       "I think we will go when the weather improves.",

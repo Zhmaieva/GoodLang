@@ -42,6 +42,8 @@ export async function getToken() {
 - ти можливо відчуєш запах кави у кухні - error?
 Ця вправа легка.
 
+https://api-goodlang.beampie.com/translations?rules=TOO_ENOUGH&seed=572328&skip=16
+
 - add a progress bar to the rule page
 - add ordering in the rules table
 - add email/number input type and enter

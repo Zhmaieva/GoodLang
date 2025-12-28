@@ -43,7 +43,7 @@
       "hint": "використовуй MUST / MUSTN'T"
     },
     {
-      "rules": ["MUST_MUSTNT", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"],
+      "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ми повинні закінчити роботу сьогодні ввечері.",
       "en": ["We must finish the work this evening."],
       "hint": "використовуй MUST / MUSTN'T"

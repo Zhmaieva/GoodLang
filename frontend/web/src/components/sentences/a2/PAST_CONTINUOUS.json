@@ -240,7 +240,7 @@
     ]
   },
   {
-    "rules": ["PAST_CONTINUOUS", "WHEN_PRESENT_FOR_FUTURE", "PREP_PLACE"],
+    "rules": ["PAST_CONTINUOUS", "PREP_PLACE"],
     "ua": "Ми сиділи в кафе, коли він прийшов.",
     "en": [
       "We were sitting in a café when he arrived.",

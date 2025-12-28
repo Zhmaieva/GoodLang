@@ -7,7 +7,7 @@ import {
     callVerifyCodeApi
 } from "../../services/api.js";
 import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import {logoStyle, stripePromise} from "./LimitModal.jsx";
+import {getStripe, logoStyle} from "./LimitModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import {logError} from "../../services/logger.js";
@@ -236,7 +236,7 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                 try {
                     setLoading(true);
 
-                    const stripe = await stripePromise;
+                    const stripe = await getStripe();
 
                     const { clientSecret, isSuccess } = await callCheckoutApi();
                     if (!isSuccess) {

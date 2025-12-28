@@ -226,7 +226,7 @@
       "en": ["They’ll join later, won’t they?"]
     },
     {
-      "rules": ["QUESTION_TAGS", "PRESENT_CONTINUOUS"],
+      "rules": ["QUESTION_TAGS", "PRESENT_CONT_NOW"],
       "ua": "Вона зараз працює, чи не так?",
       "en": ["She’s working now, isn’t she?"]
     },

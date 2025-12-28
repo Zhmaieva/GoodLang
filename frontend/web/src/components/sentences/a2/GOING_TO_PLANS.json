@@ -7,7 +7,7 @@
   { "rules": ["GOING_TO_PLANS"], "ua": "Він не збирається пити каву сьогодні.", "en": ["He’s not going to drink coffee today."] },
   { "rules": ["GOING_TO_PLANS", "PREP_TIME"], "ua": "Ти збираєшся піти в кіно ввечері?", "en": ["Are you going to go to the cinema this evening?"] },
   { "rules": ["GOING_TO_PLANS", "ARTICLES"], "ua": "Мої друзі збираються відвідати новий музей.", "en": ["My friends are going to visit a new museum."] },
-  { "rules": ["GOING_TO_PLANS", "WHEN_PRESENT_FOR_FUTURE", "PREP_TIME"], "ua": "Ми поїдемо в парк, коли закінчимо планувати поїздку.", "en": ["We’re going to go to the park when we finish planning the trip."] },
+  { "rules": ["GOING_TO_PLANS", "PREP_TIME"], "ua": "Ми поїдемо в парк, коли закінчимо планувати поїздку.", "en": ["We’re going to go to the park when we finish planning the trip."] },
   { "rules": ["GOING_TO_PLANS", "PREP_TIME", "DEMONSTRATIVES"], "ua": "Ці дівчата збираються піти на концерт наступного тижня.", "en": ["These girls are going to go to a concert next week."] },
   { "rules": ["GOING_TO_PLANS", "WH_Q"], "ua": "Що ти збираєшся приготувати на вечерю?", "en": ["What are you going to cook for dinner?"] },
   { "rules": ["GOING_TO_PLANS"], "ua": "Ви збираєтеся відвідати ярмарок завтра?", "en": ["Are you going to visit the fair tomorrow?"] },

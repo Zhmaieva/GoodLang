@@ -26,8 +26,8 @@ export function sendVerificationEmail(to, code) {
     const info = transporter.sendMail({
         from: `"GoodLang" <${process.env.SMTP_FROM}>`,
         to,
-        subject: "Перевірка імейлу в GoodLang",
-        text: `Твій код доступу до GoodLang: ${code}`,
+        subject: "Код логіну до GoodLang",
+        text: `Твій код логіну до GoodLang: ${code}`,
         html: `
         <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
   <tr>
@@ -100,7 +100,7 @@ export function sendPromoEmail(to) {
     return transporter.sendMail({
         from: `"GoodLang" <${process.env.SMTP_FROM}>`,
         to,
-        subject: "🎁 Твій промо-код для GoodLang",
+        subject: "Твій промо-код для GoodLang",
         text: `Твій промо-код: ${PROMO_CODE}\nАктивуй тут: ${SUBSCRIBE_URL}`,
         html: `
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
@@ -115,7 +115,7 @@ export function sendPromoEmail(to) {
               font-weight:800;
               color:#3a2a1d;
             ">
-              🎁 ${PROMO_CODE}
+              ${PROMO_CODE}
             </h2>
 
             <p style="
@@ -124,7 +124,7 @@ export function sendPromoEmail(to) {
               font-weight:500;
               color:#3a2a1d;
             ">
-              Це твій персональний промо-код для <strong>GoodLang</strong>
+              🎁 Це твій промо-код для <strong>GoodLang</strong>
             </p>
 
             <p style="

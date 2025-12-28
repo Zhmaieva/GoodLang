@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import {callAccountInfoApi, callCheckoutApi, callDataSyncApi, callVerifyCodeApi} from "../../services/api.js";
-import {logoStyle, stripePromise} from "./LimitModal.jsx";
+import {getStripe, logoStyle} from "./LimitModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import {logError} from "../../services/logger.js";
@@ -66,7 +66,7 @@ export default function TermsOfUseModal({
                 try {
                     setLoading(true);
 
-                    const stripe = await stripePromise;
+                    const stripe = await getStripe();
 
                     const { clientSecret, isSuccess } = await callCheckoutApi();
                     if (!isSuccess) {
@@ -339,7 +339,14 @@ export default function TermsOfUseModal({
                                 сервісу.
                             </p>
 
-                            <h3>7. Доступність сервісу та повернення коштів</h3>
+                            <h3>7. Політика cookies</h3>
+                            <p>
+                                Ми використовуємо виключно необхідні файли cookie для забезпечення безпечної автентифікації
+                                та обробки платежів.
+                                Ці файли cookie є необхідними для коректної роботи вебсайту і не можуть бути вимкнені.
+                            </p>
+
+                            <h3>8. Доступність сервісу та повернення коштів</h3>
                             <p>
                                 Ми не гарантуємо безперебійну або постійну доступність сервісу та не
                                 несемо відповідальності за тимчасову недоступність додатку.
@@ -351,14 +358,14 @@ export default function TermsOfUseModal({
                                 повний цикл оплати.
                             </p>
 
-                            <h3> 8. Обмеження відповідальності</h3>
+                            <h3>9. Обмеження відповідальності</h3>
                             <p>
                                 Сервіс надається «як є». Ми не гарантуємо досягнення конкретних результатів
                                 навчання та не несемо відповідальності за будь-які прямі або непрямі
                                 наслідки використання сервісу.
                             </p>
 
-                            <h3>9. Припинення надання послуг</h3>
+                            <h3>10. Припинення надання послуг</h3>
                             <p>
                                 Ми залишаємо за собою право припинити надання послуг у будь-який момент
                                 без пояснення причин.
@@ -370,14 +377,14 @@ export default function TermsOfUseModal({
                                 підставою для зупинення доступу до сервісу для конкретного користувача.
                             </p>
 
-                            <h3>10. Зміни умов користування</h3>
+                            <h3>11. Зміни умов користування</h3>
                             <p>
                                 Ми залишаємо за собою право змінювати ці умови користування. У разі
                                 суттєвих змін ми зобов’язуємося повідомити користувача електронною
                                 поштою, використовуючи імейл, вказаний під час реєстрації.
                             </p>
 
-                            <h3>11. Контактна інформація</h3>
+                            <h3>12. Контактна інформація</h3>
                             <p style={{marginBottom: 0}}>
                                 Уся офіційна комунікація з питань використання сервісу здійснюється
                                 електронною поштою:

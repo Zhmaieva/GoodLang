@@ -25802,7 +25802,6 @@ export const ALL_RULES_SAMPLES = {
             {
                 "rules": [
                     "COMPARATIVES",
-                    "WHEN_PRESENT_FOR_FUTURE",
                     "SIMPLE_ADJ"
                 ],
                 "ua": "Коли сонце зійде, день стане теплішим.",
@@ -26106,7 +26105,6 @@ export const ALL_RULES_SAMPLES = {
             {
                 "rules": [
                     "COMPARATIVES",
-                    "WHEN_PRESENT_FOR_FUTURE",
                     "SIMPLE_ADJ"
                 ],
                 "ua": "Коли настане літо, дні стануть теплішими.",
@@ -27641,7 +27639,6 @@ export const ALL_RULES_SAMPLES = {
             {
                 "rules": [
                     "GOING_TO_PLANS",
-                    "WHEN_PRESENT_FOR_FUTURE",
                     "PREP_TIME"
                 ],
                 "ua": "Ми поїдемо в парк, коли закінчимо планувати поїздку.",
@@ -31071,7 +31068,6 @@ export const ALL_RULES_SAMPLES = {
             {
                 "rules": [
                     "MUST_MUSTNT",
-                    "WHEN_PRESENT_FOR_FUTURE",
                     "PREP_TIME"
                 ],
                 "ua": "Ми повинні закінчити роботу сьогодні ввечері.",
@@ -31996,7 +31992,6 @@ export const ALL_RULES_SAMPLES = {
             {
                 "rules": [
                     "PAST_CONTINUOUS",
-                    "WHEN_PRESENT_FOR_FUTURE",
                     "PREP_PLACE"
                 ],
                 "ua": "Ми сиділи в кафе, коли він прийшов.",
@@ -37523,7 +37518,6 @@ export const ALL_RULES_SAMPLES = {
             {
                 "rules": [
                     "WILL_PREDICTIONS",
-                    "WHEN_PRESENT_FOR_FUTURE",
                     "PREP_TIME"
                 ],
                 "ua": "Я думаю, що ми поїдемо, коли погода покращиться.",
@@ -53359,7 +53353,7 @@ export const ALL_RULES_SAMPLES = {
             {
                 "rules": [
                     "QUESTION_TAGS",
-                    "PRESENT_CONTINUOUS"
+                    "PRESENT_CONT_NOW"
                 ],
                 "ua": "Вона зараз працює, чи не так?",
                 "en": [

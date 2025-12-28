@@ -509,45 +509,6 @@ export const RULE_PAGE_PRESENT_SIMPLE_FREQ = {
 };
 ``
 
-export const RULE_PAGE_NEGATION_DONT_DOESNT = {
-    id: "NEGATION_DONT_DOESNT",
-    title: "Negation with don’t / doesn’t",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що це",
-            html: "Для утворення заперечення в Present Simple використовуємо <strong>do not / don't</strong> або <strong>does not / doesn't</strong>."
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
-            badges: [
-                "I/You/We/They + don't + V",
-                "He/She/It + doesn't + V"
-            ],
-            hint: "В основному дієслові повертається форма без -s після допоміжного don't/doesn't."
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["I don't like coffee.", "Мені не подобається кава."],
-                ["She doesn't work on Sundays.", "Вона не працює по неділях."]
-            ]
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: [
-                "❌ <em>He don't</em> → ✅ <strong>He doesn't</strong>.",
-                "❌ <em>She doesn't likes</em> → ✅ <strong>She doesn't like</strong>."
-            ]
-        },
-        { type: "trainer", title: "Міні-тренажер (Negation with don't/doesn't)" }
-    ]
-};
-
 export const RULE_PAGE_YES_NO_Q = {
     id: "YES_NO_Q",
     title: "Yes/No questions",
@@ -691,38 +652,6 @@ export const RULE_PAGE_CAN_CANT = {
                 "❌ <em>He cans drive.</em> → ✅ <strong>He can drive.</strong>"
             ]},
         { type: "trainer", title: "Міні-тренажер (Can / can't)" }
-    ]
-};
-
-export const RULE_PAGE_THERE_ISNT_ARENT_ANY = {
-    id: "THERE_ISNT_ARENT_ANY",
-    title: "There isn’t / aren’t any",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Що це",
-            html: "Заперечні форми 'there isn't' / 'there aren't' або 'there are no' для відсутності чогось."
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
-            badges: [
-                "Заперечення однини: <strong>There isn't a shop.</strong>",
-                "Заперечення множини: <strong>There aren't any eggs.</strong>",
-                "Або: <strong>There are no problems.</strong>"
-            ],
-            hint: "'any' часто використовується в запитаннях і запереченнях."
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["There aren't any bananas.", "Бананів немає."],
-                ["There is no milk in the fridge.", "У холодильнику немає молока."]
-            ]
-        },
-        { type: "trainer", title: "Міні-тренажер (There isn't / aren't any)" }
     ]
 };
 
@@ -2366,72 +2295,6 @@ export const RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY = {
         {
             type: "trainer",
             title: "Міні-тренажер (Quantifiers)",
-        },
-    ],
-};
-
-export const RULE_PAGE_FUTURE_WITH_PRESENT_CONT = {
-    id: "FUTURE_WITH_PRESENT_CONT",
-    title: "Future with Present Continuous (arrangements)",
-    subtitle: "Вивчення правила",
-    sections: [
-        {
-            type: "meaning",
-            title: "Майбутнє через Present Continuous",
-            html:
-                "Форму <strong>Present Continuous</strong> (<em>am/is/are + V-ing</em>) можна використовувати для <em>майбутніх планів</em>, " +
-                "якщо це вже <strong>точні домовленості</strong> (arrangements).",
-        },
-        {
-            type: "usage",
-            title: "Коли так говорити про майбутнє",
-            badges: [
-                "📅 Особисті плани: <strong>I’m meeting my friend tomorrow.</strong>",
-                "🚂 Розклад, якщо це «моя» організована подія: <strong>We’re leaving at 6.</strong>",
-                "👥 Домовленість з кимось: <strong>She’s having dinner with her parents on Sunday.</strong>",
-            ],
-            hint:
-                "Часто є конкретний час/дата: <strong>this evening, on Monday, at 7 o’clock</strong>.",
-        },
-        {
-            type: "forms",
-            title: "Структура",
-            headers: ["Особа", "Ствердження", "Заперечення", "Питання", "Примітка"],
-            rows: [
-                [
-                    "Усі особи",
-                    "am/is/are + V-ing + future time",
-                    "am/is/are not + V-ing",
-                    "Am/Is/Are + підмет + V-ing?",
-                    "the train is leaving at 9",
-                ],
-            ],
-            hint:
-                "Зовні це звичайний Present Continuous, але контекст (future time) робить його «майбутнім».",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["I’m flying to London next week.", "Я лечу до Лондона наступного тижня."],
-                ["We’re having a party on Friday.", "У нас вечірка в п’ятницю."],
-                ["Are you meeting him tomorrow?", "Ти зустрічаєшся з ним завтра?"],
-                ["She isn’t working this weekend.", "Вона не працює цього вікенду."],
-            ],
-        },
-        {
-            type: "mistakes",
-            title: "Типові помилки",
-            bullets: [
-                "❌ <em>I meet my friend tomorrow</em> (як звичка) → краще ✅ <strong>I’m meeting my friend tomorrow</strong>.",
-                "❌ Забувати час → речення може звучати як теперішній момент.",
-            ],
-            note:
-                "Завжди додавай <strong>future time</strong> (tomorrow, next week…), щоб було зрозуміло, що це про майбутнє.",
-        },
-        {
-            type: "trainer",
-            title: "Міні-тренажер (Future with Present Continuous)",
         },
     ],
 };
