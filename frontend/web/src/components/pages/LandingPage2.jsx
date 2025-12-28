@@ -3,11 +3,13 @@ import FooterBar from "../FooterBar.jsx";
 import {PrimaryButton} from "../Buttons.jsx";
 import FaqModal from "../subscription/FaqModal.jsx";
 import {useNavigate} from "react-router-dom";
-import {logInfo} from "../../services/logger.js";
 import {callSendPromoCodeApi} from "../../services/api.js";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
+import {loadGA} from "../../services/gaService.js";
+
+const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -733,6 +735,7 @@ export default function GoodLangLandingTeaStyleThemed({
                         theme={theme}
                         onAccept={() => {
                             acceptCookies();
+                            loadGA(GA_ID);
                             setCookieOpen(false);
                             // ⬇️ load analytics here if you use them
                             // loadGoogleAnalytics();
