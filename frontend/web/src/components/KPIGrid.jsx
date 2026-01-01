@@ -77,7 +77,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
             <div style={cardStyle}>
                 <div style={labelStyle}>Вивчені правила</div>
                 <div style={valueStyle}>{masteredRules ?? 0}</div>
-                <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, ((masteredRules ?? 0) / 90) * 100))} /></div>
+                <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, ((masteredRules ?? 0) / 91) * 100))} /></div>
             </div>
             <LevelKpi mobile={isMobile} theme={theme} />
         </section>

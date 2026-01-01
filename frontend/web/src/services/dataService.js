@@ -398,7 +398,7 @@ export function getOverallAccuracy() {
     const levelAcc = accOf(curLvl); // 0..100
 
     const BANDS = {
-        a1: { low: 0,  cap: 30 },
+        a1: { low: 0, cap: 30 },
         a2: { low: 30, cap: 55 },
         b1: { low: 55, cap: 80 },
         b2: { low: 80, cap: 100 },
@@ -413,11 +413,7 @@ export function getOverallAccuracy() {
     // ✅ (5) within-band contribution uses ONLY 75% of band width
     const effectiveWidth = bandWidth * 0.75;
 
-    if (curLvl === "a1") {
-        bandAcc += clamp01(levelAcc / 100) * effectiveWidth;
-    } else {
-        bandAcc += clamp01(Math.max(0, levelAcc - 75) / 25) * effectiveWidth;
-    }
+    bandAcc += clamp01(levelAcc / 100) * effectiveWidth;
 
     // (6) pull from higher levels
     const ABOVE = {
@@ -428,26 +424,24 @@ export function getOverallAccuracy() {
     };
 
     for (const lvlAbove of ABOVE[curLvl] ?? []) {
-        const diff = band.cap - bandAcc;
-        if (diff <= 0) break;
+        const band = BANDS[lvlAbove];
+        const bandWidth = band.cap - band.low;
+        const effectiveWidth = bandWidth * 0.75;
 
-        bandAcc += clamp01(accOf(lvlAbove, true) / 100) * diff;
+        const acc = accOf(lvlAbove, true);
+        bandAcc += clamp01(acc / 100) * effectiveWidth;
     }
 
     // (3) enforce band limits
-    bandAcc =
-        curLvl === "a1"
-            ? Math.min(bandAcc, band.cap - 0.0001)
-            : Math.min(bandAcc, band.cap);
+    bandAcc = Math.min(bandAcc, 100);
 
     bandAcc = Math.max(band.low, bandAcc);
 
     return {
         attemptsLeft: 0,
-        accuracy: Math.round(bandAcc * 100) / 100
+        accuracy: Math.round(bandAcc * 100) / 100,
     };
 }
-
 
 // Count of all answers
 export function getAllAnswersCount() {
