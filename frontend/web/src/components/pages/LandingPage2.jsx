@@ -41,12 +41,12 @@ export default function GoodLangLandingTeaStyleThemed({
                                                               { id: "join", label: "Приєднатися" },
                                                           ],
 
-                                                          heroLines = ["тренажер", "англійської", "який виправляє", "помилки"],
-                                                          heroAccentWord = "швидко",
+                                                          heroLines = ["Почни", "розмовляти", "англійською"],
+                                                          heroAccentWord = "правильно",
                                                           heroBadge = "безкоштовно",
 
-                                                          communityCount = "1058 речень перекладено",
-                                                          subStat = "192 правила засвоєно",
+                                                          communityCount = "1142 речення перекладено",
+                                                          subStat = "209 правил засвоєно",
 
                                                           useTitle = `ВИКОРИСТОВУЙ ${brand.toUpperCase()}, ЩОБ`,
                                                           hashtags = [
@@ -254,7 +254,6 @@ export default function GoodLangLandingTeaStyleThemed({
             heroMetaRow: {
                 marginTop: 14,
                 paddingTop: 14,
-                borderTop: `2px solid ${theme.accent}`,
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "flex-end",
@@ -291,7 +290,8 @@ export default function GoodLangLandingTeaStyleThemed({
                 boxShadow: `3px 3px 0 ${theme.greenDark}`,
                 transform: pressed ? "translateY(1px)" : "none",
             }),
-            ctaRow: { display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 },
+            ctaRow: {                 borderTop: `2px solid ${theme.accent}`, paddingTop: "1rem",
+                display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 },
 
             // Screens
             screensRow: {
@@ -564,14 +564,6 @@ export default function GoodLangLandingTeaStyleThemed({
                             ))}
                         </div>
 
-                        <div style={styles.heroMetaRow}>
-                            <div>
-                                <div style={styles.stat}>{communityCount}</div>
-                                <div style={styles.statSmall}>{subStat}</div>
-                            </div>
-                            {/*<div style={styles.freeBadge}>{heroBadge}</div>*/}
-                        </div>
-
                         <div style={styles.ctaRow}>
                             <button
                                 type="button"
@@ -590,6 +582,14 @@ export default function GoodLangLandingTeaStyleThemed({
                             >
                                 {secondaryCtaText}
                             </button>
+                        </div>
+
+                        <div style={styles.heroMetaRow}>
+                            <div>
+                                <div style={styles.stat}>{communityCount}</div>
+                                <div style={styles.statSmall}>{subStat}</div>
+                            </div>
+                            {/*<div style={styles.freeBadge}>{heroBadge}</div>*/}
                         </div>
 
                         <div style={{marginTop: 10, color: theme.text, opacity: 0.5, fontWeight: 600}}>
