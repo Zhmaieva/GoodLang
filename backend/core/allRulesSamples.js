@@ -2709,7 +2709,7 @@ export const ALL_RULES_SAMPLES = {
                 ],
                 "ua": "Ти можеш розмовляти спокійніше?",
                 "en": [
-                    "Can you talk more calmly?"
+                    "Can you talk more calmly?", "Can you speak more calmly?"
                 ]
             },
             {

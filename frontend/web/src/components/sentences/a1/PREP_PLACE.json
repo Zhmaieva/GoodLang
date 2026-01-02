@@ -2,471 +2,388 @@
   "PREP_PLACE": [
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Книга (лежить) на столі.",
-      "en": ["The book is on the table."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Книга на столі.",
+      "en": ["The book is on the table."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кіт (сидить) під стільцем.",
-      "en": ["The cat is under the chair."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Кіт під стільцем.",
+      "en": ["The cat is under the chair."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Ключі (лежать) у сумці.",
-      "en": ["The keys are in the bag."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Ключі у сумці.",
+      "en": ["The keys are in the bag."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Магазин (знаходиться поруч, але не впритул) біля мого будинку.",
-      "en": ["The shop is near my house."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Магазин біля мого будинку.",
+      "en": ["The shop is near my house."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Телевізор (стоїть) перед диваном.",
-      "en": ["The TV is in front of the sofa."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Телевізор перед диваном.",
+      "en": ["The TV is in front of the sofa."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Лампа (знаходиться безпосередньо, майже впритул) біля ліжка.",
-      "en": ["The lamp is next to the bed."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Лампа біля ліжка.",
+      "en": ["The lamp is next to the bed."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Взуття (лежить) під ліжком.",
-      "en": ["The shoes are under the bed."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Взуття під ліжком.",
+      "en": ["The shoes are under the bed."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Картина (висить) на стіні.",
-      "en": ["The picture is on the wall."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Картина на стіні.",
+      "en": ["The picture is on the wall."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Холодильник (стоїть) на кухні.",
-      "en": ["The fridge is in the kitchen."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Холодильник на кухні.",
+      "en": ["The fridge is in the kitchen."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Зупинка (знаходиться) навпроти школи.",
-      "en": ["The bus stop is across from the school."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кіт (сидить) за диваном.",
-      "en": ["The cat is behind the sofa."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Зупинка навпроти школи.",
+      "en": ["The bus stop is across from the school."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Телефон (лежить) на столі.",
-      "en": ["The phone is on the desk."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Кіт за диваном.",
+      "en": ["The cat is behind the sofa."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Собака (знаходиться) в саду.",
-      "en": ["The dog is in the garden."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Телефон на столі.",
+      "en": ["The phone is on the desk."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кафе (знаходиться поруч, але не прямо) біля парку.",
-      "en": ["The café is near the park."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Собака в саду.",
+      "en": ["The dog is in the garden."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Дзеркало (висить) над раковиною.",
-      "en": ["The mirror is above the sink."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Кафе біля парку.",
+      "en": ["The café is near the park."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Килим (лежить) на підлозі.",
-      "en": ["The carpet is on the floor."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Дзеркало над раковиною.",
+      "en": ["The mirror is above the sink."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Куртка (лежить) на стільці.",
-      "en": ["The jacket is on the chair."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Килим на підлозі.",
+      "en": ["The carpet is on the floor."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Машина (стоїть) перед будинком.",
-      "en": ["The car is in front of the house."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Куртка на стільці.",
+      "en": ["The jacket is on the chair."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Магазин (знаходиться безпосередньо, майже впритул) поруч із банком.",
-      "en": ["The shop is next to the bank."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Машина перед будинком.",
+      "en": ["The car is in front of the house."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Дитина (стоїть) за дверима.",
-      "en": ["The child is behind the door."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Магазин поруч із банком.",
+      "en": ["The shop is next to the bank."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Тарілки (стоять) у шафці.",
-      "en": ["The plates are in the cupboard."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Дитина за дверима.",
+      "en": ["The child is behind the door."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Годинник (висить) на стіні.",
-      "en": ["The clock is on the wall."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Тарілки у шафці.",
+      "en": ["The plates are in the cupboard."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "М’яч (лежить) під столом.",
-      "en": ["The ball is under the table."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Годинник на стіні.",
+      "en": ["The clock is on the wall."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Стілець (стоїть поруч, але не впритул) біля вікна.",
-      "en": ["The chair is near the window."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "М’яч під столом.",
+      "en": ["The ball is under the table."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Взуття (стоїть) біля дверей.",
-      "en": ["The shoes are by the door."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Стілець біля вікна.",
+      "en": ["The chair is near the window."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Квіти (стоять) на полиці.",
-      "en": ["The flowers are on the shelf."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Взуття біля дверей.",
+      "en": ["The shoes are by the door."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кіт (сидить) у коробці.",
-      "en": ["The cat is in the box."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Квіти на полиці.",
+      "en": ["The flowers are on the shelf."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Кіт у коробці.",
+      "en": ["The cat is in the box."]
     },
     {
       "rules": ["PREP_PLACE"],
-      "ua": "Туалет (знаходиться) далі по коридору.",
-      "en": ["The toilet is down the hall."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Туалет далі по коридору.",
+      "en": ["The toilet is down the hall."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Сумка (лежить) на підлозі.",
-      "en": ["The bag is on the floor."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-
-    {
-      "rules": ["PREP_PLACE"],
-      "ua": "Магазин (знаходиться) за рогом.",
-      "en": ["The shop is around the corner."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Сумка на підлозі.",
+      "en": ["The bag is on the floor."]
     },
     {
       "rules": ["PREP_PLACE"],
-      "ua": "Машина (стоїть) між двома деревами.",
-      "en": ["The car is between two trees."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Магазин за рогом.",
+      "en": ["The shop is around the corner."]
     },
     {
       "rules": ["PREP_PLACE"],
-      "ua": "Телефон (лежить) у моїй кишені.",
-      "en": ["The phone is in my pocket."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Собака (стоїть) біля дверей.",
-      "en": ["The dog is at the door."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Рушник (лежить) на ліжку.",
-      "en": ["The towel is on the bed."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Немовля (знаходиться) в кімнаті.",
-      "en": ["The baby is in the room."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Машина між двома деревами.",
+      "en": ["The car is between two trees."]
     },
     {
       "rules": ["PREP_PLACE"],
-      "ua": "Взуття (лежить) під лавкою.",
-      "en": ["The shoes are under the bench."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Телефон у моїй кишені.",
+      "en": ["The phone is in my pocket."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Банк (знаходиться) навпроти готелю.",
-      "en": ["The bank is across from the hotel."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Собака біля дверей.",
+      "en": ["The dog is at the door."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Рушник на ліжку.",
+      "en": ["The towel is on the bed."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Немовля в кімнаті.",
+      "en": ["The baby is in the room."]
     },
     {
       "rules": ["PREP_PLACE"],
-      "ua": "Книга (лежить поруч, але не прямо) біля краю.",
-      "en": ["The book is near the edge."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Взуття під лавкою.",
+      "en": ["The shoes are under the bench."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Тарілка (лежить) у мийці.",
-      "en": ["The plate is in the sink."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Велосипед (стоїть) за гаражем.",
-      "en": ["The bike is behind the garage."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Магазин (знаходиться безпосередньо, майже впритул) поруч із кафе.",
-      "en": ["The store is next to the cafe."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Ключі (лежать) на полиці.",
-      "en": ["The keys are on the shelf."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кіт (сидить) перед телевізором.",
-      "en": ["The cat is in front of the TV."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Пляшка (стоїть) на столі.",
-      "en": ["The bottle is on the table."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Взуття (стоїть) біля стіни.",
-      "en": ["The shoes are by the wall."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Банк навпроти готелю.",
+      "en": ["The bank is across from the hotel."]
     },
     {
       "rules": ["PREP_PLACE"],
-      "ua": "Парк (знаходиться поруч, але не прямо) біля мого офісу.",
-      "en": ["The park is near my office."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Книга біля краю.",
+      "en": ["The book is near the edge."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Сумка (лежить) під письмовим столом.",
-      "en": ["The bag is under the desk."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Тарілка у мийці.",
+      "en": ["The plate is in the sink."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Вивіска (висить) над дверима.",
-      "en": ["The sign is above the door."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Велосипед за гаражем.",
+      "en": ["The bike is behind the garage."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Ручка (знаходиться) в моїй руці.",
-      "en": ["The pen is in my hand."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Магазин поруч із кафе.",
+      "en": ["The store is next to the cafe."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Собака (сидить) у машині.",
-      "en": ["The dog is in the car."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Ключі на полиці.",
+      "en": ["The keys are on the shelf."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Квіти (стоять) на балконі.",
-      "en": ["The flowers are on the balcony."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Кіт перед телевізором.",
+      "en": ["The cat is in front of the TV."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Стілець (стоїть) у кутку.",
-      "en": ["The chair is in the corner."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Пляшка на столі.",
+      "en": ["The bottle is on the table."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Ключі (лежать) на кухонному столі.",
-      "en": ["The keys are on the kitchen table."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Взуття біля стіни.",
+      "en": ["The shoes are by the wall."]
     },
-
     {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Дитина (сидить) між своїми батьками.",
-      "en": ["The child is between his parents."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "rules": ["PREP_PLACE"],
+      "ua": "Парк біля мого офісу.",
+      "en": ["The park is near my office."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Шкарпетки (лежать) у шухляді.",
-      "en": ["The socks are in the drawer."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Сумка під письмовим столом.",
+      "en": ["The bag is under the desk."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Дзеркало (висить) на дверях.",
-      "en": ["The mirror is on the door."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Вивіска над дверима.",
+      "en": ["The sign is above the door."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Собака (знаходиться) надворі біля будинку.",
-      "en": ["The dog is outside the house."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Ручка в моїй руці.",
+      "en": ["The pen is in my hand."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Ресторан (знаходиться поруч, але не прямо) біля річки.",
-      "en": ["The restaurant is near the river."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Собака у машині.",
+      "en": ["The dog is in the car."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Телефон (стоїть) на зарядці.",
-      "en": ["The phone is on the charger."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Квіти на балконі.",
+      "en": ["The flowers are on the balcony."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Магазин (знаходиться) навпроти школи.",
-      "en": ["The shop is opposite the school."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Стілець у кутку.",
+      "en": ["The chair is in the corner."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Книги (стоять) на полиці.",
-      "en": ["The books are on the shelf."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Ключі на кухонному столі.",
+      "en": ["The keys are on the kitchen table."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кава (стоїть) на столі.",
-      "en": ["The coffee is on the desk."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Дитина між своїми батьками.",
+      "en": ["The child is between his parents."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Пульт (лежить) між подушками.",
-      "en": ["The remote is between the cushions."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Шкарпетки у шухляді.",
+      "en": ["The socks are in the drawer."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Картина (висить) над каміном.",
-      "en": ["The painting is above the fireplace."],
-      "hint": "текст у круглих дужках не потребує перекладу"
-    },
-
-    {
-      "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Машина (стоїть) на парковці.",
-      "en": ["The car is in the parking lot."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Дзеркало на дверях.",
+      "en": ["The mirror is on the door."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кіт (лежить) під ковдрою.",
-      "en": ["The cat is under the blanket."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Собака надворі біля будинку.",
+      "en": ["The dog is outside the house."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Ванна (стоїть) у ванній кімнаті.",
-      "en": ["The bath is in the bathroom."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Ресторан біля річки.",
+      "en": ["The restaurant is near the river."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Взуття (стоїть) біля входу.",
-      "en": ["The shoes are at the entrance."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Телефон на зарядці.",
+      "en": ["The phone is on the charger."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Автовокзал (знаходиться безпосередньо, майже впритул) поруч із торговим центром.",
-      "en": ["The bus station is next to the mall."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Магазин навпроти школи.",
+      "en": ["The shop is opposite the school."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Немовля (знаходиться) на підлозі.",
-      "en": ["The baby is on the floor."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Книги на полиці.",
+      "en": ["The books are on the shelf."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Гаманець (лежить) у моєму рюкзаку.",
-      "en": ["The wallet is in my backpack."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Кава на столі.",
+      "en": ["The coffee is on the desk."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Дерево (росте) перед будинком.",
-      "en": ["The tree is in front of the house."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Пульт між подушками.",
+      "en": ["The remote is between the cushions."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Пташка (сидить) на даху.",
-      "en": ["The bird is on the roof."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Картина над каміном.",
+      "en": ["The painting is above the fireplace."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Магазин (знаходиться поруч, але не впритул) біля автобусної зупинки.",
-      "en": ["The shop is near the bus stop."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Машина на парковці.",
+      "en": ["The car is in the parking lot."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кіт (сидить) між двома коробками.",
-      "en": ["The cat is between two boxes."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Кіт під ковдрою.",
+      "en": ["The cat is under the blanket."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Молоко (стоїть) у холодильнику.",
-      "en": ["The milk is in the fridge."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Ванна у ванній кімнаті.",
+      "en": ["The bath is in the bathroom."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Рушник (лежить) на стільці.",
-      "en": ["The towel is on the chair."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Взуття біля входу.",
+      "en": ["The shoes are at the entrance."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Автовокзал поруч із торговим центром.",
+      "en": ["The bus station is next to the mall."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Немовля на підлозі.",
+      "en": ["The baby is on the floor."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Гаманець у моєму рюкзаку.",
+      "en": ["The wallet is in my backpack."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Дерево перед будинком.",
+      "en": ["The tree is in front of the house."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Пташка на даху.",
+      "en": ["The bird is on the roof."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Магазин біля автобусної зупинки.",
+      "en": ["The shop is near the bus stop."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Кіт між двома коробками.",
+      "en": ["The cat is between two boxes."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Молоко у холодильнику.",
+      "en": ["The milk is in the fridge."]
+    },
+    {
+      "rules": ["PREP_PLACE", "ARTICLES"],
+      "ua": "Рушник на стільці.",
+      "en": ["The towel is on the chair."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
@@ -475,75 +392,63 @@
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Машина (стоїть) за магазином.",
-      "en": ["The car is behind the store."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Машина за магазином.",
+      "en": ["The car is behind the store."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Ключі (лежать) у моїй куртці.",
-      "en": ["The keys are in my jacket."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Ключі у моїй куртці.",
+      "en": ["The keys are in my jacket."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Собака (знаходиться) поруч зі мною.",
-      "en": ["The dog is by my side."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Собака поруч зі мною.",
+      "en": ["The dog is by my side."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Картина (висить) на стіні.",
-      "en": ["The painting is on the wall."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Картина на стіні.",
+      "en": ["The painting is on the wall."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Діти (знаходяться) в класі.",
-      "en": ["The children are in the classroom."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Діти в класі.",
+      "en": ["The children are in the classroom."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Меню (лежить) на столі.",
-      "en": ["The menu is on the table."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Меню на столі.",
+      "en": ["The menu is on the table."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Стілець (стоїть поруч, але не впритул) біля вікна.",
-      "en": ["The chair is near the window."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Стілець біля вікна.",
+      "en": ["The chair is near the window."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Лампа (висить) над столом.",
-      "en": ["The lamp is above the desk."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Лампа над столом.",
+      "en": ["The lamp is above the desk."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Взуття (стоїть) перед дверима.",
-      "en": ["The shoes are in front of the door."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Взуття перед дверима.",
+      "en": ["The shoes are in front of the door."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Мило (знаходиться) у ванній кімнаті.",
-      "en": ["The soap is in the bathroom."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Мило у ванній кімнаті.",
+      "en": ["The soap is in the bathroom."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Магазин (знаходиться) навпроти мого будинку.",
-      "en": ["The store is across from my house."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Магазин навпроти мого будинку.",
+      "en": ["The store is across from my house."]
     },
     {
       "rules": ["PREP_PLACE", "ARTICLES"],
-      "ua": "Кіт (лежить) на дивані.",
-      "en": ["The cat is on the sofa."],
-      "hint": "текст у круглих дужках не потребує перекладу"
+      "ua": "Кіт на дивані.",
+      "en": ["The cat is on the sofa."]
     }
   ]
 }
