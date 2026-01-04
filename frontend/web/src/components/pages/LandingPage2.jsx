@@ -7,9 +7,7 @@ import {callSendPromoCodeApi} from "../../services/api.js";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
-import {loadGA} from "../../services/gaService.js";
-
-const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+import {ensureAnalytics, trackPageView} from "../../services/gaService.js";
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -735,10 +733,10 @@ export default function GoodLangLandingTeaStyleThemed({
                         theme={theme}
                         onAccept={() => {
                             acceptCookies();
-                            loadGA(GA_ID);
+                            ensureAnalytics();
+                            trackPageView(window.location.pathname);
+
                             setCookieOpen(false);
-                            // ⬇️ load analytics here if you use them
-                            // loadGoogleAnalytics();
                         }}
                         onReject={() => {
                             rejectCookies();

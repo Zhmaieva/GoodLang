@@ -1,13 +1,14 @@
 import TaskCard from "./TaskCard.jsx";
 import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
-import {addAnswer, getAllStatistics, getSeed, saveSeed} from "../../services/dataService.js";
+import {addAnswer, getAllStatistics, getOverallAccuracy, getSeed, saveSeed} from "../../services/dataService.js";
 import {callAccountInfoApi, callTranslateAPI} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import {getTrainingLevel} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
 import {logInfo} from "../../services/logger.js";
+import {trackMetaCustomEvent} from "../../services/gaService.js";
 
 export default function Trainer({
                                     theme,
@@ -235,19 +236,16 @@ export default function Trainer({
             let nextWeakRules = [];
             if (!data.isAnswerCorrect)
                 nextWeakRules = rules.map(r => r);
-            // if (Array.isArray(data.scores)) {
-            //     data.scores.forEach(s => {
-            //         const index = data.scores.indexOf(s);
-            //         if (s < 1 && (rules.length - 1 >= index)) {
-            //             nextWeakRules.push(rules[index]);
-            //         }
-            //     });
-            // }
+
             const uniqueWeakRules = [...new Set(nextWeakRules)];
 
             setWeakRules(uniqueWeakRules);
 
+            const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
             addAnswer(data.scores, rules, data.level);
+            const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
+            if (prevAttemptsLeft === 1 && newAttemptsLeft === 0)
+                trackMetaCustomEvent("CompleteEvaluation");
 
             if (data.isAnswerCorrect) {
                 setHint("✔ Правильно!");

@@ -4,6 +4,7 @@ import {getStripe, logoStyle} from "./LimitModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import {logError} from "../../services/logger.js";
+import {trackMetaEvent} from "../../services/gaService.js";
 
 export default function TermsOfUseModal({
                                             theme,
@@ -92,6 +93,8 @@ export default function TermsOfUseModal({
                 }
                 return;
             }
+
+            trackMetaEvent("CompleteRegistration");
 
             window.location.reload();
             onClose();

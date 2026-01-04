@@ -92,7 +92,7 @@ export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPo
                             boxShadow: `2px 2px 0 ${theme.accentDark}`,
                         }}
                     >
-                        Відхилити
+                        Прийняти необхідні
                     </button>
 
                     <button

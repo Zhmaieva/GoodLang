@@ -113,10 +113,8 @@ import {
 } from "./services/rulePages.js";
 import GoodLangLandingTeaStyle from "./components/pages/LandingPage2.jsx";
 import {off, on} from "./services/events.js";
-import {ensureGA} from "./services/gaService.js";
-import {getCookieConsent} from "./services/settingsService.js";
-
-const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+import {ensureAnalytics} from "./services/gaService.js";
+import GaRouteTracker from "./components/routing/GaRouteTracker.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -157,7 +155,7 @@ export default function App() {
     }
 
     useEffect(() => {
-        ensureGA(GA_ID, getCookieConsent()); // ✅ init on refresh if accepted
+        ensureAnalytics(); // ✅ init on refresh if accepted
 
         on("onFirstOpen", goToLanding);
 
@@ -168,6 +166,7 @@ export default function App() {
 
     return (
         <section>
+            <GaRouteTracker />
             <SyncOnRouteChange />
             <Routes>
                 {/* Core pages */}
