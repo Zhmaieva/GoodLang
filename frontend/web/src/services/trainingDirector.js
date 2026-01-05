@@ -42,7 +42,7 @@ export function getTrainingLevel() {
 
     const overall = getOverallAccuracy();
 
-    // --- CALIBRATION MODE: total scores < 40 ---
+    // --- CALIBRATION MODE ---
     if (overall.attemptsLeft > 0) {
         let levelIdx = 0; // start at A1
 
@@ -53,7 +53,7 @@ export function getTrainingLevel() {
             if (!lvlStats || lvlStats.attempts === 0) break;
 
             // Move UP if accuracy >75%
-            if (lvlStats.accuracy >= 75) {
+            if (lvlStats.accuracy >= 60) {
                 if (levelIdx < CEFR_ORDER.length - 1) levelIdx++;
                 else  {
                     logInfo(`CALIBRATION ${lvl}: ${lvlStats.accuracy}%`);
@@ -61,7 +61,7 @@ export function getTrainingLevel() {
                 }
             }
             // Move DOWN if accuracy <75% and not already at A1
-            else if (((lvlStats.accuracy < 75 && lvlStats.attempts > 6) || (lvlStats.accuracy < 25 && lvlStats.attempts > 1)) && levelIdx > 0) {
+            else if (((lvlStats.accuracy < 60 && lvlStats.attempts > 6) || (lvlStats.accuracy < 25 && lvlStats.attempts > 1)) && levelIdx > 0) {
                 levelIdx--;
                 break;
             }

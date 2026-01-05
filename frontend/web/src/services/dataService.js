@@ -490,13 +490,13 @@ export function inferUserLevel() {
         },
 
         // Minimum total attempts required to "trust" a level
-        minTotalAttemptsPerLevel = 8,
+        minTotalAttemptsPerLevel = 5,
         // A rule counts toward coverage if it has at least this many attempts
         minAttemptsPerRule = 1,
         // Need at least this many covered rules in a level
-        minRulesWithAttempts = 6,
+        minRulesWithAttempts = 5,
         // Minimum overall accuracy (percent) in the level to consider it "proficient"
-        minAccuracy = 75,
+        minAccuracy = 70,
 
         // Composite scoring weights (tune as you like)
         weights = {
