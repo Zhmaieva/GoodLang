@@ -745,9 +745,9 @@ export function inferUserLevel() {
     ).filter(x => x.accuracy >= 75).find(_=>true);
 
     const res = {
-        level: best.level,
+        level: bestOverall.level,
         decidedBy: "eligibility",
-        confidence: clamp01(best.score),
+        confidence: clamp01(bestOverall.score),
         levels: levelStats,
     };
 
