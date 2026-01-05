@@ -507,6 +507,55 @@ export function inferUserLevel() {
         },
     } = {};
 
+    const pickLevelKey = (name) =>
+        stepLevels.find((l) => String(l).toLowerCase() === String(name).toLowerCase()) ?? null;
+
+    const maybeOverrideA1WithA2 = (result, levelStats) => {
+        const cur = String(result?.level ?? "").toLowerCase();
+
+        const a1Key = pickLevelKey("a1");
+        const a2Key = pickLevelKey("a2");
+        const b1Key = pickLevelKey("b1");
+
+        // Only apply when we *actually* decided A1 and we have A2 + B1 in LEVEL_RULES
+        if (!a1Key || !a2Key || !b1Key) return result;
+        if (cur !== String(a1Key).toLowerCase()) return result;
+
+        const a2 = levelStats.find((s) => String(s.level).toLowerCase() === String(a2Key).toLowerCase());
+        const b1 = levelStats.find((s) => String(s.level).toLowerCase() === String(b1Key).toLowerCase());
+        if (!a2 || !b1) return result;
+
+        const combinedAttempts = (a2.attempts ?? 0) + (b1.attempts ?? 0);
+        const combinedRulesWithAttempts = (a2.rulesWithMinAttempts ?? 0) + (b1.rulesWithMinAttempts ?? 0);
+
+        // "eligible for estimate" (use your existing thresholds, but combined)
+        const eligibleForEstimate =
+            combinedAttempts >= minTotalAttemptsPerLevel &&
+            combinedRulesWithAttempts >= minRulesWithAttempts;
+
+        if (!eligibleForEstimate) return result;
+
+        // Average accuracy across A2 + B1 (attempt-weighted)
+        const avgAccuracy =
+            combinedAttempts > 0
+                ? (((a2.accuracy ?? 0) * (a2.attempts ?? 0)) + ((b1.accuracy ?? 0) * (b1.attempts ?? 0))) / combinedAttempts
+                : 0;
+
+        if (avgAccuracy >= minAccuracy) {
+            // Promote to A2
+            const conf = clamp01((avgAccuracy - minAccuracy) / (100 - minAccuracy)); // simple confidence bump
+            return {
+                ...result,
+                level: a2Key,
+                decidedBy: "a1_overridden_by_a2b1_accuracy",
+                confidence: Math.max(result?.confidence ?? 0, conf),
+                levels: levelStats,
+            };
+        }
+
+        return result;
+    };
+
     const stepLevels = Object.keys(LEVEL_RULES || {}); // e.g. ["beginner","intermediate","advanced"]
     if (!stepLevels.length) {
         return { level: null, decidedBy: "noData", confidence: 0, levels: [] };
@@ -695,12 +744,14 @@ export function inferUserLevel() {
         (a, b) => (b.accuracy * b.score - a.accuracy * a.score) || (stepLevels.indexOf(b.level) - stepLevels.indexOf(a.level))
     ).filter(x => x.accuracy >= 75).find(_=>true);
 
-    return {
-        level: bestOverall?.level ?? "a1",
-        decidedBy: answers.length ? "bestScore" : "noData",
-        confidence: clamp01(bestOverall?.score ?? 0),
+    const res = {
+        level: best.level,
+        decidedBy: "eligibility",
+        confidence: clamp01(best.score),
         levels: levelStats,
     };
+
+    return maybeOverrideA1WithA2(res, levelStats);
 }
 
 // Small util
