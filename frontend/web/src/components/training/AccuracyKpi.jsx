@@ -35,7 +35,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const showEmpty = attemptsLeft > 0;
 
     const cardStyle = {
-        visibility: !isLoading ? "visible" : "hidden",
+        visibility: "visible",
         background: "#fffdf8",
         border: "3px solid #ff6138",
         borderRadius: "20px",
@@ -49,6 +49,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const labelStyle = {
+        visibility: !isLoading ? "visible" : "hidden",
         fontSize: (header || isMobile) ? "0.6rem" : "1rem",
         color: "#a47856",
         textTransform: "uppercase",
@@ -56,6 +57,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const valueStyle = {
+        visibility: !isLoading ? "visible" : "hidden",
         fontSize: header || isMobile ? "1rem" : "2rem",
         fontWeight: 800,
     };
@@ -71,6 +73,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const sparkFillStyle = (width) => ({
+        visibility: !isLoading ? "visible" : "hidden",
         display: "block",
         position: "absolute",
         height: "100%",
