@@ -11,7 +11,7 @@
       "en": ["She's used to living alone."]
     },
     {
-      "rules": ["BE_USED_TO_GET_USED_TO", "ADJECTIVES"],
+      "rules": ["BE_USED_TO_GET_USED_TO", "SIMPLE_ADJ"],
       "ua": "Вони звикли до холодної погоди.",
       "en": ["They're used to cold weather."]
     },

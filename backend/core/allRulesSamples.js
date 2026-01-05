@@ -47270,14 +47270,10 @@ export const ALL_RULES_SAMPLES = {
             "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
         },
         {
-            "rules": [
-                "MODALS_OF_PROBABILITY"
-            ],
+            "rules": ["MODALS_OF_PROBABILITY", "ARTICLES"],
             "ua": "Це, мабуть, найкраще рішення.",
-            "en": [
-                "That must be the best solution.",
-                "That might be the best solution."
-            ],
+            "en": ["That must be the best solution.", "It must be the best solution.", "It might be the best solution.", "That might be the best solution.",
+                "That must be the best decision.", "It must be the best decision.", "It might be the best decision.", "That might be the best decision."],
             "hint": "використовуй MUST/MIGHT для оцінки теперішньої ситуації."
         },
         {
