@@ -62,6 +62,8 @@ export default function TermsOfUseModal({
                 await syncData();
             }
 
+            trackMetaEvent("CompleteRegistration");
+
             if (newAccount.status === "free" && getPaymentIntent()) {
                 setPaymentIntent(false);
                 try {
@@ -93,8 +95,6 @@ export default function TermsOfUseModal({
                 }
                 return;
             }
-
-            trackMetaEvent("CompleteRegistration");
 
             setTimeout(async () => {
                 window.location.reload();
