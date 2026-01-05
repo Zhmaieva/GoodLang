@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {useState, useRef, useEffect, useCallback} from "react";
 import {callAccountInfoApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
@@ -41,19 +41,18 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [account, setAccount] = useState(accountInfo);
 
-    const onCloseHandler = () => {
-        setPaymentIntent(false);
-        if (isPaying)
-            window.location.reload();
-        onClose();
-    }
 
     const loadAccountInfo = async () => {
         const account = await callAccountInfoApi();
         setAccount(account);
     }
 
-    // ⏳ Countdown timer — only when limit is reached
+    const onCloseHandler = useCallback(() => {
+        setPaymentIntent(false);
+        if (isPaying) window.location.reload();
+        onClose();
+    }, [isPaying, onClose]);
+
     useEffect(() => {
         if (!open || !isLimitReached) return;
 
