@@ -99,7 +99,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                         ) : (
                             <>
                                 <div style={labelStyle}>Знання правил</div>
-                                <div style={valueStyle}>{(accuracy ?? 0) === 0 ? '' : accuracy?.toFixed(2) + '%'}</div>
+                                <div style={valueStyle}>{(accuracy ?? 0) === 0 ? '0.00' : accuracy?.toFixed(2)}%</div>
                                 <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, accuracy ?? 0))}/></div>
                             </>
                         )
