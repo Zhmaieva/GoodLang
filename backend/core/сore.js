@@ -63,7 +63,40 @@ export function randomRule(level) {
 export const clearText = (text) => text?.toLowerCase()
     .split('.').join('')
     .split('’').join('\'')
-    .split(',').join('');
+    .split(',').join('')
+
+    .split('wouldn\'t').join('would not')
+    .split('wouldnt').join('would not')
+
+    .split(' won\'t ').join(' will not ')
+    .split(' wont ').join(' will not ')
+
+    .split('couldn\'t').join('could not')
+    .split('couldnt').join('could not')
+
+    .split(' arent ').join(' are not ')
+    .split('aren\'t').join('are not')
+
+    .split(' isnt ').join(' is not ')
+    .split('isn\'t').join('is not')
+
+    .split(' werent ').join(' were not ')
+    .split('weren\'t').join('were not')
+
+    .split('wasnt').join('was not')
+    .split('wasn\'t').join('was not')
+
+    .split(' doesnt ').join(' does not ')
+    .split('doesn\'t').join('does not')
+
+    .split('didnt').join('did not')
+    .split('didn\'t').join('did not')
+
+    .split(' hasnt ').join(' has not ')
+    .split('hasn\'t').join('has not')
+
+    .split(' havent ').join(' have not ')
+    .split('haven\'t').join('have not')
 
 export function preEvaluate({
                                       rules = [],
