@@ -731,18 +731,20 @@ export function inferUserLevel() {
             (a, b) => (stepLevels.indexOf(b.level) - stepLevels.indexOf(a.level) || (b.score - a.score))
         );
         const best = eligible[0];
-        return {
+        const res = {
             level: best.level,
             decidedBy: "eligibility",
             confidence: clamp01(best.score),
             levels: levelStats,
         };
+
+        return maybeOverrideA1WithA2(res, levelStats);
     }
 
     // Otherwise best overall (soft fallback)
     const bestOverall = [...levelStats].sort(
         (a, b) => (b.accuracy * b.score - a.accuracy * a.score) || (stepLevels.indexOf(b.level) - stepLevels.indexOf(a.level))
-    ).filter(x => x.accuracy >= 75).find(_=>true);
+    ).filter(x => x.accuracy >= minAccuracy).find(_=>true);
 
     const res = {
         level: bestOverall.level,
