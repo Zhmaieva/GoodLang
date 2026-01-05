@@ -98,6 +98,9 @@ export const clearText = (text) => text?.toLowerCase()
     .split(' havent ').join(' have not ')
     .split('haven\'t').join('have not')
 
+    .split(' cant ').join(' can not ')
+    .split('can\'t').join('can not');
+
 export function preEvaluate({
                                       rules = [],
                                       targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
