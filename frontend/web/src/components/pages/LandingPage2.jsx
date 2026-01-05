@@ -7,7 +7,7 @@ import {callSendPromoCodeApi} from "../../services/api.js";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
-import {ensureAnalytics, trackPageView} from "../../services/gaService.js";
+import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../services/gaService.js";
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -447,7 +447,10 @@ export default function GoodLangLandingTeaStyleThemed({
     }, [theme, w, maxWidth]);
 
     const navigate = useNavigate();
-    const handleStart = () => navigate('/');
+    const handleStart = () => {
+        trackMetaCustomEvent("StartUsing");
+        navigate('/');
+    }
 
     const scrollTo = (id) => {
         const el = document.getElementById(id);
