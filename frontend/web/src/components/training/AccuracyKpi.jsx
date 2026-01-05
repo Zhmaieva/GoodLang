@@ -49,7 +49,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const labelStyle = {
-        visibility: !isLoading ? "visible" : "hidden",
         fontSize: (header || isMobile) ? "0.6rem" : "1rem",
         color: "#a47856",
         textTransform: "uppercase",
@@ -95,7 +94,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                 {
                         header ? (
                             <>
-                                <div style={valueStyle}>Знання правил {accuracy.toFixed(2)}%</div>
+                                <div style={valueStyle}>Знання правил {(accuracy ?? 0) === 0 ? '' : accuracy?.toFixed(2)}%</div>
                                 <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, accuracy ?? 0))}/></div>
                             </>
                         ) : (
