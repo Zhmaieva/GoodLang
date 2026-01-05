@@ -96,8 +96,10 @@ export default function TermsOfUseModal({
 
             trackMetaEvent("CompleteRegistration");
 
-            window.location.reload();
-            onClose();
+            setTimeout(async () => {
+                window.location.reload();
+                onClose();
+            }, 500)
         } catch (err) {
             setError("Не вдалося підтвердити код. Спробуйте ще раз.");
         } finally {
