@@ -40637,7 +40637,7 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "BE_USED_TO_GET_USED_TO",
-                "ADJECTIVES"
+                "SIMPLE_ADJ"
             ],
             "ua": "Вони звикли до холодної погоди.",
             "en": [
@@ -46989,7 +46989,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_CONT_NOW"
             ],
-            "ua": "Вона, мабуть, працює над проєктом зараз.",
+            "ua": "Вона, напевно, працює над проєктом зараз.",
             "en": [
                 "She must be working on the project now.",
                 "She might be working on the project now."
@@ -47001,7 +47001,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_CONT_NOW"
             ],
-            "ua": "Вони, мабуть, чекають на нас біля входу.",
+            "ua": "Вони, напевно, чекають на нас біля входу.",
             "en": [
                 "They must be waiting for us at the entrance.",
                 "They might be waiting for us at the entrance."
@@ -47013,7 +47013,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT_CONT"
             ],
-            "ua": "Він, мабуть, пожартував.",
+            "ua": "Він, напевно, пожартував.",
             "en": [
                 "He must have been joking.",
                 "He might have been joking."
@@ -47026,7 +47026,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_PERFECT",
                 "SINCE_FOR"
             ],
-            "ua": "Вони, мабуть, давно знайомі.",
+            "ua": "Вони, напевно, давно знайомі.",
             "en": [
                 "They must have known each other for a long time.",
                 "They might have known each other for a long time."
@@ -47039,7 +47039,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_PERFECT_CONT",
                 "SINCE_FOR"
             ],
-            "ua": "Він, мабуть, працює тут недавно.",
+            "ua": "Він, напевно, працює тут недавно.",
             "en": [
                 "He must have been working here for a short time.",
                 "He might have been working here for a short time."
@@ -47052,7 +47052,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_PERFECT",
                 "ALREADY_YET_JUST"
             ],
-            "ua": "Вона, мабуть, щойно приїхала.",
+            "ua": "Вона, напевно, щойно приїхала.",
             "en": [
                 "She must have just arrived.",
                 "She might have just arrived."
@@ -47064,7 +47064,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Він, мабуть, думав, що ми запізнимось.",
+            "ua": "Він, напевно, думав, що ми запізнимось.",
             "en": [
                 "He must have thought we would be late.",
                 "He might have thought we would be late."
@@ -47122,7 +47122,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Це, мабуть, була її ідея.",
+            "ua": "Це, напевно, була її ідея.",
             "en": [
                 "It must have been her idea.",
                 "It might have been her idea."
@@ -47156,7 +47156,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Це, мабуть, було дуже страшно.",
+            "ua": "Це, напевно, було дуже страшно.",
             "en": [
                 "That must have been very scary.",
                 "That might have been very scary."
@@ -47180,7 +47180,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_CONT_NOW"
             ],
-            "ua": "Він, мабуть, щось приховує.",
+            "ua": "Він, напевно, щось приховує.",
             "en": [
                 "He must be hiding something.",
                 "He might be hiding something."
@@ -47226,7 +47226,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Вони, мабуть, не зрозуміли інструкції.",
+            "ua": "Вони, напевно, не зрозуміли інструкції.",
             "en": [
                 "They must not have understood the instructions.",
                 "They might not have understood the instructions."
@@ -47250,7 +47250,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Вона, мабуть, чула про це по телевізору.",
+            "ua": "Вона, напевно, чула про це по телевізору.",
             "en": [
                 "She must have heard about it on TV.",
                 "She might have heard about it on TV."
@@ -47270,10 +47270,21 @@ export const ALL_RULES_SAMPLES = {
             "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
         },
         {
-            "rules": ["MODALS_OF_PROBABILITY", "ARTICLES"],
-            "ua": "Це, мабуть, найкраще рішення.",
-            "en": ["That must be the best solution.", "It must be the best solution.", "It might be the best solution.", "That might be the best solution.",
-                "That must be the best decision.", "It must be the best decision.", "It might be the best decision.", "That might be the best decision."],
+            "rules": [
+                "MODALS_OF_PROBABILITY",
+                "ARTICLES"
+            ],
+            "ua": "Це, напевно, найкраще рішення.",
+            "en": [
+                "That must be the best solution.",
+                "It must be the best solution.",
+                "It might be the best solution.",
+                "That might be the best solution.",
+                "That must be the best decision.",
+                "It must be the best decision.",
+                "It might be the best decision.",
+                "That might be the best decision."
+            ],
             "hint": "використовуй MUST/MIGHT для оцінки теперішньої ситуації."
         },
         {
@@ -47281,7 +47292,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT_CONT"
             ],
-            "ua": "Вона, мабуть, плакала.",
+            "ua": "Вона, напевно, плакала.",
             "en": [
                 "She must have been crying.",
                 "She might have been crying."
@@ -47293,7 +47304,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_CONT_NOW"
             ],
-            "ua": "Він, мабуть, зараз готує вечерю.",
+            "ua": "Він, напевно, зараз готує вечерю.",
             "en": [
                 "He must be cooking dinner now.",
                 "He might be cooking dinner now."
@@ -47305,7 +47316,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Вони, мабуть, не бачили цього фільму.",
+            "ua": "Вони, напевно, не бачили цього фільму.",
             "en": [
                 "They must not have seen this movie.",
                 "They might not have seen this movie."
@@ -47317,7 +47328,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_CONT_NOW"
             ],
-            "ua": "Він, мабуть, бреше.",
+            "ua": "Він, напевно, бреше.",
             "en": [
                 "He must be lying.",
                 "He might be lying."
@@ -47340,7 +47351,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "MODALS_OF_PROBABILITY"
             ],
-            "ua": "Вона, мабуть, хвилюється через іспит.",
+            "ua": "Вона, напевно, хвилюється через іспит.",
             "en": [
                 "She must be nervous about the exam.",
                 "She might be nervous about the exam."
@@ -47363,7 +47374,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "MODALS_OF_PROBABILITY"
             ],
-            "ua": "Вона, мабуть, вдома.",
+            "ua": "Вона, напевно, вдома.",
             "en": [
                 "She must be at home.",
                 "She might be at home."
@@ -47385,7 +47396,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "MODALS_OF_PROBABILITY"
             ],
-            "ua": "Вони, мабуть, запізнилися.",
+            "ua": "Вони, напевно, запізнилися.",
             "en": [
                 "They must be late.",
                 "They might be late."
@@ -47418,7 +47429,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Вона, мабуть, забула.",
+            "ua": "Вона, напевно, забула.",
             "en": [
                 "She must have forgotten.",
                 "She might have forgotten."
@@ -47443,7 +47454,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Він, мабуть, бачив це.",
+            "ua": "Він, напевно, бачив це.",
             "en": [
                 "He must have seen it.",
                 "He might have seen it."
@@ -47465,7 +47476,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_CONT_NOW"
             ],
-            "ua": "Вона, мабуть, спить.",
+            "ua": "Вона, напевно, спить.",
             "en": [
                 "She must be sleeping.",
                 "She might be sleeping."
@@ -47488,7 +47499,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_CONT_NOW"
             ],
-            "ua": "Ти, мабуть, жартуєш.",
+            "ua": "Ти, напевно, жартуєш.",
             "en": [
                 "You must be joking."
             ],
@@ -47521,7 +47532,7 @@ export const ALL_RULES_SAMPLES = {
                 "MODALS_OF_PROBABILITY",
                 "PRESENT_PERFECT"
             ],
-            "ua": "Він, мабуть, зателефонував раніше.",
+            "ua": "Він, напевно, зателефонував раніше.",
             "en": [
                 "He must have called earlier.",
                 "He might have called earlier."
@@ -59983,7 +59994,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Він, мабуть, уже бачив цей фільм.",
+            "ua": "Він, напевно, уже бачив цей фільм.",
             "en": [
                 "He must have seen the movie already.",
                 "He must've already seen the movie."
@@ -60008,7 +60019,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "DEMONSTRATIVES"
             ],
-            "ua": "Це, мабуть, було її рішення.",
+            "ua": "Це, напевно, було її рішення.",
             "en": [
                 "That must have been her decision.",
                 "It must've been her choice."
@@ -60020,7 +60031,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вони, мабуть, не чули дзвінка.",
+            "ua": "Вони, напевно, не чули дзвінка.",
             "en": [
                 "They can’t have heard the phone.",
                 "They must not have heard the bell."
@@ -60032,7 +60043,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Ти, мабуть, неправильно зрозумів мене.",
+            "ua": "Ти, напевно, неправильно зрозумів мене.",
             "en": [
                 "You must have misunderstood me.",
                 "You must've got me wrong."
@@ -60056,7 +60067,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вона, мабуть, забула купити молоко.",
+            "ua": "Вона, напевно, забула купити молоко.",
             "en": [
                 "She must have forgotten to buy milk.",
                 "She might have forgotten to buy the milk."
@@ -60069,7 +60080,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "THERE_IS_ARE"
             ],
-            "ua": "Там, мабуть, не було світла минулої ночі.",
+            "ua": "Там, напевно, не було світла минулої ночі.",
             "en": [
                 "There can’t have been any light last night.",
                 "There must have been a power cut last night."
@@ -60082,7 +60093,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "ENOUGH_TOO_MUCH_MANY"
             ],
-            "ua": "Він, мабуть, був занадто зайнятий, щоб відповісти.",
+            "ua": "Він, напевно, був занадто зайнятий, щоб відповісти.",
             "en": [
                 "He must have been too busy to reply.",
                 "He might have been too busy to answer."
@@ -60094,7 +60105,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "THERE_IS_ARE"
             ],
-            "ua": "Там, мабуть, було дуже шумно.",
+            "ua": "Там, напевно, було дуже шумно.",
             "en": [
                 "There must have been a lot of noise.",
                 "There might have been too much noise."
@@ -60117,7 +60128,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Ти, мабуть, зробив це випадково.",
+            "ua": "Ти, напевно, зробив це випадково.",
             "en": [
                 "You must have done it by accident.",
                 "You might have done it unintentionally."
@@ -60130,7 +60141,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "COUNT_UNCOUNT"
             ],
-            "ua": "Вона, мабуть, витратила всі гроші на подорож.",
+            "ua": "Вона, напевно, витратила всі гроші на подорож.",
             "en": [
                 "She must have spent all the money on the trip.",
                 "She could have used all her savings for the trip."
@@ -60142,7 +60153,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вони, мабуть, не бачили повідомлення.",
+            "ua": "Вони, напевно, не бачили повідомлення.",
             "en": [
                 "They can’t have seen the message.",
                 "They might not have noticed the message."
@@ -60154,7 +60165,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_TIME"
             ],
-            "ua": "Вона, мабуть, поїхала до школи рано вранці.",
+            "ua": "Вона, напевно, поїхала до школи рано вранці.",
             "en": [
                 "She must have gone to school early in the morning.",
                 "She might have left for school at dawn."
@@ -60165,7 +60176,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Він, мабуть, був дуже зайнятий цілий день.",
+            "ua": "Він, напевно, був дуже зайнятий цілий день.",
             "en": [
                 "He must have been very busy all day.",
                 "He might have been working all day."
@@ -60177,7 +60188,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вони, мабуть, забули забронювати квитки.",
+            "ua": "Вони, напевно, забули забронювати квитки.",
             "en": [
                 "They must have forgotten to book the tickets.",
                 "They might have missed the reservation."
@@ -60190,7 +60201,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "DEMONSTRATIVES"
             ],
-            "ua": "Це, мабуть, було найгірше рішення.",
+            "ua": "Це, напевно, було найгірше рішення.",
             "en": [
                 "That must have been the worst decision.",
                 "It might have been a terrible choice."
@@ -60203,7 +60214,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "BECAUSE_SO_BUT_ALTHOUGH"
             ],
-            "ua": "Він, мабуть, не почув, бо музика була надто гучна.",
+            "ua": "Він, напевно, не почув, бо музика була надто гучна.",
             "en": [
                 "He must not have heard because the music was too loud.",
                 "He might not have heard since it was noisy."
@@ -60214,7 +60225,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Там, мабуть, не було жодного вільного місця.",
+            "ua": "Там, напевно, не було жодного вільного місця.",
             "en": [
                 "There can’t have been any free seats.",
                 "There might not have been any empty spots."
@@ -60227,7 +60238,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "SIMPLE_ADJ"
             ],
-            "ua": "Вона, мабуть, була дуже втомленою після подорожі.",
+            "ua": "Вона, напевно, була дуже втомленою після подорожі.",
             "en": [
                 "She must have been very tired after the trip.",
                 "She might have been exhausted after traveling."
@@ -60238,7 +60249,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Ми, мабуть, пропустили правильний поворот.",
+            "ua": "Ми, напевно, пропустили правильний поворот.",
             "en": [
                 "We must have missed the right turn.",
                 "We might have taken the wrong road."
@@ -60250,7 +60261,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Він, мабуть, часто забував про ці зустрічі раніше.",
+            "ua": "Він, напевно, часто забував про ці зустрічі раніше.",
             "en": [
                 "He must have often forgotten about these meetings before.",
                 "He might have missed them regularly."
@@ -60262,7 +60273,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вона, мабуть, була на вечірці вчора.",
+            "ua": "Вона, напевно, була на вечірці вчора.",
             "en": [
                 "She must have been at the party yesterday.",
                 "She might have gone to the party."
@@ -60274,7 +60285,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_PLACE"
             ],
-            "ua": "Він, мабуть, залишив свій телефон у машині.",
+            "ua": "Він, напевно, залишив свій телефон у машині.",
             "en": [
                 "He must have left his phone in the car.",
                 "He might have forgotten his phone in the car."
@@ -60286,7 +60297,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Хтось, мабуть, розповів їй секрет.",
+            "ua": "Хтось, напевно, розповів їй секрет.",
             "en": [
                 "Someone must have told her the secret.",
                 "Somebody might have revealed it to her."
@@ -60297,7 +60308,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Я, мабуть, забув надіслати листа.",
+            "ua": "Я, напевно, забув надіслати листа.",
             "en": [
                 "I must have forgotten to send the letter.",
                 "I might have missed sending it."
@@ -60309,7 +60320,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Він, мабуть, був дуже щедрим.",
+            "ua": "Він, напевно, був дуже щедрим.",
             "en": [
                 "He must have been very generous.",
                 "He might have been kind-hearted."
@@ -60322,7 +60333,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "COUNT_UNCOUNT"
             ],
-            "ua": "Він, мабуть, витратив багато часу на цей проєкт.",
+            "ua": "Він, напевно, витратив багато часу на цей проєкт.",
             "en": [
                 "He must have spent a lot of time on this project.",
                 "He might have worked on it for hours."
@@ -60334,7 +60345,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "THERE_IS_ARE"
             ],
-            "ua": "Там, мабуть, було багато людей.",
+            "ua": "Там, напевно, було багато людей.",
             "en": [
                 "There must have been many people.",
                 "There might have been a big crowd."
@@ -60346,7 +60357,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вона, мабуть, переплутала дати.",
+            "ua": "Вона, напевно, переплутала дати.",
             "en": [
                 "She must have mixed up the dates.",
                 "She might have got the day wrong."
@@ -60358,7 +60369,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вони, мабуть, втратили інтерес до теми.",
+            "ua": "Вони, напевно, втратили інтерес до теми.",
             "en": [
                 "They must have lost interest in the topic.",
                 "They might have become bored."
@@ -60370,7 +60381,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Хтось, мабуть, зламав вікно.",
+            "ua": "Хтось, напевно, зламав вікно.",
             "en": [
                 "Someone must have broken the window.",
                 "It might have been broken accidentally."
@@ -60382,7 +60393,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Він, мабуть, сказав правду.",
+            "ua": "Він, напевно, сказав правду.",
             "en": [
                 "He must have told the truth.",
                 "He might have been honest."
@@ -60394,7 +60405,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Вона, мабуть, пішла додому раніше.",
+            "ua": "Вона, напевно, пішла додому раніше.",
             "en": [
                 "She must have gone home earlier.",
                 "She might have left before everyone else."
@@ -60405,7 +60416,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Ми, мабуть, неправильно зрозуміли завдання.",
+            "ua": "Ми, напевно, неправильно зрозуміли завдання.",
             "en": [
                 "We must have misunderstood the task.",
                 "We might have read it wrong."
@@ -60417,7 +60428,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_PLACE"
             ],
-            "ua": "Він, мабуть, залишив документи в офісі.",
+            "ua": "Він, напевно, залишив документи в офісі.",
             "en": [
                 "He must have left the documents in the office.",
                 "He might have forgotten them at work."
@@ -60430,7 +60441,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES",
                 "TOO_VERY"
             ],
-            "ua": "Вона, мабуть, була занадто втомленою, щоб вийти.",
+            "ua": "Вона, напевно, була занадто втомленою, щоб вийти.",
             "en": [
                 "She must have been too tired to go out.",
                 "She might have been too exhausted to leave."
@@ -60442,7 +60453,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Він, мабуть, був дуже задоволений результатом.",
+            "ua": "Він, напевно, був дуже задоволений результатом.",
             "en": [
                 "He must have been pleased with the result.",
                 "He might have been happy about the outcome."
@@ -60453,7 +60464,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, завжди любила читати детективи.",
+            "ua": "Вона, напевно, завжди любила читати детективи.",
             "en": [
                 "She must have always liked reading detective stories.",
                 "She might have enjoyed mysteries for years."
@@ -60465,7 +60476,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "ARTICLES"
             ],
-            "ua": "Він, мабуть, мав ідею, як це зробити.",
+            "ua": "Він, напевно, мав ідею, як це зробити.",
             "en": [
                 "He must have had an idea how to do it.",
                 "He might have had a plan in mind."
@@ -60476,7 +60487,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вони, мабуть, не зрозуміли інструкцію.",
+            "ua": "Вони, напевно, не зрозуміли інструкцію.",
             "en": [
                 "They must not have understood the instruction.",
                 "They might have missed the details."
@@ -60488,7 +60499,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "COUNT_UNCOUNT"
             ],
-            "ua": "Він, мабуть, випив занадто багато кави.",
+            "ua": "Він, напевно, випив занадто багато кави.",
             "en": [
                 "He must have drunk too much coffee.",
                 "He might have had too much caffeine."
@@ -60500,7 +60511,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "COMPARATIVES"
             ],
-            "ua": "Вона, мабуть, працювала більше, ніж інші.",
+            "ua": "Вона, напевно, працювала більше, ніж інші.",
             "en": [
                 "She must have worked more than others.",
                 "She might have been busier than everyone else."
@@ -60511,7 +60522,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Якщо він так зробив, він, мабуть, мав вагому причину.",
+            "ua": "Якщо він так зробив, він, напевно, мав вагому причину.",
             "en": [
                 "If he did that, he must have had a good reason.",
                 "He might have had no choice."
@@ -60523,7 +60534,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_TIME"
             ],
-            "ua": "Він, мабуть, поїхав на роботу рано вранці.",
+            "ua": "Він, напевно, поїхав на роботу рано вранці.",
             "en": [
                 "He must have left for work early in the morning.",
                 "He might have gone before sunrise."
@@ -60534,7 +60545,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, зателефонувала йому вчора.",
+            "ua": "Вона, напевно, зателефонувала йому вчора.",
             "en": [
                 "She must have called him yesterday.",
                 "She might have phoned him last night."
@@ -60546,7 +60557,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "THERE_IS_ARE"
             ],
-            "ua": "Там, мабуть, була сильна буря.",
+            "ua": "Там, напевно, була сильна буря.",
             "en": [
                 "There must have been a strong storm.",
                 "There might have been bad weather."
@@ -60558,7 +60569,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_PLACE"
             ],
-            "ua": "Він, мабуть, загубив гаманець у метро.",
+            "ua": "Він, напевно, загубив гаманець у метро.",
             "en": [
                 "He must have lost his wallet in the subway.",
                 "He might have dropped it on the train."
@@ -60569,7 +60580,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, не почула свій будильник.",
+            "ua": "Вона, напевно, не почула свій будильник.",
             "en": [
                 "She must not have heard her alarm.",
                 "She might have slept through it."
@@ -60580,7 +60591,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Він, мабуть, загубив свій паспорт у літаку.",
+            "ua": "Він, напевно, загубив свій паспорт у літаку.",
             "en": [
                 "He must have lost his passport on the plane.",
                 "He might have left his passport on the flight."
@@ -60592,7 +60603,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "TOO_VERY"
             ],
-            "ua": "Він, мабуть, був занадто злий, щоб щось пояснювати.",
+            "ua": "Він, напевно, був занадто злий, щоб щось пояснювати.",
             "en": [
                 "He must have been too angry to explain anything.",
                 "He might have been too upset to talk."
@@ -60603,7 +60614,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Ми, мабуть, пропустили автобус.",
+            "ua": "Ми, напевно, пропустили автобус.",
             "en": [
                 "We must have missed the bus.",
                 "We might have been late for the bus."
@@ -60615,7 +60626,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "COUNT_UNCOUNT"
             ],
-            "ua": "Вона, мабуть, з'їла весь торт.",
+            "ua": "Вона, напевно, з'їла весь торт.",
             "en": [
                 "She must have eaten the whole cake.",
                 "She might have finished the cake herself."
@@ -60626,7 +60637,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Він, мабуть, забув вимкнути світло.",
+            "ua": "Він, напевно, забув вимкнути світло.",
             "en": [
                 "He must have forgotten to turn off the light.",
                 "He might have left the light on."
@@ -60637,7 +60648,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, бачила його на вечірці.",
+            "ua": "Вона, напевно, бачила його на вечірці.",
             "en": [
                 "She must have seen him at the party.",
                 "She might have met him last night."
@@ -60649,7 +60660,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_PLACE"
             ],
-            "ua": "Він, мабуть, залишив свій гаманець у кафе.",
+            "ua": "Він, напевно, залишив свій гаманець у кафе.",
             "en": [
                 "He must have left his wallet in the café.",
                 "He might have forgotten it there."
@@ -60661,7 +60672,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_TIME"
             ],
-            "ua": "Вона, мабуть, повернулася пізно вночі.",
+            "ua": "Вона, напевно, повернулася пізно вночі.",
             "en": [
                 "She must have come back late at night.",
                 "She might have arrived after midnight."
@@ -60672,7 +60683,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Ти, мабуть, бачив це у новинах.",
+            "ua": "Ти, напевно, бачив це у новинах.",
             "en": [
                 "You must have seen it on the news.",
                 "You might have read about it online."
@@ -60683,7 +60694,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вони, мабуть, не почули попередження.",
+            "ua": "Вони, напевно, не почули попередження.",
             "en": [
                 "They can’t have heard the warning.",
                 "They might not have noticed it."
@@ -60694,7 +60705,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Там, мабуть, не було ніякої інформації про це.",
+            "ua": "Там, напевно, не було ніякої інформації про це.",
             "en": [
                 "There can’t have been any information about it.",
                 "There might not have been any details."
@@ -60706,7 +60717,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "SUPERLATIVES"
             ],
-            "ua": "Він, мабуть, був найкращим студентом у групі.",
+            "ua": "Він, напевно, був найкращим студентом у групі.",
             "en": [
                 "He must have been the best student in the group.",
                 "He might have been the top one in class."
@@ -60717,7 +60728,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, випадково видалила файл.",
+            "ua": "Вона, напевно, випадково видалила файл.",
             "en": [
                 "She must have deleted the file by mistake.",
                 "She might have removed it accidentally."
@@ -60729,7 +60740,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "THERE_IS_ARE"
             ],
-            "ua": "Там, мабуть, була черга біля входу.",
+            "ua": "Там, напевно, була черга біля входу.",
             "en": [
                 "There must have been a line at the entrance.",
                 "There might have been many people waiting."
@@ -60740,7 +60751,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Він, мабуть, переплутав адресу.",
+            "ua": "Він, напевно, переплутав адресу.",
             "en": [
                 "He must have mixed up the address.",
                 "He might have gone to the wrong place."
@@ -60752,7 +60763,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "TOO_VERY"
             ],
-            "ua": "Вона, мабуть, була занадто втомлена, щоб йти в кіно.",
+            "ua": "Вона, напевно, була занадто втомлена, щоб йти в кіно.",
             "en": [
                 "She must have been too tired to go to the cinema.",
                 "She might have stayed home because of fatigue."
@@ -60763,7 +60774,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Ми, мабуть, забули ключі вдома.",
+            "ua": "Ми, напевно, забули ключі вдома.",
             "en": [
                 "We must have left the keys at home.",
                 "We might have forgotten them on the table."
@@ -60774,7 +60785,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Ти, мабуть, чув про це раніше.",
+            "ua": "Ти, напевно, чув про це раніше.",
             "en": [
                 "You must have heard about it before.",
                 "You might have known it already."
@@ -60785,7 +60796,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вони, мабуть, не зрозуміли питання.",
+            "ua": "Вони, напевно, не зрозуміли питання.",
             "en": [
                 "They must not have understood the question.",
                 "They might have misheard it."
@@ -60796,7 +60807,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, не взяла парасолю.",
+            "ua": "Вона, напевно, не взяла парасолю.",
             "en": [
                 "She must not have taken an umbrella.",
                 "She might have left it at home."
@@ -60807,7 +60818,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Хтось, мабуть, залишив двері відчиненими.",
+            "ua": "Хтось, напевно, залишив двері відчиненими.",
             "en": [
                 "Someone must have left the door open.",
                 "Somebody might have forgotten to close it."
@@ -60819,7 +60830,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "DEMONSTRATIVES"
             ],
-            "ua": "Це, мабуть, було його перше інтерв’ю.",
+            "ua": "Це, напевно, було його перше інтерв’ю.",
             "en": [
                 "That must have been his first interview.",
                 "It might have been his first time."
@@ -60831,7 +60842,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "COMPARATIVES"
             ],
-            "ua": "Він, мабуть, заплатив більше, ніж очікував.",
+            "ua": "Він, напевно, заплатив більше, ніж очікував.",
             "en": [
                 "He must have paid more than he expected.",
                 "He might have spent extra money."
@@ -60842,7 +60853,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Я, мабуть, залишив телефон у сумці.",
+            "ua": "Я, напевно, залишив телефон у сумці.",
             "en": [
                 "I must have left my phone in the bag.",
                 "I might have forgotten it there."
@@ -60853,7 +60864,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, купила це вчора.",
+            "ua": "Вона, напевно, купила це вчора.",
             "en": [
                 "She must have bought it yesterday.",
                 "She might have picked it up after work."
@@ -60865,7 +60876,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "THERE_IS_ARE"
             ],
-            "ua": "Там, мабуть, було багато туристів.",
+            "ua": "Там, напевно, було багато туристів.",
             "en": [
                 "There must have been many tourists.",
                 "There might have been a big crowd."
@@ -60877,7 +60888,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "COUNT_UNCOUNT"
             ],
-            "ua": "Він, мабуть, випив забагато вина.",
+            "ua": "Він, напевно, випив забагато вина.",
             "en": [
                 "He must have drunk too much wine.",
                 "He might have had one glass too many."
@@ -60888,7 +60899,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Він, мабуть, не зрозумів жарту.",
+            "ua": "Він, напевно, не зрозумів жарту.",
             "en": [
                 "He must not have understood the joke.",
                 "He might have missed the meaning."
@@ -60899,7 +60910,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Ми, мабуть, прийшли надто пізно.",
+            "ua": "Ми, напевно, прийшли надто пізно.",
             "en": [
                 "We must have arrived too late.",
                 "We might have missed the beginning."
@@ -60911,7 +60922,7 @@ export const ALL_RULES_SAMPLES = {
                 "ADVANCED_MODALS_OF_DEDUCTION",
                 "PREP_PLACE"
             ],
-            "ua": "Вона, мабуть, залишила парасольку в автобусі.",
+            "ua": "Вона, напевно, залишила парасольку в автобусі.",
             "en": [
                 "She must have left her umbrella on the bus.",
                 "She might have forgotten it there."
@@ -60922,7 +60933,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вона, мабуть, не отримала повідомлення.",
+            "ua": "Вона, напевно, не отримала повідомлення.",
             "en": [
                 "She must not have received the message.",
                 "She might have missed the email."
@@ -60933,7 +60944,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ADVANCED_MODALS_OF_DEDUCTION"
             ],
-            "ua": "Вони, мабуть, уже бачили цей фільм.",
+            "ua": "Вони, напевно, уже бачили цей фільм.",
             "en": [
                 "They must have seen this movie already.",
                 "They might have watched it before."
