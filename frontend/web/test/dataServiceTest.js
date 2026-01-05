@@ -403,7 +403,7 @@ function getOverallAccuracy() {
         // const diff = band.cap - bandAcc;
         // if (diff <= 0) break;
 
-        const acc = accOf(lvlAbove, true);
+        const acc = accOf(lvlAbove, false);
         bandAcc += clamp01(acc / 100) * effectiveWidth;
     }
 

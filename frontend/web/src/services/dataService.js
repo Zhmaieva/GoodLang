@@ -428,7 +428,7 @@ export function getOverallAccuracy() {
         const bandWidth = band.cap - band.low;
         const effectiveWidth = bandWidth * 0.75;
 
-        const acc = accOf(lvlAbove, true);
+        const acc = accOf(lvlAbove, false);
         bandAcc += clamp01(acc / 100) * effectiveWidth;
     }
 
