@@ -35,7 +35,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const showEmpty = attemptsLeft > 0;
 
     const cardStyle = {
-        visibility: "visible",
+        visibility: (header && isLoading) ? "hidden" : "visible",
         background: "#fffdf8",
         border: "3px solid #ff6138",
         borderRadius: "20px",
