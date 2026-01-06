@@ -20,11 +20,21 @@ export default function LevelKpi({ mobile, theme }) {
 
     const onRefresh = () => {
         const userLevel = inferUserLevel();
-        const inferred = userLevel?.level || "A1";
+        const overall = getOverallAccuracy();
+        const acc = Number.isFinite(overall?.accuracy) ? overall.accuracy : 0;
+
+        let inferred = userLevel?.level || "A1";
+        if (inferred === 'A1' && acc > 40) {
+            inferred = 'A2';
+        }
+
+        if (inferred !== 'B2' && acc > 85) {
+            inferred = 'B2';
+        }
+
         setLevelInfo(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
 
-        const overall = getOverallAccuracy();
-        setAccuracy(Number.isFinite(overall?.accuracy) ? overall.accuracy : 0);
+        setAccuracy(acc);
         setAttemptsLeft(overall.attemptsLeft ?? 0);
     }
     const onResize = () => setIsMobile(window.innerWidth < 915);

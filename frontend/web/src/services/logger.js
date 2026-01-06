@@ -1,4 +1,4 @@
-const logEnabled = !import.meta.env?.PROD || (import.meta.env.VITE_LOG_DEBUG || false);
+const logEnabled = !import.meta.env?.PROD || false;//(import.meta.env.VITE_LOG_DEBUG || false);
 
 export function logInfo(text) {
     if (!logEnabled)

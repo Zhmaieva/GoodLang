@@ -576,7 +576,11 @@ export default function GoodLangLandingTeaStyleThemed({
                                 type="button"
                                 style={styles.primaryBtn(pressedId === "heroPrimary")}
                                 {...pressHandlers("heroPrimary")}
-                                onClick={() => (onPrimaryCta ? onPrimaryCta() : scrollTo("join"))}
+                                onClick={async () => {
+                                    onPrimaryCta ? onPrimaryCta() : scrollTo("join");
+
+                                    await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_LEARNING);
+                                }}
                             >
                                 {primaryCtaText}
                             </button>
@@ -585,7 +589,11 @@ export default function GoodLangLandingTeaStyleThemed({
                                 type="button"
                                 style={styles.secondaryBtn(pressedId === "heroSecondary")}
                                 {...pressHandlers("heroSecondary")}
-                                onClick={() => (onSecondaryCta ? onSecondaryCta() : scrollTo("about"))}
+                                onClick={async () => {
+                                    onSecondaryCta ? onSecondaryCta() : scrollTo("about");
+
+                                    await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_LEARN_MORE);
+                                }}
                             >
                                 {secondaryCtaText}
                             </button>

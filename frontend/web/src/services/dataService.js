@@ -375,7 +375,7 @@ export function getOverallAccuracy() {
     );
 
     const total = uniqueAttempts.size;
-    const required = 10;
+    const required = 7;
 
     if (total < required) {
         return {
@@ -428,8 +428,11 @@ export function getOverallAccuracy() {
         const bandWidth = band.cap - band.low;
         const effectiveWidth = bandWidth * 0.75;
 
-        const acc = accOf(lvlAbove, false);
-        bandAcc += clamp01(acc / 100) * effectiveWidth;
+        const accFull = accOf(lvlAbove, false);
+        const accCoverage = accOf(lvlAbove, true);
+
+        const accCombined = accFull * 0.60 + accCoverage * 0.40
+        bandAcc += clamp01(accCombined / 100) * effectiveWidth;
     }
 
     // (3) enforce band limits
@@ -490,11 +493,11 @@ export function inferUserLevel() {
         },
 
         // Minimum total attempts required to "trust" a level
-        minTotalAttemptsPerLevel = 5,
+        minTotalAttemptsPerLevel = 4,
         // A rule counts toward coverage if it has at least this many attempts
         minAttemptsPerRule = 1,
         // Need at least this many covered rules in a level
-        minRulesWithAttempts = 5,
+        minRulesWithAttempts = 4,
         // Minimum overall accuracy (percent) in the level to consider it "proficient"
         minAccuracy = 70,
 
@@ -744,12 +747,12 @@ export function inferUserLevel() {
     // Otherwise best overall (soft fallback)
     const bestOverall = [...levelStats].sort(
         (a, b) => (b.accuracy * b.score - a.accuracy * a.score) || (stepLevels.indexOf(b.level) - stepLevels.indexOf(a.level))
-    ).filter(x => x.accuracy >= minAccuracy).find(_=>true);
+    ).filter(x => x.accuracy >= minAccuracy && x.attempts > minTotalAttemptsPerLevel).find(_=>true);
 
     const res = {
-        level: bestOverall.level,
-        decidedBy: "eligibility",
-        confidence: clamp01(bestOverall.score),
+        level: bestOverall?.level ?? 'A1',
+        decidedBy: "highest_accuracy",
+        confidence: clamp01(bestOverall?.score ?? 0),
         levels: levelStats,
     };
 

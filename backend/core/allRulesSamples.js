@@ -72222,7 +72222,7 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "PRESENT_SIMPLE_FREQ"
             ],
-            "ua": "Він зазвичай надає перевагу роботі рано-вранці.",
+            "ua": "Він cкоріш надає перевагу роботі рано-вранці.",
             "en": [
                 "He usually prefers working early in the morning.",
                 "He usually prefers to work early in the morning.",
