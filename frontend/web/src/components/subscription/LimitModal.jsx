@@ -5,6 +5,7 @@ import LoginModal from "./LoginModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import {acc} from "../pages/analyticsLogic.js";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -32,7 +33,7 @@ export const logoStyle = (size) => ({
     boxShadow: `0 2px 0 ${theme.accentDark}`,
 });
 
-export default function LimitModal({ subscribeIntent = false, accountInfo, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
+export default function LimitModal({ subscribeIntent = false, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -40,13 +41,13 @@ export default function LimitModal({ subscribeIntent = false, accountInfo, isLim
 
     const [timeLeft, setTimeLeft] = useState(0);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
-    const [account, setAccount] = useState(accountInfo);
+    const [account, setAccount] = useState(null);
     const [subscribe, setSubscribe] = useState(subscribeIntent);
 
     useEffect(() => {
         loadAccountInfo().then();
         setSubscribe(subscribeIntent);
-    }, [accountInfo, subscribeIntent])
+    }, [subscribeIntent])
 
     const loadAccountInfo = async () => {
         const account = await callAccountInfoApi();
@@ -364,7 +365,7 @@ export default function LimitModal({ subscribeIntent = false, accountInfo, isLim
 
                                 }}
                             >
-                                {accountInfo?.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
+                                {account?.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
                             </button>}
                         </div>
 
