@@ -15,9 +15,6 @@ function normalizePromoCode(raw) {
     const v = raw.trim().toUpperCase();
     if (!v) return null;
 
-    // Soft validation: allow A-Z 0-9 and dashes, 3..32 chars
-    if (!/^[A-Z0-9-]{3,32}$/.test(v)) return null;
-
     return v;
 }
 
