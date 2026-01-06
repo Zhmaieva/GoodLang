@@ -332,7 +332,6 @@ export default function Trainer({
                 weakRules={weakRules} // 🔹 pass down
             />
             <LimitModal
-                accountInfo={account}
                 waitTimeSeconds={waitTimeSeconds}
                 isLimitReached={true}
                 theme={theme}

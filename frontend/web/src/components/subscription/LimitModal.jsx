@@ -5,7 +5,6 @@ import LoginModal from "./LoginModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
-import {acc} from "../pages/analyticsLogic.js";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -45,7 +44,9 @@ export default function LimitModal({ subscribeIntent = false, isLimitReached, th
     const [subscribe, setSubscribe] = useState(subscribeIntent);
 
     useEffect(() => {
-        loadAccountInfo().then();
+        setTimeout(() => {
+            loadAccountInfo().then();
+        }, 200)
         setSubscribe(subscribeIntent);
     }, [subscribeIntent])
 
