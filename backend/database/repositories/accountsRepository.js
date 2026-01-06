@@ -62,10 +62,8 @@ export async function getAccountInfo(accountId, promoCode) {
     if (typeof promoCode === "string" && promoCode.trim()) {
         const normalizedPromo = promoCode.trim().toUpperCase();
 
-        // Soft format validation (optional but recommended)
-        if (/^[A-Z0-9-]{3,32}$/.test(normalizedPromo)) {
-            const { rows: promoRows } = await pool.query(
-                `
+        const { rows: promoRows } = await pool.query(
+            `
                 SELECT
                     account_id,
                     promo_code,
@@ -78,19 +76,18 @@ export async function getAccountInfo(accountId, promoCode) {
                   AND expiration_date > NOW()
                 LIMIT 1
                 `,
-                [normalizedPromo]
-            );
+            [normalizedPromo]
+        );
 
-            if (promoRows[0]) {
-                promo = {
-                    accountId: promoRows[0].account_id,
-                    promoCode: promoRows[0].promo_code,
-                    expirationDate: promoRows[0].expiration_date,
-                    originalPrice: Number(promoRows[0].original_price),
-                    discountedPrice: Number(promoRows[0].discounted_price),
-                    discountPercentage: promoRows[0].discount_percentage,
-                };
-            }
+        if (promoRows[0]) {
+            promo = {
+                accountId: promoRows[0].account_id,
+                promoCode: promoRows[0].promo_code,
+                expirationDate: promoRows[0].expiration_date,
+                originalPrice: Number(promoRows[0].original_price),
+                discountedPrice: Number(promoRows[0].discounted_price),
+                discountPercentage: promoRows[0].discount_percentage,
+            };
         }
     }
 

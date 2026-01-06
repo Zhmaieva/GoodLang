@@ -21,12 +21,6 @@ export function setPromoCode(code) {
 
     const normalized = code.trim().toUpperCase();
 
-    // Soft validation (same rules as backend)
-    if (!/^[A-Z0-9-]{3,32}$/.test(normalized)) {
-        localStorage.removeItem(STORAGE_KEY_PROMO_CODE);
-        return;
-    }
-
     localStorage.setItem(STORAGE_KEY_PROMO_CODE, normalized);
 }
 
