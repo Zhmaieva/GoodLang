@@ -59,7 +59,9 @@ export async function getAccountInfo(accountId, promoCode) {
     // --- Promo lookup (soft) ---
     let promo = null;
 
+    console.log('promo ' + promoCode);
     if (typeof promoCode === "string" && promoCode.trim()) {
+        console.log('promo lookup');
         const normalizedPromo = promoCode.trim().toUpperCase();
 
         const { rows: promoRows } = await pool.query(
@@ -80,6 +82,7 @@ export async function getAccountInfo(accountId, promoCode) {
         );
 
         if (promoRows[0]) {
+            console.log('promo lookup found');
             promo = {
                 accountId: promoRows[0].account_id,
                 promoCode: promoRows[0].promo_code,
