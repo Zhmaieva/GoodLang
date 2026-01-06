@@ -14,11 +14,6 @@ const STORAGE_KEY_PROMO_CODE = "promo_code";
 const CHUNK_SIZE = 100;
 
 export function setPromoCode(code) {
-    if (typeof code !== "string") {
-        localStorage.removeItem(STORAGE_KEY_PROMO_CODE);
-        return;
-    }
-
     const normalized = code.trim().toUpperCase();
 
     localStorage.setItem(STORAGE_KEY_PROMO_CODE, normalized);
