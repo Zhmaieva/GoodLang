@@ -4,10 +4,23 @@ import Stripe from "stripe";
 import express from "express";
 import {updateSubscriptionForAccount} from "../database/repositories/subscriptionRepository.js";
 import {getAccountById} from "../database/repositories/accountsRepository.js";
+import {pool} from "../database/pool.js";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const name = 'payments';
+
+function normalizePromoCode(raw) {
+    if (typeof raw !== "string") return null;
+    const v = raw.trim().toUpperCase();
+    if (!v) return null;
+
+    // Soft validation: allow A-Z 0-9 and dashes, 3..32 chars
+    if (!/^[A-Z0-9-]{3,32}$/.test(v)) return null;
+
+    return v;
+}
+
 
 export const paymentsController = {
     mapRoutes: function (app) {
@@ -42,37 +55,75 @@ export const paymentsController = {
                 const account = await getAccountById(accountId);
 
                 if (!accountId) {
-                    return res.status(400).json({error: "Missing accountId"});
+                    return res.status(400).json({ error: "Missing accountId" });
                 }
 
-                const session = await stripe.checkout.sessions.create({
+                // 1) Soft-validate promo code string (format only)
+                const promoCodeStr = normalizePromoCode(req.body?.promoCode);
+
+                let discounts = undefined;
+                let allowPromotionCodes = true;
+
+
+                if (promoCodeStr) {
+                    // 2) Hard-validate it in your DB (must belong to this account and not be expired)
+                    const { rows } = await pool.query(
+                        `
+                      SELECT promo_code
+                      FROM promo_codes
+                      WHERE promo_code = $1
+                        AND expiration_date > NOW()
+                      LIMIT 1
+                    `,
+                        [promoCodeStr]
+                    );
+
+                    if (rows.length > 0) {
+                        // 3) Resolve Stripe promotion_code id by code string
+                        const list = await stripe.promotionCodes.list({
+                            code: promoCodeStr,
+                            active: true,
+                            limit: 1,
+                        }); // Stripe supports listing promotion codes and filtering by active. :contentReference[oaicite:2]{index=2}
+
+                        const promo = list.data?.[0];
+
+                        if (promo?.id) {
+                            discounts = [{ promotion_code: promo.id }];
+                            allowPromotionCodes = false;
+                        }
+                    }
+                }
+
+                const sessionParams = {
                     ui_mode: "embedded",
                     mode: "subscription",
                     return_url: `${process.env.FRONTEND_URL}/payment/success`,
                     client_reference_id: accountId,
                     customer_email: account.email,
-                    allow_promotion_codes: true,
-                    line_items: [
-                        {
-                            price: process.env.STRIPE_PRICE_ID,
-                            quantity: 1,
-                        },
-                    ],
+                    line_items: [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }],
                     subscription_data: {
-                        metadata: {
-                            accountId: accountId,
-                        }
-                    }
-                });
+                        metadata: { accountId },
+                    },
+                };
 
-                return res.json({
-                    clientSecret: session.client_secret
-                });
+                // If promo pre-applied -> use discounts ONLY (no allow_promotion_codes)
+                if (discounts) {
+                    sessionParams.discounts = discounts;
+                } else {
+                    // If no promo pre-applied -> allow entering a code manually
+                    sessionParams.allow_promotion_codes = true;
+                }
+
+                const session = await stripe.checkout.sessions.create(sessionParams);
+
+                return res.json({ clientSecret: session.client_secret });
             } catch (err) {
                 console.error("Stripe error:", err);
-                res.status(500).json({error: "Failed to create session"});
+                res.status(500).json({ error: "Failed to create session" });
             }
         });
+
     },
 
     mapRawJsonRoutes: function (app) {

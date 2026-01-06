@@ -36,7 +36,7 @@ export const accountsController = {
 
         app.get(`/accounts/info`, authMiddleware, async (req, res, next) => {
             try {
-                const account = await getAccountInfo(req.user.id);
+                const account = await getAccountInfo(req.user.id, req.query.promo_code);
                 res.json(account);
             } catch (e) {
                 next(e);
@@ -56,12 +56,12 @@ export const accountsController = {
         });
 
         // Request a verification code
-        app.post(`/accounts/send-promo-code`, async (req, res, next) => {
+        app.post(`/accounts/send-promo-code`, authMiddleware, async (req, res, next) => {
             try {
                 const { email } = req.body;
                 if (!email) return res.status(400).json({ error: "Email required" });
 
-                await sendPromoCode(email.toLowerCase().trim());
+                await sendPromoCode(req.user.id, email.toLowerCase().trim());
 
                 res.json({ message: "Verification code sent" });
             } catch (e) {

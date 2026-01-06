@@ -1,5 +1,7 @@
 import { pool } from '../pool.js';
 import {sendPromoEmail, sendVerificationEmail} from "../../core/emailSender.js";
+import {getLifetime10CouponId, stripe} from "../../integrations/stripeService.js";
+import {nanoid} from "nanoid";
 
 /**
  * Creates a new account without requiring an email.
@@ -20,30 +22,84 @@ export async function createAccount() {
 }
 
 /**
- * Get account info by account ID
+ * Get account info by account ID (+ optional promo info by promo code)
  * @param {string} accountId
- * @returns {Promise<{email: string, status: 'free'|'paid'|'attention'}>}
+ * @param {string=} promoCode
+ * @returns {Promise<{
+ *   email: string|null,
+ *   status: 'free'|'paid'|'attention',
+ *   isTrial: boolean,
+ *   trialEndsOn: any,
+ *   promo: null | {
+ *     accountId: string,
+ *     promoCode: string,
+ *     expirationDate: any,
+ *     originalPrice: number,
+ *     discountedPrice: number,
+ *     discountPercentage: number
+ *   }
+ * }>}
  */
-export async function getAccountInfo(accountId) {
+export async function getAccountInfo(accountId, promoCode) {
     const { rows } = await pool.query(
-        'SELECT email, status, is_trial, trial_ended_at FROM accounts WHERE id = $1',
+        "SELECT email, status, is_trial, trial_ended_at FROM accounts WHERE id = $1",
         [accountId]
     );
 
     if (!rows[0]) {
         return {
             email: null,
-            status: 'free', // default fallback
+            status: "free",
             isTrial: false,
             trialEndsOn: null,
+            promo: null,
         };
+    }
+
+    // --- Promo lookup (soft) ---
+    let promo = null;
+
+    if (typeof promoCode === "string" && promoCode.trim()) {
+        const normalizedPromo = promoCode.trim().toUpperCase();
+
+        // Soft format validation (optional but recommended)
+        if (/^[A-Z0-9-]{3,32}$/.test(normalizedPromo)) {
+            const { rows: promoRows } = await pool.query(
+                `
+                SELECT
+                    account_id,
+                    promo_code,
+                    expiration_date,
+                    original_price,
+                    discounted_price,
+                    discount_percentage
+                FROM promo_codes
+                WHERE promo_code = $1
+                  AND expiration_date > NOW()
+                LIMIT 1
+                `,
+                [normalizedPromo]
+            );
+
+            if (promoRows[0]) {
+                promo = {
+                    accountId: promoRows[0].account_id,
+                    promoCode: promoRows[0].promo_code,
+                    expirationDate: promoRows[0].expiration_date,
+                    originalPrice: Number(promoRows[0].original_price),
+                    discountedPrice: Number(promoRows[0].discounted_price),
+                    discountPercentage: promoRows[0].discount_percentage,
+                };
+            }
+        }
     }
 
     return {
         email: rows[0].email,
-        status: rows[0].status || 'free',
+        status: rows[0].status || "free",
         isTrial: rows[0].is_trial || false,
         trialEndsOn: rows[0].trial_ended_at,
+        promo,
     };
 }
 
@@ -108,33 +164,102 @@ export async function sendVerificationCode(email) {
  * Soft-saves email to inquiries.
  * Does NOT create sign-in links.
  */
-export async function sendPromoCode(email) {
-    // 0) Basic email validation
-    if (typeof email !== 'string') return;
+export async function sendPromoCode(accountId, email) {
+    // 0) Basic validation
+    if (typeof email !== "string" || typeof accountId !== "string") return;
 
     const normalizedEmail = email.trim().toLowerCase();
-
-    // Simple, safe email regex (good enough for promo flows)
     const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!EMAIL_REGEX.test(normalizedEmail)) return;
 
-    if (!EMAIL_REGEX.test(normalizedEmail)) {
-        return;
-    }
-
-    // 1) Soft write to inquiries (lead capture)
-    await pool.query(
+    // 1) Insert into inquiries ONLY if new; if already exists -> do nothing (no email)
+    const ins = await pool.query(
         `
-            INSERT INTO inquiries (email)
-            VALUES ($1)
-            ON CONFLICT (email) DO NOTHING
-        `,
+      INSERT INTO inquiries (email)
+      VALUES ($1)
+      ON CONFLICT (email) DO NOTHING
+      RETURNING email
+    `,
         [normalizedEmail]
     );
 
-    // 2) Send promo email (marketing only)
-    await sendPromoEmail(normalizedEmail);
+    const isNewInquiry = ins.rows.length > 0;
+    if (!isNewInquiry) return;
+
+    // 2) Reuse existing non-expired promo_code for this account if present
+    const { rows: existing } = await pool.query(
+        `
+      SELECT promo_code, expiration_date
+      FROM promo_codes
+      WHERE account_id = $1
+        AND expiration_date > NOW()
+      ORDER BY expiration_date DESC
+      LIMIT 1
+    `,
+        [accountId]
+    );
+
+    let promoCode = existing[0]?.promo_code ?? null;
+    const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000);
+
+    // 3) If none, create a new Stripe promotion code (expires in 24h) tied to a lifetime 10% coupon
+    if (!promoCode) {
+        const couponId = await getLifetime10CouponId();
+
+        // Your public-facing code (keep it simple and unique)
+        promoCode = `GL10-${nanoid(8).toUpperCase()}`;
+
+
+        // Create Stripe promotion code (the redeemable thing customers type)
+        await stripe.promotionCodes.create({
+            promotion: {
+                type: "coupon",
+                coupon: couponId,
+            },
+            code: promoCode,
+            expires_at: Math.floor(expiresAt.getTime() / 1000),
+            metadata: {
+                account_id: accountId,
+                email: normalizedEmail,
+            },
+        });
+
+
+        const { original, discounted } = calcPrices();
+
+        // Save to DB
+        await pool.query(
+            `
+        INSERT INTO promo_codes (
+          account_id,
+          promo_code,
+          expiration_date,
+          original_price,
+          discounted_price,
+          discount_percentage
+        )
+        VALUES ($1,$2,$3,$4,$5,$6)
+      `,
+            [accountId, promoCode, expiresAt, original, discounted, 10]
+        );
+    }
+
+    // 4) Send the promo email (now we definitely have promoCode)
+    await sendPromoEmail(normalizedEmail, promoCode, expiresAt);
 }
 
+function calcPrices() {
+    // Avoid float money math by using cents
+    const originalCents = 14999; // 149.99
+    const discountedCents = Math.round(originalCents * 0.9); // 10% off => 13499 cents => 134.99
+    const original = Number((originalCents / 100).toFixed(2));
+    const discounted = Number((discountedCents / 100).toFixed(2));
+    return { original, discounted };
+}
+
+function toUnixSeconds(date) {
+    return Math.floor(date.getTime() / 1000);
+}
 
 /**
  * Verify code for email and return account id if valid

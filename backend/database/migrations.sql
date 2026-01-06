@@ -548,3 +548,39 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: add_promo_codes_table
+-- Description: Creates promo_codes table linked to accounts
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_promo_codes_table'
+        ) THEN
+
+            CREATE TABLE IF NOT EXISTS promo_codes (
+                                                       id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                                                       account_id UUID NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,
+                                                       promo_code VARCHAR(100) NOT NULL,
+                                                       expiration_date TIMESTAMPTZ NOT NULL,
+                                                       original_price NUMERIC NOT NULL,
+                                                       discounted_price NUMERIC NOT NULL,
+                                                       discount_percentage INTEGER NOT NULL,
+                                                       created_at TIMESTAMPTZ NOT NULL DEFAULT (NOW() AT TIME ZONE 'UTC'),
+                                                       UNIQUE (promo_code)
+            );
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_promo_codes_table', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+

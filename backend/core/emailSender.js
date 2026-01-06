@@ -89,19 +89,39 @@ export function sendVerificationEmail(to, code) {
     });
 }
 
+function pluralizeHours(n) {
+    const mod10 = n % 10;
+    const mod100 = n % 100;
+
+    if (mod100 >= 11 && mod100 <= 14) return "годин";
+    if (mod10 === 1) return "годину";
+    if (mod10 >= 2 && mod10 <= 4) return "години";
+    return "годин";
+}
+
+
 /**
  * Send promo code email
  * @param {string} to - recipient email
+ * @param {string} code - promo code
+ * @param {Date} expiresAt - expiration datetime
  */
-export function sendPromoEmail(to) {
-    const SUBSCRIBE_URL = `${process.env.FRONTEND_URL}?subscribe=true`;
-    const PROMO_CODE = "WELCOME26";
+export function sendPromoEmail(to, code, expiresAt) {
+    const SUBSCRIBE_URL = `${process.env.FRONTEND_URL}?subscribe=true&code=${code}`;
+
+    const now = Date.now();
+    const expiresMs = expiresAt instanceof Date ? expiresAt.getTime() : Date.parse(expiresAt);
+    const hoursLeft = Math.max(1, Math.ceil((expiresMs - now) / (1000 * 60 * 60)));
+
+    const hoursWord = pluralizeHours(hoursLeft);
 
     return transporter.sendMail({
         from: `"GoodLang" <${process.env.SMTP_FROM}>`,
         to,
         subject: "Твій промо-код для GoodLang",
-        text: `Твій промо-код: ${PROMO_CODE}\nАктивуй тут: ${SUBSCRIBE_URL}`,
+        text: `Твій промо-код: ${code}
+Діє ще ${hoursLeft} ${hoursWord}.
+Активуй тут: ${SUBSCRIBE_URL}`,
         html: `
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
   <tr>
@@ -115,16 +135,16 @@ export function sendPromoEmail(to) {
               font-weight:800;
               color:#3a2a1d;
             ">
-              ${PROMO_CODE}
+              ${code}
             </h2>
 
             <p style="
-              margin:8px 0 16px 0;
+              margin:8px 0 8px 0;
               font-size:16px;
               font-weight:500;
               color:#3a2a1d;
             ">
-              🎁 Це твій промо-код для <strong>GoodLang</strong>
+              🎁 Це твій промо-код для <strong>GoodLang</strong> ⏳ Діє ще ${hoursLeft} ${hoursWord}
             </p>
 
             <p style="
@@ -132,7 +152,7 @@ export function sendPromoEmail(to) {
               font-size:15px;
               color:#3a2a1d;
             ">
-              Активуй доступ за посиланням:
+              Застосуй код за посиланням:
             </p>
 
             <a
@@ -192,3 +212,4 @@ export function sendPromoEmail(to) {
         console.log(`Promo email sent to ${to}: ${info.messageId}`);
     });
 }
+
