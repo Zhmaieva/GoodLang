@@ -5,6 +5,7 @@ import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
 import {logInfo} from "../../services/logger.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import {setPromoCode} from "../../services/dataService.js";
 
 export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
@@ -12,6 +13,7 @@ export default function AccountStatusButton({ theme }) {
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
+    const [subscribeIntent, setSubscribeIntent] = useState(false);
 
     const effectRan = useRef(false); // <-- prevents double run
 
@@ -56,19 +58,29 @@ export default function AccountStatusButton({ theme }) {
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const shouldOpenSubscribe = params.get("subscribe") === "true";
-
+        const promoCode = params.get("code");
 
         if (shouldOpenSubscribe && account) {
-            if (account?.status !== 'paid')
-                setLimitModalOpen(true);
 
-            // Optional: remove param so it doesn't reopen on refresh
+            setSubscribeIntent(true);
+
+            // If promo_code exists and not yet loaded into account → refetch with promo
+            if (promoCode) {
+                setPromoCode(promoCode);
+            }
+
+            if (account?.status !== "paid") {
+                setLimitModalOpen(true);
+            }
+
+            // Remove only `subscribe`, keep promo_code if you want it reusable
             params.delete("subscribe");
+            params.delete("code");
             const next = params.toString();
             const newUrl = `${window.location.pathname}${next ? `?${next}` : ""}${window.location.hash || ""}`;
             window.history.replaceState({}, "", newUrl);
         }
-    }, [account])
+    }, [account]);
 
     function handleClick() {
         if (!account?.status) return;
@@ -144,6 +156,7 @@ export default function AccountStatusButton({ theme }) {
 
             {
                 account && <LimitModal
+                    subscribeIntent={subscribeIntent}
                     accountInfo={account}
                     isLimitReached={false}
                     theme={theme}

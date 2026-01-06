@@ -9,8 +9,35 @@ const STORAGE_KEY_LAST_SYNC = "answers_lastSync";
 const STORAGE_KEY_SEED_UPDATED = "seed_updatedAt";
 const STORAGE_KEY_DEVICE_ID = "device_id";
 const STORAGE_KEY_PAYMENT_INTENT_ENABLED = "payment_intent_enabled";
+const STORAGE_KEY_PROMO_CODE = "promo_code";
 
 const CHUNK_SIZE = 100;
+
+export function setPromoCode(code) {
+    if (typeof code !== "string") {
+        localStorage.removeItem(STORAGE_KEY_PROMO_CODE);
+        return;
+    }
+
+    const normalized = code.trim().toUpperCase();
+
+    // Soft validation (same rules as backend)
+    if (!/^[A-Z0-9-]{3,32}$/.test(normalized)) {
+        localStorage.removeItem(STORAGE_KEY_PROMO_CODE);
+        return;
+    }
+
+    localStorage.setItem(STORAGE_KEY_PROMO_CODE, normalized);
+}
+
+export function getPromoCode() {
+    const value = localStorage.getItem(STORAGE_KEY_PROMO_CODE);
+    return value || null;
+}
+
+export function clearPromoCode() {
+    localStorage.removeItem(STORAGE_KEY_PROMO_CODE);
+}
 
 export function setPaymentIntent(value) {
     localStorage.setItem(STORAGE_KEY_PAYMENT_INTENT_ENABLED, value);

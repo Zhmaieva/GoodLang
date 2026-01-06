@@ -131,7 +131,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                         fontSize: "1rem",
                                         textAlign: "left"
                                     }}>
-                                        Підписка <strong>₴149.99 / місяць</strong>
+                                        Щомісячна підписка
                                     </p>
                                 }
                                 {

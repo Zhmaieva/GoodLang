@@ -32,7 +32,7 @@ export const logoStyle = (size) => ({
     boxShadow: `0 2px 0 ${theme.accentDark}`,
 });
 
-export default function LimitModal({ accountInfo, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
+export default function LimitModal({ subscribeIntent = false, accountInfo, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -41,7 +41,12 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
     const [timeLeft, setTimeLeft] = useState(0);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [account, setAccount] = useState(accountInfo);
+    const [subscribe, setSubscribe] = useState(subscribeIntent);
 
+    useEffect(() => {
+        loadAccountInfo().then();
+        setSubscribe(subscribeIntent);
+    }, [accountInfo, subscribeIntent])
 
     const loadAccountInfo = async () => {
         const account = await callAccountInfoApi();
@@ -72,6 +77,29 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
 
         return () => clearInterval(interval);
     }, [open, isLimitReached, waitTimeSeconds, onCloseHandler]);
+
+    function formatMoneyUAH(n) {
+        const v = Number(n);
+        if (!Number.isFinite(v)) return "₴149.99";
+        return `₴${v.toFixed(2)}`;
+    }
+
+    function hoursLeftFromExpiration(expirationDate) {
+        if (!expirationDate) return null;
+        const ms = new Date(expirationDate).getTime() - Date.now();
+        if (!Number.isFinite(ms)) return null;
+        return Math.max(0, Math.ceil(ms / (1000 * 60 * 60)));
+    }
+
+    function pluralizeHoursUk(n) {
+        const mod10 = n % 10;
+        const mod100 = n % 100;
+
+        if (mod100 >= 11 && mod100 <= 14) return "годин";
+        if (mod10 === 1) return "годину";
+        if (mod10 >= 2 && mod10 <= 4) return "години";
+        return "годин";
+    }
 
     function formatTime(sec) {
         const h = Math.floor(sec / 3600);
@@ -119,6 +147,15 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
             setLoading(false);
         }
     }
+
+    const promo = account?.promo ?? null;
+
+    const basePrice = promo?.originalPrice ?? 149.99;
+    const finalPrice = promo?.discountedPrice ?? (149.99 * 0.9);
+    const percent = promo?.discountPercentage ?? 10;
+
+    const hoursLeft = promo?.expirationDate ? hoursLeftFromExpiration(promo.expirationDate) : null;
+    const hoursWord = hoursLeft != null ? pluralizeHoursUk(hoursLeft) : null;
 
     return (
         <>
@@ -201,15 +238,42 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                 }}>
                                     {"Навчання на повну силу"}
                                 </h2>
-                                 <p style={{
-                                    marginBottom: 16,
+                                <p style={{
+                                    marginBottom: 0,
                                     marginTop: 8,
                                     marginLeft: 0,
                                     color: theme.text,
                                     fontSize: "1rem",
                                     textAlign: "left"
                                 }}>
-                                    Підписка <strong>₴149.99 / місяць</strong>
+                                    Підписка {" "}
+                                    {!promo && <strong>₴149.99 / місяць</strong>}
+
+                                    {promo && (
+                                        <>
+            <span style={{
+                textDecoration: "line-through",
+                color: theme.muted,
+                fontWeight: 800,
+            }}>
+                {formatMoneyUAH(basePrice)}
+            </span> <br/>
+
+                                            <strong>−{percent}%: {formatMoneyUAH(finalPrice)} / місяць
+                                            </strong>
+
+                                            {hoursLeft != null && (
+                                                <span style={{
+                                                    display: "block",
+                                                    marginTop: 6,
+                                                    color: theme.muted,
+                                                    fontSize: "0.95rem",
+                                                    fontWeight: 700
+                                                }}>Пропозиція діятиме ще {hoursLeft} {hoursWord}
+                </span>
+                                            )}
+                                        </>
+                                    )}
                                 </p>
                             </div>
 
@@ -244,6 +308,10 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                     <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
                                     Пріоритетна підтримка
                                 </li>
+                                <li>
+                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
+                                    Можеш завжди скасувати
+                                </li>
                             </ul>
                         </div>
 
@@ -269,7 +337,7 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
                                 {loading ? "Завантаження…" : "Придбати підписку"}
                             </button>
 
-                            <button
+                            {!subscribeIntent && <button
                                 onClick={async () => {
                                     if (!account)
                                         await loadAccountInfo().then();
@@ -296,8 +364,8 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
 
                                 }}
                             >
-                                {accountInfo?.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися" }
-                            </button>
+                                {accountInfo?.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
+                            </button>}
                         </div>
 
 

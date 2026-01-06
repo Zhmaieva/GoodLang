@@ -26,7 +26,7 @@ export default function PaymentSuccess() {
                             fontSize: "18pt",
                             fontWeight: 800
                         }}>
-                            Почато підписку
+                            Все cупер
                         </h2>
                         <p style={{
                             marginBottom: 16,
@@ -37,7 +37,7 @@ export default function PaymentSuccess() {
                             fontWeight: 500,
                             textAlign: "left"
                         }}>
-                            Підписка <strong>₴149.99 / місяць</strong>
+                            Щомісячна підписка
                         </p>
                     </div>
 

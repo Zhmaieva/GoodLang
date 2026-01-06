@@ -1,5 +1,6 @@
 import {getToken} from "./accountService.js";
 import {logError} from "./logger.js";
+import {getPromoCode} from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
@@ -9,8 +10,12 @@ export async function callCheckoutApi() {
     const res = await fetch(url, {
         method: "POST",
         headers: {
+            "Content-Type": "application/json",
             'Authorization': `Bearer ${await getToken()}`,
-        }
+        },
+        body: JSON.stringify({
+            promoCode: getPromoCode()
+        })
     });
 
     const data = await res.json();
@@ -79,7 +84,11 @@ export async function callSignUpApi(params) {
 }
 
 export async function callAccountInfoApi() {
-    const url = `${API_BASE}/accounts/info`;
+    const params = new URLSearchParams();
+    const promoCode = getPromoCode();
+    if (promoCode) params.set("promo_code", promoCode);
+
+    const url = `${API_BASE}/accounts/info${params.toString() ? `?${params.toString()}` : ""}`;
 
     const res = await fetch(url, {
         headers: {
@@ -133,7 +142,10 @@ export async function callManageSubscriptionApi() {
 export async function callSendPromoCodeApi({ email }) {
     const res = await fetch(`${API_BASE}/accounts/send-promo-code`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+            'Authorization': `Bearer ${await getToken()}`,
+        },
         body: JSON.stringify({ email }),
     });
 
