@@ -1,9 +1,10 @@
 import React, {useCallback, useEffect, useRef, useState} from "react";
-import {callAccountInfoApi} from "../../services/api.js";
+import {callAccountInfoApi, callAccountVerifyApi} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
 import {logInfo} from "../../services/logger.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
@@ -71,6 +72,8 @@ export default function AccountStatusButton({ theme }) {
 
     function handleClick() {
         if (!account?.status) return;
+
+        callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_SUBSCRIPTION).then();
 
         if (account?.status === "free") {
             setLimitModalOpen(true);

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import {callAccountVerifyApi} from "../../services/api.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function LevelSwitch({
                                         level,
@@ -37,24 +39,29 @@ export default function LevelSwitch({
     });
 
     const options = [
-        { value: "managed", label: "адаптивний" },
-        { value: "beginner", label: "початківець" },
-        { value: "intermediate", label: "середній" },
-        { value: "advanced", label: "просунутий" },
+        { value: "managed", label: "адаптивний", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADAPTIVE },
+        { value: "beginner", label: "початківець", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_BEGINNER },
+        { value: "intermediate", label: "середній", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_AVERAGE },
+        { value: "advanced", label: "просунутий", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADVANCED },
     ];
 
     const selectedOption = options.find(o => o.value === level);
 
-    const handleClick = (value) => {
+    const handleClick = async (value, actionType) => {
         if (!expanded) {
             // First click → expand
             setExpanded(true);
+
+            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY);
+
             return;
         }
 
         // If expanded, selecting an option → collapse + apply
         if (!loading) {
             onLevelChange(value);
+
+            await callAccountVerifyApi(actionType);
         }
         setExpanded(false);
     };
@@ -63,7 +70,7 @@ export default function LevelSwitch({
 
     return (
         <div style={wrap} role="group" aria-label="Вибір рівня">
-            {visibleOptions.map(({ value, label }) => (
+            {visibleOptions.map(({ value, label, actionType }) => (
                 <button
                     key={value}
                     onMouseEnter={() => setHovered(value)}
@@ -71,7 +78,7 @@ export default function LevelSwitch({
                     style={btn(level === value, hovered === value)}
                     aria-pressed={level === value}
                     disabled={loading}
-                    onClick={() => handleClick(value)}
+                    onClick={() => handleClick(value, actionType)}
                 >
                     {label !== 'Рівень' && !expanded && `Рівень складності: ${label}`}
                     {label === 'Рівень' && !expanded && `Рівень складності`}

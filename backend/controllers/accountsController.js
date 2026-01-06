@@ -7,6 +7,7 @@ import {
 import jwt from "jsonwebtoken";
 import {SECRET_KEY} from "../core/constants.js";
 import {authMiddleware} from "../middleware/authMiddleware.js";
+import {recordAction} from "../database/repositories/accountLogRepository.js";
 
 const name = 'accounts';
 
@@ -37,6 +38,18 @@ export const accountsController = {
             try {
                 const account = await getAccountInfo(req.user.id);
                 res.json(account);
+            } catch (e) {
+                next(e);
+            }
+        });
+
+        app.get(`/accounts/verify`, authMiddleware, async (req, res, next) => {
+            try {
+                const { action_type } = req.query;
+
+                await recordAction(req.user.id, action_type);
+
+                res.json({verified: true});
             } catch (e) {
                 next(e);
             }

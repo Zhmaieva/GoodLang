@@ -3,8 +3,9 @@ import LevelSwitch from "./training/LevelSwitch.jsx";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 import AccuracyKpi from "./training/AccuracyKpi.jsx";
 import {PrimaryButton} from "./Buttons.jsx";
-import TermsOfUseModal from "./subscription/TermsOfUseModal.jsx";
 import FaqModal from "./subscription/FaqModal.jsx";
+import {callAccountVerifyApi} from "../services/api.js";
+import {ACTION_TYPES} from "../utils/constants.js";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
@@ -179,8 +180,9 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={styles.titleWrap}>
                         <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
                             <h1 style={styles.h1}>GoodLang</h1>
-                            <PrimaryButton theme={theme} onClick={() => {
+                            <PrimaryButton theme={theme} onClick={async () => {
                                 setFaqVisible(true);
+                                await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_FAQ);
                             }}>FAQ</PrimaryButton>
                         </div>
                         <div style={styles.sub}>

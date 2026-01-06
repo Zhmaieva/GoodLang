@@ -1,4 +1,5 @@
 import {getToken} from "./accountService.js";
+import {logError} from "./logger.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
@@ -91,6 +92,22 @@ export async function callAccountInfoApi() {
     if (!res.ok) throw new Error("Server error: " + res.status);
 
     return data;
+}
+
+export async function callAccountVerifyApi(actionType) {
+    try {
+        const url = `${API_BASE}/accounts/verify?action_type=${actionType}`;
+
+        const res = await fetch(url, {
+            headers: {
+                'Authorization': `Bearer ${await getToken()}`,
+            },
+        });
+
+        await res.json();
+    } catch (e) {
+        logError(e);
+    }
 }
 
 

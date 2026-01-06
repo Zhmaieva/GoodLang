@@ -3,11 +3,12 @@ import FooterBar from "../FooterBar.jsx";
 import {PrimaryButton} from "../Buttons.jsx";
 import FaqModal from "../subscription/FaqModal.jsx";
 import {useNavigate} from "react-router-dom";
-import {callSendPromoCodeApi} from "../../services/api.js";
+import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../services/gaService.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 /**
  * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
@@ -129,8 +130,9 @@ export default function GoodLangLandingTeaStyleThemed({
     useEffect(() => {
         if (getCookieConsent()) return;
 
-        const t = setTimeout(() => {
+        const t = setTimeout(async () => {
             setCookieOpen(true);
+            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
         }, 4000); // ⏱ 4 seconds after load
 
         return () => clearTimeout(t);
@@ -447,8 +449,11 @@ export default function GoodLangLandingTeaStyleThemed({
     }, [theme, w, maxWidth]);
 
     const navigate = useNavigate();
-    const handleStart = () => {
+    const handleStart = async () => {
         trackMetaCustomEvent("StartUsing");
+
+        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
+
         navigate('/');
     }
 
@@ -521,8 +526,9 @@ export default function GoodLangLandingTeaStyleThemed({
 
                             <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
                                 <h1 style={styles.h1}>GoodLang</h1>
-                                <PrimaryButton theme={theme} onClick={() => {
+                                <PrimaryButton theme={theme} onClick={async () => {
                                     setFaqVisible(true);
+                                    await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_FAQ);
                                 }}>FAQ</PrimaryButton>
                             </div>
 
@@ -734,21 +740,27 @@ export default function GoodLangLandingTeaStyleThemed({
                 {cookieOpen && !touOpen && (
                     <CookieConsentModal
                         theme={theme}
-                        onAccept={() => {
+                        onAccept={async () => {
                             acceptCookies();
                             ensureAnalytics();
                             trackPageView(window.location.pathname);
 
+                            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
+
                             setCookieOpen(false);
                         }}
-                        onReject={() => {
+                        onReject={async () => {
                             rejectCookies();
                             setCookieOpen(false);
+
+                            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
                         }}
-                        onOpenPolicy={() => {
+                        onOpenPolicy={async () => {
                             // reuse your existing Terms modal
                             // this keeps UX consistent
                             setTouOpen(true);
+
+                            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
                             // or open TermsOfUseModal if you prefer
                         }}
                     />

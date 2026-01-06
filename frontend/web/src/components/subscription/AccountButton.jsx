@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import LoginModal from "./LoginModal.jsx";
-import { callAccountInfoApi } from "../../services/api.js";
+import {callAccountInfoApi, callAccountVerifyApi} from "../../services/api.js";
 import {syncWithServer} from "../../services/dataService.js";
 import {emit, off} from "../../services/events.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function AccountButton({ theme, mobile }) {
     const [account, setAccount] = useState(null);
@@ -32,6 +33,7 @@ export default function AccountButton({ theme, mobile }) {
 
     function handleClick() {
         syncWithServer().then();
+        callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_SUBSCRIPTION).then();
         setLoginModalOpen(true);
     }
 

@@ -5,6 +5,8 @@ import Header from "../Header";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import Trainer from "../training/Trainer.jsx";
 import FooterBar from "../FooterBar.jsx";
+import {callAccountVerifyApi} from "../../services/api.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function HomePage({ theme }) {
 
@@ -43,7 +45,10 @@ export default function HomePage({ theme }) {
     };
 
     const navigate = useNavigate();
-    const handleAnalyticsClick = () => navigate("/analytics");
+    const handleAnalyticsClick = async () => {
+        callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_ANALYTICS).then();
+        navigate("/analytics");
+    }
 
     return (
         <AppShell theme={theme}>

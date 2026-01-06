@@ -2,13 +2,14 @@ import TaskCard from "./TaskCard.jsx";
 import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getAllStatistics, getOverallAccuracy, getSeed, saveSeed} from "../../services/dataService.js";
-import {callAccountInfoApi, callTranslateAPI} from "../../services/api.js";
+import {callAccountInfoApi, callAccountVerifyApi, callTranslateAPI} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import {getTrainingLevel} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
 import {logInfo} from "../../services/logger.js";
 import {trackMetaCustomEvent} from "../../services/gaService.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function Trainer({
                                     theme,
@@ -64,6 +65,8 @@ export default function Trainer({
     const loadAccount = async () => {
         const data = await callAccountInfoApi();
         setAccount(data);
+
+        await callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_TRAINER);
     }
 
     useEffect(() => {

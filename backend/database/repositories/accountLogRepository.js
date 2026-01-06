@@ -75,3 +75,15 @@ export async function recordTranslationUsage(accountId) {
     const date = new Date();
     await pool.query(query, [accountId, ACTION_TYPES.TRANSLATION_CALL, date]);
 }
+
+/**
+ * Record a translation usage
+ */
+export async function recordAction(accountId, actionType) {
+    const query = `
+        INSERT INTO account_log (account_id, action_type, created_at)
+        VALUES ($1, $2, $3)
+    `;
+    const date = new Date();
+    await pool.query(query, [accountId, actionType, date]);
+}

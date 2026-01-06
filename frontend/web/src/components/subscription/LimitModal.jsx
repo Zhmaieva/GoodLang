@@ -1,9 +1,10 @@
 import React, {useState, useRef, useEffect, useCallback} from "react";
-import {callAccountInfoApi, callCheckoutApi} from "../../services/api.js";
+import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -84,6 +85,8 @@ export default function LimitModal({ accountInfo, isLimitReached, theme, open, o
     async function handleSubscribe() {
         try {
             setLoading(true);
+
+            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_WANT_PREMIUM);
 
             if (!account)
                 await loadAccountInfo();
