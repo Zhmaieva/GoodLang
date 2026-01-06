@@ -69,16 +69,18 @@ export default function AccountStatusButton({ theme }) {
                 setPromoCode(promoCode);
             }
 
-            if (account?.status !== "paid") {
-                setLimitModalOpen(true);
-            }
+            setTimeout(() => {
+                if (account?.status !== "paid") {
+                    setLimitModalOpen(true);
+                }
 
-            // Remove only `subscribe`, keep promo_code if you want it reusable
-            params.delete("subscribe");
-            params.delete("code");
-            const next = params.toString();
-            const newUrl = `${window.location.pathname}${next ? `?${next}` : ""}${window.location.hash || ""}`;
-            window.history.replaceState({}, "", newUrl);
+                // Remove only `subscribe`, keep promo_code if you want it reusable
+                params.delete("subscribe");
+                params.delete("code");
+                const next = params.toString();
+                const newUrl = `${window.location.pathname}${next ? `?${next}` : ""}${window.location.hash || ""}`;
+                window.history.replaceState({}, "", newUrl);
+            }, 200)
         }
     }, [account]);
 
