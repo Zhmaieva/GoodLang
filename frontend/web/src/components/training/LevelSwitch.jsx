@@ -25,17 +25,20 @@ export default function LevelSwitch({
         padding: compact ? "8px 14px" : "10px 16px",
         fontWeight: 800,
         fontSize: "1rem",
-        fontFamily: "Nunito, system-ui, sans-serif",
         lineHeight: 1,
         borderRadius: 999,
         cursor: loading ? "not-allowed" : "pointer",
         background: selected ? theme.green : "#fffdf8",
         color: selected ? "#fff" : theme.text,
-        border: `2px solid ${selected ? theme.green : theme.accent}`,
-        boxShadow: `2px 2px 0 ${selected ? theme.greenDark : theme.accentDark}`,
+        border: "2px solid rgba(0,0,0,0.12)",
+        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
+        fontFamily: "Nunito, system-ui, sans-serif",
+        whiteSpace: "nowrap",
+        opacity: loading ? 0.7 : 1,
+
         transform: isHover ? "translateY(1px)" : "none",
-        opacity: loading ? 0.65 : 1,
-        transition: "transform 120ms ease",
+        filter: isHover ? "brightness(0.95)" : "none",
+        transition: "transform 120ms ease, filter 120ms ease",
     });
 
     const options = [

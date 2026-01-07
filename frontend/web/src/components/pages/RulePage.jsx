@@ -158,10 +158,28 @@ export default function RulePage({ data, theme }) {
                     subtitle={<>{data.title}</>}
                     right={
                         <button style={{
+                            appearance: "none",
+                            padding: "10px 14px",
                             fontWeight: 800,
-                            fontSize: "1rem",
+                            fontSize: "0.95rem",
+                            lineHeight: 1,
+                            borderRadius: 999,
+                            cursor: "pointer",
+
+                            background: theme.accent ?? "#4ba36e",
+                            color: "#fff",
+                            border: "2px solid rgba(0,0,0,0.12)",
+                            boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
                             fontFamily: "Nunito, system-ui, sans-serif",
-                        }} className="btn secondary" onClick={handleAnalyticsClick}>
+
+                            /* 👇 REQUIRED for ellipsis */
+                            maxWidth: 180,              // ← adjust (px) to fit your layout
+                            whiteSpace: "nowrap",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+
+                            transition: "transform 120ms ease, filter 120ms ease",
+                        }} onClick={handleAnalyticsClick}>
                             ← До аналітики
                         </button>
                     }

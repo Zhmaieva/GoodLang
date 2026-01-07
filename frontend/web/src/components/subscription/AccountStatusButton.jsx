@@ -121,22 +121,28 @@ export default function AccountStatusButton({ theme }) {
 
         return {
             appearance: "none",
-            padding: "10px 16px",
+            padding: "10px 14px",
             fontWeight: 800,
             fontSize: "1rem",
             lineHeight: 1,
             borderRadius: 999,
-            cursor: "pointer",
+
+            border: "2px solid rgba(0,0,0,0.12)",
+            boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
+            fontFamily: "Nunito, system-ui, sans-serif",
+            whiteSpace: "nowrap",
+
+            transform: hovered ? "translateY(1px)" : "none",
+            filter: hovered ? "brightness(0.95)" : "none",
+            transition: "transform 120ms ease, filter 120ms ease",
+
+            background,
+            color,
             height: "100%",
             minWidth: "180px",
             textAlign: "center",
             visibility: account?.status? "visible" : "hidden",
 
-            background,
-            color,
-            border: `2px solid ${border}`,
-            boxShadow: `2px 2px 0 ${shadow}`,
-            transform: hovered ? "translateY(1px)" : "none",
             justifyContent: "center",
         };
     })();
