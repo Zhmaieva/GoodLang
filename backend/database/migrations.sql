@@ -584,3 +584,128 @@ $$;
 
 COMMIT;
 
+-- Migration: add_daily_translation_limit_to_accounts
+-- Description: Adds daily_translation_limit column to accounts table
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_daily_translation_limit_to_accounts'
+        ) THEN
+
+            -- 1) Add column with default
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS daily_translation_limit INTEGER NOT NULL DEFAULT 7;
+
+            -- 2) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_daily_translation_limit_to_accounts', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+-- Migration: rename_daily_translation_limit_and_add_time_span
+-- Description: Renames daily_translation_limit to translation_limit and adds limit_time_span_seconds
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'rename_daily_translation_limit_and_add_time_span'
+        ) THEN
+
+            -- 1) Rename column if old exists and new does not
+            IF EXISTS (
+                SELECT 1
+                FROM information_schema.columns
+                WHERE table_name = 'accounts'
+                  AND column_name = 'daily_translation_limit'
+            ) AND NOT EXISTS (
+                SELECT 1
+                FROM information_schema.columns
+                WHERE table_name = 'accounts'
+                  AND column_name = 'translation_limit'
+            ) THEN
+                ALTER TABLE accounts
+                    RENAME COLUMN daily_translation_limit TO translation_limit;
+            END IF;
+
+            -- 2) Add translation_limit if neither exists (fresh DB safety)
+            IF NOT EXISTS (
+                SELECT 1
+                FROM information_schema.columns
+                WHERE table_name = 'accounts'
+                  AND column_name = 'translation_limit'
+            ) THEN
+                ALTER TABLE accounts
+                    ADD COLUMN translation_limit INTEGER NOT NULL DEFAULT 7;
+            END IF;
+
+            -- 3) Add time span column
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS limit_time_span_seconds INTEGER NOT NULL DEFAULT (24 * 3600);
+
+            -- 4) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('rename_daily_translation_limit_and_add_time_span', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+-- Migration: alter_accounts_set_default_translations_quota_8
+-- Description: Set default value of translations_quota to 8
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'alter_accounts_set_default_translations_quota_8'
+        ) THEN
+
+            -- 1) Ensure column exists (defensive)
+            IF EXISTS (
+                SELECT 1
+                FROM information_schema.columns
+                WHERE table_name = 'accounts'
+                  AND column_name = 'translations_quota'
+            ) THEN
+
+                -- 2) Set DEFAULT to 8 for new rows
+                ALTER TABLE accounts
+                    ALTER COLUMN translations_quota SET DEFAULT 8;
+
+                -- 3) Backfill NULLs (optional but safe)
+                UPDATE accounts
+                SET translations_quota = 8
+                WHERE translations_quota IS NULL;
+
+            END IF;
+
+            -- 4) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_accounts_set_default_translations_quota_8', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

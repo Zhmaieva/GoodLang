@@ -8,10 +8,18 @@ import {nanoid} from "nanoid";
  * @returns {Promise<{id: string}>}
  */
 export async function createAccount() {
-    const query = `
-        INSERT INTO accounts DEFAULT VALUES
-        RETURNING id
-    `;
+    const shortLimitsEnabled = String(process.env.FEATURE_SHORT_TRANSLATION_LIMITS).toLowerCase() === "true";
+
+    const query = shortLimitsEnabled
+        ? `
+            INSERT INTO accounts (translation_limit, limit_time_span_seconds)
+            VALUES (3, 4 * 3600)
+            RETURNING id
+          `
+        : `
+            INSERT INTO accounts DEFAULT VALUES
+            RETURNING id
+          `;
 
     try {
         const result = await pool.query(query);
@@ -20,6 +28,7 @@ export async function createAccount() {
         throw err;
     }
 }
+
 
 /**
  * Get account info by account ID (+ optional promo info by promo code)
@@ -30,6 +39,8 @@ export async function createAccount() {
  *   status: 'free'|'paid'|'attention',
  *   isTrial: boolean,
  *   trialEndsOn: any,
+ *   translationLimit: number,
+ *   limitTimeSpanSeconds: number,
  *   promo: null | {
  *     accountId: string,
  *     promoCode: string,
@@ -42,7 +53,17 @@ export async function createAccount() {
  */
 export async function getAccountInfo(accountId, promoCode) {
     const { rows } = await pool.query(
-        "SELECT email, status, is_trial, trial_ended_at FROM accounts WHERE id = $1",
+        `
+        SELECT
+            email,
+            status,
+            is_trial,
+            trial_ended_at,
+            translation_limit,
+            limit_time_span_seconds
+        FROM accounts
+        WHERE id = $1
+        `,
         [accountId]
     );
 
@@ -52,6 +73,8 @@ export async function getAccountInfo(accountId, promoCode) {
             status: "free",
             isTrial: false,
             trialEndsOn: null,
+            translationLimit: 10,            // safe fallback
+            limitTimeSpanSeconds: 24 * 3600, // safe fallback
             promo: null,
         };
     }
@@ -75,7 +98,7 @@ export async function getAccountInfo(accountId, promoCode) {
                 WHERE promo_code = $1
                   AND expiration_date > NOW()
                 LIMIT 1
-                `,
+            `,
             [normalizedPromo]
         );
 
@@ -96,6 +119,10 @@ export async function getAccountInfo(accountId, promoCode) {
         status: rows[0].status || "free",
         isTrial: rows[0].is_trial || false,
         trialEndsOn: rows[0].trial_ended_at,
+
+        translationLimit: Number(rows[0].translation_limit ?? 7),
+        limitTimeSpanSeconds: Number(rows[0].limit_time_span_seconds ?? (24 * 3600)),
+
         promo,
     };
 }

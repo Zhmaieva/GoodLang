@@ -23,7 +23,8 @@ WITH reg_users AS (
                             (300, 'PAGE_OPEN_TRAINER'),
                             (301, 'PAGE_OPEN_ANALYTICS'),
                             (400, 'MODAL_SHOWN_COOKIES'),
-                            (401, 'MODAL_SHOWN_TOU')
+                            (401, 'MODAL_SHOWN_TOU'),
+                            (402, 'MODAL_SHOWN_DISCOUNT_SUBSCRIPTION')
                        ) AS t(action_type, action_name)
      )
 SELECT

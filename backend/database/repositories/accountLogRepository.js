@@ -5,17 +5,20 @@ import {getAccountInfo} from "./accountsRepository.js";
 /**
  * Check translation usage limit (race-safe)
  * @param {string} accountId
- * @param {number} limit Maximum calls in window (fallback)
- * @param {number} hours Time window in hours (fallback)
  * @returns {Promise<{ allowed: boolean, waitTimeSeconds: number }>}
  */
-export async function checkTranslationLimit(accountId, limit = 10, hours = 24) {
+export async function checkTranslationLimit(accountId) {
     const account = await getAccountInfo(accountId);
 
     // 0️⃣ Paid users → unlimited
-    if (account.status === 'paid') {
+    if (account.status === "paid") {
         return { allowed: true, waitTimeSeconds: 0 };
     }
+
+    // Account-based limits (fallback-safe)
+    const limit = Number.isFinite(account.translationLimit) ? account.translationLimit : 7;
+    const windowSeconds = Number.isFinite(account.limitTimeSpanSeconds) ? account.limitTimeSpanSeconds : (24 * 3600);
+    const windowMs = windowSeconds * 1000;
 
     // 1️⃣ Atomic quota decrement (single round-trip)
     const { rowCount } = await pool.query(
@@ -34,7 +37,7 @@ export async function checkTranslationLimit(accountId, limit = 10, hours = 24) {
         return { allowed: true, waitTimeSeconds: 0 };
     }
 
-    // 2️⃣ Quota exhausted → fallback to time window logic
+    // 2️⃣ Quota exhausted → time window logic based on account limits
     const { rows } = await pool.query(
         `
         SELECT created_at
@@ -48,7 +51,6 @@ export async function checkTranslationLimit(accountId, limit = 10, hours = 24) {
 
     const timestamps = rows.map(r => new Date(r.created_at).getTime());
     const now = Date.now();
-    const windowMs = hours * 60 * 60 * 1000;
 
     if (timestamps.length < limit) {
         return { allowed: true, waitTimeSeconds: 0 };
@@ -60,7 +62,7 @@ export async function checkTranslationLimit(accountId, limit = 10, hours = 24) {
 
     return {
         allowed: waitTimeSeconds === 0,
-        waitTimeSeconds
+        waitTimeSeconds,
     };
 }
 
