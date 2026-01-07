@@ -49,7 +49,7 @@ export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPo
                     }}
                 >
                     Ми використовуємо <strong>виключно необхідні cookies</strong> для
-                    безпечної автентифікації та обробки платежів, а також
+                    безпечної автентифікації та обробки платежів, але ти можеш прийняти
                     <strong> аналітичні cookies</strong> для покращення сервісу.
                 </p>
 
@@ -92,7 +92,7 @@ export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPo
                             boxShadow: `2px 2px 0 ${theme.accentDark}`,
                         }}
                     >
-                        Прийняти необхідні
+                        Відхилити
                     </button>
 
                     <button

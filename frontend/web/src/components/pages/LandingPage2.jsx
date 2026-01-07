@@ -125,18 +125,20 @@ export default function GoodLangLandingTeaStyleThemed({
 
     const [faqVisible, setFaqVisible] = useState(false);
     const [cookieOpen, setCookieOpen] = useState(false);
+    const [isStartingUsingApp, setIsStartingUsingApp] = useState(false);
+    const [isGettingPromoCode, setIsGettingPromoCode] = useState(false);
     const [touOpen, setTouOpen] = useState(false);
 
-    useEffect(() => {
-        if (getCookieConsent()) return;
-
-        const t = setTimeout(async () => {
-            setCookieOpen(true);
-            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
-        }, 4000); // ⏱ 4 seconds after load
-
-        return () => clearTimeout(t);
-    }, []);
+    // useEffect(() => {
+    //     if (getCookieConsent()) return;
+    //
+    //     const t = setTimeout(async () => {
+    //         setCookieOpen(true);
+    //         await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
+    //     }, 4000); // ⏱ 4 seconds after load
+    //
+    //     return () => clearTimeout(t);
+    // }, []);
 
     useEffect(() => {
         const onResize = () => setW(window.innerWidth);
@@ -450,6 +452,14 @@ export default function GoodLangLandingTeaStyleThemed({
 
     const navigate = useNavigate();
     const handleStart = async () => {
+        if (!getCookieConsent()) {
+            setCookieOpen(true);
+            setIsStartingUsingApp(true);
+            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
+
+            return;
+        }
+
         trackMetaCustomEvent("StartUsing");
 
         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
@@ -463,6 +473,14 @@ export default function GoodLangLandingTeaStyleThemed({
     };
 
     const submitEmail = async () => {
+        if (!getCookieConsent()) {
+            setCookieOpen(true);
+            setIsGettingPromoCode(true);
+            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
+
+            return;
+        }
+
         const v = String(email || "").trim();
         if (!/^\S+@\S+\.\S+$/.test(v)) {
             setMsg("Введіть правильний імейл");
@@ -755,13 +773,26 @@ export default function GoodLangLandingTeaStyleThemed({
 
                             await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
 
+                            if (isStartingUsingApp) {
+                                await handleStart();
+                            } else if (isGettingPromoCode) {
+                                await submitEmail();
+                            }
+
                             setCookieOpen(false);
                         }}
                         onReject={async () => {
                             rejectCookies();
-                            setCookieOpen(false);
 
                             await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
+
+                            if (isStartingUsingApp) {
+                                await handleStart();
+                            } else if (isGettingPromoCode) {
+                                await submitEmail();
+                            }
+
+                            setCookieOpen(false);
                         }}
                         onOpenPolicy={async () => {
                             // reuse your existing Terms modal
