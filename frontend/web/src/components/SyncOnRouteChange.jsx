@@ -20,8 +20,11 @@ export default function SyncOnRouteChange() {
             if (!hasOpened) {
                 localStorage.setItem(FIRST_OPEN_KEY, "1");
 
+                const params = new URLSearchParams(window.location.search);
+                const shouldOpenSubscribe = params.get("subscribe") === "true";
+
                 // avoid redirect loop if already on /welcome
-                if (location.pathname !== "/welcome") {
+                if (location.pathname !== "/welcome" && !shouldOpenSubscribe) {
                     navigate("/welcome", { replace: true });
                     return;
                 }
