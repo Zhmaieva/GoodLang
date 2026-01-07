@@ -18,6 +18,9 @@ export default function HomePage({ theme }) {
     const [weakRules, setWeakRules] = useState([]);
     const [hoveredRuleId, setHoveredRuleId] = useState(null);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+
     // Responsive grid (container-based)
     const { ref: containerRef } = useBreakpoint(880);
 
@@ -61,7 +64,7 @@ export default function HomePage({ theme }) {
         }),
     };
 
-    const weakRuleButtonStyle = (isHover) => ({
+    const weakRuleButtonStyle = (isHover, keepFullSize = false) => ({
         appearance: "none",
         padding: "10px 14px",
         fontWeight: 800,
@@ -75,7 +78,7 @@ export default function HomePage({ theme }) {
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
         fontFamily: "Nunito, system-ui, sans-serif",
 
-        maxWidth: 280,              // ← adjust (px) to fit your layout
+        maxWidth: isMobile && !keepFullSize ? 160 : 280,              // ← adjust (px) to fit your layout
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
@@ -137,11 +140,16 @@ export default function HomePage({ theme }) {
         // initial
         onRefresh();
 
+        const onResize = () => setIsMobile(window.innerWidth < 915);
+        onResize();
+        window.addEventListener("resize", onResize);
+
         // ✅ update when dataService emits weeklyProgressUpdate (it calls emit("weeklyProgressUpdate"))
         on("weeklyProgressUpdate", onRefresh);
 
         return () => {
             off("weeklyProgressUpdate", onRefresh);
+            window.removeEventListener("resize", onResize)
         };
     }, []);
 
@@ -161,10 +169,10 @@ export default function HomePage({ theme }) {
                         <button
                             onMouseEnter={() => setHoveredAnalytics(true)}
                             onMouseLeave={() => setHoveredAnalytics(false)}
-                            style={weakRuleButtonStyle(hoveredAnalytics)}
+                            style={weakRuleButtonStyle(hoveredAnalytics, true)}
                             onClick={handleAnalyticsClick}
                         >
-                            Що мені підтягнути? →
+                            {!isMobile ? "Що мені підтягнути? →" : "Усі правила"}
                         </button>
 
                         {weakRules.map((r) => {
