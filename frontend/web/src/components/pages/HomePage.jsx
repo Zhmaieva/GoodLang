@@ -44,25 +44,6 @@ export default function HomePage({ theme }) {
 
     // Analytics button (LevelSwitch style)
     const [hoveredAnalytics, setHoveredAnalytics] = useState(false);
-    const analyticsButtonStyles = {
-        button: (isHover) => ({
-            appearance: "none",
-            padding: "10px 18px",
-            fontWeight: 800,
-            fontSize: "1rem",
-            lineHeight: 1,
-            borderRadius: 999,
-            cursor: "pointer",
-            background: "#fffdf8",
-            fontFamily: "Nunito, system-ui, sans-serif",
-            color: theme.text,
-            border: `2px solid ${theme.accent}`,
-            boxShadow: `2px 2px 0 ${theme.accentDark}`,
-            transform: isHover ? "translateY(1px)" : "none",
-            transition: "transform 120ms ease",
-            whiteSpace: "nowrap",
-        }),
-    };
 
     const weakRuleButtonStyle = (isHover, keepFullSize = false) => ({
         appearance: "none",
@@ -78,7 +59,9 @@ export default function HomePage({ theme }) {
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
         fontFamily: "Nunito, system-ui, sans-serif",
 
-        maxWidth: isMobile && !keepFullSize ? 160 : 280,              // ← adjust (px) to fit your layout
+        width: ((weakRules?.length || 0) <= 0) ? "100%" : "initial",
+
+        maxWidth: ((weakRules?.length || 0) <= 0) ? "100%" : (isMobile && !keepFullSize ? 160 : 280),
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
