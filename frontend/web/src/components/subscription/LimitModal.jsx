@@ -44,8 +44,11 @@ export default function LimitModal({ subscribeIntent = false, isLimitReached, th
     const [subscribe, setSubscribe] = useState(subscribeIntent);
 
     useEffect(() => {
-        setTimeout(() => {
-            loadAccountInfo().then();
+        setTimeout(async () => {
+            await loadAccountInfo();
+            if (subscribeIntent) {
+                await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_DISCOUNT_SUBSCRIPTION)
+            }
         }, 200)
         setSubscribe(subscribeIntent);
     }, [subscribeIntent])
