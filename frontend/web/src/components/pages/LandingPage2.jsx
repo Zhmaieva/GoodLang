@@ -44,8 +44,8 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           heroAccentWord = "правильно",
                                                           heroBadge = "безкоштовно",
 
-                                                          communityCount = "1142 речення перекладено",
-                                                          subStat = "209 правил засвоєно",
+                                                          communityCount = "1581 речення перекладено",
+                                                          subStat = "299 правил засвоєно",
 
                                                           useTitle = `ВИКОРИСТОВУЙ ${brand.toUpperCase()}, ЩОБ`,
                                                           hashtags = [
