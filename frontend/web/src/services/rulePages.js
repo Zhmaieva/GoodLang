@@ -3189,17 +3189,17 @@ export const RULE_PAGE_PRESENT_PERFECT_CONT = {
                 [
                     "Ствердження",
                     "have / has + been + V-ing",
-                    "I <strong>have been working</strong> all day.",
+                    "I have been working all day.",
                 ],
                 [
                     "Заперечення",
                     "have / has + not + been + V-ing",
-                    "She <strong>hasn’t been sleeping</strong> well.",
+                    "She hasn’t been sleeping well.",
                 ],
                 [
                     "Питання",
                     "Have / Has + підмет + been + V-ing?",
-                    "<strong>Have</strong> you <strong>been waiting</strong> long?",
+                    "Have you been waiting long?",
                 ],
             ],
             hint:
