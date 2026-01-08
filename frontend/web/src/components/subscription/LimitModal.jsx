@@ -224,7 +224,11 @@ export default function LimitModal({ subscribeIntent = false, isLimitReached, th
                         textAlign: "center",
                         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                         display: !isPaying ? "block" : "none",
-                    }} onClick={e => e.stopPropagation()}>
+                    }} onClick={e => {
+                            e.stopPropagation()
+                            setShowInfo(false)
+                        }
+                    }>
 
                         <div style={{display: "flex", justifyContent: "space-between"}}>
                             {
