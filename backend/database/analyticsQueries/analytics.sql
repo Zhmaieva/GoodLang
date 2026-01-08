@@ -7,6 +7,9 @@ WITH reg_users AS (
 ),
      action_dict AS (
          SELECT * FROM (VALUES
+                            (1, 'UPDATE_ACCOUNT_STATUS_TO_PAID'),
+                            (2, 'UPDATE_ACCOUNT_STATUS_TO_FREE'),
+                            (3, 'UPDATE_ACCOUNT_STATUS_TO_ATTENTION'),
                             (200, 'BUTTON_CLICK_START_USING'),
                             (201, 'BUTTON_CLICK_WANT_PREMIUM'),
                             (202, 'BUTTON_CLICK_ACCEPT_COOKIES'),

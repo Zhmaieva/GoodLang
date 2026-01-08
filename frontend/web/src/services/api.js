@@ -3,6 +3,8 @@ import {logError} from "./logger.js";
 import {getPromoCode} from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+const STORAGE_KEY_APP_VERSION = "app_version";
+const CLIENT_APP_VERSION = "1.0.5"; // hardcoded client version
 
 export async function callCheckoutApi() {
     const url = `${API_BASE}/payments/create-checkout-session`;
@@ -83,6 +85,47 @@ export async function callSignUpApi(params) {
     return res.json();
 }
 
+function parseVersion(v) {
+    const clean = String(v || "").trim().split("-")[0];
+    const parts = clean.split(".").map((n) => parseInt(n, 10));
+    return [
+        Number.isFinite(parts[0]) ? parts[0] : 0,
+        Number.isFinite(parts[1]) ? parts[1] : 0,
+        Number.isFinite(parts[2]) ? parts[2] : 0,
+    ];
+}
+
+function compareVersions(a, b) {
+    const A = parseVersion(a);
+    const B = parseVersion(b);
+    for (let i = 0; i < 3; i++) {
+        if (A[i] > B[i]) return 1;
+        if (A[i] < B[i]) return -1;
+    }
+    return 0;
+}
+
+function syncVersionAndMaybeReload(serverVersion) {
+    if (!serverVersion) return;
+
+    const localVersion = localStorage.getItem(STORAGE_KEY_APP_VERSION);
+
+    // If LS missing, treat it as CLIENT version for comparison purposes
+    const effectiveLocal = localVersion || CLIENT_APP_VERSION;
+
+    const serverVsLocal = compareVersions(serverVersion, effectiveLocal);
+    const serverVsClient = compareVersions(serverVersion, CLIENT_APP_VERSION);
+
+    const shouldReload = serverVsLocal === 1 && serverVsClient === 1;
+
+    // Always sync LS to backend version
+    localStorage.setItem(STORAGE_KEY_APP_VERSION, serverVersion);
+
+    if (shouldReload) {
+        window.location.reload();
+    }
+}
+
 export async function callAccountInfoApi() {
     const params = new URLSearchParams();
     const promoCode = getPromoCode();
@@ -92,13 +135,16 @@ export async function callAccountInfoApi() {
 
     const res = await fetch(url, {
         headers: {
-            'Authorization': `Bearer ${await getToken()}`,
+            Authorization: `Bearer ${await getToken()}`,
         },
     });
 
     const data = await res.json();
 
     if (!res.ok) throw new Error("Server error: " + res.status);
+
+    // ✅ version sync + optional reload
+    syncVersionAndMaybeReload(data?.appVersion);
 
     return data;
 }

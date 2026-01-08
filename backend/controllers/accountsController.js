@@ -10,6 +10,7 @@ import {authMiddleware} from "../middleware/authMiddleware.js";
 import {recordAction} from "../database/repositories/accountLogRepository.js";
 
 const name = 'accounts';
+const appVersion = process.env.APP_VERSION || "1.0.0";
 
 function generateToken({id}) {
     return jwt.sign({ id }, SECRET_KEY);
@@ -36,12 +37,20 @@ export const accountsController = {
 
         app.get(`/accounts/info`, authMiddleware, async (req, res, next) => {
             try {
-                const account = await getAccountInfo(req.user.id, req.query.promo_code);
-                res.json(account);
+                const account = await getAccountInfo(
+                    req.user.id,
+                    req.query.promo_code
+                );
+
+                res.json({
+                    ...account,
+                    appVersion,
+                });
             } catch (e) {
                 next(e);
             }
         });
+
 
         app.get(`/accounts/verify`, authMiddleware, async (req, res, next) => {
             try {
