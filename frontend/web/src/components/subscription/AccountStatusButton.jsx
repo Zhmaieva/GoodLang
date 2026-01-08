@@ -126,6 +126,7 @@ export default function AccountStatusButton({ theme }) {
             fontSize: "1rem",
             lineHeight: 1,
             borderRadius: 999,
+            cursor: "pointer",
 
             border: "2px solid rgba(0,0,0,0.12)",
             boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,

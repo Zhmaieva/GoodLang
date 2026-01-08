@@ -20,6 +20,7 @@ WITH reg_users AS (
                             (210, 'BUTTON_CLICK_SUBSCRIPTION'),
                             (211, 'BUTTON_CLICK_START_LEARNING'),
                             (212, 'BUTTON_CLICK_LEARN_MORE'),
+                            (213, 'BUTTON_CLICK_RULE_PREVIEW'),
                             (300, 'PAGE_OPEN_TRAINER'),
                             (301, 'PAGE_OPEN_ANALYTICS'),
                             (400, 'MODAL_SHOWN_COOKIES'),
