@@ -28,15 +28,6 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Це новий комп’ютер.",
-            "en": [
-                "This is a new computer."
-            ]
-        },
-        {
-            "rules": [
                 "ARTICLES",
                 "PREP_PLACE",
                 "PRESENT_SIMPLE_FREQ"
@@ -56,18 +47,6 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is a good student.",
                 "He's a good student."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES",
-                "TO_BE",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Це цікава ідея.",
-            "en": [
-                "It’s an interesting idea.",
-                "This is an interesting idea."
             ]
         },
         {
@@ -183,18 +162,6 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "ARTICLES",
-                "TO_BE",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Це була гарна ідея.",
-            "en": [
-                "That was a good idea.",
-                "It was a good idea."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES",
                 "TO_BE"
             ],
             "ua": "Собака — вірний друг людини.",
@@ -292,15 +259,6 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Це справжній сюрприз.",
-            "en": [
-                "It is a real surprise."
-            ]
-        },
-        {
-            "rules": [
                 "ARTICLES",
                 "PRESENT_SIMPLE_FREQ",
                 "ADVERBS_FREQUENCY",
@@ -372,18 +330,6 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ARTICLES",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Це питання дуже важливе.",
-            "en": [
-                "This is an important question.",
-                "It's an important question.",
-                "This question is very important."
-            ]
-        },
-        {
-            "rules": [
                 "ARTICLES"
             ],
             "ua": "Я люблю читати книги.",
@@ -422,17 +368,6 @@ export const ALL_RULES_SAMPLES = {
             "ua": "Двері відчинені.",
             "en": [
                 "The door is open."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES",
-                "TO_BE"
-            ],
-            "ua": "Це те саме питання.",
-            "en": [
-                "This is the same question.",
-                "It’s the same question."
             ]
         },
         {
@@ -635,15 +570,6 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Ця усмішка робить усіх щасливими.",
-            "en": [
-                "The smile makes everyone happy."
-            ]
-        },
-        {
-            "rules": [
                 "ARTICLES",
                 "PREP_TIME"
             ],
@@ -756,15 +682,6 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Цей велосипед швидкий.",
-            "en": [
-                "The bike is fast."
-            ]
-        },
-        {
-            "rules": [
                 "ARTICLES",
                 "PREP_TIME"
             ],
@@ -797,15 +714,6 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ARTICLES"
             ],
-            "ua": "Це морозиво холодне.",
-            "en": [
-                "The ice cream is cold."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES"
-            ],
             "ua": "Двері на кухні білі.",
             "en": [
                 "A door in the kitchen is white."
@@ -828,15 +736,6 @@ export const ALL_RULES_SAMPLES = {
             "ua": "Новини сьогодні погані.",
             "en": [
                 "The news is bad today."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Ця сукня рожева.",
-            "en": [
-                "The dress is pink."
             ]
         },
         {
@@ -909,64 +808,9 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "ARTICLES"
             ],
-            "ua": "Ця вечеря пахне смачно.",
-            "en": [
-                "The dinner smells good."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Ця гора висока.",
-            "en": [
-                "The mountain is high."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES",
-                "PREP_TIME"
-            ],
-            "ua": "Мені подобається кава вранці.",
-            "en": [
-                "I like coffee in the morning."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Ця кава міцна.",
-            "en": [
-                "The coffee is strong."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Це запитання складне.",
-            "en": [
-                "The question is difficult."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES"
-            ],
             "ua": "Ми живемо у великому будинку.",
             "en": [
                 "We live in a big house."
-            ]
-        },
-        {
-            "rules": [
-                "ARTICLES"
-            ],
-            "ua": "Цей будинок має гарний сад.",
-            "en": [
-                "The house has a beautiful garden."
             ]
         },
         {
@@ -982,11 +826,150 @@ export const ALL_RULES_SAMPLES = {
         {
             "rules": [
                 "ARTICLES",
+                "PREP_TIME"
+            ],
+            "ua": "Мені подобається кава вранці.",
+            "en": [
+                "I like coffee in the morning."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES",
                 "TO_BE"
             ],
             "ua": "Музика робить мене щасливою.",
             "en": [
                 "Music makes me happy."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Це новий комп’ютер.",
+            "en": [
+                "It’s a new computer."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Будинок має гарний сад.",
+            "en": [
+                "The house has a beautiful garden."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Вечеря пахне смачно.",
+            "en": [
+                "The dinner smells good."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Гора висока.",
+            "en": [
+                "The mountain is high."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Кава міцна.",
+            "en": [
+                "The coffee is strong."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Запитання складне.",
+            "en": [
+                "The question is difficult."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Сукня рожева.",
+            "en": [
+                "The dress is pink."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES",
+                "TO_BE"
+            ],
+            "ua": "Це те саме питання.",
+            "en": [
+                "It’s the same question."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Усмішка робить усіх щасливими.",
+            "en": [
+                "The smile makes everyone happy."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Це швидкий велосипед.",
+            "en": [
+                "It’s a fast bike."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Морозиво холодне.",
+            "en": [
+                "The ice cream is cold."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES",
+                "TO_BE"
+            ],
+            "ua": "Це була гарна ідея.",
+            "en": [
+                "It was a good idea."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES"
+            ],
+            "ua": "Це справжній сюрприз.",
+            "en": [
+                "It’s a real surprise."
+            ]
+        },
+        {
+            "rules": [
+                "ARTICLES",
+                "TO_BE"
+            ],
+            "ua": "Це цікава ідея.",
+            "en": [
+                "It’s an interesting idea."
             ]
         }
     ],
@@ -72222,7 +72205,7 @@ export const ALL_RULES_SAMPLES = {
                 "WOULD_RATHER_PREFER",
                 "PRESENT_SIMPLE_FREQ"
             ],
-            "ua": "Він cкоріш надає перевагу роботі рано-вранці.",
+            "ua": "Він скоріш надає перевагу роботі рано-вранці.",
             "en": [
                 "He usually prefers working early in the morning.",
                 "He usually prefers to work early in the morning.",
