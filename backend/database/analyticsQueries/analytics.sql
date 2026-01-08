@@ -2,7 +2,7 @@
 WITH reg_users AS (
     SELECT id AS account_id
     FROM accounts
-    WHERE created_at >= TIMESTAMP '2026-01-08 00:00:00+00'
+    WHERE created_at >= TIMESTAMP '2026-01-06 00:00:00+00'
       AND created_at <  TIMESTAMP '2026-02-01 00:00:00+00'
 ),
      action_dict AS (
