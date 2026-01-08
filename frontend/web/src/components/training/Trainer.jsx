@@ -244,12 +244,14 @@ export default function Trainer({
                 setHint("Навчайся більше з підпискою, або почекай");
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
+                setLocked(true);
                 return;
             }
 
             if (!data.allowed) {
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
+                setLocked(true);
             }
 
             // 🔹 Detect rules with score < 1 for this evaluation

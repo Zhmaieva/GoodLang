@@ -732,6 +732,12 @@ export default function GoodLangLandingTeaStyleThemed({
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder={emailPlaceholder}
                                     inputMode="email"
+                                    onKeyDown={async (e) => {
+                                        if (e.key === "Enter") {
+                                            e.preventDefault();      // ⛔ prevent accidental form submit / reload
+                                            await submitEmail();           // ✅ same logic as button click
+                                        }
+                                    }}
                                 />
                                 <button
                                     type="button"
@@ -767,6 +773,8 @@ export default function GoodLangLandingTeaStyleThemed({
                     <CookieConsentModal
                         theme={theme}
                         onAccept={async () => {
+                            setCookieOpen(false);
+
                             acceptCookies();
                             ensureAnalytics();
                             trackPageView(window.location.pathname);
@@ -778,10 +786,10 @@ export default function GoodLangLandingTeaStyleThemed({
                             } else if (isGettingPromoCode) {
                                 await submitEmail();
                             }
-
-                            setCookieOpen(false);
                         }}
                         onReject={async () => {
+                            setCookieOpen(false);
+
                             rejectCookies();
 
                             await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
@@ -791,8 +799,6 @@ export default function GoodLangLandingTeaStyleThemed({
                             } else if (isGettingPromoCode) {
                                 await submitEmail();
                             }
-
-                            setCookieOpen(false);
                         }}
                         onOpenPolicy={async () => {
                             // reuse your existing Terms modal

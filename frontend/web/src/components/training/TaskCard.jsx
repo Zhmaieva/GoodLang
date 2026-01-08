@@ -78,7 +78,7 @@ export default function TaskCard({
             appearance: "none",
             padding: "10px 14px",
             fontWeight: 800,
-            fontSize: "clamp(0.9rem, 3.5vw, 1.3rem)",
+            fontSize: "clamp(0.85rem, 3.5vw, 1.3rem)",
             lineHeight: 1,
             borderRadius: 999,
             cursor: (loading) ? "not-allowed" : "pointer",

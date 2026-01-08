@@ -39,7 +39,7 @@ export function sendVerificationEmail(to, code) {
               margin:0;
               font-size:24px;
               font-weight:800;
-              color:#3a2a1d;
+              color:#ff6138;
             ">
               ${code}
             </h2>
@@ -48,7 +48,6 @@ export function sendVerificationEmail(to, code) {
               margin:8px 0 16px 0;
               font-size:16px;
               font-weight:500;
-              color:#3a2a1d;
             ">
               Твій код доступу до <strong>GoodLang</strong>
             </p>
@@ -133,7 +132,7 @@ export function sendPromoEmail(to, code, expiresAt) {
               margin:0;
               font-size:24px;
               font-weight:800;
-              color:#3a2a1d;
+              color:#ff6138;
             ">
               ${code}
             </h2>
@@ -142,7 +141,6 @@ export function sendPromoEmail(to, code, expiresAt) {
               margin:8px 0 8px 0;
               font-size:16px;
               font-weight:500;
-              color:#3a2a1d;
             ">
               🎁 Це твій промо-код для <strong>GoodLang</strong> ⏳ Діє ще ${hoursLeft} ${hoursWord}
             </p>
@@ -150,7 +148,6 @@ export function sendPromoEmail(to, code, expiresAt) {
             <p style="
               margin:0 0 12px 0;
               font-size:15px;
-              color:#3a2a1d;
             ">
               Застосуй код за посиланням:
             </p>
