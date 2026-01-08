@@ -3114,12 +3114,12 @@ export const RULE_PAGE_SINCE_FOR = {
             rows: [
                 [
                     "Present Perfect + since + момент",
-                    "She has worked here <strong>since 2018</strong>.",
+                    "She has worked here since 2018.",
                     "З 2018 року (точка початку).",
                 ],
                 [
                     "Present Perfect + for + період",
-                    "They have lived here <strong>for five years</strong>.",
+                    "They have lived here for five years.",
                     "Протягом 5 років (тривалість).",
                 ],
             ],
@@ -3265,9 +3265,9 @@ export const RULE_PAGE_ALREADY_YET_JUST = {
             title: "Позиція в реченні",
             headers: ["Слово", "Де стоїть", "Приклад"],
             rows: [
-                ["already", "have/has + already + V3", "I have <strong>already</strong> finished."],
-                ["just", "have/has + just + V3", "She has <strong>just</strong> arrived."],
-                ["yet", "зазвичай у кінці (questions/negatives)", "Have you finished <strong>yet</strong>? / I haven’t finished <strong>yet</strong>."],
+                ["already", "have/has + already + V3", "I have already finished."],
+                ["just", "have/has + just + V3", "She has just arrived."],
+                ["yet", "зазвичай у кінці (questions/negatives)", "Have you finished yet? / I haven’t finished yet."],
             ],
             hint:
                 "У розмовній мові <strong>already</strong> інколи буває наприкінці: <strong>Have you finished already?</strong> (здивування).",
@@ -3335,17 +3335,17 @@ export const RULE_PAGE_PAST_PERFECT = {
                 [
                     "Ствердження",
                     "had + V3",
-                    "They <strong>had finished</strong> the project.",
+                    "They had finished the project.",
                 ],
                 [
                     "Заперечення",
                     "had not (hadn’t) + V3",
-                    "She <strong>hadn’t seen</strong> him before.",
+                    "She hadn’t seen him before.",
                 ],
                 [
                     "Питання",
                     "Had + підмет + V3?",
-                    "<strong>Had</strong> you <strong>met</strong> her before?",
+                    "Had you met her before?",
                 ],
             ],
             hint:
@@ -3424,17 +3424,17 @@ export const RULE_PAGE_USED_TO = {
                 [
                     "Ствердження",
                     "used to + V1",
-                    "I <strong>used to work</strong> at night.",
+                    "I used to work at night.",
                 ],
                 [
                     "Заперечення",
                     "did not (didn’t) + use to + V1",
-                    "I <strong>didn’t use to like</strong> coffee.",
+                    "I didn’t use to like coffee.",
                 ],
                 [
                     "Питання",
                     "Did + підмет + use to + V1?",
-                    "<strong>Did</strong> you <strong>use to live</strong> here?",
+                    "Did you use to live here?",
                 ],
             ],
             hint:
