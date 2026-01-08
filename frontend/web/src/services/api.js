@@ -215,7 +215,10 @@ export async function callSendCodeApi({ email }) {
 export async function callVerifyCodeApi({ email, code, termsAccepted = false }) {
     const res = await fetch(`${API_BASE}/accounts/verify-code`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+            'Authorization': `Bearer ${await getToken()}`,
+        },
         body: JSON.stringify({ email, code, termsAccepted }),
     });
 

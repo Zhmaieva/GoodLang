@@ -708,4 +708,45 @@ $$
     END
 $$;
 
+-- Migration: alter_accounts_set_default_translations_quota_7
+-- Description: Set default value of translations_quota to 7
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'alter_accounts_set_default_translations_quota_7'
+        ) THEN
+
+            -- 1) Ensure column exists (defensive)
+            IF EXISTS (
+                SELECT 1
+                FROM information_schema.columns
+                WHERE table_name = 'accounts'
+                  AND column_name = 'translations_quota'
+            ) THEN
+
+                -- 2) Set DEFAULT to 8 for new rows
+                ALTER TABLE accounts
+                    ALTER COLUMN translations_quota SET DEFAULT 7;
+
+                -- 3) Backfill NULLs (optional but safe)
+                UPDATE accounts
+                SET translations_quota = 7
+                WHERE translations_quota IS NULL;
+
+            END IF;
+
+            -- 4) Record migration
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_accounts_set_default_translations_quota_7', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
 COMMIT;

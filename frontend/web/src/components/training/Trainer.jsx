@@ -47,6 +47,7 @@ export default function Trainer({
     const [loading, setLoading] = useState(false);
     const [mode, setMode] = useState("check"); // 'check' | 'next'
     const [isError, setIsError] = useState(false);
+    const [locked, setLocked] = useState(false);
 
     const [taskText, setTaskText] = useState("Завантаження завдання…");
     const [hint, setHint] = useState('Порада: переклади і натисни «Перевірити»');
@@ -157,23 +158,34 @@ export default function Trainer({
 
             // Managed mode → DO NOT send level
             logInfo("getting training sentence...");
-            return await callTranslateAPI({
+            const result = await callTranslateAPI({
                 rules: [ruleToSend],
                 seed,
                 skip
             });
+            if (!result.allowed) {
+                setLocked(true);
+                setWaitTimeSeconds(result.waitTimeSeconds);
+            }
+            return result;
         }
 
         // --- Old logic for non-managed ---
         const currentLevel = selectedDifficulty;
 
         logInfo("getting training sentence...");
-        return await callTranslateAPI({
+        const result =  await callTranslateAPI({
             level: currentLevel,
             rules: [ruleToSend],
             seed,
             skip
         });
+
+        if (!result.allowed) {
+            setLocked(true);
+            setWaitTimeSeconds(result.waitTimeSeconds);
+        }
+        return result;
     }
 
     async function loadNewTask(selectedDifficulty = difficulty) {
@@ -206,7 +218,7 @@ export default function Trainer({
             setNextTextToTranslate('');
             setNextRules([]);
 
-            setHint('Порада: перекладіть і натисніть «Перевірити»');
+            setHint('Порада: переклади і натисни «Перевірити»');
             setCorrectAnswer("");
             setMode("check");
         } catch (e) {
@@ -229,10 +241,15 @@ export default function Trainer({
             const data = await callTranslateAPI({ freeTraining, textToTranslate, translation: userAns, rules, seed, skip });
 
             if (!data.isSuccess) {
-                setHint("Досягнуто ліміт користування, спробуйте пізніше.");
+                setHint("Навчайся більше з підпискою, або почекай");
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
                 return;
+            }
+
+            if (!data.allowed) {
+                setWaitTimeSeconds(data.waitTimeSeconds);
+                setLimitModalOpen(true);
             }
 
             // 🔹 Detect rules with score < 1 for this evaluation
@@ -290,6 +307,11 @@ export default function Trainer({
     }
 
     async function onMainButtonClick() {
+        if (locked) {
+            setLimitModalOpen(true);
+            return
+        }
+
         if (mode === "check") await evaluateAnswer();
         else {
             const diff = randomDifficulty(level);
@@ -313,6 +335,7 @@ export default function Trainer({
     ) : (
         <section id="trainer" style={gridStyle}>
             <TaskCard
+                waitTimeSeconds={waitTimeSeconds}
                 hint={freeTraining ? taskHint : null}
                 theme={theme}
                 taskText={taskText}
@@ -324,6 +347,8 @@ export default function Trainer({
                 loading={loading}
                 textareaRef={textareaRef}
                 onKeyDown={handleKeyDown}
+                locked={locked}
+                account={account}
             />
             <ResultCard
                 theme={theme}

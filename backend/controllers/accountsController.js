@@ -93,12 +93,12 @@ export const accountsController = {
         });
 
         // Verify the code and return a JWT token
-        app.post(`/accounts/verify-code`, async (req, res, next) => {
+        app.post(`/accounts/verify-code`, authMiddleware, async (req, res, next) => {
             try {
                 const { email, code, termsAccepted } = req.body;
                 if (!email || !code) return res.status(400).json({ error: "Email and code required" });
 
-                const { accountId, codeAccepted } = await verifyCode(email, code, termsAccepted);
+                const { accountId, codeAccepted } = await verifyCode(req.user.id, email, code, termsAccepted);
                 if (!codeAccepted) return res.status(400).json({ error: "Invalid or expired code" });
 
                 const token = accountId ? generateToken({id: accountId}) : "";

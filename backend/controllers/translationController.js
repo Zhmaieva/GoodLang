@@ -50,6 +50,10 @@ export const translationsController = {
                 const adjustedSkip = Math.floor(Number(skipRaw || "0") % samples.length);
                 const sample = samples[adjustedSkip];
 
+                const { allowed, waitTimeSeconds } = skipCoach ? {
+                    allowed: true, waitTimeSeconds: 0
+                } : await checkTranslationLimit(accountId);
+
                 return res.json({
                     rules: sample.rules,
                     textToTranslate: sample[locale],
@@ -59,12 +63,14 @@ export const translationsController = {
                     score: 0,
                     hint: sample.hint,
                     skip: adjustedSkip + 1,
+                    allowed: allowed,
+                    waitTimeSeconds: waitTimeSeconds,
                 });
             }
 
             if (!skipCoach) {
                 // --- ліміт перекладів ---
-                const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId);
+                const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, false);
 
                 if (!allowed) {
                     return res.status(429).json({
@@ -133,6 +139,10 @@ export const translationsController = {
                 result.answer_is_correct = true;
             }
 
+            const { allowed, waitTimeSeconds } = skipCoach ? {
+                allowed: true, waitTimeSeconds: 0
+            } : await checkTranslationLimit(accountId);
+
             return res.json({
                 rules: newRules,
                 textToTranslate: newTextToTranslate,
@@ -141,6 +151,8 @@ export const translationsController = {
                 tipIfWrong: result.tip_if_wrong,
                 scores: scores,
                 skip: newSkip,
+                allowed: allowed,
+                waitTimeSeconds: waitTimeSeconds,
             });
         } catch (e) {
             if (!skipCoach)

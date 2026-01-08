@@ -342,7 +342,7 @@ export default function LimitModal({ subscribeIntent = false, isLimitReached, th
                                 {loading ? "Завантаження…" : "Придбати підписку"}
                             </button>
 
-                            {!subscribeIntent && <button
+                            {true && <button
                                 onClick={async () => {
                                     if (!account)
                                         await loadAccountInfo().then();
@@ -374,15 +374,15 @@ export default function LimitModal({ subscribeIntent = false, isLimitReached, th
                         </div>
 
 
-                        {(isLimitReached && timeLeft > 0) && (
+                        {(!account?.email) && (
                             <div
                                 style={{
                                     marginLeft: 0,
-                                    marginTop: 24,
+                                    marginTop: 12,
                                     marginBottom: 0,
-                                    fontSize: "1rem",
+                                    fontSize: "0.95rem",
                                     fontWeight: 700,
-                                    color: theme.accent,
+                                    color: theme.text,
                                     letterSpacing: "0.5px",
                                     width: "100%",
                                     opacity: 0.5,
@@ -390,10 +390,11 @@ export default function LimitModal({ subscribeIntent = false, isLimitReached, th
                                     textAlign: "center"
                                 }}
                             >
-                                {"Або почекай:"}
-                                <span style={{display: "inline-block", minWidth: "110px", textAlign: "center"}}>
-            {formatTime(timeLeft)}
-        </span>
+        {/*                        {"Або почекай:"}*/}
+        {/*                        <span style={{display: "inline-block", minWidth: "110px", textAlign: "center"}}>*/}
+        {/*    {formatTime(timeLeft)}*/}
+        {/*</span>*/}
+                                На 60% більше завдань щодня для зареєстрованих користувачів
                             </div>
                         )}
                     </div>

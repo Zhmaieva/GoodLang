@@ -3,6 +3,8 @@ import {sendPromoEmail, sendVerificationEmail} from "../../core/emailSender.js";
 import {getLifetime10CouponId, stripe} from "../../integrations/stripeService.js";
 import {nanoid} from "nanoid";
 
+const SHORTENED_WAIT_TIME_HOURS = 12;
+
 /**
  * Creates a new account without requiring an email.
  * @returns {Promise<{id: string}>}
@@ -13,7 +15,7 @@ export async function createAccount() {
     const query = shortLimitsEnabled
         ? `
             INSERT INTO accounts (translation_limit, limit_time_span_seconds)
-            VALUES (3, 4 * 3600)
+            VALUES (3, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
             RETURNING id
           `
         : `
@@ -33,13 +35,14 @@ export async function createAccount() {
 /**
  * Get account info by account ID (+ optional promo info by promo code)
  * @param {string} accountId
- * @param {string=} promoCode
+ * @param {string?} promoCode
  * @returns {Promise<{
  *   email: string|null,
  *   status: 'free'|'paid'|'attention',
  *   isTrial: boolean,
  *   trialEndsOn: any,
  *   translationLimit: number,
+ *   translationsQuota: number,
  *   limitTimeSpanSeconds: number,
  *   promo: null | {
  *     accountId: string,
@@ -60,7 +63,8 @@ export async function getAccountInfo(accountId, promoCode) {
             is_trial,
             trial_ended_at,
             translation_limit,
-            limit_time_span_seconds
+            limit_time_span_seconds,
+            translations_quota
         FROM accounts
         WHERE id = $1
         `,
@@ -75,6 +79,7 @@ export async function getAccountInfo(accountId, promoCode) {
             trialEndsOn: null,
             translationLimit: 10,            // safe fallback
             limitTimeSpanSeconds: 24 * 3600, // safe fallback
+            translationsQuota: 0,
             promo: null,
         };
     }
@@ -119,6 +124,7 @@ export async function getAccountInfo(accountId, promoCode) {
         status: rows[0].status || "free",
         isTrial: rows[0].is_trial || false,
         trialEndsOn: rows[0].trial_ended_at,
+        translationsQuota: rows[0].translations_quota || 0,
 
         translationLimit: Number(rows[0].translation_limit ?? 7),
         limitTimeSpanSeconds: Number(rows[0].limit_time_span_seconds ?? (24 * 3600)),
@@ -288,7 +294,7 @@ function toUnixSeconds(date) {
 /**
  * Verify code for email and return account id if valid
  */
-export async function verifyCode(email, code, termsAccepted) {
+export async function verifyCode(currentId, email, code, termsAccepted) {
     const { rows } = await pool.query(
         `SELECT account_id, expires_at FROM sign_in_links
          WHERE email=$1 AND code=$2`,
@@ -328,22 +334,29 @@ export async function verifyCode(email, code, termsAccepted) {
     }
 
     // CASE 2: No account yet → create one
+
+    const shortLimitsEnabled = String(process.env.FEATURE_SHORT_TRANSLATION_LIMITS).toLowerCase() === "true";
+
+    const accountInfo = await getAccountInfo(currentId, null);
+
+    const query = shortLimitsEnabled
+        ? `
+            INSERT INTO accounts (email, translations_quota, translation_limit, limit_time_span_seconds)
+            VALUES ($1, $2, 5, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
+            RETURNING id
+          `
+        : `
+            INSERT INTO accounts (email, translations_quota)
+            VALUES ($1, $2)
+            RETURNING id
+          `;
+
     const { rows: accountRows } = await pool.query(
-        `INSERT INTO accounts (email)
-         VALUES ($1)
-         RETURNING id`,
-        [email]
+        query,
+        [email, accountInfo.translationsQuota]
     );
 
     const newAccountId = accountRows[0].id;
-
-    // Attach the new account_id to the link row
-    await pool.query(
-        `UPDATE sign_in_links
-         SET account_id=$1
-         WHERE email=$2`,
-        [newAccountId, email]
-    );
 
     // Optional: delete the sign_in_link now that it's used
     await pool.query(`DELETE FROM sign_in_links WHERE email=$1`, [email]);

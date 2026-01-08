@@ -5,9 +5,10 @@ import {getAccountInfo} from "./accountsRepository.js";
 /**
  * Check translation usage limit (race-safe)
  * @param {string} accountId
+ * @param {boolean} soft for checking without tracking
  * @returns {Promise<{ allowed: boolean, waitTimeSeconds: number }>}
  */
-export async function checkTranslationLimit(accountId) {
+export async function checkTranslationLimit(accountId, soft = true) {
     const account = await getAccountInfo(accountId);
 
     // 0️⃣ Paid users → unlimited
@@ -20,22 +21,28 @@ export async function checkTranslationLimit(accountId) {
     const windowSeconds = Number.isFinite(account.limitTimeSpanSeconds) ? account.limitTimeSpanSeconds : (24 * 3600);
     const windowMs = windowSeconds * 1000;
 
-    // 1️⃣ Atomic quota decrement (single round-trip)
-    const { rowCount } = await pool.query(
-        `
+    if (soft) {
+        if (account.translationsQuota > 0)
+            return { allowed: true, waitTimeSeconds: 0 };
+    } else {
+        // 1️⃣ Atomic quota decrement (single round-trip)
+        const { rowCount } = await pool.query(
+            `
             UPDATE accounts
             SET translations_quota = translations_quota - 1
             WHERE id = $1
               AND translations_quota > 0
             RETURNING translations_quota
         `,
-        [accountId]
-    );
+            [accountId]
+        );
 
-    // If quota was successfully consumed → allow immediately
-    if (rowCount === 1) {
-        return { allowed: true, waitTimeSeconds: 0 };
+        // If quota was successfully consumed → allow immediately
+        if (rowCount === 1) {
+            return { allowed: true, waitTimeSeconds: 0 };
+        }
     }
+
 
     // 2️⃣ Quota exhausted → time window logic based on account limits
     const { rows } = await pool.query(
