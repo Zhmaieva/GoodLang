@@ -19,6 +19,7 @@ export default function TaskCard({
                 setSecondsLeft(prev => {
                     if (prev <= 1) {
                         clearInterval(interval);
+                        window.location.reload();
                         return 0;
                     }
                     return prev - 1;

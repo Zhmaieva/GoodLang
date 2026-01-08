@@ -170,3 +170,7 @@ SELECT
     ROUND((SELECT AVG(sessions_per_user) FROM per_user), 2) AS avg_sessions_per_user,
     (SELECT percentile_cont(0.50) WITHIN GROUP (ORDER BY sessions_per_user) FROM per_user) AS median_sessions_per_user,
     (SELECT percentile_cont(0.90) WITHIN GROUP (ORDER BY sessions_per_user) FROM per_user) AS p90_sessions_per_user;
+
+
+
+update accounts set translation_limit = 3, limit_time_span_seconds = 43200 where limit_time_span_seconds > 43200
