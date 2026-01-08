@@ -75,7 +75,6 @@ body{margin:0;font-family:'Nunito',system-ui,sans-serif;background:var(--bg);col
     margin-top: 20px;
     overflow-x: hidden;}
 
-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px;border-bottom:3px solid var(--accent);padding-bottom:12px;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
 .logo{width:50px;height:50px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px}
 h1{font-size:30px;margin:0;font-weight:800;color:var(--accent-dark);letter-spacing:.02em}
