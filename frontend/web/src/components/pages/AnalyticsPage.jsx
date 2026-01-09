@@ -96,7 +96,7 @@ export default function AnalyticsPage({theme}) {
     return (
         <AppShell theme={theme}>
             <div style={{height: "100vh"}}>
-                <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Огляд прогресу"}  onExport={onExportJSON}
+                <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Огляд прогресу та список правил"}  onExport={onExportJSON}
                              right={
                                  <button style={{
                                      appearance: "none",

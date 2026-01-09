@@ -173,14 +173,14 @@ export default function RulePage({ data, theme }) {
                             fontFamily: "Nunito, system-ui, sans-serif",
 
                             /* 👇 REQUIRED for ellipsis */
-                            maxWidth: 180,              // ← adjust (px) to fit your layout
+                            maxWidth: 280,              // ← adjust (px) to fit your layout
                             whiteSpace: "nowrap",
                             overflow: "hidden",
                             textOverflow: "ellipsis",
 
                             transition: "transform 120ms ease, filter 120ms ease",
                         }} onClick={handleAnalyticsClick}>
-                            ← До аналітики
+                            ← До списку правил
                         </button>
                     }
                 />

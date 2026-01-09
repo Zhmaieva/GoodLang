@@ -227,4 +227,28 @@ export async function callVerifyCodeApi({ email, code, termsAccepted = false }) 
     return data; // { token: "..." }
 }
 
+export async function callGeneratePdfApi() {
+    const url = `${API_BASE}/files/generate/pdf`;
+
+    const res = await fetch(url, {
+        method: "GET",
+        headers: {
+            Authorization: `Bearer ${await getToken()}`,
+        },
+    });
+
+    if (!res.ok) {
+        throw new Error("Failed to generate PDF: " + res.status);
+    }
+
+    // IMPORTANT: read as Blob, not JSON
+    const blob = await res.blob();
+
+    return {
+        isSuccess: true,
+        blob, // application/pdf
+    };
+}
+
+
 

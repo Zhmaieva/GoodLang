@@ -7,7 +7,7 @@ export default function AnalyticsHeader({ onBack, onExport }) {
                 <div>
                     <h1>GoodLang</h1>
                     <div className="sub">
-                        Огляд прогресу
+                        Огляд прогресу та список правил
                     </div>
                 </div>
             </div>
