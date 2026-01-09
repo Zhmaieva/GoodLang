@@ -58,14 +58,11 @@ async function getBrowser() {
     return browserPromise;
 }
 
-async function loadHtmlTemplate(fileName) {
+async function getWatermarkBase64() {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    let html = await fs.readFile(path.join(__dirname, fileName), "utf8");
-
-    // ---- Watermark (fallback to the sandbox image if watermark.png is missing) ----
-    let watermarkBase64 = "";
+    let watermarkBase64 = ""
     try {
         watermarkBase64 = await fs.readFile(path.join(__dirname, "watermark.png"), "base64");
     } catch {
@@ -79,6 +76,16 @@ async function loadHtmlTemplate(fileName) {
             watermarkBase64 = "";
         }
     }
+    return watermarkBase64;
+}
+
+async function loadHtmlTemplate(fileName) {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+
+    let html = await fs.readFile(path.join(__dirname, fileName), "utf8");
+
+    const watermarkBase64 = await getWatermarkBase64();
 
     // ---- Nunito fonts (TTF, embedded as data URIs) ----
     // We reuse the variable font file for weights 400/700/800.
@@ -213,7 +220,9 @@ export async function getPdf(ruleName) {
     const samples = samplesAll.slice(0, 8);
 
     // 1) Intro page
-    const introHtml = buildRuleIntroHtml(rulePage);
+    const introHtml = buildRuleIntroHtml(rulePage, {
+        watermarkBase64: await getWatermarkBase64()
+    });
     const introPdf = await generatePdfFromHtml(introHtml);
 
     // 2) Tasks
