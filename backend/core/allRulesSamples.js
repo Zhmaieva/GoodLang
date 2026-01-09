@@ -3673,10 +3673,10 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це поруч із дверима.",
             "en": [
-                "It is next to the door.",
-                "It's next to the door.",
-                "It is beside the door.",
-                "It's beside the door."
+                "That is next to the door.",
+                "That's next to the door.",
+                "That is beside the door.",
+                "That's beside the door."
             ]
         },
         {
@@ -3730,10 +3730,10 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це в холодильнику.",
             "en": [
-                "It is in the fridge.",
-                "It's in the fridge.",
-                "It is in the refrigerator.",
-                "It's in the refrigerator."
+                "That is in the fridge.",
+                "That's in the fridge.",
+                "That is in the refrigerator.",
+                "That's in the refrigerator."
             ]
         },
         {
@@ -3845,8 +3845,8 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це на полиці.",
             "en": [
-                "It is on the shelf.",
-                "It's on the shelf."
+                "That is on the shelf.",
+                "That's on the shelf."
             ]
         },
         {
@@ -3879,8 +3879,8 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це в моїй сумці.",
             "en": [
-                "It is in my bag.",
-                "It's in my bag."
+                "That is in my bag.",
+                "That's in my bag."
             ]
         },
         {
@@ -4033,8 +4033,8 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це на кухні.",
             "en": [
-                "It is in the kitchen.",
-                "It's in the kitchen."
+                "That is in the kitchen.",
+                "That's in the kitchen."
             ]
         },
         {
@@ -4211,8 +4211,8 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це під ліжком.",
             "en": [
-                "It's under the bed.",
-                "It is under the bed."
+                "That's under the bed.",
+                "That is under the bed."
             ]
         },
         {
@@ -4423,8 +4423,8 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це за дверима.",
             "en": [
-                "It is behind the door.",
-                "It's behind the door."
+                "That is behind the door.",
+                "That's behind the door."
             ]
         },
         {
@@ -4541,8 +4541,7 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це добре запитання.",
             "en": [
-                "That is a good question.",
-                "That's a good question."
+                "This is a good question."
             ]
         },
         {
@@ -4553,8 +4552,8 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Це в коробці.",
             "en": [
-                "It is in the box.",
-                "It's in the box."
+                "That is in the box.",
+                "That's in the box."
             ]
         },
         {

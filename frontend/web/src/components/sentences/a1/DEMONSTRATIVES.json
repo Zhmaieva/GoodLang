@@ -432,7 +432,7 @@
   {
     "rules": ["DEMONSTRATIVES", "TO_BE"],
     "ua": "Це добре запитання.",
-    "en": ["That is a good question.", "That's a good question."]
+    "en": ["This is a good question."]
   },
   {
     "rules": ["DEMONSTRATIVES", "TO_BE", "PREP_PLACE"],
