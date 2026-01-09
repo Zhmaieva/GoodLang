@@ -78,13 +78,22 @@
             width: 710px;
         }
         .header h1{
-            margin:0;
-            color:#fff;
+            margin: 0;
+            color: #fff;
             font-weight: 800;
-            font-size: 46px;
+
+            /* головне */
+            white-space: nowrap;        /* ❗ ніколи не переносити */
+            overflow: hidden;           /* сховати зайве */
+            text-overflow: ellipsis;    /* … якщо вже зовсім не влазить */
+
+            /* адаптивний розмір */
+            font-size: clamp(18px, 3vw, 46px);
+
             letter-spacing: .2px;
             text-transform: lowercase;
         }
+
 
         .list{
             display: flex;

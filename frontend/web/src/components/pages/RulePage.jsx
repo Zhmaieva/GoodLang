@@ -6,7 +6,6 @@ import Badge from "../Badge";
 import ConjugationTable from "../ConjugationTable";
 import Examples from "../Examples";
 import Note from "../Note";
-import Footer from "../Footer";
 import Trainer from "../training/Trainer.jsx";
 import {useNavigate} from "react-router-dom";
 import FooterBar from "../FooterBar.jsx";
