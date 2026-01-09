@@ -180,7 +180,7 @@ export default function HomePage({ theme }) {
                             style={weakRuleButtonStyle(hoveredAnalytics, true)}
                             onClick={handleAnalyticsClick}
                         >
-                            {!isMobile ? "Що мені підтягнути? →" : "Усі правила"}
+                            {!isMobile ? "Список усіх правил →" : "Усі правила"}
                         </button>
 
                         {weakRules.map((r) => {

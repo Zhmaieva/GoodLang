@@ -1,5 +1,5 @@
 import {authMiddleware} from "../middleware/authMiddleware.js";
-import {generatePdf} from "../pdf/pdfGeneration.js";
+import {getPdf} from "../pdf/pdfGeneration.js";
 import {getAccountInfo} from "../database/repositories/accountsRepository.js";
 
 const name = 'files';
@@ -13,7 +13,7 @@ export const filesController = {
                     return res.status(404).send({})
                 }
 
-                const pdfBuffer = await generatePdf();
+                const pdfBuffer = await getPdf();
 
                 res.setHeader("Content-Type", "application/pdf");
                 res.setHeader(

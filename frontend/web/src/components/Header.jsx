@@ -191,7 +191,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     </div>
                 </div>
 
-                <AccuracyKpi header mobile theme={theme}/>
+                <AccuracyKpi header theme={theme}/>
             </div>
 
             <div

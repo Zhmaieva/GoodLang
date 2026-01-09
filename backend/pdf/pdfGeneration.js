@@ -1,7 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import {fileURLToPath} from "node:url";
 import puppeteer from "puppeteer";
+import { PDFDocument } from "pdf-lib";
 
 /** ------------ small concurrency limiter (no extra deps) ------------ */
 function createLimiter(maxConcurrent = 4) {
@@ -67,11 +68,11 @@ async function loadAssets() {
     };
 }
 
-async function loadHtmlTemplate() {
+async function loadHtmlTemplate(fileName) {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    let html = await fs.readFile(path.join(__dirname, "template.html"), "utf8");
+    let html = await fs.readFile(path.join(__dirname, fileName), "utf8");
 
     const watermarkBase64 = await fs.readFile(
         path.join(__dirname, "watermark.png"),
@@ -79,34 +80,42 @@ async function loadHtmlTemplate() {
     );
 
     const nunitoRegular = await fs.readFile(
-        path.join(__dirname, "Nunito-Regular.ttf"),
-        "base64"
-    );
-    const nunitoBold = await fs.readFile(
-        path.join(__dirname, "Nunito-Bold.ttf"),
-        "base64"
-    );
-    const nunitoExtraBold = await fs.readFile(
-        path.join(__dirname, "Nunito-ExtraBold.ttf"),
+        path.join(__dirname, "Nunito-VariableFont_wght.ttf"),
         "base64"
     );
     const nunitoItalic = await fs.readFile(
-        path.join(__dirname, "Nunito-Italic.ttf"),
+        path.join(__dirname, "Nunito-Italic-VariableFont_wght.ttf"),
         "base64"
     );
 
     return html
         .split("{{WATERMARK_BASE64}}").join(watermarkBase64)
-        .replace("{{NUNITO_REGULAR}}", nunitoRegular)
-        .replace("{{NUNITO_BOLD}}", nunitoBold)
-        .replace("{{NUNITO_EXTRABOLD}}", nunitoExtraBold)
+        .replace("{{NUNITO}}", nunitoRegular)
         .replace("{{NUNITO_ITALIC}}", nunitoItalic);
 }
 
+export async function getPdf() {
+    const pdf1 = await generatePdf('template.html'); // page 1
+    const pdf2 = await generatePdf('template-answers.html'); // page 2
+
+    return mergePdfs([pdf1, pdf2]);
+}
+
+async function mergePdfs(pdfBuffers) {
+    const mergedPdf = await PDFDocument.create();
+
+    for (const buffer of pdfBuffers) {
+        const pdf = await PDFDocument.load(buffer);
+        const pages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+        pages.forEach((page) => mergedPdf.addPage(page));
+    }
+
+    return await mergedPdf.save(); // Uint8Array
+}
 
 /** ------------ PDF generator ------------ */
-export async function generatePdf() {
-    const html = await loadHtmlTemplate();
+async function generatePdf(templateName) {
+    const html = await loadHtmlTemplate(templateName);
 
     // Queue + limit concurrency to avoid resource spikes
     return limitPdf(async () => {
@@ -139,10 +148,6 @@ export async function generatePdf() {
             await page.close().catch(() => {});
         }
     });
-}
-
-export function generateHtmlLayout(ruleSamples) {
-    //TODO: generate HTML page from rules
 }
 
 /** Optional: graceful shutdown (put in your main server file if you prefer) */

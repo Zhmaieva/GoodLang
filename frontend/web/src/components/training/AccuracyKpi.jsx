@@ -2,12 +2,14 @@
 import React, {useEffect} from "react";
 import {getOverallAccuracy, syncWithServer} from "../../services/dataService.js";
 import {off, on} from "../../services/events.js";
+import {useNavigate} from "react-router-dom";
 
 export default function AccuracyKpi({ header, mobile, theme }) {
     const [accuracy, setAccuracy] = React.useState(0);
     const [attemptsLeft, setAttemptsLeft] = React.useState(0);
     const [isMobile, setIsMobile] = React.useState(mobile);
     const [isLoading, setIsLoading] = React.useState(true);
+    const [hover, setHover] = React.useState(null);
 
     const refresh = async () => {
         await syncWithServer();
@@ -34,7 +36,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const showEmpty = attemptsLeft > 0;
 
-    const cardStyle = {
+    const cardStyle = (isHover) => ({
         visibility: (header && isLoading) ? "hidden" : "visible",
         background: "#fffdf8",
         border: "3px solid #ff6138",
@@ -46,7 +48,39 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         gap: header || isMobile ? "1px" : "6px",
         textAlign: "center",
         width: header ? (isMobile ? '220px' : '320px') : 'default',
-    };
+
+        cursor: isHover ? "pointer" : "default",
+
+        transform: isHover ? "translateY(1px)" : "none",
+        filter: isHover ? "brightness(0.95)" : "none",
+        transition: "transform 120ms ease, filter 120ms ease",
+    });
+
+    const cardStyleHeader = (isHover) => ({
+        appearance: "none",
+        fontWeight: 800,
+        fontSize: "1rem",
+        lineHeight: 1,
+        borderRadius: 999,
+        background: "#fff",
+        color: theme.text,
+        border: "2px solid rgba(0,0,0,0.12)",
+        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
+        fontFamily: "Nunito, system-ui, sans-serif",
+
+        visibility: (header && isLoading) ? "hidden" : "visible",
+        padding: isMobile || header ? "12px" : "18px",
+        display: "flex",
+        flexDirection: "column",
+        cursor: header ? "pointer" : "arrow",
+        gap: header || isMobile ? "1px" : "6px",
+        textAlign: "center",
+        width: header ? (isMobile ? '220px' : '320px') : 'default',
+
+        transform: isHover ? "translateY(1px)" : "none",
+        filter: isHover ? "brightness(0.95)" : "none",
+        transition: "transform 120ms ease, filter 120ms ease",
+    });
 
     const labelStyle = {
         fontSize: (header || isMobile) ? "0.6rem" : "1rem",
@@ -81,8 +115,19 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         top: 0,
     });
 
+    const navigate = useNavigate();
+
     return (
-        <div style={cardStyle}>
+        <div
+            style={(header && !mobile && false) ? cardStyleHeader(hover) : cardStyle(header && hover === "card")}
+            onMouseEnter={() => setHover("card")}
+            onMouseLeave={() => setHover(null)}
+            onClick={() => {
+                if (!header)
+                    return;
+
+                navigate('/analytics');
+            }}>
             {showEmpty ? (
                 <>
                     {!header && (<div style={labelStyle}>Знання правил</div>)}
