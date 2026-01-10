@@ -36,5 +36,7 @@ export const ACTION_TYPES = {
     MODAL_SHOWN_TOU: 401,
     MODAL_SHOWN_DISCOUNT_SUBSCRIPTION: 402,
 
+    USER_TEACHER_REGISTERED: 500
+
     // other action types...
 };

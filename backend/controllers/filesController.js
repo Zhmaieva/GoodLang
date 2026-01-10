@@ -8,21 +8,19 @@ export const filesController = {
     mapRoutes: function (app) {
         app.get(`/${name}/generate/pdf`, authMiddleware, async (req, res, next) => {
             try {
-                const accountInfo = await getAccountInfo(req.user.id);
-                if (accountInfo?.email !== "zorkasupreme@gmail.com") {
-                    return res.status(404).send({});
-                }
-
-                const rule = String(req.query.rule || "DEMONSTRATIVES").trim();
-                const pdfBuffer = await getPdf(rule);
+                const pdf = await getPdf(req.query.rule);
 
                 res.setHeader("Content-Type", "application/pdf");
-                const safeName = rule.replaceAll(/[^a-zA-Z0-9_-]+/g, "_");
-                res.setHeader("Content-Disposition", `attachment; filename="${safeName}.pdf"`);
+                res.send(Buffer.from(pdf));
+            } catch (err) {
+                if (err.code === "PDF_QUEUE_FULL") {
+                    return res.status(429).json({
+                        error: "Too many PDF requests. Please try again in a moment."
+                    });
+                }
 
-                return res.send(pdfBuffer);
-            } catch (e) {
-                next(e);
+                console.error(err);
+                res.status(500).json({ error: "Failed to generate PDF" });
             }
         });
     },

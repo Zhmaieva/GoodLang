@@ -8,8 +8,10 @@ import {getTrainingLevel} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
 import {logInfo} from "../../services/logger.js";
-import {trackMetaCustomEvent} from "../../services/gaService.js";
+import {ensureAnalytics, trackMetaCustomEvent, trackMetaEvent, trackPageView} from "../../services/gaService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import CookieConsentModal from "../modals/CookieConsentModal.jsx";
+import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 
 export default function Trainer({
                                     theme,
@@ -59,6 +61,8 @@ export default function Trainer({
 
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [waitTimeSeconds, setWaitTimeSeconds] = useState(false);
+
+    const [cookieOpen, setCookieOpen] = useState(false);
 
     // 🔹 NEW: rules that need attention (score < 1)
     const [weakRules, setWeakRules] = useState([]);
@@ -314,6 +318,13 @@ export default function Trainer({
             return
         }
 
+        if (!getCookieConsent()) {
+            setCookieOpen(true);
+            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
+
+            return;
+        }
+
         if (mode === "check") await evaluateAnswer();
         else {
             const diff = randomDifficulty(level);
@@ -365,6 +376,31 @@ export default function Trainer({
                 open={limitModalOpen}
                 onClose={() => setLimitModalOpen(false)}
             />
+
+            {cookieOpen && (
+                <CookieConsentModal
+                    theme={theme}
+                    onAccept={async () => {
+                        setCookieOpen(false);
+                        acceptCookies();
+                        ensureAnalytics();
+                        trackPageView(window.location.pathname);
+                        trackMetaEvent("CompleteRegistration");
+
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
+
+                        await onMainButtonClick()
+                    }}
+                    onReject={async () => {
+                        setCookieOpen(false);
+                        rejectCookies();
+
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
+
+                        await onMainButtonClick()
+                    }}
+                />
+            )}
         </section>
     );
 }

@@ -1,12 +1,22 @@
 import React, {useRef, useState} from "react";
-import {callAccountInfoApi, callCheckoutApi, callDataSyncApi, callVerifyCodeApi} from "../../services/api.js";
+import {
+    callAccountInfoApi,
+    callAccountVerifyApi,
+    callCheckoutApi,
+    callDataSyncApi,
+    callVerifyCodeApi
+} from "../../services/api.js";
 import {getStripe, logoStyle} from "./LimitModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import {logError} from "../../services/logger.js";
-import {trackMetaEvent} from "../../services/gaService.js";
+import {ensureAnalytics, trackMetaEvent, trackPageView} from "../../services/gaService.js";
+import CookieConsentModal from "../modals/CookieConsentModal.jsx";
+import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function TermsOfUseModal({
+                                            ruleToDownload = null,
                                             theme,
                                             onClose = () => {},
                                             readOnly = false,
@@ -19,6 +29,7 @@ export default function TermsOfUseModal({
     const navigate = useNavigate();
 
     const checkoutRef = useRef(null);
+    const [cookieOpen, setCookieOpen] = useState(false);
 
     async function syncData() {
         try {
@@ -41,6 +52,8 @@ export default function TermsOfUseModal({
 
         setLoading(true);
         setError("");
+
+        let stopLoading = true;
 
         try {
             // Same flow as LoginForm.handleVerify
@@ -96,14 +109,49 @@ export default function TermsOfUseModal({
                 return;
             }
 
+            stopLoading = true;
+            if (!getCookieConsent()) {
+                setCookieOpen(true);
+                await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
+
+                return;
+            }
+
             setTimeout(async () => {
-                window.location.reload();
+                reloadWithRuleParam(ruleToDownload);
+
                 onClose();
             }, 500)
         } catch (err) {
+            stopLoading = false;
             setError("Не вдалося підтвердити код. Спробуйте ще раз.");
         } finally {
-            setLoading(false);
+            if (!stopLoading)
+                setLoading(false);
+        }
+    }
+
+    function reloadWithRuleParam(ruleId) {
+        try {
+            const url = new URL(window.location.href);
+
+            if (ruleId) {
+                url.searchParams.set("ruleToDownload", ruleId);
+            } else {
+                url.searchParams.delete("ruleToDownload");
+            }
+
+            // replaceState avoids adding a new history entry
+            window.history.replaceState({}, "", url.toString());
+
+            // reload the current URL (now including the param)
+            window.location.reload();
+        } catch (e) {
+            // fallback (rare, but safe)
+            const encoded = ruleId ? encodeURIComponent(ruleId) : "";
+            window.location.href = ruleId
+                ? `${window.location.pathname}?ruleToDownload=${encoded}`
+                : window.location.pathname;
         }
     }
 
@@ -178,6 +226,7 @@ export default function TermsOfUseModal({
 
     return (
         <>
+            {!cookieOpen && <>
             {
                 !isPaying && <div style={overlayStyle}>
                     <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
@@ -450,6 +499,30 @@ export default function TermsOfUseModal({
                     />
                 </div>
             }
+            </>}
+
+            {cookieOpen && (
+                <CookieConsentModal
+                    theme={theme}
+                    onAccept={async () => {
+                        acceptCookies();
+                        ensureAnalytics();
+                        trackPageView(window.location.pathname);
+                        trackMetaEvent("CompleteRegistration");
+
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
+
+                        reloadWithRuleParam(ruleToDownload);
+                    }}
+                    onReject={async () => {
+                        rejectCookies();
+
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
+
+                        reloadWithRuleParam(ruleToDownload);
+                    }}
+                />
+            )}
         </>
     );
 }

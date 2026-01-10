@@ -4,6 +4,7 @@ import { syncWithServer } from "../services/dataService";
 import { callAccountInfoApi } from "../services/api.js";
 
 const FIRST_OPEN_KEY = "gl_has_opened";
+const TEACHER_KEY = "teacher";
 
 export default function SyncOnRouteChange() {
     const location = useLocation();
@@ -15,18 +16,34 @@ export default function SyncOnRouteChange() {
         if (!checkedFirstOpen.current) {
             checkedFirstOpen.current = true;
 
+            const params = new URLSearchParams(window.location.search);
+            const isTeacher = params.get("teacher") === "true";
+            const shouldOpenSubscribe = params.get("subscribe") === "true";
+
+            // If teacher=true -> remember it + remove param from URL (no redirect)
+            if (isTeacher) {
+                localStorage.setItem(TEACHER_KEY, "true");
+                params.delete("teacher");
+
+                const nextSearch = params.toString();
+                const nextUrl = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash || ""}`;
+
+                // Remove param without triggering navigation / redirect loops
+                window.history.replaceState(null, "", nextUrl);
+            }
+
             const hasOpened = localStorage.getItem(FIRST_OPEN_KEY);
 
             if (!hasOpened) {
                 localStorage.setItem(FIRST_OPEN_KEY, "1");
 
-                const params = new URLSearchParams(window.location.search);
-                const shouldOpenSubscribe = params.get("subscribe") === "true";
-
-                // avoid redirect loop if already on /welcome
-                if (location.pathname !== "/welcome" && !shouldOpenSubscribe) {
-                    navigate("/welcome", { replace: true });
-                    return;
+                // Only redirect to /welcome if NOT teacher and NOT subscribe
+                if (!isTeacher) {
+                    // avoid redirect loop if already on /welcome
+                    if (location.pathname !== "/welcome" && !shouldOpenSubscribe) {
+                        navigate("/welcome", { replace: true });
+                        return;
+                    }
                 }
             }
         }

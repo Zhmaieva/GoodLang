@@ -269,7 +269,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       position: relative;
       left: -18px;
       top: -18px;
-      width: 710px;
+      width: 734px;
       flex: 0 0 auto;
     }
     .header h1{
@@ -294,7 +294,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
     }
     .rule-fit-inner{
       transform-origin: top left;
-      width: 100%;
+      width: 99%;
     }
 
     /* ---------- Bottom-right logo ---------- */

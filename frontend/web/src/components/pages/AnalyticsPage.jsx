@@ -19,6 +19,7 @@ import {useNavigate} from "react-router-dom";
 import {getAllStatistics, inferUserLevel} from "../../services/dataService.js";
 import AppShell from "../AppShell.jsx";
 import BrandHeader from "../BrandHeader.jsx";
+import {callAccountInfoApi} from "../../services/api.js";
 
 export default function AnalyticsPage({theme}) {
     // ----- State (mirrors your script) -----
@@ -28,6 +29,7 @@ export default function AnalyticsPage({theme}) {
     const [showWeakOnly, setShowWeakOnly] = useState(false);
     const [query, setQuery] = useState("");
     const [queue, setQueue] = useState([]);
+    const [account, setAccount] = useState(null);
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 915);
 
@@ -35,9 +37,17 @@ export default function AnalyticsPage({theme}) {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 915);
         };
+
+        loadAccountInfo().then();
+
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    const loadAccountInfo = async () => {
+        const account = await callAccountInfoApi();
+        setAccount(account);
+    }
 
 
     // ----- Derived -----
@@ -140,6 +150,7 @@ export default function AnalyticsPage({theme}) {
                 />
                 <div style={{height: '50%'}}>
                     <RulesTable
+                        account={account}
                         theme={theme}
                         rows={tableRows}
                         pct={pct}

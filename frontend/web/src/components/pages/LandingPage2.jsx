@@ -44,8 +44,8 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           heroAccentWord = "правильно",
                                                           heroBadge = "безкоштовно",
 
-                                                          communityCount = "1811 речень перекладено",
-                                                          subStat = "339 правил засвоєно",
+                                                          communityCount = "2120 речень перекладено",
+                                                          subStat = "350 правил засвоєно",
 
                                                           useTitle = `ВИКОРИСТОВУЙ ${brand.toUpperCase()}, ЩОБ`,
                                                           hashtags = [
@@ -594,11 +594,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                 type="button"
                                 style={styles.primaryBtn(pressedId === "heroPrimary")}
                                 {...pressHandlers("heroPrimary")}
-                                onClick={async () => {
-                                    onPrimaryCta ? onPrimaryCta() : scrollTo("join");
-
-                                    await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_LEARNING);
-                                }}
+                                onClick={handleStart}
                             >
                                 {primaryCtaText}
                             </button>

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
-    callAccountInfoApi,
+    callAccountInfoApi, callAccountVerifyApi,
     callCheckoutApi,
     callDataSyncApi,
     callSendCodeApi,
@@ -11,8 +11,16 @@ import {getStripe, logoStyle} from "./LimitModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import {logError} from "../../services/logger.js";
+import CookieConsentModal from "../modals/CookieConsentModal.jsx";
+import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
+import {ensureAnalytics, trackMetaEvent, trackPageView} from "../../services/gaService.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
-export default function LoginForm({ theme, account, onClose = () => {} }) {
+export default function LoginForm({
+                                      theme,
+                                      account,
+                                      ruleToDownload = null,
+                                      onClose = () => {} }) {
     const [step, setStep] = useState("email"); // "email" | "code"
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
@@ -21,11 +29,13 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
     const [error, setError] = useState("");
     const [isMobile, setIsMobile] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
+    const [cookieOpen, setCookieOpen] = useState(false);
 
     const inputsRef = useRef([]);
     const checkoutRef = useRef(null);
 
     const navigate = useNavigate();
+
 
 
     useEffect(() => {
@@ -263,13 +273,44 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
                 return;
             }
 
-            window.location.reload();
+            if (!getCookieConsent()) {
+                setCookieOpen(true);
+                await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
+
+                return;
+            }
+
+            reloadWithRuleParam(ruleToDownload);
 
             onClose();
         } catch (err) {
             setError("Невірний код");
         } finally {
             setLoading(false);
+        }
+    }
+
+    function reloadWithRuleParam(ruleId) {
+        try {
+            const url = new URL(window.location.href);
+
+            if (ruleId) {
+                url.searchParams.set("ruleToDownload", ruleId);
+            } else {
+                url.searchParams.delete("ruleToDownload");
+            }
+
+            // replaceState avoids adding a new history entry
+            window.history.replaceState({}, "", url.toString());
+
+            // reload the current URL (now including the param)
+            window.location.reload();
+        } catch (e) {
+            // fallback (rare, but safe)
+            const encoded = ruleId ? encodeURIComponent(ruleId) : "";
+            window.location.href = ruleId
+                ? `${window.location.pathname}?ruleToDownload=${encoded}`
+                : window.location.pathname;
         }
     }
 
@@ -288,219 +329,284 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
         }
     }, [step]);
 
+    const wrapperStyle = {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        inset: 0,
+        height: "100dvh",
+        background: "rgba(0,0,0,0.35)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 9999,
+    };
+
+    const boxStyle = {
+        background: theme.bg,
+        padding: "36px",
+        borderRadius: theme.radius * 1.2,
+        border: `4px solid ${theme.accent}`,
+        width: "90%",
+        maxWidth: 480,
+        textAlign: "center",
+        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+        fontFamily: "Nunito, system-ui, sans-serif",
+        lineHeight: 1.4,
+    };
+
     return (
         <>
-            {
-                !termsOpen && !isPaying && <div style={{display: "flex", flexDirection: "column", gap: 12}}>
-                    {step === "email" && (
-                        <>
-                            <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
-                                <div></div>
+            {(!cookieOpen && !termsOpen) && <div
+                style={wrapperStyle}
+            >
+                <div style={boxStyle} onClick={(e) => e.stopPropagation()}>
+                    {
+                        !termsOpen && !isPaying && <div style={{display: "flex", flexDirection: "column", gap: 12}}>
+                            {step === "email" && (
+                                <>
+                                    <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
+                                        <div></div>
 
-                                <p onClick={onClose} style={{
-                                    marginBottom: 16,
-                                    marginTop: -26,
-                                    marginLeft: 0,
-                                    marginRight: -22,
-                                    color: theme.accent,
-                                    fontSize: "1.3rem",
-                                    fontWeight: 500,
-                                    textAlign: "left",
-                                    cursor: "pointer",
-                                    userSelect: "none",
-                                    WebkitUserSelect: "none",
-                                    WebkitTouchCallout: "none",
-                                }}>
-                                    ✕
-                                </p>
-                            </div>
+                                        <p onClick={onClose} style={{
+                                            marginBottom: 16,
+                                            marginTop: -26,
+                                            marginLeft: 0,
+                                            marginRight: -22,
+                                            color: theme.accent,
+                                            fontSize: "1.3rem",
+                                            fontWeight: 500,
+                                            textAlign: "left",
+                                            cursor: "pointer",
+                                            userSelect: "none",
+                                            WebkitUserSelect: "none",
+                                            WebkitTouchCallout: "none",
+                                        }}>
+                                            ✕
+                                        </p>
+                                    </div>
 
-                            <div style={{
-                                marginLeft: 0,
-                                marginBottom: 16,
-                                display: "flex",
-                                justifyContent: "space-between",
-                            }}>
-                                <div style={{display: "flex", flexDirection: "column"}}>
-                                    <h2 style={{
-                                        textAlign: "left",
-                                        marginBottom: 0,
-                                        marginTop: 0,
-                                        color: theme.text,
-                                        fontSize: "18pt",
-                                        fontWeight: 800
-                                    }}>
-                                        Введи свій імейл
-                                    </h2>
-                                    <p style={{
-                                        marginBottom: 0,
-                                        marginTop: 8,
+                                    <div style={{
                                         marginLeft: 0,
-                                        color: theme.text,
-                                        fontSize: "16px",
-                                        fontWeight: 500,
-                                        textAlign: "left"
+                                        marginBottom: 16,
+                                        display: "flex",
+                                        justifyContent: "space-between",
                                     }}>
-                                        На пошту надійде підтвердження
-                                    </p>
-                                </div>
+                                        <div style={{display: "flex", flexDirection: "column"}}>
+                                            <h2 style={{
+                                                textAlign: "left",
+                                                marginBottom: 0,
+                                                marginTop: 0,
+                                                color: theme.text,
+                                                fontSize: "18pt",
+                                                fontWeight: 800
+                                            }}>
+                                                Введи свій імейл
+                                            </h2>
+                                            <p style={{
+                                                marginBottom: 0,
+                                                marginTop: 8,
+                                                marginLeft: 0,
+                                                color: theme.text,
+                                                fontSize: "16px",
+                                                fontWeight: 500,
+                                                textAlign: "left"
+                                            }}>
+                                                На пошту надійде підтвердження
+                                            </p>
+                                        </div>
 
-                                <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                    <div style={logoStyle(64)}>GL</div>
-                                </div>
-                            </div>
-                            <input
-                                type="email"
-                                placeholder="goodlang.app@example.com"
-                                value={emailInput}
-                                onChange={(e) => setEmailInput(e.target.value)}
-                                style={{
-                                    ...baseInputStyle,
-                                    width: "100%",
-                                }}
-                                required
-                                disabled={loading}
-                            />
-                            <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
-                                {loading ? "Відправляю..." : "Підтвердити"}
-                            </button>
-                        </>
-                    )}
-
-                    {step === "code" && (
-                        <>
-                            <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
-                                <div></div>
-
-                                <p onClick={onClose} style={{
-                                    marginBottom: 16,
-                                    marginTop: -26,
-                                    marginLeft: 0,
-                                    marginRight: -22,
-                                    color: theme.accent,
-                                    fontSize: "1.3rem",
-                                    fontWeight: 500,
-                                    textAlign: "left",
-                                    cursor: "pointer",
-                                    userSelect: "none",
-                                    WebkitUserSelect: "none",
-                                    WebkitTouchCallout: "none",
-                                }}>
-                                    ✕
-                                </p>
-                            </div>
-
-                            <div style={{
-                                marginLeft: 0,
-                                marginBottom: 16,
-                                display: "flex",
-                                justifyContent: "space-between",
-                            }}>
-                                <div style={{display: "flex", flexDirection: "column"}}>
-                                    <h2 style={{
-                                        textAlign: "left",
-                                        marginBottom: 0,
-                                        marginTop: 0,
-                                        color: theme.text,
-                                        fontSize: "18pt",
-                                        fontWeight: 800
-                                    }}>
-                                        Введи код з імейлу
-                                    </h2>
-                                    <p style={{
-                                        marginBottom: 0,
-                                        marginTop: 8,
-                                        marginLeft: 0,
-                                        color: theme.text,
-                                        fontSize: "16px",
-                                        fontWeight: 500,
-                                        textAlign: "left",
-                                        overflow: "clip",
-                                        maxWidth: 310
-                                    }}>
-                                        Відправлено на: {emailInput}
-                                    </p>
-                                </div>
-
-                                <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                    <div style={logoStyle(64)}>GL</div>
-                                </div>
-                            </div>
-                            <div
-                                onPaste={handlePaste}
-                                style={{
-                                    display: "flex",
-                                    resize: "none",
-                                    justifyContent: "space-between",
-                                    borderRadius: theme.radius,
-                                    border: `3px solid ${theme.accent}`,
-                                    background: "#fffaf3",
-                                    fontSize: "18pt",
-                                    fontWeight: 700,
-                                    color: theme.text,
-                                    textAlign: "center",
-                                    caretColor: "grey",
-                                    marginBottom: 16
-                                }}>
-                                {code.map((digit, i) => (
+                                        <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                            <div style={logoStyle(64)}>GL</div>
+                                        </div>
+                                    </div>
                                     <input
-                                        type="text"
-                                        inputMode="numeric"
-                                        autoComplete="one-time-code"
-                                        key={i}
-                                        ref={(el) => (inputsRef.current[i] = el)}
-                                        value={digit}
-                                        onChange={(e) => handleCodeChange(e, i)}
-                                        onKeyDown={(e) => handleCodeKeyDown(e, i)}
-                                        onClick={() => focusFirstEmpty()}
-                                        onTouchEnd={() => focusFirstEmpty()}
-                                        onPointerDown={(e) => {
-                                            const firstEmpty = getFirstEmptyIndex(code);
-                                            if (i !== firstEmpty) {
-                                                e.preventDefault();     // важливо
-                                                forceFocusFirstEmpty();
-                                            }
+                                        type="email"
+                                        placeholder="goodlang.app@example.com"
+                                        value={emailInput}
+                                        onChange={(e) => setEmailInput(e.target.value)}
+                                        style={{
+                                            ...baseInputStyle,
+                                            width: "100%",
                                         }}
-                                        onTouchStart={(e) => {      // fallback для iOS, якщо pointer events десь вимкнені
-                                            const firstEmpty = getFirstEmptyIndex(code);
-                                            if (i !== firstEmpty) {
-                                                e.preventDefault();
-                                                forceFocusFirstEmpty();
-                                            }
-                                        }}
-                                        onFocus={() => {            // додатковий захист
-                                            const firstEmpty = getFirstEmptyIndex(code);
-                                            if (i !== firstEmpty) {
-                                                forceFocusFirstEmpty();
-                                            }
-                                        }}
-                                        style={codeInputStyle}
-                                        maxLength={1}
+                                        required
                                         disabled={loading}
                                     />
+                                    <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
+                                        {loading ? "Відправляю..." : "Підтвердити"}
+                                    </button>
+                                </>
+                            )}
 
-                                ))}
-                            </div>
-                            <button style={buttonStyle} onClick={handleVerify} disabled={loading}>
-                                {loading ? "Перевіряю..." : "Увійти"}
-                            </button>
-                        </>
-                    )}
+                            {step === "code" && (
+                                <>
+                                    <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
+                                        <div></div>
 
-                    {error && <div style={{color: theme.text}}>{error}</div>}
+                                        <p onClick={onClose} style={{
+                                            marginBottom: 16,
+                                            marginTop: -26,
+                                            marginLeft: 0,
+                                            marginRight: -22,
+                                            color: theme.accent,
+                                            fontSize: "1.3rem",
+                                            fontWeight: 500,
+                                            textAlign: "left",
+                                            cursor: "pointer",
+                                            userSelect: "none",
+                                            WebkitUserSelect: "none",
+                                            WebkitTouchCallout: "none",
+                                        }}>
+                                            ✕
+                                        </p>
+                                    </div>
 
-                    <style>
-                        {`
+                                    <div style={{
+                                        marginLeft: 0,
+                                        marginBottom: 16,
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                    }}>
+                                        <div style={{display: "flex", flexDirection: "column"}}>
+                                            <h2 style={{
+                                                textAlign: "left",
+                                                marginBottom: 0,
+                                                marginTop: 0,
+                                                color: theme.text,
+                                                fontSize: "18pt",
+                                                fontWeight: 800
+                                            }}>
+                                                Введи код з імейлу
+                                            </h2>
+                                            <p style={{
+                                                marginBottom: 0,
+                                                marginTop: 8,
+                                                marginLeft: 0,
+                                                color: theme.text,
+                                                fontSize: "16px",
+                                                fontWeight: 500,
+                                                textAlign: "left",
+                                                overflow: "clip",
+                                                maxWidth: 310
+                                            }}>
+                                                Відправлено на: {emailInput}
+                                            </p>
+                                        </div>
+
+                                        <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                            <div style={logoStyle(64)}>GL</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        onPaste={handlePaste}
+                                        style={{
+                                            display: "flex",
+                                            resize: "none",
+                                            justifyContent: "space-between",
+                                            borderRadius: theme.radius,
+                                            border: `3px solid ${theme.accent}`,
+                                            background: "#fffaf3",
+                                            fontSize: "18pt",
+                                            fontWeight: 700,
+                                            color: theme.text,
+                                            textAlign: "center",
+                                            caretColor: "grey",
+                                            marginBottom: 16
+                                        }}>
+                                        {code.map((digit, i) => (
+                                            <input
+                                                type="text"
+                                                inputMode="numeric"
+                                                autoComplete="one-time-code"
+                                                key={i}
+                                                ref={(el) => (inputsRef.current[i] = el)}
+                                                value={digit}
+                                                onChange={(e) => handleCodeChange(e, i)}
+                                                onKeyDown={(e) => handleCodeKeyDown(e, i)}
+                                                onClick={() => focusFirstEmpty()}
+                                                onTouchEnd={() => focusFirstEmpty()}
+                                                onPointerDown={(e) => {
+                                                    const firstEmpty = getFirstEmptyIndex(code);
+                                                    if (i !== firstEmpty) {
+                                                        e.preventDefault();     // важливо
+                                                        forceFocusFirstEmpty();
+                                                    }
+                                                }}
+                                                onTouchStart={(e) => {      // fallback для iOS, якщо pointer events десь вимкнені
+                                                    const firstEmpty = getFirstEmptyIndex(code);
+                                                    if (i !== firstEmpty) {
+                                                        e.preventDefault();
+                                                        forceFocusFirstEmpty();
+                                                    }
+                                                }}
+                                                onFocus={() => {            // додатковий захист
+                                                    const firstEmpty = getFirstEmptyIndex(code);
+                                                    if (i !== firstEmpty) {
+                                                        forceFocusFirstEmpty();
+                                                    }
+                                                }}
+                                                style={codeInputStyle}
+                                                maxLength={1}
+                                                disabled={loading}
+                                            />
+
+                                        ))}
+                                    </div>
+                                    <button style={buttonStyle} onClick={handleVerify} disabled={loading}>
+                                        {loading ? "Перевіряю..." : "Увійти"}
+                                    </button>
+                                </>
+                            )}
+
+                            {error && <div style={{color: theme.text}}>{error}</div>}
+
+                            <style>
+                                {`
                     input::placeholder,
                     textarea::placeholder {
                         text-align: center;
                     }
                 `}
-                    </style>
+                            </style>
+                        </div>
+                    }
+                    {
+                        isPaying && <div style={{
+                            position: "fixed",
+                            top: 0, left: 0,
+                            width: "100vw",
+                            height: "100vh",
+                            background: "rgba(0,0,0,0.35)",
+                            display: "flex",
+                            alignItems: isMobile ? "top" : "center",
+                            justifyContent: "center",
+                            zIndex: 9999
+                        }}>
+                            <div
+                                id="embedded-checkout-container-login-form"
+                                style={{
+                                    display: "none",
+                                    width: "92vw",
+                                    maxWidth: 720,
+                                    margin: "0 auto",
+                                    background: theme.bg,
+                                    borderRadius: theme.radius * 1.2,
+                                    border: `4px solid ${theme.accent}`,
+                                    boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                                    maxHeight: "75%",
+                                    overflow: "auto",
+                                }}
+                            />
+                        </div>
+                    }
                 </div>
-            }
+            </div>}
+
+
             {
                 termsOpen && !isPaying && <TermsOfUseModal
+                    ruleToDownload={ruleToDownload}
                     theme={theme}
                     onClose={() => {
                         setTermsOpen(false);
@@ -512,35 +618,28 @@ export default function LoginForm({ theme, account, onClose = () => {} }) {
 
             }
 
-            {
-                isPaying && <div style={{
-                    position: "fixed",
-                    top: 0, left: 0,
-                    width: "100vw",
-                    height: "100vh",
-                    background: "rgba(0,0,0,0.35)",
-                    display: "flex",
-                    alignItems: isMobile ? "top" : "center",
-                    justifyContent: "center",
-                    zIndex: 9999
-                }}>
-                    <div
-                        id="embedded-checkout-container-login-form"
-                        style={{
-                            display: "none",
-                            width: "92vw",
-                            maxWidth: 720,
-                            margin: "0 auto",
-                            background: theme.bg,
-                            borderRadius: theme.radius * 1.2,
-                            border: `4px solid ${theme.accent}`,
-                            boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                            maxHeight: "75%",
-                            overflow: "auto",
-                        }}
-                    />
-                </div>
-            }
-        </>
-    );
-}
+
+            {cookieOpen && (
+                        <CookieConsentModal
+                            theme={theme}
+                            onAccept={async () => {
+                                acceptCookies();
+                                ensureAnalytics();
+                                trackPageView(window.location.pathname);
+
+                                await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
+
+                                reloadWithRuleParam(ruleToDownload);
+                            }}
+                            onReject={async () => {
+                                rejectCookies();
+
+                                await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
+
+                                reloadWithRuleParam(ruleToDownload);
+                            }}
+                        />
+                    )}
+                </>
+                );
+                }

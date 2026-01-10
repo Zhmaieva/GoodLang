@@ -12,7 +12,8 @@ import {shuffleBySeed} from "../core/сore.js";
 import {buildRuleIntroHtml} from "./buildRuleInfo.js";
 
 /** ------------ small concurrency limiter (no extra deps) ------------ */
-function createLimiter(maxConcurrent = 4) {
+/** ------------ small concurrency + queue limiter ------------ */
+function createLimiter(maxConcurrent = 4, maxQueue = 20) {
     let active = 0;
     const queue = [];
 
@@ -20,9 +21,9 @@ function createLimiter(maxConcurrent = 4) {
         if (active >= maxConcurrent) return;
         const next = queue.shift();
         if (!next) return;
+
         active++;
         next()
-            .catch(() => {})
             .finally(() => {
                 active--;
                 runNext();
@@ -31,6 +32,13 @@ function createLimiter(maxConcurrent = 4) {
 
     return function limit(fn) {
         return new Promise((resolve, reject) => {
+            if (queue.length >= maxQueue) {
+                const err = new Error("PDF queue is full");
+                err.code = "PDF_QUEUE_FULL";
+                reject(err);
+                return;
+            }
+
             queue.push(async () => {
                 try {
                     resolve(await fn());
@@ -38,12 +46,14 @@ function createLimiter(maxConcurrent = 4) {
                     reject(e);
                 }
             });
+
             runNext();
         });
     };
 }
 
-const limitPdf = createLimiter(Number(process.env.PDF_CONCURRENCY ?? 4));
+
+const limitPdf = createLimiter(Number(process.env.PDF_CONCURRENCY ?? 2), 20);
 
 /** ------------ puppeteer browser singleton ------------ */
 let browserPromise = null;

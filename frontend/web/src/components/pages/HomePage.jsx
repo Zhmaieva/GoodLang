@@ -5,7 +5,7 @@ import Header from "../Header";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import Trainer from "../training/Trainer.jsx";
 import FooterBar from "../FooterBar.jsx";
-import {callAccountVerifyApi, callGeneratePdfApi} from "../../services/api.js";
+import {callAccountVerifyApi, dowloadPdf} from "../../services/api.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
 import { getAllStatistics } from "../../services/dataService.js";
 import { on, off } from "../../services/events.js";
@@ -156,19 +156,7 @@ export default function HomePage({ theme }) {
                                 onMouseEnter={() => setHoveredRuleId("pdf")}
                                 onMouseLeave={() => setHoveredRuleId(null)}
                                 style={weakRuleButtonStyle(hoveredRuleId === "pdf")}
-                                onClick={async () => {
-                                    const { blob } = await callGeneratePdfApi();
-
-                                    const url = window.URL.createObjectURL(blob);
-                                    const a = document.createElement("a");
-                                    a.href = url;
-                                    a.download = "document.pdf";
-                                    document.body.appendChild(a);
-                                    a.click();
-
-                                    a.remove();
-                                    window.URL.revokeObjectURL(url);
-                                }}
+                                onClick={dowloadPdf}
                             >
                                 Download PDF
                             </button>

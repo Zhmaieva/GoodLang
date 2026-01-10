@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPolicy }) {
+export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPolicy, disableLinks = false }) {
     return (
         <div
             style={{
@@ -62,21 +62,26 @@ export default function CookieConsentModal({ theme, onAccept, onReject, onOpenPo
                     }}
                 >
                     Детальніше — в{" "}
-                    <a
-                        href="#"
-                        onClick={onOpenPolicy}
-                        style={{
-                            color: theme.accent,
-                            fontWeight: 700,
-                            textDecoration: "none",
-                        }}
-                    >
-                        політиці конфіденційності та cookies
-                    </a>
+                    {
+                        !disableLinks && <a
+                            href="#"
+                            onClick={onOpenPolicy}
+                            style={{
+                                color: theme.accent,
+                                fontWeight: 700,
+                                textDecoration: "none",
+                            }}
+                        >
+                            політиці конфіденційності та cookies
+                        </a>
+                    }
+                    {
+                        disableLinks && "політиці конфіденційності та cookies"
+                    }
                     .
                 </p>
 
-                <div style={{ display: "flex", gap: 12 }}>
+                <div style={{display: "flex", gap: 12}}>
                     <button
                         onClick={onReject}
                         style={{

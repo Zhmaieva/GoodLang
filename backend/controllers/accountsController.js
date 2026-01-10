@@ -5,7 +5,7 @@ import {
     verifyCode
 } from "../database/repositories/accountsRepository.js";
 import jwt from "jsonwebtoken";
-import {SECRET_KEY} from "../core/constants.js";
+import {ACTION_TYPES, SECRET_KEY} from "../core/constants.js";
 import {authMiddleware} from "../middleware/authMiddleware.js";
 import {recordAction} from "../database/repositories/accountLogRepository.js";
 
@@ -21,19 +21,30 @@ export const accountsController = {
 
         app.post(`/${name}/start`, async (req, res, next) => {
             try {
-                const {id} = await createAccount();
+                const { id } = await createAccount();
 
-                const token = generateToken({id});
+                // teacher=true comes from query param: /accounts/start?teacher=true
+                const isTeacher =
+                    req.query?.teacher === "true" ||
+                    req.body?.teacher === true ||
+                    req.body?.teacher === "true";
+
+                if (isTeacher) {
+                    await recordAction(id, ACTION_TYPES.USER_TEACHER_REGISTERED); // 500
+                }
+
+                const token = generateToken({ id });
 
                 res.status(201).json({
                     message: "User registered successfully",
                     userId: id,
-                    token: token
+                    token: token,
                 });
             } catch (e) {
                 next(e);
             }
         });
+
 
         app.get(`/accounts/info`, authMiddleware, async (req, res, next) => {
             try {
@@ -102,6 +113,18 @@ export const accountsController = {
                 if (!codeAccepted) return res.status(400).json({ error: "Invalid or expired code" });
 
                 const token = accountId ? generateToken({id: accountId}) : "";
+
+                if (accountId) {
+                    // teacher=true comes from query param: /accounts/start?teacher=true
+                    const isTeacher =
+                        req.query?.teacher === "true" ||
+                        req.body?.teacher === true ||
+                        req.body?.teacher === "true";
+
+                    if (isTeacher) {
+                        await recordAction(accountId, ACTION_TYPES.USER_TEACHER_REGISTERED); // 500
+                    }
+                }
 
                 res.json({ message: "Logged in successfully", mustAcceptTerms: !accountId, token });
             } catch (e) {

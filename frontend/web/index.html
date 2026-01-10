@@ -20,6 +20,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoodLang</title>
     <style>
+      @keyframes spin-pause {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        /* smooth rotation */
+        95% {
+          transform: rotate(355deg);
+        }
+
+        /* micro-pause at the end */
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+
       input,
       textarea {
         border-color: inherit;
