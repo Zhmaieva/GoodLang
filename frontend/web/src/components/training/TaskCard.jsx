@@ -46,7 +46,6 @@ export default function TaskCard({
         return hours > 0 ? `${hh}:${mm}:${ss}` : `${mm}:${ss}`;
     };
 
-
     const isLockedNow = locked && secondsLeft > 0;
     const buttonText = isLockedNow ? `Підпишись або почекай ${formatTime(secondsLeft)}` : mainBtnText;
 
@@ -101,13 +100,60 @@ export default function TaskCard({
             color: theme.text,
             whiteSpace: "pre-wrap",
         },
+
+        // ✅ loader styles
+        loaderWrap: {
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            paddingTop: 2,
+            paddingBottom: 2,
+        },
+        bars: {
+            display: "inline-flex",
+            alignItems: "flex-end",
+            gap: 8,
+            height: 26,
+            marginLeft: 12,
+        },
+        bar: (white) => ({
+            width: 7,              // thick
+            borderRadius: 999,
+            background: white ? "#fff" : theme.text // same as task title color
+        })
     };
+
+    const BarsLoader = ({white = false}) => (
+        <div style={styles.loaderWrap} aria-label="Loading" role="status">
+            <div style={styles.bars}>
+                <span style={{ ...styles.bar(white), height: 12, animation: "glWave 700ms ease-in-out infinite" }} />
+                <span style={{ ...styles.bar(white), height: 18, animation: "glWave 700ms ease-in-out infinite 120ms" }} />
+                <span style={{ ...styles.bar(white), height: 12, animation: "glWave 700ms ease-in-out infinite 240ms" }} />
+            </div>
+
+            {/* local keyframes (no deps) */}
+            <style>{`
+        @keyframes glWave {
+          0%, 100% { transform: translateY(4px) scaleY(1); opacity: 0.65; }
+          25% { transform: translateY(0px) scaleY(1.5); opacity: 1; }
+          70% { transform: translateY(-8px) scaleY(1); opacity: 1; }
+        }
+      `}</style>
+        </div>
+    );
 
     return (
         <div style={styles.card} aria-live="polite">
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-                <div style={styles.taskText}>{taskText}</div>
-                {hint && <div style={styles.hintText}>{hint}</div>}
+                {/* ✅ if loading, show bars instead of task text */}
+                {loading ? (
+                    <BarsLoader />
+                ) : (
+                    <div style={styles.taskText}>{taskText}</div>
+                )}
+
+                {/* keep hint behavior */}
+                {hint && !loading && <div style={styles.hintText}>{hint}</div>}
             </div>
 
             <div style={styles.inputWrap}>
@@ -130,7 +176,10 @@ export default function TaskCard({
                     disabled={loading}
                     style={styles.btn}
                 >
-                    {buttonText}
+                    {loading ? (
+                    <BarsLoader white />
+                    ) : buttonText}
+
                 </button>
             </div>
         </div>

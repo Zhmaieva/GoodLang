@@ -750,3 +750,52 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: create_email_sendings_table
+-- Description: Track tip email sendings. Must insert record before any send.
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'create_email_sendings_table'
+        ) THEN
+
+            CREATE TABLE IF NOT EXISTS email_sendings (
+                                                          id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+                                                          email VARCHAR NOT NULL,
+                                                          account_id UUID NULL,
+                                                          letter_id VARCHAR NOT NULL,
+
+                                                          created_at TIMESTAMP NOT NULL
+                                                                              DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'UTC'),
+
+                                                          sent_at TIMESTAMP NULL,
+                                                          last_error TEXT NULL,
+                                                          last_failed_at TIMESTAMP NULL,
+
+                                                          CONSTRAINT email_sendings_email_letter_unique UNIQUE (email, letter_id)
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_email_sendings_email
+                ON email_sendings (email);
+
+            CREATE INDEX IF NOT EXISTS idx_email_sendings_letter_id
+                ON email_sendings (letter_id);
+
+            CREATE INDEX IF NOT EXISTS idx_email_sendings_created_at
+                ON email_sendings (created_at);
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('create_email_sendings_table', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

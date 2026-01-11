@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import {MAIL_PASS} from "./constants.js";
 
 // Create reusable transporter using SMTP (example: Gmail, custom SMTP)
-const transporter = nodemailer.createTransport({
+export const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587, // Use 465 for SSL
     secure: false, // Set to true for port 465

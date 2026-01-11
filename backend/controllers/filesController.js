@@ -1,5 +1,7 @@
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import {getPdf, getPreGeneratedPdf} from "../pdf/pdfGeneration.js";
+import {recordAction} from "../database/repositories/accountLogRepository.js";
+import {ACTION_TYPES} from "../core/constants.js";
 
 const name = "files";
 
@@ -8,6 +10,8 @@ export const filesController = {
         app.get(`/${name}/generate/pdf`, authMiddleware, async (req, res, next) => {
             try {
                 const pdf = await getPreGeneratedPdf(req.query.rule);//await getPdf(req.query.rule);
+
+                await recordAction(req.user.id, ACTION_TYPES.PDF_DOWNLOAD_CALL);
 
                 res.setHeader("Content-Type", "application/pdf");
                 res.send(Buffer.from(pdf));
