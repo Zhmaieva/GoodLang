@@ -1,6 +1,5 @@
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import { getPdf } from "../pdf/pdfGeneration.js";
-import { getAccountInfo } from "../database/repositories/accountsRepository.js";
 
 const name = "files";
 

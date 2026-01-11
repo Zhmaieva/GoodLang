@@ -53,7 +53,7 @@ function createLimiter(maxConcurrent = 4, maxQueue = 20) {
 }
 
 
-const limitPdf = createLimiter(Number(process.env.PDF_CONCURRENCY ?? 2), 20);
+const limitPdf = createLimiter(Number(process.env.PDF_CONCURRENCY ?? 2), Number(process.env.PDF_QUEUE_LIMIT ?? 20));
 
 /** ------------ puppeteer browser singleton ------------ */
 let browserPromise = null;

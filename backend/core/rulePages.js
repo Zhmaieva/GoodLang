@@ -694,7 +694,7 @@ export const RULE_PAGE_COUNT_UNCOUNT = {
     ]
 };
 
-export const RULE_PAGE_BE_FROM = {
+export const RULE_PAGE_BE_FROM_NATIONALITY = {
     id: "BE_FROM_NATIONALITY",
     title: "Be from (nationality)",
     subtitle: "Вивчення правила",
