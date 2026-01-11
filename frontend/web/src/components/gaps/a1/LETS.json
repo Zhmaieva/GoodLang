@@ -1,0 +1,122 @@
+{ "LETS": [
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} home."],
+    "options": ["to go", "going", "go"],
+    "correct": "go"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} dinner."],
+    "options": ["cook", "to cook", "cooking"],
+    "correct": "cook"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} a movie."],
+    "options": ["watching", "to watch", "watch"],
+    "correct": "watch"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} outside."],
+    "options": ["to go", "went", "go"],
+    "correct": "go"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} this together."],
+    "options": ["do", "doing", "to do"],
+    "correct": "do"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} a break."],
+    "options": ["taking", "take", "to take"],
+    "correct": "take"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} early."],
+    "options": ["leave", "leaving", "to leave"],
+    "correct": "leave"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} some coffee."],
+    "options": ["to drink", "drink", "drinking"],
+    "correct": "drink"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} about it."],
+    "options": ["talk", "talking", "to talk"],
+    "correct": "talk"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} ready."],
+    "options": ["getting", "got", "get"],
+    "correct": "get"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} the window."],
+    "options": ["opening", "open", "to open"],
+    "correct": "open"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} a taxi."],
+    "options": ["calling", "to call", "call"],
+    "correct": "call"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} the music."],
+    "options": ["turning down", "turn down", "to turn down"],
+    "correct": "turn down"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} some air."],
+    "options": ["to get", "getting", "get"],
+    "correct": "get"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} again tomorrow."],
+    "options": ["meet", "meeting", "to meet"],
+    "correct": "meet"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} this problem."],
+    "options": ["solve", "solving", "to solve"],
+    "correct": "solve"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} here."],
+    "options": ["stay", "staying", "to stay"],
+    "correct": "stay"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} a photo."],
+    "options": ["taking", "take", "to take"],
+    "correct": "take"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} the menu."],
+    "options": ["checking", "check", "to check"],
+    "correct": "check"
+  },
+  {
+    "rules": ["LETS"],
+    "en": ["Let’s {GAP} for a walk."],
+    "options": ["to go", "going", "go"],
+    "correct": "go"
+  }
+] }

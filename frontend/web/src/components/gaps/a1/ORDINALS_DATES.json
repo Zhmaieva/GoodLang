@@ -1,0 +1,122 @@
+{ "ORDINALS_DATES": [
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["My birthday is on the {GAP} of May."],
+    "options": ["five", "fifth", "five-th"],
+    "correct": "fifth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["We met on April the {GAP}."],
+    "options": ["third", "three", "thirty"],
+    "correct": "third"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["The meeting is on the {GAP} of June."],
+    "options": ["two", "second", "twice"],
+    "correct": "second"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["She was born on the {GAP} of July."],
+    "options": ["first", "one", "once"],
+    "correct": "first"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["Our exam is on the {GAP} of March."],
+    "options": ["four", "fourth", "forth"],
+    "correct": "fourth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["He arrived on August the {GAP}."],
+    "options": ["eight", "eighth"],
+    "correct": "eighth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["The shop opens on the {GAP} of September."],
+    "options": ["ninth", "nine", "ninety"],
+    "correct": "ninth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["My flight is on the {GAP} of October."],
+    "options": ["tenth", "ten", "ten-th"],
+    "correct": "tenth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["She moved here on November the {GAP}."],
+    "options": ["eleven", "eleventh"],
+    "correct": "eleventh"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["The party is on the {GAP} of December."],
+    "options": ["twelveth", "twelfth", "twelve"],
+    "correct": "twelfth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["School starts on the {GAP} of January."],
+    "options": ["three", "third", "thirteen"],
+    "correct": "third"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["I got the email on February the {GAP}."],
+    "options": ["sixth", "six", "sixteen"],
+    "correct": "sixth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["The deadline is on the {GAP} of April."],
+    "options": ["seven", "seventh", "seventy"],
+    "correct": "seventh"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["They married on May the {GAP}."],
+    "options": ["twenty", "twentieth", "twenty-th"],
+    "correct": "twentieth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["The event is on the {GAP} of June."],
+    "options": ["twenty-one", "twenty-first", "twenty one"],
+    "correct": "twenty-first"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["My son was born on the {GAP} of August."],
+    "options": ["twenty-second", "twenty-two", "twenty two"],
+    "correct": "twenty-second"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["We moved house on September the {GAP}."],
+    "options": ["thirteen", "thirty", "thirtieth"],
+    "correct": "thirtieth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["The class starts on the {GAP} of October."],
+    "options": ["fourteen", "fourteenth", "forty"],
+    "correct": "fourteenth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["I paid the bill on November the {GAP}."],
+    "options": ["fifteen", "fifteenth", "fifty"],
+    "correct": "fifteenth"
+  },
+  {
+    "rules": ["ORDINALS_DATES"],
+    "en": ["The appointment is on the {GAP} of December."],
+    "options": ["sixteen", "sixteenth", "sixty"],
+    "correct": "sixteenth"
+  }
+] }

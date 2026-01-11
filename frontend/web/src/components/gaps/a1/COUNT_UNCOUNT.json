@@ -1,0 +1,122 @@
+{ "COUNT_UNCOUNT": [
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["I don’t have {GAP} time today."],
+    "options": ["many", "a", "much"],
+    "correct": "much"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["She bought {GAP} apples."],
+    "options": ["many", "much", "a"],
+    "correct": "many"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["Can I have {GAP} water, please?"],
+    "options": ["a", "many", "some"],
+    "correct": "some"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["There isn’t {GAP} milk left."],
+    "options": ["many", "a", "much"],
+    "correct": "much"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["He has {GAP} friends at work."],
+    "options": ["many", "much", "a"],
+    "correct": "many"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["I need {GAP} information about the course."],
+    "options": ["many", "an", "some"],
+    "correct": "some"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["We don’t have {GAP} chairs."],
+    "options": ["much", "a", "enough"],
+    "correct": "enough"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["She didn’t eat {GAP} food."],
+    "options": ["many", "a", "much"],
+    "correct": "much"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["There are {GAP} people waiting."],
+    "options": ["much", "a", "many"],
+    "correct": "many"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["I don’t drink {GAP} coffee."],
+    "options": ["many", "a", "much"],
+    "correct": "much"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["She gave me {GAP} advice."],
+    "options": ["some", "an", "many"],
+    "correct": "some"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["Do you have {GAP} questions?"],
+    "options": ["much", "a", "any"],
+    "correct": "any"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["There isn’t {GAP} sugar in the jar."],
+    "options": ["many", "a", "much"],
+    "correct": "much"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["He made {GAP} mistakes."],
+    "options": ["much", "a", "many"],
+    "correct": "many"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["We need {GAP} bread for dinner."],
+    "options": ["a", "many", "some"],
+    "correct": "some"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["She doesn’t have {GAP} experience."],
+    "options": ["many", "an", "much"],
+    "correct": "much"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["There are {GAP} shops near here."],
+    "options": ["much", "a", "many"],
+    "correct": "many"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["I didn’t get {GAP} sleep last night."],
+    "options": ["many", "a", "much"],
+    "correct": "much"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["She has {GAP} work to do."],
+    "options": ["many", "a", "a lot of"],
+    "correct": "a lot of"
+  },
+  {
+    "rules": ["COUNT_UNCOUNT"],
+    "en": ["There are {GAP} cookies left."],
+    "options": ["much", "a", "a few"],
+    "correct": "a few"
+  }
+] }

@@ -1,0 +1,122 @@
+{ "POSSESSIVE_S": [
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["This is my {GAP} bag."],
+    "options": ["brother’s", "brothers’", "brother"],
+    "correct": "brother’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["I like Anna {GAP} dress."],
+    "options": ["Anna’s", "Anna", "Annas’"],
+    "correct": "Anna’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["That is the {GAP} room."],
+    "options": ["teacher", "teachers’", "teacher’s"],
+    "correct": "teacher’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["This is my {GAP} phone."],
+    "options": ["friend", "friend’s", "friends’"],
+    "correct": "friend’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["I’m in my {GAP} car."],
+    "options": ["parents’", "parent", "parent’s"],
+    "correct": "parent’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["It is the {GAP} idea."],
+    "options": ["boss’s", "boss", "bosses’"],
+    "correct": "boss’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["This is my {GAP} house."],
+    "options": ["sister’s", "sister", "sisters’"],
+    "correct": "sister’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["I like this {GAP} voice."],
+    "options": ["actor", "actors’", "actor’s"],
+    "correct": "actor’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["That is the {GAP} toy."],
+    "options": ["child", "child’s", "children"],
+    "correct": "child’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["This is the {GAP} office."],
+    "options": ["doctor’s", "doctor", "doctors’"],
+    "correct": "doctor’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["I found my {GAP} keys."],
+    "options": ["neighbor", "neighbors’", "neighbor’s"],
+    "correct": "neighbor’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["That is the {GAP} answer."],
+    "options": ["student", "student’s", "students’"],
+    "correct": "student’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["This is my {GAP} jacket."],
+    "options": ["husband’s", "husband", "husbands’"],
+    "correct": "husband’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["I like the {GAP} style."],
+    "options": ["designer", "designers’", "designer’s"],
+    "correct": "designer’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["That is my {GAP} bike."],
+    "options": ["son", "sons’", "son’s"],
+    "correct": "son’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["This is the {GAP} table."],
+    "options": ["waiter’s", "waiter", "waiters’"],
+    "correct": "waiter’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["I know my {GAP} name."],
+    "options": ["teacher", "teacher’s", "teachers’"],
+    "correct": "teacher’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["That is the {GAP} bag."],
+    "options": ["woman", "women’s", "woman’s"],
+    "correct": "woman’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["This is my {GAP} room."],
+    "options": ["daughter’s", "daughter", "daughters’"],
+    "correct": "daughter’s"
+  },
+  {
+    "rules": ["POSSESSIVE_S"],
+    "en": ["I like the {GAP} food."],
+    "options": ["chef", "chefs’", "chef’s"],
+    "correct": "chef’s"
+  }
+] }

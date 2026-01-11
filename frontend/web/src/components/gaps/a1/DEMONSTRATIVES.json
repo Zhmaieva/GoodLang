@@ -1,0 +1,122 @@
+{ "DEMONSTRATIVES": [
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} book is interesting."],
+    "options": ["that", "these", "this"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["I don’t like {GAP} weather."],
+    "options": ["this", "these", "that"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} shoes are too small."],
+    "options": ["those", "this", "these"],
+    "correct": "these"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["Can you see {GAP} building over there?"],
+    "options": ["this", "these", "that"],
+    "correct": "that"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} apples taste sweet."],
+    "options": ["those", "this", "these"],
+    "correct": "these"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["I remember {GAP} day very well."],
+    "options": ["this", "these", "that"],
+    "correct": "that"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} phone doesn’t work."],
+    "options": ["these", "that", "this"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["Look at {GAP} stars in the sky."],
+    "options": ["those", "that", "this"],
+    "correct": "those"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["I like {GAP} idea."],
+    "options": ["these", "that", "this"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["Who are {GAP} people?"],
+    "options": ["those", "that", "this"],
+    "correct": "those"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} chair is broken."],
+    "options": ["that", "these", "this"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["Do you like {GAP} pictures on the wall?"],
+    "options": ["these", "this", "that"],
+    "correct": "these"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["I don’t understand {GAP} question."],
+    "options": ["that", "these", "this"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} houses are very old."],
+    "options": ["those", "that", "this"],
+    "correct": "those"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["Take {GAP} bag with you."],
+    "options": ["that", "these", "this"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} cookies smell great."],
+    "options": ["those", "this", "these"],
+    "correct": "these"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["I don’t like {GAP} sound."],
+    "options": ["these", "that", "this"],
+    "correct": "this"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["{GAP} mountains look beautiful."],
+    "options": ["these", "that", "this"],
+    "correct": "these"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["What is {GAP} noise outside?"],
+    "options": ["that", "these", "this"],
+    "correct": "that"
+  },
+  {
+    "rules": ["DEMONSTRATIVES"],
+    "en": ["I’ll never forget {GAP} moments."],
+    "options": ["those", "this", "that"],
+    "correct": "those"
+  }
+] }

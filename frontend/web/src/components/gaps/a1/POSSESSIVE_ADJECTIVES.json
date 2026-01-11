@@ -1,0 +1,122 @@
+{ "POSSESSIVE_ADJECTIVES": [
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["This is {GAP} phone."],
+    "options": ["me", "mine","my"],
+    "correct": "my"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["She forgot {GAP} keys."],
+    "options": ["her", "hers", "she"],
+    "correct": "her"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["I like {GAP} job."],
+    "options": ["my", "mine", "me"],
+    "correct": "my"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["He is with {GAP} friends."],
+    "options": [ "he", "his'","his"],
+    "correct": "his"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["We are in {GAP} house."],
+    "options": [ "us","our"],
+    "correct": "our"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["Where is {GAP} bag?"],
+    "options": ["your", "you"],
+    "correct": "your"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["They sold {GAP} car."],
+    "options": ["their", "them"],
+    "correct": "their"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["The dog is with {GAP} owner."],
+    "options": ["its", "it"],
+    "correct": "its"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["I lost {GAP} wallet."],
+    "options": ["my", "mine"],
+    "correct": "my"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["She loves {GAP} work."],
+    "options": [ "her", "hers"],
+    "correct": "her"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["He parked {GAP} bike here."],
+    "options": ["his", "him"],
+    "correct": "his"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["Is this {GAP} seat?"],
+    "options": ["your", "yours"],
+    "correct": "your"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["We finished {GAP} dinner."],
+    "options": [ "us", "our"],
+    "correct": "our"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["They are visiting {GAP} parents."],
+    "options": ["them", "their"],
+    "correct": "their"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["The cat cleaned {GAP} paws."],
+    "options": [ "it's","its"],
+    "correct": "its"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["I like {GAP} new shoes."],
+    "options": ["mine", "my"],
+    "correct": "my"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["She opened {GAP} laptop."],
+    "options": ["hers", "her"],
+    "correct": "her"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["He called {GAP} sister."],
+    "options": ["his", "him"],
+    "correct": "his"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["Can I use {GAP} charger?"],
+    "options": ["yours", "your"],
+    "correct": "your"
+  },
+  {
+    "rules": ["POSSESSIVE_ADJECTIVES"],
+    "en": ["We shared {GAP} plans."],
+    "options": ["ours", "our"],
+    "correct": "our"
+  }
+] }

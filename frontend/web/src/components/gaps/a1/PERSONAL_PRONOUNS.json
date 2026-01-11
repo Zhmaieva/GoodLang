@@ -1,0 +1,122 @@
+{ "PERSONAL_PRONOUNS": [
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} am tired."],
+    "options": ["Me", "I", "My"],
+    "correct": "I"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["This is {GAP}."],
+    "options": [ "I", "my","me"],
+    "correct": "me"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} is my brother."],
+    "options": ["Him", "He", "His"],
+    "correct": "He"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["I like {GAP}."],
+    "options": ["she", "her", "hers"],
+    "correct": "her"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} are at home."],
+    "options": ["Them", "They", "Their"],
+    "correct": "They"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["Can you help {GAP}?"],
+    "options": ["I", "my","me"],
+    "correct": "me"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} like coffee."],
+    "options": ["We", "Us", "Our"],
+    "correct": "We"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["This gift is for {GAP}."],
+    "options": ["they", "them", "their"],
+    "correct": "them"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} works here."],
+    "options": ["Her", "Hers","She"],
+    "correct": "She"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["I know {GAP} well."],
+    "options": ["he", "him", "his"],
+    "correct": "him"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} is raining."],
+    "options": ["He", "It", "They"],
+    "correct": "It"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["The teacher called {GAP}."],
+    "options": ["we", "us", "our"],
+    "correct": "us"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} don’t understand."],
+    "options": ["Me", "My", "I"],
+    "correct": "I"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["This seat is for {GAP}."],
+    "options": ["she", "her", "hers"],
+    "correct": "her"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} are late."],
+    "options": ["Them", "They", "Their"],
+    "correct": "They"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["She spoke to {GAP}."],
+    "options": ["he", "him", "his"],
+    "correct": "him"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} live nearby."],
+    "options": ["Us", "We", "Our"],
+    "correct": "We"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["I will call {GAP} later."],
+    "options": ["they", "them", "their"],
+    "correct": "them"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["{GAP} is my phone."],
+    "options": ["It", "He", "They"],
+    "correct": "It"
+  },
+  {
+    "rules": ["PERSONAL_PRONOUNS"],
+    "en": ["Give it to {GAP}."],
+    "options": ["I", "me", "my"],
+    "correct": "me"
+  }
+] }

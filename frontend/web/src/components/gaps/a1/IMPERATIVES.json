@@ -1,0 +1,122 @@
+{ "IMPERATIVES": [
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} the door, please."],
+    "options": ["To open", "Open", "Opens"],
+    "correct": "Open"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} quiet."],
+    "options": ["Being", "Be", "To be"],
+    "correct": "Be"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} touch this."],
+    "options": ["Don’t", "Doesn’t", "Not"],
+    "correct": "Don’t"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} me your phone."],
+    "options": ["Gives", "To give", "Give"],
+    "correct": "Give"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} forget your keys."],
+    "options": ["Don’t", "Doesn’t", "Not"],
+    "correct": "Don’t"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} here for a moment."],
+    "options": ["Stay", "Stays", "To stay"],
+    "correct": "Stay"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} this form."],
+    "options": ["Filling", "To fill", "Fill"],
+    "correct": "Fill"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} be late."],
+    "options": ["Don’t", "Doesn’t", "Not"],
+    "correct": "Don’t"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} your hands."],
+    "options": ["Wash", "Washes", "To wash"],
+    "correct": "Wash"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} run here."],
+    "options": ["Don’t", "Doesn’t", "Not"],
+    "correct": "Don’t"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} a seat."],
+    "options": ["Takes", "To take", "Take"],
+    "correct": "Take"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} me later."],
+    "options": ["Call", "Calls", "To call"],
+    "correct": "Call"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} worry about it."],
+    "options": ["Don’t", "Doesn’t", "Not"],
+    "correct": "Don’t"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} attention."],
+    "options": ["Pays", "Pay", "To pay"],
+    "correct": "Pay"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} this message."],
+    "options": ["Read", "Reads", "To read"],
+    "correct": "Read"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} the lights."],
+    "options": ["Turn off", "Turns off", "To turn off"],
+    "correct": "Turn off"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} open the window."],
+    "options": ["Don’t", "Doesn’t", "Not"],
+    "correct": "Don’t"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} carefully."],
+    "options": ["Drive", "Drives", "To drive"],
+    "correct": "Drive"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} a deep breath."],
+    "options": ["Takes", "Take", "To take"],
+    "correct": "Take"
+  },
+  {
+    "rules": ["IMPERATIVES"],
+    "en": ["{GAP} this again."],
+    "options": ["Tries", "To try", "Try"],
+    "correct": "Try"
+  }
+] }

@@ -1,0 +1,122 @@
+{ "CAN_CANT": [
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["I {GAP} swim."],
+    "options": ["can to", "can"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["She {GAP} drive a car."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["We {GAP} hear you."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["He {GAP} come today."],
+    "options": ["can’t to", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["I {GAP} help you now."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["She {GAP} open the jar."],
+    "options": ["can’t to", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["They {GAP} speak English."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["I {GAP} find my keys."],
+    "options": ["can’t to", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["He {GAP} fix it."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["We {GAP} stay late."],
+    "options": ["can’t to", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["She {GAP} understand me."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["I {GAP} eat spicy food."],
+    "options": ["can’t to", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["They {GAP} finish today."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["He {GAP} hear very well."],
+    "options": ["can", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["I {GAP} remember her name."],
+    "options": ["can’t to", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["She {GAP} do it alone."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["We {GAP} meet tomorrow."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["He {GAP} run fast."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["I {GAP} sleep here."],
+    "options": ["can’t to", "can’t"],
+    "correct": "can’t"
+  },
+  {
+    "rules": ["CAN_CANT"],
+    "en": ["They {GAP} help us."],
+    "options": ["can", "can to"],
+    "correct": "can"
+  }
+] }

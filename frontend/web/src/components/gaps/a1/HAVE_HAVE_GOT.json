@@ -1,0 +1,122 @@
+{ "HAVE_HAVE_GOT": [
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["I {GAP} a problem."],
+    "options": ["have got", "has"],
+    "correct": "have got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["She {GAP} two sisters."],
+    "options": ["has got","have"],
+    "correct": "has got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["We {GAP} enough time."],
+    "options": ["has", "have"],
+    "correct": "have"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["He {GAP} a new phone."],
+    "options": ["have", "has"],
+    "correct": "has"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["They {GAP} a car."],
+    "options": ["have got","has got"],
+    "correct": "have got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["I {GAP} an idea."],
+    "options": ["had", "have", "has"],
+    "correct": "have"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["My brother {GAP} a dog."],
+    "options": ["have", "has got"],
+    "correct": "has got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["You {GAP} a nice smile."],
+    "options": ["has", "have"],
+    "correct": "have"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["She {GAP} a lot of work today."],
+    "options": ["has","have"],
+    "correct": "has"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["We {GAP} a small kitchen."],
+    "options": ["has got", "have got"],
+    "correct": "have got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["He {GAP} no money."],
+    "options": ["has","have"],
+    "correct": "has"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["I {GAP} a question."],
+    "options": ["has", "have"],
+    "correct": "have"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["They {GAP} three kids."],
+    "options": ["has", "have"],
+    "correct": "have"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["She {GAP} blue eyes."],
+    "options": ["has got","have"],
+    "correct": "has got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["We {GAP} a meeting today."],
+    "options": ["has", "have"],
+    "correct": "have"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["My parents {GAP} a house."],
+    "options": ["has got", "have got"],
+    "correct": "have got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["He {GAP} a cold."],
+    "options": ["have", "has"],
+    "correct": "has"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["I {GAP} no time right now."],
+    "options": ["has", "have got"],
+    "correct": "have got"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["She {GAP} a busy day."],
+    "options": ["has","have"],
+    "correct": "has"
+  },
+  {
+    "rules": ["HAVE_HAVE_GOT"],
+    "en": ["They {GAP} an answer."],
+    "options": ["have","has"],
+    "correct": "have"
+  }
+] }
