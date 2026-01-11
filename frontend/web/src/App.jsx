@@ -114,6 +114,7 @@ import GoodLangLandingTeaStyle from "./components/pages/LandingPage2.jsx";
 import {off, on} from "./services/events.js";
 import {ensureAnalytics} from "./services/gaService.js";
 import GaRouteTracker from "./components/routing/GaRouteTracker.jsx";
+import GoodLangLandingTeacherStyleThemed from "./components/pages/LandingPageTeachers.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -171,6 +172,7 @@ export default function App() {
                 {/* Core pages */}
                 <Route path="/" element={<HomePage theme={theme} />} />
                 <Route path="/welcome" element={<GoodLangLandingTeaStyle theme={theme} />} />
+                <Route path="/greetings" element={<GoodLangLandingTeacherStyleThemed theme={theme} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />
                 <Route path="/payment/cancel" element={<PaymentCancel />} />
