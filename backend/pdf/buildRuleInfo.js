@@ -55,14 +55,15 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
     const showGuides = opts.showGuides !== false;
 
     // Header should be the rule name, like on 2nd/3rd page templates.
-    const headerRuleName = String(rulePage.headerTitle ?? rulePage.printTitle ?? rulePage.title ?? rulePage.id ?? "")
-        .trim();
+    const headerRuleName = String(
+        rulePage.headerTitle ?? rulePage.printTitle ?? rulePage.title ?? rulePage.id ?? ""
+    ).trim();
 
     // Watermark/logo sources: allow either base64 or direct src.
     const watermarkSrc =
         opts.watermarkSrc ??
         (opts.watermarkBase64 ? `data:image/png;base64,${opts.watermarkBase64}` : "");
-    const logoSrc = watermarkSrc
+    const logoSrc = watermarkSrc;
 
     const fontFaces = [
         opts.nunitoRegularB64
@@ -96,9 +97,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       <div class="rp-section-title">${escapeAttr(s.title ?? "")}</div>
       <div class="rp-card">
         <div class="rp-badges">
-          ${(s.badges ?? [])
-        .map((b) => `<span class="rp-badge">${b ?? ""}</span>`)
-        .join("")}
+          ${(s.badges ?? []).map((b) => `<span class="rp-badge">${b ?? ""}</span>`).join("")}
         </div>
         ${s.hint ? `<div class="rp-hint">${s.hint}</div>` : ""}
       </div>
@@ -226,7 +225,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
     }
 
     /* ---------- Guides (same as templates) ---------- */
-    .guides{ position:absolute; inset:0; pointer-events:none; opacity: 0.95; display:${showGuides ? "block" : "none"}; }
+    .guides{ position:absolute; inset:0; pointer-events:none; opacity: 0.95; display:${showGuides ? "block" : "none"}; z-index: 10; }
     .guide{ position:absolute; background: var(--orange); }
     .g-top    { left:0; right:0; top:  28px; height: 3px; }
     .g-bottom { left:0; right:0; bottom:28px; height: 3px; }
@@ -244,7 +243,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       opacity: 0.10;
       pointer-events:none;
       user-select:none;
-      z-index: 3;
+      z-index: 1;
     }
     .watermark img{ width:100%; height:100%; object-fit: contain; }
 
@@ -256,7 +255,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       display:flex;
       flex-direction:column;
       gap: 14px;
-      z-index: 2;
+      z-index: 3;
     }
 
     /* Header bar should match tasks pages; only rule name inside */
@@ -271,6 +270,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       top: -18px;
       width: 734px;
       flex: 0 0 auto;
+      z-index: 4;
     }
     .header h1{
       margin: 0;
@@ -292,22 +292,25 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       overflow: hidden;
       position: relative;
     }
+
     .rule-fit-inner{
+      width: 100%;
       transform-origin: top left;
-      width: 99%;
+      /* JS will set --k using binary search to fit */
+      --k: 1;
     }
 
     /* ---------- Bottom-right logo ---------- */
     .logo{
       position: absolute;
       right: 44px;
-      bottom: 4px;
+      bottom: 24px;
       width: 60px;
       height: 60px;
       border-radius: 999px;
       overflow: hidden;
       background: transparent;
-      z-index: 2;
+      z-index: 5;
     }
     .logo img{ width:100%; height:100%; object-fit: contain; }
 
@@ -330,10 +333,10 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       }
     }
 
-    /* ---------- Rule content (kept from previous buildRuleIntroHtml) ---------- */
+    /* ---------- Rule content (scaled by --k) ---------- */
     .rp-section-title{
-      margin: 10px 2px 8px;
-      font-size: 12px;
+      margin: calc(10px * var(--k)) calc(2px * var(--k)) calc(8px * var(--k));
+      font-size: calc(12px * var(--k));
       letter-spacing: .06em;
       text-transform: uppercase;
       font-weight: 800;
@@ -345,21 +348,21 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       border: 3px solid ${theme.accent};
       border-radius: ${theme.radius}px;
       box-shadow: 4px 4px 0 ${theme.accentDark};
-      padding: 14px;
+      padding: calc(14px * var(--k));
       break-inside: avoid;
     }
 
-    .rp-text{ margin: 0; font-size: 13.5px; line-height: 1.45; color: ${theme.text}; }
-    .rp-hint{ margin-top: 8px; color: ${theme.muted}; font-size: 12px; line-height: 1.4; }
+    .rp-text{ margin: 0; font-size: calc(13.5px * var(--k)); line-height: 1.45; color: ${theme.text}; }
+    .rp-hint{ margin-top: calc(8px * var(--k)); color: ${theme.muted}; font-size: calc(12px * var(--k)); line-height: 1.4; }
 
-    .rp-badges{ display:flex; gap:8px; flex-wrap:wrap; }
+    .rp-badges{ display:flex; gap: calc(8px * var(--k)); flex-wrap:wrap; }
     .rp-badge{
       display:inline-flex;
       align-items:center;
-      gap:6px;
-      font-size: 13px;
+      gap: calc(6px * var(--k));
+      font-size: calc(13px * var(--k));
       font-weight: 700;
-      padding: 6px 10px;
+      padding: calc(6px * var(--k)) calc(10px * var(--k));
       border-radius: 999px;
       border: 2px solid ${theme.accent};
       background: transparent;
@@ -367,11 +370,11 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
     }
 
     .rp-table-wrap{ width:100%; overflow:hidden; }
-    .rp-table{ width:100%; border-collapse:collapse; margin-top:6px; font-size:12.5px; line-height:1.35; }
-    .rp-table th, .rp-table td{ padding:8px 8px; vertical-align:top; border-bottom:1px solid rgba(0,0,0,.12); word-break: break-word; }
+    .rp-table{ width:100%; border-collapse:collapse; margin-top: calc(6px * var(--k)); font-size: calc(12.5px * var(--k)); line-height:1.35; }
+    .rp-table th, .rp-table td{ padding: calc(8px * var(--k)); vertical-align:top; border-bottom:1px solid rgba(0,0,0,.12); word-break: break-word; }
     .rp-table th{
       text-transform: uppercase;
-      font-size: 10.5px;
+      font-size: calc(10.5px * var(--k));
       letter-spacing: .06em;
       color: ${theme.muted};
       text-align:left;
@@ -382,52 +385,78 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       background:#fff;
       border:2px solid ${theme.accent};
       border-radius:14px;
-      padding:10px;
-      margin:6px 0;
+      padding: calc(10px * var(--k));
+      margin: calc(6px * var(--k)) 0;
     }
-    .rp-example-en{ font-weight:700; }
-    .rp-example-ua{ color:${theme.muted}; margin-top:2px; }
+    .rp-example-en{ font-weight:700; font-size: calc(13px * var(--k)); }
+    .rp-example-ua{ color:${theme.muted}; margin-top: calc(2px * var(--k)); font-size: calc(12px * var(--k)); }
 
-    .rp-ul{ margin:6px 0 0; padding-left:18px; }
-    .rp-ul li{ margin:6px 0; }
+    .rp-ul{ margin: calc(6px * var(--k)) 0 0; padding-left: calc(18px * var(--k)); }
+    .rp-ul li{ margin: calc(6px * var(--k)) 0; font-size: calc(13px * var(--k)); }
+
     .rp-note{
-      margin-top:8px;
-      padding:10px 12px;
+      margin-top: calc(8px * var(--k));
+      padding: calc(10px * var(--k)) calc(12px * var(--k));
       border-left:4px solid ${theme.accent};
       background:#fff;
       border-radius:10px;
       color:${theme.muted};
-      font-size:12px;
+      font-size: calc(12px * var(--k));
       line-height:1.4;
     }
 
-    .rp-block{ margin-bottom: 12px; }
+    .rp-block{ margin-bottom: calc(12px * var(--k)); }
     .rp-card, .rp-example, table, tr { break-inside: avoid; page-break-inside: avoid; }
 
     /* Ensure long content wraps instead of pushing width */
     pre, code{ white-space: pre-wrap; word-break: break-word; }
   `.trim();
 
-    // Auto-fit script: shrink rule content to stay inside the safe area.
-    // (Single page intro; we clamp minimum scale so it doesn't become unreadable.)
+    // Auto-fit script: shrink rule content (sections) to stay inside the safe area.
+    // Uses CSS variable scaling (--k) + binary search.
     const fitScript = `
     (function(){
       const outer = document.getElementById('ruleFitOuter');
       const inner = document.getElementById('ruleFitInner');
       if(!outer || !inner) return;
 
-      function fit(){
-        inner.style.transform = 'scale(1)';
-        // Force layout
-        const outerRect = outer.getBoundingClientRect();
-        const innerW = inner.scrollWidth;
-        const innerH = inner.scrollHeight;
+      const MIN_K = 0.72;  // minimum readability clamp
+      const MAX_K = 1.00;
 
-        const wRatio = outerRect.width / Math.max(1, innerW);
-        const hRatio = outerRect.height / Math.max(1, innerH);
-        const scale = Math.min(1, wRatio, hRatio);
-        const clamped = Math.max(scale, 0.72);
-        inner.style.transform = 'scale(' + clamped.toFixed(4) + ')';
+      function setK(k){
+        inner.style.setProperty('--k', String(k));
+      }
+
+      function fits(){
+        const fitsW = inner.scrollWidth <= outer.clientWidth + 1;
+        const fitsH = inner.scrollHeight <= outer.clientHeight + 1;
+        return fitsW && fitsH;
+      }
+
+      async function fit(){
+        // reset transform and scale
+        inner.style.transform = 'none';
+        setK(MAX_K);
+
+        // If fits at full size, done
+        if(fits()) return;
+
+        // Binary search the best k that fits
+        let lo = MIN_K, hi = MAX_K;
+        for(let i=0;i<18;i++){
+          const mid = (lo + hi) / 2;
+          setK(mid);
+          await new Promise(r => requestAnimationFrame(r));
+          if(fits()) lo = mid;
+          else hi = mid;
+        }
+        setK(lo);
+
+        // Last resort: if still doesn't fit, apply a tiny transform scale
+        if(!fits()){
+          inner.style.transformOrigin = 'top left';
+          inner.style.transform = 'scale(0.96)';
+        }
       }
 
       window.addEventListener('load', () => {
@@ -460,11 +489,15 @@ ${css}
       <div class="guide g-right"></div>
     </div>
 
-    ${watermarkSrc ? `
+    ${
+        watermarkSrc
+            ? `
       <div class="watermark" aria-hidden="true">
         <img src="${escapeAttr(watermarkSrc)}" alt="" />
       </div>
-    ` : ""}
+    `
+            : ""
+    }
 
     <div class="content">
       <div class="header">
@@ -478,11 +511,15 @@ ${css}
       </div>
     </div>
 
-    ${logoSrc ? `
+    ${
+        logoSrc
+            ? `
       <div class="logo" aria-hidden="true">
         <img src="${escapeAttr(logoSrc)}" alt="" />
       </div>
-    ` : ""}
+    `
+            : ""
+    }
 
   </div>
 
