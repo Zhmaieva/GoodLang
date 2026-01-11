@@ -50,7 +50,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "./pre-generated");
 await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
 /** ---------- config ---------- */
-const PARALLEL = Number(process.env.PREGEN_PARALLEL ?? 8);
+const PARALLEL = Number(process.env.PREGEN_PARALLEL ?? 16);
 const limit = createLimiter(PARALLEL);
 
 const rules = Object.values(GrammarRule);

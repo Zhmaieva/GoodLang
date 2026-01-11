@@ -43,7 +43,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
         ink: "#2b2b2b",
         muted: "#666",
         paper: "#ffffff",
-        // content cards (kept from the previous RulePage-like styles)
+        // content cards
         card: "#fffdf8",
         radius: 18,
         accent: "#ff6138",
@@ -82,12 +82,15 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
         .filter(Boolean)
         .join("\n");
 
-    // --- Section rendering (same content logic as your previous buildRuleIntroHtml) ---
+    /** -------- Section rendering --------
+     * IMPORTANT: use a "rich" container instead of forcing <p class="rp-text">
+     * so rulePage.html can contain <p>, <ul>, etc. without nesting issues.
+     */
     const renderMeaning = (s) => `
     <div class="rp-block">
       <div class="rp-section-title">${escapeAttr(s.title ?? "")}</div>
       <div class="rp-card">
-        <p class="rp-text">${s.html ?? ""}</p>
+        <div class="rp-rich">${s.html ?? ""}</div>
       </div>
     </div>
   `;
@@ -174,13 +177,22 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
             case "mistakes":
                 return renderMistakes(section);
             default:
+                if (section?.html) {
+                    return `
+            <div class="rp-block">
+              <div class="rp-section-title">${escapeAttr(section.title ?? "")}</div>
+              <div class="rp-card">
+                <div class="rp-rich">${section.html ?? ""}</div>
+              </div>
+            </div>
+          `;
+                }
                 return "";
         }
     };
 
     const sectionsHtml = (rulePage.sections ?? []).map(renderSection).filter(Boolean).join("\n");
 
-    // --- CSS: aligned to your templates' layout system (sheet + guides + header + watermark/logo) ---
     const css = `
     /* ---------- Print setup ---------- */
     @page { size: A4; margin: 0; }
@@ -196,6 +208,16 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       --padX: 48px;
       --padTop: 48px;
       --padBottom: 46px;
+
+      /* reserve space so content never collides with the logo */
+      --logoSafe: 86px;
+
+      /* compact tuning (applied when .sheet.compact is set) */
+      --compactPad: 10px;
+      --compactGap: 8px;
+      --compactCardPad: 10px;
+      --compactTitleMB: 6px;
+      --compactBlockMB: 8px;
     }
 
     *{ box-sizing: border-box; }
@@ -232,7 +254,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
     .g-left   { top:0; bottom:0; left: 28px; width: 3px; }
     .g-right  { top:0; bottom:0; right:28px; width: 3px; }
 
-    /* ---------- Watermark (image-based, like templates) ---------- */
+    /* ---------- Watermark ---------- */
     .watermark{
       position:absolute;
       left:50%;
@@ -254,11 +276,11 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       padding: var(--padTop) var(--padX) var(--padBottom);
       display:flex;
       flex-direction:column;
-      gap: 14px;
+      gap: 12px;
       z-index: 3;
     }
 
-    /* Header bar should match tasks pages; only rule name inside */
+    /* Header bar: only rule name inside */
     .header{
       background: var(--orange);
       height: 74px;
@@ -279,7 +301,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: clamp(18px, 3vw, 46px);
+      font-size: clamp(20px, 3.1vw, 44px);
       letter-spacing: .2px;
       text-transform: lowercase;
       width: 100%;
@@ -291,12 +313,14 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       min-height: 0;
       overflow: hidden;
       position: relative;
+
+      /* reserve bottom space for logo so text never overlaps it */
+      padding-bottom: var(--logoSafe);
     }
 
     .rule-fit-inner{
-      width: 100%;
+      width: 99%;
       transform-origin: top left;
-      /* JS will set --k using binary search to fit */
       --k: 1;
     }
 
@@ -334,6 +358,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
     }
 
     /* ---------- Rule content (scaled by --k) ---------- */
+
     .rp-section-title{
       margin: calc(10px * var(--k)) calc(2px * var(--k)) calc(8px * var(--k));
       font-size: calc(12px * var(--k));
@@ -352,7 +377,17 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       break-inside: avoid;
     }
 
-    .rp-text{ margin: 0; font-size: calc(13.5px * var(--k)); line-height: 1.45; color: ${theme.text}; }
+    /* Rich text defaults (avoid huge margins from nested <p>) */
+    .rp-rich{
+      font-size: calc(13.5px * var(--k));
+      line-height: 1.45;
+      color: ${theme.text};
+    }
+    .rp-rich p{ margin: 0 0 calc(8px * var(--k)); }
+    .rp-rich p:last-child{ margin-bottom: 0; }
+    .rp-rich ul{ margin: calc(6px * var(--k)) 0 0; padding-left: calc(18px * var(--k)); }
+    .rp-rich li{ margin: calc(6px * var(--k)) 0; }
+
     .rp-hint{ margin-top: calc(8px * var(--k)); color: ${theme.muted}; font-size: calc(12px * var(--k)); line-height: 1.4; }
 
     .rp-badges{ display:flex; gap: calc(8px * var(--k)); flex-wrap:wrap; }
@@ -405,69 +440,202 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
       line-height:1.4;
     }
 
-    .rp-block{ margin-bottom: calc(12px * var(--k)); }
+    .rp-block{ margin-bottom: calc(10px * var(--k)); }
     .rp-card, .rp-example, table, tr { break-inside: avoid; page-break-inside: avoid; }
 
     /* Ensure long content wraps instead of pushing width */
     pre, code{ white-space: pre-wrap; word-break: break-word; }
+
+    /* ---------------- Compact mode (auto-enabled by JS when needed) ---------------- */
+    .sheet.compact .content{
+      gap: var(--compactGap);
+    }
+    .sheet.compact .rp-section-title{
+      margin: calc(8px * var(--k)) 2px calc(var(--compactTitleMB) * var(--k));
+      font-size: calc(11px * var(--k));
+    }
+    .sheet.compact .rp-block{
+      margin-bottom: calc(var(--compactBlockMB) * var(--k));
+    }
+    .sheet.compact .rp-card{
+      padding: calc(var(--compactCardPad) * var(--k));
+      border-width: 2px;
+      box-shadow: 3px 3px 0 ${theme.accentDark};
+    }
+    .sheet.compact .rp-rich{
+      font-size: calc(12.6px * var(--k));
+      line-height: 1.38;
+    }
+    .sheet.compact .rp-rich p{ margin: 0 0 calc(6px * var(--k)); }
+    .sheet.compact .rp-rich li{ margin: calc(4px * var(--k)) 0; }
+
+    .sheet.compact .rp-badges{ gap: calc(6px * var(--k)); }
+    .sheet.compact .rp-badge{
+      font-size: calc(12px * var(--k));
+      padding: calc(4px * var(--k)) calc(8px * var(--k));
+      border-width: 1.5px;
+    }
+
+    .sheet.compact .rp-example{
+      padding: calc(8px * var(--k));
+      border-width: 1.5px;
+      margin: calc(5px * var(--k)) 0;
+    }
+    .sheet.compact .rp-example-en{ font-size: calc(12.5px * var(--k)); }
+    .sheet.compact .rp-example-ua{ font-size: calc(11.5px * var(--k)); }
+
+    .sheet.compact .rp-table{ font-size: calc(12px * var(--k)); }
+    .sheet.compact .rp-table th, .sheet.compact .rp-table td{ padding: calc(6px * var(--k)); }
+
+    .sheet.compact .rp-ul li{ font-size: calc(12.5px * var(--k)); margin: calc(4px * var(--k)) 0; }
+    .sheet.compact .rp-hint{ font-size: calc(11.5px * var(--k)); margin-top: calc(6px * var(--k)); }
   `.trim();
 
-    // Auto-fit script: shrink rule content (sections) to stay inside the safe area.
-    // Uses CSS variable scaling (--k) + binary search.
+    // More robust auto-fit:
+    // - binary search --k down to 0.50
+    // - compact mode toggle when needed
+    // - refit after fonts load
+    // - refit on resize via ResizeObserver
     const fitScript = `
     (function(){
+      const sheet = document.querySelector('.sheet');
       const outer = document.getElementById('ruleFitOuter');
       const inner = document.getElementById('ruleFitInner');
-      if(!outer || !inner) return;
+      if(!outer || !inner || !sheet) return;
 
-      const MIN_K = 0.72;  // minimum readability clamp
+      const MIN_K = 0.50; // a bit lower for edge cases
       const MAX_K = 1.00;
 
       function setK(k){
         inner.style.setProperty('--k', String(k));
       }
 
-      function fits(){
-        const fitsW = inner.scrollWidth <= outer.clientWidth + 1;
-        const fitsH = inner.scrollHeight <= outer.clientHeight + 1;
-        return fitsW && fitsH;
+      function rectFits(){
+        // Use bounding rects to avoid scrollHeight quirks in print rendering
+        const o = outer.getBoundingClientRect();
+        const i = inner.getBoundingClientRect();
+        // tolerate a tiny overflow due to rounding
+        return (i.width <= o.width + 1.5) && (i.height <= o.height + 1.5);
       }
 
-      async function fit(){
-        // reset transform and scale
+      async function raf(){
+        return new Promise(r => requestAnimationFrame(() => r()));
+      }
+
+      function setCompact(on){
+        if(on) sheet.classList.add('compact');
+        else sheet.classList.remove('compact');
+      }
+
+      async function fitPass(){
+        // reset state
         inner.style.transform = 'none';
+        setCompact(false);
         setK(MAX_K);
+        await raf();
 
-        // If fits at full size, done
-        if(fits()) return;
+        // First try without compact
+        if(rectFits()) return { k: MAX_K, compact: false };
 
-        // Binary search the best k that fits
+        // Binary search for best k
         let lo = MIN_K, hi = MAX_K;
-        for(let i=0;i<18;i++){
+        for(let i=0;i<22;i++){
           const mid = (lo + hi) / 2;
           setK(mid);
-          await new Promise(r => requestAnimationFrame(r));
-          if(fits()) lo = mid;
+          await raf();
+          if(rectFits()) lo = mid;
           else hi = mid;
         }
         setK(lo);
+        await raf();
 
-        // Last resort: if still doesn't fit, apply a tiny transform scale
-        if(!fits()){
-          inner.style.transformOrigin = 'top left';
-          inner.style.transform = 'scale(0.96)';
+        if(rectFits()) {
+          // If we had to shrink a lot, enable compact and retry at slightly higher k
+          if(lo < 0.78){
+            setCompact(true);
+            await raf();
+            // Try to reclaim size with compact mode
+            let lo2 = MIN_K, hi2 = MAX_K;
+            setK(MAX_K);
+            await raf();
+            if(!rectFits()){
+              for(let i=0;i<22;i++){
+                const mid = (lo2 + hi2) / 2;
+                setK(mid);
+                await raf();
+                if(rectFits()) lo2 = mid;
+                else hi2 = mid;
+              }
+              setK(lo2);
+              await raf();
+            }
+            return { k: parseFloat(inner.style.getPropertyValue('--k') || String(lo2)), compact: true };
+          }
+          return { k: lo, compact: false };
         }
+
+        // If still not fitting: enable compact and binary search again
+        setCompact(true);
+        setK(MAX_K);
+        await raf();
+
+        if(rectFits()) return { k: MAX_K, compact: true };
+
+        let lo3 = MIN_K, hi3 = MAX_K;
+        for(let i=0;i<24;i++){
+          const mid = (lo3 + hi3) / 2;
+          setK(mid);
+          await raf();
+          if(rectFits()) lo3 = mid;
+          else hi3 = mid;
+        }
+        setK(lo3);
+        await raf();
+
+        // Last resort: tiny transform scale steps
+        if(!rectFits()){
+          inner.style.transformOrigin = 'top left';
+          inner.style.transform = 'scale(0.94)';
+          await raf();
+          if(!rectFits()){
+            inner.style.transform = 'scale(0.92)';
+            await raf();
+          }
+          if(!rectFits()){
+            inner.style.transform = 'scale(0.90)';
+            await raf();
+          }
+        }
+
+        return { k: parseFloat(inner.style.getPropertyValue('--k') || String(lo3)), compact: true };
+      }
+
+      function scheduleFit(){
+        clearTimeout(window.__ruleFitT);
+        window.__ruleFitT = setTimeout(() => { fitPass(); }, 30);
       }
 
       window.addEventListener('load', () => {
-        fit();
-        setTimeout(fit, 60);
-        setTimeout(fit, 240);
+        fitPass();
+        setTimeout(fitPass, 80);
+        setTimeout(fitPass, 260);
       });
+
+      if(document.fonts && document.fonts.ready){
+        document.fonts.ready.then(() => {
+          scheduleFit();
+          setTimeout(fitPass, 80);
+        }).catch(() => {});
+      }
+
+      try{
+        const ro = new ResizeObserver(() => scheduleFit());
+        ro.observe(outer);
+        ro.observe(inner);
+      }catch(e){ /* ignore */ }
     })();
   `.trim();
 
-    // Note: rule strings may contain inline HTML (strong/em/u), we keep them as-is.
     return `<!doctype html>
 <html lang="uk">
 <head>

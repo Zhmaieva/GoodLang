@@ -477,9 +477,8 @@
     },
     {
       "rules": ["LIKE_LOVE_HATE_ING"],
-      "ua": "Ми часто катаємося на роликах.",
+      "ua": "Ми любимо кататися на роликах.",
       "en": [
-        "We often go rollerblading.",
         "We love going rollerblading.",
         "We like going rollerblading.",
         "We enjoy going rollerblading."

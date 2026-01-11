@@ -39,8 +39,6 @@ export const RULE_PAGE_TO_BE = {
             title: "Приклади",
             items: [
                 ["I’m from Ukraine.", "Я з України."],
-                ["She’s a doctor.", "Вона лікар."],
-                ["We’re tired but happy.", "Ми втомлені, але щасливі."],
                 ["Is he at school?", "Він у школі?"],
                 ["They aren’t ready.", "Вони не готові."],
             ],
@@ -50,7 +48,6 @@ export const RULE_PAGE_TO_BE = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>I are / I is</em> → ✅ <strong>I am</strong>",
-                "❌ <em>He don’t is</em> → ✅ <strong>He isn’t</strong> (без <em>do/does</em>)",
                 "❌ <em>I have 7 years</em> → ✅ <strong>I’m 7 (years old)</strong>",
                 "❌ <em>She very happy</em> → ✅ <strong>She is very happy</strong>",
             ],
@@ -262,18 +259,11 @@ export const RULE_PAGE_POSSESSIVE_ADJECTIVES = {
             title: "Приклади",
             items: [
                 ["This is my seat.", "Це моє місце."],
-                ["Her English is very good.", "Її англійська дуже хороша."],
-                ["They sold their house.", "Вони продали свій будинок."]
             ]
         },
         {
             type: "mistakes",
             title: "Типові помилки",
-            bullets: [
-                "❌ <em>She lost his keys</em> → ✅ <strong>She lost her keys</strong>.",
-                "❌ <em>Its a problem</em> → ✅ <strong>It's a problem</strong>.",
-                "❌ <em>my is book</em> → ✅ <strong>my book</strong>."
-            ],
             note: "Possessive adjectives <strong>ніколи не вживаються самі</strong> — після них завжди має бути іменник."
         },
         { type: "trainer", title: "Міні-тренажер (Possessive Adjectives)" }
@@ -417,7 +407,6 @@ export const RULE_PAGE_PERSONAL_PRONOUNS = {
         { type: "trainer", title: "Міні-тренажер (Personal pronouns)" }
     ]
 };
-
 export const RULE_PAGE_SIMPLE_ADJ = {
     id: "SIMPLE_ADJ",
     title: "Simple adjectives",
@@ -426,26 +415,72 @@ export const RULE_PAGE_SIMPLE_ADJ = {
         {
             type: "meaning",
             title: "Що це",
-            html: "Прикметники описують предмет або людину: <strong>big, small, happy, sad</strong>."
+            html: `
+        <p>
+          <strong>Adjectives</strong> (прикметники) описують людину або предмет:
+          <strong>big, small, happy, sad, tall, nice</strong>.
+        </p>
+        <p>
+          В англійській прикметники <strong>не змінюються</strong> за родом і числом:
+          ✅ <em>a big house</em> / ✅ <em>two big houses</em>
+        </p>
+      `
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Коли і де ставимо",
             badges: [
                 "Перед іменником: <strong>a big house</strong>",
-                "Після дієслова to be: <strong>She is happy</strong>"
+                "Після <strong>to be</strong>: <strong>She is happy.</strong>",
+                "Після feel / look / seem: <strong>I feel tired.</strong>"
             ],
-            hint: "Прикметники не змінюються за родом/числом в англійській."
+            hint: "Не кажемо: ❌ <em>a house big</em>. В англійській прикметник майже завжди перед іменником."
+        },
+        {
+            type: "form",
+            title: "Форма",
+            html: `
+        <ul>
+          <li>
+            <strong>Adj + noun:</strong><br>
+            <em>a small dog</em>, <em>a new phone</em>
+          </li>
+          <li>
+            <strong>Subject + be + adj:</strong><br>
+            <em>He is tall.</em> / <em>The coffee is hot.</em>
+          </li>
+          <li>
+            <strong>Very</strong> підсилює прикметник:<br>
+            <em>very big</em>, <em>very nice</em>
+          </li>
+        </ul>
+      `
+        },
+        {
+            type: "clarification",
+            title: "Порядок кількох прикметників",
+            html: `
+        <p>
+          Якщо прикметників два, зазвичай спочатку йде думка/оцінка, потім розмір/колір:
+        </p>
+        <ul>
+          <li>✅ <em>a nice big house</em></li>
+          <li>✅ <em>a small red bag</em></li>
+        </ul>
+        <p>
+          (Для A1 достатньо памʼятати: <strong>nice</strong> → <strong>big/small</strong> → <strong>color</strong>.)
+        </p>
+      `
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["A small cat.", "Маленький кіт."],
-                ["He is tall.", "Він високий."]
+                ["He is tall.", "Він високий."],
+                ["I feel tired today.", "Я сьогодні втомлена/втомлений."]
             ]
         },
-
         { type: "trainer", title: "Міні-тренажер (Simple adjectives)" }
     ]
 };
@@ -517,28 +552,95 @@ export const RULE_PAGE_YES_NO_Q = {
         {
             type: "meaning",
             title: "Що це",
-            html: "Питання, на які відповідають 'Yes' або 'No'. Часто потребують допоміжного дієслова (Do/Does/Am/Is/Are)."
+            html: `
+        <p>
+          <strong>Yes/No questions</strong> — це питання, на які можна відповісти
+          <strong>Yes</strong> або <strong>No</strong>.
+        </p>
+        <p>
+          В англійській у більшості таких питань <strong>потрібне допоміжне слово</strong>:
+          <strong>Do/Does</strong>, або <strong>Am/Is/Are</strong>, або модальне <strong>Can</strong>.
+        </p>
+      `
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "Як будувати",
             badges: [
-                "Do/Does + підмет + V... ?",
-                "Am/Is/Are + підмет + ... ?"
+                "🟧 Present Simple: <strong>Do/Does + subject + verb?</strong>",
+                "🟧 To be: <strong>Am/Is/Are + subject + ...?</strong>",
+                "🟧 Can: <strong>Can + subject + verb?</strong>"
             ],
-            hint: "Відповіді: Yes, I do. / No, she doesn't. / Yes, he is."
+            hint:
+                "Головне правило: у питанні першим стоїть допоміжне слово (Do/Does/Am/Is/Are/Can)."
+        },
+        {
+            type: "form",
+            title: "Шаблони",
+            html: `
+        <ul>
+          <li>
+            <strong>Do/Does (дія):</strong><br>
+            <em>Do you work here?</em><br>
+          </li>
+          <li>
+            <strong>Am/Is/Are (стан / хто-що / де):</strong><br>
+            <em>Are you tired?</em><br>
+          </li>
+          <li>
+            <strong>Can (вміння / дозвіл):</strong><br>
+            <em>Can you swim?</em><br>
+          </li>
+        </ul>
+      `
+        },
+        {
+            type: "short_answers",
+            title: "Короткі відповіді",
+            html: `
+        <p>
+          Коротка відповідь повторює те саме допоміжне слово:
+        </p>
+        <ul>
+          <li>
+            <strong>Do/Does:</strong><br>
+            ✅ <em>Yes, I do.</em> / ✅ <em>No, she doesn't.</em>
+          </li>
+          <li>
+            <strong>Am/Is/Are:</strong><br>
+            ✅ <em>Yes, he is.</em> / ✅ <em>No, I’m not.</em>
+          </li>
+          <li>
+            <strong>Can:</strong><br>
+            ✅ <em>Yes, we can.</em> / ✅ <em>No, I can’t.</em>
+          </li>
+        </ul>
+        <p>
+          Не відповідаємо просто <em>Yes</em> / <em>No</em> у ввічливій розмові — краще додати коротку форму.
+        </p>
+      `
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
-                ["Do you like pizza? — Yes, I do.", "Ти любиш піцу? — Так."],
-                ["Is he at home? — No, he isn't.", "Він вдома? — Ні."]
+                ["Is he at home? — No, he isn't.", "Він вдома? — Ні."],
+                ["Are you ready? — Yes, I am.", "Ти готовий/готова? — Так."],
+                ["Can you help me? — Yes, I can.", "Ти можеш мені допомогти? — Так."]
+            ]
+        },
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>You like pizza?</em> → ✅ <strong>Do you like pizza?</strong>",
+                "❌ <em>Does she likes tea?</em> → ✅ <strong>Does she like tea?</strong>",
             ]
         },
         { type: "trainer", title: "Міні-тренажер (Yes/No questions)" }
     ]
 };
+
 
 export const RULE_PAGE_WH_Q = {
     id: "WH_Q",
@@ -625,35 +727,91 @@ export const RULE_PAGE_CAN_CANT = {
         {
             type: "meaning",
             title: "Що це",
-            html: "<strong>Can</strong> виражає вміння або можливість; <strong>can't</strong> — відсутність вміння/заборона."
+            html: `
+        <p>
+          <strong>Can</strong> використовується, щоб сказати, що людина
+          <strong>вміє</strong> щось робити або що щось <strong>можливо / дозволено</strong>.
+        </p>
+        <p>
+          <strong>Can't</strong> означає, що вміння або можливість
+          <strong>відсутні</strong>, або що щось <strong>заборонено</strong>.
+        </p>
+      `
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
                 "Вміння: <strong>I can swim.</strong>",
-                "Можливість/дозвіл: <strong>Can I open the window?</strong>",
-                "Заперечення: <strong>I can't come.</strong>"
-            ]
+                "Можливість: <strong>I can come tomorrow.</strong>",
+                "Дозвіл / прохання: <strong>Can I open the window?</strong>",
+                "Заборона: <strong>You can't park here.</strong>"
+            ],
+            hint: "Після <strong>can</strong> завжди йде дієслово без <em>to</em>."
+        },
+        {
+            type: "form",
+            title: "Форма",
+            html: `
+        <ul>
+          <li>
+            <strong>Ствердження:</strong><br>
+            I / You / He / She / We / They + <strong>can</strong> + verb<br>
+            <em>She can drive.</em>
+          </li>
+          <li>
+            <strong>Заперечення:</strong><br>
+            subject + <strong>can't</strong> + verb<br>
+            <em>I can't understand.</em>
+          </li>
+          <li>
+            <strong>Питання:</strong><br>
+            <strong>Can</strong> + subject + verb?<br>
+            <em>Can you help me?</em>
+          </li>
+        </ul>
+      `
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["She can speak English.", "Вона вміє говорити англійською."],
+                ["Can we sit here?", "Ми можемо тут сісти?"],
                 ["No, you can't park here.", "Ні, тут паркуватися не можна."]
             ]
+        },
+        {
+            type: "clarification",
+            title: "Важливо",
+            html: `
+        <ul>
+          <li>
+            <strong>Can</strong> не змінюється за особами:<br>
+            ✅ I can / He can / They can
+          </li>
+          <li>
+            Для минулого або конкретного досягнення часто краще
+            використовувати <strong>was / were able to</strong>.
+          </li>
+        </ul>
+      `
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
                 "❌ <em>I can to swim.</em> → ✅ <strong>I can swim.</strong>",
-                "❌ <em>He cans drive.</em> → ✅ <strong>He can drive.</strong>"
-            ]},
-        { type: "trainer", title: "Міні-тренажер (Can / can't)" }
+                "❌ <em>Do you can help me?</em> → ✅ <strong>Can you help me?</strong>"
+            ]
+        },
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Can / can't)"
+        }
     ]
 };
+
 
 export const RULE_PAGE_COUNT_UNCOUNT = {
     id: "COUNT_UNCOUNT",
@@ -663,36 +821,93 @@ export const RULE_PAGE_COUNT_UNCOUNT = {
         {
             type: "meaning",
             title: "Що це",
-            html: "Деякі іменники можна порахувати (apples), інші — ні (water, information)."
+            html: `
+        <p>
+          <strong>Countable nouns</strong> — іменники, які можна порахувати:
+          <em>one apple, two apples</em>.
+        </p>
+        <p>
+          <strong>Uncountable nouns</strong> — іменники, які не рахують поштучно:
+          <em>water, money, information</em>.
+        </p>
+      `
         },
         {
             type: "usage",
             title: "Як вживати",
             badges: [
-                "Countable: many / a few / two apples",
-                "Uncountable: much / a little / some water"
+                "Countable (однина): <strong>a / an</strong>, one, two books",
+                "Countable (множина): <strong>many</strong>, a few, these apples",
+                "Uncountable: <strong>much</strong>, a little, some water",
+                "Питання: <strong>How many</strong> vs <strong>How much</strong>"
             ],
-            hint: "Обережно з 'a' — його не використовують з uncountable."
+            hint: "Якщо можна поставити число (1, 2, 3) — іменник countable."
+        },
+        {
+            type: "form",
+            title: "Форма",
+            html: `
+        <ul>
+          <li>
+            <strong>Countable:</strong><br>
+            a book / two books / many books
+          </li>
+          <li>
+            <strong>Uncountable:</strong><br>
+            water / some water / much water
+          </li>
+          <li>
+            Для uncountable часто використовують контейнери:<br>
+            <em>a piece of</em>, <em>a glass of</em>, <em>a bottle of</em>
+          </li>
+        </ul>
+      `
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I have three books.", "У мене три книжки."],
-                ["There is some sugar.", "Є трохи цукру."]
+                ["There is some sugar.", "Є трохи цукру."],
+                ["Can I have a glass of water?", "Можна мені склянку води?"],
+                ["How much time do we have?", "Скільки в нас є часу?"]
             ]
+        },
+        {
+            type: "clarification",
+            title: "Важливо запамʼятати",
+            html: `
+        <ul>
+          <li>
+            <strong>Uncountable</strong> не має множини:<br>
+            ❌ informations → ✅ information
+          </li>
+          <li>
+            З uncountable <strong>не використовують a / an</strong>.
+          </li>
+          <li>
+            Деякі слова завжди uncountable:
+            <em>advice, information, money, furniture</em>.
+          </li>
+        </ul>
+      `
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>I need a advice.</em> → ✅ <strong>I need advice.</strong>",
-                "❌ <em>Two advices</em> → ✅ <strong>Two pieces of advice</strong>",
-                "❌ <em>Many money</em> → ✅ <strong>Much money</strong>"
-            ]},
-        { type: "trainer", title: "Міні-тренажер (Countable / Uncountable)" }
+                "❌ <em>Two advices.</em> → ✅ <strong>Two pieces of advice.</strong>",
+                "❌ <em>Many money.</em> → ✅ <strong>Much money.</strong>",
+                "❌ <em>These informations.</em> → ✅ <strong>This information.</strong>"
+            ]
+        },
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Countable / Uncountable)"
+        }
     ]
 };
+
 
 export const RULE_PAGE_BE_FROM_NATIONALITY = {
     id: "BE_FROM_NATIONALITY",
@@ -702,28 +917,77 @@ export const RULE_PAGE_BE_FROM_NATIONALITY = {
         {
             type: "meaning",
             title: "Що це",
-            html: "<strong>Be from</strong> використовується для вказівки походження/національності: <em>I am from Ukraine.</em>"
+            html: `
+        <p>
+          <strong>Be from</strong> використовується, щоб сказати,
+          <strong>звідки людина</strong> (країна, місто).
+        </p>
+        <p>
+          Для <strong>національності</strong> також часто використовується
+          прикметник:
+          <em>I am Ukrainian.</em>
+        </p>
+      `
         },
         {
             type: "usage",
             title: "Коли вживаємо",
             badges: [
-                "Країна/місто: <strong>She is from Ukraine.</strong>",
-                "Національність через 'be' + adjective: <strong>He is Ukrainian.</strong>"
+                "Походження (країна/місто): <strong>I am from Ukraine.</strong>",
+                "Національність (прикметник): <strong>She is Polish.</strong>",
+                "Питання: <strong>Are you from Spain?</strong>",
+                "Заперечення: <strong>I am not from Italy.</strong>"
             ],
-            hint: "Для національності можна використовувати 'from' або прикметник (I'm Ukrainian)."
+            hint: "Обидва варіанти правильні: <em>I am from Ukraine</em> або <em>I am Ukrainian</em>."
+        },
+        {
+            type: "clarification",
+            title: "Важливо памʼятати",
+            html: `
+        <ul>
+          <li>
+            <strong>from</strong> + <strong>країна / місто</strong><br>
+            ✅ I am from Poland.<br>
+            ❌ I am from Polish.
+          </li>
+          <li>
+            <strong>be</strong> + <strong>nationality adjective</strong><br>
+            ✅ She is Italian.<br>
+            ❌ She is an Italian.
+          </li>
+          <li>
+            Назви національностей <strong>НЕ мають артикля</strong>.
+          </li>
+        </ul>
+      `
         },
         {
             type: "examples",
             title: "Приклади",
             items: [
                 ["I'm from Spain.", "Я з Іспанії."],
-                ["Are you from London?", "Ти з Лондона?"]
+                ["She is Ukrainian.", "Вона українка."],
+                ["Are you from London?", "Ти з Лондона?"],
+                ["They are not from France.", "Вони не з Франції."]
             ]
         },
-        { type: "trainer", title: "Міні-тренажер (Be from / nationality)" }
+        {
+            type: "mistakes",
+            title: "Типові помилки",
+            bullets: [
+                "❌ <em>I am from Ukrainian.</em> → ✅ <strong>I am Ukrainian.</strong>",
+                "❌ <em>She is a Polish.</em> → ✅ <strong>She is Polish.</strong>",
+                "❌ <em>He is from the Ukraine.</em> → ✅ <strong>He is from Ukraine.</strong>"
+            ]
+        },
+        {
+            type: "trainer",
+            title: "Міні-тренажер (Be from / nationality)"
+        }
     ]
 };
+
+
 
 export const RULE_PAGE_PRESENT_CONT_NOW = {
     id: "PRESENT_CONT_NOW",
@@ -769,34 +1033,17 @@ export const RULE_PAGE_PRESENT_CONT_NOW = {
             type: "examples",
             title: "Приклади",
             items: [
-                ["They are playing football now.", "Вони зараз грають у футбол."],
                 ["We’re having a party on Friday.", "У нас вечірка в п’ятницю."],
-                ["Are you meeting him tomorrow?", "Ти зустрічаєшся з ним завтра?"],
                 ["She isn’t working this weekend.", "Вона не працює цього вікенду."],
             ]
-        },
-        {
-            type: "mistakes",
-            title: "Present Continuous VS will",
-            bullets: [
-                "<em>Дія вже йде?</em> → ✅ <strong>Present Continuous</strong>",
-                "<em>Це спонтанне рішення / обіцянка?</em> → ✅ <strong>will</strong>",
-                "<em>Є домовленість на майбутнє?</em> → ✅ <strong>Present Continuous</strong>",
-                "<em>Є слово now?</em> → ✅ <strong>Present Continuous</strong>"
-            ],
-            note:
-                "Завжди додавай <strong>future time</strong> (tomorrow, next week…), щоб було зрозуміло, що це про майбутнє.",
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
                 "❌ <em>I read now.</em> → ✅ <strong>I am reading now.</strong>",
-                "❌ <em>I can reading.</em> → ✅ <strong>I can read.</strong>",
                 "❌ <em>She is liking this movie.</em> → ✅ <strong>She likes this movie.</strong>",
-                "❌ <em>You are working now?</em> → ✅ <strong>Are you working now?</strong>",
                 "❌ <em>I am living in Ukraine.</em> → ✅ <strong>I live in Ukraine.</strong>",
-                "❌ <em>You are working now?</em> → ✅ <strong>Are you working now?</strong>",
                 "❌ <em>I meet my friend tomorrow.</em> → ✅ <strong>I’m meeting my friend tomorrow.</strong>.",
             ],
         },
@@ -1152,10 +1399,8 @@ export const RULE_PAGE_PAST_SIMPLE = {
             type: "examples",
             title: "Приклади",
             items: [
-                ["I visited my grandparents last weekend.", "Я відвідала бабусю й дідуся минулих вихідних."],
                 ["We played football after school.", "Ми грали у футбол після школи."],
                 ["Did you enjoy the trip?", "Тобі сподобалася поїздка?"],
-                ["She didn’t work yesterday.", "Вона не працювала вчора."],
             ],
         },
         {
@@ -1167,9 +1412,6 @@ export const RULE_PAGE_PAST_SIMPLE = {
                 "❌ <em>She not worked yesterday</em> → ✅ <strong>She didn’t work yesterday</strong>",
                 "❌ <em>Did you were at home?</em> → ✅ <strong>Were you at home?</strong>",
             ],
-            note:
-                "Пам’ятай: <strong>did / didn’t</strong> використовуються з усіма дієсловами, <strong>крім to be</strong>. " +
-                "Для <strong>to be</strong> у минулому вживаємо <strong>was / were</strong>.",
         },
         {
             type: "trainer",
@@ -2277,16 +2519,13 @@ export const RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY = {
             items: [
                 ["We have some bread.", "У нас є трохи хліба."],
                 ["Do you have any questions?", "У тебе є запитання?"],
-                ["There are a lot of children in the park.", "У парку багато дітей."],
                 ["We don’t have much time.", "У нас немає багато часу."],
-                ["How many apples do you need?", "Скільки яблук тобі потрібно?"],
             ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>many money</em> → ✅ <strong>much money / a lot of money</strong>",
                 "❌ <em>much apples</em> → ✅ <strong>many apples / a lot of apples</strong>",
             ],
             note:
@@ -2491,7 +2730,6 @@ export const RULE_PAGE_FIRST_CONDITIONAL = {
             title: "Приклади",
             items: [
                 ["If I have time, I’ll call you.", "Якщо в мене буде час, я тобі подзвоню."],
-                ["If they study hard, they’ll pass the exam.", "Якщо вони добре вчитимуться, вони складуть іспит."],
                 ["We won’t go out if it’s cold.", "Ми не підемо гуляти, якщо буде холодно."],
             ],
         },
@@ -2658,8 +2896,6 @@ export const RULE_PAGE_HOW_OFTEN_LONG_MUCH = {
             title: "Приклади",
             items: [
                 ["How often do you wash your car?", "Як часто ти миєш свою машину?"],
-                ["How long is the break?", "Скільки триває перерва?"],
-                ["How much milk is in the fridge?", "Скільки молока в холодильнику?"],
                 ["How much is this book?", "Скільки коштує ця книга?"],
             ],
         },
@@ -2668,8 +2904,6 @@ export const RULE_PAGE_HOW_OFTEN_LONG_MUCH = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>How much apples?</em> → ✅ <strong>How many apples?</strong>",
-                "❌ <em>How often does the lesson last?</em> → ✅ <strong>How long does the lesson last?</strong>",
-                "❌ <em>How long do you go to the gym?</em> (про частоту) → ✅ <strong>How often do you go to the gym?</strong>",
             ],
             note:
                 "Спочатку визнач: <strong>частота</strong> / <strong>тривалість</strong> / <strong>кількість або ціна</strong> — і лише потім обирай <strong>how…</strong>.",
@@ -3070,7 +3304,6 @@ export const RULE_PAGE_PRESENT_PERFECT = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>I have saw</em> → ✅ <strong>I have seen</strong>",
-                "❌ <em>He have done</em> → ✅ <strong>He has done</strong>",
                 "❌ Використання з конкретним минулим часом (<em>yesterday</em>)."
             ],
             note: "Не використовуємо Present Perfect з часовими маркерами минулого."
@@ -3141,10 +3374,7 @@ export const RULE_PAGE_SINCE_FOR = {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>for 2010</em> → це конкретний момент → ✅ <strong>since 2010</strong>",
-                "❌ <em>since two years</em> → це період → ✅ <strong>for two years</strong>",
                 "❌ <em>I live here since 2015.</em> → бракує Perfect → ✅ <strong>I have lived here since 2015.</strong>",
-                "❌ <em>for Monday</em> → день = точка → ✅ <strong>since Monday</strong>",
             ],
         },
         {
@@ -3211,7 +3441,6 @@ export const RULE_PAGE_PRESENT_PERFECT_CONT = {
             items: [
                 ["I’ve been waiting for you.", "Я чекаю на тебе вже деякий час."],
                 ["She has been studying since morning.", "Вона навчається з ранку."],
-                ["They’ve been arguing all evening.", "Вони сперечаються весь вечір."],
                 ["Have you been working here long?", "Ти давно тут працюєш?"],
             ],
         },
@@ -3278,7 +3507,6 @@ export const RULE_PAGE_ALREADY_YET_JUST = {
             items: [
                 ["I’ve already finished.", "Я вже закінчив."],
                 ["We haven’t decided yet.", "Ми ще не вирішили."],
-                ["Have you called her yet?", "Ти вже їй подзвонив?"],
                 ["She’s just left.", "Вона щойно пішла."],
             ],
         },
@@ -3377,9 +3605,7 @@ export const RULE_PAGE_PAST_PERFECT = {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Використання <em>Past Perfect</em> без другої минулої дії або чіткого контексту.",
                 "❌ <em>had went</em> → ✅ <strong>had gone</strong>",
-                "❌ <em>After she had arrived, he left.</em> → зайве <em>had</em> → ✅ <strong>After she arrived, he left.</strong>",
             ],
         },
         {
@@ -3446,8 +3672,6 @@ export const RULE_PAGE_USED_TO = {
             title: "Приклади",
             items: [
                 ["I used to have long hair.", "У мене раніше було довге волосся."],
-                ["She used to be very shy.", "Вона раніше була дуже сором’язливою."],
-                ["We didn’t use to eat out often.", "Раніше ми нечасто їли поза домом."],
                 ["Did you use to play football?", "Ти раніше грав у футбол?"],
             ],
         },
@@ -3456,9 +3680,7 @@ export const RULE_PAGE_USED_TO = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>didn’t used to</em> → ✅ <strong>didn’t use to</strong>",
-                "❌ <em>Did you used to…?</em> → ✅ <strong>Did you use to…?</strong>",
                 "❌ Плутанина з <em>be used to</em> → ✅ <strong>I am used to waking up early.</strong> (це вже про «звик»)",
-                "❌ Використання для теперішніх звичок → ❌ <em>I use to drink coffee every day.</em>",
             ],
         },
         {
@@ -3601,34 +3823,23 @@ export const RULE_PAGE_SECOND_CONDITIONAL = {
                     "Would you help me if I asked?",
                     "Ти б допоміг мені, якби я попросив?",
                 ],
-                [
-                    "She wouldn’t be so tired if she slept more.",
-                    "Вона б не була такою втомленою, якби більше спала.",
-                ],
             ],
         },
         {
             type: "mistakes",
-            title: "Second vs Third Conditional — як обрати",
+            title: "Third Conditional — як обрати",
             bullets: [
-                "<em>Це про тепер або майбутнє?</em><br/>(уявляю іншу ситуацію зараз / потім) → ✅ <strong>Second Conditional</strong>",
                 "<em>Це про минуле, яке вже не змінити?</em> → ✅ <strong>Third Conditional</strong>",
                 "<em>Можна подумки додати фразу «але цього вже не можна змінити»?</em> → ✅ <strong>Third Conditional</strong>",
                 "<em>Є відчуття жалю або докору?</em> → ✅ <strong>Third Conditional</strong>",
-                "<em>Це просто фантазія або уява, без жалю?</em> → ✅ <strong>Second Conditional</strong>"
             ],
-            note:
-                "Коротко: <strong>уявляю інше тепер / майбутнє → Second</strong>, <strong>шкодую про минуле → Third</strong>.",
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
                 "❌ <em>If I will have time…</em> → ✅ <strong>If I had time…</strong>",
-                "❌ <em>If I would know…</em> → ✅ <strong>If I knew…</strong>",
             ],
-            note:
-                "Умовна частина завжди в <strong>Past Simple</strong>, навіть якщо мова про теперішнє або майбутнє.",
         },
         {
             type: "trainer",
@@ -3667,20 +3878,16 @@ export const RULE_PAGE_THIRD_CONDITIONAL = {
         {
             type: "forms",
             title: "Структура Third Conditional",
-            headers: ["Позиція if", "Структура", "Приклад", "Переклад", "Примітка"],
+            headers: ["Структура", "Приклад", "Примітка"],
             rows: [
                 [
-                    "If на початку",
                     "If + Past Perfect, would have + V3",
                     "If I had studied, I would have passed.",
-                    "Якби я вчився, я б склав (іспит).",
                     "Кома після if-частини.",
                 ],
                 [
-                    "If в середині",
                     "Would have + V3 if + Past Perfect",
                     "I would have passed if I had studied.",
-                    "Я б склав (іспит), якби я вчився.",
                     "Коми немає.",
                 ],
             ],
@@ -3699,24 +3906,7 @@ export const RULE_PAGE_THIRD_CONDITIONAL = {
                     "She wouldn’t have been late if she had taken a taxi.",
                     "Вона б не запізнилась, якби взяла таксі.",
                 ],
-                [
-                    "Would you have gone if I had invited you?",
-                    "Ти б пішов, якби я тебе запросив?",
-                ],
             ],
-        },
-        {
-            type: "mistakes",
-            title: "Second vs Third Conditional — як обрати",
-            bullets: [
-                "<em>Це про тепер або майбутнє?</em><br/>(уявляю іншу ситуацію зараз / потім) → ✅ <strong>Second Conditional</strong>",
-                "<em>Це про минуле, яке вже не змінити?</em> → ✅ <strong>Third Conditional</strong>",
-                "<em>Можна подумки додати фразу «але цього вже не можна змінити»?</em> → ✅ <strong>Third Conditional</strong>",
-                "<em>Є відчуття жалю або докору?</em> → ✅ <strong>Third Conditional</strong>",
-                "<em>Це просто фантазія або уява, без жалю?</em> → ✅ <strong>Second Conditional</strong>"
-            ],
-            note:
-                "Коротко: <strong>уявляю інше тепер / майбутнє → Second</strong>, <strong>шкодую про минуле → Third</strong>.",
         },
         {
             type: "mistakes",
@@ -3791,8 +3981,6 @@ export const RULE_PAGE_WISH_PAST_PAST_PERFECT = {
             type: "examples",
             title: "Приклади",
             items: [
-                ["I wish I were taller.", "Шкода, що я не вищий."],
-                ["I wish I knew her phone number.", "Шкода, що я не знаю її номер."],
                 ["I wish I had studied harder.", "Шкода, що я вчився недостатньо."],
                 ["He wishes he hadn’t said that.", "Він шкодує, що це сказав."],
             ],
@@ -3804,7 +3992,6 @@ export const RULE_PAGE_WISH_PAST_PAST_PERFECT = {
                 "❌ <em>I wish I would know.</em> → ✅ <strong>I wish I knew.</strong>",
                 "❌ <em>I wish I will go there.</em> → ✅ <strong>I wish I could go there.</strong>",
                 "❌ <em>I wish I didn’t say that yesterday.</em> → для минулого → ✅ <strong>I wish I hadn’t said that.</strong>",
-                "❌ <em>wish + will</em> для жалю → не використовується.",
             ],
         },
         {
@@ -3874,15 +4061,12 @@ export const RULE_PAGE_MODAL_PERFECTS = {
                 ["I should have studied more.", "Мені треба було більше вчитися."],
                 ["She could have been hurt.", "Вона могла постраждати."],
                 ["We might have made a mistake.", "Ми, можливо, зробили помилку."],
-                ["You shouldn’t have said that.", "Тобі не варто було цього казати."],
             ],
         },
         {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>should had</em> → ✅ <strong>should have</strong>",
-                "❌ <em>could had gone</em> → ✅ <strong>could have gone</strong>",
                 "❌ Плутанина з теперішніми модальними: <em>You should go</em> ≠ <strong>You should have gone</strong>",
             ],
         },
@@ -4043,10 +4227,7 @@ export const RULE_PAGE_PASSIVE_VOICE_ALL_TENSES = {
             type: "examples",
             title: "Приклади",
             items: [
-                ["The room is cleaned every day.", "Кімнату прибирають щодня."],
                 ["The letter was sent yesterday.", "Листа відправили вчора."],
-                ["The house has been built recently.", "Будинок нещодавно збудували."],
-                ["The rules must be followed.", "Правил потрібно дотримуватися."],
                 ["The book was written by Orwell.", "Книгу написав Орвелл."],
             ],
         },
@@ -4055,9 +4236,7 @@ export const RULE_PAGE_PASSIVE_VOICE_ALL_TENSES = {
             title: "Типові помилки",
             bullets: [
                 "❌ Неправильна форма <em>be</em> → час не узгоджений.",
-                "❌ <em>is build</em> → ✅ <strong>is built</strong> (потрібен V3).",
-                "❌ Зайвий <strong>by</strong>, коли виконавець очевидний або неважливий.",
-                "❌ Неможливо утворити пасив від неперехідних дієслів (<em>arrive, happen</em>).",
+                "❌ <em>is build</em> → ✅ <strong>is built</strong> (потрібен V3)."
             ],
         },
         {
@@ -4121,9 +4300,7 @@ export const RULE_PAGE_GET_PAST_PARTICIPLE = {
             title: "Приклади",
             items: [
                 ["She got hired last month.", "Вона отримала роботу минулого місяця."],
-                ["Don’t get hurt.", "Не поранись."],
-                ["He got fired because he was late.", "Його звільнили, бо він запізнювався."],
-                ["The kids got excited.", "Діти збудилися."],
+                ["He got fired because he was late.", "Його звільнили, бо він запізнювався."]
             ],
         },
         {
@@ -4248,8 +4425,6 @@ export const RULE_PAGE_QUESTION_TAGS = {
                 "➖ Заперечення → ❓ позитивний tag: <strong>You aren’t tired, are you?</strong>",
                 "🧩 Допоміжне дієслово в tag залежить від часу та форми речення",
             ],
-            hint:
-                "Tag = <em>допоміжне дієслово + займенник</em>.",
         },
         {
             type: "forms",
@@ -4285,7 +4460,6 @@ export const RULE_PAGE_QUESTION_TAGS = {
             type: "examples",
             title: "Приклади",
             items: [
-                ["He’s a doctor, isn’t he?", "Він лікар, чи не так?"],
                 ["They aren’t ready, are they?", "Вони не готові, так?"],
                 ["You finished the report, didn’t you?", "Ти закінчив звіт, так?"],
                 ["She can swim, can’t she?", "Вона вміє плавати, правда?"],
@@ -4295,9 +4469,8 @@ export const RULE_PAGE_QUESTION_TAGS = {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Неправильне допоміжне дієслово → <em>You like it, isn’t you?</em> → ✅ <strong>don’t you</strong>",
+                "❌ Неправильне допоміжне дієслово → <em>You like it, do you?</em> → ✅ <strong>don’t you</strong>",
                 "❌ Неправильний займенник → <em>Anna is here, isn’t Anna?</em> → ✅ <strong>isn’t she</strong>",
-                "❌ Забувають інверсію позитив/негатив у tag",
             ],
         },
         {
@@ -4527,7 +4700,6 @@ export const RULE_PAGE_REFLEXIVE_PRONOUNS = {
             title: "Приклади",
             items: [
                 ["Be careful! Don’t cut yourself.", "Обережно! Не поріж себе."],
-                ["They introduced themselves.", "Вони представилися."],
                 ["I don’t want to blame myself.", "Я не хочу звинувачувати себе."],
                 ["She made the cake herself.", "Вона сама зробила торт."],
             ],
@@ -4536,7 +4708,6 @@ export const RULE_PAGE_REFLEXIVE_PRONOUNS = {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ Відсутній reflexive pronoun → <em>He hurt.</em> → ✅ <strong>He hurt himself.</strong>",
                 "❌ Зайвий reflexive pronoun → <em>I washed myself my hands.</em> → ✅ <strong>I washed my hands.</strong>",
                 "❌ Плутанина з особовими займенниками → <em>She blamed her.</em> (не себе)",
             ],
@@ -4677,8 +4848,7 @@ export const RULE_PAGE_IN_ORDER_TO_SO_THAT = {
             items: [
                 ["She studies hard to pass the exam.", "Вона вчиться, щоб скласти іспит."],
                 ["She studies hard in order to pass the exam.", "Вона вчиться, щоб скласти іспит."],
-                ["He spoke loudly so that everyone could hear.", "Він говорив голосно, щоб усі чули."],
-                ["I’m whispering so that the baby doesn’t wake up.", "Я шепочу, щоб дитина не прокинулась."],
+                ["He spoke loudly so that everyone could hear.", "Він говорив голосно, щоб усі чули."]
             ],
         },
         {
@@ -4762,9 +4932,6 @@ export const RULE_PAGE_MODALS_OF_PROBABILITY = {
             items: [
                 ["It must be cold outside.", "Напевно надворі холодно."],
                 ["She might be at work.", "Вона, можливо, на роботі."],
-                ["They could be wrong.", "Вони можуть помилятися."],
-                ["He can’t be serious.", "Це не може бути серйозно."],
-                ["She must have left already.", "Вона, напевно, вже пішла."],
             ],
         },
         {
@@ -4772,7 +4939,6 @@ export const RULE_PAGE_MODALS_OF_PROBABILITY = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>mustn’t</em> як припущення → ❌ ні (це заборона) → ✅ <strong>can’t</strong> для «неможливо»",
-                "❌ <em>He must to be tired</em> → ✅ <strong>He must be tired</strong>",
                 "❌ Пропускають <em>have</em> у минулому → <em>must forgot</em> → ✅ <strong>must have forgotten</strong>",
             ],
         },
@@ -4840,7 +5006,6 @@ export const RULE_PAGE_BE_SUPPOSED_TO = {
             items: [
                 ["You’re supposed to clean your room.", "Ти повинен прибрати кімнату."],
                 ["We weren’t supposed to leave early.", "Ми не мали йти рано."],
-                ["She’s supposed to call me later.", "Вона має подзвонити пізніше."],
                 ["I was supposed to be there by noon.", "Я мав бути там до обіду."],
             ],
         },
@@ -5322,7 +5487,6 @@ export const RULE_PAGE_SO_DO_I_NEITHER_DO_I = {
                 "❌ <em>So I do.</em> → ✅ <strong>So do I.</strong> (потрібна інверсія)",
                 "❌ <em>Neither I do.</em> → ✅ <strong>Neither do I.</strong>",
                 "❌ Неправильний auxiliary → <em>I’m tired. — So do I.</em> → ✅ <strong>So am I.</strong>",
-                "⚠️ <em>Me too / Me neither</em> — розмовно; <em>So do I / Neither do I</em> — нейтрально/формальніше",
             ],
         },
         {
@@ -5517,10 +5681,6 @@ export const RULE_PAGE_MIXED_CONDITIONALS = {
                     "If he hadn’t missed the bus, he would be here now.",
                     "Якби він не пропустив автобус, він був би тут зараз.",
                 ],
-                [
-                    "If we were more organized, we would have finished on time.",
-                    "Якби ми були більш організовані, ми б закінчили вчасно.",
-                ],
             ],
         },
         {
@@ -5639,7 +5799,6 @@ export const RULE_PAGE_ADV_PASSIVES_REPORTING_VERBS = {
             type: "examples",
             title: "Приклади",
             items: [
-                ["It is believed that the crisis is over.", "Вважається, що криза закінчилася."],
                 ["The minister is expected to resign.", "Очікується, що міністр піде у відставку."],
                 ["She is reported to have won the election.", "Повідомляють, що вона виграла вибори."],
                 ["The company is said to be expanding.", "Кажуть, що компанія розширюється."],
@@ -5651,8 +5810,7 @@ export const RULE_PAGE_ADV_PASSIVES_REPORTING_VERBS = {
             bullets: [
                 "❌ <em>He is said that he is rich.</em> → ❌ (потрібна інфінітивна форма)",
                 "❌ <em>He is said to is rich.</em> → ✅ <strong>to be rich</strong>",
-                "❌ Неправильний час → <em>is said to leave yesterday</em> → ✅ <strong>to have left</strong>",
-                "❌ Надмірне використання в розмовній мові — звучить неприродно",
+                "❌ Неправильний час → <em>is said to leave yesterday</em> → ✅ <strong>to have left</strong>"
             ],
         },
         {
@@ -5723,14 +5881,6 @@ export const RULE_PAGE_PARTICIPLE_CLAUSES = {
                     "Ідучи вулицею, вона зустріла старого друга.",
                 ],
                 [
-                    "Seen from above, the city looks tiny.",
-                    "Якщо дивитися згори, місто здається крихітним.",
-                ],
-                [
-                    "Having missed the bus, he was late for work.",
-                    "Пропустивши автобус, він запізнився на роботу.",
-                ],
-                [
                     "Not knowing what to say, she stayed silent.",
                     "Не знаючи, що сказати, вона мовчала.",
                 ],
@@ -5742,7 +5892,6 @@ export const RULE_PAGE_PARTICIPLE_CLAUSES = {
             bullets: [
                 "❌ Dangling participle → <em>Walking down the street, the house appeared.</em>",
                 "❌ Різні підмети в частинах речення → participle clause стає нелогічним",
-                "❌ Надмірне використання — краще іноді повне підрядне речення",
             ],
         },
         {
@@ -5958,21 +6107,18 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
         {
             type: "forms",
             title: "Форми",
-            headers: ["Конструкція", "Структура", "Приклад"],
+            headers: ["Конструкція", "Приклад"],
             rows: [
                 [
-                    "despite + noun",
                     "despite + noun",
                     "Despite the rain, we went out.",
                 ],
                 [
                     "in spite of + noun",
-                    "in spite of + noun",
                     "In spite of the rain, we went out.",
                 ],
                 [
                     "despite / in spite of + -ing",
-                    "despite / in spite of + V-ing",
                     "Despite being tired, he worked late.",
                 ],
             ],
@@ -5992,14 +6138,6 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
                     "In spite of losing, they were happy.",
                     "Незважаючи на поразку, вони були щасливі.",
                 ],
-                [
-                    "Despite his age, he runs marathons.",
-                    "Незважаючи на вік, він бігає марафони.",
-                ],
-                [
-                    "In spite of the traffic, we arrived on time.",
-                    "Незважаючи на затори, ми приїхали вчасно.",
-                ],
             ],
         },
         {
@@ -6008,7 +6146,6 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
             bullets: [
                 "❌ <em>despite of the rain</em> → ✅ <strong>despite the rain</strong>",
                 "❌ <em>despite she was tired</em> → ✅ <strong>despite being tired</strong> / <strong>although she was tired</strong>",
-                "❌ <em>in spite that</em> → ❌ (краще <strong>although</strong>)",
             ],
         },
         {
@@ -6087,8 +6224,6 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
                 ["I’d rather stay at home.", "Я краще залишуся вдома."],
                 ["I’d rather you didn’t smoke here.", "Я б волів, щоб ти тут не курив."],
                 ["I prefer coffee to tea.", "Я більше люблю каву, ніж чай."],
-                ["She prefers working from home.", "Вона віддає перевагу роботі з дому."],
-                ["I prefer to read rather than watch TV.", "Я краще почитаю, ніж дивитимусь телевізор."],
             ],
         },
         {
@@ -6096,9 +6231,7 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>I’d rather you to go.</em> → ✅ <strong>I’d rather you went.</strong>",
-                "❌ <em>I’d rather to stay.</em> → ✅ <strong>I’d rather stay.</strong>",
-                "❌ <em>I prefer coffee than tea.</em> → ✅ <strong>prefer coffee to tea</strong>",
-                "❌ Змішування структур <em>would rather</em> і <em>prefer</em>",
+                "❌ <em>I’d rather stayed.</em> → ✅ <strong>I’d rather stay.</strong>",
             ],
         },
         {
@@ -6164,7 +6297,6 @@ export const RULE_PAGE_HAD_BETTER = {
             title: "Приклади",
             items: [
                 ["You’d better not be late.", "Краще не спізнюйся."],
-                ["We’d better call them.", "Нам краще їм подзвонити."],
                 ["He’d better see a doctor.", "Йому краще звернутися до лікаря."],
                 ["You had better back up your files.", "Тобі краще зробити резервну копію файлів."],
             ],
@@ -6174,8 +6306,7 @@ export const RULE_PAGE_HAD_BETTER = {
             title: "Типові помилки",
             bullets: [
                 "❌ <em>had better to go</em> → ✅ <strong>had better go</strong>",
-                "❌ <em>had better went</em> → ✅ <strong>had better go</strong>",
-                "❌ Плутанина з <em>should</em> → <strong>had better</strong> = сильніше, з наслідками",
+                "❌ <em>had better went</em> → ✅ <strong>had better go</strong>"
             ],
         },
         {
@@ -6424,7 +6555,6 @@ export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
             items: [
                 ["She wondered what he was doing.", "Вона цікавилася, що він робить."],
                 ["He asked whether we could wait.", "Він запитав, чи можемо ми почекати."],
-                ["I don’t know where she lives.", "Я не знаю, де вона живе."],
                 ["Can you tell me if this is correct?", "Ти можеш сказати, чи це правильно?"],
             ],
         },

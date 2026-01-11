@@ -24748,16 +24748,6 @@
       "rules": [
         "BEFORE_AFTER_ING"
       ],
-      "ua": "Ми пішли в клас після того, як продзвенів дзвоник.",
-      "en": [
-        "We went to class after the bell ringing."
-      ],
-      "hint": "використовуй AFTER + GERUND"
-    },
-    {
-      "rules": [
-        "BEFORE_AFTER_ING"
-      ],
       "ua": "Я розтягуюсь після того, як побігаю.",
       "en": [
         "I stretch after running."
@@ -29664,9 +29654,8 @@
       "rules": [
         "LIKE_LOVE_HATE_ING"
       ],
-      "ua": "Ми часто катаємося на роликах.",
+      "ua": "Ми любимо кататися на роликах.",
       "en": [
-        "We often go rollerblading.",
         "We love going rollerblading.",
         "We like going rollerblading.",
         "We enjoy going rollerblading."
@@ -67526,8 +67515,8 @@
       ],
       "ua": "Мене спитали, чи мені подобається готувати.",
       "en": [
-        "They asked if I like cooking.",
-        "They wanted to know whether I enjoy cooking."
+        "They asked if I liked cooking.",
+        "They wanted to know whether I enjoyed cooking."
       ]
     },
     {
@@ -67789,8 +67778,8 @@
       ],
       "ua": "Він хотів знати, що мені подобається робити у вільний час.",
       "en": [
-        "He wanted to know what I like doing in my free time.",
-        "He asked what hobbies I enjoy."
+        "He wanted to know what I liked doing in my free time.",
+        "He asked what hobbies I enjoyed."
       ]
     },
     {

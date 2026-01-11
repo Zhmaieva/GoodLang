@@ -225,12 +225,6 @@
   },
   {
     "rules": ["BEFORE_AFTER_ING"],
-    "ua": "Ми пішли в клас після того, як продзвенів дзвоник.",
-    "en": ["We went to class after the bell ringing."],
-    "hint": "використовуй AFTER + GERUND"
-  },
-  {
-    "rules": ["BEFORE_AFTER_ING"],
     "ua": "Я розтягуюсь після того, як побігаю.",
     "en": ["I stretch after running."],
     "hint": "використовуй AFTER + GERUND"

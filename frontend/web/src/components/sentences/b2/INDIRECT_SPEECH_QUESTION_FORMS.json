@@ -282,7 +282,7 @@
   {
     "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Мене спитали, чи мені подобається готувати.",
-    "en": ["They asked if I like cooking.", "They wanted to know whether I enjoy cooking."]
+    "en": ["They asked if I liked cooking.", "They wanted to know whether I enjoyed cooking."]
   },
   {
     "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
@@ -397,8 +397,10 @@
   {
     "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES"],
     "ua": "Він хотів знати, що мені подобається робити у вільний час.",
-    "en": ["He wanted to know what I like doing in my free time.", "He asked what hobbies I enjoy."]
-  },
+    "en": [
+      "He wanted to know what I liked doing in my free time.",
+      "He asked what hobbies I enjoyed."
+    ]  },
   {
     "rules": ["INDIRECT_SPEECH_QUESTION_FORMS", "ARTICLES", "PRESENT_CONT_NOW"],
     "ua": "Ми запитали, що він зараз робить.",
