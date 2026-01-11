@@ -295,6 +295,52 @@ async function generatePdfFromHtml(html) {
     });
 }
 
+async function getPreGeneratedPdfPath(ruleName) {
+    const key = String(ruleName ?? "").trim().toUpperCase();
+    if (!key) throw new Error("ruleName is required");
+
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+
+    // /pdfGeneration.js is in /pdf in your repo => pre-generated folder sits next to it
+    // i.e. /pdf/pre-generated/CAN_CANT.pdf
+    const folder = path.join(__dirname, "pre-generated");
+    const filePath = path.join(folder, `${key}.pdf`);
+
+    // prevent any sneaky path tricks (extra safe)
+    const rel = path.relative(folder, filePath);
+    if (rel.startsWith("..") || path.isAbsolute(rel)) {
+        throw new Error("Invalid ruleName for pre-generated PDF");
+    }
+
+    return filePath;
+}
+
+/**
+ * Returns a pre-generated PDF buffer if it exists.
+ * File naming: /pre-generated/<RULE_ID>.pdf (RULE_ID is uppercase)
+ *
+ * @returns {Promise<Uint8Array>} PDF bytes
+ */
+export async function getPreGeneratedPdf(ruleName) {
+    const filePath = await getPreGeneratedPdfPath(ruleName);
+
+    try {
+        const buf = await fs.readFile(filePath);
+        // fs.readFile gives Buffer; keep it consistent with your return type
+        return new Uint8Array(buf);
+    } catch (e) {
+        if (e?.code === "ENOENT") {
+            const key = String(ruleName ?? "").trim().toUpperCase();
+            const err = new Error(`Pre-generated PDF not found for rule: ${key}`);
+            err.code = "PDF_PREGENERATED_NOT_FOUND";
+            err.filePath = filePath;
+            throw err;
+        }
+        throw e;
+    }
+}
+
 /** Optional: graceful shutdown */
 process.on("SIGTERM", async () => {
     try {

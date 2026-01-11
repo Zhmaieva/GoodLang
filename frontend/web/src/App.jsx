@@ -24,7 +24,6 @@ import {
     RULE_PAGE_IMPERATIVES,
     RULE_PAGE_CAN_CANT,
     RULE_PAGE_COUNT_UNCOUNT,
-    RULE_PAGE_BE_FROM,
     RULE_PAGE_PRESENT_CONT_NOW,
     RULE_PAGE_PREP_PLACE,
     RULE_PAGE_PREP_TIME,
@@ -109,7 +108,7 @@ import {
     RULE_PAGE_COMPLEX_SENTENCES,
     RULE_PAGE_COMPOUND_COMPLEX_SENTENCES,
     RULE_PAGE_CORRELATIVE_CONJUNCTIONS,
-    RULE_PAGE_PREP_DIRECTION,
+    RULE_PAGE_PREP_DIRECTION, RULE_PAGE_BE_FROM_NATIONALITY,
 } from "./services/rulePages.js";
 import GoodLangLandingTeaStyle from "./components/pages/LandingPage2.jsx";
 import {off, on} from "./services/events.js";
@@ -192,7 +191,7 @@ export default function App() {
                 <Route path="/rule/IMPERATIVES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_IMPERATIVES} />} />
                 <Route path="/rule/CAN_CANT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_CAN_CANT} />} />
                 <Route path="/rule/COUNT_UNCOUNT" element={<RulePage theme={ruleTheme} data={RULE_PAGE_COUNT_UNCOUNT} />} />
-                <Route path="/rule/BE_FROM_NATIONALITY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_BE_FROM} />} />
+                <Route path="/rule/BE_FROM_NATIONALITY" element={<RulePage theme={ruleTheme} data={RULE_PAGE_BE_FROM_NATIONALITY} />} />
                 <Route path="/rule/PRESENT_CONT_NOW" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PRESENT_CONT_NOW} />} />
                 <Route path="/rule/PREP_PLACE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PREP_PLACE} />} />
                 <Route path="/rule/PREP_TIME" element={<RulePage theme={ruleTheme} data={RULE_PAGE_PREP_TIME} />} />

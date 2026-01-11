@@ -1,5 +1,5 @@
 import { authMiddleware } from "../middleware/authMiddleware.js";
-import { getPdf } from "../pdf/pdfGeneration.js";
+import {getPdf, getPreGeneratedPdf} from "../pdf/pdfGeneration.js";
 
 const name = "files";
 
@@ -7,7 +7,7 @@ export const filesController = {
     mapRoutes: function (app) {
         app.get(`/${name}/generate/pdf`, authMiddleware, async (req, res, next) => {
             try {
-                const pdf = await getPdf(req.query.rule);
+                const pdf = await getPreGeneratedPdf(req.query.rule);//await getPdf(req.query.rule);
 
                 res.setHeader("Content-Type", "application/pdf");
                 res.send(Buffer.from(pdf));
