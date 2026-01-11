@@ -507,6 +507,10 @@ export default function TermsOfUseModal({
                     onAccept={async () => {
                         acceptCookies();
                         ensureAnalytics();
+
+                        if (localStorage.getItem("teacher") === "true")
+                            trackPageView("/greetings");
+
                         trackPageView(window.location.pathname);
                         trackMetaEvent("CompleteRegistration");
 

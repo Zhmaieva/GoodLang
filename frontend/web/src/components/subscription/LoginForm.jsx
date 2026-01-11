@@ -13,7 +13,7 @@ import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js"
 import {logError} from "../../services/logger.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
-import {ensureAnalytics, trackMetaEvent, trackPageView} from "../../services/gaService.js";
+import {ensureAnalytics, trackMetaCustomEvent, trackMetaEvent, trackPageView} from "../../services/gaService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function LoginForm({
@@ -625,7 +625,12 @@ export default function LoginForm({
                             onAccept={async () => {
                                 acceptCookies();
                                 ensureAnalytics();
+                                if (localStorage.getItem("teacher") === "true")
+                                    trackPageView("/greetings");
+
                                 trackPageView(window.location.pathname);
+
+                                trackMetaCustomEvent("StartUsing");
 
                                 await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
 

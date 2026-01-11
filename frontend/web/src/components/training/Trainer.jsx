@@ -384,8 +384,10 @@ export default function Trainer({
                         setCookieOpen(false);
                         acceptCookies();
                         ensureAnalytics();
+                        if (localStorage.getItem("teacher") === "true")
+                            trackPageView("/greetings");
                         trackPageView(window.location.pathname);
-                        trackMetaEvent("CompleteRegistration");
+                        trackMetaCustomEvent("StartUsing");
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
 

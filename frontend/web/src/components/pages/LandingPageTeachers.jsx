@@ -5,8 +5,12 @@ import hand3 from "../../../public/hand3.PNG";
 import messageRight from "../../../public/messageRight.png";
 import messageCenter from "../../../public/messageCenter.png";
 import messageLeft from "../../../public/messageLeft.png";
+import {useNavigate} from "react-router-dom";
+
 
 export default function Landing() {
+    const navigate = useNavigate();
+
     return (
         <>
             <style>{`
@@ -289,7 +293,9 @@ export default function Landing() {
 
                 <div className="right">
                     <div className="ctaWrap">
-                        <button className="cta">почати зараз</button>
+                        <button onClick={() => {
+                            navigate('/');
+                        }} className="cta">почати зараз</button>
                         <img src={handPict} alt="" className="hand"/>
                     </div>
                 </div>
