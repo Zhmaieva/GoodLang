@@ -40,7 +40,10 @@ export default function SyncOnRouteChange() {
                 // Only redirect to /welcome if NOT teacher and NOT subscribe
                 if (!isTeacher) {
                     // avoid redirect loop if already on /welcome
-                    if (location.pathname !== "/welcome" && !shouldOpenSubscribe) {
+                    if (location.pathname !== "/welcome"
+                        && location.pathname !== '/greetings'
+                        && location.pathname !== '/hello'
+                        && !shouldOpenSubscribe) {
                         navigate("/welcome", { replace: true });
                         return;
                     }

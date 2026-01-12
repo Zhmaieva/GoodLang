@@ -6,10 +6,49 @@ import messageRight2 from "../../../public/messageRight2.png";
 import messageCenter2 from "../../../public/messageCenter2.png";
 import messageLeft2 from "../../../public/messageLeft2.png";
 import {useNavigate} from "react-router-dom";
+import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
+import React, {useState} from "react";
+import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
+import {getCookieConsent} from "../../services/settingsService.js";
 
 
-export default function LandingPage3() {
+export default function LandingPage3({theme}) {
     const navigate = useNavigate();
+
+    const [email, setEmail] = useState("");
+    const [sending, setSending] = useState(false);
+    const [msg, setMsg] = useState("");
+
+
+    const [touOpen, setTouOpen] = React.useState(false);
+
+    const startUsing = async () => {
+        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
+
+        setTimeout(() => {
+            navigate("/");
+        }, 200);
+    }
+
+    const submitEmail = async () => {
+        const v = String(email || "").trim();
+        if (!/^\S+@\S+\.\S+$/.test(v)) {
+            setMsg("Введіть правильний імейл");
+            return;
+        }
+        try {
+            setSending(true);
+            setMsg("");
+            await callSendPromoCodeApi({email:v});
+            setMsg("Готово! Ми відправили промо код на вказану адресу.");
+            setEmail("");
+        } catch {
+            setMsg("Ой, помилка... Ми вже її виправляємо.");
+        } finally {
+            setSending(false);
+        }
+    };
 
     return (
         <>
@@ -279,7 +318,6 @@ export default function LandingPage3() {
   .ctaInner { justify-content: center; }   /* на мобілці приємніше */
 }
 @media (max-width: 820px) {
-  .promoRow { flex-direction: column; }
   .secondaryBtn { width: 100%; }
 }
 
@@ -350,6 +388,7 @@ export default function LandingPage3() {
 }
 .primaryBtn,
 .secondaryBtn {
+  height: 100%;
   border: 2px solid #000;
   border-radius: 14px;
   padding: 12px 20px;
@@ -398,11 +437,11 @@ export default function LandingPage3() {
 
 .emailInput {
   padding: 12px 14px;
-  font-size: 14px;
+  font-family: Nunito, ui-sans-serif, system-ui;
+  font-weight: 800;
   border: 2px solid #000;
   border-radius: 14px;
-  min-width: 240px;
-  font-family: Nunito, ui-sans-serif, system-ui;
+  min-width: 160px;
   box-shadow: 0 3px 0 #000;
 }
 
@@ -435,9 +474,8 @@ export default function LandingPage3() {
 
 .emailInput {
   padding: 12px 14px;
-  font-size: 14px;
+  font-size: 16px;
   border: 2px solid #000;
-  min-width: 240px;
 }
 
 .secondaryBtn {
@@ -505,14 +543,16 @@ export default function LandingPage3() {
   }
 
   .promoRow {
-    flex-direction: column;
     width: 100%;
   }
 
-  .emailInput,
-  .secondaryBtn {
-    width: 100%;
+  .emailInput {
     max-width: 320px;
+    min-width: 0px;
+  }
+  
+  .secondaryBtn {
+    max-width: 150px;
   }
 }
 
@@ -554,6 +594,11 @@ export default function LandingPage3() {
           display: flex;
           align-items: center;
           gap: 10px;
+        }
+        
+        .plainLink {
+            color: inherit;
+            text-decoration: none;
         }
 
         .avatar {
@@ -665,7 +710,7 @@ export default function LandingPage3() {
 
                     <div className="ctaWrap">
                         <button
-                            onClick={() => navigate('/')}
+                            onClick={startUsing}
                             className="cta"
                         >
                             почати зараз
@@ -751,19 +796,48 @@ export default function LandingPage3() {
                         </h2>
 
                         <div className="ctaButtons">
-                            <button className="primaryBtn">
+                            <button onClick={startUsing} className="primaryBtn">
                                 Почни вчитися зараз — без реєстрації
                             </button>
                         </div>
 
                         <div className="promoRow">
-                            <input
-                                type="email"
-                                placeholder="Введи email для промокоду"
-                                className="emailInput"
-                            />
-                            <button className="secondaryBtn">
-                                Отримати промокод
+                            <div style={{flex: 1, display: "flex", flexDirection: "column", gap: 6}}>
+                                <input
+                                    type="email"
+                                    placeholder="Введи email для промокоду"
+                                    className="emailInput"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    inputMode="email"
+                                    onKeyDown={async (e) => {
+                                        if (e.key === "Enter") {
+                                            e.preventDefault();
+                                            await submitEmail();
+                                        }
+                                    }}
+                                    disabled={sending}
+                                />
+
+                                {msg ? (
+                                    <p style={{
+                                        margin: 0,
+                                        fontFamily: "Nunito",
+                                        fontWeight: 800,
+                                        fontSize: 13,
+                                        opacity: 0.9
+                                    }}>
+                                        {msg}
+                                    </p>
+                                ) : null}
+                            </div>
+
+                            <button
+                                onClick={submitEmail}
+                                className="secondaryBtn"
+                                disabled={sending}
+                            >
+                                {sending ? "Відправляю..." : "Отримати промокод"}
                             </button>
                         </div>
                     </div>
@@ -773,17 +847,27 @@ export default function LandingPage3() {
             <footer className="footer">
                 <div className="footerInner">
                     <div className="footerLeft">
-                        © 2025–2026 GoodLang • goodlang.app@gmail.com
+                        © 2025–2026 GoodLang • <a className="plainLink" href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
+                        Копіювати код
+
                     </div>
 
                     <div
                         className="footerLink"
-                        onClick={() => navigate("/terms")}
+                        onClick={() => setTouOpen(true)}
                     >
                         Умови використання і політика приватності
                     </div>
                 </div>
             </footer>
+
+            {touOpen && (
+                <TermsOfUseModal
+                    readOnly
+                    theme={theme}
+                    onClose={() => setTouOpen(false)}
+                />
+            )}
         </>
     );
 }
