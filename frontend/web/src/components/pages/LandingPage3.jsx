@@ -757,7 +757,7 @@ export default function LandingPage3({theme}) {
                             <div className="tName">Іванна</div>
                         </div>
                         <p className="tQuote">
-                            <em>"Скоротила 3 заняття з репетитором в тиждень на 1. З GoodLang я практикуюся
+                            <em>"Мені не вистачає занять з репетитором. А з GoodLang я додатково практикуюся
                                 самостійно."</em>
                         </p>
                     </div>
