@@ -52,4 +52,4 @@ startNonOverlappingInterval(async () => {
 
     // avoid spam logs outside window
     if (!res.skipped) console.log("[tipsCron]", res);
-}, 10000)
+}, 3600000)

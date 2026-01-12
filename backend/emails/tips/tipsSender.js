@@ -85,7 +85,7 @@ async function selectEligibleRecipients({ pool, letterId }) {
             )
 
             ORDER BY c.email, c.account_id DESC NULLS LAST
-            LIMIT 10
+            LIMIT 1
         `,
         [String(letterId).toUpperCase()]
     );
@@ -141,7 +141,7 @@ function isAllowedWindow(now = new Date()) {
         hour12: false,
     });
     const parts = Object.fromEntries(fmt.formatToParts(now).map(p => [p.type, p.value]));
-    return parts.weekday === "Mon" && Number(parts.hour) === 7; // 07:00-07:59
+    return parts.weekday !== "Sat" && parts.weekday !== "Sun" && Number(parts.hour) > 7 && Number(parts.hour) < 13; // 07:00-13:59
 }
 
 export async function runTipsTick({

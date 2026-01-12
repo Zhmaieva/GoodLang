@@ -5,7 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server:{
-    allowedHosts: ['goodlang.beampie.com'],
+    allowedHosts: [
+        'goodlang.beampie.com',
+        'goodlang.app'],
     //proxy:{ '/translations': 'http://localhost:3000' }
   }
 })
