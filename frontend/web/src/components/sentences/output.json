@@ -64523,10 +64523,9 @@
         "ARTICLES",
         "MAY_MIGHT"
       ],
-      "ua": "Можливо, що він помилився.",
+      "ua": "Є вірогідність, що він помилився.",
       "en": [
-        "It’s possible that he might be wrong.",
-        "Maybe he made a mistake."
+        "There is a possibility that he made a mistake."
       ]
     },
     {
@@ -64578,25 +64577,21 @@
     {
       "rules": [
         "COMPLEX_NOUN_PHRASES",
-        "ARTICLES",
-        "PAST_SIMPLE"
+        "ARTICLES"
       ],
-      "ua": "Ми були здивовані, що він прийшов рано.",
+      "ua": "Ми були здивовані тим, що він прийшов рано.",
       "en": [
-        "We were surprised that he came early.",
-        "It surprised us that he arrived so soon."
+        "We were surprised by the fact that he came early"
       ]
     },
     {
       "rules": [
         "COMPLEX_NOUN_PHRASES",
-        "ARTICLES",
-        "WAS_WERE"
+        "ARTICLES"
       ],
-      "ua": "Мене тішить, що вони були чесними.",
+      "ua": "Те, що вони були чесними, мене тішить.",
       "en": [
-        "I’m glad that they were honest.",
-        "It makes me happy that they told the truth."
+        "The fact that they told the truth makes me happy"
       ]
     },
     {
@@ -64718,10 +64713,12 @@
         "COMPLEX_NOUN_PHRASES",
         "ARTICLES"
       ],
-      "ua": "Ми всі бачили, як він переміг.",
+      "ua": "Ми всі бачили, яким чином він переміг.",
       "en": [
-        "We all saw how he won.",
-        "Everyone saw the way he won."
+        "We all saw the way in which he won.",
+        "Everyone saw the way in which he won.",
+        "Everyone noticed the manner in which he won.",
+        "Everyone saw the manner in which he won."
       ]
     },
     {

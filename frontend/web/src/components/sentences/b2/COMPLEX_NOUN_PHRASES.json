@@ -526,8 +526,10 @@
   },
   {
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "MAY_MIGHT"],
-    "ua": "Можливо, що він помилився.",
-    "en": ["It’s possible that he might be wrong.", "Maybe he made a mistake."]
+    "ua": "Є вірогідність, що він помилився.",
+    "en": [
+      "There is a possibility that he made a mistake."
+    ]
   },
   {
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WILL_PREDICTIONS"],
@@ -550,14 +552,14 @@
     "en": ["I don’t like that they’re always arguing.", "It bothers me that they argue all the time."]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "PAST_SIMPLE"],
-    "ua": "Ми були здивовані, що він прийшов рано.",
-    "en": ["We were surprised that he came early.", "It surprised us that he arrived so soon."]
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Ми були здивовані тим, що він прийшов рано.",
+      "en": ["We were surprised by the fact that he came early"]
   },
   {
-    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "WAS_WERE"],
-    "ua": "Мене тішить, що вони були чесними.",
-    "en": ["I’m glad that they were honest.", "It makes me happy that they told the truth."]
+    "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
+    "ua": "Те, що вони були чесними, мене тішить.",
+    "en": ["The fact that they told the truth makes me happy"]
   },
   {
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
@@ -611,8 +613,13 @@
   },
   {
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES"],
-    "ua": "Ми всі бачили, як він переміг.",
-    "en": ["We all saw how he won.", "Everyone saw the way he won."]
+    "ua": "Ми всі бачили, яким чином він переміг.",
+    "en": [
+      "We all saw the way in which he won.",
+      "Everyone saw the way in which he won.",
+      "Everyone noticed the manner in which he won.",
+      "Everyone saw the manner in which he won."
+    ]
   },
   {
     "rules": ["COMPLEX_NOUN_PHRASES", "ARTICLES", "TO_BE"],

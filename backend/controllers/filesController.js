@@ -9,7 +9,8 @@ export const filesController = {
     mapRoutes: function (app) {
         app.get(`/${name}/generate/pdf`, authMiddleware, async (req, res, next) => {
             try {
-                const pdf = await getPreGeneratedPdf(req.query.rule);//await getPdf(req.query.rule);
+                const pdf = await getPreGeneratedPdf(req.query.rule);
+                //const pdf = await getPdf(req.query.rule);
 
                 await recordAction(req.user.id, ACTION_TYPES.PDF_DOWNLOAD_CALL);
 
