@@ -24,9 +24,9 @@ export default function LandingPageTeacher({theme}) {
         setTimeout(() => navigate("/"), 200);
     };
 
-    const goToRules = () => {
-        // ✅ зміни маршрут, якщо в тебе інший
-        navigate("/rules");
+    const goToRules = async () => {
+        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
+        setTimeout(() => navigate("/analytics"), 200);
     };
 
     const submitEmail = async () => {
@@ -418,10 +418,19 @@ html{ scroll-behavior: smooth; }
 .gifPlaceholder{
   border: var(--border);
   box-shadow: var(--shadow);
-  background: #ff73c6;
+  background: #000;            /* better behind video */
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: var(--radius);
+  overflow: hidden;            /* ✅ important */
+  display: flex;
+}
+
+.howVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* or "contain" if you want full video visible */
+  display: block;
 }
 
 /* =========================
@@ -544,10 +553,10 @@ html{ scroll-behavior: smooth; }
 @media (max-width: 1050px){
   .featuresGrid{ grid-template-columns: repeat(2, 1fr); }
   .howGrid{ grid-template-columns: 1fr; }
-  .gifPlaceholder{ aspect-ratio: 16 / 10; }
+  .gifPlaceholder{ aspect-ratio: 1 / 1; }
 }
 
-@media (max-width: 900px){
+@media (max-width: 1150px){
   .landing{ grid-template-columns: 1fr; }
   .right{
     align-items: center;
@@ -696,7 +705,8 @@ html{ scroll-behavior: smooth; }
                                 <div>
                                     <p className="stepTitle">Зі сторінки списку правил</p>
                                     <p className="stepText">
-                                        Перейдіть у список правил і натисніть на іконку “скачати” біля потрібного правила.
+                                        Перейдіть у список правил і натисніть на іконку “скачати” біля потрібного
+                                        правила.
                                     </p>
                                 </div>
                             </div>
@@ -706,7 +716,8 @@ html{ scroll-behavior: smooth; }
                                 <div>
                                     <p className="stepTitle">Зі сторінки конкретного правила</p>
                                     <p className="stepText">
-                                        Відкрийте правило → натисніть кнопку <strong>“Роздрукувати завдання”</strong> (PDF сформується та завантажиться).
+                                        Відкрийте правило → натисніть кнопку <strong>“Роздрукувати
+                                        завдання”</strong> (PDF сформується та завантажиться).
                                     </p>
                                 </div>
                             </div>
@@ -721,7 +732,7 @@ html{ scroll-behavior: smooth; }
                                 </div>
                             </div>
 
-                            <div style={{ marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap" }}>
+                            <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
                                 <button className="primaryBtn" onClick={goToRules}>
                                     Відкрити список правил
                                 </button>
@@ -732,14 +743,23 @@ html{ scroll-behavior: smooth; }
                         </div>
 
                         {/* ✅ PINK PLACEHOLDER FOR GIF */}
-                        <div>
-                            <div className="gifPlaceholder" />
-                            </div>
+                        <div className="gifPlaceholder">
+                            <video
+                                className="howVideo"
+                                src="https://d1bhp94ins4f62.cloudfront.net/goodlang/HowToPdf2.mp4"
+                                poster="../../../public/poster.png"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                            />
+                        </div>
+
                     </div>
                 </div>
             </section>
 
-            <div className="divider" />
+            <div className="divider"/>
 
             {/* CTA SECTION */}
             <section className="ctaSection" id="join">
