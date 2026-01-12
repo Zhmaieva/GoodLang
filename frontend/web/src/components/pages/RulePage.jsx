@@ -187,7 +187,7 @@ export default function RulePage({ data, theme }) {
                         <SectionTitle>{section.title}</SectionTitle>
 
                         <ul style={{ ...textStyle, paddingLeft: 20 }}>
-                            {section.bullets.map((b, i) => (
+                            {section.bullets?.map((b, i) => (
                                 <li key={i} dangerouslySetInnerHTML={{ __html: b }} />
                             ))}
                         </ul>
