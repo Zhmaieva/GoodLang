@@ -3,7 +3,13 @@ import { useEffect, useState } from "react";
 export default function TaskCard({
                                      theme, taskText, answer, setAnswer,
                                      isInputDisabled, mainBtnText, onMainButtonClick, loading, textareaRef, onKeyDown,
-                                     hint, locked = false, waitTimeSeconds = 0, account
+                                     hint, locked = false, waitTimeSeconds = 0, account,
+
+                                     // ✅ NEW (for gap mode)
+                                     taskType = "translate",
+                                     gapOptions = [],
+                                     gapSelected = null,
+                                     setGapSelected = _ => {},
                                  }) {
     const [hovered, setHovered] = useState(false);
 
@@ -116,6 +122,24 @@ export default function TaskCard({
             height: 26,
             marginLeft: 12,
         },
+        optionsWrap: {
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 10,
+        },
+        optionBtn: (active) => ({
+            appearance: "none",
+            padding: "10px 14px",
+            borderRadius: 999,
+            fontWeight: 800,
+            fontSize: "1rem",
+            fontFamily: "Nunito, system-ui, sans-serif",
+            cursor: "pointer",
+            border: `2px solid ${theme.accent}`,
+            background: active ? theme.accent : "#fffef6",
+            color: active ? "#fff" : theme.text,
+            boxShadow: `2px 2px 0 ${theme.accentDark}`,
+        }),
         bar: (white) => ({
             width: 7,              // thick
             borderRadius: 999,
@@ -157,16 +181,32 @@ export default function TaskCard({
             </div>
 
             <div style={styles.inputWrap}>
-        <textarea
-            ref={textareaRef}
-            placeholder="Введи переклад англійською…"
-            autoComplete="off"
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-            onKeyDown={onKeyDown}
-            readOnly={isInputDisabled}
-            style={styles.textarea}
-        />
+                {taskType === "gap" ? (
+                    <div style={styles.optionsWrap}>
+                        {gapOptions.map((opt) => (
+                            <button
+                                key={opt}
+                                type="button"
+                                style={styles.optionBtn(gapSelected === opt)}
+                                onClick={() => setGapSelected(opt)}
+                                disabled={loading || isInputDisabled}
+                            >
+                                {opt}
+                            </button>
+                        ))}
+                    </div>
+                ) : (
+                    <textarea
+                        ref={textareaRef}
+                        placeholder="Введи переклад англійською…"
+                        autoComplete="off"
+                        value={answer}
+                        onChange={(e) => setAnswer(e.target.value)}
+                        onKeyDown={onKeyDown}
+                        readOnly={isInputDisabled}
+                        style={styles.textarea}
+                    />
+                )}
 
                 <button
                     onMouseEnter={() => setHovered(true)}
