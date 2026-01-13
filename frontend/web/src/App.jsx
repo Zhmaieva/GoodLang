@@ -173,7 +173,7 @@ export default function App() {
             <Routes>
                 {/* Core pages */}
                 <Route path="/" element={<HomePage theme={theme} />} />
-                <Route path="/welcome" element={<GoodLangLandingTeaStyle theme={theme} />} />
+                <Route path="/welcome" element={<LandingPage3 theme={theme} />} />
                 <Route path="/greetings" element={<LandingPage3 theme={theme} />} />
                 <Route path="/hello" element={<LandingPageTeacher theme={theme} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
