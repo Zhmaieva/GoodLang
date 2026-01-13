@@ -622,7 +622,7 @@ html{ scroll-behavior: smooth; }
                         </h1>
 
                         <p className="subtitle">
-                            Якщо ви зараз проходите конкретну граматичну конструкцію і не маєте готових завдань
+                            Якщо ви зараз проходите конкретну граматичну конструкцію і потребуєте готових завдань
                             “укр → англ” — просто скачайте їх у GoodLang. Безкоштовно.
                         </p>
                     </div>
@@ -654,7 +654,7 @@ html{ scroll-behavior: smooth; }
 
                     <div className="heroStack">
                         <div className="heroCard">
-                            <h3 className="heroCardTitle">Скачати завдання під конкретне правило</h3>
+                            <h3 className="heroCardTitle">Понад 700 завдань з граматики</h3>
                             <p className="heroCardText">
                                 Оберіть правило → скачайте PDF → дайте учням перекладати з української на англійську.
                                 У файлі є ключі для швидкої перевірки.
@@ -662,8 +662,12 @@ html{ scroll-behavior: smooth; }
 
                             <div className="heroBtns">
                                 <button className="primaryBtn"
+                                        onClick={goToRules}>
+                                    Скачати
+                                </button>
+                                <button className="secondaryBtn"
                                         onClick={() => document.getElementById("download")?.scrollIntoView({behavior: "smooth"})}>
-                                    Подивитися як скачати
+                                    Дізнатися більше
                                 </button>
                             </div>
                         </div>
@@ -681,8 +685,7 @@ html{ scroll-behavior: smooth; }
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Що всередині кожного PDF</h2>
                     <p className="sectionLead">
-                        Кожен файл — це готовий пакет матеріалів для конкретної граматики: коротко, практично і без
-                        зайвого.
+                        Кожен файл — це готовий пакет матеріалів для конкретної граматики. Всього 3 аркуші: теорія, практика і відповіді.
                     </p>
 
                     <div className="featuresGrid">
@@ -724,7 +727,7 @@ html{ scroll-behavior: smooth; }
             {/* HOW TO DOWNLOAD */}
             <section className="section" id="download">
                 <div className="sectionInner">
-                    <h2 className="sectionTitle">Як скачати PDF (2 способи)</h2>
+                    <h2 className="sectionTitle">Як скачати PDF (2 зручні способи)</h2>
                     <p className="sectionLead">
                         Обирайте як зручніше: з загального списку правил або зі сторінки конкретного правила.
                     </p>
@@ -765,7 +768,7 @@ html{ scroll-behavior: smooth; }
 
                             <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
                                 <button className="primaryBtn" onClick={goToRules}>
-                                    Відкрити список правил
+                                    Почати користуватися
                                 </button>
                                 {/*<button className="secondaryBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>*/}
                                 {/*    На початок*/}
