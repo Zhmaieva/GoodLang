@@ -1,0 +1,100 @@
+{
+  "PREP_TIME": [
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["I wake up {GAP} 7 a.m."],
+      "options": ["on", "at", "in"],
+      "correct": "at"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["We have a meeting {GAP} Monday."],
+      "options": ["on", "in", "at"],
+      "correct": "on"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["She was born {GAP} 1995."],
+      "options": ["on", "at", "in"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["I usually sleep {GAP} night."],
+      "options": ["in", "at", "on"],
+      "correct": "at"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["The shop opens {GAP} the morning."],
+      "options": ["in","at", "on"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["We met {GAP} the weekend."],
+      "options": ["in", "at"],
+      "correct": "at"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["Classes start {GAP} September."],
+      "options": ["on", "in", "at"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["I eat lunch {GAP} noon."],
+      "options": ["in", "on", "at"],
+      "correct": "at"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["She arrived {GAP} the evening."],
+      "options": ["in","at", "on"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["He studies English {GAP} the evening."],
+      "options": ["at", "on", "in"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["The train leaves {GAP} 6:30."],
+      "options": ["in", "on", "at"],
+      "correct": "at"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["We go on holiday {GAP} summer."],
+      "options": ["in","at", "on"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["She left home {GAP} the morning."],
+      "options": ["at", "in", "on"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["We will finish work {GAP} 5 p.m."],
+      "options": ["on", "in", "at"],
+      "correct": "at"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["He calls his parents {GAP} Sunday."],
+      "options": ["at", "on", "in"],
+      "correct": "on"
+    },
+    {
+      "rules": ["PREP_TIME"],
+      "en": ["I read a book {GAP} bed."],
+      "options": ["in", "at"],
+      "correct": "in"
+    }
+  ]
+}

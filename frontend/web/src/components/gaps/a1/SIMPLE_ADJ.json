@@ -1,0 +1,124 @@
+{
+  "SIMPLE_ADJ": [
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The cat is very {GAP} today."],
+      "options": ["happy", "happily", "happiness", "happen"],
+      "correct": "happy"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["This soup tastes really {GAP}."],
+      "options": ["good", "better", "nice"],
+      "correct": "good"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["My room is too {GAP} now."],
+      "options": ["small", "little", "short", "less"],
+      "correct": "small"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The film was so {GAP} that I fell asleep."],
+      "options": ["bored", "bore", "boredom","boring"],
+      "correct": "boring"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["She has a very {GAP} voice."],
+      "options": ["beautiful", "beauty", "beautify", "beauties"],
+      "correct": "beautiful"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The weather is {GAP} in summer."],
+      "options": ["hot", "heat", "heating", "heated"],
+      "correct": "hot"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["This bag feels quite {GAP}."],
+      "options": ["heavy", "heavily", "weight", "heavier"],
+      "correct": "heavy"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["He is a {GAP} football player."],
+      "options": ["good", "bestly", "fine"],
+      "correct": "good"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The flowers in the garden are very {GAP}."],
+      "options": ["pretty", "prettily", "beauty", "prettiest"],
+      "correct": "pretty"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["This chair is really {GAP}."],
+      "options": ["comfortable", "comfort", "comfortably", "comfy"],
+      "correct": "comfortable"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The test was too {GAP} for me."],
+      "options": ["difficult", "difficulty", "hardly"],
+      "correct": "difficult"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["Your new dress looks {GAP}!"],
+      "options": ["nice", "nicely"],
+      "correct": "nice"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The mountain is very {GAP}."],
+      "options": ["highly", "height","high"],
+      "correct": "high"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["This coffee is too {GAP} for me."],
+      "options": ["strong", "strongly", "strength", "powerful"],
+      "correct": "strong"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The children were very {GAP} after the trip."],
+      "options": ["tiring", "tire","tired"],
+      "correct": "tired"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["It was a {GAP} day yesterday."],
+      "options": ["sunny", "sun", "sunlight", "shine"],
+      "correct": "sunny"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["This book is really {GAP}."],
+      "options": ["interesting", "interested", "interest", "funny"],
+      "correct": "interesting"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The box is {GAP} enough to carry."],
+      "options": [ "lite", "lighting", "bright","light"],
+      "correct": "light"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["Her hair is so {GAP} and soft."],
+      "options": ["large", "big","long", "tall"],
+      "correct": "long"
+    },
+    {
+      "rules": ["SIMPLE_ADJ"],
+      "en": ["The pizza smells really {GAP}!"],
+      "options": ["deliciously", "delicious", "taste"],
+      "correct": "delicious"
+    }
+  ]
+}

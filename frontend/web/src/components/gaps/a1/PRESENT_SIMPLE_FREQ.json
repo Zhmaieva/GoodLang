@@ -1,0 +1,124 @@
+{
+  "PRESENT_SIMPLE_FREQ": [
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["I {GAP} coffee every morning."],
+      "options": ["am drinking", "drink", "drinks"],
+      "correct": "drink"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["She {GAP} to work by bus."],
+      "options": ["go", "is going", "goes"],
+      "correct": "goes"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["We {GAP} TV in the evening."],
+      "options": ["are watching", "watches", "watch"],
+      "correct": "watch"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["He {GAP} up early on weekdays."],
+      "options": ["gets", "get", "is getting"],
+      "correct": "gets"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["They {GAP} lunch at home."],
+      "options": ["eat", "eats", "are eating"],
+      "correct": "eat"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["She often {GAP} before bed."],
+      "options": ["read", "is reading", "reads"],
+      "correct": "reads"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["I sometimes {GAP} my keys."],
+      "options": ["am forgetting", "forget", "forgot"],
+      "correct": "forget"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["He {GAP} plays video games after work."],
+      "options": ["often", "is often", "was often"],
+      "correct": "often"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["We {GAP} go out on Sundays."],
+      "options": ["never", "are never"],
+      "correct": "never"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["She {GAP} her email at work."],
+      "options": ["check", "checks", "is check"],
+      "correct": "checks"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["I {GAP} work on Saturdays."],
+      "options": ["don’t", "am not", "doesn’t"],
+      "correct": "don’t"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["He {GAP} like spicy food."],
+      "options": ["don’t", "doesn’t", "isn’t"],
+      "correct": "doesn’t"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["They rarely {GAP} in winter."],
+      "options": ["travel", "are traveling"],
+      "correct": "travel"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["She {GAP} eats breakfast at home."],
+      "options": ["always", "is always", "was always"],
+      "correct": "always"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["We usually {GAP} to music while working."],
+      "options": ["are listening", "listens", "listen"],
+      "correct": "listen"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["He {GAP} work at six."],
+      "options": ["finish", "finishes", "is finish"],
+      "correct": "finishes"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["I {GAP} the news in the morning."],
+      "options": ["check", "checks", "am check"],
+      "correct": "check"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["She {GAP} works from home."],
+      "options": ["sometimes", "is sometimes", "was sometimes"],
+      "correct": "sometimes"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["They often {GAP} movies together."],
+      "options": ["watches", "are watch", "watch"],
+      "correct": "watch"
+    },
+    {
+      "rules": ["PRESENT_SIMPLE_FREQ"],
+      "en": ["He {GAP} tea, not coffee."],
+      "options": ["drink", "drinks"],
+      "correct": "drinks"
+    }
+  ]
+}

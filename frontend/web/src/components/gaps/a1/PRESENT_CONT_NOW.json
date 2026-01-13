@@ -1,0 +1,130 @@
+{
+  "PRESENT_CONT_NOW": [
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["I am {GAP} dinner right now."],
+      "options": ["cooking", "cook", "cooked"],
+      "correct": "cooking"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["She is {GAP} to music."],
+      "options": ["listening", "listen", "listens"],
+      "correct": "listening"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["They are {GAP} TV at the moment."],
+      "options": ["watching", "watch", "watched"],
+      "correct": "watching"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["He is {GAP} a shower now."],
+      "options": ["taking", "take", "takes"],
+      "correct": "taking"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["We are {GAP} for the bus."],
+      "options": ["waiting", "wait", "waited"],
+      "correct": "waiting"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["I {GAP} working now."],
+      "options": ["am", "is", "are"],
+      "correct": "am"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["She {GAP} watching TV."],
+      "options": ["is", "are", "am"],
+      "correct": "is"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["They {GAP} cooking dinner."],
+      "options": ["are", "is", "am"],
+      "correct": "are"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["He {GAP} talking on the phone."],
+      "options": ["is", "am", "are"],
+      "correct": "is"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["We {GAP} waiting for the bus."],
+      "options": ["are", "is", "am"],
+      "correct": "are"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["I {GAP} reading a book."],
+      "options": ["am", "are", "is"],
+      "correct": "am"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["She is working {GAP}."],
+      "options": ["now", "every day", "usually"],
+      "correct": "now"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["They are studying {GAP}."],
+      "options": ["at the moment", "on Mondays", "often"],
+      "correct": "at the moment"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["He is driving {GAP}."],
+      "options": ["now", "always", "yesterday"],
+      "correct": "now"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["We are eating lunch {GAP}."],
+      "options": ["at the moment", "every day", "sometimes"],
+      "correct": "at the moment"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["I am listening to music {GAP}."],
+      "options": ["now", "often", "on Sundays"],
+      "correct": "now"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["I {GAP} right now."],
+      "options": ["am working", "work now", "am work"],
+      "correct": "am working"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["She {GAP} TV at the moment."],
+      "options": ["is watching", "watches now", "is watch"],
+      "correct": "is watching"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["They {GAP} dinner now."],
+      "options": ["are cooking", "cook now", "are cook"],
+      "correct": "are cooking"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["He {GAP} on the phone."],
+      "options": ["is talking", "talks now", "is talk"],
+      "correct": "is talking"
+    },
+    {
+      "rules": ["PRESENT_CONT_NOW"],
+      "en": ["We {GAP} for the bus at the moment."],
+      "options": ["are waiting", "wait now", "are wait"],
+      "correct": "are waiting"
+    }
+  ]
+}

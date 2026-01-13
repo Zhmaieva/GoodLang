@@ -1,0 +1,124 @@
+{
+  "WH_Q": [
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} you work?"],
+      "options": ["Where do","Where does",  "Where are"],
+      "correct": "Where do"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} you from?"],
+      "options": ["Where are", "Where do", "Where is"],
+      "correct": "Where are"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} she live?"],
+      "options": ["Where does","Where do",  "Where is"],
+      "correct": "Where does"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} they work?"],
+      "options": ["Where does", "Where do", "Where is"],
+      "correct": "Where do"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} he from?"],
+      "options": ["Where do", "Where are", "Where is"],
+      "correct": "Where is"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} you tired?"],
+      "options": ["Why are","Why do",  "Why is"],
+      "correct": "Why are"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} she late?"],
+      "options": ["Why is", "Why do", "Why are"],
+      "correct": "Why is"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} they here?"],
+      "options": ["Why are", "Why do", "Why is"],
+      "correct": "Why are"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} you start work?"],
+      "options": ["When do", "When does", "When are"],
+      "correct": "When do"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} she arrive?"],
+      "options": ["When do", "When is", "When does"],
+      "correct": "When does"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} he coming?"],
+      "options": ["When is","When does",  "When do"],
+      "correct": "When is"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} you feel?"],
+      "options": ["How are", "How do", "How is"],
+      "correct": "How do"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} she feel today?"],
+      "options": ["How do", "How is", "How does"],
+      "correct": "How does"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} they doing?"],
+      "options": ["What are","What do",  "What does"],
+      "correct": "What are"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} you need?"],
+      "options": ["What are", "What do", "What is"],
+      "correct": "What do"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} he want?"],
+      "options": ["What do", "What is", "What does"],
+      "correct": "What does"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} she doing now?"],
+      "options": ["What is", "What does", "What do"],
+      "correct": "What is"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} you talking to?"],
+      "options": ["Who do", "Who are", "Who is"],
+      "correct": "Who are"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} he talking to?"],
+      "options": ["Who does", "Who is", "Who do"],
+      "correct": "Who is"
+    },
+    {
+      "rules": ["WH_Q"],
+      "en": ["{GAP} they waiting for?"],
+      "options": ["Who are","Who do",  "Who does"],
+      "correct": "Who are"
+    }
+  ]
+}

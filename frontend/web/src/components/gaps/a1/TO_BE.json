@@ -1,0 +1,124 @@
+{
+  "TO_BE": [
+    {
+      "rules": ["TO_BE"],
+      "en": ["I {GAP} tired today."],
+      "options": ["are", "am", "is"],
+      "correct": "am"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["She {GAP} my sister."],
+      "options": ["are", "is", "am"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["They {GAP} at home now."],
+      "options": ["is", "are", "am"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["We {GAP} ready to go."],
+      "options": ["are", "is", "am"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["He {GAP} very kind."],
+      "options": ["am", "are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["I {GAP} from Ukraine."],
+      "options": ["am", "is", "are"],
+      "correct": "am"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["The weather {GAP} nice today."],
+      "options": ["are", "am", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["My parents {GAP} at work."],
+      "options": ["is", "are", "am"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["This coffee {GAP} hot."],
+      "options": ["is","are",  "am"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["You {GAP} late again."],
+      "options": ["am", "is", "are"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["My phone {GAP} on the table."],
+      "options": ["are", "am", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["I {GAP} hungry."],
+      "options": ["am", "are", "is"],
+      "correct": "am"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["The kids {GAP} very loud."],
+      "options": ["is", "are", "am"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["My name {GAP} Anna."],
+      "options": ["is","are",  "am"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["We {GAP} friends."],
+      "options": ["is", "am", "are"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["The shop {GAP} open."],
+      "options": ["are", "is", "am"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["I {GAP} happy to see you."],
+      "options": ["is", "are", "am"],
+      "correct": "am"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["Her eyes {GAP} blue."],
+      "options": ["are","is",  "am"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["This place {GAP} quiet."],
+      "options": ["are", "am", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TO_BE"],
+      "en": ["They {GAP} my neighbors."],
+      "options": ["are","is",  "am"],
+      "correct": "are"
+    }
+  ]
+}

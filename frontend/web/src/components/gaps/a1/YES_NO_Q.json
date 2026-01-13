@@ -1,0 +1,124 @@
+{
+  "YES_NO_Q": [
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Is she at home? No, she {GAP}."],
+      "options": ["isn't", "is", "doesn't"],
+      "correct": "isn't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Do you like tea? Yes, I {GAP}."],
+      "options": ["do", "like", "does"],
+      "correct": "do"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Can he swim? No, he {GAP}."],
+      "options": ["can't", "can", "doesn't"],
+      "correct": "can't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Are they tired? Yes, they {GAP}."],
+      "options": ["are", "is", "do"],
+      "correct": "are"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Does she play tennis? No, she {GAP}."],
+      "options": ["doesn't", "does", "isn't"],
+      "correct": "doesn't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Is it raining? Yes, it {GAP}."],
+      "options": ["is", "does", "has"],
+      "correct": "is"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Have you eaten? No, I {GAP}."],
+      "options": ["haven't", "have", "didn't"],
+      "correct": "haven't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Did he call you? Yes, he {GAP}."],
+      "options": ["did", "does", "has"],
+      "correct": "did"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Are we late? No, we {GAP}."],
+      "options": ["aren't", "are", "don't"],
+      "correct": "aren't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Can you help me? Yes, I {GAP}."],
+      "options": ["can", "do", "will"],
+      "correct": "can"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Does it work? No, it {GAP}."],
+      "options": ["doesn't", "does", "isn't"],
+      "correct": "doesn't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Is he your brother? Yes, he {GAP}."],
+      "options": ["is", "does", "has"],
+      "correct": "is"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Do they live here? No, they {GAP}."],
+      "options": ["don't", "do", "aren't"],
+      "correct": "don't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Was she happy? Yes, she {GAP}."],
+      "options": ["was", "is", "did"],
+      "correct": "was"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Have they arrived? No, they {GAP}."],
+      "options": ["haven't", "have", "aren't"],
+      "correct": "haven't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Is this your bag? Yes, it {GAP}."],
+      "options": ["is", "does", "has"],
+      "correct": "is"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Can we go now? No, we {GAP}."],
+      "options": ["can't", "can", "aren't"],
+      "correct": "can't"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Did you see him? Yes, I {GAP}."],
+      "options": ["did", "do", "have"],
+      "correct": "did"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Are you ready? No, I {GAP}."],
+      "options": ["am not", "aren't", "don't"],
+      "correct": "am not"
+    },
+    {
+      "rules": ["YES_NO_Q"],
+      "en": ["Does he know? Yes, he {GAP}."],
+      "options": ["does", "do", "is"],
+      "correct": "does"
+    }
+  ]
+}

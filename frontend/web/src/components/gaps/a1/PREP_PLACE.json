@@ -1,0 +1,118 @@
+{
+  "PREP_PLACE": [
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The book is {GAP} the table."],
+      "options": ["in", "at", "on"],
+      "correct": "on"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The cat is {GAP} the box."],
+      "options": ["at", "in", "between"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["My shoes are {GAP} the bed."],
+      "options": ["under", "at", "in"],
+      "correct": "under"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The café is {GAP} the bank."],
+      "options": ["in", "next to", "under"],
+      "correct": "next to"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The phone is {GAP} my bag."],
+      "options": ["on", "next to", "in"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["There is a lamp {GAP} the table."],
+      "options": ["at", "on", "in"],
+      "correct": "on"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The dog is sleeping {GAP} the chair."],
+      "options": ["at", "next to", "in"],
+      "correct": "next to"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The keys are {GAP} the drawer."],
+      "options": ["at", "in", "between"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The rug is {GAP} the table."],
+      "options": ["at", "under", "in"],
+      "correct": "under"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["She is sitting {GAP} me."],
+      "options": ["at", "next to", "on"],
+      "correct": "next to"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The picture is {GAP} the wall."],
+      "options": ["in", "on", "under"],
+      "correct": "on"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The milk is {GAP} the fridge."],
+      "options": ["on", "under", "in"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The ball is {GAP} the sofa."],
+      "options": ["at", "under", "in"],
+      "correct": "under"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The bus stop is {GAP} the school."],
+      "options": ["in", "next to", "on"],
+      "correct": "next to"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["There is a cup {GAP} the desk."],
+      "options": ["on", "in"],
+      "correct": "on"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["My wallet is {GAP} my pocket."],
+      "options": ["on", "next to", "in"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The trash can is {GAP} the sink."],
+      "options": ["at", "in", "under"],
+      "correct": "under"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The chair is {GAP} the window."],
+      "options": ["in", "next to"],
+      "correct": "next to"
+    },
+    {
+      "rules": ["PREP_PLACE"],
+      "en": ["The plate is {GAP} the table."],
+      "options": ["on", "in"],
+      "correct": "on"
+    }
+  ]
+}

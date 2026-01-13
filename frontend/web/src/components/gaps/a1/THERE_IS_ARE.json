@@ -1,0 +1,124 @@
+{
+  "THERE_IS_ARE": [
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a cat in the room."],
+      "options": [ "is","are"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} two cups on the table."],
+      "options": ["is", "are"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a problem with the app."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} many people in the park."],
+      "options": [ "are","is"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a shop near my house."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} some milk in the fridge."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} three windows in the room."],
+      "options": ["is", "are"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a message for you."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a lot of noise outside."],
+      "options": [ "is","are"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} two bathrooms in the flat."],
+      "options": ["is", "are"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a bus stop here."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} many reasons to stay."],
+      "options": [ "are","is"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} some water on the floor."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} four chairs in the kitchen."],
+      "options": ["is", "are"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a mistake in this sentence."],
+      "options": [ "is","are"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} many apps on my phone."],
+      "options": [ "are","is"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a good café nearby."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} some people waiting."],
+      "options": ["are","is"],
+      "correct": "are"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} a lot of work to do."],
+      "options": ["are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["THERE_IS_ARE"],
+      "en": ["There {GAP} two keys on the desk."],
+      "options": [ "are","is"],
+      "correct": "are"
+    }
+  ]
+}

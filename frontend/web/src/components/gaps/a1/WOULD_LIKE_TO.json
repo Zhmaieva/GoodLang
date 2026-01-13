@@ -1,0 +1,124 @@
+{
+  "WOULD_LIKE_TO": [
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["I would like {GAP} some coffee."],
+      "options": ["to drink", "drinking"],
+      "correct": "to drink"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["He would like {GAP} a new phone."],
+      "options": ["buying", "to buy"],
+      "correct": "to buy"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["She would like {GAP} to the cinema."],
+      "options": ["to go", "going"],
+      "correct": "to go"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["We would like {GAP} pizza tonight."],
+      "options": ["eating", "to eat"],
+      "correct": "to eat"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["They would like {GAP} a new game."],
+      "options": ["to play", "playing"],
+      "correct": "to play"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["You would like {GAP} English every day."],
+      "options": ["learning", "to learn"],
+      "correct": "to learn"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["I would like {GAP} a book this weekend."],
+      "options": ["to read", "reading"],
+      "correct": "to read"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["She would like {GAP} to music now."],
+      "options": ["listening", "to listen"],
+      "correct": "to listen"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["He would like {GAP} his friends tomorrow."],
+      "options": ["to meet", "meeting"],
+      "correct": "to meet"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["We would like {GAP} on holiday next summer."],
+      "options": ["traveling", "to travel"],
+      "correct": "to travel"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["They would like {GAP} early today."],
+      "options": ["to leave", "leaving"],
+      "correct": "to leave"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["I would like {GAP} more exercise."],
+      "options": ["doing", "to do"],
+      "correct": "to do"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["You would like {GAP} this movie with me?"],
+      "options": ["to watch", "watching"],
+      "correct": "to watch"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["She would like {GAP} a new dress."],
+      "options": ["to buy", "buying"],
+      "correct": "to buy"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["He would like {GAP} the guitar better."],
+      "options": ["playing", "to play"],
+      "correct": "to play"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["We would like {GAP} something new for dinner."],
+      "options": ["to try", "trying"],
+      "correct": "to try"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["They would like {GAP} us at the party."],
+      "options": ["to join", "joining"],
+      "correct": "to join"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["I would like {GAP} my grandparents soon."],
+      "options": ["visiting", "to visit"],
+      "correct": "to visit"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["You would like {GAP} a short break now?"],
+      "options": ["to take", "taking"],
+      "correct": "to take"
+    },
+    {
+      "rules": ["WOULD_LIKE_TO"],
+      "en": ["She would like {GAP} happy every day."],
+      "options": ["to be", "being"],
+      "correct": "to be"
+    }
+  ]
+}
