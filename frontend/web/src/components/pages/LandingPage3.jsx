@@ -848,8 +848,6 @@ export default function LandingPage3({theme}) {
                 <div className="footerInner">
                     <div className="footerLeft">
                         © 2025–2026 GoodLang • <a className="plainLink" href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
-                        Копіювати код
-
                     </div>
 
                     <div

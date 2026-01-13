@@ -2,7 +2,7 @@
 WITH reg_users AS (
     SELECT id AS account_id
     FROM accounts
-    WHERE created_at >= TIMESTAMP '2026-01-06 00:00:00+00'
+    WHERE created_at >= TIMESTAMP '2026-01-13 00:00:00+00'
       AND created_at <  TIMESTAMP '2026-02-01 00:00:00+00'
 ),
      action_dict AS (
@@ -29,7 +29,9 @@ WITH reg_users AS (
                             (301, 'PAGE_OPEN_ANALYTICS'),
                             (400, 'MODAL_SHOWN_COOKIES'),
                             (401, 'MODAL_SHOWN_TOU'),
-                            (402, 'MODAL_SHOWN_DISCOUNT_SUBSCRIPTION')
+                            (402, 'MODAL_SHOWN_DISCOUNT_SUBSCRIPTION'),
+                            (101, 'PDF_DOWNLOAD_CALL'),
+                            (500, '500')
                        ) AS t(action_type, action_name)
      )
 SELECT
