@@ -27,6 +27,18 @@ export default function Trainer({
         []
     );
 
+    const [taskType, setTaskType] = useState("translate"); // "translate" | "gap"
+    const [gapSentence, setGapSentence] = useState("");
+    const [gapOptions, setGapOptions] = useState([]);
+    const [gapCorrect, setGapCorrect] = useState("");
+    const [gapSelected, setGapSelected] = useState(null);
+    const HARDCODED_GAP_TASK = {
+        rules: ["PREP_PLACE"],
+        en: ["The café is {GAP} the bank."],
+        options: ["in", "next to", "under"],
+        correct: "next to",
+    };
+
     const gridStyle = {
         display: "flex",
         flexDirection: "column",
@@ -73,7 +85,23 @@ export default function Trainer({
 
         await callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_TRAINER);
     }
+    useEffect(() => {
+        // ✅ DEMO: force gap mode for now
+        setTaskType("gap");
 
+        // load hardcoded task
+        setRules(HARDCODED_GAP_TASK.rules);
+        setGapSentence(HARDCODED_GAP_TASK.en[0]);
+        setGapOptions(HARDCODED_GAP_TASK.options);
+        setGapCorrect(HARDCODED_GAP_TASK.correct);
+
+        setTaskText(HARDCODED_GAP_TASK.en[0]);
+        setTaskHint(null);
+        setHint("Порада: обери правильний варіант.");
+        setCorrectAnswer("");
+        setWeakRules([]);
+        setMode("check");
+    }, []);
     useEffect(() => {
         loadAccount().then()
     }, []);
@@ -113,6 +141,27 @@ export default function Trainer({
         setHint("Завантаження нового завдання…");
         setCorrectAnswer("");
         setWeakRules([]); // 🔹 reset list of weak rules
+    }
+    async function evaluateGapAnswer() {
+        if (!gapSelected) {
+            setHint("Обери варіант перед перевіркою.");
+            return;
+        }
+
+        // локальна перевірка
+        const ok = gapSelected === gapCorrect;
+
+        if (ok) {
+            setHint("✔ Правильно!");
+            setCorrectAnswer("");
+            setWeakRules([]);
+        } else {
+            setHint("❌ Не зовсім.");
+            setCorrectAnswer(gapSentence.replace("{GAP}", gapCorrect));
+            setWeakRules(rules?.length ? rules : []);
+        }
+
+        setMode("next");
     }
 
     async function fetchNextSentence({ nextLevel, nextRule, selectedDifficulty, seed, skip }) {
@@ -325,13 +374,26 @@ export default function Trainer({
             return;
         }
 
-        if (mode === "check") await evaluateAnswer();
-        else {
+        if (mode === "check") {
+            if (taskType === "gap") await evaluateGapAnswer();
+            else await evaluateAnswer();
+        } else {
+            // DEMO: просто ресетимо на той самий hardcoded gap task
+            if (taskType === "gap") {
+                setGapSelected(null);
+                setHint("Порада: обери правильний варіант.");
+                setCorrectAnswer("");
+                setWeakRules([]);
+                setMode("check");
+                return;
+            }
+
             const diff = randomDifficulty(level);
             setDifficulty(diff);
             resetToLoadingPlaceholders();
             await loadNewTask(diff);
         }
+
     }
 
     return (isError) ? (
@@ -362,6 +424,10 @@ export default function Trainer({
                 onKeyDown={handleKeyDown}
                 locked={locked}
                 account={account}
+                taskType={taskType}
+                gapOptions={gapOptions}
+                gapSelected={gapSelected}
+                setGapSelected={setGapSelected}
             />
             <ResultCard
                 theme={theme}
