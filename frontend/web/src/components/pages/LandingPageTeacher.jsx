@@ -614,8 +614,11 @@ html{ scroll-behavior: smooth; }
                     <div className="textBlock">
                         <h1 className="title">
                             Безкоштовні PDF<br />
-                            з вправами на переклад<br />
-                            <em>для уроків і домашки</em>
+                            з вправами<br/>
+                            на переклад<br />
+                            англійською<br />
+                            <em>для уроків</em><br />
+                            <em>і домашніх завдань</em>
                         </h1>
 
                         <p className="subtitle">

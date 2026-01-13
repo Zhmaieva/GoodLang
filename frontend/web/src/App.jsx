@@ -117,6 +117,7 @@ import GaRouteTracker from "./components/routing/GaRouteTracker.jsx";
 import Landing from "./components/pages/LandingPage3.jsx";
 import LandingPageTeacher from "./components/pages/LandingPageTeacher.jsx";
 import LandingPage3 from "./components/pages/LandingPage3.jsx";
+import GoodLangLandingTeaStyleThemed from "./components/pages/LandingPage2.jsx";
 
 export const theme = {
     bg: "#fff3df",

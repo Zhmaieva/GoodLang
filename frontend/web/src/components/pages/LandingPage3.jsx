@@ -695,10 +695,13 @@ export default function LandingPage3({theme}) {
                 <div className="left">
                     <div className="textBlock">
                         <h1 className="title">
-                            Твій особистий<br/>
-                            репетитор<br/>
-                            з англійської,<br/>
-                            <em>який завжди з тобою.</em>
+                            Оціни свій рівень <br/>
+                            англійської <br/>
+                            безкоштовно <br/>
+                            за 3 хвилини <br/>
+                            <em>І почни</em><br/>
+                            <em>розмовляти</em><br/>
+                            <em>правильно</em><br/>
                         </h1>
                     </div>
                 </div>
