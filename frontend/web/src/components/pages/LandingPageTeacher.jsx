@@ -7,7 +7,7 @@ import messageCenter2 from "../../../public/messageCenter2.png";
 import messageLeft2 from "../../../public/messageLeft2.png";
 import {useNavigate} from "react-router-dom";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 
@@ -19,15 +19,43 @@ export default function LandingPageTeacher({theme}) {
     const [msg, setMsg] = useState("");
     const [touOpen, setTouOpen] = React.useState(false);
 
+    const hasScrolledRef = useRef(false);
+
     const startUsing = async () => {
-        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
+        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING_TEACHER_APP);
         setTimeout(() => navigate("/"), 200);
     };
 
     const goToRules = async () => {
-        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
+        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING_TEACHER_PDF);
         setTimeout(() => navigate("/analytics"), 200);
     };
+
+    useEffect(() => {
+        setTimeout(async () => {
+            await callAccountVerifyApi(ACTION_TYPES.LANDING_WAIT_3_SECONDS);
+        }, 3000);
+
+        setTimeout(async () => {
+            await callAccountVerifyApi(ACTION_TYPES.LANDING_WAIT_10_SECONDS);
+        }, 10000);
+
+        setTimeout(async () => {
+            await callAccountVerifyApi(ACTION_TYPES.LANDING_WAIT_20_SECONDS);
+        }, 20000);
+    }, []);
+
+    useEffect(() => {
+        const onScroll = async () => {
+            if (!hasScrolledRef.current) {
+                hasScrolledRef.current = true;
+                await callAccountVerifyApi(ACTION_TYPES.LANDING_SCROLL_START);
+            }
+        };
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     const submitEmail = async () => {
         const v = String(email || "").trim();
