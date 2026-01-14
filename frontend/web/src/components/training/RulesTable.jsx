@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import {logError} from "../../services/logger.js";
 import {dowloadPdf} from "../../services/api.js";
 import DownloadLimitModal from "../subscription/DownloadLimitModal.jsx";
+import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 
 export default function RulesTable({ account, rows, pct, statusOf, fmtDate, onRowClick, theme }) {
     const LEVEL_MAP = {
@@ -261,7 +262,10 @@ export default function RulesTable({ account, rows, pct, statusOf, fmtDate, onRo
         setIsDownloading(true);
         setDownloadingRow(idx);
 
-        if (!account?.email) {
+        const downloadsNumber = getPdfDownloads();
+        const isTeacher = localStorage.getItem("teacher") === "true";
+
+        if (!account?.email && (downloadsNumber > 0 || !isTeacher)) {
             setRuleToDownload(ruleName);
             setSignUpModalOpen(true);
             return;
@@ -269,6 +273,7 @@ export default function RulesTable({ account, rows, pct, statusOf, fmtDate, onRo
 
         try {
             await dowloadPdf(ruleName);
+            setPdfDownloads(downloadsNumber + 1);
         } catch (err) {
             logError(err);
         } finally {

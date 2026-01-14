@@ -96,3 +96,18 @@ export async function recordAction(accountId, actionType) {
     const date = new Date();
     await pool.query(query, [accountId, actionType, date]);
 }
+
+/**
+ * Get event count for a specific action type and account
+ */
+export async function getActionCount(accountId, actionType) {
+    const query = `
+        SELECT COUNT(*)::int AS count
+        FROM account_log
+        WHERE account_id = $1
+          AND action_type = $2
+    `;
+
+    const { rows } = await pool.query(query, [accountId, actionType]);
+    return rows[0].count;
+}

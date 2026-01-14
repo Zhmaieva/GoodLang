@@ -1,7 +1,8 @@
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import {getPdf, getPreGeneratedPdf} from "../pdf/pdfGeneration.js";
-import {recordAction} from "../database/repositories/accountLogRepository.js";
+import {getActionCount, recordAction} from "../database/repositories/accountLogRepository.js";
 import {ACTION_TYPES} from "../core/constants.js";
+import {getAccountById} from "../database/repositories/accountsRepository.js";
 
 const name = "files";
 
@@ -9,6 +10,16 @@ export const filesController = {
     mapRoutes: function (app) {
         app.get(`/${name}/generate/pdf`, authMiddleware, async (req, res, next) => {
             try {
+                const account = await getAccountById(req.user.id);
+                if (!account.email) {
+                    const teacher = await getActionCount(req.user.id, ACTION_TYPES.USER_TEACHER_REGISTERED);
+                    const pdfCalls = await getActionCount(req.user.id, ACTION_TYPES.PDF_DOWNLOAD_CALL);
+                    if (pdfCalls > 0 || teacher <= 0) {
+                        res.status(401).json({ error: "Register to download more" });
+                        return;
+                    }
+                }
+
                 const pdf = await getPreGeneratedPdf(req.query.rule);
                 //const pdf = await getPdf(req.query.rule);
 

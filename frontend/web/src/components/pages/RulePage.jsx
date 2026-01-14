@@ -16,6 +16,7 @@ import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import {ensureAnalytics, trackMetaEvent, trackPageView} from "../../services/gaService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -231,7 +232,10 @@ export default function RulePage({ data, theme }) {
 
         setIsDownloading(true);
 
-        if (!account?.email) {
+        const downloadsNumber = getPdfDownloads();
+        const isTeacher = localStorage.getItem("teacher") === "true";
+
+        if (!account?.email || !isTeacher) {
             setRuleToDownload(ruleName);
             setSignUpModalOpen(true);
             return;
@@ -239,6 +243,7 @@ export default function RulePage({ data, theme }) {
 
         try {
             await dowloadPdf(ruleName);
+            setPdfDownloads(downloadsNumber + 1);
         } catch (err) {
             logError(err);
         } finally {

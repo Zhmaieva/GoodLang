@@ -10,8 +10,24 @@ const STORAGE_KEY_SEED_UPDATED = "seed_updatedAt";
 const STORAGE_KEY_DEVICE_ID = "device_id";
 const STORAGE_KEY_PAYMENT_INTENT_ENABLED = "payment_intent_enabled";
 const STORAGE_KEY_PROMO_CODE = "promo_code";
+const STORAGE_KEY_PDF_DOWNLOADS = "pdf_downloads";
 
 const CHUNK_SIZE = 100;
+
+export function setPdfDownloads(number) {
+    localStorage.setItem(STORAGE_KEY_PDF_DOWNLOADS, String(number));
+}
+
+export function getPdfDownloads() {
+    const raw = localStorage.getItem(STORAGE_KEY_PDF_DOWNLOADS);
+
+    if (raw === null) return 0;
+
+    const parsed = parseInt(raw, 10);
+
+    return Number.isFinite(parsed) ? parsed : 0;
+}
+
 
 export function setPromoCode(code) {
     const normalized = code.trim().toUpperCase();
