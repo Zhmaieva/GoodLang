@@ -799,3 +799,42 @@ $$
 $$;
 
 COMMIT;
+
+
+-- Migration: add_email_subscribe_to_accounts
+-- Description: Add email_subscribe flag to accounts, default true, backfill existing rows
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_email_subscribe_to_accounts'
+        ) THEN
+
+            -- 1. Add column (nullable first to avoid lock issues)
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS email_subscribe BOOLEAN;
+
+            -- 2. Backfill existing rows
+            UPDATE accounts
+            SET email_subscribe = TRUE
+            WHERE email_subscribe IS NULL;
+
+            -- 3. Enforce default + not null
+            ALTER TABLE accounts
+                ALTER COLUMN email_subscribe SET DEFAULT TRUE,
+                ALTER COLUMN email_subscribe SET NOT NULL;
+
+            -- 4. Mark migration applied
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_email_subscribe_to_accounts', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

@@ -7,7 +7,8 @@ import {pool} from "../database/pool.js";
 import {transporter} from "../core/emailSender.js";
 import {fileURLToPath} from "node:url";
 import path from "node:path";
-
+import {runPromoRegularTick} from "../emails/promo-regular/promoRegularSender.js";
+import "dotenv/config";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -45,11 +46,18 @@ export function startNonOverlappingInterval(job, intervalMs = 1000) {
     };
 }
 
-console.log('The runner is running...')
+console.log('process.env.STRIPE_LIFETIME_10_COUPON_ID', process.env.STRIPE_LIFETIME_10_COUPON_ID)
+console.log('process.env.SMTP_FROM', process.env.SMTP_FROM)
+console.log('process.env.FRONTEND_URL', process.env.FRONTEND_URL)
+console.log('The runner is running...');
 
 startNonOverlappingInterval(async () => {
     const res = await runTipsTick({ pool, transporter, projectRoot });
-
     // avoid spam logs outside window
     if (!res.skipped) console.log("[tipsCron]", res);
-}, 3600000)
+
+    const promoRes = await runPromoRegularTick(
+        { pool, transporter, projectRoot, batchSize: 1 });
+    if (!res.skipped) console.log("[promoCron]", promoRes);
+}, 10000)
+//}, 3600000)

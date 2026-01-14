@@ -4,7 +4,7 @@ import {getPromoCode} from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 const STORAGE_KEY_APP_VERSION = "app_version";
-const CLIENT_APP_VERSION = "1.1.0"; // hardcoded client version
+const CLIENT_APP_VERSION = "1.1.1"; // hardcoded client version
 
 export async function callCheckoutApi() {
     const url = `${API_BASE}/payments/create-checkout-session`;
@@ -341,6 +341,38 @@ async function callGeneratePdfApi(ruleName, opts = {}) {
     }
 }
 
+// Call: GET /accounts/unsubscribe?email_unsubscribe_token=<token>
+// Token == accountId (UUID) per your backend decision.
 
+export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
+    try {
+        const token = String(emailUnsubscribeToken ?? "").trim();
+        if (!token) {
+            return { isSuccess: false, errorCode: "missing_token" };
+        }
 
+        const qs = new URLSearchParams({ email_unsubscribe_token: token });
+        const url = `${API_BASE}/accounts/emails/unsubscribe?${qs.toString()}`;
+
+        const res = await fetch(url, { method: "GET" });
+
+        // endpoint may return text/plain
+        const bodyText = await res.text().catch(() => "");
+
+        if (!res.ok) {
+            // graceful: never throw, return status as error code
+            return {
+                isSuccess: false,
+                errorCode: `http_${res.status}`,
+                message: bodyText || null,
+            };
+        }
+
+        return { isSuccess: true, message: bodyText || null };
+    } catch (e) {
+        // graceful: network/CORS/etc
+        logError(e);
+        return { isSuccess: false, errorCode: "network_error" };
+    }
+}
 

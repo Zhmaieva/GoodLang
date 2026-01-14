@@ -1,7 +1,7 @@
 import {
     createAccount,
     getAccountInfo, sendPromoCode,
-    sendVerificationCode,
+    sendVerificationCode, unsubscribeByToken,
     verifyCode
 } from "../database/repositories/accountsRepository.js";
 import jwt from "jsonwebtoken";
@@ -127,6 +127,23 @@ export const accountsController = {
                 }
 
                 res.json({ message: "Logged in successfully", mustAcceptTerms: !accountId, token });
+            } catch (e) {
+                next(e);
+            }
+        });
+
+        app.get(`/${name}/emails/unsubscribe`, async (req, res, next) => {
+            try {
+                const token = String(req.query?.email_unsubscribe_token ?? "").trim();
+
+                const result = await unsubscribeByToken(token);
+
+                // Keep it simple for email clients
+                if (!result.ok) {
+                    return res.status(400).send("Invalid unsubscribe link.");
+                }
+
+                return res.status(200).send("You have been unsubscribed.");
             } catch (e) {
                 next(e);
             }

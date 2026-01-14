@@ -1,8 +1,11 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import {markFailed, markSent, tryInsertTrackingRow} from "../massEmailService.js";
-const TZ = "Europe/Warsaw";
+import { markFailed, markSent, tryInsertTrackingRow } from "../massEmailService.js";
 import "dotenv/config";
+
+const TZ = "Europe/Warsaw";
+
+/* ----------------------------- template helpers ---------------------------- */
 
 function parseMeta(html, name) {
     const esc = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -23,8 +26,8 @@ function parsePlain(html) {
 async function pickLatestTipTemplate({ tipsDir }) {
     const entries = await fs.readdir(tipsDir, { withFileTypes: true });
     const files = entries
-        .filter(e => e.isFile() && e.name.toLowerCase().endsWith(".html"))
-        .map(e => e.name);
+        .filter((e) => e.isFile() && e.name.toLowerCase().endsWith(".html"))
+        .map((e) => e.name);
 
     if (!files.length) return null;
 
@@ -37,8 +40,7 @@ async function pickLatestTipTemplate({ tipsDir }) {
         const createdMs = createdAtStr ? Date.parse(createdAtStr) : 0;
 
         const subject = parseMeta(html, "goodlang:subject") || "GoodLang";
-        const letterId =
-            (parseMeta(html, "goodlang:letter_id") || path.parse(file).name).toUpperCase();
+        const letterId = (parseMeta(html, "goodlang:letter_id") || path.parse(file).name).toUpperCase();
 
         const text = parsePlain(html) || "";
 
@@ -49,6 +51,8 @@ async function pickLatestTipTemplate({ tipsDir }) {
     return templates[0];
 }
 
+/* ------------------------------ email helpers ------------------------------ */
+
 function safeEmail(email) {
     if (typeof email !== "string") return null;
     const e = email.trim().toLowerCase();
@@ -56,61 +60,89 @@ function safeEmail(email) {
     return re.test(e) ? e : null;
 }
 
+/**
+ * Build an unsubscribe link for template replacement.
+ * Set APP_BASE_URL in env (recommended), e.g. https://goodlang.beampie.com
+ */
+function buildUnsubscribeUrl({ baseUrl, id }) {
+    const u = new URL("/", baseUrl);
+    u.searchParams.set("email_unsubscribe_token", id);
+    return u.toString();
+}
+
+/**
+ * Replaces `unsubscribeurl` placeholder in both HTML and plain text.
+ * Supports: "unsubscribeurl", "{{unsubscribeurl}}", "%unsubscribeurl%", "[unsubscribeurl]"
+ */
+function replaceUnsubscribeUrl({ html, text, unsubscribeUrl }) {
+    const url = String(unsubscribeUrl);
+
+
+    return {
+        html: (html ?? "").replaceAll(`{{UNSUBSCRIBE_URL}}`, unsubscribeUrl),
+        text: (text ?? "").replaceAll(`{{UNSUBSCRIBE_URL}}`, unsubscribeUrl),
+    };
+}
+
 async function selectEligibleRecipients({ pool, letterId }) {
     const { rows } = await pool.query(
         `
-            WITH candidates AS (
-                SELECT LOWER(email) AS email, id AS account_id, created_at
-                FROM accounts
-                WHERE email IS NOT NULL
+      WITH candidates AS (
+          SELECT LOWER(email) AS email, id AS account_id, created_at
+          FROM accounts
+          WHERE email IS NOT NULL
+            AND email_subscribe = TRUE
 
-                UNION ALL
+          UNION ALL
 
-                SELECT LOWER(email) AS email, NULL::uuid AS account_id, created_at
-                FROM inquiries
-                WHERE email IS NOT NULL
-            )
-            SELECT DISTINCT ON (c.email)
-                c.email,
-                c.account_id
-            FROM candidates c
-            WHERE c.created_at <= (NOW() - INTERVAL '12 hours')
+          SELECT LOWER(email) AS email, NULL::uuid AS account_id, created_at
+          FROM inquiries
+          WHERE email IS NOT NULL
+      )
+      SELECT DISTINCT ON (c.email)
+          c.email,
+          c.account_id
+      FROM candidates c
+      WHERE c.created_at <= (NOW() - INTERVAL '12 hours')
 
-              -- ✅ exclude only if this exact letter was already tracked for this email
-              AND NOT EXISTS (
-                SELECT 1
-                FROM email_sendings es
-                WHERE es.email = c.email
-                  AND es.letter_id = $1
-            )
+        -- ✅ exclude only if this exact letter was already tracked for this email
+        AND NOT EXISTS (
+          SELECT 1
+          FROM email_sendings es
+          WHERE es.email = c.email
+            AND es.letter_id = $1
+        )
 
-            ORDER BY c.email, c.account_id DESC NULLS LAST
-            LIMIT 1
-        `,
+      ORDER BY c.email, c.account_id DESC NULLS LAST
+      LIMIT 1
+    `,
         [String(letterId).toUpperCase()]
     );
 
     return rows
-        .map(r => ({ email: safeEmail(r.email), accountId: r.account_id ?? null }))
-        .filter(r => r.email);
+        .map((r) => ({ email: safeEmail(r.email), accountId: r.account_id ?? null }))
+        .filter((r) => r.email);
 }
 
-
 async function sendTipOnceIfInserted({
-                                                pool,
-                                                transporter,
-                                                from,
-                                                email,
-                                                accountId,
-                                                letterId,
-                                                subject,
-                                                html,
-                                                text,
-                                            }) {
+                                         pool,
+                                         transporter,
+                                         from,
+                                         email,
+                                         accountId,
+                                         letterId,
+                                         subject,
+                                         html,
+                                         text,
+                                     }) {
     // 1) Insert gate
     const ins = await tryInsertTrackingRow({ pool, email, accountId, letterId });
     if (!ins.inserted) {
-        return { sent: false, skipped: true, reason: ins.error ? "insert_failed" : "already_tracked" };
+        return {
+            sent: false,
+            skipped: true,
+            reason: ins.error ? "insert_failed" : "already_tracked",
+        };
     }
 
     // 2) Send (only after insert succeeded)
@@ -132,6 +164,7 @@ async function sendTipOnceIfInserted({
     }
 }
 
+/* ------------------------------ scheduling -------------------------------- */
 
 function isAllowedWindow(now = new Date()) {
     const fmt = new Intl.DateTimeFormat("en-GB", {
@@ -140,9 +173,16 @@ function isAllowedWindow(now = new Date()) {
         hour: "2-digit",
         hour12: false,
     });
-    const parts = Object.fromEntries(fmt.formatToParts(now).map(p => [p.type, p.value]));
-    return parts.weekday !== "Sat" && parts.weekday !== "Sun" && Number(parts.hour) > 7 && Number(parts.hour) < 13; // 07:00-13:59
+    const parts = Object.fromEntries(fmt.formatToParts(now).map((p) => [p.type, p.value]));
+    return (
+        parts.weekday !== "Sat" &&
+        parts.weekday !== "Sun" &&
+        Number(parts.hour) > 7 &&
+        Number(parts.hour) < 13 // 07:00-13:59
+    );
 }
+
+/* --------------------------------- tick ---------------------------------- */
 
 export async function runTipsTick({
                                       pool,
@@ -160,6 +200,9 @@ export async function runTipsTick({
 
     const from = `"GoodLang" <${process.env.SMTP_FROM}>`;
 
+    // ✅ used for unsubscribeurl replacement
+    const baseUrl = process.env.FRONTEND_URL;
+
     let attempted = 0;
     let sent = 0;
     let skipped = 0;
@@ -169,6 +212,17 @@ export async function runTipsTick({
     for (const r of recipients) {
         attempted++;
 
+        const unsubscribeUrl = buildUnsubscribeUrl({
+            baseUrl,
+            id: r.accountId,
+        });
+
+        const rendered = replaceUnsubscribeUrl({
+            html: tpl.html,
+            text: tpl.text,
+            unsubscribeUrl,
+        });
+
         const res = await sendTipOnceIfInserted({
             pool,
             transporter,
@@ -177,8 +231,8 @@ export async function runTipsTick({
             accountId: r.accountId,
             letterId: tpl.letterId,
             subject: tpl.subject,
-            html: tpl.html,
-            text: tpl.text,
+            html: rendered.html,
+            text: rendered.text,
         });
 
         if (res.sent) sent++;

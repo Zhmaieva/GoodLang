@@ -278,7 +278,7 @@ export async function sendPromoCode(accountId, email) {
     await sendPromoEmail(normalizedEmail, promoCode, expiresAt);
 }
 
-function calcPrices() {
+export function calcPrices() {
     // Avoid float money math by using cents
     const originalCents = 14999; // 149.99
     const discountedCents = Math.round(originalCents * 0.9); // 10% off => 13499 cents => 134.99
@@ -365,5 +365,42 @@ export async function verifyCode(currentId, email, code, termsAccepted) {
         codeAccepted: true,
         accountId: newAccountId
     }
+}
+
+/**
+ * Unsubscribe account by token (token == accountId UUID string).
+ * No auth (email link).
+ *
+ * Uses existing accounts.status (free/paid/attention) and stores unsubscribe state there.
+ * If you want a dedicated boolean column later, add it and update this method.
+ *
+ * @param {string} token
+ * @returns {Promise<{ok: boolean, reason?: string}>}
+ */
+export async function unsubscribeByToken(token) {
+    if (typeof token !== "string" || !token.trim()) {
+        return { ok: false, reason: "missing_token" };
+    }
+
+    const accountId = token.trim();
+
+    // Basic UUID-ish check (optional but avoids garbage)
+    const UUID_RE =
+        /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    if (!UUID_RE.test(accountId)) {
+        return { ok: false, reason: "invalid_token" };
+    }
+
+    const { rowCount } = await pool.query(
+        `
+            UPDATE accounts
+            SET email_subscribe = FALSE
+            WHERE id = $1;
+    `,
+        [accountId]
+    );
+
+    if (!rowCount) return { ok: false, reason: "not_found" };
+    return { ok: true };
 }
 

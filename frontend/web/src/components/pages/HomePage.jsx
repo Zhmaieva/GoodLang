@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import AppShell from "../AppShell";
 import Header from "../Header";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import Trainer from "../training/Trainer.jsx";
 import FooterBar from "../FooterBar.jsx";
-import {callAccountVerifyApi, dowloadPdf} from "../../services/api.js";
+import { callAccountVerifyApi, dowloadPdf, callEmailUnsubscribeApi } from "../../services/api.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
 import { getAllStatistics } from "../../services/dataService.js";
 import { on, off } from "../../services/events.js";
+import InfoModal from "../modals/InfoModal.jsx"; // ✅ adjust path if needed
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -20,11 +21,16 @@ export default function HomePage({ theme }) {
 
     const [isMobile, setIsMobile] = useState(false);
 
+    // ✅ Info modal state (for unsubscribe)
+    const [infoOpen, setInfoOpen] = useState(false);
+    const [infoTitle, setInfoTitle] = useState("Інформація");
+    const [infoMessage, setInfoMessage] = useState("");
 
     // Responsive grid (container-based)
     const { ref: containerRef } = useBreakpoint(880);
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     const gridStyle = {
         display: "flex",
@@ -66,12 +72,10 @@ export default function HomePage({ theme }) {
         overflow: "hidden",
         textOverflow: "ellipsis",
 
-
         transform: isHover ? "translateY(1px)" : "none",
         filter: isHover ? "brightness(0.95)" : "none",
         transition: "transform 120ms ease, filter 120ms ease",
     });
-
 
     const handleAnalyticsClick = async () => {
         callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_ANALYTICS).then();
@@ -79,22 +83,17 @@ export default function HomePage({ theme }) {
     };
 
     const handleRuleClick = async (ruleId) => {
-        // ✅ track event
         callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_RULE_PREVIEW).then();
-
-        // adjust route if yours differs
         navigate(`/rule/${encodeURIComponent(ruleId)}`);
     };
 
     // ✅ Pick up to 3 weakest rules from dataService stats
     const computeWeakRules = () => {
-        const stats = getAllStatistics(); // [{rule, ruleName, accuracy, attemptsNumber, status, ...}]
+        const stats = getAllStatistics();
         if (!Array.isArray(stats) || !stats.length) return [];
 
-        // Only rules with attempts (otherwise "weakest" becomes random)
         const attempted = stats.filter((x) => (x?.attemptsNumber ?? 0) > 0);
 
-        // Prefer "needs practice", then lowest accuracy, then fewer attempts (still shaky)
         const sorted = attempted.sort((a, b) => {
             const aNeeds = a.status === "needs practice" ? 0 : 1;
             const bNeeds = b.status === "needs practice" ? 0 : 1;
@@ -115,29 +114,85 @@ export default function HomePage({ theme }) {
         }));
     };
 
+    // ✅ Unsubscribe flow: read token -> call API -> show InfoModal -> remove param from URL
+    useEffect(() => {
+        let cancelled = false;
+
+        async function runUnsubscribeFromUrl() {
+            const params = new URLSearchParams(location.search);
+            const token = params.get("email_unsubscribe_token");
+            if (!token) return;
+
+            // remove param from URL ASAP (so refresh doesn't re-trigger)
+            params.delete("email_unsubscribe_token");
+            const nextSearch = params.toString();
+            window.history.replaceState(
+                {},
+                "",
+                `${location.pathname}${nextSearch ? `?${nextSearch}` : ""}${location.hash || ""}`
+            );
+
+            // call API (graceful)
+            const res = await callEmailUnsubscribeApi(token);
+
+            if (cancelled) return;
+
+            if (res?.isSuccess) {
+                setInfoTitle("Готово");
+                setInfoMessage("Ми більше не турбуватимемо імейлами від GoodLang. Ми надсилатимемо тільки необхідні для роботи додатку повідомлення — наприклад, код входу");
+            } else {
+                setInfoTitle("Ой...");
+                setInfoMessage("Сталася помилка. Напиши на goodlang.app@gmail.com i ми все виправимо.");
+            }
+
+            setInfoOpen(true);
+        }
+
+        runUnsubscribeFromUrl().catch(() => {
+            // don't crash page if something unexpected happens
+            if (!cancelled) {
+                setInfoTitle("Ой...");
+                setInfoMessage("Сталася помилка. Напиши на goodlang.app@gmail.com i ми все виправимо.");
+                setInfoOpen(true);
+            }
+        });
+
+        return () => {
+            cancelled = true;
+        };
+    }, [location.pathname, location.search, location.hash]);
+
     useEffect(() => {
         const onRefresh = () => {
             setWeakRules(computeWeakRules());
         };
 
-        // initial
         onRefresh();
 
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
         window.addEventListener("resize", onResize);
 
-        // ✅ update when dataService emits weeklyProgressUpdate (it calls emit("weeklyProgressUpdate"))
         on("weeklyProgressUpdate", onRefresh);
 
         return () => {
             off("weeklyProgressUpdate", onRefresh);
-            window.removeEventListener("resize", onResize)
+            window.removeEventListener("resize", onResize);
         };
     }, []);
 
     return (
         <AppShell theme={theme}>
+            {infoOpen && (
+                <InfoModal
+                    theme={theme}
+                    title={infoTitle}
+                    message={infoMessage}
+                    buttonText="Добре"
+                    onClose={() => setInfoOpen(false)}
+                />
+            )}
+
             <div ref={containerRef}>
                 <Header
                     theme={theme}
@@ -149,8 +204,7 @@ export default function HomePage({ theme }) {
 
                 <section style={gridStyle}>
                     <div style={topRowStyle}>
-                        {
-                            localStorage.getItem('EXPERIMENTAL_PDF') &&
+                        {localStorage.getItem("EXPERIMENTAL_PDF") && (
                             <button
                                 key={"pdf"}
                                 onMouseEnter={() => setHoveredRuleId("pdf")}
@@ -160,7 +214,7 @@ export default function HomePage({ theme }) {
                             >
                                 Download PDF
                             </button>
-                        }
+                        )}
 
                         <button
                             onMouseEnter={() => setHoveredAnalytics(true)}
@@ -187,7 +241,6 @@ export default function HomePage({ theme }) {
                                 </button>
                             );
                         })}
-
                     </div>
 
                     <Trainer

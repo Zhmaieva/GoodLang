@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Used by backend to pick the latest email -->
+  <meta name="goodlang:created_at" content="2026-01-14T10:00:00+01:00" />
+  <meta name="goodlang:subject" content="–10% на навчання (назавжди)" />
+  <meta name="goodlang:letter_id" content="PROMO_REGULAR_10_OFF" />
+
+  <title>–20% на GoodLang</title>
+
+  <style>
+    body { margin:0; padding:0; background:#fff3df; font-family: Arial, sans-serif; color:#3a2a1d; }
+    .wrap { width:100%; padding: 20px 12px; }
+    .card {
+      max-width: 640px; margin: 0 auto; background:#fffdf8;
+      border: 3px solid #ff6138; box-shadow: 4px 4px 0 #d74e2a;
+      border-radius: 20px; overflow:hidden;
+    }
+    .header { background:#ff6138; color:#fff; padding:16px 18px; font-size:18px; font-weight:bold; }
+    .body { padding:18px; font-size:16px; line-height:1.5; color:#000; }
+    .p { margin: 0 0 14px; }
+    .promo {
+      background:#fffaf3; border:2px dashed #ff6138; border-radius:16px;
+      padding: 12px; margin: 12px 0;
+    }
+    .code {
+      font-size: 22px; font-weight: 900; letter-spacing: 1px;
+      display:inline-block; padding: 6px 10px; background:#ff6138; color:#fff;
+      border-radius: 12px;
+    }
+    .muted { color:#7a5b44; font-size: 14px; }
+    .cta {
+      display:inline-block; margin-top: 6px;
+      background:#000; color:#fff; font-weight: 800;
+      padding: 10px 14px; border-radius: 999px; text-decoration:none;
+    }
+    .footer { padding:16px 18px 20px; font-size:14px; color:#7a5b44; }
+    .brand { text-decoration:none; display:inline-block; margin-top: 6px;
+      background:#ff6138; color:#fff; padding:6px 10px; border-radius:999px;
+      font-size:13px; font-weight:bold; letter-spacing:.3px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="header">GoodLang</div>
+
+    <div class="body">
+      <p class="p">Привіт! 👋</p>
+
+      <p class="p">
+        Якщо хочеш ще швидше побачити прогрес, спробуй підписку і подивись, як зміниться результат.
+      </p>
+
+      <div class="promo">
+        <div class="p">Твій промокод на <strong><b>-10% назавжди</b></strong>:</div>
+        <div class="p"><span class="code">{{PROMO_CODE}}</span></div>
+        <div class="p" style="margin-bottom: 0">застосуй за посиланням:</div>
+        <div class="p" style="margin-bottom: 14px">
+          <a
+                  href="{{SUBSCRIBE_URL}}"
+                  style="
+                color:#ff6138;
+                font-weight:900;
+                font-size:15px;
+                text-decoration:none;
+              "
+          >
+            {{SUBSCRIBE_URL}}
+          </a>
+        </div>
+        <div class="muted">Увага: код діятиме до {{PROMO_EXPIRES_DATE}}</div>
+      </div>
+
+      <p class="p">
+        Маєш друзів, які теж вчать англійську?
+        Встигни поділитися кодом — нехай тренуються разом із тобою
+      </p>
+
+    </div>
+
+    <div class="footer">
+      See you around 💛,<br/>
+      <span class="brand">GoodLang</span>
+
+      <div class="muted" style="text-align: right; font-size: 0.65rem; margin-top:10px">
+        Не хочеш отримувати ці листи?
+        <a href="{{UNSUBSCRIBE_URL}}" style="color:#7a5b44; font-weight:700; text-decoration:underline;">
+          Відписатися
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Plain text version for raw email sending -->
+<script type="text/plain" id="goodlang-plain">
+  Привіт!
+
+  Спробуй навчання з підпискою і побач результат.
+  Твій промокод на -10%: {{PROMO_CODE}}
+
+  Активувати знижку: {{SUBSCRIBE_URL}}
+
+  Діє до {{PROMO_EXPIRES_DATE}}.
+
+  Маєш друзів? Поділися кодом 💛
+
+  GoodLang: https://goodlang.app
+
+  Відписатися: {{UNSUBSCRIBE_URL}}
+</script>
+</body>
+</html>
