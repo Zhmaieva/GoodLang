@@ -173,7 +173,10 @@ export default function TaskCard({
                 {loading ? (
                     <BarsLoader />
                 ) : (
-                    <div style={styles.taskText}>{taskText}</div>
+                    <div
+                        style={styles.taskText}
+                        dangerouslySetInnerHTML={{__html: taskText}}
+                    />
                 )}
 
                 {/* keep hint behavior */}
