@@ -16,7 +16,7 @@ import RulesTable from "../training/RulesTable.jsx";
 import WeakFocus from "../WeakFocus";
 import FooterBar from "../FooterBar";
 import {useNavigate} from "react-router-dom";
-import {getAllStatistics, inferUserLevel} from "../../services/dataService.js";
+import {getAllStatistics, getOverallAccuracy, inferUserLevel} from "../../services/dataService.js";
 import AppShell from "../AppShell.jsx";
 import BrandHeader from "../BrandHeader.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
@@ -32,8 +32,18 @@ export default function AnalyticsPage({theme}) {
     const [account, setAccount] = useState(null);
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 915);
+    const [isTeacher, setIsTeacher] = useState(false);
+    const [hasData, setHasData] = useState(false);
 
     useEffect(() => {
+        const isTeacher = localStorage.getItem("teacher") === "true";
+        setIsTeacher(isTeacher);
+
+        const overall = getOverallAccuracy();
+        if (overall.attemptsLeft === 0) {
+            setHasData(true);
+        }
+
         const handleResize = () => {
             setIsMobile(window.innerWidth < 915);
         };
@@ -135,12 +145,17 @@ export default function AnalyticsPage({theme}) {
                                  </button>
                              }
                 />
-                <KPIGrid
-                    theme={theme}
-                    attempts={kpis.totalAttempts}
-                    masteredRules={kpis.mastered}
-                />
+                {
+                    (!isMobile || !isTeacher || hasData) &&
+                    <KPIGrid
+                        theme={theme}
+                        attempts={kpis.totalAttempts}
+                        masteredRules={kpis.mastered}
+                    />
+                }
+
                 <FiltersBar
+                    advanced={(!isMobile || !isTeacher || hasData)}
                     filterLevel={filterLevel}
                     onLevelChange={setFilterLevel}
                     query={query}
@@ -150,6 +165,7 @@ export default function AnalyticsPage({theme}) {
                 />
                 <div style={{height: '50%'}}>
                     <RulesTable
+                        advanced={(!isMobile || !isTeacher || hasData)}
                         account={account}
                         theme={theme}
                         rows={tableRows}

@@ -4,7 +4,15 @@ import {dowloadPdf} from "../../services/api.js";
 import DownloadLimitModal from "../subscription/DownloadLimitModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 
-export default function RulesTable({ account, rows, pct, statusOf, fmtDate, onRowClick, theme }) {
+export default function RulesTable({
+                                       account,
+                                       rows,
+                                       pct,
+                                       statusOf,
+                                       fmtDate,
+                                       onRowClick,
+                                       theme,
+                                       advanced = true}) {
     const LEVEL_MAP = {
         A1: { label: "Початківець" },
         A2: { label: "Середній" },
@@ -188,7 +196,7 @@ export default function RulesTable({ account, rows, pct, statusOf, fmtDate, onRo
 
     const iconBtn = (isHover) => ({
         marginTop: 6,
-        width: 16,
+        width: advanced ? 16 : '100%',
         height: 16,
         cursor: isDownloading ? "default" : "pointer",
         opacity: isDownloading ? 0.5 : 1,
@@ -396,13 +404,18 @@ export default function RulesTable({ account, rows, pct, statusOf, fmtDate, onRo
                                                 Рівень: {LEVEL_MAP[r.level]?.label}
                                             </div>
 
-                                            <div style={{ fontSize: "1rem" }}>
-                                                Спроби: {r.attemptsNumber}
-                                            </div>
-
-                                            <div style={{ fontSize: "1rem" }}>
-                                                Oстання практика: {fmtDate(r.lastAttemptDate)}
-                                            </div>
+                                            {
+                                                advanced &&
+                                                <div style={{fontSize: "1rem"}}>
+                                                    Спроби: {r.attemptsNumber}
+                                                </div>
+                                            }
+                                            {
+                                                advanced &&
+                                                <div style={{fontSize: "1rem"}}>
+                                                    Oстання практика: {fmtDate(r.lastAttemptDate)}
+                                                </div>
+                                            }
 
                                             <div style={{
                                                 display: "flex",
@@ -410,40 +423,78 @@ export default function RulesTable({ account, rows, pct, statusOf, fmtDate, onRo
                                                 gap: "2rem",
                                                 marginTop: 6
                                             }}>
-                                                <span className={`badge ${st.cls}`}>{st.label}</span>
-                                                <div
-                                                    key={idx}
-                                                    onMouseEnter={() => setHover(idx)}
-                                                    onMouseLeave={() => setHover(null)}
-                                                    onClick={(e)=>onPrintClick(e, idx, r.rule)}
-                                                    style={iconBtn(idx === hover, downloadingRow === idx)}
-                                                    title="Друкувати правило"
-                                                >
-                                                    <img
-                                                        src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
-                                                        alt="Print"
-                                                        style={{
-                                                            width: 56,
-                                                            height: 56,
-                                                            display: "block",
+                                                {
+                                                    advanced &&
+                                                    <span className={`badge ${st.cls}`}>{st.label}</span>
+                                                }
+                                                {
+                                                    advanced &&
+                                                    <div
+                                                        key={idx}
+                                                        onMouseEnter={() => setHover(idx)}
+                                                        onMouseLeave={() => setHover(null)}
+                                                        onClick={(e) => onPrintClick(e, idx, r.rule)}
+                                                        style={iconBtn(idx === hover, downloadingRow === idx)}
+                                                        title="Друкувати правило"
+                                                    >
+                                                        <img
+                                                            src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
+                                                            alt="Print"
+                                                            style={{
+                                                                width: 56,
+                                                                height: 56,
+                                                                display: "block",
 
-                                                            animation:
-                                                                downloadingRow === idx
-                                                                    ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
-                                                                    : "none",
-                                                            transformOrigin: "50% 50%",
-                                                        }}
-                                                    />
-                                                </div>
+                                                                animation:
+                                                                    downloadingRow === idx
+                                                                        ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
+                                                                        : "none",
+                                                                transformOrigin: "50% 50%",
+                                                            }}
+                                                        />
+                                                    </div>}
                                             </div>
                                         </div>
 
                                         <div style={{display: "flex", flexDirection: "column"}}>
                                             <div style={{marginTop: 4, width: "80px"}}>
-                                                <strong>{a}%</strong>
-                                                <div className="bar" aria-label="bar">
-                                                    <i style={{width: `${a}%`, background: barColor}}/>
-                                                </div>
+                                                {
+                                                    advanced &&
+                                                    <>
+                                                        <strong>{a}%</strong>
+                                                        <div className="bar" aria-label="bar">
+                                                            <i style={{width: `${a}%`, background: barColor}}/>
+                                                        </div>
+                                                    </>
+                                                }
+
+
+                                                {
+                                                    !advanced &&
+                                                    <div
+                                                        key={idx}
+                                                        onMouseEnter={() => setHover(idx)}
+                                                        onMouseLeave={() => setHover(null)}
+                                                        onClick={(e) => onPrintClick(e, idx, r.rule)}
+                                                        style={iconBtn(idx === hover, downloadingRow === idx)}
+                                                        title="Друкувати правило"
+                                                    >
+                                                        <img
+                                                            src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
+                                                            alt="Print"
+                                                            style={{
+                                                                width: 56,
+                                                                height: 56,
+                                                                display: "block",
+
+                                                                animation:
+                                                                    downloadingRow === idx
+                                                                        ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
+                                                                        : "none",
+                                                                transformOrigin: "50% 50%",
+                                                            }}
+                                                        />
+                                                    </div>}
                                             </div>
                                         </div>
                                     </div>

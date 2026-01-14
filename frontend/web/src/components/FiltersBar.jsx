@@ -14,6 +14,7 @@ export default function FiltersBar({
                                        onQueryChange,
                                        showWeakOnly,
                                        onToggleWeak,
+                                       advanced = true
                                    }) {
     const [isMobile, setIsMobile] = useState(false);
 
@@ -74,17 +75,20 @@ export default function FiltersBar({
                 />
             </div>
 
-            <button
-                className={`pill ${showWeakOnly ? "selected" : ""}`}
-                onClick={onToggleWeak}
-                style={{
-                    fontSize: "1rem",
-                    fontWeight: 800,
-                    fontFamily: "Nunito, system-ui, sans-serif",
-                }}
-            >
-                {showWeakOnly ? "Показати всі" : "Лише слабкі"}
-            </button>
+            {
+                advanced && <button
+                    className={`pill ${showWeakOnly ? "selected" : ""}`}
+                    onClick={onToggleWeak}
+                    style={{
+                        fontSize: "1rem",
+                        fontWeight: 800,
+                        fontFamily: "Nunito, system-ui, sans-serif",
+                    }}
+                >
+                    {showWeakOnly ? "Показати всі" : "Лише слабкі"}
+                </button>
+            }
+
         </div>
     );
 }
