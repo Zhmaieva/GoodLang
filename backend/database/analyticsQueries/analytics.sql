@@ -277,3 +277,21 @@ FROM logs
     ) inq ON TRUE
 
 ORDER BY logs.log_created_at DESC, logs.log_row ASC;
+
+
+
+
+SELECT
+    a.email,
+    a.created_at,
+    EXISTS (
+        SELECT 1
+        FROM account_log al
+        WHERE al.account_id = a.id
+          AND al.action_type = 500
+    ) AS is_teacher
+FROM accounts a
+WHERE a.email IS NOT NULL
+ORDER BY
+    is_teacher DESC,
+    a.created_at DESC;
