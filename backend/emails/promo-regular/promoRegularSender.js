@@ -71,7 +71,7 @@ function getTzParts(now = new Date()) {
 function isAllowedWindow(now = new Date()) {
     const { weekday, hour } = getTzParts(now);
     const allowedDay = weekday === "Thu" || weekday === "Fri" || weekday === "Sat";
-    const allowedHour = hour >= 16 && hour < 20;
+    const allowedHour = hour >= 14 && hour < 20;
     return allowedDay && allowedHour;
 }
 

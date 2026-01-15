@@ -68,6 +68,10 @@ export const translationsController = {
                 });
             }
 
+            if ((translation?.length ?? 0) >= 200) {
+                return res.status(400).send("Message too long.");
+            }
+
             if (!skipCoach) {
                 // --- ліміт перекладів ---
                 const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, false);
