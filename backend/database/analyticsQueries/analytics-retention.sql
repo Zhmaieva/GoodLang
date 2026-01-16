@@ -126,3 +126,63 @@ SELECT
     (SELECT percentile_cont(0.50) WITHIN GROUP (ORDER BY sessions_per_user) FROM per_user) AS median_sessions_per_user,
     (SELECT percentile_cont(0.90) WITHIN GROUP (ORDER BY sessions_per_user) FROM per_user) AS p90_sessions_per_user;
 
+
+
+
+
+
+--returning
+WITH params AS (
+    SELECT DATE '2026-01-06' AS start_day  -- <-- hardcode your start date here
+),
+
+     filtered_events AS (
+         SELECT
+             al.account_id,
+             (al.created_at AT TIME ZONE 'UTC')::date AS day
+         FROM account_log al
+         WHERE al.account_id IS NOT NULL
+           AND al.action_type NOT IN (300, 301)
+     ),
+
+     daily_active AS (
+         -- one row per (user, day) where the user had qualifying activity
+         SELECT DISTINCT
+             account_id,
+             day
+         FROM filtered_events
+     ),
+
+     first_active_day AS (
+         -- first qualifying activity day per user
+         SELECT
+             account_id,
+             MIN(day) AS first_day
+         FROM daily_active
+         GROUP BY account_id
+     ),
+
+     returning_daily AS (
+         SELECT
+             da.day,
+             da.account_id
+         FROM daily_active da
+                  JOIN first_active_day fad
+                       ON fad.account_id = da.account_id
+         WHERE da.day > fad.first_day
+     )
+
+SELECT
+    d.day,
+    COUNT(DISTINCT rd.account_id) AS returning_users
+FROM (
+         SELECT generate_series(
+                        (SELECT start_day FROM params),
+                        (SELECT MAX(day) FROM daily_active),
+                        interval '1 day'
+                )::date AS day
+     ) d
+         LEFT JOIN returning_daily rd
+                   ON rd.day = d.day
+GROUP BY d.day
+ORDER BY d.day;

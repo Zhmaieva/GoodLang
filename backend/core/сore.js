@@ -134,7 +134,6 @@ export async function evaluateAndCoach({
                                            userEnglish = "",                // learner's translation attempt (English)
                                            textToTranslate = "",
                                            hint = "",
-                                           sampleTranslation = ""
                                        }) {
 
 
@@ -143,7 +142,6 @@ You are a friendly but precise ESL grammar tutor. You never invalidate informal 
 Return JSON only.
 Schema:
 {
-  "sample_in_target_language": string,
   "answer_is_correct": boolean,
   "correct_answer": string,
   "tip_if_wrong": string,
@@ -156,7 +154,6 @@ TARGET_LANGUAGE: ${targetLanguage}
 GRAMMAR_RULES: [${rules.join(', ')}]
 TEXT_TO_TRANSLATE: ${textToTranslate}
 HINT: ${hint}
-SAMPLE_TRANSLATION: ${sampleTranslation}
 
 TASKS:
 1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to GRAMMAR_RULES[0] as the target rule, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
@@ -186,3 +183,93 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
 
     return parsed;
 }
+
+export async function evaluateGapAndCoach({
+                                              task,
+                                              userAnswer = "",
+                                              targetLanguage = "Ukrainian"
+                                          }) {
+    const { rules = [], en = [], options = [], correct } = task;
+
+    const sentence = Array.isArray(en) ? (en[0] ?? "") : String(en ?? "");
+    const normalizedUser = clearText(String(userAnswer ?? "").trim());
+    const normalizedCorrect = clearText(String(correct ?? "").trim());
+
+    const isCorrect = normalizedUser === normalizedCorrect;
+
+    // Always computed deterministically
+    const filledCorrectSentence = String(sentence).replaceAll(
+        "{GAP}",
+        String(correct ?? "")
+    );
+
+    // ✅ If correct: no LLM call
+    if (isCorrect) {
+        return {
+            sample_in_target_language: filledCorrectSentence,
+            answer_is_correct: true,
+            correct_answer: String(correct ?? ""),
+            tip_if_wrong: "",
+            scores: rules.map(() => 1)
+        };
+    }
+
+    // ❌ Wrong: call LLM ONLY for tip_if_wrong
+    const systemPrompt = `
+You are a friendly but precise ESL grammar tutor.
+Return JSON only.
+Schema:
+{
+  "tip_if_wrong": string
+}
+`;
+
+    const userPrompt = `
+TARGET_LANGUAGE: ${targetLanguage}
+GRAMMAR_RULES: [${rules.join(", ")}]
+
+TASK_TYPE: GAP_CHOICE
+SENTENCE_TEMPLATE: ${sentence}
+OPTIONS: ${JSON.stringify(options)}
+CORRECT_OPTION: ${correct}
+
+LEARNER_CHOICE: ${userAnswer || "(none)"}
+
+INSTRUCTIONS:
+1) Give a short, helpful tip in TARGET_LANGUAGE explaining why LEARNER_CHOICE is wrong and why CORRECT_OPTION fits.
+2) Never mention the grammar rule names (GRAMMAR_RULES) as they are.
+3) Keep it practical and short (1-3 sentences).
+4) Do NOT include any other keys besides tip_if_wrong.
+5) Also if you use English words, explaining the mistake, specify TARGET_LANGUAGE translations next to them
+`;
+
+    const resp = await client.responses.create({
+        model: "gpt-4.1-mini",
+        temperature: 0.2,
+        text: { format: { type: "json_object" } },
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] }
+        ]
+    });
+
+    const txt = resp.output_text;
+    let parsed;
+    try {
+        parsed = JSON.parse(txt);
+    } catch (e) {
+        parsed = {};
+    }
+
+    return {
+        // deterministic composition (not LLM)
+        answer_is_correct: false,
+        correct_answer: filledCorrectSentence,
+        scores: rules.map(() => 0),
+
+        // LLM-only explanation
+        tip_if_wrong: String(parsed.tip_if_wrong ?? "")
+    };
+}
+
+

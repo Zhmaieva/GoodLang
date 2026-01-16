@@ -13,13 +13,6 @@ import {ACTION_TYPES} from "../../utils/constants.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 
-const HARDCODED_GAP_TASK = {
-    rules: ["PREP_PLACE"],
-    en: ["The café is {GAP} the bank."],
-    options: ["in", "next to", "under"],
-    correct: "next to",
-};
-
 export default function Trainer({
                                     theme,
                                     onLoadingChange = _ => {},
@@ -30,18 +23,9 @@ export default function Trainer({
                                     notFocused = false,
                                 }) {
     const LEVEL_TO_DIFFICULTY = useMemo(
-        () => ({beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"]}),
+        () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),
         []
     );
-
-    // -----------------------------
-    // ✅ NEW: Task type (DEMO gap)
-    // -----------------------------
-    const [taskType, setTaskType] = useState("translate"); // "translate" | "gap"
-    const [gapSentence, setGapSentence] = useState("");
-    const [gapOptions, setGapOptions] = useState([]);
-    const [gapCorrect, setGapCorrect] = useState("");
-    const [gapSelected, setGapSelected] = useState(null);
 
     const gridStyle = {
         display: "flex",
@@ -50,27 +34,72 @@ export default function Trainer({
     };
 
     const randomDifficulty = (level) => {
-        const pool = LEVEL_TO_DIFFICULTY[level] || ["A1", "A2"];
+        const pool = LEVEL_TO_DIFFICULTY[level] || ["A1"];
+
+        try {
+            const { level: directorLevel } = getTrainingLevel();
+
+            // map training director → CEFR
+            const directorMap = {
+                beginner: ["A1"],
+                intermediate: ["A2", "B1"],
+                advanced: ["B2"],
+            };
+
+            const directorPool = directorMap[directorLevel] || [];
+
+            // intersection with allowed pool
+            const intersection = pool.filter(l => directorPool.includes(l));
+
+            if (intersection.length > 0) {
+                return intersection[Math.floor(Math.random() * intersection.length)];
+            }
+        } catch {
+            // ignore and fallback to random
+        }
+
         return pool[Math.floor(Math.random() * pool.length)];
     };
 
-    // State
+
+    // -----------------------------
+    // Task type + gap state
+    // -----------------------------
+    const [taskType, setTaskType] = useState("translate"); // "translate" | "gap"
+    const [gapSentence, setGapSentence] = useState("");
+    const [gapOptions, setGapOptions] = useState([]);
+    const [gapSelected, setGapSelected] = useState(null);
+
+    // -----------------------------
+    // Mode selector (UI)
+    // -----------------------------
+    // "translations" | "gaps" | "combined"
+    const [taskMode, setTaskMode] = useState("combined");
+    const [taskModeLocked, setTaskModeLocked] = useState(false);
+    const [taskModeLockReason, setTaskModeLockReason] = useState("");
+
+    // In combined: which type to request next (0 translation, 1 gaps)
+    const [nextRequestedTaskType, setNextRequestedTaskType] = useState(0);
+
+    // -----------------------------
+    // Core state
+    // -----------------------------
     const [level, setLevel] = useState(null);
     const [difficulty, setDifficulty] = useState(() => null);
+
     const [textToTranslate, setTextToTranslate] = useState("");
-    const [nextTextToTranslate, setNextTextToTranslate] = useState("");
     const [rules, setRules] = useState([]);
-    const [nextRules, setNextRules] = useState([]);
+
     const [answer, setAnswer] = useState("");
     const [loading, setLoading] = useState(false);
-    const [mode, setMode] = useState("check"); // 'check' | 'next'
+    const [mode, setMode] = useState("check"); // "check" | "next"
     const [isError, setIsError] = useState(false);
     const [locked, setLocked] = useState(false);
 
     const [taskText, setTaskText] = useState("Завантаження завдання…");
     const [hint, setHint] = useState("Порада: переклади і натисни «Перевірити»");
     const [taskHint, setTaskHint] = useState(null);
-    const [nextHint, setNextHint] = useState(null);
+
     const [account, setAccount] = useState(null);
     const [correctAnswer, setCorrectAnswer] = useState("");
     const textareaRef = useRef(null);
@@ -80,69 +109,35 @@ export default function Trainer({
 
     const [cookieOpen, setCookieOpen] = useState(false);
 
-    // 🔹 rules that need attention (score < 1)
+    // weak rules
     const [weakRules, setWeakRules] = useState([]);
+
+    // -----------------------------
+    // Preloading state (supports gaps too)
+    // -----------------------------
+    const [nextTextToTranslate, setNextTextToTranslate] = useState("");
+    const [nextRules, setNextRules] = useState([]);
+    const [nextHint, setNextHint] = useState(null);
+    const [nextTaskType, setNextTaskType] = useState(0); // 0 translation, 1 gaps
+    const [nextOptions, setNextOptions] = useState([]);  // gaps only
+
+    // -----------------------------
+    // Simple caches so "Next" can invalidate both
+    // -----------------------------
+    // NOTE: We do not reuse these on mode switch anymore (you asked mode switch should reload),
+    // but we keep them so "Next" can invalidate both cleanly and prevent old leftovers.
+    const [cachedTranslateTask, setCachedTranslateTask] = useState(null);
+    const [cachedGapTask, setCachedGapTask] = useState(null);
 
     const loadAccount = async () => {
         const data = await callAccountInfoApi();
         setAccount(data);
-
         await callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_TRAINER);
     };
 
     useEffect(() => {
         loadAccount().then();
     }, []);
-
-    // ---------------------------------------
-    // ✅ DEMO: init hardcoded GAP task once
-    // ---------------------------------------
-    useEffect(() => {
-        setTaskType("gap");
-
-        setRules(HARDCODED_GAP_TASK.rules);
-        setGapSentence(HARDCODED_GAP_TASK.en[0]);
-        setGapOptions(HARDCODED_GAP_TASK.options);
-        setGapCorrect(HARDCODED_GAP_TASK.correct);
-        setGapSelected(null);
-
-        setHint("Порада: обери правильний варіант.");
-        setCorrectAnswer("");
-        setWeakRules([]);
-        setMode("check");
-    }, []);
-
-    // ---------------------------------------
-    // ✅ IMPORTANT: don't let translate flow
-    // overwrite the taskText in gap mode
-    // ---------------------------------------
-    useEffect(() => {
-        if (taskType === "gap") return; // ✅ key fix
-
-        if (loading) return;
-        if (nextLevel === level && !nextRule) return;
-
-        if (level !== nextLevel) {
-            setRules([]);
-            setNextRules([]);
-            setNextHint(null);
-        }
-
-        setLevel(nextLevel);
-
-        const diff = randomDifficulty(nextLevel);
-        setDifficulty(diff);
-        setTextToTranslate("");
-        setMode("check");
-        resetToLoadingPlaceholders();
-
-        loadNewTask(diff).then(_ => {});
-    }, [nextLevel, taskType]); // ✅ include taskType
-
-    useEffect(() => {
-        if (taskType === "gap") return; // optional: don't focus textarea in gap mode
-        if (mode === "check" && !notFocused && textareaRef.current && !loading) textareaRef.current.focus();
-    }, [mode, loading, taskType, notFocused]);
 
     function setControlsDisabled(disabled) {
         onLoadingChange(disabled);
@@ -156,102 +151,186 @@ export default function Trainer({
         setWeakRules([]);
     }
 
-    // ✅ show correct sentence / blank in UI
+    // -----------------------------
+    // Helpers for task type + server params
+    // -----------------------------
+    const gapsAvailable = difficulty === "A1";
+
+    function getUseSameTaskType() {
+        // as you specified:
+        // - translations/gaps => true
+        // - combined => false
+        return taskMode === "combined" ? "false" : "true";
+    }
+
+    function getRequestedTaskType() {
+        // lock: if not A1, force translations
+        if (!gapsAvailable) return 0;
+
+        if (taskMode === "translations") return 0;
+        if (taskMode === "gaps") return 1;
+
+        // ✅ combined: NEVER request gaps. Only use gaps if server returned them as preload.
+        return 0;
+    }
+
+    function resetCurrentTaskOnly() {
+        setTaskType("translate");
+        setTextToTranslate("");
+        setGapSentence("");
+        setGapOptions([]);
+        setGapSelected(null);
+        setRules([]);
+        setAnswer("");
+        setCorrectAnswer("");
+        setWeakRules([]);
+        setTaskHint(null);
+        setMode("check");
+    }
+
+
+    // -----------------------------
+    // Render gap with blank / selected option
+    // -----------------------------
     const renderedTaskText = useMemo(() => {
         if (taskType !== "gap") return taskText;
 
         const gap = gapSelected
-            ? `<span style="
-        color:#fe6137;
-        font-weight:800;
-      ">${gapSelected}</span>`
+            ? `<span style="color:#fe6137;font-weight:800;">${gapSelected}</span>`
             : `<span style="
-        display:inline-block;
-        min-width:80px;
-        border-bottom:2px solid ${theme.text};
-        border-color: #fe6137;
-        transform: translateY(2px);
-      "></span>`;
+            display:inline-block;
+            min-width:80px;
+            border-bottom:2px solid ${theme.text};
+            border-color:#fe6137;
+            transform: translateY(2px);
+         "></span>`;
 
-        return (gapSentence || "").replace("{GAP}", gap);
+        return (gapSentence[0] || "").replace("{GAP}", gap);
     }, [taskType, taskText, gapSentence, gapSelected, theme.text]);
 
-    async function evaluateGapAnswer() {
-        if (!gapSelected) {
-            setHint("Обери варіант перед перевіркою.");
-            return;
-        }
+    // -----------------------------
+    // Reset/invalidate both tasks (used on Next sentence, and on hard mode switches)
+    // -----------------------------
+    function invalidateBothTasks() {
+        // current task UI
+        setTaskType("translate");
+        setTextToTranslate("");
+        setGapSentence("");
+        setGapOptions([]);
+        setGapSelected(null);
+        setRules([]);
+        setAnswer("");
+        setCorrectAnswer("");
+        setWeakRules([]);
+        setTaskHint(null);
+        setMode("check");
 
-        const ok = gapSelected === gapCorrect;
+        // preload
+        setNextTextToTranslate("");
+        setNextRules([]);
+        setNextHint(null);
+        setNextTaskType(0);
+        setNextOptions([]);
 
-        if (ok) {
-            setHint("✔ Правильно!");
-            setCorrectAnswer("");
-            setWeakRules([]);
-        } else {
-            setHint("❌ Не зовсім.");
-            setCorrectAnswer((gapSentence || "").replace("{GAP}", gapCorrect));
-            setWeakRules(rules?.length ? rules : []);
-        }
-
-        setMode("next");
+        // caches
+        setCachedTranslateTask(null);
+        setCachedGapTask(null);
     }
 
-    async function fetchNextSentence({nextLevel, nextRule, selectedDifficulty, seed, skip}) {
+    // Apply task objects (used internally)
+    function applyTranslationTask(data) {
+        setTaskType("translate");
+        setTextToTranslate(data.textToTranslate || "");
+        setTaskText(data.textToTranslate || "—");
+        setTaskHint(data.hint || null);
+        setHint("Порада: переклади і натисни «Перевірити»");
+        setRules(data.rules || []);
+        setAnswer("");
+        setGapSelected(null);
+        setCorrectAnswer("");
+        setWeakRules([]);
+        setMode("check");
+
+        setCachedTranslateTask({
+            text: data.textToTranslate || "",
+            rules: data.rules || [],
+            hint: data.hint || null,
+        });
+    }
+
+    function applyGapTask(data) {
+        setTaskType("gap");
+        setGapSentence(data.textToTranslate || "");
+        setGapOptions(Array.isArray(data.options) ? data.options : []);
+        setGapSelected(null);
+        setTaskText(data.textToTranslate || "—");
+        setTaskHint(null);
+        setHint("Порада: обери правильний варіант.");
+        setRules(data.rules || []);
+        setAnswer("");
+        setCorrectAnswer("");
+        setWeakRules([]);
+        setMode("check");
+
+        setCachedGapTask({
+            en: data.textToTranslate || "",
+            rules: data.rules || [],
+            options: Array.isArray(data.options) ? data.options : [],
+        });
+    }
+
+    // -----------------------------
+    // Fetch next task from server
+    // -----------------------------
+    async function fetchNextSentence({
+                                         nextLevel,
+                                         nextRule,
+                                         selectedDifficulty,
+                                         seed,
+                                         skip,
+                                         overrideTaskType = null,
+                                     }) {
         let ruleToSend = nextRule;
 
-        if (nextLevel === "managed") {
-            const allStats = getAllStatistics();
+        const task_type = String(overrideTaskType ?? getRequestedTaskType());
+        const use_same_task_type = getUseSameTaskType();
 
-            const {level} = getTrainingLevel();
-            const allowedRules = LEVEL_RULES[level] ?? [];
-            const stats = allStats.filter(s => allowedRules.includes(s.rule));
+        const allStats = getAllStatistics();
 
-            if (!ruleToSend) {
-                const noAttempts = stats.filter(r => r.attemptsNumber === 0);
+        const {level} = nextLevel === "managed" ? getTrainingLevel() : {level: selectedDifficulty};
 
-                if (noAttempts.length > 0) {
-                    ruleToSend = noAttempts[Math.floor(Math.random() * noAttempts.length)].rule;
+        const allowedRules = LEVEL_RULES[level] ?? [];
+        const stats = allStats.filter(s => allowedRules.includes(s.rule));
+
+        if (!ruleToSend) {
+            const noAttempts = stats.filter(r => r.attemptsNumber === 0);
+
+            if (noAttempts.length > 0) {
+                ruleToSend = noAttempts[Math.floor(Math.random() * noAttempts.length)].rule;
+            } else {
+                const lowestAcc = stats.reduce((a, b) => (a.accuracy < b.accuracy ? a : b));
+                const below75 = stats.filter(r => r.accuracy < 75);
+                const rnd = Math.random() * 100;
+
+                const fewDataRules = stats.filter(r => r.attemptsLast7Days <= 4);
+                if (rnd < 60) {
+                    ruleToSend = lowestAcc.rule;
+                } else if (rnd < 90 && below75.length > 0 && fewDataRules.length > 0) {
+                    ruleToSend = fewDataRules[Math.floor(Math.random() * fewDataRules.length)].rule;
                 } else {
-                    const lowestAcc = stats.reduce((a, b) => (a.accuracy < b.accuracy ? a : b));
-                    const below75 = stats.filter(r => r.accuracy < 75);
-                    const rnd = Math.random() * 100;
-
-                    const fewDataRules = stats.filter(r => r.attemptsLast7Days <= 4);
-                    if (rnd < 60) {
-                        ruleToSend = lowestAcc.rule;
-                    } else if (rnd < 90 && below75.length > 0 && fewDataRules.length > 0) {
-                        // NOTE: keep your original logic intent; bugfix would be using fewDataRules.length
-                        ruleToSend = fewDataRules[Math.floor(Math.random() * fewDataRules.length)].rule;
-                    } else {
-                        const pick = stats[Math.floor(Math.random() * stats.length)];
-                        ruleToSend = pick.rule;
-                    }
+                    const pick = stats[Math.floor(Math.random() * stats.length)];
+                    ruleToSend = pick.rule;
                 }
             }
-
-            logInfo("getting training sentence...");
-            const result = await callTranslateAPI({
-                rules: [ruleToSend],
-                seed,
-                skip
-            });
-
-            if (!result.allowed) {
-                setLocked(true);
-                setWaitTimeSeconds(result.waitTimeSeconds);
-            }
-            return result;
         }
-
-        const currentLevel = selectedDifficulty;
 
         logInfo("getting training sentence...");
         const result = await callTranslateAPI({
-            level: currentLevel,
             rules: [ruleToSend],
             seed,
-            skip
+            skip,
+            task_type,
+            use_same_task_type,
         });
 
         if (!result.allowed) {
@@ -259,40 +338,68 @@ export default function Trainer({
             setWaitTimeSeconds(result.waitTimeSeconds);
         }
         return result;
+
     }
 
-    async function loadNewTask(selectedDifficulty = difficulty) {
+    // -----------------------------
+    // Load task (uses preload if available)
+    // -----------------------------
+    async function loadNewTask(selectedDifficulty = difficulty, {overrideTaskType = null} = {}) {
         if (!selectedDifficulty && !nextRule) return;
 
         try {
             setControlsDisabled(true);
             setAnswer("");
+            setGapSelected(null);
             setWeakRules([]);
 
-            if (!nextRules || !nextTextToTranslate) {
+            const hasPreload = !!(nextTextToTranslate && nextRules && nextRules.length > 0);
+
+            if (!hasPreload) {
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const data = await fetchNextSentence({nextLevel, nextRule, selectedDifficulty, seed, skip});
-                setTextToTranslate(data.textToTranslate || "");
-                setRules(data.rules || null);
-                setTaskText(data.textToTranslate || "—");
-                setTaskHint(data.hint || null);
+                const data = await fetchNextSentence({
+                    nextLevel,
+                    nextRule,
+                    selectedDifficulty,
+                    seed,
+                    skip,
+                    overrideTaskType,
+                });
+
+                const serverTaskType = Number(data.taskType ?? 0);
+                if (serverTaskType === 1) applyGapTask(data);
+                else applyTranslationTask(data);
 
                 saveSeed({seed, skip: data.skip ?? (skip + 1)});
             } else {
-                setTextToTranslate(nextTextToTranslate || "");
-                setRules(nextRules || null);
-                setTaskText(nextTextToTranslate || "—");
-                setTaskHint(nextHint || null);
+                // Apply preloaded task
+                const t = Number(nextTaskType ?? 0);
+
+                if (t === 1) {
+                    applyGapTask({
+                        taskType: 1,
+                        textToTranslate: nextTextToTranslate,
+                        rules: nextRules,
+                        options: nextOptions,
+                    });
+                } else {
+                    applyTranslationTask({
+                        taskType: 0,
+                        textToTranslate: nextTextToTranslate,
+                        rules: nextRules,
+                        hint: nextHint,
+                    });
+                }
+
+                // consume preload
+                setNextTextToTranslate("");
+                setNextRules([]);
+                setNextHint(null);
+                setNextTaskType(0);
+                setNextOptions([]);
             }
-
-            setNextTextToTranslate("");
-            setNextRules([]);
-
-            setHint("Порада: переклади і натисни «Перевірити»");
-            setCorrectAnswer("");
-            setMode("check");
         } catch (e) {
             console.error(e);
             setIsError(true);
@@ -301,9 +408,18 @@ export default function Trainer({
         }
     }
 
-    async function evaluateAnswer() {
-        const userAns = answer.trim();
-        if (!userAns) {
+    // -----------------------------
+    // Evaluate current task
+    // -----------------------------
+    async function evaluateCurrentTask() {
+        const userAns =
+            taskType === "gap" ? String(gapSelected ?? "").trim() : answer.trim();
+
+        if (taskType === "gap" && !gapSelected) {
+            setHint("Обери варіант перед перевіркою.");
+            return;
+        }
+        if (taskType !== "gap" && !userAns) {
             setHint("Введи переклад перед перевіркою.");
             return;
         }
@@ -314,7 +430,19 @@ export default function Trainer({
 
             const {seed, skip} = getSeed();
             logInfo("evaluating answer...");
-            const data = await callTranslateAPI({freeTraining, textToTranslate, translation: userAns, rules, seed, skip});
+
+            const currentTaskTypeParam = taskType === "gap" ? "1" : "0";
+
+            const data = await callTranslateAPI({
+                freeTraining,
+                textToTranslate: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
+                translation: userAns,
+                rules,
+                seed,
+                skip,
+                task_type: currentTaskTypeParam,
+                use_same_task_type: getUseSameTaskType(),
+            });
 
             if (!data.isSuccess) {
                 setHint("Навчайся більше з підпискою, або почекай");
@@ -333,11 +461,10 @@ export default function Trainer({
             let nextWeakRules = [];
             if (!data.isAnswerCorrect) nextWeakRules = rules.map(r => r);
 
-            const uniqueWeakRules = [...new Set(nextWeakRules)];
-            setWeakRules(uniqueWeakRules);
+            setWeakRules([...new Set(nextWeakRules)]);
 
             const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
-            addAnswer(data.scores, rules, data.level);
+            addAnswer(data.scores || [], rules, data.level);
             const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
             if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
 
@@ -351,19 +478,40 @@ export default function Trainer({
             }
 
             emit("weeklyProgressUpdate");
-            setMode("next");
 
-            const {isCalibration} = getTrainingLevel();
+            const serverNextType = Number(data.taskType ?? 0);
+            const serverProvidedNextTask = !!(data.textToTranslate && (data.rules?.length ?? 0) > 0);
+
+// ✅ combined: we only "accept" gaps if server provided the actual gap task payload
+            if (taskMode === "combined") {
+                if (gapsAvailable && serverProvidedNextTask && serverNextType === 1) {
+                    // optional: keep this state if you still display it somewhere
+                    setNextRequestedTaskType(1);
+                } else {
+                    setNextRequestedTaskType(0);
+                }
+            }
+
+
+// ✅ Preload next task (always keep server-provided next task if we’re allowed to preload)
+            const { isCalibration } = getTrainingLevel();
+
             if (freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
-                setNextRules(data.rules);
+                setNextRules(data.rules || []);
                 setNextHint(data.hint || null);
-            } else if (nextLevel === "managed" && isCalibration) {
-                setNextRules([]);
+                setNextTaskType(serverNextType);
+                setNextOptions(Array.isArray(data.options) ? data.options : []);
+            } else {
+                // clear preload (either calibration or we don't preload here)
                 setNextTextToTranslate("");
-                setNextRules(data.rules);
+                setNextRules([]);
                 setNextHint(null);
+                setNextTaskType(0);
+                setNextOptions([]);
             }
+
+            setMode("next");
 
             saveSeed({seed, skip: data.skip ?? (skip + 1)});
             onAnswerEvaluated();
@@ -386,6 +534,9 @@ export default function Trainer({
         }
     }
 
+    // -----------------------------
+    // Main button (Check / Next)
+    // -----------------------------
     async function onMainButtonClick() {
         if (locked) {
             setLimitModalOpen(true);
@@ -399,25 +550,109 @@ export default function Trainer({
         }
 
         if (mode === "check") {
-            if (taskType === "gap") await evaluateGapAnswer();
-            else await evaluateAnswer();
-        } else {
-            // DEMO: reset same hardcoded gap task
-            if (taskType === "gap") {
-                setGapSelected(null);
-                setHint("Порада: обери правильний варіант.");
-                setCorrectAnswer("");
-                setWeakRules([]);
-                setMode("check");
-                return;
-            }
-
-            const diff = randomDifficulty(level);
-            setDifficulty(diff);
-            resetToLoadingPlaceholders();
-            await loadNewTask(diff);
+            await evaluateCurrentTask();
+            return;
         }
+
+        // ✅ NEXT:
+        // "reload both tasks" => invalidate both tasks/preloads/caches so everything is fresh
+        resetCurrentTaskOnly();
+        resetToLoadingPlaceholders();
+
+        const diff = randomDifficulty(level);
+        setDifficulty(diff);
+
+        // In combined, we choose the type for upcoming tasks (0 or 1) via nextRequestedTaskType.
+        // In translations/gaps, getRequestedTaskType() already forces it.
+        await loadNewTask(diff, {overrideTaskType: getRequestedTaskType()});
     }
+
+    // -----------------------------
+    // Mode switch handling (your latest rule)
+    // -----------------------------
+    async function onTaskModeSelected(newMode) {
+        if (taskModeLocked) return;
+
+        // Combined: DOES NOT reset anything (only affects upcoming tasks)
+        if (newMode === "combined") {
+            setTaskMode("combined");
+            // start upcoming tasks with translation
+            if (gapsAvailable) setNextRequestedTaskType(0);
+            return;
+        }
+
+        // If user selected opposite mode (translations/gaps): reset + load fresh task of that mode
+        setTaskMode(newMode);
+
+        // Force same type for subsequent tasks in this mode
+        if (newMode === "translations") setNextRequestedTaskType(0);
+        if (newMode === "gaps") setNextRequestedTaskType(1);
+
+        // hard reset everything to avoid mixing tasks
+        invalidateBothTasks();
+        resetToLoadingPlaceholders();
+
+        // Load a fresh task of selected mode
+        const forced = newMode === "gaps" ? 1 : 0;
+        await loadNewTask(difficulty, {overrideTaskType: forced});
+    }
+
+    // -----------------------------
+    // Initial load when nextLevel changes
+    // -----------------------------
+    useEffect(() => {
+        if (loading) return;
+        if (nextLevel === level && !nextRule) return;
+
+        if (level !== nextLevel) {
+            invalidateBothTasks();
+        }
+
+        setLevel(nextLevel);
+
+        const diff = randomDifficulty(nextLevel);
+        setDifficulty(diff);
+
+        // lock selector if gaps not available
+        const isA1 = diff === "A1";
+        if (!isA1) {
+            setTaskMode("translations");
+            setTaskModeLocked(true);
+            setTaskModeLockReason("Gaps are available only for A1 for now.");
+            setNextRequestedTaskType(0);
+        } else {
+            setTaskModeLocked(false);
+            setTaskModeLockReason("");
+            // if in combined, upcoming starts with translation
+            if (taskMode === "combined") setNextRequestedTaskType(0);
+        }
+
+        resetToLoadingPlaceholders();
+        loadNewTask(diff, {overrideTaskType: isA1 ? getRequestedTaskType() : 0}).then(_ => {});
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [nextLevel]);
+
+    // Focus textarea only for translation tasks
+    useEffect(() => {
+        if (taskType === "gap") return;
+        if (mode === "check" && !notFocused && textareaRef.current && !loading) textareaRef.current.focus();
+    }, [mode, loading, taskType, notFocused]);
+
+    // Also enforce lock if difficulty changes away from A1
+    useEffect(() => {
+        if (!difficulty) return;
+
+        if (difficulty !== "A1") {
+            setTaskMode("translations");
+            setTaskModeLocked(true);
+            setTaskModeLockReason("Gaps are available only for A1 for now.");
+            setNextRequestedTaskType(0);
+        } else {
+            setTaskModeLocked(false);
+            setTaskModeLockReason("");
+            if (taskMode === "combined") setNextRequestedTaskType(0);
+        }
+    }, [difficulty]);
 
     return isError ? (
         <div style={{
@@ -440,11 +675,11 @@ export default function Trainer({
                 waitTimeSeconds={waitTimeSeconds}
                 hint={
                     taskType === "gap"
-                        ? null              // ✅ hide hint for gap
+                        ? null
                         : (freeTraining ? taskHint : null)
                 }
                 theme={theme}
-                taskText={renderedTaskText}   // ✅ key: show gap sentence w/ blank
+                taskText={renderedTaskText}
                 answer={answer}
                 setAnswer={setAnswer}
                 isInputDisabled={loading || mode === "next"}
@@ -455,10 +690,17 @@ export default function Trainer({
                 onKeyDown={handleKeyDown}
                 locked={locked}
                 account={account}
+
                 taskType={taskType}
                 gapOptions={gapOptions}
                 gapSelected={gapSelected}
                 setGapSelected={setGapSelected}
+
+                // ✅ mode selector props
+                taskMode={taskMode}
+                setTaskMode={onTaskModeSelected}
+                taskModeLocked={taskModeLocked}
+                taskModeLockReason={taskModeLockReason}
             />
 
             <ResultCard

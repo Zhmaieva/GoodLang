@@ -2,7 +2,7 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["I am {GAP}."],
-    "options": ["Ukrainian", "from the Ukraine"],
+    "options": ["Ukrainian", "from Ukraine"],
     "correct": "Ukrainian"
   },
   {
@@ -14,13 +14,13 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["American", "from the America"],
+    "options": ["American", "from America"],
     "correct": "American"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["We are {GAP}."],
-    "options": ["Italian", "from the Italy"],
+    "options": ["Italian", "from Italy"],
     "correct": "Italian"
   },
   {
@@ -44,7 +44,7 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["British", "from the Britain"],
+    "options": ["British", "from Britain"],
     "correct": "British"
   },
   {
@@ -62,13 +62,13 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["Japanese", "from the Japan"],
+    "options": ["Japanese", "from Japan"],
     "correct": "Japanese"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["They are {GAP}."],
-    "options": ["Chinese", "from the China"],
+    "options": ["Chinese", "from China"],
     "correct": "Chinese"
   },
   {
@@ -80,7 +80,7 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["My teacher is {GAP}."],
-    "options": ["Irish", "from the Ireland"],
+    "options": ["Irish", "from Ireland"],
     "correct": "Irish"
   },
   {
@@ -92,7 +92,7 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["She is {GAP}."],
-    "options": ["Greek", "from the Greece"],
+    "options": ["Greek", "from Greece"],
     "correct": "Greek"
   },
   {
@@ -110,7 +110,7 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["Dutch", "from the Holland"],
+    "options": ["Dutch", "from Holland"],
     "correct": "Dutch"
   },
   {

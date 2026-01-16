@@ -2,121 +2,121 @@
   {
     "rules": ["ARTICLES"],
     "en": ["I have {GAP} dog."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["She wants {GAP} apple."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "an"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["He is {GAP} teacher."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["This is {GAP} new phone."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["We live in {GAP} big city."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["There is {GAP} book on the table."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["I need {GAP} pen."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["She bought {GAP} dress yesterday."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["He found {GAP} job."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["It is {GAP} good idea."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "a"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["{ARTICLE} sun is very bright today."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["{ARTICLE} sky is blue."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["{ARTICLE} coffee is hot."],
-    "options": ["a", "an", "the", "—"],
-    "correct": "—"
+    "options": ["a", "an", "the", ""],
+    "correct": ""
   },
   {
     "rules": ["ARTICLES"],
     "en": ["{ARTICLE} house has a garden."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["{ARTICLE} movie was interesting."],
-    "options": ["a", "an", "the", "—"],
+    "options": ["a", "an", "the", ""],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
     "en": ["I go to {GAP} school every day."],
-    "options": ["a", "an", "the", "—"],
-    "correct": "—"
+    "options": ["a", "an", "the", ""],
+    "correct": ""
   },
   {
     "rules": ["ARTICLES"],
     "en": ["She listens to {GAP} music in the evening."],
-    "options": ["a", "an", "the", "—"],
-    "correct": "—"
+    "options": ["a", "an", "the", ""],
+    "correct": ""
   },
   {
     "rules": ["ARTICLES"],
     "en": ["He drinks {GAP} water after running."],
-    "options": ["a", "an", "the", "—"],
-    "correct": "—"
+    "options": ["a", "an", "the", ""],
+    "correct": ""
   },
   {
     "rules": ["ARTICLES"],
     "en": ["We eat {GAP} dinner at home."],
-    "options": ["a", "an", "the", "—"],
-    "correct": "—"
+    "options": ["a", "an", "the", ""],
+    "correct": ""
   },
   {
     "rules": ["ARTICLES"],
     "en": ["I like {GAP} chocolate."],
-    "options": ["a", "an", "the", "—"],
-    "correct": "—"
+    "options": ["a", "an", "the", ""],
+    "correct": ""
   }
 ] }
