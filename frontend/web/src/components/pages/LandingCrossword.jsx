@@ -11,6 +11,7 @@ import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/set
 import InfoModal from "../modals/InfoModal.jsx";
 import {downloadCrossword} from "../../services/api.js"; // adjust path if needed
 import {useLocation} from "react-router-dom";
+import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../services/gaService.js";
 
 
 export default function LandingCrossword({theme}) {
@@ -56,6 +57,8 @@ export default function LandingCrossword({theme}) {
 
 
     const startUsing = async () => {
+        trackMetaCustomEvent("StartUsing");
+
         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING_TEACHER_APP);
         setTimeout(() => navigate("/"), 200);
     };
@@ -615,6 +618,8 @@ html{ scroll-behavior: smooth; }
                         setCookieOpen(false);
 
                         acceptCookies();
+                        ensureAnalytics();
+                        trackPageView(window.location.pathname);
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
 
