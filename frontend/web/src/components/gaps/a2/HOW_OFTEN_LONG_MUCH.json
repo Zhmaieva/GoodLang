@@ -1,0 +1,124 @@
+{
+  "HOW_OFTEN_LONG_MUCH": [
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} do you go to the gym?"],
+      "options": ["How often", "How long", "How much"],
+      "correct": "How often"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} does the meeting last?"],
+      "options": ["How much", "How long", "How often"],
+      "correct": "How long"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} water do you drink a day?"],
+      "options": ["How many", "How much", "How often"],
+      "correct": "How much"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} do you call your parents?"],
+      "options": ["How often", "How much", "How long"],
+      "correct": "How often"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} does it take to get to work?"],
+      "options": ["How long", "How often", "How much"],
+      "correct": "How long"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} coffee do you drink?"],
+      "options": ["How often", "How much", "How many"],
+      "correct": "How much"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} do you clean your room?"],
+      "options": ["How long", "How often", "How much"],
+      "correct": "How often"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} does the movie run?"],
+      "options": ["How much", "How long", "How often"],
+      "correct": "How long"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} money do you need?"],
+      "options": ["How much", "How long", "How many"],
+      "correct": "How much"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} do you eat out?"],
+      "options": ["How often", "How long", "How much"],
+      "correct": "How often"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} does the flight take?"],
+      "options": ["How often", "How much", "How long"],
+      "correct": "How long"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} sugar is in this cake?"],
+      "options": ["How long", "How many", "How much"],
+      "correct": "How much"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} do you check your email?"],
+      "options": ["How much", "How often", "How long"],
+      "correct": "How often"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} does the lesson take?"],
+      "options": ["How long", "How often", "How much"],
+      "correct": "How long"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} milk do we have left?"],
+      "options": ["How many", "How long", "How much"],
+      "correct": "How much"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} do you travel for work?"],
+      "options": ["How long", "How often", "How much"],
+      "correct": "How often"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} did you wait in line?"],
+      "options": ["How much", "How long", "How often"],
+      "correct": "How long"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} bread should I buy?"],
+      "options": ["How many", "How much", "How often"],
+      "correct": "How much"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} do you exercise at home?"],
+      "options": ["How often", "How much", "How long"],
+      "correct": "How often"
+    },
+    {
+      "rules": ["HOW_OFTEN_LONG_MUCH"],
+      "en": ["{GAP} does the test last?"],
+      "options": ["How much", "How often", "How long"],
+      "correct": "How long"
+    }
+  ]
+}

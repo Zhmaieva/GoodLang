@@ -1,0 +1,124 @@
+{
+  "COMPARATIVES": [
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This bag is {GAP} than mine."],
+      "options": ["more heavy", "heavier", "heavy"],
+      "correct": "heavier"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["Today is {GAP} than yesterday."],
+      "options": ["more cold", "cold", "colder"],
+      "correct": "colder"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["My phone is {GAP} than yours."],
+      "options": ["more expensive", "expensiver", "expensive"],
+      "correct": "more expensive"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This exercise is {GAP} than the last one."],
+      "options": ["easier", "more easy", "easy"],
+      "correct": "easier"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["Her house is {GAP} than ours."],
+      "options": ["more big", "big", "bigger"],
+      "correct": "bigger"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["English is {GAP} than I thought."],
+      "options": ["more difficult", "difficulter", "difficult"],
+      "correct": "more difficult"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This road is {GAP} than that one."],
+      "options": ["long", "more long", "longer"],
+      "correct": "longer"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["My sister is {GAP} than me."],
+      "options": ["taller", "more tall", "tall"],
+      "correct": "taller"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This movie is {GAP} than the book."],
+      "options": ["more interesting", "interestinger", "interesting"],
+      "correct": "more interesting"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["Winter is {GAP} than autumn."],
+      "options": ["cold", "more cold", "colder"],
+      "correct": "colder"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["My job is {GAP} than before."],
+      "options": ["stressful", "stressfuller", "more stressful"],
+      "correct": "more stressful"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This chair is {GAP} than that one."],
+      "options": ["comfortabler", "comfortable", "more comfortable"],
+      "correct": "more comfortable"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["Your answer is {GAP} than mine."],
+      "options": ["better", "more good", "gooder"],
+      "correct": "better"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This test was {GAP} than I expected."],
+      "options": ["more easy", "easier", "easy"],
+      "correct": "easier"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["My city is {GAP} than it was before."],
+      "options": ["more clean", "clean", "cleaner"],
+      "correct": "cleaner"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This app is {GAP} than the old version."],
+      "options": ["more fast", "fast", "faster"],
+      "correct": "faster"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["Math is {GAP} for me than history."],
+      "options": ["harder", "more hard", "hard"],
+      "correct": "harder"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["This restaurant is {GAP} than the one near my house."],
+      "options": ["popularer", "popular","more popular"],
+      "correct": "more popular"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["My new laptop is {GAP} than the old one."],
+      "options": ["lighter", "more light", "light"],
+      "correct": "lighter"
+    },
+    {
+      "rules": ["COMPARATIVES"],
+      "en": ["Life here is {GAP} than in the city."],
+      "options": ["more quiet", "quieter", "quiet"],
+      "correct": "quieter"
+    }
+  ]
+}

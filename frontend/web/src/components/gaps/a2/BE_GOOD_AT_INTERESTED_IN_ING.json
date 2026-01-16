@@ -1,0 +1,124 @@
+{
+  "BE_GOOD_AT_INTERESTED_IN_ING": [
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["She is {GAP} drawing."],
+      "options": ["good in", "good at", "good to"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["I am {GAP} learning English."],
+      "options": ["interested to", "interested in", "interested at"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["He is really {GAP} cooking."],
+      "options": ["good in", "good at", "good with"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["They are {GAP} traveling."],
+      "options": ["interested on", "interested in", "interested to"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["My sister is {GAP} singing."],
+      "options": ["good at", "good in", "good on"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["We are {GAP} meeting new people."],
+      "options": ["interested for", "interested to", "interested in"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["He is not {GAP} remembering names."],
+      "options": ["good at", "good in", "good to"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["I am {GAP} working from home."],
+      "options": ["interested in", "interested to", "interested at"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["She is very {GAP} dancing."],
+      "options": ["good with", "good at", "good in"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["He is {GAP} fixing things."],
+      "options": ["good to", "good in", "good at"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["I am not {GAP} watching TV all day."],
+      "options": ["interested at", "interested in", "interested to"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["She is {GAP} speaking in public."],
+      "options": ["good at", "good for", "good in"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["They are {GAP} learning new skills."],
+      "options": ["interested to", "interested on", "interested in"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["He is quite {GAP} playing chess."],
+      "options": ["good with", "good at", "good in"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["I am {GAP} reading about psychology."],
+      "options": ["interested in", "interested to", "interested at"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["She is {GAP} organizing events."],
+      "options": ["good for", "good in", "good at"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["We are {GAP} improving our English."],
+      "options": ["interested on", "interested in", "interested to"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["He is not very {GAP} explaining things."],
+      "options": ["good at", "good in", "good to"],
+      "correct": "good at"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["I am {GAP} learning new technologies."],
+      "options": ["interested to", "interested at", "interested in"],
+      "correct": "interested in"
+    },
+    {
+      "rules": ["BE_GOOD_AT_INTERESTED_IN_ING"],
+      "en": ["She is really {GAP} taking photos."],
+      "options": ["good in", "good at", "good for"],
+      "correct": "good at"
+    }
+  ]
+}

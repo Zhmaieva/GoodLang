@@ -1,0 +1,124 @@
+{
+  "BEFORE_AFTER_ING": [
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["Wash your hands before {GAP}."],
+      "options": ["eat", "eating", "to eat"],
+      "correct": "eating"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["She felt tired after {GAP} all day."],
+      "options": ["to work", "working", "work"],
+      "correct": "working"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["He checks his phone before {GAP} to bed."],
+      "options": ["to go", "go", "going"],
+      "correct": "going"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["We talked a lot after {GAP} the movie."],
+      "options": ["watch", "watching", "to watch"],
+      "correct": "watching"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["I stretch before {GAP}."],
+      "options": ["running", "to run", "run"],
+      "correct": "running"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["She took a shower after {GAP}."],
+      "options": ["exercise", "to exercise", "exercising"],
+      "correct": "exercising"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["He drinks coffee before {GAP} work."],
+      "options": ["start", "starting", "to start"],
+      "correct": "starting"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["They cleaned the kitchen after {GAP}."],
+      "options": ["to cook", "cooking", "cook"],
+      "correct": "cooking"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["Read the instructions before {GAP} the app."],
+      "options": ["use", "to use", "using"],
+      "correct": "using"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["She relaxed after {GAP} her homework."],
+      "options": ["finishing", "to finish", "finish"],
+      "correct": "finishing"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["Turn off the lights before {GAP} the room."],
+      "options": ["leave", "leaving", "to leave"],
+      "correct": "leaving"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["We talked to the teacher after {GAP} her."],
+      "options": ["to meet", "meeting", "meet"],
+      "correct": "meeting"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["I check the weather before {GAP} out."],
+      "options": ["going", "to go", "go"],
+      "correct": "going"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["She smiled after {GAP} the news."],
+      "options": ["hear", "to hear", "hearing"],
+      "correct": "hearing"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["He washes the dishes after {GAP}."],
+      "options": ["to eat", "eating", "eat"],
+      "correct": "eating"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["Lock the door before {GAP} the house."],
+      "options": ["leaving", "leave", "to leave"],
+      "correct": "leaving"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["She rested after {GAP} for hours."],
+      "options": ["to walk", "walking", "walk"],
+      "correct": "walking"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["Say goodbye before {GAP} home."],
+      "options": ["go", "to go", "going"],
+      "correct": "going"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["He felt better after {GAP} to her."],
+      "options": ["talk", "talking", "to talk"],
+      "correct": "talking"
+    },
+    {
+      "rules": ["BEFORE_AFTER_ING"],
+      "en": ["Save your work before {GAP} the file."],
+      "options": ["to close", "close", "closing"],
+      "correct": "closing"
+    }
+  ]
+}

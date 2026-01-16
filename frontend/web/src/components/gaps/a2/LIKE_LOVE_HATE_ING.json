@@ -1,0 +1,124 @@
+{
+  "LIKE_LOVE_HATE_ING": [
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["I like {GAP} music while working."],
+      "options": [ "listen", "to listen","listening"],
+      "correct": "listening"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["She loves {GAP} photos of her kids."],
+      "options": ["to take", "taking", "take"],
+      "correct": "taking"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["He hates {GAP} early on weekends."],
+      "options": ["wake", "waking", "to wake"],
+      "correct": "waking"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["We love {GAP} at home."],
+      "options": ["cook", "cooking", "to cooking"],
+      "correct": "cooking"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["I hate {GAP} in long lines."],
+      "options": ["waiting", "wait", "to wait"],
+      "correct": "waiting"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["They like {GAP} movies together."],
+      "options": ["watch", "watching", "to watch"],
+      "correct": "watching"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["She hates {GAP} late at night."],
+      "options": [ "drive", "to drive","driving"],
+      "correct": "driving"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["I love {GAP} new places."],
+      "options": ["to travel", "travel", "traveling"],
+      "correct": "traveling"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["He likes {GAP} coffee in the morning."],
+      "options": ["drink", "drinking", "to drink"],
+      "correct": "drinking"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["We hate {GAP} bad news."],
+      "options": [ "hear", "to hear","hearing"],
+      "correct": "hearing"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["She likes {GAP} messages from friends."],
+      "options": ["getting", "get", "to get"],
+      "correct": "getting"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["I love {GAP} books before bed."],
+      "options": ["read", "to read", "reading"],
+      "correct": "reading"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["He hates {GAP} cold weather."],
+      "options": ["feel", "to feel","feeling"],
+      "correct": "feeling"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["They love {GAP} with their dog."],
+      "options": ["playing", "play", "to play"],
+      "correct": "playing"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["I like {GAP} podcasts on walks."],
+      "options": ["listening", "listen", "to listen"],
+      "correct": "listening"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["She hates {GAP} mistakes at work."],
+      "options": ["making", "make", "to make"],
+      "correct": "making"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["We like {GAP} dinner together."],
+      "options": ["having", "have", "to have"],
+      "correct": "having"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["He loves {GAP} new skills."],
+      "options": ["learn", "to learn","learning"],
+      "correct": "learning"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["I hate {GAP} lost."],
+      "options": ["get", "getting", "to get"],
+      "correct": "getting"
+    },
+    {
+      "rules": ["LIKE_LOVE_HATE_ING"],
+      "en": ["She likes {GAP} early in summer."],
+      "options": [ "wake", "to wake","waking"],
+      "correct": "waking"
+    }
+  ]
+}

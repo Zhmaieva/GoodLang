@@ -445,7 +445,7 @@ html{ scroll-behavior: smooth; }
   .left{ padding: 44px 18px; }
   .ctaButtons{ flex-direction: column; }
   .footerInner{ flex-direction: column; align-items: flex-start; gap: 6px; }
-}
+
       `}</style>
 
             {/* HERO */}

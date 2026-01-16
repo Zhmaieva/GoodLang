@@ -1,0 +1,124 @@
+{
+  "GOING_TO_PLANS": [
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["I am going to {GAP} my parents this weekend."],
+      "options": ["visit", "visiting"],
+      "correct": "visit"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["She is going to {GAP} a new job next month."],
+      "options": ["starting", "start"],
+      "correct": "start"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["We are going to {GAP} a movie tonight."],
+      "options": ["watch", "watching"],
+      "correct": "watch"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["I am going to {GAP} dinner for my family."],
+      "options": ["cooking", "cook"],
+      "correct": "cook"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["They are going to {GAP} to Italy in summer."],
+      "options": ["travel", "traveling"],
+      "correct": "travel"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["He is going to {GAP} a new phone tomorrow."],
+      "options": ["buying", "buy"],
+      "correct": "buy"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["I am going to {GAP} my friend after work."],
+      "options": ["meet", "meeting"],
+      "correct": "meet"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["We are going to {GAP} to a new apartment."],
+      "options": ["moving", "move"],
+      "correct": "move"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["She is going to {GAP} English this year."],
+      "options": ["learn", "learning"],
+      "correct": "learn"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["I am going to {GAP} my room today."],
+      "options": ["cleaning", "clean"],
+      "correct": "clean"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["They are going to {GAP} a party on Friday."],
+      "options": ["having","have"],
+      "correct": "have"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["He is going to {GAP} tonight."],
+      "options": ["studying", "study"],
+      "correct": "study"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["We are going to {GAP} at home this evening."],
+      "options": ["stay", "staying"],
+      "correct": "stay"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["I am going to {GAP} you later."],
+      "options": ["calling", "call"],
+      "correct": "call"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["She is going to {GAP} her job soon."],
+      "options": ["change", "changing"],
+      "correct": "change"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["They are going to {GAP} their grandparents."],
+      "options": ["visiting", "visit"],
+      "correct": "visit"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["I am going to {GAP} up early tomorrow."],
+      "options": ["waking","wake" ],
+      "correct": "wake"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["He is going to {GAP} a break next week."],
+      "options": ["taking", "take"],
+      "correct": "take"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["We are going to {GAP} lunch together."],
+      "options": ["have", "having"],
+      "correct": "have"
+    },
+    {
+      "rules": ["GOING_TO_PLANS"],
+      "en": ["She is going to {GAP} some groceries later."],
+      "options": [ "buy","buying"],
+      "correct": "buy"
+    }
+  ]
+}

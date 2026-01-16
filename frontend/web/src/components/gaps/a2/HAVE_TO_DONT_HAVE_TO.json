@@ -1,0 +1,124 @@
+{
+  "HAVE_TO_DONT_HAVE_TO": [
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["I {GAP} wear a uniform at school."],
+      "options": ["has to", "have to", "doesn't have to"],
+      "correct": "have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["She {GAP} clean her room every weekend."],
+      "options": ["have to", "don't have to", "has to"],
+      "correct": "has to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["We {GAP} study for the exam tomorrow."],
+      "options": ["have to", "has to", "doesn't have to"],
+      "correct": "have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["He {GAP} pay for the ticket because it's free."],
+      "options": ["have to", "doesn't have to"],
+      "correct": "doesn't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["You {GAP} eat breakfast every morning."],
+      "options": ["don't have to", "has to"],
+      "correct": "don't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["The dog {GAP} go for a walk twice a day."],
+      "options": ["has to", "have to", "don't have to"],
+      "correct": "has to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["They {GAP} bring their own food to the party."],
+      "options": ["has to", "doesn't have to", "don't have to"],
+      "correct": "don't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["My sister {GAP} finish her homework before dinner."],
+      "options": ["has to", "have to"],
+      "correct": "has to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["I {GAP} wake up early on weekends."],
+      "options": ["don't have to", "has to"],
+      "correct": "don't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["The teacher {GAP} grade the tests by Friday."],
+      "options": ["have to", "has to"],
+      "correct": "has to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["We {GAP} take the bus because we have a car."],
+      "options": ["don't have to", "has to"],
+      "correct": "don't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["He {GAP} wear a helmet when riding a bike."],
+      "options": ["has to", "have to", "don't have to"],
+      "correct": "has to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["You {GAP} buy a new phone if yours works fine."],
+      "options": [ "has to","don't have to"],
+      "correct": "don't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["The children {GAP} go to bed at 8 PM."],
+      "options": ["has to", "have to"],
+      "correct": "have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["She {GAP} cook dinner because we ordered pizza."],
+      "options": [ "doesn't have to", "have to"],
+      "correct": "doesn't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["I {GAP} learn English for my job."],
+      "options": [ "has to", "doesn't have to", "have to"],
+      "correct": "have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["The cat {GAP} eat vegetables."],
+      "options": ["have to", "doesn't have to"],
+      "correct": "doesn't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["They {GAP} visit the doctor regularly."],
+      "options": ["has to", "have to", "doesn't have to"],
+      "correct": "have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["My brother {GAP} drive to work; he can walk."],
+      "options": ["doesn't have to", "have to"],
+      "correct": "doesn't have to"
+    },
+    {
+      "rules": ["HAVE_TO_DONT_HAVE_TO"],
+      "en": ["We {GAP} water the plants every day."],
+      "options": ["has to", "have to"],
+      "correct": "have to"
+    }
+  ]
+}

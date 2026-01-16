@@ -1,0 +1,124 @@
+{
+  "FIRST_CONDITIONAL": [
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If it {GAP} rain, I will stay at home."],
+      "options": ["will rain", "rains", "rained"],
+      "correct": "rains"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If you hurry, you {GAP} catch the bus."],
+      "options": ["will", "would", "are"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If she {GAP} this button, the door will open."],
+      "options": ["pressed", "will press", "presses"],
+      "correct": "presses"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If we finish early, we {GAP} go for a walk."],
+      "options": ["go", "would", "will"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If he {GAP} enough money, he will buy a car."],
+      "options": ["will have", "has", "had"],
+      "correct": "has"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If you don’t call me, I {GAP} worry."],
+      "options": ["worried", "will worry", "worry"],
+      "correct": "will worry"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If they arrive late, the movie {GAP} start without them."],
+      "options": ["started", "will", "starts"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If I feel tired, I {GAP} go to bed early."],
+      "options": ["will", "would", "am"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If it {GAP} cold tonight, we will close the window."],
+      "options": ["will be", "is", "was"],
+      "correct": "is"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If you study more, you {GAP} pass the test."],
+      "options": ["pass", "would", "will"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If she doesn’t eat now, she {GAP} be hungry later."],
+      "options": ["will", "is", "was"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If we miss the train, we {GAP} take a taxi."],
+      "options": ["took", "will", "take"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If he {GAP} too fast, he will get a fine."],
+      "options": ["will drive", "drives", "drove"],
+      "correct": "drives"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If you ask her, she {GAP} help you."],
+      "options": ["helps", "will", "helped"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If it stops raining, we {GAP} go outside."],
+      "options": ["will", "go", "went"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If I don’t sleep well, I {GAP} feel tired tomorrow."],
+      "options": ["felt", "feel", "will"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If she {GAP} late again, the boss will be angry."],
+      "options": ["will be", "is", "was"],
+      "correct": "is"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If you break the rules, you {GAP} get in trouble."],
+      "options": ["got", "will", "get"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If we don’t hurry, we {GAP} be late."],
+      "options": ["are", "will", "were"],
+      "correct": "will"
+    },
+    {
+      "rules": ["FIRST_CONDITIONAL"],
+      "en": ["If he calls me, I {GAP} answer."],
+      "options": ["answered", "will", "answer"],
+      "correct": "will"
+    }
+  ]
+}

@@ -1,5 +1,100 @@
 {
   "ADVERBS_FREQUENCY_OFTEN_NEVER": [
-
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["I {GAP} eat fast food, but not every day."],
+      "options": ["sometimes", "never", "always"],
+      "correct": "sometimes"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["She {GAP} drinks coffee. She hates the taste."],
+      "options": ["never", "often", "sometimes"],
+      "correct": "never"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["He is {GAP} tired after work — almost every day."],
+      "options": ["usually", "never", "rarely"],
+      "correct": "usually"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["I {GAP} forget my phone at home. It happens from time to time."],
+      "options": ["sometimes", "never", "always"],
+      "correct": "sometimes"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["She {GAP} watches TV. She prefers reading."],
+      "options": ["rarely", "always", "often"],
+      "correct": "rarely"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["They are {GAP} late. They plan everything carefully."],
+      "options": ["never", "often", "always"],
+      "correct": "never"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["He {GAP} checks his email at night, but not every evening."],
+      "options": ["often", "never", "always"],
+      "correct": "often"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["I am {GAP} nervous before exams, but not every time."],
+      "options": ["sometimes", "always", "never"],
+      "correct": "sometimes"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["She {GAP} eats meat. She is vegetarian."],
+      "options": ["never", "often", "sometimes"],
+      "correct": "never"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["We {GAP} travel in summer — almost every year."],
+      "options": ["usually", "never", "rarely"],
+      "correct": "usually"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["I {GAP} watch horror movies. I’m too scared."],
+      "options": ["never", "often", "sometimes"],
+      "correct": "never"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["She {GAP} listens to music while studying. She doesn't like to be distracted."],
+      "options": ["often", "never", "usually"],
+      "correct": "never"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["We {GAP} eat breakfast together on weekdays. We never miss it."],
+      "options": ["rarely", "always", "never"],
+      "correct": "always"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["He {GAP} works on weekends — only once a month."],
+      "options": ["rarely", "always", "often"],
+      "correct": "rarely"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["I {GAP} read books before bed. It’s my habit."],
+      "options": ["usually", "never", "rarely"],
+      "correct": "usually"
+    },
+    {
+      "rules": ["ADVERBS_FREQUENCY_OFTEN_NEVER"],
+      "en": ["She is {GAP} online late at night, but not every night."],
+      "options": ["often", "never", "rarely"],
+      "correct": "often"
+    }
   ]
 }

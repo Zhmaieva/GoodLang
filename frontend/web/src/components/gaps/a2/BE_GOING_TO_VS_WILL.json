@@ -1,0 +1,124 @@
+{
+  "BE_GOING_TO_VS_WILL": [
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["I think it {GAP} rain tomorrow."],
+      "options": ["will", "is going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["Look at those clouds! It {GAP} rain."],
+      "options": ["is going to", "will"],
+      "correct": "is going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["I’m tired. I {GAP} go to bed early."],
+      "options": ["will", "am going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["She already decided. She {GAP} change her job."],
+      "options": ["is going to", "will"],
+      "correct": "is going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["Don’t worry, I {GAP} help you."],
+      "options": ["will", "am going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["We bought tickets. We {GAP} visit Paris next week."],
+      "options": ["are going to", "will"],
+      "correct": "are going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["I promise I {GAP} call you later."],
+      "options": ["will", "am going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["He looks very pale. He {GAP} be sick."],
+      "options": ["is going to", "will"],
+      "correct": "is going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["I think you {GAP} like this movie."],
+      "options": ["will", "are going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["She packed her bags. She {GAP} move tomorrow."],
+      "options": ["is going to", "will"],
+      "correct": "is going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["Okay, I {GAP} open the window."],
+      "options": ["will", "am going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["They have a plan. They {GAP} start a business."],
+      "options": ["are going to", "will"],
+      "correct": "are going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["I don’t know yet. Maybe I {GAP} stay at home."],
+      "options": ["will", "am going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["Watch out! You {GAP} fall!"],
+      "options": ["are going to", "will"],
+      "correct": "are going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["I think our team {GAP} win the game."],
+      "options": ["will", "is going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["She studied a lot. She {GAP} pass the exam."],
+      "options": ["is going to", "will"],
+      "correct": "is going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["The phone is ringing. I {GAP} answer it."],
+      "options": ["will", "am going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["There are dark clouds. It {GAP} snow soon."],
+      "options": ["is going to", "will"],
+      "correct": "is going to"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["I’m sure you {GAP} understand this."],
+      "options": ["will", "are going to"],
+      "correct": "will"
+    },
+    {
+      "rules": ["BE_GOING_TO_VS_WILL"],
+      "en": ["He already planned everything. He {GAP} travel alone."],
+      "options": ["is going to", "will"],
+      "correct": "is going to"
+    }
+  ]
+}

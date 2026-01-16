@@ -1,0 +1,124 @@
+{
+  "BECAUSE_SO_BUT_ALTHOUGH": [
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["I stayed at home {GAP} it was raining."],
+      "options": ["but", "because", "so"],
+      "correct": "because"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["I was tired, {GAP} I went to bed early."],
+      "options": ["because", "so", "but"],
+      "correct": "so"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["She likes coffee, {GAP} she doesn’t drink it at night."],
+      "options": ["because", "but", "so"],
+      "correct": "but"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["{GAP} it was cold, he didn’t wear a jacket."],
+      "options": ["Although", "Because", "So"],
+      "correct": "Although"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["I didn’t call you {GAP} I was busy."],
+      "options": ["so", "but", "because"],
+      "correct": "because"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["It was late, {GAP} we went home."],
+      "options": ["but", "because", "so"],
+      "correct": "so"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["He is rich, {GAP} he lives simply."],
+      "options": ["so", "but", "because"],
+      "correct": "but"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["{GAP} she was tired, she finished the work."],
+      "options": ["Because", "Although", "So"],
+      "correct": "Although"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["We stayed inside {GAP} it was very hot."],
+      "options": ["but", "so", "because"],
+      "correct": "because"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["I forgot my keys, {GAP} I couldn’t open the door."],
+      "options": ["because", "but", "so"],
+      "correct": "so"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["She studied a lot, {GAP} she was nervous."],
+      "options": ["so", "because", "but"],
+      "correct": "but"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["{GAP} it was noisy, I could sleep."],
+      "options": ["Because", "So", "Although"],
+      "correct": "Although"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["I ate at home {GAP} the café was closed."],
+      "options": ["but", "because", "so"],
+      "correct": "because"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["It started to rain, {GAP} we stopped walking."],
+      "options": ["but", "so", "because"],
+      "correct": "so"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["He was sick, {GAP} he went to work."],
+      "options": ["because", "so", "but"],
+      "correct": "but"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["{GAP} I like her, I don’t trust her."],
+      "options": ["Because", "Although", "So"],
+      "correct": "Although"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["She smiled {GAP} she was happy."],
+      "options": ["so", "but", "because"],
+      "correct": "because"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["The bus was late, {GAP} I was late too."],
+      "options": ["because", "so", "but"],
+      "correct": "so"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["I want to go, {GAP} I have no time."],
+      "options": ["so", "because", "but"],
+      "correct": "but"
+    },
+    {
+      "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
+      "en": ["{GAP} it was difficult, she didn’t give up."],
+      "options": ["So", "Because", "Although"],
+      "correct": "Although"
+    }
+  ]
+}
