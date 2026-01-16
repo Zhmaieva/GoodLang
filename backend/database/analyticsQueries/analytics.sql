@@ -44,6 +44,7 @@ WITH reg_users AS (
                             (401, 'MODAL_SHOWN_TOU'),
                             (402, 'MODAL_SHOWN_DISCOUNT_SUBSCRIPTION'),
                             (101, 'PDF_DOWNLOAD_CALL'),
+                            (102, 'PDF_CROSSWORD_DOWNLOAD_CALL'),
                             (900, 'LANDING_WAIT_3_SECONDS'),
                             (901, 'LANDING_WAIT_10_SECONDS'),
                             (902, 'LANDING_WAIT_20_SECONDS'),

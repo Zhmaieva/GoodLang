@@ -63,6 +63,12 @@ export default function LandingCrossword({theme}) {
         setTimeout(() => navigate("/"), 200);
     };
 
+    const getSafeFileName = () => {
+        return filename
+            ? filename.replace(/[^\w\d-_]+/g, "_")
+            : `crossword_${code}`;
+    }
+
     const doDownload = async () => {
         if (isDownloading) return;
         if (!code) return; // safety
@@ -75,12 +81,8 @@ export default function LandingCrossword({theme}) {
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement("a");
 
-            const safeName = filename
-                ? filename.replace(/[^\w\d-_]+/g, "_")
-                : `crossword_${code}`;
-
             a.href = url;
-            a.download = `GoodLang_crossword_${safeName}.pdf`;
+            a.download = `GoodLang_crossword_${getSafeFileName()}.pdf`;
             document.body.appendChild(a);
             a.click();
             a.remove();
@@ -550,7 +552,7 @@ html{ scroll-behavior: smooth; }
                                     Завантажую…
                                 </>
                             ) : (
-                                "Скачати кросворд"
+                                `Скачати кросворд ${getSafeFileName()}.pdf`
                             )}
                         </button>
 
