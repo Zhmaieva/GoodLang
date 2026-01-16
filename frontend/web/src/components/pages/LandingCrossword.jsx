@@ -1,22 +1,22 @@
 import handPict from "../../../public/handPict.PNG";
-import hand2 from "../../../public/hand2.PNG";
-import hand1 from "../../../public/hand1.PNG";
-import hand3 from "../../../public/hand3.PNG";
-import messageRight2 from "../../../public/messageRight2.png";
-import messageCenter2 from "../../../public/messageCenter2.png";
-import messageLeft2 from "../../../public/messageLeft2.png";
 import {useNavigate} from "react-router-dom";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import React, {useEffect, useRef, useState} from "react";
 import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import {logError} from "../../services/logger.js";
+
+import CookieConsentModal from "../modals/CookieConsentModal.jsx";
+import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
+import InfoModal from "../modals/InfoModal.jsx";
+import {downloadCrossword} from "../../services/api.js"; // adjust path if needed
+import {useLocation} from "react-router-dom";
+
 
 export default function LandingCrossword({theme}) {
     const navigate = useNavigate();
+    const location = useLocation();
 
-    const [email, setEmail] = useState("");
-    const [sending, setSending] = useState(false);
-    const [msg, setMsg] = useState("");
     const [touOpen, setTouOpen] = React.useState(false);
 
     const hasScrolledRef = useRef(false);
@@ -24,33 +24,107 @@ export default function LandingCrossword({theme}) {
     // ✅ spinner state (RulesTable-style)
     const [isDownloading, setIsDownloading] = useState(false);
 
+    // ✅ cookie gate (Tea-style)
+    const [cookieOpen, setCookieOpen] = useState(false);
+    const [pendingDownload, setPendingDownload] = useState(false);
+
+    // ✅ code from URL
+    const [code, setCode] = useState("");
+    const [filename, setFilename] = useState("");
+
+
+    // ✅ info modal on download error
+    const [infoOpen, setInfoOpen] = useState(false);
+    const [infoMsg, setInfoMsg] = useState(null); // string | JSX
+
+    useEffect(() => {
+        const qs = new URLSearchParams(location.search);
+
+        const c = String(qs.get("code") ?? "").trim();
+        const f = String(qs.get("filename") ?? "").trim();
+
+        if (!c || !f) {
+            navigate("/", { replace: true });
+            return;
+        }
+
+        setCode(c);
+
+        // optional filename (safe fallback)
+        setFilename(f || `crossword_${c}`);
+    }, [location.search, navigate]);
+
+
     const startUsing = async () => {
         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING_TEACHER_APP);
         setTimeout(() => navigate("/"), 200);
     };
 
-    // ✅ button handler with spinner
-    const onDownloadCrosswordClick = async () => {
+    const doDownload = async () => {
         if (isDownloading) return;
+        if (!code) return; // safety
 
         try {
             setIsDownloading(true);
 
-            // keep your tracking
-            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING_TEACHER_PDF);
+            const { blob } = await downloadCrossword(code);
 
-            // if you actually download a file here later, call your API here
-            // await dowloadPdf("CROSSWORD_FOOD_A2") // example
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
 
-            setTimeout(() => navigate("/analytics"), 200);
+            const safeName = filename
+                ? filename.replace(/[^\w\d-_]+/g, "_")
+                : `crossword_${code}`;
+
+            a.href = url;
+            a.download = `GoodLang_crossword_${safeName}.pdf`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+
+            setTimeout(() => {
+                setIsDownloading(false);
+            }, 1000)
         } catch (e) {
-            // optional: show message
-            setMsg("Ой, помилка... Ми вже її виправляємо.");
-        } finally {
-            // if you navigate away immediately, this might not matter,
-            // but still keeps state correct if navigation is blocked for any reason
+            logError(e);
+
+            setInfoMsg(
+                <>
+                    Не вдалося завантажити кросворд.
+
+                    <div style={{ opacity: 0.9 }}>
+                        Напишіть нам на{" "}
+                        <a
+                            href="mailto:goodlang.app@gmail.com"
+                            style={{ color: theme.accentDark, textDecoration: 'none', fontWeight: 900}}
+                        >
+                            goodlang.app@gmail.com
+                        </a>{" "}
+                        і ми допоможемо.
+                    </div>
+                </>
+            );
+            setInfoOpen(true);
             setIsDownloading(false);
         }
+    };
+
+    // ✅ button handler with cookie gating + modal conflict rules
+    const onDownloadCrosswordClick = async () => {
+        if (isDownloading) return;
+
+        // If cookie modal should be shown, do it, and remember we need to download after
+        if (!getCookieConsent()) {
+            setTouOpen(false);          // avoid conflict like Tea landing
+            setCookieOpen(true);
+            setPendingDownload(true);
+
+            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
+            return;
+        }
+
+        await doDownload();
     };
 
     useEffect(() => {
@@ -78,25 +152,6 @@ export default function LandingCrossword({theme}) {
         window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
-
-    const submitEmail = async () => {
-        const v = String(email || "").trim();
-        if (!/^\S+@\S+\.\S+$/.test(v)) {
-            setMsg("Введіть правильний імейл");
-            return;
-        }
-        try {
-            setSending(true);
-            setMsg("");
-            await callSendPromoCodeApi({ email: v });
-            setMsg("Готово! Ми відправили промо код на вказану адресу.");
-            setEmail("");
-        } catch {
-            setMsg("Ой, помилка... Ми вже її виправляємо.");
-        } finally {
-            setSending(false);
-        }
-    };
 
     return (
         <>
@@ -448,6 +503,7 @@ html{ scroll-behavior: smooth; }
 
       `}</style>
 
+
             {/* HERO */}
             <section className="landing">
                 <div className="left">
@@ -521,7 +577,6 @@ html{ scroll-behavior: smooth; }
                                 Спробувати практику
                             </button>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -534,14 +589,69 @@ html{ scroll-behavior: smooth; }
                         <a className="plainLink" href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
                     </div>
 
-                    <div className="footerLink" onClick={() => setTouOpen(true)}>
+                    <div
+                        className="footerLink"
+                        onClick={async () => {
+                            setCookieOpen(false); // ✅ conflict rule like Tea landing
+                            setTouOpen(true);
+                            await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
+                        }}
+                    >
                         Умови використання і політика приватності
                     </div>
                 </div>
             </footer>
 
-            {touOpen && (
+            {/* ✅ Terms modal (only if cookie isn't open) */}
+            {touOpen && !cookieOpen && (
                 <TermsOfUseModal readOnly theme={theme} onClose={() => setTouOpen(false)} />
+            )}
+
+            {/* ✅ Cookie modal (Tea-style conflict rule) */}
+            {cookieOpen && !touOpen && (
+                <CookieConsentModal
+                    theme={theme}
+                    onAccept={async () => {
+                        setCookieOpen(false);
+
+                        acceptCookies();
+
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
+
+                        if (pendingDownload) {
+                            setPendingDownload(false);
+                            await doDownload();
+                        }
+                    }}
+                    onReject={async () => {
+                        setCookieOpen(false);
+
+                        rejectCookies();
+
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
+
+                        if (pendingDownload) {
+                            setPendingDownload(false);
+                            await doDownload();
+                        }
+                    }}
+                    onOpenPolicy={async () => {
+                        setCookieOpen(false);
+                        setTouOpen(true);
+                        await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
+                    }}
+                />
+            )}
+
+            {/* ✅ Info modal on errors */}
+            {infoOpen && (
+                <InfoModal
+                    theme={theme}
+                    title="Ой..."
+                    message={infoMsg}
+                    buttonText="OK"
+                    onClose={() => setInfoOpen(false)}
+                />
             )}
         </>
     );

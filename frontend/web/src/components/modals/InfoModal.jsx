@@ -3,10 +3,12 @@ import React from "react";
 export default function InfoModal({
                                       theme,
                                       title = "Інформація",
-                                      message,
+                                      message,                 // string | ReactNode
                                       buttonText = "OK",
                                       onClose,
                                   }) {
+    const isString = typeof message === "string";
+
     return (
         <div
             style={{
@@ -52,6 +54,7 @@ export default function InfoModal({
                         color: theme.text,
                         fontSize: "1rem",
                         lineHeight: 1.5,
+                        whiteSpace: isString ? "pre-wrap" : "normal", // keeps old newline formatting
                     }}
                 >
                     {message}

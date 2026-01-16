@@ -4,7 +4,7 @@ import {getPromoCode} from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 const STORAGE_KEY_APP_VERSION = "app_version";
-const CLIENT_APP_VERSION = "1.1.1"; // hardcoded client version
+const CLIENT_APP_VERSION = "1.1.2"; // hardcoded client version
 
 export async function callCheckoutApi() {
     const url = `${API_BASE}/payments/create-checkout-session`;
@@ -247,6 +247,41 @@ export async function callVerifyCodeApi({ email, code, termsAccepted = false }) 
 
     return data; // { token: "..." }
 }
+
+export async function downloadCrossword(code) {
+    const p = String(code ?? "").trim();
+    if (!p) throw new Error("Missing code");
+
+    const url = `${API_BASE}/files/pdf/crossword?p=${encodeURIComponent(p)}`;
+
+    const res = await fetch(url, {
+        method: "GET",
+        headers: {
+            Authorization: `Bearer ${await getToken()}`,
+        },
+    });
+
+    if (!res.ok) {
+        // Best-effort message
+        let details = "";
+        try {
+            const ct = res.headers.get("content-type") || "";
+            if (ct.includes("application/json")) {
+                const data = await res.json();
+                details = data?.error ? ` (${data.error})` : "";
+            } else {
+                const txt = await res.text();
+                if (txt) details = ` (${txt.slice(0, 140)})`;
+            }
+        } catch {}
+
+        throw new Error(`Failed to fetch PDF: ${res.status}${details}`);
+    }
+
+    const blob = await res.blob();
+    return { isSuccess: true, blob };
+}
+
 
 
 export async function dowloadPdf(ruleName) {

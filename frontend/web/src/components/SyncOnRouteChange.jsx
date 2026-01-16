@@ -43,6 +43,7 @@ export default function SyncOnRouteChange() {
                     if (location.pathname !== "/welcome"
                         && location.pathname !== '/greetings'
                         && location.pathname !== '/hello'
+                        && location.pathname !== '/crossword'
                         && !shouldOpenSubscribe) {
                         navigate("/welcome", { replace: true });
                         return;
