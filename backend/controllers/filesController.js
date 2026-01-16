@@ -50,7 +50,7 @@ export const filesController = {
 
                 const pdfBuffer = await getPdfByBase64Path(p);
 
-                await recordAction(req.user.id, ACTION_TYPES.PDF_DOWNLOAD_CALL);
+                await recordAction(req.user.id, ACTION_TYPES.PDF_CROSSWORD_DOWNLOAD_CALL);
 
                 res.setHeader("Content-Type", "application/pdf");
                 res.setHeader("Content-Disposition", "inline; filename=file.pdf");
