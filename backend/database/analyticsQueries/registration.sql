@@ -50,12 +50,3 @@ FROM inquiry_emails
 ORDER BY
     is_teacher DESC,
     created_at DESC;
-
---paid accounts
-SELECT
-    id,
-    email,
-    created_at,
-    status
-FROM accounts
-WHERE status = 'paid';
