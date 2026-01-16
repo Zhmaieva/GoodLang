@@ -4,7 +4,7 @@ import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getAllStatistics, getOverallAccuracy, getSeed, saveSeed} from "../../services/dataService.js";
 import {callAccountInfoApi, callAccountVerifyApi, callTranslateAPI} from "../../services/api.js";
 import LimitModal from "../subscription/LimitModal.jsx";
-import {getTrainingLevel} from "../../services/trainingDirector.js";
+import {getSavedTaskMode, getTrainingLevel, saveTaskMode} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
 import {logInfo} from "../../services/logger.js";
@@ -74,7 +74,7 @@ export default function Trainer({
     // Mode selector (UI)
     // -----------------------------
     // "translations" | "gaps" | "combined"
-    const [taskMode, setTaskMode] = useState("combined");
+    const [taskMode, setTaskMode] = useState(() => getSavedTaskMode() || "combined");
     const [taskModeLocked, setTaskModeLocked] = useState(false);
     const [taskModeLockReason, setTaskModeLockReason] = useState("");
 
@@ -137,6 +137,9 @@ export default function Trainer({
 
     useEffect(() => {
         loadAccount().then();
+
+        const saved = getSavedTaskMode();
+        if (saved) setTaskMode(saved);
     }, []);
 
     function setControlsDisabled(disabled) {
@@ -154,7 +157,7 @@ export default function Trainer({
     // -----------------------------
     // Helpers for task type + server params
     // -----------------------------
-    const gapsAvailable = difficulty === "A1";
+    const gapsAvailable = true;//difficulty === "A1";
 
     function getUseSameTaskType() {
         // as you specified:
@@ -195,7 +198,7 @@ export default function Trainer({
     const renderedTaskText = useMemo(() => {
         if (taskType !== "gap") return taskText;
 
-        const gap = gapSelected
+        const gap = gapSelected || gapSelected === ""
             ? `<span style="color:#fe6137;font-weight:800;">${gapSelected}</span>`
             : `<span style="
             display:inline-block;
@@ -415,7 +418,7 @@ export default function Trainer({
         const userAns =
             taskType === "gap" ? String(gapSelected ?? "").trim() : answer.trim();
 
-        if (taskType === "gap" && !gapSelected) {
+        if (taskType === "gap" && !gapSelected && gapSelected !== "") {
             setHint("Обери варіант перед перевіркою.");
             return;
         }
@@ -573,6 +576,8 @@ export default function Trainer({
     async function onTaskModeSelected(newMode) {
         if (taskModeLocked) return;
 
+        saveTaskMode(newMode);
+
         // Combined: DOES NOT reset anything (only affects upcoming tasks)
         if (newMode === "combined") {
             setTaskMode("combined");
@@ -613,22 +618,13 @@ export default function Trainer({
         const diff = randomDifficulty(nextLevel);
         setDifficulty(diff);
 
-        // lock selector if gaps not available
-        const isA1 = diff === "A1";
-        if (!isA1) {
-            setTaskMode("translations");
-            setTaskModeLocked(true);
-            setTaskModeLockReason("Gaps are available only for A1 for now.");
-            setNextRequestedTaskType(0);
-        } else {
-            setTaskModeLocked(false);
-            setTaskModeLockReason("");
-            // if in combined, upcoming starts with translation
-            if (taskMode === "combined") setNextRequestedTaskType(0);
-        }
+        setTaskModeLocked(false);
+        setTaskModeLockReason("");
+        // if in combined, upcoming starts with translation
+        if (taskMode === "combined") setNextRequestedTaskType(0);
 
         resetToLoadingPlaceholders();
-        loadNewTask(diff, {overrideTaskType: isA1 ? getRequestedTaskType() : 0}).then(_ => {});
+        loadNewTask(diff, {overrideTaskType: getRequestedTaskType()}).then(_ => {});
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [nextLevel]);
 
@@ -642,16 +638,10 @@ export default function Trainer({
     useEffect(() => {
         if (!difficulty) return;
 
-        if (difficulty !== "A1") {
-            setTaskMode("translations");
-            setTaskModeLocked(true);
-            setTaskModeLockReason("Gaps are available only for A1 for now.");
-            setNextRequestedTaskType(0);
-        } else {
-            setTaskModeLocked(false);
-            setTaskModeLockReason("");
-            if (taskMode === "combined") setNextRequestedTaskType(0);
-        }
+        setTaskModeLocked(false);
+        setTaskModeLockReason("");
+        if (taskMode === "combined") setNextRequestedTaskType(0);
+
     }, [difficulty]);
 
     return isError ? (
