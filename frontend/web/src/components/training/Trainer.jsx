@@ -471,6 +471,10 @@ export default function Trainer({
             const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
             if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
 
+            const { isCalibration } = getTrainingLevel();
+
+            setTaskModeLocked(!!isCalibration);
+
             if (data.isAnswerCorrect) {
                 setHint("✔ Правильно!");
                 setCorrectAnswer("");
@@ -497,7 +501,6 @@ export default function Trainer({
 
 
 // ✅ Preload next task (always keep server-provided next task if we’re allowed to preload)
-            const { isCalibration } = getTrainingLevel();
 
             if (freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
@@ -576,6 +579,9 @@ export default function Trainer({
     async function onTaskModeSelected(newMode) {
         if (taskModeLocked) return;
 
+        if (newMode === taskMode)
+            return;
+
         saveTaskMode(newMode);
 
         // Combined: DOES NOT reset anything (only affects upcoming tasks)
@@ -618,7 +624,9 @@ export default function Trainer({
         const diff = randomDifficulty(nextLevel);
         setDifficulty(diff);
 
-        setTaskModeLocked(false);
+        const { isCalibration } = getTrainingLevel();
+
+        setTaskModeLocked(!!isCalibration);
         setTaskModeLockReason("");
         // if in combined, upcoming starts with translation
         if (taskMode === "combined") setNextRequestedTaskType(0);
@@ -638,7 +646,9 @@ export default function Trainer({
     useEffect(() => {
         if (!difficulty) return;
 
-        setTaskModeLocked(false);
+        const { isCalibration } = getTrainingLevel();
+
+        setTaskModeLocked(!!isCalibration);
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
 

@@ -141,6 +141,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
                         <LevelSwitch
+                            compact
                             level={level}
                             loading={loading}
                             onLevelChange={onLevelChange}
