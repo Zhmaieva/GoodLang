@@ -61,31 +61,31 @@
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} sun is very bright today."],
+    "en": ["{Gap} sun is very bright today."],
     "options": ["a", "an", "the", ""],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} sky is blue."],
+    "en": ["{Gap} sky is blue."],
     "options": ["a", "an", "the", ""],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} coffee is hot."],
+    "en": ["{Gap} coffee is hot."],
     "options": ["a", "an", "the", ""],
     "correct": ""
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} house has a garden."],
+    "en": ["{Gap} house has a garden."],
     "options": ["a", "an", "the", ""],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} movie was interesting."],
+    "en": ["{Gap} movie was interesting."],
     "options": ["a", "an", "the", ""],
     "correct": "the"
   },

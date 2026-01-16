@@ -9,14 +9,16 @@ import { callAccountVerifyApi, dowloadPdf, callEmailUnsubscribeApi } from "../..
 import { ACTION_TYPES } from "../../utils/constants.js";
 import { getAllStatistics } from "../../services/dataService.js";
 import { on, off } from "../../services/events.js";
-import InfoModal from "../modals/InfoModal.jsx"; // ✅ adjust path if needed
+import InfoModal from "../modals/InfoModal.jsx";
+import {getSavedTrainingLevel, saveTrainingLevel} from "../../services/trainingDirector.js"; // ✅ adjust path if needed
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
-    const [level, setLevel] = useState("managed");
+    const [level, setLevel] = useState(getSavedTrainingLevel() || "managed");
 
     // weakest rules buttons (up to 3)
     const [weakRules, setWeakRules] = useState([]);
+    const [allRulesVisible, setAllRulesVisible] = useState(false);
     const [hoveredRuleId, setHoveredRuleId] = useState(null);
 
     const [isMobile, setIsMobile] = useState(false);
@@ -157,6 +159,9 @@ export default function HomePage({ theme }) {
             }
         });
 
+        const saved = getSavedTrainingLevel();
+        if (saved) setLevel(saved);
+
         return () => {
             cancelled = true;
         };
@@ -165,6 +170,7 @@ export default function HomePage({ theme }) {
     useEffect(() => {
         const onRefresh = () => {
             setWeakRules(computeWeakRules());
+            setAllRulesVisible(true);
         };
 
         onRefresh();
@@ -199,31 +205,25 @@ export default function HomePage({ theme }) {
                     level={level}
                     defaultLevel="managed"
                     loading={loading}
-                    onLevelChange={setLevel}
+                    onLevelChange={(level) => {
+                        setLevel(level);
+                        saveTrainingLevel(level);
+                    }}
                 />
 
                 <section style={gridStyle}>
                     <div style={topRowStyle}>
-                        {localStorage.getItem("EXPERIMENTAL_PDF") && (
-                            <button
-                                key={"pdf"}
-                                onMouseEnter={() => setHoveredRuleId("pdf")}
-                                onMouseLeave={() => setHoveredRuleId(null)}
-                                style={weakRuleButtonStyle(hoveredRuleId === "pdf")}
-                                onClick={dowloadPdf}
+                        {
+                            allRulesVisible && <button
+                                onMouseEnter={() => setHoveredAnalytics(true)}
+                                onMouseLeave={() => setHoveredAnalytics(false)}
+                                style={weakRuleButtonStyle(hoveredAnalytics, true)}
+                                onClick={handleAnalyticsClick}
                             >
-                                Download PDF
+                                {!isMobile ? "Список усіх правил →" : "Усі правила"}
                             </button>
-                        )}
+                        }
 
-                        <button
-                            onMouseEnter={() => setHoveredAnalytics(true)}
-                            onMouseLeave={() => setHoveredAnalytics(false)}
-                            style={weakRuleButtonStyle(hoveredAnalytics, true)}
-                            onClick={handleAnalyticsClick}
-                        >
-                            {!isMobile ? "Список усіх правил →" : "Усі правила"}
-                        </button>
 
                         {weakRules.map((r) => {
                             const isHover = hoveredRuleId === r.id;

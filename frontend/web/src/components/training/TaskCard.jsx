@@ -165,13 +165,13 @@ export default function TaskCard({
             boxShadow: `2px 2px 0 ${theme.accentDark}`,
             opacity: loading || isInputDisabled ? 0.7 : 1,
             height: 44,
+            minWidth: 60,
         }),
 
         // ✅ mode select
         headerRow: {
             display: "flex",
             gap: 12,
-            alignItems: "flex-start",
             justifyContent: "space-between",
             flexWrap: "wrap-reverse", // ✅ key: wrapped rows appear ABOVE
         },
@@ -185,9 +185,13 @@ export default function TaskCard({
         },
 
         modeWrap: {
-            marginLeft: "auto",   // ✅ pushes it to the right on desktop
-            flex: "0 0 auto",
+            marginLeft: "auto",
+            flex: "1 1 380px", // ✅ can shrink, can wrap
+            minWidth: 0,       // ✅ critical
+            display: "flex",
+            justifyContent: "flex-end",
         },
+
 
 
         taskLine: {
@@ -248,6 +252,7 @@ export default function TaskCard({
                         loading={loading}
                         taskModeLocked={taskModeLocked}
                         taskModeLockReason={taskModeLockReason}
+                        compact={window.innerWidth < 900}
                     />
                 </div>
             </div>
@@ -264,7 +269,7 @@ export default function TaskCard({
                                 onClick={() => setGapSelected(opt)}
                                 disabled={loading || isInputDisabled}
                             >
-                                {opt}
+                                {opt || "-"}
                             </button>
                         ))}
                     </div>

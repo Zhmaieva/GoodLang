@@ -155,7 +155,7 @@ export const ALL_GAPS_SAMPLES = {
                 "ARTICLES"
             ],
             "en": [
-                "{ARTICLE} sun is very bright today."
+                "{Gap} sun is very bright today."
             ],
             "options": [
                 "a",
@@ -170,7 +170,7 @@ export const ALL_GAPS_SAMPLES = {
                 "ARTICLES"
             ],
             "en": [
-                "{ARTICLE} sky is blue."
+                "{Gap} sky is blue."
             ],
             "options": [
                 "a",
@@ -185,7 +185,7 @@ export const ALL_GAPS_SAMPLES = {
                 "ARTICLES"
             ],
             "en": [
-                "{ARTICLE} coffee is hot."
+                "{Gap} coffee is hot."
             ],
             "options": [
                 "a",
@@ -200,7 +200,7 @@ export const ALL_GAPS_SAMPLES = {
                 "ARTICLES"
             ],
             "en": [
-                "{ARTICLE} house has a garden."
+                "{Gap} house has a garden."
             ],
             "options": [
                 "a",
@@ -215,7 +215,7 @@ export const ALL_GAPS_SAMPLES = {
                 "ARTICLES"
             ],
             "en": [
-                "{ARTICLE} movie was interesting."
+                "{Gap} movie was interesting."
             ],
             "options": [
                 "a",
