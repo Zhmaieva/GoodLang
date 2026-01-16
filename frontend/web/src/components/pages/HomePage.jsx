@@ -69,7 +69,7 @@ export default function HomePage({ theme }) {
 
         width: ((weakRules?.length || 0) <= 0) ? "100%" : "initial",
 
-        maxWidth: ((weakRules?.length || 0) <= 0) ? "100%" : (isMobile && !keepFullSize ? 160 : 280),
+        maxWidth: ((weakRules?.length || 0) <= 0) ? "100%" : (isMobile && !keepFullSize ? 140 : 280),
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",

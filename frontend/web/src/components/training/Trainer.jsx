@@ -61,7 +61,6 @@ export default function Trainer({
         return pool[Math.floor(Math.random() * pool.length)];
     };
 
-
     // -----------------------------
     // Task type + gap state
     // -----------------------------
@@ -80,6 +79,20 @@ export default function Trainer({
 
     // In combined: which type to request next (0 translation, 1 gaps)
     const [nextRequestedTaskType, setNextRequestedTaskType] = useState(0);
+
+    // -----------------------------
+    // ✅ Calibration forcing
+    // -----------------------------
+    const [calibrationNextTaskType, setCalibrationNextTaskType] = useState(0); // 0 translate, 1 gap
+    const isCalibrationNow = () => {
+        if (nextLevel !== "managed") return false;
+        try {
+            const { isCalibration } = getTrainingLevel();
+            return !!isCalibration;
+        } catch {
+            return false;
+        }
+    };
 
     // -----------------------------
     // Core state
@@ -124,8 +137,6 @@ export default function Trainer({
     // -----------------------------
     // Simple caches so "Next" can invalidate both
     // -----------------------------
-    // NOTE: We do not reuse these on mode switch anymore (you asked mode switch should reload),
-    // but we keep them so "Next" can invalidate both cleanly and prevent old leftovers.
     const [cachedTranslateTask, setCachedTranslateTask] = useState(null);
     const [cachedGapTask, setCachedGapTask] = useState(null);
 
@@ -157,7 +168,7 @@ export default function Trainer({
     // -----------------------------
     // Helpers for task type + server params
     // -----------------------------
-    const gapsAvailable = true;//difficulty === "A1";
+    const gapsAvailable = true; // difficulty === "A1";
 
     function getUseSameTaskType() {
         // as you specified:
@@ -167,6 +178,9 @@ export default function Trainer({
     }
 
     function getRequestedTaskType() {
+        // ✅ calibration: always request translation by default
+        if (isCalibrationNow()) return 0;
+
         // lock: if not A1, force translations
         if (!gapsAvailable) return 0;
 
@@ -190,7 +204,6 @@ export default function Trainer({
         setTaskHint(null);
         setMode("check");
     }
-
 
     // -----------------------------
     // Render gap with blank / selected option
@@ -299,7 +312,6 @@ export default function Trainer({
         const use_same_task_type = getUseSameTaskType();
 
         const allStats = getAllStatistics();
-
         const {level} = nextLevel === "managed" ? getTrainingLevel() : {level: selectedDifficulty};
 
         const allowedRules = LEVEL_RULES[level] ?? [];
@@ -341,7 +353,6 @@ export default function Trainer({
             setWaitTimeSeconds(result.waitTimeSeconds);
         }
         return result;
-
     }
 
     // -----------------------------
@@ -484,24 +495,28 @@ export default function Trainer({
                 setCorrectAnswer(data.correctAnswer || "");
             }
 
+            // ✅ calibration: force next task type (ignore server)
+            if (isCalibrationNow()) {
+                const forced = data.isAnswerCorrect ? 0 : 1;
+                setCalibrationNextTaskType(!gapsAvailable ? 0 : forced);
+            }
+
             emit("weeklyProgressUpdate");
 
             const serverNextType = Number(data.taskType ?? 0);
             const serverProvidedNextTask = !!(data.textToTranslate && (data.rules?.length ?? 0) > 0);
 
-// ✅ combined: we only "accept" gaps if server provided the actual gap task payload
+            // ✅ combined: we only "accept" gaps if server provided the actual gap task payload
             if (taskMode === "combined") {
                 if (gapsAvailable && serverProvidedNextTask && serverNextType === 1) {
-                    // optional: keep this state if you still display it somewhere
                     setNextRequestedTaskType(1);
                 } else {
                     setNextRequestedTaskType(0);
                 }
             }
 
-
-// ✅ Preload next task (always keep server-provided next task if we’re allowed to preload)
-
+            // ✅ Preload next task
+            // During calibration you already prevent preloading below; kept as-is.
             if (freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
                 setNextRules(data.rules || []);
@@ -561,16 +576,22 @@ export default function Trainer({
         }
 
         // ✅ NEXT:
-        // "reload both tasks" => invalidate both tasks/preloads/caches so everything is fresh
         resetCurrentTaskOnly();
         resetToLoadingPlaceholders();
 
         const diff = randomDifficulty(level);
         setDifficulty(diff);
 
-        // In combined, we choose the type for upcoming tasks (0 or 1) via nextRequestedTaskType.
-        // In translations/gaps, getRequestedTaskType() already forces it.
-        await loadNewTask(diff, {overrideTaskType: getRequestedTaskType()});
+        // ✅ calibration override:
+        // - wrong => 1 gap
+        // - correct => 0 translation
+        // - initial calibration is forced to 0 in the nextLevel effect
+        const override =
+            isCalibrationNow()
+                ? (!gapsAvailable ? 0 : calibrationNextTaskType)
+                : getRequestedTaskType();
+
+        await loadNewTask(diff, { overrideTaskType: override });
     }
 
     // -----------------------------
@@ -579,8 +600,7 @@ export default function Trainer({
     async function onTaskModeSelected(newMode) {
         if (taskModeLocked) return;
 
-        if (newMode === taskMode)
-            return;
+        if (newMode === taskMode) return;
 
         saveTaskMode(newMode);
 
@@ -628,11 +648,17 @@ export default function Trainer({
 
         setTaskModeLocked(!!isCalibration);
         setTaskModeLockReason("");
-        // if in combined, upcoming starts with translation
         if (taskMode === "combined") setNextRequestedTaskType(0);
 
+        // ✅ calibration always starts with translation
+        if (isCalibrationNow()) {
+            setCalibrationNextTaskType(0);
+        }
+
         resetToLoadingPlaceholders();
-        loadNewTask(diff, {overrideTaskType: getRequestedTaskType()}).then(_ => {});
+
+        const initialOverride = isCalibrationNow() ? 0 : getRequestedTaskType();
+        loadNewTask(diff, { overrideTaskType: initialOverride }).then(_ => {});
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [nextLevel]);
 

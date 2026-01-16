@@ -132,7 +132,7 @@ export default function LevelSwitch({
             boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
             fontFamily: "Nunito, system-ui, sans-serif",
             whiteSpace: "nowrap",
-            opacity: loading ? 0.7 : 1,
+            opacity: 1,
 
             transform: !disabled && isHover ? "translateY(1px)" : "none",
             transition: "transform 120ms ease, filter 120ms ease, opacity 120ms ease",
