@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import TaskModeSwitch from "./TaskModeSwitch.jsx";
 
 export default function TaskCard({
@@ -23,16 +23,26 @@ export default function TaskCard({
                                      gapSelected = null,
                                      setGapSelected = (_) => {},
 
-                                     // ✅ NEW: mode selector UI
+                                     // ✅ mode selector
                                      taskMode = "combined", // "translations" | "gaps" | "combined"
                                      setTaskMode = (_) => {},
                                      taskModeLocked = false,
-                                     taskModeLockReason = "",
                                  }) {
     const [hovered, setHovered] = useState(false);
 
     // countdown state
     const [secondsLeft, setSecondsLeft] = useState(0);
+
+    // ✅ simple responsive flags (keeps behavior stable during resize)
+    const [isCompact, setIsCompact] = useState(() => window.innerWidth < 900);
+
+    useEffect(() => {
+        const onResize = () => setIsCompact(window.innerWidth < 900);
+        window.addEventListener("resize", onResize, { passive: true });
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
+    const isDesktop = !isCompact;
 
     useEffect(() => {
         if (locked && waitTimeSeconds > 0) {
@@ -72,6 +82,21 @@ export default function TaskCard({
         ? `Підпишись або почекай ${formatTime(secondsLeft)}`
         : mainBtnText;
 
+    // ✅ detect if mode switch is expanded (best-effort)
+    // We can’t read internal state of TaskModeSwitch directly.
+    // But we CAN infer: when not expanded, it shows one pill; when expanded, 3 pills.
+    // We'll approximate by "expanded on desktop = always allow it to take room",
+    // and also ensure left block can grow when right is small.
+    // If you want exact control, add `onExpandedChange` in TaskModeSwitch later.
+    const modeWrapDesktopBehavior = useMemo(() => {
+        // keep switch as small as possible by default
+        // and still let left side fill remaining space
+        return {
+            flex: "0 0 auto",
+            maxWidth: "55%", // safety cap so it never eats the whole row
+        };
+    }, []);
+
     const styles = {
         card: {
             background: "#fffdf8",
@@ -80,13 +105,65 @@ export default function TaskCard({
             boxShadow: `4px 4px 0 ${theme.accentDark}`,
             padding: 20,
         },
+
+        // ✅ header row
+        headerRow: {
+            display: "flex",
+            gap: 12,
+            justifyContent: "space-between",
+            flexWrap: "wrap-reverse", // wrapped rows appear ABOVE
+            //alignItems: "flex-start",  // ✅ keeps switch aligned with task top line
+        },
+
+        // ✅ left block should fill as much as possible
+        taskBlock: {
+            display: "flex",
+            flexDirection: "column",
+            gap: 10,
+            flex: "1 1 200px", // ✅ grow on desktop
+        },
+
+        // ✅ task line: keep task + hint on same baseline row
+        taskLine: {
+            minHeight: 34,
+            display: "flex",
+            gap: 10,
+            flexWrap: "wrap",
+            minWidth: 0,
+        },
+
         taskText: {
             fontSize: "1.5rem",
             fontWeight: 800,
             color: theme.text,
-            lineHeight: 1.15,           // ✅ stable line box
+            lineHeight: 1.15,
+            minWidth: 0,
+            flex: "1 1 auto",
         },
+
+        hintText: {
+            background: "#fffaf3",
+            border: `2px dashed ${theme.accent}`,
+            padding: "2px 14px",
+            borderRadius: theme.radius,
+            color: theme.text,
+            whiteSpace: "pre-wrap",
+            flex: "0 1 auto",
+        },
+
+        // ✅ right column: keep it on the right on desktop, left on mobile (TaskModeSwitch handles align)
+        modeWrap: {
+            marginLeft: "auto",
+            minWidth: 0,
+            display: "flex",
+            justifyContent: isCompact ? "flex-start" : "flex-end",
+            //alignSelf: "flex-start", // ✅ align with task line top
+
+            ...(isDesktop ? modeWrapDesktopBehavior : { flex: "1 1 380px" }),
+        },
+
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
+
         textarea: {
             fontFamily: "Nunito, system-ui, sans-serif",
             resize: "none",
@@ -101,6 +178,7 @@ export default function TaskCard({
             color: theme.text,
             opacity: isInputDisabled ? 0.7 : 1,
         },
+
         btn: {
             appearance: "none",
             padding: "10px 14px",
@@ -119,14 +197,6 @@ export default function TaskCard({
             transform: hovered ? "translateY(1px)" : "none",
             filter: hovered ? "brightness(0.95)" : "none",
             transition: "transform 120ms ease, filter 120ms ease",
-        },
-        hintText: {
-            background: "#fffaf3",
-            border: `2px dashed ${theme.accent}`,
-            padding: "2px 14px",
-            borderRadius: theme.radius,
-            color: theme.text,
-            whiteSpace: "pre-wrap",
         },
 
         // loader
@@ -150,7 +220,13 @@ export default function TaskCard({
             background: white ? "#fff" : theme.text,
         }),
 
-        optionsWrap: { display: "flex", flexWrap: "wrap", gap: 10, height: 70 },
+        loaderInline: {
+            display: "flex",
+            alignItems: "center",
+            height: 34,
+        },
+
+        optionsWrap: { display: "flex", flexWrap: "wrap", gap: 10},
         optionBtn: (active) => ({
             appearance: "none",
             padding: "10px 14px",
@@ -167,46 +243,6 @@ export default function TaskCard({
             height: 44,
             minWidth: 60,
         }),
-
-        // ✅ mode select
-        headerRow: {
-            display: "flex",
-            gap: 12,
-            justifyContent: "space-between",
-            flexWrap: "wrap-reverse", // ✅ key: wrapped rows appear ABOVE
-        },
-
-        taskBlock: {
-            display: "flex",
-            flexDirection: "column",
-            gap: 10,
-            flex: "1 1 420px",
-            minWidth: 240,
-        },
-
-        modeWrap: {
-            marginLeft: "auto",
-            flex: "1 1 380px", // ✅ can shrink, can wrap
-            minWidth: 0,       // ✅ critical
-            display: "flex",
-            justifyContent: "flex-end",
-        },
-
-
-
-        taskLine: {
-            minHeight: 34,              // ✅ reserve one-line height (tweak if needed)
-            display: "flex",
-            alignItems: "center",       // ✅ same vertical alignment for text + loader
-        },
-
-        loaderInline: {
-            display: "flex",
-            alignItems: "center",
-            height: 34,                 // ✅ match taskLine minHeight
-        },
-
-
     };
 
     const BarsLoader = ({ white = false }) => (
@@ -234,10 +270,10 @@ export default function TaskCard({
                     <div style={styles.taskLine}>
                         {loading ? (
                             <div style={styles.loaderInline}>
-                                <BarsLoader/>
+                                <BarsLoader />
                             </div>
                         ) : (
-                            <div style={styles.taskText} dangerouslySetInnerHTML={{__html: taskText}}/>
+                            <div style={styles.taskText} dangerouslySetInnerHTML={{ __html: taskText }} />
                         )}
 
                         {hint && !loading && <div style={styles.hintText}>{hint}</div>}
@@ -250,13 +286,11 @@ export default function TaskCard({
                         taskMode={taskMode}
                         setTaskMode={setTaskMode}
                         loading={loading}
-                        taskModeLocked={taskModeLocked}
-                        taskModeLockReason={taskModeLockReason}
-                        compact={window.innerWidth < 900}
+                        locked={taskModeLocked}
+                        compact={isCompact}
                     />
                 </div>
             </div>
-
 
             <div style={styles.inputWrap}>
                 {taskType === "gap" ? (
@@ -294,7 +328,7 @@ export default function TaskCard({
                     disabled={loading}
                     style={styles.btn}
                 >
-                    {loading ? <BarsLoader white/> : buttonText}
+                    {loading ? <BarsLoader white /> : buttonText}
                 </button>
             </div>
         </div>
