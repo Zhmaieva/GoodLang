@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TaskModeSwitch from "./TaskModeSwitch.jsx";
 
 export default function TaskCard({
                                      theme,
@@ -79,13 +80,18 @@ export default function TaskCard({
             boxShadow: `4px 4px 0 ${theme.accentDark}`,
             padding: 20,
         },
-        taskText: { fontSize: "1.5rem", fontWeight: 800, color: theme.text },
+        taskText: {
+            fontSize: "1.5rem",
+            fontWeight: 800,
+            color: theme.text,
+            lineHeight: 1.15,           // ✅ stable line box
+        },
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
         textarea: {
             fontFamily: "Nunito, system-ui, sans-serif",
             resize: "none",
             flex: 1,
-            minHeight: 70,
+            height: 70,
             borderRadius: theme.radius,
             border: `3px solid ${theme.accent}`,
             background: "#fffaf3",
@@ -144,7 +150,7 @@ export default function TaskCard({
             background: white ? "#fff" : theme.text,
         }),
 
-        optionsWrap: { display: "flex", flexWrap: "wrap", gap: 10 },
+        optionsWrap: { display: "flex", flexWrap: "wrap", gap: 10, height: 70 },
         optionBtn: (active) => ({
             appearance: "none",
             padding: "10px 14px",
@@ -158,35 +164,45 @@ export default function TaskCard({
             color: active ? "#fff" : theme.text,
             boxShadow: `2px 2px 0 ${theme.accentDark}`,
             opacity: loading || isInputDisabled ? 0.7 : 1,
+            height: 44,
         }),
 
-        // ✅ mode selector
-        modeWrap: {
+        // ✅ mode select
+        headerRow: {
             display: "flex",
+            gap: 12,
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            flexWrap: "wrap-reverse", // ✅ key: wrapped rows appear ABOVE
+        },
+
+        taskBlock: {
+            display: "flex",
+            flexDirection: "column",
             gap: 10,
-            flexWrap: "wrap",
+            flex: "1 1 420px",
+            minWidth: 240,
+        },
+
+        modeWrap: {
+            marginLeft: "auto",   // ✅ pushes it to the right on desktop
+            flex: "0 0 auto",
+        },
+
+
+        taskLine: {
+            minHeight: 34,              // ✅ reserve one-line height (tweak if needed)
+            display: "flex",
+            alignItems: "center",       // ✅ same vertical alignment for text + loader
+        },
+
+        loaderInline: {
+            display: "flex",
             alignItems: "center",
-            marginBottom: 12,
+            height: 34,                 // ✅ match taskLine minHeight
         },
-        modeBtn: (active) => ({
-            appearance: "none",
-            padding: "8px 12px",
-            borderRadius: 999,
-            fontWeight: 900,
-            fontSize: "0.95rem",
-            cursor: taskModeLocked ? "not-allowed" : "pointer",
-            border: `2px solid ${theme.accent}`,
-            background: active ? theme.accent : "#fffef6",
-            color: active ? "#fff" : theme.text,
-            boxShadow: `2px 2px 0 ${theme.accentDark}`,
-            opacity: taskModeLocked ? 0.6 : 1,
-        }),
-        modeNote: {
-            fontWeight: 800,
-            fontSize: "0.95rem",
-            color: theme.text,
-            opacity: 0.8,
-        },
+
+
     };
 
     const BarsLoader = ({ white = false }) => (
@@ -209,49 +225,33 @@ export default function TaskCard({
 
     return (
         <div style={styles.card} aria-live="polite">
-            {/* ✅ Mode selector */}
-            <div style={styles.modeWrap}>
-                <button
-                    type="button"
-                    style={styles.modeBtn(taskMode === "translations")}
-                    disabled={taskModeLocked}
-                    onClick={() => setTaskMode("translations")}
-                >
-                    Translations
-                </button>
+            <div style={styles.headerRow}>
+                <div style={styles.taskBlock}>
+                    <div style={styles.taskLine}>
+                        {loading ? (
+                            <div style={styles.loaderInline}>
+                                <BarsLoader/>
+                            </div>
+                        ) : (
+                            <div style={styles.taskText} dangerouslySetInnerHTML={{__html: taskText}}/>
+                        )}
 
-                <button
-                    type="button"
-                    style={styles.modeBtn(taskMode === "gaps")}
-                    disabled={taskModeLocked}
-                    onClick={() => setTaskMode("gaps")}
-                >
-                    Gaps
-                </button>
+                        {hint && !loading && <div style={styles.hintText}>{hint}</div>}
+                    </div>
+                </div>
 
-                <button
-                    type="button"
-                    style={styles.modeBtn(taskMode === "combined")}
-                    disabled={taskModeLocked}
-                    onClick={() => setTaskMode("combined")}
-                >
-                    Combined
-                </button>
-
-                {taskModeLocked && (
-                    <div style={styles.modeNote}>{taskModeLockReason || "Only translations available for this level."}</div>
-                )}
+                <div style={styles.modeWrap}>
+                    <TaskModeSwitch
+                        theme={theme}
+                        taskMode={taskMode}
+                        setTaskMode={setTaskMode}
+                        loading={loading}
+                        taskModeLocked={taskModeLocked}
+                        taskModeLockReason={taskModeLockReason}
+                    />
+                </div>
             </div>
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-                {loading ? (
-                    <BarsLoader />
-                ) : (
-                    <div style={styles.taskText} dangerouslySetInnerHTML={{ __html: taskText }} />
-                )}
-
-                {hint && !loading && <div style={styles.hintText}>{hint}</div>}
-            </div>
 
             <div style={styles.inputWrap}>
                 {taskType === "gap" ? (
@@ -289,7 +289,7 @@ export default function TaskCard({
                     disabled={loading}
                     style={styles.btn}
                 >
-                    {loading ? <BarsLoader white /> : buttonText}
+                    {loading ? <BarsLoader white/> : buttonText}
                 </button>
             </div>
         </div>

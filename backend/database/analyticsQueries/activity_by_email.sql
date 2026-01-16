@@ -54,5 +54,5 @@ SELECT
 FROM account_log al
          JOIN accounts a
               ON a.id = al.account_id
-WHERE a.email = 'kosiukliudmyla@gmail.com'
+WHERE a.email is not null
 ORDER BY al.created_at DESC;
