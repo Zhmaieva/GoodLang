@@ -85,14 +85,14 @@ export default function PdfTypeModal({
         () => [
             {
                 id: "translations",
-                title: "Завдання з перекладами",
-                subtitle: "Translation tasks + answers",
+                title: "Речення на переклад",
+                subtitle: "Теорія, 8 речень та відповіді",
                 requiresPaid: false,
             },
             {
                 id: "choose_variant",
-                title: "Choose correct variant",
-                subtitle: "Circle the correct option + answers",
+                title: "Завдання \"обери вірний варіант\"",
+                subtitle: "Теорія, 12 вправ та відповіді",
                 requiresPaid: true,
             },
         ],
@@ -347,7 +347,7 @@ export default function PdfTypeModal({
                                     fontWeight: 800,
                                 }}
                             >
-                                Choose PDF type
+                                Обери форму завдань
                             </h2>
 
                             <p
@@ -435,10 +435,29 @@ export default function PdfTypeModal({
                                             {o.subtitle}
                                         </div>
 
+                                        {
+                                            !locked && <div style={{marginTop: 6}}>
+                                                <div
+                                                    style={{
+                                                        fontWeight: 900,
+                                                        fontSize: "0.9rem",
+                                                        color: theme.text,
+                                                        opacity: 0.55,
+                                                    }}
+                                                >
+                                                    {o.warning}
+                                                </div>
+                                            </div>
+                                        }
+
+
                                         {locked && (
                                             <LockedCta
                                                 theme={theme}
-                                                onOpenLimit={() => setLimitOpen(true)}
+                                                onOpenLimit={() => {
+                                                    localStorage.setItem("teacher", "true");
+                                                    setLimitOpen(true);
+                                                }}
                                                 unlockBtnStyle={unlockBtnStyle}
                                             />
                                         )}
@@ -496,7 +515,7 @@ export default function PdfTypeModal({
                                     }
                                 }}
                             >
-                                {loading ? "Downloading..." : "Download"}
+                                {loading ? "Стягую..." : "Стягнути"}
                             </button>
                         )}
                     </div>
@@ -519,7 +538,7 @@ function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
                     opacity: 0.55,
                 }}
             >
-                Available on paid plan
+                ✓ Усі копії без вотермарку
             </div>
 
             <button
@@ -549,7 +568,7 @@ function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
                 WebkitMaskImage: "url(/lock-icon.svg)",
             }}
         />
-                Unlock
+                Оформити підписку
             </button>
         </div>
     );

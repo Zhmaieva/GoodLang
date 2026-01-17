@@ -165,6 +165,7 @@ export default function AccountStatusButton({ theme }) {
 
             {
                 account && <LimitModal
+                    featurePdf={localStorage.getItem("teacher") === "true"}
                     subscribeIntent={subscribeIntent}
                     accountInfo={account}
                     isLimitReached={false}
