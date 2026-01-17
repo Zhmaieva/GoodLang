@@ -80,7 +80,7 @@ export function sendVerificationEmail(to, code) {
 </table>
 
 <p style="font-family:Arial, sans-serif; opacity: 0.5">
-  Якщо це був хтось інший, будь ласка, надішли нам листа на <a href="mailto:goodlang@mail.com">goodlang@mail.com</a>
+  Якщо це був хтось інший, будь ласка, надішли нам листа на <a href="mailto:goodlang.app@gmail.com">goodlang@mail.com</a>
 </p>
 `,
     }).then(() => {
