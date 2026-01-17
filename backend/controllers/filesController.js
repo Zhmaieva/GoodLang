@@ -1,5 +1,5 @@
 import { authMiddleware } from "../middleware/authMiddleware.js";
-import {CHOOSE_VARIANT_TASK_FORM, getPdf, getPreGeneratedPdf} from "../pdf/pdfGeneration.js";
+import {CHOOSE_VARIANT_TASK_FORM, getPreGeneratedPdf} from "../pdf/pdfGeneration.js";
 import {getActionCount, recordAction} from "../database/repositories/accountLogRepository.js";
 import {ACTION_TYPES} from "../core/constants.js";
 import {getAccountById} from "../database/repositories/accountsRepository.js";
@@ -22,7 +22,9 @@ export const filesController = {
 
                 const { pdfType } = req.query;
 
-                if (account?.status !== 'paid' && pdfType === CHOOSE_VARIANT_TASK_FORM) {
+                const withWatermarks = account?.status === 'free';
+
+                if (account?.status === 'free' && pdfType === CHOOSE_VARIANT_TASK_FORM) {
                     res.status(401).json({ error: "Subscribe to download \"choose correct option\" pdf" });
                 }
 
