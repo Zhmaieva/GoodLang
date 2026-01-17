@@ -109,7 +109,7 @@ export default function Trainer({
     const [isError, setIsError] = useState(false);
     const [locked, setLocked] = useState(false);
 
-    const [taskText, setTaskText] = useState("Завантаження завдання…");
+    const [taskText, setTaskText] = useState("Стягнення завдання…");
     const [hint, setHint] = useState("Порада: переклади і натисни «Перевірити»");
     const [taskHint, setTaskHint] = useState(null);
 
@@ -159,8 +159,8 @@ export default function Trainer({
     }
 
     function resetToLoadingPlaceholders() {
-        setTaskText("Завантаження завдання…");
-        setHint("Завантаження нового завдання…");
+        setTaskText("Стягнення завдання…");
+        setHint("Стягнення нового завдання…");
         setCorrectAnswer("");
         setWeakRules([]);
     }

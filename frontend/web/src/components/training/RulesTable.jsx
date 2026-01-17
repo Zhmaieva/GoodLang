@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import {logError} from "../../services/logger.js";
 import {dowloadPdf} from "../../services/api.js";
-import DownloadLimitModal from "../subscription/DownloadLimitModal.jsx";
+import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 
 export default function RulesTable({
@@ -12,7 +12,8 @@ export default function RulesTable({
                                        fmtDate,
                                        onRowClick,
                                        theme,
-                                       advanced = true}) {
+                                       advanced = true
+                                   }) {
     const LEVEL_MAP = {
         A1: { label: "Початківець" },
         A2: { label: "Середній" },
@@ -22,12 +23,10 @@ export default function RulesTable({
 
     // Hidden sort order (lower -> higher)
     const LEVEL_ORDER = { A1: 1, A2: 2, B1: 3, B2: 4 };
-
     const STORAGE_KEY = "rules_table_sort_v2";
 
     const [isMobile, setIsMobile] = useState(false);
 
-    // default sort: by CEFR level (hidden), ascending
     function readSortFromLS() {
         try {
             const raw = localStorage.getItem(STORAGE_KEY);
@@ -42,7 +41,6 @@ export default function RulesTable({
 
     const saved = readSortFromLS();
 
-    // default: hidden sort by CEFR level
     const [sortKey, setSortKey] = useState(saved?.sortKey ?? "level");
     const [sortDir, setSortDir] = useState(saved?.sortDir ?? "asc");
 
@@ -55,8 +53,11 @@ export default function RulesTable({
     const [isDownloading, setIsDownloading] = useState(false);
     const [downloadingRow, setDownloadingRow] = useState(null);
 
-    const [signUpModalOpen, setSignUpModalOpen] = useState(false);
-    const [ruleToDownload, setRuleToDownload] = useState(null);
+    // NEW modal state
+    const [pdfTypeModalOpen, setPdfTypeModalOpen] = useState(false);
+    const [pendingRule, setPendingRule] = useState(null);
+    const [pendingIdx, setPendingIdx] = useState(null);
+    const [pendingRuleLabel, setPendingRuleLabel] = useState("PDF");
 
     const autoDownloadRanRef = React.useRef(false);
 
@@ -64,10 +65,21 @@ export default function RulesTable({
         try {
             const url = new URL(window.location.href);
             url.searchParams.delete("ruleToDownload");
+            url.searchParams.delete("pdf_type");
             window.history.replaceState({}, "", url.pathname + url.search + url.hash);
         } catch (_) {}
     }
 
+    function getDownloadFromUrl() {
+        try {
+            const u = new URL(window.location.href);
+            const rule = u.searchParams.get("ruleToDownload");
+            const pdfType = u.searchParams.get("pdf_type") || "translations";
+            return { rule, pdfType };
+        } catch (_) {
+            return { rule: null, pdfType: "translations" };
+        }
+    }
 
     // save whenever user changes
     useEffect(() => {
@@ -91,14 +103,11 @@ export default function RulesTable({
 
             const parsed = JSON.parse(raw);
 
-            if (parsed.sortKey === 'ruleName')
-                parsed.sortKey = 'level';
-
+            if (parsed.sortKey === "ruleName") parsed.sortKey = "level";
             if (parsed?.sortKey) setSortKey(parsed.sortKey);
             if (parsed?.sortDir) setSortDir(parsed.sortDir);
         } catch (_) {}
     }, []);
-
 
     const toggleSort = (key) => {
         if (sortKey === key) {
@@ -126,9 +135,8 @@ export default function RulesTable({
             case "lastPractice":
                 return r.lastAttemptDate ? new Date(r.lastAttemptDate).getTime() : 0;
 
-            case "status": {
+            case "status":
                 return r.attemptsNumber > 0 && Number.isFinite(r.accuracy) ? r.accuracy : -1;
-            }
 
             default:
                 return 0;
@@ -143,7 +151,6 @@ export default function RulesTable({
             const av = getSortValue(a, sortKey);
             const bv = getSortValue(b, sortKey);
 
-            // numeric vs string
             if (typeof av === "number" && typeof bv === "number") {
                 if (av !== bv) return (av - bv) * dir;
             } else {
@@ -151,13 +158,11 @@ export default function RulesTable({
                 if (av > bv) return 1 * dir;
             }
 
-            // TIE-BREAKERS (always keep stable & useful)
-            // 1) Hidden: CEFR level asc (A1 -> B2)
+            // TIE-BREAKERS
             const aL = LEVEL_ORDER[a.level] ?? 999;
             const bL = LEVEL_ORDER[b.level] ?? 999;
             if (aL !== bL) return aL - bL;
 
-            // 2) rule name asc
             const an = String(a.ruleName ?? "").toLowerCase();
             const bn = String(b.ruleName ?? "").toLowerCase();
             if (an < bn) return -1;
@@ -171,7 +176,6 @@ export default function RulesTable({
 
     const barColor = theme.accent;
 
-    // two-arrow UI: only active arrow is full opacity
     const ArrowPair = ({ columnKey }) => {
         const active = sortKey === columnKey;
         const upOpacity = active && sortDir === "asc" ? 1 : 0.25;
@@ -196,99 +200,25 @@ export default function RulesTable({
 
     const iconBtn = (isHover) => ({
         marginTop: 6,
-        width: advanced ? 16 : '100%',
+        width: advanced ? 16 : "100%",
         height: 16,
         cursor: isDownloading ? "default" : "pointer",
         opacity: isDownloading ? 0.5 : 1,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-
         transform: !isDownloading && isHover ? "scale(1.4)" : "none",
         filter: !isDownloading && isHover ? "brightness(0.95)" : "none",
         transition: "transform 120ms ease, filter 120ms ease",
-    })
+    });
 
     const row = (isHover) => ({
         cursor: "pointer",
         userSelect: "none",
-
         background: isHover ? "#ededed" : "#fff",
         filter: isHover ? "brightness(0.95)" : "none",
         transition: "transform 120ms ease, filter 120ms ease",
-    })
-
-    useEffect(() => {
-        // run once
-        if (autoDownloadRanRef.current) return;
-
-        // pick rule id from state OR from URL
-        const urlRule = (() => {
-            try {
-                return new URL(window.location.href).searchParams.get("ruleToDownload");
-            } catch (_) {
-                return null;
-            }
-        })();
-
-        const ruleId = ruleToDownload || urlRule;
-        if (!ruleId) return;
-
-        // must have data loaded
-        if (!sortedRows?.length) return;
-
-        // if user is not logged in, let your modal flow handle it (don't auto-trigger here)
-        if (!account?.email) return;
-
-        const idx = sortedRows.findIndex(r => r.rule === ruleId);
-        if (idx === -1) {
-            // still clear param so it doesn't keep trying
-            clearRuleToDownloadFromUrl();
-            autoDownloadRanRef.current = true;
-            setRuleToDownload(null);
-            return;
-        }
-
-        autoDownloadRanRef.current = true;
-
-        requestAnimationFrame(() => {
-            scrollRowToTop(idx, 0);
-        });
-
-        // trigger download
-        onPrintClick(null, idx, ruleId).then();
-
-        // clear URL + state so it won't repeat on re-render
-        clearRuleToDownloadFromUrl();
-        setRuleToDownload(null);
-    }, [sortedRows, ruleToDownload, account]);
-
-
-    const onPrintClick = async (e, idx, ruleName) => {
-        e?.stopPropagation();
-
-        setIsDownloading(true);
-        setDownloadingRow(idx);
-
-        const downloadsNumber = getPdfDownloads();
-        const isTeacher = localStorage.getItem("teacher") === "true";
-
-        if (!account?.email && (downloadsNumber > 0 || !isTeacher)) {
-            setRuleToDownload(ruleName);
-            setSignUpModalOpen(true);
-            return;
-        }
-
-        try {
-            await dowloadPdf(ruleName);
-            setPdfDownloads(downloadsNumber + 1);
-        } catch (err) {
-            logError(err);
-        } finally {
-            setIsDownloading(false);
-            setDownloadingRow(null);
-        }
-    }
+    });
 
     function scrollRowToTop(idx, topOffset = 0) {
         const container = scrollRef.current;
@@ -298,24 +228,74 @@ export default function RulesTable({
         const cRect = container.getBoundingClientRect();
         const rRect = rowEl.getBoundingClientRect();
 
-        // distance from row to container top, plus current scroll
         let targetTop = (rRect.top - cRect.top) + container.scrollTop - topOffset;
 
-        // clamp (prevents overscroll)
         const maxTop = container.scrollHeight - container.clientHeight;
         if (targetTop < 0) targetTop = 0;
         if (targetTop > maxTop) targetTop = maxTop;
 
-        container.scrollTo({
-            top: targetTop,
-            behavior: "smooth",
-        });
+        container.scrollTo({ top: targetTop, behavior: "smooth" });
     }
 
+    async function startDownload(ruleId, idx, pdfType) {
+        setIsDownloading(true);
+        setDownloadingRow(idx);
+
+        try {
+            await dowloadPdf(ruleId, pdfType);
+
+            setPdfDownloads(getPdfDownloads() + 1);
+        } catch (err) {
+            logError(err);
+        } finally {
+            setIsDownloading(false);
+            setDownloadingRow(null);
+        }
+    }
+
+    // URL-triggered auto-download: skip modal completely
+    useEffect(() => {
+        if (autoDownloadRanRef.current) return;
+
+        const { rule: urlRule, pdfType: urlPdfType } = getDownloadFromUrl();
+        if (!urlRule) return;
+
+        if (!sortedRows?.length) return;
+
+        const idx = sortedRows.findIndex(r => r.rule === urlRule);
+        if (idx === -1) {
+            clearRuleToDownloadFromUrl();
+            autoDownloadRanRef.current = true;
+            return;
+        }
+
+        autoDownloadRanRef.current = true;
+
+        requestAnimationFrame(() => {
+            scrollRowToTop(idx, 0);
+        });
+
+        // ✅ start immediately from URL (no modal)
+        startDownload(urlRule, idx, urlPdfType).then();
+
+        // clear URL so it won't repeat
+        clearRuleToDownloadFromUrl();
+    }, [sortedRows]);
+
+    const onPrintClick = async (e, idx, ruleId, ruleNameHuman) => {
+        e?.stopPropagation();
+
+        if (isDownloading) return;
+
+        // open modal instead of downloading immediately
+        setPendingRule(ruleId);
+        setPendingIdx(idx);
+        setPendingRuleLabel(ruleNameHuman || ruleId);
+        setPdfTypeModalOpen(true);
+    };
 
     return (
         <div className="table" style={{ height: "100%" }} aria-live="polite">
-            {/* DESKTOP HEADERS */}
             {!isMobile && (
                 <div className="thead">
                     <div style={{ opacity: 0.8 }}>#</div>
@@ -356,7 +336,6 @@ export default function RulesTable({
                         const a = r.accuracy;
                         const st = statusOf(r);
 
-                        // MOBILE (no header, but still sorted)
                         if (isMobile) {
                             return (
                                 <div
@@ -404,37 +383,19 @@ export default function RulesTable({
                                                 Рівень: {LEVEL_MAP[r.level]?.label}
                                             </div>
 
-                                            {
-                                                advanced &&
-                                                <div style={{fontSize: "1rem"}}>
-                                                    Спроби: {r.attemptsNumber}
-                                                </div>
-                                            }
-                                            {
-                                                advanced &&
-                                                <div style={{fontSize: "1rem"}}>
-                                                    Oстання практика: {fmtDate(r.lastAttemptDate)}
-                                                </div>
-                                            }
+                                            {advanced && <div style={{ fontSize: "1rem" }}>Спроби: {r.attemptsNumber}</div>}
+                                            {advanced && <div style={{ fontSize: "1rem" }}>Oстання практика: {fmtDate(r.lastAttemptDate)}</div>}
 
-                                            <div style={{
-                                                display: "flex",
-                                                justifyContent: "start",
-                                                gap: "2rem",
-                                                marginTop: 6
-                                            }}>
-                                                {
-                                                    advanced &&
-                                                    <span className={`badge ${st.cls}`}>{st.label}</span>
-                                                }
-                                                {
-                                                    advanced &&
+                                            <div style={{ display: "flex", justifyContent: "start", gap: "2rem", marginTop: 6 }}>
+                                                {advanced && <span className={`badge ${st.cls}`}>{st.label}</span>}
+
+                                                {advanced && (
                                                     <div
                                                         key={idx}
                                                         onMouseEnter={() => setHover(idx)}
                                                         onMouseLeave={() => setHover(null)}
-                                                        onClick={(e) => onPrintClick(e, idx, r.rule)}
-                                                        style={iconBtn(idx === hover, downloadingRow === idx)}
+                                                        onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
+                                                        style={iconBtn(idx === hover)}
                                                         title="Друкувати правило"
                                                     >
                                                         <img
@@ -444,7 +405,6 @@ export default function RulesTable({
                                                                 width: 56,
                                                                 height: 56,
                                                                 display: "block",
-
                                                                 animation:
                                                                     downloadingRow === idx
                                                                         ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
@@ -452,31 +412,29 @@ export default function RulesTable({
                                                                 transformOrigin: "50% 50%",
                                                             }}
                                                         />
-                                                    </div>}
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
 
-                                        <div style={{display: "flex", flexDirection: "column"}}>
-                                            <div style={{marginTop: 4, width: "80px"}}>
-                                                {
-                                                    advanced &&
+                                        <div style={{ display: "flex", flexDirection: "column" }}>
+                                            <div style={{ marginTop: 4, width: "80px" }}>
+                                                {advanced && (
                                                     <>
                                                         <strong>{a}%</strong>
                                                         <div className="bar" aria-label="bar">
-                                                            <i style={{width: `${a}%`, background: barColor}}/>
+                                                            <i style={{ width: `${a}%`, background: barColor }} />
                                                         </div>
                                                     </>
-                                                }
+                                                )}
 
-
-                                                {
-                                                    !advanced &&
+                                                {!advanced && (
                                                     <div
                                                         key={idx}
                                                         onMouseEnter={() => setHover(idx)}
                                                         onMouseLeave={() => setHover(null)}
-                                                        onClick={(e) => onPrintClick(e, idx, r.rule)}
-                                                        style={iconBtn(idx === hover, downloadingRow === idx)}
+                                                        onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
+                                                        style={iconBtn(idx === hover)}
                                                         title="Друкувати правило"
                                                     >
                                                         <img
@@ -486,7 +444,6 @@ export default function RulesTable({
                                                                 width: 56,
                                                                 height: 56,
                                                                 display: "block",
-
                                                                 animation:
                                                                     downloadingRow === idx
                                                                         ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
@@ -494,7 +451,8 @@ export default function RulesTable({
                                                                 transformOrigin: "50% 50%",
                                                             }}
                                                         />
-                                                    </div>}
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -502,7 +460,7 @@ export default function RulesTable({
                             );
                         }
 
-                        // DESKTOP ROW
+                        // DESKTOP
                         return (
                             <div
                                 ref={(el) => {
@@ -511,21 +469,20 @@ export default function RulesTable({
                                 }}
                                 onMouseEnter={() => setHoverRow(r.ruleName)}
                                 onMouseLeave={() => setHoverRow(null)}
-                                className="trow" style={row(hoverRow === r.ruleName)} key={r.ruleName}
-                                onClick={() => onRowClick(r)}>
-                                <div style={{
-                                    display: "flex",
-                                    justifyContent: "space-around"
-                                }}>
-                                    <div>
-                                        {idx + 1}
-                                    </div>
+                                className="trow"
+                                style={row(hoverRow === r.ruleName)}
+                                key={r.ruleName}
+                                onClick={() => onRowClick(r)}
+                            >
+                                <div style={{ display: "flex", justifyContent: "space-around" }}>
+                                    <div>{idx + 1}</div>
+
                                     <div
                                         key={idx}
                                         onMouseEnter={() => setHover(idx)}
                                         onMouseLeave={() => setHover(null)}
-                                        onClick={(e)=>onPrintClick(e, idx, r.rule)}
-                                        style={iconBtn(idx === hover, downloadingRow === idx)}
+                                        onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
+                                        style={iconBtn(idx === hover)}
                                         title="Друкувати правило"
                                     >
                                         <img
@@ -538,26 +495,28 @@ export default function RulesTable({
                                                 width: 38,
                                                 height: 38,
                                                 display: "block",
-                                                animation: downloadingRow === idx
-                                                    ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
-                                                    : "none",
+                                                animation:
+                                                    downloadingRow === idx
+                                                        ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
+                                                        : "none",
                                                 transformOrigin: "50% 50%",
                                             }}
                                         />
                                     </div>
-
-
                                 </div>
+
                                 <div>
                                     <div className="rule-name">{r.ruleName}</div>
                                     <div className="sub">Рівень: {LEVEL_MAP[r.level]?.label}</div>
                                 </div>
+
                                 <div>
                                     <strong>{a}%</strong>
                                     <div className="bar">
-                                        <i style={{width: `${a}%`, background: barColor}}/>
+                                        <i style={{ width: `${a}%`, background: barColor }} />
                                     </div>
                                 </div>
+
                                 <div>{r.attemptsNumber}</div>
                                 <div>{fmtDate(r.lastAttemptDate)}</div>
                                 <div className="col-last">
@@ -569,13 +528,30 @@ export default function RulesTable({
                 </div>
             </div>
 
-            <DownloadLimitModal
-                ruleToDownload={ruleToDownload}
-                theme={theme} open={signUpModalOpen} onClose={() => {
-                setSignUpModalOpen(false);
-                setDownloadingRow(null);
-                setIsDownloading(false);
-            }}/>
+            <PdfTypeModal
+                account={account}
+                open={pdfTypeModalOpen}
+                theme={theme}
+                ruleLabel={pendingRuleLabel}
+                defaultValue={"translations"}
+                ruleToDownload={pendingRule}
+                onClose={() => {
+                    if (isDownloading) return;
+                    setPdfTypeModalOpen(false);
+                    setPendingRule(null);
+                    setPendingIdx(null);
+                }}
+                onConfirm={async (pdfType) => {
+                    // set URL params (requested) and start download
+                    if (!pendingRule) return;
+
+                    setPdfTypeModalOpen(false);
+                    await startDownload(pendingRule, pendingIdx, pdfType);
+
+                    setPendingRule(null);
+                    setPendingIdx(null);
+                }}
+            />
         </div>
     );
 }

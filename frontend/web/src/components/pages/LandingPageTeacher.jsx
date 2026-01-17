@@ -751,7 +751,7 @@ html{ scroll-behavior: smooth; }
                                     <p className="stepTitle">Зі сторінки конкретного правила</p>
                                     <p className="stepText">
                                         Відкрийте правило → натисніть кнопку <strong>“Роздрукувати
-                                        завдання”</strong> (PDF сформується та завантажиться).
+                                        завдання”</strong> (PDF сформується та стягнеться).
                                     </p>
                                 </div>
                             </div>

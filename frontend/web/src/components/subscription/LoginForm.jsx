@@ -104,7 +104,15 @@ export default function LoginForm({
     // --- Email Step ---
     async function handleEmailSubmit(e) {
         e.preventDefault();
-        if (!emailInput || emailInput.trim().toLowerCase() === account.email) return;
+        if (!emailInput) {
+            setError("Імейл не може бути пустим");
+            return;
+        }
+
+        if (emailInput.trim().toLowerCase() === account.email) {
+            setError("Ти вже увійшов під цим імейлом");
+            return;
+        }
 
         setLoading(true);
         setError("");
@@ -134,7 +142,7 @@ export default function LoginForm({
         });
     }
 
-    function handleCodeKeyDown(e, index) {
+    async function handleCodeKeyDown(e, index) {
         if (e.key === "Backspace") {
             e.preventDefault();
 
@@ -153,6 +161,10 @@ export default function LoginForm({
             requestAnimationFrame(() => {
                 focusLastFilled(newCode);
             });
+        }
+
+        if (e.key === "Enter") {
+            await handleVerify();
         }
     }
 
@@ -425,7 +437,16 @@ export default function LoginForm({
                                         type="email"
                                         placeholder="goodlang.app@example.com"
                                         value={emailInput}
-                                        onChange={(e) => setEmailInput(e.target.value)}
+                                        onChange={(e) => {
+                                            setError(null);
+                                            setEmailInput(e.target.value)
+                                        }}
+                                        onKeyDown={async (e) => {
+                                            if (e.key === "Enter" && !loading) {
+                                                e.preventDefault();
+                                                await handleEmailSubmit(e);
+                                            }
+                                        }}
                                         style={{
                                             ...baseInputStyle,
                                             width: "100%",

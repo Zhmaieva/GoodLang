@@ -44,14 +44,30 @@ export default function AnalyticsPage({theme}) {
             setHasData(true);
         }
 
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 915);
-        };
+        const handleResize = () => setIsMobile(window.innerWidth < 915);
 
+        // ✅ initial load
         loadAccountInfo().then();
 
+        // ✅ poll every 5s
+        const intervalId = setInterval(() => {
+            loadAccountInfo().then();
+        }, 5000);
+
+        // ✅ (optional) stop polling when tab is hidden to reduce spam
+        const onVis = () => {
+            if (document.hidden) return; // keep interval but skip work
+            loadAccountInfo().then();
+        };
+        document.addEventListener("visibilitychange", onVis);
+
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+
+        return () => {
+            clearInterval(intervalId);
+            document.removeEventListener("visibilitychange", onVis);
+            window.removeEventListener("resize", handleResize);
+        };
     }, []);
 
     const loadAccountInfo = async () => {

@@ -1,15 +1,11 @@
 import React, {useState, useRef, useEffect, useCallback} from "react";
 import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
-import LoginModal from "./LoginModal.jsx";
+import LoginModal from "../subscription/LoginModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
-import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import CookieConsentModal from "../modals/CookieConsentModal.jsx";
-import {acceptCookies, rejectCookies} from "../../services/settingsService.js";
-import {ensureAnalytics, trackPageView} from "../../services/gaService.js";
 
 let stripeLoaded = null;
 export async function getStripe() {
