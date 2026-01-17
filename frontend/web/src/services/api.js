@@ -284,13 +284,13 @@ export async function downloadCrossword(code) {
 
 
 
-export async function dowloadPdf(ruleName) {
-    const { blob } = await callGeneratePdfApi(ruleName);
+export async function dowloadPdf(ruleName, pdfType = "choose_variant") {
+    const { blob } = await callGeneratePdfApi(ruleName, pdfType);
 
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${ruleName}_TRANSLATIONS.pdf`;
+    a.download = `${ruleName}_${pdfType.toUpperCase()}.pdf`;
     document.body.appendChild(a);
     a.click();
 
@@ -308,7 +308,7 @@ function jitter(ms, jitterRatio = 0.3) {
     return Math.max(0, Math.round(ms - j + Math.random() * (2 * j)));
 }
 
-async function callGeneratePdfApi(ruleName, opts = {}) {
+async function callGeneratePdfApi(ruleName, pdfType, opts = {}) {
     const {
         maxRetries = 5,
         baseDelayMs = 400,      // initial backoff
@@ -316,7 +316,7 @@ async function callGeneratePdfApi(ruleName, opts = {}) {
         jitterRatio = 0.35,
     } = opts;
 
-    const url = `${API_BASE}/files/generate/pdf?rule=${encodeURIComponent(ruleName)}`;
+    const url = `${API_BASE}/files/generate/pdf?rule=${encodeURIComponent(ruleName)}&pdfType=${pdfType}`;
 
     let attempt = 0;
     while (true) {

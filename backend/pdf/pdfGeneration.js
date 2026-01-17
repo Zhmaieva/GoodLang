@@ -10,6 +10,9 @@ import { RULE_LABELS } from "../core/rules.js";
 import * as RulePages from "../core/rulePages.js";
 import {shuffleBySeed} from "../core/сore.js";
 import {buildRuleIntroHtml} from "./buildRuleInfo.js";
+import {ALL_GAPS_SAMPLES} from "../core/allGapsSamples.js";
+
+export const CHOOSE_VARIANT_TASK_FORM = "choose_variant";
 
 /** ------------ small concurrency limiter (no extra deps) ------------ */
 /** ------------ small concurrency + queue limiter ------------ */
@@ -190,14 +193,79 @@ function buildAnswerItems(samples) {
         .join("\n\n");
 }
 
-function populateTemplate({ html, ruleName, samples, mode }) {
+function getFirstEn(s) {
+    return escapeHtml(Array.isArray(s?.en) ? (s.en[0] ?? "") : "");
+}
+
+function buildGapsTaskItems(samples) {
+    return samples
+        .map((s, idx) => {
+            const en = getFirstEn(s);
+            const options = Array.isArray(s?.options) ? s.options : [];
+            const optionsText = options.map(escapeHtml).map(o => {
+                return o === "" ? "—" : o;
+            }).join(" / ");
+
+            const sentenceHtml = escapeHtml(en).includes("{GAP}")
+                ? escapeHtml(en).replace("{GAP}", `<span class="choices">${optionsText}</span>`)
+                : `${escapeHtml(en)} <span class="choices">${optionsText}</span>`;
+
+            return (
+                `            <div class="item">\n` +
+                `                <div class="badge">${idx + 1}</div>\n` +
+                `                <div class="text-wrap">\n` +
+                `                    <p class="sentence">${sentenceHtml}</p>\n` +
+                `                </div>\n` +
+                `            </div>`
+            );
+        })
+        .join("\n\n");
+}
+
+function buildGapsAnswerItems(samples) {
+    return samples
+        .map((s, idx) => {
+            const en = getFirstEn(s);
+            let correct = escapeHtml(s?.correct ?? "");
+            correct = correct === "" ? "—" : correct;
+
+            const sentenceHtml = escapeHtml(en).includes("{GAP}")
+                ? escapeHtml(en).replace("{GAP}", `<span class="fill">${correct}</span>`)
+                : `${escapeHtml(en)} <span class="fill">${correct}</span>`;
+
+            return (
+                `            <div class="item">\n` +
+                `                <div class="badge">${idx + 1}</div>\n` +
+                `                <div class="text-wrap">\n` +
+                `                    <p class="sentence">${sentenceHtml}</p>\n` +
+                `                </div>\n` +
+                `            </div>`
+            );
+        })
+        .join("\n\n");
+}
+
+
+function populateTemplate({ html, ruleName, samples, mode, pdfType = "translations" }) {
     const title = RULE_LABELS?.[ruleName] ?? ruleName;
-    //const withSuffix = false && mode === "answers" ? `${title} — answers` : title;
 
-    let out = replaceTitle(html, title);
+    let headerTitle = title;
+    if (pdfType === CHOOSE_VARIANT_TASK_FORM && mode === "task") headerTitle = `${title}, circle the correct option`;
+    if (pdfType === CHOOSE_VARIANT_TASK_FORM && mode === "answers") headerTitle = `${title}, answers`;
 
-    const itemsHtml = mode === "answers" ? buildAnswerItems(samples) : buildTaskItems(samples);
-    out = replaceListItems(out, itemsHtml, mode === "answers" ? "answers" : "task");
+    let out = replaceTitle(html, headerTitle);
+
+    let itemsHtml = "";
+    if (pdfType === CHOOSE_VARIANT_TASK_FORM) {
+        itemsHtml = mode === "answers" ? buildGapsAnswerItems(samples) : buildGapsTaskItems(samples);
+    } else {
+        itemsHtml = mode === "answers" ? buildAnswerItems(samples) : buildTaskItems(samples);
+    }
+
+    // for gaps templates, the list ends before bottom logo too; reuse "answers" behavior
+    const replaceMode = mode === "answers" ? "answers" : "task";
+    out = replaceListItems(out, itemsHtml, replaceMode);
+
     return out;
 }
 
@@ -213,49 +281,66 @@ function getRulePage(ruleId) {
  * - ruleName: e.g. "SECOND_CONDITIONAL"
  * - takes first 8 samples for that rule
  */
-export async function getPdf(ruleName) {
+export async function getPdf(ruleName, opts = {}) {
+    const { pdfType = "translations" } = opts;
+
     const key = String(ruleName ?? "").trim();
     if (!key) throw new Error("ruleName is required");
 
-    const rulePage = getRulePage(ruleName);
-    if (!rulePage) {
-        throw new Error(`No rule page found for rule: ${key}`);
+    if (!["translations", CHOOSE_VARIANT_TASK_FORM].includes(pdfType)) {
+        throw new Error(`Unsupported pdfType: ${pdfType}`);
     }
 
-    const samplesAll = shuffleBySeed(ALL_RULES_SAMPLES?.[key], 5431);
+    const rulePage = getRulePage(ruleName);
+    if (!rulePage) throw new Error(`No rule page found for rule: ${key}`);
+
+    const isGaps = pdfType === CHOOSE_VARIANT_TASK_FORM;
+    const samplesRaw = isGaps ? ALL_GAPS_SAMPLES?.[key] : ALL_RULES_SAMPLES?.[key];
+
+    const samplesAll = shuffleBySeed(samplesRaw, 5431);
     if (!Array.isArray(samplesAll) || samplesAll.length === 0) {
         throw new Error(`No samples found for rule: ${key}`);
     }
 
-    const samples = samplesAll.slice(0, 8);
+    const samples = samplesAll.slice(0, isGaps ? 12 : 8);
 
-    // 1) Intro page
+    // 1) Intro page (same for both pdf types)
     const introHtml = buildRuleIntroHtml(rulePage, {
         watermarkBase64: await getWatermarkBase64()
     });
     const introPdf = await generatePdfFromHtml(introHtml);
 
+    // Pick templates by type
+    const taskTemplateFile =
+        isGaps ? "template-gaps.html" : "template.html";
+
+    const answersTemplateFile =
+        isGaps ? "template-gaps-answers.html" : "template-answers.html";
+
     // 2) Tasks
     const htmlTask = populateTemplate({
-        html: await loadHtmlTemplate("template.html"),
+        html: await loadHtmlTemplate(taskTemplateFile),
         ruleName: key,
         samples,
         mode: "task",
+        pdfType,
     });
     const pdfTask = await generatePdfFromHtml(htmlTask);
 
     // 3) Answers
     const htmlAnswers = populateTemplate({
-        html: await loadHtmlTemplate("template-answers.html"),
+        html: await loadHtmlTemplate(answersTemplateFile),
         ruleName: key,
         samples,
         mode: "answers",
+        pdfType,
     });
     const pdfAnswers = await generatePdfFromHtml(htmlAnswers);
 
     // Merge: intro → tasks → answers
     return mergePdfs([introPdf, pdfTask, pdfAnswers]);
 }
+
 
 
 async function mergePdfs(pdfBuffers) {
@@ -295,16 +380,19 @@ async function generatePdfFromHtml(html) {
     });
 }
 
-async function getPreGeneratedPdfPath(ruleName) {
+async function getPreGeneratedPdfPath(ruleName, pdfType) {
     const key = String(ruleName ?? "").trim().toUpperCase();
     if (!key) throw new Error("ruleName is required");
 
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
+    const pdfDirName = pdfType === CHOOSE_VARIANT_TASK_FORM
+        ? "pre-generated-choose-variant"
+        : "pre-generated-translations";
     // /pdfGeneration.js is in /pdf in your repo => pre-generated folder sits next to it
     // i.e. /pdf/pre-generated/CAN_CANT.pdf
-    const folder = path.join(__dirname, "pre-generated");
+    const folder = path.join(__dirname, pdfDirName);
     const filePath = path.join(folder, `${key}.pdf`);
 
     // prevent any sneaky path tricks (extra safe)
@@ -322,8 +410,8 @@ async function getPreGeneratedPdfPath(ruleName) {
  *
  * @returns {Promise<Uint8Array>} PDF bytes
  */
-export async function getPreGeneratedPdf(ruleName) {
-    const filePath = await getPreGeneratedPdfPath(ruleName);
+export async function getPreGeneratedPdf(ruleName, {pdfType}) {
+    const filePath = await getPreGeneratedPdfPath(ruleName, pdfType);
 
     try {
         const buf = await fs.readFile(filePath);
