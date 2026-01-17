@@ -71,7 +71,6 @@ export const translationsController = {
             if (!textToTranslate) {
                 const selectedRule =
                     rulesArr.length > 0 ? GrammarRule[rulesArr[0]] : randomRule(level ?? "A1");
-                console.log(selectedRule);
 
                 // -------------------------------
                 // TASK TYPE 1: GAPS (A1 only for now)
