@@ -39,8 +39,7 @@ export default function LimitModal({
                                        open,
                                        onClose,
                                        waitTimeSeconds,
-                                       featurePdf = false,
-                                   }) {
+                                       featurePdf = false}) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -539,35 +538,35 @@ export default function LimitModal({
                                 </ul>
                             </div>
 
-                            <div style={{display: "flex", flexDirection: "column", gap: 12}}>
-                                <button
-                                    onMouseEnter={() => setHovered(true)}
-                                    onMouseLeave={() => setHovered(false)}
-                                    onClick={handleSubscribe}
-                                    disabled={loading}
-                                    style={{
-                                        appearance: "none",
-                                        padding: "10px 14px",
-                                        fontWeight: 800,
-                                        fontSize: "clamp(0.9rem, 3.5vw, 1rem)",
-                                        lineHeight: 1,
-                                        borderRadius: 999,
-                                        background: loading ? "#999" : theme.accent,
-                                        color: "#fff",
-                                        border: "2px solid rgba(0,0,0,0.12)",
-                                        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                        fontFamily: "Nunito, system-ui, sans-serif",
-                                        whiteSpace: "nowrap",
-                                        opacity: (loading) ? 0.7 : 1,
-                                        transform: hovered ? "translateY(1px)" : "none",
-                                        filter: hovered ? "brightness(0.95)" : "none",
-                                        transition: "transform 120ms ease, filter 120ms ease",
-                                        cursor: loading ? "not-allowed" : "pointer",
-                                        width: "100%",
-                                    }}
-                                >
-                                    {loading ? "Стягнення…" : "Придбати підписку"}
-                                </button>
+                        <div style={{display: "flex", flexDirection: "column", gap: 12}}>
+                            <button
+                                onMouseEnter={() => setHovered(true)}
+                                onMouseLeave={() => setHovered(false)}
+                                onClick={handleSubscribe}
+                                disabled={loading}
+                                style={{
+                                    appearance: "none",
+                                    padding: "10px 14px",
+                                    fontWeight: 800,
+                                    fontSize: "clamp(0.9rem, 3.5vw, 1rem)",
+                                    lineHeight: 1,
+                                    borderRadius: 999,
+                                    background: loading ? "#999" : theme.accent,
+                                    color: "#fff",
+                                    border: "2px solid rgba(0,0,0,0.12)",
+                                    boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
+                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    whiteSpace: "nowrap",
+                                    opacity: (loading) ? 0.7 : 1,
+                                    transform: hovered ? "translateY(1px)" : "none",
+                                    filter: hovered ? "brightness(0.95)" : "none",
+                                    transition: "transform 120ms ease, filter 120ms ease",
+                                    cursor: loading ? "not-allowed" : "pointer",
+                                    width: "100%",
+                                }}
+                            >
+                                {loading ? "Стягнення…" : "Придбати підписку"}
+                            </button>
 
                                 <button
                                     onMouseEnter={() => setSignInHovered(true)}
