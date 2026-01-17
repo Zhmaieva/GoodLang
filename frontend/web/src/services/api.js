@@ -282,8 +282,6 @@ export async function downloadCrossword(code) {
     return { isSuccess: true, blob };
 }
 
-
-
 export async function dowloadPdf(ruleName, pdfType = "translations") {
     const { blob } = await callGeneratePdfApi(ruleName, pdfType);
 
