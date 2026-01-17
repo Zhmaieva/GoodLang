@@ -33,7 +33,14 @@ export const logoStyle = (size) => ({
     boxShadow: `0 2px 0 ${theme.accentDark}`,
 });
 
-export default function LimitModal({ subscribeIntent = false, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
+export default function LimitModal({
+                                       subscribeIntent = false,
+                                       isLimitReached,
+                                       theme,
+                                       open,
+                                       onClose,
+                                       waitTimeSeconds,
+                                       featurePdf = false}) {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -461,7 +468,7 @@ export default function LimitModal({ subscribeIntent = false, isLimitReached, th
                                     width: "100%",
                                 }}
                             >
-                                {loading ? "Завантаження…" : "Придбати підписку"}
+                                {loading ? "Стягнення…" : "Придбати підписку"}
                             </button>
 
                             {true && <button
