@@ -34,7 +34,7 @@ export default function TaskCard({
     const [secondsLeft, setSecondsLeft] = useState(0);
 
     // ✅ simple responsive flags (keeps behavior stable during resize)
-    const [isCompact, setIsCompact] = useState(() => window.innerWidth < 900);
+    const [isCompact, setIsCompact] = useState(() => window.innerWidth < 915);
 
     useEffect(() => {
         const onResize = () => setIsCompact(window.innerWidth < 900);
@@ -156,10 +156,11 @@ export default function TaskCard({
             marginLeft: "auto",
             minWidth: 0,
             display: "flex",
-            justifyContent: isCompact ? "flex-start" : "flex-end",
+            justifyContent: (isCompact && window.innerWidth < 600) ? "flex-start" : "flex-end",
             //alignSelf: "flex-start", // ✅ align with task line top
 
-            ...(isDesktop ? modeWrapDesktopBehavior : { flex: "1 1 380px" }),
+            ...(isDesktop ? modeWrapDesktopBehavior :
+                (window.innerWidth > 460 ? {} : { flex: "1 1 380px" })),
         },
 
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },

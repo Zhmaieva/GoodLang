@@ -109,7 +109,7 @@ export default function TaskModeSwitch({
         gap: 10,
         alignItems: "flex-start",
         flexWrap: "wrap",
-        justifyContent: compact ? "flex-start" : "flex-end",
+        justifyContent: (compact && window.innerWidth < 600) ? "flex-start" : "flex-end",
         width: "100%",
         minWidth: 0,
     };
