@@ -28,8 +28,10 @@ export const filesController = {
                     res.status(401).json({ error: "Subscribe to download \"choose correct option\" pdf" });
                 }
 
-                const pdf = await getPreGeneratedPdf(req.query.rule, { pdfType: pdfType });
-                //const pdf = await getPdf(req.query.rule,{ pdfType: pdfType });
+                const pdf = await getPreGeneratedPdf(req.query.rule, {
+                    pdfType: pdfType,
+                    withWatermarks: withWatermarks});
+                //const pdf = await getPdf(req.query.rule,{ pdfType: pdfType, withWatermarks: withWatermarks });
 
                 await recordAction(req.user.id, ACTION_TYPES.PDF_DOWNLOAD_CALL);
 

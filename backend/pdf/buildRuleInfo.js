@@ -658,7 +658,7 @@ ${css}
     </div>
 
     ${
-        watermarkSrc
+        watermarkSrc && opts.withWatermarks
             ? `
       <div class="watermark" aria-hidden="true">
         <img src="${escapeAttr(watermarkSrc)}" alt="" />
@@ -680,7 +680,7 @@ ${css}
     </div>
 
     ${
-        logoSrc
+        logoSrc && opts.withWatermarks
             ? `
       <div class="logo" aria-hidden="true">
         <img src="${escapeAttr(logoSrc)}" alt="" />
