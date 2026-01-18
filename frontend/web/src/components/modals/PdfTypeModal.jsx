@@ -292,6 +292,7 @@ export default function PdfTypeModal({
                     style={{
                         background: theme.bg,
                         padding: "28px",
+                        paddingTop: 0,
                         borderRadius: theme.radius * 1.2,
                         border: `4px solid ${theme.accent}`,
                         width: "90%",
@@ -310,9 +311,9 @@ export default function PdfTypeModal({
                                 onClose();
                             }}
                             style={{
-                                marginBottom: 16,
-                                marginTop: -18,
-                                marginRight: -12,
+                                marginBottom: 0,
+                                marginTop: 4,
+                                marginRight: -16,
                                 color: theme.accent,
                                 fontSize: "1.3rem",
                                 fontWeight: 500,

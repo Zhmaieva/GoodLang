@@ -28,7 +28,7 @@ export default function PaymentSuccess() {
 
         // teacher/pdfs perks first
         return [
-            'Необмежений доступ до PDF "обери варіант"',
+            '1800+ вправ у форматі PDF',
             "Відсутність вотермарків на усіх PDF",
             ...core,
         ];
