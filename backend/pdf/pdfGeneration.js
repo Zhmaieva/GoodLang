@@ -13,6 +13,7 @@ import {buildRuleIntroHtml} from "./buildRuleInfo.js";
 import {ALL_GAPS_SAMPLES} from "../core/allGapsSamples.js";
 
 export const CHOOSE_VARIANT_TASK_FORM = "choose_variant";
+export const TRANSLATIONS = "translations";
 
 /** ------------ small concurrency limiter (no extra deps) ------------ */
 /** ------------ small concurrency + queue limiter ------------ */
@@ -282,7 +283,7 @@ function getRulePage(ruleId) {
  * - takes first 8 samples for that rule
  */
 export async function getPdf(ruleName, opts = {}) {
-    const { pdfType = "translations" } = opts;
+    const { pdfType = "translations", withWatermarks = true } = opts;
 
     const key = String(ruleName ?? "").trim();
     if (!key) throw new Error("ruleName is required");
@@ -306,16 +307,16 @@ export async function getPdf(ruleName, opts = {}) {
 
     // 1) Intro page (same for both pdf types)
     const introHtml = buildRuleIntroHtml(rulePage, {
-        watermarkBase64: await getWatermarkBase64()
+        watermarkBase64: await getWatermarkBase64(), withWatermarks: withWatermarks
     });
     const introPdf = await generatePdfFromHtml(introHtml);
 
     // Pick templates by type
     const taskTemplateFile =
-        isGaps ? "template-gaps.html" : "template.html";
+        isGaps ? "template-gaps.html" : `template${withWatermarks ? '' : '-watermarkless'}.html`;
 
     const answersTemplateFile =
-        isGaps ? "template-gaps-answers.html" : "template-answers.html";
+        isGaps ? "template-gaps-answers.html" : `template-answers${withWatermarks ? '' : '-watermarkless'}.html`;
 
     // 2) Tasks
     const htmlTask = populateTemplate({
@@ -380,16 +381,20 @@ async function generatePdfFromHtml(html) {
     });
 }
 
-async function getPreGeneratedPdfPath(ruleName, pdfType) {
+async function getPreGeneratedPdfPath(ruleName, pdfType, withWatermarks) {
     const key = String(ruleName ?? "").trim().toUpperCase();
     if (!key) throw new Error("ruleName is required");
 
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    const pdfDirName = pdfType === CHOOSE_VARIANT_TASK_FORM
+    let pdfDirName = pdfType === CHOOSE_VARIANT_TASK_FORM
         ? "pre-generated-choose-variant"
         : "pre-generated-translations";
+
+    if (withWatermarks)
+        pdfDirName = `${pdfDirName}${withWatermarks ? '-watermark' : ''}`
+
     // /pdfGeneration.js is in /pdf in your repo => pre-generated folder sits next to it
     // i.e. /pdf/pre-generated/CAN_CANT.pdf
     const folder = path.join(__dirname, pdfDirName);
@@ -410,8 +415,8 @@ async function getPreGeneratedPdfPath(ruleName, pdfType) {
  *
  * @returns {Promise<Uint8Array>} PDF bytes
  */
-export async function getPreGeneratedPdf(ruleName, {pdfType}) {
-    const filePath = await getPreGeneratedPdfPath(ruleName, pdfType);
+export async function getPreGeneratedPdf(ruleName, {pdfType, withWatermarks}) {
+    const filePath = await getPreGeneratedPdfPath(ruleName, pdfType, withWatermarks);
 
     try {
         const buf = await fs.readFile(filePath);

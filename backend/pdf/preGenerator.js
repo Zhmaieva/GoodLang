@@ -7,7 +7,7 @@ import { GrammarRule } from "../core/rules.js";
 
 // ✅ import your existing PDF function (the file that exports getPdf)
 // adjust path to where the code you pasted lives
-import {CHOOSE_VARIANT_TASK_FORM, getPdf} from "../pdf/pdfGeneration.js";
+import {CHOOSE_VARIANT_TASK_FORM, getPdf, TRANSLATIONS} from "../pdf/pdfGeneration.js";
 
 /** ---------- tiny concurrency limiter (no deps) ---------- */
 function createLimiter(maxConcurrent = 8) {
@@ -74,7 +74,8 @@ async function generateAndSave(ruleName) {
         return;
     }
 
-    const pdfBytes = await getPdf(ruleName, {pdfType: CHOOSE_VARIANT_TASK_FORM}); // Uint8Array
+    //const pdfBytes = await getPdf(ruleName, {pdfType: CHOOSE_VARIANT_TASK_FORM}); // Uint8Array
+    const pdfBytes = await getPdf(ruleName, {pdfType: TRANSLATIONS, withWatermarks: false}); // Uint8Array
     await fs.writeFile(outPath, Buffer.from(pdfBytes));
 
     console.log(`✅ saved ${ruleName}.pdf`);

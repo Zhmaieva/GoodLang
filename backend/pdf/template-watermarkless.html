@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GoodLang — Second Conditional (A4)</title>
+
+    <style>
+        /* ---------- Print setup ---------- */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        :root{
+            --orange: #FE6136;
+            --orange-dark: #f64c2a;
+            --ink: #2b2b2b;
+            --muted: #666;
+            --paper: #ffffff;
+
+            /* Inner content padding to mimic your layout */
+            --padX: 48px;
+            --padTop: 48px;
+            --padBottom: 46px;
+
+            /* Line system */
+            --rule: 2px;
+            --ruleOpacity: 1;
+        }
+
+        /* A4 at 96dpi-ish preview: 794 x 1123 (approx). Print will still be A4 via @page. */
+        .sheet{
+            width: 794px;
+            height: 1123px;
+            background: var(--paper);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        }
+
+        /* ---------- Red crop/guide lines (like in the screenshot) ---------- */
+        .guides{
+            position:absolute;
+            inset:0;
+            pointer-events:none;
+            opacity: 0.95;
+        }
+        .guide{
+            position:absolute;
+            background: var(--orange);
+        }
+        /* Outer frame lines */
+        .g-top    { left:0; right:0; top:  28px; height: 3px; }
+        .g-bottom { left:0; right:0; bottom:28px; height: 3px; }
+        .g-left   { top:0; bottom:0; left: 28px; width: 3px; }
+        .g-right  { top:0; bottom:0; right:28px; width: 3px; }
+
+        /* Extra “registration mark” lines near edges (subtle) */
+        .g-top2    { left:0; right:0; top:  60px; height: 2px; opacity:.55; }
+        .g-bottom2 { left:0; right:0; bottom:60px; height: 2px; opacity:.55; }
+        .g-left2   { top:0; bottom:0; left: 60px; width: 2px; opacity:.55; }
+        .g-right2  { top:0; bottom:0; right:60px; width: 2px; opacity:.55; }
+
+        /* ---------- Watermark ---------- */
+        .watermark{
+            position:absolute;
+            left:50%;
+            top:58%;
+            transform: translate(-50%,-50%);
+            width: 360px;
+            height: 360px;
+            border-radius: 999px;
+            background: rgba(255,90,58,.08);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            pointer-events:none;
+            user-select:none;
+        }
+        .watermark .wm-inner{
+            width: 78%;
+            height: 78%;
+            border-radius: 999px;
+            background: rgba(255,90,58,.05);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+            gap: 6px;
+        }
+        .watermark .wm-gl{
+            font-weight: 800;
+            font-size: 86px;
+            letter-spacing: -2px;
+            color: rgba(255,90,58,.20);
+            line-height: 1;
+        }
+        .watermark .wm-text{
+            font-weight: 700;
+            font-size: 20px;
+            color: rgba(255,90,58,.18);
+            letter-spacing: .2px;
+            margin-top: -10px;
+        }
+
+        /* ---------- Content ---------- */
+        .content{
+            position:absolute;
+            inset:0;
+            padding: var(--padTop) var(--padX) var(--padBottom);
+            display:flex;
+            flex-direction:column;
+            gap: 18px;
+        }
+
+        .header{
+            background: var(--orange);
+            height: 74px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            position: relative;
+            left: -18px;
+            top: -18px;
+            width: 710px;
+        }
+        .header h1{
+            margin: 0;
+            color: #fff;
+            font-weight: 800;
+
+            /* головне */
+            white-space: nowrap;        /* ❗ ніколи не переносити */
+            overflow: hidden;           /* сховати зайве */
+            text-overflow: ellipsis;    /* … якщо вже зовсім не влазить */
+
+            /* адаптивний розмір */
+            font-size: clamp(18px, 3vw, 46px);
+
+            letter-spacing: .2px;
+            text-transform: lowercase;
+        }
+
+        .list{
+            display: flex;
+            flex-direction: column;
+            height: 820px;
+            justify-content: space-around;
+            position: relative;
+            top: -20px;
+        }
+
+        .item{
+            display:flex;
+            gap: 4px;
+            align-items:flex-start;
+        }
+
+        .badge{
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            background: var(--orange);
+            color:#fff;
+            font-weight: 800;
+            font-size: 16px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex: 0 0 auto;
+            /*top: -2px;*/
+            /*position: relative;*/
+        }
+
+        .text-wrap{
+            flex: 1 1 auto;
+        }
+
+        .sentence{
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.35;
+            margin: 0 0 32px 0;
+            color: #3a3a3a;
+        }
+
+        .answer-line{
+            height: var(--rule);
+            background: rgba(255,90,58,var(--ruleOpacity));
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        /* Spacer block to mimic lower repeated items in screenshot */
+        .spacer{
+            flex: 1 1 auto;
+            min-height: 10px;
+        }
+
+        /* ---------- Bottom-right logo ---------- */
+        .logo{
+            position: absolute;
+            right: 44px;
+            bottom: 24px;
+            width: 60px;
+            height: 60px;
+            border-radius: 999px;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .logo img{
+            width:100%;
+            height:100%;
+            object-fit: contain;
+        }
+
+        /* ---------- Print friendliness ---------- */
+        @media print {
+            html, body {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                background: #fff !important;
+            }
+
+            body {
+                display: block !important;   /* kill flex */
+            }
+
+            .sheet {
+                width: 210mm !important;
+                height: 297mm !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                overflow: hidden !important;
+            }
+        }
+
+        /* ---------- Fonts (embedded) ---------- */
+        @font-face {
+            font-family: "Nunito";
+            src: url("data:font/woff2;base64,{{NUNITO_REGULAR}}") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Nunito";
+            src: url("data:font/woff2;base64,{{NUNITO_BOLD}}") format("woff2");
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Nunito";
+            src: url("data:font/woff2;base64,{{NUNITO_EXTRABOLD}}") format("woff2");
+            font-weight: 800;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Nunito";
+            src: url("data:font/woff2;base64,{{NUNITO_ITALIC}}") format("woff2");
+            font-weight: 400;
+            font-style: italic;
+        }
+
+
+        /* ---------- Base ---------- */
+        body{
+            margin:0;
+            background:#efefef;
+            font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--ink);
+        }
+
+        @media screen {
+            body{
+                display:flex;
+                justify-content:center;
+                padding: 24px;
+            }
+        }
+
+        /* ---------- Watermark (image-based) ---------- */
+        .watermark{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            width: 360px;
+            height: 360px;
+            opacity: 0.10;
+            pointer-events:none;
+            user-select:none;
+        }
+
+        .watermark img{
+            width:100%;
+            height:100%;
+            object-fit: contain;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="sheet">
+    <!-- guides -->
+    <div class="guides" aria-hidden="true">
+        <div class="guide g-top"></div>
+        <div class="guide g-bottom"></div>
+        <div class="guide g-left"></div>
+        <div class="guide g-right"></div>
+
+<!--        <div class="guide g-top2"></div>-->
+<!--        <div class="guide g-bottom2"></div>-->
+<!--        <div class="guide g-left2"></div>-->
+<!--        <div class="guide g-right2"></div>-->
+    </div>
+
+    <!-- content -->
+    <div class="content">
+        <div class="header">
+            <h1>Second conditional</h1>
+        </div>
+
+        <div class="list">
+            <div class="item">
+                <div class="badge">1</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби вони жили ближче, ми б бачилися частіше.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="badge">2</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби в нього було більше часу, він би навчився грати на гітарі.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="badge">3</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби я побачив привида, я б утік.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="badge">4</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби ми були молодшими, ми б гуляли всю ніч.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+
+            <!-- extra repeats like in the screenshot -->
+            <div class="item">
+                <div class="badge">4</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби ми були молодшими, ми б гуляли всю ніч.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="badge">1</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби вони жили ближче, ми б бачилися частіше.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="badge">1</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби вони жили ближче, ми б бачилися частіше.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="badge">3</div>
+                <div class="text-wrap">
+                    <p class="sentence">Якби я побачив привида, я б утік.</p>
+                    <div class="answer-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+    </div>
+
+</div>
+</body>
+</html>
