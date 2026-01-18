@@ -440,7 +440,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Доступ до PDF "обери варіант"
+                                                1800+ вправ у форматі PDF
                                             </li>
                                             <li>
                                                 <span style={{
@@ -450,27 +450,92 @@ export default function LimitModal({
                                                 }}>✓</span>
                                                 Відсутність вотермарків на всіх PDF
                                             </li>
+
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Пріоритетна підтримка
+                                            </li>
+
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Безлімітна практика онлайн
+                                            </li>
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Хмарне збереження прогресу
+                                            </li>
+
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Можеш завжди скасувати
+                                            </li>
                                         </>
                                     )}
 
-                                    <li>
-                                        <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                        Пріоритетна підтримка
-                                    </li>
+                                    {!featurePdf && (
+                                        <>
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Безлімітна практика онлайн
+                                            </li>
 
-                                    <li>
-                                        <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                        Безлімітна практика онлайн
-                                    </li>
-                                    <li>
-                                        <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                        Хмарне збереження прогресу
-                                    </li>
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Хмарне збереження прогресу
+                                            </li>
 
-                                    <li>
-                                        <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                        Можеш завжди скасувати
-                                    </li>
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Пріоритетна підтримка
+                                            </li>
+
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                1800+ вправ у форматі PDF
+                                            </li>
+
+                                            <li>
+                                                <span style={{
+                                                    marginRight: 8,
+                                                    color: theme.accent,
+                                                    fontWeight: 700
+                                                }}>✓</span>
+                                                Можеш завжди скасувати
+                                            </li>
+                                        </>
+                                    )}
                                 </ul>
                             </div>
 
@@ -537,7 +602,7 @@ export default function LimitModal({
                                 </button>
                             </div>
 
-                            {(!account?.email) && (
+                            {(!account?.email) && !featurePdf && (
                                 <div
                                     style={{
                                         marginLeft: 0,
