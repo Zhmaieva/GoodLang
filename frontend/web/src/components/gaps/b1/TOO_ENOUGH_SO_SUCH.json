@@ -1,0 +1,124 @@
+{
+  "TOO_ENOUGH_SO_SUCH": [
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["It is {GAP} cold to go outside."],
+      "options": ["so", "too", "enough"],
+      "correct": "too"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["She is {GAP} tall to reach the shelf."],
+      "options": ["too", "enough", "so"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["It was {GAP} a nice day that we stayed out late."],
+      "options": ["so", "such", "too"],
+      "correct": "such"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["The coffee is {GAP} hot."],
+      "options": ["enough", "so", "too"],
+      "correct": "too"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["He speaks {GAP} fast for me to understand."],
+      "options": ["so", "enough", "too"],
+      "correct": "too"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["We didn’t have {GAP} time to talk."],
+      "options": ["too", "so", "enough"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["It was {GAP} cold that we stayed home."],
+      "options": ["such", "so", "too"],
+      "correct": "so"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["She made {GAP} a big mess."],
+      "options": ["so", "too", "such"],
+      "correct": "such"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["The box is light {GAP} to carry."],
+      "options": ["too", "so", "enough"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["He was {GAP} tired to continue."],
+      "options": ["so", "too", "enough"],
+      "correct": "too"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["It was {GAP} an easy task."],
+      "options": ["such", "so", "too"],
+      "correct": "such"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["She is {GAP} shy to speak in public."],
+      "options": ["enough", "too", "so"],
+      "correct": "too"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["The soup isn’t hot {GAP}."],
+      "options": ["too", "so", "enough"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["They were {GAP} happy that they cried."],
+      "options": ["too", "such", "so"],
+      "correct": "so"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["It was {GAP} a boring movie."],
+      "options": ["too", "so", "such"],
+      "correct": "such"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["This room is {GAP} small for five people."],
+      "options": ["enough", "so", "too"],
+      "correct": "too"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["He isn’t strong {GAP} to lift it."],
+      "options": ["too", "so", "enough"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["It was {GAP} noisy that I couldn’t sleep."],
+      "options": ["too", "so", "such"],
+      "correct": "so"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["She has {GAP} many clothes."],
+      "options": ["so", "enough", "too"],
+      "correct": "too"
+    },
+    {
+      "rules": ["TOO_ENOUGH_SO_SUCH"],
+      "en": ["That was {GAP} a strange question."],
+      "options": ["so", "too", "such"],
+      "correct": "such"
+    }
+  ]
+}

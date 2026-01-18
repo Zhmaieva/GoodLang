@@ -1,0 +1,118 @@
+{
+  "ADVANCED_MODALS_OF_DEDUCTION": [
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["She {GAP} forgotten her keys. She can't get in."],
+      "options": ["could have", "must have", "might have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["He {GAP} heard the alarm. He was wearing headphones."],
+      "options": ["might have", "can't have", "must have"],
+      "correct": "can't have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["The lights are on. Someone {GAP} left them on."],
+      "options": ["might not have", "must have", "can't have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["She looks exhausted. She {GAP} slept well."],
+      "options": ["must have", "can't have", "might have"],
+      "correct": "can't have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["The door is locked. He {GAP} already left."],
+      "options": ["can't have", "must have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["I'm not sure where he is. He {GAP} gone home."],
+      "options": ["mustn't have", "might have", "can't have"],
+      "correct": "might have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["She knew all the answers. She {GAP} studied a lot."],
+      "options": ["might not have", "can't have", "must have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["The food is still warm. They {GAP} just cooked it."],
+      "options": ["can't have", "must have", "might not have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["He looks surprised. He {GAP} expected this."],
+      "options": ["might have", "must have", "can't have"],
+      "correct": "can't have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["She isn't answering her phone. She {GAP} fallen asleep."],
+      "options": ["mustn't have", "can't have", "might have"],
+      "correct": "might have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["The test was very easy. He {GAP} failed it."],
+      "options": ["might have", "can't have", "must have"],
+      "correct": "can't have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["His car isn't there. He {GAP} gone to work."],
+      "options": ["might not have", "must have", "can't have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["She didn't reply yesterday. She {GAP} been very busy."],
+      "options": ["can't have", "might have", "mustn't have"],
+      "correct": "might have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["The window is broken. Someone {GAP} broken it."],
+      "options": ["can't have", "might not have", "must have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["He looks calm now. He {GAP} been angry earlier."],
+      "options": ["mustn't have", "might have", "can't have"],
+      "correct": "might have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["She knows his name. They {GAP} met before."],
+      "options": ["can't have", "must have", "might not have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["The kids are quiet. They {GAP} fallen asleep."],
+      "options": ["might not have", "can't have", "must have"],
+      "correct": "must have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["He arrived very early. He {GAP} taken a taxi."],
+      "options": ["mustn't have", "might have", "can't have"],
+      "correct": "might have"
+    },
+    {
+      "rules": ["ADVANCED_MODALS_OF_DEDUCTION"],
+      "en": ["She didn't recognize him. She {GAP} seen him before."],
+      "options": ["must have", "might have", "can't have"],
+      "correct": "can't have"
+    }
+  ]
+}

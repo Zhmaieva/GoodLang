@@ -1,0 +1,124 @@
+{
+  "WISH_PAST_PAST_PERFECT": [
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["I wish I {GAP} more time."],
+      "options": ["have", "had", "have had"],
+      "correct": "had"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["She wishes she {GAP} closer to work."],
+      "options": ["had lived", "lives", "lived"],
+      "correct": "lived"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["We wish it {GAP} cheaper."],
+      "options": ["is", "had been", "were"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["He wishes he {GAP} a car."],
+      "options": ["has", "had had", "had"],
+      "correct": "had"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["I wish I {GAP} speak English better."],
+      "options": ["can", "could have", "could"],
+      "correct": "could"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["She wishes she {GAP} the truth earlier."],
+      "options": ["knew", "has known", "had known"],
+      "correct": "had known"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["They wish they {GAP} more careful yesterday."],
+      "options": ["were", "are", "had been"],
+      "correct": "had been"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["I wish I {GAP} him about the meeting."],
+      "options": ["told", "had told", "have told"],
+      "correct": "had told"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["He wishes he {GAP} so late last night."],
+      "options": ["doesn't work", "hadn't worked"],
+      "correct": "hadn't worked"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["We wish we {GAP} more money now."],
+      "options": ["have", "had had", "had"],
+      "correct": "had"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["She wishes she {GAP} that email."],
+      "options": ["didn't send", "hasn't sent", "hadn't sent"],
+      "correct": "hadn't sent"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["I wish I {GAP} earlier yesterday."],
+      "options": ["have left", "left", "had left"],
+      "correct": "had left"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["He wishes he {GAP} more confident."],
+      "options": ["is", "were", "had been"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["They wish they {GAP} the tickets in advance."],
+      "options": ["bought", "have bought", "had bought"],
+      "correct": "had bought"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["I wish I {GAP} so tired today."],
+      "options": ["hadn't been", "weren't", "am not"],
+      "correct": "weren't"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["She wishes she {GAP} harder at school."],
+      "options": ["studied", "has studied", "had studied"],
+      "correct": "had studied"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["We wish we {GAP} that mistake."],
+      "options": ["didn't make", "hadn't made", "haven't made"],
+      "correct": "hadn't made"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["He wishes he {GAP} more free time."],
+      "options": ["has", "had", "had had"],
+      "correct": "had"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["I wish I {GAP} that film with you."],
+      "options": ["watched", "had watched", "have watched"],
+      "correct": "had watched"
+    },
+    {
+      "rules": ["WISH_PAST_PAST_PERFECT"],
+      "en": ["She wishes she {GAP} what to say then."],
+      "options": ["knows", "knew", "had known"],
+      "correct": "had known"
+    }
+  ]
+}

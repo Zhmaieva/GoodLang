@@ -1,5 +1,106 @@
 {
   "PREP_DIRECTION": [
-
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["She went {GAP} the shop entrance."],
+      "options": ["to", "onto", "into"],
+      "correct": "to"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["He walked {GAP} the room."],
+      "options": ["into", "onto"],
+      "correct": "into"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["They are driving {GAP} the city center."],
+      "options": [ "towards", "onto"],
+      "correct": "towards"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["I ran {GAP} the house because it started raining."],
+      "options": ["onto", "into"],
+      "correct": "into"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["The dog ran {GAP} me."],
+      "options": ["into", "towards"],
+      "correct": "towards"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["He moved {GAP} the door slowly."],
+      "options": ["into", "towards"],
+      "correct": "towards"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["I walked {GAP} my car and got in."],
+      "options": ["into", "to"],
+      "correct": "to"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["She jumped {GAP} the pool."],
+      "options": ["onto", "into"],
+      "correct": "into"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["They went {GAP} the exit door."],
+      "options": ["into", "to"],
+      "correct": "to"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["The child ran {GAP} his mother."],
+      "options": [ "towards", "into"],
+      "correct": "towards"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["I came {GAP} the kitchen to get some water."],
+      "options": ["onto", "into"],
+      "correct": "into"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["She is going {GAP} work now."],
+      "options": ["into", "towards", "to"],
+      "correct": "to"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["He leaned {GAP} her and whispered."],
+      "options": ["towards", "into"],
+      "correct": "towards"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["We walked {GAP} the building through the main door."],
+      "options": ["towards", "into"],
+      "correct": "into"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["She moved {GAP} the table to pick up her phone."],
+      "options": ["towards", "into"],
+      "correct": "towards"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["I went {GAP} my bedroom."],
+      "options": ["onto", "to"],
+      "correct": "to"
+    },
+    {
+      "rules": ["PREP_DIRECTION"],
+      "en": ["They turned {GAP} the noise."],
+      "options": ["into", "towards"],
+      "correct": "towards"
+    }
   ]
 }

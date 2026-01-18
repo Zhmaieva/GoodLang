@@ -1,0 +1,124 @@
+{
+  "REDUCED_RELATIVE_CLAUSES": [
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The car {GAP} last year is still in good condition."],
+      "options": ["selling", "sold", "sell"],
+      "correct": "sold"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The documents {GAP} yesterday are confidential."],
+      "options": ["sign", "signed", "signing"],
+      "correct": "signed"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The people {GAP} in the hallway were asked to wait."],
+      "options": ["stood", "standing", "stand"],
+      "correct": "standing"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The meal {GAP} at the restaurant was delicious."],
+      "options": ["serve", "serving", "served"],
+      "correct": "served"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The student {GAP} near the window looks nervous."],
+      "options": ["sit", "sitting", "sat"],
+      "correct": "sitting"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The files {GAP} this morning are already backed up."],
+      "options": ["upload", "uploaded", "uploading"],
+      "correct": "uploaded"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The woman {GAP} behind the counter helped me."],
+      "options": ["working", "worked", "work"],
+      "correct": "working"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The house {GAP} in the 18th century is protected."],
+      "options": ["build", "building", "built"],
+      "correct": "built"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The package {GAP} yesterday has arrived."],
+      "options": ["deliver", "delivering", "delivered"],
+      "correct": "delivered"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The man {GAP} at the bus stop checked his phone."],
+      "options": ["waiting", "waited", "wait"],
+      "correct": "waiting"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The email {GAP} this afternoon contains the details."],
+      "options": ["sent", "sending", "send"],
+      "correct": "sent"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The children {GAP} in the yard were very noisy."],
+      "options": ["play", "playing", "played"],
+      "correct": "playing"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The phone {GAP} on the floor is broken."],
+      "options": ["dropping", "drop", "dropped"],
+      "correct": "dropped"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The guests {GAP} late missed dinner."],
+      "options": ["arriving", "arrive", "arrived"],
+      "correct": "arriving"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The painting {GAP} in the gallery was expensive."],
+      "options": ["displayed", "display", "displaying"],
+      "correct": "displayed"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The worker {GAP} the machine followed instructions."],
+      "options": ["operating", "operate", "operated"],
+      "correct": "operating"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The tickets {GAP} online are non-refundable."],
+      "options": ["buying", "bought", "buy"],
+      "correct": "bought"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The couple {GAP} in Paris enjoyed the trip."],
+      "options": ["stayed", "staying", "stay"],
+      "correct": "staying"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The report {GAP} last night explains everything."],
+      "options": ["finished", "finishing", "finish"],
+      "correct": "finished"
+    },
+    {
+      "rules": ["REDUCED_RELATIVE_CLAUSES"],
+      "en": ["The dog {GAP} in the garden started barking."],
+      "options": ["run", "running", "ran"],
+      "correct": "running"
+    }
+  ]
+}

@@ -1,5 +1,125 @@
 {
   "WILL_PREDICTIONS": [
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I think it {GAP} later."],
+      "options": ["will rain", "will raining"],
+      "correct": "will rain"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["She looks tired. She {GAP} asleep soon."],
+      "options": ["will fell", "will fall"],
+      "correct": "will fall"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["Don’t worry. Everything {GAP} fine."],
+      "options": ["will being", "will be"],
+      "correct": "will be"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I’m sure they {GAP} this place."],
+      "options": ["will love", "will loving"],
+      "correct": "will love"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["He’s late again. He {GAP} the meeting."],
+      "options": ["will missed", "will miss"],
+      "correct": "will miss"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I think prices {GAP} soon."],
+      "options": ["will rising", "will rise"],
+      "correct": "will rise"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["Be careful! You {GAP} it."],
+      "options": ["will break", "will broke"],
+      "correct": "will break"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["She studies a lot. She {GAP} the exam."],
+      "options": ["will passed", "will pass"],
+      "correct": "will pass"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I don’t think this plan {GAP}."],
+      "options": ["will work", "will working"],
+      "correct": "will work"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["The sky is very dark. It {GAP} a storm."],
+      "options": ["will be", "will been"],
+      "correct": "will be"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I’m sure you {GAP} a solution."],
+      "options": ["will finding", "will find"],
+      "correct": "will find"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["He’s driving too fast. He {GAP} an accident."],
+      "options": ["will had", "will have"],
+      "correct": "will have"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["My phone battery {GAP} soon."],
+      "options": ["will die", "will died"],
+      "correct": "will die"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["This job {GAP} hard at first."],
+      "options": ["will felt", "will feel"],
+      "correct": "will feel"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["They are very quiet. They {GAP} upset."],
+      "options": ["will being", "will be"],
+      "correct": "will be"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I think we {GAP} more time."],
+      "options": ["will need", "will needed"],
+      "correct": "will need"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["Look at the traffic. We {GAP} late."],
+      "options": ["will been", "will be"],
+      "correct": "will be"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I’m sure she {GAP} you."],
+      "options": ["will understood", "will understand"],
+      "correct": "will understand"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["This mistake {GAP} problems later."],
+      "options": ["will caused", "will cause"],
+      "correct": "will cause"
+    },
+    {
+      "rules": ["WILL_PREDICTIONS"],
+      "en": ["I think he {GAP} this job."],
+      "options": ["will accept", "will accepted"],
+      "correct": "will accept"
+    }
 
   ]
 }

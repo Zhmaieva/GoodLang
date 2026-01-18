@@ -1,0 +1,124 @@
+{
+  "DESPITE_IN_SPITE_OF_ING": [
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} working late, she felt rested the next day."],
+      "options": ["Although", "Despite", "Because of"],
+      "correct": "Despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} feeling tired, he went to the gym."],
+      "options": ["In spite of", "Although", "Because"],
+      "correct": "In spite of"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["She smiled {GAP} being nervous."],
+      "options": ["despite", "although", "because"],
+      "correct": "despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} raining heavily, they went for a walk."],
+      "options": ["Although", "In spite of", "Because of"],
+      "correct": "In spite of"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["He kept running {GAP} hurting his leg."],
+      "options": ["despite", "because", "although"],
+      "correct": "despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} having little time, she cooked dinner."],
+      "options": ["In spite of", "Although", "So"],
+      "correct": "In spite of"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["They stayed calm {GAP} hearing the bad news."],
+      "options": ["because of", "despite", "although"],
+      "correct": "despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} feeling sick, he went to work."],
+      "options": ["Although", "Despite", "Because"],
+      "correct": "Despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["She passed the test {GAP} missing a class."],
+      "options": ["although", "in spite of", "because"],
+      "correct": "in spite of"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} being shy, she spoke first."],
+      "options": ["Despite", "Although", "Since"],
+      "correct": "Despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["He enjoyed the trip {GAP} traveling alone."],
+      "options": ["despite", "although", "because"],
+      "correct": "despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} feeling cold, they went swimming."],
+      "options": ["In spite of", "Although", "So"],
+      "correct": "In spite of"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["She finished the book {GAP} being very tired."],
+      "options": ["because", "despite", "although"],
+      "correct": "despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} working on weekends, he spends time with family."],
+      "options": ["Although", "Despite", "Because"],
+      "correct": "Despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["They laughed {GAP} losing the game."],
+      "options": ["although", "in spite of", "because"],
+      "correct": "in spite of"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} being busy, she answered the call."],
+      "options": ["Despite", "Although", "Since"],
+      "correct": "Despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["He stayed positive {GAP} facing problems."],
+      "options": ["despite", "because", "although"],
+      "correct": "despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} having no experience, she got the job."],
+      "options": ["In spite of", "Although", "So"],
+      "correct": "In spite of"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["She kept learning {GAP} making mistakes."],
+      "options": ["although", "despite", "because"],
+      "correct": "despite"
+    },
+    {
+      "rules": ["DESPITE_IN_SPITE_OF_ING"],
+      "en": ["{GAP} feeling scared, he tried again."],
+      "options": ["Although", "Despite", "Since"],
+      "correct": "Despite"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "REPORTED_QUESTIONS": [
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["She asked me {GAP} I was tired."],
+      "options": ["if was I tired", "if I was tired", "did I was tired"],
+      "correct": "if I was tired"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["He wanted to know {GAP} I lived."],
+      "options": ["where did I live", "where I lived", "where do I live"],
+      "correct": "where I lived"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["They asked her {GAP} she could help."],
+      "options": ["could she help", "if she could help", "if could she help"],
+      "correct": "if she could help"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["I asked him {GAP} he was coming."],
+      "options": ["whether he was coming", "whether was he coming", "did he was coming"],
+      "correct": "whether he was coming"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["She asked {GAP} the shop was open."],
+      "options": ["was the shop open", "if the shop was open", "did the shop was open"],
+      "correct": "if the shop was open"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["He asked me {GAP} I needed help."],
+      "options": ["did I need help", "if I needed help", "if did I need help"],
+      "correct": "if I needed help"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["She wanted to know {GAP} we had time."],
+      "options": ["whether had we time", "whether we had time", "did we had time"],
+      "correct": "whether we had time"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["They asked {GAP} he worked there."],
+      "options": ["did he work there", "if he worked there", "if did he work there"],
+      "correct": "if he worked there"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["I asked her {GAP} she was feeling okay."],
+      "options": ["was she feeling okay", "if she was feeling okay", "did she was feeling okay"],
+      "correct": "if she was feeling okay"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["He asked me {GAP} I had seen her before."],
+      "options": ["if I had seen her before", "did I had seen her before", "if had I seen her before"],
+      "correct": "if I had seen her before"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["She asked {GAP} the meeting started."],
+      "options": ["when the meeting started", "when did the meeting start", "when was the meeting start"],
+      "correct": "when the meeting started"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["He wanted to know {GAP} I liked coffee."],
+      "options": ["did I like coffee", "if I liked coffee", "if did I like coffee"],
+      "correct": "if I liked coffee"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["They asked her {GAP} she was ready."],
+      "options": ["if she was ready", "was she ready", "did she was ready"],
+      "correct": "if she was ready"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["I asked him {GAP} he had finished."],
+      "options": ["had he finished", "if he had finished", "if had he finished"],
+      "correct": "if he had finished"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["She wanted to know {GAP} we were going."],
+      "options": ["where were we going", "where we were going", "where did we go"],
+      "correct": "where we were going"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["He asked {GAP} I understood."],
+      "options": ["if I understood", "did I understood", "if did I understand"],
+      "correct": "if I understood"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["They wanted to know {GAP} she was at home."],
+      "options": ["was she at home", "if she was at home", "did she was at home"],
+      "correct": "if she was at home"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["I asked her {GAP} she needed anything."],
+      "options": ["did she need anything", "if she needed anything", "if did she need anything"],
+      "correct": "if she needed anything"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["He asked me {GAP} I had time later."],
+      "options": ["if I had time later", "did I had time later", "if had I time later"],
+      "correct": "if I had time later"
+    },
+    {
+      "rules": ["REPORTED_QUESTIONS"],
+      "en": ["She wanted to know {GAP} I was okay."],
+      "options": ["was I okay", "if I was okay", "if was I okay"],
+      "correct": "if I was okay"
+    }
+  ]
+}

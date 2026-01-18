@@ -1,0 +1,124 @@
+{
+  "INDIRECT_SPEECH_QUESTION_FORMS": [
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["She asked me where he {GAP}."],
+      "options": ["is", "did he go", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["I don't know what time the meeting {GAP}."],
+      "options": ["starts", "does it start", "is it start"],
+      "correct": "starts"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["He asked if I {GAP} ready."],
+      "options": ["were I", "was", "am"],
+      "correct": "was"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["Can you tell me where she {GAP}?" ],
+      "options": ["does she live", "lives", "is she live"],
+      "correct": "lives"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["She wanted to know why he {GAP} late."],
+      "options": ["did he be", "was", "is he"],
+      "correct": "was"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["I asked him if he {GAP} help."],
+      "options": ["did he need", "needed", "needs"],
+      "correct": "needed"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["Do you know where my keys {GAP}?" ],
+      "options": ["are they", "do they are", "are"],
+      "correct": "are"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["She asked what he {GAP} for a living."],
+      "options": ["does he do", "did", "do"],
+      "correct": "did"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["I wondered if they {GAP} the news."],
+      "options": ["did they hear", "have they heard", "had heard"],
+      "correct": "had heard"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["He asked me how much it {GAP}."],
+      "options": ["did it cost", "costed", "cost"],
+      "correct": "cost"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["She wanted to know when the train {GAP}."],
+      "options": ["has arrived", "arrived", "did the train arrive"],
+      "correct": "arrived"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["I asked her if she {GAP} coming."],
+      "options": ["is she", "were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["Do you know why he {GAP} upset?" ],
+      "options": ["does he be", "is", "is he"],
+      "correct": "is"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["She asked where we {GAP} met before."],
+      "options": ["have we", "did we", "had"],
+      "correct": "had"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["I don't remember how long it {GAP}."],
+      "options": ["takes", "did it take", "took"],
+      "correct": "took"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["He asked if the shop {GAP} open."],
+      "options": ["is it", "were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["She wanted to know who {GAP} her message."],
+      "options": ["has sent", "did send", "sent"],
+      "correct": "sent"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["I asked him where he {GAP} the car."],
+      "options": ["parks", "did he park", "parked"],
+      "correct": "parked"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["Do you know if she {GAP} already left?" ],
+      "options": ["is she", "has", "did she"],
+      "correct": "has"
+    },
+    {
+      "rules": ["INDIRECT_SPEECH_QUESTION_FORMS"],
+      "en": ["She asked how old he {GAP}."],
+      "options": ["is he", "were", "was"],
+      "correct": "was"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "PARTICIPLE_CLAUSES": [
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} home, she found the door open."],
+      "options": ["Arriving", "Arrives"],
+      "correct": "Arriving"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} tired, he went to bed early."],
+      "options": ["Was", "Being", "Been"],
+      "correct": "Being"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} the message, I called her back."],
+      "options": ["Read", "Reads", "Reading"],
+      "correct": "Reading"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} by the noise, the baby woke up."],
+      "options": ["Disturbing", "Disturbed", "Disturbs"],
+      "correct": "Disturbed"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} breakfast, he left the house."],
+      "options": ["Having", "Has"],
+      "correct": "Having"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} late, she took a taxi."],
+      "options": ["Runs", "Running", "Ran"],
+      "correct": "Running"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} in a hurry, he forgot his keys."],
+      "options": ["Been", "Was", "Being"],
+      "correct": "Being"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} the instructions, she made a mistake."],
+      "options": ["Ignored", "Ignoring", "Ignores"],
+      "correct": "Ignoring"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} with the result, they celebrated."],
+      "options": ["Satisfying", "Satisfied", "Satisfy"],
+      "correct": "Satisfied"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} carefully, he avoided mistakes."],
+      "options": ["Worked", "Works", "Working"],
+      "correct": "Working"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} her phone, she smiled."],
+      "options": ["Checks", "Checking", "Checked"],
+      "correct": "Checking"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} by the news, he stayed silent."],
+      "options": ["Shocks", "Shocking", "Shocked"],
+      "correct": "Shocked"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} faster, we finished earlier."],
+      "options": ["Worked", "Working", "Works"],
+      "correct": "Working"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} the door, she left quietly."],
+      "options": ["Closes", "Closing"],
+      "correct": "Closing"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} with the answer, he raised his hand."],
+      "options": ["Confidently", "Confidence", "Confident"],
+      "correct": "Confident"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} all day, she felt exhausted."],
+      "options": ["Works", "Worked", "Working"],
+      "correct": "Working"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} by his words, she felt hurt."],
+      "options": ["Offending", "Offends", "Offended"],
+      "correct": "Offended"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} the problem, they found a solution."],
+      "options": ["Discusses", "Discussing", "Discussed"],
+      "correct": "Discussing"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} alone, he felt calmer."],
+      "options": ["Was", "Been", "Being"],
+      "correct": "Being"
+    },
+    {
+      "rules": ["PARTICIPLE_CLAUSES"],
+      "en": ["{GAP} the train, she felt relieved."],
+      "options": ["Catches", "Catching"],
+      "correct": "Catching"
+    }
+  ]
+}

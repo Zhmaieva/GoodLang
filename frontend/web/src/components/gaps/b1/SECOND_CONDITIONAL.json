@@ -1,0 +1,125 @@
+{
+  "SECOND_CONDITIONAL": [
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If I had more time, I {GAP} more."],
+      "options": ["will study", "would study", "would studied"],
+      "correct": "would study"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If she lived closer, she {GAP} us more often."],
+      "options": ["would visited", "would visit", "will visit"],
+      "correct": "would visit"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If she {GAP} more free time, she would do yoga."],
+      "options": ["has", "had", "would have"],
+      "correct": "had"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If they {GAP} him, they would follow his advice."],
+      "options": ["would trust", "trusted", "trust"],
+      "correct": "trusted"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If we had a car, we {GAP} to work."],
+      "options": ["would drive", "would drove", "will drive"],
+      "correct": "would drive"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If he knew the answer, he {GAP} you."],
+      "options": ["would told", "will tell", "would tell"],
+      "correct": "would tell"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If they {GAP} the rules, they would make fewer mistakes."],
+      "options": ["understand", "would understand", "understood"],
+      "correct": "understood"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If they had enough money, they {GAP} a house."],
+      "options": ["would bought", "would buy", "will buy"],
+      "correct": "would buy"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If you {GAP} carefully, you would hear everything."],
+      "options": ["listen", "listened", "would listen"],
+      "correct": "listened"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If we {GAP} earlier, we would have dinner together."],
+      "options": ["finished", "would finish", "finish"],
+      "correct": "finished"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If I spoke Spanish, I {GAP} this better."],
+      "options": ["will understand", "would understood", "would understand"],
+      "correct": "would understand"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If it stopped raining, we {GAP} outside."],
+      "options": ["would went", "would go", "will go"],
+      "correct": "would go"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If you tried harder, you {GAP} better results."],
+      "options": ["will get", "would got", "would get"],
+      "correct": "would get"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If I {GAP} better, I would go to the party."],
+      "options": ["would feel", "feel", "felt"],
+      "correct": "felt"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If he {GAP} more, he would plan a vacation."],
+      "options": ["saved", "would save", "saves"],
+      "correct": "saved"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If he worked less, he {GAP} less tired."],
+      "options": ["would feel", "will feel", "would felt"],
+      "correct": "would feel"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If I knew her number, I {GAP} her."],
+      "options": ["would called", "would call", "will call"],
+      "correct": "would call"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If we lived by the sea, we {GAP} every day."],
+      "options": ["will swim", "would swim", "would swam"],
+      "correct": "would swim"
+    },
+
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If she {GAP} faster, she would succeed sooner."],
+      "options": ["learned", "would learn", "learns"],
+      "correct": "learned"
+    },
+    {
+      "rules": ["SECOND_CONDITIONAL"],
+      "en": ["If I {GAP} that bike, I would cycle to work."],
+      "options": ["own", "owned", "would own"],
+      "correct": "owned"
+    }
+  ]
+}

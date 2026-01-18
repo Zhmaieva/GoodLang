@@ -1,0 +1,106 @@
+{
+  "COMPLEX_NOUN_PHRASES": [
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["She works in a small {GAP} company."],
+      "options": ["technologies","technology"],
+      "correct": "technology"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["I forgot my phone {GAP} at home."],
+      "options": [ "charging","charger", "charge"],
+      "correct": "charger"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["They live near the city {GAP}."],
+      "options": ["centered", "central", "center"],
+      "correct": "center"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["He bought a leather travel {GAP}."],
+      "options": ["bag", "baggage", "bags"],
+      "correct": "bag"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["This is a customer service {GAP}."],
+      "options": ["desk", "serve", "serving"],
+      "correct": "desk"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["They stayed at a family-run {GAP}."],
+      "options": ["hotel", "host", "housing"],
+      "correct": "hotel"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["She is a software {GAP}."],
+      "options": ["develop", "development","developer"],
+      "correct": "developer"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["She bought a glass-top {GAP}."],
+      "options": ["table", "tabling", "tablet"],
+      "correct": "table"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["They rented a two-bedroom {GAP}."],
+      "options": ["apartment", "room", "household"],
+      "correct": "apartment"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["He drives a second-hand {GAP}."],
+      "options": ["car", "carry", "cart"],
+      "correct": "car"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["She keeps documents in an office desk {GAP}."],
+      "options": [ "drawing", "drawer","draw"],
+      "correct": "drawer"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["They opened a coffee {GAP}."],
+      "options": ["bar", "drink", "brew"],
+      "correct": "bar"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["This is a factory-made {GAP}."],
+      "options": [ "produce", "production","product"],
+      "correct": "product"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["She wore a gold wedding {GAP}."],
+      "options": ["ring", "engaged", "engagement"],
+      "correct": "ring"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["We need a problem-solving {GAP}."],
+      "options": [ "solve", "solution","approach"],
+      "correct": "approach"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["She has a strong work {GAP}."],
+      "options": [ "ethical", "ethics","ethic"],
+      "correct": "ethic"
+    },
+    {
+      "rules": ["COMPLEX_NOUN_PHRASES"],
+      "en": ["They live in a mountain-side {GAP}."],
+      "options": ["village", "villager", "living"],
+      "correct": "village"
+    }
+  ]
+}

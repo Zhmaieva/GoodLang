@@ -1,0 +1,124 @@
+{
+  "COMPLEX_PREPOSITIONS": [
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The flight was delayed {GAP} bad weather."],
+      "options": ["because", "due to", "thanks for"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["She found the job {GAP} her friend helped her."],
+      "options": ["due to", "because", "thanks to"],
+      "correct": "because"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The match was canceled {GAP} heavy rain."],
+      "options": ["due to", "thanks to", "because"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["He passed the exam {GAP} extra practice."],
+      "options": ["because", "thanks to", "due for"],
+      "correct": "thanks to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The store is closed {GAP} a power cut."],
+      "options": ["due to", "thanks for", "because"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["We arrived early {GAP} the traffic was light."],
+      "options": ["thanks to", "due to", "because"],
+      "correct": "because"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The event was postponed {GAP} technical issues."],
+      "options": ["because", "due to", "thanks to"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["She feels better {GAP} the new medicine."],
+      "options": ["thanks to", "due for", "because"],
+      "correct": "thanks to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The road is blocked {GAP} an accident."],
+      "options": ["thanks for", "due to", "because"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The project succeeded {GAP} strong teamwork."],
+      "options": ["because", "thanks to", "due for"],
+      "correct": "thanks to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The delay happened {GAP} a system error."],
+      "options": ["due to", "thanks to", "thanks for"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["He stayed home {GAP} he felt sick."],
+      "options": ["due to", "because", "thanks to"],
+      "correct": "because"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The game ended early {GAP} bad lighting."],
+      "options": ["thanks to", "due to", "because"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["She stayed calm {GAP} her experience."],
+      "options": ["due for", "because", "thanks to"],
+      "correct": "thanks to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The meeting was moved {GAP} schedule changes."],
+      "options": ["because", "thanks to", "due to"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["We finished on time {GAP} good planning."],
+      "options": ["thanks for", "due to", "thanks to"],
+      "correct": "thanks to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The service was slow {GAP} there were few staff."],
+      "options": ["thanks to", "due to", "because"],
+      "correct": "because"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["He got home safely {GAP} your help."],
+      "options": ["due to", "thanks to", "due for"],
+      "correct": "thanks to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["The flight changed gates {GAP} security checks."],
+      "options": ["thanks for", "because", "due to"],
+      "correct": "due to"
+    },
+    {
+      "rules": ["COMPLEX_PREPOSITIONS"],
+      "en": ["She learned quickly {GAP} good teachers."],
+      "options": ["thanks to", "due to", "thanks for"],
+      "correct": "thanks to"
+    }
+  ]
+}

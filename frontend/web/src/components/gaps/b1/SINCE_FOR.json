@@ -1,0 +1,124 @@
+{
+  "SINCE_FOR": [
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["I have lived here {GAP} 2019."],
+      "options": ["for", "since", "from"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["She has worked here {GAP} five years."],
+      "options": ["since", "during", "for"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["We have known each other {GAP} childhood."],
+      "options": ["for", "since", "during"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["He has been sick {GAP} two days."],
+      "options": ["during", "for", "since"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["I have had this phone {GAP} last summer."],
+      "options": ["for", "from", "since"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["They have waited {GAP} an hour."],
+      "options": ["since", "for", "during"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["She has not eaten {GAP} morning."],
+      "options": ["during", "for", "since"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["We have been married {GAP} ten years."],
+      "options": ["since", "for", "from"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["I have not seen him {GAP} last week."],
+      "options": ["for", "since", "during"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["She has studied English {GAP} three months."],
+      "options": ["since", "during", "for"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["He has lived alone {GAP} 2020."],
+      "options": ["for", "from", "since"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["I have felt tired {GAP} the whole day."],
+      "options": ["since", "for", "during"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["We have used this app {GAP} January."],
+      "options": ["for", "since", "during"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["She has been online {GAP} two hours."],
+      "options": ["during", "since", "for"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["I have liked coffee {GAP} I was a student."],
+      "options": ["for", "since", "during"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["They have stayed here {GAP} a long time."],
+      "options": ["since", "for", "from"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["He has been quiet {GAP} the meeting started."],
+      "options": ["for", "since", "during"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["I have waited {GAP} thirty minutes."],
+      "options": ["since", "during", "for"],
+      "correct": "for"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["She has worked remotely {GAP} 2021."],
+      "options": ["for", "since", "from"],
+      "correct": "since"
+    },
+    {
+      "rules": ["SINCE_FOR"],
+      "en": ["We have been friends {GAP} many years."],
+      "options": ["since", "during", "for"],
+      "correct": "for"
+    }
+  ]
+}

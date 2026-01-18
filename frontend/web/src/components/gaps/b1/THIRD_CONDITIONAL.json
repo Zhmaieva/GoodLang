@@ -1,0 +1,124 @@
+{
+  "THIRD_CONDITIONAL": [
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If I {GAP} earlier, I would have caught the bus."],
+      "options": ["woke up", "had woken up", "would wake up"],
+      "correct": "had woken up"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["She would have helped you if she {GAP} the truth."],
+      "options": ["knew", "had known", "would know"],
+      "correct": "had known"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If we had left earlier, we {GAP} late."],
+      "options": ["would not be", "would not have been", "were not"],
+      "correct": "would not have been"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["He would have passed the exam if he {GAP} more."],
+      "options": ["studied", "had studied", "would study"],
+      "correct": "had studied"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If they {GAP} the map, they wouldn’t have gotten lost."],
+      "options": ["used", "had used", "would use"],
+      "correct": "had used"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["I would have called you if I {GAP} your number."],
+      "options": ["had", "had had", "would have"],
+      "correct": "had had"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If she had told me, I {GAP} surprised."],
+      "options": ["would not be", "would not have been", "was not"],
+      "correct": "would not have been"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["We would have stayed home if it {GAP} raining."],
+      "options": ["was", "had been", "would be"],
+      "correct": "had been"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If you {GAP} harder, you would have succeeded."],
+      "options": ["tried", "had tried", "would try"],
+      "correct": "had tried"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["He would have bought the ticket if he {GAP} enough money."],
+      "options": ["had", "had had", "would have"],
+      "correct": "had had"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If I had known about the meeting, I {GAP}."],
+      "options": ["came", "would come", "would have come"],
+      "correct": "would have come"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["She wouldn’t have been angry if you {GAP} earlier."],
+      "options": ["apologized", "had apologized", "would apologize"],
+      "correct": "had apologized"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If we {GAP} a taxi, we would have arrived on time."],
+      "options": ["took", "had taken", "would take"],
+      "correct": "had taken"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["I would have understood if you {GAP} it clearly."],
+      "options": ["explained", "had explained", "would explain"],
+      "correct": "had explained"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If he had listened to her, he {GAP} this mistake."],
+      "options": ["would avoid", "would have avoided", "avoided"],
+      "correct": "would have avoided"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["They would have finished earlier if they {GAP} distracted."],
+      "options": ["were not", "had not been", "would not be"],
+      "correct": "had not been"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If I {GAP} more time, I would have helped you."],
+      "options": ["had", "had had", "would have"],
+      "correct": "had had"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["She would have stayed longer if she {GAP} tired."],
+      "options": ["was not", "had not been", "would not be"],
+      "correct": "had not been"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["If we had checked the address, we {GAP} the wrong place."],
+      "options": ["would not go", "would not have gone", "did not go"],
+      "correct": "would not have gone"
+    },
+    {
+      "rules": ["THIRD_CONDITIONAL"],
+      "en": ["He would have called earlier if he {GAP} his phone."],
+      "options": ["found", "had found", "would find"],
+      "correct": "had found"
+    }
+  ]
+}

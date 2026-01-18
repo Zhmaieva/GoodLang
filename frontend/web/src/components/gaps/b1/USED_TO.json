@@ -1,0 +1,118 @@
+{
+  "USED_TO": [
+    {
+      "rules": ["USED_TO"],
+      "en": ["I {GAP} live in the city."],
+      "options": ["am used to", "use to", "used to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["I used to {GAP} up early."],
+      "options": ["woke", "wake", "waking"],
+      "correct": "wake"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["She used to {GAP} coffee every morning."],
+      "options": ["drinks", "drank", "drink"],
+      "correct": "drink"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["We used to {GAP} near the park."],
+      "options": ["living", "lived", "live"],
+      "correct": "live"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["He used to {GAP} football after school."],
+      "options": ["plays", "playing", "play"],
+      "correct": "play"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["She {GAP} work nights."],
+      "options": ["used to", "is used to", "use to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["They used to {GAP} out every weekend."],
+      "options": ["going", "go", "went"],
+      "correct": "go"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["I used to {GAP} a lot of sugar."],
+      "options": ["eat", "ate", "eating"],
+      "correct": "eat"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["She used to {GAP} late on Sundays."],
+      "options": ["sleep", "slept", "sleeping"],
+      "correct": "sleep"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["He used to {GAP} the bus to work."],
+      "options": ["takes", "taking", "take"],
+      "correct": "take"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["We used to {GAP} TV together."],
+      "options": ["watch", "watched", "watching"],
+      "correct": "watch"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["I used to {GAP} late every night."],
+      "options": ["worked", "work", "working"],
+      "correct": "work"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["They {GAP} travel a lot before."],
+      "options": ["are used to", "use to", "used to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["She used to {GAP} long hair."],
+      "options": ["has", "having", "have"],
+      "correct": "have"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["They used to {GAP} a small apartment."],
+      "options": ["rent", "rented", "renting"],
+      "correct": "rent"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["He {GAP} drink coffee."],
+      "options": ["is used to", "use to","used to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["He used to {GAP} video games all night."],
+      "options": ["plays",  "playing","play"],
+      "correct": "play"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["We used to {GAP} friends after work."],
+      "options": ["meet", "met", "meeting"],
+      "correct": "meet"
+    },
+    {
+      "rules": ["USED_TO"],
+      "en": ["I used to {GAP} very shy."],
+      "options": ["being", "be", "was"],
+      "correct": "be"
+    }
+  ]
+}

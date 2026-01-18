@@ -1,0 +1,124 @@
+{
+  "REPORTED_SPEECH": [
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["She {GAP} me she was tired."],
+      "options": ["said", "told", "asked"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["He {GAP} that he was late."],
+      "options": ["told me", "said", "asked"],
+      "correct": "said"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["They {GAP} if I needed help."],
+      "options": ["said", "asked", "told"],
+      "correct": "asked"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["She {GAP} him to wait outside."],
+      "options": ["said", "asked", "told"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["He {GAP} that the shop was closed."],
+      "options": ["asked", "said", "told me"],
+      "correct": "said"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["I {GAP} her where she lived."],
+      "options": ["told", "asked", "said"],
+      "correct": "asked"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["She {GAP} me not to worry."],
+      "options": ["asked", "said", "told"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["He {GAP} that he didn’t know the answer."],
+      "options": ["told me", "asked", "said"],
+      "correct": "said"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["They {GAP} us to come earlier."],
+      "options": ["said", "asked", "told"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["She {GAP} if we were ready."],
+      "options": ["said", "told", "asked"],
+      "correct": "asked"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["He {GAP} me he would call later."],
+      "options": ["said", "asked", "told"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["I {GAP} that I was busy."],
+      "options": ["told her", "asked", "said"],
+      "correct": "said"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["She {GAP} him what time it was."],
+      "options": ["told", "asked", "said"],
+      "correct": "asked"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["He {GAP} me to sit down."],
+      "options": ["asked", "said", "told"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["They {GAP} that they were moving out."],
+      "options": ["told us", "asked", "said"],
+      "correct": "said"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["She {GAP} if I liked the food."],
+      "options": ["said", "told", "asked"],
+      "correct": "asked"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["He {GAP} me his name."],
+      "options": ["said", "asked", "told"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["I {GAP} that I couldn’t come."],
+      "options": ["told him", "asked", "said"],
+      "correct": "said"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["She {GAP} us to be quiet."],
+      "options": ["said", "asked", "told"],
+      "correct": "told"
+    },
+    {
+      "rules": ["REPORTED_SPEECH"],
+      "en": ["He {GAP} if we had finished."],
+      "options": ["told", "asked", "said"],
+      "correct": "asked"
+    }
+  ]
+}

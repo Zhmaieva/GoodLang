@@ -1,0 +1,56 @@
+{ "TOO_VERY": [
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["The coffee is {GAP} hot to drink."],
+    "options": ["very", "too"],
+    "correct": "too"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["The road is {GAP} narrow for buses."],
+    "options": [ "too","very"],
+    "correct": "too"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["This singer is {GAP} well-known in Europe."],
+    "options": ["too", "very"],
+    "correct": "very"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["It is {GAP} cold to swim today."],
+    "options": ["very", "too"],
+    "correct": "too"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["The answer is {GAP} much clearer now."],
+    "options": ["too", "very"],
+    "correct": "very"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["The box is {GAP} big for this shelf."],
+    "options": [ "too","very"],
+    "correct": "too"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["That movie is {GAP} much loved by fans."],
+    "options": [ "very","too"],
+    "correct": "very"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["This bag is {GAP} heavy for a child."],
+    "options": ["very", "too"],
+    "correct": "too"
+  },
+  {
+    "rules": ["TOO_VERY"],
+    "en": ["This place is {GAP} well organized."],
+    "options": [ "very","too"],
+    "correct": "very"
+  }
+] }

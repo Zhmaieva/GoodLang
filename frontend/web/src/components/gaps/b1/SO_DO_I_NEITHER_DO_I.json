@@ -1,0 +1,124 @@
+{
+  "SO_DO_I_NEITHER_DO_I": [
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I like coffee. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't watch TV much. — {GAP}."],
+      "options": ["So do I", "Neither do I", "Neither am I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I work from home. — {GAP}."],
+      "options": ["So am I", "So do I", "Neither do I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't like cold weather. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I wake up early. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't eat meat. — {GAP}."],
+      "options": ["So do I", "Neither am I", "Neither do I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I enjoy long walks. — {GAP}."],
+      "options": ["So do I", "Neither do I", "So am I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't drink soda. — {GAP}."],
+      "options": ["So do I", "Neither do I", "Neither am I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I read before bed. — {GAP}."],
+      "options": ["So am I", "So do I", "Neither do I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't like loud music. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I need more sleep. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't use cash often. — {GAP}."],
+      "options": ["So do I", "Neither do I", "Neither am I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I like simple food. — {GAP}."],
+      "options": ["So do I", "Neither do I", "So am I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't go out on weekdays. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I enjoy quiet mornings. — {GAP}."],
+      "options": ["So am I", "Neither do I", "So do I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't like rushing. — {GAP}."],
+      "options": ["So do I", "Neither am I", "Neither do I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I cook at home a lot. — {GAP}."],
+      "options": ["So do I", "So am I", "Neither do I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't feel hungry now. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "Neither do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I like learning English. — {GAP}."],
+      "options": ["Neither do I", "So do I", "So am I"],
+      "correct": "So do I"
+    },
+    {
+      "rules": ["SO_DO_I_NEITHER_DO_I"],
+      "en": ["I don't skip breakfast. — {GAP}."],
+      "options": ["Neither do I", "Neither am I"],
+      "correct": "Neither do I"
+    }
+  ]
+}

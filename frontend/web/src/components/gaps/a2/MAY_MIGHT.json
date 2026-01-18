@@ -9,19 +9,19 @@
     {
       "rules": ["MAY_MIGHT"],
       "en": ["She might {GAP} us later."],
-      "options": ["call", "calls", "calling"],
+      "options": ["call", "to call", "calling"],
       "correct": "call"
     },
     {
       "rules": ["MAY_MIGHT"],
       "en": ["We may {GAP} home early."],
-      "options": ["go", "goes", "going"],
+      "options": [ "to go", "go", "going"],
       "correct": "go"
     },
     {
       "rules": ["MAY_MIGHT"],
       "en": ["He might {GAP} the answer."],
-      "options": ["know", "knows", "knowing"],
+      "options": ["know", "to know", "knowing"],
       "correct": "know"
     },
     {
@@ -33,19 +33,19 @@
     {
       "rules": ["MAY_MIGHT"],
       "en": ["I might {GAP} this movie."],
-      "options": ["watch", "watches", "watching"],
+      "options": ["watch", "to watch", "watching"],
       "correct": "watch"
     },
     {
       "rules": ["MAY_MIGHT"],
       "en": ["She may {GAP} tired after work."],
-      "options": ["being","be"],
+      "options": ["to be","be"],
       "correct": "be"
     },
     {
       "rules": ["MAY_MIGHT"],
       "en": ["We might {GAP} him tomorrow."],
-      "options": [ "sees", "see","seeing"],
+      "options": ["to see", "see","seeing"],
       "correct": "see"
     },
     {
@@ -57,7 +57,7 @@
     {
       "rules": ["MAY_MIGHT"],
       "en": ["I might {GAP} your message."],
-      "options": ["miss", "misses", "missing"],
+      "options": ["miss", "to miss", "missing"],
       "correct": "miss"
     },
     {
@@ -87,13 +87,13 @@
     {
       "rules": ["MAY_MIGHT"],
       "en": ["I may {GAP} you later."],
-      "options": [ "texts", "texting","text"],
+      "options": [ "to text", "texting","text"],
       "correct": "text"
     },
     {
       "rules": ["MAY_MIGHT"],
       "en": ["She might {GAP} at home now."],
-      "options": ["be", "being"],
+      "options": ["be", "to be"],
       "correct": "be"
     },
     {
@@ -111,13 +111,13 @@
     {
       "rules": ["MAY_MIGHT"],
       "en": ["They may {GAP} soon."],
-      "options": [ "arrives", "arriving","arrive"],
+      "options": ["to arrive", "arriving","arrive"],
       "correct": "arrive"
     },
     {
       "rules": ["MAY_MIGHT"],
       "en": ["I might {GAP} my mind."],
-      "options": [ "changes", "change","changing"],
+      "options": ["changes", "change","changing"],
       "correct": "change"
     }
   ]

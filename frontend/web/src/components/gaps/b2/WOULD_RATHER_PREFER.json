@@ -1,0 +1,124 @@
+{
+  "WOULD_RATHER_PREFER": [
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["I {GAP} stay at home tonight."],
+      "options": ["would rather", "prefer than", "would prefer"],
+      "correct": "would rather"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["She would {GAP} walk than drive."],
+      "options": ["prefer to", "rather", "prefers"],
+      "correct": "rather"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["I {GAP} to work early in the morning."],
+      "options": ["would rather", "would prefer", "rather"],
+      "correct": "would prefer"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["They would rather {GAP} at home."],
+      "options": ["to stay", "staying", "stay"],
+      "correct": "stay"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["He {GAP} tea to coffee."],
+      "options": ["would rather", "would prefer", "rather"],
+      "correct": "would prefer"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["I would rather {GAP} now."],
+      "options": ["leave", "to leave", "leaving"],
+      "correct": "leave"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["She would prefer {GAP} later."],
+      "options": ["to talk", "talk", "talking"],
+      "correct": "to talk"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["We would rather eat at home {GAP} go out."],
+      "options": ["than", "to", "instead"],
+      "correct": "than"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["He {GAP} not discuss this now."],
+      "options": ["would rather", "would prefer to", "prefers"],
+      "correct": "would rather"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["I would prefer {GAP} by train."],
+      "options": ["travel", "to travel", "travelling"],
+      "correct": "to travel"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["She would rather {GAP} alone."],
+      "options": ["go", "to go", "going"],
+      "correct": "go"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["They {GAP} working from home."],
+      "options": ["would prefer", "would rather", "prefer to"],
+      "correct": "would prefer"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["I would rather you {GAP} me later."],
+      "options": ["call", "called", "to call"],
+      "correct": "called"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["He would prefer {GAP} earlier."],
+      "options": ["to leave", "leave", "leaving"],
+      "correct": "to leave"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["We would rather not {GAP} about it."],
+      "options": ["talk", "to talk", "talking"],
+      "correct": "talk"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["She {GAP} to stay quiet."],
+      "options": ["would prefer", "would rather", "rather"],
+      "correct": "would prefer"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["I would rather {GAP} this tomorrow."],
+      "options": ["do", "to do", "doing"],
+      "correct": "do"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["They would prefer {GAP} dinner at home."],
+      "options": ["having", "have", "to have"],
+      "correct": "to have"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["He would rather you {GAP} now."],
+      "options": ["leave", "left", "to leave"],
+      "correct": "left"
+    },
+    {
+      "rules": ["WOULD_RATHER_PREFER"],
+      "en": ["I {GAP} not say anything."],
+      "options": ["would rather", "would prefer to", "prefer"],
+      "correct": "would rather"
+    }
+  ]
+}

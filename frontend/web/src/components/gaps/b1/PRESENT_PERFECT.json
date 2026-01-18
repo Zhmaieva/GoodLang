@@ -1,0 +1,124 @@
+{
+  "PRESENT_PERFECT": [
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["I {GAP} my keys."],
+      "options": ["have lose", "have lost"],
+      "correct": "have lost"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["She {GAP} breakfast."],
+      "options": ["has eating", "has eaten", "had ate"],
+      "correct": "has eaten"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["We {GAP} this movie before."],
+      "options": ["have seen", "have saw"],
+      "correct": "have seen"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["He {GAP} his phone at home."],
+      "options": [ "has leave", "has left"],
+      "correct": "has left"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["They {GAP} the email."],
+      "options": ["have send", "have sent"],
+      "correct": "have sent"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["I {GAP} too much coffee today."],
+      "options": ["have drunk", "have drank", "had drunk"],
+      "correct": "have drunk"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["She {GAP} a new job."],
+      "options": [ "has get", "had get","has got"],
+      "correct": "has got"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["We {GAP} our homework."],
+      "options": [ "have did", "have done","had do"],
+      "correct": "have done"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["He {GAP} his wallet."],
+      "options": ["has lose", "has lost", "had lose"],
+      "correct": "has lost"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["I {GAP} this song many times."],
+      "options": ["have heard", "have hear"],
+      "correct": "have heard"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["She {GAP} the dishes."],
+      "options": [ "has wash","has washed"],
+      "correct": "has washed"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["They {GAP} to the teacher."],
+      "options": ["have spoke", "have spoken"],
+      "correct": "have spoken"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["He {GAP} his mind."],
+      "options": ["has change", "has changed", "had change"],
+      "correct": "has changed"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["We {GAP} this place before."],
+      "options": ["have visit", "have visited"],
+      "correct": "have visited"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["I {GAP} my lunch already."],
+      "options": ["have eaten", "have eat", "had ate"],
+      "correct": "have eaten"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["She {GAP} the answer."],
+      "options": ["has knew", "has known"],
+      "correct": "has known"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["They {GAP} the door."],
+      "options": ["have close", "have closed", "had close"],
+      "correct": "have closed"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["He {GAP} a mistake."],
+      "options": [ "has make", "has made","had make"],
+      "correct": "has made"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["I {GAP} my room."],
+      "options": ["have cleaned", "have clean", "had clean"],
+      "correct": "have cleaned"
+    },
+    {
+      "rules": ["PRESENT_PERFECT"],
+      "en": ["We {GAP} this problem before."],
+      "options": [ "have face","have faced"],
+      "correct": "have faced"
+    }
+  ]
+}

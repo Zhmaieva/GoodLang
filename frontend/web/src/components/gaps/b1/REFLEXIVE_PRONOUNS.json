@@ -1,0 +1,124 @@
+{
+  "REFLEXIVE_PRONOUNS": [
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["I hurt {GAP} while cooking."],
+      "options": ["herself", "myself", "yourself", "themselves"],
+      "correct": "myself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["You should be proud of {GAP}."],
+      "options": ["ourselves",  "himself", "itself","yourself"],
+      "correct": "yourself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["He cut {GAP} with a knife."],
+      "options": ["themselves", "herself", "himself", "myself"],
+      "correct": "himself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["She taught {GAP} to drive."],
+      "options": ["yourself", "itself", "ourselves","herself"],
+      "correct": "herself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["We prepared {GAP} for the test."],
+      "options": ["ourselves", "myself", "himself", "yourself"],
+      "correct": "ourselves"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["They introduced {GAP} to the new neighbors."],
+      "options": ["themselves", "herself", "yourself", "itself"],
+      "correct": "themselves"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["The dog hurt {GAP} jumping off the couch."],
+      "options": [ "himself","itself", "myself", "herself"],
+      "correct": "itself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["My sister blamed {GAP} for being late."],
+      "options": [ "yourself", "ourselves", "themselves","herself"],
+      "correct": "herself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["Tom looked at {GAP} in the mirror."],
+      "options": ["myself",  "itself","himself", "yourself"],
+      "correct": "himself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["Please help {GAP} to some tea."],
+      "options": ["yourself", "herself", "themselves", "ourselves"],
+      "correct": "yourself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["I told {GAP} to stay calm."],
+      "options": ["myself", "himself", "yourself", "itself"],
+      "correct": "myself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["The kids dressed {GAP} quickly."],
+      "options": ["yourselves", "themselves", "ourselves", "herself"],
+      "correct": "themselves"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["You all can do it {GAP}."],
+      "options": [ "ourselves", "themselves", "myself","yourselves"],
+      "correct": "yourselves"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["Anna bought {GAP} a new phone."],
+      "options": [ "yourself", "myself", "itself","herself"],
+      "correct": "herself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["We treated {GAP} to dinner."],
+      "options": ["themselves", "ourselves", "yourself", "himself"],
+      "correct": "ourselves"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["He taught {GAP} English using videos."],
+      "options": ["himself", "herself", "myself", "yourselves"],
+      "correct": "himself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["She fell and hurt {GAP}."],
+      "options": ["itself", "herself", "themselves", "ourselves"],
+      "correct": "herself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["They kept {GAP} busy all day."],
+      "options": [ "myself", "yourself","themselves", "himself"],
+      "correct": "themselves"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["I sometimes surprise {GAP}."],
+      "options": ["yourself", "myself", "herself", "themselves"],
+      "correct": "myself"
+    },
+    {
+      "rules": ["REFLEXIVE_PRONOUNS"],
+      "en": ["The cat cleaned {GAP} after eating."],
+      "options": ["himself", "itself", "herself", "ourselves"],
+      "correct": "itself"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "RELATIVE_CLAUSES": [
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["My sister, {GAP} lives in Spain, is a teacher."],
+      "options": ["which", "who", "where"],
+      "correct": "who"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["This is the café {GAP} we usually meet."],
+      "options": ["which", "where", "who"],
+      "correct": "where"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["I met a man {GAP} works with my brother."],
+      "options": ["where", "that", "which"],
+      "correct": "that"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["My phone, {GAP} I bought last year, is already broken."],
+      "options": ["where", "which", "who"],
+      "correct": "which"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["That’s the house {GAP} I grew up."],
+      "options": ["which", "who", "where"],
+      "correct": "where"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["She has a friend {GAP} lives next door."],
+      "options": ["which", "that", "where"],
+      "correct": "that"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["My boss, {GAP} is very strict, is fair."],
+      "options": ["where", "which", "who"],
+      "correct": "who"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["This is the movie {GAP} everyone is talking about."],
+      "options": ["who", "that", "where"],
+      "correct": "that"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["Paris, {GAP} I visited last year, is beautiful."],
+      "options": ["where", "who", "which"],
+      "correct": "which"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["He works in a company {GAP} makes software."],
+      "options": ["where", "that", "who"],
+      "correct": "that"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["My aunt, {GAP} lives alone, visits us often."],
+      "options": ["which", "where", "who"],
+      "correct": "who"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["This is the park {GAP} we play with the kids."],
+      "options": ["which", "who", "where"],
+      "correct": "where"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["I like books {GAP} help me relax."],
+      "options": ["who", "where", "that"],
+      "correct": "that"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["My car, {GAP} is very old, still works well."],
+      "options": ["who", "which", "where"],
+      "correct": "which"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["She knows a doctor {GAP} works at night."],
+      "options": ["where", "which", "that"],
+      "correct": "that"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["This is the city {GAP} my parents met."],
+      "options": ["which", "where", "who"],
+      "correct": "where"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["My teacher, {GAP} helped me a lot, moved abroad."],
+      "options": ["which", "who", "where"],
+      "correct": "who"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["That’s the story {GAP} surprised everyone."],
+      "options": ["where", "who", "that"],
+      "correct": "that"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["London, {GAP} is very busy, can be expensive."],
+      "options": ["where", "which", "who"],
+      "correct": "which"
+    },
+    {
+      "rules": ["RELATIVE_CLAUSES"],
+      "en": ["She works in an office {GAP} is near the station."],
+      "options": ["who", "where", "that"],
+      "correct": "that"
+    }
+  ]
+}

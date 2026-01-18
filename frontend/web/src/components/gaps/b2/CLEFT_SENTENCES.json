@@ -1,0 +1,124 @@
+{
+  "CLEFT_SENTENCES": [
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["It {GAP} Anna who called me."],
+      "options": ["is", "were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} my sister who cooks dinner."],
+      "options": ["It is", "What is", "It was"],
+      "correct": "It is"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} John that fixed the problem."],
+      "options": ["It was", "What was", "It is"],
+      "correct": "It was"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} I really need is some sleep."],
+      "options": ["It is", "What", "What I"],
+      "correct": "What"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} yesterday that we decided to leave."],
+      "options": ["It was", "What was", "It is"],
+      "correct": "It was"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["It {GAP} this place that feels safe."],
+      "options": ["were", "is", "was"],
+      "correct": "is"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["It {GAP} yesterday that we met."],
+      "options": ["is", "was", "are"],
+      "correct": "was"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["What I need {GAP} a break."],
+      "options": ["are", "is", "were"],
+      "correct": "is"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["What they want {GAP} clear answers."],
+      "options": ["is", "are", "was"],
+      "correct": "are"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["What surprised me {GAP} the result."],
+      "options": ["were", "are", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["It {GAP} my keys that are missing."],
+      "options": ["were", "was", "is"],
+      "correct": "is"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} makes me happy is quiet mornings."],
+      "options": ["What", "It", "That"],
+      "correct": "What"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} this book that I like most."],
+      "options": ["It is", "What is", "It was"],
+      "correct": "It is"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} we need now is more time."],
+      "options": ["What", "It", "That"],
+      "correct": "What"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["What helped us {GAP} practice every day."],
+      "options": ["is", "were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["It {GAP} in June that they got married."],
+      "options": ["is", "are", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["What matters most {GAP} your health."],
+      "options": ["are", "is", "were"],
+      "correct": "is"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} her words that hurt me."],
+      "options": ["It was", "What were", "It is"],
+      "correct": "It was"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} really matters is honesty."],
+      "options": ["What", "It", "That"],
+      "correct": "What"
+    },
+    {
+      "rules": ["CLEFT_SENTENCES"],
+      "en": ["{GAP} last year that they moved abroad."],
+      "options": ["It was", "It is", "What was"],
+      "correct": "It was"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "MIXED_CONDITIONALS": [
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If I had studied harder at school, I {GAP} confident at work now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If she had moved abroad earlier, she {GAP} fluent in English now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If he were more responsible, he {GAP} his job last year."],
+      "options": ["would not lose", "would not have lost"],
+      "correct": "would not have lost"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If we had bought that apartment, we {GAP} living closer to work now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If I were more confident, I {GAP} for that promotion last year."],
+      "options": ["would apply", "would have applied"],
+      "correct": "would have applied"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If she had saved more money, she {GAP} less stressed now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If he were better organized, he {GAP} the deadline yesterday."],
+      "options": ["would meet", "would have met"],
+      "correct": "would have met"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If they had chosen another route, they {GAP} at home by now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If I were more careful, I {GAP} that mistake last week."],
+      "options": ["would not make", "would not have made"],
+      "correct": "would not have made"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If she had accepted that offer, she {GAP} working remotely now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If he were less impulsive, he {GAP} his savings last year."],
+      "options": ["would not spend", "would not have spent"],
+      "correct": "would not have spent"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If we had planned the trip better, we {GAP} relaxed now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If I were more patient, I {GAP} that argument yesterday."],
+      "options": ["would avoid", "would have avoided"],
+      "correct": "would have avoided"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If she had learned to drive earlier, she {GAP} more independent now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If he were more focused, he {GAP} that important email last night."],
+      "options": ["would not miss", "would not have missed"],
+      "correct": "would not have missed"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If we had invested earlier, we {GAP} financially secure now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If I were less shy, I {GAP} at the conference yesterday."],
+      "options": ["would speak", "would have spoken"],
+      "correct": "would have spoken"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If she had taken better care of her health, she {GAP} feeling stronger now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If he were more attentive, he {GAP} that warning last week."],
+      "options": ["would notice", "would have noticed"],
+      "correct": "would have noticed"
+    },
+    {
+      "rules": ["MIXED_CONDITIONALS"],
+      "en": ["If we had chosen a different strategy, we {GAP} in a better position now."],
+      "options": ["would be", "would have been"],
+      "correct": "would be"
+    }
+  ]
+}

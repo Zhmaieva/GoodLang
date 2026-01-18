@@ -1,0 +1,124 @@
+{
+  "QUESTION_TAGS": [
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["You like coffee, {GAP}?"],
+      "options": ["do you", "don't you", "aren't you"],
+      "correct": "don't you"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["She works here, {GAP}?"],
+      "options": ["isn't she", "doesn't she", "didn't she"],
+      "correct": "doesn't she"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["They are ready, {GAP}?"],
+      "options": ["don't they", "weren't they", "aren't they"],
+      "correct": "aren't they"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["He finished early, {GAP}?"],
+      "options": ["hasn't he", "didn't he", "doesn't he"],
+      "correct": "didn't he"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["We can start now, {GAP}?"],
+      "options": ["won't we", "can't we", "don't we"],
+      "correct": "can't we"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["You were tired yesterday, {GAP}?"],
+      "options": ["aren't you", "didn't you", "weren't you"],
+      "correct": "weren't you"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["She has a car, {GAP}?"],
+      "options": ["hasn't she", "isn't she", "doesn't she"],
+      "correct": "doesn't she"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["They live nearby, {GAP}?"],
+      "options": ["aren't they", "don't they", "didn't they"],
+      "correct": "don't they"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["He is your brother, {GAP}?"],
+      "options": ["doesn't he", "wasn't he", "isn't he"],
+      "correct": "isn't he"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["You saw the message, {GAP}?"],
+      "options": ["don't you", "haven't you", "didn't you"],
+      "correct": "didn't you"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["We should wait, {GAP}?"],
+      "options": ["don't we", "shouldn't we", "won't we"],
+      "correct": "shouldn't we"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["She doesn't eat meat, {GAP}?"],
+      "options": ["doesn't she", "is she", "does she"],
+      "correct": "does she"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["They weren't late, {GAP}?"],
+      "options": ["weren't they", "did they", "were they"],
+      "correct": "were they"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["You will help me, {GAP}?"],
+      "options": ["will you", "don't you", "won't you"],
+      "correct": "won't you"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["He can't swim, {GAP}?"],
+      "options": ["can't he", "does he", "can he"],
+      "correct": "can he"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["We didn't forget, {GAP}?"],
+      "options": ["do we", "didn't we", "did we"],
+      "correct": "did we"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["She was at home, {GAP}?"],
+      "options": ["didn't she", "wasn't she", "isn't she"],
+      "correct": "wasn't she"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["They have finished, {GAP}?"],
+      "options": ["didn't they", "haven't they", "don't they"],
+      "correct": "haven't they"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["You don't mind, {GAP}?"],
+      "options": ["don't you", "are you", "do you"],
+      "correct": "do you"
+    },
+    {
+      "rules": ["QUESTION_TAGS"],
+      "en": ["He plays football, {GAP}?"],
+      "options": ["didn't he", "isn't he", "doesn't he"],
+      "correct": "doesn't he"
+    }
+  ]
+}

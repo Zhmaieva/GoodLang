@@ -1,0 +1,124 @@
+{
+  "PRESENT_PERFECT_CONT": [
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["I {GAP} all morning."],
+      "options": ["had work", "have been working", "has beed working"],
+      "correct": "have been working"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["She {GAP} for hours."],
+      "options": ["was study", "has been studying", "have been study"],
+      "correct": "has been studying"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["We {GAP} since 8 a.m."],
+      "options": ["have been waiting", "had waiting", "has been wait"],
+      "correct": "have been waiting"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["He {GAP} lately."],
+      "options": ["has been feeling", "have been feel", "had felt"],
+      "correct": "has been feeling"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["They {GAP} all day."],
+      "options": ["have been talking", "has been talk", "talked been"],
+      "correct": "have been talking"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["I {GAP} for a year."],
+      "options": ["have been learning", "had learn", "has been learn"],
+      "correct": "have been learning"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["She {GAP} since morning."],
+      "options": ["has been cleaning", "had cleaned", "have been clean"],
+      "correct": "has been cleaning"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["We {GAP} lately."],
+      "options": ["had working", "have been working", "has been work"],
+      "correct": "have been working"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["He {GAP} recently."],
+      "options": ["has been sleeping", "have sleep", "was been sleep"],
+      "correct": "has been sleeping"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["They {GAP} for hours."],
+      "options": ["has been argue", "have been arguing", "had arguing"],
+      "correct": "have been arguing"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["I {GAP} a lot."],
+      "options": ["have been thinking", "had think", "has been think"],
+      "correct": "have been thinking"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["She {GAP} lately."],
+      "options": ["has been working", "have been work", "had worked"],
+      "correct": "has been working"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["We {GAP} all week."],
+      "options": ["have been trying", "has been try", "had tried"],
+      "correct": "have been trying"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["He {GAP} for your call."],
+      "options": ["has been waiting", "had wait", "have been waits"],
+      "correct": "has been waiting"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["They {GAP} all afternoon."],
+      "options": ["have been playing", "has been play", "had play"],
+      "correct": "have been playing"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["I {GAP} recently."],
+      "options": ["have been feeling", "had feel", "has been feel"],
+      "correct": "have been feeling"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["She {GAP} for some time."],
+      "options": ["has been crying", "had cry", "have been cries"],
+      "correct": "has been crying"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["We {GAP} all week."],
+      "options": ["have been discussing", "has been discuss", "had discussed"],
+      "correct": "have been discussing"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["He {GAP} these days."],
+      "options": ["has been working", "have been works", "had work"],
+      "correct": "has been working"
+    },
+    {
+      "rules": ["PRESENT_PERFECT_CONT"],
+      "en": ["They {GAP} since yesterday."],
+      "options": ["have been helping", "has been help", "had helping"],
+      "correct": "have been helping"
+    }
+  ]
+}

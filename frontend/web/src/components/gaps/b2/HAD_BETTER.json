@@ -1,0 +1,124 @@
+{
+  "HAD_BETTER": [
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["You {GAP} better go now."],
+      "options": ["have", "had", "has"],
+      "correct": "had"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["She had better {GAP} the doctor."],
+      "options": ["to call", "call", "called"],
+      "correct": "call"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["We had better {GAP} early."],
+      "options": ["left", "leave", "to leave"],
+      "correct": "leave"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["He {GAP} better be careful."],
+      "options": ["has", "had", "have"],
+      "correct": "had"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["You had better {GAP} quiet."],
+      "options": ["being", "to be", "be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["They had better {GAP} inside."],
+      "options": ["to stay", "stay", "stayed"],
+      "correct": "stay"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["I had better {GAP} some rest."],
+      "options": ["took", "take", "to take"],
+      "correct": "take"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["She had better {GAP} home."],
+      "options": ["went", "to go", "go"],
+      "correct": "go"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["You {GAP} better tell him the truth."],
+      "options": ["had", "has", "have"],
+      "correct": "had"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["We had better {GAP} the door."],
+      "options": ["lock", "locked", "to lock"],
+      "correct": "lock"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["He had better {GAP} his phone."],
+      "options": ["charges", "to charge", "charge"],
+      "correct": "charge"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["You had better {GAP} sorry."],
+      "options": ["said", "to say", "say"],
+      "correct": "say"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["They had better {GAP} attention."],
+      "options": ["paid", "pay", "to pay"],
+      "correct": "pay"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["I {GAP} better get ready."],
+      "options": ["have", "had", "has"],
+      "correct": "had"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["She had better {GAP} late."],
+      "options": ["not been", "not be", "not to be"],
+      "correct": "not be"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["You had better {GAP} him back."],
+      "options": ["called", "to call", "call"],
+      "correct": "call"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["We had better {GAP} a taxi."],
+      "options": ["to take", "take", "took"],
+      "correct": "take"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["He had better {GAP} his job."],
+      "options": ["kept", "keep", "to keep"],
+      "correct": "keep"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["You {GAP} better not be late."],
+      "options": ["has", "had", "have"],
+      "correct": "had"
+    },
+    {
+      "rules": ["HAD_BETTER"],
+      "en": ["She had better {GAP} careful with that."],
+      "options": ["to be", "being", "be"],
+      "correct": "be"
+    }
+  ]
+}

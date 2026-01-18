@@ -1,0 +1,124 @@
+{
+  "ADV_PASSIVES_REPORTING_VERBS": [
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["He {GAP} very rich."],
+      "options": ["is said to be", "is said being", "said to be"],
+      "correct": "is said to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The company {GAP} thousands of jobs."],
+      "options": ["is expected create", "is expected to create", "expects to be created"],
+      "correct": "is expected to create"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["She {GAP} in Paris now."],
+      "options": ["is believed to live", "believes to live", "is believing to live"],
+      "correct": "is believed to live"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The new law {GAP} next year."],
+      "options": ["is thought will start", "is thought to start", "thinks to start"],
+      "correct": "is thought to start"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The actor {GAP} the role."],
+      "options": ["is rumored taking", "is rumored to be taking", "rumors to take"],
+      "correct": "is rumored to be taking"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["This painting {GAP} very valuable."],
+      "options": ["is considered be", "is considering to be", "is considered to be"],
+      "correct": "is considered to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The suspect {GAP} the country."],
+      "options": ["is alleged leaving", "is alleged to have left", "alleges to leave"],
+      "correct": "is alleged to have left"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["Prices {GAP} again soon."],
+      "options": ["are expected rising", "are expected to rise", "expect to rise"],
+      "correct": "are expected to rise"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The meeting {GAP} canceled."],
+      "options": ["is reported to be", "is reported being", "reports to be"],
+      "correct": "is reported to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["He {GAP} working on a new project."],
+      "options": ["is said to be", "is said being", "says to be"],
+      "correct": "is said to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The phone {GAP} yesterday."],
+      "options": ["is thought stolen", "is thought to be stolen", "thought to steal"],
+      "correct": "is thought to be stolen"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["She {GAP} one of the best doctors."],
+      "options": ["is known being", "knows to be", "is known to be"],
+      "correct": "is known to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The team {GAP} very confident."],
+      "options": ["is considered being", "are considered to be", "considered to be"],
+      "correct": "are considered to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The plan {GAP} risky."],
+      "options": ["is believed to be", "believed being", "is believing to be"],
+      "correct": "is believed to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The singer {GAP} secretly married."],
+      "options": ["is rumored to have been", "is rumored being", "rumors to be"],
+      "correct": "is rumored to have been"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The building {GAP} over 200 years old."],
+      "options": ["is thought to be", "is thought being", "thinks to be"],
+      "correct": "is thought to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["He {GAP} responsible for the decision."],
+      "options": ["is said being", "is said to be", "said to be"],
+      "correct": "is said to be"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The product {GAP} next month."],
+      "options": ["is expected launching", "expects to launch", "is expected to launch"],
+      "correct": "is expected to launch"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["She {GAP} the exam easily."],
+      "options": ["is believed passing", "believes to pass", "is believed to have passed"],
+      "correct": "is believed to have passed"
+    },
+    {
+      "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
+      "en": ["The story {GAP} untrue."],
+      "options": ["is considered to be", "is considering to be", "considered being"],
+      "correct": "is considered to be"
+    }
+  ]
+}
