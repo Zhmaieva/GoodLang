@@ -1,0 +1,124 @@
+{
+  "PAST_SIMPLE": [
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["I {GAP} a movie last night."],
+      "options": ["watch", "watched", "was watching"],
+      "correct": "watched"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["She {GAP} home late yesterday."],
+      "options": ["comes", "came", "come"],
+      "correct": "came"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["We {GAP} pizza for dinner."],
+      "options": ["eat", "eaten", "ate"],
+      "correct": "ate"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["He {GAP} me an email."],
+      "options": [ "send", "sending","sent"],
+      "correct": "sent"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["They {GAP} to the park on Sunday."],
+      "options": ["go", "gone", "went"],
+      "correct": "went"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["I {GAP} my keys this morning."],
+      "options": ["lose", "lost", "losing"],
+      "correct": "lost"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["She {GAP} very tired after work."],
+      "options": ["is",  "were","was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["We {GAP} a lot during the trip."],
+      "options": [ "talk", "talking","talked"],
+      "correct": "talked"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["He {GAP} up early yesterday."],
+      "options": ["get", "got", "gets"],
+      "correct": "got"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["I {GAP} coffee this morning."],
+      "options": ["drink", "drank", "drunk"],
+      "correct": "drank"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["She {GAP} the door and left."],
+      "options": ["close", "closed", "closing"],
+      "correct": "closed"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["They {GAP} the game easily."],
+      "options": ["win",  "winning","won"],
+      "correct": "won"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["We {GAP} our friends last weekend."],
+      "options": ["see", "saw", "seen"],
+      "correct": "saw"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["He {GAP} a shower before bed."],
+      "options": ["takes", "took", "taking"],
+      "correct": "took"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["I {GAP} a new phone last year."],
+      "options": ["buy", "bought", "buying"],
+      "correct": "bought"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["She {GAP} the answer quickly."],
+      "options": ["knows", "knew", "known"],
+      "correct": "knew"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["We {GAP} at home all day."],
+      "options": ["stay", "stayed", "staying"],
+      "correct": "stayed"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["He {GAP} me at the station."],
+      "options": ["meet", "met", "meeting"],
+      "correct": "met"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["I {GAP} English at school."],
+      "options": ["learn",  "learning","learned"],
+      "correct": "learned"
+    },
+    {
+      "rules": ["PAST_SIMPLE"],
+      "en": ["They {GAP} very happy about the news."],
+      "options": [ "was","were"],
+      "correct": "were"
+    }
+  ]
+}

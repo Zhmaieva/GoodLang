@@ -1,0 +1,124 @@
+{
+  "BE_SUPPOSED_TO": [
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["I {GAP} be at work at 9."],
+      "options": [ "suppose to","am supposed to"],
+      "correct": "am supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["She {GAP} call me today."],
+      "options": ["is supposed to", "is suppose"],
+      "correct": "is supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["We {GAP} finish this today."],
+      "options": ["are supposed to", "suppose to"],
+      "correct": "are supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["He {GAP} help his parents."],
+      "options": ["is supposed to", "supposed"],
+      "correct": "is supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["I {GAP} meet her at noon."],
+      "options": ["am suppose","am supposed to"],
+      "correct": "am supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["They {GAP} clean the room."],
+      "options": [ "are suppose","are supposed to"],
+      "correct": "are supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["He {GAP} be here already."],
+      "options": ["is supposed to", "suppose to"],
+      "correct": "is supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["We {GAP} start the meeting now."],
+      "options": ["are supposed to", "are suppose"],
+      "correct": "are supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["She {GAP} study for the test."],
+      "options": ["is supposed to", "is supposed"],
+      "correct": "is supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["I {GAP} send the email."],
+      "options": ["am supposed to", "suppose to"],
+      "correct": "am supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["They {GAP} arrive on time."],
+      "options": ["are supposed to", "supposed"],
+      "correct": "are supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["He {GAP} wear a uniform."],
+      "options": [ "is supposed","is supposed to"],
+      "correct": "is supposed to"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["We are supposed {GAP} the rules."],
+      "options": ["follow", "to follow", "following"],
+      "correct": "to follow"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["She is supposed {GAP} here now."],
+      "options": ["be", "to be", "being"],
+      "correct": "to be"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["I am supposed {GAP} you back."],
+      "options": ["calling", "to call", "call"],
+      "correct": "to call"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["They are supposed {GAP} each other."],
+      "options": [ "helping", "to help","help"],
+      "correct": "to help"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["He is supposed to {GAP} the task."],
+      "options": ["finish", "finishing"],
+      "correct": "finish"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["We are supposed to {GAP} quiet here."],
+      "options": ["be", "being"],
+      "correct": "be"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["She is supposed to {GAP} today."],
+      "options": ["working", "work"],
+      "correct": "work"
+    },
+    {
+      "rules": ["BE_SUPPOSED_TO"],
+      "en": ["I {GAP} know the answer."],
+      "options": ["am supposed to", "suppose to"],
+      "correct": "am supposed to"
+    }
+  ]
+}

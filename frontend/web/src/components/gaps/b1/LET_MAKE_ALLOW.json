@@ -1,0 +1,124 @@
+{
+  "LET_MAKE_ALLOW": [
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["My parents let me {GAP} out late."],
+      "options": ["to go", "go", "going"],
+      "correct": "go"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["My boss lets us {GAP} from home on Fridays."],
+      "options": ["working", "work", "to work"],
+      "correct": "work"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["She didn’t let him {GAP} her phone."],
+      "options": ["using", "to use", "use"],
+      "correct": "use"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["The teacher let the kids {GAP} early."],
+      "options": ["leaving", "leave", "to leave"],
+      "correct": "leave"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["Please let me {GAP} you."],
+      "options": ["helping", "to help", "help"],
+      "correct": "help"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["They made me {GAP} my ID at the entrance."],
+      "options": ["to show", "showing", "show"],
+      "correct": "show"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["The rain made us {GAP} inside."],
+      "options": ["stay", "to stay", "staying"],
+      "correct": "stay"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["This movie always makes me {GAP}."],
+      "options": ["crying", "cry", "to cry"],
+      "correct": "cry"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["The noise made her {GAP} nervous."],
+      "options": ["to feel", "feel", "feeling"],
+      "correct": "feel"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["They made him {GAP} for the mistake."],
+      "options": ["apologizing", "to apologize", "apologize"],
+      "correct": "apologize"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["My parents allow me {GAP} out late on weekends."],
+      "options": ["go", "to go", "going"],
+      "correct": "to go"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["The school allows students {GAP} phones in class."],
+      "options": ["using", "use", "to use"],
+      "correct": "to use"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["They don’t allow people {GAP} here."],
+      "options": ["smoking", "to smoke", "smoke"],
+      "correct": "to smoke"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["This ticket allows you {GAP} the museum for free."],
+      "options": ["entering", "enter", "to enter"],
+      "correct": "to enter"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["The app allows users {GAP} their password."],
+      "options": ["reset", "resetting", "to reset"],
+      "correct": "to reset"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["My doctor allowed me {GAP} home early."],
+      "options": ["going", "to go", "go"],
+      "correct": "to go"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["They won’t allow us {GAP} without tickets."],
+      "options": ["entering", "to enter", "enter"],
+      "correct": "to enter"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["The manager doesn’t allow staff {GAP} late."],
+      "options": ["arrive", "arriving", "to arrive"],
+      "correct": "to arrive"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["He allowed his kids {GAP} up late."],
+      "options": ["stay", "to stay", "staying"],
+      "correct": "to stay"
+    },
+    {
+      "rules": ["LET_MAKE_ALLOW"],
+      "en": ["The rules allow visitors {GAP} photos here."],
+      "options": ["taking", "take", "to take"],
+      "correct": "to take"
+    }
+  ]
+}

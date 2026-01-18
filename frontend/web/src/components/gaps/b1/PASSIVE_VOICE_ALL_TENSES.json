@@ -1,0 +1,118 @@
+{
+  "PASSIVE_VOICE_ALL_TENSES": [
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The door {GAP} every morning."],
+      "options": ["was opened", "is opened", "has been opened"],
+      "correct": "is opened"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The email {GAP} yesterday."],
+      "options": ["has been sent", "was sent", "is sent"],
+      "correct": "was sent"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["Dinner {GAP} right now."],
+      "options": ["is cooked", "was being cooked", "is being cooked"],
+      "correct": "is being cooked"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The room {GAP} already."],
+      "options": ["has been cleaned", "is cleaned", "was cleaned"],
+      "correct": "has been cleaned"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The car {GAP} last week."],
+      "options": ["has been repaired", "is repaired", "was repaired"],
+      "correct": "was repaired"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The tickets {GAP} tomorrow."],
+      "options": ["are sold", "will be sold", "have been sold"],
+      "correct": "will be sold"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The house {GAP} at the moment."],
+      "options": ["was built", "is built", "is being built"],
+      "correct": "is being built"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The movie {GAP} by millions of people."],
+      "options": ["is watched", "have been watched"],
+      "correct": "is watched"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The package {GAP} when I arrived."],
+      "options": ["has been delivered", "is delivered", "was delivered"],
+      "correct": "was delivered"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The problem {GAP} soon."],
+      "options": ["is solved", "was solved", "will be solved"],
+      "correct": "will be solved"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The cake {GAP} by my mom."],
+      "options": ["has been baked", "was baked", "is baked"],
+      "correct": "was baked"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The report {GAP} yet."],
+      "options": ["is not finished", "was not finished", "has not been finished"],
+      "correct": "has not been finished"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["English {GAP} all over the world."],
+      "options": ["have been spoken", "is spoken", "was spoken"],
+      "correct": "is spoken"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The window {GAP} last night."],
+      "options": ["has been broken", "is broken", "was broken"],
+      "correct": "was broken"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The message {GAP} right now."],
+      "options": ["is sent", "was being sent", "is being sent"],
+      "correct": "is being sent"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The job {GAP} before the deadline."],
+      "options": ["is finished", "was finished", "will be finished"],
+      "correct": "will be finished"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The room {GAP} every day."],
+      "options": ["has been cleaned", "is cleaned", "was cleaned"],
+      "correct": "is cleaned"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The song {GAP} many times."],
+      "options": ["was played", "is played", "has been played"],
+      "correct": "has been played"
+    },
+    {
+      "rules": ["PASSIVE_VOICE_ALL_TENSES"],
+      "en": ["The keys {GAP}."],
+      "options": ["has been lost", "are lost"],
+      "correct": "are lost"
+    }
+  ]
+}

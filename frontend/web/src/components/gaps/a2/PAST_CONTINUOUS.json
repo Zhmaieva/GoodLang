@@ -1,0 +1,124 @@
+{
+  "PAST_CONTINUOUS": [
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["I {GAP} TV when you called."],
+      "options": ["am watching", "was watching", "watched"],
+      "correct": "was watching"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["She {GAP} dinner at 7 pm."],
+      "options": ["cooked", "was cooking", "is cooking"],
+      "correct": "was cooking"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["They {GAP} outside all afternoon."],
+      "options": ["played", "are playing", "were playing"],
+      "correct": "were playing"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["He {GAP} when the alarm rang."],
+      "options": ["slept", "is sleeping", "was sleeping"],
+      "correct": "was sleeping"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["We {GAP} for the bus."],
+      "options": ["were waiting", "waited", "are waiting"],
+      "correct": "were waiting"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["I {GAP} late last night."],
+      "options": ["worked", "am working", "was working"],
+      "correct": "was working"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["She {GAP} on the phone."],
+      "options": ["talked", "was talking", "is talking"],
+      "correct": "was talking"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["They {GAP} lunch at noon."],
+      "options": ["had", "were having", "are having"],
+      "correct": "were having"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["He {GAP} home when it started to rain."],
+      "options": ["was driving", "drove", "is driving"],
+      "correct": "was driving"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["We {GAP} for the test yesterday evening."],
+      "options": ["study", "studied", "were studying"],
+      "correct": "were studying"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["I {GAP} a book at that moment."],
+      "options": ["am reading", "read", "was reading"],
+      "correct": "was reading"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["She {GAP} the room when guests arrived."],
+      "options": ["cleaned", "is cleaning", "was cleaning"],
+      "correct": "was cleaning"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["They {GAP} a movie together."],
+      "options": ["are watching", "were watching", "watched"],
+      "correct": "were watching"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["He {GAP} his bike all morning."],
+      "options": ["fixed", "was fixing", "is fixing"],
+      "correct": "was fixing"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["We {GAP} in the park."],
+      "options": ["walked", "were walking", "are walking"],
+      "correct": "were walking"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["I {GAP} to music when you texted me."],
+      "options": ["listened", "am listening", "was listening"],
+      "correct": "was listening"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["She {GAP} for her keys."],
+      "options": ["looked", "was looking", "is looking"],
+      "correct": "was looking"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["They {GAP} on the project together."],
+      "options": ["worked", "are working", "were working"],
+      "correct": "were working"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["He {GAP} breakfast at that time."],
+      "options": ["ate", "was eating", "is eating"],
+      "correct": "was eating"
+    },
+    {
+      "rules": ["PAST_CONTINUOUS"],
+      "en": ["We {GAP} about you yesterday."],
+      "options": ["talked", "are talking", "were talking"],
+      "correct": "were talking"
+    }
+  ]
+}

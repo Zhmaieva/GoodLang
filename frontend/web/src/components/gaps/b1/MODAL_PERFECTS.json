@@ -1,0 +1,124 @@
+{
+  "MODAL_PERFECTS": [
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["I {GAP} told her the truth."],
+      "options": ["should have", "should had", "should"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["You {GAP} called me earlier."],
+      "options": ["could", "could have", "could had"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["He {GAP} studied more for the test."],
+      "options": ["should have", "should"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["We {GAP} taken a taxi."],
+      "options": ["could have", "could"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["She {GAP} apologized yesterday."],
+      "options": ["should", "should have", "should had"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["They {GAP} warned us about the problem."],
+      "options": ["could have", "could had"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["I {GAP} listened to your advice."],
+      "options": [ "should have", "should"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["You {GAP} saved a lot of time."],
+      "options": ["could", "could have"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["He {GAP} locked the door."],
+      "options": ["should have", "should had"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["We {GAP} stayed at home."],
+      "options": ["could have", "could"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["She {GAP} checked her email."],
+      "options": ["should have", "should"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["They {GAP} finished the work earlier."],
+      "options": ["could have", "could"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["I {GAP} bought the tickets online."],
+      "options": ["should have", "should"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["You {GAP} asked for help."],
+      "options": ["could", "could have"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["He {GAP} explained everything clearly."],
+      "options": ["should", "should had", "should have"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["We {GAP} booked the hotel earlier."],
+      "options": ["could have", "could"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["She {GAP} been more careful."],
+      "options": ["should have", "should be", "should had"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["They {GAP} chosen a better option."],
+      "options": ["could have", "could"],
+      "correct": "could have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["I {GAP} prepared better."],
+      "options": ["should have", "should"],
+      "correct": "should have"
+    },
+    {
+      "rules": ["MODAL_PERFECTS"],
+      "en": ["You {GAP} avoided the mistake."],
+      "options": ["could", "could have"],
+      "correct": "could have"
+    }
+  ]
+}

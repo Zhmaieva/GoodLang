@@ -1,0 +1,124 @@
+{
+  "ENOUGH_TOO_MUCH_MANY": [
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["I have {GAP} money to buy it."],
+      "options": ["too many", "enough", "too much"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["There is {GAP} sugar in this coffee."],
+      "options": ["too much", "enough", "too many"],
+      "correct": "too much"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["I ate {GAP} cookies."],
+      "options": ["too much", "too many", "enough"],
+      "correct": "too many"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["We don’t have {GAP} time."],
+      "options": ["too many", "enough"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["She drinks {GAP} coffee."],
+      "options": ["too many", "too much", "enough"],
+      "correct": "too much"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["There are {GAP} people in the room."],
+      "options": ["too much", "too many", "enough"],
+      "correct": "too many"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["I have {GAP} friends here."],
+      "options": ["too much", "enough"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["He spends {GAP} money on games."],
+      "options": ["too many", "too much", "enough"],
+      "correct": "too much"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["She made {GAP} mistakes."],
+      "options": ["enough", "too many", "too much"],
+      "correct": "too many"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["Do we have {GAP} chairs?"],
+      "options": ["too much", "enough", "too many"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["There is {GAP} noise outside."],
+      "options": ["too much", "too many", "enough"],
+      "correct": "too much"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["I asked {GAP} questions."],
+      "options": ["too much", "too many", "enough"],
+      "correct": "too many"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["We have {GAP} food for everyone."],
+      "options": ["too many", "too much", "enough"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["He puts {GAP} salt in soup."],
+      "options": ["too much", "enough", "too many"],
+      "correct": "too much"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["There are {GAP} emails to read."],
+      "options": ["too much", "enough", "too many"],
+      "correct": "too many"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["I think this is {GAP} information."],
+      "options": ["too many", "too much"],
+      "correct": "too much"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["She has {GAP} homework today."],
+      "options": ["too much", "too many", "enough"],
+      "correct": "too much"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["We invited {GAP} guests."],
+      "options": ["too much", "too many", "enough"],
+      "correct": "too many"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["Is there {GAP} space in the bag?"],
+      "options": ["too many", "enough", "too much"],
+      "correct": "enough"
+    },
+    {
+      "rules": ["ENOUGH_TOO_MUCH_MANY"],
+      "en": ["He eats {GAP} chocolate."],
+      "options": ["too many", "enough", "too much"],
+      "correct": "too much"
+    }
+  ]
+}
