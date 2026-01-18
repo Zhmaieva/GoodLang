@@ -1,0 +1,124 @@
+{
+  "ADVERBS_OF_MANNER": [
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She speaks {GAP}."],
+      "options": ["slowly", "slow", "slower"],
+      "correct": "slowly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["He drives very {GAP}."],
+      "options": ["careful", "carefully", "care"],
+      "correct": "carefully"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["They worked {GAP} all night."],
+      "options": ["hardly", "hard", "hardly hard"],
+      "correct": "hard"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["Please listen {GAP}."],
+      "options": ["careful", "carefully", "carefulness"],
+      "correct": "carefully"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She answered {GAP}."],
+      "options": ["quick", "quickly", "quicker"],
+      "correct": "quickly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["He explained it {GAP}."],
+      "options": ["clear", "clearly", "clearness"],
+      "correct": "clearly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["The baby slept {GAP}."],
+      "options": ["quiet", "quietly", "quieter"],
+      "correct": "quietly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She sings {GAP}."],
+      "options": ["beautiful", "beautifully", "beauty"],
+      "correct": "beautifully"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["He closed the door {GAP}."],
+      "options": ["soft", "softly", "softness"],
+      "correct": "softly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["They waited {GAP}."],
+      "options": ["patient", "patiently", "patience"],
+      "correct": "patiently"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She walks {GAP}."],
+      "options": ["slow", "slowly", "slowness"],
+      "correct": "slowly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["He did the task {GAP}."],
+      "options": ["easy", "easily", "easiness"],
+      "correct": "easily"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She laughed {GAP}."],
+      "options": ["loud", "loudly", "louder"],
+      "correct": "loudly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["He waited {GAP} in line."],
+      "options": ["quiet", "quietly", "quietness"],
+      "correct": "quietly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She writes {GAP}."],
+      "options": ["neat", "neatly", "neatness"],
+      "correct": "neatly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["He looked at me {GAP}."],
+      "options": ["angry", "angrily", "anger"],
+      "correct": "angrily"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["They played {GAP} together."],
+      "options": ["happy", "happily", "happiness"],
+      "correct": "happily"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She reacted {GAP} to the news."],
+      "options": ["calm", "calmly", "calmness"],
+      "correct": "calmly"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["He finished the work {GAP}."],
+      "options": ["successful", "successfully", "success"],
+      "correct": "successfully"
+    },
+    {
+      "rules": ["ADVERBS_OF_MANNER"],
+      "en": ["She smiled {GAP}."],
+      "options": ["kind", "kindly", "kindness"],
+      "correct": "kindly"
+    }
+  ]
+}

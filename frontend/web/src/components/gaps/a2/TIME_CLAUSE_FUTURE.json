@@ -1,0 +1,124 @@
+{
+  "TIME_CLAUSE_FUTURE": [
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["I will call you when I {GAP} home."],
+      "options": ["get", "will get", "am getting"],
+      "correct": "get"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["She will eat after she {GAP} work."],
+      "options": ["finishes", "will finish"],
+      "correct": "finishes"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["We will start when everyone {GAP} here."],
+      "options": ["is", "will be", "was"],
+      "correct": "is"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["I will wait until he {GAP} back."],
+      "options": ["comes", "will come"],
+      "correct": "comes"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["Call me as soon as you {GAP} time."],
+      "options": ["have", "will have"],
+      "correct": "have"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["She will leave before it {GAP} dark."],
+      "options": ["gets", "will get"],
+      "correct": "gets"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["We will talk after the kids {GAP} asleep."],
+      "options": ["are", "will be"],
+      "correct": "are"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["He will text you when he {GAP} there."],
+      "options": ["arrives", "will arrive", "arrived"],
+      "correct": "arrives"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["I will cook dinner after I {GAP} home."],
+      "options": ["get", "will get"],
+      "correct": "get"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["She will rest when the baby {GAP} asleep."],
+      "options": ["falls", "will fall"],
+      "correct": "falls"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["We will go out when the rain {GAP}."],
+      "options": ["stops", "will stop"],
+      "correct": "stops"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["I will finish this before you {GAP} back."],
+      "options": ["come", "will come"],
+      "correct": "come"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["He will start the meeting after she {GAP}."],
+      "options": ["arrives", "will arrive"],
+      "correct": "arrives"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["We will eat when dad {GAP} home."],
+      "options": ["gets", "will get"],
+      "correct": "gets"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["She will call you before she {GAP} out."],
+      "options": ["goes", "will go"],
+      "correct": "goes"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["I will clean the room after guests {GAP}."],
+      "options": ["leave", "will leave"],
+      "correct": "leave"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["He will sleep until the alarm {GAP}."],
+      "options": ["rings", "will ring"],
+      "correct": "rings"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["We will decide when we {GAP} more information."],
+      "options": ["get", "will get"],
+      "correct": "get"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["She will smile when she {GAP} the news."],
+      "options": ["hears", "will hear"],
+      "correct": "hears"
+    },
+    {
+      "rules": ["TIME_CLAUSE_FUTURE"],
+      "en": ["I will relax after I {GAP} this task."],
+      "options": ["finish", "will finish"],
+      "correct": "finish"
+    }
+  ]
+}

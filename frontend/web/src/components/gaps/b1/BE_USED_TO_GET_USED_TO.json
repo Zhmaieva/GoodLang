@@ -1,0 +1,124 @@
+{
+  "BE_USED_TO_GET_USED_TO": [
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["I am {GAP} waking up early."],
+      "options": [ "use to", "get used to","used to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["She is used to {GAP} less now."],
+      "options": [ "sleep", "sleeping","to sleep"],
+      "correct": "sleeping"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["We are getting used to {GAP} dinner late."],
+      "options": ["eating", "eat", "to eat"],
+      "correct": "eating"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["She is {GAP} the cold weather."],
+      "options": ["getting used to", "used to", "get use to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["He is already used to {GAP} online meetings."],
+      "options": [ "have", "to have","having"],
+      "correct": "having"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["I am not used to {GAP} this schedule yet."],
+      "options": [ "follow","following", "to follow"],
+      "correct": "following"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["She is slowly getting used to {GAP} alone."],
+      "options": ["living", "live", "to live"],
+      "correct": "living"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["I am still {GAP} working from home."],
+      "options": ["getting used to", "used to", "get used"],
+      "correct": "getting used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["He wasn’t {GAP} driving on the left."],
+      "options": [ "use to", "getting use to","used to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["She is {GAP} the noise now."],
+      "options": ["used to", "getting used to", "use to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["They are used to {GAP} the new system now."],
+      "options": ["using", "use", "to use"],
+      "correct": "using"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["I am still getting used to {GAP} the new app."],
+      "options": [ "use","using", "to use"],
+      "correct": "using"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["He is used to {GAP} late."],
+      "options": [ "work", "to work","working"],
+      "correct": "working"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["I am slowly {GAP} speaking English every day."],
+      "options": ["getting used to", "used to", "get use to"],
+      "correct": "getting used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["They are {GAP} living in a big city."],
+      "options": ["used to", "get used to", "getting use to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["She is getting used to {GAP} her new routine."],
+      "options": [ "follow", "to follow","following"],
+      "correct": "following"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["He is still {GAP} his new job."],
+      "options": ["getting used to", "used to", "use to"],
+      "correct": "getting used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["I wasn’t {GAP} so much traffic."],
+      "options": ["used to", "getting used to", "use to"],
+      "correct": "used to"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["We are not used to {GAP} this weather yet."],
+      "options": ["having", "have", "to have"],
+      "correct": "having"
+    },
+    {
+      "rules": ["BE_USED_TO_GET_USED_TO"],
+      "en": ["I am finally used to {GAP} every day."],
+      "options": ["driving", "drive", "to drive"],
+      "correct": "driving"
+    }
+  ]
+}

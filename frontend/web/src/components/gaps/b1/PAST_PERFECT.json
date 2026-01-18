@@ -1,0 +1,124 @@
+{
+  "PAST_PERFECT": [
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["She {GAP} before I called her."],
+      "options": ["had left", "has left", "left"],
+      "correct": "had left"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["We {GAP} the movie before it started."],
+      "options": ["had seen", "saw", "have seen"],
+      "correct": "had seen"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["He {GAP} breakfast before going to work."],
+      "options": ["ate", "had eaten", "has eaten"],
+      "correct": "had eaten"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["They {GAP} the house before the guests arrived."],
+      "options": ["had cleaned", "cleaned", "have cleaned"],
+      "correct": "had cleaned"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["I {GAP} my keys, so I was late."],
+      "options": ["lost", "have lost", "had lost"],
+      "correct": "had lost"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["She {GAP} the email before the meeting."],
+      "options": ["read", "has read", "had read"],
+      "correct": "had read"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["We {GAP} the tickets before we entered."],
+      "options": ["bought", "had bought", "have bought"],
+      "correct": "had bought"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["He {GAP} already when I arrived."],
+      "options": ["had finished", "finished", "has finished"],
+      "correct": "had finished"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["They {GAP} the problem before the boss noticed it."],
+      "options": ["fixed", "have fixed", "had fixed"],
+      "correct": "had fixed"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["I {GAP} her name before she told me."],
+      "options": ["knew", "had known", "have known"],
+      "correct": "had known"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["She {GAP} the door before leaving."],
+      "options": ["locked", "has locked", "had locked"],
+      "correct": "had locked"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["We {GAP} dinner before the guests came."],
+      "options": ["had cooked", "cooked", "have cooked"],
+      "correct": "had cooked"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["He {GAP} the report before the deadline."],
+      "options": ["finished", "had finished", "has finished"],
+      "correct": "had finished"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["They {GAP} the hotel before midnight."],
+      "options": ["had booked", "booked", "have booked"],
+      "correct": "had booked"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["I {GAP} the answer before the teacher explained it."],
+      "options": ["knew", "have known", "had known"],
+      "correct": "had known"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["She {GAP} the dishes before her parents came home."],
+      "options": ["washed", "had washed", "has washed"],
+      "correct": "had washed"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["We {GAP} the room before the meeting started."],
+      "options": ["prepared", "have prepared", "had prepared"],
+      "correct": "had prepared"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["He {GAP} the bus before I reached the stop."],
+      "options": ["had missed", "missed", "has missed"],
+      "correct": "had missed"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["They {GAP} the rules before the game began."],
+      "options": ["had explained", "explained", "have explained"],
+      "correct": "had explained"
+    },
+    {
+      "rules": ["PAST_PERFECT"],
+      "en": ["I {GAP} the message before it was deleted."],
+      "options": ["read", "had read", "have read"],
+      "correct": "had read"
+    }
+  ]
+}

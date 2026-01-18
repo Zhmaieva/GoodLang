@@ -1,0 +1,124 @@
+{
+  "CAUSATIVE_HAVE_GET": [
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["I had my hair {GAP} last week."],
+      "options": ["cutting", "cuts", "cut", "to cut"],
+      "correct": "cut"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["She got her car {GAP} at the garage."],
+      "options": ["repair", "repaired", "repairing", "repairs"],
+      "correct": "repaired"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["We need to have the house {GAP} before winter."],
+      "options": [ "painting", "paint", "paints","painted"],
+      "correct": "painted"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["He {GAP} his suit cleaned yesterday."],
+      "options": ["has", "have", "had", "having"],
+      "correct": "had"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["They got their windows {GAP} by a professional."],
+      "options": ["replace", "replacing", "replaces", "replaced"],
+      "correct": "replaced"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["I will have my teeth {GAP} next month."],
+      "options": ["checked", "checking", "check", "checks"],
+      "correct": "checked"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["She {GAP} her nails done every week."],
+      "options": ["getting", "gets", "get", "got"],
+      "correct": "gets"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["He had the lawn {GAP} by the gardener."],
+      "options": ["mows", "mowing", "mow", "mowed"],
+      "correct": "mowed"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["We {GAP} our roof repaired after the storm."],
+      "options": [ "getting", "gets", "get","got"],
+      "correct": "got"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["They need to get the computer {GAP} soon."],
+      "options": ["fixing", "fixed", "fixes", "fix"],
+      "correct": "fixed"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["I have my clothes {GAP} at the dry cleaner."],
+      "options": ["washed", "washing", "washes", "wash"],
+      "correct": "washed"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["She {GAP} her bike serviced regularly."],
+      "options": [ "have", "having", "had","has"],
+      "correct": "has"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["He got his watch {GAP} last year."],
+      "options": ["mends", "mended", "mend", "mending"],
+      "correct": "mended"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["We had the cake {GAP} for the party."],
+      "options": ["bakes", "baking", "bake", "baked"],
+      "correct": "baked"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["They {GAP} their garden landscaped."],
+      "options": [ "get", "gets", "getting","got"],
+      "correct": "got"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["I need to have my shoes {GAP}."],
+      "options": ["polish", "polishes", "polishing", "polished"],
+      "correct": "polished"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["She has her room {GAP} every day."],
+      "options": ["cleaned", "clean", "cleans", "cleaning"],
+      "correct": "cleaned"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["He {GAP} his car washed weekly."],
+      "options": ["get", "got", "gets", "getting"],
+      "correct": "gets"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["We got the fence {GAP} by experts."],
+      "options": ["build", "built", "building", "builds"],
+      "correct": "built"
+    },
+    {
+      "rules": ["CAUSATIVE_HAVE_GET"],
+      "en": ["They had their photo {GAP} at the studio."],
+      "options": ["taken", "take", "taking", "takes"],
+      "correct": "taken"
+    }
+  ]
+}

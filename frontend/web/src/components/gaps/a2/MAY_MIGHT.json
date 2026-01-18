@@ -1,0 +1,124 @@
+{
+  "MAY_MIGHT": [
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["I may {GAP} late today."],
+      "options": ["be", "being"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["She might {GAP} us later."],
+      "options": ["call", "calls", "calling"],
+      "correct": "call"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["We may {GAP} home early."],
+      "options": ["go", "goes", "going"],
+      "correct": "go"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["He might {GAP} the answer."],
+      "options": ["know", "knows", "knowing"],
+      "correct": "know"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["They may {GAP} busy today."],
+      "options": [ "being","be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["I might {GAP} this movie."],
+      "options": ["watch", "watches", "watching"],
+      "correct": "watch"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["She may {GAP} tired after work."],
+      "options": ["being","be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["We might {GAP} him tomorrow."],
+      "options": [ "sees", "see","seeing"],
+      "correct": "see"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["He may {GAP} late tonight."],
+      "options": [ "works", "working","work"],
+      "correct": "work"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["I might {GAP} your message."],
+      "options": ["miss", "misses", "missing"],
+      "correct": "miss"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["They may {GAP} the plan."],
+      "options": [ "changes","change", "changing"],
+      "correct": "change"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["She might {GAP} the truth."],
+      "options": ["tell", "tells", "telling"],
+      "correct": "tell"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["We may {GAP} some help."],
+      "options": [ "needs", "need","needing"],
+      "correct": "need"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["He might {GAP} the meeting."],
+      "options": ["skip", "skips", "skipping"],
+      "correct": "skip"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["I may {GAP} you later."],
+      "options": [ "texts", "texting","text"],
+      "correct": "text"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["She might {GAP} at home now."],
+      "options": ["be", "being"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["We may {GAP} dinner outside."],
+      "options": ["have", "has", "having"],
+      "correct": "have"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["He might {GAP} the train."],
+      "options": [ "misses", "miss","missing"],
+      "correct": "miss"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["They may {GAP} soon."],
+      "options": [ "arrives", "arriving","arrive"],
+      "correct": "arrive"
+    },
+    {
+      "rules": ["MAY_MIGHT"],
+      "en": ["I might {GAP} my mind."],
+      "options": [ "changes", "change","changing"],
+      "correct": "change"
+    }
+  ]
+}

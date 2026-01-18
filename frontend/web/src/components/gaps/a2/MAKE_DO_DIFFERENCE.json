@@ -1,5 +1,124 @@
 {
   "MAKE_DO_DIFFERENCE": [
-
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["It {GAP} a big difference."],
+      "options": ["makes", "does"],
+      "correct": "makes"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["This small change {GAP} a difference."],
+      "options": ["makes", "does"],
+      "correct": "makes"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Does it {GAP} any difference?"],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Your help {GAP} a real difference."],
+      "options": ["makes", "does"],
+      "correct": "makes"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["It doesn’t {GAP} much difference."],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Does the color {GAP} a difference?"],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["That mistake didn’t {GAP} a difference."],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["A good teacher {GAP} a big difference."],
+      "options": ["makes", "does"],
+      "correct": "makes"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["It won’t {GAP} any difference."],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Did that decision {GAP} a difference?"],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["One vote can {GAP} a difference."],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["It really {GAP} a difference to me."],
+      "options": ["makes", "does"],
+      "correct": "makes"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Does the price {GAP} any difference?"],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["That extra hour {GAP} a difference."],
+      "options": ["makes", "does"],
+      "correct": "makes"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["It didn’t really {GAP} a difference."],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Do details {GAP} a difference?"],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Good sleep {GAP} a big difference."],
+      "options": ["makes", "does"],
+      "correct": "makes"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Will this update {GAP} a difference?"],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["It can {GAP} all the difference."],
+      "options": ["make", "do"],
+      "correct": "make"
+    },
+    {
+      "rules": ["MAKE_DO_DIFFERENCE"],
+      "en": ["Her words {GAP} a difference."],
+      "options": ["make", "makes"],
+      "correct": "make"
+    }
   ]
 }

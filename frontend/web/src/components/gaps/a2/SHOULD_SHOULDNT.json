@@ -1,0 +1,124 @@
+{
+  "SHOULD_SHOULDNT": [
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You should {GAP} more water."],
+      "options": ["drink", "to drink"],
+      "correct": "drink"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You shouldn’t {GAP} so late."],
+      "options": ["sleep", "to sleep"],
+      "correct": "sleep"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["She should {GAP} her teacher."],
+      "options": ["call", "to call"],
+      "correct": "call"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You shouldn’t {GAP} your phone at work."],
+      "options": ["use", "to use"],
+      "correct": "use"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["We should {GAP} earlier."],
+      "options": ["leave", "to leave"],
+      "correct": "leave"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["He shouldn’t {GAP} so fast."],
+      "options": ["drive", "to drive"],
+      "correct": "drive"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["I should {GAP} more often."],
+      "options": ["exercise", "to exercise"],
+      "correct": "exercise"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You shouldn’t {GAP} rude to people."],
+      "options": ["be", "to be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["She should {GAP} this book."],
+      "options": ["read", "to read"],
+      "correct": "read"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["We shouldn’t {GAP} the rules."],
+      "options": ["break", "to break"],
+      "correct": "break"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You should {GAP} your parents."],
+      "options": ["visit", "to visit"],
+      "correct": "visit"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["He shouldn’t {GAP} so much sugar."],
+      "options": ["eat", "to eat"],
+      "correct": "eat"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["I should {GAP} sorry."],
+      "options": ["be", "to be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You shouldn’t {GAP} about it."],
+      "options": ["worry", "to worry"],
+      "correct": "worry"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["We should {GAP} this now."],
+      "options": ["do", "to do"],
+      "correct": "do"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["She shouldn’t {GAP} the truth."],
+      "options": ["hide", "to hide"],
+      "correct": "hide"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You should {GAP} more carefully."],
+      "options": ["listen", "to listen"],
+      "correct": "listen"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["He shouldn’t {GAP} so angry."],
+      "options": ["be", "to be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["I should {GAP} earlier tomorrow."],
+      "options": ["wake up", "to wake up"],
+      "correct": "wake up"
+    },
+    {
+      "rules": ["SHOULD_SHOULDNT"],
+      "en": ["You shouldn’t {GAP} this message."],
+      "options": ["ignore", "to ignore"],
+      "correct": "ignore"
+    }
+  ]
+}

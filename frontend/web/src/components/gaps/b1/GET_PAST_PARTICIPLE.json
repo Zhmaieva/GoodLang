@@ -1,0 +1,124 @@
+{
+  "GET_PAST_PARTICIPLE": [
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["I {GAP} every Friday."],
+      "options": [ "get pay", "get paying","get paid"],
+      "correct": "get paid"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["She {GAP} last year."],
+      "options": ["gets married", "gets marry", "gets marrying"],
+      "correct": "gets married"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["He {GAP} during the game."],
+      "options": [ "got hurting", "got hurt","got hurted"],
+      "correct": "got hurt"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["We don’t want to {GAP} on the way."],
+      "options": ["get lost", "get lose", "get losing"],
+      "correct": "get lost"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["I usually {GAP} after work."],
+      "options": ["get tired", "get tire", "get tiring"],
+      "correct": "get tired"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["My phone {GAP} yesterday."],
+      "options": [ "got breaking","got broken", "got broke"],
+      "correct": "got broken"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["He {GAP} for theft."],
+      "options": [ "got arrest", "got arresting","got arrested"],
+      "correct": "got arrested"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["She hopes to {GAP} soon."],
+      "options": ["get promoted", "get promote", "get promoting"],
+      "correct": "get promoted"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["They {GAP} to the party."],
+      "options": [ "got invite", "got invited","got inviting"],
+      "correct": "got invited"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["I {GAP} last month."],
+      "options": [ "got fire", "got fired","got firing"],
+      "correct": "got fired"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["He {GAP} quickly."],
+      "options": [ "got dress", "got dressing","got dressed"],
+      "correct": "got dressed"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["She {GAP} in the accident."],
+      "options": [ "got injure", "got injuring","got injured"],
+      "correct": "got injured"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["We {GAP} by the rules."],
+      "options": ["got confused", "got confuse", "got confusing"],
+      "correct": "got confused"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["I don’t want to {GAP} in this."],
+      "options": ["get involved", "get involve", "get involving"],
+      "correct": "get involved"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["The room {GAP} every day."],
+      "options": ["gets cleaned", "gets clean", "gets cleaning"],
+      "correct": "gets cleaned"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["He {GAP} very easily."],
+      "options": ["gets annoyed", "gets annoy", "gets annoying"],
+      "correct": "gets annoyed"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["I need to {GAP} waking up early."],
+      "options": [ "get use to", "get used to","get using to"],
+      "correct": "get used to"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["She {GAP} by the news."],
+      "options": [ "got shock", "got shocking","got shocked"],
+      "correct": "got shocked"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["They {GAP} about money."],
+      "options": [ "get worry", "get worrying","get worried"],
+      "correct": "get worried"
+    },
+    {
+      "rules": ["GET_PAST_PARTICIPLE"],
+      "en": ["I {GAP} very quickly."],
+      "options": ["get bored", "get bore", "get boring"],
+      "correct": "get bored"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "IN_ORDER_TO_SO_THAT": [
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["I woke up early {GAP} catch the train."],
+      "options": ["so that", "in order to", "because"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["She whispered {GAP} the baby would not wake up."],
+      "options": ["because", "so that", "in order to"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["He studied every day {GAP} pass the exam."],
+      "options": ["for", "because", "in order to"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["We closed the window {GAP} it wouldn’t be cold."],
+      "options": ["in order to", "because", "so that"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["I saved money {GAP} buy a new phone."],
+      "options": ["because", "in order to", "so that"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["She spoke louder {GAP} everyone could hear her."],
+      "options": ["so that", "because", "in order to"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["He left early {GAP} avoid traffic."],
+      "options": ["because of", "so that", "in order to"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["They wrote it down {GAP} they wouldn’t forget."],
+      "options": ["in order to", "so that", "because"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["I turned off my phone {GAP} focus on work."],
+      "options": ["for", "in order to", "so that"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["She took a taxi {GAP} she would arrive on time."],
+      "options": ["because", "in order to", "so that"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["He wears glasses {GAP} see better."],
+      "options": ["so that", "because", "in order to"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["We left a note {GAP} they would know where we are."],
+      "options": ["for", "so that", "in order to"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["She exercises every day {GAP} stay healthy."],
+      "options": ["in order to", "because", "so that"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["I repeated the question {GAP} he could understand me."],
+      "options": ["because", "so that", "in order to"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["He moved closer {GAP} hear better."],
+      "options": ["for", "in order to", "so that"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["She set an alarm {GAP} she wouldn’t oversleep."],
+      "options": ["in order to", "because", "so that"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["I took notes {GAP} remember everything."],
+      "options": ["because", "in order to", "so that"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["They spoke quietly {GAP} no one else would hear."],
+      "options": ["so that", "because", "in order to"],
+      "correct": "so that"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["He locked the door {GAP} be safe."],
+      "options": ["because", "so that", "in order to"],
+      "correct": "in order to"
+    },
+    {
+      "rules": ["IN_ORDER_TO_SO_THAT"],
+      "en": ["She explained it again {GAP} everyone understood."],
+      "options": ["in order to", "so that", "because"],
+      "correct": "so that"
+    }
+  ]
+}

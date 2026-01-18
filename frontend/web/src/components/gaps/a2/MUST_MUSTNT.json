@@ -1,0 +1,124 @@
+{
+  "MUST_MUSTNT": [
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You must {GAP} your seatbelt."],
+      "options": ["to wear", "wearing", "wear"],
+      "correct": "wear"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} here."],
+      "options": ["smoking", "smoke", "to smoke"],
+      "correct": "smoke"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["I must {GAP} early tomorrow."],
+      "options": ["to wake up", "wake up", "waking up"],
+      "correct": "wake up"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} the door unlocked."],
+      "options": [ "to leave", "leaving","leave"],
+      "correct": "leave"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["We must {GAP} now."],
+      "options": [ "to go", "going","go"],
+      "correct": "go"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} late for work."],
+      "options": ["being", "be", "to be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["She must {GAP} more water."],
+      "options": ["to drink", "drink", "drinking"],
+      "correct": "drink"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} this password."],
+      "options": ["sharing", "share", "to share"],
+      "correct": "share"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["They must {GAP} the rules."],
+      "options": [ "to follow", "following","follow"],
+      "correct": "follow"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} so loudly."],
+      "options": [ "talking", "talk","to talk"],
+      "correct": "talk"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["I must {GAP} my phone."],
+      "options": ["charging", "to charge", "charge"],
+      "correct": "charge"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} food here."],
+      "options": [ "eating", "to eat","eat"],
+      "correct": "eat"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["We must {GAP} this problem."],
+      "options": ["solve", "solving", "to solve"],
+      "correct": "solve"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} the instructions."],
+      "options": ["ignore", "ignoring", "to ignore"],
+      "correct": "ignore"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["She must {GAP} her homework."],
+      "options": ["to finish", "finish", "finishing"],
+      "correct": "finish"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} the window."],
+      "options": ["open", "opening", "to open"],
+      "correct": "open"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["I must {GAP} him back."],
+      "options": [ "calling","call", "to call"],
+      "correct": "call"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} this button."],
+      "options": [ "pressing", "to press","press"],
+      "correct": "press"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["We must {GAP} careful."],
+      "options": ["be", "being", "to be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MUST_MUSTNT"],
+      "en": ["You mustn’t {GAP} during the exam."],
+      "options": ["talking", "talk", "to talk"],
+      "correct": "talk"
+    }
+  ]
+}

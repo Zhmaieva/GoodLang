@@ -1,0 +1,126 @@
+{
+  "ALREADY_YET_JUST": [
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["I haven’t finished my homework {GAP}."],
+      "options": ["already", "yet", "just"],
+      "correct": "yet"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["Have you finished your homework {GAP}?"],
+      "options": ["yet", "already", "just"],
+      "correct": "yet"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["She hasn’t called me {GAP}."],
+      "options": ["just", "yet", "already"],
+      "correct": "yet"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["We haven’t had dinner {GAP}."],
+      "options": ["already", "just", "yet"],
+      "correct": "yet"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["Has the bus arrived {GAP}?"],
+      "options": ["just", "already", "yet"],
+      "correct": "yet"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["I still don’t know the answer. I haven’t checked {GAP}."],
+      "options": [ "just", "already","yet"],
+      "correct": "yet"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["They haven’t replied {GAP}, so I’ll wait."],
+      "options": ["already", "yet", "just"],
+      "correct": "yet"
+    },
+
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["I have {GAP} finished my homework. I did it a minute ago."],
+      "options": [ "just", "yet"],
+      "correct": "just"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["She has {GAP} left the house, so you may still catch her."],
+      "options": ["just", "yet"],
+      "correct": "just"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["We have {GAP} arrived, and we’re still taking off our coats."],
+      "options": ["yet", "just"],
+      "correct": "just"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["He has {GAP} woken up, so please be quiet."],
+      "options": ["yet", "just"],
+      "correct": "just"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["I’ve {GAP} seen him downstairs — like 10 seconds ago."],
+      "options": ["just", "yet"],
+      "correct": "just"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["They’ve {GAP} started the meeting, so hurry."],
+      "options": ["yet", "just"],
+      "correct": "just"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["The food is hot because I have {GAP} cooked it."],
+      "options": ["just", "yet"],
+      "correct": "just"
+    },
+
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["I have {GAP} finished my homework."],
+      "options": [ "yet","already"],
+      "correct": "already"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["She has {GAP} seen that movie, so she doesn’t want to watch it again."],
+      "options": ["already", "yet"],
+      "correct": "already"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["We have {GAP} booked the hotel for next week."],
+      "options": ["yet", "already"],
+      "correct": "already"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["He has {GAP} eaten, so he isn’t hungry now."],
+      "options": ["already", "yet"],
+      "correct": "already"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["Don’t buy milk — I’ve {GAP} bought it this morning."],
+      "options": ["yet", "already", "just"],
+      "correct": "already"
+    },
+    {
+      "rules": ["ALREADY_YET_JUST"],
+      "en": ["They have {GAP} fixed the problem, so the app works again."],
+      "options": [  "yet","already"],
+      "correct": "already"
+    }
+  ]
+}

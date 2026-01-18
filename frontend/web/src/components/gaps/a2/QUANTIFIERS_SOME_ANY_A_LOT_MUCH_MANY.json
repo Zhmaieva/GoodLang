@@ -1,0 +1,118 @@
+{
+  "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY": [
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["I have {GAP} friends in this city."],
+      "options": ["much", "any","many"],
+      "correct": "many"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["Do you have {GAP} questions?"],
+      "options": [ "some", "many","any"],
+      "correct": "any"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["There is {GAP} milk left in the fridge."],
+      "options": ["many","much",  "any"],
+      "correct": "much"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["She bought {GAP} apples at the market."],
+      "options": ["a lot of", "much", "any"],
+      "correct": "a lot of"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["We don’t have {GAP} time today."],
+      "options": ["much", "many", "some"],
+      "correct": "much"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["Are there {GAP} shops open now?"],
+      "options": ["any", "much"],
+      "correct": "any"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["I need {GAP} help with this task."],
+      "options": [ "many","some"],
+      "correct": "some"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["He doesn’t drink {GAP} coffee."],
+      "options": [ "many", "much","some"],
+      "correct": "much"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["There are {GAP} people waiting outside."],
+      "options": [ "much", "many","any"],
+      "correct": "many"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["I saw {GAP} interesting places on the trip."],
+      "options": ["a lot of", "much", "any"],
+      "correct": "a lot of"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["She doesn’t have {GAP} money with her."],
+      "options": ["much", "many"],
+      "correct": "much"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["There isn’t {GAP} sugar in the jar."],
+      "options": [ "many", "much","some"],
+      "correct": "much"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["We invited {GAP} guests to the party."],
+      "options": [ "much", "any","a lot of"],
+      "correct": "a lot of"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["Do you know {GAP} people here?"],
+      "options": ["many", "much"],
+      "correct": "many"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["I don’t have {GAP} information about it."],
+      "options": ["many", "any"],
+      "correct": "much"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["She has {GAP} work to do today."],
+      "options": ["a lot of", "many", "any"],
+      "correct": "a lot of"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["Are there {GAP} cookies left?"],
+      "options": [ "much","any"],
+      "correct": "any"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["I have {GAP} ideas for the project."],
+      "options": ["some", "much", "any"],
+      "correct": "some"
+    },
+    {
+      "rules": ["QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
+      "en": ["He made {GAP} mistakes in the test."],
+      "options": [ "much","many"],
+      "correct": "many"
+    }
+  ]
+}

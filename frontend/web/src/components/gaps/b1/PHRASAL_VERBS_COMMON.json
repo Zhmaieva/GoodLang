@@ -1,0 +1,124 @@
+{
+  "PHRASAL_VERBS_COMMON": [
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["Please turn {GAP} the lights before you leave."],
+      "options": ["off", "up"],
+      "correct": "off"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["I usually wake {GAP} at 7 a.m."],
+      "options": ["up", "out", "over"],
+      "correct": "up"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["She is looking {GAP} her keys."],
+      "options": ["for", "after", "at"],
+      "correct": "for"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["We ran {GAP} of milk."],
+      "options": ["out", "off", "away"],
+      "correct": "out"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["Can you pick {GAP} the kids after school?"],
+      "options": ["up", "out", "on"],
+      "correct": "up"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["He gave {GAP} smoking last year."],
+      "options": ["up", "out", "away"],
+      "correct": "up"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["Please fill {GAP} this form."],
+      "options": ["in", "up"],
+      "correct": "in"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["I’m tired. I want to lie {GAP}."],
+      "options": ["down", "up", "over"],
+      "correct": "down"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["She took {GAP} her jacket because it was warm."],
+      "options": ["off", "out", "away"],
+      "correct": "off"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["We need to find {GAP} what happened."],
+      "options": ["out", "up", "over"],
+      "correct": "out"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["He came {GAP} a great idea."],
+      "options": ["up with", "out with", "over with"],
+      "correct": "up with"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["I get {GAP} well with my coworkers."],
+      "options": ["along", "over"],
+      "correct": "along"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["Please put {GAP} your phone during the meeting."],
+      "options": ["away", "out", "off"],
+      "correct": "away"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["The plane took {GAP} on time."],
+      "options": ["off", "up", "away"],
+      "correct": "off"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["I forgot to lock the door, so I went {GAP}."],
+      "options": ["back", "away", "out"],
+      "correct": "back"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["She turned {GAP} the job offer."],
+      "options": ["down", "off", "away"],
+      "correct": "down"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["He looked {GAP} the word in the dictionary."],
+      "options": ["up", "for", "at"],
+      "correct": "up"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["I’m looking {GAP} to the weekend."],
+      "options": ["forward", "up", "out"],
+      "correct": "forward"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["She stayed {GAP} late to finish her work."],
+      "options": ["up", "out", "over"],
+      "correct": "up"
+    },
+    {
+      "rules": ["PHRASAL_VERBS_COMMON"],
+      "en": ["He put {GAP} the meeting to tomorrow."],
+      "options": ["off", "away", "out"],
+      "correct": "off"
+    }
+  ]
+}

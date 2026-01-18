@@ -1,0 +1,132 @@
+{
+  "ZERO_CONDITIONAL": [
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you {GAP} ice, it melts."],
+      "options": ["heat", "will heat", "heated"],
+      "correct": "heat"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If it {GAP} rain, the ground gets wet."],
+      "options": ["rains", "will rain", "rained"],
+      "correct": "rains"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you {GAP} water to 100°C, it boils."],
+      "options": ["add", "added", "will add"],
+      "correct": "add"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If people {GAP} enough, they feel tired."],
+      "options": ["don’t sleep", "won’t sleep", "didn’t sleep"],
+      "correct": "don’t sleep"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you {GAP} too much sugar, it tastes sweet."],
+      "options": ["add", "will add", "added"],
+      "correct": "add"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If the sun {GAP}, the room gets warm."],
+      "options": ["shines", "will shine", "shined"],
+      "correct": "shines"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If I {GAP} coffee late, I can’t sleep."],
+      "options": ["drink", "will drink", "drank"],
+      "correct": "drink"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If children {GAP} enough, they grow better."],
+      "options": ["eat", "will eat", "ate"],
+      "correct": "eat"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you {GAP} glass, it breaks."],
+      "options": ["drop", "will drop", "dropped"],
+      "correct": "drop"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If it {GAP} cold, water freezes."],
+      "options": ["gets", "will get", "got"],
+      "correct": "gets"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you {GAP} exercise, you feel better."],
+      "options": ["do", "will do", "did"],
+      "correct": "do"
+    },
+
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If people work too fast, they {GAP} mistakes."],
+      "options": ["make", "will make", "made"],
+      "correct": "make"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If a plant doesn’t get water, it {GAP}."],
+      "options": ["dies", "will die", "died"],
+      "correct": "dies"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you watch too much TV, your eyes {GAP} tired."],
+      "options": ["get", "will get", "got"],
+      "correct": "get"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If dogs are hungry, they {GAP}."],
+      "options": ["bark", "will bark", "barked"],
+      "correct": "bark"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you leave ice in the sun, it {GAP}."],
+      "options": ["melts", "will melt", "melted"],
+      "correct": "melts"
+    },
+
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If people are late, they {GAP} the bus."],
+      "options": ["miss", "will miss", "missed"],
+      "correct": "miss"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you add salt to soup, it {GAP} better."],
+      "options": ["tastes", "will taste", "tasted"],
+      "correct": "tastes"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If it gets dark, we {GAP} on the lights."],
+      "options": ["turn", "will turn", "turned"],
+      "correct": "turn"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If I work a lot, I {GAP} stressed."],
+      "options": ["feel", "will feel", "felt"],
+      "correct": "feel"
+    },
+    {
+      "rules": ["ZERO_CONDITIONAL"],
+      "en": ["If you mix red and blue, you {GAP} purple."],
+      "options": ["get", "will get", "got"],
+      "correct": "get"
+    }
+  ]
+}

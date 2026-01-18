@@ -1,0 +1,124 @@
+{
+  "WAS_WERE": [
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["I {GAP} tired after work."],
+      "options": ["were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["They {GAP} at home yesterday."],
+      "options": ["was", "were"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["We {GAP} late for school."],
+      "options": ["were", "was"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["She {GAP} very happy."],
+      "options": ["was", "were"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["The movie {GAP} interesting."],
+      "options": ["were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["My parents {GAP} busy."],
+      "options": ["was", "were"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["Her answers {GAP} correct."],
+      "options": ["was", "were"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["It {GAP} cold last night."],
+      "options": ["was", "were"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["You {GAP} very kind."],
+      "options": ["were", "was"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["The shops {GAP} closed."],
+      "options": ["were", "was"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["My phone {GAP} on the table."],
+      "options": ["was", "were"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["The weather {GAP} nice."],
+      "options": ["were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["We {GAP} surprised."],
+      "options": ["were", "was"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["The test {GAP} hard."],
+      "options": ["was", "were"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["He {GAP} not ready."],
+      "options": ["were", "was"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["Those shoes {GAP} expensive."],
+      "options": ["were", "was"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["The kids {GAP} very quiet."],
+      "options": ["was", "were"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["The café {GAP} full."],
+      "options": ["was", "were"],
+      "correct": "was"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["You and I {GAP} wrong."],
+      "options": ["were", "was"],
+      "correct": "were"
+    },
+    {
+      "rules": ["WAS_WERE"],
+      "en": ["My first job {GAP} stressful."],
+      "options": ["was", "were"],
+      "correct": "was"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "GERUND_VS_INFINITIVE": [
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["I enjoy {GAP} music."],
+      "options": ["listening", "to listen", "listen"],
+      "correct": "listening"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["She decided {GAP} early."],
+      "options": ["leaving", "to leave", "leave"],
+      "correct": "to leave"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["He avoids {GAP} late."],
+      "options": ["to be", "being", "be"],
+      "correct": "being"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["We hope {GAP} you soon."],
+      "options": ["seeing", "see", "to see"],
+      "correct": "to see"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["They finished {GAP} dinner."],
+      "options": ["eat", "to eat", "eating"],
+      "correct": "eating"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["I want {GAP} English better."],
+      "options": ["learning", "learn", "to learn"],
+      "correct": "to learn"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["She suggested {GAP} a break."],
+      "options": ["taking", "to take", "take"],
+      "correct": "taking"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["He promised {GAP} me."],
+      "options": ["helping", "help", "to help"],
+      "correct": "to help"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["I don’t mind {GAP} here."],
+      "options": ["stay", "to stay", "staying"],
+      "correct": "staying"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["She plans {GAP} abroad."],
+      "options": ["moving", "to move", "move"],
+      "correct": "to move"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["He admitted {GAP} a mistake."],
+      "options": ["to make", "making", "make"],
+      "correct": "making"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["We agreed {GAP} later."],
+      "options": ["meeting", "meet", "to meet"],
+      "correct": "to meet"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["She keeps {GAP} questions."],
+      "options": ["asking", "to ask", "ask"],
+      "correct": "asking"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["I need {GAP} now."],
+      "options": ["resting", "to rest", "rest"],
+      "correct": "to rest"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["He risks {GAP} his job."],
+      "options": ["losing", "to lose", "lose"],
+      "correct": "losing"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["She offered {GAP} me."],
+      "options": ["helping", "help", "to help"],
+      "correct": "to help"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["I miss {GAP} my friends."],
+      "options": ["see", "to see", "seeing"],
+      "correct": "seeing"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["They decided {GAP} a taxi."],
+      "options": ["taking", "take", "to take"],
+      "correct": "to take"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["She enjoys {GAP} alone."],
+      "options": ["to walk", "walking", "walk"],
+      "correct": "walking"
+    },
+    {
+      "rules": ["GERUND_VS_INFINITIVE"],
+      "en": ["He wants {GAP} famous."],
+      "options": ["becoming", "become", "to become"],
+      "correct": "to become"
+    }
+  ]
+}

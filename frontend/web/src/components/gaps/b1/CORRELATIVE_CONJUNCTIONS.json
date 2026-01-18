@@ -1,0 +1,124 @@
+{
+  "CORRELATIVE_CONJUNCTIONS": [
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["{GAP} my sister and my brother work here."],
+      "options": ["Either", "Both", "Neither"],
+      "correct": "Both"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["You can {GAP} call me or send a message."],
+      "options": ["both", "either", "neither"],
+      "correct": "either"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["{GAP} John nor Kate knows about this."],
+      "options": ["Either", "Neither", "Both"],
+      "correct": "Neither"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["She likes {GAP} tea and coffee."],
+      "options": ["either", "neither", "both"],
+      "correct": "both"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["We will meet {GAP} today or tomorrow."],
+      "options": ["neither", "either", "both"],
+      "correct": "either"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["{GAP} my phone nor my laptop is working."],
+      "options": ["Both", "Either", "Neither"],
+      "correct": "Neither"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["He invited {GAP} friends and family."],
+      "options": ["either", "both", "neither"],
+      "correct": "both"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["You must choose {GAP} this option or that one."],
+      "options": ["both", "neither", "either"],
+      "correct": "either"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["{GAP} Anna nor Tom was late."],
+      "options": ["Either", "Neither", "Both"],
+      "correct": "Neither"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["I like {GAP} working from home and going to the office."],
+      "options": ["either", "both", "neither"],
+      "correct": "both"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["He speaks {GAP} Spanish or French."],
+      "options": ["both", "either", "neither"],
+      "correct": "either"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["{GAP} the manager nor the assistant answered."],
+      "options": ["Either", "Both", "Neither"],
+      "correct": "Neither"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["She wants {GAP} to study and to work."],
+      "options": ["either", "neither", "both"],
+      "correct": "both"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["We can go {GAP} by bus or by train."],
+      "options": ["neither", "either", "both"],
+      "correct": "either"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["{GAP} my keys nor my wallet is here."],
+      "options": ["Either", "Both", "Neither"],
+      "correct": "Neither"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["They invited {GAP} teachers and students."],
+      "options": ["either", "neither", "both"],
+      "correct": "both"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["You may choose {GAP} Monday or Tuesday."],
+      "options": ["both", "either", "neither"],
+      "correct": "either"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["{GAP} the boss nor the team agreed."],
+      "options": ["Either", "Both", "Neither"],
+      "correct": "Neither"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["She enjoys {GAP} reading and writing."],
+      "options": ["neither", "either", "both"],
+      "correct": "both"
+    },
+    {
+      "rules": ["CORRELATIVE_CONJUNCTIONS"],
+      "en": ["You can pay {GAP} in cash or by card."],
+      "options": ["neither", "both", "either"],
+      "correct": "either"
+    }
+  ]
+}

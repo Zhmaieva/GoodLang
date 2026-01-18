@@ -1,0 +1,124 @@
+{
+  "MODALS_OF_PROBABILITY": [
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["She {GAP} be at home. The lights are on."],
+      "options": ["must", "might", "can’t"],
+      "correct": "must"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["He must {GAP} tired."],
+      "options": ["to be", "be", "being"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["They {GAP} be friends. They never talk."],
+      "options": ["might", "must","can’t"],
+      "correct": "can’t"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["It might {GAP} true."],
+      "options": ["to be", "being","be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["She {GAP} be the manager. Everyone listens to her."],
+      "options": ["must","can’t"],
+      "correct": "must"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["He {GAP} be at work. His car is gone."],
+      "options": ["can’t","must"],
+      "correct": "must"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["This {GAP} be the right address. The numbers don’t match."],
+      "options": [ "might","can’t", "must"],
+      "correct": "can’t"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["She {GAP} be late. The bus is delayed."],
+      "options": ["might", "can’t"],
+      "correct": "might"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["He must {GAP} sick. He looks very pale."],
+      "options": ["to be", "being","be"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["They {GAP} be at the cinema. The lights are off at home."],
+      "options": ["can’t","might"],
+      "correct": "might"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["She {GAP} be happy. She is crying."],
+      "options": [ "might","can’t", "must"],
+      "correct": "can’t"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["It {GAP} be cold outside. Everyone is wearing coats."],
+      "options": ["must", "can’t"],
+      "correct": "must"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["He {GAP} be the owner. He has the keys."],
+      "options": ["must", "can’t"],
+      "correct": "must"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["She {GAP} be at work today. It’s a holiday."],
+      "options": ["can’t", "might", "must"],
+      "correct": "can’t"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["They might {GAP} lost."],
+      "options": ["to be", "be","being"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["This {GAP} be his phone. His name is on it."],
+      "options": ["must", "can’t"],
+      "correct": "must"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["He might {GAP} asleep."],
+      "options": ["be", "to be","being"],
+      "correct": "be"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["She {GAP} be serious. She is laughing."],
+      "options": ["can’t", "might", "must"],
+      "correct": "can’t"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["It {GAP} be expensive. It looks very cheap."],
+      "options": ["can’t", "might", "must"],
+      "correct": "can’t"
+    },
+    {
+      "rules": ["MODALS_OF_PROBABILITY"],
+      "en": ["He {GAP} be busy. He hasn’t replied yet."],
+      "options": [ "can’t","might"],
+      "correct": "might"
+    }
+  ]
+}

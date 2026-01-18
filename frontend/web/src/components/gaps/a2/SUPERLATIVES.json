@@ -1,0 +1,124 @@
+{
+  "SUPERLATIVES": [
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["This is the {GAP} day of my life."],
+      "options": ["most happy", "happiest", "more happy"],
+      "correct": "happiest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["She is the {GAP} student in the class."],
+      "options": ["better", "most good", "best"],
+      "correct": "best"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["This phone is the {GAP} one here."],
+      "options": ["cheapest", "more cheap", "most cheaper"],
+      "correct": "cheapest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["That was the {GAP} movie I have ever seen."],
+      "options": ["most boring", "more boring", "boringest"],
+      "correct": "most boring"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["He is the {GAP} player on the team."],
+      "options": ["fastest", "more fast", "most faster"],
+      "correct": "fastest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["This is the {GAP} place to relax."],
+      "options": ["most quiet", "quieter", "quietest"],
+      "correct": "quietest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["It was the {GAP} answer in the test."],
+      "options": ["most easy", "easiest", "more easy"],
+      "correct": "easiest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["She chose the {GAP} dress in the shop."],
+      "options": ["most beautiful", "beautifullest", "more beautiful"],
+      "correct": "most beautiful"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["This is the {GAP} road to the city."],
+      "options": ["shortest", "more short", "most shorter"],
+      "correct": "shortest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["He is the {GAP} person I know."],
+      "options": ["kindest", "more kind", "most kinder"],
+      "correct": "kindest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["That was the {GAP} mistake."],
+      "options": ["biggest", "most big", "bigger"],
+      "correct": "biggest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["This app is the {GAP} to use."],
+      "options": ["most simple", "simplest", "more simple"],
+      "correct": "simplest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["She had the {GAP} idea in the meeting."],
+      "options": ["most interesting", "interestinger", "more interesting"],
+      "correct": "most interesting"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["It was the {GAP} winter in years."],
+      "options": ["coldest", "more cold", "most colder"],
+      "correct": "coldest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["This is the {GAP} café in town."],
+      "options": ["most popular", "popularer", "more popular"],
+      "correct": "most popular"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["He told the {GAP} story."],
+      "options": ["funniest", "more funny", "most fun"],
+      "correct": "funniest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["That was the {GAP} moment of the trip."],
+      "options": ["best", "better", "most good"],
+      "correct": "best"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["This chair is the {GAP} one."],
+      "options": ["most comfortable", "comfortablest", "more comfortable"],
+      "correct": "most comfortable"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["She lives in the {GAP} house on the street."],
+      "options": ["largest", "most large", "larger"],
+      "correct": "largest"
+    },
+    {
+      "rules": ["SUPERLATIVES"],
+      "en": ["It was the {GAP} decision."],
+      "options": ["most difficult", "difficulter", "more difficult"],
+      "correct": "most difficult"
+    }
+  ]
+}

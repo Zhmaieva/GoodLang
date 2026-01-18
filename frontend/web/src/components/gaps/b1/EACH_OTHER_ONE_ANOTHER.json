@@ -1,0 +1,124 @@
+{
+  "EACH_OTHER_ONE_ANOTHER": [
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The two friends trust {GAP}."],
+      "options": ["one another", "each others"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["We see {GAP} at work all the time."],
+      "options": ["one anothers", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["They help {GAP} every day."],
+      "options": ["each other", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The players encouraged {GAP} before the match."],
+      "options": ["one another", "one others"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["My parents support {GAP}."],
+      "options": ["each other", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The students shared notes with {GAP}."],
+      "options": ["one another", "one others"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The sisters call {GAP} every day."],
+      "options": ["one another", "one others"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["They looked at {GAP} and laughed."],
+      "options": ["each others", "each other"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["We understand {GAP} very well."],
+      "options": ["each other", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["They smiled at {GAP}."],
+      "options": ["each other", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The teams respected {GAP}."],
+      "options": ["one another", "each others"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The neighbors help {GAP} when needed."],
+      "options": ["one others", "one another"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["We blamed {GAP} for the mistake."],
+      "options": ["each other", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The children played with {GAP} all afternoon."],
+      "options": ["one another", "one others"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The partners listen to {GAP}."],
+      "options": ["one another", "each others"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["They hugged {GAP} goodbye."],
+      "options": ["each others", "each other"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["We text {GAP} every morning."],
+      "options": ["each other", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The colleagues respect {GAP} at work."],
+      "options": ["one others", "one another"],
+      "correct": "one another"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["They understand {GAP} better now."],
+      "options": ["each other", "each others"],
+      "correct": "each other"
+    },
+    {
+      "rules": ["EACH_OTHER_ONE_ANOTHER"],
+      "en": ["The members thanked {GAP} for the help."],
+      "options": ["one another", "one others"],
+      "correct": "one another"
+    }
+  ]
+}
