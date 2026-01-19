@@ -1,52 +1,52 @@
 {
-  "ENOUGH_TOO_MUCH_MANY_SO_SUCH": [
+  "TOO_ENOUGH_SO_SUCH": [
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Це занадто важко для мене.", "en": ["It’s too hard for me.", "It is too hard for me."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Вона надто втомлена, щоб працювати.", "en": ["She’s too tired to work.", "She is too tired to work."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ADVERBS_OF_MANNER"], "ua": "Вони говорять занадто швидко.", "en": ["They speak too quickly.", "They speak too fast."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Він надто молодий, щоб водити авто.", "en": ["He’s too young to drive.", "He is too young to drive."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Це занадто дорого для нас.", "en": ["It’s too expensive for us.", "It is too expensive for us."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE", "PREP_PLACE"], "ua": "Тут надто холодно, щоб сидіти надворі.", "en": ["It’s too cold to sit outside.", "It is too cold to sit outside."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ADVERBS_OF_MANNER"], "ua": "Вона говорить занадто голосно.", "en": ["She speaks too loudly.", "She talks too loudly."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH"], "ua": "Вони прийшли надто пізно.", "en": ["They arrived too late.", "They came too late."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Я занадто зайнятий сьогодні.", "en": ["I’m too busy today.", "I am too busy today."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Цей фільм надто довгий.", "en": ["This movie is too long.", "This film is too long."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Це занадто важко для мене.", "en": ["It’s too hard for me.", "It is too hard for me."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Вона надто втомлена, щоб працювати.", "en": ["She’s too tired to work.", "She is too tired to work."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ADVERBS_OF_MANNER"], "ua": "Вони говорять занадто швидко.", "en": ["They speak too quickly.", "They speak too fast."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Він надто молодий, щоб водити авто.", "en": ["He’s too young to drive.", "He is too young to drive."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Це занадто дорого для нас.", "en": ["It’s too expensive for us.", "It is too expensive for us."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE", "PREP_PLACE"], "ua": "Тут надто холодно, щоб сидіти надворі.", "en": ["It’s too cold to sit outside.", "It is too cold to sit outside."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ADVERBS_OF_MANNER"], "ua": "Вона говорить занадто голосно.", "en": ["She speaks too loudly.", "She talks too loudly."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH"], "ua": "Вони прийшли надто пізно.", "en": ["They arrived too late.", "They came too late."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Я занадто зайнятий сьогодні.", "en": ["I’m too busy today.", "I am too busy today."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Цей фільм надто довгий.", "en": ["This movie is too long.", "This film is too long."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Ти достатньо дорослий, щоб це зрозуміти.", "en": ["You’re old enough to understand it.", "You are old enough to understand it."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Ти достатньо дорослий, щоб це зрозуміти.", "en": ["You’re old enough to understand it.", "You are old enough to understand it."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Він такий добрий друг.", "en": ["He’s such a good friend.", "He is such a good friend."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Це така гарна ідея!", "en": ["That’s such a great idea!", "That is such a good idea!"] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Погода така гарна!", "en": ["The weather is so nice!", "It’s so nice outside."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Вона така розумна дівчина!", "en": ["She’s such a smart girl!", "She is such a clever girl."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Він такий добрий друг.", "en": ["He’s such a good friend.", "He is such a good friend."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Це така гарна ідея!", "en": ["That’s such a great idea!", "That is such a good idea!"] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Погода така гарна!", "en": ["The weather is so nice!", "It’s so nice outside."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Вона така розумна дівчина!", "en": ["She’s such a smart girl!", "She is such a clever girl."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ARTICLES"], "ua": "У нас була така гарна поїздка!", "en": ["We had such a great trip!", "We had such a good journey!"] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ARTICLES"], "ua": "У нас була така гарна поїздка!", "en": ["We had such a great trip!", "We had such a good journey!"] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Він такий талановитий музикант.", "en": ["He’s such a talented musician.", "He is such a talented musician."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Це такі гарні новини!", "en": ["That’s such good news!", "That is such great news!"] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ARTICLES", "TO_BE"], "ua": "Він такий талановитий музикант.", "en": ["He’s such a talented musician.", "He is such a talented musician."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Це такі гарні новини!", "en": ["That’s such good news!", "That is such great news!"] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Він був такий втомлений, що заснув одразу.", "en": ["He was so tired that he fell asleep immediately.", "He was so tired he fell asleep right away."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Ми були такі голодні, що замовили піцу.", "en": ["We were so hungry that we ordered pizza.", "We were so hungry we ordered a pizza."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Було так спекотно, що я не міг спати.", "en": ["It was so hot that I couldn’t sleep.", "It was so hot I couldn’t fall asleep."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Ми були такі зайняті, що забули поїсти.", "en": ["We were so busy that we forgot to eat.", "We were so busy we didn’t have lunch."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Він був такий втомлений, що заснув одразу.", "en": ["He was so tired that he fell asleep immediately.", "He was so tired he fell asleep right away."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Ми були такі голодні, що замовили піцу.", "en": ["We were so hungry that we ordered pizza.", "We were so hungry we ordered a pizza."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Було так спекотно, що я не міг спати.", "en": ["It was so hot that I couldn’t sleep.", "It was so hot I couldn’t fall asleep."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Ми були такі зайняті, що забули поїсти.", "en": ["We were so busy that we forgot to eat.", "We were so busy we didn’t have lunch."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Цей чай надто гарячий, щоб його пити.", "en": ["This tea is too hot to drink.", "This tea’s too hot to drink."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Ця кімната достатньо велика для нас.", "en": ["This room is big enough for us.", "This room’s big enough for us."] },
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Було надто пізно, щоб щось робити.", "en": ["It was too late to do anything.", "It was too late to act."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Цей чай надто гарячий, щоб його пити.", "en": ["This tea is too hot to drink.", "This tea’s too hot to drink."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Ця кімната достатньо велика для нас.", "en": ["This room is big enough for us.", "This room’s big enough for us."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Було надто пізно, щоб щось робити.", "en": ["It was too late to do anything.", "It was too late to act."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Твоє пояснення достатньо чітке.", "en": ["Your explanation is clear enough.", "Your explanation’s clear enough."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Твоє пояснення достатньо чітке.", "en": ["Your explanation is clear enough.", "Your explanation’s clear enough."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Така тиша, що я чую, як цокає годинник.", "en": ["It’s so quiet that I can hear the clock tick.", "It is so quiet that I can hear the clock ticking."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Така тиша, що я чую, як цокає годинник.", "en": ["It’s so quiet that I can hear the clock tick.", "It is so quiet that I can hear the clock ticking."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "ARTICLES", "HAVE_HAVE_GOT"], "ua": "Він має таку гарну вимову.", "en": ["He has such a good accent.", "He’s got such a nice accent."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "ARTICLES", "HAVE_HAVE_GOT"], "ua": "Він має таку гарну вимову.", "en": ["He has such a good accent.", "He’s got such a nice accent."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Було так темно, що я ледве бачив дорогу перед собою.", "en": ["It was so dark that I could hardly see the road.", "It was very dark, and I could barely see the road."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Було так темно, що я ледве бачив дорогу перед собою.", "en": ["It was so dark that I could hardly see the road.", "It was very dark, and I could barely see the road."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Тут занадто шумно для зустрічі.", "en": ["This place is too noisy for a meeting.", "It’s too loud here for a meeting."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Тут занадто шумно для зустрічі.", "en": ["This place is too noisy for a meeting.", "It’s too loud here for a meeting."] },
 
-    { "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE"], "ua": "Ми були так здивовані результатами.", "en": ["We were so amazed by the results.", "We were so impressed by the results."] },
+    { "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE"], "ua": "Ми були так здивовані результатами.", "en": ["We were so amazed by the results.", "We were so impressed by the results."] },
 
     {
-      "rules": ["ENOUGH_TOO_MUCH_MANY_SO_SUCH", "TO_BE", "COMPARATIVES"],
+      "rules": ["TOO_ENOUGH_SO_SUCH", "TO_BE", "COMPARATIVES"],
       "ua": "Ми такі ж зайняті, як і наш керівник.",
       "en": ["We’re as busy as our manager.", "We are as busy as our boss."]
     }

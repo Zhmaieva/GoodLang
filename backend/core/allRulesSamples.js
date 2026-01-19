@@ -48572,7 +48572,7 @@ export const ALL_RULES_SAMPLES = {
             "rules": [
                 "MODAL_PERFECTS",
                 "MODALS_OF_PROBABILITY",
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH"
+                "TOO_ENOUGH_SO_SUCH"
             ],
             "en": [
                 "You cannot have finished so quickly.",
@@ -58626,10 +58626,10 @@ export const ALL_RULES_SAMPLES = {
             "hint": "поїздка не відбулася, шанс уже минув."
         }
     ],
-    "ENOUGH_TOO_MUCH_MANY_SO_SUCH": [
+    "TOO_ENOUGH_SO_SUCH": [
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Це занадто важко для мене.",
@@ -58640,7 +58640,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Вона надто втомлена, щоб працювати.",
@@ -58651,7 +58651,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ADVERBS_OF_MANNER"
             ],
             "ua": "Вони говорять занадто швидко.",
@@ -58662,7 +58662,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Він надто молодий, щоб водити авто.",
@@ -58673,7 +58673,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Це занадто дорого для нас.",
@@ -58684,7 +58684,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE",
                 "PREP_PLACE"
             ],
@@ -58696,7 +58696,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ADVERBS_OF_MANNER"
             ],
             "ua": "Вона говорить занадто голосно.",
@@ -58707,7 +58707,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH"
+                "TOO_ENOUGH_SO_SUCH"
             ],
             "ua": "Вони прийшли надто пізно.",
             "en": [
@@ -58717,7 +58717,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Я занадто зайнятий сьогодні.",
@@ -58728,7 +58728,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Цей фільм надто довгий.",
@@ -58739,7 +58739,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Ти достатньо дорослий, щоб це зрозуміти.",
@@ -58750,7 +58750,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ARTICLES",
                 "TO_BE"
             ],
@@ -58762,7 +58762,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ARTICLES",
                 "TO_BE"
             ],
@@ -58774,7 +58774,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Погода така гарна!",
@@ -58785,7 +58785,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ARTICLES",
                 "TO_BE"
             ],
@@ -58797,7 +58797,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ARTICLES"
             ],
             "ua": "У нас була така гарна поїздка!",
@@ -58808,7 +58808,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ARTICLES",
                 "TO_BE"
             ],
@@ -58820,7 +58820,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Це такі гарні новини!",
@@ -58831,7 +58831,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Він був такий втомлений, що заснув одразу.",
@@ -58842,7 +58842,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Ми були такі голодні, що замовили піцу.",
@@ -58853,7 +58853,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Було так спекотно, що я не міг спати.",
@@ -58864,7 +58864,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Ми були такі зайняті, що забули поїсти.",
@@ -58875,7 +58875,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Цей чай надто гарячий, щоб його пити.",
@@ -58886,7 +58886,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Ця кімната достатньо велика для нас.",
@@ -58897,7 +58897,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Було надто пізно, щоб щось робити.",
@@ -58908,7 +58908,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Твоє пояснення достатньо чітке.",
@@ -58919,7 +58919,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Така тиша, що я чую, як цокає годинник.",
@@ -58930,7 +58930,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "ARTICLES",
                 "HAVE_HAVE_GOT"
             ],
@@ -58942,7 +58942,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Було так темно, що я ледве бачив дорогу перед собою.",
@@ -58953,7 +58953,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Тут занадто шумно для зустрічі.",
@@ -58964,7 +58964,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE"
             ],
             "ua": "Ми були так здивовані результатами.",
@@ -58975,7 +58975,7 @@ export const ALL_RULES_SAMPLES = {
         },
         {
             "rules": [
-                "ENOUGH_TOO_MUCH_MANY_SO_SUCH",
+                "TOO_ENOUGH_SO_SUCH",
                 "TO_BE",
                 "COMPARATIVES"
             ],

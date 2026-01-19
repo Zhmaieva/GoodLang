@@ -822,7 +822,7 @@
     "hint": "використовуй CANNOT"
   },
   {
-    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "ENOUGH_TOO_MUCH_MANY_SO_SUCH"],
+    "rules": ["MODAL_PERFECTS", "MODALS_OF_PROBABILITY", "TOO_ENOUGH_SO_SUCH"],
     "en": [
       "You cannot have finished so quickly.",
       "You cannot have completed it so quickly."

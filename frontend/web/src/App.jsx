@@ -74,7 +74,7 @@ import {
     RULE_PAGE_GET_PAST_PARTICIPLE,
     RULE_PAGE_REPORTED_SPEECH,
     RULE_PAGE_QUESTION_TAGS,
-    RULE_PAGE_ENOUGH_TOO_MUCH_MANY_SO_SUCH,
+    RULE_PAGE_TOO_ENOUGH_SO_SUCH,
     RULE_PAGE_RELATIVE_CLAUSES,
     RULE_PAGE_REFLEXIVE_PRONOUNS,
     RULE_PAGE_ADVERBS_OF_MANNER,
@@ -251,7 +251,7 @@ export default function App() {
                 <Route path="/rule/GET_PAST_PARTICIPLE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_GET_PAST_PARTICIPLE} />} />
                 <Route path="/rule/REPORTED_SPEECH" element={<RulePage theme={ruleTheme} data={RULE_PAGE_REPORTED_SPEECH} />} />
                 <Route path="/rule/QUESTION_TAGS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_QUESTION_TAGS} />} />
-                <Route path="/rule/ENOUGH_TOO_MUCH_MANY_SO_SUCH" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ENOUGH_TOO_MUCH_MANY_SO_SUCH} />} />
+                <Route path="/rule/TOO_ENOUGH_SO_SUCH" element={<RulePage theme={ruleTheme} data={RULE_PAGE_TOO_ENOUGH_SO_SUCH} />} />
                 <Route path="/rule/RELATIVE_CLAUSES" element={<RulePage theme={ruleTheme} data={RULE_PAGE_RELATIVE_CLAUSES} />} />
                 <Route path="/rule/REFLEXIVE_PRONOUNS" element={<RulePage theme={ruleTheme} data={RULE_PAGE_REFLEXIVE_PRONOUNS} />} />
                 <Route path="/rule/ADVERBS_OF_MANNER" element={<RulePage theme={ruleTheme} data={RULE_PAGE_ADVERBS_OF_MANNER} />} />
