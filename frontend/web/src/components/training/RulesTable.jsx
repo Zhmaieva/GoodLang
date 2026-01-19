@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import {logError} from "../../services/logger.js";
+import {logError, logInfo} from "../../services/logger.js";
 import {dowloadPdf} from "../../services/api.js";
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
@@ -73,6 +73,7 @@ export default function RulesTable({
     function getDownloadFromUrl() {
         try {
             const u = new URL(window.location.href);
+            logInfo(u);
             const rule = u.searchParams.get("ruleToDownload");
             const pdfType = u.searchParams.get("pdf_type") || "translations";
             return { rule, pdfType };

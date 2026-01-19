@@ -509,9 +509,9 @@ export default function PdfTypeModal({
                                         setLoading(true);
 
                                         // safety: if not paid and somehow selected locked option, force translations
-                                        const safeSelected = selected;//(!paid && selected === "choose_variant") ? "translations" : selected;
+                                        //const safeSelected = selected;//(!paid && selected === "choose_variant") ? "translations" : selected;
 
-                                        await onConfirm(safeSelected);
+                                        await onConfirm(selected);
                                     } finally {
                                         setLoading(false);
                                     }

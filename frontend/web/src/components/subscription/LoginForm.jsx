@@ -303,7 +303,7 @@ export default function LoginForm({
         }
     }
 
-    function reloadWithRuleParam(ruleId, fileTypeToDownload) {
+    function reloadWithRuleParam(ruleId) {
         try {
             const url = new URL(window.location.href);
 
@@ -322,8 +322,9 @@ export default function LoginForm({
         } catch (e) {
             // fallback (rare, but safe)
             const encoded = ruleId ? encodeURIComponent(ruleId) : "";
+            const encodedType = fileTypeToDownload ? encodeURIComponent(fileTypeToDownload) : "";
             window.location.href = ruleId
-                ? `${window.location.pathname}?ruleToDownload=${encoded}`
+                ? `${window.location.pathname}?ruleToDownload=${encoded}&pdf_type=${encodedType}`
                 : window.location.pathname;
         }
     }
