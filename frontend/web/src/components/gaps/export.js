@@ -3,7 +3,7 @@ import path from 'path';
 import {logError, logInfo, logWarning} from "../../services/logger.js";
 
 // --- CONFIG ---
-const inputDir = './a1';       // Directory with source JSON files
+const inputDir = './b2';       // Directory with source JSON files
 const outputFile = './output.json';    // Output file path
 // ----------------
 

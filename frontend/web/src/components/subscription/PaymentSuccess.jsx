@@ -9,7 +9,7 @@ export default function PaymentSuccess() {
 
     const isTeacher = useMemo(() => {
         try {
-            return localStorage.getItem("teacher") === "true";
+            return false;// localStorage.getItem("teacher") === "true";
         } catch (_) {
             return false;
         }

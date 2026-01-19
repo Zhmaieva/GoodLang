@@ -75,7 +75,7 @@ async function generateAndSave(ruleName) {
     }
 
     //const pdfBytes = await getPdf(ruleName, {pdfType: CHOOSE_VARIANT_TASK_FORM}); // Uint8Array
-    const pdfBytes = await getPdf(ruleName, {pdfType: TRANSLATIONS, withWatermarks: false}); // Uint8Array
+    const pdfBytes = await getPdf(ruleName, {pdfType: CHOOSE_VARIANT_TASK_FORM, withWatermarks: true}); // Uint8Array
     await fs.writeFile(outPath, Buffer.from(pdfBytes));
 
     console.log(`✅ saved ${ruleName}.pdf`);

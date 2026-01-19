@@ -654,7 +654,7 @@ html{ scroll-behavior: smooth; }
 
                     <div className="heroStack">
                         <div className="heroCard">
-                            <h3 className="heroCardTitle">Понад 700 завдань з граматики</h3>
+                            <h3 className="heroCardTitle">Понад 1700 вправ з граматики</h3>
                             <p className="heroCardText">
                                 Оберіть правило → скачайте PDF → дайте учням перекладати з української на англійську.
                                 У файлі є ключі для швидкої перевірки.

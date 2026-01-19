@@ -73,19 +73,19 @@
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} cup of coffee is hot."],
+    "en": ["{GAP} cup of coffee is hot."],
     "options": ["an", "the", "—"],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} house has a garden."],
+    "en": ["{GAP} house has a garden."],
     "options": [ "an", "the", "—"],
     "correct": "the"
   },
   {
     "rules": ["ARTICLES"],
-    "en": ["{ARTICLE} movie was interesting."],
+    "en": ["{GAP} movie was interesting."],
     "options": ["an", "the", "—"],
     "correct": "the"
   },

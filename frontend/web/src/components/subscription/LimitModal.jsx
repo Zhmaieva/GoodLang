@@ -40,6 +40,8 @@ export default function LimitModal({
                                        onClose,
                                        waitTimeSeconds,
                                        featurePdf = false}) {
+    featurePdf = false;//temp block pdf selling
+
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
@@ -516,14 +518,14 @@ export default function LimitModal({
                                                 Пріоритетна підтримка
                                             </li>
 
-                                            <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
-                                                1800+ вправ у форматі PDF
-                                            </li>
+                                            {/*<li>*/}
+                                            {/*    <span style={{*/}
+                                            {/*        marginRight: 8,*/}
+                                            {/*        color: theme.accent,*/}
+                                            {/*        fontWeight: 700*/}
+                                            {/*    }}>✓</span>*/}
+                                            {/*    1800+ вправ у форматі PDF*/}
+                                            {/*</li>*/}
 
                                             <li>
                                                 <span style={{

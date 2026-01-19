@@ -201,15 +201,20 @@ function getFirstEn(s) {
 function buildGapsTaskItems(samples) {
     return samples
         .map((s, idx) => {
-            const en = getFirstEn(s);
-            const options = Array.isArray(s?.options) ? s.options : [];
-            const optionsText = options.map(escapeHtml).map(o => {
-                return o === "" ? "—" : o;
-            }).join(" / ");
+            // getFirstEn() already returns escaped text
+            const enEscaped = String(getFirstEn(s) ?? "");
 
-            const sentenceHtml = escapeHtml(en).includes("{GAP}")
-                ? escapeHtml(en).replace("{GAP}", `<span class="choices">${optionsText}</span>`)
-                : `${escapeHtml(en)} <span class="choices">${optionsText}</span>`;
+            const options = Array.isArray(s?.options) ? s.options : [];
+
+            // options are raw -> escape them here
+            const optionsText = options
+                .map(o => escapeHtml(o === "" ? "—" : o))
+                .join(" / ");
+
+            // ✅ inline replacement at {GAP}
+            const sentenceHtml = enEscaped.includes("{GAP}")
+                ? enEscaped.replace("{GAP}", `<span class="choices">${optionsText}</span>`)
+                : `${enEscaped} <span class="choices">${optionsText}</span>`;
 
             return (
                 `            <div class="item">\n` +
@@ -226,13 +231,17 @@ function buildGapsTaskItems(samples) {
 function buildGapsAnswerItems(samples) {
     return samples
         .map((s, idx) => {
-            const en = getFirstEn(s);
+            // getFirstEn() already returns escaped text
+            const enEscaped = String(getFirstEn(s) ?? "");
+
+            // correct is raw -> escape it here
             let correct = escapeHtml(s?.correct ?? "");
             correct = correct === "" ? "—" : correct;
 
-            const sentenceHtml = escapeHtml(en).includes("{GAP}")
-                ? escapeHtml(en).replace("{GAP}", `<span class="fill">${correct}</span>`)
-                : `${escapeHtml(en)} <span class="fill">${correct}</span>`;
+            // ✅ inline replacement at {GAP}
+            const sentenceHtml = enEscaped.includes("{GAP}")
+                ? enEscaped.replace("{GAP}", `<span class="fill">${correct}</span>`)
+                : `${enEscaped} <span class="fill">${correct}</span>`;
 
             return (
                 `            <div class="item">\n` +

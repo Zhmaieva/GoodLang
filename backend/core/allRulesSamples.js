@@ -35371,919 +35371,6 @@ export const ALL_RULES_SAMPLES = {
             ]
         }
     ],
-    "ENOUGH_TOO_MUCH_MANY": [
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У неї достатньо часу.",
-            "en": "She has enough time."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У нас достатньо грошей.",
-            "en": "We have enough money."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PREP_TIME"
-            ],
-            "ua": "Він п’є достатньо води щодня.",
-            "en": "He drinks enough water every day."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Ми їмо достатньо овочів.",
-            "en": "We eat enough vegetables."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він читає достатньо книжок.",
-            "en": "He reads enough books."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У мене достатньо одягу.",
-            "en": "I have enough clothes."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У неї достатньо простору.",
-            "en": "She has enough space."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PREP_TIME"
-            ],
-            "ua": "У нас достатньо роботи сьогодні.",
-            "en": "We have enough work today."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PREP_TIME"
-            ],
-            "ua": "У нас достатньо їжі на обід.",
-            "en": "We have enough food for lunch."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У неї достатньо досвіду.",
-            "en": "She has enough experience."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона отримує достатньо допомоги.",
-            "en": "She gets enough help."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він купує достатньо фруктів.",
-            "en": "He buys enough fruit."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вони п’ють достатньо чаю.",
-            "en": "They drink enough tea."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PREP_TIME"
-            ],
-            "ua": "Ми відкладаємо достатньо грошей щомісяця?",
-            "en": "Do we save enough money every month?"
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він їсть достатньо білка?",
-            "en": "Does he eat enough protein?"
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У неї достатньо терпіння?",
-            "en": "Does she have enough patience?"
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_CONT_NOW",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він достатньо тренується?",
-            "en": [
-                "Is he training enough?",
-                "Does he train enough?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У тебе достатньо часу?",
-            "en": "Do you have enough time?"
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PAST_SIMPLE"
-            ],
-            "ua": "Ми купили надто багато продуктів.",
-            "en": "We bought too many groceries."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона не спить достатньо.",
-            "en": "She doesn't sleep enough."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "THERE_IS_ARE",
-                "PREP_PLACE"
-            ],
-            "ua": "Тут надто багато людей.",
-            "en": "There are too many people here.",
-            "hint": "використовуй THERE IS/THERE ARE"
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я кладу надто багато солі.",
-            "en": "I use too much salt."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У нього надто багато роботи.",
-            "en": [
-                "He gets too much work.",
-                "He has too much work."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У неї надто багато домашнього завдання.",
-            "en": "She has too much homework."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він п’є надто багато соку.",
-            "en": "He drinks too much juice."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вони їдять надто багато хліба.",
-            "en": "They eat too much bread."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я використовую надто багато води.",
-            "en": "I use too much water."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вони надто багато говорять.",
-            "en": "They talk too much."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона приносить надто багато їжі.",
-            "en": "She brings too much food."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вони використовують надто багато паперу.",
-            "en": "They use too much paper."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я додаю занадто багато цукру в каву.",
-            "en": "I take too much sugar in my coffee."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона готує надто багато рису.",
-            "en": "She cooks too much rice."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У них надто багато вільного часу.",
-            "en": "They have too much free time."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PREP_TIME"
-            ],
-            "ua": "Я проводжу надто багато часу онлайн.",
-            "en": "I spend too much time online."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона їсть надто багато шоколаду.",
-            "en": "She eats too much chocolate."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вони п’ють надто багато молока.",
-            "en": "They drink too much milk."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона використовує надто багато олії.",
-            "en": "She uses too much oil."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він додає надто багато солі.",
-            "en": "He adds too much salt."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PRESENT_CONT_NOW"
-            ],
-            "ua": "Він купує забагато книжок?",
-            "en": [
-                "He buys too many books.",
-                "Is he buying too many books?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вони роблять надто багато фото.",
-            "en": "They take too many photos."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я отримую надто багато листів.",
-            "en": "I get too many emails."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона п’є надто багато солодких напоїв.",
-            "en": "She drinks too many sodas."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він їсть надто багато печива.",
-            "en": "He eats too many cookies."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PRESENT_CONT_NOW"
-            ],
-            "ua": "Вони роблять забагато помилок?",
-            "en": [
-                "Are they making too many mistakes?",
-                "Do they make too many mistakes?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У неї надто багато взуття.",
-            "en": "She owns too many shoes."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він робить надто багато перерв.",
-            "en": "He takes too many breaks."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "PRESENT_CONT_NOW"
-            ],
-            "ua": "Вони ставлять надто багато запитань?",
-            "en": [
-                "Are they asking too many questions?",
-                "Do they ask too many questions?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я читаю надто багато повідомлень.",
-            "en": "I read too many messages."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У нього надто багато сорочок.",
-            "en": "He has too many shirts."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я купую надто багато перекусів.",
-            "en": "I buy too many snacks."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ",
-                "MAKE_DO_DIFFERENCE"
-            ],
-            "ua": "Вона робить надто багато селфі.",
-            "en": "She takes too many selfies."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я отримую надто багато дзвінків.",
-            "en": "I get too many calls."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Вона будує надто багато планів.",
-            "en": "She makes too many plans."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він дивиться надто багато відео.",
-            "en": "He watches too many videos."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я бачу надто багато реклами онлайн.",
-            "en": "I see too many ads online."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У неї надто багато рослин.",
-            "en": "She owns too many plants."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_CONT_NOW",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Він отримує забагато посилок?",
-            "en": [
-                "Is he getting too many parcels?",
-                "Is he getting too many packages?",
-                "Does he get too many parcels?",
-                "Does he get too many packages?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "Я приймаю надто багато вітамінів.",
-            "en": "I take too many vitamins."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PRESENT_SIMPLE_FREQ"
-            ],
-            "ua": "У нього надто багато ідей.",
-            "en": "He has too many ideas."
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PREP_PLACE",
-                "DEMONSTRATIVES",
-                "ARTICLES"
-            ],
-            "ua": "Ця дорога занадто крута для велосипеда.",
-            "en": [
-                "This road is too steep for a bike.",
-                "This road is too steep for a bicycle."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PREP_TIME",
-                "DEMONSTRATIVES",
-                "ARTICLES"
-            ],
-            "ua": "Цей вечір занадто холодний для барбекю.",
-            "en": [
-                "This evening is too cold for a barbecue.",
-                "This evening is too cold for a cookout."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PREP_TIME",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Цей день занадто спекотний для риболовлі.",
-            "en": [
-                "This day is too hot for fishing.",
-                "This day is too warm for fishing."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Ця куртка занадто велика для мене.",
-            "en": [
-                "This jacket is too big for me.",
-                "This coat is too big for me."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Ці штани занадто короткі для тебе.",
-            "en": [
-                "These trousers are too short for you.",
-                "These pants are too short for you."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Ці черевики занадто вузькі для нього.",
-            "en": [
-                "These shoes are too tight for him.",
-                "These boots are too tight for him."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY"
-            ],
-            "ua": "Ці шкарпетки занадто теплі для літа.",
-            "en": [
-                "These socks are too warm for summer.",
-                "These socks are too hot for summer."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PREP_PLACE",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Цей стіл занадто низький для мене.",
-            "en": [
-                "This table is too low for me.",
-                "This table is too short for me."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PREP_PLACE",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Цей стіл недостатньо високий для мене.",
-            "en": [
-                "This table is not high enough for me.",
-                "This table is not tall enough for me."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PREP_PLACE",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Цей клас недостатньо великий для всіх циз учнів.",
-            "en": [
-                "This classroom is not big enough for all these students.",
-                "This class is not big enough for all these students."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Ця парта недостатньо низька для дитини.",
-            "en": [
-                "This desk is not low enough for a child.",
-                "This desk is not short enough for a child."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Цей рюкзак занадто важкий для тебе.",
-            "en": [
-                "This backpack is too heavy for you.",
-                "This bag is too heavy for you."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PREP_PLACE"
-            ],
-            "ua": "Ця площа недостатньо широка для ярмарку.",
-            "en": [
-                "This square is not wide enough for a fair.",
-                "This square is not big enough for a fair."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE",
-                "ARTICLES"
-            ],
-            "ua": "Цей суп занадто гарячий для дитини.",
-            "en": [
-                "This soup is too hot for a child.",
-                "This soup is too hot for kids."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Ця кава недостатньо міцна для мене.",
-            "en": [
-                "This coffee is not strong enough for me.",
-                "This coffee is not strong enough for my taste."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "DEMONSTRATIVES"
-            ],
-            "ua": "Ці печені яблука занадто солодкі.",
-            "en": [
-                "These baked apples are too sweet.",
-                "These apples are too sweet."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Я недостатньо сміливий, щоб виступати на сцені.",
-            "en": [
-                "I am not brave enough to perform on stage.",
-                "I'm not brave enough to go on stage."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Ця вода достатньо чиста, щоб її пити?",
-            "en": [
-                "Is this water clean enough to drink?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Тобі достатньо зручно в цьому кріслі?",
-            "en": [
-                "Are you comfortable enough in that chair?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Ця кава достатньо солодка для тебе?",
-            "en": [
-                "Is this coffee sweet enough for you?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "HAVE_HAVE_GOT"
-            ],
-            "ua": "Ми маємо достатньо часу, щоб усе закінчити?",
-            "en": [
-                "Do we have enough time to finish everything?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Ці яблука достатньо стиглі, щоб їх їсти?",
-            "en": [
-                "Are these apples ripe enough to eat?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Цей суп достатньо теплий, чи його потрібно підігріти?",
-            "en": [
-                "Is this soup warm enough, or do I need to heat it?"
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Кава занадто гаряча, щоб її пити.",
-            "en": [
-                "The coffee is too hot to drink."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Вже занадто пізно, щоб телефонувати.",
-            "en": [
-                "It's too late to call."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Вода занадто холодна, щоб купатися.",
-            "en": [
-                "The water is too cold to swim in."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PAST_SIMPLE"
-            ],
-            "ua": "Ця сукня була надто дорогою, тому я її не купила.",
-            "en": [
-                "The dress was too expensive, so I didn’t buy it."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PAST_SIMPLE"
-            ],
-            "ua": "Фільм був занадто довгим, і я занудьгувала.",
-            "en": [
-                "The film was too long, and I got bored."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Валіза надто повна, тому вона не закривається.",
-            "en": [
-                "The suitcase is too full, so it doesn’t close."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Суп занадто солоний для мене.",
-            "en": [
-                "The soup is too salty for me."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Погода надто погана, щоб виходити надвір.",
-            "en": [
-                "The weather is too bad to go out."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Він надто впертий, щоб вибачатися.",
-            "en": [
-                "He’s too stubborn to apologize."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Музика занадто гучна — зроби тихіше.",
-            "en": [
-                "The music is too loud — turn it down."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Вона ще не достатньо доросла, щоб водити.",
-            "en": [
-                "She isn’t old enough to drive."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "ENOUGH_TOO_MUCH_MANY"
-            ],
-            "ua": "У мене недостатньо грошей, щоб купити цей телефон.",
-            "en": [
-                "I don't have enough money to buy that phone."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Суп недостатньо теплий — підігрій його.",
-            "en": [
-                "The soup isn’t warm enough — heat it up."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "PAST_SIMPLE"
-            ],
-            "ua": "Ми не мали достатньо часу, щоб завершити проєкт.",
-            "en": [
-                "We didn’t have enough time to finish the project."
-            ]
-        },
-        {
-            "rules": [
-                "ENOUGH_TOO_MUCH_MANY",
-                "TO_BE"
-            ],
-            "ua": "Інтернет тут достатньо швидкий для відеодзвінків.",
-            "en": [
-                "The internet here is fast enough for video calls."
-            ]
-        }
-    ],
     "WAS_WERE": [
         {
             "rules": [
@@ -44149,6 +43236,919 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We understand each other’s feelings.",
                 "We understand one another’s feelings."
+            ]
+        }
+    ],
+    "ENOUGH_TOO_MUCH_MANY": [
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У неї достатньо часу.",
+            "en": "She has enough time."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У нас достатньо грошей.",
+            "en": "We have enough money."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PREP_TIME"
+            ],
+            "ua": "Він п’є достатньо води щодня.",
+            "en": "He drinks enough water every day."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Ми їмо достатньо овочів.",
+            "en": "We eat enough vegetables."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він читає достатньо книжок.",
+            "en": "He reads enough books."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У мене достатньо одягу.",
+            "en": "I have enough clothes."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У неї достатньо простору.",
+            "en": "She has enough space."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PREP_TIME"
+            ],
+            "ua": "У нас достатньо роботи сьогодні.",
+            "en": "We have enough work today."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PREP_TIME"
+            ],
+            "ua": "У нас достатньо їжі на обід.",
+            "en": "We have enough food for lunch."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У неї достатньо досвіду.",
+            "en": "She has enough experience."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона отримує достатньо допомоги.",
+            "en": "She gets enough help."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він купує достатньо фруктів.",
+            "en": "He buys enough fruit."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вони п’ють достатньо чаю.",
+            "en": "They drink enough tea."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PREP_TIME"
+            ],
+            "ua": "Ми відкладаємо достатньо грошей щомісяця?",
+            "en": "Do we save enough money every month?"
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він їсть достатньо білка?",
+            "en": "Does he eat enough protein?"
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У неї достатньо терпіння?",
+            "en": "Does she have enough patience?"
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_CONT_NOW",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він достатньо тренується?",
+            "en": [
+                "Is he training enough?",
+                "Does he train enough?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У тебе достатньо часу?",
+            "en": "Do you have enough time?"
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PAST_SIMPLE"
+            ],
+            "ua": "Ми купили надто багато продуктів.",
+            "en": "We bought too many groceries."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона не спить достатньо.",
+            "en": "She doesn't sleep enough."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "THERE_IS_ARE",
+                "PREP_PLACE"
+            ],
+            "ua": "Тут надто багато людей.",
+            "en": "There are too many people here.",
+            "hint": "використовуй THERE IS/THERE ARE"
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я кладу надто багато солі.",
+            "en": "I use too much salt."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У нього надто багато роботи.",
+            "en": [
+                "He gets too much work.",
+                "He has too much work."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У неї надто багато домашнього завдання.",
+            "en": "She has too much homework."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він п’є надто багато соку.",
+            "en": "He drinks too much juice."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вони їдять надто багато хліба.",
+            "en": "They eat too much bread."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я використовую надто багато води.",
+            "en": "I use too much water."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вони надто багато говорять.",
+            "en": "They talk too much."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона приносить надто багато їжі.",
+            "en": "She brings too much food."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вони використовують надто багато паперу.",
+            "en": "They use too much paper."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я додаю занадто багато цукру в каву.",
+            "en": "I take too much sugar in my coffee."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона готує надто багато рису.",
+            "en": "She cooks too much rice."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У них надто багато вільного часу.",
+            "en": "They have too much free time."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PREP_TIME"
+            ],
+            "ua": "Я проводжу надто багато часу онлайн.",
+            "en": "I spend too much time online."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона їсть надто багато шоколаду.",
+            "en": "She eats too much chocolate."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вони п’ють надто багато молока.",
+            "en": "They drink too much milk."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона використовує надто багато олії.",
+            "en": "She uses too much oil."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він додає надто багато солі.",
+            "en": "He adds too much salt."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PRESENT_CONT_NOW"
+            ],
+            "ua": "Він купує забагато книжок?",
+            "en": [
+                "He buys too many books.",
+                "Is he buying too many books?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вони роблять надто багато фото.",
+            "en": "They take too many photos."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я отримую надто багато листів.",
+            "en": "I get too many emails."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона п’є надто багато солодких напоїв.",
+            "en": "She drinks too many sodas."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він їсть надто багато печива.",
+            "en": "He eats too many cookies."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PRESENT_CONT_NOW"
+            ],
+            "ua": "Вони роблять забагато помилок?",
+            "en": [
+                "Are they making too many mistakes?",
+                "Do they make too many mistakes?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У неї надто багато взуття.",
+            "en": "She owns too many shoes."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він робить надто багато перерв.",
+            "en": "He takes too many breaks."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "PRESENT_CONT_NOW"
+            ],
+            "ua": "Вони ставлять надто багато запитань?",
+            "en": [
+                "Are they asking too many questions?",
+                "Do they ask too many questions?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я читаю надто багато повідомлень.",
+            "en": "I read too many messages."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У нього надто багато сорочок.",
+            "en": "He has too many shirts."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я купую надто багато перекусів.",
+            "en": "I buy too many snacks."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ",
+                "MAKE_DO_DIFFERENCE"
+            ],
+            "ua": "Вона робить надто багато селфі.",
+            "en": "She takes too many selfies."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я отримую надто багато дзвінків.",
+            "en": "I get too many calls."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Вона будує надто багато планів.",
+            "en": "She makes too many plans."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він дивиться надто багато відео.",
+            "en": "He watches too many videos."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я бачу надто багато реклами онлайн.",
+            "en": "I see too many ads online."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У неї надто багато рослин.",
+            "en": "She owns too many plants."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_CONT_NOW",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Він отримує забагато посилок?",
+            "en": [
+                "Is he getting too many parcels?",
+                "Is he getting too many packages?",
+                "Does he get too many parcels?",
+                "Does he get too many packages?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "Я приймаю надто багато вітамінів.",
+            "en": "I take too many vitamins."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PRESENT_SIMPLE_FREQ"
+            ],
+            "ua": "У нього надто багато ідей.",
+            "en": "He has too many ideas."
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PREP_PLACE",
+                "DEMONSTRATIVES",
+                "ARTICLES"
+            ],
+            "ua": "Ця дорога занадто крута для велосипеда.",
+            "en": [
+                "This road is too steep for a bike.",
+                "This road is too steep for a bicycle."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PREP_TIME",
+                "DEMONSTRATIVES",
+                "ARTICLES"
+            ],
+            "ua": "Цей вечір занадто холодний для барбекю.",
+            "en": [
+                "This evening is too cold for a barbecue.",
+                "This evening is too cold for a cookout."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PREP_TIME",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Цей день занадто спекотний для риболовлі.",
+            "en": [
+                "This day is too hot for fishing.",
+                "This day is too warm for fishing."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Ця куртка занадто велика для мене.",
+            "en": [
+                "This jacket is too big for me.",
+                "This coat is too big for me."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Ці штани занадто короткі для тебе.",
+            "en": [
+                "These trousers are too short for you.",
+                "These pants are too short for you."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Ці черевики занадто вузькі для нього.",
+            "en": [
+                "These shoes are too tight for him.",
+                "These boots are too tight for him."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY"
+            ],
+            "ua": "Ці шкарпетки занадто теплі для літа.",
+            "en": [
+                "These socks are too warm for summer.",
+                "These socks are too hot for summer."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PREP_PLACE",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Цей стіл занадто низький для мене.",
+            "en": [
+                "This table is too low for me.",
+                "This table is too short for me."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PREP_PLACE",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Цей стіл недостатньо високий для мене.",
+            "en": [
+                "This table is not high enough for me.",
+                "This table is not tall enough for me."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PREP_PLACE",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Цей клас недостатньо великий для всіх циз учнів.",
+            "en": [
+                "This classroom is not big enough for all these students.",
+                "This class is not big enough for all these students."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Ця парта недостатньо низька для дитини.",
+            "en": [
+                "This desk is not low enough for a child.",
+                "This desk is not short enough for a child."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Цей рюкзак занадто важкий для тебе.",
+            "en": [
+                "This backpack is too heavy for you.",
+                "This bag is too heavy for you."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PREP_PLACE"
+            ],
+            "ua": "Ця площа недостатньо широка для ярмарку.",
+            "en": [
+                "This square is not wide enough for a fair.",
+                "This square is not big enough for a fair."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE",
+                "ARTICLES"
+            ],
+            "ua": "Цей суп занадто гарячий для дитини.",
+            "en": [
+                "This soup is too hot for a child.",
+                "This soup is too hot for kids."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Ця кава недостатньо міцна для мене.",
+            "en": [
+                "This coffee is not strong enough for me.",
+                "This coffee is not strong enough for my taste."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "DEMONSTRATIVES"
+            ],
+            "ua": "Ці печені яблука занадто солодкі.",
+            "en": [
+                "These baked apples are too sweet.",
+                "These apples are too sweet."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Я недостатньо сміливий, щоб виступати на сцені.",
+            "en": [
+                "I am not brave enough to perform on stage.",
+                "I'm not brave enough to go on stage."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Ця вода достатньо чиста, щоб її пити?",
+            "en": [
+                "Is this water clean enough to drink?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Тобі достатньо зручно в цьому кріслі?",
+            "en": [
+                "Are you comfortable enough in that chair?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Ця кава достатньо солодка для тебе?",
+            "en": [
+                "Is this coffee sweet enough for you?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "HAVE_HAVE_GOT"
+            ],
+            "ua": "Ми маємо достатньо часу, щоб усе закінчити?",
+            "en": [
+                "Do we have enough time to finish everything?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Ці яблука достатньо стиглі, щоб їх їсти?",
+            "en": [
+                "Are these apples ripe enough to eat?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Цей суп достатньо теплий, чи його потрібно підігріти?",
+            "en": [
+                "Is this soup warm enough, or do I need to heat it?"
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Кава занадто гаряча, щоб її пити.",
+            "en": [
+                "The coffee is too hot to drink."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Вже занадто пізно, щоб телефонувати.",
+            "en": [
+                "It's too late to call."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Вода занадто холодна, щоб купатися.",
+            "en": [
+                "The water is too cold to swim in."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PAST_SIMPLE"
+            ],
+            "ua": "Ця сукня була надто дорогою, тому я її не купила.",
+            "en": [
+                "The dress was too expensive, so I didn’t buy it."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PAST_SIMPLE"
+            ],
+            "ua": "Фільм був занадто довгим, і я занудьгувала.",
+            "en": [
+                "The film was too long, and I got bored."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Валіза надто повна, тому вона не закривається.",
+            "en": [
+                "The suitcase is too full, so it doesn’t close."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Суп занадто солоний для мене.",
+            "en": [
+                "The soup is too salty for me."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Погода надто погана, щоб виходити надвір.",
+            "en": [
+                "The weather is too bad to go out."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Він надто впертий, щоб вибачатися.",
+            "en": [
+                "He’s too stubborn to apologize."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Музика занадто гучна — зроби тихіше.",
+            "en": [
+                "The music is too loud — turn it down."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Вона ще не достатньо доросла, щоб водити.",
+            "en": [
+                "She isn’t old enough to drive."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "ENOUGH_TOO_MUCH_MANY"
+            ],
+            "ua": "У мене недостатньо грошей, щоб купити цей телефон.",
+            "en": [
+                "I don't have enough money to buy that phone."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Суп недостатньо теплий — підігрій його.",
+            "en": [
+                "The soup isn’t warm enough — heat it up."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "PAST_SIMPLE"
+            ],
+            "ua": "Ми не мали достатньо часу, щоб завершити проєкт.",
+            "en": [
+                "We didn’t have enough time to finish the project."
+            ]
+        },
+        {
+            "rules": [
+                "ENOUGH_TOO_MUCH_MANY",
+                "TO_BE"
+            ],
+            "ua": "Інтернет тут достатньо швидкий для відеодзвінків.",
+            "en": [
+                "The internet here is fast enough for video calls."
             ]
         }
     ],

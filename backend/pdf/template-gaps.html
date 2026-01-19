@@ -106,21 +106,34 @@
             flex: 0 0 auto;
         }
 
+        /* ✅ critical: allow the sentence column to shrink so wrapping works */
+        .text-wrap{
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
         .sentence{
             margin: 0;
             font-size: 20px;
             font-style: italic;
             line-height: 1.35;
+
+            white-space: normal;
+            overflow-wrap: anywhere;
         }
 
-        /* the underlined options chunk (like screenshot) */
+        /* ✅ INLINE GAP OPTIONS — wraps + keeps underline */
         .choices{
+            display: inline;          /* inline so it behaves like part of sentence */
+            white-space: normal;      /* allow wrapping */
+            overflow-wrap: anywhere;  /* break if needed */
+            word-break: break-word;
+
+            font-style: italic;
             font-weight: 800;
             border-bottom: 3px solid var(--orange);
             padding: 0 10px 2px;
-            display: inline-block;
-            transform: translateY(2px);
-            white-space: nowrap;
+            border-radius: 2px; /* optional tiny smoothing */
         }
 
         .logo{

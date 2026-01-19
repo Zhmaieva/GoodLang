@@ -93,7 +93,7 @@ export default function PdfTypeModal({
                 id: "choose_variant",
                 title: "Завдання \"обери вірний варіант\"",
                 subtitle: "Теорія, 12 вправ та відповіді",
-                requiresPaid: true,
+                requiresPaid: false,
             },
         ],
         []
@@ -102,7 +102,7 @@ export default function PdfTypeModal({
     // keep selection valid (ONLY ONCE)
     useEffect(() => {
         if (!open) return;
-        if (!paid && selected === "choose_variant") {
+        if (!paid && options?.find(x => x.id === selected)?.requiresPaid) {
             setSelected("translations");
         }
     }, [open, paid, selected]);

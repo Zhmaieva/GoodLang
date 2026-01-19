@@ -30,9 +30,6 @@ export const RULE_PAGE_TO_BE = {
                 ["He / She / It", "He is → He’s", "He is not → He isn’t / He’s not", "Is he…?", "Yes, he is. / No, he isn’t."],
                 ["You / We / They", "They are → They’re", "They are not → They aren’t / They’re not", "Are they…?", "Yes, they are. / No, they aren’t."],
             ],
-            hint:
-                "Питання: <strong>Am/Is/Are + підмет + … ?</strong> Заперечення: <strong>am not / isn’t / aren’t</strong>. " +
-                "<u>Не використовуємо</u> <em>do/does</em> з <em>to be</em>.",
         },
         {
             type: "examples",
@@ -901,7 +898,6 @@ export const RULE_PAGE_BE_FROM_NATIONALITY = {
             items: [
                 ["I'm from Spain.", "Я з Іспанії."],
                 ["She is Ukrainian.", "Вона українка."],
-                ["Are you from London?", "Ти з Лондона?"],
                 ["They are not from France.", "Вони не з Франції."]
             ]
         },
@@ -909,7 +905,6 @@ export const RULE_PAGE_BE_FROM_NATIONALITY = {
             type: "mistakes",
             title: "Типові помилки",
             bullets: [
-                "❌ <em>I am from Ukrainian.</em> → ✅ <strong>I am Ukrainian.</strong>",
                 "❌ <em>She is a Polish.</em> → ✅ <strong>She is Polish.</strong>",
                 "❌ <em>He is from the Ukraine.</em> → ✅ <strong>He is from Ukraine.</strong>"
             ]
@@ -1465,8 +1460,6 @@ export const RULE_PAGE_WAS_WERE = {
                     "Yes, they were. / No, they weren’t.",
                 ],
             ],
-            hint:
-                "Як і в Present: для <em>to be</em> <strong>не використовуємо did/didn’t</strong>.",
         },
         {
             type: "examples",
@@ -1621,7 +1614,6 @@ export const RULE_PAGE_GOING_TO_PLANS = {
             title: "Приклади",
             items: [
                 ["I’m going to buy a new phone.", "Я збираюся купити новий телефон."],
-                ["We’re going to visit our cousins.", "Ми збираємося відвідати наших двоюрідних братів/сестер."],
                 ["Is she going to move to London?", "Вона збирається переїхати до Лондона?"],
                 ["They aren’t going to work today.", "Вони не збираються працювати сьогодні."],
             ],
@@ -1787,8 +1779,6 @@ export const RULE_PAGE_MUST_MUSTNT = {
                 "🧠 Особистий обов’язок: <strong>I must finish this today.</strong>",
                 "⛔ Заборона: <strong>You mustn’t smoke here.</strong>",
             ],
-            hint:
-                "Структура: <strong>must / mustn’t + V1</strong>. Не додаємо <em>to</em> перед дієсловом.",
         },
         {
             type: "forms",
@@ -2381,17 +2371,6 @@ export const RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY = {
                 "Вони працюють з іменниками, особливо з <strong>countable / uncountable</strong>.",
         },
         {
-            type: "usage",
-            title: "Коли що вживати",
-            badges: [
-                "🍏 <strong>some</strong> — ствердження: <strong>some apples, some water</strong>",
-                "❓ <strong>any</strong> — питання/заперечення: <strong>any apples, any water</strong>",
-                "📦 <strong>a lot of</strong> — багато (для всіх): <strong>a lot of books / money</strong>",
-                "📚 <strong>many</strong> — багато + countable: <strong>many books</strong>",
-                "💧 <strong>much</strong> — багато + uncountable: <strong>much water</strong>",
-            ],
-        },
-        {
             type: "forms",
             title: "Countable vs uncountable",
             headers: ["Квантифікатор", "З ким", "Приклад", "Переклад"],
@@ -2867,8 +2846,6 @@ export const RULE_PAGE_BECAUSE_SO_BUT_ALTHOUGH = {
                     "Хоча було холодно, ми пішли гуляти.",
                 ],
             ],
-            hint:
-                "На письмі не починай речення з <strong>so</strong> занадто часто — краще поєднувати речення.",
         },
         {
             type: "examples",
@@ -3239,7 +3216,6 @@ export const RULE_PAGE_SINCE_FOR = {
                 ["We’ve lived here since 2015.", "Ми живемо тут з 2015 року."],
                 ["I’ve known her for years.", "Я знаю її багато років."],
                 ["He has been tired since the morning.", "Він втомлений з ранку."],
-                ["She has worked here for a long time.", "Вона працює тут уже давно."],
             ],
         },
         {
@@ -3339,23 +3315,11 @@ export const RULE_PAGE_ALREADY_YET_JUST = {
         {
             type: "meaning",
             title: "Що означають already / yet / just",
-            html:
-                "<strong>Already</strong> = <em>вже</em> (раніше, ніж очікували).<br/>" +
-                "<strong>Yet</strong> = <em>вже?</em> (у питанні) / <em>ще не</em> (у запереченні).<br/>" +
-                "<strong>Just</strong> = <em>щойно</em> (дуже недавно).",
-        },
-        {
-            type: "usage",
-            title: "Коли вживаємо",
             badges: [
                 "✅ <strong>Already</strong> — переважно у ствердженнях: <strong>I’ve already eaten.</strong>",
                 "✅ <strong>Yet</strong> — у питаннях і запереченнях: <strong>Have you finished yet?</strong> / <strong>I haven’t finished yet.</strong>",
                 "✅ <strong>Just</strong> — «щойно» (дуже недавно): <strong>She’s just left.</strong>",
-                "🧠 Найчастіше разом із <strong>Present Perfect</strong> (have/has + V3).",
             ],
-            hint:
-                "Типове місце в реченні: <strong>already / just</strong> — між <em>have/has</em> і <em>V3</em>; " +
-                "<strong>yet</strong> — зазвичай <em>в кінці</em> речення.",
         },
         {
             type: "forms",
@@ -3366,8 +3330,6 @@ export const RULE_PAGE_ALREADY_YET_JUST = {
                 ["just", "have/has + just + V3", "She has just arrived."],
                 ["yet", "зазвичай у кінці (questions/negatives)", "Have you finished yet? / I haven’t finished yet."],
             ],
-            hint:
-                "У розмовній мові <strong>already</strong> інколи буває наприкінці: <strong>Have you finished already?</strong> (здивування).",
         },
         {
             type: "examples",
@@ -3872,9 +3834,6 @@ export const RULE_PAGE_MODAL_PERFECTS = {
                 "🎯 Нереалізована можливість → <strong>He could have won.</strong>",
                 "⚠️ Критика після факту → <strong>They should have known better.</strong>",
             ],
-            hint:
-                "Форма: <strong>modal + have + V3</strong> " +
-                "(should / could / might + have + V3).",
         },
         {
             type: "forms",
@@ -4266,9 +4225,6 @@ export const RULE_PAGE_QUESTION_TAGS = {
                     "You can drive, can’t you?",
                 ],
             ],
-            hint:
-                "Якщо в реченні вже є допоміжне або модальне дієслово — " +
-                "воно ж використовується і в tag.",
         },
         {
             type: "examples",
@@ -4402,18 +4358,6 @@ export const RULE_PAGE_RELATIVE_CLAUSES = {
             html:
                 "<strong>Relative clauses</strong> — це підрядні речення, які <em>описують або уточнюють</em> " +
                 "людей, речі чи місця. Вони відповідають на питання <em>який? яка? яке?</em>",
-        },
-        {
-            type: "usage",
-            title: "Коли і як вживаємо",
-            badges: [
-                "👤 <strong>who</strong> — для людей: <strong>The woman who lives next door.</strong>",
-                "📦 <strong>which</strong> — для речей і тварин: <strong>The book which I bought.</strong>",
-                "🔗 <strong>that</strong> — універсальне (people + things): <strong>The movie that we watched.</strong>",
-                "✂️ <strong>that / who / which</strong> можна пропустити, якщо це не підмет",
-            ],
-            hint:
-                "Relative clause зазвичай стоїть <em>одразу після слова</em>, яке вона описує.",
         },
         {
             type: "forms",
@@ -4695,8 +4639,6 @@ export const RULE_PAGE_MODALS_OF_PROBABILITY = {
                 "🚫 Неможливість → <strong>He can’t be serious.</strong>",
                 "🕒 Для теперішнього та минулого (з have + V3)",
             ],
-            hint:
-                "Це <em>припущення</em>, а не факт. Ми оцінюємо ситуацію за наявними доказами.",
         },
         {
             type: "forms",
@@ -5165,8 +5107,6 @@ export const RULE_PAGE_EACH_OTHER_ONE_ANOTHER = {
                     "Прийменник залишається перед фразою.",
                 ],
             ],
-            hint:
-                "<strong>Each other / one another</strong> — це <em>обʼєкт</em> у реченні.",
         },
         {
             type: "examples",
@@ -6206,10 +6146,6 @@ export const RULE_PAGE_COMPLEX_NOUN_PHRASES = {
                     "Рішення, ухвалене комітетом, було неочікуваним.",
                 ],
                 [
-                    "A small wooden house with a red roof stood near the river.",
-                    "Невеликий дерев’яний будинок з червоним дахом стояв біля річки.",
-                ],
-                [
                     "The report that was published last week caused debate.",
                     "Звіт, опублікований минулого тижня, викликав дискусію.",
                 ],
@@ -6513,16 +6449,6 @@ export const RULE_PAGE_PREP_DIRECTION = {
             html:
                 "<strong>Prepositions of direction</strong> показують <em>рух і напрямок</em> — " +
                 "куди хтось або щось рухається.",
-        },
-        {
-            type: "usage",
-            title: "Основні прийменники",
-            badges: [
-                "➡️ <strong>to</strong> — рух у напрямку місця (без акценту на «всередину»): <strong>go to school</strong>",
-                "⬇️ <strong>into</strong> — рух <em>всередину</em>: <strong>walk into the room</strong>",
-                "↗️ <strong>towards</strong> — у бік, у напрямку (не обовʼязково досягти): <strong>run towards the park</strong>",
-                "↘️ <strong>onto</strong> — рух <em>на поверхню</em>: <strong>jump onto the table</strong>",
-            ],
         },
         {
             type: "forms",
