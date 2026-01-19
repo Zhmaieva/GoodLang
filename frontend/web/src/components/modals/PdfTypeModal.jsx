@@ -234,7 +234,7 @@ export default function PdfTypeModal({
     const openLogin = async () => {
         // matches old “force login” flow: set payment intent + open login modal
         try {
-            setPaymentIntent(true);
+            //setPaymentIntent(true);
         } catch {}
         try {
             // optional analytics; harmless if you keep it
