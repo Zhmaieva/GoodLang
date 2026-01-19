@@ -2,26 +2,26 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["I am {GAP}."],
-    "options": ["Ukrainian", "from Ukraine"],
-    "correct": "Ukrainian"
+    "options": ["a Ukrainian", "Ukrainian", "the Ukrainian"],
+    "correct": "a Ukrainian"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["She is {GAP}."],
-    "options": ["the Polish", "from Poland"],
-    "correct": "from Poland"
+    "options": ["the Polish", "a Polish", "Polish"],
+    "correct": "Polish"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["American", "from America"],
+    "options": ["from America", "from the America"],
     "correct": "American"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["We are {GAP}."],
-    "options": ["Italian", "from Italy"],
-    "correct": "Italian"
+    "options": ["Italians", "from the Italy"],
+    "correct": "Italians"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -32,26 +32,25 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["My friend is {GAP}."],
-    "options": ["German", "a German"],
+    "options": ["Germanian", "German", "from the Germany"],
     "correct": "German"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["She is {GAP}."],
-    "options": ["a French", "from France"],
+    "options": ["a French", "from France", "from the France"],
     "correct": "from France"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["British", "from Britain"],
-    "correct": "British"
+    "options": ["a British", "a Britain", "from Britain"],
+    "correct": "from Britain"
   },
   {
-    "rules": ["BE_FROM_NATIONALITY"],
     "en": ["I am {GAP}."],
-    "options": ["Canadians", "from Canada"],
-    "correct": "from Canada"
+    "options": ["from the Netherlands", "from Netherlands", "a Netherlandian"],
+    "correct": "from the Netherlands"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -62,13 +61,13 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["Japanese", "from Japan"],
-    "correct": "Japanese"
+    "options": ["from Japan", "from the Japan"],
+    "correct": "from Japan"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["They are {GAP}."],
-    "options": ["Chinese", "from China"],
+    "options": ["Chinese", "Chinian", "from the China"],
     "correct": "Chinese"
   },
   {
@@ -80,26 +79,26 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["My teacher is {GAP}."],
-    "options": ["Irish", "from Ireland"],
-    "correct": "Irish"
+    "options": ["an Irish", "from Ireland"],
+    "correct": "from Ireland"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["an Indian", "from India"],
-    "correct": "from India"
+    "options": ["an Indian", "from the India"],
+    "correct": "an Indian"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["She is {GAP}."],
-    "options": ["Greek", "from Greece"],
-    "correct": "Greek"
+    "options": ["a Greek", "from Greece", "from Greek"],
+    "correct": "from Greece"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["I am {GAP}."],
-    "options": ["a Mexican", "from Mexico"],
-    "correct": "from Mexico"
+    "options": ["a Mexican", "from Mexica", "from the Mexico"],
+    "correct": "a Mexican"
   },
   {
     "rules": ["BE_FROM_NATIONALITY"],
@@ -110,7 +109,7 @@
   {
     "rules": ["BE_FROM_NATIONALITY"],
     "en": ["He is {GAP}."],
-    "options": ["Dutch", "from Holland"],
+    "options": ["Dutch", "from the Holland"],
     "correct": "Dutch"
   },
   {

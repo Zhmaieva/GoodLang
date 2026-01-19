@@ -307,10 +307,11 @@ export const ALL_GAPS_SAMPLES = {
                 "I am {GAP}."
             ],
             "options": [
+                "a Ukrainian",
                 "Ukrainian",
-                "from Ukraine"
+                "the Ukrainian"
             ],
-            "correct": "Ukrainian"
+            "correct": "a Ukrainian"
         },
         {
             "rules": [
@@ -321,9 +322,10 @@ export const ALL_GAPS_SAMPLES = {
             ],
             "options": [
                 "the Polish",
-                "from Poland"
+                "a Polish",
+                "Polish"
             ],
-            "correct": "from Poland"
+            "correct": "Polish"
         },
         {
             "rules": [
@@ -333,8 +335,8 @@ export const ALL_GAPS_SAMPLES = {
                 "He is {GAP}."
             ],
             "options": [
-                "American",
-                "from America"
+                "from America",
+                "from the America"
             ],
             "correct": "American"
         },
@@ -346,10 +348,10 @@ export const ALL_GAPS_SAMPLES = {
                 "We are {GAP}."
             ],
             "options": [
-                "Italian",
-                "from Italy"
+                "Italians",
+                "from the Italy"
             ],
-            "correct": "Italian"
+            "correct": "Italians"
         },
         {
             "rules": [
@@ -372,8 +374,9 @@ export const ALL_GAPS_SAMPLES = {
                 "My friend is {GAP}."
             ],
             "options": [
+                "Germanian",
                 "German",
-                "a German"
+                "from the Germany"
             ],
             "correct": "German"
         },
@@ -386,7 +389,8 @@ export const ALL_GAPS_SAMPLES = {
             ],
             "options": [
                 "a French",
-                "from France"
+                "from France",
+                "from the France"
             ],
             "correct": "from France"
         },
@@ -398,23 +402,22 @@ export const ALL_GAPS_SAMPLES = {
                 "He is {GAP}."
             ],
             "options": [
-                "British",
+                "a British",
+                "a Britain",
                 "from Britain"
             ],
-            "correct": "British"
+            "correct": "from Britain"
         },
         {
-            "rules": [
-                "BE_FROM_NATIONALITY"
-            ],
             "en": [
                 "I am {GAP}."
             ],
             "options": [
-                "Canadians",
-                "from Canada"
+                "from the Netherlands",
+                "from Netherlands",
+                "a Netherlandian"
             ],
-            "correct": "from Canada"
+            "correct": "from the Netherlands"
         },
         {
             "rules": [
@@ -437,10 +440,10 @@ export const ALL_GAPS_SAMPLES = {
                 "He is {GAP}."
             ],
             "options": [
-                "Japanese",
-                "from Japan"
+                "from Japan",
+                "from the Japan"
             ],
-            "correct": "Japanese"
+            "correct": "from Japan"
         },
         {
             "rules": [
@@ -451,7 +454,8 @@ export const ALL_GAPS_SAMPLES = {
             ],
             "options": [
                 "Chinese",
-                "from China"
+                "Chinian",
+                "from the China"
             ],
             "correct": "Chinese"
         },
@@ -476,10 +480,10 @@ export const ALL_GAPS_SAMPLES = {
                 "My teacher is {GAP}."
             ],
             "options": [
-                "Irish",
+                "an Irish",
                 "from Ireland"
             ],
-            "correct": "Irish"
+            "correct": "from Ireland"
         },
         {
             "rules": [
@@ -490,9 +494,9 @@ export const ALL_GAPS_SAMPLES = {
             ],
             "options": [
                 "an Indian",
-                "from India"
+                "from the India"
             ],
-            "correct": "from India"
+            "correct": "an Indian"
         },
         {
             "rules": [
@@ -502,10 +506,11 @@ export const ALL_GAPS_SAMPLES = {
                 "She is {GAP}."
             ],
             "options": [
-                "Greek",
-                "from Greece"
+                "a Greek",
+                "from Greece",
+                "from Greek"
             ],
-            "correct": "Greek"
+            "correct": "from Greece"
         },
         {
             "rules": [
@@ -516,9 +521,10 @@ export const ALL_GAPS_SAMPLES = {
             ],
             "options": [
                 "a Mexican",
-                "from Mexico"
+                "from Mexica",
+                "from the Mexico"
             ],
-            "correct": "from Mexico"
+            "correct": "a Mexican"
         },
         {
             "rules": [
@@ -542,7 +548,7 @@ export const ALL_GAPS_SAMPLES = {
             ],
             "options": [
                 "Dutch",
-                "from Holland"
+                "from the Holland"
             ],
             "correct": "Dutch"
         },
