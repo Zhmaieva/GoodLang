@@ -23,10 +23,11 @@ export const filesController = {
                 const { pdfType } = req.query;
 
                 const withWatermarks = true;//account?.status === 'free';
-
-                if (account?.status === 'free' && pdfType === CHOOSE_VARIANT_TASK_FORM) {
-                    res.status(401).json({ error: "Subscribe to download \"choose correct option\" pdf" });
-                }
+                //
+                // if (account?.status === 'free' && pdfType === CHOOSE_VARIANT_TASK_FORM) {
+                //     res.status(401).json({ error: "Subscribe to download \"choose correct option\" pdf" });
+                //     return;
+                // }
 
                 const pdf = await getPreGeneratedPdf(req.query.rule, {
                     pdfType: pdfType,
