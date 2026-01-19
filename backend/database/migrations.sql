@@ -980,3 +980,76 @@ $$
 $$;
 
 COMMIT;
+
+
+-- Migration: alter_accounts_add_original_status
+-- Description: Add original_status to accounts to restore status when leaving/removal from all classes.
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'alter_accounts_add_original_status'
+        ) THEN
+
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS original_status VARCHAR(50) NULL;
+
+            -- Backfill for existing accounts (keep their current status as original)
+            UPDATE accounts
+            SET original_status = status
+            WHERE original_status IS NULL;
+
+            -- Optional default (helps for future inserted rows)
+            ALTER TABLE accounts
+                ALTER COLUMN original_status SET DEFAULT 'free';
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_accounts_add_original_status', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+
+-- Migration: alter_teachers_status_free_pro_only
+-- Description: Restrict teachers.status to 'free' | 'pro' and set default to 'free'.
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'alter_teachers_status_free_pro_only'
+        ) THEN
+
+            -- Normalize any legacy values to 'free'
+            UPDATE teachers
+            SET status = 'free'
+            WHERE status IS NULL
+               OR status NOT IN ('free', 'pro');
+
+            ALTER TABLE teachers
+                ALTER COLUMN status SET DEFAULT 'free';
+
+            ALTER TABLE teachers
+                ADD CONSTRAINT teachers_status_check
+                    CHECK (status IN ('free', 'pro'));
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('alter_teachers_status_free_pro_only', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
