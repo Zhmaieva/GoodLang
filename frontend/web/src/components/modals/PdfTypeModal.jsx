@@ -259,6 +259,7 @@ export default function PdfTypeModal({
             {/* ✅ login modal replaces old DownloadLimitModal */}
             <LoginModal
                 ruleToDownload={ruleToDownload}
+                fileTypeToDownload={selected}
                 forceLogin={true}
                 theme={theme}
                 account={account}
@@ -508,7 +509,7 @@ export default function PdfTypeModal({
                                         setLoading(true);
 
                                         // safety: if not paid and somehow selected locked option, force translations
-                                        const safeSelected = (!paid && selected === "choose_variant") ? "translations" : selected;
+                                        const safeSelected = selected;//(!paid && selected === "choose_variant") ? "translations" : selected;
 
                                         await onConfirm(safeSelected);
                                     } finally {

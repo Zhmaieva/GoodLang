@@ -20,6 +20,7 @@ export default function LoginForm({
                                       theme,
                                       account,
                                       ruleToDownload = null,
+                                      fileTypeToDownload = 'translations',
                                       onClose = () => {} }) {
     const [step, setStep] = useState("email"); // "email" | "code"
     const [emailInput, setEmailInput] = useState("");
@@ -302,12 +303,13 @@ export default function LoginForm({
         }
     }
 
-    function reloadWithRuleParam(ruleId) {
+    function reloadWithRuleParam(ruleId, fileTypeToDownload) {
         try {
             const url = new URL(window.location.href);
 
             if (ruleId) {
                 url.searchParams.set("ruleToDownload", ruleId);
+                url.searchParams.set("pdf_type", fileTypeToDownload);
             } else {
                 url.searchParams.delete("ruleToDownload");
             }

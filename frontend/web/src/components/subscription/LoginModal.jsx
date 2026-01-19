@@ -9,7 +9,8 @@ export default function LoginModal({
                                        onClose,
                                        account,
                                        forceLogin = false,
-                                       ruleToDownload = null
+                                       ruleToDownload = null,
+                                       fileTypeToDownload = 'translations'
                                    }) {
     if (!open) return null;
 
@@ -18,6 +19,7 @@ export default function LoginModal({
                     ruleToDownload={ruleToDownload}
                     theme={theme}
                     account={account}
+                    fileTypeToDownload={fileTypeToDownload}
                     onClose={() => {
                         if (forceLogin) onClose();
                     }}
