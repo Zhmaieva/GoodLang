@@ -838,3 +838,145 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: create_classes_and_class_students_tables
+-- Description: Add teacher classes + join table for students (no per-student invite codes, no joined_at).
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'create_classes_and_class_students_tables'
+        ) THEN
+
+            -- =========================
+            -- CLASSES
+            -- =========================
+            CREATE TABLE IF NOT EXISTS classes (
+                                                   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+                                                   teacher_account_id UUID NOT NULL
+                                                       REFERENCES accounts(id)
+                                                           ON DELETE CASCADE,
+
+                                                   name VARCHAR(255) NOT NULL,
+
+                                                   invite_code VARCHAR(32) NOT NULL UNIQUE,
+
+                                                   created_at TIMESTAMP NOT NULL
+                                                                       DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'UTC')
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_classes_teacher_account_id
+                ON classes (teacher_account_id);
+
+            CREATE INDEX IF NOT EXISTS idx_classes_invite_code
+                ON classes (invite_code);
+
+
+            -- =========================
+            -- CLASS STUDENTS
+            -- =========================
+            CREATE TABLE IF NOT EXISTS class_students (
+                                                          id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+                                                          class_id UUID NOT NULL
+                                                              REFERENCES classes(id)
+                                                                  ON DELETE CASCADE,
+
+                                                          student_account_id UUID NOT NULL
+                                                              REFERENCES accounts(id)
+                                                                  ON DELETE CASCADE,
+
+                                                          first_name VARCHAR(100) NULL,
+                                                          last_name VARCHAR(100) NULL,
+
+                                                          created_at TIMESTAMP NOT NULL
+                                                                              DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'UTC'),
+
+                                                          CONSTRAINT uq_class_students_class_student
+                                                              UNIQUE (class_id, student_account_id)
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_class_students_class_id
+                ON class_students (class_id);
+
+            CREATE INDEX IF NOT EXISTS idx_class_students_student_account_id
+                ON class_students (student_account_id);
+
+            CREATE INDEX IF NOT EXISTS idx_class_students_created_at
+                ON class_students (created_at);
+
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('create_classes_and_class_students_tables', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+
+-- Migration: create_teachers_table_and_add_is_active_to_class_students
+-- Description: Add teachers profile table and add is_active flag to class_students.
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'create_teachers_table_and_add_is_active_to_class_students'
+        ) THEN
+
+            -- =========================
+            -- TEACHERS
+            -- =========================
+            CREATE TABLE IF NOT EXISTS teachers (
+                                                    account_id UUID PRIMARY KEY
+                                                        REFERENCES accounts(id)
+                                                            ON DELETE CASCADE,
+
+                                                    first_name VARCHAR(100) NULL,
+                                                    last_name VARCHAR(100) NULL,
+
+                                                    status VARCHAR(50) NOT NULL DEFAULT 'active',
+
+                                                    students_quota INTEGER NOT NULL DEFAULT 0,
+
+                                                    created_at TIMESTAMP NOT NULL
+                                                        DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'UTC')
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_teachers_status
+                ON teachers (status);
+
+            CREATE INDEX IF NOT EXISTS idx_teachers_created_at
+                ON teachers (created_at);
+
+
+            -- =========================
+            -- CLASS_STUDENTS: is_active
+            -- =========================
+            ALTER TABLE class_students
+                ADD COLUMN IF NOT EXISTS is_active BOOLEAN NOT NULL DEFAULT TRUE;
+
+            CREATE INDEX IF NOT EXISTS idx_class_students_is_active
+                ON class_students (is_active);
+
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('create_teachers_table_and_add_is_active_to_class_students', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
