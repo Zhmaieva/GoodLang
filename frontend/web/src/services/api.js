@@ -409,3 +409,75 @@ export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
     }
 }
 
+async function jsonFetch(url, opts = {}) {
+    const res = await fetch(url, {
+        ...opts,
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+            ...(opts.headers || {}),
+        },
+    });
+
+    let data = null;
+    try {
+        data = await res.json();
+    } catch {
+        // ignore
+    }
+
+    if (!res.ok) {
+        const msg = data?.error || `Server error: ${res.status}`;
+        const err = new Error(msg);
+        err.status = res.status;
+        err.data = data;
+        throw err;
+    }
+
+    return data;
+}
+
+// Teacher
+export function apiTeacherMetadata() {
+    return jsonFetch(`${API_BASE}/schools/teachers/me`);
+}
+
+export function apiTeacherClasses() {
+    return jsonFetch(`${API_BASE}/schools/teachers/me/classes`);
+}
+
+export function apiTeacherStudents() {
+    return jsonFetch(`${API_BASE}/schools/teachers/me/students`);
+}
+
+export function apiClassStudents(classId, isActive = "all") {
+    const qs = new URLSearchParams();
+    qs.set("is_active", isActive); // "all" | "true" | "false"
+    return jsonFetch(`${API_BASE}/schools/teachers/me/classes/${classId}/students?${qs.toString()}`);
+}
+
+export function apiCreateClass(name) {
+    return jsonFetch(`${API_BASE}/schools/teachers/me/classes`, {
+        method: "POST",
+        body: JSON.stringify({ name }),
+    });
+}
+
+export function apiRegenerateInviteCode(classId) {
+    return jsonFetch(`${API_BASE}/schools/teachers/me/classes/${classId}/invitation-codes`, {
+        method: "POST",
+    });
+}
+
+export function apiAddStudentToClass(classId, { email, firstName, lastName }) {
+    return jsonFetch(`${API_BASE}/schools/teachers/me/classes/${classId}/students`, {
+        method: "POST",
+        body: JSON.stringify({ email, firstName, lastName }),
+    });
+}
+
+export function apiDeactivateStudentInClass(classId, studentAccountId) {
+    return jsonFetch(`${API_BASE}/schools/teachers/me/classes/${classId}/students/${studentAccountId}`, {
+        method: "DELETE",
+    });
+}

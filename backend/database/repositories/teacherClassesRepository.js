@@ -469,28 +469,33 @@ export async function acceptInvitationByCode(studentAccountId, inviteCode) {
 
 /**
  * Get teacher metadata by class id (student action)
+ * SECURITY: only if the student has membership in that class (active or inactive).
  */
-export async function getTeacherMetadataByClassId(classId) {
+export async function getTeacherMetadataByClassId(studentId, classId) {
     const { rows } = await pool.query(
         `
-    SELECT
-      t.account_id,
-      t.first_name,
-      t.last_name,
-      t.status,
-      t.students_quota,
-      t.created_at,
-      c.id AS class_id,
-      c.name AS class_name
-    FROM classes c
-    JOIN teachers t ON t.account_id = c.teacher_account_id
-    WHERE c.id = $1
-    LIMIT 1
-    `,
-        [classId]
+            SELECT
+                t.account_id,
+                t.first_name,
+                t.last_name,
+                t.status,
+                t.students_quota,
+                t.created_at,
+                c.id AS class_id,
+                c.name AS class_name
+            FROM class_students cs
+                     JOIN classes c ON c.id = cs.class_id
+                     JOIN teachers t ON t.account_id = c.teacher_account_id
+            WHERE cs.student_account_id = $1
+              AND cs.class_id = $2
+                LIMIT 1
+        `,
+        [studentId, classId]
     );
+
     return rows[0] || null;
 }
+
 
 /**
  * List classes by student id (student action)

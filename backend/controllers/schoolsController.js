@@ -9,7 +9,7 @@ import {
     addStudentToClassByEmail,
     deactivateStudentInClass,
     acceptInvitationByCode,
-    getTeacherMetadataByClassIdForStudent,
+    getTeacherMetadataByClassId,
     listClassesByStudentId,
     leaveClass,
 } from "../database/repositories/teacherClassesRepository.js";
@@ -224,7 +224,7 @@ export const schoolController = {
             authMiddleware,
             async (req, res, next) => {
                 try {
-                    const meta = await getTeacherMetadataByClassIdForStudent(req.user.id, req.params.classId);
+                    const meta = await getTeacherMetadataByClassId(req.user.id, req.params.classId);
                     if (!meta) return res.status(404).json({ error: "Not found" });
                     res.json(meta);
                 } catch (e) {
