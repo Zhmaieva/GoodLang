@@ -110,16 +110,17 @@ import {
     RULE_PAGE_CORRELATIVE_CONJUNCTIONS,
     RULE_PAGE_PREP_DIRECTION, RULE_PAGE_BE_FROM_NATIONALITY,
 } from "./services/rulePages.js";
-import GoodLangLandingTeaStyle from "./components/pages/LandingPage2.jsx";
 import {off, on} from "./services/events.js";
 import {ensureAnalytics} from "./services/gaService.js";
 import GaRouteTracker from "./components/routing/GaRouteTracker.jsx";
-import Landing from "./components/pages/LandingPage3.jsx";
 import LandingPageTeacher from "./components/pages/LandingPageTeacher.jsx";
 import LandingPage3 from "./components/pages/LandingPage3.jsx";
-import GoodLangLandingTeaStyleThemed from "./components/pages/LandingPage2.jsx";
 import LandingCrossword from "./components/pages/LandingCrossword.jsx";
-import TeacherDashboardPage from "./components/pages/TeacherDashboardPage.jsx";
+import TeacherMyProfilePage from "./components/dashboard/pages/TeacherMyProfilePage.jsx";
+import TeacherMyStudentsPage from "./components/dashboard/pages/TeacherMyStudentsPage.jsx";
+import TeacherMyClassesPage from "./components/dashboard/pages/TeacherMyClassesPage.jsx";
+import {TeacherDashboardProvider} from "./components/dashboard/TeacherDashboardContext.jsx";
+import TeacherDashboardLayout from "./components/dashboard/TeacherDashboardLayout.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -183,7 +184,19 @@ export default function App() {
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />
                 <Route path="/payment/cancel" element={<PaymentCancel />} />
-                <Route path="/school/dashboard" element={<TeacherDashboardPage theme={theme} />} />
+                <Route
+                    path="/teacher"
+                    element={
+                        <TeacherDashboardProvider>
+                            <TeacherDashboardLayout />
+                        </TeacherDashboardProvider>
+                    }
+                >
+                    <Route index element={<TeacherMyProfilePage />} />
+                    <Route path="profile" element={<TeacherMyProfilePage />} />
+                    <Route path="students" element={<TeacherMyStudentsPage />} />
+                    <Route path="classes" element={<TeacherMyClassesPage />} />
+                </Route>
 
                 {/* A1 RULES */}
                 <Route path="/rule/TO_BE" element={<RulePage theme={ruleTheme} data={RULE_PAGE_TO_BE} />} />

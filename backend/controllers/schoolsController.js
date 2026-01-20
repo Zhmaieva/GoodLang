@@ -11,7 +11,7 @@ import {
     acceptInvitationByCode,
     getTeacherMetadataByClassId,
     listClassesByStudentId,
-    leaveClass,
+    leaveClass, addStudentToTeacherByEmail, deactivateStudentFromTeacher,
 } from "../database/repositories/teacherClassesRepository.js";
 
 const name = "schools";
@@ -110,6 +110,9 @@ export const schoolController = {
         );
 
         // Add student to class by email (quota-safe)
+        // Add student by email (quota-safe)
+        // - classId = real UUID => add to that class (existing behavior)
+        // - classId = "none"    => add student under teacher with no class (new behavior)
         app.post(
             `/${name}/teachers/me/classes/:classId/students`,
             authMiddleware,
@@ -118,13 +121,22 @@ export const schoolController = {
                     const missing = requireBodyFields(req.body, ["email"]);
                     if (missing) return res.status(400).json({ error: `${missing} required` });
 
-                    const result = await addStudentToClassByEmail({
+                    const classIdRaw = String(req.params.classId || "").trim().toLowerCase();
+                    const isNoClass = classIdRaw === "none" || classIdRaw === "unassigned";
+
+                    const payload = {
                         teacherAccountId: req.user.id,
-                        classId: req.params.classId,
                         email: req.body.email,
                         firstName: req.body.firstName ?? null,
                         lastName: req.body.lastName ?? null,
-                    });
+                    };
+
+                    const result = isNoClass
+                        ? await addStudentToTeacherByEmail(payload)
+                        : await addStudentToClassByEmail({
+                            ...payload,
+                            classId: req.params.classId,
+                        });
 
                     if (!result.ok) {
                         if (result.reason === "quota_exceeded") {
@@ -134,9 +146,12 @@ export const schoolController = {
                                 activeStudents: result.activeStudents,
                             });
                         }
-                        if (result.reason === "class_not_found_or_not_owned") {
+
+                        if (!isNoClass && result.reason === "class_not_found_or_not_owned") {
                             return res.status(404).json({ error: "Class not found" });
                         }
+
+                        // plan / other errors
                         return res.status(400).json({ error: result.reason });
                     }
 
@@ -147,29 +162,38 @@ export const schoolController = {
             }
         );
 
+
         // Deactivate student in a class
+        // Remove student:
+        // - classId = real UUID => remove from that class (existing)
+        // - classId = "all" or "teacher" => remove from teacher across all classes (new)
         app.delete(
             `/${name}/teachers/me/classes/:classId/students/:studentAccountId`,
             authMiddleware,
             async (req, res, next) => {
                 try {
-                    const result = await deactivateStudentInClass(
-                        req.user.id,
-                        req.params.classId,
-                        req.params.studentAccountId
-                    );
+                    const classIdRaw = String(req.params.classId || "").trim().toLowerCase();
+                    const studentAccountId = req.params.studentAccountId;
 
-                    if (!result.ok && result.reason === "class_not_found_or_not_owned") {
-                        return res.status(404).json({ error: "Class not found" });
+                    const isGlobal =
+                        classIdRaw === "all" || classIdRaw === "teacher" || classIdRaw === "everywhere";
+
+                    const result = isGlobal
+                        ? await deactivateStudentFromTeacher(req.user.id, studentAccountId)
+                        : await deactivateStudentInClass(req.user.id, req.params.classId, studentAccountId);
+
+                    if (!result?.ok) {
+                        // Keep your existing error mapping.
+                        return res.status(400).json({ error: result?.reason || "unknown_error" });
                     }
 
-                    // ok=false may also mean membership didn't exist
-                    res.json(result);
+                    return res.status(200).json({ ok: true });
                 } catch (e) {
                     next(e);
                 }
             }
         );
+
 
         // =========================
         // STUDENT endpoints (me)

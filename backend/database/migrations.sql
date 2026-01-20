@@ -1053,3 +1053,82 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: create_teacher_students_table_and_rename_teacher_status
+-- Description:
+-- 1) Add teacher_students table to allow students attached to a teacher without a class
+-- 2) Rename teacher statuses to 'Free' and 'Teacher+'
+-- 3) Backfill existing teacher statuses
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'create_teacher_students_table_and_rename_teacher_status'
+        ) THEN
+
+            -- =========================
+            -- TEACHER_STUDENTS
+            -- =========================
+            CREATE TABLE IF NOT EXISTS teacher_students (
+                                                            id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+                                                            teacher_account_id UUID NOT NULL
+                                                                REFERENCES accounts(id)
+                                                                    ON DELETE CASCADE,
+
+                                                            student_account_id UUID NOT NULL
+                                                                REFERENCES accounts(id)
+                                                                    ON DELETE CASCADE,
+
+                                                            first_name VARCHAR(100) NULL,
+                                                            last_name  VARCHAR(100) NULL,
+
+                                                            is_active BOOLEAN NOT NULL DEFAULT TRUE,
+
+                                                            created_at TIMESTAMP NOT NULL
+                                                                DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'UTC'),
+
+                                                            CONSTRAINT uq_teacher_students_teacher_student
+                                                                UNIQUE (teacher_account_id, student_account_id)
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_teacher_students_teacher_account_id
+                ON teacher_students (teacher_account_id);
+
+            CREATE INDEX IF NOT EXISTS idx_teacher_students_student_account_id
+                ON teacher_students (student_account_id);
+
+            CREATE INDEX IF NOT EXISTS idx_teacher_students_is_active
+                ON teacher_students (is_active);
+
+            -- =========================
+            -- TEACHERS.STATUS rename + backfill
+            -- =========================
+
+            -- Default -> 'Free'
+            ALTER TABLE teachers
+                ALTER COLUMN status SET DEFAULT 'Free';
+
+            -- Backfill old values
+            UPDATE teachers
+            SET status = CASE
+                             WHEN status ILIKE 'pro' OR status ILIKE 'teacher+'
+                                 THEN 'Teacher+'
+                             ELSE 'Free'
+                END;
+
+            ALTER TABLE teachers
+                DROP CONSTRAINT teachers_status_check;
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('create_teacher_students_table_and_rename_teacher_status', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+

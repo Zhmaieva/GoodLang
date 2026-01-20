@@ -1,0 +1,148 @@
+// TeacherDashboardContext.jsx
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import {
+    apiTeacherMetadata,
+    apiTeacherClasses,
+    apiTeacherStudents,
+    apiCreateClass,
+    apiClassStudents,
+    apiAddStudentToClass,
+    apiDeactivateStudentInClass,
+    apiRegenerateInviteCode,
+} from "../../services/api.js";
+
+const Ctx = createContext(null);
+
+export function TeacherDashboardProvider({ children }) {
+    const [loading, setLoading] = useState(true);
+    const [err, setErr] = useState("");
+
+    const [teacher, setTeacher] = useState(null);
+    const [classes, setClasses] = useState([]);
+    const [students, setStudents] = useState([]);
+
+    const [expandedClassId, setExpandedClassId] = useState(null);
+    const [classStudentsMap, setClassStudentsMap] = useState({});
+    const [classStudentsLoading, setClassStudentsLoading] = useState({});
+
+    const activeStudentsCount = Number(teacher?.active_students ?? 0);
+    const quota = Number(teacher?.students_quota ?? 0);
+    const isPro = teacher?.status === "Teacher+";
+    const canAddStudents = isPro && quota > 0 && activeStudentsCount < quota;
+
+    const quotaText = useMemo(() => {
+        if (!teacher) return "";
+        if (!isPro) return "План: FREE (додавання студентів недоступне)";
+        if (quota <= 0) return "План: PRO (квота студентів: 0 — зверніться в підтримку)";
+        return `План: PRO • Активні студенти: ${activeStudentsCount} / ${quota}`;
+    }, [teacher, isPro, quota, activeStudentsCount]);
+
+    async function reloadAll() {
+        setLoading(true);
+        setErr("");
+        try {
+            const [t, c, s] = await Promise.all([
+                apiTeacherMetadata(),
+                apiTeacherClasses(),
+                apiTeacherStudents(),
+            ]);
+            setTeacher(t);
+            setClasses(c?.classes || []);
+            setStudents(s?.students || []);
+        } catch (e) {
+            setErr(e?.message || "Щось пішло не так");
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        reloadAll();
+    }, []);
+
+    async function loadClassStudents(classId) {
+        setClassStudentsLoading((m) => ({ ...m, [classId]: true }));
+        try {
+            const data = await apiClassStudents(classId, "all");
+            setClassStudentsMap((m) => ({ ...m, [classId]: data?.students || [] }));
+        } catch (e) {
+            setErr(e?.message || "Не вдалося завантажити студентів класу");
+        } finally {
+            setClassStudentsLoading((m) => ({ ...m, [classId]: false }));
+        }
+    }
+
+    async function onToggleExpandClass(classId) {
+        setExpandedClassId((prev) => (prev === classId ? null : classId));
+        const already = classStudentsMap[classId];
+        if (!already) await loadClassStudents(classId);
+    }
+
+    async function onCreateClass(name) {
+        const created = await apiCreateClass(name);
+        const [c, t] = await Promise.all([apiTeacherClasses(), apiTeacherMetadata()]);
+        setClasses(c?.classes || []);
+        setTeacher(t);
+        return created;
+    }
+
+    async function onRegenerateInviteCode(classId) {
+        await apiRegenerateInviteCode(classId);
+        const c = await apiTeacherClasses();
+        setClasses(c?.classes || []);
+    }
+
+    async function onAddStudent(classId, payload) {
+        const result = await apiAddStudentToClass(classId, payload);
+        const [t, s] = await Promise.all([apiTeacherMetadata(), apiTeacherStudents()]);
+        setTeacher(t);
+        setStudents(s?.students || []);
+        await loadClassStudents(classId);
+        return result;
+    }
+
+    async function onDeactivateStudent(classId, studentAccountId) {
+        await apiDeactivateStudentInClass(classId, studentAccountId);
+        const [t, s] = await Promise.all([apiTeacherMetadata(), apiTeacherStudents()]);
+        setTeacher(t);
+        setStudents(s?.students || []);
+        await loadClassStudents(classId);
+    }
+
+    const value = {
+        // state
+        loading,
+        err,
+        teacher,
+        classes,
+        students,
+        expandedClassId,
+        classStudentsMap,
+        classStudentsLoading,
+
+        // derived
+        activeStudentsCount,
+        quota,
+        isPro,
+        canAddStudents,
+        quotaText,
+
+        // actions
+        setErr,
+        reloadAll,
+        onToggleExpandClass,
+        onCreateClass,
+        onAddStudent,
+        onDeactivateStudent,
+        onRegenerateInviteCode,
+        loadClassStudents,
+    };
+
+    return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
+}
+
+export function useTeacherDashboard() {
+    const ctx = useContext(Ctx);
+    if (!ctx) throw new Error("useTeacherDashboard must be used inside TeacherDashboardProvider");
+    return ctx;
+}

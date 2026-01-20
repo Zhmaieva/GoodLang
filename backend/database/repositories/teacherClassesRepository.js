@@ -37,6 +37,24 @@ export async function listTeachersClasses(teacherAccountId) {
 export async function listTeachersStudents(teacherAccountId) {
     const { rows } = await pool.query(
         `
+    -- 1) Students attached to teacher but not necessarily in any class
+    SELECT
+      ts.student_account_id,
+      a.email,
+      a.status AS account_status,
+      ts.first_name,
+      ts.last_name,
+      ts.is_active,
+      ts.created_at AS added_at,
+      NULL::uuid AS class_id,
+      NULL::varchar AS class_name
+    FROM teacher_students ts
+    JOIN accounts a ON a.id = ts.student_account_id
+    WHERE ts.teacher_account_id = $1
+
+    UNION ALL
+
+    -- 2) Class memberships (one row per class)
     SELECT
       cs.student_account_id,
       a.email,
@@ -51,12 +69,105 @@ export async function listTeachersStudents(teacherAccountId) {
     JOIN class_students cs ON cs.class_id = c.id
     JOIN accounts a ON a.id = cs.student_account_id
     WHERE c.teacher_account_id = $1
-    ORDER BY cs.created_at DESC
+
+    ORDER BY added_at DESC
     `,
         [teacherAccountId]
     );
     return rows;
 }
+
+/**
+ * Add a student directly under a teacher (no class).
+ * - Enforces teacher plan (must be 'Teacher+')
+ * - Enforces quota vs active teacher_students
+ * - Upserts teacher_students row and activates it
+ * - Sets student's account status to paid
+ */
+export async function addStudentToTeacherByEmail({
+                                                     teacherAccountId,
+                                                     email,
+                                                     firstName = null,
+                                                     lastName = null,
+                                                 }) {
+    const client = await pool.connect();
+    try {
+        await client.query("BEGIN");
+
+        // Lock teacher row (quota thread-safety anchor) + enforce plan
+        const { rows: teacher } = await client.query(
+            `
+      SELECT status, students_quota
+      FROM teachers
+      WHERE account_id = $1
+      FOR UPDATE
+      `,
+            [teacherAccountId]
+        );
+        if (!teacher[0]) {
+            await client.query("ROLLBACK");
+            return { ok: false, reason: "teacher_not_found" };
+        }
+
+        // ✅ Free teachers cannot add students
+        if (teacher[0].status !== "Teacher+") {
+            await client.query("ROLLBACK");
+            return { ok: false, reason: "teacher_not_teacher_plus" };
+        }
+
+        // Count active seats under teacher_students
+        const { rows: cnt } = await client.query(
+            `
+      SELECT COUNT(*)::int AS active_students
+      FROM teacher_students
+      WHERE teacher_account_id = $1
+        AND is_active = true
+      `,
+            [teacherAccountId]
+        );
+
+        const activeStudents = cnt[0]?.active_students ?? 0;
+        const quota = Number(teacher[0].students_quota || 0);
+
+        if (quota <= 0) {
+            await client.query("ROLLBACK");
+            return { ok: false, reason: "quota_exceeded", activeStudents, quota };
+        }
+        if (activeStudents >= quota) {
+            await client.query("ROLLBACK");
+            return { ok: false, reason: "quota_exceeded", activeStudents, quota };
+        }
+
+        // Find or create student account
+        const student = await findOrCreateAccountByEmail(client, email);
+
+        // Upsert teacher_students row
+        const { rows: up } = await client.query(
+            `
+      INSERT INTO teacher_students (teacher_account_id, student_account_id, first_name, last_name, is_active)
+      VALUES ($1, $2, $3, $4, true)
+      ON CONFLICT (teacher_account_id, student_account_id)
+      DO UPDATE SET
+        first_name = COALESCE(EXCLUDED.first_name, teacher_students.first_name),
+        last_name  = COALESCE(EXCLUDED.last_name,  teacher_students.last_name),
+        is_active  = true
+      RETURNING id, teacher_account_id, student_account_id, is_active, created_at
+      `,
+            [teacherAccountId, student.id, firstName, lastName]
+        );
+
+        await setAccountPaid(client, student.id);
+
+        await client.query("COMMIT");
+        return { ok: true, studentAccountId: student.id, teacherStudent: up[0] };
+    } catch (e) {
+        await client.query("ROLLBACK");
+        throw e;
+    } finally {
+        client.release();
+    }
+}
+
 
 /**
  * List a single class's students (teacher-owned), including both active and inactive
@@ -107,12 +218,11 @@ export async function getTeacherMetadata(teacherAccountId) {
     // Optional: include active students count
     const { rows: cnt } = await pool.query(
         `
-    SELECT COUNT(*)::int AS active_students
-    FROM classes c
-    JOIN class_students cs ON cs.class_id = c.id
-    WHERE c.teacher_account_id = $1
-      AND cs.is_active = true
-    `,
+            SELECT COUNT(*)::int AS active_students
+            FROM teacher_students ts
+            WHERE ts.teacher_account_id = $1
+              AND ts.is_active = true
+        `,
         [teacherAccountId]
     );
 
@@ -231,11 +341,24 @@ async function setAccountPaid(client, accountId) {
 /**
  * Internal: restore account status to original_status IF the student is not active in any other class
  */
-async function restoreIfNoActiveClasses(client, studentAccountId) {
-    const { rows: active } = await client.query(
+async function restoreIfNoActiveClassesOrTeachers(client, studentAccountId) {
+    const { rows: activeClass } = await client.query(
+        `
+            SELECT 1
+            FROM class_students
+            WHERE student_account_id = $1
+              AND is_active = true
+            LIMIT 1
+        `,
+        [studentAccountId]
+    );
+
+    if (activeClass[0]) return;
+
+    const { rows: activeTeacher } = await client.query(
         `
     SELECT 1
-    FROM class_students
+    FROM teacher_students
     WHERE student_account_id = $1
       AND is_active = true
     LIMIT 1
@@ -243,17 +366,18 @@ async function restoreIfNoActiveClasses(client, studentAccountId) {
         [studentAccountId]
     );
 
-    if (active[0]) return; // still active somewhere -> keep paid
+    if (activeTeacher[0]) return;
 
     await client.query(
         `
-    UPDATE accounts
-    SET status = COALESCE(original_status, status)
-    WHERE id = $1
-    `,
+            UPDATE accounts
+            SET status = COALESCE(original_status, status)
+            WHERE id = $1
+        `,
         [studentAccountId]
     );
 }
+
 
 /**
  * Add a student to a class by email (teacher-owned), thread-safe quota.
@@ -305,40 +429,70 @@ export async function addStudentToClassByEmail({
         }
 
         // ✅ Free teachers cannot add students regardless of quota
-        if (teacher[0].status !== "pro") {
+        if (teacher[0].status !== "Teacher+") {
             await client.query("ROLLBACK");
-            return { ok: false, reason: "teacher_not_pro" };
+            return { ok: false, reason: "teacher_not_teacher_plus" };
         }
 
-        // 3) Count active students under this teacher (within tx + teacher lock)
-        const { rows: cnt } = await client.query(
+        // 3) Find or create student FIRST
+        const student = await findOrCreateAccountByEmail(client, email);
+
+        // 4) If student is already active under this teacher, DO NOT apply quota.
+        //    Quota is only for creating/reactivating teacher_students relation.
+        const { rows: rel } = await client.query(
             `
-      SELECT COUNT(*)::int AS active_students
-      FROM classes c
-      JOIN class_students cs ON cs.class_id = c.id
-      WHERE c.teacher_account_id = $1
-        AND cs.is_active = true
-      `,
-            [teacherAccountId]
+    SELECT is_active
+    FROM teacher_students
+    WHERE teacher_account_id = $1
+      AND student_account_id = $2
+    LIMIT 1
+  `,
+            [teacherAccountId, student.id]
         );
 
-        const activeStudents = cnt[0]?.active_students ?? 0;
-        const quota = Number(teacher[0].students_quota || 0);
+        const alreadyActiveUnderTeacher = rel[0]?.is_active === true;
 
-        // quota = 0 means "no seats" (keep consistent)
-        // if you want 0 to mean "unlimited", tell me and I'll flip it
-        if (quota <= 0) {
-            await client.query("ROLLBACK");
-            return { ok: false, reason: "quota_exceeded", activeStudents, quota };
+        // 5) If NOT already active -> enforce quota (teacher_students only)
+        if (!alreadyActiveUnderTeacher) {
+            const { rows: cnt } = await client.query(
+                `
+      SELECT COUNT(*)::int AS active_students
+      FROM teacher_students
+      WHERE teacher_account_id = $1
+        AND is_active = true
+    `,
+                [teacherAccountId]
+            );
+
+            const activeStudents = cnt[0]?.active_students ?? 0;
+            const quota = Number(teacher[0].students_quota || 0);
+
+            if (quota <= 0) {
+                await client.query("ROLLBACK");
+                return { ok: false, reason: "quota_exceeded", activeStudents, quota };
+            }
+
+            if (activeStudents >= quota) {
+                await client.query("ROLLBACK");
+                return { ok: false, reason: "quota_exceeded", activeStudents, quota };
+            }
         }
 
-        if (activeStudents >= quota) {
-            await client.query("ROLLBACK");
-            return { ok: false, reason: "quota_exceeded", activeStudents, quota };
-        }
+// 6) Upsert teacher_students (this is what consumes quota when it changes inactive->active or new)
+        await client.query(
+            `
+                INSERT INTO teacher_students (teacher_account_id, student_account_id, first_name, last_name, is_active)
+                VALUES ($1, $2, $3, $4, true)
+                ON CONFLICT (teacher_account_id, student_account_id)
+                    DO UPDATE SET
+                                  first_name = COALESCE(EXCLUDED.first_name, teacher_students.first_name),
+                                  last_name  = COALESCE(EXCLUDED.last_name,  teacher_students.last_name),
+                                  is_active  = true
+            `,
+            [teacherAccountId, student.id, firstName, lastName]
+        );
 
-        // 4) Find or create student
-        const student = await findOrCreateAccountByEmail(client, email);
+
 
         // 5) Insert/activate membership
         const { rows: up } = await client.query(
@@ -360,6 +514,50 @@ export async function addStudentToClassByEmail({
 
         await client.query("COMMIT");
         return { ok: true, studentAccountId: student.id, membership: up[0] };
+    } catch (e) {
+        await client.query("ROLLBACK");
+        throw e;
+    } finally {
+        client.release();
+    }
+}
+
+// Removes student from teacher across ALL teacher-owned classes + teacher_students.
+// This is the "global remove" action.
+export async function deactivateStudentFromTeacher(teacherAccountId, studentAccountId) {
+    const client = await pool.connect();
+    try {
+        await client.query("BEGIN");
+
+        // 1) Deactivate teacher-level link (if exists)
+        await client.query(
+            `
+      UPDATE teacher_students
+      SET is_active = false
+      WHERE teacher_account_id = $1
+        AND student_account_id = $2
+      `,
+            [teacherAccountId, studentAccountId]
+        );
+
+        // 2) Deactivate student in ALL classes owned by the teacher
+        await client.query(
+            `
+      UPDATE class_students cs
+      SET is_active = false
+      FROM classes c
+      WHERE c.id = cs.class_id
+        AND c.teacher_account_id = $1
+        AND cs.student_account_id = $2
+      `,
+            [teacherAccountId, studentAccountId]
+        );
+
+        // 3) Restore student account status ONLY if they have no active teacher/classes left
+        await restoreIfNoActiveClassesOrTeachers(client, studentAccountId);
+
+        await client.query("COMMIT");
+        return { ok: true };
     } catch (e) {
         await client.query("ROLLBACK");
         throw e;
@@ -404,7 +602,7 @@ export async function deactivateStudentInClass(teacherAccountId, classId, studen
         );
 
         // restore if no other active memberships
-        await restoreIfNoActiveClasses(client, studentAccountId);
+        await restoreIfNoActiveClassesOrTeachers(client, studentAccountId);
 
         await client.query("COMMIT");
         return { ok: rowCount === 1 };
@@ -539,7 +737,7 @@ export async function leaveClass(studentAccountId, classId) {
             [classId, studentAccountId]
         );
 
-        await restoreIfNoActiveClasses(client, studentAccountId);
+        await restoreIfNoActiveClassesOrTeachers(client, studentAccountId);
 
         await client.query("COMMIT");
         return { ok: rowCount === 1 };
