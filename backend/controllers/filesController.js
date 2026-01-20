@@ -35,6 +35,9 @@ export const filesController = {
                 //const pdf = await getPdf(req.query.rule,{ pdfType: pdfType, withWatermarks: withWatermarks });
 
                 await recordAction(req.user.id, ACTION_TYPES.PDF_DOWNLOAD_CALL);
+                if (pdfType === CHOOSE_VARIANT_TASK_FORM) {
+                    await recordAction(req.user.id, ACTION_TYPES.PDF_DOWNLOAD_CALL_CHOOSE);
+                }
 
                 res.setHeader("Content-Type", "application/pdf");
                 res.send(Buffer.from(pdf));

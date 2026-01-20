@@ -83,6 +83,8 @@ export async function recordTranslationUsage(accountId) {
     `;
     const date = new Date();
     await pool.query(query, [accountId, ACTION_TYPES.TRANSLATION_CALL, date]);
+
+    await recordAction(accountId, ACTION_TYPES.TRANSLATION_CALL_CHOOSE);
 }
 
 /**
