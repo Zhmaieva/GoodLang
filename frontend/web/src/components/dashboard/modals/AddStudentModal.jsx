@@ -1,3 +1,4 @@
+// AddStudentModal.jsx — FULL DROP-IN
 import React, { useEffect, useMemo, useState } from "react";
 import AwesomeModal from "../AwesomeModal.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
@@ -5,10 +6,10 @@ import AwesomeButton from "../AwesomeButton.jsx";
 export default function AddStudentModal({
                                             open,
                                             onClose,
-                                            classId,
+                                            classId, // UUID | "none"
                                             onAdd,
                                             canAddStudents,
-                                            isPro,
+                                            isTeacherPlus,
                                             quota,
                                             activeStudentsCount,
                                         }) {
@@ -18,6 +19,8 @@ export default function AddStudentModal({
     const [err, setErr] = useState("");
     const [busy, setBusy] = useState(false);
 
+    const isNoClass = String(classId || "").toLowerCase() === "none";
+
     useEffect(() => {
         if (!open) {
             setErr("");
@@ -26,17 +29,18 @@ export default function AddStudentModal({
     }, [open]);
 
     const info = useMemo(() => {
-        if (!isPro) return "Ваш план FREE — ви не можете додавати студентів.";
+        if (!isTeacherPlus) return "Ваш план: Free — ви не можете додавати студентів.";
         if (quota <= 0) return "Квота студентів = 0.";
         if (activeStudentsCount >= quota) return "Квота вичерпана — додавання студентів недоступне.";
         return `Активні студенти: ${activeStudentsCount} / ${quota}`;
-    }, [isPro, quota, activeStudentsCount]);
+    }, [isTeacherPlus, quota, activeStudentsCount]);
 
     async function submit() {
         setErr("");
 
+        // ✅ allow "none"
         if (!classId) {
-            setErr("Не вибрано клас");
+            setErr("Не вибрано клас / режим");
             return;
         }
 
@@ -75,7 +79,7 @@ export default function AddStudentModal({
         <AwesomeModal
             open={open}
             onClose={onClose}
-            title="Додати студента"
+            title={isNoClass ? "Додати студента (без класу)" : "Додати студента в клас"}
             footer={
                 <>
                     <AwesomeButton variant="ghost" onClick={onClose} disabled={busy}>
@@ -88,6 +92,12 @@ export default function AddStudentModal({
             }
         >
             <div style={styles.info}>{info}</div>
+
+            {isNoClass ? (
+                <div style={styles.hint}>
+                    Студент буде доданий до вас як до викладача. Ви зможете пізніше додати його в будь-який клас.
+                </div>
+            ) : null}
 
             <div style={styles.grid}>
                 <div style={styles.field}>
@@ -123,7 +133,7 @@ export default function AddStudentModal({
 
             {!canAddStudents ? (
                 <div style={styles.blocked}>
-                    Додавання заблоковано. Перевірте план (FREE/PRO) або квоту.
+                    Додавання заблоковано. Перевірте план (Free/Teacher+) або квоту.
                 </div>
             ) : null}
 
@@ -139,6 +149,15 @@ const styles = {
         background: "rgba(0,0,0,0.03)",
         fontWeight: 900,
         marginBottom: 10,
+    },
+    hint: {
+        marginTop: -2,
+        marginBottom: 10,
+        padding: 10,
+        border: "2px solid rgba(0,0,0,0.10)",
+        background: "rgba(255,255,255,0.6)",
+        fontWeight: 800,
+        lineHeight: 1.35,
     },
     grid: { display: "grid", gridTemplateColumns: "1fr", gap: 10 },
     field: { display: "flex", flexDirection: "column", gap: 6 },
@@ -162,6 +181,6 @@ const styles = {
         padding: 10,
         border: "2px solid rgba(255,0,0,0.25)",
         background: "rgba(255,0,0,0.06)",
-        fontWeight: 900,
+        fontWeight: 800,
     },
 };

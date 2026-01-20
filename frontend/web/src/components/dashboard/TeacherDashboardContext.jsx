@@ -29,6 +29,7 @@ export function TeacherDashboardProvider({ children }) {
     const quota = Number(teacher?.students_quota ?? 0);
     const isPro = teacher?.status === "Teacher+";
     const canAddStudents = isPro && quota > 0 && activeStudentsCount < quota;
+    const isTeacherPlus = isPro;
 
     const quotaText = useMemo(() => {
         if (!teacher) return "";
@@ -60,17 +61,17 @@ export function TeacherDashboardProvider({ children }) {
         reloadAll();
     }, []);
 
+    // inside TeacherDashboardContext
     async function loadClassStudents(classId) {
         setClassStudentsLoading((m) => ({ ...m, [classId]: true }));
         try {
             const data = await apiClassStudents(classId, "all");
             setClassStudentsMap((m) => ({ ...m, [classId]: data?.students || [] }));
-        } catch (e) {
-            setErr(e?.message || "Не вдалося завантажити студентів класу");
         } finally {
             setClassStudentsLoading((m) => ({ ...m, [classId]: false }));
         }
     }
+
 
     async function onToggleExpandClass(classId) {
         setExpandedClassId((prev) => (prev === classId ? null : classId));
@@ -126,6 +127,7 @@ export function TeacherDashboardProvider({ children }) {
         isPro,
         canAddStudents,
         quotaText,
+        isTeacherPlus,
 
         // actions
         setErr,

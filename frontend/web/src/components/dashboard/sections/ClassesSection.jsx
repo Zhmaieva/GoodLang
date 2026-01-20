@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import AwesomeCard from "../AwesomeCard.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 
@@ -6,6 +6,7 @@ export default function ClassesSection({
                                            classes,
                                            expandedClassId,
                                            onToggleExpand,
+                                           loadClassStudents, // ✅ IMPORTANT: must NOT toggle, only fetch
                                            classStudentsMap,
                                            classStudentsLoading,
                                            onAddClass,
@@ -13,17 +14,54 @@ export default function ClassesSection({
                                            onRegenerateInviteCode,
                                            onDeactivate,
                                            canAddStudents,
+                                           // support both to avoid breaking old/new props
                                            isPro,
+                                           isTeacherPlus,
                                            quota,
                                            activeStudentsCount,
                                        }) {
-    const hint = !isPro
+    const isPaid = typeof isTeacherPlus === "boolean" ? isTeacherPlus : !!isPro;
+
+    const hint = !isPaid
         ? "Ваш план FREE — додавання студентів вимкнено."
         : quota <= 0
             ? "Квота студентів = 0. Змініть план або квоту."
             : activeStudentsCount >= quota
                 ? "Квота вичерпана — додавання студентів вимкнено."
                 : "";
+
+    // ✅ Expand all by default (when expandedClassId is null)
+    const isExpanded = (classId) => expandedClassId === null || expandedClassId === classId;
+
+    // ✅ Auto-load students for any expanded classes that don't have data yet
+    useEffect(() => {
+        if (!loadClassStudents) return;
+        if (!Array.isArray(classes) || classes.length === 0) return;
+
+        // If expandedClassId is a UUID -> only that class should be loaded
+        // If expandedClassId is null -> load all (expanded by default)
+        const targetIds =
+            expandedClassId === null
+                ? classes.map((c) => c.id)
+                : [expandedClassId];
+
+        targetIds.forEach((classId) => {
+            if (!classId) return;
+
+            const expanded = expandedClassId === null || expandedClassId === classId;
+            if (!expanded) return;
+
+            const hasData = Array.isArray(classStudentsMap?.[classId]);
+            const loading = !!classStudentsLoading?.[classId];
+
+            // Important: only fetch if not already fetched and not already loading
+            if (!hasData && !loading) {
+                loadClassStudents(classId);
+            }
+        });
+    }, [classes, expandedClassId, classStudentsMap, classStudentsLoading, loadClassStudents]);
+
+    const safeClasses = useMemo(() => (Array.isArray(classes) ? classes : []), [classes]);
 
     return (
         <AwesomeCard
@@ -37,13 +75,13 @@ export default function ClassesSection({
             {hint ? <div style={styles.hint}>{hint}</div> : null}
 
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {classes.length === 0 ? (
+                {safeClasses.length === 0 ? (
                     <div style={styles.empty}>Ще немає класів. Створіть перший.</div>
                 ) : (
-                    classes.map((c) => {
-                        const expanded = expandedClassId === c.id;
-                        const students = classStudentsMap[c.id] || [];
-                        const loading = !!classStudentsLoading[c.id];
+                    safeClasses.map((c) => {
+                        const expanded = isExpanded(c.id);
+                        const students = Array.isArray(classStudentsMap?.[c.id]) ? classStudentsMap[c.id] : [];
+                        const loading = !!classStudentsLoading?.[c.id];
 
                         return (
                             <div key={c.id} style={styles.classBox}>
@@ -52,7 +90,11 @@ export default function ClassesSection({
                                         {expanded ? "▾" : "▸"}
                                     </button>
 
-                                    <div style={styles.classMain} onClick={() => onToggleExpand(c.id)} title="Розгорнути">
+                                    <div
+                                        style={styles.classMain}
+                                        onClick={() => onToggleExpand(c.id)}
+                                        title="Розгорнути"
+                                    >
                                         <div style={styles.className}>{c.name}</div>
                                         <div style={styles.classCode}>
                                             Код: <b>{c.invite_code}</b>
@@ -93,7 +135,9 @@ export default function ClassesSection({
                                                                 {(s.first_name || s.last_name)
                                                                     ? `${s.first_name || ""} ${s.last_name || ""}`.trim()
                                                                     : "Без імені"}
-                                                                {!s.is_active ? <span style={styles.badgeInactive}>неактивний</span> : null}
+                                                                {!s.is_active ? (
+                                                                    <span style={styles.badgeInactive}>неактивний</span>
+                                                                ) : null}
                                                             </div>
                                                             <div style={styles.studentEmail}>{s.email}</div>
                                                         </div>

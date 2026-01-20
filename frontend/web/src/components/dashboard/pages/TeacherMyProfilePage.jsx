@@ -1,11 +1,22 @@
-// TeacherMyProfilePage.jsx
-import React from "react";
+// TeacherMyProfilePage.jsx — FULL DROP-IN
+import React, { useMemo } from "react";
 import AwesomeCard from "../AwesomeCard.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 
 export default function TeacherMyProfilePage() {
-    const { loading, err, teacher, quotaText, reloadAll } = useTeacherDashboard();
+    const { loading, err, teacher, reloadAll } = useTeacherDashboard();
+
+    const quotaText = useMemo(() => {
+        if (!teacher) return "—";
+        const active = Number(teacher?.active_students ?? 0);
+        const quota = Number(teacher?.students_quota ?? 0);
+        const isPlus = teacher?.status === "Teacher+";
+
+        if (!isPlus) return "План: Free (додавання студентів недоступне)";
+        if (quota <= 0) return "План: Teacher+ (квота студентів: 0 — зверніться в підтримку)";
+        return `План: Teacher+ • Активні студенти: ${active} / ${quota}`;
+    }, [teacher]);
 
     return (
         <div>
@@ -23,7 +34,7 @@ export default function TeacherMyProfilePage() {
 
                 <div style={styles.box}>
                     <div style={styles.label}>Статус</div>
-                    <div style={styles.value}>{quotaText || "—"}</div>
+                    <div style={styles.value}>{quotaText}</div>
                 </div>
 
                 <div style={styles.box}>

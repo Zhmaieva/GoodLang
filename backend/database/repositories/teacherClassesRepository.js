@@ -34,48 +34,65 @@ export async function listTeachersClasses(teacherAccountId) {
  * List teacher's students (across all classes) — returns both active and inactive rows.
  * If you want ONLY active students, add WHERE cs.is_active = true.
  */
+/**
+ * List teacher's students (one row per student)
+ * - Does NOT duplicate teacher-only students when they are also in classes
+ * - If student is in multiple classes, returns the FIRST class (by newest membership)
+ * - Returns both active and inactive teacher_students rows (same as before)
+ */
 export async function listTeachersStudents(teacherAccountId) {
     const { rows } = await pool.query(
         `
-    -- 1) Students attached to teacher but not necessarily in any class
-    SELECT
-      ts.student_account_id,
-      a.email,
-      a.status AS account_status,
-      ts.first_name,
-      ts.last_name,
-      ts.is_active,
-      ts.created_at AS added_at,
-      NULL::uuid AS class_id,
-      NULL::varchar AS class_name
-    FROM teacher_students ts
-    JOIN accounts a ON a.id = ts.student_account_id
-    WHERE ts.teacher_account_id = $1
-
-    UNION ALL
-
-    -- 2) Class memberships (one row per class)
-    SELECT
-      cs.student_account_id,
-      a.email,
-      a.status AS account_status,
-      cs.first_name,
-      cs.last_name,
-      cs.is_active,
-      cs.created_at AS added_at,
-      c.id AS class_id,
-      c.name AS class_name
-    FROM classes c
-    JOIN class_students cs ON cs.class_id = c.id
-    JOIN accounts a ON a.id = cs.student_account_id
-    WHERE c.teacher_account_id = $1
-
-    ORDER BY added_at DESC
-    `,
+        WITH teacher_base AS (
+            SELECT
+                ts.teacher_account_id,
+                ts.student_account_id,
+                a.email,
+                a.status AS account_status,
+                ts.first_name,
+                ts.last_name,
+                ts.is_active,
+                ts.created_at AS added_at
+            FROM teacher_students ts
+            JOIN accounts a ON a.id = ts.student_account_id
+            WHERE ts.teacher_account_id = $1
+        ),
+        ranked_classes AS (
+            SELECT
+                cs.student_account_id,
+                c.id AS class_id,
+                c.name AS class_name,
+                cs.created_at AS joined_at,
+                ROW_NUMBER() OVER (
+                    PARTITION BY cs.student_account_id
+                    ORDER BY cs.created_at DESC, c.created_at DESC
+                ) AS rn
+            FROM classes c
+            JOIN class_students cs ON cs.class_id = c.id
+            WHERE c.teacher_account_id = $1
+        )
+        SELECT
+            tb.student_account_id,
+            tb.email,
+            tb.account_status,
+            tb.first_name,
+            tb.last_name,
+            tb.is_active,
+            tb.added_at,
+            rc.class_id,
+            rc.class_name
+        FROM teacher_base tb
+        LEFT JOIN ranked_classes rc
+            ON rc.student_account_id = tb.student_account_id
+           AND rc.rn = 1
+        ORDER BY tb.added_at DESC
+        `,
         [teacherAccountId]
     );
+
     return rows;
 }
+
 
 /**
  * Add a student directly under a teacher (no class).
@@ -201,21 +218,22 @@ export async function listClassStudents(teacherAccountId, classId) {
 export async function getTeacherMetadata(teacherAccountId) {
     const { rows } = await pool.query(
         `
-    SELECT
-      t.account_id,
-      t.first_name,
-      t.last_name,
-      t.status,
-      t.students_quota,
-      t.created_at
-    FROM teachers t
-    WHERE t.account_id = $1
-    LIMIT 1
-    `,
+            SELECT
+                t.account_id,
+                a.email AS email,           -- ✅ teacher email
+                t.first_name,
+                t.last_name,
+                t.status,
+                t.students_quota,
+                t.created_at
+            FROM teachers t
+                     JOIN accounts a ON a.id = t.account_id
+            WHERE t.account_id = $1
+            LIMIT 1
+        `,
         [teacherAccountId]
     );
 
-    // Optional: include active students count
     const { rows: cnt } = await pool.query(
         `
             SELECT COUNT(*)::int AS active_students
@@ -231,6 +249,7 @@ export async function getTeacherMetadata(teacherAccountId) {
         active_students: cnt[0]?.active_students ?? 0,
     };
 }
+
 
 /**
  * Create a class (invite code generated)

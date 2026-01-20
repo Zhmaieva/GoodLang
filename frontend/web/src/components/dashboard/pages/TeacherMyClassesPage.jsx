@@ -1,4 +1,4 @@
-// TeacherMyClassesPage.jsx
+// TeacherMyClassesPage.jsx — FULL DROP-IN
 import React, { useState } from "react";
 import ClassesSection from "../sections/ClassesSection.jsx";
 import AddClassModal from "../modals/AddClassModal.jsx";
@@ -11,6 +11,7 @@ export default function TeacherMyClassesPage() {
         classes,
         expandedClassId,
         onToggleExpandClass,
+        loadClassStudents, // ✅ MUST exist in context now
         classStudentsMap,
         classStudentsLoading,
         onCreateClass,
@@ -18,7 +19,9 @@ export default function TeacherMyClassesPage() {
         onRegenerateInviteCode,
         onDeactivateStudent,
         canAddStudents,
+        // support both versions to avoid breaking
         isPro,
+        isTeacherPlus,
         quota,
         activeStudentsCount,
     } = useTeacherDashboard();
@@ -34,10 +37,12 @@ export default function TeacherMyClassesPage() {
                 classes={classes}
                 expandedClassId={expandedClassId}
                 onToggleExpand={onToggleExpandClass}
+                loadClassStudents={loadClassStudents}
                 classStudentsMap={classStudentsMap}
                 classStudentsLoading={classStudentsLoading}
                 canAddStudents={canAddStudents}
                 isPro={isPro}
+                isTeacherPlus={isTeacherPlus}
                 quota={quota}
                 activeStudentsCount={activeStudentsCount}
                 onAddClass={() => setAddClassOpen(true)}
@@ -72,6 +77,7 @@ export default function TeacherMyClassesPage() {
                 classId={addStudentClassId}
                 canAddStudents={canAddStudents}
                 isPro={isPro}
+                isTeacherPlus={isTeacherPlus}
                 quota={quota}
                 activeStudentsCount={activeStudentsCount}
                 onAdd={onAddStudent}

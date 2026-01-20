@@ -408,7 +408,6 @@ export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
         return { isSuccess: false, errorCode: "network_error" };
     }
 }
-
 async function jsonFetch(url, opts = {}) {
     const res = await fetch(url, {
         ...opts,
@@ -469,6 +468,11 @@ export function apiRegenerateInviteCode(classId) {
     });
 }
 
+/**
+ * Add student:
+ * - classId = real UUID => adds to class
+ * - classId = "none"    => adds to teacher without class
+ */
 export function apiAddStudentToClass(classId, { email, firstName, lastName }) {
     return jsonFetch(`${API_BASE}/schools/teachers/me/classes/${classId}/students`, {
         method: "POST",
@@ -476,8 +480,22 @@ export function apiAddStudentToClass(classId, { email, firstName, lastName }) {
     });
 }
 
+/**
+ * Remove student:
+ * - classId = real UUID => removes from that class
+ * - classId = "teacher" => removes from teacher across all classes
+ */
 export function apiDeactivateStudentInClass(classId, studentAccountId) {
     return jsonFetch(`${API_BASE}/schools/teachers/me/classes/${classId}/students/${studentAccountId}`, {
         method: "DELETE",
     });
+}
+
+// ✅ Convenience wrappers for FE readability
+export function apiAddStudentToTeacher({ email, firstName, lastName }) {
+    return apiAddStudentToClass("none", { email, firstName, lastName });
+}
+
+export function apiRemoveStudentFromTeacher(studentAccountId) {
+    return apiDeactivateStudentInClass("teacher", studentAccountId);
 }
