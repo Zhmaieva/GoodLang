@@ -1,10 +1,13 @@
 // TeacherDashboardLayout.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { useTeacherDashboard } from "./TeacherDashboardContext.jsx";
+import AwesomeButton from "./AwesomeButton.jsx"; // ✅ adjust path if needed
 
 const LS_KEY = "teacher_nav_collapsed";
 
 export default function TeacherDashboardLayout() {
+    const { teacher } = useTeacherDashboard();
     const [collapsed, setCollapsed] = useState(false);
 
     useEffect(() => {
@@ -22,47 +25,66 @@ export default function TeacherDashboardLayout() {
 
     const sideW = collapsed ? 72 : 260;
 
+    const teacherName =
+        teacher?.displayName ||
+        [teacher?.first_name, teacher?.last_name].filter(Boolean).join(" ").trim() ||
+        "Teacher";
+
+    const teacherEmail = teacher?.email || "";
+
+    const initials = useMemo(() => {
+        const parts = teacherName.split(" ").filter(Boolean);
+        const a = parts[0]?.[0] || "T";
+        const b = parts[1]?.[0] || "";
+        return (a + b).toUpperCase();
+    }, [teacherName]);
+
     return (
         <div style={styles.page}>
             {/* Fixed left drawer */}
             <aside style={{ ...styles.sidebar, width: sideW }}>
                 <div style={styles.sideTop}>
-                    <div style={styles.brandRow}>
-                        <div style={styles.brandText}>
-                            {collapsed ? "GL" : "GoodLang • Teacher"}
-                        </div>
+                    <div style={{...styles.brandRow, justifyContent: collapsed ? "center" : "space-around"}}>
+                        {
+                            !collapsed && <div style={styles.brandText}>
+                                {collapsed ? "" : "GoodLang • Teacher"}
+                            </div>
+                        }
 
-                        <button
-                            type="button"
+                        {/* ✅ AwesomeButton instead of <button> */}
+                        <AwesomeButton
+                            variant="ghost"
                             onClick={() => setCollapsed((v) => !v)}
-                            aria-label={collapsed ? "Expand navigation" : "Collapse navigation"}
                             title={collapsed ? "Expand" : "Collapse"}
                             style={styles.collapseBtn}
                         >
                             {collapsed ? "»" : "«"}
-                        </button>
+                        </AwesomeButton>
                     </div>
+
+                    {!collapsed ? (
+                        <div style={styles.teacherBlock}>
+                            <div style={styles.teacherName} title={teacherName}>
+                                {teacherName}
+                            </div>
+                            <div style={styles.teacherEmail} title={teacherEmail}>
+                                {teacherEmail}
+                            </div>
+                        </div>
+                    ) : (
+                        <div
+                            style={styles.teacherMini}
+                            title={`${teacherName}${teacherEmail ? ` • ${teacherEmail}` : ""}`}
+                        >
+                            {initials}
+                        </div>
+                    )}
                 </div>
 
                 <nav style={styles.nav}>
-                    <NavItem
-                        to="/teacher/profile"
-                        label="Мій профіль"
-                        icon="👤"
-                        collapsed={collapsed}
-                    />
-                    <NavItem
-                        to="/teacher/students"
-                        label="Мої учні"
-                        icon="🧑‍🎓"
-                        collapsed={collapsed}
-                    />
-                    <NavItem
-                        to="/teacher/classes"
-                        label="Мої класи"
-                        icon="🏫"
-                        collapsed={collapsed}
-                    />
+                    <NavItem to="/teacher/profile" label="Мій профіль" icon="👤" collapsed={collapsed} />
+                    <NavItem to="/teacher/students" label="Мої учні" icon="🧑‍🎓" collapsed={collapsed} />
+                    <NavItem to="/teacher/classes" label="Мої класи" icon="🏫" collapsed={collapsed} />
                 </nav>
 
                 {!collapsed ? (
@@ -80,21 +102,65 @@ export default function TeacherDashboardLayout() {
     );
 }
 
+/**
+ * IMPORTANT:
+ * - We must NOT render <button> inside <NavLink> (invalid HTML).
+ * - So we style a div to look like AwesomeButton "ghost".
+ */
 function NavItem({ to, label, icon, collapsed }) {
     return (
         <NavLink
             to={to}
-            style={({ isActive }) => ({
-                ...styles.navItem,
-                ...(isActive ? styles.navItemActive : null),
-                ...(collapsed ? styles.navItemCollapsed : null),
-            })}
             title={collapsed ? label : undefined}
+            style={({ isActive }) => ({
+                textDecoration: "none",
+                display: "block",
+            })}
         >
-            <span style={styles.icon}>{icon}</span>
-            {!collapsed ? <span style={styles.label}>{label}</span> : null}
+            {({ isActive }) => (
+                <AwesomeButton
+                    title={collapsed ? "Expand" : "Collapse"}
+                    variant={isActive ? "accent" : "ghost"}
+                    style={{width: collapsed ? 'auto' : '100%', textAlign: 'left'}}
+                >
+                    {collapsed && <span style={styles.icon}>{icon}</span>}
+                         {!collapsed ? <span style={styles.label}>{label}</span> : null}
+                </AwesomeButton>
+
+                // <div
+                //     style={{
+                //         ...ghostButtonLikeStyle(),
+                //         ...(isActive ? styles.navItemActive : null),
+                //         ...(collapsed ? styles.navItemCollapsed : null),
+                //     }}
+                // >
+                //     <span style={styles.icon}>{icon}</span>
+                //     {!collapsed ? <span style={styles.label}>{label}</span> : null}
+                // </div>
+            )}
         </NavLink>
     );
+}
+
+/**
+ * Match AwesomeButton variant="ghost" visuals without using <button>.
+ */
+function ghostButtonLikeStyle() {
+    return {
+        padding: "10px 12px",
+        fontWeight: 800,
+        cursor: "pointer",
+        opacity: 1,
+        background: "transparent",
+        color: "var(--text, #3a2a1d)",
+        userSelect: "none",
+        whiteSpace: "nowrap",
+        border: "2px solid rgba(0,0,0,0.2)",
+        boxShadow: "none",
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+    };
 }
 
 const styles = {
@@ -143,32 +209,52 @@ const styles = {
         textOverflow: "ellipsis",
     },
 
+    // ✅ use with AwesomeButton
     collapseBtn: {
-        border: "2px solid rgba(0,0,0,0.2)",
-        background: "rgba(255,255,255,0.7)",
-        fontWeight: 900,
-        cursor: "pointer",
         padding: "6px 10px",
         lineHeight: 1,
+    },
+
+    teacherBlock: {
+        marginTop: 10,
+        padding: "8px 8px",
+        border: "2px solid rgba(0,0,0,0.10)",
+        background: "rgba(255,255,255,0.55)",
+    },
+    teacherName: {
+        fontWeight: 900,
+        fontSize: 13,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+    teacherEmail: {
+        marginTop: 2,
+        fontWeight: 800,
+        fontSize: 12,
+        color: "var(--muted, #a47856)",
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+    teacherMini: {
+        marginTop: 10,
+        width: 42,
+        height: 42,
+        borderRadius: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontWeight: 900,
+        border: "2px solid rgba(0,0,0,0.15)",
+        background: "rgba(255,255,255,0.7)",
+        userSelect: "none",
     },
 
     nav: {
         display: "flex",
         flexDirection: "column",
         gap: 8,
-    },
-
-    navItem: {
-        display: "flex",
-        alignItems: "center",
-        gap: 10,
-        padding: "10px 10px",
-        border: "2px solid rgba(0,0,0,0.12)",
-        textDecoration: "none",
-        color: "var(--text, #3a2a1d)",
-        fontWeight: 900,
-        background: "rgba(255,255,255,0.65)",
-        userSelect: "none",
     },
 
     navItemActive: {

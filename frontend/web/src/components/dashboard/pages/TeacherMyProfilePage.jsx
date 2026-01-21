@@ -1,68 +1,68 @@
-// TeacherMyProfilePage.jsx — FULL DROP-IN
-import React, { useMemo } from "react";
+import React from "react";
 import AwesomeCard from "../AwesomeCard.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 
 export default function TeacherMyProfilePage() {
-    const { loading, err, teacher, reloadAll } = useTeacherDashboard();
+    const { teacher, loading, err, reloadAll } = useTeacherDashboard();
 
-    const quotaText = useMemo(() => {
-        if (!teacher) return "—";
-        const active = Number(teacher?.active_students ?? 0);
-        const quota = Number(teacher?.students_quota ?? 0);
-        const isPlus = teacher?.status === "Teacher+";
+    if (loading) {
+        return <div style={styles.muted}>Завантаження…</div>;
+    }
 
-        if (!isPlus) return "План: Free (додавання студентів недоступне)";
-        if (quota <= 0) return "План: Teacher+ (квота студентів: 0 — зверніться в підтримку)";
-        return `План: Teacher+ • Активні студенти: ${active} / ${quota}`;
-    }, [teacher]);
+    if (err) {
+        return <div style={styles.error}>{err}</div>;
+    }
+
+    if (!teacher) return null;
+
+    const quotaText = !teacher.isTeacherPlus
+        ? "План: Free"
+        : teacher.quota <= 0
+            ? "План: Teacher+ (квота = 0)"
+            : `План: Teacher+ • Студенти: ${teacher.activeStudentsCount} / ${teacher.quota}`;
 
     return (
-        <div>
-            <AwesomeCard
-                title="Мій профіль"
-                right={
-                    <AwesomeButton variant="ghost" onClick={reloadAll} disabled={loading}>
-                        Оновити
-                    </AwesomeButton>
-                }
-                style={{ marginBottom: 14 }}
-            >
-                {err ? <div style={styles.error}>{err}</div> : null}
-                {loading ? <div style={styles.muted}>Завантаження…</div> : null}
+        <AwesomeCard
+            title="Мій профіль"
+            right={
+                <AwesomeButton variant="ghost" onClick={reloadAll}>
+                    Оновити
+                </AwesomeButton>
+            }
+        >
+            <div style={styles.block}>
+                <div style={styles.label}>Імʼя</div>
+                <div style={styles.value}>{teacher.last_name} {teacher.first_name}</div>
+            </div>
 
-                <div style={styles.box}>
-                    <div style={styles.label}>Статус</div>
-                    <div style={styles.value}>{quotaText}</div>
-                </div>
+            <div style={styles.block}>
+                <div style={styles.label}>Email</div>
+                <div style={styles.value}>{teacher.email}</div>
+            </div>
 
-                <div style={styles.box}>
-                    <div style={styles.label}>Викладач</div>
-                    <div style={styles.value}>
-                        ID: {teacher?.account_id ? String(teacher.account_id).slice(0, 8) + "…" : "—"}
-                    </div>
-                </div>
-            </AwesomeCard>
-        </div>
+            <div style={styles.block}>
+                <div style={styles.label}>Статус</div>
+                <div style={styles.value}>{quotaText}</div>
+            </div>
+        </AwesomeCard>
     );
 }
 
 const styles = {
-    box: {
+    block: {
+        marginBottom: 12,
+        padding: 10,
         border: "2px solid rgba(0,0,0,0.12)",
-        padding: 12,
         background: "rgba(255,255,255,0.6)",
-        marginTop: 10,
     },
     label: { fontWeight: 900, marginBottom: 4 },
-    value: { lineHeight: 1.35 },
+    value: { fontWeight: 800 },
+    muted: { color: "var(--muted, #a47856)", fontWeight: 800 },
     error: {
-        marginTop: 10,
         padding: 10,
         border: "2px solid rgba(255,0,0,0.25)",
         background: "rgba(255,0,0,0.06)",
         fontWeight: 800,
     },
-    muted: { marginTop: 10, color: "var(--muted, #a47856)", fontWeight: 800 },
 };

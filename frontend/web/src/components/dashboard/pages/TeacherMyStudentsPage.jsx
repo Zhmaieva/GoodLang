@@ -36,7 +36,7 @@ export default function TeacherMyStudentsPage() {
                 style={{ marginBottom: 14 }}
             >
                 <div style={styles.hint}>
-                    Тут можна додати студента під себе (без класу), а потім додавати в будь-які ваші класи.
+                    Тут можна додати учня під себе (без класу), а потім додавати в будь-які ваші класи.
                 </div>
             </AwesomeCard>
 
@@ -45,8 +45,8 @@ export default function TeacherMyStudentsPage() {
                 onDeactivate={(classId, studentId) => {
                     setConfirm({
                         open: true,
-                        title: "Видалити студента з класу?",
-                        text: "Це деактивує студента тільки в конкретному класі (див. назву класу у рядку).",
+                        title: "Видалити учня з класу?",
+                        text: "Це деактивує учня тільки в конкретному класі (див. назву класу у рядку).",
                         confirmText: "Видалити",
                         onConfirm: async () => {
                             setConfirm({ open: false });
@@ -57,8 +57,8 @@ export default function TeacherMyStudentsPage() {
                 onRemoveFromTeacher={(studentId) => {
                     setConfirm({
                         open: true,
-                        title: "Видалити студента від викладача?",
-                        text: "Студент буде видалений від вас повністю: з усіх ваших класів і з вашого списку учнів.",
+                        title: "Видалити учня від викладача?",
+                        text: "Учень буде видалений від вас повністю: з усіх ваших класів і з вашого списку учнів.",
                         confirmText: "Видалити повністю",
                         onConfirm: async () => {
                             setConfirm({ open: false });

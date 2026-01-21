@@ -1,6 +1,28 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import AwesomeCard from "../AwesomeCard.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
+
+/** helpers */
+function norm(v) {
+    return String(v || "").trim().toLowerCase();
+}
+
+function filterStudents(list, query) {
+    const students = Array.isArray(list) ? list : [];
+    const q = norm(query);
+    if (!q) return students;
+
+    const tokens = q.split(/\s+/).filter(Boolean);
+
+    return students.filter((s) => {
+        const email = norm(s.email);
+        const first = norm(s.first_name);
+        const last = norm(s.last_name);
+
+        const hay = `${email} ${first} ${last}`.trim();
+        return tokens.every((t) => hay.includes(t));
+    });
+}
 
 export default function ClassesSection({
                                            classes,
@@ -31,15 +53,31 @@ export default function ClassesSection({
                 : "";
 
     // ✅ Expand all by default (when expandedClassId is null)
-    const isExpanded = (classId) => expandedClassId === null || expandedClassId === classId;
+    const isExpanded = (classId) => expandedClassId === classId;
+
+    // ✅ per-class search queries stored in ONE state (hook-safe)
+    const [searchByClassId, setSearchByClassId] = useState({});
+
+    const setSearch = (classId, value) => {
+        setSearchByClassId((prev) => ({
+            ...(prev || {}),
+            [classId]: value,
+        }));
+    };
+
+    const clearSearch = (classId) => {
+        setSearchByClassId((prev) => {
+            const next = { ...(prev || {}) };
+            delete next[classId];
+            return next;
+        });
+    };
 
     // ✅ Auto-load students for any expanded classes that don't have data yet
     useEffect(() => {
         if (!loadClassStudents) return;
         if (!Array.isArray(classes) || classes.length === 0) return;
 
-        // If expandedClassId is a UUID -> only that class should be loaded
-        // If expandedClassId is null -> load all (expanded by default)
         const targetIds =
             expandedClassId === null
                 ? classes.map((c) => c.id)
@@ -54,7 +92,6 @@ export default function ClassesSection({
             const hasData = Array.isArray(classStudentsMap?.[classId]);
             const loading = !!classStudentsLoading?.[classId];
 
-            // Important: only fetch if not already fetched and not already loading
             if (!hasData && !loading) {
                 loadClassStudents(classId);
             }
@@ -80,8 +117,11 @@ export default function ClassesSection({
                 ) : (
                     safeClasses.map((c) => {
                         const expanded = isExpanded(c.id);
-                        const students = Array.isArray(classStudentsMap?.[c.id]) ? classStudentsMap[c.id] : [];
+                        const studentsRaw = Array.isArray(classStudentsMap?.[c.id]) ? classStudentsMap[c.id] : [];
                         const loading = !!classStudentsLoading?.[c.id];
+
+                        const q = searchByClassId?.[c.id] || "";
+                        const students = filterStudents(studentsRaw, q);
 
                         return (
                             <div key={c.id} style={styles.classBox}>
@@ -124,35 +164,83 @@ export default function ClassesSection({
                                     <div style={styles.expandArea}>
                                         {loading ? (
                                             <div style={styles.loading}>Завантаження студентів…</div>
-                                        ) : students.length === 0 ? (
-                                            <div style={styles.empty}>У цьому класі ще немає студентів.</div>
                                         ) : (
-                                            <div style={styles.studentList}>
-                                                {students.map((s) => (
-                                                    <div key={`${c.id}-${s.student_account_id}`} style={styles.studentRow}>
-                                                        <div style={styles.studentLeft}>
-                                                            <div style={styles.studentName}>
-                                                                {(s.first_name || s.last_name)
-                                                                    ? `${s.first_name || ""} ${s.last_name || ""}`.trim()
-                                                                    : "Без імені"}
-                                                                {!s.is_active ? (
-                                                                    <span style={styles.badgeInactive}>неактивний</span>
-                                                                ) : null}
-                                                            </div>
-                                                            <div style={styles.studentEmail}>{s.email}</div>
+                                            <>
+                                                {/* ✅ Search row for this class */}
+                                                <div style={styles.searchRow}>
+                                                    <input
+                                                        value={q}
+                                                        onChange={(e) => setSearch(c.id, e.target.value)}
+                                                        placeholder="Пошук студента: email / ім’я / прізвище"
+                                                        style={styles.searchInput}
+                                                    />
+                                                    {q ? (
+                                                        <AwesomeButton
+                                                            variant="ghost"
+                                                            onClick={() => clearSearch(c.id)}
+                                                            title="Очистити"
+                                                        >
+                                                            Очистити
+                                                        </AwesomeButton>
+                                                    ) : null}
+
+                                                    <div style={styles.count}>
+                                                        {students.length}/{studentsRaw.length}
+                                                    </div>
+                                                </div>
+
+                                                {studentsRaw.length === 0 ? (
+                                                    <div style={styles.empty}>У цьому класі ще немає студентів.</div>
+                                                ) : students.length === 0 ? (
+                                                    <div style={styles.empty}>Нічого не знайдено за запитом.</div>
+                                                ) : (
+                                                    <div style={styles.tableWrap}>
+                                                        {/* header */}
+                                                        <div style={styles.thead}>
+                                                            <div style={styles.th}>Студент</div>
+                                                            <div style={styles.th}>Email</div>
+                                                            <div style={styles.thActions}>Дії</div>
                                                         </div>
 
-                                                        <div style={styles.studentRight}>
-                                                            <AwesomeButton
-                                                                variant="danger"
-                                                                onClick={() => onDeactivate?.(c.id, s.student_account_id)}
-                                                            >
-                                                                Видалити
-                                                            </AwesomeButton>
-                                                        </div>
+                                                        {/* rows */}
+                                                        {students.map((s) => {
+                                                            const fullName =
+                                                                (s.first_name || s.last_name)
+                                                                    ? `${s.last_name || ""} ${s.first_name || ""}`.trim()
+                                                                    : "Без імені";
+
+                                                            return (
+                                                                <div
+                                                                    key={`${c.id}-${s.student_account_id}`}
+                                                                    style={styles.trow}
+                                                                >
+                                                                    <div style={styles.tdName}>
+                                                                        <div style={styles.studentName}>
+                                                                            {fullName}
+                                                                            {!s.is_active ? (
+                                                                                <span style={styles.badgeInactive}>неактивний</span>
+                                                                            ) : null}
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div style={styles.tdEmail} title={s.email}>
+                                                                        {s.email}
+                                                                    </div>
+
+                                                                    <div style={styles.tdActions}>
+                                                                        <AwesomeButton
+                                                                            variant="danger"
+                                                                            onClick={() => onDeactivate?.(c.id, s.student_account_id)}
+                                                                        >
+                                                                            Видалити
+                                                                        </AwesomeButton>
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        })}
                                                     </div>
-                                                ))}
-                                            </div>
+                                                )}
+                                            </>
                                         )}
                                     </div>
                                 ) : null}
@@ -227,36 +315,82 @@ const styles = {
         color: "var(--muted, #a47856)",
         fontWeight: 800,
     },
-    studentList: {
+
+    // ✅ per-class search UI
+    searchRow: {
         display: "flex",
-        flexDirection: "column",
-        gap: 8,
-    },
-    studentRow: {
-        display: "flex",
-        justifyContent: "space-between",
+        alignItems: "center",
         gap: 10,
-        padding: 10,
-        border: "1px solid rgba(0,0,0,0.1)",
-        background: "rgba(255,255,255,0.55)",
+        flexWrap: "wrap",
+        marginBottom: 10,
+    },
+    searchInput: {
+        flex: "1 1 320px",
+        minWidth: 220,
+        padding: "10px 12px",
+        fontWeight: 800,
+        border: "2px solid rgba(0,0,0,0.18)",
+        outline: "none",
+        background: "rgba(255,255,255,0.9)",
+        color: "var(--text, #3a2a1d)",
+    },
+    count: {
+        marginLeft: "auto",
+        color: "var(--muted, #a47856)",
+        fontWeight: 900,
+    },
+
+    // ✅ embedded table
+    tableWrap: {
+        border: "2px solid rgba(0,0,0,0.12)",
+        background: "rgba(255,255,255,0.6)",
+    },
+    thead: {
+        display: "grid",
+        gridTemplateColumns: "2fr 2fr 1fr",
+        gap: 10,
+        padding: "10px 10px",
+        borderBottom: "1px solid rgba(0,0,0,0.1)",
+        background: "rgba(0,0,0,0.03)",
+        fontWeight: 900,
         alignItems: "center",
     },
-    studentLeft: { minWidth: 0 },
-    studentName: { fontWeight: 900, display: "flex", alignItems: "center", gap: 8 },
+    th: {
+        minWidth: 0,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
+    },
+    thActions: {
+        textAlign: "left",
+    },
+    trow: {
+        display: "grid",
+        gridTemplateColumns: "2fr 2fr 1fr",
+        gap: 10,
+        padding: "10px 10px",
+        borderTop: "1px solid rgba(0,0,0,0.1)",
+        alignItems: "center",
+        userSelect: "none",
+    },
+    tdName: { minWidth: 0 },
+    tdEmail: {
+        minWidth: 0,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
+        fontWeight: 800,
+        color: "var(--muted, #a47856)",
+    },
+    tdActions: { display: "flex", gap: 8, alignItems: "center", justifyContent: "flex-start" },
+
+    studentName: { fontWeight: 900, display: "flex", alignItems: "center", gap: 8, minWidth: 0 },
     badgeInactive: {
         fontSize: 12,
         fontWeight: 900,
         padding: "2px 6px",
         border: "2px solid rgba(0,0,0,0.15)",
         background: "rgba(0,0,0,0.04)",
-    },
-    studentEmail: {
-        color: "var(--muted, #a47856)",
-        fontWeight: 800,
-        overflow: "hidden",
-        textOverflow: "ellipsis",
         whiteSpace: "nowrap",
-        maxWidth: 360,
     },
-    studentRight: { display: "flex", gap: 8, alignItems: "center" },
 };
