@@ -1,5 +1,10 @@
 // scoresRepository.js — FULL DROP-IN (MongoDB)
 //
+// IMPORTANT CHANGE (UUID-safe):
+// - account/user/teacher/student IDs are UUID strings (36 chars) => store & query them as STRINGs.
+// - Only Mongo-native document ids (_id), taskSetId, taskId use ObjectId.
+// - NEVER attempt new ObjectId(uuid).
+//
 // Existing collections (kept):
 // - good_lang_scores (per-rule/per-question score sync from client)
 // - good_lang_state  (seed/skip)
@@ -11,11 +16,9 @@
 // - good_lang_student_answers
 //
 // Notes:
-// - teacherId is now supported on score upserts (defaults to null).
+// - teacherId is supported on score upserts (defaults to null).
 // - student answers are stored separately for teacher analytics.
 // - Uses the same connectDB() pattern as your current file.
-//
-// Source base file: :contentReference[oaicite:0]{index=0}
 
 import { connectDB } from "../mongo.js";
 import { ObjectId } from "mongodb";
@@ -24,56 +27,68 @@ import { LEVEL_RULES } from "../../core/rules.js"; // adjust relative path if ne
 // -----------------------------
 // Helpers
 // -----------------------------
-function toObjectId(id) {
-    if (!id) return null;
-    if (id instanceof ObjectId) return id;
-    return new ObjectId(String(id));
-}
-
 function toIso(d) {
     return d instanceof Date ? d.toISOString() : d;
 }
 
-function normalizeTeacherId(teacherId) {
-    // IMPORTANT: for "regular GL user" we want explicit null
-    // so it becomes a real dimension in the score upsert filter.
-    return teacherId ? toObjectId(teacherId) : null;
+function isObjectIdLike(id) {
+    return typeof id === "string" && /^[a-fA-F0-9]{24}$/.test(id);
 }
 
-// -----------------------------
+/**
+ * ONLY for Mongo-generated ids (taskSetId, taskId, cursor ids, etc).
+ * Never call this on UUIDs.
+ */
+function toObjectIdMaybe(id) {
+    if (!id) return null;
+    if (id instanceof ObjectId) return id;
+    const s = String(id).trim();
+    if (!isObjectIdLike(s)) return null;
+    return new ObjectId(s);
+}
+
+function normalizeUuidOrNull(v) {
+    const s = String(v ?? "").trim();
+    return s ? s : null;
+}
+
+function normalizeTeacherId(teacherId) {
+    // IMPORTANT: for "regular GL user" we want explicit null
+    return normalizeUuidOrNull(teacherId);
+}
+
+// =====================================================================
 // EXISTING: Upsert synced answers (scores)
-// UPDATED: includes teacherId flag (nullable)
-// -----------------------------
+// UPDATED: includes teacherId flag (nullable, STRING UUID)
+// =====================================================================
 export async function upsertAnswers(userId, deviceId, answers, updatedOn, teacherId = null) {
     if (!answers?.length) return;
 
     const db = await connectDB();
     const bulk = db.collection("good_lang_scores").initializeUnorderedBulkOp();
 
-    const teacherObjId = normalizeTeacherId(teacherId);
+    const teacherKey = normalizeTeacherId(teacherId); // string UUID or null
+    const userKey = String(userId); // UUID string
 
     for (const a of answers) {
-        // expect client to send `id`. If not, ignore this record (or generate server id)
         if (!a.id) continue;
 
-        // ensure date field gets stored as proper Date
         const createdDate = a.date ? new Date(a.date) : updatedOn;
 
-        // ✅ teacherId dimension (null by default)
         bulk
-            .find({ userId, id: a.id, teacherId: teacherObjId })
+            .find({ userId: userKey, id: a.id, teacherId: teacherKey })
             .upsert()
             .updateOne({
                 $set: {
-                    userId,
-                    teacherId: teacherObjId, // ✅ NEW (null for regular GL user)
+                    userId: userKey,
+                    teacherId: teacherKey, // ✅ NEW (null for regular GL user)
                     id: a.id,
                     rule: a.rule,
                     level: a.level ?? null,
                     score: a.score,
                     date: createdDate,
                     deviceId: a.deviceId ?? deviceId,
-                    updatedAt: updatedOn, // server authoritative
+                    updatedAt: updatedOn,
                 },
                 $setOnInsert: {
                     createdAt: updatedOn,
@@ -90,13 +105,14 @@ export async function getAnswersSince(userId, since, teacherId = null) {
     const db = await connectDB();
     const sinceDate = new Date(since || 0);
 
-    const teacherObjId = normalizeTeacherId(teacherId);
+    const teacherKey = normalizeTeacherId(teacherId);
+    const userKey = String(userId);
 
     const docs = await db
         .collection("good_lang_scores")
         .find({
-            userId,
-            teacherId: teacherObjId, // ✅ NEW filter (null by default)
+            userId: userKey,
+            teacherId: teacherKey,
             updatedAt: { $gt: sinceDate },
         })
         .toArray();
@@ -113,14 +129,15 @@ export async function getAnswersSince(userId, since, teacherId = null) {
     }));
 }
 
-// -----------------------------
+// =====================================================================
 // EXISTING: seed state
-// -----------------------------
+// =====================================================================
 export async function saveSeedState(userId, seedState) {
     const db = await connectDB();
+    const userKey = String(userId);
 
     await db.collection("good_lang_state").updateOne(
-        { userId },
+        { userId: userKey },
         {
             $set: {
                 seed: seedState.seed,
@@ -134,8 +151,9 @@ export async function saveSeedState(userId, seedState) {
 
 export async function getSeedState(userId) {
     const db = await connectDB();
+    const userKey = String(userId);
 
-    const doc = await db.collection("good_lang_state").findOne({ userId });
+    const doc = await db.collection("good_lang_state").findOne({ userId: userKey });
     if (!doc) return null;
 
     return {
@@ -148,7 +166,6 @@ export async function getSeedState(userId) {
 // =====================================================================
 // NEW: Teacher task sets + tasks + assignments + student answers
 // =====================================================================
-
 const COL_TASK_SETS = "good_lang_task_sets";
 const COL_TASKS = "good_lang_tasks";
 const COL_ASSIGNMENTS = "good_lang_task_set_assignments";
@@ -157,27 +174,26 @@ const COL_STUDENT_ANSWERS = "good_lang_student_answers";
 /**
  * Insert (upsert) a student answer record for teachers to use.
  *
- * payload:
- * {
- *   userId, teacherId, taskSetId, taskId,
- *   taskType: "translation" | "gap",
- *   ruleIds: string[],
- *   textToTranslate: string,
- *   userTranslation: string,
- *   isAnswerCorrect: boolean,
- *   correctAnswer?: string|null,
- *   tipIfWrong?: string|null,
- *   createdAt?: Date|string
- * }
+ * UUID fields are STRINGS:
+ * - userId, teacherId are UUID strings
+ *
+ * ObjectId fields:
+ * - taskSetId, taskId (Mongo ids)
  */
 export async function insertStudentAnswer(payload) {
     const db = await connectDB();
 
+    const userKey = String(payload.userId || "").trim();
+    const teacherKey = String(payload.teacherId || "").trim();
+
+    const taskSetObjId = toObjectIdMaybe(payload.taskSetId);
+    const taskObjId = toObjectIdMaybe(payload.taskId);
+
     const doc = {
-        userId: toObjectId(payload.userId),
-        teacherId: toObjectId(payload.teacherId),
-        taskSetId: toObjectId(payload.taskSetId),
-        taskId: toObjectId(payload.taskId),
+        userId: userKey,
+        teacherId: teacherKey,
+        taskSetId: taskSetObjId,
+        taskId: taskObjId,
 
         taskType: payload.taskType, // "translation" | "gap"
         ruleIds: Array.isArray(payload.ruleIds) ? payload.ruleIds : [],
@@ -212,35 +228,18 @@ export async function insertStudentAnswer(payload) {
 /**
  * Create a task set + insert its tasks.
  *
- * input:
- * {
- *   teacherId,
- *   setType: "homework" (default),
- *   title?: string|null,
- *   deadline?: Date|string|null,
- *   tasks: [
- *     {
- *       taskType: "translation"|"gap",
- *       ruleIds: string[],
- *       textToTranslate: string,
- *       options?: any|null,         // gaps
- *       correctAnswer?: string|null,
- *       tipIfWrong?: string|null,
- *       taskOrderNumber?: number,
- *       deadline?: Date|string|null
- *     }
- *   ]
- * }
+ * teacherId is UUID STRING.
+ * taskSetId/taskId are ObjectId.
  */
 export async function createTaskSetWithTasks(input) {
     const db = await connectDB();
 
-    const teacherObjId = toObjectId(input.teacherId);
-    if (!teacherObjId) throw new Error("createTaskSetWithTasks: missing teacherId");
+    const teacherKey = String(input.teacherId || "").trim();
+    if (!teacherKey) throw new Error("createTaskSetWithTasks: missing teacherId");
 
     const now = new Date();
     const setDoc = {
-        teacherId: teacherObjId,
+        teacherId: teacherKey, // ✅ string UUID
         setType: String(input.setType ?? "homework"),
         title: input.title ?? null,
         deadline: input.deadline ? new Date(input.deadline) : null,
@@ -252,8 +251,8 @@ export async function createTaskSetWithTasks(input) {
     const tasks = Array.isArray(input.tasks) ? input.tasks : [];
     if (tasks.length) {
         const taskDocs = tasks.map((t, idx) => ({
-            teacherId: teacherObjId,
-            taskSetId,
+            teacherId: teacherKey, // ✅ string UUID
+            taskSetId, // ✅ ObjectId
 
             taskType: t.taskType, // "translation" | "gap"
             ruleIds: Array.isArray(t.ruleIds) ? t.ruleIds : [],
@@ -263,9 +262,7 @@ export async function createTaskSetWithTasks(input) {
             correctAnswer: t.correctAnswer ?? null,
             tipIfWrong: t.tipIfWrong ?? null,
 
-            taskOrderNumber: Number.isFinite(Number(t.taskOrderNumber))
-                ? Number(t.taskOrderNumber)
-                : idx + 1,
+            taskOrderNumber: Number.isFinite(Number(t.taskOrderNumber)) ? Number(t.taskOrderNumber) : idx + 1,
 
             deadline: t.deadline ? new Date(t.deadline) : null,
             createdAt: now,
@@ -280,28 +277,26 @@ export async function createTaskSetWithTasks(input) {
 /**
  * Assign one or many task sets to one or many students.
  *
- * input:
- * {
- *   teacherId,
- *   taskSetIds: string|string[],
- *   studentIds: string|string[],
- *   setType?: "homework",
- *   deadline?: Date|string|null   // optional override at assignment level
- * }
+ * teacherId/studentId are UUID STRINGS.
+ * taskSetId is ObjectId.
  */
 export async function assignTaskSetsToStudents(input) {
     const db = await connectDB();
 
-    const teacherObjId = toObjectId(input.teacherId);
-    if (!teacherObjId) throw new Error("assignTaskSetsToStudents: missing teacherId");
+    const teacherKey = String(input.teacherId || "").trim();
+    if (!teacherKey) throw new Error("assignTaskSetsToStudents: missing teacherId");
 
-    const setIds = (Array.isArray(input.taskSetIds) ? input.taskSetIds : [input.taskSetIds])
+    const setIdsRaw = Array.isArray(input.taskSetIds) ? input.taskSetIds : [input.taskSetIds];
+    const setIds = setIdsRaw
         .filter(Boolean)
-        .map(toObjectId);
+        .map(toObjectIdMaybe)
+        .filter(Boolean);
 
-    const studentIds = (Array.isArray(input.studentIds) ? input.studentIds : [input.studentIds])
+    const studentIdsRaw = Array.isArray(input.studentIds) ? input.studentIds : [input.studentIds];
+    const studentIds = studentIdsRaw
         .filter(Boolean)
-        .map(toObjectId);
+        .map((x) => String(x).trim())
+        .filter(Boolean);
 
     if (!setIds.length || !studentIds.length) return { inserted: 0 };
 
@@ -312,9 +307,9 @@ export async function assignTaskSetsToStudents(input) {
     for (const taskSetId of setIds) {
         for (const studentId of studentIds) {
             docs.push({
-                teacherId: teacherObjId,
+                teacherId: teacherKey,
                 taskSetId,
-                studentId,
+                studentId, // ✅ UUID string
                 setType: String(input.setType ?? "homework"),
                 deadline,
                 assignedAt: now,
@@ -326,56 +321,40 @@ export async function assignTaskSetsToStudents(input) {
         const res = await db.collection(COL_ASSIGNMENTS).insertMany(docs, { ordered: false });
         return { inserted: res.insertedCount };
     } catch (e) {
-        // ignore duplicate key errors (requires unique index)
         if (e?.code === 11000) return { inserted: 0 };
         throw e;
     }
 }
 
-
 /**
  * Teacher: get last task sets with paging + per-student completion per set
  *
- * input:
- * {
- *   teacherId: string,
- *   limit?: number (default 10),
- *   cursor?: { createdAt: string|Date, id: string }  // pass from previous page last item
- * }
- *
- * returns:
- * { items: [...], nextCursor: { createdAt, id } | null }
+ * teacherId UUID string.
+ * cursor.id is task set _id (ObjectId string).
  */
 export async function getTaskSetsListTeacherPaged(input) {
     const db = await connectDB();
 
-    const teacherId = toObjectId(input.teacherId);
-    if (!teacherId) throw new Error("getTaskSetsListTeacherPaged: missing teacherId");
+    const teacherKey = String(input.teacherId || "").trim();
+    if (!teacherKey) throw new Error("getTaskSetsListTeacherPaged: missing teacherId");
 
     const limit = Math.min(Math.max(Number(input.limit) || 10, 1), 50);
 
     const cursorCreatedAt = input.cursor?.createdAt ? new Date(input.cursor.createdAt) : null;
-    const cursorId = input.cursor?.id ? toObjectId(input.cursor.id) : null;
+    const cursorId = input.cursor?.id ? toObjectIdMaybe(input.cursor.id) : null;
 
-    // Cursor filter: older than (createdAt, _id)
     const cursorMatch =
         cursorCreatedAt && cursorId
             ? {
-                $or: [
-                    { createdAt: { $lt: cursorCreatedAt } },
-                    { createdAt: cursorCreatedAt, _id: { $lt: cursorId } },
-                ],
+                $or: [{ createdAt: { $lt: cursorCreatedAt } }, { createdAt: cursorCreatedAt, _id: { $lt: cursorId } }],
             }
             : {};
 
     const pipeline = [
-        { $match: { teacherId, ...cursorMatch } },
-
-        // sort newest first for pagination
+        { $match: { teacherId: teacherKey, ...cursorMatch } },
         { $sort: { createdAt: -1, _id: -1 } },
         { $limit: limit },
 
-        // tasks meta for set
         {
             $lookup: {
                 from: COL_TASKS,
@@ -384,8 +363,6 @@ export async function getTaskSetsListTeacherPaged(input) {
                 as: "tasks",
             },
         },
-
-        // assignments for set (students)
         {
             $lookup: {
                 from: COL_ASSIGNMENTS,
@@ -395,7 +372,6 @@ export async function getTaskSetsListTeacherPaged(input) {
             },
         },
 
-        // answers grouped by student for this set
         {
             $lookup: {
                 from: COL_STUDENT_ANSWERS,
@@ -403,27 +379,16 @@ export async function getTaskSetsListTeacherPaged(input) {
                 pipeline: [
                     {
                         $match: {
-                            $expr: {
-                                $and: [
-                                    { $eq: ["$taskSetId", "$$setId"] },
-                                    { $eq: ["$teacherId", "$$tId"] },
-                                ],
-                            },
+                            $expr: { $and: [{ $eq: ["$taskSetId", "$$setId"] }, { $eq: ["$teacherId", "$$tId"] }] },
                         },
                     },
-                    {
-                        $group: {
-                            _id: "$userId",
-                            answeredCount: { $sum: 1 },
-                        },
-                    },
+                    { $group: { _id: "$userId", answeredCount: { $sum: 1 } } },
                     { $project: { _id: 0, studentId: "$_id", answeredCount: 1 } },
                 ],
                 as: "answersByStudent",
             },
         },
 
-        // merge assignments (all students) with answersByStudent (maybe missing)
         {
             $addFields: {
                 totalTasks: { $size: "$tasks" },
@@ -478,7 +443,6 @@ export async function getTaskSetsListTeacherPaged(input) {
 
                 numberOfTasks: "$totalTasks",
                 includedTaskTypes: 1,
-
                 students: 1,
             },
         },
@@ -486,7 +450,6 @@ export async function getTaskSetsListTeacherPaged(input) {
 
     const docs = await db.collection(COL_TASK_SETS).aggregate(pipeline).toArray();
 
-    // post-process: add completionRatio
     const items = docs.map((d) => {
         const total = Number(d.numberOfTasks) || 0;
         const students = (d.students || []).map((s) => ({
@@ -511,10 +474,7 @@ export async function getTaskSetsListTeacherPaged(input) {
     });
 
     const last = items[items.length - 1];
-    const nextCursor =
-        items.length === limit
-            ? { createdAt: last.createdAt, id: last.id }
-            : null;
+    const nextCursor = items.length === limit ? { createdAt: last.createdAt, id: last.id } : null;
 
     return { items, nextCursor };
 }
@@ -522,39 +482,29 @@ export async function getTaskSetsListTeacherPaged(input) {
 /**
  * Student: get last assigned task sets with paging (by assignedAt) + completion for that student
  *
- * input:
- * {
- *   studentId: string,
- *   limit?: number (default 10),
- *   cursor?: { assignedAt: string|Date, id: string }  // id = assignment _id
- * }
- *
- * returns:
- * { items: [...], nextCursor: { assignedAt, id } | null }
+ * studentId UUID string.
+ * cursor.id is assignment _id (ObjectId string).
  */
 export async function getTaskSetsListStudentPaged(input) {
     const db = await connectDB();
 
-    const studentId = toObjectId(input.studentId);
-    if (!studentId) throw new Error("getTaskSetsListStudentPaged: missing studentId");
+    const studentKey = String(input.studentId || "").trim();
+    if (!studentKey) throw new Error("getTaskSetsListStudentPaged: missing studentId");
 
     const limit = Math.min(Math.max(Number(input.limit) || 10, 1), 50);
 
     const cursorAssignedAt = input.cursor?.assignedAt ? new Date(input.cursor.assignedAt) : null;
-    const cursorId = input.cursor?.id ? toObjectId(input.cursor.id) : null;
+    const cursorId = input.cursor?.id ? toObjectIdMaybe(input.cursor.id) : null;
 
     const cursorMatch =
         cursorAssignedAt && cursorId
             ? {
-                $or: [
-                    { assignedAt: { $lt: cursorAssignedAt } },
-                    { assignedAt: cursorAssignedAt, _id: { $lt: cursorId } },
-                ],
+                $or: [{ assignedAt: { $lt: cursorAssignedAt } }, { assignedAt: cursorAssignedAt, _id: { $lt: cursorId } }],
             }
             : {};
 
     const pipeline = [
-        { $match: { studentId, ...cursorMatch } },
+        { $match: { studentId: studentKey, ...cursorMatch } },
         { $sort: { assignedAt: -1, _id: -1 } },
         { $limit: limit },
 
@@ -584,12 +534,7 @@ export async function getTaskSetsListStudentPaged(input) {
                 pipeline: [
                     {
                         $match: {
-                            $expr: {
-                                $and: [
-                                    { $eq: ["$taskSetId", "$$setId"] },
-                                    { $eq: ["$userId", "$$sId"] },
-                                ],
-                            },
+                            $expr: { $and: [{ $eq: ["$taskSetId", "$$setId"] }, { $eq: ["$userId", "$$sId"] }] },
                         },
                     },
                     { $project: { _id: 1 } },
@@ -643,7 +588,7 @@ export async function getTaskSetsListStudentPaged(input) {
         const answered = Number(d.answeredCount) || 0;
         return {
             id: String(d.taskSetId),
-            assignmentId: String(d._id), // important for paging cursor
+            assignmentId: String(d._id),
             teacherId: String(d.teacherId),
 
             setType: d.setType,
@@ -660,39 +605,33 @@ export async function getTaskSetsListStudentPaged(input) {
     });
 
     const last = items[items.length - 1];
-    const nextCursor =
-        items.length === limit
-            ? { assignedAt: last.assignedAt, id: last.assignmentId }
-            : null;
+    const nextCursor = items.length === limit ? { assignedAt: last.assignedAt, id: last.assignmentId } : null;
 
     return { items, nextCursor };
 }
-
 
 /**
  * Get next task from a task set (by student).
  * Returns the first task (by order) that the student has not answered yet.
  *
- * input: { studentId, taskSetId }
+ * studentId UUID string, taskSetId ObjectId string.
  */
 export async function getNextTaskFromTaskSet(input) {
     const db = await connectDB();
 
-    const studentId = toObjectId(input.studentId);
-    const taskSetId = toObjectId(input.taskSetId);
-    if (!studentId || !taskSetId) throw new Error("getNextTaskFromTaskSet: missing studentId/taskSetId");
+    const studentKey = String(input.studentId || "").trim();
+    const taskSetId = toObjectIdMaybe(input.taskSetId);
 
-    // get answered taskIds for this set
+    if (!studentKey || !taskSetId) throw new Error("getNextTaskFromTaskSet: missing studentId/taskSetId");
+
     const answered = await db
         .collection(COL_STUDENT_ANSWERS)
-        .find({ userId: studentId, taskSetId }, { projection: { taskId: 1 } })
+        .find({ userId: studentKey, taskSetId }, { projection: { taskId: 1 } })
         .toArray();
 
     const answeredIds = answered.map((a) => a.taskId).filter(Boolean);
 
-    const query = answeredIds.length
-        ? { taskSetId, _id: { $nin: answeredIds } }
-        : { taskSetId };
+    const query = answeredIds.length ? { taskSetId, _id: { $nin: answeredIds } } : { taskSetId };
 
     const nextTask = await db
         .collection(COL_TASKS)
@@ -722,18 +661,19 @@ export async function getNextTaskFromTaskSet(input) {
 /**
  * Get all tasks from a task set (by teacher).
  *
- * input: { teacherId, taskSetId }
+ * teacherId UUID string, taskSetId ObjectId string.
  */
 export async function getAllTasksFromTaskSetByTeacher(input) {
     const db = await connectDB();
 
-    const teacherId = toObjectId(input.teacherId);
-    const taskSetId = toObjectId(input.taskSetId);
-    if (!teacherId || !taskSetId) throw new Error("getAllTasksFromTaskSetByTeacher: missing teacherId/taskSetId");
+    const teacherKey = String(input.teacherId || "").trim();
+    const taskSetId = toObjectIdMaybe(input.taskSetId);
+
+    if (!teacherKey || !taskSetId) throw new Error("getAllTasksFromTaskSetByTeacher: missing teacherId/taskSetId");
 
     const tasks = await db
         .collection(COL_TASKS)
-        .find({ teacherId, taskSetId })
+        .find({ teacherId: teacherKey, taskSetId })
         .sort({ taskOrderNumber: 1, createdAt: 1 })
         .toArray();
 
@@ -758,30 +698,26 @@ export async function getAllTasksFromTaskSetByTeacher(input) {
 /**
  * Get all student answers from a task set (by teacher).
  *
- * input: { teacherId, taskSetId, studentId? }
+ * teacherId UUID string, taskSetId ObjectId string, studentId UUID string optional.
  */
 export async function getAllStudentAnswersFromTaskSetByTeacher(input) {
     const db = await connectDB();
 
-    const teacherId = toObjectId(input.teacherId);
-    const taskSetId = toObjectId(input.taskSetId);
-    const studentId = input.studentId ? toObjectId(input.studentId) : null;
+    const teacherKey = String(input.teacherId || "").trim();
+    const taskSetId = toObjectIdMaybe(input.taskSetId);
+    const studentKey = input.studentId ? String(input.studentId).trim() : null;
 
-    if (!teacherId || !taskSetId) {
+    if (!teacherKey || !taskSetId) {
         throw new Error("getAllStudentAnswersFromTaskSetByTeacher: missing teacherId/taskSetId");
     }
 
     const query = {
-        teacherId,
+        teacherId: teacherKey,
         taskSetId,
-        ...(studentId ? { userId: studentId } : {}),
+        ...(studentKey ? { userId: studentKey } : {}),
     };
 
-    const answers = await db
-        .collection(COL_STUDENT_ANSWERS)
-        .find(query)
-        .sort({ createdAt: -1 })
-        .toArray();
+    const answers = await db.collection(COL_STUDENT_ANSWERS).find(query).sort({ createdAt: -1 }).toArray();
 
     return answers.map((a) => ({
         id: String(a._id),
@@ -807,67 +743,51 @@ export async function getAllStudentAnswersFromTaskSetByTeacher(input) {
 /**
  * OPTIONAL helper: call once at startup (or in a script) to ensure indexes exist.
  * Safe to call multiple times.
+ *
+ * IMPORTANT: indexes reflect UUID strings for teacherId/userId/studentId.
  */
 export async function ensureTeacherCollectionsIndexes() {
     const db = await connectDB();
 
-    // -----------------------------
-    // student answers
-    // -----------------------------
-
-    // one answer per student per task
-    await db.collection(COL_STUDENT_ANSWERS)
-        .createIndex({ userId: 1, taskId: 1 }, { unique: true });
+    // student answers: one per student per task
+    await db.collection(COL_STUDENT_ANSWERS).createIndex({ userId: 1, taskId: 1 }, { unique: true });
 
     // teacher: list answers in a set (sorted by latest)
-    await db.collection(COL_STUDENT_ANSWERS)
-        .createIndex({ teacherId: 1, taskSetId: 1, createdAt: -1 });
+    await db.collection(COL_STUDENT_ANSWERS).createIndex({ teacherId: 1, taskSetId: 1, createdAt: -1 });
 
-    // teacher: aggregate completion per student in a set (filter set+teacher, group user)
-    await db.collection(COL_STUDENT_ANSWERS)
-        .createIndex({ taskSetId: 1, teacherId: 1, userId: 1 });
+    // teacher: aggregate completion per student in a set
+    await db.collection(COL_STUDENT_ANSWERS).createIndex({ taskSetId: 1, teacherId: 1, userId: 1 });
 
     // student: completion in a set
-    await db.collection(COL_STUDENT_ANSWERS)
-        .createIndex({ userId: 1, taskSetId: 1 });
+    await db.collection(COL_STUDENT_ANSWERS).createIndex({ userId: 1, taskSetId: 1 });
 
-    // -----------------------------
-    // task sets (teacher paging)
-    // -----------------------------
-    await db.collection(COL_TASK_SETS)
-        .createIndex({ teacherId: 1, createdAt: -1, _id: -1 });
+    // task sets: teacher paging
+    await db.collection(COL_TASK_SETS).createIndex({ teacherId: 1, createdAt: -1, _id: -1 });
 
-    // -----------------------------
-    // tasks
-    // -----------------------------
+    // tasks: teacher fetch tasks securely (teacherId + set)
+    await db.collection(COL_TASKS).createIndex({ teacherId: 1, taskSetId: 1, taskOrderNumber: 1 });
 
-    // teacher fetch tasks securely (teacherId + set)
-    await db.collection(COL_TASKS)
-        .createIndex({ teacherId: 1, taskSetId: 1, taskOrderNumber: 1 });
+    // tasks: lookups by taskSetId
+    await db.collection(COL_TASKS).createIndex({ taskSetId: 1, taskOrderNumber: 1 });
 
-    // lookups by taskSetId (lookup/localField usage)
-    await db.collection(COL_TASKS)
-        .createIndex({ taskSetId: 1, taskOrderNumber: 1 });
-
-    // -----------------------------
-    // assignments
-    // -----------------------------
-
-    // unique assignment per student per set per teacher
-    await db.collection(COL_ASSIGNMENTS)
-        .createIndex({ teacherId: 1, taskSetId: 1, studentId: 1 }, { unique: true });
+    // assignments: unique assignment per student per set per teacher
+    await db.collection(COL_ASSIGNMENTS).createIndex(
+        { teacherId: 1, taskSetId: 1, studentId: 1 },
+        { unique: true }
+    );
 
     // student paging of assigned sets
-    await db.collection(COL_ASSIGNMENTS)
-        .createIndex({ studentId: 1, assignedAt: -1, _id: -1 });
+    await db.collection(COL_ASSIGNMENTS).createIndex({ studentId: 1, assignedAt: -1, _id: -1 });
 
     // lookups by taskSetId (merge students for teacher view)
-    await db.collection(COL_ASSIGNMENTS)
-        .createIndex({ taskSetId: 1, studentId: 1 });
+    await db.collection(COL_ASSIGNMENTS).createIndex({ taskSetId: 1, studentId: 1 });
 
     return { ok: true };
 }
 
+// ----------------------------------------------------------------------
+// Weak rules (BE service) — UUID-safe (reads from good_lang_scores)
+// ----------------------------------------------------------------------
 function normalizeLevel(level) {
     const up = String(level ?? "").trim().toUpperCase();
     if (!["A1", "A2", "B1", "B2"].includes(up)) return null;
@@ -885,7 +805,7 @@ function statusFor(accuracy, attempts) {
  * Returns array of ruleIds (strings), weakest first.
  *
  * input:
- * { userId, level: "A1"|"A2"|"B1"|"B2", limit?: number, teacherId?: string|null }
+ * { userId (UUID string), level: "A1"|"A2"|"B1"|"B2", limit?: number, teacherId?: string|null }
  */
 export async function getWeakRulesForStudent({ userId, level, limit = 4, teacherId = null }) {
     const db = await connectDB();
@@ -896,16 +816,15 @@ export async function getWeakRulesForStudent({ userId, level, limit = 4, teacher
     const allowedRules = Array.isArray(LEVEL_RULES?.[lvl]) ? LEVEL_RULES[lvl].map(String) : [];
     if (!allowedRules.length) return [];
 
-    // IMPORTANT:
-    // - This reads from good_lang_scores (synced client answers)
-    // - teacherId dimension exists but for now you said it will be null for regular GL users. :contentReference[oaicite:6]{index=6}
-    const teacherObjId = normalizeTeacherId(teacherId);
+    const teacherKey = normalizeTeacherId(teacherId); // null or UUID string (for now likely null)
+    const userKey = String(userId || "").trim();
+    if (!userKey) return [];
 
     const pipeline = [
         {
             $match: {
-                userId: toObjectId(userId),
-                teacherId: teacherObjId,
+                userId: userKey,
+                teacherId: teacherKey,
                 rule: { $in: allowedRules },
             },
         },
@@ -913,7 +832,7 @@ export async function getWeakRulesForStudent({ userId, level, limit = 4, teacher
             $group: {
                 _id: "$rule",
                 attemptsNumber: { $sum: 1 },
-                accuracy: { $avg: "$score" }, // score is 0..100 already
+                accuracy: { $avg: "$score" }, // score is 0..100
             },
         },
         {
@@ -928,7 +847,6 @@ export async function getWeakRulesForStudent({ userId, level, limit = 4, teacher
 
     const rows = await db.collection("good_lang_scores").aggregate(pipeline).toArray();
 
-    // Build a map for all rules so "unattempted" aren't considered
     const attempted = rows
         .filter((x) => (x?.attemptsNumber ?? 0) > 0)
         .map((x) => ({
@@ -938,7 +856,6 @@ export async function getWeakRulesForStudent({ userId, level, limit = 4, teacher
             status: statusFor(Number.isFinite(x.accuracy) ? x.accuracy : 0, x.attemptsNumber ?? 0),
         }));
 
-    // FE-like sorting: needs practice first, then low accuracy, then low attempts. :contentReference[oaicite:7]{index=7}
     attempted.sort((a, b) => {
         const aNeeds = a.status === "needs practice" ? 0 : 1;
         const bNeeds = b.status === "needs practice" ? 0 : 1;
@@ -953,5 +870,6 @@ export async function getWeakRulesForStudent({ userId, level, limit = 4, teacher
         return attA - attB;
     });
 
-    return attempted.slice(0, Math.max(1, Math.min(10, Number(limit) || 4))).map((x) => x.rule);
+    const lim = Math.max(1, Math.min(10, Number(limit) || 4));
+    return attempted.slice(0, lim).map((x) => x.rule);
 }

@@ -121,6 +121,7 @@ import TeacherMyStudentsPage from "./components/dashboard/pages/TeacherMyStudent
 import TeacherMyClassesPage from "./components/dashboard/pages/TeacherMyClassesPage.jsx";
 import {TeacherDashboardProvider} from "./components/dashboard/TeacherDashboardContext.jsx";
 import TeacherDashboardLayout from "./components/dashboard/TeacherDashboardLayout.jsx";
+import TeacherHomeworkPage from "./components/dashboard/pages/TeachersHomeworkPage.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -196,6 +197,7 @@ export default function App() {
                     <Route path="profile" element={<TeacherMyProfilePage />} />
                     <Route path="students" element={<TeacherMyStudentsPage />} />
                     <Route path="classes" element={<TeacherMyClassesPage />} />
+                    <Route path="homework" element={<TeacherHomeworkPage />} />
                 </Route>
 
                 {/* A1 RULES */}

@@ -111,7 +111,7 @@ function parseCursorStudent(q) {
 // --------------------------------------------------
 // Controller
 // --------------------------------------------------
-export const schoolsController = {
+export const schoolsTaskSetsController = {
     mapRoutes(app) {
         // ==========================================================
         // (1) CREATE TASK SET (teacher)

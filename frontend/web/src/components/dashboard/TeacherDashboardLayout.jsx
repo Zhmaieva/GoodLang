@@ -1,4 +1,4 @@
-// TeacherDashboardLayout.jsx
+// TeacherDashboardLayout.jsx — FULL DROP-IN
 import React, { useEffect, useMemo, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useTeacherDashboard } from "./TeacherDashboardContext.jsx";
@@ -44,14 +44,9 @@ export default function TeacherDashboardLayout() {
             {/* Fixed left drawer */}
             <aside style={{ ...styles.sidebar, width: sideW }}>
                 <div style={styles.sideTop}>
-                    <div style={{...styles.brandRow, justifyContent: collapsed ? "center" : "space-around"}}>
-                        {
-                            !collapsed && <div style={styles.brandText}>
-                                {collapsed ? "" : "GoodLang • Teacher"}
-                            </div>
-                        }
+                    <div style={{ ...styles.brandRow, justifyContent: collapsed ? "center" : "space-around" }}>
+                        {!collapsed && <div style={styles.brandText}>{collapsed ? "" : "GoodLang • Teacher"}</div>}
 
-                        {/* ✅ AwesomeButton instead of <button> */}
                         <AwesomeButton
                             variant="ghost"
                             onClick={() => setCollapsed((v) => !v)}
@@ -85,16 +80,15 @@ export default function TeacherDashboardLayout() {
                     <NavItem to="/teacher/profile" label="Мій профіль" icon="👤" collapsed={collapsed} />
                     <NavItem to="/teacher/students" label="Мої учні" icon="🧑‍🎓" collapsed={collapsed} />
                     <NavItem to="/teacher/classes" label="Мої класи" icon="🏫" collapsed={collapsed} />
+
+                    {/* ✅ NEW */}
+                    <NavItem to="/teacher/homework" label="Домашня робота" icon="📝" collapsed={collapsed} />
                 </nav>
 
-                {!collapsed ? (
-                    <div style={styles.sideHint}>
-                        Навігація зліва (fixed). Можна згорнути.
-                    </div>
-                ) : null}
+                {!collapsed ? <div style={styles.sideHint}>Навігація зліва (fixed). Можна згорнути.</div> : null}
             </aside>
 
-            {/* Content: full width minus sidebar */}
+            {/* Content */}
             <main style={{ ...styles.content, marginLeft: sideW }}>
                 <Outlet />
             </main>
@@ -102,65 +96,28 @@ export default function TeacherDashboardLayout() {
     );
 }
 
-/**
- * IMPORTANT:
- * - We must NOT render <button> inside <NavLink> (invalid HTML).
- * - So we style a div to look like AwesomeButton "ghost".
- */
 function NavItem({ to, label, icon, collapsed }) {
     return (
         <NavLink
             to={to}
             title={collapsed ? label : undefined}
-            style={({ isActive }) => ({
+            style={() => ({
                 textDecoration: "none",
                 display: "block",
             })}
         >
             {({ isActive }) => (
                 <AwesomeButton
-                    title={collapsed ? "Expand" : "Collapse"}
+                    title={collapsed ? label : undefined}
                     variant={isActive ? "accent" : "ghost"}
-                    style={{width: collapsed ? 'auto' : '100%', textAlign: 'left'}}
+                    style={{ width: collapsed ? "auto" : "100%", textAlign: "left" }}
                 >
                     {collapsed && <span style={styles.icon}>{icon}</span>}
-                         {!collapsed ? <span style={styles.label}>{label}</span> : null}
+                    {!collapsed ? <span style={styles.label}>{label}</span> : null}
                 </AwesomeButton>
-
-                // <div
-                //     style={{
-                //         ...ghostButtonLikeStyle(),
-                //         ...(isActive ? styles.navItemActive : null),
-                //         ...(collapsed ? styles.navItemCollapsed : null),
-                //     }}
-                // >
-                //     <span style={styles.icon}>{icon}</span>
-                //     {!collapsed ? <span style={styles.label}>{label}</span> : null}
-                // </div>
             )}
         </NavLink>
     );
-}
-
-/**
- * Match AwesomeButton variant="ghost" visuals without using <button>.
- */
-function ghostButtonLikeStyle() {
-    return {
-        padding: "10px 12px",
-        fontWeight: 800,
-        cursor: "pointer",
-        opacity: 1,
-        background: "transparent",
-        color: "var(--text, #3a2a1d)",
-        userSelect: "none",
-        whiteSpace: "nowrap",
-        border: "2px solid rgba(0,0,0,0.2)",
-        boxShadow: "none",
-        display: "flex",
-        alignItems: "center",
-        gap: 10,
-    };
 }
 
 const styles = {
@@ -195,25 +152,10 @@ const styles = {
         zIndex: 2,
     },
 
-    brandRow: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gap: 8,
-    },
+    brandRow: { display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 },
+    brandText: { fontWeight: 900, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
 
-    brandText: {
-        fontWeight: 900,
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-    },
-
-    // ✅ use with AwesomeButton
-    collapseBtn: {
-        padding: "6px 10px",
-        lineHeight: 1,
-    },
+    collapseBtn: { padding: "6px 10px", lineHeight: 1 },
 
     teacherBlock: {
         marginTop: 10,
@@ -221,13 +163,7 @@ const styles = {
         border: "2px solid rgba(0,0,0,0.10)",
         background: "rgba(255,255,255,0.55)",
     },
-    teacherName: {
-        fontWeight: 900,
-        fontSize: 13,
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-    },
+    teacherName: { fontWeight: 900, fontSize: 13, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
     teacherEmail: {
         marginTop: 2,
         fontWeight: 800,
@@ -251,35 +187,10 @@ const styles = {
         userSelect: "none",
     },
 
-    nav: {
-        display: "flex",
-        flexDirection: "column",
-        gap: 8,
-    },
+    nav: { display: "flex", flexDirection: "column", gap: 8 },
 
-    navItemActive: {
-        background: "var(--accent, #ff6138)",
-        color: "#fff",
-        border: "2px solid #000",
-    },
-
-    navItemCollapsed: {
-        justifyContent: "center",
-        padding: "10px 6px",
-    },
-
-    icon: {
-        width: 24,
-        textAlign: "center",
-        flex: "0 0 24px",
-    },
-
-    label: {
-        minWidth: 0,
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-    },
+    icon: { width: 24, textAlign: "center", flex: "0 0 24px" },
+    label: { minWidth: 0, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
 
     sideHint: {
         marginTop: 12,
@@ -290,10 +201,5 @@ const styles = {
         lineHeight: 1.35,
     },
 
-    content: {
-        minHeight: "100vh",
-        width: "auto",
-        padding: 14,
-        transition: "margin-left 180ms ease",
-    },
+    content: { minHeight: "100vh", width: "auto", padding: 14, transition: "margin-left 180ms ease" },
 };

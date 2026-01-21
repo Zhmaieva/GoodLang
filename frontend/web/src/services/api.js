@@ -499,3 +499,121 @@ export function apiAddStudentToTeacher({ email, firstName, lastName }) {
 export function apiRemoveStudentFromTeacher(studentAccountId) {
     return apiDeactivateStudentInClass("teacher", studentAccountId);
 }
+
+// ============================================================
+// Schools / Task Sets (NEW)
+// ============================================================
+
+/**
+ * POST /schools/task-sets
+ * Teacher creates a task set from config (no task content)
+ *
+ * payload:
+ * {
+ *   studentIds: string[],
+ *   taskMode: "translations" | "gaps" | "mixed",
+ *   ruleIds?: string[] | "A,B,C",
+ *   recommended?: boolean,
+ *   level?: "A1"|"A2"|"B1"|"B2",
+ *   title: string,
+ *   numberOfTasks: number (1..50),
+ *   seed: number,
+ *   dueDate?: string|Date|null
+ * }
+ */
+export function apiCreateTaskSet(payload) {
+    return jsonFetch(`${API_BASE}/schools/task-sets`, {
+        method: "POST",
+        body: JSON.stringify(payload),
+    });
+}
+
+/**
+ * GET /schools/task-sets/teacher?limit=10&cursorCreatedAt=...&cursorId=...
+ * Teacher list sets (paged) + per-student completion metadata
+ *
+ * cursor: { createdAt: string, id: string } (from server nextCursor)
+ */
+export function apiTeacherTaskSets({ limit = 10, cursor } = {}) {
+    const qs = new URLSearchParams();
+    qs.set("limit", String(limit));
+
+    if (cursor?.createdAt && cursor?.id) {
+        qs.set("cursorCreatedAt", String(cursor.createdAt));
+        qs.set("cursorId", String(cursor.id));
+    }
+
+    return jsonFetch(`${API_BASE}/schools/task-sets/teacher?${qs.toString()}`);
+}
+
+/**
+ * GET /schools/task-sets/student?limit=10&cursorAssignedAt=...&cursorId=...
+ * Student list assigned sets (paged) + own completion
+ *
+ * cursor: { assignedAt: string, id: string } (from server nextCursor)
+ */
+export function apiStudentTaskSets({ limit = 10, cursor } = {}) {
+    const qs = new URLSearchParams();
+    qs.set("limit", String(limit));
+
+    if (cursor?.assignedAt && cursor?.id) {
+        qs.set("cursorAssignedAt", String(cursor.assignedAt));
+        qs.set("cursorId", String(cursor.id));
+    }
+
+    return jsonFetch(`${API_BASE}/schools/task-sets/student?${qs.toString()}`);
+}
+
+/**
+ * GET /schools/task-sets/:taskSetId/tasks
+ * Teacher gets all tasks in a set
+ */
+export function apiTeacherTaskSetTasks(taskSetId) {
+    const id = String(taskSetId ?? "").trim();
+    if (!id) throw new Error("Missing taskSetId");
+    return jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/tasks`);
+}
+
+/**
+ * GET /schools/task-sets/:taskSetId/answers?studentId=...
+ * Teacher gets all student answers in a set (read-only for now)
+ */
+export function apiTeacherTaskSetAnswers(taskSetId, { studentId } = {}) {
+    const id = String(taskSetId ?? "").trim();
+    if (!id) throw new Error("Missing taskSetId");
+
+    const qs = new URLSearchParams();
+    if (studentId) qs.set("studentId", String(studentId));
+
+    const url =
+        `${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/answers` +
+        (qs.toString() ? `?${qs.toString()}` : "");
+
+    return jsonFetch(url);
+}
+
+/**
+ * GET /schools/task-sets/:taskSetId/next
+ * Student gets next task from set (server returns { task: ... } or { task: null } when completed)
+ */
+export function apiStudentNextTaskFromSet(taskSetId) {
+    const id = String(taskSetId ?? "").trim();
+    if (!id) throw new Error("Missing taskSetId");
+    return jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/next`);
+}
+
+/**
+ * POST /schools/task-sets/:taskSetId/assignments
+ * Teacher assigns existing set to more students
+ *
+ * payload: { studentIds: string[], dueDate?: string|Date|null }
+ */
+export function apiAssignTaskSet(taskSetId, payload) {
+    const id = String(taskSetId ?? "").trim();
+    if (!id) throw new Error("Missing taskSetId");
+
+    return jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/assignments`, {
+        method: "POST",
+        body: JSON.stringify(payload),
+    });
+}

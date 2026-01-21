@@ -9,6 +9,7 @@ import {filesController} from "./controllers/filesController.js";
 import {schoolController} from "./controllers/schoolsController.js";
 import {connectDB} from "./database/mongo.js";
 import {ensureTeacherCollectionsIndexes} from "./database/repositories/scoresRepository.js";
+import {schoolsTaskSetsController} from "./controllers/schoolsTaskSetsController.js";
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
@@ -41,6 +42,7 @@ paymentsController.mapRoutes(app);
 dataSyncController.mapRoutes(app);
 filesController.mapRoutes(app);
 schoolController.mapRoutes(app);
+schoolsTaskSetsController.mapRoutes(app);
 
 connectDB().then(async () => {
     await ensureTeacherCollectionsIndexes();
