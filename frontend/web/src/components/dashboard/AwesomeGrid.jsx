@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function AwesomeGrid({ left, right }) {
+export default function AwesomeGrid({ left, right, gridStyle, colStyle }) {
     return (
-        <div style={styles.grid}>
-            <div style={styles.col}>{left}</div>
-            <div style={styles.col}>{right}</div>
+        <div style={{ ...styles.grid, ...gridStyle }}>
+            <div style={{ ...styles.col, ...colStyle }}>{left}</div>
+            <div style={{ ...styles.col, ...colStyle }}>{right}</div>
         </div>
     );
 }

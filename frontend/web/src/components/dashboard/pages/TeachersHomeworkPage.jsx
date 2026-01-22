@@ -471,10 +471,8 @@ export default function TeacherHomeworkPage() {
 
             {/* Create modal */}
             <CreateHomeworkModal
-                isOpen={createOpen}
+                open={createOpen}
                 onClose={() => setCreateOpen(false)}
-                classes={classes}
-                students={students}
                 onCreated={async () => {
                     setCreateOpen(false);
                     await loadSets();

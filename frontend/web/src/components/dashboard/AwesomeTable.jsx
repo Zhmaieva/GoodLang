@@ -3,6 +3,8 @@ import React, { useEffect, useMemo, useState } from "react";
 /**
  * AwesomeTable — RulesTable-like look & feel + built-in sorting
  *
+ * ✅ Now supports: fixed header + scrollable rows area
+ *
  * columns: [
  *   {
  *     key: "email",
@@ -26,6 +28,8 @@ import React, { useEffect, useMemo, useState } from "react";
  * options:
  * - storageKey: persist sorting in localStorage (optional)
  * - defaultSortKey / defaultSortDir
+ * - headerHeight: fixed header height in px (default 44)
+ * - headerGap: vertical gap between header and rows (default 8)
  */
 export default function AwesomeTable({
                                          columns,
@@ -34,6 +38,9 @@ export default function AwesomeTable({
                                          storageKey = null,
                                          defaultSortKey = null,
                                          defaultSortDir = "asc", // "asc" | "desc"
+
+                                         headerHeight = 44,
+                                         headerGap = 8,
                                      }) {
     const [hoverRow, setHoverRow] = useState(null);
 
@@ -137,9 +144,9 @@ export default function AwesomeTable({
 
         return (
             <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 0.9, marginLeft: 6 }}>
-                <span style={{ opacity: upOpacity, fontSize: 12 }}>▲</span>
-                <span style={{ opacity: downOpacity, fontSize: 12 }}>▼</span>
-            </span>
+        <span style={{ opacity: upOpacity, fontSize: 12 }}>▲</span>
+        <span style={{ opacity: downOpacity, fontSize: 12 }}>▼</span>
+      </span>
         );
     };
 
@@ -164,10 +171,7 @@ export default function AwesomeTable({
     const gridTemplateColumns = useMemo(() => {
         return columns
             .map((c) => {
-                // ✅ explicit CSS width wins
                 if (c.width) return c.width;
-
-                // ✅ proportional sizing
                 const sRaw = c.size;
                 const s = Number.isFinite(Number(sRaw)) ? Number(sRaw) : 1;
                 const safe = s > 0 ? s : 1;
@@ -178,7 +182,14 @@ export default function AwesomeTable({
 
     return (
         <div style={styles.tableWrap} aria-live="polite">
-            <div style={{ ...styles.thead, gridTemplateColumns }}>
+            {/* HEADER (fixed height) */}
+            <div
+                style={{
+                    ...styles.thead,
+                    gridTemplateColumns,
+                    height: headerHeight,
+                }}
+            >
                 {columns.map((c) => {
                     const sortable = c.sortable !== false;
                     return (
@@ -203,37 +214,40 @@ export default function AwesomeTable({
                 })}
             </div>
 
-            {sortedRows.length === 0 ? (
-                <div style={styles.empty}>{emptyText}</div>
-            ) : (
-                <div>
-                    {sortedRows.map((r, idx) => {
-                        const key = r.id || r.key || idx;
-                        const isHover = hoverRow === key;
+            {/* ROWS (fills remaining space + scrolls) */}
+            <div style={{ ...styles.rowsScroll, paddingTop: headerGap }}>
+                {sortedRows.length === 0 ? (
+                    <div style={styles.empty}>{emptyText}</div>
+                ) : (
+                    <div style={styles.rowsInner}>
+                        {sortedRows.map((r, idx) => {
+                            const key = r.id || r.key || idx;
+                            const isHover = hoverRow === key;
 
-                        return (
-                            <div
-                                key={key}
-                                style={{ ...styles.trow, gridTemplateColumns, ...rowStyle(isHover) }}
-                                onMouseEnter={() => setHoverRow(key)}
-                                onMouseLeave={() => setHoverRow(null)}
-                            >
-                                {columns.map((c) => (
-                                    <div
-                                        key={c.key}
-                                        style={{
-                                            ...styles.td,
-                                            ...(c.style || {}),
-                                        }}
-                                    >
-                                        {typeof c.render === "function" ? c.render(r) : r?.[c.key]}
-                                    </div>
-                                ))}
-                            </div>
-                        );
-                    })}
-                </div>
-            )}
+                            return (
+                                <div
+                                    key={key}
+                                    style={{ ...styles.trow, gridTemplateColumns, ...rowStyle(isHover) }}
+                                    onMouseEnter={() => setHoverRow(key)}
+                                    onMouseLeave={() => setHoverRow(null)}
+                                >
+                                    {columns.map((c) => (
+                                        <div
+                                            key={c.key}
+                                            style={{
+                                                ...styles.td,
+                                                ...(c.style || {}),
+                                            }}
+                                        >
+                                            {typeof c.render === "function" ? c.render(r) : r?.[c.key]}
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
@@ -242,20 +256,37 @@ const styles = {
     tableWrap: {
         border: "2px solid rgba(0,0,0,0.12)",
         background: "rgba(255,255,255,0.6)",
+
+        height: "100%",
+        minHeight: 0,
+
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden", // ✅ rowsScroll becomes the only scroll container
     },
 
     thead: {
         display: "grid",
         gap: 10,
-        padding: "10px 10px",
+        padding: "0 10px", // ✅ deterministic height control (no vertical padding)
         borderBottom: "1px solid rgba(0,0,0,0.1)",
         background: "rgba(0,0,0,0.03)",
         fontWeight: 900,
         alignItems: "center",
+        flex: "0 0 auto",
+    },
+
+    rowsScroll: {
+        flex: "1 1 auto",
+        minHeight: 0,
+        overflow: "auto",
+    },
+
+    rowsInner: {
+        display: "block",
     },
 
     th: { minWidth: 0 },
-
     thSortable: { cursor: "pointer" },
 
     thText: {
