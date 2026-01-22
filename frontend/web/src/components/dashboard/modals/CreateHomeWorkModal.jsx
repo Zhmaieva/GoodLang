@@ -46,10 +46,10 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                     />
                 </div>
 
-                {/* lower half (placeholder) */}
-                <div style={styles.bottomHalf}>
-                    {/* intentionally empty */}
-                </div>
+                {/*/!* lower half (placeholder) *!/*/}
+                {/*<div style={styles.bottomHalf}>*/}
+                {/*    /!* intentionally empty *!/*/}
+                {/*</div>*/}
             </div>
         </AwesomeModal>
     );

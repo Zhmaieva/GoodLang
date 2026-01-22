@@ -38,7 +38,7 @@ export default function AwesomeTable({
                                          storageKey = null,
                                          defaultSortKey = null,
                                          defaultSortDir = "asc", // "asc" | "desc"
-
+                                         onRowClick= (r) => {},
                                          headerHeight = 44,
                                          headerGap = 8,
                                      }) {
@@ -161,7 +161,6 @@ export default function AwesomeTable({
     };
 
     const rowStyle = (isHover) => ({
-        cursor: "default",
         userSelect: "none",
         background: isHover ? "#ededed" : "#fff",
         filter: isHover ? "brightness(0.95)" : "none",
@@ -227,6 +226,7 @@ export default function AwesomeTable({
                             return (
                                 <div
                                     key={key}
+                                    onClick={() => onRowClick(r)}
                                     style={{ ...styles.trow, gridTemplateColumns, ...rowStyle(isHover) }}
                                     onMouseEnter={() => setHoverRow(key)}
                                     onMouseLeave={() => setHoverRow(null)}
@@ -302,6 +302,7 @@ const styles = {
         padding: "10px 10px",
         borderTop: "1px solid rgba(0,0,0,0.1)",
         alignItems: "center",
+        cursor: "pointer",
     },
 
     td: {

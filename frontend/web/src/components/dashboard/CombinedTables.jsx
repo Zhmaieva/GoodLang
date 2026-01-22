@@ -267,10 +267,6 @@ function TablePanel({
                         <div
                             role="button"
                             tabIndex={0}
-                            onClick={() => onRowClick?.(r)}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter" || e.key === " ") onRowClick?.(r);
-                            }}
                             title="Click to move"
                             style={{
                                 ...panelStyles.clickCell,
@@ -318,6 +314,7 @@ function TablePanel({
                     <AwesomeTable
                         storageKey={storageKey}
                         columns={clickableColumns}
+                        onRowClick={(r) => onRowClick?.(r)}
                         rows={(rows || []).map((r, idx) => ({
                             ...r,
                             // ensure stable row key for AwesomeTable

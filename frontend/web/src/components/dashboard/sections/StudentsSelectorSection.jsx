@@ -1,75 +1,97 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { useTeacherDashboard } from "../TeacherDashboardContext.jsx"; // :contentReference[oaicite:1]{index=1}
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import SelectableTableSection from "./SelectableTableSection.jsx";
 import CombinedTables from "../CombinedTables.jsx";
-
-function norm(v) {
-    return String(v || "").trim().toLowerCase();
-}
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
     return Array.from(s);
 }
 
+function clamp(n, min, max) {
+    return Math.max(min, Math.min(max, n));
+}
+
 /**
  * StudentsSelectorSection
  *
- * - Left column: 2 SelectableTableSection (Classes + Students quick select)
- * - Right column: CombinedTables (Available ↔ Selected students)
+ * Preserves existing behavior unless the container is narrow:
+ * - wide: fixed-height section, inner tables scroll, no outer scroll
+ * - narrow: wraps, the whole section scrolls vertically (so you can reach stacked columns)
  *
- * Behavior:
- * - Selecting a class => bulk select its students
- * - Unselecting a class => bulk unselect its students
- *
- * Output:
- * - onChangeSelectedStudentIds(nextIds, meta)
- *
- * Height:
- * - parent controls height via style (e.g. style={{height: 520}})
- * - children fill that height; tables scroll internally
+ * Parent controls height via style={{ height: ... }} or enclosing flex area.
  */
 export default function StudentsSelectorSection({
-                                                    // parent can control height via style
                                                     style,
                                                     className,
 
-                                                    // initial values (optional)
                                                     initialSelectedClassIds = [],
                                                     initialSelectedStudentIds = [],
 
-                                                    // notify parent with final student selection
                                                     onChangeSelectedStudentIds,
 
-                                                    // optional labels
                                                     titleClasses = "Класи",
                                                     titleStudentsQuick = "Студенти (швидкий вибір)",
                                                     titleAvailable = "Доступні студенти",
                                                     titleSelected = "Вибрані студенти",
+
+                                                    // breakpoint for "narrow" behavior (container width)
+                                                    narrowBreakpoint = 980,
                                                 }) {
     const { classes, students } = useTeacherDashboard();
 
-    // internal controlled selection
     const [selectedClassIds, setSelectedClassIds] = useState(() => uniqStrings(initialSelectedClassIds));
     const [selectedStudentIds, setSelectedStudentIds] = useState(() => uniqStrings(initialSelectedStudentIds));
 
-    const combinedRef = useRef(null);
-
-    // keep parent informed
+    // report final selection to parent
     useEffect(() => {
         onChangeSelectedStudentIds?.(selectedStudentIds, { source: "students_selector_section" });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedStudentIds]);
+
+    // ---- measure container width/height to switch behavior ONLY when narrow
+    const rootRef = useRef(null);
+    const [isNarrow, setIsNarrow] = useState(false);
+    const [box, setBox] = useState({ w: 0, h: 0 });
+
+    useLayoutEffect(() => {
+        if (!rootRef.current) return;
+
+        const el = rootRef.current;
+
+        const update = () => {
+            const r = el.getBoundingClientRect();
+            const w = Math.floor(r.width || 0);
+            const h = Math.floor(r.height || 0);
+            setBox({ w, h });
+            setIsNarrow(w > 0 && w < narrowBreakpoint);
+        };
+
+        update();
+
+        // ResizeObserver catches width changes inside modals/containers (better than window resize)
+        const ro = new ResizeObserver(() => update());
+        ro.observe(el);
+
+        return () => ro.disconnect();
+    }, [narrowBreakpoint]);
+
+    // in narrow mode, we want each “block” (left / right) to have a fixed internal height
+    // so the tables can still scroll internally, and the overall section can scroll if stacked.
+    const narrowPanelHeight = useMemo(() => {
+        const h = box.h || 600;
+        // roughly half-ish of available selector height, but within sane bounds
+        return clamp(Math.floor(h * 0.58), 280, 520);
+    }, [box.h]);
 
     // ---- helpers
     const classIdOf = (c) => String(c?.id ?? c?.class_id ?? "");
     const studentIdOf = (s) => String(s?.student_account_id ?? s?.studentId ?? s?.id ?? "");
     const studentClassIdOf = (s) => String(s?.class_id ?? s?.classId ?? "");
 
-    // Map classId => [studentIds] based on context "students" list
-    // (Students list in your dashboard context is already class-aware.)
+    // Map classId => [studentIds]
     const classToStudentIds = useMemo(() => {
-        const map = new Map(); // classId -> Set(studentId)
+        const map = new Map();
         for (const s of students || []) {
             const cid = studentClassIdOf(s);
             const sid = studentIdOf(s);
@@ -77,13 +99,11 @@ export default function StudentsSelectorSection({
             if (!map.has(cid)) map.set(cid, new Set());
             map.get(cid).add(sid);
         }
-        // convert to arrays
         const out = new Map();
         for (const [cid, set] of map.entries()) out.set(cid, Array.from(set));
         return out;
     }, [students]);
 
-    // ---- columns (AwesomeTable format)
     const classRows = useMemo(() => {
         const list = Array.isArray(classes) ? classes : [];
         return list.map((c, idx) => {
@@ -174,8 +194,13 @@ export default function StudentsSelectorSection({
         []
     );
 
-    // ---- Class selection change -> bulk student selection changes
-    const onClassesChange = (nextClassIds, meta) => {
+    // Search text helpers
+    const classSearchText = (c) => `${c?.__className || ""} ${c?.__studentsCount ?? ""}`;
+    const studentSearchText = (s) =>
+        `${s?.__name || ""} ${s?.__email || ""} ${s?.class_name || ""} ${s?.class_id || ""}`;
+
+    // ---- Class selection change => bulk student add/remove
+    const onClassesChange = (nextClassIds) => {
         const next = uniqStrings(nextClassIds);
 
         const prevSet = new Set(selectedClassIds);
@@ -186,7 +211,7 @@ export default function StudentsSelectorSection({
 
         setSelectedClassIds(next);
 
-        // bulk add students for newly selected classes
+        // add students for newly selected classes
         if (added.length) {
             const idsToAdd = [];
             for (const cid of added) {
@@ -198,7 +223,7 @@ export default function StudentsSelectorSection({
             }
         }
 
-        // bulk remove students for unselected classes (literal requirement)
+        // remove students for unselected classes (literal requirement)
         if (removed.length) {
             const idsToRemove = new Set();
             for (const cid of removed) {
@@ -206,50 +231,53 @@ export default function StudentsSelectorSection({
                 for (const sid of list) idsToRemove.add(String(sid));
             }
             if (idsToRemove.size) {
-                setSelectedStudentIds((prev) => (prev || []).map(String).filter((sid) => !idsToRemove.has(sid)));
+                setSelectedStudentIds((prev) =>
+                    (prev || []).map(String).filter((sid) => !idsToRemove.has(sid))
+                );
             }
         }
-
-        // optional meta hook for debugging / analytics
-        // (parent can listen via onChangeSelectedStudentIds)
     };
 
-    // ---- Students quick selection change (left bottom)
-    const onStudentsQuickChange = (nextStudentIds, meta) => {
-        const next = uniqStrings(nextStudentIds);
-        setSelectedStudentIds(next);
+    const onStudentsCombinedChange = (nextStudentIds) => {
+        setSelectedStudentIds(uniqStrings(nextStudentIds));
     };
 
-    // ---- CombinedTables change (right)
-    const onStudentsCombinedChange = (nextStudentIds, meta) => {
-        const next = uniqStrings(nextStudentIds);
-        setSelectedStudentIds(next);
-    };
-
-    // keep CombinedTables in sync even if selection changes via class picker/quick picker
-    // (CombinedTables is controlled; no imperative call needed here, but the ref is kept for future messaging)
-    useEffect(() => {
-        // no-op for now (kept intentionally)
-        // combinedRef.current?.setSelectedIds?.(selectedStudentIds);
-    }, [selectedStudentIds]);
-
-    // ---- Search text helpers
-    const classSearchText = (c) => `${c?.__className || ""} ${c?.__studentsCount ?? ""}`;
-    const studentSearchText = (s) =>
-        `${s?.__name || ""} ${s?.__email || ""} ${s?.class_name || ""} ${s?.class_id || ""}`;
+    // --- heights for children
+    const leftBlockHeight = isNarrow ? narrowPanelHeight : "100%";
+    const rightBlockHeight = isNarrow ? narrowPanelHeight : "100%";
+    const selectorScrollOverflow = isNarrow ? "auto" : "hidden";
 
     return (
         <div
+            ref={rootRef}
             className={className}
             style={{
                 ...styles.wrap,
+                overflow: "hidden",
                 ...style,
             }}
         >
-            <div style={styles.row}>
-                {/* LEFT: two stacked sections */}
-                <div style={styles.leftCol}>
-                    <div style={styles.leftTop}>
+            {/* ✅ only becomes scrollable in narrow mode */}
+            <div
+                style={{
+                    ...styles.scrollWrap,
+                    overflowY: selectorScrollOverflow,
+                }}
+            >
+                <div
+                    style={{
+                        ...styles.row,
+                        // ✅ preserve your existing fixed-height behavior unless narrow
+                        height: isNarrow ? "auto" : "100%",
+                    }}
+                >
+                    {/* LEFT */}
+                    <div
+                        style={{
+                            ...styles.leftCol,
+                            height: leftBlockHeight,
+                        }}
+                    >
                         <SelectableTableSection
                             title={titleClasses}
                             items={classRows}
@@ -265,39 +293,27 @@ export default function StudentsSelectorSection({
                         />
                     </div>
 
-                    {/*<div style={styles.leftBottom}>*/}
-                    {/*    <SelectableTableSection*/}
-                    {/*        title={titleStudentsQuick}*/}
-                    {/*        items={studentRows}*/}
-                    {/*        columns={studentColumns}*/}
-                    {/*        mode="multi"*/}
-                    {/*        selectedIds={selectedStudentIds}*/}
-                    {/*        onChangeSelectedIds={onStudentsQuickChange}*/}
-                    {/*        getId={(r) => r?.__studentId}*/}
-                    {/*        getSearchText={studentSearchText}*/}
-                    {/*        storageKey="students_selector_students_quick_sort_v1"*/}
-                    {/*        emptyText="Немає студентів"*/}
-                    {/*        style={{ height: "100%" }}*/}
-                    {/*    />*/}
-                    {/*</div>*/}
-                </div>
-
-                {/* RIGHT: combined available/selected */}
-                <div style={styles.rightCol}>
-                    <CombinedTables
-                        ref={combinedRef}
-                        items={studentRows}
-                        selectedIds={selectedStudentIds}
-                        onChangeSelectedIds={onStudentsCombinedChange}
-                        getId={(r) => r?.__studentId}
-                        getSearchText={studentSearchText}
-                        columns={studentColumns}
-                        availableTitle={titleAvailable}
-                        selectedTitle={titleSelected}
-                        storageKeyAvailable="students_selector_available_sort_v1"
-                        storageKeySelected="students_selector_selected_sort_v1"
-                        style={{ height: "100%" }}
-                    />
+                    {/* RIGHT */}
+                    <div
+                        style={{
+                            ...styles.rightCol,
+                            height: rightBlockHeight,
+                        }}
+                    >
+                        <CombinedTables
+                            items={studentRows}
+                            selectedIds={selectedStudentIds}
+                            onChangeSelectedIds={onStudentsCombinedChange}
+                            getId={(r) => r?.__studentId}
+                            getSearchText={studentSearchText}
+                            columns={studentColumns}
+                            availableTitle={titleAvailable}
+                            selectedTitle={titleSelected}
+                            storageKeyAvailable="students_selector_available_sort_v1"
+                            storageKeySelected="students_selector_selected_sort_v1"
+                            style={{ height: "100%" }}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,45 +322,48 @@ export default function StudentsSelectorSection({
 
 const styles = {
     wrap: {
-        display: "block",
+        height: "100%",
+        minHeight: 0,
         minWidth: 0,
-        height: "100%", // parent sets explicit height (or it can fill container)
+        display: "flex",
+        flexDirection: "column",
     },
 
-    // 1:3 proportion, wrap on shrink
+    // this is the outer scroll container, only active in narrow mode
+    scrollWrap: {
+        flex: "1 1 auto",
+        minHeight: 0,
+        minWidth: 0,
+        overflowX: "hidden",
+        paddingRight: 2,
+    },
+
+    // wide mode: row fills 100% height; narrow mode: row becomes natural height and wraps
     row: {
         display: "flex",
         gap: 14,
         alignItems: "stretch",
-        height: "100%",
         flexWrap: "wrap",
+        minWidth: 0,
+        minHeight: 0,
     },
 
     leftCol: {
-        flex: "1 1 360px", // 1 part, can shrink/wrap
-        minWidth: 280,
+        flex: "1 1 360px",
+        minHeight: 0,
+        minWidth: 0,
+        overflow: "hidden",
         display: "flex",
         flexDirection: "column",
-        gap: 14,
-        height: "100%",
-        minHeight: 0, // important for internal scroll regions
-    },
-
-    leftTop: {
-        flex: "1 1 0",
-        minHeight: 0,
-    },
-
-    leftBottom: {
-        flex: "1 1 0",
-        minHeight: 0,
     },
 
     rightCol: {
-        flex: "3 1 640px", // 3 parts
-        minWidth: 320,
-        height: "100%",
+        flex: "3 1 640px",
         minHeight: 0,
+        minWidth: 0,
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
     },
 
     boldEllipsis: {

@@ -7,28 +7,17 @@ function norm(v) {
     return String(v || "").trim().toLowerCase();
 }
 
+function uniqStrings(arr) {
+    const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
+    return Array.from(s);
+}
+
 /**
  * SelectableTableSection
  *
- * A single-table "section" that:
- * - shows rows (items)
- * - allows searching
- * - allows selecting items (controlled by selectedIds)
- * - uses AwesomeTable sorting
- * - scrolls internally (table area)
- *
- * Props:
- * - title: string
- * - items: array
- * - columns: AwesomeTable columns (same format)
- * - selectedIds: array of ids (controlled)
- * - onChangeSelectedIds: (nextIds, meta) => void
- * - getId: (item) => id (default: item.id)
- * - getSearchText: (item) => string (default: join primitive values)
- * - storageKey: string for AwesomeTable sorting persistence
- * - emptyText: string
- * - style / className: for parent-controlled height and layout
- * - mode: "multi" | "single" (default: "multi")
+ * - Single table "section" with search + selection.
+ * - Adds a checkbox column.
+ * - Clicking anywhere in a row toggles selection.
  */
 export default function SelectableTableSection({
                                                    title = "Select items",
@@ -112,12 +101,41 @@ export default function SelectableTableSection({
         emit(Array.from(base), { action: "select_all_filtered" });
     };
 
-    // Decorate columns to:
-    // - allow click-to-toggle selection anywhere
-    // - visually indicate selected rows (subtle background + accent border)
+    // ✅ Row-wrapper: make the whole row clickable by wrapping EVERY cell in a full-height clickable div,
+    // and add a real checkbox column as first column for clear UX.
+    const selectionColumn = useMemo(() => {
+        return {
+            key: "__selected",
+            title: "",
+            size: 0.35,
+            sortable: false,
+            width: "44px",
+            render: (r) => {
+                const id = String(getId(r));
+                const isSelected = id && selectedSet.has(id);
+
+                return (
+                    <div style={styles.checkboxCell}>
+                        <span
+                            aria-hidden="true"
+                            style={{
+                                ...styles.checkboxBox,
+                                ...(isSelected ? styles.checkboxBoxOn : null),
+                            }}
+                        >
+                            {isSelected ? "✓" : ""}
+                        </span>
+                    </div>
+                );
+            },
+        };
+    }, [getId, selectedSet]);
+
     const clickableColumns = useMemo(() => {
         const cols = Array.isArray(columns) ? columns : [];
-        return cols.map((c) => {
+
+        // Wrap each cell so any click toggles the row.
+        const wrapped = cols.map((c) => {
             const userRender = c.render;
 
             return {
@@ -125,7 +143,6 @@ export default function SelectableTableSection({
                 render: (r) => {
                     const id = String(getId(r));
                     const isSelected = id && selectedSet.has(id);
-
                     const content =
                         typeof userRender === "function" ? userRender(r) : r?.[c.key];
 
@@ -133,15 +150,11 @@ export default function SelectableTableSection({
                         <div
                             role="button"
                             tabIndex={0}
-                            onClick={() => toggle(r, { source: "row_click" })}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter" || e.key === " ") toggle(r, { source: "row_key" });
-                            }}
-                            title={isSelected ? "Click to deselect" : "Click to select"}
                             style={{
                                 ...styles.clickCell,
                                 ...(isSelected ? styles.clickCellSelected : null),
                             }}
+                            title={isSelected ? "Click to deselect" : "Click to select"}
                         >
                             {content}
                         </div>
@@ -149,7 +162,43 @@ export default function SelectableTableSection({
                 },
             };
         });
-    }, [columns, getId, selectedSet, toggle]);
+
+        // Also wrap the checkbox column so clicking checkbox area toggles too.
+        const wrappedSelection = {
+            ...selectionColumn,
+            render: (r) => {
+                const id = String(getId(r));
+                const isSelected = id && selectedSet.has(id);
+
+                return (
+                    <div
+                        role="button"
+                        tabIndex={0}
+                        style={{
+                            ...styles.clickCell,
+                            ...(isSelected ? styles.clickCellSelected : null),
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}
+                        title={isSelected ? "Click to deselect" : "Click to select"}
+                    >
+                        <span
+                            aria-hidden="true"
+                            style={{
+                                ...styles.checkboxBox,
+                                ...(isSelected ? styles.checkboxBoxOn : null),
+                            }}
+                        >
+                            {isSelected ? "✓" : ""}
+                        </span>
+                    </div>
+                );
+            },
+        };
+
+        return [wrappedSelection, ...wrapped];
+    }, [columns, getId, selectedSet, toggle, selectionColumn]);
 
     return (
         <div className={className} style={{ ...styles.wrap, ...style }}>
@@ -157,9 +206,9 @@ export default function SelectableTableSection({
                 title={title}
                 right={
                     <div style={styles.headerRight}>
-            <span style={styles.count}>
-              {selectedIds?.length || 0} вибрано
-            </span>
+                        <span style={styles.count}>
+                            {selectedIds?.length || 0} вибрано
+                        </span>
 
                         {mode === "multi" ? (
                             <>
@@ -202,6 +251,7 @@ export default function SelectableTableSection({
                                 ...r,
                                 id: r?.id ?? String(getId(r) ?? idx),
                             }))}
+                            onRowClick={(r) => toggle(r, { source: "row_click" })}
                             emptyText={emptyText}
                         />
                     </div>
@@ -215,7 +265,7 @@ const styles = {
     wrap: {
         display: "block",
         minWidth: 0,
-        height: "100%", // parent controls the height externally
+        height: "100%",
     },
 
     cardFill: {
@@ -223,6 +273,7 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         minWidth: 0,
+        minHeight: 0,
     },
 
     body: {
@@ -230,6 +281,7 @@ const styles = {
         flexDirection: "column",
         gap: 10,
         minWidth: 0,
+        minHeight: 0,
         height: "100%",
     },
 
@@ -267,8 +319,8 @@ const styles = {
 
     tableScroll: {
         flex: "1 1 auto",
-        minHeight: 0, // ✅ needed so overflow works inside flex
-        overflow: "auto",
+        minHeight: 0,
+        overflow: "hidden", // table handles internal scroll
         height: "100%",
     },
 
@@ -278,10 +330,35 @@ const styles = {
         cursor: "pointer",
         userSelect: "none",
         padding: "2px 0",
+        minWidth: 0,
     },
 
     clickCellSelected: {
+        //background: "rgba(255,97,56,0.10)",
+    },
+
+    checkboxCell: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    checkboxBox: {
+        width: 18,
+        height: 18,
+        border: "2px solid rgba(0,0,0,0.25)",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontWeight: 900,
+        fontSize: 12,
+        lineHeight: 1,
+        background: "rgba(255,255,255,0.9)",
+    },
+
+    checkboxBoxOn: {
+        border: "2px solid var(--accent, #ff6138)",
         background: "rgba(255,97,56,0.10)",
-        boxShadow: "inset 3px 0 0 var(--accent, #ff6138)",
+        color: "var(--text, #3a2a1d)",
     },
 };
