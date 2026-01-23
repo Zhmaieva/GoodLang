@@ -1,38 +1,4 @@
-// controllers/schoolsController.js — FULL DROP-IN
-//
-// Routes implemented (NO "student saves answer" yet):
-//
-// 1) POST /schools/task-sets
-//    - Teacher creates a set from config (no task content in request)
-//    - Builds tasks via buildTaskSetTasks()
-//    - Saves set+tasks, assigns to provided students
-//
-// 2) GET /schools/task-sets/teacher
-//    - Teacher list last task sets with paging + per-student completion per set
-//    - query: limit=10&cursorCreatedAt=...&cursorId=...
-//
-// 3) GET /schools/task-sets/student
-//    - Student list last assigned sets with paging + completion for that student
-//    - query: limit=10&cursorAssignedAt=...&cursorId=...
-//
-// 4) GET /schools/task-sets/:taskSetId/tasks
-//    - Teacher gets all tasks in the set
-//
-// 5) GET /schools/task-sets/:taskSetId/answers
-//    - Teacher gets all answers in the set (optional ?studentId=...)
-//    - This is read-only until we implement student submission
-//
-// 6) GET /schools/task-sets/:taskSetId/next
-//    - Student gets next unanswered task in the set
-//
-// 7) POST /schools/task-sets/:taskSetId/assignments
-//    - Teacher assigns an existing set to additional students
-//    - body: { studentIds: [...], dueDate?: ... }
-//
-// Depends on:
-// - authMiddleware
-// - buildTaskSetTasks (services/taskSetBuilderService.js)
-// - repository methods (database/repositories/scoresRepository.js) :contentReference[oaicite:1]{index=1}
+// controllers/schoolsTaskSetsController.js — FULL DROP-IN (UPDATED)
 
 import { authMiddleware } from "../middleware/authMiddleware.js";
 
@@ -46,7 +12,10 @@ import {
     getAllStudentAnswersFromTaskSetByTeacher,
 } from "../database/repositories/scoresRepository.js";
 
-import { buildTaskSetTasks } from "../services/taskSetBuilderService.js";
+import {
+    buildTaskSetTasks,
+    buildRecommendedQuotasForStudents,
+} from "../services/taskSetBuilderService.js";
 
 const name = "schools";
 
@@ -76,12 +45,6 @@ function normalizeTaskMode(v) {
     return null;
 }
 
-function normalizeLevel(v) {
-    const l = String(v ?? "").trim().toUpperCase();
-    if (["A1", "A2", "B1", "B2"].includes(l)) return l;
-    return null;
-}
-
 function clampInt(v, min, max, fallback) {
     const n = Number.parseInt(String(v ?? ""), 10);
     if (!Number.isFinite(n)) return fallback;
@@ -108,11 +71,59 @@ function parseCursorStudent(q) {
     return { assignedAt: cursorAssignedAt, id: cursorId };
 }
 
+function normalizeRecommendedPlan(body) {
+    // expected: { items: [ { studentId, numberOfTasks, seed, quotas, breakdown } ] }
+    const items = body?.items;
+    if (!Array.isArray(items)) return [];
+    return items
+        .map((x) => ({
+            studentId: String(x?.studentId || "").trim(),
+            numberOfTasks: Number(x?.numberOfTasks) || null,
+            seed: Number(x?.seed) || null,
+            quotas: x?.quotas || null,
+            breakdown: x?.breakdown || null,
+        }))
+        .filter((x) => x.studentId && x.quotas && typeof x.quotas === "object");
+}
+
 // --------------------------------------------------
 // Controller
 // --------------------------------------------------
 export const schoolsTaskSetsController = {
     mapRoutes(app) {
+
+        // ==========================================================
+        // (0) RECOMMENDED PREVIEW (teacher) — per student quotas
+        // ==========================================================
+        // POST /schools/task-sets/recommended-preview
+        // body: { studentIds: [...], seed, numberOfTasksPerStudent }
+        app.post(`/${name}/task-sets/recommended-preview`, authMiddleware, async (req, res, next) => {
+            try {
+                const teacherId = req.user.id;
+
+                const studentIds = normalizeArrayIds(req.body?.studentIds);
+                if (!studentIds.length) {
+                    return res.status(400).json({ error: "studentIds must be a non-empty array" });
+                }
+
+                const numberOfTasksPerStudent = clampInt(req.body?.numberOfTasksPerStudent, 1, 50, 10);
+
+                const seedRaw = Number(req.body?.seed);
+                const seed = Number.isFinite(seedRaw) ? seedRaw : 1;
+
+                const result = await buildRecommendedQuotasForStudents({
+                    teacherId,
+                    studentIds,
+                    seed,
+                    numberOfTasksPerStudent,
+                });
+
+                return res.json(result);
+            } catch (e) {
+                next(e);
+            }
+        });
+
         // ==========================================================
         // (1) CREATE TASK SET (teacher)
         // ==========================================================
@@ -123,13 +134,6 @@ export const schoolsTaskSetsController = {
                 const studentIds = normalizeArrayIds(req.body?.studentIds);
                 if (!studentIds.length) {
                     return res.status(400).json({ error: "studentIds must be a non-empty array" });
-                }
-
-                const taskMode = normalizeTaskMode(req.body?.taskMode);
-                if (!taskMode) {
-                    return res.status(400).json({
-                        error: "taskMode must be one of: translations, gaps, mixed",
-                    });
                 }
 
                 const title = String(req.body?.title ?? "").trim();
@@ -144,36 +148,93 @@ export const schoolsTaskSetsController = {
 
                 const dueDate = parseOptionalDate(req.body?.dueDate);
 
-                const ruleIds = normalizeRuleIds(req.body?.ruleIds);
                 const recommended = String(req.body?.recommended ?? "false").toLowerCase() === "true";
 
-                let level = null;
+                // -----------------------------
+                // RECOMMENDED MODE (NEW)
+                // - requires recommendedPlan (items per student)
+                // - creates one set per student (tasks differ per student)
+                // -----------------------------
+                if (recommended) {
+                    const planItems = normalizeRecommendedPlan(req.body?.recommendedPlan);
+                    if (!planItems.length) {
+                        return res.status(400).json({
+                            error: "recommended=true requires recommendedPlan with { items: [...] } from /recommended-preview",
+                        });
+                    }
 
-                if (!ruleIds.length) {
-                    if (!recommended) {
-                        return res.status(400).json({
-                            error: "Provide ruleIds OR set recommended=true with level (A1–B2)",
+                    // Only create for students included in request
+                    const planByStudent = new Map(planItems.map((p) => [p.studentId, p]));
+
+                    const createdSets = [];
+                    for (const sid of studentIds) {
+                        const plan = planByStudent.get(sid);
+                        if (!plan) continue;
+
+                        const tasks = await buildTaskSetTasks({
+                            teacherId,
+                            recommended: true,
+                            numberOfTasks,
+                            seed, // fallback
+                            recommendedPlan: plan,
+                        });
+
+                        const created = await createTaskSetWithTasks({
+                            teacherId,
+                            setType: "homework",
+                            title,
+                            deadline: dueDate,
+                            tasks,
+                        });
+
+                        // Assign ONLY to this student
+                        await assignTaskSetsToStudents({
+                            teacherId,
+                            taskSetIds: [created.taskSetId],
+                            studentIds: [sid],
+                            setType: "homework",
+                            deadline: dueDate,
+                        });
+
+                        createdSets.push({
+                            studentId: sid,
+                            taskSetId: created.taskSetId,
+                            numberOfTasks: tasks.length,
+                            seed: plan?.seed ?? seed,
                         });
                     }
-                    level = normalizeLevel(req.body?.level);
-                    if (!level) {
-                        return res.status(400).json({
-                            error: "level is required when recommended=true (A1–B2)",
-                        });
-                    }
-                } else {
-                    // optional
-                    level = req.body?.level ? normalizeLevel(req.body.level) : null;
+
+                    return res.status(201).json({
+                        mode: "recommended",
+                        title,
+                        dueDate: dueDate ? dueDate.toISOString() : null,
+                        items: createdSets,
+                    });
                 }
 
-                // Build tasks (teacher sends no content)
+                // -----------------------------
+                // NON-RECOMMENDED (LEGACY)
+                // -----------------------------
+                const taskMode = normalizeTaskMode(req.body?.taskMode);
+                if (!taskMode) {
+                    return res.status(400).json({
+                        error: "taskMode must be one of: translations, gaps, mixed",
+                    });
+                }
+
+                const ruleIds = normalizeRuleIds(req.body?.ruleIds);
+                if (!ruleIds.length) {
+                    return res.status(400).json({
+                        error: "Non-recommended mode requires ruleIds (non-empty).",
+                    });
+                }
+
                 const tasks = await buildTaskSetTasks({
                     teacherId,
                     studentIds,
                     taskMode,
-                    ruleIds: ruleIds.length ? ruleIds : undefined,
-                    recommended: !ruleIds.length,
-                    level,
+                    ruleIds,
+                    recommended: false,
                     numberOfTasks,
                     seed,
                 });
@@ -182,7 +243,6 @@ export const schoolsTaskSetsController = {
                     return res.status(400).json({ error: "Failed to generate tasks" });
                 }
 
-                // Save set + tasks
                 const created = await createTaskSetWithTasks({
                     teacherId,
                     setType: "homework",
@@ -191,7 +251,6 @@ export const schoolsTaskSetsController = {
                     tasks,
                 });
 
-                // Assign to students
                 const assigned = await assignTaskSetsToStudents({
                     teacherId,
                     taskSetIds: [created.taskSetId],
@@ -201,6 +260,7 @@ export const schoolsTaskSetsController = {
                 });
 
                 return res.status(201).json({
+                    mode: "manual",
                     taskSetId: created.taskSetId,
                     assigned: assigned?.inserted ?? 0,
                     numberOfTasks: tasks.length,
@@ -217,7 +277,6 @@ export const schoolsTaskSetsController = {
         // ==========================================================
         // (2) TEACHER: LIST TASK SETS (paged, per-student completion)
         // ==========================================================
-        // GET /schools/task-sets/teacher?limit=10&cursorCreatedAt=...&cursorId=...
         app.get(`/${name}/task-sets/teacher`, authMiddleware, async (req, res, next) => {
             try {
                 const teacherId = req.user.id;
@@ -239,7 +298,6 @@ export const schoolsTaskSetsController = {
         // ==========================================================
         // (3) STUDENT: LIST ASSIGNED TASK SETS (paged, completion)
         // ==========================================================
-        // GET /schools/task-sets/student?limit=10&cursorAssignedAt=...&cursorId=...
         app.get(`/${name}/task-sets/student`, authMiddleware, async (req, res, next) => {
             try {
                 const studentId = req.user.id;
@@ -261,7 +319,6 @@ export const schoolsTaskSetsController = {
         // ==========================================================
         // (4) TEACHER: GET ALL TASKS FROM SET
         // ==========================================================
-        // GET /schools/task-sets/:taskSetId/tasks
         app.get(`/${name}/task-sets/:taskSetId/tasks`, authMiddleware, async (req, res, next) => {
             try {
                 const teacherId = req.user.id;
@@ -278,7 +335,6 @@ export const schoolsTaskSetsController = {
         // ==========================================================
         // (5) TEACHER: GET ALL STUDENT ANSWERS FROM SET (read-only)
         // ==========================================================
-        // GET /schools/task-sets/:taskSetId/answers?studentId=...
         app.get(`/${name}/task-sets/:taskSetId/answers`, authMiddleware, async (req, res, next) => {
             try {
                 const teacherId = req.user.id;
@@ -302,7 +358,6 @@ export const schoolsTaskSetsController = {
         // ==========================================================
         // (6) STUDENT: GET NEXT TASK FROM SET
         // ==========================================================
-        // GET /schools/task-sets/:taskSetId/next
         app.get(`/${name}/task-sets/:taskSetId/next`, authMiddleware, async (req, res, next) => {
             try {
                 const studentId = req.user.id;
@@ -310,7 +365,7 @@ export const schoolsTaskSetsController = {
                 if (!taskSetId) return res.status(400).json({ error: "taskSetId required" });
 
                 const task = await getNextTaskFromTaskSet({ studentId, taskSetId });
-                return res.json({ task }); // can be null when completed
+                return res.json({ task });
             } catch (e) {
                 next(e);
             }
@@ -319,8 +374,6 @@ export const schoolsTaskSetsController = {
         // ==========================================================
         // (7) TEACHER: ASSIGN EXISTING SET TO MORE STUDENTS
         // ==========================================================
-        // POST /schools/task-sets/:taskSetId/assignments
-        // body: { studentIds: [...], dueDate?: ... }
         app.post(`/${name}/task-sets/:taskSetId/assignments`, authMiddleware, async (req, res, next) => {
             try {
                 const teacherId = req.user.id;

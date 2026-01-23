@@ -226,6 +226,75 @@ export async function insertStudentAnswer(payload) {
 }
 
 /**
+ * Recommended-mode stats: per-student per-rule attempts/accuracy/lastDate.
+ *
+ * Returns:
+ * {
+ *   [studentId]: {
+ *     [ruleId]: { attemptsNumber, accuracy, lastDate }
+ *   }
+ * }
+ */
+export async function getRuleStatsForStudents({ studentIds, teacherId = null }) {
+    const db = await connectDB();
+
+    const ids = Array.isArray(studentIds)
+        ? studentIds.map((x) => String(x).trim()).filter(Boolean)
+        : [];
+
+    if (!ids.length) return {};
+
+    const teacherKey = normalizeTeacherId(teacherId);
+
+    // Use `date` as the per-attempt timestamp (falls back to createdAt/updatedAt if needed)
+    const pipeline = [
+        {
+            $match: {
+                userId: { $in: ids },
+                teacherId: teacherKey,
+            },
+        },
+        {
+            $group: {
+                _id: { userId: "$userId", rule: "$rule" },
+                attemptsNumber: { $sum: 1 },
+                accuracy: { $avg: "$score" }, // score 0..100
+                lastDate: { $max: "$date" },
+            },
+        },
+        {
+            $project: {
+                _id: 0,
+                userId: "$_id.userId",
+                rule: "$_id.rule",
+                attemptsNumber: 1,
+                accuracy: 1,
+                lastDate: 1,
+            },
+        },
+    ];
+
+    const rows = await db.collection("good_lang_scores").aggregate(pipeline).toArray();
+
+    const out = {};
+    for (const sid of ids) out[sid] = {};
+
+    for (const r of rows) {
+        const sid = String(r.userId);
+        const rule = String(r.rule);
+        if (!out[sid]) out[sid] = {};
+        out[sid][rule] = {
+            attemptsNumber: Number(r.attemptsNumber) || 0,
+            accuracy: Number.isFinite(r.accuracy) ? r.accuracy : 0,
+            lastDate: r.lastDate ? toIso(r.lastDate) : null,
+        };
+    }
+
+    return out;
+}
+
+
+/**
  * Create a task set + insert its tasks.
  *
  * teacherId is UUID STRING.
