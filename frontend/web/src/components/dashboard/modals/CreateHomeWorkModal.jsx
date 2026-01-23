@@ -1,38 +1,53 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import AwesomeModal from "../AwesomeModal.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 import StudentsSelectorSection from "../sections/StudentsSelectorSection.jsx";
 import StepScreens from "../StepScreens.jsx";
-import Tooltip from "../Tooltip.jsx"; // adjust path if needed
+import Tooltip from "../Tooltip.jsx"; // keep if you already use it in footer
+import Loader from "../Loader.jsx";   // ✅ adjust path if needed
+
+import { apiRecommendedPreview } from "../../../services/api.js"; // ✅ adjust path if needed
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
     return Array.from(s);
 }
 
+function makeRandomSeed() {
+    // stable enough random int
+    return Math.floor(Math.random() * 1_000_000_000);
+}
+
 export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const [selectedStudentIds, setSelectedStudentIds] = useState([]);
     const selectedCount = useMemo(() => selectedStudentIds.length, [selectedStudentIds]);
 
-    const STEPS = useMemo(() => ([
-        {
-            label: "Учні",
-            title: "Вибери учнів",
-            subtitle: "Обери класи або окремих учнів",
-        },
-        {
-            label: "Завдання",
-            title: "Налаштуй завдання",
-            subtitle: "Або дай GoodLang зробити це за тебе",
-        },
-        {
-            label: "Підсумок",
-            title: "Майже готово",
-            subtitle: "Переконайся, що все правильно",
-        },
-    ]), []);
+    const STEPS = useMemo(
+        () => [
+            { label: "Учні", title: "Вибери учнів", subtitle: "Обери класи або окремих учнів" },
+            { label: "Завдання", title: "Налаштуй завдання", subtitle: "Або дай GoodLang зробити це за тебе" },
+            { label: "Підсумок", title: "Майже готово", subtitle: "Переконайся, що все правильно" },
+        ],
+        []
+    );
 
     const [step, setStep] = useState(0);
+
+    // ✅ Step 2 readiness gate
+    const [step2Ready, setStep2Ready] = useState(false);
+
+    // ✅ used to force Loader remount when selection changes
+    const previewKey = useMemo(() => uniqStrings(selectedStudentIds).sort().join("|"), [selectedStudentIds]);
+
+    // ✅ seed should be random and not displayed; re-generate each preview run
+    const seedRef = useRef(makeRandomSeed());
+
+    // When student selection changes, Step 2 must re-load
+    useMemo(() => {
+        seedRef.current = makeRandomSeed();
+        setStep2Ready(false);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [previewKey]);
 
     const screenTitle = STEPS?.[step]?.title || "Створити домашнє завдання";
     const screenSubtitle = STEPS?.[step]?.subtitle || `Крок ${step + 1} з ${STEPS.length}`;
@@ -40,21 +55,20 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const isFirst = step <= 0;
     const isLast = step >= STEPS.length - 1;
 
-    // ✅ per-step validation (re-evaluates automatically on state changes)
     const validateStep = (idx) => {
         // Step 0: students required
         if (idx === 0) {
             const ok = (selectedStudentIds?.length || 0) > 0;
-            return ok
-                ? { ok: true, message: "" }
-                : { ok: false, message: "Виберіть учня, щоб продовжити" };
+            return ok ? { ok: true, message: "" } : { ok: false, message: "Виберіть учня, щоб продовжити" };
         }
 
+        // ✅ Step 1: pass only after recommended-preview finished loading
         if (idx === 1) {
-            return { ok: false, message: "Оберіть завдання, щоб продовжити" };
+            return step2Ready
+                ? { ok: true, message: "" }
+                : { ok: false, message: "Завантажуємо рекомендації..." };
         }
 
-        // next steps: no validation yet
         return { ok: true, message: "" };
     };
 
@@ -82,13 +96,10 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
         }
 
         // last step action (no-op for now)
-        // later: call create homework API, then onCreated?.()
         // onCreated?.();
     };
 
-    const onBack = () => {
-        setStep((s) => Math.max(s - 1, 0));
-    };
+    const onBack = () => setStep((s) => Math.max(s - 1, 0));
 
     if (!open) return null;
 
@@ -102,7 +113,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
             footer={
                 <div style={styles.footer}>
                     <div style={styles.footerLeft}>
-                        { !isFirst &&
+                        {!isFirst && (
                             <AwesomeButton
                                 variant="ghost"
                                 onClick={onBack}
@@ -111,8 +122,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                             >
                                 {backLabel}
                             </AwesomeButton>
-                        }
-
+                        )}
                     </div>
 
                     <div style={styles.footerMeta}>
@@ -120,39 +130,22 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                     </div>
 
                     <div style={styles.footerRight}>
-                        {
-                            isBlocked &&
+                        {isBlocked ? (
                             <Tooltip content={blockMsg} autoHideMs={1500} fadeMs={260}>
-
-                            <AwesomeButton
-                                variant="accent"
-                                onClick={onNext}
-                                disabled
-                                title={blockMsg}
-                            >
-                                <div style={styles.nextBtnInner}>
-                                        <span
-                                            style={{...styles.lockIcon}}
-                                        />
-                                    <span>{nextLabel}</span>
-                                </div>
-                            </AwesomeButton>
+                                <AwesomeButton variant="accent" onClick={onNext} disabled title={blockMsg}>
+                                    <div style={styles.nextBtnInner}>
+                                        <span style={{ ...styles.lockIcon }} />
+                                        <span>{nextLabel}</span>
+                                    </div>
+                                </AwesomeButton>
                             </Tooltip>
-                        }
-
-                        {
-                            !isBlocked &&
-                            <AwesomeButton
-                                variant="accent"
-                                onClick={onNext}
-                                title={nextLabel}
-                            >
+                        ) : (
+                            <AwesomeButton variant="accent" onClick={onNext} title={nextLabel}>
                                 <div style={styles.nextBtnInner}>
                                     <span>{nextLabel}</span>
                                 </div>
                             </AwesomeButton>
-
-                        }
+                        )}
                     </div>
                 </div>
             }
@@ -175,16 +168,45 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                                     <StudentsSelectorSection
                                         style={{ height: "100%" }}
                                         initialSelectedStudentIds={selectedStudentIds}
-                                        onChangeSelectedStudentIds={(ids) =>
-                                            setSelectedStudentIds(uniqStrings(ids))
-                                        }
+                                        onChangeSelectedStudentIds={(ids) => setSelectedStudentIds(uniqStrings(ids))}
                                     />
                                 </div>
                             );
                         }
 
                         if (activeStep === 1) {
-                            return <div style={styles.placeholder}>{/* TODO */}</div>;
+                            // ✅ Always load recommended-preview when this step is mounted
+                            // (remount happens automatically when previewKey changes via key prop)
+                            return (
+                                <div style={styles.stepFill}>
+                                    <Loader
+                                        key={previewKey || "no-students"}
+                                        estimateMs={200}
+                                        minVisibleMs={400}
+                                        description="Готуємо рекомендації для учнів..."
+                                        load={async () => {
+                                            // If no students selected (should be blocked by step 0 anyway)
+                                            if (!selectedStudentIds?.length) return;
+
+                                            // ✅ seed hidden, random
+                                            const seed = seedRef.current;
+
+                                            // ✅ call endpoint, ignore response
+                                            await apiRecommendedPreview({
+                                                studentIds: selectedStudentIds,
+                                                seed,
+                                            });
+                                        }}
+                                        onDone={() => {
+                                            // ✅ Step 2 validation becomes OK when done
+                                            setStep2Ready(true);
+                                        }}
+                                    >
+                                        {/* You asked: don't parse results, simply empty content */}
+                                        <div style={styles.emptyStepContent} />
+                                    </Loader>
+                                </div>
+                            );
                         }
 
                         return <div style={styles.placeholder}>{/* TODO */}</div>;
@@ -212,6 +234,12 @@ const styles = {
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
+    },
+
+    emptyStepContent: {
+        flex: "1 1 auto",
+        minHeight: 0,
+        minWidth: 0,
     },
 
     placeholder: {

@@ -1,97 +1,14 @@
-import {getToken} from "./accountService.js";
-import {logError} from "./logger.js";
-import {getPromoCode} from "./dataService.js";
+import { getToken } from "./accountService.js";
+import { logError } from "./logger.js";
+import { getPromoCode } from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 const STORAGE_KEY_APP_VERSION = "app_version";
 const CLIENT_APP_VERSION = "1.1.4"; // hardcoded client version
 
-export async function callCheckoutApi() {
-    const url = `${API_BASE}/payments/create-checkout-session`;
-
-    const res = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            'Authorization': `Bearer ${await getToken()}`,
-        },
-        body: JSON.stringify({
-            promoCode: getPromoCode()
-        })
-    });
-
-    const data = await res.json();
-    if (!res.ok) {
-        return { isSuccess: false }
-    }
-    return  { ...data, isSuccess: true };
-}
-
-export async function callDataSyncApi(payload) {
-    const url = `${API_BASE}/data-sync`;
-
-    const res = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${await getToken()}`,
-        },
-        body: JSON.stringify(payload)
-    });
-
-    const data = await res.json();
-
-    if (!res.ok) {
-        return { isSuccess: false }
-    }
-
-    return { isSuccess: true, ...data };
-}
-
-export async function callTranslateAPI(params) {
-    const qs = new URLSearchParams(params);
-    const url = `${API_BASE}/translations?${qs.toString()}`;
-
-    const res = await fetch(url, {
-        headers: {
-            'Authorization': `Bearer ${await getToken()}` // add Authorization header
-        }
-    });
-
-    const data = await res.json();
-    if (!res.ok) {
-        if (data?.waitTimeSeconds) {
-            return  { ...data, isSuccess: false };
-        }
-        throw new Error("Server error: " + res.status);
-    }
-    return  { ...data, isSuccess: true };
-}
-
-
-export async function callSignUpApi(params) {
-    const qs = new URLSearchParams(params);
-
-    // If teacher flag is stored locally, include it in query params
-    if (localStorage.getItem("teacher") === "true") {
-        qs.set("teacher", "true");
-    }
-
-    const url = `${API_BASE}/accounts/start?${qs.toString()}`;
-
-    const res = await fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(params),
-    });
-
-    if (!res.ok) throw new Error("Server error: " + res.status);
-
-    return res.json();
-}
-
+// ------------------------------------------------------------
+// Helpers
+// ------------------------------------------------------------
 function parseVersion(v) {
     const clean = String(v || "").trim().split("-")[0];
     const parts = clean.split(".").map((n) => parseInt(n, 10));
@@ -133,6 +50,181 @@ function syncVersionAndMaybeReload(serverVersion) {
     }
 }
 
+async function jsonFetch(url, opts = {}) {
+    const res = await fetch(url, {
+        ...opts,
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+            ...(opts.headers || {}),
+        },
+    });
+
+    let data = null;
+    try {
+        data = await res.json();
+    } catch {
+        // ignore
+    }
+
+    if (!res.ok) {
+        const msg = data?.error || `Server error: ${res.status}`;
+        const err = new Error(msg);
+        err.status = res.status;
+        err.data = data;
+        throw err;
+    }
+
+    return data;
+}
+
+function sleep(ms) {
+    return new Promise((r) => setTimeout(r, ms));
+}
+
+function jitter(ms, jitterRatio = 0.3) {
+    // random in [ms*(1-j), ms*(1+j)]
+    const j = ms * jitterRatio;
+    return Math.max(0, Math.round(ms - j + Math.random() * (2 * j)));
+}
+
+/**
+ * ✅ Homework task normalizer:
+ * Ensures the FE always has `task.taskId` to attach into score sync payload.
+ *
+ * Server returns:
+ * { task: { id: "<mongoTaskId>", ... } } or { task: null }
+ *
+ * We normalize to:
+ * { task: { id, taskId: id, ... } } or { task: null }
+ */
+function normalizeNextTaskResponse(data) {
+    if (!data || typeof data !== "object") return data;
+
+    const t = data.task;
+    if (!t) return data;
+
+    const id = String(t.id ?? "").trim();
+    const taskId = String(t.taskId ?? id ?? "").trim();
+
+    return {
+        ...data,
+        task: {
+            ...t,
+            id: id || t.id,
+            taskId: taskId || (id || null),
+        },
+    };
+}
+
+/**
+ * ✅ Helper to attach taskId into an answer object that you later send to /data-sync.
+ * Use for homework mode; safe no-op otherwise.
+ *
+ * Example:
+ * const next = await apiStudentNextTaskFromSet(taskSetId);
+ * const answer = { id, rule, score, ... };
+ * const answerWithTask = withTaskId(answer, next.task);
+ * await callDataSyncApi({ answers: [answerWithTask], ... });
+ */
+export function withTaskId(answer, task) {
+    const a = answer && typeof answer === "object" ? { ...answer } : {};
+    const t = task && typeof task === "object" ? task : null;
+
+    const taskId = t?.taskId ?? t?.id ?? null;
+    if (!taskId) return a;
+
+    return { ...a, taskId: String(taskId) };
+}
+
+// ------------------------------------------------------------
+// Payments / account / core
+// ------------------------------------------------------------
+export async function callCheckoutApi() {
+    const url = `${API_BASE}/payments/create-checkout-session`;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify({
+            promoCode: getPromoCode(),
+        }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) {
+        return { isSuccess: false };
+    }
+    return { ...data, isSuccess: true };
+}
+
+export async function callDataSyncApi(payload) {
+    const url = `${API_BASE}/data-sync`;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+        return { isSuccess: false };
+    }
+
+    return { isSuccess: true, ...data };
+}
+
+export async function callTranslateAPI(params) {
+    const qs = new URLSearchParams(params);
+    const url = `${API_BASE}/translations?${qs.toString()}`;
+
+    const res = await fetch(url, {
+        headers: {
+            Authorization: `Bearer ${await getToken()}`, // add Authorization header
+        },
+    });
+
+    const data = await res.json();
+    if (!res.ok) {
+        if (data?.waitTimeSeconds) {
+            return { ...data, isSuccess: false };
+        }
+        throw new Error("Server error: " + res.status);
+    }
+    return { ...data, isSuccess: true };
+}
+
+export async function callSignUpApi(params) {
+    const qs = new URLSearchParams(params);
+
+    // If teacher flag is stored locally, include it in query params
+    if (localStorage.getItem("teacher") === "true") {
+        qs.set("teacher", "true");
+    }
+
+    const url = `${API_BASE}/accounts/start?${qs.toString()}`;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(params),
+    });
+
+    if (!res.ok) throw new Error("Server error: " + res.status);
+
+    return res.json();
+}
+
 export async function callAccountInfoApi() {
     const params = new URLSearchParams();
     const promoCode = getPromoCode();
@@ -162,7 +254,7 @@ export async function callAccountVerifyApi(actionType) {
 
         const res = await fetch(url, {
             headers: {
-                'Authorization': `Bearer ${await getToken()}`,
+                Authorization: `Bearer ${await getToken()}`,
             },
         });
 
@@ -172,14 +264,13 @@ export async function callAccountVerifyApi(actionType) {
     }
 }
 
-
 export async function callManageSubscriptionApi() {
     const url = `${API_BASE}/payments/manage`;
 
     const res = await fetch(url, {
         headers: {
-            'Authorization': `Bearer ${await getToken()}`,
-        }
+            Authorization: `Bearer ${await getToken()}`,
+        },
     });
 
     const data = await res.json();
@@ -197,7 +288,7 @@ export async function callSendPromoCodeApi({ email }) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            'Authorization': `Bearer ${await getToken()}`,
+            Authorization: `Bearer ${await getToken()}`,
         },
         body: JSON.stringify({ email }),
     });
@@ -296,21 +387,11 @@ export async function dowloadPdf(ruleName, pdfType = "translations") {
     window.URL.revokeObjectURL(url);
 }
 
-function sleep(ms) {
-    return new Promise((r) => setTimeout(r, ms));
-}
-
-function jitter(ms, jitterRatio = 0.3) {
-    // random in [ms*(1-j), ms*(1+j)]
-    const j = ms * jitterRatio;
-    return Math.max(0, Math.round(ms - j + Math.random() * (2 * j)));
-}
-
 async function callGeneratePdfApi(ruleName, pdfType, opts = {}) {
     const {
         maxRetries = 5,
-        baseDelayMs = 400,      // initial backoff
-        maxDelayMs = 8000,      // cap
+        baseDelayMs = 400, // initial backoff
+        maxDelayMs = 8000, // cap
         jitterRatio = 0.35,
     } = opts;
 
@@ -332,7 +413,6 @@ async function callGeneratePdfApi(ruleName, pdfType, opts = {}) {
 
         // Retry only on 429
         if (res.status === 429 && attempt < maxRetries) {
-            // If server provides Retry-After, respect it (seconds or date)
             const ra = res.headers.get("Retry-After");
             let delay = null;
 
@@ -347,7 +427,6 @@ async function callGeneratePdfApi(ruleName, pdfType, opts = {}) {
             }
 
             if (delay == null) {
-                // exponential backoff (capped) + jitter
                 const exp = Math.min(maxDelayMs, baseDelayMs * 2 ** attempt);
                 delay = jitter(exp, jitterRatio);
             }
@@ -376,7 +455,6 @@ async function callGeneratePdfApi(ruleName, pdfType, opts = {}) {
 
 // Call: GET /accounts/unsubscribe?email_unsubscribe_token=<token>
 // Token == accountId (UUID) per your backend decision.
-
 export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
     try {
         const token = String(emailUnsubscribeToken ?? "").trim();
@@ -393,7 +471,6 @@ export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
         const bodyText = await res.text().catch(() => "");
 
         if (!res.ok) {
-            // graceful: never throw, return status as error code
             return {
                 isSuccess: false,
                 errorCode: `http_${res.status}`,
@@ -403,40 +480,14 @@ export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
 
         return { isSuccess: true, message: bodyText || null };
     } catch (e) {
-        // graceful: network/CORS/etc
         logError(e);
         return { isSuccess: false, errorCode: "network_error" };
     }
 }
-async function jsonFetch(url, opts = {}) {
-    const res = await fetch(url, {
-        ...opts,
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${await getToken()}`,
-            ...(opts.headers || {}),
-        },
-    });
 
-    let data = null;
-    try {
-        data = await res.json();
-    } catch {
-        // ignore
-    }
-
-    if (!res.ok) {
-        const msg = data?.error || `Server error: ${res.status}`;
-        const err = new Error(msg);
-        err.status = res.status;
-        err.data = data;
-        throw err;
-    }
-
-    return data;
-}
-
+// ------------------------------------------------------------
 // Teacher
+// ------------------------------------------------------------
 export function apiTeacherMetadata() {
     return jsonFetch(`${API_BASE}/schools/teachers/me`);
 }
@@ -501,25 +552,12 @@ export function apiRemoveStudentFromTeacher(studentAccountId) {
 }
 
 // ============================================================
-// Schools / Task Sets (NEW)
+// Schools / Task Sets
 // ============================================================
 
 /**
  * POST /schools/task-sets
- * Teacher creates a task set from config (no task content)
- *
- * payload:
- * {
- *   studentIds: string[],
- *   taskMode: "translations" | "gaps" | "mixed",
- *   ruleIds?: string[] | "A,B,C",
- *   recommended?: boolean,
- *   level?: "A1"|"A2"|"B1"|"B2",
- *   title: string,
- *   numberOfTasks: number (1..50),
- *   seed: number,
- *   dueDate?: string|Date|null
- * }
+ * Teacher creates a task set (server builds tasks + assigns)
  */
 export function apiCreateTaskSet(payload) {
     return jsonFetch(`${API_BASE}/schools/task-sets`, {
@@ -531,8 +569,6 @@ export function apiCreateTaskSet(payload) {
 /**
  * GET /schools/task-sets/teacher?limit=10&cursorCreatedAt=...&cursorId=...
  * Teacher list sets (paged) + per-student completion metadata
- *
- * cursor: { createdAt: string, id: string } (from server nextCursor)
  */
 export function apiTeacherTaskSets({ limit = 10, cursor } = {}) {
     const qs = new URLSearchParams();
@@ -549,8 +585,6 @@ export function apiTeacherTaskSets({ limit = 10, cursor } = {}) {
 /**
  * GET /schools/task-sets/student?limit=10&cursorAssignedAt=...&cursorId=...
  * Student list assigned sets (paged) + own completion
- *
- * cursor: { assignedAt: string, id: string } (from server nextCursor)
  */
 export function apiStudentTaskSets({ limit = 10, cursor } = {}) {
     const qs = new URLSearchParams();
@@ -594,12 +628,17 @@ export function apiTeacherTaskSetAnswers(taskSetId, { studentId } = {}) {
 
 /**
  * GET /schools/task-sets/:taskSetId/next
- * Student gets next task from set (server returns { task: ... } or { task: null } when completed)
+ * Student gets next task from set
+ *
+ * ✅ We normalize the response so FE always has:
+ * data.task.taskId (alias of data.task.id)
  */
-export function apiStudentNextTaskFromSet(taskSetId) {
+export async function apiStudentNextTaskFromSet(taskSetId) {
     const id = String(taskSetId ?? "").trim();
     if (!id) throw new Error("Missing taskSetId");
-    return jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/next`);
+
+    const data = await jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/next`);
+    return normalizeNextTaskResponse(data);
 }
 
 /**
@@ -617,3 +656,22 @@ export function apiAssignTaskSet(taskSetId, payload) {
         body: JSON.stringify(payload),
     });
 }
+
+/**
+ * POST /schools/recommended-preview
+ * body: { studentIds: string[], seed: number }
+ */
+export function apiRecommendedPreview({ studentIds, seed }) {
+    const ids = Array.isArray(studentIds)
+        ? studentIds.map((x) => String(x).trim()).filter(Boolean)
+        : [];
+
+    return jsonFetch(`${API_BASE}/schools/task-sets/recommended-preview`, {
+        method: "POST",
+        body: JSON.stringify({
+            studentIds: ids,
+            seed: Number.isFinite(seed) ? seed : Math.floor(Math.random() * 1e9),
+        }),
+    });
+}
+

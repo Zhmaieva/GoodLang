@@ -8,8 +8,8 @@ import {dataSyncController} from "./controllers/dataSyncController.js";
 import {filesController} from "./controllers/filesController.js";
 import {schoolController} from "./controllers/schoolsController.js";
 import {connectDB} from "./database/mongo.js";
-import {ensureTeacherCollectionsIndexes} from "./database/repositories/scoresRepository.js";
 import {schoolsTaskSetsController} from "./controllers/schoolsTaskSetsController.js";
+import {ensureSchoolTaskIndexes} from "./database/repositories/schoolTaskRepository.js";
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
@@ -45,7 +45,7 @@ schoolController.mapRoutes(app);
 schoolsTaskSetsController.mapRoutes(app);
 
 connectDB().then(async () => {
-    await ensureTeacherCollectionsIndexes();
+    await ensureSchoolTaskIndexes();
 });
 
 // Catch-all handler for undefined routes

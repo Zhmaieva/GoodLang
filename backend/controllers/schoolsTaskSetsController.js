@@ -10,11 +10,11 @@ import {
     getNextTaskFromTaskSet,
     getAllTasksFromTaskSetByTeacher,
     getAllStudentAnswersFromTaskSetByTeacher,
-} from "../database/repositories/scoresRepository.js";
+} from "../database/repositories/schoolTaskRepository.js";
 
 import {
-    buildTaskSetTasks,
     buildRecommendedQuotasForStudents,
+    buildTaskSetTasks,
 } from "../services/taskSetBuilderService.js";
 
 const name = "schools";
