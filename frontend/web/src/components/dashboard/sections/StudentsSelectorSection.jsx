@@ -31,9 +31,8 @@ export default function StudentsSelectorSection({
                                                     onChangeSelectedStudentIds,
 
                                                     titleClasses = "Класи",
-                                                    titleStudentsQuick = "Студенти (швидкий вибір)",
-                                                    titleAvailable = "Доступні студенти",
-                                                    titleSelected = "Вибрані студенти",
+                                                    titleAvailable = "Доступні учні",
+                                                    titleSelected = "Вибрані учні",
 
                                                     // breakpoint for "narrow" behavior (container width)
                                                     narrowBreakpoint = 980,

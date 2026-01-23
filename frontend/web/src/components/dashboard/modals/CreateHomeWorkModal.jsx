@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import AwesomeModal from "../AwesomeModal.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 import StudentsSelectorSection from "../sections/StudentsSelectorSection.jsx";
+import StepScreens from "../StepScreens.jsx"; // adjust path if needed
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
@@ -12,6 +13,58 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const [selectedStudentIds, setSelectedStudentIds] = useState([]);
     const selectedCount = useMemo(() => selectedStudentIds.length, [selectedStudentIds]);
 
+    const STEPS = useMemo(() => ([
+        {
+            label: "Учні",
+            title: "Вибери учнів",
+            subtitle: "Обери класи або окремих учнів",
+        },
+        {
+            label: "Завдання",
+            title: "Налаштуй завдання",
+            subtitle: "Або дай GoodLang зробити це за тебе",
+        },
+        {
+            label: "Підсумок",
+            title: "Майже готово",
+            subtitle: "Переконайся, що все правильно",
+        },
+    ]), []);
+
+    const [step, setStep] = useState(0);
+
+    const screenTitle = STEPS?.[step]?.title || "Створити домашнє завдання";
+    const screenSubtitle = STEPS?.[step]?.subtitle || `Крок ${step + 1} з ${STEPS.length}`;
+
+    const isFirst = step <= 0;
+    const isLast = step >= STEPS.length - 1;
+
+    const nextLabel = useMemo(() => {
+        if (isLast) return "Відправити завдання";
+        const next = STEPS[step + 1]?.label ?? "Далі";
+        return `Далі: ${next}`;
+    }, [isLast, STEPS, step]);
+
+    const backLabel = useMemo(() => {
+        const prev = STEPS[step - 1]?.label ?? "Назад";
+        return `Назад: ${prev}`;
+    }, [STEPS, step]);
+
+    const onNext = () => {
+        if (!isLast) {
+            setStep((s) => Math.min(s + 1, STEPS.length - 1));
+            return;
+        }
+
+        // last step action (no-op for now)
+        // later: call create homework API, then onCreated?.()
+        // onCreated?.();
+    };
+
+    const onBack = () => {
+        setStep((s) => Math.max(s - 1, 0));
+    };
+
     if (!open) return null;
 
     return (
@@ -19,72 +72,100 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
             open={open}
             onClose={onClose}
             width="80%"
-            height="80vh" // ✅ gives body a real height between header + footer
+            height="80vh"
             title="Створити домашнє завдання"
             footer={
                 <div style={styles.footer}>
                     <div style={styles.footerLeft}>
-                        Обрано студентів: <b>{selectedCount}</b>
+                        <AwesomeButton
+                            variant="ghost"
+                            onClick={onBack}
+                            disabled={isFirst}
+                            title={isFirst ? "Це перший крок" : backLabel}
+                        >
+                            {backLabel}
+                        </AwesomeButton>
+                    </div>
+
+                    <div style={styles.footerMeta}>
+                        Обрано учнів: <b>{selectedCount}</b>
                     </div>
 
                     <div style={styles.footerRight}>
-                        <AwesomeButton variant="ghost" onClick={onClose}>
-                            Закрити
+                        <AwesomeButton
+                            variant="accent"
+                            onClick={onNext}
+                            title={nextLabel}
+                        >
+                            {nextLabel}
                         </AwesomeButton>
                     </div>
                 </div>
             }
         >
-            {/* This content goes into AwesomeModal's BODY (the area between header & footer) */}
             <div style={styles.body}>
-                {/* upper half */}
-                <div style={styles.topHalf}>
-                    <StudentsSelectorSection
-                        style={{ height: "100%" }}
-                        initialSelectedStudentIds={selectedStudentIds}
-                        onChangeSelectedStudentIds={(ids) => setSelectedStudentIds(uniqStrings(ids))}
-                    />
-                </div>
+                <StepScreens
+                    title={screenTitle}
+                    subtitle={screenSubtitle}
+                    steps={STEPS}
+                    step={step}
+                    onStepChange={(s) => setStep(s)}
+                    contentPadding={10}
+                    style={{ height: "100%" }}
+                >
+                    {(activeStep) => {
+                        if (activeStep === 0) {
+                            return (
+                                <div style={styles.stepFill}>
+                                    <StudentsSelectorSection
+                                        style={{ height: "100%" }}
+                                        initialSelectedStudentIds={selectedStudentIds}
+                                        onChangeSelectedStudentIds={(ids) => setSelectedStudentIds(uniqStrings(ids))}
+                                    />
+                                </div>
+                            );
+                        }
 
-                {/*/!* lower half (placeholder) *!/*/}
-                {/*<div style={styles.bottomHalf}>*/}
-                {/*    /!* intentionally empty *!/*/}
-                {/*</div>*/}
+                        if (activeStep === 1) {
+                            return <div style={styles.placeholder}>{/* TODO */}</div>;
+                        }
+
+                        return <div style={styles.placeholder}>{/* TODO */}</div>;
+                    }}
+                </StepScreens>
             </div>
         </AwesomeModal>
     );
 }
 
 const styles = {
-    // ✅ This must fill the modal BODY area (which is already flex:1)
     body: {
         height: "100%",
         minHeight: 0,
         minWidth: 0,
         display: "flex",
         flexDirection: "column",
-        gap: 14,
-        padding: 8, // inner spacing (so content doesn't touch modal edges)
         overflow: "hidden",
     },
 
-    topHalf: {
-        flex: "1 1 0",
+    // makes each step content fill available area
+    stepFill: {
+        flex: "1 1 auto",
         minHeight: 0,
         minWidth: 0,
         overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
     },
 
-    bottomHalf: {
-        flex: "1 1 0",
+    placeholder: {
+        flex: "1 1 auto",
         minHeight: 0,
         minWidth: 0,
-        overflow: "hidden",
         border: "2px dashed rgba(0,0,0,0.12)",
         background: "rgba(0,0,0,0.02)",
     },
 
-    // footer is now rendered by AwesomeModal.footer (outside body, never clipped)
     footer: {
         display: "flex",
         justifyContent: "space-between",
@@ -95,14 +176,23 @@ const styles = {
     },
 
     footerLeft: {
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+        minWidth: 0,
+    },
+
+    footerMeta: {
         fontWeight: 900,
         color: "var(--muted, #a47856)",
         whiteSpace: "nowrap",
+        minWidth: 0,
     },
 
     footerRight: {
         display: "flex",
-        gap: 10,
         alignItems: "center",
+        gap: 10,
+        minWidth: 0,
     },
 };
