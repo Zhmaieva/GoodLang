@@ -1,18 +1,16 @@
 import React, { useEffect, useMemo, useState } from "react";
+import Tooltip from "./Tooltip.jsx";
 
 /**
- * StepScreens
+ * StepScreens (with validation gating)
  *
- * Top header:
- * - Left: screen title + subtitle (NOT step label)
- * - Right: progress line + steps spread (first at start, last at end)
+ * - validateStep(stepIndex) => { ok: boolean, message?: string }
+ * - If current step invalid => all next steps show lock + tooltip (message)
+ * - If a step validation passed => green + checkmark (instead of circle)
+ * - If step is available but not valid => circle muted
+ * - Locked steps are not clickable
  *
- * Steps:
- * - Solid pill background (not transparent) so it "cuts" the line behind
- * - Hover scale
- *
- * Content:
- * - Fills remaining height
+ * lock icon: /lock-icon.svg (from public)
  */
 export default function StepScreens({
                                         // header (screen) text
@@ -24,6 +22,9 @@ export default function StepScreens({
                                         defaultStep = 0,
                                         onStepChange,
                                         style,
+
+                                        // validation
+                                        validateStep, // (idx) => { ok, message }
 
                                         children,
                                         renderStep,
@@ -55,6 +56,38 @@ export default function StepScreens({
         return children ?? null;
     }, [children, renderStep, safeStep]);
 
+    // ---- validation map
+    const validations = useMemo(() => {
+        const out = [];
+        for (let i = 0; i < count; i++) {
+            const v = typeof validateStep === "function" ? validateStep(i) : null;
+            out.push({
+                ok: !!v?.ok,
+                message: v?.message || "",
+            });
+        }
+        return out;
+    }, [validateStep, count]);
+
+    // can open step idx if:
+    // - idx <= current
+    // - OR all steps before idx are valid
+    const canNavigateTo = (idx) => {
+        if (idx <= safeStep) return true;
+        for (let i = 0; i < idx; i++) {
+            if (!validations[i]?.ok) return false;
+        }
+        return true;
+    };
+
+    // if a step is not navigable => show lock with message of the blocking invalid step
+    const getBlockMessage = (idx) => {
+        for (let i = 0; i < idx; i++) {
+            if (!validations[i]?.ok) return validations[i]?.message || "Заповніть попередній крок";
+        }
+        return "Заповніть попередній крок";
+    };
+
     return (
         <div style={{ ...styles.wrap, ...style }}>
             {/* Header row: left title/subtitle + right progress */}
@@ -72,51 +105,101 @@ export default function StepScreens({
 
                         <div style={styles.stepsRow}>
                             {steps.map((s, idx) => {
-                                const isDone = idx < safeStep;
                                 const isActive = idx === safeStep;
                                 const isHover = hovered === idx;
 
-                                return (
+                                const ok = !!validations[idx]?.ok;
+
+                                // completed meaning: step validated and is at/before current
+                                const isCompleted = ok && idx <= safeStep;
+
+                                const unlocked = canNavigateTo(idx);
+                                const isLocked = !unlocked;
+
+                                // available but not valid (only makes sense for current/visited steps)
+                                const isAvailableButInvalid = unlocked && !ok && idx <= safeStep;
+
+                                const tooltip = isLocked
+                                    ? getBlockMessage(idx)
+                                    : (validations[idx]?.message || (typeof s === "string" ? s : s?.label) || "");
+
+                                const pillStyle = isCompleted
+                                    ? styles.stepPillDoneGreen
+                                    : isActive
+                                        ? styles.stepPillActive
+                                        : isAvailableButInvalid
+                                            ? styles.stepPillMuted
+                                            : null;
+
+                                const btn = (
                                     <button
                                         key={idx}
                                         type="button"
-                                        onClick={() => setStep(idx, { source: "step_click" })}
-                                        onMouseEnter={() => setHovered(idx)}
+                                        onClick={() => {
+                                            if (isLocked) return;
+                                            setStep(idx, { source: "step_click" });
+                                        }}
+                                        onMouseEnter={() => (!isActive ? setHovered(idx) : null)}
                                         onMouseLeave={() => setHovered(null)}
                                         style={{
                                             ...styles.stepBtn,
                                             ...(isActive ? styles.stepBtnActive : null),
+                                            ...(isLocked ? styles.stepBtnLocked : null),
                                         }}
-                                        title={typeof s === "string" ? s : s?.label}
+                                        aria-disabled={isLocked}
                                     >
                                         <div
                                             style={{
                                                 ...styles.stepPill,
-                                                ...(isActive ? styles.stepPillActive : null),
-                                                ...(isDone ? styles.stepPillDone : null),
-
+                                                ...(pillStyle || null),
                                                 transform: isHover ? "scale(1.03)" : "scale(1)",
                                                 filter: isHover ? "brightness(0.985)" : "none",
                                             }}
                                         >
-                                            <div
-                                                style={{
-                                                    ...styles.dot,
-                                                    ...(isDone ? styles.dotDone : null),
-                                                    ...(isActive ? styles.dotActive : null),
-                                                }}
-                                            />
+                                            {/* ICON AREA */}
+                                            {isLocked ? (
+                                                <img src="/lock-icon.svg" alt="locked" style={styles.lockIcon} />
+                                            ) : isCompleted ? (
+                                                <div style={styles.checkMark}></div>
+                                            ) : (
+                                                <div
+                                                    style={{
+                                                        ...styles.dot,
+                                                        ...(isActive ? styles.dotActive : null),
+                                                        ...(!isActive && isAvailableButInvalid ? styles.dotMuted : null),
+                                                    }}
+                                                />
+                                            )}
+
                                             <div
                                                 style={{
                                                     ...styles.label,
                                                     ...(isActive ? styles.labelActive : null),
-                                                    ...(isDone ? styles.labelDone : null),
+                                                    ...(isCompleted ? styles.labelGreen : null),
+                                                    ...(isLocked ? styles.labelLocked : null),
                                                 }}
                                             >
                                                 {typeof s === "string" ? s : s?.label}
                                             </div>
                                         </div>
                                     </button>
+                                );
+
+                                // Tooltip wrapper (auto-hide + fade)
+                                return (
+                                    <>
+                                        {
+                                            isLocked &&
+                                            <Tooltip key={idx} content={tooltip} autoHideMs={1500} fadeMs={260}>
+                                                {btn}
+                                            </Tooltip>
+                                        }
+
+                                        {
+                                            !isLocked &&
+                                            <div key={idx}>{btn}</div>
+                                        }
+                                    </>
                                 );
                             })}
                         </div>
@@ -158,9 +241,9 @@ const styles = {
     },
 
     headerLeft: {
-        flex: "0 0 34%",          // ~1/3
-        minWidth: 220,            // keeps readable
-        maxWidth: 420,            // prevents taking too much
+        flex: "0 0 34%",
+        minWidth: 220,
+        maxWidth: 420,
         minHeight: 0,
         display: "flex",
         flexDirection: "column",
@@ -172,7 +255,7 @@ const styles = {
     screenTitle: {
         fontWeight: 1000,
         color: "var(--text, #3a2a1d)",
-        fontSize: "clamp(1.4rem, 2.2vw, 2rem)", // ✅ fluid
+        fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
         lineHeight: 1.1,
         minWidth: 0,
         overflow: "hidden",
@@ -183,14 +266,13 @@ const styles = {
     screenSubtitle: {
         fontWeight: 800,
         color: "var(--muted, #a47856)",
-        fontSize: "clamp(0.9rem, 1.2vw, 1rem)", // ✅ fluid
+        fontSize: "clamp(0.9rem, 1.2vw, 1rem)",
         lineHeight: 1.2,
         minWidth: 0,
         overflow: "hidden",
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
     },
-
 
     headerRight: {
         flex: "1 1 auto",
@@ -218,7 +300,6 @@ const styles = {
         zIndex: 0,
     },
 
-    // ✅ spread steps: first left, last right, middle evenly between
     stepsRow: {
         position: "relative",
         zIndex: 1,
@@ -245,17 +326,20 @@ const styles = {
         cursor: "default",
     },
 
+    stepBtnLocked: {
+        cursor: "not-allowed",
+        opacity: 0.9,
+    },
+
     stepPill: {
         display: "inline-flex",
         alignItems: "center",
         gap: 10,
         padding: "8px 10px",
         borderRadius: 999,
-
         background: "var(--card, #fffdf8)",
         border: "2px solid rgba(0,0,0,0.10)",
         boxShadow: "2px 2px 0 rgba(0,0,0,0.06)",
-
         minWidth: 0,
         transformOrigin: "left center",
         transition: "transform 130ms ease, filter 130ms ease, border-color 130ms ease, box-shadow 130ms ease",
@@ -266,8 +350,16 @@ const styles = {
         boxShadow: "3px 3px 0 rgba(0,0,0,0.08)",
     },
 
-    stepPillDone: {
-        border: "2px solid rgba(0,0,0,0.16)",
+    // completed (valid) => green
+    stepPillDoneGreen: {
+        border: "2px solid rgba(75,163,110,0.65)",
+        boxShadow: "3px 3px 0 rgba(0,0,0,0.06)",
+    },
+
+    // available but invalid => muted
+    stepPillMuted: {
+        border: "2px solid rgba(0,0,0,0.10)",
+        opacity: 0.85,
     },
 
     dot: {
@@ -279,12 +371,35 @@ const styles = {
         flex: "0 0 auto",
     },
 
-    dotDone: {
-        background: "rgba(0,0,0,0.40)",
-    },
-
     dotActive: {
         background: "var(--accent, #ff6138)",
+    },
+
+    dotMuted: {
+        background: "rgba(0,0,0,0.12)",
+    },
+
+    checkMark: {
+        width: 18,
+        height: 18,
+        borderRadius: 999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontWeight: 1000,
+        fontSize: 14,
+        color: "var(--green, #4ba36e)",
+        background: "rgba(75,163,110,0.10)",
+        boxShadow: "0 0 0 3px rgba(255,255,255,0.98)",
+        flex: "0 0 auto",
+    },
+
+    lockIcon: {
+        width: 16,
+        height: 16,
+        display: "block",
+        flex: "0 0 auto",
+        opacity: 0.95,
     },
 
     label: {
@@ -297,14 +412,18 @@ const styles = {
         whiteSpace: "nowrap",
     },
 
-    labelDone: {
-        color: "rgba(0,0,0,0.75)",
-    },
-
     labelActive: {
         color: "var(--text, #3a2a1d)",
         fontSize: 20,
         lineHeight: 1.1,
+    },
+
+    labelGreen: {
+        color: "var(--greenDark, #2d6f48)",
+    },
+
+    labelLocked: {
+        color: "rgba(0,0,0,0.45)",
     },
 
     /* -------- content -------- */

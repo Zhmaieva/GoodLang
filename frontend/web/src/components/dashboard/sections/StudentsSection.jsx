@@ -52,7 +52,7 @@ export default function StudentsSection({
 
     return (
         <AwesomeCard
-            title="Студенти"
+            title="Учні"
             right={
                 <div style={styles.rightControls}>
                     <AwesomeToggle
@@ -85,13 +85,13 @@ export default function StudentsSection({
             <div style={styles.note}>
                 <div style={{ fontWeight: 900 }}>Що означають дії:</div>
                 <div style={styles.noteLine}>
-                    • <b>Видалити з класу</b> — деактивує студента тільки в конкретному класі (якщо клас є в рядку).
+                    • <b>Видалити з класу</b> — деактивує учня тільки в конкретному класі (якщо клас є в рядку).
                 </div>
                 <div style={styles.noteLine}>
-                    • <b>Видалити від викладача</b> — видаляє студента повністю: з усіх ваших класів і з вашого списку учнів.
+                    • <b>Видалити від викладача</b> — видаляє учня повністю: з усіх ваших класів і з вашого списку учнів.
                 </div>
                 <div style={styles.noteLine}>
-                    • Рядки <b>Без класу</b> — це студенти, додані напряму до вас (teacher_students), ще не прив’язані до класу.
+                    • Рядки <b>Без класу</b> — це учні, додані напряму до вас (teacher_students), ще не прив’язані до класу.
                 </div>
             </div>
 
@@ -198,7 +198,7 @@ export default function StudentsSection({
                     ...s,
                     id: `${s.class_id || "none"}-${s.student_account_id}-${idx}`,
                 }))}
-                emptyText="Немає студентів"
+                emptyText="Немає учнів"
             />
         </AwesomeCard>
     );

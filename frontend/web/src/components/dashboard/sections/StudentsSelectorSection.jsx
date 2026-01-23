@@ -156,7 +156,7 @@ export default function StudentsSelectorSection({
             },
             {
                 key: "__studentsCount",
-                title: "Студентів",
+                title: "Учнів",
                 size: 1,
                 sortable: true,
                 sortType: "number",
@@ -170,7 +170,7 @@ export default function StudentsSelectorSection({
         () => [
             {
                 key: "__name",
-                title: "Студент",
+                title: "Учень",
                 size: 2,
                 sortable: true,
                 sortType: "string",

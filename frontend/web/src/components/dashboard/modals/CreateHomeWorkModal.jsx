@@ -2,7 +2,8 @@ import React, { useMemo, useState } from "react";
 import AwesomeModal from "../AwesomeModal.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 import StudentsSelectorSection from "../sections/StudentsSelectorSection.jsx";
-import StepScreens from "../StepScreens.jsx"; // adjust path if needed
+import StepScreens from "../StepScreens.jsx";
+import Tooltip from "../Tooltip.jsx"; // adjust path if needed
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
@@ -39,6 +40,28 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const isFirst = step <= 0;
     const isLast = step >= STEPS.length - 1;
 
+    // ✅ per-step validation (re-evaluates automatically on state changes)
+    const validateStep = (idx) => {
+        // Step 0: students required
+        if (idx === 0) {
+            const ok = (selectedStudentIds?.length || 0) > 0;
+            return ok
+                ? { ok: true, message: "" }
+                : { ok: false, message: "Виберіть учня, щоб продовжити" };
+        }
+
+        if (idx === 1) {
+            return { ok: false, message: "Оберіть завдання, щоб продовжити" };
+        }
+
+        // next steps: no validation yet
+        return { ok: true, message: "" };
+    };
+
+    const currentValidation = validateStep(step);
+    const isBlocked = !currentValidation?.ok;
+    const blockMsg = currentValidation?.message || "Заповніть поточний крок";
+
     const nextLabel = useMemo(() => {
         if (isLast) return "Відправити завдання";
         const next = STEPS[step + 1]?.label ?? "Далі";
@@ -51,6 +74,8 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     }, [STEPS, step]);
 
     const onNext = () => {
+        if (isBlocked) return;
+
         if (!isLast) {
             setStep((s) => Math.min(s + 1, STEPS.length - 1));
             return;
@@ -77,14 +102,17 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
             footer={
                 <div style={styles.footer}>
                     <div style={styles.footerLeft}>
-                        <AwesomeButton
-                            variant="ghost"
-                            onClick={onBack}
-                            disabled={isFirst}
-                            title={isFirst ? "Це перший крок" : backLabel}
-                        >
-                            {backLabel}
-                        </AwesomeButton>
+                        { !isFirst &&
+                            <AwesomeButton
+                                variant="ghost"
+                                onClick={onBack}
+                                disabled={isFirst}
+                                title={isFirst ? "Це перший крок" : backLabel}
+                            >
+                                {backLabel}
+                            </AwesomeButton>
+                        }
+
                     </div>
 
                     <div style={styles.footerMeta}>
@@ -92,13 +120,39 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                     </div>
 
                     <div style={styles.footerRight}>
-                        <AwesomeButton
-                            variant="accent"
-                            onClick={onNext}
-                            title={nextLabel}
-                        >
-                            {nextLabel}
-                        </AwesomeButton>
+                        {
+                            isBlocked &&
+                            <Tooltip content={blockMsg} autoHideMs={1500} fadeMs={260}>
+
+                            <AwesomeButton
+                                variant="accent"
+                                onClick={onNext}
+                                disabled
+                                title={blockMsg}
+                            >
+                                <div style={styles.nextBtnInner}>
+                                        <span
+                                            style={{...styles.lockIcon}}
+                                        />
+                                    <span>{nextLabel}</span>
+                                </div>
+                            </AwesomeButton>
+                            </Tooltip>
+                        }
+
+                        {
+                            !isBlocked &&
+                            <AwesomeButton
+                                variant="accent"
+                                onClick={onNext}
+                                title={nextLabel}
+                            >
+                                <div style={styles.nextBtnInner}>
+                                    <span>{nextLabel}</span>
+                                </div>
+                            </AwesomeButton>
+
+                        }
                     </div>
                 </div>
             }
@@ -110,6 +164,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                     steps={STEPS}
                     step={step}
                     onStepChange={(s) => setStep(s)}
+                    validateStep={validateStep}
                     contentPadding={10}
                     style={{ height: "100%" }}
                 >
@@ -120,7 +175,9 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                                     <StudentsSelectorSection
                                         style={{ height: "100%" }}
                                         initialSelectedStudentIds={selectedStudentIds}
-                                        onChangeSelectedStudentIds={(ids) => setSelectedStudentIds(uniqStrings(ids))}
+                                        onChangeSelectedStudentIds={(ids) =>
+                                            setSelectedStudentIds(uniqStrings(ids))
+                                        }
                                     />
                                 </div>
                             );
@@ -148,7 +205,6 @@ const styles = {
         overflow: "hidden",
     },
 
-    // makes each step content fill available area
     stepFill: {
         flex: "1 1 auto",
         minHeight: 0,
@@ -194,5 +250,30 @@ const styles = {
         alignItems: "center",
         gap: 10,
         minWidth: 0,
+    },
+
+    nextBtnInner: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+    },
+
+    lockIcon: {
+        width: 16,
+        height: 16,
+        display: "block",
+        maskImage: "url(/lock-icon.svg)",
+        WebkitMaskImage: "url(/lock-icon.svg)",
+        WebkitMask: "url(/lock-icon.svg) no-repeat center / contain",
+        mask: "url(/lock-icon.svg) no-repeat center / contain",
+        backgroundColor: "#fff",
+        maskRepeat: "no-repeat",
+        maskPosition: "center",
+        maskSize: "contain",
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        WebkitMaskSize: "contain",
+        transform: "scale(1.2)",
+        transformOrigin: "center",
     },
 };
