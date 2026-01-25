@@ -12,6 +12,8 @@ import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../servic
 import {ACTION_TYPES} from "../../utils/constants.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
+import MarathonPurchaseModal from "../modals/MarathonPurchaseModal.jsx";
+import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
 
 export default function Trainer({
                                     theme,
@@ -736,12 +738,20 @@ export default function Trainer({
                 weakRules={weakRules}
             />
 
-            <LimitModal
-                waitTimeSeconds={waitTimeSeconds}
-                isLimitReached={true}
-                theme={theme}
+            {/*<LimitModal*/}
+            {/*    waitTimeSeconds={waitTimeSeconds}*/}
+            {/*    isLimitReached={true}*/}
+            {/*    theme={theme}*/}
+            {/*    open={limitModalOpen}*/}
+            {/*    onClose={() => setLimitModalOpen(false)}*/}
+            {/*/>*/}
+
+            <MarathonInfoModal
                 open={limitModalOpen}
                 onClose={() => setLimitModalOpen(false)}
+                theme={theme}
+                account={account}               // from callAccountInfoApi()
+                ruleIds={[]}         // exactly 7 items
             />
 
             {cookieOpen && (

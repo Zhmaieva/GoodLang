@@ -1,27 +1,29 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
-    callAccountInfoApi, callAccountVerifyApi,
+    callAccountInfoApi,
+    callAccountVerifyApi,
     callCheckoutApi,
     callDataSyncApi,
     callSendCodeApi,
     callVerifyCodeApi
 } from "../../services/api.js";
 import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import {getStripe, logoStyle} from "./LimitModal.jsx";
-import {useNavigate} from "react-router-dom";
-import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
-import {logError} from "../../services/logger.js";
+import { getStripe, logoStyle } from "./LimitModal.jsx";
+import { useNavigate } from "react-router-dom";
+import { getPaymentIntent, setPaymentIntent } from "../../services/dataService.js";
+import { logError } from "../../services/logger.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
-import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
-import {ensureAnalytics, trackMetaCustomEvent, trackMetaEvent, trackPageView} from "../../services/gaService.js";
-import {ACTION_TYPES} from "../../utils/constants.js";
+import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
+import { ensureAnalytics, trackMetaCustomEvent, trackPageView } from "../../services/gaService.js";
+import { ACTION_TYPES } from "../../utils/constants.js";
 
 export default function LoginForm({
                                       theme,
                                       account,
                                       ruleToDownload = null,
-                                      fileTypeToDownload = 'translations',
-                                      onClose = () => {} }) {
+                                      fileTypeToDownload = "translations",
+                                      onClose = () => {}
+                                  }) {
     const [step, setStep] = useState("email"); // "email" | "code"
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
@@ -32,12 +34,13 @@ export default function LoginForm({
     const [isPaying, setIsPaying] = useState(false);
     const [cookieOpen, setCookieOpen] = useState(false);
 
+    // hover for Trainer-style button
+    const [btnHover, setBtnHover] = useState(false);
+
     const inputsRef = useRef([]);
     const checkoutRef = useRef(null);
 
     const navigate = useNavigate();
-
-
 
     useEffect(() => {
         const onResize = () => setIsMobile(window.innerWidth < 915);
@@ -46,20 +49,74 @@ export default function LoginForm({
         return () => window.removeEventListener("resize", onResize);
     }, []);
 
-    const buttonStyle = {
-        fontFamily: "Nunito, system-ui, sans-serif",
-        background: theme.accent,
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
-        color: "white",
-        padding: "10px 20px",
-        borderRadius: theme.radius,
-        border: "none",
-        cursor: "pointer",
-        fontSize: "1rem",
-        fontWeight: 700,
+    // lock body scroll while modal is shown (prevents scroll propagation outside modal)
+    useEffect(() => {
+        const isOpen = !cookieOpen && !termsOpen;
+        if (!isOpen) return;
+
+        const prevOverflow = document.body.style.overflow;
+        const prevPaddingRight = document.body.style.paddingRight;
+
+        const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.overflow = "hidden";
+        if (scrollBarWidth > 0) document.body.style.paddingRight = `${scrollBarWidth}px`;
+
+        return () => {
+            document.body.style.overflow = prevOverflow;
+            document.body.style.paddingRight = prevPaddingRight;
+        };
+    }, [cookieOpen, termsOpen]);
+
+    const wrapperStyle = {
+        position: "fixed",
+        inset: 0,
         width: "100%",
-        opacity: 1
+        height: "100dvh",
+        background: "rgba(0,0,0,0.35)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 9999,
+        paddingBottom: "env(safe-area-inset-bottom)",
+        paddingTop: "env(safe-area-inset-top)",
+        backdropFilter: "blur(6px)",
+        WebkitBackdropFilter: "blur(6px)",
     };
+
+    const boxStyle = {
+        background: theme.bg,
+        padding: "28px",
+        borderRadius: theme.radius * 1.2,
+        border: `4px solid ${theme.accent}`,
+        width: "90%",
+        maxWidth: 520,
+        textAlign: "center",
+        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+        fontFamily: "Nunito, system-ui, sans-serif",
+        lineHeight: 1.4,
+    };
+
+    // Trainer / LimitModal button style
+    const mainButtonStyle = (disabled) => ({
+        appearance: "none",
+        padding: "10px 14px",
+        fontWeight: 800,
+        fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
+        lineHeight: 1,
+        borderRadius: 999,
+        background: disabled ? "#999" : theme.accent,
+        color: "#fff",
+        border: "2px solid rgba(0,0,0,0.12)",
+        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+        fontFamily: "Nunito, system-ui, sans-serif",
+        whiteSpace: "nowrap",
+        opacity: disabled ? 0.7 : 1,
+        transform: btnHover && !disabled ? "translateY(1px)" : "none",
+        filter: btnHover && !disabled ? "brightness(0.95)" : "none",
+        transition: "transform 120ms ease, filter 120ms ease",
+        cursor: disabled ? "not-allowed" : "pointer",
+        width: "100%",
+    });
 
     const baseInputStyle = {
         resize: "none",
@@ -74,7 +131,8 @@ export default function LoginForm({
         color: theme.text,
         textAlign: "center",
         caretColor: "grey",
-        marginBottom: 16
+        marginBottom: 16,
+        outline: "none",
     };
 
     const codeInputStyle = {
@@ -91,7 +149,6 @@ export default function LoginForm({
 
     function focusLastFilled(newCode) {
         const lastFilledIndex = newCode.findLastIndex(d => d !== "");
-
         const nextIndex =
             lastFilledIndex === -1
                 ? 0
@@ -99,8 +156,6 @@ export default function LoginForm({
 
         inputsRef.current[nextIndex]?.focus();
     }
-
-
 
     // --- Email Step ---
     async function handleEmailSubmit(e) {
@@ -110,7 +165,7 @@ export default function LoginForm({
             return;
         }
 
-        if (emailInput.trim().toLowerCase() === account.email) {
+        if (emailInput.trim().toLowerCase() === account?.email) {
             setError("Ти вже увійшов під цим імейлом");
             return;
         }
@@ -121,7 +176,7 @@ export default function LoginForm({
             await callSendCodeApi({ email: emailInput });
             setStep("code");
         } catch (err) {
-            setError(err.message || "Не вдалося відправити код");
+            setError(err?.message || "Не вдалося відправити код");
         } finally {
             setLoading(false);
         }
@@ -178,7 +233,6 @@ export default function LoginForm({
 
         if (!pasted) return;
 
-        // replace every input (reset all first)
         const newCode = new Array(6).fill("");
         pasted.split("").forEach((ch, i) => {
             newCode[i] = ch;
@@ -196,17 +250,13 @@ export default function LoginForm({
         return idx === -1 ? codeArr.length - 1 : idx;
     }
 
-
     function forceFocusFirstEmpty() {
         const firstEmpty = getFirstEmptyIndex(code);
         const el = inputsRef.current[firstEmpty];
         if (!el) return;
 
-        // iOS інколи краще реагує на "пізніший" фокус
         setTimeout(() => {
             el.focus({ preventScroll: true });
-
-            // щоб точно було в кінці (на випадок автозаповнення/вставки)
             try {
                 el.setSelectionRange(1, 1);
             } catch {}
@@ -218,8 +268,6 @@ export default function LoginForm({
         if (!el) return;
 
         el.focus({ preventScroll: true });
-
-        // щоб каретка точно стала в кінець (1 символ)
         try { el.setSelectionRange(1, 1); } catch {}
     }
 
@@ -246,15 +294,15 @@ export default function LoginForm({
 
             const newAccount = await callAccountInfoApi();
 
-            if (oldAccount.email && oldAccount.status !== 'free') {//purge old data if it was synced account
+            if (oldAccount?.email && oldAccount?.status !== "free") {
                 localStorage.clear();
                 localStorage.setItem("token", token);
             }
 
-            if (newAccount.status !== 'free') // old data will be synced to new account if possible
+            if (newAccount?.status !== "free")
                 await syncData();
 
-            if (newAccount.status === "free" && getPaymentIntent()) {
+            if (newAccount?.status === "free" && getPaymentIntent()) {
                 setPaymentIntent(false);
                 try {
                     setLoading(true);
@@ -278,7 +326,7 @@ export default function LoginForm({
 
                         document.getElementById("embedded-checkout-container-login-form").style.display = "block";
                         setLoading(false);
-                    }, 200)
+                    }, 200);
                 } catch (err) {
                     console.error("Stripe error:", err);
                     setLoading(false);
@@ -289,7 +337,6 @@ export default function LoginForm({
             if (!getCookieConsent()) {
                 setCookieOpen(true);
                 await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
-
                 return;
             }
 
@@ -314,13 +361,9 @@ export default function LoginForm({
                 url.searchParams.delete("ruleToDownload");
             }
 
-            // replaceState avoids adding a new history entry
             window.history.replaceState({}, "", url.toString());
-
-            // reload the current URL (now including the param)
             window.location.reload();
         } catch (e) {
-            // fallback (rare, but safe)
             const encoded = ruleId ? encodeURIComponent(ruleId) : "";
             const encodedType = fileTypeToDownload ? encodeURIComponent(fileTypeToDownload) : "";
             window.location.href = ruleId
@@ -344,292 +387,311 @@ export default function LoginForm({
         }
     }, [step]);
 
-    const wrapperStyle = {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        inset: 0,
-        height: "100dvh",
-        background: "rgba(0,0,0,0.35)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 9999,
-    };
-
-    const boxStyle = {
-        background: theme.bg,
-        padding: "36px",
-        borderRadius: theme.radius * 1.2,
-        border: `4px solid ${theme.accent}`,
-        width: "90%",
-        maxWidth: 480,
-        textAlign: "center",
-        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-        fontFamily: "Nunito, system-ui, sans-serif",
-        lineHeight: 1.4,
-    };
+    const closeDisabled = loading || isPaying;
 
     return (
         <>
-            {(!cookieOpen && !termsOpen) && <div
-                style={wrapperStyle}
-            >
-                <div style={boxStyle} onClick={(e) => e.stopPropagation()}>
-                    {
-                        !termsOpen && !isPaying && <div style={{display: "flex", flexDirection: "column", gap: 12}}>
-                            {step === "email" && (
-                                <>
-                                    <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
-                                        <div></div>
+            {(!cookieOpen && !termsOpen) && (
+                <div style={wrapperStyle}>
+                    <div style={boxStyle} onClick={(e) => e.stopPropagation()}>
+                        {!termsOpen && !isPaying && (
+                            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                                {step === "email" && (
+                                    <>
+                                        <div style={{ display: "flex", height: "0", justifyContent: "space-between" }}>
+                                            <div></div>
 
-                                        <p onClick={onClose} style={{
-                                            marginBottom: 16,
-                                            marginTop: -26,
-                                            marginLeft: 0,
-                                            marginRight: -22,
-                                            color: theme.accent,
-                                            fontSize: "1.3rem",
-                                            fontWeight: 500,
-                                            textAlign: "left",
-                                            cursor: "pointer",
-                                            userSelect: "none",
-                                            WebkitUserSelect: "none",
-                                            WebkitTouchCallout: "none",
-                                        }}>
-                                            ✕
-                                        </p>
-                                    </div>
-
-                                    <div style={{
-                                        marginLeft: 0,
-                                        marginBottom: 16,
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                    }}>
-                                        <div style={{display: "flex", flexDirection: "column"}}>
-                                            <h2 style={{
-                                                textAlign: "left",
-                                                marginBottom: 0,
-                                                marginTop: 0,
-                                                color: theme.text,
-                                                fontSize: "18pt",
-                                                fontWeight: 800
-                                            }}>
-                                                Введи свій імейл
-                                            </h2>
-                                            <p style={{
-                                                marginBottom: 0,
-                                                marginTop: 8,
-                                                marginLeft: 0,
-                                                color: theme.text,
-                                                fontSize: "16px",
-                                                fontWeight: 500,
-                                                textAlign: "left"
-                                            }}>
-                                                На пошту надійде підтвердження
+                                            <p
+                                                onClick={() => {
+                                                    if (!closeDisabled) onClose();
+                                                }}
+                                                style={{
+                                                    marginBottom: 16,
+                                                    marginTop: -22,
+                                                    marginLeft: 0,
+                                                    marginRight: -16,
+                                                    color: theme.accent,
+                                                    fontSize: "1.3rem",
+                                                    fontWeight: 500,
+                                                    textAlign: "left",
+                                                    cursor: closeDisabled ? "not-allowed" : "pointer",
+                                                    userSelect: "none",
+                                                    WebkitUserSelect: "none",
+                                                    WebkitTouchCallout: "none",
+                                                    opacity: closeDisabled ? 0.6 : 1,
+                                                }}
+                                            >
+                                                ✕
                                             </p>
                                         </div>
 
-                                        <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                            <div style={logoStyle(64)}>GL</div>
-                                        </div>
-                                    </div>
-                                    <input
-                                        type="email"
-                                        placeholder="goodlang.app@example.com"
-                                        value={emailInput}
-                                        onChange={(e) => {
-                                            setError(null);
-                                            setEmailInput(e.target.value)
-                                        }}
-                                        onKeyDown={async (e) => {
-                                            if (e.key === "Enter" && !loading) {
-                                                e.preventDefault();
-                                                await handleEmailSubmit(e);
-                                            }
-                                        }}
-                                        style={{
-                                            ...baseInputStyle,
-                                            width: "100%",
-                                        }}
-                                        required
-                                        disabled={loading}
-                                    />
-                                    <button style={buttonStyle} onClick={handleEmailSubmit} disabled={loading}>
-                                        {loading ? "Відправляю..." : "Підтвердити"}
-                                    </button>
-                                </>
-                            )}
-
-                            {step === "code" && (
-                                <>
-                                    <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
-                                        <div></div>
-
-                                        <p onClick={onClose} style={{
-                                            marginBottom: 16,
-                                            marginTop: -26,
-                                            marginLeft: 0,
-                                            marginRight: -22,
-                                            color: theme.accent,
-                                            fontSize: "1.3rem",
-                                            fontWeight: 500,
-                                            textAlign: "left",
-                                            cursor: "pointer",
-                                            userSelect: "none",
-                                            WebkitUserSelect: "none",
-                                            WebkitTouchCallout: "none",
-                                        }}>
-                                            ✕
-                                        </p>
-                                    </div>
-
-                                    <div style={{
-                                        marginLeft: 0,
-                                        marginBottom: 16,
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                    }}>
-                                        <div style={{display: "flex", flexDirection: "column"}}>
-                                            <h2 style={{
-                                                textAlign: "left",
-                                                marginBottom: 0,
-                                                marginTop: 0,
-                                                color: theme.text,
-                                                fontSize: "18pt",
-                                                fontWeight: 800
-                                            }}>
-                                                Введи код з імейлу
-                                            </h2>
-                                            <p style={{
-                                                marginBottom: 0,
-                                                marginTop: 8,
+                                        <div
+                                            style={{
                                                 marginLeft: 0,
-                                                color: theme.text,
-                                                fontSize: "16px",
-                                                fontWeight: 500,
-                                                textAlign: "left",
-                                                overflow: "clip",
-                                                maxWidth: 310
-                                            }}>
-                                                Відправлено на: {emailInput}
+                                                marginBottom: 16,
+                                                display: "flex",
+                                                justifyContent: "space-between",
+                                            }}
+                                        >
+                                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                                <h2
+                                                    style={{
+                                                        textAlign: "left",
+                                                        marginBottom: 0,
+                                                        marginTop: 0,
+                                                        color: theme.text,
+                                                        fontSize: "18pt",
+                                                        fontWeight: 800,
+                                                    }}
+                                                >
+                                                    Введи свій імейл
+                                                </h2>
+                                                <p
+                                                    style={{
+                                                        marginBottom: 0,
+                                                        marginTop: 8,
+                                                        marginLeft: 0,
+                                                        color: theme.text,
+                                                        fontSize: "16px",
+                                                        fontWeight: 500,
+                                                        textAlign: "left",
+                                                    }}
+                                                >
+                                                    На пошту надійде підтвердження
+                                                </p>
+                                            </div>
+
+                                            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                                                <div style={logoStyle(64)}>GL</div>
+                                            </div>
+                                        </div>
+
+                                        <input
+                                            type="email"
+                                            placeholder="goodlang.app@example.com"
+                                            value={emailInput}
+                                            onChange={(e) => {
+                                                setError(null);
+                                                setEmailInput(e.target.value);
+                                            }}
+                                            onKeyDown={async (e) => {
+                                                if (e.key === "Enter" && !loading) {
+                                                    e.preventDefault();
+                                                    await handleEmailSubmit(e);
+                                                }
+                                            }}
+                                            style={{
+                                                ...baseInputStyle,
+                                                width: "100%",
+                                            }}
+                                            required
+                                            disabled={loading}
+                                        />
+
+                                        <button
+                                            style={mainButtonStyle(loading)}
+                                            onMouseEnter={() => setBtnHover(true)}
+                                            onMouseLeave={() => setBtnHover(false)}
+                                            onClick={handleEmailSubmit}
+                                            disabled={loading}
+                                        >
+                                            {loading ? "Відправляю..." : "Підтвердити"}
+                                        </button>
+                                    </>
+                                )}
+
+                                {step === "code" && (
+                                    <>
+                                        <div style={{ display: "flex", height: "0", justifyContent: "space-between" }}>
+                                            <div></div>
+
+                                            <p
+                                                onClick={() => {
+                                                    if (!closeDisabled) onClose();
+                                                }}
+                                                style={{
+                                                    marginBottom: 16,
+                                                    marginTop: -26,
+                                                    marginLeft: 0,
+                                                    marginRight: -22,
+                                                    color: theme.accent,
+                                                    fontSize: "1.3rem",
+                                                    fontWeight: 500,
+                                                    textAlign: "left",
+                                                    cursor: closeDisabled ? "not-allowed" : "pointer",
+                                                    userSelect: "none",
+                                                    WebkitUserSelect: "none",
+                                                    WebkitTouchCallout: "none",
+                                                    opacity: closeDisabled ? 0.6 : 1,
+                                                }}
+                                            >
+                                                ✕
                                             </p>
                                         </div>
 
-                                        <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                            <div style={logoStyle(64)}>GL</div>
+                                        <div
+                                            style={{
+                                                marginLeft: 0,
+                                                marginBottom: 16,
+                                                display: "flex",
+                                                justifyContent: "space-between",
+                                            }}
+                                        >
+                                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                                <h2
+                                                    style={{
+                                                        textAlign: "left",
+                                                        marginBottom: 0,
+                                                        marginTop: 0,
+                                                        color: theme.text,
+                                                        fontSize: "18pt",
+                                                        fontWeight: 800,
+                                                    }}
+                                                >
+                                                    Введи код з імейлу
+                                                </h2>
+                                                <p
+                                                    style={{
+                                                        marginBottom: 0,
+                                                        marginTop: 8,
+                                                        marginLeft: 0,
+                                                        color: theme.text,
+                                                        fontSize: "16px",
+                                                        fontWeight: 500,
+                                                        textAlign: "left",
+                                                        overflow: "clip",
+                                                        maxWidth: 310,
+                                                    }}
+                                                >
+                                                    Відправлено на: {emailInput}
+                                                </p>
+                                            </div>
+
+                                            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                                                <div style={logoStyle(64)}>GL</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        onPaste={handlePaste}
-                                        style={{
-                                            display: "flex",
-                                            resize: "none",
-                                            justifyContent: "space-between",
-                                            borderRadius: theme.radius,
-                                            border: `3px solid ${theme.accent}`,
-                                            background: "#fffaf3",
-                                            fontSize: "18pt",
-                                            fontWeight: 700,
-                                            color: theme.text,
-                                            textAlign: "center",
-                                            caretColor: "grey",
-                                            marginBottom: 16
-                                        }}>
-                                        {code.map((digit, i) => (
-                                            <input
-                                                type="text"
-                                                inputMode="numeric"
-                                                autoComplete="one-time-code"
-                                                key={i}
-                                                ref={(el) => (inputsRef.current[i] = el)}
-                                                value={digit}
-                                                onChange={(e) => handleCodeChange(e, i)}
-                                                onKeyDown={(e) => handleCodeKeyDown(e, i)}
-                                                onClick={() => focusFirstEmpty()}
-                                                onTouchEnd={() => focusFirstEmpty()}
-                                                onPointerDown={(e) => {
-                                                    const firstEmpty = getFirstEmptyIndex(code);
-                                                    if (i !== firstEmpty) {
-                                                        e.preventDefault();     // важливо
-                                                        forceFocusFirstEmpty();
-                                                    }
-                                                }}
-                                                onTouchStart={(e) => {      // fallback для iOS, якщо pointer events десь вимкнені
-                                                    const firstEmpty = getFirstEmptyIndex(code);
-                                                    if (i !== firstEmpty) {
-                                                        e.preventDefault();
-                                                        forceFocusFirstEmpty();
-                                                    }
-                                                }}
-                                                onFocus={() => {            // додатковий захист
-                                                    const firstEmpty = getFirstEmptyIndex(code);
-                                                    if (i !== firstEmpty) {
-                                                        forceFocusFirstEmpty();
-                                                    }
-                                                }}
-                                                style={codeInputStyle}
-                                                maxLength={1}
-                                                disabled={loading}
-                                            />
 
-                                        ))}
-                                    </div>
-                                    <button style={buttonStyle} onClick={handleVerify} disabled={loading}>
-                                        {loading ? "Перевіряю..." : "Увійти"}
-                                    </button>
-                                </>
-                            )}
+                                        <div
+                                            onPaste={handlePaste}
+                                            style={{
+                                                display: "flex",
+                                                resize: "none",
+                                                justifyContent: "space-between",
+                                                borderRadius: theme.radius,
+                                                border: `3px solid ${theme.accent}`,
+                                                background: "#fffaf3",
+                                                fontSize: "18pt",
+                                                fontWeight: 700,
+                                                color: theme.text,
+                                                textAlign: "center",
+                                                caretColor: "grey",
+                                                marginBottom: 16,
+                                            }}
+                                        >
+                                            {code.map((digit, i) => (
+                                                <input
+                                                    type="text"
+                                                    inputMode="numeric"
+                                                    autoComplete="one-time-code"
+                                                    key={i}
+                                                    ref={(el) => (inputsRef.current[i] = el)}
+                                                    value={digit}
+                                                    onChange={(e) => handleCodeChange(e, i)}
+                                                    onKeyDown={(e) => handleCodeKeyDown(e, i)}
+                                                    onClick={() => focusFirstEmpty()}
+                                                    onTouchEnd={() => focusFirstEmpty()}
+                                                    onPointerDown={(e) => {
+                                                        const firstEmpty = getFirstEmptyIndex(code);
+                                                        if (i !== firstEmpty) {
+                                                            e.preventDefault();
+                                                            forceFocusFirstEmpty();
+                                                        }
+                                                    }}
+                                                    onTouchStart={(e) => {
+                                                        const firstEmpty = getFirstEmptyIndex(code);
+                                                        if (i !== firstEmpty) {
+                                                            e.preventDefault();
+                                                            forceFocusFirstEmpty();
+                                                        }
+                                                    }}
+                                                    onFocus={() => {
+                                                        const firstEmpty = getFirstEmptyIndex(code);
+                                                        if (i !== firstEmpty) {
+                                                            forceFocusFirstEmpty();
+                                                        }
+                                                    }}
+                                                    style={codeInputStyle}
+                                                    maxLength={1}
+                                                    disabled={loading}
+                                                />
+                                            ))}
+                                        </div>
 
-                            {error && <div style={{color: theme.text}}>{error}</div>}
+                                        <button
+                                            style={mainButtonStyle(loading)}
+                                            onMouseEnter={() => setBtnHover(true)}
+                                            onMouseLeave={() => setBtnHover(false)}
+                                            onClick={handleVerify}
+                                            disabled={loading}
+                                        >
+                                            {loading ? "Перевіряю..." : "Увійти"}
+                                        </button>
+                                    </>
+                                )}
 
-                            <style>
-                                {`
-                    input::placeholder,
-                    textarea::placeholder {
-                        text-align: center;
-                    }
-                `}
-                            </style>
-                        </div>
-                    }
-                    {
-                        isPaying && <div style={{
-                            position: "fixed",
-                            top: 0, left: 0,
-                            width: "100vw",
-                            height: "100vh",
-                            background: "rgba(0,0,0,0.35)",
-                            display: "flex",
-                            alignItems: isMobile ? "top" : "center",
-                            justifyContent: "center",
-                            zIndex: 9999
-                        }}>
+                                {error && <div style={{ color: theme.text }}>{error}</div>}
+
+                                <style>
+                                    {`
+                                        input::placeholder,
+                                        textarea::placeholder {
+                                            text-align: center;
+                                        }
+                                    `}
+                                </style>
+                            </div>
+                        )}
+
+                        {isPaying && (
                             <div
-                                id="embedded-checkout-container-login-form"
                                 style={{
-                                    display: "none",
-                                    width: "92vw",
-                                    maxWidth: 720,
-                                    margin: "0 auto",
-                                    background: theme.bg,
-                                    borderRadius: theme.radius * 1.2,
-                                    border: `4px solid ${theme.accent}`,
-                                    boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                                    maxHeight: "75%",
-                                    overflow: "auto",
+                                    position: "fixed",
+                                    inset: 0,
+                                    width: "100vw",
+                                    height: "100vh",
+                                    background: "rgba(0,0,0,0.35)",
+                                    display: "flex",
+                                    alignItems: isMobile ? "top" : "center",
+                                    justifyContent: "center",
+                                    zIndex: 9999,
+                                    backdropFilter: "blur(6px)",
+                                    WebkitBackdropFilter: "blur(6px)",
                                 }}
-                            />
-                        </div>
-                    }
+                            >
+                                <div
+                                    id="embedded-checkout-container-login-form"
+                                    style={{
+                                        display: "none",
+                                        width: "92vw",
+                                        maxWidth: 720,
+                                        margin: "0 auto",
+                                        background: theme.bg,
+                                        borderRadius: theme.radius * 1.2,
+                                        border: `4px solid ${theme.accent}`,
+                                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                                        maxHeight: "75%",
+                                        overflow: "auto",
+                                    }}
+                                />
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>}
+            )}
 
-
-            {
-                termsOpen && !isPaying && <TermsOfUseModal
+            {termsOpen && !isPaying && (
+                <TermsOfUseModal
                     ruleToDownload={ruleToDownload}
                     theme={theme}
                     onClose={() => {
@@ -639,36 +701,33 @@ export default function LoginForm({
                     email={emailInput}
                     verificationCode={code.join("")}
                 />
-
-            }
-
+            )}
 
             {cookieOpen && (
-                        <CookieConsentModal
-                            theme={theme}
-                            onAccept={async () => {
-                                acceptCookies();
-                                ensureAnalytics();
-                                if (localStorage.getItem("teacher") === "true")
-                                    trackPageView("/greetings");
+                <CookieConsentModal
+                    theme={theme}
+                    onAccept={async () => {
+                        acceptCookies();
+                        ensureAnalytics();
+                        if (localStorage.getItem("teacher") === "true")
+                            trackPageView("/greetings");
 
-                                trackPageView(window.location.pathname);
+                        trackPageView(window.location.pathname);
+                        trackMetaCustomEvent("StartUsing");
 
-                                trackMetaCustomEvent("StartUsing");
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
 
-                                await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
+                        reloadWithRuleParam(ruleToDownload);
+                    }}
+                    onReject={async () => {
+                        rejectCookies();
 
-                                reloadWithRuleParam(ruleToDownload);
-                            }}
-                            onReject={async () => {
-                                rejectCookies();
+                        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
 
-                                await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
-
-                                reloadWithRuleParam(ruleToDownload);
-                            }}
-                        />
-                    )}
-                </>
-                );
-                }
+                        reloadWithRuleParam(ruleToDownload);
+                    }}
+                />
+            )}
+        </>
+    );
+}

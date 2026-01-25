@@ -43,10 +43,8 @@ setInterval(() => {
 }, 5000);
 
 /* todo:
-- ти можливо відчуєш запах кави у кухні - error?
-Ця вправа легка.
-
-https://api-goodlang.beampie.com/translations?rules=TOO_ENOUGH&seed=572328&skip=16
+- add product limitation to automatic promo code on prod before releasing marathon
+- update ToU for marathons
 
 - add a progress bar to the rule page
 - add ordering in the rules table

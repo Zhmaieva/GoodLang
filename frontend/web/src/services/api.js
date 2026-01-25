@@ -27,6 +27,31 @@ export async function callCheckoutApi() {
     return  { ...data, isSuccess: true };
 }
 
+export async function callCheckoutMarathonApi(ruleIds) {
+    const url = `${API_BASE}/payments/create-marathon-checkout-session`;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify({
+            ruleIds,          // ✅ array of 7 strings
+            // promoCode: getPromoCode(), // optional (remove if not used)
+        }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok) {
+        return { isSuccess: false, error: data?.error || "Failed to create session" };
+    }
+
+    return { ...data, isSuccess: true }; // expects { clientSecret }
+}
+
+
 export async function callDataSyncApi(payload) {
     const url = `${API_BASE}/data-sync`;
 
@@ -153,8 +178,14 @@ export async function callAccountInfoApi() {
     // ✅ version sync + optional reload
     syncVersionAndMaybeReload(data?.appVersion);
 
+    // ✅ persist last known account info to LS (but still always fetch on this function)
+    try {
+        localStorage.setItem("account_info", JSON.stringify(data));
+    } catch {}
+
     return data;
 }
+
 
 export async function callAccountVerifyApi(actionType) {
     try {
@@ -406,6 +437,47 @@ export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
         // graceful: network/CORS/etc
         logError(e);
         return { isSuccess: false, errorCode: "network_error" };
+    }
+}
+
+/**
+ * Update current user's marathon status.
+ * Backend resolves marathon by accountId (auth token).
+ *
+ * @param {'completed'|'failed'} status
+ * @returns {Promise<{ isSuccess: boolean, updated?: boolean, status?: string }>}
+ */
+export async function callUpdateMarathonStatusApi(status) {
+    if (status !== "completed" && status !== "failed") {
+        throw new Error("Invalid marathon status");
+    }
+
+    try {
+        const res = await fetch(`${API_BASE}/marathons/status`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${await getToken()}`,
+            },
+            body: JSON.stringify({ status }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+            return {
+                isSuccess: false,
+                error: data?.error || "Failed to update marathon status",
+            };
+        }
+
+        return {
+            isSuccess: true,
+            ...data, // { ok, updated, status, previousStatus }
+        };
+    } catch (e) {
+        logError(e);
+        return { isSuccess: false, error: "network_error" };
     }
 }
 

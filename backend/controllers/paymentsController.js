@@ -4,7 +4,10 @@ import Stripe from "stripe";
 import express from "express";
 import {updateSubscriptionForAccount} from "../database/repositories/subscriptionRepository.js";
 import {getAccountById} from "../database/repositories/accountsRepository.js";
+import { startMarathon } from "../database/repositories/marathonsRepository.js";
 import {pool} from "../database/pool.js";
+import {recordAction} from "../database/repositories/accountLogRepository.js";
+import {ACTION_TYPES} from "../core/constants.js";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -121,6 +124,55 @@ export const paymentsController = {
             }
         });
 
+        app.post(`/${name}/create-marathon-checkout-session`, authMiddleware, async (req, res) => {
+            try {
+                const accountId = req.user.id;
+                const account = await getAccountById(accountId);
+
+                if (!accountId) {
+                    return res.status(400).json({ error: "Missing accountId" });
+                }
+
+                const ruleIds = req.body?.ruleIds;
+
+                if (!Array.isArray(ruleIds) || ruleIds.length !== 7 || ruleIds.some(r => typeof r !== "string" || !r.trim())) {
+                    return res.status(400).json({ error: "ruleIds must be an array of exactly 7 non-empty strings" });
+                }
+
+                // Store as JSON string in metadata (Stripe metadata values are strings)
+                const ruleIdsJson = JSON.stringify(ruleIds.map(r => r.trim()));
+
+
+                const sessionParams = {
+                    ui_mode: "embedded",
+                    mode: "subscription",
+                    return_url: `${process.env.FRONTEND_URL}/payment/success?type=marathon`,
+                    client_reference_id: accountId,
+                    customer_email: account?.email || undefined,
+                    line_items: [{ price: process.env.STRIPE_MARATHON_PRICE_ID, quantity: 1 }],
+                    metadata: {
+                        accountId,
+                        ruleIds: ruleIdsJson,
+                        product: "marathon_7d",
+                    },
+                    subscription_data: {
+                        metadata: {
+                            accountId,
+                            ruleIds: ruleIdsJson,
+                            product: "marathon_7d",
+                        },
+                    },
+                };
+
+                const session = await stripe.checkout.sessions.create(sessionParams);
+
+                return res.json({ clientSecret: session.client_secret });
+            } catch (err) {
+                console.error("Stripe error (marathon checkout):", err);
+                res.status(500).json({ error: "Failed to create marathon checkout session" });
+            }
+        });
+
     },
 
     mapRawJsonRoutes: function (app) {
@@ -144,15 +196,53 @@ export const paymentsController = {
                 if (event.type === "checkout.session.completed") {
                     const session = event.data.object;
 
-                    const accountId = session.client_reference_id;
-                    const email = session.customer_details.email;
-                    const subscriptionId = session.subscription;
+                    // Existing subscription flow (keep yours)
+                    if (session.mode === "subscription") {
+                        const subscriptionId = session.subscription;
 
-                    await updateSubscriptionForAccount(accountId, {
-                        status: "active",
-                        stripe_subscription_id: subscriptionId,
-                        customer_id: session.customer,
-                    });
+                        const accountId = session.client_reference_id || session.metadata?.accountId;
+                        const ruleIdsRaw = session.metadata?.ruleIds;
+                        const product = session.metadata?.product;
+
+                        await updateSubscriptionForAccount(accountId, {
+                            status: "active",
+                            stripe_subscription_id: subscriptionId,
+                            customer_id: session.customer,
+                        });
+
+                        if (product !== "marathon_7d") {
+                            return;
+                        }
+
+                        if (!accountId) {
+                            console.error("Marathon purchase: missing metadata.accountId");
+                            return res.json({ received: true });
+                        }
+
+                        let ruleIds;
+                        try {
+                            ruleIds = JSON.parse(ruleIdsRaw || "[]");
+                        } catch (e) {
+                            console.error("Marathon purchase: failed to parse ruleIds JSON:", e);
+                            return res.json({ received: true });
+                        }
+
+                        if (!Array.isArray(ruleIds) || ruleIds.length !== 7 || ruleIds.some(r => typeof r !== "string" || !r.trim())) {
+                            console.error("Marathon purchase: invalid ruleIds in metadata:", ruleIds);
+                            return res.json({ received: true });
+                        }
+
+                        // Start marathon (idempotent — won’t start if one already in progress)
+                        try {
+                            const {started} = await startMarathon(accountId, ruleIds);
+                            if (started)// track only for new marathons (idempotent)
+                                await recordAction(accountId, ACTION_TYPES.MARATHON_STATUS_IN_PROGRESS);
+                        } catch (e) {
+                            console.error("Marathon purchase: failed to start marathon:", e);
+                            // Still acknowledge webhook to Stripe to avoid retries storm;
+                            // Your startMarathon is idempotent anyway.
+                        }
+                    }
                 }
 
                 if (event.type === "customer.subscription.deleted") {

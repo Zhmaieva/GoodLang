@@ -838,3 +838,158 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: add_learning_marathons_and_schedules
+-- Description: Add learning_marathons + marathon_schedules tables (with constraints + indexes)
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_learning_marathons_and_schedules'
+        ) THEN
+
+            -- 1) learning_marathons
+            CREATE TABLE IF NOT EXISTS learning_marathons (
+                                                              id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                                                              account_id UUID NOT NULL,
+                                                              created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+                                                              duration INTEGER NOT NULL CHECK (duration > 0),
+                                                              status TEXT NOT NULL CHECK (status IN ('completed', 'in_progress', 'failed')),
+                                                              CONSTRAINT fk_learning_marathons_account
+                                                                  FOREIGN KEY (account_id)
+                                                                      REFERENCES accounts(id)
+                                                                      ON DELETE CASCADE
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_learning_marathons_account_id
+                ON learning_marathons(account_id);
+
+            CREATE INDEX IF NOT EXISTS idx_learning_marathons_status
+                ON learning_marathons(status);
+
+
+            -- 2) marathon_schedules
+            CREATE TABLE IF NOT EXISTS marathon_schedules (
+                                                              id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                                                              marathon_id UUID NOT NULL,
+                                                              day_number INTEGER NOT NULL CHECK (day_number > 0),
+                                                              rule_id VARCHAR(64) NOT NULL,
+                                                              day_start_at TIMESTAMP WITH TIME ZONE NOT NULL,
+                                                              day_end_at TIMESTAMP WITH TIME ZONE NOT NULL,
+
+                                                              CONSTRAINT fk_marathon_schedules_marathon
+                                                                  FOREIGN KEY (marathon_id)
+                                                                      REFERENCES learning_marathons(id)
+                                                                      ON DELETE CASCADE,
+
+                                                              CONSTRAINT uq_marathon_day
+                                                                  UNIQUE (marathon_id, day_number),
+
+                                                              CONSTRAINT chk_day_time
+                                                                  CHECK (day_end_at > day_start_at)
+            );
+
+            CREATE INDEX IF NOT EXISTS idx_marathon_schedules_marathon_id
+                ON marathon_schedules(marathon_id);
+
+            CREATE INDEX IF NOT EXISTS idx_marathon_schedules_rule_id
+                ON marathon_schedules(rule_id);
+
+
+            -- 3) Mark migration applied
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_learning_marathons_and_schedules', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+
+-- Migration: add_marathon_schedule_tasks
+-- Description: Add marathon_schedule_tasks table (PK, constraints, indexes)
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_marathon_schedule_tasks'
+        ) THEN
+
+            CREATE TABLE IF NOT EXISTS marathon_schedule_tasks (
+                                                                   marathon_schedule_id UUID NOT NULL,
+                                                                   ordinal_number INTEGER NOT NULL CHECK (ordinal_number > 0),
+                                                                   rule_id VARCHAR(64) NOT NULL,
+                                                                   is_answered BOOLEAN NOT NULL DEFAULT FALSE,
+
+                -- Composite PK
+                                                                   CONSTRAINT pk_marathon_schedule_tasks
+                                                                       PRIMARY KEY (marathon_schedule_id, ordinal_number),
+
+                -- FK to marathon_schedules
+                                                                   CONSTRAINT fk_marathon_schedule_tasks_schedule
+                                                                       FOREIGN KEY (marathon_schedule_id)
+                                                                           REFERENCES marathon_schedules(id)
+                                                                           ON DELETE CASCADE
+            );
+
+            -- Helpful indexes
+            CREATE INDEX IF NOT EXISTS idx_marathon_schedule_tasks_schedule_id
+                ON marathon_schedule_tasks(marathon_schedule_id);
+
+            CREATE INDEX IF NOT EXISTS idx_marathon_schedule_tasks_rule_id
+                ON marathon_schedule_tasks(rule_id);
+
+            CREATE INDEX IF NOT EXISTS idx_marathon_schedule_tasks_is_answered
+                ON marathon_schedule_tasks(is_answered);
+
+            -- Mark migration applied
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_marathon_schedule_tasks', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
+
+-- Migration: add_marathon_schedules_is_day_completed
+-- Description: Add is_day_completed flag to marathon_schedules
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'add_marathon_schedules_is_day_completed'
+        ) THEN
+
+            ALTER TABLE marathon_schedules
+                ADD COLUMN IF NOT EXISTS is_day_completed BOOLEAN NOT NULL DEFAULT FALSE;
+
+            -- Optional index if you’ll query by completion status
+            CREATE INDEX IF NOT EXISTS idx_marathon_schedules_is_day_completed
+                ON marathon_schedules(is_day_completed);
+
+            -- Mark migration applied
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_marathon_schedules_is_day_completed', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

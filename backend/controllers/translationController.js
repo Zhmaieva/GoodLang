@@ -11,6 +11,8 @@ import { authMiddleware } from "../middleware/authMiddleware.js";
 import { checkTranslationLimit, recordTranslationUsage } from "../database/repositories/accountLogRepository.js";
 import {GrammarRule, LEVEL_RULES} from "../core/rules.js";
 import {ALL_GAPS_SAMPLES} from "../core/allGapsSamples.js";
+import {answerNextMarathonTaskByRuleId} from "../database/repositories/marathonsRepository.js";
+import {getAccountById} from "../database/repositories/accountsRepository.js";
 
 const name = "translations";
 const locale = "ua";
@@ -183,6 +185,8 @@ export const translationsController = {
                     targetLanguage: "Ukrainian",
                 });
             } else {
+                const accountShortInfo = await getAccountById(req.user.id);
+
                 // Translation path (keeps your current behavior)
                 result = preEvaluate({
                     rules: rulesArr,
@@ -199,6 +203,10 @@ export const translationsController = {
                         textToTranslate: textToTranslate ?? "",
                     });
                 }
+
+                // Track marathon task completion
+                if (accountShortInfo?.status !== 'free')
+                    await answerNextMarathonTaskByRuleId(req.user.id, rulesArr[0]);
             }
 
             // -------------------------------
