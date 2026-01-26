@@ -10,13 +10,29 @@ import {ACTION_TYPES} from "../utils/constants.js";
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
     const [faqVisible, setFaqVisible] = useState(false);
+    const [isInMarathonView, setIsInMarathonView] = useState(false);
 
     useEffect(() => {
         const update = () => setIsMobile(window.innerWidth < 915);
         update();
+        checkMarathonView().then();
+
         window.addEventListener("resize", update);
-        return () => window.removeEventListener("resize", update);
+        window.addEventListener("onMarathonUpdate", checkMarathonView);
+        return () => {
+            window.removeEventListener("resize", update);
+            window.removeEventListener("onMarathonUpdate", checkMarathonView);
+        }
     }, []);
+
+    useEffect(() => {
+        checkMarathonView().then();
+    }, [loading])
+
+    const checkMarathonView = async () => {
+        const result = await marathonService.isMarathonView();
+        setIsInMarathonView(result);
+    }
 
     const styles = {
         header: {
@@ -133,20 +149,30 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
                         <div style={{display: "flex", flexDirection: "row", gap: 12, justifyContent: "space-between"}}>
                             <AccuracyKpi header mobile theme={theme}/>
-                            <AccountStatusButton theme={theme}/>
+                            {
+                                !isInMarathonView &&
+                                <AccountStatusButton theme={theme}/>
+                            }
                         </div>
 
                     </div>
 
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
-                        <LevelSwitch
-                            compact
-                            level={level}
-                            loading={loading}
-                            onLevelChange={onLevelChange}
-                            theme={theme}
-                        />
+                        {
+                            isInMarathonView &&
+                            <AccountStatusButton theme={theme}/>
+                        }
+                        {
+                            !isInMarathonView &&
+                            <LevelSwitch
+                                compact
+                                level={level}
+                                loading={loading}
+                                onLevelChange={onLevelChange}
+                                theme={theme}
+                            />
+                        }
                     </div>
                 </div>
             </div>
@@ -210,12 +236,16 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         gap: 8,
                     }}
                 >
-                    <LevelSwitch
-                        level={level}
-                        loading={loading}
-                        onLevelChange={onLevelChange}
-                        theme={theme}
-                    />
+                    {
+                        !isInMarathonView &&
+                        <LevelSwitch
+                            level={level}
+                            loading={loading}
+                            onLevelChange={onLevelChange}
+                            theme={theme}
+                        />
+                    }
+
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
