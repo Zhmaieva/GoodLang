@@ -119,6 +119,7 @@ import LandingPageTeacher from "./components/pages/LandingPageTeacher.jsx";
 import LandingPage3 from "./components/pages/LandingPage3.jsx";
 import GoodLangLandingTeaStyleThemed from "./components/pages/LandingPage2.jsx";
 import LandingCrossword from "./components/pages/LandingCrossword.jsx";
+import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -178,6 +179,7 @@ export default function App() {
                 <Route path="/welcome" element={<LandingPage3 theme={theme} />} />
                 <Route path="/greetings" element={<LandingPage3 theme={theme} />} />
                 <Route path="/hello" element={<LandingPageTeacher theme={theme} />} />
+                <Route path="/marathon" element={<LandingPageMarathon theme={theme} />} />
                 <Route path="/crossword" element={<LandingCrossword theme={theme} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />

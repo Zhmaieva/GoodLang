@@ -18,6 +18,7 @@ export default function SyncOnRouteChange() {
 
             const params = new URLSearchParams(window.location.search);
             const isTeacher = params.get("teacher") === "true";
+            const isCode = params.get("code");
             const shouldOpenSubscribe = params.get("subscribe") === "true";
 
             // If teacher=true -> remember it + remove param from URL (no redirect)
@@ -38,7 +39,7 @@ export default function SyncOnRouteChange() {
                 localStorage.setItem(FIRST_OPEN_KEY, "1");
 
                 // Only redirect to /welcome if NOT teacher and NOT subscribe
-                if (!isTeacher) {
+                if (!isTeacher && !isCode) {
                     // avoid redirect loop if already on /welcome
                     if (location.pathname !== "/welcome"
                         && location.pathname !== '/greetings'

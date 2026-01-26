@@ -42,6 +42,36 @@ export default function RulePage({ data, theme }) {
     const navigate = useNavigate();
 
     useEffect(() => {
+        if (typeof window === "undefined") return;
+
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get("code");
+        const url = new URL(window.location.href);
+        url.searchParams.delete("code");
+        window.history.replaceState({}, "", url.pathname + url.search);
+
+        if (!code) return;
+
+        let tries = 0;
+
+        const scrollWhenReady = () => {
+            const el = document.getElementById("trainer");
+
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+                return;
+            }
+
+            if (tries < 40) {
+                tries += 1;
+                setTimeout(scrollWhenReady, 50);
+            }
+        };
+
+        scrollWhenReady();
+    }, [data?.id, data?.sections?.length]);
+
+    useEffect(() => {
         loadAccountInfo().then();
     }, []);
 
@@ -218,12 +248,21 @@ export default function RulePage({ data, theme }) {
                     </Card>
                 );
 
+            // =========================================================
+            // ✅ 3) Anchor is attached to trainer section
+            // =========================================================
             case "trainer":
                 return (
-                    <>
+                    <div
+                        id="trainer"
+                        style={{
+                            // helps native anchor jumps too
+                            scrollMarginTop: 90,
+                        }}
+                    >
                         <SectionTitle>{section.title}</SectionTitle>
                         <Trainer notFocused nextRule={data.id} theme={theme} />
-                    </>
+                    </div>
                 );
 
             default:
