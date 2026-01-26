@@ -12,7 +12,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const [hover, setHover] = useState(false);
     const [levelInfo, setLevelInfo] = useState(LEVEL_MAP?.A1 ?? { label: "A1" });
 
-    // ✅ enables smooth transitions only AFTER first real data render
+    // ✅ smooth transitions only AFTER first real data render
     const [canAnimate, setCanAnimate] = useState(false);
 
     const navigate = useNavigate();
@@ -33,7 +33,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         setLevelInfo(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
         setIsLoading(false);
 
-        // enable transitions after first refresh
         setTimeout(() => setCanAnimate(true), 0);
     };
 
@@ -69,8 +68,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // HEADER MODE
     // -------------------------
     if (header) {
-        const SCROLL_SECONDS = 10;
-
         const ICON_LANE = [
             { src: "/house-icon.svg", gap: 32 },
             { src: "/apple-icon.svg", gap: 32 },
@@ -201,7 +198,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             display: "block",
         };
 
-        // ✅ BAR: keep sizing exactly as you had
         const barOuter = {
             position: "relative",
             height: 32,
@@ -218,7 +214,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             overflow: "hidden",
         };
 
-        // ✅ Fill grows by width (no squishing of road bars), smooth AFTER load
         const barFill = {
             position: "absolute",
             left: 0,
@@ -242,7 +237,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             pointerEvents: "none",
         };
 
-        // ✅ rounded pill dashes (SVG tile) + seamless loop (bgTravel multiple of 34)
         const roadLinesInner = {
             position: "absolute",
             left: 0,
@@ -254,10 +248,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             backgroundRepeat: "repeat-x",
             backgroundSize: "34px 4px",
             backgroundPosition: "0px center",
-            ["--bgTravel"]: `${34 * 60}px`, // 2040px => seamless reset
+            ["--bgTravel"]: `${34 * 60}px`,
         };
 
-        // ✅ Brain bubble pinned to the TIP (separate from fill, so it won't be clipped)
         const tipBubble = {
             position: "absolute",
             top: "50%",
@@ -277,9 +270,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
         const pctText = showEmpty ? "—" : `${(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%`;
 
-        const levelText = showEmpty
-            ? `${attemptsLeft} речень до оцінки рівня`
-            : `Рівень: ${levelInfo.label?.toLowerCase()}`;
+        const levelText = showEmpty ? `${attemptsLeft} речень до оцінки рівня` : `Рівень: ${levelInfo.label?.toLowerCase()}`;
 
         const renderIconSegment = (prefix) => {
             const totalGap = ICON_LANE.reduce((s, it) => s + (it.gap ?? 0), 0) || 1;
@@ -296,13 +287,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                 </span>
 
                                 {i !== ICON_LANE.length - 1 ? (
-                                    <span
-                                        aria-hidden
-                                        style={{
-                                            flex: `${wPct} 1 0%`,
-                                            minWidth: it.gap ?? 0,
-                                        }}
-                                    />
+                                    <span aria-hidden style={{ flex: `${wPct} 1 0%`, minWidth: it.gap ?? 0 }} />
                                 ) : null}
                             </React.Fragment>
                         );
@@ -319,19 +304,17 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                 onClick={onClick}
             >
                 <style>{`
-          /* ICONS: seamless transform loop */
           @keyframes glIconScroll {
             0%   { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
           }
           .gl-icon-scroll {
-            animation: glIconScroll var(--scrollSeconds, 10s) linear infinite;
+            animation: glIconScroll 6s linear infinite;
             will-change: transform;
             transform: translateZ(0);
             backface-visibility: hidden;
           }
 
-          /* ROAD: background-position loop */
           @keyframes glBgScroll {
             0%   { background-position-x: 0px; }
             100% { background-position-x: calc(-1 * var(--bgTravel, 2040px)); }
@@ -350,15 +333,15 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                                 style={{
                                     fontSize: "1.5rem",
                                     fontWeight: 800,
-                                    textTransform: "none",   // ✅ THIS fixes it
-                                    letterSpacing: 0,        // optional, keeps it clean
-                                    lineHeight: "1.25rem",
+                                    textTransform: "none",
+                                    letterSpacing: 0,
+                                    lineHeight: "1.5rem",
                                     top: ".15rem",
                                     position: "relative",
                                 }}
-                            >ⓘ</span>
-
-
+                            >
+                ⓘ
+              </span>
                         </div>
                         <div style={subStyle}>{levelText}</div>
                     </div>
@@ -366,7 +349,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                 </div>
 
                 <div style={trackArea}>
-                    {/* Moving icons */}
                     <div style={movingIconsLane}>
                         <div className="gl-icon-scroll" style={iconLaneWrap}>
                             <div style={half}>{renderIconSegment("segA")}</div>
@@ -374,7 +356,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                         </div>
                     </div>
 
-                    {/* Road bar */}
                     <div style={barOuter}>
                         <div style={barMask}>
                             <div style={barFill}>
@@ -384,7 +365,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                             </div>
                         </div>
 
-                        {/* ✅ Tip bubble (brain) */}
                         <span style={tipBubble} aria-hidden>
               <span
                   style={{
@@ -410,8 +390,23 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     }
 
     // -------------------------
-    // NON-HEADER MODE
+    // NON-HEADER MODE (RESTORED OLD LOOK WITH PROGRESS BAR)
     // -------------------------
+    const labelStyle = {
+        fontSize: isMobile ? "0.9rem" : "1rem",
+        color: "#a47856",
+        textTransform: "uppercase",
+        letterSpacing: ".06em",
+        fontWeight: 900,
+    };
+
+    const valueStyle = {
+        fontSize: isMobile ? "1.4rem" : "2rem",
+        fontWeight: 900,
+        color: theme.text,
+        lineHeight: 1.1,
+    };
+
     const cardStyle = {
         visibility: isLoading ? "hidden" : "visible",
         background: "#fffdf8",
@@ -426,29 +421,45 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         userSelect: "none",
     };
 
-    const labelStyle = {
-        fontSize: isMobile ? "0.9rem" : "1rem",
-        color: "#a47856",
-        textTransform: "uppercase",
-        letterSpacing: ".06em",
-        fontWeight: 900,
+    // ✅ old spark bar sizes
+    const sparkStyle = {
+        height: isMobile ? "6px" : "8px",
+        borderRadius: "8px",
+        background: "#fff",
+        border: "2px solid #ff6138",
+        marginTop: "6px",
+        position: "relative",
+        overflow: "hidden",
     };
 
-    const bigStyle = {
-        fontSize: isMobile ? "1.4rem" : "2rem",
-        fontWeight: 900,
-        color: theme.text,
-    };
+    const sparkFillStyle = (width) => ({
+        visibility: !isLoading ? "visible" : "hidden",
+        display: "block",
+        position: "absolute",
+        height: "100%",
+        width: `${width}%`,
+        background: theme.accent,
+        left: 0,
+        top: 0,
+        transition: canAnimate ? "width 650ms cubic-bezier(0.22, 1, 0.36, 1)" : "none",
+        willChange: "width",
+    });
 
     return (
         <div style={cardStyle}>
             <div style={labelStyle}>{title}</div>
-            {attemptsLeft > 0 ? (
-                <div style={bigStyle}>
+
+            {showEmpty ? (
+                <div style={valueStyle}>
                     {attemptsLeft} {attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня
                 </div>
             ) : (
-                <div style={bigStyle}>{(accuracy ?? 0) === 0 ? "0.00%" : `${accuracy.toFixed(2)}%`}</div>
+                <>
+                    <div style={valueStyle}>{(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%</div>
+                    <div style={sparkStyle}>
+                        <i style={sparkFillStyle(Math.min(100, accuracy ?? 0))} />
+                    </div>
+                </>
             )}
         </div>
     );
