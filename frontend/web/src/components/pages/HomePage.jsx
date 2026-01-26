@@ -23,6 +23,7 @@ export default function HomePage({ theme }) {
 
     const [isMobile, setIsMobile] = useState(false);
     const [isInMarathonView, setIsInMarathonView] = useState(false);
+    const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
 
     // ✅ Info modal state (for unsubscribe)
     const [infoOpen, setInfoOpen] = useState(false);
@@ -199,6 +200,7 @@ export default function HomePage({ theme }) {
     const checkMarathonView = async () => {
         const result = await marathonService.isMarathonView();
         setIsInMarathonView(result);
+        setIsMarathonLoaded(true);
     }
 
     return (
@@ -227,7 +229,7 @@ export default function HomePage({ theme }) {
 
                 <section style={gridStyle}>
                     {
-                        !isMobile &&    !isInMarathonView &&
+                        !isMobile && isMarathonLoaded && !isInMarathonView &&
                         <div style={topRowStyle}>
                             {
                                 !isMobile && allRulesVisible && <button

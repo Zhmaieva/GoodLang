@@ -104,7 +104,7 @@ export default function Trainer({
     const [rules, setRules] = useState([]);
 
     const [answer, setAnswer] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [mode, setMode] = useState("check"); // "check" | "next"
     const [isError, setIsError] = useState(false);
     const [locked, setLocked] = useState(false);
@@ -652,7 +652,6 @@ export default function Trainer({
     // Initial load when nextLevel changes
     // -----------------------------
     useEffect(() => {
-        if (loading) return;
         if (nextLevel === level && !nextRule) return;
 
         if (level !== nextLevel) {
