@@ -12,6 +12,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
     const [faqVisible, setFaqVisible] = useState(false);
     const [isInMarathonView, setIsInMarathonView] = useState(false);
+    const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
 
     useEffect(() => {
         const update = () => setIsMobile(window.innerWidth < 915);
@@ -33,6 +34,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     const checkMarathonView = async () => {
         const result = await marathonService.isMarathonView();
         setIsInMarathonView(result);
+        setIsMarathonLoaded(true);
     }
 
     const styles = {
@@ -159,7 +161,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
                         {
-                            !isInMarathonView &&
+                            !isInMarathonView && isMarathonLoaded &&
                             <LevelSwitch
                                 compact
                                 level={level}
@@ -232,7 +234,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     }}
                 >
                     {
-                        !isInMarathonView &&
+                        !isInMarathonView && isMarathonLoaded &&
                         <LevelSwitch
                             level={level}
                             loading={loading}

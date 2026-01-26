@@ -53,9 +53,14 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const showEmpty = attemptsLeft > 0;
 
     const pct = useMemo(() => {
+        if (showEmpty) {
+            const r = 100 * (7 - attemptsLeft) / 7;
+            return r;
+        }
+
         const v = Math.max(0, Math.min(100, Number(accuracy) || 0));
         return v;
-    }, [accuracy]);
+    }, [accuracy, attemptsLeft]);
 
     const title = "Знання правил";
 
@@ -219,7 +224,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             left: 0,
             top: 0,
             bottom: 0,
-            width: `${pct}%`,
+            width: `${Math.max(10, pct)}%`,
             background: theme.accent,
             borderRadius: 999,
             overflow: "hidden",
@@ -254,7 +259,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         const tipBubble = {
             position: "absolute",
             top: "50%",
-            left: `${Math.max(2, Math.min(98, pct))}%`,
+            left: `${Math.max(10.0, pct)}%`,
             transform: "translate(-100%, -50%)",
             width: 28,
             height: 28,
@@ -268,9 +273,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             willChange: "left",
         };
 
-        const pctText = showEmpty ? "—" : `${(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%`;
+        const pctText = showEmpty ? "" : `${(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%`;
 
-        const levelText = showEmpty ? `${attemptsLeft} речень до оцінки рівня` : `Рівень: ${levelInfo.label?.toLowerCase()}`;
+        const levelText = showEmpty ? `Лише ${attemptsLeft} ${attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня` : `Рівень: ${levelInfo.label?.toLowerCase()}`;
 
         const renderIconSegment = (prefix) => {
             const totalGap = ICON_LANE.reduce((s, it) => s + (it.gap ?? 0), 0) || 1;
