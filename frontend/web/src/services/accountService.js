@@ -43,6 +43,11 @@ setInterval(() => {
 }, 5000);
 
 /* todo:
+- overall accuracy redesign (header mode)
+- marathon progress bar
+- trainer redesign
+- trainer result redesign
+- modal on marathon day summary
 - modal on marathon fail (only once on active session)
 - modal on marathon base tasks completion
 - modal on marathon full tasks completion

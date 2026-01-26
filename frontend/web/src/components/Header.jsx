@@ -11,13 +11,29 @@ import {marathonService} from "../services/marathonService.js";
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
     const [faqVisible, setFaqVisible] = useState(false);
+    const [isInMarathonView, setIsInMarathonView] = useState(false);
 
     useEffect(() => {
         const update = () => setIsMobile(window.innerWidth < 915);
         update();
+        checkMarathonView().then();
+
         window.addEventListener("resize", update);
-        return () => window.removeEventListener("resize", update);
+        window.addEventListener("onMarathonUpdate", checkMarathonView);
+        return () => {
+            window.removeEventListener("resize", update);
+            window.removeEventListener("onMarathonUpdate", checkMarathonView);
+        }
     }, []);
+
+    useEffect(() => {
+        checkMarathonView().then();
+    }, [loading])
+
+    const checkMarathonView = async () => {
+        const result = await marathonService.isMarathonView();
+        setIsInMarathonView(result);
+    }
 
     const styles = {
         header: {
@@ -135,7 +151,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         <div style={{display: "flex", flexDirection: "row", gap: 12, justifyContent: "space-between"}}>
                             <AccuracyKpi header mobile theme={theme}/>
                             {
-                                !marathonService.isMarathonView() &&
+                                !isInMarathonView &&
                                 <AccountStatusButton theme={theme}/>
                             }
                         </div>
@@ -145,11 +161,11 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
                         {
-                            marathonService.isMarathonView() &&
+                            isInMarathonView &&
                             <AccountStatusButton theme={theme}/>
                         }
                         {
-                            !marathonService.isMarathonView() &&
+                            !isInMarathonView &&
                             <LevelSwitch
                                 compact
                                 level={level}
@@ -222,7 +238,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     }}
                 >
                     {
-                        !marathonService.isMarathonView() &&
+                        !isInMarathonView &&
                         <LevelSwitch
                             level={level}
                             loading={loading}

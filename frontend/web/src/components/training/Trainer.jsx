@@ -150,14 +150,17 @@ export default function Trainer({
 
     useEffect(() => {
         loadAccount().then();
+        refreshTaskMode().then();
+    }, []);
 
+    const refreshTaskMode = async () => {
         const saved = getSavedTaskMode();
-        if (marathonService.isInMarathon()) {
+        if (await marathonService.isMarathonView()) {
             setTaskMode("translations")
             return;
         }
         if (saved) setTaskMode(saved);
-    }, []);
+    }
 
     function setControlsDisabled(disabled) {
         onLoadingChange(disabled);
@@ -312,7 +315,7 @@ export default function Trainer({
                                          skip,
                                          overrideTaskType = null,
                                      }) {
-        if (marathonService.isInMarathon()) {
+        if (await marathonService.isMarathonView()) {
             const nextMarathonRule = marathonService.getNextMarathonRule();
             return await callTranslateAPI({
                 rules: [nextMarathonRule],
@@ -532,12 +535,11 @@ export default function Trainer({
                 }
             }
 
-            if (marathonService.isInMarathon())
-                await marathonService.isScheduleCompleted(); // full refresh schedule
+            await marathonService.isMarathonView();
 
             // ✅ Preload next task
             // During calibration you already prevent preloading below; kept as-is.
-            if (!marathonService.isInMarathon() && freeTraining && !(nextLevel === "managed" && isCalibration)) {
+            if (!(await marathonService.isMarathonView()) && freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
                 setNextRules(data.rules || []);
                 setNextHint(data.hint || null);
@@ -661,12 +663,16 @@ export default function Trainer({
 
         setLevel(nextLevel);
 
+        initCalibration().then()
+    }, [nextLevel]);
+
+    const initCalibration = async () => {
         const diff = randomDifficulty(nextLevel);
         setDifficulty(diff);
 
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration || marathonService.isInMarathon());
+        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView());
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
 
@@ -679,8 +685,7 @@ export default function Trainer({
 
         const initialOverride = isCalibrationNow() ? 0 : getRequestedTaskType();
         loadNewTask(diff, { overrideTaskType: initialOverride }).then(_ => {});
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [nextLevel]);
+    }
 
     // Focus textarea only for translation tasks
     useEffect(() => {
@@ -692,13 +697,16 @@ export default function Trainer({
     useEffect(() => {
         if (!difficulty) return;
 
+        initCalibrationSimple().then();
+    }, [difficulty]);
+
+    const initCalibrationSimple = async () => {
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration || marathonService.isInMarathon());
+        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView());
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
-
-    }, [difficulty]);
+    }
 
     return isError ? (
         <div style={{

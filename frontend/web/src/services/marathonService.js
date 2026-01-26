@@ -66,8 +66,8 @@ export const marathonService = {
         return Boolean(a?.isInMarathon);
     },
 
-    isMarathonView() {
-        return this.isInMarathon() && !this.isScheduleCompleted();
+    async isMarathonView() {
+        return this.isInMarathon() && !(await this.isScheduleCompleted());
     },
 
     isDayCompleted() {
@@ -156,7 +156,17 @@ export const marathonService = {
      * @returns {Promise<boolean>}
      */
     async isScheduleCompleted() {
-        const a = readAccountInfoFromLS();
+        let a = readAccountInfoFromLS();
+
+        // ✅ If LS day is stale (dayEndAt already passed), refresh account info first
+        const dayEndAt = a?.currentDay?.dayEndAt;
+        if (a?.isInMarathon && dayEndAt) {
+            const endMs = Date.parse(dayEndAt); // ISO UTC-safe
+            if (Number.isFinite(endMs) && endMs < Date.now()) {
+                await callAccountInfoApi();      // refresh LS cache
+                a = readAccountInfoFromLS();     // re-read fresh data
+            }
+        }
 
         // If backend already says completed, trust it
         if (a?.currentDay?.isDayCompleted === true) return true;
@@ -181,4 +191,5 @@ export const marathonService = {
 
         return true;
     },
+
 };

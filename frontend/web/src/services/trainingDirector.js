@@ -20,7 +20,7 @@ export function saveTrainingLevel(level) {
 const LS_TASK_MODE_KEY = "task_mode"; // "translations" | "gaps" | "combined"
 
 export function getSavedTaskMode() {
-    if (marathonService.isInMarathon())
+    if (marathonService.isMarathonView())
         return "translations";
 
     const v = String(localStorage.getItem(LS_TASK_MODE_KEY) || "").trim();

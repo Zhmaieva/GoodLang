@@ -37,12 +37,29 @@ export default function TaskCard({
 
     // ✅ simple responsive flags (keeps behavior stable during resize)
     const [isCompact, setIsCompact] = useState(() => window.innerWidth < 915);
+    const [isInMarathonView, setIsInMarathonView] = useState(false);
 
     useEffect(() => {
         const onResize = () => setIsCompact(window.innerWidth < 900);
+        checkMarathonView().then();
+
         window.addEventListener("resize", onResize, { passive: true });
-        return () => window.removeEventListener("resize", onResize);
+        window.addEventListener("onMarathonUpdate", checkMarathonView);
+
+        return () => {
+            window.removeEventListener("resize", onResize);
+            window.removeEventListener("onMarathonUpdate", checkMarathonView);
+        }
     }, []);
+
+    useEffect(() => {
+        checkMarathonView().then();
+    }, [loading])
+
+    const checkMarathonView = async () => {
+        const result = await marathonService.isMarathonView();
+        setIsInMarathonView(result);
+    }
 
     const isDesktop = !isCompact;
 
@@ -284,7 +301,7 @@ export default function TaskCard({
                 </div>
 
                 {
-                    !marathonService.isInMarathon() && <div style={styles.modeWrap}>
+                    !isInMarathonView && <div style={styles.modeWrap}>
                         <TaskModeSwitch
                             theme={theme}
                             taskMode={taskMode}
