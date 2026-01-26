@@ -98,7 +98,7 @@ export default function TaskCard({
 
     const isLockedNow = locked && secondsLeft > 0;
     const buttonText = isLockedNow
-        ? `Підпишись або почекай ${formatTime(secondsLeft)}`
+        ? `Почни марафон або почекай ${formatTime(secondsLeft)}`
         : mainBtnText;
 
     // ✅ detect if mode switch is expanded (best-effort)

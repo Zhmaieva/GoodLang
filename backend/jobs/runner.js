@@ -56,8 +56,8 @@ startNonOverlappingInterval(async () => {
     // avoid spam logs outside window
     if (!res.skipped) console.log("[tipsCron]", res);
 
-    const promoRes = await runPromoRegularTick(
-        { pool, transporter, projectRoot, batchSize: 1 });
-    if (!res.skipped) console.log("[promoCron]", promoRes);
+    // const promoRes = await runPromoRegularTick(
+    //     { pool, transporter, projectRoot, batchSize: 1 });
+    // if (!res.skipped) console.log("[promoCron]", promoRes);
 //}, 10000)
 }, 1200000)

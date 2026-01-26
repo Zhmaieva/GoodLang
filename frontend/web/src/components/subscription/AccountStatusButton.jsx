@@ -5,7 +5,14 @@ import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
 import {logInfo} from "../../services/logger.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
-import {setPromoCode} from "../../services/dataService.js";
+import {
+    getOverallAccuracy,
+    getPaymentIntent,
+    inferUserLevel,
+    setPaymentIntent,
+    setPromoCode
+} from "../../services/dataService.js";
+import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
 
 export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
@@ -14,6 +21,7 @@ export default function AccountStatusButton({ theme }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
     const [subscribeIntent, setSubscribeIntent] = useState(false);
+    const [attemptsLeft, setAttemptsLeft] = useState(1);
 
     const effectRan = useRef(false); // <-- prevents double run
 
@@ -25,6 +33,14 @@ export default function AccountStatusButton({ theme }) {
             const data = await callAccountInfoApi();
             if (!mountedRef.current) return null;
             setAccount(data);
+
+            if (data.status === 'free' && getPaymentIntent()) {
+                const intentType = localStorage.getItem("paymentIntentType");
+                if (intentType === '1') {
+                    setLimitModalOpen(true);
+                }
+            }
+
             return data;
         } catch (e) {
             console.error("Failed to load account status", e);
@@ -41,6 +57,10 @@ export default function AccountStatusButton({ theme }) {
         loadStatus().then((data) => {
             if (data) logInfo(data);
         });
+
+        const overall = getOverallAccuracy();
+        setAttemptsLeft(overall?.attemptsLeft ?? 0);
+
 
         intervalRef.current = setInterval(() => {
             loadStatus().catch(() => {});
@@ -90,6 +110,7 @@ export default function AccountStatusButton({ theme }) {
         callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_SUBSCRIPTION).then();
 
         if (account?.status === "free") {
+            // setLoginModalOpen(true);
             setLimitModalOpen(true);
         } else {
             setStatusModalOpen(true);
@@ -150,6 +171,7 @@ export default function AccountStatusButton({ theme }) {
 
     return (
         <>
+
             <div
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
@@ -158,20 +180,28 @@ export default function AccountStatusButton({ theme }) {
             >
                 {account?.status === "paid" && "Моя підписка"}
                 {account?.status === "attention" && "Підписка (увага)"}
-                {account?.status === "free" && account?.email && "Хочу підписку"}
-                {account?.status === "free" && !account?.email && "Підписка / Увійти"}
+                {account?.status === "free" && account?.email && "Марафон"}
+                {account?.status === "free" && !account?.email && "Увійти"}
             </div>
 
 
             {
-                account && <LimitModal
-                    featurePdf={localStorage.getItem("teacher") === "true"}
-                    subscribeIntent={subscribeIntent}
-                    accountInfo={account}
-                    isLimitReached={false}
-                    theme={theme}
+                // account && <LimitModal
+                //     featurePdf={localStorage.getItem("teacher") === "true"}
+                //     subscribeIntent={subscribeIntent}
+                //     accountInfo={account}
+                //     isLimitReached={false}
+                //     theme={theme}
+                //     open={limitModalOpen}
+                //     onClose={() => setLimitModalOpen(false)}
+                // />
+
+                account && <MarathonInfoModal
                     open={limitModalOpen}
                     onClose={() => setLimitModalOpen(false)}
+                    theme={theme}
+                    account={account}               // from callAccountInfoApi()
+                    ruleIds={[]}         // exactly 7 items
                 />
             }
 
@@ -191,6 +221,6 @@ export default function AccountStatusButton({ theme }) {
                             onClose={() => setLoginModalOpen(false)}/>
             }
 
-            </>
+        </>
     );
 }

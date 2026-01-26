@@ -254,37 +254,37 @@ export default function LoginForm({
             if (newAccount.status !== 'free') // old data will be synced to new account if possible
                 await syncData();
 
-            if (newAccount.status === "free" && getPaymentIntent()) {
-                setPaymentIntent(false);
-                try {
-                    setLoading(true);
-
-                    const stripe = await getStripe();
-
-                    const { clientSecret, isSuccess } = await callCheckoutApi();
-                    if (!isSuccess) {
-                        navigate("/payment/cancel");
-                        setLoading(false);
-                        return;
-                    }
-
-                    setIsPaying(true);
-
-                    setTimeout(async () => {
-                        if (!checkoutRef.current) {
-                            checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
-                            checkoutRef.current.mount("#embedded-checkout-container-login-form");
-                        }
-
-                        document.getElementById("embedded-checkout-container-login-form").style.display = "block";
-                        setLoading(false);
-                    }, 200)
-                } catch (err) {
-                    console.error("Stripe error:", err);
-                    setLoading(false);
-                }
-                return;
-            }
+            // if (newAccount?.status === "free" && getPaymentIntent()) {
+            //     setPaymentIntent(false);
+            //     try {
+            //         setLoading(true);
+            //
+            //         const stripe = await getStripe();
+            //
+            //         const { clientSecret, isSuccess } = await callCheckoutApi();
+            //         if (!isSuccess) {
+            //             navigate("/payment/cancel");
+            //             setLoading(false);
+            //             return;
+            //         }
+            //
+            //         setIsPaying(true);
+            //
+            //         setTimeout(async () => {
+            //             if (!checkoutRef.current) {
+            //                 checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
+            //                 checkoutRef.current.mount("#embedded-checkout-container-login-form");
+            //             }
+            //
+            //             document.getElementById("embedded-checkout-container-login-form").style.display = "block";
+            //             setLoading(false);
+            //         }, 200);
+            //     } catch (err) {
+            //         console.error("Stripe error:", err);
+            //         setLoading(false);
+            //     }
+            //     return;
+            // }
 
             if (!getCookieConsent()) {
                 setCookieOpen(true);

@@ -114,7 +114,7 @@ export default function LevelSwitch({
 
         return {
             appearance: "none",
-            padding: "10px 16px",
+            padding: "8px 14px",
             fontWeight: 800,
             fontSize: "1rem",
             lineHeight: 1,
