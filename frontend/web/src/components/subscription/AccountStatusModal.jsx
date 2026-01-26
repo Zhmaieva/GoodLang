@@ -3,6 +3,8 @@ import {callManageSubscriptionApi} from "../../services/api.js";
 import LoginModal from "./LoginModal.jsx";
 import {logoStyle} from "./LimitModal.jsx";
 import {fmtDate} from "../pages/analyticsLogic.js";
+import {marathonService} from "../../services/marathonService.js"; // ✅ adjust path if needed
+
 
 export default function AccountStatusModal({ accountInfo, theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -131,7 +133,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                         fontSize: "1rem",
                                         textAlign: "left"
                                     }}>
-                                        Щомісячна підписка
+                                        {marathonService.isInMarathon() ? 'Марафон кожні 7 днів' : 'Щомісячна підписка'}
                                     </p>
                                 }
                                 {

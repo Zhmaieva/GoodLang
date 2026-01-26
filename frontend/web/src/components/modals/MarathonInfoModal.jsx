@@ -1,7 +1,7 @@
 // MarathonPurchaseModal.jsx
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import LoginModal from "../subscription/LoginModal.jsx"; // adjust path if needed
-import {getOverallAccuracy, inferUserLevel, setPaymentIntent} from "../../services/dataService.js";
+import {getOverallAccuracy, getPaymentIntent, inferUserLevel, setPaymentIntent} from "../../services/dataService.js";
 import MarathonPurchaseModal from "./MarathonPurchaseModal.jsx";
 import {normalizeLevel} from "../training/MarathonPlanner.jsx";
 
@@ -33,6 +33,7 @@ export default function MarathonInfoModal({
                                                   ruleIds = [],
                                               }) {
     const [btnHover, setBtnHover] = useState(false);
+    const [loginBtnHover, setLoginBtnHover] = useState(false);
 
     const [loginOpen, setLoginOpen] = useState(false);
     const [purchaseOpen, setPurchaseOpen] = useState(false);
@@ -79,6 +80,14 @@ export default function MarathonInfoModal({
         setUserLevel(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
 
 
+        if (getPaymentIntent()) {
+            setPaymentIntent(false);
+            const intentType = localStorage.getItem("paymentIntentType");
+            if (intentType === '1') {
+                setPurchaseOpen(true);
+            }
+        }
+
         // NOTE: we don't unmount stripe embedded checkout instance here
         // (LimitModal doesn't either). If you want, we can destroy on close.
     }, [open]);
@@ -100,7 +109,7 @@ export default function MarathonInfoModal({
 
     const openLoginFlow = () => {
         try {
-            localStorage.setItem("rulesToMarathon", JSON.stringify(ruleIds));
+            // localStorage.setItem("rulesToMarathon", JSON.stringify(ruleIds));
             localStorage.setItem("paymentIntentType", "1");
             setPaymentIntent(true);
         } catch {}
@@ -228,6 +237,23 @@ export default function MarathonInfoModal({
                                 >
                                     {/* top row with close */}
                                     <div style={{display: "flex", justifyContent: "space-between"}}>
+                                        {
+                                            account?.email &&
+                                            <p style={{
+                                                marginBottom: 16,
+                                                marginTop: 8,
+                                                marginLeft: 0,
+                                                color: theme.muted,
+                                                fontSize: "1rem",
+                                                fontWeight: 500,
+                                                textAlign: "left",
+                                                overflow: "hidden",
+                                                textOverflow: "ellipsis",
+                                                maxWidth: 180,
+                                            }}>
+                                                {account?.email}
+                                            </p>
+                                        }
                                         <div/>
                                         <p
                                             onClick={() => {
@@ -302,8 +328,8 @@ export default function MarathonInfoModal({
                                     <div style={listWrap}>
                                         {items.map((x, idx) => (
                                             <div key={idx} style={row}>
-                                                <div style={dot} />
-                                                <div style={{ flex: 1, minWidth: 0 }}>
+                                                <div style={dot}/>
+                                                <div style={{flex: 1, minWidth: 0}}>
                                                     <p style={itemTitle}>{x.title}</p>
                                                     <p style={subText}>{x.sub}</p>
                                                 </div>
@@ -311,7 +337,13 @@ export default function MarathonInfoModal({
                                         ))}
 
                                         {/* tiny helper */}
-                                        <div style={{marginTop: 6, fontSize: 12.5, fontWeight: 800, opacity: 0.55, color: theme.text}}>
+                                        <div style={{
+                                            marginTop: 6,
+                                            fontSize: 12.5,
+                                            fontWeight: 800,
+                                            opacity: 0.55,
+                                            color: theme.text
+                                        }}>
                                             Твій поточний рівень: {userLevel?.label?.toLowerCase()}
                                         </div>
                                     </div>
@@ -338,7 +370,7 @@ export default function MarathonInfoModal({
                                             whiteSpace: "nowrap",
                                             opacity: 1,
                                             transform: btnHover ? "translateY(1px)" : "none",
-                                            filter: btnHover  ? "brightness(0.95)" : "none",
+                                            filter: btnHover ? "brightness(0.95)" : "none",
                                             transition: "transform 120ms ease, filter 120ms ease",
                                             cursor: "pointer",
                                             width: "100%",
@@ -346,6 +378,39 @@ export default function MarathonInfoModal({
                                     >
                                         Почати марафон
                                     </button>
+
+                                    {
+                                        account?.email &&
+                                        <button
+                                            onMouseEnter={() => setLoginBtnHover(true)}
+                                            onMouseLeave={() => setLoginBtnHover(false)}
+                                            onClick={() => {setLoginOpen(true)}}
+                                            style={{
+                                                appearance: "none",
+                                                padding: "10px 14px",
+                                                marginTop: 8,
+                                                fontWeight: 800,
+                                                fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
+                                                lineHeight: 1,
+                                                borderRadius: 999,
+                                                background: "#fff",
+                                                color: theme.text,
+                                                border: "2px solid rgba(0,0,0,0.12)",
+                                                boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+                                                fontFamily: "Nunito, system-ui, sans-serif",
+                                                whiteSpace: "nowrap",
+                                                opacity: 1,
+                                                transform: loginBtnHover ? "translateY(1px)" : "none",
+                                                filter: loginBtnHover ? "brightness(0.95)" : "none",
+                                                transition: "transform 120ms ease, filter 120ms ease",
+                                                cursor: "pointer",
+                                                width: "100%",
+                                            }}
+                                        >
+                                            Увійти в інший аккаунт
+                                        </button>
+                                    }
+
 
                                 </div>
                             </div>)

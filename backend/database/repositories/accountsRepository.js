@@ -3,7 +3,7 @@ import {sendPromoEmail, sendVerificationEmail} from "../../core/emailSender.js";
 import {getLifetime10CouponId, stripe} from "../../integrations/stripeService.js";
 import {nanoid} from "nanoid";
 
-const SHORTENED_WAIT_TIME_HOURS = 12;
+const SHORTENED_WAIT_TIME_HOURS = 24;
 
 /**
  * Creates a new account without requiring an email.
@@ -131,6 +131,8 @@ export async function getAccountInfo(accountId, promoCode) {
                      FROM marathon_schedules ms
                      WHERE ms.marathon_id = (SELECT id FROM current_marathon)
                        AND COALESCE(ms.is_day_completed, FALSE) = FALSE
+                       AND ms.day_start_at <= NOW()
+                       AND ms.day_end_at > NOW()
                      ORDER BY ms.day_number ASC
                      LIMIT 1
                  )
@@ -487,7 +489,7 @@ export async function verifyCode(currentId, email, code, termsAccepted) {
     const query = shortLimitsEnabled
         ? `
             INSERT INTO accounts (email, translations_quota, translation_limit, limit_time_span_seconds)
-            VALUES ($1, $2, 5, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
+            VALUES ($1, $2, 3, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
             RETURNING id
           `
         : `

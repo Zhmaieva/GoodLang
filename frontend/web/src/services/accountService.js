@@ -43,13 +43,13 @@ setInterval(() => {
 }, 5000);
 
 /* todo:
-- overall accuracy redesign (header mode)
+- overall accuracy redesign (header mode) DONE
 - marathon progress bar
 
 - trainer redesign
 - trainer result redesign
 
-- modal on marathon day summary
+- modal on marathon day summary (when day starts)
 
 - certificate on marathon completion
 - email on marathon completion
