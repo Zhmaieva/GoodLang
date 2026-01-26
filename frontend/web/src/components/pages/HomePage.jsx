@@ -227,10 +227,10 @@ export default function HomePage({ theme }) {
 
                 <section style={gridStyle}>
                     {
-                        !isInMarathonView &&
+                        !isMobile &&    !isInMarathonView &&
                         <div style={topRowStyle}>
                             {
-                                allRulesVisible && <button
+                                !isMobile && allRulesVisible && <button
                                     onMouseEnter={() => setHoveredAnalytics(true)}
                                     onMouseLeave={() => setHoveredAnalytics(false)}
                                     style={weakRuleButtonStyle(hoveredAnalytics, true)}

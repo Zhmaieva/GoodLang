@@ -3,20 +3,20 @@ import React, {useEffect} from "react";
 import {getOverallAccuracy, inferUserLevel} from "../../services/dataService.js";
 import {off, on} from "../../services/events.js";
 
+
+export const LEVEL_MAP = {
+    A1: { label: "Початківець", percent: 33 },
+    A2: { label: "Середній", percent: 66 },
+    B1: { label: "Середній", percent: 66 },
+    B2: { label: "Просунутий", percent: 100 },
+};
+
 export default function LevelKpi({ mobile, theme }) {
     const [isMobile, setIsMobile] = React.useState(mobile);
     const [accuracy, setAccuracy] = React.useState(0)
     const [attemptsLeft, setAttemptsLeft] = React.useState(0);
     const [levelInfo, setLevelInfo] = React.useState(0);
     const [isLoading, setIsLoading] = React.useState(true);
-
-
-    const LEVEL_MAP = {
-        A1: { label: "Початківець", percent: 33 },
-        A2: { label: "Середній", percent: 66 },
-        B1: { label: "Середній", percent: 66 },
-        B2: { label: "Просунутий", percent: 100 },
-    };
 
     const onRefresh = () => {
         const userLevel = inferUserLevel();

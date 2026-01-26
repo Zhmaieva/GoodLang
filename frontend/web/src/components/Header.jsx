@@ -39,17 +39,15 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             display: "flex",
             flexDirection: "column",
             gap: 16,
-            paddingBottom: 20,
-            borderBottom: `3px solid ${theme.accent}`,
-            marginBottom: 12,
+            paddingBottom: 10,
+            marginBottom: 6,
         },
         headerMobile: {
             display: "flex",
             flexDirection: "column",
             gap: 12,
-            paddingBottom: 20,
-            borderBottom: `3px solid ${theme.accent}`,
-            marginBottom: 12,
+            paddingBottom: 10,
+            marginBottom: 6,
         },
         brandRowMobile: {
             display: "flex",
@@ -73,6 +71,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         titleWrap: {
             display: "flex",
             flexDirection: "column",
+            width: "100%",
         },
         h1: {
             margin: 0,
@@ -84,6 +83,9 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         sub: {
             color: theme.muted,
             fontSize: "1rem",
+            marginTop: 8,
+            display: "flex",
+            justifyContent: 'flex-end',
         },
         leftColumn: {
             display: "flex",
@@ -140,7 +142,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                             </div>
 
                             <div style={styles.sub}>
-                                Перекладай, поки не вивчиш
+                                <AccountStatusButton theme={theme}/>
                             </div>
                         </div>
                     </div>
@@ -149,20 +151,12 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
                         <div style={{display: "flex", flexDirection: "row", gap: 12, justifyContent: "space-between"}}>
                             <AccuracyKpi header mobile theme={theme}/>
-                            {
-                                !isInMarathonView &&
-                                <AccountStatusButton theme={theme}/>
-                            }
                         </div>
 
                     </div>
 
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
-                        {
-                            isInMarathonView &&
-                            <AccountStatusButton theme={theme}/>
-                        }
                         {
                             !isInMarathonView &&
                             <LevelSwitch
@@ -198,7 +192,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     flexWrap: "wrap",
                     gap: 16,
                     width: "100%",
-                    height: "100px",
+                    height: "140px",
                 }}
             >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>

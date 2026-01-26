@@ -45,15 +45,21 @@ setInterval(() => {
 /* todo:
 - overall accuracy redesign (header mode)
 - marathon progress bar
+
 - trainer redesign
 - trainer result redesign
+
 - modal on marathon day summary
+
+- certificate on marathon completion
+- email on marathon completion
+- job to change marathon status
+
 - modal on marathon fail (only once on active session)
 - modal on marathon base tasks completion
 - modal on marathon full tasks completion
 - modal on marathon completion (only once on active session)
-- certificate on marathon completion
-- email on marathon completion
+
 - add product limitation to automatic promo code on prod before releasing marathon
 - update ToU for marathons
 
