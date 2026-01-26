@@ -481,3 +481,47 @@ export async function callUpdateMarathonStatusApi(status) {
     }
 }
 
+/**
+ * Complete current marathon day for the authenticated user.
+ *
+ * @param {{ requireAllTasksAnswered?: boolean }} [opts]
+ * @returns {Promise<{
+ *   isSuccess: boolean,
+ *   ok?: boolean,
+ *   updated?: boolean,
+ *   marathonId?: string,
+ *   scheduleId?: string,
+ *   dayNumber?: number,
+ *   error?: string
+ * }>}
+ */
+export async function callCompleteMarathonDayApi(opts = {}) {
+    try {
+        const { requireAllTasksAnswered = false } = opts || {};
+
+        const res = await fetch(`${API_BASE}/marathons/complete-day`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${await getToken()}`,
+            },
+            body: JSON.stringify({ requireAllTasksAnswered }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+            return {
+                isSuccess: false,
+                error: data?.error || "Failed to complete marathon day",
+            };
+        }
+
+        // expected: { ok, updated, marathonId, scheduleId, dayNumber }
+        return { isSuccess: true, ...data };
+    } catch (e) {
+        logError(e);
+        return { isSuccess: false, error: "network_error" };
+    }
+}
+

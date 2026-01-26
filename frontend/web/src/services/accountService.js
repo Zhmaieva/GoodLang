@@ -43,6 +43,12 @@ setInterval(() => {
 }, 5000);
 
 /* todo:
+- modal on marathon fail (only once on active session)
+- modal on marathon base tasks completion
+- modal on marathon full tasks completion
+- modal on marathon completion (only once on active session)
+- certificate on marathon completion
+- email on marathon completion
 - add product limitation to automatic promo code on prod before releasing marathon
 - update ToU for marathons
 

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import TaskModeSwitch from "./TaskModeSwitch.jsx";
+import {marathonService} from "../../services/marathonService.js";
 
 export default function TaskCard({
                                      theme,
@@ -27,6 +28,7 @@ export default function TaskCard({
                                      taskMode = "combined", // "translations" | "gaps" | "combined"
                                      setTaskMode = (_) => {},
                                      taskModeLocked = false,
+                                     taskModeLockReason = "",
                                  }) {
     const [hovered, setHovered] = useState(false);
 
@@ -281,16 +283,20 @@ export default function TaskCard({
                     </div>
                 </div>
 
-                <div style={styles.modeWrap}>
-                    <TaskModeSwitch
-                        theme={theme}
-                        taskMode={taskMode}
-                        setTaskMode={setTaskMode}
-                        loading={loading}
-                        locked={taskModeLocked}
-                        compact={isCompact}
-                    />
-                </div>
+                {
+                    !marathonService.isInMarathon() && <div style={styles.modeWrap}>
+                        <TaskModeSwitch
+                            theme={theme}
+                            taskMode={taskMode}
+                            setTaskMode={setTaskMode}
+                            loading={loading}
+                            locked={taskModeLocked}
+                            taskModeLockReason={taskModeLockReason}
+                            compact={isCompact}
+                        />
+                    </div>
+                }
+
             </div>
 
             <div style={styles.inputWrap}>

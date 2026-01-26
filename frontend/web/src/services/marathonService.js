@@ -66,6 +66,10 @@ export const marathonService = {
         return Boolean(a?.isInMarathon);
     },
 
+    isMarathonView() {
+        return this.isInMarathon() && !this.isScheduleCompleted();
+    },
+
     isDayCompleted() {
         const a = readAccountInfoFromLS();
         return Boolean(a?.currentDay?.isDayCompleted);
@@ -111,15 +115,6 @@ export const marathonService = {
     },
 
     /**
-     * Top 3 weakest rules (by lowest accuracy) from rulesSoFar.
-     * Returns rule IDs only.
-     */
-    getWeakMarathonRules() {
-        const weak = this.getWeakTodaysRules();
-        return weak.slice(0, 3).map((x) => x.ruleId);
-    },
-
-    /**
      * Next rule to train:
      * 1) next not-answered task in today's schedule (by ordinal_number)
      * 2) if none left → from rulesSoFar with accuracy <75%, pick most recent rule
@@ -146,6 +141,8 @@ export const marathonService = {
 
         return rulesSoFar[rulesSoFar.length - 1] || "";
     },
+
+
 
     /**
      * Schedule completed = all tasks completed AND no weak rules under 75% (rulesSoFar).

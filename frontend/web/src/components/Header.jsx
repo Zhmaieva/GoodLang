@@ -6,6 +6,7 @@ import {PrimaryButton} from "./Buttons.jsx";
 import FaqModal from "./subscription/FaqModal.jsx";
 import {callAccountVerifyApi} from "../services/api.js";
 import {ACTION_TYPES} from "../utils/constants.js";
+import {marathonService} from "../services/marathonService.js";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
@@ -133,20 +134,30 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
                         <div style={{display: "flex", flexDirection: "row", gap: 12, justifyContent: "space-between"}}>
                             <AccuracyKpi header mobile theme={theme}/>
-                            <AccountStatusButton theme={theme}/>
+                            {
+                                !marathonService.isMarathonView() &&
+                                <AccountStatusButton theme={theme}/>
+                            }
                         </div>
 
                     </div>
 
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
-                        <LevelSwitch
-                            compact
-                            level={level}
-                            loading={loading}
-                            onLevelChange={onLevelChange}
-                            theme={theme}
-                        />
+                        {
+                            marathonService.isMarathonView() &&
+                            <AccountStatusButton theme={theme}/>
+                        }
+                        {
+                            !marathonService.isMarathonView() &&
+                            <LevelSwitch
+                                compact
+                                level={level}
+                                loading={loading}
+                                onLevelChange={onLevelChange}
+                                theme={theme}
+                            />
+                        }
                     </div>
                 </div>
             </div>
@@ -210,12 +221,16 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         gap: 8,
                     }}
                 >
-                    <LevelSwitch
-                        level={level}
-                        loading={loading}
-                        onLevelChange={onLevelChange}
-                        theme={theme}
-                    />
+                    {
+                        !marathonService.isMarathonView() &&
+                        <LevelSwitch
+                            level={level}
+                            loading={loading}
+                            onLevelChange={onLevelChange}
+                            theme={theme}
+                        />
+                    }
+
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>

@@ -12,8 +12,8 @@ import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../servic
 import {ACTION_TYPES} from "../../utils/constants.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
-import MarathonPurchaseModal from "../modals/MarathonPurchaseModal.jsx";
 import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
+import {marathonService} from "../../services/marathonService.js";
 
 export default function Trainer({
                                     theme,
@@ -152,6 +152,10 @@ export default function Trainer({
         loadAccount().then();
 
         const saved = getSavedTaskMode();
+        if (marathonService.isInMarathon()) {
+            setTaskMode("translations")
+            return;
+        }
         if (saved) setTaskMode(saved);
     }, []);
 
@@ -308,6 +312,17 @@ export default function Trainer({
                                          skip,
                                          overrideTaskType = null,
                                      }) {
+        if (marathonService.isInMarathon()) {
+            const nextMarathonRule = marathonService.getNextMarathonRule();
+            return await callTranslateAPI({
+                rules: [nextMarathonRule],
+                seed,
+                skip,
+                taskType: "translations",
+                use_same_task_type: true,
+            });
+        }
+
         let ruleToSend = nextRule;
 
         const task_type = String(overrideTaskType ?? getRequestedTaskType());
@@ -517,9 +532,12 @@ export default function Trainer({
                 }
             }
 
+            if (marathonService.isInMarathon())
+                await marathonService.isScheduleCompleted(); // full refresh schedule
+
             // ✅ Preload next task
             // During calibration you already prevent preloading below; kept as-is.
-            if (freeTraining && !(nextLevel === "managed" && isCalibration)) {
+            if (!marathonService.isInMarathon() && freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
                 setNextRules(data.rules || []);
                 setNextHint(data.hint || null);
@@ -648,7 +666,7 @@ export default function Trainer({
 
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration);
+        setTaskModeLocked(!!isCalibration || marathonService.isInMarathon());
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
 
@@ -676,7 +694,7 @@ export default function Trainer({
 
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration);
+        setTaskModeLocked(!!isCalibration || marathonService.isInMarathon());
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
 
