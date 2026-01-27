@@ -46,7 +46,7 @@ setInterval(() => {
 - overall accuracy redesign (header mode) DONE
 - marathon progress bar DONE
 
-- job to change marathon status
+- job to change marathon status DONE
 - assign rules
 - modal on marathon fail (only once on active session)
 - modal on marathon completion (only once on active session)
