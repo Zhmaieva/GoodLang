@@ -3,7 +3,6 @@ import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getAllStatistics, getOverallAccuracy, getSeed, saveSeed} from "../../services/dataService.js";
 import {callAccountInfoApi, callAccountVerifyApi, callTranslateAPI} from "../../services/api.js";
-import LimitModal from "../subscription/LimitModal.jsx";
 import {getSavedTaskMode, getTrainingLevel, saveTaskMode} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
@@ -152,8 +151,8 @@ export default function Trainer({
     }, []);
 
     const refreshTaskMode = async () => {
-        const saved = getSavedTaskMode();
-        if (await marathonService.isMarathonView()) {
+        const saved = await getSavedTaskMode();
+        if (await marathonService.isMarathonView(true)) {
             setTaskMode("translations")
             return;
         }
@@ -313,7 +312,7 @@ export default function Trainer({
                                          skip,
                                          overrideTaskType = null,
                                      }) {
-        if (await marathonService.isMarathonView()) {
+        if (await marathonService.isMarathonView(true)) {
             const nextMarathonRule = marathonService.getNextMarathonRule();
             return await callTranslateAPI({
                 rules: [nextMarathonRule],
@@ -520,6 +519,7 @@ export default function Trainer({
             }
 
             emit("weeklyProgressUpdate");
+            emit("marathonProgressUpdate");
 
             const serverNextType = Number(data.taskType ?? 0);
             const serverProvidedNextTask = !!(data.textToTranslate && (data.rules?.length ?? 0) > 0);
@@ -533,7 +533,7 @@ export default function Trainer({
                 }
             }
 
-            await marathonService.isMarathonView();
+            emit("marathonProgressUpdateHardRefresh");
 
             // ✅ Preload next task
             // During calibration you already prevent preloading below; kept as-is.
@@ -669,7 +669,7 @@ export default function Trainer({
 
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView());
+        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView(true));
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
 
@@ -700,7 +700,7 @@ export default function Trainer({
     const initCalibrationSimple = async () => {
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView());
+        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView(true));
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
     }

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {logoStyle} from "./LimitModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
+import {syncPrevAccountInfoToLS} from "../../services/marathonService.js";
 
 export default function PaymentSuccess() {
     const navigate = useNavigate();
@@ -18,6 +19,7 @@ export default function PaymentSuccess() {
         if (isMarathon) {
             params.delete("type");
             setIsMarathon(true);
+            syncPrevAccountInfoToLS();
         }
 
         setPaymentIntent(false);
@@ -147,7 +149,7 @@ export default function PaymentSuccess() {
                         onClick={() => navigate("/")}
                         style={buttonStyle}
                     >
-                        До тренажера
+                        {isMarathon ? "До марафону" : "До тренажера"}
                     </button>
                 </div>
             </div>
