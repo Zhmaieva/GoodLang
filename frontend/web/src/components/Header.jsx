@@ -32,7 +32,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
     }, [loading])
 
     const checkMarathonView = async () => {
-        const result = await marathonService.isMarathonView();
+        const result = await marathonService.isMarathonView(true);
         setIsInMarathonView(result);
         setIsMarathonLoaded(true);
     }
@@ -41,7 +41,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         header: {
             display: "flex",
             flexDirection: "column",
-            gap: 16,
+            gap: marathonService.isInMarathon() ? 24 : 16,
             paddingBottom: 10,
             marginBottom: 6,
         },

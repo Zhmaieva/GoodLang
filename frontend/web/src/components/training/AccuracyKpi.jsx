@@ -1,8 +1,43 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { getOverallAccuracy, inferUserLevel, syncWithServer } from "../../services/dataService.js";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import {
+    getAllStatistics,
+    getOverallAccuracy,
+    inferUserLevel,
+    syncWithServer,
+} from "../../services/dataService.js";
 import { off, on } from "../../services/events.js";
 import { useNavigate } from "react-router-dom";
 import { LEVEL_MAP } from "./LevelKpi.jsx";
+
+// ✅ marathon
+import { marathonService, readAccountInfoFromLS } from "../../services/marathonService.js";
+import { RULE_LABELS } from "../../utils/rules.js";
+
+function pad2(n) {
+    return String(Math.max(0, n | 0)).padStart(2, "0");
+}
+
+function formatHMS(ms) {
+    const s = Math.max(0, Math.floor(ms / 1000));
+    const hh = Math.floor(s / 3600);
+    const mm = Math.floor((s % 3600) / 60);
+    const ss = s % 60;
+    return `${pad2(hh)}:${pad2(mm)}:${pad2(ss)}`;
+}
+
+function endOfLocalDayMs() {
+    const d = new Date();
+    d.setHours(23, 59, 59, 999);
+    return d.getTime();
+}
+
+function getRuleAccuracy(ruleId) {
+    if (!ruleId) return 0;
+    const stats = getAllStatistics?.() || [];
+    const s = stats.find((x) => String(x?.rule) === String(ruleId));
+    const v = Number(s?.accuracy);
+    return Number.isFinite(v) ? v : 0;
+}
 
 export default function AccuracyKpi({ header, mobile, theme }) {
     const [accuracy, setAccuracy] = useState(0);
@@ -11,58 +46,63 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const [isLoading, setIsLoading] = useState(true);
     const [hover, setHover] = useState(false);
     const [levelInfo, setLevelInfo] = useState(LEVEL_MAP?.A1 ?? { label: "A1" });
-    const [levelNameInfo, setLevelNameInfo] = useState("");
 
     // ✅ smooth transitions only AFTER first real data render
     const [canAnimate, setCanAnimate] = useState(false);
 
+    // ✅ marathon countdown tick (header mode uses it)
+    const [tick, setTick] = useState(0);
+    const tickTimerRef = useRef(null);
+    const [isMarathonView, setIsMarathonView] = useState(false);
+    const [tasksRemainingData, setTasksRemainingData] = useState(marathonService.getRulesLeftForToday());
+
     const navigate = useNavigate();
 
-    const refresh = async () => {
+    const refresh = async (decrementTasks = false) => {
         await syncWithServer();
         const overall = getOverallAccuracy();
         const userLevel = inferUserLevel();
         const acc = Number.isFinite(overall?.accuracy) ? overall.accuracy : 0;
 
+        const isInMarathonView = await marathonService.isMarathonView();
+        setTasksRemainingData(marathonService.getRulesLeftForToday());
+
+        setIsMarathonView(isInMarathonView);
+
         setAccuracy(acc);
         setAttemptsLeft(overall?.attemptsLeft ?? 0);
 
-        const originalInferred = userLevel?.level || "A1";
-        let inferred = originalInferred;
+        let inferred = userLevel?.level || "A1";
         if (inferred === "A1" && acc > 40) inferred = "A2";
         if (inferred !== "B2" && acc > 85) inferred = "B2";
-
-        if (originalInferred === "A1" && acc < 30) {
-            setLevelNameInfo(", A1");
-        } else if ((originalInferred === "A1" && acc >= 30) || (originalInferred === "A2" && acc <= 45)) {
-            setLevelNameInfo(", A1-A2");
-        } else if ((originalInferred === "A2" || originalInferred === "B1") && acc < 60 || ((originalInferred === "A2" && acc >= 60))) {
-            setLevelNameInfo(", A2-B1");
-        } else if (originalInferred === "B1" && acc >= 60) {
-            setLevelNameInfo(", B1-B2");
-        } else if (originalInferred === "B2" && acc < 90) {
-            setLevelNameInfo(", B2-C1");
-        } else if (originalInferred === "B2" && acc > 90) {
-            setLevelNameInfo(", C1");
-        }
 
         setLevelInfo(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
         setIsLoading(false);
 
+
         setTimeout(() => setCanAnimate(true), 0);
     };
+
+    const refreshWithTaskDecrement = () => refresh(true);
 
     useEffect(() => {
         refresh().then();
         on("weeklyProgressUpdate", refresh);
+        on("marathonProgressUpdate", refreshWithTaskDecrement);
+        on("marathonProgressUpdateHardRefresh", refresh);
 
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
         window.addEventListener("resize", onResize);
 
+        // ✅ tick for countdowns (header-only UI uses it; harmless elsewhere)
+        tickTimerRef.current = window.setInterval(() => setTick((x) => x + 1), 1000);
+
         return () => {
             off("weeklyProgressUpdate", refresh);
+            off("marathonProgressUpdate", refreshWithTaskDecrement);
             window.removeEventListener("resize", onResize);
+            if (tickTimerRef.current) window.clearInterval(tickTimerRef.current);
         };
     }, []);
 
@@ -70,7 +110,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const pct = useMemo(() => {
         if (showEmpty) {
-            const r = 100 * (7 - attemptsLeft) / 7;
+            const r = (100 * (7 - attemptsLeft)) / 7;
             return r;
         }
 
@@ -78,7 +118,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         return v;
     }, [accuracy, attemptsLeft]);
 
-    const title = "Знання правил";
+    const titleDefault = "Знання правил";
 
     const onClick = () => {
         if (!header) return;
@@ -89,16 +129,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // HEADER MODE
     // -------------------------
     if (header) {
-        // ✅ edge fade for moving content (icons + road dashes)
-        const edgeFadeMask = {
-            maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
-            WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
-            maskRepeat: "no-repeat",
-            WebkitMaskRepeat: "no-repeat",
-            maskSize: "100% 100%",
-            WebkitMaskSize: "100% 100%",
-        };
-
         const ICON_LANE = [
             { src: "/house-icon.svg", gap: 32 },
             { src: "/apple-icon.svg", gap: 32 },
@@ -171,6 +201,13 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             marginTop: 4,
         };
 
+        const subStyleMulti = {
+            ...subStyle,
+            whiteSpace: "normal",
+            overflow: "visible",
+            textOverflow: "clip",
+        };
+
         const valueStyle = {
             fontFamily: "Nunito, system-ui, sans-serif",
             fontWeight: 1000,
@@ -197,8 +234,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             overflow: "hidden",
             opacity: 0.78,
             pointerEvents: "none",
-
-            ...edgeFadeMask,
         };
 
         const iconLaneWrap = {
@@ -247,12 +282,11 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             overflow: "hidden",
         };
 
-        const barFill = {
+        const barFillBase = {
             position: "absolute",
             left: 0,
             top: 0,
             bottom: 0,
-            width: `${Math.max(10, pct)}%`,
             background: theme.accent,
             borderRadius: 999,
             overflow: "hidden",
@@ -268,8 +302,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             transform: "translateY(-50%)",
             height: 4,
             pointerEvents: "none",
-
-            ...edgeFadeMask,
         };
 
         const roadLinesInner = {
@@ -303,10 +335,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             willChange: "left",
         };
 
-        const pctText = showEmpty ? "" : `${(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%`;
-
-        const levelText = showEmpty ? `Лише ${attemptsLeft} ${attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня` : `Рівень: ${levelInfo.label?.toLowerCase()}${levelNameInfo}`;
-
         const renderIconSegment = (prefix) => {
             const totalGap = ICON_LANE.reduce((s, it) => s + (it.gap ?? 0), 0) || 1;
 
@@ -329,6 +357,113 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                     })}
                 </div>
             );
+        };
+
+        // =========================
+        // ✅ Marathon header logic (ONLY affects header mode)
+        // =========================
+        const account = readAccountInfoFromLS?.() || marathonService?._getAccountInfo?.() || null;
+        const isInMarathon = Boolean(account?.isInMarathon || marathonService?.isInMarathon?.());
+        const dayNumberRaw =
+            Number(account?.currentDay?.dayNumber ?? account?.currentDay?.day ?? account?.currentDay?.ordinalNumber ?? 1) || 1;
+        const dayNumber = Math.max(1, Math.min(7, dayNumberRaw));
+
+        const dayEndAtIso = account?.currentDay?.dayEndAt || account?.currentDay?.day_end_at || null;
+        const dayEndMs = Number.isFinite(Date.parse(dayEndAtIso)) ? Date.parse(dayEndAtIso) : endOfLocalDayMs();
+        const timeLeftMs = Math.max(0, dayEndMs - Date.now());
+        const timeLeftText = formatHMS(timeLeftMs);
+
+        const scheduleHasRemainingTasks = isInMarathon && tasksRemainingData.remaining > 0;
+
+        const nextRuleId = isInMarathon ? marathonService.getNextMarathonRule() : "";
+        const nextRuleLabel = RULE_LABELS?.[nextRuleId] || nextRuleId || titleDefault;
+        const nextRuleAcc = getRuleAccuracy(nextRuleId);
+
+        const levelTextDefault = showEmpty
+            ? `Лише ${attemptsLeft} ${attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня`
+            : `Рівень: ${levelInfo.label?.toLowerCase()}`;
+
+        // ✅ marathon “passed” message for day 7 (you asked specifically for it)
+        const marathonPassedText =
+            isInMarathon && dayNumber >= 7 && Boolean(account?.currentDay?.isDayCompleted) ? "Марафон пройдено. Вітаю!" : null;
+
+        // Decide what to render (title/sub/value/progress) based on your rules:
+        let headerTitle = titleDefault;
+        let headerSub = levelTextDefault;
+        let headerValue = showEmpty ? "" : `${(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%`;
+
+        // fill width for bar + marker position for bubble
+        let progressPctForFill = Math.max(10, pct);
+        let progressPctForMarker = Math.max(10.0, pct);
+
+        // ====== case: NOT in marathon → unchanged ======
+        if (!isInMarathon) {
+            // keep defaults (no changes)
+        }
+
+        // ====== case: IN marathon AND in marathon view ======
+        else if (isMarathonView) {
+            // A) tasks are NOT empty (remaining tasks > 0)
+            if (scheduleHasRemainingTasks) {
+                headerSub = `${dayNumber} день марафону. \nДо дедлайну ${timeLeftText}`;
+                headerTitle = `Залишилось завдань`;
+                headerValue = `${tasksRemainingData.remaining}`;
+
+                const done = Math.max(0, tasksRemainingData.total - tasksRemainingData.remaining);
+                const denom = Math.max(1, tasksRemainingData.total);
+                const p = (100 * done) / denom;
+
+                progressPctForFill = Math.max(10, Math.min(100, p));
+                progressPctForMarker = Math.max(10.0, Math.min(100, p));
+            }
+            // B) tasks are empty (remaining tasks == 0)
+            else {
+                headerTitle = nextRuleLabel;
+
+                const eta = marathonService.estimateEtaForWeakRules(70);
+                headerSub = `Підтягни точність правил.\nЦе займе ${eta}. До дедлайну ${timeLeftText}`;
+
+                // show current rule accuracy as percentage (per your spec)
+                headerValue = `${(nextRuleAcc ?? 0) === 0 ? "0.00" : Number(nextRuleAcc).toFixed(2)}%`;
+
+                // bar: target is 70% (full width), fill is current accuracy relative to 70
+                const p = (100 * Math.max(0, Math.min(70, nextRuleAcc))) / 70;
+                progressPctForFill = Math.max(10, Math.min(100, p));
+                progressPctForMarker = Math.max(10.0, Math.min(100, p));
+            }
+        }
+
+        // ====== case: IN marathon but NOT in marathon view ======
+        else {
+            headerTitle = titleDefault;
+
+            if (marathonPassedText) {
+                headerSub = marathonPassedText;
+            } else {
+                // subtitle = existing one + extra line with countdown
+                headerSub = `${dayNumber} день марафону пройдено.\n Наступний день починається за ${timeLeftText}`;
+            }
+
+            // keep value as normal KPI
+            headerValue = showEmpty ? "" : `${(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%`;
+            progressPctForFill = Math.max(10, pct);
+            progressPctForMarker = Math.max(10.0, pct);
+        }
+
+        // Make sure re-render happens every second (we already tick),
+        // and “use” tick so React doesn’t tree-shake it away.
+        // eslint-disable-next-line no-unused-vars
+        const _tick = tick;
+
+        // Apply computed progress values
+        const barFill = {
+            ...barFillBase,
+            width: `${progressPctForFill}%`,
+        };
+
+        const tipBubbleRuntime = {
+            ...tipBubble,
+            left: `${progressPctForMarker}%`,
         };
 
         return (
@@ -362,25 +497,48 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
                 <div style={headerTopRow}>
                     <div style={leftCol}>
-                        <div style={titleStyle}>
-                            {title}{" "}
-                            <span
-                                style={{
-                                    fontSize: "1.5rem",
-                                    fontWeight: 800,
-                                    textTransform: "none",
-                                    letterSpacing: 0,
-                                    lineHeight: "1.5rem",
-                                    top: ".15rem",
-                                    position: "relative",
-                                }}
-                            >
+                        {
+                            isMarathonView && <div style={titleStyle}>
+                                {headerTitle}
+                            </div>
+
+                        }
+
+                        {
+                            !isMarathonView && <div style={titleStyle}>
+                                {headerTitle}{" "}
+                                <span
+                                    style={{
+                                        fontSize: "1.5rem",
+                                        fontWeight: 800,
+                                        textTransform: "none",
+                                        letterSpacing: 0,
+                                        lineHeight: "1.5rem",
+                                        top: ".15rem",
+                                        position: "relative",
+                                    }}
+                                >
                 ⓘ
               </span>
+                            </div>
+
+                        }
+
+
+                        {/* ✅ allow <br> via \n */}
+                        <div style={subStyleMulti}>
+                            {String(headerSub || "")
+                                .split("\n")
+                                .map((line, i, arr) => (
+                                    <React.Fragment key={i}>
+                                        {line}
+                                        {i !== arr.length - 1 ? <br/> : null}
+                                    </React.Fragment>
+                                ))}
                         </div>
-                        <div style={subStyle}>{levelText}</div>
                     </div>
-                    <div style={valueStyle}>{pctText}</div>
+
+                    <div style={valueStyle}>{headerValue}</div>
                 </div>
 
                 <div style={trackArea}>
@@ -400,7 +558,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                             </div>
                         </div>
 
-                        <span style={tipBubble} aria-hidden>
+                        <span style={tipBubbleRuntime} aria-hidden>
               <span
                   style={{
                       width: 16,
@@ -482,7 +640,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     return (
         <div style={cardStyle}>
-            <div style={labelStyle}>{title}</div>
+            <div style={labelStyle}>{titleDefault}</div>
 
             {showEmpty ? (
                 <div style={valueStyle}>

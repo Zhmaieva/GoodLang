@@ -58,7 +58,7 @@ export default function TaskCard({
     }, [loading])
 
     const checkMarathonView = async () => {
-        const result = await marathonService.isMarathonView();
+        const result = await marathonService.isMarathonView(true);
         setIsInMarathonView(result);
         setIsMarathonLoaded(true);
     }

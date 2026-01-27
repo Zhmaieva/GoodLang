@@ -1,10 +1,13 @@
 import { callAccountInfoApi, callCompleteMarathonDayApi } from "./api.js";
 import { getAllStatistics } from "./dataService.js";
+import {emit} from "./events.js";
 
 const STORAGE_KEY_ACCOUNT_INFO = "account_info";
+const STORAGE_KEY_ACCOUNT_INFO_PREV = "account_info_old";
 const WEAK_BAR = 70; // %
+const SECONDS_PER_TRANSLATION = 30;
 
-function readAccountInfoFromLS() {
+export function readAccountInfoFromLS() {
     const raw = localStorage.getItem(STORAGE_KEY_ACCOUNT_INFO);
     if (!raw) return null;
     try {
@@ -13,6 +16,52 @@ function readAccountInfoFromLS() {
         return null;
     }
 }
+
+function readPrevAccountInfoFromLS() {
+    const raw = localStorage.getItem(STORAGE_KEY_ACCOUNT_INFO_PREV);
+    if (!raw) return null;
+    try {
+        return JSON.parse(raw);
+    } catch {
+        return null;
+    }
+}
+
+export function syncPrevAccountInfoToLS() {
+    localStorage.setItem(STORAGE_KEY_ACCOUNT_INFO_PREV, JSON.stringify(readAccountInfoFromLS()));
+}
+
+
+function translationsNeededToReachTarget(avgPercent, attempts, targetPercent) {
+    const a = Number.isFinite(Number(avgPercent)) ? Number(avgPercent) : 0;
+    const n = Number.isFinite(Number(attempts)) ? Number(attempts) : 0;
+    const t = Number.isFinite(Number(targetPercent)) ? Number(targetPercent) : 70;
+
+    if (a >= t) return 0;
+
+    // If no attempts yet, 1 perfect translation immediately puts avg at 100%
+    if (n <= 0) return 1;
+
+    // Need k such that: (a*n + 100*k) / (n+k) >= t
+    // => k >= n*(t - a) / (100 - t)
+    const denom = Math.max(1e-9, 100 - t);
+    const k = Math.ceil((n * (t - a)) / denom);
+
+    return Math.max(0, k);
+}
+
+function formatEtaFromSeconds(totalSeconds) {
+    const s = Math.max(0, Math.floor(Number(totalSeconds) || 0));
+    const mins = Math.ceil(s / 60);
+
+    if (mins < 60) return `${mins} хв`;
+
+    const h = Math.floor(mins / 60);
+    const m = mins % 60;
+
+    return m > 0 ? `${h} год ${m} хв` : `${h} год`;
+}
+
 
 function safeArray(v) {
     return Array.isArray(v) ? v : [];
@@ -45,6 +94,7 @@ function ruleAccuracy(ruleId, statByRule) {
     return Number.isFinite(acc) ? acc : 0;
 }
 
+
 function mostRecentWeakRuleFromRulesSoFar(rulesSoFar, statByRule) {
     // "ordered by the most recent rule" → interpret as the most recent in rulesSoFar array
     // (rulesSoFar is accumulated chronologically in your backend query)
@@ -66,13 +116,45 @@ export const marathonService = {
         return Boolean(a?.isInMarathon);
     },
 
-    async isMarathonView() {
-        return this.isInMarathon() && !(await this.isScheduleCompleted());
+    async isMarathonView(cache = false) {
+        return this.isInMarathon() && !(await this.isScheduleCompleted(cache));
     },
 
     isDayCompleted() {
         const a = readAccountInfoFromLS();
         return Boolean(a?.currentDay?.isDayCompleted);
+    },
+
+    /**
+     * Estimates total ETA to raise ALL weak rules in rulesSoFar to WEAK_BAR (default 70),
+     * assuming each new translation is perfect (score 1.0 => 100%),
+     * and 1 translation takes 30 seconds.
+     *
+     * @returns {string} e.g. "18 хв" or "2 год 10 хв"
+     */
+    estimateEtaForWeakRules(target = WEAK_BAR) {
+        const a = readAccountInfoFromLS();
+        const rulesSoFar = safeArray(a?.rulesSoFar).map(String).filter(Boolean);
+
+        if (!rulesSoFar.length) return "0 хв";
+
+        const statByRule = statsMap();
+
+        let totalTranslations = 0;
+
+        for (const ruleId of rulesSoFar) {
+            const s = statByRule.get(ruleId);
+
+            const acc = Number.isFinite(Number(s?.accuracy)) ? Number(s.accuracy) : 0;           // 0..100
+            const attempts = Number.isFinite(Number(s?.attemptsNumber)) ? Number(s.attemptsNumber) : 0;
+
+            if (acc >= target) continue;
+
+            totalTranslations += translationsNeededToReachTarget(acc, attempts, target);
+        }
+
+        const totalSeconds = totalTranslations * SECONDS_PER_TRANSLATION;
+        return formatEtaFromSeconds(totalSeconds);
     },
 
     /**
@@ -86,11 +168,29 @@ export const marathonService = {
         const a = readAccountInfoFromLS();
         const tasks = normalizeDayTasks(a);
 
-        const total = tasks.length;
-        const remaining = tasks.filter((t) => !t.isAnswered).length;
+        // No schedule tasks at all
+        if (!tasks.length) return { total: 0, remaining: 0 };
+
+        // Ordinal range (use lowest - 1 as baseline)
+        const lowest = tasks[0].ordinalNumber;
+        const highest = tasks[tasks.length - 1].ordinalNumber;
+
+        // total tasks in today's ordinal window
+        const total = highest;
+
+        // remaining tasks in today's ordinal window:
+        // - if backend includes answered tasks -> find first not answered
+        // - if backend includes ONLY not answered tasks -> first is not answered anyway
+        const firstNotAnswered = tasks.find((t) => !t.isAnswered);
+
+        // all answered
+        if (!firstNotAnswered) return { total, remaining: 0 };
+
+        const remaining = Math.max(0, highest - (firstNotAnswered.ordinalNumber - 1));
 
         return { total, remaining };
     },
+
 
     /**
      * Array of weak rules among rulesSoFar (<75% accuracy), with their accuracy.
@@ -155,8 +255,22 @@ export const marathonService = {
      *
      * @returns {Promise<boolean>}
      */
-    async isScheduleCompleted() {
+    async isScheduleCompleted(cache = false) {
+        if (!cache) {
+            await callAccountInfoApi(); // updates LS cache in your api.js
+        }
+
         let a = readAccountInfoFromLS();
+        let old = readPrevAccountInfoFromLS();
+
+        if (!old && a) {
+            syncPrevAccountInfoToLS();
+        } else if (old?.currentDay && a?.currentDay) {
+            if (old?.currentDay?.dayStartAt !== a?.currentDay?.dayStartAt) {
+                syncPrevAccountInfoToLS();
+                window.location.reload();
+            }
+        }
 
         // ✅ If LS day is stale (dayEndAt already passed), refresh account info first
         const dayEndAt = a?.currentDay?.dayEndAt;
@@ -164,7 +278,7 @@ export const marathonService = {
             const endMs = Date.parse(dayEndAt); // ISO UTC-safe
             if (Number.isFinite(endMs) && endMs < Date.now()) {
                 await callAccountInfoApi();      // refresh LS cache
-                a = readAccountInfoFromLS();     // re-read fresh data
+                window.location.reload();
             }
         }
 
@@ -186,10 +300,14 @@ export const marathonService = {
 
         // ✅ At this point schedule is effectively completed:
         // Mark day completed on backend + refresh account cache.
-        await callCompleteMarathonDayApi({ requireAllTasksAnswered: false });
-        await callAccountInfoApi(); // updates LS cache in your api.js
+        callCompleteMarathonDayApi({ requireAllTasksAnswered: false }).then();
+        callAccountInfoApi().then(); // updates LS cache in your api.js
 
         return true;
     },
 
 };
+
+setInterval(async () => {
+    await marathonService.isScheduleCompleted(true);
+}, 5000);

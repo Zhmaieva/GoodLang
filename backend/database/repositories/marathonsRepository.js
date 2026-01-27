@@ -326,7 +326,8 @@ export async function completeCurrentMarathonDay(accountId, opts = {}) {
             FROM marathon_schedules
             WHERE marathon_id = $1
               AND is_day_completed = FALSE
-            ORDER BY day_number ASC
+              AND day_start_at <= NOW()
+              AND day_end_at > NOW()
             LIMIT 1
             FOR UPDATE
             `,
