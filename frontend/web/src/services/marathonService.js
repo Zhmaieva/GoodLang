@@ -4,6 +4,7 @@ import {emit} from "./events.js";
 
 const STORAGE_KEY_ACCOUNT_INFO = "account_info";
 const STORAGE_KEY_ACCOUNT_INFO_PREV = "account_info_old";
+const STORAGE_KEY_MARATHON_FAILED_MODAL = "marathon_failed_modal";
 const WEAK_BAR = 70; // %
 const SECONDS_PER_TRANSLATION = 30;
 
@@ -29,6 +30,14 @@ function readPrevAccountInfoFromLS() {
 
 export function syncPrevAccountInfoToLS() {
     localStorage.setItem(STORAGE_KEY_ACCOUNT_INFO_PREV, JSON.stringify(readAccountInfoFromLS()));
+}
+
+function enableMarathonFailedModal() {
+    localStorage.setItem(STORAGE_KEY_MARATHON_FAILED_MODAL, "true");
+}
+
+export function isMarathonFailedModalEnabled() {
+    return localStorage.getItem(STORAGE_KEY_MARATHON_FAILED_MODAL) === "true";
 }
 
 
@@ -265,7 +274,11 @@ export const marathonService = {
 
         if (!old && a) {
             syncPrevAccountInfoToLS();
-        } else if (old?.currentDay && a?.currentDay) {
+        } else if (!old.marathonFailed && a.marathonFailed) {
+            syncPrevAccountInfoToLS();
+            enableMarathonFailedModal();
+        }
+        else if (old?.currentDay && a?.currentDay) {
             if (old?.currentDay?.dayStartAt !== a?.currentDay?.dayStartAt) {
                 syncPrevAccountInfoToLS();
                 window.location.reload();

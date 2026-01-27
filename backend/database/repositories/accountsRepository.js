@@ -54,6 +54,7 @@ export async function createAccount() {
  *     discountedPrice: number,
  *     discountPercentage: number
  *   },
+ *   marathonFailed: boolean,
  *   isInMarathon: boolean,
  *   daysLeft: number,
  *   rulesSoFar: string[],
@@ -99,6 +100,7 @@ export async function getAccountInfo(accountId, promoCode) {
             translationsQuota: 0,
             promo: null,
 
+            marathonFailed: false,
             isInMarathon: false,
             daysLeft: 0,
             rulesSoFar: [],
@@ -107,7 +109,9 @@ export async function getAccountInfo(accountId, promoCode) {
         };
     }
 
-    const status = rows[0].status || "free"
+    const status = rows[0].status || "free";
+
+    let marathonFailed = false;
 
     let isInMarathon = false;
     let daysLeft = 0;
@@ -115,76 +119,96 @@ export async function getAccountInfo(accountId, promoCode) {
     let currentDayTasks = [];
     let currentDay = null;
 
+    // -------------------------
+    // Latest marathon failed flag (soft)
+    // -------------------------
+    try {
+        const { rows: lastRows } = await pool.query(
+            `
+          SELECT status
+          FROM learning_marathons
+          WHERE account_id = $1
+          ORDER BY created_at DESC
+          LIMIT 1
+        `,
+            [accountId]
+        );
+
+        const lastStatus = String(lastRows?.[0]?.status || "").toLowerCase();
+        marathonFailed = (lastStatus === "failed" || lastStatus === "failed_cancelled");
+    } catch (_) {
+        marathonFailed = false;
+    }
+
     if (status !== "free") {
         // -------------------------
         // Marathon metadata + current day tasks (soft)
         // -------------------------
         const { rows: marathonRows } = await pool.query(
             `
-            WITH current_marathon AS (
-                SELECT lm.id
-                FROM learning_marathons lm
-                WHERE lm.account_id = $1
-                  AND lm.status = 'in_progress'
-                ORDER BY lm.created_at DESC
-                LIMIT 1
-            ),
-                 current_day AS (
-                     SELECT
-                         ms.id,
-                         ms.day_number,
-                         ms.rule_id,
-                         ms.day_start_at,
-                         ms.day_end_at,
-                         COALESCE(ms.is_day_completed, FALSE) AS is_day_completed
-                     FROM marathon_schedules ms
-                     WHERE ms.marathon_id = (SELECT id FROM current_marathon)
-                       --AND COALESCE(ms.is_day_completed, FALSE) = FALSE
-                       AND ms.day_start_at <= NOW()
-                       AND ms.day_end_at > NOW()
-                     ORDER BY ms.day_number ASC
-                     LIMIT 1
-                 )
-            SELECT
-                    (SELECT id FROM current_marathon) AS marathon_id,
+                WITH current_marathon AS (
+                    SELECT lm.id
+                    FROM learning_marathons lm
+                    WHERE lm.account_id = $1
+                      AND lm.status = 'in_progress'
+                    ORDER BY lm.created_at DESC
+                    LIMIT 1
+                ),
+                     current_day AS (
+                         SELECT
+                             ms.id,
+                             ms.day_number,
+                             ms.rule_id,
+                             ms.day_start_at,
+                             ms.day_end_at,
+                             COALESCE(ms.is_day_completed, FALSE) AS is_day_completed
+                         FROM marathon_schedules ms
+                         WHERE ms.marathon_id = (SELECT id FROM current_marathon)
+                           AND ms.day_start_at <= NOW()
+                           AND ms.day_end_at > NOW()
+                         ORDER BY ms.day_number ASC
+                         LIMIT 1
+                     )
+                SELECT
+                        (SELECT id FROM current_marathon) AS marathon_id,
 
-                    COALESCE((
-                                 SELECT COUNT(*)
-                                 FROM marathon_schedules ms
-                                 WHERE ms.marathon_id = (SELECT id FROM current_marathon)
-                                   AND ms.day_end_at > NOW()
-                             ), 0) AS days_left,
+                        COALESCE((
+                                     SELECT COUNT(*)
+                                     FROM marathon_schedules ms
+                                     WHERE ms.marathon_id = (SELECT id FROM current_marathon)
+                                       AND ms.day_end_at > NOW()
+                                 ), 0) AS days_left,
 
-                    COALESCE((
-                                 SELECT json_agg(ms.rule_id ORDER BY ms.day_number)
-                                 FROM marathon_schedules ms
-                                 WHERE ms.marathon_id = (SELECT id FROM current_marathon)
-                                   AND ms.day_start_at <= NOW()
-                             ), '[]'::json) AS rules_so_far,
+                        COALESCE((
+                                     SELECT json_agg(ms.rule_id ORDER BY ms.day_number)
+                                     FROM marathon_schedules ms
+                                     WHERE ms.marathon_id = (SELECT id FROM current_marathon)
+                                       AND ms.day_start_at <= NOW()
+                                 ), '[]'::json) AS rules_so_far,
 
-                    -- current day (first not completed)
-                    (SELECT id FROM current_day) AS current_schedule_id,
-                    (SELECT day_number FROM current_day) AS current_day_number,
-                    (SELECT rule_id FROM current_day) AS current_day_rule_id,
-                    (SELECT day_start_at FROM current_day) AS current_day_start_at,
-                    (SELECT day_end_at FROM current_day) AS current_day_end_at,
-                    (SELECT is_day_completed FROM current_day) AS current_day_completed,
+                        -- current day
+                        (SELECT id FROM current_day) AS current_schedule_id,
+                        (SELECT day_number FROM current_day) AS current_day_number,
+                        (SELECT rule_id FROM current_day) AS current_day_rule_id,
+                        (SELECT day_start_at FROM current_day) AS current_day_start_at,
+                        (SELECT day_end_at FROM current_day) AS current_day_end_at,
+                        (SELECT is_day_completed FROM current_day) AS current_day_completed,
 
-                    -- pending tasks for current day
-                    COALESCE((
-                                 SELECT json_agg(
-                                                json_build_object(
-                                                        'ordinalNumber', mst.ordinal_number,
-                                                        'ruleId', mst.rule_id,
-                                                        'isAnswered', mst.is_answered
-                                                )
-                                                ORDER BY mst.ordinal_number
-                                        )
-                                 FROM marathon_schedule_tasks mst
-                                 WHERE mst.marathon_schedule_id = (SELECT id FROM current_day)
-                                   AND mst.is_answered = FALSE
-                             ), '[]'::json) AS current_day_tasks
-        `,
+                        -- pending tasks for current day
+                        COALESCE((
+                                     SELECT json_agg(
+                                                    json_build_object(
+                                                            'ordinalNumber', mst.ordinal_number,
+                                                            'ruleId', mst.rule_id,
+                                                            'isAnswered', mst.is_answered
+                                                    )
+                                                    ORDER BY mst.ordinal_number
+                                            )
+                                     FROM marathon_schedule_tasks mst
+                                     WHERE mst.marathon_schedule_id = (SELECT id FROM current_day)
+                                       AND mst.is_answered = FALSE
+                                 ), '[]'::json) AS current_day_tasks
+            `,
             [accountId]
         );
 
@@ -206,26 +230,27 @@ export async function getAccountInfo(accountId, promoCode) {
 
         // current day
         const currentScheduleId = marathonRows?.[0]?.current_schedule_id ?? null;
-        currentDay =
-            currentScheduleId
-                ? {
-                    dayNumber: Number(marathonRows?.[0]?.current_day_number ?? 0),
-                    ruleId: String(marathonRows?.[0]?.current_day_rule_id ?? ""),
-                    dayStartAt: marathonRows?.[0]?.current_day_start_at ?? null,
-                    dayEndAt: marathonRows?.[0]?.current_day_end_at ?? null,
-                    isDayCompleted: Boolean(marathonRows?.[0]?.current_day_completed ?? false),
-                }
-                : null;
+        currentDay = currentScheduleId
+            ? {
+                dayNumber: Number(marathonRows?.[0]?.current_day_number ?? 0),
+                ruleId: String(marathonRows?.[0]?.current_day_rule_id ?? ""),
+                dayStartAt: marathonRows?.[0]?.current_day_start_at ?? null,
+                dayEndAt: marathonRows?.[0]?.current_day_end_at ?? null,
+                isDayCompleted: Boolean(marathonRows?.[0]?.current_day_completed ?? false),
+            }
+            : null;
 
         // current day pending tasks normalize
         try {
             const raw = marathonRows?.[0]?.current_day_tasks;
             const arr = Array.isArray(raw) ? raw : raw ? JSON.parse(raw) : [];
-            currentDayTasks = (arr || []).map((t) => ({
-                ordinalNumber: Number(t?.ordinalNumber ?? t?.ordinal_number ?? 0),
-                ruleId: String(t?.ruleId ?? t?.rule_id ?? ""),
-                isAnswered: Boolean(t?.isAnswered ?? t?.is_answered ?? false),
-            })).filter(t => t.ordinalNumber > 0 && t.ruleId);
+            currentDayTasks = (arr || [])
+                .map((t) => ({
+                    ordinalNumber: Number(t?.ordinalNumber ?? t?.ordinal_number ?? 0),
+                    ruleId: String(t?.ruleId ?? t?.rule_id ?? ""),
+                    isAnswered: Boolean(t?.isAnswered ?? t?.is_answered ?? false),
+                }))
+                .filter((t) => t.ordinalNumber > 0 && t.ruleId);
         } catch (_) {
             currentDayTasks = [];
         }
@@ -274,10 +299,11 @@ export async function getAccountInfo(accountId, promoCode) {
         translationsQuota: rows[0].translations_quota || 0,
 
         translationLimit: Number(rows[0].translation_limit ?? 7),
-        limitTimeSpanSeconds: Number(rows[0].limit_time_span_seconds ?? (24 * 3600)),
+        limitTimeSpanSeconds: Number(rows[0].limit_time_span_seconds ?? 24 * 3600),
 
         promo,
 
+        marathonFailed,
         isInMarathon,
         daysLeft,
         rulesSoFar,
@@ -285,6 +311,7 @@ export async function getAccountInfo(accountId, promoCode) {
         currentDayTasks,
     };
 }
+
 
 
 export async function getAccountById(accountId) {
