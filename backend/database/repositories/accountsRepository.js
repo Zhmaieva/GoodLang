@@ -130,7 +130,7 @@ export async function getAccountInfo(accountId, promoCode) {
                          COALESCE(ms.is_day_completed, FALSE) AS is_day_completed
                      FROM marathon_schedules ms
                      WHERE ms.marathon_id = (SELECT id FROM current_marathon)
-                       AND COALESCE(ms.is_day_completed, FALSE) = FALSE
+                       --AND COALESCE(ms.is_day_completed, FALSE) = FALSE
                        AND ms.day_start_at <= NOW()
                        AND ms.day_end_at > NOW()
                      ORDER BY ms.day_number ASC

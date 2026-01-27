@@ -2,7 +2,7 @@ import { callAccountInfoApi, callCompleteMarathonDayApi } from "./api.js";
 import { getAllStatistics } from "./dataService.js";
 
 const STORAGE_KEY_ACCOUNT_INFO = "account_info";
-const WEAK_BAR = 75; // %
+const WEAK_BAR = 70; // %
 
 function readAccountInfoFromLS() {
     const raw = localStorage.getItem(STORAGE_KEY_ACCOUNT_INFO);
