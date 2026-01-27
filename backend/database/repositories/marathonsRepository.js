@@ -1,3 +1,91 @@
+// marathonsRepository.js
+import Stripe from "stripe";
+import { pool } from "../pool.js";
+
+// if you have a logger util, use it; else keep console.*
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+/**
+ * Start a 7-day learning marathon for an account (idempotent).
+ * - If an in-progress marathon exists for the account -> returns it (no changes).
+ * - Otherwise creates:
+ *   - learning_marathons row (duration=7, status='in_progress')
+ *   - 7 marathon_schedules rows starting NOW, each day = 24h
+ *
+ * @param {string} accountId
+ * @param {string[]} ruleIds - must have exactly 7 rule ids (one per day)
+ * @returns {Promise<{
+ *   started: boolean,
+ *   marathonId: string,
+ *   status: 'in_progress'|'completed'|'failed',
+ *   createdAt: any,
+ *   duration: number
+ * }>}
+ */
+export async function startMarathon(accountId, ruleIds) {
+    if (typeof accountId !== "string" || !accountId.trim()) {
+        throw new Error("startMarathon: accountId is required");
+    }
+    if (!Array.isArray(ruleIds) || ruleIds.length !== 7 || ruleIds.some(r => typeof r !== "string" || !r.trim())) {
+        throw new Error("startMarathon: ruleIds must be an array of exactly 7 non-empty strings");
+    }
+
+    const client = await pool.connect();
+    try {
+        await client.query("BEGIN");
+
+        // 1) Idempotency guard (row-level lock if present)
+        // If there is already an in-progress marathon, return it and do nothing.
+        const { rows: existingRows } = await client.query(
+            `
+        SELECT id, status, created_at, duration
+        FROM learning_marathons
+        WHERE account_id = $1
+          AND status = 'in_progress'
+        ORDER BY created_at DESC
+        LIMIT 1
+        FOR UPDATE
+      `,
+            [accountId]
+        );
+
+        if (existingRows[0]) {
+            await client.query("COMMIT");
+            return {
+                started: false,
+                marathonId: existingRows[0].id,
+                status: existingRows[0].status,
+                createdAt: existingRows[0].created_at,
+                duration: Number(existingRows[0].duration),
+            };
+        }
+
+        // 2) Create marathon
+        const { rows: created } = await client.query(
+            `
+        INSERT INTO learning_marathons (account_id, duration, status)
+        VALUES ($1, 7, 'in_progress')
+        RETURNING id, status, created_at, duration
+      `,
+            [accountId]
+        );
+
+        const marathonId = created[0].id;
+
+// 3) Create 7 schedule rows: Day 1 starts NOW, each day is 24h
+// Insert + RETURNING so we have schedule IDs to create tasks
+        const params = [marathonId];
+        const values = [];
+        let p = 2;
+
+        const now = new Date();
+
+        for (let i = 0; i < 7; i++) {
+            const dayNumber = i + 1;
+            const ruleId = ruleIds[i].trim();
+
+            const dayStartAt = new Date(now.getTime() + i * 24 * 60 * 60 * 1000);
+            const dayEndAt = new Date(now.getTime() + (i + 1) * 24 * 60 * 60 * 1000);
 
             params.push(dayNumber, ruleId, dayStartAt, dayEndAt);
             values.push(`($1, $${p}, $${p + 1}, $${p + 2}, $${p + 3})`);
@@ -497,4 +585,291 @@ export async function answerNextMarathonTaskByRuleId(accountId, ruleId, opts = {
     } finally {
         client.release();
     }
+}
+
+/**
+ * For accounts with status IN ('paid','attention') whose LATEST marathon is 'failed':
+ * - update latest marathon status => 'failed_cancelled'
+ * - set account.status => 'free'
+ * - cancel Stripe marathon subscription(s) for the account by stripe_customer_id
+ *
+ * Notes:
+ * - DB updates are done in a transaction per account (row-locked).
+ * - Stripe cancellation happens AFTER commit (so we don't hold DB locks while calling Stripe).
+ * - We cancel only subscriptions that look like marathon:
+ *    - subscription.metadata.product === 'marathon_7d' OR
+ *    - any item price.id === STRIPE_MARATHON_PRICE_ID
+ *
+ * @param {object} opts
+ * @param {number} opts.limit max accounts to process (default 50)
+ * @returns {Promise<{processed:number, updated:number, stripeCancelled:number, failed:number, results:Array}>}
+ */
+export async function cancelFailedLatestMarathonsAndDowngradeAccounts(opts = {}) {
+    const limit = Math.max(1, Math.min(500, Number(opts.limit) || 50));
+    const marathonPriceId = process.env.STRIPE_MARATHON_PRICE_ID;
+
+    // 1) Fetch candidates (latest marathon per account is failed)
+    const { rows: candidates } = await pool.query(
+        `
+      WITH latest_marathon AS (
+        SELECT DISTINCT ON (lm.account_id)
+          lm.account_id,
+          lm.id AS marathon_id,
+          lm.status AS marathon_status,
+          lm.created_at AS marathon_created_at
+        FROM learning_marathons lm
+        ORDER BY lm.account_id, lm.created_at DESC
+      )
+      SELECT
+        a.id AS account_id,
+        a.status AS account_status,
+        a.stripe_customer_id,
+        lm.marathon_id,
+        lm.marathon_status
+      FROM accounts a
+      JOIN latest_marathon lm ON lm.account_id = a.id
+      WHERE a.status IN ('paid','attention')
+        AND lm.marathon_status = 'failed'
+      ORDER BY lm.marathon_created_at ASC
+      LIMIT $1
+    `,
+        [limit]
+    );
+
+    const results = [];
+    let updated = 0;
+    let stripeCancelled = 0;
+    let failed = 0;
+
+    for (const c of candidates) {
+        const accountId = c.account_id;
+        const marathonId = c.marathon_id;
+        const customerId = c.stripe_customer_id || null;
+
+        // 2) DB transaction: re-check with locks, update marathon + account
+        let didDbUpdate = false;
+
+        const client = await pool.connect();
+        try {
+            await client.query("BEGIN");
+
+            // lock account row
+            const { rows: accRows } = await client.query(
+                `SELECT id, status, stripe_customer_id FROM accounts WHERE id=$1 FOR UPDATE`,
+                [accountId]
+            );
+            if (!accRows[0]) {
+                await client.query("ROLLBACK");
+                results.push({ accountId, ok: false, reason: "account_not_found" });
+                failed++;
+                continue;
+            }
+
+            // lock latest marathon row for this account (must still be latest + failed)
+            const { rows: latestRows } = await client.query(
+                `
+          SELECT id, status, created_at
+          FROM learning_marathons
+          WHERE account_id = $1
+          ORDER BY created_at DESC
+          LIMIT 1
+          FOR UPDATE
+        `,
+                [accountId]
+            );
+
+            const latest = latestRows[0];
+            if (!latest || latest.id !== marathonId || latest.status !== "failed") {
+                // something changed since candidate select; skip safely
+                await client.query("COMMIT");
+                results.push({ accountId, ok: true, skipped: true, reason: "no_longer_latest_failed" });
+                continue;
+            }
+
+            // update marathon status
+            await client.query(
+                `
+          UPDATE learning_marathons
+          SET status = 'failed_cancelled'
+          WHERE id = $1
+            AND status = 'failed'
+        `,
+                [marathonId]
+            );
+
+            // downgrade account
+            await client.query(
+                `
+          UPDATE accounts
+          SET status = 'free'
+          WHERE id = $1
+            AND status IN ('paid','attention')
+        `,
+                [accountId]
+            );
+
+            await client.query("COMMIT");
+            didDbUpdate = true;
+            updated++;
+
+        } catch (e) {
+            try { await client.query("ROLLBACK"); } catch (_) {}
+            failed++;
+            results.push({
+                accountId,
+                ok: false,
+                reason: "db_error",
+                error: String(e?.message || e),
+            });
+            continue;
+        } finally {
+            client.release();
+        }
+
+        // 3) Stripe cancellation (after DB commit)
+        // We cancel only marathon subscription(s).
+        let cancelledCountForAccount = 0;
+
+        try {
+            if (didDbUpdate && customerId) {
+                const subs = await stripe.subscriptions.list({
+                    customer: customerId,
+                    status: "all",
+                    limit: 100,
+                });
+
+                const toCancel = (subs?.data || []).filter((s) => {
+                    const metaProduct = String(s?.metadata?.product || "").trim();
+                    if (metaProduct === "marathon_7d") return true;
+
+                    // if you rely on price id:
+                    if (marathonPriceId) {
+                        const items = s?.items?.data || [];
+                        return items.some((it) => it?.price?.id === marathonPriceId);
+                    }
+
+                    return false;
+                });
+
+                for (const s of toCancel) {
+                    // Cancel immediately (same effect as dashboard cancel)
+                    // If you prefer cancel_at_period_end=true, swap to update() instead.
+                    if (s?.status !== "canceled") {
+                        await stripe.subscriptions.cancel(s.id);
+                        cancelledCountForAccount++;
+                    }
+                }
+            }
+
+            stripeCancelled += cancelledCountForAccount;
+
+            results.push({
+                accountId,
+                ok: true,
+                marathonId,
+                dbUpdated: didDbUpdate,
+                stripeCancelled: cancelledCountForAccount,
+            });
+
+        } catch (e) {
+            // DB is already consistent; Stripe failure is reported (can be retried).
+            failed++;
+            results.push({
+                accountId,
+                ok: false,
+                marathonId,
+                dbUpdated: didDbUpdate,
+                reason: "stripe_cancel_failed",
+                error: String(e?.message || e),
+            });
+        }
+    }
+
+    return {
+        processed: candidates.length,
+        updated,
+        stripeCancelled,
+        failed,
+        results,
+    };
+}
+
+/**
+ * For all marathons with status='in_progress':
+ * if there exists a schedule day where:
+ *  - is_day_completed = FALSE
+ *  - day_end_at <= NOW()
+ * then mark the marathon as 'failed'.
+ *
+ * @returns {Promise<{updated:number, marathonIds:string[]}>}
+ */
+export async function failOverdueInProgressMarathonsBySchedules() {
+    const { rows } = await pool.query(
+        `
+      WITH overdue AS (
+        SELECT DISTINCT ms.marathon_id
+        FROM marathon_schedules ms
+        JOIN learning_marathons lm ON lm.id = ms.marathon_id
+        WHERE lm.status = 'in_progress'
+          AND ms.is_day_completed = FALSE
+          AND ms.day_end_at IS NOT NULL
+          AND ms.day_end_at <= NOW()
+      )
+      UPDATE learning_marathons lm
+      SET status = 'failed'
+      WHERE lm.id IN (SELECT marathon_id FROM overdue)
+        AND lm.status = 'in_progress'
+      RETURNING lm.id
+    `
+    );
+
+    return {
+        updated: rows.length,
+        marathonIds: rows.map((r) => r.id),
+    };
+}
+
+
+/**
+ * Marks in-progress marathons as completed if ALL their schedule days are completed.
+ *
+ * Condition:
+ * - learning_marathons.status = 'in_progress'
+ * - there are NO marathon_schedules rows for that marathon with is_day_completed = FALSE
+ *
+ * @param {object} [opts]
+ * @param {number} [opts.limit=200] max marathons to complete per run (cron safety)
+ * @returns {Promise<{updated:number, marathonIds:string[]}>}
+ */
+export async function completeMarathonsWhenAllSchedulesDone(opts = {}) {
+    const limit = Math.max(1, Math.min(2000, Number(opts.limit) || 200));
+
+    const { rows } = await pool.query(
+        `
+      WITH done AS (
+        SELECT lm.id
+        FROM learning_marathons lm
+        WHERE lm.status = 'in_progress'
+          AND NOT EXISTS (
+            SELECT 1
+            FROM marathon_schedules ms
+            WHERE ms.marathon_id = lm.id
+              AND ms.is_day_completed = FALSE
+          )
+        ORDER BY lm.created_at ASC
+        LIMIT $1
+      )
+      UPDATE learning_marathons lm
+      SET status = 'completed'
+      WHERE lm.id IN (SELECT id FROM done)
+        AND lm.status = 'in_progress'
+      RETURNING lm.id
+    `,
+        [limit]
+    );
+
+    return {
+        updated: rows.length,
+        marathonIds: rows.map((r) => r.id),
+    };
 }
