@@ -11,6 +11,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const [isLoading, setIsLoading] = useState(true);
     const [hover, setHover] = useState(false);
     const [levelInfo, setLevelInfo] = useState(LEVEL_MAP?.A1 ?? { label: "A1" });
+    const [levelNameInfo, setLevelNameInfo] = useState("");
 
     // ✅ smooth transitions only AFTER first real data render
     const [canAnimate, setCanAnimate] = useState(false);
@@ -26,9 +27,24 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         setAccuracy(acc);
         setAttemptsLeft(overall?.attemptsLeft ?? 0);
 
-        let inferred = userLevel?.level || "A1";
+        const originalInferred = userLevel?.level || "A1";
+        let inferred = originalInferred;
         if (inferred === "A1" && acc > 40) inferred = "A2";
         if (inferred !== "B2" && acc > 85) inferred = "B2";
+
+        if (originalInferred === "A1" && acc < 30) {
+            setLevelNameInfo(", A1");
+        } else if ((originalInferred === "A1" && acc >= 30) || (originalInferred === "A2" && acc <= 45)) {
+            setLevelNameInfo(", A1-A2");
+        } else if ((originalInferred === "A2" || originalInferred === "B1") && acc < 60 || ((originalInferred === "A2" && acc >= 60))) {
+            setLevelNameInfo(", A2-B1");
+        } else if (originalInferred === "B1" && acc >= 60) {
+            setLevelNameInfo(", B1-B2");
+        } else if (originalInferred === "B2" && acc < 90) {
+            setLevelNameInfo(", B2-C1");
+        } else if (originalInferred === "B2" && acc > 90) {
+            setLevelNameInfo(", C1");
+        }
 
         setLevelInfo(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
         setIsLoading(false);
@@ -289,7 +305,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
         const pctText = showEmpty ? "" : `${(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%`;
 
-        const levelText = showEmpty ? `Лише ${attemptsLeft} ${attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня` : `Рівень: ${levelInfo.label?.toLowerCase()}`;
+        const levelText = showEmpty ? `Лише ${attemptsLeft} ${attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня` : `Рівень: ${levelInfo.label?.toLowerCase()}${levelNameInfo}`;
 
         const renderIconSegment = (prefix) => {
             const totalGap = ICON_LANE.reduce((s, it) => s + (it.gap ?? 0), 0) || 1;
