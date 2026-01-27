@@ -73,6 +73,16 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // HEADER MODE
     // -------------------------
     if (header) {
+        // ✅ edge fade for moving content (icons + road dashes)
+        const edgeFadeMask = {
+            maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            maskRepeat: "no-repeat",
+            WebkitMaskRepeat: "no-repeat",
+            maskSize: "100% 100%",
+            WebkitMaskSize: "100% 100%",
+        };
+
         const ICON_LANE = [
             { src: "/house-icon.svg", gap: 32 },
             { src: "/apple-icon.svg", gap: 32 },
@@ -171,6 +181,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             overflow: "hidden",
             opacity: 0.78,
             pointerEvents: "none",
+
+            ...edgeFadeMask,
         };
 
         const iconLaneWrap = {
@@ -240,6 +252,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             transform: "translateY(-50%)",
             height: 4,
             pointerEvents: "none",
+
+            ...edgeFadeMask,
         };
 
         const roadLinesInner = {
