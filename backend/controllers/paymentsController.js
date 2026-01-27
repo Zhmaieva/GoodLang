@@ -291,7 +291,7 @@ export const paymentsController = {
 
                     if (accountId) {
                         await updateSubscriptionForAccount(accountId, {
-                            status: "attention",
+                            status: "free",
                         });
                     }
                 }

@@ -18797,7 +18797,7 @@ export const ALL_RULES_SAMPLES = {
                 "I agree"
             ],
             "rules": [
-                "PERSONAL_PRONOUNS"
+                "TO_BE"
             ]
         },
         {

@@ -7,8 +7,13 @@ import {pool} from "../database/pool.js";
 import {transporter} from "../core/emailSender.js";
 import {fileURLToPath} from "node:url";
 import path from "node:path";
-import {runPromoRegularTick} from "../emails/promo-regular/promoRegularSender.js";
 import "dotenv/config";
+import {downgradeAttentionAccountsAfterMarathonAge} from "../database/repositories/accountsRepository.js";
+import {safelyAutostartMarathonsForEligibleAccounts} from "../database/repositories/marathonStarterRepository.js";
+import {
+    cancelFailedLatestMarathonsAndDowngradeAccounts, completeMarathonsWhenAllSchedulesDone,
+    failOverdueInProgressMarathonsBySchedules
+} from "../database/repositories/marathonsRepository.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -61,3 +66,12 @@ startNonOverlappingInterval(async () => {
     // if (!res.skipped) console.log("[promoCron]", promoRes);
 //}, 10000)
 }, 1200000)
+
+startNonOverlappingInterval(async () => {
+    await completeMarathonsWhenAllSchedulesDone();
+    await safelyAutostartMarathonsForEligibleAccounts();
+
+    await failOverdueInProgressMarathonsBySchedules();
+    await cancelFailedLatestMarathonsAndDowngradeAccounts({ limit: 10 });
+    await downgradeAttentionAccountsAfterMarathonAge();
+}, 5000)

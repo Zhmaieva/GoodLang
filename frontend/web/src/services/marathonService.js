@@ -1,4 +1,4 @@
-import { callAccountInfoApi, callCompleteMarathonDayApi } from "./api.js";
+import {callAccountInfoApi, callCompleteMarathonDayApi, callUpdateMarathonStatusApi} from "./api.js";
 import { getAllStatistics } from "./dataService.js";
 import {emit} from "./events.js";
 
@@ -301,6 +301,10 @@ export const marathonService = {
         // ✅ At this point schedule is effectively completed:
         // Mark day completed on backend + refresh account cache.
         callCompleteMarathonDayApi({ requireAllTasksAnswered: false }).then();
+        if (a?.currentDay?.dayNumber === 7) {
+            callUpdateMarathonStatusApi('completed').then();
+            emit('marathonCompleted');
+        }
         callAccountInfoApi().then(); // updates LS cache in your api.js
 
         return true;

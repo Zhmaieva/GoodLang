@@ -66,7 +66,7 @@
         { "ua": "Ми на кухні.", "en": ["We are in the kitchen","We're in the kitchen"], "rules": ["TO_BE","PREP_PLACE","ARTICLES"] },
         { "ua": "Це добре.", "en": ["It is good","It's good"], "rules": ["TO_BE"] },
         { "ua": "Він розумний.", "en": ["He is clever","He's clever"], "rules": ["TO_BE"] },
-        { "ua": "Я згодна.", "en": ["I agree"], "rules": ["PERSONAL_PRONOUNS"] },
+        { "ua": "Я згодна.", "en": ["I agree"], "rules": ["TO_BE"] },
         { "ua": "Вона моя подруга.", "en": ["She is my friend","She's my friend"], "rules": ["TO_BE"] },
         { "ua": "Ми не втомлені.", "en": ["We are not tired","We're not tired","We aren't tired"], "rules": ["TO_BE"] },
         { "ua": "Ти не правий.", "en": ["You are not right","You're not right","You aren't right"], "rules": ["TO_BE"] },

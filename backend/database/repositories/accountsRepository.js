@@ -107,11 +107,20 @@ export async function getAccountInfo(accountId, promoCode) {
         };
     }
 
-    // -------------------------
-    // Marathon metadata + current day tasks (soft)
-    // -------------------------
-    const { rows: marathonRows } = await pool.query(
-        `
+    const status = rows[0].status || "free"
+
+    let isInMarathon = false;
+    let daysLeft = 0;
+    let rulesSoFar = [];
+    let currentDayTasks = [];
+    let currentDay = null;
+
+    if (status !== "free") {
+        // -------------------------
+        // Marathon metadata + current day tasks (soft)
+        // -------------------------
+        const { rows: marathonRows } = await pool.query(
+            `
             WITH current_marathon AS (
                 SELECT lm.id
                 FROM learning_marathons lm
@@ -176,52 +185,50 @@ export async function getAccountInfo(accountId, promoCode) {
                                    AND mst.is_answered = FALSE
                              ), '[]'::json) AS current_day_tasks
         `,
-        [accountId]
-    );
+            [accountId]
+        );
 
-    const marathonId = marathonRows?.[0]?.marathon_id ?? null;
+        const marathonId = marathonRows?.[0]?.marathon_id ?? null;
 
-    const isInMarathon = Boolean(marathonId);
-    const daysLeft = Number(marathonRows?.[0]?.days_left ?? 0);
+        isInMarathon = Boolean(marathonId);
+        daysLeft = Number(marathonRows?.[0]?.days_left ?? 0);
 
-    // rules_so_far normalize to string[]
-    let rulesSoFar = [];
-    try {
-        const raw = marathonRows?.[0]?.rules_so_far;
-        if (Array.isArray(raw)) {
-            rulesSoFar = raw.map(String);
-        } else if (raw) {
-            rulesSoFar = JSON.parse(raw).map(String);
-        }
-    } catch (_) {
-        rulesSoFar = [];
-    }
-
-    // current day
-    const currentScheduleId = marathonRows?.[0]?.current_schedule_id ?? null;
-    const currentDay =
-        currentScheduleId
-            ? {
-                dayNumber: Number(marathonRows?.[0]?.current_day_number ?? 0),
-                ruleId: String(marathonRows?.[0]?.current_day_rule_id ?? ""),
-                dayStartAt: marathonRows?.[0]?.current_day_start_at ?? null,
-                dayEndAt: marathonRows?.[0]?.current_day_end_at ?? null,
-                isDayCompleted: Boolean(marathonRows?.[0]?.current_day_completed ?? false),
+        try {
+            const raw = marathonRows?.[0]?.rules_so_far;
+            if (Array.isArray(raw)) {
+                rulesSoFar = raw.map(String);
+            } else if (raw) {
+                rulesSoFar = JSON.parse(raw).map(String);
             }
-            : null;
+        } catch (_) {
+            rulesSoFar = [];
+        }
 
-    // current day pending tasks normalize
-    let currentDayTasks = [];
-    try {
-        const raw = marathonRows?.[0]?.current_day_tasks;
-        const arr = Array.isArray(raw) ? raw : raw ? JSON.parse(raw) : [];
-        currentDayTasks = (arr || []).map((t) => ({
-            ordinalNumber: Number(t?.ordinalNumber ?? t?.ordinal_number ?? 0),
-            ruleId: String(t?.ruleId ?? t?.rule_id ?? ""),
-            isAnswered: Boolean(t?.isAnswered ?? t?.is_answered ?? false),
-        })).filter(t => t.ordinalNumber > 0 && t.ruleId);
-    } catch (_) {
-        currentDayTasks = [];
+        // current day
+        const currentScheduleId = marathonRows?.[0]?.current_schedule_id ?? null;
+        currentDay =
+            currentScheduleId
+                ? {
+                    dayNumber: Number(marathonRows?.[0]?.current_day_number ?? 0),
+                    ruleId: String(marathonRows?.[0]?.current_day_rule_id ?? ""),
+                    dayStartAt: marathonRows?.[0]?.current_day_start_at ?? null,
+                    dayEndAt: marathonRows?.[0]?.current_day_end_at ?? null,
+                    isDayCompleted: Boolean(marathonRows?.[0]?.current_day_completed ?? false),
+                }
+                : null;
+
+        // current day pending tasks normalize
+        try {
+            const raw = marathonRows?.[0]?.current_day_tasks;
+            const arr = Array.isArray(raw) ? raw : raw ? JSON.parse(raw) : [];
+            currentDayTasks = (arr || []).map((t) => ({
+                ordinalNumber: Number(t?.ordinalNumber ?? t?.ordinal_number ?? 0),
+                ruleId: String(t?.ruleId ?? t?.rule_id ?? ""),
+                isAnswered: Boolean(t?.isAnswered ?? t?.is_answered ?? false),
+            })).filter(t => t.ordinalNumber > 0 && t.ruleId);
+        } catch (_) {
+            currentDayTasks = [];
+        }
     }
 
     // --- Promo lookup (soft) ---
@@ -551,3 +558,39 @@ export async function unsubscribeByToken(token) {
     return { ok: true };
 }
 
+/**
+ * For all accounts with status='attention' whose LATEST marathon (by created_at)
+ * was created between 8 and 7 days ago, set status='free'.
+ *
+ * "between 7 and 8 days ago" = created_at >= NOW() - INTERVAL '8 days'
+ *                          AND created_at <  NOW() - INTERVAL '7 days'
+ *
+ * @returns {Promise<{updated: number}>}
+ */
+export async function downgradeAttentionAccountsAfterMarathonAge() {
+    const { rowCount } = await pool.query(
+        `
+      WITH latest_marathon AS (
+        SELECT DISTINCT ON (lm.account_id)
+          lm.account_id,
+          lm.created_at
+        FROM learning_marathons lm
+        ORDER BY lm.account_id, lm.created_at DESC
+      ),
+      target_accounts AS (
+        SELECT a.id
+        FROM accounts a
+        JOIN latest_marathon lm ON lm.account_id = a.id
+        WHERE a.status = 'attention'
+          AND lm.created_at >= NOW() - INTERVAL '8 days'
+          AND lm.created_at <  NOW() - INTERVAL '7 days'
+      )
+      UPDATE accounts a
+      SET status = 'free'
+      WHERE a.id IN (SELECT id FROM target_accounts)
+      RETURNING a.id
+    `
+    );
+
+    return { updated: rowCount || 0 };
+}
