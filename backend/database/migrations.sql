@@ -993,3 +993,52 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: drop_learning_marathons_status_constraint
+-- Description: Drop CHECK constraint on learning_marathons.status (allow new statuses like failed_by_account_status)
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'drop_learning_marathons_status_constraint'
+        ) THEN
+
+            -- Drop the status CHECK constraint (created inline, so it has an auto-generated name).
+            -- Find it dynamically and drop it safely.
+            DO $inner$
+                DECLARE
+                    _constraint_name TEXT;
+                BEGIN
+                    SELECT c.conname
+                    INTO _constraint_name
+                    FROM pg_constraint c
+                             JOIN pg_class t ON t.oid = c.conrelid
+                             JOIN pg_namespace n ON n.oid = t.relnamespace
+                    WHERE t.relname = 'learning_marathons'
+                      AND n.nspname = current_schema()
+                      AND c.contype = 'c'
+                      AND pg_get_constraintdef(c.oid) ILIKE '%status%'
+                      AND pg_get_constraintdef(c.oid) ILIKE '%in_progress%'
+                      AND pg_get_constraintdef(c.oid) ILIKE '%completed%'
+                      AND pg_get_constraintdef(c.oid) ILIKE '%failed%';
+
+                    IF _constraint_name IS NOT NULL THEN
+                        EXECUTE format('ALTER TABLE learning_marathons DROP CONSTRAINT %I', _constraint_name);
+                    END IF;
+                END
+            $inner$;
+
+            -- Mark migration applied
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('drop_learning_marathons_status_constraint', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

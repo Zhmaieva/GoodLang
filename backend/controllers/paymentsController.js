@@ -266,7 +266,9 @@ export const paymentsController = {
 
                 if (event.type === "customer.subscription.updated") {
                     const subscription = event.data.object;
-                    const status = subscription.status; // active, canceled, past_due, unpaid, etc.
+                    const status = subscription.status === 'active' && subscription.cancellation_details.reason === 'cancellation_requested'
+                        ? 'cancellation_requested' // active, canceled, past_due, unpaid, etc.
+                        : subscription.status;
 
                     const accountId = subscription.metadata?.accountId;
 

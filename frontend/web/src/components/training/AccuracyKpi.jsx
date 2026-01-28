@@ -31,14 +31,6 @@ function endOfLocalDayMs() {
     return d.getTime();
 }
 
-function getRuleAccuracy(ruleId) {
-    if (!ruleId) return 0;
-    const stats = getAllStatistics?.() || [];
-    const s = stats.find((x) => String(x?.rule) === String(ruleId));
-    const v = Number(s?.accuracy);
-    return Number.isFinite(v) ? v : 0;
-}
-
 export default function AccuracyKpi({ header, mobile, theme }) {
     const [accuracy, setAccuracy] = useState(0);
     const [attemptsLeft, setAttemptsLeft] = useState(0);
@@ -46,6 +38,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const [isLoading, setIsLoading] = useState(true);
     const [hover, setHover] = useState(false);
     const [levelInfo, setLevelInfo] = useState(LEVEL_MAP?.A1 ?? { label: "A1" });
+    const [levelNameInfo, setLevelNameInfo] = useState("");
 
     // ✅ smooth transitions only AFTER first real data render
     const [canAnimate, setCanAnimate] = useState(false);
@@ -72,9 +65,24 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         setAccuracy(acc);
         setAttemptsLeft(overall?.attemptsLeft ?? 0);
 
-        let inferred = userLevel?.level || "A1";
+        const originalInferred = userLevel?.level || "A1";
+        let inferred = originalInferred;
         if (inferred === "A1" && acc > 40) inferred = "A2";
         if (inferred !== "B2" && acc > 85) inferred = "B2";
+
+        if (originalInferred === "A1" && acc < 30) {
+            setLevelNameInfo(", A1");
+        } else if ((originalInferred === "A1" && acc >= 30) || (originalInferred === "A2" && acc <= 45)) {
+            setLevelNameInfo(", A1-A2");
+        } else if ((originalInferred === "A2" || originalInferred === "B1") && acc < 60 || ((originalInferred === "A2" && acc >= 60))) {
+            setLevelNameInfo(", A2-B1");
+        } else if (originalInferred === "B1" && acc >= 60) {
+            setLevelNameInfo(", B1-B2");
+        } else if (originalInferred === "B2" && acc < 90) {
+            setLevelNameInfo(", B2-C1");
+        } else if (originalInferred === "B2" && acc > 90) {
+            setLevelNameInfo(", C1");
+        }
 
         setLevelInfo(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
         setIsLoading(false);
@@ -129,6 +137,16 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // HEADER MODE
     // -------------------------
     if (header) {
+        // ✅ edge fade for moving content (icons + road dashes)
+        const edgeFadeMask = {
+            maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            maskRepeat: "no-repeat",
+            WebkitMaskRepeat: "no-repeat",
+            maskSize: "100% 100%",
+            WebkitMaskSize: "100% 100%",
+        };
+
         const ICON_LANE = [
             { src: "/house-icon.svg", gap: 32 },
             { src: "/apple-icon.svg", gap: 32 },
@@ -234,6 +252,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             overflow: "hidden",
             opacity: 0.78,
             pointerEvents: "none",
+
+            ...edgeFadeMask,
         };
 
         const iconLaneWrap = {
@@ -377,11 +397,11 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
         const nextRuleId = isInMarathon ? marathonService.getNextMarathonRule() : "";
         const nextRuleLabel = RULE_LABELS?.[nextRuleId] || nextRuleId || titleDefault;
-        const nextRuleAcc = getRuleAccuracy(nextRuleId);
+        const nextRuleAcc = marathonService.getRuleRecentAccuracy(nextRuleId);
 
         const levelTextDefault = showEmpty
             ? `Лише ${attemptsLeft} ${attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня`
-            : `Рівень: ${levelInfo.label?.toLowerCase()}`;
+            : `Рівень: ${levelInfo.label?.toLowerCase()}${levelNameInfo}`;
 
         // ✅ marathon “passed” message for day 7 (you asked specifically for it)
         const marathonPassedText =

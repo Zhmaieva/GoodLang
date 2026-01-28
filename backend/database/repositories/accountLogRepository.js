@@ -12,7 +12,7 @@ export async function checkTranslationLimit(accountId, soft = true) {
     const account = await getAccountInfo(accountId);
 
     // 0️⃣ Paid users → unlimited
-    if (account.status === "paid") {
+    if (account.status !== "free") {
         return { allowed: true, waitTimeSeconds: 0 };
     }
 

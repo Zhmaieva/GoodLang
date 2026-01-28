@@ -6,7 +6,80 @@ const STORAGE_KEY_ACCOUNT_INFO = "account_info";
 const STORAGE_KEY_ACCOUNT_INFO_PREV = "account_info_old";
 const STORAGE_KEY_MARATHON_FAILED_MODAL = "marathon_failed_modal";
 const WEAK_BAR = 70; // %
-const SECONDS_PER_TRANSLATION = 30;
+const SECONDS_PER_TRANSLATION = 60;
+
+const WINDOW_N = 8;
+
+/**
+ * Try to extract recent answer scores for a rule from the stats object.
+ * Expected scores are either 0..1 or 0..100; we normalize to 0..100.
+ *
+ * Adjust the field names here to match what your getAllStatistics() returns.
+ */
+function getRecentScoresFromStat(stat, windowN = WINDOW_N) {
+    if (!stat) return [];
+
+    // Try common field names (pick whichever exists in your data)
+    const candidate =
+        stat.attemptsLast7Days ??
+        null;
+
+    const arr = Array.isArray(candidate) ? candidate : [];
+    if (!arr.length) return [];
+
+    // Normalize to numbers 0..100
+    const normalized = arr
+        .map((x) => x.score)
+        .filter((v) => Number.isFinite(v));
+
+    // Keep only the last N
+    return normalized.slice(-windowN);
+}
+
+/**
+ * Window-based accuracy: average of last N answers.
+ * Fallback to overall stat.accuracy if recent scores aren't available.
+ */
+function ruleAccuracyWindowed(ruleId, statByRule, windowN = WINDOW_N) {
+    const s = statByRule.get(ruleId);
+    const recent = getRecentScoresFromStat(s, windowN);
+
+    if (recent.length > 0) {
+        const sum = recent.reduce((acc, v) => acc + v, 0);
+        return sum / recent.length;
+    }
+
+    // fallback: old behavior
+    const acc = Number(s?.accuracy);
+    return Number.isFinite(acc) ? acc : 0;
+}
+
+/**
+ * Minimal number of extra perfect answers needed so that
+ * avg(last N of (recentScores + perfects)) >= target.
+ *
+ * Rolling window behavior is modeled by slicing last N after appending.
+ */
+function extraPerfectAnswersNeededWindowed(recentScores, targetPercent, windowN = WINDOW_N) {
+    const t = Number.isFinite(Number(targetPercent)) ? Number(targetPercent) : WEAK_BAR;
+    const base = Array.isArray(recentScores)
+        ? recentScores.map(Number).filter((v) => Number.isFinite(v))
+        : [];
+
+    // If no recent answers: 1 perfect answer makes window avg 100
+    if (base.length === 0) return 1;
+
+    // Search k from 0..windowN (after windowN perfect answers, window is all perfect)
+    for (let k = 0; k <= windowN; k++) {
+        const withPerfects = base.concat(Array(k).fill(100));
+        const window = withPerfects.slice(-windowN);
+        const avg = window.reduce((acc, v) => acc + v, 0) / window.length;
+        if (avg >= t) return k;
+    }
+
+    return windowN; // safe fallback
+}
+
 
 export function readAccountInfoFromLS() {
     const raw = localStorage.getItem(STORAGE_KEY_ACCOUNT_INFO);
@@ -152,23 +225,27 @@ export const marathonService = {
         if (!rulesSoFar.length) return "0 хв";
 
         const statByRule = statsMap();
-
         let totalTranslations = 0;
 
         for (const ruleId of rulesSoFar) {
             const s = statByRule.get(ruleId);
 
-            const acc = Number.isFinite(Number(s?.accuracy)) ? Number(s.accuracy) : 0;           // 0..100
-            const attempts = Number.isFinite(Number(s?.attemptsNumber)) ? Number(s.attemptsNumber) : 0;
+            // last-8 window accuracy
+            const recent = getRecentScoresFromStat(s, WINDOW_N);
+            const accNow = recent.length
+                ? recent.reduce((sum, v) => sum + v, 0) / recent.length
+                : (Number.isFinite(Number(s?.accuracy)) ? Number(s.accuracy) : 0);
 
-            if (acc >= target) continue;
+            if (accNow >= target) continue;
 
-            totalTranslations += translationsNeededToReachTarget(acc, attempts, target);
+            // minimal k perfect answers, taking rolling window into account
+            totalTranslations += extraPerfectAnswersNeededWindowed(recent, target, WINDOW_N);
         }
 
         const totalSeconds = totalTranslations * SECONDS_PER_TRANSLATION;
         return formatEtaFromSeconds(totalSeconds);
     },
+
 
     /**
      * Returns { total, remaining } for today's schedule tasks.
@@ -218,13 +295,19 @@ export const marathonService = {
         const statByRule = statsMap();
 
         const weak = rulesSoFar
-            .map((r) => ({ ruleId: r, accuracy: ruleAccuracy(r, statByRule) }))
+            .map((r) => ({ ruleId: r, accuracy: ruleAccuracyWindowed(r, statByRule) }))
             .filter((x) => x.accuracy < WEAK_BAR);
 
-        // Sort: lowest accuracy first (more urgent)
         weak.sort((x, y) => x.accuracy - y.accuracy);
 
         return weak;
+    },
+
+    getRuleRecentAccuracy(ruleId) {
+        const statByRule = statsMap();
+        const result = ruleAccuracyWindowed(ruleId, statByRule);
+
+        return result;
     },
 
     /**
