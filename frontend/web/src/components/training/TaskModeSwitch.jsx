@@ -128,8 +128,8 @@ export default function TaskModeSwitch({
             cursor: disabled ? "not-allowed" : "pointer",
 
             // ✅ less saturated when locked
-            background: selected ? theme.green : "#fffdf8",
-            color: selected ? "#fff" : theme.text,
+            background: (selected || !expanded) ? theme.green : "#fffdf8",
+            color: (selected || !expanded) ? "#fff" : theme.text,
             //opacity: disabled ? 0.55 : 1,
             filter: disabled ? "saturate(0.5)" : isHover ? "brightness(0.95)" : "none",
 

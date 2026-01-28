@@ -13,13 +13,21 @@ import {
     setPromoCode
 } from "../../services/dataService.js";
 import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
+import {disableMarathonFailedModal, isMarathonFailedModalEnabled} from "../../services/marathonService.js";
+import MarathonFailedModal from "../modals/MarathonFailedModal.jsx";
+import {off, on} from "../../services/events.js";
+import MarathonCompletedModal from "../modals/MarathonCompletedModal.jsx";
 
 export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
     const [hovered, setHovered] = useState(null);
+
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
+    const [failedModalOpen, setFailedModalOpen] = useState(isMarathonFailedModalEnabled());
+    const [completedModalOpen, setCompletedModalOpen] = useState(false);
+
     const [subscribeIntent, setSubscribeIntent] = useState(false);
     const [attemptsLeft, setAttemptsLeft] = useState(1);
 
@@ -47,6 +55,24 @@ export default function AccountStatusButton({ theme }) {
             return null;
         }
     }, []);
+
+    const checkMarathonFailed = () => {
+        setFailedModalOpen(isMarathonFailedModalEnabled())
+    }
+
+    const checkMarathonCompleted = () => {
+        setCompletedModalOpen(true)
+    }
+
+    useEffect(() => {
+        on('marathonFailed', checkMarathonFailed);
+        on('marathonCompleted', checkMarathonCompleted);
+
+        return () => {
+            off('marathonFailed', checkMarathonFailed);
+            off('marathonCompleted', checkMarathonCompleted);
+        }
+    })
 
     useEffect(() => {
         mountedRef.current = true;
@@ -221,6 +247,27 @@ export default function AccountStatusButton({ theme }) {
                             onClose={() => setLoginModalOpen(false)}/>
             }
 
+            {
+                account && failedModalOpen && <MarathonFailedModal
+                    open={failedModalOpen}
+                    theme={theme}
+                    account={account}
+                    onClose={() => {
+                        disableMarathonFailedModal();   // 🔒 one-time only
+                        setFailedModalOpen(false);
+                    }}
+                />
+            }
+
+            {
+                account && completedModalOpen && <MarathonCompletedModal
+                    open={completedModalOpen}
+                    theme={theme}
+                    onClose={() => {
+                        setCompletedModalOpen(false);
+                    }}
+                />
+            }
         </>
     );
 }

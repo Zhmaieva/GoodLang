@@ -36,6 +36,10 @@ function enableMarathonFailedModal() {
     localStorage.setItem(STORAGE_KEY_MARATHON_FAILED_MODAL, "true");
 }
 
+export function disableMarathonFailedModal() {
+    localStorage.setItem(STORAGE_KEY_MARATHON_FAILED_MODAL, "false");
+}
+
 export function isMarathonFailedModalEnabled() {
     return localStorage.getItem(STORAGE_KEY_MARATHON_FAILED_MODAL) === "true";
 }
@@ -277,8 +281,9 @@ export const marathonService = {
         } else if (!old.marathonFailed && a.marathonFailed) {
             syncPrevAccountInfoToLS();
             enableMarathonFailedModal();
+            emit('marathonFailed');
         }
-        else if (old?.currentDay && a?.currentDay) {
+        else if (old?.currentDay && a?.currentDay || old?.isInMarathon !== a?.isInMarathon) {
             if (old?.currentDay?.dayStartAt !== a?.currentDay?.dayStartAt) {
                 syncPrevAccountInfoToLS();
                 window.location.reload();

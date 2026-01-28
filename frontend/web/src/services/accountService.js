@@ -47,18 +47,20 @@ setInterval(() => {
 - marathon progress bar DONE
 
 - job to change marathon status DONE
-- assign rules
-- modal on marathon fail (only once on active session)
-- modal on marathon completion (only once on active session)
+- assign rules DONE
+- modal on marathon fail (only once on active session) DONE
+- modal on marathon completion (only once on active session) DONE
+
+- email on marathon start DONE
+- email on marathon fail DONE
+- email on marathon completion DONE
+
+- add product to prod
+- add product limitation to automatic promo code on prod before releasing marathon
+- update ToU for marathons
 
 - trainer redesign
 - trainer result redesign
-
-- certificate on marathon completion
-- email on marathon completion
-
-- add product limitation to automatic promo code on prod before releasing marathon
-- update ToU for marathons
 
 - add a progress bar to the rule page
 - add ordering in the rules table
