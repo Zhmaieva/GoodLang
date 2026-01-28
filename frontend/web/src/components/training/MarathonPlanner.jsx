@@ -84,8 +84,22 @@ export default function MarathonPlanner({
         const m = new Map();
         for (const s of stats) {
             if (s?.rule) {
+                const _acc = Number.isFinite(s.accuracy) ? s.accuracy : 0;
+
+                // attempts field name can vary; keep it resilient
+                const _attemptsRaw =
+                    s.attempts ??
+                    s.tries ??
+                    s.count ??
+                    s.total ??
+                    s.totalAttempts ??
+                    s.n ??
+                    0;
+                const _attempts = Number.isFinite(Number(_attemptsRaw)) ? Number(_attemptsRaw) : 0;
+
                 m.set(String(s.rule), {
-                    accuracy: Number.isFinite(s.accuracy) ? s.accuracy : 0,
+                    accuracy: _acc,
+                    attempts: _attempts,
                     level: normalizeLevel(s.level),
                     label: s.ruleName || RULE_LABELS?.[s.rule] || s.rule,
                 });
@@ -129,43 +143,173 @@ export default function MarathonPlanner({
         };
 
         const buildInitial = () => {
-            const myLevelRules = (LEVEL_RULES?.[lvl] || []).map(String);
+            const inferredObj = inferUserLevel();
+            const overall = getOverallAccuracy();
+            const accOverall = Number.isFinite(overall?.accuracy) ? overall.accuracy : 0;
 
-            const above = nextLevel(lvl);
-            const aboveRules = above ? (LEVEL_RULES?.[above] || []).map(String) : [];
+            let inferred = inferredObj?.level || "A1";
+            if (inferred === "A1" && accOverall > 40) inferred = "A2";
+            if (inferred !== "B2" && accOverall > 85) inferred = "B2";
 
-            const getAcc = (ruleId) => statByRule.get(String(ruleId))?.accuracy ?? 0;
+            const currentLevel = normalizeLevel(inferred);
 
-            const pickWeakest = (ruleIds, takeN) => {
-                const sorted = [...ruleIds].sort((a, b) => getAcc(a) - getAcc(b));
-                return sorted.slice(0, Math.max(0, takeN));
+            const primaryLevelForRule = (ruleId) => {
+                const r = String(ruleId);
+                for (const L of LEVEL_ORDER) {
+                    if ((LEVEL_RULES?.[L] || []).includes(r)) return L;
+                }
+                return "A1";
             };
 
-            const fromAbove = above ? pickWeakest(aboveRules, 3) : [];
-            const remaining = max - fromAbove.length;
+            const levelOf = (r) => statByRule.get(String(r))?.level || primaryLevelForRule(r);
+            const attemptsOf = (r) => Number(statByRule.get(String(r))?.attempts ?? 0) || 0;
+            const accuracyOf = (r) => Number(statByRule.get(String(r))?.accuracy ?? 0) || 0;
 
-            const myCandidates = myLevelRules.filter((r) => !fromAbove.includes(r));
-            const fromMy = pickWeakest(myCandidates, remaining);
+            const hasData = (r) => attemptsOf(r) > 0;
 
-            const merged = uniq([...fromMy, ...fromAbove]);
+            // "adjusted like in AccuracyKpi": use accuracy but nudge low-attempt rules to be less decisive
+            const adjustedAccuracyOf = (r) => {
+                const a = accuracyOf(r);
+                const n = attemptsOf(r);
+                if (!n) return null; // means "no data"
+                // shrink towards 70% for very low attempts (smooth + predictable)
+                const w = Math.min(1, n / 5);
+                return a * w + 70 * (1 - w);
+            };
 
-            if (merged.length < max) {
-                const rest = allRulesFlat.filter((r) => !merged.includes(r));
-                merged.push(...rest.slice(0, max - merged.length));
-            }
+            const sortWeak = (a, b) => {
+                const aa = adjustedAccuracyOf(a);
+                const bb = adjustedAccuracyOf(b);
 
-            const levelOf = (r) =>
-                statByRule.get(String(r))?.level || normalizeLevel(levelsForRuleFallback(r));
-            const accOf = (r) => statByRule.get(String(r))?.accuracy ?? 0;
+                // rules with data first
+                if (aa === null && bb !== null) return 1;
+                if (aa !== null && bb === null) return -1;
 
-            return [...merged]
-                .slice(0, max)
-                .sort((a, b) => {
+                // lowest adjusted accuracy first
+                if (aa !== bb) return (aa ?? 0) - (bb ?? 0);
+
+                // then fewer attempts first
+                const na = attemptsOf(a);
+                const nb = attemptsOf(b);
+                if (na !== nb) return na - nb;
+
+                return String(a).localeCompare(String(b));
+            };
+
+            const pickWeakestWithData = (ruleIds, takeN, extraFilter = null) => {
+                const arr = (ruleIds || []).map(String).filter((r) => hasData(r));
+                const filtered = extraFilter ? arr.filter(extraFilter) : arr;
+                return [...filtered].sort(sortWeak).slice(0, Math.max(0, takeN));
+            };
+
+            const pickRandom = (ruleIds, takeN) => {
+                const arr = [...(ruleIds || [])].map(String);
+                for (let i = arr.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [arr[i], arr[j]] = [arr[j], arr[i]];
+                }
+                return arr.slice(0, Math.max(0, takeN));
+            };
+
+            const currentRules = (LEVEL_RULES?.[currentLevel] || []).map(String);
+            const currentWithData = currentRules.filter(hasData);
+
+            // last fallback: no data at all in this level → random rules of the level
+            if (!currentWithData.length) {
+                const rnd = pickRandom(currentRules, max);
+                return [...rnd].slice(0, max).sort((a, b) => {
                     const la = levelIndex(levelOf(a));
                     const lb = levelIndex(levelOf(b));
                     if (la !== lb) return la - lb;
-                    return accOf(a) - accOf(b);
+                    const na = attemptsOf(a);
+                    const nb = attemptsOf(b);
+                    if (na !== nb) return na - nb;
+                    return String(a).localeCompare(String(b));
                 });
+            }
+
+            const selectedSet = new Set();
+
+            const addMany = (arr) => {
+                for (const r of arr || []) {
+                    const id = String(r);
+                    if (!selectedSet.has(id)) selectedSet.add(id);
+                    if (selectedSet.size >= max) break;
+                }
+            };
+
+            const lowerLevels = LEVEL_ORDER.slice(0, Math.max(0, levelIndex(currentLevel)));
+            const aboveLevel = nextLevel(currentLevel);
+
+            // 1) base: take 4 weakest rules of the current level (with data)
+            const baseWeak = pickWeakestWithData(currentRules, 4);
+            addMany(baseWeak);
+
+            // 1b) If not enough (base 4), take some starting from lower level first (with data)
+            if (selectedSet.size < 4) {
+                for (let i = lowerLevels.length - 1; i >= 0 && selectedSet.size < 4; i--) {
+                    const L = lowerLevels[i];
+                    const rulesL = (LEVEL_RULES?.[L] || []).map(String);
+                    const picked = pickWeakestWithData(rulesL, 4 - selectedSet.size);
+                    addMany(picked);
+                }
+            }
+
+            // 2) prepend 1 weakest rule of lower levels (attempts >= 5), if any (not for A1)
+            if (lowerLevels.length) {
+                let lowerCandidates = [];
+                for (let i = lowerLevels.length - 1; i >= 0; i--) {
+                    const L = lowerLevels[i];
+                    const rulesL = (LEVEL_RULES?.[L] || []).map(String);
+                    lowerCandidates = lowerCandidates.concat(rulesL);
+                }
+                const lowerOne = pickWeakestWithData(lowerCandidates, 1, (r) => attemptsOf(r) >= 5);
+                addMany(lowerOne);
+            }
+
+            // 3) append 2 rules of level above:
+            //    - only for "A2 adjusted level", OR
+            //    - if we can’t fill 7 with current-level rules that have attempts
+            const shouldAddAbove = currentLevel === "A2" || currentWithData.length < max;
+            if (shouldAddAbove && aboveLevel) {
+                const aboveRules = (LEVEL_RULES?.[aboveLevel] || []).map(String);
+                const abovePicked = pickWeakestWithData(aboveRules, 2);
+                addMany(abovePicked);
+            }
+
+            // 4) fill the rest with weakest rules of the current level (with data), then lower levels, then random current-level
+            if (selectedSet.size < max) {
+                const remainingCurrent = currentRules.filter((r) => !selectedSet.has(String(r)));
+                addMany(pickWeakestWithData(remainingCurrent, max - selectedSet.size));
+            }
+
+            if (selectedSet.size < max) {
+                for (let i = lowerLevels.length - 1; i >= 0 && selectedSet.size < max; i--) {
+                    const L = lowerLevels[i];
+                    const rulesL = (LEVEL_RULES?.[L] || []).map(String).filter((r) => !selectedSet.has(String(r)));
+                    addMany(pickWeakestWithData(rulesL, max - selectedSet.size));
+                }
+            }
+
+            if (selectedSet.size < max) {
+                const remainingNoData = currentRules.filter((r) => !selectedSet.has(String(r)));
+                addMany(pickRandom(remainingNoData, max - selectedSet.size));
+            }
+
+            const merged = [...selectedSet].slice(0, max);
+
+            // final ordering requirement: by level (low → high), then attempts (low → high)
+            return merged.sort((a, b) => {
+                const la = levelIndex(levelOf(a));
+                const lb = levelIndex(levelOf(b));
+                if (la !== lb) return la - lb;
+
+                const na = attemptsOf(a);
+                const nb = attemptsOf(b);
+                if (na !== nb) return na - nb;
+
+                return String(a).localeCompare(String(b));
+            });
         };
 
         setSelected((prev) => {

@@ -14,6 +14,11 @@ import {
     cancelFailedLatestMarathonsAndDowngradeAccounts, completeMarathonsWhenAllSchedulesDone,
     failOverdueInProgressMarathonsBySchedules
 } from "../database/repositories/marathonsRepository.js";
+import {
+    runMarathonCompletedTick,
+    runMarathonFailTick,
+    runMarathonStartTick
+} from "../emails/marathon/marathonEmails.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -66,6 +71,24 @@ startNonOverlappingInterval(async () => {
     // if (!res.skipped) console.log("[promoCron]", promoRes);
 //}, 10000)
 }, 1200000)
+
+startNonOverlappingInterval(async () => {
+    const res = await runMarathonStartTick({ pool, transporter, projectRoot, limit: 1 });
+    // avoid spam logs outside window
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 1000)
+
+startNonOverlappingInterval(async () => {
+    const res = await runMarathonFailTick({ pool, transporter, projectRoot, limit: 1 });
+    // avoid spam logs outside window
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 1000)
+
+startNonOverlappingInterval(async () => {
+    const res = await runMarathonCompletedTick({ pool, transporter, projectRoot, limit: 1 });
+    // avoid spam logs outside window
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 1000)
 
 startNonOverlappingInterval(async () => {
     await completeMarathonsWhenAllSchedulesDone();

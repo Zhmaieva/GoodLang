@@ -126,44 +126,152 @@ function inferLevelFromAnswers(answers, statByRule) {
 }
 
 function pickNextMarathonRules({ inferredLevel, statByRule, max = 7 }) {
-    const allRulesFlat = uniq(LEVEL_ORDER.flatMap((L) => (LEVEL_RULES?.[L] || []).map(String)));
+    const level = String(inferredLevel || "A1").toUpperCase();
+    const currentLevel = LEVEL_ORDER.includes(level) ? level : "A1";
 
-    const getAcc = (ruleId) => Number(statByRule.get(String(ruleId))?.accuracy ?? 0);
+    const primaryLevel = (r) => (statByRule.get(String(r))?.level || primaryLevelForRule(r) || "A1");
 
-    const pickWeakest = (ruleIds, takeN) => {
-        const sorted = [...(ruleIds || [])].sort((a, b) => getAcc(a) - getAcc(b));
-        return sorted.slice(0, Math.max(0, takeN));
+    const attemptsOf = (r) => Number(statByRule.get(String(r))?.attempts ?? 0) || 0;
+    const accuracyOf = (r) => Number(statByRule.get(String(r))?.accuracy ?? 0) || 0;
+
+    const hasData = (r) => attemptsOf(r) > 0;
+
+    // "adjusted like in AccuracyKpi": shrink very low-attempt accuracy towards 70%
+    const adjustedAccuracyOf = (r) => {
+        const n = attemptsOf(r);
+        if (!n) return null; // no data
+        const a = accuracyOf(r);
+        const w = Math.min(1, n / 5);
+        return a * w + 70 * (1 - w);
     };
 
-    const myLevelRules = (LEVEL_RULES?.[inferredLevel] || []).map(String);
+    const sortWeak = (a, b) => {
+        const aa = adjustedAccuracyOf(a);
+        const bb = adjustedAccuracyOf(b);
 
-    const above = nextLevel(inferredLevel);
-    const aboveRules = above ? (LEVEL_RULES?.[above] || []).map(String) : [];
+        if (aa === null && bb !== null) return 1;
+        if (aa !== null && bb === null) return -1;
 
-    const fromAbove = above ? pickWeakest(aboveRules, 3) : [];
-    const remaining = max - fromAbove.length;
+        if (aa !== bb) return (aa ?? 0) - (bb ?? 0);
 
-    const myCandidates = myLevelRules.filter((r) => !fromAbove.includes(r));
-    const fromMy = pickWeakest(myCandidates, remaining);
+        const na = attemptsOf(a);
+        const nb = attemptsOf(b);
+        if (na !== nb) return na - nb;
 
-    const merged = uniq([...fromMy, ...fromAbove]);
+        return String(a).localeCompare(String(b));
+    };
 
-    if (merged.length < max) {
-        const rest = allRulesFlat.filter((r) => !merged.includes(r));
-        merged.push(...rest.slice(0, max - merged.length));
+    const pickWeakestWithData = (ruleIds, takeN, extraFilter = null) => {
+        const arr = (ruleIds || []).map(String).filter((r) => hasData(r));
+        const filtered = extraFilter ? arr.filter(extraFilter) : arr;
+        return [...filtered].sort(sortWeak).slice(0, Math.max(0, takeN));
+    };
+
+    const pickRandom = (ruleIds, takeN) => {
+        const arr = [...(ruleIds || [])].map(String);
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr.slice(0, Math.max(0, takeN));
+    };
+
+    const levelRules = (LEVEL_RULES?.[currentLevel] || []).map(String);
+    const levelWithData = levelRules.filter(hasData);
+
+    // last fallback: if no rules with data at all in this level → random rules of the level
+    if (!levelWithData.length) {
+        const rnd = pickRandom(levelRules, max);
+        return rnd
+            .slice(0, max)
+            .sort((a, b) => {
+                const la = levelIndex(primaryLevel(a));
+                const lb = levelIndex(primaryLevel(b));
+                if (la !== lb) return la - lb;
+
+                const na = attemptsOf(a);
+                const nb = attemptsOf(b);
+                if (na !== nb) return na - nb;
+
+                return String(a).localeCompare(String(b));
+            });
     }
 
-    const levelOf = (r) => statByRule.get(String(r))?.level || primaryLevelForRule(r);
-    const accOf = (r) => getAcc(r);
+    const selected = new Set();
 
-    return [...merged]
-        .slice(0, max)
-        .sort((a, b) => {
-            const la = levelIndex(levelOf(a));
-            const lb = levelIndex(levelOf(b));
-            if (la !== lb) return la - lb;
-            return accOf(a) - accOf(b);
-        });
+    const addMany = (arr) => {
+        for (const r of arr || []) {
+            const id = String(r);
+            if (!selected.has(id)) selected.add(id);
+            if (selected.size >= max) break;
+        }
+    };
+
+    const lowerLevels = LEVEL_ORDER.slice(0, Math.max(0, levelIndex(currentLevel)));
+    const aboveLevel = nextLevel(currentLevel);
+
+    // 1) base: take 4 weakest rules of the level (with data)
+    addMany(pickWeakestWithData(levelRules, 4));
+
+    // 1b) If not enough weak rules of the level (base 4), take some starting from lower level first
+    if (selected.size < 4) {
+        for (let i = lowerLevels.length - 1; i >= 0 && selected.size < 4; i--) {
+            const L = lowerLevels[i];
+            const rulesL = (LEVEL_RULES?.[L] || []).map(String);
+            addMany(pickWeakestWithData(rulesL, 4 - selected.size));
+        }
+    }
+
+    // 2) prepend 1 weakest rule of lower levels (attempts >= 5), if any
+    if (lowerLevels.length) {
+        let lowerCandidates = [];
+        for (let i = lowerLevels.length - 1; i >= 0; i--) {
+            const L = lowerLevels[i];
+            lowerCandidates = lowerCandidates.concat((LEVEL_RULES?.[L] || []).map(String));
+        }
+        addMany(pickWeakestWithData(lowerCandidates, 1, (r) => attemptsOf(r) >= 5));
+    }
+
+    // 3) append 2 rules of level above (only for A2 adjusted level OR if not enough attempts-data in the level)
+    const shouldAddAbove = currentLevel === "A2" || levelWithData.length < max;
+    if (shouldAddAbove && aboveLevel) {
+        const aboveRules = (LEVEL_RULES?.[aboveLevel] || []).map(String);
+        addMany(pickWeakestWithData(aboveRules, 2));
+    }
+
+    // 4) fill rest with weakest rules of the level, otherwise lower levels, then random current level
+    if (selected.size < max) {
+        const remainingLevel = levelRules.filter((r) => !selected.has(String(r)));
+        addMany(pickWeakestWithData(remainingLevel, max - selected.size));
+    }
+
+    if (selected.size < max) {
+        for (let i = lowerLevels.length - 1; i >= 0 && selected.size < max; i--) {
+            const L = lowerLevels[i];
+            const rulesL = (LEVEL_RULES?.[L] || []).map(String).filter((r) => !selected.has(String(r)));
+            addMany(pickWeakestWithData(rulesL, max - selected.size));
+        }
+    }
+
+    if (selected.size < max) {
+        const remainingAny = levelRules.filter((r) => !selected.has(String(r)));
+        addMany(pickRandom(remainingAny, max - selected.size));
+    }
+
+    const out = [...selected].slice(0, max);
+
+    // final ordering: by level (low → high), then attempts (low → high)
+    return out.sort((a, b) => {
+        const la = levelIndex(primaryLevel(a));
+        const lb = levelIndex(primaryLevel(b));
+        if (la !== lb) return la - lb;
+
+        const na = attemptsOf(a);
+        const nb = attemptsOf(b);
+        if (na !== nb) return na - nb;
+
+        return String(a).localeCompare(String(b));
+    });
 }
 
 // marathonsRepository.js
@@ -189,12 +297,12 @@ async function autoStartNextMarathonForPaidAccount(accountId, opts = {}) {
     // 2) latest marathon must be completed
     const { rows: mRows } = await pool.query(
         `
-      SELECT id, status, created_at
-      FROM learning_marathons
-      WHERE account_id = $1
-      ORDER BY created_at DESC
-      LIMIT 1
-    `,
+            SELECT id, status, created_at
+            FROM learning_marathons
+            WHERE account_id = $1
+            ORDER BY created_at DESC
+            LIMIT 1
+        `,
         [accountId]
     );
 
@@ -216,11 +324,11 @@ async function autoStartNextMarathonForPaidAccount(accountId, opts = {}) {
     // 3) avoid duplicates
     const { rows: inProg } = await pool.query(
         `
-      SELECT 1
-      FROM learning_marathons
-      WHERE account_id = $1 AND status = 'in_progress'
-      LIMIT 1
-    `,
+            SELECT 1
+            FROM learning_marathons
+            WHERE account_id = $1 AND status = 'in_progress'
+            LIMIT 1
+        `,
         [accountId]
     );
     if (inProg?.length) return { started: false, reason: "already_in_progress" };
@@ -255,31 +363,31 @@ async function getEligibleAccountsForMarathonAutostart(limit = 50) {
 
     const { rows } = await pool.query(
         `
-      WITH latest_marathon AS (
-        SELECT DISTINCT ON (lm.account_id)
-          lm.account_id,
-          lm.status,
-          lm.created_at
-        FROM learning_marathons lm
-        ORDER BY lm.account_id, lm.created_at DESC
-      ),
-      in_progress AS (
-        SELECT DISTINCT account_id
-        FROM learning_marathons
-        WHERE status = 'in_progress'
-      )
-      SELECT a.id
-      FROM accounts a
-      JOIN latest_marathon lm ON lm.account_id = a.id
-      LEFT JOIN in_progress ip ON ip.account_id = a.id
-      WHERE a.status = 'paid'
-        AND ip.account_id IS NULL
-        AND lm.status = 'completed'
-        AND lm.created_at >= NOW() - INTERVAL '8 days'
-        AND (lm.created_at + INTERVAL '7 days') <= NOW()
-      ORDER BY lm.created_at ASC
-      LIMIT $1
-    `,
+            WITH latest_marathon AS (
+                SELECT DISTINCT ON (lm.account_id)
+                    lm.account_id,
+                    lm.status,
+                    lm.created_at
+                FROM learning_marathons lm
+                ORDER BY lm.account_id, lm.created_at DESC
+            ),
+                 in_progress AS (
+                     SELECT DISTINCT account_id
+                     FROM learning_marathons
+                     WHERE status = 'in_progress'
+                 )
+            SELECT a.id
+            FROM accounts a
+                     JOIN latest_marathon lm ON lm.account_id = a.id
+                     LEFT JOIN in_progress ip ON ip.account_id = a.id
+            WHERE a.status = 'paid'
+              AND ip.account_id IS NULL
+              AND lm.status = 'completed'
+              AND lm.created_at >= NOW() - INTERVAL '8 days'
+              AND (lm.created_at + INTERVAL '7 days') <= NOW()
+            ORDER BY lm.created_at ASC
+            LIMIT $1
+        `,
         [lim]
     );
 

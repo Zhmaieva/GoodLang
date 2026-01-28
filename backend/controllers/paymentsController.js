@@ -3,7 +3,7 @@ import Stripe from "stripe";
 
 import express from "express";
 import {updateSubscriptionForAccount} from "../database/repositories/subscriptionRepository.js";
-import {getAccountById} from "../database/repositories/accountsRepository.js";
+import {getAccountById, getAccountInfo} from "../database/repositories/accountsRepository.js";
 import { startMarathon } from "../database/repositories/marathonsRepository.js";
 import {pool} from "../database/pool.js";
 import {recordAction} from "../database/repositories/accountLogRepository.js";
@@ -127,7 +127,11 @@ export const paymentsController = {
         app.post(`/${name}/create-marathon-checkout-session`, authMiddleware, async (req, res) => {
             try {
                 const accountId = req.user.id;
-                const account = await getAccountById(accountId);
+                const account = await getAccountInfo(accountId);
+
+                if (account?.isInMarathon) {
+                    return res.status(400).json({ error: "The account is already in marathon" });
+                }
 
                 if (!accountId) {
                     return res.status(400).json({ error: "Missing accountId" });

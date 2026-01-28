@@ -154,7 +154,7 @@ export default function Trainer({
 
     const refreshTaskMode = async () => {
         const saved = await getSavedTaskMode();
-        if (await marathonService.isMarathonView(true)) {
+        if (freeTraining && await marathonService.isMarathonView(true)) {
             setTaskMode("translations")
             return;
         }
@@ -314,7 +314,7 @@ export default function Trainer({
                                          skip,
                                          overrideTaskType = null,
                                      }) {
-        if (await marathonService.isMarathonView(true)) {
+        if (freeTraining && await marathonService.isMarathonView(true)) {
             const nextMarathonRule = marathonService.getNextMarathonRule();
             return await callTranslateAPI({
                 rules: [nextMarathonRule],
@@ -521,7 +521,9 @@ export default function Trainer({
             }
 
             emit("weeklyProgressUpdate");
-            emit("marathonProgressUpdate");
+
+            if (freeTraining)
+                emit("marathonProgressUpdate");
 
             const serverNextType = Number(data.taskType ?? 0);
             const serverProvidedNextTask = !!(data.textToTranslate && (data.rules?.length ?? 0) > 0);
@@ -535,7 +537,8 @@ export default function Trainer({
                 }
             }
 
-            emit("marathonProgressUpdateHardRefresh");
+            if (freeTraining)
+                emit("marathonProgressUpdateHardRefresh");
 
             // ✅ Preload next task
             // During calibration you already prevent preloading below; kept as-is.
@@ -671,7 +674,7 @@ export default function Trainer({
 
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView(true));
+        setTaskModeLocked(!!isCalibration || (freeTraining && await marathonService.isMarathonView(true)));
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
 
@@ -702,7 +705,7 @@ export default function Trainer({
     const initCalibrationSimple = async () => {
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration || await marathonService.isMarathonView(true));
+        setTaskModeLocked(!!isCalibration || (freeTraining && await marathonService.isMarathonView(true)));
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
     }
