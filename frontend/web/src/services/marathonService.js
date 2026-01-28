@@ -276,6 +276,8 @@ export const marathonService = {
         let a = readAccountInfoFromLS();
         let old = readPrevAccountInfoFromLS();
 
+        let dayTasksJustCompleted = false;
+
         if (!old && a) {
             syncPrevAccountInfoToLS();
         } else if (!old.marathonFailed && a.marathonFailed) {
@@ -284,9 +286,13 @@ export const marathonService = {
             emit('marathonFailed');
         }
         else if (old?.currentDay && a?.currentDay || old?.isInMarathon !== a?.isInMarathon) {
-            if (old?.currentDay?.dayStartAt !== a?.currentDay?.dayStartAt) {
+            if (old?.currentDay?.dayStartAt !== a?.currentDay?.dayStartAt
+                || old?.currentDay?.dayNumber !== a?.currentDay?.dayNumber) {
                 syncPrevAccountInfoToLS();
                 window.location.reload();
+            } else if (old?.currentDayTasks?.length > 0 && (a?.currentDayTasks?.length ?? 0) === 0) {
+                dayTasksJustCompleted = true;
+                syncPrevAccountInfoToLS();
             }
         }
 
@@ -313,6 +319,8 @@ export const marathonService = {
         const noWeakLeft = weak.length === 0;
 
         if (!(noTasksLeft && noWeakLeft)) {
+            if (dayTasksJustCompleted)
+                emit('marathonDailyNeedsPractice');
             return false;
         }
 
@@ -322,6 +330,8 @@ export const marathonService = {
         if (a?.currentDay?.dayNumber === 7) {
             callUpdateMarathonStatusApi('completed').then();
             emit('marathonCompleted');
+        } else {
+            emit('marathonDailyCompleted');
         }
         callAccountInfoApi().then(); // updates LS cache in your api.js
 
@@ -332,4 +342,4 @@ export const marathonService = {
 
 setInterval(async () => {
     await marathonService.isScheduleCompleted(true);
-}, 5000);
+}, 1000);

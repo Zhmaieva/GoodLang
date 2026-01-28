@@ -138,7 +138,7 @@ export async function getAccountInfo(accountId, promoCode) {
         marathonFailed = false;
     }
 
-    if (status !== "free") {
+    if (status !== "free" && !marathonFailed) {
         // -------------------------
         // Marathon metadata + current day tasks (soft)
         // -------------------------
@@ -148,7 +148,8 @@ export async function getAccountInfo(accountId, promoCode) {
                     SELECT lm.id
                     FROM learning_marathons lm
                     WHERE lm.account_id = $1
-                      AND lm.status = 'in_progress'
+                      AND lm.status = 'in_progress' 
+                      OR  lm.status = 'completed'
                     ORDER BY lm.created_at DESC
                     LIMIT 1
                 ),

@@ -8,8 +8,6 @@ import {ACTION_TYPES} from "../../utils/constants.js";
 import {
     getOverallAccuracy,
     getPaymentIntent,
-    inferUserLevel,
-    setPaymentIntent,
     setPromoCode
 } from "../../services/dataService.js";
 import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
@@ -17,6 +15,8 @@ import {disableMarathonFailedModal, isMarathonFailedModalEnabled} from "../../se
 import MarathonFailedModal from "../modals/MarathonFailedModal.jsx";
 import {off, on} from "../../services/events.js";
 import MarathonCompletedModal from "../modals/MarathonCompletedModal.jsx";
+import DailyTasksCompletedModal from "../modals/DailyTasksCompletedModal.jsx";
+import DailyTasksNeedMorePracticeModal from "../modals/DailyTasksNeedMorePractiseModal.jsx";
 
 export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
@@ -27,6 +27,8 @@ export default function AccountStatusButton({ theme }) {
     const [statusModalOpen, setStatusModalOpen] = useState(false);
     const [failedModalOpen, setFailedModalOpen] = useState(isMarathonFailedModalEnabled());
     const [completedModalOpen, setCompletedModalOpen] = useState(false);
+    const [completedDailyModalOpen, setCompletedDailyModalOpen] = useState(false);
+    const [dailyNeedsPracticeModalOpen, setDailyNeedsPracticeModalOpen] = useState(false);
 
     const [subscribeIntent, setSubscribeIntent] = useState(false);
     const [attemptsLeft, setAttemptsLeft] = useState(1);
@@ -64,13 +66,25 @@ export default function AccountStatusButton({ theme }) {
         setCompletedModalOpen(true)
     }
 
+    const checkMarathonDailyCompleted = () => {
+        setCompletedDailyModalOpen(true)
+    }
+
+    const checkMarathonDailyNeedsPracticeModalOpen = () => {
+        setDailyNeedsPracticeModalOpen(true)
+    }
+
     useEffect(() => {
         on('marathonFailed', checkMarathonFailed);
         on('marathonCompleted', checkMarathonCompleted);
+        on('marathonDailyCompleted', checkMarathonDailyCompleted);
+        on('marathonDailyNeedsPractice', checkMarathonDailyNeedsPracticeModalOpen);
 
         return () => {
             off('marathonFailed', checkMarathonFailed);
             off('marathonCompleted', checkMarathonCompleted);
+            off('marathonDailyCompleted', checkMarathonDailyCompleted);
+            off('marathonDailyNeedsPractice', checkMarathonDailyNeedsPracticeModalOpen);
         }
     })
 
@@ -265,6 +279,26 @@ export default function AccountStatusButton({ theme }) {
                     theme={theme}
                     onClose={() => {
                         setCompletedModalOpen(false);
+                    }}
+                />
+            }
+
+            {
+                account && completedDailyModalOpen && <DailyTasksCompletedModal
+                    open={completedDailyModalOpen}
+                    theme={theme}
+                    onClose={() => {
+                        setCompletedDailyModalOpen(false);
+                    }}
+                />
+            }
+
+            {
+                account && dailyNeedsPracticeModalOpen && <DailyTasksNeedMorePracticeModal
+                    open={dailyNeedsPracticeModalOpen}
+                    theme={theme}
+                    onClose={() => {
+                        setDailyNeedsPracticeModalOpen(false);
                     }}
                 />
             }
