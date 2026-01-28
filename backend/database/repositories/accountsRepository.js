@@ -619,3 +619,24 @@ export async function downgradeAttentionAccountsAfterMarathonAge() {
 
     return { updated: rowCount || 0 };
 }
+
+/**
+ * Mark all in-progress marathons as failed_by_account_status
+ * for accounts whose status is 'free'.
+ *
+ * @returns {Promise<{updated: number}>}
+ */
+export async function failInProgressMarathonsForFreeAccounts() {
+    const { rowCount } = await pool.query(
+        `
+            UPDATE learning_marathons lm
+            SET status = 'failed_by_account_status'
+            FROM accounts a
+            WHERE lm.account_id = a.id
+              AND a.status = 'free'
+              AND lm.status = 'in_progress'
+        `
+    );
+
+    return { updated: rowCount || 0 };
+}

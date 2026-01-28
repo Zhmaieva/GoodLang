@@ -8,7 +8,10 @@ import {transporter} from "../core/emailSender.js";
 import {fileURLToPath} from "node:url";
 import path from "node:path";
 import "dotenv/config";
-import {downgradeAttentionAccountsAfterMarathonAge} from "../database/repositories/accountsRepository.js";
+import {
+    downgradeAttentionAccountsAfterMarathonAge,
+    failInProgressMarathonsForFreeAccounts
+} from "../database/repositories/accountsRepository.js";
 import {safelyAutostartMarathonsForEligibleAccounts} from "../database/repositories/marathonStarterRepository.js";
 import {
     cancelFailedLatestMarathonsAndDowngradeAccounts, completeMarathonsWhenAllSchedulesDone,
@@ -93,8 +96,10 @@ startNonOverlappingInterval(async () => {
 startNonOverlappingInterval(async () => {
     await completeMarathonsWhenAllSchedulesDone();
     await safelyAutostartMarathonsForEligibleAccounts();
-
     await failOverdueInProgressMarathonsBySchedules();
+
     await cancelFailedLatestMarathonsAndDowngradeAccounts({ limit: 10 });
     await downgradeAttentionAccountsAfterMarathonAge();
+
+    await failInProgressMarathonsForFreeAccounts();
 }, 5000)
