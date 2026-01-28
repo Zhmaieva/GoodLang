@@ -57,7 +57,7 @@ setInterval(() => {
 
 - add product to prod
 - add product limitation to automatic promo code on prod before releasing marathon
-- update ToU for marathons
+- update ToU for marathons DONE
 
 - trainer redesign
 - trainer result redesign

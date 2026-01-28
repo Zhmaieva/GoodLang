@@ -22,6 +22,8 @@ import {
     runMarathonFailTick,
     runMarathonStartTick
 } from "../emails/marathon/marathonEmails.js";
+import {runTouTick} from "../emails/tou/TermsSender.js";
+import res from "express/lib/response.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -74,6 +76,12 @@ startNonOverlappingInterval(async () => {
     // if (!res.skipped) console.log("[promoCron]", promoRes);
 //}, 10000)
 }, 1200000)
+
+startNonOverlappingInterval(async () => {
+    await runTouTick({ pool, transporter, projectRoot });
+
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 60000)
 
 startNonOverlappingInterval(async () => {
     const res = await runMarathonStartTick({ pool, transporter, projectRoot, limit: 1 });
