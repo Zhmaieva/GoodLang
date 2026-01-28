@@ -385,7 +385,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
         // ✅ marathon “passed” message for day 7 (you asked specifically for it)
         const marathonPassedText =
-            isInMarathon && dayNumber >= 7 && Boolean(account?.currentDay?.isDayCompleted) ? "Марафон пройдено. Вітаю!" : null;
+            isInMarathon && dayNumber >= 7 && Boolean(account?.currentDay?.isDayCompleted) ? "Марафон пройдено.\n Вітаю!" : null;
 
         // Decide what to render (title/sub/value/progress) based on your rules:
         let headerTitle = titleDefault;
@@ -421,7 +421,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                 headerTitle = nextRuleLabel;
 
                 const eta = marathonService.estimateEtaForWeakRules(70);
-                headerSub = `Підтягни точність правил.\nЦе займе ${eta}. До дедлайну ${timeLeftText}`;
+                headerSub = `Підтягни точність правил (до 70%).\nЦе займе ${eta}. До дедлайну ${timeLeftText}`;
 
                 // show current rule accuracy as percentage (per your spec)
                 headerValue = `${(nextRuleAcc ?? 0) === 0 ? "0.00" : Number(nextRuleAcc).toFixed(2)}%`;
@@ -526,16 +526,19 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
 
                         {/* ✅ allow <br> via \n */}
-                        <div style={subStyleMulti}>
-                            {String(headerSub || "")
-                                .split("\n")
-                                .map((line, i, arr) => (
-                                    <React.Fragment key={i}>
+                        {String(headerSub || "")
+                            .split("\n")
+                            .map((line, i, arr) => {
+                                const highlight = i === 0 && arr.length > 1;
+                                return (
+                                    <div style={{...subStyleMulti,
+                                        color: highlight ? theme.accentDark : theme.text,
+                                        opacity: highlight ? 1 : .7}} key={i}>
                                         {line}
                                         {i !== arr.length - 1 ? <br/> : null}
-                                    </React.Fragment>
-                                ))}
-                        </div>
+                                    </div>
+                                )
+                            })}
                     </div>
 
                     <div style={valueStyle}>{headerValue}</div>

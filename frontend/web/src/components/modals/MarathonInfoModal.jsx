@@ -248,7 +248,7 @@ export default function MarathonInfoModal({
                                                 textAlign: "left",
                                                 overflow: "hidden",
                                                 textOverflow: "ellipsis",
-                                                maxWidth: 180,
+                                                maxWidth: 250,
                                             }}>
                                                 {account?.email}
                                             </p>
