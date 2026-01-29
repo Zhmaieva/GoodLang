@@ -2,7 +2,7 @@ BEGIN;
 
 DO $$
     DECLARE
-        _email TEXT := 'xiteba4997@okexbit.com';
+        _email TEXT := 'pexin62110@sepole.com';
         _account_id UUID;
         _marathon_id UUID;
     BEGIN

@@ -146,30 +146,25 @@ export const paymentsController = {
                 // Store as JSON string in metadata (Stripe metadata values are strings)
                 const ruleIdsJson = JSON.stringify(ruleIds.map(r => r.trim()));
 
-
                 const sessionParams = {
                     ui_mode: "embedded",
-                    mode: "subscription",
+                    mode: "payment", // ✅ one-time
                     return_url: `${process.env.FRONTEND_URL}/payment/success?type=marathon`,
                     client_reference_id: accountId,
                     customer_email: account?.email || undefined,
+
+                    // ✅ this price must be ONE-TIME in Stripe
                     line_items: [{ price: process.env.STRIPE_MARATHON_PRICE_ID, quantity: 1 }],
+
+                    // ✅ keep metadata here
                     metadata: {
                         accountId,
                         ruleIds: ruleIdsJson,
                         product: "marathon_7d",
                     },
-                    subscription_data: {
-                        metadata: {
-                            accountId,
-                            ruleIds: ruleIdsJson,
-                            product: "marathon_7d",
-                        },
-                    },
                 };
 
                 const session = await stripe.checkout.sessions.create(sessionParams);
-
                 return res.json({ clientSecret: session.client_secret });
             } catch (err) {
                 console.error("Stripe error (marathon checkout):", err);
@@ -200,13 +195,12 @@ export const paymentsController = {
                 if (event.type === "checkout.session.completed") {
                     const session = event.data.object;
 
-                    // Existing subscription flow (keep yours)
-                    if (session.mode === "subscription") {
-                        const subscriptionId = session.subscription;
+                    const mode = session.mode; // "subscription" | "payment"
+                    const accountId = session.client_reference_id || session.metadata?.accountId;
 
-                        const accountId = session.client_reference_id || session.metadata?.accountId;
-                        const ruleIdsRaw = session.metadata?.ruleIds;
-                        const product = session.metadata?.product;
+                    // ---- 1) Subscription purchase (your existing GoodLang subscription) ----
+                    if (mode === "subscription") {
+                        const subscriptionId = session.subscription;
 
                         await updateSubscriptionForAccount(accountId, {
                             status: "active",
@@ -214,14 +208,28 @@ export const paymentsController = {
                             customer_id: session.customer,
                         });
 
+                        // ✅ If you still ever sell marathon as subscription, you could keep this,
+                        // but after switching marathon to one-off, it won't hit here anymore.
+                        return res.json({ received: true });
+                    }
+
+                    // ---- 2) One-off purchase (marathon_7d product) ----
+                    if (mode === "payment") {
+                        const product = session.metadata?.product; // "marathon_7d"
                         if (product !== "marathon_7d") {
-                            return;
+                            return res.json({ received: true });
                         }
 
                         if (!accountId) {
-                            console.error("Marathon purchase: missing metadata.accountId");
+                            console.error("Marathon purchase: missing accountId (client_reference_id / metadata.accountId)");
                             return res.json({ received: true });
                         }
+
+                        await updateSubscriptionForAccount(accountId, {
+                            status: "active",
+                        });
+
+                        const ruleIdsRaw = session.metadata?.ruleIds;
 
                         let ruleIds;
                         try {
@@ -231,23 +239,30 @@ export const paymentsController = {
                             return res.json({ received: true });
                         }
 
-                        if (!Array.isArray(ruleIds) || ruleIds.length !== 7 || ruleIds.some(r => typeof r !== "string" || !r.trim())) {
+                        if (
+                            !Array.isArray(ruleIds) ||
+                            ruleIds.length !== 7 ||
+                            ruleIds.some(r => typeof r !== "string" || !r.trim())
+                        ) {
                             console.error("Marathon purchase: invalid ruleIds in metadata:", ruleIds);
                             return res.json({ received: true });
                         }
 
-                        // Start marathon (idempotent — won’t start if one already in progress)
+                        // ✅ Start marathon (idempotent)
                         try {
-                            const {started} = await startMarathon(accountId, ruleIds);
-                            if (started)// track only for new marathons (idempotent)
+                            const { started } = await startMarathon(accountId, ruleIds);
+                            if (started) {
                                 await recordAction(accountId, ACTION_TYPES.MARATHON_STATUS_IN_PROGRESS);
+                            }
                         } catch (e) {
                             console.error("Marathon purchase: failed to start marathon:", e);
-                            // Still acknowledge webhook to Stripe to avoid retries storm;
-                            // Your startMarathon is idempotent anyway.
+                            // still acknowledge webhook
                         }
+
+                        return res.json({ received: true });
                     }
                 }
+
 
                 if (event.type === "customer.subscription.deleted") {
                     const subscription = event.data.object;

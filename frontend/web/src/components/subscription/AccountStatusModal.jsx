@@ -131,9 +131,12 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                         marginLeft: 0,
                                         color: theme.text,
                                         fontSize: "1rem",
-                                        textAlign: "left"
+                                        textAlign: "left",
+                                        opacity: 0.7,
+                                        fontWeight: 700,
+                                        maxWidth: '90%'
                                     }}>
-                                        {marathonService.isInMarathon() ? 'Марафон кожні 7 днів' : 'Щомісячна підписка'}
+                                        {marathonService.isInMarathon() ? 'Марафон на 7 днів. Завершення підписки по закінченню марафону або при вибутті.' : 'Щомісячна підписка'}
                                     </p>
                                 }
                                 {
@@ -191,7 +194,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             gap: "12px",
                             justifyContent: "space-between"
                         }}>
-                            {(status === "paid" || status === "attention") && !account?.isTrial && (
+                            {!marathonService.isInMarathon() && (status === "paid" || status === "attention") && !account?.isTrial && (
                                 <button
                                     style={{
                                         background: theme.accent,
@@ -214,7 +217,19 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
 
                             <button onClick={() => {
                                 setLoginModalOpen(true)
-                            }} style={closeBtnStyle}>
+                            }} style={marathonService.isInMarathon() ? {
+                                background: theme.accent,
+                                boxShadow: `2px 2px 0 ${theme.accentDark}`,
+                                color: "white",
+                                padding: "10px 20px",
+                                borderRadius: theme.radius,
+                                border: "none",
+                                cursor: "pointer",
+                                fontSize: "1rem",
+                                fontWeight: 700,
+                                width: "100%",
+                                opacity: 1
+                            } : closeBtnStyle}>
                                 Увійти в інший акаунт
                             </button>
                         </div>

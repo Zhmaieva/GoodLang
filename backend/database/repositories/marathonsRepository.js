@@ -728,61 +728,61 @@ export async function cancelFailedLatestMarathonsAndDowngradeAccounts(opts = {})
 
         // 3) Stripe cancellation (after DB commit)
         // We cancel only marathon subscription(s).
-        let cancelledCountForAccount = 0;
-
-        try {
-            if (didDbUpdate && customerId) {
-                const subs = await stripe.subscriptions.list({
-                    customer: customerId,
-                    status: "all",
-                    limit: 100,
-                });
-
-                const toCancel = (subs?.data || []).filter((s) => {
-                    const metaProduct = String(s?.metadata?.product || "").trim();
-                    if (metaProduct === "marathon_7d") return true;
-
-                    // if you rely on price id:
-                    if (marathonPriceId) {
-                        const items = s?.items?.data || [];
-                        return items.some((it) => it?.price?.id === marathonPriceId);
-                    }
-
-                    return false;
-                });
-
-                for (const s of toCancel) {
-                    // Cancel immediately (same effect as dashboard cancel)
-                    // If you prefer cancel_at_period_end=true, swap to update() instead.
-                    if (s?.status !== "canceled") {
-                        await stripe.subscriptions.cancel(s.id);
-                        cancelledCountForAccount++;
-                    }
-                }
-            }
-
-            stripeCancelled += cancelledCountForAccount;
-
-            results.push({
-                accountId,
-                ok: true,
-                marathonId,
-                dbUpdated: didDbUpdate,
-                stripeCancelled: cancelledCountForAccount,
-            });
-
-        } catch (e) {
-            // DB is already consistent; Stripe failure is reported (can be retried).
-            failed++;
-            results.push({
-                accountId,
-                ok: false,
-                marathonId,
-                dbUpdated: didDbUpdate,
-                reason: "stripe_cancel_failed",
-                error: String(e?.message || e),
-            });
-        }
+        // let cancelledCountForAccount = 0;
+        //
+        // try {
+        //     if (didDbUpdate && customerId) {
+        //         const subs = await stripe.subscriptions.list({
+        //             customer: customerId,
+        //             status: "all",
+        //             limit: 100,
+        //         });
+        //
+        //         const toCancel = (subs?.data || []).filter((s) => {
+        //             const metaProduct = String(s?.metadata?.product || "").trim();
+        //             if (metaProduct === "marathon_7d") return true;
+        //
+        //             // if you rely on price id:
+        //             if (marathonPriceId) {
+        //                 const items = s?.items?.data || [];
+        //                 return items.some((it) => it?.price?.id === marathonPriceId);
+        //             }
+        //
+        //             return false;
+        //         });
+        //
+        //         for (const s of toCancel) {
+        //             // Cancel immediately (same effect as dashboard cancel)
+        //             // If you prefer cancel_at_period_end=true, swap to update() instead.
+        //             if (s?.status !== "canceled") {
+        //                 await stripe.subscriptions.cancel(s.id);
+        //                 cancelledCountForAccount++;
+        //             }
+        //         }
+        //     }
+        //
+        //     stripeCancelled += cancelledCountForAccount;
+        //
+        //     results.push({
+        //         accountId,
+        //         ok: true,
+        //         marathonId,
+        //         dbUpdated: didDbUpdate,
+        //         stripeCancelled: cancelledCountForAccount,
+        //     });
+        //
+        // } catch (e) {
+        //     // DB is already consistent; Stripe failure is reported (can be retried).
+        //     failed++;
+        //     results.push({
+        //         accountId,
+        //         ok: false,
+        //         marathonId,
+        //         dbUpdated: didDbUpdate,
+        //         reason: "stripe_cancel_failed",
+        //         error: String(e?.message || e),
+        //     });
+        // }
     }
 
     return {
@@ -871,5 +871,178 @@ export async function completeMarathonsWhenAllSchedulesDone(opts = {}) {
     return {
         updated: rows.length,
         marathonIds: rows.map((r) => r.id),
+    };
+}
+
+
+/**
+ * Accounts eligible for reverting paid->free after a completed marathon ended.
+ *
+ * Eligibility:
+ * - accounts.status = 'paid'
+ * - latest marathon status = 'completed'
+ * - latest.created_at <= NOW() - INTERVAL '7 days'
+ *
+ * @param {number} limit - max accounts to return (default 50)
+ * @returns {Promise<Array<{accountId:string, marathonId:string}>>}
+ */
+async function getEligibleAccountsForUnsubscribeAfterCompletedMarathon(limit = 50) {
+    const lim = Math.max(1, Math.min(500, Number(limit) || 50));
+
+    const { rows } = await pool.query(
+        `
+            WITH latest_marathon AS (
+                SELECT DISTINCT ON (lm.account_id)
+                    lm.account_id,
+                    lm.id AS marathon_id,
+                    lm.status,
+                    lm.created_at
+                FROM learning_marathons lm
+                ORDER BY lm.account_id, lm.created_at DESC
+            )
+            SELECT a.id AS account_id, lm.marathon_id
+            FROM accounts a
+            JOIN latest_marathon lm ON lm.account_id = a.id
+            WHERE a.status = 'paid'
+              AND lm.status = 'completed'
+              AND lm.created_at <= NOW() - INTERVAL '7 days'
+            ORDER BY lm.created_at ASC
+            LIMIT $1
+        `,
+        [lim]
+    );
+
+    return rows.map(r => ({
+        accountId: r.account_id,
+        marathonId: r.marathon_id,
+    }));
+}
+
+/**
+ * For a single account: if latest marathon is completed and older than 7 days,
+ * switch account to free and mark marathon completed_unsubscribed.
+ *
+ * Uses a transaction and locks the account row to reduce race conditions.
+ */
+async function unsubscribePaidAccountAfterMarathonEnd(accountId) {
+    if (!accountId) return { updated: false, reason: "missing_accountId" };
+
+    const client = await pool.connect();
+    try {
+        await client.query("BEGIN");
+
+        // Lock account row
+        const { rows: accRows } = await client.query(
+            `SELECT status FROM accounts WHERE id = $1 FOR UPDATE`,
+            [accountId]
+        );
+        const status = accRows?.[0]?.status;
+        if (status !== "paid") {
+            await client.query("ROLLBACK");
+            return { updated: false, reason: "not_paid" };
+        }
+
+        // Get latest marathon for this account (lock row as well)
+        const { rows: mRows } = await client.query(
+            `
+                SELECT id, status, created_at
+                FROM learning_marathons
+                WHERE account_id = $1
+                ORDER BY created_at DESC
+                LIMIT 1
+                FOR UPDATE
+            `,
+            [accountId]
+        );
+
+        const latest = mRows?.[0];
+        if (!latest) {
+            await client.query("ROLLBACK");
+            return { updated: false, reason: "no_marathon" };
+        }
+
+        if (latest.status !== "completed") {
+            await client.query("ROLLBACK");
+            return { updated: false, reason: "latest_not_completed" };
+        }
+
+        // Check created_at <= now - 7 days
+        const createdAt = latest.created_at instanceof Date ? latest.created_at : new Date(latest.created_at);
+        const createdMs = createdAt.getTime();
+        if (!Number.isFinite(createdMs)) {
+            await client.query("ROLLBACK");
+            return { updated: false, reason: "bad_created_at" };
+        }
+
+        const nowMs = Date.now();
+        const MS_DAY = 24 * 60 * 60 * 1000;
+        if (nowMs - createdMs < 7 * MS_DAY) {
+            await client.query("ROLLBACK");
+            return { updated: false, reason: "not_past_7d" };
+        }
+
+        // Update account to free
+        await client.query(
+            `UPDATE accounts SET status = 'free' WHERE id = $1`,
+            [accountId]
+        );
+
+        // Update latest marathon status
+        await client.query(
+            `UPDATE learning_marathons SET status = 'completed_unsubscribed' WHERE id = $1`,
+            [latest.id]
+        );
+
+        await client.query("COMMIT");
+        return { updated: true, accountId, marathonId: latest.id };
+    } catch (err) {
+        await client.query("ROLLBACK");
+        return { updated: false, reason: "exception", error: String(err?.message || err) };
+    } finally {
+        client.release();
+    }
+}
+
+/**
+ * Safely processes eligible accounts and unsubscribes (paid->free)
+ * after completed marathon passed 7 days.
+ *
+ * @param {object} opts
+ * @param {number} opts.limit - max eligible accounts to process (default 50)
+ * @returns {Promise<{processed:number, updated:number, skipped:number, failed:number, results:Array}>}
+ */
+export async function safelyUnsubscribePaidAccountsAfterMarathonEnd(opts = {}) {
+    const limit = Math.max(1, Math.min(500, Number(opts.limit) || 50));
+
+    const targets = await getEligibleAccountsForUnsubscribeAfterCompletedMarathon(limit);
+
+    const results = [];
+    let updated = 0;
+    let skipped = 0;
+    let failed = 0;
+
+    for (const t of targets) {
+        try {
+            const res = await unsubscribePaidAccountAfterMarathonEnd(t.accountId);
+            if (res?.updated) updated++;
+            else skipped++;
+            results.push({ accountId: t.accountId, ok: true, ...res });
+        } catch (err) {
+            failed++;
+            results.push({
+                accountId: t.accountId,
+                ok: false,
+                reason: "exception",
+                error: String(err?.message || err),
+            });
+        }
+    }
+
+    return {
+        processed: targets.length,
+        updated,
+        skipped,
+        failed,
+        results,
     };
 }

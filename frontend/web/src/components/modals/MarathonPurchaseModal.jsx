@@ -44,16 +44,24 @@ export default function MarathonPurchaseModal({
 
     const checkoutRef = useRef(null);
 
+    // ✅ Drop-in fix for Stripe selector duplication:
+    // mount embedded checkout into this element (NOT by "#id" selector)
+    const checkoutContainerRef = useRef(null);
+
     // reset on open
     useEffect(() => {
         if (!open) return;
+
         setLoading(false);
         setBtnHover(false);
         setIsPaying(false);
 
-        // hide checkout container if it existed from previous open
-        const el = document.getElementById("embedded-checkout-marathon");
-        if (el) el.style.display = "none";
+        // ✅ hide + clear checkout container if it existed from previous open
+        const el = checkoutContainerRef.current;
+        if (el) {
+            el.style.display = "none";
+            el.innerHTML = "";
+        }
 
         // NOTE: we don't unmount stripe embedded checkout instance here
         // (LimitModal doesn't either). If you want, we can destroy on close.
@@ -65,7 +73,16 @@ export default function MarathonPurchaseModal({
 
     const onCloseHandler = () => {
         // match LimitModal behavior
-        try { setPaymentIntent(false); } catch {}
+        try {
+            setPaymentIntent(false);
+        } catch {}
+
+        // ✅ optional cleanup: hide & clear embedded checkout DOM
+        if (checkoutContainerRef.current) {
+            checkoutContainerRef.current.style.display = "none";
+            checkoutContainerRef.current.innerHTML = "";
+        }
+
         if (isPaying) {
             // same pattern as LimitModal: if embedded checkout was mounted, refresh
             window.location.reload();
@@ -96,14 +113,27 @@ export default function MarathonPurchaseModal({
                 return;
             }
 
+            // ✅ Ensure container exists and is clean
+            const containerEl = checkoutContainerRef.current;
+            if (!containerEl) {
+                console.error("Marathon checkout: missing checkout container ref");
+                setLoading(false);
+                return;
+            }
+
+            // Always clear before mounting (prevents leftover iframe/content)
+            containerEl.innerHTML = "";
+            containerEl.style.display = "none";
+
             if (!checkoutRef.current) {
                 setIsPaying(true);
                 checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
-                checkoutRef.current.mount("#embedded-checkout-marathon");
+
+                // ✅ Mount into a single element, not by selector (fixes duplicate selector error)
+                checkoutRef.current.mount(containerEl);
             }
 
-            const el = document.getElementById("embedded-checkout-marathon");
-            if (el) el.style.display = "block";
+            containerEl.style.display = "block";
 
             setLoading(false);
         } catch (e) {
@@ -139,28 +169,28 @@ export default function MarathonPurchaseModal({
                     >
                         {/* embedded checkout container (hidden until started) */}
                         <div
-                            id="embedded-checkout-marathon"
+                            ref={checkoutContainerRef}
                             style={{
                                 display: "none",
 
-                                // ✅ stay inside modal width
-                                width: "90%",
-                                maxWidth: "100%",
+                        // ✅ stay inside modal width
+                        width: "90%",
+                        maxWidth: "100%",
 
-                                // ✅ prevent any child overflow from Stripe
-                                overflow: "scroll",
+                        // ✅ prevent any child overflow from Stripe
+                        overflow: "scroll",
 
-                                // ✅ keep your look
-                                margin: "12px auto 0",
-                                background: theme.bg,
-                                borderRadius: theme.radius * 1.2,
-                                border: `4px solid ${theme.accent}`,
-                                boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                        // ✅ keep your look
+                        margin: "12px auto 0",
+                        background: theme.bg,
+                        borderRadius: theme.radius * 1.2,
+                        border: `4px solid ${theme.accent}`,
+                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
 
-                                // ✅ make it usable on mobile
-                                maxHeight: "85vh",
-                            }}
-                        />
+                        // ✅ make it usable on mobile
+                        maxHeight: "85vh",
+                    }}
+                />
 
                         {!isPaying &&
                         <div
@@ -243,16 +273,12 @@ export default function MarathonPurchaseModal({
                                     </p>
                                 </div>
 
-                                <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                    <div style={logoStyle(56, theme)}>GL</div>
-                                </div>
+                            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                                <div style={logoStyle(56, theme)}>GL</div>
                             </div>
+                        </div>
 
-                            <MarathonPlanner
-                                theme={theme}
-                                onChange={(ids) => setPlannedRuleIds(ids)}
-                                max={7}
-                            />
+                        <MarathonPlanner theme={theme} onChange={(ids) => setPlannedRuleIds(ids)} max={7} />
 
                             {/* footer button */}
                             {/* footer button (LoginForm style) */}
@@ -297,7 +323,7 @@ export default function MarathonPurchaseModal({
                                     textAlign: "center",
                                 }}
                             >
-                                500.00₴ / 7 днів. Автоматичне продовження. Можеш завжди скасувати. Автоматичне припинення послуги в разі невиконання завдання у термін
+                                500.00₴ / 7 днів. Автоматичне припинення послуги в разі невиконання завдання у термін
                             </p>
                         </div>
                         }

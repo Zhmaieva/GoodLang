@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MarathonInfoModal from "./MarathonInfoModal.jsx";
+import {disableMarathonFailedModal} from "../../services/marathonService.js";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -42,6 +43,7 @@ export default function MarathonFailedModal({
     if (!open) return null;
 
     const handleStartNew = () => {
+        disableMarathonFailedModal();   // 🔒 one-time only
         setInfoOpen(true);
     };
 

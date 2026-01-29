@@ -15,7 +15,7 @@ import {
 import {safelyAutostartMarathonsForEligibleAccounts} from "../database/repositories/marathonStarterRepository.js";
 import {
     cancelFailedLatestMarathonsAndDowngradeAccounts, completeMarathonsWhenAllSchedulesDone,
-    failOverdueInProgressMarathonsBySchedules
+    failOverdueInProgressMarathonsBySchedules, safelyUnsubscribePaidAccountsAfterMarathonEnd
 } from "../database/repositories/marathonsRepository.js";
 import {
     runMarathonCompletedTick,
@@ -103,11 +103,12 @@ startNonOverlappingInterval(async () => {
 
 startNonOverlappingInterval(async () => {
     await completeMarathonsWhenAllSchedulesDone();
-    await safelyAutostartMarathonsForEligibleAccounts();
+    //await safelyAutostartMarathonsForEligibleAccounts();
+    await safelyUnsubscribePaidAccountsAfterMarathonEnd( {limit: 10});
     await failOverdueInProgressMarathonsBySchedules();
 
     await cancelFailedLatestMarathonsAndDowngradeAccounts({ limit: 10 });
-    await downgradeAttentionAccountsAfterMarathonAge();
+   //await downgradeAttentionAccountsAfterMarathonAge();
 
-    await failInProgressMarathonsForFreeAccounts();
+    //await failInProgressMarathonsForFreeAccounts();
 }, 5000)
