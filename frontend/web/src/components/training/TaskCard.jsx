@@ -228,7 +228,7 @@ export default function TaskCard({
             fontFamily: "Nunito, system-ui, sans-serif",
             whiteSpace: "nowrap",
             opacity: (loading || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? 0.7 : 1,
-            transform: hovered && !(loading || (taskType === 'translate' && (!textareaRef?.current?.value || false)) ? "translateY(1px)" : "none",
+            transform: hovered && !(loading || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? "translateY(1px)" : "none",
             filter: hovered && !(loading || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? "brightness(0.95)" : "none",
             transition: "transform 120ms ease, filter 120ms ease, box-shadow 120ms ease",
             height: "44px",
