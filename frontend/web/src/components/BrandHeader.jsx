@@ -61,6 +61,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         color: theme.muted,
         fontSize: "1rem",
         overflow: "hidden",
+        fontWeight: 700,
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
     };

@@ -86,7 +86,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         sub: {
             color: theme.muted,
             fontSize: "1rem",
-            marginTop: 8,
+            fontWeight: 700,
             display: "flex",
             justifyContent: 'flex-start',
         },
