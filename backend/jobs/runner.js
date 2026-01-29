@@ -78,7 +78,7 @@ startNonOverlappingInterval(async () => {
 }, 1200000)
 
 startNonOverlappingInterval(async () => {
-    await runTouTick({ pool, transporter, projectRoot });
+    const res = await runTouTick({ pool, transporter, projectRoot });
 
     if (!res.skipped) console.log("[tipsCron]", res);
 }, 60000)

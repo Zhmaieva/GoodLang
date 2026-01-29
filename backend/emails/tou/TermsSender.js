@@ -82,23 +82,57 @@ async function selectEligibleRecipients({ pool, letterId, templateCreatedMs }) {
 
     const { rows } = await pool.query(
         `
-        SELECT
-            LOWER(a.email) AS email,
-            a.id AS account_id
-        FROM accounts a
-        WHERE a.email IS NOT NULL
-          AND a.email_subscribe = TRUE
-          AND a.created_at <= $2::timestamptz
+            SELECT
+                LOWER(a.email) AS email,
+                a.id AS account_id
+            FROM accounts a
+            WHERE a.email IS NOT NULL
+              AND a.created_at <= $2::timestamptz
 
-          AND NOT EXISTS (
-            SELECT 1
-            FROM email_sendings es
-            WHERE es.email = LOWER(a.email)
-              AND es.letter_id = $1
-          )
+              -- 1) Never resend if it was ever successfully sent
+              AND NOT EXISTS (
+                SELECT 1
+                FROM email_sendings es
+                WHERE es.email = LOWER(a.email)
+                  AND es.letter_id = $1
+                  AND es.sent_at IS NOT NULL
+            )
 
-        ORDER BY a.created_at ASC
-        LIMIT 1
+              -- 2) Either never attempted OR eligible for retry
+              AND (
+                -- never attempted at all
+                NOT EXISTS (
+                    SELECT 1
+                    FROM email_sendings es0
+                    WHERE es0.email = LOWER(a.email)
+                      AND es0.letter_id = $1
+                )
+                    OR
+                (
+                    -- has failures but under the cap
+                    (
+                        SELECT COUNT(*)
+                        FROM email_sendings esf
+                        WHERE esf.email = LOWER(a.email)
+                          AND esf.letter_id = $1
+                          AND esf.sent_at IS NULL
+                          AND esf.last_failed_at IS NOT NULL
+                    ) < 5
+
+                        -- and the latest failure was more than 3 hours ago
+                        AND (
+                                SELECT MAX(esf2.last_failed_at)
+                                FROM email_sendings esf2
+                                WHERE esf2.email = LOWER(a.email)
+                                  AND esf2.letter_id = $1
+                                  AND esf2.sent_at IS NULL
+                                  AND esf2.last_failed_at IS NOT NULL
+                            ) <= (NOW() AT TIME ZONE 'UTC') - INTERVAL '3 hours'
+                    )
+                )
+
+            ORDER BY a.created_at ASC
+            LIMIT 1;
       `,
         [String(letterId).toUpperCase(), templateCreatedAtIso]
     );
@@ -120,7 +154,7 @@ async function sendOnceIfInserted({
                                       text,
                                   }) {
     // 1) Insert gate (prevents duplicate sends across concurrent ticks)
-    const ins = await tryInsertTrackingRow({ pool, email, accountId, letterId });
+    const ins = await tryInsertTrackingRow({ pool, email, accountId, letterId, force: true });
     if (!ins.inserted) {
         return {
             sent: false,

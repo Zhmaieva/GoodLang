@@ -1042,3 +1042,31 @@ $$
 $$;
 
 COMMIT;
+
+
+-- Migration: remove_email_sendings_email_letter_unique
+-- Description: Remove unique constraint to allow multiple send attempts per email + letter.
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'remove_email_sendings_email_letter_unique'
+        ) THEN
+
+            -- Drop unique constraint if it exists
+            ALTER TABLE email_sendings
+                DROP CONSTRAINT IF EXISTS email_sendings_email_letter_unique;
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('remove_email_sendings_email_letter_unique', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

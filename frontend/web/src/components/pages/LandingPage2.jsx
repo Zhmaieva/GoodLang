@@ -105,7 +105,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           onPrimaryCta,
                                                           onSecondaryCta,
 
-                                                          showEmailCapture = true,
+                                                          showEmailCapture = false,
                                                           onEmailSubmit,
                                                           emailPlaceholder = "you@example.com",
 
