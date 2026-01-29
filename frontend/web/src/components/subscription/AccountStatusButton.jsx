@@ -150,7 +150,10 @@ export default function AccountStatusButton({ theme }) {
         callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_SUBSCRIPTION).then();
 
         if (account?.status === "free") {
-            // setLoginModalOpen(true);
+            if (!account?.email) {
+                setLoginModalOpen(true);
+                return;
+            }
             setLimitModalOpen(true);
         } else {
             setStatusModalOpen(true);

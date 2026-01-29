@@ -42,11 +42,14 @@
         border-color: inherit;
       }
 
-      input:focus,
-      textarea:focus {
-        outline: none;
-        box-shadow: none;
-        border-width: 4px !important;
+      .highlight-input:focus {
+        /*outline: none;*/
+        /*box-shadow: none;*/
+        border: 2px solid rgba(255, 97, 56, 1) !important;
+      }
+
+      .highlight-input-wrapper:has(.highlight-input-inner:focus) {
+        border: 2px solid rgba(255, 97, 56, 1) !important;
       }
     </style>
   </head>

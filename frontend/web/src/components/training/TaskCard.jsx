@@ -358,6 +358,7 @@ export default function TaskCard({
                     </div>
                 ) : (
                     <textarea
+                        className={"highlight-input"}
                         ref={textareaRef}
                         placeholder="Введи переклад англійською…"
                         autoComplete="off"

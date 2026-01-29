@@ -462,8 +462,9 @@ export default function LoginForm({
                                                         marginTop: 8,
                                                         marginLeft: 0,
                                                         color: theme.text,
-                                                        fontSize: "16px",
-                                                        fontWeight: 500,
+                                                        fontWeight: 800,
+                                                        opacity: 0.55,
+                                                        fontSize: "1rem",
                                                         textAlign: "left",
                                                     }}
                                                 >
@@ -477,6 +478,7 @@ export default function LoginForm({
                                         </div>
 
                                         <input
+                                            className={"highlight-input"}
                                             type="email"
                                             placeholder="goodlang.app@example.com"
                                             value={emailInput}
@@ -584,6 +586,7 @@ export default function LoginForm({
                                         </div>
 
                                         <div
+                                            className={'highlight-input-wrapper'}
                                             onPaste={handlePaste}
                                             style={{
                                                 display: "flex",
@@ -605,6 +608,7 @@ export default function LoginForm({
                                         >
                                             {code.map((digit, i) => (
                                                 <input
+                                                    className={'highlight-input-inner'}
                                                     type="text"
                                                     inputMode="numeric"
                                                     autoComplete="one-time-code"
@@ -654,7 +658,7 @@ export default function LoginForm({
                                     </>
                                 )}
 
-                                {error && <div style={{ color: theme.text }}>{error}</div>}
+                                {error && <div style={{ color: theme.text, fontWeight: 700 }}>{error}</div>}
 
                                 <style>
                                     {`
