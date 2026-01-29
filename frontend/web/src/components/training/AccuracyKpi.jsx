@@ -617,7 +617,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const valueStyle = {
-        fontSize: isMobile ? "1.4rem" : "2rem",
+        fontSize: isMobile ? "1rem" : "2rem",
         fontWeight: 900,
         color: theme.text,
         lineHeight: 1.1,
@@ -635,6 +635,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         gap: isMobile ? "2px" : "6px",
         textAlign: "center",
         userSelect: "none",
+        justifyContent: "space-between",
     };
 
     // ✅ old spark bar sizes

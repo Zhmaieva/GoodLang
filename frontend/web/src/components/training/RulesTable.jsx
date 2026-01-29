@@ -196,6 +196,7 @@ export default function RulesTable({
         gap: 6,
         cursor: "pointer",
         userSelect: "none",
+        fontWeight: 800,
         pointerEvents: "auto",
     };
 
@@ -296,7 +297,14 @@ export default function RulesTable({
     };
 
     return (
-        <div className="table" style={{ height: "100%" }} aria-live="polite">
+        <div className="table" style={{
+            height: "100%",
+            background: isMobile ? "rgba(255, 253, 248, 0.88)" : "rgba(255, 243, 223, 0.92)",      // same creamy surface
+            border: "2px solid rgba(255,97,56,0.65)",     // softer accent than before
+            borderRadius: 20,
+            boxShadow: "0 10px 26px rgba(0,0,0,0.12)",    // same as KPI / TaskCard
+            overflow: "hidden",                           // clips header corners cleanly
+        }} aria-live="polite">
             {!isMobile && (
                 <div className="thead">
                     <div style={{ opacity: 0.8 }}>#</div>
@@ -352,7 +360,6 @@ export default function RulesTable({
                                         flexDirection: "column",
                                         gap: 6,
                                         padding: "18px 14px 10px 14px",
-                                        borderBottom: "1px solid rgba(0,0,0,0.1)",
                                         cursor: "pointer",
                                         textAlign: "left",
                                     }}
@@ -380,12 +387,12 @@ export default function RulesTable({
                                                 {r.ruleName}
                                             </h2>
 
-                                            <div style={{ fontSize: "1rem" }}>
+                                            <div style={{ fontSize: "1rem", fontWeight: 700, opacity: .7, marginBottom: 8, }}>
                                                 Рівень: {LEVEL_MAP[r.level]?.label}
                                             </div>
 
-                                            {advanced && <div style={{ fontSize: "1rem" }}>Спроби: {r.attemptsNumber}</div>}
-                                            {advanced && <div style={{ fontSize: "1rem" }}>Oстання практика: {fmtDate(r.lastAttemptDate)}</div>}
+                                            {/*{advanced && <div style={{ fontSize: "1rem", fontWeight: 700, opacity: 0.7 }}>Спроби: {r.attemptsNumber}</div>}*/}
+                                            {/*{advanced && <div style={{ fontSize: "1rem", fontWeight: 700, opacity: 0.7 }}>Практика: {fmtDate(r.lastAttemptDate)}</div>}*/}
 
                                             <div style={{ display: "flex", justifyContent: "start", gap: "2rem", marginTop: 6 }}>
                                                 {advanced && <span className={`badge ${st.cls}`}>{st.label}</span>}

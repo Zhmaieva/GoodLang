@@ -67,6 +67,7 @@ export default function LevelKpi({ mobile, theme }) {
         textAlign: "center",
         userSelect: "none",
         visibility: isLoading ? "hidden" : "visible",
+        justifyContent: "space-between",
     };
 
     const labelStyle = {

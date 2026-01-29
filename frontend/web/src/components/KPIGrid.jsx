@@ -38,6 +38,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         gap: "6px",
         textAlign: "center",
         userSelect: "none",
+        justifyContent: "space-between",
     };
 
     const labelStyle = {
