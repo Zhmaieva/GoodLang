@@ -3,7 +3,12 @@ import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getAllStatistics, getOverallAccuracy, getSeed, saveSeed} from "../../services/dataService.js";
 import {callAccountInfoApi, callAccountVerifyApi, callTranslateAPI} from "../../services/api.js";
-import {getSavedTaskMode, getTrainingLevel, saveTaskMode} from "../../services/trainingDirector.js";
+import {
+    getSavedTaskMode,
+    getSavedTaskModeSync,
+    getTrainingLevel,
+    saveTaskMode
+} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
 import {logInfo} from "../../services/logger.js";
@@ -74,7 +79,7 @@ export default function Trainer({
     // Mode selector (UI)
     // -----------------------------
     // "translations" | "gaps" | "combined"
-    const [taskMode, setTaskMode] = useState(() => getSavedTaskMode() || "combined");
+    const [taskMode, setTaskMode] = useState(getSavedTaskModeSync());
     const [taskModeLocked, setTaskModeLocked] = useState(false);
     const [taskModeLockReason, setTaskModeLockReason] = useState("");
 
@@ -506,11 +511,11 @@ export default function Trainer({
             setTaskModeLocked(!!isCalibration);
 
             if (data.isAnswerCorrect) {
-                setHint("✔ Правильно!");
+                setHint("Правильно!");
                 setCorrectAnswer("");
             } else {
                 const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
-                setHint("❌ Не зовсім." + tip);
+                setHint("Не зовсім вірно." + tip);
                 setCorrectAnswer(data.correctAnswer || "");
             }
 

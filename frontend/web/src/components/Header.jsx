@@ -88,7 +88,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
             fontSize: "1rem",
             marginTop: 8,
             display: "flex",
-            justifyContent: 'flex-end',
+            justifyContent: 'flex-start',
         },
         leftColumn: {
             display: "flex",

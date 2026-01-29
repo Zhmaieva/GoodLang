@@ -157,7 +157,7 @@ HINT: ${hint}
 
 TASKS:
 1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to GRAMMAR_RULES[0] as the target rule, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
-2) If wrong, give a helpful human tip in TARGET_LANGUAGE
+2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Use informal 'ти' замість 'ви' omitting gender, yet assertive way to address express the tip.
 3) Also, give correct translation from TARGET_LANGUAGE to English.
 4) For each of GRAMMAR_RULES, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLIS -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
 

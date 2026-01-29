@@ -2,15 +2,13 @@ import React, { useState, useRef, useEffect } from "react";
 import {
     callAccountInfoApi,
     callAccountVerifyApi,
-    callCheckoutApi,
     callDataSyncApi,
     callSendCodeApi,
     callVerifyCodeApi
 } from "../../services/api.js";
 import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import { getStripe, logoStyle } from "./LimitModal.jsx";
+import { logoStyle } from "./LimitModal.jsx";
 import { useNavigate } from "react-router-dom";
-import { getPaymentIntent, setPaymentIntent } from "../../services/dataService.js";
 import { logError } from "../../services/logger.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
@@ -118,12 +116,21 @@ export default function LoginForm({
         width: "100%",
     });
 
+    // -----------------------------
+    // ✅ TaskCard textarea look-alike
+    // (same colors/border/shadow; no new focus behavior)
+    // -----------------------------
+    const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
+    const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
+    const INPUT_SHADOW = "0 8px 20px rgba(0,0,0,0.08)";
+    const INPUT_RADIUS = 14;
+
     const baseInputStyle = {
         resize: "none",
         flex: 1,
-        borderRadius: theme.radius,
-        border: `3px solid ${theme.accent}`,
-        background: "#fffaf3",
+        borderRadius: INPUT_RADIUS,
+        border: `2px solid ${SOFT_STROKE_ACCENT}`,
+        background: SOFT_INNER,
         padding: "12px 14px",
         fontSize: "18pt",
         fontWeight: 700,
@@ -133,8 +140,10 @@ export default function LoginForm({
         caretColor: "grey",
         marginBottom: 16,
         outline: "none",
+        boxShadow: INPUT_SHADOW,
     };
 
+    // individual digit input inside the “gapped” code box
     const codeInputStyle = {
         ...baseInputStyle,
         width: 34,
@@ -145,6 +154,7 @@ export default function LoginForm({
         border: "none",
         marginBottom: 0,
         backgroundColor: "transparent",
+        boxShadow: "none", // keep shadow on the container, like TaskCard (single surface)
     };
 
     function focusLastFilled(newCode) {
@@ -483,6 +493,7 @@ export default function LoginForm({
                                             style={{
                                                 ...baseInputStyle,
                                                 width: "100%",
+                                                opacity: loading ? 0.7 : 1,
                                             }}
                                             required
                                             disabled={loading}
@@ -511,9 +522,9 @@ export default function LoginForm({
                                                 }}
                                                 style={{
                                                     marginBottom: 16,
-                                                    marginTop: -26,
+                                                    marginTop: -20,
                                                     marginLeft: 0,
-                                                    marginRight: -22,
+                                                    marginRight: -18,
                                                     color: theme.accent,
                                                     fontSize: "1.3rem",
                                                     fontWeight: 500,
@@ -578,15 +589,18 @@ export default function LoginForm({
                                                 display: "flex",
                                                 resize: "none",
                                                 justifyContent: "space-between",
-                                                borderRadius: theme.radius,
-                                                border: `3px solid ${theme.accent}`,
-                                                background: "#fffaf3",
+                                                borderRadius: INPUT_RADIUS,
+                                                border: `2px solid ${SOFT_STROKE_ACCENT}`,
+                                                background: SOFT_INNER,
                                                 fontSize: "18pt",
                                                 fontWeight: 700,
                                                 color: theme.text,
                                                 textAlign: "center",
                                                 caretColor: "grey",
                                                 marginBottom: 16,
+                                                boxShadow: INPUT_SHADOW,
+                                                padding: "0 10px",
+                                                opacity: loading ? 0.7 : 1,
                                             }}
                                         >
                                             {code.map((digit, i) => (

@@ -206,6 +206,13 @@ export const marathonService = {
         return this.isInMarathon() && !(await this.isScheduleCompleted(cache));
     },
 
+    isMarathonViewSync() {
+        const a = readAccountInfoFromLS();
+        const scheduleCompleted = a?.currentDay?.isDayCompleted === true || true;
+
+        return this.isInMarathon() && !scheduleCompleted;
+    },
+
     isDayCompleted() {
         const a = readAccountInfoFromLS();
         return Boolean(a?.currentDay?.isDayCompleted);
