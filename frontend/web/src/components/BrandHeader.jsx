@@ -8,7 +8,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         justifyContent: "space-between",
         alignItems: "center",
         gap: 16,
-        borderBottom: `3px solid ${theme.accent}`,
+       // borderBottom: `3px solid ${theme.accent}`,
         paddingBottom: 12,
         marginBottom: 20,
         flexWrap: "wrap",

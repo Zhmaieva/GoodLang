@@ -151,7 +151,7 @@
       "en": ["How much milk is left?"]
     },
     {
-      "rules": ["WH_Q", "QUANTIFIERS", "THERE_IS_ARE"],
+      "rules": ["WH_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "THERE_IS_ARE"],
       "ua": "Скільки людей у черзі?",
       "en": ["How many people are there in the queue?", "How many people are there in line?"]
     },

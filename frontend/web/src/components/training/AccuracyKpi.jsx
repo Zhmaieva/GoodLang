@@ -625,10 +625,10 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const cardStyle = {
         visibility: isLoading ? "hidden" : "visible",
-        background: "#fffdf8",
-        border: "3px solid #ff6138",
+        background: "rgba(255, 243, 223, 0.92)",
+        border: "2px solid rgba(255,97,56,0.70)",
         borderRadius: "20px",
-        boxShadow: "4px 4px 0 #d74e2a",
+        boxShadow: "0 10px 26px rgba(0,0,0,0.12)",
         padding: isMobile ? "12px" : "18px",
         display: "flex",
         flexDirection: "column",
@@ -640,13 +640,14 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // ✅ old spark bar sizes
     const sparkStyle = {
         height: isMobile ? "6px" : "8px",
-        borderRadius: "8px",
-        background: "#fff",
-        border: "2px solid #ff6138",
+        borderRadius: "999px",
+        background: "rgba(0,0,0,0.10)",
+        border: "none",
         marginTop: "6px",
         position: "relative",
         overflow: "hidden",
     };
+
 
     const sparkFillStyle = (width) => ({
         visibility: !isLoading ? "visible" : "hidden",

@@ -22,35 +22,44 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
             : "repeat(4, 1fr)",
     };
 
+    // ✅ NON-header AccuracyKpi-like card styling tokens
+    const CARD_BG = "rgba(255, 243, 223, 0.92)";
+    const CARD_BORDER = "rgba(255,97,56,0.70)";
+    const CARD_SHADOW = "0 10px 26px rgba(0,0,0,0.12)";
+
     const cardStyle = {
-        background: "#fffdf8",
-        border: "3px solid #ff6138",
+        background: CARD_BG,
+        border: `2px solid ${CARD_BORDER}`,
         borderRadius: "20px",
-        boxShadow: "4px 4px 0 #d74e2a",
+        boxShadow: CARD_SHADOW,
         padding: isMobile ? "12px" : "18px",
         display: "flex",
         flexDirection: "column",
         gap: "6px",
         textAlign: "center",
+        userSelect: "none",
     };
 
     const labelStyle = {
-        fontSize: isMobile ? "0.6rem" : "1rem",
+        fontSize: isMobile ? "0.9rem" : "1rem",
         color: "#a47856",
         textTransform: "uppercase",
         letterSpacing: ".06em",
+        fontWeight: 900,
     };
 
     const valueStyle = {
         fontSize: isMobile ? "1rem" : "2rem",
         fontWeight: 800,
+        color: theme.text,
     };
 
+    // ✅ your preferred spark style (no border)
     const sparkStyle = {
         height: isMobile ? "6px" : "8px",
-        borderRadius: "8px",
-        background: "#fff",
-        border: "2px solid #ff6138",
+        borderRadius: "999px",
+        background: "rgba(0,0,0,0.10)",
+        border: "none",
         marginTop: "6px",
         position: "relative",
         overflow: "hidden",
@@ -66,19 +75,30 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         top: 0,
     });
 
+    // ✅ FIX: correct precedence + convert to percent
+    const attemptsPct = Math.min(100, ((attempts ?? 0) / 400) * 100);
+    const masteredPct = Math.min(100, ((masteredRules ?? 0) / 91) * 100);
+
     return (
         <section style={gridStyle} id="kpis">
             <AccuracyKpi mobile={isMobile} theme={theme} />
+
             <div style={cardStyle}>
                 <div style={labelStyle}>Всього результатів</div>
                 <div style={valueStyle}>{attempts ?? 0}</div>
-                <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, (attempts ?? 0 / 400)))} /></div>
+                <div style={sparkStyle}>
+                    <i style={sparkFillStyle(attemptsPct)} />
+                </div>
             </div>
+
             <div style={cardStyle}>
                 <div style={labelStyle}>Вивчені правила</div>
                 <div style={valueStyle}>{masteredRules ?? 0}</div>
-                <div style={sparkStyle}><i style={sparkFillStyle(Math.min(100, ((masteredRules ?? 0) / 91) * 100))} /></div>
+                <div style={sparkStyle}>
+                    <i style={sparkFillStyle(masteredPct)} />
+                </div>
             </div>
+
             <LevelKpi mobile={isMobile} theme={theme} />
         </section>
     );
