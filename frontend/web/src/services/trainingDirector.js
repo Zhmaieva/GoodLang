@@ -73,7 +73,7 @@ export function getTrainingLevel() {
 
     // --- CALIBRATION MODE ---
     if (overall.attemptsLeft > 0) {
-        let levelIdx = 0; // start at A1
+        let levelIdx = 1; // start at A2
 
         while (true) {
             const lvl = CEFR_ORDER[levelIdx];

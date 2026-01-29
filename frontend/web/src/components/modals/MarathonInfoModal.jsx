@@ -176,7 +176,7 @@ export default function MarathonInfoModal({
     return (
         <>
             {
-                purchaseOpen ?
+                account?.email && purchaseOpen ?
                     (<MarathonPurchaseModal
                     open={true}
                     onClose={() => setPurchaseOpen(false)}
