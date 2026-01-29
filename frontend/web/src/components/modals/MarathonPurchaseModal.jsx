@@ -176,6 +176,7 @@ export default function MarathonPurchaseModal({
                         // ✅ stay inside modal width
                         width: "90%",
                         maxWidth: "100%",
+                                padding: 20,
 
                         // ✅ prevent any child overflow from Stripe
                         overflow: "scroll",
