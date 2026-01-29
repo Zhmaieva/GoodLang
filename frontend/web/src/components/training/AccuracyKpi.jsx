@@ -148,14 +148,14 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         };
 
         const ICON_LANE = [
-            { src: "/house-icon.svg", gap: 32 },
-            { src: "/apple-icon.svg", gap: 32 },
-            { src: "/flower-icon.svg", gap: 32 },
-            { src: "/computer-icon.svg", gap: 32 },
-            { src: "/brain-icon.svg", gap: 32 },
-            { src: "/pencil-icon.svg", gap: 32 },
-            { src: "/note-icon.svg", gap: 32 },
-            { src: "/tree-icon.svg", gap: 32 },
+            { src: "/house-icon.svg", gap: 15 },
+            { src: "/apple-icon.svg", gap: 15 },
+            { src: "/flower-icon.svg", gap: 15 },
+            { src: "/computer-icon.svg", gap: 15 },
+            { src: "/brain-icon.svg", gap: 15 },
+            { src: "/pencil-icon.svg", gap: 15 },
+            { src: "/note-icon.svg", gap: 15 },
+            { src: "/tree-icon.svg", gap: 15 },
         ];
 
         const cardStyleHeader = {
