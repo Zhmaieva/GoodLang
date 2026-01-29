@@ -24,24 +24,37 @@ export async function markFailed({ pool, id, error }) {
 }
 
 
-export async function tryInsertTrackingRow({ pool, email, accountId, letterId }) {
+export async function tryInsertTrackingRow({
+                                               pool,
+                                               email,
+                                               accountId,
+                                               letterId,
+                                               force = false,
+                                           }) {
     try {
-        // Insert only. No UPDATE. No lock. If already exists, 0 rows returned.
         const { rows } = await pool.query(
-            `
-      INSERT INTO email_sendings (email, account_id, letter_id)
-      VALUES ($1, $2, $3)
-      ON CONFLICT (email, letter_id) DO NOTHING
-      RETURNING id
-      `,
+            force
+                ? `
+                  INSERT INTO email_sendings (email, account_id, letter_id)
+                  VALUES ($1, $2, $3)
+                  RETURNING id
+                  `
+                : `
+                  INSERT INTO email_sendings (email, account_id, letter_id)
+                  VALUES ($1, $2, $3)
+                  ON CONFLICT (email, letter_id) DO NOTHING
+                  RETURNING id
+                  `,
             [email, accountId ?? null, letterId]
         );
 
-        // If inserted -> rows[0] exists
-        if (rows.length === 0) return { inserted: false, id: null };
+        if (rows.length === 0) {
+            return { inserted: false, id: null };
+        }
+
         return { inserted: true, id: rows[0].id };
     } catch (e) {
-        // Insert failed => MUST NOT SEND
         return { inserted: false, id: null, error: e };
     }
 }
+
