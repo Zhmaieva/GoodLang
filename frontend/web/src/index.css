@@ -37,7 +37,7 @@ nav.actions{display:flex;gap:10px;flex-wrap:wrap}
 /* Filters */
 .filters{display:flex;align-items:center;gap:10px;margin:22px 0 10px;flex-wrap:wrap}
 .search{flex:1;display:flex;gap:8px}
-.search input{flex:1;border:3px solid var(--accent);border-radius:999px;background:#fffaf3;padding:10px 14px;font-size:14px}
+.search input{flex:1;border: 2px solid rgba(255, 97, 56,.7) !important;border-radius:999px;background:#fffaf3;padding:10px 14px;font-size:14px}
 
 /* Table */
 .table{background:#fffdf8;border:3px solid var(--accent);border-radius:var(--radius);box-shadow:4px 4px 0 var(--accent-dark);overflow:hidden}

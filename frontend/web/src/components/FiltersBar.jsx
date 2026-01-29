@@ -62,6 +62,7 @@ export default function FiltersBar({
 
             <div className="search">
                 <input
+                    className={'highlight-input'}
                     style={{
                         fontSize: "1rem",
                         fontWeight: 700,
