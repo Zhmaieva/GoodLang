@@ -174,15 +174,17 @@ export default function TaskCard({
 
         hintText: {
             fontFamily: "Nunito, system-ui, sans-serif",
-            background: SOFT_INNER,
-            border: `2px dashed ${SOFT_STROKE_ACCENT_2}`,
+            background: theme.text,
+            //border: `2px dashed ${SOFT_STROKE_ACCENT_2}`,
             padding: "4px 14px",
-            borderRadius: 999,
-            color: theme.text,
+            borderRadius: 14,
+            color: "#fff",
             whiteSpace: "pre-wrap",
             flex: "0 1 auto",
-            opacity: 0.9,
+            opacity: 0.7,
+            fontWeight: 700,
             boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            alignContent: "center",
         },
 
         // ✅ right column
@@ -322,7 +324,7 @@ export default function TaskCard({
                             <div style={styles.taskText} dangerouslySetInnerHTML={{ __html: taskText }} />
                         )}
 
-                        {hint && !loading && <div style={styles.hintText}>{hint}</div>}
+                        {hint && !loading && <div style={styles.hintText}>Уточнення: {hint.toLowerCase()}</div>}
                     </div>
                 </div>
 
