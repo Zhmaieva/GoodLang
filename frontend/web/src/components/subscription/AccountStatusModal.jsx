@@ -54,11 +54,22 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                     width: "100%",
                     inset: 0,
                     height: "100dvh",
-                    background: "rgba(0,0,0,0.35)",
+
+                    // ✅ blur background like MarathonPurchaseModal, but without darkening
+                    background: "rgba(255,255,255,0)",
+
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    zIndex: 9999
+                    zIndex: 9999,
+
+                    // ✅ blur underlying page
+                    backdropFilter: "blur(6px)",
+                    WebkitBackdropFilter: "blur(6px)",
+
+                    // ✅ safe-area padding (matches your other modals)
+                    paddingBottom: "env(safe-area-inset-bottom)",
+                    paddingTop: "env(safe-area-inset-top)",
                 }}>
                     <div onClick={(e) => e.stopPropagation()} style={{
                         background: theme.bg,
