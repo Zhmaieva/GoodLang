@@ -570,10 +570,11 @@ export default function LoginForm({
                                                         marginLeft: 0,
                                                         color: theme.text,
                                                         fontSize: "16px",
-                                                        fontWeight: 500,
+                                                        fontWeight: 700,
                                                         textAlign: "left",
                                                         overflow: "clip",
                                                         maxWidth: 310,
+                                                        opacity: .7,
                                                     }}
                                                 >
                                                     Відправлено на: {emailInput}

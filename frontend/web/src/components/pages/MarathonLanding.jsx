@@ -1,4 +1,5 @@
 import handPict from "../../../public/handPict.PNG";
+import marathonPict from "../../../public/marathon-img.png";
 import hand2 from "../../../public/hand2.PNG";
 import hand1 from "../../../public/hand1.PNG";
 import hand3 from "../../../public/hand3.PNG";
@@ -153,7 +154,7 @@ html{ scroll-behavior: smooth; }
 
 /* left hero */
 .left{
-  background: var(--accent);
+  background: #f24f13;
   padding: 56px 48px;
   display: flex;
   align-items: center;
@@ -180,7 +181,7 @@ html{ scroll-behavior: smooth; }
   font-size: 16px;
   line-height: 1.35;
   font-weight: 300;
-  color: var(--muted);
+  color: var(--bg);
   max-width: 560px;
 }
 
@@ -487,11 +488,16 @@ html{ scroll-behavior: smooth; }
   box-shadow: var(--shadow);
   background: #000;
   width: 100%;
-  aspect-ratio: 1 / 1;
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
 }
+.videoBox img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .howVideo{
   width: 100%;
   height: 100%;
@@ -691,11 +697,10 @@ html{ scroll-behavior: smooth; }
    RESPONSIVE
 ========================= */
 @media (max-width: 1050px){
-  .featuresGrid{ grid-template-columns: repeat(2, 1fr); }
+  .featuresGrid{ grid-template-columns: repeat(1, 1fr); }
   .howGrid{ grid-template-columns: 1fr; }
   .modesGrid{ grid-template-columns: 1fr; }
   .testimonialsGrid{ grid-template-columns: 1fr; }
-  .videoBox{ aspect-ratio: 1 / 1; }
 }
 
 @media (max-width: 1150px){
@@ -711,6 +716,11 @@ html{ scroll-behavior: smooth; }
     gap: 12px;
   }
   .handPointer{ width: 64px; }
+    .desktop{display: none}
+}
+
+@media (min-width: 1150px){
+  .mobile{display: none}
 }
 
 @media (max-width: 600px){
@@ -719,24 +729,35 @@ html{ scroll-behavior: smooth; }
   .ctaButtons{ flex-direction: column; }
   .footerInner{ flex-direction: column; align-items: flex-start; gap: 6px; }
 }
+
       `}</style>
 
             {/* HERO */}
             <section className="landing">
-                <div className="left">
+                <div className="left" style={{zIndex: 10}}>
                     <div className="textBlock">
                         <h1 className="title">
-                            ➤ марафон перекладу<br />
-                            ➤ 16-34 речення в день<br />
-                            ➤ 7 правил граматики<br />
+                            ➤ марафон перекладу<br/>
+                            ➤ 16-34 речення в день<br/>
+                            ➤ 7 правил граматики<br/>
                             <em class="hint-text">Пропуск дня = кінець марафону.<br/>
                                 Стартуй знову в наступному циклі.</em>
                         </h1>
 
                         <p className="subtitle">
-                            30 хв інтенсиву на день → відпрацьовуєш grammar до автомату
+                            Інтенсив англійської 7 днів поспіль → відпрацьовуєш grammar до автомату
                         </p>
                     </div>
+                </div>
+
+                <div className="handPointerWrap mobile" style={{
+                    position: "absolute",
+                    rotate: '180deg',
+                    top: '32vh',
+                    left: '-40px',
+                    zIndex: 9
+                }}>
+                    <img src={handPict} className="handPointer" alt=""/>
                 </div>
 
                 <div className="right">
@@ -755,10 +776,15 @@ html{ scroll-behavior: smooth; }
                     <div className="heroStack">
                         <div className="heroCard">
                             <p className="heroCardText">
-                                <strong style={{fontWeight: 800}}>Марафон</strong> побудований як “наростаюча хвиля”: щодня переклад 16-34 речень підібраних під <strong style={{fontWeight: 800}}>твій рівень</strong>: частина - нове правило, частина - коротке повторення
-                                попередніх. Такі знання відкарбовуються у пам'яті надовго
+                                <strong style={{fontWeight: 800}}>Марафон</strong> побудований як “наростаюча хвиля”:
+                                щодня новий набір речень підібраних під <strong style={{fontWeight: 800}}>твій
+                                рівень</strong>.
                             </p>
 
+                            <p className="heroCardText">
+                                <strong style={{fontWeight: 800}}>Це складно</strong>, але ефективність цього методу
+                                доведена
+                            </p>
                             <ul className="miniList">
                                 <li><strong style={{fontWeight: 800}}>День 1</strong> → Оцінка рівня + Правило 1</li>
                                 <li><strong style={{fontWeight: 800}}>День 2</strong> → Правило 2 + повторення
@@ -780,31 +806,32 @@ html{ scroll-behavior: smooth; }
                             </div>
                         </div>
 
-                        <div className="handPointerWrap">
+                        <div className="handPointerWrap desktop" style={{}}>
                             <img src={handPict} className="handPointer" alt=""/>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div className="divider" />
+            <div className="divider"/>
 
             {/* INSIDE */}
             <section className="section" id="inside">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Що всередині марафону</h2>
                     <p className="sectionLead">
-                        Кожен день — 16-34 речень на переклад з української на англійську. Моментальний фідбек по кожній помилці і рухаємось далі.
+                        Кожен день — 16-34 речення на переклад з української на англійську. Миттєвий фідбек по помилкам.
+                        Також додаткова практика там, де часто помиляєшся: маєш закрити прогалини до дедлайну. Після виконання завдань, можеш тренуватися скільки завгодно до кінця дня у вільному режимі.
                     </p>
 
                     <div className="featuresGrid">
                         <div className="featureCard">
                             <div className="featureIconRow">
                                 <img src={hand3} className="featureIcon" alt="" />
-                                <div className="featureTitle">1 правило — повністю</div>
+                                <div className="featureTitle">Вивчені правила</div>
                             </div>
                             <p className="featureText">
-                                Коротке пояснення + приклади + типові помилки. Без “води” — тільки те, що потрібно для правильної побудови речень.
+                                По 1 новому правилу щодня - кожне має бути надійно вивчене, інакше вибуваєш з марафону.
                             </p>
                         </div>
 
@@ -814,7 +841,7 @@ html{ scroll-behavior: smooth; }
                                 <div className="featureTitle">Практика перекладу</div>
                             </div>
                             <p className="featureText">
-                                Українська → англійська. Миттєвий фідбек і підказка “чому так”, щоб помилка більше не повторювалась.
+                                Українська → англійська. Миттєвий фідбек і пояснення “чому так”, щоб помилка більше не повторювалась.
                             </p>
                         </div>
 
@@ -824,7 +851,7 @@ html{ scroll-behavior: smooth; }
                                 <div className="featureTitle">Повторення щодня</div>
                             </div>
                             <p className="featureText">
-                                Кожен наступний день містить короткий мікс попередніх правил — це і є причина, чому прогрес тримається.
+                                Кожен наступний день містить короткий мікс попередніх правил — інтервальна методика з доведеною ефективністю.
                             </p>
                         </div>
                     </div>
@@ -848,7 +875,8 @@ html{ scroll-behavior: smooth; }
                                 <div className="stepNum">1</div>
                                 <div>
                                     <p className="stepTitle">День 1</p>
-                                    <p className="stepText">Правило #1: 16 речень для перекладу</p>
+                                    <p className="stepText">Оцінка рівня і правило #1: <strong
+                                        style={{fontWeight: 800}}>16+ речень</strong> для перекладу</p>
                                 </div>
                             </div>
 
@@ -856,7 +884,8 @@ html{ scroll-behavior: smooth; }
                                 <div className="stepNum">2</div>
                                 <div>
                                     <p className="stepTitle">День 2</p>
-                                    <p className="stepText">Правило #2: 16 речень + 3 на повторення</p>
+                                    <p className="stepText">Правило #2: <strong style={{fontWeight: 800}}>16+ речень</strong> і
+                                        повторення</p>
                                 </div>
                             </div>
 
@@ -870,7 +899,7 @@ html{ scroll-behavior: smooth; }
 
                             <div style={{ marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap" }}>
                                 <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                    {ctaLoading ? "Відкриваю..." : "Оцінити свій рівень і почати марафон"}
+                                    {ctaLoading ? "Відкриваю..." : "Оцінити рівень і почати марафон"}
                                 </button>
                                 <button className="secondaryBtn" onClick={() => scrollTo("price")}>
                                     Ціна і умови
@@ -880,14 +909,8 @@ html{ scroll-behavior: smooth; }
 
                         <div className="videoBox">
                             {/* Replace with your marathon preview video if you have one */}
-                            <video
-                                className="howVideo"
-                                src="https://d1bhp94ins4f62.cloudfront.net/goodlang/HowToPdf2.mp4"
-                                poster="../../../public/poster.png"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
+                            <img
+                                src={marathonPict}
                             />
                         </div>
                     </div>
@@ -896,23 +919,25 @@ html{ scroll-behavior: smooth; }
 
             <div className="divider" />
 
-            {/* PRICE + TERMS */}
+             {/*PRICE + TERMS */}
             <section className="section" id="price">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Скільки це коштує</h2>
 
-                    <div style={{ marginTop: 18 }} className="stepsCard">
-                        <p className="stepTitle" style={{ margin: 0 }}>
+                    <div style={{marginTop: 18}} className="stepsCard">
+                        <p className="stepTitle" style={{margin: 0}}>
                             Умови коротко
                         </p>
-                        <ul className="miniList" style={{ marginTop: 10 }}>
-                            <li>500 грн / 7 днів.</li>
-                            <li>Пропуск дня закриває марафон, щоб зберегти темп; можна стартувати з наступного циклу.</li>
+                        <ul className="miniList" style={{marginTop: 10}}>
+                            <li>Безкоштовна оцінка рівня і коротка щоденна практика</li>
+                            <li>Інтенсивний марафон: 500 грн / 7 днів.</li>
+                            <li>Пропуск дня закриває марафон - навчання безкомпромісне але дієве; можна стартувати з наступного циклу.
+                            </li>
                         </ul>
 
-                        <div style={{ marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap" }}>
+                        <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
                             <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                {ctaLoading ? "Відкриваю..." : "Оцінити свій рівень і почати марафон"}
+                                {ctaLoading ? "Відкриваю..." : "Оцінити рівень і почати марафон"}
                             </button>
                             <button className="secondaryBtn" onClick={() => setTouOpen(true)}>
                                 Умови використання
@@ -922,7 +947,7 @@ html{ scroll-behavior: smooth; }
                 </div>
             </section>
 
-            <div className="divider" />
+            <div className="divider"/>
 
             {/* SOCIAL PROOF */}
             <section className="section" id="proof">
@@ -931,17 +956,17 @@ html{ scroll-behavior: smooth; }
 
                     <div className="testimonialsGrid">
                         <div className="quoteCard">
-                            <p className="quote">“Це було складно, але дуже ефективно!”</p>
+                            <p className="quote">“Було важко, але я реально стала краще розмовляти!”</p>
                             <p className="quoteAuthor">— Оля</p>
                         </div>
 
                         <div className="quoteCard">
-                            <p className="quote">“Круто, що треба багато перекладати, як на мене це сама сильна вправа з усіх.”</p>
+                            <p className="quote">“Як на мене, переклад — це найдієвіше. Ще супер, що показує аналітику і можеш працювати з помилками”</p>
                             <p className="quoteAuthor">— Андрій</p>
                         </div>
 
                         <div className="quoteCard">
-                            <p className="quote">“Я задоволена! Я почуваюся значно впевненіше в граматиці.”</p>
+                            <p className="quote">“Я задоволена! Хоч іноді було дійсно складно, я почуваюся значно впевненіше в деяких заплутаних правилах, типу second/third conditional”</p>
                             <p className="quoteAuthor">— Марина</p>
                         </div>
                     </div>

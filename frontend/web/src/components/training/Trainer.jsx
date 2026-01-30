@@ -116,7 +116,7 @@ export default function Trainer({
     const [locked, setLocked] = useState(false);
 
     const [taskText, setTaskText] = useState("Стягнення завдання…");
-    const [hint, setHint] = useState("Порада: переклади і натисни «Перевірити»");
+    const [hint, setHintValue] = useState("Порада: переклади і натисни «Перевірити»");
     const [taskHint, setTaskHint] = useState(null);
 
     const [account, setAccount] = useState(null);
@@ -130,6 +130,12 @@ export default function Trainer({
 
     // weak rules
     const [weakRules, setWeakRules] = useState([]);
+
+    const setHint = (value) => {
+        setHintValue(value);
+
+    }
+
 
     // -----------------------------
     // Preloading state (supports gaps too)

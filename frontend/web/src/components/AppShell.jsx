@@ -21,7 +21,7 @@ export default function AppShell({ children, theme, noPadding = false }) {
     };
 
     return (
-        <div style={styles.app}>
+        <div id={"app-shell"} style={styles.app}>
             <style>{`
         html, body, #root {
           margin: 0;

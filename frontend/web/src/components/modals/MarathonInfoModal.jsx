@@ -215,6 +215,7 @@ export default function MarathonInfoModal({
                                     WebkitBackdropFilter: "blur(6px)",
                                 }}
                                 onClick={() => {
+                                    e?.stopPropagation();
                                     if (loginOpen) return;
                                     onCloseHandler();
                                 }}

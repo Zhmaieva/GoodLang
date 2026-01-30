@@ -39,6 +39,7 @@ export default function MarathonPurchaseModal({
     const [btnHover, setBtnHover] = useState(false);
 
     const [isPaying, setIsPaying] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const [plannedRuleIds, setPlannedRuleIds] = useState([]); // <- NEW
 
@@ -162,7 +163,8 @@ export default function MarathonPurchaseModal({
                             backdropFilter: "blur(6px)",
                             WebkitBackdropFilter: "blur(6px)",
                         }}
-                        onClick={() => {
+                        onClick={(e) => {
+                            e?.stopPropagation();
                             if (loading) return;
                             onCloseHandler();
                         }}
@@ -279,53 +281,61 @@ export default function MarathonPurchaseModal({
                             </div>
                         </div>
 
-                        <MarathonPlanner theme={theme} onChange={(ids) => setPlannedRuleIds(ids)} max={7} />
+                        <MarathonPlanner theme={theme} onChange={(ids) => setPlannedRuleIds(ids)} max={7}
+                        onLoadingComplete={() => {
+                            setIsLoading(false);
+                        }}/>
 
-                            {/* footer button */}
-                            {/* footer button (LoginForm style) */}
-                            <button
-                                onMouseEnter={() => setBtnHover(true)}
-                                onMouseLeave={() => setBtnHover(false)}
-                                onClick={handleStart}
-                                disabled={loading || safeRuleIds.length !== 7}
-                                style={{
-                                    appearance: "none",
-                                    padding: "10px 14px",
-                                    fontWeight: 800,
-                                    fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
-                                    lineHeight: 1,
-                                    borderRadius: 999,
-                                    background: (loading || safeRuleIds.length !== 7) ? "#999" : theme.accent,
-                                    color: "#fff",
-                                    border: "2px solid rgba(0,0,0,0.12)",
-                                    boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-                                    fontFamily: "Nunito, system-ui, sans-serif",
-                                    whiteSpace: "nowrap",
-                                    opacity: (loading || safeRuleIds.length !== 7) ? 0.7 : 1,
-                                    transform: btnHover && !loading && safeRuleIds.length === 7 ? "translateY(1px)" : "none",
-                                    filter: btnHover && !loading && safeRuleIds.length === 7 ? "brightness(0.95)" : "none",
-                                    transition: "transform 120ms ease, filter 120ms ease",
-                                    cursor: (loading || safeRuleIds.length !== 7) ? "not-allowed" : "pointer",
-                                    width: "100%",
-                                }}
-                            >
-                                Придбати і розпочати: 500.00₴
-                            </button>
+                            {
+                                <div style={{display: isLoading ? "none" : "initial"}}>
+                                    {/* footer button */}
+                                    {/* footer button (LoginForm style) */}
+                                    <button
+                                        onMouseEnter={() => setBtnHover(true)}
+                                        onMouseLeave={() => setBtnHover(false)}
+                                        onClick={handleStart}
+                                        disabled={loading || isLoading || safeRuleIds.length !== 7}
+                                        style={{
+                                            appearance: "none",
+                                            padding: "10px 14px",
+                                            fontWeight: 800,
+                                            fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
+                                            lineHeight: 1,
+                                            borderRadius: 999,
+                                            background: (loading || safeRuleIds.length !== 7) ? "#999" : theme.accent,
+                                            color: "#fff",
+                                            border: "2px solid rgba(0,0,0,0.12)",
+                                            boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+                                            fontFamily: "Nunito, system-ui, sans-serif",
+                                            whiteSpace: "nowrap",
+                                            opacity: (loading || safeRuleIds.length !== 7) ? 0.7 : 1,
+                                            transform: btnHover && !loading && safeRuleIds.length === 7 ? "translateY(1px)" : "none",
+                                            filter: btnHover && !loading && safeRuleIds.length === 7 ? "brightness(0.95)" : "none",
+                                            transition: "transform 120ms ease, filter 120ms ease",
+                                            cursor: (loading || safeRuleIds.length !== 7) ? "not-allowed" : "pointer",
+                                            width: "100%",
+                                        }}
+                                    >
+                                        Придбати і розпочати: 500.00₴
+                                    </button>
 
-                            <p
-                                style={{
-                                    marginBottom: 0,
-                                    marginTop: 8,
-                                    marginLeft: 0,
-                                    color: theme.text,
-                                    fontWeight: 800,
-                                    opacity: 0.55,
-                                    fontSize: "clamp(.6rem, 1.5vh, .75rem)",
-                                    textAlign: "center",
-                                }}
-                            >
-                                500.00₴ / 7 днів. Автоматичне припинення послуги в разі невиконання завдання у термін
-                            </p>
+                                    <p
+                                        style={{
+                                            marginBottom: 0,
+                                            marginTop: 8,
+                                            marginLeft: 0,
+                                            color: theme.text,
+                                            fontWeight: 800,
+                                            opacity: 0.55,
+                                            fontSize: "clamp(.6rem, 1.5vh, .75rem)",
+                                            textAlign: "center",
+                                        }}
+                                    >
+                                        500.00₴ / 7 днів. Автоматичне припинення послуги в разі невиконання завдання у термін
+                                    </p>
+                                </div>
+                            }
+
                         </div>
                         }
              </div>
