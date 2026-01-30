@@ -648,6 +648,9 @@ html{ scroll-behavior: smooth; }
   border: var(--border);
   height: 100%;
 }
+.hint-text {
+  font-size: 0.7em; /* або 13px / 14px */
+}
 
 /* =========================
    FOOTER
@@ -723,21 +726,16 @@ html{ scroll-behavior: smooth; }
                 <div className="left">
                     <div className="textBlock">
                         <h1 className="title">
-                            7-денний марафон<br />
-                            граматики<br />
-                            1 правило на день<br />
-                            <em>+ розумне повторення</em>
+                            ➤ марафон перекладу<br />
+                            ➤ 16-34 речень в день<br />
+                            ➤ 7 правил граматики<br />
+                            <em class="hint-text">Пропуск дня = кінець марафону.<br/>
+                                Стартуй знову в наступному циклі.</em>
                         </h1>
 
                         <p className="subtitle">
-                            15-20 хв на день → відчутний прогрес.
+                            30 хв інтенсиву на день → відпрацьовуєш grammar до автомату
                         </p>
-
-                        <div className="badgeRow">
-                            <div className="pill">Day 1 — безкоштовно</div>
-                            <div className="pill">щоденна практика</div>
-                            <div className="pill">автопродовження можна вимкнути</div>
-                        </div>
                     </div>
                 </div>
 
@@ -752,40 +750,29 @@ html{ scroll-behavior: smooth; }
                         <button className="topNavBtn" onClick={() => scrollTo("price")}>
                             ціна
                         </button>
-                        <button className="topNavBtn" onClick={() => scrollTo("join")}>
-                            почати
-                        </button>
                     </div>
 
                     <div className="heroStack">
                         <div className="heroCard">
-                            <h3 className="heroCardTitle">Спробуй 1 день безкоштовно — без карти</h3>
                             <p className="heroCardText">
-                                Марафон побудований як “наростаюча хвиля”: щодня нове правило + коротке повторення
-                                попередніх. Так знання не
-                                зникають через тиждень.
+                                Марафон побудований як “наростаюча хвиля”: щодня переклад 16-34 речень: частина - нове правило, частина - коротке повторення
+                                попередніх. Так знання не зникають через тиждень.
                             </p>
 
                             <ul className="miniList">
                                 <li>День 1 → Правило 1</li>
                                 <li>День 2 → Правило 2 + повторення попередніх</li>
-                                <li>День 3 → Правило 3 + повторення попередніх</li>
                                 <li>…</li>
                                 <li>День 7 → Правило 7 + мікс з попередніх правил</li>
                             </ul>
 
                             <div className="heroBtns">
                                 <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                    {ctaLoading ? "Відкриваю День 1..." : "Почати безкоштовний День 1"}
+                                    {ctaLoading ? "Відкриваю День 1..." : "Почати марафон"}
                                 </button>
                                 <button className="secondaryBtn" onClick={() => scrollTo("how")}>
-                                    Як працює марафон
+                                    Як це працює?
                                 </button>
-                            </div>
-
-                            <div className="noticeLine">
-                                Після Дня 1 можна продовжити за <strong>100 грн / 7 днів</strong>. Автопродовження легко
-                                вимкнути в акаунті.
                             </div>
                         </div>
 
@@ -803,7 +790,7 @@ html{ scroll-behavior: smooth; }
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Що всередині марафону</h2>
                     <p className="sectionLead">
-                        Кожен день — від 16 до 24 речень на переклад з української на англійську. Моментальний фідбек по кожній помилці і рухаємось далі, в наступне правило.
+                        Кожен день — 16-34 речень на переклад з української на англійську. Моментальний фідбек по кожній помилці і рухаємось далі.
                     </p>
 
                     <div className="featuresGrid">
@@ -856,7 +843,7 @@ html{ scroll-behavior: smooth; }
                             <div className="step">
                                 <div className="stepNum">1</div>
                                 <div>
-                                    <p className="stepTitle">День 1 (безкоштовно)</p>
+                                    <p className="stepTitle">День 1</p>
                                     <p className="stepText">Правило #1: 16 речень для перекладу</p>
                                 </div>
                             </div>
@@ -872,22 +859,14 @@ html{ scroll-behavior: smooth; }
                             <div className="step">
                                 <div className="stepNum">…</div>
                                 <div>
-                                    <p className="stepTitle">Дні 4–6</p>
+                                    <p className="stepTitle">Дні 4–7</p>
                                     <p className="stepText">Нове правило + мікс попередніх</p>
-                                </div>
-                            </div>
-
-                            <div className="step">
-                                <div className="stepNum">7</div>
-                                <div>
-                                    <p className="stepTitle">День 7</p>
-                                    <p className="stepText">Правило #7: мікс попередніх</p>
                                 </div>
                             </div>
 
                             <div style={{ marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap" }}>
                                 <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                    {ctaLoading ? "Відкриваю..." : "Почати День 1 безкоштовно"}
+                                    {ctaLoading ? "Відкриваю..." : "Почати День 1"}
                                 </button>
                                 <button className="secondaryBtn" onClick={() => scrollTo("price")}>
                                     Ціна і умови
@@ -917,56 +896,19 @@ html{ scroll-behavior: smooth; }
             <section className="section" id="price">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Скільки це коштує</h2>
-                    <p className="sectionLead">
-                        Максимально прозоро: безкоштовний старт + оплата тільки якщо формат зайшов.
-                    </p>
-
-                    <div className="featuresGrid">
-                        <div className="featureCard">
-                            <div className="featureIconRow">
-                                <img src={hand3} className="featureIcon" alt="" />
-                                <div className="featureTitle">День 1 — безкоштовно</div>
-                            </div>
-                            <p className="featureText">
-                                Спробуй формат без карти: подивись як виглядають уроки, повторення та фідбек.
-                            </p>
-                        </div>
-
-                        <div className="featureCard">
-                            <div className="featureIconRow">
-                                <img src={hand1} className="featureIcon" alt="" />
-                                <div className="featureTitle">100 грн / 7 днів</div>
-                            </div>
-                            <p className="featureText">
-                                Після Дня 1 ти можеш продовжити марафон. Оплата відкриває доступ на наступні 7 днів.
-                            </p>
-                        </div>
-
-                        <div className="featureCard">
-                            <div className="featureIconRow">
-                                <img src={hand2} className="featureIcon" alt="" />
-                                <div className="featureTitle">Автопродовження — opt-in</div>
-                            </div>
-                            <p className="featureText">
-                                Автопродовження <strong>можна вимкнути в будь-який момент</strong> в акаунті — є простий тумблер “Не продовжувати”.
-                            </p>
-                        </div>
-                    </div>
 
                     <div style={{ marginTop: 18 }} className="stepsCard">
                         <p className="stepTitle" style={{ margin: 0 }}>
                             Умови коротко
                         </p>
                         <ul className="miniList" style={{ marginTop: 10 }}>
-                            <li>День 1 — безкоштовно (без карти).</li>
-                            <li>Далі — 100 грн / 7 днів, якщо вирішиш продовжити.</li>
-                            <li>Автопродовження вимикається в акаунті одразу (opt-in, без “пасток”).</li>
-                            <li>У Hard mode пропуск дня закриває марафон, щоб зберегти темп; можна стартувати з наступного циклу.</li>
+                            <li>500 грн / 7 днів.</li>
+                            <li>Пропуск дня закриває марафон, щоб зберегти темп; можна стартувати з наступного циклу.</li>
                         </ul>
 
                         <div style={{ marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap" }}>
                             <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                {ctaLoading ? "Відкриваю..." : "Почати безкоштовний День 1"}
+                                {ctaLoading ? "Відкриваю..." : "Почати День 1"}
                             </button>
                             <button className="secondaryBtn" onClick={() => setTouOpen(true)}>
                                 Умови використання
@@ -982,88 +924,21 @@ html{ scroll-behavior: smooth; }
             <section className="section" id="proof">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Що кажуть учасники</h2>
-                    <p className="sectionLead">
-                        Навіть 10 хв на день працюють, якщо є правильна структура і повторення.
-                    </p>
 
                     <div className="testimonialsGrid">
                         <div className="quoteCard">
-                            <p className="quote">“Я вперше відчула articles, а не просто вгадувала.”</p>
+                            <p className="quote">“Це було складно, але дуже ефективно!”</p>
                             <p className="quoteAuthor">— Оля</p>
                         </div>
 
                         <div className="quoteCard">
-                            <p className="quote">“Перестав плутати much / many / a lot of буквально за кілька днів.”</p>
+                            <p className="quote">“Круто, що треба багато перекладати, як на мене це сама сильна вправа з усіх.”</p>
                             <p className="quoteAuthor">— Андрій</p>
                         </div>
 
                         <div className="quoteCard">
-                            <p className="quote">“Коли є повторення щодня — прогрес реально тримається.”</p>
+                            <p className="quote">“Я задоволена! Я почуваюся значно впевненіше в граматиці.”</p>
                             <p className="quoteAuthor">— Марина</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div className="divider" />
-
-            {/* FINAL CTA */}
-            <section className="ctaSection" id="join">
-                <div className="ctaInner">
-                    <div className="ctaContent">
-                        <h2 className="ctaTitle">
-                            Почни з безкоштовного дня в <em>GoodLang</em>
-                        </h2>
-
-                        <p className="ctaSubtitle">
-                            Ніякого ризику: спробуй День 1, подивись як тобі формат — і вже потім вирішуй, чи продовжувати за 100 грн / 7 днів.
-                        </p>
-
-                        <div className="ctaButtons">
-                            <button onClick={startFreeDay1} className="primaryBtn" disabled={ctaLoading}>
-                                {ctaLoading ? "Відкриваю..." : "Почати День 1 безкоштовно"}
-                            </button>
-                            <button onClick={() => setTouOpen(true)} className="secondaryBtn">
-                                Умови використання
-                            </button>
-                        </div>
-
-                        <div className="promoRow">
-                            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
-                                <input
-                                    type="email"
-                                    placeholder="Email для промокоду"
-                                    className="emailInput"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    inputMode="email"
-                                    onKeyDown={async (e) => {
-                                        if (e.key === "Enter") {
-                                            e.preventDefault();
-                                            await submitEmail();
-                                        }
-                                    }}
-                                    disabled={sending}
-                                />
-
-                                {msg ? (
-                                    <p
-                                        style={{
-                                            margin: 0,
-                                            fontFamily: "Nunito",
-                                            fontWeight: 800,
-                                            fontSize: 13,
-                                            opacity: 0.9,
-                                        }}
-                                    >
-                                        {msg}
-                                    </p>
-                                ) : null}
-                            </div>
-
-                            <button onClick={submitEmail} className="secondaryBtn promoBtnOrange" disabled={sending}>
-                                {sending ? "Відправляю..." : "Отримати промокод"}
-                            </button>
                         </div>
                     </div>
                 </div>
