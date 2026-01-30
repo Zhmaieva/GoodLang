@@ -251,7 +251,7 @@ export default function TaskCard({
             alignItems: "flex-end",
             gap: 8,
             height: 26,
-            marginLeft: 12,
+            marginLeft: 0,
         },
         bar: (white) => ({
             width: 7,
