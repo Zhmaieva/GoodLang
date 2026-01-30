@@ -14,6 +14,7 @@ import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
 import { ensureAnalytics, trackMetaCustomEvent, trackPageView } from "../../services/gaService.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
+import {enableBodyScroll, disableBodyScroll} from 'body-scroll-lock';
 
 export default function LoginForm({
                                       theme,
@@ -41,6 +42,7 @@ export default function LoginForm({
     const navigate = useNavigate();
 
     useEffect(() => {
+        lockScroll()
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
         window.addEventListener("resize", onResize);
@@ -70,7 +72,6 @@ export default function LoginForm({
         inset: 0,
         width: "100%",
         height: "100dvh",
-        background: "rgba(0,0,0,0.35)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -177,6 +178,12 @@ export default function LoginForm({
 
         if (emailInput.trim().toLowerCase() === account?.email) {
             setError("Ти вже увійшов під цим імейлом");
+            return;
+        }
+
+        const v = String(emailInput.trim().toLowerCase() || "");
+        if (!/^\S+@\S+\.\S+$/.test(v)) {
+            setError("Введіть правильний імейл");
             return;
         }
 
@@ -352,12 +359,21 @@ export default function LoginForm({
 
             reloadWithRuleParam(ruleToDownload);
 
+            unlockScroll()
             onClose();
         } catch (err) {
             setError("Невірний код");
         } finally {
             setLoading(false);
         }
+    }
+
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#login-form'));
+    }
+
+    const unlockScroll = () => {
+        enableBodyScroll(document.querySelector('#login-form'));
     }
 
     function reloadWithRuleParam(ruleId) {
@@ -402,17 +418,24 @@ export default function LoginForm({
     return (
         <>
             {(!cookieOpen && !termsOpen) && (
-                <div style={wrapperStyle}>
+                <div id={"login-form"} style={wrapperStyle}
+                     onClick={(e) => {
+                         e.stopPropagation();
+                         unlockScroll();
+                         onClose();
+                     }}
+                >
                     <div style={boxStyle} onClick={(e) => e.stopPropagation()}>
                         {!termsOpen && !isPaying && (
-                            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                            <div style={{display: "flex", flexDirection: "column", gap: 12}}>
                                 {step === "email" && (
                                     <>
-                                        <div style={{ display: "flex", height: "0", justifyContent: "space-between" }}>
+                                        <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
                                             <div></div>
 
                                             <p
                                                 onClick={() => {
+                                                    unlockScroll()
                                                     if (!closeDisabled) onClose();
                                                 }}
                                                 style={{
@@ -443,7 +466,7 @@ export default function LoginForm({
                                                 justifyContent: "space-between",
                                             }}
                                         >
-                                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                            <div style={{display: "flex", flexDirection: "column"}}>
                                                 <h2
                                                     style={{
                                                         textAlign: "left",
@@ -472,7 +495,7 @@ export default function LoginForm({
                                                 </p>
                                             </div>
 
-                                            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
                                                 <div style={logoStyle(64)}>GL</div>
                                             </div>
                                         </div>
@@ -515,11 +538,12 @@ export default function LoginForm({
 
                                 {step === "code" && (
                                     <>
-                                        <div style={{ display: "flex", height: "0", justifyContent: "space-between" }}>
+                                        <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
                                             <div></div>
 
                                             <p
                                                 onClick={() => {
+                                                    unlockScroll()
                                                     if (!closeDisabled) onClose();
                                                 }}
                                                 style={{
@@ -550,7 +574,7 @@ export default function LoginForm({
                                                 justifyContent: "space-between",
                                             }}
                                         >
-                                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                            <div style={{display: "flex", flexDirection: "column"}}>
                                                 <h2
                                                     style={{
                                                         textAlign: "left",
@@ -581,7 +605,7 @@ export default function LoginForm({
                                                 </p>
                                             </div>
 
-                                            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
                                                 <div style={logoStyle(64)}>GL</div>
                                             </div>
                                         </div>
@@ -659,7 +683,7 @@ export default function LoginForm({
                                     </>
                                 )}
 
-                                {error && <div style={{ color: theme.text, fontWeight: 700 }}>{error}</div>}
+                                {error && <div style={{color: theme.text, fontWeight: 700}}>{error}</div>}
 
                                 <style>
                                     {`
@@ -714,6 +738,7 @@ export default function LoginForm({
                     ruleToDownload={ruleToDownload}
                     theme={theme}
                     onClose={() => {
+                        unlockScroll()
                         setTermsOpen(false);
                         onClose();
                     }}
@@ -736,6 +761,7 @@ export default function LoginForm({
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
 
+                        unlockScroll();
                         reloadWithRuleParam(ruleToDownload);
                     }}
                     onReject={async () => {
@@ -743,6 +769,7 @@ export default function LoginForm({
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
 
+                        unlockScroll();
                         reloadWithRuleParam(ruleToDownload);
                     }}
                 />

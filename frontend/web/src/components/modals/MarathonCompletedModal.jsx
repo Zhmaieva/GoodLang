@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -23,6 +24,15 @@ export default function MarathonCompletedModal({
                                                }) {
     const [btnHover, setBtnHover] = useState(false);
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#marathon-completed-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#marathon-completed-modal'));
+    }
+
     // Works even if router isn't mounted (just fallback)
     let navigate;
     try {
@@ -33,6 +43,7 @@ export default function MarathonCompletedModal({
     }
 
     useEffect(() => {
+        lockScroll();
         if (!open) return;
         setBtnHover(false);
     }, [open]);
@@ -40,6 +51,7 @@ export default function MarathonCompletedModal({
     if (!open) return null;
 
     const onCloseHandler = () => {
+        unlockScroll();
         onClose?.();
     };
 
@@ -51,10 +63,10 @@ export default function MarathonCompletedModal({
 
     return (
         <div
+            id={"marathon-completed-modal"}
             style={{
                 position: "fixed",
                 inset: 0,
-                background: "rgba(0,0,0,0.35)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

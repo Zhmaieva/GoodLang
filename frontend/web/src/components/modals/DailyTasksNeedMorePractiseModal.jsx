@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -22,7 +23,17 @@ export default function DailyTasksNeedMorePracticeModal({
                                                         }) {
     const [btnHover, setBtnHover] = useState(false);
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#marathon-daily-more-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#marathon-daily-more-modal'));
+    }
+
     useEffect(() => {
+        lockScroll();
         if (!open) return;
         setBtnHover(false);
     }, [open]);
@@ -30,15 +41,16 @@ export default function DailyTasksNeedMorePracticeModal({
     if (!open) return null;
 
     const onCloseHandler = () => {
+        unlockScroll();
         onClose?.();
     };
 
     return (
         <div
+            id={"marathon-daily-more-modal"}
             style={{
                 position: "fixed",
                 inset: 0,
-                background: "rgba(0,0,0,0.35)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

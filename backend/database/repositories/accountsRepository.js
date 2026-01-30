@@ -347,6 +347,20 @@ export async function getAccountById(accountId) {
  * Send verification code only if account exists
  */
 export async function sendVerificationCode(email) {
+    if (email?.length === 0 || email.length > 40)
+        return {};
+
+    if (email.indexOf('@') < 0)
+        return {};
+
+    if (email.split('@').length > 2)
+        return {};
+
+    const dotParts = email.split('.');
+    const lastDotPart = dotParts[dotParts.length - 1];
+    if (lastDotPart.indexOf('@') >= 0)
+        return {};
+
     // check if account exists
     const { rows: accounts } = await pool.query(
         'SELECT id FROM accounts WHERE email=$1',
@@ -365,8 +379,12 @@ export async function sendVerificationCode(email) {
         [accountId, email, code, expiresAt]
     );
 
-    // send the code via email
-    await sendVerificationEmail(email, code);
+    try {
+        // send the code via email
+        await sendVerificationEmail(email, code);
+    } catch (e) {
+        console.log(e);
+    }
 
     return accountId;
 };
@@ -380,9 +398,23 @@ export async function sendPromoCode(accountId, email) {
     // 0) Basic validation
     if (typeof email !== "string" || typeof accountId !== "string") return;
 
-    const normalizedEmail = email.trim().toLowerCase();
-    const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!EMAIL_REGEX.test(normalizedEmail)) return;
+    if (email?.length === 0 || email.length > 40)
+        return {};
+
+    if (email.indexOf('@') < 0)
+        return {};
+
+    if (email.split('@').length > 2)
+        return {};
+
+    const dotParts = email.split('.');
+    const lastDotPart = dotParts[dotParts.length - 1];
+    if (lastDotPart.indexOf('@') >= 0)
+        return {};
+
+    // const normalizedEmail = email.trim().toLowerCase();
+    // const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!EMAIL_REGEX.test(normalizedEmail)) return;
 
     // 1) Insert into inquiries ONLY if new; if already exists -> do nothing (no email)
     const ins = await pool.query(
@@ -477,6 +509,20 @@ function toUnixSeconds(date) {
  * Verify code for email and return account id if valid
  */
 export async function verifyCode(currentId, email, code, termsAccepted) {
+    if (email?.length === 0 || email.length > 40)
+        return {};
+
+    if (email.indexOf('@') < 0)
+        return {};
+
+    if (email.split('@').length > 2)
+        return {};
+
+    const dotParts = email.split('.');
+    const lastDotPart = dotParts[dotParts.length - 1];
+    if (lastDotPart.indexOf('@') >= 0)
+        return {};
+
     const { rows } = await pool.query(
         `SELECT account_id, expires_at FROM sign_in_links
          WHERE email=$1 AND code=$2`,

@@ -4,7 +4,8 @@ import LimitModal from "../subscription/LimitModal.jsx";
 import LoginModal from "../subscription/LoginModal.jsx"; // ✅ adjust path if needed
 import { getPdfDownloads, setPaymentIntent } from "../../services/dataService.js"; // ✅ setPaymentIntent used like in old modal
 import { callAccountVerifyApi } from "../../services/api.js"; // ✅ optional analytics; safe to keep
-import { ACTION_TYPES } from "../../utils/constants.js";      // ✅ optional analytics
+import { ACTION_TYPES } from "../../utils/constants.js";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";      // ✅ optional analytics
 
 // light copy of logo style to match DownloadLimitModal design
 const logoStyle = (size, theme) => ({
@@ -71,8 +72,19 @@ export default function PdfTypeModal({
     const paid = isPaidStatus(account?.status);
     const hasEmail = !!account?.email;
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#pdf-type-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#pdf-type-modal'));
+    }
+
     useEffect(() => {
         if (!open) return;
+
+        lockScroll();
         setSelected(defaultValue);
         setHovered(null);
         setBtnHovered(false);
@@ -275,21 +287,24 @@ export default function PdfTypeModal({
                 style={{
                     position: "fixed",
                     inset: 0,
-                    background: "rgba(0,0,0,0.35)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     zIndex: 9998,
                     paddingBottom: "env(safe-area-inset-bottom)",
                     paddingTop: "env(safe-area-inset-top)",
+                    backdropFilter: "blur(6px)",
+                    WebkitBackdropFilter: "blur(6px)",
                 }}
                 onClick={() => {
                     if (loading) return;
                     if (limitOpen || loginOpen) return;
+                    unlockScroll();
                     onClose();
                 }}
             >
                 <div
+                    id={'pdf-type-modal'}
                     style={{
                         background: theme.bg,
                         padding: "28px",
@@ -309,6 +324,7 @@ export default function PdfTypeModal({
                         <p
                             onClick={() => {
                                 if (loading) return;
+                                unlockScroll();
                                 onClose();
                             }}
                             style={{

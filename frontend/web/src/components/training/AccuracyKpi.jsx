@@ -669,7 +669,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
             {showEmpty ? (
                 <div style={valueStyle}>
-                    {attemptsLeft} {attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня
+                    {attemptsLeft} {attemptsLeft > 4 ? "речень" : "речення"} до оцінки
                 </div>
             ) : (
                 <>

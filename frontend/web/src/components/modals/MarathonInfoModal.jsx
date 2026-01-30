@@ -4,6 +4,7 @@ import LoginModal from "../subscription/LoginModal.jsx"; // adjust path if neede
 import {getOverallAccuracy, getPaymentIntent, inferUserLevel, setPaymentIntent} from "../../services/dataService.js";
 import MarathonPurchaseModal from "./MarathonPurchaseModal.jsx";
 import {normalizeLevel} from "../training/MarathonPlanner.jsx";
+import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 
 
 const logoStyle = (size, theme) => ({
@@ -40,6 +41,15 @@ export default function MarathonInfoModal({
     const [isPaying, setIsPaying] = useState(false);
     const [userLevel, setUserLevel] = useState("");
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#marathon-info-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#marathon-info-modal'));
+    }
+
     const items = useMemo(
         () => [
             { title: "7 правил за 7 днів", sub: "Нове правило щодня та необмежена практика." },
@@ -59,6 +69,8 @@ export default function MarathonInfoModal({
     // reset on open
     useEffect(() => {
         if (!open) return;
+
+        lockScroll();
         setBtnHover(false);
         setLoginOpen(false);
         setIsPaying(false);
@@ -96,6 +108,8 @@ export default function MarathonInfoModal({
     const hasEmail = !!account?.email;
 
     const onCloseHandler = () => {
+        unlockScroll();
+
         // match LimitModal behavior
         try { setPaymentIntent(false); } catch {}
         if (isPaying) {
@@ -201,10 +215,10 @@ export default function MarathonInfoModal({
                             />)
                             :
                             (<div
+                                id={"marathon-info-modal"}
                                 style={{
                                     position: "fixed",
                                     inset: 0,
-                                    background: "rgba(0,0,0,0.35)",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",

@@ -753,7 +753,7 @@ html{ scroll-behavior: smooth; }
                 <div className="handPointerWrap mobile" style={{
                     position: "absolute",
                     rotate: '180deg',
-                    top: '32vh',
+                    top: window.innerWidth < 400 ? '25vh' : '40vh',
                     left: '-40px',
                     zIndex: 9
                 }}>

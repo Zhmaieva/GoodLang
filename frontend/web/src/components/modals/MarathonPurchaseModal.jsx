@@ -4,7 +4,8 @@ import LoginModal from "../subscription/LoginModal.jsx"; // adjust path if neede
 import { setPaymentIntent } from "../../services/dataService.js";
 import { callCheckoutMarathonApi } from "../../services/api.js";
 import { getStripe } from "../subscription/LimitModal.jsx";
-import MarathonPlanner from "../training/MarathonPlanner.jsx"; // ✅ reuse same Stripe singleton loader
+import MarathonPlanner from "../training/MarathonPlanner.jsx";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock"; // ✅ reuse same Stripe singleton loader
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -153,7 +154,6 @@ export default function MarathonPurchaseModal({
                         style={{
                             position: "fixed",
                             inset: 0,
-                            background: "rgba(0,0,0,0.35)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -191,7 +191,7 @@ export default function MarathonPurchaseModal({
                         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
 
                         // ✅ make it usable on mobile
-                        maxHeight: "85vh",
+                        maxHeight: window.innerWidth < 400 ? "75vh" : "85vh",
                     }}
                 />
 
@@ -205,6 +205,7 @@ export default function MarathonPurchaseModal({
                                 border: `4px solid ${theme.accent}`,
                                 width: "90%",
                                 maxWidth: 520,
+
                                 textAlign: "center",
                                 boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
                             }}

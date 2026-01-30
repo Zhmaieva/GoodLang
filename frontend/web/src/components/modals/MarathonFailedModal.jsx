@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MarathonInfoModal from "./MarathonInfoModal.jsx";
 import {disableMarathonFailedModal} from "../../services/marathonService.js";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -27,13 +28,25 @@ export default function MarathonFailedModal({
     const [btnHover, setBtnHover] = useState(false);
     const [infoOpen, setInfoOpen] = useState(false);
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#marathon-completed-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#marathon-completed-modal'));
+    }
+
     useEffect(() => {
         if (!open) return;
+
+        lockScroll();
         setBtnHover(false);
         setInfoOpen(false);
     }, [open]);
 
     const onCloseHandler = () => {
+        unlockScroll();
         onClose?.();
     };
 
@@ -65,10 +78,10 @@ export default function MarathonFailedModal({
 
     return (
         <div
+            id={"marathon-completed-modal"}
             style={{
                 position: "fixed",
                 inset: 0,
-                background: "rgba(0,0,0,0.35)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

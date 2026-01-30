@@ -6,6 +6,7 @@ import {theme} from "../../App.jsx";
 import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -58,7 +59,18 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
         setAttemptsLeft(overall?.attemptsLeft ?? 0);
     };
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#download-limit-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#download-limit-modal'));
+    }
+
     useEffect(() => {
+        lockScroll();
+
         on("weeklyProgressUpdate", refreshSkill);
         return () => off("weeklyProgressUpdate", refreshSkill);
     }, []);
@@ -83,6 +95,7 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
     }
 
     const onCloseHandler = useCallback(() => {
+        unlockScroll();
         setPaymentIntent(false);
         if (isPaying) window.location.reload();
         onClose();
@@ -201,16 +214,17 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
     return (
         <>
             {
-                !loginModalOpen && <div style={{
+                !loginModalOpen && <div id={"download-limit-modal"} style={{
                     position: "fixed",
                     inset: 0,
-                    background: "rgba(0,0,0,0.35)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     zIndex: 9999,
                     paddingBottom: "env(safe-area-inset-bottom)",
                     paddingTop: "env(safe-area-inset-top)",
+                    backdropFilter: "blur(6px)",
+                    WebkitBackdropFilter: "blur(6px)",
                 }} onClick={onCloseHandler}>
                     <div style={{
                         background: theme.bg,

@@ -461,13 +461,13 @@ export default function MarathonPlanner({
     const nodeRowStyle = (side) => ({
         display: "flex",
         justifyContent: side === "right" ? "flex-end" : "flex-start",
-        padding: "4px 0",
+        padding: window.innerWidth < 400 ? "2px 0" : "4px 0",
     });
 
     const nodeStyle = {
         maxWidth: "88%",
         width: "fit-content",
-        padding: "10px 12px",
+        padding: window.innerWidth < 400 ? "6px 8px" : "10px 12px",
         borderRadius: 999,
         border: "2px solid rgba(0,0,0,0.10)",
         background: "rgba(255,255,255,0.85)",

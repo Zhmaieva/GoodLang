@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 export default function CookieConsentModal({
                                                theme,
@@ -9,6 +10,29 @@ export default function CookieConsentModal({
                                            }) {
     const [primaryHover, setPrimaryHover] = useState(false);
     const [secondaryHover, setSecondaryHover] = useState(false);
+
+    const onAcceptHandler = () => {
+        unlockScroll();
+        onAccept();
+    }
+
+    const onRejectHandler = () => {
+        unlockScroll();
+        onReject();
+    }
+
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#cookie-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#cookie-modal'));
+    }
+
+    useEffect(() => {
+        lockScroll();
+    })
 
     const overlayStyle = {
         position: "fixed",
@@ -78,7 +102,7 @@ export default function CookieConsentModal({
     };
 
     return (
-        <div style={overlayStyle}>
+        <div id={"cookie-modal"} style={overlayStyle}>
             <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
                 <h2
                     style={{
@@ -138,7 +162,7 @@ export default function CookieConsentModal({
                         <button
                             onMouseEnter={() => setSecondaryHover(true)}
                             onMouseLeave={() => setSecondaryHover(false)}
-                            onClick={onReject}
+                            onClick={onRejectHandler}
                             style={secondaryBtn}
                         >
                             Відхилити
@@ -149,7 +173,7 @@ export default function CookieConsentModal({
                         <button
                             onMouseEnter={() => setPrimaryHover(true)}
                             onMouseLeave={() => setPrimaryHover(false)}
-                            onClick={onAccept}
+                            onClick={onAcceptHandler}
                             style={primaryBtn}
                         >
                             Прийняти
