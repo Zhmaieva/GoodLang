@@ -42,7 +42,6 @@ export async function tryInsertTrackingRow({
                 : `
                   INSERT INTO email_sendings (email, account_id, letter_id)
                   VALUES ($1, $2, $3)
-                  ON CONFLICT (email, letter_id) DO NOTHING
                   RETURNING id
                   `,
             [email, accountId ?? null, letterId]
