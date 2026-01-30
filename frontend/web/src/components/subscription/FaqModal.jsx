@@ -12,11 +12,22 @@ export default function FaqModal({
         width: "100%",
         inset: 0,
         height: "100dvh",
-        background: "rgba(0,0,0,0.35)",
+
+        // ✅ blur-only overlay (no darkening)
+        background: "rgba(255,255,255,0)",
+
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         zIndex: 9999,
+
+        // ✅ blur underlying page
+        backdropFilter: "blur(6px)",
+        WebkitBackdropFilter: "blur(6px)",
+
+        // ✅ safe-area padding (consistent with other modals)
+        paddingBottom: "env(safe-area-inset-bottom)",
+        paddingTop: "env(safe-area-inset-top)",
     };
 
     const cardStyle = {
@@ -120,18 +131,32 @@ export default function FaqModal({
 
                     <h3>4. Чи можу я отримати знижку?</h3>
                     <p>
-                        Так.
-
-                        Напишіть нам на <strong><a style={{color: theme.accent, textDecoration: "none"}}
-                                                   href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a></strong> і ми запропонуємо спеціальні умови для індивідуальних користувачів та окремі програми
+                        Так. Напишіть нам на{" "}
+                        <strong>
+                            <a
+                                style={{ color: theme.accent, textDecoration: "none" }}
+                                href="mailto:goodlang.app@gmail.com"
+                            >
+                                goodlang.app@gmail.com
+                            </a>
+                        </strong>{" "}
+                        і ми запропонуємо спеціальні умови для індивідуальних користувачів та окремі програми
                         для учбових закладів, викладачів і навчальних груп.
                     </p>
 
                     <h3>5. Хто ми?</h3>
                     <p>
                         Юля та Артем — ентузіасти, які постійно розвивають сервіс.
-                        Ми уважно ставимося до фідбеку і попереду маємо багато крутих фіч. Чогось бракує в <strong>GoodLang</strong>? Напишіть нам на <strong><a style={{color: theme.accent, textDecoration: "none"}}
-                                                                                                                      href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a></strong>
+                        Ми уважно ставимося до фідбеку і попереду маємо багато крутих фіч.
+                        Чогось бракує в <strong>GoodLang</strong>? Напишіть нам на{" "}
+                        <strong>
+                            <a
+                                style={{ color: theme.accent, textDecoration: "none" }}
+                                href="mailto:goodlang.app@gmail.com"
+                            >
+                                goodlang.app@gmail.com
+                            </a>
+                        </strong>
                     </p>
                 </div>
 
