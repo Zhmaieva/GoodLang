@@ -4,7 +4,7 @@ import {getPromoCode} from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 const STORAGE_KEY_APP_VERSION = "app_version";
-const CLIENT_APP_VERSION = "1.2.1"; // hardcoded client version
+const CLIENT_APP_VERSION = "1.2.2"; // hardcoded client version
 
 export async function callCheckoutApi() {
     const url = `${API_BASE}/payments/create-checkout-session`;
