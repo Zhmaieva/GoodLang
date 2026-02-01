@@ -19,6 +19,10 @@ export default function LandingPageMarathon({ theme }) {
 
     const [ctaLoading, setCtaLoading] = useState(false);
 
+    // "Як працює" chart animation
+    const scaleRef = useRef(null);
+    const [scaleVisible, setScaleVisible] = useState(false);
+
     const hasScrolledRef = useRef(false);
 
     const startFreeDay1 = async () => {
@@ -60,6 +64,23 @@ export default function LandingPageMarathon({ theme }) {
 
         window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    // Animate the scale bars when user scrolls to the chart
+    useEffect(() => {
+        const el = scaleRef.current;
+        if (!el) return;
+
+        const obs = new IntersectionObserver(
+            (entries) => {
+                const first = entries[0];
+                if (first?.isIntersecting) setScaleVisible(true);
+            },
+            { threshold: 0.35 }
+        );
+
+        obs.observe(el);
+        return () => obs.disconnect();
     }, []);
 
     const submitEmail = async () => {
@@ -150,6 +171,7 @@ html{ scroll-behavior: smooth; }
   grid-template-columns: 1fr 1fr;
   width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 /* left hero */
@@ -431,6 +453,108 @@ html{ scroll-behavior: smooth; }
 /* =========================
    HOW
 ========================= */
+.scaleWrap{
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.scaleTitle{
+  margin: 0;
+  font-family: var(--font-soft);
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.scaleIntro{
+  margin: 8px 0 0 0;
+  font-family: var(--font-soft);
+  font-weight: 300;
+  line-height: 1.35;
+  color: #3a2a1d;
+  font-size: 14px;
+}
+
+.scaleRows{ margin-top: 14px; display: grid; gap: 14px; }
+
+.scaleRow{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.scaleLabel{
+  font-family: var(--font-soft);
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.scaleSub{
+  margin-top: 4px;
+  font-family: var(--font-soft);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.25;
+  opacity: 0.75;
+}
+
+.scaleTrack{
+  position: relative;
+  height: 24px;
+  border: var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-btn);
+  background: #fffdf8;
+  overflow: hidden;
+}
+
+.scaleFill{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 900ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scaleValue{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-family: var(--font-soft);
+  font-weight: 900;
+  font-size: 12px;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.scaleLinks{
+  font-family: var(--font-soft);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #3a2a1d;
+  opacity: 0.85;
+}
+
+.scaleLinks a{
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.scaleOutro{
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
 .howGrid{
   margin-top: 26px;
   display: grid;
@@ -698,12 +822,14 @@ html{ scroll-behavior: smooth; }
 ========================= */
 @media (max-width: 1050px){
   .featuresGrid{ grid-template-columns: repeat(1, 1fr); }
+  .scaleRow{ grid-template-columns: 1fr; gap: 10px; }
   .howGrid{ grid-template-columns: 1fr; }
   .modesGrid{ grid-template-columns: 1fr; }
   .testimonialsGrid{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1150px){
+  .divider{display:none}
   .landing{ grid-template-columns: 1fr; }
   .right{
     align-items: center;
@@ -737,8 +863,8 @@ html{ scroll-behavior: smooth; }
                 <div className="left" style={{zIndex: 10}}>
                     <div className="textBlock">
                         <h1 className="title">
-                            ➤ марафон перекладу<br/>
-                            ➤ 16-34 речення в день<br/>
+                            ➤ марафон англійської<br/>
+                            ➤ 7 днів навчання<br/>
                             ➤ 7 правил граматики<br/>
                             <em class="hint-text">Пропуск дня = кінець марафону.<br/>
                                 Стартуй знову в наступному циклі.</em>
@@ -800,7 +926,7 @@ html{ scroll-behavior: smooth; }
                                 <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
                                     {ctaLoading ? "Відкриваю..." : "Оцінити рівень і почати марафон"}
                                 </button>
-                                <button className="secondaryBtn" onClick={() => scrollTo("how")}>
+                                <button className="secondaryBtn" onClick={() => scrollTo("why")}>
                                     Як це працює?
                                 </button>
                             </div>
@@ -815,19 +941,123 @@ html{ scroll-behavior: smooth; }
 
             <div className="divider"/>
 
+            <section className="section" id="why">
+                <div className="sectionInner">
+                    {/* SCALE CHART */}
+                    <h2 className="sectionTitle">Вчися продуктивно</h2>
+                    <p className="sectionLead">
+                        Доведена дієвість методу, підтверджена батьма дослідженнями. Переклад в з нативної мови на цільову з
+                        фідбеком є найефективнішою формою навчання. Не вір на слово, переконайся:
+                    </p>
+                    <div className="scaleLinks">
+                        <div style={{marginTop: 6, display: "flex", flexWrap: "wrap", gap: 10}}>
+                            <a
+                                href="https://onlinelibrary.wiley.com/doi/10.1111/0023-8333.00136"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Norris & Ortega — effect sizes
+                            </a>
+                            <a
+                                href="https://www.hpu.edu/research-publications/tesol-working-papers/2017/2017-new-with-metadata/06pannellpartschfuller_output.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Swain — output / form–meaning
+                            </a>
+                            <a
+                                href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/896AFFA93A6703A70E22C0187E3C34CB/S026144482200012Xa.pdf/rod-elliss-essential-bookshelf-focus-on-form.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Ellis — focus on form
+                            </a>
+                            <a
+                                href="https://psychnet.wustl.edu/memory/wp-content/uploads/2018/04/Roediger-Karpicke-2006_PPS.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Delayed post-tests — retention
+                            </a>
+                        </div>
+
+                        <div className="scaleOutro">
+                            Саме тому в марафоні: <strong style={{fontWeight: 800}}>переклад + фідбек</strong> +
+                            щоденне повторення.  <strong style={{fontWeight: 800}}>Це не модно, не просто, але це
+                            працює.</strong>
+                        </div>
+                    </div>
+                    <div className="scaleWrap" ref={scaleRef}>
+                        <div className="scaleTitle">Ефективність форм завдань (по шкалі від 1 до 10)</div>
+                        {(() => {
+                            const items = [
+                                {
+                                    label: "Читання / аудіювання",
+                                    sub: "Тренує лише сприйняття інформації",
+                                    value: 3,
+                                    opacity: .55
+                                },
+                                {
+                                    label: "Механічні завдання (пропуски/поєднання)",
+                                    sub: "Практика у штучних рамках без прикладної складової",
+                                    value: 5,
+                                    opacity: .65
+                                },
+                                {
+                                    label: "Комунікація (розмова, письмо)",
+                                    sub: "Зосередження на загальному значенні, з оминанням точного перекладу",
+                                    value: 7,
+                                    opacity: .75
+                                },
+                                {
+                                    label: "Переклад з фідбеком",
+                                    sub: "Вміння чітко формулювати думки і будувати речення",
+                                    value: 9,
+                                    opacity: 1
+                                },
+                            ];
+
+                            return (
+                                <div className="scaleRows">
+                                    {items.map((it) => (
+                                        <div className="scaleRow" style={{
+                                            opacity: it.opacity
+                                        }} key={it.label}>
+                                            <div>
+                                                <div className="scaleLabel">{it.label}</div>
+                                                <div className="scaleSub">{it.sub}</div>
+                                            </div>
+
+                                            <div className="scaleTrack" aria-label={`${it.label}: ${it.value}/10`}>
+                                                <div
+                                                    className="scaleFill"
+                                                    style={{width: scaleVisible ? `${Math.max(0, Math.min(10, it.value)) * 10}%` : "0%"}}
+                                                />
+                                                <div className="scaleValue">{it.value}/10</div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+                        })()}
+                    </div>
+                </div>
+            </section>
+
             {/* INSIDE */}
             <section className="section" id="inside">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Що всередині марафону</h2>
                     <p className="sectionLead">
                         Кожен день — 16-34 речення на переклад з української на англійську. Миттєвий фідбек по помилкам.
-                        Також додаткова практика там, де часто помиляєшся: маєш закрити прогалини до дедлайну. Після виконання завдань, можеш тренуватися скільки завгодно до кінця дня у вільному режимі.
+                        Також додаткова практика там, де часто помиляєшся: маєш закрити прогалини до дедлайну. Після
+                        виконання завдань, можеш тренуватися скільки завгодно до кінця дня у вільному режимі.
                     </p>
 
                     <div className="featuresGrid">
                         <div className="featureCard">
                             <div className="featureIconRow">
-                                <img src={hand3} className="featureIcon" alt="" />
+                                <img src={hand3} className="featureIcon" alt=""/>
                                 <div className="featureTitle">Вивчені правила</div>
                             </div>
                             <p className="featureText">
@@ -837,35 +1067,35 @@ html{ scroll-behavior: smooth; }
 
                         <div className="featureCard">
                             <div className="featureIconRow">
-                                <img src={hand1} className="featureIcon" alt="" />
+                                <img src={hand1} className="featureIcon" alt=""/>
                                 <div className="featureTitle">Практика перекладу</div>
                             </div>
                             <p className="featureText">
-                                Українська → англійська. Миттєвий фідбек і пояснення “чому так”, щоб помилка більше не повторювалась.
+                                Українська → англійська. Миттєвий фідбек і пояснення “чому так”, щоб помилка більше не
+                                повторювалась.
                             </p>
                         </div>
 
                         <div className="featureCard">
                             <div className="featureIconRow">
-                                <img src={hand2} className="featureIcon" alt="" />
+                                <img src={hand2} className="featureIcon" alt=""/>
                                 <div className="featureTitle">Повторення щодня</div>
                             </div>
                             <p className="featureText">
-                                Кожен наступний день містить короткий мікс попередніх правил — інтервальна методика з доведеною ефективністю.
+                                Кожен наступний день містить короткий мікс попередніх правил — інтервальна методика з
+                                доведеною ефективністю.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div className="divider" />
-
             {/* HOW */}
             <section className="section" id="how">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Як працює марафон</h2>
                     <p className="sectionLead">
-                        Ти не просто “робиш” якісь завдання. Ти перекладаєш, з української на англійську — і відпрацьовуєш кожне правило на практиці поки не запамʼятаєш як правильно.
+                    Ти не просто “робиш” якісь завдання. Ти перекладаєш, з української на англійську — і відпрацьовуєш кожне правило на практиці поки не запамʼятаєш як правильно.
                     </p>
 
                     <div className="howGrid">
@@ -917,9 +1147,7 @@ html{ scroll-behavior: smooth; }
                 </div>
             </section>
 
-            <div className="divider" />
-
-             {/*PRICE + TERMS */}
+            {/*PRICE + TERMS */}
             <section className="section" id="price">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Скільки це коштує</h2>
@@ -946,8 +1174,6 @@ html{ scroll-behavior: smooth; }
                     </div>
                 </div>
             </section>
-
-            <div className="divider"/>
 
             {/* SOCIAL PROOF */}
             <section className="section" id="proof">
