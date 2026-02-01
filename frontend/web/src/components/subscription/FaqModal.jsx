@@ -1,5 +1,6 @@
-import React from "react";
+import React, {use, useEffect} from "react";
 import { logoStyle } from "./LimitModal.jsx";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 export default function FaqModal({
                                      theme,
@@ -71,8 +72,24 @@ export default function FaqModal({
         width: "100%",
     };
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#faq-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#faq-modal'));
+    }
+
+    useEffect(() => {
+        lockScroll();
+    })
+
     return (
-        <div style={overlayStyle} onClick={onClose}>
+        <div style={overlayStyle} onClick={() => {
+            unlockScroll();
+            onClose();
+        }}>
             <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
                 <div style={{
                     marginBottom: 16,
@@ -103,7 +120,7 @@ export default function FaqModal({
                     <div style={logoStyle(64)}>GL</div>
                 </div>
 
-                <div style={contentStyle}>
+                <div id={"faq-modal"} style={contentStyle}>
                     <h3 style={{ marginTop: 0 }}>1. Що це?</h3>
                     <p>
                         <strong>GoodLang</strong> — це персональний тренажер англійської мови, який допомагає
@@ -161,7 +178,10 @@ export default function FaqModal({
                 </div>
 
                 <div style={{ marginTop: 16 }}>
-                    <button style={closeBtn} onClick={onClose}>
+                    <button style={closeBtn} onClick={() => {
+                        unlockScroll();
+                        onClose();
+                    }}>
                         Добре
                     </button>
                 </div>

@@ -1,14 +1,42 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {callManageSubscriptionApi} from "../../services/api.js";
 import LoginModal from "./LoginModal.jsx";
 import {logoStyle} from "./LimitModal.jsx";
 import {fmtDate} from "../pages/analyticsLogic.js";
-import {marathonService} from "../../services/marathonService.js"; // ✅ adjust path if needed
+import {marathonService} from "../../services/marathonService.js";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock"; // ✅ adjust path if needed
 
 
 export default function AccountStatusModal({ accountInfo, theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [account, setAccount] = useState(accountInfo);
+
+    const onManage = async () => {
+        try {
+            const { url } = await callManageSubscriptionApi();
+            window.open(url, "_blank"); // open in new tab
+        } catch (e) {
+            console.error("Failed to open subscription management", e);
+        }
+    }
+
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#acc-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#acc-modal'));
+    }
+
+    const onCloseHandler = () => {
+        unlockScroll();
+        onClose();
+    }
+
+    useEffect(() => {
+        lockScroll();
+    });
 
     if (!open) return null;
 
@@ -35,20 +63,11 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
         transition: "transform 120ms ease",
     };
 
-    const onManage = async () => {
-        try {
-            const { url } = await callManageSubscriptionApi();
-            window.open(url, "_blank"); // open in new tab
-        } catch (e) {
-            console.error("Failed to open subscription management", e);
-        }
-    }
-
     return (
         <>
             {
                 !loginModalOpen &&
-                <div onClick={onClose} style={{
+                <div id={'acc-modal'} onClick={onCloseHandler} style={{
                     position: "fixed",
                     top: 0, left: 0,
                     width: "100%",
@@ -100,7 +119,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             {
                                 !account?.email && <div></div>
                             }
-                            <p onClick={onClose} style={{
+                            <p onClick={onCloseHandler} style={{
                                 marginBottom: 16,
                                 marginTop: -22,
                                 marginLeft: 0,
@@ -253,7 +272,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                     <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen}
                                 onClose={() => {
                                     setLoginModalOpen(false);
-                                    onClose();
+                                    onCloseHandler();
                                 }
                                 }/>
                 </div>
