@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import {logoStyle} from "./LimitModal.jsx";
 import {theme} from "../../App.jsx";
+import {callAccountVerifyApi} from "../../services/api.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 export default function PaymentCancel() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        callAccountVerifyApi(ACTION_TYPES.ERROR_PURCHASE_MARATHON).then();
+    })
 
     return (
         <div className="container" style={{ maxWidth: 380, display: "flex", alignItems: "center", justifyContent: "center" }}>

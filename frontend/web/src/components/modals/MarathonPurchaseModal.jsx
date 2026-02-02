@@ -2,10 +2,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import LoginModal from "../subscription/LoginModal.jsx"; // adjust path if needed
 import { setPaymentIntent } from "../../services/dataService.js";
-import { callCheckoutMarathonApi } from "../../services/api.js";
+import {callAccountVerifyApi, callCheckoutMarathonApi} from "../../services/api.js";
 import { getStripe } from "../subscription/LimitModal.jsx";
 import MarathonPlanner from "../training/MarathonPlanner.jsx";
-import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock"; // ✅ reuse same Stripe singleton loader
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import {ACTION_TYPES} from "../../utils/constants.js"; // ✅ reuse same Stripe singleton loader
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -145,7 +146,12 @@ export default function MarathonPurchaseModal({
     };
 
     const handleStart = async () => {
-        await startCheckoutFlow();
+        try {
+            callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_PURCHASE).then();
+            await startCheckoutFlow();
+        } catch (e) {
+            callAccountVerifyApi(ACTION_TYPES.ERROR_PURCHASE_MARATHON).then();
+        }
     };
 
     return (

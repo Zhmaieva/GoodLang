@@ -119,6 +119,11 @@ export const paymentsController = {
 
                 return res.json({ clientSecret: session.client_secret });
             } catch (err) {
+                try {
+                    await recordAction(req?.user?.id, ACTION_TYPES.ERROR_PURCHASE_MARATHON);
+                } catch (e) {
+                    console.error("Error logging payment error", err);
+                }
                 console.error("Stripe error:", err);
                 res.status(500).json({ error: "Failed to create session" });
             }
@@ -167,6 +172,12 @@ export const paymentsController = {
                 const session = await stripe.checkout.sessions.create(sessionParams);
                 return res.json({ clientSecret: session.client_secret });
             } catch (err) {
+                try {
+                    await recordAction(req?.user?.id, ACTION_TYPES.ERROR_PURCHASE_MARATHON);
+                } catch (e) {
+                    console.error("Error logging payment error", err);
+                }
+
                 console.error("Stripe error (marathon checkout):", err);
                 res.status(500).json({ error: "Failed to create marathon checkout session" });
             }

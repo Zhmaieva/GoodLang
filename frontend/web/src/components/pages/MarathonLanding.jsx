@@ -28,14 +28,28 @@ export default function LandingPageMarathon({ theme }) {
     const startFreeDay1 = async () => {
         try {
             setCtaLoading(true);
-            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_START_FREE_DAY1);
+            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_START_USING);
             setTimeout(() => navigate("/"), 150);
         } finally {
             setCtaLoading(false);
         }
     };
 
-    const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const scrollTo = async (id) => {
+        if (id === 'why') {
+            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_WHY);
+        }
+
+        if (id === 'price') {
+            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_PRICE);
+        }
+
+        if (id === 'inside') {
+            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_WHATS_INSIDE);
+        }
+
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
 
     useEffect(() => {
         setTimeout(async () => {
@@ -80,25 +94,25 @@ export default function LandingPageMarathon({ theme }) {
         return () => obs.disconnect();
     }, []);
 
-    const submitEmail = async () => {
-        const v = String(email || "").trim();
-        if (!/^\S+@\S+\.\S+$/.test(v)) {
-            setMsg("Введіть правильний імейл");
-            return;
-        }
-        try {
-            setSending(true);
-            setMsg("");
-            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_PROMO_REQUEST);
-            await callSendPromoCodeApi({ email: v });
-            setMsg("Готово! Ми відправили промо код на вказану адресу.");
-            setEmail("");
-        } catch {
-            setMsg("Ой, помилка... Ми вже її виправляємо.");
-        } finally {
-            setSending(false);
-        }
-    };
+    // const submitEmail = async () => {
+    //     const v = String(email || "").trim();
+    //     if (!/^\S+@\S+\.\S+$/.test(v)) {
+    //         setMsg("Введіть правильний імейл");
+    //         return;
+    //     }
+    //     try {
+    //         setSending(true);
+    //         setMsg("");
+    //         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_PROMO_REQUEST);
+    //         await callSendPromoCodeApi({ email: v });
+    //         setMsg("Готово! Ми відправили промо код на вказану адресу.");
+    //         setEmail("");
+    //     } catch {
+    //         setMsg("Ой, помилка... Ми вже її виправляємо.");
+    //     } finally {
+    //         setSending(false);
+    //     }
+    // };
 
     return (
         <>

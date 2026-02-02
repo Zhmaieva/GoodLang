@@ -5,6 +5,8 @@ import {getOverallAccuracy, getPaymentIntent, inferUserLevel, setPaymentIntent} 
 import MarathonPurchaseModal from "./MarathonPurchaseModal.jsx";
 import {normalizeLevel} from "../training/MarathonPlanner.jsx";
 import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
+import {callAccountVerifyApi} from "../../services/api.js";
+import {ACTION_TYPES} from "../../utils/constants.js";
 
 
 const logoStyle = (size, theme) => ({
@@ -134,6 +136,8 @@ export default function MarathonInfoModal({
     const handleStart = async () => {
         // Like LimitModal:
         // if no email -> login flow; else -> purchase
+        callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_START).then();
+
         if (!hasEmail) {
             openLoginFlow();
             return;
