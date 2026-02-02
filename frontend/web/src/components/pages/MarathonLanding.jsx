@@ -29,9 +29,6 @@ export default function LandingPageMarathon({ theme }) {
         try {
             setCtaLoading(true);
             await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_START_FREE_DAY1);
-
-            // ✅ adjust route as needed
-            // e.g. /marathon?start=1 or /marathon/day/1
             setTimeout(() => navigate("/"), 150);
         } finally {
             setCtaLoading(false);
@@ -545,7 +542,7 @@ html{ scroll-behavior: smooth; }
 
 .scaleLinks a{
   color: var(--ink);
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
@@ -630,7 +627,75 @@ html{ scroll-behavior: smooth; }
 }
 
 /* =========================
-   MODES
+   PRICING: COMPARISON TABLE
+========================= */
+.compareTitle{
+  margin: 0 0 10px 0;
+  font-family: var(--font-soft);
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.compareWrap{
+  width: 100%;
+  overflow-x: hidden;
+  border: var(--border);
+  box-shadow: var(--shadow-btn);
+  border-radius: var(--radius);
+}
+
+.compareTable{
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-family: var(--font-soft);
+}
+
+.compareTable th,
+.compareTable td{
+  width: 25%;
+  border-bottom: 1px solid rgba(0,0,0,0.14);
+  padding: 12px 6px;
+  text-align: left;
+  vertical-align: top;
+  font-size: clamp(.65rem, 2vw, 1rem);
+  line-height: 1.25;
+}
+
+.compareTable th{
+  background: var(--accent);
+  font-weight: 900;
+  border-bottom: 2px solid rgba(0,0,0,0.35);
+}
+
+.compareTable td:last-child{
+  font-weight: 800;
+}
+
+.compareTable td:first-child{
+  font-weight: 800;
+}
+
+.rowWhite{ background: #fff; }
+.rowOrange{ 
+background: #fe6037; 
+color: #fff;
+}
+
+.tick{
+  font-weight: 900;
+}
+.dim{
+  opacity: 0.8;
+}
+
+.hint-text {
+  font-size: 0.7em;
+}
+
+/* =========================
+   MODES / TESTIMONIALS / CTA / FOOTER / RESPONSIVE
+   (unchanged)
 ========================= */
 .modesGrid{
   margin-top: 26px;
@@ -673,9 +738,6 @@ html{ scroll-behavior: smooth; }
   color: #3a2a1d;
 }
 
-/* =========================
-   TESTIMONIALS
-========================= */
 .testimonialsGrid{
   margin-top: 26px;
   display: grid;
@@ -817,9 +879,6 @@ html{ scroll-behavior: smooth; }
   text-decoration: none;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 @media (max-width: 1050px){
   .featuresGrid{ grid-template-columns: repeat(1, 1fr); }
   .scaleRow{ grid-template-columns: 1fr; gap: 10px; }
@@ -842,7 +901,7 @@ html{ scroll-behavior: smooth; }
     gap: 12px;
   }
   .handPointer{ width: 64px; }
-    .desktop{display: none}
+  .desktop{display: none}
 }
 
 @media (min-width: 1150px){
@@ -855,7 +914,6 @@ html{ scroll-behavior: smooth; }
   .ctaButtons{ flex-direction: column; }
   .footerInner{ flex-direction: column; align-items: flex-start; gap: 6px; }
 }
-
       `}</style>
 
             {/* HERO */}
@@ -902,7 +960,9 @@ html{ scroll-behavior: smooth; }
                     <div className="heroStack">
                         <div className="heroCard">
                             <p className="heroCardText">
-                                <strong style={{fontSize: "2rem", fontWeight: 800}}>Це непросто, проте дієво</strong>
+                                <strong style={{fontSize: "2rem", fontWeight: 800}}>Це складно,</strong>
+                                <br/>
+                                <strong style={{fontSize: "2rem", fontWeight: 800}}>проте дієво</strong>
                             </p>
                             <p className="heroCardText">
                                 <strong style={{fontWeight: 800}}>Марафон</strong> побудований як “наростаюча хвиля”:
@@ -922,7 +982,7 @@ html{ scroll-behavior: smooth; }
 
                             <div className="heroBtns">
                                 <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                    {ctaLoading ? "Відкриваю..." : "Оцінити рівень і почати марафон"}
+                                    {"Оцінити рівень і почати марафон"}
                                 </button>
                                 <button className="secondaryBtn" onClick={() => scrollTo("why")}>
                                     Як це працює?
@@ -943,47 +1003,6 @@ html{ scroll-behavior: smooth; }
                 <div className="sectionInner">
                     {/* SCALE CHART */}
                     <h2 className="sectionTitle">Вчися продуктивно</h2>
-                    <p className="sectionLead">
-                        <strong style={{fontWeight: 800}}>Переклад тексту є найефективнішою формою навчання.</strong> Доведена дієвість методу, підтверджена батьма дослідженнями. Не вір на слово, переконайся:
-                    </p>
-                    <div className="scaleLinks">
-                        <div style={{marginTop: 6, display: "flex", flexWrap: "wrap", gap: 10}}>
-                            <a
-                                href="https://onlinelibrary.wiley.com/doi/10.1111/0023-8333.00136"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Norris & Ortega — effect sizes
-                            </a>
-                            <a
-                                href="https://www.hpu.edu/research-publications/tesol-working-papers/2017/2017-new-with-metadata/06pannellpartschfuller_output.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Swain — output / form–meaning
-                            </a>
-                            <a
-                                href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/896AFFA93A6703A70E22C0187E3C34CB/S026144482200012Xa.pdf/rod-elliss-essential-bookshelf-focus-on-form.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Ellis — focus on form
-                            </a>
-                            <a
-                                href="https://psychnet.wustl.edu/memory/wp-content/uploads/2018/04/Roediger-Karpicke-2006_PPS.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Delayed post-tests — retention
-                            </a>
-                        </div>
-
-                        <div className="scaleOutro">
-                            Саме тому в марафоні <strong style={{fontWeight: 800}}>переклад + фідбек</strong> +
-                            щоденне повторення.  <strong style={{fontWeight: 800}}>Це незвично, це непросто, але це
-                            працює.</strong>
-                        </div>
-                    </div>
                     <div className="scaleWrap" ref={scaleRef}>
                         <div className="scaleTitle">Ефективність форм завдань (по шкалі від 1 до 10)</div>
                         {(() => {
@@ -1038,6 +1057,54 @@ html{ scroll-behavior: smooth; }
                             );
                         })()}
                     </div>
+
+                    <p className="sectionLead" style={{marginTop: 20}}>
+                        <strong style={{fontWeight: 800}}>Переклад тексту є найефективнішою формою навчання.</strong> Не
+                        вір на слово, переконайся:
+                    </p>
+                    <div className="scaleLinks">
+                        <div style={{marginTop: 6, display: "flex", flexWrap: "wrap", gap: 10}}>
+                            <a
+                                className="secondaryBtn"
+                                href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/896AFFA93A6703A70E22C0187E3C34CB/S026144482200012Xa.pdf/rod-elliss-essential-bookshelf-focus-on-form.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Ellis — focus on form
+                            </a>
+                            <a
+                                className="secondaryBtn"
+                                href="http://psychnet.wustl.edu/memory/wp-content/uploads/2018/04/Roediger-Karpicke-2006_PPS.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Delayed post-tests — retention
+                            </a>
+                            <a
+                                className="secondaryBtn"
+                                href="https://onlinelibrary.wiley.com/doi/10.1111/0023-8333.00136"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Norris & Ortega — effect sizes
+                            </a>
+                            <a
+                                className="secondaryBtn"
+                                href="https://www.hpu.edu/research-publications/tesol-working-papers/2017/2017-new-with-metadata/06pannellpartschfuller_output.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Swain — output / form–meaning
+                            </a>
+                        </div>
+
+                        <div className="sectionLead">
+                            Саме тому в марафоні <strong style={{fontWeight: 800}}>переклад + фідбек</strong> +
+                            щоденне повторення. <strong style={{fontWeight: 800}}>Це незвично, це непросто, але це
+                            працює.</strong>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -1046,7 +1113,8 @@ html{ scroll-behavior: smooth; }
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Як працює марафон</h2>
                     <p className="sectionLead">
-                        Ти не просто “робиш” якісь завдання. Ти перекладаєш, з української на англійську — і відпрацьовуєш кожне правило на практиці поки не запамʼятаєш як правильно.
+                        Ти не просто “робиш” якісь завдання. Ти перекладаєш, з української на англійську — і
+                        відпрацьовуєш кожне правило на практиці поки не запамʼятаєш як правильно.
                     </p>
 
                     <div className="howGrid">
@@ -1065,7 +1133,8 @@ html{ scroll-behavior: smooth; }
                                 <div className="stepNum">2</div>
                                 <div>
                                     <p className="stepTitle">День 2</p>
-                                    <p className="stepText">Правило #2: <strong style={{fontWeight: 800}}>16+ речень</strong> і
+                                    <p className="stepText">Правило #2: <strong style={{fontWeight: 800}}>16+
+                                        речень</strong> і
                                         повторення</p>
                                 </div>
                             </div>
@@ -1078,9 +1147,9 @@ html{ scroll-behavior: smooth; }
                                 </div>
                             </div>
 
-                            <div style={{ marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap" }}>
+                            <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
                                 <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                    {ctaLoading ? "Відкриваю..." : "Оцінити рівень і почати марафон"}
+                                    {"Оцінити рівень і почати марафон"}
                                 </button>
                                 <button className="secondaryBtn" onClick={() => scrollTo("price")}>
                                     Ціна і умови
@@ -1088,12 +1157,13 @@ html{ scroll-behavior: smooth; }
                             </div>
                         </div>
 
-                        {/*<div className="videoBox">*/}
-                        {/*    /!* Replace with your marathon preview video if you have one *!/*/}
-                        {/*    <img*/}
-                        {/*        src={marathonPict}*/}
-                        {/*    />*/}
-                        {/*</div>*/}
+
+                        <div className="videoBox">
+                            {/* Replace with your marathon preview video if you have one */}
+                            <img
+                                src={marathonPict}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1103,7 +1173,7 @@ html{ scroll-behavior: smooth; }
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Що всередині марафону</h2>
                     <p className="sectionLead">
-                        Кожен день — 16-34 речення на переклад з української на англійську. Миттєвий фідбек по помилкам.
+                        Кожен день — від 16 до 34 речень на переклад з української на англійську. Миттєвий фідбек по помилкам.
                         Також додаткова практика там, де часто помиляєшся: маєш закрити прогалини до дедлайну. Після
                         виконання завдань, можеш тренуватися скільки завгодно до кінця дня у вільному режимі.
                     </p>
@@ -1149,21 +1219,82 @@ html{ scroll-behavior: smooth; }
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Скільки це коштує</h2>
 
-                    <div style={{marginTop: 18}} className="stepsCard">
-                        <p className="stepTitle" style={{margin: 0}}>
+                    <div style={{ marginTop: 18 }} className="stepsCard">
+                        {/* ✅ NEW: Comparison table at the top */}
+                        <p className="compareTitle">Порівняння цін і можливостей</p>
+
+                        <div className="compareWrap" style={{
+
+                        }} aria-label="comparison table">
+                            <table className="compareTable">
+                                <thead style={{backgroundColor: "rosybrown"}}>
+                                <tr>
+                                    <th></th>
+                                    <th>Посібник</th>
+                                    <th>Репетитор</th>
+                                    <th>GoodLang</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr className="rowWhite">
+                                    <td><span className="dim">Стартова ціна</span></td>
+                                    <td><span className="dim">від 600₴</span></td>
+                                    <td><span className="dim">від 250₴ за годину</span></td>
+                                    <td><span className="dim">безкоштовно*</span></td>
+                                </tr>
+                                <tr className="rowWhite">
+                                    <td><span className="dim">Інтенсив</span></td>
+                                    <td><span className="dim">відсутній</span></td>
+                                    <td><span className="dim">від 750₴ / 3 години щотижня</span></td>
+                                    <td><span className="dim">500₴ за тиждень марафону 24/7</span></td>
+                                </tr>
+                                <tr className="rowWhite">
+                                    <td><span className="dim">Контроль</span></td>
+                                    <td><span className="dim">відсутній</span></td>
+                                    <td><span className="dim">опціональний</span></td>
+                                    <td><span className="dim">суворий</span></td>
+                                </tr>
+                                <tr className="rowWhite">
+                                    <td><span className="dim">Фідбек</span></td>
+                                    <td><span className="dim">відсутній</span></td>
+                                    <td><span className="dim">під час заняття</span></td>
+                                    <td><span className="dim">завжди</span></td>
+                                </tr>
+                                <tr className="rowWhite">
+                                    <td><span className="dim">Відстеження прогресу</span></td>
+                                    <td><span className="dim">відсутнє</span></td>
+                                    <td><span className="dim">відсутнє</span></td>
+                                    <td><span className="dim">безкоштовно</span></td>
+                                </tr>
+                                <tr className="rowWhite">
+                                    <td><span className="dim">Кількість завдань</span></td>
+                                    <td><span className="dim">фіксована</span></td>
+                                    <td><span className="dim">обмежена в рамках заняття</span></td>
+                                    <td><span className="dim">необмежена</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        {/* existing content */}
+                        <p className="stepTitle" style={{margin: "16px 0 0 0"}}>
                             Умови коротко
                         </p>
                         <ul className="miniList" style={{marginTop: 10}}>
-                            <li>Безкоштовна оцінка рівня і коротка щоденна практика</li>
                             <li>Інтенсивний марафон: 500 грн / 7 днів.</li>
-                            <li>Пропуск дня закриває марафон - навчання безкомпромісне але дієве; можна стартувати з наступного циклу.
+                            <li>Пропуск дня закриває марафон - навчання безкомпромісне але дієве; можна стартувати з
+                                наступного циклу.
                             </li>
                         </ul>
 
+                        <p className="miniList" style={{padding: 0}}>
+                            * Безкоштовна оцінка рівня і коротка щоденна практика в кілька речень.
+                        </p>
+
                         <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
-                            <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
-                                {ctaLoading ? "Відкриваю..." : "Оцінити рівень і почати марафон"}
-                            </button>
+                        <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
+                            {"Оцінити рівень і почати марафон"}
+                        </button>
                             <button className="secondaryBtn" onClick={() => setTouOpen(true)}>
                                 Умови використання
                             </button>
