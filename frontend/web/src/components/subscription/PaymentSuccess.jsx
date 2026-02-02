@@ -4,6 +4,7 @@ import {logoStyle} from "./LimitModal.jsx";
 import {theme} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
 import {syncPrevAccountInfoToLS} from "../../services/marathonService.js";
+import {trackMetaEvent} from "../../services/gaService.js";
 
 export default function PaymentSuccess() {
     const navigate = useNavigate();
@@ -24,6 +25,11 @@ export default function PaymentSuccess() {
 
         setPaymentIntent(false);
         localStorage.removeItem("paymentIntentType");
+
+        if (!localStorage.getItem("purchase")) {
+            localStorage.setItem("purchase", "true")
+            trackMetaEvent("Purchase");
+        }
     }, []);
 
     const isTeacher = useMemo(() => {
