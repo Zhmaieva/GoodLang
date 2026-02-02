@@ -155,7 +155,7 @@ html{ scroll-behavior: smooth; }
   background: var(--bg);
   display: flex;
   justify-content: center;
-  padding: 56px 16px;
+  padding: 26px 16px;
 }
 
 .sectionInner,
@@ -891,7 +891,7 @@ html{ scroll-behavior: smooth; }
                         <button className="topNavBtn" onClick={() => scrollTo("inside")}>
                             що всередині
                         </button>
-                        <button className="topNavBtn" onClick={() => scrollTo("how")}>
+                        <button className="topNavBtn" onClick={() => scrollTo("why")}>
                             як працює
                         </button>
                         <button className="topNavBtn" onClick={() => scrollTo("price")}>
@@ -902,14 +902,12 @@ html{ scroll-behavior: smooth; }
                     <div className="heroStack">
                         <div className="heroCard">
                             <p className="heroCardText">
+                                <strong style={{fontSize: "2rem", fontWeight: 800}}>Це непросто, проте дієво</strong>
+                            </p>
+                            <p className="heroCardText">
                                 <strong style={{fontWeight: 800}}>Марафон</strong> побудований як “наростаюча хвиля”:
                                 щодня новий набір речень підібраних під <strong style={{fontWeight: 800}}>твій
                                 рівень</strong>.
-                            </p>
-
-                            <p className="heroCardText">
-                                <strong style={{fontWeight: 800}}>Це складно</strong>, але ефективність цього методу
-                                доведена
                             </p>
                             <ul className="miniList">
                                 <li><strong style={{fontWeight: 800}}>День 1</strong> → Оцінка рівня + Правило 1</li>
@@ -946,8 +944,7 @@ html{ scroll-behavior: smooth; }
                     {/* SCALE CHART */}
                     <h2 className="sectionTitle">Вчися продуктивно</h2>
                     <p className="sectionLead">
-                        Доведена дієвість методу, підтверджена батьма дослідженнями. Переклад в з нативної мови на цільову з
-                        фідбеком є найефективнішою формою навчання. Не вір на слово, переконайся:
+                        <strong style={{fontWeight: 800}}>Переклад тексту є найефективнішою формою навчання.</strong> Доведена дієвість методу, підтверджена батьма дослідженнями. Не вір на слово, переконайся:
                     </p>
                     <div className="scaleLinks">
                         <div style={{marginTop: 6, display: "flex", flexWrap: "wrap", gap: 10}}>
@@ -982,8 +979,8 @@ html{ scroll-behavior: smooth; }
                         </div>
 
                         <div className="scaleOutro">
-                            Саме тому в марафоні: <strong style={{fontWeight: 800}}>переклад + фідбек</strong> +
-                            щоденне повторення.  <strong style={{fontWeight: 800}}>Це не модно, не просто, але це
+                            Саме тому в марафоні <strong style={{fontWeight: 800}}>переклад + фідбек</strong> +
+                            щоденне повторення.  <strong style={{fontWeight: 800}}>Це незвично, це непросто, але це
                             працює.</strong>
                         </div>
                     </div>
@@ -1044,58 +1041,12 @@ html{ scroll-behavior: smooth; }
                 </div>
             </section>
 
-            {/* INSIDE */}
-            <section className="section" id="inside">
-                <div className="sectionInner">
-                    <h2 className="sectionTitle">Що всередині марафону</h2>
-                    <p className="sectionLead">
-                        Кожен день — 16-34 речення на переклад з української на англійську. Миттєвий фідбек по помилкам.
-                        Також додаткова практика там, де часто помиляєшся: маєш закрити прогалини до дедлайну. Після
-                        виконання завдань, можеш тренуватися скільки завгодно до кінця дня у вільному режимі.
-                    </p>
-
-                    <div className="featuresGrid">
-                        <div className="featureCard">
-                            <div className="featureIconRow">
-                                <img src={hand3} className="featureIcon" alt=""/>
-                                <div className="featureTitle">Вивчені правила</div>
-                            </div>
-                            <p className="featureText">
-                                По 1 новому правилу щодня - кожне має бути надійно вивчене, інакше вибуваєш з марафону.
-                            </p>
-                        </div>
-
-                        <div className="featureCard">
-                            <div className="featureIconRow">
-                                <img src={hand1} className="featureIcon" alt=""/>
-                                <div className="featureTitle">Практика перекладу</div>
-                            </div>
-                            <p className="featureText">
-                                Українська → англійська. Миттєвий фідбек і пояснення “чому так”, щоб помилка більше не
-                                повторювалась.
-                            </p>
-                        </div>
-
-                        <div className="featureCard">
-                            <div className="featureIconRow">
-                                <img src={hand2} className="featureIcon" alt=""/>
-                                <div className="featureTitle">Повторення щодня</div>
-                            </div>
-                            <p className="featureText">
-                                Кожен наступний день містить короткий мікс попередніх правил — інтервальна методика з
-                                доведеною ефективністю.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* HOW */}
             <section className="section" id="how">
                 <div className="sectionInner">
                     <h2 className="sectionTitle">Як працює марафон</h2>
                     <p className="sectionLead">
-                    Ти не просто “робиш” якісь завдання. Ти перекладаєш, з української на англійську — і відпрацьовуєш кожне правило на практиці поки не запамʼятаєш як правильно.
+                        Ти не просто “робиш” якісь завдання. Ти перекладаєш, з української на англійську — і відпрацьовуєш кожне правило на практиці поки не запамʼятаєш як правильно.
                     </p>
 
                     <div className="howGrid">
@@ -1137,11 +1088,57 @@ html{ scroll-behavior: smooth; }
                             </div>
                         </div>
 
-                        <div className="videoBox">
-                            {/* Replace with your marathon preview video if you have one */}
-                            <img
-                                src={marathonPict}
-                            />
+                        {/*<div className="videoBox">*/}
+                        {/*    /!* Replace with your marathon preview video if you have one *!/*/}
+                        {/*    <img*/}
+                        {/*        src={marathonPict}*/}
+                        {/*    />*/}
+                        {/*</div>*/}
+                    </div>
+                </div>
+            </section>
+
+            {/* INSIDE */}
+            <section className="section" id="inside">
+                <div className="sectionInner">
+                    <h2 className="sectionTitle">Що всередині марафону</h2>
+                    <p className="sectionLead">
+                        Кожен день — 16-34 речення на переклад з української на англійську. Миттєвий фідбек по помилкам.
+                        Також додаткова практика там, де часто помиляєшся: маєш закрити прогалини до дедлайну. Після
+                        виконання завдань, можеш тренуватися скільки завгодно до кінця дня у вільному режимі.
+                    </p>
+
+                    <div className="featuresGrid">
+                        <div className="featureCard">
+                            <div className="featureIconRow">
+                                <img src={hand3} className="featureIcon" alt=""/>
+                                <div className="featureTitle">Вивчені правила</div>
+                            </div>
+                            <p className="featureText">
+                                По 1 новому правилу щодня - кожне має бути надійно вивчене, інакше вибуваєш з марафону.
+                            </p>
+                        </div>
+
+                        <div className="featureCard">
+                            <div className="featureIconRow">
+                                <img src={hand1} className="featureIcon" alt=""/>
+                                <div className="featureTitle">Практика перекладу</div>
+                            </div>
+                            <p className="featureText">
+                                Українська → англійська. Миттєвий фідбек і пояснення “чому так”, щоб помилка більше не
+                                повторювалась.
+                            </p>
+                        </div>
+
+                        <div className="featureCard">
+                            <div className="featureIconRow">
+                                <img src={hand2} className="featureIcon" alt=""/>
+                                <div className="featureTitle">Повторення щодня</div>
+                            </div>
+                            <p className="featureText">
+                                Кожен наступний день містить короткий мікс попередніх правил — інтервальна методика з
+                                доведеною ефективністю.
+                            </p>
                         </div>
                     </div>
                 </div>
