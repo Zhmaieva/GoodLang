@@ -5,8 +5,8 @@ WITH reg_users AS (
         date_trunc('day', created_at) AS reg_day,
         translations_quota
     FROM accounts
-    WHERE created_at >= TIMESTAMP '2026-01-14 00:00:00+00'
-      AND created_at <  TIMESTAMP '2026-02-01 00:00:00+00'
+    WHERE created_at >= TIMESTAMP '2026-02-03 00:00:00+00'
+      AND created_at <  TIMESTAMP '2026-03-01 00:00:00+00'
 ),
      reg_counts AS (
          SELECT
@@ -51,7 +51,18 @@ WITH reg_users AS (
                             (901, 'LANDING_WAIT_10_SECONDS'),
                             (902, 'LANDING_WAIT_20_SECONDS'),
                             (903, 'LANDING_SCROLL_START'),
-                            (500, 'TEACHER_REGISTERED')
+                            (500, 'TEACHER_REGISTERED'),
+                            (216, 'BUTTON_CLICK_MARATHON_START_USING'),
+                            (217, 'BUTTON_CLICK_MARATHON_WHY'),
+                            (218, 'BUTTON_CLICK_MARATHON_WHATS_INSIDE'),
+                            (219, 'BUTTON_CLICK_MARATHON_PRICE'),
+                            (220, 'BUTTON_CLICK_MARATHON_BEFORE_START'),
+                            (221, 'BUTTON_CLICK_MARATHON_START'),
+                            (222, 'BUTTON_CLICK_MARATHON_PURCHASE'),
+                            (2000, 'ERROR_PURCHASE_MARATHON'),
+                            (2001, 'ERROR_TRANSLATOR')
+
+
                        ) AS t(action_type, action_name)
      ),
      activity AS (
@@ -93,57 +104,5 @@ SELECT *
 FROM reg_rows
 
 ORDER BY day DESC, action_name;
-
-
--- account activity
-WITH logs AS (
-    SELECT
-        l.created_at AS log_created_at,
-        l.account_id,
-        l.action_type,
-        ROW_NUMBER() OVER (ORDER BY l.created_at DESC, l.account_id, l.action_type) AS log_row
-    FROM account_log l
-    ORDER BY l.created_at DESC, l.account_id, l.action_type
-    LIMIT 500
-)
-SELECT
-    logs.log_row,
-    logs.log_created_at,
-    logs.account_id,
-    logs.action_type,
-
-    COALESCE(a.email, inq.email) AS resolved_email,
-
-    CASE
-        WHEN a.email IS NOT NULL THEN 'account'
-        WHEN inq.email IS NOT NULL THEN 'inquiry_time_match'
-        ELSE 'unknown'
-        END AS email_source,
-
-    -- debugging fields
-    a.created_at     AS account_created_at,
-    inq.created_at   AS inquiry_created_at,
-    CASE
-        WHEN inq.created_at IS NULL THEN NULL
-        ELSE ABS(EXTRACT(EPOCH FROM (inq.created_at - a.created_at)))
-        END AS account_inquiry_diff_seconds
-
-FROM logs
-         JOIN accounts a
-              ON a.id = logs.account_id
-
-         LEFT JOIN LATERAL (
-    SELECT i.email, i.created_at
-    FROM inquiries i
-    WHERE a.email IS NULL
-      AND i.email IS NOT NULL
-      AND i.created_at BETWEEN a.created_at - INTERVAL '1 minute'
-        AND a.created_at + INTERVAL '1 minute'
-    ORDER BY ABS(EXTRACT(EPOCH FROM (i.created_at - a.created_at))) ASC
-    LIMIT 1
-    ) inq ON TRUE
-
-ORDER BY logs.log_created_at DESC, logs.log_row ASC;
-
 
 
