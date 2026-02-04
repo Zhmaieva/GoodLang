@@ -1,5 +1,6 @@
-import React from "react";
+import React, {use, useEffect} from "react";
 import { logoStyle } from "./LimitModal.jsx";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 export default function FaqModal({
                                      theme,
@@ -12,11 +13,22 @@ export default function FaqModal({
         width: "100%",
         inset: 0,
         height: "100dvh",
-        background: "rgba(0,0,0,0.35)",
+
+        // ✅ blur-only overlay (no darkening)
+        background: "rgba(255,255,255,0)",
+
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         zIndex: 9999,
+
+        // ✅ blur underlying page
+        backdropFilter: "blur(6px)",
+        WebkitBackdropFilter: "blur(6px)",
+
+        // ✅ safe-area padding (consistent with other modals)
+        paddingBottom: "env(safe-area-inset-bottom)",
+        paddingTop: "env(safe-area-inset-top)",
     };
 
     const cardStyle = {
@@ -60,8 +72,24 @@ export default function FaqModal({
         width: "100%",
     };
 
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#faq-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#faq-modal'));
+    }
+
+    useEffect(() => {
+        lockScroll();
+    })
+
     return (
-        <div style={overlayStyle} onClick={onClose}>
+        <div style={overlayStyle} onClick={() => {
+            unlockScroll();
+            onClose();
+        }}>
             <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
                 <div style={{
                     marginBottom: 16,
@@ -92,7 +120,7 @@ export default function FaqModal({
                     <div style={logoStyle(64)}>GL</div>
                 </div>
 
-                <div style={contentStyle}>
+                <div id={"faq-modal"} style={contentStyle}>
                     <h3 style={{ marginTop: 0 }}>1. Що це?</h3>
                     <p>
                         <strong>GoodLang</strong> — це персональний тренажер англійської мови, який допомагає
@@ -110,32 +138,50 @@ export default function FaqModal({
                         щоб побачити реальний прогрес.
                     </p>
 
-                    <h3>3. Чи потрібна мені підписка?</h3>
+                    <h3>3. Чи потрібна мені підписка \ марафон?</h3>
                     <p>
-                        Підписка знімає обмеження на щоденну кількість перекладів
-                        і дає доступ до навчанням з необмеженої
-                        кількості пристроїв.
+                        Підписка та марафон знімають обмеження на щоденну кількість перекладів
+                        і дають доступ до навчанням з необмеженої
+                        кількості пристроїв. Марафон також спонукає вивчати правила,
+                        щоб не втратити доступ до підписки.
                     </p>
 
                     <h3>4. Чи можу я отримати знижку?</h3>
                     <p>
-                        Так.
-
-                        Напишіть нам на <strong><a style={{color: theme.accent, textDecoration: "none"}}
-                                                   href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a></strong> і ми запропонуємо спеціальні умови для індивідуальних користувачів та окремі програми
+                        Так. Напишіть нам на{" "}
+                        <strong>
+                            <a
+                                style={{ color: theme.accent, textDecoration: "none" }}
+                                href="mailto:goodlang.app@gmail.com"
+                            >
+                                goodlang.app@gmail.com
+                            </a>
+                        </strong>{" "}
+                        і ми запропонуємо спеціальні умови для індивідуальних користувачів та окремі програми
                         для учбових закладів, викладачів і навчальних груп.
                     </p>
 
                     <h3>5. Хто ми?</h3>
                     <p>
                         Юля та Артем — ентузіасти, які постійно розвивають сервіс.
-                        Ми уважно ставимося до фідбеку і попереду маємо багато крутих фіч. Чогось бракує в <strong>GoodLang</strong>? Напишіть нам на <strong><a style={{color: theme.accent, textDecoration: "none"}}
-                                                                                                                      href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a></strong>
+                        Ми уважно ставимося до фідбеку і попереду маємо багато крутих фіч.
+                        Чогось бракує в <strong>GoodLang</strong>? Напишіть нам на{" "}
+                        <strong>
+                            <a
+                                style={{ color: theme.accent, textDecoration: "none" }}
+                                href="mailto:goodlang.app@gmail.com"
+                            >
+                                goodlang.app@gmail.com
+                            </a>
+                        </strong>
                     </p>
                 </div>
 
                 <div style={{ marginTop: 16 }}>
-                    <button style={closeBtn} onClick={onClose}>
+                    <button style={closeBtn} onClick={() => {
+                        unlockScroll();
+                        onClose();
+                    }}>
                         Добре
                     </button>
                 </div>

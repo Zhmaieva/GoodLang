@@ -5,15 +5,33 @@ import AccountStatusModal from "./AccountStatusModal.jsx";
 import LoginModal from "./LoginModal.jsx";
 import {logInfo} from "../../services/logger.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
-import {setPromoCode} from "../../services/dataService.js";
+import {
+    getOverallAccuracy,
+    getPaymentIntent,
+    setPromoCode
+} from "../../services/dataService.js";
+import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
+import {disableMarathonFailedModal, isMarathonFailedModalEnabled} from "../../services/marathonService.js";
+import MarathonFailedModal from "../modals/MarathonFailedModal.jsx";
+import {off, on} from "../../services/events.js";
+import MarathonCompletedModal from "../modals/MarathonCompletedModal.jsx";
+import DailyTasksCompletedModal from "../modals/DailyTasksCompletedModal.jsx";
+import DailyTasksNeedMorePracticeModal from "../modals/DailyTasksNeedMorePractiseModal.jsx";
 
 export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
     const [hovered, setHovered] = useState(null);
+
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
+    const [failedModalOpen, setFailedModalOpen] = useState(isMarathonFailedModalEnabled());
+    const [completedModalOpen, setCompletedModalOpen] = useState(false);
+    const [completedDailyModalOpen, setCompletedDailyModalOpen] = useState(false);
+    const [dailyNeedsPracticeModalOpen, setDailyNeedsPracticeModalOpen] = useState(false);
+
     const [subscribeIntent, setSubscribeIntent] = useState(false);
+    const [attemptsLeft, setAttemptsLeft] = useState(1);
 
     const effectRan = useRef(false); // <-- prevents double run
 
@@ -25,12 +43,50 @@ export default function AccountStatusButton({ theme }) {
             const data = await callAccountInfoApi();
             if (!mountedRef.current) return null;
             setAccount(data);
+
+            if (data.status === 'free' && getPaymentIntent()) {
+                const intentType = localStorage.getItem("paymentIntentType");
+                if (intentType === '1') {
+                    setLimitModalOpen(true);
+                }
+            }
+
             return data;
         } catch (e) {
             console.error("Failed to load account status", e);
             return null;
         }
     }, []);
+
+    const checkMarathonFailed = () => {
+        setFailedModalOpen(isMarathonFailedModalEnabled())
+    }
+
+    const checkMarathonCompleted = () => {
+        setCompletedModalOpen(true)
+    }
+
+    const checkMarathonDailyCompleted = () => {
+        setCompletedDailyModalOpen(true)
+    }
+
+    const checkMarathonDailyNeedsPracticeModalOpen = () => {
+        setDailyNeedsPracticeModalOpen(true)
+    }
+
+    useEffect(() => {
+        on('marathonFailed', checkMarathonFailed);
+        on('marathonCompleted', checkMarathonCompleted);
+        on('marathonDailyCompleted', checkMarathonDailyCompleted);
+        on('marathonDailyNeedsPractice', checkMarathonDailyNeedsPracticeModalOpen);
+
+        return () => {
+            off('marathonFailed', checkMarathonFailed);
+            off('marathonCompleted', checkMarathonCompleted);
+            off('marathonDailyCompleted', checkMarathonDailyCompleted);
+            off('marathonDailyNeedsPractice', checkMarathonDailyNeedsPracticeModalOpen);
+        }
+    })
 
     useEffect(() => {
         mountedRef.current = true;
@@ -41,6 +97,10 @@ export default function AccountStatusButton({ theme }) {
         loadStatus().then((data) => {
             if (data) logInfo(data);
         });
+
+        const overall = getOverallAccuracy();
+        setAttemptsLeft(overall?.attemptsLeft ?? 0);
+
 
         intervalRef.current = setInterval(() => {
             loadStatus().catch(() => {});
@@ -90,6 +150,10 @@ export default function AccountStatusButton({ theme }) {
         callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_SUBSCRIPTION).then();
 
         if (account?.status === "free") {
+            if (!account?.email) {
+                setLoginModalOpen(true);
+                return;
+            }
             setLimitModalOpen(true);
         } else {
             setStatusModalOpen(true);
@@ -150,6 +214,7 @@ export default function AccountStatusButton({ theme }) {
 
     return (
         <>
+
             <div
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
@@ -158,20 +223,28 @@ export default function AccountStatusButton({ theme }) {
             >
                 {account?.status === "paid" && "Моя підписка"}
                 {account?.status === "attention" && "Підписка (увага)"}
-                {account?.status === "free" && account?.email && "Хочу підписку"}
-                {account?.status === "free" && !account?.email && "Підписка / Увійти"}
+                {account?.status === "free" && account?.email && "Марафон"}
+                {account?.status === "free" && !account?.email && "Увійти"}
             </div>
 
 
             {
-                account && <LimitModal
-                    featurePdf={localStorage.getItem("teacher") === "true"}
-                    subscribeIntent={subscribeIntent}
-                    accountInfo={account}
-                    isLimitReached={false}
-                    theme={theme}
+                // account && <LimitModal
+                //     featurePdf={localStorage.getItem("teacher") === "true"}
+                //     subscribeIntent={subscribeIntent}
+                //     accountInfo={account}
+                //     isLimitReached={false}
+                //     theme={theme}
+                //     open={limitModalOpen}
+                //     onClose={() => setLimitModalOpen(false)}
+                // />
+
+                account && <MarathonInfoModal
                     open={limitModalOpen}
                     onClose={() => setLimitModalOpen(false)}
+                    theme={theme}
+                    account={account}               // from callAccountInfoApi()
+                    ruleIds={[]}         // exactly 7 items
                 />
             }
 
@@ -191,6 +264,47 @@ export default function AccountStatusButton({ theme }) {
                             onClose={() => setLoginModalOpen(false)}/>
             }
 
-            </>
+            {
+                account && failedModalOpen && <MarathonFailedModal
+                    open={failedModalOpen}
+                    theme={theme}
+                    account={account}
+                    onClose={() => {
+                        disableMarathonFailedModal();   // 🔒 one-time only
+                        setFailedModalOpen(false);
+                    }}
+                />
+            }
+
+            {
+                account && completedModalOpen && <MarathonCompletedModal
+                    open={completedModalOpen}
+                    theme={theme}
+                    onClose={() => {
+                        setCompletedModalOpen(false);
+                    }}
+                />
+            }
+
+            {
+                account && completedDailyModalOpen && <DailyTasksCompletedModal
+                    open={completedDailyModalOpen}
+                    theme={theme}
+                    onClose={() => {
+                        setCompletedDailyModalOpen(false);
+                    }}
+                />
+            }
+
+            {
+                account && dailyNeedsPracticeModalOpen && <DailyTasksNeedMorePracticeModal
+                    open={dailyNeedsPracticeModalOpen}
+                    theme={theme}
+                    onClose={() => {
+                        setDailyNeedsPracticeModalOpen(false);
+                    }}
+                />
+            }
+        </>
     );
 }

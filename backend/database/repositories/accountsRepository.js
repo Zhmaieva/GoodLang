@@ -3,7 +3,7 @@ import {sendPromoEmail, sendVerificationEmail} from "../../core/emailSender.js";
 import {getLifetime10CouponId, stripe} from "../../integrations/stripeService.js";
 import {nanoid} from "nanoid";
 
-const SHORTENED_WAIT_TIME_HOURS = 12;
+const SHORTENED_WAIT_TIME_HOURS = 24;
 
 /**
  * Creates a new account without requiring an email.
@@ -34,6 +34,8 @@ export async function createAccount() {
 
 /**
  * Get account info by account ID (+ optional promo info by promo code)
+ * ALSO returns current marathon day pending tasks (if marathon in progress).
+ *
  * @param {string} accountId
  * @param {string?} promoCode
  * @returns {Promise<{
@@ -51,22 +53,38 @@ export async function createAccount() {
  *     originalPrice: number,
  *     discountedPrice: number,
  *     discountPercentage: number
- *   }
+ *   },
+ *   marathonFailed: boolean,
+ *   isInMarathon: boolean,
+ *   daysLeft: number,
+ *   rulesSoFar: string[],
+ *   currentDay: null | {
+ *     dayNumber: number,
+ *     ruleId: string,
+ *     dayStartAt: any,
+ *     dayEndAt: any,
+ *     isDayCompleted: boolean
+ *   },
+ *   currentDayTasks: Array<{
+ *     ordinalNumber: number,
+ *     ruleId: string,
+ *     isAnswered: boolean
+ *   }>
  * }>}
  */
 export async function getAccountInfo(accountId, promoCode) {
     const { rows } = await pool.query(
         `
-        SELECT
-            email,
-            status,
-            is_trial,
-            trial_ended_at,
-            translation_limit,
-            limit_time_span_seconds,
-            translations_quota
-        FROM accounts
-        WHERE id = $1
+            SELECT
+                email,
+                status,
+                is_trial,
+                trial_ended_at,
+                translation_limit,
+                limit_time_span_seconds,
+                translations_quota
+            FROM accounts
+            WHERE id = $1
         `,
         [accountId]
     );
@@ -81,7 +99,162 @@ export async function getAccountInfo(accountId, promoCode) {
             limitTimeSpanSeconds: 24 * 3600, // safe fallback
             translationsQuota: 0,
             promo: null,
+
+            marathonFailed: false,
+            isInMarathon: false,
+            daysLeft: 0,
+            rulesSoFar: [],
+            currentDay: null,
+            currentDayTasks: [],
         };
+    }
+
+    const status = rows[0].status || "free";
+
+    let marathonFailed = false;
+
+    let isInMarathon = false;
+    let daysLeft = 0;
+    let rulesSoFar = [];
+    let currentDayTasks = [];
+    let currentDay = null;
+
+    // -------------------------
+    // Latest marathon failed flag (soft)
+    // -------------------------
+    try {
+        const { rows: lastRows } = await pool.query(
+            `
+          SELECT status
+          FROM learning_marathons
+          WHERE account_id = $1
+          ORDER BY created_at DESC
+          LIMIT 1
+        `,
+            [accountId]
+        );
+
+        const lastStatus = String(lastRows?.[0]?.status || "").toLowerCase();
+        marathonFailed = (lastStatus === "failed" || lastStatus === "failed_cancelled");
+    } catch (_) {
+        marathonFailed = false;
+    }
+
+    if (status !== "free" && !marathonFailed) {
+        // -------------------------
+        // Marathon metadata + current day tasks (soft)
+        // -------------------------
+        const { rows: marathonRows } = await pool.query(
+            `
+                WITH current_marathon AS (
+                    SELECT lm.id
+                    FROM learning_marathons lm
+                    WHERE lm.account_id = $1
+                      AND (lm.status = 'in_progress' 
+                        OR  lm.status = 'completed')
+                    ORDER BY lm.created_at DESC
+                    LIMIT 1
+                ),
+                     current_day AS (
+                         SELECT
+                             ms.id,
+                             ms.day_number,
+                             ms.rule_id,
+                             ms.day_start_at,
+                             ms.day_end_at,
+                             COALESCE(ms.is_day_completed, FALSE) AS is_day_completed
+                         FROM marathon_schedules ms
+                         WHERE ms.marathon_id = (SELECT id FROM current_marathon)
+                           AND ms.day_start_at <= NOW()
+                           AND ms.day_end_at > NOW()
+                         ORDER BY ms.day_number ASC
+                         LIMIT 1
+                     )
+                SELECT
+                        (SELECT id FROM current_marathon) AS marathon_id,
+
+                        COALESCE((
+                                     SELECT COUNT(*)
+                                     FROM marathon_schedules ms
+                                     WHERE ms.marathon_id = (SELECT id FROM current_marathon)
+                                       AND ms.day_end_at > NOW()
+                                 ), 0) AS days_left,
+
+                        COALESCE((
+                                     SELECT json_agg(ms.rule_id ORDER BY ms.day_number)
+                                     FROM marathon_schedules ms
+                                     WHERE ms.marathon_id = (SELECT id FROM current_marathon)
+                                       AND ms.day_start_at <= NOW()
+                                 ), '[]'::json) AS rules_so_far,
+
+                        -- current day
+                        (SELECT id FROM current_day) AS current_schedule_id,
+                        (SELECT day_number FROM current_day) AS current_day_number,
+                        (SELECT rule_id FROM current_day) AS current_day_rule_id,
+                        (SELECT day_start_at FROM current_day) AS current_day_start_at,
+                        (SELECT day_end_at FROM current_day) AS current_day_end_at,
+                        (SELECT is_day_completed FROM current_day) AS current_day_completed,
+
+                        -- pending tasks for current day
+                        COALESCE((
+                                     SELECT json_agg(
+                                                    json_build_object(
+                                                            'ordinalNumber', mst.ordinal_number,
+                                                            'ruleId', mst.rule_id,
+                                                            'isAnswered', mst.is_answered
+                                                    )
+                                                    ORDER BY mst.ordinal_number
+                                            )
+                                     FROM marathon_schedule_tasks mst
+                                     WHERE mst.marathon_schedule_id = (SELECT id FROM current_day)
+                                       AND mst.is_answered = FALSE
+                                 ), '[]'::json) AS current_day_tasks
+            `,
+            [accountId]
+        );
+
+        const marathonId = marathonRows?.[0]?.marathon_id ?? null;
+
+        isInMarathon = Boolean(marathonId);
+        daysLeft = Number(marathonRows?.[0]?.days_left ?? 0);
+
+        try {
+            const raw = marathonRows?.[0]?.rules_so_far;
+            if (Array.isArray(raw)) {
+                rulesSoFar = raw.map(String);
+            } else if (raw) {
+                rulesSoFar = JSON.parse(raw).map(String);
+            }
+        } catch (_) {
+            rulesSoFar = [];
+        }
+
+        // current day
+        const currentScheduleId = marathonRows?.[0]?.current_schedule_id ?? null;
+        currentDay = currentScheduleId
+            ? {
+                dayNumber: Number(marathonRows?.[0]?.current_day_number ?? 0),
+                ruleId: String(marathonRows?.[0]?.current_day_rule_id ?? ""),
+                dayStartAt: marathonRows?.[0]?.current_day_start_at ?? null,
+                dayEndAt: marathonRows?.[0]?.current_day_end_at ?? null,
+                isDayCompleted: Boolean(marathonRows?.[0]?.current_day_completed ?? false),
+            }
+            : null;
+
+        // current day pending tasks normalize
+        try {
+            const raw = marathonRows?.[0]?.current_day_tasks;
+            const arr = Array.isArray(raw) ? raw : raw ? JSON.parse(raw) : [];
+            currentDayTasks = (arr || [])
+                .map((t) => ({
+                    ordinalNumber: Number(t?.ordinalNumber ?? t?.ordinal_number ?? 0),
+                    ruleId: String(t?.ruleId ?? t?.rule_id ?? ""),
+                    isAnswered: Boolean(t?.isAnswered ?? t?.is_answered ?? false),
+                }))
+                .filter((t) => t.ordinalNumber > 0 && t.ruleId);
+        } catch (_) {
+            currentDayTasks = [];
+        }
     }
 
     // --- Promo lookup (soft) ---
@@ -127,11 +300,20 @@ export async function getAccountInfo(accountId, promoCode) {
         translationsQuota: rows[0].translations_quota || 0,
 
         translationLimit: Number(rows[0].translation_limit ?? 7),
-        limitTimeSpanSeconds: Number(rows[0].limit_time_span_seconds ?? (24 * 3600)),
+        limitTimeSpanSeconds: Number(rows[0].limit_time_span_seconds ?? 24 * 3600),
 
         promo,
+
+        marathonFailed,
+        isInMarathon,
+        daysLeft,
+        rulesSoFar,
+        currentDay,
+        currentDayTasks,
     };
 }
+
+
 
 export async function getAccountById(accountId) {
     try {
@@ -165,6 +347,20 @@ export async function getAccountById(accountId) {
  * Send verification code only if account exists
  */
 export async function sendVerificationCode(email) {
+    if (email?.length === 0 || email.length > 40)
+        return {};
+
+    if (email.indexOf('@') < 0)
+        return {};
+
+    if (email.split('@').length > 2)
+        return {};
+
+    const dotParts = email.split('.');
+    const lastDotPart = dotParts[dotParts.length - 1];
+    if (lastDotPart.indexOf('@') >= 0)
+        return {};
+
     // check if account exists
     const { rows: accounts } = await pool.query(
         'SELECT id FROM accounts WHERE email=$1',
@@ -183,8 +379,12 @@ export async function sendVerificationCode(email) {
         [accountId, email, code, expiresAt]
     );
 
-    // send the code via email
-    await sendVerificationEmail(email, code);
+    try {
+        // send the code via email
+        await sendVerificationEmail(email, code);
+    } catch (e) {
+        console.log(e);
+    }
 
     return accountId;
 };
@@ -198,9 +398,23 @@ export async function sendPromoCode(accountId, email) {
     // 0) Basic validation
     if (typeof email !== "string" || typeof accountId !== "string") return;
 
-    const normalizedEmail = email.trim().toLowerCase();
-    const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!EMAIL_REGEX.test(normalizedEmail)) return;
+    if (email?.length === 0 || email.length > 40)
+        return {};
+
+    if (email.indexOf('@') < 0)
+        return {};
+
+    if (email.split('@').length > 2)
+        return {};
+
+    const dotParts = email.split('.');
+    const lastDotPart = dotParts[dotParts.length - 1];
+    if (lastDotPart.indexOf('@') >= 0)
+        return {};
+
+    // const normalizedEmail = email.trim().toLowerCase();
+    // const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!EMAIL_REGEX.test(normalizedEmail)) return;
 
     // 1) Insert into inquiries ONLY if new; if already exists -> do nothing (no email)
     const ins = await pool.query(
@@ -295,6 +509,20 @@ function toUnixSeconds(date) {
  * Verify code for email and return account id if valid
  */
 export async function verifyCode(currentId, email, code, termsAccepted) {
+    if (email?.length === 0 || email.length > 40)
+        return {};
+
+    if (email.indexOf('@') < 0)
+        return {};
+
+    if (email.split('@').length > 2)
+        return {};
+
+    const dotParts = email.split('.');
+    const lastDotPart = dotParts[dotParts.length - 1];
+    if (lastDotPart.indexOf('@') >= 0)
+        return {};
+
     const { rows } = await pool.query(
         `SELECT account_id, expires_at FROM sign_in_links
          WHERE email=$1 AND code=$2`,
@@ -342,7 +570,7 @@ export async function verifyCode(currentId, email, code, termsAccepted) {
     const query = shortLimitsEnabled
         ? `
             INSERT INTO accounts (email, translations_quota, translation_limit, limit_time_span_seconds)
-            VALUES ($1, $2, 5, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
+            VALUES ($1, $2, 3, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
             RETURNING id
           `
         : `
@@ -404,3 +632,60 @@ export async function unsubscribeByToken(token) {
     return { ok: true };
 }
 
+/**
+ * For all accounts with status='attention' whose LATEST marathon (by created_at)
+ * was created between 8 and 7 days ago, set status='free'.
+ *
+ * "between 7 and 8 days ago" = created_at >= NOW() - INTERVAL '8 days'
+ *                          AND created_at <  NOW() - INTERVAL '7 days'
+ *
+ * @returns {Promise<{updated: number}>}
+ */
+export async function downgradeAttentionAccountsAfterMarathonAge() {
+    const { rowCount } = await pool.query(
+        `
+      WITH latest_marathon AS (
+        SELECT DISTINCT ON (lm.account_id)
+          lm.account_id,
+          lm.created_at
+        FROM learning_marathons lm
+        ORDER BY lm.account_id, lm.created_at DESC
+      ),
+      target_accounts AS (
+        SELECT a.id
+        FROM accounts a
+        JOIN latest_marathon lm ON lm.account_id = a.id
+        WHERE a.status = 'attention'
+          AND lm.created_at >= NOW() - INTERVAL '8 days'
+          AND lm.created_at <  NOW() - INTERVAL '7 days'
+      )
+      UPDATE accounts a
+      SET status = 'free'
+      WHERE a.id IN (SELECT id FROM target_accounts)
+      RETURNING a.id
+    `
+    );
+
+    return { updated: rowCount || 0 };
+}
+
+/**
+ * Mark all in-progress marathons as failed_by_account_status
+ * for accounts whose status is 'free'.
+ *
+ * @returns {Promise<{updated: number}>}
+ */
+export async function failInProgressMarathonsForFreeAccounts() {
+    const { rowCount } = await pool.query(
+        `
+            UPDATE learning_marathons lm
+            SET status = 'failed_by_account_status'
+            FROM accounts a
+            WHERE lm.account_id = a.id
+              AND a.status = 'free'
+              AND lm.status = 'in_progress'
+        `
+    );
+
+    return { updated: rowCount || 0 };
+}

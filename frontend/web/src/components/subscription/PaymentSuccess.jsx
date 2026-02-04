@@ -1,11 +1,36 @@
-import React, {useMemo, useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import {logoStyle} from "./LimitModal.jsx";
 import {theme} from "../../App.jsx";
+import {setPaymentIntent} from "../../services/dataService.js";
+import {syncPrevAccountInfoToLS} from "../../services/marathonService.js";
+import {trackMetaEvent} from "../../services/gaService.js";
 
 export default function PaymentSuccess() {
     const navigate = useNavigate();
     const [hovered, setHovered] = useState(false);
+    const [isMarathon, setIsMarathon] = useState(false);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+
+        const isMarathon = params.get("type") === "marathon";
+
+        // If teacher=true -> remember it + remove param from URL (no redirect)
+        if (isMarathon) {
+            params.delete("type");
+            setIsMarathon(true);
+            syncPrevAccountInfoToLS();
+        }
+
+        setPaymentIntent(false);
+        localStorage.removeItem("paymentIntentType");
+
+        if (!localStorage.getItem("purchase")) {
+            localStorage.setItem("purchase", "true")
+            trackMetaEvent("Purchase");
+        }
+    }, []);
 
     const isTeacher = useMemo(() => {
         try {
@@ -29,7 +54,7 @@ export default function PaymentSuccess() {
         // teacher/pdfs perks first
         return [
             '1800+ вправ у форматі PDF',
-            "Відсутність вотермарків на усіх PDF",
+            //"Відсутність вотермарків на усіх PDF",
             ...core,
         ];
     }, [isTeacher]);
@@ -89,7 +114,7 @@ export default function PaymentSuccess() {
                             textAlign: "left",
                             opacity: 0.9,
                         }}>
-                            Щомісячна підписка
+                            {isMarathon ? "Марафон розпочато" : "Щомісячна підписка"}
                         </p>
                     </div>
 
@@ -127,10 +152,10 @@ export default function PaymentSuccess() {
                     <button
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
-                        onClick={() => navigate("/analytics")}
+                        onClick={() => navigate("/")}
                         style={buttonStyle}
                     >
-                        Перейти до списку правил
+                        {isMarathon ? "До марафону" : "До тренажера"}
                     </button>
                 </div>
             </div>

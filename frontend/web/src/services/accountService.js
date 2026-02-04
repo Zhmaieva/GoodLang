@@ -43,10 +43,24 @@ setInterval(() => {
 }, 5000);
 
 /* todo:
-- ти можливо відчуєш запах кави у кухні - error?
-Ця вправа легка.
+- overall accuracy redesign (header mode) DONE
+- marathon progress bar DONE
 
-https://api-goodlang.beampie.com/translations?rules=TOO_ENOUGH&seed=572328&skip=16
+- job to change marathon status DONE
+- assign rules DONE
+- modal on marathon fail (only once on active session) DONE
+- modal on marathon completion (only once on active session) DONE
+
+- email on marathon start DONE
+- email on marathon fail DONE
+- email on marathon completion DONE
+
+- add product to prod
+- add product limitation to automatic promo code on prod before releasing marathon
+- update ToU for marathons DONE
+
+- trainer redesign
+- trainer result redesign
 
 - add a progress bar to the rule page
 - add ordering in the rules table

@@ -3,8 +3,11 @@ import Stripe from "stripe";
 
 import express from "express";
 import {updateSubscriptionForAccount} from "../database/repositories/subscriptionRepository.js";
-import {getAccountById} from "../database/repositories/accountsRepository.js";
+import {getAccountById, getAccountInfo} from "../database/repositories/accountsRepository.js";
+import { startMarathon } from "../database/repositories/marathonsRepository.js";
 import {pool} from "../database/pool.js";
+import {recordAction} from "../database/repositories/accountLogRepository.js";
+import {ACTION_TYPES} from "../core/constants.js";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -116,8 +119,67 @@ export const paymentsController = {
 
                 return res.json({ clientSecret: session.client_secret });
             } catch (err) {
+                try {
+                    await recordAction(req?.user?.id, ACTION_TYPES.ERROR_PURCHASE_MARATHON);
+                } catch (e) {
+                    console.error("Error logging payment error", err);
+                }
                 console.error("Stripe error:", err);
                 res.status(500).json({ error: "Failed to create session" });
+            }
+        });
+
+        app.post(`/${name}/create-marathon-checkout-session`, authMiddleware, async (req, res) => {
+            try {
+                const accountId = req.user.id;
+                const account = await getAccountInfo(accountId);
+
+                if (account?.isInMarathon) {
+                    return res.status(400).json({ error: "The account is already in marathon" });
+                }
+
+                if (!accountId) {
+                    return res.status(400).json({ error: "Missing accountId" });
+                }
+
+                const ruleIds = req.body?.ruleIds;
+
+                if (!Array.isArray(ruleIds) || ruleIds.length !== 7 || ruleIds.some(r => typeof r !== "string" || !r.trim())) {
+                    return res.status(400).json({ error: "ruleIds must be an array of exactly 7 non-empty strings" });
+                }
+
+                // Store as JSON string in metadata (Stripe metadata values are strings)
+                const ruleIdsJson = JSON.stringify(ruleIds.map(r => r.trim()));
+
+                const sessionParams = {
+                    ui_mode: "embedded",
+                    mode: "payment", // ✅ one-time
+                    return_url: `${process.env.FRONTEND_URL}/payment/success?type=marathon`,
+                    client_reference_id: accountId,
+                    customer_email: account?.email || undefined,
+
+                    // ✅ this price must be ONE-TIME in Stripe
+                    line_items: [{ price: process.env.STRIPE_MARATHON_PRICE_ID, quantity: 1 }],
+
+                    // ✅ keep metadata here
+                    metadata: {
+                        accountId,
+                        ruleIds: ruleIdsJson,
+                        product: "marathon_7d",
+                    },
+                };
+
+                const session = await stripe.checkout.sessions.create(sessionParams);
+                return res.json({ clientSecret: session.client_secret });
+            } catch (err) {
+                try {
+                    await recordAction(req?.user?.id, ACTION_TYPES.ERROR_PURCHASE_MARATHON);
+                } catch (e) {
+                    console.error("Error logging payment error", err);
+                }
+
+                console.error("Stripe error (marathon checkout):", err);
+                res.status(500).json({ error: "Failed to create marathon checkout session" });
             }
         });
 
@@ -144,16 +206,74 @@ export const paymentsController = {
                 if (event.type === "checkout.session.completed") {
                     const session = event.data.object;
 
-                    const accountId = session.client_reference_id;
-                    const email = session.customer_details.email;
-                    const subscriptionId = session.subscription;
+                    const mode = session.mode; // "subscription" | "payment"
+                    const accountId = session.client_reference_id || session.metadata?.accountId;
 
-                    await updateSubscriptionForAccount(accountId, {
-                        status: "active",
-                        stripe_subscription_id: subscriptionId,
-                        customer_id: session.customer,
-                    });
+                    // ---- 1) Subscription purchase (your existing GoodLang subscription) ----
+                    if (mode === "subscription") {
+                        const subscriptionId = session.subscription;
+
+                        await updateSubscriptionForAccount(accountId, {
+                            status: "active",
+                            stripe_subscription_id: subscriptionId,
+                            customer_id: session.customer,
+                        });
+
+                        // ✅ If you still ever sell marathon as subscription, you could keep this,
+                        // but after switching marathon to one-off, it won't hit here anymore.
+                        return res.json({ received: true });
+                    }
+
+                    // ---- 2) One-off purchase (marathon_7d product) ----
+                    if (mode === "payment") {
+                        const product = session.metadata?.product; // "marathon_7d"
+                        if (product !== "marathon_7d") {
+                            return res.json({ received: true });
+                        }
+
+                        if (!accountId) {
+                            console.error("Marathon purchase: missing accountId (client_reference_id / metadata.accountId)");
+                            return res.json({ received: true });
+                        }
+
+                        await updateSubscriptionForAccount(accountId, {
+                            status: "active",
+                        });
+
+                        const ruleIdsRaw = session.metadata?.ruleIds;
+
+                        let ruleIds;
+                        try {
+                            ruleIds = JSON.parse(ruleIdsRaw || "[]");
+                        } catch (e) {
+                            console.error("Marathon purchase: failed to parse ruleIds JSON:", e);
+                            return res.json({ received: true });
+                        }
+
+                        if (
+                            !Array.isArray(ruleIds) ||
+                            ruleIds.length !== 7 ||
+                            ruleIds.some(r => typeof r !== "string" || !r.trim())
+                        ) {
+                            console.error("Marathon purchase: invalid ruleIds in metadata:", ruleIds);
+                            return res.json({ received: true });
+                        }
+
+                        // ✅ Start marathon (idempotent)
+                        try {
+                            const { started } = await startMarathon(accountId, ruleIds);
+                            if (started) {
+                                await recordAction(accountId, ACTION_TYPES.MARATHON_STATUS_IN_PROGRESS);
+                            }
+                        } catch (e) {
+                            console.error("Marathon purchase: failed to start marathon:", e);
+                            // still acknowledge webhook
+                        }
+
+                        return res.json({ received: true });
+                    }
                 }
+
 
                 if (event.type === "customer.subscription.deleted") {
                     const subscription = event.data.object;
@@ -172,7 +292,9 @@ export const paymentsController = {
 
                 if (event.type === "customer.subscription.updated") {
                     const subscription = event.data.object;
-                    const status = subscription.status; // active, canceled, past_due, unpaid, etc.
+                    const status = subscription.status === 'active' && subscription.cancellation_details.reason === 'cancellation_requested'
+                        ? 'cancellation_requested' // active, canceled, past_due, unpaid, etc.
+                        : subscription.status;
 
                     const accountId = subscription.metadata?.accountId;
 
@@ -201,7 +323,7 @@ export const paymentsController = {
 
                     if (accountId) {
                         await updateSubscriptionForAccount(accountId, {
-                            status: "attention",
+                            status: "free",
                         });
                     }
                 }

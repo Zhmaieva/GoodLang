@@ -67,7 +67,8 @@ export const accountsController = {
             try {
                 const { action_type } = req.query;
 
-                await recordAction(req.user.id, action_type);
+                if (action_type)
+                    await recordAction(req.user.id, action_type);
 
                 res.json({verified: true});
             } catch (e) {

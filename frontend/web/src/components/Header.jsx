@@ -6,34 +6,51 @@ import {PrimaryButton} from "./Buttons.jsx";
 import FaqModal from "./subscription/FaqModal.jsx";
 import {callAccountVerifyApi} from "../services/api.js";
 import {ACTION_TYPES} from "../utils/constants.js";
+import {marathonService} from "../services/marathonService.js";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
     const [faqVisible, setFaqVisible] = useState(false);
+    const [isInMarathonView, setIsInMarathonView] = useState(false);
+    const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
 
     useEffect(() => {
         const update = () => setIsMobile(window.innerWidth < 915);
         update();
+        checkMarathonView().then();
+
         window.addEventListener("resize", update);
-        return () => window.removeEventListener("resize", update);
+        window.addEventListener("onMarathonUpdate", checkMarathonView);
+        return () => {
+            window.removeEventListener("resize", update);
+            window.removeEventListener("onMarathonUpdate", checkMarathonView);
+        }
     }, []);
+
+    useEffect(() => {
+        checkMarathonView().then();
+    }, [loading])
+
+    const checkMarathonView = async () => {
+        const result = await marathonService.isMarathonView(true);
+        setIsInMarathonView(result);
+        setIsMarathonLoaded(true);
+    }
 
     const styles = {
         header: {
             display: "flex",
             flexDirection: "column",
-            gap: 16,
-            paddingBottom: 20,
-            borderBottom: `3px solid ${theme.accent}`,
-            marginBottom: 12,
+            gap: marathonService.isInMarathon() ? 24 : 16,
+            paddingBottom: 10,
+            marginBottom: 6,
         },
         headerMobile: {
             display: "flex",
             flexDirection: "column",
             gap: 12,
-            paddingBottom: 20,
-            borderBottom: `3px solid ${theme.accent}`,
-            marginBottom: 12,
+            paddingBottom: 10,
+            marginBottom: 6,
         },
         brandRowMobile: {
             display: "flex",
@@ -57,6 +74,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         titleWrap: {
             display: "flex",
             flexDirection: "column",
+            width: "100%",
         },
         h1: {
             margin: 0,
@@ -68,6 +86,9 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         sub: {
             color: theme.muted,
             fontSize: "1rem",
+            fontWeight: 700,
+            display: "flex",
+            justifyContent: 'flex-start',
         },
         leftColumn: {
             display: "flex",
@@ -124,7 +145,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                             </div>
 
                             <div style={styles.sub}>
-                                Перекладай, поки не вивчиш
+                                <AccountStatusButton theme={theme}/>
                             </div>
                         </div>
                     </div>
@@ -133,20 +154,22 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={{display: "flex", flexDirection: "column", gap: 6}}>
                         <div style={{display: "flex", flexDirection: "row", gap: 12, justifyContent: "space-between"}}>
                             <AccuracyKpi header mobile theme={theme}/>
-                            <AccountStatusButton theme={theme}/>
                         </div>
 
                     </div>
 
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
-                        <LevelSwitch
-                            compact
-                            level={level}
-                            loading={loading}
-                            onLevelChange={onLevelChange}
-                            theme={theme}
-                        />
+                        {
+                            !isInMarathonView && isMarathonLoaded &&
+                            <LevelSwitch
+                                compact
+                                level={level}
+                                loading={loading}
+                                onLevelChange={onLevelChange}
+                                theme={theme}
+                            />
+                        }
                     </div>
                 </div>
             </div>
@@ -172,7 +195,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     flexWrap: "wrap",
                     gap: 16,
                     width: "100%",
-                    height: "100px",
+                    height: "140px",
                 }}
             >
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
@@ -210,12 +233,16 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         gap: 8,
                     }}
                 >
-                    <LevelSwitch
-                        level={level}
-                        loading={loading}
-                        onLevelChange={onLevelChange}
-                        theme={theme}
-                    />
+                    {
+                        !isInMarathonView && isMarathonLoaded &&
+                        <LevelSwitch
+                            level={level}
+                            loading={loading}
+                            onLevelChange={onLevelChange}
+                            theme={theme}
+                        />
+                    }
+
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>

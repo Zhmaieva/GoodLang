@@ -1,34 +1,30 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import AppShell from "../AppShell";
 import BrandHeader from "../BrandHeader";
-import Card from "../Card";
 import Badge from "../Badge";
 import ConjugationTable from "../ConjugationTable";
 import Examples from "../Examples";
 import Note from "../Note";
 import Trainer from "../training/Trainer.jsx";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FooterBar from "../FooterBar.jsx";
-import {callAccountInfoApi, callAccountVerifyApi, dowloadPdf} from "../../services/api.js";
-import {logError} from "../../services/logger.js";
+import { callAccountInfoApi, callAccountVerifyApi, dowloadPdf } from "../../services/api.js";
+import { logError } from "../../services/logger.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
-import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
-import {ensureAnalytics, trackPageView} from "../../services/gaService.js";
-import {ACTION_TYPES} from "../../utils/constants.js";
-import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
+import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
+import { ensureAnalytics, trackPageView } from "../../services/gaService.js";
+import { ACTION_TYPES } from "../../utils/constants.js";
+import { getPdfDownloads, setPdfDownloads } from "../../services/dataService.js";
 
-// ✅ NEW
+// ✅ Pdf type modal
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
 
     const [account, setAccount] = useState(null);
-
     const [hover, setHover] = useState(null);
-
     const [isDownloading, setIsDownloading] = useState(false);
-
     const [cookieOpen, setCookieOpen] = useState(false);
 
     // ✅ PdfType modal state (same pattern as RulesTable)
@@ -123,6 +119,14 @@ export default function RulePage({ data, theme }) {
         setPdfTypeModalOpen(true);
     };
 
+    // ----- Styling tokens aligned with NON-header AccuracyKpi / TaskCard -----
+    const CARD_BG = "rgba(255, 243, 223, 0.92)";
+    const CARD_BORDER = "rgba(255,97,56,0.65)";
+    const CARD_SHADOW = "0 10px 26px rgba(0,0,0,0.12)";
+
+    const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
+    const SOFT_STROKE = "rgba(0,0,0,0.12)";
+
     const container = {
         maxWidth: 980,
         width: "100%",
@@ -130,14 +134,39 @@ export default function RulePage({ data, theme }) {
         margin: "0 auto",
     };
 
+    // ✅ a subtle canvas behind all sections so cards feel cohesive
+    const sectionsCanvas = {
+        borderRadius: 22,
+        padding: isMobile ? 10 : 12,
+        //background: "rgba(0,0,0,0.02)",
+    };
+
+    // ✅ local card style for this page only (no need to touch global Card.jsx)
+    const SurfaceCard = ({ children }) => (
+        <div
+            style={{
+                background: CARD_BG,
+                border: `2px solid ${CARD_BORDER}`,
+                borderRadius: 20,
+                boxShadow: CARD_SHADOW,
+                padding: isMobile ? 14 : 18,
+            }}
+        >
+            {children}
+        </div>
+    );
+
     const SectionTitle = ({ children }) => (
         <div
             style={{
-                margin: "4px 2px 8px",
-                fontSize: isMobile ? 15 : 16,
-                letterSpacing: ".05em",
+                margin: "4px 2px 10px",
+                fontSize: isMobile ? 13 : 14,
+                letterSpacing: ".08em",
                 textTransform: "uppercase",
-                fontWeight: 800,
+                fontWeight: 900,
+                color: theme.text,
+                opacity: 0.9,
+                fontFamily: "Nunito, system-ui, sans-serif",
             }}
         >
             {children}
@@ -147,21 +176,25 @@ export default function RulePage({ data, theme }) {
     const textStyle = {
         fontSize: isMobile ? 14 : 15,
         lineHeight: 1.45,
+        color: theme.text,
+        fontFamily: "Nunito, system-ui, sans-serif",
+        fontWeight: 700,
+        opacity: 0.95,
     };
 
     const renderSection = (section) => {
         switch (section.type) {
             case "meaning":
                 return (
-                    <Card theme={theme}>
+                    <SurfaceCard>
                         <SectionTitle>{section.title}</SectionTitle>
                         <p style={textStyle} dangerouslySetInnerHTML={{ __html: section.html }} />
-                    </Card>
+                    </SurfaceCard>
                 );
 
             case "usage":
                 return (
-                    <Card theme={theme}>
+                    <SurfaceCard>
                         <SectionTitle>{section.title}</SectionTitle>
                         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                             {section.badges.map((b, i) => (
@@ -172,50 +205,79 @@ export default function RulePage({ data, theme }) {
                         </div>
                         {section.hint && (
                             <p
-                                style={{ color: theme.muted, fontSize: isMobile ? 12 : 13, marginTop: 6 }}
+                                style={{
+                                    color: theme.muted,
+                                    fontSize: isMobile ? 12 : 13,
+                                    marginTop: 8,
+                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    fontWeight: 700,
+                                    opacity: 0.9,
+                                }}
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
                         )}
-                    </Card>
+                    </SurfaceCard>
                 );
 
             case "forms":
                 return (
-                    <Card theme={theme}>
+                    <SurfaceCard>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <ConjugationTable theme={theme} headers={section.headers} rows={section.rows} />
+
+                        {/* optional soft inner surface behind the table for the same feel as inputs */}
+                        <div
+                            style={{
+                                background: SOFT_INNER,
+                                border: `2px solid ${SOFT_STROKE}`,
+                                borderRadius: 16,
+                                padding: isMobile ? 10 : 12,
+                                boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+                            }}
+                        >
+                            <ConjugationTable theme={theme} headers={section.headers} rows={section.rows} />
+                        </div>
+
                         {section.hint && (
                             <div
-                                style={{ color: theme.muted, fontSize: isMobile ? 12 : 13, marginTop: 6 }}
+                                style={{
+                                    color: theme.muted,
+                                    fontSize: isMobile ? 12 : 13,
+                                    marginTop: 8,
+                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    fontWeight: 700,
+                                    opacity: 0.9,
+                                }}
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
                         )}
-                    </Card>
+                    </SurfaceCard>
                 );
 
             case "examples":
                 return (
-                    <Card theme={theme}>
+                    <SurfaceCard>
                         <SectionTitle>{section.title}</SectionTitle>
                         <Examples theme={theme} items={section.items} />
-                    </Card>
+                    </SurfaceCard>
                 );
 
             case "mistakes":
                 return (
-                    <Card theme={theme}>
+                    <SurfaceCard>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <ul style={{ ...textStyle, paddingLeft: 20 }}>
+                        <ul style={{ ...textStyle, paddingLeft: 20, marginTop: 8 }}>
                             {section.bullets?.map((b, i) => (
                                 <li key={i} dangerouslySetInnerHTML={{ __html: b }} />
                             ))}
                         </ul>
                         {section.note && (
-                            <Note theme={theme}>
-                                <span dangerouslySetInnerHTML={{ __html: section.note }} />
-                            </Note>
+                            <div style={{ marginTop: 10 }}>
+                                <Note theme={theme}>
+                                    <span dangerouslySetInnerHTML={{ __html: section.note }} />
+                                </Note>
+                            </div>
                         )}
-                    </Card>
+                    </SurfaceCard>
                 );
 
             case "trainer":
@@ -231,7 +293,7 @@ export default function RulePage({ data, theme }) {
         }
     };
 
-    const iconBtn = (isHover) => ({
+    const iconBtn = () => ({
         maxWidth: 480,
         gap: 8,
         cursor: isDownloading ? "default" : "pointer",
@@ -278,7 +340,7 @@ export default function RulePage({ data, theme }) {
                                     onMouseEnter={() => setHover("print")}
                                     onMouseLeave={() => setHover(null)}
                                     onClick={(e) => onPrintClick(e, data.id)}
-                                    style={iconBtn("print" === hover, true)}
+                                    style={iconBtn()}
                                     title="Друкувати правило"
                                 >
                                     <div
@@ -326,16 +388,18 @@ export default function RulePage({ data, theme }) {
                     }
                 />
 
-                <section style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                    {data.sections.map((section, i) => (
-                        <div key={i}>{renderSection(section)}</div>
-                    ))}
-                </section>
+                <div style={sectionsCanvas}>
+                    <section style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                        {data.sections.map((section, i) => (
+                            <div key={i}>{renderSection(section)}</div>
+                        ))}
+                    </section>
+                </div>
 
                 <FooterBar theme={theme} />
             </div>
 
-            {/* ✅ NEW modal: Pdf type choose (handles register CTA inside itself) */}
+            {/* ✅ Pdf type choose modal */}
             <PdfTypeModal
                 account={account}
                 open={pdfTypeModalOpen}

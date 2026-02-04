@@ -142,7 +142,7 @@ export function sendPromoEmail(to, code, expiresAt) {
               font-size:16px;
               font-weight:500;
             ">
-              🎁 Це твій промо-код для <strong>GoodLang</strong> ⏳ Діє ще ${hoursLeft} ${hoursWord}
+              🎁 Це твій промо-код для щомісячної підписки <strong>GoodLang</strong> ⏳ Діє ще ${hoursLeft} ${hoursWord}
             </p>
 
             <p style="

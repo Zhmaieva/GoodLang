@@ -1,34 +1,32 @@
-import React, {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 import {
     callAccountInfoApi,
     callAccountVerifyApi,
-    callCheckoutApi,
     callDataSyncApi,
     callVerifyCodeApi
 } from "../../services/api.js";
-import {getStripe, logoStyle} from "./LimitModal.jsx";
-import {useNavigate} from "react-router-dom";
-import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
-import {logError} from "../../services/logger.js";
-import {ensureAnalytics, trackMetaEvent, trackPageView} from "../../services/gaService.js";
+import { logoStyle } from "./LimitModal.jsx";
+import { useNavigate } from "react-router-dom";
+import { logError } from "../../services/logger.js";
+import { ensureAnalytics, trackMetaEvent, trackPageView } from "../../services/gaService.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
-import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
-import {ACTION_TYPES} from "../../utils/constants.js";
+import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
+import { ACTION_TYPES } from "../../utils/constants.js";
 
 export default function TermsOfUseModal({
                                             ruleToDownload = null,
                                             theme,
                                             onClose = () => {},
                                             readOnly = false,
-                                            email,                 // required for verify
-                                            verificationCode,      // 6-digit code passed from parent
+                                            email,
+                                            verificationCode,
                                         }) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [isPaying, setIsPaying] = useState(false);
-    const navigate = useNavigate();
+    const [btnHover, setBtnHover] = useState(false);
+    const [secondaryHover, setSecondaryHover] = useState(false);
 
-    const checkoutRef = useRef(null);
     const [cookieOpen, setCookieOpen] = useState(false);
 
     async function syncData() {
@@ -41,6 +39,7 @@ export default function TermsOfUseModal({
 
     async function handleAgree() {
         const code = String(verificationCode || "").trim();
+
         if (!email || !email.trim()) {
             setError("Немає імейлу для підтвердження.");
             return;
@@ -56,113 +55,65 @@ export default function TermsOfUseModal({
         let stopLoading = true;
 
         try {
-            // Same flow as LoginForm.handleVerify
             const oldAccount = await callAccountInfoApi();
-            const { token } = await callVerifyCodeApi({ email: email.trim(), code, termsAccepted: true });
+            const { token } = await callVerifyCodeApi({
+                email: email.trim(),
+                code,
+                termsAccepted: true
+            });
 
             localStorage.setItem("token", token);
 
             const newAccount = await callAccountInfoApi();
 
-            // purge old data if it was synced account
             if (oldAccount.email && oldAccount.status !== "free") {
                 localStorage.clear();
                 localStorage.setItem("token", token);
             }
 
-            // old data will be synced to new account if possible
             if (newAccount.status !== "free") {
                 await syncData();
             }
 
             trackMetaEvent("CompleteRegistration");
 
-            if (newAccount.status === "free" && getPaymentIntent()) {
-                setPaymentIntent(false);
-                try {
-                    setLoading(true);
-
-                    const stripe = await getStripe();
-
-                    const { clientSecret, isSuccess } = await callCheckoutApi();
-                    if (!isSuccess) {
-                        navigate("/payment/cancel");
-                        setLoading(false);
-                        return;
-                    }
-
-                    setIsPaying(true);
-
-                    setTimeout(async () => {
-                        if (!checkoutRef.current) {
-                            checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
-                            checkoutRef.current.mount("#embedded-checkout-container-tou");
-                        }
-
-                        document.getElementById("embedded-checkout-container-tou").style.display = "block";
-                        setLoading(false);
-                    }, 200)
-                } catch (err) {
-                    console.error("Stripe error:", err);
-                    setLoading(false);
-                }
-                return;
-            }
-
-            stopLoading = true;
             if (!getCookieConsent()) {
                 setCookieOpen(true);
                 await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
-
                 return;
             }
 
-            setTimeout(async () => {
+            setTimeout(() => {
                 reloadWithRuleParam(ruleToDownload);
-
                 onClose();
-            }, 500)
+            }, 500);
         } catch (err) {
             stopLoading = false;
             setError("Не вдалося підтвердити код. Спробуйте ще раз.");
         } finally {
-            if (!stopLoading)
-                setLoading(false);
+            if (!stopLoading) setLoading(false);
         }
     }
 
     function reloadWithRuleParam(ruleId) {
         try {
             const url = new URL(window.location.href);
-
-            if (ruleId) {
-                url.searchParams.set("ruleToDownload", ruleId);
-            } else {
-                url.searchParams.delete("ruleToDownload");
-            }
-
-            // replaceState avoids adding a new history entry
+            ruleId ? url.searchParams.set("ruleToDownload", ruleId) : url.searchParams.delete("ruleToDownload");
             window.history.replaceState({}, "", url.toString());
-
-            // reload the current URL (now including the param)
             window.location.reload();
-        } catch (e) {
-            // fallback (rare, but safe)
-            const encoded = ruleId ? encodeURIComponent(ruleId) : "";
+        } catch {
             window.location.href = ruleId
-                ? `${window.location.pathname}?ruleToDownload=${encoded}`
+                ? `${window.location.pathname}?ruleToDownload=${encodeURIComponent(ruleId)}`
                 : window.location.pathname;
         }
     }
 
     const overlayStyle = {
         position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
         inset: 0,
-        height: "100dvh",
         background: "rgba(0,0,0,0.35)",
+        backdropFilter: "blur(6px)",
+        WebkitBackdropFilter: "blur(6px)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -171,12 +122,11 @@ export default function TermsOfUseModal({
 
     const cardStyle = {
         background: theme.bg,
-        padding: "28px",
+        padding: 28,
         borderRadius: theme.radius * 1.2,
         border: `4px solid ${theme.accent}`,
         width: "92%",
         maxWidth: 560,
-        textAlign: "center",
         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
     };
 
@@ -185,88 +135,91 @@ export default function TermsOfUseModal({
         background: "#fffdf8",
         borderRadius: theme.radius,
         border: `3px solid ${theme.accent}`,
-        padding: "14px 14px",
+        padding: 14,
         maxHeight: 260,
         overflowY: "auto",
         lineHeight: 1.55,
         color: theme.text,
-        fontSize: "1rem",
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
     };
 
     const primaryBtn = {
-        background: loading ? "#999" : theme.accent,
-        color: "white",
-        padding: "10px 20px",
-        borderRadius: theme.radius,
-        border: "none",
-        cursor: loading ? "default" : "pointer",
-        fontSize: "1rem",
-        fontWeight: 800,
-        width: "100%",
-        opacity: loading ? 0.7 : 1,
-    };
-
-    const secondaryBtn = {
-        fontFamily: "Nunito, system-ui, sans-serif",
         appearance: "none",
-        padding: "10px 16px",
+        padding: "10px 14px",
         fontWeight: 800,
         fontSize: "1rem",
         lineHeight: 1,
         borderRadius: 999,
-        cursor: loading ? "default" : "pointer",
-        background: "#fffdf8",
-        color: theme.text,
-        border: `2px solid ${theme.accent}`,
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
+        background: loading ? "#999" : theme.accent,
+        color: "#fff",
+        border: "2px solid rgba(0,0,0,0.12)",
+        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+        fontFamily: "Nunito, system-ui, sans-serif",
         width: "100%",
+        cursor: loading ? "not-allowed" : "pointer",
         opacity: loading ? 0.7 : 1,
+        transform: (btnHover || (readOnly && secondaryHover)) && !loading ? "translateY(1px)" : "none",
+        filter: (btnHover || (readOnly && secondaryHover)) && !loading ? "brightness(0.95)" : "none",
+        transition: "transform 120ms ease, filter 120ms ease",
+    };
+
+    const secondaryBtn = {
+        appearance: "none",
+        padding: "10px 14px",
+        fontWeight: 800,
+        fontSize: "1rem",
+        lineHeight: 1,
+        borderRadius: 999,
+        background: "#fff",
+        color: theme.text,
+        border: "2px solid rgba(0,0,0,0.12)",
+        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+        fontFamily: "Nunito, system-ui, sans-serif",
+        width: "100%",
+        cursor: loading ? "not-allowed" : "pointer",
+        opacity: loading ? 0.7 : 1,
+        transform: secondaryHover && !loading ? "translateY(1px)" : "none",
+        filter: secondaryHover && !loading ? "brightness(0.95)" : "none",
+        transition: "transform 120ms ease, filter 120ms ease",
     };
 
     return (
         <>
-            {!cookieOpen && <>
-            {
-                !isPaying && <div style={overlayStyle}>
+            {!cookieOpen && !isPaying && (
+                <div style={overlayStyle}>
                     <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
-                        <div style={{
-                            marginLeft: 0,
-                            marginBottom: 16,
-                            display: "flex",
-                            justifyContent: "space-between",
-                        }}>
-                            <div style={{display: "flex", flexDirection: "column"}}>
-                                <h2 style={{
-                                    textAlign: "left",
-                                    marginBottom: 0,
-                                    marginTop: 0,
-                                    color: theme.text,
-                                    fontSize: "1.5rem",
-                                    fontWeight: 800
-                                }}>
-                                    Умови використання
-                                </h2>
-                                <p style={{
-                                    marginBottom: 16,
-                                    marginTop: 8,
-                                    marginLeft: 0,
-                                    color: theme.text,
-                                    fontSize: "1rem",
-                                    fontWeight: 500,
-                                    textAlign: "left"
-                                }}>
-                                    { readOnly ? 'Будь ласка, ознайомся' : 'Перш ніж зареєструватися, підтвердь, що погоджуєшся з умовами використання і політикою приватності.'}
+                        <div style={{display: "flex", justifyContent: "space-between", marginBottom: 16}}>
+                            <div>
+                                <h2 style={{margin: 0, fontWeight: 800}}>Умови використання</h2>
+                                <p style={{marginTop: 8}}>
+                                    {readOnly
+                                        ? "Будь ласка, ознайомся"
+                                        : "Перш ніж зареєструватися, підтвердь, що погоджуєшся з умовами використання."}
                                 </p>
                             </div>
-
-                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                <div style={logoStyle(64)}>GL</div>
-                            </div>
+                            <div style={logoStyle(56, theme)}>GL</div>
                         </div>
 
                         <div style={termsBoxStyle}>
                             <h3 style={{marginTop: 0}}>1. Загальні положення</h3>
+                            <p>
+                                <strong>GoodLang</strong>, <strong>«ми»</strong>, <strong>«сервіс»</strong> —
+                                онлайн-платформа
+                                для вивчення англійської мови через переклад з миттєвим AI-фідбеком,
+                                що надається під брендом GoodLang та керується його власниками.
+                            </p>
+
+                            <p>
+                                <strong>Користувач</strong>, <strong>«ви»</strong> — фізична особа, яка отримує доступ
+                                до сервісу GoodLang, реєструється в ньому або використовує його функціонал
+                                незалежно від наявності платної підписки.
+                            </p>
+
+                            <p>
+                                <strong>Підписка</strong> — платний доступ до розширеного функціоналу сервісу GoodLang
+                                на умовах, описаних у цих правилах.
+                            </p>
+
                             <p>
                                 Використовуючи сервіс GoodLang, ви підтверджуєте, що ознайомилися з цими
                                 умовами користування та погоджуєтеся з ними. Якщо ви не погоджуєтеся з
@@ -282,10 +235,12 @@ export default function TermsOfUseModal({
                             </p>
 
                             <p>
-                                Сервіс може використовуватися дітьми віком від 3 років виключно за згодою
-                                батьків або законних опікунів. Використовуючи сервіс, ви підтверджуєте,
-                                що є батьком або законним опікуном дитини, або маєте дозвіл діяти від їх
-                                імені.
+                                Сервіс може використовуватися особами, що досягли віку 18 років, а також
+                                дітьми віком від 3 років виключно за згодою батьків або законних опікунів.
+                                Використовуючи сервіс, ви підтверджуєте, що або: 1) маєте 18 років і
+                                користуєтесь сервісом особисто; 2) або являєтесь батьком/матір'ю чи законним опікуном
+                                дитини,
+                                що користується сервісом, або ж маєте дозвіл діяти від їх імені у відношенні до дитини.
                             </p>
 
                             <h3>3. Персональні дані</h3>
@@ -370,8 +325,9 @@ export default function TermsOfUseModal({
                             </p>
 
                             <p>
-                                У разі зміни вартості підписки ми зобов’язуємося повідомити про це електронною
-                                поштою користувачів з активною підпискою до набуття таких змін чинності.
+                                У разі зміни вартості окремо взятої підписки ми зобов’язуємося повідомити про це
+                                електронною
+                                поштою користувачів з цією активною підпискою до набуття таких змін чинності.
                             </p>
 
                             <p>
@@ -396,7 +352,9 @@ export default function TermsOfUseModal({
 
                             <p>
                                 Також ми можемо надсилати маркетингові та інформаційні листи з новинами
-                                сервісу.
+                                сервісу. Ви можете відмовитися від маркетингових то необов'язкових
+                                інформаційних листів, перейшовши по відповідному посиланню у одному з таки листів
+                                або написавши нам на goodlang.app@gmail.com
                             </p>
 
                             <h3>7. Політика cookies</h3>
@@ -415,8 +373,16 @@ export default function TermsOfUseModal({
 
                             <p>
                                 За запитом користувача ми можемо розглянути звернення щодо скасування
-                                підписки або повернення коштів. Сума повернення може бути меншою за
-                                повний цикл оплати.
+                                підписки або повернення коштів. Ми не гарантуємо повернення повної вартості
+                                або частини суми. Сума повернення може бути меншою за
+                                повний цикл оплати або у поверненні може бути відмовлено на розсуд адміністрації
+                                додатку.
+                            </p>
+
+                            <p>
+                                Ми не повертаємо кошти за вартість продукту типу "Марафон", або інших подібних, зі
+                                спеціальними
+                                умовами надання доступу, в тому числі, де зазначено автоматичне припинення послуги.
                             </p>
 
                             <h3>9. Обмеження відповідальності</h3>
@@ -455,51 +421,33 @@ export default function TermsOfUseModal({
                         </div>
 
                         <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 16}}>
-                            {!readOnly &&
-                                <button onClick={handleAgree} disabled={loading} style={primaryBtn}>
+                            {!readOnly && (
+                                <button
+                                    onMouseEnter={() => setBtnHover(true)}
+                                    onMouseLeave={() => setBtnHover(false)}
+                                    onClick={handleAgree}
+                                    disabled={loading}
+                                    style={primaryBtn}
+                                >
                                     {loading ? "Підтверджую…" : "Погоджуюсь"}
                                 </button>
-                            }
+                            )}
 
-                            <button onClick={onClose} disabled={loading} style={secondaryBtn}>
-                                {readOnly ? 'Добре' : 'Не погоджуюсь'}
+                            <button
+                                onMouseEnter={() => setSecondaryHover(true)}
+                                onMouseLeave={() => setSecondaryHover(false)}
+                                onClick={onClose}
+                                disabled={loading}
+                                style={readOnly ? primaryBtn : secondaryBtn}
+                            >
+                                {readOnly ? "Добре" : "Не погоджуюсь"}
                             </button>
 
                             {error && <div style={{color: "red", fontWeight: 700}}>{error}</div>}
                         </div>
                     </div>
                 </div>
-            }
-            {
-                isPaying && <div style={{
-                    position: "fixed",
-                    top: 0, left: 0,
-                    width: "100vw",
-                    height: "100vh",
-                    background: "rgba(0,0,0,0.35)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    zIndex: 9999
-                }}>
-                    <div
-                        id="embedded-checkout-container-tou"
-                        style={{
-                            display: "none",
-                            width: "92vw",
-                            maxWidth: 720,
-                            margin: "0 auto",
-                            background: theme.bg,
-                            borderRadius: theme.radius * 1.2,
-                            border: `4px solid ${theme.accent}`,
-                            boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                            maxHeight: "75%",
-                            overflow: "auto",
-                        }}
-                    />
-                </div>
-            }
-            </>}
+            )}
 
             {cookieOpen && (
                 <CookieConsentModal
@@ -507,22 +455,14 @@ export default function TermsOfUseModal({
                     onAccept={async () => {
                         acceptCookies();
                         ensureAnalytics();
-
-                        if (localStorage.getItem("teacher") === "true")
-                            trackPageView("/greetings");
-
                         trackPageView(window.location.pathname);
                         trackMetaEvent("CompleteRegistration");
-
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
-
                         reloadWithRuleParam(ruleToDownload);
                     }}
                     onReject={async () => {
                         rejectCookies();
-
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
-
                         reloadWithRuleParam(ruleToDownload);
                     }}
                 />

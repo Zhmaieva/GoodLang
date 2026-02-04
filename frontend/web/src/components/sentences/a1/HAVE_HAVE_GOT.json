@@ -66,7 +66,7 @@
                 "en": ["We have a big flat.", "We’ve got a big flat.", "We have got a big flat."]
         },
         {
-                "rules": ["HAVE_HAVE_GOT", "QUANTIFIERS"],
+                "rules": ["HAVE_HAVE_GOT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
                 "ua": "У них немає грошей.",
                 "en": [
                         "They don’t have money.",
@@ -133,7 +133,7 @@
                 "en": ["Do you have an umbrella?", "Have you got an umbrella?"]
         },
         {
-                "rules": ["HAVE_HAVE_GOT", "QUANTIFIERS"],
+                "rules": ["HAVE_HAVE_GOT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
                 "ua": "У них багато друзів.",
                 "en": ["They have many friends.", "They’ve got many friends.", "They have got many friends."]
         },

@@ -1,6 +1,7 @@
 import {getOverallAccuracy, inferUserLevel} from "./dataService"; // adjust path
 import {getLearningState, LEVEL_MAP_TO} from "./insightsService.js";
 import {logInfo} from "./logger.js";
+import {marathonService, readAccountInfoFromLS} from "./marathonService.js";
 
 const CEFR_ORDER = ["A1", "A2", "B1", "B2"];
 
@@ -18,7 +19,19 @@ export function saveTrainingLevel(level) {
 
 const LS_TASK_MODE_KEY = "task_mode"; // "translations" | "gaps" | "combined"
 
-export function getSavedTaskMode() {
+export async function getSavedTaskMode() {
+    if (await marathonService.isMarathonView(true))
+        return "translations";
+
+    const v = String(localStorage.getItem(LS_TASK_MODE_KEY) || "").trim();
+    const allowed = new Set(["translations", "gaps", "combined"]);
+    return allowed.has(v) ? v : null;
+}
+
+export function getSavedTaskModeSync() {
+    if (marathonService.isMarathonViewSync())
+        return "translations";
+
     const v = String(localStorage.getItem(LS_TASK_MODE_KEY) || "").trim();
     const allowed = new Set(["translations", "gaps", "combined"]);
     return allowed.has(v) ? v : null;
@@ -69,7 +82,7 @@ export function getTrainingLevel() {
 
     // --- CALIBRATION MODE ---
     if (overall.attemptsLeft > 0) {
-        let levelIdx = 0; // start at A1
+        let levelIdx = 1; // start at A2
 
         while (true) {
             const lvl = CEFR_ORDER[levelIdx];

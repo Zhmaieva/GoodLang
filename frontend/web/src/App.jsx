@@ -116,6 +116,7 @@ import GaRouteTracker from "./components/routing/GaRouteTracker.jsx";
 import LandingPageTeacher from "./components/pages/LandingPageTeacher.jsx";
 import LandingPage3 from "./components/pages/LandingPage3.jsx";
 import LandingCrossword from "./components/pages/LandingCrossword.jsx";
+import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
 import TeacherMyProfilePage from "./components/dashboard/pages/TeacherMyProfilePage.jsx";
 import TeacherMyStudentsPage from "./components/dashboard/pages/TeacherMyStudentsPage.jsx";
 import TeacherMyClassesPage from "./components/dashboard/pages/TeacherMyClassesPage.jsx";
@@ -172,15 +173,18 @@ export default function App() {
     })
 
     return (
-        <section>
+        <section style={{overflowX: 'hidden'}}>
             <GaRouteTracker />
             <SyncOnRouteChange />
             <Routes>
-                {/* Core pages */}
-                <Route path="/" element={<HomePage theme={theme} />} />
+                {/* Landing pages */}
                 <Route path="/welcome" element={<LandingPage3 theme={theme} />} />
                 <Route path="/greetings" element={<LandingPage3 theme={theme} />} />
                 <Route path="/hello" element={<LandingPageTeacher theme={theme} />} />
+                <Route path="/marathon" element={<LandingPageMarathon theme={theme} />} />
+
+                {/* Core pages */}
+                <Route path="/" element={<HomePage theme={theme} />} />
                 <Route path="/crossword" element={<LandingCrossword theme={theme} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />

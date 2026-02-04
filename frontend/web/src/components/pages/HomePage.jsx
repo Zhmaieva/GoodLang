@@ -10,7 +10,8 @@ import { ACTION_TYPES } from "../../utils/constants.js";
 import { getAllStatistics } from "../../services/dataService.js";
 import { on, off } from "../../services/events.js";
 import InfoModal from "../modals/InfoModal.jsx";
-import {getSavedTrainingLevel, saveTrainingLevel} from "../../services/trainingDirector.js"; // ✅ adjust path if needed
+import {getSavedTrainingLevel, saveTrainingLevel} from "../../services/trainingDirector.js";
+import {marathonService} from "../../services/marathonService.js"; // ✅ adjust path if needed
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -22,6 +23,8 @@ export default function HomePage({ theme }) {
     const [hoveredRuleId, setHoveredRuleId] = useState(null);
 
     const [isMobile, setIsMobile] = useState(false);
+    const [isInMarathonView, setIsInMarathonView] = useState(false);
+    const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
 
     // ✅ Info modal state (for unsubscribe)
     const [infoOpen, setInfoOpen] = useState(false);
@@ -67,9 +70,9 @@ export default function HomePage({ theme }) {
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
         fontFamily: "Nunito, system-ui, sans-serif",
 
-        width: ((weakRules?.length || 0) <= 0) ? "100%" : "initial",
+        width: (isMobile || (weakRules?.length || 0) <= 0) ? "100%" : "initial",
 
-        maxWidth: ((weakRules?.length || 0) <= 0) ? "100%" : (isMobile && !keepFullSize ? 140 : 280),
+        maxWidth: (isMobile || (weakRules?.length || 0) <= 0) ? "100%" : (isMobile && !keepFullSize ? 140 : 280),
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
@@ -177,15 +180,29 @@ export default function HomePage({ theme }) {
 
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
+        checkMarathonView().then();
+
         window.addEventListener("resize", onResize);
+        window.addEventListener("onMarathonUpdate", checkMarathonView);
 
         on("weeklyProgressUpdate", onRefresh);
 
         return () => {
             off("weeklyProgressUpdate", onRefresh);
             window.removeEventListener("resize", onResize);
+            window.removeEventListener("onMarathonUpdate", checkMarathonView);
         };
     }, []);
+
+    useEffect(() => {
+        checkMarathonView().then();
+    }, [loading])
+
+    const checkMarathonView = async () => {
+        const result = await marathonService.isMarathonView(true);
+        setIsInMarathonView(result);
+        setIsMarathonLoaded(true);
+    }
 
     return (
         <AppShell theme={theme}>
@@ -212,36 +229,39 @@ export default function HomePage({ theme }) {
                 />
 
                 <section style={gridStyle}>
-                    <div style={topRowStyle}>
-                        {
-                            allRulesVisible && <button
-                                onMouseEnter={() => setHoveredAnalytics(true)}
-                                onMouseLeave={() => setHoveredAnalytics(false)}
-                                style={weakRuleButtonStyle(hoveredAnalytics, true)}
-                                onClick={handleAnalyticsClick}
-                            >
-                                {!isMobile ? "Список усіх правил →" : "Усі правила"}
-                            </button>
-                        }
-
-
-                        {weakRules.map((r) => {
-                            const isHover = hoveredRuleId === r.id;
-
-                            return (
-                                <button
-                                    key={r.id}
-                                    style={weakRuleButtonStyle(isHover)}
-                                    onMouseEnter={() => setHoveredRuleId(r.id)}
-                                    onMouseLeave={() => setHoveredRuleId(null)}
-                                    onClick={() => handleRuleClick(r.id)}
-                                    title={`Open rule: ${r.label}`}
+                    {
+                        !isMobile && isMarathonLoaded && !isInMarathonView &&
+                        <div style={topRowStyle}>
+                            {
+                                !isMobile && allRulesVisible && <button
+                                    onMouseEnter={() => setHoveredAnalytics(true)}
+                                    onMouseLeave={() => setHoveredAnalytics(false)}
+                                    style={weakRuleButtonStyle(hoveredAnalytics, true)}
+                                    onClick={handleAnalyticsClick}
                                 >
-                                    {r.label}
+                                    {!isMobile ? "Список усіх правил →" : "Усі правила"}
                                 </button>
-                            );
-                        })}
-                    </div>
+                            }
+
+
+                            {!isMobile && weakRules.map((r) => {
+                                const isHover = hoveredRuleId === r.id;
+
+                                return (
+                                    <button
+                                        key={r.id}
+                                        style={weakRuleButtonStyle(isHover)}
+                                        onMouseEnter={() => setHoveredRuleId(r.id)}
+                                        onMouseLeave={() => setHoveredRuleId(null)}
+                                        onClick={() => handleRuleClick(r.id)}
+                                        title={`Open rule: ${r.label}`}
+                                    >
+                                        {r.label}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    }
 
                     <Trainer
                         freeTraining
@@ -251,7 +271,7 @@ export default function HomePage({ theme }) {
                     />
                 </section>
 
-                <FooterBar theme={theme} />
+                <FooterBar theme={theme}/>
             </div>
         </AppShell>
     );

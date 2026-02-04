@@ -498,7 +498,7 @@
     "en": ["Are they from Spain? Yes, they are."]
   },
   {
-    "rules": ["YES_NO_Q", "QUANTIFIERS", "THERE_IS_ARE"],
+    "rules": ["YES_NO_Q", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "THERE_IS_ARE"],
     "ua": "У черзі багато людей? Так.",
     "en": ["Are there many people in the queue? Yes, there are.", "Are there many people in line? Yes, there are."]
   },

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Used by backend to pick the latest email -->
+  <meta name="goodlang:created_at" content="{{CREATED_AT_ISO}}" />
+  <meta name="goodlang:subject" content="Твій 7-денний марафон стартував 🚀" />
+
+  <title>7-денний марафон GoodLang</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff3df;
+      font-family: Arial, sans-serif;
+      color: #3a2a1d;
+    }
+
+    .wrap {
+      width: 100%;
+      padding: 20px 12px;
+    }
+
+    .card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #fffdf8;
+      border: 3px solid #ff6138;
+      box-shadow: 4px 4px 0 #d74e2a;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .header {
+      background: #ff6138;
+      color: #ffffff;
+      padding: 16px 18px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+    }
+
+    .body {
+      padding: 18px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #000;
+    }
+
+    .p {
+      margin: 0 0 14px;
+    }
+
+    .section {
+      margin: 18px 0;
+    }
+
+    .bullet {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: #ff6138;
+      border-radius: 50%;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .rules {
+      background: #fffaf3;
+      border: 2px dashed #ff6138;
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin: 14px 0;
+    }
+
+    .rule {
+      margin-bottom: 8px;
+    }
+
+    .rule a {
+      color: #000;
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    .footer {
+      padding: 16px 18px 20px;
+      font-size: 14px;
+      color: #7a5b44;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 6px;
+      background: #ff6138;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="header">GoodLang</div>
+
+    <div class="body">
+      <p class="p">
+        Привіт!
+      </p>
+
+      <p class="p">
+        <strong>Твій 7-денний марафон щойно стартував.</strong><br />
+        Попереду — 7 граматичних правил за 7 днів і багато практики.
+      </p>
+
+      <div class="section">
+        <div class="bullet">
+          <div>
+            <strong>7 правил за 7 днів</strong><br />
+            Нове правило щодня та необмежена практика.
+          </div>
+        </div>
+
+        <div class="bullet">
+          <div>
+            <strong>Вивчиш або вилетиш</strong><br />
+            Маєш 24 години, щоб вивчити правило.
+          </div>
+        </div>
+      </div>
+
+      <p class="p">
+        Ось правила, які входять у твій марафон:
+      </p>
+
+      <div class="rules">
+        <!-- Dynamic list -->
+        {{#RULES}}
+        <div class="rule">
+          👉 <a href="{{url}}" target="_blank">{{title}}</a>
+        </div>
+        {{/RULES}}
+      </div>
+
+      <p class="p">
+        <strong>Важливо:</strong><br />
+        якщо пропускаєш один день — марафон завершується.
+        Щоб зберегти темп навчання, ти зможеш стартувати знову
+        в наступному циклі.
+      </p>
+
+      <p class="p">
+        Починай з першого правила вже сьогодні — і побачимось завтра!
+      </p>
+    </div>
+
+    <div class="footer">
+      Успіхів 💛,<br />
+      <span class="brand">GoodLang</span>
+
+      <div style="text-align: right; font-size: 0.65rem; margin-top:10px">
+        Не хочеш отримувати ці листи?
+        <a href="{{UNSUBSCRIBE_URL}}" style="color:#7a5b44; font-weight:700; text-decoration:underline;">
+          Відписатися
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Plain text version -->
+<script type="text/plain" id="goodlang-plain">
+  Привіт!
+
+  Твій 7-денний марафон щойно стартував 🚀
+
+  7 правил за 7 днів.
+  Нове правило щодня та необмежена практика.
+
+  Вивчиш або вилетиш:
+  маєш 24 години, щоб вивчити правило.
+  Пропускаєш день — марафон завершується.
+
+  Правила марафону:
+  {{#RULES}}
+  - {{title}} → {{url}}
+  {{/RULES}}
+
+  Починай вже сьогодні 💛
+  GoodLang
+
+  Відписатися: {{UNSUBSCRIBE_URL}}
+</script>
+</body>
+</html>

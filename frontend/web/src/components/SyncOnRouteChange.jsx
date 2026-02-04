@@ -44,6 +44,7 @@ export default function SyncOnRouteChange() {
                         && location.pathname !== '/greetings'
                         && location.pathname !== '/hello'
                         && location.pathname !== '/crossword'
+                        && location.pathname !== '/marathon'
                         && !shouldOpenSubscribe) {
                         navigate("/welcome", { replace: true });
                         return;

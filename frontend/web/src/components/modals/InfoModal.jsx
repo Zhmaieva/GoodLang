@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
 export default function InfoModal({
                                       theme,
@@ -8,9 +9,22 @@ export default function InfoModal({
                                       onClose,
                                   }) {
     const isString = typeof message === "string";
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#info-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#info-modal'));
+    }
+
+    useEffect(() => {
+        lockScroll();
+    }, []);
 
     return (
         <div
+            id={"info-modal"}
             style={{
                 position: "fixed",
                 inset: 0,
@@ -22,7 +36,10 @@ export default function InfoModal({
                 paddingBottom: "env(safe-area-inset-bottom)",
                 paddingTop: "env(safe-area-inset-top)",
             }}
-            onClick={onClose}
+            onClick={() => {
+                unlockScroll();
+                onClose();
+            }}
         >
             <div
                 style={{
@@ -61,7 +78,10 @@ export default function InfoModal({
                 </div>
 
                 <button
-                    onClick={onClose}
+                    onClick={() => {
+                        unlockScroll();
+                        onClose();
+                    }}
                     style={{
                         width: "100%",
                         background: theme.accent,

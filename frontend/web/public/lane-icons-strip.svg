@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="20" viewBox="0 0 240 20">
+    <!-- stride = 40px: icon 18px + gap 22px -->
+    <image href="/apple-icon.svg"    x="0"   y="1" width="18" height="18" />
+    <image href="/computer-icon.svg" x="40"  y="1" width="18" height="18" />
+    <image href="/flower-icon.svg"   x="80"  y="1" width="18" height="18" />
+    <image href="/house-icon.svg"    x="120" y="1" width="18" height="18" />
+    <image href="/pencil-icon.svg"   x="160" y="1" width="18" height="18" />
+    <image href="/tree-icon.svg"     x="200" y="1" width="18" height="18" />
+</svg>

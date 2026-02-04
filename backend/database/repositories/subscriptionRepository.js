@@ -25,6 +25,7 @@ function mapStripeStatus(stripeStatus) {
         case "past_due":
         case "unpaid":
         case "incomplete":
+        case "cancellation_requested":
             return "attention";
 
         case "canceled":

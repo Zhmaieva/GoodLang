@@ -3,8 +3,12 @@ import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getAllStatistics, getOverallAccuracy, getSeed, saveSeed} from "../../services/dataService.js";
 import {callAccountInfoApi, callAccountVerifyApi, callTranslateAPI} from "../../services/api.js";
-import LimitModal from "../subscription/LimitModal.jsx";
-import {getSavedTaskMode, getTrainingLevel, saveTaskMode} from "../../services/trainingDirector.js";
+import {
+    getSavedTaskMode,
+    getSavedTaskModeSync,
+    getTrainingLevel,
+    saveTaskMode
+} from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
 import {emit} from "../../services/events.js";
 import {logInfo} from "../../services/logger.js";
@@ -12,6 +16,8 @@ import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../servic
 import {ACTION_TYPES} from "../../utils/constants.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
+import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
+import {marathonService} from "../../services/marathonService.js";
 
 export default function Trainer({
                                     theme,
@@ -73,7 +79,7 @@ export default function Trainer({
     // Mode selector (UI)
     // -----------------------------
     // "translations" | "gaps" | "combined"
-    const [taskMode, setTaskMode] = useState(() => getSavedTaskMode() || "combined");
+    const [taskMode, setTaskMode] = useState(getSavedTaskModeSync());
     const [taskModeLocked, setTaskModeLocked] = useState(false);
     const [taskModeLockReason, setTaskModeLockReason] = useState("");
 
@@ -104,13 +110,13 @@ export default function Trainer({
     const [rules, setRules] = useState([]);
 
     const [answer, setAnswer] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [mode, setMode] = useState("check"); // "check" | "next"
     const [isError, setIsError] = useState(false);
     const [locked, setLocked] = useState(false);
 
     const [taskText, setTaskText] = useState("Стягнення завдання…");
-    const [hint, setHint] = useState("Порада: переклади і натисни «Перевірити»");
+    const [hint, setHintValue] = useState("Порада: переклади і натисни «Перевірити»");
     const [taskHint, setTaskHint] = useState(null);
 
     const [account, setAccount] = useState(null);
@@ -124,6 +130,12 @@ export default function Trainer({
 
     // weak rules
     const [weakRules, setWeakRules] = useState([]);
+
+    const setHint = (value) => {
+        setHintValue(value);
+
+    }
+
 
     // -----------------------------
     // Preloading state (supports gaps too)
@@ -148,10 +160,17 @@ export default function Trainer({
 
     useEffect(() => {
         loadAccount().then();
-
-        const saved = getSavedTaskMode();
-        if (saved) setTaskMode(saved);
+        refreshTaskMode().then();
     }, []);
+
+    const refreshTaskMode = async () => {
+        const saved = await getSavedTaskMode();
+        if (freeTraining && await marathonService.isMarathonView(true)) {
+            setTaskMode("translations")
+            return;
+        }
+        if (saved) setTaskMode(saved);
+    }
 
     function setControlsDisabled(disabled) {
         onLoadingChange(disabled);
@@ -306,6 +325,17 @@ export default function Trainer({
                                          skip,
                                          overrideTaskType = null,
                                      }) {
+        if (freeTraining && await marathonService.isMarathonView(true)) {
+            const nextMarathonRule = marathonService.getNextMarathonRule();
+            return await callTranslateAPI({
+                rules: [nextMarathonRule],
+                seed,
+                skip,
+                taskType: "translations",
+                use_same_task_type: true,
+            });
+        }
+
         let ruleToSend = nextRule;
 
         const task_type = String(overrideTaskType ?? getRequestedTaskType());
@@ -417,6 +447,11 @@ export default function Trainer({
         } catch (e) {
             console.error(e);
             setIsError(true);
+
+            try {
+                callAccountVerifyApi(ACTION_TYPES.ERROR_TRANSLATOR).then();
+            } catch {}
+
         } finally {
             setControlsDisabled(false);
         }
@@ -487,11 +522,11 @@ export default function Trainer({
             setTaskModeLocked(!!isCalibration);
 
             if (data.isAnswerCorrect) {
-                setHint("✔ Правильно!");
+                setHint("Правильно!");
                 setCorrectAnswer("");
             } else {
                 const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
-                setHint("❌ Не зовсім." + tip);
+                setHint("Не зовсім вірно." + tip);
                 setCorrectAnswer(data.correctAnswer || "");
             }
 
@@ -502,6 +537,9 @@ export default function Trainer({
             }
 
             emit("weeklyProgressUpdate");
+
+            if (freeTraining)
+                emit("marathonProgressUpdate");
 
             const serverNextType = Number(data.taskType ?? 0);
             const serverProvidedNextTask = !!(data.textToTranslate && (data.rules?.length ?? 0) > 0);
@@ -515,9 +553,12 @@ export default function Trainer({
                 }
             }
 
+            if (freeTraining)
+                emit("marathonProgressUpdateHardRefresh");
+
             // ✅ Preload next task
             // During calibration you already prevent preloading below; kept as-is.
-            if (freeTraining && !(nextLevel === "managed" && isCalibration)) {
+            if (!(await marathonService.isMarathonView()) && freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
                 setNextRules(data.rules || []);
                 setNextHint(data.hint || null);
@@ -539,6 +580,10 @@ export default function Trainer({
         } catch (e) {
             console.error(e);
             setIsError(true);
+
+            try {
+                callAccountVerifyApi(ACTION_TYPES.ERROR_TRANSLATOR).then();
+            } catch {}
         } finally {
             setControlsDisabled(false);
         }
@@ -560,6 +605,10 @@ export default function Trainer({
     // -----------------------------
     async function onMainButtonClick() {
         if (locked) {
+            try {
+                callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_BEFORE_START).then();
+            } catch {}
+
             setLimitModalOpen(true);
             return;
         }
@@ -632,7 +681,6 @@ export default function Trainer({
     // Initial load when nextLevel changes
     // -----------------------------
     useEffect(() => {
-        if (loading) return;
         if (nextLevel === level && !nextRule) return;
 
         if (level !== nextLevel) {
@@ -641,12 +689,16 @@ export default function Trainer({
 
         setLevel(nextLevel);
 
+        initCalibration().then()
+    }, [nextLevel]);
+
+    const initCalibration = async () => {
         const diff = randomDifficulty(nextLevel);
         setDifficulty(diff);
 
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration);
+        setTaskModeLocked(!!isCalibration || (freeTraining && await marathonService.isMarathonView(true)));
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
 
@@ -659,8 +711,7 @@ export default function Trainer({
 
         const initialOverride = isCalibrationNow() ? 0 : getRequestedTaskType();
         loadNewTask(diff, { overrideTaskType: initialOverride }).then(_ => {});
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [nextLevel]);
+    }
 
     // Focus textarea only for translation tasks
     useEffect(() => {
@@ -672,13 +723,16 @@ export default function Trainer({
     useEffect(() => {
         if (!difficulty) return;
 
+        initCalibrationSimple().then();
+    }, [difficulty]);
+
+    const initCalibrationSimple = async () => {
         const { isCalibration } = getTrainingLevel();
 
-        setTaskModeLocked(!!isCalibration);
+        setTaskModeLocked(!!isCalibration || (freeTraining && await marathonService.isMarathonView(true)));
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
-
-    }, [difficulty]);
+    }
 
     return isError ? (
         <div style={{
@@ -736,12 +790,20 @@ export default function Trainer({
                 weakRules={weakRules}
             />
 
-            <LimitModal
-                waitTimeSeconds={waitTimeSeconds}
-                isLimitReached={true}
-                theme={theme}
+            {/*<LimitModal*/}
+            {/*    waitTimeSeconds={waitTimeSeconds}*/}
+            {/*    isLimitReached={true}*/}
+            {/*    theme={theme}*/}
+            {/*    open={limitModalOpen}*/}
+            {/*    onClose={() => setLimitModalOpen(false)}*/}
+            {/*/>*/}
+
+            <MarathonInfoModal
                 open={limitModalOpen}
                 onClose={() => setLimitModalOpen(false)}
+                theme={theme}
+                account={account}               // from callAccountInfoApi()
+                ruleIds={[]}         // exactly 7 items
             />
 
             {cookieOpen && (

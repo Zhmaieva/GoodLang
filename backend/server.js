@@ -10,6 +10,7 @@ import {schoolController} from "./controllers/schoolsController.js";
 import {connectDB} from "./database/mongo.js";
 import {schoolsTaskSetsController} from "./controllers/schoolsTaskSetsController.js";
 import {ensureSchoolTaskIndexes} from "./database/repositories/schoolTaskRepository.js";
+import {marathonsController} from "./controllers/marathonsController.js";
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
@@ -41,6 +42,7 @@ accountsController.mapRoutes(app);
 paymentsController.mapRoutes(app);
 dataSyncController.mapRoutes(app);
 filesController.mapRoutes(app);
+marathonsController.mapRoutes(app);
 schoolController.mapRoutes(app);
 schoolsTaskSetsController.mapRoutes(app);
 

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import TaskModeSwitch from "./TaskModeSwitch.jsx";
+import { marathonService } from "../../services/marathonService.js";
 
 export default function TaskCard({
                                      theme,
@@ -27,20 +28,44 @@ export default function TaskCard({
                                      taskMode = "combined", // "translations" | "gaps" | "combined"
                                      setTaskMode = (_) => {},
                                      taskModeLocked = false,
+                                     taskModeLockReason = "",
                                  }) {
+   //const loading = true;
     const [hovered, setHovered] = useState(false);
+
+    // ✅ card hover is styling-only
+    const [cardHovered, setCardHovered] = useState(false);
 
     // countdown state
     const [secondsLeft, setSecondsLeft] = useState(0);
 
     // ✅ simple responsive flags (keeps behavior stable during resize)
     const [isCompact, setIsCompact] = useState(() => window.innerWidth < 915);
+    const [isInMarathonView, setIsInMarathonView] = useState(false);
+    const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
 
     useEffect(() => {
         const onResize = () => setIsCompact(window.innerWidth < 900);
+        checkMarathonView().then();
+
         window.addEventListener("resize", onResize, { passive: true });
-        return () => window.removeEventListener("resize", onResize);
+        window.addEventListener("onMarathonUpdate", checkMarathonView);
+
+        return () => {
+            window.removeEventListener("resize", onResize);
+            window.removeEventListener("onMarathonUpdate", checkMarathonView);
+        };
     }, []);
+
+    useEffect(() => {
+        checkMarathonView().then();
+    }, [loading]);
+
+    const checkMarathonView = async () => {
+        const result = await marathonService.isMarathonView(true);
+        setIsInMarathonView(result);
+        setIsMarathonLoaded(true);
+    };
 
     const isDesktop = !isCompact;
 
@@ -79,31 +104,36 @@ export default function TaskCard({
 
     const isLockedNow = locked && secondsLeft > 0;
     const buttonText = isLockedNow
-        ? `Підпишись або почекай ${formatTime(secondsLeft)}`
+        ? `Почни марафон або почекай ${formatTime(secondsLeft)}`
         : mainBtnText;
 
-    // ✅ detect if mode switch is expanded (best-effort)
-    // We can’t read internal state of TaskModeSwitch directly.
-    // But we CAN infer: when not expanded, it shows one pill; when expanded, 3 pills.
-    // We'll approximate by "expanded on desktop = always allow it to take room",
-    // and also ensure left block can grow when right is small.
-    // If you want exact control, add `onExpandedChange` in TaskModeSwitch later.
     const modeWrapDesktopBehavior = useMemo(() => {
-        // keep switch as small as possible by default
-        // and still let left side fill remaining space
         return {
             flex: "0 0 auto",
-            maxWidth: "55%", // safety cap so it never eats the whole row
+            maxWidth: "55%",
         };
     }, []);
 
+    // ----- “Accuracy KPI header” styling tokens -----
+    const CARD_BG = "rgba(255, 243, 223, 0.92)";
+    const CARD_BORDER_IDLE = "rgba(255,97,56,0.70)";
+    const CARD_BORDER_HOVER = "rgba(255,97,56,0.95)";
+    const CARD_SHADOW_IDLE = "0 10px 26px rgba(0,0,0,0.12)";
+    const CARD_SHADOW_HOVER = "0 14px 34px rgba(0,0,0,0.14)";
+    const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
+    const SOFT_STROKE = "rgba(0,0,0,0.12)";
+    const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
+    const SOFT_STROKE_ACCENT_2 = "rgba(255,97,56,0.40)";
+
     const styles = {
         card: {
-            background: "#fffdf8",
-            border: `3px solid ${theme.accent}`,
-            borderRadius: theme.radius,
-            boxShadow: `4px 4px 0 ${theme.accentDark}`,
-            padding: 20,
+            background: CARD_BG,
+            border: `2px solid ${cardHovered ? CARD_BORDER_HOVER : CARD_BORDER_IDLE}`,
+            borderRadius: 14,
+            boxShadow: cardHovered ? CARD_SHADOW_HOVER : CARD_SHADOW_IDLE,
+            padding: isCompact ? 16 : 20,
+            transform: cardHovered ? "translateY(-1px)" : "none",
+            transition: "transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease",
         },
 
         // ✅ header row
@@ -111,8 +141,7 @@ export default function TaskCard({
             display: "flex",
             gap: 12,
             justifyContent: "space-between",
-            flexWrap: "wrap-reverse", // wrapped rows appear ABOVE
-            //alignItems: "flex-start",  // ✅ keeps switch aligned with task top line
+            flexWrap: "wrap-reverse",
         },
 
         // ✅ left block should fill as much as possible
@@ -120,7 +149,8 @@ export default function TaskCard({
             display: "flex",
             flexDirection: "column",
             gap: 10,
-            flex: "1 1 200px", // ✅ grow on desktop
+            flex: "1 1 200px",
+            minWidth: 0,
         },
 
         // ✅ task line: keep task + hint on same baseline row
@@ -133,8 +163,9 @@ export default function TaskCard({
         },
 
         taskText: {
-            fontSize: "1.5rem",
-            fontWeight: 800,
+            fontFamily: "Nunito, system-ui, sans-serif",
+            fontSize: isCompact ? "1.25rem" : "1.5rem",
+            fontWeight: 900,
             color: theme.text,
             lineHeight: 1.15,
             minWidth: 0,
@@ -142,25 +173,27 @@ export default function TaskCard({
         },
 
         hintText: {
-            background: "#fffaf3",
-            border: `2px dashed ${theme.accent}`,
-            padding: "2px 14px",
-            borderRadius: theme.radius,
-            color: theme.text,
+            fontFamily: "Nunito, system-ui, sans-serif",
+            background: theme.text,
+            //border: `2px dashed ${SOFT_STROKE_ACCENT_2}`,
+            padding: "4px 14px",
+            borderRadius: 14,
+            color: "#fff",
             whiteSpace: "pre-wrap",
             flex: "0 1 auto",
+            opacity: 0.7,
+            fontWeight: 700,
+            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            alignContent: "center",
         },
 
-        // ✅ right column: keep it on the right on desktop, left on mobile (TaskModeSwitch handles align)
+        // ✅ right column
         modeWrap: {
             marginLeft: "auto",
             minWidth: 0,
             display: "flex",
-            justifyContent: (isCompact && window.innerWidth < 600) ? "flex-start" : "flex-end",
-            //alignSelf: "flex-start", // ✅ align with task line top
-
-            ...(isDesktop ? modeWrapDesktopBehavior :
-                (window.innerWidth > 460 ? {} : { flex: "1 1 380px" })),
+            justifyContent: isCompact && window.innerWidth < 600 ? "flex-start" : "flex-end",
+            ...(isDesktop ? modeWrapDesktopBehavior : window.innerWidth > 460 ? {} : { flex: "1 1 380px" }),
         },
 
         inputWrap: { marginTop: 14, display: "flex", flexDirection: "column", gap: 12 },
@@ -170,34 +203,37 @@ export default function TaskCard({
             resize: "none",
             flex: 1,
             height: 70,
-            borderRadius: theme.radius,
-            border: `3px solid ${theme.accent}`,
-            background: "#fffaf3",
+            borderRadius: 14,
+            border: `2px solid ${SOFT_STROKE_ACCENT}`,
+            background: SOFT_INNER,
             padding: "12px 14px",
             fontWeight: 800,
-            fontSize: "1rem",
+            fontSize: "1.25rem",
             color: theme.text,
             opacity: isInputDisabled ? 0.7 : 1,
+            outline: "none",
+            boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
         },
 
         btn: {
             appearance: "none",
             padding: "10px 14px",
-            fontWeight: 800,
-            fontSize: "clamp(0.85rem, 3.5vw, 1.3rem)",
+            fontWeight: 900,
+            fontSize: "clamp(0.6rem, 3.5vw, 1.3rem)",
             lineHeight: 1,
             borderRadius: 999,
-            cursor: loading ? "not-allowed" : "pointer",
+            cursor: !isLockedNow && (loading || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? "not-allowed" : "pointer",
             background: theme.accent ?? "#4ba36e",
             color: "#fff",
-            border: "2px solid rgba(0,0,0,0.12)",
-            boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
+            border: `2px solid ${SOFT_STROKE}`,
+            boxShadow: "0 10px 22px rgba(0,0,0,0.14)",
             fontFamily: "Nunito, system-ui, sans-serif",
             whiteSpace: "nowrap",
-            opacity: loading ? 0.7 : 1,
-            transform: hovered ? "translateY(1px)" : "none",
-            filter: hovered ? "brightness(0.95)" : "none",
-            transition: "transform 120ms ease, filter 120ms ease",
+            opacity: !isLockedNow && (loading || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? 0.7 : 1,
+            transform: hovered && (!isLockedNow || !(loading || (taskType === 'translate' && (!textareaRef?.current?.value || false)))) ? "translateY(1px)" : "none",
+            filter: hovered && (!isLockedNow || !(loading || (taskType === 'translate' && (!textareaRef?.current?.value || false)))) ? "brightness(0.95)" : "none",
+            transition: "transform 120ms ease, filter 120ms ease, box-shadow 120ms ease",
+            height: "44px",
         },
 
         // loader
@@ -205,20 +241,23 @@ export default function TaskCard({
             display: "inline-flex",
             alignItems: "center",
             gap: 8,
-            paddingTop: 2,
+            //paddingTop: 2,
             paddingBottom: 2,
+            position: "relative",
+            top: "-6px",
         },
         bars: {
             display: "inline-flex",
             alignItems: "flex-end",
             gap: 8,
             height: 26,
-            marginLeft: 12,
+            marginLeft: 0,
         },
         bar: (white) => ({
             width: 7,
             borderRadius: 999,
             background: white ? "#fff" : theme.text,
+            boxShadow: "0 6px 14px rgba(0,0,0,0.10)",
         }),
 
         loaderInline: {
@@ -227,22 +266,25 @@ export default function TaskCard({
             height: 34,
         },
 
-        optionsWrap: { display: "flex", flexWrap: "wrap", gap: 10},
+        optionsWrap: { display: "flex", flexWrap: "wrap", gap: 10 },
+
         optionBtn: (active) => ({
             appearance: "none",
-            padding: "10px 14px",
+            padding: "0px 14px",
             borderRadius: 999,
-            fontWeight: 800,
+            fontWeight: 900,
             fontSize: "1rem",
             fontFamily: "Nunito, system-ui, sans-serif",
             cursor: "pointer",
-            border: `2px solid ${theme.accent}`,
-            background: active ? theme.accent : "#fffef6",
+            border: `2px solid ${active ? CARD_BORDER_HOVER : SOFT_STROKE_ACCENT}`,
+            background: active ? theme.accent : "rgba(255,255,255,0.78)",
             color: active ? "#fff" : theme.text,
-            boxShadow: `2px 2px 0 ${theme.accentDark}`,
+            boxShadow: active ? "0 10px 22px rgba(0,0,0,0.14)" : "0 8px 18px rgba(0,0,0,0.10)",
             opacity: loading || isInputDisabled ? 0.7 : 1,
             height: 44,
             minWidth: 60,
+            transform: active ? "translateY(-1px)" : "none",
+            transition: "transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease",
         }),
     };
 
@@ -265,7 +307,12 @@ export default function TaskCard({
     );
 
     return (
-        <div style={styles.card} aria-live="polite">
+        <div
+            style={styles.card}
+            aria-live="polite"
+            onMouseEnter={() => setCardHovered(true)}
+            onMouseLeave={() => setCardHovered(false)}
+        >
             <div style={styles.headerRow}>
                 <div style={styles.taskBlock}>
                     <div style={styles.taskLine}>
@@ -277,20 +324,23 @@ export default function TaskCard({
                             <div style={styles.taskText} dangerouslySetInnerHTML={{ __html: taskText }} />
                         )}
 
-                        {hint && !loading && <div style={styles.hintText}>{hint}</div>}
+                        {hint && !loading && <div style={styles.hintText}>Уточнення: {hint.toLowerCase()}</div>}
                     </div>
                 </div>
 
-                <div style={styles.modeWrap}>
-                    <TaskModeSwitch
-                        theme={theme}
-                        taskMode={taskMode}
-                        setTaskMode={setTaskMode}
-                        loading={loading}
-                        locked={taskModeLocked}
-                        compact={isCompact}
-                    />
-                </div>
+                {!isInMarathonView && isMarathonLoaded && (
+                    <div style={styles.modeWrap}>
+                        <TaskModeSwitch
+                            theme={theme}
+                            taskMode={taskMode}
+                            setTaskMode={setTaskMode}
+                            loading={loading}
+                            locked={taskModeLocked}
+                            taskModeLockReason={taskModeLockReason}
+                            compact={isCompact}
+                        />
+                    </div>
+                )}
             </div>
 
             <div style={styles.inputWrap}>
@@ -310,8 +360,9 @@ export default function TaskCard({
                     </div>
                 ) : (
                     <textarea
+                        className={"highlight-input"}
                         ref={textareaRef}
-                        placeholder="Введи переклад англійською…"
+                        placeholder="Введи переклад англійською..."
                         autoComplete="off"
                         value={answer}
                         onChange={(e) => setAnswer(e.target.value)}

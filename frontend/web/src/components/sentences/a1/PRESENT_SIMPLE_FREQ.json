@@ -121,7 +121,7 @@
       "en": ["He always drinks a lot of water."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
       "ua": "Ми часто маємо багато роботи.",
       "en": ["We often have a lot of work."]
     },
@@ -166,7 +166,7 @@
       "en": ["He is often angry when he is hungry."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
       "ua": "Вони часто їдять багато фруктів.",
       "en": ["They often eat a lot of fruit."]
     },
@@ -301,7 +301,7 @@
       "en": ["They are often at the gym after work."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
       "ua": "Він завжди має багато енергії вранці.",
       "en": ["He always has a lot of energy in the morning."]
     },
@@ -371,7 +371,7 @@
       "en": ["They are always punctual."]
     },
     {
-      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS"],
+      "rules": ["PRESENT_SIMPLE_FREQ", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
       "ua": "Я часто маю багато роботи.",
       "en": ["I often have a lot of work."]
     },

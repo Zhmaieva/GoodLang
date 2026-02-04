@@ -313,7 +313,7 @@ export function statusFor(accuracy, attempts) {
     // needs practice: (<5 attempts AND accuracy < 75) OR accuracy < 30
     if (accuracy < 50) return "needs practice";
     // learned: accuracy > 80 AND attempts > 5
-    if (accuracy > 75) return "learned";
+    if (accuracy > 70) return "learned";
     return "in progress";
 }
 

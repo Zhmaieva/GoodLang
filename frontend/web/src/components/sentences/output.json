@@ -4765,7 +4765,7 @@
     {
       "rules": [
         "HAVE_HAVE_GOT",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "У них немає грошей.",
       "en": [
@@ -4887,7 +4887,7 @@
     {
       "rules": [
         "HAVE_HAVE_GOT",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "У них багато друзів.",
       "en": [
@@ -12680,7 +12680,7 @@
     {
       "rules": [
         "PRESENT_SIMPLE_FREQ",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Ми часто маємо багато роботи.",
       "en": [
@@ -12770,7 +12770,7 @@
     {
       "rules": [
         "PRESENT_SIMPLE_FREQ",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Вони часто їдять багато фруктів.",
       "en": [
@@ -13034,7 +13034,7 @@
     {
       "rules": [
         "PRESENT_SIMPLE_FREQ",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Він завжди має багато енергії вранці.",
       "en": [
@@ -13171,7 +13171,7 @@
     {
       "rules": [
         "PRESENT_SIMPLE_FREQ",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Я часто маю багато роботи.",
       "en": [
@@ -15095,7 +15095,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У парку багато людей.",
@@ -15131,7 +15131,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У склянці є трохи води.",
@@ -15154,7 +15154,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "На полиці кілька книжок.",
@@ -15213,7 +15213,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "На пляжі багато людей.",
@@ -15320,7 +15320,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У класі є кілька учнів.",
@@ -15356,7 +15356,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "На вулиці багато машин.",
@@ -15404,7 +15404,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У холодильнику є трохи сиру.",
@@ -15440,7 +15440,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У парку багато дітей.",
@@ -15476,7 +15476,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У кімнаті багато людей.",
@@ -15501,7 +15501,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У каструлі є трохи рису.",
@@ -15549,7 +15549,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "На вечірці буде багато їжі.",
@@ -15596,7 +15596,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "У чайнику було трохи чаю.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -15618,7 +15618,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "На землі лежить трохи снігу.",
@@ -15642,7 +15642,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У машині багато місця.",
@@ -15654,7 +15654,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "У чашці було трохи цукру.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -15678,7 +15678,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У тексті є кілька помилок.",
@@ -15691,7 +15691,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "На столі є трохи пилу.",
@@ -15738,7 +15738,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У кімнаті є кілька стільців.",
@@ -15750,7 +15750,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У чашці було трохи молока.",
@@ -15775,7 +15775,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "У банці є кілька цукерок.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -15833,7 +15833,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "До обіду є трохи часу.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -15844,7 +15844,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "На вулиці лежить трохи снігу.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -15855,7 +15855,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "У гаманці є трохи грошей.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -15866,7 +15866,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -15913,7 +15913,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -15927,7 +15927,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У черзі було кілька людей.",
@@ -15952,7 +15952,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -15988,7 +15988,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -16002,7 +16002,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -16015,7 +16015,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "На стіні висять кілька картин.",
@@ -16062,7 +16062,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -16099,7 +16099,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -16135,7 +16135,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES"
       ],
       "ua": "У банці є трохи меду.",
@@ -16147,7 +16147,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES"
       ],
       "ua": "У холодильнику було трохи молока.",
@@ -16172,7 +16172,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -16197,7 +16197,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -16244,7 +16244,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "На столі було трохи хліба.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -16268,7 +16268,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE"
       ],
@@ -16304,7 +16304,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE"
       ],
       "ua": "У черзі було кілька людей.",
@@ -16328,7 +16328,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "На вулиці було трохи снігу.",
       "hint": "використовуй THERE IS / THERE ARE",
@@ -16340,7 +16340,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
       ],
@@ -16354,7 +16354,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
       ],
@@ -16367,7 +16367,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
@@ -16381,7 +16381,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
       ],
@@ -16394,7 +16394,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
@@ -16408,7 +16408,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "COUNT_UNCOUNT"
       ],
       "ua": "До початку ще є трохи часу.",
@@ -16420,7 +16420,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "COUNT_UNCOUNT"
       ],
@@ -16433,7 +16433,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
       ],
@@ -16446,7 +16446,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
@@ -16460,11 +16460,11 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
       ],
-      "ua": "Сьогодні в парку було трохи людей.",
+      "ua": "Сьогодні в парку було кілька людей.",
       "hint": "використовуй THERE IS / THERE ARE",
       "en": [
         "There were a few people in the park today.",
@@ -16474,7 +16474,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
@@ -16488,7 +16488,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "COUNT_UNCOUNT"
       ],
@@ -16502,7 +16502,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "COUNT_UNCOUNT",
         "ARTICLES"
@@ -16517,7 +16517,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "ARTICLES"
       ],
@@ -16531,7 +16531,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES"
       ],
       "ua": "В чайнику є трохи чаю?",
@@ -16544,7 +16544,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES"
       ],
       "ua": "У холодильнику є зелень?",
@@ -16557,7 +16557,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "ARTICLES"
       ],
@@ -16571,7 +16571,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "ARTICLES"
       ],
@@ -16585,7 +16585,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "ARTICLES"
       ],
@@ -16598,7 +16598,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES"
       ],
       "ua": "В гаманці є гроші?",
@@ -16611,7 +16611,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "ARTICLES"
       ],
       "ua": "В холодильнику є їжа?",
@@ -16623,7 +16623,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "PREP_PLACE",
         "ARTICLES"
       ],
@@ -17281,7 +17281,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Немає варіантів для вибору.",
       "en": [
@@ -17315,7 +17315,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Немає причин турбуватись.",
       "en": [
@@ -17358,7 +17358,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Немає планів на сьогодні.",
       "en": [
@@ -17379,7 +17379,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Немає сумнівів у цьому.",
       "en": [
@@ -17422,7 +17422,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Немає шансів виграти.",
       "en": [
@@ -17485,7 +17485,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Немає ідей для подарунка.",
       "en": [
@@ -17496,7 +17496,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "На картці немає грошей.",
       "en": [
@@ -17507,7 +17507,7 @@
     {
       "rules": [
         "THERE_IS_ARE",
-        "QUANTIFIERS"
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
       ],
       "ua": "Сьогодні немає новин.",
       "en": [
@@ -18797,7 +18797,7 @@
         "I agree"
       ],
       "rules": [
-        "PERSONAL_PRONOUNS"
+        "TO_BE"
       ]
     },
     {
@@ -20556,7 +20556,7 @@
     {
       "rules": [
         "WH_Q",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "THERE_IS_ARE"
       ],
       "ua": "Скільки людей у черзі?",
@@ -22862,7 +22862,7 @@
     {
       "rules": [
         "YES_NO_Q",
-        "QUANTIFIERS",
+        "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY",
         "THERE_IS_ARE"
       ],
       "ua": "У черзі багато людей? Так.",

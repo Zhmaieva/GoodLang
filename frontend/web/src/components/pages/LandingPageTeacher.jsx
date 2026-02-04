@@ -816,45 +816,45 @@ html{ scroll-behavior: smooth; }
                             </button>
                         </div>
 
-                        <div className="promoRow">
-                            <div style={{flex: 1, display: "flex", flexDirection: "column", gap: 6}}>
-                                <input
-                                    type="email"
-                                    placeholder="Введи email для промокоду"
-                                    className="emailInput"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    inputMode="email"
-                                    onKeyDown={async (e) => {
-                                        if (e.key === "Enter") {
-                                            e.preventDefault();
-                                            await submitEmail();
-                                        }
-                                    }}
-                                    disabled={sending}
-                                />
+                        {/*<div className="promoRow">*/}
+                        {/*    <div style={{flex: 1, display: "flex", flexDirection: "column", gap: 6}}>*/}
+                        {/*        <input*/}
+                        {/*            type="email"*/}
+                        {/*            placeholder="Введи email для промокоду"*/}
+                        {/*            className="emailInput"*/}
+                        {/*            value={email}*/}
+                        {/*            onChange={(e) => setEmail(e.target.value)}*/}
+                        {/*            inputMode="email"*/}
+                        {/*            onKeyDown={async (e) => {*/}
+                        {/*                if (e.key === "Enter") {*/}
+                        {/*                    e.preventDefault();*/}
+                        {/*                    await submitEmail();*/}
+                        {/*                }*/}
+                        {/*            }}*/}
+                        {/*            disabled={sending}*/}
+                        {/*        />*/}
 
-                                {msg ? (
-                                    <p style={{
-                                        margin: 0,
-                                        fontFamily: "Nunito",
-                                        fontWeight: 800,
-                                        fontSize: 13,
-                                        opacity: 0.9
-                                    }}>
-                                        {msg}
-                                    </p>
-                                ) : null}
-                            </div>
+                        {/*        {msg ? (*/}
+                        {/*            <p style={{*/}
+                        {/*                margin: 0,*/}
+                        {/*                fontFamily: "Nunito",*/}
+                        {/*                fontWeight: 800,*/}
+                        {/*                fontSize: 13,*/}
+                        {/*                opacity: 0.9*/}
+                        {/*            }}>*/}
+                        {/*                {msg}*/}
+                        {/*            </p>*/}
+                        {/*        ) : null}*/}
+                        {/*    </div>*/}
 
-                            <button
-                                onClick={submitEmail}
-                                className="secondaryBtn promoBtnOrange"
-                                disabled={sending}
-                            >
-                                {sending ? "Відправляю..." : "Отримати промокод"}
-                            </button>
-                        </div>
+                        {/*    <button*/}
+                        {/*        onClick={submitEmail}*/}
+                        {/*        className="secondaryBtn promoBtnOrange"*/}
+                        {/*        disabled={sending}*/}
+                        {/*    >*/}
+                        {/*        {sending ? "Відправляю..." : "Отримати промокод"}*/}
+                        {/*    </button>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </section>

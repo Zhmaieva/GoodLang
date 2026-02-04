@@ -1,12 +1,42 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {callManageSubscriptionApi} from "../../services/api.js";
 import LoginModal from "./LoginModal.jsx";
 import {logoStyle} from "./LimitModal.jsx";
 import {fmtDate} from "../pages/analyticsLogic.js";
+import {marathonService} from "../../services/marathonService.js";
+import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock"; // ✅ adjust path if needed
+
 
 export default function AccountStatusModal({ accountInfo, theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [account, setAccount] = useState(accountInfo);
+
+    const onManage = async () => {
+        try {
+            const { url } = await callManageSubscriptionApi();
+            window.open(url, "_blank"); // open in new tab
+        } catch (e) {
+            console.error("Failed to open subscription management", e);
+        }
+    }
+
+    const lockScroll = () => {
+        disableBodyScroll(document.querySelector('#acc-modal'));
+    }
+
+    const unlockScroll = () => {
+        clearAllBodyScrollLocks();
+        enableBodyScroll(document.querySelector('#acc-modal'));
+    }
+
+    const onCloseHandler = () => {
+        unlockScroll();
+        onClose();
+    }
+
+    useEffect(() => {
+        lockScroll();
+    });
 
     if (!open) return null;
 
@@ -33,30 +63,32 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
         transition: "transform 120ms ease",
     };
 
-    const onManage = async () => {
-        try {
-            const { url } = await callManageSubscriptionApi();
-            window.open(url, "_blank"); // open in new tab
-        } catch (e) {
-            console.error("Failed to open subscription management", e);
-        }
-    }
-
     return (
         <>
             {
                 !loginModalOpen &&
-                <div onClick={onClose} style={{
+                <div id={'acc-modal'} onClick={onCloseHandler} style={{
                     position: "fixed",
                     top: 0, left: 0,
                     width: "100%",
                     inset: 0,
                     height: "100dvh",
-                    background: "rgba(0,0,0,0.35)",
+
+                    // ✅ blur background like MarathonPurchaseModal, but without darkening
+                    background: "rgba(255,255,255,0)",
+
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    zIndex: 9999
+                    zIndex: 9999,
+
+                    // ✅ blur underlying page
+                    backdropFilter: "blur(6px)",
+                    WebkitBackdropFilter: "blur(6px)",
+
+                    // ✅ safe-area padding (matches your other modals)
+                    paddingBottom: "env(safe-area-inset-bottom)",
+                    paddingTop: "env(safe-area-inset-top)",
                 }}>
                     <div onClick={(e) => e.stopPropagation()} style={{
                         background: theme.bg,
@@ -87,7 +119,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             {
                                 !account?.email && <div></div>
                             }
-                            <p onClick={onClose} style={{
+                            <p onClick={onCloseHandler} style={{
                                 marginBottom: 16,
                                 marginTop: -22,
                                 marginLeft: 0,
@@ -111,7 +143,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             display: "flex",
                             justifyContent: "space-between",
                         }}>
-                            <div style={{display: "flex", flexDirection: "column"}}>
+                            <div style={{display: "flex", flexDirection: "column", width: '100%'}}>
                                 <h2 style={{
                                     textAlign: "left",
                                     marginBottom: 0,
@@ -129,9 +161,12 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                         marginLeft: 0,
                                         color: theme.text,
                                         fontSize: "1rem",
-                                        textAlign: "left"
+                                        textAlign: "left",
+                                        opacity: 0.7,
+                                        fontWeight: 700,
+                                        maxWidth: '90%'
                                     }}>
-                                        Щомісячна підписка
+                                        {marathonService.isInMarathon() ? 'Марафон на 7 днів. Завершення підписки по закінченню марафону або при вибутті.' : 'Щомісячна підписка'}
                                     </p>
                                 }
                                 {
@@ -189,7 +224,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             gap: "12px",
                             justifyContent: "space-between"
                         }}>
-                            {(status === "paid" || status === "attention") && !account?.isTrial && (
+                            {!marathonService.isInMarathon() && (status === "paid" || status === "attention") && !account?.isTrial && (
                                 <button
                                     style={{
                                         background: theme.accent,
@@ -212,7 +247,19 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
 
                             <button onClick={() => {
                                 setLoginModalOpen(true)
-                            }} style={closeBtnStyle}>
+                            }} style={marathonService.isInMarathon() ? {
+                                background: theme.accent,
+                                boxShadow: `2px 2px 0 ${theme.accentDark}`,
+                                color: "white",
+                                padding: "10px 20px",
+                                borderRadius: theme.radius,
+                                border: "none",
+                                cursor: "pointer",
+                                fontSize: "1rem",
+                                fontWeight: 700,
+                                width: "100%",
+                                opacity: 1
+                            } : closeBtnStyle}>
                                 Увійти в інший акаунт
                             </button>
                         </div>
@@ -225,7 +272,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                     <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen}
                                 onClose={() => {
                                     setLoginModalOpen(false);
-                                    onClose();
+                                    onCloseHandler();
                                 }
                                 }/>
                 </div>

@@ -7,8 +7,23 @@ import {pool} from "../database/pool.js";
 import {transporter} from "../core/emailSender.js";
 import {fileURLToPath} from "node:url";
 import path from "node:path";
-import {runPromoRegularTick} from "../emails/promo-regular/promoRegularSender.js";
 import "dotenv/config";
+import {
+    downgradeAttentionAccountsAfterMarathonAge,
+    failInProgressMarathonsForFreeAccounts
+} from "../database/repositories/accountsRepository.js";
+import {safelyAutostartMarathonsForEligibleAccounts} from "../database/repositories/marathonStarterRepository.js";
+import {
+    cancelFailedLatestMarathonsAndDowngradeAccounts, completeMarathonsWhenAllSchedulesDone,
+    failOverdueInProgressMarathonsBySchedules, safelyUnsubscribePaidAccountsAfterMarathonEnd
+} from "../database/repositories/marathonsRepository.js";
+import {
+    runMarathonCompletedTick,
+    runMarathonFailTick,
+    runMarathonStartTick
+} from "../emails/marathon/marathonEmails.js";
+import {runTouTick} from "../emails/tou/TermsSender.js";
+import res from "express/lib/response.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -56,8 +71,44 @@ startNonOverlappingInterval(async () => {
     // avoid spam logs outside window
     if (!res.skipped) console.log("[tipsCron]", res);
 
-    const promoRes = await runPromoRegularTick(
-        { pool, transporter, projectRoot, batchSize: 1 });
-    if (!res.skipped) console.log("[promoCron]", promoRes);
+    // const promoRes = await runPromoRegularTick(
+    //     { pool, transporter, projectRoot, batchSize: 1 });
+    // if (!res.skipped) console.log("[promoCron]", promoRes);
 //}, 10000)
 }, 1200000)
+
+startNonOverlappingInterval(async () => {
+    const res = await runTouTick({ pool, transporter, projectRoot });
+
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 60000)
+
+startNonOverlappingInterval(async () => {
+    const res = await runMarathonStartTick({ pool, transporter, projectRoot, limit: 1 });
+    // avoid spam logs outside window
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 1000)
+
+startNonOverlappingInterval(async () => {
+    const res = await runMarathonFailTick({ pool, transporter, projectRoot, limit: 1 });
+    // avoid spam logs outside window
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 1000)
+
+startNonOverlappingInterval(async () => {
+    const res = await runMarathonCompletedTick({ pool, transporter, projectRoot, limit: 1 });
+    // avoid spam logs outside window
+    if (!res.skipped) console.log("[tipsCron]", res);
+}, 1000)
+
+startNonOverlappingInterval(async () => {
+    await completeMarathonsWhenAllSchedulesDone();
+    //await safelyAutostartMarathonsForEligibleAccounts();
+    await safelyUnsubscribePaidAccountsAfterMarathonEnd( {limit: 10});
+    await failOverdueInProgressMarathonsBySchedules();
+
+    await cancelFailedLatestMarathonsAndDowngradeAccounts({ limit: 10 });
+   //await downgradeAttentionAccountsAfterMarathonAge();
+
+    //await failInProgressMarathonsForFreeAccounts();
+}, 5000)

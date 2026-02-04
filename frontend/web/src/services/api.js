@@ -4,7 +4,7 @@ import { getPromoCode } from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 const STORAGE_KEY_APP_VERSION = "app_version";
-const CLIENT_APP_VERSION = "1.1.4"; // hardcoded client version
+const CLIENT_APP_VERSION = "1.2.3"; // hardcoded client version
 
 // ------------------------------------------------------------
 // Helpers
@@ -161,6 +161,31 @@ export async function callCheckoutApi() {
     return { ...data, isSuccess: true };
 }
 
+export async function callCheckoutMarathonApi(ruleIds) {
+    const url = `${API_BASE}/payments/create-marathon-checkout-session`;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify({
+            ruleIds,          // ✅ array of 7 strings
+            // promoCode: getPromoCode(), // optional (remove if not used)
+        }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok) {
+        return { isSuccess: false, error: data?.error || "Failed to create session" };
+    }
+
+    return { ...data, isSuccess: true }; // expects { clientSecret }
+}
+
+
 export async function callDataSyncApi(payload) {
     const url = `${API_BASE}/data-sync`;
 
@@ -245,8 +270,14 @@ export async function callAccountInfoApi() {
     // ✅ version sync + optional reload
     syncVersionAndMaybeReload(data?.appVersion);
 
+    // ✅ persist last known account info to LS (but still always fetch on this function)
+    try {
+        localStorage.setItem("account_info", JSON.stringify(data));
+    } catch {}
+
     return data;
 }
+
 
 export async function callAccountVerifyApi(actionType) {
     try {
@@ -485,6 +516,92 @@ export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
     }
 }
 
+/**
+ * Update current user's marathon status.
+ * Backend resolves marathon by accountId (auth token).
+ *
+ * @param {'completed'|'failed'} status
+ * @returns {Promise<{ isSuccess: boolean, updated?: boolean, status?: string }>}
+ */
+export async function callUpdateMarathonStatusApi(status) {
+    if (status !== "completed" && status !== "failed") {
+        throw new Error("Invalid marathon status");
+    }
+
+    try {
+        const res = await fetch(`${API_BASE}/marathons/status`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${await getToken()}`,
+            },
+            body: JSON.stringify({ status }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+            return {
+                isSuccess: false,
+                error: data?.error || "Failed to update marathon status",
+            };
+        }
+
+        return {
+            isSuccess: true,
+            ...data, // { ok, updated, status, previousStatus }
+        };
+    } catch (e) {
+        logError(e);
+        return { isSuccess: false, error: "network_error" };
+    }
+}
+
+/**
+ * Complete current marathon day for the authenticated user.
+ *
+ * @param {{ requireAllTasksAnswered?: boolean }} [opts]
+ * @returns {Promise<{
+ *   isSuccess: boolean,
+ *   ok?: boolean,
+ *   updated?: boolean,
+ *   marathonId?: string,
+ *   scheduleId?: string,
+ *   dayNumber?: number,
+ *   error?: string
+ * }>}
+ */
+export async function callCompleteMarathonDayApi(opts = {}) {
+    try {
+        const { requireAllTasksAnswered = false } = opts || {};
+
+        const res = await fetch(`${API_BASE}/marathons/complete-day`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${await getToken()}`,
+            },
+            body: JSON.stringify({ requireAllTasksAnswered }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+            return {
+                isSuccess: false,
+                error: data?.error || "Failed to complete marathon day",
+            };
+        }
+
+        // expected: { ok, updated, marathonId, scheduleId, dayNumber }
+        return { isSuccess: true, ...data };
+    } catch (e) {
+        logError(e);
+        return { isSuccess: false, error: "network_error" };
+    }
+}
+
+
 // ------------------------------------------------------------
 // Teacher
 // ------------------------------------------------------------
@@ -674,4 +791,3 @@ export function apiRecommendedPreview({ studentIds, seed }) {
         }),
     });
 }
-
