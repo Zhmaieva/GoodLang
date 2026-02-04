@@ -65,7 +65,7 @@ const CombinedTables = forwardRef(function CombinedTables(
 
         // optional meta
         emptyTextAvailable = "Немає доступних",
-        emptyTextSelected = "Оберіть зліва",
+        emptyTextSelected = "Обери зліва",
 
         // container styles
         style,

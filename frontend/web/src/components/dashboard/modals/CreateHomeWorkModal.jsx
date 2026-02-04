@@ -4,9 +4,8 @@ import AwesomeButton from "../AwesomeButton.jsx";
 import StudentsSelectorSection from "../sections/StudentsSelectorSection.jsx";
 import StepScreens from "../StepScreens.jsx";
 import Tooltip from "../Tooltip.jsx"; // keep if you already use it in footer
-import Loader from "../Loader.jsx";   // ✅ adjust path if needed
 
-import { apiRecommendedPreview } from "../../../services/api.js"; // ✅ adjust path if needed
+import RecommendedPreviewSection from "../sections/RecommendedPreviewSection.jsx"; // ✅ adjust path if needed
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
@@ -25,7 +24,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const STEPS = useMemo(
         () => [
             { label: "Учні", title: "Вибери учнів", subtitle: "Обери класи або окремих учнів" },
-            { label: "Завдання", title: "Налаштуй завдання", subtitle: "Або дай GoodLang зробити це за тебе" },
+            { label: "Завдання", title: "Налаштуй завдання", subtitle: "Дай GoodLang зробити це за тебе" },
             { label: "Підсумок", title: "Майже готово", subtitle: "Переконайся, що все правильно" },
         ],
         []
@@ -59,7 +58,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
         // Step 0: students required
         if (idx === 0) {
             const ok = (selectedStudentIds?.length || 0) > 0;
-            return ok ? { ok: true, message: "" } : { ok: false, message: "Виберіть учня, щоб продовжити" };
+            return ok ? { ok: true, message: "" } : { ok: false, message: "Вибери учня, щоб продовжити" };
         }
 
         // ✅ Step 1: pass only after recommended-preview finished loading
@@ -74,7 +73,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
 
     const currentValidation = validateStep(step);
     const isBlocked = !currentValidation?.ok;
-    const blockMsg = currentValidation?.message || "Заповніть поточний крок";
+    const blockMsg = currentValidation?.message || "Заповни поточний крок";
 
     const nextLabel = useMemo(() => {
         if (isLast) return "Відправити завдання";
@@ -179,32 +178,9 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                             // (remount happens automatically when previewKey changes via key prop)
                             return (
                                 <div style={styles.stepFill}>
-                                    <Loader
-                                        key={previewKey || "no-students"}
-                                        estimateMs={200}
-                                        minVisibleMs={400}
-                                        description="Готуємо рекомендації для учнів..."
-                                        load={async () => {
-                                            // If no students selected (should be blocked by step 0 anyway)
-                                            if (!selectedStudentIds?.length) return;
-
-                                            // ✅ seed hidden, random
-                                            const seed = seedRef.current;
-
-                                            // ✅ call endpoint, ignore response
-                                            await apiRecommendedPreview({
-                                                studentIds: selectedStudentIds,
-                                                seed,
-                                            });
-                                        }}
-                                        onDone={() => {
-                                            // ✅ Step 2 validation becomes OK when done
-                                            setStep2Ready(true);
-                                        }}
-                                    >
-                                        {/* You asked: don't parse results, simply empty content */}
-                                        <div style={styles.emptyStepContent} />
-                                    </Loader>
+                                    <RecommendedPreviewSection
+                                        selectedStudentIds={selectedStudentIds}
+                                    />
                                 </div>
                             );
                         }

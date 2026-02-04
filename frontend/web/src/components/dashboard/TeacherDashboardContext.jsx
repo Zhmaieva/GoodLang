@@ -9,6 +9,9 @@ import {
     apiAddStudentToClass,
     apiDeactivateStudentInClass,
     apiRegenerateInviteCode,
+
+    // ✅ додали
+    apiRecommendedPreview,
 } from "../../services/api.js";
 
 const Ctx = createContext(null);
@@ -24,6 +27,19 @@ export function TeacherDashboardProvider({ children }) {
     const [expandedClassId, setExpandedClassId] = useState(null);
     const [classStudentsMap, setClassStudentsMap] = useState({});
     const [classStudentsLoading, setClassStudentsLoading] = useState({});
+
+    // ✅ recommended preview state (Step 2)
+    const [recommendedPreview, setRecommendedPreview] = useState({
+        loading: false,
+        err: "",
+        ready: false,
+        data: null,
+        key: "",
+        seed: null,
+        studentIds: [],
+    });
+
+    const [activePreviewStudentId, setActivePreviewStudentId] = useState("");
 
     const activeStudentsCount = Number(teacher?.active_students ?? 0);
     const quota = Number(teacher?.students_quota ?? 0);
@@ -61,7 +77,6 @@ export function TeacherDashboardProvider({ children }) {
         reloadAll();
     }, []);
 
-    // inside TeacherDashboardContext
     async function loadClassStudents(classId) {
         setClassStudentsLoading((m) => ({ ...m, [classId]: true }));
         try {
@@ -71,7 +86,6 @@ export function TeacherDashboardProvider({ children }) {
             setClassStudentsLoading((m) => ({ ...m, [classId]: false }));
         }
     }
-
 
     async function onToggleExpandClass(classId) {
         setExpandedClassId((prev) => (prev === classId ? null : classId));
@@ -110,6 +124,58 @@ export function TeacherDashboardProvider({ children }) {
         await loadClassStudents(classId);
     }
 
+    // ✅ Step 2: load recommended preview and store in context
+    async function loadRecommendedPreview({ studentIds, seed, key }) {
+        const ids = Array.isArray(studentIds) ? studentIds.map(String).filter(Boolean) : [];
+        setRecommendedPreview((p) => ({
+            ...p,
+            loading: true,
+            err: "",
+            ready: false,
+            key: key || "",
+            seed: seed ?? null,
+            studentIds: ids,
+        }));
+
+        try {
+            const data = await apiRecommendedPreview({ studentIds: ids, seed });
+            setRecommendedPreview((p) => ({
+                ...p,
+                loading: false,
+                err: "",
+                ready: true,
+                data,
+            }));
+
+            const firstId = String(data?.items?.[0]?.studentId || "");
+            setActivePreviewStudentId((prev) => prev || firstId || "");
+            return data;
+        } catch (e) {
+            setRecommendedPreview((p) => ({
+                ...p,
+                loading: false,
+                err: e?.message || "Не вдалося завантажити рекомендації",
+                ready: false,
+                data: null,
+            }));
+            setActivePreviewStudentId("");
+            throw e;
+        }
+    }
+
+    function clearRecommendedPreview() {
+        setRecommendedPreview({
+            loading: false,
+            err: "",
+            ready: false,
+            data: null,
+            key: "",
+            seed: null,
+            studentIds: [],
+        });
+        setActivePreviewStudentId("");
+    }
+
     const value = {
         // state
         loading,
@@ -129,6 +195,10 @@ export function TeacherDashboardProvider({ children }) {
         quotaText,
         isTeacherPlus,
 
+        // ✅ preview state
+        recommendedPreview,
+        activePreviewStudentId,
+
         // actions
         setErr,
         reloadAll,
@@ -138,6 +208,11 @@ export function TeacherDashboardProvider({ children }) {
         onDeactivateStudent,
         onRegenerateInviteCode,
         loadClassStudents,
+
+        // ✅ preview actions
+        loadRecommendedPreview,
+        clearRecommendedPreview,
+        setActivePreviewStudentId,
     };
 
     return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
