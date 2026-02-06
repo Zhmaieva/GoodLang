@@ -1,7 +1,10 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
-import RecommendedStudentsTable from "./RecommendedStudentsTable.jsx";
-import RecommendedToolbar from "./RecommendedToolbar.jsx";
+import RecommendedStudentsTable from "../taskCreation/RecommendedStudentsTable.jsx";
+import RecommendedToolbar from "../taskCreation/RecommendedToolbar.jsx";
 import RulesRecommendationsSection from "./RulesRecommendationsSection.jsx";
+import RecommendedPreviewTopToolbar from "../taskCreation/RecommendedPreviewTopToolbar.jsx";
+import {useTeacherDashboard} from "../TeacherDashboardContext.jsx";
+import ManualRulesTableSection from "./ManualRulesTableSection.jsx";
 
 export default function RecommendedPreviewSection({
                                                       selectedStudentIds = [],
@@ -13,6 +16,7 @@ export default function RecommendedPreviewSection({
                                                   }) {
     const rootRef = useRef(null);
     const [isNarrow, setIsNarrow] = useState(false);
+    const { useRecommendedRules } = useTeacherDashboard();
 
     useLayoutEffect(() => {
         if (!rootRef.current) return;
@@ -40,19 +44,30 @@ export default function RecommendedPreviewSection({
                 ...style,
             }}
         >
-            <RecommendedStudentsTable
-                selectedStudentIds={selectedStudentIds}
-                isNarrow={isNarrow}
-            />
+            {/* TOP ROW (full width) */}
+            <div style={styles.topRow}>
+                <RecommendedPreviewTopToolbar />
+            </div>
 
-            <div style={styles.rightWrap}>
-                <RecommendedToolbar />
-                <RulesRecommendationsSection
-                    selectedStudentIds={selectedStudentIds}
-                    previewKey={previewKey}
-                    onReady={onReady}
-                    isNarrow={isNarrow}
-                />
+            {/* BOTTOM ROW */}
+            <div style={{ ...styles.contentRow, ...(isNarrow ? styles.contentRowNarrow : null) }}>
+                <RecommendedStudentsTable selectedStudentIds={selectedStudentIds} isNarrow={isNarrow} />
+
+                <div style={styles.rightWrap}>
+                    {useRecommendedRules ? (
+                        <>
+                            <RecommendedToolbar />
+                            <RulesRecommendationsSection
+                                selectedStudentIds={selectedStudentIds}
+                                previewKey={previewKey}
+                                onReady={onReady}
+                                isNarrow={isNarrow}
+                            />
+                        </>
+                    ) : (
+                        <ManualRulesTableSection />
+                    )}
+                </div>
             </div>
         </div>
     );
@@ -64,11 +79,27 @@ const styles = {
         minHeight: 0,
         minWidth: 0,
         display: "flex",
+        flexDirection: "column", // ✅ important: vertical layout
         gap: 12,
     },
-    rootNarrow: {
+
+    topRow: {
+        flex: "0 0 auto",
+        minWidth: 0,
+    },
+
+    contentRow: {
+        flex: "1 1 auto",
+        minHeight: 0,
+        minWidth: 0,
+        display: "flex",
+        gap: 12,
+    },
+
+    contentRowNarrow: {
         flexDirection: "column",
     },
+
     rightWrap: {
         flex: "1 1 auto",
         minWidth: 0,
@@ -78,3 +109,4 @@ const styles = {
         gap: 10,
     },
 };
+

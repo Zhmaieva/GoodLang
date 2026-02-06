@@ -12,6 +12,7 @@
   "dependencies": {
     "@stripe/stripe-js": "^8.4.0",
     "body-scroll-lock": "^4.0.0-beta.0",
+    "framer-motion": "^12.31.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.6"

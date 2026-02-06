@@ -3,6 +3,7 @@ import AwesomeTable from "../AwesomeTable.jsx";
 import Loader from "../Loader.jsx";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import { RULE_LABELS } from "../../../utils/rules.js";
+import {apiRecommendedPreview} from "../../../services/api.js";
 
 function safeId(x) {
     return String(x ?? "").trim();
@@ -32,6 +33,9 @@ export default function RulesRecommendationsSection({
         setActivePreviewStudentId,
         loadRecommendedPreview,
         clearRecommendedPreview,
+        numberOfTasksPerStudent,
+        taskMode,
+        recommendedPreviewNonce,
     } = useTeacherDashboard();
 
     // ✅ seed hidden, random; regenerate on previewKey change
@@ -148,22 +152,18 @@ export default function RulesRecommendationsSection({
         >
             {/* ✅ Loader EXACTLY as requested — inside this section */}
             <Loader
-                key={previewKey || "no-students"}
+                key={`${previewKey || "no-students"}:${recommendedPreviewNonce}:${numberOfTasksPerStudent}`}
                 estimateMs={200}
                 minVisibleMs={400}
                 description="Готуємо рекомендації для учнів..."
                 load={async () => {
-                    // If no students selected (should be blocked by step 0 anyway)
                     if (!selectedStudentIds?.length) return;
-
-                    // ✅ seed hidden, random
                     const seed = seedRef.current;
 
-                    // ✅ call endpoint AND store in context
                     await loadRecommendedPreview({
                         studentIds: selectedStudentIds,
                         seed,
-                        key: previewKey,
+                        numberOfTasksPerStudent,
                     });
                 }}
                 onDone={() => {

@@ -41,6 +41,7 @@ export default function AwesomeTable({
                                          onRowClick= (r) => {},
                                          headerHeight = 44,
                                          headerGap = 8,
+                                         selectedRowId = null
                                      }) {
     const [hoverRow, setHoverRow] = useState(null);
 
@@ -160,9 +161,9 @@ export default function AwesomeTable({
         minWidth: 0,
     };
 
-    const rowStyle = (isHover) => ({
+    const rowStyle = (isHover, selected) => ({
         userSelect: "none",
-        background: isHover ? "#ededed" : "#fff",
+        background: isHover || selected ? "#ededed" : "#fff",
         filter: isHover ? "brightness(0.95)" : "none",
         transition: "transform 120ms ease, filter 120ms ease",
     });
@@ -180,11 +181,11 @@ export default function AwesomeTable({
     }, [columns]);
 
     return (
-        <div style={styles.tableWrap} aria-live="polite">
+        <div style={styles().tableWrap} aria-live="polite">
             {/* HEADER (fixed height) */}
             <div
                 style={{
-                    ...styles.thead,
+                    ...styles().thead,
                     gridTemplateColumns,
                     height: headerHeight,
                 }}
@@ -195,9 +196,9 @@ export default function AwesomeTable({
                         <div
                             key={c.key}
                             style={{
-                                ...styles.th,
+                                ...styles().th,
                                 ...(c.style || {}),
-                                ...(sortable ? styles.thSortable : null),
+                                ...(sortable ? styles().thSortable : null),
                             }}
                             onClick={() => sortable && toggleSort(c.key)}
                             role={sortable ? "button" : undefined}
@@ -205,7 +206,7 @@ export default function AwesomeTable({
                             title={sortable ? "Sort" : undefined}
                         >
                             <div style={headerBtnStyle}>
-                                <span style={styles.thText}>{c.title}</span>
+                                <span style={styles().thText}>{c.title}</span>
                                 {sortable ? <ArrowPair columnKey={c.key} /> : null}
                             </div>
                         </div>
@@ -214,11 +215,11 @@ export default function AwesomeTable({
             </div>
 
             {/* ROWS (fills remaining space + scrolls) */}
-            <div style={{ ...styles.rowsScroll, paddingTop: headerGap }}>
+            <div style={{ ...styles().rowsScroll, paddingTop: headerGap }}>
                 {sortedRows.length === 0 ? (
-                    <div style={styles.empty}>{emptyText}</div>
+                    <div style={styles().empty}>{emptyText}</div>
                 ) : (
-                    <div style={styles.rowsInner}>
+                    <div style={styles().rowsInner}>
                         {sortedRows.map((r, idx) => {
                             const key = r.id || r.key || idx;
                             const isHover = hoverRow === key;
@@ -227,7 +228,7 @@ export default function AwesomeTable({
                                 <div
                                     key={key}
                                     onClick={() => onRowClick(r)}
-                                    style={{ ...styles.trow, gridTemplateColumns, ...rowStyle(isHover) }}
+                                    style={{ ...styles().trow, gridTemplateColumns, ...rowStyle(isHover, key === selectedRowId) }}
                                     onMouseEnter={() => setHoverRow(key)}
                                     onMouseLeave={() => setHoverRow(null)}
                                 >
@@ -235,7 +236,7 @@ export default function AwesomeTable({
                                         <div
                                             key={c.key}
                                             style={{
-                                                ...styles.td,
+                                                ...styles().td,
                                                 ...(c.style || {}),
                                             }}
                                         >
@@ -252,70 +253,73 @@ export default function AwesomeTable({
     );
 }
 
-const styles = {
-    tableWrap: {
-        border: "2px solid rgba(0,0,0,0.12)",
-        background: "rgba(255,255,255,0.6)",
+const styles = (selected) => {
+    return {
+        tableWrap: {
+            border: "2px solid rgba(0,0,0,0.12)",
+            background: "rgba(255,255,255,0.6)",
 
-        height: "100%",
-        minHeight: 0,
+            height: "100%",
+            minHeight: 0,
 
-        display: "flex",
-        flexDirection: "column",
-        overflow: "hidden", // ✅ rowsScroll becomes the only scroll container
-    },
+            display: "flex",
+            flexDirection: "column",
+            overflow: "hidden", // ✅ rowsScroll becomes the only scroll container
+        },
 
-    thead: {
-        display: "grid",
-        gap: 10,
-        padding: "0 10px", // ✅ deterministic height control (no vertical padding)
-        borderBottom: "1px solid rgba(0,0,0,0.1)",
-        background: "rgba(0,0,0,0.03)",
-        fontWeight: 900,
-        alignItems: "center",
-        flex: "0 0 auto",
-    },
+        thead: {
+            display: "grid",
+            gap: 10,
+            padding: "0 10px", // ✅ deterministic height control (no vertical padding)
+            borderBottom: "1px solid rgba(0,0,0,0.1)",
+            background: "rgba(0,0,0,0.03)",
+            fontWeight: 900,
+            alignItems: "center",
+            flex: "0 0 auto",
+        },
 
-    rowsScroll: {
-        flex: "1 1 auto",
-        minHeight: 0,
-        overflow: "auto",
-    },
+        rowsScroll: {
+            flex: "1 1 auto",
+            minHeight: 0,
+            overflow: "auto",
+        },
 
-    rowsInner: {
-        display: "block",
-    },
+        rowsInner: {
+            display: "block",
+        },
 
-    th: { minWidth: 0 },
-    thSortable: { cursor: "pointer" },
+        th: { minWidth: 0 },
+        thSortable: { cursor: "pointer" },
 
-    thText: {
-        minWidth: 0,
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        whiteSpace: "nowrap",
-    },
+        thText: {
+            minWidth: 0,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+        },
 
-    trow: {
-        display: "grid",
-        gap: 10,
-        padding: "10px 10px",
-        borderTop: "1px solid rgba(0,0,0,0.1)",
-        alignItems: "center",
-        cursor: "pointer",
-    },
+        trow: {
+            display: "grid",
+            gap: 10,
+            padding: "10px 10px",
+            borderTop: "1px solid rgba(0,0,0,0.1)",
+            alignItems: "center",
+            cursor: "pointer",
+            background: selected ? "red" : "transparent",
+        },
 
-    td: {
-        minWidth: 0,
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        whiteSpace: "nowrap",
-        fontWeight: 800,
-    },
+        td: {
+            minWidth: 0,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            fontWeight: 800,
+        },
 
-    empty: {
-        padding: 12,
-        color: "var(--muted, #a47856)",
-        fontWeight: 800,
-    },
-};
+        empty: {
+            padding: 12,
+            color: "var(--muted, #a47856)",
+            fontWeight: 800,
+        },
+    };
+}

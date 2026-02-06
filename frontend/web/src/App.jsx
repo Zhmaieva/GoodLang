@@ -123,6 +123,8 @@ import TeacherMyClassesPage from "./components/dashboard/pages/TeacherMyClassesP
 import {TeacherDashboardProvider} from "./components/dashboard/TeacherDashboardContext.jsx";
 import TeacherDashboardLayout from "./components/dashboard/TeacherDashboardLayout.jsx";
 import TeacherHomeworkPage from "./components/dashboard/pages/TeachersHomeworkPage.jsx";
+import GoodLangSchoolsLanding from "./components/pages/GoodLangSchoolsLanding.jsx";
+import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -178,7 +180,7 @@ export default function App() {
             <SyncOnRouteChange />
             <Routes>
                 {/* Landing pages */}
-                <Route path="/welcome" element={<LandingPage3 theme={theme} />} />
+                <Route path="/welcome" element={<GoodLangSchoolsLanding2 theme={theme} />} />
                 <Route path="/greetings" element={<LandingPage3 theme={theme} />} />
                 <Route path="/hello" element={<LandingPageTeacher theme={theme} />} />
                 <Route path="/marathon" element={<LandingPageMarathon theme={theme} />} />

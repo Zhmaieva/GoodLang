@@ -778,7 +778,7 @@ export function apiAssignTaskSet(taskSetId, payload) {
  * POST /schools/recommended-preview
  * body: { studentIds: string[], seed: number }
  */
-export function apiRecommendedPreview({ studentIds, seed }) {
+export function apiRecommendedPreview({ studentIds, seed, numberOfTasksPerStudent = 10 }) {
     const ids = Array.isArray(studentIds)
         ? studentIds.map((x) => String(x).trim()).filter(Boolean)
         : [];
@@ -788,6 +788,7 @@ export function apiRecommendedPreview({ studentIds, seed }) {
         body: JSON.stringify({
             studentIds: ids,
             seed: Number.isFinite(seed) ? seed : Math.floor(Math.random() * 1e9),
+            numberOfTasksPerStudent
         }),
     });
 }

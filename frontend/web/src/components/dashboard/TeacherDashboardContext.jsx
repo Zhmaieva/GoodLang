@@ -38,6 +38,20 @@ export function TeacherDashboardProvider({ children }) {
         seed: null,
         studentIds: [],
     });
+    const [numberOfTasksPerStudent, _setNumberOfTasksPerStudent] = useState(10);
+    const [taskMode, setTaskMode] = useState("translations");
+    const [useRecommendedRules, setUseRecommendedRules] = useState(true);
+
+// used to force reload when sliders/toggles change
+    const [recommendedPreviewNonce, setRecommendedPreviewNonce] = useState(0);
+    const setNumberOfTasksPerStudent = (n) => {
+        const x = Math.max(1, Math.min(50, Number(n) || 10));
+        _setNumberOfTasksPerStudent(x);
+    };
+
+    const restartRecommendedPreview = () => {
+        setRecommendedPreviewNonce((x) => x + 1);
+    };
 
     const [activePreviewStudentId, setActivePreviewStudentId] = useState("");
 
@@ -126,7 +140,16 @@ export function TeacherDashboardProvider({ children }) {
 
     // ✅ Step 2: load recommended preview and store in context
     async function loadRecommendedPreview({ studentIds, seed, key }) {
-        const ids = Array.isArray(studentIds) ? studentIds.map(String).filter(Boolean) : [];
+        const ids = Array.isArray(studentIds)
+            ? studentIds.map(String).filter(Boolean)
+            : [];
+
+        // snapshot current slider value for this request
+        const tasksPerStudent = Math.max(
+            1,
+            Math.min(50, Number(numberOfTasksPerStudent) || 10)
+        );
+
         setRecommendedPreview((p) => ({
             ...p,
             loading: true,
@@ -135,10 +158,18 @@ export function TeacherDashboardProvider({ children }) {
             key: key || "",
             seed: seed ?? null,
             studentIds: ids,
+
+            // optional: store what we requested with (useful for debugging/UI)
+            numberOfTasksPerStudent: tasksPerStudent,
         }));
 
         try {
-            const data = await apiRecommendedPreview({ studentIds: ids, seed });
+            const data = await apiRecommendedPreview({
+                studentIds: ids,
+                seed,
+                numberOfTasksPerStudent: tasksPerStudent,
+            });
+
             setRecommendedPreview((p) => ({
                 ...p,
                 loading: false,
@@ -213,6 +244,14 @@ export function TeacherDashboardProvider({ children }) {
         loadRecommendedPreview,
         clearRecommendedPreview,
         setActivePreviewStudentId,
+        numberOfTasksPerStudent,
+        setNumberOfTasksPerStudent,
+        taskMode,
+        setTaskMode,
+        useRecommendedRules,
+        setUseRecommendedRules,
+        recommendedPreviewNonce,
+        restartRecommendedPreview,
     };
 
     return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
