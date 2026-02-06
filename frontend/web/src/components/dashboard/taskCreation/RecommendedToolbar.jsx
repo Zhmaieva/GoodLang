@@ -6,7 +6,7 @@ export default function RecommendedToolbar() {
     const [studentName, setStudentName] = useState('');
     useEffect(() => {
         const student = students.find(x => x.student_account_id === activePreviewStudentId);
-        const userName = `${student?.first_name} ${student?.last_name}`;
+        const userName = `${student?.last_name} ${student?.first_name}`;
         setStudentName(userName.trim());
     }, [activePreviewStudentId]);
 

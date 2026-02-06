@@ -11,7 +11,7 @@ WITH params AS (
                   LEFT JOIN accounts a
                             ON a.id = al.account_id
          WHERE al.account_id IS NOT NULL
-           AND al.action_type NOT IN (300, 301, 900, 901, 902, 903)
+           --AND al.action_type NOT IN (300, 301, 900, 901, 902, 903)
            AND (
              a.email IS NULL
                  OR a.email NOT IN ('zorkasupreme@gmail.com', 'zhmaevajuliya@gmail.com')

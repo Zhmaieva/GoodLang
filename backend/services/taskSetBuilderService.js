@@ -417,11 +417,6 @@ export async function buildTaskSetTasks({
                                             // recommended mode inputs
                                             recommended,
                                             recommendedPlan, // { items: [{ studentId, seed, numberOfTasks, quotas:[...] }] }
-
-                                            // optional (kept for compatibility but ignored in recommended)
-                                            teacherId,
-                                            studentIds,
-                                            level,
                                         }) {
     const n = clampInt(numberOfTasks, 1, 50, 10);
     const mode = normalizeMode(taskMode);

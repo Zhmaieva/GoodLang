@@ -112,7 +112,6 @@ export const schoolsTaskSetsController = {
                 const seed = Number.isFinite(seedRaw) ? seedRaw : 1;
 
                 const result = await buildRecommendedQuotasForStudents({
-                    teacherId,
                     studentIds,
                     seed,
                     numberOfTasksPerStudent,
@@ -130,6 +129,13 @@ export const schoolsTaskSetsController = {
         app.post(`/${name}/task-sets`, authMiddleware, async (req, res, next) => {
             try {
                 const teacherId = req.user.id;
+
+                const taskMode = normalizeTaskMode(req.body?.taskMode);
+                if (!taskMode) {
+                    return res.status(400).json({
+                        error: "taskMode must be one of: translations, gaps, mixed",
+                    });
+                }
 
                 const studentIds = normalizeArrayIds(req.body?.studentIds);
                 if (!studentIds.length) {
@@ -172,11 +178,11 @@ export const schoolsTaskSetsController = {
                         if (!plan) continue;
 
                         const tasks = await buildTaskSetTasks({
-                            teacherId,
                             recommended: true,
                             numberOfTasks,
                             seed, // fallback
                             recommendedPlan: plan,
+                            taskMode
                         });
 
                         const created = await createTaskSetWithTasks({
@@ -215,12 +221,6 @@ export const schoolsTaskSetsController = {
                 // -----------------------------
                 // NON-RECOMMENDED (LEGACY)
                 // -----------------------------
-                const taskMode = normalizeTaskMode(req.body?.taskMode);
-                if (!taskMode) {
-                    return res.status(400).json({
-                        error: "taskMode must be one of: translations, gaps, mixed",
-                    });
-                }
 
                 const ruleIds = normalizeRuleIds(req.body?.ruleIds);
                 if (!ruleIds.length) {
