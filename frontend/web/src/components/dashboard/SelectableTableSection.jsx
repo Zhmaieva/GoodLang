@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
-import AwesomeCard from "../AwesomeCard.jsx";
-import AwesomeTable from "../AwesomeTable.jsx";
-import AwesomeButton from "../AwesomeButton.jsx";
+import AwesomeCard from "./AwesomeCard.jsx";
+import AwesomeTable from "./AwesomeTable.jsx";
+import AwesomeButton from "./AwesomeButton.jsx";
 
 function norm(v) {
     return String(v || "").trim().toLowerCase();

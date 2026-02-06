@@ -23,6 +23,9 @@ export function TeacherDashboardProvider({ children }) {
     const [teacher, setTeacher] = useState(null);
     const [classes, setClasses] = useState([]);
     const [students, setStudents] = useState([]);
+    const [selectedRuleIds, setSelectedRuleIds] = useState([]);
+    const [manualBuild, setManualBuild] = useState([]);
+    const [builtTasksPreview, setBuiltTasksPreview] = useState([]);
 
     const [expandedClassId, setExpandedClassId] = useState(null);
     const [classStudentsMap, setClassStudentsMap] = useState({});
@@ -229,20 +232,17 @@ export function TeacherDashboardProvider({ children }) {
         // ✅ preview state
         recommendedPreview,
         activePreviewStudentId,
+        selectedRuleIds,
+        setSelectedRuleIds,
+        manualBuild,
+        setManualBuild,
+        builtTasksPreview,
+        setBuiltTasksPreview,
 
         // actions
         setErr,
-        reloadAll,
-        onToggleExpandClass,
-        onCreateClass,
-        onAddStudent,
-        onDeactivateStudent,
-        onRegenerateInviteCode,
-        loadClassStudents,
 
         // ✅ preview actions
-        loadRecommendedPreview,
-        clearRecommendedPreview,
         setActivePreviewStudentId,
         numberOfTasksPerStudent,
         setNumberOfTasksPerStudent,

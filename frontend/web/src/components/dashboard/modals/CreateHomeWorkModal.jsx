@@ -1,11 +1,15 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import AwesomeModal from "../AwesomeModal.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 import StudentsSelectorSection from "../sections/StudentsSelectorSection.jsx";
 import StepScreens from "../StepScreens.jsx";
-import Tooltip from "../Tooltip.jsx"; // keep if you already use it in footer
+import Tooltip from "../Tooltip.jsx";
 
-import RecommendedPreviewSection from "../sections/RecommendedPreviewSection.jsx"; // ✅ adjust path if needed
+import ManualBuildSection from "../taskCreation/ManualBuildSection.jsx";
+
+// ✅ add these
+import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
+import { RULE_LABELS, LEVEL_RULES } from "../../../utils/rules.js";
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
@@ -13,13 +17,44 @@ function uniqStrings(arr) {
 }
 
 function makeRandomSeed() {
-    // stable enough random int
     return Math.floor(Math.random() * 1_000_000_000);
 }
 
+function findRuleLevel(ruleId) {
+    const id = String(ruleId || "").trim();
+    if (!id) return "—";
+
+    for (const [lvl, ids] of Object.entries(LEVEL_RULES || {})) {
+        if ((ids || []).includes(id)) return lvl;
+    }
+    return "—";
+}
+
 export default function CreateHomeworkModal({ open, onClose, onCreated }) {
+    const ctx = useTeacherDashboard();
+
     const [selectedStudentIds, setSelectedStudentIds] = useState([]);
     const selectedCount = useMemo(() => selectedStudentIds.length, [selectedStudentIds]);
+
+    // ✅ build RULES list (for your manual build UI)
+    const RULES = useMemo(() => {
+        const out = Object.entries(RULE_LABELS || {}).map(([id, label]) => ({
+            id,
+            label, // UI headers are UA; labels can stay EN unless you provide UA map
+            level: findRuleLevel(id),
+        }));
+
+        // stable sorting: level -> label
+        const order = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6, "—": 99 };
+        out.sort((a, b) => {
+            const da = order[a.level] ?? 99;
+            const db = order[b.level] ?? 99;
+            if (da !== db) return da - db;
+            return String(a.label || "").localeCompare(String(b.label || ""));
+        });
+
+        return out;
+    }, []);
 
     const STEPS = useMemo(
         () => [
@@ -32,21 +67,28 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
 
     const [step, setStep] = useState(0);
 
-    // ✅ Step 2 readiness gate
+    // ✅ Step 1 readiness gate (was step2Ready)
     const [step2Ready, setStep2Ready] = useState(false);
 
-    // ✅ used to force Loader remount when selection changes
     const previewKey = useMemo(() => uniqStrings(selectedStudentIds).sort().join("|"), [selectedStudentIds]);
 
-    // ✅ seed should be random and not displayed; re-generate each preview run
     const seedRef = useRef(makeRandomSeed());
 
-    // When student selection changes, Step 2 must re-load
-    useMemo(() => {
+    // When student selection changes, re-seed and re-lock Step 1
+    useEffect(() => {
         seedRef.current = makeRandomSeed();
         setStep2Ready(false);
+        // optional: also clear built preview to avoid stale tasks
+        // ctx.setBuiltTasksPreview?.(null);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [previewKey]);
+
+    // ✅ unlock Step 1 when tasks are built
+    useEffect(() => {
+        // 🔁 rename these if your context key differs
+        const tasks = ctx?.builtTasksPreview?.tasks || ctx?.builtTasksPreview?.data?.tasks || [];
+        setStep2Ready(Array.isArray(tasks) && tasks.length > 0);
+    }, [ctx?.builtTasksPreview]);
 
     const screenTitle = STEPS?.[step]?.title || "Створити домашнє завдання";
     const screenSubtitle = STEPS?.[step]?.subtitle || `Крок ${step + 1} з ${STEPS.length}`;
@@ -55,17 +97,15 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const isLast = step >= STEPS.length - 1;
 
     const validateStep = (idx) => {
-        // Step 0: students required
         if (idx === 0) {
             const ok = (selectedStudentIds?.length || 0) > 0;
             return ok ? { ok: true, message: "" } : { ok: false, message: "Вибери учня, щоб продовжити" };
         }
 
-        // ✅ Step 1: pass only after recommended-preview finished loading
         if (idx === 1) {
             return step2Ready
                 ? { ok: true, message: "" }
-                : { ok: false, message: "Завантажуємо рекомендації..." };
+                : { ok: false, message: "Згенеруй список завдань, щоб продовжити" };
         }
 
         return { ok: true, message: "" };
@@ -174,18 +214,28 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                         }
 
                         if (activeStep === 1) {
-                            // ✅ Always load recommended-preview when this step is mounted
-                            // (remount happens automatically when previewKey changes via key prop)
                             return (
-                                <div style={styles.stepFill}>
-                                    <RecommendedPreviewSection
+                                <div style={styles.stepFill} key={previewKey}>
+                                    <ManualBuildSection
+                                        // ✅ give it the rule list for the table
+                                        rules={RULES}
+                                        // ✅ give it students (if needed for later assign step)
                                         selectedStudentIds={selectedStudentIds}
+                                        // ✅ keep seed hidden, but stable per selection
+                                        seed={seedRef.current}
+                                        // ✅ wire to context
+                                        selectedRuleIds={ctx.selectedRuleIds}
+                                        setSelectedRuleIds={ctx.setSelectedRuleIds}
+                                        manualBuild={ctx.manualBuild}
+                                        setManualBuild={ctx.setManualBuild}
+                                        // 🔁 this should be what the section calls after build endpoint returns
+                                        setBuiltTasksPreview={ctx.setBuiltTasksPreview}
                                     />
                                 </div>
                             );
                         }
 
-                        return <div style={styles.placeholder}>{/* TODO */}</div>;
+                        return <div style={styles.placeholder}>{/* TODO: summary */}</div>;
                     }}
                 </StepScreens>
             </div>
@@ -202,7 +252,6 @@ const styles = {
         flexDirection: "column",
         overflow: "hidden",
     },
-
     stepFill: {
         flex: "1 1 auto",
         minHeight: 0,
@@ -211,13 +260,6 @@ const styles = {
         display: "flex",
         flexDirection: "column",
     },
-
-    emptyStepContent: {
-        flex: "1 1 auto",
-        minHeight: 0,
-        minWidth: 0,
-    },
-
     placeholder: {
         flex: "1 1 auto",
         minHeight: 0,
@@ -225,7 +267,6 @@ const styles = {
         border: "2px dashed rgba(0,0,0,0.12)",
         background: "rgba(0,0,0,0.02)",
     },
-
     footer: {
         display: "flex",
         justifyContent: "space-between",
@@ -234,34 +275,29 @@ const styles = {
         width: "100%",
         flexWrap: "wrap",
     },
-
     footerLeft: {
         display: "flex",
         alignItems: "center",
         gap: 10,
         minWidth: 0,
     },
-
     footerMeta: {
         fontWeight: 900,
         color: "var(--muted, #a47856)",
         whiteSpace: "nowrap",
         minWidth: 0,
     },
-
     footerRight: {
         display: "flex",
         alignItems: "center",
         gap: 10,
         minWidth: 0,
     },
-
     nextBtnInner: {
         display: "inline-flex",
         alignItems: "center",
         gap: 8,
     },
-
     lockIcon: {
         width: 16,
         height: 16,

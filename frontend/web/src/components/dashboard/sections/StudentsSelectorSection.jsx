@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
-import SelectableTableSection from "./SelectableTableSection.jsx";
+import SelectableTableSection from "../SelectableTableSection.jsx";
 import CombinedTables from "../CombinedTables.jsx";
 
 function uniqStrings(arr) {

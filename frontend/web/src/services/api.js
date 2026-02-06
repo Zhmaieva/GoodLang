@@ -814,7 +814,7 @@ export function apiBuildTaskSet({
     }
 
     return jsonFetch(
-        `${API_BASE}/schools/task-sets/build?${qs.toString()}`
+        `${API_BASE}/schools/task-sets?${qs.toString()}`
     );
 }
 
