@@ -83,7 +83,7 @@ export default function GoodLangSchoolsLanding2() {
         () => [
             {
                 q: "How does it reduce teacher workload?",
-                a: "GoodLang generates tasks in different forms: L1/L2 translations, choose a correct option, etc. and checks them instantly giving a short feedback and analytics. Teachers spend time on teaching, not manual checking and repetitive feedback.",
+                a: "GoodLang generates tasks in different forms: L1/L2 translations, choose a correct option, etc. and checks them instantly giving a short feedback and analytics. It enables teachers to spend time on teaching, instead of doing assignments routine.",
             },
             {
                 q: "How does it help retain students?",
@@ -96,10 +96,6 @@ export default function GoodLangSchoolsLanding2() {
             {
                 q: "How is it better than workbooks/spreadsheets/AI chats?",
                 a: "Everything has it's applications. But none of the tools above is capable of automated detailed progress tracking and producing/checking assignments at the same time. Teachers would spend tens of hours per week trying to put it all together.",
-            },
-            {
-                q: "How fast can we start?",
-                a: "Usually within minutes upon the registration: create a class → add students → generate an assignment → send it out.",
             },
             {
                 q: "Unlimited assignment generations* - why the asterisk?",
@@ -209,7 +205,9 @@ export default function GoodLangSchoolsLanding2() {
                 headerStyle={{
                 }}
             >
-                <div className="gl-twoCol">
+                <div className="gl-twoCol" style={{
+                    width: "100%",
+                }}>
                     <div className="gl-bullet">
                         <div style={{
                             display: 'flex',
