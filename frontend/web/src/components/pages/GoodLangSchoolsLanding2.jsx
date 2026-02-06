@@ -76,6 +76,39 @@ export default function GoodLangSchoolsLanding2() {
     const [email, setEmail] = useState("");
     const [sent, setSent] = useState(false);
 
+    // ✅ 1) Add this state near your other useState's (inside GoodLangSchoolsLanding2)
+    const [faqOpen, setFaqOpen] = useState(-1);
+
+    const FAQS = useMemo(
+        () => [
+            {
+                q: "How does it reduce teacher workload?",
+                a: "GoodLang generates tasks in different forms: L1/L2 translations, choose a correct option, etc. and checks them instantly giving a short feedback and analytics. Teachers spend time on teaching, not manual checking and repetitive feedback.",
+            },
+            {
+                q: "How does it help retain students?",
+                a: "One of the main reasons why students leave language schools, is that they can't see the progress. By giving precise progress and weak spots data, GoodLang eliminates confusion to let your students know what they are paying for.",
+            },
+            {
+                q: "Does GoodLang provide a learning plan?",
+                a: "This is no exactly what GoodLang was made for. Teachers are the ones who adopt and shape the learning path. GoodLang is there for them to pinpoint learning gaps and instantly generate assignments based on grammar rule, vocabulary or subject.",
+            },
+            {
+                q: "How is it better than workbooks/spreadsheets/AI chats?",
+                a: "Everything has it's applications. But none of the tools above is capable of automated detailed progress tracking and producing/checking assignments at the same time. Teachers would spend tens of hours per week trying to put it all together.",
+            },
+            {
+                q: "How fast can we start?",
+                a: "Usually within minutes upon the registration: create a class → add students → generate an assignment → send it out.",
+            },
+            {
+                q: "Unlimited assignment generations* - why the asterisk?",
+                a: "Don't worry - it's unlimited as long as it falls under fair use policy and users don't try to abuse the system by sharing accounts with other people.",
+            },
+        ],
+        []
+    );
+
     const sections = useMemo(
         () => [
             { id: "top", bg: TOKENS.bg0 },
@@ -550,66 +583,41 @@ export default function GoodLangSchoolsLanding2() {
 
             <Section
                 id="faq"
-                bg={bgByIndex(0)}
-                prevBg={bgByIndex(1)}
-                nextBg={bgByIndex(1)}
+                bg={bgByIndex(6)}
+                prevBg={bgByIndex(6)}
+                nextBg={bgByIndex(6)}
                 title="Frequently asked questions"
                 align="left"
-                headerStyle={{
-                }}
             >
-                <div className="gl-twoCol">
-                    <div className="gl-solutionGrid">
-                        <div style={{
-                            display: "flex",
-                            gap: 12,
-                        }}>
-                            <div className="gl-solutionCard">
-                                <div className="gl-solutionTitle">Scale with no friction</div>
-                                <div className="gl-solutionText">
-                                    GoodLang generates tasks and instantly checks them to reduce operational cost. Start
-                                    more
-                                    classes with less effort.
-                                </div>
-                            </div>
+                <div className="gl-twoCol" style={{ justifyContent: "center" }}>
+                    <div className="gl-faqStack">
 
-                            <div className="gl-solutionCard" style={{
-                                width: '80%'
-                            }}>
-                                <div className="gl-solutionTitle">Stronger retention</div>
-                                <div className="gl-solutionText">
-                                    Give transparent and data-driven feedback to your students — catch weak cohorts
-                                    before
-                                    refunds or churn happen.
-                                </div>
-                            </div>
-                        </div>
+                        {FAQS.map((item, idx) => {
+                            const open = faqOpen === idx;
 
-                        <div style={{
-                            display: "flex",
-                            gap: 12,
-                        }}>
-                            <div className="gl-solutionCard" style={{
-                                width: '80%'
-                            }}>
-                                <div className="gl-solutionTitle">Market value</div>
-                                <div className="gl-solutionText">
-                                    With automated checking, invest more time to focus on quality — put your school in a
-                                    stronger position among
-                                    competitors.
-                                </div>
-                            </div>
+                            return (
+                                <button
+                                    key={item.q}
+                                    type="button"
+                                    className={clsx("gl-faqCard", open && "open")}
+                                    onClick={() => setFaqOpen((v) => (v === idx ? -1 : idx))}
+                                >
+                                    <div className="gl-faqTop">
+                                        <div className="gl-faqQ">{item.q}</div>
 
-                            <div className="gl-solutionCard">
-                                <div className="gl-solutionTitle">Easy to start</div>
-                                <div className="gl-solutionText">
-                                    We know that onboarding brings a lot of struggle. That's why GoodLang enables
-                                    teachers
-                                    to
-                                    setup classes and start giving assignments within a minute.
-                                </div>
-                            </div>
-                        </div>
+                                        <div className={clsx("gl-faqArrow", open && "open")} aria-hidden="true">
+                                            ▾
+                                        </div>
+                                    </div>
+
+                                    {/* ✅ Animated body (always mounted) */}
+                                    <div className={clsx("gl-faqBody", open ? "open" : "closed")}>
+                                        <div className="gl-faqA">{item.a}</div>
+                                    </div>
+                                </button>
+                            );
+                        })}
+
                     </div>
                 </div>
             </Section>
@@ -1330,6 +1338,115 @@ html, body, #root, .gl-page {
     padding: 10px 12px;
     font-weight: 900;
   }
+  
+  .gl-faqStack{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Kill Safari tap highlight + focus box */
+.gl-faqCard {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.gl-faqCard:focus {
+  outline: none;
+}
+
+.gl-faqCard{
+  font-family: var(--font-family-mono);
+  width: 100%;
+  text-align: left;
+  border: 2px solid rgba(0,0,0,0.14);
+  background: rgba(255,255,255,0.72);
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow: var(--shadowSoft);
+  padding: 14px 14px;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.gl-faqCard:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.80);
+}
+
+.gl-faqTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.gl-faqQ{
+  color: var(--text) !important;
+  font-weight: 900;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.gl-faqArrow{
+  color: var(--text) !important;
+  min-width: 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 2px solid rgba(0,0,0,0.12);
+  background: rgba(255,243,223,0.8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 1100;
+  transition: transform 160ms ease;
+}
+
+.gl-faqArrow.open{
+  transform: rotate(180deg);
+}
+
+.gl-faqA{
+  margin-top: 10px;
+  border-top: 2px solid rgba(0,0,0,0.08);
+  padding-top: 10px;
+  color: rgba(58,42,29,0.78);
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+
+/* ✅ Add ONLY these CSS updates */
+
+/* body animation wrapper */
+.gl-faqBody{
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    max-height 260ms ease,
+    opacity 200ms ease,
+    transform 220ms ease;
+  will-change: max-height, opacity, transform;
+}
+
+/* open state */
+.gl-faqBody.open{
+  max-height: 220px; /* adjust if some answers are longer */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* spacing + divider should appear only when opening */
+.gl-faqA{
+  margin-top: 10px;
+  border-top: 2px solid rgba(0,0,0,0.08);
+  padding-top: 10px;
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+
 
   /* Footer */
   .gl-footer{
