@@ -91,14 +91,6 @@ export default function GoodLangSchoolsLanding2() {
                 a: "One of the main reasons why students leave language schools, is that they can't see the progress. By giving precise progress and weak spots data, GoodLang eliminates confusion to let your students know what they are paying for.",
             },
             {
-                q: "Does GoodLang provide a learning plan?",
-                a: "This is no exactly what GoodLang was made for. Teachers are the ones who adopt and shape the learning path. GoodLang is there for them to pinpoint learning gaps and instantly generate assignments based on grammar rule, vocabulary or subject.",
-            },
-            {
-                q: "How is it better than AI chats / spreadsheets?",
-                a: "Everything has it's applications. But none such tools can't massively track progress and produce / check assignments at the same time. Teachers would spend tens of hours per week trying to put it all together.",
-            },
-            {
                 q: "Unlimited assignment generations* - why the asterisk?",
                 a: "Don't worry - it's unlimited as long as it falls under fair use policy and users don't try to abuse the system by sharing accounts with other people.",
             },
