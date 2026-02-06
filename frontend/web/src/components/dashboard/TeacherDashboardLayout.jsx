@@ -45,7 +45,7 @@ export default function TeacherDashboardLayout() {
             <aside style={{ ...styles.sidebar, width: sideW }}>
                 <div style={styles.sideTop}>
                     <div style={{ ...styles.brandRow, justifyContent: collapsed ? "center" : "space-around" }}>
-                        {!collapsed && <div style={styles.brandText}>{collapsed ? "" : "GoodLang • Teacher"}</div>}
+                        {!collapsed && <div style={styles.brandText}>{collapsed ? "" : "GoodLang • School"}</div>}
 
                         <AwesomeButton
                             variant="ghost"
@@ -84,8 +84,6 @@ export default function TeacherDashboardLayout() {
                     {/* ✅ NEW */}
                     <NavItem to="/teacher/homework" label="Домашня робота" icon="📝" collapsed={collapsed} />
                 </nav>
-
-                {!collapsed ? <div style={styles.sideHint}>Навігація зліва (fixed). Можна згорнути.</div> : null}
             </aside>
 
             {/* Content */}

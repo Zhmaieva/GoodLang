@@ -205,7 +205,7 @@ export async function assignTaskSetsToStudents({ teacherId, taskSetIds, studentI
     const now = new Date();
 
     const col = db.collection("good_lang_task_set_assignments");
-    await col.createIndex({ taskSetId: 1, studentId: 1 }, { unique: true });
+//    await col.createIndex({ taskSetId: 1, studentId: 1 }, { unique: true });
 
     const bulk = col.initializeUnorderedBulkOp();
     let planned = 0;

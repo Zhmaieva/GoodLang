@@ -11,6 +11,9 @@ import ManualBuildSection from "../taskCreation/ManualBuildSection.jsx";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import { RULE_LABELS, LEVEL_RULES } from "../../../utils/rules.js";
 
+// ✅ new step-2 summary section
+import AssignmentSummarySection from "../taskCreation/AssignmentSummarySection.jsx";
+
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
     return Array.from(s);
@@ -40,11 +43,10 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const RULES = useMemo(() => {
         const out = Object.entries(RULE_LABELS || {}).map(([id, label]) => ({
             id,
-            label, // UI headers are UA; labels can stay EN unless you provide UA map
+            label,
             level: findRuleLevel(id),
         }));
 
-        // stable sorting: level -> label
         const order = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6, "—": 99 };
         out.sort((a, b) => {
             const da = order[a.level] ?? 99;
@@ -67,25 +69,28 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
 
     const [step, setStep] = useState(0);
 
-    // ✅ Step 1 readiness gate (was step2Ready)
+    // ✅ Step 1 readiness gate (build must happen)
     const [step2Ready, setStep2Ready] = useState(false);
+
+    // ✅ trigger for sending (Step 2 listens to this)
+    const [confirmNonce, setConfirmNonce] = useState(0);
 
     const previewKey = useMemo(() => uniqStrings(selectedStudentIds).sort().join("|"), [selectedStudentIds]);
 
+    // ✅ hidden seed
     const seedRef = useRef(makeRandomSeed());
 
     // When student selection changes, re-seed and re-lock Step 1
     useEffect(() => {
         seedRef.current = makeRandomSeed();
         setStep2Ready(false);
-        // optional: also clear built preview to avoid stale tasks
-        // ctx.setBuiltTasksPreview?.(null);
+        // also clear built preview to avoid stale tasks (optional but sane)
+        ctx?.setBuiltTasksPreview?.(null);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [previewKey]);
 
     // ✅ unlock Step 1 when tasks are built
     useEffect(() => {
-        // 🔁 rename these if your context key differs
         const tasks = ctx?.builtTasksPreview?.tasks || ctx?.builtTasksPreview?.data?.tasks || [];
         setStep2Ready(Array.isArray(tasks) && tasks.length > 0);
     }, [ctx?.builtTasksPreview]);
@@ -103,9 +108,13 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
         }
 
         if (idx === 1) {
-            return step2Ready
-                ? { ok: true, message: "" }
-                : { ok: false, message: "Згенеруй список завдань, щоб продовжити" };
+            return step2Ready ? { ok: true, message: "" } : { ok: false, message: "Згенеруй список завдань, щоб продовжити" };
+        }
+
+        if (idx === 2) {
+            const tasks = ctx?.builtTasksPreview?.tasks || [];
+            const ok = (selectedStudentIds?.length || 0) > 0 && Array.isArray(tasks) && tasks.length > 0;
+            return ok ? { ok: true, message: "" } : { ok: false, message: "Немає завдань для відправки" };
         }
 
         return { ok: true, message: "" };
@@ -134,8 +143,8 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
             return;
         }
 
-        // last step action (no-op for now)
-        // onCreated?.();
+        // ✅ trigger Step 2 “send”
+        setConfirmNonce((x) => x + 1);
     };
 
     const onBack = () => setStep((s) => Math.max(s - 1, 0));
@@ -153,12 +162,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                 <div style={styles.footer}>
                     <div style={styles.footerLeft}>
                         {!isFirst && (
-                            <AwesomeButton
-                                variant="ghost"
-                                onClick={onBack}
-                                disabled={isFirst}
-                                title={isFirst ? "Це перший крок" : backLabel}
-                            >
+                            <AwesomeButton variant="ghost" onClick={onBack} disabled={isFirst} title={isFirst ? "Це перший крок" : backLabel}>
                                 {backLabel}
                             </AwesomeButton>
                         )}
@@ -217,18 +221,13 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                             return (
                                 <div style={styles.stepFill} key={previewKey}>
                                     <ManualBuildSection
-                                        // ✅ give it the rule list for the table
                                         rules={RULES}
-                                        // ✅ give it students (if needed for later assign step)
                                         selectedStudentIds={selectedStudentIds}
-                                        // ✅ keep seed hidden, but stable per selection
                                         seed={seedRef.current}
-                                        // ✅ wire to context
                                         selectedRuleIds={ctx.selectedRuleIds}
                                         setSelectedRuleIds={ctx.setSelectedRuleIds}
                                         manualBuild={ctx.manualBuild}
                                         setManualBuild={ctx.setManualBuild}
-                                        // 🔁 this should be what the section calls after build endpoint returns
                                         setBuiltTasksPreview={ctx.setBuiltTasksPreview}
                                         setStep2Ready={setStep2Ready}
                                     />
@@ -236,7 +235,23 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                             );
                         }
 
-                        return <div style={styles.placeholder}>{/* TODO: summary */}</div>;
+                        // ✅ Step 2: summary + send
+                        return (
+                            <div style={styles.stepFill}>
+                                <AssignmentSummarySection
+                                    selectedStudentIds={selectedStudentIds}
+                                    students={ctx.students || []}
+                                    builtTasksPreview={ctx.builtTasksPreview}
+                                    confirmNonce={confirmNonce}
+                                    onDone={() => {
+                                        onClose?.();
+                                        // refresh page after close
+                                        window.location.reload();
+                                        onCreated?.();
+                                    }}
+                                />
+                            </div>
+                        );
                     }}
                 </StepScreens>
             </div>
@@ -260,13 +275,6 @@ const styles = {
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
-    },
-    placeholder: {
-        flex: "1 1 auto",
-        minHeight: 0,
-        minWidth: 0,
-        border: "2px dashed rgba(0,0,0,0.12)",
-        background: "rgba(0,0,0,0.02)",
     },
     footer: {
         display: "flex",
