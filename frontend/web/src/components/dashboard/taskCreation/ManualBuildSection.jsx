@@ -38,12 +38,12 @@ export default function ManualBuildSection({
             </div>
 
             {/* 30% */}
-            <div style={{ flex: "0 0 40%", minWidth: 340 }}>
+            <div style={{ flex: "0 0 40%", minWidth: 340, height: '100%'  }}>
                 <RulesSelectorTable
                     rules={rules}
                     selectedRuleIds={selectedRuleIds}
                     setSelectedRuleIds={setSelectedRuleIds}
-                    height="72vh"
+                    height="100%"
                 />
             </div>
 

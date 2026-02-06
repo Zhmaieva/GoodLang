@@ -1,14 +1,6 @@
 // RulesSelectorTable.jsx
 import React, { useMemo, useState } from "react";
 
-/**
- * EXPECTS from context:
- * - selectedRuleIds: string[]
- * - setSelectedRuleIds: (ids: string[]) => void
- *
- * RULES input shape (flexible):
- * [{ id: 'PAST_SIMPLE', labelUa: 'Past Simple', level: 'A2' }, ...]
- */
 export default function RulesSelectorTable({
                                                rules = [],
                                                selectedRuleIds = [],
@@ -16,15 +8,12 @@ export default function RulesSelectorTable({
                                                height = "72vh",
                                            }) {
     const TOKENS = {
-        bg0: "#fff3df",
-        card: "rgba(255,255,255,0.72)",
+        card: "rgba(255,255,255,0.1)",
         text: "#3a2a1d",
         muted: "#a47856",
         border: "rgba(58,42,29,0.18)",
         accent: "#ff6138",
         radius: 20,
-        shadow: "0 14px 40px rgba(58,42,29,0.12)",
-        mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     };
 
     // deterministic-ish random per rule id (stable per render)
@@ -35,23 +24,21 @@ export default function RulesSelectorTable({
             const id = String(r?.id ?? "").trim();
             if (!id) continue;
 
-            // pseudo-random from id
             let h = 0;
             for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
 
-            const never = (h % 7) === 0; // ~14% never
-            if (never) {
-                map.set(id, null);
-            } else {
+            const never = h % 7 === 0;
+            if (never) map.set(id, null);
+            else {
                 const daysAgo = 1 + (h % 30);
-                const d = new Date(now - daysAgo * 24 * 60 * 60 * 1000);
-                map.set(id, d);
+                map.set(id, new Date(now - daysAgo * 24 * 60 * 60 * 1000));
             }
         }
         return map;
     }, [rules]);
 
     const [sort, setSort] = useState({ key: "label", dir: "asc" }); // label|level|last
+
     const rows = useMemo(() => {
         const norm = (x) => String(x ?? "").trim();
 
@@ -66,6 +53,7 @@ export default function RulesSelectorTable({
             .filter((x) => x.id);
 
         const dirMul = sort.dir === "asc" ? 1 : -1;
+
         arr.sort((a, b) => {
             if (sort.key === "level") return dirMul * a.level.localeCompare(b.level);
             if (sort.key === "last") {
@@ -79,7 +67,10 @@ export default function RulesSelectorTable({
         return arr;
     }, [rules, lastPracticeById, sort]);
 
-    const selectedSet = useMemo(() => new Set((selectedRuleIds || []).map(String)), [selectedRuleIds]);
+    const selectedSet = useMemo(
+        () => new Set((selectedRuleIds || []).map((x) => String(x).trim()).filter(Boolean)),
+        [selectedRuleIds]
+    );
 
     function toggle(id) {
         const next = new Set(selectedSet);
@@ -89,7 +80,7 @@ export default function RulesSelectorTable({
     }
 
     function toggleAll() {
-        if (rows.length === 0) return;
+        if (!rows.length) return;
         const allIds = rows.map((r) => r.id);
         const allSelected = allIds.every((id) => selectedSet.has(id));
         setSelectedRuleIds(allSelected ? [] : allIds);
@@ -103,22 +94,30 @@ export default function RulesSelectorTable({
         return `${dd}.${mm}.${yy}`;
     }
 
-    const TH = ({ k, children, style }) => (
+    const TH = ({ k, children, align = "left" }) => (
         <button
             type="button"
             onClick={() =>
-                setSort((s) => (s.key === k ? { key: k, dir: s.dir === "asc" ? "desc" : "asc" } : { key: k, dir: "asc" }))
+                setSort((s) =>
+                    s.key === k
+                        ? { key: k, dir: s.dir === "asc" ? "desc" : "asc" }
+                        : { key: k, dir: "asc" }
+                )
             }
             style={{
                 all: "unset",
                 cursor: "pointer",
-                fontFamily: TOKENS.mono,
+                fontFamily: "Nunito, ui-sans-serif, system-ui",
                 fontSize: 12,
-                letterSpacing: 0.3,
+                fontWeight: 900,
                 color: TOKENS.muted,
                 padding: "10px 10px",
                 userSelect: "none",
-                ...style,
+                textAlign: align,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                minWidth: 0,
             }}
             title="Натисніть, щоб відсортувати"
         >
@@ -137,26 +136,55 @@ export default function RulesSelectorTable({
                 borderRadius: TOKENS.radius,
                 border: `1px solid ${TOKENS.border}`,
                 background: TOKENS.card,
-                boxShadow: TOKENS.shadow,
+                // ✅ no shadow
+                boxShadow: "none",
                 display: "flex",
                 flexDirection: "column",
+                minWidth: 0, // ✅ critical for no horizontal scroll in flex layouts
             }}
         >
             {/* header */}
-            <div style={{ padding: 12, borderBottom: `1px solid ${TOKENS.border}`, display: "flex", gap: 10, alignItems: "center" }}>
-                <div style={{ fontFamily: TOKENS.mono, fontWeight: 800, color: TOKENS.text }}>
+            <div
+                style={{
+                    padding: 12,
+                    borderBottom: `1px solid ${TOKENS.border}`,
+                    display: "flex",
+                    gap: 10,
+                    alignItems: "center",
+                    minWidth: 0,
+                }}
+            >
+                <div
+                    style={{
+                        fontFamily: "Nunito, ui-sans-serif, system-ui",
+                        fontWeight: 1000,
+                        color: TOKENS.text,
+                    }}
+                >
                     Правила
                 </div>
-                <div style={{ fontFamily: TOKENS.mono, color: TOKENS.muted, fontSize: 12 }}>
+
+                {/* ✅ subheader opacity = 1 */}
+                <div
+                    style={{
+                        fontFamily: "Nunito, ui-sans-serif, system-ui",
+                        color: TOKENS.muted,
+                        fontSize: 12,
+                        fontWeight: 900,
+                        opacity: 1,
+                        whiteSpace: "nowrap",
+                    }}
+                >
                     Обрано: {selectedSet.size}
                 </div>
+
                 <div style={{ marginLeft: "auto" }}>
                     <button
                         type="button"
                         onClick={toggleAll}
                         style={{
-                            fontFamily: TOKENS.mono,
-                            fontWeight: 800,
+                            fontFamily: "Nunito, ui-sans-serif, system-ui",
+                            fontWeight: 900,
                             fontSize: 12,
                             borderRadius: 999,
                             padding: "8px 10px",
@@ -171,36 +199,43 @@ export default function RulesSelectorTable({
             </div>
 
             {/* table */}
-            <div style={{ flex: 1, overflow: "auto" }}>
+            <div style={{ flex: 1, overflow: "auto", minWidth: 0 }}>
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "44px 1.4fr 110px 140px",
+                        gridTemplateColumns: "40px minmax(0, 1fr) 84px 110px", // ✅ no overflow, label can shrink
                         alignItems: "center",
                         borderBottom: `1px solid ${TOKENS.border}`,
-                        background: "rgba(255,255,255,0.65)",
+                        background: "rgba(255,255,255,1)",
                         position: "sticky",
                         top: 0,
                         zIndex: 2,
+                        minWidth: 0,
                     }}
                 >
                     <div style={{ padding: "10px 10px" }} />
                     <TH k="label">Правило</TH>
-                    <TH k="level" style={{ textAlign: "right" }}>Рівень</TH>
-                    <TH k="last" style={{ textAlign: "right" }}>Остання практика</TH>
+                    <TH k="level" align="right">
+                        Рівень
+                    </TH>
+                    <TH k="last" align="right">
+                        Остання практика
+                    </TH>
                 </div>
 
                 {rows.map((r) => {
                     const isOn = selectedSet.has(r.id);
+
                     return (
                         <div
                             key={r.id}
                             style={{
                                 display: "grid",
-                                gridTemplateColumns: "44px 1.4fr 110px 140px",
+                                gridTemplateColumns: "40px minmax(0, 1fr) 84px 110px",
                                 alignItems: "center",
                                 borderBottom: `1px solid ${TOKENS.border}`,
                                 background: isOn ? "rgba(255,97,56,0.10)" : "transparent",
+                                minWidth: 0,
                             }}
                         >
                             <div style={{ padding: "10px 10px" }}>
@@ -208,9 +243,11 @@ export default function RulesSelectorTable({
                                     type="checkbox"
                                     checked={isOn}
                                     onChange={() => toggle(r.id)}
-                                    style={{ width: 16, height: 16, cursor: "pointer" }}
+                                    style={{ width: 16, height: 16, cursor: "pointer", accentColor: TOKENS.accent }}
                                 />
                             </div>
+
+                            {/* ✅ label cell with ellipsis */}
                             <button
                                 type="button"
                                 onClick={() => toggle(r.id)}
@@ -218,21 +255,44 @@ export default function RulesSelectorTable({
                                     all: "unset",
                                     cursor: "pointer",
                                     padding: "10px 10px",
-                                    fontFamily: TOKENS.mono,
+                                    fontFamily: "Nunito, ui-sans-serif, system-ui",
                                     color: TOKENS.text,
-                                    fontWeight: 800,
+                                    fontWeight: 900,
+                                    minWidth: 0,
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                    whiteSpace: "nowrap",
                                 }}
-                                title={r.id}
+                                title={r.label}
                             >
                                 {r.label}
-                                <span style={{ marginLeft: 10, fontWeight: 700, fontSize: 12, color: TOKENS.muted }}>
-                  {r.id}
-                </span>
                             </button>
-                            <div style={{ padding: "10px 10px", textAlign: "right", fontFamily: TOKENS.mono, color: TOKENS.text, fontWeight: 900 }}>
+
+                            <div
+                                style={{
+                                    padding: "10px 10px",
+                                    textAlign: "right",
+                                    fontFamily: "Nunito, ui-sans-serif, system-ui",
+                                    color: TOKENS.text,
+                                    fontWeight: 900,
+                                    whiteSpace: "nowrap",
+                                    minWidth: 0,
+                                }}
+                            >
                                 {r.level || "—"}
                             </div>
-                            <div style={{ padding: "10px 10px", textAlign: "right", fontFamily: TOKENS.mono, color: TOKENS.muted, fontWeight: 900 }}>
+
+                            <div
+                                style={{
+                                    padding: "10px 10px",
+                                    textAlign: "right",
+                                    fontFamily: "Nunito, ui-sans-serif, system-ui",
+                                    color: TOKENS.muted,
+                                    fontWeight: 900,
+                                    whiteSpace: "nowrap",
+                                    minWidth: 0,
+                                }}
+                            >
                                 {fmt(r.last)}
                             </div>
                         </div>
@@ -240,7 +300,7 @@ export default function RulesSelectorTable({
                 })}
 
                 {!rows.length && (
-                    <div style={{ padding: 14, fontFamily: TOKENS.mono, color: TOKENS.muted }}>
+                    <div style={{ padding: 14, fontFamily: "Nunito, ui-sans-serif, system-ui", color: TOKENS.muted, fontWeight: 900 }}>
                         Немає правил для відображення.
                     </div>
                 )}
