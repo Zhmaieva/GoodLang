@@ -63,7 +63,7 @@ export default function ManualBuildSection({
                             lastBuildKey: `${Date.now()}`,
                         }));
                     }}
-                    height="72vh"
+                    height="100%"
                 />
             </div>
         </div>

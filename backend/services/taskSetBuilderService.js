@@ -67,7 +67,8 @@ function getRuleSamplesGaps(ruleId) {
 }
 
 function normalizeTranslationSample(ruleId, sample) {
-    const text = sample?.ua ?? sample?.["ua"] ?? sample?.en ?? sample?.["en"];
+    const text = sample?.ua ?? sample?.["ua"];
+    const correctAnswer = sample?.en ?? sample?.["en"];
     if (!text) return null;
 
     return {
@@ -75,7 +76,7 @@ function normalizeTranslationSample(ruleId, sample) {
         ruleIds: Array.isArray(sample.rules) ? sample.rules : [String(ruleId)],
         textToTranslate: String(text),
         options: null,
-        correctAnswer: null,
+        correctAnswer: correctAnswer,
         tipIfWrong: null,
     };
 }

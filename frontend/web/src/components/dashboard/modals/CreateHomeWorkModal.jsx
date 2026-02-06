@@ -59,7 +59,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const STEPS = useMemo(
         () => [
             { label: "Учні", title: "Вибери учнів", subtitle: "Обери класи або окремих учнів" },
-            { label: "Завдання", title: "Налаштуй завдання", subtitle: "Дай GoodLang зробити це за тебе" },
+            { label: "Завдання", title: "Налаштуй завдання", subtitle: "Обери тип завдань, кількість і тему" },
             { label: "Підсумок", title: "Майже готово", subtitle: "Переконайся, що все правильно" },
         ],
         []

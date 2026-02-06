@@ -2,26 +2,33 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { apiBuildTaskSet } from "../../../../services/api.js";
 
+function normalizeText(x) {
+    return String(x ?? "").replaceAll("{GAP}", "___");
+}
+
+function formatAnswer(ans) {
+    if (Array.isArray(ans)) return ans.map((x) => String(x ?? "")).filter(Boolean).join(" / ");
+    if (ans == null) return "";
+    return String(ans);
+}
+
 export default function BuiltTasksPreview({
                                               selectedRuleIds = [],
                                               manualBuild,
-                                              onBuilt, // optional: (data) => void (push to context)
+                                              onBuilt,
                                               height = "72vh",
                                           }) {
     const TOKENS = {
-        card: "rgba(255,255,255,0.72)",
+        card: "rgba(255,255,255,0.1)",   // ✅ common
         text: "#3a2a1d",
         muted: "#a47856",
         border: "rgba(58,42,29,0.18)",
         accent: "#ff6138",
-        radius: 20,
-        shadow: "0 14px 40px rgba(58,42,29,0.12)",
-        mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+        radius: 20,                     // ✅ rounded like others
     };
 
     const [state, setState] = useState({
         isLoading: false,
-        taskSetId: null,
         tasks: [],
         error: null,
     });
@@ -40,12 +47,14 @@ export default function BuiltTasksPreview({
     useEffect(() => {
         const ids = (selectedRuleIds || []).map(String).filter(Boolean);
         if (!ids.length) {
-            setState((s) => ({ ...s, isLoading: false, taskSetId: null, tasks: [], error: null }));
+            setState({ isLoading: false, tasks: [], error: null });
             return;
         }
 
         const taskMode = manualBuild?.taskMode || "translations";
-        const numberOfTasks = Number.isFinite(Number(manualBuild?.numberOfTasks)) ? Number(manualBuild.numberOfTasks) : 10;
+        const numberOfTasks = Number.isFinite(Number(manualBuild?.numberOfTasks))
+            ? Number(manualBuild.numberOfTasks)
+            : 10;
         const seed = Number.isFinite(Number(manualBuild?.seed)) ? Number(manualBuild.seed) : 1;
 
         const reqId = Date.now();
@@ -66,7 +75,6 @@ export default function BuiltTasksPreview({
 
                 setState({
                     isLoading: false,
-                    taskSetId: data?.taskSetId ?? null,
                     tasks: Array.isArray(data?.tasks) ? data.tasks : [],
                     error: null,
                 });
@@ -74,13 +82,11 @@ export default function BuiltTasksPreview({
                 onBuilt?.(data);
             } catch (e) {
                 if (lastReqRef.current !== reqId) return;
-                setState((s) => ({
-                    ...s,
+                setState({
                     isLoading: false,
-                    taskSetId: null,
                     tasks: [],
                     error: e?.message || "Не вдалося згенерувати завдання",
-                }));
+                });
             }
         })();
     }, [buildKey]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -95,73 +101,76 @@ export default function BuiltTasksPreview({
                 borderRadius: TOKENS.radius,
                 border: `1px solid ${TOKENS.border}`,
                 background: TOKENS.card,
-                boxShadow: TOKENS.shadow,
+                boxShadow: "none", // ✅ no heavy shadow
                 position: "relative",
                 display: "flex",
                 flexDirection: "column",
+                minWidth: 0,
+                fontFamily: "Nunito, ui-sans-serif, system-ui",
             }}
         >
             {/* header */}
-            <div style={{ padding: 12, borderBottom: `1px solid ${TOKENS.border}`, display: "flex", gap: 10, alignItems: "center" }}>
-                <div style={{ fontFamily: TOKENS.mono, fontWeight: 1000, color: TOKENS.text }}>
-                    Прев’ю завдань
-                </div>
-                <div style={{ fontFamily: TOKENS.mono, color: TOKENS.muted, fontSize: 12 }}>
-                    {state.taskSetId ? <>TaskSet: <b>{state.taskSetId}</b></> : "—"}
-                </div>
-                <div style={{ marginLeft: "auto", fontFamily: TOKENS.mono, color: TOKENS.muted, fontSize: 12 }}>
+            <div
+                style={{
+                    padding: 12,
+                    borderBottom: `1px solid ${TOKENS.border}`,
+                    display: "flex",
+                    gap: 10,
+                    alignItems: "center",
+                    minWidth: 0,
+                }}
+            >
+                <div style={{ fontWeight: 1000, color: TOKENS.text }}>Прев’ю завдань</div>
+
+                <div style={{ marginLeft: "auto", color: TOKENS.muted, fontSize: 12, fontWeight: 900, whiteSpace: "nowrap" }}>
                     {tasks.length ? <>Завдань: <b>{tasks.length}</b></> : null}
                 </div>
             </div>
 
             {/* body */}
-            <div style={{ flex: 1, overflow: "auto", padding: 14 }}>
+            <div style={{ flex: 1, overflow: "auto", padding: 14, minWidth: 0 }}>
                 {!selectedRuleIds?.length ? (
-                    <div style={{ fontFamily: TOKENS.mono, color: TOKENS.muted }}>
+                    <div style={{ color: TOKENS.muted, fontWeight: 900 }}>
                         Оберіть хоча б одне правило — і тут з’явиться прев’ю завдань.
                     </div>
                 ) : state.error ? (
-                    <div style={{ fontFamily: TOKENS.mono, color: "#b00020", fontWeight: 900 }}>
+                    <div style={{ color: "#b00020", fontWeight: 900 }}>
                         {state.error}
                     </div>
                 ) : !tasks.length && !state.isLoading ? (
-                    <div style={{ fontFamily: TOKENS.mono, color: TOKENS.muted }}>
+                    <div style={{ color: TOKENS.muted, fontWeight: 900 }}>
                         Порожньо.
                     </div>
                 ) : (
-                    <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 12, minWidth: 0 }}>
                         {tasks.map((t, idx) => {
                             const n = idx + 1;
-                            const type = String(t?.taskType ?? t?.type ?? "translation");
-                            const ruleIds = Array.isArray(t?.ruleIds) ? t.ruleIds : [];
-                            const text = t?.textToTranslate ?? t?.prompt ?? t?.text ?? "";
+
+                            const typeRaw = String(t?.taskType ?? t?.type ?? "translation");
+                            const isGap = typeRaw === "gap" || typeRaw === "gaps";
+                            const typeLabel = isGap ? "Пропуски" : "Переклад";
+
+                            const text = normalizeText(t?.textToTranslate ?? t?.prompt ?? t?.text ?? "");
                             const options = Array.isArray(t?.options) ? t.options : null;
+                            const answer = formatAnswer(t?.correctAnswer);
 
                             return (
                                 <div
-                                    key={`${t?.id ?? ""}-${idx}`}
+                                    key={`${t?.taskOrderNumber ?? ""}-${idx}`}
                                     style={{
                                         border: `1px solid ${TOKENS.border}`,
-                                        borderRadius: 16,
-                                        background: "rgba(255,255,255,0.75)",
+                                        borderRadius: 16, // ✅ nicer corners
+                                        background: "rgba(255,255,255,0.65)", // ✅ softer, common
                                         padding: 12,
+                                        minWidth: 0,
                                     }}
                                 >
-                                    <div style={{ display: "flex", gap: 10, alignItems: "baseline", flexWrap: "wrap" }}>
-                                        <div style={{ fontFamily: TOKENS.mono, fontWeight: 1000, color: TOKENS.text }}>
-                                            {n}.
-                                        </div>
-                                        <div style={{ fontFamily: TOKENS.mono, fontWeight: 1000, color: TOKENS.text }}>
-                                            {type === "gaps" ? "Пропуски" : type === "mixed" ? "Змішане" : "Переклад"}
-                                        </div>
-                                        {!!ruleIds.length && (
-                                            <div style={{ fontFamily: TOKENS.mono, color: TOKENS.muted, fontSize: 12 }}>
-                                                ({ruleIds.join(", ")})
-                                            </div>
-                                        )}
+                                    <div style={{ display: "flex", gap: 10, alignItems: "baseline", flexWrap: "wrap", minWidth: 0 }}>
+                                        <div style={{ fontWeight: 1000, color: TOKENS.text }}>{n}.</div>
+                                        <div style={{ fontWeight: 1000, color: TOKENS.text }}>{typeLabel}</div>
                                     </div>
 
-                                    <div style={{ marginTop: 10, fontFamily: TOKENS.mono, color: TOKENS.text, fontWeight: 900, lineHeight: 1.35 }}>
+                                    <div style={{ marginTop: 10, color: TOKENS.text, fontWeight: 900, lineHeight: 1.35 }}>
                                         {text || "—"}
                                     </div>
 
@@ -171,14 +180,17 @@ export default function BuiltTasksPreview({
                                                 <div
                                                     key={`${idx}-opt-${i}`}
                                                     style={{
-                                                        fontFamily: TOKENS.mono,
                                                         color: TOKENS.text,
                                                         fontWeight: 900,
                                                         border: `1px dashed ${TOKENS.border}`,
                                                         borderRadius: 12,
                                                         padding: "8px 10px",
-                                                        background: "rgba(255,255,255,0.7)",
+                                                        background: "rgba(255,255,255,0.6)",
+                                                        whiteSpace: "nowrap",
+                                                        overflow: "hidden",
+                                                        textOverflow: "ellipsis",
                                                     }}
+                                                    title={String(o)}
                                                 >
                                                     {String.fromCharCode(65 + i)}) {String(o)}
                                                 </div>
@@ -188,10 +200,25 @@ export default function BuiltTasksPreview({
 
                                     {/* answer line */}
                                     <div style={{ marginTop: 12, borderTop: `1px dashed ${TOKENS.border}`, paddingTop: 10 }}>
-                                        <div style={{ fontFamily: TOKENS.mono, color: TOKENS.muted, fontSize: 12, fontWeight: 900 }}>
-                                            Відповідь:
+                                        <div style={{ color: TOKENS.muted, fontSize: 12, fontWeight: 900 }}>
+                                            Правильна відповідь:
                                         </div>
-                                        <div style={{ height: 36, borderRadius: 12, border: `1px solid ${TOKENS.border}`, background: "rgba(255,255,255,0.65)" }} />
+
+                                        <div
+                                            style={{
+                                                marginTop: 6,
+                                                borderRadius: 12,
+                                                border: `1px solid ${TOKENS.border}`,
+                                                background: "rgba(255,255,255,0.55)",
+                                                padding: "10px 10px",
+                                                color: TOKENS.text,
+                                                fontWeight: 900,
+                                                textOverflow: "ellipsis",
+                                            }}
+                                            title={answer || ""}
+                                        >
+                                            {answer || "—"}
+                                        </div>
                                     </div>
                                 </div>
                             );
@@ -216,7 +243,7 @@ export default function BuiltTasksPreview({
                     }}
                 >
                     <div style={{ width: 12, height: 12, borderRadius: 999, background: TOKENS.accent }} />
-                    <div style={{ fontFamily: TOKENS.mono, fontWeight: 1000, color: TOKENS.text }}>
+                    <div style={{ fontWeight: 1000, color: TOKENS.text }}>
                         Генеруємо завдання…
                     </div>
                 </div>
