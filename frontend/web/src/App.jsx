@@ -120,6 +120,7 @@ import LandingPage3 from "./components/pages/LandingPage3.jsx";
 import GoodLangLandingTeaStyleThemed from "./components/pages/LandingPage2.jsx";
 import LandingCrossword from "./components/pages/LandingCrossword.jsx";
 import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
+import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
 
 export const theme = {
     bg: "#fff3df",
@@ -175,7 +176,7 @@ export default function App() {
             <SyncOnRouteChange />
             <Routes>
                 {/* Landing pages */}
-                <Route path="/welcome" element={<LandingPage3 theme={theme} />} />
+                <Route path="/welcome" element={<GoodLangSchoolsLanding2 theme={theme} />} />
                 <Route path="/greetings" element={<LandingPage3 theme={theme} />} />
                 <Route path="/hello" element={<LandingPageTeacher theme={theme} />} />
                 <Route path="/marathon" element={<LandingPageMarathon theme={theme} />} />

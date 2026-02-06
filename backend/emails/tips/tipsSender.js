@@ -93,11 +93,11 @@ async function selectEligibleRecipients({ pool, letterId }) {
           WHERE email IS NOT NULL
             AND email_subscribe = TRUE
 
-          UNION ALL
-
-          SELECT LOWER(email) AS email, NULL::uuid AS account_id, created_at
-          FROM inquiries
-          WHERE email IS NOT NULL
+--           UNION ALL
+-- 
+--           SELECT LOWER(email) AS email, NULL::uuid AS account_id, created_at
+--           FROM inquiries
+--           WHERE email IS NOT NULL
       )
       SELECT DISTINCT ON (c.email)
           c.email,
