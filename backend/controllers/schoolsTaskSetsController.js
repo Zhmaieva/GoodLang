@@ -9,7 +9,7 @@ import {
     getTaskSetsListStudentPaged,
     getNextTaskFromTaskSet,
     getAllTasksFromTaskSetByTeacher,
-    getAllStudentAnswersFromTaskSetByTeacher,
+    getAllStudentAnswersFromTaskSetByTeacher, updateTaskSetTitleById,
 } from "../database/repositories/schoolTaskRepository.js";
 
 import {
@@ -126,115 +126,184 @@ export const schoolsTaskSetsController = {
         // ==========================================================
         // (1) CREATE TASK SET (teacher)
         // ==========================================================
-        app.post(`/${name}/task-sets`, authMiddleware, async (req, res, next) => {
+        // app.post(`/${name}/task-sets`, authMiddleware, async (req, res, next) => {
+        //     try {
+        //         const teacherId = req.user.id;
+        //
+        //         const taskMode = normalizeTaskMode(req.body?.taskMode);
+        //         if (!taskMode) {
+        //             return res.status(400).json({
+        //                 error: "taskMode must be one of: translations, gaps, mixed",
+        //             });
+        //         }
+        //
+        //         const studentIds = normalizeArrayIds(req.body?.studentIds);
+        //         if (!studentIds.length) {
+        //             return res.status(400).json({ error: "studentIds must be a non-empty array" });
+        //         }
+        //
+        //         const title = String(req.body?.title ?? "").trim();
+        //         if (!title) {
+        //             return res.status(400).json({ error: "title is required" });
+        //         }
+        //
+        //         const numberOfTasks = clampInt(req.body?.numberOfTasks, 1, 50, 10);
+        //
+        //         const seedRaw = Number(req.body?.seed);
+        //         const seed = Number.isFinite(seedRaw) ? seedRaw : 1;
+        //
+        //         const dueDate = parseOptionalDate(req.body?.dueDate);
+        //
+        //         const recommended = String(req.body?.recommended ?? "false").toLowerCase() === "true";
+        //
+        //         // -----------------------------
+        //         // RECOMMENDED MODE (NEW)
+        //         // - requires recommendedPlan (items per student)
+        //         // - creates one set per student (tasks differ per student)
+        //         // -----------------------------
+        //         if (recommended) {
+        //             const planItems = normalizeRecommendedPlan(req.body?.recommendedPlan);
+        //             if (!planItems.length) {
+        //                 return res.status(400).json({
+        //                     error: "recommended=true requires recommendedPlan with { items: [...] } from /recommended-preview",
+        //                 });
+        //             }
+        //
+        //             // Only create for students included in request
+        //             const planByStudent = new Map(planItems.map((p) => [p.studentId, p]));
+        //
+        //             const createdSets = [];
+        //             for (const sid of studentIds) {
+        //                 const plan = planByStudent.get(sid);
+        //                 if (!plan) continue;
+        //
+        //                 const tasks = await buildTaskSetTasks({
+        //                     recommended: true,
+        //                     numberOfTasks,
+        //                     seed, // fallback
+        //                     recommendedPlan: plan,
+        //                     taskMode
+        //                 });
+        //
+        //                 const created = await createTaskSetWithTasks({
+        //                     teacherId,
+        //                     setType: "homework",
+        //                     title,
+        //                     deadline: dueDate,
+        //                     tasks,
+        //                 });
+        //
+        //                 // Assign ONLY to this student
+        //                 await assignTaskSetsToStudents({
+        //                     teacherId,
+        //                     taskSetIds: [created.taskSetId],
+        //                     studentIds: [sid],
+        //                     setType: "homework",
+        //                     deadline: dueDate,
+        //                 });
+        //
+        //                 createdSets.push({
+        //                     studentId: sid,
+        //                     taskSetId: created.taskSetId,
+        //                     numberOfTasks: tasks.length,
+        //                     seed: plan?.seed ?? seed,
+        //                 });
+        //             }
+        //
+        //             return res.status(201).json({
+        //                 mode: "recommended",
+        //                 title,
+        //                 dueDate: dueDate ? dueDate.toISOString() : null,
+        //                 items: createdSets,
+        //             });
+        //         }
+        //
+        //         // -----------------------------
+        //         // NON-RECOMMENDED (LEGACY)
+        //         // -----------------------------
+        //
+        //         const ruleIds = normalizeRuleIds(req.body?.ruleIds);
+        //         if (!ruleIds.length) {
+        //             return res.status(400).json({
+        //                 error: "Non-recommended mode requires ruleIds (non-empty).",
+        //             });
+        //         }
+        //
+        //         const tasks = await buildTaskSetTasks({
+        //             teacherId,
+        //             studentIds,
+        //             taskMode,
+        //             ruleIds,
+        //             recommended: false,
+        //             numberOfTasks,
+        //             seed,
+        //         });
+        //
+        //         if (!Array.isArray(tasks) || !tasks.length) {
+        //             return res.status(400).json({ error: "Failed to generate tasks" });
+        //         }
+        //
+        //         const created = await createTaskSetWithTasks({
+        //             teacherId,
+        //             setType: "homework",
+        //             title,
+        //             deadline: dueDate,
+        //             tasks,
+        //         });
+        //
+        //         const assigned = await assignTaskSetsToStudents({
+        //             teacherId,
+        //             taskSetIds: [created.taskSetId],
+        //             studentIds,
+        //             setType: "homework",
+        //             deadline: dueDate,
+        //         });
+        //
+        //         return res.status(201).json({
+        //             mode: "manual",
+        //             taskSetId: created.taskSetId,
+        //             assigned: assigned?.inserted ?? 0,
+        //             numberOfTasks: tasks.length,
+        //             taskMode,
+        //             title,
+        //             dueDate: dueDate ? dueDate.toISOString() : null,
+        //             seed,
+        //         });
+        //     } catch (e) {
+        //         next(e);
+        //     }
+        // });
+
+        // ==========================================================
+        // (1.5) BUILD TASK SET (teacher) — create set + tasks, no assignment
+        // ==========================================================
+        // GET /schools/task-sets/build?taskMode=translations&ruleIds=PAST_SIMPLE,ARTICLES&numberOfTasks=10&seed=1
+        app.get(`/${name}/task-sets/`, authMiddleware, async (req, res, next) => {
             try {
                 const teacherId = req.user.id;
 
-                const taskMode = normalizeTaskMode(req.body?.taskMode);
+                const taskMode = normalizeTaskMode(req.query?.taskMode);
                 if (!taskMode) {
                     return res.status(400).json({
                         error: "taskMode must be one of: translations, gaps, mixed",
                     });
                 }
 
-                const studentIds = normalizeArrayIds(req.body?.studentIds);
-                if (!studentIds.length) {
-                    return res.status(400).json({ error: "studentIds must be a non-empty array" });
-                }
-
-                const title = String(req.body?.title ?? "").trim();
-                if (!title) {
-                    return res.status(400).json({ error: "title is required" });
-                }
-
-                const numberOfTasks = clampInt(req.body?.numberOfTasks, 1, 50, 10);
-
-                const seedRaw = Number(req.body?.seed);
-                const seed = Number.isFinite(seedRaw) ? seedRaw : 1;
-
-                const dueDate = parseOptionalDate(req.body?.dueDate);
-
-                const recommended = String(req.body?.recommended ?? "false").toLowerCase() === "true";
-
-                // -----------------------------
-                // RECOMMENDED MODE (NEW)
-                // - requires recommendedPlan (items per student)
-                // - creates one set per student (tasks differ per student)
-                // -----------------------------
-                if (recommended) {
-                    const planItems = normalizeRecommendedPlan(req.body?.recommendedPlan);
-                    if (!planItems.length) {
-                        return res.status(400).json({
-                            error: "recommended=true requires recommendedPlan with { items: [...] } from /recommended-preview",
-                        });
-                    }
-
-                    // Only create for students included in request
-                    const planByStudent = new Map(planItems.map((p) => [p.studentId, p]));
-
-                    const createdSets = [];
-                    for (const sid of studentIds) {
-                        const plan = planByStudent.get(sid);
-                        if (!plan) continue;
-
-                        const tasks = await buildTaskSetTasks({
-                            recommended: true,
-                            numberOfTasks,
-                            seed, // fallback
-                            recommendedPlan: plan,
-                            taskMode
-                        });
-
-                        const created = await createTaskSetWithTasks({
-                            teacherId,
-                            setType: "homework",
-                            title,
-                            deadline: dueDate,
-                            tasks,
-                        });
-
-                        // Assign ONLY to this student
-                        await assignTaskSetsToStudents({
-                            teacherId,
-                            taskSetIds: [created.taskSetId],
-                            studentIds: [sid],
-                            setType: "homework",
-                            deadline: dueDate,
-                        });
-
-                        createdSets.push({
-                            studentId: sid,
-                            taskSetId: created.taskSetId,
-                            numberOfTasks: tasks.length,
-                            seed: plan?.seed ?? seed,
-                        });
-                    }
-
-                    return res.status(201).json({
-                        mode: "recommended",
-                        title,
-                        dueDate: dueDate ? dueDate.toISOString() : null,
-                        items: createdSets,
-                    });
-                }
-
-                // -----------------------------
-                // NON-RECOMMENDED (LEGACY)
-                // -----------------------------
-
-                const ruleIds = normalizeRuleIds(req.body?.ruleIds);
+                const ruleIds = normalizeRuleIds(req.query?.ruleIds);
                 if (!ruleIds.length) {
-                    return res.status(400).json({
-                        error: "Non-recommended mode requires ruleIds (non-empty).",
-                    });
+                    return res.status(400).json({ error: "ruleIds must be non-empty (comma-separated or array)" });
                 }
+
+                const numberOfTasks = clampInt(req.query?.numberOfTasks, 1, 50, 10);
+
+                const seedRaw = Number(req.query?.seed);
+                const seed = Number.isFinite(seedRaw) ? seedRaw : 1;
 
                 const tasks = await buildTaskSetTasks({
                     teacherId,
-                    studentIds,
                     taskMode,
                     ruleIds,
-                    recommended: false,
+                    recommended: false, // not recommended build here
                     numberOfTasks,
                     seed,
                 });
@@ -243,36 +312,83 @@ export const schoolsTaskSetsController = {
                     return res.status(400).json({ error: "Failed to generate tasks" });
                 }
 
+                // create set WITHOUT title/deadline
                 const created = await createTaskSetWithTasks({
                     teacherId,
                     setType: "homework",
-                    title,
-                    deadline: dueDate,
+                    title: "",          // no title at this moment
+                    deadline: null,     // no deadline here
                     tasks,
                 });
 
-                const assigned = await assignTaskSetsToStudents({
-                    teacherId,
-                    taskSetIds: [created.taskSetId],
-                    studentIds,
-                    setType: "homework",
-                    deadline: dueDate,
-                });
-
                 return res.status(201).json({
-                    mode: "manual",
                     taskSetId: created.taskSetId,
-                    assigned: assigned?.inserted ?? 0,
-                    numberOfTasks: tasks.length,
                     taskMode,
-                    title,
-                    dueDate: dueDate ? dueDate.toISOString() : null,
+                    ruleIds,
+                    numberOfTasks: tasks.length,
                     seed,
+                    tasks, // return full tasks list
                 });
             } catch (e) {
                 next(e);
             }
         });
+
+
+        // ==========================================================
+        // (1.6) ASSIGN TASK SET (teacher) — accepts tasks + title + studentId(s)
+        // ==========================================================
+        // POST /schools/task-sets/:taskSetId/assign
+        // body: { title, studentIds: [...], tasks: [...] } OR { title, studentId, tasks: [...] }
+        app.post(`/${name}/task-sets/:taskSetId/assign`, authMiddleware, async (req, res, next) => {
+            try {
+                const teacherId = req.user.id;
+                const taskSetId = String(req.params.taskSetId || "").trim();
+                if (!taskSetId) return res.status(400).json({ error: "taskSetId required" });
+
+                const title = String(req.body?.title ?? "").trim();
+                if (!title) return res.status(400).json({ error: "title is required" });
+
+                // accept studentId OR studentIds
+                const studentIds = normalizeArrayIds(
+                    req.body?.studentIds?.length
+                        ? req.body.studentIds
+                        : (req.body?.studentId ? [req.body.studentId] : [])
+                );
+                if (!studentIds.length) {
+                    return res.status(400).json({ error: "studentIds (or studentId) is required" });
+                }
+
+                const tasks = Array.isArray(req.body?.tasks) ? req.body.tasks : [];
+                if (!tasks.length) return res.status(400).json({ error: "tasks must be a non-empty array" });
+
+                // (B) Update title
+                await updateTaskSetTitleById({
+                    teacherId,
+                    taskSetId,
+                    title,
+                });
+
+                // (C) Assign to students (no deadline here)
+                const assigned = await assignTaskSetsToStudents({
+                    teacherId,
+                    taskSetIds: [taskSetId],
+                    studentIds,
+                    setType: "homework",
+                    deadline: null,
+                });
+
+                return res.status(201).json({
+                    taskSetId,
+                    title,
+                    assigned: assigned?.inserted ?? 0,
+                    tasksCount: tasks.length,
+                });
+            } catch (e) {
+                next(e);
+            }
+        });
+
 
         // ==========================================================
         // (2) TEACHER: LIST TASK SETS (paged, per-student completion)

@@ -160,6 +160,34 @@ export async function createTaskSetWithTasks({ teacherId, setType, title, deadli
     return { taskSetId: String(taskSetId) };
 }
 
+function safeId(x) {
+    return String(x ?? "").trim();
+}
+
+// --------------------------------------------------
+// Update task set title (teacher scoped)
+// --------------------------------------------------
+export async function updateTaskSetTitleById({ teacherId, taskSetId, title }) {
+    const db = await connectDB();
+
+    const teacherKey = safeId(teacherId);
+    const setId = safeId(taskSetId);
+    const t = String(title ?? "").trim();
+
+    if (!teacherKey) throw new Error("teacherId required");
+    if (!setId) throw new Error("taskSetId required");
+    if (!t) throw new Error("title required");
+
+    const now = new Date();
+
+    const res = await db.collection("good_lang_task_sets").updateOne(
+        { _id: setId, teacherId: teacherKey },
+        { $set: { title: t, updatedAt: now } }
+    );
+
+    return { updated: res?.modifiedCount ?? 0 };
+}
+
 // =====================================================================
 // Teacher: assign task set(s) to students
 // =====================================================================

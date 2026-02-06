@@ -759,22 +759,6 @@ export async function apiStudentNextTaskFromSet(taskSetId) {
 }
 
 /**
- * POST /schools/task-sets/:taskSetId/assignments
- * Teacher assigns existing set to more students
- *
- * payload: { studentIds: string[], dueDate?: string|Date|null }
- */
-export function apiAssignTaskSet(taskSetId, payload) {
-    const id = String(taskSetId ?? "").trim();
-    if (!id) throw new Error("Missing taskSetId");
-
-    return jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/assignments`, {
-        method: "POST",
-        body: JSON.stringify(payload),
-    });
-}
-
-/**
  * POST /schools/recommended-preview
  * body: { studentIds: string[], seed: number }
  */
@@ -792,3 +776,89 @@ export function apiRecommendedPreview({ studentIds, seed, numberOfTasksPerStuden
         }),
     });
 }
+
+/**
+ * GET /schools/task-sets/build
+ * Build a task set + tasks (no title, no assignment)
+ *
+ * params:
+ * - taskMode: "translations" | "gaps" | "mixed"
+ * - ruleIds: string[] | comma-separated string
+ * - numberOfTasks?: number
+ * - seed?: number
+ */
+export function apiBuildTaskSet({
+                                    taskMode,
+                                    ruleIds,
+                                    numberOfTasks = 10,
+                                    seed,
+                                }) {
+    if (!taskMode) throw new Error("taskMode is required");
+    if (!ruleIds || (Array.isArray(ruleIds) && !ruleIds.length)) {
+        throw new Error("ruleIds is required");
+    }
+
+    const qs = new URLSearchParams();
+
+    qs.set("taskMode", taskMode);
+    qs.set(
+        "ruleIds",
+        Array.isArray(ruleIds)
+            ? ruleIds.join(",")
+            : String(ruleIds)
+    );
+    qs.set("numberOfTasks", String(numberOfTasks));
+
+    if (Number.isFinite(seed)) {
+        qs.set("seed", String(seed));
+    }
+
+    return jsonFetch(
+        `${API_BASE}/schools/task-sets/build?${qs.toString()}`
+    );
+}
+
+/**
+ * POST /schools/task-sets/:taskSetId/assign
+ * Assign an existing task set to students with a title
+ *
+ * payload:
+ * - title: string
+ * - studentIds?: string[]
+ * - studentId?: string
+ * - tasks: Task[]   (for validation / count only)
+ */
+export function apiAssignBuiltTaskSet(taskSetId, {
+    title,
+    studentIds,
+    studentId,
+    tasks,
+}) {
+    const id = String(taskSetId ?? "").trim();
+    if (!id) throw new Error("Missing taskSetId");
+    if (!title) throw new Error("title is required");
+    if (!tasks || !tasks.length) throw new Error("tasks are required");
+
+    const payload = {
+        title,
+        tasks,
+        ...(Array.isArray(studentIds) && studentIds.length
+            ? { studentIds }
+            : studentId
+                ? { studentId }
+                : {}),
+    };
+
+    if (!payload.studentIds && !payload.studentId) {
+        throw new Error("studentId or studentIds is required");
+    }
+
+    return jsonFetch(
+        `${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/assign`,
+        {
+            method: "POST",
+            body: JSON.stringify(payload),
+        }
+    );
+}
+
