@@ -731,7 +731,7 @@ html, body, #root, .gl-page {
     left: -5vw;
     top: 100vh;
     height: 500px;
-    z-index: 1;
+    z-index: 9;
     rotate: 90deg;
   }
   
