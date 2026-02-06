@@ -27,9 +27,9 @@ export default function ManualBuildSection({
     );
 
     return (
-        <div style={{ display: "flex", gap: TOKENS.gap, alignItems: "stretch" }}>
+        <div style={{ display: "flex", gap: TOKENS.gap, alignItems: "stretch", height: "99%" }}>
             {/* 20% */}
-            <div style={{ flex: "0 0 20%", minWidth: 240 }}>
+            <div style={{ flex: "0 0 20%", minWidth: 240, height: '100%' }}>
                 <ManualBuildToolbar
                     manualBuild={manualBuild}
                     setManualBuild={setManualBuild}
@@ -38,7 +38,7 @@ export default function ManualBuildSection({
             </div>
 
             {/* 30% */}
-            <div style={{ flex: "0 0 30%", minWidth: 320 }}>
+            <div style={{ flex: "0 0 40%", minWidth: 340 }}>
                 <RulesSelectorTable
                     rules={rules}
                     selectedRuleIds={selectedRuleIds}
@@ -47,8 +47,8 @@ export default function ManualBuildSection({
                 />
             </div>
 
-            {/* rest */}
-            <div style={{ flex: "1 1 auto", minWidth: 360 }}>
+            {/* r§t */}
+            <div style={{ flex: "1 1 auto", minWidth: 340 }}>
                 <BuiltTasksPreview
                     selectedRuleIds={selectedRuleIds}
                     manualBuild={manualBuild}

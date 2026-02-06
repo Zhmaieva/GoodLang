@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 
-export default function TaskNumberSelector({ min = 1, max = 50 }) {
+export default function TaskNumberSelector({ min = 1, max = 50, onChange }) {
     const { numberOfTasksPerStudent, setNumberOfTasksPerStudent, restartRecommendedPreview } =
         useTeacherDashboard();
 
@@ -19,7 +19,7 @@ export default function TaskNumberSelector({ min = 1, max = 50 }) {
 
         lastCommittedRef.current = next;
         setNumberOfTasksPerStudent(next);
-        restartRecommendedPreview();
+        onChange(next);
     };
 
     return (

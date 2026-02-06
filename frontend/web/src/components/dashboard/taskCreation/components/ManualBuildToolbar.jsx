@@ -1,147 +1,95 @@
 // ManualBuildToolbar.jsx
-import React from "react";
+import React, { useMemo } from "react";
+import AwesomeButton from "../../AwesomeButton.jsx";
+import TaskModeSelector from "../TaskModeSelector.jsx";
+import TaskNumberSelector from "../TaskNumberSelector.jsx";
+
+function makeRandomSeed() {
+    return Math.floor(Math.random() * 1_000_000_000);
+}
 
 export default function ManualBuildToolbar({
                                                manualBuild,
                                                setManualBuild,
-                                               selectedRuleIdsCount = 0,
+                                               disabled = false,
+                                               style,
                                            }) {
-    const TOKENS = {
-        card: "rgba(255,255,255,0.72)",
-        text: "#3a2a1d",
-        muted: "#a47856",
-        border: "rgba(58,42,29,0.18)",
-        accent: "#ff6138",
-        radius: 20,
-        shadow: "0 14px 40px rgba(58,42,29,0.12)",
-        mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-    };
+    const seed = useMemo(() => {
+        const n = Number(manualBuild?.seed);
+        return Number.isFinite(n) ? n : makeRandomSeed();
+    }, [manualBuild?.seed]);
 
-    function patch(next) {
-        setManualBuild((prev) => ({ ...(prev || {}), ...(next || {}) }));
-    }
+    // ensure seed exists but never display it
+    React.useEffect(() => {
+        const n = Number(manualBuild?.seed);
+        if (!Number.isFinite(n)) {
+            setManualBuild?.((prev) => ({ ...(prev || {}), seed }));
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    const taskMode = manualBuild?.taskMode || "translations";
-    const numberOfTasks = Number.isFinite(Number(manualBuild?.numberOfTasks)) ? Number(manualBuild.numberOfTasks) : 10;
-    const seed = Number.isFinite(Number(manualBuild?.seed)) ? Number(manualBuild.seed) : 1;
-
-    const Field = ({ label, children, hint }) => (
-        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <div style={{ fontFamily: TOKENS.mono, fontSize: 12, fontWeight: 900, color: TOKENS.muted }}>
-                {label}
-            </div>
-            {children}
-            {hint ? (
-                <div style={{ fontFamily: TOKENS.mono, fontSize: 12, color: TOKENS.muted, opacity: 0.9 }}>
-                    {hint}
-                </div>
-            ) : null}
-        </div>
-    );
-
-    const inputStyle = {
-        fontFamily: TOKENS.mono,
-        fontWeight: 900,
-        borderRadius: 14,
-        padding: "10px 10px",
-        border: `1px solid ${TOKENS.border}`,
-        outline: "none",
-        background: "#fff",
-        color: TOKENS.text,
-    };
-
-    const btnStyle = {
-        fontFamily: TOKENS.mono,
-        fontWeight: 900,
-        borderRadius: 14,
-        padding: "10px 10px",
-        border: `1px solid ${TOKENS.border}`,
-        background: "#fff",
-        cursor: "pointer",
+    const onRegenerate = () => {
+        const nextSeed = makeRandomSeed();
+        setManualBuild?.((prev) => ({ ...(prev || {}), seed: nextSeed }));
     };
 
     return (
-        <div
-            style={{
-                borderRadius: TOKENS.radius,
-                border: `1px solid ${TOKENS.border}`,
-                background: TOKENS.card,
-                boxShadow: TOKENS.shadow,
-                padding: 12,
-                display: "flex",
-                flexDirection: "column",
-                gap: 12,
-            }}
-        >
-            <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                <div style={{ fontFamily: TOKENS.mono, fontWeight: 1000, color: TOKENS.text, fontSize: 14 }}>
-                    Налаштування
-                </div>
-                <div style={{ fontFamily: TOKENS.mono, color: TOKENS.muted, fontSize: 12 }}>
-                    Обрано правил: <b>{selectedRuleIdsCount}</b>
-                </div>
-            </div>
-
-            <Field label="Режим завдань">
-                <select
-                    value={taskMode}
-                    onChange={(e) => patch({ taskMode: e.target.value })}
-                    style={inputStyle}
-                >
-                    <option value="translations">Переклад</option>
-                    <option value="gaps">Пропуски</option>
-                    <option value="mixed">Змішаний</option>
-                </select>
-            </Field>
-
-            <Field label="Кількість завдань" hint="1–50">
-                <input
-                    type="number"
-                    min={1}
-                    max={50}
-                    value={numberOfTasks}
-                    onChange={(e) => patch({ numberOfTasks: Number(e.target.value) })}
-                    style={inputStyle}
+        <div style={{ ...styles.wrap, ...style }}>
+            {/* TOP: controls */}
+            <div style={styles.top}>
+                <TaskModeSelector
+                    value={manualBuild?.taskMode || "translations"}
+                    onChange={(taskMode) =>
+                        setManualBuild?.((prev) => ({ ...(prev || {}), taskMode }))
+                    }
+                    disabled={disabled}
                 />
-            </Field>
 
-            <Field label="Seed" hint="Однаковий seed → однакові завдання">
-                <div style={{ display: "flex", gap: 8 }}>
-                    <input
-                        type="number"
-                        value={seed}
-                        onChange={(e) => patch({ seed: Number(e.target.value) })}
-                        style={{ ...inputStyle, flex: 1 }}
-                    />
-                    <button
-                        type="button"
-                        onClick={() => patch({ seed: Math.floor(Math.random() * 1e9) })}
-                        style={btnStyle}
-                        title="Згенерувати новий seed"
-                    >
-                        🎲
-                    </button>
-                </div>
-            </Field>
-
-            <div style={{ height: 1, background: TOKENS.border, opacity: 0.7 }} />
-
-            <div style={{ fontFamily: TOKENS.mono, fontSize: 12, color: TOKENS.muted }}>
-                Прев’ю праворуч оновлюється автоматично при зміні правил або налаштувань.
+                <TaskNumberSelector
+                    value={manualBuild?.numberOfTasks ?? 10}
+                    onChange={(numberOfTasks) =>
+                        setManualBuild?.((prev) => ({ ...(prev || {}), numberOfTasks }))
+                    }
+                    disabled={disabled}
+                />
             </div>
 
-            <button
-                type="button"
-                onClick={() => patch({ _bump: Date.now() })} // optional “rebuild now” signal
-                style={{
-                    ...btnStyle,
-                    background: TOKENS.accent,
-                    borderColor: "rgba(0,0,0,0.45)",
-                    color: "#fff",
-                }}
-            >
-                Оновити прев’ю
-            </button>
+            {/* BOTTOM: button */}
+            <div style={styles.bottom}>
+                <AwesomeButton
+                    variant="accent"
+                    onClick={onRegenerate}
+                    disabled={disabled}
+                    title="Перегенерувати"
+                >
+                    Перегенерувати
+                </AwesomeButton>
+            </div>
         </div>
     );
 }
+
+const styles = {
+    wrap: {
+        height: "100%",
+        minHeight: 0,
+        minWidth: 0,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        gap: 12,
+        fontFamily: "Nunito, ui-sans-serif, system-ui",
+    },
+    top: {
+        display: "flex",
+        flexDirection: "column",
+        gap: 14,
+        alignItems: "flex-start",
+        height: "0px",
+    },
+    bottom: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+    },
+};

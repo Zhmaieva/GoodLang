@@ -230,6 +230,7 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                                         setManualBuild={ctx.setManualBuild}
                                         // 🔁 this should be what the section calls after build endpoint returns
                                         setBuiltTasksPreview={ctx.setBuiltTasksPreview}
+                                        setStep2Ready={setStep2Ready}
                                     />
                                 </div>
                             );
