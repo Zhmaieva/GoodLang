@@ -203,7 +203,7 @@ export default function App() {
                     <Route path="profile" element={<TeacherMyProfilePage />} />
                     <Route path="students" element={<TeacherMyStudentsPage />} />
                     <Route path="classes" element={<TeacherMyClassesPage />} />
-                    <Route path="homework" element={<TeacherHomeworkPage />} />
+                    <Route path="assignments" element={<TeacherHomeworkPage />} />
                 </Route>
 
                 {/* A1 RULES */}

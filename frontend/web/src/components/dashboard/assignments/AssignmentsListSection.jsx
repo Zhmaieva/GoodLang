@@ -47,7 +47,7 @@ export default function AssignmentsListSection({
     return (
         <AwesomeCard
             title="Assignments"
-            right={<AwesomeButton onClick={onAdd}>Add homework</AwesomeButton>}
+            right={<AwesomeButton onClick={onAdd}>Create an assignment</AwesomeButton>}
             style={{ flex: 1, position: "relative" }}
         >
             <div
