@@ -1,11 +1,11 @@
 // taskCreation/AssignmentSummarySection.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import Loader from "../Loader.jsx"; // ✅ adjust if your Loader path differs
+import Loader from "../../Loader.jsx"; // ✅ adjust if your Loader path differs
 
-import AssignmentNameInput from "./components/AssignmentNameInput.jsx";
-import StudentsSummaryTable from "./components/StudentsSummaryTable.jsx";
-import {apiAssignBuiltTaskSet} from "../../../services/api.js";
-import {logError} from "../../../services/logger.js";
+import AssignmentNameInput from "./AssignmentNameInput.jsx";
+import StudentsSummaryTable from "./StudentsSummaryTable.jsx";
+import {apiAssignBuiltTaskSet} from "../../../../services/api.js";
+import {logError} from "../../../../services/logger.js";
 
 // ✅ use your preview *style* without rebuilding via API
 // (we render from builtTasksPreview.tasks that you already generated in Step 1)

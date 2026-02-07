@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
+import { useTeacherDashboard } from "../../TeacherDashboardContext.jsx";
 
 export default function TaskNumberSelector({ min = 1, max = 50, onChange }) {
     const { numberOfTasksPerStudent, setNumberOfTasksPerStudent, restartRecommendedPreview } =

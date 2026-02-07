@@ -1,18 +1,16 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import AwesomeModal from "../AwesomeModal.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
-import StudentsSelectorSection from "../sections/StudentsSelectorSection.jsx";
+import StudentsSelectorSection from "../assignments/studentSelection/StudentsSelectorSection.jsx";
 import StepScreens from "../StepScreens.jsx";
 import Tooltip from "../Tooltip.jsx";
 
-import ManualBuildSection from "../taskCreation/ManualBuildSection.jsx";
+import ManualBuildSection from "../assignments/taskCreation/ManualBuildSection.jsx";
+import AssignmentSummarySection from "../assignments/taskCreation/AssignmentSummarySection.jsx";
 
-// ✅ add these
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import { RULE_LABELS, LEVEL_RULES } from "../../../utils/rules.js";
 
-// ✅ new step-2 summary section
-import AssignmentSummarySection from "../taskCreation/AssignmentSummarySection.jsx";
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));

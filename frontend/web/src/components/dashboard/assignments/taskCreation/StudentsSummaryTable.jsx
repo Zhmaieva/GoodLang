@@ -6,28 +6,16 @@ function safeId(x) {
 }
 
 function pickStudentName(s) {
-    const first =
-        s?.first_name ?? s?.firstName ?? s?.given_name ?? s?.givenName ?? "";
-    const last =
-        s?.last_name ?? s?.lastName ?? s?.family_name ?? s?.familyName ?? "";
+    const first = s?.first_name ?? s?.firstName ?? s?.given_name ?? s?.givenName ?? "";
+    const last = s?.last_name ?? s?.lastName ?? s?.family_name ?? s?.familyName ?? "";
     return { first: String(first || "").trim(), last: String(last || "").trim() };
-}
-
-function pickClassName(s) {
-    return String(
-        s?.class_name ??
-        s?.className ??
-        s?.group_name ??
-        s?.groupName ??
-        s?.classTitle ??
-        s?.class_title ??
-        ""
-    ).trim();
 }
 
 export default function StudentsSummaryTable({
                                                  students = [],
-                                                 selectedStudentIds = [],
+                                                 selectedStudentId = null,
+                                                 onSelectStudent,
+                                                 showScore = false,
                                                  height = "100%",
                                              }) {
     const TOKENS = {
@@ -35,21 +23,26 @@ export default function StudentsSummaryTable({
         text: "#3a2a1d",
         muted: "#a47856",
         border: "rgba(58,42,29,0.18)",
+        accent: "#ff6138",
         radius: 20,
     };
 
     const [q, setQ] = useState("");
 
-    const selectedSet = useMemo(() => new Set((selectedStudentIds || []).map(safeId)), [selectedStudentIds]);
-
     const rows = useMemo(() => {
         const list = (students || [])
             .map((s) => {
                 const id = safeId(s?.student_account_id ?? s?.studentId ?? s?.id);
-                if (!id || !selectedSet.has(id)) return null;
+                if (!id) return null;
+
                 const { first, last } = pickStudentName(s);
-                const className = pickClassName(s);
-                return { id, first, last, className };
+                const className = String(s?.className ?? s?.class_name ?? s?.classTitle ?? "").trim() || "—";
+
+                const scoreVal = s?.score;
+                const score =
+                    scoreVal == null || scoreVal === "" ? null : Number.isFinite(Number(scoreVal)) ? Number(scoreVal) : null;
+
+                return { id, first, last, className, score };
             })
             .filter(Boolean);
 
@@ -63,8 +56,10 @@ export default function StudentsSummaryTable({
         const query = String(q || "").trim().toLowerCase();
         if (!query) return list;
 
-        return list.filter((x) => (`${x.first} ${x.last} ${x.className}`.toLowerCase()).includes(query));
-    }, [students, selectedSet, q]);
+        return list.filter((x) =>
+            (`${x.first} ${x.last} ${x.className}`.toLowerCase()).includes(query)
+        );
+    }, [students, q]);
 
     const TH = (txt, align) => (
         <div
@@ -84,13 +79,13 @@ export default function StudentsSummaryTable({
         </div>
     );
 
-    const TD = (txt, align) => (
+    const TD = (txt, align, color) => (
         <div
             style={{
                 padding: "10px 10px",
                 fontSize: 13,
                 fontWeight: 900,
-                color: TOKENS.text,
+                color: color || TOKENS.text,
                 textAlign: align || "left",
                 whiteSpace: "nowrap",
                 overflow: "hidden",
@@ -102,6 +97,10 @@ export default function StudentsSummaryTable({
             {txt || "—"}
         </div>
     );
+
+    const gridCols = showScore
+        ? "minmax(0,1fr) minmax(0,1fr) 120px 90px"
+        : "minmax(0,1fr) minmax(0,1fr) 140px";
 
     return (
         <div
@@ -118,7 +117,16 @@ export default function StudentsSummaryTable({
                 fontFamily: "Nunito, ui-sans-serif, system-ui",
             }}
         >
-            <div style={{ padding: 12, borderBottom: `1px solid ${TOKENS.border}`, display: "flex", alignItems: "center", gap: 10 }}>
+            <div
+                style={{
+                    padding: 12,
+                    borderBottom: `1px solid ${TOKENS.border}`,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    minWidth: 0,
+                }}
+            >
                 <div style={{ fontWeight: 1000, color: TOKENS.text }}>Students</div>
                 <div style={{ marginLeft: "auto", fontSize: 12, fontWeight: 900, color: TOKENS.muted }}>
                     {rows.length}
@@ -148,7 +156,7 @@ export default function StudentsSummaryTable({
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr) 110px",
+                        gridTemplateColumns: gridCols,
                         borderBottom: `1px solid ${TOKENS.border}`,
                         background: "rgba(255,255,255,1)",
                         position: "sticky",
@@ -160,24 +168,36 @@ export default function StudentsSummaryTable({
                     {TH("First name")}
                     {TH("Last name")}
                     {TH("Class", "right")}
+                    {showScore ? TH("Score", "right") : null}
                 </div>
 
-                {rows.map((r) => (
-                    <div
-                        key={r.id}
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr) 110px",
-                            borderBottom: `1px solid ${TOKENS.border}`,
-                            alignItems: "center",
-                            minWidth: 0,
-                        }}
-                    >
-                        {TD(r.first)}
-                        {TD(r.last)}
-                        {TD(r.className, "right")}
-                    </div>
-                ))}
+                {rows.map((r) => {
+                    const active = String(selectedStudentId || "") === String(r.id);
+                    const scoreText = r.score == null ? "N/A" : `${Math.round(r.score)}%`;
+
+                    return (
+                        <div
+                            key={r.id}
+                            role="button"
+                            tabIndex={0}
+                            onClick={() => onSelectStudent?.(r.id)}
+                            style={{
+                                display: "grid",
+                                gridTemplateColumns: gridCols,
+                                borderBottom: `1px solid ${TOKENS.border}`,
+                                alignItems: "center",
+                                minWidth: 0,
+                                cursor: "pointer",
+                                background: active ? "rgba(255,97,56,0.10)" : "transparent",
+                            }}
+                        >
+                            {TD(r.first)}
+                            {TD(r.last)}
+                            {TD(r.className, "right")}
+                            {showScore ? TD(scoreText, "right", r.score == null ? TOKENS.muted : TOKENS.text) : null}
+                        </div>
+                    );
+                })}
 
                 {!rows.length ? (
                     <div style={{ padding: 12, color: TOKENS.muted, fontWeight: 900 }}>

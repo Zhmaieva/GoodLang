@@ -1,8 +1,8 @@
 // ManualBuildToolbar.jsx
 import React, { useMemo } from "react";
 import AwesomeButton from "../../AwesomeButton.jsx";
-import TaskModeSelector from "../TaskModeSelector.jsx";
-import TaskNumberSelector from "../TaskNumberSelector.jsx";
+import TaskModeSelector from "./TaskModeSelector.jsx";
+import TaskNumberSelector from "./TaskNumberSelector.jsx";
 
 function makeRandomSeed() {
     return Math.floor(Math.random() * 1_000_000_000);

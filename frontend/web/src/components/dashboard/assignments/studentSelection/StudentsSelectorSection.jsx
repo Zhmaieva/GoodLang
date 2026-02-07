@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
-import SelectableTableSection from "../SelectableTableSection.jsx";
-import CombinedTables from "../CombinedTables.jsx";
+import { useTeacherDashboard } from "../../TeacherDashboardContext.jsx";
+import SelectableTableSection from "../../SelectableTableSection.jsx";
+import CombinedTables from "../../CombinedTables.jsx";
 
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));

@@ -171,7 +171,7 @@ export async function updateTaskSetTitleById({ teacherId, taskSetId, title }) {
     const db = await connectDB();
 
     const teacherKey = safeId(teacherId);
-    const setId = safeId(taskSetId);
+    const setId = toObjectIdStrict(taskSetId, "taskSetId");
     const t = String(title ?? "").trim();
 
     if (!teacherKey) throw new Error("teacherId required");
@@ -253,7 +253,10 @@ export async function getTaskSetsListTeacherPaged({ teacherId, limit = 10, curso
     if (!teacherKey) throw new Error("teacherId required");
 
     const lim = clampInt(limit, 1, 50, 10);
-    const base = { teacherId: teacherKey };
+    const base = {
+        teacherId: teacherKey,
+        title: { $exists: true, $type: "string", $nin: ["", null] },
+    };
     const cur = teacherCursorFilter(cursor);
     const query = cur ? { ...base, ...cur } : base;
 

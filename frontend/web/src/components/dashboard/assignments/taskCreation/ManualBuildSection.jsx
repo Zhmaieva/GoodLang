@@ -1,8 +1,8 @@
 // ManualBuildSection.jsx
 import React, { useMemo } from "react";
-import ManualBuildToolbar from "./components/ManualBuildToolbar.jsx";
-import RulesSelectorTable from "./components/RulesSelectorTable.jsx";
-import BuiltTasksPreview from "./components/BuiltTasksPreview.jsx";
+import ManualBuildToolbar from "./ManualBuildToolbar.jsx";
+import RulesSelectorTable from "./RulesSelectorTable.jsx";
+import BuiltTasksPreview from "./BuiltTasksPreview.jsx";
 
 /**
  * EXPECTS from context props:
