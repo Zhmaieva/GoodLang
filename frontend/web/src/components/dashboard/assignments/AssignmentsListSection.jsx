@@ -4,7 +4,7 @@ import AwesomeCard from "../AwesomeCard.jsx";
 import AwesomeButton from "../AwesomeButton.jsx";
 
 export default function AssignmentsListSection({
-                                                   assignments,
+                                                   assignments = [],
                                                    loading,
                                                    selectedId,
                                                    onSelect,
@@ -18,46 +18,168 @@ export default function AssignmentsListSection({
         const el = scrollRef.current;
         if (!el) return;
 
+        let ticking = false;
+
         const onScroll = () => {
-            if (el.scrollTop + el.clientHeight >= el.scrollHeight - 120) {
-                onLoadMore();
-            }
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                ticking = false;
+                if (el.scrollTop + el.clientHeight >= el.scrollHeight - 140) onLoadMore();
+            });
         };
 
-        el.addEventListener("scroll", onScroll);
+        el.addEventListener("scroll", onScroll, { passive: true });
         return () => el.removeEventListener("scroll", onScroll);
     }, [onLoadMore]);
+
+    const TOKENS = {
+        bg: "rgba(255,255,255,0.10)",        // like other sections
+        rowBg: "rgba(255,255,255,0.65)",
+        rowBgActive: "rgba(255,255,255,0.82)",
+        text: "#3a2a1d",
+        muted: "#a47856",
+        border: "rgba(58,42,29,0.18)",
+        accent: "#ff6138",
+        radius: 18,
+    };
 
     return (
         <AwesomeCard
             title="Assignments"
             right={<AwesomeButton onClick={onAdd}>Add homework</AwesomeButton>}
-            style={{ flex: 1 }}
+            style={{ flex: 1, position: "relative" }}
         >
-            <div ref={scrollRef} style={{ overflowY: "auto", height: "100%" }}>
+            <div
+                ref={scrollRef}
+                style={{
+                    height: "100%",
+                    minHeight: 0,
+                    overflowY: "auto",
+                    paddingRight: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 10,
+                    fontFamily: "Nunito, ui-sans-serif, system-ui",
+                }}
+            >
+                {!assignments?.length && !loading ? (
+                    <div
+                        style={{
+                            border: `1px solid ${TOKENS.border}`,
+                            background: TOKENS.bg,
+                            borderRadius: TOKENS.radius,
+                            padding: 12,
+                            fontWeight: 900,
+                            color: TOKENS.muted,
+                            textAlign: "center",
+                        }}
+                    >
+                        No assignments yet.
+                    </div>
+                ) : null}
+
                 {assignments.map((a) => {
-                    const active = a.id === selectedId;
+                    const id = String(a?.id ?? "");
+                    const active = id && String(selectedId) === id;
+
                     return (
-                        <div
-                            key={a.id}
-                            onClick={() => onSelect(a)}
+                        <button
+                            key={id || a.title}
+                            type="button"
+                            onClick={() => onSelect?.(a)}
                             style={{
-                                padding: 12,
-                                border: active ? "2px solid #ff6138" : "1px solid rgba(0,0,0,0.15)",
-                                marginBottom: 8,
+                                all: "unset",
                                 cursor: "pointer",
-                                background: "rgba(255,255,255,0.65)",
+                                display: "block",
+                                borderRadius: TOKENS.radius,
+                                border: active ? `2px solid ${TOKENS.accent}` : `1px solid ${TOKENS.border}`,
+                                background: active ? TOKENS.rowBgActive : TOKENS.rowBg,
+                                padding: 12,
+                                boxShadow: "none",
                             }}
                         >
-                            <div style={{ fontWeight: 900 }}>{a.title}</div>
-                            <div style={{ fontSize: 12, opacity: 0.7 }}>
-                                Tasks: {a.tasksCount} · Assigned: {a.assigned}
+                            <div
+                                style={{
+                                    fontWeight: 1000,
+                                    color: TOKENS.text,
+                                    lineHeight: 1.15,
+                                    whiteSpace: "nowrap",
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                }}
+                                title={a?.title || ""}
+                            >
+                                {a?.title || "Untitled assignment"}
                             </div>
-                        </div>
+
+                            <div style={{ marginTop: 8, display: "flex", gap: 8, flexWrap: "wrap" }}>
+                                <Pill>
+                                    Tasks: <b>{Number(a?.tasksCount ?? 0)}</b>
+                                </Pill>
+                                <Pill>
+                                    Assigned: <b>{Number(a?.assigned ?? 0)}</b>
+                                </Pill>
+                            </div>
+
+                            {/* small meta (optional) */}
+                            {a?.createdAt ? (
+                                <div
+                                    style={{
+                                        marginTop: 8,
+                                        fontSize: 12,
+                                        fontWeight: 900,
+                                        color: TOKENS.muted,
+                                        opacity: 1,
+                                        whiteSpace: "nowrap",
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis",
+                                    }}
+                                    title={String(a.createdAt)}
+                                >
+                                    Created: {new Date(a.createdAt).toLocaleString()}
+                                </div>
+                            ) : null}
+                        </button>
                     );
+
+                    function Pill({ children }) {
+                        return (
+                            <span
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "baseline",
+                                    gap: 6,
+                                    padding: "4px 8px",
+                                    borderRadius: 999,
+                                    border: `1px solid ${TOKENS.border}`,
+                                    background: active ? "rgba(255,97,56,0.10)" : "rgba(0,0,0,0.03)",
+                                    fontSize: 12,
+                                    fontWeight: 900,
+                                    color: TOKENS.text,
+                                }}
+                            >
+                {children}
+              </span>
+                        );
+                    }
                 })}
 
-                {loading && <div style={{ padding: 12 }}>Loading…</div>}
+                {loading ? (
+                    <div
+                        style={{
+                            border: `1px dashed ${TOKENS.border}`,
+                            background: "rgba(255,255,255,0.35)",
+                            borderRadius: TOKENS.radius,
+                            padding: 12,
+                            fontWeight: 900,
+                            color: TOKENS.muted,
+                            textAlign: "center",
+                        }}
+                    >
+                        Loading…
+                    </div>
+                ) : null}
             </div>
         </AwesomeCard>
     );

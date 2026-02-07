@@ -86,7 +86,7 @@ export default function TeacherHomeworkPage() {
 
     return (
         <>
-            <div style={{ display: "flex", gap: 16, height: "50vh", minHeight: 0 }}>
+            <div style={{ display: "flex", gap: 16, height: "45vh", minHeight: 0 }}>
                 {/* LEFT 50% */}
                 <AssignmentsListSection
                     assignments={assignments}
@@ -102,7 +102,7 @@ export default function TeacherHomeworkPage() {
             </div>
 
             {/* BOTTOM 50% */}
-            <div style={{ display: "flex", gap: 16, marginTop: 16, height: "50vh", minHeight: 0 }}>
+            <div style={{ display: "flex", gap: 16, marginTop: 16, height: "48vh", minHeight: 0 }}>
                 <StudentsSection
                     assignment={selectedAssignment}
                     students={ctx.students}
