@@ -166,8 +166,7 @@ export default function GoodLangSchoolsLanding2() {
                 id="top"
                 bg={bgByIndex(0)}
                 nextBg={bgByIndex(1)}
-                title="ESL teaching at scale, transparent and frugal"
-                kicker="Scale • Save • Retain"
+                title="Tools that help ESL schools scale"
                 align="center"
                 sectionStyle={{
                     minHeight: "60vh",
