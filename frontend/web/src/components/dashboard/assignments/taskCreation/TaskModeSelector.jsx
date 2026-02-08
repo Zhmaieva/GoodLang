@@ -28,7 +28,7 @@ export default function TaskModeSelector({
 
     return (
         <div style={{ ...styles.wrap, ...style }}>
-            <div style={styles.label}>Тип завдань</div>
+            <div style={styles.label}>Task type</div>
 
             <label style={styles.row}>
                 <input
@@ -38,7 +38,7 @@ export default function TaskModeSelector({
                     onChange={(e) => setFromChecks(e.target.checked, state.gaps)}
                     style={styles.checkbox}
                 />
-                <span style={styles.text}>Переклади</span>
+                <span style={styles.text}>Translations</span>
             </label>
 
             <label style={styles.row}>
@@ -49,7 +49,7 @@ export default function TaskModeSelector({
                     onChange={(e) => setFromChecks(state.translations, e.target.checked)}
                     style={styles.checkbox}
                 />
-                <span style={styles.text}>Пропуски</span>
+                <span style={styles.text}>Gaps</span>
             </label>
         </div>
     );

@@ -87,7 +87,7 @@ export default function RulesSelectorTable({
     }
 
     function fmt(d) {
-        if (!d) return "ніколи";
+        if (!d) return "never";
         const dd = String(d.getDate()).padStart(2, "0");
         const mm = String(d.getMonth() + 1).padStart(2, "0");
         const yy = d.getFullYear();
@@ -119,7 +119,7 @@ export default function RulesSelectorTable({
                 textOverflow: "ellipsis",
                 minWidth: 0,
             }}
-            title="Натисніть, щоб відсортувати"
+            title="Click to sort"
         >
             {children}
             <span style={{ marginLeft: 6, opacity: sort.key === k ? 1 : 0.35 }}>
@@ -136,11 +136,10 @@ export default function RulesSelectorTable({
                 borderRadius: TOKENS.radius,
                 border: `1px solid ${TOKENS.border}`,
                 background: TOKENS.card,
-                // ✅ no shadow
                 boxShadow: "none",
                 display: "flex",
                 flexDirection: "column",
-                minWidth: 0, // ✅ critical for no horizontal scroll in flex layouts
+                minWidth: 0,
             }}
         >
             {/* header */}
@@ -161,10 +160,9 @@ export default function RulesSelectorTable({
                         color: TOKENS.text,
                     }}
                 >
-                    Правила
+                    Rules
                 </div>
 
-                {/* ✅ subheader opacity = 1 */}
                 <div
                     style={{
                         fontFamily: "Nunito, ui-sans-serif, system-ui",
@@ -175,7 +173,7 @@ export default function RulesSelectorTable({
                         whiteSpace: "nowrap",
                     }}
                 >
-                    Обрано: {selectedSet.size}
+                    Selected: {selectedSet.size}
                 </div>
 
                 <div style={{ marginLeft: "auto" }}>
@@ -193,7 +191,9 @@ export default function RulesSelectorTable({
                             cursor: "pointer",
                         }}
                     >
-                        {rows.length && rows.every((r) => selectedSet.has(r.id)) ? "Зняти все" : "Обрати все"}
+                        {rows.length && rows.every((r) => selectedSet.has(r.id))
+                            ? "Deselect all"
+                            : "Select all"}
                     </button>
                 </div>
             </div>
@@ -203,7 +203,7 @@ export default function RulesSelectorTable({
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "40px minmax(0, 1fr) 84px 110px", // ✅ no overflow, label can shrink
+                        gridTemplateColumns: "40px minmax(0, 1fr) 84px 110px",
                         alignItems: "center",
                         borderBottom: `1px solid ${TOKENS.border}`,
                         background: "rgba(255,255,255,1)",
@@ -214,12 +214,12 @@ export default function RulesSelectorTable({
                     }}
                 >
                     <div style={{ padding: "10px 10px" }} />
-                    <TH k="label">Правило</TH>
+                    <TH k="label">Rule</TH>
                     <TH k="level" align="right">
-                        Рівень
+                        Level
                     </TH>
                     <TH k="last" align="right">
-                        Остання практика
+                        Last practice
                     </TH>
                 </div>
 
@@ -243,11 +243,15 @@ export default function RulesSelectorTable({
                                     type="checkbox"
                                     checked={isOn}
                                     onChange={() => toggle(r.id)}
-                                    style={{ width: 16, height: 16, cursor: "pointer", accentColor: TOKENS.accent }}
+                                    style={{
+                                        width: 16,
+                                        height: 16,
+                                        cursor: "pointer",
+                                        accentColor: TOKENS.accent,
+                                    }}
                                 />
                             </div>
 
-                            {/* ✅ label cell with ellipsis */}
                             <button
                                 type="button"
                                 onClick={() => toggle(r.id)}
@@ -300,8 +304,15 @@ export default function RulesSelectorTable({
                 })}
 
                 {!rows.length && (
-                    <div style={{ padding: 14, fontFamily: "Nunito, ui-sans-serif, system-ui", color: TOKENS.muted, fontWeight: 900 }}>
-                        Немає правил для відображення.
+                    <div
+                        style={{
+                            padding: 14,
+                            fontFamily: "Nunito, ui-sans-serif, system-ui",
+                            color: TOKENS.muted,
+                            fontWeight: 900,
+                        }}
+                    >
+                        No rules to display.
                     </div>
                 )}
             </div>

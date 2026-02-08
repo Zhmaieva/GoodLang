@@ -50,22 +50,24 @@ const CombinedTables = forwardRef(function CombinedTables(
             if (!x || typeof x !== "object") return String(x || "");
             // best effort: join primitive fields
             return Object.values(x)
-                .map((v) => (v == null ? "" : typeof v === "string" || typeof v === "number" ? String(v) : ""))
+                .map((v) =>
+                    v == null ? "" : typeof v === "string" || typeof v === "number" ? String(v) : ""
+                )
                 .join(" ");
         },
 
         // tables
         columns, // same columns passed to AwesomeTable for both sides
-        availableTitle = "Доступні",
-        selectedTitle = "Вибрані",
+        availableTitle = "Available",
+        selectedTitle = "Selected",
 
         // storage keys (keep sorting separate)
         storageKeyAvailable = "combined_table_available_sort_v1",
         storageKeySelected = "combined_table_selected_sort_v1",
 
         // optional meta
-        emptyTextAvailable = "Немає доступних",
-        emptyTextSelected = "Обери зліва",
+        emptyTextAvailable = "No available items",
+        emptyTextSelected = "Select from the left",
 
         // container styles
         style,
@@ -189,8 +191,8 @@ const CombinedTables = forwardRef(function CombinedTables(
                     height: "100%",
                 }}
                 colStyle={{
-                    height: '100%',
-                    minHeight: 0
+                    height: "100%",
+                    minHeight: 0,
                 }}
                 left={
                     <TablePanel
@@ -255,7 +257,7 @@ function TablePanel({
     // that spans the cell content, so clicking any cell moves the row.
     const clickableColumns = useMemo(() => {
         const cols = Array.isArray(columns) ? columns : [];
-        return cols.map((c, idx) => {
+        return cols.map((c) => {
             const userRender = c.render;
 
             return {
@@ -287,9 +289,7 @@ function TablePanel({
             title={title}
             right={
                 <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-          <span style={panelStyles.count}>
-            {Array.isArray(rows) ? rows.length : 0}
-          </span>
+                    <span style={panelStyles.count}>{Array.isArray(rows) ? rows.length : 0}</span>
                 </div>
             }
             style={panelStyles.cardFill}
@@ -299,11 +299,11 @@ function TablePanel({
                     <input
                         value={query}
                         onChange={(e) => onQueryChange?.(e.target.value)}
-                        placeholder="Пошук…"
+                        placeholder="Search…"
                         style={panelStyles.searchInput}
                     />
                     {query ? (
-                        <AwesomeButton variant="ghost" onClick={onClear} title="Очистити">
+                        <AwesomeButton variant="ghost" onClick={onClear} title="Clear">
                             ✕
                         </AwesomeButton>
                     ) : null}

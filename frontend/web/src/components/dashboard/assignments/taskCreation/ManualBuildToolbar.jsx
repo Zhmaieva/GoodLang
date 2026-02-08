@@ -60,9 +60,9 @@ export default function ManualBuildToolbar({
                     variant="accent"
                     onClick={onRegenerate}
                     disabled={disabled}
-                    title="Перегенерувати"
+                    title="Regenerate"
                 >
-                    Перегенерувати
+                    Regenerate
                 </AwesomeButton>
             </div>
         </div>

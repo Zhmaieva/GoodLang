@@ -30,9 +30,9 @@ export default function StudentsSelectorSection({
 
                                                     onChangeSelectedStudentIds,
 
-                                                    titleClasses = "Класи",
-                                                    titleAvailable = "Доступні учні",
-                                                    titleSelected = "Вибрані учні",
+                                                    titleClasses = "Classes",
+                                                    titleAvailable = "Available students",
+                                                    titleSelected = "Selected students",
 
                                                     // breakpoint for "narrow" behavior (container width)
                                                     narrowBreakpoint = 980,
@@ -144,7 +144,7 @@ export default function StudentsSelectorSection({
         () => [
             {
                 key: "__className",
-                title: "Клас",
+                title: "Class",
                 size: 2,
                 sortable: true,
                 sortType: "string",
@@ -156,7 +156,7 @@ export default function StudentsSelectorSection({
             },
             {
                 key: "__studentsCount",
-                title: "Учнів",
+                title: "Students",
                 size: 1,
                 sortable: true,
                 sortType: "number",
@@ -170,7 +170,7 @@ export default function StudentsSelectorSection({
         () => [
             {
                 key: "__name",
-                title: "Учень",
+                title: "Student",
                 size: 2,
                 sortable: true,
                 sortType: "string",
@@ -183,7 +183,7 @@ export default function StudentsSelectorSection({
             },
             {
                 key: "class_name",
-                title: "Клас",
+                title: "Class",
                 size: 1,
                 sortable: true,
                 sortType: "string",
@@ -222,7 +222,7 @@ export default function StudentsSelectorSection({
             }
         }
 
-        // remove students for unselected classes (literal requirement)
+        // remove students for unselected classes
         if (removed.length) {
             const idsToRemove = new Set();
             for (const cid of removed) {
@@ -256,7 +256,7 @@ export default function StudentsSelectorSection({
                 ...style,
             }}
         >
-            {/* ✅ only becomes scrollable in narrow mode */}
+            {/* scrollable only in narrow mode */}
             <div
                 style={{
                     ...styles.scrollWrap,
@@ -266,7 +266,6 @@ export default function StudentsSelectorSection({
                 <div
                     style={{
                         ...styles.row,
-                        // ✅ preserve your existing fixed-height behavior unless narrow
                         height: isNarrow ? "auto" : "100%",
                     }}
                 >
@@ -287,7 +286,7 @@ export default function StudentsSelectorSection({
                             getId={(r) => r?.__classId}
                             getSearchText={classSearchText}
                             storageKey="students_selector_classes_sort_v1"
-                            emptyText="Немає класів"
+                            emptyText="No classes"
                             style={{ height: "100%" }}
                         />
                     </div>
@@ -328,7 +327,6 @@ const styles = {
         flexDirection: "column",
     },
 
-    // this is the outer scroll container, only active in narrow mode
     scrollWrap: {
         flex: "1 1 auto",
         minHeight: 0,
@@ -337,7 +335,6 @@ const styles = {
         paddingRight: 2,
     },
 
-    // wide mode: row fills 100% height; narrow mode: row becomes natural height and wraps
     row: {
         display: "flex",
         gap: 14,

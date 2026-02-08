@@ -38,7 +38,7 @@ export default function SelectableTableSection({
                                                    },
 
                                                    storageKey = "selectable_table_section_sort_v1",
-                                                   emptyText = "Нічого не знайдено",
+                                                   emptyText = "Nothing found",
 
                                                    mode = "multi", // or "single"
                                                    style,
@@ -74,7 +74,7 @@ export default function SelectableTableSection({
         const exists = selectedSet.has(id);
 
         if (mode === "single") {
-            // single selection: clicking selected -> clear; clicking another -> set only it
+            // single selection: click selected -> clear; click another -> set only it
             const next = exists ? [] : [id];
             emit(next, { ...meta, action: exists ? "clear_single" : "set_single", id });
             return;
@@ -101,8 +101,8 @@ export default function SelectableTableSection({
         emit(Array.from(base), { action: "select_all_filtered" });
     };
 
-    // ✅ Row-wrapper: make the whole row clickable by wrapping EVERY cell in a full-height clickable div,
-    // and add a real checkbox column as first column for clear UX.
+    // Row-wrapper: make the whole row clickable by wrapping EVERY cell in a full-height clickable div,
+    // and add a real checkbox column as the first column for clear UX.
     const selectionColumn = useMemo(() => {
         return {
             key: "__selected",
@@ -116,15 +116,15 @@ export default function SelectableTableSection({
 
                 return (
                     <div style={styles.checkboxCell}>
-                        <span
-                            aria-hidden="true"
-                            style={{
-                                ...styles.checkboxBox,
-                                ...(isSelected ? styles.checkboxBoxOn : null),
-                            }}
-                        >
-                            {isSelected ? "✓" : ""}
-                        </span>
+            <span
+                aria-hidden="true"
+                style={{
+                    ...styles.checkboxBox,
+                    ...(isSelected ? styles.checkboxBoxOn : null),
+                }}
+            >
+              {isSelected ? "✓" : ""}
+            </span>
                     </div>
                 );
             },
@@ -143,8 +143,7 @@ export default function SelectableTableSection({
                 render: (r) => {
                     const id = String(getId(r));
                     const isSelected = id && selectedSet.has(id);
-                    const content =
-                        typeof userRender === "function" ? userRender(r) : r?.[c.key];
+                    const content = typeof userRender === "function" ? userRender(r) : r?.[c.key];
 
                     return (
                         <div
@@ -163,7 +162,7 @@ export default function SelectableTableSection({
             };
         });
 
-        // Also wrap the checkbox column so clicking checkbox area toggles too.
+        // Also wrap the checkbox column so clicking the checkbox area toggles too.
         const wrappedSelection = {
             ...selectionColumn,
             render: (r) => {
@@ -183,15 +182,15 @@ export default function SelectableTableSection({
                         }}
                         title={isSelected ? "Click to deselect" : "Click to select"}
                     >
-                        <span
-                            aria-hidden="true"
-                            style={{
-                                ...styles.checkboxBox,
-                                ...(isSelected ? styles.checkboxBoxOn : null),
-                            }}
-                        >
-                            {isSelected ? "✓" : ""}
-                        </span>
+            <span
+                aria-hidden="true"
+                style={{
+                    ...styles.checkboxBox,
+                    ...(isSelected ? styles.checkboxBoxOn : null),
+                }}
+            >
+              {isSelected ? "✓" : ""}
+            </span>
                     </div>
                 );
             },
@@ -206,22 +205,20 @@ export default function SelectableTableSection({
                 title={title}
                 right={
                     <div style={styles.headerRight}>
-                        <span style={styles.count}>
-                            {selectedIds?.length || 0} вибрано
-                        </span>
+                        <span style={styles.count}>{selectedIds?.length || 0} selected</span>
 
                         {mode === "multi" ? (
                             <>
                                 <AwesomeButton variant="ghost" onClick={selectAllFiltered} title="Select all filtered">
-                                    + Все
+                                    Select all
                                 </AwesomeButton>
                                 <AwesomeButton variant="ghost" onClick={clearAll} title="Clear selection">
-                                    Очистити
+                                    Clear
                                 </AwesomeButton>
                             </>
                         ) : (
                             <AwesomeButton variant="ghost" onClick={clearAll} title="Clear selection">
-                                Очистити
+                                Clear
                             </AwesomeButton>
                         )}
                     </div>
@@ -233,11 +230,11 @@ export default function SelectableTableSection({
                         <input
                             value={q}
                             onChange={(e) => setQ(e.target.value)}
-                            placeholder="Пошук…"
+                            placeholder="Search…"
                             style={styles.searchInput}
                         />
                         {q ? (
-                            <AwesomeButton variant="ghost" onClick={() => setQ("")} title="Очистити">
+                            <AwesomeButton variant="ghost" onClick={() => setQ("")} title="Clear">
                                 ✕
                             </AwesomeButton>
                         ) : null}
@@ -334,7 +331,7 @@ const styles = {
     },
 
     clickCellSelected: {
-        //background: "rgba(255,97,56,0.10)",
+        // background: "rgba(255,97,56,0.10)",
     },
 
     checkboxCell: {

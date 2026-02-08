@@ -11,7 +11,6 @@ import AssignmentSummarySection from "../assignments/taskCreation/AssignmentSumm
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import { RULE_LABELS, LEVEL_RULES } from "../../../utils/rules.js";
 
-
 function uniqStrings(arr) {
     const s = new Set((arr || []).map((x) => String(x)).filter(Boolean));
     return Array.from(s);
@@ -37,7 +36,6 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const [selectedStudentIds, setSelectedStudentIds] = useState([]);
     const selectedCount = useMemo(() => selectedStudentIds.length, [selectedStudentIds]);
 
-    // ✅ build RULES list (for your manual build UI)
     const RULES = useMemo(() => {
         const out = Object.entries(RULE_LABELS || {}).map(([id, label]) => ({
             id,
@@ -58,43 +56,34 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
 
     const STEPS = useMemo(
         () => [
-            { label: "Учні", title: "Вибери учнів", subtitle: "Обери класи або окремих учнів" },
-            { label: "Завдання", title: "Налаштуй завдання", subtitle: "Обери тип завдань, кількість і тему" },
-            { label: "Підсумок", title: "Майже готово", subtitle: "Переконайся, що все правильно" },
+            { label: "Students", title: "Select students", subtitle: "Choose classes or individual students" },
+            { label: "Tasks", title: "Configure tasks", subtitle: "Choose task type, amount, and topic" },
+            { label: "Summary", title: "Almost ready", subtitle: "Double-check before sending" },
         ],
         []
     );
 
     const [step, setStep] = useState(0);
-
-    // ✅ Step 1 readiness gate (build must happen)
     const [step2Ready, setStep2Ready] = useState(false);
-
-    // ✅ trigger for sending (Step 2 listens to this)
     const [confirmNonce, setConfirmNonce] = useState(0);
 
     const previewKey = useMemo(() => uniqStrings(selectedStudentIds).sort().join("|"), [selectedStudentIds]);
-
-    // ✅ hidden seed
     const seedRef = useRef(makeRandomSeed());
 
-    // When student selection changes, re-seed and re-lock Step 1
     useEffect(() => {
         seedRef.current = makeRandomSeed();
         setStep2Ready(false);
-        // also clear built preview to avoid stale tasks (optional but sane)
         ctx?.setBuiltTasksPreview?.(null);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [previewKey]);
 
-    // ✅ unlock Step 1 when tasks are built
     useEffect(() => {
         const tasks = ctx?.builtTasksPreview?.tasks || ctx?.builtTasksPreview?.data?.tasks || [];
         setStep2Ready(Array.isArray(tasks) && tasks.length > 0);
     }, [ctx?.builtTasksPreview]);
 
-    const screenTitle = STEPS?.[step]?.title || "Створити домашнє завдання";
-    const screenSubtitle = STEPS?.[step]?.subtitle || `Крок ${step + 1} з ${STEPS.length}`;
+    const screenTitle = STEPS?.[step]?.title || "Create homework";
+    const screenSubtitle = STEPS?.[step]?.subtitle || `Step ${step + 1} of ${STEPS.length}`;
 
     const isFirst = step <= 0;
     const isLast = step >= STEPS.length - 1;
@@ -102,17 +91,19 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
     const validateStep = (idx) => {
         if (idx === 0) {
             const ok = (selectedStudentIds?.length || 0) > 0;
-            return ok ? { ok: true, message: "" } : { ok: false, message: "Вибери учня, щоб продовжити" };
+            return ok ? { ok: true, message: "" } : { ok: false, message: "Select at least one student to continue" };
         }
 
         if (idx === 1) {
-            return step2Ready ? { ok: true, message: "" } : { ok: false, message: "Згенеруй список завдань, щоб продовжити" };
+            return step2Ready
+                ? { ok: true, message: "" }
+                : { ok: false, message: "Generate tasks to continue" };
         }
 
         if (idx === 2) {
             const tasks = ctx?.builtTasksPreview?.tasks || [];
             const ok = (selectedStudentIds?.length || 0) > 0 && Array.isArray(tasks) && tasks.length > 0;
-            return ok ? { ok: true, message: "" } : { ok: false, message: "Немає завдань для відправки" };
+            return ok ? { ok: true, message: "" } : { ok: false, message: "No tasks to send" };
         }
 
         return { ok: true, message: "" };
@@ -120,28 +111,25 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
 
     const currentValidation = validateStep(step);
     const isBlocked = !currentValidation?.ok;
-    const blockMsg = currentValidation?.message || "Заповни поточний крок";
+    const blockMsg = currentValidation?.message || "Complete the current step";
 
     const nextLabel = useMemo(() => {
-        if (isLast) return "Відправити завдання";
-        const next = STEPS[step + 1]?.label ?? "Далі";
-        return `Далі: ${next}`;
+        if (isLast) return "Send assignment";
+        const next = STEPS[step + 1]?.label ?? "Next";
+        return `Next: ${next}`;
     }, [isLast, STEPS, step]);
 
     const backLabel = useMemo(() => {
-        const prev = STEPS[step - 1]?.label ?? "Назад";
-        return `Назад: ${prev}`;
+        const prev = STEPS[step - 1]?.label ?? "Back";
+        return `Back: ${prev}`;
     }, [STEPS, step]);
 
     const onNext = () => {
         if (isBlocked) return;
-
         if (!isLast) {
             setStep((s) => Math.min(s + 1, STEPS.length - 1));
             return;
         }
-
-        // ✅ trigger Step 2 “send”
         setConfirmNonce((x) => x + 1);
     };
 
@@ -155,36 +143,31 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
             onClose={onClose}
             width="80%"
             height="80vh"
-            title="Створити домашнє завдання"
+            title="Create homework"
             footer={
                 <div style={styles.footer}>
                     <div style={styles.footerLeft}>
                         {!isFirst && (
-                            <AwesomeButton variant="ghost" onClick={onBack} disabled={isFirst} title={isFirst ? "Це перший крок" : backLabel}>
+                            <AwesomeButton variant="ghost" onClick={onBack}>
                                 {backLabel}
                             </AwesomeButton>
                         )}
                     </div>
 
                     <div style={styles.footerMeta}>
-                        Обрано учнів: <b>{selectedCount}</b>
+                        Selected students: <b>{selectedCount}</b>
                     </div>
 
                     <div style={styles.footerRight}>
                         {isBlocked ? (
                             <Tooltip content={blockMsg} autoHideMs={1500} fadeMs={260}>
-                                <AwesomeButton variant="accent" onClick={onNext} disabled title={blockMsg}>
-                                    <div style={styles.nextBtnInner}>
-                                        <span style={{ ...styles.lockIcon }} />
-                                        <span>{nextLabel}</span>
-                                    </div>
+                                <AwesomeButton variant="accent" disabled>
+                                    {nextLabel}
                                 </AwesomeButton>
                             </Tooltip>
                         ) : (
-                            <AwesomeButton variant="accent" onClick={onNext} title={nextLabel}>
-                                <div style={styles.nextBtnInner}>
-                                    <span>{nextLabel}</span>
-                                </div>
+                            <AwesomeButton variant="accent" onClick={onNext}>
+                                {nextLabel}
                             </AwesomeButton>
                         )}
                     </div>
@@ -233,7 +216,6 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                             );
                         }
 
-                        // ✅ Step 2: summary + send
                         return (
                             <div style={styles.stepFill}>
                                 <AssignmentSummarySection
@@ -243,7 +225,6 @@ export default function CreateHomeworkModal({ open, onClose, onCreated }) {
                                     confirmNonce={confirmNonce}
                                     onDone={() => {
                                         onClose?.();
-                                        // refresh page after close
                                         window.location.reload();
                                         onCreated?.();
                                     }}
@@ -282,45 +263,11 @@ const styles = {
         width: "100%",
         flexWrap: "wrap",
     },
-    footerLeft: {
-        display: "flex",
-        alignItems: "center",
-        gap: 10,
-        minWidth: 0,
-    },
+    footerLeft: { display: "flex", gap: 10 },
     footerMeta: {
         fontWeight: 900,
         color: "var(--muted, #a47856)",
         whiteSpace: "nowrap",
-        minWidth: 0,
     },
-    footerRight: {
-        display: "flex",
-        alignItems: "center",
-        gap: 10,
-        minWidth: 0,
-    },
-    nextBtnInner: {
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 8,
-    },
-    lockIcon: {
-        width: 16,
-        height: 16,
-        display: "block",
-        maskImage: "url(/lock-icon.svg)",
-        WebkitMaskImage: "url(/lock-icon.svg)",
-        WebkitMask: "url(/lock-icon.svg) no-repeat center / contain",
-        mask: "url(/lock-icon.svg) no-repeat center / contain",
-        backgroundColor: "#fff",
-        maskRepeat: "no-repeat",
-        maskPosition: "center",
-        maskSize: "contain",
-        WebkitMaskRepeat: "no-repeat",
-        WebkitMaskPosition: "center",
-        WebkitMaskSize: "contain",
-        transform: "scale(1.2)",
-        transformOrigin: "center",
-    },
+    footerRight: { display: "flex", gap: 10 },
 };
