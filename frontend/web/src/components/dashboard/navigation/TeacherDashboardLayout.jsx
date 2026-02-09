@@ -1,11 +1,10 @@
-// TeacherDashboardLayout.jsx — FULL DROP-IN (NO NAVBAR BACKGROUND + AUTONOMOUS BREADCRUMBS)
+// TeacherDashboardLayout.jsx — FULL DROP-IN (NO NAVBAR BACKGROUND + AUTONOMOUS BREADCRUMBS, THEME-DRIVEN)
 import React, { useMemo } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import ItemsList from "../ItemsList.jsx";
 import Breadcrumbs from "./Breadcrumbs.jsx";
-
-const SIDEBAR_WIDTH = 300;
+import { theme } from "../../../App.jsx";
 
 export default function TeacherDashboardLayout() {
     const { teacher } = useTeacherDashboard();
@@ -36,19 +35,18 @@ export default function TeacherDashboardLayout() {
                 id: "/school/classes",
                 title: "Classes",
                 subtitle: "Students, groups, progress",
-                imageUrl: "/1list.PNG",
+                imageUrl: "/hand2.PNG",
             },
             {
                 id: "/school/assignments",
                 title: "Assignments",
                 subtitle: "Create & track assignments",
-                imageUrl: "/1lamp.PNG",
+                imageUrl: "/hand3.PNG",
             },
         ],
         []
     );
 
-    // Which nav item is active for the current route?
     const activeBaseRoute = useMemo(() => {
         const path = location.pathname;
         const match =
@@ -57,9 +55,113 @@ export default function TeacherDashboardLayout() {
         return match?.id || navItems[0]?.id || "/school/profile";
     }, [location.pathname, navItems]);
 
+    const styles = useMemo(() => {
+        const m = theme.layoutMetrics;
+
+        return {
+            page: {
+                background: theme.bg,
+                minHeight: "100vh",
+                width: "100vw",
+                fontFamily: theme.fontFamily,
+            },
+
+            sidebar: {
+                position: "fixed",
+                left: 0,
+                top: 0,
+                bottom: 0,
+                width: m.sidebarWidth,
+                zIndex: 50,
+
+                background: theme.panel.none,
+                boxShadow: "none",
+
+                display: "flex",
+                flexDirection: "column",
+                gap: m.sidebarGap,
+                padding: m.sidebarPad,
+            },
+
+            navWrap: {
+                flex: 1,
+                minHeight: 0,
+            },
+
+            bottom: {
+                display: "flex",
+                flexDirection: "column",
+                gap: theme.spacing.gap,
+            },
+
+            teacherRow: {
+                display: "flex",
+                alignItems: theme.layout.rowAlign,
+                gap: theme.spacing.gap,
+            },
+
+            initials: {
+                width: theme.avatar.size,
+                height: theme.avatar.size,
+                borderRadius: theme.avatar.radius,
+                border: theme.avatar.border,
+                background: theme.avatar.bg,
+                display: "flex",
+                alignItems: theme.layout.rowAlign,
+                justifyContent: "center",
+                fontWeight: theme.weights.title,
+                userSelect: "none",
+                flexShrink: 0,
+            },
+
+            teacherMeta: {
+                minWidth: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: 2, // if you want *zero numbers anywhere*, move this into theme too
+            },
+
+            teacherName: {
+                fontWeight: theme.weights.title,
+                fontSize: theme.smallType.name,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                color: theme.textDark,
+            },
+
+            teacherHint: {
+                fontSize: theme.smallType.hint,
+                color: theme.smallType.hintColor,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+            },
+
+            content: {
+                marginLeft: m.sidebarWidth,
+                minHeight: "100vh",
+                padding: m.pagePad,
+                display: "flex",
+                flexDirection: "column",
+                gap: m.contentGap,
+            },
+
+            breadcrumbRow: {
+                minHeight: m.breadcrumbRowMinH,
+                display: "flex",
+                alignItems: theme.layout.rowAlign,
+            },
+
+            outletWrap: {
+                flex: 1,
+                minHeight: 0,
+            },
+        };
+    }, []);
+
     return (
         <div style={styles.page}>
-            {/* Sidebar (transparent) */}
             <aside style={styles.sidebar}>
                 <div style={styles.navWrap}>
                     <ItemsList
@@ -82,9 +184,7 @@ export default function TeacherDashboardLayout() {
                 </div>
             </aside>
 
-            {/* Content */}
             <main style={styles.content}>
-                {/* ✅ Breadcrumbs: only basePrefix, autonomous beyond that */}
                 <div style={styles.breadcrumbRow}>
                     <Breadcrumbs basePrefix={activeBaseRoute} />
                 </div>
@@ -96,100 +196,3 @@ export default function TeacherDashboardLayout() {
         </div>
     );
 }
-
-const styles = {
-    page: {
-        background: "var(--bg, #fff3df)",
-        minHeight: "100vh",
-        width: "100vw",
-    },
-
-    sidebar: {
-        position: "fixed",
-        left: 0,
-        top: 0,
-        bottom: 0,
-        width: SIDEBAR_WIDTH,
-        zIndex: 50,
-        background: "transparent",
-        boxShadow: "none",
-        display: "flex",
-        flexDirection: "column",
-        gap: 16,
-        padding: 16,
-    },
-
-    bottom: {
-        display: "flex",
-        flexDirection: "column",
-        gap: 12,
-    },
-
-    teacherRow: {
-        display: "flex",
-        alignItems: "center",
-        gap: 12,
-    },
-
-    teacherMeta: {
-        minWidth: 0,
-        display: "flex",
-        flexDirection: "column",
-        gap: 2,
-    },
-
-    teacherName: {
-        fontWeight: 900,
-        fontSize: 14,
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-    },
-
-    teacherHint: {
-        fontSize: 12,
-        opacity: 0.65,
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-    },
-
-    initials: {
-        width: 42,
-        height: 42,
-        borderRadius: 14,
-        border: "2px solid rgba(0,0,0,0.15)",
-        background: "rgba(255,255,255,0.6)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontWeight: 900,
-        userSelect: "none",
-        flexShrink: 0,
-    },
-
-    navWrap: {
-        flex: 1,
-        minHeight: 0,
-    },
-
-    content: {
-        marginLeft: SIDEBAR_WIDTH,
-        minHeight: "100vh",
-        padding: 16,
-        display: "flex",
-        flexDirection: "column",
-        gap: 12,
-    },
-
-    breadcrumbRow: {
-        minHeight: 44,
-        display: "flex",
-        alignItems: "center",
-    },
-
-    outletWrap: {
-        flex: 1,
-        minHeight: 0,
-    },
-};

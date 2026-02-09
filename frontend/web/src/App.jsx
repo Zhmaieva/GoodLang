@@ -126,7 +126,7 @@ import {ProfilePage} from "./components/dashboard/profile/ProfilePage.jsx";
 
 // theme.js
 export const theme = {
-    fontFamily: `"Nunito", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`,
+    fontFamily: `"Merriweather", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`,
 
     weights: {
         normal: 500,
@@ -174,11 +174,11 @@ export const theme = {
     surface: "#ffffff",
     surfaceSoft: "#fbfbfc",
     border: "rgba(0,0,0,0.10)",
-    hoverDarken: "rgba(0,0,0,0.06)",
+    hoverDarken: "rgba(0,0,0,0.08)",
 
     // brand
-    accent: "#ff6138",
-    accentDark: "#d74e2a",
+    accent: "#a6a6a6",
+    accentDark: "#656565",
 
     // text
     textDark: "#121212",
@@ -222,7 +222,7 @@ export const theme = {
 
     // borders
     borders: {
-        card: "1px solid rgba(0,0,0,0.10)",
+        card: "1px solid rgba(0,0,0,0.01)",
         img: "1px solid rgba(0,0,0,0.08)",
     },
 
@@ -234,7 +234,43 @@ export const theme = {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        objectFit: "cover",
+        objectFit: "contain",
+        defaultOpacity: 0.8,
+        inactiveOpacity: 0.4,
+    },
+
+    // ✅ app surfaces
+    bg: "#fff9ef",
+
+    // ✅ shared “soft panel” look
+    panel: {
+        none: "transparent",
+        soft: "rgba(255,255,255,0.6)",
+    },
+
+    // ✅ layout metrics (moves SIDEBAR_WIDTH / paddings / gaps / heights into theme)
+    layoutMetrics: {
+        sidebarWidth: 300,
+        pagePad: 16,
+        sidebarPad: 16,
+        sidebarGap: 16,
+        contentGap: 12,
+        breadcrumbRowMinH: 44,
+    },
+
+    // ✅ teacher badge / avatar chip (moves sizes + borders + background)
+    avatar: {
+        size: 42,
+        radius: 14,
+        border: "2px solid rgba(0,0,0,0.15)",
+        bg: "rgba(255,255,255,0.6)",
+    },
+
+    // ✅ small text styles used in layout (moves 14/12 and opacity into theme)
+    smallType: {
+        name: "clamp(0.85rem, 0.82rem + 0.25vw, 0.95rem)",
+        hint: "clamp(0.75rem, 0.72rem + 0.20vw, 0.85rem)",
+        hintColor: "rgba(18,18,18,0.72)", // reuse your muted concept for “hint”
     },
 };
 

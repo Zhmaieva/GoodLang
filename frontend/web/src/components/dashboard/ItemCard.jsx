@@ -15,19 +15,18 @@ export default function ItemCard({
     const baseBg = selected ? theme.accent : theme.surface;
     const bgIsLight = useMemo(() => isLightColor(baseBg), [baseBg]);
 
-    const titleColor = bgIsLight ? theme.textDark : theme.textOnColor;
-    const subColor = bgIsLight ? theme.textMutedDark : theme.textMutedOnColor;
+    const titleColor = theme.textDark
+    const subColor = theme.textMutedDark
 
     const transform = useMemo(() => {
         if (!selectedShift || theme.accessibility.reduceMotion) return "translateX(0) scaleX(1)";
-        if (selected) return "translateX(5%) scaleX(1)";
+        if (selected) return "translateX(5%) scaleX(1.05)";
         if (hovered) return "translateX(5%) scaleX(1.05)";
         return "translateX(0) scaleX(1)";
     }, [hovered, selected, selectedShift]);
 
     const overlayOpacity = useMemo(() => {
-        if (selected) return 0;
-        return hovered ? 1 : 0;
+        return hovered || selected ? 1 : 0;
     }, [hovered, selected]);
 
     const styles = useMemo(() => {
@@ -37,7 +36,6 @@ export default function ItemCard({
             boxSizing: "border-box",
             borderRadius: theme.radius.card,
             border: theme.borders.card,
-            background: baseBg,
             cursor: "pointer",
             userSelect: "none",
             padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
@@ -93,7 +91,7 @@ export default function ItemCard({
 
         const subtitleStyle = {
             fontFamily: theme.fontFamily,
-            fontWeight: selected ? theme.weights.subtitleSelected : theme.weights.normal,
+            fontWeight: theme.weights.normal,
             color: subColor,
             fontSize: theme.type.subtitle,
             lineHeight: theme.type.subtitleLineHeight,
@@ -107,8 +105,6 @@ export default function ItemCard({
             width: theme.sizes.img,
             height: theme.sizes.img,
             borderRadius: theme.radius.img,
-            background: theme.imgSlot.bg,
-            border: theme.imgSlot.border,
             overflow: theme.imgSlot.overflow,
             display: theme.imgSlot.display,
             alignItems: theme.imgSlot.alignItems,
@@ -121,6 +117,8 @@ export default function ItemCard({
             height: "100%",
             objectFit: theme.imgSlot.objectFit,
             display: "block",
+            filter: 'grayscale(1)',
+            opacity: selected || hovered ? theme.imgSlot.defaultOpacity :  theme.imgSlot.inactiveOpacity,
         };
 
         return { card, overlay, row, textCol, titleStyle, subtitleStyle, imgWrap, img };
