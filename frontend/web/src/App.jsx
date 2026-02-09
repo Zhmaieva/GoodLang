@@ -126,37 +126,97 @@ import TeacherHomeworkPage from "./components/dashboard/pages/TeachersHomeworkPa
 import GoodLangSchoolsLanding from "./components/pages/GoodLangSchoolsLanding.jsx";
 import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
 
+// theme.js
 export const theme = {
-    bg: "#fff3df",
+    fontFamily: `"Nunito", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`,
+
+    weights: {
+        normal: 500,
+        title: 900,
+        selectedBoost: 950,
+        subtitleSelected: 650,
+    },
+
+    radius: {
+        card: 18,
+        img: 16,
+    },
+
+    spacing: {
+        cardPadY: 12,
+        cardPadX: 14,
+        // list
+        listPad: 8,
+        listInnerRightPad: 18,
+        rowGap: 10,
+        // card
+        gap: 12,
+    },
+
+    sizes: {
+        img: 56,
+    },
+
+    motion: {
+        fast: "160ms",
+        normal: "220ms",
+        ease: "cubic-bezier(0.2, 0.8, 0.2, 1)",
+    },
+
+    // typography (rem + clamp)
+    type: {
+        title: "clamp(0.90rem, 0.86rem + 0.25vw, 0.98rem)",
+        subtitle: "clamp(0.78rem, 0.76rem + 0.20vw, 0.86rem)",
+        empty: "clamp(0.85rem, 0.82rem + 0.25vw, 0.95rem)",
+        titleLineHeight: 1.15,
+        subtitleLineHeight: 1.15,
+    },
+
+    // neutrals
+    surface: "#ffffff",
+    surfaceSoft: "#fbfbfc",
+    border: "rgba(0,0,0,0.10)",
+    hoverDarken: "rgba(0,0,0,0.06)",
+
+    // brand
     accent: "#ff6138",
     accentDark: "#d74e2a",
-    green: "#4ba36e",
-    greenDark: "#2d6f48",
-    blue: "#3a6ea5",
-    text: "#3a2a1d",
-    muted: "#a47856",
-    radius: 20,
+
+    // text
+    textDark: "#121212",
+    textMutedDark: "rgba(18,18,18,0.72)",
+    textOnColor: "#ffffff",
+    textMutedOnColor: "rgba(255,255,255,0.86)",
+
+    // layout defaults (so you can reuse in other components)
+    layout: {
+        rowAlign: "center",
+        rowJustify: "space-between",
+    },
+
+    accessibility: {
+        reduceMotion: false,
+    },
+
+    // borders
+    borders: {
+        card: "1px solid rgba(0,0,0,0.10)",
+        img: "1px solid rgba(0,0,0,0.08)",
+    },
+
+    // image square (whole style)
+    imgSlot: {
+        bg: "#ffffff",
+        border: "1px solid rgba(0,0,0,0.08)",
+        overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        objectFit: "cover",
+    },
 };
 
 export default function App() {
-    const ruleTheme = useMemo(
-        () => ({
-            bg: "#fff3df",
-            card: "#fffdf8",
-            accent: "#ff6138",
-            accentDark: "#d74e2a",
-            green: "#4ba36e",
-            greenDark: "#2d6f48",
-            blue: "#3a6ea5",
-            text: "#3a2a1d",
-            muted: "#a47856",
-            bad: "#ef476f",
-            warn: "#ffd166",
-            good: "#4ba36e",
-            radius: 20,
-        }),
-        []
-    );
 
     const navigate = useNavigate();
 
@@ -172,7 +232,9 @@ export default function App() {
         return () => {
             off("onFirstOpen", goToLanding);
         }
-    })
+    });
+
+    const ruleTheme = theme;
 
     return (
         <section style={{overflowX: 'hidden'}}>
