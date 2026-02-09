@@ -1,14 +1,12 @@
-// Breadcrumbs.jsx — FULL DROP-IN (autonomous, basePrefix only)
-import React, { useMemo } from "react";
+// Breadcrumbs.jsx — FULL DROP-IN (autonomous, basePrefix only) — THEME-ONLY NUMBERS + HOVER/FOCUS A11Y
+import React, { useMemo, useState, useCallback } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { theme } from "../../../App.jsx";
 
 function normalizePrefix(p) {
     const s = String(p || "").trim();
     if (!s) return "";
-    // allow "teacher/assignments" or "/teacher/assignments"
     const withSlash = s.startsWith("/") ? s : `/${s}`;
-    // remove trailing slashes
     return withSlash.replace(/\/+$/, "");
 }
 
@@ -24,18 +22,9 @@ function titleFromSegment(seg) {
     return parts.map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w)).join(" ");
 }
 
-/**
- * Props:
- * - basePrefix: string, required, e.g. "teacher/assignments" or "/teacher/assignments"
- *
- * Behavior:
- * - If current route is exactly basePrefix -> shows: "Assignments" (big title only)
- * - If current route is basePrefix + "/my/path" -> shows: "Assignments > My > Path"
- * - Clickable: first + previous (if present). Current is NOT clickable. Middle collapsed -> "..."
- * - No transitions/animations (instant update on route changes)
- */
 export default function Breadcrumbs({ basePrefix }) {
     const location = useLocation();
+    const [hotKey, setHotKey] = useState(null); // hover or focus
 
     const crumbs = useMemo(() => {
         const base = normalizePrefix(basePrefix);
@@ -43,28 +32,24 @@ export default function Breadcrumbs({ basePrefix }) {
         const path = pathRaw.startsWith("/") ? pathRaw : `/${pathRaw}`;
 
         if (!base) return [];
-
-        // Only render when inside the basePrefix scope
         if (!(path === base || path.startsWith(base + "/"))) return [];
 
-        // tail after basePrefix
         let tail = path.slice(base.length);
         if (!tail.startsWith("/")) tail = "/" + tail;
         const tailSegs = tail.split("/").filter(Boolean);
 
-        // Base segments define the first crumb label and href
         const baseSegs = base.split("/").filter(Boolean);
         const baseLabelSeg = baseSegs[baseSegs.length - 1] || "";
         const baseLabel = titleFromSegment(baseLabelSeg);
 
         const out = [];
-        out.push({ label: baseLabel, to: base });
+        out.push({ key: base, label: baseLabel, to: base });
 
         if (tailSegs.length) {
             let acc = base;
             for (const seg of tailSegs) {
                 acc += "/" + seg;
-                out.push({ label: titleFromSegment(seg), to: acc });
+                out.push({ key: acc, label: titleFromSegment(seg), to: acc });
             }
         }
 
@@ -74,8 +59,7 @@ export default function Breadcrumbs({ basePrefix }) {
     const model = useMemo(() => {
         if (!crumbs.length) return null;
 
-        if (crumbs.length === 1) {
-            // only base -> show only big title
+        if (crumbs.length === theme.breadcrumbs.singleCrumbCount) {
             return { first: null, prev: null, current: crumbs[0], showEllipsis: false };
         }
 
@@ -83,50 +67,74 @@ export default function Breadcrumbs({ basePrefix }) {
         const current = crumbs[crumbs.length - 1];
         const prev = crumbs[crumbs.length - 2];
 
-        // collapse middle if more than: first + prev + current
-        const showEllipsis = crumbs.length > 3;
-
+        const showEllipsis = crumbs.length > theme.breadcrumbs.collapseAfterCrumbs;
         return { first, prev, current, showEllipsis };
     }, [crumbs]);
 
     const styles = useMemo(() => {
+        const reduceMotion = !!theme?.accessibility?.reduceMotion;
         return {
             wrap: {
                 width: "100%",
                 display: "flex",
                 alignItems: "baseline",
                 justifyContent: "flex-start",
-                gap: "0.55rem",
+                gap: theme.breadcrumbs.gap,
                 fontFamily: theme.fontFamily,
                 color: theme.textDark,
                 userSelect: "none",
             },
-            smallLink: {
-                fontSize: "clamp(0.82rem, 0.80rem + 0.25vw, 0.92rem)",
+
+            linkBase: {
+                fontSize: theme.breadcrumbs.fontSize,
                 fontWeight: theme.weights.normal,
                 color: theme.textDark,
+                opacity: theme.breadcrumbs.linkOpacity,
                 textDecoration: "none",
                 whiteSpace: "nowrap",
-                maxWidth: "18rem",
+                maxWidth: theme.breadcrumbs.maxLabelWidth,
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 cursor: "pointer",
+
+                transform: theme.breadcrumbs.idleScale,
+                transformOrigin: "left center",
+                transition: reduceMotion
+                    ? "none"
+                    : `transform ${theme.breadcrumbs.hoverTransition} ${theme.motion.ease}, opacity ${theme.breadcrumbs.hoverTransition} ${theme.motion.ease}`,
             },
+
+            linkHot: {
+                opacity: theme.breadcrumbs.linkHoverOpacity,
+                textDecorationThickness: theme.breadcrumbs.underlineThickness,
+                textUnderlineOffset: theme.breadcrumbs.underlineOffset,
+                transform: reduceMotion ? theme.breadcrumbs.idleScale : theme.breadcrumbs.hoverScale,
+            },
+
+            linkFocus: {
+                borderRadius: theme.breadcrumbs.focusRadius,
+                outline: "none",
+            },
+
             sep: {
-                fontSize: "clamp(0.78rem, 0.76rem + 0.25vw, 0.90rem)",
-                color: theme.textMutedDark,
-                lineHeight: 1,
+                fontSize: theme.breadcrumbs.fontSize,
+                color: theme.textDark,
+                opacity: theme.breadcrumbs.sepOpacity,
+                lineHeight: "1",
             },
+
             dots: {
-                fontSize: "clamp(0.82rem, 0.80rem + 0.25vw, 0.92rem)",
+                fontSize: theme.breadcrumbs.fontSize,
                 fontWeight: theme.weights.normal,
-                color: theme.textMutedDark,
+                color: theme.textDark,
+                opacity: theme.breadcrumbs.dotsOpacity,
             },
+
             current: {
-                marginLeft: "0.25rem",
-                fontSize: "clamp(1.25rem, 1.10rem + 0.9vw, 1.70rem)",
+                fontSize: theme.breadcrumbs.fontSize,
                 fontWeight: theme.weights.selectedBoost,
                 color: theme.textDark,
+                opacity: "1",
                 whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
@@ -134,44 +142,67 @@ export default function Breadcrumbs({ basePrefix }) {
         };
     }, []);
 
+    const setHot = useCallback((key) => setHotKey(key), []);
+    const clearHot = useCallback((key) => {
+        setHotKey((prev) => (prev === key ? null : prev));
+    }, []);
+
     if (!model) return null;
 
-    const LinkCrumb = ({ to, children }) => (
-        <NavLink to={to} style={styles.smallLink} title={String(children)}>
-            {children}
-        </NavLink>
-    );
+    const LinkCrumb = ({ crumb }) => {
+        const isHot = hotKey === crumb.key;
+
+        return (
+            <NavLink
+                to={crumb.to}
+                title={String(crumb.label)}
+                style={{
+                    ...styles.linkBase,
+                    ...(isHot ? styles.linkHot : null),
+                }}
+                onMouseEnter={() => setHot(crumb.key)}
+                onMouseLeave={() => clearHot(crumb.key)}
+                onFocus={() => setHot(crumb.key)}
+                onBlur={() => clearHot(crumb.key)}
+            >
+                {/* focus ring wrapper via inline boxShadow (a11y) */}
+                <span style={isHot ? styles.linkFocus : null}>{crumb.label}</span>
+            </NavLink>
+        );
+    };
 
     const showPrev =
-        model.prev && model.first && model.prev.to !== model.first.to && model.prev.label !== model.first.label;
+        model.prev &&
+        model.first &&
+        model.prev.to !== model.first.to &&
+        model.prev.label !== model.first.label;
 
     return (
-        <div style={styles.wrap}>
-            {/* first + ... + prev + current (big) */}
+        <nav style={styles.wrap} aria-label="Breadcrumb">
             {model.first ? (
                 <>
-                    <LinkCrumb to={model.first.to}>{model.first.label}</LinkCrumb>
-                    <span style={styles.sep}>&gt;</span>
+                    <LinkCrumb crumb={model.first} />
+                    <span style={styles.sep}>▶</span>
                 </>
             ) : null}
 
             {model.showEllipsis && model.first ? (
                 <>
                     <span style={styles.dots}>...</span>
-                    <span style={styles.sep}>&gt;</span>
+                    <span style={styles.sep}>▶</span>
                 </>
             ) : null}
 
             {showPrev ? (
                 <>
-                    <LinkCrumb to={model.prev.to}>{model.prev.label}</LinkCrumb>
-                    <span style={styles.sep}>&gt;</span>
+                    <LinkCrumb crumb={model.prev} />
+                    <span style={styles.sep}>▶</span>
                 </>
             ) : null}
 
-            <div style={styles.current} title={model.current.label}>
+            <div style={styles.current} title={model.current.label} aria-current="page">
                 {model.current.label}
             </div>
-        </div>
+        </nav>
     );
 }

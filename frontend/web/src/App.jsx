@@ -196,6 +196,30 @@ export const theme = {
         reduceMotion: false,
     },
 
+    // breadcrumbs (no hardcoded numbers in component)
+    breadcrumbs: {
+        fontSize: "clamp(2.10rem, 1.85rem + 0.75vw, 2.50rem)",
+        gap: "0.55rem",
+        maxLabelWidth: "18rem",
+        linkOpacity: 0.75,
+        sepOpacity: 0.35,
+        dotsOpacity: 0.45,
+        collapseAfterCrumbs: 3,
+        singleCrumbCount: 1,
+
+        // ✅ hover + a11y (no numbers in component)
+        hoverScale: "scale(1.03)",
+        idleScale: "scale(1)",
+        hoverTransition: "140ms",
+        focusTransition: "0ms", // instant if you prefer; or reuse hoverTransition
+        focusRing: "0 0 0 3px rgba(255,97,56,0.35)", // accent ring
+        focusRadius: "6px",
+        underlineThickness: "2px",
+        underlineOffset: "3px",
+        linkHoverOpacity: 0.95,
+    },
+
+
     // borders
     borders: {
         card: "1px solid rgba(0,0,0,0.10)",
@@ -262,7 +286,11 @@ export default function App() {
                     <Route index element={<AssignmentsPage />} />
                     <Route path="profile" element={<ProfilePage />} />
                     <Route path="classes" element={<ClassesPage />} />
-                    <Route path="assignments" element={<AssignmentsPage />} />
+                    <Route path="assignments" element={<AssignmentsPage />}>
+                        <Route path="classes" element={<ClassesPage />}>
+                            <Route path="profile" element={<ProfilePage />} />
+                        </Route>
+                    </Route>
                 </Route>
 
                 {/* A1 RULES */}
