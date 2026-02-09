@@ -117,14 +117,12 @@ import LandingPageTeacher from "./components/pages/LandingPageTeacher.jsx";
 import LandingPage3 from "./components/pages/LandingPage3.jsx";
 import LandingCrossword from "./components/pages/LandingCrossword.jsx";
 import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
-import TeacherMyProfilePage from "./components/dashboard/pages/TeacherMyProfilePage.jsx";
-import TeacherMyStudentsPage from "./components/dashboard/pages/TeacherMyStudentsPage.jsx";
-import TeacherMyClassesPage from "./components/dashboard/pages/TeacherMyClassesPage.jsx";
 import {TeacherDashboardProvider} from "./components/dashboard/TeacherDashboardContext.jsx";
-import TeacherDashboardLayout from "./components/dashboard/TeacherDashboardLayout.jsx";
-import TeacherHomeworkPage from "./components/dashboard/pages/TeachersHomeworkPage.jsx";
-import GoodLangSchoolsLanding from "./components/pages/GoodLangSchoolsLanding.jsx";
+import TeacherDashboardLayout from "./components/dashboard/navigation/TeacherDashboardLayout.jsx";
 import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
+import {AssignmentsPage} from "./components/dashboard/assignments/AssignmentsPage.jsx";
+import {ClassesPage} from "./components/dashboard/classes/ClassesPage.jsx";
+import {ProfilePage} from "./components/dashboard/profile/ProfilePage.jsx";
 
 // theme.js
 export const theme = {
@@ -138,8 +136,8 @@ export const theme = {
     },
 
     radius: {
-        card: 18,
-        img: 16,
+        card: 8,
+        img: 10,
     },
 
     spacing: {
@@ -254,18 +252,17 @@ export default function App() {
                 <Route path="/payment/success" element={<PaymentSuccess />} />
                 <Route path="/payment/cancel" element={<PaymentCancel />} />
                 <Route
-                    path="/teacher"
+                    path="/school"
                     element={
                         <TeacherDashboardProvider>
                             <TeacherDashboardLayout />
                         </TeacherDashboardProvider>
                     }
                 >
-                    <Route index element={<TeacherMyProfilePage />} />
-                    <Route path="profile" element={<TeacherMyProfilePage />} />
-                    <Route path="students" element={<TeacherMyStudentsPage />} />
-                    <Route path="classes" element={<TeacherMyClassesPage />} />
-                    <Route path="assignments" element={<TeacherHomeworkPage />} />
+                    <Route index element={<AssignmentsPage />} />
+                    <Route path="profile" element={<ProfilePage />} />
+                    <Route path="classes" element={<ClassesPage />} />
+                    <Route path="assignments" element={<AssignmentsPage />} />
                 </Route>
 
                 {/* A1 RULES */}

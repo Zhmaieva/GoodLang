@@ -1,8 +1,9 @@
-// TeacherDashboardLayout.jsx — FULL DROP-IN (NO NAVBAR BACKGROUND)
+// TeacherDashboardLayout.jsx — FULL DROP-IN (NO NAVBAR BACKGROUND + AUTONOMOUS BREADCRUMBS)
 import React, { useMemo } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { useTeacherDashboard } from "./TeacherDashboardContext.jsx";
-import ItemsList from "./ItemsList.jsx";
+import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
+import ItemsList from "../ItemsList.jsx";
+import Breadcrumbs from "./Breadcrumbs.jsx";
 
 const SIDEBAR_WIDTH = 300;
 
@@ -23,33 +24,37 @@ export default function TeacherDashboardLayout() {
         return (a + b).toUpperCase();
     }, [teacherName]);
 
-    const navItems = useMemo(() => [
-        {
-            id: "/teacher/profile",
-            title: "My profile",
-            subtitle: "Edit profile & preferences",
-            imageUrl: "/hand1.PNG",
-        },
-        {
-            id: "/teacher/classes",
-            title: "Classes",
-            subtitle: "Students, groups, progress",
-            imageUrl: "/1list.PNG",
-        },
-        {
-            id: "/teacher/assignments",
-            title: "Assignments",
-            subtitle: "Create & track assignments",
-            imageUrl: "/1lamp.PNG",
-        },
-    ], []);
+    const navItems = useMemo(
+        () => [
+            {
+                id: "/school/profile",
+                title: "My profile",
+                subtitle: "Edit profile & preferences",
+                imageUrl: "/hand1.PNG",
+            },
+            {
+                id: "/school/classes",
+                title: "Classes",
+                subtitle: "Students, groups, progress",
+                imageUrl: "/1list.PNG",
+            },
+            {
+                id: "/school/assignments",
+                title: "Assignments",
+                subtitle: "Create & track assignments",
+                imageUrl: "/1lamp.PNG",
+            },
+        ],
+        []
+    );
 
-    const defaultSelectedId = useMemo(() => {
+    // Which nav item is active for the current route?
+    const activeBaseRoute = useMemo(() => {
         const path = location.pathname;
         const match =
             navItems.find((x) => path === x.id) ||
             navItems.find((x) => path.startsWith(x.id + "/"));
-        return match?.id || null;
+        return match?.id || navItems[0]?.id || "/school/profile";
     }, [location.pathname, navItems]);
 
     return (
@@ -59,10 +64,10 @@ export default function TeacherDashboardLayout() {
                 <div style={styles.navWrap}>
                     <ItemsList
                         items={navItems}
-                        defaultSelectedId={defaultSelectedId}
+                        defaultSelectedId={activeBaseRoute}
                         selectedShift={true}
                         onSelect={(item) => item?.id && navigate(item.id)}
-                        style={{height: "100%", padding: 0}}
+                        style={{ height: "100%", padding: 0 }}
                     />
                 </div>
 
@@ -79,7 +84,14 @@ export default function TeacherDashboardLayout() {
 
             {/* Content */}
             <main style={styles.content}>
-                <Outlet/>
+                {/* ✅ Breadcrumbs: only basePrefix, autonomous beyond that */}
+                <div style={styles.breadcrumbRow}>
+                    <Breadcrumbs basePrefix={activeBaseRoute} />
+                </div>
+
+                <div style={styles.outletWrap}>
+                    <Outlet />
+                </div>
             </main>
         </div>
     );
@@ -99,11 +111,8 @@ const styles = {
         bottom: 0,
         width: SIDEBAR_WIDTH,
         zIndex: 50,
-
-        // 👇 no background, no shadow
         background: "transparent",
         boxShadow: "none",
-
         display: "flex",
         flexDirection: "column",
         gap: 16,
@@ -150,7 +159,7 @@ const styles = {
         height: 42,
         borderRadius: 14,
         border: "2px solid rgba(0,0,0,0.15)",
-        background: "rgba(255,255,255,0.6)", // subtle, not a panel
+        background: "rgba(255,255,255,0.6)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -168,5 +177,19 @@ const styles = {
         marginLeft: SIDEBAR_WIDTH,
         minHeight: "100vh",
         padding: 16,
+        display: "flex",
+        flexDirection: "column",
+        gap: 12,
+    },
+
+    breadcrumbRow: {
+        minHeight: 44,
+        display: "flex",
+        alignItems: "center",
+    },
+
+    outletWrap: {
+        flex: 1,
+        minHeight: 0,
     },
 };
