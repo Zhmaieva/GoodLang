@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Details Form (PDF)</title>
+    <style>
+        /* --- PDF-safe styling (works well in Puppeteer/Chrome print) --- */
+        @page { size: A4; margin: 18mm; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            background: #fff;
+        }
+
+        .section {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: #d9d9d9;
+            margin: 6px 0 18px 0;
+        }
+
+        /* Grid that matches the screenshot layout */
+        .grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1.6fr 1.6fr;
+            gap: 14px;
+        }
+
+        .field {
+            border: 1px solid #cfcfcf;
+            border-radius: 2px;
+            height: 46px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+        }
+
+        .placeholder {
+            color: #3b3b3b;
+            font-size: 14px;
+            line-height: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+
+        /* Little dropdown chevron */
+        .chev {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #6a6a6a;
+            margin-left: 10px;
+            flex: 0 0 auto;
+        }
+
+        /* Row helpers (span columns) */
+        .span-2 { grid-column: span 2; }
+        .span-3 { grid-column: span 3; }
+
+        /* Phone row with 4 boxes */
+        .phone-row {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 1.1fr 1.1fr 1.1fr 1.6fr;
+            gap: 14px;
+        }
+
+        /* Optional: slightly tighter on small screens (not relevant for PDF) */
+        @media (max-width: 700px) {
+            .grid { grid-template-columns: 1fr; }
+            .phone-row { grid-template-columns: 1fr; }
+            .span-2, .span-3 { grid-column: auto; }
+        }
+    </style>
+</head>
+<body>
+<div class="section">
+    <div class="section-title">Your personal details</div>
+    <div class="divider"></div>
+
+    <div class="grid">
+        <!-- Row 1 -->
+        <div class="field">
+            <div class="placeholder">Title</div>
+            <div class="chev" aria-hidden="true"></div>
+        </div>
+
+        <div class="field">
+            <div class="placeholder">First name</div>
+        </div>
+
+        <div class="field">
+            <div class="placeholder">Last name</div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="field span-2">
+            <div class="placeholder">Email</div>
+        </div>
+
+        <div class="field">
+            <div class="placeholder">Confirm email</div>
+        </div>
+
+        <!-- Row 3 (phone row) -->
+        <div class="phone-row">
+            <div class="field">
+                <div class="placeholder">Phone type</div>
+                <div class="chev" aria-hidden="true"></div>
+            </div>
+
+            <div class="field">
+                <div class="placeholder">Country Co…</div>
+                <div class="chev" aria-hidden="true"></div>
+            </div>
+
+            <div class="field">
+                <div class="placeholder">Area c…</div>
+                <div class="chev" aria-hidden="true"></div>
+            </div>
+
+            <div class="field">
+                <div class="placeholder">Phone Number</div>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="field span-2">
+            <div class="placeholder">Emirates Skywards number (Optional)</div>
+        </div>
+
+        <div class="field">
+            <div class="placeholder">Business Rewards number (optional)</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
