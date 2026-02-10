@@ -16,6 +16,7 @@ export default function DynamicList({
                                               children,               // optional: if you want to pass JSX directly
                                               style,
                                               contentStyle,
+                                              scrollVisible = false,
                                               ariaLabel = "List",
                                           }) {
 
@@ -99,9 +100,10 @@ export default function DynamicList({
 
     return (
         <div style={{
+            ...style,
             height: theme.pageSizeHeightRelative,
         }}>
-            <AwesomeScroll>
+            <AwesomeScroll scrollVisible={scrollVisible}>
                 <div style={styles.content}>{rendered}</div>
             </AwesomeScroll>
         </div>

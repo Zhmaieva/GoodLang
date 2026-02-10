@@ -7,12 +7,15 @@ export default function ItemCard({
                                      subtitle,
                                      imageUrl,
                                      onClick,
+                                     accentHover = false,
                                      selected = false,
                                      selectedShift = true,
                                  }) {
     const [hovered, setHovered] = useState(false);
 
-    const baseBg = selected || hovered ? theme.accentSelected : theme.surface;
+    const baseBg = selected || hovered ?
+        ((accentHover && hovered && !selected || !accentHover) ? theme.accentSelected : theme.accentDarkSelected) : theme.surface;
+
     const bgIsLight = useMemo(() => isLightColor(baseBg), [baseBg]);
 
     const titleColor = bgIsLight ? theme.textDark : theme.textOnColor;
@@ -52,7 +55,7 @@ export default function ItemCard({
         const overlay = {
             position: "absolute",
             inset: 0,
-            background: theme.accentSelected,
+            background: (accentHover && hovered && !selected || !accentHover) ? theme.accentSelected : theme.accentDarkSelected,
             opacity: overlayOpacity,
             pointerEvents: "none",
             transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,

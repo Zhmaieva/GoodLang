@@ -1,7 +1,7 @@
 import Scrollbar from "react-scrollbars-custom";
 import {useState} from "react";
 
-export function AwesomeScroll({ children, style }) {
+export function AwesomeScroll({ children, style, scrollVisible = false }) {
     const [hovered, setHovered] = useState(false);
 
     return (
@@ -27,7 +27,7 @@ export function AwesomeScroll({ children, style }) {
                     style: {
                         width: 6,
                         right: 2,
-                        opacity: hovered ? 1: 0,
+                        opacity: scrollVisible && hovered ? 1: 0,
                         transition: "opacity 150ms ease",
                     },
                 }}

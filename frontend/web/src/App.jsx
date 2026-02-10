@@ -124,6 +124,9 @@ import {AssignmentsPage} from "./components/dashboard/assignments/AssignmentsPag
 import {ClassesPage} from "./components/dashboard/classes/ClassesPage.jsx";
 import {ProfilePage} from "./components/dashboard/profile/ProfilePage.jsx";
 import {CreateAssignmentsPage} from "./components/dashboard/assignments/create/CreateAssignmentPage.jsx";
+import {
+    CreateGrammarChooseOptionPage
+} from "./components/dashboard/assignments/create/CreateGrammarChooseOptionPage.jsx";
 
 // theme.js
 export const theme = {
@@ -529,8 +532,12 @@ export default function App() {
     const ruleTheme = theme;
 
     const createAssignmentRoute = (
-        <Route path="create-assignment" element={<CreateAssignmentsPage />}>
-        </Route>
+        <>
+            <Route path="create-assignment" element={<CreateAssignmentsPage />}>
+            </Route>
+            <Route path="create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}>
+            </Route>
+        </>
     );
 
     return (
@@ -564,7 +571,9 @@ export default function App() {
                     {{...createAssignmentRoute}}
                     <Route path="assignments" element={<AssignmentsPage />}>
                     </Route>
-                    <Route path="assignments/create-assignment" element={<CreateAssignmentsPage />}>
+                    <Route path="assignments/create-assignment" element={<CreateAssignmentsPage/>}>
+                    </Route>
+                    <Route path="assignments/create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}>
                     </Route>
                 </Route>
 

@@ -3,6 +3,8 @@ import { theme } from "../../../../App.jsx";
 import RectangleGroup from "../../RectangleGroup.jsx";
 import DynamicList from "../../DynamicList.jsx";
 import ItemCard from "../../ItemCard.jsx";
+import {useNavigate} from "react-router-dom";
+import Page from "../../Page.jsx";
 
 function pickHandById(id) {
     const pool = theme.assignmentsCatalog.cardImagePool || [];
@@ -13,35 +15,18 @@ function pickHandById(id) {
     return pool[idx] || pool[0];
 }
 
-function mkItem(groupKey, key, title, subtitle) {
+function mkItem(groupKey, key, title, subtitle, url) {
     return {
         id: `${groupKey}:${key}`,
         groupKey,
         title,
         subtitle,
+        url
     };
 }
 
 export function CreateAssignmentsPage() {
-
-    theme.createAssignments = {
-        // page layout
-        pageMinH: "100%",
-        pageW: "100%",
-        pageDisplay: "flex",
-        pageDirection: "column",
-
-        // content columns
-        contentFlex: "1 1 auto",
-        contentMinH: "0",
-        contentW: "100%",
-        contentDisplay: "flex",
-        contentDirection: "column",
-
-        // groups list scroll area
-        groupsFlex: "1 1 auto",
-        groupsMinH: "0",
-    };
+    const navigate = useNavigate();
 
     theme.assignmentsCatalog = {
         groupsGap: theme.spacing.gap,
@@ -57,7 +42,7 @@ export function CreateAssignmentsPage() {
                     mkItem("vocabulary", "audio_gaps", "Audio fill in gaps", "Listen and complete missing words"),
                     mkItem("vocabulary", "match_def", "Match definitions", "Match words to meanings"),
                     mkItem("vocabulary", "vocabulary_choose_option", "Choose an option", "Pick the right word"),
-                    mkItem("grammar", "grammar_gaps", "Fill in gaps", "Vocabulary-focused fill in the blanks"),
+                    mkItem("vocabulary", "grammar_gaps", "Fill in gaps", "Vocabulary-focused fill in the blanks"),
                 ],
             },
             {
@@ -65,7 +50,8 @@ export function CreateAssignmentsPage() {
                 title: "Grammar",
                 items: [
                     mkItem("grammar", "grammar_gaps", "Fill in gaps", "Grammar-focused fill in the blanks"),
-                    mkItem("grammar", "grammar_choose_option", "Choose an option", "Pick the correct grammar form"),
+                    mkItem("grammar", "grammar_choose_option", "Choose an option", "Pick the correct grammar form",
+                        `grammar-choose-option`),
                 ],
             },
             {
@@ -99,63 +85,28 @@ export function CreateAssignmentsPage() {
 
     const [selectedId, setSelectedId] = useState(null);
 
-    const styles = useMemo(() => {
-        return {
-            page: {
-                flex: "1 1 auto",
-                minHeight: 0,
-                overflowY: "auto",
-                overflowX: "hidden",
-                overscrollBehavior: "contain", // ✅ key
-                WebkitOverflowScrolling: "touch",
-                width: theme.createAssignments.pageW,
-                display: theme.createAssignments.pageDisplay,
-                flexDirection: theme.createAssignments.pageDirection,
-            },
-            content: {
-                width: theme.createAssignments.contentW,
-                display: theme.createAssignments.contentDisplay,
-                flexDirection: theme.createAssignments.contentDirection,
-                flex: theme.createAssignments.contentFlex,
-                minHeight: theme.createAssignments.contentMinH,
-                height: theme.pageSizeHeight,
-                overflow: 'scroll',
-            },
-        };
-    }, []);
-
     return (
-        <div style={styles.page}>
-            <div style={styles.content}>
-                <div>
-                    <h2 style={{
-                        padding: theme.layoutMetrics.pagePad,
-                        fontFamily: theme.fontFamily,
-                        fontWeight: theme.weights.title,
-                        color: theme.textDark,
-                        fontSize: theme.breadcrumbs.fontSize
-                    }}>Choose assignment type</h2>
-                </div>
-                <DynamicList>
-                    {groups.map((g) => (
-                        <RectangleGroup key={g.key} title={g.title}>
-                            {g.items.map((it) => (
-                                <ItemCard
-                                    key={it.id}
-                                    title={it.title}
-                                    subtitle={it.subtitle}
-                                    imageUrl={pickHandById(it.id)}
-                                    selected={selectedId === it.id}
-                                    selectedShift={false} // keep non-shifting per your request
-                                    onClick={() => {
-                                        setSelectedId(it.id);
-                                    }}
-                                />
-                            ))}
-                        </RectangleGroup>
-                    ))}
-                </DynamicList>
-            </div>
-        </div>
+        <Page title={"Choose assignment type"}>
+            <DynamicList>
+                {groups.map((g) => (
+                    <RectangleGroup key={g.key} title={g.title}>
+                        {g.items.map((it) => (
+                            <ItemCard
+                                key={it.id}
+                                title={it.title}
+                                subtitle={it.subtitle}
+                                imageUrl={pickHandById(it.id)}
+                                selected={selectedId === it.id}
+                                selectedShift={false} // keep non-shifting per your request
+                                onClick={() => {
+                                    setSelectedId(it.id);
+                                    navigate(it.url)
+                                }}
+                            />
+                        ))}
+                    </RectangleGroup>
+                ))}
+            </DynamicList>
+        </Page>
     );
 }

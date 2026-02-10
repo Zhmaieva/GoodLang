@@ -3,7 +3,6 @@ import React, { useMemo } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import ItemsList from "../ItemsList.jsx";
-import Breadcrumbs from "./Breadcrumbs.jsx";
 import { theme } from "../../../App.jsx";
 
 export default function TeacherDashboardLayout() {
