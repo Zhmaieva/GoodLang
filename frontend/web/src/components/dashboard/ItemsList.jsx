@@ -42,7 +42,7 @@ export default function ItemsList({
             empty: {
                 fontFamily: theme.fontFamily,
                 fontSize: theme.type.empty,
-                color: "rgba(18,18,18,0.6)",
+                color: theme.textDark,
                 padding: "0.75rem",
             },
         };
@@ -66,7 +66,7 @@ export default function ItemsList({
         <div style={{ ...styles.wrap, ...style }}>
             <div style={styles.inner}>
                 {items.length === 0 ? (
-                    <div style={styles.empty}>No items</div>
+                    <div style={styles.empty}>Nothing here</div>
                 ) : (
                     items.map((it) => (
                         <ItemCard

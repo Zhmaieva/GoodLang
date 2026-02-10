@@ -128,7 +128,8 @@ import {CreateAssignmentsPage} from "./components/dashboard/assignments/create/C
 // theme.js
 export const theme = {
     fontFamily: `"Merriweather", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`,
-
+    pageSizeHeight: '100vh',
+    pageSizeHeightRelative: '100%',
     weights: {
         normal: 500,
         title: 900,
@@ -248,7 +249,7 @@ export const theme = {
 
     // borders
     borders: {
-        card: "1px solid rgba(0,0,0,0.01)",
+        card: "1px solid rgba(0,0,0,0.1)",
         img: "1px solid rgba(0,0,0,0.08)",
     },
 
@@ -306,6 +307,206 @@ theme.emptyContent = {
     buttonTopGap: theme.spacing.gap,
     giantCtaMaxLen: 14,
 };
+
+theme.rectangleGroup = {
+    background: theme.panel?.soft || theme.surfaceSoft,
+    border: theme.borders?.card || `1px solid ${theme.border}`,
+    radius: theme.radius.card,
+
+    padY: theme.spacing.cardPadY,
+    padX: theme.spacing.cardPadX,
+    gap: theme.spacing.gap,
+
+    titleGap: theme.spacing.gap,
+    titleFontSize: "clamp(1.2rem, 1.15rem + 0.25vw, 1.5rem)",
+    titleFontWeight: theme.weights.selectedBoost,
+};
+
+// ✅ Add to theme.js (NO changes required in component once these exist)
+// Try to reuse what you already have; this only groups the “drawer/card” styling in one place.
+
+theme.mediaPreview = {
+    // behavior
+    kinds: { auto: "auto", image: "image", video: "video" },
+    phases: { hidden: "hidden", enter: "enter", exit: "exit" },
+    keyJoiner: "||",
+    fallbackMs: 220,
+
+    // responsive (keep query in theme, not in component)
+    mobileQuery: "(max-width: 760px)",
+
+    // events/keys/a11y
+    events: { keydown: "keydown" },
+    keys: { escape: "Escape" },
+    a11y: {
+        role: "dialog",
+        ariaModal: true,
+        ariaLabel: "Media preview",
+        closeLabel: "Close",
+        mediaAlt: "Preview",
+    },
+
+    // overlay (monochromous)
+    overlayStyle: {
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        background: theme.panel.none,
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "flex-start",
+        pointerEvents: "auto",
+    },
+
+    // card styles
+    cardStyles: {
+        desktop: {
+            background: theme.panel.soft,
+            border: theme.borders.card,
+            borderRadius: theme.radius.card,
+            boxSizing: "border-box",
+
+            // “drawer card” hovering above without shifting content
+            position: "fixed",
+            top: theme.layoutMetrics.pagePad,
+            right: theme.layoutMetrics.pagePad,
+
+            width: "min(38vw, 540px)",
+            maxHeight: "min(76vh, 640px)",
+            overflow: "hidden",
+
+            display: "flex",
+            flexDirection: "column",
+            gap: theme.spacing.gap,
+            padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
+        },
+        mobile: {
+            background: theme.panel.soft,
+            border: theme.borders.card,
+            borderRadius: theme.radius.card,
+            boxSizing: "border-box",
+
+            position: "fixed",
+            left: theme.layoutMetrics.pagePad,
+            right: theme.layoutMetrics.pagePad,
+            bottom: theme.layoutMetrics.pagePad,
+
+            width: "auto",
+            maxHeight: "88vh",
+            overflow: "hidden",
+
+            display: "flex",
+            flexDirection: "column",
+            gap: theme.spacing.gap,
+            padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
+        },
+    },
+
+    // motion (put transforms as strings here, not in component)
+    motionStyles: {
+        reduce: { transform: "none", transition: "none" },
+        desktop: {
+            in: {
+                transform: "translate3d(0,0,0)",
+                transition: `transform ${theme.motion.normal} ${theme.motion.ease}`,
+            },
+            out: {
+                transform: "translate3d(120%,0,0)",
+                transition: `transform ${theme.motion.normal} ${theme.motion.ease}`,
+            },
+        },
+        mobile: {
+            in: {
+                transform: "translate3d(0,0,0)",
+                transition: `transform ${theme.motion.normal} ${theme.motion.ease}`,
+            },
+            out: {
+                transform: "translate3d(0,120%,0)",
+                transition: `transform ${theme.motion.normal} ${theme.motion.ease}`,
+            },
+        },
+    },
+
+    // layout bits
+    headerStyle: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: theme.spacing.gap,
+    },
+
+    titleStyle: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.titleLineHeight,
+        color: theme.textDark,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+
+    closeSymbol: "✕",
+    closeButtonStyle: {
+        appearance: "none",
+        border: "none",
+        background: "transparent",
+        color: theme.textDark,
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.titleLineHeight,
+        cursor: "pointer",
+        padding: theme.spacing.listPad,
+        borderRadius: theme.radius.card,
+    },
+
+    mediaWrapStyle: {
+        width: "100%",
+        borderRadius: theme.radius.card,
+        overflow: "hidden",
+        border: theme.borders.card,
+        background: theme.surfaceSoft,
+        flex: "0 0 auto",
+    },
+
+    mediaStyle: {
+        display: "block",
+        width: "100%",
+        height: "auto",
+        objectFit: "cover",
+        background: theme.surfaceSoft,
+    },
+
+    media: { draggable: false },
+    video: { controls: true, playsInline: true },
+
+    textStyle: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textMutedDark,
+        overflow: "auto",
+        flex: "1 1 auto",
+    },
+
+    ctaRowStyle: {
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        gap: theme.spacing.gap,
+        flex: "0 0 auto",
+    },
+
+    // button config
+    ctaVariant: "accent",
+    ctaSizes: {
+        desktop: "regular",
+        mobile: "regular",
+    },
+};
+
 
 export default function App() {
 

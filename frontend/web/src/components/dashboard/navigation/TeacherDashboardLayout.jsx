@@ -26,15 +26,9 @@ export default function TeacherDashboardLayout() {
     const navItems = useMemo(
         () => [
             {
-                id: "/school/profile",
-                title: "My profile",
-                subtitle: "Edit profile & preferences",
-                //imageUrl: "/hand1.PNG",
-            },
-            {
                 id: "/school/create-assignment",
                 title: "Quick assignment",
-                subtitle: "Assignment in a minute",
+                subtitle: "Create less than in a minute",
                 //imageUrl: "/hand3.PNG",
             },
             {
@@ -46,8 +40,14 @@ export default function TeacherDashboardLayout() {
             {
                 id: "/school/classes",
                 title: "Classes",
-                subtitle: "Students, groups, progress",
+                subtitle: "Students, groups progress",
                 //imageUrl: "/hand2.PNG",
+            },
+            {
+                id: "/school/profile",
+                title: "My profile",
+                subtitle: "Edit profile & preferences",
+                //imageUrl: "/hand1.PNG",
             },
         ],
         []
@@ -145,12 +145,13 @@ export default function TeacherDashboardLayout() {
             },
 
             content: {
-                marginLeft: m.sidebarWidth,
+                marginLeft: theme.layoutMetrics.sidebarWidth,
                 minHeight: "100vh",
-                padding: m.pagePad,
+                padding: theme.layoutMetrics.pagePad,
                 display: "flex",
                 flexDirection: "column",
-                gap: m.contentGap,
+                gap: theme.layoutMetrics.contentGap,
+                overflow: "hidden",
             },
 
             breadcrumbRow: {
@@ -162,9 +163,9 @@ export default function TeacherDashboardLayout() {
             outletWrap: {
                 flex: 1,
                 minHeight: 0,
+                overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "stretch",
             },
 
         };
@@ -188,7 +189,7 @@ export default function TeacherDashboardLayout() {
                         <div style={styles.initials}>{initials}</div>
                         <div style={styles.teacherMeta}>
                             <div style={styles.teacherName}>{teacherName}</div>
-                            <div style={styles.teacherHint}>Teacher dashboard</div>
+                            <div style={styles.teacherHint}>English Teacher</div>
                         </div>
                     </div>
                 </div>

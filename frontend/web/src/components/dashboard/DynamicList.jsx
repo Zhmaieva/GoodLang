@@ -8,8 +8,9 @@
 import React, { useMemo } from "react";
 import { theme } from "../../App.jsx";
 import Scrollbar from "react-scrollbars-custom";
+import {AwesomeScroll} from "./AwesomeScroll.jsx";
 
-export default function BottomDynamicList({
+export default function DynamicList({
                                               items,                  // optional: array
                                               renderItem,             // optional: (item, index) => ReactNode
                                               children,               // optional: if you want to pass JSX directly
@@ -20,10 +21,10 @@ export default function BottomDynamicList({
 
     theme.bottomDynamicList = {
         // layout behavior
-        flex: "1 1 auto",
         minHeight: 0,
         width: "100%",
         justify: "flex-end",
+        height: "100%",
 
         // scrolling
         overflowY: "auto",
@@ -35,7 +36,7 @@ export default function BottomDynamicList({
 
         // paddings
         padTop: theme.spacing.gap,
-        padBottom: theme.spacing.gap,
+        padBottom: theme.spacing.gap * 4,
         padX: theme.spacing.cardPadX,
     };
 
@@ -73,6 +74,7 @@ export default function BottomDynamicList({
             content: {
                 display: "flex",
                 flexDirection: "column",
+                width: "100%",
                 gap: theme.bottomDynamicList.gap,
 
                 // keeps content visually “resting” at bottom while still scrollable
@@ -96,12 +98,13 @@ export default function BottomDynamicList({
     }, [items, renderItem, children]);
 
     return (
-        <Scrollbar
-            style={{height: "100%", flex: "1 1 auto"}}
-            noScrollX
-        >
-            <div style={styles.content}>{rendered}</div>
+        <div style={{
+            height: theme.pageSizeHeightRelative,
+        }}>
+            <AwesomeScroll>
+                <div style={styles.content}>{rendered}</div>
+            </AwesomeScroll>
+        </div>
 
-        </Scrollbar>
     );
 }
