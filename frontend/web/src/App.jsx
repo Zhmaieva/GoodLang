@@ -141,7 +141,7 @@ export const theme = {
     },
 
     radius: {
-        card: 8,
+        card: 7,
         img: 10,
     },
 
@@ -291,7 +291,7 @@ export const theme = {
     // ✅ teacher badge / avatar chip (moves sizes + borders + background)
     avatar: {
         size: 42,
-        radius: 14,
+        radius: 3,
         border: "2px solid rgba(0,0,0,0.15)",
         bg: "rgba(255,255,255,0.6)",
     },

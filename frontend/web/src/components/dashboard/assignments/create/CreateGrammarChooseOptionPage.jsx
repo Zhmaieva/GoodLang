@@ -62,7 +62,7 @@ export function CreateGrammarChooseOptionPage() {
                 flex: "1 1 auto",
                 minWidth: 0,
                 height: "90%",
-                maxWidth: "25%",
+                maxWidth: "40%",
                 minHeight: 0,
                 overflow: "hidden",
                 display: "flex",
@@ -109,7 +109,12 @@ export function CreateGrammarChooseOptionPage() {
                     <RectangleGroup style={{
                         height: "100%",
                     }} title={`Chosen rules`}>
-                        <DynamicList>
+                        <DynamicList contentStyle={{
+                            flexDirection: "row",
+                            alignItems: "flex-start",
+                            justifyContent: "flex-start",
+                            flexWrap: "wrap",
+                        }}>
                             {selectedItems.length ? (
                                 selectedItems.map((it) => (
                                     <ItemCard

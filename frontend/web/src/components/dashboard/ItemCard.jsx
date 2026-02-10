@@ -10,6 +10,7 @@ export default function ItemCard({
                                      accentHover = false,
                                      selected = false,
                                      selectedShift = true,
+                                     style = {}
                                  }) {
     const [hovered, setHovered] = useState(false);
 
@@ -129,7 +130,9 @@ export default function ItemCard({
 
     return (
         <>
-            <div>
+            <div style={{
+                ...style
+            }}>
                 <div
                     style={styles.card}
                     onMouseEnter={() => setHovered(true)}

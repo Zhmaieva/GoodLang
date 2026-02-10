@@ -38,6 +38,7 @@ export default function RectangleGroup({ title, children, style, boxStyle }) {
                 alignItems: "flex-start",
                 justifyContent: "flex-start",
                 gap: t.gap,
+                height: "100%",
 
                 padding: `${t.padY}px ${t.padX}px`,
                 borderRadius: t.radius,

@@ -84,7 +84,7 @@ export default function DynamicList({
                 paddingLeft: theme.bottomDynamicList.padX,
                 paddingRight: theme.bottomDynamicList.padX,
 
-                ...(contentStyle || {}),
+                ...contentStyle
             },
         };
     }, [contentStyle]);
@@ -101,10 +101,11 @@ export default function DynamicList({
     return (
         <div style={{
             ...style,
+            flex: "1 1 auto",
             height: theme.pageSizeHeightRelative,
         }}>
             <AwesomeScroll scrollVisible={scrollVisible}>
-                <div style={styles.content}>{rendered}</div>
+                <div style={{...styles.content, ...contentStyle}}>{rendered}</div>
             </AwesomeScroll>
         </div>
 
