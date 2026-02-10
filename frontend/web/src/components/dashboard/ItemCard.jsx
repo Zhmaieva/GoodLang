@@ -7,15 +7,13 @@ export default function ItemCard({
                                      subtitle,
                                      imageUrl,
                                      onClick,
-                                     accentHover = false,
                                      selected = false,
                                      selectedShift = true,
                                      style = {}
                                  }) {
     const [hovered, setHovered] = useState(false);
 
-    const baseBg = selected || hovered ?
-        ((accentHover && hovered && !selected || !accentHover) ? theme.accentSelected : theme.accentDarkSelected) : theme.surface;
+    const baseBg = selected ? theme.accentDark : theme.surface; //selected || hovered ? (theme.accentSelected) : theme.surface;
 
     const bgIsLight = useMemo(() => isLightColor(baseBg), [baseBg]);
 
@@ -30,7 +28,7 @@ export default function ItemCard({
     }, [hovered, selected, selectedShift]);
 
     const overlayOpacity = useMemo(() => {
-        return hovered || selected ? 1 : 0;
+        return selected ? 1 : 0;
     }, [hovered, selected]);
 
     const styles = useMemo(() => {
@@ -39,7 +37,7 @@ export default function ItemCard({
             width: selectedShift && (selected || hovered) && !theme.accessibility.reduceMotion ? "110%" : "100%",
             boxSizing: "border-box",
             borderRadius: theme.radius.card,
-            border: theme.borders.card,
+            border: (hovered || selected) ? theme.borders.cardSelected : theme.borders.card,
             cursor: "pointer",
             userSelect: "none",
             padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
@@ -56,7 +54,7 @@ export default function ItemCard({
         const overlay = {
             position: "absolute",
             inset: 0,
-            background: (accentHover && hovered && !selected || !accentHover) ? theme.accentSelected : theme.accentDarkSelected,
+            background: baseBg,
             opacity: overlayOpacity,
             pointerEvents: "none",
             transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,
@@ -121,12 +119,12 @@ export default function ItemCard({
             height: "100%",
             objectFit: theme.imgSlot.objectFit,
             display: "block",
-            filter: selected || hovered ? '' : 'grayscale(1)',
+            filter: 'grayscale(1)',
             opacity: selected || hovered ? theme.imgSlot.defaultOpacity :  theme.imgSlot.inactiveOpacity,
         };
 
         return { card, overlay, row, textCol, titleStyle, subtitleStyle, imgWrap, img };
-    }, [baseBg, overlayOpacity, titleColor, subColor, transform, selected]);
+    }, [baseBg, overlayOpacity, titleColor, subColor, transform, selected, hovered]);
 
     return (
         <>
@@ -164,7 +162,7 @@ export default function ItemCard({
                 </div>
                 {
                     selectedShift && (selected || hovered) ? (
-                        <div style={theme.images.handWrapper}>
+                        <div style={{...theme.images.handWrapper}}>
                             <img src={'/handPict.PNG'} style={theme.images.handNav}/>
                         </div>
 

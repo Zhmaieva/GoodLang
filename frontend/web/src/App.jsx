@@ -253,6 +253,7 @@ export const theme = {
     // borders
     borders: {
         card: "1px solid rgba(0,0,0,0.1)",
+        cardSelected: "1px solid rgba(0,0,0,0.9)",
         img: "1px solid rgba(0,0,0,0.08)",
     },
 

@@ -80,7 +80,7 @@ export function CreateGrammarChooseOptionPage() {
     );
 
     return (
-        <Page title={"Grammar: choose an option"}>
+        <Page title={"Choose an option (grammar): prepare assignment"}>
             <div style={styles.row}>
                 {/* LEFT: all rules */}
                 <div style={styles.left}>
@@ -108,7 +108,7 @@ export function CreateGrammarChooseOptionPage() {
                 <div style={styles.right}>
                     <RectangleGroup style={{
                         height: "100%",
-                    }} title={`Chosen rules`}>
+                        }} title={`Chosen rules`}>
                         <DynamicList contentStyle={{
                             flexDirection: "row",
                             alignItems: "flex-start",
@@ -136,16 +136,19 @@ export function CreateGrammarChooseOptionPage() {
                         </DynamicList>
                     </RectangleGroup>
 
-                    <div style={styles.footer}>
+                    <div style={{...styles.footer,
+                        paddingBottom: 24,
+                        paddingRight: 24,
+                    }}>
                         <AwesomeActionButton
-                            variant="accent"
                             size="regular"
+                            variant={"ghost"}
                             title={!selected.length ? "Select at least one rule" : "Finish creation"}
                             onClick={() => {
                                 navigate("/create-assignment/finish", {state: {selectedRules: selected}});
                             }}
                         >
-                            Finish
+                            Start sending
                         </AwesomeActionButton>
                     </div>
 

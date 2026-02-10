@@ -10,6 +10,7 @@ export function AssignmentsPage() {
             subtitle={"Create an assignment to share it with your students within a minute"}
             actionText={"Create assignment"}
             actionSymbol={'+'}
+            variant={'ghost'}
             onAction={() => {
                 navigate("/school/assignments/create-assignment");
             }}

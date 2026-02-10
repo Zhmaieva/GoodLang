@@ -10,6 +10,7 @@ export default function AwesomeActionButton({
                                                 variant = "accent",      // accent | ghost
                                                 disabled = false,
                                                 title,
+                                                style = {}
                                             }) {
     const [pressed, setPressed] = useState(false);
     const [hovered, setHovered] = useState(false);
@@ -38,8 +39,8 @@ export default function AwesomeActionButton({
         const reduceMotion = !!theme?.accessibility?.reduceMotion;
 
         const background =
-            hovered ? variant === "accent" ? theme.accentSelected : theme.accentDark :
-            variant === "accent" ? theme.accentSelected : theme.accent
+            hovered ? variant === "accent" ? theme.accentSelected : 'transparent' :
+            variant === "accent" ? theme.accentSelected : 'transparent'
 
         const color =
             variant === "accent"
@@ -60,7 +61,7 @@ export default function AwesomeActionButton({
         return {
             button: {
                 appearance: "none",
-                border: "none",
+                border: hovered ? theme.borders.cardSelected : theme.borders.card,
                 background,
                 color: disabled ? mutedColor : color,
 
@@ -137,7 +138,7 @@ export default function AwesomeActionButton({
     return (
         <button
             type="button"
-            style={styles.button}
+            style={{...styles.button, ...style}}
             onClick={handleClick}
             disabled={disabled}
             aria-disabled={disabled}

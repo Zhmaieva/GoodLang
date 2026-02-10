@@ -99,7 +99,7 @@ export function CreateAssignmentsPage() {
                                 selected={selectedId === it.id}
                                 selectedShift={false} // keep non-shifting per your request
                                 onClick={() => {
-                                    setSelectedId(it.id);
+                                    //setSelectedId(it.id);
                                     navigate(it.url)
                                 }}
                             />
