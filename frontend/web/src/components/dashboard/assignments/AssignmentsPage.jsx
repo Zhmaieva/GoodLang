@@ -1,15 +1,19 @@
-import AwesomeActionButton from "../AwesomeActionButton.jsx";
+import EmptyContent from "../EmpyContent.jsx";
+import {useNavigate} from "react-router-dom";
 
 export function AssignmentsPage() {
-    return (<>
-        <AwesomeActionButton
-            size="giant"
-            variant="accent"
-            symbol="+"
-        >
-            Create Assignment
-        </AwesomeActionButton>
+    const navigate = useNavigate();
 
+    return (<>
+        <EmptyContent
+            sourceText={"Let's get started"}
+            subtitle={"Create an assignment to share it with your students within a minute"}
+            actionText={"Create assignment"}
+            actionSymbol={'+'}
+            onAction={() => {
+                navigate("/school/assignments/create-assignment");
+            }}
+        />
 
     </>);
 }

@@ -12,11 +12,11 @@ export default function ItemCard({
                                  }) {
     const [hovered, setHovered] = useState(false);
 
-    const baseBg = selected ? theme.accent : theme.surface;
+    const baseBg = selected || hovered ? theme.accentSelected : theme.surface;
     const bgIsLight = useMemo(() => isLightColor(baseBg), [baseBg]);
 
-    const titleColor = theme.textDark
-    const subColor = theme.textMutedDark
+    const titleColor = bgIsLight ? theme.textDark : theme.textOnColor;
+    const subColor = bgIsLight ? theme.textMutedDark : theme.textMutedOnColor;
 
     const transform = useMemo(() => {
         if (!selectedShift || theme.accessibility.reduceMotion) return "translateX(0) scaleX(1)";
@@ -52,7 +52,7 @@ export default function ItemCard({
         const overlay = {
             position: "absolute",
             inset: 0,
-            background: theme.hoverDarken,
+            background: theme.accentSelected,
             opacity: overlayOpacity,
             pointerEvents: "none",
             transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,
@@ -117,7 +117,7 @@ export default function ItemCard({
             height: "100%",
             objectFit: theme.imgSlot.objectFit,
             display: "block",
-            filter: 'grayscale(1)',
+            filter: selected || hovered ? '' : 'grayscale(1)',
             opacity: selected || hovered ? theme.imgSlot.defaultOpacity :  theme.imgSlot.inactiveOpacity,
         };
 
@@ -125,34 +125,46 @@ export default function ItemCard({
     }, [baseBg, overlayOpacity, titleColor, subColor, transform, selected]);
 
     return (
-        <div
-            style={styles.card}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            onClick={onClick}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") onClick?.(e);
-            }}
-        >
-            <div style={styles.overlay} />
-            <div style={styles.row}>
-                <div style={styles.textCol}>
-                    <div style={styles.titleStyle} title={title}>
-                        {title}
-                    </div>
-                    <div style={styles.subtitleStyle} title={subtitle}>
-                        {subtitle}
+        <>
+            <div>
+                <div
+                    style={styles.card}
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+                    onClick={onClick}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") onClick?.(e);
+                    }}
+                >
+                    <div style={styles.overlay}/>
+                    <div style={styles.row}>
+                        <div style={styles.textCol}>
+                            <div style={styles.titleStyle} title={title}>
+                                {title}
+                            </div>
+                            <div style={styles.subtitleStyle} title={subtitle}>
+                                {subtitle}
+                            </div>
+                        </div>
+
+                        {imageUrl ? (
+                            <div style={styles.imgWrap} aria-hidden="true">
+                                <img src={imageUrl} alt="" style={styles.img}/>
+                            </div>
+                        ) : null}
                     </div>
                 </div>
+                {
+                    selectedShift && (selected || hovered) ? (
+                        <div style={theme.images.handWrapper}>
+                            <img src={'/handPict.PNG'} style={theme.images.handNav}/>
+                        </div>
 
-                {imageUrl ? (
-                    <div style={styles.imgWrap} aria-hidden="true">
-                        <img src={imageUrl} alt="" style={styles.img} />
-                    </div>
-                ) : null}
+                    ) : null
+                }
             </div>
-        </div>
+        </>
     );
 }

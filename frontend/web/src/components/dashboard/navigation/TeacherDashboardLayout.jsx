@@ -29,19 +29,25 @@ export default function TeacherDashboardLayout() {
                 id: "/school/profile",
                 title: "My profile",
                 subtitle: "Edit profile & preferences",
-                imageUrl: "/hand1.PNG",
+                //imageUrl: "/hand1.PNG",
             },
             {
-                id: "/school/classes",
-                title: "Classes",
-                subtitle: "Students, groups, progress",
-                imageUrl: "/hand2.PNG",
+                id: "/school/create-assignment",
+                title: "Quick assignment",
+                subtitle: "Assignment in a minute",
+                //imageUrl: "/hand3.PNG",
             },
             {
                 id: "/school/assignments",
                 title: "Assignments",
                 subtitle: "Create & track assignments",
-                imageUrl: "/hand3.PNG",
+                //imageUrl: "/hand3.PNG",
+            },
+            {
+                id: "/school/classes",
+                title: "Classes",
+                subtitle: "Students, groups, progress",
+                //imageUrl: "/hand2.PNG",
             },
         ],
         []
@@ -156,7 +162,11 @@ export default function TeacherDashboardLayout() {
             outletWrap: {
                 flex: 1,
                 minHeight: 0,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
             },
+
         };
     }, []);
 
@@ -185,9 +195,9 @@ export default function TeacherDashboardLayout() {
             </aside>
 
             <main style={styles.content}>
-                <div style={styles.breadcrumbRow}>
-                    <Breadcrumbs basePrefix={activeBaseRoute} />
-                </div>
+                {/*<div style={styles.breadcrumbRow}>*/}
+                {/*    <Breadcrumbs basePrefix={activeBaseRoute} />*/}
+                {/*</div>*/}
 
                 <div style={styles.outletWrap}>
                     <Outlet />

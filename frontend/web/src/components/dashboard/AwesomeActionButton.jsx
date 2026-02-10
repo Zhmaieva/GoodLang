@@ -37,7 +37,9 @@ export default function AwesomeActionButton({
 
         const reduceMotion = !!theme?.accessibility?.reduceMotion;
 
-        const background = variant === "accent" ? theme.accent : "transparent";
+        const background =
+            hovered ? variant === "accent" ? theme.accentSelected : theme.accentDark :
+            variant === "accent" ? theme.accentSelected : theme.accent
 
         const color =
             variant === "accent"
@@ -88,9 +90,6 @@ export default function AwesomeActionButton({
 
                 userSelect: "none",
                 outline: "none",
-
-                // Use existing theme ring (no new rgba / opacity literals)
-                ...(focused && !disabled ? { boxShadow: theme.breadcrumbs.focusRing } : null),
             },
 
             iconWrap: {

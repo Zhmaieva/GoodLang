@@ -92,9 +92,9 @@ export default function Breadcrumbs({ basePrefix }) {
                 opacity: theme.breadcrumbs.linkOpacity,
                 textDecoration: "none",
                 whiteSpace: "nowrap",
-                maxWidth: theme.breadcrumbs.maxLabelWidth,
                 overflow: "hidden",
                 textOverflow: "ellipsis",
+                textAlign: "center",
                 cursor: "pointer",
 
                 transform: theme.breadcrumbs.idleScale,
@@ -108,7 +108,7 @@ export default function Breadcrumbs({ basePrefix }) {
                 opacity: theme.breadcrumbs.linkHoverOpacity,
                 textDecorationThickness: theme.breadcrumbs.underlineThickness,
                 textUnderlineOffset: theme.breadcrumbs.underlineOffset,
-                transform: reduceMotion ? theme.breadcrumbs.idleScale : theme.breadcrumbs.hoverScale,
+                // transform: reduceMotion ? theme.breadcrumbs.idleScale : theme.breadcrumbs.hoverScale,
             },
 
             linkFocus: {

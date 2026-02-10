@@ -123,6 +123,7 @@ import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.
 import {AssignmentsPage} from "./components/dashboard/assignments/AssignmentsPage.jsx";
 import {ClassesPage} from "./components/dashboard/classes/ClassesPage.jsx";
 import {ProfilePage} from "./components/dashboard/profile/ProfilePage.jsx";
+import {CreateAssignmentsPage} from "./components/dashboard/assignments/create/CreateAssignmentPage.jsx";
 
 // theme.js
 export const theme = {
@@ -180,11 +181,37 @@ export const theme = {
     accent: "#a6a6a6",
     accentDark: "#656565",
 
+    accentSelected: "#ff6138",
+    accentDarkSelected: "#d74e2a",
+
     // text
-    textDark: "#121212",
-    textMutedDark: "rgba(18,18,18,0.72)",
+    textDark: "#4e4646",
+    textMutedDark: "rgba(41,37,37,0.72)",
     textOnColor: "#ffffff",
     textMutedOnColor: "rgba(255,255,255,0.86)",
+
+    images: {
+        handWrapper: {
+            height: '0',
+            width: '0'
+        },
+        handNav: {
+            position: 'relative',
+            overflow: 'visible',
+            height: 120,
+            transform: `rotate(270deg) scaleY(-1)`,
+            top: -110,
+            left: -60,
+        },
+        handEmptyContent: {
+            position: 'fixed',
+            overflow: 'visible',
+            height: 400,
+            transform: `rotate(180) scaleY(-1)`,
+            top: '70vh',
+            left: '55vw',
+        }
+    },
 
     // layout defaults (so you can reuse in other components)
     layout: {
@@ -212,7 +239,6 @@ export const theme = {
         idleScale: "scale(1)",
         hoverTransition: "140ms",
         focusTransition: "0ms", // instant if you prefer; or reuse hoverTransition
-        focusRing: "0 0 0 3px rgba(255,97,56,0.35)", // accent ring
         focusRadius: "6px",
         underlineThickness: "2px",
         underlineOffset: "3px",
@@ -274,6 +300,13 @@ export const theme = {
     },
 };
 
+theme.emptyContent = {
+    maxWidth: "65%",
+    stackGap: theme.spacing.gap,
+    buttonTopGap: theme.spacing.gap,
+    giantCtaMaxLen: 14,
+};
+
 export default function App() {
 
     const navigate = useNavigate();
@@ -293,6 +326,11 @@ export default function App() {
     });
 
     const ruleTheme = theme;
+
+    const createAssignmentRoute = (
+        <Route path="create-assignment" element={<CreateAssignmentsPage />}>
+        </Route>
+    );
 
     return (
         <section style={{overflowX: 'hidden'}}>
@@ -322,10 +360,10 @@ export default function App() {
                     <Route index element={<AssignmentsPage />} />
                     <Route path="profile" element={<ProfilePage />} />
                     <Route path="classes" element={<ClassesPage />} />
+                    {{...createAssignmentRoute}}
                     <Route path="assignments" element={<AssignmentsPage />}>
-                        <Route path="classes" element={<ClassesPage />}>
-                            <Route path="profile" element={<ProfilePage />} />
-                        </Route>
+                    </Route>
+                    <Route path="assignments/create-assignment" element={<CreateAssignmentsPage />}>
                     </Route>
                 </Route>
 
