@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { theme } from "../../App.jsx";
 
-export default function Page({ title, children }) {
+export default function Page({ title, subtitle, children }) {
 
     const styles = useMemo(() => {
         theme.createAssignments = {
@@ -53,11 +53,26 @@ export default function Page({ title, children }) {
                 <div>
                     <h2 style={{
                         padding: theme.layoutMetrics.pagePad,
+                        paddingLeft: theme.layoutMetrics.pagePad * 2,
                         fontFamily: theme.fontFamily,
                         fontWeight: theme.weights.title,
                         color: theme.textDark,
-                        fontSize: theme.breadcrumbs.fontSize
+                        fontSize: theme.breadcrumbs.fontSize,
+                        marginBottom: 0,
+                        paddingBottom: 0
                     }}>{title}</h2>
+                    {
+                        subtitle &&
+                        <h3 style={{
+                            marginTop: 0,
+                            paddingLeft: theme.layoutMetrics.pagePad * 2,
+                            fontFamily: theme.fontFamily,
+                            fontWeight: theme.weights.normal,
+                            opacity: 0.75,
+                            color: theme.textDark,
+                            fontSize: theme.type.title
+                        }}>{subtitle}</h3>
+                    }
                 </div>
                 {children}
             </div>

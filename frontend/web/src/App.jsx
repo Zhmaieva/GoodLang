@@ -135,6 +135,7 @@ export const theme = {
     pageSizeHeightRelative: '100%',
     weights: {
         normal: 500,
+        thin: 200,
         title: 900,
         selectedBoost: 950,
         subtitleSelected: 650,
@@ -282,7 +283,7 @@ export const theme = {
     // ✅ layout metrics (moves SIDEBAR_WIDTH / paddings / gaps / heights into theme)
     layoutMetrics: {
         sidebarWidth: 300,
-        pagePad: 16,
+        pagePad: 14,
         sidebarPad: 16,
         sidebarGap: 16,
         contentGap: 12,

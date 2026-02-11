@@ -14,19 +14,26 @@ import Input from "../../Input.jsx";
 export function CreateGrammarChooseOptionPage() {
     const navigate = useNavigate();
     const [selected, setSelected] = useState([]);
+    const [filter, setFilter] = useState("");
 
     const groups = useMemo(() => {
         const levelOrder = ["A1", "A2", "B1", "B2"];
         return levelOrder.map((level) => ({
             key: level,
             title: level,
-            items: (LEVEL_RULES[level] || []).map((ruleId) => ({
+            items: (LEVEL_RULES[level] || [])
+                .filter((ruleId) => {
+                    if (!filter)
+                        return true;
+                    const name = RULE_LABELS[ruleId] || ruleId;
+                    return name.toLowerCase().includes(filter.toLowerCase());
+                }).map((ruleId) => ({
                 id: ruleId,
                 title: RULE_LABELS[ruleId] || ruleId,
                 subtitle: RULE_DESCRIPTIONS[ruleId] ? `"${RULE_DESCRIPTIONS[ruleId]}"` : "",
             })),
         }));
-    }, []);
+    }, [filter]);
 
     const selectedItems = useMemo(() => {
         const map = new Map();
@@ -99,28 +106,31 @@ export function CreateGrammarChooseOptionPage() {
     );
 
     return (
-        <Page title={"Choose an option (grammar): prepare assignment"}>
+        <Page title={"Choose an option (grammar)"} subtitle={"Select grammar rules to use in the assignment"}>
             <div style={styles.row}>
                 {/* LEFT: all rules */}
                 <div style={styles.left}>
                     <div style={{
                         paddingLeft: theme.bottomDynamicList.padX * 2,
-                        marginBottom: theme.bottomDynamicList.padBottom,
+                        marginTop: theme.bottomDynamicList.padBottom,
+                        paddingBottom: theme.bottomDynamicList.padTop,
                         width: '80%'
                     }}>
                         <Input
-                            placeholder={`Find grammar rule: i.e. "1st conditional"`}
-                            mode="email"
+                            placeholder={`Search a grammar rule: i.e. "1st conditional"`}
+                            mode="raw"
                             charLimit={120}
-                            value={''}
-                            onChange={() => {
-
+                            value={filter}
+                            onChange={(value) => {
+                                setFilter(value);
                             }}
                         />
                     </div>
 
                     <DynamicList>
-                        {groups.map((g) => (
+                        {groups.filter((g) => {
+                            return g.items?.length > 0;
+                        }).map((g) => (
                             <RectangleGroup key={g.key} title={g.title}>
                                 {g.items.map((it) => (
                                     <ItemCard

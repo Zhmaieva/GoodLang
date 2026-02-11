@@ -9,7 +9,7 @@
 // - full width of container
 // - parent can pass style overrides (wrapperStyle, inputStyle, labelStyle, clearStyle)
 
-import React, { useMemo } from "react";
+import React, {useEffect, useMemo} from "react";
 import { theme } from "../../App.jsx";
 
 function mergeStyle(a, b) {
@@ -45,7 +45,11 @@ export default function Input({
                               }) {
     const t = theme.input;
 
-    const val = value !== undefined ? String(value ?? "") : undefined;
+    const [val, setVal] = React.useState('');
+
+    useEffect(() => {
+        setVal(value !== undefined ? String(value ?? "") : undefined);
+    }, [value])
 
     const computed = useMemo(() => {
         return {
@@ -83,6 +87,13 @@ export default function Input({
                     ...t.clearBtn,
                     opacity: disabled ? t.clearBtnDisabledOpacity : t.clearBtn.opacity,
                     pointerEvents: disabled ? "none" : t.clearBtn.pointerEvents,
+                },
+                {
+                    position: "relative",
+                    right: '1rem',
+                    bottom: '.5rem',
+                    fontWeight: theme.weights.thin,
+                    fontSize: theme.breadcrumbs.fontSize,
                 },
                 clearStyle
             ),
@@ -124,31 +135,38 @@ export default function Input({
         <div style={computed.wrap}>
             <div style={computed.labelRow}>
                 <div style={computed.label}>{title}</div>
-
-                <button
-                    type="button"
-                    style={computed.clearBtn}
-                    onClick={handleClear}
-                    disabled={disabled || !showClear}
-                    aria-label={t.a11y?.clearLabel || "Clear input"}
-                    title={t.a11y?.clearLabel || "Clear"}
-                >
-                    {t.clearSymbol}
-                </button>
             </div>
 
-            <input
-                value={val !== undefined ? currentValue : undefined}
-                defaultValue={val === undefined ? currentValue : undefined}
-                onChange={handleChange}
-                placeholder={placeholder}
-                disabled={disabled}
-                style={computed.input}
-                aria-label={ariaLabel || title || placeholder || (t.a11y?.inputLabel || "Input")}
-                autoComplete={mode === "email" ? (t.autoCompleteEmail || "email") : (t.autoCompleteRaw || "off")}
-                inputMode={mode === "email" ? (t.inputModeEmail || "email") : undefined}
-                type={mode === "email" ? (t.typeEmail || "email") : (t.typeRaw || "text")}
-            />
+            <div style={{
+                display: "flex",
+            }}>
+                <input
+                    value={val !== undefined ? currentValue : undefined}
+                    defaultValue={val === undefined ? currentValue : undefined}
+                    onChange={handleChange}
+                    placeholder={placeholder}
+                    disabled={disabled}
+                    style={computed.input}
+                    aria-label={ariaLabel || title || placeholder || (t.a11y?.inputLabel || "Input")}
+                    autoComplete={mode === "email" ? (t.autoCompleteEmail || "email") : (t.autoCompleteRaw || "off")}
+                    inputMode={mode === "email" ? (t.inputModeEmail || "email") : undefined}
+                    type={mode === "email" ? (t.typeEmail || "email") : (t.typeRaw || "text")}
+                />
+                <div style={{
+                    height: 0,
+                }}>
+                    <button
+                        type="button"
+                        style={computed.clearBtn}
+                        onClick={handleClear}
+                        disabled={disabled || !showClear}
+                        aria-label={t.a11y?.clearLabel || "Clear input"}
+                        title={t.a11y?.clearLabel || "Clear"}
+                    >
+                        {t.clearSymbol}
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }

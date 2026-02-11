@@ -1,5 +1,5 @@
 // TeacherDashboardLayout.jsx — FULL DROP-IN (NO NAVBAR BACKGROUND + AUTONOMOUS BREADCRUMBS, THEME-DRIVEN)
-import React, { useMemo } from "react";
+import React, {useEffect, useMemo} from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import ItemsList from "../ItemsList.jsx";
@@ -9,6 +9,10 @@ export default function TeacherDashboardLayout() {
     const { teacher } = useTeacherDashboard();
     const navigate = useNavigate();
     const location = useLocation();
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+    })
 
     const teacherName =
         teacher?.displayName ||

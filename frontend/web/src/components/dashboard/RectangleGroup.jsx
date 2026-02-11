@@ -29,6 +29,7 @@ export default function RectangleGroup({ title, children, style, boxStyle }) {
                 lineHeight: theme.type.titleLineHeight,
                 color: theme.textDark,
                 margin: 0,
+                paddingLeft: theme.spacing.cardPadX,
             },
 
             box: {
