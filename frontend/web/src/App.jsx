@@ -511,6 +511,134 @@ theme.mediaPreview = {
     },
 };
 
+// theme.js — add at the bottom (or near other page presets)
+theme.createGrammarChooseOption = {
+    // layout
+    rowGap: theme.spacing?.gap ?? 14, // was: theme.spacing?.gap ?? 14
+    leftWidth: "60%",                // was: "60%"
+    rightMaxWidth: "40%",            // was: "40%"
+    rightHeight: "90%",              // was: "90%"
+
+    // footer spacing
+    footerPadTop: 12,                // was: 12
+    footerPadBottom: 24,             // was: 24
+    footerPadRight: 24,              // was: 24
+
+    // chosen group
+    chosenGroupHeight: "100%",       // was: "100%"
+
+    // chosen list layout
+    chosenList: {
+        flexDirection: "row",
+        alignItems: "flex-start",
+        justifyContent: "flex-start",
+        flexWrap: "wrap",
+    },
+
+    // empty state
+    emptyOpacity: 0.75,              // was: 0.75
+    emptyPad: 10,                    // was: 10
+
+    // misc layout guards
+    full: "100%",                    // used for height/width where you had "100%"
+    minH0: 0,                        // used for minHeight: 0
+};
+
+theme.input = {
+    width: "100%",
+    minWidth: 0,
+    display: "flex",
+    flexDirection: "column",
+    gap: theme.spacing.gap,
+
+    // label row
+    labelRow: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: theme.spacing.gap,
+    },
+
+    // text styles (reuse your existing tokens)
+    label: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textDark,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+
+    // input field styles (bottom line look)
+    input: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.titleLineHeight,
+        color: theme.textDark,
+
+        background: "transparent",
+        border: "none",
+        outline: "none",
+        borderBottom: theme.borders.card,
+
+        padding: `${theme.spacing.listPad}px 0px`,
+        boxSizing: "border-box",
+    },
+
+    // clear button
+    clearSymbol: "×",
+    clearBtn: {
+        appearance: "none",
+        border: "none",
+        background: "transparent",
+        cursor: "pointer",
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.titleLineHeight,
+        color: theme.textMutedDark,
+        padding: 0,
+        opacity: 1,
+        pointerEvents: "auto",
+    },
+    clearBtnDisabledOpacity: 0,
+
+    // input behavior tokens (still theme-owned)
+    typeRaw: "text",
+    typeEmail: "email",
+    inputModeEmail: "email",
+    autoCompleteEmail: "email",
+    autoCompleteRaw: "off",
+
+    a11y: {
+        clearLabel: "Clear",
+        inputLabel: "Input",
+    },
+};
+
+theme.bottomDynamicList = {
+    // layout behavior
+    minHeight: 0,
+    width: "100%",
+    justify: "flex-end",
+    height: "100%",
+
+    // scrolling
+    overflowY: "auto",
+    overflowX: "hidden",
+
+    // spacing
+    topMargin: theme.spacing.gap,
+    gap: theme.spacing.gap,
+
+    // paddings
+    padTop: theme.spacing.gap,
+    padBottom: theme.spacing.gap * 4,
+    padX: theme.spacing.cardPadX,
+};
 
 export default function App() {
 

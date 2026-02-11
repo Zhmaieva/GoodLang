@@ -8,7 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 import { LEVEL_RULES, RULE_LABELS } from "../../../../utils/rules.js";
 import { RULE_DESCRIPTIONS } from "../../../../utils/ruleDescriptions.js";
-import {theme} from "../../../../App.jsx";
+import { theme } from "../../../../App.jsx";
+import Input from "../../Input.jsx";
 
 export function CreateGrammarChooseOptionPage() {
     const navigate = useNavigate();
@@ -37,22 +38,24 @@ export function CreateGrammarChooseOptionPage() {
         setSelected((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
     };
 
+    const t = theme.createGrammarChooseOption;
+
     const styles = useMemo(
         () => ({
             row: {
                 display: "flex",
-                gap: theme.spacing?.gap ?? 14,
-                width: "100%",
-                height: "100%",
-                minHeight: 0,
+                gap: t.rowGap,
+                width: t.full,
+                height: t.full,
+                minHeight: t.minH0,
                 overflow: "hidden",
             },
 
             left: {
-                width: "60%",
-                minWidth: 0,
-                height: "100%",
-                minHeight: 0,
+                width: t.leftWidth,
+                minWidth: t.minH0,
+                height: t.full,
+                minHeight: t.minH0,
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
@@ -60,10 +63,10 @@ export function CreateGrammarChooseOptionPage() {
 
             right: {
                 flex: "1 1 auto",
-                minWidth: 0,
-                height: "90%",
-                maxWidth: "40%",
-                minHeight: 0,
+                minWidth: t.minH0,
+                height: t.rightHeight,
+                maxWidth: t.rightMaxWidth,
+                minHeight: t.minH0,
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
@@ -73,10 +76,26 @@ export function CreateGrammarChooseOptionPage() {
                 flex: "0 0 auto",
                 display: "flex",
                 justifyContent: "flex-end",
-                paddingTop: 12,
+                paddingTop: t.footerPadTop,
+            },
+
+            footerInner: {
+                paddingBottom: t.footerPadBottom,
+                paddingRight: t.footerPadRight,
+            },
+
+            chosenGroup: {
+                height: t.chosenGroupHeight,
+            },
+
+            chosenList: t.chosenList,
+
+            empty: {
+                opacity: t.emptyOpacity,
+                padding: t.emptyPad,
             },
         }),
-        []
+        [t]
     );
 
     return (
@@ -84,6 +103,22 @@ export function CreateGrammarChooseOptionPage() {
             <div style={styles.row}>
                 {/* LEFT: all rules */}
                 <div style={styles.left}>
+                    <div style={{
+                        paddingLeft: theme.bottomDynamicList.padX * 2,
+                        marginBottom: theme.bottomDynamicList.padBottom,
+                        width: '80%'
+                    }}>
+                        <Input
+                            placeholder={`Find grammar rule: i.e. "1st conditional"`}
+                            mode="email"
+                            charLimit={120}
+                            value={''}
+                            onChange={() => {
+
+                            }}
+                        />
+                    </div>
+
                     <DynamicList>
                         {groups.map((g) => (
                             <RectangleGroup key={g.key} title={g.title}>
@@ -106,15 +141,8 @@ export function CreateGrammarChooseOptionPage() {
 
                 {/* RIGHT: selected rules + bottom button */}
                 <div style={styles.right}>
-                    <RectangleGroup style={{
-                        height: "100%",
-                        }} title={`Chosen rules`}>
-                        <DynamicList contentStyle={{
-                            flexDirection: "row",
-                            alignItems: "flex-start",
-                            justifyContent: "flex-start",
-                            flexWrap: "wrap",
-                        }}>
+                    <RectangleGroup style={styles.chosenGroup} title={`Chosen grammar`}>
+                        <DynamicList contentStyle={styles.chosenList}>
                             {selectedItems.length ? (
                                 selectedItems.map((it) => (
                                     <ItemCard
@@ -125,33 +153,29 @@ export function CreateGrammarChooseOptionPage() {
                                         imageUrl={undefined}
                                         selected={true}
                                         selectedShift={false}
-                                        onClick={() => toggle(it.id)} // ✅ click here unselects
+                                        onClick={() => toggle(it.id)}
                                     />
                                 ))
                             ) : (
-                                <div style={{opacity: 0.75, padding: 10}}>
+                                <div style={styles.empty}>
                                     Select rules on the left to include them here.
                                 </div>
                             )}
                         </DynamicList>
                     </RectangleGroup>
 
-                    <div style={{...styles.footer,
-                        paddingBottom: 24,
-                        paddingRight: 24,
-                    }}>
+                    <div style={{ ...styles.footer, ...styles.footerInner }}>
                         <AwesomeActionButton
                             size="regular"
                             variant={"ghost"}
                             title={!selected.length ? "Select at least one rule" : "Finish creation"}
                             onClick={() => {
-                                navigate("/create-assignment/finish", {state: {selectedRules: selected}});
+                                navigate("/create-assignment/finish", { state: { selectedRules: selected } });
                             }}
                         >
                             Start sending
                         </AwesomeActionButton>
                     </div>
-
                 </div>
             </div>
         </Page>

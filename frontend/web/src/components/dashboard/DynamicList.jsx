@@ -20,27 +20,6 @@ export default function DynamicList({
                                               ariaLabel = "List",
                                           }) {
 
-    theme.bottomDynamicList = {
-        // layout behavior
-        minHeight: 0,
-        width: "100%",
-        justify: "flex-end",
-        height: "100%",
-
-        // scrolling
-        overflowY: "auto",
-        overflowX: "hidden",
-
-        // spacing
-        topMargin: theme.spacing.gap,
-        gap: theme.spacing.gap,
-
-        // paddings
-        padTop: theme.spacing.gap,
-        padBottom: theme.spacing.gap * 4,
-        padX: theme.spacing.cardPadX,
-    };
-
     const styles = useMemo(() => {
         return {
             wrap: {
@@ -99,11 +78,22 @@ export default function DynamicList({
     }, [items, renderItem, children]);
 
     return (
-        <div style={{
+        <div className={'dynamic-list'} style={{
             ...style,
             flex: "1 1 auto",
             height: theme.pageSizeHeightRelative,
         }}>
+            <style>
+                {
+                    `
+                       .dynamic-list {
+                            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+                            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+                       }
+            `
+                }
+
+            </style>
             <AwesomeScroll scrollVisible={scrollVisible}>
                 <div style={{...styles.content, ...contentStyle}}>{rendered}</div>
             </AwesomeScroll>
