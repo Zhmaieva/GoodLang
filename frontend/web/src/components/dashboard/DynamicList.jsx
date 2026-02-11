@@ -60,7 +60,6 @@ export default function DynamicList({
                 // keeps content visually “resting” at bottom while still scrollable
                 paddingTop: theme.bottomDynamicList.padTop,
                 paddingBottom: theme.bottomDynamicList.padBottom,
-                paddingLeft: theme.bottomDynamicList.padX,
                 paddingRight: theme.bottomDynamicList.padX,
 
                 ...contentStyle

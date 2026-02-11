@@ -114,6 +114,7 @@ export default function TeacherDashboardLayout() {
                 height: theme.avatar.size,
                 borderRadius: theme.avatar.radius,
                 border: theme.avatar.border,
+                color: theme.surface,
                 background: theme.avatar.bg,
                 display: "flex",
                 alignItems: theme.layout.rowAlign,

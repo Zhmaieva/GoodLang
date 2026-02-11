@@ -10,11 +10,13 @@ import { LEVEL_RULES, RULE_LABELS } from "../../../../utils/rules.js";
 import { RULE_DESCRIPTIONS } from "../../../../utils/ruleDescriptions.js";
 import { theme } from "../../../../App.jsx";
 import Input from "../../Input.jsx";
+import NumberSlider from "../../NumberSlider.jsx";
 
 export function CreateGrammarChooseOptionPage() {
     const navigate = useNavigate();
     const [selected, setSelected] = useState([]);
     const [filter, setFilter] = useState("");
+    const [tasksSelected, setTasksSelected] = useState(5);
 
     const groups = useMemo(() => {
         const levelOrder = ["A1", "A2", "B1", "B2"];
@@ -22,12 +24,7 @@ export function CreateGrammarChooseOptionPage() {
             key: level,
             title: level,
             items: (LEVEL_RULES[level] || [])
-                .filter((ruleId) => {
-                    if (!filter)
-                        return true;
-                    const name = RULE_LABELS[ruleId] || ruleId;
-                    return name.toLowerCase().includes(filter.toLowerCase());
-                }).map((ruleId) => ({
+                .map((ruleId) => ({
                 id: ruleId,
                 title: RULE_LABELS[ruleId] || ruleId,
                 subtitle: RULE_DESCRIPTIONS[ruleId] ? `"${RULE_DESCRIPTIONS[ruleId]}"` : "",
@@ -99,7 +96,6 @@ export function CreateGrammarChooseOptionPage() {
 
             empty: {
                 opacity: t.emptyOpacity,
-                padding: t.emptyPad,
             },
         }),
         [t]
@@ -127,8 +123,17 @@ export function CreateGrammarChooseOptionPage() {
                         />
                     </div>
 
-                    <DynamicList>
+                    <DynamicList style={{
+                        paddingLeft: theme.spacing.cardPadX,
+                    }}>
                         {groups.filter((g) => {
+                            if (!filter)
+                                return true;
+                            g.items = g.items?.filter(id => {
+                                const name = RULE_LABELS[id] || id;
+                                return name?.title?.toLowerCase().includes(filter.toLowerCase());
+                            }) || [];
+
                             return g.items?.length > 0;
                         }).map((g) => (
                             <RectangleGroup key={g.key} title={g.title}>
@@ -156,6 +161,7 @@ export function CreateGrammarChooseOptionPage() {
                             {selectedItems.length ? (
                                 selectedItems.map((it) => (
                                     <ItemCard
+                                        variant={'minimal'}
                                         accentHover
                                         key={`chosen:${it.id}`}
                                         title={it.title}
@@ -174,6 +180,21 @@ export function CreateGrammarChooseOptionPage() {
                         </DynamicList>
                     </RectangleGroup>
 
+                    <NumberSlider
+                        value={tasksSelected}
+                        onChange={(value) => {
+                            setTasksSelected(value);
+                        }}
+                        min={1}
+                        max={30}
+                        step={1}
+                        wordSingular="task"
+                        wordPlural="tasks"
+                        postText="in the assignment"
+                        subtitle="Pick how many tasks students will receive."
+                    />
+
+
                     <div style={{ ...styles.footer, ...styles.footerInner }}>
                         <AwesomeActionButton
                             size="regular"
@@ -183,7 +204,7 @@ export function CreateGrammarChooseOptionPage() {
                                 navigate("/create-assignment/finish", { state: { selectedRules: selected } });
                             }}
                         >
-                            Start sending
+                            Save and share with students
                         </AwesomeActionButton>
                     </div>
                 </div>

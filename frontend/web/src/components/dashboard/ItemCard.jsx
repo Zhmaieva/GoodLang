@@ -5,6 +5,7 @@ import { isLightColor } from "../../utils/uiUtils.js";
 export default function ItemCard({
                                      title,
                                      subtitle,
+                                     variant = 'regular', // regular | minimal
                                      imageUrl,
                                      onClick,
                                      selected = false,
@@ -75,7 +76,7 @@ export default function ItemCard({
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            height: theme.sizes.img,
+            height: variant === 'minimal' ? 'initial' : theme.sizes.img,
             gap: "0.25rem",
         };
 
@@ -148,14 +149,17 @@ export default function ItemCard({
                             <div style={styles.titleStyle} title={title}>
                                 {title}
                             </div>
-                            <div style={styles.subtitleStyle} title={subtitle}>
-                                {subtitle}
-                            </div>
+                            {
+                                variant !== 'minimal' &&
+                                <div style={styles.subtitleStyle} title={subtitle}>
+                                    {subtitle}
+                                </div>
+                            }
                         </div>
 
                         {imageUrl ? (
                             <div style={styles.imgWrap} aria-hidden="true">
-                                <img src={imageUrl} alt="" style={styles.img}/>
+                            <img src={imageUrl} alt="" style={styles.img}/>
                             </div>
                         ) : null}
                     </div>
