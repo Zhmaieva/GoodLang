@@ -719,7 +719,7 @@ export function apiStudentTaskSets({ limit = 10, cursor } = {}) {
  * GET /schools/task-sets/:taskSetId/tasks
  * Teacher gets all tasks in a set
  */
-export function apiTeacherTaskSetTasks(taskSetId) {
+export function apiTeacherTaskSetTasks({taskSetId}) {
     const id = String(taskSetId ?? "").trim();
     if (!id) throw new Error("Missing taskSetId");
     return jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/tasks`);
@@ -789,6 +789,7 @@ export function apiRecommendedPreview({ studentIds, seed, numberOfTasksPerStuden
  */
 export function apiBuildTaskSet({
                                     taskMode,
+                                    title,
                                     ruleIds,
                                     numberOfTasks = 10,
                                     seed,
@@ -801,6 +802,7 @@ export function apiBuildTaskSet({
     const qs = new URLSearchParams();
 
     qs.set("taskMode", taskMode);
+    qs.set("title", title);
     qs.set(
         "ruleIds",
         Array.isArray(ruleIds)

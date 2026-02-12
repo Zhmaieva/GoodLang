@@ -440,26 +440,30 @@ export async function getAllTasksFromTaskSetByTeacher({ teacherId, taskSetId }) 
 
     const setObjId = toObjectIdStrict(taskSetId, "taskSetId");
 
-    const set = await db.collection("good_lang_task_sets").findOne({ _id: setObjId, teacherId: teacherKey });
+    const set = await db.collection("good_lang_task_sets").findOne({ _id: setObjId, teacherId: teacherKey }, { projection: { title: 1}});
     if (!set) return [];
 
     const tasks = await db
         .collection("good_lang_tasks")
-        .find({ taskSetId: setObjId }, { projection: { taskOrderNumber: 1, taskType: 1, ruleIds: 1, textToTranslate: 1, options: 1, correctAnswer: 1, tipIfWrong: 1 } })
+        .find({ taskSetId: setObjId }, { projection: { title: 1, taskOrderNumber: 1, taskType: 1, ruleIds: 1, textToTranslate: 1, options: 1, correctAnswer: 1, tipIfWrong: 1 } })
         .sort({ taskOrderNumber: 1, _id: 1 })
         .toArray();
 
-    return tasks.map((t) => ({
-        id: String(t._id),
-        taskSetId: String(setObjId),
-        taskOrderNumber: t.taskOrderNumber,
-        taskType: t.taskType,
-        ruleIds: t.ruleIds,
-        textToTranslate: t.textToTranslate,
-        options: t.options,
-        correctAnswer: t.correctAnswer,
-        tipIfWrong: t.tipIfWrong,
-    }));
+    return {
+        title: set.title,
+        tasks: tasks.map((t) => ({
+            id: String(t._id),
+            title: String(t.title),
+            taskSetId: String(setObjId),
+            taskOrderNumber: t.taskOrderNumber,
+            taskType: t.taskType,
+            ruleIds: t.ruleIds,
+            textToTranslate: t.textToTranslate,
+            options: t.options,
+            correctAnswer: t.correctAnswer,
+            tipIfWrong: t.tipIfWrong,
+        }))
+    };
 }
 
 export async function getAllStudentAnswersFromTaskSetByTeacher({ teacherId, taskSetId, studentId }) {

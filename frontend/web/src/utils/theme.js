@@ -541,7 +541,7 @@ theme.input = {
     // text styles (reuse your existing tokens)
     label: {
         fontFamily: theme.fontFamily,
-        fontSize: theme.type.subtitle,
+        fontSize: theme.type.title,
         fontWeight: theme.weights.title,
         lineHeight: theme.type.subtitleLineHeight,
         color: theme.textDark,

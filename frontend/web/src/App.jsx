@@ -128,6 +128,7 @@ import {
     CreateGrammarChooseOptionPage
 } from "./components/dashboard/assignments/create/CreateGrammarChooseOptionPage.jsx";
 import {themeStyles} from "./utils/theme.js";
+import {ShareAssignmentPage} from "./components/dashboard/assignments/share/ShareAssignmentPage.jsx";
 
 // theme.js
 export const theme = themeStyles;
@@ -154,10 +155,9 @@ export default function App() {
 
     const createAssignmentRoute = (
         <>
-            <Route path="create-assignment" element={<CreateAssignmentsPage />}>
-            </Route>
-            <Route path="create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}>
-            </Route>
+            <Route path="create-assignment" element={<CreateAssignmentsPage />}/>
+            <Route path="create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}/>
+            <Route path="create-assignment/share" element={<ShareAssignmentPage />}/>
         </>
     );
 
@@ -190,12 +190,10 @@ export default function App() {
                     <Route path="profile" element={<ProfilePage />} />
                     <Route path="classes" element={<ClassesPage />} />
                     {{...createAssignmentRoute}}
-                    <Route path="assignments" element={<AssignmentsPage />}>
-                    </Route>
-                    <Route path="assignments/create-assignment" element={<CreateAssignmentsPage/>}>
-                    </Route>
-                    <Route path="assignments/create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}>
-                    </Route>
+                    <Route path="assignments" element={<AssignmentsPage />}/>
+                    <Route path="assignments/create-assignment" element={<CreateAssignmentsPage/>}/>
+                    <Route path="assignments/create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}/>
+                    <Route path="assignments/create-assignment/share" element={<ShareAssignmentPage />}/>
                 </Route>
 
                 {/* A1 RULES */}

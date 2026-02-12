@@ -316,7 +316,7 @@ export const schoolsTaskSetsController = {
                 const created = await createTaskSetWithTasks({
                     teacherId,
                     setType: "homework",
-                    title: "",          // no title at this moment
+                    title: req.query.title || 'Draft assignment',          // no title at this moment
                     deadline: null,     // no deadline here
                     tasks,
                 });
@@ -441,8 +441,8 @@ export const schoolsTaskSetsController = {
                 const taskSetId = String(req.params.taskSetId || "").trim();
                 if (!taskSetId) return res.status(400).json({ error: "taskSetId required" });
 
-                const tasks = await getAllTasksFromTaskSetByTeacher({ teacherId, taskSetId });
-                return res.json({ tasks });
+                const result = await getAllTasksFromTaskSetByTeacher({ teacherId, taskSetId });
+                return res.json(result);
             } catch (e) {
                 next(e);
             }

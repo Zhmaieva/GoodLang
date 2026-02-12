@@ -25,6 +25,56 @@ function mkItem(groupKey, key, title, subtitle, url) {
     };
 }
 
+export const groups = (() => {
+    return [
+        {
+            key: "vocabulary",
+            title: "Vocabulary",
+            items: [
+                mkItem("vocabulary", "audio_gaps", "Audio fill in gaps", "Listen and complete missing words"),
+                mkItem("vocabulary", "match_def", "Match definitions", "Match words to meanings"),
+                mkItem("vocabulary", "vocabulary_choose_option", "Choose an option", "Pick the right word"),
+                mkItem("vocabulary", "grammar_gaps", "Fill in gaps", "Vocabulary-focused fill in the blanks"),
+            ],
+        },
+        {
+            key: "grammar",
+            title: "Grammar",
+            items: [
+                mkItem("grammar", "grammar_gaps", "Fill in gaps", "Grammar-focused fill in the blanks"),
+                mkItem("grammar", "grammar_choose_option", "Choose an option", "Pick the correct grammar form",
+                    `grammar-choose-option`),
+            ],
+        },
+        {
+            key: "listening",
+            title: "Listening",
+            items: [
+                mkItem("listening", "audio_gaps", "Audio fill in gaps", "Listen and fill the blanks"),
+                mkItem("listening", "order_paragraphs", "Order paragraphs", "Rebuild the story order by listening"),
+                mkItem("listening", "free_answer", "Audio + free answers", "Listen and answer in your own words"),
+            ],
+        },
+        {
+            key: "reading",
+            title: "Reading",
+            items: [
+                mkItem("reading", "abcd", "Text + A/B/C/D questions", "Read and choose answers"),
+                mkItem("reading", "order_paragraphs", "Name paragraphs", "Match titles with paragraphs"),
+                mkItem("reading", "free_answers", "Text + free answers", "Read and answer in your own words"),
+            ],
+        },
+        {
+            key: "writing",
+            title: "Writing",
+            items: [
+                mkItem("writing", "essay", "Essay", "Long-form writing task"),
+                mkItem("writing", "letter", "Letter", "Formal or informal letter"),
+            ],
+        },
+    ];
+});
+
 export function CreateAssignmentsPage() {
     const navigate = useNavigate();
 
@@ -33,62 +83,12 @@ export function CreateAssignmentsPage() {
         cardImagePool: ["/hand1.PNG", "/hand2.PNG", "/hand3.PNG"],
     };
 
-    const groups = useMemo(() => {
-        return [
-            {
-                key: "vocabulary",
-                title: "Vocabulary",
-                items: [
-                    mkItem("vocabulary", "audio_gaps", "Audio fill in gaps", "Listen and complete missing words"),
-                    mkItem("vocabulary", "match_def", "Match definitions", "Match words to meanings"),
-                    mkItem("vocabulary", "vocabulary_choose_option", "Choose an option", "Pick the right word"),
-                    mkItem("vocabulary", "grammar_gaps", "Fill in gaps", "Vocabulary-focused fill in the blanks"),
-                ],
-            },
-            {
-                key: "grammar",
-                title: "Grammar",
-                items: [
-                    mkItem("grammar", "grammar_gaps", "Fill in gaps", "Grammar-focused fill in the blanks"),
-                    mkItem("grammar", "grammar_choose_option", "Choose an option", "Pick the correct grammar form",
-                        `grammar-choose-option`),
-                ],
-            },
-            {
-                key: "listening",
-                title: "Listening",
-                items: [
-                    mkItem("listening", "audio_gaps", "Audio fill in gaps", "Listen and fill the blanks"),
-                    mkItem("listening", "order_paragraphs", "Order paragraphs", "Rebuild the story order by listening"),
-                    mkItem("listening", "free_answer", "Audio + free answers", "Listen and answer in your own words"),
-                ],
-            },
-            {
-                key: "reading",
-                title: "Reading",
-                items: [
-                    mkItem("reading", "abcd", "Text + A/B/C/D questions", "Read and choose answers"),
-                    mkItem("reading", "order_paragraphs", "Name paragraphs", "Match titles with paragraphs"),
-                    mkItem("reading", "free_answers", "Text + free answers", "Read and answer in your own words"),
-                ],
-            },
-            {
-                key: "writing",
-                title: "Writing",
-                items: [
-                    mkItem("writing", "essay", "Essay", "Long-form writing task"),
-                    mkItem("writing", "letter", "Letter", "Formal or informal letter"),
-                ],
-            },
-        ];
-    }, []);
-
     const [selectedId, setSelectedId] = useState(null);
 
     return (
         <Page title={"Choose assignment type"}>
             <DynamicList>
-                {groups.map((g) => (
+                {groups().map((g) => (
                     <RectangleGroup key={g.key} title={g.title}>
                         {g.items.map((it) => (
                             <ItemCard

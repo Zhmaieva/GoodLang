@@ -4,13 +4,14 @@ import DynamicList from "../../DynamicList.jsx";
 import RectangleGroup from "../../RectangleGroup.jsx";
 import ItemCard from "../../ItemCard.jsx";
 import AwesomeActionButton from "../../AwesomeActionButton.jsx";
-import { useNavigate } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 import { LEVEL_RULES, RULE_LABELS } from "../../../../utils/rules.js";
 import { RULE_DESCRIPTIONS } from "../../../../utils/ruleDescriptions.js";
 import { theme } from "../../../../App.jsx";
 import Input from "../../Input.jsx";
 import NumberSlider from "../../NumberSlider.jsx";
+import {getLastPathEdge} from "../../navigation/TeacherDashboardLayout.jsx";
 
 export function CreateGrammarChooseOptionPage() {
     const navigate = useNavigate();
@@ -53,6 +54,7 @@ export function CreateGrammarChooseOptionPage() {
                 height: t.full,
                 minHeight: t.minH0,
                 overflow: "hidden",
+                marginTop: theme.bottomDynamicList.padBottom,
             },
 
             left: {
@@ -81,6 +83,8 @@ export function CreateGrammarChooseOptionPage() {
                 display: "flex",
                 justifyContent: "flex-end",
                 paddingTop: t.footerPadTop,
+                opacity: selectedItems?.length > 0 ? 1 : 0,
+                transition: "opacity 0.3s"
             },
 
             footerInner: {
@@ -98,8 +102,11 @@ export function CreateGrammarChooseOptionPage() {
                 opacity: t.emptyOpacity,
             },
         }),
-        [t]
+        [t, selectedItems]
     );
+
+    const location = useLocation();
+
 
     return (
         <Page title={"Choose an option (grammar)"} subtitle={"Select grammar rules to use in the assignment"}>
@@ -108,7 +115,6 @@ export function CreateGrammarChooseOptionPage() {
                 <div style={styles.left}>
                     <div style={{
                         paddingLeft: theme.bottomDynamicList.padX * 2,
-                        marginTop: theme.bottomDynamicList.padBottom,
                         paddingBottom: theme.bottomDynamicList.padTop,
                         width: '80%'
                     }}>
@@ -156,6 +162,23 @@ export function CreateGrammarChooseOptionPage() {
 
                 {/* RIGHT: selected rules + bottom button */}
                 <div style={styles.right}>
+                    <NumberSlider
+                        value={tasksSelected}
+                        onChange={(value) => {
+                            setTasksSelected(value);
+                        }}
+                        min={1}
+                        max={30}
+                        step={1}
+                        wordSingular="task"
+                        wordPlural="tasks"
+                        postText="in the assignment"
+                        subtitle="Pick how many tasks students will receive."
+                        wrapperStyle={{
+                            marginBottom: theme.bottomDynamicList.padBottom,
+                        }}
+                    />
+
                     <RectangleGroup style={styles.chosenGroup} title={`Chosen grammar`}>
                         <DynamicList contentStyle={styles.chosenList}>
                             {selectedItems.length ? (
@@ -180,33 +203,28 @@ export function CreateGrammarChooseOptionPage() {
                         </DynamicList>
                     </RectangleGroup>
 
-                    <NumberSlider
-                        value={tasksSelected}
-                        onChange={(value) => {
-                            setTasksSelected(value);
-                        }}
-                        min={1}
-                        max={30}
-                        step={1}
-                        wordSingular="task"
-                        wordPlural="tasks"
-                        postText="in the assignment"
-                        subtitle="Pick how many tasks students will receive."
-                    />
+                    {
+                        <div style={{...styles.footer, ...styles.footerInner}}>
+                            <AwesomeActionButton
+                                size="regular"
+                                variant={"ghost"}
+                                title={!selected.length ? "Select at least one rule" : "Finish creation"}
+                                onClick={() => {
+                                    const assignmentType = getLastPathEdge(location.pathname);
+                                    const params = new URLSearchParams();
+                                    params.set("type", assignmentType);
+                                    params.set("taskMode", 'gaps');
+                                    params.set("tasks", String(tasksSelected));
+                                    params.set("rules", selected.join(",")); // ids list
 
+                                    navigate(`/school/assignments/create-assignment/share?${params.toString()}`);
+                                }}
 
-                    <div style={{ ...styles.footer, ...styles.footerInner }}>
-                        <AwesomeActionButton
-                            size="regular"
-                            variant={"ghost"}
-                            title={!selected.length ? "Select at least one rule" : "Finish creation"}
-                            onClick={() => {
-                                navigate("/create-assignment/finish", { state: { selectedRules: selected } });
-                            }}
-                        >
-                            Save and share with students
-                        </AwesomeActionButton>
-                    </div>
+                            >
+                                Save and share with students
+                            </AwesomeActionButton>
+                        </div>
+                    }
                 </div>
             </div>
         </Page>

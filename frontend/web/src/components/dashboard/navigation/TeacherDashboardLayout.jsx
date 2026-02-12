@@ -5,6 +5,17 @@ import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import ItemsList from "../ItemsList.jsx";
 import { theme } from "../../../App.jsx";
 
+export function getLastPathEdge(pathname) {
+    const parts = String(pathname || "")
+        .split("?")[0]
+        .split("#")[0]
+        .split("/")
+        .filter(Boolean);
+
+    return parts[parts.length - 1] || "";
+}
+
+
 export default function TeacherDashboardLayout() {
     const { teacher } = useTeacherDashboard();
     const navigate = useNavigate();
@@ -17,7 +28,7 @@ export default function TeacherDashboardLayout() {
     const teacherName =
         teacher?.displayName ||
         [teacher?.first_name, teacher?.last_name].filter(Boolean).join(" ").trim() ||
-        "Teacher";
+        "";
 
     const initials = useMemo(() => {
         const parts = teacherName.split(" ").filter(Boolean);
@@ -101,6 +112,8 @@ export default function TeacherDashboardLayout() {
                 display: "flex",
                 flexDirection: "column",
                 gap: theme.spacing.gap,
+                opacity: teacherName ? 1 : 0,
+                transition: "opacity 0.3s"
             },
 
             teacherRow: {
@@ -173,7 +186,7 @@ export default function TeacherDashboardLayout() {
             },
 
         };
-    }, []);
+    }, [teacherName]);
 
     return (
         <div style={styles.page}>
