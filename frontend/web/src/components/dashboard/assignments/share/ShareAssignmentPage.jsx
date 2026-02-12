@@ -13,6 +13,7 @@ import { apiBuildTaskSet, apiTeacherTaskSetTasks } from "../../../../services/ap
 import { groups as ASSIGNMENT_GROUPS } from "../create/CreateAssignmentPage.jsx";
 
 import { useTeacherDashboard } from "../../TeacherDashboardContext.jsx";
+import Link from "../../Link.jsx";
 
 function parseRules(str) {
     if (!str) return [];
@@ -56,7 +57,7 @@ function formatTitleReadable(readableTypeTitle, ruleIds) {
 
     if (rules.length > 0) {
         const formatted = rules.map(formatRuleReadable);
-        if (formatted.length > 3) rulePart = formatted.slice(0, 3).join(", ") + " and more";
+        if (formatted.length > 1) rulePart = formatted.slice(0, 1).join(", ") + ` and ${formatted.length - 1} more`;
         else rulePart = formatted.join(", ");
     }
 
@@ -642,6 +643,13 @@ export function ShareAssignmentPage() {
         }
     };
 
+    const shareId = safeStr(taskSetIdFromUrl || taskSetId);
+    const shareUrl = useMemo(() => {
+        if (!shareId) return "";
+        return `${window.location.origin}/share/${encodeURIComponent(shareId)}`;
+    }, [shareId]);
+
+
     const styles = useMemo(
         () => ({
             row: {
@@ -651,7 +659,6 @@ export function ShareAssignmentPage() {
                 height: t.full,
                 minHeight: t.minH0,
                 overflow: "hidden",
-                marginTop: theme.bottomDynamicList.padBottom,
             },
             left: {
                 width: t.leftWidth,
@@ -727,7 +734,13 @@ export function ShareAssignmentPage() {
                 display: "flex",
                 gap: theme.spacing?.gap ?? 12,
             },
-
+            shareLinkWrap: {
+                width: "80%",
+                paddingLeft: theme.bottomDynamicList.padX * 2,
+                paddingBottom: theme.bottomDynamicList.padTop,
+                marginBottom: theme.bottomDynamicList.padBottom,
+                ...showByCondition(Boolean(shareId)), // ✅ opacity 0 if no id
+            },
         }),
         [taskName, t]
     );
@@ -736,13 +749,20 @@ export function ShareAssignmentPage() {
         <Page
             title={"Share assignment"}
             subtitle={
-                "Share with anyone using the code or the link. " +
+                "With anyone using the link. " +
                 "Or, send it to any existent students or classes"
             }
         >
             <div style={styles.row}>
                 {/* LEFT */}
                 <div style={styles.left}>
+                    {/* share link (from URL id) */}
+                    <div style={styles.shareLinkWrap}>
+                        <Link href={shareUrl}>
+                            {shareUrl}
+                        </Link>
+                    </div>
+
                     {/* assignment title */}
                     <div style={styles.leftTop}>
                         <Input
@@ -759,7 +779,7 @@ export function ShareAssignmentPage() {
                     <div style={styles.leftSearchWrap}>
                         <Input
                             title={"Send to"}
-                            placeholder={"Email address of the recipient. Or, search by student name or class name."}
+                            placeholder={"Type an email address of the recipient. Or, search by student name or class name."}
                             mode="raw"
                             charLimit={120}
                             value={peopleQuery}

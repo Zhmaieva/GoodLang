@@ -564,6 +564,7 @@ theme.input = {
         borderBottom: theme.borders.card,
 
         padding: `${theme.spacing.listPad}px 0px`,
+        paddingRight: 20,
         boxSizing: "border-box",
     },
 
@@ -619,4 +620,58 @@ theme.bottomDynamicList = {
     padX: theme.spacing.cardPadX,
 };
 
+theme.link = {
+    wrap: {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: theme.spacing.gap,
+    },
+
+    title: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textDark,
+    },
+
+    row: {
+        display: "flex",
+        alignItems: "center",
+        gap: theme.spacing.rowGap,
+        width: "100%",
+        minWidth: 0,
+    },
+
+    link: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.titleLineHeight,
+        color: theme.textDark,
+        textDecoration: "none",
+        cursor: "pointer",
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        width: "100%",
+        minWidth: 0,
+    },
+
+    linkHoverOpacity: 0.85,
+
+    icon: {
+        size: 16,
+        bg: theme.textDark,
+        opacity: 1,
+    },
+
+    a11y: {
+        ariaLabel: "External link",
+    },
+};
+
 export const themeStyles = theme;
+
