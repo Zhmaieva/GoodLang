@@ -12,7 +12,6 @@ import { theme } from "../../../../App.jsx";
 import { apiBuildTaskSet, apiTeacherTaskSetTasks } from "../../../../services/api.js";
 import { groups as ASSIGNMENT_GROUPS } from "../create/CreateAssignmentPage.jsx";
 
-// ✅ teacher dashboard data
 import { useTeacherDashboard } from "../../TeacherDashboardContext.jsx";
 
 function parseRules(str) {
@@ -150,7 +149,7 @@ export function ShareAssignmentPage() {
     }, [typeParam]);
 
     // local state
-    const [taskName, setTaskName] = useState("");
+    const [taskName, setTaskName] = useState(null);
 
     const [taskSetId, setTaskSetId] = useState(taskSetIdFromUrl || "");
     const [tasks, setTasks] = useState([]);
@@ -264,14 +263,17 @@ export function ShareAssignmentPage() {
         location.pathname,
     ]);
 
-    // once taskName is set from API/build, capture “opening snapshot”
+
     useEffect(() => {
-        if (!loading && !initialRef.current.ready) {
-            // if taskName is still empty, we still snapshot (so later “empty -> non-empty” is a change)
+        const hasId = Boolean(taskSetIdFromUrl || taskSetId);
+        if (!hasId) return;
+
+        if (!loading && !initialRef.current.ready && taskName) {
             ensureInitialSnapshot();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [loading]);
+    }, [loading, taskName, taskSetIdFromUrl, taskSetId]);
+
 
     // ---------- grouping + filtering ----------
     const normalizedPeopleQuery = useMemo(() => normalizeHay(peopleQuery), [peopleQuery]);
@@ -499,7 +501,10 @@ export function ShareAssignmentPage() {
 
     const showPrimaryButton = safeStr(taskName).length > 0 && hasChanges;
 
-    const primaryButtonText = hasAnySelected ? "Save and send" : "Save changes";
+    const primaryButtonText = showPrimaryButton ?
+        (hasAnySelected ? "Save and send to selected recipients" : "Save changes")
+        : "Changes are saved"
+
 
     function onPrimaryAction() {
         // ✅ stub: no API call yet
@@ -510,6 +515,13 @@ export function ShareAssignmentPage() {
 
     // Layout
     const t = theme.createGrammarChooseOption;
+
+    const showByCondition = (condition) => {
+        return {
+            opacity: condition ? 1 : 0, // (optional) hide until we have an id
+            transition: "opacity 0.3s",
+        }
+    };
 
     const styles = useMemo(
         () => ({
@@ -546,7 +558,7 @@ export function ShareAssignmentPage() {
                 paddingLeft: theme.bottomDynamicList.padX * 2,
                 paddingBottom: theme.bottomDynamicList.padTop,
                 width: "80%",
-                opacity: taskName ? 1 : 0,
+                opacity: taskName !== null ? 1 : 0,
                 transition: "opacity 0.3s",
             },
             leftSearchWrap: {
@@ -579,6 +591,23 @@ export function ShareAssignmentPage() {
                 paddingBottom: theme.bottomDynamicList.padBottom,
             },
             tinyHint: { opacity: 0.7, fontSize: 12, marginTop: 6 },
+            // ✅ ADD in styles (inside useMemo styles object)
+            footer: {
+                flex: "0 0 auto",
+                display: "flex",
+                justifyContent: "flex-end",
+                paddingTop: t.footerPadTop,
+            },
+            footerInner: {
+                paddingBottom: t.footerPadBottom,
+                paddingRight: t.footerPadRight,
+                paddingLeft: theme.bottomDynamicList.padX * 2,
+            },
+            footerBtns: {
+                display: "flex",
+                gap: theme.spacing?.gap ?? 12,
+            },
+
         }),
         [taskName, t]
     );
@@ -587,8 +616,8 @@ export function ShareAssignmentPage() {
         <Page
             title={"Share assignment"}
             subtitle={
-                "Instantly share with anyone using the code or the link. " +
-                "Or, simply send it to any existent students or classes"
+                "Share with anyone using the code or the link. " +
+                "Or, send it to any existent students or classes"
             }
         >
             <div style={styles.row}>
@@ -694,30 +723,11 @@ export function ShareAssignmentPage() {
 
                 {/* RIGHT */}
                 <div style={styles.right}>
-                    {/* top-right buttons */}
-                    <div style={styles.rightTopBar}>
-                        <AwesomeActionButton
-                            text={"Return to assignments"}
-                            onClick={() => {
-                                // stub — do nothing for now
-                            }}
-                            variant="secondary"
-                        />
-
-                        {showPrimaryButton && (
-                            <AwesomeActionButton
-                                text={primaryButtonText}
-                                onClick={onPrimaryAction}
-                                variant="primary"
-                            />
-                        )}
-                    </div>
-
                     {/* selected recipients list */}
                     <div style={styles.rightListWrap}>
                         <DynamicList
                             ariaLabel="Selected recipients"
-                            items={[{ key: "selected" }]}
+                            items={[{key: "selected"}]}
                             renderItem={() => {
                                 const hasAnything =
                                     selectedSummary.selectedClassBlocks.length > 0 || selectedSummary.selectedIndividuals.length > 0;
@@ -732,7 +742,7 @@ export function ShareAssignmentPage() {
                                             }
                                         >
                                             {!hasAnything && (
-                                                <div style={{ padding: 12, opacity: 0.65 }}>
+                                                <div style={{padding: 12, opacity: 0.65}}>
                                                     No recipients selected yet.
                                                 </div>
                                             )}
@@ -772,6 +782,40 @@ export function ShareAssignmentPage() {
                                 );
                             }}
                         />
+                    </div>
+                    <div style={{...styles.footer, ...styles.footerInner}}>
+                        <div style={styles.footerBtns}>
+                            <AwesomeActionButton
+                                size="regular"
+                                variant={"ghost"}
+                                title={"Copy share link"}
+                                onClick={() => {
+                                    // stub (no clipboard yet)
+                                    // later: navigator.clipboard.writeText(`${window.location.origin}/.../${taskSetId}`)
+                                }}
+                            >
+                                Go to assignment list
+                            </AwesomeActionButton>
+
+                            <AwesomeActionButton
+                                // style={{
+                                //     ...showByCondition(showPrimaryButton), // ✅ visible if anything changed (and title not empty)
+                                // }}
+                                size="regular"
+                                variant={"ghost"}
+                                disabled={!showPrimaryButton}
+                                title={showPrimaryButton ?
+                                    (hasAnySelected ? "Save and send to selected recipients" : "Save changes")
+                                    : "Changes are saved"}
+                                onClick={() => {
+                                    // stub
+                                    // later: if hasAnySelected -> assign/send; else -> save title only
+                                }}
+                            >
+                                {primaryButtonText}
+                            </AwesomeActionButton>
+
+                        </div>
                     </div>
                 </div>
             </div>
