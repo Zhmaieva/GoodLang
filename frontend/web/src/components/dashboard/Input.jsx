@@ -85,7 +85,7 @@ export default function Input({
             clearBtn: mergeStyle(
                 {
                     ...t.clearBtn,
-                    opacity: disabled ? t.clearBtnDisabledOpacity : t.clearBtn.opacity,
+                    opacity: disabled || !value ? t.clearBtnDisabledOpacity : t.clearBtn.opacity,
                     pointerEvents: disabled ? "none" : t.clearBtn.pointerEvents,
                 },
                 {
@@ -106,7 +106,7 @@ export default function Input({
                 inputStyle
             ),
         };
-    }, [t, style, wrapperStyle, inputStyle, labelStyle, clearStyle, disabled]);
+    }, [t, style, wrapperStyle, inputStyle, labelStyle, clearStyle, disabled, value]);
 
     const currentValue = val !== undefined ? val : String(defaultValue ?? "");
     const showClear = !!currentValue;
