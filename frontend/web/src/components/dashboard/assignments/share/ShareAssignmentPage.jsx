@@ -114,6 +114,11 @@ function classIdOf(c) {
 }
 
 function studentLabel(s) {
+    if (s?.__kind === "new_email") {
+        const e = safeStr(s?.email);
+        return "New student";
+    }
+
     const first = safeStr(s?.first_name);
     const last = safeStr(s?.last_name);
     const email = safeStr(s?.email);
@@ -121,10 +126,45 @@ function studentLabel(s) {
     return name || email || studentIdOf(s);
 }
 
+
 function classLabel(c) {
     const name = safeStr(c?.name);
     const code = safeStr(c?.invite_code);
     return name || code || classIdOf(c);
+}
+
+function normalizeEmail(x) {
+    return safeStr(x).toLowerCase();
+}
+
+// very light validation per your spec: has @, then a dot, then a symbol after dot
+function isEmailLike(x) {
+    const s = safeStr(x);
+    if (!s) return false;
+    // example: a@b.c
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+}
+
+function isEmailId(id) {
+    return safeStr(id).startsWith("email:");
+}
+
+function makeEmailId(email) {
+    return `email:${normalizeEmail(email)}`;
+}
+
+function makeNewStudentByEmail(email) {
+    const e = normalizeEmail(email);
+    return {
+        __kind: "new_email",
+        student_account_id: makeEmailId(e),
+        email: e,
+        is_active: true,
+        first_name: "",
+        last_name: "",
+        class_id: "",
+        class_name: "",
+    };
 }
 
 export function ShareAssignmentPage() {
@@ -284,6 +324,42 @@ export function ShareAssignmentPage() {
         return arr.filter((s) => Boolean(s?.is_active));
     }, [students]);
 
+    const activeEmailsSet = useMemo(() => {
+        const set = new Set();
+        for (const s of activeStudents) {
+            const e = normalizeEmail(s?.email);
+            if (e) set.add(e);
+        }
+        return set;
+    }, [activeStudents]);
+
+    const emailCandidate = useMemo(() => {
+        const raw = safeStr(peopleQuery);
+        if (!isEmailLike(raw)) return "";
+        return normalizeEmail(raw);
+    }, [peopleQuery]);
+
+    const shouldOfferNewEmail = useMemo(() => {
+        if (!emailCandidate) return false;
+        return !activeEmailsSet.has(emailCandidate);
+    }, [emailCandidate, activeEmailsSet]);
+
+    // new-email items that are currently selected (they must persist even if input changes)
+    const selectedNewEmailItems = useMemo(() => {
+        const arr = [];
+        for (const id of Array.from(selectedStudentIds)) {
+            const sid = safeStr(id);
+            if (isEmailId(sid)) {
+                const email = sid.replace(/^email:/, "");
+                if (email) arr.push(makeNewStudentByEmail(email));
+            }
+        }
+        // stable
+        arr.sort((a, b) => safeStr(a.email).localeCompare(safeStr(b.email)));
+        return arr;
+    }, [selectedStudentIds]);
+
+
     const studentsByClassId = useMemo(() => {
         const map = new Map(); // classId -> students[]
         for (const s of activeStudents) {
@@ -342,6 +418,31 @@ export function ShareAssignmentPage() {
     const groupedItems = useMemo(() => {
         const groups = [];
 
+        // ✅ NEW GROUP: New students (selected ones + current typed candidate if valid)
+        const newEmailCards = [...selectedNewEmailItems];
+
+        if (shouldOfferNewEmail) {
+            const candidateObj = makeNewStudentByEmail(emailCandidate);
+            const candidateId = studentIdOf(candidateObj);
+            const alreadySelected = selectedStudentIds.has(String(candidateId));
+            if (!alreadySelected) {
+                newEmailCards.unshift(candidateObj); // candidate appears on top
+            }
+        }
+
+        if (newEmailCards.length > 0) {
+            // filter by query like everything else
+            const visible = newEmailCards.filter(matchesPeopleQueryStudent);
+            if (!normalizedPeopleQuery || visible.length > 0) {
+                groups.push({
+                    kind: "new_emails",
+                    title: "New students",
+                    studentsAll: newEmailCards,
+                    studentsVisible: visible,
+                });
+            }
+        }
+
         // classes (non-empty)
         for (const cls of nonEmptyClasses) {
             const clsStudents = cls.__students || [];
@@ -349,7 +450,6 @@ export function ShareAssignmentPage() {
 
             const visibleStudents = clsStudents.filter(matchesPeopleQueryStudent);
 
-            // group shows: class card + (filtered students)
             groups.push({
                 kind: "class",
                 classId: cls.__id,
@@ -374,7 +474,15 @@ export function ShareAssignmentPage() {
         }
 
         return groups;
-    }, [nonEmptyClasses, unassignedStudents, normalizedPeopleQuery]);
+    }, [
+        nonEmptyClasses,
+        unassignedStudents,
+        normalizedPeopleQuery,
+        selectedNewEmailItems,
+        shouldOfferNewEmail,
+        emailCandidate,
+        selectedStudentIds,
+    ]);
 
     // ---------- selection logic ----------
     function isStudentSelected(studentId) {
@@ -472,9 +580,20 @@ export function ShareAssignmentPage() {
         }
 
         for (const id of Array.from(selected)) {
-            const s = allStudentsMap.get(String(id));
+            const sid = String(id);
+
+            // ✅ new-email selected
+            if (isEmailId(sid)) {
+                const email = sid.replace(/^email:/, "");
+                if (email) selectedIndividuals.push(makeNewStudentByEmail(email));
+                continue;
+            }
+
+            // ✅ normal student selected
+            const s = allStudentsMap.get(String(sid));
             if (s) selectedIndividuals.push(s);
         }
+
         selectedIndividuals.sort((a, b) => studentLabel(a).localeCompare(studentLabel(b)));
 
         return {
@@ -502,7 +621,7 @@ export function ShareAssignmentPage() {
     const showPrimaryButton = safeStr(taskName).length > 0 && hasChanges;
 
     const primaryButtonText = showPrimaryButton ?
-        (hasAnySelected ? "Save and send to selected recipients" : "Save changes")
+        (hasAnySelected ? "Save and send" : "Save changes")
         : "Changes are saved"
 
 
@@ -573,6 +692,7 @@ export function ShareAssignmentPage() {
                 paddingLeft: theme.bottomDynamicList.padX * 2,
                 paddingRight: theme.bottomDynamicList.padX,
                 paddingBottom: theme.bottomDynamicList.padBottom,
+                ...showByCondition(taskName)
             },
             rightTopBar: {
                 display: "flex",
