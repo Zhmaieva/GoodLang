@@ -14,6 +14,8 @@ import { groups as ASSIGNMENT_GROUPS } from "../create/CreateAssignmentPage.jsx"
 
 import { useTeacherDashboard } from "../../TeacherDashboardContext.jsx";
 import Link from "../../Link.jsx";
+import TabSwitcher from "../../TabSwitcher.jsx";
+import SharePreviewList from "./SharePreviewList.jsx";
 
 function parseRules(str) {
     if (!str) return [];
@@ -195,6 +197,7 @@ export function ShareAssignmentPage() {
     const [taskSetId, setTaskSetId] = useState(taskSetIdFromUrl || "");
     const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [rightTab, setRightTab] = useState("send");
 
     // ✅ recipients UI state
     const { classes, students } = useTeacherDashboard();
@@ -709,12 +712,18 @@ export function ShareAssignmentPage() {
                 paddingTop: theme.bottomDynamicList.padTop,
                 paddingLeft: theme.bottomDynamicList.padX * 2,
             },
+            rightTabsWrap: {
+                paddingLeft: theme.bottomDynamicList.padX * 2,
+                paddingRight: theme.bottomDynamicList.padX * 2,
+                paddingTop: theme.bottomDynamicList.padTop,
+                ...showByCondition(Boolean(taskName)), // hide until built/fetched title exists (matches your pattern)
+            },
+
             rightListWrap: {
                 flex: "1 1 auto",
                 minHeight: 0,
                 paddingLeft: theme.bottomDynamicList.padX * 2,
                 paddingRight: theme.bottomDynamicList.padX * 2,
-                paddingTop: theme.bottomDynamicList.padTop,
                 paddingBottom: theme.bottomDynamicList.padBottom,
             },
             tinyHint: { opacity: 0.7, fontSize: 12, marginTop: 6 },
@@ -864,65 +873,91 @@ export function ShareAssignmentPage() {
                 {/* RIGHT */}
                 <div style={styles.right}>
                     {/* selected recipients list */}
+                    {/* RIGHT: tabs */}
                     <div style={styles.rightListWrap}>
-                        <DynamicList
-                            ariaLabel="Selected recipients"
-                            items={[{key: "selected"}]}
-                            renderItem={() => {
-                                const hasAnything =
-                                    selectedSummary.selectedClassBlocks.length > 0 || selectedSummary.selectedIndividuals.length > 0;
+                        <TabSwitcher
+                            style={{height: "100%", minHeight: 0}}
+                            value={rightTab}
+                            onChange={setRightTab}
+                            tabs={[
+                                {key: "send", label: "Sending list"},
+                                {key: "preview", label: "Tasks preview"},
+                            ]}
+                            renderContent={(key) => {
+                                if (key === "preview") {
+                                    return (
+                                        <div style={{ flex: "1 1 auto", minHeight: 0, height: "100%", display: "flex" }}>
+                                            <SharePreviewList tasks={tasks} style={{ flex: "1 1 auto", minHeight: 0, height: "100%" }} />
+                                        </div>
+                                    );
+                                }
 
                                 return (
-                                    <>
-                                        <RectangleGroup
-                                            title={
-                                                hasAnything
-                                                    ? `Send to ${selectedSummary.totalSelectedStudents} student${selectedSummary.totalSelectedStudents > 1 ? 's' : ''}`
-                                                    : "Send to"
-                                            }
-                                        >
-                                            {!hasAnything && (
-                                                <div style={{padding: 12, opacity: 0.65}}>
-                                                    No recipients selected yet.
-                                                </div>
-                                            )}
+                                    <DynamicList
+                                        ariaLabel="Selected recipients"
+                                        items={[{key: "selected"}]}
+                                        renderItem={() => {
+                                            const hasAnything =
+                                                selectedSummary.selectedClassBlocks.length > 0 ||
+                                                selectedSummary.selectedIndividuals.length > 0;
 
-                                            {/* fully-selected classes */}
-                                            {selectedSummary.selectedClassBlocks.map((c) => (
-                                                <ItemCard
-                                                    selectedShift={false}
-                                                    key={`sel-class-${c.classId}`}
-                                                    title={c.title}
-                                                    selected
-                                                    subtitle={`Whole class • ${c.count} students`}
-                                                    rightText={"Selected"}
-                                                    onClick={() => toggleWholeClass(c.studentsAll)}
-                                                    active
-                                                />
-                                            ))}
+                                            return (
+                                                <RectangleGroup
+                                                    title={
+                                                        hasAnything
+                                                            ? `Send to ${selectedSummary.totalSelectedStudents} student${
+                                                                selectedSummary.totalSelectedStudents > 1 ? "s" : ""
+                                                            }`
+                                                            : "Send to"
+                                                    }
+                                                >
+                                                    {!hasAnything && (
+                                                        <div style={{padding: 12, opacity: 0.65}}>
+                                                            No recipients selected yet.
+                                                        </div>
+                                                    )}
 
-                                            {/* individual students */}
-                                            {selectedSummary.selectedIndividuals.map((s) => {
-                                                const sid = studentIdOf(s);
-                                                return (
-                                                    <ItemCard
-                                                        selected
-                                                        selectedShift={false}
-                                                        key={`sel-student-${sid}`}
-                                                        title={studentLabel(s)}
-                                                        subtitle={safeStr(s?.class_name) ? `Class: ${safeStr(s?.class_name)}` : safeStr(s?.email)}
-                                                        rightText={"Selected"}
-                                                        onClick={() => toggleStudent(s)}
-                                                        active
-                                                    />
-                                                );
-                                            })}
-                                        </RectangleGroup>
-                                    </>
+                                                    {selectedSummary.selectedClassBlocks.map((c) => (
+                                                        <ItemCard
+                                                            selectedShift={false}
+                                                            key={`sel-class-${c.classId}`}
+                                                            title={c.title}
+                                                            selected
+                                                            subtitle={`Whole class • ${c.count} students`}
+                                                            rightText={"Selected"}
+                                                            onClick={() => toggleWholeClass(c.studentsAll)}
+                                                            active
+                                                        />
+                                                    ))}
+
+                                                    {selectedSummary.selectedIndividuals.map((s) => {
+                                                        const sid = studentIdOf(s);
+                                                        return (
+                                                            <ItemCard
+                                                                selected
+                                                                selectedShift={false}
+                                                                key={`sel-student-${sid}`}
+                                                                title={studentLabel(s)}
+                                                                subtitle={
+                                                                    safeStr(s?.class_name)
+                                                                        ? `Class: ${safeStr(s?.class_name)}`
+                                                                        : safeStr(s?.email)
+                                                                }
+                                                                rightText={"Selected"}
+                                                                onClick={() => toggleStudent(s)}
+                                                                active
+                                                            />
+                                                        );
+                                                    })}
+                                                </RectangleGroup>
+                                            );
+                                        }}
+                                    />
                                 );
                             }}
                         />
                     </div>
+
                     <div style={{...styles.footer, ...styles.footerInner}}>
                         <div style={styles.footerBtns}>
                             <AwesomeActionButton

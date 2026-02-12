@@ -673,5 +673,175 @@ theme.link = {
     },
 };
 
+theme.tabSwitcher = {
+    wrap: {
+        width: "100%",
+        minWidth: 0,
+        height: "100%",
+        minHeight: 0,
+        display: "flex",
+        flexDirection: "column",
+    },
+
+    bar: {
+        position: "relative",
+        display: "flex",
+        width: "100%",
+        borderBottom: theme.borders.card,
+        // ...whatever else you have
+    },
+
+    tab: {
+        flex: "1 1 0",
+        position: "relative",
+        cursor: "pointer",
+        padding: `${theme.spacing.listPad}px ${theme.spacing.cardPadX}px`,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minWidth: 0,
+    },
+
+    label: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.normal,
+        color: theme.textDark,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+
+    content: {
+        flex: "1 1 auto",
+        minHeight: 0,
+        display: "flex",
+    },
+
+    fade: {
+        flex: "1 1 auto",
+        minHeight: 0,
+        transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
+    },
+
+    indicator: {
+        height: 2,
+        radius: 0,
+        transition: `left ${theme.motion.normal} ${theme.motion.ease}, width ${theme.motion.normal} ${theme.motion.ease}, opacity ${theme.motion.fast} ${theme.motion.ease}`,
+    },
+
+    fadeMs: 220,
+
+    divider: { width: 1, color: theme.border },
+
+    a11y: { role: "tablist" },
+};
+
+
+theme.chooseOptionReadonlyTask = {
+    wrap: {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: theme.spacing.gap,
+    },
+
+    card: {
+        width: "100%",
+        minWidth: 0,
+        boxSizing: "border-box",
+        borderRadius: theme.radius.card,
+        border: theme.borders.card,
+        padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
+        display: "flex",
+        flexDirection: "column",
+        gap: theme.spacing.gap,
+        overflow: "hidden",
+    },
+
+    metaLine: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textMutedDark,
+        opacity: 0.9,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+
+    question: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.titleLineHeight,
+        color: theme.textDark,
+        wordBreak: "break-word",
+    },
+
+    optionsWrap: {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        flexWrap: "wrap",
+        gap: theme.spacing.rowGap,
+        alignItems: "flex-start",
+    },
+
+    chip: {
+        display: "flex",
+        flexDirection: "column",
+        gap: 4,
+        padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
+        borderRadius: theme.radius.card,
+        border: theme.borders.card,
+        background: theme.surfaceSoft,
+        maxWidth: "100%",
+        minWidth: 0,
+    },
+
+    chipText: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textDark,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+
+    chipCorrect: {
+        background: theme.accentDark, // ✅ contrast, not “selected” orange
+        border: theme.borders.cardSelected,
+    },
+
+    chipTextCorrect: {
+        color: theme.textOnColor,
+        fontWeight: theme.weights.subtitleSelected,
+    },
+
+    chipSubLabel: {
+        fontFamily: theme.fontFamily,
+        fontSize: "clamp(0.70rem, 0.68rem + 0.15vw, 0.78rem)",
+        fontWeight: theme.weights.normal,
+        lineHeight: 1.1,
+        opacity: 0.85,
+        color: theme.textMutedDark,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+    },
+
+    chipSubLabelCorrect: {
+        color: theme.textMutedOnColor,
+        opacity: 0.92,
+    },
+
+    gapToken: "____",
+};
+
 export const themeStyles = theme;
 
