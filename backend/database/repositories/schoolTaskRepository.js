@@ -366,7 +366,6 @@ export async function getTaskSetsListStudentPaged({ studentId, limit = 10, curso
             title: set?.title ?? "",
             setType: a.setType,
             assignedAt: toIso(a.assignedAt),
-            deadline: a.deadline ? toIso(a.deadline) : null,
             progress: total ? { done, total } : { done: 0, total: 0 },
         };
     });
@@ -626,6 +625,147 @@ export async function getRuleStatsForStudent(userId) {
     };
 }
 
+const ERR = {
+    STUDENT_ID_REQUIRED: "STUDENT_ID_REQUIRED",
+    TASK_SET_ID_REQUIRED: "TASK_SET_ID_REQUIRED",
+    TASK_SET_NOT_FOUND: "TASK_SET_NOT_FOUND",
+};
+
+// Student flow: get task set and its teacherId
+export async function getTaskSetByIdForJoin({ taskSetId }) {
+    const db = await connectDB();
+
+    const idStr = String(taskSetId || "").trim();
+    if (!idStr) throw new Error(ERR.TASK_SET_ID_REQUIRED);
+
+    const setObjId = toObjectIdStrict(idStr, "taskSetId");
+
+    const set = await db.collection("good_lang_task_sets").findOne(
+        { _id: setObjId },
+        { projection: { _id: 1, teacherId: 1, setType: 1, title: 1, deadline: 1, createdAt: 1 } }
+    );
+
+    if (!set) throw new Error(ERR.TASK_SET_NOT_FOUND);
+
+    return {
+        taskSetId: String(set._id),
+        teacherId: String(set.teacherId || "").trim(),
+        setType: set.setType ?? "homework",
+        title: set.title ?? "",
+        deadline: set.deadline ? toIso(set.deadline) : null,
+        createdAt: set.createdAt ? toIso(set.createdAt) : null,
+    };
+}
+
+export async function assignTaskSetToStudentIdempotent({
+                                                           teacherId,   // from task set
+                                                           taskSetId,
+                                                           studentId,   // from auth
+                                                           setType = "homework",
+                                                           deadline = null,
+                                                       }) {
+    const db = await connectDB();
+
+    const teacherKey = String(teacherId || "").trim();
+    if (!teacherKey) throw new Error("TEACHER_ID_REQUIRED"); // domain code
+
+    const studentKey = String(studentId || "").trim();
+    if (!studentKey) throw new Error(ERR.STUDENT_ID_REQUIRED);
+
+    const idStr = String(taskSetId || "").trim();
+    if (!idStr) throw new Error(ERR.TASK_SET_ID_REQUIRED);
+
+    const setObjId = toObjectIdStrict(idStr, "taskSetId");
+
+    const due = safeDate(deadline);
+    const now = new Date();
+
+    const col = db.collection("good_lang_task_set_assignments");
+
+    const res = await col.updateOne(
+        { taskSetId: setObjId, studentId: studentKey },
+        {
+            $set: {
+                teacherId: teacherKey,
+                setType: String(setType || "homework"),
+                deadline: due ?? null,
+                state: "assigned",
+                updatedAt: now,
+            },
+            $setOnInsert: {
+                taskSetId: setObjId,
+                studentId: studentKey,
+                assignedAt: now,
+            },
+        },
+        { upsert: true }
+    );
+
+    return { created: Boolean(res?.upsertedCount) };
+}
+
+// =====================================================================
+// Student: tasks view (no answers, no tips, no correct, no ruleIds)
+// - requires assignment exists for this student
+// =====================================================================
+export async function getAllTasksFromTaskSetByStudent({ studentId, taskSetId }) {
+    const db = await connectDB();
+
+    const studentKey = String(studentId || "").trim();
+    if (!studentKey) throw new Error("studentId required");
+
+    const setObjId = toObjectIdStrict(taskSetId, "taskSetId");
+
+    // 1) must be assigned to this student
+    const asg = await db.collection("good_lang_task_set_assignments").findOne(
+        { taskSetId: setObjId, studentId: studentKey, state: "assigned" },
+        { projection: { _id: 1 } }
+    );
+
+    if (!asg) return []; // consistent with teacher method style
+
+    // 2) load set title (no teacher scope here)
+    const set = await db.collection("good_lang_task_sets").findOne(
+        { _id: setObjId },
+        { projection: { title: 1 } }
+    );
+
+    if (!set) return [];
+
+    // 3) load tasks without sensitive fields
+    const tasks = await db
+        .collection("good_lang_tasks")
+        .find(
+            { taskSetId: setObjId },
+            {
+                projection: {
+                    title: 1,
+                    taskOrderNumber: 1,
+                    taskType: 1,
+                    textToTranslate: 1,
+                    options: 1,
+                },
+            }
+        )
+        .sort({ taskOrderNumber: 1, _id: 1 })
+        .toArray();
+
+    return {
+        title: set.title ?? "",
+        tasks: tasks.map((t) => ({
+            id: String(t._id),
+            title: String(t.title ?? ""),
+            taskSetId: String(setObjId),
+            taskOrderNumber: t.taskOrderNumber,
+            taskType: t.taskType,
+            textToTranslate: t.textToTranslate ?? null,
+            options: t.options ?? null,
+        })),
+    };
+}
+
+
+
 // =====================================================================
 // Indexes (safe)
 // =====================================================================
@@ -635,6 +775,10 @@ export async function ensureSchoolTaskIndexes() {
     await db.collection("good_lang_task_sets").createIndex({ teacherId: 1, createdAt: -1 });
     await db.collection("good_lang_tasks").createIndex({ taskSetId: 1, taskOrderNumber: 1 });
     await db.collection("good_lang_task_set_assignments").createIndex({ studentId: 1, assignedAt: -1 });
+    await db.collection("good_lang_task_set_assignments").createIndex(
+        { taskSetId: 1, studentId: 1 },
+        { unique: true, name: "uniq_taskSet_student" }
+    );
 
     // for student progress queries:
     await db.collection("good_lang_scores").createIndex({ userId: 1, updatedAt: -1 });
@@ -651,3 +795,4 @@ export async function ensureSchoolTaskIndexes() {
 
     return { ok: true };
 }
+

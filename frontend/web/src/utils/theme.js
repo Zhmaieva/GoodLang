@@ -658,6 +658,7 @@ theme.link = {
         textOverflow: "ellipsis",
         width: "100%",
         minWidth: 0,
+        maxWidth: "500px",
     },
 
     linkHoverOpacity: 0.85,

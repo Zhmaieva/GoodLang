@@ -9,13 +9,17 @@ import {
     getTaskSetsListStudentPaged,
     getNextTaskFromTaskSet,
     getAllTasksFromTaskSetByTeacher,
-    getAllStudentAnswersFromTaskSetByTeacher, updateTaskSetTitleById,
+    getAllStudentAnswersFromTaskSetByTeacher,
+    updateTaskSetTitleById,
+    getTaskSetByIdForJoin,
+    assignTaskSetToStudentIdempotent, getAllTasksFromTaskSetByStudent,
 } from "../database/repositories/schoolTaskRepository.js";
 
 import {
     buildRecommendedQuotasForStudents,
     buildTaskSetTasks,
 } from "../services/taskSetBuilderService.js";
+import {ensureTeacherStudentPg} from "../database/repositories/teacherStudentsRepository.js";
 
 const name = "schools";
 
@@ -84,6 +88,18 @@ function normalizeRecommendedPlan(body) {
             breakdown: x?.breakdown || null,
         }))
         .filter((x) => x.studentId && x.quotas && typeof x.quotas === "object");
+}
+
+function mapDomainErrorToHttp(e) {
+    const code = String(e?.message || "");
+
+    if (code === "TASK_SET_ID_REQUIRED" || code === "STUDENT_ID_REQUIRED" || code === "STUDENT_NEEDS_FIRST_NAME")
+        return { status: 400, body: { error: code } };
+
+    if (code === "TASK_SET_NOT_FOUND")
+        return { status: 404, body: { error: code } };
+
+    return null;
 }
 
 // --------------------------------------------------
@@ -432,6 +448,52 @@ export const schoolsTaskSetsController = {
             }
         });
 
+        // POST /schools/task-sets/join?taskSetId=...&firstName=...&lastName=...
+        app.post(`/${name}/task-sets/join`, authMiddleware, async (req, res, next) => {
+            try {
+                const studentId = req.user.id;
+
+                const taskSetId = String(req.query?.taskSetId || "").trim();
+                const firstName = req.query?.firstName != null ? String(req.query.firstName).trim() : "";
+                const lastName = req.query?.lastName != null ? String(req.query.lastName).trim() : "";
+
+                // (1) Mongo: fetch set and get teacherId
+                const set = await getTaskSetByIdForJoin({ taskSetId });
+                const teacherId = set.teacherId;
+
+                // (2) PG: ensure teacher-student relation exists (or create if firstName provided)
+                const st = await ensureTeacherStudentPg({
+                    teacherId,
+                    studentId,
+                    firstName,
+                    lastName,
+                });
+
+                // (3) Mongo: assign set to student (idempotent)
+                const asg = await assignTaskSetToStudentIdempotent({
+                    teacherId,
+                    taskSetId,
+                    studentId,
+                    setType: set.setType || "homework",
+                    deadline: set.deadline ? new Date(set.deadline) : null,
+                });
+
+                return res.status(201).json({
+                    ok: true,
+                    taskSetId,
+                    teacherId,
+                    studentId,
+                    studentCreated: Boolean(st?.created),
+                    assignmentCreated: Boolean(asg?.created),
+                });
+            } catch (e) {
+                const mapped = mapDomainErrorToHttp(e);
+                if (mapped) return res.status(mapped.status).json(mapped.body);
+                next(e);
+            }
+        });
+
+
         // ==========================================================
         // (4) TEACHER: GET ALL TASKS FROM SET
         // ==========================================================
@@ -447,6 +509,23 @@ export const schoolsTaskSetsController = {
                 next(e);
             }
         });
+
+        // ==========================================================
+        // (4S) STUDENT: GET ALL TASKS FROM ASSIGNED SET (safe view)
+        // ==========================================================
+        app.get(`/${name}/task-sets/:taskSetId/tasks-student`, authMiddleware, async (req, res, next) => {
+            try {
+                const studentId = req.user.id;
+                const taskSetId = String(req.params.taskSetId || "").trim();
+                if (!taskSetId) return res.status(400).json({ error: "taskSetId required" });
+
+                const result = await getAllTasksFromTaskSetByStudent({ studentId, taskSetId });
+                return res.json(result);
+            } catch (e) {
+                next(e);
+            }
+        });
+
 
         // ==========================================================
         // (5) TEACHER: GET ALL STUDENT ANSWERS FROM SET (read-only)

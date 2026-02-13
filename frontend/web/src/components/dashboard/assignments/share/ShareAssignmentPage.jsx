@@ -16,6 +16,7 @@ import { useTeacherDashboard } from "../../TeacherDashboardContext.jsx";
 import Link from "../../Link.jsx";
 import TabSwitcher from "../../TabSwitcher.jsx";
 import SharePreviewList from "./SharePreviewList.jsx";
+import QrPng from "../../QrPng.jsx";
 
 function parseRules(str) {
     if (!str) return [];
@@ -626,7 +627,7 @@ export function ShareAssignmentPage() {
 
     const primaryButtonText = showPrimaryButton ?
         (hasAnySelected ? "Save and send" : "Save changes")
-        : "Changes are saved"
+        : (taskName ? "Changes are saved" : "")
 
 
     function onPrimaryAction() {
@@ -649,7 +650,7 @@ export function ShareAssignmentPage() {
     const shareId = safeStr(taskSetIdFromUrl || taskSetId);
     const shareUrl = useMemo(() => {
         if (!shareId) return "";
-        return `${window.location.origin}/share/${encodeURIComponent(shareId)}`;
+        return `${window.location.origin}/students/share/${encodeURIComponent(shareId)}`;
     }, [shareId]);
 
 
@@ -744,10 +745,8 @@ export function ShareAssignmentPage() {
                 gap: theme.spacing?.gap ?? 12,
             },
             shareLinkWrap: {
-                width: "80%",
-                paddingLeft: theme.bottomDynamicList.padX * 2,
+                paddingTop: theme.bottomDynamicList.padTop,
                 paddingBottom: theme.bottomDynamicList.padTop,
-                marginBottom: theme.bottomDynamicList.padBottom,
                 ...showByCondition(Boolean(shareId)), // ✅ opacity 0 if no id
             },
         }),
@@ -761,16 +760,26 @@ export function ShareAssignmentPage() {
                 "With anyone using the link. " +
                 "Or, send it to any existent students or classes"
             }
-        >
-            <div style={styles.row}>
-                {/* LEFT */}
-                <div style={styles.left}>
+            subSubtitleChild={
+                <>
                     {/* share link (from URL id) */}
                     <div style={styles.shareLinkWrap}>
                         <Link href={shareUrl}>
                             {shareUrl}
                         </Link>
                     </div>
+                </>
+            }
+            headerRight={
+                <QrPng
+                    value={shareUrl}
+                    size={120}
+                />
+            }
+        >
+            <div style={styles.row}>
+                {/* LEFT */}
+                <div style={styles.left}>
 
                     {/* assignment title */}
                     <div style={styles.leftTop}>
@@ -787,7 +796,6 @@ export function ShareAssignmentPage() {
                     {/* people search */}
                     <div style={styles.leftSearchWrap}>
                         <Input
-                            title={"Send to"}
                             placeholder={"Type an email address of the recipient. Or, search by student name or class name."}
                             mode="raw"
                             charLimit={120}
@@ -973,15 +981,13 @@ export function ShareAssignmentPage() {
                             </AwesomeActionButton>
 
                             <AwesomeActionButton
-                                // style={{
-                                //     ...showByCondition(showPrimaryButton), // ✅ visible if anything changed (and title not empty)
-                                // }}
+                                style={{
+                                    ...showByCondition(primaryButtonText), // ✅ visible if anything changed (and title not empty)
+                                }}
                                 size="regular"
                                 variant={"ghost"}
                                 disabled={!showPrimaryButton}
-                                title={showPrimaryButton ?
-                                    (hasAnySelected ? "Save and send to selected recipients" : "Save changes")
-                                    : "Changes are saved"}
+                                title={primaryButtonText}
                                 onClick={() => {
                                     // stub
                                     // later: if hasAnySelected -> assign/send; else -> save title only
