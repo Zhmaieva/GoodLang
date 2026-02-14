@@ -4,8 +4,8 @@ import {MAIL_PASS} from "./constants.js";
 // Create reusable transporter using SMTP (example: Gmail, custom SMTP)
 export const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 587, // Use 465 for SSL
-    secure: false, // Set to true for port 465
+    port: 465,
+    secure: true,
     auth: {
         user: 'goodlang.app@gmail.com', // Your custom domain email on iCloud
         pass: MAIL_PASS, // App-specific password
@@ -24,7 +24,7 @@ export const transporter = nodemailer.createTransport({
  */
 export function sendVerificationEmail(to, code) {
     const info = transporter.sendMail({
-        from: `"GoodLang" <${process.env.SMTP_FROM}>`,
+        from: `"GoodLang" <goodlang.app@gmail.com>`,
         to,
         subject: "Код логіну до GoodLang",
         text: `Твій код логіну до GoodLang: ${code}`,
@@ -85,6 +85,10 @@ export function sendVerificationEmail(to, code) {
 `,
     }).then(() => {
         console.log(`Verification email sent to ${to}: ${info.messageId}`);
+    }).catch((err) => {
+        console.error("sendVerificationEmail failed:", err?.message || err);
+        // swallow error so it never becomes unhandled
+        return null;
     });
 }
 
@@ -207,6 +211,10 @@ export function sendPromoEmail(to, code, expiresAt) {
 `
     }).then(info => {
         console.log(`Promo email sent to ${to}: ${info.messageId}`);
+    }).catch((err) => {
+        console.error("sendVerificationEmail failed:", err?.message || err);
+        // swallow error so it never becomes unhandled
+        return null;
     });
 }
 
