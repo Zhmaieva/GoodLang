@@ -888,7 +888,7 @@ export function ShareAssignmentPage() {
                             value={rightTab}
                             onChange={setRightTab}
                             tabs={[
-                                {key: "send", label: "Sending list"},
+                                {key: "send", label: "Assignees"},
                                 {key: "preview", label: "Tasks preview"},
                             ]}
                             renderContent={(key) => {
@@ -913,15 +913,15 @@ export function ShareAssignmentPage() {
                                                 <RectangleGroup
                                                     title={
                                                         hasAnything
-                                                            ? `Send to ${selectedSummary.totalSelectedStudents} student${
+                                                            ? `Assign to ${selectedSummary.totalSelectedStudents} student${
                                                                 selectedSummary.totalSelectedStudents > 1 ? "s" : ""
                                                             }`
-                                                            : "Send to"
+                                                            : "Assign to"
                                                     }
                                                 >
                                                     {!hasAnything && (
                                                         <div style={{padding: 12, opacity: 0.65}}>
-                                                            No recipients selected yet.
+                                                            No assignees selected yet.
                                                         </div>
                                                     )}
 
