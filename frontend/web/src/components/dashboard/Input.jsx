@@ -1,13 +1,5 @@
 // Input.jsx — drop-in, theme-driven (no fonts/sizes/colors defined here)
-// Requirements:
-// - relies on theme.input tokens
-// - bottom-line title text (label row) + clear "×" on the right
-// - controlled/uncontrolled friendly (value + onChange)
-// - modes: "raw" | "email"
-// - placeholder param
-// - charLimit
-// - full width of container
-// - parent can pass style overrides (wrapperStyle, inputStyle, labelStyle, clearStyle)
+// ONLY CHANGE: prevent browser autofill from changing text styling
 
 import React, {useEffect, useMemo} from "react";
 import { theme } from "../../App.jsx";
@@ -20,6 +12,8 @@ function normalizeEmail(s) {
     // minimal normalization, no styling decisions here
     return String(s ?? "").trim().toLowerCase();
 }
+
+const AUTOFILL_CLASS = "gl-input-autofill";
 
 export default function Input({
                                   value,
@@ -131,8 +125,41 @@ export default function Input({
         emit("");
     };
 
+// ✅ autofill fix: force exact same typography as theme.input.input
+    const autofillCss = useMemo(() => {
+        // read the same tokens you're already applying via computed.input
+        const ff = theme.input?.input?.fontFamily || theme.fontFamily;
+        const fs = theme.input?.input?.fontSize;
+        const fw = theme.input?.input?.fontWeight;
+        const lh = theme.input?.input?.lineHeight;
+        const color = theme.input?.input?.color;
+
+        // Note: we only set typography + text fill; no background/shadow changes
+        return `
+    input.${AUTOFILL_CLASS}:-webkit-autofill,
+    input.${AUTOFILL_CLASS}:-webkit-autofill:hover,
+    input.${AUTOFILL_CLASS}:-webkit-autofill:focus,
+    input.${AUTOFILL_CLASS}:-webkit-autofill:active {
+      font-family: ${ff} !important;
+      ${fs ? `font-size: ${fs} !important;` : ""}
+      ${fw ? `font-weight: ${fw} !important;` : ""}
+      ${lh ? `line-height: ${lh} !important;` : ""}
+
+      ${color ? `-webkit-text-fill-color: ${color} !important;` : "-webkit-text-fill-color: inherit !important;"}
+      caret-color: ${color || "inherit"} !important;
+
+      /* avoid Safari text autosizing weirdness */
+      -webkit-text-size-adjust: 100% !important;
+    }
+  `;
+    }, []);
+
+
     return (
         <div style={computed.wrap}>
+            {/* ✅ autofill text style fix only */}
+            <style dangerouslySetInnerHTML={{ __html: autofillCss }} />
+
             <div style={computed.labelRow}>
                 <div style={computed.label}>{title}</div>
             </div>
@@ -141,6 +168,7 @@ export default function Input({
                 display: "flex",
             }}>
                 <input
+                    className={AUTOFILL_CLASS}
                     value={val !== undefined ? currentValue : undefined}
                     defaultValue={val === undefined ? currentValue : undefined}
                     onChange={handleChange}
