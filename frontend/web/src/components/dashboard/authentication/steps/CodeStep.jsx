@@ -7,8 +7,17 @@ function onlyDigits(s) {
     return String(s ?? "").replace(/\D/g, "");
 }
 
+const STUB_VALID_CODE = "123456";
+
 export default function CodeStep({ email = "", onVerified, onNext, onBack }) {
     const [code, setCode] = React.useState("");
+
+    // subtext behaves like Input subtext: reserved space + fade in/out
+    const [hint, setHint] = React.useState("");
+    const [hintOpacity, setHintOpacity] = React.useState(0);
+
+    const L = theme.authCodeInput.length;
+    const isFull = onlyDigits(code).length >= L;
 
     const subtitleStyle = {
         fontFamily: theme.fontFamily,
@@ -16,6 +25,16 @@ export default function CodeStep({ email = "", onVerified, onNext, onBack }) {
         fontWeight: theme.weights.normal,
         lineHeight: theme.type.subtitleLineHeight,
         color: theme.textMutedDark,
+    };
+
+    // use the same style as Input subtext if present, otherwise fall back to subtitleStyle
+    const hintStyleBase = theme.input?.subtext || subtitleStyle;
+
+    const hintStyle = {
+        ...hintStyleBase,
+        textAlign: "center",
+        transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,
+        opacity: hintOpacity,
     };
 
     const stackStyle = {
@@ -35,15 +54,33 @@ export default function CodeStep({ email = "", onVerified, onNext, onBack }) {
         gap: theme.spacing.gap,
     };
 
+    const btnFadeStyle = {
+        transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
+        opacity: isFull ? 1 : 0,
+        pointerEvents: isFull ? "auto" : "none",
+    };
+
     const verify = async () => {
-        const clean = onlyDigits(code);
+        const clean = onlyDigits(code).slice(0, L);
         setCode(clean);
 
-        const L = theme.authCodeInput.length;
         if (clean.length < L) return;
 
-        const ok = await onVerified?.(clean);
-        if (ok === false) return;
+        // prefer real verifier if provided; otherwise stub
+        let ok = false;
+        if (onVerified) {
+            ok = await onVerified(clean);
+        } else {
+            ok = clean === STUB_VALID_CODE;
+        }
+
+        ok = false
+
+        if (ok === false) {
+            setHint("Invalid code");
+            setHintOpacity(1);
+            return;
+        }
 
         onNext?.();
     };
@@ -56,27 +93,28 @@ export default function CodeStep({ email = "", onVerified, onNext, onBack }) {
 
             <AuthCodeInput
                 value={code}
-                onChange={(v) => setCode(onlyDigits(v))}
+                onChange={(v) => {
+                    setCode(onlyDigits(v));
+
+                    // like Input: hide hint on change (but keep row space)
+                    if (hintOpacity !== 0) setHintOpacity(0);
+                    if (hint) setHint("");
+                }}
             />
 
+            {/* subtext row (always occupies space) */}
+            <div style={hintStyle}>{hint ? hint : "\u00A0"}</div>
+
             <div style={actionsRowStyle}>
-                <AwesomeActionButton
-                    variant="ghost"
-                    size="regular"
-                    symbol={"←"}
-                    onClick={onBack}
-                >
+                <AwesomeActionButton variant="ghost" size="regular" symbol={"←"} onClick={onBack}>
                     Back
                 </AwesomeActionButton>
 
-                <AwesomeActionButton
-                    variant="ghost"
-                    size="regular"
-                    symbol={"→"}
-                    onClick={verify}
-                >
-                    Verify
-                </AwesomeActionButton>
+                <div style={btnFadeStyle}>
+                    <AwesomeActionButton variant="ghost" size="regular" symbol={"→"} onClick={verify}>
+                        Verify
+                    </AwesomeActionButton>
+                </div>
             </div>
         </div>
     );

@@ -79,21 +79,12 @@ export default function EmailStep({ initialEmail = "", onConfirmed, onNext }) {
             <div
                 style={{
                     ...subtitleStyle,
-                    ...fade,
-                    opacity: baseOpacity,
-                    transitionDelay: `${theme.flow.stagger.delayStep * 1}ms`,
                 }}
             >
                 In order to proceed, we need to verify your email.
             </div>
 
-            <div
-                style={{
-                    ...fade,
-                    opacity: baseOpacity,
-                    transitionDelay: `${theme.flow.stagger.delayStep * 2}ms`,
-                }}
-            >
+            <div>
                 <Input
                     title=""
                     mode="email"

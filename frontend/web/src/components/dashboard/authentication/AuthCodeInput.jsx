@@ -23,13 +23,29 @@ export default function AuthCodeInput({ value = "", onChange }) {
         emit(arr.join("").replace(/\s/g, ""));
     };
 
+    // ✅ focus without selecting; caret at end
     const focus = (idx) => {
         const el = refs.current[idx];
         if (!el) return;
         el.focus();
         try {
-            el.setSelectionRange(0, 1);
+            const pos = (el.value || "").length; // 0 or 1
+            el.setSelectionRange(pos, pos);
         } catch {}
+    };
+
+    // ✅ focus rules: first empty cell, else last cell
+    const targetIndex = React.useCallback(() => {
+        const i = digits.indexOf(" ");
+        return i >= 0 ? i : Math.max(0, L - 1);
+    }, [digits, L]);
+
+    // ✅ ANY pointer down (including on inputs) behaves like wrapper click:
+    // - prevent native caret placement
+    // - focus the target cell
+    const onAnyPointerDown = (e) => {
+        e.preventDefault();
+        focus(targetIndex());
     };
 
     const handlePaste = (idx, e) => {
@@ -45,22 +61,28 @@ export default function AuthCodeInput({ value = "", onChange }) {
         }
         emit(arr.join("").replace(/\s/g, ""));
 
-        // focus next empty (or last)
-        const nextIdx = Math.min(j, L - 1);
-        focus(nextIdx);
+        focus(targetIndex());
     };
 
     const onKeyDown = (idx, e) => {
         const k = e.key;
 
+        // ✅ prevent movement with arrow keys
+        if (k === "ArrowLeft" || k === "ArrowRight" || k === "ArrowUp" || k === "ArrowDown") {
+            e.preventDefault();
+            return;
+        }
+
         if (k === "Backspace") {
             const cur = digits[idx] === " " ? "" : digits[idx];
+
             if (cur) {
                 e.preventDefault();
                 setAt(idx, " ");
                 focus(idx);
                 return;
             }
+
             if (idx > 0) {
                 e.preventDefault();
                 setAt(idx - 1, " ");
@@ -68,58 +90,50 @@ export default function AuthCodeInput({ value = "", onChange }) {
             }
             return;
         }
-
-        if (k === "ArrowLeft") {
-            if (idx > 0) {
-                e.preventDefault();
-                focus(idx - 1);
-            }
-            return;
-        }
-
-        if (k === "ArrowRight") {
-            if (idx < L - 1) {
-                e.preventDefault();
-                focus(idx + 1);
-            }
-            return;
-        }
     };
+
 
     const onInputChange = (idx, e) => {
         const raw = e?.target?.value ?? "";
         const d = onlyDigits(raw);
 
-        // allow typing more than 1 char (mobile) -> distribute
         if (d.length > 1) {
             const arr = digits.split("");
             let j = idx;
             for (let i = 0; i < d.length && j < L; i += 1, j += 1) arr[j] = d[i];
             emit(arr.join("").replace(/\s/g, ""));
-            focus(Math.min(j, L - 1));
+
+            focus(targetIndex());
             return;
         }
 
         const ch = d ? d[0] : " ";
         setAt(idx, ch);
 
-        // ✅ move focus forward only when a digit is entered
         if (d && idx < L - 1) focus(idx + 1);
     };
 
+    const wrapperStyle = {
+        ...t.row,
+        justifyContent: "center",
+        borderBottom: t.underlineBorder || t.cellWrap?.borderBottom,
+        cursor: "text",
+    };
+
+    const cellWrapStyle = {
+        ...t.cellWrap,
+        borderBottom: "none",
+        width: t.cellWidth,
+    };
+
     return (
-        <div style={t.row}>
+        <div style={wrapperStyle} onPointerDown={onAnyPointerDown}>
             {Array.from({ length: L }).map((_, idx) => (
-                <div
-                    key={idx}
-                    style={{
-                        ...t.cellWrap,
-                        width: t.cellWidth,
-                    }}
-                >
+                <div key={idx} style={cellWrapStyle}>
                     <input
                         ref={(el) => (refs.current[idx] = el)}
                         value={digits[idx] === " " ? "" : digits[idx]}
+                        onPointerDown={onAnyPointerDown}   // ✅ same behavior even when clicking input
                         onChange={(e) => onInputChange(idx, e)}
                         onKeyDown={(e) => onKeyDown(idx, e)}
                         onPaste={(e) => handlePaste(idx, e)}
