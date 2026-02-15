@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import EmptyContent from "../EmpyContent.jsx";
+import EmptyContent from "../EmptyContent.jsx";
 
 export default function SignInPage({ nextPath }) {
     const location = useLocation();
