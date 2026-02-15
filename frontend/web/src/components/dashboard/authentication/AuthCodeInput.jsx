@@ -5,119 +5,128 @@ function onlyDigits(s) {
     return String(s ?? "").replace(/\D/g, "");
 }
 
-export default function AuthCodeInput({
-                                          value = "",
-                                          onChange,
-                                          onComplete,
-                                          length,
-                                          autoFocus = true,
-                                          disabled = false,
-                                      }) {
+export default function AuthCodeInput({ value = "", onChange }) {
     const t = theme.authCodeInput;
-    const L = Number.isFinite(length) ? length : t.length;
+
+    const L = t.length;
+    const digits = onlyDigits(value).slice(0, L).padEnd(L, " ");
 
     const refs = React.useRef([]);
 
-    const digits = React.useMemo(() => {
-        const clean = onlyDigits(value).slice(0, L);
-        return Array.from({ length: L }, (_, i) => clean[i] || "");
-    }, [value, L]);
+    const emit = (next) => {
+        onChange?.(onlyDigits(next).slice(0, L));
+    };
+
+    const setAt = (idx, ch) => {
+        const arr = digits.split("");
+        arr[idx] = ch;
+        emit(arr.join("").replace(/\s/g, ""));
+    };
 
     const focus = (idx) => {
         const el = refs.current[idx];
         if (!el) return;
-        el.focus({ preventScroll: true });
+        el.focus();
         try {
-            el.setSelectionRange(1, 1);
+            el.setSelectionRange(0, 1);
         } catch {}
     };
 
-    const firstEmpty = () => {
-        const i = digits.findIndex((d) => !d);
-        return i === -1 ? L - 1 : i;
-    };
+    const handlePaste = (idx, e) => {
+        const text = onlyDigits(e.clipboardData?.getData("text") || "");
+        if (!text) return;
 
-    React.useEffect(() => {
-        if (!autoFocus) return;
-        focus(firstEmpty());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    const setAt = (idx, ch) => {
-        const next = [...digits];
-        next[idx] = ch;
-        const joined = next.join("");
-        onChange?.(joined);
-        if (!next.includes("") && joined.length === L) onComplete?.(joined);
-    };
-
-    const handlePaste = (e) => {
         e.preventDefault();
-        if (disabled) return;
 
-        const pasted = onlyDigits(e.clipboardData?.getData("text") || "").slice(0, L);
-        if (!pasted) return;
+        const arr = digits.split("");
+        let j = idx;
+        for (let i = 0; i < text.length && j < L; i += 1, j += 1) {
+            arr[j] = text[i];
+        }
+        emit(arr.join("").replace(/\s/g, ""));
 
-        const joined = pasted.padEnd(L, "");
-        onChange?.(joined);
+        // focus next empty (or last)
+        const nextIdx = Math.min(j, L - 1);
+        focus(nextIdx);
+    };
 
-        requestAnimationFrame(() => focus(Math.min(pasted.length, L - 1)));
-        if (pasted.length === L) onComplete?.(pasted);
+    const onKeyDown = (idx, e) => {
+        const k = e.key;
+
+        if (k === "Backspace") {
+            const cur = digits[idx] === " " ? "" : digits[idx];
+            if (cur) {
+                e.preventDefault();
+                setAt(idx, " ");
+                focus(idx);
+                return;
+            }
+            if (idx > 0) {
+                e.preventDefault();
+                setAt(idx - 1, " ");
+                focus(idx - 1);
+            }
+            return;
+        }
+
+        if (k === "ArrowLeft") {
+            if (idx > 0) {
+                e.preventDefault();
+                focus(idx - 1);
+            }
+            return;
+        }
+
+        if (k === "ArrowRight") {
+            if (idx < L - 1) {
+                e.preventDefault();
+                focus(idx + 1);
+            }
+            return;
+        }
+    };
+
+    const onInputChange = (idx, e) => {
+        const raw = e?.target?.value ?? "";
+        const d = onlyDigits(raw);
+
+        // allow typing more than 1 char (mobile) -> distribute
+        if (d.length > 1) {
+            const arr = digits.split("");
+            let j = idx;
+            for (let i = 0; i < d.length && j < L; i += 1, j += 1) arr[j] = d[i];
+            emit(arr.join("").replace(/\s/g, ""));
+            focus(Math.min(j, L - 1));
+            return;
+        }
+
+        const ch = d ? d[0] : " ";
+        setAt(idx, ch);
+
+        // ✅ move focus forward only when a digit is entered
+        if (d && idx < L - 1) focus(idx + 1);
     };
 
     return (
-        <div style={t.row} onPaste={handlePaste}>
-            {digits.map((d, i) => (
-                <div key={i} style={t.cellWrap}>
+        <div style={t.row}>
+            {Array.from({ length: L }).map((_, idx) => (
+                <div
+                    key={idx}
+                    style={{
+                        ...t.cellWrap,
+                        width: t.cellWidth,
+                    }}
+                >
                     <input
-                        ref={(el) => (refs.current[i] = el)}
-                        value={d}
-                        disabled={disabled}
+                        ref={(el) => (refs.current[idx] = el)}
+                        value={digits[idx] === " " ? "" : digits[idx]}
+                        onChange={(e) => onInputChange(idx, e)}
+                        onKeyDown={(e) => onKeyDown(idx, e)}
+                        onPaste={(e) => handlePaste(idx, e)}
                         inputMode="numeric"
                         autoComplete="one-time-code"
                         style={t.cellInput}
-                        onChange={(e) => {
-                            if (disabled) return;
-                            const ch = onlyDigits(e.target.value).slice(0, 1);
-                            if (!ch) return;
-                            setAt(i, ch);
-                            requestAnimationFrame(() => focus(Math.min(i + 1, L - 1)));
-                        }}
-                        onKeyDown={(e) => {
-                            if (disabled) return;
-
-                            if (e.key === "Backspace") {
-                                e.preventDefault();
-                                if (digits[i]) {
-                                    setAt(i, "");
-                                    requestAnimationFrame(() => focus(i));
-                                } else if (i > 0) {
-                                    setAt(i - 1, "");
-                                    requestAnimationFrame(() => focus(i - 1));
-                                }
-                                return;
-                            }
-
-                            if (e.key === "ArrowLeft") {
-                                e.preventDefault();
-                                focus(Math.max(0, i - 1));
-                                return;
-                            }
-                            if (e.key === "ArrowRight") {
-                                e.preventDefault();
-                                focus(Math.min(L - 1, i + 1));
-                                return;
-                            }
-
-                            if (e.key === "Enter") {
-                                const joined = digits.join("");
-                                if (!digits.includes("") && joined.length === L) onComplete?.(joined);
-                            }
-                        }}
-                        onFocus={() => {
-                            const fe = firstEmpty();
-                            if (fe < i && digits[i] === "") focus(fe);
-                        }}
+                        aria-label={`Code digit ${idx + 1}`}
                     />
                 </div>
             ))}

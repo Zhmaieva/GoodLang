@@ -67,12 +67,17 @@ export default function Flow({ steps = [], onDone }) {
 
     const opacity = phase === "hidden" ? t.opacity.hidden : t.opacity.shown;
 
-    // ✅ one fade wrapper for title + content together
+
     const fadeWrapStyle = {
-        ...t.fade, // if you already have it in theme.flow
+        ...t.fade,
         transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
         opacity,
+
+        display: t.content?.display || "flex",
+        flexDirection: t.content?.flexDirection || "column",
+        gap: t.content?.gap,
     };
+
 
     return (
         <div style={t.wrap}>

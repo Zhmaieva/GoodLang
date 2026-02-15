@@ -924,13 +924,30 @@ theme.authCodeInput = {
         textAlign: "center",
 
         fontFamily: theme.fontFamily,
-        fontSize: theme.type.title,
-        fontWeight: theme.weights.title,
+        fontSize: theme.breadcrumbs.fontSize,
+        fontWeight: theme.weights.normal,
         lineHeight: theme.type.titleLineHeight,
         color: theme.textDark,
 
         width: "100%",
     },
+};
+
+theme.authCodeInput = {
+    ...theme.authCodeInput,
+
+    // tighter spacing between cells
+    gap: theme.spacing.rowGap,
+    row: {
+        ...theme.authCodeInput.row,
+        gap: theme.spacing.rowGap,
+        justifyContent: "space-between",
+    },
+
+    // controls underline width (prevents full-width stretch)
+    cellWidth: "2.2em",
+
+    // underline already comes from cellWrap.borderBottom
 };
 
 // optional input subtext styling (used by Input.jsx)

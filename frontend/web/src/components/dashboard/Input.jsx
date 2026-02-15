@@ -1,8 +1,3 @@
-// Input.jsx — drop-in, theme-driven (no fonts/sizes/colors defined here)
-// Changes requested:
-// ✅ add optional subtext row below label (occupies space) + fades in/out on input changes
-// ✅ prevent caret jumping to end when value updates
-
 import React, {useEffect, useMemo} from "react";
 import { theme } from "../../App.jsx";
 
@@ -11,7 +6,6 @@ function mergeStyle(a, b) {
 }
 
 function normalizeEmail(s) {
-    // minimal normalization, no styling decisions here
     return String(s ?? "").trim().toLowerCase();
 }
 
@@ -26,12 +20,11 @@ export default function Input({
                                   subtext = "",
                                   placeholder = "",
 
-                                  mode = "raw", // "raw" | "email"
+                                  mode = "raw",
                                   charLimit,
 
                                   disabled = false,
 
-                                  // style escape hatches (still theme-first)
                                   style,
                                   wrapperStyle,
                                   inputStyle,
@@ -42,21 +35,29 @@ export default function Input({
                               }) {
     const t = theme.input;
 
-    const [val, setVal] = React.useState('');
-
     const inputRef = React.useRef(null);
-    const selRef = React.useRef({ start: null, end: null, wasFocused: false });
 
-    // ✅ subtext opacity (occupy space, fade only)
-    const [subtextOpacity, setSubtextOpacity] = React.useState(subtext ? 1 : 0);
+    // ✅ single source of truth for displayed value
+    const isControlled = value !== undefined;
 
-    // when parent provides new subtext -> fade in
+    const [val, setVal] = React.useState(() => {
+        const initial = isControlled ? String(value ?? "") : String(defaultValue ?? "");
+        return initial;
+    });
+
+    // track last external value to avoid resetting caret on same-value renders
+    const lastExtRef = React.useRef(isControlled ? String(value ?? "") : null);
+
+    // selection restore info
+    const selRef = React.useRef({ start: null, end: null, shouldRestore: false });
+
+    // ✅ sync from parent ONLY when external value actually changes
     useEffect(() => {
-        setSubtextOpacity(subtext ? 1 : 0);
-    }, [subtext]);
+        if (!isControlled) return;
 
-    useEffect(() => {
-        // ✅ preserve caret/selection only if the input is focused
+        const nextExt = String(value ?? "");
+        if (lastExtRef.current === nextExt) return;
+
         const el = inputRef.current;
         const isFocused = !!el && document.activeElement === el;
 
@@ -64,30 +65,43 @@ export default function Input({
             selRef.current = {
                 start: el.selectionStart,
                 end: el.selectionEnd,
-                wasFocused: true,
+                shouldRestore: true,
             };
         } else {
-            selRef.current = { start: null, end: null, wasFocused: false };
+            selRef.current = { start: null, end: null, shouldRestore: false };
         }
 
-        setVal(value !== undefined ? String(value ?? "") : undefined);
+        lastExtRef.current = nextExt;
+        setVal(nextExt);
+    }, [isControlled, value]);
 
-        // restore selection AFTER state applies
-        if (selRef.current.wasFocused) {
-            queueMicrotask(() => {
-                const el2 = inputRef.current;
-                if (!el2) return;
-                if (document.activeElement !== el2) return;
+    // ✅ restore selection immediately after val changes (before paint)
+    React.useLayoutEffect(() => {
+        if (!selRef.current.shouldRestore) return;
 
-                const { start, end } = selRef.current;
-                if (typeof start === "number" && typeof end === "number") {
-                    try {
-                        el2.setSelectionRange(start, end);
-                    } catch {}
-                }
-            });
+        const el = inputRef.current;
+        if (!el) return;
+        if (document.activeElement !== el) return;
+
+        const { start, end } = selRef.current;
+        selRef.current.shouldRestore = false;
+
+        if (typeof start === "number" && typeof end === "number") {
+            try {
+                // clamp to current length (important if parent normalized)
+                const len = el.value.length;
+                const s = Math.min(start, len);
+                const e = Math.min(end, len);
+                el.setSelectionRange(s, e);
+            } catch {}
         }
-    }, [value]);
+    }, [val]);
+
+    // ✅ subtext opacity
+    const [subtextOpacity, setSubtextOpacity] = React.useState(subtext ? 1 : 0);
+    useEffect(() => {
+        setSubtextOpacity(subtext ? 1 : 0);
+    }, [subtext]);
 
     const computed = useMemo(() => {
         return {
@@ -120,11 +134,9 @@ export default function Input({
                 labelStyle
             ),
 
-            // ✅ subtext style: reuse theme.input.subtext if present, else empty object
             subtext: mergeStyle(
                 (t.subtext || {}),
                 {
-                    // only opacity animation; occupies space because we always render it
                     transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,
                     opacity: subtextOpacity,
                 }
@@ -156,8 +168,7 @@ export default function Input({
         };
     }, [t, style, wrapperStyle, inputStyle, labelStyle, clearStyle, disabled, value, subtextOpacity]);
 
-    const currentValue = val !== undefined ? val : String(defaultValue ?? "");
-    const showClear = !!currentValue;
+    const showClear = !!val;
 
     const emit = (next) => {
         if (!onChange) return;
@@ -165,26 +176,51 @@ export default function Input({
     };
 
     const handleChange = (e) => {
-        // ✅ when input changes -> fade OUT subtext (but keep its row space)
         if (subtextOpacity !== 0) setSubtextOpacity(0);
 
-        let next = e?.target?.value ?? "";
+        const el = e?.target;
+        // capture caret before we mutate val (important for mid-edit)
+        if (el && document.activeElement === el) {
+            selRef.current = {
+                start: el.selectionStart,
+                end: el.selectionEnd,
+                shouldRestore: true,
+            };
+        } else {
+            selRef.current = { start: null, end: null, shouldRestore: false };
+        }
+
+        let next = el?.value ?? "";
         if (mode === "email") next = normalizeEmail(next);
 
         if (typeof charLimit === "number" && charLimit >= 0) {
             if (next.length > charLimit) next = next.slice(0, charLimit);
         }
 
+        // ✅ update internal state immediately so caret stays stable
+        setVal(next);
+
+        // ✅ keep lastExt in sync to avoid effect re-setting same value
+        if (isControlled) lastExtRef.current = next;
+
         emit(next);
     };
 
     const handleClear = () => {
-        // clearing is also a change -> fade out
         if (subtextOpacity !== 0) setSubtextOpacity(0);
+
+        const el = inputRef.current;
+        if (el && document.activeElement === el) {
+            selRef.current = { start: 0, end: 0, shouldRestore: true };
+        } else {
+            selRef.current = { start: null, end: null, shouldRestore: false };
+        }
+
+        setVal("");
+        if (isControlled) lastExtRef.current = "";
         emit("");
     };
 
-    // (keeping your autofill css exactly as-is)
     const autofillCss = useMemo(() => {
         const ff = theme.input?.input?.fontFamily || theme.fontFamily;
         const fs = theme.input?.input?.fontSize;
@@ -201,10 +237,8 @@ export default function Input({
       ${fs ? `font-size: ${fs} !important;` : ""}
       ${fw ? `font-weight: ${fw} !important;` : ""}
       ${lh ? `line-height: ${lh} !important;` : ""}
-
       ${color ? `-webkit-text-fill-color: ${color} !important;` : "-webkit-text-fill-color: inherit !important;"}
       caret-color: ${color || "inherit"} !important;
-
       -webkit-text-size-adjust: 100% !important;
     }
   `;
@@ -218,14 +252,11 @@ export default function Input({
                 <div style={computed.label}>{title}</div>
             </div>
 
-            <div style={{
-                display: "flex",
-            }}>
+            <div style={{ display: "flex" }}>
                 <input
                     ref={inputRef}
                     className={AUTOFILL_CLASS}
-                    value={val !== undefined ? currentValue : undefined}
-                    defaultValue={val === undefined ? currentValue : undefined}
+                    value={val}
                     onChange={handleChange}
                     placeholder={placeholder}
                     disabled={disabled}
@@ -235,9 +266,7 @@ export default function Input({
                     inputMode={mode === "email" ? (t.inputModeEmail || "email") : undefined}
                     type={mode === "email" ? (t.typeEmail || "email") : (t.typeRaw || "text")}
                 />
-                <div style={{
-                    height: 0,
-                }}>
+                <div style={{ height: 0 }}>
                     <button
                         type="button"
                         style={computed.clearBtn}
@@ -250,9 +279,8 @@ export default function Input({
                     </button>
                 </div>
             </div>
+
             <div style={computed.subtext}>{subtext ? subtext : "\u00A0"}</div>
-
-
         </div>
     );
 }

@@ -7,17 +7,36 @@ function onlyDigits(s) {
     return String(s ?? "").replace(/\D/g, "");
 }
 
-/**
- * Props:
- * - onVerified: async (code) => boolean | void
- * - onNext: () => void
- * - onBack: () => void
- */
-export default function CodeStep({ onVerified, onNext, onBack }) {
+export default function CodeStep({ email = "", onVerified, onNext, onBack }) {
     const [code, setCode] = React.useState("");
 
-    const verify = async (val) => {
-        const clean = onlyDigits(val);
+    const subtitleStyle = {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textMutedDark,
+    };
+
+    const stackStyle = {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: theme.spacing.gap,
+    };
+
+    const actionsRowStyle = {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        alignItems: theme.layout?.rowAlign || "center",
+        justifyContent: "space-between",
+        gap: theme.spacing.gap,
+    };
+
+    const verify = async () => {
+        const clean = onlyDigits(code);
         setCode(clean);
 
         const L = theme.authCodeInput.length;
@@ -30,30 +49,35 @@ export default function CodeStep({ onVerified, onNext, onBack }) {
     };
 
     return (
-        <>
+        <div style={stackStyle}>
+            <div style={subtitleStyle}>
+                We have sent an email to {String(email || "").trim() || "your email"}.
+            </div>
+
             <AuthCodeInput
                 value={code}
                 onChange={(v) => setCode(onlyDigits(v))}
-                onComplete={verify}
             />
 
-            <AwesomeActionButton
-                variant="ghost"
-                size="regular"
-                title="Back"
-                onClick={onBack}
-            >
-                Back
-            </AwesomeActionButton>
+            <div style={actionsRowStyle}>
+                <AwesomeActionButton
+                    variant="ghost"
+                    size="regular"
+                    symbol={"←"}
+                    onClick={onBack}
+                >
+                    Back
+                </AwesomeActionButton>
 
-            <AwesomeActionButton
-                variant="accent"
-                size="regular"
-                title="Verify"
-                onClick={() => verify(code)}
-            >
-                Verify
-            </AwesomeActionButton>
-        </>
+                <AwesomeActionButton
+                    variant="ghost"
+                    size="regular"
+                    symbol={"→"}
+                    onClick={verify}
+                >
+                    Verify
+                </AwesomeActionButton>
+            </div>
+        </div>
     );
 }
