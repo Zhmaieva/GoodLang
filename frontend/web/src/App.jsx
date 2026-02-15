@@ -129,6 +129,11 @@ import {
 } from "./components/dashboard/assignments/create/CreateGrammarChooseOptionPage.jsx";
 import {themeStyles} from "./utils/theme.js";
 import {ShareAssignmentPage} from "./components/dashboard/assignments/share/ShareAssignmentPage.jsx";
+import {MySubmissionsPage} from "./components/dashboard/assignments/student/submissions/MySubmissionsPage.jsx";
+import {WorkOnAssignmentPage} from "./components/dashboard/assignments/student/assignments/WorkOnAssignmentPage.jsx";
+import {MyAssignmentPage} from "./components/dashboard/assignments/student/assignments/MyAssignmentPage.jsx";
+import StudentDashboardLayout from "./components/dashboard/navigation/StudentDashboardLayout.jsx";
+import {StudentProfilePage} from "./components/dashboard/assignments/student/profile/StudentProfilePage.jsx";
 
 // theme.js
 export const theme = themeStyles;
@@ -178,6 +183,7 @@ export default function App() {
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />
                 <Route path="/payment/cancel" element={<PaymentCancel />} />
+
                 <Route
                     path="/school"
                     element={
@@ -194,6 +200,25 @@ export default function App() {
                     <Route path="assignments/create-assignment" element={<CreateAssignmentsPage/>}/>
                     <Route path="assignments/create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}/>
                     <Route path="assignments/create-assignment/share" element={<ShareAssignmentPage />}/>
+                </Route>
+
+                <Route
+                    path="/student"
+                    element={
+                        <TeacherDashboardProvider>
+                            <StudentDashboardLayout />
+                        </TeacherDashboardProvider>
+                    }
+                >
+                    <Route index element={<MyAssignmentPage />} />
+                    <Route path="assignments" element={<MyAssignmentPage />} />
+
+                    {/* ✅ inner route by URL to work on an assignment */}
+                    <Route path="assignments/:assignmentId" element={<WorkOnAssignmentPage />} />
+
+                    {/* fake routes for now */}
+                    <Route path="submissions" element={<MySubmissionsPage />} />
+                    <Route path="profile" element={<StudentProfilePage />} />
                 </Route>
 
                 {/* A1 RULES */}

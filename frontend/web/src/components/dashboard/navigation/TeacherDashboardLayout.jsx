@@ -4,6 +4,7 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import ItemsList from "../ItemsList.jsx";
 import { theme } from "../../../App.jsx";
+import SignInPage from "../authentication/SignInPage.jsx";
 
 export function getLastPathEdge(pathname) {
     const parts = String(pathname || "")
@@ -17,9 +18,13 @@ export function getLastPathEdge(pathname) {
 
 
 export default function TeacherDashboardLayout() {
-    const { teacher } = useTeacherDashboard();
+    const { teacher, loading } = useTeacherDashboard(); // same context
     const navigate = useNavigate();
     const location = useLocation();
+
+    const nextPath = useMemo(() => {
+        return (location?.pathname || "/") + (location?.search || "");
+    }, [location?.pathname, location?.search]);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -77,6 +82,15 @@ export default function TeacherDashboardLayout() {
 
     const styles = useMemo(() => {
         const m = theme.layoutMetrics;
+
+        const contentFull = {
+            minHeight: "100vh",
+            padding: theme.layoutMetrics.pagePad,
+            display: "flex",
+            flexDirection: "column",
+            gap: theme.layoutMetrics.contentGap,
+            overflow: "hidden",
+        };
 
         return {
             page: {
@@ -161,14 +175,11 @@ export default function TeacherDashboardLayout() {
                 textOverflow: "ellipsis",
             },
 
+            contentFull,
+
             content: {
                 marginLeft: theme.layoutMetrics.sidebarWidth,
-                minHeight: "100vh",
-                padding: theme.layoutMetrics.pagePad,
-                display: "flex",
-                flexDirection: "column",
-                gap: theme.layoutMetrics.contentGap,
-                overflow: "hidden",
+                ...contentFull
             },
 
             breadcrumbRow: {
@@ -187,6 +198,18 @@ export default function TeacherDashboardLayout() {
 
         };
     }, [teacherName]);
+
+    if (!loading && !teacher?.first_name) {
+        return <div style={styles.page}>
+            <main style={styles.contentFull}>
+                <SignInPage nextPath={nextPath}/>
+            </main>
+        </div>
+    }
+
+    if (loading) {
+        return <div style={styles.page}></div>
+    }
 
     return (
         <div style={styles.page}>

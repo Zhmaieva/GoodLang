@@ -650,7 +650,7 @@ export function ShareAssignmentPage() {
     const shareId = safeStr(taskSetIdFromUrl || taskSetId);
     const shareUrl = useMemo(() => {
         if (!shareId) return "";
-        return `${window.location.origin}/students/share/${encodeURIComponent(shareId)}`;
+        return `${window.location.origin}/student/assignments/${encodeURIComponent(shareId)}`;
     }, [shareId]);
 
 
@@ -889,7 +889,7 @@ export function ShareAssignmentPage() {
                             onChange={setRightTab}
                             tabs={[
                                 {key: "send", label: "Assignees"},
-                                {key: "preview", label: "Tasks preview"},
+                                {key: "preview", label: "Preview"},
                             ]}
                             renderContent={(key) => {
                                 if (key === "preview") {

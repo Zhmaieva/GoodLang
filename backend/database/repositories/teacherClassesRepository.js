@@ -213,14 +213,15 @@ export async function listClassStudents(teacherAccountId, classId) {
 }
 
 /**
- * Get teacher metadata
+ * Get account metadata (teacher or basic account)
  */
-export async function getTeacherMetadata(teacherAccountId) {
-    const { rows } = await pool.query(
+export async function getAccountMetadata(accountId) {
+    // 1️⃣ Check if account is a teacher
+    const { rows: teacherRows } = await pool.query(
         `
             SELECT
                 t.account_id,
-                a.email AS email,           -- ✅ teacher email
+                a.email AS email,
                 t.first_name,
                 t.last_name,
                 t.status,
@@ -231,24 +232,61 @@ export async function getTeacherMetadata(teacherAccountId) {
             WHERE t.account_id = $1
             LIMIT 1
         `,
-        [teacherAccountId]
+        [accountId]
     );
 
-    const { rows: cnt } = await pool.query(
+    // 2️⃣ If teacher exists → fetch active students count
+    if (teacherRows.length > 0) {
+        const { rows: cnt } = await pool.query(
+            `
+                SELECT COUNT(*)::int AS active_students
+                FROM teacher_students ts
+                WHERE ts.teacher_account_id = $1
+                  AND ts.is_active = true
+            `,
+            [accountId]
+        );
+
+        return {
+            ...teacherRows[0],
+            active_students: cnt[0]?.active_students ?? 0,
+            role: "teacher",
+        };
+    }
+
+    // 3️⃣ If NOT teacher → return basic account metadata
+    const { rows: accountRows } = await pool.query(
         `
-            SELECT COUNT(*)::int AS active_students
-            FROM teacher_students ts
-            WHERE ts.teacher_account_id = $1
-              AND ts.is_active = true
+            SELECT
+                a.id AS account_id,
+                a.email,
+                a.created_at
+            FROM accounts a
+            WHERE a.id = $1
+            LIMIT 1
         `,
-        [teacherAccountId]
+        [accountId]
     );
+
+    if (accountRows.length === 0) {
+        return null;
+    }
+
+    const acc = accountRows[0];
 
     return {
-        ...(rows[0] || null),
-        active_students: cnt[0]?.active_students ?? 0,
+        account_id: acc.account_id,
+        email: acc.email,
+        first_name: null,
+        last_name: null,
+        status: null,
+        students_quota: null,
+        created_at: acc.created_at,
+        active_students: 0,
+        role: "student", // or "account"
     };
 }
+
 
 
 /**

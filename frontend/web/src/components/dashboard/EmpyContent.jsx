@@ -33,8 +33,7 @@ export default function EmptyContent({
     const buttonSize = useMemo(() => {
         if (!hasAction) return "regular";
         // “Dynamic”: short CTAs feel better as GIANT; longer ones as REGULAR.
-        const len = String(actionText || "").trim().length;
-        return len ? (len <= theme.emptyContent?.giantCtaMaxLen ? "giant" : "regular") : "regular";
+        return "regular";
     }, [hasAction, actionText]);
 
     const resolvedVariant = useMemo(() => {

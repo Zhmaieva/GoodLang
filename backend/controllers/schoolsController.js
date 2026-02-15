@@ -1,6 +1,6 @@
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import {
-    getTeacherMetadata,
+    getAccountMetadata,
     listTeachersClasses,
     listTeachersStudents,
     listClassStudents,
@@ -32,9 +32,9 @@ export const schoolController = {
         // =========================
 
         // Get teacher metadata (me)
-        app.get(`/${name}/teachers/me`, authMiddleware, async (req, res, next) => {
+        app.get(`/${name}/me`, authMiddleware, async (req, res, next) => {
             try {
-                const meta = await getTeacherMetadata(req.user.id);
+                const meta = await getAccountMetadata(req.user.id);
                 if (!meta) return res.status(404).json({ error: "Teacher not found" });
                 res.json(meta);
             } catch (e) {

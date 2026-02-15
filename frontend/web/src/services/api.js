@@ -606,7 +606,7 @@ export async function callCompleteMarathonDayApi(opts = {}) {
 // Teacher
 // ------------------------------------------------------------
 export function apiTeacherMetadata() {
-    return jsonFetch(`${API_BASE}/schools/teachers/me`);
+    return jsonFetch(`${API_BASE}/schools/me`);
 }
 
 export function apiTeacherClasses() {
