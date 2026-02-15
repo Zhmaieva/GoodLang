@@ -583,6 +583,7 @@ theme.input = {
         padding: 0,
         opacity: 1,
         pointerEvents: "auto",
+        width: 0,
     },
     clearBtnDisabledOpacity: 0,
 
@@ -843,6 +844,110 @@ theme.chooseOptionReadonlyTask = {
 
     gapToken: "____",
 };
+
+// theme.js — minimal, reuse-only additions for Flow + AuthCodeInput + Input subtext
+
+theme.flow = {
+    ms: theme.motion?.normal || "220ms",
+    ease: theme.motion?.ease || "ease",
+
+    wrap: {
+        width: "100%",
+        flex: "1 1 auto",
+        minHeight: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: theme.spacing?.cardPadX,
+        boxSizing: "border-box",
+    },
+
+    content: {
+        width: "100%",
+        maxWidth: "clamp(28rem, 42vw, 42rem)", // controlled but responsive
+        display: "flex",
+        flexDirection: "column",
+        gap: theme.spacing?.gap,
+        minWidth: 0,
+    },
+
+
+    title: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.breadcrumbs.fontSize,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.titleLineHeight,
+        color: theme.textDark,
+        margin: 0,
+    },
+
+    stagger: {
+        delayStep: 80,
+    },
+
+    fade: {
+        transition: `opacity ${theme.motion?.normal || "220ms"} ${theme.motion?.ease || "ease"}`,
+    },
+
+    opacity: { hidden: 0, shown: 1 },
+};
+
+
+theme.authCodeInput = {
+    // behavior
+    length: 6,
+
+    row: {
+        display: "flex",
+        gap: theme.spacing?.rowGap,
+        alignItems: "center",
+        justifyContent: "flex-start",
+        width: "100%",
+        minWidth: 0,
+    },
+
+    cellWrap: {
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "center",
+        borderBottom: theme.borders?.card || `1px solid ${theme.border}`,
+    },
+
+    cellInput: {
+        // “no visible borders”, but we keep the bottom border on wrapper
+        appearance: "none",
+        border: "none",
+        outline: "none",
+        background: "transparent",
+        padding: 0,
+        margin: 0,
+        textAlign: "center",
+
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.title,
+        fontWeight: theme.weights.title,
+        lineHeight: theme.type.titleLineHeight,
+        color: theme.textDark,
+
+        width: "100%",
+    },
+};
+
+// optional input subtext styling (used by Input.jsx)
+theme.input.subtextWrap = {
+    transition: `opacity ${theme.motion?.fast || "160ms"} ${theme.motion?.ease || "ease"}`,
+};
+
+theme.input.subtext = {
+    fontFamily: theme.fontFamily,
+    fontSize: theme.type.subtitle,
+    fontWeight: theme.weights.normal,
+    lineHeight: theme.type.subtitleLineHeight,
+    color: theme.textMutedDark,
+    margin: 0,
+    height: 0,
+};
+
 
 export const themeStyles = theme;
 

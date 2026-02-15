@@ -1,5 +1,7 @@
 // Input.jsx — drop-in, theme-driven (no fonts/sizes/colors defined here)
-// ONLY CHANGE: prevent browser autofill from changing text styling
+// Changes requested:
+// ✅ add optional subtext row below label (occupies space) + fades in/out on input changes
+// ✅ prevent caret jumping to end when value updates
 
 import React, {useEffect, useMemo} from "react";
 import { theme } from "../../App.jsx";
@@ -21,6 +23,7 @@ export default function Input({
                                   onChange,
 
                                   title = "",
+                                  subtext = "",
                                   placeholder = "",
 
                                   mode = "raw", // "raw" | "email"
@@ -41,9 +44,50 @@ export default function Input({
 
     const [val, setVal] = React.useState('');
 
+    const inputRef = React.useRef(null);
+    const selRef = React.useRef({ start: null, end: null, wasFocused: false });
+
+    // ✅ subtext opacity (occupy space, fade only)
+    const [subtextOpacity, setSubtextOpacity] = React.useState(subtext ? 1 : 0);
+
+    // when parent provides new subtext -> fade in
     useEffect(() => {
+        setSubtextOpacity(subtext ? 1 : 0);
+    }, [subtext]);
+
+    useEffect(() => {
+        // ✅ preserve caret/selection only if the input is focused
+        const el = inputRef.current;
+        const isFocused = !!el && document.activeElement === el;
+
+        if (isFocused && el) {
+            selRef.current = {
+                start: el.selectionStart,
+                end: el.selectionEnd,
+                wasFocused: true,
+            };
+        } else {
+            selRef.current = { start: null, end: null, wasFocused: false };
+        }
+
         setVal(value !== undefined ? String(value ?? "") : undefined);
-    }, [value])
+
+        // restore selection AFTER state applies
+        if (selRef.current.wasFocused) {
+            queueMicrotask(() => {
+                const el2 = inputRef.current;
+                if (!el2) return;
+                if (document.activeElement !== el2) return;
+
+                const { start, end } = selRef.current;
+                if (typeof start === "number" && typeof end === "number") {
+                    try {
+                        el2.setSelectionRange(start, end);
+                    } catch {}
+                }
+            });
+        }
+    }, [value]);
 
     const computed = useMemo(() => {
         return {
@@ -76,6 +120,16 @@ export default function Input({
                 labelStyle
             ),
 
+            // ✅ subtext style: reuse theme.input.subtext if present, else empty object
+            subtext: mergeStyle(
+                (t.subtext || {}),
+                {
+                    // only opacity animation; occupies space because we always render it
+                    transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,
+                    opacity: subtextOpacity,
+                }
+            ),
+
             clearBtn: mergeStyle(
                 {
                     ...t.clearBtn,
@@ -100,7 +154,7 @@ export default function Input({
                 inputStyle
             ),
         };
-    }, [t, style, wrapperStyle, inputStyle, labelStyle, clearStyle, disabled, value]);
+    }, [t, style, wrapperStyle, inputStyle, labelStyle, clearStyle, disabled, value, subtextOpacity]);
 
     const currentValue = val !== undefined ? val : String(defaultValue ?? "");
     const showClear = !!currentValue;
@@ -111,6 +165,9 @@ export default function Input({
     };
 
     const handleChange = (e) => {
+        // ✅ when input changes -> fade OUT subtext (but keep its row space)
+        if (subtextOpacity !== 0) setSubtextOpacity(0);
+
         let next = e?.target?.value ?? "";
         if (mode === "email") next = normalizeEmail(next);
 
@@ -122,19 +179,19 @@ export default function Input({
     };
 
     const handleClear = () => {
+        // clearing is also a change -> fade out
+        if (subtextOpacity !== 0) setSubtextOpacity(0);
         emit("");
     };
 
-// ✅ autofill fix: force exact same typography as theme.input.input
+    // (keeping your autofill css exactly as-is)
     const autofillCss = useMemo(() => {
-        // read the same tokens you're already applying via computed.input
         const ff = theme.input?.input?.fontFamily || theme.fontFamily;
         const fs = theme.input?.input?.fontSize;
         const fw = theme.input?.input?.fontWeight;
         const lh = theme.input?.input?.lineHeight;
         const color = theme.input?.input?.color;
 
-        // Note: we only set typography + text fill; no background/shadow changes
         return `
     input.${AUTOFILL_CLASS}:-webkit-autofill,
     input.${AUTOFILL_CLASS}:-webkit-autofill:hover,
@@ -148,17 +205,14 @@ export default function Input({
       ${color ? `-webkit-text-fill-color: ${color} !important;` : "-webkit-text-fill-color: inherit !important;"}
       caret-color: ${color || "inherit"} !important;
 
-      /* avoid Safari text autosizing weirdness */
       -webkit-text-size-adjust: 100% !important;
     }
   `;
     }, []);
 
-
     return (
         <div style={computed.wrap}>
-            {/* ✅ autofill text style fix only */}
-            <style dangerouslySetInnerHTML={{ __html: autofillCss }} />
+            <style dangerouslySetInnerHTML={{__html: autofillCss}}/>
 
             <div style={computed.labelRow}>
                 <div style={computed.label}>{title}</div>
@@ -168,6 +222,7 @@ export default function Input({
                 display: "flex",
             }}>
                 <input
+                    ref={inputRef}
                     className={AUTOFILL_CLASS}
                     value={val !== undefined ? currentValue : undefined}
                     defaultValue={val === undefined ? currentValue : undefined}
@@ -195,6 +250,9 @@ export default function Input({
                     </button>
                 </div>
             </div>
+            <div style={computed.subtext}>{subtext ? subtext : "\u00A0"}</div>
+
+
         </div>
     );
 }

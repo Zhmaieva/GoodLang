@@ -1,0 +1,87 @@
+import React from "react";
+import { theme } from "../../App.jsx";
+
+function isEligible(step) {
+    return typeof step.when === "function" ? !!step.when() : true;
+}
+function firstEligibleKey(steps) {
+    const s = steps.find(isEligible);
+    return s ? s.key : "";
+}
+function nextEligibleKey(steps, fromKey, dir) {
+    const idx = steps.findIndex((s) => s.key === fromKey);
+    if (idx < 0) return "";
+    for (let i = idx + dir; i >= 0 && i < steps.length; i += dir) {
+        if (isEligible(steps[i])) return steps[i].key;
+    }
+    return "";
+}
+
+export default function Flow({ steps = [], onDone }) {
+    const t = theme.flow;
+
+    const [activeKey, setActiveKey] = React.useState(() => firstEligibleKey(steps));
+    const [phase, setPhase] = React.useState("shown");
+    const pendingRef = React.useRef(null);
+
+    React.useEffect(() => {
+        const cur = steps.find((s) => s.key === activeKey);
+        if (!cur || !isEligible(cur)) {
+            const first = firstEligibleKey(steps);
+            if (first) setActiveKey(first);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeKey, steps]);
+
+    React.useEffect(() => () => pendingRef.current && clearTimeout(pendingRef.current), []);
+
+    const goTo = React.useCallback(
+        (key) => {
+            if (!key || key === activeKey) return;
+
+            setPhase("hidden");
+            if (pendingRef.current) clearTimeout(pendingRef.current);
+
+            const ms = Number.parseInt(String(t.ms || theme.motion?.normal || "220ms"), 10);
+            pendingRef.current = setTimeout(() => {
+                setActiveKey(key);
+                setPhase("shown");
+            }, Number.isFinite(ms) ? ms : 0);
+        },
+        [activeKey, t.ms]
+    );
+
+    const goNext = React.useCallback(() => {
+        const next = nextEligibleKey(steps, activeKey, +1);
+        if (next) return goTo(next);
+        onDone?.();
+    }, [steps, activeKey, goTo, onDone]);
+
+    const goPrev = React.useCallback(() => {
+        const prev = nextEligibleKey(steps, activeKey, -1);
+        if (prev) goTo(prev);
+    }, [steps, activeKey, goTo]);
+
+    const active = steps.find((s) => s.key === activeKey);
+    if (!active) return null;
+
+    const opacity = phase === "hidden" ? t.opacity.hidden : t.opacity.shown;
+
+    // ✅ one fade wrapper for title + content together
+    const fadeWrapStyle = {
+        ...t.fade, // if you already have it in theme.flow
+        transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
+        opacity,
+    };
+
+    return (
+        <div style={t.wrap}>
+            <div style={t.content}>
+                <div style={fadeWrapStyle}>
+                    {active.title ? <h3 style={t.title}>{active.title}</h3> : null}
+                    {active.render({ goNext, goPrev, setStep: goTo })}
+                </div>
+            </div>
+        </div>
+    );
+}

@@ -1,7 +1,7 @@
 import EmptyContent from "../EmptyContent.jsx";
 import {useNavigate} from "react-router-dom";
 
-export function AssignmentsPage() {
+export function AssignmentsPageOld() {
     const navigate = useNavigate();
 
     return (<>
