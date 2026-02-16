@@ -8,6 +8,8 @@ import NameStep from "./steps/NameStep.jsx";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import {callSendCodeApi, callVerifyCodeApi} from "../../../services/api.js";
 import {logError} from "../../../services/logger.js";
+import TermsStep from "./steps/TermsStep.jsx";
+import {TERMS_OF_USE_CONTENT} from "../../../services/touService.js";
 
 function getTeacherFromCtx(ctx) {
     return ctx?.teacher || ctx?.account?.teacher || ctx?.me || null;
@@ -44,10 +46,16 @@ export default function SignInPage() {
         return true;
     };
 
-    const verifyEmailCode = async (email, code) => {
+    const verifyEmailCode = async (email, code, acceptTou = false) => {
         try {
-            await callVerifyCodeApi({email, code});
-            setSentCode(code);
+            const { token } = await callVerifyCodeApi({email, code, termsAccepted: acceptTou});
+
+            if (acceptTou) {
+                localStorage.setItem("token", token);
+            } else {
+                setSentCode(code);
+            }
+
             return true;
         } catch (e) {
             logError(e);
@@ -89,6 +97,20 @@ export default function SignInPage() {
                     }}
                     onNext={goNext}
                     onBack={goPrev}
+                />
+            ),
+        },
+        {
+            key: "terms",
+            title: "Please review",
+            when: () => !teacherEmail, // shown only if email step was required
+            render: ({ goNext }) => (
+                <TermsStep
+                    paragraphs={TERMS_OF_USE_CONTENT}
+                    verifyApi={async () => {
+                        await verifyEmailCode(sentEmail, sentCode, true);
+                    }}
+                    onAccepted={goNext}
                 />
             ),
         },

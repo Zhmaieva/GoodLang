@@ -78,10 +78,10 @@ export default function DynamicList({
 
     return (
         <div className={'dynamic-list'} style={{
-            ...style,
             width: theme.input.width,
             flex: "1 1 auto",
             height: theme.pageSizeHeightRelative,
+            ...style,
         }}>
             <style>
                 {
