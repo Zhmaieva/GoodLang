@@ -1,17 +1,8 @@
-// AssignmentList.jsx — FULL DROP-IN (theme-driven, rectangle cards, actions)
-// Renders assignments as “rectangle-like” cards with:
-// - name
-// - details (type / mode / tasks / rules count)
-// - created date
-// - submissions progress (students done / total)
-// - actions: View, Edit, Delete
-//
-// ✅ Parent can pass callbacks; component stays UI-only.
+// AssignmentList.jsx — FULL DROP-IN (theme-driven, transparent chips, clickable details, better actions)
 
 import React, { useMemo, useState } from "react";
 import DynamicList from "../DynamicList.jsx";
 import RectangleGroup from "../RectangleGroup.jsx";
-import AwesomeActionButton from "../AwesomeActionButton.jsx";
 import EmptyContent from "../EmptyContent.jsx";
 import { theme } from "../../../App.jsx";
 
@@ -35,9 +26,7 @@ function toMetaLine(a) {
     const type = a?.type ? String(a.type) : "assignment";
     const mode = a?.taskMode ? String(a.taskMode) : "";
     const tasks = safeInt(a?.tasksCount ?? a?.tasks ?? a?.numberOfTasks, 0);
-    const rules = Array.isArray(a?.ruleIds)
-        ? a.ruleIds.length
-        : safeInt(a?.rulesCount, 0);
+    const rules = Array.isArray(a?.ruleIds) ? a.ruleIds.length : safeInt(a?.rulesCount, 0);
 
     const bits = [
         type,
@@ -49,11 +38,141 @@ function toMetaLine(a) {
     return bits.join(" • ");
 }
 
-function toProgressLine(a) {
+function toCompletedLine(a) {
     const done = safeInt(a?.submittedCount ?? a?.doneCount ?? a?.completedStudents, 0);
-    const total = safeInt(a?.studentsCount ?? a?.assignedStudents ?? a?.totalStudents, 0);
-    if (!total) return done ? `${done} done` : "";
-    return `${done} / ${total} students done`;
+    if (!done) return "";
+    return `Completed by: ${done} ${done === 1 ? "student" : "students"}`;
+}
+
+function toAssignedToLine(a) {
+    // you can pass either className or something else later
+    if (a?.className) return `Assigned to: ${String(a.className)}`;
+    if (a?.audienceLabel) return `Assigned to: ${String(a.audienceLabel)}`;
+    return "";
+}
+
+// ---------- small local UI helpers (so we don’t touch global components)
+function PressableChip({ children, title, onClick, style }) {
+    const [hovered, setHovered] = useState(false);
+
+    const s = useMemo(() => {
+        const base = {
+            fontFamily: theme.fontFamily,
+            fontSize: theme.type.subtitle,
+            fontWeight: theme.weights.normal,
+            lineHeight: theme.type.subtitleLineHeight,
+            color: theme.textDark,
+
+            border: hovered ? theme.borders.cardSelected : theme.borders.card,
+            background: "transparent", // ✅ no light background
+            borderRadius: theme.radius.card,
+
+            padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
+
+            whiteSpace: "nowrap",
+            maxWidth: "100%",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+
+            cursor: onClick ? "pointer" : "default",
+            userSelect: "none",
+            transition: `transform ${theme.motion.fast} ${theme.motion.ease}, border ${theme.motion.fast} ${theme.motion.ease}, opacity ${theme.motion.fast} ${theme.motion.ease}`,
+
+            transform: hovered && onClick && !theme.accessibility.reduceMotion ? "scale(1.02)" : "scale(1)",
+            opacity: onClick ? 1 : 0.85,
+            outline: "none",
+        };
+        return { ...base, ...(style || {}) };
+    }, [hovered, onClick, style]);
+
+    if (!children) return null;
+
+    return (
+        <div
+            role={onClick ? "button" : undefined}
+            tabIndex={onClick ? 0 : undefined}
+            title={title}
+            style={s}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={onClick}
+            onKeyDown={(e) => {
+                if (!onClick) return;
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onClick();
+                }
+            }}
+        >
+            {children}
+        </div>
+    );
+}
+
+function IconButton({ label, symbol, onClick, disabled }) {
+    const [hovered, setHovered] = useState(false);
+
+    const s = useMemo(() => {
+        const reduceMotion = !!theme?.accessibility?.reduceMotion;
+
+        return {
+            btn: {
+                appearance: "none",
+                border: hovered ? theme.borders.cardSelected : theme.borders.card,
+                background: "transparent",
+                borderRadius: theme.radius.card,
+
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+
+                width: 34,
+                height: 34,
+
+                cursor: disabled ? "default" : "pointer",
+                opacity: disabled ? 0.5 : 1,
+
+                transform: hovered && !disabled && !reduceMotion ? "scale(1.03)" : "scale(1)",
+                transition: reduceMotion
+                    ? "none"
+                    : `transform ${theme.motion.fast} ${theme.motion.ease},
+                       border ${theme.motion.fast} ${theme.motion.ease},
+                       background ${theme.motion.fast} ${theme.motion.ease}`,
+
+                color: theme.textDark,
+                userSelect: "none",
+                outline: "none",
+            },
+            sym: {
+                fontFamily: theme.fontFamily,
+                fontSize: theme.type.title,
+                fontWeight: theme.weights.title,
+                lineHeight: 1,
+                opacity: hovered && !disabled ? 1 : 0.9,
+                pointerEvents: "none",
+            },
+        };
+    }, [hovered, disabled]);
+
+    return (
+        <button
+            type="button"
+            title={label}
+            aria-label={label}
+            disabled={disabled}
+            style={s.btn}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={(e) => {
+                if (disabled) return;
+                onClick?.(e);
+            }}
+        >
+            <span style={s.sym} aria-hidden="true">
+                {symbol}
+            </span>
+        </button>
+    );
 }
 
 export function AssignmentList({
@@ -64,11 +183,17 @@ export function AssignmentList({
                                    onEdit,    // (assignment) => void
                                    onDelete,  // (assignment) => Promise<void> | void
 
+                                   // optional: clicks on detail chips
+                                   onOpenSubmissions, // (assignment) => void
+                                   onOpenAudience,    // (assignment) => void
+                                   onOpenMeta,        // (assignment) => void
+                                   onOpenCreated,     // (assignment) => void
+
                                    // optional UI
                                    groupTitle = "All assignments",
                                    emptyTitle = "No assignments yet",
                                    emptySubtitle = "Create your first assignment to start tracking submissions.",
-                                   onCreate, // optional CTA for empty state
+                                   onCreate,
                                }) {
     const [busyId, setBusyId] = useState(null);
 
@@ -80,7 +205,7 @@ export function AssignmentList({
                 boxSizing: "border-box",
                 borderRadius: theme.radius.card,
                 border: theme.borders.card,
-                background: "transparent",
+                background: "transparent", // ✅ no soft white panel
                 padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
                 display: "flex",
                 flexDirection: "column",
@@ -127,30 +252,6 @@ export function AssignmentList({
                 textOverflow: "ellipsis",
             },
 
-            detailsRow: {
-                display: "flex",
-                flexWrap: "wrap",
-                gap: theme.spacing.rowGap,
-                alignItems: "center",
-                justifyContent: "flex-start",
-            },
-
-            pill: {
-                fontFamily: theme.fontFamily,
-                fontSize: theme.type.subtitle,
-                fontWeight: theme.weights.normal,
-                lineHeight: theme.type.subtitleLineHeight,
-                color: theme.textDark,
-                border: theme.borders.card,
-                background: theme.surfaceSoft,
-                borderRadius: theme.radius.card,
-                padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
-                whiteSpace: "nowrap",
-                maxWidth: "100%",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-            },
-
             actions: {
                 display: "flex",
                 alignItems: "center",
@@ -167,6 +268,14 @@ export function AssignmentList({
                 opacity: 0.8,
                 marginTop: 2,
                 marginBottom: 2,
+            },
+
+            detailsRow: {
+                display: "flex",
+                flexWrap: "wrap",
+                gap: theme.spacing.rowGap,
+                alignItems: "center",
+                justifyContent: "flex-start",
             },
         };
     }, []);
@@ -187,9 +296,12 @@ export function AssignmentList({
         return assignments.map((a) => {
             const id = String(a?.id ?? a?._id ?? a?.taskSetId ?? "");
             const name = String(a?.title ?? a?.name ?? "Untitled assignment");
+
             const created = formatDate(a?.createdAt ?? a?.created_at ?? a?.created);
             const metaLine = toMetaLine(a);
-            const progress = toProgressLine(a);
+
+            const completedLine = toCompletedLine(a);
+            const assignedToLine = toAssignedToLine(a);
 
             const isBusy = busyId && String(busyId) === id;
 
@@ -197,7 +309,11 @@ export function AssignmentList({
                 <div key={id} style={styles.card}>
                     <div style={styles.topRow}>
                         <div style={styles.titleCol}>
-                            <h3 style={styles.title} title={name}>
+                            <h3
+                                style={styles.title}
+                                title={name}
+                                onClick={() => onOpen?.(a)}
+                            >
                                 {name}
                             </h3>
 
@@ -206,31 +322,23 @@ export function AssignmentList({
                             </div>
                         </div>
 
+                        {/* ✅ nicer actions: icon buttons instead of “empty squares” */}
                         <div style={styles.actions}>
-                            <AwesomeActionButton
-                                size="compact"
-                                variant="ghost"
-                                title="View"
+                            <IconButton
+                                label="View"
+                                symbol="→"
                                 disabled={isBusy}
                                 onClick={() => onOpen?.(a)}
-                            >
-                                View
-                            </AwesomeActionButton>
-
-                            <AwesomeActionButton
-                                size="compact"
-                                variant="ghost"
-                                title="Edit"
+                            />
+                            <IconButton
+                                label="Edit"
+                                symbol="✎"
                                 disabled={isBusy}
                                 onClick={() => onEdit?.(a)}
-                            >
-                                Edit
-                            </AwesomeActionButton>
-
-                            <AwesomeActionButton
-                                size="compact"
-                                variant="ghost"
-                                title="Delete"
+                            />
+                            <IconButton
+                                label="Delete"
+                                symbol="🗑"
                                 disabled={isBusy}
                                 onClick={async () => {
                                     if (!onDelete) return;
@@ -241,26 +349,74 @@ export function AssignmentList({
                                         setBusyId(null);
                                     }
                                 }}
-                            >
-                                Delete
-                            </AwesomeActionButton>
+                            />
                         </div>
                     </div>
 
                     <div style={styles.divider} />
 
+                    {/* ✅ transparent + clickable chips */}
                     <div style={styles.detailsRow}>
-                        {created ? <div style={styles.pill}>Created: {created}</div> : null}
-                        {progress ? <div style={styles.pill}>{progress}</div> : null}
-                        {a?.className ? <div style={styles.pill}>Class: {String(a.className)}</div> : null}
+                        {created ? (
+                            <PressableChip
+                                title={`Created: ${created}`}
+                                onClick={onOpenCreated ? () => onOpenCreated(a) : undefined}
+                            >
+                                Created: {created}
+                            </PressableChip>
+                        ) : null}
+
+                        {completedLine ? (
+                            <PressableChip
+                                title={completedLine}
+                                onClick={onOpenSubmissions ? () => onOpenSubmissions(a) : undefined}
+                            >
+                                {completedLine}
+                            </PressableChip>
+                        ) : null}
+
+                        {assignedToLine ? (
+                            <PressableChip
+                                title={assignedToLine}
+                                onClick={onOpenAudience ? () => onOpenAudience(a) : undefined}
+                            >
+                                {assignedToLine}
+                            </PressableChip>
+                        ) : null}
+
+                        {metaLine ? (
+                            <PressableChip
+                                title={metaLine}
+                                onClick={onOpenMeta ? () => onOpenMeta(a) : undefined}
+                            >
+                                {metaLine}
+                            </PressableChip>
+                        ) : null}
                     </div>
                 </div>
             );
         });
-    }, [assignments, busyId, styles, onOpen, onEdit, onDelete, onCreate, emptyTitle, emptySubtitle]);
+    }, [
+        assignments,
+        busyId,
+        styles,
+        onOpen,
+        onEdit,
+        onDelete,
+        onCreate,
+        emptyTitle,
+        emptySubtitle,
+        onOpenSubmissions,
+        onOpenAudience,
+        onOpenMeta,
+        onOpenCreated,
+    ]);
 
     return (
-        <RectangleGroup title={groupTitle} boxStyle={{ flexDirection: "column", flexWrap: "nowrap" }}>
+        <RectangleGroup
+            title={groupTitle}
+            boxStyle={{ flexDirection: "column", flexWrap: "nowrap" }}
+        >
             <DynamicList contentStyle={{ paddingRight: 0 }}>
                 {content}
             </DynamicList>
