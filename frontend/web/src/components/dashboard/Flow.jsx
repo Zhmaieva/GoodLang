@@ -84,7 +84,7 @@ export default function Flow({ steps = [], onDone }) {
             <div style={t.content}>
                 <div style={fadeWrapStyle}>
                     {active.title ? <h3 style={t.title}>{active.title}</h3> : null}
-                    {active.render({ goNext, goPrev, setStep: goTo })}
+                    {active.render({ goNext, goPrev, goTo })}
                 </div>
             </div>
         </div>

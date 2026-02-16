@@ -74,8 +74,6 @@ export default function CodeStep({ email = "", onVerified, onNext, onBack }) {
             ok = clean === STUB_VALID_CODE;
         }
 
-        ok = false
-
         if (ok === false) {
             setHint("Invalid code");
             setHintOpacity(1);
@@ -88,7 +86,7 @@ export default function CodeStep({ email = "", onVerified, onNext, onBack }) {
     return (
         <div style={stackStyle}>
             <div style={subtitleStyle}>
-                We have sent an email to {String(email || "").trim() || "your email"}.
+                We have sent an email to {String(email || "").trim() || "the address specified"}.
             </div>
 
             <AuthCodeInput

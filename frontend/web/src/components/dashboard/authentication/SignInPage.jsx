@@ -1,12 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import Flow from "../Flow.jsx";
 
 import EmailStep from "./steps/EmailStep.jsx";
 import CodeStep from "./steps/CodeStep.jsx";
 import NameStep from "./steps/NameStep.jsx";
-import DoneStep from "./steps/DoneStep.jsx";
 
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
+import {callSendCodeApi, callVerifyCodeApi} from "../../../services/api.js";
+import {logError} from "../../../services/logger.js";
 
 function getTeacherFromCtx(ctx) {
     return ctx?.teacher || ctx?.account?.teacher || ctx?.me || null;
@@ -26,20 +27,32 @@ export default function SignInPage() {
     const ctx = useTeacherDashboard?.();
     const teacher = getTeacherFromCtx(ctx);
 
-    const teacherEmail = String(pickEmail(teacher) || "").trim();
+    const [teacherEmail, setTeacherEmail] = useState(String(pickEmail(teacher) || "").trim());
+    const [sentEmail, setSentEmail] = useState("");
+    const [sentCode, setSentCode] = useState("");
     const teacherFirst = String(pickFirstName(teacher) || "").trim();
     const teacherLast = String(pickLastName(teacher) || "").trim();
 
     // Page only wires actions (can call services here; steps decide when/how)
     const sendEmailCode = async (email) => {
-        // TODO: call your API
-        // return false to block navigation
+        callSendCodeApi({email})
+            .catch((err) => {
+                logError(err);
+            });
+
+        setSentEmail(email);
         return true;
     };
 
-    const verifyEmailCode = async (code) => {
-        // TODO: call your API
-        return true;
+    const verifyEmailCode = async (email, code) => {
+        try {
+            await callVerifyCodeApi({email, code});
+            setSentCode(code);
+            return true;
+        } catch (e) {
+            logError(e);
+            return false;
+        }
     };
 
     const saveName = async ({ firstName, lastName }) => {
@@ -70,7 +83,10 @@ export default function SignInPage() {
             when: () => !teacherEmail, // shown only if email step was required
             render: ({ goNext, goPrev }) => (
                 <CodeStep
-                    onVerified={verifyEmailCode}
+                    email={sentEmail}
+                    onVerified={async (code) => {
+                        return await verifyEmailCode(sentEmail, code);
+                    }}
                     onNext={goNext}
                     onBack={goPrev}
                 />
@@ -78,22 +94,22 @@ export default function SignInPage() {
         },
         {
             key: "name",
-            title: "Your name",
+            title: "Before we start",
             when: () => !teacherFirst,
-            render: ({ goNext }) => (
+            render: ({ goNext, goTo }) => (
                 <NameStep
+                    teacherEmail={teacherEmail}
                     initialFirstName={teacherFirst}
                     initialLastName={teacherLast}
                     onConfirmed={saveName}
-                    onNext={goNext}
+                    onNext={() => {
+
+                    }}
+                    onBack={() => {
+                        goTo('email')
+                    }}
                 />
             ),
-        },
-        {
-            key: "done",
-            title: "Welcome",
-            when: () => true,
-            render: () => <DoneStep onDone={finish} />,
         },
     ];
 

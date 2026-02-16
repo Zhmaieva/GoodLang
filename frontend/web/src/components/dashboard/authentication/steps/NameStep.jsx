@@ -1,4 +1,5 @@
 import React from "react";
+import { theme } from "../../../../App.jsx";
 import Input from "../../Input.jsx";
 import AwesomeActionButton from "../../AwesomeActionButton.jsx";
 
@@ -8,16 +9,52 @@ import AwesomeActionButton from "../../AwesomeActionButton.jsx";
  * - initialLastName: string
  * - onConfirmed: async ({firstName,lastName}) => boolean | void
  * - onNext: () => void
+ * - onBack: () => void
  */
 export default function NameStep({
                                      initialFirstName = "",
                                      initialLastName = "",
                                      onConfirmed,
                                      onNext,
+                                     onBack,
+                                     teacherEmail,
                                  }) {
     const [firstName, setFirstName] = React.useState(String(initialFirstName || ""));
     const [lastName, setLastName] = React.useState(String(initialLastName || ""));
     const [error, setError] = React.useState("");
+
+    const subtitleStyle = {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textMutedDark,
+    };
+
+    const stackStyle = {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: theme.spacing.gap,
+    };
+
+    const actionsRowStyle = {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        alignItems: theme.layout?.rowAlign || "center",
+        justifyContent: "space-between",
+        gap: theme.spacing.gap,
+    };
+
+    const canBegin = String(firstName || "").trim().length > 2;
+
+    const btnFadeStyle = {
+        transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
+        opacity: canBegin ? 1 : 0,
+        pointerEvents: canBegin ? "auto" : "none",
+    };
 
     const submit = async () => {
         const f = String(firstName || "").trim();
@@ -35,9 +72,10 @@ export default function NameStep({
     };
 
     return (
-        <>
+        <div style={stackStyle}>
+            <div style={subtitleStyle}>For your best experience, we need a few more details</div>
+
             <Input
-                title="First name"
                 placeholder="First name"
                 value={firstName}
                 onChange={(v) => {
@@ -49,20 +87,25 @@ export default function NameStep({
             />
 
             <Input
-                title="Last name (optional)"
-                placeholder="Last name"
+                placeholder="Last name (optional)"
                 value={lastName}
                 onChange={setLastName}
             />
 
-            <AwesomeActionButton
-                variant="accent"
-                size="regular"
-                title="Confirm"
-                onClick={submit}
-            >
-                Confirm
-            </AwesomeActionButton>
-        </>
+            <div style={actionsRowStyle}>
+                {
+                    !teacherEmail &&
+                    <AwesomeActionButton variant="ghost" size="regular" symbol={"←"} onClick={onBack}>
+                        Back
+                    </AwesomeActionButton>
+                }
+
+                <div style={btnFadeStyle}>
+                    <AwesomeActionButton variant="ghost" size="regular" symbol={"→"} onClick={submit}>
+                        Let’s begin
+                    </AwesomeActionButton>
+                </div>
+            </div>
+        </div>
     );
 }
