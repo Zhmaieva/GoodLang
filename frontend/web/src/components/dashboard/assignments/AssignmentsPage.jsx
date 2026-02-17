@@ -3,6 +3,7 @@ import Page from "../Page.jsx";
 import Input from "../Input.jsx";
 import { AssignmentList } from "./AssignmentList.jsx";
 import { theme } from "../../../App.jsx";
+import {Chip} from "../Chip.jsx";
 
 // ids
 const TYPE_ALL = "all";
@@ -149,26 +150,6 @@ export function AssignmentsPage() {
                 alignItems: "center",
             },
 
-            chip: (active, hover) => ({
-                appearance: "none",
-                border: active || hover ? theme.borders.cardSelected : theme.borders.card,
-                background: active ? theme.accentDark : "transparent",
-                borderRadius: theme.radius.card,
-                padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
-                fontFamily: theme.fontFamily,
-                fontSize: theme.type.subtitle,
-                fontWeight: active ? theme.weights.subtitleSelected : theme.weights.normal,
-                lineHeight: theme.type.subtitleLineHeight,
-                color: active ? theme.textOnColor : theme.textDark,
-                cursor: "pointer",
-                transition: `transform ${theme.motion.fast} ${theme.motion.ease}, opacity ${theme.motion.fast} ${theme.motion.ease}`,
-            }),
-
-            chipHover: {
-                transform: "scale(1.02)",
-                opacity: 0.95,
-            },
-
             searchBox: {
                 border: theme.borders.card,
                 borderRadius: theme.radius.card,
@@ -177,24 +158,6 @@ export function AssignmentsPage() {
             },
         };
     }, []);
-
-    function Chip({ active, children, onClick }) {
-        const [hover, setHover] = useState(false);
-        return (
-            <button
-                type="button"
-                onClick={onClick}
-                style={{
-                    ...styles.chip(active, hover),
-                    ...(hover ? styles.chipHover : null),
-                }}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-            >
-                {children}
-            </button>
-        );
-    }
 
     return (
         <Page

@@ -8,6 +8,7 @@ import DynamicList from "../DynamicList.jsx";
 import RectangleGroup from "../RectangleGroup.jsx";
 import EmptyContent from "../EmptyContent.jsx";
 import { theme } from "../../../App.jsx";
+import {Chip} from "../Chip.jsx";
 
 function formatDate(d) {
     if (!d) return "";
@@ -53,114 +54,6 @@ function getGreyFill() {
         theme?.bgMuted ||
         theme?.surfaceMuted ||
         "rgba(0,0,0,0.06)"
-    );
-}
-
-// ✅ NON-pressable info chip (for inside assignment card)
-function InfoChip({ children, title, style }) {
-    const s = useMemo(() => {
-        const base = {
-            fontFamily: theme.fontFamily,
-            fontSize: theme.type.subtitle,
-            fontWeight: theme.weights.normal,
-            lineHeight: theme.type.subtitleLineHeight,
-            color: theme.textDark,
-
-            border: theme.borders.card,
-            background: "transparent",
-            borderRadius: theme.radius.card,
-
-            padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
-
-            whiteSpace: "nowrap",
-            maxWidth: "100%",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-
-            userSelect: "text",
-            cursor: "default",
-            outline: "none",
-        };
-        return { ...base, ...(style || {}) };
-    }, [style]);
-
-    if (!children) return null;
-
-    return (
-        <div title={title} style={s}>
-            {children}
-        </div>
-    );
-}
-
-// ✅ SELECTABLE chip for filters/sorting (grey fill when selected)
-export function SelectableChip({ children, title, selected = false, onClick, style, disabled = false }) {
-    const [hovered, setHovered] = useState(false);
-
-    const s = useMemo(() => {
-        const reduceMotion = !!theme?.accessibility?.reduceMotion;
-        const bg = selected ? getGreyFill() : "transparent";
-
-        return {
-            fontFamily: theme.fontFamily,
-            fontSize: theme.type.subtitle,
-            fontWeight: theme.weights.normal,
-            lineHeight: theme.type.subtitleLineHeight,
-            color: theme.textDark,
-
-            border: selected ? theme.borders.cardSelected : hovered ? theme.borders.cardSelected : theme.borders.card,
-            background: bg,
-            borderRadius: theme.radius.card,
-
-            padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
-
-            whiteSpace: "nowrap",
-            maxWidth: "100%",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-
-            cursor: disabled ? "default" : "pointer",
-            opacity: disabled ? 0.5 : 1,
-            userSelect: "none",
-
-            transition: reduceMotion
-                ? "none"
-                : `transform ${theme.motion.fast} ${theme.motion.ease},
-           border ${theme.motion.fast} ${theme.motion.ease},
-           background ${theme.motion.fast} ${theme.motion.ease},
-           opacity ${theme.motion.fast} ${theme.motion.ease}`,
-
-            transform: hovered && !disabled && !reduceMotion ? "scale(1.02)" : "scale(1)",
-            outline: "none",
-
-            ...style,
-        };
-    }, [hovered, selected, disabled, style]);
-
-    if (!children) return null;
-
-    return (
-        <div
-            role="button"
-            tabIndex={disabled ? -1 : 0}
-            title={title}
-            style={s}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            onClick={() => {
-                if (disabled) return;
-                onClick?.();
-            }}
-            onKeyDown={(e) => {
-                if (disabled) return;
-                if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    onClick?.();
-                }
-            }}
-        >
-            {children}
-        </div>
     );
 }
 
@@ -396,9 +289,9 @@ export function AssignmentList({
 
                     {/* ✅ non-pressable info chips (only 3) */}
                     <div style={styles.detailsRow}>
-                        {created ? <InfoChip title={`Created: ${created}`}>Created: {created}</InfoChip> : null}
-                        {completedLine ? <InfoChip title={completedLine}>{completedLine}</InfoChip> : null}
-                        {assignedToLine ? <InfoChip title={assignedToLine}>{assignedToLine}</InfoChip> : null}
+                        {created ? <Chip info title={`Created: ${created}`}>Created: {created}</Chip> : null}
+                        {completedLine ? <Chip info title={completedLine}>{completedLine}</Chip> : null}
+                        {assignedToLine ? <Chip info title={assignedToLine}>{assignedToLine}</Chip> : null}
                     </div>
                 </div>
             );

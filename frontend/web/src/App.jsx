@@ -134,7 +134,6 @@ import {WorkOnAssignmentPage} from "./components/dashboard/assignments/student/a
 import {MyAssignmentPage} from "./components/dashboard/assignments/student/assignments/MyAssignmentPage.jsx";
 import StudentDashboardLayout from "./components/dashboard/navigation/StudentDashboardLayout.jsx";
 import {StudentProfilePage} from "./components/dashboard/assignments/student/profile/StudentProfilePage.jsx";
-import {AssignmentsPageOld} from "./components/dashboard/assignments/AssignmentsPage_old.jsx";
 import {RootRedirect} from "./components/routing/RootRedirect.jsx";
 
 // theme.js
