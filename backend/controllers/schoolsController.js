@@ -11,7 +11,7 @@ import {
     acceptInvitationByCode,
     getTeacherMetadataByClassId,
     listClassesByStudentId,
-    leaveClass, addStudentToTeacherByEmail, deactivateStudentFromTeacher,
+    leaveClass, addStudentToTeacherByEmail, deactivateStudentFromTeacher, createSchoolTeacherForAccount,
 } from "../database/repositories/teacherClassesRepository.js";
 
 const name = "schools";
@@ -37,6 +37,15 @@ export const schoolController = {
                 const meta = await getAccountMetadata(req.user.id);
                 if (!meta) return res.status(404).json({ error: "Teacher not found" });
                 res.json(meta);
+            } catch (e) {
+                next(e);
+            }
+        });
+
+        app.post(`/${name}/me/teacher`, authMiddleware, async (req, res, next) => {
+            try {
+                const registered = await createSchoolTeacherForAccount(req.user.id);
+                res.json(registered);
             } catch (e) {
                 next(e);
             }

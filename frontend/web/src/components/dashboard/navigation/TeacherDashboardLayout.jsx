@@ -199,10 +199,10 @@ export default function TeacherDashboardLayout() {
         };
     }, [teacherName]);
 
-    if (!loading && !teacher?.first_name) {
+    if (!loading && (!teacher.status || !teacher.first_name)) {
         return <div style={styles.page}>
             <main style={styles.contentFull}>
-                <SignInPage nextPath={nextPath}/>
+                <SignInPage forTeacher nextPath={nextPath}/>
             </main>
         </div>
     }

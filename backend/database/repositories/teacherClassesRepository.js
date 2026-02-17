@@ -15,6 +15,140 @@ function genInviteCode6() {
 }
 
 /**
+ * Create/upgrade teacher record for an account:
+ * - status = 'school'
+ * - students_quota = 30
+ * - first_name/last_name copied from accounts
+ *
+ * @param {string} accountId
+ * @returns {Promise<{ok: boolean, teacher?: any, reason?: string}>}
+ */
+export async function createSchoolTeacherForAccount(accountId) {
+    if (typeof accountId !== "string" || !accountId.trim()) {
+        return { ok: false, reason: "invalid_account_id" };
+    }
+
+    const client = await pool.connect();
+    try {
+        await client.query("BEGIN");
+
+        // Lock account row and read names
+        const { rows: acc } = await client.query(
+            `
+        SELECT id, first_name, last_name
+        FROM accounts
+        WHERE id = $1
+        LIMIT 1
+        FOR UPDATE
+      `,
+            [accountId]
+        );
+
+        if (!acc[0]) {
+            await client.query("ROLLBACK");
+            return { ok: false, reason: "account_not_found" };
+        }
+
+        const firstName = acc[0].first_name ?? null;
+        const lastName = acc[0].last_name ?? null;
+
+        // Upsert teacher row
+        const { rows: t } = await client.query(
+            `
+        INSERT INTO teachers (
+          account_id,
+          first_name,
+          last_name,
+          status,
+          students_quota
+        )
+        VALUES ($1, $2, $3, 'school', 30)
+        ON CONFLICT (account_id)
+        DO UPDATE SET
+          first_name     = EXCLUDED.first_name,
+          last_name      = EXCLUDED.last_name,
+          status         = 'school',
+          students_quota = 30
+        RETURNING
+          account_id,
+          first_name,
+          last_name,
+          status,
+          students_quota,
+          created_at
+      `,
+            [accountId, firstName, lastName]
+        );
+
+        await client.query("COMMIT");
+        return { ok: true, teacher: t[0] };
+    } catch (e) {
+        await client.query("ROLLBACK");
+        throw e;
+    } finally {
+        client.release();
+    }
+}
+
+/**
+ * Sync first_name and last_name from accounts → teachers
+ * Only updates if teacher record exists.
+ *
+ * @param {string} accountId
+ * @returns {Promise<{ok: boolean, updated: boolean}>}
+ */
+export async function syncTeacherNameFromAccount(accountId) {
+    if (typeof accountId !== "string" || !accountId.trim()) {
+        return { ok: false, updated: false };
+    }
+
+    const client = await pool.connect();
+    try {
+        await client.query("BEGIN");
+
+        // Get names from accounts
+        const { rows: acc } = await client.query(
+            `
+        SELECT first_name, last_name
+        FROM accounts
+        WHERE id = $1
+        LIMIT 1
+      `,
+            [accountId]
+        );
+
+        if (!acc[0]) {
+            await client.query("ROLLBACK");
+            return { ok: false, updated: false };
+        }
+
+        // Update teacher only if exists
+        const { rowCount } = await client.query(
+            `
+        UPDATE teachers
+        SET first_name = $1,
+            last_name  = $2
+        WHERE account_id = $3
+      `,
+            [acc[0].first_name ?? null, acc[0].last_name ?? null, accountId]
+        );
+
+        await client.query("COMMIT");
+
+        return {
+            ok: true,
+            updated: rowCount > 0, // true if teacher existed and was updated
+        };
+    } catch (e) {
+        await client.query("ROLLBACK");
+        throw e;
+    } finally {
+        client.release();
+    }
+}
+
+
+/**
  * List teacher's classes
  */
 export async function listTeachersClasses(teacherAccountId) {
@@ -127,7 +261,7 @@ export async function addStudentToTeacherByEmail({
         }
 
         // ✅ Free teachers cannot add students
-        if (teacher[0].status !== "Teacher+") {
+        if (teacher[0].status !== "Free") {
             await client.query("ROLLBACK");
             return { ok: false, reason: "teacher_not_teacher_plus" };
         }
@@ -260,7 +394,9 @@ export async function getAccountMetadata(accountId) {
             SELECT
                 a.id AS account_id,
                 a.email,
-                a.created_at
+                a.created_at,
+                a.first_name,
+                a.last_name
             FROM accounts a
             WHERE a.id = $1
             LIMIT 1
@@ -277,8 +413,8 @@ export async function getAccountMetadata(accountId) {
     return {
         account_id: acc.account_id,
         email: acc.email,
-        first_name: null,
-        last_name: null,
+        first_name: acc.first_name,
+        last_name: acc.last_name,
         status: null,
         students_quota: null,
         created_at: acc.created_at,
@@ -486,7 +622,7 @@ export async function addStudentToClassByEmail({
         }
 
         // ✅ Free teachers cannot add students regardless of quota
-        if (teacher[0].status !== "Teacher+") {
+        if (teacher[0].status !== "Free") {
             await client.query("ROLLBACK");
             return { ok: false, reason: "teacher_not_teacher_plus" };
         }

@@ -45,11 +45,25 @@ export default function SyncOnRouteChange() {
                         && location.pathname !== '/hello'
                         && location.pathname !== '/crossword'
                         && location.pathname !== '/marathon'
+                        && !location.pathname.includes('/student')
+                        && !location.pathname.includes('/school')
                         && !shouldOpenSubscribe) {
-                        navigate("/greetings", { replace: true });
+                        navigate("/welcome", { replace: true });
                         return;
                     }
                 }
+            }
+
+            // tries to open base path and never used old B2C GL
+            if (location.pathname === "/") {
+                if (!localStorage.getItem('answers_data')) {
+                    if (localStorage.getItem('isTeacherApp') === 'true' || !localStorage.getItem('account_info')?.email)
+                        navigate("/school")
+                    else
+                        navigate("/student")
+                }
+                else
+                    navigate("/trainer")
             }
         }
 

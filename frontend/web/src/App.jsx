@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo} from "react";
-import {Routes, Route, useNavigate} from "react-router-dom";
+import {Routes, Route, useNavigate, Navigate} from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AnalyticsPage from "./components/pages/AnalyticsPage";
 import RulePage from "./components/pages/RulePage.jsx";
@@ -135,6 +135,7 @@ import {MyAssignmentPage} from "./components/dashboard/assignments/student/assig
 import StudentDashboardLayout from "./components/dashboard/navigation/StudentDashboardLayout.jsx";
 import {StudentProfilePage} from "./components/dashboard/assignments/student/profile/StudentProfilePage.jsx";
 import {AssignmentsPageOld} from "./components/dashboard/assignments/AssignmentsPage_old.jsx";
+import {RootRedirect} from "./components/routing/RootRedirect.jsx";
 
 // theme.js
 export const theme = themeStyles;
@@ -179,7 +180,8 @@ export default function App() {
                 <Route path="/marathon" element={<LandingPageMarathon theme={theme} />} />
 
                 {/* Core pages */}
-                <Route path="/" element={<HomePage theme={theme} />} />
+                <Route path="/" element={<RootRedirect />} />
+                <Route path="/trainer" element={<HomePage theme={theme} />} />
                 <Route path="/crossword" element={<LandingCrossword theme={theme} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />

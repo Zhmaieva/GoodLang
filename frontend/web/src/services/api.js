@@ -295,6 +295,23 @@ export async function callAccountVerifyApi(actionType) {
     }
 }
 
+export async function callAccountUpdateApi({firstName, lastName}) {
+    try {
+        const url = `${API_BASE}/accounts?firstName=${firstName}&lastName=${lastName}`;
+
+        const res = await fetch(url, {
+            method: "PATCH",
+            headers: {
+                Authorization: `Bearer ${await getToken()}`,
+            },
+        });
+
+        await res.json();
+    } catch (e) {
+        logError(e);
+    }
+}
+
 export async function callManageSubscriptionApi() {
     const url = `${API_BASE}/payments/manage`;
 
@@ -341,7 +358,7 @@ export async function callSendCodeApi({ email }) {
     return data;
 }
 
-export async function callVerifyCodeApi({ email, code, termsAccepted = false }) {
+export async function callVerifyCodeApi({ email, code, termsAccepted = false, teacher = false }) {
     const isTeacher = localStorage.getItem("teacher") === "true";
 
     const qs = new URLSearchParams();
@@ -359,7 +376,7 @@ export async function callVerifyCodeApi({ email, code, termsAccepted = false }) 
                 email,
                 code,
                 termsAccepted,
-                ...(isTeacher && { teacher: true }),
+                ...(isTeacher || teacher && { teacher: true }),
             }),
         }
     );
@@ -605,6 +622,13 @@ export async function callCompleteMarathonDayApi(opts = {}) {
 // ------------------------------------------------------------
 // Teacher
 // ------------------------------------------------------------
+
+export function apiBecomeTeacher() {
+    return jsonFetch(`${API_BASE}/schools/me/teacher`, {
+        method: "POST",
+    });
+}
+
 export function apiTeacherMetadata() {
     return jsonFetch(`${API_BASE}/schools/me`);
 }

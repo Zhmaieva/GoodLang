@@ -241,6 +241,7 @@ export function TeacherDashboardProvider({ children }) {
 
         // actions
         setErr,
+        reloadAll,
 
         // ✅ preview actions
         setActivePreviewStudentId,

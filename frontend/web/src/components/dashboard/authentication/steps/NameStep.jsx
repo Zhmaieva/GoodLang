@@ -17,7 +17,6 @@ export default function NameStep({
                                      onConfirmed,
                                      onNext,
                                      onBack,
-                                     teacherEmail,
                                  }) {
     const [firstName, setFirstName] = React.useState(String(initialFirstName || ""));
     const [lastName, setLastName] = React.useState(String(initialLastName || ""));
@@ -93,12 +92,9 @@ export default function NameStep({
             />
 
             <div style={actionsRowStyle}>
-                {
-                    !teacherEmail &&
-                    <AwesomeActionButton variant="ghost" size="regular" symbol={"←"} onClick={onBack}>
-                        Back
-                    </AwesomeActionButton>
-                }
+                <AwesomeActionButton variant="ghost" size="regular" symbol={"←"} onClick={onBack}>
+                    Back
+                </AwesomeActionButton>
 
                 <div style={btnFadeStyle}>
                     <AwesomeActionButton variant="ghost" size="regular" symbol={"→"} onClick={submit}>

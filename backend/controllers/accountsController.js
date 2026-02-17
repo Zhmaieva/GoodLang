@@ -1,13 +1,17 @@
 import {
     createAccount,
     getAccountInfo, sendPromoCode,
-    sendVerificationCode, unsubscribeByToken,
+    sendVerificationCode, unsubscribeByToken, updateAccountProfile,
     verifyCode
 } from "../database/repositories/accountsRepository.js";
 import jwt from "jsonwebtoken";
 import {ACTION_TYPES, SECRET_KEY} from "../core/constants.js";
 import {authMiddleware} from "../middleware/authMiddleware.js";
 import {recordAction} from "../database/repositories/accountLogRepository.js";
+import {
+    createSchoolTeacherForAccount,
+    syncTeacherNameFromAccount
+} from "../database/repositories/teacherClassesRepository.js";
 
 const name = 'accounts';
 const appVersion = process.env.APP_VERSION || "1.0.0";
@@ -46,7 +50,7 @@ export const accountsController = {
         });
 
 
-        app.get(`/accounts/info`, authMiddleware, async (req, res, next) => {
+        app.get(`/${name}/info`, authMiddleware, async (req, res, next) => {
             try {
                 const account = await getAccountInfo(
                     req.user.id,
@@ -63,7 +67,7 @@ export const accountsController = {
         });
 
 
-        app.get(`/accounts/verify`, authMiddleware, async (req, res, next) => {
+        app.get(`/${name}/verify`, authMiddleware, async (req, res, next) => {
             try {
                 const { action_type } = req.query;
 
@@ -76,8 +80,22 @@ export const accountsController = {
             }
         });
 
+        app.patch(`/${name}/`, authMiddleware, async (req, res, next) => {
+            try {
+                const { firstName, lastName } = req.query;
+
+                const { success, error } = await updateAccountProfile(req.user.id, firstName, lastName);
+                if (success) {
+                    syncTeacherNameFromAccount(req.user.id).catch((err) => {console.log(err)});
+                }
+                res.json({ success, error });
+            } catch (e) {
+                next(e);
+            }
+        });
+
         // Request a verification code
-        app.post(`/accounts/send-promo-code`, authMiddleware, async (req, res, next) => {
+        app.post(`/${name}/send-promo-code`, authMiddleware, async (req, res, next) => {
             try {
                 const { email } = req.body;
                 if (!email) return res.status(400).json({ error: "Email required" });
@@ -91,7 +109,7 @@ export const accountsController = {
         });
 
         // Request a verification code
-        app.post(`/accounts/send-code`, async (req, res, next) => {
+        app.post(`/${name}/send-code`, async (req, res, next) => {
             try {
                 const { email } = req.body;
                 if (!email) return res.status(400).json({ error: "Email required" });
@@ -105,7 +123,7 @@ export const accountsController = {
         });
 
         // Verify the code and return a JWT token
-        app.post(`/accounts/verify-code`, authMiddleware, async (req, res, next) => {
+        app.post(`/${name}/verify-code`, authMiddleware, async (req, res, next) => {
             try {
                 const { email, code, termsAccepted } = req.body;
                 if (!email || !code) return res.status(400).json({ error: "Email and code required" });
@@ -123,6 +141,7 @@ export const accountsController = {
                         req.body?.teacher === "true";
 
                     if (isTeacher) {
+                        await createSchoolTeacherForAccount(accountId);
                         await recordAction(accountId, ACTION_TYPES.USER_TEACHER_REGISTERED); // 500
                     }
                 }

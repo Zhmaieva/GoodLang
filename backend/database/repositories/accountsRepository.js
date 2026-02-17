@@ -689,3 +689,77 @@ export async function failInProgressMarathonsForFreeAccounts() {
 
     return { updated: rowCount || 0 };
 }
+
+/**
+ * Update account profile (first_name, last_name)
+ *
+ * firstName:
+ *  - required
+ *  - min 3 characters (after trim)
+ *
+ * lastName:
+ *  - optional
+ *  - can be null or empty
+ *
+ * @param {string} accountId
+ * @param {string} firstName
+ * @param {string|null} lastName
+ *
+ * @returns {Promise<{
+ *   success: boolean,
+ *   error?: string,
+ *   account?: {
+ *     id: string,
+ *     firstName: string,
+ *     lastName: string|null
+ *   }
+ * }>}
+ */
+export async function updateAccountProfile(accountId, firstName, lastName) {
+    if (typeof accountId !== "string" || !accountId.trim()) {
+        return { success: false, error: "invalid_account_id" };
+    }
+
+    if (typeof firstName !== "string") {
+        return { success: false, error: "first_name_required" };
+    }
+
+    const normalizedFirst = firstName.trim();
+    const normalizedLast =
+        typeof lastName === "string" && lastName.trim().length > 0
+            ? lastName.trim()
+            : null;
+
+    if (normalizedFirst.length < 3) {
+        return { success: false, error: "first_name_too_short" };
+    }
+
+    try {
+        const { rows } = await pool.query(
+            `
+            UPDATE accounts
+            SET first_name = $1,
+                last_name  = $2
+            WHERE id = $3
+            RETURNING id, first_name, last_name
+            `,
+            [normalizedFirst, normalizedLast, accountId]
+        );
+
+        if (!rows[0]) {
+            return { success: false, error: "account_not_found" };
+        }
+
+        return {
+            success: true,
+            account: {
+                id: rows[0].id,
+                firstName: rows[0].first_name,
+                lastName: rows[0].last_name,
+            },
+        };
+    } catch (err) {
+        console.error("DB error in updateAccountProfile:", err);
+        throw err;
+    }
+}

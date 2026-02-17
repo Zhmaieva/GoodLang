@@ -6,7 +6,7 @@ import CodeStep from "./steps/CodeStep.jsx";
 import NameStep from "./steps/NameStep.jsx";
 
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
-import {callSendCodeApi, callVerifyCodeApi} from "../../../services/api.js";
+import {apiBecomeTeacher, callAccountUpdateApi, callSendCodeApi, callVerifyCodeApi} from "../../../services/api.js";
 import {logError} from "../../../services/logger.js";
 import TermsStep from "./steps/TermsStep.jsx";
 import {TERMS_OF_USE_CONTENT} from "../../../services/touService.js";
@@ -25,13 +25,14 @@ function pickLastName(t) {
     return t?.last_name ?? t?.lastName ?? t?.profile?.last_name ?? "";
 }
 
-export default function SignInPage() {
+export default function SignInPage({forTeacher = false}) {
     const ctx = useTeacherDashboard?.();
     const teacher = getTeacherFromCtx(ctx);
 
     const [teacherEmail, setTeacherEmail] = useState(String(pickEmail(teacher) || "").trim());
     const [sentEmail, setSentEmail] = useState("");
     const [sentCode, setSentCode] = useState("");
+    const [mustReviewTerms, setMustReviewTerms] = useState(false);
     const teacherFirst = String(pickFirstName(teacher) || "").trim();
     const teacherLast = String(pickLastName(teacher) || "").trim();
 
@@ -46,30 +47,42 @@ export default function SignInPage() {
         return true;
     };
 
+    const markUserAsTeacher = () => localStorage.setItem('isTeacherApp', 'true');
+
     const verifyEmailCode = async (email, code, acceptTou = false) => {
         try {
-            const { token } = await callVerifyCodeApi({email, code, termsAccepted: acceptTou});
+            const { token, mustAcceptTerms } = await callVerifyCodeApi({
+                email,
+                code,
+                termsAccepted: acceptTou,
+                teacher: forTeacher,
+            });
 
-            if (acceptTou) {
+            if (forTeacher) markUserAsTeacher();
+
+            if (acceptTou || !mustAcceptTerms) {
                 localStorage.setItem("token", token);
-            } else {
-                setSentCode(code);
+                await ctx?.reloadAll();
+                return "next";
             }
 
-            return true;
+            setSentCode(code);
+            setMustReviewTerms(true);
+            return "terms";
         } catch (e) {
             logError(e);
-            return false;
+            return "error";
         }
     };
 
+
     const saveName = async ({ firstName, lastName }) => {
-        // TODO: call your API
+        await callAccountUpdateApi({firstName, lastName});
         return true;
     };
 
-    const finish = () => {
-        // TODO: navigate or finalize auth
+    const finish = async () => {
+        await ctx?.reloadAll();
     };
 
     const steps = [
@@ -89,21 +102,32 @@ export default function SignInPage() {
             key: "code",
             title: "Enter the code",
             when: () => !teacherEmail, // shown only if email step was required
-            render: ({ goNext, goPrev }) => (
+            render: ({ goNext, goPrev, goTo }) => (
                 <CodeStep
                     email={sentEmail}
                     onVerified={async (code) => {
-                        return await verifyEmailCode(sentEmail, code);
+                        const res = await verifyEmailCode(sentEmail, code, false);
+
+                        if (res === "terms") {
+                            goTo("terms");
+                            return true; // keep CodeStep happy
+                        }
+
+                        if (res === "next") {
+                            goNext();
+                            return true;
+                        }
+
+                        return false;
                     }}
-                    onNext={goNext}
                     onBack={goPrev}
                 />
-            ),
+            )
         },
         {
             key: "terms",
             title: "Please review",
-            when: () => !teacherEmail, // shown only if email step was required
+            when: () => !teacherEmail && mustReviewTerms, // shown only if email step was required
             render: ({ goNext }) => (
                 <TermsStep
                     paragraphs={TERMS_OF_USE_CONTENT}
@@ -120,16 +144,29 @@ export default function SignInPage() {
             when: () => !teacherFirst,
             render: ({ goNext, goTo }) => (
                 <NameStep
-                    teacherEmail={teacherEmail}
                     initialFirstName={teacherFirst}
                     initialLastName={teacherLast}
                     onConfirmed={saveName}
-                    onNext={() => {
-
-                    }}
+                    onNext={finish}
                     onBack={() => {
                         goTo('email')
                     }}
+                />
+            ),
+        },
+        {
+            key: "teacher",
+            title: "Teacher dashboard",
+            when: () => forTeacher && (!localStorage.getItem('isTeacherApp') !== 'true'),
+            render: ({ goNext, goTo }) => (
+                <TermsStep
+                    paragraphs={TERMS_OF_USE_CONTENT}
+                    verifyApi={async () => {
+                        await apiBecomeTeacher();
+                        markUserAsTeacher();
+                        return true;
+                    }}
+                    onAccepted={goNext}
                 />
             ),
         },

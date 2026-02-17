@@ -1364,3 +1364,40 @@ $$;
 
 COMMIT;
 
+-- Migration: add_first_name_last_name_to_accounts
+-- Description:
+-- 1) Add first_name and last_name columns to accounts table (nullable)
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1 FROM migrations_history WHERE id = 'add_first_name_last_name_to_accounts'
+        ) THEN
+
+            -- =========================
+            -- ACCOUNTS: first_name / last_name
+            -- =========================
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS first_name VARCHAR(100) NULL;
+
+            ALTER TABLE accounts
+                ADD COLUMN IF NOT EXISTS last_name VARCHAR(100) NULL;
+
+            -- Optional: index if you plan to search by name frequently
+            CREATE INDEX IF NOT EXISTS idx_accounts_first_name
+                ON accounts (first_name);
+
+            CREATE INDEX IF NOT EXISTS idx_accounts_last_name
+                ON accounts (last_name);
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('add_first_name_last_name_to_accounts', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;
