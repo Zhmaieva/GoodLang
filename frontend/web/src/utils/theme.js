@@ -964,6 +964,94 @@ theme.input.subtext = {
     margin: 0,
     height: 0,
 };
+// ============================================================
+// ChooseOptionGapTaskWorkView (student homework work view)
+// ============================================================
+theme.chooseOptionGapTaskWorkView = {
+    wrap: {
+        width: "100%",
+        minWidth: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: theme.spacing.gap,
+    },
+
+    // we reuse the same “card” look as chooseOptionReadonlyTask
+    card: theme.chooseOptionReadonlyTask?.card,
+
+    // sentence / task text
+    text: {
+        ...theme.chooseOptionReadonlyTask?.question,
+        fontWeight: theme.weights.normal, // not “big title”, closer to EmailStep tone
+    },
+
+    gapInline: {
+        display: "inline-flex",
+        alignItems: "baseline",
+        justifyContent: "center",
+        minWidth: "3.2em",
+        padding: "0 0.15em",
+        borderBottom: theme.borders.cardSelected,
+        transition: `min-width ${theme.motion.normal} ${theme.motion.ease}, opacity ${theme.motion.fast} ${theme.motion.ease}`,
+        color: theme.textDark,
+    },
+
+    gapInlineEmpty: {
+        minWidth: "1.2em", // “reduces the gap” when empty chosen
+        opacity: 0.75,
+    },
+
+    optionsWrap: theme.chooseOptionReadonlyTask?.optionsWrap,
+
+    // Use Chip component; this helps keep spacing consistent
+    actionsRow: {
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: theme.spacing.gap,
+        marginTop: 2,
+    },
+
+    navRow: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-end",
+        gap: theme.spacing.rowGap,
+    },
+
+    // smooth “expand + fade” answer panel
+    answerWrap: {
+        overflow: "hidden",
+        transition: `max-height ${theme.motion.normal} ${theme.motion.ease}, opacity ${theme.motion.normal} ${theme.motion.ease}`,
+        maxHeight: 0,
+        opacity: 0,
+    },
+
+    answerWrapShown: {
+        maxHeight: 220,
+        opacity: 1,
+    },
+
+    answerCard: {
+        border: theme.borders.card,
+        borderRadius: theme.radius.card,
+        background: theme.surfaceSoft,
+        padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
+        display: "flex",
+        flexDirection: "column",
+        gap: Math.max(8, Math.floor(theme.spacing.rowGap * 0.9)),
+    },
+
+    answerText: {
+        fontFamily: theme.fontFamily,
+        fontSize: theme.type.subtitle,
+        fontWeight: theme.weights.normal,
+        lineHeight: theme.type.subtitleLineHeight,
+        color: theme.textMutedDark,
+        wordBreak: "break-word",
+    },
+};
 
 
 export const themeStyles = theme;
