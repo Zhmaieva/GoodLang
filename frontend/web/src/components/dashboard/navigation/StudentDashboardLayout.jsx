@@ -10,6 +10,18 @@ export default function StudentDashboardLayout() {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const studentName =
+        teacher?.displayName ||
+        [teacher?.first_name, teacher?.last_name].filter(Boolean).join(" ").trim() ||
+        "";
+
+    const initials = useMemo(() => {
+        const parts = String(studentName || "").split(" ").filter(Boolean);
+        const a = parts[0]?.[0] || "S";
+        const b = parts[1]?.[0] || "";
+        return (a + b).toUpperCase();
+    }, [studentName]);
+
     useEffect(() => {
         const prev = document.body.style.overflow;
         document.body.style.overflow = "hidden";
@@ -91,11 +103,64 @@ export default function StudentDashboardLayout() {
                 minHeight: 0,
             },
 
+            bottom: {
+                display: "flex",
+                flexDirection: "column",
+                gap: theme.spacing.gap,
+                opacity: studentName ? 1 : 0,
+                transition: "opacity 0.3s",
+            },
+
+            teacherRow: {
+                display: "flex",
+                alignItems: theme.layout.rowAlign,
+                gap: theme.spacing.gap,
+            },
+
+            initials: {
+                width: theme.avatar.size,
+                height: theme.avatar.size,
+                borderRadius: theme.avatar.radius,
+                border: theme.avatar.border,
+                color: theme.surface,
+                background: theme.avatar.bg,
+                display: "flex",
+                alignItems: theme.layout.rowAlign,
+                justifyContent: "center",
+                fontWeight: theme.weights.title,
+                userSelect: "none",
+                flexShrink: 0,
+            },
+
+            teacherMeta: {
+                minWidth: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+            },
+
+            teacherName: {
+                fontWeight: theme.weights.title,
+                fontSize: theme.smallType.name,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                color: theme.textDark,
+            },
+
+            teacherHint: {
+                fontSize: theme.smallType.hint,
+                color: theme.smallType.hintColor,
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+            },
+
             contentFull,
 
             content: {
                 marginLeft: theme.layoutMetrics.sidebarWidth,
-                ...contentFull
+                ...contentFull,
             },
 
             outletWrap: {
@@ -106,20 +171,21 @@ export default function StudentDashboardLayout() {
                 flexDirection: "column",
             },
         };
-    }, []);
+    }, [studentName]);
 
     if (!loading && !teacher?.first_name) {
-        return <div style={styles.page}>
-            <main style={styles.contentFull}>
-                <SignInPage nextPath={nextPath}/>
-            </main>
-        </div>
+        return (
+            <div style={styles.page}>
+                <main style={styles.contentFull}>
+                    <SignInPage nextPath={nextPath} />
+                </main>
+            </div>
+        );
     }
 
     if (loading) {
-        return <div style={styles.page}></div>
+        return <div style={styles.page}></div>;
     }
-
 
     return (
         <div style={styles.page}>
@@ -132,6 +198,16 @@ export default function StudentDashboardLayout() {
                         onSelect={(item) => item?.id && navigate(item.id)}
                         style={{ height: "100%", padding: 0 }}
                     />
+                </div>
+
+                <div style={styles.bottom}>
+                    <div style={styles.teacherRow}>
+                        <div style={styles.initials}>{initials}</div>
+                        <div style={styles.teacherMeta}>
+                            <div style={styles.teacherName}>{studentName}</div>
+                            <div style={styles.teacherHint}>Student</div>
+                        </div>
+                    </div>
                 </div>
             </aside>
 

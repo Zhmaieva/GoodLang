@@ -229,7 +229,7 @@ export default function TeacherDashboardLayout() {
                         <div style={styles.initials}>{initials}</div>
                         <div style={styles.teacherMeta}>
                             <div style={styles.teacherName}>{teacherName}</div>
-                            <div style={styles.teacherHint}>English Teacher</div>
+                            <div style={styles.teacherHint}>Teacher</div>
                         </div>
                     </div>
                 </div>

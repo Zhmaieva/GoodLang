@@ -6,25 +6,36 @@ const ERR = {
     STUDENT_NEEDS_FIRST_NAME: "STUDENT_NEEDS_FIRST_NAME",
 };
 
-export async function ensureTeacherStudentPg({ teacherId, studentId, firstName, lastName }) {
+export async function ensureTeacherStudentPg({ teacherId, studentId }) {
     const t = String(teacherId || "").trim();
     if (!t) throw new Error(ERR.teacher_account_id_REQUIRED);
 
     const s = String(studentId || "").trim();
     if (!s) throw new Error(ERR.student_account_id_REQUIRED);
 
-    const fn = String(firstName ?? "").trim();
-    const ln = String(lastName ?? "").trim();
-
+    // (0) Already linked?
     const existing = await pool.query(
-        `SELECT id FROM teacher_students WHERE teacher_account_id=$1 AND student_account_id=$2 LIMIT 1`,
+        `SELECT id FROM teacher_students
+         WHERE teacher_account_id=$1 AND student_account_id=$2
+         LIMIT 1`,
         [t, s]
     );
 
-    if (existing.rows[0]) return { created: false }; // ignore names
+    if (existing.rows[0]) return { created: false };
+
+    // (1) Pull names from student's account
+    const acc = await pool.query(
+        `SELECT first_name, last_name FROM accounts WHERE id=$1 LIMIT 1`,
+        [s]
+    );
+
+    const row = acc.rows[0] || null;
+    const fn = String(row?.first_name ?? "").trim();
+    const ln = String(row?.last_name ?? "").trim();
 
     if (!fn) throw new Error(ERR.STUDENT_NEEDS_FIRST_NAME);
 
+    // (2) Insert relation
     const ins = await pool.query(
         `
             INSERT INTO teacher_students (teacher_account_id, student_account_id, first_name, last_name)
@@ -37,3 +48,4 @@ export async function ensureTeacherStudentPg({ teacherId, studentId, firstName, 
 
     return { created: ins.rows.length > 0 };
 }
+

@@ -888,3 +888,36 @@ export function apiAssignBuiltTaskSet(taskSetId, {
     );
 }
 
+/**
+ * ==========================================================
+ * (4S) STUDENT: GET ALL TASKS FROM ASSIGNED SET (safe view)
+ * ==========================================================
+ * GET /schools/task-sets/:taskSetId/tasks-student
+ */
+export function apiStudentTaskSetTasksStudent({ taskSetId }) {
+    const id = String(taskSetId ?? "").trim();
+    if (!id) throw new Error("Missing taskSetId");
+
+    return jsonFetch(`${API_BASE}/schools/task-sets/${encodeURIComponent(id)}/tasks-student`);
+}
+
+/**
+ * ==========================================================
+ * STUDENT: JOIN TASK SET
+ * ==========================================================
+ * POST /schools/task-sets/join?taskSetId=...&firstName=...&lastName=...
+ *
+ * Notes:
+ * - auth required
+ */
+export function apiJoinTaskSet({ taskSetId }) {
+    const id = String(taskSetId ?? "").trim();
+    if (!id) throw new Error("Missing taskSetId");
+
+    const qs = new URLSearchParams();
+    qs.set("taskSetId", id);
+
+    return jsonFetch(`${API_BASE}/schools/task-sets/join?${qs.toString()}`, {
+        method: "POST",
+    });
+}

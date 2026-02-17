@@ -454,19 +454,16 @@ export const schoolsTaskSetsController = {
                 const studentId = req.user.id;
 
                 const taskSetId = String(req.query?.taskSetId || "").trim();
-                const firstName = req.query?.firstName != null ? String(req.query.firstName).trim() : "";
-                const lastName = req.query?.lastName != null ? String(req.query.lastName).trim() : "";
+
 
                 // (1) Mongo: fetch set and get teacherId
                 const set = await getTaskSetByIdForJoin({ taskSetId });
                 const teacherId = set.teacherId;
 
-                // (2) PG: ensure teacher-student relation exists (or create if firstName provided)
+                // (2) PG: ensure teacher-student relation exists (or create)
                 const st = await ensureTeacherStudentPg({
                     teacherId,
                     studentId,
-                    firstName,
-                    lastName,
                 });
 
                 // (3) Mongo: assign set to student (idempotent)

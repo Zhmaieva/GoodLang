@@ -131,7 +131,7 @@ import {themeStyles} from "./utils/theme.js";
 import {ShareAssignmentPage} from "./components/dashboard/assignments/share/ShareAssignmentPage.jsx";
 import {MySubmissionsPage} from "./components/dashboard/assignments/student/submissions/MySubmissionsPage.jsx";
 import {WorkOnAssignmentPage} from "./components/dashboard/assignments/student/assignments/WorkOnAssignmentPage.jsx";
-import {MyAssignmentPage} from "./components/dashboard/assignments/student/assignments/MyAssignmentPage.jsx";
+import {MyAssignmentsPage} from "./components/dashboard/assignments/student/assignments/MyAssignmentsPage.jsx";
 import StudentDashboardLayout from "./components/dashboard/navigation/StudentDashboardLayout.jsx";
 import {StudentProfilePage} from "./components/dashboard/assignments/student/profile/StudentProfilePage.jsx";
 import {RootRedirect} from "./components/routing/RootRedirect.jsx";
@@ -212,8 +212,8 @@ export default function App() {
                         </TeacherDashboardProvider>
                     }
                 >
-                    <Route index element={<MyAssignmentPage />} />
-                    <Route path="assignments" element={<MyAssignmentPage />} />
+                    <Route index element={<MyAssignmentsPage />} />
+                    <Route path="assignments" element={<MyAssignmentsPage />} />
 
                     {/* ✅ inner route by URL to work on an assignment */}
                     <Route path="assignments/:assignmentId" element={<WorkOnAssignmentPage />} />
