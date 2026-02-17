@@ -59,9 +59,9 @@ export default function AuthCodeInput({ value = "", onChange }) {
         for (let i = 0; i < text.length && j < L; i += 1, j += 1) {
             arr[j] = text[i];
         }
-        emit(arr.join("").replace(/\s/g, ""));
+        focus(Math.min(text.length, L) - 1);
 
-        focus(targetIndex());
+        emit(arr.join("").replace(/\s/g, ""));
     };
 
     const onKeyDown = (idx, e) => {
