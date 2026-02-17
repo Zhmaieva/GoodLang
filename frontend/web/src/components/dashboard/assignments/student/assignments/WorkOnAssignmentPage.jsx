@@ -30,7 +30,7 @@ export function WorkOnAssignmentPage() {
     const [tasks, setTasks] = useState([]);
 
     // simple per-task local submission state (until backend scoring sync)
-    const [submittedByTaskId, setSubmittedByTaskId] = useState({}); // { [taskId]: { selected: string, submittedAt: number } }
+    const [answersByTaskId, setAnswersByTaskId] = useState({});
 
     useEffect(() => {
         let cancelled = false;
@@ -76,25 +76,50 @@ export function WorkOnAssignmentPage() {
             return {
                 key,
                 title: `Task ${idx + 1}/${total}`,
-                render: ({ goNext, goPrev }) => (
-                    <ChooseOptionGapTaskWorkView
-                        task={task}
-                        onSubmit={async (selected) => {
-                            setSubmittedByTaskId((prev) => ({
-                                ...prev,
-                                [key]: { selected: String(selected ?? ""), submittedAt: Date.now() },
-                            }));
-                            return true;
-                        }}
-                        onPrev={goPrev}
-                        onNext={goNext}
-                        canPrev={idx > 0}
-                        canNext={idx < total - 1}
-                    />
-                ),
+                render: ({ goNext, goPrev }) => {
+                    const taskId = String(task?.id || idx);
+                    const saved = answersByTaskId[taskId] || {};
+
+                    return (
+                        <ChooseOptionGapTaskWorkView
+                            key={taskId} // ✅ keep remount per task
+                            task={task}
+                            initialSelected={saved.selected ?? null}
+                            initialSubmitted={Boolean(saved.submitted)}
+                            onSelect={(value) => {
+                                setAnswersByTaskId((prev) => ({
+                                    ...prev,
+                                    [taskId]: {
+                                        ...(prev[taskId] || {}),
+                                        selected: value,
+                                        // if user changes after submission, we can auto-unsubmit OR keep submitted
+                                        // recommended: auto-unsubmit:
+                                        submitted: false,
+                                    },
+                                }));
+                            }}
+                            onSubmit={async (selected) => {
+                                setAnswersByTaskId((prev) => ({
+                                    ...prev,
+                                    [taskId]: {
+                                        ...(prev[taskId] || {}),
+                                        selected: String(selected ?? ""),
+                                        submitted: true,
+                                        submittedAt: Date.now(),
+                                    },
+                                }));
+                                return true;
+                            }}
+                            onBack={goPrev}
+                            onNext={goNext}
+                            canBack={idx > 0}
+                            canNext={idx < total - 1}
+                        />
+                    );
+                },
             };
         });
-    }, [tasks]);
+    }, [tasks, answersByTaskId]);
 
     return (
         <Page title="Work on Assignment">

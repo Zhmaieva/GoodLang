@@ -1051,6 +1051,20 @@ theme.chooseOptionGapTaskWorkView = {
         color: theme.textMutedDark,
         wordBreak: "break-word",
     },
+
+    fadeSlot: {
+        transition: `opacity ${theme.motion.fast} ${theme.motion.ease}, transform ${theme.motion.fast} ${theme.motion.ease}`,
+        opacity: 0,
+        transform: "translateY(4px)",
+        pointerEvents: "none",
+    },
+
+    fadeSlotShown: {
+        opacity: 1,
+        transform: "translateY(0px)",
+        pointerEvents: "auto",
+    },
+
 };
 
 

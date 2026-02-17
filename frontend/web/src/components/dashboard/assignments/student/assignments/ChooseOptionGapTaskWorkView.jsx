@@ -13,13 +13,17 @@ function splitByGap(text) {
 
 export default function ChooseOptionGapTaskWorkView({
                                                         task,
-                                                        onSubmit,          // async (selected) => void | boolean
-                                                        onPrev,            // () => void
-                                                        onNext,            // () => void
-                                                        canPrev = true,
-                                                        canNext = true,
+                                                        initialSelected = null,        // string|null
+                                                        initialSubmitted = false,      // boolean
+                                                        onSelect,                      // (value: string) => void
+                                                        onSubmit,                      // async (selected: string) => void | boolean
+                                                        onBack,
+                                                        onNext,
+                                                        canBack = false,
+                                                        canNext = false,
                                                     }) {
     const t = theme.chooseOptionGapTaskWorkView;
+
 
     const { before, after } = useMemo(
         () => splitByGap(task?.textToTranslate),
@@ -28,18 +32,16 @@ export default function ChooseOptionGapTaskWorkView({
 
     const options = useMemo(() => {
         const arr = Array.isArray(task?.options) ? task.options : [];
-        // Keep empty option as a real selectable option.
         return arr.map((x) => (x == null ? "" : String(x)));
     }, [task?.options]);
 
-    const [selected, setSelected] = useState(null); // string|null
-    const [submitted, setSubmitted] = useState(false);
+    const [selected, setSelected] = useState(initialSelected);  // ✅ init from parent
+    const [submitted, setSubmitted] = useState(initialSubmitted);
 
     const selectedText = selected == null ? "" : String(selected);
 
     const handleSubmit = async () => {
         if (submitted) return;
-        // allow submitting empty string if user explicitly selected it
         if (selected == null) return;
 
         const ok = await onSubmit?.(selectedText);
@@ -53,6 +55,10 @@ export default function ChooseOptionGapTaskWorkView({
         const shown = selectedText === "" ? "— (no article)" : `"${selectedText}"`;
         return `Your answer: ${shown}`;
     }, [submitted, selectedText]);
+
+    const showBack = Boolean(canBack);
+    const showNext = Boolean(submitted && canNext);
+    const showSubmit = Boolean(!submitted);
 
     return (
         <div style={t.wrap}>
@@ -80,11 +86,16 @@ export default function ChooseOptionGapTaskWorkView({
                                 key={`${opt}__${i}`}
                                 active={isActive}
                                 title={opt === "" ? "Empty" : opt}
-                                onClick={() => {
-                                    setSelected(opt);
-                                    // keep submitted state; user can change before submitting
-                                    if (submitted) setSubmitted(false);
-                                }}
+                                // ✅ not clickable upon submission
+                                onClick={
+                                    submitted
+                                        ? undefined
+                                        : () => {
+                                            setSelected(opt);
+                                            onSelect?.(opt);     // ✅ persist in parent
+                                        }
+                                }
+
                             >
                                 {label}
                             </Chip>
@@ -92,40 +103,67 @@ export default function ChooseOptionGapTaskWorkView({
                     })}
                 </div>
 
+                {/* actions: Back + (Submit OR Next) in same row */}
                 <div style={t.actionsRow}>
-                    <div style={t.navRow}>
-                        <AwesomeActionButton
-                            variant="ghost"
-                            size="regular"
-                            symbol={"←"}
-                            onClick={onPrev}
-                            disabled={!canPrev}
-                        >
-                            Prev
-                        </AwesomeActionButton>
-
-                        <AwesomeActionButton
-                            variant="ghost"
-                            size="regular"
-                            symbol={"→"}
-                            onClick={onNext}
-                            disabled={!canNext || !submitted}
-                        >
-                            Next
-                        </AwesomeActionButton>
+                    <div
+                        style={{
+                            ...t.fadeSlot,
+                            ...(showBack ? t.fadeSlotShown : null),
+                        }}
+                    >
+                        {showBack ? (
+                            <AwesomeActionButton
+                                variant="ghost"
+                                size="regular"
+                                symbol={"←"}
+                                onClick={onBack}
+                            >
+                                Back
+                            </AwesomeActionButton>
+                        ) : null}
                     </div>
 
-                    <AwesomeActionButton
-                        variant="ghost"
-                        size="regular"
-                        symbol={"✓"}
-                        onClick={handleSubmit}
-                        disabled={selected == null || submitted}
+                    <div style={{ flex: 1 }} />
+
+                    <div
+                        style={{
+                            ...t.fadeSlot,
+                            ...(showSubmit ? t.fadeSlotShown : null),
+                        }}
                     >
-                        Submit
-                    </AwesomeActionButton>
+                        {showSubmit ? (
+                            <AwesomeActionButton
+                                variant="ghost"
+                                size="regular"
+                                symbol={"✓"}
+                                onClick={handleSubmit}
+                                disabled={selected == null || submitted}
+                            >
+                                Submit
+                            </AwesomeActionButton>
+                        ) : null}
+                    </div>
+
+                    <div
+                        style={{
+                            ...t.fadeSlot,
+                            ...(showNext ? t.fadeSlotShown : null),
+                        }}
+                    >
+                        {showNext ? (
+                            <AwesomeActionButton
+                                variant="ghost"
+                                size="regular"
+                                symbol={"→"}
+                                onClick={onNext}
+                            >
+                                Next
+                            </AwesomeActionButton>
+                        ) : null}
+                    </div>
                 </div>
 
+                {/* answer panel (expand + fade after submit) */}
                 <div
                     style={{
                         ...t.answerWrap,
@@ -135,7 +173,6 @@ export default function ChooseOptionGapTaskWorkView({
                     <div style={t.answerCard}>
                         <div style={t.answerText}>{answerLine}</div>
                         <div style={t.answerText}>
-                            {/* placeholder clarification text — plug real explanation later */}
                             Clarification will appear here after we connect correct answer / rule hint.
                         </div>
                     </div>
