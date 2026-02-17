@@ -247,9 +247,18 @@ export function ShareAssignmentPage() {
                 try {
                     const resp = await apiTeacherTaskSetTasks({ taskSetId: taskSetIdFromUrl });
                     if (cancelled) return;
-                    setTasks(resp?.tasks || []);
+                    const tasks = resp?.tasks || [];
+                    const title = resp?.title || "";
+
+                    if (!tasks || !title) {
+                        navigate('/school/assignments');
+                        return;
+                    }
+
+                    setTasks(tasks);
+                    setTaskName(title);
                     setTaskSetId(taskSetIdFromUrl);
-                    setTaskName(resp?.title || "");
+
                 } finally {
                     if (!cancelled) setLoading(false);
                 }
