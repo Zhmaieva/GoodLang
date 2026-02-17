@@ -1,4 +1,7 @@
-// AssignmentList.jsx — FULL DROP-IN (theme-driven, transparent chips, clickable details, better actions)
+// AssignmentList.jsx — FULL DROP-IN
+// - subtitle under title: TYPE only
+// - only 3 info chips inside card (non-pressable)
+// - includes SelectableChip (grey-filled when selected) for filters/sorting UI elsewhere
 
 import React, { useMemo, useState } from "react";
 import DynamicList from "../DynamicList.jsx";
@@ -22,20 +25,10 @@ function safeInt(n, fallback = 0) {
     return Number.isFinite(x) ? x : fallback;
 }
 
-function toMetaLine(a) {
-    const type = a?.type ? String(a.type) : "assignment";
-    const mode = a?.taskMode ? String(a.taskMode) : "";
-    const tasks = safeInt(a?.tasksCount ?? a?.tasks ?? a?.numberOfTasks, 0);
-    const rules = Array.isArray(a?.ruleIds) ? a.ruleIds.length : safeInt(a?.rulesCount, 0);
-
-    const bits = [
-        type,
-        mode ? `mode: ${mode}` : "",
-        tasks ? `${tasks} ${tasks === 1 ? "task" : "tasks"}` : "",
-        rules ? `${rules} ${rules === 1 ? "rule" : "rules"}` : "",
-    ].filter(Boolean);
-
-    return bits.join(" • ");
+function toTypeLine(a) {
+    const raw = a?.type ?? a?.taskType ?? a?.assignmentType ?? "";
+    const t = raw ? String(raw) : "Assignment";
+    return t.length ? t.charAt(0).toUpperCase() + t.slice(1) : "Assignment";
 }
 
 function toCompletedLine(a) {
@@ -45,16 +38,26 @@ function toCompletedLine(a) {
 }
 
 function toAssignedToLine(a) {
-    // you can pass either className or something else later
     if (a?.className) return `Assigned to: ${String(a.className)}`;
     if (a?.audienceLabel) return `Assigned to: ${String(a.audienceLabel)}`;
     return "";
 }
 
-// ---------- small local UI helpers (so we don’t touch global components)
-function PressableChip({ children, title, onClick, style }) {
-    const [hovered, setHovered] = useState(false);
+// ---------- local UI helpers
 
+function getGreyFill() {
+    // Use whatever your project has; fall back to a subtle grey.
+    return (
+        theme?.colors?.buttonSelectedBg ||
+        theme?.bgSoft ||
+        theme?.bgMuted ||
+        theme?.surfaceMuted ||
+        "rgba(0,0,0,0.06)"
+    );
+}
+
+// ✅ NON-pressable info chip (for inside assignment card)
+function InfoChip({ children, title, style }) {
     const s = useMemo(() => {
         const base = {
             fontFamily: theme.fontFamily,
@@ -63,8 +66,8 @@ function PressableChip({ children, title, onClick, style }) {
             lineHeight: theme.type.subtitleLineHeight,
             color: theme.textDark,
 
-            border: hovered ? theme.borders.cardSelected : theme.borders.card,
-            background: "transparent", // ✅ no light background
+            border: theme.borders.card,
+            background: "transparent",
             borderRadius: theme.radius.card,
 
             padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
@@ -74,33 +77,85 @@ function PressableChip({ children, title, onClick, style }) {
             overflow: "hidden",
             textOverflow: "ellipsis",
 
-            cursor: onClick ? "pointer" : "default",
-            userSelect: "none",
-            transition: `transform ${theme.motion.fast} ${theme.motion.ease}, border ${theme.motion.fast} ${theme.motion.ease}, opacity ${theme.motion.fast} ${theme.motion.ease}`,
-
-            transform: hovered && onClick && !theme.accessibility.reduceMotion ? "scale(1.02)" : "scale(1)",
-            opacity: onClick ? 1 : 0.85,
+            userSelect: "text",
+            cursor: "default",
             outline: "none",
         };
         return { ...base, ...(style || {}) };
-    }, [hovered, onClick, style]);
+    }, [style]);
+
+    if (!children) return null;
+
+    return (
+        <div title={title} style={s}>
+            {children}
+        </div>
+    );
+}
+
+// ✅ SELECTABLE chip for filters/sorting (grey fill when selected)
+export function SelectableChip({ children, title, selected = false, onClick, style, disabled = false }) {
+    const [hovered, setHovered] = useState(false);
+
+    const s = useMemo(() => {
+        const reduceMotion = !!theme?.accessibility?.reduceMotion;
+        const bg = selected ? getGreyFill() : "transparent";
+
+        return {
+            fontFamily: theme.fontFamily,
+            fontSize: theme.type.subtitle,
+            fontWeight: theme.weights.normal,
+            lineHeight: theme.type.subtitleLineHeight,
+            color: theme.textDark,
+
+            border: selected ? theme.borders.cardSelected : hovered ? theme.borders.cardSelected : theme.borders.card,
+            background: bg,
+            borderRadius: theme.radius.card,
+
+            padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
+
+            whiteSpace: "nowrap",
+            maxWidth: "100%",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+
+            cursor: disabled ? "default" : "pointer",
+            opacity: disabled ? 0.5 : 1,
+            userSelect: "none",
+
+            transition: reduceMotion
+                ? "none"
+                : `transform ${theme.motion.fast} ${theme.motion.ease},
+           border ${theme.motion.fast} ${theme.motion.ease},
+           background ${theme.motion.fast} ${theme.motion.ease},
+           opacity ${theme.motion.fast} ${theme.motion.ease}`,
+
+            transform: hovered && !disabled && !reduceMotion ? "scale(1.02)" : "scale(1)",
+            outline: "none",
+
+            ...style,
+        };
+    }, [hovered, selected, disabled, style]);
 
     if (!children) return null;
 
     return (
         <div
-            role={onClick ? "button" : undefined}
-            tabIndex={onClick ? 0 : undefined}
+            role="button"
+            tabIndex={disabled ? -1 : 0}
             title={title}
             style={s}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            onClick={onClick}
+            onClick={() => {
+                if (disabled) return;
+                onClick?.();
+            }}
             onKeyDown={(e) => {
-                if (!onClick) return;
+                if (disabled) return;
                 if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
-                    onClick();
+                    onClick?.();
                 }
             }}
         >
@@ -136,8 +191,8 @@ function IconButton({ label, symbol, onClick, disabled }) {
                 transition: reduceMotion
                     ? "none"
                     : `transform ${theme.motion.fast} ${theme.motion.ease},
-                       border ${theme.motion.fast} ${theme.motion.ease},
-                       background ${theme.motion.fast} ${theme.motion.ease}`,
+             border ${theme.motion.fast} ${theme.motion.ease},
+             background ${theme.motion.fast} ${theme.motion.ease}`,
 
                 color: theme.textDark,
                 userSelect: "none",
@@ -168,9 +223,9 @@ function IconButton({ label, symbol, onClick, disabled }) {
                 onClick?.(e);
             }}
         >
-            <span style={s.sym} aria-hidden="true">
-                {symbol}
-            </span>
+      <span style={s.sym} aria-hidden="true">
+        {symbol}
+      </span>
         </button>
     );
 }
@@ -178,19 +233,17 @@ function IconButton({ label, symbol, onClick, disabled }) {
 export function AssignmentList({
                                    assignments = [],
 
-                                   // optional actions
-                                   onOpen,    // (assignment) => void
-                                   onEdit,    // (assignment) => void
-                                   onDelete,  // (assignment) => Promise<void> | void
+                                   onOpen,
+                                   onEdit,
+                                   onDelete,
 
-                                   // optional: clicks on detail chips
-                                   onOpenSubmissions, // (assignment) => void
-                                   onOpenAudience,    // (assignment) => void
-                                   onOpenMeta,        // (assignment) => void
-                                   onOpenCreated,     // (assignment) => void
+                                   // (kept for backwards compat; not used now because chips are non-pressable)
+                                   onOpenSubmissions,
+                                   onOpenAudience,
+                                   onOpenMeta,
+                                   onOpenCreated,
 
-                                   // optional UI
-                                   groupTitle = "All assignments",
+                                   groupTitle = "test",
                                    emptyTitle = "No assignments yet",
                                    emptySubtitle = "Create your first assignment to start tracking submissions.",
                                    onCreate,
@@ -205,7 +258,7 @@ export function AssignmentList({
                 boxSizing: "border-box",
                 borderRadius: theme.radius.card,
                 border: theme.borders.card,
-                background: "transparent", // ✅ no soft white panel
+                background: "transparent",
                 padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
                 display: "flex",
                 flexDirection: "column",
@@ -238,6 +291,7 @@ export function AssignmentList({
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 margin: 0,
+                cursor: onOpen ? "pointer" : "default",
             },
 
             meta: {
@@ -278,7 +332,7 @@ export function AssignmentList({
                 justifyContent: "flex-start",
             },
         };
-    }, []);
+    }, [onOpen]);
 
     const content = useMemo(() => {
         if (!assignments?.length) {
@@ -298,7 +352,7 @@ export function AssignmentList({
             const name = String(a?.title ?? a?.name ?? "Untitled assignment");
 
             const created = formatDate(a?.createdAt ?? a?.created_at ?? a?.created);
-            const metaLine = toMetaLine(a);
+            const typeLine = toTypeLine(a);
 
             const completedLine = toCompletedLine(a);
             const assignedToLine = toAssignedToLine(a);
@@ -309,33 +363,18 @@ export function AssignmentList({
                 <div key={id} style={styles.card}>
                     <div style={styles.topRow}>
                         <div style={styles.titleCol}>
-                            <h3
-                                style={styles.title}
-                                title={name}
-                                onClick={() => onOpen?.(a)}
-                            >
+                            <h3 style={styles.title} title={name} onClick={() => onOpen?.(a)}>
                                 {name}
                             </h3>
 
-                            <div style={styles.meta} title={metaLine}>
-                                {metaLine}
+                            <div style={styles.meta} title={typeLine}>
+                                {typeLine}
                             </div>
                         </div>
 
-                        {/* ✅ nicer actions: icon buttons instead of “empty squares” */}
                         <div style={styles.actions}>
-                            <IconButton
-                                label="View"
-                                symbol="→"
-                                disabled={isBusy}
-                                onClick={() => onOpen?.(a)}
-                            />
-                            <IconButton
-                                label="Edit"
-                                symbol="✎"
-                                disabled={isBusy}
-                                onClick={() => onEdit?.(a)}
-                            />
+                            <IconButton label="View" symbol="→" disabled={isBusy} onClick={() => onOpen?.(a)} />
+                            <IconButton label="Edit" symbol="✎" disabled={isBusy} onClick={() => onEdit?.(a)} />
                             <IconButton
                                 label="Delete"
                                 symbol="🗑"
@@ -355,71 +394,20 @@ export function AssignmentList({
 
                     <div style={styles.divider} />
 
-                    {/* ✅ transparent + clickable chips */}
+                    {/* ✅ non-pressable info chips (only 3) */}
                     <div style={styles.detailsRow}>
-                        {created ? (
-                            <PressableChip
-                                title={`Created: ${created}`}
-                                onClick={onOpenCreated ? () => onOpenCreated(a) : undefined}
-                            >
-                                Created: {created}
-                            </PressableChip>
-                        ) : null}
-
-                        {completedLine ? (
-                            <PressableChip
-                                title={completedLine}
-                                onClick={onOpenSubmissions ? () => onOpenSubmissions(a) : undefined}
-                            >
-                                {completedLine}
-                            </PressableChip>
-                        ) : null}
-
-                        {assignedToLine ? (
-                            <PressableChip
-                                title={assignedToLine}
-                                onClick={onOpenAudience ? () => onOpenAudience(a) : undefined}
-                            >
-                                {assignedToLine}
-                            </PressableChip>
-                        ) : null}
-
-                        {metaLine ? (
-                            <PressableChip
-                                title={metaLine}
-                                onClick={onOpenMeta ? () => onOpenMeta(a) : undefined}
-                            >
-                                {metaLine}
-                            </PressableChip>
-                        ) : null}
+                        {created ? <InfoChip title={`Created: ${created}`}>Created: {created}</InfoChip> : null}
+                        {completedLine ? <InfoChip title={completedLine}>{completedLine}</InfoChip> : null}
+                        {assignedToLine ? <InfoChip title={assignedToLine}>{assignedToLine}</InfoChip> : null}
                     </div>
                 </div>
             );
         });
-    }, [
-        assignments,
-        busyId,
-        styles,
-        onOpen,
-        onEdit,
-        onDelete,
-        onCreate,
-        emptyTitle,
-        emptySubtitle,
-        onOpenSubmissions,
-        onOpenAudience,
-        onOpenMeta,
-        onOpenCreated,
-    ]);
+    }, [assignments, busyId, styles, onOpen, onEdit, onDelete, onCreate, emptyTitle, emptySubtitle]);
 
     return (
-        <RectangleGroup
-            title={groupTitle}
-            boxStyle={{ flexDirection: "column", flexWrap: "nowrap" }}
-        >
-            <DynamicList contentStyle={{ paddingRight: 0 }}>
-                {content}
-            </DynamicList>
+        <RectangleGroup boxStyle={{ flexDirection: "column", flexWrap: "nowrap" }}>
+            <DynamicList contentStyle={{ paddingRight: 0 }}>{content}</DynamicList>
         </RectangleGroup>
     );
 }

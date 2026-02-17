@@ -149,17 +149,17 @@ export function AssignmentsPage() {
                 alignItems: "center",
             },
 
-            chip: (active) => ({
+            chip: (active, hover) => ({
                 appearance: "none",
-                border: active ? theme.borders.cardSelected : theme.borders.card,
-                background: "transparent",
+                border: active || hover ? theme.borders.cardSelected : theme.borders.card,
+                background: active ? theme.accentDark : "transparent",
                 borderRadius: theme.radius.card,
                 padding: `${Math.max(6, Math.floor(theme.spacing.listPad * 0.8))}px ${theme.spacing.cardPadX}px`,
                 fontFamily: theme.fontFamily,
                 fontSize: theme.type.subtitle,
                 fontWeight: active ? theme.weights.subtitleSelected : theme.weights.normal,
                 lineHeight: theme.type.subtitleLineHeight,
-                color: theme.textDark,
+                color: active ? theme.textOnColor : theme.textDark,
                 cursor: "pointer",
                 transition: `transform ${theme.motion.fast} ${theme.motion.ease}, opacity ${theme.motion.fast} ${theme.motion.ease}`,
             }),
@@ -185,7 +185,7 @@ export function AssignmentsPage() {
                 type="button"
                 onClick={onClick}
                 style={{
-                    ...styles.chip(active),
+                    ...styles.chip(active, hover),
                     ...(hover ? styles.chipHover : null),
                 }}
                 onMouseEnter={() => setHover(true)}
@@ -217,8 +217,8 @@ export function AssignmentsPage() {
                 </div>
 
                 <div style={styles.section}>
-                    <div style={styles.label}>Type</div>
                     <div style={styles.chipsRow}>
+                        <div style={styles.label}>Type</div>
                         {typeOptions.map((o) => (
                             <Chip
                                 key={o.id}
@@ -232,8 +232,8 @@ export function AssignmentsPage() {
                 </div>
 
                 <div style={styles.section}>
-                    <div style={styles.label}>Recipient</div>
                     <div style={styles.chipsRow}>
+                        <div style={styles.label}>Recipient</div>
                         {recipientOptions.map((o) => (
                             <Chip
                                 key={o.id}
@@ -247,8 +247,8 @@ export function AssignmentsPage() {
                 </div>
 
                 <div style={styles.section}>
-                    <div style={styles.label}>Sort</div>
                     <div style={styles.chipsRow}>
+                        <div style={styles.label}>Sort</div>
                         {sortOptions.map((o) => (
                             <Chip
                                 key={o.id}
@@ -264,7 +264,7 @@ export function AssignmentsPage() {
 
             <AssignmentList
                 assignments={filteredSorted}
-                groupTitle={"All assignments"}
+                groupTitle={"test"}
                 onDelete={(a) => {
                     const id = String(a?.id ?? "");
                     setAssignments((prev) => prev.filter((x) => String(x?.id ?? "") !== id));
