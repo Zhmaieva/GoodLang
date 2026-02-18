@@ -1,14 +1,11 @@
-// AssignmentList.jsx — FULL DROP-IN
-// - subtitle under title: TYPE only
-// - only 3 info chips inside card (non-pressable)
-// - includes SelectableChip (grey-filled when selected) for filters/sorting UI elsewhere
-
+// AssignmentList.jsx — FULL DROP-IN (with selection + transparent chips)
 import React, { useMemo, useState } from "react";
 import DynamicList from "../DynamicList.jsx";
 import RectangleGroup from "../RectangleGroup.jsx";
 import EmptyContent from "../EmptyContent.jsx";
 import { theme } from "../../../App.jsx";
-import {Chip} from "../Chip.jsx";
+import { Chip } from "../Chip.jsx";
+import AwesomeActionButton from "../AwesomeActionButton.jsx";
 
 function formatDate(d) {
     if (!d) return "";
@@ -20,41 +17,24 @@ function formatDate(d) {
         return "";
     }
 }
-
 function safeInt(n, fallback = 0) {
     const x = Number(n);
     return Number.isFinite(x) ? x : fallback;
 }
-
 function toTypeLine(a) {
     const raw = a?.type ?? a?.taskType ?? a?.assignmentType ?? "";
-    const t = raw ? String(raw) : "Assignment";
-    return t.length ? t.charAt(0).toUpperCase() + t.slice(1) : "Assignment";
+    const t = raw ? String(raw) : "assignment";
+    return t.length ? t.charAt(0).toUpperCase() + t.slice(1) : "assignment";
 }
-
 function toCompletedLine(a) {
     const done = safeInt(a?.submittedCount ?? a?.doneCount ?? a?.completedStudents, 0);
     if (!done) return "";
-    return `Completed by: ${done} ${done === 1 ? "student" : "students"}`;
+    return `completed by: ${done} ${done === 1 ? "student" : "students"}`;
 }
-
 function toAssignedToLine(a) {
-    if (a?.className) return `Assigned to: ${String(a.className)}`;
-    if (a?.audienceLabel) return `Assigned to: ${String(a.audienceLabel)}`;
+    if (a?.className) return `assigned to: ${String(a.className)}`;
+    if (a?.audienceLabel) return `assigned to: ${String(a.audienceLabel)}`;
     return "";
-}
-
-// ---------- local UI helpers
-
-function getGreyFill() {
-    // Use whatever your project has; fall back to a subtle grey.
-    return (
-        theme?.colors?.buttonSelectedBg ||
-        theme?.bgSoft ||
-        theme?.bgMuted ||
-        theme?.surfaceMuted ||
-        "rgba(0,0,0,0.06)"
-    );
 }
 
 function IconButton({ label, symbol, onClick, disabled }) {
@@ -62,31 +42,25 @@ function IconButton({ label, symbol, onClick, disabled }) {
 
     const s = useMemo(() => {
         const reduceMotion = !!theme?.accessibility?.reduceMotion;
-
         return {
             btn: {
                 appearance: "none",
                 border: hovered ? theme.borders.cardSelected : theme.borders.card,
-                background: "transparent",
+                background: hovered ? "rgba(0,0,0,0.03)" : "transparent",
                 borderRadius: theme.radius.card,
-
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-
                 width: 34,
                 height: 34,
-
                 cursor: disabled ? "default" : "pointer",
                 opacity: disabled ? 0.5 : 1,
-
                 transform: hovered && !disabled && !reduceMotion ? "scale(1.03)" : "scale(1)",
                 transition: reduceMotion
                     ? "none"
                     : `transform ${theme.motion.fast} ${theme.motion.ease},
-             border ${theme.motion.fast} ${theme.motion.ease},
-             background ${theme.motion.fast} ${theme.motion.ease}`,
-
+                       border ${theme.motion.fast} ${theme.motion.ease},
+                       background ${theme.motion.fast} ${theme.motion.ease}`,
                 color: theme.textDark,
                 userSelect: "none",
                 outline: "none",
@@ -112,31 +86,31 @@ function IconButton({ label, symbol, onClick, disabled }) {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             onClick={(e) => {
+                e.stopPropagation();
                 if (disabled) return;
                 onClick?.(e);
             }}
         >
-      <span style={s.sym} aria-hidden="true">
-        {symbol}
-      </span>
+            <span style={s.sym} aria-hidden="true">
+                {symbol}
+            </span>
         </button>
     );
 }
 
 export function AssignmentList({
                                    assignments = [],
+                                   selectedId,
+                                   onSelect, // (assignment) => void
 
                                    onOpen,
                                    onEdit,
                                    onDelete,
 
-                                   // (kept for backwards compat; not used now because chips are non-pressable)
+                                   onOpenCreated,
                                    onOpenSubmissions,
                                    onOpenAudience,
-                                   onOpenMeta,
-                                   onOpenCreated,
 
-                                   groupTitle = "test",
                                    emptyTitle = "No assignments yet",
                                    emptySubtitle = "Create your first assignment to start tracking submissions.",
                                    onCreate,
@@ -145,18 +119,19 @@ export function AssignmentList({
 
     const styles = useMemo(() => {
         return {
-            card: {
+            card: (isSelected) => ({
                 width: "100%",
                 minWidth: 0,
                 boxSizing: "border-box",
                 borderRadius: theme.radius.card,
-                border: theme.borders.card,
+                border: isSelected ? theme.borders.cardSelected : theme.borders.card,
                 background: "transparent",
                 padding: `${theme.spacing.cardPadY}px ${theme.spacing.cardPadX}px`,
                 display: "flex",
                 flexDirection: "column",
                 gap: theme.spacing.rowGap,
-            },
+                cursor: "pointer",
+            }),
 
             topRow: {
                 display: "flex",
@@ -184,7 +159,6 @@ export function AssignmentList({
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 margin: 0,
-                cursor: onOpen ? "pointer" : "default",
             },
 
             meta: {
@@ -220,12 +194,17 @@ export function AssignmentList({
             detailsRow: {
                 display: "flex",
                 flexWrap: "wrap",
-                gap: theme.spacing.rowGap,
                 alignItems: "center",
                 justifyContent: "flex-start",
+                gap: 0, // бо separators дають контрольовані відступи
+            },
+
+            infoChipStyle: {
+                background: "transparent",
+                border: theme.borders.card,
             },
         };
-    }, [onOpen]);
+    }, []);
 
     const content = useMemo(() => {
         if (!assignments?.length) {
@@ -240,37 +219,95 @@ export function AssignmentList({
             );
         }
 
+        function InfoText({ children, title }) {
+            return (
+                <div
+                    title={title}
+                    style={{
+                        fontFamily: theme.fontFamily,
+                        fontSize: theme.type.subtitle,
+                        lineHeight: theme.type.subtitleLineHeight,
+                        color: theme.textMutedDark,
+                        opacity: 0.95,
+                        whiteSpace: "nowrap",
+                    }}
+                >
+                    {children}
+                </div>
+            );
+        }
+
+        function Dot() {
+            return (
+                <div
+                    aria-hidden="true"
+                    style={{
+                        opacity: 0.45,
+                        color: theme.textMutedDark,
+                        padding: "0 6px",
+                        lineHeight: theme.type.subtitleLineHeight,
+                        userSelect: "none",
+                    }}
+                >
+                    •
+                </div>
+            );
+        }
+
+
         return assignments.map((a) => {
             const id = String(a?.id ?? a?._id ?? a?.taskSetId ?? "");
             const name = String(a?.title ?? a?.name ?? "Untitled assignment");
 
             const created = formatDate(a?.createdAt ?? a?.created_at ?? a?.created);
             const typeLine = toTypeLine(a);
-
             const completedLine = toCompletedLine(a);
             const assignedToLine = toAssignedToLine(a);
 
             const isBusy = busyId && String(busyId) === id;
+            const isSelected = selectedId && String(selectedId) === id;
+
+            const infoParts = [];
+            if (created) infoParts.push({ key: "created", node: `created: ${created}` });
+            if (completedLine) infoParts.push({ key: "done", node: completedLine });
+            if (assignedToLine) infoParts.push({ key: "to", node: assignedToLine });
 
             return (
-                <div key={id} style={styles.card}>
+                <div
+                    key={id}
+                    style={styles.card(isSelected)}
+                    onClick={() => onSelect?.(a)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") onSelect?.(a);
+                    }}
+                >
                     <div style={styles.topRow}>
                         <div style={styles.titleCol}>
-                            <h3 style={styles.title} title={name} onClick={() => onOpen?.(a)}>
+                            <h3 style={styles.title} title={name}>
                                 {name}
                             </h3>
-
                             <div style={styles.meta} title={typeLine}>
                                 {typeLine}
                             </div>
                         </div>
 
-                        <div style={styles.actions}>
-                            <IconButton label="View" symbol="→" disabled={isBusy} onClick={() => onOpen?.(a)} />
-                            <IconButton label="Edit" symbol="✎" disabled={isBusy} onClick={() => onEdit?.(a)} />
-                            <IconButton
-                                label="Delete"
-                                symbol="🗑"
+                        <div style={styles.actions} onClick={(e) => e.stopPropagation()}>
+                            <AwesomeActionButton
+                                variant="ghost"
+                                symbol="⤴"
+                                size="regular"
+                                disabled={isBusy}
+                                onClick={() => onEdit?.(a)}
+                            >
+                                Share
+                            </AwesomeActionButton>
+
+                            <AwesomeActionButton
+                                variant="ghost"
+                                size="regular"
+                                symbol="✖"
                                 disabled={isBusy}
                                 onClick={async () => {
                                     if (!onDelete) return;
@@ -281,22 +318,42 @@ export function AssignmentList({
                                         setBusyId(null);
                                     }
                                 }}
-                            />
+                            >
+                                Delete
+                            </AwesomeActionButton>
                         </div>
+
                     </div>
 
-                    <div style={styles.divider} />
+                    <div style={styles.divider}/>
 
-                    {/* ✅ non-pressable info chips (only 3) */}
                     <div style={styles.detailsRow}>
-                        {created ? <Chip info title={`Created: ${created}`}>Created: {created}</Chip> : null}
-                        {completedLine ? <Chip info title={completedLine}>{completedLine}</Chip> : null}
-                        {assignedToLine ? <Chip info title={assignedToLine}>{assignedToLine}</Chip> : null}
+                        {infoParts.map((p, idx) => (
+                            <React.Fragment key={p.key}>
+                                {idx > 0 ? <Dot/> : null}
+                                <InfoText title={p.node}>{p.node}</InfoText>
+                            </React.Fragment>
+                        ))}
                     </div>
                 </div>
             );
         });
-    }, [assignments, busyId, styles, onOpen, onEdit, onDelete, onCreate, emptyTitle, emptySubtitle]);
+    }, [
+        assignments,
+        selectedId,
+        busyId,
+        styles,
+        onSelect,
+        onOpen,
+        onEdit,
+        onDelete,
+        onCreate,
+        emptyTitle,
+        emptySubtitle,
+        onOpenCreated,
+        onOpenSubmissions,
+        onOpenAudience,
+    ]);
 
     return (
         <RectangleGroup boxStyle={{ flexDirection: "column", flexWrap: "nowrap" }}>
