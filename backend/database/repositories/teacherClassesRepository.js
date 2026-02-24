@@ -1,4 +1,6 @@
 import { pool } from "../pool.js";
+import {recordAction} from "./accountLogRepository.js";
+import {ACTION_TYPES} from "../../core/constants.js";
 
 /**
  * Helpers
@@ -20,8 +22,10 @@ function genInviteCode6() {
  * - students_quota = 30
  * - first_name/last_name copied from accounts
  *
+ * Tracks ACTION_TYPES.USER_TEACHER_REGISTERED only if the row was newly inserted.
+ *
  * @param {string} accountId
- * @returns {Promise<{ok: boolean, teacher?: any, reason?: string}>}
+ * @returns {Promise<{ok: boolean, teacher?: any, inserted?: boolean, reason?: string}>}
  */
 export async function createSchoolTeacherForAccount(accountId) {
     if (typeof accountId !== "string" || !accountId.trim()) {
@@ -35,12 +39,11 @@ export async function createSchoolTeacherForAccount(accountId) {
         // Lock account row and read names
         const { rows: acc } = await client.query(
             `
-        SELECT id, first_name, last_name
-        FROM accounts
-        WHERE id = $1
-        LIMIT 1
-        FOR UPDATE
-      `,
+                SELECT id, first_name, last_name
+                FROM accounts
+                WHERE id = $1
+                LIMIT 1
+            `,
             [accountId]
         );
 
@@ -52,36 +55,45 @@ export async function createSchoolTeacherForAccount(accountId) {
         const firstName = acc[0].first_name ?? null;
         const lastName = acc[0].last_name ?? null;
 
-        // Upsert teacher row
+        // Upsert teacher row + detect whether it was inserted
         const { rows: t } = await client.query(
             `
-        INSERT INTO teachers (
-          account_id,
-          first_name,
-          last_name,
-          status,
-          students_quota
-        )
-        VALUES ($1, $2, $3, 'school', 30)
-        ON CONFLICT (account_id)
-        DO UPDATE SET
-          first_name     = EXCLUDED.first_name,
-          last_name      = EXCLUDED.last_name,
-          status         = 'school',
-          students_quota = 30
-        RETURNING
-          account_id,
-          first_name,
-          last_name,
-          status,
-          students_quota,
-          created_at
-      `,
+                INSERT INTO teachers (
+                    account_id,
+                    first_name,
+                    last_name,
+                    status,
+                    students_quota
+                )
+                VALUES ($1, $2, $3, 'school', 30)
+                ON CONFLICT (account_id)
+                    DO UPDATE SET
+                                  first_name     = EXCLUDED.first_name,
+                                  last_name      = EXCLUDED.last_name,
+                                  status         = 'school',
+                                  students_quota = 30
+                RETURNING
+                    account_id,
+                    first_name,
+                    last_name,
+                    status,
+                    students_quota,
+                    created_at,
+                    (xmax = 0) AS was_inserted
+            `,
             [accountId, firstName, lastName]
         );
 
+        const teacher = t[0];
+        const inserted = !!teacher?.was_inserted;
+
+        // Track only if row was inserted (first time teacher created)
+        if (inserted) {
+            await recordAction(accountId, ACTION_TYPES.USER_TEACHER_REGISTERED);
+        }
+
         await client.query("COMMIT");
-        return { ok: true, teacher: t[0] };
+        return { ok: true, teacher, inserted };
     } catch (e) {
         await client.query("ROLLBACK");
         throw e;
@@ -89,6 +101,7 @@ export async function createSchoolTeacherForAccount(accountId) {
         client.release();
     }
 }
+
 
 /**
  * Sync first_name and last_name from accounts → teachers

@@ -20,6 +20,9 @@ import {
     buildTaskSetTasks,
 } from "../services/taskSetBuilderService.js";
 import {ensureTeacherStudentPg} from "../database/repositories/teacherStudentsRepository.js";
+import {createSchoolTeacherForAccount} from "../database/repositories/teacherClassesRepository.js";
+import {recordAction} from "../database/repositories/accountLogRepository.js";
+import {ACTION_TYPES} from "../core/constants.js";
 
 const name = "schools";
 
@@ -328,6 +331,8 @@ export const schoolsTaskSetsController = {
                     return res.status(400).json({ error: "Failed to generate tasks" });
                 }
 
+                await createSchoolTeacherForAccount(teacherId);
+
                 // create set WITHOUT title/deadline
                 const created = await createTaskSetWithTasks({
                     teacherId,
@@ -454,7 +459,6 @@ export const schoolsTaskSetsController = {
                 const studentId = req.user.id;
 
                 const taskSetId = String(req.query?.taskSetId || "").trim();
-
 
                 // (1) Mongo: fetch set and get teacherId
                 const set = await getTaskSetByIdForJoin({ taskSetId });

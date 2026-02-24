@@ -142,7 +142,6 @@ export const accountsController = {
 
                     if (isTeacher) {
                         await createSchoolTeacherForAccount(accountId);
-                        await recordAction(accountId, ACTION_TYPES.USER_TEACHER_REGISTERED); // 500
                     }
                 }
 

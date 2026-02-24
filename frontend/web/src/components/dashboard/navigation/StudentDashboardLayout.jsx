@@ -173,15 +173,16 @@ export default function StudentDashboardLayout() {
         };
     }, [studentName]);
 
-    if (!loading && !teacher?.first_name) {
-        return (
-            <div style={styles.page}>
-                <main style={styles.contentFull}>
-                    <SignInPage nextPath={nextPath} />
-                </main>
-            </div>
-        );
-    }
+    // We want to let students access the page anonymously
+    // if (!loading && !teacher?.first_name) {
+    //     return (
+    //         <div style={styles.page}>
+    //             <main style={styles.contentFull}>
+    //                 <SignInPage nextPath={nextPath} />
+    //             </main>
+    //         </div>
+    //     );
+    // }
 
     if (loading) {
         return <div style={styles.page}></div>;

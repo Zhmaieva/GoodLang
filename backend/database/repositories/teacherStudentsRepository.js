@@ -33,8 +33,6 @@ export async function ensureTeacherStudentPg({ teacherId, studentId }) {
     const fn = String(row?.first_name ?? "").trim();
     const ln = String(row?.last_name ?? "").trim();
 
-    if (!fn) throw new Error(ERR.STUDENT_NEEDS_FIRST_NAME);
-
     // (2) Insert relation
     const ins = await pool.query(
         `

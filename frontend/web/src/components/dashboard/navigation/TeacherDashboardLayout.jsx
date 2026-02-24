@@ -199,13 +199,14 @@ export default function TeacherDashboardLayout() {
         };
     }, [teacherName]);
 
-    if (!loading && (!teacher.status || !teacher.first_name)) {
-        return <div style={styles.page}>
-            <main style={styles.contentFull}>
-                <SignInPage forTeacher nextPath={nextPath}/>
-            </main>
-        </div>
-    }
+    // We want to let teachers access the page anonymously
+    // if (!loading && (!teacher.status || !teacher.first_name)) {
+    //     return <div style={styles.page}>
+    //         <main style={styles.contentFull}>
+    //             <SignInPage forTeacher nextPath={nextPath}/>
+    //         </main>
+    //     </div>
+    // }
 
     if (loading) {
         return <div style={styles.page}></div>
