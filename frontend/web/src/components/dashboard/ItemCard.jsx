@@ -5,13 +5,17 @@ import { isLightColor } from "../../utils/uiUtils.js";
 export default function ItemCard({
                                      title,
                                      subtitle,
-                                     variant = 'regular', // regular | minimal
+                                     overTitle = null,
+                                     rightBigText = null,
+                                     variant = 'regular',
                                      imageUrl,
                                      onClick,
                                      selected = false,
                                      selectedShift = true,
+                                     suppressHand = false,
                                      style = {}
                                  }) {
+
     const [hovered, setHovered] = useState(false);
 
     const baseBg = selected ? theme.accentDark : theme.surface; //selected || hovered ? (theme.accentSelected) : theme.surface;
@@ -124,7 +128,51 @@ export default function ItemCard({
             opacity: selected || hovered ? theme.imgSlot.defaultOpacity :  theme.imgSlot.inactiveOpacity,
         };
 
-        return { card, overlay, row, textCol, titleStyle, subtitleStyle, imgWrap, img };
+        const overTitleStyle = {
+            fontFamily: theme.fontFamily,
+            fontWeight: theme.weights.normal,
+            color: subColor,
+            fontSize: theme.smallType?.hint || Math.max(11, theme.type.subtitle - 2),
+            lineHeight: 1.2,
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            opacity: 0.85,
+        };
+
+        const rightCol = {
+            flex: "0 0 auto",
+            display: "flex",
+            alignItems: theme.layout.rowAlign,
+            justifyContent: "center",
+            minWidth: 28,
+        };
+
+        const rightBigTextStyle = {
+            fontFamily: theme.fontFamily,
+            fontWeight: theme.weights.title,
+            color: titleColor,
+            fontSize: theme.type?.title || 18,
+            lineHeight: theme.type?.titleLineHeight || 1.2,
+            opacity: 0.95,
+            userSelect: "none",
+        };
+
+
+        return {
+            card,
+            overlay,
+            row,
+            textCol,
+            overTitleStyle,
+            titleStyle,
+            subtitleStyle,
+            rightCol,
+            rightBigTextStyle,
+            imgWrap,
+            img,
+        };
+
     }, [baseBg, overlayOpacity, titleColor, subColor, transform, selected, hovered]);
 
     return (
@@ -146,26 +194,38 @@ export default function ItemCard({
                     <div style={styles.overlay}/>
                     <div style={styles.row}>
                         <div style={styles.textCol}>
+                            {overTitle ? (
+                                <div style={styles.overTitleStyle} title={String(overTitle)}>
+                                    {overTitle}
+                                </div>
+                            ) : null}
+
                             <div style={styles.titleStyle} title={title}>
                                 {title}
                             </div>
-                            {
-                                variant !== 'minimal' &&
+
+                            {variant !== 'minimal' && (
                                 <div style={styles.subtitleStyle} title={subtitle}>
                                     {subtitle}
                                 </div>
-                            }
+                            )}
                         </div>
 
+                        {rightBigText != null && rightBigText !== "" ? (
+                            <div style={styles.rightCol}>
+                                <div style={styles.rightBigTextStyle}>{rightBigText}</div>
+                            </div>
+                        ) : null}
+
                         {imageUrl ? (
-                            <div style={styles.imgWrap} aria-hidden="true">
-                            <img src={imageUrl} alt="" style={styles.img}/>
+                            <div style={styles.imgWrap}>
+                                <img src={imageUrl} alt="" style={styles.img}/>
                             </div>
                         ) : null}
                     </div>
                 </div>
                 {
-                    selectedShift && (selected || hovered) ? (
+                    !suppressHand && selectedShift && (selected || hovered) ? (
                         <div style={{...theme.images.handWrapper}}>
                             <img src={'/handPict.PNG'} style={theme.images.handNav}/>
                         </div>

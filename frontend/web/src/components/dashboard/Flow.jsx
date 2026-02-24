@@ -17,10 +17,40 @@ function nextEligibleKey(steps, fromKey, dir) {
     return "";
 }
 
-export default function Flow({ steps = [], onDone }) {
+export default function Flow({
+                                 steps = [],
+                                 onDone,
+                                 activeKey: controlledActiveKey = null,
+                                 onActiveKeyChange,
+                                 initialKey = null,
+                                 style = {},
+                             }) {
     const t = theme.flow;
 
-    const [activeKey, setActiveKey] = React.useState(() => firstEligibleKey(steps));
+
+    const isControlled = controlledActiveKey != null;
+
+    const [uncontrolledKey, setUncontrolledKey] = React.useState(() => {
+        const init = initialKey ? String(initialKey) : "";
+        return init || firstEligibleKey(steps);
+    });
+
+    const activeKey = isControlled
+        ? String(controlledActiveKey || "")
+        : uncontrolledKey;
+
+    const setActiveKey = React.useCallback(
+        (k) => {
+            const key = String(k || "");
+            if (isControlled) {
+                onActiveKeyChange?.(key);
+            } else {
+                setUncontrolledKey(key);
+                onActiveKeyChange?.(key);
+            }
+        },
+        [isControlled, onActiveKeyChange]
+    );
     const [phase, setPhase] = React.useState("shown");
     const pendingRef = React.useRef(null);
 
@@ -80,7 +110,10 @@ export default function Flow({ steps = [], onDone }) {
 
 
     return (
-        <div style={t.wrap}>
+        <div style={{
+            ...t.wrap,
+            ...style
+        }}>
             <div style={t.content}>
                 <div style={fadeWrapStyle}>
                     {active.title ? <h3 style={t.title}>{active.title}</h3> : null}

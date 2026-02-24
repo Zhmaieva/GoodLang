@@ -4,7 +4,9 @@ import Page from "../../../Page.jsx";
 import Flow from "../../../Flow.jsx";
 import { apiJoinTaskSet, apiStudentTaskSetTasksStudent } from "../../../../../services/api.js";
 import { logError } from "../../../../../services/logger.js";
-import ChooseOptionGapTaskWorkView from "./ChooseOptionGapTaskWorkView.jsx"; // adjust path
+import ChooseOptionGapTaskWorkView from "./ChooseOptionGapTaskWorkView.jsx";
+import TasksProgressList from "./TasksProgressList.jsx"; // adjust path
+import {theme} from "../../../../../App.jsx";
 
 function extractTaskSetId(pathname) {
     const parts = String(pathname || "")
@@ -24,6 +26,7 @@ export function WorkOnAssignmentPage() {
 
     const taskSetId = useMemo(() => extractTaskSetId(location?.pathname), [location?.pathname]);
 
+    const [activeTaskId, setActiveTaskId] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
@@ -123,15 +126,45 @@ export function WorkOnAssignmentPage() {
 
     return (
         <Page title="Work on Assignment">
-            {loading ? (
-                <div style={{ opacity: 0.7 }}>Loading…</div>
-            ) : error ? (
-                <div style={{ color: "rgba(0,0,0,0.6)" }}>{error}</div>
-            ) : !steps.length ? (
-                <div style={{ opacity: 0.7 }}>No tasks found.</div>
-            ) : (
-                <Flow steps={steps} onDone={() => {}} />
-            )}
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "calc(100vh - 140px)",
+                    minHeight: 0,
+                }}
+            >
+                <div
+                    style={{
+                        display: "flex",
+                        flex: "1 1 auto",
+                        minHeight: 0,
+                        gap: theme.spacing.gap,
+                        alignItems: "stretch",
+                    }}
+                >
+                    <div style={{ flex: "1 1 auto", minWidth: 0, minHeight: 0 }}>
+                        <Flow
+                            style={{height:'100%'}}
+                            steps={steps}
+                            activeKey={activeTaskId || steps?.[0]?.key || ""}
+                            onActiveKeyChange={setActiveTaskId}
+                            onDone={() => {}}
+                        />
+                    </div>
+
+                    <div style={{ width: 420, minWidth: 320, minHeight: 0 }}>
+                        <TasksProgressList
+                            tasks={tasks}
+                            answersByTaskId={answersByTaskId}
+                            activeTaskId={activeTaskId || steps?.[0]?.key || ""}
+                            onSelectTaskId={setActiveTaskId}
+                        />
+                    </div>
+                </div>
+            </div>
         </Page>
     );
+
+
 }
