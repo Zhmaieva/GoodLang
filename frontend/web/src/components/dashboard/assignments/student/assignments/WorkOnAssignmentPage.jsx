@@ -124,7 +124,7 @@ export function WorkOnAssignmentPage() {
             return {
                 key,
                 title: `Task ${idx + 1}/${total}`,
-                render: ({ goNext, goPrev, goTo }) => {
+                render: ({ goNext, goPrev, goToNextAfter }) => {
                     const taskId = String(task?.id || idx);
                     const saved = answersByTaskId[taskId] || {};
 
@@ -157,7 +157,13 @@ export function WorkOnAssignmentPage() {
                                 return true;
                             }}
                             onBack={goPrev}
-                            onNext={goNext}
+                            onNext={() => {
+                                if (areAllDone()) {
+                                    goToNextAfter(tasks[tasks.length - 1].id);
+                                    return;
+                                }
+                                goNext();
+                            }}
                             canBack={idx > 0}
                             canNext={idx < total - 1 || areAllDone()}
                         />

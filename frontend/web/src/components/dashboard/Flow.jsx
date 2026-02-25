@@ -17,6 +17,11 @@ function nextEligibleKey(steps, fromKey, dir) {
     return "";
 }
 
+function nextEligibleKeyAfter(steps, afterKey) {
+    return nextEligibleKey(steps, afterKey, +1);
+}
+
+
 export default function Flow({
                                  steps = [],
                                  onDone,
@@ -24,7 +29,8 @@ export default function Flow({
                                  onActiveKeyChange,
                                  initialKey = null,
                                  style = {},
-                                 onBetweenPhases = () => {}
+                                 onBetweenPhases = () => {},
+                                 refreshOnChange = null
                              }) {
     const t = theme.flow;
 
@@ -75,9 +81,10 @@ export default function Flow({
 
             const ms = Number.parseInt(String(t.ms || theme.motion?.normal || "220ms"), 10);
             pendingRef.current = setTimeout(() => {
+                setActiveKey(key);
+
                 onBetweenPhases();
 
-                setActiveKey(key);
                 setPhase("shown");
             }, Number.isFinite(ms) ? ms : 0);
         },
@@ -88,7 +95,20 @@ export default function Flow({
         const next = nextEligibleKey(steps, activeKey, +1);
         if (next) return goTo(next);
         onDone?.();
-    }, [steps, activeKey, goTo, onDone]);
+    }, [steps, activeKey, goTo, onDone, refreshOnChange]);
+
+    const goToNextAfter = React.useCallback(
+        (afterKey) => {
+            const from = String(afterKey || "");
+            if (!from) return;
+
+            const next = nextEligibleKey(steps, from, +1);
+            if (next) return goTo(next);
+
+            onDone?.();
+        },
+        [steps, goTo, onDone]
+    );
 
     const goPrev = React.useCallback(() => {
         const prev = nextEligibleKey(steps, activeKey, -1);
@@ -120,7 +140,7 @@ export default function Flow({
             <div style={t.content}>
                 <div style={fadeWrapStyle}>
                     {active.title ? <h3 style={t.title}>{active.title}</h3> : null}
-                    {active.render({ goNext, goPrev, goTo })}
+                    {active.render({ goNext, goPrev, goTo, goToNextAfter })}
                 </div>
             </div>
         </div>
