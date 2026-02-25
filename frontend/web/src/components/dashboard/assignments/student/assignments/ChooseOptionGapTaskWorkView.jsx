@@ -58,7 +58,7 @@ export default function ChooseOptionGapTaskWorkView({
 
     const showBack = Boolean(canBack);
     const showNext = Boolean(submitted && canNext);
-    const showSubmit = Boolean(!submitted);
+    const showSubmit = Boolean(!submitted && selectedText);
 
     return (
         <div style={t.wrap}>
@@ -131,7 +131,7 @@ export default function ChooseOptionGapTaskWorkView({
                             ...(showSubmit ? t.fadeSlotShown : null),
                         }}
                     >
-                        {showSubmit ? (
+                        {!submitted ? (
                             <AwesomeActionButton
                                 variant="ghost"
                                 size="regular"

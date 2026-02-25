@@ -45,6 +45,7 @@ export function WorkOnAssignmentPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
+    const [title, setTitle] = useState('');
     const [tasks, setTasks] = useState([]);
     const [allDone, setAllDone] = useState(false);
     const [taskListVisible, setTaskListVisible] = useState(true);
@@ -104,6 +105,8 @@ export function WorkOnAssignmentPage() {
 
                 const res = await apiStudentTaskSetTasksStudent({ taskSetId: id });
                 if (cancelled) return;
+
+                setTitle(res.title || '');
 
                 const arr = Array.isArray(res?.tasks)
                     ? res.tasks
@@ -325,7 +328,7 @@ export function WorkOnAssignmentPage() {
     }, [tasks, answersByTaskId, sentEmail, sentCode, teacher, reloadAll, navigate]); // ✅ add missing deps
 
     return (
-        <Page title="Work on Assignment">
+        <Page loading={loading} subtitle={title} title={'Work on the assignment'}>
             <div
                 style={{
                     display: "flex",

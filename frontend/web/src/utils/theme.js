@@ -33,6 +33,7 @@ const theme = {
     motion: {
         fast: "160ms",
         normal: "220ms",
+        slow: "1420ms",
         ease: "cubic-bezier(0.2, 0.8, 0.2, 1)",
     },
 
@@ -1055,13 +1056,11 @@ theme.chooseOptionGapTaskWorkView = {
     fadeSlot: {
         transition: `opacity ${theme.motion.fast} ${theme.motion.ease}, transform ${theme.motion.fast} ${theme.motion.ease}`,
         opacity: 0,
-        transform: "translateY(4px)",
         pointerEvents: "none",
     },
 
     fadeSlotShown: {
         opacity: 1,
-        transform: "translateY(0px)",
         pointerEvents: "auto",
     },
 

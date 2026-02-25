@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { theme } from "../../App.jsx";
 
-export default function Page({ title, subtitle, subSubtitleChild, headerRight, children }) {
+export default function Page({ title, subtitle, subSubtitleChild, headerRight, children, loading }) {
     const styles = useMemo(() => {
         theme.createAssignments = {
             // page layout
@@ -33,6 +33,8 @@ export default function Page({ title, subtitle, subSubtitleChild, headerRight, c
                 width: theme.createAssignments.pageW,
                 display: theme.createAssignments.pageDisplay,
                 flexDirection: theme.createAssignments.pageDirection,
+                transition: `opacity ${theme.motion.slow} ${theme.motion.ease}`,
+                opacity: loading ? 0 : 1,
             },
             content: {
                 width: theme.createAssignments.contentW,
@@ -83,7 +85,7 @@ export default function Page({ title, subtitle, subSubtitleChild, headerRight, c
                 fontSize: theme.type.title,
             },
         };
-    }, []);
+    }, [loading]);
 
     return (
         <div style={styles.page}>
