@@ -1,19 +1,23 @@
-import React, { useEffect, useMemo, useState } from "react";
-import {useLocation, useNavigate} from "react-router-dom";
+import React, { useEffect, useMemo, useRef, useState } from "react"; // ✅ add useRef
+import { useLocation, useNavigate } from "react-router-dom";
 import Page from "../../../Page.jsx";
 import Flow from "../../../Flow.jsx";
-import {apiJoinTaskSet, apiStudentTaskSetTasksStudent, callVerifyCodeApi} from "../../../../../services/api.js";
+import {
+    apiJoinTaskSet,
+    apiStudentTaskSetTasksStudent,
+    callVerifyCodeApi,
+} from "../../../../../services/api.js";
 import { logError } from "../../../../../services/logger.js";
 import ChooseOptionGapTaskWorkView from "./ChooseOptionGapTaskWorkView.jsx";
-import TasksProgressList from "./TasksProgressList.jsx"; // adjust path
-import {theme} from "../../../../../App.jsx";
-import {useTeacherDashboard} from "../../../TeacherDashboardContext.jsx";
+import TasksProgressList from "./TasksProgressList.jsx";
+import { theme } from "../../../../../App.jsx";
+import { useTeacherDashboard } from "../../../TeacherDashboardContext.jsx";
 import NameStep from "../../../authentication/steps/NameStep.jsx";
-import {saveName, sendEmailCode} from "../../../authentication/SignInPage.jsx";
+import { saveName, sendEmailCode } from "../../../authentication/SignInPage.jsx";
 import EmailStep from "../../../authentication/steps/EmailStep.jsx";
 import CodeStep from "../../../authentication/steps/CodeStep.jsx";
 import TermsStep from "../../../authentication/steps/TermsStep.jsx";
-import {TERMS_OF_USE_CONTENT} from "../../../../../services/touService.js";
+import { TERMS_OF_USE_CONTENT } from "../../../../../services/touService.js";
 import CustomInfoStep from "../../../CustomInfoStep.jsx";
 
 function extractTaskSetId(pathname) {
@@ -32,7 +36,10 @@ function extractTaskSetId(pathname) {
 export function WorkOnAssignmentPage() {
     const location = useLocation();
 
-    const taskSetId = useMemo(() => extractTaskSetId(location?.pathname), [location?.pathname]);
+    const taskSetId = useMemo(
+        () => extractTaskSetId(location?.pathname),
+        [location?.pathname]
+    );
 
     const [activeTaskId, setActiveTaskId] = useState("");
     const [loading, setLoading] = useState(true);
@@ -44,7 +51,14 @@ export function WorkOnAssignmentPage() {
 
     const [answersByTaskId, setAnswersByTaskId] = useState({});
 
-    const { teacher, reloadAll } = useTeacherDashboard(); // same context
+    // ✅ NEW: always-latest answers (sync updated inside setAnswersByTaskId updaters)
+    const answersRef = useRef({});
+    useEffect(() => {
+        // keep in sync on normal renders too
+        answersRef.current = answersByTaskId;
+    }, [answersByTaskId]);
+
+    const { teacher, reloadAll } = useTeacherDashboard();
 
     const [sentEmail, setSentEmail] = useState("");
     const [sentCode, setSentCode] = useState("");
@@ -91,7 +105,11 @@ export function WorkOnAssignmentPage() {
                 const res = await apiStudentTaskSetTasksStudent({ taskSetId: id });
                 if (cancelled) return;
 
-                const arr = Array.isArray(res?.tasks) ? res.tasks : Array.isArray(res) ? res : [];
+                const arr = Array.isArray(res?.tasks)
+                    ? res.tasks
+                    : Array.isArray(res)
+                        ? res
+                        : [];
                 setTasks(arr);
             } catch (e) {
                 logError?.(e);
@@ -108,15 +126,24 @@ export function WorkOnAssignmentPage() {
         };
     }, [taskSetId]);
 
+    // ✅ CHANGED: read from answersRef so it’s always the latest even in onBetweenPhases
     const areAllDone = () => {
         const total = tasks.length || 0;
-        return Object.keys(answersByTaskId)?.filter(x => answersByTaskId[x].submitted).length === total && tasks.length > 0;
-    }
+        const answers = answersRef.current || {};
+        return (
+            Object.keys(answers).filter((x) => answers?.[x]?.submitted).length ===
+            total && total > 0
+        );
+    };
+
+    // ✅ NEW: move side-effect out of useMemo
+    useEffect(() => {
+        setAllDone(areAllDone());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [tasks, answersByTaskId]);
 
     const steps = useMemo(() => {
         const total = tasks.length || 0;
-        const allDoneValue = areAllDone();
-        setAllDone(allDoneValue);
 
         let result = tasks.map((task, idx) => {
             const key = String(task?.id || `${idx}`);
@@ -135,29 +162,40 @@ export function WorkOnAssignmentPage() {
                             initialSelected={saved.selected ?? null}
                             initialSubmitted={Boolean(saved.submitted)}
                             onSelect={(value) => {
-                                setAnswersByTaskId((prev) => ({
-                                    ...prev,
-                                    [taskId]: {
-                                        ...(prev[taskId] || {}),
-                                        selected: value,
-                                        submitted: false,
-                                    },
-                                }));
+                                setAnswersByTaskId((prev) => {
+                                    const next = {
+                                        ...prev,
+                                        [taskId]: {
+                                            ...(prev[taskId] || {}),
+                                            selected: value,
+                                            submitted: false,
+                                        },
+                                    };
+                                    // ✅ sync-ref update (so Flow onBetweenPhases sees it)
+                                    answersRef.current = next;
+                                    return next;
+                                });
                             }}
                             onSubmit={async (selected) => {
-                                setAnswersByTaskId((prev) => ({
-                                    ...prev,
-                                    [taskId]: {
-                                        ...(prev[taskId] || {}),
-                                        selected: String(selected ?? ""),
-                                        submitted: true,
-                                        submittedAt: Date.now(),
-                                    },
-                                }));
+                                setAnswersByTaskId((prev) => {
+                                    const next = {
+                                        ...prev,
+                                        [taskId]: {
+                                            ...(prev[taskId] || {}),
+                                            selected: String(selected ?? ""),
+                                            submitted: true,
+                                            submittedAt: Date.now(),
+                                        },
+                                    };
+                                    // ✅ sync-ref update (so Flow onBetweenPhases sees it)
+                                    answersRef.current = next;
+                                    return next;
+                                });
                                 return true;
                             }}
                             onBack={goPrev}
                             onNext={() => {
+                                // ✅ now this uses latest answers (via ref)
                                 if (areAllDone()) {
                                     goToNextAfter(tasks[tasks.length - 1].id);
                                     return;
@@ -180,12 +218,12 @@ export function WorkOnAssignmentPage() {
             result.push({
                 key: "name",
                 title: "Please sign your work",
-                render: ({ goNext, goPrev }) => (
+                render: ({ goNext }) => (
                     <NameStep
-                        initialFirstName={''}
-                        initialLastName={''}
-                        onConfirmed={async ({firstName, lastName}) => {
-                            await saveName({firstName, lastName});
+                        initialFirstName={""}
+                        initialLastName={""}
+                        onConfirmed={async ({ firstName, lastName }) => {
+                            await saveName({ firstName, lastName });
                             reloadAll();
                         }}
                         onNext={() => {
@@ -204,8 +242,8 @@ export function WorkOnAssignmentPage() {
                 title: "Don't lose your progress",
                 render: ({ goNext, goPrev, goTo }) => (
                     <EmailStep
-                        initialEmail={''}
-                        title={'Confirm your email to access your progress from anywhere, anytime'}
+                        initialEmail={""}
+                        title={"Confirm your email to access your progress from anywhere, anytime"}
                         onConfirmed={(email) => {
                             sendEmailCode(email).then();
                             setSentEmail(email);
@@ -213,15 +251,16 @@ export function WorkOnAssignmentPage() {
                         }}
                         onNext={goNext}
                         onSkip={() => {
-                            goTo("finish")
+                            goTo("finish");
                         }}
                     />
                 ),
             });
+
             result.push({
                 key: "code",
                 title: "Enter the code",
-                render: ({ goNext, goPrev, goTo }) => (
+                render: ({ goPrev, goTo }) => (
                     <CodeStep
                         email={sentEmail}
                         onVerified={async (code) => {
@@ -241,8 +280,9 @@ export function WorkOnAssignmentPage() {
                         }}
                         onBack={goPrev}
                     />
-                )
+                ),
             });
+
             result.push({
                 key: "terms",
                 title: "Please review",
@@ -263,27 +303,26 @@ export function WorkOnAssignmentPage() {
         }
 
         result.push({
-            key: 'finish',
-            title: 'All done',
-            render: ({ goNext, goPrev }) => (
+            key: "finish",
+            title: "All done",
+            render: () => (
                 <CustomInfoStep
                     title={"Your answers have been saved and sent to the teacher"}
                     subtitle={"Do other assignments, review previous ones, or have a cup of tea"}
                     buttonText={"Go to assignments"}
                     backButtonText={"Go to submissions"}
                     onAction={() => {
-                        navigate('/student/assignments');
+                        navigate("/student/assignments");
                     }}
                     onBackAction={() => {
-                        navigate('/student/submissions');
+                        navigate("/student/submissions");
                     }}
                 />
-            )
+            ),
         });
 
-
         return result;
-    }, [tasks, answersByTaskId, sentEmail, sentCode]);
+    }, [tasks, answersByTaskId, sentEmail, sentCode, teacher, reloadAll, navigate]); // ✅ add missing deps
 
     return (
         <Page title="Work on Assignment">
@@ -304,27 +343,37 @@ export function WorkOnAssignmentPage() {
                         alignItems: "stretch",
                     }}
                 >
-                    <div style={{ flex: "1 1 auto", transition: `width ${theme.motion.normal} ${theme.motion.ease}`, minWidth: 0, minHeight: 0 }}>
+                    <div
+                        style={{
+                            flex: "1 1 auto",
+                            transition: `width ${theme.motion.normal} ${theme.motion.ease}`,
+                            minWidth: 0,
+                            minHeight: 0,
+                        }}
+                    >
                         <Flow
-                            style={{height:'100%'}}
+                            style={{ height: "100%" }}
                             steps={steps}
                             activeKey={activeTaskId || steps?.[0]?.key || ""}
                             onActiveKeyChange={setActiveTaskId}
                             onDone={() => {}}
                             onBetweenPhases={() => {
-                                if (areAllDone())
-                                    setTaskListVisible(false);
+                                // ✅ now uses ref-backed areAllDone => latest state
+                                if (areAllDone()) setTaskListVisible(false);
                             }}
                         />
                     </div>
 
-                    {taskListVisible &&
-                        <div style={{
-                            transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
-                            opacity: (!allDone || taskListVisible) ? 1 : 0,
-                            width: 420,
-                            minWidth: 320,
-                            minHeight: 0}}>
+                    {taskListVisible && (
+                        <div
+                            style={{
+                                transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
+                                opacity: !allDone || taskListVisible ? 1 : 0,
+                                width: 420,
+                                minWidth: 320,
+                                minHeight: 0,
+                            }}
+                        >
                             <TasksProgressList
                                 tasks={tasks}
                                 answersByTaskId={answersByTaskId}
@@ -332,12 +381,9 @@ export function WorkOnAssignmentPage() {
                                 onSelectTaskId={setActiveTaskId}
                             />
                         </div>
-                    }
-
+                    )}
                 </div>
             </div>
         </Page>
     );
-
-
 }
