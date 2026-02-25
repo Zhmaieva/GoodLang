@@ -4,7 +4,6 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import ItemsList from "../ItemsList.jsx";
 import { theme } from "../../../App.jsx";
-import SignInPage from "../authentication/SignInPage.jsx";
 
 export function getLastPathEdge(pathname) {
     const parts = String(pathname || "")
@@ -33,7 +32,7 @@ export default function TeacherDashboardLayout() {
     const teacherName =
         teacher?.displayName ||
         [teacher?.first_name, teacher?.last_name].filter(Boolean).join(" ").trim() ||
-        "";
+        "No name";
 
     const initials = useMemo(() => {
         const parts = teacherName.split(" ").filter(Boolean);
@@ -198,15 +197,6 @@ export default function TeacherDashboardLayout() {
 
         };
     }, [teacherName]);
-
-    // We want to let teachers access the page anonymously
-    // if (!loading && (!teacher.status || !teacher.first_name)) {
-    //     return <div style={styles.page}>
-    //         <main style={styles.contentFull}>
-    //             <SignInPage forTeacher nextPath={nextPath}/>
-    //         </main>
-    //     </div>
-    // }
 
     if (loading) {
         return <div style={styles.page}></div>

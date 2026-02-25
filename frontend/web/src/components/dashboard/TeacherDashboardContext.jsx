@@ -16,6 +16,10 @@ import {
 
 const Ctx = createContext(null);
 
+export function getTeacherFromCtx(ctx) {
+    return ctx?.teacher || ctx?.account?.teacher || ctx?.me || null;
+}
+
 export function TeacherDashboardProvider({ children }) {
     const [loading, setLoading] = useState(true);
     const [err, setErr] = useState("");

@@ -160,6 +160,62 @@ export async function syncTeacherNameFromAccount(accountId) {
     }
 }
 
+/**
+ * Sync first_name and last_name from accounts → teacher_students
+ * Only updates if student record exists.
+ *
+ * @param {string} accountId
+ * @returns {Promise<{ok: boolean, updated: boolean}>}
+ */
+export async function syncStudentNameFromAccount(accountId) {
+    if (typeof accountId !== "string" || !accountId.trim()) {
+        return { ok: false, updated: false };
+    }
+
+    const client = await pool.connect();
+    try {
+        await client.query("BEGIN");
+
+        const { rows: acc } = await client.query(
+            `
+        SELECT first_name, last_name
+        FROM accounts
+        WHERE id = $1
+        LIMIT 1
+      `,
+            [accountId]
+        );
+
+        if (!acc[0]) {
+            await client.query("ROLLBACK");
+            return { ok: false, updated: false };
+        }
+
+        // Update student only if exists
+        const { rowCount } = await client.query(
+            `
+        UPDATE teacher_students
+        SET first_name = $1,
+            last_name  = $2
+        WHERE student_account_id = $3
+      `,
+            [acc[0].first_name ?? null, acc[0].last_name ?? null, accountId]
+        );
+
+        await client.query("COMMIT");
+
+        return {
+            ok: true,
+            updated: rowCount > 0, // true if student existed and was updated
+        };
+    } catch (e) {
+        await client.query("ROLLBACK");
+        throw e;
+    } finally {
+        client.release();
+    }
+}
+
 
 /**
  * List teacher's classes

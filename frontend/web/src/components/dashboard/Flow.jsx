@@ -24,6 +24,7 @@ export default function Flow({
                                  onActiveKeyChange,
                                  initialKey = null,
                                  style = {},
+                                 onBetweenPhases = () => {}
                              }) {
     const t = theme.flow;
 
@@ -74,6 +75,8 @@ export default function Flow({
 
             const ms = Number.parseInt(String(t.ms || theme.motion?.normal || "220ms"), 10);
             pendingRef.current = setTimeout(() => {
+                onBetweenPhases();
+
                 setActiveKey(key);
                 setPhase("shown");
             }, Number.isFinite(ms) ? ms : 0);

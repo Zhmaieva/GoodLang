@@ -9,7 +9,7 @@ import {ACTION_TYPES, SECRET_KEY} from "../core/constants.js";
 import {authMiddleware} from "../middleware/authMiddleware.js";
 import {recordAction} from "../database/repositories/accountLogRepository.js";
 import {
-    createSchoolTeacherForAccount,
+    createSchoolTeacherForAccount, syncStudentNameFromAccount,
     syncTeacherNameFromAccount
 } from "../database/repositories/teacherClassesRepository.js";
 
@@ -87,6 +87,7 @@ export const accountsController = {
                 const { success, error } = await updateAccountProfile(req.user.id, firstName, lastName);
                 if (success) {
                     syncTeacherNameFromAccount(req.user.id).catch((err) => {console.log(err)});
+                    syncStudentNameFromAccount(req.user.id).catch((err) => {console.log(err)});
                 }
                 res.json({ success, error });
             } catch (e) {

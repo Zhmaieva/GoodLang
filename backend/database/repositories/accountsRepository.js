@@ -10,15 +10,7 @@ const SHORTENED_WAIT_TIME_HOURS = 24;
  * @returns {Promise<{id: string}>}
  */
 export async function createAccount() {
-    const shortLimitsEnabled = String(process.env.FEATURE_SHORT_TRANSLATION_LIMITS).toLowerCase() === "true";
-
-    const query = shortLimitsEnabled
-        ? `
-            INSERT INTO accounts (translation_limit, limit_time_span_seconds)
-            VALUES (3, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
-            RETURNING id
-          `
-        : `
+    const query = `
             INSERT INTO accounts DEFAULT VALUES
             RETURNING id
           `;
@@ -561,32 +553,19 @@ export async function verifyCode(currentId, email, code, termsAccepted) {
         }
     }
 
-    // CASE 2: No account yet → create one
-
-    const shortLimitsEnabled = String(process.env.FEATURE_SHORT_TRANSLATION_LIMITS).toLowerCase() === "true";
-
-    const accountInfo = await getAccountInfo(currentId, null);
-
-    const query = shortLimitsEnabled
-        ? `
-            INSERT INTO accounts (email, translations_quota, translation_limit, limit_time_span_seconds)
-            VALUES ($1, $2, 3, `+SHORTENED_WAIT_TIME_HOURS+` * 3600)
-            RETURNING id
-          `
-        : `
-            INSERT INTO accounts (email, translations_quota)
-            VALUES ($1, $2)
-            RETURNING id
+    // CASE 2: No account with the email yet → update the current one
+    const query = `
+            UPDATE accounts SET email = $1
+            WHERE id = $2
           `;
 
-    const { rows: accountRows } = await pool.query(
+    await pool.query(
         query,
-        [email, accountInfo.translationsQuota]
+        [email, currentId]
     );
 
-    const newAccountId = accountRows[0].id;
+    const newAccountId = currentId;
 
-    // Optional: delete the sign_in_link now that it's used
     await pool.query(`DELETE FROM sign_in_links WHERE email=$1`, [email]);
 
     return {

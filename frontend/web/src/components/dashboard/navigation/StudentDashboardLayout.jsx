@@ -2,7 +2,6 @@ import React, { useEffect, useMemo } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
 import ItemsList from "../ItemsList.jsx";
-import SignInPage from "../authentication/SignInPage.jsx";
 import { theme } from "../../../App.jsx";
 
 export default function StudentDashboardLayout() {
@@ -13,7 +12,7 @@ export default function StudentDashboardLayout() {
     const studentName =
         teacher?.displayName ||
         [teacher?.first_name, teacher?.last_name].filter(Boolean).join(" ").trim() ||
-        "";
+        "No name";
 
     const initials = useMemo(() => {
         const parts = String(studentName || "").split(" ").filter(Boolean);
@@ -173,18 +172,7 @@ export default function StudentDashboardLayout() {
         };
     }, [studentName]);
 
-    // We want to let students access the page anonymously
-    // if (!loading && !teacher?.first_name) {
-    //     return (
-    //         <div style={styles.page}>
-    //             <main style={styles.contentFull}>
-    //                 <SignInPage nextPath={nextPath} />
-    //             </main>
-    //         </div>
-    //     );
-    // }
-
-    if (loading) {
+    if (!teacher && loading) {
         return <div style={styles.page}></div>;
     }
 

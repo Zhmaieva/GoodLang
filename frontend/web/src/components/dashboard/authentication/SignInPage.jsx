@@ -5,15 +5,11 @@ import EmailStep from "./steps/EmailStep.jsx";
 import CodeStep from "./steps/CodeStep.jsx";
 import NameStep from "./steps/NameStep.jsx";
 
-import { useTeacherDashboard } from "../TeacherDashboardContext.jsx";
+import {getTeacherFromCtx, useTeacherDashboard} from "../TeacherDashboardContext.jsx";
 import {apiBecomeTeacher, callAccountUpdateApi, callSendCodeApi, callVerifyCodeApi} from "../../../services/api.js";
 import {logError} from "../../../services/logger.js";
 import TermsStep from "./steps/TermsStep.jsx";
 import {TERMS_OF_USE_CONTENT} from "../../../services/touService.js";
-
-function getTeacherFromCtx(ctx) {
-    return ctx?.teacher || ctx?.account?.teacher || ctx?.me || null;
-}
 
 function pickEmail(t) {
     return t?.email ?? t?.profile?.email ?? "";
@@ -25,6 +21,18 @@ function pickLastName(t) {
     return t?.last_name ?? t?.lastName ?? t?.profile?.last_name ?? "";
 }
 
+export const saveName = async ({ firstName, lastName }) => {
+    await callAccountUpdateApi({firstName, lastName});
+    return true;
+};
+
+export const sendEmailCode = async (email) => {
+    callSendCodeApi({email})
+        .catch((err) => {
+            logError(err);
+        });
+};
+
 export default function SignInPage({forTeacher = false}) {
     const ctx = useTeacherDashboard?.();
     const teacher = getTeacherFromCtx(ctx);
@@ -35,17 +43,6 @@ export default function SignInPage({forTeacher = false}) {
     const [mustReviewTerms, setMustReviewTerms] = useState(false);
     const teacherFirst = String(pickFirstName(teacher) || "").trim();
     const teacherLast = String(pickLastName(teacher) || "").trim();
-
-    // Page only wires actions (can call services here; steps decide when/how)
-    const sendEmailCode = async (email) => {
-        callSendCodeApi({email})
-            .catch((err) => {
-                logError(err);
-            });
-
-        setSentEmail(email);
-        return true;
-    };
 
     const markUserAsTeacher = () => localStorage.setItem('isTeacherApp', 'true');
 
@@ -75,12 +72,6 @@ export default function SignInPage({forTeacher = false}) {
         }
     };
 
-
-    const saveName = async ({ firstName, lastName }) => {
-        await callAccountUpdateApi({firstName, lastName});
-        return true;
-    };
-
     const finish = async () => {
         await ctx?.reloadAll();
     };
@@ -93,7 +84,11 @@ export default function SignInPage({forTeacher = false}) {
             render: ({ goNext }) => (
                 <EmailStep
                     initialEmail={teacherEmail}
-                    onConfirmed={sendEmailCode}
+                    onConfirmed={(email) => {
+                        sendEmailCode(email).then();
+                        setSentEmail(email);
+                        return true;
+                    }}
                     onNext={goNext}
                 />
             ),
@@ -110,7 +105,7 @@ export default function SignInPage({forTeacher = false}) {
 
                         if (res === "terms") {
                             goTo("terms");
-                            return true; // keep CodeStep happy
+                            return true;
                         }
 
                         if (res === "next") {

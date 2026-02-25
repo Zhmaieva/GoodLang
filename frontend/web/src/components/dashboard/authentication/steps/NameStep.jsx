@@ -17,6 +17,7 @@ export default function NameStep({
                                      onConfirmed,
                                      onNext,
                                      onBack,
+                                     canBack = true,
                                  }) {
     const [firstName, setFirstName] = React.useState(String(initialFirstName || ""));
     const [lastName, setLastName] = React.useState(String(initialLastName || ""));
@@ -92,7 +93,9 @@ export default function NameStep({
             />
 
             <div style={actionsRowStyle}>
-                <AwesomeActionButton variant="ghost" size="regular" symbol={"←"} onClick={onBack}>
+                <AwesomeActionButton style={{
+                    visibility: canBack ? "visible" : "hidden",
+                }} variant="ghost" size="regular" symbol={"←"} onClick={onBack}>
                     Back
                 </AwesomeActionButton>
 

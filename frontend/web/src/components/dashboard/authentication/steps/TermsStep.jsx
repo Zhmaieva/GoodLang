@@ -17,6 +17,7 @@ export default function TermsStep({
                                       paragraphs = [],
                                       verifyApi,
                                       onAccepted,
+                                      onDeclined,
                                   }) {
     const nav = useNavigate();
 
@@ -63,7 +64,7 @@ export default function TermsStep({
 
     return (
         <div style={stackStyle}>
-            <div style={subtitleStyle}>In order to use the service, you must read and accept terms of use and privacy policy</div>
+            <div style={subtitleStyle}>In order to register with an email, you must read and accept terms of use and privacy policy</div>
 
             <DynamicList style={{
                 height: "500px",
@@ -87,8 +88,8 @@ export default function TermsStep({
             </DynamicList>
 
             <div style={actionsRowStyle}>
-                <AwesomeActionButton variant="ghost" size="regular" onClick={onDecline}>
-                    I do not accept
+                <AwesomeActionButton variant="ghost" size="regular" onClick={onDeclined ? onDeclined : onDecline}>
+                    I don't accept - skip registration
                 </AwesomeActionButton>
 
                 <AwesomeActionButton variant="ghost" size="regular" onClick={onAccept}>

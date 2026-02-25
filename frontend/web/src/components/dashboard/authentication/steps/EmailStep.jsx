@@ -12,7 +12,7 @@ function isValidEmail(v) {
     return /^\S+@\S+\.\S+$/.test(s);
 }
 
-export default function EmailStep({ initialEmail = "", onConfirmed, onNext }) {
+export default function EmailStep({ initialEmail = "", title = "", onConfirmed, onNext, onSkip }) {
     const [email, setEmail] = React.useState(normalizeEmail(initialEmail));
     const [hint, setHint] = React.useState("");
 
@@ -81,7 +81,7 @@ export default function EmailStep({ initialEmail = "", onConfirmed, onNext }) {
                     ...subtitleStyle,
                 }}
             >
-                In order to proceed, we need to verify your email.
+                {title || "In order to proceed, we need to verify your email"}
             </div>
 
             <div>
@@ -98,24 +98,41 @@ export default function EmailStep({ initialEmail = "", onConfirmed, onNext }) {
                 />
             </div>
 
-            <div
-                style={{
-                    ...actionsStyle,
-                    ...fade,
-                    opacity: buttonOpacity,
-                    pointerEvents: buttonOpacity ? "auto" : "none",
-                    transitionDelay: `${theme.flow.stagger.delayStep * 3}ms`,
-                }}
-            >
-                <AwesomeActionButton
-                    variant="ghost"
-                    size="regular"
-                    symbol={"→"}
-                    onClick={onContinue}
+            <div style={{
+                marginTop: theme.spacing.gap,
+                display: "flex",
+            }}>
+                {onSkip &&
+                    <AwesomeActionButton
+                        variant="ghost"
+                        size="regular"
+                        symbol={"→"}
+                        onClick={onSkip}
+                    >
+                        Skip
+                    </AwesomeActionButton>}
+
+
+                <div
+                    style={{
+                        ...actionsStyle,
+                        ...fade,
+                        opacity: buttonOpacity,
+                        pointerEvents: buttonOpacity ? "auto" : "none",
+                        transitionDelay: `${theme.flow.stagger.delayStep * 3}ms`,
+                    }}
                 >
-                    Continue
-                </AwesomeActionButton>
+                    <AwesomeActionButton
+                        variant="ghost"
+                        size="regular"
+                        symbol={"→"}
+                        onClick={onContinue}
+                    >
+                        Continue
+                    </AwesomeActionButton>
+                </div>
             </div>
+
         </div>
     );
 }
