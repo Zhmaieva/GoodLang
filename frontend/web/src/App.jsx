@@ -135,6 +135,7 @@ import {MyAssignmentsPage} from "./components/dashboard/assignments/student/assi
 import StudentDashboardLayout from "./components/dashboard/navigation/StudentDashboardLayout.jsx";
 import {StudentProfilePage} from "./components/dashboard/assignments/student/profile/StudentProfilePage.jsx";
 import {RootRedirect} from "./components/routing/RootRedirect.jsx";
+import {CreateVocabFillGapsPage} from "./components/dashboard/assignments/create/CreateVocabFillGapsPage.jsx";
 
 // theme.js
 export const theme = themeStyles;
@@ -163,6 +164,7 @@ export default function App() {
         <>
             <Route path="create-assignment" element={<CreateAssignmentsPage />}/>
             <Route path="create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}/>
+            <Route path="create-assignment/vocabulary-gaps" element={<CreateVocabFillGapsPage />}/>
             <Route path="create-assignment/share" element={<ShareAssignmentPage />}/>
         </>
     );
@@ -201,6 +203,7 @@ export default function App() {
                     <Route path="assignments" element={<AssignmentsPage />}/>
                     <Route path="assignments/create-assignment" element={<CreateAssignmentsPage/>}/>
                     <Route path="assignments/create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}/>
+                    <Route path="assignments/create-assignment/vocabulary-gaps" element={<CreateVocabFillGapsPage />}/>
                     <Route path="assignments/create-assignment/share" element={<ShareAssignmentPage />}/>
                 </Route>
 

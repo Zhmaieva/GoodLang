@@ -34,7 +34,8 @@ export const groups = (() => {
                 mkItem("vocabulary", "audio_gaps", "Audio fill in gaps", "Listen and complete missing words"),
                 mkItem("vocabulary", "match_def", "Match definitions", "Match words to meanings"),
                 mkItem("vocabulary", "vocabulary_choose_option", "Choose an option", "Pick the right word"),
-                mkItem("vocabulary", "grammar_gaps", "Fill in gaps", "Vocabulary-focused fill in the blanks"),
+                mkItem("vocabulary", "vocabulary_gaps", "Fill in gaps", "Vocabulary-focused fill in the blanks",
+                    "vocabulary-gaps"),
             ],
         },
         {
