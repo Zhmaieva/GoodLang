@@ -225,7 +225,6 @@ Schema:
 `;
 
     const userPrompt = `
-TARGET_LANGUAGE: ${targetLanguage}
 GRAMMAR_RULES: [${rules.join(", ")}]
 
 TASK_TYPE: GAP_CHOICE
@@ -240,7 +239,6 @@ INSTRUCTIONS:
 2) Never mention the grammar rule names (GRAMMAR_RULES) as they are.
 3) Keep it practical and short (1-3 sentences).
 4) Do NOT include any other keys besides tip_if_wrong.
-5) Also if you use English words, explaining the mistake, specify TARGET_LANGUAGE translations next to them
 `;
 
     const resp = await client.responses.create({

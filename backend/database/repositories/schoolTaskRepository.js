@@ -24,7 +24,7 @@ import { LEVEL_RULES } from "../../core/rules.js"; // adjust if your path differ
 function isObjectIdLike(id) {
     return typeof id === "string" && /^[a-fA-F0-9]{24}$/.test(id);
 }
-function toObjectIdStrict(id, name = "id") {
+export function toObjectIdStrict(id, name = "id") {
     if (id instanceof ObjectId) return id;
     const s = String(id || "").trim();
     if (!isObjectIdLike(s)) throw new Error(`${name} must be a 24-hex ObjectId string`);
