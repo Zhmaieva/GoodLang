@@ -921,3 +921,31 @@ export function apiJoinTaskSet({ taskSetId }) {
         method: "POST",
     });
 }
+
+/**
+ * ==========================================================
+ * TASK BUILDER: GENERATE TOPIC WORDS
+ * ==========================================================
+ * POST /schools/task-builder/topic-words
+ * body: { topic: string(<=64), level: "A1".."C2", numberOfWords: 5..30 }
+ */
+export function apiGenerateTopicWords({ topic, level, numberOfWords = 12 }) {
+    const t = String(topic ?? "").trim();
+    if (!t) throw new Error("topic is required");
+
+    const lvl = String(level ?? "").trim().toUpperCase();
+    const allowed = new Set(["A1", "A2", "B1", "B2", "C1", "C2"]);
+    if (!allowed.has(lvl)) throw new Error("level must be one of: A1, A2, B1, B2, C1, C2");
+
+    const n = Number.parseInt(String(numberOfWords ?? ""), 10);
+    const clamped = Number.isFinite(n) ? Math.max(5, Math.min(30, n)) : 12;
+
+    return jsonFetch(`${API_BASE}/schools/task-builder/topic-words`, {
+        method: "POST",
+        body: JSON.stringify({
+            topic: t.slice(0, 64),
+            level: lvl,
+            numberOfWords: clamped,
+        }),
+    });
+}

@@ -7,6 +7,7 @@ import NumberSlider from "../../NumberSlider.jsx";
 import { Chip } from "../../Chip.jsx";
 import { theme } from "../../../../App.jsx";
 import EmptyContent from "../../EmptyContent.jsx";
+import {apiGenerateTopicWords} from "../../../../services/api.js";
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 
@@ -50,7 +51,7 @@ export function CreateVocabFillGapsPage() {
 
     const [generatedText, setGeneratedText] = useState("");
 
-    const generateWords = () => {
+    const generateWords = async () => {
         const t = String(topic || "").trim();
         setTopicError("");
 
@@ -66,9 +67,11 @@ export function CreateVocabFillGapsPage() {
             return;
         }
 
-        const words = Array.from({ length: count }).map(
-            (_, i) => `${t}_${level}_${i + 1}`
-        );
+        const { words } = await apiGenerateTopicWords({
+            topic: t,
+            level: level,
+            numberOfWords: count,
+        });
 
         setGeneratedWords(words);
         setGeneratedText("");

@@ -270,4 +270,83 @@ INSTRUCTIONS:
     };
 }
 
+// Generates topic vocabulary words (English) for a given CEFR level.
+// - topic: string up to 64 symbols
+// - level: A1..C2
+// - numberOfWords: clamped 5..30
+export async function generateTopicWords({
+                                             topic = "",
+                                             level = "A2",
+                                             numberOfWords = 12,
+                                         }) {
+    const t = String(topic ?? "").trim().slice(0, 64);
+    if (!t) throw new Error("topic required");
+
+    const lvl = String(level ?? "").trim().toUpperCase();
+    const allowed = new Set(["A1", "A2", "B1", "B2", "C1", "C2"]);
+    if (!allowed.has(lvl)) throw new Error("level must be A1..C2");
+
+    const n = Math.max(5, Math.min(30, Number.parseInt(String(numberOfWords ?? ""), 10) || 12));
+
+    const systemPrompt = `
+You generate English vocabulary lists for language learners.
+Return JSON only.
+Schema:
+{
+  "words": string[]
+}
+Rules:
+- Return exactly N unique items.
+- Items must be English vocabulary suitable for CEFR LEVEL.
+- Only single words.
+- No punctuation at the end, no numbering, no extra keys.
+`;
+
+    const userPrompt = `
+TOPIC: ${t}
+LEVEL: ${lvl}
+N: ${n}
+
+Generate a list of N useful English vocabulary items for this topic and level.
+`;
+
+    const resp = await client.responses.create({
+        model: "gpt-4.1-mini",
+        temperature: 0.3,
+        text: { format: { type: "json_object" } },
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    });
+
+    const txt = resp.output_text;
+    let parsed;
+    try {
+        parsed = JSON.parse(txt);
+    } catch {
+        parsed = {};
+    }
+
+    const wordsRaw = Array.isArray(parsed.words) ? parsed.words : [];
+    // Post-sanitize to be safe and deterministic
+    const cleaned = [];
+    const seen = new Set();
+    for (const w of wordsRaw) {
+        const s = String(w ?? "").trim();
+        if (!s) continue;
+        const norm = s.toLowerCase();
+        if (seen.has(norm)) continue;
+        seen.add(norm);
+        cleaned.push(s);
+        if (cleaned.length >= n) break;
+    }
+
+    // If model returned fewer than requested, hard fail (so caller can retry/log)
+    if (cleaned.length !== n) {
+        throw new Error(`MODEL_RETURNED_${cleaned.length}_WORDS_EXPECTED_${n}`);
+    }
+
+    return cleaned;
+}
 
