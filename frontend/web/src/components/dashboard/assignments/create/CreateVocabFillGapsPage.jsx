@@ -104,26 +104,38 @@ export function CreateVocabFillGapsPage() {
         setGeneratedText(`   ${res.text}`.split('[[p]]').join('\n\n   '));
     };
 
+    const t = theme.createGrammarChooseOption;
+
     const styles = useMemo(() => ({
         row: {
             display: "flex",
-            gap: theme.spacing.gap,
-            width: "100%",
-            minHeight: 0,
+            gap: t.rowGap,          // ✅ same spacing as the other page
+            width: t.full,
+            minHeight: t.minH0,
+            alignItems: "stretch",
+            paddingLeft: theme.layoutMetrics?.pagePad ?? 16,
+            paddingRight: theme.layoutMetrics?.pagePad ?? 16,
         },
+
         left: {
-            width: "40%",
-            minWidth: 320,
+            width: t.leftWidth,     // ✅ same left width as grammar page
+            minWidth: 320,          // keep your safety min if you want
+            minHeight: t.minH0,
             display: "flex",
             flexDirection: "column",
             gap: theme.spacing.gap,
+            overflow: "hidden",
         },
+
         right: {
-            flex: 1,
-            minWidth: 0,
+            flex: "1 1 auto",
+            minWidth: t.minH0,
+            maxWidth: t.rightMaxWidth, // ✅ same right max width as grammar page
+            minHeight: t.minH0,
             display: "flex",
             flexDirection: "column",
             gap: theme.spacing.gap,
+            overflow: "hidden",
         },
         wordsRow: {
             display: "flex",
@@ -275,7 +287,7 @@ export function CreateVocabFillGapsPage() {
 
                 {/* RIGHT */}
                 <div style={styles.right}>
-                    <RectangleGroup title={"Generated text"}>
+                    <RectangleGroup>
                         {!generatedWords.length ? (
                             <EmptyContent
                                 sourceText={"Generate vocabulary first"}
