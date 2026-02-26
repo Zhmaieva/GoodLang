@@ -7,7 +7,7 @@ import NumberSlider from "../../NumberSlider.jsx";
 import { Chip } from "../../Chip.jsx";
 import { theme } from "../../../../App.jsx";
 import EmptyContent from "../../EmptyContent.jsx";
-import {apiGenerateTopicWords} from "../../../../services/api.js";
+import {apiGenerateStoryFromWords, apiGenerateTopicWords} from "../../../../services/api.js";
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 
@@ -89,17 +89,19 @@ export function CreateVocabFillGapsPage() {
         setCustomWord("");
     };
 
-    const generateText = () => {
+    const generateText = async () => {
         if (!generatedWords.length) return;
 
-        const text = `This is a short ${level} text about ${topic}.
-Students must use the following words:
+        const res = await apiGenerateStoryFromWords({
+            words: generatedWords,
+            level: level,
+            topicHint: topic,
+        });
 
-${generatedWords.map(() => "_____").join(", ")}
+        //console.log(res.text);     // story with {GAP}
+        console.log(res.answers);  // ["telescope","orbit","gravity","scientist","crater"] matching the order of the gaps
 
-The topic relates to daily life and includes useful vocabulary.`;
-
-        setGeneratedText(text);
+        setGeneratedText(`   ${res.text}`.split('[[p]]').join('\n\n   '));
     };
 
     const styles = useMemo(() => ({

@@ -350,3 +350,133 @@ Generate a list of N useful English vocabulary items for this topic and level.
     return cleaned;
 }
 
+// Create a factual mini-story using ALL provided words.
+// Each word must appear exactly once wrapped in curly braces: {word}
+// Then we replace them with {GAP} and return the final text + answers in order.
+export async function generateGapStoryFromWords({
+                                                    words = [],
+                                                    level = "A2", // optional: influences sentence complexity
+                                                    topicHint = "", // optional: helps anchor the story
+                                                }) {
+    const raw = Array.isArray(words) ? words : [];
+    const cleanedWords = raw
+        .map((w) => String(w ?? "").trim())
+        .filter(Boolean);
+
+    if (!cleanedWords.length) throw new Error("words must be a non-empty array");
+
+    // de-dup by lowercase (keep first)
+    const seen = new Set();
+    const uniqWords = [];
+    for (const w of cleanedWords) {
+        const k = w.toLowerCase();
+        if (seen.has(k)) continue;
+        seen.add(k);
+        uniqWords.push(w);
+    }
+
+    if (uniqWords.length < 3) throw new Error("need at least 3 unique words");
+    if (uniqWords.length > 40) throw new Error("too many words (max 40)");
+
+    const lvl = String(level ?? "").trim().toUpperCase();
+    const allowed = new Set(["A1", "A2", "B1", "B2", "C1", "C2"]);
+    const safeLevel = allowed.has(lvl) ? lvl : "A2";
+
+    const safeHint = String(topicHint ?? "").trim().slice(0, 80);
+
+    const systemPrompt = `
+You write short factual mini-stories for ESL learners.
+Return JSON only.
+Schema:
+{
+  "text": string
+}
+Rules:
+- The story MUST be based on exactly ONE real fact story (science article/history/person/place/event).
+- The story MUST reference a name of a famous person/work of art/landmark/brand in at least every second sentence.
+- The story MUST come with a surprise fact in at least every third sentence.
+- Use EVERY provided WORD exactly once, and ONLY once.
+- Each provided WORD must appear wrapped in curly braces: {WORD}
+- Story MUST develop into a few paragraphs: start with a hook, then intro, then main theme, then conclusion or open question.
+- Split paragraphs with [[p]]
+- You MUST use connecting sentences and connecting words to add intermediate context between each sentence with the WORD.
+- Do NOT use braces for anything else.
+- Do NOT add extra brace words beyond the list.
+`;
+
+    const userPrompt = `
+LEVEL: ${safeLevel}
+
+WORDS (use each exactly once, wrapped in braces):
+${uniqWords.map((w) => `- ${w}`).join("\n")}
+
+Return JSON with "text".
+`;
+
+    const resp = await client.responses.create({
+        model: "gpt-4.1",
+        temperature: 0.35,
+        text: { format: { type: "json_object" } },
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    });
+
+    const txt = resp.output_text;
+    let parsed;
+    try {
+        parsed = JSON.parse(txt);
+    } catch {
+        parsed = {};
+    }
+
+    const storyText = String(parsed.text ?? "").trim();
+    if (!storyText) throw new Error("MODEL_RETURNED_EMPTY_TEXT");
+
+    // --- Extract {word} placeholders in appearance order ---
+    // We only consider braces that match one of our required words (case-insensitive)
+    const requiredMap = new Map(uniqWords.map((w) => [w.toLowerCase(), w]));
+    const found = [];
+    const counts = new Map(); // lower -> count
+
+    const re = /\{([^{}]+)\}/g;
+    let m;
+    while ((m = re.exec(storyText)) !== null) {
+        const inside = String(m[1] ?? "").trim();
+        if (!inside) continue;
+        const key = inside.toLowerCase();
+        if (requiredMap.has(key)) {
+            found.push(requiredMap.get(key)); // push canonical original casing
+            counts.set(key, (counts.get(key) || 0) + 1);
+        } else {
+            // model used braces for something else -> hard fail to keep deterministic
+            throw new Error(`UNEXPECTED_BRACED_TOKEN: ${inside}`);
+        }
+    }
+
+    // // Validate: every required word appears exactly once
+    // for (const w of uniqWords) {
+    //     const k = w.toLowerCase();
+    //     const c = counts.get(k) || 0;
+    //     if (c !== 1) {
+    //         throw new Error(`WORD_USAGE_INVALID: "${w}" count=${c}`);
+    //     }
+    // }
+
+    // // Validate: number of found placeholders matches uniqWords length
+    // if (found.length !== uniqWords.length) {
+    //     throw new Error(`GAPS_COUNT_MISMATCH found=${found.length} expected=${uniqWords.length}`);
+    // }
+
+    // Replace ALL {word} occurrences with {GAP} (case-insensitive exact match inside braces)
+    // Since we already validated exact counts, we can do a generic replace.
+    const textWithGaps = storyText.replace(re, "{GAP}");
+
+    return {
+        text: textWithGaps,
+        answers: found, // in exact gap order
+        // optional: for debugging
+        // originalText: storyText,
+    };
+}

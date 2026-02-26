@@ -949,3 +949,54 @@ export function apiGenerateTopicWords({ topic, level, numberOfWords = 12 }) {
         }),
     });
 }
+
+/**
+ * ==========================================================
+ * TASK BUILDER: GENERATE STORY FROM WORDS
+ * ==========================================================
+ * POST /schools/task-builder/story-from-words
+ * body: { words: string[], level?: "A1".."C2", topicHint?: string }
+ *
+ * returns:
+ * {
+ *   level,
+ *   topicHint,
+ *   wordsCount,
+ *   text,      // story with {GAP}
+ *   answers    // correct answers in gap order
+ * }
+ */
+export function apiGenerateStoryFromWords({
+                                              words,
+                                              level = "A2",
+                                              topicHint = "",
+                                          }) {
+    if (!Array.isArray(words) || !words.length) {
+        throw new Error("words must be a non-empty array");
+    }
+
+    const cleanedWords = words
+        .map((w) => String(w ?? "").trim())
+        .filter(Boolean);
+
+    if (!cleanedWords.length) {
+        throw new Error("words must contain valid strings");
+    }
+
+    const lvl = String(level ?? "").trim().toUpperCase();
+    const allowed = new Set(["A1", "A2", "B1", "B2", "C1", "C2"]);
+    if (!allowed.has(lvl)) {
+        throw new Error("level must be one of: A1, A2, B1, B2, C1, C2");
+    }
+
+    const hint = String(topicHint ?? "").trim().slice(0, 80);
+
+    return jsonFetch(`${API_BASE}/schools/task-builder/story-from-words`, {
+        method: "POST",
+        body: JSON.stringify({
+            words: cleanedWords,
+            level: lvl,
+            topicHint: hint || undefined,
+        }),
+    });
+}
