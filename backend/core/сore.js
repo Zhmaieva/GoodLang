@@ -414,7 +414,7 @@ Return JSON with "text".
 `;
 
     const resp = await client.responses.create({
-        model: "gpt-4.1",
+        model: "gpt-5.1",
         temperature: 0.35,
         text: { format: { type: "json_object" } },
         input: [
