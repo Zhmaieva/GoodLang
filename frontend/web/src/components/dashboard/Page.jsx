@@ -35,6 +35,7 @@ export default function Page({ title, subtitle, subSubtitleChild, headerRight, c
                 flexDirection: theme.createAssignments.pageDirection,
                 transition: `opacity ${theme.motion.slow} ${theme.motion.ease}`,
                 opacity: loading ? 0 : 1,
+                paddingTop: "10px"
             },
             content: {
                 width: theme.createAssignments.contentW,
@@ -53,7 +54,7 @@ export default function Page({ title, subtitle, subSubtitleChild, headerRight, c
                 justifyContent: "flex-start",
                 gap: theme.layoutMetrics.pagePad * 2,
                 padding: theme.layoutMetrics.pagePad,
-                paddingLeft: theme.layoutMetrics.pagePad * 2,
+                //paddingLeft: theme.layoutMetrics.pagePad * 2,
             },
             headerLeft: {
                 minWidth: 0,

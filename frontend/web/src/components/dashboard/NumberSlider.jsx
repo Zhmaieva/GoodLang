@@ -1,14 +1,5 @@
-// NumberSlider.jsx — theme-driven, no fonts/sizes/colors here
-// UI: [ number + (word singular/plural) + postText ] + subtitle, then slider with vertical-bar thumb
-// Params:
-// - value (number) + onChange(nextNumber)
-// - min, max, step
-// - wordSingular, wordPlural, postText  (e.g. "tasks", "tasks", "in the assignment")
-// - subtitle (string)
-// - disabled
-// - style overrides: wrapperStyle, headerStyle, valueStyle, subtitleStyle, sliderWrapStyle, sliderStyle
-
-import React, { useMemo } from "react";
+// NumberSlider.jsx — theme-driven, with optional persisted default value
+import React, { useEffect, useMemo, useRef } from "react";
 import { theme } from "../../App.jsx";
 
 function mergeStyle(a, b) {
@@ -24,8 +15,6 @@ function clamp(n, min, max) {
 }
 
 function chooseWord(n, singular, plural) {
-    // Simple EN-style pluralization rule:
-    // 1 -> singular, everything else -> plural
     return Number(n) === 1 ? singular : plural;
 }
 
@@ -45,6 +34,10 @@ export default function NumberSlider({
 
                                          disabled = false,
 
+                                         // NEW
+                                         defaultValue,     // number
+                                         persistKey,       // string (localStorage key)
+
                                          // style escape hatches (theme-first)
                                          wrapperStyle,
                                          headerStyle,
@@ -61,46 +54,50 @@ export default function NumberSlider({
     const safeMax = Number(max);
     const safeStep = Number(step) || 1;
 
-    const v = clamp(value, safeMin, safeMax);
+    // --- NEW: initialize value from storage (once) ---
+    const didInitRef = useRef(false);
+
+    useEffect(() => {
+        if (didInitRef.current) return;
+        didInitRef.current = true;
+
+        // If parent controls value, we only set it if it's missing/invalid
+        const current = Number(value);
+        const hasValidCurrent = !Number.isNaN(current);
+
+        const fallback = clamp(
+            defaultValue ?? safeMin,
+            safeMin,
+            safeMax
+        );
+
+        let next = fallback;
+
+        if (persistKey) {
+            try {
+                const raw = window.localStorage.getItem(persistKey);
+                if (raw != null) {
+                    const parsed = Number(raw);
+                    if (!Number.isNaN(parsed)) next = clamp(parsed, safeMin, safeMax);
+                }
+            } catch (_) {}
+        }
+
+        if (!hasValidCurrent || value == null) {
+            onChange?.(next);
+        }
+    }, [persistKey, defaultValue, safeMin, safeMax]); // intentionally NOT depending on value/onChange
+
+    const v = clamp(value ?? (defaultValue ?? safeMin), safeMin, safeMax);
     const word = chooseWord(v, wordSingular, wordPlural);
 
     const styles = useMemo(() => {
         return {
-            wrap: mergeStyle(
-                {
-                    ...t.wrap,
-                },
-                wrapperStyle
-            ),
-
-            header: mergeStyle(
-                {
-                    ...t.header,
-                },
-                headerStyle
-            ),
-
-            valueLine: mergeStyle(
-                {
-                    ...t.valueLine,
-                },
-                valueStyle
-            ),
-
-            subtitle: mergeStyle(
-                {
-                    ...t.subtitle,
-                },
-                subtitleStyle
-            ),
-
-            sliderWrap: mergeStyle(
-                {
-                    ...t.sliderWrap,
-                },
-                sliderWrapStyle
-            ),
-
+            wrap: mergeStyle({ ...t.wrap }, wrapperStyle),
+            header: mergeStyle({ ...t.header }, headerStyle),
+            valueLine: mergeStyle({ ...t.valueLine }, valueStyle),
+            subtitle: mergeStyle({ ...t.subtitle }, subtitleStyle),
+            sliderWrap: mergeStyle({ ...t.sliderWrap }, sliderWrapStyle),
             slider: mergeStyle(
                 {
                     ...t.slider,
@@ -124,6 +121,13 @@ export default function NumberSlider({
     const handleChange = (e) => {
         const raw = Number(e?.target?.value);
         const next = clamp(raw, safeMin, safeMax);
+
+        if (persistKey) {
+            try {
+                window.localStorage.setItem(persistKey, String(next));
+            } catch (_) {}
+        }
+
         onChange?.(next);
     };
 

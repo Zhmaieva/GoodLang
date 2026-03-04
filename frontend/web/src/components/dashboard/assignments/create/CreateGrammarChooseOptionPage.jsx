@@ -118,6 +118,22 @@ export function CreateGrammarChooseOptionPage() {
                         paddingBottom: theme.bottomDynamicList.padTop,
                         width: '80%'
                     }}>
+                        <NumberSlider
+                            value={tasksSelected}
+                            onChange={(value) => {
+                                setTasksSelected(value);
+                            }}
+                            min={1}
+                            max={30}
+                            step={1}
+                            wordSingular="sentence"
+                            wordPlural="sentences"
+                            //postText="in the assignment"
+                            //subtitle="Pick how many tasks students will receive."
+                            wrapperStyle={{
+                                marginBottom: theme.bottomDynamicList.padBottom,
+                            }}
+                        />
                         <Input
                             placeholder={`Search a grammar rule: i.e. "1st conditional"`}
                             mode="raw"
@@ -162,22 +178,6 @@ export function CreateGrammarChooseOptionPage() {
 
                 {/* RIGHT: selected rules + bottom button */}
                 <div style={styles.right}>
-                    <NumberSlider
-                        value={tasksSelected}
-                        onChange={(value) => {
-                            setTasksSelected(value);
-                        }}
-                        min={1}
-                        max={30}
-                        step={1}
-                        wordSingular="task"
-                        wordPlural="tasks"
-                        postText="in the assignment"
-                        subtitle="Pick how many tasks students will receive."
-                        wrapperStyle={{
-                            marginBottom: theme.bottomDynamicList.padBottom,
-                        }}
-                    />
 
                     <RectangleGroup style={styles.chosenGroup} title={`Chosen grammar`}>
                         <DynamicList contentStyle={styles.chosenList}>

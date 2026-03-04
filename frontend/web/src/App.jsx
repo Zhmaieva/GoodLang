@@ -136,6 +136,8 @@ import StudentDashboardLayout from "./components/dashboard/navigation/StudentDas
 import {StudentProfilePage} from "./components/dashboard/assignments/student/profile/StudentProfilePage.jsx";
 import {RootRedirect} from "./components/routing/RootRedirect.jsx";
 import {CreateVocabFillGapsPage} from "./components/dashboard/assignments/create/CreateVocabFillGapsPage.jsx";
+import {CreateMatchDefinitionsPage} from "./components/dashboard/assignments/create/CreateMatchDefinitionsPage.jsx";
+import {CreateTextPlusABCDquestions} from "./components/dashboard/assignments/create/CreateTextPlusABCDquestions.jsx";
 
 // theme.js
 export const theme = themeStyles;
@@ -164,7 +166,9 @@ export default function App() {
         <>
             <Route path="create-assignment" element={<CreateAssignmentsPage />}/>
             <Route path="create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}/>
+            <Route path="create-assignment/text-abcd" element={<CreateTextPlusABCDquestions />}/>
             <Route path="create-assignment/vocabulary-gaps" element={<CreateVocabFillGapsPage />}/>
+            <Route path="create-assignment/vocabulary-match" element={<CreateMatchDefinitionsPage />}/>
             <Route path="create-assignment/share" element={<ShareAssignmentPage />}/>
         </>
     );
@@ -204,6 +208,8 @@ export default function App() {
                     <Route path="assignments/create-assignment" element={<CreateAssignmentsPage/>}/>
                     <Route path="assignments/create-assignment/grammar-choose-option" element={<CreateGrammarChooseOptionPage />}/>
                     <Route path="assignments/create-assignment/vocabulary-gaps" element={<CreateVocabFillGapsPage />}/>
+                    <Route path="assignments/create-assignment/vocabulary-match" element={<CreateMatchDefinitionsPage />}/>
+                    <Route path="assignments/create-assignment/text-abcd" element={<CreateTextPlusABCDquestions />}/>
                     <Route path="assignments/create-assignment/share" element={<ShareAssignmentPage />}/>
                 </Route>
 

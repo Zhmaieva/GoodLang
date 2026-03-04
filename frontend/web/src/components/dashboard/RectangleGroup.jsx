@@ -19,7 +19,7 @@ export default function RectangleGroup({ title, children, style, boxStyle }) {
                 display: "flex",
                 flex: "1 1 auto",
                 flexDirection: "column",
-                gap: t.titleGap,
+                //gap: t.titleGap,
                 ...(style || {}),
             },
 
@@ -36,9 +36,9 @@ export default function RectangleGroup({ title, children, style, boxStyle }) {
             box: {
                 width: "100%",
                 display: "flex",
-                flexWrap: "wrap",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
+                //flexWrap: "wrap",
+                alignItems: "stretch",
+                justifyContent: "stretch",
                 gap: t.gap,
                 height: "100%",
                 flex: "1 1 auto",

@@ -52,7 +52,7 @@ export default function EmptyContent({
                 display: "flex",
                 alignItems: theme.layout.rowAlign,
                 justifyContent: "center",
-                padding: pad,
+                //padding: pad,
                 fontFamily: theme.fontFamily,
             },
 
@@ -60,16 +60,16 @@ export default function EmptyContent({
             stack: {
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
+                //alignItems: "center",
+                //justifyContent: "center",
                 gap: theme.emptyContent?.stackGap ?? theme.spacing.gap,
-                textAlign: "center",
-                maxWidth: theme.emptyContent?.maxWidth ?? theme.breadcrumbs.maxLabelWidth,
+                //textAlign: "center",
+                //maxWidth: theme.emptyContent?.maxWidth ?? theme.breadcrumbs.maxLabelWidth,
             },
 
             title: {
-                fontSize: theme.breadcrumbs.fontSize,
-                fontWeight: theme.weights.selectedBoost,
+                fontSize: "14px",
+                fontWeight: theme.weights.thin,
                 lineHeight: theme.type.titleLineHeight,
                 color: theme.textDark,
                 margin: 0,
@@ -98,7 +98,7 @@ export default function EmptyContent({
     return (
         <div style={styles.wrap}>
             <div style={styles.stack}>
-                <h2 style={styles.title}>{sourceText}</h2>
+                <div style={styles.title}>{sourceText}</div>
 
                 {subtitle ? <p style={styles.subtitle}>{subtitle}</p> : null}
 

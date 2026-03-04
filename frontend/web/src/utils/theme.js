@@ -206,7 +206,7 @@ theme.numberSlider = {
         display: "flex",
         flexDirection: "column",
         gap: theme.spacing.gap,
-        padding: theme.spacing.cardPadX,
+        // padding: theme.spacing.cardPadX,
     },
 
     header: {
