@@ -19,7 +19,6 @@ export default function RectangleGroup({ title, children, style, boxStyle }) {
                 display: "flex",
                 flex: "1 1 auto",
                 flexDirection: "column",
-                //gap: t.titleGap,
                 ...(style || {}),
             },
 
@@ -36,7 +35,7 @@ export default function RectangleGroup({ title, children, style, boxStyle }) {
             box: {
                 width: "100%",
                 display: "flex",
-                //flexWrap: "wrap",
+                flexWrap: "wrap",
                 alignItems: "stretch",
                 justifyContent: "stretch",
                 gap: t.gap,
@@ -45,10 +44,7 @@ export default function RectangleGroup({ title, children, style, boxStyle }) {
 
                 padding: `${t.padY}px ${t.padX}px`,
                 borderRadius: t.radius,
-                //background: t.background,
-                //border: t.border,
 
-                // keeps it subtle/monochrome
                 color: theme.textDark,
 
                 ...(boxStyle || {}),

@@ -18,6 +18,7 @@ export default function Input({
 
                                   title = "",
                                   subtext = "",
+                                  reserveSpaceForSubtext = true,
                                   placeholder = "",
 
                                   mode = "raw",
@@ -128,6 +129,7 @@ export default function Input({
                     width: t.width,
                     display: t.display,
                     flexDirection: t.flexDirection,
+                    justifyContent: 'space-between',
                     gap: t.gap,
                     minWidth: t.minWidth,
                 },
@@ -392,7 +394,9 @@ export default function Input({
                 </div>
             </div>
 
-            <div style={computed.subtext}>{subtext ? subtext : "\u00A0"}</div>
+            {reserveSpaceForSubtext || subtext
+                && <div style={computed.subtext}>{subtext ? subtext : "\u00A0"}</div>
+            }
         </div>
     );
 }

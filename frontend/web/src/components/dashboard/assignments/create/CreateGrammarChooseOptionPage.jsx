@@ -114,10 +114,21 @@ export function CreateGrammarChooseOptionPage() {
                 {/* LEFT: all rules */}
                 <div style={styles.left}>
                     <div style={{
+                        display: "flex",
                         paddingLeft: theme.bottomDynamicList.padX * 2,
                         paddingBottom: theme.bottomDynamicList.padTop,
-                        width: '80%'
+                        gap: theme.spacing.gap
                     }}>
+                        <Input
+                            placeholder={`Search a grammar rule: i.e. "1st conditional"`}
+                            mode="raw"
+                            charLimit={120}
+                            value={filter}
+                            onChange={(value) => {
+                                setFilter(value);
+                            }}
+                            subtext={null}
+                        />
                         <NumberSlider
                             value={tasksSelected}
                             onChange={(value) => {
@@ -128,20 +139,8 @@ export function CreateGrammarChooseOptionPage() {
                             step={1}
                             wordSingular="sentence"
                             wordPlural="sentences"
-                            //postText="in the assignment"
-                            //subtitle="Pick how many tasks students will receive."
-                            wrapperStyle={{
-                                marginBottom: theme.bottomDynamicList.padBottom,
-                            }}
-                        />
-                        <Input
-                            placeholder={`Search a grammar rule: i.e. "1st conditional"`}
-                            mode="raw"
-                            charLimit={120}
-                            value={filter}
-                            onChange={(value) => {
-                                setFilter(value);
-                            }}
+                            // postText="in the assignment"
+                            subtitle="Pick how many tasks students will receive."
                         />
                     </div>
 
