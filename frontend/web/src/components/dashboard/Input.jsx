@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo} from "react";
+import React, { useEffect, useMemo } from "react";
 import { theme } from "../../App.jsx";
 
 function mergeStyle(a, b) {
@@ -32,6 +32,15 @@ export default function Input({
                                   clearStyle,
 
                                   ariaLabel,
+
+                                  // ✅ NEW: shuffle support
+                                  shuffleItems,
+                                  shuffleEnabled = true,
+                                  shuffleTitle = "Shuffle",
+                                  shuffleAriaLabel = "Shuffle input",
+                                  shuffleSymbol = "⟲",
+                                  shuffleStyle,
+                                  shufflePick,
                               }) {
     const t = theme.input;
 
@@ -103,7 +112,16 @@ export default function Input({
         setSubtextOpacity(subtext ? 1 : 0);
     }, [subtext]);
 
+    const hasShuffle = shuffleEnabled && Array.isArray(shuffleItems) && shuffleItems.length > 0;
+
     const computed = useMemo(() => {
+        const shuffleBtnBase =
+            t.shuffleBtn ||
+            {
+                ...t.clearBtn,
+                // slightly different placement than clear, but compatible if theme has only clearBtn
+            };
+
         return {
             wrap: mergeStyle(
                 {
@@ -134,28 +152,43 @@ export default function Input({
                 labelStyle
             ),
 
-            subtext: mergeStyle(
-                (t.subtext || {}),
-                {
-                    transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,
-                    opacity: subtextOpacity,
-                }
-            ),
+            subtext: mergeStyle((t.subtext || {}), {
+                transition: `opacity ${theme.motion.fast} ${theme.motion.ease}`,
+                opacity: subtextOpacity,
+            }),
 
             clearBtn: mergeStyle(
                 {
                     ...t.clearBtn,
-                    opacity: disabled || !value ? t.clearBtnDisabledOpacity : t.clearBtn.opacity,
+                    opacity: disabled || !val ? t.clearBtnDisabledOpacity : t.clearBtn.opacity,
                     pointerEvents: disabled ? "none" : t.clearBtn.pointerEvents,
                 },
                 {
                     position: "relative",
-                    right: '1rem',
-                    bottom: '.5rem',
+                    right: "1rem",
+                    bottom: ".5rem",
                     fontWeight: theme.weights.thin,
                     fontSize: theme.breadcrumbs.fontSize,
                 },
                 clearStyle
+            ),
+
+            shuffleBtn: mergeStyle(
+                {
+                    ...shuffleBtnBase,
+                    opacity: disabled ? (shuffleBtnBase.disabledOpacity ?? t.clearBtnDisabledOpacity) : shuffleBtnBase.opacity,
+                    pointerEvents: disabled ? "none" : shuffleBtnBase.pointerEvents,
+                },
+                {
+                    position: "relative",
+                    right: "0.4rem",
+                    bottom: ".5rem",
+                    fontWeight: theme.weights.thin,
+                    fontSize: theme.breadcrumbs.fontSize,
+                    // keep it visually separate from clear
+                    marginLeft: "0.1rem",
+                },
+                shuffleStyle
             ),
 
             input: mergeStyle(
@@ -166,13 +199,71 @@ export default function Input({
                 inputStyle
             ),
         };
-    }, [t, style, wrapperStyle, inputStyle, labelStyle, clearStyle, disabled, value, subtextOpacity]);
+    }, [
+        t,
+        style,
+        wrapperStyle,
+        inputStyle,
+        labelStyle,
+        clearStyle,
+        disabled,
+        val,
+        subtextOpacity,
+        shuffleStyle,
+    ]);
 
     const showClear = !!val;
 
     const emit = (next) => {
         if (!onChange) return;
         onChange(next);
+    };
+
+    const applyNextValue = (next, { focus = true, selectAll = true } = {}) => {
+        if (subtextOpacity !== 0) setSubtextOpacity(0);
+
+        const el = inputRef.current;
+        const isFocused = !!el && document.activeElement === el;
+
+        // We want stable UX: focus and select all after shuffle (or at least put caret end)
+        // Capture selection first if focused
+        if (isFocused && el) {
+            selRef.current = {
+                start: el.selectionStart,
+                end: el.selectionEnd,
+                shouldRestore: false, // we'll set explicitly below
+            };
+        } else {
+            selRef.current = { start: null, end: null, shouldRestore: false };
+        }
+
+        // enforce normalization/charLimit same as typing
+        let normalized = String(next ?? "");
+        if (mode === "email") normalized = normalizeEmail(normalized);
+
+        if (typeof charLimit === "number" && charLimit >= 0) {
+            if (normalized.length > charLimit) normalized = normalized.slice(0, charLimit);
+        }
+
+        setVal(normalized);
+        if (isControlled) lastExtRef.current = normalized;
+        emit(normalized);
+
+        // focus + selection behavior
+        if (focus && el) {
+            try {
+                el.focus();
+                // after state update, React will re-render; we can still set selection immediately on DOM value
+                // (works fine because we're controlling the input)
+                if (selectAll) {
+                    const len = normalized.length;
+                    el.setSelectionRange(0, len);
+                } else {
+                    const len = normalized.length;
+                    el.setSelectionRange(len, len);
+                }
+            } catch {}
+        }
     };
 
     const handleChange = (e) => {
@@ -207,18 +298,24 @@ export default function Input({
     };
 
     const handleClear = () => {
-        if (subtextOpacity !== 0) setSubtextOpacity(0);
+        applyNextValue("", { focus: true, selectAll: false });
+    };
 
-        const el = inputRef.current;
-        if (el && document.activeElement === el) {
-            selRef.current = { start: 0, end: 0, shouldRestore: true };
+    const handleShuffle = () => {
+        if (!hasShuffle || disabled) return;
+
+        const items = shuffleItems.filter((x) => String(x ?? "").trim().length > 0);
+        if (items.length === 0) return;
+
+        let picked;
+        if (typeof shufflePick === "function") {
+            picked = shufflePick(items);
         } else {
-            selRef.current = { start: null, end: null, shouldRestore: false };
+            const idx = Math.floor(Math.random() * items.length);
+            picked = items[idx];
         }
 
-        setVal("");
-        if (isControlled) lastExtRef.current = "";
-        emit("");
+        applyNextValue(String(picked ?? ""), { focus: true, selectAll: true });
     };
 
     const autofillCss = useMemo(() => {
@@ -229,24 +326,24 @@ export default function Input({
         const color = theme.input?.input?.color;
 
         return `
-    input.${AUTOFILL_CLASS}:-webkit-autofill,
-    input.${AUTOFILL_CLASS}:-webkit-autofill:hover,
-    input.${AUTOFILL_CLASS}:-webkit-autofill:focus,
-    input.${AUTOFILL_CLASS}:-webkit-autofill:active {
-      font-family: ${ff} !important;
-      ${fs ? `font-size: ${fs} !important;` : ""}
-      ${fw ? `font-weight: ${fw} !important;` : ""}
-      ${lh ? `line-height: ${lh} !important;` : ""}
-      ${color ? `-webkit-text-fill-color: ${color} !important;` : "-webkit-text-fill-color: inherit !important;"}
-      caret-color: ${color || "inherit"} !important;
-      -webkit-text-size-adjust: 100% !important;
-    }
-  `;
+      input.${AUTOFILL_CLASS}:-webkit-autofill,
+      input.${AUTOFILL_CLASS}:-webkit-autofill:hover,
+      input.${AUTOFILL_CLASS}:-webkit-autofill:focus,
+      input.${AUTOFILL_CLASS}:-webkit-autofill:active {
+        font-family: ${ff} !important;
+        ${fs ? `font-size: ${fs} !important;` : ""}
+        ${fw ? `font-weight: ${fw} !important;` : ""}
+        ${lh ? `line-height: ${lh} !important;` : ""}
+        ${color ? `-webkit-text-fill-color: ${color} !important;` : "-webkit-text-fill-color: inherit !important;"}
+        caret-color: ${color || "inherit"} !important;
+        -webkit-text-size-adjust: 100% !important;
+      }
+    `;
     }, []);
 
     return (
         <div style={computed.wrap}>
-            <style dangerouslySetInnerHTML={{__html: autofillCss}}/>
+            <style dangerouslySetInnerHTML={{ __html: autofillCss }} />
 
             <div style={computed.labelRow}>
                 <div style={computed.label}>{title}</div>
@@ -266,7 +363,22 @@ export default function Input({
                     inputMode={mode === "email" ? (t.inputModeEmail || "email") : undefined}
                     type={mode === "email" ? (t.typeEmail || "email") : (t.typeRaw || "text")}
                 />
-                <div style={{ height: 0 }}>
+
+                {/* right-side buttons */}
+                <div style={{ height: 0, display: "flex" }}>
+                    {hasShuffle && (
+                        <button
+                            type="button"
+                            style={computed.shuffleBtn}
+                            onClick={handleShuffle}
+                            disabled={disabled}
+                            aria-label={shuffleAriaLabel}
+                            title={shuffleTitle}
+                        >
+                            {t.shuffleSymbol || shuffleSymbol}
+                        </button>
+                    )}
+
                     <button
                         type="button"
                         style={computed.clearBtn}

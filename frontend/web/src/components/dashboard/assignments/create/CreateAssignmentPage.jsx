@@ -69,7 +69,7 @@ export const groups = (() => {
             key: "writing",
             title: "Writing",
             items: [
-                 mkItem("writing", "essay", "Essay", "Long-form writing task"),
+                 mkItem("writing", "essay", "Essay", "Long-form writing task", `essay`),
                 // mkItem("writing", "letter", "Letter", "Formal or informal letter"),
             ],
         },

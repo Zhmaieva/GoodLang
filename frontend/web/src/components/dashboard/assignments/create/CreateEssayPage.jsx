@@ -558,8 +558,8 @@ export function CreateEssayPage() {
 
     return (
         <Page
-            title={"Read and choose"}
-            subtitle={"Generate text and related questions"}
+            title={"Essay"}
+            subtitle={"Create an essay assignment "}
         >
             <style>{`
                 @keyframes gl_skeleton {
@@ -593,6 +593,15 @@ export function CreateEssayPage() {
                             if (toast) setToast("");
                         }}
                         charLimit={80}
+                        shuffleItems={[
+                            "Food",
+                            "Travel",
+                            "Technology",
+                            "Education",
+                            "Health",
+                        ]}
+                        shuffleTitle="Random topic"
+                        shuffleSymbol="🔀"
                     />
 
                     {topicError && (
