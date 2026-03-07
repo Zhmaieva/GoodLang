@@ -42,7 +42,7 @@ export default function TextLoadingPreview({}) {
     return (
         <div style={{ width: "100%", minWidth: 0, alignSelf: "stretch" }}>
             <div style={{ ...styles.paper, width: "100%", minWidth: 0, boxSizing: "border-box" }}>
-                <div style={styles.miniMeta}>Generating text… please wait.</div>
+                <div style={styles.miniMeta}>Composing text… please wait.</div>
                 <div style={{ height: 10 }} />
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 10, width: "100%" }}>
