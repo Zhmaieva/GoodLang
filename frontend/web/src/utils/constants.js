@@ -39,3 +39,5 @@ export const ACTION_TYPES = {
     ERROR_PURCHASE_MARATHON: 2000,
     ERROR_TRANSLATOR: 2001
 };
+
+export const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];

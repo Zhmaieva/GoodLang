@@ -331,7 +331,7 @@ export function WorkOnAssignmentPage() {
 
     return (
         <Page loading={loading} subtitle={title} title={'Work on the assignment'}>
-            <PageLeft>
+            <PageLeft autoStretch>
                 <Flow
                     style={{height: "100%"}}
                     steps={steps}

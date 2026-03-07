@@ -1,7 +1,7 @@
 import {theme} from "../../App.jsx";
 import {useMemo} from "react";
 
-export default function PageRight({children}) {
+export default function PageRight({children, style}) {
     const t = theme.page;
 
     const styles = useMemo(
@@ -15,6 +15,7 @@ export default function PageRight({children}) {
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
+                ...style
             },
         }),
         [t]

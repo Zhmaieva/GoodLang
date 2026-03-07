@@ -1,8 +1,14 @@
-import {theme} from "../../App.jsx";
-import {useMemo} from "react";
+import { theme } from "../../App.jsx";
+import { useMemo } from "react";
 
-export default function PageLeft({children}) {
+export default function PageLeft({ autoStretch = false, children }) {
     const t = theme.page;
+
+    const autoStretchStyles = {
+        flex: "1 1 auto",
+        gap: theme.spacing.gap,
+        alignItems: "stretch",
+    };
 
     const styles = useMemo(
         () => ({
@@ -15,18 +21,15 @@ export default function PageLeft({children}) {
                 display: "flex",
                 flexDirection: "column",
 
-                flex: "1 1 auto",
-                gap: theme.spacing.gap,
-                alignItems: "stretch",
+                ...(autoStretch ? autoStretchStyles : {}),
             },
         }),
-        [t]
+        [t, autoStretch]
     );
 
     return (
         <div style={styles.left}>
             {children}
         </div>
-    )
+    );
 }
-

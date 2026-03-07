@@ -28,6 +28,7 @@ const theme = {
 
     sizes: {
         img: 56,
+        commonWidth: '420px'
     },
 
     motion: {

@@ -6,6 +6,7 @@ export default function HorizontalGroup({children}) {
             display: "flex",
             paddingLeft: theme.bottomDynamicList.padX * 2,
             paddingBottom: theme.bottomDynamicList.padTop,
+            paddingRight: theme.bottomDynamicList.padX * 2,
             gap: theme.spacing.gap
         }}>
             {children}
