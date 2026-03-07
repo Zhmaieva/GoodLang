@@ -7,9 +7,11 @@ export default function TasksProgressList({
                                               answersByTaskId = {},
                                               activeTaskId,
                                               onSelectTaskId,
+                                              style = {}
                                           }) {
     return (
         <DynamicList
+            style={style}
             items={tasks}
             renderItem={(task, idx) => {
                 const taskId = String(task?.id || idx);

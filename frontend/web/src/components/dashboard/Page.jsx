@@ -22,7 +22,18 @@ export default function Page({ title, subtitle, subSubtitleChild, headerRight, c
             groupsMinH: "0",
         };
 
+        const t = theme.page;
+
         return {
+            row: {
+                display: "flex",
+                gap: t.rowGap,
+                width: t.full,
+                height: t.full,
+                minHeight: t.minH0,
+                overflow: "hidden",
+            },
+
             page: {
                 flex: "1 1 auto",
                 minHeight: 0,
@@ -101,9 +112,10 @@ export default function Page({ title, subtitle, subSubtitleChild, headerRight, c
                     {/* ✅ anything you pass here will sit to the right of title+subtitle */}
                     {headerRight ? <div style={styles.headerRight}>{headerRight}</div> : null}
                 </div>
-
-                {children}
+                <div style={styles.row}>
+                    {children}
+                </div>
             </div>
         </div>
     );
-}
+    }

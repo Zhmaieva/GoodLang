@@ -19,6 +19,8 @@ import CodeStep from "../../../authentication/steps/CodeStep.jsx";
 import TermsStep from "../../../authentication/steps/TermsStep.jsx";
 import { TERMS_OF_USE_CONTENT } from "../../../../../services/touService.js";
 import CustomInfoStep from "../../../CustomInfoStep.jsx";
+import PageLeft from "../../../PageLeft.jsx";
+import PageRight from "../../../PageRight.jsx";
 
 function extractTaskSetId(pathname) {
     const parts = String(pathname || "")
@@ -329,64 +331,34 @@ export function WorkOnAssignmentPage() {
 
     return (
         <Page loading={loading} subtitle={title} title={'Work on the assignment'}>
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "calc(100vh - 140px)",
-                    minHeight: 0,
-                }}
-            >
-                <div
-                    style={{
-                        display: "flex",
-                        flex: "1 1 auto",
-                        minHeight: 0,
-                        gap: theme.spacing.gap,
-                        alignItems: "stretch",
+            <PageLeft>
+                <Flow
+                    style={{height: "100%"}}
+                    steps={steps}
+                    activeKey={activeTaskId || steps?.[0]?.key || ""}
+                    onActiveKeyChange={setActiveTaskId}
+                    onDone={() => {
                     }}
-                >
-                    <div
-                        style={{
-                            flex: "1 1 auto",
-                            transition: `width ${theme.motion.normal} ${theme.motion.ease}`,
-                            minWidth: 0,
-                            minHeight: 0,
-                        }}
-                    >
-                        <Flow
-                            style={{ height: "100%" }}
-                            steps={steps}
-                            activeKey={activeTaskId || steps?.[0]?.key || ""}
-                            onActiveKeyChange={setActiveTaskId}
-                            onDone={() => {}}
-                            onBetweenPhases={() => {
-                                // ✅ now uses ref-backed areAllDone => latest state
-                                if (areAllDone()) setTaskListVisible(false);
-                            }}
-                        />
-                    </div>
+                    onBetweenPhases={() => {
+                        if (areAllDone()) setTaskListVisible(false);
+                    }}
+                />
+            </PageLeft>
 
-                    {taskListVisible && (
-                        <div
-                            style={{
-                                transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
-                                opacity: !allDone || taskListVisible ? 1 : 0,
-                                width: 420,
-                                minWidth: 320,
-                                minHeight: 0,
-                            }}
-                        >
-                            <TasksProgressList
-                                tasks={tasks}
-                                answersByTaskId={answersByTaskId}
-                                activeTaskId={activeTaskId || steps?.[0]?.key || ""}
-                                onSelectTaskId={setActiveTaskId}
-                            />
-                        </div>
-                    )}
-                </div>
-            </div>
+            {taskListVisible && (
+                <PageRight>
+                    <TasksProgressList
+                        style={{
+                            transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
+                            opacity: !allDone || taskListVisible ? 1 : 0,
+                        }}
+                        tasks={tasks}
+                        answersByTaskId={answersByTaskId}
+                        activeTaskId={activeTaskId || steps?.[0]?.key || ""}
+                        onSelectTaskId={setActiveTaskId}
+                    />
+                </PageRight>
+            )}
         </Page>
     );
 }

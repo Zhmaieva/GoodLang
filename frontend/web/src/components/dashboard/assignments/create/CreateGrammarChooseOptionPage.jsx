@@ -12,6 +12,10 @@ import { theme } from "../../../../App.jsx";
 import Input from "../../Input.jsx";
 import NumberSlider from "../../NumberSlider.jsx";
 import {getLastPathEdge} from "../../navigation/TeacherDashboardLayout.jsx";
+import PageLeft from "../../PageLeft.jsx";
+import HorizontalGroup from "../../HorizontalGroup.jsx";
+import PageRight from "../../PageRight.jsx";
+import FooterNextButtons from "../../FooterNextButtons.jsx";
 
 export function CreateGrammarChooseOptionPage() {
     const navigate = useNavigate();
@@ -43,55 +47,10 @@ export function CreateGrammarChooseOptionPage() {
         setSelected((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
     };
 
-    const t = theme.createGrammarChooseOption;
+    const t = theme.page;
 
     const styles = useMemo(
         () => ({
-            row: {
-                display: "flex",
-                gap: t.rowGap,
-                width: t.full,
-                height: t.full,
-                minHeight: t.minH0,
-                overflow: "hidden",
-                marginTop: theme.bottomDynamicList.padBottom,
-            },
-
-            left: {
-                width: t.leftWidth,
-                minWidth: t.minH0,
-                height: t.full,
-                minHeight: t.minH0,
-                overflow: "hidden",
-                display: "flex",
-                flexDirection: "column",
-            },
-
-            right: {
-                flex: "1 1 auto",
-                minWidth: t.minH0,
-                height: t.rightHeight,
-                maxWidth: t.rightMaxWidth,
-                minHeight: t.minH0,
-                overflow: "hidden",
-                display: "flex",
-                flexDirection: "column",
-            },
-
-            footer: {
-                flex: "0 0 auto",
-                display: "flex",
-                justifyContent: "flex-end",
-                paddingTop: t.footerPadTop,
-                opacity: selectedItems?.length > 0 ? 1 : 0,
-                transition: "opacity 0.3s"
-            },
-
-            footerInner: {
-                paddingBottom: t.footerPadBottom,
-                paddingRight: t.footerPadRight,
-            },
-
             chosenGroup: {
                 height: t.chosenGroupHeight,
             },
@@ -110,122 +69,109 @@ export function CreateGrammarChooseOptionPage() {
 
     return (
         <Page title={"Choose an option (grammar)"} subtitle={"Select grammar rules to use in the assignment"}>
-            <div style={styles.row}>
-                {/* LEFT: all rules */}
-                <div style={styles.left}>
-                    <div style={{
-                        display: "flex",
-                        paddingLeft: theme.bottomDynamicList.padX * 2,
-                        paddingBottom: theme.bottomDynamicList.padTop,
-                        gap: theme.spacing.gap
-                    }}>
-                        <Input
-                            placeholder={`Search a grammar rule: i.e. "1st conditional"`}
-                            mode="raw"
-                            charLimit={120}
-                            value={filter}
-                            onChange={(value) => {
-                                setFilter(value);
-                            }}
-                            subtext={null}
-                        />
-                        <NumberSlider
-                            value={tasksSelected}
-                            onChange={(value) => {
-                                setTasksSelected(value);
-                            }}
-                            min={1}
-                            max={30}
-                            step={1}
-                            wordSingular="sentence"
-                            wordPlural="sentences"
-                            // postText="in the assignment"
-                            subtitle="Pick how many tasks students will receive."
-                        />
-                    </div>
+            <PageLeft>
+                <HorizontalGroup>
+                    <Input
+                        placeholder={`Search a grammar rule: i.e. "1st conditional"`}
+                        mode="raw"
+                        charLimit={120}
+                        value={filter}
+                        onChange={(value) => {
+                            setFilter(value);
+                        }}
+                        subtext={null}
+                    />
+                    <NumberSlider
+                        value={tasksSelected}
+                        onChange={(value) => {
+                            setTasksSelected(value);
+                        }}
+                        min={1}
+                        max={30}
+                        step={1}
+                        wordSingular="sentence"
+                        wordPlural="sentences"
+                        // postText="in the assignment"
+                        subtitle="Pick how many tasks students will receive."
+                    />
+                </HorizontalGroup>
+                <DynamicList style={{
+                    paddingLeft: theme.spacing.cardPadX,
+                }}>
+                    {groups.filter((g) => {
+                        if (!filter)
+                            return true;
+                        g.items = g.items?.filter(id => {
+                            const name = RULE_LABELS[id] || id;
+                            return name?.title?.toLowerCase().includes(filter.toLowerCase());
+                        }) || [];
 
-                    <DynamicList style={{
-                        paddingLeft: theme.spacing.cardPadX,
-                    }}>
-                        {groups.filter((g) => {
-                            if (!filter)
-                                return true;
-                            g.items = g.items?.filter(id => {
-                                const name = RULE_LABELS[id] || id;
-                                return name?.title?.toLowerCase().includes(filter.toLowerCase());
-                            }) || [];
+                        return g.items?.length > 0;
+                    }).map((g) => (
+                        <RectangleGroup key={g.key} title={g.title}>
+                            {g.items.map((it) => (
+                                <ItemCard
+                                    accentHover
+                                    key={it.id}
+                                    title={it.title}
+                                    subtitle={it.subtitle}
+                                    imageUrl={undefined}
+                                    selected={selected.includes(it.id)}
+                                    selectedShift={false}
+                                    onClick={() => toggle(it.id)}
+                                />
+                            ))}
+                        </RectangleGroup>
+                    ))}
+                </DynamicList>
+            </PageLeft>
 
-                            return g.items?.length > 0;
-                        }).map((g) => (
-                            <RectangleGroup key={g.key} title={g.title}>
-                                {g.items.map((it) => (
-                                    <ItemCard
-                                        accentHover
-                                        key={it.id}
-                                        title={it.title}
-                                        subtitle={it.subtitle}
-                                        imageUrl={undefined}
-                                        selected={selected.includes(it.id)}
-                                        selectedShift={false}
-                                        onClick={() => toggle(it.id)}
-                                    />
-                                ))}
-                            </RectangleGroup>
-                        ))}
+            {/* RIGHT: selected rules + bottom button */}
+            <PageRight>
+                <RectangleGroup style={styles.chosenGroup} title={`Chosen grammar`}>
+                    <DynamicList contentStyle={styles.chosenList}>
+                        {selectedItems.length ? (
+                            selectedItems.map((it) => (
+                                <ItemCard
+                                    variant={'minimal'}
+                                    accentHover
+                                    key={`chosen:${it.id}`}
+                                    title={it.title}
+                                    subtitle={it.subtitle}
+                                    imageUrl={undefined}
+                                    selected={true}
+                                    selectedShift={false}
+                                    onClick={() => toggle(it.id)}
+                                />
+                            ))
+                        ) : (
+                            <div style={styles.empty}>
+                                Select rules on the left to include them here.
+                            </div>
+                        )}
                     </DynamicList>
-                </div>
+                </RectangleGroup>
 
-                {/* RIGHT: selected rules + bottom button */}
-                <div style={styles.right}>
-
-                    <RectangleGroup style={styles.chosenGroup} title={`Chosen grammar`}>
-                        <DynamicList contentStyle={styles.chosenList}>
-                            {selectedItems.length ? (
-                                selectedItems.map((it) => (
-                                    <ItemCard
-                                        variant={'minimal'}
-                                        accentHover
-                                        key={`chosen:${it.id}`}
-                                        title={it.title}
-                                        subtitle={it.subtitle}
-                                        imageUrl={undefined}
-                                        selected={true}
-                                        selectedShift={false}
-                                        onClick={() => toggle(it.id)}
-                                    />
-                                ))
-                            ) : (
-                                <div style={styles.empty}>
-                                    Select rules on the left to include them here.
-                                </div>
-                            )}
-                        </DynamicList>
-                    </RectangleGroup>
-
-                    {
-                        <div style={{...styles.footer, ...styles.footerInner}}>
-                            <AwesomeActionButton
-                                size="regular"
-                                variant={"ghost"}
-                                title={!selected.length ? "Select at least one rule" : "Finish creation"}
-                                onClick={() => {
-                                    const assignmentType = getLastPathEdge(location.pathname);
-                                    const params = new URLSearchParams();
-                                    params.set("type", assignmentType);
-                                    params.set("taskMode", 'gaps');
-                                    params.set("tasks", String(tasksSelected));
-                                    params.set("rules", selected.join(",")); // ids list
-
-                                    navigate(`/school/assignments/create-assignment/share?${params.toString()}`);
-                                }}
-
-                            >
-                                Save and share with students
-                            </AwesomeActionButton>
-                        </div>
-                    }
-                </div>
-            </div>
+                <FooterNextButtons
+                    disabled={selectedItems?.length === 0}
+                >
+                    <AwesomeActionButton
+                        size="regular"
+                        variant={"ghost"}
+                        onClick={() => {
+                            const assignmentType = getLastPathEdge(location.pathname);
+                            const params = new URLSearchParams();
+                            params.set("type", assignmentType);
+                            params.set("taskMode", 'gaps');
+                            params.set("tasks", String(tasksSelected));
+                            params.set("rules", selected.join(",")); // ids list
+                            navigate(`/school/assignments/create-assignment/share?${params.toString()}`);
+                        }}
+                    >
+                        Save and share with students
+                    </AwesomeActionButton>
+                </FooterNextButtons>
+            </PageRight>
         </Page>
     );
 }

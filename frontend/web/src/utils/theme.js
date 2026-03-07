@@ -493,7 +493,7 @@ theme.mediaPreview = {
 };
 
 // theme.js — add at the bottom (or near other page presets)
-theme.createGrammarChooseOption = {
+theme.page = {
     // layout
     rowGap: theme.spacing?.gap ?? 14, // was: theme.spacing?.gap ?? 14
     leftWidth: "60%",                // was: "60%"

@@ -17,6 +17,9 @@ import Link from "../../Link.jsx";
 import TabSwitcher from "../../TabSwitcher.jsx";
 import SharePreviewList from "./SharePreviewList.jsx";
 import QrPng from "../../QrPng.jsx";
+import PageLeft from "../../PageLeft.jsx";
+import PageRight from "../../PageRight.jsx";
+import FooterNextButtons from "../../FooterNextButtons.jsx";
 
 function parseRules(str) {
     if (!str) return [];
@@ -665,34 +668,6 @@ export function ShareAssignmentPage() {
 
     const styles = useMemo(
         () => ({
-            row: {
-                display: "flex",
-                gap: t.rowGap,
-                width: t.full,
-                height: t.full,
-                minHeight: t.minH0,
-                overflow: "hidden",
-            },
-            left: {
-                width: t.leftWidth,
-                minWidth: t.minH0,
-                height: t.full,
-                minHeight: t.minH0,
-                overflow: "hidden",
-                display: "flex",
-                flexDirection: "column",
-            },
-            right: {
-                flex: "1 1 auto",
-                minWidth: t.minH0,
-                height: t.rightHeight,
-                maxWidth: t.rightMaxWidth,
-                minHeight: t.minH0,
-                overflow: "hidden",
-                display: "flex",
-                flexDirection: "column",
-                position: "relative",
-            },
             leftTop: {
                 paddingLeft: theme.bottomDynamicList.padX * 2,
                 paddingBottom: theme.bottomDynamicList.padTop,
@@ -737,22 +712,6 @@ export function ShareAssignmentPage() {
                 paddingBottom: theme.bottomDynamicList.padBottom,
             },
             tinyHint: { opacity: 0.7, fontSize: 12, marginTop: 6 },
-            // ✅ ADD in styles (inside useMemo styles object)
-            footer: {
-                flex: "0 0 auto",
-                display: "flex",
-                justifyContent: "flex-end",
-                paddingTop: t.footerPadTop,
-            },
-            footerInner: {
-                paddingBottom: t.footerPadBottom,
-                paddingRight: t.footerPadRight,
-                paddingLeft: theme.bottomDynamicList.padX * 2,
-            },
-            footerBtns: {
-                display: "flex",
-                gap: theme.spacing?.gap ?? 12,
-            },
             shareLinkWrap: {
                 paddingTop: theme.bottomDynamicList.padTop,
                 paddingBottom: theme.bottomDynamicList.padTop,
@@ -786,229 +745,220 @@ export function ShareAssignmentPage() {
                 />
             }
         >
-            <div style={styles.row}>
-                {/* LEFT */}
-                <div style={styles.left}>
+            <PageLeft>
+                {/* assignment title */}
+                <div style={styles.leftTop}>
+                    <Input
+                        title={"Assignment name (visible to students)"}
+                        placeholder={`e.g. "Homework for Sally"`}
+                        mode="raw"
+                        charLimit={120}
+                        value={taskName}
+                        onChange={setTaskName}
+                    />
+                </div>
 
-                    {/* assignment title */}
-                    <div style={styles.leftTop}>
-                        <Input
-                            title={"Assignment name (visible to students)"}
-                            placeholder={`e.g. "Homework for Sally"`}
-                            mode="raw"
-                            charLimit={120}
-                            value={taskName}
-                            onChange={setTaskName}
-                        />
-                    </div>
-
-                    {/* people search */}
-                    <div style={styles.leftSearchWrap}>
-                        <Input
-                            placeholder={"Type an email address of the recipient. Or, search by student name or class name."}
-                            mode="raw"
-                            charLimit={120}
-                            value={peopleQuery}
-                            onChange={setPeopleQuery}
-                        />
-                        <div style={styles.tinyHint}>
-                            Select a class to include everyone in it, or pick students individually.
-                        </div>
-                    </div>
-
-                    {/* grouped list */}
-                    <div style={styles.leftListWrap}>
-                        <DynamicList
-                            ariaLabel="Students and classes"
-                            items={groupedItems}
-                            renderItem={(group, gi) => {
-                                const isClass = group?.kind === "class";
-                                const title = safeStr(group?.title);
-
-                                const classState = isClass ? classSelectionState(group.studentsAll) : null;
-
-                                // hide empty visible groups during search
-                                const visibleStudents = Array.isArray(group?.studentsVisible) ? group.studentsVisible : [];
-                                if (normalizedPeopleQuery && isClass && visibleStudents.length === 0 && !normalizeHay(title).includes(normalizedPeopleQuery)) {
-                                    return null;
-                                }
-                                if (normalizedPeopleQuery && !isClass && visibleStudents.length === 0) {
-                                    return null;
-                                }
-
-                                return (
-                                    <RectangleGroup
-                                        key={`${group.kind}-${group.classId || "none"}-${gi}`}
-                                        title={
-                                            isClass
-                                                ? `${title} (${classState.count}/${classState.total})`
-                                                : `${title} (${visibleStudents.length})`
-                                        }
-                                    >
-                                        {/* class card (first) */}
-                                        {isClass && (
-                                            <ItemCard
-                                                key={`class-${group.classId}`}
-                                                title={title}
-                                                selectedShift={false}
-                                                subtitle={
-                                                    classState.all
-                                                        ? "Whole class selected"
-                                                        : classState.some
-                                                            ? "Partially selected"
-                                                            : "Select whole class"
-                                                }
-                                                selected={classState.all }
-                                                onClick={() => toggleWholeClass(group.studentsAll)}
-                                                active={classState.all || classState.some}
-                                            />
-                                        )}
-
-                                        {/* students in group */}
-                                        {visibleStudents.map((s) => {
-                                            const sid = studentIdOf(s);
-                                            const active = sid ? isStudentSelected(sid) : false;
-                                            return (
-                                                <ItemCard
-                                                    key={`student-${sid}`}
-                                                    title={studentLabel(s)}
-                                                    selectedShift={false}
-                                                    subtitle={safeStr(s?.email) || safeStr(s?.class_name)}
-                                                    selected={active}
-                                                    onClick={() => toggleStudent(s)}
-                                                    active={active}
-                                                />
-                                            );
-                                        })}
-                                    </RectangleGroup>
-                                );
-                            }}
-                        />
+                {/* people search */}
+                <div style={styles.leftSearchWrap}>
+                    <Input
+                        placeholder={"Type an email address of the recipient. Or, search by student name or class name."}
+                        mode="raw"
+                        charLimit={120}
+                        value={peopleQuery}
+                        onChange={setPeopleQuery}
+                    />
+                    <div style={styles.tinyHint}>
+                        Select a class to include everyone in it, or pick students individually.
                     </div>
                 </div>
 
-                {/* RIGHT */}
-                <div style={styles.right}>
-                    {/* selected recipients list */}
-                    {/* RIGHT: tabs */}
-                    <div style={styles.rightListWrap}>
-                        <TabSwitcher
-                            style={{height: "100%", minHeight: 0}}
-                            value={rightTab}
-                            onChange={setRightTab}
-                            tabs={[
-                                {key: "send", label: "Assignees"},
-                                {key: "preview", label: "Preview"},
-                            ]}
-                            renderContent={(key) => {
-                                if (key === "preview") {
-                                    return (
-                                        <div style={{ flex: "1 1 auto", minHeight: 0, height: "100%", display: "flex" }}>
-                                            <SharePreviewList tasks={tasks} style={{ flex: "1 1 auto", minHeight: 0, height: "100%" }} />
-                                        </div>
-                                    );
-                                }
+                {/* grouped list */}
+                <div style={styles.leftListWrap}>
+                    <DynamicList
+                        ariaLabel="Students and classes"
+                        items={groupedItems}
+                        renderItem={(group, gi) => {
+                            const isClass = group?.kind === "class";
+                            const title = safeStr(group?.title);
 
+                            const classState = isClass ? classSelectionState(group.studentsAll) : null;
+
+                            // hide empty visible groups during search
+                            const visibleStudents = Array.isArray(group?.studentsVisible) ? group.studentsVisible : [];
+                            if (normalizedPeopleQuery && isClass && visibleStudents.length === 0 && !normalizeHay(title).includes(normalizedPeopleQuery)) {
+                                return null;
+                            }
+                            if (normalizedPeopleQuery && !isClass && visibleStudents.length === 0) {
+                                return null;
+                            }
+
+                            return (
+                                <RectangleGroup
+                                    key={`${group.kind}-${group.classId || "none"}-${gi}`}
+                                    title={
+                                        isClass
+                                            ? `${title} (${classState.count}/${classState.total})`
+                                            : `${title} (${visibleStudents.length})`
+                                    }
+                                >
+                                    {/* class card (first) */}
+                                    {isClass && (
+                                        <ItemCard
+                                            key={`class-${group.classId}`}
+                                            title={title}
+                                            selectedShift={false}
+                                            subtitle={
+                                                classState.all
+                                                    ? "Whole class selected"
+                                                    : classState.some
+                                                        ? "Partially selected"
+                                                        : "Select whole class"
+                                            }
+                                            selected={classState.all }
+                                            onClick={() => toggleWholeClass(group.studentsAll)}
+                                            active={classState.all || classState.some}
+                                        />
+                                    )}
+
+                                    {/* students in group */}
+                                    {visibleStudents.map((s) => {
+                                        const sid = studentIdOf(s);
+                                        const active = sid ? isStudentSelected(sid) : false;
+                                        return (
+                                            <ItemCard
+                                                key={`student-${sid}`}
+                                                title={studentLabel(s)}
+                                                selectedShift={false}
+                                                subtitle={safeStr(s?.email) || safeStr(s?.class_name)}
+                                                selected={active}
+                                                onClick={() => toggleStudent(s)}
+                                                active={active}
+                                            />
+                                        );
+                                    })}
+                                </RectangleGroup>
+                            );
+                        }}
+                    />
+                </div>
+            </PageLeft>
+            <PageRight>
+                {/* selected recipients list */}
+                {/* RIGHT: tabs */}
+                <div style={styles.rightListWrap}>
+                    <TabSwitcher
+                        style={{height: "100%", minHeight: 0}}
+                        value={rightTab}
+                        onChange={setRightTab}
+                        tabs={[
+                            {key: "send", label: "Assignees"},
+                            {key: "preview", label: "Preview"},
+                        ]}
+                        renderContent={(key) => {
+                            if (key === "preview") {
                                 return (
-                                    <DynamicList
-                                        ariaLabel="Selected recipients"
-                                        items={[{key: "selected"}]}
-                                        renderItem={() => {
-                                            const hasAnything =
-                                                selectedSummary.selectedClassBlocks.length > 0 ||
-                                                selectedSummary.selectedIndividuals.length > 0;
+                                    <div style={{ flex: "1 1 auto", minHeight: 0, height: "100%", display: "flex" }}>
+                                        <SharePreviewList tasks={tasks} style={{ flex: "1 1 auto", minHeight: 0, height: "100%" }} />
+                                    </div>
+                                );
+                            }
 
-                                            return (
-                                                <RectangleGroup
-                                                    title={
-                                                        hasAnything
-                                                            ? `Assign to ${selectedSummary.totalSelectedStudents} student${
-                                                                selectedSummary.totalSelectedStudents > 1 ? "s" : ""
-                                                            }`
-                                                            : "Assign to"
-                                                    }
-                                                >
-                                                    {!hasAnything && (
-                                                        <div style={{padding: 12, opacity: 0.65}}>
-                                                            No assignees selected yet.
-                                                        </div>
-                                                    )}
+                            return (
+                                <DynamicList
+                                    ariaLabel="Selected recipients"
+                                    items={[{key: "selected"}]}
+                                    renderItem={() => {
+                                        const hasAnything =
+                                            selectedSummary.selectedClassBlocks.length > 0 ||
+                                            selectedSummary.selectedIndividuals.length > 0;
 
-                                                    {selectedSummary.selectedClassBlocks.map((c) => (
+                                        return (
+                                            <RectangleGroup
+                                                title={
+                                                    hasAnything
+                                                        ? `Assign to ${selectedSummary.totalSelectedStudents} student${
+                                                            selectedSummary.totalSelectedStudents > 1 ? "s" : ""
+                                                        }`
+                                                        : "Assign to"
+                                                }
+                                            >
+                                                {!hasAnything && (
+                                                    <div style={{padding: 12, opacity: 0.65}}>
+                                                        No assignees selected yet.
+                                                    </div>
+                                                )}
+
+                                                {selectedSummary.selectedClassBlocks.map((c) => (
+                                                    <ItemCard
+                                                        selectedShift={false}
+                                                        key={`sel-class-${c.classId}`}
+                                                        title={c.title}
+                                                        selected
+                                                        subtitle={`Whole class • ${c.count} students`}
+                                                        rightText={"Selected"}
+                                                        onClick={() => toggleWholeClass(c.studentsAll)}
+                                                        active
+                                                    />
+                                                ))}
+
+                                                {selectedSummary.selectedIndividuals.map((s) => {
+                                                    const sid = studentIdOf(s);
+                                                    return (
                                                         <ItemCard
-                                                            selectedShift={false}
-                                                            key={`sel-class-${c.classId}`}
-                                                            title={c.title}
                                                             selected
-                                                            subtitle={`Whole class • ${c.count} students`}
+                                                            selectedShift={false}
+                                                            key={`sel-student-${sid}`}
+                                                            title={studentLabel(s)}
+                                                            subtitle={
+                                                                safeStr(s?.class_name)
+                                                                    ? `Class: ${safeStr(s?.class_name)}`
+                                                                    : safeStr(s?.email)
+                                                            }
                                                             rightText={"Selected"}
-                                                            onClick={() => toggleWholeClass(c.studentsAll)}
+                                                            onClick={() => toggleStudent(s)}
                                                             active
                                                         />
-                                                    ))}
-
-                                                    {selectedSummary.selectedIndividuals.map((s) => {
-                                                        const sid = studentIdOf(s);
-                                                        return (
-                                                            <ItemCard
-                                                                selected
-                                                                selectedShift={false}
-                                                                key={`sel-student-${sid}`}
-                                                                title={studentLabel(s)}
-                                                                subtitle={
-                                                                    safeStr(s?.class_name)
-                                                                        ? `Class: ${safeStr(s?.class_name)}`
-                                                                        : safeStr(s?.email)
-                                                                }
-                                                                rightText={"Selected"}
-                                                                onClick={() => toggleStudent(s)}
-                                                                active
-                                                            />
-                                                        );
-                                                    })}
-                                                </RectangleGroup>
-                                            );
-                                        }}
-                                    />
-                                );
-                            }}
-                        />
-                    </div>
-
-                    <div style={{...styles.footer, ...styles.footerInner}}>
-                        <div style={styles.footerBtns}>
-                            <AwesomeActionButton
-                                size="regular"
-                                variant={"ghost"}
-                                title={"Copy share link"}
-                                onClick={() => {
-                                    // stub (no clipboard yet)
-                                    // later: navigator.clipboard.writeText(`${window.location.origin}/.../${taskSetId}`)
-                                }}
-                            >
-                                Go to assignment list
-                            </AwesomeActionButton>
-
-                            <AwesomeActionButton
-                                style={{
-                                    ...showByCondition(primaryButtonText), // ✅ visible if anything changed (and title not empty)
-                                }}
-                                size="regular"
-                                variant={"ghost"}
-                                disabled={!showPrimaryButton}
-                                title={primaryButtonText}
-                                onClick={() => {
-                                    // stub
-                                    // later: if hasAnySelected -> assign/send; else -> save title only
-                                }}
-                            >
-                                {primaryButtonText}
-                            </AwesomeActionButton>
-
-                        </div>
-                    </div>
+                                                    );
+                                                })}
+                                            </RectangleGroup>
+                                        );
+                                    }}
+                                />
+                            );
+                        }}
+                    />
                 </div>
-            </div>
+
+                <FooterNextButtons>
+                    <AwesomeActionButton
+                        size="regular"
+                        variant={"ghost"}
+                        title={"Copy share link"}
+                        onClick={() => {
+                            // stub (no clipboard yet)
+                            // later: navigator.clipboard.writeText(`${window.location.origin}/.../${taskSetId}`)
+                        }}
+                    >
+                        Go to assignment list
+                    </AwesomeActionButton>
+
+                    <AwesomeActionButton
+                        style={{
+                            ...showByCondition(primaryButtonText), // ✅ visible if anything changed (and title not empty)
+                        }}
+                        size="regular"
+                        variant={"ghost"}
+                        disabled={!showPrimaryButton}
+                        title={primaryButtonText}
+                        onClick={() => {
+                            // stub
+                            // later: if hasAnySelected -> assign/send; else -> save title only
+                        }}
+                    >
+                        {primaryButtonText}
+                    </AwesomeActionButton>
+                </FooterNextButtons>
+            </PageRight>
         </Page>
     );
 }
