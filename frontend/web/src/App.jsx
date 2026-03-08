@@ -122,7 +122,7 @@ import LandingCrossword from "./components/pages/LandingCrossword.jsx";
 import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
 import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
 
-export const theme = {
+export const legacyGlobalStyling = {
     bg: "#fff3df",
     accent: "#ff6138",
     accentDark: "#d74e2a",
@@ -131,26 +131,15 @@ export const theme = {
     blue: "#3a6ea5",
     text: "#3a2a1d",
     muted: "#a47856",
+    bad: "#ef476f",
+    warn: "#ffd166",
+    good: "#4ba36e",
     radius: 20,
 };
 
 export default function App() {
     const ruleTheme = useMemo(
-        () => ({
-            bg: "#fff3df",
-            card: "#fffdf8",
-            accent: "#ff6138",
-            accentDark: "#d74e2a",
-            green: "#4ba36e",
-            greenDark: "#2d6f48",
-            blue: "#3a6ea5",
-            text: "#3a2a1d",
-            muted: "#a47856",
-            bad: "#ef476f",
-            warn: "#ffd166",
-            good: "#4ba36e",
-            radius: 20,
-        }),
+        () => (legacyGlobalStyling),
         []
     );
 
@@ -176,15 +165,15 @@ export default function App() {
             <SyncOnRouteChange />
             <Routes>
                 {/* Landing pages */}
-                <Route path="/welcome" element={<GoodLangSchoolsLanding2 theme={theme} />} />
-                <Route path="/greetings" element={<LandingPage3 theme={theme} />} />
-                <Route path="/hello" element={<LandingPageTeacher theme={theme} />} />
-                <Route path="/marathon" element={<LandingPageMarathon theme={theme} />} />
+                <Route path="/welcome" element={<GoodLangSchoolsLanding2 theme={legacyGlobalStyling} />} />
+                <Route path="/greetings" element={<LandingPage3 theme={legacyGlobalStyling} />} />
+                <Route path="/hello" element={<LandingPageTeacher theme={legacyGlobalStyling} />} />
+                <Route path="/marathon" element={<LandingPageMarathon theme={legacyGlobalStyling} />} />
 
                 {/* Core pages */}
-                <Route path="/" element={<HomePage theme={theme} />} />
-                <Route path="/crossword" element={<LandingCrossword theme={theme} />} />
-                <Route path="/analytics" element={<AnalyticsPage theme={theme} />} />
+                <Route path="/" element={<HomePage theme={legacyGlobalStyling} />} />
+                <Route path="/crossword" element={<LandingCrossword theme={legacyGlobalStyling} />} />
+                <Route path="/analytics" element={<AnalyticsPage theme={legacyGlobalStyling} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />
                 <Route path="/payment/cancel" element={<PaymentCancel />} />
 
