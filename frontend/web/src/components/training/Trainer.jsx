@@ -18,6 +18,7 @@ import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
 import {marathonService} from "../../services/marathonService.js";
+import LimitModal from "../subscription/LimitModal.jsx";
 
 export default function Trainer({
                                     theme,
@@ -790,21 +791,21 @@ export default function Trainer({
                 weakRules={weakRules}
             />
 
-            {/*<LimitModal*/}
-            {/*    waitTimeSeconds={waitTimeSeconds}*/}
-            {/*    isLimitReached={true}*/}
-            {/*    theme={theme}*/}
-            {/*    open={limitModalOpen}*/}
-            {/*    onClose={() => setLimitModalOpen(false)}*/}
-            {/*/>*/}
-
-            <MarathonInfoModal
+            <LimitModal
+                waitTimeSeconds={waitTimeSeconds}
+                isLimitReached={true}
+                theme={theme}
                 open={limitModalOpen}
                 onClose={() => setLimitModalOpen(false)}
-                theme={theme}
-                account={account}               // from callAccountInfoApi()
-                ruleIds={[]}         // exactly 7 items
             />
+
+            {/*<MarathonInfoModal*/}
+            {/*    open={limitModalOpen}*/}
+            {/*    onClose={() => setLimitModalOpen(false)}*/}
+            {/*    theme={theme}*/}
+            {/*    account={account}               // from callAccountInfoApi()*/}
+            {/*    ruleIds={[]}         // exactly 7 items*/}
+            {/*/>*/}
 
             {cookieOpen && (
                 <CookieConsentModal

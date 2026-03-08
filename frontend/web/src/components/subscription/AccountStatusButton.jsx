@@ -223,29 +223,29 @@ export default function AccountStatusButton({ theme }) {
             >
                 {account?.status === "paid" && "Моя підписка"}
                 {account?.status === "attention" && "Підписка (увага)"}
-                {account?.status === "free" && account?.email && "Марафон"}
-                {account?.status === "free" && !account?.email && "Увійти"}
+                {account?.status === "free" && account?.email && "Хочу більше практики"}
+                {account?.status === "free" && !account?.email && "Підписка / Увійти"}
             </div>
 
 
             {
-                // account && <LimitModal
-                //     featurePdf={localStorage.getItem("teacher") === "true"}
-                //     subscribeIntent={subscribeIntent}
-                //     accountInfo={account}
-                //     isLimitReached={false}
-                //     theme={theme}
-                //     open={limitModalOpen}
-                //     onClose={() => setLimitModalOpen(false)}
-                // />
-
-                account && <MarathonInfoModal
+                account && <LimitModal
+                    featurePdf={localStorage.getItem("teacher") === "true"}
+                    subscribeIntent={subscribeIntent}
+                    accountInfo={account}
+                    isLimitReached={false}
+                    theme={theme}
                     open={limitModalOpen}
                     onClose={() => setLimitModalOpen(false)}
-                    theme={theme}
-                    account={account}               // from callAccountInfoApi()
-                    ruleIds={[]}         // exactly 7 items
                 />
+
+                // account && <MarathonInfoModal
+                //     open={limitModalOpen}
+                //     onClose={() => setLimitModalOpen(false)}
+                //     theme={theme}
+                //     account={account}               // from callAccountInfoApi()
+                //     ruleIds={[]}         // exactly 7 items
+                // />
             }
 
             {

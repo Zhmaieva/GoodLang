@@ -232,7 +232,7 @@ async function selectEligibleRecipients({ pool, letterId, batchSize = 50 }) {
               AND COALESCE(a.status, 'free') <> 'paid'
 
               -- ✅ registered at least 12h ago AND not today (previous day)
-              AND a.created_at <= (NOW() - INTERVAL '12 hours')
+              AND a.created_at <= (NOW() - INTERVAL '7 days')
               AND a.created_at < DATE_TRUNC('day', NOW())
 
 --               -- ✅ account age <= 5 days

@@ -104,7 +104,7 @@ export default function TaskCard({
 
     const isLockedNow = locked && secondsLeft > 0;
     const buttonText = isLockedNow
-        ? `Почни марафон або почекай ${formatTime(secondsLeft)}`
+        ? `Придбай підписку або почекай ${formatTime(secondsLeft)}`
         : mainBtnText;
 
     const modeWrapDesktopBehavior = useMemo(() => {

@@ -567,7 +567,7 @@ export default function LimitModal({
                                     width: "100%",
                                 }}
                             >
-                                {loading ? "Стягнення…" : "Хочу марафон"}
+                                {loading ? "Стягнення…" : "Хочу підписку"}
                             </button>
 
                                 <button
@@ -603,25 +603,25 @@ export default function LimitModal({
                                 </button>
                             </div>
 
-                            {/*{(!account?.email) && !featurePdf && (*/}
-                            {/*    <div*/}
-                            {/*        style={{*/}
-                            {/*            marginLeft: 0,*/}
-                            {/*            marginTop: 12,*/}
-                            {/*            marginBottom: 0,*/}
-                            {/*            fontSize: "0.95rem",*/}
-                            {/*            fontWeight: 700,*/}
-                            {/*            color: theme.text,*/}
-                            {/*            letterSpacing: "0.5px",*/}
-                            {/*            width: "100%",*/}
-                            {/*            opacity: 0.5,*/}
-                            {/*            display: "inline-block",*/}
-                            {/*            textAlign: "center"*/}
-                            {/*        }}*/}
-                            {/*    >*/}
-                            {/*        На 60% більше завдань щодня для зареєстрованих користувачів*/}
-                            {/*    </div>*/}
-                            {/*)}*/}
+                            {(!account?.email) && !featurePdf && (
+                                <div
+                                    style={{
+                                        marginLeft: 0,
+                                        marginTop: 12,
+                                        marginBottom: 0,
+                                        fontSize: "0.95rem",
+                                        fontWeight: 700,
+                                        color: theme.text,
+                                        letterSpacing: "0.5px",
+                                        width: "100%",
+                                        opacity: 0.5,
+                                        display: "inline-block",
+                                        textAlign: "center"
+                                    }}
+                                >
+                                    На 60% більше завдань щодня для зареєстрованих користувачів
+                                </div>
+                            )}
                         </div>
 
                         <div
