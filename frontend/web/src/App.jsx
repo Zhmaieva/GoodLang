@@ -172,6 +172,7 @@ export default function App() {
 
                 {/* Core pages */}
                 <Route path="/" element={<HomePage theme={legacyGlobalStyling} />} />
+                <Route path="/trainer" element={<HomePage theme={legacyGlobalStyling} />} />
                 <Route path="/crossword" element={<LandingCrossword theme={legacyGlobalStyling} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={legacyGlobalStyling} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />
