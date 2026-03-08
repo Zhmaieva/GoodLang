@@ -45,7 +45,7 @@ export default function LandingCrossword({theme}) {
         const f = String(qs.get("filename") ?? "").trim();
 
         if (!c || !f) {
-            navigate("/", { replace: true });
+            navigate("/trainer", { replace: true });
             return;
         }
 

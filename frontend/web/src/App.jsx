@@ -121,6 +121,7 @@ import GoodLangLandingTeaStyleThemed from "./components/pages/LandingPage2.jsx";
 import LandingCrossword from "./components/pages/LandingCrossword.jsx";
 import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
 import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
+import {RootRedirect} from "./components/routing/RootRedirect.jsx";
 
 export const legacyGlobalStyling = {
     bg: "#fff3df",

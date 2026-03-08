@@ -382,7 +382,7 @@ export async function runPromoRegularTick({
         if (promo.reused) reusedPromo++;
         else createdPromo++;
 
-        const subscribeUrl = `${process.env.FRONTEND_URL}?subscribe=true&code=${promo.promoCode}`;
+        const subscribeUrl = `${process.env.FRONTEND_URL}/trainer?subscribe=true&code=${promo.promoCode}`;
 
         const unsubscribeUrl =
             r.accountId

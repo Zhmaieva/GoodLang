@@ -52,7 +52,7 @@ export default function LandingPage3({theme}) {
         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
 
         setTimeout(() => {
-            navigate("/");
+            navigate("/trainer");
         }, 200);
     }
 

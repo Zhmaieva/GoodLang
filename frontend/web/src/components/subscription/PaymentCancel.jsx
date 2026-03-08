@@ -51,7 +51,7 @@ export default function PaymentCancel() {
                         fontWeight: 700,
                         width: "100%",
                         opacity: 1
-                    }} onClick={() => navigate("/")}>
+                    }} onClick={() => navigate("/trainer")}>
                         Повернутися на головну
                     </button>
                 </div>

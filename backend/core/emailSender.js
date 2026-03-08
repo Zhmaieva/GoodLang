@@ -110,7 +110,7 @@ function pluralizeHours(n) {
  * @param {Date} expiresAt - expiration datetime
  */
 export function sendPromoEmail(to, code, expiresAt) {
-    const SUBSCRIBE_URL = `${process.env.FRONTEND_URL}?subscribe=true&code=${code}`;
+    const SUBSCRIBE_URL = `${process.env.FRONTEND_URL}/trainer?subscribe=true&code=${code}`;
 
     const now = Date.now();
     const expiresMs = expiresAt instanceof Date ? expiresAt.getTime() : Date.parse(expiresAt);
