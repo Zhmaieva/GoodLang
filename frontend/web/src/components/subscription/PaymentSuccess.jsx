@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import {logoStyle} from "./LimitModal.jsx";
-import {theme} from "../../App.jsx";
+import {legacyGlobalStyling} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
 import {syncPrevAccountInfoToLS} from "../../services/marathonService.js";
 import {trackMetaEvent} from "../../services/gaService.js";
@@ -66,7 +66,7 @@ export default function PaymentSuccess() {
         fontSize: "clamp(0.9rem, 3.5vw, 1rem)",
         lineHeight: 1,
         borderRadius: 999,
-        background: theme.accent,
+        background: legacyGlobalStyling.accent,
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
@@ -97,7 +97,7 @@ export default function PaymentSuccess() {
                             textAlign: "left",
                             marginBottom: 0,
                             marginTop: 0,
-                            color: theme.text,
+                            color: legacyGlobalStyling.text,
                             fontSize: "18pt",
                             fontWeight: 800
                         }}>
@@ -108,7 +108,7 @@ export default function PaymentSuccess() {
                             marginBottom: 16,
                             marginTop: 8,
                             marginLeft: 0,
-                            color: theme.text,
+                            color: legacyGlobalStyling.text,
                             fontSize: "16px",
                             fontWeight: 500,
                             textAlign: "left",
@@ -129,13 +129,13 @@ export default function PaymentSuccess() {
                         padding: 0,
                         margin: 0,
                         lineHeight: "1.6",
-                        color: theme.text,
+                        color: legacyGlobalStyling.text,
                         fontSize: "16px",
                         fontWeight: 500
                     }}>
                         {benefits.map((txt, i) => (
                             <li key={i}>
-                                <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
+                                <span style={{marginRight: 8, color: legacyGlobalStyling.accent, fontWeight: 700}}>✓</span>
                                 {txt}
                             </li>
                         ))}

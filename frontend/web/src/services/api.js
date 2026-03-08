@@ -358,6 +358,21 @@ export async function callSendCodeApi({ email }) {
     return data;
 }
 
+export async function callSendInquiry({ email }) {
+    try {
+        await fetch(`${API_BASE}/accounts/inquiry`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                'Authorization': `Bearer ${await getToken()}`,
+            },
+            body: JSON.stringify({ email }),
+        });
+    } catch (e) {
+        logError(e);
+    }
+}
+
 export async function callVerifyCodeApi({ email, code, termsAccepted = false, teacher = false }) {
     const isTeacher = localStorage.getItem("teacher") === "true";
 

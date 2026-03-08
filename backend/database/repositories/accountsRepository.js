@@ -382,6 +382,41 @@ export async function sendVerificationCode(email) {
 };
 
 /**
+ * Add inquiry.
+ * Does NOT create sign-in links.
+ */
+export async function addInquiry(email) {
+    // 0) Basic validation
+    if (typeof email !== "string") return;
+
+    if (email?.length === 0 || email.length > 40)
+        return {};
+
+    if (email.indexOf('@') < 0)
+        return {};
+
+    if (email.split('@').length > 2)
+        return {};
+
+    const normalizedEmail = email.trim().toLowerCase();
+
+    const dotParts = email.split('.');
+    const lastDotPart = dotParts[dotParts.length - 1];
+    if (lastDotPart.indexOf('@') >= 0)
+        return {};
+
+    const ins = await pool.query(
+        `
+      INSERT INTO inquiries (email)
+      VALUES ($1)
+      ON CONFLICT (email) DO NOTHING
+      RETURNING email
+    `,
+        [normalizedEmail]
+    );
+}
+
+/**
  * Send promo code email.
  * Soft-saves email to inquiries.
  * Does NOT create sign-in links.
@@ -404,7 +439,7 @@ export async function sendPromoCode(accountId, email) {
     if (lastDotPart.indexOf('@') >= 0)
         return {};
 
-    // const normalizedEmail = email.trim().toLowerCase();
+    const normalizedEmail = email.trim().toLowerCase();
     // const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // if (!EMAIL_REGEX.test(normalizedEmail)) return;
 

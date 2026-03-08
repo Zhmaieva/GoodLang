@@ -48,7 +48,7 @@ export default function SyncOnRouteChange() {
                         && !location.pathname.includes('/student')
                         && !location.pathname.includes('/school')
                         && !shouldOpenSubscribe) {
-                        navigate("/welcome", { replace: true });
+                        navigate("/greetings", { replace: true });
                         return;
                     }
                 }

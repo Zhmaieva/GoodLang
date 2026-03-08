@@ -1,4 +1,5 @@
 import {
+    addInquiry,
     createAccount,
     getAccountInfo, sendPromoCode,
     sendVerificationCode, unsubscribeByToken, updateAccountProfile,
@@ -116,6 +117,19 @@ export const accountsController = {
                 if (!email) return res.status(400).json({ error: "Email required" });
 
                 await sendVerificationCode(email.toLowerCase().trim());
+
+                res.json({ message: "Verification code sent" });
+            } catch (e) {
+                next(e);
+            }
+        });
+
+        app.post(`/accounts/inquiry`, authMiddleware, async (req, res, next) => {
+            try {
+                const { email } = req.body;
+                if (!email) return res.status(400).json({ error: "Email required" });
+
+                await addInquiry(email.toLowerCase().trim());
 
                 res.json({ message: "Verification code sent" });
             } catch (e) {

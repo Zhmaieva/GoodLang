@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import {logoStyle} from "./LimitModal.jsx";
-import {theme} from "../../App.jsx";
+import {legacyGlobalStyling} from "../../App.jsx";
 import {callAccountVerifyApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 
@@ -23,28 +23,28 @@ export default function PaymentCancel() {
                     textAlign: "center",
                     marginBottom: 0,
                     marginTop: 0,
-                    color: theme.text,
+                    color: legacyGlobalStyling.text,
                     fontSize: "18pt",
                     fontWeight: 800}}>Ой, помилка :(</h1>
 
                 <p style={{
-                    color: theme.text,
+                    color: legacyGlobalStyling.text,
                     fontSize: "16px",
                     fontWeight: 500
                 }}>
 
                     Напиши до <a style={{
-                        color: theme.accent,
+                        color: legacyGlobalStyling.accent,
                         textDecoration: "none",
                     }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a> і ми допоможемо.
                 </p>
 
                 <div style={{display: "flex", justifyContent: "center"}}>
                     <button style={{
-                        background: theme.accent,
+                        background: legacyGlobalStyling.accent,
                         color: "white",
                         padding: "10px 20px",
-                        borderRadius: theme.radius,
+                        borderRadius: legacyGlobalStyling.radius,
                         border: "none",
                         cursor: "pointer",
                         fontSize: "1rem",

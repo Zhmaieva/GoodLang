@@ -1,4 +1,5 @@
 import React, { useMemo, useRef, useState } from "react";
+import {callSendInquiry} from "../../services/api.js";
 
 // Uses /public/handPict.png
 // In Vite/CRA, "/handPict.png" resolves to public asset.
@@ -124,11 +125,12 @@ export default function GoodLangSchoolsLanding2() {
         waitlistRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         const v = String(email || "").trim();
         if (!v.includes("@")) return;
         // Hook your API here
+        await callSendInquiry({email: v});
         setSent(true);
     };
 
@@ -172,8 +174,7 @@ export default function GoodLangSchoolsLanding2() {
                 id="top"
                 bg={bgByIndex(0)}
                 nextBg={bgByIndex(1)}
-                title="ESL teaching at scale, transparent and frugal"
-                kicker="Scale • Save • Retain"
+                title="Tools that help ESL schools scale"
                 align="center"
                 sectionStyle={{
                     minHeight: "60vh",
@@ -737,7 +738,7 @@ html, body, #root, .gl-page {
     left: -5vw;
     top: 100vh;
     height: 500px;
-    z-index: 1;
+    z-index: 9;
     rotate: 90deg;
   }
   

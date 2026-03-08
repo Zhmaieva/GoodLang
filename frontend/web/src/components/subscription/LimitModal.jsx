@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect, useCallback} from "react";
 import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
-import {theme} from "../../App.jsx";
+import {legacyGlobalStyling} from "../../App.jsx";
 import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
@@ -22,14 +22,14 @@ export const logoStyle = (size) => ({
     width: size,
     height: size,
     borderRadius: 12,
-    background: theme.accent,
+    background: legacyGlobalStyling.accent,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     color: "#fff",
     fontWeight: 800,
     fontSize: size * 0.45,
-    boxShadow: `0 2px 0 ${theme.accentDark}`,
+    boxShadow: `0 2px 0 ${legacyGlobalStyling.accentDark}`,
 });
 
 export default function LimitModal({
