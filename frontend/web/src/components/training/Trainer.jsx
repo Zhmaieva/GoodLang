@@ -19,6 +19,7 @@ import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/set
 import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
 import {marathonService} from "../../services/marathonService.js";
 import LimitModal from "../subscription/LimitModal.jsx";
+import {localizationService} from "../../localization/localizationService.js";
 
 export default function Trainer({
                                     theme,
@@ -108,6 +109,7 @@ export default function Trainer({
     const [difficulty, setDifficulty] = useState(() => null);
 
     const [textToTranslate, setTextToTranslate] = useState("");
+    const [textToTranslateOriginal, setTextToTranslateOriginal] = useState("");
     const [rules, setRules] = useState([]);
 
     const [answer, setAnswer] = useState("");
@@ -142,6 +144,7 @@ export default function Trainer({
     // Preloading state (supports gaps too)
     // -----------------------------
     const [nextTextToTranslate, setNextTextToTranslate] = useState("");
+    const [nextTextToTranslateOriginal, setNextTextToTranslateOriginal] = useState("");
     const [nextRules, setNextRules] = useState([]);
     const [nextHint, setNextHint] = useState(null);
     const [nextTaskType, setNextTaskType] = useState(0); // 0 translation, 1 gaps
@@ -214,6 +217,7 @@ export default function Trainer({
     function resetCurrentTaskOnly() {
         setTaskType("translate");
         setTextToTranslate("");
+        setTextToTranslateOriginal("");
         setGapSentence("");
         setGapOptions([]);
         setGapSelected(null);
@@ -251,6 +255,7 @@ export default function Trainer({
         // current task UI
         setTaskType("translate");
         setTextToTranslate("");
+        setTextToTranslateOriginal("");
         setGapSentence("");
         setGapOptions([]);
         setGapSelected(null);
@@ -263,6 +268,7 @@ export default function Trainer({
 
         // preload
         setNextTextToTranslate("");
+        setNextTextToTranslateOriginal("");
         setNextRules([]);
         setNextHint(null);
         setNextTaskType(0);
@@ -277,6 +283,7 @@ export default function Trainer({
     function applyTranslationTask(data) {
         setTaskType("translate");
         setTextToTranslate(data.textToTranslate || "");
+        setTextToTranslateOriginal(data.textToTranslateOriginal || "");
         setTaskText(data.textToTranslate || "—");
         setTaskHint(data.hint || null);
         setHint("Порада: переклади і натисни «Перевірити»");
@@ -334,6 +341,7 @@ export default function Trainer({
                 skip,
                 taskType: "translations",
                 use_same_task_type: true,
+                userLocale: localizationService.getLocale()
             });
         }
 
@@ -377,6 +385,7 @@ export default function Trainer({
             skip,
             task_type,
             use_same_task_type,
+            userLocale: localizationService.getLocale(),
         });
 
         if (!result.allowed) {
@@ -433,6 +442,7 @@ export default function Trainer({
                     applyTranslationTask({
                         taskType: 0,
                         textToTranslate: nextTextToTranslate,
+                        textToTranslateOriginal: nextTextToTranslateOriginal,
                         rules: nextRules,
                         hint: nextHint,
                     });
@@ -440,6 +450,7 @@ export default function Trainer({
 
                 // consume preload
                 setNextTextToTranslate("");
+                setNextTextToTranslateOriginal("");
                 setNextRules([]);
                 setNextHint(null);
                 setNextTaskType(0);
@@ -486,12 +497,14 @@ export default function Trainer({
             const data = await callTranslateAPI({
                 freeTraining,
                 textToTranslate: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
+                textToTranslateOriginal: taskType === "gap" ? (gapSentence || "") : (textToTranslateOriginal || ""),
                 translation: userAns,
                 rules,
                 seed,
                 skip,
                 task_type: currentTaskTypeParam,
                 use_same_task_type: getUseSameTaskType(),
+                userLocale: localizationService.getLocale(),
             });
 
             if (!data.isSuccess) {
@@ -527,11 +540,10 @@ export default function Trainer({
                 setCorrectAnswer("");
             } else {
                 const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
-                setHint("Не зовсім вірно." + tip);
+                setHint(tip);
                 setCorrectAnswer(data.correctAnswer || "");
             }
 
-            // ✅ calibration: force next task type (ignore server)
             if (isCalibrationNow()) {
                 const forced = data.isAnswerCorrect ? 0 : 1;
                 setCalibrationNextTaskType(!gapsAvailable ? 0 : forced);
@@ -561,6 +573,7 @@ export default function Trainer({
             // During calibration you already prevent preloading below; kept as-is.
             if (!(await marathonService.isMarathonView()) && freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
+                setNextTextToTranslateOriginal(data.textToTranslateOriginal || "");
                 setNextRules(data.rules || []);
                 setNextHint(data.hint || null);
                 setNextTaskType(serverNextType);
@@ -568,6 +581,7 @@ export default function Trainer({
             } else {
                 // clear preload (either calibration or we don't preload here)
                 setNextTextToTranslate("");
+                setNextTextToTranslateOriginal("");
                 setNextRules([]);
                 setNextHint(null);
                 setNextTaskType(0);
@@ -678,20 +692,20 @@ export default function Trainer({
         await loadNewTask(difficulty, {overrideTaskType: forced});
     }
 
-    // -----------------------------
-    // Initial load when nextLevel changes
-    // -----------------------------
+    const loadedLevelRef = useRef(null);
+
     useEffect(() => {
-        if (nextLevel === level && !nextRule) return;
+        if (!nextLevel) return;
 
-        if (level !== nextLevel) {
-            invalidateBothTasks();
-        }
+        // skip if same level already initialized
+        if (loadedLevelRef.current === nextLevel && !nextRule) return;
 
+        loadedLevelRef.current = nextLevel;
+
+        invalidateBothTasks();
         setLevel(nextLevel);
-
-        initCalibration().then()
-    }, [nextLevel]);
+        initCalibration().then();
+    }, [nextLevel, nextRule]);
 
     const initCalibration = async () => {
         const diff = randomDifficulty(nextLevel);
@@ -764,7 +778,9 @@ export default function Trainer({
                 answer={answer}
                 setAnswer={setAnswer}
                 isInputDisabled={loading || mode === "next"}
-                mainBtnText={mode === "check" ? "Перевірити" : "Наступне речення"}
+                mainBtnText={mode === "check"
+                    ? 'Check answer'
+                    : 'Next sentence'}
                 onMainButtonClick={onMainButtonClick}
                 loading={loading}
                 textareaRef={textareaRef}

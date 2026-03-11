@@ -12,6 +12,7 @@ import { ensureAnalytics, trackMetaEvent, trackPageView } from "../../services/g
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
+import {localizationService} from "../../localization/localizationService.js";
 
 export default function TermsOfUseModal({
                                             ruleToDownload = null,
@@ -64,11 +65,17 @@ export default function TermsOfUseModal({
 
             localStorage.setItem("token", token);
 
+            const savedLocale = localizationService.getLocale();
+
             const newAccount = await callAccountInfoApi();
 
             if (oldAccount.email && oldAccount.status !== "free") {
                 localStorage.clear();
                 localStorage.setItem("token", token);
+
+                if (savedLocale) {
+                    localizationService.setLocale(savedLocale);
+                }
             }
 
             if (newAccount.status !== "free") {

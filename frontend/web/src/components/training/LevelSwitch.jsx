@@ -191,7 +191,7 @@ export default function LevelSwitch({
         color: "#fff",
         padding: "10px 12px",
         borderRadius: 12,
-        fontSize: 13,
+        fontSize: '1rem',
         fontWeight: 800,
         lineHeight: 1.25,
         width: 310,

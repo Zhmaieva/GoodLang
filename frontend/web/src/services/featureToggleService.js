@@ -3,7 +3,7 @@ export default class FeatureToggleService {
     toggle = (featureName, enabled) => localStorage.setItem(featureName, enabled.toString());
 
     FEATURE_NAME = {
-        LOCALIZATION: 'LOCALIZATION'
+        LOCALIZATION: 'FEATURE_LOCALIZATION'
     }
 }
 

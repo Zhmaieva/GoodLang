@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
     callAccountInfoApi,
-    callAccountVerifyApi,
+    callAccountVerifyApi, callCheckoutApi,
     callDataSyncApi,
     callSendCodeApi,
     callVerifyCodeApi
 } from "../../services/api.js";
 import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import { logoStyle } from "./LimitModal.jsx";
+import {getStripe, logoStyle} from "./LimitModal.jsx";
 import { useNavigate } from "react-router-dom";
 import { logError } from "../../services/logger.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
@@ -15,6 +15,8 @@ import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/s
 import { ensureAnalytics, trackMetaCustomEvent, trackPageView } from "../../services/gaService.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
 import {enableBodyScroll, disableBodyScroll} from 'body-scroll-lock';
+import {localizationService} from "../../localization/localizationService.js";
+import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 
 export default function LoginForm({
                                       theme,
@@ -311,45 +313,51 @@ export default function LoginForm({
 
             const newAccount = await callAccountInfoApi();
 
+            const savedLocale = localizationService.getLocale();
+
             if (oldAccount?.email && oldAccount?.status !== "free") {
                 localStorage.clear();
                 localStorage.setItem("token", token);
+
+                if (savedLocale) {
+                    localizationService.setLocale(savedLocale);
+                }
             }
 
             if (newAccount?.status !== "free")
                 await syncData();
 
-            // if (newAccount?.status === "free" && getPaymentIntent()) {
-            //     setPaymentIntent(false);
-            //     try {
-            //         setLoading(true);
-            //
-            //         const stripe = await getStripe();
-            //
-            //         const { clientSecret, isSuccess } = await callCheckoutApi();
-            //         if (!isSuccess) {
-            //             navigate("/payment/cancel");
-            //             setLoading(false);
-            //             return;
-            //         }
-            //
-            //         setIsPaying(true);
-            //
-            //         setTimeout(async () => {
-            //             if (!checkoutRef.current) {
-            //                 checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
-            //                 checkoutRef.current.mount("#embedded-checkout-container-login-form");
-            //             }
-            //
-            //             document.getElementById("embedded-checkout-container-login-form").style.display = "block";
-            //             setLoading(false);
-            //         }, 200);
-            //     } catch (err) {
-            //         console.error("Stripe error:", err);
-            //         setLoading(false);
-            //     }
-            //     return;
-            // }
+            if (newAccount?.status === "free" && getPaymentIntent()) {
+                setPaymentIntent(false);
+                try {
+                    setLoading(true);
+
+                    const stripe = await getStripe();
+
+                    const { clientSecret, isSuccess } = await callCheckoutApi();
+                    if (!isSuccess) {
+                        navigate("/payment/cancel");
+                        setLoading(false);
+                        return;
+                    }
+
+                    setIsPaying(true);
+
+                    setTimeout(async () => {
+                        if (!checkoutRef.current) {
+                            checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
+                            checkoutRef.current.mount("#embedded-checkout-container-login-form");
+                        }
+
+                        document.getElementById("embedded-checkout-container-login-form").style.display = "block";
+                        setLoading(false);
+                    }, 200);
+                } catch (err) {
+                    console.error("Stripe error:", err);
+                    setLoading(false);
+                }
+                return;
+            }
 
             if (!getCookieConsent()) {
                 setCookieOpen(true);
