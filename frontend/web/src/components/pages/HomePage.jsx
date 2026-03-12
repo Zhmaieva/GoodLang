@@ -28,7 +28,7 @@ export default function HomePage({ theme }) {
 
     // ✅ Info modal state (for unsubscribe)
     const [infoOpen, setInfoOpen] = useState(false);
-    const [infoTitle, setInfoTitle] = useState("Інформація");
+    const [infoTitle, setInfoTitle] = useState("Information");
     const [infoMessage, setInfoMessage] = useState("");
 
     // Responsive grid (container-based)
@@ -143,11 +143,11 @@ export default function HomePage({ theme }) {
             if (cancelled) return;
 
             if (res?.isSuccess) {
-                setInfoTitle("Готово");
-                setInfoMessage("Ми більше не турбуватимемо імейлами від GoodLang. Ми надсилатимемо тільки необхідні для роботи додатку повідомлення — наприклад, код входу");
+                setInfoTitle("Done");
+                setInfoMessage("We will no longer send you emails from GoodLang. You will only receive essential messages required for the app to work, such as login codes.");
             } else {
-                setInfoTitle("Ой...");
-                setInfoMessage("Сталася помилка. Напиши на goodlang.app@gmail.com i ми все виправимо.");
+                setInfoTitle("Oops...");
+                setInfoMessage("Something went wrong. Please contact us at goodlang.app@gmail.com and we will fix it.");
             }
 
             setInfoOpen(true);
@@ -156,8 +156,8 @@ export default function HomePage({ theme }) {
         runUnsubscribeFromUrl().catch(() => {
             // don't crash page if something unexpected happens
             if (!cancelled) {
-                setInfoTitle("Ой...");
-                setInfoMessage("Сталася помилка. Напиши на goodlang.app@gmail.com i ми все виправимо.");
+                setInfoTitle("Oops...");
+                setInfoMessage("Something went wrong. Please contact us at goodlang.app@gmail.com and we’ll fix it.");
                 setInfoOpen(true);
             }
         });
@@ -211,7 +211,7 @@ export default function HomePage({ theme }) {
                     theme={theme}
                     title={infoTitle}
                     message={infoMessage}
-                    buttonText="Добре"
+                    buttonText="OK"
                     onClose={() => setInfoOpen(false)}
                 />
             )}
@@ -239,7 +239,7 @@ export default function HomePage({ theme }) {
                                     style={weakRuleButtonStyle(hoveredAnalytics, true)}
                                     onClick={handleAnalyticsClick}
                                 >
-                                    {!isMobile ? "Список усіх правил →" : "Усі правила"}
+                                    {!isMobile ? "View all rules →" : "All rules"}
                                 </button>
                             }
 

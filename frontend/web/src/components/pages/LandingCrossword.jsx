@@ -570,16 +570,17 @@ html{ scroll-behavior: smooth; }
                 <div className="ctaInner">
                     <div className="ctaContent">
                         <h2 className="ctaTitle">
-                            Якщо вашим учням потрібна додаткова практика англійської <em>— GoodLang</em> ідеально підходить для самостійної роботи.
+                            If your students need extra English practice, <em>GoodLang</em> is perfect for independent
+                            learning.
                         </h2>
 
                         <p className="ctaSubtitle">
-                            Учні перекладають з української на англійську та одразу отримують фідбек.
+                            Students translate from Ukrainian to English and receive instant feedback.
                         </p>
 
                         <div className="ctaButtons">
                             <button onClick={startUsing} className="primaryBtn">
-                                Спробувати практику
+                                Try the practice
                             </button>
                         </div>
                     </div>
@@ -602,14 +603,14 @@ html{ scroll-behavior: smooth; }
                             await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
                         }}
                     >
-                        Умови використання і політика приватності
+                        Terms of Use and Privacy Policy
                     </div>
                 </div>
             </footer>
 
             {/* ✅ Terms modal (only if cookie isn't open) */}
             {touOpen && !cookieOpen && (
-                <TermsOfUseModal readOnly theme={theme} onClose={() => setTouOpen(false)} />
+                <TermsOfUseModal readOnly theme={theme} onClose={() => setTouOpen(false)}/>
             )}
 
             {/* ✅ Cookie modal (Tea-style conflict rule) */}

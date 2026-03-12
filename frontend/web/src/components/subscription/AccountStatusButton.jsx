@@ -221,10 +221,10 @@ export default function AccountStatusButton({ theme }) {
                 style={btnStyle}
                 onClick={handleClick}
             >
-                {account?.status === "paid" && "Моя підписка"}
-                {account?.status === "attention" && "Підписка (увага)"}
-                {account?.status === "free" && account?.email && "Хочу більше практики"}
-                {account?.status === "free" && !account?.email && "Підписка / Увійти"}
+                {account?.status === "paid" && "My subscription"}
+                {account?.status === "attention" && "Subscription (expiring)"}
+                {account?.status === "free" && account?.email && "Get more practice"}
+                {account?.status === "free" && !account?.email && "Subscribe / Sign in"}
             </div>
 
 

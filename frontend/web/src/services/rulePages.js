@@ -5397,77 +5397,67 @@ export const RULE_PAGE_REDUCED_RELATIVE_CLAUSES = {
 export const RULE_PAGE_COMPLEX_PREPOSITIONS = {
     id: "COMPLEX_PREPOSITIONS",
     title: "Complex prepositions (due to, thanks to, because of)",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що таке complex prepositions",
+            title: "What complex prepositions are",
             html:
-                "<strong>Complex prepositions</strong> — це <em>стійкі прийменникові фрази</em>, " +
-                "які складаються з двох або більше слів і працюють як один прийменник. " +
-                "Вони пояснюють <em>причину, позицію або обставини</em>.",
+                "<strong>Complex prepositions</strong> are <em>fixed prepositional phrases</em> " +
+                "that consist of two or more words but function as a single preposition. " +
+                "They explain <em>reason, position, or circumstances</em>.",
         },
         {
             type: "usage",
-            title: "Коли й як вживаємо",
+            title: "When and how we use them",
             badges: [
-                "⚠️ Причина (часто формально) → <strong>due to</strong>",
-                "😊 Позитивна причина → <strong>thanks to</strong>",
-                "🔹 Нейтральна причина → <strong>because of</strong>",
-                "📍 Місце / позиція → <strong>in front of, next to, on top of</strong>",
-                "🚫 Контраст → <strong>in spite of</strong>",
+                "⚠️ Cause (often formal) → <strong>due to</strong>",
+                "😊 Positive cause → <strong>thanks to</strong>",
+                "🔹 Neutral cause → <strong>because of</strong>",
+                "📍 Position / place → <strong>in front of, next to, on top of</strong>",
+                "🚫 Contrast → <strong>in spite of</strong>",
             ]
         },
         {
             type: "forms",
-            title: "Типові моделі",
-            headers: ["Прийменник", "Значення", "Приклад"],
+            title: "Common patterns",
+            headers: ["Preposition", "Meaning", "Example"],
             rows: [
                 [
                     "due to",
-                    "через (часто формально)",
+                    "cause (often formal)",
                     "The delay was due to bad weather.",
                 ],
                 [
                     "thanks to",
-                    "завдяки (позитив)",
+                    "positive cause",
                     "Thanks to her advice, we succeeded.",
                 ],
                 [
                     "because of",
-                    "через (нейтрально)",
+                    "neutral cause",
                     "The flight was cancelled because of fog.",
                 ],
                 [
                     "in spite of",
-                    "незважаючи на",
+                    "contrast",
                     "In spite of the rain, we went out.",
                 ],
             ],
         },
         {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["The match was cancelled due to the rain.", "Матч скасували через дощ."],
-                ["Thanks to your help, we finished on time.", "Завдяки твоїй допомозі ми встигли."],
-                ["In spite of the traffic, they arrived early.", "Незважаючи на затори, вони приїхали рано."],
-            ],
-        },
-        {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
                 "❌ <em>Because of he was tired</em> → ✅ <strong>because of being tired</strong>",
             ],
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Complex prepositions)",
+            title: "Mini trainer (Complex prepositions)",
         },
     ],
 };
-
 
 /* ============================
    DESPITE / IN SPITE OF + -ING
@@ -5475,31 +5465,31 @@ export const RULE_PAGE_COMPLEX_PREPOSITIONS = {
 export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
     id: "DESPITE_IN_SPITE_OF_ING",
     title: "Despite / in spite of + -ing",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що означають despite / in spite of",
+            title: "What despite / in spite of mean",
             html:
-                "<strong>Despite</strong> і <strong>in spite of</strong> означають <em>«незважаючи на»</em> " +
-                "і використовуються, щоб показати <em>контраст</em>: щось сталося всупереч обставинам.",
+                "<strong>Despite</strong> and <strong>in spite of</strong> mean <em>“although / regardless of”</em> " +
+                "and are used to show <em>contrast</em>: something happens even though the situation suggests otherwise.",
         },
         {
             type: "usage",
-            title: "Як вживаємо",
+            title: "How we use them",
             badges: [
-                "📌 Перед іменником → <strong>despite the rain</strong>",
-                "📌 Перед дієсловом → <strong>despite / in spite of + V-ing</strong>",
-                "🟰 <strong>Despite</strong> і <strong>in spite of</strong> мають однакове значення",
-                "✍️ <strong>Despite</strong> — трохи коротше й частіше вживається",
+                "📌 Before a noun → <strong>despite the rain</strong>",
+                "📌 Before a verb → <strong>despite / in spite of + V-ing</strong>",
+                "🟰 <strong>Despite</strong> and <strong>in spite of</strong> have the same meaning",
+                "✍️ <strong>Despite</strong> is slightly shorter and more commonly used",
             ],
             hint:
-                "Після <strong>despite / in spite of</strong> НЕ може стояти повне речення з підметом і присудком.",
+                "After <strong>despite / in spite of</strong> we cannot use a full clause with a subject and verb.",
         },
         {
             type: "forms",
-            title: "Форми",
-            headers: ["Конструкція", "Приклад"],
+            title: "Forms",
+            headers: ["Structure", "Example"],
             rows: [
                 [
                     "despite + noun",
@@ -5516,25 +5506,11 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
             ],
             hint:
                 "<strong>Despite</strong> ≠ <strong>despite of</strong> (❌). " +
-                "<strong>In spite of</strong> — завжди з <strong>of</strong>.",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                [
-                    "Despite feeling ill, she went to work.",
-                    "Незважаючи на те, що почувалася погано, вона пішла на роботу.",
-                ],
-                [
-                    "In spite of losing, they were happy.",
-                    "Незважаючи на поразку, вони були щасливі.",
-                ],
-            ],
+                "<strong>In spite of</strong> always includes <strong>of</strong>.",
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
                 "❌ <em>despite of the rain</em> → ✅ <strong>despite the rain</strong>",
                 "❌ <em>despite she was tired</em> → ✅ <strong>despite being tired</strong> / <strong>although she was tired</strong>",
@@ -5542,7 +5518,7 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Despite / In spite of)",
+            title: "Mini trainer (Despite / In spite of)",
         },
     ],
 };
@@ -5553,19 +5529,19 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
 export const RULE_PAGE_WOULD_RATHER_PREFER = {
     id: "WOULD_RATHER_PREFER",
     title: "Would rather / prefer",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що означають would rather / prefer",
+            title: "What would rather / prefer mean",
             html:
-                "<strong>Would rather</strong> і <strong>prefer</strong> використовуються, щоб говорити про <em>уподобання</em>, " +
-                "але мають <em>різні структури</em> та відтінки значення.",
+                "<strong>Would rather</strong> and <strong>prefer</strong> are used to talk about <em>preferences</em>, " +
+                "but they follow <em>different grammatical structures</em> and have slightly different usage.",
         },
         {
             type: "forms",
-            title: "Основні структури",
-            headers: ["Конструкція", "Структура", "Приклад"],
+            title: "Main structures",
+            headers: ["Construction", "Structure", "Example"],
             rows: [
                 [
                     "would rather (self)",
@@ -5573,7 +5549,7 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
                     "I’d rather stay at home.",
                 ],
                 [
-                    "would rather (other)",
+                    "would rather (other person)",
                     "would rather + subject + Past Simple",
                     "I’d rather you didn’t smoke here.",
                 ],
@@ -5594,21 +5570,12 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
                 ],
             ],
             hint:
-                "Після <strong>would rather</strong> ніколи не ставимо <em>to</em>. " +
-                "Після <strong>prefer</strong> можливі різні моделі.",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["I’d rather stay at home.", "Я краще залишуся вдома."],
-                ["I’d rather you didn’t smoke here.", "Я б волів, щоб ти тут не курив."],
-                ["I prefer coffee to tea.", "Я більше люблю каву, ніж чай."],
-            ],
+                "After <strong>would rather</strong> we never use <em>to</em>. " +
+                "After <strong>prefer</strong>, several structures are possible.",
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
                 "❌ <em>I’d rather you to go.</em> → ✅ <strong>I’d rather you went.</strong>",
                 "❌ <em>I’d rather stayed.</em> → ✅ <strong>I’d rather stay.</strong>",
@@ -5616,7 +5583,7 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Would rather / prefer)",
+            title: "Mini trainer (Would rather / prefer)",
         },
     ],
 };
@@ -5627,63 +5594,53 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
 export const RULE_PAGE_HAD_BETTER = {
     id: "HAD_BETTER",
     title: "Had better + verb",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що означає had better",
+            title: "What had better means",
             html:
-                "<strong>Had better</strong> використовується, щоб дати <em>сильну пораду або попередження</em>. " +
-                "Ідея така: <em>якщо цього не зробити, можливі негативні наслідки</em>.",
+                "<strong>Had better</strong> is used to give <em>strong advice or a warning</em>. " +
+                "The idea is that <em>negative consequences may happen if the advice is not followed</em>.",
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "When we use it",
             badges: [
-                "⚠️ Попередження → <strong>You’d better leave now.</strong>",
-                "⏰ Нагальна порада → <strong>We’d better hurry.</strong>",
-                "🚨 Потенційні наслідки (часто не сказані прямо)",
+                "⚠️ Warning → <strong>You’d better leave now.</strong>",
+                "⏰ Urgent advice → <strong>We’d better hurry.</strong>",
+                "🚨 Possible consequences (often implied)",
             ],
             hint:
-                "<strong>Had better</strong> звучить сильніше, ніж <em>should</em>, " +
-                "і може сприйматись як наполягання.",
+                "<strong>Had better</strong> sounds stronger than <em>should</em> and can feel like insistence.",
         },
         {
             type: "forms",
-            title: "Форми",
-            headers: ["Тип", "Структура", "Приклад"],
+            title: "Forms",
+            headers: ["Type", "Structure", "Example"],
             rows: [
                 [
-                    "Ствердження",
+                    "Affirmative",
                     "had better + V1",
                     "You had better tell the truth.",
                 ],
                 [
-                    "Заперечення",
+                    "Negative",
                     "had better not + V1",
                     "You’d better not be late.",
                 ],
                 [
-                    "Розмовна форма",
+                    "Spoken form",
                     "’d better + V1",
                     "We’d better call them.",
                 ],
             ],
             hint:
-                "Після <strong>had better</strong> завжди базова форма дієслова (V1), <em>без to</em>.",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["You’d better not be late.", "Краще не спізнюйся."],
-                ["He’d better see a doctor.", "Йому краще звернутися до лікаря."],
-                ["You had better back up your files.", "Тобі краще зробити резервну копію файлів."],
-            ],
+                "After <strong>had better</strong> we always use the base form of the verb (V1) <em>without to</em>.",
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
                 "❌ <em>had better to go</em> → ✅ <strong>had better go</strong>",
                 "❌ <em>had better went</em> → ✅ <strong>had better go</strong>"
@@ -5691,7 +5648,7 @@ export const RULE_PAGE_HAD_BETTER = {
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Had better)",
+            title: "Mini trainer (Had better)",
         },
     ],
 };
@@ -5702,72 +5659,63 @@ export const RULE_PAGE_HAD_BETTER = {
 export const RULE_PAGE_ADVANCED_MODALS_OF_DEDUCTION = {
     id: "ADVANCED_MODALS_OF_DEDUCTION",
     title: "Advanced modals of deduction",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Модальні дієслова для припущень",
+            title: "Modal verbs for deduction",
             html:
-                "<strong>Advanced modals of deduction</strong> використовуються, щоб висловити " +
-                "<em>логічні припущення</em> з різним ступенем впевненості про теперішнє або минуле.<br/>"
+                "<strong>Advanced modals of deduction</strong> are used to express " +
+                "<em>logical assumptions</em> with different levels of certainty about the present or the past.",
         },
         {
             type: "usage",
-            title: "Коли вживаємо",
+            title: "When we use them",
             badges: [
-                "🔍 Логічний висновок → <strong>must</strong>",
-                "🤔 Можливість → <strong>may / might / could</strong>",
-                "🚫 Неможливість → <strong>can’t</strong>",
-                "🕒 Для минулого → <strong>modal + have + V3</strong>",
+                "🔍 Logical conclusion → <strong>must</strong>",
+                "🤔 Possibility → <strong>may / might / could</strong>",
+                "🚫 Impossibility → <strong>can’t</strong>",
+                "🕒 For past deductions → <strong>modal + have + V3</strong>",
             ],
         },
         {
             type: "forms",
-            title: "Форми за часами",
-            headers: ["Час", "Структура", "Приклад"],
+            title: "Forms by time reference",
+            headers: ["Time", "Structure", "Example"],
             rows: [
                 [
-                    "Теперішнє",
+                    "Present",
                     "modal + V / modal + be",
                     "She must be tired.",
                 ],
                 [
-                    "Теперішнє (процес)",
+                    "Present (ongoing action)",
                     "modal + be + V-ing",
                     "He may be sleeping.",
                 ],
                 [
-                    "Минуле",
+                    "Past",
                     "modal + have + V3",
                     "They might have forgotten.",
                 ],
                 [
-                    "Неможливо (минуле)",
+                    "Past impossibility",
                     "can’t + have + V3",
                     "She can’t have done it.",
                 ],
             ],
         },
         {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["He could be at home.", "Він може бути вдома."],
-                ["They might have missed the train.", "Можливо, вони пропустили потяг."],
-                ["It must have rained last night.", "Напевно, вночі був дощ."],
-            ],
-        },
-        {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
                 "❌ <em>He must left</em> → ✅ <strong>must have left</strong>",
-                "❌ Неправильний час → для минулого завжди <strong>have + V3</strong>",
+                "❌ Incorrect tense → for past deductions always use <strong>have + V3</strong>",
             ],
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Advanced modals of deduction)",
+            title: "Mini trainer (Advanced modals of deduction)",
         },
     ],
 };
@@ -5779,83 +5727,65 @@ export const RULE_PAGE_ADVANCED_MODALS_OF_DEDUCTION = {
 export const RULE_PAGE_COMPLEX_NOUN_PHRASES = {
     id: "COMPLEX_NOUN_PHRASES",
     title: "Complex noun phrases",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що таке complex noun phrases",
+            title: "What complex noun phrases are",
             html:
-                "<strong>Complex noun phrases</strong> — це іменникові фрази, у яких <em>головний іменник</em> " +
-                "уточнюється кількома елементами: <em>прикметниками, іншими іменниками, прийменниковими фразами</em> " +
-                "та <em>відносними реченнями</em>.",
+                "<strong>Complex noun phrases</strong> are noun phrases where the <em>main noun</em> " +
+                "is modified by several elements such as <em>adjectives, other nouns, prepositional phrases</em> " +
+                "or <em>relative clauses</em>.",
         },
         {
             type: "usage",
-            title: "Як вони будуються",
+            title: "How they are built",
             badges: [
-                "🧩 Перед іменником → <strong>det + adj + noun</strong>",
-                "🔗 Після іменника → <strong>prepositional phrase / relative clause</strong>",
-                "📚 Часто вживаються в письмовій та формальній мові",
+                "🧩 Before the noun → <strong>det + adj + noun</strong>",
+                "🔗 After the noun → <strong>prepositional phrase / relative clause</strong>",
+                "📚 Common in formal and written language",
             ],
             hint:
-                "В англійській більшість опису стоїть <em>перед</em> іменником, " +
-                "а деталі — <em>після</em> нього.",
+                "In English, most descriptive elements appear <em>before</em> the noun, " +
+                "while additional details often appear <em>after</em> it.",
         },
         {
             type: "forms",
-            title: "Типові структури",
-            headers: ["Структура", "Пояснення", "Приклад"],
+            title: "Common structures",
+            headers: ["Structure", "Explanation", "Example"],
             rows: [
                 [
                     "det + adj + noun + prep phrase",
-                    "базовий опис + уточнення",
+                    "basic description with extra detail",
                     "The long, narrow road to the village",
                 ],
                 [
                     "noun + V3 phrase",
-                    "пасивне уточнення",
+                    "passive modifier",
                     "The decision made by the committee",
                 ],
                 [
                     "noun + relative clause",
-                    "додаткова інформація",
+                    "additional information",
                     "The book that you recommended",
                 ],
             ],
             hint:
-                "Коми залежать від того, чи інформація <em>обмежувальна</em> (без ком) " +
-                "чи <em>додаткова</em> (з комами).",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                [
-                    "The long, narrow road to the village was empty.",
-                    "Довга вузька дорога до села була порожньою.",
-                ],
-                [
-                    "The decision made by the committee was unexpected.",
-                    "Рішення, ухвалене комітетом, було неочікуваним.",
-                ],
-                [
-                    "The report that was published last week caused debate.",
-                    "Звіт, опублікований минулого тижня, викликав дискусію.",
-                ],
-            ],
+                "Commas depend on whether the information is <em>restrictive</em> (no commas) " +
+                "or <em>non-restrictive</em> (with commas).",
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
-                "❌ Занадто багато прикметників без логічного порядку",
-                "❌ Відсутність ком у переліку прикметників",
-                "❌ Перевантажені фрази, які важко читати",
+                "❌ Using too many adjectives without a logical order",
+                "❌ Missing commas in a list of adjectives",
+                "❌ Overly long phrases that are difficult to read",
             ],
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Complex noun phrases)",
+            title: "Mini trainer (Complex noun phrases)",
         },
     ],
 };
@@ -5866,30 +5796,30 @@ export const RULE_PAGE_COMPLEX_NOUN_PHRASES = {
 export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
     id: "INDIRECT_SPEECH_QUESTION_FORMS",
     title: "Question forms in indirect speech",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Запитання в непрямій мові",
+            title: "Questions in indirect speech",
             html:
-                "<strong>Indirect questions</strong> — це запитання, вбудовані в речення. " +
-                "У них використовується <em>звичайний порядок слів</em> (як у ствердженні) " +
-                "і <em>немає інверсії</em> або допоміжних <em>do / does / did</em>.",
+                "<strong>Indirect questions</strong> are questions embedded inside a sentence. " +
+                "They use the <em>normal statement word order</em> and there is <em>no inversion</em> " +
+                "and no auxiliary <em>do / does / did</em>.",
         },
         {
             type: "usage",
-            title: "Основні правила",
+            title: "Main rules",
             badges: [
-                "❓ Wh-запитання → <strong>wh-word + subject + verb</strong>",
-                "❓ Yes/No → <strong>if / whether + subject + verb</strong>",
-                "⏪ Часто відбувається зсув часу (backshift)",
-                "🔗 Часто після <em>ask, wonder, want to know</em>",
+                "❓ Wh-questions → <strong>wh-word + subject + verb</strong>",
+                "❓ Yes/No questions → <strong>if / whether + subject + verb</strong>",
+                "⏪ Backshift often occurs (present → past)",
+                "🔗 Often used after <em>ask, wonder, want to know</em>",
             ],
         },
         {
             type: "forms",
-            title: "Форми",
-            headers: ["Тип питання", "Структура", "Приклад"],
+            title: "Forms",
+            headers: ["Question type", "Structure", "Example"],
             rows: [
                 [
                     "Wh-question",
@@ -5908,21 +5838,12 @@ export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
                 ],
             ],
             hint:
-                "<strong>If</strong> і <strong>whether</strong> зазвичай взаємозамінні; " +
-                "<strong>whether</strong> частіше вживається у формальному стилі.",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["She wondered what he was doing.", "Вона цікавилася, що він робить."],
-                ["He asked whether we could wait.", "Він запитав, чи можемо ми почекати."],
-                ["Can you tell me if this is correct?", "Ти можеш сказати, чи це правильно?"],
-            ],
+                "<strong>If</strong> and <strong>whether</strong> are usually interchangeable, " +
+                "but <strong>whether</strong> is more common in formal style.",
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
                 "❌ <em>She asked where was he.</em> → ✅ <strong>where he was</strong>",
                 "❌ <em>He asked did I see her.</em> → ✅ <strong>if I had seen her</strong>",
@@ -5930,7 +5851,7 @@ export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Indirect speech question forms)",
+            title: "Mini trainer (Indirect speech question forms)",
         },
     ],
 };
@@ -5941,16 +5862,18 @@ export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
 export const RULE_PAGE_COMPOUND_SENTENCES = {
     id: "COMPOUND_SENTENCES",
     title: "Compound sentences",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що таке compound sentences",
-            html: "Речення, що складаються з двох (або більше) <strong>незалежних</strong> частин, з’єднаних сполучниками <strong>and, but, or, so</strong>."
+            title: "What compound sentences are",
+            html:
+                "A <strong>compound sentence</strong> contains two or more <strong>independent clauses</strong> " +
+                "connected by coordinating conjunctions such as <strong>and, but, or, so</strong>.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Examples of usage",
             badges: [
                 "<strong>I was tired, but I finished my work.</strong>",
                 "<strong>She called me, and we talked for an hour.</strong>"
@@ -5958,18 +5881,23 @@ export const RULE_PAGE_COMPOUND_SENTENCES = {
         },
         {
             type: "examples",
-            title: "Приклади",
+            title: "Examples",
             items: [
-                ["He wanted to go out, but it was raining.", "Він хотів піти гуляти, але йшов дощ."],
-                ["You can stay here, or you can leave.", "Ти можеш залишитися тут або піти."]
+                ["He wanted to go out, but it was raining."],
+                ["You can stay here, or you can leave."]
             ]
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Кома splice без сполучника: дві частини, з’єднані лише комою."]
+            title: "Common mistakes",
+            bullets: [
+                "❌ Comma splice: two clauses joined only by a comma without a conjunction."
+            ]
         },
-        { type: "trainer", title: "Міні-тренажер (Compound sentences)" }
+        {
+            type: "trainer",
+            title: "Mini trainer (Compound sentences)",
+        }
     ]
 };
 
@@ -5980,16 +5908,18 @@ export const RULE_PAGE_COMPOUND_SENTENCES = {
 export const RULE_PAGE_COMPLEX_SENTENCES = {
     id: "COMPLEX_SENTENCES",
     title: "Complex sentences",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що таке complex sentences",
-            html: "Речення з <strong>головною</strong> та <strong>підрядною</strong> частиною, з’єднані сполучниками <strong>because, although, when, if</strong> тощо."
+            title: "What complex sentences are",
+            html:
+                "A <strong>complex sentence</strong> contains a <strong>main clause</strong> and at least one <strong>subordinate clause</strong>, " +
+                "connected by subordinating conjunctions such as <strong>because, although, when, if</strong>.",
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Examples of usage",
             badges: [
                 "<strong>Although it was late, we kept talking.</strong>",
                 "<strong>When I arrived, they were eating.</strong>"
@@ -5997,18 +5927,23 @@ export const RULE_PAGE_COMPLEX_SENTENCES = {
         },
         {
             type: "examples",
-            title: "Приклади",
+            title: "Examples",
             items: [
-                ["Because it was raining, we stayed at home.", "Тому що йшов дощ, ми залишилися вдома."],
-                ["I’ll call you when I get there.", "Я подзвоню, коли дістануся."]
+                ["Because it was raining, we stayed at home."],
+                ["I’ll call you when I get there."]
             ]
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Відсутні коми при початкових підрядних реченнях у письмі."]
+            title: "Common mistakes",
+            bullets: [
+                "❌ Missing commas after introductory subordinate clauses in writing."
+            ]
         },
-        { type: "trainer", title: "Міні-тренажер (Complex sentences)" }
+        {
+            type: "trainer",
+            title: "Mini trainer (Complex sentences)",
+        }
     ]
 };
 
@@ -6019,16 +5954,18 @@ export const RULE_PAGE_COMPLEX_SENTENCES = {
 export const RULE_PAGE_COMPOUND_COMPLEX_SENTENCES = {
     id: "COMPOUND_COMPLEX_SENTENCES",
     title: "Compound–complex sentences",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що таке compound–complex sentences",
-            html: "Речення, що поєднують <strong>кілька незалежних</strong> і <strong>одну чи більше підрядних</strong> частин."
+            title: "What compound–complex sentences are",
+            html:
+                "A <strong>compound–complex sentence</strong> combines <strong>multiple independent clauses</strong> " +
+                "and <strong>one or more subordinate clauses</strong> in a single sentence."
         },
         {
             type: "usage",
-            title: "Приклади",
+            title: "Examples of usage",
             badges: [
                 "<strong>I was tired, but I finished the report because it was important.</strong>",
                 "<strong>When he arrived, we started cooking, and the guests came soon after.</strong>"
@@ -6036,18 +5973,23 @@ export const RULE_PAGE_COMPOUND_COMPLEX_SENTENCES = {
         },
         {
             type: "examples",
-            title: "Приклади",
+            title: "Examples",
             items: [
-                ["While I was studying, my phone rang, and I missed the call.", "Поки я вчився, задзвонив телефон, і я пропустив дзвінок."],
-                ["She didn’t come because she was ill, and nobody called her.", "Вона не прийшла, бо була хвора, і ніхто їй не подзвонив."]
+                ["While I was studying, my phone rang, and I missed the call."],
+                ["She didn’t come because she was ill, and nobody called her."]
             ]
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
-            bullets: ["❌ Дуже довгі речення без логічних пауз і ком."]
+            title: "Common mistakes",
+            bullets: [
+                "❌ Very long sentences without clear punctuation or logical pauses."
+            ]
         },
-        { type: "trainer", title: "Міні-тренажер (Compound–complex sentences)" }
+        {
+            type: "trainer",
+            title: "Mini trainer (Compound–complex sentences)"
+        }
     ]
 };
 
@@ -6057,30 +5999,30 @@ export const RULE_PAGE_COMPOUND_COMPLEX_SENTENCES = {
 export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
     id: "CORRELATIVE_CONJUNCTIONS",
     title: "Correlative conjunctions (either…or / neither…nor / both…and)",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що таке correlative conjunctions",
+            title: "What correlative conjunctions are",
             html:
-                "<strong>Correlative conjunctions</strong> — це <em>парні сполучники</em>, " +
-                "які завжди працюють разом і з’єднують рівноправні частини речення:<br/>" +
+                "<strong>Correlative conjunctions</strong> are <em>paired conjunctions</em> " +
+                "that always work together to connect equal parts of a sentence:<br/>" +
                 "<strong>either … or</strong>, <strong>neither … nor</strong>, <strong>both … and</strong>, <strong>not only … but also</strong>.",
         },
         {
             type: "usage",
-            title: "Коли й як вживаємо",
+            title: "When and how we use them",
             badges: [
-                "🔀 Вибір між двома → <strong>either … or</strong>",
-                "🚫 Заперечення обох → <strong>neither … nor</strong>",
-                "➕ Обидва варіанти → <strong>both … and</strong>",
-                "✨ Підсилення → <strong>not only … but also</strong>",
+                "🔀 Choice between two options → <strong>either … or</strong>",
+                "🚫 Negative for both → <strong>neither … nor</strong>",
+                "➕ Both options → <strong>both … and</strong>",
+                "✨ Emphasis → <strong>not only … but also</strong>",
             ],
         },
         {
             type: "forms",
-            title: "Типові моделі",
-            headers: ["Конструкція", "Структура", "Приклад"],
+            title: "Common patterns",
+            headers: ["Construction", "Structure", "Example"],
             rows: [
                 [
                     "either … or",
@@ -6105,25 +6047,16 @@ export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
             ]
         },
         {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["Either call me or send a message.", "Або подзвони мені, або напиши повідомлення."],
-                ["Neither my parents nor my friends knew about it.", "Ні батьки, ні друзі про це не знали."],
-                ["She is not only talented but also hardworking.", "Вона не лише талановита, а й працьовита."],
-            ],
-        },
-        {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
-                "❌ Порушення паралельної структури → <em>both reading and write</em> → ❌",
-                "❌ Неправильне узгодження → <em>Neither you nor I is ready</em> → ✅ <strong>am ready</strong>",
+                "❌ Breaking parallel structure → <em>both reading and write</em> → ❌",
+                "❌ Incorrect agreement → <em>Neither you nor I is ready</em> → ✅ <strong>am ready</strong>",
             ],
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Correlative conjunctions)",
+            title: "Mini trainer (Correlative conjunctions)",
         },
     ],
 };
@@ -6134,65 +6067,56 @@ export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
 export const RULE_PAGE_PREP_DIRECTION = {
     id: "PREP_DIRECTION",
     title: "Prepositions of direction",
-    subtitle: "Вивчення правила",
+    subtitle: "Learning the rule",
     sections: [
         {
             type: "meaning",
-            title: "Що таке prepositions of direction",
+            title: "What prepositions of direction are",
             html:
-                "<strong>Prepositions of direction</strong> показують <em>рух і напрямок</em> — " +
-                "куди хтось або щось рухається.",
+                "<strong>Prepositions of direction</strong> show <em>movement and direction</em> — " +
+                "where someone or something is moving.",
         },
         {
             type: "forms",
-            title: "Типові моделі",
-            headers: ["Прийменник", "Коли вживаємо", "Приклад"],
+            title: "Common patterns",
+            headers: ["Preposition", "Usage", "Example"],
             rows: [
                 [
                     "to",
-                    "напрямок до місця",
+                    "movement toward a place",
                     "She went to the office.",
                 ],
                 [
                     "into",
-                    "рух всередину",
+                    "movement inside something",
                     "He walked into the room.",
                 ],
                 [
                     "towards",
-                    "рух у бік (напрямок)",
+                    "movement in the direction of something",
                     "They moved towards the exit.",
                 ],
                 [
                     "onto",
-                    "рух на поверхню",
+                    "movement to a surface",
                     "The cat jumped onto the sofa.",
                 ],
             ],
             hint:
                 "<strong>To</strong> ≠ <strong>into</strong>: " +
-                "<em>to</em> — просто напрямок, <em>into</em> — обовʼязково «всередину».",
-        },
-        {
-            type: "examples",
-            title: "Приклади",
-            items: [
-                ["He threw the ball into the basket.", "Він кинув м’яч у кошик."],
-                ["She walked towards the station.", "Вона пішла в напрямку вокзалу."],
-                ["The child ran into the house.", "Дитина забігла в будинок."],
-            ],
+                "<em>to</em> shows direction only, while <em>into</em> means movement <em>inside</em> something.",
         },
         {
             type: "mistakes",
-            title: "Типові помилки",
+            title: "Common mistakes",
             bullets: [
-                "❌ <em>go into school</em> (як звичайний напрямок) → ✅ <strong>go to school</strong>",
-                "❌ <em>walk to the room</em> (коли мається на увазі «всередину») → ✅ <strong>walk into the room</strong>",
+                "❌ <em>go into school</em> (for general direction) → ✅ <strong>go to school</strong>",
+                "❌ <em>walk to the room</em> (when meaning inside) → ✅ <strong>walk into the room</strong>",
             ],
         },
         {
             type: "trainer",
-            title: "Міні-тренажер (Prepositions of direction)",
+            title: "Mini trainer (Prepositions of direction)",
         },
     ],
 };

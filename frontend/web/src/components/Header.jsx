@@ -212,7 +212,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                             }}>FAQ</PrimaryButton>
                         </div>
                         <div style={styles.sub}>
-                            Перекладай, поки не вивчиш
+                            Translate until you learn it
                         </div>
                     </div>
                 </div>

@@ -2,14 +2,14 @@
 import {getAllAnswersCount, getLearnedRulesCount, getOverallAccuracy} from "../../services/dataService.js";
 
 const TRANSLATE_UA = new Map(Object.entries({
-    enough: 'досить',
-    although: 'хоча',
-    through: 'через / крізь',
-    comparative: 'ступінь порівняння',
-    possessive: 'присвійний',
-    whether: 'чи',
-    scarcely: 'ледве',
-    apple: 'яблуко'
+    enough: 'enough',
+    although: 'although',
+    through: 'through / across',
+    comparative: 'comparative',
+    possessive: 'possessive',
+    whether: 'whether',
+    scarcely: 'scarcely',
+    apple: 'apple'
 }));
 
 export function seedWordsMap() {
@@ -42,7 +42,7 @@ export const pct = (num, den) => (den ? Math.round((num/den)*100) : 0);
 export const acc = (nCorrect, nAll) => (nAll ? (nCorrect/nAll) : 0);
 
 export const fmtDate = (iso) =>
-    iso ? new Date(iso).toLocaleDateString('uk-UA',{year:'numeric',month:'short',day:'numeric'}) : "—";
+    iso ? new Date(iso).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'}) : "—";
 
 
 export const daysSince = (iso) => {
@@ -53,10 +53,10 @@ export const daysSince = (iso) => {
 
 // ---------- rules ----------
 export const statusOf = (r) => {
-    if (r.status === 'learned') return { label: "Засвоєно", cls: "ok" };
-    if (r.status === 'needs practice')       return { label: "Потребує практики", cls: "bad" };
-    if (r.status === 'not defined')       return { label: "Не вистачає даних", cls: "na" };
-    return { label: "У процесі", cls: "warn" };
+    if (r.status === 'learned') return { label: "Learned", cls: "ok" };
+    if (r.status === 'needs practice') return { label: "Needs practice", cls: "bad" };
+    if (r.status === 'not defined') return { label: "Not enough data", cls: "na" };
+    return { label: "In progress", cls: "warn" };
 };
 
 export function computeKPIs(rows) {

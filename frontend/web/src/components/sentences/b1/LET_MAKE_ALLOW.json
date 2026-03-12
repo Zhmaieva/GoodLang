@@ -4,7 +4,7 @@
       "rules": ["LET_MAKE_ALLOW", "PREP_TIME"],
       "ua": ["Батьки дозволяють дітям дивитися телевізор після 19:00?"],
       "en": ["Do parents allow children to watch TV after 7 p.m.?"],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "ARTICLES"],
@@ -13,7 +13,7 @@
         "My parents made me sign the agreement.",
         "My parents made me sign this agreement."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "ARTICLES", "PREP_PLACE"],
@@ -22,7 +22,7 @@
         "They don’t allow people to bring drinks into the library.",
         "They do not allow people to bring drinks into the library."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "ARTICLES"],
@@ -31,7 +31,7 @@
         "The teacher made us rewrite the paper.",
         "The teacher made us rewrite a paper."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "POSSESSIVE_ADJECTIVES", "PREP_TIME"],
@@ -40,7 +40,7 @@
         "His parents allowed him to stay out until ten.",
         "His parents allowed him to stay outside until ten."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
@@ -49,13 +49,13 @@
         "Don’t make me wait.",
         "Do not make me wait."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
       "ua": ["Тут дозволено робити фото?"],
       "en": ["Is it allowed to take photos here?"],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "DEMONSTRATIVES"],
@@ -64,7 +64,7 @@
         "I’m not allowed to use this computer.",
         "I am not allowed to use this computer."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PREP_TIME"],
@@ -73,7 +73,7 @@
         "We were made to work on weekends.",
         "We were made to work at weekends."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES"],
@@ -82,7 +82,7 @@
         "She doesn’t let me use her laptop.",
         "She does not let me use her laptop."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "BECAUSE_SO_BUT_ALTHOUGH"],
@@ -91,25 +91,25 @@
         "They made me leave early because I didn’t feel well.",
         "They made me leave early because I did not feel well."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
       "ua": ["Мені дозволили залишитися вдома вчора."],
       "en": ["I was allowed to stay home yesterday."],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
       "ua": ["Його змусили вибачитися перед усіма."],
       "en": ["He was made to apologize to everyone."],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
       "ua": ["Він дозволив мені скористатися його телефоном."],
       "en": ["He let me use his phone."],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
@@ -118,7 +118,7 @@
         "We don’t allow smoking in this house.",
         "We do not allow smoking in this house."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
@@ -126,7 +126,7 @@
       "en": [
         "My parents often let me stay out late."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
@@ -134,7 +134,7 @@
       "en": [
         "Does your job allow you to travel?"
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -143,7 +143,7 @@
         "They aren’t allowed to park here.",
         "They are not allowed to park here."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -151,7 +151,7 @@
       "en": [
         "She made me call him."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ", "PREP_PLACE"],
@@ -160,7 +160,7 @@
         "They don’t let the kids run in the corridor.",
         "They do not let the kids run in the corridor."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -168,7 +168,7 @@
       "en": [
         "He allowed us to use his car."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -176,7 +176,7 @@
       "en": [
         "His parents made him go to the doctor."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -184,7 +184,7 @@
       "en": [
         "Are students allowed to stay after class?"
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -192,7 +192,7 @@
       "en": [
         "She was made to delete the post."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "IMPERATIVES"],
@@ -201,7 +201,7 @@
         "Let me help you.",
         "Allow me to help you."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -209,7 +209,7 @@
       "en": [
         "He was allowed to take an extra day off."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
@@ -218,7 +218,7 @@
         "We don’t allow them to use this software.",
         "We do not allow them to use this software."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -226,7 +226,7 @@
       "en": [
         "She was made to make the decision faster."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
@@ -234,7 +234,7 @@
       "en": [
         "He always lets his sister take his books."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
@@ -242,7 +242,7 @@
       "en": [
         "They made me rewrite the report."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW", "PRESENT_SIMPLE_FREQ"],
@@ -251,20 +251,20 @@
         "She doesn’t allow anyone to use her phone.",
         "She does not allow anyone to use her phone."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
     {
       "rules": ["LET_MAKE_ALLOW"],
       "ua": ["Вони дозволили тобі піти раніше?"],
       "en": ["Did they let you leave early?"],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
 
     {
       "rules": ["LET_MAKE_ALLOW"],
       "ua": ["Його змусили розповісти правду."],
       "en": ["He was made to tell the truth."],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
 
     {
@@ -274,7 +274,7 @@
         "They aren’t allowed to stay after ten.",
         "They are not allowed to stay after ten."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
 
     {
@@ -284,14 +284,14 @@
         "Don’t make me repeat it.",
         "Do not make me repeat it."
       ],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     },
 
     {
       "rules": ["LET_MAKE_ALLOW"],
       "ua": ["Він дозволив мені піти додому раніше."],
       "en": ["He let me go home early."],
-      "hint": "використовуй LET / MAKE / ALLOW"
+      "hint": "use LET / MAKE / ALLOW"
     }
   ]
 }

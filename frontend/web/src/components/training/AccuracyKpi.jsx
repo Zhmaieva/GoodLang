@@ -126,7 +126,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         return v;
     }, [accuracy, attemptsLeft]);
 
-    const titleDefault = "Знання правил";
+    const titleDefault = "Knowledge";
 
     const onClick = () => {
         if (!header) return;
@@ -400,12 +400,14 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         const nextRuleAcc = marathonService.getRuleRecentAccuracy(nextRuleId);
 
         const levelTextDefault = showEmpty
-            ? `Лише ${attemptsLeft} ${attemptsLeft > 4 ? "речень" : "речення"} до оцінки рівня`
-            : `Рівень: ${levelInfo.label?.toLowerCase()}${levelNameInfo}`;
+            ? `Only ${attemptsLeft} ${attemptsLeft > 4 ? "sentences" : "sentence"} left to evaluate your level`
+            : `Level: ${levelInfo.label?.toLowerCase()}${levelNameInfo}`;
 
         // ✅ marathon “passed” message for day 7 (you asked specifically for it)
         const marathonPassedText =
-            isInMarathon && dayNumber >= 7 && Boolean(account?.currentDay?.isDayCompleted) ? "Марафон пройдено.\n Вітаю!" : null;
+            isInMarathon && dayNumber >= 7 && Boolean(account?.currentDay?.isDayCompleted)
+                ? "Marathon completed!\nCongratulations!"
+                : null;
 
         // Decide what to render (title/sub/value/progress) based on your rules:
         let headerTitle = titleDefault;
@@ -425,8 +427,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         else if (isMarathonView) {
             // A) tasks are NOT empty (remaining tasks > 0)
             if (scheduleHasRemainingTasks) {
-                headerSub = `${dayNumber} день марафону. \nДо дедлайну ${timeLeftText}`;
-                headerTitle = `Залишилось завдань`;
+                headerSub = `Day ${dayNumber} of the marathon.\nDeadline in ${timeLeftText}`;
+                headerTitle = `Tasks remaining`;
                 headerValue = `${tasksRemainingData.remaining}`;
 
                 const done = Math.max(0, tasksRemainingData.total - tasksRemainingData.remaining);
@@ -441,9 +443,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                 headerTitle = nextRuleLabel;
 
                 const eta = marathonService.estimateEtaForWeakRules(70);
-                headerSub = `Підтягни точність правил (до 70%).\nЦе займе ${eta}. До дедлайну ${timeLeftText}`;
+                headerSub = `Improve rule accuracy (to 70%).\nThis will take about ${eta}. Deadline in ${timeLeftText}`;
 
-                // show current rule accuracy as percentage (per your spec)
+                // show current rule accuracy as percentage
                 headerValue = `${(nextRuleAcc ?? 0) === 0 ? "0.00" : Number(nextRuleAcc).toFixed(2)}%`;
 
                 // bar: target is 70% (full width), fill is current accuracy relative to 70
@@ -461,7 +463,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                 headerSub = marathonPassedText;
             } else {
                 // subtitle = existing one + extra line with countdown
-                headerSub = `${dayNumber} день марафону пройдено.\n Наступний день починається за ${timeLeftText}`;
+                headerSub = `Day ${dayNumber} of the marathon completed.\nNext day starts in ${timeLeftText}`;
             }
 
             // keep value as normal KPI
@@ -669,7 +671,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
             {showEmpty ? (
                 <div style={valueStyle}>
-                    {attemptsLeft} {attemptsLeft > 4 ? "речень" : "речення"} до оцінки
+                    {attemptsLeft} {attemptsLeft > 1 ? "sentences" : "sentence"} left to calculate accuracy
                 </div>
             ) : (
                 <>

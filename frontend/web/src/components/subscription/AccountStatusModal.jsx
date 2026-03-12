@@ -41,8 +41,8 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
     if (!open) return null;
 
     const titleMap = {
-        paid: "Все супер",
-        attention: "Підписка закінчується"
+        paid: "You're all set",
+        attention: "Your subscription is expiring"
     };
 
     const closeBtnStyle = {
@@ -166,7 +166,11 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                         fontWeight: 700,
                                         maxWidth: '90%'
                                     }}>
-                                        {marathonService.isInMarathon() ? 'Марафон на 7 днів. Завершення підписки по закінченню марафону або при вибутті.' : 'Щомісячна підписка'}
+                                        {
+                                            marathonService.isInMarathon()
+                                                ? "7-day marathon. Subscription ends when the marathon finishes or if you drop out."
+                                                : "Monthly subscription"
+                                        }
                                     </p>
                                 }
                                 {
@@ -200,19 +204,19 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             }}>
                                 <li>
                                     <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Необмежена кількість завдань
+                                    Unlimited tasks
                                 </li>
                                 <li>
                                     <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Хмарне збереження прогресу
+                                    Cloud progress sync
                                 </li>
                                 <li>
                                     <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Доступ з усіх пристроїв
+                                    Access from all devices
                                 </li>
                                 <li>
                                     <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Пріоритетна підтримка
+                                    Priority support
                                 </li>
                             </ul>
                         </div>
@@ -241,7 +245,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                     }}
                                     onClick={onManage} // open stripe portal
                                 >
-                                    Керувати підпискою
+                                    Manage subscription
                                 </button>
                             )}
 
@@ -260,7 +264,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 width: "100%",
                                 opacity: 1
                             } : closeBtnStyle}>
-                                Увійти в інший акаунт
+                                Sign in to another account
                             </button>
                         </div>
                     </div>

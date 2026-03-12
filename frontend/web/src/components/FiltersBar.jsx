@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const LEVELS = [
-    { id: "all", label: "Усі" },
-    { id: "beginner", label: "Початківець" },
-    { id: "intermediate", label: "Середній" },
-    { id: "advanced", label: "Просунутий" },
+    { id: "all", label: "All" },
+    { id: "beginner", label: "Beginner" },
+    { id: "intermediate", label: "Intermediate" },
+    { id: "advanced", label: "Advanced" },
 ];
 
 export default function FiltersBar({
@@ -121,8 +121,8 @@ export default function FiltersBar({
                     className={"highlight-input"}
                     style={inputStyle}
                     type="search"
-                    placeholder={`Пошук правила…${isMobile ? "" : "(наприклад, Present Perfect, or, wish)"}`}
-                    aria-label="Пошук правила"
+                    placeholder={`Search rule…${isMobile ? "" : " (e.g., Present Perfect, or, wish)"}`}
+                    aria-label="Search rule"
                     value={query}
                     onChange={(e) => onQueryChange(e.target.value)}
                 />
@@ -147,7 +147,7 @@ export default function FiltersBar({
                     }}
 
                 >
-                    {showWeakOnly ? "Показати всі" : "Лише слабкі"}
+                    {showWeakOnly ? "Show all" : "Weak only"}
                 </button>
             )}
         </div>

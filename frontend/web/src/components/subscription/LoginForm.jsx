@@ -174,18 +174,18 @@ export default function LoginForm({
     async function handleEmailSubmit(e) {
         e.preventDefault();
         if (!emailInput) {
-            setError("Імейл не може бути пустим");
+            setError("Email cannot be empty");
             return;
         }
 
         if (emailInput.trim().toLowerCase() === account?.email) {
-            setError("Ти вже увійшов під цим імейлом");
+            setError("You are already signed in with this email");
             return;
         }
 
         const v = String(emailInput.trim().toLowerCase() || "");
         if (!/^\S+@\S+\.\S+$/.test(v)) {
-            setError("Введіть правильний імейл");
+            setError("Enter a valid email");
             return;
         }
 
@@ -195,7 +195,7 @@ export default function LoginForm({
             await callSendCodeApi({ email: emailInput });
             setStep("code");
         } catch (err) {
-            setError(err?.message || "Не вдалося відправити код");
+            setError(err?.message || "Failed to send the code");
         } finally {
             setLoading(false);
         }
@@ -370,7 +370,7 @@ export default function LoginForm({
             unlockScroll()
             onClose();
         } catch (err) {
-            setError("Невірний код");
+            setError("Invalid code");
         } finally {
             setLoading(false);
         }
@@ -485,7 +485,7 @@ export default function LoginForm({
                                                         fontWeight: 800,
                                                     }}
                                                 >
-                                                    Введи свій імейл
+                                                    Enter your email
                                                 </h2>
                                                 <p
                                                     style={{
@@ -499,7 +499,7 @@ export default function LoginForm({
                                                         textAlign: "left",
                                                     }}
                                                 >
-                                                    На пошту надійде підтвердження
+                                                    You’ll receive a confirmation email
                                                 </p>
                                             </div>
 
@@ -539,7 +539,7 @@ export default function LoginForm({
                                             onClick={handleEmailSubmit}
                                             disabled={loading}
                                         >
-                                            {loading ? "Відправляю..." : "Підтвердити"}
+                                            {loading ? "Sending..." : "Confirm"}
                                         </button>
                                     </>
                                 )}
@@ -593,7 +593,7 @@ export default function LoginForm({
                                                         fontWeight: 800,
                                                     }}
                                                 >
-                                                    Введи код з імейлу
+                                                    Enter the code from your email
                                                 </h2>
                                                 <p
                                                     style={{
@@ -609,7 +609,7 @@ export default function LoginForm({
                                                         opacity: .7,
                                                     }}
                                                 >
-                                                    Відправлено на: {emailInput}
+                                                    Code sent to: {emailInput}
                                                 </p>
                                             </div>
 
@@ -686,7 +686,7 @@ export default function LoginForm({
                                             onClick={handleVerify}
                                             disabled={loading}
                                         >
-                                            {loading ? "Перевіряю..." : "Увійти"}
+                                            {loading ? "Checking..." : "Sign in"}
                                         </button>
                                     </>
                                 )}

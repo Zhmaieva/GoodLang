@@ -7,12 +7,12 @@ export default function AnalyticsHeader({ onBack, onExport }) {
                 <div>
                     <h1>GoodLang</h1>
                     <div className="sub">
-                        Огляд прогресу та список правил
+                        Progress overview and list of rules
                     </div>
                 </div>
             </div>
             <nav className="actions">
-                <button className="btn secondary" onClick={onBack}>← Практика</button>
+                <button className="btn secondary" onClick={onBack}>← Practice</button>
                 {/*<button className="btn" onClick={onExport}>Роздрукувати результати</button>*/}
             </nav>
         </header>

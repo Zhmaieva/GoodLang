@@ -104,7 +104,7 @@ export default function FaqModal({
                             fontWeight: 800,
                             textAlign: "left"
                         }}>
-                            Часті питання
+                            Frequently Asked Questions
                         </h2>
                         <p style={{
                             marginTop: 8,
@@ -113,7 +113,7 @@ export default function FaqModal({
                             fontWeight: 500,
                             textAlign: "left"
                         }}>
-                            Коротко про сервіс GoodLang
+                            A quick overview of the GoodLang service
                         </p>
                     </div>
 
@@ -121,34 +121,34 @@ export default function FaqModal({
                 </div>
 
                 <div id={"faq-modal"} style={contentStyle}>
-                    <h3 style={{ marginTop: 0 }}>1. Що це?</h3>
+                    <h3 style={{ marginTop: 0 }}>1. What is this?</h3>
                     <p>
-                        <strong>GoodLang</strong> — це персональний тренажер англійської мови, який допомагає
-                        <strong> розібратися саме з тими правилами, де ти застряг(ла)</strong>.
-                        Сервіс показує прогрес, слабкі місця та зручну аналітику.
-                        Усі правила зібрані в одному місці.
-                        Можеш користуватися самостійно або разом з учителем.
+                        <strong>GoodLang</strong> is a personal English learning trainer that helps you
+                        <strong> understand exactly the rules you are struggling with</strong>.
+                        The service shows your progress, weak points, and useful analytics.
+                        All grammar rules are collected in one place.
+                        You can use it on your own or together with a teacher.
                     </p>
 
-                    <h3>2. Скільки це коштує?</h3>
+                    <h3>2. How much does it cost?</h3>
                     <p>
-                        <strong>GoodLang</strong> можна користуватися <strong>безкоштовно</strong>.
-                        Безкоштовний доступ включає оцінку рівня англійської
-                        та щоденну практику з достатньою кількістю речень,
-                        щоб побачити реальний прогрес.
+                        <strong>GoodLang</strong> can be used <strong>for free</strong>.
+                        Free access includes an English level assessment
+                        and daily practice with enough sentences
+                        to see real progress.
                     </p>
 
-                    <h3>3. Чи потрібна мені підписка \ марафон?</h3>
+                    <h3>3. Do I need a subscription / marathon?</h3>
                     <p>
-                        Підписка та марафон знімають обмеження на щоденну кількість перекладів
-                        і дають доступ до навчанням з необмеженої
-                        кількості пристроїв. Марафон також спонукає вивчати правила,
-                        щоб не втратити доступ до підписки.
+                        A subscription and marathon remove the daily limit on translations
+                        and give access to learning from an unlimited
+                        number of devices. The marathon also motivates you to study the rules
+                        so you do not lose access to the subscription.
                     </p>
 
-                    <h3>4. Чи можу я отримати знижку?</h3>
+                    <h3>4. Can I get a discount?</h3>
                     <p>
-                        Так. Напишіть нам на{" "}
+                        Yes. Write to us at{" "}
                         <strong>
                             <a
                                 style={{ color: theme.accent, textDecoration: "none" }}
@@ -157,15 +157,15 @@ export default function FaqModal({
                                 goodlang.app@gmail.com
                             </a>
                         </strong>{" "}
-                        і ми запропонуємо спеціальні умови для індивідуальних користувачів та окремі програми
-                        для учбових закладів, викладачів і навчальних груп.
+                        and we will offer special terms for individual users as well as separate programs
+                        for educational institutions, teachers, and study groups.
                     </p>
 
-                    <h3>5. Хто ми?</h3>
+                    <h3>5. Who are we?</h3>
                     <p>
-                        Юля та Артем — ентузіасти, які постійно розвивають сервіс.
-                        Ми уважно ставимося до фідбеку і попереду маємо багато крутих фіч.
-                        Чогось бракує в <strong>GoodLang</strong>? Напишіть нам на{" "}
+                        Yulia and Artem are enthusiasts who are constantly improving the service.
+                        We care deeply about feedback, and we have many cool features ahead.
+                        Is something missing in <strong>GoodLang</strong>? Write to us at{" "}
                         <strong>
                             <a
                                 style={{ color: theme.accent, textDecoration: "none" }}
@@ -182,7 +182,7 @@ export default function FaqModal({
                         unlockScroll();
                         onClose();
                     }}>
-                        Добре
+                        OK
                     </button>
                 </div>
             </div>

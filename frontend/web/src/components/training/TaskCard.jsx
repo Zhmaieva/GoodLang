@@ -324,7 +324,7 @@ export default function TaskCard({
                             <div style={styles.taskText} dangerouslySetInnerHTML={{ __html: taskText }} />
                         )}
 
-                        {hint && !loading && <div style={styles.hintText}>Уточнення: {hint.toLowerCase()}</div>}
+                        {hint && !loading && <div style={styles.hintText}>Hint: {hint.toLowerCase()}</div>}
                     </div>
                 </div>
 
@@ -362,7 +362,7 @@ export default function TaskCard({
                     <textarea
                         className={"highlight-input"}
                         ref={textareaRef}
-                        placeholder="Введи переклад англійською..."
+                        placeholder="Enter your translation..."
                         autoComplete="off"
                         value={answer}
                         onChange={(e) => setAnswer(e.target.value)}
@@ -375,7 +375,7 @@ export default function TaskCard({
                 <button
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}
-                    aria-label="Перевірити переклад"
+                    aria-label="Check the translation"
                     onClick={onMainButtonClick}
                     disabled={loading}
                     style={styles.btn}

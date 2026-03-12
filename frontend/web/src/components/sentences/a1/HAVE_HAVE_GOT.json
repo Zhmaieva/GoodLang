@@ -58,7 +58,7 @@
                         "I haven’t got time.",
                         "I have not got time."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -84,7 +84,7 @@
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У моєї мами нова робота.",
                 "en": ["My mum has a new job.", "My mum’s got a new job.", "My mum has got a new job."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -115,7 +115,7 @@
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У мене є ідея.",
                 "en": ["I have an idea.", "I’ve got an idea.", "I have got an idea."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -157,7 +157,7 @@
                         "He hasn’t got time today.",
                         "He has not got time today."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -213,7 +213,7 @@
                         "I’ve got a good mood today.",
                         "I have got a good mood today."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
@@ -223,7 +223,7 @@
                         "We’ve got a lot of free time.",
                         "We have got a lot of free time."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -307,7 +307,7 @@
                         "She hasn’t got time today.",
                         "She has not got time today."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES", "PREP_PLACE"],
@@ -338,7 +338,7 @@
                         "They haven’t got jobs.",
                         "They have not got jobs."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -371,7 +371,7 @@
                         "They don’t have a plan.",
                         "They haven’t got a plan."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -388,7 +388,7 @@
                         "We don’t have free time.",
                         "We haven’t got free time."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "COMPLEX_NOUN_PHRASES"],
@@ -397,7 +397,7 @@
                         "He doesn’t have work experience.",
                         "He hasn’t got work experience."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -438,7 +438,7 @@
                         "Do you have time now?",
                         "Have you got time now?"
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
@@ -471,7 +471,7 @@
                         "Do you have a question?",
                         "Have you got a question?"
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "PREP_PLACE"],
@@ -496,7 +496,7 @@
                         "She has a nice smile.",
                         "She’s got a nice smile."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
@@ -505,7 +505,7 @@
                         "We have some time.",
                         "We’ve got some time."
                 ],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -516,13 +516,13 @@
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES", "PREP_TIME"],
                 "ua": "У мене завтра іспит.",
                 "en": ["I have an exam tomorrow.", "I’ve got an exam tomorrow."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У неї урок музики.",
                 "en": ["She has a music lesson.", "She’s got a music lesson."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
@@ -533,7 +533,7 @@
                 "rules": ["HAVE_HAVE_GOT"],
                 "ua": "У мене багато роботи.",
                 "en": ["I have a lot of work.", "I’ve got a lot of work."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -554,7 +554,7 @@
                 "rules": ["HAVE_HAVE_GOT"],
                 "ua": "У нас гарна новина.",
                 "en": ["We have good news.", "We’ve got good news."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -585,7 +585,7 @@
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У нього нова робота.",
                 "en": ["He has a new job.", "He’s got a new job."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -601,7 +601,7 @@
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У неї є гарна ідея.",
                 "en": ["She has a great idea.", "She’s got a great idea."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -612,7 +612,7 @@
                 "rules": ["HAVE_HAVE_GOT", "PREP_TIME"],
                 "ua": "У нас щотижня уроки англійської.",
                 "en": ["We have English lessons every week.", "We’ve got English lessons every week."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
@@ -643,7 +643,7 @@
                 "rules": ["HAVE_HAVE_GOT"],
                 "ua": "У нього гарний почерк.",
                 "en": ["He has good handwriting.", "He’s got good handwriting."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -659,7 +659,7 @@
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES", "COMPLEX_NOUN_PHRASES"],
                 "ua": "У нього гарне почуття гумору.",
                 "en": ["He has a good sense of humour.", "He’s got a good sense of humour."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
@@ -670,7 +670,7 @@
                 "rules": ["HAVE_HAVE_GOT", "PREP_TIME"],
                 "ua": "У мене немає часу на сніданок.",
                 "en": ["I don’t have time for breakfast.", "I haven’t got time for breakfast."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES", "COMPLEX_NOUN_PHRASES"],
@@ -701,13 +701,13 @@
                 "rules": ["HAVE_HAVE_GOT", "PREP_TIME"],
                 "ua": "У нас немає планів на вихідні.",
                 "en": ["We don’t have plans for the weekend.", "We haven’t got plans for the weekend."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
                 "ua": "У нього немає часу пограти.",
                 "en": ["He doesn’t have time to play.", "He hasn’t got time to play."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "PREP_PLACE"],
@@ -738,7 +738,7 @@
                 "rules": ["HAVE_HAVE_GOT"],
                 "ua": "У тебе є час поговорити?",
                 "en": ["Do you have time to talk?", "Have you got time to talk?"],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
@@ -799,24 +799,24 @@
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES", "COMPLEX_NOUN_PHRASES"],
                 "ua": "У мене болить голова.",
                 "en": ["I have a headache.", "I’ve got a headache."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES", "COMPLEX_NOUN_PHRASES"],
                 "ua": "У неї болить горло.",
                 "en": ["She has a sore throat.", "She’s got a sore throat."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT", "ARTICLES"],
                 "ua": "У нього температура.",
                 "en": ["He has a fever.", "He’s got a fever."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         },
         {
                 "rules": ["HAVE_HAVE_GOT"],
                 "ua": "У мене болить спина.",
                 "en": ["I have back pain.", "I’ve got back pain."],
-                "hint": "використовуй HAVE / HAVE GOT"
+                "hint": "use HAVE / HAVE GOT"
         }
 ] }

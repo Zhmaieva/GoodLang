@@ -1352,7 +1352,7 @@ color: #fff;
                     </div>
 
                     <div className="footerLink" onClick={() => setTouOpen(true)}>
-                        Умови використання і політика приватності
+                        Terms of Use and Privacy Policy
                     </div>
                 </div>
             </footer>

@@ -135,7 +135,7 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
 
     return (
         <div style={styles.card}>
-            <h2 style={styles.title}>Результат</h2>
+            <h2 style={styles.title}>Result</h2>
 
             <div key={hintKey} style={styles.floatIn}>
                 <div style={styles.feedback}>{hint.replaceAll('❌','').replaceAll('✔','').trim()}</div>
@@ -144,7 +144,7 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             {correctAnswer ? (
                 <div key={correctKey} style={{ ...styles.floatIn, marginTop: 14 }}>
                     <div style={styles.correctWrap}>
-                        <div style={styles.correctTitle}>Правильна відповідь</div>
+                        <div style={styles.correctTitle}>Correct answer</div>
                         <div style={styles.correctText}>{correctAnswer}</div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
 
             {weakRules.length > 0 && (
                 <div style={styles.rulesOuterWrap}>
-                    <div style={styles.rulesTitle}>Важливі правила:</div>
+                    <div style={styles.rulesTitle}>Important rules:</div>
 
                     <div style={styles.rulesWrap}>
                         {weakRules.map((rule) => (
@@ -182,11 +182,11 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             )}
 
             <style>{`
-                @keyframes glFloatIn {
-                    0%   { opacity: 0; transform: translateY(10px); }
-                    100% { opacity: 1; transform: translateY(0px); }
-                }
-            `}</style>
+            @keyframes glFloatIn {
+                0%   { opacity: 0; transform: translateY(10px); }
+                100% { opacity: 1; transform: translateY(0px); }
+            }
+        `}</style>
         </div>
     );
 }

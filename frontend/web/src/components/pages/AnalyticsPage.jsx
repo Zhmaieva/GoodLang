@@ -109,7 +109,7 @@ export default function AnalyticsPage({theme}) {
 
     // ----- Handlers -----
     const onGenerateQueue = () => setQueue(getSmartQueue(words, 10));
-    const onStartPractice = () => alert("Почати практику: підʼєднай до екрана практики вашого додатку.");
+    const onStartPractice = () => alert("Start practicing: connect this button to your app’s practice screen.");
 
     const onExportJSON = () => {
         const payload = {
@@ -132,7 +132,7 @@ export default function AnalyticsPage({theme}) {
     return (
         <AppShell theme={theme}>
             <div style={{height: "100vh"}}>
-                <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Огляд прогресу та список правил"}  onExport={onExportJSON}
+                <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Progress overview and list of rules"}  onExport={onExportJSON}
                              right={
                                  <button style={{
                                      appearance: "none",
@@ -157,7 +157,7 @@ export default function AnalyticsPage({theme}) {
 
                                      transition: "transform 120ms ease, filter 120ms ease",
                                  }} onClick={handlePracticeClick}>
-                                     ← До тренування
+                                     ← Go to practice
                                  </button>
                              }
                 />

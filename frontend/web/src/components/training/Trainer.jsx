@@ -118,8 +118,8 @@ export default function Trainer({
     const [isError, setIsError] = useState(false);
     const [locked, setLocked] = useState(false);
 
-    const [taskText, setTaskText] = useState("Стягнення завдання…");
-    const [hint, setHintValue] = useState("Порада: переклади і натисни «Перевірити»");
+    const [taskText, setTaskText] = useState("Loading task…");
+    const [hint, setHintValue] = useState("Hint: translate and press 'Check'.");
     const [taskHint, setTaskHint] = useState(null);
 
     const [account, setAccount] = useState(null);
@@ -182,8 +182,8 @@ export default function Trainer({
     }
 
     function resetToLoadingPlaceholders() {
-        setTaskText("Стягнення завдання…");
-        setHint("Стягнення нового завдання…");
+        setTaskText("Loading task…");
+        setHint("Loading new task…");
         setCorrectAnswer("");
         setWeakRules([]);
     }
@@ -286,7 +286,7 @@ export default function Trainer({
         setTextToTranslateOriginal(data.textToTranslateOriginal || "");
         setTaskText(data.textToTranslate || "—");
         setTaskHint(data.hint || null);
-        setHint("Порада: переклади і натисни «Перевірити»");
+        setHint("Tip: translate the sentence and press 'Check'.");
         setRules(data.rules || []);
         setAnswer("");
         setGapSelected(null);
@@ -308,7 +308,7 @@ export default function Trainer({
         setGapSelected(null);
         setTaskText(data.textToTranslate || "—");
         setTaskHint(null);
-        setHint("Порада: обери правильний варіант.");
+        setHint("Tip: select the correct option.");
         setRules(data.rules || []);
         setAnswer("");
         setCorrectAnswer("");
@@ -477,11 +477,11 @@ export default function Trainer({
             taskType === "gap" ? String(gapSelected ?? "").trim() : answer.trim();
 
         if (taskType === "gap" && !gapSelected && gapSelected !== "") {
-            setHint("Обери варіант перед перевіркою.");
+            setHint("Select an option before checking.");
             return;
         }
         if (taskType !== "gap" && !userAns) {
-            setHint("Введи переклад перед перевіркою.");
+            setHint("Enter your translation before checking.");
             return;
         }
 
@@ -508,7 +508,7 @@ export default function Trainer({
             });
 
             if (!data.isSuccess) {
-                setHint("Навчайся більше з підпискою, або почекай");
+                setHint("Continue learning with a subscription, or wait");
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
                 setLocked(true);
@@ -536,7 +536,7 @@ export default function Trainer({
             setTaskModeLocked(!!isCalibration);
 
             if (data.isAnswerCorrect) {
-                setHint("Правильно!");
+                setHint("Well done!");
                 setCorrectAnswer("");
             } else {
                 const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
@@ -757,12 +757,12 @@ export default function Trainer({
             fontWeight: 800,
             textAlign: "center"
         }}>
-            Ой, помилка :( <br/>
-            Напиши до{" "}
+            Oops, an error occurred :( <br/>
+            Write to{" "}
             <a style={{color: theme.accent, textDecoration: "none"}} href="mailto:goodlang.app@gmail.com">
                 goodlang.app@gmail.com
             </a>{" "}
-            і ми допоможемо.
+            and we will help you.
         </div>
     ) : (
         <section id="trainer" style={gridStyle}>
@@ -779,7 +779,7 @@ export default function Trainer({
                 setAnswer={setAnswer}
                 isInputDisabled={loading || mode === "next"}
                 mainBtnText={mode === "check"
-                    ? 'Check answer'
+                    ? 'Check'
                     : 'Next sentence'}
                 onMainButtonClick={onMainButtonClick}
                 loading={loading}

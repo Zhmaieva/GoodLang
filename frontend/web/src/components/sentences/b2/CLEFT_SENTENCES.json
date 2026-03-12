@@ -2,7 +2,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PAST_SIMPLE"],
     "ua": ["Це Марія принесла торт на вечірку."],
-    "hint": "використовуй It was ... who ...",
+    "hint": "use It was ... who ...",
     "en": [
       "It was Maria who brought the cake to the party.",
       "It’s Maria who brought the cake to the party."
@@ -11,7 +11,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES"],
     "ua": ["Це був сад, де ми зустрілися вперше."],
-    "hint": "використовуй It was ... where ...",
+    "hint": "use It was ... where ...",
     "en": [
       "It was the garden where we met for the first time.",
       "It’s the garden where we met for the first time."
@@ -20,7 +20,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": ["Це через тебе ми запізнилися."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was because of you that we were late.",
       "It’s because of you that we were late."
@@ -30,7 +30,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Саме мій брат часто допомагає мені з домашнім завданням."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is my brother who often helps me with my homework.",
       "It’s my brother who often helps me with my homework."
@@ -39,7 +39,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "PREP_PLACE"],
     "ua": ["Це в Лондоні я вперше зустрів її."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in London that I first met her.",
       "It’s in London that I first met her."
@@ -48,7 +48,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": ["Саме твоя ідея зробила це можливим."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was your idea that made it possible.",
       "It’s your idea that made it possible."
@@ -57,7 +57,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES"],
     "ua": ["Саме танці приносять їй найбільше радості."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is dancing that brings her the most joy.",
       "It’s dancing that brings her the most joy."
@@ -66,7 +66,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "PAST_SIMPLE", "ARTICLES"],
     "ua": ["Саме в парку ми втратили ключі."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in the park that we lost the keys.",
       "It’s in the park that we lost the keys."
@@ -75,7 +75,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE", "ARTICLES"],
     "ua": ["Саме в понеділок почався курс."],
-    "hint": "використовуй It was ... when ...",
+    "hint": "use It was ... when ...",
     "en": [
       "It was on Monday that the course started.",
       "It’s on Monday that the course started."
@@ -84,7 +84,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
     "ua": ["Саме через затори ми запізнилися."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was because of the traffic that we were late.",
       "It’s because of the traffic that we were late."
@@ -93,7 +93,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "POSSESSIVE_ADJECTIVES"],
     "ua": ["Саме читання найбільше допомагає моїй англійській."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is reading that helps my English the most.",
       "It’s reading that helps my English the most."
@@ -102,7 +102,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Саме мій брат завжди миє посуд вдома."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is my brother who always washes the dishes at home.",
       "It’s my brother who always washes the dishes at home."
@@ -111,7 +111,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "ARTICLES"],
     "ua": ["Саме цей лист ми отримали останнім."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was this letter that we received last.",
       "It’s this letter that we received last."
@@ -121,7 +121,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
     "ua": ["Саме в офісі він залишив свій паспорт."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was at the office that he left his passport.",
       "It’s at the office that he left his passport."
@@ -130,7 +130,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "ua": ["Саме цей проєкт був обраний комісією."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was this project that was selected by the committee.",
       "It’s this project that was selected by the committee."
@@ -139,7 +139,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "HAVE_HAVE_GOT"],
     "ua": ["Саме в нас є потрібні інструменти."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is we who have the necessary tools.",
       "It’s us who have the necessary tools."
@@ -148,7 +148,7 @@
   {
     "rules": ["CLEFT_SENTENCES"],
     "ua": ["Саме коли він втомлений, він робить помилки."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is when he is tired that he makes mistakes.",
       "It’s when he is tired that he makes mistakes."
@@ -157,7 +157,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "COMPARATIVES", "ARTICLES"],
     "ua": ["Саме ця версія краща за іншу."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is this version that is better than the other one."
     ]
@@ -165,7 +165,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": ["Саме ти зараз допомагаєш команді найбільше."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is you who are helping the team the most right now.",
       "It’s you who’re helping the team the most right now."
@@ -174,7 +174,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Саме та книга, яку ти порадив, мені найбільше сподобалася."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is the book that you recommended that I liked the most.",
       "It’s the book that you recommended that I liked the most."
@@ -183,7 +183,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "ua": ["Саме ця стаття була опублікована вчора."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was this article that was published yesterday."
     ]
@@ -191,7 +191,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PREP_PLACE"],
     "ua": ["Саме на кухні ти знайдеш чай."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is in the kitchen that you will find the tea.",
       "It’s in the kitchen that you’ll find the tea."
@@ -200,7 +200,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO", "ARTICLES"],
     "ua": ["Саме ти маєш підписати цей документ."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is you who have to sign this document.",
       "It’s you who have to sign this document."
@@ -209,7 +209,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PAST_SIMPLE"],
     "ua": ["Саме Анна приготувала вечерю вчора."],
-    "hint": "використовуй It was ... who ...",
+    "hint": "use It was ... who ...",
     "en": [
       "It was Anna who cooked dinner yesterday."
     ]
@@ -217,7 +217,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
     "ua": ["Саме в цьому кафе ми зустрілися вперше."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in this café that we met for the first time.",
       "It’s in this café that we met for the first time."
@@ -226,7 +226,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "ARTICLES"],
     "ua": ["Саме влітку я планую відпочинок."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is in summer that I plan my vacation.",
       "It’s in summer that I plan my vacation."
@@ -235,7 +235,7 @@
   {
     "rules": ["CLEFT_SENTENCES"],
     "ua": ["Саме спів приносить їй найбільше радості."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is singing that brings her the most joy.",
       "It’s singing that brings her the most joy."
@@ -244,7 +244,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Саме він завжди прибирає після обіду."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is he who always cleans up after lunch.",
       "It’s him who always cleans up after lunch."
@@ -254,7 +254,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "PREP_PLACE"],
     "ua": ["Саме у Франції він навчився готувати."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in France that he learned to cook.",
       "It’s in France that he learned to cook."
@@ -263,7 +263,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "FIRST_CONDITIONAL", "TIME_CLAUSE_FUTURE"],
     "ua": ["Саме коли вона повернеться, ми розпочнемо зустріч."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is when she returns that we will start the meeting.",
       "It’s when she returns that we’ll start the meeting."
@@ -272,7 +272,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "COMPARATIVES"],
     "ua": ["Саме цей шлях коротший, ніж інший."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is this route that is shorter than the other one.",
       "It’s this route that’s shorter than the other one."
@@ -281,7 +281,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS"],
     "ua": ["Саме завтра ми отримаємо результати."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is tomorrow that we will get the results.",
       "It’s tomorrow that we’ll get the results."
@@ -290,7 +290,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "HAVE_HAVE_GOT"],
     "ua": ["Саме ми маємо ключ від офісу."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is we who have the key to the office.",
       "It’s us who have the key to the office."
@@ -299,7 +299,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY"],
     "ua": ["Саме він, мабуть, зробив це."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is he who must have done it.",
       "It’s him who must have done it."
@@ -308,7 +308,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES"],
     "ua": ["Саме той фільм, який ти порадив, був найкращим."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was the movie that you recommended that was the best.",
       "It’s the movie that you recommended that was the best."
@@ -317,7 +317,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
     "ua": ["Саме в саду ми проводимо більшість вихідних."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is in the garden that we spend most weekends.",
       "It’s in the garden that we spend most weekends."
@@ -326,7 +326,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
     "ua": ["Саме ця будівля була зруйнована під час бурі."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was this building that was destroyed during the storm.",
       "It’s this building that was destroyed during the storm."
@@ -335,7 +335,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE"],
     "ua": ["Саме вчора він купив новий ноутбук."],
-    "hint": "використовуй It was ... when ...",
+    "hint": "use It was ... when ...",
     "en": [
       "It was yesterday that he bought a new laptop."
     ]
@@ -343,7 +343,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO"],
     "ua": ["Саме ти маєш написати цей лист."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is you who have to write this letter.",
       "It’s you who have to write this letter."
@@ -352,7 +352,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW"],
     "ua": ["Саме завтра вони вирушають у відпустку."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is tomorrow that they are leaving for vacation.",
       "It’s tomorrow that they’re leaving for vacation."
@@ -361,7 +361,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY", "ARTICLES"],
     "ua": ["Саме вона може бути новим керівником."],
-    "hint": "використовуй It is who ...",
+    "hint": "use It is who ...",
     "en": [
       "It is she who might be the new manager.",
       "It’s her who might be the new manager."
@@ -370,7 +370,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PAST_SIMPLE"],
     "ua": ["Саме Том написав цей лист учора."],
-    "hint": "використовуй It was ... who ...",
+    "hint": "use It was ... who ...",
     "en": [
       "It was Tom who wrote this letter yesterday."
     ]
@@ -378,7 +378,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
     "ua": ["Саме в бібліотеці вона готувалася до іспиту."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in the library that she prepared for the exam.",
       "It’s in the library that she prepared for the exam."
@@ -387,7 +387,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "ARTICLES"],
     "ua": ["Саме вранці він зазвичай бігає."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is in the morning that he usually goes jogging.",
       "It’s in the morning that he usually goes jogging."
@@ -396,7 +396,7 @@
   {
     "rules": ["CLEFT_SENTENCES"],
     "ua": ["Саме малювання допомагає їй розслабитися."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is painting that helps her relax.",
       "It’s painting that helps her relax."
@@ -405,7 +405,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
     "ua": ["Саме через холодну погоду ми залишилися вдома."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was because of the cold weather that we stayed at home.",
       "It’s because of the cold weather that we stayed at home."
@@ -415,7 +415,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PRESENT_SIMPLE_FREQ"],
     "ua": ["Саме мама завжди будить мене зранку."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is my mother who always wakes me up in the morning.",
       "It’s my mother who always wakes me up in the morning."
@@ -424,7 +424,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PAST_SIMPLE", "PREP_PLACE"],
     "ua": ["Саме в Італії вона познайомилася зі своїм чоловіком."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in Italy that she met her husband.",
       "It’s in Italy that she met her husband."
@@ -433,7 +433,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "COMPARATIVES", "ARTICLES"],
     "ua": ["Саме цей спосіб кращий за інший."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is this method that is better than the other one.",
       "It’s this method that’s better than the other one."
@@ -442,7 +442,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS", "ARTICLES"],
     "ua": ["Саме завтра ми почнемо новий проєкт."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is tomorrow that we will start the new project.",
       "It’s tomorrow that we’ll start the new project."
@@ -451,7 +451,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "HAVE_HAVE_GOT"],
     "ua": ["Саме він має найкраще рішення."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is he who has the best solution.",
       "It’s him who’s got the best solution."
@@ -460,7 +460,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES", "ARTICLES"],
     "ua": ["Саме той учень, який запізнився, пояснював причину."],
-    "hint": "використовуй It was ... who ...",
+    "hint": "use It was ... who ...",
     "en": [
       "It was the student who was late that explained the reason.",
       "It’s the student who was late that explained the reason."
@@ -469,7 +469,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
     "ua": ["Саме в офісі він залишив телефон."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in the office that he left his phone.",
       "It’s in the office that he left his phone."
@@ -478,7 +478,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": ["Саме ти зараз допомагаєш найбільше."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is you who are helping the most right now.",
       "It’s you who’re helping the most right now."
@@ -487,7 +487,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "ARTICLES", "PASSIVE_VOICE_ALL_TENSES"],
     "ua": ["Саме ця кімната була відремонтована минулого тижня."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was this room that was renovated last week.",
       "It’s this room that was renovated last week."
@@ -496,7 +496,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "TOO_VERY"],
     "ua": ["Саме він занадто зайнятий, щоб прийти."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is he who is too busy to come.",
       "It’s him who’s too busy to come."
@@ -505,7 +505,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE", "ARTICLES"],
     "ua": ["Саме вчора вони купили нову машину."],
-    "hint": "використовуй It was ... when ...",
+    "hint": "use It was ... when ...",
     "en": [
       "It was yesterday that they bought a new car."
     ]
@@ -513,7 +513,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO", "ARTICLES"],
     "ua": ["Саме вони мають підготувати звіт."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is they who have to prepare the report.",
       "It’s them who have to prepare the report."
@@ -522,7 +522,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW", "ARTICLES"],
     "ua": ["Саме у п’ятницю ми вирушаємо у відрядження."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is on Friday that we are leaving on a business trip.",
       "It’s on Friday that we’re leaving on a business trip."
@@ -532,7 +532,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "MODALS_OF_PROBABILITY", "ARTICLES"],
     "ua": ["Саме він може бути новим директором."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is he who might be the new director.",
       "It’s him who might be the new director."
@@ -541,7 +541,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "ARTICLES"],
     "ua": ["Саме в неділю ми зазвичай відпочиваємо."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is on Sunday that we usually rest.",
       "It’s on Sunday that we usually rest."
@@ -550,7 +550,7 @@
   {
     "rules": ["CLEFT_SENTENCES"],
     "ua": ["Саме танці роблять її щасливою."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is dancing that makes her happy.",
       "It’s dancing that makes her happy."
@@ -559,7 +559,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "BECAUSE_SO_BUT_ALTHOUGH", "ARTICLES"],
     "ua": ["Саме через дощ ми не поїхали на пікнік."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was because of the rain that we didn’t go on a picnic.",
       "It’s because of the rain that we didn’t go on a picnic."
@@ -568,7 +568,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PRESENT_SIMPLE_FREQ", "POSSESSIVE_ADJECTIVES", "ARTICLES"],
     "ua": ["Саме моя сестра завжди готує найсмачніше."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is my sister who always cooks the best meals.",
       "It’s my sister who always cooks the best meals."
@@ -577,7 +577,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_PLACE", "ARTICLES"],
     "ua": ["Саме у цьому будинку вона виросла."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was in this house that she grew up.",
       "It’s in this house that she grew up."
@@ -586,7 +586,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "COMPARATIVES", "ARTICLES"],
     "ua": ["Саме цей план ефективніший за попередній."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is this plan that is more effective than the previous one.",
       "It’s this plan that’s more effective than the previous one."
@@ -595,7 +595,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "WILL_PREDICTIONS", "ARTICLES"],
     "ua": ["Саме ввечері ми побачимо фінальні результати."],
-    "hint": "використовуй It is ... when ...",
+    "hint": "use It is ... when ...",
     "en": [
       "It is in the evening that we will see the final results.",
       "It’s in the evening that we’ll see the final results."
@@ -604,7 +604,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_HAVE_GOT", "ARTICLES"],
     "ua": ["Саме він має останню копію документа."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is he who has the last copy of the document.",
       "It’s him who’s got the last copy of the document."
@@ -613,7 +613,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "RELATIVE_CLAUSES"],
     "ua": ["Саме та книга, яку я купив учора, тепер моя улюблена."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is the book that I bought yesterday that is now my favorite."
     ]
@@ -622,7 +622,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "ua": ["Саме цей звіт був опублікований минулого місяця."],
-    "hint": "використовуй It was ... that ...",
+    "hint": "use It was ... that ...",
     "en": [
       "It was this report that was published last month.",
       "It’s this report that was published last month."
@@ -631,7 +631,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "TOO_VERY"],
     "ua": ["Саме він надто сором’язливий, щоб говорити публічно."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is he who is too shy to speak in public.",
       "It’s him who’s too shy to speak in public."
@@ -640,7 +640,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_TIME", "PAST_SIMPLE"],
     "ua": ["Саме минулої суботи ми зустріли старих друзів."],
-    "hint": "використовуй It was ... when ...",
+    "hint": "use It was ... when ...",
     "en": [
       "It was last Saturday that we met our old friends."
     ]
@@ -648,7 +648,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PREP_DIRECTION"],
     "ua": ["Саме до університету він зараз прямує."],
-    "hint": "використовуй It is ... that ...",
+    "hint": "use It is ... that ...",
     "en": [
       "It is to the university that he is heading now.",
       "It’s to the university that he’s heading now."
@@ -657,7 +657,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "HAVE_TO_DONT_HAVE_TO"],
     "ua": ["Саме ти маєш вирішити цю проблему."],
-    "hint": "використовуй It is ... who ...",
+    "hint": "use It is ... who ...",
     "en": [
       "It is you who have to solve this problem.",
       "It’s you who have to solve this problem."
@@ -666,7 +666,7 @@
   {
     "rules": ["CLEFT_SENTENCES", "PRESENT_CONT_NOW"],
     "ua": ["Саме наступного тижня ми вирушаємо у подорож."],
-    "hint": "використовуй It is when ...",
+    "hint": "use It is when ...",
     "en": [
       "It is next week that we are leaving for our trip.",
       "It’s next week that we’re leaving for our trip."

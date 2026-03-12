@@ -3,10 +3,10 @@ import { getOverallAccuracy, inferUserLevel } from "../../services/dataService.j
 import { off, on } from "../../services/events.js";
 
 export const LEVEL_MAP = {
-    A1: { label: "Початківець", percent: 33 },
-    A2: { label: "Середній", percent: 66 },
-    B1: { label: "Середній", percent: 66 },
-    B2: { label: "Просунутий", percent: 100 },
+    A1: { label: "Beginner", percent: 33 },
+    A2: { label: "Intermediate", percent: 66 },
+    B1: { label: "Intermediate", percent: 66 },
+    B2: { label: "Advanced", percent: 100 },
 };
 
 export default function LevelKpi({ mobile, theme }) {
@@ -113,14 +113,14 @@ export default function LevelKpi({ mobile, theme }) {
         <div style={cardStyle}>
             {showEmpty ? (
                 <>
-                    <div style={labelStyle}>Рівень</div>
+                    <div style={labelStyle}>Level</div>
                     <div style={valueStyle}>
-                        {attemptsLeft} {attemptsLeft > 4 ? "речень" : "речення"} до оцінки
+                        {attemptsLeft} {attemptsLeft > 4 ? "sentences" : "sentence"} left for evaluation
                     </div>
                 </>
             ) : (
                 <>
-                    <div style={labelStyle}>Рівень</div>
+                    <div style={labelStyle}>Level</div>
                     <div style={valueStyle}>{levelInfo?.label}</div>
                     <div style={sparkStyle}>
                         <i style={sparkFillStyle(accuracy ?? 0)} />

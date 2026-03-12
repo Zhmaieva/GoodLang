@@ -1767,7 +1767,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I park the car here?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -1841,7 +1841,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can you speak louder?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -1936,7 +1936,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I take your pen?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -1977,7 +1977,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can you come earlier?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2029,7 +2029,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I open the window?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2123,7 +2123,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I use your computer?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2195,7 +2195,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can you come before lunch?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2217,7 +2217,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I take your phone?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2280,7 +2280,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can you speak more slowly?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2312,7 +2312,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can you come after eight?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2334,7 +2334,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I take your pencil?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2446,7 +2446,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I leave the classroom?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2652,7 +2652,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I close the door?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         },
         {
             "rules": [
@@ -2839,7 +2839,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Can I take your backpack?"
             ],
-            "hint": "використовуй CAN"
+            "hint": "use CAN"
         }
     ],
     "COUNT_UNCOUNT": [
@@ -4748,7 +4748,7 @@ export const ALL_RULES_SAMPLES = {
                 "I haven’t got time.",
                 "I have not got time."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -4798,7 +4798,7 @@ export const ALL_RULES_SAMPLES = {
                 "My mum’s got a new job.",
                 "My mum has got a new job."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -4858,7 +4858,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’ve got an idea.",
                 "I have got an idea."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -4932,7 +4932,7 @@ export const ALL_RULES_SAMPLES = {
                 "He hasn’t got time today.",
                 "He has not got time today."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5008,7 +5008,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’ve got a good mood today.",
                 "I have got a good mood today."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5020,7 +5020,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’ve got a lot of free time.",
                 "We have got a lot of free time."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5127,7 +5127,7 @@ export const ALL_RULES_SAMPLES = {
                 "She hasn’t got time today.",
                 "She has not got time today."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5167,7 +5167,7 @@ export const ALL_RULES_SAMPLES = {
                 "They haven’t got jobs.",
                 "They have not got jobs."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5212,7 +5212,7 @@ export const ALL_RULES_SAMPLES = {
                 "They don’t have a plan.",
                 "They haven’t got a plan."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5234,7 +5234,7 @@ export const ALL_RULES_SAMPLES = {
                 "We don’t have free time.",
                 "We haven’t got free time."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5246,7 +5246,7 @@ export const ALL_RULES_SAMPLES = {
                 "He doesn’t have work experience.",
                 "He hasn’t got work experience."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5301,7 +5301,7 @@ export const ALL_RULES_SAMPLES = {
                 "Do you have time now?",
                 "Have you got time now?"
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5344,7 +5344,7 @@ export const ALL_RULES_SAMPLES = {
                 "Do you have a question?",
                 "Have you got a question?"
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5377,7 +5377,7 @@ export const ALL_RULES_SAMPLES = {
                 "She has a nice smile.",
                 "She’s got a nice smile."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5388,7 +5388,7 @@ export const ALL_RULES_SAMPLES = {
                 "We have some time.",
                 "We’ve got some time."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5412,7 +5412,7 @@ export const ALL_RULES_SAMPLES = {
                 "I have an exam tomorrow.",
                 "I’ve got an exam tomorrow."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5424,7 +5424,7 @@ export const ALL_RULES_SAMPLES = {
                 "She has a music lesson.",
                 "She’s got a music lesson."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5445,7 +5445,7 @@ export const ALL_RULES_SAMPLES = {
                 "I have a lot of work.",
                 "I’ve got a lot of work."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5489,7 +5489,7 @@ export const ALL_RULES_SAMPLES = {
                 "We have good news.",
                 "We’ve got good news."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5555,7 +5555,7 @@ export const ALL_RULES_SAMPLES = {
                 "He has a new job.",
                 "He’s got a new job."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5588,7 +5588,7 @@ export const ALL_RULES_SAMPLES = {
                 "She has a great idea.",
                 "She’s got a great idea."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5611,7 +5611,7 @@ export const ALL_RULES_SAMPLES = {
                 "We have English lessons every week.",
                 "We’ve got English lessons every week."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5676,7 +5676,7 @@ export const ALL_RULES_SAMPLES = {
                 "He has good handwriting.",
                 "He’s got good handwriting."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5711,7 +5711,7 @@ export const ALL_RULES_SAMPLES = {
                 "He has a good sense of humour.",
                 "He’s got a good sense of humour."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5734,7 +5734,7 @@ export const ALL_RULES_SAMPLES = {
                 "I don’t have time for breakfast.",
                 "I haven’t got time for breakfast."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5802,7 +5802,7 @@ export const ALL_RULES_SAMPLES = {
                 "We don’t have plans for the weekend.",
                 "We haven’t got plans for the weekend."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5813,7 +5813,7 @@ export const ALL_RULES_SAMPLES = {
                 "He doesn’t have time to play.",
                 "He hasn’t got time to play."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -5879,7 +5879,7 @@ export const ALL_RULES_SAMPLES = {
                 "Do you have time to talk?",
                 "Have you got time to talk?"
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -6011,7 +6011,7 @@ export const ALL_RULES_SAMPLES = {
                 "I have a headache.",
                 "I’ve got a headache."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -6024,7 +6024,7 @@ export const ALL_RULES_SAMPLES = {
                 "She has a sore throat.",
                 "She’s got a sore throat."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -6036,7 +6036,7 @@ export const ALL_RULES_SAMPLES = {
                 "He has a fever.",
                 "He’s got a fever."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         },
         {
             "rules": [
@@ -6047,7 +6047,7 @@ export const ALL_RULES_SAMPLES = {
                 "I have back pain.",
                 "I’ve got back pain."
             ],
-            "hint": "використовуй HAVE / HAVE GOT"
+            "hint": "use HAVE / HAVE GOT"
         }
     ],
     "IMPERATIVES": [
@@ -15064,7 +15064,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Яблуко лежить на столі.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is an apple on the table."
             ]
@@ -15075,7 +15075,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На полиці стоять дві чашки.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are two cups on the shelf."
             ]
@@ -15087,7 +15087,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Кіт у кімнаті.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cat in the room."
             ]
@@ -15099,7 +15099,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У парку багато людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are a lot of people in the park.",
                 "There are many people in the park."
@@ -15111,7 +15111,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Люди у парку.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are people in the park."
             ]
@@ -15123,7 +15123,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Біля вікна стоїть стілець.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a chair near the window."
             ]
@@ -15135,7 +15135,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У склянці є трохи води.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some water in the glass."
             ]
@@ -15146,7 +15146,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Молоко в холодильнику.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is milk in the fridge."
             ]
@@ -15158,7 +15158,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На полиці кілька книжок.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are some books on the shelf."
             ]
@@ -15170,7 +15170,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У нашому місті є річка.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a river in our city."
             ]
@@ -15181,7 +15181,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На підлозі лежать іграшки.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are toys on the floor."
             ]
@@ -15193,7 +15193,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Біля школи стоїть автобус.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a bus near the school."
             ]
@@ -15205,7 +15205,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У кімнаті стоїть телевізор.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a TV in the room."
             ]
@@ -15217,7 +15217,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На пляжі багато людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are many people on the beach.",
                 "There are a lot of people on the beach."
@@ -15230,7 +15230,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Лампа стоїть у кутку.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a lamp in the corner."
             ]
@@ -15242,7 +15242,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У ванній висить дзеркало.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a mirror in the bathroom."
             ]
@@ -15254,7 +15254,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На кухні є стіл і два стільці.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a table and two chairs in the kitchen."
             ]
@@ -15265,7 +15265,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Птахи сидять на дереві.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are birds in the tree."
             ]
@@ -15276,7 +15276,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Хмари на небі.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are clouds in the sky."
             ]
@@ -15288,7 +15288,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Поруч із будинком є школа.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a school near the house."
             ]
@@ -15300,7 +15300,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "За рогом є кафе.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cafe around the corner."
             ]
@@ -15312,7 +15312,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У моїй кімнаті є килим.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a carpet in my room."
             ]
@@ -15324,7 +15324,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У класі є кілька учнів.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are a few students in the class."
             ]
@@ -15336,7 +15336,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У поштовій скриньці є лист.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a letter in the mailbox."
             ]
@@ -15348,7 +15348,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На малюнку зображена собака.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a dog in the picture."
             ]
@@ -15360,7 +15360,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На вулиці багато машин.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are many cars in the street.",
                 "There are a lot of cars in the street."
@@ -15373,7 +15373,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На підвіконні стоїть квітка.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a flower on the windowsill."
             ]
@@ -15385,7 +15385,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На столі стоїть пляшка води.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a bottle of water on the table."
             ]
@@ -15396,7 +15396,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Яблука лежать у кошику.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are apples in the basket."
             ]
@@ -15408,7 +15408,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У холодильнику є трохи сиру.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some cheese in the fridge."
             ]
@@ -15420,7 +15420,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Під диваном сидить кіт.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cat under the sofa."
             ]
@@ -15432,7 +15432,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На даху сидить птах.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a bird on the roof."
             ]
@@ -15444,7 +15444,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У парку багато дітей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are many children in the park.",
                 "There are a lot of children in the park."
@@ -15457,7 +15457,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Біля дверей сидить собака.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a dog near the door."
             ]
@@ -15468,7 +15468,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У холодильнику є сир і масло.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is cheese and butter in the fridge."
             ]
@@ -15480,7 +15480,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У кімнаті багато людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are many people in the room.",
                 "There are a lot of people in the room."
@@ -15493,7 +15493,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На тарілці лежить один помідор.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is one tomato on the plate."
             ]
@@ -15505,7 +15505,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У каструлі є трохи рису.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some rice in the pot."
             ]
@@ -15517,7 +15517,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На столі лежить книжка.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a book on the table."
             ]
@@ -15529,7 +15529,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У дворі кіт і собака.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cat and a dog in the yard."
             ]
@@ -15541,7 +15541,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У кутку кімнати стоїть стіл.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a table in the corner of the room."
             ]
@@ -15553,7 +15553,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На вечірці буде багато їжі.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There will be a lot of food at the party."
             ]
@@ -15565,7 +15565,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На стіні висить дзеркало.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a mirror on the wall."
             ]
@@ -15577,7 +15577,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Біля ліжка є вікно.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a window near the bed."
             ]
@@ -15588,7 +15588,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "Поруч є новий магазин.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a new shop nearby."
             ]
@@ -15599,7 +15599,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "У чайнику було трохи чаю.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some tea in the kettle."
             ]
@@ -15610,7 +15610,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У дворі граються діти.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are kids in the yard."
             ]
@@ -15622,7 +15622,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На землі лежить трохи снігу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some snow on the ground."
             ]
@@ -15634,7 +15634,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "В акваріумі плаває риба.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a fish in the aquarium."
             ]
@@ -15646,7 +15646,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У машині багато місця.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a lot of space in the car."
             ]
@@ -15657,7 +15657,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "У чашці було трохи цукру.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some sugar in the cup.",
                 "There was a little sugar in the cup."
@@ -15670,7 +15670,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Поруч із домом є парк.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a park near the house."
             ]
@@ -15682,7 +15682,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У тексті є кілька помилок.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are a few mistakes in the text.",
                 "There are some mistakes in the text."
@@ -15695,7 +15695,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На столі є трохи пилу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some dust on the table."
             ]
@@ -15707,7 +15707,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У холодильнику стоїть пляшка соку.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a bottle of juice in the fridge."
             ]
@@ -15718,7 +15718,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На даху сидять птахи.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are birds on the roof."
             ]
@@ -15730,7 +15730,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У кінотеатрі показують новий фільм.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a new movie at the cinema."
             ]
@@ -15742,7 +15742,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У кімнаті є кілька стільців.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are a few chairs in the room."
             ]
@@ -15754,7 +15754,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У чашці було трохи молока.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some milk in the cup.",
                 "There was a little milk in the cup."
@@ -15767,7 +15767,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У нашому класі є новий студент.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a new student in our class."
             ]
@@ -15778,7 +15778,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "У банці є кілька цукерок.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are some candies in the jar."
             ]
@@ -15790,7 +15790,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На столі стоїть комп’ютер.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a computer on the desk."
             ]
@@ -15802,7 +15802,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Біля вікна сидить кішка.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cat near the window."
             ]
@@ -15813,7 +15813,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У кафе буде багато людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There will be a lot of people in the cafe."
             ]
@@ -15825,7 +15825,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На дереві сидить птах.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a bird in the tree."
             ]
@@ -15836,7 +15836,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "До обіду є трохи часу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some time before lunch."
             ]
@@ -15847,7 +15847,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "На вулиці лежить трохи снігу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some snow outside."
             ]
@@ -15858,7 +15858,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "У гаманці є трохи грошей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some money in the wallet."
             ]
@@ -15871,7 +15871,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На тарілці є трохи масла.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some butter on the plate."
             ]
@@ -15882,7 +15882,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На ліжку лежать дві подушки.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are two pillows on the bed."
             ]
@@ -15894,7 +15894,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На столі стоїть пляшка вина.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a bottle of wine on the table."
             ]
@@ -15905,7 +15905,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "У районі є нова школа.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a new school in the area."
             ]
@@ -15918,7 +15918,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У коробці було трохи шоколаду.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some chocolate in the box.",
                 "There was a little chocolate in the box."
@@ -15931,7 +15931,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У черзі було кілька людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There were a few people in the queue.",
                 "There were several people in line."
@@ -15944,7 +15944,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На столі лежать чотири листи.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are four letters on the table."
             ]
@@ -15957,7 +15957,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У холодильнику було трохи морозива.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some ice cream in the fridge.",
                 "There was a little ice cream left in the fridge."
@@ -15969,7 +15969,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "Біля школи є кафе.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cafe near the school."
             ]
@@ -15980,7 +15980,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На тарілці три яблука.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are three apples on the plate."
             ]
@@ -15993,7 +15993,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У відрі було трохи води.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some water in the bucket.",
                 "There was a little water in the bucket."
@@ -16007,7 +16007,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На склі є трохи інею.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some frost on the glass."
             ]
@@ -16019,7 +16019,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На стіні висять кілька картин.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are several pictures on the wall."
             ]
@@ -16031,7 +16031,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У моїй кишені є квиток.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a ticket in my pocket."
             ]
@@ -16042,7 +16042,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На дереві ростуть яблука.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are apples on the tree."
             ]
@@ -16054,7 +16054,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На дивані сидить кішка.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cat on the sofa."
             ]
@@ -16067,7 +16067,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На даху було трохи снігу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some snow on the roof."
             ]
@@ -16079,7 +16079,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У дворі є собака.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a dog in the yard."
             ]
@@ -16091,7 +16091,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На столі стоїть чашка.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cup on the table."
             ]
@@ -16104,7 +16104,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У банці було трохи цукру.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some sugar in the jar.",
                 "There was a little sugar in the jar."
@@ -16116,7 +16116,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "Біля парку є новий магазин.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a new shop near the park."
             ]
@@ -16127,7 +16127,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На полиці стоять три книжки.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are three books on the shelf."
             ]
@@ -16139,7 +16139,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "У банці є трохи меду.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some honey in the jar."
             ]
@@ -16151,7 +16151,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "У холодильнику було трохи молока.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some milk in the fridge.",
                 "There was a little milk in the fridge."
@@ -16164,7 +16164,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На тумбочці стоїть лампа.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a lamp on the nightstand."
             ]
@@ -16177,7 +16177,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На тарілці є трохи сиру.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some cheese on the plate."
             ]
@@ -16188,7 +16188,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "На дитячому майданчику були діти.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There were children at the playground.",
                 "There were kids on the playground."
@@ -16202,7 +16202,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У чашці було трохи кави.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some coffee in the cup.",
                 "There was a little coffee left in the cup."
@@ -16214,7 +16214,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У кімнаті є три вікна.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are three windows in the room."
             ]
@@ -16225,7 +16225,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "У місті є новий парк.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a new park in the city."
             ]
@@ -16236,7 +16236,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У саду ростуть квіти.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are flowers in the garden."
             ]
@@ -16247,7 +16247,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "На столі було трохи хліба.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some bread on the table.",
                 "There was a little coffee left in the cup."
@@ -16260,7 +16260,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Біля дверей стоїть великий пес.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a big dog near the door."
             ]
@@ -16273,7 +16273,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У склянці було трохи соку.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some juice in the glass.",
                 "There was a little juice in the glass."
@@ -16285,7 +16285,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Перед будинком стоять три машини.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are three cars in front of the house."
             ]
@@ -16296,7 +16296,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "У кінотеатрі показують новий фільм.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a new movie at the cinema."
             ]
@@ -16308,7 +16308,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "У черзі було кілька людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There were several people in line.",
                 "There were a few people in the queue."
@@ -16320,7 +16320,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "Поруч з офісом є кафе.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a cafe next to the office."
             ]
@@ -16331,7 +16331,7 @@ export const ALL_RULES_SAMPLES = {
                 "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"
             ],
             "ua": "На вулиці було трохи снігу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There was some snow outside.",
                 "There was a little snow on the street."
@@ -16345,7 +16345,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "У шафі є багато одягу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is a lot of clothing in the wardrobe.",
                 "There are lots of clothes in the wardrobe."
@@ -16359,7 +16359,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "На полиці є трохи книжок.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are some books on the shelf."
             ]
@@ -16373,7 +16373,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "На столі є трохи сиру.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some cheese on the table."
             ]
@@ -16386,7 +16386,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "У мисці є трохи винограду.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are some grapes in the bowl."
             ]
@@ -16400,7 +16400,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "На підлозі є трохи піску.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some sand on the floor."
             ]
@@ -16412,7 +16412,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "До початку ще є трохи часу.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some time before the start."
             ]
@@ -16425,7 +16425,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "У пакеті є трохи хліба.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some bread in the bag."
             ]
@@ -16438,7 +16438,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "На парковці стоять кілька машин.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There are some cars in the parking lot."
             ]
@@ -16452,7 +16452,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "На столі є трохи кави.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some coffee on the table."
             ]
@@ -16465,7 +16465,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "Сьогодні в парку було кілька людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There were a few people in the park today.",
                 "There were some people in the park today."
@@ -16480,7 +16480,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "У пляшці є трохи води.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There is some water in the bottle."
             ]
@@ -16493,7 +16493,7 @@ export const ALL_RULES_SAMPLES = {
                 "COUNT_UNCOUNT"
             ],
             "ua": "У супермаркеті було багато людей.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There were a lot of people in the supermarket.",
                 "There were lots of people at the supermarket."
@@ -16508,7 +16508,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "На парковці було кілька машин.",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "There were a few cars in the parking lot.",
                 "There were several cars in the car park."
@@ -16522,7 +16522,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "На вулиці є машини?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Are there any cars on the street?",
                 "Are there cars on the street?"
@@ -16535,7 +16535,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "В чайнику є трохи чаю?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Is there any tea in the teapot?",
                 "Is there a bit of tea in the teapot?"
@@ -16548,7 +16548,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "У холодильнику є зелень?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Is there any parsley in the fridge?",
                 "Are there any greens in the fridge?"
@@ -16562,7 +16562,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "В кінотеатрі є люди?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Are there any people in the cinema?",
                 "Are there a few people at the movies?"
@@ -16576,7 +16576,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "В кошику є яблука?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Are there any apples in the basket?",
                 "Are there a few apples in the basket?"
@@ -16590,7 +16590,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "В супі є перець?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Is there any pepper in the soup?"
             ]
@@ -16602,7 +16602,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "В гаманці є гроші?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Is there any money in the wallet?",
                 "Is there money in the wallet?"
@@ -16615,7 +16615,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "В холодильнику є їжа?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Is there any food in the fridge?"
             ]
@@ -16628,7 +16628,7 @@ export const ALL_RULES_SAMPLES = {
                 "ARTICLES"
             ],
             "ua": "На майданчику були діти?",
-            "hint": "використовуй THERE IS / THERE ARE",
+            "hint": "use THERE IS / THERE ARE",
             "en": [
                 "Were there any children on the playground?",
                 "Were there kids on the playground?"
@@ -16643,7 +16643,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any people in the library."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16655,7 +16655,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any space in the wardrobe.",
                 "There is no space in the wardrobe."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16667,7 +16667,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any milk in the cup.",
                 "There is no milk in the cup."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16678,7 +16678,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any people at the bus stop."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16690,7 +16690,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any light in the room.",
                 "There is no light in the room."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16702,7 +16702,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any parsley in the fridge.",
                 "There is no parsley in the fridge."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16714,7 +16714,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any water in the bottle.",
                 "There is no water in the bottle."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16725,7 +16725,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any people in the shop."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16736,7 +16736,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any cars in the parking lot."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16748,7 +16748,7 @@ export const ALL_RULES_SAMPLES = {
                 "There is no computer on the desk.",
                 "There isn’t any computer on the desk."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16760,7 +16760,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any bread on the table.",
                 "There is no bread on the table."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16772,7 +16772,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any sugar in the cup.",
                 "There is no sugar in the cup."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16783,7 +16783,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any children at school today."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16794,7 +16794,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any chairs in the classroom."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16806,7 +16806,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any paper in the printer.",
                 "There is no paper in the printer."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16818,7 +16818,7 @@ export const ALL_RULES_SAMPLES = {
                 "There is no lamp in the bedroom.",
                 "There isn’t any lamp in the bedroom."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16830,7 +16830,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any time to rest.",
                 "There is no time to rest."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16842,7 +16842,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any food on the table.",
                 "There is no food on the table."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16854,7 +16854,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any water in the glass.",
                 "There is no water in the glass."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16866,7 +16866,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any coffee in the jar.",
                 "There is no coffee in the jar."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16878,7 +16878,7 @@ export const ALL_RULES_SAMPLES = {
                 "There isn’t any space in the car.",
                 "There is no space in the car."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16890,7 +16890,7 @@ export const ALL_RULES_SAMPLES = {
                 "There are no eggs in the fridge.",
                 "There aren’t any eggs in the fridge."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16902,7 +16902,7 @@ export const ALL_RULES_SAMPLES = {
                 "There is no mirror in the bathroom.",
                 "There isn’t any mirror in the bathroom."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16914,7 +16914,7 @@ export const ALL_RULES_SAMPLES = {
                 "There aren’t any flowers in the vase.",
                 "There are no flowers in the vase."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16925,7 +16925,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any bread left."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16936,7 +16936,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any people in the park."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16947,7 +16947,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any clothes in the wardrobe."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16958,7 +16958,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any new messages."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16969,7 +16969,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any milk for coffee."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16980,7 +16980,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any answers in the test."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -16991,7 +16991,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any internet at home."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17002,7 +17002,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any animals in this forest."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17013,7 +17013,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any time for lunch."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17024,7 +17024,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any trees in the yard."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17035,7 +17035,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any calls this morning."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17046,7 +17046,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any clouds in the sky."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17057,7 +17057,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any juice in the fridge."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17068,7 +17068,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any free tables in the restaurant."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17079,7 +17079,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any cookies in the jar."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17090,7 +17090,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any people in the museum today."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17101,7 +17101,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any milk in the glass."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17112,7 +17112,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any keys in the pocket."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17123,7 +17123,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any people in the house."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17134,7 +17134,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any problems here."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17145,7 +17145,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any sugar at home."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17156,7 +17156,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any light in the basement."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17167,7 +17167,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any people near the shop."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17178,7 +17178,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t a computer in the room."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17189,7 +17189,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any buses today."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17200,7 +17200,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any dust on the shelves."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17211,7 +17211,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any plans for tomorrow."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17222,7 +17222,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any seats on the plane."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17233,7 +17233,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any money in the account."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17244,7 +17244,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any windows in the room."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17255,7 +17255,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any time to wait."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17266,7 +17266,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any children on the street."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17276,7 +17276,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any water in the bucket."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17287,7 +17287,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any options to choose from."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17299,7 +17299,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t a TV in the bedroom."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17310,7 +17310,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any lessons today."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17321,7 +17321,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any reasons to worry."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17332,7 +17332,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any cars near the school."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17342,7 +17342,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any oil in the pan."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17353,7 +17353,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any chairs near the table."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17364,7 +17364,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any plans for today."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17374,7 +17374,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any electricity in the city."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17385,7 +17385,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any doubts about it."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17395,7 +17395,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any paint in the bucket."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17406,7 +17406,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any wallet in the bag."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17417,7 +17417,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t a computer in the office."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17428,7 +17428,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any chances to win."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17438,7 +17438,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any air in the room."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17449,7 +17449,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any books on the desk."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17459,7 +17459,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any salt in the soup."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17470,7 +17470,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any meetings tomorrow."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17480,7 +17480,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any coffee in the cup."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17491,7 +17491,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any ideas for a gift."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17502,7 +17502,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any money on the card."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17513,7 +17513,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any news today."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17524,7 +17524,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There aren’t any animals in the zoo."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17535,7 +17535,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t a lamp on the nightstand."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17545,7 +17545,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any water in the aquarium."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         },
         {
             "rules": [
@@ -17555,7 +17555,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There isn’t any honey in the jar."
             ],
-            "hint": "використовуй THERE ISN'T / AREN'T ANY"
+            "hint": "use THERE ISN'T / AREN'T ANY"
         }
     ],
     "TOO_VERY": [
@@ -23777,7 +23777,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It was hot, so we went to the beach."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23788,7 +23788,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am hungry, so I am having lunch."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23799,7 +23799,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I didn’t have money, so I didn’t buy a ticket."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23810,7 +23810,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We were in a hurry, so we walked fast."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23820,7 +23820,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She went to work although she felt tired."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -23830,7 +23830,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He did it although he didn’t want to."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -23840,7 +23840,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It was late, so he went to bed."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23851,7 +23851,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It’s cold today, so I will wear a hat."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23861,7 +23861,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I was tired, so I took a day off."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23871,7 +23871,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is very smart, so I trust him."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23881,7 +23881,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It was raining, so we stayed inside."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23892,7 +23892,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I didn’t hurry, so I was late."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23902,7 +23902,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We didn’t have time, so we didn’t go."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23912,7 +23912,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The food was delicious, so we ordered more."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23922,7 +23922,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He didn’t know the answer, so he asked the teacher."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23933,7 +23933,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She might be late, so we will go without her."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23943,7 +23943,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I want to be strong, so I work out every day."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23953,7 +23953,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The task was easy, so I finished it quickly."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23963,7 +23963,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I skipped breakfast, so I am very hungry."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23974,7 +23974,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is sleeping, so speak more quietly."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23984,7 +23984,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We don’t have enough milk, so I will go to the shop."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -23995,7 +23995,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We didn’t see the bus, so we missed it."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -24005,7 +24005,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is very kind, so I like working with her."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -24016,7 +24016,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I don’t want to make noise, so I close the door slowly."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -24026,7 +24026,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They were scared, so they ran away."
             ],
-            "hint": "використовуй SO"
+            "hint": "use SO"
         },
         {
             "rules": [
@@ -24243,7 +24243,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although it’s cold, we are walking in the park."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24254,7 +24254,7 @@ export const ALL_RULES_SAMPLES = {
                 "He is smiling although he is sad.",
                 "Although he is sad, he is smiling."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24265,7 +24265,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although I don’t like fish, I ate it."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24275,7 +24275,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She came although I didn’t invite her."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24286,7 +24286,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although it was raining, we played outside."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24296,7 +24296,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I bought the sofa although it’s expensive."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24307,7 +24307,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although she doesn’t like sport, she runs."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24317,7 +24317,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although we are tired, we keep working."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24327,7 +24327,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although it’s difficult, I try."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24337,7 +24337,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although her English isn’t perfect, she speaks."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24347,7 +24347,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although we aren’t close, we are friends."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24358,7 +24358,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although I was hungry, I waited for everyone."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24368,7 +24368,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although I made a mistake, I am learning."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24378,7 +24378,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although we lost, it was a good match."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         },
         {
             "rules": [
@@ -24388,7 +24388,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although I am afraid, I move forward."
             ],
-            "hint": "використовуй ALTHOUGH"
+            "hint": "use ALTHOUGH"
         }
     ],
     "BEFORE_AFTER_ING": [
@@ -24401,7 +24401,7 @@ export const ALL_RULES_SAMPLES = {
                 "Wash your hands before eating.",
                 "Before eating, wash your hands."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24411,7 +24411,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Wait a little before leaving."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24421,7 +24421,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She brushes her hair before leaving the house."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24432,7 +24432,7 @@ export const ALL_RULES_SAMPLES = {
                 "Count the money before buying anything.",
                 "Count the money before making a purchase."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24442,7 +24442,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Wait before diving."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24452,7 +24452,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I check the tickets before entering."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24462,7 +24462,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He washes his hands before cooking."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24473,7 +24473,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They talked before going home."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24483,7 +24483,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She stretches before working out."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24493,7 +24493,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Take off your shoes before entering."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24504,7 +24504,7 @@ export const ALL_RULES_SAMPLES = {
                 "Look left and right before crossing the road.",
                 "Make sure to look left and right before crossing."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24515,7 +24515,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We checked everything before leaving."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24525,7 +24525,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I take a deep breath before performing."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24535,7 +24535,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Check the weather before going out."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24545,7 +24545,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I read a book before falling asleep."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24555,7 +24555,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Turn off the light before leaving."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24565,7 +24565,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Take a break before continuing."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24576,7 +24576,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Feed the cat before going to school."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24586,7 +24586,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I brush my teeth before going to bed."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24597,7 +24597,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Although I am nervous, I smile before performing."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24607,7 +24607,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Take off your hat before entering."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24618,7 +24618,7 @@ export const ALL_RULES_SAMPLES = {
                 "Clean up before heading to the party.",
                 "Tidy up before heading to the party."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24629,7 +24629,7 @@ export const ALL_RULES_SAMPLES = {
                 "I drink water before working out.",
                 "I drink water before going to the gym."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24640,7 +24640,7 @@ export const ALL_RULES_SAMPLES = {
                 "I hug my mom before going to bed.",
                 "I hug my mom before going to sleep."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24650,7 +24650,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We close the door before leaving."
             ],
-            "hint": "використовуй BEFORE + GERUND"
+            "hint": "use BEFORE + GERUND"
         },
         {
             "rules": [
@@ -24660,7 +24660,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I understood everything after talking to the teacher."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24671,7 +24671,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I don’t eat right after working out."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24681,7 +24681,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I take a shower after coming home."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24692,7 +24692,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I took notes after finishing reading."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24702,7 +24702,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I drink water after cycling."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24712,7 +24712,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I play games after doing homework."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24722,7 +24722,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Taste the soup after cooking it."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24732,7 +24732,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He stretches after working out."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24742,7 +24742,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Wash your plate after eating."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24752,7 +24752,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I stretch after running."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24762,7 +24762,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Repeat the words after learning them."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         },
         {
             "rules": [
@@ -24772,7 +24772,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We clean the table after eating lunch."
             ],
-            "hint": "використовуй AFTER + GERUND"
+            "hint": "use AFTER + GERUND"
         }
     ],
     "BE_GOING_TO_VS_WILL": [
@@ -25185,7 +25185,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is good at cooking."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25195,7 +25195,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is good at remembering names."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25206,7 +25206,7 @@ export const ALL_RULES_SAMPLES = {
                 "He is good at fixing small problems.",
                 "He is good at handling small problems."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25217,7 +25217,7 @@ export const ALL_RULES_SAMPLES = {
                 "My sister is good at drawing.",
                 "My sister is good at painting."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25228,7 +25228,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "My brother is good at playing the guitar."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25238,7 +25238,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is good at saving money."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25249,7 +25249,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am good at taking photos."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25259,7 +25259,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is good at explaining things."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25269,7 +25269,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We are good at planning trips."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25279,7 +25279,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is good at choosing gifts."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25289,7 +25289,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They are good at cooking simple meals."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25299,7 +25299,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is good at talking to people."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25309,7 +25309,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am good at staying calm."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25319,7 +25319,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "My mom is good at growing plants."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25329,7 +25329,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "My dad is good at repairing things."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25339,7 +25339,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is good at keeping promises."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25349,7 +25349,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They are good at solving conflicts."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25360,7 +25360,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am good at taking care of kids."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25370,7 +25370,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We are good at learning new skills."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25380,7 +25380,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am interested in learning English."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25391,7 +25391,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in cooking new recipes."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25401,7 +25401,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We are interested in trying local food."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25411,7 +25411,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in meeting new people."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25421,7 +25421,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am interested in studying psychology."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25431,7 +25431,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in learning about investments."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25441,7 +25441,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in studying design."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25451,7 +25451,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We are interested in traveling around Asia."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25461,7 +25461,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is interested in creating his own projects."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25471,7 +25471,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in photographing nature."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25481,7 +25481,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am interested in running my own blog."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25491,7 +25491,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in growing his business."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25501,7 +25501,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is interested in modern art."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25511,7 +25511,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We are interested in new technologies."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25521,7 +25521,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is interested in improving his skills."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25531,7 +25531,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in learning to work with people."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25541,7 +25541,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am interested in trying new learning formats."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25551,7 +25551,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He is interested in building a personal brand."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25561,7 +25561,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is interested in self-development."
             ],
-            "hint": "використовуй BE INTERESTED IN"
+            "hint": "use BE INTERESTED IN"
         },
         {
             "rules": [
@@ -25572,7 +25572,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is good at doing makeup."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25582,7 +25582,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am good at managing my time."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         },
         {
             "rules": [
@@ -25592,7 +25592,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She is good at staying positive."
             ],
-            "hint": "використовуй BE GOOD AT"
+            "hint": "use BE GOOD AT"
         }
     ],
     "COMPARATIVES": [
@@ -27815,7 +27815,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Ти маєш приймати ліки після їжі.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to take medicine after meals."
             ]
@@ -27826,7 +27826,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Взимку тобі не треба косити траву.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to cut the grass in winter."
             ]
@@ -27836,7 +27836,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш повісити рушник після душу.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to hang the towel after showering."
             ]
@@ -27847,7 +27847,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Тобі не треба мити підлогу щовечора.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to mop the floor every evening."
             ]
@@ -27858,7 +27858,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Ти маєш годувати кота двічі на день.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to feed the cat twice a day."
             ]
@@ -27869,7 +27869,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Тобі не треба міняти постіль щотижня.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to change the bedsheets weekly."
             ]
@@ -27880,7 +27880,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Ти маєш розвантажити посудомийку зранку.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to empty the dishwasher in the morning."
             ]
@@ -27890,7 +27890,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба пекти печиво сьогодні.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to bake cookies today."
             ]
@@ -27900,7 +27900,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш носити шкарпетки з взуттям.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to wear socks with shoes."
             ]
@@ -27910,7 +27910,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба пилососити килим щодня.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to vacuum the carpet daily."
             ]
@@ -27921,7 +27921,7 @@ export const ALL_RULES_SAMPLES = {
                 "TOO_VERY"
             ],
             "ua": "Ти маєш швидко зачиняти дверцята холодильника.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to close the fridge door quickly."
             ]
@@ -27931,7 +27931,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба витирати стіл після кожного перекусу.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to wipe the table after every snack."
             ]
@@ -27942,7 +27942,7 @@ export const ALL_RULES_SAMPLES = {
                 "BECAUSE_SO_BUT_ALTHOUGH"
             ],
             "ua": "Ти маєш вмикати обігрівач, коли холодно.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to turn on the heater when it's cold."
             ]
@@ -27953,7 +27953,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Тобі не треба відкривати всі вікна зараз.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to open all the windows now."
             ]
@@ -27965,7 +27965,7 @@ export const ALL_RULES_SAMPLES = {
                 "POSSESSIVE_S"
             ],
             "ua": "Ти маєш завжди вішати ключі на гачок.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You always have to hang the keys on the hook."
             ]
@@ -27975,7 +27975,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба чистити взуття щодня.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to polish shoes every day."
             ]
@@ -27985,7 +27985,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш обполіскувати чашку після кави.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to rinse the cup after coffee."
             ]
@@ -27996,7 +27996,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Тобі не треба підмітати балкон цього тижня.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to sweep the balcony this week."
             ]
@@ -28006,7 +28006,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба сортувати пошту негайно.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to sort the mail right away."
             ]
@@ -28017,7 +28017,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Ти маєш знімати пальто біля дверей.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to take off your coat at the door."
             ]
@@ -28027,7 +28027,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба прасувати рушники.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to iron the towels."
             ]
@@ -28038,7 +28038,7 @@ export const ALL_RULES_SAMPLES = {
                 "POSSESSIVE_S"
             ],
             "ua": "Ти маєш поповнити дозатор мила.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to refill the soap dispenser."
             ]
@@ -28048,7 +28048,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба мити машину щомісяця.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to wash the car monthly."
             ]
@@ -28059,7 +28059,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Ти маєш вимикати вентилятор перед сном.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to switch off the fan before sleep."
             ]
@@ -28069,7 +28069,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба сьогодні впорядковувати шафу.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to organize the closet today."
             ]
@@ -28079,7 +28079,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш чистити картоплю перед готуванням.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to peel the potatoes before cooking."
             ]
@@ -28089,7 +28089,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба витирати посуд вручну.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to dry the dishes by hand."
             ]
@@ -28100,7 +28100,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Тобі не треба поливати кімнатні рослини щодня.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to water the indoor plants daily."
             ]
@@ -28110,7 +28110,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш викидати старі газети.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to throw away old newspapers."
             ]
@@ -28121,7 +28121,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Тобі не треба щодня мити дзеркало.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to clean the mirror every morning."
             ]
@@ -28131,7 +28131,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш помішувати суп, поки він вариться.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to stir the soup while it cooks."
             ]
@@ -28141,7 +28141,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба складати ковдри щодня.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to fold blankets each day."
             ]
@@ -28151,7 +28151,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш регулярно заряджати електричну зубну щітку.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to regularly charge your electric toothbrush.",
                 "You have to charge your electric toothbrush regularly."
@@ -28162,7 +28162,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба розморожувати холодильник щотижня.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to defrost the fridge weekly."
             ]
@@ -28172,7 +28172,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Ти маєш ставити молоко назад у холодильник.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You have to put milk back in the fridge."
             ]
@@ -28182,7 +28182,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба щодня змінювати сторінку календаря.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to change the calendar page daily."
             ]
@@ -28193,7 +28193,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Тобі не треба провітрювати кімнату під час дощу.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to air the room in the rain."
             ]
@@ -28203,7 +28203,7 @@ export const ALL_RULES_SAMPLES = {
                 "HAVE_TO_DONT_HAVE_TO"
             ],
             "ua": "Тобі не треба витирати книжкові полиці щомісяця.",
-            "hint": "використовуй HAVE TO / DON'T HAVE TO",
+            "hint": "use HAVE TO / DON'T HAVE TO",
             "en": [
                 "You don't have to dust the bookshelves monthly."
             ]
@@ -29757,7 +29757,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We take a lot of photos when we travel."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29769,7 +29769,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He often makes mistakes."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29780,7 +29780,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I want to make a cake."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29790,7 +29790,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I want to take a picture."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29801,7 +29801,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Don’t make a mistake."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29812,7 +29812,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He made the right choice."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29822,7 +29822,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We made dinner together."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29832,7 +29832,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I want to make friends at my new school."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29843,7 +29843,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She made a shopping list."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29853,7 +29853,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We made a plan for the weekend."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29864,7 +29864,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am making tea now."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29877,7 +29877,7 @@ export const ALL_RULES_SAMPLES = {
                 "They make accessories by hand.",
                 "They are making accessories by hand."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29888,7 +29888,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I am making breakfast right now."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29898,7 +29898,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She made me some tea."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29909,7 +29909,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We made a mistake, but we learned."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29921,7 +29921,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He made a better presentation this time."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29932,7 +29932,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Will you take a picture of me?"
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29943,7 +29943,7 @@ export const ALL_RULES_SAMPLES = {
                 "I have made my choice.",
                 "I have made a choice."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29954,7 +29954,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We made many plans for the summer."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29964,7 +29964,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She took a break."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29974,7 +29974,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I will do my best."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29984,7 +29984,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We are making progress."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -29994,7 +29994,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It made me happy."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30004,7 +30004,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It makes a big difference."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30014,7 +30014,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I want to make positive changes."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30024,7 +30024,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Volunteers make the world better."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30035,7 +30035,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He makes his bed every morning."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30046,7 +30046,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We made an effort to help."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30059,7 +30059,7 @@ export const ALL_RULES_SAMPLES = {
                 "I do my homework every day.",
                 "I do homework every day."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30071,7 +30071,7 @@ export const ALL_RULES_SAMPLES = {
                 "He does exercise in the morning.",
                 "He does his exercises in the morning."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30084,7 +30084,7 @@ export const ALL_RULES_SAMPLES = {
                 "She doesn’t make many mistakes.",
                 "She doesn’t make a lot of mistakes."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30095,7 +30095,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We do the cleaning every Saturday."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30107,7 +30107,7 @@ export const ALL_RULES_SAMPLES = {
                 "I do sport three times a week.",
                 "I exercise three times a week."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30117,7 +30117,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They do a great job."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30128,7 +30128,7 @@ export const ALL_RULES_SAMPLES = {
                 "Who does the dishes in your family?",
                 "Who washes the dishes in your family?"
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30138,7 +30138,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I do my best."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30150,7 +30150,7 @@ export const ALL_RULES_SAMPLES = {
                 "Don’t do silly things.",
                 "Don't do anything stupid."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30162,7 +30162,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He never does anything bad."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30174,7 +30174,7 @@ export const ALL_RULES_SAMPLES = {
                 "We do the shopping after work.",
                 "We go shopping after work."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30185,7 +30185,7 @@ export const ALL_RULES_SAMPLES = {
                 "I do back exercises.",
                 "I do exercises for my back."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30195,7 +30195,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Who is making coffee today?"
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30207,7 +30207,7 @@ export const ALL_RULES_SAMPLES = {
                 "We did a project together at school.",
                 "We worked on a project together at school."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30218,7 +30218,7 @@ export const ALL_RULES_SAMPLES = {
                 "I will do my part.",
                 "I’ll do my part."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30230,7 +30230,7 @@ export const ALL_RULES_SAMPLES = {
                 "He doesn’t do his homework on time.",
                 "He does not do his homework on time."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30240,7 +30240,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I do everything slowly when I am tired."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30252,7 +30252,7 @@ export const ALL_RULES_SAMPLES = {
                 "My brother does household chores.",
                 "My brother does the chores."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30264,7 +30264,7 @@ export const ALL_RULES_SAMPLES = {
                 "He can do better.",
                 "He could do better."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30276,7 +30276,7 @@ export const ALL_RULES_SAMPLES = {
                 "I do my homework and then I play games.",
                 "I do homework and then I play games."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30288,7 +30288,7 @@ export const ALL_RULES_SAMPLES = {
                 "She did a great job last week.",
                 "She did an excellent job last week."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30300,7 +30300,7 @@ export const ALL_RULES_SAMPLES = {
                 "We do projects at school.",
                 "We work on projects at school."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30314,7 +30314,7 @@ export const ALL_RULES_SAMPLES = {
                 "He makes a lot of mistakes in dictation.",
                 "He makes a lot of mistakes in spelling tests."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30326,7 +30326,7 @@ export const ALL_RULES_SAMPLES = {
                 "Who does the homework with you?",
                 "Who studies with you?"
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30337,7 +30337,7 @@ export const ALL_RULES_SAMPLES = {
                 "I do what is needed.",
                 "I do everything that is needed."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30349,7 +30349,7 @@ export const ALL_RULES_SAMPLES = {
                 "He does exercises because he wants to be strong.",
                 "He works out because he wants to be strong."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30361,7 +30361,7 @@ export const ALL_RULES_SAMPLES = {
                 "I am making coffee for everyone.",
                 "I'm making coffee for everyone."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30373,7 +30373,7 @@ export const ALL_RULES_SAMPLES = {
                 "He will do a good job with this project.",
                 "He will do a great job with this project."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30384,7 +30384,7 @@ export const ALL_RULES_SAMPLES = {
                 "We do our part for the team.",
                 "We contribute to the team."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30395,7 +30395,7 @@ export const ALL_RULES_SAMPLES = {
                 "They do the work better together.",
                 "They work better together."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30408,7 +30408,7 @@ export const ALL_RULES_SAMPLES = {
                 "I don’t always do what I promise.",
                 "I do not always do what I promise."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         },
         {
             "rules": [
@@ -30420,7 +30420,7 @@ export const ALL_RULES_SAMPLES = {
                 "We have already done our homework.",
                 "We've already done our homework."
             ],
-            "hint": "використовуй MAKE / DO / TAKE"
+            "hint": "use MAKE / DO / TAKE"
         }
     ],
     "MAY_MIGHT": [
@@ -30436,7 +30436,7 @@ export const ALL_RULES_SAMPLES = {
                 "Photographers may work in the studio.",
                 "Photographers might work in the studio."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30450,7 +30450,7 @@ export const ALL_RULES_SAMPLES = {
                 "May we remain in the gallery after the show?",
                 "Might we remain in the gallery after the show?"
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30461,7 +30461,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may take the bus if you miss the train."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30472,7 +30472,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might need an umbrella."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30483,7 +30483,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may drink tea or coffee in the morning."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30496,7 +30496,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might see flowers in the park today."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30507,7 +30507,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may open the window if it is hot."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30519,7 +30519,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might find bread at the small shop."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30531,7 +30531,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may walk to the store."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30542,7 +30542,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might hear birds early in the morning."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30553,7 +30553,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might like the new cafe nearby."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30564,7 +30564,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may sit here if the chair is free."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30575,7 +30575,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may call your friend after dinner."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30587,7 +30587,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It might rain later this afternoon."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30599,7 +30599,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might see the moon tonight."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30610,7 +30610,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may turn on the light if it is dark."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30622,7 +30622,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might buy fruit at the market."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30633,7 +30633,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may wear a jacket."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30644,7 +30644,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might hear your neighbor's music."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30655,7 +30655,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may close the door quietly."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30667,7 +30667,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might find keys on the table."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30679,7 +30679,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may eat an apple after lunch."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30690,7 +30690,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may watch TV for one hour."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30700,7 +30700,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might smell fresh bread outside."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30712,7 +30712,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may take a short nap today."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30724,7 +30724,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might see a cat in the yard."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30735,7 +30735,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might hear the bell soon."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30746,7 +30746,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might feel tired after work."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30758,7 +30758,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may open the mail tomorrow."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30770,7 +30770,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may smile at the neighbor."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30782,7 +30782,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might find a pen in the drawer."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30793,7 +30793,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may turn off the fan now."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30803,7 +30803,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might see stars if it is clear."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30814,7 +30814,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might like this tea."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30826,7 +30826,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might smell coffee in the kitchen."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30838,7 +30838,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may sit on the sofa to rest."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30850,7 +30850,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You might see people in the street."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30862,7 +30862,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may charge the phone tonight."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         },
         {
             "rules": [
@@ -30872,7 +30872,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You may eat bread with butter."
             ],
-            "hint": "використовуй MAY / MIGHT"
+            "hint": "use MAY / MIGHT"
         }
     ],
     "MUST_MUSTNT": [
@@ -30887,7 +30887,7 @@ export const ALL_RULES_SAMPLES = {
                 "You mustn’t shout in the library.",
                 "You must not shout in the library."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30900,7 +30900,7 @@ export const ALL_RULES_SAMPLES = {
                 "You mustn’t park here because this is private property.",
                 "You must not park here because this is private property."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30910,7 +30910,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "This student must return the book to the library."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30921,7 +30921,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must finish your homework by this evening."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30933,7 +30933,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Students must read this book for the exam."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30945,7 +30945,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must be very careful during the experiment."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30956,7 +30956,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We must finish the work this evening."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30967,7 +30967,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must wear a seatbelt when driving to ensure your safety."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30978,7 +30978,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Students must complete their homework before the deadline."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30989,7 +30989,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You mustn't smoke in this area as it is prohibited."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -30999,7 +30999,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Drivers mustn't use their phones while operating a vehicle."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31010,7 +31010,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We must arrive at the airport two hours early for international flights."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31021,7 +31021,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must show your ID to enter the building."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31032,7 +31032,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Employees must wear safety helmets on the construction site."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31043,7 +31043,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You mustn't feed the animals in the zoo."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31054,7 +31054,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Tourists must respect local customs while visiting temples."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31065,7 +31065,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Children must hold an adult's hand when crossing the street."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31076,7 +31076,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must turn off your phone during the exam."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31086,7 +31086,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Passengers mustn't open the emergency exit unless instructed."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31097,7 +31097,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must book tickets in advance for the concert."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31107,7 +31107,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Drivers must stop at red lights without exception."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31117,7 +31117,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Students must attend all mandatory lectures."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31129,7 +31129,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Visitors mustn't touch the artworks in the museum."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31140,7 +31140,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must submit your application by Friday."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31151,7 +31151,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Athletes must follow the coach's instructions during training."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31161,7 +31161,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You mustn't reveal confidential information to outsiders."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31172,7 +31172,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Customers must pay before leaving the store."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31182,7 +31182,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Employees mustn't use company computers for personal gaming."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31193,7 +31193,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must arrive on time for your doctor's appointment."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31204,7 +31204,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Travelers must declare goods over the allowance at customs."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31215,7 +31215,7 @@ export const ALL_RULES_SAMPLES = {
                 "You must wear goggles when handling chemicals.",
                 "You must wear protective goggles when working with chemicals."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31225,7 +31225,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must update your software to the latest version."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31235,7 +31235,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Players must shake hands after the match."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31245,7 +31245,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You mustn't copy someone else's work without citation."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31256,7 +31256,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must lock the door when leaving the office."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31266,7 +31266,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Cyclists must use bike lanes where available."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31276,7 +31276,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must provide references for your job application."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31286,7 +31286,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Shoppers must scan items at self-checkout correctly."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31297,7 +31297,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Volunteers must sign in at the registration desk."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31308,7 +31308,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must fasten your seatbelt before takeoff."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31319,7 +31319,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Audience members must silence their devices in the theater."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31330,7 +31330,7 @@ export const ALL_RULES_SAMPLES = {
                 "You must obtain permission to film in public areas.",
                 "You must get permission to film in public places."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31340,7 +31340,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Drivers mustn't drink alcohol before operating machinery."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31350,7 +31350,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must label all food containers in the shared fridge."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31361,7 +31361,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Participants must warm up before the race starts."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31372,7 +31372,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She must check the documents carefully."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31385,7 +31385,7 @@ export const ALL_RULES_SAMPLES = {
                 "Children must come to school by eight in the morning.",
                 "Children must arrive at school by eight in the morning."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31397,7 +31397,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I must fix my brother’s car."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31408,7 +31408,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He must write the report quickly so everything is ready."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31419,7 +31419,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She must submit the documents by Monday."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         },
         {
             "rules": [
@@ -31431,7 +31431,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We must arrive at the station by six in the evening."
             ],
-            "hint": "використовуй MUST / MUSTN'T"
+            "hint": "use MUST / MUSTN'T"
         }
     ],
     "PAST_CONTINUOUS": [
@@ -33503,7 +33503,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should buy a local SIM card."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33514,7 +33514,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't drink tap water."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33525,7 +33525,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't leave your passport at home when you go out."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33535,7 +33535,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should take the bus to save money on transport."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33546,7 +33546,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't throw trash on the street."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33557,7 +33557,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should shop at local markets."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33567,7 +33567,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't forget to lock your door when you leave."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33578,7 +33578,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should wear warm clothes in winter."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33589,7 +33589,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't speak loudly on the phone in public."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33600,7 +33600,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should recycle paper and plastic every week."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33611,7 +33611,7 @@ export const ALL_RULES_SAMPLES = {
                 "You should bring an umbrella.",
                 "You should take an umbrella."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33621,7 +33621,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't leave food uncovered."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33632,7 +33632,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should call your relatives every weekend."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33643,7 +33643,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should walk in the park to relax after work."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33654,7 +33654,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't feed birds bread, it's bad for them."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33664,7 +33664,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should pay bills on time to avoid fines."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33674,7 +33674,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should wash fruits before you eat them."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33685,7 +33685,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should close windows when it gets cold."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33696,7 +33696,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't play loud music after 10 PM."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33706,7 +33706,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should take shoes off inside the house."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33717,7 +33717,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't waste water."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33727,7 +33727,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't leave the stove on alone."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33738,7 +33738,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't waste water."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33748,7 +33748,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't leave the stove on alone."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33758,7 +33758,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should charge your phone every night."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33769,7 +33769,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't eat on the bus."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33779,7 +33779,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't forget your keys in the door."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33789,7 +33789,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should drink tea if you have a cold."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33800,7 +33800,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't park in the wrong spot."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33810,7 +33810,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should clean the kitchen after cooking."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33820,7 +33820,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't open the door to strangers."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33830,7 +33830,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should buy bread fresh every morning."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33841,7 +33841,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't use hot water for all laundry."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33852,7 +33852,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should turn off lights when you leave a room."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33862,7 +33862,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't keep old food in the fridge."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33873,7 +33873,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should walk on the sidewalk, not the road."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33884,7 +33884,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't talk during movies at the cinema."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33895,7 +33895,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should water plants twice a week."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33905,7 +33905,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't leave wet clothes inside."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33915,7 +33915,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should check the mail every day."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33925,7 +33925,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't run in the hallway."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         },
         {
             "rules": [
@@ -33935,7 +33935,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should use a basket when shopping."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33946,7 +33946,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You should sleep early to feel good."
             ],
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -33956,7 +33956,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You shouldn't share your PIN with anyone."
             ],
-            "hint": "використовуй SHOULDN'T"
+            "hint": "use SHOULDN'T"
         }
     ],
     "SUPERLATIVES": [
@@ -39167,7 +39167,7 @@ export const ALL_RULES_SAMPLES = {
                 "You’re supposed to do your homework.",
                 "You are supposed to do your homework."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39179,7 +39179,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re supposed to meet at seven.",
                 "We are supposed to meet at seven."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39191,7 +39191,7 @@ export const ALL_RULES_SAMPLES = {
                 "You’re not supposed to smoke here.",
                 "You are not supposed to smoke here."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39203,7 +39203,7 @@ export const ALL_RULES_SAMPLES = {
                 "He was supposed to arrive yesterday.",
                 "He was supposed to come yesterday."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39213,7 +39213,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It was supposed to be a surprise."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39226,7 +39226,7 @@ export const ALL_RULES_SAMPLES = {
                 "She’s supposed to be at work now.",
                 "She is supposed to be at work now."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39237,7 +39237,7 @@ export const ALL_RULES_SAMPLES = {
                 "They’re supposed to help us.",
                 "They are supposed to help us."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39249,7 +39249,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re not supposed to be here.",
                 "We are not supposed to be here."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39260,7 +39260,7 @@ export const ALL_RULES_SAMPLES = {
                 "You were supposed to call me.",
                 "You were supposed to phone me."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39272,7 +39272,7 @@ export const ALL_RULES_SAMPLES = {
                 "This movie is supposed to be really good.",
                 "The film is supposed to be really good."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39283,7 +39283,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m not supposed to do that.",
                 "I am not supposed to do that."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39296,7 +39296,7 @@ export const ALL_RULES_SAMPLES = {
                 "She was supposed to meet us at the entrance.",
                 "She was supposed to meet us by the entrance."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39307,7 +39307,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re supposed to arrive on time.",
                 "We are supposed to arrive on time."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39318,7 +39318,7 @@ export const ALL_RULES_SAMPLES = {
                 "He wasn’t supposed to know about it.",
                 "He was not supposed to know about it."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39329,7 +39329,7 @@ export const ALL_RULES_SAMPLES = {
                 "You were supposed to bring the documents.",
                 "You were supposed to bring the papers."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39340,7 +39340,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re not supposed to talk about it.",
                 "We are not supposed to talk about it."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39352,7 +39352,7 @@ export const ALL_RULES_SAMPLES = {
                 "This restaurant is supposed to be very popular.",
                 "It’s supposed to be a very popular restaurant."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39363,7 +39363,7 @@ export const ALL_RULES_SAMPLES = {
                 "She was supposed to send the email.",
                 "She was supposed to email it."
             ],
-            "hint": "використовуй BE_SUPPOSED_TO."
+            "hint": "use BE_SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39375,7 +39375,7 @@ export const ALL_RULES_SAMPLES = {
                 "You’re supposed to wear a mask here.",
                 "You are supposed to wear a mask here."
             ],
-            "hint": "використовуй BE_SUPPOSED TO."
+            "hint": "use BE_SUPPOSED TO."
         },
         {
             "rules": [
@@ -39386,7 +39386,7 @@ export const ALL_RULES_SAMPLES = {
                 "He wasn’t supposed to say that.",
                 "He was not supposed to say that."
             ],
-            "hint": "використовуй BE_SUPPOSED_TO."
+            "hint": "use BE_SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39397,7 +39397,7 @@ export const ALL_RULES_SAMPLES = {
                 "She’s not supposed to answer that.",
                 "She is not supposed to answer that."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39408,7 +39408,7 @@ export const ALL_RULES_SAMPLES = {
                 "The movie was supposed to be funny.",
                 "The film was supposed to be funny."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39419,7 +39419,7 @@ export const ALL_RULES_SAMPLES = {
                 "We weren’t supposed to see that.",
                 "We were not supposed to see that."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39432,7 +39432,7 @@ export const ALL_RULES_SAMPLES = {
                 "You’re supposed to be home by ten.",
                 "You are supposed to be home by ten."
             ],
-            "hint": "використовуй BE_SUPPOSED_TO."
+            "hint": "use BE_SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39443,7 +39443,7 @@ export const ALL_RULES_SAMPLES = {
                 "He was supposed to stay after work.",
                 "He was supposed to stay late."
             ],
-            "hint": "використовуй BE_SUPPOSED_TO."
+            "hint": "use BE_SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39454,7 +39454,7 @@ export const ALL_RULES_SAMPLES = {
                 "They’re supposed to follow the rules.",
                 "They are supposed to follow the rules."
             ],
-            "hint": "використовуй BE_SUPPOSED_TO."
+            "hint": "use BE_SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39466,7 +39466,7 @@ export const ALL_RULES_SAMPLES = {
                 "The bus was supposed to arrive ten minutes ago.",
                 "The bus was supposed to be here ten minutes ago."
             ],
-            "hint": "використовуй BE SUPPOSED TO."
+            "hint": "use BE SUPPOSED TO."
         },
         {
             "rules": [
@@ -39477,7 +39477,7 @@ export const ALL_RULES_SAMPLES = {
                 "She was supposed to call me.",
                 "She was supposed to ring me."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39488,7 +39488,7 @@ export const ALL_RULES_SAMPLES = {
                 "You’re not supposed to go in there.",
                 "You are not supposed to go in there."
             ],
-            "hint": "використовуй BE_SUPPOSED_TO."
+            "hint": "use BE_SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39500,7 +39500,7 @@ export const ALL_RULES_SAMPLES = {
                 "He’s supposed to be a good teacher.",
                 "He is supposed to be a good teacher."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39512,7 +39512,7 @@ export const ALL_RULES_SAMPLES = {
                 "She wasn’t supposed to know this information.",
                 "She was not supposed to know this information."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39524,7 +39524,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re supposed to be ready by ten.",
                 "We are supposed to be ready by ten."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39535,7 +39535,7 @@ export const ALL_RULES_SAMPLES = {
                 "He wasn’t supposed to see it.",
                 "He was not supposed to see it."
             ],
-            "hint": "використовуй BE_SUPPOSED_TO."
+            "hint": "use BE_SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39547,7 +39547,7 @@ export const ALL_RULES_SAMPLES = {
                 "You’re not supposed to eat here.",
                 "You are not supposed to eat here."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39559,7 +39559,7 @@ export const ALL_RULES_SAMPLES = {
                 "He was supposed to pay for dinner.",
                 "He was supposed to cover dinner."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39572,7 +39572,7 @@ export const ALL_RULES_SAMPLES = {
                 "This document is supposed to be ready today.",
                 "The document is supposed to be ready today."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39584,7 +39584,7 @@ export const ALL_RULES_SAMPLES = {
                 "She was supposed to write the report.",
                 "She was supposed to prepare the report."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39597,7 +39597,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re not supposed to leave the door open.",
                 "We are not supposed to leave the door open."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39609,7 +39609,7 @@ export const ALL_RULES_SAMPLES = {
                 "You’re supposed to answer honestly.",
                 "You are supposed to answer honestly."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39621,7 +39621,7 @@ export const ALL_RULES_SAMPLES = {
                 "He wasn’t supposed to come here.",
                 "He was not supposed to come here."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39634,7 +39634,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re not supposed to bring phones to class.",
                 "We are not supposed to bring phones to class."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39645,7 +39645,7 @@ export const ALL_RULES_SAMPLES = {
                 "You were supposed to help me.",
                 "You were supposed to give me a hand."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39658,7 +39658,7 @@ export const ALL_RULES_SAMPLES = {
                 "This course is supposed to last three months.",
                 "The course is supposed to last three months."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         },
         {
             "rules": [
@@ -39670,7 +39670,7 @@ export const ALL_RULES_SAMPLES = {
                 "We were supposed to leave by now.",
                 "We were supposed to have left by now."
             ],
-            "hint": "використовуй BE SUPPOSED_TO."
+            "hint": "use BE SUPPOSED_TO."
         }
     ],
     "BE_USED_TO_GET_USED_TO": [
@@ -40258,7 +40258,7 @@ export const ALL_RULES_SAMPLES = {
                 "PAST_SIMPLE"
             ],
             "ua": "Мені вчора пофарбували кімнату.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I had my room painted yesterday.",
                 "I got my room painted yesterday."
@@ -40270,7 +40270,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_SIMPLE_FREQ"
             ],
             "ua": "Вона завжди робить манікюр у салоні.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "She always has her nails done at the salon.",
                 "She always gets her nails done at the salon."
@@ -40282,7 +40282,7 @@ export const ALL_RULES_SAMPLES = {
                 "PAST_SIMPLE"
             ],
             "ua": "Йому вчора відремонтували машину.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He had his car repaired yesterday.",
                 "He got his car repaired yesterday."
@@ -40294,7 +40294,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_CONT_NOW"
             ],
             "ua": "Нам зараз ремонтують квартиру.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We’re having our apartment renovated.",
                 "We’re getting our apartment renovated."
@@ -40306,7 +40306,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Мені завтра підстрижуть волосся.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’m having my hair cut tomorrow.",
                 "I’m getting my hair cut tomorrow."
@@ -40319,7 +40319,7 @@ export const ALL_RULES_SAMPLES = {
                 "ALREADY_YET_JUST"
             ],
             "ua": "Мені вже встановили нові вікна.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’ve already had new windows installed.",
                 "I’ve already got new windows installed."
@@ -40331,7 +40331,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_SIMPLE_FREQ"
             ],
             "ua": "Мені щороку готують податкову звітність.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I have my taxes done every year.",
                 "I get my taxes done every year."
@@ -40343,7 +40343,7 @@ export const ALL_RULES_SAMPLES = {
                 "PAST_SIMPLE"
             ],
             "ua": "Мені відремонтували телефон у сервісному центрі.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I had my phone repaired at the service center.",
                 "I got my phone repaired at the service center."
@@ -40355,7 +40355,7 @@ export const ALL_RULES_SAMPLES = {
                 "PAST_SIMPLE"
             ],
             "ua": "Нам минулого тижня встановили нові двері.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We had new doors installed last week.",
                 "We got new doors installed last week."
@@ -40367,7 +40367,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_PERFECT"
             ],
             "ua": "Мені вже почистили килим.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’ve had my carpet cleaned.",
                 "I’ve got my carpet cleaned."
@@ -40379,7 +40379,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Мені завтра будуть лікувати зуби.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’m having my teeth treated tomorrow.",
                 "I’m getting my teeth treated tomorrow."
@@ -40390,7 +40390,7 @@ export const ALL_RULES_SAMPLES = {
                 "CAUSATIVE_HAVE_GET"
             ],
             "ua": "Йому зробили фото на паспорт.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He had his passport photo taken.",
                 "He got his passport photo taken."
@@ -40402,7 +40402,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_SIMPLE_FREQ"
             ],
             "ua": "Нам щомісяця миють вікна.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We have our windows cleaned every month.",
                 "We get our windows cleaned every month."
@@ -40414,7 +40414,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Мені наступного тижня відремонтують ванну кімнату.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’m having my bathroom renovated next week.",
                 "I’m getting my bathroom renovated next week."
@@ -40426,7 +40426,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_SIMPLE_FREQ"
             ],
             "ua": "Йому кожного року ремонтують взуття.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He has his shoes repaired every year.",
                 "He gets his shoes repaired every year."
@@ -40437,7 +40437,7 @@ export const ALL_RULES_SAMPLES = {
                 "CAUSATIVE_HAVE_GET"
             ],
             "ua": "Їй замінили екран на телефоні.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "She had her phone screen replaced.",
                 "She got her phone screen replaced."
@@ -40449,7 +40449,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Нам завтра зроблять нові ключі.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We’re having new keys made tomorrow.",
                 "We’re getting new keys made tomorrow."
@@ -40461,7 +40461,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_SIMPLE_FREQ"
             ],
             "ua": "Йому раз на два тижні стрижуть волосся.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He has his hair cut every two weeks.",
                 "He gets his hair cut every two weeks."
@@ -40473,7 +40473,7 @@ export const ALL_RULES_SAMPLES = {
                 "PAST_SIMPLE"
             ],
             "ua": "Йому вчора замінили шини на машині.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He had his tires changed yesterday.",
                 "He got his tires changed yesterday."
@@ -40485,7 +40485,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_PERFECT"
             ],
             "ua": "Мені щойно відремонтували годинник.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I have just had my watch repaired.",
                 "I have just got my watch repaired."
@@ -40497,7 +40497,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_CONT_NOW"
             ],
             "ua": "Нам зараз встановлюють новий бойлер.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We’re having a new boiler installed.",
                 "We’re getting a new boiler installed."
@@ -40509,7 +40509,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Мені наступного тижня зроблять нові окуляри.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’m having new glasses made next week.",
                 "I’m getting new glasses made next week."
@@ -40521,7 +40521,7 @@ export const ALL_RULES_SAMPLES = {
                 "PAST_SIMPLE"
             ],
             "ua": "Вчора йому замінили батарею в ноутбуці.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He had the battery replaced in his laptop yesterday.",
                 "He got the battery replaced in his laptop yesterday."
@@ -40533,7 +40533,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_CONT_NOW"
             ],
             "ua": "Йому зараз лагодять комп’ютер.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He’s having his computer repaired.",
                 "He’s getting his computer repaired."
@@ -40545,7 +40545,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_PLACE"
             ],
             "ua": "Нам у вітальні поклали новий паркет.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We had new flooring installed in the living room.",
                 "We got new flooring installed in the living room."
@@ -40557,7 +40557,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_SIMPLE_FREQ"
             ],
             "ua": "Їй щороку перевіряють зір.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "She has her eyes checked every year.",
                 "She gets her eyes checked every year."
@@ -40569,7 +40569,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Мені завтра відполірують машину.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’m having my car polished tomorrow.",
                 "I’m getting my car polished tomorrow."
@@ -40581,7 +40581,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Їй завтра зроблять нові фотографії.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "She’s having new photos taken tomorrow.",
                 "She’s getting new photos taken tomorrow."
@@ -40593,7 +40593,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Мені завтра продовжать паспорт.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’m having my passport renewed tomorrow.",
                 "I’m getting my passport renewed tomorrow."
@@ -40605,7 +40605,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_SIMPLE_FREQ"
             ],
             "ua": "Нам щороку перевіряють кондиціонер.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We have our air conditioner checked every year.",
                 "We get our air conditioner checked every year."
@@ -40617,7 +40617,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_PERFECT"
             ],
             "ua": "Йому вже замінили гальма в машині.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He has had the brakes replaced in his car.",
                 "He has got the brakes replaced in his car."
@@ -40629,7 +40629,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_PERFECT"
             ],
             "ua": "Нам уже полагодили кран на кухні.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We’ve had the kitchen tap fixed.",
                 "We’ve got the kitchen tap fixed."
@@ -40641,7 +40641,7 @@ export const ALL_RULES_SAMPLES = {
                 "PREP_TIME"
             ],
             "ua": "Нам наступного місяця відремонтують спальню.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "We’re having our bedroom renovated next month.",
                 "We’re getting our bedroom renovated next month."
@@ -40653,7 +40653,7 @@ export const ALL_RULES_SAMPLES = {
                 "PAST_SIMPLE"
             ],
             "ua": "Йому вчора полагодили телевізор.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "He had his TV repaired yesterday.",
                 "He got his TV repaired yesterday."
@@ -40665,7 +40665,7 @@ export const ALL_RULES_SAMPLES = {
                 "PRESENT_CONT_NOW"
             ],
             "ua": "Мені зараз лагодять телефон.",
-            "hint": "використовуй HAVE/GET SOMETHING DONE",
+            "hint": "use HAVE/GET SOMETHING DONE",
             "en": [
                 "I’m having my phone fixed right now.",
                 "I’m getting my phone fixed right now."
@@ -43417,7 +43417,7 @@ export const ALL_RULES_SAMPLES = {
             ],
             "ua": "Тут надто багато людей.",
             "en": "There are too many people here.",
-            "hint": "використовуй THERE IS/THERE ARE"
+            "hint": "use THERE IS/THERE ARE"
         },
         {
             "rules": [
@@ -44865,7 +44865,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I get dressed quickly in the morning."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44875,7 +44875,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She got married last summer."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44885,7 +44885,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They got divorced two years ago."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44895,7 +44895,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We got lost in the city."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44905,7 +44905,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She got burned by the hot pan."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44915,7 +44915,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They got stuck in traffic."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44925,7 +44925,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He got bitten by a mosquito."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44935,7 +44935,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I got caught in the rain."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44945,7 +44945,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He gets paid every Friday."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44955,7 +44955,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We got invited to their wedding."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44965,7 +44965,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We got offered free tickets."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44975,7 +44975,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They got tricked by a scammer."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44985,7 +44985,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He got robbed on his way home."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -44995,7 +44995,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We got scammed online."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45005,7 +45005,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They got caught stealing."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45015,7 +45015,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He got yelled at by the teacher."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45025,7 +45025,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We got ignored by the waiter."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45035,7 +45035,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I got hit by a snowball."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45045,7 +45045,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She got fired unfairly."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45055,7 +45055,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They got accused of lying."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45065,7 +45065,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He got insulted by a stranger."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45075,7 +45075,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We got denied entry."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45085,7 +45085,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I got overcharged at the store."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45095,7 +45095,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She got left behind."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45105,7 +45105,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He got burned by the sun."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45115,7 +45115,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The windows got broken during the storm."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45125,7 +45125,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The project got finished on time."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45135,7 +45135,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The car got damaged in the accident."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45145,7 +45145,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The door got locked by mistake."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45155,7 +45155,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The files got deleted."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45165,7 +45165,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The house got painted last week."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45175,7 +45175,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The photo got uploaded."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45185,7 +45185,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The meeting got canceled."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45195,7 +45195,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The plan got changed again."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45205,7 +45205,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The concert got postponed."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45215,7 +45215,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The car got fixed."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45225,7 +45225,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The message got delivered."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45235,7 +45235,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The idea got approved."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -45245,7 +45245,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "The rule got updated."
             ],
-            "hint": "використовуй GET + PAST PARTICIPLE"
+            "hint": "use GET + PAST PARTICIPLE"
         }
     ],
     "IN_ORDER_TO_SO_THAT": [
@@ -45260,7 +45260,7 @@ export const ALL_RULES_SAMPLES = {
                 "I study every day in order to improve my English.",
                 "I study every day to improve my English."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45274,7 +45274,7 @@ export const ALL_RULES_SAMPLES = {
                 "She got up early in order not to be late.",
                 "She got up early not to be late."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45301,7 +45301,7 @@ export const ALL_RULES_SAMPLES = {
                 "They drove to town in order to buy groceries.",
                 "They drove to town to buy groceries."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45315,7 +45315,7 @@ export const ALL_RULES_SAMPLES = {
                 "I called her in order to find out the news.",
                 "I called her to find out the news."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45330,7 +45330,7 @@ export const ALL_RULES_SAMPLES = {
                 "She signed up for courses in order to find a new job.",
                 "She signed up for courses to find a new job."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45343,7 +45343,7 @@ export const ALL_RULES_SAMPLES = {
                 "I took an umbrella in order not to get wet.",
                 "I took an umbrella not to get wet."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45356,7 +45356,7 @@ export const ALL_RULES_SAMPLES = {
                 "He stopped in order to rest.",
                 "He stopped to rest."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45369,7 +45369,7 @@ export const ALL_RULES_SAMPLES = {
                 "They came early in order to get good seats.",
                 "They came early to get good seats."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45384,7 +45384,7 @@ export const ALL_RULES_SAMPLES = {
                 "We turned off the TV in order to keep it quiet.",
                 "We turned off the TV to keep it quiet."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45397,7 +45397,7 @@ export const ALL_RULES_SAMPLES = {
                 "I wrote it down in order not to forget.",
                 "I wrote it down not to forget."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45411,7 +45411,7 @@ export const ALL_RULES_SAMPLES = {
                 "She saved money in order to buy a new phone.",
                 "She saved money to buy a new phone."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45425,7 +45425,7 @@ export const ALL_RULES_SAMPLES = {
                 "I made a copy in order to have a spare one.",
                 "I made a copy to have a spare one."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45440,7 +45440,7 @@ export const ALL_RULES_SAMPLES = {
                 "He left the window open in order to let the cat get outside.",
                 "He left the window open to let the cat get outside."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45454,7 +45454,7 @@ export const ALL_RULES_SAMPLES = {
                 "We arrived early in order to avoid traffic.",
                 "We arrived early to avoid traffic."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45468,7 +45468,7 @@ export const ALL_RULES_SAMPLES = {
                 "I kept the receipt in order to have proof of purchase.",
                 "I kept the receipt to have proof of purchase."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45482,7 +45482,7 @@ export const ALL_RULES_SAMPLES = {
                 "She stayed home in order to look after the baby.",
                 "She stayed home to look after the baby."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45495,7 +45495,7 @@ export const ALL_RULES_SAMPLES = {
                 "They left quietly in order not to wake anyone up.",
                 "They left quietly not to wake anyone up."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45509,7 +45509,7 @@ export const ALL_RULES_SAMPLES = {
                 "I bought flowers in order to make her happy.",
                 "I bought flowers to make her happy."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45523,7 +45523,7 @@ export const ALL_RULES_SAMPLES = {
                 "We rescheduled the meeting in order to let everyone come.",
                 "We rescheduled the meeting to let everyone come."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45537,7 +45537,7 @@ export const ALL_RULES_SAMPLES = {
                 "She wore her glasses in order to see better.",
                 "She wore her glasses to see better."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45551,7 +45551,7 @@ export const ALL_RULES_SAMPLES = {
                 "I cleaned the room in order to make it look neat.",
                 "I cleaned the room to make it look neat."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45565,7 +45565,7 @@ export const ALL_RULES_SAMPLES = {
                 "He took an extra blanket in order not to get cold.",
                 "He took an extra blanket not to get cold."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45580,7 +45580,7 @@ export const ALL_RULES_SAMPLES = {
                 "We left early in order not to get caught in the rain.",
                 "We left early not to get caught in the rain."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45594,7 +45594,7 @@ export const ALL_RULES_SAMPLES = {
                 "They made dinner in order for us to eat together.",
                 "They made dinner for us to eat together."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45608,7 +45608,7 @@ export const ALL_RULES_SAMPLES = {
                 "I left a note in order for him to know where I was.",
                 "I left a note for him to know where I was."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45621,7 +45621,7 @@ export const ALL_RULES_SAMPLES = {
                 "He came early in order to help me.",
                 "He came early to help me."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45635,7 +45635,7 @@ export const ALL_RULES_SAMPLES = {
                 "We spoke quietly in order not to disturb anyone.",
                 "We spoke quietly not to disturb anyone."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45648,7 +45648,7 @@ export const ALL_RULES_SAMPLES = {
                 "I did it in order to prove I was right.",
                 "I did it to prove I was right."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45661,7 +45661,7 @@ export const ALL_RULES_SAMPLES = {
                 "She came late in order not to run into him.",
                 "She came late not to run into him."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45675,7 +45675,7 @@ export const ALL_RULES_SAMPLES = {
                 "They called early in order to confirm the reservation.",
                 "They called early to confirm the reservation."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45691,7 +45691,7 @@ export const ALL_RULES_SAMPLES = {
                 "I closed the window in order to make it quieter.",
                 "I closed the window to make it quieter."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45705,7 +45705,7 @@ export const ALL_RULES_SAMPLES = {
                 "We work out in order to get stronger.",
                 "We work out to get stronger."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45718,7 +45718,7 @@ export const ALL_RULES_SAMPLES = {
                 "I'm saving in order to go on a trip.",
                 "I'm saving to go on a trip."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45732,7 +45732,7 @@ export const ALL_RULES_SAMPLES = {
                 "She wore a coat in order not to freeze.",
                 "She wore a coat not to freeze."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45746,7 +45746,7 @@ export const ALL_RULES_SAMPLES = {
                 "I brought some water in order for you to drink.",
                 "I brought some water for you to drink."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45760,7 +45760,7 @@ export const ALL_RULES_SAMPLES = {
                 "We're saving in order to buy a house.",
                 "We're saving to buy a house."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45774,7 +45774,7 @@ export const ALL_RULES_SAMPLES = {
                 "She speaks louder in order to be heard better.",
                 "She speaks louder to be heard better."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45787,7 +45787,7 @@ export const ALL_RULES_SAMPLES = {
                 "He works out daily in order to win the competition.",
                 "He works out daily to win the competition."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45802,7 +45802,7 @@ export const ALL_RULES_SAMPLES = {
                 "We changed the plan in order to make it convenient for everyone.",
                 "We changed the plan to make it convenient for everyone."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45815,7 +45815,7 @@ export const ALL_RULES_SAMPLES = {
                 "I wrote a letter in order to thank them.",
                 "I wrote a letter to thank them."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45830,7 +45830,7 @@ export const ALL_RULES_SAMPLES = {
                 "They left the light on in order to make the road visible.",
                 "They left the light on to make the road visible."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45844,7 +45844,7 @@ export const ALL_RULES_SAMPLES = {
                 "She took a map in order not to get lost.",
                 "She took a map not to get lost."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45857,7 +45857,7 @@ export const ALL_RULES_SAMPLES = {
                 "We made a video in order not to forget the moment.",
                 "We made a video not to forget the moment."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45871,7 +45871,7 @@ export const ALL_RULES_SAMPLES = {
                 "I work hard in order to earn more.",
                 "I work hard to earn more."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45885,7 +45885,7 @@ export const ALL_RULES_SAMPLES = {
                 "She made breakfast in order for everyone to eat.",
                 "She made breakfast for everyone to eat."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45899,7 +45899,7 @@ export const ALL_RULES_SAMPLES = {
                 "We bought a present in order to surprise them.",
                 "We bought a present to surprise them."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45914,7 +45914,7 @@ export const ALL_RULES_SAMPLES = {
                 "He brought a flashlight in order to see in the dark.",
                 "He brought a flashlight to see in the dark."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45930,7 +45930,7 @@ export const ALL_RULES_SAMPLES = {
                 "We left the light on in order to make it visible from afar.",
                 "We left the light on to make it visible from afar."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45944,7 +45944,7 @@ export const ALL_RULES_SAMPLES = {
                 "She spoke quietly in order not to be heard.",
                 "She spoke quietly not to be heard."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45957,7 +45957,7 @@ export const ALL_RULES_SAMPLES = {
                 "I saved up in order to buy a car next year.",
                 "I saved up to buy a car next year."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45971,7 +45971,7 @@ export const ALL_RULES_SAMPLES = {
                 "We left a note in order for him to know where we were.",
                 "We left a note for him to know where we were."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45984,7 +45984,7 @@ export const ALL_RULES_SAMPLES = {
                 "He did it on purpose in order to draw attention to the problem.",
                 "He did it on purpose to draw attention to the problem."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -45998,7 +45998,7 @@ export const ALL_RULES_SAMPLES = {
                 "I opened the window in order to air out the room.",
                 "I opened the window to air out the room."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46011,7 +46011,7 @@ export const ALL_RULES_SAMPLES = {
                 "She memorized the text in order not to forget it on stage.",
                 "She memorized the text not to forget it on stage."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46024,7 +46024,7 @@ export const ALL_RULES_SAMPLES = {
                 "We came early in order to set up the place.",
                 "We came early to set up the place."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46037,7 +46037,7 @@ export const ALL_RULES_SAMPLES = {
                 "He raised his hand in order to ask a question.",
                 "He raised his hand to ask a question."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46050,7 +46050,7 @@ export const ALL_RULES_SAMPLES = {
                 "I wore headphones in order not to hear the noise.",
                 "I wore headphones not to hear the noise."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46064,7 +46064,7 @@ export const ALL_RULES_SAMPLES = {
                 "She opened her laptop in order to check her email.",
                 "She opened her laptop to check her email."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46078,7 +46078,7 @@ export const ALL_RULES_SAMPLES = {
                 "We went faster in order not to be late for the meeting.",
                 "We went faster not to be late for the meeting."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46092,7 +46092,7 @@ export const ALL_RULES_SAMPLES = {
                 "I took a deep breath in order to calm down.",
                 "I took a deep breath to calm down."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46106,7 +46106,7 @@ export const ALL_RULES_SAMPLES = {
                 "We double-checked in order to avoid mistakes.",
                 "We double-checked to avoid mistakes."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46120,7 +46120,7 @@ export const ALL_RULES_SAMPLES = {
                 "He shut the door in order to keep the cat from running away.",
                 "He shut the door to keep the cat from running away."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46133,7 +46133,7 @@ export const ALL_RULES_SAMPLES = {
                 "I left my phone at home in order not to get distracted.",
                 "I left my phone at home not to get distracted."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46147,7 +46147,7 @@ export const ALL_RULES_SAMPLES = {
                 "She made a copy in order to keep the original from getting lost.",
                 "She made a copy to keep the original from getting lost."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46160,7 +46160,7 @@ export const ALL_RULES_SAMPLES = {
                 "I muted it in order to make sure nobody would hear the ringtone.",
                 "I muted it to make sure nobody would hear the ringtone."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46173,7 +46173,7 @@ export const ALL_RULES_SAMPLES = {
                 "We turned our phones off in order to concentrate.",
                 "We turned our phones off to concentrate."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46186,7 +46186,7 @@ export const ALL_RULES_SAMPLES = {
                 "I got everything ready in order not to be in a hurry in the morning.",
                 "I got everything ready not to be in a hurry in the morning."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46199,7 +46199,7 @@ export const ALL_RULES_SAMPLES = {
                 "She brought water in order for us to give the dog a drink.",
                 "She brought water for us to give the dog a drink."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46212,7 +46212,7 @@ export const ALL_RULES_SAMPLES = {
                 "I stopped for a moment in order to think.",
                 "I stopped for a moment to think."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46225,7 +46225,7 @@ export const ALL_RULES_SAMPLES = {
                 "She wore gloves in order to keep her hands from freezing.",
                 "She wore gloves to keep her hands from freezing."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46240,7 +46240,7 @@ export const ALL_RULES_SAMPLES = {
                 "I left the lamp on in order to see at night.",
                 "I left the lamp on to see at night."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46254,7 +46254,7 @@ export const ALL_RULES_SAMPLES = {
                 "She brought an umbrella in order to keep us from getting wet.",
                 "She brought an umbrella to keep us from getting wet."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46268,7 +46268,7 @@ export const ALL_RULES_SAMPLES = {
                 "He spoke slowly in order to be understood even by children.",
                 "He spoke slowly to be understood even by children."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46283,7 +46283,7 @@ export const ALL_RULES_SAMPLES = {
                 "We updated the system in order to make it run more efficiently.",
                 "We updated the system to make it run more efficiently."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46296,7 +46296,7 @@ export const ALL_RULES_SAMPLES = {
                 "He left a message in order to avoid any doubt about his intentions.",
                 "He left a message to avoid any doubt about his intentions."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46310,7 +46310,7 @@ export const ALL_RULES_SAMPLES = {
                 "She delayed the meeting in order to let everyone attend.",
                 "She delayed the meeting to let everyone attend."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46324,7 +46324,7 @@ export const ALL_RULES_SAMPLES = {
                 "He spoke louder in order to be heard by everyone.",
                 "He spoke louder to be heard by everyone."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46337,7 +46337,7 @@ export const ALL_RULES_SAMPLES = {
                 "We made a backup in order not to lose any data.",
                 "We made a backup not to lose any data."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46352,7 +46352,7 @@ export const ALL_RULES_SAMPLES = {
                 "She wrote a report in order to inform the management.",
                 "She wrote a report to inform the management."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46365,7 +46365,7 @@ export const ALL_RULES_SAMPLES = {
                 "We arranged training in order to help employees better understand the workflow.",
                 "We arranged training to help employees better understand the workflow."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46378,7 +46378,7 @@ export const ALL_RULES_SAMPLES = {
                 "I closed the window in order to keep mosquitoes out.",
                 "I closed the window to keep mosquitoes out."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46392,7 +46392,7 @@ export const ALL_RULES_SAMPLES = {
                 "They signed the agreement in order to avoid legal problems.",
                 "They signed the agreement to avoid legal problems."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46405,7 +46405,7 @@ export const ALL_RULES_SAMPLES = {
                 "He made a presentation in order to impress the investors.",
                 "He made a presentation to impress the investors."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46418,7 +46418,7 @@ export const ALL_RULES_SAMPLES = {
                 "We ran a test in order to confirm the results.",
                 "We ran a test to confirm the results."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46432,7 +46432,7 @@ export const ALL_RULES_SAMPLES = {
                 "She spoke clearly in order to avoid misunderstandings.",
                 "She spoke clearly to avoid misunderstandings."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46445,7 +46445,7 @@ export const ALL_RULES_SAMPLES = {
                 "He changed the password in order to block unauthorized access.",
                 "He changed the password to block unauthorized access."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46460,7 +46460,7 @@ export const ALL_RULES_SAMPLES = {
                 "I prepared the papers in order to speed up the process.",
                 "I prepared the papers to speed up the process."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         },
         {
             "rules": [
@@ -46474,7 +46474,7 @@ export const ALL_RULES_SAMPLES = {
                 "She recorded the lecture in order to watch it again later.",
                 "She recorded the lecture to watch it again later."
             ],
-            "hint": "використовуй TO / SO (THAT) / IN ORDER TO"
+            "hint": "use TO / SO (THAT) / IN ORDER TO"
         }
     ],
     "LET_MAKE_ALLOW": [
@@ -46489,7 +46489,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Do parents allow children to watch TV after 7 p.m.?"
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46503,7 +46503,7 @@ export const ALL_RULES_SAMPLES = {
                 "My parents made me sign the agreement.",
                 "My parents made me sign this agreement."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46519,7 +46519,7 @@ export const ALL_RULES_SAMPLES = {
                 "They don’t allow people to bring drinks into the library.",
                 "They do not allow people to bring drinks into the library."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46533,7 +46533,7 @@ export const ALL_RULES_SAMPLES = {
                 "The teacher made us rewrite the paper.",
                 "The teacher made us rewrite a paper."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46548,7 +46548,7 @@ export const ALL_RULES_SAMPLES = {
                 "His parents allowed him to stay out until ten.",
                 "His parents allowed him to stay outside until ten."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46562,7 +46562,7 @@ export const ALL_RULES_SAMPLES = {
                 "Don’t make me wait.",
                 "Do not make me wait."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46574,7 +46574,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Is it allowed to take photos here?"
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46588,7 +46588,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m not allowed to use this computer.",
                 "I am not allowed to use this computer."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46602,7 +46602,7 @@ export const ALL_RULES_SAMPLES = {
                 "We were made to work on weekends.",
                 "We were made to work at weekends."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46617,7 +46617,7 @@ export const ALL_RULES_SAMPLES = {
                 "She doesn’t let me use her laptop.",
                 "She does not let me use her laptop."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46631,7 +46631,7 @@ export const ALL_RULES_SAMPLES = {
                 "They made me leave early because I didn’t feel well.",
                 "They made me leave early because I did not feel well."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46643,7 +46643,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I was allowed to stay home yesterday."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46655,7 +46655,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He was made to apologize to everyone."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46667,7 +46667,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He let me use his phone."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46681,7 +46681,7 @@ export const ALL_RULES_SAMPLES = {
                 "We don’t allow smoking in this house.",
                 "We do not allow smoking in this house."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46695,7 +46695,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "My parents often let me stay out late."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46709,7 +46709,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Does your job allow you to travel?"
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46722,7 +46722,7 @@ export const ALL_RULES_SAMPLES = {
                 "They aren’t allowed to park here.",
                 "They are not allowed to park here."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46734,7 +46734,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She made me call him."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46749,7 +46749,7 @@ export const ALL_RULES_SAMPLES = {
                 "They don’t let the kids run in the corridor.",
                 "They do not let the kids run in the corridor."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46761,7 +46761,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He allowed us to use his car."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46773,7 +46773,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "His parents made him go to the doctor."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46785,7 +46785,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Are students allowed to stay after class?"
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46797,7 +46797,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She was made to delete the post."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46811,7 +46811,7 @@ export const ALL_RULES_SAMPLES = {
                 "Let me help you.",
                 "Allow me to help you."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46823,7 +46823,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He was allowed to take an extra day off."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46837,7 +46837,7 @@ export const ALL_RULES_SAMPLES = {
                 "We don’t allow them to use this software.",
                 "We do not allow them to use this software."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46849,7 +46849,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She was made to make the decision faster."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46862,7 +46862,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He always lets his sister take his books."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46874,7 +46874,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "They made me rewrite the report."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46888,7 +46888,7 @@ export const ALL_RULES_SAMPLES = {
                 "She doesn’t allow anyone to use her phone.",
                 "She does not allow anyone to use her phone."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46900,7 +46900,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "Did they let you leave early?"
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46912,7 +46912,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He was made to tell the truth."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46925,7 +46925,7 @@ export const ALL_RULES_SAMPLES = {
                 "They aren’t allowed to stay after ten.",
                 "They are not allowed to stay after ten."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46939,7 +46939,7 @@ export const ALL_RULES_SAMPLES = {
                 "Don’t make me repeat it.",
                 "Do not make me repeat it."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         },
         {
             "rules": [
@@ -46951,7 +46951,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He let me go home early."
             ],
-            "hint": "використовуй LET / MAKE / ALLOW"
+            "hint": "use LET / MAKE / ALLOW"
         }
     ],
     "MODALS_OF_PROBABILITY": [
@@ -46965,7 +46965,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must be working on the project now.",
                 "She might be working on the project now."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -46977,7 +46977,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must be waiting for us at the entrance.",
                 "They might be waiting for us at the entrance."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -46989,7 +46989,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been joking.",
                 "He might have been joking."
             ],
-            "hint": "використовуй MUST HAVE/MIGHT HAVE для ймовірності в минулому."
+            "hint": "use MUST HAVE/MIGHT HAVE для ймовірності в минулому."
         },
         {
             "rules": [
@@ -47002,7 +47002,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have known each other for a long time.",
                 "They might have known each other for a long time."
             ],
-            "hint": "використовуй MUST HAVE/MIGHT HAVE для ймовірності в минулому."
+            "hint": "use MUST HAVE/MIGHT HAVE для ймовірності в минулому."
         },
         {
             "rules": [
@@ -47015,7 +47015,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been working here for a short time.",
                 "He might have been working here for a short time."
             ],
-            "hint": "використовуй MUST/MIGHT для припущень щодо тривалості."
+            "hint": "use MUST/MIGHT для припущень щодо тривалості."
         },
         {
             "rules": [
@@ -47028,7 +47028,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have just arrived.",
                 "She might have just arrived."
             ],
-            "hint": "використовуй MUST/MIGHT для подій у недавньому минулому."
+            "hint": "use MUST/MIGHT для подій у недавньому минулому."
         },
         {
             "rules": [
@@ -47040,7 +47040,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have thought we would be late.",
                 "He might have thought we would be late."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47050,7 +47050,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "It can’t be a coincidence."
             ],
-            "hint": "використовуй CAN’T для логічних припущень про минуле."
+            "hint": "use CAN’T для логічних припущень про минуле."
         },
         {
             "rules": [
@@ -47062,7 +47062,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must be preparing for the exam.",
                 "She might be preparing for the exam."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -47074,7 +47074,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must not have heard the question.",
                 "He might not have heard the question."
             ],
-            "hint": "використовуй MUST NOT/MIGHT NOT для логічних припущень про минуле."
+            "hint": "use MUST NOT/MIGHT NOT для логічних припущень про минуле."
         },
         {
             "rules": [
@@ -47086,7 +47086,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have been working all night.",
                 "They might have been working all night."
             ],
-            "hint": "використовуй MUST/MIGHT для ймовірності тривалої дії в минулому."
+            "hint": "use MUST/MIGHT для ймовірності тривалої дії в минулому."
         },
         {
             "rules": [
@@ -47098,7 +47098,7 @@ export const ALL_RULES_SAMPLES = {
                 "It must have been her idea.",
                 "It might have been her idea."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47108,7 +47108,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He can’t be that naive."
             ],
-            "hint": "використовуй CAN’T для сильної неможливості в теперішньому."
+            "hint": "use CAN’T для сильної неможливості в теперішньому."
         },
         {
             "rules": [
@@ -47120,7 +47120,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must not have expected to see us.",
                 "She might not have expected to see us."
             ],
-            "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
+            "hint": "use MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
         },
         {
             "rules": [
@@ -47132,7 +47132,7 @@ export const ALL_RULES_SAMPLES = {
                 "That must have been very scary.",
                 "That might have been very scary."
             ],
-            "hint": "використовуй MUST/MIGHT ля оцінки минулих подій / дій."
+            "hint": "use MUST/MIGHT ля оцінки минулих подій / дій."
         },
         {
             "rules": [
@@ -47144,7 +47144,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must be thinking about us.",
                 "She might be thinking about us."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -47156,7 +47156,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must be hiding something.",
                 "He might be hiding something."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -47166,7 +47166,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "She can’t be satisfied with the result."
             ],
-            "hint": "використовуй CAN’T для сильної неможливості в теперішньому."
+            "hint": "use CAN’T для сильної неможливості в теперішньому."
         },
         {
             "rules": [
@@ -47178,7 +47178,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must not have seen the warning.",
                 "He might not have seen the warning."
             ],
-            "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
+            "hint": "use MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
         },
         {
             "rules": [
@@ -47190,7 +47190,7 @@ export const ALL_RULES_SAMPLES = {
                 "That must have been a big disappointment.",
                 "That might have been a big disappointment."
             ],
-            "hint": "використовуй MUST/MIGHT ля оцінки минулих подій / дій."
+            "hint": "use MUST/MIGHT ля оцінки минулих подій / дій."
         },
         {
             "rules": [
@@ -47202,7 +47202,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must not have understood the instructions.",
                 "They might not have understood the instructions."
             ],
-            "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
+            "hint": "use MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
         },
         {
             "rules": [
@@ -47214,7 +47214,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been looking for his keys.",
                 "He might have been looking for his keys."
             ],
-            "hint": "використовуй MUST/MIGHT для ймовірності тривалої дії в минулому."
+            "hint": "use MUST/MIGHT для ймовірності тривалої дії в минулому."
         },
         {
             "rules": [
@@ -47226,7 +47226,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have heard about it on TV.",
                 "She might have heard about it on TV."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47238,7 +47238,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must not have understood the question.",
                 "He might not have understood the question."
             ],
-            "hint": "використовуй MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
+            "hint": "use MUST NOT/MIGHT NOT для заперечної ймовірності в минулому."
         },
         {
             "rules": [
@@ -47256,7 +47256,7 @@ export const ALL_RULES_SAMPLES = {
                 "It might be the best decision.",
                 "That might be the best decision."
             ],
-            "hint": "використовуй MUST/MIGHT для оцінки теперішньої ситуації."
+            "hint": "use MUST/MIGHT для оцінки теперішньої ситуації."
         },
         {
             "rules": [
@@ -47268,7 +47268,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have been crying.",
                 "She might have been crying."
             ],
-            "hint": "використовуй MUST/MIGHT для ймовірності тривалої дії в минулому."
+            "hint": "use MUST/MIGHT для ймовірності тривалої дії в минулому."
         },
         {
             "rules": [
@@ -47280,7 +47280,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must be cooking dinner now.",
                 "He might be cooking dinner now."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -47292,7 +47292,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must not have seen this movie.",
                 "They might not have seen this movie."
             ],
-            "hint": "використовуй MUST NOT/MIGHT NOT для невпевнених припущень про минуле."
+            "hint": "use MUST NOT/MIGHT NOT для невпевнених припущень про минуле."
         },
         {
             "rules": [
@@ -47304,7 +47304,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must be lying.",
                 "He might be lying."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -47316,7 +47316,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have heard the noise.",
                 "He might have heard the noise."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47327,7 +47327,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must be nervous about the exam.",
                 "She might be nervous about the exam."
             ],
-            "hint": "використовуй MUST/MIGHT для припущень про теперішній стан."
+            "hint": "use MUST/MIGHT для припущень про теперішній стан."
         },
         {
             "rules": [
@@ -47339,7 +47339,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have been friends at school.",
                 "They might have been friends at school."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47350,7 +47350,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must be at home.",
                 "She might be at home."
             ],
-            "hint": "використовуй MUST/MIGHT для визначення місцезнаходження в теперішньому."
+            "hint": "use MUST/MIGHT для визначення місцезнаходження в теперішньому."
         },
         {
             "rules": [
@@ -47361,7 +47361,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must be busy right now.",
                 "He might be busy right now."
             ],
-            "hint": "використовуй MUST/MIGHT для поточного стану."
+            "hint": "use MUST/MIGHT для поточного стану."
         },
         {
             "rules": [
@@ -47372,7 +47372,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must be late.",
                 "They might be late."
             ],
-            "hint": "використовуй MUST/MIGHT для логічного висновку в теперішньому."
+            "hint": "use MUST/MIGHT для логічного висновку в теперішньому."
         },
         {
             "rules": [
@@ -47382,7 +47382,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "There can’t be a mistake."
             ],
-            "hint": "використовуй CAN’T для неможливості."
+            "hint": "use CAN’T для неможливості."
         },
         {
             "rules": [
@@ -47393,7 +47393,7 @@ export const ALL_RULES_SAMPLES = {
                 "That must be her bag.",
                 "That might be her bag."
             ],
-            "hint": "використовуй MUST/MIGHT для логічного висновку."
+            "hint": "use MUST/MIGHT для логічного висновку."
         },
         {
             "rules": [
@@ -47405,7 +47405,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have forgotten.",
                 "She might have forgotten."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47418,7 +47418,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have left already.",
                 "They might have left already."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47430,7 +47430,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have seen it.",
                 "He might have seen it."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в минулому."
+            "hint": "use MUST/MIGHT для вираження ймовірності в минулому."
         },
         {
             "rules": [
@@ -47440,7 +47440,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "That can’t be true."
             ],
-            "hint": "використовуй CAN’T для логічних припущень про минуле."
+            "hint": "use CAN’T для логічних припущень про минуле."
         },
         {
             "rules": [
@@ -47452,7 +47452,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must be sleeping.",
                 "She might be sleeping."
             ],
-            "hint": "використовуй MUST/MIGHT для вираження ймовірності в теперішньому часі."
+            "hint": "use MUST/MIGHT для вираження ймовірності в теперішньому часі."
         },
         {
             "rules": [
@@ -47463,7 +47463,7 @@ export const ALL_RULES_SAMPLES = {
                 "That must be his sister.",
                 "That might be his sister."
             ],
-            "hint": "використовуй MUST/MIGHT для припущення особи."
+            "hint": "use MUST/MIGHT для припущення особи."
         },
         {
             "rules": [
@@ -47474,7 +47474,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "You must be joking."
             ],
-            "hint": "використовуй MUST для сильного припущення."
+            "hint": "use MUST для сильного припущення."
         },
         {
             "rules": [
@@ -47485,7 +47485,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must be on vacation.",
                 "They might be on vacation."
             ],
-            "hint": "використовуй MUST/MIGHT для припущень про теперішнє."
+            "hint": "use MUST/MIGHT для припущень про теперішнє."
         },
         {
             "rules": [
@@ -47496,7 +47496,7 @@ export const ALL_RULES_SAMPLES = {
                 "There must be a mistake.",
                 "There might be a mistake."
             ],
-            "hint": "використовуй MUST для впевненого логічного висновку."
+            "hint": "use MUST для впевненого логічного висновку."
         },
         {
             "rules": [
@@ -47508,7 +47508,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have called earlier.",
                 "He might have called earlier."
             ],
-            "hint": "використовуй MUST/MIGHT для припущень про минуле."
+            "hint": "use MUST/MIGHT для припущень про минуле."
         }
     ],
     "MODAL_PERFECTS": [
@@ -47522,7 +47522,7 @@ export const ALL_RULES_SAMPLES = {
                 "You should have been honest with me."
             ],
             "ua": "Тобі слід було сказати мені правду.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47534,7 +47534,7 @@ export const ALL_RULES_SAMPLES = {
                 "I should have put more effort into studying for the exam."
             ],
             "ua": "Мені слід було вчитися старанніше до іспиту.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47545,7 +47545,7 @@ export const ALL_RULES_SAMPLES = {
                 "They should have gone earlier."
             ],
             "ua": "Їм слід було піти раніше.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47556,7 +47556,7 @@ export const ALL_RULES_SAMPLES = {
                 "He should have said sorry to her."
             ],
             "ua": "Йому слід було вибачитися перед нею.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47568,7 +47568,7 @@ export const ALL_RULES_SAMPLES = {
                 "We should have reserved the tickets ahead of time."
             ],
             "ua": "Нам слід було забронювати квитки заздалегідь.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47580,7 +47580,7 @@ export const ALL_RULES_SAMPLES = {
                 "You should have phoned before you came."
             ],
             "ua": "Тобі слід було подзвонити перед тим, як прийти.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47592,7 +47592,7 @@ export const ALL_RULES_SAMPLES = {
                 "I should have brought an umbrella."
             ],
             "ua": "Мені слід було взяти парасолю.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47604,7 +47604,7 @@ export const ALL_RULES_SAMPLES = {
                 "She should have paid attention to her parents' advice."
             ],
             "ua": "Їй слід було послухати своїх батьків.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47616,7 +47616,7 @@ export const ALL_RULES_SAMPLES = {
                 "We should have noted the address."
             ],
             "ua": "Нам слід було записати адресу.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47628,7 +47628,7 @@ export const ALL_RULES_SAMPLES = {
                 "They should have given their neighbors a hand."
             ],
             "ua": "Їм слід було допомогти своїм сусідам.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47640,7 +47640,7 @@ export const ALL_RULES_SAMPLES = {
                 "He should have looked at the weather forecast."
             ],
             "ua": "Йому слід було перевірити прогноз погоди.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47653,7 +47653,7 @@ export const ALL_RULES_SAMPLES = {
                 "I should have put aside more money."
             ],
             "ua": "Мені слід було заощадити більше грошей.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47664,7 +47664,7 @@ export const ALL_RULES_SAMPLES = {
                 "You should have expressed your gratitude to her for the gift."
             ],
             "ua": "Тобі слід було подякувати їй за подарунок.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47676,7 +47676,7 @@ export const ALL_RULES_SAMPLES = {
                 "We should have spent more time at the party."
             ],
             "ua": "Нам слід було залишитися на вечірці довше.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47688,7 +47688,7 @@ export const ALL_RULES_SAMPLES = {
                 "She should have put on a coat."
             ],
             "ua": "Їй слід було вдягнути пальто.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47699,7 +47699,7 @@ export const ALL_RULES_SAMPLES = {
                 "I should have gone to sleep earlier."
             ],
             "ua": "Мені слід було лягти спати раніше.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47711,7 +47711,7 @@ export const ALL_RULES_SAMPLES = {
                 "They should have gone through the instructions."
             ],
             "ua": "Їм слід було прочитати інструкцію.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47723,7 +47723,7 @@ export const ALL_RULES_SAMPLES = {
                 "He should have behaved more politely."
             ],
             "ua": "Йому слід було бути ввічливішим.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47734,7 +47734,7 @@ export const ALL_RULES_SAMPLES = {
                 "You should have secured the door."
             ],
             "ua": "Тобі слід було замкнути двері.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47745,7 +47745,7 @@ export const ALL_RULES_SAMPLES = {
                 "We should have stayed and waited for them."
             ],
             "ua": "Нам слід було їх почекати.",
-            "hint": "використовуй SHOULD"
+            "hint": "use SHOULD"
         },
         {
             "rules": [
@@ -47757,7 +47757,7 @@ export const ALL_RULES_SAMPLES = {
                 "She could have won the race if she had trained more."
             ],
             "ua": "Вона могла б виграти забіг, якби більше тренувалася.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47769,7 +47769,7 @@ export const ALL_RULES_SAMPLES = {
                 "They could have offered us help, but they chose not to."
             ],
             "ua": "Вони могли б нам допомогти, але не зробили цього.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47780,7 +47780,7 @@ export const ALL_RULES_SAMPLES = {
                 "He could have made a call, but he forgot."
             ],
             "ua": "Він міг би подзвонити, але забув.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47791,7 +47791,7 @@ export const ALL_RULES_SAMPLES = {
                 "We could have arrived earlier if we had not been stuck in traffic."
             ],
             "ua": "Ми могли б приїхати раніше, якби не застрягли в заторах.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47803,7 +47803,7 @@ export const ALL_RULES_SAMPLES = {
                 "I could have travelled to Paris, but I chose Rome instead."
             ],
             "ua": "Я міг би поїхати до Парижа, але вибрав Рим.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47814,7 +47814,7 @@ export const ALL_RULES_SAMPLES = {
                 "She could have accepted the job offer."
             ],
             "ua": "Вона могла б прийняти пропозицію роботи.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47826,7 +47826,7 @@ export const ALL_RULES_SAMPLES = {
                 "They could have purchased that house last year."
             ],
             "ua": "Вони могли б купити той будинок минулого року.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47837,7 +47837,7 @@ export const ALL_RULES_SAMPLES = {
                 "He could have said something more pleasant."
             ],
             "ua": "Він міг би сказати щось приємніше.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47849,7 +47849,7 @@ export const ALL_RULES_SAMPLES = {
                 "I could have completed it yesterday."
             ],
             "ua": "Я міг би закінчити це вчора.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47860,7 +47860,7 @@ export const ALL_RULES_SAMPLES = {
                 "You could have requested help."
             ],
             "ua": "Ти міг би попросити про допомогу.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47871,7 +47871,7 @@ export const ALL_RULES_SAMPLES = {
                 "We could have used a taxi."
             ],
             "ua": "Ми могли б узяти таксі.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47882,7 +47882,7 @@ export const ALL_RULES_SAMPLES = {
                 "She could have become part of the team."
             ],
             "ua": "Вона могла б приєднатися до команди.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47894,7 +47894,7 @@ export const ALL_RULES_SAMPLES = {
                 "They could have remained longer."
             ],
             "ua": "Вони могли б залишитися довше.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47905,7 +47905,7 @@ export const ALL_RULES_SAMPLES = {
                 "He could have shared the secret with me."
             ],
             "ua": "Він міг би сказати мені секрет.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47917,7 +47917,7 @@ export const ALL_RULES_SAMPLES = {
                 "I could have performed better."
             ],
             "ua": "Я міг би зробити краще.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47929,7 +47929,7 @@ export const ALL_RULES_SAMPLES = {
                 "You could have acted more carefully."
             ],
             "ua": "Ти міг би бути обережнішим.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47940,7 +47940,7 @@ export const ALL_RULES_SAMPLES = {
                 "We could have lost it all."
             ],
             "ua": "Ми могли б втратити все.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47951,7 +47951,7 @@ export const ALL_RULES_SAMPLES = {
                 "She could have got it wrong."
             ],
             "ua": "Вона могла б зробити помилку.",
-            "hint": "використовуй COULD"
+            "hint": "use COULD"
         },
         {
             "rules": [
@@ -47963,7 +47963,7 @@ export const ALL_RULES_SAMPLES = {
                 "If I had known, I would have helped you."
             ],
             "ua": "Я б допоміг тобі, якби я знав.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -47975,7 +47975,7 @@ export const ALL_RULES_SAMPLES = {
                 "If she had not been sick, she would have come."
             ],
             "ua": "Вона б прийшла, якби не була хвора.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -47987,7 +47987,7 @@ export const ALL_RULES_SAMPLES = {
                 "If they had had time, they would have joined us."
             ],
             "ua": "Вони б приєдналися до нас, якби мали час.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -47999,7 +47999,7 @@ export const ALL_RULES_SAMPLES = {
                 "He would have attended the meeting, but he forgot."
             ],
             "ua": "Він би пішов на зустріч, але забув.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48011,7 +48011,7 @@ export const ALL_RULES_SAMPLES = {
                 "With more people, we would have finished earlier."
             ],
             "ua": "Ми б закінчили раніше, якби було більше людей.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48024,7 +48024,7 @@ export const ALL_RULES_SAMPLES = {
                 "If it had been cheaper, I would have bought it."
             ],
             "ua": "Я б купив це, якби воно було дешевше.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48035,7 +48035,7 @@ export const ALL_RULES_SAMPLES = {
                 "You would have enjoyed the movie."
             ],
             "ua": "Тобі б сподобався фільм.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48047,7 +48047,7 @@ export const ALL_RULES_SAMPLES = {
                 "She would have called, but her phone battery died."
             ],
             "ua": "Вона б подзвонила, але в неї розрядився телефон.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48059,7 +48059,7 @@ export const ALL_RULES_SAMPLES = {
                 "If it had not rained, they would have stayed longer."
             ],
             "ua": "Вони б залишилися довше, якби не було дощу.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48071,7 +48071,7 @@ export const ALL_RULES_SAMPLES = {
                 "He would have got on the bus, but it was full."
             ],
             "ua": "Він би сів на автобус, але той був переповнений.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48083,7 +48083,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would have met you, but I was too busy."
             ],
             "ua": "Я б зустрівся з тобою, але був зайнятий.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48095,7 +48095,7 @@ export const ALL_RULES_SAMPLES = {
                 "If you had been there, you would have understood."
             ],
             "ua": "Ти б зрозумів, якби був там.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48106,7 +48106,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would have danced for the whole night."
             ],
             "ua": "Ми б танцювали всю ніч.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48117,7 +48117,7 @@ export const ALL_RULES_SAMPLES = {
                 "She would have agreed to the offer."
             ],
             "ua": "Вона б прийняла пропозицію.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48128,7 +48128,7 @@ export const ALL_RULES_SAMPLES = {
                 "They would have trusted what he said."
             ],
             "ua": "Вони б йому повірили.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48140,7 +48140,7 @@ export const ALL_RULES_SAMPLES = {
                 "If he had had money, he would have studied abroad."
             ],
             "ua": "Він би навчався за кордоном, якби мав гроші.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48152,7 +48152,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would have made dinner, but we ran out of food."
             ],
             "ua": "Я б приготував вечерю, але в нас закінчилася їжа.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48165,7 +48165,7 @@ export const ALL_RULES_SAMPLES = {
                 "If you had tried harder, you would have passed."
             ],
             "ua": "Ти б склав іспит, якби старався більше.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48178,7 +48178,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would have called, but it was already too late."
             ],
             "ua": "Ми б подзвонили, але було вже надто пізно.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48189,7 +48189,7 @@ export const ALL_RULES_SAMPLES = {
                 "She would have recognized you immediately."
             ],
             "ua": "Вона б тебе впізнала миттєво.",
-            "hint": "використовуй WOULD"
+            "hint": "use WOULD"
         },
         {
             "rules": [
@@ -48201,7 +48201,7 @@ export const ALL_RULES_SAMPLES = {
                 "I might have forgotten my phone at home."
             ],
             "ua": "Я, можливо, залишив свій телефон удома.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48212,7 +48212,7 @@ export const ALL_RULES_SAMPLES = {
                 "She might have taken what I said the wrong way."
             ],
             "ua": "Вона, можливо, неправильно зрозуміла те, що я сказав.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48223,7 +48223,7 @@ export const ALL_RULES_SAMPLES = {
                 "They might have already arrived."
             ],
             "ua": "Вони, можливо, вже прибули.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48234,7 +48234,7 @@ export const ALL_RULES_SAMPLES = {
                 "He might have forgotten about the meeting."
             ],
             "ua": "Він, можливо, забув про зустріч.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48246,7 +48246,7 @@ export const ALL_RULES_SAMPLES = {
                 "We might have gone to the wrong location."
             ],
             "ua": "Ми, можливо, пішли не в те місце.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48259,7 +48259,7 @@ export const ALL_RULES_SAMPLES = {
                 "I might have spotted her at the station."
             ],
             "ua": "Я, можливо, бачив її на вокзалі.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48270,7 +48270,7 @@ export const ALL_RULES_SAMPLES = {
                 "You might have heard the latest news."
             ],
             "ua": "Ти, можливо, чув новини.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48281,7 +48281,7 @@ export const ALL_RULES_SAMPLES = {
                 "She might have misplaced her wallet."
             ],
             "ua": "Вона, можливо, загубила свій гаманець.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48294,7 +48294,7 @@ export const ALL_RULES_SAMPLES = {
                 "They might have caught the earlier train."
             ],
             "ua": "Вони, можливо, поїхали раннішим поїздом.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48305,7 +48305,7 @@ export const ALL_RULES_SAMPLES = {
                 "He might have got something wrong."
             ],
             "ua": "Він, можливо, припустився помилки.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48317,7 +48317,7 @@ export const ALL_RULES_SAMPLES = {
                 "I might have been overly harsh."
             ],
             "ua": "Я, можливо, був надто суворим.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48328,7 +48328,7 @@ export const ALL_RULES_SAMPLES = {
                 "You might have frightened him away."
             ],
             "ua": "Ти, можливо, його злякав і він утік.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48340,7 +48340,7 @@ export const ALL_RULES_SAMPLES = {
                 "We might have selected the wrong option."
             ],
             "ua": "Ми, можливо, обрали неправильний варіант.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48351,7 +48351,7 @@ export const ALL_RULES_SAMPLES = {
                 "She might have headed home."
             ],
             "ua": "Вона, можливо, пішла додому.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48362,7 +48362,7 @@ export const ALL_RULES_SAMPLES = {
                 "They might have believed we were joking."
             ],
             "ua": "Вони, можливо, подумали, що ми жартуємо.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48373,7 +48373,7 @@ export const ALL_RULES_SAMPLES = {
                 "He might have removed the file."
             ],
             "ua": "Він, можливо, видалив файл.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48384,7 +48384,7 @@ export const ALL_RULES_SAMPLES = {
                 "I might have upset her."
             ],
             "ua": "Я, можливо, образив її.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48396,7 +48396,7 @@ export const ALL_RULES_SAMPLES = {
                 "You might have lost your keys."
             ],
             "ua": "Ти, можливо, впустив свої ключі.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48407,7 +48407,7 @@ export const ALL_RULES_SAMPLES = {
                 "She might have been sleeping."
             ],
             "ua": "Вона, можливо, спала.",
-            "hint": "використовуй MIGHT"
+            "hint": "use MIGHT"
         },
         {
             "rules": [
@@ -48420,7 +48420,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have felt exhausted after that trip."
             ],
             "ua": "Він, напевно, був втомлений після тієї поїздки.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48432,7 +48432,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have forgotten about the appointment."
             ],
             "ua": "Вона, напевно, забула про зустріч.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48444,7 +48444,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have got here by now."
             ],
             "ua": "Вони, напевно, вже прибули.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48456,7 +48456,7 @@ export const ALL_RULES_SAMPLES = {
                 "You must have heard of it."
             ],
             "ua": "Ти, напевно, чув про це.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48469,7 +48469,7 @@ export const ALL_RULES_SAMPLES = {
                 "I must have forgotten my bag at the café."
             ],
             "ua": "Я, напевно, залишив свою сумку в кафе.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48481,7 +48481,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been aware of the answer."
             ],
             "ua": "Він, напевно, знав відповідь.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48493,7 +48493,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have felt awful."
             ],
             "ua": "Вона, напевно, почувалася жахливо.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48506,7 +48506,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have gone the wrong way."
             ],
             "ua": "Вони, напевно, повернули не туди.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48518,7 +48518,7 @@ export const ALL_RULES_SAMPLES = {
                 "We must have done something wrong."
             ],
             "ua": "Ми, напевно, припустилися помилки.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48530,7 +48530,7 @@ export const ALL_RULES_SAMPLES = {
                 "I must have met him before."
             ],
             "ua": "Я, напевно, бачив його раніше.",
-            "hint": "використовуй MUST"
+            "hint": "use MUST"
         },
         {
             "rules": [
@@ -48542,7 +48542,7 @@ export const ALL_RULES_SAMPLES = {
                 "He cannot have managed it alone."
             ],
             "ua": "Він не міг зробити це сам.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48554,7 +48554,7 @@ export const ALL_RULES_SAMPLES = {
                 "She cannot have made such a statement!"
             ],
             "ua": "Вона не могла таке сказати!",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48566,7 +48566,7 @@ export const ALL_RULES_SAMPLES = {
                 "They cannot have gone already."
             ],
             "ua": "Вони не могли вже піти.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48579,7 +48579,7 @@ export const ALL_RULES_SAMPLES = {
                 "You cannot have completed it so quickly."
             ],
             "ua": "Ти не міг закінчити так швидко.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48592,7 +48592,7 @@ export const ALL_RULES_SAMPLES = {
                 "I cannot have forgotten about your birthday."
             ],
             "ua": "Я не міг забути про твій день народження.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48605,7 +48605,7 @@ export const ALL_RULES_SAMPLES = {
                 "He cannot have been the one who broke the window."
             ],
             "ua": "Він не міг розбити вікно.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48617,7 +48617,7 @@ export const ALL_RULES_SAMPLES = {
                 "She cannot have told us a lie."
             ],
             "ua": "Вона не могла нам збрехати.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48630,7 +48630,7 @@ export const ALL_RULES_SAMPLES = {
                 "They cannot have failed to catch the train."
             ],
             "ua": "Вони не могли пропустити поїзд.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48642,7 +48642,7 @@ export const ALL_RULES_SAMPLES = {
                 "We cannot have made such a big mistake."
             ],
             "ua": "Ми не могли так помилитися.",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         },
         {
             "rules": [
@@ -48655,7 +48655,7 @@ export const ALL_RULES_SAMPLES = {
                 "I cannot have misplaced my passport again!"
             ],
             "ua": "Я не міг знову загубити свій паспорт!",
-            "hint": "використовуй CANNOT"
+            "hint": "use CANNOT"
         }
     ],
     "PASSIVE_VOICE_ALL_TENSES": [
@@ -48669,7 +48669,7 @@ export const ALL_RULES_SAMPLES = {
                 "This book gets read by many students."
             ],
             "ua": "Цю книгу читають багато студентів.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48681,7 +48681,7 @@ export const ALL_RULES_SAMPLES = {
                 "The windows get cleaned every week."
             ],
             "ua": "Вікна миють щотижня.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48694,7 +48694,7 @@ export const ALL_RULES_SAMPLES = {
                 "English gets spoken in many countries."
             ],
             "ua": "Англійською мовою розмовляють у багатьох країнах.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48706,7 +48706,7 @@ export const ALL_RULES_SAMPLES = {
                 "Coffee gets grown in Brazil."
             ],
             "ua": "Каву вирощують у Бразилії.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48718,7 +48718,7 @@ export const ALL_RULES_SAMPLES = {
                 "The homework gets checked by the teacher."
             ],
             "ua": "Вчитель перевіряє домашнє завдання.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48730,7 +48730,7 @@ export const ALL_RULES_SAMPLES = {
                 "The floor gets washed every morning."
             ],
             "ua": "Підлогу миють щоранку.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48741,7 +48741,7 @@ export const ALL_RULES_SAMPLES = {
                 "Letters get delivered every day."
             ],
             "ua": "Листи доставляють щодня.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48754,7 +48754,7 @@ export const ALL_RULES_SAMPLES = {
                 "The food gets prepared in the kitchen."
             ],
             "ua": "На кухні готують їжу.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48767,7 +48767,7 @@ export const ALL_RULES_SAMPLES = {
                 "The car is getting repaired right now."
             ],
             "ua": "Автомобіль ремонтують прямо зараз.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48782,7 +48782,7 @@ export const ALL_RULES_SAMPLES = {
                 "Dinner is getting cooked now."
             ],
             "ua": "Вечерю зараз готують.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48795,7 +48795,7 @@ export const ALL_RULES_SAMPLES = {
                 "The project is getting discussed."
             ],
             "ua": "Проєкт обговорюють.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48808,7 +48808,7 @@ export const ALL_RULES_SAMPLES = {
                 "A new bridge is getting built in the city."
             ],
             "ua": "У місті зараз будують новий міст.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48821,7 +48821,7 @@ export const ALL_RULES_SAMPLES = {
                 "The room is getting cleaned by the maid."
             ],
             "ua": "Покоївка прибирає кімнату.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48834,7 +48834,7 @@ export const ALL_RULES_SAMPLES = {
                 "The report is getting written."
             ],
             "ua": "Звіт пишуть.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48847,7 +48847,7 @@ export const ALL_RULES_SAMPLES = {
                 "The kids are getting taken to school."
             ],
             "ua": "Дітей зараз відводять до школи.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48860,7 +48860,7 @@ export const ALL_RULES_SAMPLES = {
                 "The movie is getting filmed in London."
             ],
             "ua": "Фільм зараз знімають у Лондоні.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48873,7 +48873,7 @@ export const ALL_RULES_SAMPLES = {
                 "The walls are getting painted."
             ],
             "ua": "Стіни фарбують.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48886,7 +48886,7 @@ export const ALL_RULES_SAMPLES = {
                 "The documents are getting signed."
             ],
             "ua": "Документи підписують.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48898,7 +48898,7 @@ export const ALL_RULES_SAMPLES = {
                 "The cake got baked yesterday."
             ],
             "ua": "Торт спекли вчора.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48910,7 +48910,7 @@ export const ALL_RULES_SAMPLES = {
                 "The door got locked by mistake."
             ],
             "ua": "Двері зачинили помилково.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48923,7 +48923,7 @@ export const ALL_RULES_SAMPLES = {
                 "The house got built in 1990."
             ],
             "ua": "Будинок збудували у 1990 році.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48935,7 +48935,7 @@ export const ALL_RULES_SAMPLES = {
                 "The song got written by her."
             ],
             "ua": "Вона написала пісню.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48948,7 +48948,7 @@ export const ALL_RULES_SAMPLES = {
                 "The letter got sent on Monday."
             ],
             "ua": "Листа відправили в понеділок.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48960,7 +48960,7 @@ export const ALL_RULES_SAMPLES = {
                 "The car got stolen last week."
             ],
             "ua": "Автомобіль викрали минулого тижня.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48972,7 +48972,7 @@ export const ALL_RULES_SAMPLES = {
                 "This film got directed by Spielberg."
             ],
             "ua": "Спілберг зняв цей фільм.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48985,7 +48985,7 @@ export const ALL_RULES_SAMPLES = {
                 "The book got published in 2001."
             ],
             "ua": "Книгу опублікували у 2001 році.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -48997,7 +48997,7 @@ export const ALL_RULES_SAMPLES = {
                 "The meeting got canceled."
             ],
             "ua": "Зустріч скасували.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49009,7 +49009,7 @@ export const ALL_RULES_SAMPLES = {
                 "The room was getting cleaned when I arrived."
             ],
             "ua": "Кімнату прибирали, коли я приїхав.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49022,7 +49022,7 @@ export const ALL_RULES_SAMPLES = {
                 "The dinner was getting served at 7 p.m."
             ],
             "ua": "Вечерю подавали о 7 годині вечора.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49034,7 +49034,7 @@ export const ALL_RULES_SAMPLES = {
                 "The walls were getting painted yesterday."
             ],
             "ua": "Стіни фарбували вчора.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49046,7 +49046,7 @@ export const ALL_RULES_SAMPLES = {
                 "The report was getting prepared all morning."
             ],
             "ua": "Звіт готували весь ранок.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49058,7 +49058,7 @@ export const ALL_RULES_SAMPLES = {
                 "The car was getting repaired when we called."
             ],
             "ua": "Машину ремонтували, коли ми подзвонили.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49071,7 +49071,7 @@ export const ALL_RULES_SAMPLES = {
                 "The song was getting recorded in the studio."
             ],
             "ua": "Пісню записували у студії.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49083,7 +49083,7 @@ export const ALL_RULES_SAMPLES = {
                 "The results are going to be announced tomorrow."
             ],
             "ua": "Результати оголосять завтра.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49095,7 +49095,7 @@ export const ALL_RULES_SAMPLES = {
                 "The house is going to be finished next month."
             ],
             "ua": "Будинок добудують наступного місяця.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49107,7 +49107,7 @@ export const ALL_RULES_SAMPLES = {
                 "Dinner is going to be served at 8 p.m."
             ],
             "ua": "Вечерю подаватимуть о восьмій годині вечора.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49119,7 +49119,7 @@ export const ALL_RULES_SAMPLES = {
                 "The guests are going to be invited soon."
             ],
             "ua": "Гостей незабаром запросять.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49131,7 +49131,7 @@ export const ALL_RULES_SAMPLES = {
                 "The decision is going to be made later."
             ],
             "ua": "Рішення ухвалять пізніше.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49144,7 +49144,7 @@ export const ALL_RULES_SAMPLES = {
                 "The car is going to be repaired by Monday."
             ],
             "ua": "Автомобіль відремонтують до понеділка.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49157,7 +49157,7 @@ export const ALL_RULES_SAMPLES = {
                 "The project is going to be completed on time."
             ],
             "ua": "Проєкт завершать вчасно.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49169,7 +49169,7 @@ export const ALL_RULES_SAMPLES = {
                 "The movie is going to be released next year."
             ],
             "ua": "Фільм вийде наступного року.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49181,7 +49181,7 @@ export const ALL_RULES_SAMPLES = {
                 "The new rule is going to be introduced soon."
             ],
             "ua": "Нове правило запровадять незабаром.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49194,7 +49194,7 @@ export const ALL_RULES_SAMPLES = {
                 "The bridge is expected to have been built by 2030."
             ],
             "ua": "Міст буде збудовано до 2030 року.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49207,7 +49207,7 @@ export const ALL_RULES_SAMPLES = {
                 "The job is expected to have been done before Friday."
             ],
             "ua": "Роботу буде виконано до п’ятниці.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49220,7 +49220,7 @@ export const ALL_RULES_SAMPLES = {
                 "The report is expected to have been finished by tomorrow."
             ],
             "ua": "Звіт буде завершено до завтра.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49233,7 +49233,7 @@ export const ALL_RULES_SAMPLES = {
                 "The tickets are expected to have been printed by noon."
             ],
             "ua": "Квитки буде надруковано до полудня.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49246,7 +49246,7 @@ export const ALL_RULES_SAMPLES = {
                 "The meeting is expected to have been arranged by 5 PM."
             ],
             "ua": "Зустріч буде організовано до 17:00.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49259,7 +49259,7 @@ export const ALL_RULES_SAMPLES = {
                 "The product is expected to have been tested by tomorrow."
             ],
             "ua": "Продукт буде протестовано до завтра.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49272,7 +49272,7 @@ export const ALL_RULES_SAMPLES = {
                 "The plan is expected to have been approved by Thursday."
             ],
             "ua": "План буде затверджено до четверга.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49284,7 +49284,7 @@ export const ALL_RULES_SAMPLES = {
                 "The rules have to be followed."
             ],
             "ua": "Правил потрібно дотримуватися.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49297,7 +49297,7 @@ export const ALL_RULES_SAMPLES = {
                 "The homework ought to be done carefully."
             ],
             "ua": "Домашнє завдання слід виконувати уважно.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49310,7 +49310,7 @@ export const ALL_RULES_SAMPLES = {
                 "The car could be repaired easily."
             ],
             "ua": "Автомобіль можна легко відремонтувати.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49322,7 +49322,7 @@ export const ALL_RULES_SAMPLES = {
                 "The message may be sent by email."
             ],
             "ua": "Повідомлення можна надіслати електронною поштою.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49334,7 +49334,7 @@ export const ALL_RULES_SAMPLES = {
                 "The form ought to be filled out."
             ],
             "ua": "Форму слід заповнити.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49346,7 +49346,7 @@ export const ALL_RULES_SAMPLES = {
                 "The work must be finished today."
             ],
             "ua": "Роботу потрібно завершити сьогодні.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49359,7 +49359,7 @@ export const ALL_RULES_SAMPLES = {
                 "The house may be sold soon."
             ],
             "ua": "Будинок, можливо, незабаром продадуть.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49372,7 +49372,7 @@ export const ALL_RULES_SAMPLES = {
                 "The exam has to be taken next week."
             ],
             "ua": "Іспит потрібно скласти наступного тижня.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49384,7 +49384,7 @@ export const ALL_RULES_SAMPLES = {
                 "The food may be ordered online."
             ],
             "ua": "Їжу можна замовити онлайн.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49397,7 +49397,7 @@ export const ALL_RULES_SAMPLES = {
                 "The tickets ought to be booked in advance."
             ],
             "ua": "Квитки слід бронювати заздалегідь.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49410,7 +49410,7 @@ export const ALL_RULES_SAMPLES = {
                 "The problem may be solved quickly."
             ],
             "ua": "Проблему можна швидко розв’язати.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49422,7 +49422,7 @@ export const ALL_RULES_SAMPLES = {
                 "The rules cannot be broken."
             ],
             "ua": "Правила не можна порушувати.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49434,7 +49434,7 @@ export const ALL_RULES_SAMPLES = {
                 "The error may be corrected."
             ],
             "ua": "Помилку можна виправити.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49447,7 +49447,7 @@ export const ALL_RULES_SAMPLES = {
                 "The keys may be found later."
             ],
             "ua": "Ключі, можливо, знайдуть пізніше.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         },
         {
             "rules": [
@@ -49459,7 +49459,7 @@ export const ALL_RULES_SAMPLES = {
                 "The results may be improved."
             ],
             "ua": "Результати можна покращити.",
-            "hint": "використовуй PASSIVE VOICE"
+            "hint": "use PASSIVE VOICE"
         }
     ],
     "PAST_PERFECT": [
@@ -49694,7 +49694,7 @@ export const ALL_RULES_SAMPLES = {
                 "She turned off the TV and went to bed.",
                 "She switched off the TV and went to bed."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49708,7 +49708,7 @@ export const ALL_RULES_SAMPLES = {
                 "Please take off your shoes before coming in.",
                 "Please take your shoes off before entering."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49723,7 +49723,7 @@ export const ALL_RULES_SAMPLES = {
                 "They fought but then made up later.",
                 "They had a fight, but then they made up."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49737,7 +49737,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m trying to find out what happened.",
                 "I am trying to figure out what happened."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49752,7 +49752,7 @@ export const ALL_RULES_SAMPLES = {
                 "We put off the meeting until Monday.",
                 "We pushed back the meeting until Monday."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49766,7 +49766,7 @@ export const ALL_RULES_SAMPLES = {
                 "He gets along well with his colleagues.",
                 "He gets on well with his colleagues."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49780,7 +49780,7 @@ export const ALL_RULES_SAMPLES = {
                 "I came across some old photos yesterday.",
                 "I ran across some old photos yesterday."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49794,7 +49794,7 @@ export const ALL_RULES_SAMPLES = {
                 "We have to fill out this form before the trip.",
                 "We have to fill in this form before the trip."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49808,7 +49808,7 @@ export const ALL_RULES_SAMPLES = {
                 "He came up with a great idea for the project.",
                 "He thought up a great idea for the project."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49824,7 +49824,7 @@ export const ALL_RULES_SAMPLES = {
                 "I always turn off the light before I leave.",
                 "I always switch off the light before I leave."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49841,7 +49841,7 @@ export const ALL_RULES_SAMPLES = {
                 "He picked up the pen that had fallen on the floor.",
                 "He picked it up from the floor."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49856,7 +49856,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re looking for a solution to the problem.",
                 "We are looking for a solution to the problem."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49870,7 +49870,7 @@ export const ALL_RULES_SAMPLES = {
                 "She gave up after a few attempts.",
                 "She gave it up after a few tries."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49885,7 +49885,7 @@ export const ALL_RULES_SAMPLES = {
                 "Please turn down the music.",
                 "Please turn the music down."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49901,7 +49901,7 @@ export const ALL_RULES_SAMPLES = {
                 "We ran into each other at the mall.",
                 "We bumped into each other at the mall."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49916,7 +49916,7 @@ export const ALL_RULES_SAMPLES = {
                 "I always tidy up my room before bed.",
                 "I always clean up my room before bed."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49931,7 +49931,7 @@ export const ALL_RULES_SAMPLES = {
                 "Don’t forget to put on this jacket.",
                 "Do not forget to put on this jacket."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49947,7 +49947,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m catching up on work after my vacation.",
                 "I am catching up on work after my vacation."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49962,7 +49962,7 @@ export const ALL_RULES_SAMPLES = {
                 "I need to throw away this trash.",
                 "I need to throw this trash away."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49977,7 +49977,7 @@ export const ALL_RULES_SAMPLES = {
                 "She made up a wonderful story.",
                 "She came up with a wonderful story."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -49991,7 +49991,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m trying to cut down on expenses.",
                 "I am trying to cut down on my spending."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50007,7 +50007,7 @@ export const ALL_RULES_SAMPLES = {
                 "We gave the money back to the customer.",
                 "We paid the money back to the customer."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50021,7 +50021,7 @@ export const ALL_RULES_SAMPLES = {
                 "He always puts off important tasks.",
                 "He always puts important things off."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50039,7 +50039,7 @@ export const ALL_RULES_SAMPLES = {
                 "We have to take this book back to the library.",
                 "We need to bring this book back to the library."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50056,7 +50056,7 @@ export const ALL_RULES_SAMPLES = {
                 "She picked up the letter that had fallen on the floor.",
                 "She picked it up from the floor."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50072,7 +50072,7 @@ export const ALL_RULES_SAMPLES = {
                 "Please shut down the computer before you leave.",
                 "Please turn off the computer before you go."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50086,7 +50086,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re looking for new employees.",
                 "We are looking for new workers."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50101,7 +50101,7 @@ export const ALL_RULES_SAMPLES = {
                 "I turned down the offer.",
                 "I passed up the offer."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50116,7 +50116,7 @@ export const ALL_RULES_SAMPLES = {
                 "He often looks after his younger brother.",
                 "He often looks out for his younger brother."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50131,7 +50131,7 @@ export const ALL_RULES_SAMPLES = {
                 "We cut off the internet to save money.",
                 "We turned off the internet to save money."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50145,7 +50145,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m waiting for him to call back.",
                 "I am waiting for him to call me back."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50161,7 +50161,7 @@ export const ALL_RULES_SAMPLES = {
                 "She tore up the contract yesterday.",
                 "She ripped up the contract yesterday."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50176,7 +50176,7 @@ export const ALL_RULES_SAMPLES = {
                 "I usually wake up at eight in the morning.",
                 "I usually get up at eight in the morning."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50192,7 +50192,7 @@ export const ALL_RULES_SAMPLES = {
                 "She picked up the kids from school.",
                 "She picked them up from school."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50207,7 +50207,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re looking for a new apartment.",
                 "We are looking for a new flat."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50222,7 +50222,7 @@ export const ALL_RULES_SAMPLES = {
                 "He turned off the light before going to bed.",
                 "He switched off the light before sleeping."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50237,7 +50237,7 @@ export const ALL_RULES_SAMPLES = {
                 "Please write down this address.",
                 "Please note down this address."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50251,7 +50251,7 @@ export const ALL_RULES_SAMPLES = {
                 "We came back home late at night.",
                 "We got back home late at night."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50265,7 +50265,7 @@ export const ALL_RULES_SAMPLES = {
                 "She always puts on her coat when it’s cold.",
                 "She always puts her coat on when it’s cold."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50278,7 +50278,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "We called off the trip because of the rain."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50293,7 +50293,7 @@ export const ALL_RULES_SAMPLES = {
                 "Don’t throw away these newspapers.",
                 "Do not throw these newspapers away."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50306,7 +50306,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He often hangs out with his friends."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50320,7 +50320,7 @@ export const ALL_RULES_SAMPLES = {
                 "I filled out the job application.",
                 "I filled in the job form."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50334,7 +50334,7 @@ export const ALL_RULES_SAMPLES = {
                 "They get along well with each other.",
                 "They get on well with each other."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50349,7 +50349,7 @@ export const ALL_RULES_SAMPLES = {
                 "We stopped by the café to have a coffee.",
                 "We dropped by the café for a drink."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50363,7 +50363,7 @@ export const ALL_RULES_SAMPLES = {
                 "Please turn off the TV.",
                 "Please switch off the TV."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50378,7 +50378,7 @@ export const ALL_RULES_SAMPLES = {
                 "She broke her headphones and threw them away.",
                 "She broke her headphones and got rid of them."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50391,7 +50391,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "I look after my garden every Sunday."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50406,7 +50406,7 @@ export const ALL_RULES_SAMPLES = {
                 "We met up last week and talked.",
                 "We caught up last week and talked."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50420,7 +50420,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m looking for my charger.",
                 "I am looking for my phone charger."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50435,7 +50435,7 @@ export const ALL_RULES_SAMPLES = {
                 "I always turn on the computer in the morning.",
                 "I always switch on the computer in the morning."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50451,7 +50451,7 @@ export const ALL_RULES_SAMPLES = {
                 "She put down her keys on the table.",
                 "She put her keys down on the table."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50467,7 +50467,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re cleaning up the kitchen right now.",
                 "We are tidying up the kitchen right now."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50482,7 +50482,7 @@ export const ALL_RULES_SAMPLES = {
                 "He turned off the air conditioner before leaving.",
                 "He switched off the AC before leaving."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50496,7 +50496,7 @@ export const ALL_RULES_SAMPLES = {
                 "We carried on working after the break.",
                 "We went on working after the break."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50510,7 +50510,7 @@ export const ALL_RULES_SAMPLES = {
                 "He always turns off the TV before bed.",
                 "He always switches off the TV before bed."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50525,7 +50525,7 @@ export const ALL_RULES_SAMPLES = {
                 "I dropped by the shop to buy some bread.",
                 "I stopped by the store to buy some bread."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50539,7 +50539,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m sorting out my things.",
                 "I am clearing up my stuff."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50554,7 +50554,7 @@ export const ALL_RULES_SAMPLES = {
                 "We turned off the lights before we left.",
                 "We switched off the lights before leaving."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50570,7 +50570,7 @@ export const ALL_RULES_SAMPLES = {
                 "He often puts his phone down on the table.",
                 "He often sets his phone down on the table."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50585,7 +50585,7 @@ export const ALL_RULES_SAMPLES = {
                 "She woke up at six in the morning.",
                 "She got up at six in the morning."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50600,7 +50600,7 @@ export const ALL_RULES_SAMPLES = {
                 "We usually go to bed at ten o’clock.",
                 "We usually turn in at ten o’clock."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50616,7 +50616,7 @@ export const ALL_RULES_SAMPLES = {
                 "He put down his bag near the door.",
                 "He set down his bag by the door."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50630,7 +50630,7 @@ export const ALL_RULES_SAMPLES = {
                 "Don’t turn off the light, please.",
                 "Do not switch off the light, please."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50644,7 +50644,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m getting ready for the meeting now.",
                 "I am preparing for the meeting now."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50659,7 +50659,7 @@ export const ALL_RULES_SAMPLES = {
                 "We met up last week.",
                 "We caught up last week."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50674,7 +50674,7 @@ export const ALL_RULES_SAMPLES = {
                 "I always clean up the flat on weekends.",
                 "I always tidy up the apartment on weekends."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50689,7 +50689,7 @@ export const ALL_RULES_SAMPLES = {
                 "We stopped by the coffee shop for a coffee.",
                 "We dropped by the cafe for a drink."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50704,7 +50704,7 @@ export const ALL_RULES_SAMPLES = {
                 "We take off our shoes by the door.",
                 "We leave our shoes by the door."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50719,7 +50719,7 @@ export const ALL_RULES_SAMPLES = {
                 "She went out of the house at eight.",
                 "She headed out of the house at eight."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50734,7 +50734,7 @@ export const ALL_RULES_SAMPLES = {
                 "I am heading out to work right now.",
                 "I am heading out to work now."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50750,7 +50750,7 @@ export const ALL_RULES_SAMPLES = {
                 "I often drop by the neighbor’s for tea.",
                 "I often stop by the neighbor’s for tea."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50765,7 +50765,7 @@ export const ALL_RULES_SAMPLES = {
                 "She walked out of the room without a word.",
                 "She went out of the room silently."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50780,7 +50780,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’re heading to school now.",
                 "We are heading out to school now."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50794,7 +50794,7 @@ export const ALL_RULES_SAMPLES = {
                 "He always looks after his cat.",
                 "He always takes care of his cat."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50809,7 +50809,7 @@ export const ALL_RULES_SAMPLES = {
                 "She often goes out for a walk after lunch.",
                 "She often heads out for a walk after lunch."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50824,7 +50824,7 @@ export const ALL_RULES_SAMPLES = {
                 "We met up last Saturday.",
                 "We caught up last Saturday."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50839,7 +50839,7 @@ export const ALL_RULES_SAMPLES = {
                 "We stopped by the restaurant for lunch.",
                 "We dropped by the restaurant for lunch."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50855,7 +50855,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m sorting out my documents right now.",
                 "I am clearing up my paperwork right now."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50869,7 +50869,7 @@ export const ALL_RULES_SAMPLES = {
                 "She always picks up trash on the beach.",
                 "She always cleans up trash on the beach."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50884,7 +50884,7 @@ export const ALL_RULES_SAMPLES = {
                 "I came up with a good solution.",
                 "I thought up a good solution."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50899,7 +50899,7 @@ export const ALL_RULES_SAMPLES = {
                 "Don’t throw away these boxes.",
                 "Do not throw these boxes away."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50913,7 +50913,7 @@ export const ALL_RULES_SAMPLES = {
                 "We found out the cause of the problem.",
                 "We figured out the reason for the issue."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50927,7 +50927,7 @@ export const ALL_RULES_SAMPLES = {
                 "He always gives back books on time.",
                 "He always brings back books on time."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50942,7 +50942,7 @@ export const ALL_RULES_SAMPLES = {
                 "She went out of the office at five.",
                 "She headed out of the office at five."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50956,7 +50956,7 @@ export const ALL_RULES_SAMPLES = {
                 "They made up after the argument.",
                 "They patched things up after the fight."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         },
         {
             "rules": [
@@ -50970,7 +50970,7 @@ export const ALL_RULES_SAMPLES = {
                 "Please turn off the light before you leave.",
                 "Please switch off the light before you go."
             ],
-            "hint": "використовуй PHRASAL VERB"
+            "hint": "use PHRASAL VERB"
         }
     ],
     "PREP_DIRECTION": [
@@ -59970,7 +59970,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have seen the movie already.",
                 "He must've already seen the movie."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -59982,7 +59982,7 @@ export const ALL_RULES_SAMPLES = {
                 "She can’t have left the keys at home.",
                 "She couldn't have forgotten the keys at home."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -59995,7 +59995,7 @@ export const ALL_RULES_SAMPLES = {
                 "That must have been her decision.",
                 "It must've been her choice."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60007,7 +60007,7 @@ export const ALL_RULES_SAMPLES = {
                 "They can’t have heard the phone.",
                 "They must not have heard the bell."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60019,7 +60019,7 @@ export const ALL_RULES_SAMPLES = {
                 "You must have misunderstood me.",
                 "You must've got me wrong."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60031,7 +60031,7 @@ export const ALL_RULES_SAMPLES = {
                 "He can’t have been unaware of it.",
                 "He must have known about it."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60043,7 +60043,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have forgotten to buy milk.",
                 "She might have forgotten to buy the milk."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60056,7 +60056,7 @@ export const ALL_RULES_SAMPLES = {
                 "There can’t have been any light last night.",
                 "There must have been a power cut last night."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60069,7 +60069,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been too busy to reply.",
                 "He might have been too busy to answer."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60081,7 +60081,7 @@ export const ALL_RULES_SAMPLES = {
                 "There must have been a lot of noise.",
                 "There might have been too much noise."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60092,7 +60092,7 @@ export const ALL_RULES_SAMPLES = {
                 "He can’t have said that on purpose.",
                 "He couldn’t have meant it."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60104,7 +60104,7 @@ export const ALL_RULES_SAMPLES = {
                 "You must have done it by accident.",
                 "You might have done it unintentionally."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60117,7 +60117,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have spent all the money on the trip.",
                 "She could have used all her savings for the trip."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60129,7 +60129,7 @@ export const ALL_RULES_SAMPLES = {
                 "They can’t have seen the message.",
                 "They might not have noticed the message."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60141,7 +60141,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have gone to school early in the morning.",
                 "She might have left for school at dawn."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60152,7 +60152,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been very busy all day.",
                 "He might have been working all day."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60164,7 +60164,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have forgotten to book the tickets.",
                 "They might have missed the reservation."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60177,7 +60177,7 @@ export const ALL_RULES_SAMPLES = {
                 "That must have been the worst decision.",
                 "It might have been a terrible choice."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60190,7 +60190,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must not have heard because the music was too loud.",
                 "He might not have heard since it was noisy."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60201,7 +60201,7 @@ export const ALL_RULES_SAMPLES = {
                 "There can’t have been any free seats.",
                 "There might not have been any empty spots."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60214,7 +60214,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have been very tired after the trip.",
                 "She might have been exhausted after traveling."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60225,7 +60225,7 @@ export const ALL_RULES_SAMPLES = {
                 "We must have missed the right turn.",
                 "We might have taken the wrong road."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60237,7 +60237,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have often forgotten about these meetings before.",
                 "He might have missed them regularly."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60249,7 +60249,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have been at the party yesterday.",
                 "She might have gone to the party."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60261,7 +60261,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have left his phone in the car.",
                 "He might have forgotten his phone in the car."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60273,7 +60273,7 @@ export const ALL_RULES_SAMPLES = {
                 "Someone must have told her the secret.",
                 "Somebody might have revealed it to her."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60284,7 +60284,7 @@ export const ALL_RULES_SAMPLES = {
                 "I must have forgotten to send the letter.",
                 "I might have missed sending it."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60296,7 +60296,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been very generous.",
                 "He might have been kind-hearted."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60309,7 +60309,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have spent a lot of time on this project.",
                 "He might have worked on it for hours."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60321,7 +60321,7 @@ export const ALL_RULES_SAMPLES = {
                 "There must have been many people.",
                 "There might have been a big crowd."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60333,7 +60333,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have mixed up the dates.",
                 "She might have got the day wrong."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60345,7 +60345,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have lost interest in the topic.",
                 "They might have become bored."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60357,7 +60357,7 @@ export const ALL_RULES_SAMPLES = {
                 "Someone must have broken the window.",
                 "It might have been broken accidentally."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60369,7 +60369,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have told the truth.",
                 "He might have been honest."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60381,7 +60381,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have gone home earlier.",
                 "She might have left before everyone else."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60392,7 +60392,7 @@ export const ALL_RULES_SAMPLES = {
                 "We must have misunderstood the task.",
                 "We might have read it wrong."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60404,7 +60404,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have left the documents in the office.",
                 "He might have forgotten them at work."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60417,7 +60417,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have been too tired to go out.",
                 "She might have been too exhausted to leave."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60429,7 +60429,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been pleased with the result.",
                 "He might have been happy about the outcome."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60440,7 +60440,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have always liked reading detective stories.",
                 "She might have enjoyed mysteries for years."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60452,7 +60452,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have had an idea how to do it.",
                 "He might have had a plan in mind."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60463,7 +60463,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must not have understood the instruction.",
                 "They might have missed the details."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60475,7 +60475,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have drunk too much coffee.",
                 "He might have had too much caffeine."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60487,7 +60487,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have worked more than others.",
                 "She might have been busier than everyone else."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60498,7 +60498,7 @@ export const ALL_RULES_SAMPLES = {
                 "If he did that, he must have had a good reason.",
                 "He might have had no choice."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60510,7 +60510,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have left for work early in the morning.",
                 "He might have gone before sunrise."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60521,7 +60521,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have called him yesterday.",
                 "She might have phoned him last night."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60533,7 +60533,7 @@ export const ALL_RULES_SAMPLES = {
                 "There must have been a strong storm.",
                 "There might have been bad weather."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60545,7 +60545,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have lost his wallet in the subway.",
                 "He might have dropped it on the train."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60556,7 +60556,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must not have heard her alarm.",
                 "She might have slept through it."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60567,7 +60567,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have lost his passport on the plane.",
                 "He might have left his passport on the flight."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60579,7 +60579,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been too angry to explain anything.",
                 "He might have been too upset to talk."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60590,7 +60590,7 @@ export const ALL_RULES_SAMPLES = {
                 "We must have missed the bus.",
                 "We might have been late for the bus."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60602,7 +60602,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have eaten the whole cake.",
                 "She might have finished the cake herself."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60613,7 +60613,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have forgotten to turn off the light.",
                 "He might have left the light on."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60624,7 +60624,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have seen him at the party.",
                 "She might have met him last night."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60636,7 +60636,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have left his wallet in the café.",
                 "He might have forgotten it there."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60648,7 +60648,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have come back late at night.",
                 "She might have arrived after midnight."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60659,7 +60659,7 @@ export const ALL_RULES_SAMPLES = {
                 "You must have seen it on the news.",
                 "You might have read about it online."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60670,7 +60670,7 @@ export const ALL_RULES_SAMPLES = {
                 "They can’t have heard the warning.",
                 "They might not have noticed it."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60681,7 +60681,7 @@ export const ALL_RULES_SAMPLES = {
                 "There can’t have been any information about it.",
                 "There might not have been any details."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60693,7 +60693,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have been the best student in the group.",
                 "He might have been the top one in class."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60704,7 +60704,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have deleted the file by mistake.",
                 "She might have removed it accidentally."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60716,7 +60716,7 @@ export const ALL_RULES_SAMPLES = {
                 "There must have been a line at the entrance.",
                 "There might have been many people waiting."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60727,7 +60727,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have mixed up the address.",
                 "He might have gone to the wrong place."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60739,7 +60739,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have been too tired to go to the cinema.",
                 "She might have stayed home because of fatigue."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60750,7 +60750,7 @@ export const ALL_RULES_SAMPLES = {
                 "We must have left the keys at home.",
                 "We might have forgotten them on the table."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60761,7 +60761,7 @@ export const ALL_RULES_SAMPLES = {
                 "You must have heard about it before.",
                 "You might have known it already."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60772,7 +60772,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must not have understood the question.",
                 "They might have misheard it."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60783,7 +60783,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must not have taken an umbrella.",
                 "She might have left it at home."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60794,7 +60794,7 @@ export const ALL_RULES_SAMPLES = {
                 "Someone must have left the door open.",
                 "Somebody might have forgotten to close it."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60806,7 +60806,7 @@ export const ALL_RULES_SAMPLES = {
                 "That must have been his first interview.",
                 "It might have been his first time."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60818,7 +60818,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have paid more than he expected.",
                 "He might have spent extra money."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60829,7 +60829,7 @@ export const ALL_RULES_SAMPLES = {
                 "I must have left my phone in the bag.",
                 "I might have forgotten it there."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60840,7 +60840,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have bought it yesterday.",
                 "She might have picked it up after work."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60852,7 +60852,7 @@ export const ALL_RULES_SAMPLES = {
                 "There must have been many tourists.",
                 "There might have been a big crowd."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60864,7 +60864,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must have drunk too much wine.",
                 "He might have had one glass too many."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60875,7 +60875,7 @@ export const ALL_RULES_SAMPLES = {
                 "He must not have understood the joke.",
                 "He might have missed the meaning."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60886,7 +60886,7 @@ export const ALL_RULES_SAMPLES = {
                 "We must have arrived too late.",
                 "We might have missed the beginning."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60898,7 +60898,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must have left her umbrella on the bus.",
                 "She might have forgotten it there."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60909,7 +60909,7 @@ export const ALL_RULES_SAMPLES = {
                 "She must not have received the message.",
                 "She might have missed the email."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60920,7 +60920,7 @@ export const ALL_RULES_SAMPLES = {
                 "They must have seen this movie already.",
                 "They might have watched it before."
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60931,7 +60931,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could he have done it on purpose?",
                 "Might he have done it intentionally?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60942,7 +60942,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could she have forgotten about the meeting?",
                 "Might she have missed it?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60953,7 +60953,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could they have left when you arrived?",
                 "Might they have gone before you came?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60964,7 +60964,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could we have made a mistake in the report?",
                 "Might we have been wrong in the report?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60975,7 +60975,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could he have seen you at the supermarket yesterday?",
                 "Might he have noticed you there?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60986,7 +60986,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could he have been at home when it happened?",
                 "Might he have been there then?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -60997,7 +60997,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could she have hidden something from us?",
                 "Might she have kept something secret?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -61008,7 +61008,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could someone have taken the documents from the office?",
                 "Might somebody have removed them?"
             ],
-            "hint": "використовуй MODAL + HAVE + PAST PARTICIPLE"
+            "hint": "use MODAL + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -61019,7 +61019,7 @@ export const ALL_RULES_SAMPLES = {
                 "He can’t have been unaware of it.",
                 "He must have known about it."
             ],
-            "hint": "використовуй CAN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61030,7 +61030,7 @@ export const ALL_RULES_SAMPLES = {
                 "She can’t have made such a mistake.",
                 "She couldn’t have made that error."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61041,7 +61041,7 @@ export const ALL_RULES_SAMPLES = {
                 "They can’t have arrived that fast.",
                 "They couldn’t have come so soon."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61052,7 +61052,7 @@ export const ALL_RULES_SAMPLES = {
                 "You can’t have seen a ghost.",
                 "You couldn’t have seen a ghost."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61063,7 +61063,7 @@ export const ALL_RULES_SAMPLES = {
                 "We can’t have forgotten about the invitation.",
                 "We couldn’t have ignored it."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61074,7 +61074,7 @@ export const ALL_RULES_SAMPLES = {
                 "She can’t have been unfamiliar with him before.",
                 "She couldn’t have met him for the first time."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61085,7 +61085,7 @@ export const ALL_RULES_SAMPLES = {
                 "He can’t have left the door open.",
                 "He couldn’t have forgotten to close it."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61096,7 +61096,7 @@ export const ALL_RULES_SAMPLES = {
                 "They can’t have missed this chance.",
                 "They couldn’t have ignored the opportunity."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61107,7 +61107,7 @@ export const ALL_RULES_SAMPLES = {
                 "He can’t have received that letter.",
                 "He couldn’t have got such an email."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61118,7 +61118,7 @@ export const ALL_RULES_SAMPLES = {
                 "She can’t have failed to hear her name.",
                 "She couldn’t have missed that call."
             ],
-            "hint": "використовуй CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
+            "hint": "use CAN'T / COULDN'T + HAVE + PAST PARTICIPLE for strong negative deduction"
         },
         {
             "rules": [
@@ -61129,7 +61129,7 @@ export const ALL_RULES_SAMPLES = {
                 "Why might he have left without saying a word?",
                 "Why might he have walked away silently?"
             ],
-            "hint": "використовуй MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61140,7 +61140,7 @@ export const ALL_RULES_SAMPLES = {
                 "Who could have opened the window in the middle of the night?",
                 "Who might have done it?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61151,7 +61151,7 @@ export const ALL_RULES_SAMPLES = {
                 "Where could she have gone after the party?",
                 "Where might she have disappeared?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61162,7 +61162,7 @@ export const ALL_RULES_SAMPLES = {
                 "When could they have found out about it?",
                 "When might they have learned the news?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61173,7 +61173,7 @@ export const ALL_RULES_SAMPLES = {
                 "How could you have forgotten her name?",
                 "How might you have mixed up her name?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61184,7 +61184,7 @@ export const ALL_RULES_SAMPLES = {
                 "What could he have said to offend her?",
                 "What might he have done to upset her?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61195,7 +61195,7 @@ export const ALL_RULES_SAMPLES = {
                 "Who could have been with him at that moment?",
                 "Who might have been there too?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61207,7 +61207,7 @@ export const ALL_RULES_SAMPLES = {
                 "Who could have broken the vase?",
                 "Who might have dropped it?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61218,7 +61218,7 @@ export const ALL_RULES_SAMPLES = {
                 "How could he have missed the mistake?",
                 "How might he have overlooked the error?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61229,7 +61229,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could she have won the competition?",
                 "Might she have taken first place?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -61240,7 +61240,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could he have told her directly?",
                 "Might he have confessed it himself?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE"
         },
         {
             "rules": [
@@ -61251,7 +61251,7 @@ export const ALL_RULES_SAMPLES = {
                 "Where could he have been all this time?",
                 "Where might he have stayed so long?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE in WH-questions"
         },
         {
             "rules": [
@@ -61262,7 +61262,7 @@ export const ALL_RULES_SAMPLES = {
                 "Could she have done it by accident?",
                 "Might she have made that mistake unintentionally?"
             ],
-            "hint": "використовуй COULD / MIGHT + HAVE + PAST PARTICIPLE"
+            "hint": "use COULD / MIGHT + HAVE + PAST PARTICIPLE"
         }
     ],
     "ADV_PASSIVES_REPORTING_VERBS": [
@@ -61275,7 +61275,7 @@ export const ALL_RULES_SAMPLES = {
                 "He is said to live in London.",
                 "It is said that he lives in London."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61287,7 +61287,7 @@ export const ALL_RULES_SAMPLES = {
                 "The meeting is reported to take place tomorrow.",
                 "It is reported that the meeting will take place tomorrow."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61299,7 +61299,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is believed to have a good education.",
                 "It is believed that she has a good education."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61311,7 +61311,7 @@ export const ALL_RULES_SAMPLES = {
                 "The project is expected to be completed next month.",
                 "It is expected that the project will be completed next month."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61323,7 +61323,7 @@ export const ALL_RULES_SAMPLES = {
                 "They are said to live in Warsaw.",
                 "It is said that they live in Warsaw."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61335,7 +61335,7 @@ export const ALL_RULES_SAMPLES = {
                 "The company is reported to have increased its profits.",
                 "It is reported that the company has increased its profits."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61346,7 +61346,7 @@ export const ALL_RULES_SAMPLES = {
                 "He is said to have been one of the best actors of his time.",
                 "It is said that he was one of the best actors of his time."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61358,7 +61358,7 @@ export const ALL_RULES_SAMPLES = {
                 "The book is thought to be very interesting.",
                 "It is thought that the book is very interesting."
             ],
-            "hint": "використовуй “... thought to/that ...”"
+            "hint": "use “... thought to/that ...”"
         },
         {
             "rules": [
@@ -61370,7 +61370,7 @@ export const ALL_RULES_SAMPLES = {
                 "The team is expected to travel to Spain for training.",
                 "It is expected that the team will travel to Spain for training."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61384,7 +61384,7 @@ export const ALL_RULES_SAMPLES = {
                 "The actor is said to have appeared in a new film.",
                 "It is said that the actor has appeared in a new film."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61395,7 +61395,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is said to have won the main prize.",
                 "It is said that she won the main prize."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61407,7 +61407,7 @@ export const ALL_RULES_SAMPLES = {
                 "The event is reported to be held next week.",
                 "It is reported that the event will be held next week."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61419,7 +61419,7 @@ export const ALL_RULES_SAMPLES = {
                 "The film is believed to have a deep meaning.",
                 "It is believed that the film has a deep meaning."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61431,7 +61431,7 @@ export const ALL_RULES_SAMPLES = {
                 "The construction is expected to be finished in December.",
                 "It is expected that the construction will be finished in December."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61443,7 +61443,7 @@ export const ALL_RULES_SAMPLES = {
                 "The singer is said to live in Paris.",
                 "It is said that the singer lives in Paris."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61455,7 +61455,7 @@ export const ALL_RULES_SAMPLES = {
                 "The government is reported to have changed its policy.",
                 "It is reported that the government has changed its policy."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61466,7 +61466,7 @@ export const ALL_RULES_SAMPLES = {
                 "The team is believed to be well-prepared.",
                 "It is believed that the team is well-prepared."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61478,7 +61478,7 @@ export const ALL_RULES_SAMPLES = {
                 "The movie is said to be very long.",
                 "It is said that the movie is very long."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61490,7 +61490,7 @@ export const ALL_RULES_SAMPLES = {
                 "The president is expected to travel to Italy on an official visit.",
                 "It is expected that the president will travel to Italy on an official visit."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61502,7 +61502,7 @@ export const ALL_RULES_SAMPLES = {
                 "The student is said to have written an excellent essay.",
                 "It is said that the student has written an excellent essay."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61513,7 +61513,7 @@ export const ALL_RULES_SAMPLES = {
                 "He is believed to be the best doctor in the city.",
                 "It is believed that he is the best doctor in the city."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61525,7 +61525,7 @@ export const ALL_RULES_SAMPLES = {
                 "The concert is reported to start at seven.",
                 "It is reported that the concert will start at seven."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61537,7 +61537,7 @@ export const ALL_RULES_SAMPLES = {
                 "The new law is expected to be passed tomorrow.",
                 "It is expected that the new law will be passed tomorrow."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61549,7 +61549,7 @@ export const ALL_RULES_SAMPLES = {
                 "The writer is said to live in a small town.",
                 "It is said that the writer lives in a small town."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61561,7 +61561,7 @@ export const ALL_RULES_SAMPLES = {
                 "The company is reported to have doubled its profits.",
                 "It is reported that the company has doubled its profits."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61573,7 +61573,7 @@ export const ALL_RULES_SAMPLES = {
                 "The task is thought to be too difficult.",
                 "It is thought that the task is too difficult."
             ],
-            "hint": "використовуй “... thought to/that ...”"
+            "hint": "use “... thought to/that ...”"
         },
         {
             "rules": [
@@ -61585,7 +61585,7 @@ export const ALL_RULES_SAMPLES = {
                 "The actor is said to have appeared in a new series.",
                 "It is said that the actor has appeared in a new series."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61597,7 +61597,7 @@ export const ALL_RULES_SAMPLES = {
                 "The delegation is expected to leave for the USA.",
                 "It is expected that the delegation will leave for the USA."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61609,7 +61609,7 @@ export const ALL_RULES_SAMPLES = {
                 "The exhibition is reported to be held in the museum.",
                 "It is reported that the exhibition will be held in the museum."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61620,7 +61620,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is said to have received an award for best role.",
                 "It is said that she received an award for best role."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61632,7 +61632,7 @@ export const ALL_RULES_SAMPLES = {
                 "The premiere is expected to take place next month.",
                 "It is expected that the premiere will take place next month."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61644,7 +61644,7 @@ export const ALL_RULES_SAMPLES = {
                 "The company is believed to have lost part of its investments.",
                 "It is believed that the company has lost part of its investments."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61656,7 +61656,7 @@ export const ALL_RULES_SAMPLES = {
                 "The decision is said to have been made last week.",
                 "It is said that the decision was made last week."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61668,7 +61668,7 @@ export const ALL_RULES_SAMPLES = {
                 "The scientist is reported to have discovered a new species of plants.",
                 "It is reported that the scientist has discovered a new species of plants."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61679,7 +61679,7 @@ export const ALL_RULES_SAMPLES = {
                 "He is believed to have helped many people.",
                 "It is believed that he has helped many people."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61690,7 +61690,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is said to have left the country last year.",
                 "It is said that she left the country last year."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61702,7 +61702,7 @@ export const ALL_RULES_SAMPLES = {
                 "The new bridge is expected to be opened in April.",
                 "It is expected that the new bridge will be opened in April."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61714,7 +61714,7 @@ export const ALL_RULES_SAMPLES = {
                 "The conference is reported to be held in Berlin.",
                 "It is reported that the conference will be held in Berlin."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61726,7 +61726,7 @@ export const ALL_RULES_SAMPLES = {
                 "The song is believed to have become the hit of the year.",
                 "It is believed that the song has become the hit of the year."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61737,7 +61737,7 @@ export const ALL_RULES_SAMPLES = {
                 "The economy is expected to start recovering soon.",
                 "It is expected that the economy will start recovering soon."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61749,7 +61749,7 @@ export const ALL_RULES_SAMPLES = {
                 "The company is said to have changed its plans.",
                 "It is said that the company has changed its plans."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61761,7 +61761,7 @@ export const ALL_RULES_SAMPLES = {
                 "The project is thought to be very important for the country.",
                 "It is thought that the project is very important for the country."
             ],
-            "hint": "використовуй “... thought to/that ...”"
+            "hint": "use “... thought to/that ...”"
         },
         {
             "rules": [
@@ -61773,7 +61773,7 @@ export const ALL_RULES_SAMPLES = {
                 "The movie is reported to be released this summer.",
                 "It is reported that the movie will be released this summer."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61785,7 +61785,7 @@ export const ALL_RULES_SAMPLES = {
                 "The actor is said to have won an Oscar for the leading role.",
                 "It is said that the actor has won an Oscar for the leading role."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61797,7 +61797,7 @@ export const ALL_RULES_SAMPLES = {
                 "The new program is expected to be launched soon.",
                 "It is expected that the new program will be launched soon."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61809,7 +61809,7 @@ export const ALL_RULES_SAMPLES = {
                 "The conference is reported to have been moved to London.",
                 "It is reported that the conference has been moved to London."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61821,7 +61821,7 @@ export const ALL_RULES_SAMPLES = {
                 "The company is said to be expanding its operations.",
                 "It is said that the company is expanding its operations."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61833,7 +61833,7 @@ export const ALL_RULES_SAMPLES = {
                 "The film is thought to be too long.",
                 "It is thought that the film is too long."
             ],
-            "hint": "використовуй “... thought to/that ...”"
+            "hint": "use “... thought to/that ...”"
         },
         {
             "rules": [
@@ -61845,7 +61845,7 @@ export const ALL_RULES_SAMPLES = {
                 "The minister is expected to travel to the USA for negotiations.",
                 "It is expected that the minister will travel to the USA for negotiations."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61857,7 +61857,7 @@ export const ALL_RULES_SAMPLES = {
                 "The student is reported to have written an excellent paper.",
                 "It is reported that the student has written an excellent paper."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61868,7 +61868,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is said to speak English well.",
                 "It is said that she speaks English well."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61880,7 +61880,7 @@ export const ALL_RULES_SAMPLES = {
                 "The results are expected to be published tomorrow.",
                 "It is expected that the results will be published tomorrow."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61892,7 +61892,7 @@ export const ALL_RULES_SAMPLES = {
                 "The building is believed to have been built in the 18th century.",
                 "It is believed that the building was built in the 18th century."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61903,7 +61903,7 @@ export const ALL_RULES_SAMPLES = {
                 "They are said to have finished the project.",
                 "It is said that they have finished the project."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61915,7 +61915,7 @@ export const ALL_RULES_SAMPLES = {
                 "The issue is thought to be very complicated.",
                 "It is thought that the issue is very complicated."
             ],
-            "hint": "використовуй “... thought to/that ...”"
+            "hint": "use “... thought to/that ...”"
         },
         {
             "rules": [
@@ -61927,7 +61927,7 @@ export const ALL_RULES_SAMPLES = {
                 "The festival is expected to take place in the city center.",
                 "It is expected that the festival will take place in the city center."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61938,7 +61938,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is said to be working on a new novel.",
                 "It is said that she is working on a new novel."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61950,7 +61950,7 @@ export const ALL_RULES_SAMPLES = {
                 "The new stadium is expected to be opened this summer.",
                 "It is expected that the new stadium will be opened this summer."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -61962,7 +61962,7 @@ export const ALL_RULES_SAMPLES = {
                 "The company is reported to open an office in Prague.",
                 "It is reported that the company will open an office in Prague."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -61973,7 +61973,7 @@ export const ALL_RULES_SAMPLES = {
                 "He is believed to be one of the best architects in the world.",
                 "It is believed that he is one of the best architects in the world."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -61985,7 +61985,7 @@ export const ALL_RULES_SAMPLES = {
                 "The story is said to be very sad.",
                 "It is said that the story is very sad."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -61997,7 +61997,7 @@ export const ALL_RULES_SAMPLES = {
                 "The meeting is expected to start at eight in the morning.",
                 "It is expected that the meeting will start at eight in the morning."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -62009,7 +62009,7 @@ export const ALL_RULES_SAMPLES = {
                 "The scientist is reported to have received an important award.",
                 "It is reported that the scientist has received an important award."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -62021,7 +62021,7 @@ export const ALL_RULES_SAMPLES = {
                 "The building is said to have been destroyed during the storm.",
                 "It is said that the building was destroyed during the storm."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -62033,7 +62033,7 @@ export const ALL_RULES_SAMPLES = {
                 "The concert is expected to take place in the city’s main theatre.",
                 "It is expected that the concert will take place in the city’s main theatre."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -62045,7 +62045,7 @@ export const ALL_RULES_SAMPLES = {
                 "The company is reported to have lost part of its shares.",
                 "It is reported that the company has lost part of its shares."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -62057,7 +62057,7 @@ export const ALL_RULES_SAMPLES = {
                 "The exercise is thought to be too difficult for beginners.",
                 "It is thought that the exercise is too difficult for beginners."
             ],
-            "hint": "використовуй “... thought to/that ...”"
+            "hint": "use “... thought to/that ...”"
         },
         {
             "rules": [
@@ -62068,7 +62068,7 @@ export const ALL_RULES_SAMPLES = {
                 "The actress is said to live in an old house by the sea.",
                 "It is said that the actress lives in an old house by the sea."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -62080,7 +62080,7 @@ export const ALL_RULES_SAMPLES = {
                 "The team is expected to travel to Canada for the competition.",
                 "It is expected that the team will travel to Canada for the competition."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -62092,7 +62092,7 @@ export const ALL_RULES_SAMPLES = {
                 "The writer is reported to have published a new book.",
                 "It is reported that the writer has published a new book."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -62104,7 +62104,7 @@ export const ALL_RULES_SAMPLES = {
                 "The restaurant is said to be very popular among tourists.",
                 "It is said that the restaurant is very popular among tourists."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -62116,7 +62116,7 @@ export const ALL_RULES_SAMPLES = {
                 "The school is expected to be opened in the fall.",
                 "It is expected that the school will be opened in the fall."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -62128,7 +62128,7 @@ export const ALL_RULES_SAMPLES = {
                 "The festival is reported to take place in the main square.",
                 "It is reported that the festival will take place in the main square."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -62139,7 +62139,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is believed to have great influence in her field.",
                 "It is believed that she has great influence in her field."
             ],
-            "hint": "використовуй “... believed to/that ...”"
+            "hint": "use “... believed to/that ...”"
         },
         {
             "rules": [
@@ -62150,7 +62150,7 @@ export const ALL_RULES_SAMPLES = {
                 "She is said to have been promoted at work.",
                 "It is said that she was promoted at work."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -62162,7 +62162,7 @@ export const ALL_RULES_SAMPLES = {
                 "The new airport is expected to be opened in July.",
                 "It is expected that the new airport will be opened in July."
             ],
-            "hint": "використовуй “... expected to/that ...”"
+            "hint": "use “... expected to/that ...”"
         },
         {
             "rules": [
@@ -62174,7 +62174,7 @@ export const ALL_RULES_SAMPLES = {
                 "The teacher is reported to have received an award for best teaching.",
                 "It is reported that the teacher has received an award for best teaching."
             ],
-            "hint": "використовуй “... reported to/that ...”"
+            "hint": "use “... reported to/that ...”"
         },
         {
             "rules": [
@@ -62186,7 +62186,7 @@ export const ALL_RULES_SAMPLES = {
                 "The writer is said to live in a small village.",
                 "It is said that the writer lives in a small village."
             ],
-            "hint": "використовуй “... said to/that ...”"
+            "hint": "use “... said to/that ...”"
         },
         {
             "rules": [
@@ -62198,7 +62198,7 @@ export const ALL_RULES_SAMPLES = {
                 "The course is thought to be very effective.",
                 "It is thought that the course is very effective."
             ],
-            "hint": "використовуй “... thought to/that ...”"
+            "hint": "use “... thought to/that ...”"
         }
     ],
     "CLEFT_SENTENCES": [
@@ -62211,7 +62211,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Це Марія принесла торт на вечірку."
             ],
-            "hint": "використовуй It was ... who ...",
+            "hint": "use It was ... who ...",
             "en": [
                 "It was Maria who brought the cake to the party.",
                 "It’s Maria who brought the cake to the party."
@@ -62225,7 +62225,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Це був сад, де ми зустрілися вперше."
             ],
-            "hint": "використовуй It was ... where ...",
+            "hint": "use It was ... where ...",
             "en": [
                 "It was the garden where we met for the first time.",
                 "It’s the garden where we met for the first time."
@@ -62240,7 +62240,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Це через тебе ми запізнилися."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was because of you that we were late.",
                 "It’s because of you that we were late."
@@ -62255,7 +62255,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме мій брат часто допомагає мені з домашнім завданням."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is my brother who often helps me with my homework.",
                 "It’s my brother who often helps me with my homework."
@@ -62270,7 +62270,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Це в Лондоні я вперше зустрів її."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in London that I first met her.",
                 "It’s in London that I first met her."
@@ -62285,7 +62285,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме твоя ідея зробила це можливим."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was your idea that made it possible.",
                 "It’s your idea that made it possible."
@@ -62299,7 +62299,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме танці приносять їй найбільше радості."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is dancing that brings her the most joy.",
                 "It’s dancing that brings her the most joy."
@@ -62315,7 +62315,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в парку ми втратили ключі."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in the park that we lost the keys.",
                 "It’s in the park that we lost the keys."
@@ -62331,7 +62331,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в понеділок почався курс."
             ],
-            "hint": "використовуй It was ... when ...",
+            "hint": "use It was ... when ...",
             "en": [
                 "It was on Monday that the course started.",
                 "It’s on Monday that the course started."
@@ -62346,7 +62346,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме через затори ми запізнилися."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was because of the traffic that we were late.",
                 "It’s because of the traffic that we were late."
@@ -62360,7 +62360,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме читання найбільше допомагає моїй англійській."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is reading that helps my English the most.",
                 "It’s reading that helps my English the most."
@@ -62375,7 +62375,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме мій брат завжди миє посуд вдома."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is my brother who always washes the dishes at home.",
                 "It’s my brother who always washes the dishes at home."
@@ -62390,7 +62390,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме цей лист ми отримали останнім."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was this letter that we received last.",
                 "It’s this letter that we received last."
@@ -62405,7 +62405,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в офісі він залишив свій паспорт."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was at the office that he left his passport.",
                 "It’s at the office that he left his passport."
@@ -62420,7 +62420,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме цей проєкт був обраний комісією."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was this project that was selected by the committee.",
                 "It’s this project that was selected by the committee."
@@ -62435,7 +62435,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в нас є потрібні інструменти."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is we who have the necessary tools.",
                 "It’s us who have the necessary tools."
@@ -62448,7 +62448,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме коли він втомлений, він робить помилки."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is when he is tired that he makes mistakes.",
                 "It’s when he is tired that he makes mistakes."
@@ -62463,7 +62463,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ця версія краща за іншу."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is this version that is better than the other one."
             ]
@@ -62477,7 +62477,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ти зараз допомагаєш команді найбільше."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is you who are helping the team the most right now.",
                 "It’s you who’re helping the team the most right now."
@@ -62492,7 +62492,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме та книга, яку ти порадив, мені найбільше сподобалася."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is the book that you recommended that I liked the most.",
                 "It’s the book that you recommended that I liked the most."
@@ -62507,7 +62507,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ця стаття була опублікована вчора."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was this article that was published yesterday."
             ]
@@ -62521,7 +62521,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме на кухні ти знайдеш чай."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is in the kitchen that you will find the tea.",
                 "It’s in the kitchen that you’ll find the tea."
@@ -62536,7 +62536,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ти маєш підписати цей документ."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is you who have to sign this document.",
                 "It’s you who have to sign this document."
@@ -62551,7 +62551,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме Анна приготувала вечерю вчора."
             ],
-            "hint": "використовуй It was ... who ...",
+            "hint": "use It was ... who ...",
             "en": [
                 "It was Anna who cooked dinner yesterday."
             ]
@@ -62565,7 +62565,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в цьому кафе ми зустрілися вперше."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in this café that we met for the first time.",
                 "It’s in this café that we met for the first time."
@@ -62580,7 +62580,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме влітку я планую відпочинок."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is in summer that I plan my vacation.",
                 "It’s in summer that I plan my vacation."
@@ -62593,7 +62593,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме спів приносить їй найбільше радості."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is singing that brings her the most joy.",
                 "It’s singing that brings her the most joy."
@@ -62608,7 +62608,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме він завжди прибирає після обіду."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is he who always cleans up after lunch.",
                 "It’s him who always cleans up after lunch."
@@ -62623,7 +62623,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме у Франції він навчився готувати."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in France that he learned to cook.",
                 "It’s in France that he learned to cook."
@@ -62638,7 +62638,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме коли вона повернеться, ми розпочнемо зустріч."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is when she returns that we will start the meeting.",
                 "It’s when she returns that we’ll start the meeting."
@@ -62652,7 +62652,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме цей шлях коротший, ніж інший."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is this route that is shorter than the other one.",
                 "It’s this route that’s shorter than the other one."
@@ -62667,7 +62667,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме завтра ми отримаємо результати."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is tomorrow that we will get the results.",
                 "It’s tomorrow that we’ll get the results."
@@ -62682,7 +62682,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ми маємо ключ від офісу."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is we who have the key to the office.",
                 "It’s us who have the key to the office."
@@ -62696,7 +62696,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме він, мабуть, зробив це."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is he who must have done it.",
                 "It’s him who must have done it."
@@ -62710,7 +62710,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме той фільм, який ти порадив, був найкращим."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was the movie that you recommended that was the best.",
                 "It’s the movie that you recommended that was the best."
@@ -62725,7 +62725,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в саду ми проводимо більшість вихідних."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is in the garden that we spend most weekends.",
                 "It’s in the garden that we spend most weekends."
@@ -62740,7 +62740,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ця будівля була зруйнована під час бурі."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was this building that was destroyed during the storm.",
                 "It’s this building that was destroyed during the storm."
@@ -62755,7 +62755,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме вчора він купив новий ноутбук."
             ],
-            "hint": "використовуй It was ... when ...",
+            "hint": "use It was ... when ...",
             "en": [
                 "It was yesterday that he bought a new laptop."
             ]
@@ -62768,7 +62768,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ти маєш написати цей лист."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is you who have to write this letter.",
                 "It’s you who have to write this letter."
@@ -62782,7 +62782,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме завтра вони вирушають у відпустку."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is tomorrow that they are leaving for vacation.",
                 "It’s tomorrow that they’re leaving for vacation."
@@ -62797,7 +62797,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме вона може бути новим керівником."
             ],
-            "hint": "використовуй It is who ...",
+            "hint": "use It is who ...",
             "en": [
                 "It is she who might be the new manager.",
                 "It’s her who might be the new manager."
@@ -62812,7 +62812,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме Том написав цей лист учора."
             ],
-            "hint": "використовуй It was ... who ...",
+            "hint": "use It was ... who ...",
             "en": [
                 "It was Tom who wrote this letter yesterday."
             ]
@@ -62826,7 +62826,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в бібліотеці вона готувалася до іспиту."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in the library that she prepared for the exam.",
                 "It’s in the library that she prepared for the exam."
@@ -62841,7 +62841,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме вранці він зазвичай бігає."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is in the morning that he usually goes jogging.",
                 "It’s in the morning that he usually goes jogging."
@@ -62854,7 +62854,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме малювання допомагає їй розслабитися."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is painting that helps her relax.",
                 "It’s painting that helps her relax."
@@ -62869,7 +62869,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме через холодну погоду ми залишилися вдома."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was because of the cold weather that we stayed at home.",
                 "It’s because of the cold weather that we stayed at home."
@@ -62884,7 +62884,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме мама завжди будить мене зранку."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is my mother who always wakes me up in the morning.",
                 "It’s my mother who always wakes me up in the morning."
@@ -62899,7 +62899,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в Італії вона познайомилася зі своїм чоловіком."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in Italy that she met her husband.",
                 "It’s in Italy that she met her husband."
@@ -62914,7 +62914,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме цей спосіб кращий за інший."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is this method that is better than the other one.",
                 "It’s this method that’s better than the other one."
@@ -62930,7 +62930,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме завтра ми почнемо новий проєкт."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is tomorrow that we will start the new project.",
                 "It’s tomorrow that we’ll start the new project."
@@ -62945,7 +62945,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме він має найкраще рішення."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is he who has the best solution.",
                 "It’s him who’s got the best solution."
@@ -62960,7 +62960,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме той учень, який запізнився, пояснював причину."
             ],
-            "hint": "використовуй It was ... who ...",
+            "hint": "use It was ... who ...",
             "en": [
                 "It was the student who was late that explained the reason.",
                 "It’s the student who was late that explained the reason."
@@ -62975,7 +62975,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в офісі він залишив телефон."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in the office that he left his phone.",
                 "It’s in the office that he left his phone."
@@ -62990,7 +62990,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ти зараз допомагаєш найбільше."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is you who are helping the most right now.",
                 "It’s you who’re helping the most right now."
@@ -63005,7 +63005,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ця кімната була відремонтована минулого тижня."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was this room that was renovated last week.",
                 "It’s this room that was renovated last week."
@@ -63019,7 +63019,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме він занадто зайнятий, щоб прийти."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is he who is too busy to come.",
                 "It’s him who’s too busy to come."
@@ -63035,7 +63035,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме вчора вони купили нову машину."
             ],
-            "hint": "використовуй It was ... when ...",
+            "hint": "use It was ... when ...",
             "en": [
                 "It was yesterday that they bought a new car."
             ]
@@ -63049,7 +63049,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме вони мають підготувати звіт."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is they who have to prepare the report.",
                 "It’s them who have to prepare the report."
@@ -63064,7 +63064,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме у п’ятницю ми вирушаємо у відрядження."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is on Friday that we are leaving on a business trip.",
                 "It’s on Friday that we’re leaving on a business trip."
@@ -63079,7 +63079,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме він може бути новим директором."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is he who might be the new director.",
                 "It’s him who might be the new director."
@@ -63094,7 +63094,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме в неділю ми зазвичай відпочиваємо."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is on Sunday that we usually rest.",
                 "It’s on Sunday that we usually rest."
@@ -63107,7 +63107,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме танці роблять її щасливою."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is dancing that makes her happy.",
                 "It’s dancing that makes her happy."
@@ -63122,7 +63122,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме через дощ ми не поїхали на пікнік."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was because of the rain that we didn’t go on a picnic.",
                 "It’s because of the rain that we didn’t go on a picnic."
@@ -63138,7 +63138,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме моя сестра завжди готує найсмачніше."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is my sister who always cooks the best meals.",
                 "It’s my sister who always cooks the best meals."
@@ -63153,7 +63153,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме у цьому будинку вона виросла."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was in this house that she grew up.",
                 "It’s in this house that she grew up."
@@ -63168,7 +63168,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме цей план ефективніший за попередній."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is this plan that is more effective than the previous one.",
                 "It’s this plan that’s more effective than the previous one."
@@ -63184,7 +63184,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ввечері ми побачимо фінальні результати."
             ],
-            "hint": "використовуй It is ... when ...",
+            "hint": "use It is ... when ...",
             "en": [
                 "It is in the evening that we will see the final results.",
                 "It’s in the evening that we’ll see the final results."
@@ -63199,7 +63199,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме він має останню копію документа."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is he who has the last copy of the document.",
                 "It’s him who’s got the last copy of the document."
@@ -63213,7 +63213,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме та книга, яку я купив учора, тепер моя улюблена."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is the book that I bought yesterday that is now my favorite."
             ]
@@ -63227,7 +63227,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме цей звіт був опублікований минулого місяця."
             ],
-            "hint": "використовуй It was ... that ...",
+            "hint": "use It was ... that ...",
             "en": [
                 "It was this report that was published last month.",
                 "It’s this report that was published last month."
@@ -63241,7 +63241,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме він надто сором’язливий, щоб говорити публічно."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is he who is too shy to speak in public.",
                 "It’s him who’s too shy to speak in public."
@@ -63256,7 +63256,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме минулої суботи ми зустріли старих друзів."
             ],
-            "hint": "використовуй It was ... when ...",
+            "hint": "use It was ... when ...",
             "en": [
                 "It was last Saturday that we met our old friends."
             ]
@@ -63269,7 +63269,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме до університету він зараз прямує."
             ],
-            "hint": "використовуй It is ... that ...",
+            "hint": "use It is ... that ...",
             "en": [
                 "It is to the university that he is heading now.",
                 "It’s to the university that he’s heading now."
@@ -63283,7 +63283,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме ти маєш вирішити цю проблему."
             ],
-            "hint": "використовуй It is ... who ...",
+            "hint": "use It is ... who ...",
             "en": [
                 "It is you who have to solve this problem.",
                 "It’s you who have to solve this problem."
@@ -63297,7 +63297,7 @@ export const ALL_RULES_SAMPLES = {
             "ua": [
                 "Саме наступного тижня ми вирушаємо у подорож."
             ],
-            "hint": "використовуй It is when ...",
+            "hint": "use It is when ...",
             "en": [
                 "It is next week that we are leaving for our trip.",
                 "It’s next week that we’re leaving for our trip."
@@ -65647,7 +65647,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the rain, they played football.",
                 "In spite of the rain, they played football."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65659,7 +65659,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite being tired, she has finished the work.",
                 "In spite of being tired, she has finished the work."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65671,7 +65671,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite feeling ill, he came to the meeting.",
                 "In spite of feeling ill, he came to the meeting."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65683,7 +65683,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite it raining, we are still going for a walk.",
                 "In spite of it raining, we are still going for a walk."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65695,7 +65695,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite being delayed, the meeting was successful.",
                 "In spite of being delayed, the meeting was successful."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65707,7 +65707,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite working all day, he hasn’t finished the project yet.",
                 "In spite of working all day, he hasn’t finished the project yet."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65719,7 +65719,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite being late, he was allowed into the lecture.",
                 "In spite of being late, he was allowed into the lecture."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65731,7 +65731,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the lack of evidence, it might be true.",
                 "In spite of the lack of evidence, it might be true."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65743,7 +65743,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the warning, they went to sea during the storm.",
                 "In spite of the warning, they went to sea during the storm."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65755,7 +65755,7 @@ export const ALL_RULES_SAMPLES = {
                 "We’ll go for a walk despite it being cold.",
                 "We’ll go for a walk in spite of it being cold."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65767,7 +65767,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite it raining now, the children are playing outside.",
                 "In spite of it raining now, the children are playing outside."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65779,7 +65779,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite having finished his work, he stayed to help.",
                 "In spite of having finished his work, he stayed to help."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65791,7 +65791,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite her fears, she performed on stage.",
                 "In spite of her fears, she performed on stage."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65803,7 +65803,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite being made years ago, the film is still popular.",
                 "In spite of being made years ago, the film is still popular."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65815,7 +65815,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the difficulties, the team will win the competition.",
                 "In spite of the difficulties, the team will win the competition."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65827,7 +65827,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the rain and mud, the children enjoyed the game.",
                 "In spite of the rain and mud, the children enjoyed the game."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65839,7 +65839,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite studying English for years, she finds it hard to speak fluently.",
                 "In spite of studying English for years, she finds it hard to speak fluently."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65851,7 +65851,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the heavy rain, they got home safely.",
                 "In spite of the heavy rain, they got home safely."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65863,7 +65863,7 @@ export const ALL_RULES_SAMPLES = {
                 "She said that despite being tired, she kept working.",
                 "She said that in spite of being tired, she kept working."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65874,7 +65874,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite losing support, he remained calm.",
                 "In spite of losing support, he remained calm."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65886,7 +65886,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the risks, it might be a profitable investment.",
                 "In spite of the risks, it might be a profitable investment."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65898,7 +65898,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite being fired, he stayed very calm.",
                 "In spite of being fired, he stayed very calm."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65910,7 +65910,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite having received advice, he did everything his own way.",
                 "In spite of having received advice, he did everything his own way."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65922,7 +65922,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite it being dark, they kept moving forward.",
                 "In spite of it being dark, they kept moving forward."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65934,7 +65934,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the bad weather, there were many spectators.",
                 "In spite of the bad weather, there were many spectators."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65946,7 +65946,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite being tired, he often stays late at work.",
                 "In spite of being tired, he often stays late at work."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65958,7 +65958,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite having arrived, the meeting hadn’t started yet.",
                 "In spite of having arrived, the meeting hadn’t started yet."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65970,7 +65970,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the risks, the company will succeed.",
                 "In spite of the risks, the company will succeed."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65984,7 +65984,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite a lack of time, we have a chance to finish the project on time.",
                 "Despite the lack of time, we still have a chance to finish the project on schedule."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -65996,7 +65996,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the bad weather, people came to the fair.",
                 "In spite of the bad weather, people came to the fair."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66008,7 +66008,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite having graduated, he stayed at the university as a teacher.",
                 "In spite of having graduated, he stayed at the university as a teacher."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66022,7 +66022,7 @@ export const ALL_RULES_SAMPLES = {
                 "In spite of measures being taken, the problem still has not disappeared.",
                 "In spite of the fact that measures were taken, the problem still didn’t disappear."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66034,7 +66034,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite it being difficult, the participants achieved their goal.",
                 "In spite of it being difficult, the participants achieved their goal."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66046,7 +66046,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the risks, the project might turn out to be successful.",
                 "In spite of the risks, the project might turn out to be successful."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66058,7 +66058,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite having made significant progress, there is still much work to do.",
                 "In spite of having made significant progress, there is still much work to do."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66071,7 +66071,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the measures implemented by the government, the problem remains unsolved.",
                 "In spite of the measures implemented by the government, the problem remains unsolved."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66083,7 +66083,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the economy having been growing for years, inequality has not decreased.",
                 "In spite of the economy having been growing for years, inequality has not decreased."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66095,7 +66095,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite many resources being spent, the result was disappointing.",
                 "In spite of many resources being spent, the result was disappointing."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66107,7 +66107,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite numerous difficulties, there are reasons for optimism.",
                 "In spite of numerous difficulties, there are reasons for optimism."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66119,7 +66119,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite numerous mistakes, the author made a significant contribution to science.",
                 "In spite of numerous mistakes, the author made a significant contribution to science."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66131,7 +66131,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the report being supposed to be short, it lasted an hour.",
                 "In spite of the report being supposed to be short, it lasted an hour."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66143,7 +66143,7 @@ export const ALL_RULES_SAMPLES = {
                 "We will continue support despite changes in the political situation.",
                 "We will continue support in spite of changes in the political situation."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66157,7 +66157,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the company’s policy being revised, the main problems did not disappear.",
                 "In spite of the company’s policy having been revised, the main issues have not disappeared."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66169,7 +66169,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the positive changes, the education system still has flaws.",
                 "In spite of the positive changes, the education system still has flaws."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66180,7 +66180,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the lack of sufficient information, a decision was made.",
                 "In spite of the lack of sufficient information, a decision was made."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66193,7 +66193,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite the achievements, society will likely face new challenges.",
                 "In spite of the achievements, society will likely face new challenges."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         },
         {
             "rules": [
@@ -66205,7 +66205,7 @@ export const ALL_RULES_SAMPLES = {
                 "Despite having graduated, many graduates remain unemployed.",
                 "In spite of having graduated, many graduates remain unemployed."
             ],
-            "hint": "використовуй DESPITE / IN SPITE OF ..."
+            "hint": "use DESPITE / IN SPITE OF ..."
         }
     ],
     "HAD_BETTER": [
@@ -71891,7 +71891,7 @@ export const ALL_RULES_SAMPLES = {
                 "I prefer staying at home to going to the cinema.",
                 "I prefer to stay at home rather than go to the cinema."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -71903,7 +71903,7 @@ export const ALL_RULES_SAMPLES = {
                 "She’d rather you told her the truth.",
                 "She would rather you told her the truth."
             ],
-            "hint": "використовуй WOULD RATHER"
+            "hint": "use WOULD RATHER"
         },
         {
             "rules": [
@@ -71915,7 +71915,7 @@ export const ALL_RULES_SAMPLES = {
                 "He usually prefers working alone.",
                 "He usually prefers to work alone."
             ],
-            "hint": "використовуй PREFER"
+            "hint": "use PREFER"
         },
         {
             "rules": [
@@ -71928,7 +71928,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’d prefer not to do this at the moment.",
                 "I would prefer not to do this at the moment."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -71942,7 +71942,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’m too cold; I prefer staying inside.",
                 "I am too cold; I prefer to stay inside."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -71956,7 +71956,7 @@ export const ALL_RULES_SAMPLES = {
                 "I’d prefer to choose a cheaper hotel.",
                 "I prefer choosing a cheaper hotel."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -71968,7 +71968,7 @@ export const ALL_RULES_SAMPLES = {
                 "She’d rather her brother stayed at home.",
                 "She would rather her brother stayed at home."
             ],
-            "hint": "використовуй WOULD RATHER"
+            "hint": "use WOULD RATHER"
         },
         {
             "rules": [
@@ -71980,7 +71980,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather wait a few minutes than hurry.",
                 "I prefer waiting a few minutes to hurrying."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -71993,7 +71993,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather choose a quieter place.",
                 "We’d prefer a quieter place."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72006,7 +72006,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather stay at home because it’s cold outside.",
                 "I prefer staying at home because it’s cold outside."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72018,7 +72018,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather not talk about it now.",
                 "I’d prefer not to talk about it now."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72031,7 +72031,7 @@ export const ALL_RULES_SAMPLES = {
                 "If you don’t mind, I would rather go tomorrow.",
                 "If you don’t mind, I’d prefer to go tomorrow."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72042,7 +72042,7 @@ export const ALL_RULES_SAMPLES = {
             "en": [
                 "He often says he prefers working at night."
             ],
-            "hint": "використовуй PREFER"
+            "hint": "use PREFER"
         },
         {
             "rules": [
@@ -72055,7 +72055,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather sit by the window.",
                 "We prefer sitting by the window."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72069,7 +72069,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather go to a café where there is good coffee.",
                 "I’d prefer to go to a café where there is good coffee."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72082,7 +72082,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather live by the sea if I could.",
                 "I’d prefer to live by the sea if I could."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72094,7 +72094,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather order something light for dinner.",
                 "We’d prefer to order something light for dinner."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72107,7 +72107,7 @@ export const ALL_RULES_SAMPLES = {
                 "He would rather go on a shorter vacation than a longer one.",
                 "He prefers shorter trips to longer ones."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72120,7 +72120,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather take a taxi than a bus.",
                 "I’d prefer taking a taxi to taking a bus."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72132,7 +72132,7 @@ export const ALL_RULES_SAMPLES = {
                 "I usually prefer morning meetings.",
                 "I usually prefer to have meetings in the morning."
             ],
-            "hint": "використовуй PREFER"
+            "hint": "use PREFER"
         },
         {
             "rules": [
@@ -72145,7 +72145,7 @@ export const ALL_RULES_SAMPLES = {
                 "She’d rather walk in the evening when there are fewer people.",
                 "She would rather walk in the evening when there are fewer people."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72157,7 +72157,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather keep it between us.",
                 "I prefer to keep it between us."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72170,7 +72170,7 @@ export const ALL_RULES_SAMPLES = {
                 "If the weather is nice, I would rather go for a picnic.",
                 "If the weather is nice, I’d prefer to go for a picnic."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72183,7 +72183,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather take a shorter route.",
                 "We prefer taking the shorter way."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72196,7 +72196,7 @@ export const ALL_RULES_SAMPLES = {
                 "He usually prefers to work early in the morning.",
                 "He’d rather work early in the morning."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72209,7 +72209,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather live in the mountains if I had a choice.",
                 "I’d prefer to live in the mountains if I had a choice."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72221,7 +72221,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather not see that again.",
                 "I prefer not to see that again."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72234,7 +72234,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather go somewhere cheaper.",
                 "We’d prefer a cheaper destination."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72246,7 +72246,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather discuss it in person.",
                 "I prefer to discuss it face to face."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72258,7 +72258,7 @@ export const ALL_RULES_SAMPLES = {
                 "She’d rather I stayed at home.",
                 "She would rather I stayed at home."
             ],
-            "hint": "використовуй WOULD RATHER"
+            "hint": "use WOULD RATHER"
         },
         {
             "rules": [
@@ -72271,7 +72271,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather have a cup of tea than coffee.",
                 "I prefer drinking tea to coffee."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72283,7 +72283,7 @@ export const ALL_RULES_SAMPLES = {
                 "He would rather do sports than watch TV.",
                 "He prefers doing sports to watching TV."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72296,7 +72296,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather live in a city where there is good transport.",
                 "I prefer to live in cities with good public transport."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72309,7 +72309,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather travel by train if it were cheaper.",
                 "We’d prefer to travel by train if it were cheaper."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72321,7 +72321,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather wait for confirmation before proceeding.",
                 "We’d prefer to wait for confirmation before we continue."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72334,7 +72334,7 @@ export const ALL_RULES_SAMPLES = {
                 "It’s too late now; I would rather talk about it tomorrow.",
                 "It’s too late now; I’d prefer to discuss it tomorrow."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72346,7 +72346,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather receive written confirmation.",
                 "I’d prefer to get confirmation in writing."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72358,7 +72358,7 @@ export const ALL_RULES_SAMPLES = {
                 "They would rather sign the contract once the meeting is over.",
                 "They’d prefer to finalize the contract after the discussion."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72371,7 +72371,7 @@ export const ALL_RULES_SAMPLES = {
                 "If it’s okay, I would rather postpone this issue.",
                 "If possible, I’d prefer to return to it later."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72383,7 +72383,7 @@ export const ALL_RULES_SAMPLES = {
                 "We would rather focus on quality than quantity.",
                 "We prefer focusing on quality instead of quantity."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         },
         {
             "rules": [
@@ -72396,7 +72396,7 @@ export const ALL_RULES_SAMPLES = {
                 "I would rather make a deal if there is such an option.",
                 "I prefer to reach an agreement when possible."
             ],
-            "hint": "використовуй WOULD RATHER / PREFER"
+            "hint": "use WOULD RATHER / PREFER"
         }
     ]
 }

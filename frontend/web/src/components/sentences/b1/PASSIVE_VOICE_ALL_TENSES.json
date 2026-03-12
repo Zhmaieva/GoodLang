@@ -3,399 +3,399 @@
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "DEMONSTRATIVES"],
     "en": ["This book is read by many students.", "This book gets read by many students."],
     "ua": "Цю книгу читають багато студентів.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The windows are cleaned every week.", "The windows get cleaned every week."],
     "ua": "Вікна миють щотижня.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_PLACE", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
     "en": ["English is spoken in many countries.", "English gets spoken in many countries."],
     "ua": "Англійською мовою розмовляють у багатьох країнах.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_PLACE"],
     "en": ["Coffee is grown in Brazil.", "Coffee gets grown in Brazil."],
     "ua": "Каву вирощують у Бразилії.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The homework is checked by the teacher.", "The homework gets checked by the teacher."],
     "ua": "Вчитель перевіряє домашнє завдання.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The floor is washed every morning.", "The floor gets washed every morning."],
     "ua": "Підлогу миють щоранку.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES"],
     "en": ["Letters are delivered every day.", "Letters get delivered every day."],
     "ua": "Листи доставляють щодня.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_PLACE"],
     "en": ["The food is prepared in the kitchen.", "The food gets prepared in the kitchen."],
     "ua": "На кухні готують їжу.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "ARTICLES"],
     "en": ["The car is being repaired right now.", "The car is getting repaired right now."],
     "ua": "Автомобіль ремонтують прямо зараз.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "PREP_TIME"],
     "en": ["Dinner is being cooked at the moment.", "Dinner is getting cooked at the moment.", "Dinner is being cooked now.", "Dinner is getting cooked now."],
     "ua": "Вечерю зараз готують.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "ARTICLES"],
     "en": ["The project is being discussed.", "The project is getting discussed."],
     "ua": "Проєкт обговорюють.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "PREP_PLACE"],
     "en": ["A new bridge is being built in the city.", "A new bridge is getting built in the city."],
     "ua": "У місті зараз будують новий міст.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "ARTICLES"],
     "en": ["The room is being cleaned by the maid.", "The room is getting cleaned by the maid."],
     "ua": "Покоївка прибирає кімнату.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "ARTICLES"],
     "en": ["The report is being written.", "The report is getting written."],
     "ua": "Звіт пишуть.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "PREP_PLACE"],
     "en": ["The kids are being taken to school.", "The kids are getting taken to school."],
     "ua": "Дітей зараз відводять до школи.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "PREP_PLACE"],
     "en": ["The movie is being filmed in London.", "The movie is getting filmed in London."],
     "ua": "Фільм зараз знімають у Лондоні.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "ARTICLES"],
     "en": ["The walls are being painted.", "The walls are getting painted."],
     "ua": "Стіни фарбують.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PRESENT_CONT_NOW", "ARTICLES"],
     "en": ["The documents are being signed.", "The documents are getting signed."],
     "ua": "Документи підписують.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The cake was baked yesterday.", "The cake got baked yesterday."],
     "ua": "Торт спекли вчора.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The door was locked by mistake.", "The door got locked by mistake."],
     "ua": "Двері зачинили помилково.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_TIME", "ARTICLES"],
     "en": ["The house was built in 1990.", "The house got built in 1990."],
     "ua": "Будинок збудували у 1990 році.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The song was written by her.", "The song got written by her."],
     "ua": "Вона написала пісню.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_TIME", "ARTICLES"],
     "en": ["The letter was sent on Monday.", "The letter got sent on Monday."],
     "ua": "Листа відправили в понеділок.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The car was stolen last week.", "The car got stolen last week."],
     "ua": "Автомобіль викрали минулого тижня.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["This film was directed by Spielberg.", "This film got directed by Spielberg."],
     "ua": "Спілберг зняв цей фільм.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_TIME", "ARTICLES"],
     "en": ["The book was published in 2001.", "The book got published in 2001."],
     "ua": "Книгу опублікували у 2001 році.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The meeting was canceled.", "The meeting got canceled."],
     "ua": "Зустріч скасували.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The room was being cleaned when I arrived.", "The room was getting cleaned when I arrived."],
     "ua": "Кімнату прибирали, коли я приїхав.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_TIME", "ARTICLES"],
     "en": ["The dinner was being served at 7 p.m.", "The dinner was getting served at 7 p.m."],
     "ua": "Вечерю подавали о 7 годині вечора.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The walls were being painted yesterday.", "The walls were getting painted yesterday."],
     "ua": "Стіни фарбували вчора.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The report was being prepared all morning.", "The report was getting prepared all morning."],
     "ua": "Звіт готували весь ранок.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The car was being repaired when we called.", "The car was getting repaired when we called."],
     "ua": "Машину ремонтували, коли ми подзвонили.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_PLACE", "ARTICLES"],
     "en": ["The song was being recorded in the studio.", "The song was getting recorded in the studio."],
     "ua": "Пісню записували у студії.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The results will be announced tomorrow.", "The results are going to be announced tomorrow."],
     "ua": "Результати оголосять завтра.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The house will be finished next month.", "The house is going to be finished next month."],
     "ua": "Будинок добудують наступного місяця.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_TIME"],
     "en": ["Dinner will be served at 8 p.m.", "Dinner is going to be served at 8 p.m."],
     "ua": "Вечерю подаватимуть о восьмій годині вечора.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The guests will be invited soon.", "The guests are going to be invited soon."],
     "ua": "Гостей незабаром запросять.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The decision will be made later.", "The decision is going to be made later."],
     "ua": "Рішення ухвалять пізніше.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_TIME", "ARTICLES"],
     "en": ["The car will be repaired by Monday.", "The car is going to be repaired by Monday."],
     "ua": "Автомобіль відремонтують до понеділка.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "PREP_TIME", "ARTICLES"],
     "en": ["The project will be completed on time.", "The project is going to be completed on time."],
     "ua": "Проєкт завершать вчасно.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The movie will be released next year.", "The movie is going to be released next year."],
     "ua": "Фільм вийде наступного року.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES"],
     "en": ["The new rule will be introduced soon.", "The new rule is going to be introduced soon."],
     "ua": "Нове правило запровадять незабаром.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_TIME"],
     "en": ["The bridge will have been built by 2030.", "The bridge is expected to have been built by 2030."],
     "ua": "Міст буде збудовано до 2030 року.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_TIME"],
     "en": ["The job will have been done before Friday.", "The job is expected to have been done before Friday."],
     "ua": "Роботу буде виконано до п’ятниці.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_TIME"],
     "en": ["The report will have been finished by tomorrow.", "The report is expected to have been finished by tomorrow."],
     "ua": "Звіт буде завершено до завтра.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_TIME"],
     "en": ["The tickets will have been printed by noon.", "The tickets are expected to have been printed by noon."],
     "ua": "Квитки буде надруковано до полудня.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_TIME"],
     "en": ["The meeting will have been arranged by 5 PM.", "The meeting is expected to have been arranged by 5 PM."],
     "ua": "Зустріч буде організовано до 17:00.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_TIME"],
     "en": ["The product will have been tested by tomorrow.", "The product is expected to have been tested by tomorrow."],
     "ua": "Продукт буде протестовано до завтра.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "ARTICLES", "PREP_TIME"],
     "en": ["The plan will have been approved by Thursday.", "The plan is expected to have been approved by Thursday."],
     "ua": "План буде затверджено до четверга.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "MUST_MUSTNT"],
     "en": ["The rules must be followed.", "The rules have to be followed."],
     "ua": "Правил потрібно дотримуватися.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "SHOULD_SHOULDNT", "ADVERBS_OF_MANNER"],
     "en": ["The homework should be done carefully.", "The homework ought to be done carefully."],
     "ua": "Домашнє завдання слід виконувати уважно.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "CAN_CANT", "ADVERBS_OF_MANNER"],
     "en": ["The car can be repaired easily.", "The car could be repaired easily."],
     "ua": "Автомобіль можна легко відремонтувати.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "CAN_CANT"],
     "en": ["The message can be sent by email.", "The message may be sent by email."],
     "ua": "Повідомлення можна надіслати електронною поштою.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "SHOULD_SHOULDNT"],
     "en": ["The form should be filled out.", "The form ought to be filled out."],
     "ua": "Форму слід заповнити.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "HAVE_TO_DONT_HAVE_TO"],
     "en": ["The work has to be finished today.", "The work must be finished today."],
     "ua": "Роботу потрібно завершити сьогодні.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "MAY_MIGHT", "MODALS_OF_PROBABILITY"],
     "en": ["The house might be sold soon.", "The house may be sold soon."],
     "ua": "Будинок, можливо, незабаром продадуть.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "MUST_MUSTNT", "PREP_TIME"],
     "en": ["The exam must be taken next week.", "The exam has to be taken next week."],
     "ua": "Іспит потрібно скласти наступного тижня.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "CAN_CANT"],
     "en": ["The food can be ordered online.", "The food may be ordered online."],
     "ua": "Їжу можна замовити онлайн.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "SHOULD_SHOULDNT", "PREP_TIME"],
     "en": ["The tickets should be booked in advance.", "The tickets ought to be booked in advance."],
     "ua": "Квитки слід бронювати заздалегідь.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "CAN_CANT", "ADVERBS_OF_MANNER"],
     "en": ["The problem can be solved quickly.", "The problem may be solved quickly."],
     "ua": "Проблему можна швидко розв’язати.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "MUST_MUSTNT"],
     "en": ["The rules must not be broken.", "The rules cannot be broken."],
     "ua": "Правила не можна порушувати.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "CAN_CANT"],
     "en": ["The error can be corrected.", "The error may be corrected."],
     "ua": "Помилку можна виправити.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "MAY_MIGHT", "MODALS_OF_PROBABILITY"],
     "en": ["The keys might be found later.", "The keys may be found later."],
     "ua": "Ключі, можливо, знайдуть пізніше.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   },
 
   {
     "rules": ["PASSIVE_VOICE_ALL_TENSES", "CAN_CANT"],
     "en": ["The results can be improved.", "The results may be improved."],
     "ua": "Результати можна покращити.",
-    "hint": "використовуй PASSIVE VOICE"
+    "hint": "use PASSIVE VOICE"
   }
 ]
 }

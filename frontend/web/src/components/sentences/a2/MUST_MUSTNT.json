@@ -7,7 +7,7 @@
         "You mustn’t shout in the library.",
         "You must not shout in the library."
       ],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "BECAUSE_SO_BUT_ALTHOUGH", "PREP_PLACE"],
@@ -16,242 +16,242 @@
         "You mustn’t park here because this is private property.",
         "You must not park here because this is private property."
       ],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Цей учень забовʼязаний повернути книгу до бібліотеки.",
       "en": ["This student must return the book to the library."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ти повинен закінчити домашнє завдання до вечора.",
       "en": ["You must finish your homework by this evening."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY", "ARTICLES"],
       "ua": "Студенти повинні прочитати цю книгу для іспиту.",
       "en": ["Students must read this book for the exam."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "TOO_VERY", "SIMPLE_ADJ"],
       "ua": "Ти повинен бути дуже обережним під час експерименту.",
       "en": ["You must be very careful during the experiment."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ми повинні закінчити роботу сьогодні ввечері.",
       "en": ["We must finish the work this evening."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Під час поїздки ти забовʼязаний пристібати ремінь безпеки.",
       "en": ["You must wear a seatbelt when driving to ensure your safety."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Студенти повинні виконати домашнє завдання до дедлайну.",
       "en": ["Students must complete their homework before the deadline."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "У цій зоні заборонено курити.",
       "en": ["You mustn't smoke in this area as it is prohibited."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Водіям заборонено користуватися телефоном під час руху.",
       "en": ["Drivers mustn't use their phones while operating a vehicle."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ми повинні прибути в аеропорт за дві години до міжнародного рейсу.",
       "en": ["We must arrive at the airport two hours early for international flights."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "Ти забовʼязаний показати посвідчення особи, щоб увійти до будівлі.",
       "en": ["You must show your ID to enter the building."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "Працівники забовʼязані носити захисні шоломи на будівництві.",
       "en": ["Employees must wear safety helmets on the construction site."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "У зоопарку заборонено годувати тварин.",
       "en": ["You mustn't feed the animals in the zoo."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "Туристи повинні поважати місцеві звичаї під час відвідування храмів.",
       "en": ["Tourists must respect local customs while visiting temples."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "POSSESSIVE_S"],
       "ua": "Діти повинні тримати дорослого за руку, переходячи дорогу.",
       "en": ["Children must hold an adult's hand when crossing the street."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Під час іспиту потрібно вимикати телефон.",
       "en": ["You must turn off your phone during the exam."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Пасажирам забороено відкривати аварійний вихід без вказівки.",
       "en": ["Passengers mustn't open the emergency exit unless instructed."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ти повинен заздалегідь бронювати квитки на концерт.",
       "en": ["You must book tickets in advance for the concert."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Водії забовʼязані зупинятися на червоне світло без винятків.",
       "en": ["Drivers must stop at red lights without exception."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Студенти забовʼязані відвідувати всі обов’язкові лекції.",
       "en": ["Students must attend all mandatory lectures."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE", "ARTICLES"],
       "ua": "Відвідувачам заборонено торкатися експонатів у музеї.",
       "en": ["Visitors mustn't touch the artworks in the museum."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ти забовʼязаний подати заявку до п’ятниці.",
       "en": ["You must submit your application by Friday."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "POSSESSIVE_S"],
       "ua": "Спортсмени забовʼязані виконувати вказівки тренера під час тренування.",
       "en": ["Athletes must follow the coach's instructions during training."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Тобі заборонено розголошувати конфіденційну інформацію стороннім.",
       "en": ["You mustn't reveal confidential information to outsiders."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
 
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "Покупці забовʼязані оплатити товар перед виходом із магазину.",
       "en": ["Customers must pay before leaving the store."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Працівникам заборонено використовувати робочі комп’ютери для ігор.",
       "en": ["Employees mustn't use company computers for personal gaming."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ти повинен приходити вчасно на прийом до лікаря.",
       "en": ["You must arrive on time for your doctor's appointment."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY"],
       "ua": "Подорожуючі забовʼязані декларувати товари, що перевищують норму.",
       "en": ["Travelers must declare goods over the allowance at customs."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Ти забовʼязаний носити захисні окуляри під час роботи з хімікатами.",
       "en": ["You must wear goggles when handling chemicals.", "You must wear protective goggles when working with chemicals."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Ти забовʼязаний оновити програмне забезпечення до останньої версії.",
       "en": ["You must update your software to the latest version."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Гравці забовʼязані потиснути руки після матчу.",
       "en": ["Players must shake hands after the match."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Заборонено копіювати чужу роботу без посилання.",
       "en": ["You mustn't copy someone else's work without citation."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "Ти забовʼязаний замикати двері, виходячи з офісу.",
       "en": ["You must lock the door when leaving the office."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Велосипедисти повинні користуватися велодоріжками там, де вони є.",
       "en": ["Cyclists must use bike lanes where available."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Ти забовʼязаний надати рекомендації для своєї заявки на роботу.",
       "en": ["You must provide references for your job application."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Покупці повинні правильно сканувати товари на самообслуговуванні.",
       "en": ["Shoppers must scan items at self-checkout correctly."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "Волонтери забовʼязані зареєструватися на стійці реєстрації.",
       "en": ["Volunteers must sign in at the registration desk."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Ти забовʼязаний пристебнути ремінь безпеки перед зльотом.",
       "en": ["You must fasten your seatbelt before takeoff."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE"],
       "ua": "Глядачі повинні вимикати пристрої в театрі.",
       "en": ["Audience members must silence their devices in the theater."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
@@ -260,31 +260,31 @@
         "You must obtain permission to film in public areas.",
         "You must get permission to film in public places."
       ],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Водіям заборонено вживати алкоголь перед керуванням технікою.",
       "en": ["Drivers mustn't drink alcohol before operating machinery."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT"],
       "ua": "Ти повинен підписувати всі контейнери з їжею в спільному холодильнику.",
       "en": ["You must label all food containers in the shared fridge."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Учасники повинні розігрітися перед початком забігу.",
       "en": ["Participants must warm up before the race starts."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER"],
       "ua": "Вона повинна уважно перевірити документи.",
       "en": ["She must check the documents carefully."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME", "DEMONSTRATIVES"],
@@ -293,31 +293,31 @@
         "Children must come to school by eight in the morning.",
         "Children must arrive at school by eight in the morning."
       ],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "ARTICLES", "POSSESSIVE_S"],
       "ua": "Я повинен полагодити машину брата.",
       "en": ["I must fix my brother’s car."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "ADVERBS_OF_MANNER"],
       "ua": "Він повинен швидко написати звіт, щоб усе було готово.",
       "en": ["He must write the report quickly so everything is ready."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_TIME"],
       "ua": "Вона забовʼязана подати документи до понеділка.",
       "en": ["She must submit the documents by Monday."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     },
     {
       "rules": ["MUST_MUSTNT", "PREP_PLACE", "PREP_TIME"],
       "ua": "Ми повинні приїхати на вокзал до шостої вечора.",
       "en": ["We must arrive at the station by six in the evening."],
-      "hint": "використовуй MUST / MUSTN'T"
+      "hint": "use MUST / MUSTN'T"
     }
   ]
 }
