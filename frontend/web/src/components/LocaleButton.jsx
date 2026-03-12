@@ -46,7 +46,7 @@ export default function LocaleButton({ theme }) {
         transition: "transform 120ms ease, filter 120ms ease",
         background: theme.green,
         color: "#fff",
-        minWidth: "80px",
+        minWidth: "120px",
         textAlign: "center",
         justifyContent: "center",
     };
@@ -62,7 +62,7 @@ export default function LocaleButton({ theme }) {
                 style={btnStyle}
                 onClick={handleOpen}
             >
-                Мова
+                Language
             </div>
 
             <ChooseLocaleModal

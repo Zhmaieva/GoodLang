@@ -125,9 +125,7 @@ export default function CookieConsentModal({
                         lineHeight: 1.5,
                     }}
                 >
-                    Ми використовуємо <strong>виключно необхідні cookies</strong> для
-                    безпечної автентифікації та обробки платежів, але ти можеш прийняти
-                    <strong> аналітичні cookies</strong> для покращення сервісу.
+                    We use <strong>strictly necessary cookies</strong> for secure authentication and payment processing. You can optionally accept <strong>analytics cookies</strong> to help us improve the service.
                 </p>
 
                 <p
@@ -138,7 +136,7 @@ export default function CookieConsentModal({
                         color: theme.muted,
                     }}
                 >
-                    Детальніше — в{" "}
+                    Learn more in the{" "}
                     {!disableLinks ? (
                         <a
                             href="#"
@@ -149,10 +147,10 @@ export default function CookieConsentModal({
                                 textDecoration: "none",
                             }}
                         >
-                            політиці конфіденційності та cookies
+                            Privacy and Cookie Policy
                         </a>
                     ) : (
-                        "політиці конфіденційності та cookies"
+                        "Privacy and Cookie Policy"
                     )}
                     .
                 </p>
@@ -165,7 +163,7 @@ export default function CookieConsentModal({
                             onClick={onRejectHandler}
                             style={secondaryBtn}
                         >
-                            Відхилити
+                            Reject
                         </button>
                     </div>
 
@@ -176,7 +174,7 @@ export default function CookieConsentModal({
                             onClick={onAcceptHandler}
                             style={primaryBtn}
                         >
-                            Прийняти
+                            Accept
                         </button>
                     </div>
                 </div>

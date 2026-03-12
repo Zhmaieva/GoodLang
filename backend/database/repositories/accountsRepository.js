@@ -292,6 +292,17 @@ export async function getAccountInfo(accountId, promoCode) {
         }
     }
 
+    if (!promo) {
+        promo = {
+            accountId: accountId,
+            promoCode: null,
+            expirationDate: null,
+            originalPrice: 3.99,
+            discountedPrice: 3.99,
+            discountPercentage: 0,
+        };
+    }
+
     return {
         email: rows[0].email,
         status: rows[0].status || "free",
@@ -529,7 +540,7 @@ export async function sendPromoCode(accountId, email) {
 
 export function calcPrices() {
     // Avoid float money math by using cents
-    const originalCents = 14999; // 149.99
+    const originalCents = 399; // 3.99
     const discountedCents = Math.round(originalCents * 0.9); // 10% off => 13499 cents => 134.99
     const original = Number((originalCents / 100).toFixed(2));
     const discounted = Number((discountedCents / 100).toFixed(2));

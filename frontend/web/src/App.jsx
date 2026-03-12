@@ -168,7 +168,7 @@ export default function App() {
                 {/* Landing pages */}
                 <Route path="/welcome" element={<GoodLangSchoolsLanding2 theme={legacyGlobalStyling} />} />
                 <Route path="/greetings" element={<LandingPage3 theme={legacyGlobalStyling} />} />
-                <Route path="/hello" element={<LandingPageTeacher theme={legacyGlobalStyling} />} />
+                <Route path="/hello" element={<GoodLangLandingTeaStyleThemed theme={legacyGlobalStyling} />} />
                 <Route path="/marathon" element={<LandingPageMarathon theme={legacyGlobalStyling} />} />
 
                 {/* Core pages */}

@@ -695,8 +695,8 @@ export default function LandingPage3({theme}) {
                 <div className="left">
                     <div className="textBlock">
                         <h1 className="title">
-                            Check your English level <br/>
-                            for free <br/>
+                            Check your English <br/>
+                            level for free <br/>
                             in just 3 minutes <br/>
                             <em>And start</em><br/>
                             <em>speaking</em><br/>
@@ -757,7 +757,7 @@ export default function LandingPage3({theme}) {
                         <img src={hand3} className="featureIcon"/>
                         <div className="featureTitle">Translation</div>
                         <p className="featureText">
-                            Translate sentences
+                            Translate sentences from your native language
                         </p>
                     </div>
 
@@ -803,7 +803,7 @@ export default function LandingPage3({theme}) {
                         </div>
                         <p className="tQuote">
                             <em>"I practice every day on my way to work. I don’t have time for a tutor, but GoodLang
-                                gives me feedback and helps me understand what to practice."</em>
+                                gives me feedback and spotlights gaps."</em>
                         </p>
                     </div>
 

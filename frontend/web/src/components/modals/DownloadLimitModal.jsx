@@ -122,7 +122,6 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
 
     function formatMoneyUAH(n) {
         const v = Number(n);
-        if (!Number.isFinite(v)) return "₴149.99";
         return `₴${v.toFixed(2)}`;
     }
 

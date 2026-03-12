@@ -3,6 +3,7 @@ import {logError, logInfo} from "../../services/logger.js";
 import {dowloadPdf} from "../../services/api.js";
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
+import {featureToggleService} from "../../services/featureToggleService.js";
 
 export default function RulesTable({
                                        account,
@@ -206,7 +207,7 @@ export default function RulesTable({
         height: 16,
         cursor: isDownloading ? "default" : "pointer",
         opacity: isDownloading ? 0.5 : 1,
-        display: "flex",
+        display: featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION) ? 'none' : "flex",
         alignItems: "center",
         justifyContent: "center",
         transform: !isDownloading && isHover ? "scale(1.4)" : "none",

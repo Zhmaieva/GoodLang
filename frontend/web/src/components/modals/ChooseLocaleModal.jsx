@@ -314,7 +314,7 @@ export default function ChooseLocaleModal({
                                 textAlign: "center",
                             }}
                         >
-                            Обери одну мову, щоб продовжити
+                            Choose a language to continue
                         </div>
                     )}
 

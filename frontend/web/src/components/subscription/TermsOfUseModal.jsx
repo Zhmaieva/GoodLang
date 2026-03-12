@@ -197,234 +197,226 @@ export default function TermsOfUseModal({
                     <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
                         <div style={{display: "flex", justifyContent: "space-between", marginBottom: 16}}>
                             <div>
-                                <h2 style={{margin: 0, fontWeight: 800}}>Умови використання</h2>
+                                <h2 style={{margin: 0, fontWeight: 800}}>Terms of use</h2>
                                 <p style={{marginTop: 8}}>
                                     {readOnly
-                                        ? "Будь ласка, ознайомся"
-                                        : "Перш ніж зареєструватися, підтвердь, що погоджуєшся з умовами використання."}
+                                        ? "Please review"
+                                        : "Before signing up, please confirm that you agree to the Terms of Use."}
                                 </p>
                             </div>
                             <div style={logoStyle(56, theme)}>GL</div>
                         </div>
 
                         <div style={termsBoxStyle}>
-                            <h3 style={{marginTop: 0}}>1. Загальні положення</h3>
+                            <h3 style={{marginTop: 0}}>1. General Provisions</h3>
                             <p>
-                                <strong>GoodLang</strong>, <strong>«ми»</strong>, <strong>«сервіс»</strong> —
-                                онлайн-платформа
-                                для вивчення англійської мови через переклад з миттєвим AI-фідбеком,
-                                що надається під брендом GoodLang та керується його власниками.
+                                <strong>GoodLang</strong>, <strong>“we”</strong>, <strong>“the service”</strong> —
+                                an online platform for learning English through translation with instant AI feedback,
+                                provided under the GoodLang brand and operated by its owners.
                             </p>
 
                             <p>
-                                <strong>Користувач</strong>, <strong>«ви»</strong> — фізична особа, яка отримує доступ
-                                до сервісу GoodLang, реєструється в ньому або використовує його функціонал
-                                незалежно від наявності платної підписки.
+                                <strong>User</strong>, <strong>“you”</strong> — an individual who accesses the GoodLang
+                                service,
+                                registers for it, or uses its functionality regardless of whether a paid subscription
+                                is active.
                             </p>
 
                             <p>
-                                <strong>Підписка</strong> — платний доступ до розширеного функціоналу сервісу GoodLang
-                                на умовах, описаних у цих правилах.
+                                <strong>Subscription</strong> — paid access to extended functionality of the GoodLang
+                                service under the terms described in these rules.
                             </p>
 
                             <p>
-                                Використовуючи сервіс GoodLang, ви підтверджуєте, що ознайомилися з цими
-                                умовами користування та погоджуєтеся з ними. Якщо ви не погоджуєтеся з
-                                умовами, будь ласка, припиніть використання сервісу.
+                                By using the GoodLang service, you confirm that you have read these Terms of Use
+                                and agree to them. If you do not agree with these terms, please stop using the service.
                             </p>
 
-                            <h3>2. Використання сервісу</h3>
+                            <h3>2. Use of the Service</h3>
                             <p>
-                                Користувач зобов’язується використовувати сервіс добросовісно та
-                                відповідно до його призначення. Забороняється зловживання сервісом,
-                                спроби несанкціонованого доступу, автоматизація взаємодії з додатком,
-                                надсилання спаму або навмисне створення перешкод у роботі сервісу.
-                            </p>
-
-                            <p>
-                                Сервіс може використовуватися особами, що досягли віку 18 років, а також
-                                дітьми віком від 3 років виключно за згодою батьків або законних опікунів.
-                                Використовуючи сервіс, ви підтверджуєте, що або: 1) маєте 18 років і
-                                користуєтесь сервісом особисто; 2) або являєтесь батьком/матір'ю чи законним опікуном
-                                дитини,
-                                що користується сервісом, або ж маєте дозвіл діяти від їх імені у відношенні до дитини.
-                            </p>
-
-                            <h3>3. Персональні дані</h3>
-                            <p>
-                                Ми зберігаємо лише персональні дані, необхідні для коректного
-                                функціонування додатку. До таких даних належать імейл користувача, а
-                                також результати відповідей на завдання, а саме: оцінки, час виконання
-                                та коди граматичних правил. Ми не зберігаємо повні тексти відповідей
-                                користувача.
+                                The user agrees to use the service in good faith and in accordance with its intended
+                                purpose. Abuse of the service, attempts to gain unauthorized access, automation of
+                                interactions with the application, sending spam, or intentionally interfering with
+                                the operation of the service are prohibited.
                             </p>
 
                             <p>
-                                Ми також залишаємо за собою право збирати додаткові аналітичні та
-                                технічні метадані з метою покращення якості сервісу, оптимізації роботи
-                                додатку та розвитку нових функцій.
+                                The service may be used by persons who have reached the age of 18, as well as by
+                                children aged 3 and older exclusively with the consent of their parents or legal
+                                guardians. By using the service, you confirm that either: 1) you are 18 years old
+                                and use the service personally; or 2) you are the parent or legal guardian of a child
+                                using the service, or have permission to act on their behalf in relation to the child.
+                            </p>
+
+                            <h3>3. Personal Data</h3>
+                            <p>
+                                We store only the personal data necessary for the proper functioning of the
+                                application. Such data includes the user’s email address and the results of answers
+                                to tasks, including: scores, completion time, and grammar rule codes. We do not
+                                store the full text of user answers.
                             </p>
 
                             <p>
-                                Обробка персональних даних користувачів здійснюється відповідно до
-                                чинного законодавства України, а також Загального регламенту про захист
-                                даних (GDPR) Європейського Союзу у випадках, коли він застосовується.
-                            </p>
-
-                            <h3>4. Видалення персональних даних</h3>
-                            <p>
-                                За бажанням користувача ми можемо повністю видалити всі персональні дані
-                                користувача, що зберігаються на наших серверах. Це включає імейл
-                                користувача, історію використання сервісу, результати відповідей на
-                                завдання (оцінки, час виконання та коди граматичних правил), аналітичні
-                                та технічні метадані, а також будь-яку іншу інформацію, яка прямо або
-                                опосередковано стосується цього користувача.
+                                We also reserve the right to collect additional analytical and technical metadata
+                                in order to improve service quality, optimize application performance, and develop
+                                new features.
                             </p>
 
                             <p>
-                                Для видалення персональних даних користувач повинен звернутися до нас
-                                електронною поштою.
+                                Processing of users’ personal data is carried out in accordance with the applicable
+                                legislation of Ukraine, as well as the General Data Protection Regulation (GDPR)
+                                of the European Union where applicable.
                             </p>
 
-                            <h3>5. Платежі та сторонні сервіси</h3>
+                            <h3>4. Deletion of Personal Data</h3>
                             <p>
-                                Для обробки платежів ми користуємося стороннім платіжним сервісом
-                                Stripe. Ми передаємо Stripe лише імейл користувача та не несемо
-                                відповідальності за те, як Stripe обробляє цю інформацію.
-                            </p>
-
-                            <p>
-                                Інші дані, які Stripe може збирати на своїй сторінці оплати,
-                                регулюються політикою Stripe та не належать до умов використання цього
-                                додатку.
+                                Upon the user’s request, we may completely delete all personal data stored on our
+                                servers related to that user. This includes the user’s email address, service usage
+                                history, task answer results (scores, completion time, and grammar rule codes),
+                                analytical and technical metadata, as well as any other information directly or
+                                indirectly related to that user.
                             </p>
 
                             <p>
-                                Оформлення підписки, зняття коштів та обробка платежів регулюються
-                                платіжним сервісом Stripe. Ми не здійснюємо пряме управління платіжними
-                                операціями та не несемо відповідальності за технічні аспекти роботи Stripe.
+                                To delete personal data, the user must contact us via email.
+                            </p>
+
+                            <h3>5. Payments and Third-Party Services</h3>
+                            <p>
+                                To process payments, we use the third-party payment service Stripe. We transfer
+                                only the user’s email address to Stripe and are not responsible for how Stripe
+                                processes this information.
                             </p>
 
                             <p>
-                                Підписка продовжується автоматично, якщо її не скасовано до завершення
-                                поточного платіжного циклу.
+                                Other data that Stripe may collect on its payment page is governed by Stripe’s
+                                own policies and does not fall under the Terms of Use of this application.
                             </p>
 
                             <p>
-                                Керування підпискою, включно зі скасуванням, доступне через відповідне
-                                посилання на сторінку Stripe всередині додатку, а також шляхом звернення
-                                до нас електронною поштою.
+                                Subscription management, payment processing, and charges are governed by the
+                                Stripe payment service. We do not directly control payment operations and are
+                                not responsible for technical aspects of Stripe’s operation.
                             </p>
 
                             <p>
-                                Користувач може скасувати підписку у будь-який момент за власним бажанням.
-                                У разі скасування підписки кошти за вже оплачений період не повертаються,
-                                однак оплачений функціонал залишається доступним до завершення поточного
-                                циклу оплати.
+                                Subscriptions renew automatically unless canceled before the end of the
+                                current billing cycle.
                             </p>
 
                             <p>
-                                Ми залишаємо за собою право у будь-який момент змінювати вартість підписки в
-                                національній валюті України — гривні, яка є основною валютою сервісу. У разі
-                                оплати в іншій валюті конвертація здійснюється платіжним сервісом Stripe, і ми
-                                не несемо відповідальності за курс конвертації або додаткові комісії, які можуть
-                                застосовуватися.
+                                Subscription management, including cancellation, is available through the
+                                appropriate link to the Stripe page within the application, as well as by
+                                contacting us via email.
                             </p>
 
                             <p>
-                                У разі зміни вартості окремо взятої підписки ми зобов’язуємося повідомити про це
-                                електронною
-                                поштою користувачів з цією активною підпискою до набуття таких змін чинності.
+                                The user may cancel the subscription at any time at their own discretion.
+                                If the subscription is canceled, payments for the already paid period are
+                                non-refundable, but paid functionality remains available until the end of
+                                the current billing cycle.
                             </p>
 
                             <p>
-                                У разі зміни вартості підписки нова ціна застосовується лише з початку
-                                наступного платіжного циклу, а ціна для користувача з активною підпискою
-                                залишається незмінною до завершення поточного періоду платежу.
+                                We reserve the right to change the subscription price at any time in the
+                                national currency of Ukraine — the hryvnia, which is the primary currency
+                                of the service. If payment is made in another currency, conversion is
+                                performed by the Stripe payment service, and we are not responsible for
+                                the conversion rate or any additional fees that may apply.
                             </p>
 
                             <p>
-                                Ми використовуємо сторонні бібліотеки програмного коду для забезпечення функціонування
-                                продукту. Для генерації PDF документів ми використовуємо Puppeteer (Apache 2.0 License)
-                                Більше інформації на: https://github.com/puppeteer/puppeteer/blob/main/LICENSE.
-                            </p>
-
-                            <h3>6. Сповіщення</h3>
-                            <p>
-                                Ми залишаємо за собою право надсилати користувачам електронні листи,
-                                необхідні для функціонування сервісу, включно з підтвердженням входу,
-                                службовими повідомленнями та повідомленнями про зміни в умовах
-                                користування.
+                                In the event of a price change for a specific subscription, we undertake to
+                                notify users with an active subscription via email before such changes
+                                take effect.
                             </p>
 
                             <p>
-                                Також ми можемо надсилати маркетингові та інформаційні листи з новинами
-                                сервісу. Ви можете відмовитися від маркетингових то необов'язкових
-                                інформаційних листів, перейшовши по відповідному посиланню у одному з таки листів
-                                або написавши нам на goodlang.app@gmail.com
-                            </p>
-
-                            <h3>7. Політика cookies</h3>
-                            <p>
-                                Ми використовуємо виключно необхідні файли cookie для забезпечення безпечної автентифікації
-                                та обробки платежів.
-                                Ці файли cookie є необхідними для коректної роботи вебсайту і не можуть бути вимкнені.
-                                Також ми використовуємо аналітичні cookies для покращення сервісу, від яких можна відмовитись, перш ніж вони будуть встановлені.
-                            </p>
-
-                            <h3>8. Доступність сервісу та повернення коштів</h3>
-                            <p>
-                                Ми не гарантуємо безперебійну або постійну доступність сервісу та не
-                                несемо відповідальності за тимчасову недоступність додатку.
+                                When the subscription price changes, the new price applies only from the
+                                beginning of the next billing cycle, while the price for users with an
+                                active subscription remains unchanged until the end of the current payment
+                                period.
                             </p>
 
                             <p>
-                                За запитом користувача ми можемо розглянути звернення щодо скасування
-                                підписки або повернення коштів. Ми не гарантуємо повернення повної вартості
-                                або частини суми. Сума повернення може бути меншою за
-                                повний цикл оплати або у поверненні може бути відмовлено на розсуд адміністрації
-                                додатку.
+                                We use third-party code libraries to ensure the functioning of the product.
+                                For generating PDF documents, we use Puppeteer (Apache 2.0 License).
+                                More information: https://github.com/puppeteer/puppeteer/blob/main/LICENSE.
+                            </p>
+
+                            <h3>6. Notifications</h3>
+                            <p>
+                                We reserve the right to send users emails necessary for the operation of
+                                the service, including login confirmations, service notifications, and
+                                notifications about changes to the Terms of Use.
                             </p>
 
                             <p>
-                                Ми не повертаємо кошти за вартість продукту типу "Марафон", або інших подібних, зі
-                                спеціальними
-                                умовами надання доступу, в тому числі, де зазначено автоматичне припинення послуги.
+                                We may also send marketing and informational emails about service updates.
+                                You can opt out of marketing and non-essential informational emails by
+                                clicking the corresponding link in one of these emails or by contacting us
+                                at goodlang.app@gmail.com.
                             </p>
 
-                            <h3>9. Обмеження відповідальності</h3>
+                            <h3>7. Cookie Policy</h3>
                             <p>
-                                Сервіс надається «як є». Ми не гарантуємо досягнення конкретних результатів
-                                навчання та не несемо відповідальності за будь-які прямі або непрямі
-                                наслідки використання сервісу.
+                                We use only essential cookies required for secure authentication and payment
+                                processing. These cookies are necessary for the proper functioning of the
+                                website and cannot be disabled. We also use analytical cookies to improve
+                                the service, which you can decline before they are set.
                             </p>
 
-                            <h3>10. Припинення надання послуг</h3>
+                            <h3>8. Service Availability and Refunds</h3>
                             <p>
-                                Ми залишаємо за собою право припинити надання послуг у будь-який момент
-                                без пояснення причин.
+                                We do not guarantee uninterrupted or continuous availability of the service
+                                and are not responsible for temporary unavailability of the application.
                             </p>
 
                             <p>
-                                Використання сторонніх засобів для автоматизації взаємодії з додатком
-                                або навмисні спроби створити перешкоди в його роботі є достатньою
-                                підставою для зупинення доступу до сервісу для конкретного користувача.
+                                Upon user request, we may review cases related to subscription cancellation
+                                or refund requests. We do not guarantee a full or partial refund. The refund
+                                amount may be less than the full billing cycle or may be denied at the
+                                discretion of the application administration.
                             </p>
 
-                            <h3>11. Зміни умов користування</h3>
                             <p>
-                                Ми залишаємо за собою право змінювати ці умови користування. У разі
-                                суттєвих змін ми зобов’язуємося повідомити користувача електронною
-                                поштою, використовуючи імейл, вказаний під час реєстрації.
+                                We do not provide refunds for products such as “Marathon” or other similar
+                                products with special access conditions, including cases where automatic
+                                termination of the service is specified.
                             </p>
 
-                            <h3>12. Контактна інформація</h3>
+                            <h3>9. Limitation of Liability</h3>
+                            <p>
+                                The service is provided “as is.” We do not guarantee specific learning
+                                outcomes and are not responsible for any direct or indirect consequences
+                                resulting from the use of the service.
+                            </p>
+
+                            <h3>10. Termination of Services</h3>
+                            <p>
+                                We reserve the right to terminate the provision of services at any time
+                                without explanation.
+                            </p>
+
+                            <p>
+                                The use of third-party tools to automate interaction with the application
+                                or intentional attempts to interfere with its operation constitute
+                                sufficient grounds to suspend access to the service for a specific user.
+                            </p>
+
+                            <h3>11. Changes to the Terms of Use</h3>
+                            <p>
+                                We reserve the right to modify these Terms of Use. In the event of
+                                significant changes, we undertake to notify the user by email using
+                                the email address provided during registration.
+                            </p>
+
+                            <h3>12. Contact Information</h3>
                             <p style={{marginBottom: 0}}>
-                                Уся офіційна комунікація з питань використання сервісу здійснюється
-                                електронною поштою:
+                                All official communication regarding the use of the service is conducted
+                                via email:
                                 <strong> goodlang.app@gmail.com</strong>
                             </p>
-
                         </div>
 
                         <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 16}}>
@@ -436,7 +428,7 @@ export default function TermsOfUseModal({
                                     disabled={loading}
                                     style={primaryBtn}
                                 >
-                                    {loading ? "Підтверджую…" : "Погоджуюсь"}
+                                    {loading ? "Confirming…" : "I agree"}
                                 </button>
                             )}
 
@@ -447,7 +439,7 @@ export default function TermsOfUseModal({
                                 disabled={loading}
                                 style={readOnly ? primaryBtn : secondaryBtn}
                             >
-                                {readOnly ? "Добре" : "Не погоджуюсь"}
+                                {readOnly ? "OK" : "Decline"}
                             </button>
 
                             {error && <div style={{color: "red", fontWeight: 700}}>{error}</div>}

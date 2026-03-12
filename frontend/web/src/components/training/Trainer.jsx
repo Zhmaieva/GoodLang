@@ -20,6 +20,7 @@ import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
 import {marathonService} from "../../services/marathonService.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import {localizationService} from "../../localization/localizationService.js";
+import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 
 export default function Trainer({
                                     theme,
@@ -130,6 +131,7 @@ export default function Trainer({
     const [waitTimeSeconds, setWaitTimeSeconds] = useState(false);
 
     const [cookieOpen, setCookieOpen] = useState(false);
+    const [termsOpen, setTermsOpen] = useState(false);
 
     // weak rules
     const [weakRules, setWeakRules] = useState([]);
@@ -695,8 +697,6 @@ export default function Trainer({
     const loadedLevelRef = useRef(null);
 
     useEffect(() => {
-        if (!nextLevel) return;
-
         // skip if same level already initialized
         if (loadedLevelRef.current === nextLevel && !nextRule) return;
 
@@ -823,7 +823,19 @@ export default function Trainer({
             {/*    ruleIds={[]}         // exactly 7 items*/}
             {/*/>*/}
 
-            {cookieOpen && (
+
+            {termsOpen && (
+                <TermsOfUseModal
+                    readOnly
+                    theme={theme}
+                    onClose={() => {
+                        setTermsOpen(false);
+                        setCookieOpen(true);
+                    }}
+                />
+            )}
+
+            {cookieOpen && !termsOpen && (
                 <CookieConsentModal
                     theme={theme}
                     onAccept={async () => {
@@ -843,6 +855,11 @@ export default function Trainer({
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
                         await onMainButtonClick();
+                    }}
+                    onOpenPolicy={async () => {
+                        setCookieOpen(false);
+                        setTermsOpen(true);
+                        await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
                     }}
                 />
             )}

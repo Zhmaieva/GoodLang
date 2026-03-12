@@ -190,6 +190,10 @@ export async function evaluateGapAndCoach({
                                           }) {
     const { rules = [], en = [], options = [], correct } = task;
 
+    targetLocale = targetLocale === 'null' ? null : targetLocale;
+
+    targetLocale = !targetLocale ? 'uk-UA' : targetLocale;
+
     const sentence = Array.isArray(en) ? (en[0] ?? "") : String(en ?? "");
     const normalizedUser = clearText(String(userAnswer ?? "").trim());
     const normalizedCorrect = clearText(String(correct ?? "").trim());
@@ -273,6 +277,8 @@ export async function translateIfNeeded({
                                             value = "",
                                             locale = null,
                                         }) {
+    locale = locale === 'null' ? null : locale;
+
     const safeValue = String(value ?? "");
 
     // skip translation if no locale

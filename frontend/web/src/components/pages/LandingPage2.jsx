@@ -35,84 +35,84 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           },
                                                           brand = "GoodLang",
                                                           navLinks = [
-                                                              { id: "about", label: `Наш підхід` },
-                                                              { id: "testimonials", label: "Відгуки" },
-                                                              { id: "join", label: "Приєднатися" },
+                                                              { id: "about", label: `Our approach` },
+                                                              { id: "testimonials", label: "Reviews" },
+                                                              { id: "join", label: "Join" },
                                                           ],
 
-                                                          heroLines = ["Почни", "розмовляти", "англійською"],
-                                                          heroAccentWord = "правильно",
-                                                          heroBadge = "безкоштовно",
+                                                          heroLines = ["Start", "speaking", "English"],
+                                                          heroAccentWord = "correctly",
+                                                          heroBadge = "free",
 
-                                                          communityCount = "2120 речень перекладено",
-                                                          subStat = "350 правил засвоєно",
+                                                          communityCount = "122,119 sentences translated",
+                                                          subStat = "5352 rules mastered",
 
-                                                          useTitle = `ВИКОРИСТОВУЙ ${brand.toUpperCase()}, ЩОБ`,
+                                                          useTitle = `USE ${brand.toUpperCase()} TO`,
                                                           hashtags = [
-                                                              "# ПРАКТИКУВАТИ ЩОДНЯ",
-                                                              "# ПІДТЯГУВАТИ СЛАБКІ ПРАВИЛА",
-                                                              "# ПИСАТИ ВПЕВНЕНО",
+                                                              "# PRACTISE EVERY DAY",
+                                                              "# IMPROVE WEAK RULES",
+                                                              "# WRITE WITH CONFIDENCE",
                                                           ],
 
-                                                          toolsTitle = "НАШІ ІНСТРУМЕНТИ НАВЧАННЯ",
+                                                          toolsTitle = "OUR LEARNING TOOLS",
                                                           tools = [
                                                               {
-                                                                  title: "Перекладай речення з української на англійську",
+                                                                  title: "Translate sentences from you mother tongue into English",
                                                                   url: "../../../1.PNG"
                                                               },
                                                               {
-                                                                  title: "Дізнайся, де саме ти помилився — з поясненням і прикладами",
+                                                                  title: "See exactly where you made a mistake — with explanations and examples",
                                                                   url: "../../../2.PNG"
                                                               },
                                                               {
-                                                                  title: "Отримай список правил до вивчення",
+                                                                  title: "Get a list of rules to study",
                                                                   url: "../../../3.PNG"
                                                               },
                                                               {
-                                                                  title: "Наступне речення підібране з урахуванням твого рівня",
+                                                                  title: "The next sentence is selected based on your level",
                                                                   url: "../../../4.PNG"
                                                               },
                                                           ],
 
-                                                          movementTitle = "НАШ ПІДХІД",
+                                                          movementTitle = "OUR APPROACH",
 
-                                                          testimonialsTitle = `ЩО КАЖУТЬ КОРИСТУВАЧІ ${brand.toUpperCase()}`,
+                                                          testimonialsTitle = `WHAT ${brand.toUpperCase()} USERS SAY`,
                                                           testimonials = [
                                                               {
                                                                   quote:
-                                                                      "Для мене, на відміну від усіх інших форм завдань, повторюваний переклад дійсно працює.",
-                                                                  name: "Іванна",
+                                                                      "For me, unlike every other type of exercise, repeated translation really works.",
+                                                                  name: "Ivanna",
                                                                   url: "../../../u1.jpg"
                                                               },
                                                               {
                                                                   quote:
-                                                                      "У мене раніше було відчуття, що іноді я знаю англійську на С1, а інколи два слова не можу зв'язати. Зараз я почав впевнено розмовляти.",
-                                                                  name: "Влад",
+                                                                      "I used to feel like sometimes I knew English at a C1 level, and other times I couldn’t put two words together. Now I’ve started speaking confidently.",
+                                                                  name: "Vlad",
                                                                   url: "../../../u2.jpg"
                                                               },
                                                               {
                                                                   quote:
-                                                                    "Я реально бачу прогрес, а не гадаю, чи став кращим в англійській.",
-                                                                  name: "Максим",
+                                                                      "I can actually see my progress instead of guessing whether my English has improved.",
+                                                                  name: "Maksym",
                                                                   url: "../../../u3.jpg"
                                                               },
                                                           ],
 
-                                                          joinTitle = `ПРИЄДНУЙСЯ ДО ${brand.toUpperCase()} СЬОГОДНІ`,
-                                                          joinSubtitle = "Почни вчитися зараз - без реєстрації.",
-                                                          primaryCtaText = "Навчатися безкоштовно",
-                                                          secondaryCtaText = "Дізнатись більше",
+                                                          joinTitle = `JOIN ${brand.toUpperCase()} TODAY`,
+                                                          joinSubtitle = "Start learning now — no registration required.",
+                                                          primaryCtaText = "Learn for free",
+                                                          secondaryCtaText = "Learn more",
                                                           onPrimaryCta,
                                                           onSecondaryCta,
 
-                                                          showEmailCapture = false,
+                                                          showEmailCapture = true,
                                                           onEmailSubmit,
                                                           emailPlaceholder = "you@example.com",
 
                                                           heroScreens = [
-                                                              { src: "../../../shot1.png", alt: "Екран застосунку 1" },
-                                                              { src: "../../../shot2.png", alt: "Екран застосунку 2" },
-                                                              // { src: "../../../public/shot3.png", alt: "Екран застосунку 3" },
+                                                              { src: "../../../shot1.png", alt: "App screen 1" },
+                                                              { src: "../../../shot2.png", alt: "App screen 2" },
+                                                              // { src: "../../../public/shot3.png", alt: "App screen 3" },
                                                           ],
 
                                                           maxWidth = 1120,
@@ -128,17 +128,6 @@ export default function GoodLangLandingTeaStyleThemed({
     const [isStartingUsingApp, setIsStartingUsingApp] = useState(false);
     const [isGettingPromoCode, setIsGettingPromoCode] = useState(false);
     const [touOpen, setTouOpen] = useState(false);
-
-    // useEffect(() => {
-    //     if (getCookieConsent()) return;
-    //
-    //     const t = setTimeout(async () => {
-    //         setCookieOpen(true);
-    //         await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_COOKIES);
-    //     }, 4000); // ⏱ 4 seconds after load
-    //
-    //     return () => clearTimeout(t);
-    // }, []);
 
     useEffect(() => {
         const onResize = () => setW(window.innerWidth);
@@ -182,7 +171,6 @@ export default function GoodLangLandingTeaStyleThemed({
                 padding: "22px 16px 60px",
             },
 
-            // Nav
             nav: {
                 display: "flex",
                 justifyContent: "space-between",
@@ -195,7 +183,7 @@ export default function GoodLangLandingTeaStyleThemed({
             },
             brand: { display: "flex", alignItems: "center", gap: 12, minWidth: 0 },
             logo: {
-                flex: "0 0 auto",        // НЕ СТИСКАЄТЬСЯ
+                flex: "0 0 auto",
                 width: 64,
                 height: 64,
                 borderRadius: 12,
@@ -220,7 +208,6 @@ export default function GoodLangLandingTeaStyleThemed({
                 fontSize: "0.95rem",
             },
 
-            // Hero
             heroCard: {
                 background: cardBg,
                 border,
@@ -250,9 +237,9 @@ export default function GoodLangLandingTeaStyleThemed({
             heroLine: () => ({
                 margin: 0,
                 fontWeight: 900,
-                // ✅ адаптивний розмір: на iPhone буде менше, на desktop — як було
                 fontSize: "clamp(38px, 8.5vw, 58px)",
-            }),            accentWord: { color: theme.accent },
+            }),
+            accentWord: { color: theme.accent },
             heroMetaRow: {
                 marginTop: 14,
                 paddingTop: 14,
@@ -273,7 +260,6 @@ export default function GoodLangLandingTeaStyleThemed({
                 boxShadow: shadowSmall,
             },
 
-            // Buttons (Primary-like + Secondary)
             primaryBtn: (pressed) => ({
                 ...btnBase,
                 background: theme.accent,
@@ -292,15 +278,16 @@ export default function GoodLangLandingTeaStyleThemed({
                 boxShadow: `3px 3px 0 ${theme.greenDark}`,
                 transform: pressed ? "translateY(1px)" : "none",
             }),
-            ctaRow: {                 borderTop: `2px solid ${theme.accent}`, paddingTop: "1rem",
-                display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 },
+            ctaRow: {
+                borderTop: `2px solid ${theme.accent}`, paddingTop: "1rem",
+                display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14
+            },
 
-            // Screens
             screensRow: {
                 display: "grid",
                 gridTemplateColumns: "repeat(2, 1fr)",
-                gap: 14,              // a bit more air
-                maxWidth: 520,        // keeps them big but not crazy
+                gap: 14,
+                maxWidth: 520,
                 margin: "0 auto",
             },
             screen: {
@@ -327,7 +314,6 @@ export default function GoodLangLandingTeaStyleThemed({
                 padding: 10,
             },
 
-            // Sections
             section: { marginTop: 18 },
             sectionTitle: {
                 fontWeight: 900,
@@ -418,7 +404,6 @@ export default function GoodLangLandingTeaStyleThemed({
             quote: { margin: 0, fontWeight: 600, lineHeight: 1.5, fontStyle: "italic" },
             who: { marginTop: 10, color: theme.text, fontWeight: 900 },
 
-            // Email
             emailRow: { display: "flex", gap: 10, flexWrap: "wrap", marginTop: 12, alignItems: "center" },
             input: {
                 fontFamily: "Nunito, system-ui, sans-serif",
@@ -483,17 +468,17 @@ export default function GoodLangLandingTeaStyleThemed({
 
         const v = String(email || "").trim();
         if (!/^\S+@\S+\.\S+$/.test(v)) {
-            setMsg("Введіть правильний імейл");
+            setMsg("Please enter a valid email address");
             return;
         }
         try {
             setSending(true);
             setMsg("");
             await callSendPromoCodeApi({email:v});
-            setMsg("Готово! Ми відправили промо код на вказану адресу.");
+            setMsg("Done! We’ve sent a promo code to the email address you provided.");
             setEmail("");
         } catch {
-            setMsg("Ой, помилка... Ми вже її виправляємо.");
+            setMsg("Oops, something went wrong... We’re already fixing it.");
         } finally {
             setSending(false);
         }
@@ -536,7 +521,6 @@ export default function GoodLangLandingTeaStyleThemed({
     return (
         <div style={styles.page}>
             <div style={styles.wrap}>
-                {/* NAV */}
                 <div style={styles.nav}>
                     <div style={styles.brand}>
                         <div style={styles.logo}>GL</div>
@@ -550,7 +534,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                 }}>FAQ</PrimaryButton>
                             </div>
 
-                            <div style={sub}>Перекладай, поки не вивчиш</div>
+                            <div style={sub}>Translate until you learn it</div>
                         </div>
                     </div>
 
@@ -563,17 +547,12 @@ export default function GoodLangLandingTeaStyleThemed({
                     </div>
                 </div>
 
-                {/* HERO */}
                 <div style={{ ...styles.heroCard, ...styles.heroGrid }}>
                     <div>
                         <div style={styles.kicker}>
                             <span style={styles.dot}/>
-                            Практика перекладу + миттєвий фідбек на базі AI
+                            Translation practice + instant AI-powered feedback
                         </div>
-
-                        {/*<div style={{marginTop: 6, color: theme.muted, fontWeight: 700, fontSize: "0.9rem"}}>*/}
-                        {/*    Розумні пояснення та фідбек на базі AI*/}
-                        {/*</div>*/}
 
                         <div style={styles.heroStack}>
                             {heroLines.map((line, idx) => (
@@ -618,12 +597,10 @@ export default function GoodLangLandingTeaStyleThemed({
                                 <div style={styles.stat}>{communityCount}</div>
                                 <div style={styles.statSmall}>{subStat}</div>
                             </div>
-                            {/*<div style={styles.freeBadge}>{heroBadge}</div>*/}
                         </div>
 
                         <div style={{marginTop: 10, color: theme.text, opacity: 0.5, fontWeight: 600}}>
-                            Зроблено для україномовних учнів, які втомилися від “я знаю правило… але все одно роблю ту
-                            саму помилку”.
+                            Built for English learners who are tired of saying, “I know the rule... but I still make the same mistake.”
                         </div>
                     </div>
 
@@ -648,14 +625,13 @@ export default function GoodLangLandingTeaStyleThemed({
                     </div>
                 </div>
 
-                {/* MOVEMENT / STORY */}
                 <div id="about" style={{ ...styles.section, ...styles.card }}>
                     <div style={styles.sectionTitle}>{movementTitle}</div>
                     <div style={styles.split}>
                         <div>
                             <p style={styles.storyHead}>
-                                Ти не “погано знаєш граматику”.{" "}<br/>
-                                <span style={{color: theme.green}}>Тобі просто потрібна регулярна практика</span>
+                                You do not “know grammar badly.”{" "}<br/>
+                                <span style={{color: theme.green}}>You just need regular practice</span>
                             </p>
                             <div style={styles.ctaRow}>
 
@@ -675,7 +651,6 @@ export default function GoodLangLandingTeaStyleThemed({
                     </div>
                 </div>
 
-                {/* TESTIMONIALS */}
                 <div id="testimonials" style={{ ...styles.section, ...styles.card }}>
                     <div style={styles.sectionTitle}>{testimonialsTitle}</div>
                     <div style={styles.testimonialsGrid}>
@@ -701,7 +676,6 @@ export default function GoodLangLandingTeaStyleThemed({
                     </div>
                 </div>
 
-                {/* JOIN */}
                 <div id="join" style={{...styles.section, ...styles.card}}>
                     <div style={styles.sectionTitle}>{joinTitle}</div>
                     <div style={{fontWeight: 900, fontSize: "1.8rem", letterSpacing: -0.5}}>
@@ -715,7 +689,7 @@ export default function GoodLangLandingTeaStyleThemed({
                             {...pressHandlers("joinPrimary")}
                             onClick={handleStart}
                         >
-                            Почати навчання
+                            Start learning
                         </button>
                     </div>
 
@@ -730,8 +704,8 @@ export default function GoodLangLandingTeaStyleThemed({
                                     inputMode="email"
                                     onKeyDown={async (e) => {
                                         if (e.key === "Enter") {
-                                            e.preventDefault();      // ⛔ prevent accidental form submit / reload
-                                            await submitEmail();           // ✅ same logic as button click
+                                            e.preventDefault();
+                                            await submitEmail();
                                         }
                                     }}
                                 />
@@ -742,7 +716,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                     disabled={sending}
                                     onClick={submitEmail}
                                 >
-                                    {sending ? "Відправляю..." : "Отримати промо код"}
+                                    {sending ? "Sending..." : "Get promo code"}
                                 </button>
                             </div>
                             {msg ? <div style={styles.msg}>{msg}</div> : null}
@@ -797,17 +771,13 @@ export default function GoodLangLandingTeaStyleThemed({
                             }
                         }}
                         onOpenPolicy={async () => {
-                            // reuse your existing Terms modal
-                            // this keeps UX consistent
                             setTouOpen(true);
 
                             await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
-                            // or open TermsOfUseModal if you prefer
                         }}
                     />
                 )}
 
-                {/* FOOTER */}
                 <FooterBar theme={theme} />
             </div>
 

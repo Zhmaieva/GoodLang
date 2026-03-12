@@ -104,7 +104,7 @@ export default function TaskCard({
 
     const isLockedNow = locked && secondsLeft > 0;
     const buttonText = isLockedNow
-        ? `Придбай підписку або почекай ${formatTime(secondsLeft)}`
+        ? `Subscribe or wait ${formatTime(secondsLeft)}`
         : mainBtnText;
 
     const modeWrapDesktopBehavior = useMemo(() => {
@@ -362,7 +362,7 @@ export default function TaskCard({
                     <textarea
                         className={"highlight-input"}
                         ref={textareaRef}
-                        placeholder="Enter your translation..."
+                        placeholder="How would you translate this into English?"
                         autoComplete="off"
                         value={answer}
                         onChange={(e) => setAnswer(e.target.value)}

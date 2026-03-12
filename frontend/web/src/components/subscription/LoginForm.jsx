@@ -29,11 +29,12 @@ export default function LoginForm({
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
-    const [termsOpen, setTermsOpen] = useState(false);
     const [error, setError] = useState("");
     const [isMobile, setIsMobile] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
     const [cookieOpen, setCookieOpen] = useState(false);
+    const [termsOpen, setTermsOpen] = useState(false);
+    const [termsReadOnly, setTermsReadOnly] = useState(false);
 
     // hover for Trainer-style button
     const [btnHover, setBtnHover] = useState(false);
@@ -743,19 +744,26 @@ export default function LoginForm({
 
             {termsOpen && !isPaying && (
                 <TermsOfUseModal
+                    readOnly={termsReadOnly}
                     ruleToDownload={ruleToDownload}
                     theme={theme}
                     onClose={() => {
-                        unlockScroll()
                         setTermsOpen(false);
-                        onClose();
+                        const termsRo = termsReadOnly;
+                        setTermsReadOnly(false);
+                        if (!termsRo) {
+                            unlockScroll();
+                            onClose();
+                        } else {
+                            setCookieOpen(true);
+                        }
                     }}
                     email={emailInput}
                     verificationCode={code.join("")}
                 />
             )}
 
-            {cookieOpen && (
+            {cookieOpen && !termsOpen && (
                 <CookieConsentModal
                     theme={theme}
                     onAccept={async () => {
@@ -779,6 +787,12 @@ export default function LoginForm({
 
                         unlockScroll();
                         reloadWithRuleParam(ruleToDownload);
+                    }}
+                    onOpenPolicy={async () => {
+                        setCookieOpen(false);
+                        setTermsReadOnly(true);
+                        setTermsOpen(true);
+                        await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
                     }}
                 />
             )}
