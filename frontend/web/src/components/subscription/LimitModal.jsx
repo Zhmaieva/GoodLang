@@ -205,7 +205,8 @@ export default function LimitModal({
                         style={{
                             position: "fixed",
                             inset: 0,
-                            background: "rgba(0,0,0,0.35)",
+                            backdropFilter: "blur(6px)",
+                            WebkitBackdropFilter: "blur(6px)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
