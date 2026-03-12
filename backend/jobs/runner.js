@@ -68,9 +68,9 @@ console.log('process.env.FRONTEND_URL', process.env.FRONTEND_URL)
 console.log('The runner is running...');
 
 startNonOverlappingInterval(async () => {
-    const res = await runTipsTick({ pool, transporter, projectRoot });
-    // avoid spam logs outside window
-    if (!res.skipped) console.log("[tipsCron]", res);
+    // const res = await runTipsTick({ pool, transporter, projectRoot });
+    // // avoid spam logs outside window
+    // if (!res.skipped) console.log("[tipsCron]", res);
 
     const promoRes = await runPromoRegularTick(
         { pool, transporter, projectRoot, batchSize: 1 });
