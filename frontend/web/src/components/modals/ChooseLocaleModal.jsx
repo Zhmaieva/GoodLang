@@ -33,14 +33,14 @@ export default function ChooseLocaleModal({
     const canClose = !!selected;
 
     const lockScroll = () => {
-        const _el = document.querySelector("#choose-locale-modal");
-        if (_el) disableBodyScroll(_el);
+        // const _el = document.querySelector("#choose-locale-modal");
+        // if (_el) disableBodyScroll(_el);
     };
 
     const unlockScroll = () => {
-        const _el = document.querySelector("#choose-locale-modal");
-        clearAllBodyScrollLocks();
-        if (_el) enableBodyScroll(_el);
+        // const _el = document.querySelector("#choose-locale-modal");
+        // clearAllBodyScrollLocks();
+        // if (_el) enableBodyScroll(_el);
     };
 
     useEffect(() => {
@@ -324,7 +324,7 @@ export default function ChooseLocaleModal({
                         style={mainButtonStyle}
                         onClick={handleClose}
                     >
-                        Готово
+                        Ok
                     </button>
                 </div>
 
