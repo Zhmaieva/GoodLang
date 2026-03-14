@@ -311,7 +311,7 @@ export const translationsController = {
             }
 
             if (!skipCoach) {
-                await recordTranslationUsage(accountId);
+                await recordTranslationUsage(accountId, taskType);
             }
 
             // preserve your "correct_answer matches translation but model said wrong" fix

@@ -43,10 +43,10 @@ export default function PaymentSuccess() {
     const benefits = useMemo(() => {
         // core benefits (same as LimitModal list, excluding "Можеш завжди скасувати")
         const core = [
-            "Тренажер без обмежень",
-            "Хмарне збереження прогресу",
-            "Доступ з усіх пристроїв",
-            "Пріоритетна підтримка",
+            "Unlimited trainer",
+            "Cloud progress saving",
+            "Access from any device",
+            "Priority customer support",
         ];
 
         if (!isTeacher) return core;
@@ -101,7 +101,7 @@ export default function PaymentSuccess() {
                             fontSize: "18pt",
                             fontWeight: 800
                         }}>
-                            Все супер
+                            You're all set
                         </h2>
 
                         <p style={{
@@ -114,7 +114,7 @@ export default function PaymentSuccess() {
                             textAlign: "left",
                             opacity: 0.9,
                         }}>
-                            {isMarathon ? "Марафон розпочато" : "Щомісячна підписка"}
+                            {isMarathon ? "Марафон розпочато" : "Monthly subscription"}
                         </p>
                     </div>
 
@@ -155,7 +155,7 @@ export default function PaymentSuccess() {
                         onClick={() => navigate("/trainer")}
                         style={buttonStyle}
                     >
-                        {isMarathon ? "До марафону" : "До тренажера"}
+                        {isMarathon ? "До марафону" : "Start training"}
                     </button>
                 </div>
             </div>

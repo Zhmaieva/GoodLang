@@ -76,15 +76,17 @@ export async function checkTranslationLimit(accountId, soft = true) {
 /**
  * Record a translation usage
  */
-export async function recordTranslationUsage(accountId) {
+export async function recordTranslationUsage(accountId, taskType = 1) {
     const query = `
         INSERT INTO account_log (account_id, action_type, created_at)
         VALUES ($1, $2, $3)
     `;
     const date = new Date();
-    await pool.query(query, [accountId, ACTION_TYPES.TRANSLATION_CALL, date]);
 
-    await recordAction(accountId, ACTION_TYPES.TRANSLATION_CALL_CHOOSE);
+    if (taskType === 1)
+        await recordAction(accountId, ACTION_TYPES.TRANSLATION_CALL_CHOOSE, date);
+    else
+        await pool.query(query, [accountId, ACTION_TYPES.TRANSLATION_CALL, date]);
 }
 
 /**

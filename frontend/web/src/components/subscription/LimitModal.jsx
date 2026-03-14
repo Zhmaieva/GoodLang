@@ -288,7 +288,7 @@ export default function LimitModal({
                                             fontSize: "1.5rem",
                                             fontWeight: 800
                                         }}>
-                                            {"Навчання на повну силу"}
+                                            {"Unlimited learning"}
                                         </h2>
                                     )}
 
