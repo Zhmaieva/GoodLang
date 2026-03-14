@@ -3,6 +3,7 @@ import {logError, logInfo} from "../../services/logger.js";
 import {dowloadPdf} from "../../services/api.js";
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
+import {featureToggleService} from "../../services/featureToggleService.js";
 
 export default function RulesTable({
                                        account,
@@ -15,10 +16,10 @@ export default function RulesTable({
                                        advanced = true
                                    }) {
     const LEVEL_MAP = {
-        A1: { label: "Початківець" },
-        A2: { label: "Середній" },
-        B1: { label: "Середній" },
-        B2: { label: "Просунутий" },
+        A1: { label: "Beginner" },
+        A2: { label: "Intermediate" },
+        B1: { label: "Intermediate" },
+        B2: { label: "Advanced" },
     };
 
     // Hidden sort order (lower -> higher)
@@ -206,7 +207,7 @@ export default function RulesTable({
         height: 16,
         cursor: isDownloading ? "default" : "pointer",
         opacity: isDownloading ? 0.5 : 1,
-        display: "flex",
+        display: featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION) ? 'none' : "flex",
         alignItems: "center",
         justifyContent: "center",
         transform: !isDownloading && isHover ? "scale(1.4)" : "none",
@@ -310,23 +311,23 @@ export default function RulesTable({
                     <div style={{ opacity: 0.8 }}>#</div>
 
                     <div style={headerBtnStyle} onClick={() => toggleSort("level")} role="button" tabIndex={0}>
-                        Правило (Рівень) <ArrowPair columnKey="level" />
+                        Rule (Level) <ArrowPair columnKey="level" />
                     </div>
 
                     <div style={headerBtnStyle} onClick={() => toggleSort("accuracy")} role="button" tabIndex={0}>
-                        Точність <ArrowPair columnKey="accuracy" />
+                        Accuracy <ArrowPair columnKey="accuracy" />
                     </div>
 
                     <div style={headerBtnStyle} onClick={() => toggleSort("attempts")} role="button" tabIndex={0}>
-                        Спроби <ArrowPair columnKey="attempts" />
+                        Attempts <ArrowPair columnKey="attempts" />
                     </div>
 
                     <div style={headerBtnStyle} onClick={() => toggleSort("lastPractice")} role="button" tabIndex={0}>
-                        Остання практика <ArrowPair columnKey="lastPractice" />
+                        Last practice <ArrowPair columnKey="lastPractice" />
                     </div>
 
                     <div className="col-last" style={headerBtnStyle} onClick={() => toggleSort("status")} role="button" tabIndex={0}>
-                        Статус <ArrowPair columnKey="status" />
+                        Status <ArrowPair columnKey="status" />
                     </div>
                 </div>
             )}
@@ -388,11 +389,11 @@ export default function RulesTable({
                                             </h2>
 
                                             <div style={{ fontSize: "1rem", fontWeight: 700, opacity: .7, marginBottom: 8, }}>
-                                                Рівень: {LEVEL_MAP[r.level]?.label}
+                                                Level: {LEVEL_MAP[r.level]?.label}
                                             </div>
 
-                                            {/*{advanced && <div style={{ fontSize: "1rem", fontWeight: 700, opacity: 0.7 }}>Спроби: {r.attemptsNumber}</div>}*/}
-                                            {/*{advanced && <div style={{ fontSize: "1rem", fontWeight: 700, opacity: 0.7 }}>Практика: {fmtDate(r.lastAttemptDate)}</div>}*/}
+                                            {/*{advanced && <div style={{ fontSize: "1rem", fontWeight: 700, opacity: 0.7 }}>Attempts: {r.attemptsNumber}</div>}*/}
+                                            {/*{advanced && <div style={{ fontSize: "1rem", fontWeight: 700, opacity: 0.7 }}>Practice: {fmtDate(r.lastAttemptDate)}</div>}*/}
 
                                             <div style={{ display: "flex", justifyContent: "start", gap: "2rem", marginTop: 6 }}>
                                                 {advanced && <span className={`badge ${st.cls}`}>{st.label}</span>}
@@ -404,7 +405,7 @@ export default function RulesTable({
                                                         onMouseLeave={() => setHover(null)}
                                                         onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
                                                         style={iconBtn(idx === hover)}
-                                                        title="Друкувати правило"
+                                                        title="Print rule"
                                                     >
                                                         <img
                                                             src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
@@ -443,7 +444,7 @@ export default function RulesTable({
                                                         onMouseLeave={() => setHover(null)}
                                                         onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
                                                         style={iconBtn(idx === hover)}
-                                                        title="Друкувати правило"
+                                                        title="Print rule"
                                                     >
                                                         <img
                                                             src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
@@ -491,7 +492,7 @@ export default function RulesTable({
                                         onMouseLeave={() => setHover(null)}
                                         onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
                                         style={iconBtn(idx === hover)}
-                                        title="Друкувати правило"
+                                        title="Print rule"
                                     >
                                         <img
                                             key={downloadingRow === idx ? `loading-${idx}` : `print-${idx}`}
@@ -515,7 +516,7 @@ export default function RulesTable({
 
                                 <div>
                                     <div className="rule-name">{r.ruleName}</div>
-                                    <div className="sub">Рівень: {LEVEL_MAP[r.level]?.label}</div>
+                                    <div className="sub">Level: {LEVEL_MAP[r.level]?.label}</div>
                                 </div>
 
                                 <div>

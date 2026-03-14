@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import {checkRouteRedirect} from "../SyncOnRouteChange.jsx";
 
 export function RootRedirect() {
     const navigate = useNavigate();
@@ -8,28 +9,11 @@ export function RootRedirect() {
     useEffect(() => {
         if (location.pathname !== "/") return;
 
-        const hasAnswersData = !!localStorage.getItem("answers_data");
-        const isTeacherApp = localStorage.getItem("isTeacherApp") === "true";
-
-        let accountInfo = null;
-        try {
-            accountInfo = JSON.parse(localStorage.getItem("account_info") || "null");
-        } catch {
-            accountInfo = null;
-        }
-
-        const hasEmail = !!accountInfo?.email;
-
-        if (!hasAnswersData) {
-            if (isTeacherApp || !hasEmail) {
-                navigate("/school", { replace: true });
-            } else {
-                navigate("/student", { replace: true });
-            }
-        } else {
+        if (!checkRouteRedirect(navigate))
             navigate("/trainer", { replace: true });
         }
     }, [location.pathname, navigate]);
 
     return null;
 }
+

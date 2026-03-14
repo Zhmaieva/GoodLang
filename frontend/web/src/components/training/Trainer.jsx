@@ -18,6 +18,9 @@ import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import {acceptCookies, getCookieConsent, rejectCookies} from "../../services/settingsService.js";
 import MarathonInfoModal from "../modals/MarathonInfoModal.jsx";
 import {marathonService} from "../../services/marathonService.js";
+import LimitModal from "../subscription/LimitModal.jsx";
+import {localizationService} from "../../localization/localizationService.js";
+import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 
 export default function Trainer({
                                     theme,
@@ -107,6 +110,7 @@ export default function Trainer({
     const [difficulty, setDifficulty] = useState(() => null);
 
     const [textToTranslate, setTextToTranslate] = useState("");
+    const [textToTranslateOriginal, setTextToTranslateOriginal] = useState("");
     const [rules, setRules] = useState([]);
 
     const [answer, setAnswer] = useState("");
@@ -115,8 +119,8 @@ export default function Trainer({
     const [isError, setIsError] = useState(false);
     const [locked, setLocked] = useState(false);
 
-    const [taskText, setTaskText] = useState("Стягнення завдання…");
-    const [hint, setHintValue] = useState("Порада: переклади і натисни «Перевірити»");
+    const [taskText, setTaskText] = useState("Loading task…");
+    const [hint, setHintValue] = useState("Hint: translate and press 'Check'.");
     const [taskHint, setTaskHint] = useState(null);
 
     const [account, setAccount] = useState(null);
@@ -127,6 +131,7 @@ export default function Trainer({
     const [waitTimeSeconds, setWaitTimeSeconds] = useState(false);
 
     const [cookieOpen, setCookieOpen] = useState(false);
+    const [termsOpen, setTermsOpen] = useState(false);
 
     // weak rules
     const [weakRules, setWeakRules] = useState([]);
@@ -141,6 +146,7 @@ export default function Trainer({
     // Preloading state (supports gaps too)
     // -----------------------------
     const [nextTextToTranslate, setNextTextToTranslate] = useState("");
+    const [nextTextToTranslateOriginal, setNextTextToTranslateOriginal] = useState("");
     const [nextRules, setNextRules] = useState([]);
     const [nextHint, setNextHint] = useState(null);
     const [nextTaskType, setNextTaskType] = useState(0); // 0 translation, 1 gaps
@@ -178,8 +184,8 @@ export default function Trainer({
     }
 
     function resetToLoadingPlaceholders() {
-        setTaskText("Стягнення завдання…");
-        setHint("Стягнення нового завдання…");
+        setTaskText("Loading task…");
+        setHint("Loading new task…");
         setCorrectAnswer("");
         setWeakRules([]);
     }
@@ -213,6 +219,7 @@ export default function Trainer({
     function resetCurrentTaskOnly() {
         setTaskType("translate");
         setTextToTranslate("");
+        setTextToTranslateOriginal("");
         setGapSentence("");
         setGapOptions([]);
         setGapSelected(null);
@@ -250,6 +257,7 @@ export default function Trainer({
         // current task UI
         setTaskType("translate");
         setTextToTranslate("");
+        setTextToTranslateOriginal("");
         setGapSentence("");
         setGapOptions([]);
         setGapSelected(null);
@@ -262,6 +270,7 @@ export default function Trainer({
 
         // preload
         setNextTextToTranslate("");
+        setNextTextToTranslateOriginal("");
         setNextRules([]);
         setNextHint(null);
         setNextTaskType(0);
@@ -276,9 +285,10 @@ export default function Trainer({
     function applyTranslationTask(data) {
         setTaskType("translate");
         setTextToTranslate(data.textToTranslate || "");
+        setTextToTranslateOriginal(data.textToTranslateOriginal || "");
         setTaskText(data.textToTranslate || "—");
         setTaskHint(data.hint || null);
-        setHint("Порада: переклади і натисни «Перевірити»");
+        setHint("Tip: translate the sentence and press 'Check'.");
         setRules(data.rules || []);
         setAnswer("");
         setGapSelected(null);
@@ -300,7 +310,7 @@ export default function Trainer({
         setGapSelected(null);
         setTaskText(data.textToTranslate || "—");
         setTaskHint(null);
-        setHint("Порада: обери правильний варіант.");
+        setHint("Tip: select the correct option.");
         setRules(data.rules || []);
         setAnswer("");
         setCorrectAnswer("");
@@ -333,6 +343,7 @@ export default function Trainer({
                 skip,
                 taskType: "translations",
                 use_same_task_type: true,
+                userLocale: localizationService.getLocale()
             });
         }
 
@@ -376,6 +387,7 @@ export default function Trainer({
             skip,
             task_type,
             use_same_task_type,
+            userLocale: localizationService.getLocale(),
         });
 
         if (!result.allowed) {
@@ -432,6 +444,7 @@ export default function Trainer({
                     applyTranslationTask({
                         taskType: 0,
                         textToTranslate: nextTextToTranslate,
+                        textToTranslateOriginal: nextTextToTranslateOriginal,
                         rules: nextRules,
                         hint: nextHint,
                     });
@@ -439,6 +452,7 @@ export default function Trainer({
 
                 // consume preload
                 setNextTextToTranslate("");
+                setNextTextToTranslateOriginal("");
                 setNextRules([]);
                 setNextHint(null);
                 setNextTaskType(0);
@@ -465,11 +479,11 @@ export default function Trainer({
             taskType === "gap" ? String(gapSelected ?? "").trim() : answer.trim();
 
         if (taskType === "gap" && !gapSelected && gapSelected !== "") {
-            setHint("Обери варіант перед перевіркою.");
+            setHint("Select an option before checking.");
             return;
         }
         if (taskType !== "gap" && !userAns) {
-            setHint("Введи переклад перед перевіркою.");
+            setHint("Enter your translation before checking.");
             return;
         }
 
@@ -485,16 +499,18 @@ export default function Trainer({
             const data = await callTranslateAPI({
                 freeTraining,
                 textToTranslate: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
+                textToTranslateOriginal: taskType === "gap" ? (gapSentence || "") : (textToTranslateOriginal || ""),
                 translation: userAns,
                 rules,
                 seed,
                 skip,
                 task_type: currentTaskTypeParam,
                 use_same_task_type: getUseSameTaskType(),
+                userLocale: localizationService.getLocale(),
             });
 
             if (!data.isSuccess) {
-                setHint("Навчайся більше з підпискою, або почекай");
+                setHint("Continue learning with a subscription, or wait");
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
                 setLocked(true);
@@ -522,15 +538,14 @@ export default function Trainer({
             setTaskModeLocked(!!isCalibration);
 
             if (data.isAnswerCorrect) {
-                setHint("Правильно!");
+                setHint("Well done!");
                 setCorrectAnswer("");
             } else {
                 const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
-                setHint("Не зовсім вірно." + tip);
+                setHint(tip);
                 setCorrectAnswer(data.correctAnswer || "");
             }
 
-            // ✅ calibration: force next task type (ignore server)
             if (isCalibrationNow()) {
                 const forced = data.isAnswerCorrect ? 0 : 1;
                 setCalibrationNextTaskType(!gapsAvailable ? 0 : forced);
@@ -560,6 +575,7 @@ export default function Trainer({
             // During calibration you already prevent preloading below; kept as-is.
             if (!(await marathonService.isMarathonView()) && freeTraining && !(nextLevel === "managed" && isCalibration)) {
                 setNextTextToTranslate(data.textToTranslate || "");
+                setNextTextToTranslateOriginal(data.textToTranslateOriginal || "");
                 setNextRules(data.rules || []);
                 setNextHint(data.hint || null);
                 setNextTaskType(serverNextType);
@@ -567,6 +583,7 @@ export default function Trainer({
             } else {
                 // clear preload (either calibration or we don't preload here)
                 setNextTextToTranslate("");
+                setNextTextToTranslateOriginal("");
                 setNextRules([]);
                 setNextHint(null);
                 setNextTaskType(0);
@@ -677,20 +694,18 @@ export default function Trainer({
         await loadNewTask(difficulty, {overrideTaskType: forced});
     }
 
-    // -----------------------------
-    // Initial load when nextLevel changes
-    // -----------------------------
+    const loadedLevelRef = useRef(null);
+
     useEffect(() => {
-        if (nextLevel === level && !nextRule) return;
+        // skip if same level already initialized
+        if (loadedLevelRef.current === nextLevel && !nextRule) return;
 
-        if (level !== nextLevel) {
-            invalidateBothTasks();
-        }
+        loadedLevelRef.current = nextLevel;
 
+        invalidateBothTasks();
         setLevel(nextLevel);
-
-        initCalibration().then()
-    }, [nextLevel]);
+        initCalibration().then();
+    }, [nextLevel, nextRule]);
 
     const initCalibration = async () => {
         const diff = randomDifficulty(nextLevel);
@@ -742,12 +757,12 @@ export default function Trainer({
             fontWeight: 800,
             textAlign: "center"
         }}>
-            Ой, помилка :( <br/>
-            Напиши до{" "}
+            Oops, an error occurred :( <br/>
+            Write to{" "}
             <a style={{color: theme.accent, textDecoration: "none"}} href="mailto:goodlang.app@gmail.com">
                 goodlang.app@gmail.com
             </a>{" "}
-            і ми допоможемо.
+            and we will help you.
         </div>
     ) : (
         <section id="trainer" style={gridStyle}>
@@ -763,7 +778,9 @@ export default function Trainer({
                 answer={answer}
                 setAnswer={setAnswer}
                 isInputDisabled={loading || mode === "next"}
-                mainBtnText={mode === "check" ? "Перевірити" : "Наступне речення"}
+                mainBtnText={mode === "check"
+                    ? 'Check'
+                    : 'Next sentence'}
                 onMainButtonClick={onMainButtonClick}
                 loading={loading}
                 textareaRef={textareaRef}
@@ -790,23 +807,35 @@ export default function Trainer({
                 weakRules={weakRules}
             />
 
-            {/*<LimitModal*/}
-            {/*    waitTimeSeconds={waitTimeSeconds}*/}
-            {/*    isLimitReached={true}*/}
-            {/*    theme={theme}*/}
-            {/*    open={limitModalOpen}*/}
-            {/*    onClose={() => setLimitModalOpen(false)}*/}
-            {/*/>*/}
-
-            <MarathonInfoModal
+            <LimitModal
+                waitTimeSeconds={waitTimeSeconds}
+                isLimitReached={true}
+                theme={theme}
                 open={limitModalOpen}
                 onClose={() => setLimitModalOpen(false)}
-                theme={theme}
-                account={account}               // from callAccountInfoApi()
-                ruleIds={[]}         // exactly 7 items
             />
 
-            {cookieOpen && (
+            {/*<MarathonInfoModal*/}
+            {/*    open={limitModalOpen}*/}
+            {/*    onClose={() => setLimitModalOpen(false)}*/}
+            {/*    theme={theme}*/}
+            {/*    account={account}               // from callAccountInfoApi()*/}
+            {/*    ruleIds={[]}         // exactly 7 items*/}
+            {/*/>*/}
+
+
+            {termsOpen && (
+                <TermsOfUseModal
+                    readOnly
+                    theme={theme}
+                    onClose={() => {
+                        setTermsOpen(false);
+                        setCookieOpen(true);
+                    }}
+                />
+            )}
+
+            {cookieOpen && !termsOpen && (
                 <CookieConsentModal
                     theme={theme}
                     onAccept={async () => {
@@ -826,6 +855,11 @@ export default function Trainer({
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
                         await onMainButtonClick();
+                    }}
+                    onOpenPolicy={async () => {
+                        setCookieOpen(false);
+                        setTermsOpen(true);
+                        await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
                     }}
                 />
             )}

@@ -7,6 +7,7 @@ import FaqModal from "./subscription/FaqModal.jsx";
 import {callAccountVerifyApi} from "../services/api.js";
 import {ACTION_TYPES} from "../utils/constants.js";
 import {marathonService} from "../services/marathonService.js";
+import LocaleButton from "./LocaleButton.jsx";
 
 export default function Header({ theme, level, loading, onLevelChange }) {
     const [isMobile, setIsMobile] = useState(false);
@@ -92,7 +93,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
         },
         leftColumn: {
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "row",
             alignItems: "flex-end",
             gap: 8,
         },
@@ -160,6 +161,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
 
                     {/* LEFT column for buttons */}
                     <div style={styles.leftColumn}>
+                        <LocaleButton theme={theme} />
                         {
                             !isInMarathonView && isMarathonLoaded &&
                             <LevelSwitch
@@ -210,7 +212,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                             }}>FAQ</PrimaryButton>
                         </div>
                         <div style={styles.sub}>
-                            Перекладай, поки не вивчиш
+                            Translate until you learn it
                         </div>
                     </div>
                 </div>
@@ -242,7 +244,7 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                             theme={theme}
                         />
                     }
-
+                    <LocaleButton theme={theme} />
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>

@@ -5,10 +5,10 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 const PENALTY_FACTOR = 1.5; // can tweak to 1.3 / 2.0 later
 
 export const LEVEL_MAP_TO = {
-    A1: { label: "початкового", percent: 33 },
-    A2: { label: "середнього", percent: 66 },
-    B1: { label: "середнього", percent: 66 },
-    B2: { label: "просунутого", percent: 100 },
+    A1: { label: "beginner", percent: 33 },
+    A2: { label: "intermediate", percent: 66 },
+    B1: { label: "intermediate", percent: 66 },
+    B2: { label: "advanced", percent: 100 },
 };
 
 function computeRuleLearningDurations() {
@@ -176,7 +176,7 @@ export function getLearningState() {
     // 2) Поточний рівень та порядок рівнів
     const levelInfo = inferUserLevel();
 
-    const currentStepLevel = levelInfo?.level || "beginner";
+    const currentStepLevel = levelInfo?.level || "A1";
 
     const stepLevelsOrder = Object.keys(LEVEL_RULES || {}); // наприклад ["beginner","intermediate","advanced"]
     if (!stepLevelsOrder.length)
@@ -266,17 +266,14 @@ function pluralDays(n) {
     const mod10 = i % 10;
     const mod100 = i % 100;
 
-    if (i === 1) return "день";
-    if (mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14))
-        return "дні";
-    return "днів";
+    if (i === 1) return "day";
+    return "days";
 }
 
 function pluralWeeks(n) {
     const i = Math.floor(n);
-    if (i === 1) return "тиждень";
-    if (i >= 2 && i <= 4) return "тижні";
-    return "тижнів";
+    if (i === 1) return "week";
+    return "weeks";
 }
 
 export function estimateTimeToNextLevelText() {
@@ -289,21 +286,20 @@ export function estimateTimeToNextLevelText() {
     const totalAttempts = levelInfo.levels.reduce((acc, level) => acc + level.attempts, 0);
 
     if (totalAttempts < 40) {
-        return  { levelNameTo: LEVEL_MAP_TO[nextLevel]?.label, text: "Оцінка рівня - продовжуй практику" };
+        return  { levelNameTo: LEVEL_MAP_TO[nextLevel]?.label, text: "Level assessment — continue practicing" };
     }
 
     if (levelInfo.level === 'B2')
         return { text: null };
 
-    if (days === null) return { text: "Недостатньо даних для оцінки." };
-    if (days === Infinity) return { text: "Поки немає прогресу для підвищення рівня." };
-
+    if (days === null) return { text: "Not enough data to estimate." };
+    if (days === Infinity) return { text: "No progress yet to level up." };
     const d = Number(days);
 
     let text;
 
     if (d < 0.1) {
-        text = "менше ніж за день";
+        text = "less than a day";
     } else if (d < 1) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
@@ -313,10 +309,11 @@ export function estimateTimeToNextLevelText() {
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
         text = `${fmt} ${pluralDays(fmt)}`;
     } else if (d === 7) {
-        text = "тиждень";
+        text = "1 week";
     } else if (d % 7 === 0) {
-        text = `${d / 7} тижнів`;
-    } else if (d < 60) {
+        text = `${d / 7} weeks`;
+    }
+    else if (d < 60) {
         const fraction = d - Math.floor(d);
         const fmt = fraction < 0.1 ? d.toFixed(0) : d.toFixed(1);
         text = `${fmt} ${pluralDays(fmt)}`;
@@ -327,7 +324,7 @@ export function estimateTimeToNextLevelText() {
 
     return  {
         levelNameTo: LEVEL_MAP_TO[nextLevel].label,
-        text: `До ${LEVEL_MAP_TO[nextLevels[0]].label} рівня: ${text}.`
+        text: `To ${LEVEL_MAP_TO[nextLevel]?.label} level: ${text}.`
     };
 }
 

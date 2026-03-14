@@ -107,161 +107,161 @@
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PAST_SIMPLE"],
     "ua": "Було спекотно, тому ми пішли на пляж.",
     "en": ["It was hot, so we went to the beach."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PRESENT_CONT_NOW"],
     "ua": "Я голодний, тому я зараз обідаю.",
     "en": ["I am hungry, so I am having lunch."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PAST_SIMPLE"],
     "ua": "Я не мав грошей, тому не купив квиток.",
     "en": ["I didn’t have money, so I didn’t buy a ticket."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
     "ua": "Ми поспішали, тому йшли швидко.",
     "en": ["We were in a hurry, so we walked fast."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Вона пішла на роботу, хоча почувалася втомленою.",
     "en": ["She went to work although she felt tired."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Він зробив це, хоча не хотів.",
     "en": ["He did it although he didn’t want to."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Було пізно, тому він ліг спати.",
     "en": ["It was late, so he went to bed."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "WILL_PREDICTIONS"],
     "ua": "Сьогодні холодно, тому я вдягну шапку.",
     "en": ["It’s cold today, so I will wear a hat."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Я був втомлений, тому взяв вихідний.",
     "en": ["I was tired, so I took a day off."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Він дуже розумний, тому я йому довіряю.",
     "en": ["He is very smart, so I trust him."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Йшов дощ, тому ми залишилися всередині.",
     "en": ["It was raining, so we stayed inside."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PAST_SIMPLE"],
     "ua": "Я не поспішав, тому запізнився.",
     "en": ["I didn’t hurry, so I was late."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Ми не мали часу, тому ми не пішли.",
     "en": ["We didn’t have time, so we didn’t go."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Їжа була смачна, тому ми замовили ще.",
     "en": ["The food was delicious, so we ordered more."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Він не знав відповіді, тому запитав учителя.",
     "en": ["He didn’t know the answer, so he asked the teacher."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "MODALS_OF_PROBABILITY"],
     "ua": "Вона може запізнитися, тому ми підемо без неї.",
     "en": ["She might be late, so we will go without her."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Я хочу бути сильним, тому тренуюся щодня.",
     "en": ["I want to be strong, so I work out every day."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Завдання було легким, тому я зробив його швидко.",
     "en": ["The task was easy, so I finished it quickly."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Я пропустив сніданок, тому дуже голодний.",
     "en": ["I skipped breakfast, so I am very hungry."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PRESENT_CONT_NOW"],
     "ua": "Він спить, тому говори тихіше.",
     "en": ["He is sleeping, so speak more quietly."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "У нас не вистачає молока, тому я піду в магазин.",
     "en": ["We don’t have enough milk, so I will go to the shop."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PAST_SIMPLE"],
     "ua": "Ми не бачили автобус, тому пропустили його.",
     "en": ["We didn’t see the bus, so we missed it."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Вона дуже добра, тому мені подобається з нею працювати.",
     "en": ["She is very kind, so I like working with her."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "ADVERBS_OF_MANNER"],
     "ua": "Я не хочу шуміти, тому зачиняю двері повільно.",
     "en": ["I don’t want to make noise, so I close the door slowly."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Вони боялися, тому втекли.",
     "en": ["They were scared, so they ran away."],
-    "hint": "використовуй SO"
+    "hint": "use SO"
   },
 
   {
@@ -403,7 +403,7 @@
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча надворі холодно, ми гуляємо в парку.",
     "en": ["Although it’s cold, we are walking in the park."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
@@ -413,97 +413,97 @@
       "He is smiling although he is sad.",
       "Although he is sad, he is smiling."
     ],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PRESENT_SIMPLE_FREQ"],
     "ua": "Хоча я не люблю рибу, я її з’їв.",
     "en": ["Although I don’t like fish, I ate it."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Вона прийшла, хоча я її не запрошував.",
     "en": ["She came although I didn’t invite her."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PAST_SIMPLE"],
     "ua": "Хоча йшов дощ, ми все одно грали надворі.",
     "en": ["Although it was raining, we played outside."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Я купив диван, хоча він дорогий.",
     "en": ["I bought the sofa although it’s expensive."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PRESENT_SIMPLE_FREQ"],
     "ua": "Хоча вона не любить спорт, вона все одно бігає.",
     "en": ["Although she doesn’t like sport, she runs."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча ми втомлені, ми продовжуємо працювати.",
     "en": ["Although we are tired, we keep working."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча це складно, я все одно намагаюся.",
     "en": ["Although it’s difficult, I try."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча її англійська не ідеальна, вона говорить упевнено.",
     "en": ["Although her English isn’t perfect, she speaks."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча ми не дуже близькі, ми все одно друзі.",
     "en": ["Although we aren’t close, we are friends."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH", "PAST_SIMPLE"],
     "ua": "Хоча я був голодний, я дочекався всіх.",
     "en": ["Although I was hungry, I waited for everyone."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча я помилився, я продовжую вчитися.",
     "en": ["Although I made a mistake, I am learning."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча ми програли, це був гарний матч.",
     "en": ["Although we lost, it was a good match."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   },
 
   {
     "rules": ["BECAUSE_SO_BUT_ALTHOUGH"],
     "ua": "Хоча я боюся, я рухаюся вперед.",
     "en": ["Although I am afraid, I move forward."],
-    "hint": "використовуй ALTHOUGH"
+    "hint": "use ALTHOUGH"
   }
 ] }

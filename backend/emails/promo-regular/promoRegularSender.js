@@ -231,8 +231,8 @@ async function selectEligibleRecipients({ pool, letterId, batchSize = 50 }) {
               -- ✅ only NOT paid
               AND COALESCE(a.status, 'free') <> 'paid'
 
-              -- ✅ registered at least 12h ago AND not today (previous day)
-              AND a.created_at <= (NOW() - INTERVAL '12 hours')
+              -- ✅ registered at least 48h ago AND not today (previous day)
+              AND a.created_at <= (NOW() - INTERVAL '48 hours')
               AND a.created_at < DATE_TRUNC('day', NOW())
 
 --               -- ✅ account age <= 5 days
@@ -382,7 +382,7 @@ export async function runPromoRegularTick({
         if (promo.reused) reusedPromo++;
         else createdPromo++;
 
-        const subscribeUrl = `${process.env.FRONTEND_URL}?subscribe=true&code=${promo.promoCode}`;
+        const subscribeUrl = `${process.env.FRONTEND_URL}/trainer?subscribe=true&code=${promo.promoCode}`;
 
         const unsubscribeUrl =
             r.accountId

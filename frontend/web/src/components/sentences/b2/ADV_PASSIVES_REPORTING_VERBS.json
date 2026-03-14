@@ -6,7 +6,7 @@
       "He is said to live in London.",
       "It is said that he lives in London."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
@@ -15,7 +15,7 @@
       "The meeting is reported to take place tomorrow.",
       "It is reported that the meeting will take place tomorrow."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -24,7 +24,7 @@
       "She is believed to have a good education.",
       "It is believed that she has a good education."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -33,7 +33,7 @@
       "The project is expected to be completed next month.",
       "It is expected that the project will be completed next month."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -42,7 +42,7 @@
       "They are said to live in Warsaw.",
       "It is said that they live in Warsaw."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
@@ -51,7 +51,7 @@
       "The company is reported to have increased its profits.",
       "It is reported that the company has increased its profits."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -60,7 +60,7 @@
       "He is said to have been one of the best actors of his time.",
       "It is said that he was one of the best actors of his time."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -69,7 +69,7 @@
       "The book is thought to be very interesting.",
       "It is thought that the book is very interesting."
     ],
-    "hint": "використовуй “... thought to/that ...”"
+    "hint": "use “... thought to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
@@ -78,7 +78,7 @@
       "The team is expected to travel to Spain for training.",
       "It is expected that the team will travel to Spain for training."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -89,7 +89,7 @@
       "The actor is said to have appeared in a new film.",
       "It is said that the actor has appeared in a new film."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -98,7 +98,7 @@
       "She is said to have won the main prize.",
       "It is said that she won the main prize."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
@@ -107,7 +107,7 @@
       "The event is reported to be held next week.",
       "It is reported that the event will be held next week."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -116,7 +116,7 @@
       "The film is believed to have a deep meaning.",
       "It is believed that the film has a deep meaning."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -125,7 +125,7 @@
       "The construction is expected to be finished in December.",
       "It is expected that the construction will be finished in December."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -134,7 +134,7 @@
       "The singer is said to live in Paris.",
       "It is said that the singer lives in Paris."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
@@ -143,7 +143,7 @@
       "The government is reported to have changed its policy.",
       "It is reported that the government has changed its policy."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -152,7 +152,7 @@
       "The team is believed to be well-prepared.",
       "It is believed that the team is well-prepared."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -161,7 +161,7 @@
       "The movie is said to be very long.",
       "It is said that the movie is very long."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
@@ -170,7 +170,7 @@
       "The president is expected to travel to Italy on an official visit.",
       "It is expected that the president will travel to Italy on an official visit."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -179,7 +179,7 @@
       "The student is said to have written an excellent essay.",
       "It is said that the student has written an excellent essay."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -188,7 +188,7 @@
       "He is believed to be the best doctor in the city.",
       "It is believed that he is the best doctor in the city."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
@@ -197,7 +197,7 @@
       "The concert is reported to start at seven.",
       "It is reported that the concert will start at seven."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -206,7 +206,7 @@
       "The new law is expected to be passed tomorrow.",
       "It is expected that the new law will be passed tomorrow."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -215,7 +215,7 @@
       "The writer is said to live in a small town.",
       "It is said that the writer lives in a small town."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
@@ -224,7 +224,7 @@
       "The company is reported to have doubled its profits.",
       "It is reported that the company has doubled its profits."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -233,7 +233,7 @@
       "The task is thought to be too difficult.",
       "It is thought that the task is too difficult."
     ],
-    "hint": "використовуй “... thought to/that ...”"
+    "hint": "use “... thought to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -242,7 +242,7 @@
       "The actor is said to have appeared in a new series.",
       "It is said that the actor has appeared in a new series."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
@@ -251,7 +251,7 @@
       "The delegation is expected to leave for the USA.",
       "It is expected that the delegation will leave for the USA."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -260,7 +260,7 @@
       "The exhibition is reported to be held in the museum.",
       "It is reported that the exhibition will be held in the museum."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -269,7 +269,7 @@
       "She is said to have received an award for best role.",
       "It is said that she received an award for best role."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
@@ -278,7 +278,7 @@
       "The premiere is expected to take place next month.",
       "It is expected that the premiere will take place next month."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
@@ -287,7 +287,7 @@
       "The company is believed to have lost part of its investments.",
       "It is believed that the company has lost part of its investments."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -296,7 +296,7 @@
       "The decision is said to have been made last week.",
       "It is said that the decision was made last week."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -305,7 +305,7 @@
       "The scientist is reported to have discovered a new species of plants.",
       "It is reported that the scientist has discovered a new species of plants."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -314,7 +314,7 @@
       "He is believed to have helped many people.",
       "It is believed that he has helped many people."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -323,7 +323,7 @@
       "She is said to have left the country last year.",
       "It is said that she left the country last year."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -332,7 +332,7 @@
       "The new bridge is expected to be opened in April.",
       "It is expected that the new bridge will be opened in April."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -341,7 +341,7 @@
       "The conference is reported to be held in Berlin.",
       "It is reported that the conference will be held in Berlin."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -350,7 +350,7 @@
       "The song is believed to have become the hit of the year.",
       "It is believed that the song has become the hit of the year."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -359,7 +359,7 @@
       "The economy is expected to start recovering soon.",
       "It is expected that the economy will start recovering soon."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
@@ -368,7 +368,7 @@
       "The company is said to have changed its plans.",
       "It is said that the company has changed its plans."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -377,7 +377,7 @@
       "The project is thought to be very important for the country.",
       "It is thought that the project is very important for the country."
     ],
-    "hint": "використовуй “... thought to/that ...”"
+    "hint": "use “... thought to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
@@ -386,7 +386,7 @@
       "The movie is reported to be released this summer.",
       "It is reported that the movie will be released this summer."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -395,7 +395,7 @@
       "The actor is said to have won an Oscar for the leading role.",
       "It is said that the actor has won an Oscar for the leading role."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -404,7 +404,7 @@
       "The new program is expected to be launched soon.",
       "It is expected that the new program will be launched soon."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -413,7 +413,7 @@
       "The conference is reported to have been moved to London.",
       "It is reported that the conference has been moved to London."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
@@ -422,7 +422,7 @@
       "The company is said to be expanding its operations.",
       "It is said that the company is expanding its operations."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -431,7 +431,7 @@
       "The film is thought to be too long.",
       "It is thought that the film is too long."
     ],
-    "hint": "використовуй “... thought to/that ...”"
+    "hint": "use “... thought to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
@@ -440,7 +440,7 @@
       "The minister is expected to travel to the USA for negotiations.",
       "It is expected that the minister will travel to the USA for negotiations."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -449,7 +449,7 @@
       "The student is reported to have written an excellent paper.",
       "It is reported that the student has written an excellent paper."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -458,7 +458,7 @@
       "She is said to speak English well.",
       "It is said that she speaks English well."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
@@ -467,7 +467,7 @@
       "The results are expected to be published tomorrow.",
       "It is expected that the results will be published tomorrow."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -476,7 +476,7 @@
       "The building is believed to have been built in the 18th century.",
       "It is believed that the building was built in the 18th century."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -485,7 +485,7 @@
       "They are said to have finished the project.",
       "It is said that they have finished the project."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -494,7 +494,7 @@
       "The issue is thought to be very complicated.",
       "It is thought that the issue is very complicated."
     ],
-    "hint": "використовуй “... thought to/that ...”"
+    "hint": "use “... thought to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -503,7 +503,7 @@
       "The festival is expected to take place in the city center.",
       "It is expected that the festival will take place in the city center."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -512,7 +512,7 @@
       "She is said to be working on a new novel.",
       "It is said that she is working on a new novel."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -521,7 +521,7 @@
       "The new stadium is expected to be opened this summer.",
       "It is expected that the new stadium will be opened this summer."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -530,7 +530,7 @@
       "The company is reported to open an office in Prague.",
       "It is reported that the company will open an office in Prague."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -539,7 +539,7 @@
       "He is believed to be one of the best architects in the world.",
       "It is believed that he is one of the best architects in the world."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -548,7 +548,7 @@
       "The story is said to be very sad.",
       "It is said that the story is very sad."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_TIME"],
@@ -557,7 +557,7 @@
       "The meeting is expected to start at eight in the morning.",
       "It is expected that the meeting will start at eight in the morning."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -566,7 +566,7 @@
       "The scientist is reported to have received an important award.",
       "It is reported that the scientist has received an important award."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -575,7 +575,7 @@
       "The building is said to have been destroyed during the storm.",
       "It is said that the building was destroyed during the storm."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -584,7 +584,7 @@
       "The concert is expected to take place in the city’s main theatre.",
       "It is expected that the concert will take place in the city’s main theatre."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "POSSESSIVE_S"],
@@ -593,7 +593,7 @@
       "The company is reported to have lost part of its shares.",
       "It is reported that the company has lost part of its shares."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -602,7 +602,7 @@
       "The exercise is thought to be too difficult for beginners.",
       "It is thought that the exercise is too difficult for beginners."
     ],
-    "hint": "використовуй “... thought to/that ...”"
+    "hint": "use “... thought to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -611,7 +611,7 @@
       "The actress is said to live in an old house by the sea.",
       "It is said that the actress lives in an old house by the sea."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_DIRECTION"],
@@ -620,7 +620,7 @@
       "The team is expected to travel to Canada for the competition.",
       "It is expected that the team will travel to Canada for the competition."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -629,7 +629,7 @@
       "The writer is reported to have published a new book.",
       "It is reported that the writer has published a new book."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -638,7 +638,7 @@
       "The restaurant is said to be very popular among tourists.",
       "It is said that the restaurant is very popular among tourists."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -647,7 +647,7 @@
       "The school is expected to be opened in the fall.",
       "It is expected that the school will be opened in the fall."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -656,7 +656,7 @@
       "The festival is reported to take place in the main square.",
       "It is reported that the festival will take place in the main square."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -665,7 +665,7 @@
       "She is believed to have great influence in her field.",
       "It is believed that she has great influence in her field."
     ],
-    "hint": "використовуй “... believed to/that ...”"
+    "hint": "use “... believed to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS"],
@@ -674,7 +674,7 @@
       "She is said to have been promoted at work.",
       "It is said that she was promoted at work."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PASSIVE_VOICE_ALL_TENSES"],
@@ -683,7 +683,7 @@
       "The new airport is expected to be opened in July.",
       "It is expected that the new airport will be opened in July."
     ],
-    "hint": "використовуй “... expected to/that ...”"
+    "hint": "use “... expected to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "ARTICLES"],
@@ -692,7 +692,7 @@
       "The teacher is reported to have received an award for best teaching.",
       "It is reported that the teacher has received an award for best teaching."
     ],
-    "hint": "використовуй “... reported to/that ...”"
+    "hint": "use “... reported to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "PREP_PLACE"],
@@ -701,7 +701,7 @@
       "The writer is said to live in a small village.",
       "It is said that the writer lives in a small village."
     ],
-    "hint": "використовуй “... said to/that ...”"
+    "hint": "use “... said to/that ...”"
   },
   {
     "rules": ["ADV_PASSIVES_REPORTING_VERBS", "TOO_VERY"],
@@ -710,6 +710,6 @@
       "The course is thought to be very effective.",
       "It is thought that the course is very effective."
     ],
-    "hint": "використовуй “... thought to/that ...”"
+    "hint": "use “... thought to/that ...”"
   }
 ] }

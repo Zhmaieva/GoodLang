@@ -143,14 +143,14 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
     if (!rule) {
         return (
             <>
-                <div className="section-title">Правило для практики</div>
+                <div className="section-title">Rule for practice</div>
                 <div className="weak-list">
                     <div className="focus-card" style={cardStyle}>
                         <div className="focus-head" style={headStyle}>
-                            <strong style={titleStyle}>Немає правил у «червоній зоні» 🎉</strong>
+                            <strong style={titleStyle}>No rules in the “red zone” 🎉</strong>
                         </div>
                         <div className="focus-meta" style={metaStyle}>
-                            Продовжуй практику — система підсвітить правило, що потребує уваги, щойно воно зʼявиться.
+                            Keep practicing — the system will highlight a rule that needs attention as soon as one appears.
                         </div>
                     </div>
                 </div>
@@ -160,18 +160,18 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
 
     return (
         <>
-            <div className="section-title">Правило для практики</div>
+            <div className="section-title">Rule for practice</div>
             <div className="weak-list">
                 <div className="focus-card" style={cardStyle}>
                     <div className="focus-head" style={headStyle}>
                         <strong style={titleStyle}>{rule.ruleName}</strong>
                         <span className={"badge bad"} style={badgeStyle}>
-                            {accuracy}%
-                        </span>
+                        {accuracy}%
+                    </span>
                     </div>
 
                     <div className="focus-meta" style={metaStyle}>
-                        Спроб: {rule.attemptsNumber} • Остання практика: {fmtDate(rule.lastAttemptDate)}
+                        Attempts: {rule.attemptsNumber} • Last practice: {fmtDate(rule.lastAttemptDate)}
                     </div>
 
                     <div className="bar" style={sparkStyle}>
@@ -197,7 +197,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                                 window.open(url, "_blank", "noopener,noreferrer");
                             }}
                         >
-                            Пояснення правила
+                            Rule explanation
                         </button>
                     </div>
 

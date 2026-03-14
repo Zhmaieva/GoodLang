@@ -221,31 +221,31 @@ export default function AccountStatusButton({ theme }) {
                 style={btnStyle}
                 onClick={handleClick}
             >
-                {account?.status === "paid" && "Моя підписка"}
-                {account?.status === "attention" && "Підписка (увага)"}
-                {account?.status === "free" && account?.email && "Марафон"}
-                {account?.status === "free" && !account?.email && "Увійти"}
+                {account?.status === "paid" && "My subscription"}
+                {account?.status === "attention" && "Subscription (expiring)"}
+                {account?.status === "free" && account?.email && "Get more practice"}
+                {account?.status === "free" && !account?.email && "Subscribe / Sign in"}
             </div>
 
 
             {
-                // account && <LimitModal
-                //     featurePdf={localStorage.getItem("teacher") === "true"}
-                //     subscribeIntent={subscribeIntent}
-                //     accountInfo={account}
-                //     isLimitReached={false}
-                //     theme={theme}
-                //     open={limitModalOpen}
-                //     onClose={() => setLimitModalOpen(false)}
-                // />
-
-                account && <MarathonInfoModal
+                account && <LimitModal
+                    featurePdf={localStorage.getItem("teacher") === "true"}
+                    subscribeIntent={subscribeIntent}
+                    accountInfo={account}
+                    isLimitReached={false}
+                    theme={theme}
                     open={limitModalOpen}
                     onClose={() => setLimitModalOpen(false)}
-                    theme={theme}
-                    account={account}               // from callAccountInfoApi()
-                    ruleIds={[]}         // exactly 7 items
                 />
+
+                // account && <MarathonInfoModal
+                //     open={limitModalOpen}
+                //     onClose={() => setLimitModalOpen(false)}
+                //     theme={theme}
+                //     account={account}               // from callAccountInfoApi()
+                //     ruleIds={[]}         // exactly 7 items
+                // />
             }
 
             {

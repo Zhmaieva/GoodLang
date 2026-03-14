@@ -133,12 +133,12 @@ import {WorkOnAssignmentPage} from "./components/dashboard/assignments/student/a
 import {MyAssignmentsPage} from "./components/dashboard/assignments/student/assignments/MyAssignmentsPage.jsx";
 import StudentDashboardLayout from "./components/dashboard/navigation/StudentDashboardLayout.jsx";
 import {StudentProfilePage} from "./components/dashboard/assignments/student/profile/StudentProfilePage.jsx";
-import {RootRedirect} from "./components/routing/RootRedirect.jsx";
 import {CreateVocabFillGapsPage} from "./components/dashboard/assignments/create/CreateVocabFillGapsPage.jsx";
 import {CreateMatchDefinitionsPage} from "./components/dashboard/assignments/create/CreateMatchDefinitionsPage.jsx";
 import {CreateTextPlusABCDquestions} from "./components/dashboard/assignments/create/CreateTextPlusABCDquestions.jsx";
 import {CreateEssayPage} from "./components/dashboard/assignments/create/CreateEssayPage.jsx";
 import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
+import GoodLangLandingTeaStyleThemed from "./components/pages/LandingPage2.jsx";
 
 // theme.js
 export const theme = themeStyles;
@@ -199,11 +199,11 @@ export default function App() {
                 {/* Landing pages */}
                 <Route path="/welcome" element={<GoodLangSchoolsLanding2 theme={legacyGlobalStyling} />} />
                 <Route path="/greetings" element={<LandingPage3 theme={legacyGlobalStyling} />} />
-                <Route path="/hello" element={<LandingPageTeacher theme={legacyGlobalStyling} />} />
+                <Route path="/hello" element={<GoodLangLandingTeaStyleThemed theme={legacyGlobalStyling} />} />
                 <Route path="/marathon" element={<LandingPageMarathon theme={legacyGlobalStyling} />} />
 
                 {/* Core pages */}
-                <Route path="/" element={<RootRedirect />} />
+                <Route path="/" element={<HomePage theme={legacyGlobalStyling} />} />
                 <Route path="/trainer" element={<HomePage theme={legacyGlobalStyling} />} />
                 <Route path="/crossword" element={<LandingCrossword theme={legacyGlobalStyling} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={legacyGlobalStyling} />} />

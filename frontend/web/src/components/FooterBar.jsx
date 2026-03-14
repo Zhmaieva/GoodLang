@@ -27,7 +27,7 @@ export default function FooterBar({theme}) {
                         fontSize: "1rem",
                         alignSelf: "center",
                         textAlign: "center"
-                    }}>© 2025-2026 GoodLang • <a style={{
+                    }}>© 2026 GoodLang • <a style={{
                         color: "#ff6138",
                         textDecoration: "none",
                     }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
@@ -40,7 +40,7 @@ export default function FooterBar({theme}) {
                             fontSize: "1rem",
                             color: "#ff6138",
                             textDecoration: "none",
-                        }} href="#">Умови використання і політика приватності</a>
+                        }} href="#">Terms of Use and Privacy Policy</a>
                 </div>
             </footer>
             {touOpen && (

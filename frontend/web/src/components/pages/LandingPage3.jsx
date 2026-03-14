@@ -52,7 +52,7 @@ export default function LandingPage3({theme}) {
         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_START_USING);
 
         setTimeout(() => {
-            navigate("/");
+            navigate("/trainer");
         }, 200);
     }
 
@@ -695,13 +695,12 @@ export default function LandingPage3({theme}) {
                 <div className="left">
                     <div className="textBlock">
                         <h1 className="title">
-                            Оціни свій рівень <br/>
-                            англійської <br/>
-                            безкоштовно <br/>
-                            за 3 хвилини <br/>
-                            <em>І почни</em><br/>
-                            <em>розмовляти</em><br/>
-                            <em>правильно</em><br/>
+                            Check your English <br/>
+                            level for free <br/>
+                            in just 3 minutes <br/>
+                            <em>And start</em><br/>
+                            <em>speaking</em><br/>
+                            <em>with confidence</em><br/>
                         </h1>
                     </div>
                 </div>
@@ -714,7 +713,7 @@ export default function LandingPage3({theme}) {
                                 document.getElementById("approach")?.scrollIntoView({behavior: "smooth"});
                             }}
                         >
-                            наш підхід
+                            Our approach
                         </button>
 
                         <button
@@ -723,7 +722,7 @@ export default function LandingPage3({theme}) {
                                 document.getElementById("testimonials")?.scrollIntoView({behavior: "smooth"});
                             }}
                         >
-                            відгуки
+                            Testimonials
                         </button>
 
                         <button
@@ -732,7 +731,7 @@ export default function LandingPage3({theme}) {
                                 document.getElementById("join")?.scrollIntoView({behavior: "smooth"});
                             }}
                         >
-                            приєднатися
+                            Join
                         </button>
                     </div>
 
@@ -741,7 +740,7 @@ export default function LandingPage3({theme}) {
                             onClick={startUsing}
                             className="cta"
                         >
-                            почати зараз
+                            Start now
                         </button>
                         <img src={handPict} alt="" className="hand"/>
                     </div>
@@ -756,20 +755,28 @@ export default function LandingPage3({theme}) {
                 <div className="featuresInner">
                     <div className="featureCard">
                         <img src={hand3} className="featureIcon"/>
-                        <div className="featureTitle">Переклад</div>
-                        <p className="featureText">Перекладай речення з<br/>української на англійську</p>
+                        <div className="featureTitle">Translation</div>
+                        <p className="featureText">
+                            Translate sentences from your native language
+                        </p>
                     </div>
 
                     <div className="featureCard">
                         <img src={hand1} className="featureIcon"/>
-                        <div className="featureTitle">Фідбек</div>
-                        <p className="featureText">Дізнайся, де саме ти помилився,<br/>з поясненням і прикладами</p>
+                        <div className="featureTitle">Feedback</div>
+                        <p className="featureText">
+                            See exactly where you made a mistake,<br/>
+                            with explanations and examples
+                        </p>
                     </div>
 
                     <div className="featureCard">
                         <img src={hand2} className="featureIcon"/>
-                        <div className="featureTitle">Нове речення</div>
-                        <p className="featureText">Наступне речення підібране<br/>з урахуванням твого рівня</p>
+                        <div className="featureTitle">Next sentence</div>
+                        <p className="featureText">
+                            The next sentence is selected<br/>
+                            based on your level
+                        </p>
                     </div>
                 </div>
             </section>
@@ -781,34 +788,33 @@ export default function LandingPage3({theme}) {
                 <div className="testimonialsInner">
                     <div className="testimonialCard isLeft">
                         <div className="tHead">
-                            <div className="avatar">І</div>
-                            <div className="tName">Іванна</div>
+                            <div className="avatar">I</div>
+                            <div className="tName">Ivanna</div>
                         </div>
                         <p className="tQuote">
-                            <em>"Мені не вистачає занять з репетитором. А з GoodLang я додатково практикуюся
-                                самостійно."</em>
+                            <em>"My tutor lessons aren’t enough, so I practice more with GoodLang on my own."</em>
                         </p>
                     </div>
 
                     <div className="testimonialCard isCenter">
                         <div className="tHead">
-                            <div className="avatar">В</div>
-                            <div className="tName">Влад</div>
+                            <div className="avatar">V</div>
+                            <div className="tName">Vlad</div>
                         </div>
                         <p className="tQuote">
-                            <em>"Займаюся щодня по дорозі на роботу. Не маю часу на репетитора, GoodLang дає фідбек і
-                                розуміння, що практикувати."</em>
+                            <em>"I practice every day on my way to work. I don’t have time for a tutor, but GoodLang
+                                gives me feedback and spotlights gaps."</em>
                         </p>
                     </div>
 
                     <div className="testimonialCard isRight">
                         <div className="tHead">
-                            <div className="avatar">М</div>
-                            <div className="tName">Максим</div>
+                            <div className="avatar">M</div>
+                            <div className="tName">Maxim</div>
                         </div>
                         <p className="tQuote">
-                            <em>"Подобається, бо переклад — складно, але дуже ефективно. Використовував GoodLang для
-                                підготовки до IELTS."</em>
+                            <em>"I like it because translation is difficult but very effective. I used GoodLang to
+                                prepare for IELTS."</em>
                         </p>
                     </div>
                 </div>
@@ -820,54 +826,14 @@ export default function LandingPage3({theme}) {
                 <div className="ctaInner">
                     <div className="ctaContent">
                         <h2 className="ctaTitle">
-                            Приєднуйся до <em>GoodLang</em> вже сьогодні
+                            Start improving your English with <em>GoodLang</em> today
                         </h2>
 
                         <div className="ctaButtons">
                             <button onClick={startUsing} className="primaryBtn">
-                                Почни вчитися зараз — без реєстрації
+                                Start learning now — no sign-up required
                             </button>
                         </div>
-
-                        {/*<div className="promoRow">*/}
-                        {/*    <div style={{flex: 1, display: "flex", flexDirection: "column", gap: 6}}>*/}
-                        {/*        <input*/}
-                        {/*            type="email"*/}
-                        {/*            placeholder="Введи email для промокоду"*/}
-                        {/*            className="emailInput"*/}
-                        {/*            value={email}*/}
-                        {/*            onChange={(e) => setEmail(e.target.value)}*/}
-                        {/*            inputMode="email"*/}
-                        {/*            onKeyDown={async (e) => {*/}
-                        {/*                if (e.key === "Enter") {*/}
-                        {/*                    e.preventDefault();*/}
-                        {/*                    await submitEmail();*/}
-                        {/*                }*/}
-                        {/*            }}*/}
-                        {/*            disabled={sending}*/}
-                        {/*        />*/}
-
-                        {/*        {msg ? (*/}
-                        {/*            <p style={{*/}
-                        {/*                margin: 0,*/}
-                        {/*                fontFamily: "Nunito",*/}
-                        {/*                fontWeight: 800,*/}
-                        {/*                fontSize: 13,*/}
-                        {/*                opacity: 0.9*/}
-                        {/*            }}>*/}
-                        {/*                {msg}*/}
-                        {/*            </p>*/}
-                        {/*        ) : null}*/}
-                        {/*    </div>*/}
-
-                        {/*    <button*/}
-                        {/*        onClick={submitEmail}*/}
-                        {/*        className="secondaryBtn"*/}
-                        {/*        disabled={sending}*/}
-                        {/*    >*/}
-                        {/*        {sending ? "Відправляю..." : "Отримати промокод"}*/}
-                        {/*    </button>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </section>
@@ -875,14 +841,15 @@ export default function LandingPage3({theme}) {
             <footer className="footer">
                 <div className="footerInner">
                     <div className="footerLeft">
-                        © 2025–2026 GoodLang • <a className="plainLink" href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
+                        © 2025–2026 GoodLang • <a className="plainLink"
+                                                  href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
                     </div>
 
                     <div
                         className="footerLink"
                         onClick={() => setTouOpen(true)}
                     >
-                        Умови використання і політика приватності
+                        Terms of Use and Privacy Policy
                     </div>
                 </div>
             </footer>

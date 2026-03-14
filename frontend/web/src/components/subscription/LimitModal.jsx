@@ -118,8 +118,7 @@ export default function LimitModal({
 
     function formatMoneyUAH(n) {
         const v = Number(n);
-        if (!Number.isFinite(v)) return "₴149.99";
-        return `₴${v.toFixed(2)}`;
+        return `$${v.toFixed(2)}`;
     }
 
     function hoursLeftFromExpiration(expirationDate) {
@@ -133,10 +132,10 @@ export default function LimitModal({
         const mod10 = n % 10;
         const mod100 = n % 100;
 
-        if (mod100 >= 11 && mod100 <= 14) return "годин";
-        if (mod10 === 1) return "годину";
-        if (mod10 >= 2 && mod10 <= 4) return "години";
-        return "годин";
+        if (mod100 >= 11 && mod100 <= 14) return "hours";
+        if (mod10 === 1) return "hour";
+        if (mod10 >= 2 && mod10 <= 4) return "hours";
+        return "hours";
     }
 
     const computeImprovePct = (skill) => {
@@ -191,9 +190,9 @@ export default function LimitModal({
 
     const promo = account?.promo ?? null;
 
-    const basePrice = promo?.originalPrice ?? 149.99;
-    const finalPrice = promo?.discountedPrice ?? (149.99 * 0.9);
-    const percent = promo?.discountPercentage ?? 10;
+    const basePrice = promo?.originalPrice;
+    const finalPrice = promo?.discountedPrice;
+    const percent = promo?.discountPercentage;
 
     const hoursLeft = promo?.expirationDate ? hoursLeftFromExpiration(promo.expirationDate) : null;
     const hoursWord = hoursLeft != null ? pluralizeHoursUk(hoursLeft) : null;
@@ -206,7 +205,8 @@ export default function LimitModal({
                         style={{
                             position: "fixed",
                             inset: 0,
-                            background: "rgba(0,0,0,0.35)",
+                            backdropFilter: "blur(6px)",
+                            WebkitBackdropFilter: "blur(6px)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -301,7 +301,7 @@ export default function LimitModal({
                                             fontSize: "1.5rem",
                                             fontWeight: 700
                                         }}>
-                                            Ти прокачаєш знання на <strong>+{improvePct}%</strong> за тиждень
+                                            Improve your knowledge by <strong>+{improvePct}%</strong> in just one week
 
                                             <span style={{ position: "relative" }}>
                                                 <h2
@@ -327,7 +327,7 @@ export default function LimitModal({
                                                         lineHeight: 1,
                                                         userSelect: "none",
                                                     }}
-                                                    aria-label="Інформація"
+                                                    aria-label="Info"
                                                 >
                                                     ⓘ
                                                 </h2>
@@ -356,7 +356,7 @@ export default function LimitModal({
                                                             setShowInfo((v) => !v);
                                                         }}
                                                     >
-                                                        Регулярно тренуючись - прогнозований результат згідно нашої статистики
+                                                        With regular practice — the predicted result according to our statistics.
                                                     </div>
                                                 )}
                                             </span>
@@ -372,7 +372,7 @@ export default function LimitModal({
                                             fontSize: "1.5rem",
                                             fontWeight: 800
                                         }}>
-                                            {"Усі навчальні матеріали"}
+                                            {"All learning tools"}
                                         </h2>
                                     )}
 
@@ -384,10 +384,10 @@ export default function LimitModal({
                                         fontSize: "1rem",
                                         textAlign: "left"
                                     }}>
-                                        {hasEnoughEval && improvePct ? "З підпискою " : "Підписка "}
-                                        {!promo && <strong>₴149.99 / місяць</strong>}
+                                        {hasEnoughEval && improvePct ? "With a subscription " : "Subscription "}
+                                        {!(promo?.discountPercentage > 0) && <strong>{formatMoneyUAH(finalPrice)} / month</strong>}
 
-                                        {promo && (
+                                        {promo?.discountPercentage > 0 && (
                                             <>
                                                 <span style={{
                                                     textDecoration: "line-through",
@@ -398,7 +398,7 @@ export default function LimitModal({
                                                     {formatMoneyUAH(basePrice)}
                                                 </span>
                                                 <br/>
-                                                <strong>−{percent}%: {formatMoneyUAH(finalPrice)} / місяць</strong>
+                                                <strong>−{percent}%: {formatMoneyUAH(finalPrice)} / month</strong>
 
                                                 {hoursLeft != null && (
                                                     <span style={{
@@ -409,7 +409,7 @@ export default function LimitModal({
                                                         fontSize: "0.95rem",
                                                         fontWeight: 700
                                                     }}>
-                                                        Пропозиція діятиме ще {hoursLeft} {hoursWord}
+                                                        The offer expires in {hoursLeft} {hoursWord}
                                                     </span>
                                                 )}
                                             </>
@@ -458,7 +458,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Пріоритетна підтримка
+                                                Priority support
                                             </li>
 
                                             <li>
@@ -467,7 +467,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Тренуйся скільки завгодно
+                                                Unlimited training
                                             </li>
                                             <li>
                                                 <span style={{
@@ -475,7 +475,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Хмарне збереження прогресу
+                                                Cloud progress saving
                                             </li>
 
                                             <li>
@@ -484,7 +484,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Можеш завжди скасувати
+                                                Cancel anytime
                                             </li>
                                         </>
                                     )}
@@ -497,7 +497,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Тренуйся скільки завгодно
+                                                Unlimited training
                                             </li>
 
                                             <li>
@@ -506,7 +506,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Хмарне збереження прогресу
+                                                Cloud progress saving
                                             </li>
 
                                             <li>
@@ -515,7 +515,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Пріоритетна підтримка
+                                                Priority support
                                             </li>
 
                                             {/*<li>*/}
@@ -533,7 +533,7 @@ export default function LimitModal({
                                                     color: theme.accent,
                                                     fontWeight: 700
                                                 }}>✓</span>
-                                                Можеш завжди скасувати
+                                                Cancel anytime
                                             </li>
                                         </>
                                     )}
@@ -567,7 +567,7 @@ export default function LimitModal({
                                     width: "100%",
                                 }}
                             >
-                                {loading ? "Стягнення…" : "Хочу марафон"}
+                                {loading ? "Loading…" : "Subscribe"}
                             </button>
 
                                 <button
@@ -599,29 +599,29 @@ export default function LimitModal({
                                         width: "100%",
                                     }}
                                 >
-                                    {account?.email ? "Увійти в інший аккаунт" : "Увійти або зареєструватися"}
+                                    {account?.email ? "Sign in with another account" : "Sign in or sign up"}
                                 </button>
                             </div>
 
-                            {/*{(!account?.email) && !featurePdf && (*/}
-                            {/*    <div*/}
-                            {/*        style={{*/}
-                            {/*            marginLeft: 0,*/}
-                            {/*            marginTop: 12,*/}
-                            {/*            marginBottom: 0,*/}
-                            {/*            fontSize: "0.95rem",*/}
-                            {/*            fontWeight: 700,*/}
-                            {/*            color: theme.text,*/}
-                            {/*            letterSpacing: "0.5px",*/}
-                            {/*            width: "100%",*/}
-                            {/*            opacity: 0.5,*/}
-                            {/*            display: "inline-block",*/}
-                            {/*            textAlign: "center"*/}
-                            {/*        }}*/}
-                            {/*    >*/}
-                            {/*        На 60% більше завдань щодня для зареєстрованих користувачів*/}
-                            {/*    </div>*/}
-                            {/*)}*/}
+                            {(!account?.email) && !featurePdf && (
+                                <div
+                                    style={{
+                                        marginLeft: 0,
+                                        marginTop: 12,
+                                        marginBottom: 0,
+                                        fontSize: "0.95rem",
+                                        fontWeight: 700,
+                                        color: theme.text,
+                                        letterSpacing: "0.5px",
+                                        width: "100%",
+                                        opacity: 0.5,
+                                        display: "inline-block",
+                                        textAlign: "center"
+                                    }}
+                                >
+                                    +60% more daily tasks for registered users
+                                </div>
+                            )}
                         </div>
 
                         <div

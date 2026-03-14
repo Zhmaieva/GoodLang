@@ -18,6 +18,8 @@ import { getPdfDownloads, setPdfDownloads } from "../../services/dataService.js"
 
 // ✅ Pdf type modal
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
+import {featureToggleService} from "../../services/featureToggleService.js";
+import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -26,6 +28,7 @@ export default function RulePage({ data, theme }) {
     const [hover, setHover] = useState(null);
     const [isDownloading, setIsDownloading] = useState(false);
     const [cookieOpen, setCookieOpen] = useState(false);
+    const [touOpen, setTouOpen] = useState(false);
 
     // ✅ PdfType modal state (same pattern as RulesTable)
     const [pdfTypeModalOpen, setPdfTypeModalOpen] = useState(false);
@@ -316,6 +319,7 @@ export default function RulePage({ data, theme }) {
                                 style={{
                                     appearance: "none",
                                     padding: "10px 14px",
+                                    display: featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION) ? 'none' : "flex",
                                     fontWeight: 800,
                                     fontSize: "0.95rem",
                                     lineHeight: 1,
@@ -356,7 +360,7 @@ export default function RulePage({ data, theme }) {
                                         }}
                                     />
 
-                                    <div>{!isDownloading ? "Роздрукувати завдання" : "Готую документ..."}</div>
+                                    <div>{!isDownloading ? "Print tasks" : "Preparing document..."}</div>
                                 </div>
                             </button>
 
@@ -382,7 +386,7 @@ export default function RulePage({ data, theme }) {
                                 }}
                                 onClick={handleAnalyticsClick}
                             >
-                                ← До списку правил
+                                ← Back to rules
                             </button>
                         </>
                     }
@@ -422,7 +426,18 @@ export default function RulePage({ data, theme }) {
                 }}
             />
 
-            {cookieOpen && (
+            {touOpen && (
+                <TermsOfUseModal
+                    readOnly
+                    theme={theme}
+                    onClose={() => {
+                        setTouOpen(false);
+                        setCookieOpen(true);
+                    }}
+                />
+            )}
+
+            {cookieOpen && !touOpen && (
                 <CookieConsentModal
                     theme={theme}
                     onAccept={async () => {
@@ -442,6 +457,11 @@ export default function RulePage({ data, theme }) {
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
 
                         if (goToAnalytics) await handleAnalyticsClick();
+                    }}
+                    onOpenPolicy={async () => {
+                        setCookieOpen(false);
+                        setTouOpen(true);
+                        await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
                     }}
                 />
             )}

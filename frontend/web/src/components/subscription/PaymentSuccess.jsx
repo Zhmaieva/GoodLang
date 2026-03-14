@@ -152,7 +152,7 @@ export default function PaymentSuccess() {
                     <button
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
-                        onClick={() => navigate("/")}
+                        onClick={() => navigate("/trainer")}
                         style={buttonStyle}
                     >
                         {isMarathon ? "До марафону" : "До тренажера"}

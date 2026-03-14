@@ -68,7 +68,7 @@ export default function TaskModeSwitch({
         };
     }, [tipOpen]);
 
-    const lockedTooltipText = "Обирай формат завдань після оцінки рівня";
+    const lockedTooltipText = "Choose task format after the level assessment";
 
     const iconBase = {
         width: 12, // layout box stays small
@@ -155,9 +155,9 @@ export default function TaskModeSwitch({
     };
 
     const options = [
-        { value: "translations", label: "лише переклад" },
-        { value: "gaps", label: "лише «обери варіант»" },
-        { value: "combined", label: "всі" },
+        { value: "translations", label: "Translation only" },
+        { value: "gaps", label: "Multiple choice only" },
+        { value: "combined", label: "All" },
     ];
 
     const selectedOption = options.find((o) => o.value === taskMode) ?? options[2];
@@ -188,9 +188,9 @@ export default function TaskModeSwitch({
     const visibleOptions = expanded ? options : [selectedOption];
 
     const getLabel = (label) => {
-        if (!compact) return !expanded ? `Завдання: ${label}` : label;
+        if (!compact) return !expanded ? `Tasks: ${label}` : label;
         if (expanded) return label;
-        if (label === "всі") return "Всі завдання";
+        if (label === "all") return "All tasks";
         return label;
     };
 

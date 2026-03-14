@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
     callAccountInfoApi,
-    callAccountVerifyApi,
+    callAccountVerifyApi, callCheckoutApi,
     callDataSyncApi,
     callSendCodeApi,
     callVerifyCodeApi
 } from "../../services/api.js";
 import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import { logoStyle } from "./LimitModal.jsx";
+import {getStripe, logoStyle} from "./LimitModal.jsx";
 import { useNavigate } from "react-router-dom";
 import { logError } from "../../services/logger.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
@@ -15,6 +15,8 @@ import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/s
 import { ensureAnalytics, trackMetaCustomEvent, trackPageView } from "../../services/gaService.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
 import {enableBodyScroll, disableBodyScroll} from 'body-scroll-lock';
+import {localizationService} from "../../localization/localizationService.js";
+import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 
 export default function LoginForm({
                                       theme,
@@ -27,11 +29,12 @@ export default function LoginForm({
     const [emailInput, setEmailInput] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
-    const [termsOpen, setTermsOpen] = useState(false);
     const [error, setError] = useState("");
     const [isMobile, setIsMobile] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
     const [cookieOpen, setCookieOpen] = useState(false);
+    const [termsOpen, setTermsOpen] = useState(false);
+    const [termsReadOnly, setTermsReadOnly] = useState(false);
 
     // hover for Trainer-style button
     const [btnHover, setBtnHover] = useState(false);
@@ -172,18 +175,18 @@ export default function LoginForm({
     async function handleEmailSubmit(e) {
         e.preventDefault();
         if (!emailInput) {
-            setError("Імейл не може бути пустим");
+            setError("Email cannot be empty");
             return;
         }
 
         if (emailInput.trim().toLowerCase() === account?.email) {
-            setError("Ти вже увійшов під цим імейлом");
+            setError("You are already signed in with this email");
             return;
         }
 
         const v = String(emailInput.trim().toLowerCase() || "");
         if (!/^\S+@\S+\.\S+$/.test(v)) {
-            setError("Введіть правильний імейл");
+            setError("Enter a valid email");
             return;
         }
 
@@ -193,7 +196,7 @@ export default function LoginForm({
             await callSendCodeApi({ email: emailInput });
             setStep("code");
         } catch (err) {
-            setError(err?.message || "Не вдалося відправити код");
+            setError(err?.message || "Failed to send the code");
         } finally {
             setLoading(false);
         }
@@ -311,45 +314,51 @@ export default function LoginForm({
 
             const newAccount = await callAccountInfoApi();
 
+            const savedLocale = localizationService.getLocale();
+
             if (oldAccount?.email && oldAccount?.status !== "free") {
                 localStorage.clear();
                 localStorage.setItem("token", token);
+
+                if (savedLocale) {
+                    localizationService.setLocale(savedLocale);
+                }
             }
 
             if (newAccount?.status !== "free")
                 await syncData();
 
-            // if (newAccount?.status === "free" && getPaymentIntent()) {
-            //     setPaymentIntent(false);
-            //     try {
-            //         setLoading(true);
-            //
-            //         const stripe = await getStripe();
-            //
-            //         const { clientSecret, isSuccess } = await callCheckoutApi();
-            //         if (!isSuccess) {
-            //             navigate("/payment/cancel");
-            //             setLoading(false);
-            //             return;
-            //         }
-            //
-            //         setIsPaying(true);
-            //
-            //         setTimeout(async () => {
-            //             if (!checkoutRef.current) {
-            //                 checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
-            //                 checkoutRef.current.mount("#embedded-checkout-container-login-form");
-            //             }
-            //
-            //             document.getElementById("embedded-checkout-container-login-form").style.display = "block";
-            //             setLoading(false);
-            //         }, 200);
-            //     } catch (err) {
-            //         console.error("Stripe error:", err);
-            //         setLoading(false);
-            //     }
-            //     return;
-            // }
+            if (newAccount?.status === "free" && getPaymentIntent()) {
+                setPaymentIntent(false);
+                try {
+                    setLoading(true);
+
+                    const stripe = await getStripe();
+
+                    const { clientSecret, isSuccess } = await callCheckoutApi();
+                    if (!isSuccess) {
+                        navigate("/payment/cancel");
+                        setLoading(false);
+                        return;
+                    }
+
+                    setIsPaying(true);
+
+                    setTimeout(async () => {
+                        if (!checkoutRef.current) {
+                            checkoutRef.current = await stripe.initEmbeddedCheckout({ clientSecret });
+                            checkoutRef.current.mount("#embedded-checkout-container-login-form");
+                        }
+
+                        document.getElementById("embedded-checkout-container-login-form").style.display = "block";
+                        setLoading(false);
+                    }, 200);
+                } catch (err) {
+                    console.error("Stripe error:", err);
+                    setLoading(false);
+                }
+                return;
+            }
 
             if (!getCookieConsent()) {
                 setCookieOpen(true);
@@ -362,7 +371,7 @@ export default function LoginForm({
             unlockScroll()
             onClose();
         } catch (err) {
-            setError("Невірний код");
+            setError("Invalid code");
         } finally {
             setLoading(false);
         }
@@ -477,7 +486,7 @@ export default function LoginForm({
                                                         fontWeight: 800,
                                                     }}
                                                 >
-                                                    Введи свій імейл
+                                                    Enter your email
                                                 </h2>
                                                 <p
                                                     style={{
@@ -491,7 +500,7 @@ export default function LoginForm({
                                                         textAlign: "left",
                                                     }}
                                                 >
-                                                    На пошту надійде підтвердження
+                                                    You’ll receive a confirmation email
                                                 </p>
                                             </div>
 
@@ -531,7 +540,7 @@ export default function LoginForm({
                                             onClick={handleEmailSubmit}
                                             disabled={loading}
                                         >
-                                            {loading ? "Відправляю..." : "Підтвердити"}
+                                            {loading ? "Sending..." : "Confirm"}
                                         </button>
                                     </>
                                 )}
@@ -585,7 +594,7 @@ export default function LoginForm({
                                                         fontWeight: 800,
                                                     }}
                                                 >
-                                                    Введи код з імейлу
+                                                    Enter the code from your email
                                                 </h2>
                                                 <p
                                                     style={{
@@ -601,7 +610,7 @@ export default function LoginForm({
                                                         opacity: .7,
                                                     }}
                                                 >
-                                                    Відправлено на: {emailInput}
+                                                    Code sent to: {emailInput}
                                                 </p>
                                             </div>
 
@@ -678,7 +687,7 @@ export default function LoginForm({
                                             onClick={handleVerify}
                                             disabled={loading}
                                         >
-                                            {loading ? "Перевіряю..." : "Увійти"}
+                                            {loading ? "Checking..." : "Sign in"}
                                         </button>
                                     </>
                                 )}
@@ -735,19 +744,26 @@ export default function LoginForm({
 
             {termsOpen && !isPaying && (
                 <TermsOfUseModal
+                    readOnly={termsReadOnly}
                     ruleToDownload={ruleToDownload}
                     theme={theme}
                     onClose={() => {
-                        unlockScroll()
                         setTermsOpen(false);
-                        onClose();
+                        const termsRo = termsReadOnly;
+                        setTermsReadOnly(false);
+                        if (!termsRo) {
+                            unlockScroll();
+                            onClose();
+                        } else {
+                            setCookieOpen(true);
+                        }
                     }}
                     email={emailInput}
                     verificationCode={code.join("")}
                 />
             )}
 
-            {cookieOpen && (
+            {cookieOpen && !termsOpen && (
                 <CookieConsentModal
                     theme={theme}
                     onAccept={async () => {
@@ -771,6 +787,12 @@ export default function LoginForm({
 
                         unlockScroll();
                         reloadWithRuleParam(ruleToDownload);
+                    }}
+                    onOpenPolicy={async () => {
+                        setCookieOpen(false);
+                        setTermsReadOnly(true);
+                        setTermsOpen(true);
+                        await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_TOU);
                     }}
                 />
             )}

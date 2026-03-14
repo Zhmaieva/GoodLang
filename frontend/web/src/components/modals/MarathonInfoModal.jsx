@@ -25,16 +25,16 @@ const logoStyle = (size, theme) => ({
 });
 
 export default function MarathonInfoModal({
-                                                  open,
-                                                  onClose,
-                                                  theme,
+                                              open,
+                                              onClose,
+                                              theme,
 
-                                                  // pass account from parent (same shape you pass to PdfTypeModal)
-                                                  account = null, // { email?: string|null, status?: string }
+                                              // pass account from parent (same shape you pass to PdfTypeModal)
+                                              account = null, // { email?: string|null, status?: string }
 
-                                                  // required: array of 7 rule IDs for the marathon
-                                                  ruleIds = [],
-                                              }) {
+                                              // required: array of 7 rule IDs for the marathon
+                                              ruleIds = [],
+                                          }) {
     const [btnHover, setBtnHover] = useState(false);
     const [loginBtnHover, setLoginBtnHover] = useState(false);
 
@@ -54,18 +54,18 @@ export default function MarathonInfoModal({
 
     const items = useMemo(
         () => [
-            { title: "7 правил за 7 днів", sub: "Нове правило щодня та необмежена практика." },
-            { title: "Вивчиш або вилетиш", sub: "Маєш 24 години, щоб вивчити правило." },
-            { title: "Індивідуальний план", sub: "Фокус на слабких місцях. Інтервальна методика." },
+            { title: "7 rules in 7 days", sub: "A new rule every day and unlimited practice." },
+            { title: "Learn it or you're out", sub: "You have 24 hours to learn the rule." },
+            { title: "Personalized plan", sub: "Focus on weak points. Spaced repetition method." },
         ],
         []
     );
 
     const LEVEL_MAP = {
-        A1: { label: "Початківець", percent: 33 },
-        A2: { label: "Середній", percent: 66 },
-        B1: { label: "Середній", percent: 66 },
-        B2: { label: "Просунутий", percent: 100 },
+        A1: { label: "Beginner", percent: 33 },
+        A2: { label: "Intermediate", percent: 66 },
+        B1: { label: "Intermediate", percent: 66 },
+        B2: { label: "Advanced", percent: 100 },
     };
 
     // reset on open
@@ -196,242 +196,242 @@ export default function MarathonInfoModal({
             {
                 account?.email && purchaseOpen ?
                     (<MarathonPurchaseModal
-                    open={true}
-                    onClose={() => setPurchaseOpen(false)}
-                    theme={theme}
-                    account={account}               // from callAccountInfoApi()
-                />)
-                : loginOpen ?
+                        open={true}
+                        onClose={() => setPurchaseOpen(false)}
+                        theme={theme}
+                        account={account}               // from callAccountInfoApi()
+                    />)
+                    : loginOpen ?
 
-                            (<LoginModal
-                                forceLogin={true}
-                                theme={theme}
-                                account={account}
-                                open={loginOpen}
-                                onClose={() => {
-                                    setLoginOpen(false);
-                                    // keep purchase modal open; user can click again after login
-                                    try {
-                                        setPaymentIntent(false);
-                                    } catch {
-                                    }
-                                }}
-                            />)
-                            :
-                            (<div
-                                id={"marathon-info-modal"}
+                        (<LoginModal
+                            forceLogin={true}
+                            theme={theme}
+                            account={account}
+                            open={loginOpen}
+                            onClose={() => {
+                                setLoginOpen(false);
+                                // keep purchase modal open; user can click again after login
+                                try {
+                                    setPaymentIntent(false);
+                                } catch {
+                                }
+                            }}
+                        />)
+                        :
+                        (<div
+                            id={"marathon-info-modal"}
+                            style={{
+                                position: "fixed",
+                                inset: 0,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                zIndex: 9998,
+                                paddingBottom: "env(safe-area-inset-bottom)",
+                                paddingTop: "env(safe-area-inset-top)",
+                                backdropFilter: "blur(6px)",
+                                WebkitBackdropFilter: "blur(6px)",
+                            }}
+                            onClick={() => {
+                                e?.stopPropagation();
+                                if (loginOpen) return;
+                                onCloseHandler();
+                            }}
+                        >
+                            <div
                                 style={{
-                                    position: "fixed",
-                                    inset: 0,
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    zIndex: 9998,
-                                    paddingBottom: "env(safe-area-inset-bottom)",
-                                    paddingTop: "env(safe-area-inset-top)",
-                                    backdropFilter: "blur(6px)",
-                                    WebkitBackdropFilter: "blur(6px)",
+                                    background: theme.bg,
+                                    padding: "28px",
+                                    paddingTop: 0,
+                                    borderRadius: theme.radius * 1.2,
+                                    border: `4px solid ${theme.accent}`,
+                                    width: "90%",
+                                    maxWidth: 480,
+                                    textAlign: "center",
+                                    boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                                    display: loginOpen ? "none" : "block",
                                 }}
-                                onClick={() => {
-                                    e?.stopPropagation();
-                                    if (loginOpen) return;
-                                    onCloseHandler();
-                                }}
+                                onClick={(e) => e.stopPropagation()}
                             >
+                                {/* top row with close */}
+                                <div style={{display: "flex", justifyContent: "space-between"}}>
+                                    {
+                                        account?.email &&
+                                        <p style={{
+                                            marginBottom: 16,
+                                            marginTop: 8,
+                                            marginLeft: 0,
+                                            color: theme.muted,
+                                            fontSize: "1rem",
+                                            fontWeight: 500,
+                                            textAlign: "left",
+                                            overflow: "hidden",
+                                            textOverflow: "ellipsis",
+                                            maxWidth: 250,
+                                        }}>
+                                            {account?.email}
+                                        </p>
+                                    }
+                                    <div/>
+                                    <p
+                                        onClick={() => {
+                                            onCloseHandler();
+                                        }}
+                                        style={{
+                                            marginBottom: 0,
+                                            marginTop: 4,
+                                            marginRight: -16,
+                                            color: theme.accent,
+                                            fontSize: "1.3rem",
+                                            fontWeight: 500,
+                                            textAlign: "left",
+                                            cursor: "pointer",
+                                            userSelect: "none",
+                                            WebkitUserSelect: "none",
+                                            WebkitTouchCallout: "none",
+                                            opacity: 1,
+                                        }}
+                                    >
+                                        ✕
+                                    </p>
+                                </div>
+
+                                {/* header */}
                                 <div
                                     style={{
-                                        background: theme.bg,
-                                        padding: "28px",
-                                        paddingTop: 0,
-                                        borderRadius: theme.radius * 1.2,
-                                        border: `4px solid ${theme.accent}`,
-                                        width: "90%",
-                                        maxWidth: 480,
-                                        textAlign: "center",
-                                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                                        display: loginOpen ? "none" : "block",
+                                        marginLeft: 0,
+                                        marginBottom: 16,
+                                        display: "flex",
+                                        justifyContent: "space-between",
                                     }}
-                                    onClick={(e) => e.stopPropagation()}
                                 >
-                                    {/* top row with close */}
-                                    <div style={{display: "flex", justifyContent: "space-between"}}>
-                                        {
-                                            account?.email &&
-                                            <p style={{
-                                                marginBottom: 16,
-                                                marginTop: 8,
-                                                marginLeft: 0,
-                                                color: theme.muted,
-                                                fontSize: "1rem",
-                                                fontWeight: 500,
-                                                textAlign: "left",
-                                                overflow: "hidden",
-                                                textOverflow: "ellipsis",
-                                                maxWidth: 250,
-                                            }}>
-                                                {account?.email}
-                                            </p>
-                                        }
-                                        <div/>
-                                        <p
-                                            onClick={() => {
-                                                onCloseHandler();
-                                            }}
+                                    <div style={{display: "flex", flexDirection: "column"}}>
+                                        <h2
                                             style={{
-                                                marginBottom: 0,
-                                                marginTop: 4,
-                                                marginRight: -16,
-                                                color: theme.accent,
-                                                fontSize: "1.3rem",
-                                                fontWeight: 500,
                                                 textAlign: "left",
-                                                cursor: "pointer",
-                                                userSelect: "none",
-                                                WebkitUserSelect: "none",
-                                                WebkitTouchCallout: "none",
-                                                opacity: 1,
+                                                marginBottom: 0,
+                                                marginTop: 0,
+                                                color: theme.text,
+                                                fontSize: "2rem",
+                                                fontWeight: 800,
+                                                lineHeight: 0.8
                                             }}
                                         >
-                                            ✕
+                                            It will be hard
+                                        </h2>
+
+                                        <p
+                                            style={{
+                                                marginBottom: 0,
+                                                marginTop: 8,
+                                                marginLeft: 0,
+                                                color: theme.text,
+                                                fontWeight: 800,
+                                                opacity: 0.55,
+                                                fontSize: "1rem",
+                                                textAlign: "left",
+                                            }}
+                                        >
+                                            But you will learn the rules. <br/>No pain, no gain.
                                         </p>
                                     </div>
 
-                                    {/* header */}
-                                    <div
-                                        style={{
-                                            marginLeft: 0,
-                                            marginBottom: 16,
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                        }}
-                                    >
-                                        <div style={{display: "flex", flexDirection: "column"}}>
-                                            <h2
-                                                style={{
-                                                    textAlign: "left",
-                                                    marginBottom: 0,
-                                                    marginTop: 0,
-                                                    color: theme.text,
-                                                    fontSize: "2rem",
-                                                    fontWeight: 800,
-                                                    lineHeight: 0.8
-                                                }}
-                                            >
-                                                Буде складно
-                                            </h2>
-
-                                            <p
-                                                style={{
-                                                    marginBottom: 0,
-                                                    marginTop: 8,
-                                                    marginLeft: 0,
-                                                    color: theme.text,
-                                                    fontWeight: 800,
-                                                    opacity: 0.55,
-                                                    fontSize: "1rem",
-                                                    textAlign: "left",
-                                                }}
-                                            >
-                                                Але ти вивчиш правила. <br/>No pain, no gain.
-                                            </p>
-                                        </div>
-
-                                        <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                            <div style={logoStyle(56, theme)}>GL</div>
-                                        </div>
+                                    <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
+                                        <div style={logoStyle(56, theme)}>GL</div>
                                     </div>
+                                </div>
 
 
-                                    {/* ✅ fancy dot list (no vertical line, 1 substatement per item) */}
-                                    <div style={listWrap}>
-                                        {items.map((x, idx) => (
-                                            <div key={idx} style={row}>
-                                                <div style={dot}/>
-                                                <div style={{flex: 1, minWidth: 0}}>
-                                                    <p style={itemTitle}>{x.title}</p>
-                                                    <p style={subText}>{x.sub}</p>
-                                                </div>
+                                {/* ✅ fancy dot list (no vertical line, 1 substatement per item) */}
+                                <div style={listWrap}>
+                                    {items.map((x, idx) => (
+                                        <div key={idx} style={row}>
+                                            <div style={dot}/>
+                                            <div style={{flex: 1, minWidth: 0}}>
+                                                <p style={itemTitle}>{x.title}</p>
+                                                <p style={subText}>{x.sub}</p>
                                             </div>
-                                        ))}
-
-                                        {/* tiny helper */}
-                                        <div style={{
-                                            marginTop: 6,
-                                            fontSize: 12.5,
-                                            fontWeight: 800,
-                                            opacity: 0.55,
-                                            color: theme.text
-                                        }}>
-                                            Твій поточний рівень: {userLevel?.label?.toLowerCase()}
                                         </div>
+                                    ))}
+
+                                    {/* tiny helper */}
+                                    <div style={{
+                                        marginTop: 6,
+                                        fontSize: 12.5,
+                                        fontWeight: 800,
+                                        opacity: 0.55,
+                                        color: theme.text
+                                    }}>
+                                        Your current level: {userLevel?.label?.toLowerCase()}
                                     </div>
+                                </div>
 
 
-                                    {/* footer button */}
-                                    {/* footer button (LoginForm style) */}
+                                {/* footer button */}
+                                {/* footer button (LoginForm style) */}
+                                <button
+                                    onMouseEnter={() => setBtnHover(true)}
+                                    onMouseLeave={() => setBtnHover(false)}
+                                    onClick={handleStart}
+                                    style={{
+                                        appearance: "none",
+                                        padding: "10px 14px",
+                                        fontWeight: 800,
+                                        fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
+                                        lineHeight: 1,
+                                        borderRadius: 999,
+                                        background: theme.accent,
+                                        color: "#fff",
+                                        border: "2px solid rgba(0,0,0,0.12)",
+                                        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+                                        fontFamily: "Nunito, system-ui, sans-serif",
+                                        whiteSpace: "nowrap",
+                                        opacity: 1,
+                                        transform: btnHover ? "translateY(1px)" : "none",
+                                        filter: btnHover ? "brightness(0.95)" : "none",
+                                        transition: "transform 120ms ease, filter 120ms ease",
+                                        cursor: "pointer",
+                                        width: "100%",
+                                    }}
+                                >
+                                    Start marathon
+                                </button>
+
+                                {
+                                    account?.email &&
                                     <button
-                                        onMouseEnter={() => setBtnHover(true)}
-                                        onMouseLeave={() => setBtnHover(false)}
-                                        onClick={handleStart}
+                                        onMouseEnter={() => setLoginBtnHover(true)}
+                                        onMouseLeave={() => setLoginBtnHover(false)}
+                                        onClick={() => {setLoginOpen(true)}}
                                         style={{
                                             appearance: "none",
                                             padding: "10px 14px",
+                                            marginTop: 8,
                                             fontWeight: 800,
                                             fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
                                             lineHeight: 1,
                                             borderRadius: 999,
-                                            background: theme.accent,
-                                            color: "#fff",
+                                            background: "#fff",
+                                            color: theme.text,
                                             border: "2px solid rgba(0,0,0,0.12)",
                                             boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
                                             fontFamily: "Nunito, system-ui, sans-serif",
                                             whiteSpace: "nowrap",
                                             opacity: 1,
-                                            transform: btnHover ? "translateY(1px)" : "none",
-                                            filter: btnHover ? "brightness(0.95)" : "none",
+                                            transform: loginBtnHover ? "translateY(1px)" : "none",
+                                            filter: loginBtnHover ? "brightness(0.95)" : "none",
                                             transition: "transform 120ms ease, filter 120ms ease",
                                             cursor: "pointer",
                                             width: "100%",
                                         }}
                                     >
-                                        Почати марафон
+                                        Log in to another account
                                     </button>
-
-                                    {
-                                        account?.email &&
-                                        <button
-                                            onMouseEnter={() => setLoginBtnHover(true)}
-                                            onMouseLeave={() => setLoginBtnHover(false)}
-                                            onClick={() => {setLoginOpen(true)}}
-                                            style={{
-                                                appearance: "none",
-                                                padding: "10px 14px",
-                                                marginTop: 8,
-                                                fontWeight: 800,
-                                                fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
-                                                lineHeight: 1,
-                                                borderRadius: 999,
-                                                background: "#fff",
-                                                color: theme.text,
-                                                border: "2px solid rgba(0,0,0,0.12)",
-                                                boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-                                                fontFamily: "Nunito, system-ui, sans-serif",
-                                                whiteSpace: "nowrap",
-                                                opacity: 1,
-                                                transform: loginBtnHover ? "translateY(1px)" : "none",
-                                                filter: loginBtnHover ? "brightness(0.95)" : "none",
-                                                transition: "transform 120ms ease, filter 120ms ease",
-                                                cursor: "pointer",
-                                                width: "100%",
-                                            }}
-                                        >
-                                            Увійти в інший аккаунт
-                                        </button>
-                                    }
+                                }
 
 
-                                </div>
-                            </div>)
+                            </div>
+                        </div>)
             }
         </>
     );

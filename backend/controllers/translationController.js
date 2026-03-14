@@ -4,7 +4,7 @@ import {
     evaluateGapAndCoach,
     preEvaluate,
     randomRule,
-    shuffleBySeed
+    shuffleBySeed, translateIfNeeded
 } from "../core/сore.js";
 import { ALL_RULES_SAMPLES } from "../core/allRulesSamples.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
@@ -49,11 +49,13 @@ export const translationsController = {
                 rules,
                 translation,
                 textToTranslate,
+                textToTranslateOriginal,
                 skip,
                 seed,
                 freeTraining,
                 task_type = "0",
                 use_same_task_type = "true",
+                userLocale = 'uk-UA'
             } = req.query;
 
             const taskType = Number(task_type) || 0;
@@ -116,15 +118,26 @@ export const translationsController = {
                     ? { allowed: true, waitTimeSeconds: 0 }
                     : await checkTranslationLimit(accountId);
 
+                const textToTranslateAdjusted = await translateIfNeeded({
+                    value: sample[locale],
+                    locale: userLocale
+                });
+
+                const hintAdjusted = await translateIfNeeded({
+                    value: sample.hint,
+                    locale: userLocale
+                });
+
                 return res.json({
                     taskType: 0,
                     rules: sample.rules,
-                    textToTranslate: sample[locale],
+                    textToTranslate: textToTranslateAdjusted,
+                    textToTranslateOriginal: sample[locale],
                     isAnswerCorrect: false,
                     correctAnswer: "",
                     tipIfWrong: "",
                     score: 0,
-                    hint: sample.hint,
+                    hint: hintAdjusted,
                     skip: adjustedSkip + 1,
                     allowed,
                     waitTimeSeconds,
@@ -182,23 +195,28 @@ export const translationsController = {
                 result = await evaluateGapAndCoach({
                     task: gapSample,
                     userAnswer: translation ?? "",
-                    targetLanguage: "Ukrainian",
+                    targetLocale: userLocale || "uk-UA",
                 });
             } else {
                 const accountShortInfo = await getAccountById(req.user.id);
 
-                // Translation path (keeps your current behavior)
-                result = preEvaluate({
-                    rules: rulesArr,
-                    targetLanguage: "Ukrainian",
-                    userEnglish: translation ?? "",
-                    textToTranslate: textToTranslate ?? "",
-                });
+                try {
+                    // Translation path (keeps your current behavior)
+                    result = preEvaluate({
+                        rules: rulesArr,
+                        userEnglish: translation ?? "",
+                        textToTranslateOriginal: textToTranslateOriginal || textToTranslate || "",
+                    });
+                } catch {
+                    result = {
+                        answer_is_correct: false,
+                    }
+                }
 
                 if (!result.answer_is_correct && !skipCoach) {
                     result = await evaluateAndCoach({
                         rules: rulesArr,
-                        targetLanguage: "Ukrainian",
+                        targetLocale: userLocale || "uk-UA",
                         userEnglish: translation ?? "",
                         textToTranslate: textToTranslate ?? "",
                     });
@@ -212,7 +230,9 @@ export const translationsController = {
             // -------------------------------
             // PICK NEXT TASK
             // -------------------------------
+            let newTextToTranslateOriginal = "";
             let newTextToTranslate = "";
+            let newHint = "";
             let newRules = rulesArr;
             let newOptions = null; // only for gaps
             let newTaskType = taskType;
@@ -272,7 +292,17 @@ export const translationsController = {
 
                         if (nextSample) {
                             newRules = nextSample.rules;
-                            newTextToTranslate = nextSample[locale];
+                            newTextToTranslateOriginal = nextSample[locale];
+                            newTextToTranslate = await translateIfNeeded({
+                                value: nextSample[locale],
+                                locale: userLocale
+                            });
+                            if (nextSample?.hint) {
+                                newHint = await translateIfNeeded({
+                                    value: nextSample.hint,
+                                    locale: userLocale
+                                });
+                            }
                         }
                     }
 
@@ -281,7 +311,7 @@ export const translationsController = {
             }
 
             if (!skipCoach) {
-                await recordTranslationUsage(accountId);
+                await recordTranslationUsage(accountId, taskType);
             }
 
             // preserve your "correct_answer matches translation but model said wrong" fix
@@ -303,8 +333,9 @@ export const translationsController = {
                 taskType: newTaskType,
                 rules: newRules,
                 textToTranslate: newTextToTranslate,
+                textToTranslateOriginal: newTextToTranslateOriginal,
+                hint: newHint,
                 options: newTaskType === 1 ? newOptions : undefined,
-
                 isAnswerCorrect: result.answer_is_correct,
                 correctAnswer: result.correct_answer,
                 tipIfWrong: result.tip_if_wrong,

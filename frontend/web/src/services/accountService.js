@@ -1,5 +1,6 @@
 import {callSignUpApi} from "./api.js";
 import {emit} from "./events.js";
+import {featureToggleService} from "./featureToggleService.js";
 
 let initPromise = null;
 
@@ -19,6 +20,9 @@ async function initCredentials() {
 
         const { token } = await callSignUpApi();
         localStorage.setItem("token", token);
+
+        //enable localization for new sign-ups only
+        featureToggleService.toggle(featureToggleService.FEATURE_NAME.LOCALIZATION, true);
 
         //emit("onFirstOpen", {});
 

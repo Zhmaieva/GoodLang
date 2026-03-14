@@ -65,7 +65,7 @@ function safeEmail(email) {
  * Set APP_BASE_URL in env (recommended), e.g. https://goodlang.beampie.com
  */
 function buildUnsubscribeUrl({ baseUrl, id }) {
-    const u = new URL("/", baseUrl);
+    const u = new URL("/trainer", baseUrl);
     u.searchParams.set("email_unsubscribe_token", id);
     return u.toString();
 }

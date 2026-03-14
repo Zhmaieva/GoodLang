@@ -13,7 +13,7 @@
     "rules": ["CAN_CANT", "PREP_PLACE"],
     "ua": "Я можу припаркувати машину тут?",
     "en": ["Can I park the car here?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE"],
@@ -49,7 +49,7 @@
     "rules": ["CAN_CANT", "ADVERBS_OF_MANNER"],
     "ua": "Ти можеш говорити голосніше?",
     "en": ["Can you speak louder?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "PREP_PLACE", "GERUND_VS_INFINITIVE"],
@@ -96,7 +96,7 @@
     "rules": ["CAN_CANT", "POSSESSIVE_ADJECTIVES"],
     "ua": "Я можу взяти твою ручку?",
     "en": ["Can I take your pen?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE"],
@@ -117,7 +117,7 @@
     "rules": ["CAN_CANT", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
     "ua": "Ти можеш прийти раніше?",
     "en": ["Can you come earlier?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
@@ -143,7 +143,7 @@
     "rules": ["CAN_CANT"],
     "ua": "Я можу відкрити вікно?",
     "en": ["Can I open the window?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "ADVERBS_FREQUENCY_OFTEN_NEVER", "GERUND_VS_INFINITIVE"],
@@ -189,7 +189,7 @@
     "rules": ["CAN_CANT", "POSSESSIVE_ADJECTIVES"],
     "ua": "Я можу скористатися твоїм комп’ютером?",
     "en": ["Can I use your computer?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE"],
@@ -225,7 +225,7 @@
     "rules": ["CAN_CANT", "PREP_TIME"],
     "ua": "Ти можеш прийти до обіду?",
     "en": ["Can you come before lunch?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "ADVERBS_OF_MANNER", "GERUND_VS_INFINITIVE"],
@@ -236,7 +236,7 @@
     "rules": ["CAN_CANT", "POSSESSIVE_ADJECTIVES"],
     "ua": "Я можу взяти твій телефон?",
     "en": ["Can I take your phone?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "POSSESSIVE_S", "GERUND_VS_INFINITIVE"],
@@ -267,7 +267,7 @@
     "rules": ["CAN_CANT", "ADVERBS_OF_MANNER"],
     "ua": "Ти можеш говорити повільніше?",
     "en": ["Can you speak more slowly?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "DEMONSTRATIVES", "GERUND_VS_INFINITIVE"],
@@ -283,7 +283,7 @@
     "rules": ["CAN_CANT", "PREP_TIME"],
     "ua": "Ти можеш прийти після восьмої?",
     "en": ["Can you come after eight?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "PREP_TIME", "GERUND_VS_INFINITIVE"],
@@ -294,7 +294,7 @@
     "rules": ["CAN_CANT", "POSSESSIVE_ADJECTIVES"],
     "ua": "Я можу взяти твій олівець?",
     "en": ["Can I take your pencil?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "PREP_PLACE"],
@@ -350,7 +350,7 @@
     "rules": ["CAN_CANT"],
     "ua": "Я можу вийти з класу?",
     "en": ["Can I leave the classroom?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "POSSESSIVE_ADJECTIVES"],
@@ -451,7 +451,7 @@
     "rules": ["CAN_CANT"],
     "ua": "Я можу закрити двері?",
     "en": ["Can I close the door?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   },
   {
     "rules": ["CAN_CANT", "GERUND_VS_INFINITIVE", "ADVERBS_FREQUENCY_OFTEN_NEVER"],
@@ -542,6 +542,6 @@
     "rules": ["CAN_CANT", "POSSESSIVE_ADJECTIVES"],
     "ua": "Я можу взяти твій рюкзак?",
     "en": ["Can I take your backpack?"],
-    "hint": "використовуй CAN"
+    "hint": "use CAN"
   }
 ] }

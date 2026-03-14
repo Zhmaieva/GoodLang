@@ -141,10 +141,10 @@ export default function LevelSwitch({
     };
 
     const options = [
-        { value: "managed", label: "адаптивний", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADAPTIVE },
-        { value: "beginner", label: "початківець", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_BEGINNER },
-        { value: "intermediate", label: "середній", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_AVERAGE },
-        { value: "advanced", label: "просунутий", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADVANCED },
+        { value: "managed", label: "Adaptive", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADAPTIVE },
+        { value: "beginner", label: "Beginner", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_BEGINNER },
+        { value: "intermediate", label: "Intermediate", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_AVERAGE },
+        { value: "advanced", label: "Advanced", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADVANCED },
     ];
 
     const selectedOption = options.find((o) => o.value === level) ?? options[0];
@@ -175,7 +175,7 @@ export default function LevelSwitch({
     const getLabel = (label) => {
         if (expanded) return label;
 
-        return `Рівень: ${label}`;
+        return `Level: ${label}`;
     };
 
     const tooltipStyle = {
@@ -191,7 +191,7 @@ export default function LevelSwitch({
         color: "#fff",
         padding: "10px 12px",
         borderRadius: 12,
-        fontSize: 13,
+        fontSize: '1rem',
         fontWeight: 800,
         lineHeight: 1.25,
         width: 310,

@@ -85,7 +85,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
             <AccuracyKpi mobile={isMobile} theme={theme} />
 
             <div style={cardStyle}>
-                <div style={labelStyle}>К-ть результатів</div>
+                <div style={labelStyle}>Attempts</div>
                 <div style={valueStyle}>{attempts ?? 0}</div>
                 <div style={sparkStyle}>
                     <i style={sparkFillStyle(attemptsPct)} />
@@ -93,7 +93,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
             </div>
 
             <div style={cardStyle}>
-                <div style={labelStyle}>Вивчено правил</div>
+                <div style={labelStyle}>Rules learned</div>
                 <div style={valueStyle}>{masteredRules ?? 0}</div>
                 <div style={sparkStyle}>
                     <i style={sparkFillStyle(masteredPct)} />

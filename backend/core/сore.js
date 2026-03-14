@@ -103,13 +103,12 @@ export const clearText = (text) => text?.toLowerCase()
 
 export function preEvaluate({
                                       rules = [],
-                                      targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
                                       userEnglish = "",                // learner's translation attempt (English)
-                                      textToTranslate = ""
+                                      textToTranslateOriginal = ""
                                   }) {
     const targetRule = rules[0];
-    const languageCode = languagesMap[targetLanguage];
-    const targetSample = ALL_RULES_SAMPLES[targetRule].find(x => x[languageCode] === textToTranslate || Array.isArray(x[languageCode]) && x[languageCode].find(xx => xx === textToTranslate));
+    const languageCode = languagesMap["Ukrainian"];
+    const targetSample = ALL_RULES_SAMPLES[targetRule].find(x => x[languageCode] === textToTranslateOriginal || Array.isArray(x[languageCode]) && x[languageCode].find(xx => xx === textToTranslateOriginal));
     const validTranslation = Array.isArray(targetSample[languagesMap["English"]])
         ? targetSample[languagesMap["English"]].find((expectedTranslation) => {
             return clearText(expectedTranslation) === clearText(userEnglish);
@@ -130,7 +129,7 @@ export function preEvaluate({
 
 export async function evaluateAndCoach({
                                            rules = [],
-                                           targetLanguage = "Ukrainian",       // the learner’s L1 for prompts
+                                           targetLocale = 'uk-UA',       // the learner’s L1 for prompts
                                            userEnglish = "",                // learner's translation attempt (English)
                                            textToTranslate = "",
                                            hint = "",
@@ -150,14 +149,14 @@ Schema:
   `;
 
     const userPrompt = `
-TARGET_LANGUAGE: ${targetLanguage}
+TARGET_LANGUAGE: ${targetLocale}
 GRAMMAR_RULES: [${rules.join(', ')}]
 TEXT_TO_TRANSLATE: ${textToTranslate}
 HINT: ${hint}
 
 TASKS:
 1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to GRAMMAR_RULES[0] as the target rule, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
-2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Use informal 'ти' замість 'ви' omitting gender, yet assertive way to address express the tip.
+2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Address user informally a omitting gender, yet assertive way to express the tip.
 3) Also, give correct translation from TARGET_LANGUAGE to English.
 4) For each of GRAMMAR_RULES, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLIS -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
 
@@ -187,9 +186,13 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
 export async function evaluateGapAndCoach({
                                               task,
                                               userAnswer = "",
-                                              targetLanguage = "Ukrainian"
+                                              targetLocale = "uk-UA"
                                           }) {
     const { rules = [], en = [], options = [], correct } = task;
+
+    targetLocale = targetLocale === 'null' ? null : targetLocale;
+
+    targetLocale = !targetLocale ? 'uk-UA' : targetLocale;
 
     const sentence = Array.isArray(en) ? (en[0] ?? "") : String(en ?? "");
     const normalizedUser = clearText(String(userAnswer ?? "").trim());
@@ -197,13 +200,11 @@ export async function evaluateGapAndCoach({
 
     const isCorrect = normalizedUser === normalizedCorrect;
 
-    // Always computed deterministically
     const filledCorrectSentence = String(sentence).replaceAll(
         "{GAP}",
         String(correct ?? "")
     );
 
-    // ✅ If correct: no LLM call
     if (isCorrect) {
         return {
             sample_in_target_language: filledCorrectSentence,
@@ -214,7 +215,6 @@ export async function evaluateGapAndCoach({
         };
     }
 
-    // ❌ Wrong: call LLM ONLY for tip_if_wrong
     const systemPrompt = `
 You are a friendly but precise ESL grammar tutor.
 Return JSON only.
@@ -225,6 +225,7 @@ Schema:
 `;
 
     const userPrompt = `
+TARGET_LANGUAGE: ${targetLocale}
 GRAMMAR_RULES: [${rules.join(", ")}]
 
 TASK_TYPE: GAP_CHOICE
@@ -479,4 +480,64 @@ Return JSON with "text".
         // optional: for debugging
         // originalText: storyText,
     };
+}
+export async function translateIfNeeded({
+                                            value = "",
+                                            locale = null,
+                                        }) {
+    locale = locale === 'null' ? null : locale;
+
+    const safeValue = String(value ?? "");
+
+    // skip translation if no locale
+    if (!locale) {
+        return safeValue;
+    }
+
+    // skip if Ukrainian
+    if (locale.toLowerCase().startsWith("uk")) {
+        return safeValue;
+    }
+
+    const systemPrompt = `
+You are a precise translator.
+Return JSON only.
+
+Schema:
+{
+  "translation": string
+}
+`;
+
+    const userPrompt = `
+Translate the following text from Ukrainian to locale "${locale}".
+
+Rules:
+1. Preserve meaning exactly.
+2. Keep tone natural.
+3. Do not add explanations.
+4. Return only JSON.
+
+TEXT:
+${safeValue}
+`;
+
+    const resp = await client.responses.create({
+        model: "gpt-4.1-mini",
+        temperature: 0.2,
+        text: { format: { type: "json_object" } },
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    });
+
+    const txt = resp.output_text;
+
+    try {
+        const parsed = JSON.parse(txt);
+        return String(parsed.translation ?? safeValue);
+    } catch {
+        return safeValue;
+    }
 }

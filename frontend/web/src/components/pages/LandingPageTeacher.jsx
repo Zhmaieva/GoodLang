@@ -60,17 +60,17 @@ export default function LandingPageTeacher({theme}) {
     const submitEmail = async () => {
         const v = String(email || "").trim();
         if (!/^\S+@\S+\.\S+$/.test(v)) {
-            setMsg("Введіть правильний імейл");
+            setMsg("Enter a valid email");
             return;
         }
         try {
             setSending(true);
             setMsg("");
             await callSendPromoCodeApi({ email: v });
-            setMsg("Готово! Ми відправили промо код на вказану адресу.");
+            setMsg("Done! We sent a promo code to the specified email address.");
             setEmail("");
         } catch {
-            setMsg("Ой, помилка... Ми вже її виправляємо.");
+            setMsg("Oops, an error occurred... We are already fixing it.");
         } finally {
             setSending(false);
         }
@@ -613,61 +613,62 @@ html{ scroll-behavior: smooth; }
                 <div className="left">
                     <div className="textBlock">
                         <h1 className="title">
-                            Безкоштовні PDF<br />
-                            з вправами<br/>
-                            на переклад<br />
-                            англійською<br />
-                            <em>для уроків</em><br />
-                            <em>і домашніх завдань</em>
+                            Free PDF worksheets<br/>
+                            with English translation exercises<br/>
+                            <em>for lessons</em><br/>
+                            <em>and homework</em>
                         </h1>
 
                         <p className="subtitle">
-                            Якщо ви зараз проходите конкретну граматичну конструкцію і потребуєте готових завдань
-                            “укр → англ” — просто скачайте їх у GoodLang. Безкоштовно.
+                            If you are currently teaching a specific grammar structure and need ready-made
+                            “Ukr → Eng” translation exercises — simply download them from GoodLang. Free.
                         </p>
                     </div>
                 </div>
 
                 <div className="right">
                     <div className="topNav">
-                        <button
-                            className="topNavBtn"
-                            onClick={() => document.getElementById("inside")?.scrollIntoView({behavior: "smooth"})}
-                        >
-                            що всередині
+                        <button className="topNavBtn"
+                                onClick={() => document.getElementById("inside")?.scrollIntoView({behavior: "smooth"})}>
+                            What's inside
                         </button>
 
-                        <button
-                            className="topNavBtn"
-                            onClick={() => document.getElementById("download")?.scrollIntoView({behavior: "smooth"})}
-                        >
-                            як скачати
+                        <button className="topNavBtn"
+                                onClick={() => document.getElementById("download")?.scrollIntoView({behavior: "smooth"})}>
+                        How to download
                         </button>
 
-                        <button
-                            className="topNavBtn"
-                            onClick={() => document.getElementById("join")?.scrollIntoView({behavior: "smooth"})}
-                        >
-                            приєднатися
+                        <button className="topNavBtn"
+                                onClick={() => document.getElementById("join")?.scrollIntoView({behavior: "smooth"})}>
+                            Get started
                         </button>
                     </div>
 
                     <div className="heroStack">
                         <div className="heroCard">
-                            <h3 className="heroCardTitle">Понад 1700 вправ з граматики</h3>
+                            <h3 className="heroCardTitle">1700+ grammar exercises</h3>
                             <p className="heroCardText">
-                                Оберіть правило → скачайте PDF → дайте учням перекладати з української на англійську.
-                                У файлі є ключі для швидкої перевірки.
+                                Choose a rule → download the PDF → have your students translate from Ukrainian to
+                                English.
+                                The file includes answer keys for quick checking.
                             </p>
 
                             <div className="heroBtns">
-                                <button className="primaryBtn"
-                                        onClick={goToRules}>
-                                    Скачати
+                                <button
+                                    className="primaryBtn"
+                                    onClick={goToRules}
+                                >
+                                    Download
                                 </button>
-                                <button className="secondaryBtn"
-                                        onClick={() => document.getElementById("download")?.scrollIntoView({behavior: "smooth"})}>
-                                    Дізнатися більше
+                                <button
+                                    className="secondaryBtn"
+                                    onClick={() =>
+                                        document
+                                            .getElementById("download")
+                                            ?.scrollIntoView({behavior: "smooth"})
+                                    }
+                                >
+                                    Learn more
                                 </button>
                             </div>
                         </div>
@@ -683,53 +684,58 @@ html{ scroll-behavior: smooth; }
             {/* WHAT'S INSIDE */}
             <section className="section" id="inside">
                 <div className="sectionInner">
-                    <h2 className="sectionTitle">Що всередині кожного PDF</h2>
+                    <h2 className="sectionTitle">What’s inside each PDF</h2>
                     <p className="sectionLead">
-                        Кожен файл — це готовий пакет матеріалів для конкретної граматики. Всього 3 аркуші: теорія, практика і відповіді.
+                        Each file is a ready-to-use package of materials for a specific grammar topic. Just 3 pages:
+                        theory,
+                        practice, and answers.
                     </p>
 
                     <div className="featuresGrid">
                         <div className="featureCard">
                             <div className="featureIconRow">
                                 <img src={hand3} className="featureIcon" alt=""/>
-                                <div className="featureTitle">Правило + приклади</div>
+                                <div className="featureTitle">Grammar rule + examples</div>
                             </div>
                             <p className="featureText">
-                            Стисле пояснення граматичної конструкції та зразки правильних речень.
+                                A concise explanation of the grammar structure with examples of correct sentences.
                             </p>
                         </div>
 
                         <div className="featureCard">
                             <div className="featureIconRow">
-                                <img src={hand1} className="featureIcon" alt="" />
-                                <div className="featureTitle">Типові помилки учнів</div>
+                                <img src={hand1} className="featureIcon" alt=""/>
+                                <div className="featureTitle">Common student mistakes</div>
                             </div>
                             <p className="featureText">
-                                Найчастіші “пастки” саме для цієї теми — щоб швидко підсвітити учням, на що звернути увагу.
+                                The most common “traps” for this topic — helping students quickly understand what to
+                                watch out for.
                             </p>
                         </div>
 
                         <div className="featureCard">
                             <div className="featureIconRow">
-                                <img src={hand2} className="featureIcon" alt="" />
-                                <div className="featureTitle">Вправи + ключі</div>
+                                <img src={hand2} className="featureIcon" alt=""/>
+                                <div className="featureTitle">Exercises + answer key</div>
                             </div>
                             <p className="featureText">
-                                Українські речення для перекладу на англійську + англійські ключі для самоперевірки або швидкої перевірки вчителем.
+                                Ukrainian sentences to translate into English + English answer keys for self-checking or
+                                quick
+                                teacher review.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div className="divider" />
+            <div className="divider"/>
 
             {/* HOW TO DOWNLOAD */}
             <section className="section" id="download">
                 <div className="sectionInner">
-                    <h2 className="sectionTitle">Як скачати PDF (2 зручні способи)</h2>
+                    <h2 className="sectionTitle">How to download a PDF (2 simple ways)</h2>
                     <p className="sectionLead">
-                        Обирайте як зручніше: з загального списку правил або зі сторінки конкретного правила.
+                        You can download it either from the rules list or from an individual rule page.
                     </p>
 
                     <div className="howGrid">
@@ -737,10 +743,9 @@ html{ scroll-behavior: smooth; }
                             <div className="step">
                                 <div className="stepNum">1</div>
                                 <div>
-                                    <p className="stepTitle">Зі сторінки списку правил</p>
+                                    <p className="stepTitle">From the rules list page</p>
                                     <p className="stepText">
-                                        Перейдіть у список правил і натисніть на іконку “скачати” біля потрібного
-                                        правила.
+                                        Go to the rules list and click the “download” icon next to the rule you need.
                                     </p>
                                 </div>
                             </div>
@@ -748,10 +753,10 @@ html{ scroll-behavior: smooth; }
                             <div className="step">
                                 <div className="stepNum">2</div>
                                 <div>
-                                    <p className="stepTitle">Зі сторінки конкретного правила</p>
+                                    <p className="stepTitle">From a specific rule page</p>
                                     <p className="stepText">
-                                        Відкрийте правило → натисніть кнопку <strong>“Роздрукувати
-                                        завдання”</strong> (PDF сформується та стягнеться).
+                                        Open a rule → click the <strong>“Print tasks”</strong> button (the PDF will be
+                                        generated and downloaded).
                                     </p>
                                 </div>
                             </div>
@@ -759,19 +764,19 @@ html{ scroll-behavior: smooth; }
                             <div className="step">
                                 <div className="stepNum">✓</div>
                                 <div>
-                                    <p className="stepTitle">Готово</p>
+                                    <p className="stepTitle">Done</p>
                                     <p className="stepText">
-                                        Використовуйте як домашку або роботу в класі — без підготовки з вашого боку.
+                                        Use it as homework or a classroom activity — no preparation required.
                                     </p>
                                 </div>
                             </div>
 
                             <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
                                 <button className="primaryBtn" onClick={goToRules}>
-                                    Почати користуватися
+                                    Get started
                                 </button>
                                 {/*<button className="secondaryBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>*/}
-                                {/*    На початок*/}
+                                {/*    Back to top*/}
                                 {/*</button>*/}
                             </div>
                         </div>
@@ -788,7 +793,6 @@ html{ scroll-behavior: smooth; }
                                 playsInline
                             />
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -800,61 +804,21 @@ html{ scroll-behavior: smooth; }
                 <div className="ctaInner">
                     <div className="ctaContent">
                         <h2 className="ctaTitle">
-                            Хочете ще більше матеріалів у <em>GoodLang</em>
+                            Want more learning materials in <em>GoodLang</em>?
                         </h2>
 
                         <p className="ctaSubtitle">
-                            Якщо вашим учням потрібна додаткова щоденна практика, вони можуть користуватися GoodLang для самостійної роботи.
+                            If your students need extra daily practice, they can use GoodLang for independent study.
                         </p>
 
                         <div className="ctaButtons">
                             <button onClick={startUsing} className="primaryBtn">
-                                Почати тренування на сайті
+                                Start practicing
                             </button>
                             <button onClick={goToRules} className="secondaryBtn">
-                                Перейти до правил і PDF
+                                View rules and PDFs
                             </button>
                         </div>
-
-                        {/*<div className="promoRow">*/}
-                        {/*    <div style={{flex: 1, display: "flex", flexDirection: "column", gap: 6}}>*/}
-                        {/*        <input*/}
-                        {/*            type="email"*/}
-                        {/*            placeholder="Введи email для промокоду"*/}
-                        {/*            className="emailInput"*/}
-                        {/*            value={email}*/}
-                        {/*            onChange={(e) => setEmail(e.target.value)}*/}
-                        {/*            inputMode="email"*/}
-                        {/*            onKeyDown={async (e) => {*/}
-                        {/*                if (e.key === "Enter") {*/}
-                        {/*                    e.preventDefault();*/}
-                        {/*                    await submitEmail();*/}
-                        {/*                }*/}
-                        {/*            }}*/}
-                        {/*            disabled={sending}*/}
-                        {/*        />*/}
-
-                        {/*        {msg ? (*/}
-                        {/*            <p style={{*/}
-                        {/*                margin: 0,*/}
-                        {/*                fontFamily: "Nunito",*/}
-                        {/*                fontWeight: 800,*/}
-                        {/*                fontSize: 13,*/}
-                        {/*                opacity: 0.9*/}
-                        {/*            }}>*/}
-                        {/*                {msg}*/}
-                        {/*            </p>*/}
-                        {/*        ) : null}*/}
-                        {/*    </div>*/}
-
-                        {/*    <button*/}
-                        {/*        onClick={submitEmail}*/}
-                        {/*        className="secondaryBtn promoBtnOrange"*/}
-                        {/*        disabled={sending}*/}
-                        {/*    >*/}
-                        {/*        {sending ? "Відправляю..." : "Отримати промокод"}*/}
-                        {/*    </button>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </section>
@@ -868,13 +832,13 @@ html{ scroll-behavior: smooth; }
                     </div>
 
                     <div className="footerLink" onClick={() => setTouOpen(true)}>
-                        Умови використання і політика приватності
+                        Terms of Use and Privacy Policy
                     </div>
                 </div>
             </footer>
 
             {touOpen && (
-                <TermsOfUseModal readOnly theme={theme} onClose={() => setTouOpen(false)} />
+                <TermsOfUseModal readOnly theme={theme} onClose={() => setTouOpen(false)}/>
             )}
         </>
     );

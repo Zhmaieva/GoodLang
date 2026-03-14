@@ -6,6 +6,47 @@ import { callAccountInfoApi } from "../services/api.js";
 const FIRST_OPEN_KEY = "gl_has_opened";
 const TEACHER_KEY = "teacher";
 
+export function checkRouteRedirect(navigate) {
+    const params = new URLSearchParams(window.location.search);
+    const isTeacher = params.get("teacher") === "true";
+    const shouldOpenSubscribe = params.get("subscribe") === "true";
+
+    // If teacher=true -> remember it + remove param from URL (no redirect)
+    if (isTeacher) {
+        localStorage.setItem(TEACHER_KEY, "true");
+        params.delete("teacher");
+
+        const nextSearch = params.toString();
+        const nextUrl = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash || ""}`;
+
+        // Remove param without triggering navigation / redirect loops
+        window.history.replaceState(null, "", nextUrl);
+    }
+
+    const hasOpened = localStorage.getItem(FIRST_OPEN_KEY);
+
+    if (!hasOpened) {
+        localStorage.setItem(FIRST_OPEN_KEY, "1");
+
+        // Only redirect to /welcome if NOT teacher and NOT subscribe
+        if (!isTeacher) {
+            // avoid redirect loop if already on /welcome
+            if (location.pathname !== "/welcome"
+                && location.pathname !== '/greetings'
+                && location.pathname !== '/hello'
+                && location.pathname !== '/crossword'
+                && location.pathname !== '/marathon'
+                && !location.pathname.includes('/student')
+                && !location.pathname.includes('/school')
+                && !shouldOpenSubscribe) {
+                navigate("/greetings", { replace: true });
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 export default function SyncOnRouteChange() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -16,54 +57,18 @@ export default function SyncOnRouteChange() {
         if (!checkedFirstOpen.current) {
             checkedFirstOpen.current = true;
 
-            const params = new URLSearchParams(window.location.search);
-            const isTeacher = params.get("teacher") === "true";
-            const shouldOpenSubscribe = params.get("subscribe") === "true";
-
-            // If teacher=true -> remember it + remove param from URL (no redirect)
-            if (isTeacher) {
-                localStorage.setItem(TEACHER_KEY, "true");
-                params.delete("teacher");
-
-                const nextSearch = params.toString();
-                const nextUrl = `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash || ""}`;
-
-                // Remove param without triggering navigation / redirect loops
-                window.history.replaceState(null, "", nextUrl);
-            }
-
-            const hasOpened = localStorage.getItem(FIRST_OPEN_KEY);
-
-            if (!hasOpened) {
-                localStorage.setItem(FIRST_OPEN_KEY, "1");
-
-                // Only redirect to /welcome if NOT teacher and NOT subscribe
-                if (!isTeacher) {
-                    // avoid redirect loop if already on /welcome
-                    if (location.pathname !== "/welcome"
-                        && location.pathname !== '/greetings'
-                        && location.pathname !== '/hello'
-                        && location.pathname !== '/crossword'
-                        && location.pathname !== '/marathon'
-                        && !location.pathname.includes('/student')
-                        && !location.pathname.includes('/school')
-                        && !shouldOpenSubscribe) {
-                        navigate("/greetings", { replace: true });
-                        return;
-                    }
-                }
-            }
+            const redirected = checkRouteRedirect(navigate);
 
             // tries to open base path and never used old B2C GL
-            if (location.pathname === "/") {
+            if (location.pathname === "/" && !redirected) {
                 if (!localStorage.getItem('answers_data')) {
                     if (localStorage.getItem('isTeacherApp') === 'true' || !localStorage.getItem('account_info')?.email)
-                        navigate("/school")
+                        navigate("/school", { replace: true });
                     else
-                        navigate("/student")
+                        navigate("/student", { replace: true });
                 }
                 else
-                    navigate("/trainer")
+                    navigate("/trainer", { replace: true });
             }
         }
 

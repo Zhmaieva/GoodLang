@@ -26,10 +26,10 @@ const ALL_RULE_LABELS = (() => {
 
 
 const LEVEL_MAP = {
-    A1: { label: "Початківець", percent: 33 },
-    A2: { label: "Середній", percent: 66 },
-    B1: { label: "Середній", percent: 66 },
-    B2: { label: "Просунутий", percent: 100 },
+    A1: { label: "Beginner", percent: 33 },
+    A2: { label: "Intermediate", percent: 66 },
+    B1: { label: "Intermediate", percent: 66 },
+    B2: { label: "Advanced", percent: 100 },
 };
 
 const nextLevel = (lvl) => {
@@ -42,7 +42,7 @@ export function normalizeLevel(raw) {
     if (!raw) return "A1";
     const v = String(raw).trim().toUpperCase();
     if (LEVEL_ORDER.includes(v)) return v;
-    return "початківець";
+    return "A1";
 }
 
 function levelIndex(lvl) {
@@ -112,13 +112,13 @@ export default function MarathonPlanner({
 
     const PROBING_SEQUENCE = useMemo(
         () => [
-            { text: "Збираю статистику…", percent: 10, wait: 820, reveal: 0 },
-            { text: "Аналізую правила…", percent: 25, wait: 1020, reveal: 1 },
-            { text: "Додаю речення…", percent: 40, wait: 820, reveal: 2 },
-            { text: "Балансую складність…", percent: 55, wait: 680, reveal: 3 },
-            { text: "Будую плани на 7 днів…", percent: 70, wait: 960, reveal: 5 },
-            { text: "Обираю оптимальний…", percent: 85, wait: 1000, reveal: 6 },
-            { text: "Фіналізую…", percent: 100, wait: 600, reveal: 7 },
+            { text: "Collecting statistics…", percent: 10, wait: 820, reveal: 0 },
+            { text: "Analyzing grammar rules…", percent: 25, wait: 1020, reveal: 1 },
+            { text: "Generating sentences…", percent: 40, wait: 820, reveal: 2 },
+            { text: "Balancing difficulty…", percent: 55, wait: 680, reveal: 3 },
+            { text: "Building your 7-day plan…", percent: 70, wait: 960, reveal: 5 },
+            { text: "Choosing the optimal path…", percent: 85, wait: 1000, reveal: 6 },
+            { text: "Finalizing…", percent: 100, wait: 600, reveal: 7 },
         ],
         []
     );
@@ -752,7 +752,7 @@ export default function MarathonPlanner({
                             userSelect: "none",
                         }}
                     >
-                        Твій поточний рівень: {userLevel?.label?.toLowerCase()}
+                        Current level: {userLevel?.label?.toLowerCase()}
                     </div>
                 </div>
             );
