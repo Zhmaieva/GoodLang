@@ -695,12 +695,11 @@ export default function LandingPage3({theme}) {
                 <div className="left">
                     <div className="textBlock">
                         <h1 className="title">
-                            Check your English <br/>
-                            level for free <br/>
-                            in just 3 minutes <br/>
-                            <em>And start</em><br/>
-                            <em>speaking</em><br/>
-                            <em>with confidence</em><br/>
+                            English grammar<br/>
+                            exercises<br/>
+                            tailored for you <br/>
+                            <em>instant feedback</em><br/>
+                            <em>individual learning plan</em><br/>
                         </h1>
                     </div>
                 </div>
