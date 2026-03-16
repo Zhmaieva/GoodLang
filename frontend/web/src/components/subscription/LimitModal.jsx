@@ -301,65 +301,65 @@ export default function LimitModal({
                                             fontSize: "1.5rem",
                                             fontWeight: 700
                                         }}>
-                                            Improve your knowledge by <strong>+{improvePct}%</strong> in just one week
+                                            Keep practicing
 
-                                            <span style={{ position: "relative" }}>
-                                                <h2
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        setShowInfo((v) => !v);
-                                                    }}
-                                                    style={{
-                                                        marginLeft: 8,
-                                                        marginTop: 0,
-                                                        marginBottom: 0,
-                                                        cursor: "pointer",
-                                                        fontSize: "1.5rem",
-                                                        fontWeight: 800,
-                                                        paddingLeft: "8px",
-                                                        borderRadius: "50%",
-                                                        width: 18,
-                                                        height: 18,
-                                                        display: "inline-flex",
-                                                        alignItems: "center",
-                                                        justifyContent: "center",
-                                                        color: theme.text,
-                                                        lineHeight: 1,
-                                                        userSelect: "none",
-                                                    }}
-                                                    aria-label="Info"
-                                                >
-                                                    ⓘ
-                                                </h2>
+                                            {/*<span style={{ position: "relative" }}>*/}
+                                            {/*    <h2*/}
+                                            {/*        onClick={(e) => {*/}
+                                            {/*            e.stopPropagation();*/}
+                                            {/*            setShowInfo((v) => !v);*/}
+                                            {/*        }}*/}
+                                            {/*        style={{*/}
+                                            {/*            marginLeft: 8,*/}
+                                            {/*            marginTop: 0,*/}
+                                            {/*            marginBottom: 0,*/}
+                                            {/*            cursor: "pointer",*/}
+                                            {/*            fontSize: "1.5rem",*/}
+                                            {/*            fontWeight: 800,*/}
+                                            {/*            paddingLeft: "8px",*/}
+                                            {/*            borderRadius: "50%",*/}
+                                            {/*            width: 18,*/}
+                                            {/*            height: 18,*/}
+                                            {/*            display: "inline-flex",*/}
+                                            {/*            alignItems: "center",*/}
+                                            {/*            justifyContent: "center",*/}
+                                            {/*            color: theme.text,*/}
+                                            {/*            lineHeight: 1,*/}
+                                            {/*            userSelect: "none",*/}
+                                            {/*        }}*/}
+                                            {/*        aria-label="Info"*/}
+                                            {/*    >*/}
+                                            {/*        ⓘ*/}
+                                            {/*    </h2>*/}
 
-                                                {showInfo && (
-                                                    <div
-                                                        style={{
-                                                            position: "absolute",
-                                                            top: "130%",
-                                                            left: "25%",
-                                                            transform: "translateX(-25%)",
-                                                            background: "#fffdf8",
-                                                            border: `2px solid ${theme.accent}`,
-                                                            borderRadius: 12,
-                                                            boxShadow: `3px 3px 0 ${theme.accentDark}`,
-                                                            padding: "10px 12px",
-                                                            fontSize: "0.9rem",
-                                                            color: theme.text,
-                                                            width: 220,
-                                                            zIndex: 10,
-                                                            textAlign: "left",
-                                                            cursor: "pointer",
-                                                        }}
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            setShowInfo((v) => !v);
-                                                        }}
-                                                    >
-                                                        With regular practice — the predicted result according to our statistics.
-                                                    </div>
-                                                )}
-                                            </span>
+                                            {/*    {showInfo && (*/}
+                                            {/*        <div*/}
+                                            {/*            style={{*/}
+                                            {/*                position: "absolute",*/}
+                                            {/*                top: "130%",*/}
+                                            {/*                left: "25%",*/}
+                                            {/*                transform: "translateX(-25%)",*/}
+                                            {/*                background: "#fffdf8",*/}
+                                            {/*                border: `2px solid ${theme.accent}`,*/}
+                                            {/*                borderRadius: 12,*/}
+                                            {/*                boxShadow: `3px 3px 0 ${theme.accentDark}`,*/}
+                                            {/*                padding: "10px 12px",*/}
+                                            {/*                fontSize: "0.9rem",*/}
+                                            {/*                color: theme.text,*/}
+                                            {/*                width: 220,*/}
+                                            {/*                zIndex: 10,*/}
+                                            {/*                textAlign: "left",*/}
+                                            {/*                cursor: "pointer",*/}
+                                            {/*            }}*/}
+                                            {/*            onClick={(e) => {*/}
+                                            {/*                e.stopPropagation();*/}
+                                            {/*                setShowInfo((v) => !v);*/}
+                                            {/*            }}*/}
+                                            {/*        >*/}
+                                            {/*            With regular practice — the predicted result according to your performance and our statistics.*/}
+                                            {/*        </div>*/}
+                                            {/*    )}*/}
+                                            {/*</span>*/}
                                         </h2>
                                     )}
 
