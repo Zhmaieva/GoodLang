@@ -133,14 +133,14 @@ export default function RulePage({ data, theme }) {
     const container = {
         maxWidth: 980,
         width: "100%",
-        padding: isMobile ? "20px 14px 60px" : "36px 20px 80px",
+        padding: isMobile ? "20px 0px 60px" : "36px 20px 80px",
         margin: "0 auto",
     };
 
     // ✅ a subtle canvas behind all sections so cards feel cohesive
     const sectionsCanvas = {
         borderRadius: 22,
-        padding: isMobile ? 10 : 12,
+        padding: isMobile ? 0 : 12,
         //background: "rgba(0,0,0,0.02)",
     };
 
