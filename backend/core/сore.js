@@ -305,10 +305,11 @@ Schema:
 Translate the following text from Ukrainian to locale "${locale}".
 
 Rules:
-1. Preserve meaning exactly.
-2. Keep tone natural.
-3. Do not add explanations.
-4. Return only JSON.
+1. Translate only part of the TEXT that is in Ukrainian. Never translate English part and preserve it as is
+2. Preserve meaning exactly.
+3. Keep tone natural.
+4. Do not add explanations.
+5. Return only JSON.
 
 TEXT:
 ${safeValue}

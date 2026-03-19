@@ -100,7 +100,7 @@ export default function GoodLangLandingTeaStyleThemed({
 
                                                           joinTitle = `JOIN ${brand.toUpperCase()} TODAY`,
                                                           joinSubtitle = "Start learning now — no registration required.",
-                                                          primaryCtaText = "Learn for free",
+                                                          primaryCtaText = "Get started",
                                                           secondaryCtaText = "Learn more",
                                                           onPrimaryCta,
                                                           onSecondaryCta,
@@ -110,8 +110,8 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           emailPlaceholder = "you@example.com",
 
                                                           heroScreens = [
-                                                              { src: "../../../shot1.png", alt: "App screen 1" },
-                                                              { src: "../../../shot2.png", alt: "App screen 2" },
+                                                              { src: "../../../shot1.jpg", alt: "App screen 1" },
+                                                              { src: "../../../shot2.jpg", alt: "App screen 2" },
                                                               // { src: "../../../public/shot3.png", alt: "App screen 3" },
                                                           ],
 
@@ -475,7 +475,7 @@ export default function GoodLangLandingTeaStyleThemed({
             setSending(true);
             setMsg("");
             await callSendPromoCodeApi({email:v});
-            setMsg("Done! We’ve sent a promo code to the email address you provided.");
+            setMsg("Done! We’ve sent a discount code to the email address you provided.");
             setEmail("");
         } catch {
             setMsg("Oops, something went wrong... We’re already fixing it.");
@@ -716,7 +716,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                     disabled={sending}
                                     onClick={submitEmail}
                                 >
-                                    {sending ? "Sending..." : "Get promo code"}
+                                    {sending ? "Sending..." : "Get discount"}
                                 </button>
                             </div>
                             {msg ? <div style={styles.msg}>{msg}</div> : null}
