@@ -91,9 +91,14 @@ export default function LimitModal({
         setAccount(account);
     };
 
-    const onCloseHandler = useCallback(() => {
+    const onCloseHandler = useCallback(async () => {
         setPaymentIntent(false);
-        if (isPaying) window.location.reload();
+        if (isPaying) {
+            try {
+                 await callAccountVerifyApi(ACTION_TYPES.MODAL_CANCELLED_STRIPE);
+            } catch {}
+            window.location.reload();
+        }
         onClose();
     }, [isPaying, onClose]);
 
@@ -167,8 +172,16 @@ export default function LimitModal({
 
             const stripe = await getStripe();
 
+            try {
+                await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_STRIPE);
+            } catch {}
+
             const { clientSecret, isSuccess } = await callCheckoutApi();
             if (!isSuccess) {
+                try {
+                    await callAccountVerifyApi(ACTION_TYPES.ERROR_PURCHASE_SUBSCRIPTION);
+                } catch {}
+
                 navigate("/payment/cancel");
                 setLoading(false);
                 return;
@@ -183,6 +196,10 @@ export default function LimitModal({
             document.getElementById("embedded-checkout-container").style.display = "block";
             setLoading(false);
         } catch (err) {
+            try {
+                await callAccountVerifyApi(ACTION_TYPES.ERROR_PURCHASE_SUBSCRIPTION);
+            } catch {}
+
             console.error("Stripe error:", err);
             setLoading(false);
         }
