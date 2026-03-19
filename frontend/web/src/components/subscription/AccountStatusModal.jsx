@@ -182,7 +182,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                         fontSize: "1rem",
                                         textAlign: "left"
                                     }}>
-                                        Пробний період до {fmtDate(account?.trialEndsOn)}
+                                        Trial ends on {fmtDate(account?.trialEndsOn)}
                                     </p>
                                 }
                             </div>
