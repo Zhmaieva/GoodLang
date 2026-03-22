@@ -5,7 +5,7 @@ WITH reg_users AS (
         date_trunc('day', created_at) AS reg_day,
         translations_quota
     FROM accounts
-    WHERE created_at >= TIMESTAMP '2026-03-01 00:00:00+00'
+    WHERE created_at >= TIMESTAMP '2026-03-20 00:00:00+00'
       AND created_at <  TIMESTAMP '2026-04-01 00:00:00+00'
 ),
      reg_counts AS (
