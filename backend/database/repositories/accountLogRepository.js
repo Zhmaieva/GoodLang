@@ -83,7 +83,7 @@ export async function recordTranslationUsage(accountId, taskType = 1) {
     `;
     const date = new Date();
 
-    if (taskType !== 1)
+    if (taskType === 1)
         await recordAction(accountId, ACTION_TYPES.TRANSLATION_CALL_CHOOSE, date);
     else
         await pool.query(query, [accountId, ACTION_TYPES.TRANSLATION_CALL, date]);

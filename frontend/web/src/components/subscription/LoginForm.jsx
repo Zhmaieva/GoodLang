@@ -335,8 +335,16 @@ export default function LoginForm({
 
                     const stripe = await getStripe();
 
+                    try {
+                        await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_STRIPE);
+                    } catch {}
+
                     const { clientSecret, isSuccess } = await callCheckoutApi();
                     if (!isSuccess) {
+                        try {
+                            await callAccountVerifyApi(ACTION_TYPES.ERROR_PURCHASE_SUBSCRIPTION);
+                        } catch {}
+
                         navigate("/payment/cancel");
                         setLoading(false);
                         return;
@@ -354,6 +362,10 @@ export default function LoginForm({
                         setLoading(false);
                     }, 200);
                 } catch (err) {
+                    try {
+                        await callAccountVerifyApi(ACTION_TYPES.ERROR_PURCHASE_SUBSCRIPTION);
+                    } catch {}
+
                     console.error("Stripe error:", err);
                     setLoading(false);
                 }

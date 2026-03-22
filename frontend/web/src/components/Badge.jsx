@@ -8,7 +8,7 @@ export default function Badge({ theme, tone, children }) {
         fontSize: "1rem",
         fontWeight: 700,
         padding: "6px 10px",
-        borderRadius: 999,
+        borderRadius: 12,
         border: `2px solid ${theme.accent}`,
         background: "transparent",
         color: theme.text,

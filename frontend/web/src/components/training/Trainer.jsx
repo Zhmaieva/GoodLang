@@ -622,9 +622,9 @@ export default function Trainer({
     // -----------------------------
     async function onMainButtonClick() {
         if (locked) {
-            try {
-                callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_BEFORE_START).then();
-            } catch {}
+            // try {
+            //     callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_MARATHON_BEFORE_START).then();
+            // } catch {}
 
             setLimitModalOpen(true);
             return;

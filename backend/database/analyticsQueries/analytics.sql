@@ -5,8 +5,8 @@ WITH reg_users AS (
         date_trunc('day', created_at) AS reg_day,
         translations_quota
     FROM accounts
-    WHERE created_at >= TIMESTAMP '2026-02-03 00:00:00+00'
-      AND created_at <  TIMESTAMP '2026-03-01 00:00:00+00'
+    WHERE created_at >= TIMESTAMP '2026-03-20 00:00:00+00'
+      AND created_at <  TIMESTAMP '2026-04-01 00:00:00+00'
 ),
      reg_counts AS (
          SELECT
@@ -44,6 +44,8 @@ WITH reg_users AS (
                             (400, 'MODAL_SHOWN_COOKIES'),
                             (401, 'MODAL_SHOWN_TOU'),
                             (402, 'MODAL_SHOWN_DISCOUNT_SUBSCRIPTION'),
+                            (403, 'MODAL_SHOWN_STRIPE'),
+                            (404, 'MODAL_CANCELLED_STRIPE'),
                             (101, 'PDF_DOWNLOAD_CALL'),
                             (102, 'PDF_CROSSWORD_DOWNLOAD_CALL'),
                             (103, 'PDF_DOWNLOAD_CALL_CHOOSE'),
@@ -60,7 +62,8 @@ WITH reg_users AS (
                             (221, 'BUTTON_CLICK_MARATHON_START'),
                             (222, 'BUTTON_CLICK_MARATHON_PURCHASE'),
                             (2000, 'ERROR_PURCHASE_MARATHON'),
-                            (2001, 'ERROR_TRANSLATOR')
+                            (2001, 'ERROR_TRANSLATOR'),
+                            (2002, 'ERROR_PURCHASE_SUBSCRIPTION')
 
 
                        ) AS t(action_type, action_name)
