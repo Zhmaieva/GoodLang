@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import Page from "../../Page.jsx";
 import Input from "../../Input.jsx";
 import NumberSlider from "../../NumberSlider.jsx";
@@ -10,6 +10,8 @@ import TextLoadingPreview from "../../TextLoadingPreview.jsx";
 import FooterNextButtons from "../../FooterNextButtons.jsx";
 import AwesomeActionButton from "../../AwesomeActionButton.jsx";
 import {LEVELS} from "../../../../utils/constants.js";
+import {theme} from "../../../../App.jsx";
+import {apiGenerateStoryFromTopic} from "../../../../services/api.js";
 
 export function CreateVocabFillGapsPage() {
     const [taskReady, setTaskReady] = useState(false);
@@ -17,66 +19,74 @@ export function CreateVocabFillGapsPage() {
     const [level, setLevel] = useState(LEVELS[2]);
     const [tasksSelected, setTasksSelected] = useState(5);
 
+    const [generatedText, setGeneratedText] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+
+    const debounceTimer = useRef(null);
+
     useEffect(() => {
-        setTaskReady(tasksSelected > 0 && topic && level);//TODO: adjust after a time gap and reset if before the timer trigger
-    }, [tasksSelected, topic, level])
+        setTaskReady(tasksSelected > 0 && topic && level);
+
+        if (!topic) return;
+
+        // Show loading preview immediately, clear any existing text
+        setIsLoading(true);
+        setGeneratedText("");
+
+        // Reset the timer on every change
+        clearTimeout(debounceTimer.current);
+        debounceTimer.current = setTimeout(async () => {
+            try {
+                const result = await apiGenerateStoryFromTopic({topic, level, numberOfWords: tasksSelected});
+                setGeneratedText(result?.text?.split("[[p]]")?.join(".\n\n    "));
+            } finally {
+                setIsLoading(false);
+            }
+        }, 3000);
+
+        return () => clearTimeout(debounceTimer.current);
+    }, [tasksSelected, topic, level]);
 
     return (
         <Page
             title={"Vocabulary gap text generator"}
             subtitle={"Generate vocabulary and create a gap-fill text automatically"}
         >
-            <PageLeft>
+            <PageLeft style={{gap: theme.spacing.gap}}>
                 <HorizontalGroup>
                     <Input
                         placeholder={`Enter topic (e.g. 'At the playground')`}
                         mode="raw"
                         charLimit={120}
                         value={topic}
-                        onChange={(value) => {
-                            setTopic(value);
-                        }}
+                        onChange={(value) => setTopic(value)}
                         subtext={null}
                     />
                     <NumberSlider
                         value={tasksSelected}
-                        onChange={(value) => {
-                            setTasksSelected(value);
-                        }}
+                        onChange={(value) => setTasksSelected(value)}
                         min={5}
                         max={30}
                         step={1}
                         wordSingular="word"
                         wordPlural="words"
-                        // postText="in the assignment"
                         subtitle="Pick how many topic words the text will receive."
                     />
                 </HorizontalGroup>
                 <HorizontalGroup>
                     <ChooseLevel initialLevel={level} onChange={setLevel}/>
                 </HorizontalGroup>
-                <HorizontalGroup>
-                    <TextLoadingPreview/>
+                <HorizontalGroup visibleIf={!!topic}>
+                    {isLoading && <TextLoadingPreview/>}
+                    {generatedText && !isLoading && <p>{generatedText}</p>}
                 </HorizontalGroup>
             </PageLeft>
-            <PageRight style={{
-                justifyContent: 'flex-end',
-            }}>
-                <FooterNextButtons
-                    disabled={!taskReady}
-                >
+            <PageRight style={{justifyContent: 'flex-end'}}>
+                <FooterNextButtons disabled={!taskReady}>
                     <AwesomeActionButton
                         size="regular"
                         variant={"ghost"}
-                        onClick={() => {
-                            //const assignmentType = getLastPathEdge(location.pathname);
-                            //const params = new URLSearchParams();
-                            // params.set("type", assignmentType);
-                            // params.set("taskMode", 'gaps');
-                            // params.set("tasks", String(tasksSelected));
-                            // params.set("rules", selected.join(",")); // ids list
-                            //navigate(`/school/assignments/create-assignment/share?${params.toString()}`);
-                        }}
+                        onClick={() => {}}
                     >
                         Save and share with students
                     </AwesomeActionButton>

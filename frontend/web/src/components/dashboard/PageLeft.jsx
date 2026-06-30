@@ -1,7 +1,7 @@
 import { theme } from "../../App.jsx";
 import { useMemo } from "react";
 
-export default function PageLeft({ autoStretch = false, children }) {
+export default function PageLeft({ autoStretch = false, style, children }) {
     const t = theme.page;
 
     const autoStretchStyles = {
@@ -21,6 +21,7 @@ export default function PageLeft({ autoStretch = false, children }) {
                 display: "flex",
                 flexDirection: "column",
 
+                ...style,
                 ...(autoStretch ? autoStretchStyles : {}),
             },
         }),

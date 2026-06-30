@@ -623,6 +623,10 @@ theme.bottomDynamicList = {
     padX: theme.spacing.cardPadX,
 };
 
+theme.fade = {
+    transition: `opacity ${theme.motion.normal} ${theme.motion.ease}`,
+}
+
 theme.link = {
     wrap: {
         width: "100%",

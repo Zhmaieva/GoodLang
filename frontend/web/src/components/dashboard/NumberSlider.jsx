@@ -1,6 +1,7 @@
 // NumberSlider.jsx — theme-driven, with optional persisted default value
 import React, { useEffect, useMemo, useRef } from "react";
 import { theme } from "../../App.jsx";
+import {Header} from "./Header.jsx";
 
 function mergeStyle(a, b) {
     return { ...(a || {}), ...(b || {}) };
@@ -133,12 +134,7 @@ export default function NumberSlider({
 
     return (
         <div style={styles.wrap}>
-            <div style={styles.header}>
-                <div style={styles.valueLine}>
-                    <span style={t.valueNumber}>{`${v} ${word} ${postText}`}</span>
-                </div>
-                {!!subtitle && <div style={styles.subtitle}>{subtitle}</div>}
-            </div>
+            <Header title={`${v} ${word} ${postText}`} subtitle={subtitle} />
 
             <div style={styles.sliderWrap}>
                 <input

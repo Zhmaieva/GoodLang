@@ -2,6 +2,7 @@ import {LEVELS} from "../../utils/constants.js";
 import {Chip} from "./Chip.jsx";
 import React, {useState} from "react";
 import {themeStyles} from "../../utils/theme";
+import {Header} from "./Header.jsx";
 
 const theme = themeStyles;
 export default function ChooseLevel({initialLevel, onChange = (l) => {}}) {
@@ -10,26 +11,33 @@ export default function ChooseLevel({initialLevel, onChange = (l) => {}}) {
     return (
         <div style={{
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
-            gap: theme.spacing.gap,
-            maxWidth: theme.sizes.commonWidth,
+            flexDirection: "column",
+            gap: theme.spacing.gap
         }}>
-            {LEVELS.map((l) => (
-                <Chip
-                    key={l}
-                    active={level === l}
-                    onClick={() => {
-                        setLevel(l);
-                        onChange(l);
-                        // clearTextOnly();
-                        // setToast("");
-                        // setGlobalError("");
-                    }}
-                >
-                    {l}
-                </Chip>
-            ))}
+            <Header title={"Choose level"} />
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                gap: theme.spacing.gap,
+                maxWidth: theme.sizes.commonWidth,
+            }}>
+                {LEVELS.map((l) => (
+                    <Chip
+                        key={l}
+                        active={level === l}
+                        onClick={() => {
+                            setLevel(l);
+                            onChange(l);
+                            // clearTextOnly();
+                            // setToast("");
+                            // setGlobalError("");
+                        }}
+                    >
+                        {l}
+                    </Chip>
+                ))}
+            </div>
         </div>
     )
 }

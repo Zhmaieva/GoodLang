@@ -939,12 +939,12 @@ export function apiJoinTaskSet({ taskSetId }) {
 
 /**
  * ==========================================================
- * TASK BUILDER: GENERATE TOPIC WORDS
+ * TASK BUILDER: GENERATE STORY FROM TOPIC
  * ==========================================================
  * POST /schools/task-builder/topic-words
  * body: { topic: string(<=64), level: "A1".."C2", numberOfWords: 5..30 }
  */
-export function apiGenerateTopicWords({ topic, level, numberOfWords = 12 }) {
+export function apiGenerateStoryFromTopic({ topic, level, numberOfWords = 12 }) {
     const t = String(topic ?? "").trim();
     if (!t) throw new Error("topic is required");
 
@@ -955,63 +955,12 @@ export function apiGenerateTopicWords({ topic, level, numberOfWords = 12 }) {
     const n = Number.parseInt(String(numberOfWords ?? ""), 10);
     const clamped = Number.isFinite(n) ? Math.max(5, Math.min(30, n)) : 12;
 
-    return jsonFetch(`${API_BASE}/schools/task-builder/topic-words`, {
+    return jsonFetch(`${API_BASE}/schools/task-builder/story-from-topic`, {
         method: "POST",
         body: JSON.stringify({
             topic: t.slice(0, 64),
             level: lvl,
             numberOfWords: clamped,
-        }),
-    });
-}
-
-/**
- * ==========================================================
- * TASK BUILDER: GENERATE STORY FROM WORDS
- * ==========================================================
- * POST /schools/task-builder/story-from-words
- * body: { words: string[], level?: "A1".."C2", topicHint?: string }
- *
- * returns:
- * {
- *   level,
- *   topicHint,
- *   wordsCount,
- *   text,      // story with {GAP}
- *   answers    // correct answers in gap order
- * }
- */
-export function apiGenerateStoryFromWords({
-                                              words,
-                                              level = "A2",
-                                              topicHint = "",
-                                          }) {
-    if (!Array.isArray(words) || !words.length) {
-        throw new Error("words must be a non-empty array");
-    }
-
-    const cleanedWords = words
-        .map((w) => String(w ?? "").trim())
-        .filter(Boolean);
-
-    if (!cleanedWords.length) {
-        throw new Error("words must contain valid strings");
-    }
-
-    const lvl = String(level ?? "").trim().toUpperCase();
-    const allowed = new Set(["A1", "A2", "B1", "B2", "C1", "C2"]);
-    if (!allowed.has(lvl)) {
-        throw new Error("level must be one of: A1, A2, B1, B2, C1, C2");
-    }
-
-    const hint = String(topicHint ?? "").trim().slice(0, 80);
-
-    return jsonFetch(`${API_BASE}/schools/task-builder/story-from-words`, {
-        method: "POST",
-        body: JSON.stringify({
-            words: cleanedWords,
-            level: lvl,
-            topicHint: hint || undefined,
         }),
     });
 }
