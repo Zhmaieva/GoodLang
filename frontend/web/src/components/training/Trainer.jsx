@@ -502,6 +502,7 @@ export default function Trainer({
                 textToTranslateOriginal: taskType === "gap" ? (gapSentence || "") : (textToTranslateOriginal || ""),
                 translation: userAns,
                 rules,
+                ...(taskType === "gap" ? { options: gapOptions } : {}),
                 seed,
                 skip,
                 task_type: currentTaskTypeParam,

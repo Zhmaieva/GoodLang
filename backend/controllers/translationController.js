@@ -2,20 +2,20 @@ import {
     clearText,
     evaluateAndCoach,
     evaluateGapAndCoach,
+    generateGapSample,
+    generateTranslationSample,
     preEvaluate,
-    randomRule,
-    shuffleBySeed, translateIfNeeded
+    randomRule
 } from "../core/сore.js";
-import { ALL_RULES_SAMPLES } from "../core/allRulesSamples.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import { checkTranslationLimit, recordTranslationUsage } from "../database/repositories/accountLogRepository.js";
 import {GrammarRule, LEVEL_RULES} from "../core/rules.js";
-import {ALL_GAPS_SAMPLES} from "../core/allGapsSamples.js";
 import {answerNextMarathonTaskByRuleId} from "../database/repositories/marathonsRepository.js";
 import {getAccountById} from "../database/repositories/accountsRepository.js";
 
 const name = "translations";
-const locale = "ua";
+const PROJECT_RULES = Object.freeze(Object.values(GrammarRule));
+const PROJECT_RULE_SET = new Set(PROJECT_RULES);
 
 const RULE_TO_LEVEL = (() => {
     const map = Object.create(null);
@@ -27,6 +27,110 @@ const RULE_TO_LEVEL = (() => {
 
 function getRuleLevel(ruleId) {
     return RULE_TO_LEVEL[String(ruleId)] ?? null;
+}
+
+function normalizeRulesInput(rules) {
+    const raw = Array.isArray(rules)
+        ? rules
+        : typeof rules === "string" && rules.trim()
+            ? rules.split(",")
+            : [];
+
+    const normalized = [];
+    for (const item of raw) {
+        const ruleId = String(item ?? "").trim();
+        const resolved = GrammarRule[ruleId] ?? ruleId;
+        if (!PROJECT_RULE_SET.has(resolved) || normalized.includes(resolved)) continue;
+        normalized.push(resolved);
+    }
+
+    return normalized;
+}
+
+function parseSkip(skip) {
+    const parsed = Number.parseInt(String(skip ?? "0"), 10);
+    return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+}
+
+function parseOptionsInput(options) {
+    if (Array.isArray(options)) {
+        return options.map((o) => String(o ?? "").trim());
+    }
+    if (typeof options === "string") {
+        return options.split(",").map((o) => String(o ?? "").trim());
+    }
+    return [];
+}
+
+function normalizeScores(scores, rules, isCorrect) {
+    const normalized = Array.isArray(scores) ? scores.slice(0, rules.length) : [];
+    while (normalized.length < rules.length) {
+        normalized.push(isCorrect ? 1 : 0);
+    }
+    return normalized.map((score) => {
+        const n = Number(score);
+        if (!Number.isFinite(n)) return isCorrect ? 1 : 0;
+        return Math.max(0, Math.min(1, n));
+    });
+}
+
+function uniqueValidRules(rules) {
+    const out = [];
+    for (const rule of Array.isArray(rules) ? rules : []) {
+        const ruleId = String(rule ?? "").trim();
+        if (!PROJECT_RULE_SET.has(ruleId) || out.includes(ruleId)) continue;
+        out.push(ruleId);
+    }
+    return out;
+}
+
+async function buildRuntimeTask({
+                                    taskType,
+                                    targetRules,
+                                    level,
+                                    seed,
+                                    skip,
+                                    userLocale,
+                                }) {
+    const requestedRules = uniqueValidRules(targetRules);
+    const rulesForSample = requestedRules.length ? requestedRules : [randomRule(level ?? "A1")];
+
+    if (taskType === 1) {
+        const sample = await generateGapSample({
+            targetRules: rulesForSample,
+            allRules: PROJECT_RULES,
+            level,
+            seed,
+            skip,
+        });
+
+        return {
+            taskType: 1,
+            rules: sample.rules,
+            textToTranslate: sample.en,
+            options: sample.options,
+            textToTranslateOriginal: "",
+            hint: "",
+        };
+    }
+
+    const sample = await generateTranslationSample({
+        targetRules: rulesForSample,
+        allRules: PROJECT_RULES,
+        level,
+        seed,
+        skip,
+        targetLocale: userLocale,
+    });
+
+    return {
+        taskType: 0,
+        rules: sample.rules,
+        textToTranslate: sample.text,
+        textToTranslateOriginal: sample.text,
+        hint: sample.hint,
+        options: undefined,
+    };
 }
 
 export const translationsController = {
@@ -50,6 +154,7 @@ export const translationsController = {
                 translation,
                 textToTranslate,
                 textToTranslateOriginal,
+                options,
                 skip,
                 seed,
                 freeTraining,
@@ -64,81 +169,36 @@ export const translationsController = {
                 String(use_same_task_type) === "1";
 
             // --- нормалізація rules ---
-            let rulesArr = [];
-            if (Array.isArray(rules)) {
-                rulesArr = rules;
-            } else if (typeof rules === "string" && rules.trim()) {
-                rulesArr = rules.split(",").map((r) => r.trim()).filter(Boolean);
-            }
+            const rulesArr = normalizeRulesInput(rules);
+            const currentSkip = parseSkip(skip);
 
             // --- якщо textToTranslate немає — віддаємо новий приклад ---
             if (!textToTranslate) {
-                const selectedRule =
-                    rulesArr.length > 0 ? GrammarRule[rulesArr[0]] : randomRule(level ?? "A1");
-
-                // -------------------------------
-                // TASK TYPE 1: GAPS (A1 only for now)
-                // -------------------------------
-                if (taskType === 1) {
-                    const samples = shuffleBySeed(ALL_GAPS_SAMPLES[selectedRule], seed ?? 1);
-
-                    const skipRaw = typeof skip === "string" ? skip : "0";
-                    const adjustedSkip = Math.floor(Number(skipRaw || "0") % samples.length);
-                    const sample = samples[adjustedSkip];
-
-                    const { allowed, waitTimeSeconds } = skipCoach
-                        ? { allowed: true, waitTimeSeconds: 0 }
-                        : await checkTranslationLimit(accountId);
-
-                    return res.json({
-                        taskType: 1,
-                        rules: sample.rules,
-                        textToTranslate: sample.en,
-                        options: sample.options,
-                        isAnswerCorrect: false,
-                        correctAnswer: "",
-                        tipIfWrong: "",
-                        scores: [],
-                        skip: adjustedSkip + 1,
-                        allowed,
-                        waitTimeSeconds,
-                    });
-                }
-
-                // -------------------------------
-                // TASK TYPE 0: TRANSLATION
-                // -------------------------------
-
-                const samples = shuffleBySeed(ALL_RULES_SAMPLES[selectedRule], seed ?? 1);
-                const skipRaw = typeof skip === "string" ? skip : "0";
-                const adjustedSkip = Math.floor(Number(skipRaw || "0") % samples.length);
-                const sample = samples[adjustedSkip];
+                const task = await buildRuntimeTask({
+                    taskType,
+                    targetRules: rulesArr,
+                    level: level ?? "A1",
+                    seed,
+                    skip: currentSkip,
+                    userLocale,
+                });
 
                 const { allowed, waitTimeSeconds } = skipCoach
                     ? { allowed: true, waitTimeSeconds: 0 }
                     : await checkTranslationLimit(accountId);
 
-                const textToTranslateAdjusted = await translateIfNeeded({
-                    value: sample[locale],
-                    locale: userLocale
-                });
-
-                const hintAdjusted = await translateIfNeeded({
-                    value: sample.hint,
-                    locale: userLocale
-                });
-
                 return res.json({
-                    taskType: 0,
-                    rules: sample.rules,
-                    textToTranslate: textToTranslateAdjusted,
-                    textToTranslateOriginal: sample[locale],
+                    taskType: task.taskType,
+                    rules: task.rules,
+                    textToTranslate: task.textToTranslate,
+                    textToTranslateOriginal: task.textToTranslateOriginal,
                     isAnswerCorrect: false,
                     correctAnswer: "",
                     tipIfWrong: "",
                     score: 0,
-                    hint: hintAdjusted,
-                    skip: adjustedSkip + 1,
+                    hint: task.hint,
+                    options: task.taskType === 1 ? task.options : undefined,
+                    skip: currentSkip + 1,
                     allowed,
                     waitTimeSeconds,
                 });
@@ -164,37 +224,16 @@ export const translationsController = {
             let result;
 
             if (taskType === 1) {
-                const selectedRule = GrammarRule[rulesArr[0]];
-                // Find the gap sample by its "en" prompt (must exist so we know correct/options)
-                const gapSample = ALL_GAPS_SAMPLES[selectedRule].find((s) => {
-                    if (!s) return false;
+                const optionList = parseOptionsInput(options);
 
-                    const enVal = s.en;
-
-                    const sameOption = s.options.some(o => o === translation);
-
-                    const sameEn = Array.isArray(enVal)
-                        ? enVal.includes(textToTranslate)
-                        : String(enVal) === String(textToTranslate);
-
-                    // If rulesArr is provided, try to match at least rule[0]
-                    const sameRule =
-                        !rulesArr?.length ||
-                        (Array.isArray(s.rules) && s.rules[0] === rulesArr[0]);
-
-                    return sameOption && sameEn && sameRule;
-                });
-
-                if (!gapSample) {
-                    return res.status(400).json({
-                        message: "Gap task not found for evaluation.",
-                    });
-                }
-
-                // Use your hybrid evaluator (LLM only for tip if wrong; sample/scores deterministic)
                 result = await evaluateGapAndCoach({
-                    task: gapSample,
+                    task: {
+                        rules: rulesArr,
+                        en: textToTranslate,
+                        options: optionList,
+                    },
                     userAnswer: translation ?? "",
+                    allRules: PROJECT_RULES,
                     targetLocale: userLocale || "uk-UA",
                 });
             } else {
@@ -216,6 +255,7 @@ export const translationsController = {
                 if (!result.answer_is_correct && !skipCoach) {
                     result = await evaluateAndCoach({
                         rules: rulesArr,
+                        allRules: PROJECT_RULES,
                         targetLocale: userLocale || "uk-UA",
                         userEnglish: translation ?? "",
                         textToTranslate: textToTranslate ?? "",
@@ -236,11 +276,9 @@ export const translationsController = {
             let newRules = rulesArr;
             let newOptions = null; // only for gaps
             let newTaskType = taskType;
-
-            const currentSkip = Number.parseInt(skip || "0", 10) || 0;
             const newSkip = currentSkip + 1;
 
-            let scores = result.scores || [];
+            let scores = normalizeScores(result.scores, rulesArr, !!result.answer_is_correct);
 
             // decide next task type rule (only if we actually select a new task below)
             const decideNextTaskType = (targetRule) => {
@@ -255,58 +293,38 @@ export const translationsController = {
                 return 0;
             };
 
-            for (let i = 0; i < scores.length; i++) {
-                if (scores[i] < 1 || (!level && !freeTraining)) {
-                    const targetRule = rulesArr[i];
+            const violatedRules = uniqueValidRules(result.violated_rules);
+            const scoredWeakRules = rulesArr.filter((_, i) => scores[i] < 1);
+            const fallbackRules = !level && !freeTraining ? rulesArr : [];
+            const nextRuleCandidates = uniqueValidRules([
+                ...violatedRules,
+                ...scoredWeakRules,
+                ...fallbackRules,
+            ]);
 
-                    // determine which task type we should serve next
-                    newTaskType = decideNextTaskType(targetRule);
+            for (const targetRule of nextRuleCandidates) {
+                // determine which task type we should serve next
+                newTaskType = decideNextTaskType(targetRule);
 
-                    if (newTaskType === 1) {
-                        const selectedRule =
-                            rulesArr.length > 0 ? GrammarRule[rulesArr[0]] : randomRule(level ?? "A1");
-                        // pick next from gaps samples (filtered by rule)
-                        const gapRuleSamples = ALL_GAPS_SAMPLES[selectedRule].filter(
-                            (s) => Array.isArray(s.rules) && s.rules[0] === targetRule
-                        );
+                try {
+                    const nextTask = await buildRuntimeTask({
+                        taskType: newTaskType,
+                        targetRules: [targetRule],
+                        level: getRuleLevel(targetRule) ?? level ?? "A1",
+                        seed,
+                        skip: newSkip,
+                        userLocale,
+                    });
 
-                        if (gapRuleSamples.length === 0) break;
-
-                        const shuffled = shuffleBySeed(gapRuleSamples, seed ?? 1);
-                        const adjustedSkip = Math.floor(Number(currentSkip + 1 || "0") % shuffled.length);
-                        const nextSample = shuffled[adjustedSkip];
-
-                        if (nextSample) {
-                            newRules = nextSample.rules;
-                            newTextToTranslate = nextSample.en;
-                            newOptions = nextSample.options;
-                        }
-                    } else {
-                        // translation samples
-                        const ruleSamples = ALL_RULES_SAMPLES[targetRule] || [];
-                        if (ruleSamples.length === 0) break;
-
-                        const shuffled = shuffleBySeed(ruleSamples, seed ?? 1);
-                        const adjustedSkip = Math.floor(Number(currentSkip + 1 || "0") % shuffled.length);
-                        const nextSample = shuffled[adjustedSkip];
-
-                        if (nextSample) {
-                            newRules = nextSample.rules;
-                            newTextToTranslateOriginal = nextSample[locale];
-                            newTextToTranslate = await translateIfNeeded({
-                                value: nextSample[locale],
-                                locale: userLocale
-                            });
-                            if (nextSample?.hint) {
-                                newHint = await translateIfNeeded({
-                                    value: nextSample.hint,
-                                    locale: userLocale
-                                });
-                            }
-                        }
-                    }
-
+                    newTaskType = nextTask.taskType;
+                    newRules = nextTask.rules;
+                    newTextToTranslate = nextTask.textToTranslate;
+                    newTextToTranslateOriginal = nextTask.textToTranslateOriginal;
+                    newHint = nextTask.hint;
+                    newOptions = nextTask.options ?? null;
                     break;
+                } catch (e) {
+                    console.log(`Failed to generate runtime task for ${targetRule}:`, e?.message || e);
                 }
             }
 
@@ -323,6 +341,7 @@ export const translationsController = {
                 result.tip_if_wrong = null;
                 result.correct_answer = null;
                 result.answer_is_correct = true;
+                result.violated_rules = [];
             }
 
             const { allowed, waitTimeSeconds } = skipCoach
@@ -340,6 +359,7 @@ export const translationsController = {
                 correctAnswer: result.correct_answer,
                 tipIfWrong: result.tip_if_wrong,
                 scores: scores,
+                violatedRules: uniqueValidRules(result.violated_rules),
                 skip: newSkip,
                 allowed,
                 waitTimeSeconds,

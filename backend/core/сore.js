@@ -1,13 +1,85 @@
 // console.js (Node 18+, console app)
 import OpenAI from "openai";
-import {LEVEL_RULES} from "./rules.js";
+import {GrammarRule, LEVEL_RULES, RULE_LABELS} from "./rules.js";
 import {ALL_RULES_SAMPLES} from "./allRulesSamples.js";
 
-const client = new OpenAI({ apiKey: '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' });
+const client = new OpenAI({ apiKey:
+        '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'
+});
+const OPENAI_RUNTIME_MODEL = process.env.OPENAI_RUNTIME_MODEL || "gpt-5.4-mini";
+const USE_REASONING_CONFIG = OPENAI_RUNTIME_MODEL.startsWith("gpt-5");
 
 const languagesMap = {
     "Ukrainian": "ua",
     "English": "en",
+}
+
+const ALL_PROJECT_RULES = Object.freeze(Object.values(GrammarRule));
+const PROJECT_RULE_SET = new Set(ALL_PROJECT_RULES);
+
+function normalizeRuleList(rules = [], fallbackRules = []) {
+    const normalized = [];
+    for (const rule of [...(Array.isArray(rules) ? rules : []), ...(Array.isArray(fallbackRules) ? fallbackRules : [])]) {
+        const ruleId = String(rule ?? "").trim();
+        if (!ruleId || !PROJECT_RULE_SET.has(ruleId) || normalized.includes(ruleId)) continue;
+        normalized.push(ruleId);
+    }
+    return normalized;
+}
+
+function formatRulesForPrompt(rules = ALL_PROJECT_RULES) {
+    return normalizeRuleList(rules, ALL_PROJECT_RULES)
+        .map((rule) => `${rule}: ${RULE_LABELS[rule] ?? rule}`)
+        .join("\n");
+}
+
+function parseJsonObject(text) {
+    try {
+        const parsed = JSON.parse(text);
+        return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+    } catch {
+        return {};
+    }
+}
+
+function normalizeGeneratedRules(modelRules = [], targetRules = [], allRules = ALL_PROJECT_RULES) {
+    const allowed = new Set(normalizeRuleList(allRules, ALL_PROJECT_RULES));
+    const out = [];
+    const add = (rule) => {
+        const ruleId = String(rule ?? "").trim();
+        if (!ruleId || !allowed.has(ruleId) || out.includes(ruleId)) return;
+        out.push(ruleId);
+    };
+
+    for (const rule of targetRules) add(rule);
+    for (const rule of Array.isArray(modelRules) ? modelRules : []) add(rule);
+
+    return out;
+}
+
+function normalizeOptions(options = [], correct = "") {
+    const cleaned = [];
+    for (const opt of Array.isArray(options) ? options : []) {
+        const value = String(opt ?? "").trim();
+        if (cleaned.includes(value)) continue;
+        cleaned.push(value);
+    }
+
+    const correctValue = String(correct ?? "").trim();
+    if (correctValue && !cleaned.includes(correctValue)) cleaned.unshift(correctValue);
+
+    return cleaned.slice(0, 5);
+}
+
+function buildJsonResponseRequest({ input, temperature = 0.2 }) {
+    return {
+        model: OPENAI_RUNTIME_MODEL,
+        ...(USE_REASONING_CONFIG
+            ? { reasoning: { effort: "low" } }
+            : { temperature }),
+        text: { format: { type: "json_object" } },
+        input,
+    };
 }
 
 // Hash function to convert any string/number into a good 32-bit seed
@@ -126,15 +198,160 @@ export function preEvaluate({
     };
 }
 
+export async function generateTranslationSample({
+                                                    targetRules = [],
+                                                    allRules = ALL_PROJECT_RULES,
+                                                    level = null,
+                                                    seed = null,
+                                                    skip = 0,
+                                                    targetLocale = "uk-UA",
+                                                }) {
+    const requestedRules = normalizeRuleList(targetRules);
+    if (!requestedRules.length) throw new Error("targetRules required");
+
+    const allowedRules = normalizeRuleList(allRules, ALL_PROJECT_RULES);
+    const primaryRule = requestedRules[0];
+    const sourceLocale = !targetLocale || String(targetLocale).toLowerCase() === "null"
+        ? "uk-UA"
+        : String(targetLocale).trim();
+
+    const systemPrompt = `
+You generate ESL grammar translation practice samples.
+Return JSON only.
+
+Schema:
+{
+  "rules": string[],
+  "text": string,
+  "en": string[],
+  "hint": string
+}
+
+Rules:
+- Create one natural sentence in SOURCE_LOCALE for a learner to translate into English.
+- Do not use Ukrainian unless SOURCE_LOCALE is Ukrainian.
+- The English answer must require PRIMARY_RULE.
+- If REQUESTED_RULES contains more than one rule, include as many requested rules as naturally possible without making the sentence awkward.
+- "rules" must contain only IDs from PROJECT_RULES, with PRIMARY_RULE first.
+- "rules" should include every PROJECT_RULE needed to judge the correct English answer.
+- "en" must contain 2 to 4 acceptable English translations.
+- "hint" must be a short hint in SOURCE_LOCALE about the grammar pattern, without giving away the full answer.
+- Keep the sentence appropriate for CEFR_LEVEL when provided.
+- Do not invent rule IDs. Do not include explanations outside JSON.
+`;
+
+    const userPrompt = `
+PRIMARY_RULE: ${primaryRule}
+REQUESTED_RULES: ${JSON.stringify(requestedRules)}
+SOURCE_LOCALE: ${sourceLocale}
+CEFR_LEVEL: ${level || "(not specified)"}
+VARIATION_KEY: ${JSON.stringify({ seed, skip })}
+
+PROJECT_RULES:
+${formatRulesForPrompt(allowedRules)}
+`;
+
+    const resp = await client.responses.create(buildJsonResponseRequest({
+        temperature: 0.45,
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    }));
+
+    const parsed = parseJsonObject(resp.output_text);
+    const rules = normalizeGeneratedRules(parsed.rules, requestedRules, allowedRules);
+    const text = String(parsed.text ?? "").trim();
+    const enRaw = Array.isArray(parsed.en) ? parsed.en : [parsed.en];
+    const en = enRaw.map((x) => String(x ?? "").trim()).filter(Boolean).slice(0, 4);
+    const hint = String(parsed.hint ?? "").trim();
+
+    if (!text || !en.length || !rules.includes(primaryRule)) {
+        throw new Error("MODEL_RETURNED_INVALID_TRANSLATION_SAMPLE");
+    }
+
+    return { rules, text, en, hint };
+}
+
+export async function generateGapSample({
+                                            targetRules = [],
+                                            allRules = ALL_PROJECT_RULES,
+                                            level = null,
+                                            seed = null,
+                                            skip = 0,
+                                        }) {
+    const requestedRules = normalizeRuleList(targetRules);
+    if (!requestedRules.length) throw new Error("targetRules required");
+
+    const allowedRules = normalizeRuleList(allRules, ALL_PROJECT_RULES);
+    const primaryRule = requestedRules[0];
+
+    const systemPrompt = `
+You generate ESL multiple-choice gap-fill grammar practice samples.
+Return JSON only.
+
+Schema:
+{
+  "rules": string[],
+  "en": string,
+  "options": string[],
+  "correct": string
+}
+
+Rules:
+- Create one natural English sentence with exactly one "{GAP}" placeholder.
+- The correct option must require PRIMARY_RULE.
+- If REQUESTED_RULES contains more than one rule, include as many requested rules as naturally possible without making the sentence awkward.
+- "rules" must contain only IDs from PROJECT_RULES, with PRIMARY_RULE first.
+- "rules" should include every PROJECT_RULE needed to judge the sentence.
+- "options" must contain 3 to 5 short choices, including "correct". Use "" as an option only when a zero article / no word answer is appropriate.
+- Keep the sentence appropriate for CEFR_LEVEL when provided.
+- Do not invent rule IDs. Do not include explanations outside JSON.
+`;
+
+    const userPrompt = `
+PRIMARY_RULE: ${primaryRule}
+REQUESTED_RULES: ${JSON.stringify(requestedRules)}
+CEFR_LEVEL: ${level || "(not specified)"}
+VARIATION_KEY: ${JSON.stringify({ seed, skip })}
+
+PROJECT_RULES:
+${formatRulesForPrompt(allowedRules)}
+`;
+
+    const resp = await client.responses.create(buildJsonResponseRequest({
+        temperature: 0.45,
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    }));
+
+    const parsed = parseJsonObject(resp.output_text);
+    const rules = normalizeGeneratedRules(parsed.rules, requestedRules, allowedRules);
+    const en = String(parsed.en ?? "").trim();
+    const correct = String(parsed.correct ?? "").trim();
+    const options = normalizeOptions(parsed.options, correct);
+
+    if (!en || (en.match(/\{GAP\}/g) || []).length !== 1 || !correct || !options.includes(correct) || !rules.includes(primaryRule)) {
+        throw new Error("MODEL_RETURNED_INVALID_GAP_SAMPLE");
+    }
+
+    return { rules, en, options, correct };
+}
+
 
 export async function evaluateAndCoach({
                                            rules = [],
+                                           allRules = ALL_PROJECT_RULES,
                                            targetLocale = 'uk-UA',       // the learner’s L1 for prompts
                                            userEnglish = "",                // learner's translation attempt (English)
                                            textToTranslate = "",
                                            hint = "",
                                        }) {
 
+    const scoreRules = normalizeRuleList(rules);
+    const validationRules = normalizeRuleList(allRules, ALL_PROJECT_RULES);
 
     const systemPrompt = `
 You are a friendly but precise ESL grammar tutor. You never invalidate informal speech.
@@ -144,41 +361,42 @@ Schema:
   "answer_is_correct": boolean,
   "correct_answer": string,
   "tip_if_wrong": string,
-  "scores": number[]
+  "scores": number[],
+  "violated_rules": string[]
 }
   `;
 
     const userPrompt = `
 TARGET_LANGUAGE: ${targetLocale}
-GRAMMAR_RULES: [${rules.join(', ')}]
+RULES_TO_SCORE_IN_ORDER: ${JSON.stringify(scoreRules)}
+ALL_BASE_GRAMMAR_RULES:
+${formatRulesForPrompt(validationRules)}
 TEXT_TO_TRANSLATE: ${textToTranslate}
 HINT: ${hint}
 
 TASKS:
-1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to GRAMMAR_RULES[0] as the target rule, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
+1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to RULES_TO_SCORE_IN_ORDER[0] as the target rule, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
 2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Address user informally a omitting gender, yet assertive way to express the tip.
 3) Also, give correct translation from TARGET_LANGUAGE to English.
-4) For each of GRAMMAR_RULES, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLIS -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
+4) Check LEARNER_ENGLISH against ALL_BASE_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from ALL_BASE_GRAMMAR_RULES.
+5) For each rule in RULES_TO_SCORE_IN_ORDER, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLISH -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
 
 LEARNER_ENGLISH: ${userEnglish || "(none)"}
 `;
 
-    const resp = await client.responses.create({
-        model: "gpt-4.1-mini",
+    const resp = await client.responses.create(buildJsonResponseRequest({
         temperature: 0.2,
-
-        text: { format: { type: "json_object" } },
-
         input: [
             { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
             { role: "user",   content: [{ type: "input_text", text: userPrompt }] },
         ],
-    });
+    }));
 
 
     // The Responses API returns structured items; easiest is to read the top-level output_text
     const txt = resp.output_text; // SDK helper that concatenates text parts
     const parsed = JSON.parse(txt);
+    parsed.violated_rules = normalizeRuleList(parsed.violated_rules, []).filter((r) => validationRules.includes(r));
 
     return parsed;
 }
@@ -186,9 +404,12 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
 export async function evaluateGapAndCoach({
                                               task,
                                               userAnswer = "",
+                                              allRules = ALL_PROJECT_RULES,
                                               targetLocale = "uk-UA"
                                           }) {
     const { rules = [], en = [], options = [], correct } = task;
+    const scoreRules = normalizeRuleList(rules);
+    const validationRules = normalizeRuleList(allRules, ALL_PROJECT_RULES);
 
     targetLocale = targetLocale === 'null' ? null : targetLocale;
 
@@ -212,6 +433,64 @@ export async function evaluateGapAndCoach({
             correct_answer: String(correct ?? ""),
             tip_if_wrong: "",
             scores: rules.map(() => 1)
+        };
+    }
+
+    if (correct == null || String(correct).trim() === "") {
+        const systemPrompt = `
+You are a friendly but precise ESL grammar tutor.
+Return JSON only.
+Schema:
+{
+  "answer_is_correct": boolean,
+  "correct_answer": string,
+  "tip_if_wrong": string,
+  "scores": number[],
+  "violated_rules": string[]
+}
+`;
+
+        const userPrompt = `
+TARGET_LANGUAGE: ${targetLocale}
+RULES_TO_SCORE_IN_ORDER: ${JSON.stringify(scoreRules)}
+ALL_BASE_GRAMMAR_RULES:
+${formatRulesForPrompt(validationRules)}
+
+TASK_TYPE: GAP_CHOICE
+SENTENCE_TEMPLATE: ${sentence}
+OPTIONS: ${JSON.stringify(options)}
+LEARNER_CHOICE: ${userAnswer || "(none)"}
+
+INSTRUCTIONS:
+1) Pick the correct option for SENTENCE_TEMPLATE from OPTIONS when OPTIONS are provided.
+2) Evaluate whether LEARNER_CHOICE is correct.
+3) correct_answer must be the full sentence with {GAP} replaced by the correct option.
+4) If wrong, give a short helpful tip in TARGET_LANGUAGE.
+5) Check the learner answer against ALL_BASE_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from ALL_BASE_GRAMMAR_RULES.
+6) Return one score for each rule in RULES_TO_SCORE_IN_ORDER, in order: 1 when the rule is satisfied, 0 when it is violated.
+`;
+
+        const resp = await client.responses.create(buildJsonResponseRequest({
+            temperature: 0.2,
+            input: [
+                { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+                { role: "user", content: [{ type: "input_text", text: userPrompt }] }
+            ]
+        }));
+
+        const parsed = parseJsonObject(resp.output_text);
+        const scores = Array.isArray(parsed.scores) ? parsed.scores.slice(0, scoreRules.length) : scoreRules.map(() => parsed.answer_is_correct ? 1 : 0);
+
+        while (scores.length < scoreRules.length) {
+            scores.push(parsed.answer_is_correct ? 1 : 0);
+        }
+
+        return {
+            answer_is_correct: !!parsed.answer_is_correct,
+            correct_answer: String(parsed.correct_answer ?? ""),
+            tip_if_wrong: String(parsed.tip_if_wrong ?? ""),
+            scores,
+            violated_rules: normalizeRuleList(parsed.violated_rules, []).filter((r) => validationRules.includes(r))
         };
     }
 
@@ -243,15 +522,13 @@ INSTRUCTIONS:
 5) Also if you use English words, explaining the mistake, specify TARGET_LANGUAGE translations next to them
 `;
 
-    const resp = await client.responses.create({
-        model: "gpt-4.1-mini",
+    const resp = await client.responses.create(buildJsonResponseRequest({
         temperature: 0.2,
-        text: { format: { type: "json_object" } },
         input: [
             { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
             { role: "user", content: [{ type: "input_text", text: userPrompt }] }
         ]
-    });
+    }));
 
     const txt = resp.output_text;
     let parsed;
@@ -266,6 +543,7 @@ INSTRUCTIONS:
         answer_is_correct: false,
         correct_answer: filledCorrectSentence,
         scores: rules.map(() => 0),
+        violated_rules: scoreRules,
 
         // LLM-only explanation
         tip_if_wrong: String(parsed.tip_if_wrong ?? "")
@@ -315,15 +593,13 @@ TEXT:
 ${safeValue}
 `;
 
-    const resp = await client.responses.create({
-        model: "gpt-4.1-mini",
+    const resp = await client.responses.create(buildJsonResponseRequest({
         temperature: 0.2,
-        text: { format: { type: "json_object" } },
         input: [
             { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
             { role: "user", content: [{ type: "input_text", text: userPrompt }] },
         ],
-    });
+    }));
 
     const txt = resp.output_text;
 
