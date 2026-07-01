@@ -10,7 +10,7 @@ import {
     saveTaskMode
 } from "../../services/trainingDirector.js";
 import {LEVEL_RULES} from "../../utils/rules.js";
-import {emit} from "../../services/events.js";
+import {emit, off, on} from "../../services/events.js";
 import {logInfo} from "../../services/logger.js";
 import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../services/gaService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
@@ -21,6 +21,13 @@ import {marathonService} from "../../services/marathonService.js";
 import LimitModal from "../subscription/LimitModal.jsx";
 import {localizationService} from "../../localization/localizationService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
+import {
+    buildTrainingTaskCacheKey,
+    clearCachedTrainingTask,
+    getCachedTrainingTask,
+    prefetchTrainingTask,
+    setCachedTrainingTask
+} from "../../services/trainingTaskCache.js";
 
 export default function Trainer({
                                     theme,
@@ -130,6 +137,8 @@ export default function Trainer({
     const [quickVerdict, setQuickVerdict] = useState(null);
     const textareaRef = useRef(null);
     const evaluationRunRef = useRef(0);
+    const currentTaskCacheKeyRef = useRef(null);
+    const lastPracticeRuleCacheRef = useRef(null);
 
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [waitTimeSeconds, setWaitTimeSeconds] = useState(false);
@@ -172,6 +181,31 @@ export default function Trainer({
         loadAccount().then();
         refreshTaskMode().then();
     }, []);
+
+    useEffect(() => {
+        let cancelled = false;
+
+        const run = async () => {
+            if (cancelled) return;
+            await Promise.all([
+                prefetchLevelCaches(),
+                prefetchPracticeRuleCache(),
+            ]);
+        };
+
+        run().then();
+
+        const refreshPracticeRule = () => {
+            prefetchPracticeRuleCache().then();
+        };
+
+        on("weeklyProgressUpdate", refreshPracticeRule);
+
+        return () => {
+            cancelled = true;
+            off("weeklyProgressUpdate", refreshPracticeRule);
+        };
+    }, [taskMode, nextLevel, nextRule, difficulty]);
 
     const refreshTaskMode = async () => {
         const saved = await getSavedTaskMode();
@@ -221,6 +255,109 @@ export default function Trainer({
 
         // ✅ combined: NEVER request gaps. Only use gaps if server returned them as preload.
         return 0;
+    }
+
+    function buildTaskCacheKey({
+                                   levelKey = nextLevel,
+                                   ruleId = nextRule,
+                                   taskTypeOverride = null,
+                               } = {}) {
+        const taskTypeForKey = Number(taskTypeOverride ?? getRequestedTaskType()) || 0;
+        const locale = localizationService.getLocale();
+
+        if (ruleId) {
+            return buildTrainingTaskCacheKey({
+                scope: "rule",
+                ruleId,
+                taskType: taskTypeForKey,
+                taskMode,
+                locale,
+            });
+        }
+
+        return buildTrainingTaskCacheKey({
+            scope: "level",
+            level: levelKey || "managed",
+            taskType: taskTypeForKey,
+            taskMode,
+            locale,
+        });
+    }
+
+    function taskFromData(data) {
+        if (!data?.textToTranslate || !(data.rules?.length > 0)) return null;
+
+        return {
+            taskType: Number(data.taskType ?? 0),
+            textToTranslate: data.textToTranslate || "",
+            textToTranslateOriginal: data.textToTranslateOriginal || "",
+            rules: data.rules || [],
+            hint: data.hint || null,
+            options: Array.isArray(data.options) ? data.options : [],
+            skip: data.skip,
+            allowed: data.allowed,
+            waitTimeSeconds: data.waitTimeSeconds,
+        };
+    }
+
+    function applyTask(data) {
+        const serverTaskType = Number(data.taskType ?? 0);
+        if (serverTaskType === 1) applyGapTask(data);
+        else applyTranslationTask(data);
+    }
+
+    function cacheCurrentTask(data, cacheKey) {
+        const task = taskFromData(data);
+        if (!task || !cacheKey) return null;
+
+        setCachedTrainingTask(cacheKey, task);
+        currentTaskCacheKeyRef.current = cacheKey;
+        return task;
+    }
+
+    function clearCurrentTaskCache() {
+        clearCachedTrainingTask(currentTaskCacheKeyRef.current);
+        currentTaskCacheKeyRef.current = null;
+    }
+
+    function getPracticeRuleForCache() {
+        const stats = getAllStatistics();
+        if (!Array.isArray(stats) || !stats.length) return null;
+
+        const sorted = [...stats]
+            .filter((x) => x?.rule)
+            .sort((a, b) => {
+                const aNeeds = a.status === "needs practice" ? 0 : 1;
+                const bNeeds = b.status === "needs practice" ? 0 : 1;
+                if (aNeeds !== bNeeds) return aNeeds - bNeeds;
+
+                const accA = Number.isFinite(a.accuracy) ? a.accuracy : 0;
+                const accB = Number.isFinite(b.accuracy) ? b.accuracy : 0;
+                if (accA !== accB) return accA - accB;
+
+                return (a.attemptsNumber ?? 0) - (b.attemptsNumber ?? 0);
+            });
+
+        return sorted[0]?.rule || null;
+    }
+
+    function buildRecommendedRules(data, scores = []) {
+        const out = [];
+        const add = (rule) => {
+            const value = String(rule ?? "").trim();
+            if (!value || out.includes(value)) return;
+            out.push(value);
+        };
+
+        for (const rule of Array.isArray(data?.violatedRules) ? data.violatedRules : []) add(rule);
+        for (const rule of Array.isArray(data?.violated_rules) ? data.violated_rules : []) add(rule);
+        rules.forEach((rule, index) => {
+            if (Number(scores[index] ?? 1) < 1) add(rule);
+        });
+        rules.forEach(add);
+        for (const rule of Array.isArray(data?.rules) ? data.rules : []) add(rule);
+
+        return out.slice(0, 3);
     }
 
     function resetCurrentTaskOnly() {
@@ -351,6 +488,8 @@ export default function Trainer({
                                          seed,
                                          skip,
                                          overrideTaskType = null,
+                                         suppressLimitState = false,
+                                         avoidSentence = "",
                                      }) {
         if (freeTraining && await marathonService.isMarathonView(true)) {
             const nextMarathonRule = marathonService.getNextMarathonRule();
@@ -405,13 +544,77 @@ export default function Trainer({
             task_type,
             use_same_task_type,
             userLocale: localizationService.getLocale(),
+            avoidSentence,
         });
 
-        if (!result.allowed) {
+        if (!result.allowed && !suppressLimitState) {
             setLocked(true);
             setWaitTimeSeconds(result.waitTimeSeconds);
         }
         return result;
+    }
+
+    function prefetchTaskForCache({
+                                      levelKey = nextLevel,
+                                      ruleId = nextRule,
+                                      selectedDifficulty,
+                                      overrideTaskType = null,
+                                      avoidSentence = "",
+                                  } = {}) {
+        const cacheKey = buildTaskCacheKey({
+            levelKey,
+            ruleId,
+            taskTypeOverride: overrideTaskType,
+        });
+
+        return prefetchTrainingTask(cacheKey, async () => {
+            const {seed, skip} = getSeed();
+            return taskFromData(await fetchNextSentence({
+                nextLevel: levelKey,
+                nextRule: ruleId,
+                selectedDifficulty,
+                seed,
+                skip,
+                overrideTaskType,
+                suppressLimitState: true,
+                avoidSentence,
+            }));
+        });
+    }
+
+    async function prefetchLevelCaches() {
+        if (await marathonService.isMarathonView(true)) return;
+
+        const levelsToCache = ["managed", "beginner", "intermediate", "advanced"];
+        const taskTypeForCache = getRequestedTaskType();
+
+        await Promise.all(levelsToCache.map((levelKey) => {
+            const selectedDifficulty = randomDifficulty(levelKey);
+            return prefetchTaskForCache({
+                levelKey,
+                ruleId: null,
+                selectedDifficulty,
+                overrideTaskType: taskTypeForCache,
+            });
+        }));
+    }
+
+    async function prefetchPracticeRuleCache() {
+        if (await marathonService.isMarathonView(true)) return;
+
+        const ruleId = nextRule || getPracticeRuleForCache();
+        const taskTypeForCache = getRequestedTaskType();
+        const cacheIdentity = `${ruleId || ""}|${taskMode || ""}|${taskTypeForCache}|${localizationService.getLocale() || ""}`;
+        if (!ruleId || lastPracticeRuleCacheRef.current === cacheIdentity) return;
+
+        lastPracticeRuleCacheRef.current = cacheIdentity;
+
+        await prefetchTaskForCache({
+            levelKey: null,
+            ruleId,
+            selectedDifficulty: difficulty || "A1",
+            overrideTaskType: taskTypeForCache,
+        });
     }
 
     // -----------------------------
@@ -427,45 +630,57 @@ export default function Trainer({
             setWeakRules([]);
 
             const hasPreload = !!(nextTextToTranslate && nextRules && nextRules.length > 0);
+            const cacheKey = buildTaskCacheKey({
+                levelKey: nextLevel,
+                ruleId: nextRule,
+                taskTypeOverride: overrideTaskType,
+            });
+            const cachedTask = getCachedTrainingTask(cacheKey);
 
-            if (!hasPreload) {
+            if (cachedTask) {
+                applyTask(cachedTask);
+                currentTaskCacheKeyRef.current = cacheKey;
+                setNextTextToTranslate("");
+                setNextTextToTranslateOriginal("");
+                setNextRules([]);
+                setNextHint(null);
+                setNextTaskType(0);
+                setNextOptions([]);
+            } else if (!hasPreload) {
                 const {seed, skip} = getSeed();
                 saveSeed({seed, skip});
 
-                const data = await fetchNextSentence({
-                    nextLevel,
-                    nextRule,
-                    selectedDifficulty,
-                    seed,
-                    skip,
-                    overrideTaskType,
+                const task = await prefetchTrainingTask(cacheKey, async () => {
+                    return taskFromData(await fetchNextSentence({
+                        nextLevel,
+                        nextRule,
+                        selectedDifficulty,
+                        seed,
+                        skip,
+                        overrideTaskType,
+                    }));
                 });
 
-                const serverTaskType = Number(data.taskType ?? 0);
-                if (serverTaskType === 1) applyGapTask(data);
-                else applyTranslationTask(data);
+                if (!task) throw new Error("Failed to load training task.");
 
-                saveSeed({seed, skip: data.skip ?? (skip + 1)});
+                setCachedTrainingTask(cacheKey, task);
+                currentTaskCacheKeyRef.current = cacheKey;
+                applyTask(task);
+
+                saveSeed({seed, skip: task.skip ?? (skip + 1)});
             } else {
                 // Apply preloaded task
-                const t = Number(nextTaskType ?? 0);
+                const preloadedTask = {
+                    taskType: Number(nextTaskType ?? 0),
+                    textToTranslate: nextTextToTranslate,
+                    textToTranslateOriginal: nextTextToTranslateOriginal,
+                    rules: nextRules,
+                    hint: nextHint,
+                    options: nextOptions,
+                };
 
-                if (t === 1) {
-                    applyGapTask({
-                        taskType: 1,
-                        textToTranslate: nextTextToTranslate,
-                        rules: nextRules,
-                        options: nextOptions,
-                    });
-                } else {
-                    applyTranslationTask({
-                        taskType: 0,
-                        textToTranslate: nextTextToTranslate,
-                        textToTranslateOriginal: nextTextToTranslateOriginal,
-                        rules: nextRules,
-                        hint: nextHint,
-                    });
-                }
+                cacheCurrentTask(preloadedTask, cacheKey);
+                applyTask(preloadedTask);
 
                 // consume preload
                 setNextTextToTranslate("");
@@ -516,6 +731,7 @@ export default function Trainer({
             logInfo("evaluating answer...");
 
             const currentTaskTypeParam = taskType === "gap" ? "1" : "0";
+            const answeredCacheKey = currentTaskCacheKeyRef.current;
             const evaluationRun = evaluationRunRef.current + 1;
             evaluationRunRef.current = evaluationRun;
             let completionHandled = false;
@@ -544,7 +760,7 @@ export default function Trainer({
                     setQuickVerdict(isQuickCorrect);
 
                     if (!isQuickCorrect) {
-                        setHint("Not quite, summarizing feedback");
+                        setHint("Doesn't seem right, double checking");
                         return quickData;
                     }
 
@@ -554,6 +770,7 @@ export default function Trainer({
                     setHint("Well done!");
                     setCorrectAnswer("");
                     setWeakRules([]);
+                    clearCurrentTaskCache();
 
                     const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                     addAnswer(rules.map(() => 1), rules, null);
@@ -578,6 +795,16 @@ export default function Trainer({
                     saveSeed({seed, skip: skip + 1});
                     onAnswerEvaluated();
                     setIsEvaluating(false);
+
+                    if (answeredCacheKey) {
+                        prefetchTaskForCache({
+                            levelKey: nextLevel,
+                            ruleId: nextRule,
+                            selectedDifficulty: difficulty,
+                            overrideTaskType: Number(currentTaskTypeParam),
+                            avoidSentence: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
+                        }).then();
+                    }
 
                     return quickData;
                 })
@@ -605,17 +832,23 @@ export default function Trainer({
                 setLocked(true);
             }
 
+            const serverReturnedNextTask = taskFromData(data);
+            if (!quickCorrectApplied) {
+                clearCachedTrainingTask(answeredCacheKey);
+                currentTaskCacheKeyRef.current = null;
+                if (!data.isAnswerCorrect && serverReturnedNextTask && answeredCacheKey) {
+                    setCachedTrainingTask(answeredCacheKey, serverReturnedNextTask);
+                }
+            } else if (serverReturnedNextTask && answeredCacheKey) {
+                setCachedTrainingTask(answeredCacheKey, serverReturnedNextTask);
+            }
+
             const { isCalibration } = getTrainingLevel();
 
             if (!quickCorrectApplied) {
                 completionHandled = true;
                 setQuickVerdict(!!data.isAnswerCorrect);
                 setIsDetailedFeedbackLoading(false);
-
-                let nextWeakRules = [];
-                if (!data.isAnswerCorrect) nextWeakRules = rules.map(r => r);
-
-                setWeakRules([...new Set(nextWeakRules)]);
 
                 const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                 addAnswer(data.scores || [], rules, data.level);
@@ -627,7 +860,9 @@ export default function Trainer({
                 if (data.isAnswerCorrect) {
                     setHint("Well done!");
                     setCorrectAnswer("");
+                    setWeakRules([]);
                 } else {
+                    setWeakRules(buildRecommendedRules(data, data.scores || []));
                     const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
                     setHint(tip);
                     setCorrectAnswer(data.correctAnswer || "");
@@ -680,6 +915,15 @@ export default function Trainer({
 
             if (!quickCorrectApplied) {
                 setMode("next");
+                if (data.isAnswerCorrect && answeredCacheKey) {
+                    prefetchTaskForCache({
+                        levelKey: nextLevel,
+                        ruleId: nextRule,
+                        selectedDifficulty: difficulty,
+                        overrideTaskType: Number(currentTaskTypeParam),
+                        avoidSentence: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
+                    }).then();
+                }
             }
 
             saveSeed({seed, skip: data.skip ?? (skip + 1)});

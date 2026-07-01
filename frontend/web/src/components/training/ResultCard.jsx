@@ -172,6 +172,7 @@ export default function ResultCard({
             : "Checking..."
         : cleanHint;
     const showLoader = isDetailedLoading && quickVerdict !== true;
+    const recommendedRules = weakRules.slice(0, 3);
 
     const BarsLoader = () => (
         <div style={styles.loaderWrap} aria-label="Loading detailed feedback" role="status">
@@ -205,12 +206,12 @@ export default function ResultCard({
                 </div>
             ) : null}
 
-            {weakRules.length > 0 && (
+            {recommendedRules.length > 0 && (
                 <div style={styles.rulesOuterWrap}>
-                    <div style={styles.rulesTitle}>Important rules:</div>
+                    <div style={styles.rulesTitle}>Recommended rules:</div>
 
                     <div style={styles.rulesWrap}>
-                        {weakRules.map((rule) => (
+                        {recommendedRules.map((rule) => (
                             <button
                                 key={rule}
                                 type="button"
@@ -229,7 +230,7 @@ export default function ResultCard({
                                     e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,0.10)";
                                 }}
                             >
-                                {RULE_LABELS[rule]}
+                                {RULE_LABELS[rule] || rule}
                             </button>
                         ))}
                     </div>

@@ -4,12 +4,18 @@ import {
     evaluateGapAndCoach,
     generateGapSample,
     generateTranslationSample,
+    OPENAI_QUICK_CHECK_MODEL,
+    OPENAI_RUNTIME_MODEL,
     preEvaluate,
     quickEvaluateAnswer,
     randomRule
 } from "../core/сore.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
-import { checkTranslationLimit, recordTranslationUsage } from "../database/repositories/accountLogRepository.js";
+import {
+    checkTranslationLimit,
+    getTranslationCallCountSince,
+    recordTranslationUsage
+} from "../database/repositories/accountLogRepository.js";
 import {GrammarRule, LEVEL_RULES} from "../core/rules.js";
 import {answerNextMarathonTaskByRuleId} from "../database/repositories/marathonsRepository.js";
 import {getAccountById} from "../database/repositories/accountsRepository.js";
@@ -85,6 +91,33 @@ function uniqueValidRules(rules) {
     return out;
 }
 
+async function selectRuntimeModelForAccount(accountId) {
+    const now = Date.now();
+    const [lastHourCalls, lastDayCalls] = await Promise.all([
+        getTranslationCallCountSince(accountId, new Date(now - 60 * 60 * 1000)),
+        getTranslationCallCountSince(accountId, new Date(now - 24 * 60 * 60 * 1000)),
+    ]);
+
+    const modelBucketForWindow = (count, miniLimit, mixedLimit) => {
+        if (count < miniLimit) return "mini";
+        if (count < mixedLimit) return "mixed";
+        return "nano";
+    };
+
+    const hourlyBucket = modelBucketForWindow(lastHourCalls, 15, 30);
+    const dailyBucket = modelBucketForWindow(lastDayCalls, 30, 60);
+
+    if (hourlyBucket === "nano" || dailyBucket === "nano") {
+        return OPENAI_QUICK_CHECK_MODEL;
+    }
+
+    if (hourlyBucket === "mixed" || dailyBucket === "mixed") {
+        return Math.random() < 0.5 ? OPENAI_RUNTIME_MODEL : OPENAI_QUICK_CHECK_MODEL;
+    }
+
+    return OPENAI_RUNTIME_MODEL;
+}
+
 async function buildRuntimeTask({
                                     taskType,
                                     targetRules,
@@ -92,6 +125,8 @@ async function buildRuntimeTask({
                                     seed,
                                     skip,
                                     userLocale,
+                                    model,
+                                    avoidSentence,
                                 }) {
     const requestedRules = uniqueValidRules(targetRules);
     const rulesForSample = requestedRules.length ? requestedRules : [randomRule(level ?? "A1")];
@@ -103,6 +138,8 @@ async function buildRuntimeTask({
             level,
             seed,
             skip,
+            model,
+            avoidSentence,
         });
 
         return {
@@ -122,6 +159,8 @@ async function buildRuntimeTask({
         seed,
         skip,
         targetLocale: userLocale,
+        model,
+        avoidSentence,
     });
 
     return {
@@ -208,10 +247,12 @@ export const translationsController = {
                 freeTraining,
                 task_type = "0",
                 use_same_task_type = "true",
-                userLocale = 'uk-UA'
+                userLocale = 'uk-UA',
+                avoidSentence = ""
             } = req.query;
 
             const taskType = Number(task_type) || 0;
+            const runtimeModel = await selectRuntimeModelForAccount(accountId);
             const useSameTaskType =
                 String(use_same_task_type).toLowerCase() === "true" ||
                 String(use_same_task_type) === "1";
@@ -229,6 +270,8 @@ export const translationsController = {
                     seed,
                     skip: currentSkip,
                     userLocale,
+                    model: runtimeModel,
+                    avoidSentence,
                 });
 
                 const { allowed, waitTimeSeconds } = skipCoach
@@ -281,8 +324,8 @@ export const translationsController = {
                         options: optionList,
                     },
                     userAnswer: translation ?? "",
-                    allRules: PROJECT_RULES,
                     targetLocale: userLocale || "uk-UA",
+                    model: runtimeModel,
                 });
             } else {
                 const accountShortInfo = await getAccountById(req.user.id);
@@ -303,10 +346,10 @@ export const translationsController = {
                 if (!result.answer_is_correct && !skipCoach) {
                     result = await evaluateAndCoach({
                         rules: rulesArr,
-                        allRules: PROJECT_RULES,
                         targetLocale: userLocale || "uk-UA",
                         userEnglish: translation ?? "",
                         textToTranslate: textToTranslate ?? "",
+                        model: runtimeModel,
                     });
                 }
 
@@ -362,6 +405,8 @@ export const translationsController = {
                         seed,
                         skip: newSkip,
                         userLocale,
+                        model: runtimeModel,
+                        avoidSentence: textToTranslate ?? "",
                     });
 
                     newTaskType = nextTask.taskType;

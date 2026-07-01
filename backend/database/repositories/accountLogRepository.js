@@ -115,3 +115,20 @@ export async function getActionCount(accountId, actionType) {
     const { rows } = await pool.query(query, [accountId, actionType]);
     return rows[0].count;
 }
+
+export async function getTranslationCallCountSince(accountId, sinceDate) {
+    const query = `
+        SELECT COUNT(*)::int AS count
+        FROM account_log
+        WHERE account_id = $1
+          AND action_type = ANY($2::int[])
+          AND created_at >= $3
+    `;
+
+    const { rows } = await pool.query(query, [
+        accountId,
+        [ACTION_TYPES.TRANSLATION_CALL, ACTION_TYPES.TRANSLATION_CALL_CHOOSE],
+        sinceDate,
+    ]);
+    return rows[0]?.count ?? 0;
+}

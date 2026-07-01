@@ -3,6 +3,7 @@ import { callAccountVerifyApi } from "../../services/api.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
 import { on, off } from "../../services/events.js";
 import { getTrainingLevel } from "../../services/trainingDirector.js";
+import { getPendingTrainingTaskKeys } from "../../services/trainingTaskCache.js";
 
 export default function LevelSwitch({
                                         level,
@@ -18,6 +19,7 @@ export default function LevelSwitch({
     const [tipOpen, setTipOpen] = useState(false);
     const [tipVisible, setTipVisible] = useState(false);
     const tipTimerRef = useRef(null);
+    const [pendingLevels, setPendingLevels] = useState(new Set());
 
     const isCalibrationNow = (() => {
         try {
@@ -46,6 +48,23 @@ export default function LevelSwitch({
         return () => {
             if (tipTimerRef.current) clearTimeout(tipTimerRef.current);
         };
+    }, []);
+
+    useEffect(() => {
+        const refreshPendingLevels = () => {
+            const next = new Set();
+            for (const key of getPendingTrainingTaskKeys()) {
+                if (!key.includes("scope:level")) continue;
+
+                const match = key.match(/(?:^|\|)level:([^|]*)/);
+                if (match?.[1]) next.add(match[1]);
+            }
+            setPendingLevels(next);
+        };
+
+        refreshPendingLevels();
+        on("trainingTaskCacheUpdate", refreshPendingLevels);
+        return () => off("trainingTaskCacheUpdate", refreshPendingLevels);
     }, []);
 
     // react to weekly progress event like you asked
@@ -114,6 +133,8 @@ export default function LevelSwitch({
 
         return {
             appearance: "none",
+            display: "inline-flex",
+            alignItems: "center",
             padding: "8px 14px",
             fontWeight: 800,
             fontSize: "1rem",
@@ -177,6 +198,31 @@ export default function LevelSwitch({
 
         return `Level: ${label}`;
     };
+
+    const isOptionPending = (value) => expanded && value !== level && pendingLevels.has(value);
+
+    const miniLoaderWrap = {
+        display: "inline-flex",
+        alignItems: "flex-end",
+        gap: 3,
+        height: 14,
+        marginLeft: 7,
+    };
+
+    const miniLoaderBar = (delay = "0ms") => ({
+        width: 3,
+        borderRadius: 999,
+        background: theme.accent,
+        animation: `glLevelPending 700ms ease-in-out infinite ${delay}`,
+    });
+
+    const LevelPendingLoader = () => (
+        <span style={miniLoaderWrap} aria-label="Loading cached sentence" role="status">
+            <span style={{ ...miniLoaderBar("0ms"), height: 7 }} />
+            <span style={{ ...miniLoaderBar("120ms"), height: 11 }} />
+            <span style={{ ...miniLoaderBar("240ms"), height: 7 }} />
+        </span>
+    );
 
     const tooltipStyle = {
         position: "absolute",
@@ -252,6 +298,7 @@ export default function LevelSwitch({
                     {!expanded && <span style={isCalibrationNow ? lockIcon : gearIcon} aria-hidden />}
 
                     {getLabel(label)}
+                    {isOptionPending(value) && <LevelPendingLoader />}
 
                     {/* ✅ tooltip only when calibration */}
                     {isCalibrationNow && tipOpen && (
@@ -262,6 +309,13 @@ export default function LevelSwitch({
                     )}
                 </button>
             ))}
+            <style>{`
+                @keyframes glLevelPending {
+                    0%, 100% { transform: translateY(2px) scaleY(1); opacity: 0.55; }
+                    25% { transform: translateY(0) scaleY(1.45); opacity: 1; }
+                    70% { transform: translateY(-3px) scaleY(1); opacity: 0.9; }
+                }
+            `}</style>
         </div>
     );
 }
