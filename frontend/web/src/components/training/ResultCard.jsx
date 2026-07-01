@@ -1,13 +1,18 @@
 import { RULE_LABELS } from "../../utils/rules.js";
 
-export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] }) {
+export default function ResultCard({
+                                       theme,
+                                       hint,
+                                       correctAnswer,
+                                       weakRules = [],
+                                       quickVerdict = null,
+                                       isDetailedLoading = false,
+                                   }) {
     // ----- same “TaskCard” styling tokens -----
     const CARD_BG = "rgba(255, 243, 223, 0.92)";
     const CARD_BORDER_IDLE = "rgba(255,97,56,0.70)";
     const CARD_SHADOW_IDLE = "0 10px 26px rgba(0,0,0,0.12)";
     const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
-    const SOFT_RED = "rgba(255, 230, 228, 0.92)";
-    const SOFT_GREEN = "rgba(232, 247, 238, 0.92)";
     const SOFT_STROKE = "rgba(0,0,0,0.12)";
     const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
     const SOFT_STROKE_ACCENT_2 = "rgba(255,97,56,0.40)";
@@ -49,6 +54,34 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             whiteSpace: "pre-wrap",
             opacity: 0.95,
             boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+        },
+
+        feedbackRow: {
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 12,
+            flexWrap: "wrap",
+        },
+
+        loaderWrap: {
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            minHeight: 22,
+        },
+
+        bars: {
+            display: "inline-flex",
+            alignItems: "flex-end",
+            gap: 8,
+            height: 22,
+        },
+
+        bar: {
+            width: 7,
+            borderRadius: 999,
+            background: theme.text,
+            boxShadow: "0 6px 14px rgba(0,0,0,0.10)",
         },
 
         correctWrap: {
@@ -132,13 +165,35 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
     // ✅ keying forces remount => animation replays on content change
     const hintKey = `hint:${hint ?? ""}`;
     const correctKey = `correct:${correctAnswer ?? ""}`;
+    const cleanHint = String(hint ?? "").replaceAll('❌','').replaceAll('✔','').trim();
+    const feedbackText = isDetailedLoading
+        ? quickVerdict === false
+            ? "Not quite, summarizing feedback"
+            : "Checking..."
+        : cleanHint;
+    const showLoader = isDetailedLoading && quickVerdict !== true;
+
+    const BarsLoader = () => (
+        <div style={styles.loaderWrap} aria-label="Loading detailed feedback" role="status">
+            <div style={styles.bars}>
+                <span style={{ ...styles.bar, height: 10, animation: "glWave 700ms ease-in-out infinite" }} />
+                <span style={{ ...styles.bar, height: 16, animation: "glWave 700ms ease-in-out infinite 120ms" }} />
+                <span style={{ ...styles.bar, height: 10, animation: "glWave 700ms ease-in-out infinite 240ms" }} />
+            </div>
+        </div>
+    );
 
     return (
         <div style={styles.card}>
             <h2 style={styles.title}>Result</h2>
 
             <div key={hintKey} style={styles.floatIn}>
-                <div style={styles.feedback}>{hint.replaceAll('❌','').replaceAll('✔','').trim()}</div>
+                <div style={styles.feedback}>
+                    <span style={styles.feedbackRow}>
+                        <span>{feedbackText}</span>
+                        {showLoader ? <BarsLoader /> : null}
+                    </span>
+                </div>
             </div>
 
             {correctAnswer ? (
@@ -185,6 +240,11 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
             @keyframes glFloatIn {
                 0%   { opacity: 0; transform: translateY(10px); }
                 100% { opacity: 1; transform: translateY(0px); }
+            }
+            @keyframes glWave {
+                0%, 100% { transform: translateY(4px) scaleY(1); opacity: 0.65; }
+                25% { transform: translateY(0px) scaleY(1.5); opacity: 1; }
+                70% { transform: translateY(-8px) scaleY(1); opacity: 1; }
             }
         `}</style>
         </div>

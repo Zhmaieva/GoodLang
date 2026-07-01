@@ -17,6 +17,7 @@ export default function TaskCard({
                                      locked = false,
                                      waitTimeSeconds = 0,
                                      account,
+                                     actionDisabled = false,
 
                                      // gap mode
                                      taskType = "translate", // "translate" | "gap"
@@ -103,6 +104,7 @@ export default function TaskCard({
     };
 
     const isLockedNow = locked && secondsLeft > 0;
+    const isActionBlocked = loading || actionDisabled;
     const buttonText = isLockedNow
         ? `Subscribe or wait ${formatTime(secondsLeft)}`
         : mainBtnText;
@@ -222,16 +224,16 @@ export default function TaskCard({
             fontSize: "clamp(0.6rem, 3.5vw, 1.3rem)",
             lineHeight: 1,
             borderRadius: 999,
-            cursor: !isLockedNow && (loading || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? "not-allowed" : "pointer",
+            cursor: !isLockedNow && (isActionBlocked || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? "not-allowed" : "pointer",
             background: theme.accent ?? "#4ba36e",
             color: "#fff",
             border: `2px solid ${SOFT_STROKE}`,
             boxShadow: "0 10px 22px rgba(0,0,0,0.14)",
             fontFamily: "Nunito, system-ui, sans-serif",
             whiteSpace: "nowrap",
-            opacity: !isLockedNow && (loading || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? 0.7 : 1,
-            transform: hovered && (!isLockedNow || !(loading || (taskType === 'translate' && (!textareaRef?.current?.value || false)))) ? "translateY(1px)" : "none",
-            filter: hovered && (!isLockedNow || !(loading || (taskType === 'translate' && (!textareaRef?.current?.value || false)))) ? "brightness(0.95)" : "none",
+            opacity: !isLockedNow && (isActionBlocked || (taskType === 'translate' && (!textareaRef?.current?.value || false))) ? 0.7 : 1,
+            transform: hovered && (!isLockedNow || !(isActionBlocked || (taskType === 'translate' && (!textareaRef?.current?.value || false)))) ? "translateY(1px)" : "none",
+            filter: hovered && (!isLockedNow || !(isActionBlocked || (taskType === 'translate' && (!textareaRef?.current?.value || false)))) ? "brightness(0.95)" : "none",
             transition: "transform 120ms ease, filter 120ms ease, box-shadow 120ms ease",
             height: "44px",
         },
@@ -377,7 +379,7 @@ export default function TaskCard({
                     onMouseLeave={() => setHovered(false)}
                     aria-label="Check the translation"
                     onClick={onMainButtonClick}
-                    disabled={loading}
+                    disabled={isActionBlocked}
                     style={styles.btn}
                 >
                     {loading ? <BarsLoader white /> : buttonText}

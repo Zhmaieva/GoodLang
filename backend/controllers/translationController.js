@@ -5,6 +5,7 @@ import {
     generateGapSample,
     generateTranslationSample,
     preEvaluate,
+    quickEvaluateAnswer,
     randomRule
 } from "../core/сore.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
@@ -138,6 +139,53 @@ export const translationsController = {
         app.get(`/${name}/`, authMiddleware, async (req, res, next) => {
             return this.handleTranslationRequest(req, res, next);
         });
+        app.get(`/${name}/quick`, authMiddleware, async (req, res, next) => {
+            return this.handleQuickEvaluationRequest(req, res, next);
+        });
+    },
+
+    handleQuickEvaluationRequest: async function (req, res, next) {
+        try {
+            const accountId = req.user.id;
+
+            const {
+                rules,
+                translation,
+                textToTranslate,
+                options,
+                task_type = "0",
+            } = req.query;
+
+            if ((translation?.length ?? 0) >= 200) {
+                return res.status(400).send("Message too long.");
+            }
+
+            const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, false);
+            if (!allowed) {
+                return res.status(429).json({
+                    message: `Free translation limit reached. Wait or upgrade to premium.`,
+                    waitTimeSeconds,
+                });
+            }
+
+            const taskType = Number(task_type) || 0;
+            const result = await quickEvaluateAnswer({
+                taskType,
+                rules: normalizeRulesInput(rules),
+                userEnglish: translation ?? "",
+                textToTranslate: textToTranslate ?? "",
+                options: parseOptionsInput(options),
+            });
+
+            return res.json({
+                isAnswerCorrect: result.answer_is_correct,
+                allowed: true,
+                waitTimeSeconds: 0,
+            });
+        } catch (e) {
+            console.log(e);
+            next(e);
+        }
     },
 
     /**

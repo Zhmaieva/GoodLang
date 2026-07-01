@@ -7,7 +7,7 @@ const client = new OpenAI({ apiKey:
         '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'
 });
 const OPENAI_RUNTIME_MODEL = process.env.OPENAI_RUNTIME_MODEL || "gpt-5.4-mini";
-const USE_REASONING_CONFIG = OPENAI_RUNTIME_MODEL.startsWith("gpt-5");
+const OPENAI_QUICK_CHECK_MODEL = process.env.OPENAI_QUICK_CHECK_MODEL || "gpt-5.4-nano";
 
 const languagesMap = {
     "Ukrainian": "ua",
@@ -71,10 +71,11 @@ function normalizeOptions(options = [], correct = "") {
     return cleaned.slice(0, 5);
 }
 
-function buildJsonResponseRequest({ input, temperature = 0.2 }) {
+function buildJsonResponseRequest({ input, temperature = 0.2, model = OPENAI_RUNTIME_MODEL }) {
+    const useReasoningConfig = String(model).startsWith("gpt-5");
     return {
-        model: OPENAI_RUNTIME_MODEL,
-        ...(USE_REASONING_CONFIG
+        model,
+        ...(useReasoningConfig
             ? { reasoning: { effort: "low" } }
             : { temperature }),
         text: { format: { type: "json_object" } },
@@ -399,6 +400,59 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
     parsed.violated_rules = normalizeRuleList(parsed.violated_rules, []).filter((r) => validationRules.includes(r));
 
     return parsed;
+}
+
+export async function quickEvaluateAnswer({
+                                              taskType = 0,
+                                              rules = [],
+                                              userEnglish = "",
+                                              textToTranslate = "",
+                                              options = [],
+                                          }) {
+    const scoreRules = normalizeRuleList(rules);
+
+    const systemPrompt = `
+You are a strict but fair ESL answer checker.
+Return JSON only.
+Schema:
+{
+  "answer_is_correct": boolean
+}
+`;
+
+    const userPrompt = Number(taskType) === 1
+        ? `
+TASK_TYPE: GAP_CHOICE
+RULES: ${JSON.stringify(scoreRules)}
+SENTENCE_TEMPLATE: ${textToTranslate}
+OPTIONS: ${JSON.stringify(options)}
+LEARNER_CHOICE: ${userEnglish || "(none)"}
+
+Return true only if LEARNER_CHOICE is the correct option for the sentence.
+`
+        : `
+TASK_TYPE: TRANSLATION_TO_ENGLISH
+RULES: ${JSON.stringify(scoreRules)}
+SOURCE_TEXT: ${textToTranslate}
+LEARNER_ENGLISH: ${userEnglish || "(none)"}
+
+Return true only if LEARNER_ENGLISH is an accurate English translation of SOURCE_TEXT and satisfies the listed grammar rules.
+`;
+
+    const resp = await client.responses.create(buildJsonResponseRequest({
+        model: OPENAI_QUICK_CHECK_MODEL,
+        temperature: 0,
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    }));
+
+    const parsed = parseJsonObject(resp.output_text);
+
+    return {
+        answer_is_correct: !!parsed.answer_is_correct,
+    };
 }
 
 export async function evaluateGapAndCoach({

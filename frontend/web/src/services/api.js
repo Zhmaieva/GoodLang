@@ -93,6 +93,26 @@ export async function callTranslateAPI(params) {
     return  { ...data, isSuccess: true };
 }
 
+export async function callQuickTranslateAPI(params) {
+    const qs = new URLSearchParams(params);
+    const url = `${API_BASE}/translations/quick?${qs.toString()}`;
+
+    const res = await fetch(url, {
+        headers: {
+            'Authorization': `Bearer ${await getToken()}`
+        }
+    });
+
+    const data = await res.json();
+    if (!res.ok) {
+        if (data?.waitTimeSeconds) {
+            return  { ...data, isSuccess: false };
+        }
+        throw new Error("Server error: " + res.status);
+    }
+    return  { ...data, isSuccess: true };
+}
+
 
 export async function callSignUpApi(params) {
     const qs = new URLSearchParams(params);
@@ -539,4 +559,3 @@ export async function callCompleteMarathonDayApi(opts = {}) {
         return { isSuccess: false, error: "network_error" };
     }
 }
-
