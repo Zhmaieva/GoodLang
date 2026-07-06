@@ -9,7 +9,7 @@ export function PrimaryButton({ theme, children, ...props }) {
         padding: "10px 16px",
         fontWeight: 800,
         fontSize: "1rem",
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: '"Source Serif 4", Georgia, serif',
         boxShadow: `2px 2px 0 ${theme.accentDark}`,
         cursor: "pointer",
         transition: "transform .1s, background .15s",

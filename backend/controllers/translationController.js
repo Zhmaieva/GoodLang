@@ -4,7 +4,9 @@ import {
     evaluateGapAndCoach,
     preEvaluate,
     randomRule,
-    shuffleBySeed, translateIfNeeded
+    shuffleBySeed,
+    translateIfNeeded,
+    translateSampleIfNeeded
 } from "../core/сore.js";
 import { ALL_RULES_SAMPLES } from "../core/allRulesSamples.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
@@ -118,9 +120,10 @@ export const translationsController = {
                     ? { allowed: true, waitTimeSeconds: 0 }
                     : await checkTranslationLimit(accountId);
 
-                const textToTranslateAdjusted = await translateIfNeeded({
-                    value: sample[locale],
-                    locale: userLocale
+                const textToTranslateAdjusted = await translateSampleIfNeeded({
+                    sample,
+                    locale: userLocale,
+                    sourceKey: locale
                 });
 
                 const hintAdjusted = await translateIfNeeded({
@@ -293,9 +296,10 @@ export const translationsController = {
                         if (nextSample) {
                             newRules = nextSample.rules;
                             newTextToTranslateOriginal = nextSample[locale];
-                            newTextToTranslate = await translateIfNeeded({
-                                value: nextSample[locale],
-                                locale: userLocale
+                            newTextToTranslate = await translateSampleIfNeeded({
+                                sample: nextSample,
+                                locale: userLocale,
+                                sourceKey: locale
                             });
                             if (nextSample?.hint) {
                                 newHint = await translateIfNeeded({

@@ -23,7 +23,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
     };
 
     // ✅ NON-header AccuracyKpi-like card styling tokens
-    const CARD_BG = "rgba(255, 243, 223, 0.92)";
+    const CARD_BG = "#F8F1E7";
     const CARD_BORDER = "rgba(255,97,56,0.70)";
     const CARD_SHADOW = "0 10px 26px rgba(0,0,0,0.12)";
 

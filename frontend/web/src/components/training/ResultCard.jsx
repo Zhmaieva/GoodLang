@@ -2,30 +2,30 @@ import { RULE_LABELS } from "../../utils/rules.js";
 
 export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] }) {
     // ----- same “TaskCard” styling tokens -----
-    const CARD_BG = "rgba(255, 243, 223, 0.92)";
-    const CARD_BORDER_IDLE = "rgba(255,97,56,0.70)";
+    const CARD_BG = "#fffbf0";
+    const CARD_BORDER_IDLE = "#40a6ff";
     const CARD_SHADOW_IDLE = "0 10px 26px rgba(0,0,0,0.12)";
-    const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
+    const SOFT_INNER = "#fffbf0";
     const SOFT_RED = "rgba(255, 230, 228, 0.92)";
     const SOFT_GREEN = "rgba(232, 247, 238, 0.92)";
     const SOFT_STROKE = "rgba(0,0,0,0.12)";
-    const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
-    const SOFT_STROKE_ACCENT_2 = "rgba(255,97,56,0.40)";
+    const SOFT_STROKE_ACCENT = "#40a6ff";
+    const SOFT_STROKE_ACCENT_2 = "#40a6ff";
 
     const styles = {
         card: {
             background: CARD_BG,
-            border: `2px solid ${CARD_BORDER_IDLE}`,
-            borderRadius: 14,
+            border: `2px solid #40a6ff`,
+            borderRadius: 5,
             boxShadow: CARD_SHADOW_IDLE,
             padding: 20,
         },
 
         title: {
-            fontFamily: "Nunito, system-ui, sans-serif",
-            fontSize: "1rem",
+            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontSize: "1.2rem",
             color: theme.text,
-            fontWeight: 900,
+            fontWeight: 700,
             marginBottom: 10,
             marginTop: 0,
             letterSpacing: ".02em",
@@ -38,30 +38,29 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
         },
 
         feedback: {
-            fontFamily: "Nunito, system-ui, sans-serif",
+            fontFamily: '"Source Serif 4", Georgia, serif',
             background: SOFT_INNER,
-            border: `2px dashed ${SOFT_STROKE_ACCENT_2}`,
+            border: `1px solid #6F625B`,
             padding: "12px 14px",
-            borderRadius: 14,
+            borderRadius: 5,
             color: theme.text,
             minHeight: 44,
-            fontWeight: 700,
+            fontWeight: 500,
             whiteSpace: "pre-wrap",
-            opacity: 0.95,
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            fontSize: "1rem",
         },
 
         correctWrap: {
             marginTop: 14,
             background: SOFT_INNER,
             border: `2px solid ${SOFT_STROKE_ACCENT}`,
-            borderRadius: 14,
+            borderRadius: 5,
             boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
             padding: "12px 14px",
         },
 
         correctTitle: {
-            fontFamily: "Nunito, system-ui, sans-serif",
+            fontFamily: '"Source Serif 4", Georgia, serif',
             fontSize: "0.95rem",
             fontWeight: 900,
             color: theme.text,
@@ -71,13 +70,13 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
         },
 
         correctText: {
-            fontFamily: "Nunito, system-ui, sans-serif",
+            fontFamily: '"Source Serif 4", Georgia, serif',
             fontSize: "1rem",
             fontWeight: 800,
             color: theme.text,
             background: "rgba(255,255,255,0.78)",
             border: `2px solid ${SOFT_STROKE}`,
-            borderRadius: 14,
+            borderRadius: 5,
             padding: "10px 12px",
             display: "inline-block",
             boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
@@ -92,7 +91,7 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
         },
 
         rulesTitle: {
-            fontFamily: "Nunito, system-ui, sans-serif",
+            fontFamily: '"Source Serif 4", Georgia, serif',
             fontSize: "0.95rem",
             fontWeight: 900,
             letterSpacing: ".03em",
@@ -110,13 +109,13 @@ export default function ResultCard({ theme, hint, correctAnswer, weakRules = [] 
         ruleButton: {
             appearance: "none",
             cursor: "pointer",
-            borderRadius: 999,
+            borderRadius: 5,
             border: `2px solid ${SOFT_STROKE_ACCENT}`,
-            background: "rgba(255,255,255,0.78)",
+            background: "#fffbf0",
             padding: "10px 14px",
             fontSize: "1rem",
-            fontWeight: 900,
-            fontFamily: "Nunito, system-ui, sans-serif",
+            fontWeight: 600,
+            fontFamily: '"Source Serif 4", Georgia, serif',
             letterSpacing: ".02em",
             color: theme.text,
             boxShadow: "0 8px 18px rgba(0,0,0,0.10)",

@@ -10,6 +10,74 @@ const languagesMap = {
     "English": "en",
 }
 
+export const localeTranslationKeys = Object.freeze({
+    "uk-UA": "ua",
+    "ru-RU": "ru",
+    "pl-PL": "pl",
+    "de-DE": "de",
+    "fr-FR": "fr",
+    "es-ES": "es",
+    "it-IT": "it",
+    "pt-PT": "pt",
+    "nl-NL": "nl",
+    "sv-SE": "sv",
+    "no-NO": "no",
+    "da-DK": "da",
+    "fi-FI": "fi",
+    "cs-CZ": "cs",
+    "sk-SK": "sk",
+    "hu-HU": "hu",
+    "ro-RO": "ro",
+    "bg-BG": "bg",
+    "el-GR": "el",
+    "tr-TR": "tr",
+    "zh-CN": "zh",
+    "ja-JP": "ja",
+    "ko-KR": "ko",
+    "th-TH": "th",
+    "vi-VN": "vi",
+    "id-ID": "id",
+    "ms-MY": "ms",
+    "he-IL": "he",
+    "ar-SA": "ar",
+});
+
+const localePrefixTranslationKeys = Object.freeze(
+    Object.fromEntries(
+        Object.entries(localeTranslationKeys).map(([locale, key]) => [
+            locale.slice(0, 2).toLowerCase(),
+            key,
+        ])
+    )
+);
+
+export function getTranslationKeyForLocale(locale = "uk-UA") {
+    const normalizedLocale = String(locale || "uk-UA").toLowerCase();
+    const exactLocale = Object.keys(localeTranslationKeys).find(
+        (supportedLocale) => supportedLocale.toLowerCase() === normalizedLocale
+    );
+
+    if (exactLocale) return localeTranslationKeys[exactLocale];
+
+    return localePrefixTranslationKeys[normalizedLocale.slice(0, 2)] || "ua";
+}
+
+export function getDeterministicSampleTranslation(sample, locale = "uk-UA") {
+    const translationKey = getTranslationKeyForLocale(locale);
+    const translations = sample?.translations;
+    const normalizedLocale = String(locale || "uk-UA").toLowerCase();
+    const exactTranslationLocale = translations
+        ? Object.keys(translations).find((key) => key.toLowerCase() === normalizedLocale)
+        : null;
+
+    return (
+        (exactTranslationLocale ? translations[exactTranslationLocale] : null) ||
+        translations?.[translationKey] ||
+        sample?.[translationKey] ||
+        null
+    );
+}
+
 // Hash function to convert any string/number into a good 32-bit seed
 function xmur3(str) {
     for (var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
@@ -333,4 +401,21 @@ ${safeValue}
     } catch {
         return safeValue;
     }
+}
+
+export async function translateSampleIfNeeded({
+                                                  sample = null,
+                                                  locale = null,
+                                                  sourceKey = "ua",
+                                              }) {
+    const deterministicTranslation = getDeterministicSampleTranslation(sample, locale);
+
+    if (deterministicTranslation) {
+        return String(deterministicTranslation);
+    }
+
+    return translateIfNeeded({
+        value: sample?.[sourceKey] ?? "",
+        locale,
+    });
 }

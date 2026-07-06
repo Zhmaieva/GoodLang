@@ -13,14 +13,14 @@ export default function Examples({ items, theme }) {
     const en = {
         fontWeight: 800,
         color: theme.text,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: '"Source Serif 4", Georgia, serif',
     };
 
     const ua = {
         color: theme.muted,
         marginTop: 2,
         fontWeight: 700,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: '"Source Serif 4", Georgia, serif',
     };
 
     return (
