@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import AppShell from "../AppShell";
-import Header from "../Header";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import Trainer from "../training/Trainer.jsx";
 import FooterBar from "../FooterBar.jsx";
-import { callAccountVerifyApi, dowloadPdf, callEmailUnsubscribeApi } from "../../services/api.js";
+import { callAccountVerifyApi, callEmailUnsubscribeApi } from "../../services/api.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
 import { getAllStatistics } from "../../services/dataService.js";
 import { on, off } from "../../services/events.js";
 import InfoModal from "../modals/InfoModal.jsx";
-import {getSavedTrainingLevel, saveTrainingLevel} from "../../services/trainingDirector.js";
-import {marathonService} from "../../services/marathonService.js"; // ✅ adjust path if needed
+import { getSavedTrainingLevel } from "../../services/trainingDirector.js";
+import { marathonService } from "../../services/marathonService.js";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
     const [level, setLevel] = useState(getSavedTrainingLevel() || "managed");
 
-    // weakest rules buttons (up to 3)
     const [weakRules, setWeakRules] = useState([]);
     const [allRulesVisible, setAllRulesVisible] = useState(false);
     const [hoveredRuleId, setHoveredRuleId] = useState(null);
@@ -26,12 +24,13 @@ export default function HomePage({ theme }) {
     const [isInMarathonView, setIsInMarathonView] = useState(false);
     const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
 
-    // ✅ Info modal state (for unsubscribe)
     const [infoOpen, setInfoOpen] = useState(false);
     const [infoTitle, setInfoTitle] = useState("Information");
     const [infoMessage, setInfoMessage] = useState("");
 
-    // Responsive grid (container-based)
+    const [hoveredAnalytics, setHoveredAnalytics] = useState(false);
+    const [hoveredHeaderBtn, setHoveredHeaderBtn] = useState(null);
+
     const { ref: containerRef } = useBreakpoint(880);
 
     const navigate = useNavigate();
@@ -43,7 +42,6 @@ export default function HomePage({ theme }) {
         gap: 24,
     };
 
-    // Row: analytics + weakest rules
     const topRowStyle = {
         display: "flex",
         gap: 10,
@@ -52,9 +50,6 @@ export default function HomePage({ theme }) {
         justifyContent: "center",
         margin: "10px 0 0",
     };
-
-    // Analytics button (LevelSwitch style)
-    const [hoveredAnalytics, setHoveredAnalytics] = useState(false);
 
     const weakRuleButtonStyle = (isHover, keepFullSize = false) => ({
         appearance: "none",
@@ -67,12 +62,17 @@ export default function HomePage({ theme }) {
         background: theme.accent ?? "#4ba36e",
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+        fontFamily: '"Source Serif 4", Georgia, serif',
 
-        width: (isMobile || (weakRules?.length || 0) <= 0) ? "100%" : "initial",
+        width: isMobile || (weakRules?.length || 0) <= 0 ? "100%" : "initial",
+        maxWidth:
+            isMobile || (weakRules?.length || 0) <= 0
+                ? "100%"
+                : isMobile && !keepFullSize
+                    ? 140
+                    : 280,
 
-        maxWidth: (isMobile || (weakRules?.length || 0) <= 0) ? "100%" : (isMobile && !keepFullSize ? 140 : 280),
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
@@ -92,7 +92,6 @@ export default function HomePage({ theme }) {
         navigate(`/rule/${encodeURIComponent(ruleId)}`);
     };
 
-    // ✅ Pick up to 3 weakest rules from dataService stats
     const computeWeakRules = () => {
         const stats = getAllStatistics();
         if (!Array.isArray(stats) || !stats.length) return [];
@@ -119,7 +118,6 @@ export default function HomePage({ theme }) {
         }));
     };
 
-    // ✅ Unsubscribe flow: read token -> call API -> show InfoModal -> remove param from URL
     useEffect(() => {
         let cancelled = false;
 
@@ -128,36 +126,40 @@ export default function HomePage({ theme }) {
             const token = params.get("email_unsubscribe_token");
             if (!token) return;
 
-            // remove param from URL ASAP (so refresh doesn't re-trigger)
             params.delete("email_unsubscribe_token");
             const nextSearch = params.toString();
+
             window.history.replaceState(
                 {},
                 "",
                 `${location.pathname}${nextSearch ? `?${nextSearch}` : ""}${location.hash || ""}`
             );
 
-            // call API (graceful)
             const res = await callEmailUnsubscribeApi(token);
 
             if (cancelled) return;
 
             if (res?.isSuccess) {
                 setInfoTitle("Done");
-                setInfoMessage("We will no longer send you emails from GoodLang. You will only receive essential messages required for the app to work, such as login codes.");
+                setInfoMessage(
+                    "We will no longer send you emails from GoodLang. You will only receive essential messages required for the app to work, such as login codes."
+                );
             } else {
                 setInfoTitle("Oops...");
-                setInfoMessage("Something went wrong. Please contact us at goodlang.app@gmail.com and we will fix it.");
+                setInfoMessage(
+                    "Something went wrong. Please contact us at goodlang.app@gmail.com and we will fix it."
+                );
             }
 
             setInfoOpen(true);
         }
 
         runUnsubscribeFromUrl().catch(() => {
-            // don't crash page if something unexpected happens
             if (!cancelled) {
                 setInfoTitle("Oops...");
-                setInfoMessage("Something went wrong. Please contact us at goodlang.app@gmail.com and we’ll fix it.");
+                setInfoMessage(
+                    "Something went wrong. Please contact us at goodlang.app@gmail.com and we’ll fix it."
+                );
                 setInfoOpen(true);
             }
         });
@@ -180,6 +182,7 @@ export default function HomePage({ theme }) {
 
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
+
         checkMarathonView().then();
 
         window.addEventListener("resize", onResize);
@@ -196,82 +199,222 @@ export default function HomePage({ theme }) {
 
     useEffect(() => {
         checkMarathonView().then();
-    }, [loading])
+    }, [loading]);
 
     const checkMarathonView = async () => {
         const result = await marathonService.isMarathonView(true);
         setIsInMarathonView(result);
         setIsMarathonLoaded(true);
-    }
+    };
+
+    const SIDE_WALL_COLOR = "#40a6ff";
+    const BUTTON_OFFSET = 5;
+
+    const pageShellStyle = {
+        width: "100%",
+        minHeight: "100vh",
+        display: "grid",
+        gridTemplateColumns: isMobile
+            ? "12px minmax(0, 1fr) 12px"
+            : "minmax(96px, 1fr) minmax(0, 980px) minmax(96px, 1fr)",
+        columnGap: isMobile ? 12 : 36,
+    };
+
+    const leftWallStyle = {
+        borderRight: `3px solid ${SIDE_WALL_COLOR}`,
+        background: '#fffbf0',
+        minHeight: "100vh",
+    };
+
+    const rightWallStyle = {
+        borderLeft: `3px solid ${SIDE_WALL_COLOR}`,
+        background: '#fffbf0',
+        minHeight: "100vh",
+    };
+
+    const pageContentStyle = {
+        minWidth: 0,
+        width: "100%",
+        minHeight: "100vh",
+
+        display: "flex",
+        flexDirection: "column",
+
+        padding: isMobile ? "24px 0 40px" : "25px 0 0px",
+    };
+
+    const headerStyle = {
+        width: "100%",
+        minHeight: "48px",
+
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-end",
+
+        marginBottom: 0,
+    };
+
+    const navStyle = {
+        display: "flex",
+        alignItems: "center",
+        gap: isMobile ? 12 : 16,
+        paddingBottom: BUTTON_OFFSET,
+        paddingRight: BUTTON_OFFSET,
+        flexWrap: "wrap",
+    };
+
+    const headerBtnWrapStyle = {
+        position: "relative",
+        display: "inline-block",
+        isolation: "isolate",
+    };
+
+    const headerBtnBgStyle = (isHover) => ({
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        top: isHover ? 0 : BUTTON_OFFSET,
+        left: isHover ? 0 : BUTTON_OFFSET,
+        backgroundColor: SIDE_WALL_COLOR,
+        transition: "top 0.2s ease, left 0.2s ease",
+        zIndex: 0,
+        pointerEvents: "none",
+        borderRadius: 5,
+    });
+
+    const headerBtnStyle = {
+        position: "relative",
+        zIndex: 1,
+
+        minWidth: isMobile ? "92px" : "120px",
+        height: "40px",
+        padding: "8px 16px",
+
+        fontWeight: 600,
+        fontSize: isMobile ? "0.95rem" : "1rem",
+        letterSpacing: "0.3px",
+        fontFamily: '"Source Serif 4", Georgia, serif',
+
+        borderRadius: 5,
+        border: "1px solid #000",
+        backgroundColor: "transparent",
+        color: "#33302E",
+
+        cursor: "pointer",
+        userSelect: "none",
+        WebkitUserSelect: "none",
+        touchAction: "manipulation",
+
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+
+        transition: "color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease",
+    };
+
+    const mainContentStyle = {
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+    };
+
+    const renderHeaderButton = (id, label, onClick) => {
+        const isHover = hoveredHeaderBtn === id;
+
+        return (
+            <div
+                key={id}
+                style={headerBtnWrapStyle}
+                onMouseEnter={() => setHoveredHeaderBtn(id)}
+                onMouseLeave={() => setHoveredHeaderBtn(null)}
+            >
+                <div style={headerBtnBgStyle(isHover)} />
+
+                <button
+                    type="button"
+                    style={headerBtnStyle}
+                    onClick={onClick}
+                >
+                    {label}
+                </button>
+            </div>
+        );
+    };
 
     return (
-        <AppShell theme={theme}>
-            {infoOpen && (
-                <InfoModal
-                    theme={theme}
-                    title={infoTitle}
-                    message={infoMessage}
-                    buttonText="OK"
-                    onClose={() => setInfoOpen(false)}
-                />
-            )}
+        <AppShell theme={theme} noPadding>
+            <div style={pageShellStyle}>
+                <div style={leftWallStyle} aria-hidden="true" />
 
-            <div ref={containerRef}>
-                <Header
-                    theme={theme}
-                    level={level}
-                    defaultLevel="managed"
-                    loading={loading}
-                    onLevelChange={(level) => {
-                        setLevel(level);
-                        saveTrainingLevel(level);
-                    }}
-                />
+                <main style={pageContentStyle} ref={containerRef}>
+                    <header style={headerStyle}>
+                        <nav style={navStyle}>
+                            {renderHeaderButton("trainer", "Trainer", () => navigate("/trainer"))}
+                            {renderHeaderButton("progress", "Progress", () => navigate("/analytics"))}
+                            {renderHeaderButton("about", "About", () => navigate("/welcome"))}
+                        </nav>
+                    </header>
 
-                <section style={gridStyle}>
-                    {
-                        !isMobile && isMarathonLoaded && !isInMarathonView &&
-                        <div style={topRowStyle}>
-                            {
-                                !isMobile && allRulesVisible && <button
-                                    onMouseEnter={() => setHoveredAnalytics(true)}
-                                    onMouseLeave={() => setHoveredAnalytics(false)}
-                                    style={weakRuleButtonStyle(hoveredAnalytics, true)}
-                                    onClick={handleAnalyticsClick}
-                                >
-                                    {!isMobile ? "View all rules →" : "All rules"}
-                                </button>
-                            }
+                    {infoOpen && (
+                        <InfoModal
+                            theme={theme}
+                            title={infoTitle}
+                            message={infoMessage}
+                            buttonText="OK"
+                            onClose={() => setInfoOpen(false)}
+                        />
+                    )}
 
+                    <div style={mainContentStyle}>
+                        <section style={gridStyle}>
+                            {/*
+                            {!isMobile && isMarathonLoaded && !isInMarathonView && (
+                                <div style={topRowStyle}>
+                                    {!isMobile && allRulesVisible && (
+                                        <button
+                                            onMouseEnter={() => setHoveredAnalytics(true)}
+                                            onMouseLeave={() => setHoveredAnalytics(false)}
+                                            style={weakRuleButtonStyle(hoveredAnalytics, true)}
+                                            onClick={handleAnalyticsClick}
+                                        >
+                                            {!isMobile ? "View all rules →" : "All rules"}
+                                        </button>
+                                    )}
 
-                            {!isMobile && weakRules.map((r) => {
-                                const isHover = hoveredRuleId === r.id;
+                                    {!isMobile && weakRules.map((r) => {
+                                        const isHover = hoveredRuleId === r.id;
 
-                                return (
-                                    <button
-                                        key={r.id}
-                                        style={weakRuleButtonStyle(isHover)}
-                                        onMouseEnter={() => setHoveredRuleId(r.id)}
-                                        onMouseLeave={() => setHoveredRuleId(null)}
-                                        onClick={() => handleRuleClick(r.id)}
-                                        title={`Open rule: ${r.label}`}
-                                    >
-                                        {r.label}
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    }
+                                        return (
+                                            <button
+                                                key={r.id}
+                                                style={weakRuleButtonStyle(isHover)}
+                                                onMouseEnter={() => setHoveredRuleId(r.id)}
+                                                onMouseLeave={() => setHoveredRuleId(null)}
+                                                onClick={() => handleRuleClick(r.id)}
+                                                title={`Open rule: ${r.label}`}
+                                            >
+                                                {r.label}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                            */}
 
-                    <Trainer
-                        freeTraining
-                        theme={theme}
-                        onLoadingChange={setLoading}
-                        nextLevel={level}
-                    />
-                </section>
+                            <Trainer
+                                freeTraining
+                                theme={theme}
+                                onLoadingChange={setLoading}
+                                nextLevel={level}
+                            />
+                        </section>
 
-                <FooterBar theme={theme}/>
+                        <FooterBar theme={theme} />
+                    </div>
+                </main>
+
+                <div style={rightWallStyle} aria-hidden="true" />
             </div>
         </AppShell>
     );

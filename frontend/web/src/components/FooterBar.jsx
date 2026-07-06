@@ -1,48 +1,78 @@
 import React from "react";
 import TermsOfUseModal from "./subscription/TermsOfUseModal.jsx";
 
-export default function FooterBar({theme}) {
+export default function FooterBar({ theme }) {
     const [touOpen, setTouOpen] = React.useState(false);
 
     return (
         <>
             <footer>
                 <style>{`
-                .footer-link,
-                .footer-link:visited,
-                .footer-link:hover,
-                .footer-link:active {
-                  color: ${theme.accent};
-                  text-decoration: none;
-                }
-              `}
-                </style>
-                <div style={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "space-between",
-                }}>
-                    <div style={{
-                        fontWeight: 900,
-                        fontSize: "1rem",
-                        alignSelf: "center",
-                        textAlign: "center"
-                    }}>© 2026 GoodLang • <a style={{
-                        color: "#ff6138",
-                        textDecoration: "none",
-                    }} href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
+                    .footer-link,
+                    .footer-link:visited,
+                    .footer-link:hover,
+                    .footer-link:active {
+                        color: ${theme.accent};
+                        text-decoration: none;
+                    }
+                `}</style>
+
+                <div
+                    style={{
+                        width: "100%",
+                        height: "2px",
+                        backgroundColor: "#40a6ff",
+                        marginBottom: "20px",
+                        marginTop: "20px",
+                    }}
+                />
+
+                <div
+                    style={{
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "space-between",
+                    }}
+                >
+                    <div
+                        style={{
+                            fontWeight: 500,
+                            fontSize: "1rem",
+                            alignSelf: "center",
+                            textAlign: "center",
+                            color: "#33302E",
+                        }}
+                    >
+                        © 2026 GoodLang •{" "}
+                        <a
+                            style={{
+                                color: "#40a6ff",
+                                textDecoration: "none",
+                                fontWeight: 800,
+                            }}
+                            href="mailto:goodlang.app@gmail.com"
+                        >
+                            goodlang.app@gmail.com
+                        </a>
                     </div>
 
-                    <a onClick={() => {
+                    <a
+                        onClick={() => {
                             setTouOpen(true);
-                        }} style={{
-                            fontWeight: 900,
+                        }}
+                        style={{
+                            fontWeight: 500,
                             fontSize: "1rem",
-                            color: "#ff6138",
-                            textDecoration: "none",
-                        }} href="#">Terms of Use and Privacy Policy</a>
+                            color: "#33302E",
+                            textDecoration: "underline",
+                        }}
+                        href="#"
+                    >
+                        Terms of Use and Privacy Policy
+                    </a>
                 </div>
             </footer>
+
             {touOpen && (
                 <TermsOfUseModal
                     readOnly
@@ -51,5 +81,5 @@ export default function FooterBar({theme}) {
                 />
             )}
         </>
-)
+    );
 }

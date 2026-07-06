@@ -124,13 +124,13 @@ import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.
 import {RootRedirect} from "./components/routing/RootRedirect.jsx";
 
 export const legacyGlobalStyling = {
-    bg: "#fff3df",
-    accent: "#ff6138",
-    accentDark: "#d74e2a",
+    bg: "#fffbf0",
+    accent: "#40a6ff",
+    accentDark: "#40a6ff",
     green: "#4ba36e",
     greenDark: "#2d6f48",
     blue: "#3a6ea5",
-    text: "#3a2a1d",
+    text: "#33302E",
     muted: "#a47856",
     bad: "#ef476f",
     warn: "#ffd166",
