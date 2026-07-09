@@ -1,6 +1,7 @@
 import React, {use, useEffect} from "react";
 import { logoStyle } from "./LimitModal.jsx";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import { Button } from "../Buttons.jsx";
 
 export default function FaqModal({
                                      theme,
@@ -57,7 +58,7 @@ export default function FaqModal({
     };
 
     const closeBtn = {
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         appearance: "none",
         padding: "10px 16px",
         fontWeight: 800,
@@ -178,12 +179,12 @@ export default function FaqModal({
                 </div>
 
                 <div style={{ marginTop: 16 }}>
-                    <button style={closeBtn} onClick={() => {
+                    <Button style={closeBtn} onClick={() => {
                         unlockScroll();
                         onClose();
                     }}>
                         OK
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>

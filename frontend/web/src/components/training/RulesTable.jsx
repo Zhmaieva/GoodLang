@@ -176,7 +176,7 @@ export default function RulesTable({
         return list;
     }, [rows, sortKey, sortDir, statusOf]);
 
-    const barColor = theme.accent;
+    const barColor = "#40a6ff";
 
     const ArrowPair = ({ columnKey }) => {
         const active = sortKey === columnKey;
@@ -197,7 +197,9 @@ export default function RulesTable({
         gap: 6,
         cursor: "pointer",
         userSelect: "none",
-        fontWeight: 800,
+        fontWeight: 700,
+        fontFamily: 'var(--font-family-base)',
+        color: "#000",
         pointerEvents: "auto",
     };
 
@@ -218,7 +220,7 @@ export default function RulesTable({
     const row = (isHover) => ({
         cursor: "pointer",
         userSelect: "none",
-        background: isHover ? "#ededed" : "#fff",
+        background: isHover ? "#f3efe3" : "#fffbf0",
         filter: isHover ? "brightness(0.95)" : "none",
         transition: "transform 120ms ease, filter 120ms ease",
     });
@@ -300,11 +302,13 @@ export default function RulesTable({
     return (
         <div className="table" style={{
             height: "100%",
-            background: isMobile ? "rgba(255, 253, 248, 0.88)" : "rgba(255, 243, 223, 0.92)",      // same creamy surface
-            border: "2px solid rgba(255,97,56,0.65)",     // softer accent than before
-            borderRadius: 20,
+            background: "#fffbf0",
+            border: "2px solid #40a6ff",
+            borderRadius: 5,
             boxShadow: "0 10px 26px rgba(0,0,0,0.12)",    // same as KPI / TaskCard
             overflow: "hidden",                           // clips header corners cleanly
+            fontFamily: 'var(--font-family-base)',
+            color: "#000",
         }} aria-live="polite">
             {!isMobile && (
                 <div className="thead">
@@ -380,15 +384,16 @@ export default function RulesTable({
                                                     textAlign: "left",
                                                     marginBottom: 0,
                                                     marginTop: 0,
-                                                    color: theme.text,
+                                                    color: "#000",
                                                     fontSize: "1.5rem",
-                                                    fontWeight: 800,
+                                                    fontWeight: 700,
+                                                    fontFamily: 'var(--font-family-base)',
                                                 }}
                                             >
                                                 {r.ruleName}
                                             </h2>
 
-                                            <div style={{ fontSize: "1rem", fontWeight: 700, opacity: .7, marginBottom: 8, }}>
+                                            <div style={{ fontSize: "1rem", fontWeight: 600, opacity: .7, marginBottom: 8, fontFamily: 'var(--font-family-base)', color: "#000" }}>
                                                 Level: {LEVEL_MAP[r.level]?.label}
                                             </div>
 

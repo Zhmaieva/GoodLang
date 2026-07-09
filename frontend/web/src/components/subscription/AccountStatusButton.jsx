@@ -17,11 +17,10 @@ import {off, on} from "../../services/events.js";
 import MarathonCompletedModal from "../modals/MarathonCompletedModal.jsx";
 import DailyTasksCompletedModal from "../modals/DailyTasksCompletedModal.jsx";
 import DailyTasksNeedMorePracticeModal from "../modals/DailyTasksNeedMorePractiseModal.jsx";
+import { Button } from "../Buttons.jsx";
 
 export default function AccountStatusButton({ theme }) {
     const [account, setAccount] = useState(null);
-    const [hovered, setHovered] = useState(null);
-
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
@@ -160,72 +159,32 @@ export default function AccountStatusButton({ theme }) {
         }
     }
 
-    // --- LevelSwitch-style button ---
-    const btnStyle = (() => {
-        // map to same semantic colors
-        const isPaid = account?.status === "paid";
-        const isAttention = account?.status === "attention";
-        const isFree = account?.status === "free";
-
-        let background = "#fffdf8";
-        let border = theme.accent;
-        let shadow = theme.accentDark;
-        let color = theme.text;
-
-        if (isPaid) {
-            background = theme.green;
-            border = theme.green;
-            shadow = theme.greenDark;
-            color = "#fff";
-        } else  {
-            background = theme.accent;
-            color = "#fff";
-            shadow = theme.accentDark;
-        }
-
-        return {
-            appearance: "none",
-            padding: "10px 14px",
-            fontWeight: 800,
-            fontSize: "1rem",
-            lineHeight: 1,
-            borderRadius: 999,
-            cursor: "pointer",
-
-            border: "2px solid rgba(0,0,0,0.12)",
-            boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-            fontFamily: "Nunito, system-ui, sans-serif",
-            whiteSpace: "nowrap",
-
-            transform: hovered ? "translateY(1px)" : "none",
-            filter: hovered ? "brightness(0.95)" : "none",
-            transition: "transform 120ms ease, filter 120ms ease",
-
-            background,
-            color,
-            height: "100%",
-            minWidth: "180px",
-            textAlign: "center",
-            visibility: account?.status? "visible" : "hidden",
-
-            justifyContent: "center",
-        };
-    })();
+    const isPaid = account?.status === "paid";
+    const buttonTheme = {
+        ...theme,
+        accent: isPaid ? theme.green : theme.accent,
+        accentDark: isPaid ? theme.greenDark : theme.accentDark,
+    };
 
     return (
         <>
 
-            <div
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-                style={btnStyle}
+            <Button
+                variant="primary"
+                theme={buttonTheme}
+                style={{
+                    fontFamily: 'var(--font-family-base)',
+                    height: "100%",
+                    minWidth: "180px",
+                    visibility: account?.status ? "visible" : "hidden",
+                }}
                 onClick={handleClick}
             >
                 {account?.status === "paid" && "My subscription"}
                 {account?.status === "attention" && "Subscription (expiring)"}
                 {account?.status === "free" && account?.email && "Get more practice"}
                 {account?.status === "free" && !account?.email && "Subscribe / Sign in"}
-            </div>
+            </Button>
 
 
             {

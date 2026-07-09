@@ -455,7 +455,7 @@ export default function MarathonPlanner({
         paddingTop: 0,
         paddingBottom: 10,
         marginBottom: 20,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
     };
 
     const nodeRowStyle = (side) => ({

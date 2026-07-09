@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Trainer from "./training/Trainer.jsx";
 import React, { useEffect, useState } from "react";
 import { getAllStatistics } from "../services/dataService.js";
+import { Button } from "./Buttons.jsx";
 
 export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrainingComplete = (_) => {} }) {
     const navigate = useNavigate();
@@ -17,7 +18,6 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
     const [accuracy, setAccuracy] = useState(0);
     const [attempts, setAttempts] = useState(0);
     const [status, setStatus] = useState("bad");
-    const [btnHover, setBtnHover] = useState(false);
 
     useEffect(() => {
         const badRules = rows
@@ -40,18 +40,16 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
     }, [rows]);
 
     // ----- shared visual tokens (NON-header AccuracyKpi / TaskCard vibe) -----
-    const CARD_BG = "rgba(255, 253, 248, 0.88)";
-    const CARD_BORDER = "rgba(255, 97, 56, 0.55)";
+    const CARD_BG = "#fffbf0";
+    const CARD_BORDER = "#40a6ff";
     const CARD_SHADOW = "0 8px 20px rgba(0,0,0,0.08)";
 
-    const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
-    const SOFT_STROKE = "rgba(0,0,0,0.12)";
-    const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
+    const SOFT_INNER = "#fffbf0";
 
     const cardStyle = {
         background: CARD_BG,
         border: `2px solid ${CARD_BORDER}`,
-        borderRadius: 20,
+        borderRadius: 5,
         boxShadow: CARD_SHADOW,
         padding: 18,
         userSelect: "none",
@@ -65,20 +63,20 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
     };
 
     const titleStyle = {
-        fontFamily: "Nunito, system-ui, sans-serif",
-        fontWeight: 900,
-        color: theme.text,
+        fontFamily: 'var(--font-family-base)',
+        fontWeight: 700,
+        color: "#000",
         fontSize: "1.15rem",
         lineHeight: 1.1,
     };
 
     const badgeStyle = {
-        fontFamily: "Nunito, system-ui, sans-serif",
-        fontWeight: 900,
-        color: theme.text,
-        background: SOFT_INNER,
-        border: `2px solid ${SOFT_STROKE}`,
-        borderRadius: 999,
+        fontFamily: 'var(--font-family-base)',
+        fontWeight: 700,
+        color: "#fff",
+        background: "#B85C4A",
+        border: "none",
+        borderRadius: 5,
         padding: "4px 10px",
         boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
         opacity: 0.95,
@@ -87,9 +85,9 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
 
     const metaStyle = {
         marginTop: 8,
-        fontFamily: "Nunito, system-ui, sans-serif",
-        fontWeight: 700,
-        color: theme.text,
+        fontFamily: 'var(--font-family-base)',
+        fontWeight: 600,
+        color: "#000",
         opacity: 0.8,
     };
 
@@ -97,15 +95,14 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
     const sparkStyle = {
         marginTop: 10,
         height: 8,
-        borderRadius: 999,
-        background: "rgba(0,0,0,0.10)",
+        borderRadius: 5,
+        background: "#C18A3D",
         border: "none",
         position: "relative",
         overflow: "hidden",
     };
 
-    const barColor =
-        status === "needs practice" ? "#ef476f" : status === "in progress" ? "#ffd166" : "#4ba36e";
+    const barColor = "#40a6ff";
 
     const sparkFillStyle = (width) => ({
         display: "block",
@@ -118,27 +115,6 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
     });
 
     const actionsWrapStyle = { margin: "16px 0px" };
-
-    const commonButtonStyle = (theme, disabled, hovered) => ({
-        appearance: "none",
-        padding: "8px 14px",
-        fontWeight: 800,
-        fontSize: "0.9rem",
-        lineHeight: 1,
-        borderRadius: 999,
-        background: disabled ? "#999" : theme.accent,
-        color: "#fff",
-        border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: "Nunito, system-ui, sans-serif",
-        whiteSpace: "nowrap",
-        opacity: disabled ? 0.7 : 1,
-        transform: hovered && !disabled ? "translateY(1px)" : "none",
-        filter: hovered && !disabled ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
-        cursor: disabled ? "not-allowed" : "pointer",
-    });
-
 
     if (!rule) {
         return (
@@ -179,26 +155,18 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                     </div>
 
                     <div className="focus-actions" style={actionsWrapStyle}>
-                        <button
-                            className="pill"
-                            onMouseEnter={() => setBtnHover(true)}
-                            onMouseLeave={() => setBtnHover(false)}
-                            style={commonButtonStyle(theme, false, btnHover)}
-                            onMouseDown={(e) => {
-                                e.currentTarget.style.transform = "translateY(1px)";
-                                e.currentTarget.style.boxShadow = "0 6px 14px rgba(0,0,0,0.10)";
-                            }}
-                            onMouseUp={(e) => {
-                                e.currentTarget.style.transform = "none";
-                                e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,0.10)";
-                            }}
+                        <Button
+                            variant="offset"
+                            compact
+                            shadowColor="#40a6ff"
+                            shadowOffset={5}
                             onClick={() => {
                                 const url = `/rule/${rule.rule}`;
                                 window.open(url, "_blank", "noopener,noreferrer");
                             }}
                         >
                             Rule explanation
-                        </button>
+                        </Button>
                     </div>
 
                     <Trainer

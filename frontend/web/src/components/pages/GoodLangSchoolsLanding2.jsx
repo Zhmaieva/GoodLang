@@ -1,5 +1,6 @@
 import React, { useMemo, useRef, useState } from "react";
 import {callSendInquiry} from "../../services/api.js";
+import { Button } from "../Buttons.jsx";
 
 // Uses /public/handPict.png
 // In Vite/CRA, "/handPict.png" resolves to public asset.
@@ -151,9 +152,9 @@ export default function GoodLangSchoolsLanding2() {
                     </nav>
 
                     <div className="gl-navRight">
-                        <button className="gl-btn gl-btnPrimary" onClick={scrollToWaitlist}>
+                        <Button className="gl-btn gl-btnPrimary" onClick={scrollToWaitlist}>
                             Join waitlist
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -176,9 +177,9 @@ export default function GoodLangSchoolsLanding2() {
                 }}
             >
                 <div className="gl-hero">
-                    <button className="gl-btn gl-btnPrimary" onClick={scrollToWaitlist}>
+                    <Button className="gl-btn gl-btnPrimary" onClick={scrollToWaitlist}>
                         Request early access
-                    </button>
+                    </Button>
                     <a className="gl-btn gl-btnGhost" style={{
                         textDecoration: "none",
                     }} href="#solution">
@@ -399,9 +400,9 @@ export default function GoodLangSchoolsLanding2() {
                                         <div className="gl-painText">Progress analytics</div>
                                         <div className="gl-painText">Basic support</div>
                                     </div>
-                                    <button className="gl-btn gl-btnGhost" onClick={scrollToWaitlist}>
+                                    <Button className="gl-btn gl-btnGhost" onClick={scrollToWaitlist}>
                                         Learn more
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
@@ -457,9 +458,9 @@ export default function GoodLangSchoolsLanding2() {
                                         <div className="gl-painText">Priority support</div>
                                         <div className="gl-painText">Principal dashboard</div>
                                     </div>
-                                    <button className="gl-btn gl-btnGhost" onClick={scrollToWaitlist}>
+                                    <Button className="gl-btn gl-btnGhost" onClick={scrollToWaitlist}>
                                         Learn more
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
@@ -516,9 +517,9 @@ export default function GoodLangSchoolsLanding2() {
                                         <div className="gl-painText">Unlimited support</div>
                                         <div className="gl-painText">Principal dashboard</div>
                                     </div>
-                                    <button className="gl-btn gl-btnGhost" onClick={scrollToWaitlist}>
+                                    <Button className="gl-btn gl-btnGhost" onClick={scrollToWaitlist}>
                                         Learn more
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
@@ -554,12 +555,12 @@ export default function GoodLangSchoolsLanding2() {
                                     inputMode="email"
                                     autoComplete="email"
                                 />
-                                <button className="gl-btn gl-btnPrimary" style={{
+                                <Button className="gl-btn gl-btnPrimary" style={{
                                     minWidth: 120,
                                     cursor: !email?.trim()?.includes('@') ? 'not-allowed' : 'pointer',
                                 }} type="submit">
                                     Join
-                                </button>
+                                </Button>
                             </div>
 
                             {sent && (
@@ -587,7 +588,7 @@ export default function GoodLangSchoolsLanding2() {
                             const open = faqOpen === idx;
 
                             return (
-                                <button
+                                <Button
                                     key={item.q}
                                     type="button"
                                     className={clsx("gl-faqCard", open && "open")}
@@ -605,7 +606,7 @@ export default function GoodLangSchoolsLanding2() {
                                     <div className={clsx("gl-faqBody", open ? "open" : "closed")}>
                                         <div className="gl-faqA">{item.a}</div>
                                     </div>
-                                </button>
+                                </Button>
                             );
                         })}
 
@@ -649,6 +650,7 @@ const css = `
     --radius:${TOKENS.radius}px;
     --shadow:${TOKENS.shadow};
     --shadowSoft:${TOKENS.shadowSoft};
+    --font-family-mono:var(--font-family-base);
   }
 html, body, #root, .gl-page {
   width: 100%;
@@ -660,7 +662,7 @@ html, body, #root, .gl-page {
   .gl-page{
     background: var(--bg0);
     color: var(--text);
-    font-family: Nunito, ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family:var(--font-family-base);
     letter-spacing: -0.01em;
   }
   a{ color: inherit; text-decoration: none; }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import { Button } from "../Buttons.jsx";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -187,7 +188,7 @@ export default function DailyTasksNeedMorePracticeModal({
                     </span>
                 </div>
 
-                <button
+                <Button
                     onMouseEnter={() => setBtnHover(true)}
                     onMouseLeave={() => setBtnHover(false)}
                     onClick={onCloseHandler}
@@ -202,7 +203,7 @@ export default function DailyTasksNeedMorePracticeModal({
                         color: "#fff",
                         border: "2px solid rgba(0,0,0,0.12)",
                         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-                        fontFamily: "Nunito, system-ui, sans-serif",
+                        fontFamily: 'var(--font-family-base)',
                         whiteSpace: "nowrap",
                         opacity: 1,
                         transform: btnHover ? "translateY(1px)" : "none",
@@ -213,7 +214,7 @@ export default function DailyTasksNeedMorePracticeModal({
                     }}
                 >
                     Добре
-                </button>
+                </Button>
             </div>
         </div>
     );

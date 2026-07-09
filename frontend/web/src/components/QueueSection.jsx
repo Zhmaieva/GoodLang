@@ -1,11 +1,12 @@
+import { Button } from "./Buttons.jsx";
 export default function QueueSection({ queue, onGenerate, onStartPractice, fmtDateEnShort }) {
     return (
         <>
             <div className="section-title">Recommended vocabulary</div>
             <div className="queue-controls">
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                    <button className="btn" onClick={onGenerate}>Words to learn</button>
-                    <button className="btn secondary" onClick={onStartPractice}>Start practice</button>
+                    <Button className="btn" onClick={onGenerate}>Words to learn</Button>
+                    <Button className="btn secondary" onClick={onStartPractice}>Start practice</Button>
                 </div>
                 <div className="sub" id="queueInfo">
                     {queue.length ? "Queue ready — click any word to start practicing."

@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { localizationService } from "../../localization/localizationService.js";
 import FeatureToggleService, {featureToggleService} from "../../services/featureToggleService.js";
+import { Button } from "../Buttons.jsx";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -116,7 +117,7 @@ export default function ChooseLocaleModal({
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         whiteSpace: "nowrap",
         transform: btnHovered && canClose ? "translateY(1px)" : "none",
         filter: btnHovered && canClose ? "brightness(0.95)" : "none",
@@ -318,14 +319,14 @@ export default function ChooseLocaleModal({
                         </div>
                     )}
 
-                    <button
+                    <Button
                         onMouseEnter={() => setBtnHovered(true)}
                         onMouseLeave={() => setBtnHovered(false)}
                         style={mainButtonStyle}
                         onClick={handleClose}
                     >
                         Ok
-                    </button>
+                    </Button>
                 </div>
 
             </div>

@@ -2,6 +2,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { markFailed, markSent, tryInsertTrackingRow } from "../massEmailService.js";
+import {applyFontFamilyTemplate} from "../../../shared/fontFamily.js";
 
 /* ----------------------------- template helpers ---------------------------- */
 
@@ -195,7 +196,7 @@ export async function runMarathonStartTick({
     const marathonDir = path.join(projectRoot, "emails", "marathon");
     const tplPath = path.join(marathonDir, "Marathon_start.html");
 
-    const rawHtml = await fs.readFile(tplPath, "utf8");
+    const rawHtml = applyFontFamilyTemplate(await fs.readFile(tplPath, "utf8"));
     const subject = parseMeta(rawHtml, "goodlang:subject") || "Твій марафон стартував 🚀";
     const plain = parsePlain(rawHtml) || "";
 
@@ -343,7 +344,7 @@ export async function runMarathonFailTick({
     const marathonDir = path.join(projectRoot, "emails", "marathon");
     const tplPath = path.join(marathonDir, "Marathon_failed.html");
 
-    const rawHtml = await fs.readFile(tplPath, "utf8");
+    const rawHtml = applyFontFamilyTemplate(await fs.readFile(tplPath, "utf8"));
     const subject =
         parseMeta(rawHtml, "goodlang:subject") || "Марафон завершився";
     const plain = parsePlain(rawHtml) || "";
@@ -491,7 +492,7 @@ export async function runMarathonCompletedTick({
     const marathonDir = path.join(projectRoot, "emails", "marathon");
     const tplPath = path.join(marathonDir, "Marathon_completed.html");
 
-    const rawHtml = await fs.readFile(tplPath, "utf8");
+    const rawHtml = applyFontFamilyTemplate(await fs.readFile(tplPath, "utf8"));
     const subject =
         parseMeta(rawHtml, "goodlang:subject") || "Ти завершив(ла) марафон! 🎉";
     const plain = parsePlain(rawHtml) || "";

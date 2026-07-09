@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import {MAIL_PASS} from "./constants.js";
+import {FONT_FAMILY_CSS} from "../../shared/fontFamily.js";
 
 // Create reusable transporter using SMTP (example: Gmail, custom SMTP)
 export const transporter = nodemailer.createTransport({
@@ -34,7 +35,7 @@ export function sendVerificationEmail(to, code) {
 <td style="padding-bottom:16px;">
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
 <tr>
-<td valign="top" style="font-family:Arial, sans-serif;">
+<td valign="top" style="font-family:${FONT_FAMILY_CSS};">
 <h2 style="
 margin:0;
 font-size:24px;
@@ -65,7 +66,7 @@ text-align:center;
 color:#ffffff;
 font-weight:800;
 font-size:28px;
-font-family:Arial, sans-serif;
+font-family:${FONT_FAMILY_CSS};
 line-height:64px;
 ">
 GL
@@ -79,7 +80,7 @@ GL
 </tr>
 </table>
 
-<p style="font-family:Arial, sans-serif; opacity: 0.5">
+<p style="font-family:${FONT_FAMILY_CSS}; opacity: 0.5">
 If this wasn’t you, please email us at 
 <a href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
 </p>
@@ -126,7 +127,7 @@ Activate it here: ${SUBSCRIBE_URL}`,
 <td style="padding-bottom:16px;">
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
 <tr>
-<td valign="top" style="font-family:Arial, sans-serif;">
+<td valign="top" style="font-family:${FONT_FAMILY_CSS};">
 <h2 style="
 margin:0;
 font-size:24px;
@@ -177,7 +178,7 @@ text-align:center;
 color:#ffffff;
 font-weight:800;
 font-size:28px;
-font-family:Arial, sans-serif;
+font-family:${FONT_FAMILY_CSS};
 line-height:64px;
 ">
 GL
@@ -192,7 +193,7 @@ GL
 </table>
 
 <p style="
-font-family:Arial, sans-serif;
+font-family:${FONT_FAMILY_CSS};
 opacity:0.5;
 font-size:13px;
 ">

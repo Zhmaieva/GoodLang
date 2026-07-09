@@ -10,6 +10,7 @@ import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import React, {useEffect, useRef, useState} from "react";
 import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import { Button } from "../Buttons.jsx";
 
 export default function LandingPageTeacher({theme}) {
     const navigate = useNavigate();
@@ -99,8 +100,8 @@ export default function LandingPageTeacher({theme}) {
   --container: 1100px;
   --heroCard: 520px;
 
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  --font-soft: Nunito, ui-sans-serif, system-ui;
+  --font: var(--font-family-base);
+  --font-soft: var(--font-family-base);
 }
 
 html, body{
@@ -628,20 +629,20 @@ html{ scroll-behavior: smooth; }
 
                 <div className="right">
                     <div className="topNav">
-                        <button className="topNavBtn"
+                        <Button className="topNavBtn"
                                 onClick={() => document.getElementById("inside")?.scrollIntoView({behavior: "smooth"})}>
                             What's inside
-                        </button>
+                        </Button>
 
-                        <button className="topNavBtn"
+                        <Button className="topNavBtn"
                                 onClick={() => document.getElementById("download")?.scrollIntoView({behavior: "smooth"})}>
                         How to download
-                        </button>
+                        </Button>
 
-                        <button className="topNavBtn"
+                        <Button className="topNavBtn"
                                 onClick={() => document.getElementById("join")?.scrollIntoView({behavior: "smooth"})}>
                             Get started
-                        </button>
+                        </Button>
                     </div>
 
                     <div className="heroStack">
@@ -654,13 +655,13 @@ html{ scroll-behavior: smooth; }
                             </p>
 
                             <div className="heroBtns">
-                                <button
+                                <Button
                                     className="primaryBtn"
                                     onClick={goToRules}
                                 >
                                     Download
-                                </button>
-                                <button
+                                </Button>
+                                <Button
                                     className="secondaryBtn"
                                     onClick={() =>
                                         document
@@ -669,7 +670,7 @@ html{ scroll-behavior: smooth; }
                                     }
                                 >
                                     Learn more
-                                </button>
+                                </Button>
                             </div>
                         </div>
                         <div className="handPointerWrap">
@@ -772,12 +773,12 @@ html{ scroll-behavior: smooth; }
                             </div>
 
                             <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
-                                <button className="primaryBtn" onClick={goToRules}>
+                                <Button className="primaryBtn" onClick={goToRules}>
                                     Get started
-                                </button>
-                                {/*<button className="secondaryBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>*/}
+                                </Button>
+                                {/*<Button className="secondaryBtn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>*/}
                                 {/*    Back to top*/}
-                                {/*</button>*/}
+                                {/*</Button>*/}
                             </div>
                         </div>
 
@@ -812,12 +813,12 @@ html{ scroll-behavior: smooth; }
                         </p>
 
                         <div className="ctaButtons">
-                            <button onClick={startUsing} className="primaryBtn">
+                            <Button onClick={startUsing} className="primaryBtn">
                                 Start practicing
-                            </button>
-                            <button onClick={goToRules} className="secondaryBtn">
+                            </Button>
+                            <Button onClick={goToRules} className="secondaryBtn">
                                 View rules and PDFs
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>

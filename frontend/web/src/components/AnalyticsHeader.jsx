@@ -1,3 +1,4 @@
+import { Button } from "./Buttons.jsx";
 
 export default function AnalyticsHeader({ onBack, onExport }) {
     return (
@@ -12,8 +13,8 @@ export default function AnalyticsHeader({ onBack, onExport }) {
                 </div>
             </div>
             <nav className="actions">
-                <button className="btn secondary" onClick={onBack}>← Practice</button>
-                {/*<button className="btn" onClick={onExport}>Роздрукувати результати</button>*/}
+                <Button className="btn secondary" onClick={onBack}>← Practice</Button>
+                {/*<Button className="btn" onClick={onExport}>Роздрукувати результати</Button>*/}
             </nav>
         </header>
     );

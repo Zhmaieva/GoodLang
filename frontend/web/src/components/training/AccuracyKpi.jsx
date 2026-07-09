@@ -167,9 +167,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             flexDirection: "column",
             gap: 10,
             padding: isMobile ? "12px 12px" : "12px 14px",
-            borderRadius: 14,
-            background: "rgba(255, 243, 223, 0.92)",
-            border: `2px solid ${hover ? "rgba(255,97,56,0.95)" : "rgba(255,97,56,0.70)"}`,
+            borderRadius: 5,
+            background: "#fffbf0",
+            border: "2px solid #40a6ff",
             boxShadow: hover ? "0 14px 34px rgba(0,0,0,0.14)" : "0 10px 26px rgba(0,0,0,0.12)",
             cursor: "pointer",
             userSelect: "none",
@@ -194,12 +194,12 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         };
 
         const titleStyle = {
-            fontFamily: "Nunito, system-ui, sans-serif",
-            fontWeight: 900,
+            fontFamily: 'var(--font-family-base)',
+            fontWeight: 700,
             letterSpacing: ".06em",
             textTransform: "uppercase",
             fontSize: "1rem",
-            color: theme.text,
+            color: "#000",
             lineHeight: 1.1,
             whiteSpace: "nowrap",
             overflow: "hidden",
@@ -207,10 +207,10 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         };
 
         const subStyle = {
-            fontFamily: "Nunito, system-ui, sans-serif",
-            fontWeight: 800,
+            fontFamily: 'var(--font-family-base)',
+            fontWeight: 600,
             fontSize: "0.95rem",
-            color: theme.text,
+            color: "#000",
             opacity: 0.7,
             lineHeight: 1.1,
             whiteSpace: "nowrap",
@@ -227,10 +227,10 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         };
 
         const valueStyle = {
-            fontFamily: "Nunito, system-ui, sans-serif",
-            fontWeight: 1000,
+            fontFamily: 'var(--font-family-base)',
+            fontWeight: 700,
             fontSize: isMobile ? "1.55rem" : "1.9rem",
-            color: theme.text,
+            color: "#000",
             lineHeight: 1,
             whiteSpace: "nowrap",
             flex: "0 0 auto",
@@ -289,16 +289,16 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         const barOuter = {
             position: "relative",
             height: 32,
-            borderRadius: 999,
-            background: "rgba(0,0,0,0.10)",
-            border: "2px solid rgba(0,0,0,0.12)",
+            borderRadius: 5,
+            background: "#C18A3D",
+            border: "none",
             overflow: "visible",
         };
 
         const barMask = {
             position: "absolute",
             inset: 0,
-            borderRadius: 999,
+            borderRadius: 5,
             overflow: "hidden",
         };
 
@@ -307,8 +307,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             left: 0,
             top: 0,
             bottom: 0,
-            background: theme.accent,
-            borderRadius: 999,
+            background: "#40a6ff",
+            borderRadius: 5,
             overflow: "hidden",
             transition: canAnimate ? "width 650ms cubic-bezier(0.22, 1, 0.36, 1)" : "none",
             willChange: "width",
@@ -612,24 +612,26 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // -------------------------
     const labelStyle = {
         fontSize: isMobile ? "0.9rem" : "1rem",
-        color: "#a47856",
+        color: "#000",
         textTransform: "uppercase",
         letterSpacing: ".06em",
-        fontWeight: 900,
+        fontWeight: 700,
+        fontFamily: 'var(--font-family-base)',
     };
 
     const valueStyle = {
         fontSize: isMobile ? "1rem" : "2rem",
-        fontWeight: 900,
-        color: theme.text,
+        fontWeight: 700,
+        color: "#000",
+        fontFamily: 'var(--font-family-base)',
         lineHeight: 1.1,
     };
 
     const cardStyle = {
         visibility: isLoading ? "hidden" : "visible",
-        background: "rgba(255, 243, 223, 0.92)",
-        border: "2px solid rgba(255,97,56,0.70)",
-        borderRadius: "20px",
+        background: "#fffbf0",
+        border: "2px solid #40a6ff",
+        borderRadius: 5,
         boxShadow: "0 10px 26px rgba(0,0,0,0.12)",
         padding: isMobile ? "12px" : "18px",
         display: "flex",
@@ -643,8 +645,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // ✅ old spark bar sizes
     const sparkStyle = {
         height: isMobile ? "6px" : "8px",
-        borderRadius: "999px",
-        background: "rgba(0,0,0,0.10)",
+        borderRadius: 5,
+        background: "#C18A3D",
         border: "none",
         marginTop: "6px",
         position: "relative",
@@ -658,7 +660,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         position: "absolute",
         height: "100%",
         width: `${width}%`,
-        background: theme.accent,
+        background: "#40a6ff",
         left: 0,
         top: 0,
         transition: canAnimate ? "width 650ms cubic-bezier(0.22, 1, 0.36, 1)" : "none",

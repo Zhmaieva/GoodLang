@@ -6,6 +6,7 @@ import {callAccountVerifyApi, callCheckoutMarathonApi} from "../../services/api.
 import { getStripe } from "../subscription/LimitModal.jsx";
 import MarathonPlanner from "../training/MarathonPlanner.jsx";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import { Button } from "../Buttons.jsx";
 import {ACTION_TYPES} from "../../utils/constants.js"; // ✅ reuse same Stripe singleton loader
 
 const logoStyle = (size, theme) => ({
@@ -297,7 +298,7 @@ export default function MarathonPurchaseModal({
                                 <div style={{display: isLoading ? "none" : "initial"}}>
                                     {/* footer button */}
                                     {/* footer button (LoginForm style) */}
-                                    <button
+                                    <Button
                                         onMouseEnter={() => setBtnHover(true)}
                                         onMouseLeave={() => setBtnHover(false)}
                                         onClick={handleStart}
@@ -313,7 +314,7 @@ export default function MarathonPurchaseModal({
                                             color: "#fff",
                                             border: "2px solid rgba(0,0,0,0.12)",
                                             boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-                                            fontFamily: "Nunito, system-ui, sans-serif",
+                                            fontFamily: 'var(--font-family-base)',
                                             whiteSpace: "nowrap",
                                             opacity: (loading || safeRuleIds.length !== 7) ? 0.7 : 1,
                                             transform: btnHover && !loading && safeRuleIds.length === 7 ? "translateY(1px)" : "none",
@@ -324,7 +325,7 @@ export default function MarathonPurchaseModal({
                                         }}
                                     >
                                         Придбати і розпочати: 500.00₴
-                                    </button>
+                                    </Button>
 
                                     <p
                                         style={{

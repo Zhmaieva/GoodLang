@@ -7,6 +7,7 @@ import {normalizeLevel} from "../training/MarathonPlanner.jsx";
 import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from "body-scroll-lock";
 import {callAccountVerifyApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import { Button } from "../Buttons.jsx";
 
 
 const logoStyle = (size, theme) => ({
@@ -369,7 +370,7 @@ export default function MarathonInfoModal({
 
                                 {/* footer button */}
                                 {/* footer button (LoginForm style) */}
-                                <button
+                                <Button
                                     onMouseEnter={() => setBtnHover(true)}
                                     onMouseLeave={() => setBtnHover(false)}
                                     onClick={handleStart}
@@ -384,7 +385,7 @@ export default function MarathonInfoModal({
                                         color: "#fff",
                                         border: "2px solid rgba(0,0,0,0.12)",
                                         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-                                        fontFamily: "Nunito, system-ui, sans-serif",
+                                        fontFamily: 'var(--font-family-base)',
                                         whiteSpace: "nowrap",
                                         opacity: 1,
                                         transform: btnHover ? "translateY(1px)" : "none",
@@ -395,11 +396,11 @@ export default function MarathonInfoModal({
                                     }}
                                 >
                                     Start marathon
-                                </button>
+                                </Button>
 
                                 {
                                     account?.email &&
-                                    <button
+                                    <Button
                                         onMouseEnter={() => setLoginBtnHover(true)}
                                         onMouseLeave={() => setLoginBtnHover(false)}
                                         onClick={() => {setLoginOpen(true)}}
@@ -415,7 +416,7 @@ export default function MarathonInfoModal({
                                             color: theme.text,
                                             border: "2px solid rgba(0,0,0,0.12)",
                                             boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-                                            fontFamily: "Nunito, system-ui, sans-serif",
+                                            fontFamily: 'var(--font-family-base)',
                                             whiteSpace: "nowrap",
                                             opacity: 1,
                                             transform: loginBtnHover ? "translateY(1px)" : "none",
@@ -426,7 +427,7 @@ export default function MarathonInfoModal({
                                         }}
                                     >
                                         Log in to another account
-                                    </button>
+                                    </Button>
                                 }
 
 

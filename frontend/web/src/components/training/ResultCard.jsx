@@ -1,4 +1,5 @@
 import { RULE_LABELS } from "../../utils/rules.js";
+import { Button } from "../Buttons.jsx";
 
 export default function ResultCard({
                                        theme,
@@ -29,7 +30,7 @@ export default function ResultCard({
         },
 
         title: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             fontSize: "1.2rem",
             color: theme.text,
             fontWeight: 700,
@@ -45,7 +46,7 @@ export default function ResultCard({
         },
 
         feedback: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             background: SOFT_INNER,
             border: `1px solid #6F625B`,
             padding: "12px 14px",
@@ -95,7 +96,7 @@ export default function ResultCard({
         },
 
         correctTitle: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             fontSize: "0.95rem",
             fontWeight: 900,
             color: theme.text,
@@ -105,7 +106,7 @@ export default function ResultCard({
         },
 
         correctText: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             fontSize: "1rem",
             fontWeight: 800,
             color: theme.text,
@@ -126,7 +127,7 @@ export default function ResultCard({
         },
 
         rulesTitle: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             fontSize: "0.95rem",
             fontWeight: 900,
             letterSpacing: ".03em",
@@ -150,7 +151,7 @@ export default function ResultCard({
             padding: "10px 14px",
             fontSize: "1rem",
             fontWeight: 600,
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             letterSpacing: ".02em",
             color: theme.text,
             boxShadow: "0 8px 18px rgba(0,0,0,0.10)",
@@ -213,7 +214,7 @@ export default function ResultCard({
 
                     <div style={styles.rulesWrap}>
                         {recommendedRules.map((rule) => (
-                            <button
+                            <Button
                                 key={rule}
                                 type="button"
                                 style={styles.ruleButton}
@@ -232,7 +233,7 @@ export default function ResultCard({
                                 }}
                             >
                                 {RULE_LABELS[rule] || rule}
-                            </button>
+                            </Button>
                         ))}
                     </div>
                 </div>

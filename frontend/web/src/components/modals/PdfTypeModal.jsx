@@ -5,6 +5,7 @@ import LoginModal from "../subscription/LoginModal.jsx"; // ✅ adjust path if n
 import { getPdfDownloads, setPaymentIntent } from "../../services/dataService.js"; // ✅ setPaymentIntent used like in old modal
 import { callAccountVerifyApi } from "../../services/api.js"; // ✅ optional analytics; safe to keep
 import { ACTION_TYPES } from "../../utils/constants.js";
+import { Button } from "../Buttons.jsx";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";      // ✅ optional analytics
 
 // light copy of logo style to match DownloadLimitModal design
@@ -181,7 +182,7 @@ export default function PdfTypeModal({
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         whiteSpace: "nowrap",
         opacity: loading ? 0.75 : 1,
         transform: btnHovered && !loading ? "translateY(1px)" : "none",
@@ -202,7 +203,7 @@ export default function PdfTypeModal({
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.18)",
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         whiteSpace: "nowrap",
         cursor: "pointer",
         display: "inline-flex",
@@ -488,7 +489,7 @@ export default function PdfTypeModal({
                         {mustRegisterToDownload ? (
                             <div >
 
-                                <button
+                                <Button
                                     onMouseEnter={() => setBtnHovered(true)}
                                     onMouseLeave={() => setBtnHovered(false)}
                                     disabled={loading}
@@ -499,7 +500,7 @@ export default function PdfTypeModal({
                                     }}
                                 >
                                     Увійти або зареєструватися
-                                </button>
+                                </Button>
 
                                 <div
                                     style={{
@@ -515,7 +516,7 @@ export default function PdfTypeModal({
                                 </div>
                             </div>
                         ) : (
-                            <button
+                            <Button
                                 onMouseEnter={() => setBtnHovered(true)}
                                 onMouseLeave={() => setBtnHovered(false)}
                                 disabled={loading}
@@ -534,7 +535,7 @@ export default function PdfTypeModal({
                                 }}
                             >
                                 {loading ? "Стягую..." : "Стягнути"}
-                            </button>
+                            </Button>
                         )}
                     </div>
                 </div>
@@ -559,7 +560,7 @@ function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
                 ✓ Усі копії без вотермарку
             </div>
 
-            <button
+            <Button
                 type="button"
                 onMouseEnter={() => setH(true)}
                 onMouseLeave={() => setH(false)}
@@ -587,7 +588,7 @@ function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
             }}
         />
                 Оформити підписку
-            </button>
+            </Button>
         </div>
     );
 }

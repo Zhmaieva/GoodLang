@@ -17,6 +17,7 @@ import { ACTION_TYPES } from "../../utils/constants.js";
 import {enableBodyScroll, disableBodyScroll} from 'body-scroll-lock';
 import {localizationService} from "../../localization/localizationService.js";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
+import { Button } from "../Buttons.jsx";
 
 export default function LoginForm({
                                       theme,
@@ -94,7 +95,7 @@ export default function LoginForm({
         maxWidth: 520,
         textAlign: "center",
         boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         lineHeight: 1.4,
     };
 
@@ -110,7 +111,7 @@ export default function LoginForm({
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         whiteSpace: "nowrap",
         opacity: disabled ? 0.7 : 1,
         transform: btnHover && !disabled ? "translateY(1px)" : "none",
@@ -138,7 +139,7 @@ export default function LoginForm({
         padding: "12px 14px",
         fontSize: "18pt",
         fontWeight: 700,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         color: theme.text,
         textAlign: "center",
         caretColor: "grey",
@@ -545,7 +546,7 @@ export default function LoginForm({
                                             disabled={loading}
                                         />
 
-                                        <button
+                                        <Button
                                             style={mainButtonStyle(loading)}
                                             onMouseEnter={() => setBtnHover(true)}
                                             onMouseLeave={() => setBtnHover(false)}
@@ -553,7 +554,7 @@ export default function LoginForm({
                                             disabled={loading}
                                         >
                                             {loading ? "Sending..." : "Confirm"}
-                                        </button>
+                                        </Button>
                                     </>
                                 )}
 
@@ -692,7 +693,7 @@ export default function LoginForm({
                                             ))}
                                         </div>
 
-                                        <button
+                                        <Button
                                             style={mainButtonStyle(loading)}
                                             onMouseEnter={() => setBtnHover(true)}
                                             onMouseLeave={() => setBtnHover(false)}
@@ -700,7 +701,7 @@ export default function LoginForm({
                                             disabled={loading}
                                         >
                                             {loading ? "Checking..." : "Sign in"}
-                                        </button>
+                                        </Button>
                                     </>
                                 )}
 

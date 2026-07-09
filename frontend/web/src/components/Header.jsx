@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import LevelSwitch from "./training/LevelSwitch.jsx";
 import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 import AccuracyKpi from "./training/AccuracyKpi.jsx";
-import {PrimaryButton} from "./Buttons.jsx";
+import { Button } from "./Buttons.jsx";
 import FaqModal from "./subscription/FaqModal.jsx";
 import {callAccountVerifyApi} from "../services/api.js";
 import {ACTION_TYPES} from "../utils/constants.js";
@@ -140,9 +140,9 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                         <div style={styles.titleWrap}>
                             <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
                                 <h1 style={styles.h1}>GoodLang</h1>
-                                <PrimaryButton theme={theme} onClick={() => {
+                                <Button variant="primary" theme={theme} onClick={() => {
                                     setFaqVisible(true);
-                                }}>FAQ</PrimaryButton>
+                                }}>FAQ</Button>
                             </div>
 
                             <div style={styles.sub}>
@@ -206,10 +206,10 @@ export default function Header({ theme, level, loading, onLevelChange }) {
                     <div style={styles.titleWrap}>
                         <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
                             <h1 style={styles.h1}>GoodLang</h1>
-                            <PrimaryButton theme={theme} onClick={async () => {
+                            <Button variant="primary" theme={theme} onClick={async () => {
                                 setFaqVisible(true);
                                 await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_FAQ);
-                            }}>FAQ</PrimaryButton>
+                            }}>FAQ</Button>
                         </div>
                         <div style={styles.sub}>
                             Translate until you learn it

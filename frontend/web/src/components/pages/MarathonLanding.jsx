@@ -8,6 +8,7 @@ import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import React, { useEffect, useRef, useState } from "react";
 import { callAccountVerifyApi, callSendPromoCodeApi } from "../../services/api.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
+import { Button } from "../Buttons.jsx";
 
 export default function LandingPageMarathon({ theme }) {
     const navigate = useNavigate();
@@ -137,8 +138,8 @@ export default function LandingPageMarathon({ theme }) {
   --container: 1100px;
   --heroCard: 520px;
 
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  --font-soft: Nunito, ui-sans-serif, system-ui;
+  --font: var(--font-family-base);
+  --font-soft: var(--font-family-base);
 }
 
 html, body{
@@ -960,15 +961,15 @@ color: #fff;
 
                 <div className="right">
                     <div className="topNav">
-                        <button className="topNavBtn" onClick={() => scrollTo("inside")}>
+                        <Button className="topNavBtn" onClick={() => scrollTo("inside")}>
                             що всередині
-                        </button>
-                        <button className="topNavBtn" onClick={() => scrollTo("why")}>
+                        </Button>
+                        <Button className="topNavBtn" onClick={() => scrollTo("why")}>
                             як працює
-                        </button>
-                        <button className="topNavBtn" onClick={() => scrollTo("price")}>
+                        </Button>
+                        <Button className="topNavBtn" onClick={() => scrollTo("price")}>
                             ціна
-                        </button>
+                        </Button>
                     </div>
 
                     <div className="heroStack">
@@ -995,12 +996,12 @@ color: #fff;
                             </ul>
 
                             <div className="heroBtns">
-                                <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
+                                <Button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
                                     {"Оцінити рівень і почати марафон"}
-                                </button>
-                                <button className="secondaryBtn" onClick={() => scrollTo("why")}>
+                                </Button>
+                                <Button className="secondaryBtn" onClick={() => scrollTo("why")}>
                                     Як це працює?
-                                </button>
+                                </Button>
                             </div>
                         </div>
 
@@ -1162,12 +1163,12 @@ color: #fff;
                             </div>
 
                             <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
-                                <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
+                                <Button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
                                     {"Оцінити рівень і почати марафон"}
-                                </button>
-                                <button className="secondaryBtn" onClick={() => scrollTo("price")}>
+                                </Button>
+                                <Button className="secondaryBtn" onClick={() => scrollTo("price")}>
                                     Ціна і умови
-                                </button>
+                                </Button>
                             </div>
                         </div>
 
@@ -1306,12 +1307,12 @@ color: #fff;
                         </p>
 
                         <div style={{marginTop: 14, display: "flex", gap: 10, flexWrap: "wrap"}}>
-                        <button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
+                        <Button className="primaryBtn" onClick={startFreeDay1} disabled={ctaLoading}>
                             {"Оцінити рівень і почати марафон"}
-                        </button>
-                            <button className="secondaryBtn" onClick={() => setTouOpen(true)}>
+                        </Button>
+                            <Button className="secondaryBtn" onClick={() => setTouOpen(true)}>
                                 Умови використання
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>

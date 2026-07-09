@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import { Button } from "../Buttons.jsx";
 
 export default function InfoModal({
                                       theme,
@@ -77,7 +78,7 @@ export default function InfoModal({
                     {message}
                 </div>
 
-                <button
+                <Button
                     onClick={() => {
                         unlockScroll();
                         onClose();
@@ -96,7 +97,7 @@ export default function InfoModal({
                     }}
                 >
                     {buttonText}
-                </button>
+                </Button>
             </div>
         </div>
     );

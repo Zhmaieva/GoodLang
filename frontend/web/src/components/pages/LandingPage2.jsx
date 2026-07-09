@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import FooterBar from "../FooterBar.jsx";
-import {PrimaryButton} from "../Buttons.jsx";
+import { Button } from "../Buttons.jsx";
 import FaqModal from "../subscription/FaqModal.jsx";
 import {useNavigate} from "react-router-dom";
 import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
@@ -11,9 +11,9 @@ import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../servic
 import {ACTION_TYPES} from "../../utils/constants.js";
 
 /**
- * Landing page (Tea-style layout) adapted to your GoodLang theme + Nunito font
+ * Landing page (Tea-style layout) adapted to your GoodLang theme + Source Serif font
  * - Uses your colors: bg/accent/accentDark/green/blue/text/muted/radius
- * - Uses pill + shadow buttons like your PrimaryButton/TaskCard
+ * - Uses pill + shadow buttons like the shared Button component
  *
  * Optional props:
  * - onPrimaryCta: () => void
@@ -142,7 +142,7 @@ export default function GoodLangLandingTeaStyleThemed({
 
         const shadow = `4px 4px 0 ${theme.accentDark}`;
         const shadowSmall = `3px 3px 0 ${theme.accentDark}`;
-        const font = "Nunito, system-ui, sans-serif";
+        const font = 'var(--font-family-base)';
 
         const isNarrow = w < 980;
 
@@ -406,7 +406,7 @@ export default function GoodLangLandingTeaStyleThemed({
 
             emailRow: { display: "flex", gap: 10, flexWrap: "wrap", marginTop: 12, alignItems: "center" },
             input: {
-                fontFamily: "Nunito, system-ui, sans-serif",
+                fontFamily: 'var(--font-family-base)',
                 fontWeight: 800,
                 padding: "12px 14px",
                 borderRadius: 999,
@@ -528,10 +528,10 @@ export default function GoodLangLandingTeaStyleThemed({
 
                             <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
                                 <h1 style={styles.h1}>GoodLang</h1>
-                                <PrimaryButton theme={theme} onClick={async () => {
+                                <Button variant="primary" theme={theme} onClick={async () => {
                                     setFaqVisible(true);
                                     await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_FAQ);
-                                }}>FAQ</PrimaryButton>
+                                }}>FAQ</Button>
                             </div>
 
                             <div style={sub}>Translate until you learn it</div>
@@ -540,9 +540,9 @@ export default function GoodLangLandingTeaStyleThemed({
 
                     <div style={styles.navLinks}>
                         {navLinks.map((l) => (
-                            <button key={l.id} style={styles.navBtn} onClick={() => scrollTo(l.id)} type="button">
+                            <Button key={l.id} style={styles.navBtn} onClick={() => scrollTo(l.id)} type="button">
                                 {l.label}
-                            </button>
+                            </Button>
                         ))}
                     </div>
                 </div>
@@ -569,16 +569,16 @@ export default function GoodLangLandingTeaStyleThemed({
                         </div>
 
                         <div style={styles.ctaRow}>
-                            <button
+                            <Button
                                 type="button"
                                 style={styles.primaryBtn(pressedId === "heroPrimary")}
                                 {...pressHandlers("heroPrimary")}
                                 onClick={handleStart}
                             >
                                 {primaryCtaText}
-                            </button>
+                            </Button>
 
-                            <button
+                            <Button
                                 type="button"
                                 style={styles.secondaryBtn(pressedId === "heroSecondary")}
                                 {...pressHandlers("heroSecondary")}
@@ -589,7 +589,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                 }}
                             >
                                 {secondaryCtaText}
-                            </button>
+                            </Button>
                         </div>
 
                         <div style={styles.heroMetaRow}>
@@ -683,14 +683,14 @@ export default function GoodLangLandingTeaStyleThemed({
                     </div>
 
                     <div style={styles.ctaRow}>
-                        <button
+                        <Button
                             type="button"
                             style={styles.primaryBtn(pressedId === "joinPrimary")}
                             {...pressHandlers("joinPrimary")}
                             onClick={handleStart}
                         >
                             Start learning
-                        </button>
+                        </Button>
                     </div>
 
                     {showEmailCapture && (
@@ -709,7 +709,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                         }
                                     }}
                                 />
-                                <button
+                                <Button
                                     type="button"
                                     style={styles.secondaryBtn(pressedId === "emailBtn")}
                                     {...pressHandlers("emailBtn")}
@@ -717,7 +717,7 @@ export default function GoodLangLandingTeaStyleThemed({
                                     onClick={submitEmail}
                                 >
                                     {sending ? "Sending..." : "Get discount"}
-                                </button>
+                                </Button>
                             </div>
                             {msg ? <div style={styles.msg}>{msg}</div> : null}
                         </>

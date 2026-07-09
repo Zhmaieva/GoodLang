@@ -23,14 +23,14 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
     };
 
     // ✅ NON-header AccuracyKpi-like card styling tokens
-    const CARD_BG = "#F8F1E7";
-    const CARD_BORDER = "rgba(255,97,56,0.70)";
+    const CARD_BG = "#fffbf0";
+    const CARD_BORDER = "#40a6ff";
     const CARD_SHADOW = "0 10px 26px rgba(0,0,0,0.12)";
 
     const cardStyle = {
         background: CARD_BG,
         border: `2px solid ${CARD_BORDER}`,
-        borderRadius: "20px",
+        borderRadius: 5,
         boxShadow: CARD_SHADOW,
         padding: isMobile ? "12px" : "18px",
         display: "flex",
@@ -43,23 +43,25 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
 
     const labelStyle = {
         fontSize: isMobile ? "0.9rem" : "1rem",
-        color: "#a47856",
+        color: "#000",
         textTransform: "uppercase",
         letterSpacing: ".06em",
-        fontWeight: 900,
+        fontWeight: 700,
+        fontFamily: 'var(--font-family-base)',
     };
 
     const valueStyle = {
         fontSize: isMobile ? "1rem" : "2rem",
-        fontWeight: 800,
-        color: theme.text,
+        fontWeight: 700,
+        color: "#000",
+        fontFamily: 'var(--font-family-base)',
     };
 
     // ✅ your preferred spark style (no border)
     const sparkStyle = {
         height: isMobile ? "6px" : "8px",
-        borderRadius: "999px",
-        background: "rgba(0,0,0,0.10)",
+        borderRadius: 5,
+        background: "#C18A3D",
         border: "none",
         marginTop: "6px",
         position: "relative",
@@ -71,7 +73,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         position: "absolute",
         height: "100%",
         width: `${width}%`,
-        background: theme.accent,
+        background: "#40a6ff",
         left: 0,
         top: 0,
     });

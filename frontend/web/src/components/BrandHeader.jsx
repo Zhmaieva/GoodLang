@@ -29,7 +29,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         flex: "0 0 auto",        // НЕ СТИСКАЄТЬСЯ
         width: size,
         height: size,
-        borderRadius: 12,
+        borderRadius: 5,
         background: theme.accent,
         display: "flex",
         alignItems: "center",
@@ -37,6 +37,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         color: "#fff",
         fontWeight: 800,
         fontSize: size * 0.45,
+        fontFamily: 'var(--font-family-base)',
         boxShadow: `0 2px 0 ${theme.accentDark}`,
     });
 

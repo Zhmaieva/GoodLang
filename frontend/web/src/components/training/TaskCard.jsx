@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import TaskModeSwitch from "./TaskModeSwitch.jsx";
 import { marathonService } from "../../services/marathonService.js";
+import { Button } from "../Buttons.jsx";
 
 export default function TaskCard({
                                      theme,
@@ -32,8 +33,6 @@ export default function TaskCard({
                                      taskModeLockReason = "",
                                  }) {
     // const loading = true;
-    const [hovered, setHovered] = useState(false);
-
     // ✅ card hover is styling-only
     const [cardHovered, setCardHovered] = useState(false);
 
@@ -60,12 +59,6 @@ export default function TaskCard({
 
     useEffect(() => {
         checkMarathonView().then();
-    }, [loading]);
-
-    useEffect(() => {
-        if (loading) {
-            setHovered(false);
-        }
     }, [loading]);
 
     const checkMarathonView = async () => {
@@ -166,7 +159,7 @@ export default function TaskCard({
         },
 
         taskText: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             fontWeight: 700,
             color: "#33302E",
             minWidth: 0,
@@ -175,7 +168,7 @@ export default function TaskCard({
         },
 
         hintText: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             background: TEXT_DARK,
             padding: "4px 14px",
             borderRadius: 5,
@@ -204,7 +197,7 @@ export default function TaskCard({
         },
 
         textarea: {
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             resize: "none",
             flex: 1,
             height: 70,
@@ -220,59 +213,6 @@ export default function TaskCard({
             fontSize: "1.1rem",
             color: "#33302E",
         },
-        // ✅ Button 52 wrapper
-        btnWrap: {
-            position: "relative",
-            display: "block",
-            width: "100%",
-            isolation: "isolate",
-        },
-
-        // ✅ Button 52 background layer
-        btnBg: {
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            top: hovered ? 0 : BUTTON_OFFSET,
-            left: hovered ? 0 : BUTTON_OFFSET,
-            backgroundColor: ACCENT_RED,
-            transition: "top 0.2s ease, left 0.2s ease",
-            zIndex: 0,
-            pointerEvents: "none",
-            borderRadius: 5
-        },
-
-        // ✅ Main button
-        btn: {
-            position: "relative",
-            zIndex: 1,
-
-            width: "100%",
-            height: "48px",
-            padding: "13px 20px",
-
-            fontWeight: 600,
-            fontSize: "1.2rem",
-            letterSpacing: "0.5px",
-            fontFamily: '"Source Serif 4", Georgia, serif',
-
-            borderRadius: 5,
-            border: `1px solid #000`,
-            backgroundColor: "transparent",
-            color: '#33302E',
-
-            cursor: isActionBlocked ? "default" : "pointer",
-            userSelect: "none",
-            WebkitUserSelect: "none",
-            touchAction: "manipulation",
-
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-
-            transition: "color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease",
-        },
-
         // loader
         loaderWrap: {
             display: "inline-flex",
@@ -310,26 +250,6 @@ export default function TaskCard({
             gap: 10,
         },
 
-        optionBtn: (active) => ({
-            appearance: "none",
-            padding: "0px 14px",
-            borderRadius: 999,
-            fontWeight: 900,
-            fontSize: "1rem",
-            fontFamily: '"Source Serif 4", Georgia, serif',
-            cursor: "pointer",
-            border: `2px solid ${active ? ACCENT_RED : SOFT_STROKE_ACCENT}`,
-            background: active ? ACCENT_RED : "rgba(255,255,255,0.78)",
-            color: active ? "#fff" : TEXT_DARK,
-            boxShadow: active
-                ? "0 10px 22px rgba(0,0,0,0.14)"
-                : "0 8px 18px rgba(0,0,0,0.10)",
-            opacity: loading || isInputDisabled ? 0.7 : 1,
-            height: 44,
-            minWidth: 60,
-            transform: active ? "translateY(-1px)" : "none",
-            transition: "transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease",
-        }),
     };
 
     const BarsLoader = ({ white = false }) => (
@@ -427,15 +347,16 @@ export default function TaskCard({
                 {taskType === "gap" ? (
                     <div style={styles.optionsWrap}>
                         {gapOptions.map((opt) => (
-                            <button
+                            <Button
                                 key={opt}
-                                type="button"
-                                style={styles.optionBtn(gapSelected === opt)}
+                                variant="choice"
+                                theme={theme}
+                                active={gapSelected === opt}
                                 onClick={() => setGapSelected(opt)}
                                 disabled={loading || isInputDisabled}
                             >
                                 {opt || "-"}
-                            </button>
+                            </Button>
                         ))}
                     </div>
                 ) : (
@@ -452,22 +373,18 @@ export default function TaskCard({
                     />
                 )}
 
-                <div
-                    style={styles.btnWrap}
-                    onMouseEnter={() => !loading && setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}
+                <Button
+                    variant="offset"
+                    fullWidth
+                    theme={theme}
+                    shadowColor={ACCENT_RED}
+                    shadowOffset={BUTTON_OFFSET}
+                    aria-label="Check the translation"
+                    onClick={onMainButtonClick}
+                    disabled={isActionBlocked}
                 >
-                    <div style={styles.btnBg} />
-
-                    <button
-                        aria-label="Check the translation"
-                        onClick={onMainButtonClick}
-                        disabled={isActionBlocked}
-                        style={styles.btn}
-                    >
-                        {isActionBlocked ? <BarsLoader /> : buttonText}
-                    </button>
-                </div>
+                    {isActionBlocked ? <BarsLoader /> : buttonText}
+                </Button>
             </div>
         </div>
     );

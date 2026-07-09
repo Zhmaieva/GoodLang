@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Button } from "./Buttons.jsx";
 
 const LEVELS = [
     { id: "all", label: "All" },
@@ -34,33 +35,12 @@ export default function FiltersBar({
         muted: "#a47856",
     };
 
-    // "Common button" language (like marathon modal), with your selected/unselected palette
-    const pillStyle = (selected) => ({
-        appearance: "none",
-        padding: "8px 14px",
-        fontWeight: 800,
-        fontSize: "1rem",
-        lineHeight: 1,
-        borderRadius: 999,
-        fontFamily: "Nunito, system-ui, sans-serif",
-        whiteSpace: "nowrap",
-
-        background: selected ? t.green : "rgba(255,255,255,0.78)",
-        color: selected ? "#fff" : t.text,
-
-        border: selected ? "2px solid rgba(0,0,0,0.10)" : "2px solid rgba(0,0,0,0.12)",
-        boxShadow: selected ? "2px 2px 0 rgba(0,0,0,0.16)" : "2px 2px 0 rgba(0,0,0,0.12)",
-
-        cursor: "pointer",
-        transition: "transform 120ms ease, filter 120ms ease, box-shadow 120ms ease",
-    });
-
     // input should match your current “highlight-input” behavior; we keep it minimal
     const inputStyle = {
         fontSize: "1rem",
-        fontWeight: 700,
-        fontFamily: "Nunito, system-ui, sans-serif",
-        color: t.text,
+        fontWeight: 600,
+        fontFamily: 'var(--font-family-base)',
+        color: "#000",
     };
 
     return (
@@ -81,13 +61,18 @@ export default function FiltersBar({
                         const selected = filterLevel === lvl.id;
 
                         return (
-                            <button
+                            <Button
                                 key={lvl.id}
-                                className={`pill ${selected ? "selected" : ""}`}
+                                variant="offset"
+                                compact
+                                shadowColor={selected ? t.green : "#40a6ff"}
+                                shadowOffset={5}
                                 aria-pressed={selected}
                                 onClick={() => onLevelChange(lvl.id)}
                                 style={{
-                                    ...pillStyle(selected),
+                                    backgroundColor: selected ? t.green : "transparent",
+                                    color: selected ? "#fff" : "#000",
+                                    borderColor: selected ? t.greenDark : "#000",
 
                                     // keep your truncation behavior
                                     flexShrink: 1,
@@ -95,22 +80,9 @@ export default function FiltersBar({
                                     textOverflow: "ellipsis",
                                     textAlign: "center",
                                 }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = "translateY(-1px)";
-                                }}
-                                onMouseDown={(e) => {
-                                    e.currentTarget.style.transform = "translateY(1px)";
-                                }}
-                                onMouseUp={(e) => {
-                                    e.currentTarget.style.transform = "translateY(-1px)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = "none";
-                                }}
-
                             >
                                 {lvl.label}
-                            </button>
+                            </Button>
                         );
                     })}
                 </div>
@@ -129,26 +101,20 @@ export default function FiltersBar({
             </div>
 
             {advanced && (
-                <button
-                    className={`pill ${showWeakOnly ? "selected" : ""}`}
+                <Button
+                    variant="offset"
+                    compact
+                    shadowColor={showWeakOnly ? t.green : "#40a6ff"}
+                    shadowOffset={5}
                     onClick={onToggleWeak}
-                    style={pillStyle(showWeakOnly)}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "translateY(-1px)";
+                    style={{
+                        backgroundColor: showWeakOnly ? t.green : "transparent",
+                        color: showWeakOnly ? "#fff" : "#000",
+                        borderColor: showWeakOnly ? t.greenDark : "#000",
                     }}
-                    onMouseDown={(e) => {
-                        e.currentTarget.style.transform = "translateY(1px)";
-                    }}
-                    onMouseUp={(e) => {
-                        e.currentTarget.style.transform = "translateY(-1px)";
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = "none";
-                    }}
-
                 >
                     {showWeakOnly ? "Show all" : "Weak only"}
-                </button>
+                </Button>
             )}
         </div>
     );

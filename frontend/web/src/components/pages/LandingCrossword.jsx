@@ -12,6 +12,7 @@ import InfoModal from "../modals/InfoModal.jsx";
 import {downloadCrossword} from "../../services/api.js"; // adjust path if needed
 import {useLocation} from "react-router-dom";
 import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../services/gaService.js";
+import { Button } from "../Buttons.jsx";
 
 
 export default function LandingCrossword({theme}) {
@@ -181,8 +182,8 @@ export default function LandingCrossword({theme}) {
   --container: 1100px;
   --heroCard: 520px;
 
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  --font-soft: Nunito, ui-sans-serif, system-ui;
+  --font: var(--font-family-base);
+  --font-soft: var(--font-family-base);
 }
 
 html, body{
@@ -528,16 +529,16 @@ html{ scroll-behavior: smooth; }
 
                 <div className="right">
                     <div className="topNav">
-                        <button
+                        <Button
                             className="topNavBtn"
                             onClick={() => document.getElementById("join")?.scrollIntoView({behavior: "smooth"})}
                         >
                             прокачати англійську
-                        </button>
+                        </Button>
                     </div>
 
                     <div className="heroStack">
-                        <button
+                        <Button
                             className="primaryBtn"
                             onClick={onDownloadCrosswordClick}
                             disabled={isDownloading}
@@ -554,7 +555,7 @@ html{ scroll-behavior: smooth; }
                             ) : (
                                 `Скачати кросворд ${getSafeFileName()}.pdf`
                             )}
-                        </button>
+                        </Button>
 
                         <div className="handPointerWrap">
                             <img src={handPict} className="handPointer" alt=""/>
@@ -579,9 +580,9 @@ html{ scroll-behavior: smooth; }
                         </p>
 
                         <div className="ctaButtons">
-                            <button onClick={startUsing} className="primaryBtn">
+                            <Button onClick={startUsing} className="primaryBtn">
                                 Try the practice
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>

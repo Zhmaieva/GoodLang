@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import { Button } from "../Buttons.jsx";
 
 export default function CookieConsentModal({
                                                theme,
@@ -70,7 +71,7 @@ export default function CookieConsentModal({
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         whiteSpace: "nowrap",
         opacity: 1,
         transform: primaryHover ? "translateY(1px)" : "none",
@@ -91,7 +92,7 @@ export default function CookieConsentModal({
         color: theme.text,
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         whiteSpace: "nowrap",
         opacity: 1,
         transform: secondaryHover ? "translateY(1px)" : "none",
@@ -157,25 +158,25 @@ export default function CookieConsentModal({
 
                 <div style={{ display: "flex", gap: 12 }}>
                     <div style={{ flex: 1 }}>
-                        <button
+                        <Button
                             onMouseEnter={() => setSecondaryHover(true)}
                             onMouseLeave={() => setSecondaryHover(false)}
                             onClick={onRejectHandler}
                             style={secondaryBtn}
                         >
                             Reject
-                        </button>
+                        </Button>
                     </div>
 
                     <div style={{ flex: 1 }}>
-                        <button
+                        <Button
                             onMouseEnter={() => setPrimaryHover(true)}
                             onMouseLeave={() => setPrimaryHover(false)}
                             onClick={onAcceptHandler}
                             style={primaryBtn}
                         >
                             Accept
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>

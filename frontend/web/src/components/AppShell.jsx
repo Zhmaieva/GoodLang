@@ -8,7 +8,7 @@ export default function AppShell({ children, theme, noPadding = false }) {
             justifyContent: "stretch",
             background: "#fffbf0",
             color: theme.text,
-            fontFamily: '"Source Serif 4", Georgia, serif',
+            fontFamily: 'var(--font-family-base)',
             overflowX: "hidden",
         },
 

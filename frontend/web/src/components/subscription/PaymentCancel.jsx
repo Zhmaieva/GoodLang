@@ -4,6 +4,7 @@ import {logoStyle} from "./LimitModal.jsx";
 import {legacyGlobalStyling} from "../../App.jsx";
 import {callAccountVerifyApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import { Button } from "../Buttons.jsx";
 
 export default function PaymentCancel() {
     const navigate = useNavigate();
@@ -40,7 +41,7 @@ export default function PaymentCancel() {
                 </p>
 
                 <div style={{display: "flex", justifyContent: "center"}}>
-                    <button style={{
+                    <Button style={{
                         background: legacyGlobalStyling.accent,
                         color: "white",
                         padding: "10px 20px",
@@ -53,7 +54,7 @@ export default function PaymentCancel() {
                         opacity: 1
                     }} onClick={() => navigate("/trainer")}>
                         Повернутися на головну
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>

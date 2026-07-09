@@ -4,6 +4,7 @@ import LoginModal from "./LoginModal.jsx";
 import {logoStyle} from "./LimitModal.jsx";
 import {fmtDate} from "../pages/analyticsLogic.js";
 import {marathonService} from "../../services/marathonService.js";
+import { Button } from "../Buttons.jsx";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock"; // ✅ adjust path if needed
 
 
@@ -52,7 +53,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
         fontSize: 14,
         lineHeight: 1,
         borderRadius: 999,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
 
         background: "#fffdf8",
         color: theme.text,
@@ -229,7 +230,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             justifyContent: "space-between"
                         }}>
                             {!marathonService.isInMarathon() && (status === "paid" || status === "attention") && !account?.isTrial && (
-                                <button
+                                <Button
                                     style={{
                                         background: theme.accent,
                                         boxShadow: `2px 2px 0 ${theme.accentDark}`,
@@ -246,10 +247,10 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                     onClick={onManage} // open stripe portal
                                 >
                                     Manage subscription
-                                </button>
+                                </Button>
                             )}
 
-                            <button onClick={() => {
+                            <Button onClick={() => {
                                 setLoginModalOpen(true)
                             }} style={marathonService.isInMarathon() ? {
                                 background: theme.accent,
@@ -265,7 +266,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 opacity: 1
                             } : closeBtnStyle}>
                                 Sign in to another account
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>

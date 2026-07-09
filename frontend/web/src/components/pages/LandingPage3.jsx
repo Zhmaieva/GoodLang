@@ -10,6 +10,7 @@ import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import React, {useEffect, useRef, useState} from "react";
 import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
+import { Button } from "../Buttons.jsx";
 
 export default function LandingPage3({theme}) {
     const navigate = useNavigate();
@@ -86,7 +87,7 @@ export default function LandingPage3({theme}) {
           width: 100%;
           min-height: 100%;
           overflow-y: auto;
-          font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+          font-family: var(--font-family-base);
         }
         
         html {
@@ -129,13 +130,13 @@ export default function LandingPage3({theme}) {
         }
 
         .title em {
-          font-family: Nunito, ui-sans-serif, system-ui;
+          font-family:var(--font-family-base);
           font-style: italic;
           font-weight: 200;
         }
         
         .ctaTitle em {
-          font-family: Nunito, ui-sans-serif, system-ui;
+          font-family:var(--font-family-base);
           font-style: italic;
           font-weight: 200;
         }
@@ -186,7 +187,7 @@ export default function LandingPage3({theme}) {
 
   font-size: 14px;
   font-weight: 500;              /* 👈 не такі жирні */
-  font-family: Nunito, ui-sans-serif, system-ui;
+  font-family:var(--font-family-base);
 
   color: #111;
   text-decoration: underline;
@@ -248,7 +249,7 @@ export default function LandingPage3({theme}) {
         .featureTitle {
           font-weight: 800;
           font-size: 18px;
-          font-family: Nunito;
+          font-family:var(--font-family-base);
         }
 
         .featureText {
@@ -257,7 +258,7 @@ export default function LandingPage3({theme}) {
           font-weight: 300;
           font-size: 15px;
           line-height: 1.3;
-          font-family: Nunito;
+          font-family:var(--font-family-base);
         }
 
         /* ---------- ORANGE BLOCK ---------- */
@@ -390,7 +391,7 @@ export default function LandingPage3({theme}) {
   border: 2px solid #000;
   border-radius: 14px;
   padding: 12px 20px;
-  font-family: Nunito, ui-sans-serif, system-ui;
+  font-family:var(--font-family-base);
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 3px 0 #000;
@@ -417,7 +418,7 @@ export default function LandingPage3({theme}) {
   border: 2px solid #000;
   border-radius: 14px;
   padding: 12px 20px;
-  font-family: Nunito, ui-sans-serif, system-ui;
+  font-family:var(--font-family-base);
   font-weight: 800;
   letter-spacing: 0.2px;
   cursor: pointer;
@@ -462,7 +463,7 @@ export default function LandingPage3({theme}) {
 
 .emailInput {
   padding: 12px 14px;
-  font-family: Nunito, ui-sans-serif, system-ui;
+  font-family:var(--font-family-base);
   font-weight: 800;
   border: 2px solid #000;
   border-radius: 14px;
@@ -533,7 +534,7 @@ export default function LandingPage3({theme}) {
   align-items: center;
   justify-content: space-between;
   font-size: 13px;
-  font-family: Nunito, ui-sans-serif, system-ui;
+  font-family:var(--font-family-base);
   color: #000;
 }
 
@@ -636,20 +637,20 @@ export default function LandingPage3({theme}) {
           place-items: center;
           font-weight: 800;
           font-size: 13px;
-          font-family: Nunito;
+          font-family:var(--font-family-base);
         }
 
         .tName {
           font-weight: 800;
           font-size: 14px;
-          font-family: Nunito;
+          font-family:var(--font-family-base);
         }
 
         .tQuote {
           margin: 0;
           font-size: 14px;
           line-height: 1.35;
-          font-family: Nunito;
+          font-family:var(--font-family-base);
           font-weight: 300;
         }
 
@@ -706,41 +707,41 @@ export default function LandingPage3({theme}) {
 
                 <div className="right">
                     <div className="topNav">
-                        <button
+                        <Button
                             className="topNavBtn"
                             onClick={() => {
                                 document.getElementById("approach")?.scrollIntoView({behavior: "smooth"});
                             }}
                         >
                             Our approach
-                        </button>
+                        </Button>
 
-                        <button
+                        <Button
                             className="topNavBtn"
                             onClick={() => {
                                 document.getElementById("testimonials")?.scrollIntoView({behavior: "smooth"});
                             }}
                         >
                             Testimonials
-                        </button>
+                        </Button>
 
-                        <button
+                        <Button
                             className="topNavBtn"
                             onClick={() => {
                                 document.getElementById("join")?.scrollIntoView({behavior: "smooth"});
                             }}
                         >
                             Join
-                        </button>
+                        </Button>
                     </div>
 
                     <div className="ctaWrap">
-                        <button
+                        <Button
                             onClick={startUsing}
                             className="cta"
                         >
                             Start now
-                        </button>
+                        </Button>
                         <img src={handPict} alt="" className="hand"/>
                     </div>
 
@@ -829,9 +830,9 @@ export default function LandingPage3({theme}) {
                         </h2>
 
                         <div className="ctaButtons">
-                            <button onClick={startUsing} className="primaryBtn">
+                            <Button onClick={startUsing} className="primaryBtn">
                                 Start learning now — no sign-up required
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import {useEffect, useRef, useState} from "react";
+import { Button } from "../Buttons.jsx";
 
 export default function TaskModeSwitch({
                                            theme,
@@ -16,7 +17,6 @@ export default function TaskModeSwitch({
                                            // ✅ NEW: visual lock for the switch (separate from "taskModeLocked")
                                            locked = false,
                                        }) {
-    const [hovered, setHovered] = useState(false);
     const [expanded, setExpanded] = useState(false);
 
     // tooltip (for locked)
@@ -114,38 +114,6 @@ export default function TaskModeSwitch({
         minWidth: 0,
     };
 
-    const btn = (selected, isHover) => {
-        const disabled = taskModeLocked || loading || locked;
-
-        return {
-            appearance: "none",
-            padding: compact ? "8px 14px" : "10px 16px",
-            fontWeight: 800,
-            fontSize: "1rem",
-            lineHeight: 1,
-            borderRadius: 999,
-
-            cursor: disabled ? "not-allowed" : "pointer",
-
-            // ✅ less saturated when locked
-            background: (selected || !expanded) ? theme.green : "#fffdf8",
-            color: (selected || !expanded) ? "#fff" : theme.text,
-            //opacity: disabled ? 0.55 : 1,
-            filter: disabled ? "saturate(0.5)" : isHover ? "brightness(0.95)" : "none",
-
-            border: "2px solid rgba(0,0,0,0.12)",
-            boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-            fontFamily: "Nunito, system-ui, sans-serif",
-            whiteSpace: "nowrap",
-            flex: "0 0 auto",
-
-            // keep your hover press effect only when enabled
-            transform: !disabled && isHover ? "translateY(1px)" : "none",
-            transition: "transform 120ms ease, filter 120ms ease, opacity 120ms ease",
-            position: "relative", // for tooltip anchor
-        };
-    };
-
     const note = {
         fontWeight: 800,
         fontSize: "0.9rem",
@@ -233,26 +201,32 @@ export default function TaskModeSwitch({
     return (
         <div style={wrap} role="group" aria-label="Task mode">
             {visibleOptions.map(({ value, label }) => (
-                <button
+                <Button
                     key={value}
-                    type="button"
+                    variant="segmented"
+                    compact={compact}
+                    theme={{ ...theme, accent: theme.green, accentDark: theme.greenDark }}
+                    active={taskMode === value || !expanded}
                     onMouseEnter={() => {
-                        setHovered(value);
                         if (locked && !compact) {
                             setTipOpen(true);
                             setTipVisible(true);
                         }
                     }}
                     onMouseLeave={() => {
-                        setHovered(false);
                         if (locked && !compact) {
                             setTipVisible(false);
                             setTipOpen(false);
                         }
                     }}
-
-
-                    style={btn(taskMode === value, hovered === value)}
+                    style={{
+                        fontFamily: 'var(--font-family-base)',
+                        whiteSpace: "nowrap",
+                        flex: "0 0 auto",
+                        position: "relative",
+                        filter: locked ? "saturate(0.5)" : undefined,
+                        cursor: locked ? "not-allowed" : undefined,
+                    }}
                     aria-pressed={taskMode === value}
                     disabled={taskModeLocked || loading}
                     onClick={(e) => {
@@ -271,7 +245,7 @@ export default function TaskModeSwitch({
                             {lockedTooltipText}
             </span>
                     )}
-                </button>
+                </Button>
             ))}
 
             {taskModeLocked && (

@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { markFailed, markSent, tryInsertTrackingRow } from "../massEmailService.js";
 import "dotenv/config";
+import {applyFontFamilyTemplate} from "../../../shared/fontFamily.js";
 
 /* ----------------------------- template helpers ---------------------------- */
 
@@ -37,7 +38,7 @@ async function pickLatestTouTemplate({ touDir }) {
     const templates = [];
     for (const file of files) {
         const full = path.join(touDir, file);
-        const html = await fs.readFile(full, "utf8");
+        const html = applyFontFamilyTemplate(await fs.readFile(full, "utf8"));
 
         const createdAtStr = parseMeta(html, "goodlang:created_at");
         const createdMs = createdAtStr ? Date.parse(createdAtStr) : 0;

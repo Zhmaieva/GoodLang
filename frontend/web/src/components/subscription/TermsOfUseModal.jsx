@@ -13,6 +13,7 @@ import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
 import {localizationService} from "../../localization/localizationService.js";
+import { Button } from "../Buttons.jsx";
 
 export default function TermsOfUseModal({
                                             ruleToDownload = null,
@@ -161,7 +162,7 @@ export default function TermsOfUseModal({
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         width: "100%",
         cursor: loading ? "not-allowed" : "pointer",
         opacity: loading ? 0.7 : 1,
@@ -181,7 +182,7 @@ export default function TermsOfUseModal({
         color: theme.text,
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         width: "100%",
         cursor: loading ? "not-allowed" : "pointer",
         opacity: loading ? 0.7 : 1,
@@ -421,7 +422,7 @@ export default function TermsOfUseModal({
 
                         <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 16}}>
                             {!readOnly && (
-                                <button
+                                <Button
                                     onMouseEnter={() => setBtnHover(true)}
                                     onMouseLeave={() => setBtnHover(false)}
                                     onClick={handleAgree}
@@ -429,10 +430,10 @@ export default function TermsOfUseModal({
                                     style={primaryBtn}
                                 >
                                     {loading ? "Confirming…" : "I agree"}
-                                </button>
+                                </Button>
                             )}
 
-                            <button
+                            <Button
                                 onMouseEnter={() => setSecondaryHover(true)}
                                 onMouseLeave={() => setSecondaryHover(false)}
                                 onClick={onClose}
@@ -440,7 +441,7 @@ export default function TermsOfUseModal({
                                 style={readOnly ? primaryBtn : secondaryBtn}
                             >
                                 {readOnly ? "OK" : "Decline"}
-                            </button>
+                            </Button>
 
                             {error && <div style={{color: "red", fontWeight: 700}}>{error}</div>}
                         </div>

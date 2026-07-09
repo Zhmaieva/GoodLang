@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import { Button } from "../Buttons.jsx";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -180,7 +181,7 @@ export default function MarathonCompletedModal({
                     </span>
                 </div>
 
-                <button
+                <Button
                     onMouseEnter={() => setBtnHover(true)}
                     onMouseLeave={() => setBtnHover(false)}
                     onClick={goToAnalytics}
@@ -195,7 +196,7 @@ export default function MarathonCompletedModal({
                         color: "#fff",
                         border: "2px solid rgba(0,0,0,0.12)",
                         boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-                        fontFamily: "Nunito, system-ui, sans-serif",
+                        fontFamily: 'var(--font-family-base)',
                         whiteSpace: "nowrap",
                         opacity: 1,
                         transform: btnHover ? "translateY(1px)" : "none",
@@ -206,7 +207,7 @@ export default function MarathonCompletedModal({
                     }}
                 >
                     Мій прогрес
-                </button>
+                </Button>
             </div>
         </div>
     );

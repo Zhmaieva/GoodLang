@@ -5,6 +5,7 @@ import {legacyGlobalStyling} from "../../App.jsx";
 import {setPaymentIntent} from "../../services/dataService.js";
 import {syncPrevAccountInfoToLS} from "../../services/marathonService.js";
 import {trackMetaEvent} from "../../services/gaService.js";
+import { Button } from "../Buttons.jsx";
 
 export default function PaymentSuccess() {
     const navigate = useNavigate();
@@ -70,7 +71,7 @@ export default function PaymentSuccess() {
         color: "#fff",
         border: "2px solid rgba(0,0,0,0.12)",
         boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         whiteSpace: "nowrap",
         width: "100%",
         cursor: "pointer",
@@ -149,14 +150,14 @@ export default function PaymentSuccess() {
                     gap: "12px",
                     justifyContent: "space-between"
                 }}>
-                    <button
+                    <Button
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
                         onClick={() => navigate("/trainer")}
                         style={buttonStyle}
                     >
                         {isMarathon ? "До марафону" : "Start training"}
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>

@@ -11,6 +11,7 @@ import { on, off } from "../../services/events.js";
 import InfoModal from "../modals/InfoModal.jsx";
 import { getSavedTrainingLevel } from "../../services/trainingDirector.js";
 import { marathonService } from "../../services/marathonService.js";
+import { Button } from "../Buttons.jsx";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -18,7 +19,6 @@ export default function HomePage({ theme }) {
 
     const [weakRules, setWeakRules] = useState([]);
     const [allRulesVisible, setAllRulesVisible] = useState(false);
-    const [hoveredRuleId, setHoveredRuleId] = useState(null);
 
     const [isMobile, setIsMobile] = useState(false);
     const [isInMarathonView, setIsInMarathonView] = useState(false);
@@ -27,9 +27,6 @@ export default function HomePage({ theme }) {
     const [infoOpen, setInfoOpen] = useState(false);
     const [infoTitle, setInfoTitle] = useState("Information");
     const [infoMessage, setInfoMessage] = useState("");
-
-    const [hoveredAnalytics, setHoveredAnalytics] = useState(false);
-    const [hoveredHeaderBtn, setHoveredHeaderBtn] = useState(null);
 
     const { ref: containerRef } = useBreakpoint(880);
 
@@ -51,20 +48,7 @@ export default function HomePage({ theme }) {
         margin: "10px 0 0",
     };
 
-    const weakRuleButtonStyle = (isHover, keepFullSize = false) => ({
-        appearance: "none",
-        padding: "10px 14px",
-        fontWeight: 800,
-        fontSize: "1rem",
-        lineHeight: 1,
-        borderRadius: 999,
-        cursor: "pointer",
-        background: theme.accent ?? "#4ba36e",
-        color: "#fff",
-        border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: '"Source Serif 4", Georgia, serif',
-
+    const weakRuleButtonLayoutStyle = (keepFullSize = false) => ({
         width: isMobile || (weakRules?.length || 0) <= 0 ? "100%" : "initial",
         maxWidth:
             isMobile || (weakRules?.length || 0) <= 0
@@ -76,10 +60,6 @@ export default function HomePage({ theme }) {
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
-
-        transform: isHover ? "translateY(1px)" : "none",
-        filter: isHover ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
     });
 
     const handleAnalyticsClick = async () => {
@@ -209,6 +189,8 @@ export default function HomePage({ theme }) {
 
     const SIDE_WALL_COLOR = "#40a6ff";
     const BUTTON_OFFSET = 5;
+    const SIDE_WALL_SECOND_LINE_GAP = 10;
+    const SIDE_WALL_LINE_WIDTH = 2;
 
     const pageShellStyle = {
         width: "100%",
@@ -221,14 +203,14 @@ export default function HomePage({ theme }) {
     };
 
     const leftWallStyle = {
-        borderRight: `3px solid ${SIDE_WALL_COLOR}`,
-        background: '#fffbf0',
+        borderRight: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
+        background: `linear-gradient(to left, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), #fffbf0`,
         minHeight: "100vh",
     };
 
     const rightWallStyle = {
-        borderLeft: `3px solid ${SIDE_WALL_COLOR}`,
-        background: '#fffbf0',
+        borderLeft: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
+        background: `linear-gradient(to right, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), #fffbf0`,
         minHeight: "100vh",
     };
 
@@ -263,83 +245,11 @@ export default function HomePage({ theme }) {
         flexWrap: "wrap",
     };
 
-    const headerBtnWrapStyle = {
-        position: "relative",
-        display: "inline-block",
-        isolation: "isolate",
-    };
-
-    const headerBtnBgStyle = (isHover) => ({
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        top: isHover ? 0 : BUTTON_OFFSET,
-        left: isHover ? 0 : BUTTON_OFFSET,
-        backgroundColor: SIDE_WALL_COLOR,
-        transition: "top 0.2s ease, left 0.2s ease",
-        zIndex: 0,
-        pointerEvents: "none",
-        borderRadius: 5,
-    });
-
-    const headerBtnStyle = {
-        position: "relative",
-        zIndex: 1,
-
-        minWidth: isMobile ? "92px" : "120px",
-        height: "40px",
-        padding: "8px 16px",
-
-        fontWeight: 600,
-        fontSize: isMobile ? "0.95rem" : "1rem",
-        letterSpacing: "0.3px",
-        fontFamily: '"Source Serif 4", Georgia, serif',
-
-        borderRadius: 5,
-        border: "1px solid #000",
-        backgroundColor: "transparent",
-        color: "#33302E",
-
-        cursor: "pointer",
-        userSelect: "none",
-        WebkitUserSelect: "none",
-        touchAction: "manipulation",
-
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-
-        transition: "color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease",
-    };
-
     const mainContentStyle = {
         flex: 1,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-    };
-
-    const renderHeaderButton = (id, label, onClick) => {
-        const isHover = hoveredHeaderBtn === id;
-
-        return (
-            <div
-                key={id}
-                style={headerBtnWrapStyle}
-                onMouseEnter={() => setHoveredHeaderBtn(id)}
-                onMouseLeave={() => setHoveredHeaderBtn(null)}
-            >
-                <div style={headerBtnBgStyle(isHover)} />
-
-                <button
-                    type="button"
-                    style={headerBtnStyle}
-                    onClick={onClick}
-                >
-                    {label}
-                </button>
-            </div>
-        );
     };
 
     return (
@@ -350,9 +260,36 @@ export default function HomePage({ theme }) {
                 <main style={pageContentStyle} ref={containerRef}>
                     <header style={headerStyle}>
                         <nav style={navStyle}>
-                            {renderHeaderButton("trainer", "Trainer", () => navigate("/trainer"))}
-                            {renderHeaderButton("progress", "Progress", () => navigate("/analytics"))}
-                            {renderHeaderButton("about", "About", () => navigate("/welcome"))}
+                            <Button
+                                variant="offset"
+                                compact
+                                isMobile={isMobile}
+                                shadowColor={SIDE_WALL_COLOR}
+                                shadowOffset={BUTTON_OFFSET}
+                                onClick={() => navigate("/trainer")}
+                            >
+                                Trainer
+                            </Button>
+                            <Button
+                                variant="offset"
+                                compact
+                                isMobile={isMobile}
+                                shadowColor={SIDE_WALL_COLOR}
+                                shadowOffset={BUTTON_OFFSET}
+                                onClick={() => navigate("/analytics")}
+                            >
+                                Progress
+                            </Button>
+                            <Button
+                                variant="offset"
+                                compact
+                                isMobile={isMobile}
+                                shadowColor={SIDE_WALL_COLOR}
+                                shadowOffset={BUTTON_OFFSET}
+                                onClick={() => navigate("/welcome")}
+                            >
+                                About
+                            </Button>
                         </nav>
                     </header>
 
@@ -368,39 +305,41 @@ export default function HomePage({ theme }) {
 
                     <div style={mainContentStyle}>
                         <section style={gridStyle}>
-                            {/*
                             {!isMobile && isMarathonLoaded && !isInMarathonView && (
                                 <div style={topRowStyle}>
                                     {!isMobile && allRulesVisible && (
-                                        <button
-                                            onMouseEnter={() => setHoveredAnalytics(true)}
-                                            onMouseLeave={() => setHoveredAnalytics(false)}
-                                            style={weakRuleButtonStyle(hoveredAnalytics, true)}
+                                        <Button
+                                            variant="offset"
+                                            compact
+                                            isMobile={isMobile}
+                                            shadowColor={SIDE_WALL_COLOR}
+                                            shadowOffset={BUTTON_OFFSET}
+                                            style={weakRuleButtonLayoutStyle(true)}
                                             onClick={handleAnalyticsClick}
                                         >
                                             {!isMobile ? "View all rules →" : "All rules"}
-                                        </button>
+                                        </Button>
                                     )}
 
                                     {!isMobile && weakRules.map((r) => {
-                                        const isHover = hoveredRuleId === r.id;
-
                                         return (
-                                            <button
+                                            <Button
                                                 key={r.id}
-                                                style={weakRuleButtonStyle(isHover)}
-                                                onMouseEnter={() => setHoveredRuleId(r.id)}
-                                                onMouseLeave={() => setHoveredRuleId(null)}
+                                                variant="offset"
+                                                compact
+                                                isMobile={isMobile}
+                                                shadowColor={SIDE_WALL_COLOR}
+                                                shadowOffset={BUTTON_OFFSET}
+                                                style={weakRuleButtonLayoutStyle()}
                                                 onClick={() => handleRuleClick(r.id)}
                                                 title={`Open rule: ${r.label}`}
                                             >
                                                 {r.label}
-                                            </button>
+                                            </Button>
                                         );
                                     })}
                                 </div>
                             )}
-                            */}
 
                             <Trainer
                                 freeTraining

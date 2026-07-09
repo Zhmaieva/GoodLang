@@ -4,6 +4,7 @@ import { ACTION_TYPES } from "../../utils/constants.js";
 import { on, off } from "../../services/events.js";
 import { getTrainingLevel } from "../../services/trainingDirector.js";
 import { getPendingTrainingTaskKeys } from "../../services/trainingTaskCache.js";
+import { Button } from "../Buttons.jsx";
 
 export default function LevelSwitch({
                                         level,
@@ -12,7 +13,6 @@ export default function LevelSwitch({
                                         theme,
                                         compact = false,
                                     }) {
-    const [hovered, setHovered] = useState(null);
     const [expanded, setExpanded] = useState(false);
 
     // tooltip (for calibration lock)
@@ -128,39 +128,6 @@ export default function LevelSwitch({
         minWidth: 0,
     };
 
-    const btn = (selected, isHover) => {
-        const disabled = loading || isCalibrationNow;
-
-        return {
-            appearance: "none",
-            display: "inline-flex",
-            alignItems: "center",
-            padding: "8px 14px",
-            fontWeight: 800,
-            fontSize: "1rem",
-            lineHeight: 1,
-            borderRadius: 999,
-
-            cursor: disabled ? "not-allowed" : "pointer",
-
-            background: selected ? theme.green : "#fffdf8",
-            color: selected ? "#fff" : theme.text,
-
-            // less saturated when calibration-locked
-            filter: disabled ? "saturate(0.5)" : isHover ? "brightness(0.95)" : "none",
-
-            border: "2px solid rgba(0,0,0,0.12)",
-            boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-            fontFamily: "Nunito, system-ui, sans-serif",
-            whiteSpace: "nowrap",
-            opacity: 1,
-
-            transform: !disabled && isHover ? "translateY(1px)" : "none",
-            transition: "transform 120ms ease, filter 120ms ease, opacity 120ms ease",
-            position: "relative",
-        };
-    };
-
     const options = [
         { value: "managed", label: "Adaptive", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADAPTIVE },
         { value: "beginner", label: "Beginner", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_BEGINNER },
@@ -269,24 +236,30 @@ export default function LevelSwitch({
     return (
         <div style={wrap} role="group" aria-label="Вибір рівня">
             {visibleOptions.map(({ value, label, actionType }) => (
-                <button
+                <Button
                     key={value}
-                    type="button"
+                    variant="segmented"
+                    theme={{ ...theme, accent: theme.green, accentDark: theme.greenDark }}
+                    active={level === value}
                     onMouseEnter={() => {
-                        setHovered(value);
                         if (isCalibrationNow && !compact) {
                             setTipOpen(true);
                             setTipVisible(true);
                         }
                     }}
                     onMouseLeave={() => {
-                        setHovered(null);
                         if (isCalibrationNow && !compact) {
                             setTipVisible(false);
                             setTipOpen(false);
                         }
                     }}
-                    style={btn(level === value, hovered === value)}
+                    style={{
+                        fontFamily: 'var(--font-family-base)',
+                        whiteSpace: "nowrap",
+                        position: "relative",
+                        filter: isCalibrationNow ? "saturate(0.5)" : undefined,
+                        cursor: isCalibrationNow ? "not-allowed" : undefined,
+                    }}
                     aria-pressed={level === value}
                     disabled={loading} // keep same semantics; calibration handled in handler + styling
                     onClick={(e) => {
@@ -307,7 +280,7 @@ export default function LevelSwitch({
                             {lockedTooltipText}
             </span>
                     )}
-                </button>
+                </Button>
             ))}
             <style>{`
                 @keyframes glLevelPending {

@@ -7,6 +7,7 @@ import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.j
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
+import { Button } from "../Buttons.jsx";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -338,7 +339,7 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
 
                         <div style={{display: "flex", flexDirection: "column", gap: 12}}>
 
-                            {true && <button
+                            {true && <Button
                                 onMouseEnter={() => setSignInHovered(true)}
                                 onMouseLeave={() => setSignInHovered(false)}
                                 onClick={async () => {
@@ -358,7 +359,7 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                                     color: "#fff",
                                     border: "2px solid rgba(0,0,0,0.12)",
                                     boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    fontFamily: 'var(--font-family-base)',
                                     whiteSpace: "nowrap",
                                     opacity: (loading) ? 0.7 : 1,
                                     transform: signInHovered ? "translateY(1px)" : "none",
@@ -369,7 +370,7 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                                 }}
                             >
                                 {"Увійти або зареєструватися"}
-                            </button>}
+                            </Button>}
                         </div>
 
                     </div>

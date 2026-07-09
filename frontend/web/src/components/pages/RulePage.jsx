@@ -20,6 +20,7 @@ import { getPdfDownloads, setPdfDownloads } from "../../services/dataService.js"
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {featureToggleService} from "../../services/featureToggleService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
+import { Button } from "../Buttons.jsx";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -169,7 +170,7 @@ export default function RulePage({ data, theme }) {
                 fontWeight: 900,
                 color: theme.text,
                 opacity: 0.9,
-                fontFamily: "Nunito, system-ui, sans-serif",
+                fontFamily: 'var(--font-family-base)',
             }}
         >
             {children}
@@ -180,7 +181,7 @@ export default function RulePage({ data, theme }) {
         fontSize: isMobile ? 14 : 15,
         lineHeight: 1.45,
         color: theme.text,
-        fontFamily: "Nunito, system-ui, sans-serif",
+        fontFamily: 'var(--font-family-base)',
         fontWeight: 700,
         opacity: 0.95,
     };
@@ -212,7 +213,7 @@ export default function RulePage({ data, theme }) {
                                     color: theme.muted,
                                     fontSize: isMobile ? 12 : 13,
                                     marginTop: 8,
-                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    fontFamily: 'var(--font-family-base)',
                                     fontWeight: 700,
                                     opacity: 0.9,
                                 }}
@@ -246,7 +247,7 @@ export default function RulePage({ data, theme }) {
                                     color: theme.muted,
                                     fontSize: isMobile ? 12 : 13,
                                     marginTop: 8,
-                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    fontFamily: 'var(--font-family-base)',
                                     fontWeight: 700,
                                     opacity: 0.9,
                                 }}
@@ -315,7 +316,7 @@ export default function RulePage({ data, theme }) {
                     subtitle={<>{data.title}</>}
                     right={
                         <>
-                            <button
+                            <Button
                                 style={{
                                     appearance: "none",
                                     padding: "10px 14px",
@@ -329,7 +330,7 @@ export default function RulePage({ data, theme }) {
                                     color: "#fff",
                                     border: "2px solid rgba(0,0,0,0.12)",
                                     boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    fontFamily: 'var(--font-family-base)',
                                     maxWidth: 280,
                                     whiteSpace: "nowrap",
                                     overflow: "hidden",
@@ -362,9 +363,9 @@ export default function RulePage({ data, theme }) {
 
                                     <div>{!isDownloading ? "Print tasks" : "Preparing document..."}</div>
                                 </div>
-                            </button>
+                            </Button>
 
-                            <button
+                            <Button
                                 style={{
                                     appearance: "none",
                                     padding: "10px 14px",
@@ -377,7 +378,7 @@ export default function RulePage({ data, theme }) {
                                     color: "#fff",
                                     border: "2px solid rgba(0,0,0,0.12)",
                                     boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                    fontFamily: "Nunito, system-ui, sans-serif",
+                                    fontFamily: 'var(--font-family-base)',
                                     maxWidth: 280,
                                     whiteSpace: "nowrap",
                                     overflow: "hidden",
@@ -387,7 +388,7 @@ export default function RulePage({ data, theme }) {
                                 onClick={handleAnalyticsClick}
                             >
                                 ← Back to rules
-                            </button>
+                            </Button>
                         </>
                     }
                 />

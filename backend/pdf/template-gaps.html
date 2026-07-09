@@ -167,21 +167,17 @@
         }
 
         /* fonts (embedded by server) */
-        @font-face {
-            font-family: "Nunito";
-            src: url("data:font/ttf;base64,{{NUNITO}}") format("ttf");
+        }") format("ttf");
             font-style: normal;
         }
-        @font-face {
-            font-family: "Nunito";
-            src: url("data:font/ttf;base64,{{NUNITO_ITALIC}}") format("ttf");
+        }") format("ttf");
             font-style: italic;
         }
 
         body{
             margin:0;
             background:#efefef;
-            font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-family: {{FONT_FAMILY}};
             color: var(--ink);
         }
         @media screen {

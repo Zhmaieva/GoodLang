@@ -7,6 +7,7 @@
 // - content constrained to the inner safe area and auto-shrunk to fit
 //
 // IMPORTANT (per request): do NOT add any “GoodLang — Вивчення правила” title.
+import {FONT_FAMILY_CSS} from "../../shared/fontFamily.js";
 
 function escapeAttr(s) {
     return String(s ?? "")
@@ -20,10 +21,6 @@ function escapeAttr(s) {
  * @param {object} rulePage - like RULE_PAGE_TO_BE
  * @param {object} opts
  * @param {object} [opts.theme] - optional theme override
- * @param {string} [opts.nunitoRegularB64] - base64 woff2
- * @param {string} [opts.nunitoBoldB64] - base64 woff2
- * @param {string} [opts.nunitoExtraBoldB64] - base64 woff2
- * @param {string} [opts.nunitoItalicB64] - base64 woff2 (optional)
  *
  * Watermark + logo (choose one approach):
  * @param {string} [opts.watermarkBase64] - base64 PNG (no prefix)
@@ -64,23 +61,6 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
         opts.watermarkSrc ??
         (opts.watermarkBase64 ? `data:image/png;base64,${opts.watermarkBase64}` : "");
     const logoSrc = watermarkSrc;
-
-    const fontFaces = [
-        opts.nunitoRegularB64
-            ? `@font-face{font-family:"Nunito";src:url("data:font/woff2;base64,${opts.nunitoRegularB64}") format("woff2");font-weight:400;font-style:normal;}`
-            : "",
-        opts.nunitoBoldB64
-            ? `@font-face{font-family:"Nunito";src:url("data:font/woff2;base64,${opts.nunitoBoldB64}") format("woff2");font-weight:700;font-style:normal;}`
-            : "",
-        opts.nunitoExtraBoldB64
-            ? `@font-face{font-family:"Nunito";src:url("data:font/woff2;base64,${opts.nunitoExtraBoldB64}") format("woff2");font-weight:800;font-style:normal;}`
-            : "",
-        opts.nunitoItalicB64
-            ? `@font-face{font-family:"Nunito";src:url("data:font/woff2;base64,${opts.nunitoItalicB64}") format("woff2");font-weight:400;font-style:italic;}`
-            : "",
-    ]
-        .filter(Boolean)
-        .join("\n");
 
     /** -------- Section rendering --------
      * IMPORTANT: use a "rich" container instead of forcing <p class="rp-text">
@@ -226,7 +206,7 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
     body{
       margin:0;
       background:#efefef;
-      font-family: ${opts.nunitoRegularB64 ? '"Nunito",' : ""} system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: ${FONT_FAMILY_CSS};
       color: var(--ink);
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -643,7 +623,6 @@ export function buildRuleIntroHtml(rulePage, opts = {}) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${escapeAttr(headerRuleName || rulePage.id || "Rule")}</title>
   <style>
-${fontFaces}
 ${css}
   </style>
 </head>

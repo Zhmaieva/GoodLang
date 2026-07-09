@@ -6,6 +6,7 @@ import "dotenv/config";
 
 import { markFailed, markSent, tryInsertTrackingRow } from "../massEmailService.js";
 import { calcPrices } from "../../database/repositories/accountsRepository.js";
+import {applyFontFamilyTemplate} from "../../../shared/fontFamily.js";
 
 // ✅ Stripe (adjust the path if your project differs)
 import { stripe, getLifetime10CouponId } from "../../integrations/stripeService.js";
@@ -87,7 +88,7 @@ async function pickLatestPromoTemplate({ promoDir }) {
     const templates = [];
     for (const file of files) {
         const full = path.join(promoDir, file);
-        const html = await fs.readFile(full, "utf8");
+        const html = applyFontFamilyTemplate(await fs.readFile(full, "utf8"));
 
         const createdAtStr = parseMeta(html, "goodlang:created_at");
         const createdMs = createdAtStr ? Date.parse(createdAtStr) : 0;

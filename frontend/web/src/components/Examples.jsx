@@ -13,14 +13,14 @@ export default function Examples({ items, theme }) {
     const en = {
         fontWeight: 800,
         color: theme.text,
-        fontFamily: '"Source Serif 4", Georgia, serif',
+        fontFamily: 'var(--font-family-base)',
     };
 
     const ua = {
         color: theme.muted,
         marginTop: 2,
         fontWeight: 700,
-        fontFamily: '"Source Serif 4", Georgia, serif',
+        fontFamily: 'var(--font-family-base)',
     };
 
     return (

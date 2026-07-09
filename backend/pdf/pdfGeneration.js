@@ -11,6 +11,7 @@ import * as RulePages from "../core/rulePages.js";
 import {shuffleBySeed} from "../core/сore.js";
 import {buildRuleIntroHtml} from "./buildRuleInfo.js";
 import {ALL_GAPS_SAMPLES} from "../core/allGapsSamples.js";
+import {applyFontFamilyTemplate} from "../../shared/fontFamily.js";
 
 export const CHOOSE_VARIANT_TASK_FORM = "choose_variant";
 export const TRANSLATIONS = "translations";
@@ -101,29 +102,7 @@ async function loadHtmlTemplate(fileName) {
 
     const watermarkBase64 = await getWatermarkBase64();
 
-    // ---- Nunito fonts (TTF, embedded as data URIs) ----
-    // We reuse the variable font file for weights 400/700/800.
-    const nunitoRegularTtf = await fs.readFile(
-        path.join(__dirname, "Nunito-VariableFont_wght.ttf"),
-        "base64"
-    );
-    const nunitoItalicTtf = await fs.readFile(
-        path.join(__dirname, "Nunito-Italic-VariableFont_wght.ttf"),
-        "base64"
-    );
-
-    // Your templates currently declare woff2 in @font-face.
-    // On the server we embed TTF, so adjust the mime + format.
-    html = html
-        .replaceAll("data:font/woff2;base64,", "data:font/ttf;base64,")
-        .replaceAll('format("woff2")', 'format("truetype")');
-
-    return html
-        .split("{{WATERMARK_BASE64}}").join(watermarkBase64)
-        .split("{{NUNITO_REGULAR}}").join(nunitoRegularTtf)
-        .split("{{NUNITO_BOLD}}").join(nunitoRegularTtf)
-        .split("{{NUNITO_EXTRABOLD}}").join(nunitoRegularTtf)
-        .split("{{NUNITO_ITALIC}}").join(nunitoItalicTtf);
+    return applyFontFamilyTemplate(html.split("{{WATERMARK_BASE64}}").join(watermarkBase64));
 }
 
 function escapeHtml(str) {

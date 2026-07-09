@@ -1,25 +1,279 @@
-import React from "react";
+import React, { useState } from "react";
 
-export function PrimaryButton({ theme, children, ...props }) {
-    const base = {
-        background: theme.accent,
-        color: "#fff",
-        border: "none",
+const FONT_FAMILY = 'var(--font-family-base)';
+const DEFAULT_ACCENT = "#40a6ff";
+const DEFAULT_ACCENT_DARK = "#2d7fca";
+const DEFAULT_TEXT = "#33302E";
+const DEFAULT_BG = "#fffbf0";
+const DEFAULT_BORDER = "#000";
+
+const mergeStyles = (...styles) => Object.assign({}, ...styles.filter(Boolean));
+
+const baseButtonStyle = {
+    appearance: "none",
+    border: "none",
+    fontFamily: FONT_FAMILY,
+    cursor: "pointer",
+    userSelect: "none",
+    WebkitUserSelect: "none",
+    touchAction: "manipulation",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    lineHeight: 1,
+    textDecoration: "none",
+    transition:
+        "transform 120ms ease, filter 120ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease",
+};
+
+function getThemeToken(theme, key, fallback) {
+    return theme?.[key] ?? fallback;
+}
+
+function getVariantStyle({
+    variant,
+    theme,
+    active,
+    hovered,
+    disabled,
+    fullWidth,
+    compact,
+    isMobile,
+}) {
+    const accent = getThemeToken(theme, "accent", DEFAULT_ACCENT);
+    const accentDark = getThemeToken(theme, "accentDark", DEFAULT_ACCENT_DARK);
+    const text = getThemeToken(theme, "text", DEFAULT_TEXT);
+
+    const disabledStyle = disabled
+        ? {
+              opacity: 0.62,
+              cursor: "default",
+              transform: "none",
+              filter: "none",
+          }
+        : null;
+
+    const sharedPill = {
         borderRadius: 999,
-        padding: "10px 16px",
         fontWeight: 800,
-        fontSize: "1rem",
-        fontFamily: '"Source Serif 4", Georgia, serif',
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
-        cursor: "pointer",
-        transition: "transform .1s, background .15s",
+        fontSize: compact ? "0.9rem" : "1rem",
+        padding: compact ? "8px 12px" : "10px 16px",
+        width: fullWidth ? "100%" : undefined,
     };
+
+    const styles = {
+        primary: {
+            ...sharedPill,
+            background: accent,
+            color: "#fff",
+            boxShadow: `2px 2px 0 ${accentDark}`,
+            transform: hovered && !disabled ? "translateY(1px)" : "none",
+            filter: hovered && !disabled ? "brightness(0.95)" : "none",
+        },
+        secondary: {
+            ...sharedPill,
+            background: DEFAULT_BG,
+            color: text,
+            border: "1px solid rgba(0,0,0,0.22)",
+            boxShadow: "2px 2px 0 rgba(0,0,0,0.16)",
+            transform: hovered && !disabled ? "translateY(1px)" : "none",
+            filter: hovered && !disabled ? "brightness(0.98)" : "none",
+        },
+        ghost: {
+            ...sharedPill,
+            background: "transparent",
+            color: text,
+            border: "1px solid rgba(0,0,0,0.18)",
+            transform: hovered && !disabled ? "translateY(1px)" : "none",
+            filter: hovered && !disabled ? "brightness(0.96)" : "none",
+        },
+        nav: {
+            borderRadius: 999,
+            padding: compact ? "7px 10px" : "8px 12px",
+            fontWeight: 800,
+            fontSize: compact ? "0.9rem" : "0.95rem",
+            background: "rgba(255,255,255,0.78)",
+            color: text,
+            border: "1px solid rgba(0,0,0,0.16)",
+            opacity: hovered && !disabled ? 0.86 : 1,
+        },
+        offset: {
+            position: "relative",
+            zIndex: 1,
+            width: fullWidth ? "100%" : undefined,
+            minWidth: isMobile ? "92px" : "120px",
+            height: compact ? "40px" : "48px",
+            padding: compact ? "8px 16px" : "13px 20px",
+            fontWeight: 600,
+            fontSize: compact ? (isMobile ? "0.95rem" : "1rem") : isMobile ? "0.95rem" : "1.2rem",
+            letterSpacing: compact ? "0.3px" : "0.5px",
+            borderRadius: 5,
+            border: `1px solid ${DEFAULT_BORDER}`,
+            backgroundColor: "transparent",
+            color: DEFAULT_TEXT,
+            cursor: disabled ? "default" : "pointer",
+            transition: "color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease",
+        },
+        choice: {
+            borderRadius: 999,
+            padding: "0 14px",
+            minWidth: 60,
+            height: compact ? 38 : 44,
+            fontWeight: 900,
+            fontSize: compact ? "0.95rem" : "1rem",
+            border: `2px solid ${active ? accent : "rgba(168,19,21,0.45)"}`,
+            background: active ? accent : "rgba(255,255,255,0.78)",
+            color: active ? "#fff" : text,
+            boxShadow: active
+                ? "0 10px 22px rgba(0,0,0,0.14)"
+                : "0 8px 18px rgba(0,0,0,0.10)",
+            transform: active ? "translateY(-1px)" : "none",
+        },
+        segmented: {
+            borderRadius: 999,
+            padding: compact ? "8px 10px" : "9px 12px",
+            fontWeight: 900,
+            fontSize: compact ? "0.86rem" : "0.95rem",
+            background: active ? accent : "rgba(255,255,255,0.78)",
+            color: active ? "#fff" : text,
+            border: `2px solid ${active ? accentDark : "rgba(0,0,0,0.12)"}`,
+            boxShadow: active ? `2px 2px 0 ${accentDark}` : "none",
+            transform: hovered && !disabled ? "translateY(1px)" : "none",
+        },
+        icon: {
+            width: compact ? 34 : 38,
+            height: compact ? 34 : 38,
+            padding: 0,
+            borderRadius: 999,
+            fontWeight: 900,
+            fontSize: compact ? "0.95rem" : "1rem",
+            background: active ? accent : "rgba(255,255,255,0.76)",
+            color: active ? "#fff" : text,
+            border: "1px solid rgba(0,0,0,0.16)",
+            boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
+            transform: hovered && !disabled ? "translateY(1px)" : "none",
+        },
+        plain: {
+            padding: 0,
+            background: "transparent",
+            color: "inherit",
+            border: "none",
+            font: "inherit",
+        },
+        unstyled: {},
+    };
+
+    return mergeStyles(styles[variant] ?? styles.primary, disabledStyle);
+}
+
+export function Button({
+    children,
+    theme,
+    variant = "unstyled",
+    active = false,
+    selected = false,
+    fullWidth = false,
+    compact = false,
+    isMobile = false,
+    type = "button",
+    disabled = false,
+    style,
+    wrapperStyle,
+    className,
+    shadowColor,
+    shadowOffset = 5,
+    onMouseEnter,
+    onMouseLeave,
+    ...props
+}) {
+    const [hovered, setHovered] = useState(false);
+    const isActive = active || selected;
+    const usesOffsetLayer = variant === "offset";
+    const accent = getThemeToken(theme, "accent", DEFAULT_ACCENT);
+    const computedShadowColor = shadowColor ?? accent;
+
+    const handleMouseEnter = (event) => {
+        if (!disabled) setHovered(true);
+        onMouseEnter?.(event);
+    };
+
+    const handleMouseLeave = (event) => {
+        setHovered(false);
+        onMouseLeave?.(event);
+    };
+
+    const buttonStyle =
+        variant === "unstyled"
+            ? style
+            : mergeStyles(
+                  baseButtonStyle,
+                  getVariantStyle({
+                      variant,
+                      theme,
+                      active: isActive,
+                      hovered,
+                      disabled,
+                      fullWidth,
+                      compact,
+                      isMobile,
+                  }),
+                  style
+              );
+
+    if (usesOffsetLayer) {
+        const offsetWrapperStyle = mergeStyles(
+            {
+                position: "relative",
+                display: fullWidth ? "block" : "inline-block",
+                width: fullWidth ? "100%" : undefined,
+                isolation: "isolate",
+            },
+            wrapperStyle
+        );
+
+        const offsetLayerStyle = {
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: hovered && !disabled ? 0 : shadowOffset,
+            left: hovered && !disabled ? 0 : shadowOffset,
+            backgroundColor: computedShadowColor,
+            transition: "top 0.2s ease, left 0.2s ease",
+            zIndex: 0,
+            pointerEvents: "none",
+            borderRadius: 5,
+        };
+
+        return (
+            <div
+                style={offsetWrapperStyle}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <div style={offsetLayerStyle} />
+                <button
+                    type={type}
+                    disabled={disabled}
+                    className={className}
+                    style={buttonStyle}
+                    {...props}
+                >
+                    {children}
+                </button>
+            </div>
+        );
+    }
+
     return (
         <button
+            type={type}
+            disabled={disabled}
+            className={className}
+            style={buttonStyle}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             {...props}
-            style={base}
-            //onMouseOver={(e) => (e.currentTarget.style.background = theme.accentDark)}
-            //onMouseOut={(e) => (e.currentTarget.style.background = theme.accent)}
         >
             {children}
         </button>
