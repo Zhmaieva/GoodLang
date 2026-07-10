@@ -123,7 +123,7 @@ export default function TaskCard({
     const SOFT_INNER = theme?.bg ?? APP_BACKGROUND_COLOR;
     const SOFT_STROKE_ACCENT = "rgba(168,19,21,0.45)";
 
-    const BUTTON_OFFSET = 5;
+    const BUTTON_OFFSET = 4;
 
     const styles = {
         card: {

@@ -13,7 +13,7 @@ export default function ResultCard({
     // ----- same “TaskCard” styling tokens -----
     const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
     const CARD_BORDER_IDLE = "#40a6ff";
-    const CARD_SHADOW_IDLE = "0 10px 26px rgba(0,0,0,0.12)";
+    const CARD_SHADOW_IDLE = "none";
     const SOFT_INNER = theme?.bg ?? APP_BACKGROUND_COLOR;
     const SOFT_RED = "rgba(255, 230, 228, 0.92)";
     const SOFT_GREEN = "rgba(232, 247, 238, 0.92)";

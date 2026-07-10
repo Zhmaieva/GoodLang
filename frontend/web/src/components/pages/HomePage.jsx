@@ -45,7 +45,7 @@ export default function HomePage({ theme }) {
         gap: 10,
         alignItems: "center",
         flexWrap: "wrap",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         margin: "10px 0 0",
     };
 
@@ -188,42 +188,34 @@ export default function HomePage({ theme }) {
         setIsMarathonLoaded(true);
     };
 
-    const SIDE_WALL_COLOR = "#40a6ff";
-    const BUTTON_OFFSET = 5;
-    const SIDE_WALL_SECOND_LINE_GAP = 10;
-    const SIDE_WALL_LINE_WIDTH = 1;
+    const FRAME_COLOR = "#40a6ff";
+    const BUTTON_OFFSET = 4;
 
     const pageShellStyle = {
         width: "100%",
         minHeight: "100vh",
-        display: "grid",
-        gridTemplateColumns: isMobile
-            ? "12px minmax(0, 1fr) 12px"
-            : "minmax(96px, 1fr) minmax(0, 980px) minmax(96px, 1fr)",
-        columnGap: isMobile ? 12 : 36,
-    };
-
-    const leftWallStyle = {
-        borderRight: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
-        background: `linear-gradient(to left, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
-        minHeight: "100vh",
-    };
-
-    const rightWallStyle = {
-        borderLeft: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
-        background: `linear-gradient(to right, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
-        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: isMobile ? "16px 12px" : "48px 24px",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
     const pageContentStyle = {
         minWidth: 0,
         width: "100%",
-        minHeight: "100vh",
+        maxWidth: 1100,
+        minHeight: "auto",
 
         display: "flex",
         flexDirection: "column",
 
-        padding: isMobile ? "24px 0 40px" : "25px 0 0px",
+        padding: isMobile ? "24px 16px 32px" : "40px 40px 40px",
+        border: `2px solid ${FRAME_COLOR}`,
+        borderRadius: 12,
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        boxShadow: "0 18px 45px rgba(0,0,0,0.10)",
+        boxSizing: "border-box",
     };
 
     const headerStyle = {
@@ -247,25 +239,23 @@ export default function HomePage({ theme }) {
     };
 
     const mainContentStyle = {
-        flex: 1,
+        flex: "0 0 auto",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "flex-start",
     };
 
     return (
         <AppShell theme={theme} noPadding>
             <div style={pageShellStyle}>
-                <div style={leftWallStyle} aria-hidden="true" />
-
                 <main style={pageContentStyle} ref={containerRef}>
                     <header style={headerStyle}>
-                        <nav style={navStyle}>
+                        {/*<nav style={navStyle}>
                             <Button
                                 variant="offset"
                                 compact
                                 isMobile={isMobile}
-                                shadowColor={SIDE_WALL_COLOR}
+                                shadowColor={FRAME_COLOR}
                                 shadowOffset={BUTTON_OFFSET}
                                 onClick={() => navigate("/trainer")}
                             >
@@ -275,7 +265,7 @@ export default function HomePage({ theme }) {
                                 variant="offset"
                                 compact
                                 isMobile={isMobile}
-                                shadowColor={SIDE_WALL_COLOR}
+                                shadowColor={FRAME_COLOR}
                                 shadowOffset={BUTTON_OFFSET}
                                 onClick={() => navigate("/analytics")}
                             >
@@ -285,13 +275,13 @@ export default function HomePage({ theme }) {
                                 variant="offset"
                                 compact
                                 isMobile={isMobile}
-                                shadowColor={SIDE_WALL_COLOR}
+                                shadowColor={FRAME_COLOR}
                                 shadowOffset={BUTTON_OFFSET}
                                 onClick={() => navigate("/welcome")}
                             >
                                 About
                             </Button>
-                        </nav>
+                        </nav>*/}
                     </header>
 
                     {infoOpen && (
@@ -313,7 +303,7 @@ export default function HomePage({ theme }) {
                                             variant="offset"
                                             compact
                                             isMobile={isMobile}
-                                            shadowColor={SIDE_WALL_COLOR}
+                                            shadowColor={FRAME_COLOR}
                                             shadowOffset={BUTTON_OFFSET}
                                             style={weakRuleButtonLayoutStyle(true)}
                                             onClick={handleAnalyticsClick}
@@ -329,7 +319,7 @@ export default function HomePage({ theme }) {
                                                 variant="offset"
                                                 compact
                                                 isMobile={isMobile}
-                                                shadowColor={SIDE_WALL_COLOR}
+                                                shadowColor={FRAME_COLOR}
                                                 shadowOffset={BUTTON_OFFSET}
                                                 style={weakRuleButtonLayoutStyle()}
                                                 onClick={() => handleRuleClick(r.id)}
@@ -353,8 +343,6 @@ export default function HomePage({ theme }) {
                         <FooterBar theme={theme} />
                     </div>
                 </main>
-
-                <div style={rightWallStyle} aria-hidden="true" />
             </div>
         </AppShell>
     );
