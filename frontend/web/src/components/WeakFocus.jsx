@@ -3,6 +3,7 @@ import Trainer from "./training/Trainer.jsx";
 import React, { useEffect, useState } from "react";
 import { getAllStatistics } from "../services/dataService.js";
 import { Button } from "./Buttons.jsx";
+import { APP_BACKGROUND_COLOR } from "../theme.js";
 
 export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrainingComplete = (_) => {} }) {
     const navigate = useNavigate();
@@ -40,15 +41,15 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
     }, [rows]);
 
     // ----- shared visual tokens (NON-header AccuracyKpi / TaskCard vibe) -----
-    const CARD_BG = "#fffbf0";
-    const CARD_BORDER = "#40a6ff";
-    const CARD_SHADOW = "0 8px 20px rgba(0,0,0,0.08)";
+    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
+    const CARD_BORDER = "#000";
+    const CARD_SHADOW = "none";
 
-    const SOFT_INNER = "#fffbf0";
+    const SOFT_INNER = theme?.bg ?? APP_BACKGROUND_COLOR;
 
     const cardStyle = {
         background: CARD_BG,
-        border: `2px solid ${CARD_BORDER}`,
+        border: `1px solid ${CARD_BORDER}`,
         borderRadius: 5,
         boxShadow: CARD_SHADOW,
         padding: 18,
@@ -78,7 +79,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
         border: "none",
         borderRadius: 5,
         padding: "4px 10px",
-        boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+        boxShadow: "none",
         opacity: 0.95,
         whiteSpace: "nowrap",
     };
@@ -96,7 +97,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
         marginTop: 10,
         height: 8,
         borderRadius: 5,
-        background: "#C18A3D",
+        background: "#000",
         border: "none",
         position: "relative",
         overflow: "hidden",
@@ -159,7 +160,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                             variant="offset"
                             compact
                             shadowColor="#40a6ff"
-                            shadowOffset={5}
+                            shadowOffset={0}
                             onClick={() => {
                                 const url = `/rule/${rule.rule}`;
                                 window.open(url, "_blank", "noopener,noreferrer");

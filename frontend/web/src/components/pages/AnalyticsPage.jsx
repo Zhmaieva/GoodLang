@@ -16,11 +16,12 @@ import RulesTable from "../training/RulesTable.jsx";
 import WeakFocus from "../WeakFocus";
 import FooterBar from "../FooterBar";
 import {useNavigate} from "react-router-dom";
-import {getAllStatistics, getOverallAccuracy, inferUserLevel} from "../../services/dataService.js";
+import {getAllStatistics, getOverallAccuracy} from "../../services/dataService.js";
 import AppShell from "../AppShell.jsx";
 import BrandHeader from "../BrandHeader.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
 import { Button } from "../Buttons.jsx";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function AnalyticsPage({theme}) {
     // ----- State (mirrors your script) -----
@@ -130,75 +131,115 @@ export default function AnalyticsPage({theme}) {
     const navigate = useNavigate();
     const handlePracticeClick = () => navigate('/');
 
+    const SIDE_WALL_COLOR = "#40a6ff";
+    const SIDE_WALL_SECOND_LINE_GAP = 10;
+    const SIDE_WALL_LINE_WIDTH = 2;
+
+    const pageShellStyle = {
+        width: "100%",
+        minHeight: "100vh",
+        display: "grid",
+        gridTemplateColumns: isMobile
+            ? "12px minmax(0, 1fr) 12px"
+            : "minmax(96px, 1fr) minmax(0, 980px) minmax(96px, 1fr)",
+        columnGap: isMobile ? 12 : 36,
+    };
+
+    const leftWallStyle = {
+        borderRight: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
+        background: `linear-gradient(to left, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
+        minHeight: "100vh",
+    };
+
+    const rightWallStyle = {
+        borderLeft: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
+        background: `linear-gradient(to right, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
+        minHeight: "100vh",
+    };
+
+    const pageContentStyle = {
+        minWidth: 0,
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        padding: isMobile ? "24px 0 40px" : "25px 0 0px",
+    };
+
     return (
-        <AppShell theme={theme}>
-            <div style={{height: "100vh"}}>
-                <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Progress overview and list of rules"}  onExport={onExportJSON}
-                             right={
-                                 <Button
-                                     variant="offset"
-                                     compact
-                                     shadowColor="#40a6ff"
-                                     shadowOffset={5}
-                                     style={{
-                                         maxWidth: 180,
-                                         whiteSpace: "nowrap",
-                                         overflow: "hidden",
-                                         textOverflow: "ellipsis",
-                                     }}
-                                     onClick={handlePracticeClick}
-                                 >
-                                     ← Go to practice
-                                 </Button>
-                             }
-                />
-                {
-                    (!isMobile || !isTeacher || hasData) &&
-                    <KPIGrid
-                        theme={theme}
-                        attempts={kpis.totalAttempts}
-                        masteredRules={kpis.mastered}
-                    />
-                }
+        <AppShell theme={theme} noPadding>
+            <div style={pageShellStyle}>
+                <div style={leftWallStyle} aria-hidden="true" />
 
-                <FiltersBar
-                    advanced={(!isMobile || !isTeacher || hasData)}
-                    filterLevel={filterLevel}
-                    onLevelChange={setFilterLevel}
-                    query={query}
-                    onQueryChange={setQuery}
-                    showWeakOnly={showWeakOnly}
-                    onToggleWeak={() => setShowWeakOnly(v => !v)}
-                    theme={theme}
-                />
-                <div style={{height: '50%'}}>
-                    <RulesTable
+                <main style={pageContentStyle}>
+                    <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Progress overview and list of rules"}  onExport={onExportJSON}
+                                 right={
+                                     <Button
+                                         variant="offset"
+                                         compact
+                                         shadowColor={SIDE_WALL_COLOR}
+                                         shadowOffset={0}
+                                         style={{
+                                             maxWidth: 180,
+                                             whiteSpace: "nowrap",
+                                             overflow: "hidden",
+                                             textOverflow: "ellipsis",
+                                         }}
+                                         onClick={handlePracticeClick}
+                                     >
+                                         ← Go to practice
+                                     </Button>
+                                 }
+                    />
+                    {
+                        (!isMobile || !isTeacher || hasData) &&
+                        <KPIGrid
+                            theme={theme}
+                            attempts={kpis.totalAttempts}
+                            masteredRules={kpis.mastered}
+                        />
+                    }
+
+                    <FiltersBar
                         advanced={(!isMobile || !isTeacher || hasData)}
-                        account={account}
+                        filterLevel={filterLevel}
+                        onLevelChange={setFilterLevel}
+                        query={query}
+                        onQueryChange={setQuery}
+                        showWeakOnly={showWeakOnly}
+                        onToggleWeak={() => setShowWeakOnly(v => !v)}
                         theme={theme}
-                        rows={tableRows}
-                        pct={pct}
-                        statusOf={statusOf}
-                        fmtDate={fmtDate}
-                        onRowClick={(rule) => {
-                            const url = `/rule/${rule.rule}`;
-                            window.open(url, "_blank", "noopener,noreferrer");
-                        }}
                     />
-                </div>
+                    <div style={{ marginBottom: 25 }}>
+                        <RulesTable
+                            advanced={(!isMobile || !isTeacher || hasData)}
+                            account={account}
+                            theme={theme}
+                            rows={tableRows}
+                            pct={pct}
+                            statusOf={statusOf}
+                            fmtDate={fmtDate}
+                            onRowClick={(rule) => {
+                                const url = `/rule/${rule.rule}`;
+                                window.open(url, "_blank", "noopener,noreferrer");
+                            }}
+                        />
+                    </div>
 
-                <WeakFocus rows={filteredRules} pct={pct} statusOf={statusOf} fmtDate={fmtDate} theme={theme}
-                           onTrainingComplete={(statistics) => setRules(statistics)}
-                />
-                {/*<QueueSection*/}
-                {/*    queue={queue}*/}
-                {/*    onGenerate={onGenerateQueue}*/}
-                {/*    onStartPractice={onStartPractice}*/}
-                {/*    fmtDateEnShort={fmtDateEnShort}*/}
-                {/*/>*/}
-                <FooterBar theme={theme}/>
+                    {/*<WeakFocus rows={filteredRules} pct={pct} statusOf={statusOf} fmtDate={fmtDate} theme={theme}
+                               onTrainingComplete={(statistics) => setRules(statistics)}
+                    />
+                    <QueueSection*/}
+                    {/*    queue={queue}*/}
+                    {/*    onGenerate={onGenerateQueue}*/}
+                    {/*    onStartPractice={onStartPractice}*/}
+                    {/*    fmtDateEnShort={fmtDateEnShort}*/}
+                    {/*/>
+                    <FooterBar theme={theme}/>*/}
+                </main>
+
+                <div style={rightWallStyle} aria-hidden="true" />
             </div>
-
         </AppShell>
     );
 }

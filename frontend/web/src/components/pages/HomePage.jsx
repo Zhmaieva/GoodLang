@@ -12,6 +12,7 @@ import InfoModal from "../modals/InfoModal.jsx";
 import { getSavedTrainingLevel } from "../../services/trainingDirector.js";
 import { marathonService } from "../../services/marathonService.js";
 import { Button } from "../Buttons.jsx";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -190,7 +191,7 @@ export default function HomePage({ theme }) {
     const SIDE_WALL_COLOR = "#40a6ff";
     const BUTTON_OFFSET = 5;
     const SIDE_WALL_SECOND_LINE_GAP = 10;
-    const SIDE_WALL_LINE_WIDTH = 2;
+    const SIDE_WALL_LINE_WIDTH = 1;
 
     const pageShellStyle = {
         width: "100%",
@@ -204,13 +205,13 @@ export default function HomePage({ theme }) {
 
     const leftWallStyle = {
         borderRight: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
-        background: `linear-gradient(to left, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), #fffbf0`,
+        background: `linear-gradient(to left, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
         minHeight: "100vh",
     };
 
     const rightWallStyle = {
         borderLeft: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
-        background: `linear-gradient(to right, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), #fffbf0`,
+        background: `linear-gradient(to right, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
         minHeight: "100vh",
     };
 

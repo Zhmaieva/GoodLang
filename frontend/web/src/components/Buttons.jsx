@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { APP_BACKGROUND_COLOR } from "../theme.js";
 
 const FONT_FAMILY = 'var(--font-family-base)';
 const DEFAULT_ACCENT = "#40a6ff";
 const DEFAULT_ACCENT_DARK = "#2d7fca";
 const DEFAULT_TEXT = "#33302E";
-const DEFAULT_BG = "#fffbf0";
+const DEFAULT_BG = APP_BACKGROUND_COLOR;
 const DEFAULT_BORDER = "#000";
 
 const mergeStyles = (...styles) => Object.assign({}, ...styles.filter(Boolean));

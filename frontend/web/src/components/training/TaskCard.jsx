@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import TaskModeSwitch from "./TaskModeSwitch.jsx";
 import { marathonService } from "../../services/marathonService.js";
 import { Button } from "../Buttons.jsx";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function TaskCard({
                                      theme,
@@ -116,10 +117,10 @@ export default function TaskCard({
     }, []);
 
     // ----- styling tokens -----
-    const CARD_BG = "#fffbf0";
+    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
     const ACCENT_RED = "#40a6ff";
     const TEXT_DARK = theme.text;
-    const SOFT_INNER = "#fffbf0";
+    const SOFT_INNER = theme?.bg ?? APP_BACKGROUND_COLOR;
     const SOFT_STROKE_ACCENT = "rgba(168,19,21,0.45)";
 
     const BUTTON_OFFSET = 5;

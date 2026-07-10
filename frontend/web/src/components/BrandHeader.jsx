@@ -1,4 +1,5 @@
 import React from "react";
+import { APP_BACKGROUND_COLOR } from "../theme.js";
 
 import "./pages/analytics.css";
 
@@ -34,7 +35,7 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        color: "#fff",
+        color: theme?.bg ?? APP_BACKGROUND_COLOR,
         fontWeight: 800,
         fontSize: size * 0.45,
         fontFamily: 'var(--font-family-base)',
@@ -52,17 +53,17 @@ export default function BrandHeader({ theme, title, subtitle, right }) {
         color: theme.accentDark,
         fontSize: "2rem",
         fontWeight: 900,
-        lineHeight: 1.2,
+        lineHeight: 1.5,
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
     };
 
     const sub = {
-        color: theme.muted,
+        color: "#000",
         fontSize: "1rem",
         overflow: "hidden",
-        fontWeight: 700,
+        fontWeight: 500,
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
     };

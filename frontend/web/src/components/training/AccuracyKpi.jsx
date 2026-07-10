@@ -8,6 +8,7 @@ import {
 import { off, on } from "../../services/events.js";
 import { useNavigate } from "react-router-dom";
 import { LEVEL_MAP } from "./LevelKpi.jsx";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 
 // ✅ marathon
 import { marathonService, readAccountInfoFromLS } from "../../services/marathonService.js";
@@ -168,7 +169,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             gap: 10,
             padding: isMobile ? "12px 12px" : "12px 14px",
             borderRadius: 5,
-            background: "#fffbf0",
+            background: theme?.bg ?? APP_BACKGROUND_COLOR,
             border: "2px solid #40a6ff",
             boxShadow: hover ? "0 14px 34px rgba(0,0,0,0.14)" : "0 10px 26px rgba(0,0,0,0.12)",
             cursor: "pointer",
@@ -629,10 +630,10 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const cardStyle = {
         visibility: isLoading ? "hidden" : "visible",
-        background: "#fffbf0",
-        border: "2px solid #40a6ff",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        border: "1px solid #000",
         borderRadius: 5,
-        boxShadow: "0 10px 26px rgba(0,0,0,0.12)",
+        boxShadow: "none",
         padding: isMobile ? "12px" : "18px",
         display: "flex",
         flexDirection: "column",
@@ -646,7 +647,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     const sparkStyle = {
         height: isMobile ? "6px" : "8px",
         borderRadius: 5,
-        background: "#C18A3D",
+        background: "#000",
         border: "none",
         marginTop: "6px",
         position: "relative",

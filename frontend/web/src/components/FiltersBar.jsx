@@ -8,6 +8,8 @@ const LEVELS = [
     { id: "advanced", label: "Advanced" },
 ];
 
+const SELECTED_BUTTON_COLOR = "#000";
+
 export default function FiltersBar({
                                        filterLevel,
                                        onLevelChange,
@@ -65,14 +67,14 @@ export default function FiltersBar({
                                 key={lvl.id}
                                 variant="offset"
                                 compact
-                                shadowColor={selected ? t.green : "#40a6ff"}
-                                shadowOffset={5}
+                                shadowColor={selected ? SELECTED_BUTTON_COLOR : "#40a6ff"}
+                                shadowOffset={0}
                                 aria-pressed={selected}
                                 onClick={() => onLevelChange(lvl.id)}
                                 style={{
-                                    backgroundColor: selected ? t.green : "transparent",
+                                    backgroundColor: selected ? SELECTED_BUTTON_COLOR : "transparent",
                                     color: selected ? "#fff" : "#000",
-                                    borderColor: selected ? t.greenDark : "#000",
+                                    borderColor: SELECTED_BUTTON_COLOR,
 
                                     // keep your truncation behavior
                                     flexShrink: 1,
@@ -104,13 +106,13 @@ export default function FiltersBar({
                 <Button
                     variant="offset"
                     compact
-                    shadowColor={showWeakOnly ? t.green : "#40a6ff"}
-                    shadowOffset={5}
+                    shadowColor={showWeakOnly ? SELECTED_BUTTON_COLOR : "#40a6ff"}
+                    shadowOffset={0}
                     onClick={onToggleWeak}
                     style={{
-                        backgroundColor: showWeakOnly ? t.green : "transparent",
+                        backgroundColor: showWeakOnly ? SELECTED_BUTTON_COLOR : "transparent",
                         color: showWeakOnly ? "#fff" : "#000",
-                        borderColor: showWeakOnly ? t.greenDark : "#000",
+                        borderColor: SELECTED_BUTTON_COLOR,
                     }}
                 >
                     {showWeakOnly ? "Show all" : "Weak only"}

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { getOverallAccuracy, inferUserLevel } from "../../services/dataService.js";
 import { off, on } from "../../services/events.js";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export const LEVEL_MAP = {
     A1: { label: "Beginner", percent: 33 },
@@ -50,14 +51,14 @@ export default function LevelKpi({ mobile, theme }) {
     }, []);
 
     // ✅ NON-header AccuracyKpi-like card styling tokens
-    const CARD_BG = "#fffbf0";
-    const CARD_BORDER = "#40a6ff";
-    const CARD_SHADOW = "0 10px 26px rgba(0,0,0,0.12)";
+    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
+    const CARD_BORDER = "#000";
+    const CARD_SHADOW = "none";
 
     const cardStyle = {
         // keep layout the same; only style language changes
         background: CARD_BG,
-        border: `2px solid ${CARD_BORDER}`,
+        border: `1px solid ${CARD_BORDER}`,
         borderRadius: 5,
         boxShadow: CARD_SHADOW,
         padding: isMobile ? "12px" : "18px",
@@ -90,7 +91,7 @@ export default function LevelKpi({ mobile, theme }) {
     const sparkStyle = {
         height: isMobile ? "6px" : "8px",
         borderRadius: 5,
-        background: "#C18A3D",
+        background: "#000",
         border: "none",
         marginTop: "6px",
         position: "relative",

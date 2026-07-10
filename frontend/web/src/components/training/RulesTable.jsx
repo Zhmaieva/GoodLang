@@ -4,6 +4,7 @@ import {dowloadPdf} from "../../services/api.js";
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 import {featureToggleService} from "../../services/featureToggleService.js";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function RulesTable({
                                        account,
@@ -220,7 +221,7 @@ export default function RulesTable({
     const row = (isHover) => ({
         cursor: "pointer",
         userSelect: "none",
-        background: isHover ? "#f3efe3" : "#fffbf0",
+        background: isHover ? "#f3efe3" : theme?.bg ?? APP_BACKGROUND_COLOR,
         filter: isHover ? "brightness(0.95)" : "none",
         transition: "transform 120ms ease, filter 120ms ease",
     });
@@ -302,10 +303,10 @@ export default function RulesTable({
     return (
         <div className="table" style={{
             height: "100%",
-            background: "#fffbf0",
-            border: "2px solid #40a6ff",
+            background: theme?.bg ?? APP_BACKGROUND_COLOR,
+            border: "1px solid #000",
             borderRadius: 5,
-            boxShadow: "0 10px 26px rgba(0,0,0,0.12)",    // same as KPI / TaskCard
+            boxShadow: "none",
             overflow: "hidden",                           // clips header corners cleanly
             fontFamily: 'var(--font-family-base)',
             color: "#000",

@@ -1,3 +1,5 @@
+import { APP_BACKGROUND_COLOR } from "../theme.js";
+
 export default function AppShell({ children, theme, noPadding = false }) {
     const styles = {
         app: {
@@ -6,7 +8,7 @@ export default function AppShell({ children, theme, noPadding = false }) {
             display: "flex",
             alignItems: "stretch",
             justifyContent: "stretch",
-            background: "#fffbf0",
+            background: theme?.bg ?? APP_BACKGROUND_COLOR,
             color: theme.text,
             fontFamily: 'var(--font-family-base)',
             overflowX: "hidden",
@@ -30,7 +32,7 @@ export default function AppShell({ children, theme, noPadding = false }) {
                     width: 100%;
                     min-height: 100%;
                     overflow-x: hidden;
-                    background: "#fffbf0";
+                    background: var(--bg);
                 }
 
                 *, *::before, *::after {

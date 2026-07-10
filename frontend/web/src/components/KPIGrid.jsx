@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import AccuracyKpi from "./training/AccuracyKpi.jsx";
 import LevelKpi from "./training/LevelKpi.jsx";
+import { APP_BACKGROUND_COLOR } from "../theme.js";
 
 export default function KPIGrid({ theme, attempts, masteredRules }) {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 915);
@@ -23,13 +24,13 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
     };
 
     // ✅ NON-header AccuracyKpi-like card styling tokens
-    const CARD_BG = "#fffbf0";
-    const CARD_BORDER = "#40a6ff";
-    const CARD_SHADOW = "0 10px 26px rgba(0,0,0,0.12)";
+    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
+    const CARD_BORDER = "#000";
+    const CARD_SHADOW = "none";
 
     const cardStyle = {
         background: CARD_BG,
-        border: `2px solid ${CARD_BORDER}`,
+        border: `1px solid ${CARD_BORDER}`,
         borderRadius: 5,
         boxShadow: CARD_SHADOW,
         padding: isMobile ? "12px" : "18px",
@@ -61,7 +62,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
     const sparkStyle = {
         height: isMobile ? "6px" : "8px",
         borderRadius: 5,
-        background: "#C18A3D",
+        background: "#000",
         border: "none",
         marginTop: "6px",
         position: "relative",
