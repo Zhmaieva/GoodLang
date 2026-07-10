@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Note({ theme, children }) {
     const style = {
-        background: "#fff7ea",
+        background: "transparent",
         border: `2px solid ${theme.accent}`,
-        borderRadius: 14,
+        borderRadius: 5,
         padding: 10,
         marginTop: 8,
     };

@@ -21,6 +21,7 @@ import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {featureToggleService} from "../../services/featureToggleService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import { Button } from "../Buttons.jsx";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -123,19 +124,35 @@ export default function RulePage({ data, theme }) {
         setPdfTypeModalOpen(true);
     };
 
-    // ----- Styling tokens aligned with NON-header AccuracyKpi / TaskCard -----
-    const CARD_BG = "rgba(255, 243, 223, 0.92)";
-    const CARD_BORDER = "rgba(255,97,56,0.65)";
-    const CARD_SHADOW = "0 10px 26px rgba(0,0,0,0.12)";
+    const FRAME_COLOR = "#40a6ff";
 
-    const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
-    const SOFT_STROKE = "rgba(0,0,0,0.12)";
+    const CARD_BG = "transparent";
+    const CARD_BORDER = "#000";
+    const CARD_SHADOW = "none";
+
+    const SOFT_INNER = "transparent";
+    const SOFT_STROKE = FRAME_COLOR;
+
+    const pageShellStyle = {
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: isMobile ? "16px 12px" : "48px 24px",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+    };
 
     const container = {
-        maxWidth: 980,
+        maxWidth: 1100,
         width: "100%",
-        padding: isMobile ? "20px 0px 60px" : "36px 20px 80px",
-        margin: "0 auto",
+        padding: isMobile ? "24px 16px 32px" : "40px 40px 40px",
+        margin: 0,
+        border: `2px solid ${FRAME_COLOR}`,
+        borderRadius: 12,
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        boxShadow: "0 18px 45px rgba(0,0,0,0.10)",
+        boxSizing: "border-box",
     };
 
     // ✅ a subtle canvas behind all sections so cards feel cohesive
@@ -150,8 +167,8 @@ export default function RulePage({ data, theme }) {
         <div
             style={{
                 background: CARD_BG,
-                border: `2px solid ${CARD_BORDER}`,
-                borderRadius: 20,
+                border: `1px solid ${CARD_BORDER}`,
+                borderRadius: 5,
                 boxShadow: CARD_SHADOW,
                 padding: isMobile ? 14 : 18,
             }}
@@ -210,7 +227,7 @@ export default function RulePage({ data, theme }) {
                         {section.hint && (
                             <p
                                 style={{
-                                    color: theme.muted,
+                                    color: "#000",
                                     fontSize: isMobile ? 12 : 13,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
@@ -233,9 +250,9 @@ export default function RulePage({ data, theme }) {
                             style={{
                                 background: SOFT_INNER,
                                 border: `2px solid ${SOFT_STROKE}`,
-                                borderRadius: 16,
+                                borderRadius: 5,
                                 padding: isMobile ? 10 : 12,
-                                boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+                                boxShadow: "none",
                             }}
                         >
                             <ConjugationTable theme={theme} headers={section.headers} rows={section.rows} />
@@ -244,7 +261,7 @@ export default function RulePage({ data, theme }) {
                         {section.hint && (
                             <div
                                 style={{
-                                    color: theme.muted,
+                                    color: "#000",
                                     fontSize: isMobile ? 12 : 13,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
@@ -307,84 +324,68 @@ export default function RulePage({ data, theme }) {
         justifyContent: "start",
     });
 
+    const standardButtonStyle = {
+        maxWidth: 280,
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        backgroundColor: "transparent",
+        color: "#000",
+        borderColor: "#000",
+    };
+
+    const showPrintButton = !featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION);
+
     return (
-        <AppShell theme={theme}>
-            <div style={container}>
+        <AppShell theme={theme} noPadding>
+            <div style={pageShellStyle}>
+                <main style={container}>
                 <BrandHeader
                     theme={theme}
                     title={"GoodLang"}
                     subtitle={<>{data.title}</>}
                     right={
                         <>
-                            <Button
-                                style={{
-                                    appearance: "none",
-                                    padding: "10px 14px",
-                                    display: featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION) ? 'none' : "flex",
-                                    fontWeight: 800,
-                                    fontSize: "0.95rem",
-                                    lineHeight: 1,
-                                    borderRadius: 999,
-                                    cursor: "pointer",
-                                    background: theme.green ?? "#4ba36e",
-                                    color: "#fff",
-                                    border: "2px solid rgba(0,0,0,0.12)",
-                                    boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                    fontFamily: 'var(--font-family-base)',
-                                    maxWidth: 280,
-                                    whiteSpace: "nowrap",
-                                    overflow: "hidden",
-                                    textOverflow: "ellipsis",
-                                    transform: !isDownloading && hover === "print" ? "translateY(1px)" : "none",
-                                    filter: !isDownloading && hover === "print" ? "brightness(0.95)" : "none",
-                                    transition: "transform 120ms ease, filter 120ms ease",
-                                }}
-                            >
-                                <div
-                                    key={"print"}
-                                    onMouseEnter={() => setHover("print")}
-                                    onMouseLeave={() => setHover(null)}
-                                    onClick={(e) => onPrintClick(e, data.id)}
-                                    style={iconBtn()}
-                                    title="Друкувати правило"
+                            {showPrintButton && (
+                                <Button
+                                    variant="offset"
+                                    compact
+                                    shadowColor={FRAME_COLOR}
+                                    shadowOffset={0}
+                                    style={standardButtonStyle}
                                 >
                                     <div
-                                        aria-label={isDownloading ? "Loading" : "Print"}
-                                        style={{
-                                            width: 16,
-                                            height: 16,
-                                            backgroundColor: "white",
-                                            WebkitMask: `url(${isDownloading ? "/loading-icon.svg" : "/print-icon.svg"}) no-repeat center / contain`,
-                                            mask: `url(${isDownloading ? "/loading-icon.svg" : "/print-icon.svg"}) no-repeat center / contain`,
-                                            animation: isDownloading ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite" : "none",
-                                            transformOrigin: "50% 50%",
-                                        }}
-                                    />
+                                        key={"print"}
+                                        onMouseEnter={() => setHover("print")}
+                                        onMouseLeave={() => setHover(null)}
+                                        onClick={(e) => onPrintClick(e, data.id)}
+                                        style={iconBtn()}
+                                        title="Друкувати правило"
+                                    >
+                                        <div
+                                            aria-label={isDownloading ? "Loading" : "Print"}
+                                            style={{
+                                                width: 16,
+                                                height: 16,
+                                                backgroundColor: "#000",
+                                                WebkitMask: `url(${isDownloading ? "/loading-icon.svg" : "/print-icon.svg"}) no-repeat center / contain`,
+                                                mask: `url(${isDownloading ? "/loading-icon.svg" : "/print-icon.svg"}) no-repeat center / contain`,
+                                                animation: isDownloading ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite" : "none",
+                                                transformOrigin: "50% 50%",
+                                            }}
+                                        />
 
-                                    <div>{!isDownloading ? "Print tasks" : "Preparing document..."}</div>
-                                </div>
-                            </Button>
+                                        <div>{!isDownloading ? "Print tasks" : "Preparing document..."}</div>
+                                    </div>
+                                </Button>
+                            )}
 
                             <Button
-                                style={{
-                                    appearance: "none",
-                                    padding: "10px 14px",
-                                    fontWeight: 800,
-                                    fontSize: "0.95rem",
-                                    lineHeight: 1,
-                                    borderRadius: 999,
-                                    cursor: "pointer",
-                                    background: theme.accent ?? "#4ba36e",
-                                    color: "#fff",
-                                    border: "2px solid rgba(0,0,0,0.12)",
-                                    boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                    fontFamily: 'var(--font-family-base)',
-                                    maxWidth: 280,
-                                    whiteSpace: "nowrap",
-                                    overflow: "hidden",
-                                    textOverflow: "ellipsis",
-                                    transition: "transform 120ms ease, filter 120ms ease",
-                                }}
+                                variant="offset"
+                                compact
+                                shadowColor={FRAME_COLOR}
+                                shadowOffset={0}
+                                style={standardButtonStyle}
                                 onClick={handleAnalyticsClick}
                             >
                                 ← Back to rules
@@ -402,6 +403,7 @@ export default function RulePage({ data, theme }) {
                 </div>
 
                 <FooterBar theme={theme} />
+                </main>
             </div>
 
             {/* ✅ Pdf type choose modal */}

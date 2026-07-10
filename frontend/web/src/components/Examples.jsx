@@ -3,9 +3,9 @@ import React from "react";
 export default function Examples({ items, theme }) {
     // aligned with RulePage / SurfaceCard (flat, no shadow)
     const block = {
-        background: "rgba(255, 250, 243, 0.92)",          // SOFT_INNER
-        border: "2px solid rgba(255,97,56,0.45)",         // softer accent
-        borderRadius: 14,
+        background: "transparent",
+        border: `2px solid ${theme.accent}`,
+        borderRadius: 5,
         padding: 10,
         margin: "6px 0",
     };

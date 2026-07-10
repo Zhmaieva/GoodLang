@@ -131,53 +131,43 @@ export default function AnalyticsPage({theme}) {
     const navigate = useNavigate();
     const handlePracticeClick = () => navigate('/');
 
-    const SIDE_WALL_COLOR = "#40a6ff";
-    const SIDE_WALL_SECOND_LINE_GAP = 10;
-    const SIDE_WALL_LINE_WIDTH = 2;
+    const FRAME_COLOR = "#40a6ff";
 
     const pageShellStyle = {
         width: "100%",
         minHeight: "100vh",
-        display: "grid",
-        gridTemplateColumns: isMobile
-            ? "12px minmax(0, 1fr) 12px"
-            : "minmax(96px, 1fr) minmax(0, 980px) minmax(96px, 1fr)",
-        columnGap: isMobile ? 12 : 36,
-    };
-
-    const leftWallStyle = {
-        borderRight: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
-        background: `linear-gradient(to left, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
-        minHeight: "100vh",
-    };
-
-    const rightWallStyle = {
-        borderLeft: `${SIDE_WALL_LINE_WIDTH}px solid ${SIDE_WALL_COLOR}`,
-        background: `linear-gradient(to right, transparent ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP}px, ${SIDE_WALL_COLOR} ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px, transparent ${SIDE_WALL_SECOND_LINE_GAP + SIDE_WALL_LINE_WIDTH}px), ${theme?.bg ?? APP_BACKGROUND_COLOR}`,
-        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: isMobile ? "16px 12px" : "48px 24px",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
     const pageContentStyle = {
         minWidth: 0,
         width: "100%",
-        minHeight: "100vh",
+        maxWidth: 1100,
+        minHeight: "auto",
         display: "flex",
         flexDirection: "column",
-        padding: isMobile ? "24px 0 40px" : "25px 0 0px",
+        padding: isMobile ? "24px 16px 32px" : "40px 40px 40px",
+        border: `2px solid ${FRAME_COLOR}`,
+        borderRadius: 12,
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        boxShadow: "0 18px 45px rgba(0,0,0,0.10)",
+        boxSizing: "border-box",
     };
 
     return (
         <AppShell theme={theme} noPadding>
             <div style={pageShellStyle}>
-                <div style={leftWallStyle} aria-hidden="true" />
-
                 <main style={pageContentStyle}>
                     <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Progress overview and list of rules"}  onExport={onExportJSON}
                                  right={
                                      <Button
                                          variant="offset"
                                          compact
-                                         shadowColor={SIDE_WALL_COLOR}
+                                         shadowColor={FRAME_COLOR}
                                          shadowOffset={0}
                                          style={{
                                              maxWidth: 180,
@@ -238,7 +228,6 @@ export default function AnalyticsPage({theme}) {
                     <FooterBar theme={theme}/>*/}
                 </main>
 
-                <div style={rightWallStyle} aria-hidden="true" />
             </div>
         </AppShell>
     );
