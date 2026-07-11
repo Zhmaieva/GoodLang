@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { getOverallAccuracy, inferUserLevel } from "../../services/dataService.js";
 import { off, on } from "../../services/events.js";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export const LEVEL_MAP = {
     A1: { label: "Beginner", percent: 33 },
@@ -105,7 +105,7 @@ export default function LevelKpi({ mobile, theme }) {
         position: "absolute",
         height: "100%",
         width: `${width}%`,
-        background: "#40a6ff",
+        background: theme?.accent ?? APP_ACCENT_COLOR,
         left: 0,
         top: 0,
     });

@@ -67,7 +67,7 @@ h1 {
 
 
 :root{
-    --accent:#40a6ff; --accent-dark:#2d7fca; --green:#4ba36e; --blue:#3a6ea5; --text:#000; --muted:#000; --radius:5px;
+    --accent-dark:#2d7fca; --green:#4ba36e; --blue:#3a6ea5; --text:#000; --muted:#000; --radius:5px;
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:var(--font-family-base);background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh}
@@ -92,7 +92,7 @@ nav.actions{display:flex;gap:10px;flex-wrap:wrap}
 .kpi .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .kpi .value{font-size:28px;font-weight:800}
 .spark{height:8px;border-radius:5px;background:#000;border:none;margin-top:6px;position:relative;overflow:hidden}
-.spark > i{display:block;position:absolute;height:100%;background:#40a6ff;left:0;top:0}
+.spark > i{display:block;position:absolute;height:100%;background:var(--accent);left:0;top:0}
 
 .filters{display:flex;align-items:center;gap:10px;margin:22px 0 10px;flex-wrap:wrap}
 .pill{appearance:none;background:var(--bg);color:var(--text);border:1px solid #000;border-radius:5px;padding:8px 14px;font-weight:700;font-size:13px;cursor:pointer;box-shadow:none;font-family:var(--font-family-base)}
@@ -117,7 +117,7 @@ nav.actions{display:flex;gap:10px;flex-wrap:wrap}
 }
 
 .bar{height:10px;background:#000;border:none;border-radius:5px;position:relative;overflow:hidden}
-.bar > i{position:absolute;left:0;top:0;bottom:0;background:#40a6ff}
+.bar > i{position:absolute;left:0;top:0;bottom:0;background:var(--accent)}
 
 .section-title{margin:20px 2px 10px;font-size:16px;text-transform:uppercase;color:var(--text);font-weight:800;letter-spacing:.05em}
 

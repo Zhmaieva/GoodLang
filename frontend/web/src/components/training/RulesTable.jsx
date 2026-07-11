@@ -4,7 +4,7 @@ import {dowloadPdf} from "../../services/api.js";
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 import {featureToggleService} from "../../services/featureToggleService.js";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function RulesTable({
                                        account,
@@ -177,7 +177,7 @@ export default function RulesTable({
         return list;
     }, [rows, sortKey, sortDir, statusOf]);
 
-    const barColor = "#40a6ff";
+    const barColor = theme?.accent ?? APP_ACCENT_COLOR;
 
     const ArrowPair = ({ columnKey }) => {
         const active = sortKey === columnKey;
@@ -221,9 +221,8 @@ export default function RulesTable({
     const row = (isHover) => ({
         cursor: "pointer",
         userSelect: "none",
-        background: isHover ? "#f3efe3" : theme?.bg ?? APP_BACKGROUND_COLOR,
-        filter: isHover ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
+        background: isHover ? "#e5e5e5" : theme?.bg ?? APP_BACKGROUND_COLOR,
+        transition: "background-color 120ms ease",
     });
 
     function scrollRowToTop(idx, topOffset = 0) {

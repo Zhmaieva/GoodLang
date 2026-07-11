@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "./Buttons.jsx";
+import { APP_ACCENT_COLOR } from "../theme.js";
 
 const LEVELS = [
     { id: "all", label: "All" },
@@ -28,14 +29,6 @@ export default function FiltersBar({
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);
     }, []);
-
-    // Fallbacks if theme is not passed for some reason
-    const t = theme ?? {
-        green: "#4ba36e",
-        greenDark: "#2d6f48",
-        text: "#3a2a1d",
-        muted: "#a47856",
-    };
 
     // input should match your current “highlight-input” behavior; we keep it minimal
     const inputStyle = {
@@ -67,7 +60,7 @@ export default function FiltersBar({
                                 key={lvl.id}
                                 variant="offset"
                                 compact
-                                shadowColor={selected ? SELECTED_BUTTON_COLOR : "#40a6ff"}
+                                shadowColor={selected ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
                                 shadowOffset={0}
                                 aria-pressed={selected}
                                 onClick={() => onLevelChange(lvl.id)}
@@ -106,7 +99,7 @@ export default function FiltersBar({
                 <Button
                     variant="offset"
                     compact
-                    shadowColor={showWeakOnly ? SELECTED_BUTTON_COLOR : "#40a6ff"}
+                    shadowColor={showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
                     shadowOffset={0}
                     onClick={onToggleWeak}
                     style={{

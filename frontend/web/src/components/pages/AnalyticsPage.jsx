@@ -21,7 +21,7 @@ import AppShell from "../AppShell.jsx";
 import BrandHeader from "../BrandHeader.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
 import { Button } from "../Buttons.jsx";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function AnalyticsPage({theme}) {
     // ----- State (mirrors your script) -----
@@ -131,7 +131,7 @@ export default function AnalyticsPage({theme}) {
     const navigate = useNavigate();
     const handlePracticeClick = () => navigate('/');
 
-    const FRAME_COLOR = "#40a6ff";
+    const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
 
     const pageShellStyle = {
         width: "100%",

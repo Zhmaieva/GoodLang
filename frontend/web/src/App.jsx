@@ -122,12 +122,12 @@ import LandingCrossword from "./components/pages/LandingCrossword.jsx";
 import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
 import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
 import {RootRedirect} from "./components/routing/RootRedirect.jsx";
-import { APP_BACKGROUND_COLOR } from "./theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "./theme.js";
 
 export const legacyGlobalStyling = {
     bg: APP_BACKGROUND_COLOR,
-    accent: "#40a6ff",
-    accentDark: "#40a6ff",
+    accent: APP_ACCENT_COLOR,
+    accentDark: APP_ACCENT_COLOR,
     green: "#4ba36e",
     greenDark: "#2d6f48",
     blue: "#3a6ea5",

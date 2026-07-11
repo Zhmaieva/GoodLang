@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import AccuracyKpi from "./training/AccuracyKpi.jsx";
 import LevelKpi from "./training/LevelKpi.jsx";
-import { APP_BACKGROUND_COLOR } from "../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
 
 export default function KPIGrid({ theme, attempts, masteredRules }) {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 915);
@@ -74,7 +74,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         position: "absolute",
         height: "100%",
         width: `${width}%`,
-        background: "#40a6ff",
+        background: theme?.accent ?? APP_ACCENT_COLOR,
         left: 0,
         top: 0,
     });

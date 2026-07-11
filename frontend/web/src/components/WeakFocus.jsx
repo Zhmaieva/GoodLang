@@ -3,7 +3,7 @@ import Trainer from "./training/Trainer.jsx";
 import React, { useEffect, useState } from "react";
 import { getAllStatistics } from "../services/dataService.js";
 import { Button } from "./Buttons.jsx";
-import { APP_BACKGROUND_COLOR } from "../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
 
 export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrainingComplete = (_) => {} }) {
     const navigate = useNavigate();
@@ -103,7 +103,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
         overflow: "hidden",
     };
 
-    const barColor = "#40a6ff";
+    const barColor = theme?.accent ?? APP_ACCENT_COLOR;
 
     const sparkFillStyle = (width) => ({
         display: "block",
@@ -159,7 +159,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                         <Button
                             variant="offset"
                             compact
-                            shadowColor="#40a6ff"
+                            shadowColor={theme?.accent ?? APP_ACCENT_COLOR}
                             shadowOffset={0}
                             onClick={() => {
                                 const url = `/rule/${rule.rule}`;

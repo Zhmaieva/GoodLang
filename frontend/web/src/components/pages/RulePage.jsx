@@ -21,7 +21,7 @@ import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {featureToggleService} from "../../services/featureToggleService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import { Button } from "../Buttons.jsx";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -124,11 +124,7 @@ export default function RulePage({ data, theme }) {
         setPdfTypeModalOpen(true);
     };
 
-    const FRAME_COLOR = "#40a6ff";
-
-    const CARD_BG = "transparent";
-    const CARD_BORDER = "#000";
-    const CARD_SHADOW = "none";
+    const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
 
     const SOFT_INNER = "transparent";
     const SOFT_STROKE = FRAME_COLOR;
@@ -155,27 +151,23 @@ export default function RulePage({ data, theme }) {
         boxSizing: "border-box",
     };
 
-    // ✅ a subtle canvas behind all sections so cards feel cohesive
     const sectionsCanvas = {
-        borderRadius: 22,
         padding: isMobile ? 0 : 12,
-        //background: "rgba(0,0,0,0.02)",
     };
 
-    // ✅ local card style for this page only (no need to touch global Card.jsx)
-    const SurfaceCard = ({ children }) => (
-        <div
-            style={{
-                background: CARD_BG,
-                border: `1px solid ${CARD_BORDER}`,
-                borderRadius: 5,
-                boxShadow: CARD_SHADOW,
-                padding: isMobile ? 14 : 18,
-            }}
-        >
-            {children}
-        </div>
-    );
+    const ruleContentStyle = {
+        background: "transparent",
+        border: "1px solid #000",
+        borderRadius: 5,
+        padding: isMobile ? 18 : 24,
+        boxShadow: "none",
+    };
+
+    const getRuleSectionStyle = (isFirst) => ({
+        borderTop: isFirst ? "none" : "1px solid #000",
+        marginTop: isFirst ? 0 : isMobile ? 18 : 24,
+        paddingTop: isFirst ? 0 : isMobile ? 18 : 24,
+    });
 
     const SectionTitle = ({ children }) => (
         <div
@@ -207,15 +199,15 @@ export default function RulePage({ data, theme }) {
         switch (section.type) {
             case "meaning":
                 return (
-                    <SurfaceCard>
+                    <>
                         <SectionTitle>{section.title}</SectionTitle>
                         <p style={textStyle} dangerouslySetInnerHTML={{ __html: section.html }} />
-                    </SurfaceCard>
+                    </>
                 );
 
             case "usage":
                 return (
-                    <SurfaceCard>
+                    <>
                         <SectionTitle>{section.title}</SectionTitle>
                         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                             {section.badges.map((b, i) => (
@@ -237,12 +229,12 @@ export default function RulePage({ data, theme }) {
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
                         )}
-                    </SurfaceCard>
+                    </>
                 );
 
             case "forms":
                 return (
-                    <SurfaceCard>
+                    <>
                         <SectionTitle>{section.title}</SectionTitle>
 
                         {/* optional soft inner surface behind the table for the same feel as inputs */}
@@ -271,20 +263,20 @@ export default function RulePage({ data, theme }) {
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
                         )}
-                    </SurfaceCard>
+                    </>
                 );
 
             case "examples":
                 return (
-                    <SurfaceCard>
+                    <>
                         <SectionTitle>{section.title}</SectionTitle>
                         <Examples theme={theme} items={section.items} />
-                    </SurfaceCard>
+                    </>
                 );
 
             case "mistakes":
                 return (
-                    <SurfaceCard>
+                    <>
                         <SectionTitle>{section.title}</SectionTitle>
                         <ul style={{ ...textStyle, paddingLeft: 20, marginTop: 8 }}>
                             {section.bullets?.map((b, i) => (
@@ -298,7 +290,7 @@ export default function RulePage({ data, theme }) {
                                 </Note>
                             </div>
                         )}
-                    </SurfaceCard>
+                    </>
                 );
 
             case "trainer":
@@ -395,9 +387,11 @@ export default function RulePage({ data, theme }) {
                 />
 
                 <div style={sectionsCanvas}>
-                    <section style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                    <section style={ruleContentStyle}>
                         {data.sections.map((section, i) => (
-                            <div key={i}>{renderSection(section)}</div>
+                            <div key={i} style={getRuleSectionStyle(i === 0)}>
+                                {renderSection(section)}
+                            </div>
                         ))}
                     </section>
                 </div>

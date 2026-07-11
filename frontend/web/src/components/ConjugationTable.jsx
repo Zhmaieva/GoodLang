@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
 
 /**
  * A fully dynamic table component with mobile responsiveness.
@@ -36,7 +37,7 @@ export default function ConjugationTable({ theme, headers = [], rows = [] }) {
 
     const thtdBase = {
         padding: isMobile ? "6px 8px" : 10,
-        borderBottom: `2px solid ${theme.accent}`,
+        borderBottom: `2px solid ${theme?.accent ?? APP_ACCENT_COLOR}`,
         verticalAlign: "top",
         textAlign: "left",
         fontSize: isMobile ? 14 : 16,
@@ -45,10 +46,10 @@ export default function ConjugationTable({ theme, headers = [], rows = [] }) {
 
     const theadTh = {
         ...thtdBase,
-        background: "linear-gradient(#fffaf3,#fff)",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
         textTransform: "uppercase",
         fontSize: isMobile ? 10 : 12,
-        color: theme.muted,
+        color: "#000",
         letterSpacing: ".06em",
         fontWeight: 700,
         whiteSpace: "nowrap",

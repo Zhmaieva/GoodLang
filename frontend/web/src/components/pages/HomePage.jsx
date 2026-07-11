@@ -12,7 +12,7 @@ import InfoModal from "../modals/InfoModal.jsx";
 import { getSavedTrainingLevel } from "../../services/trainingDirector.js";
 import { marathonService } from "../../services/marathonService.js";
 import { Button } from "../Buttons.jsx";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -188,7 +188,7 @@ export default function HomePage({ theme }) {
         setIsMarathonLoaded(true);
     };
 
-    const FRAME_COLOR = "#40a6ff";
+    const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
     const BUTTON_OFFSET = 4;
 
     const pageShellStyle = {

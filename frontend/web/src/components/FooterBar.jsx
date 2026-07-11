@@ -21,7 +21,7 @@ export default function FooterBar({ theme }) {
                     style={{
                         width: "100%",
                         height: "2px",
-                        backgroundColor: "#40a6ff",
+                        backgroundColor: theme.accent,
                         marginBottom: "20px",
                         marginTop: "20px",
                     }}
@@ -46,7 +46,7 @@ export default function FooterBar({ theme }) {
                         © 2026 GoodLang •{" "}
                         <a
                             style={{
-                                color: "#40a6ff",
+                                color: theme.accent,
                                 textDecoration: "none",
                                 fontWeight: 800,
                             }}

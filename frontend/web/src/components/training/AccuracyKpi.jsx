@@ -8,7 +8,7 @@ import {
 import { off, on } from "../../services/events.js";
 import { useNavigate } from "react-router-dom";
 import { LEVEL_MAP } from "./LevelKpi.jsx";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 // ✅ marathon
 import { marathonService, readAccountInfoFromLS } from "../../services/marathonService.js";
@@ -170,7 +170,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             padding: isMobile ? "12px 12px" : "12px 14px",
             borderRadius: 5,
             background: theme?.bg ?? APP_BACKGROUND_COLOR,
-            border: "2px solid #40a6ff",
+            border: `2px solid ${theme?.accent ?? APP_ACCENT_COLOR}`,
             boxShadow: hover ? "0 14px 34px rgba(0,0,0,0.14)" : "0 10px 26px rgba(0,0,0,0.12)",
             cursor: "pointer",
             userSelect: "none",
@@ -308,7 +308,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
             left: 0,
             top: 0,
             bottom: 0,
-            background: "#40a6ff",
+            background: theme?.accent ?? APP_ACCENT_COLOR,
             borderRadius: 5,
             overflow: "hidden",
             transition: canAnimate ? "width 650ms cubic-bezier(0.22, 1, 0.36, 1)" : "none",
@@ -661,7 +661,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         position: "absolute",
         height: "100%",
         width: `${width}%`,
-        background: "#40a6ff",
+        background: theme?.accent ?? APP_ACCENT_COLOR,
         left: 0,
         top: 0,
         transition: canAnimate ? "width 650ms cubic-bezier(0.22, 1, 0.36, 1)" : "none",

@@ -1,6 +1,6 @@
 import { RULE_LABELS } from "../../utils/rules.js";
 import { Button } from "../Buttons.jsx";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export default function ResultCard({
                                        theme,
@@ -12,19 +12,19 @@ export default function ResultCard({
                                    }) {
     // ----- same “TaskCard” styling tokens -----
     const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
-    const CARD_BORDER_IDLE = "#40a6ff";
+    const CARD_BORDER_IDLE = theme?.accent ?? APP_ACCENT_COLOR;
     const CARD_SHADOW_IDLE = "none";
     const SOFT_INNER = theme?.bg ?? APP_BACKGROUND_COLOR;
     const SOFT_RED = "rgba(255, 230, 228, 0.92)";
     const SOFT_GREEN = "rgba(232, 247, 238, 0.92)";
     const SOFT_STROKE = "rgba(0,0,0,0.12)";
-    const SOFT_STROKE_ACCENT = "#40a6ff";
-    const SOFT_STROKE_ACCENT_2 = "#40a6ff";
+    const SOFT_STROKE_ACCENT = theme?.accent ?? APP_ACCENT_COLOR;
+    const SOFT_STROKE_ACCENT_2 = theme?.accent ?? APP_ACCENT_COLOR;
 
     const styles = {
         card: {
             background: CARD_BG,
-            border: `2px solid #40a6ff`,
+            border: `2px solid ${CARD_BORDER_IDLE}`,
             borderRadius: 5,
             boxShadow: CARD_SHADOW_IDLE,
             padding: 20,
