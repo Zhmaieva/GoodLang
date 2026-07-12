@@ -44,6 +44,23 @@ export const acc = (nCorrect, nAll) => (nAll ? (nCorrect/nAll) : 0);
 export const fmtDate = (iso) =>
     iso ? new Date(iso).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'}) : "—";
 
+export const fmtLastPractice = (iso) => {
+    if (!iso) return "—";
+
+    const timestamp = new Date(iso).getTime();
+    if (!Number.isFinite(timestamp)) return "—";
+
+    const days = Math.max(0, Math.floor((Date.now() - timestamp) / (1000 * 60 * 60 * 24)));
+
+    if (days > 30) return "Ages ago";
+    if (days === 0) return "Today";
+    if (days === 1) return "Yesterday";
+    if (days < 7) return `${days} days ago`;
+
+    const weeks = Math.floor(days / 7);
+    return `${weeks} ${weeks === 1 ? "week" : "weeks"} ago`;
+};
+
 
 export const daysSince = (iso) => {
     if (!iso) return 999;

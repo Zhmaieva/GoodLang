@@ -21,7 +21,7 @@ import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {featureToggleService} from "../../services/featureToggleService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import { Button } from "../Buttons.jsx";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR, LEARNED_STATUS_COLOR } from "../../theme.js";
 import { ArrowLeft, Printer, SpinnerGap } from "@phosphor-icons/react";
 
 export default function RulePage({ data, theme }) {
@@ -126,9 +126,9 @@ export default function RulePage({ data, theme }) {
     };
 
     const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
+    const FORMS_TABLE_COLOR = LEARNED_STATUS_COLOR;
 
     const SOFT_INNER = "transparent";
-    const SOFT_STROKE = FRAME_COLOR;
 
     const pageShellStyle = {
         width: "100%",
@@ -174,12 +174,11 @@ export default function RulePage({ data, theme }) {
         <div
             style={{
                 margin: "4px 2px 10px",
-                fontSize: isMobile ? 13 : 14,
-                letterSpacing: ".08em",
+                fontSize: isMobile ? 13 : 20,
+                letterSpacing: ".06em",
                 textTransform: "uppercase",
                 fontWeight: 900,
                 color: theme.text,
-                opacity: 0.9,
                 fontFamily: 'var(--font-family-base)',
             }}
         >
@@ -187,13 +186,127 @@ export default function RulePage({ data, theme }) {
         </div>
     );
 
+    const ruleBodyFontSize = isMobile ? 14 : 16;
+    const mistakeWrongColor = theme?.bad ?? "#fe2f31";
+    const mistakeCorrectColor = LEARNED_STATUS_COLOR;
+
     const textStyle = {
-        fontSize: isMobile ? 14 : 15,
+        fontSize: ruleBodyFontSize,
         lineHeight: 1.45,
         color: theme.text,
         fontFamily: 'var(--font-family-base)',
-        fontWeight: 700,
+        fontWeight: 400,
         opacity: 0.95,
+    };
+
+    const removeLeadingExampleIcon = (value) =>
+        String(value ?? "").replace(/^[\p{Extended_Pictographic}\uFE0F]+\s*/u, "");
+
+    const cleanMistakeText = (value) =>
+        String(value ?? "")
+            .replace(/❌|✅/g, "")
+            .replace(/<\/?(em|strong)>/g, "")
+            .trim();
+
+    const escapeHtml = (value) =>
+        String(value ?? "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    const splitTrailingNote = (value) => {
+        const match = String(value ?? "").match(/^(.*?)(\s+\([^)]*\))$/);
+        return match ? { sentence: match[1], note: match[2] } : { sentence: value, note: "" };
+    };
+
+    const tokenizeForDiff = (value) =>
+        String(value ?? "").match(/\s+|[\p{L}\p{N}’'-]+|[^\s\p{L}\p{N}]/gu) ?? [];
+
+    const isWordToken = (token) => /[\p{L}\p{N}]/u.test(token);
+
+    const getChangedWordIndexes = (source, target) => {
+        const sourceWords = source
+            .map((token, index) => ({ token, index }))
+            .filter(({ token }) => isWordToken(token));
+        const targetWords = target
+            .map((token, index) => ({ token, index }))
+            .filter(({ token }) => isWordToken(token));
+
+        const matrix = Array.from({ length: sourceWords.length + 1 }, () =>
+            Array(targetWords.length + 1).fill(0)
+        );
+
+        for (let i = sourceWords.length - 1; i >= 0; i -= 1) {
+            for (let j = targetWords.length - 1; j >= 0; j -= 1) {
+                if (sourceWords[i].token.toLowerCase() === targetWords[j].token.toLowerCase()) {
+                    matrix[i][j] = matrix[i + 1][j + 1] + 1;
+                } else {
+                    matrix[i][j] = Math.max(matrix[i + 1][j], matrix[i][j + 1]);
+                }
+            }
+        }
+
+        const unchanged = new Set();
+        let i = 0;
+        let j = 0;
+
+        while (i < sourceWords.length && j < targetWords.length) {
+            if (sourceWords[i].token.toLowerCase() === targetWords[j].token.toLowerCase()) {
+                unchanged.add(sourceWords[i].index);
+                i += 1;
+                j += 1;
+            } else if (matrix[i + 1][j] >= matrix[i][j + 1]) {
+                i += 1;
+            } else {
+                j += 1;
+            }
+        }
+
+        return new Set(sourceWords.map(({ index }) => index).filter((index) => !unchanged.has(index)));
+    };
+
+    const highlightChangedWords = (value, comparisonValue, highlightColor) => {
+        const tokens = tokenizeForDiff(value);
+        const comparisonTokens = tokenizeForDiff(comparisonValue);
+        const changedIndexes = getChangedWordIndexes(tokens, comparisonTokens);
+
+        return tokens
+            .map((token, index) => {
+                const escaped = escapeHtml(token);
+                return changedIndexes.has(index)
+                    ? `<strong style="color: ${highlightColor}">${escaped}</strong>`
+                    : escaped;
+            })
+            .join("");
+    };
+
+    const formatMistakeBullet = (bullet) => {
+        const raw = String(bullet ?? "");
+
+        if (!raw.includes("❌") && !raw.includes("✅")) {
+            return raw;
+        }
+
+        const parts = raw.split("→");
+        const correctIndex = parts.findIndex((part, index) => index > 0 && part.includes("✅"));
+
+        if (correctIndex !== -1) {
+            const wrong = cleanMistakeText(parts.slice(0, correctIndex).join(" → "));
+            const correct = cleanMistakeText(parts.slice(correctIndex).join(" → "));
+            const { sentence: correctSentence, note: correctNote } = splitTrailingNote(correct);
+            const { sentence: wrongSentence, note: wrongNote } = splitTrailingNote(wrong);
+
+            const wrongHtml =
+                highlightChangedWords(wrongSentence, correctSentence, mistakeWrongColor) + escapeHtml(wrongNote);
+            const correctHtml =
+                highlightChangedWords(correctSentence, wrongSentence, mistakeCorrectColor) + escapeHtml(correctNote);
+
+            return `<span style="font-weight: 350">× ${wrongHtml}</span> → <span style="font-weight: 400">✓ ${correctHtml}</span>`;
+        }
+
+        return `<span style="font-weight: 350">× ${cleanMistakeText(raw)}</span>`;
     };
 
     const renderSection = (section) => {
@@ -212,8 +325,13 @@ export default function RulePage({ data, theme }) {
                         <SectionTitle>{section.title}</SectionTitle>
                         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                             {section.badges.map((b, i) => (
-                                <Badge key={i} theme={theme}>
-                                    <span dangerouslySetInnerHTML={{ __html: b }} />
+                                <Badge
+                                    key={i}
+                                    theme={theme}
+                                    borderColor={theme.warn}
+                                    fontSize={ruleBodyFontSize}
+                                >
+                                    <span dangerouslySetInnerHTML={{ __html: removeLeadingExampleIcon(b) }} />
                                 </Badge>
                             ))}
                         </div>
@@ -221,7 +339,7 @@ export default function RulePage({ data, theme }) {
                             <p
                                 style={{
                                     color: "#000",
-                                    fontSize: isMobile ? 12 : 13,
+                                    fontSize: ruleBodyFontSize,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
                                     fontWeight: 700,
@@ -242,20 +360,28 @@ export default function RulePage({ data, theme }) {
                         <div
                             style={{
                                 background: SOFT_INNER,
-                                border: `2px solid ${SOFT_STROKE}`,
+                                border: `2px solid ${FORMS_TABLE_COLOR}`,
                                 borderRadius: 5,
-                                padding: isMobile ? 10 : 12,
+                                padding: 0,
+                                overflow: "hidden",
                                 boxShadow: "none",
                             }}
                         >
-                            <ConjugationTable theme={theme} headers={section.headers} rows={section.rows} />
+                            <ConjugationTable
+                                theme={{ ...theme, accent: FORMS_TABLE_COLOR }}
+                                headers={section.headers}
+                                rows={section.rows}
+                                headerBackground={FORMS_TABLE_COLOR}
+                                headerColor={APP_BACKGROUND_COLOR}
+                                fontSize={ruleBodyFontSize}
+                            />
                         </div>
 
                         {section.hint && (
                             <div
                                 style={{
                                     color: "#000",
-                                    fontSize: isMobile ? 12 : 13,
+                                    fontSize: ruleBodyFontSize,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
                                     fontWeight: 700,
@@ -271,7 +397,7 @@ export default function RulePage({ data, theme }) {
                 return (
                     <>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <Examples theme={theme} items={section.items} />
+                        <Examples theme={theme} items={section.items} fontSize={ruleBodyFontSize} />
                     </>
                 );
 
@@ -279,14 +405,26 @@ export default function RulePage({ data, theme }) {
                 return (
                     <>
                         <SectionTitle>{section.title}</SectionTitle>
-                        <ul style={{ ...textStyle, paddingLeft: 20, marginTop: 8 }}>
+                        <ul
+                            style={{
+                                ...textStyle,
+                                listStyle: "none",
+                                paddingLeft: 0,
+                                marginTop: 8,
+                                marginBottom: 0,
+                            }}
+                        >
                             {section.bullets?.map((b, i) => (
-                                <li key={i} dangerouslySetInnerHTML={{ __html: b }} />
+                                <li
+                                    key={i}
+                                    style={{ marginBottom: 6 }}
+                                    dangerouslySetInnerHTML={{ __html: formatMistakeBullet(b) }}
+                                />
                             ))}
                         </ul>
                         {section.note && (
                             <div style={{ marginTop: 10 }}>
-                                <Note theme={theme}>
+                                <Note theme={theme} borderColor={theme.bad} fontSize={ruleBodyFontSize}>
                                     <span dangerouslySetInnerHTML={{ __html: section.note }} />
                                 </Note>
                             </div>
@@ -295,12 +433,7 @@ export default function RulePage({ data, theme }) {
                 );
 
             case "trainer":
-                return (
-                    <>
-                        <SectionTitle>{section.title}</SectionTitle>
-                        <Trainer notFocused nextRule={data.id} theme={theme} />
-                    </>
-                );
+                return <Trainer notFocused nextRule={data.id} theme={theme} />;
 
             default:
                 return null;
@@ -339,40 +472,7 @@ export default function RulePage({ data, theme }) {
                     subtitle={<>{data.title}</>}
                     right={
                         <>
-                            {showPrintButton && (
-                                <Button
-                                    variant="offset"
-                                    compact
-                                    shadowColor={FRAME_COLOR}
-                                    shadowOffset={0}
-                                    style={standardButtonStyle}
-                                >
-                                    <div
-                                        key={"print"}
-                                        onMouseEnter={() => setHover("print")}
-                                        onMouseLeave={() => setHover(null)}
-                                        onClick={(e) => onPrintClick(e, data.id)}
-                                        style={iconBtn()}
-                                        title="Друкувати правило"
-                                    >
-                                        {isDownloading ? (
-                                            <SpinnerGap
-                                                size={18}
-                                                weight="bold"
-                                                aria-label="Loading"
-                                                style={{
-                                                    animation: "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite",
-                                                    transformOrigin: "50% 50%",
-                                                }}
-                                            />
-                                        ) : (
-                                            <Printer size={18} weight="bold" aria-label="Print" />
-                                        )}
-
-                                        <div>{!isDownloading ? "Print tasks" : "Preparing document..."}</div>
-                                    </div>
-                                </Button>
-                            )}
+                            {/* Print tasks button is temporarily hidden. */}
 
                             <Button
                                 variant="offset"

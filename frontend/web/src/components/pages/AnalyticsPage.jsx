@@ -6,6 +6,7 @@ import {
     statusOf,
     pct,
     fmtDate,
+    fmtLastPractice,
     getSmartQueue,
 } from "./analyticsLogic";
 import "./analytics.css";
@@ -211,6 +212,7 @@ export default function AnalyticsPage({theme}) {
                             pct={pct}
                             statusOf={statusOf}
                             fmtDate={fmtDate}
+                            fmtLastPractice={fmtLastPractice}
                             onRowClick={(rule) => {
                                 const url = `/rule/${rule.rule}`;
                                 window.open(url, "_blank", "noopener,noreferrer");

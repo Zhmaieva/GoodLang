@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Examples({ items, theme }) {
+export default function Examples({ items, theme, fontSize }) {
     // aligned with RulePage / SurfaceCard (flat, no shadow)
     const block = {
         background: "transparent",
@@ -11,15 +11,17 @@ export default function Examples({ items, theme }) {
     };
 
     const en = {
-        fontWeight: 800,
+        fontSize,
+        fontWeight: 400,
         color: theme.text,
         fontFamily: 'var(--font-family-base)',
     };
 
     const ua = {
+        fontSize,
         color: theme.muted,
         marginTop: 2,
-        fontWeight: 700,
+        fontWeight: 400,
         fontFamily: 'var(--font-family-base)',
     };
 

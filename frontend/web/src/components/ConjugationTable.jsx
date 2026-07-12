@@ -8,8 +8,18 @@ import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
  * @param {object} props.theme - color theme
  * @param {string[]} props.headers - array of column titles
  * @param {Array<Array<string|JSX.Element>>} props.rows - 2D array of data rows
+ * @param {string} props.headerBackground - optional header background color
+ * @param {string} props.headerColor - optional header text color
+ * @param {number|string} props.fontSize - optional table body text size
  */
-export default function ConjugationTable({ theme, headers = [], rows = [] }) {
+export default function ConjugationTable({
+    theme,
+    headers = [],
+    rows = [],
+    headerBackground,
+    headerColor,
+    fontSize,
+}) {
     const [isMobile, setIsMobile] = useState(
         typeof window !== "undefined" ? window.innerWidth < 600 : false
     );
@@ -35,21 +45,26 @@ export default function ConjugationTable({ theme, headers = [], rows = [] }) {
         minWidth: isMobile ? 480 : "auto", // щоб не зжималось занадто
     };
 
+    const accentColor = theme?.accent ?? APP_ACCENT_COLOR;
+    const backgroundColor = theme?.bg ?? APP_BACKGROUND_COLOR;
+
+    const bodyFontSize = fontSize ?? (isMobile ? 14 : 16);
+
     const thtdBase = {
         padding: isMobile ? "6px 8px" : 10,
-        borderBottom: `2px solid ${theme?.accent ?? APP_ACCENT_COLOR}`,
+        borderBottom: `2px solid ${accentColor}`,
         verticalAlign: "top",
         textAlign: "left",
-        fontSize: isMobile ? 14 : 16,
+        fontSize: bodyFontSize,
         lineHeight: 1.3,
     };
 
     const theadTh = {
         ...thtdBase,
-        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        background: headerBackground ?? backgroundColor,
         textTransform: "uppercase",
         fontSize: isMobile ? 10 : 12,
-        color: "#000",
+        color: headerColor ?? "#000",
         letterSpacing: ".06em",
         fontWeight: 700,
         whiteSpace: "nowrap",

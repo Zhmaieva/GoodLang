@@ -13,6 +13,7 @@ export default function RulesTable({
                                        pct,
                                        statusOf,
                                        fmtDate,
+                                       fmtLastPractice = fmtDate,
                                        onRowClick,
                                        theme,
                                        advanced = true
@@ -423,18 +424,7 @@ export default function RulesTable({
                                             <div style={{ display: "flex", justifyContent: "start", gap: "2rem", marginTop: 6 }}>
                                                 {advanced && <span className={`badge ${st.cls}`}>{st.label}</span>}
 
-                                                {advanced && (
-                                                    <div
-                                                        key={idx}
-                                                        onMouseEnter={() => setHover(idx)}
-                                                        onMouseLeave={() => setHover(null)}
-                                                        onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
-                                                        style={iconBtn(idx === hover)}
-                                                        title="Print rule"
-                                                    >
-                                                        <DownloadIcon idx={idx} size={56} />
-                                                    </div>
-                                                )}
+                                                {/* Print button is temporarily hidden. */}
                                             </div>
                                         </div>
 
@@ -449,18 +439,7 @@ export default function RulesTable({
                                                     </>
                                                 )}
 
-                                                {!advanced && (
-                                                    <div
-                                                        key={idx}
-                                                        onMouseEnter={() => setHover(idx)}
-                                                        onMouseLeave={() => setHover(null)}
-                                                        onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
-                                                        style={iconBtn(idx === hover)}
-                                                        title="Print rule"
-                                                    >
-                                                        <DownloadIcon idx={idx} size={26} />
-                                                    </div>
-                                                )}
+                                                {/* Print button is temporarily hidden. */}
                                             </div>
                                         </div>
                                     </div>
@@ -485,18 +464,7 @@ export default function RulesTable({
                                 <div style={{ display: "flex", justifyContent: "space-around" }}>
                                     <div>{idx + 1}</div>
 
-                                    <div
-                                        key={idx}
-                                        onMouseEnter={() => setHover(idx)}
-                                        onMouseLeave={() => setHover(null)}
-                                        onClick={(e) => onPrintClick(e, idx, r.rule, r.ruleName)}
-                                        style={iconBtn(idx === hover)}
-                                        title="Print rule"
-                                    >
-                                        <span style={{ position: "relative", top: -4, display: "block" }}>
-                                            <DownloadIcon idx={idx} size={28} />
-                                        </span>
-                                    </div>
+                                    {/* Print button is temporarily hidden. */}
                                 </div>
 
                                 <div>
@@ -512,7 +480,7 @@ export default function RulesTable({
                                 </div>
 
                                 <div>{r.attemptsNumber}</div>
-                                <div>{fmtDate(r.lastAttemptDate)}</div>
+                                <div>{fmtLastPractice(r.lastAttemptDate)}</div>
                                 <div className="col-last">
                                     <span className={`badge ${st.cls}`}>{st.label}</span>
                                 </div>

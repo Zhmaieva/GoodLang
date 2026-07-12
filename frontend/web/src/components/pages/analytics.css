@@ -108,7 +108,7 @@ nav.actions{display:flex;gap:10px;flex-wrap:wrap}
 .trow:last-child{border-bottom:none}
 .rule-name{font-weight:700;font-family:var(--font-family-base);color:#000}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 10px;border-radius:5px;border:none;color:#fff}
-.badge.ok{background:var(--accent);color:#fff}
+.badge.ok{background:var(--status-learned);color:#fff}
 .badge.warn{background:#fe6124;color:#fff}
 .badge.bad{background:#fe2f31;color:#fff}
 .badge.na {

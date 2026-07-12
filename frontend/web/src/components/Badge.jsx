@@ -1,15 +1,15 @@
 import React from "react";
 
-export default function Badge({ theme, tone, children }) {
+export default function Badge({ theme, tone, borderColor, fontSize = "1rem", children }) {
     const base = {
         display: "inline-flex",
         alignItems: "center",
         gap: 6,
-        fontSize: "1rem",
-        fontWeight: 700,
+        fontSize,
+        fontWeight: 400,
         padding: "6px 10px",
         borderRadius: 5,
-        border: `2px solid ${theme.accent}`,
+        border: `2px solid ${borderColor ?? theme.accent}`,
         background: "transparent",
         color: theme.text,
     };
