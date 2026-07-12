@@ -8,6 +8,7 @@ import MarathonPlanner from "../training/MarathonPlanner.jsx";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 import { Button } from "../Buttons.jsx";
 import {ACTION_TYPES} from "../../utils/constants.js"; // ✅ reuse same Stripe singleton loader
+import { X } from "@phosphor-icons/react";
 
 const logoStyle = (size, theme) => ({
     flex: "0 0 auto",
@@ -241,7 +242,7 @@ export default function MarathonPurchaseModal({
                                         opacity: loading ? 0.6 : 1,
                                     }}
                                 >
-                                    ✕
+                                    <X size={18} weight="bold" aria-hidden />
                                 </p>
                             </div>
 

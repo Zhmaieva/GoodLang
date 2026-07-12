@@ -11,6 +11,7 @@ import React, {useEffect, useRef, useState} from "react";
 import {callAccountVerifyApi, callSendPromoCodeApi} from "../../services/api.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import { Button } from "../Buttons.jsx";
+import { Check } from "@phosphor-icons/react";
 
 export default function LandingPageTeacher({theme}) {
     const navigate = useNavigate();
@@ -763,7 +764,9 @@ html{ scroll-behavior: smooth; }
                             </div>
 
                             <div className="step">
-                                <div className="stepNum">✓</div>
+                                <div className="stepNum">
+                                    <Check size={20} weight="bold" aria-hidden />
+                                </div>
                                 <div>
                                     <p className="stepTitle">Done</p>
                                     <p className="stepText">

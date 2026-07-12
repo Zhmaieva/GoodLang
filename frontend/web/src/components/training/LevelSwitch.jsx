@@ -5,6 +5,7 @@ import { on, off } from "../../services/events.js";
 import { getTrainingLevel } from "../../services/trainingDirector.js";
 import { getPendingTrainingTaskKeys } from "../../services/trainingTaskCache.js";
 import { Button } from "../Buttons.jsx";
+import { GearSix, LockKey } from "@phosphor-icons/react";
 
 export default function LevelSwitch({
                                         level,
@@ -86,37 +87,12 @@ export default function LevelSwitch({
         return () => off("weeklyProgressUpdate", refresh);
     }, []);
 
-    // icons (same technique as TaskModeSwitch)
-    const iconBase = {
-        width: 12,
-        height: 12,
-        display: "inline-block",
+    const iconStyle = (isLocked) => ({
         flex: "0 0 auto",
         marginRight: ".5rem",
-        backgroundColor: "#fff",
-        maskRepeat: "no-repeat",
-        maskPosition: "center",
-        maskSize: "contain",
-        WebkitMaskRepeat: "no-repeat",
-        WebkitMaskPosition: "center",
-        WebkitMaskSize: "contain",
-    };
-
-    const gearIcon = {
-        ...iconBase,
-        maskImage: "url(/gear-icon.svg)",
-        WebkitMaskImage: "url(/gear-icon.svg)",
-        transform: "rotate(30deg) scale(2)",
+        transform: isLocked ? "scale(1.15)" : "rotate(30deg) scale(1.15)",
         transformOrigin: "center",
-    };
-
-    const lockIcon = {
-        ...iconBase,
-        maskImage: "url(/lock-icon.svg)",
-        WebkitMaskImage: "url(/lock-icon.svg)",
-        transform: "scale(1.5)",
-        transformOrigin: "center",
-    };
+    });
 
     const wrap = {
         display: "flex",
@@ -268,7 +244,11 @@ export default function LevelSwitch({
                     }}
                 >
                     {/* ✅ same icons logic: show only when collapsed */}
-                    {!expanded && <span style={isCalibrationNow ? lockIcon : gearIcon} aria-hidden />}
+                    {!expanded && (
+                        isCalibrationNow
+                            ? <LockKey size={18} weight="bold" style={iconStyle(true)} aria-hidden />
+                            : <GearSix size={18} weight="bold" style={iconStyle(false)} aria-hidden />
+                    )}
 
                     {getLabel(label)}
                     {isOptionPending(value) && <LevelPendingLoader />}

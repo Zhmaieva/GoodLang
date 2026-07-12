@@ -1246,11 +1246,11 @@ export const RULE_PAGE_TOO_VERY = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>It’s too cold for me, I like it.</em> → ✅ <strong>It’s very cold, but I like it.</strong>",
-                "❌ <em>This coffee is very hot to drink.</em> → ✅ <strong>This coffee is too hot to drink.</strong>",
-                "❌ <em>She is too beautiful.</em> → ✅ <strong>She is very beautiful.</strong>",
-                "❌ <em>The bag is very heavy to carry.</em> → ✅ <strong>The bag is too heavy to carry.</strong>",
-                "❌ <em>It’s too interesting!</em> → ✅ <strong>It’s very interesting!</strong>"
+                "<span style='font-weight: 350'>× It’s too cold for me, I like it.</span> → <span style='font-weight: 700;'>It’s very cold, but I like it.</span>",
+                "<span style='font-weight: 350'>× This coffee is very hot to drink.</span> → <span style='font-weight: 700;'>This coffee is too hot to drink.</span>",
+                "<span style='font-weight: 350'>× She is too beautiful.</span> → <span style='font-weight: 700;'>She is very beautiful.</span>",
+                "<span style='font-weight: 350'>× The bag is very heavy to carry.</span> → <span style='font-weight: 700;'>The bag is too heavy to carry.</span>",
+                "<span style='font-weight: 350'>× It’s too interesting!</span> → <span style='font-weight: 700;'>It’s very interesting!</span>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Too / Very)" }
@@ -1968,7 +1968,7 @@ export const RULE_PAGE_COMPARATIVES = {
         {
             type: "forms",
             title: "Forming comparatives",
-            headers: ["Adjective type", "Form", "Example", "Meaning", "Note"],
+            headers: ["Adjective type", "Form", "Example", "Meaning"],
             rows: [
                 [
                     "Short (1 syllable)",

@@ -6,42 +6,8 @@ import { getPdfDownloads, setPaymentIntent } from "../../services/dataService.js
 import { callAccountVerifyApi } from "../../services/api.js"; // ✅ optional analytics; safe to keep
 import { ACTION_TYPES } from "../../utils/constants.js";
 import { Button } from "../Buttons.jsx";
-import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";      // ✅ optional analytics
-
-// light copy of logo style to match DownloadLimitModal design
-const logoStyle = (size, theme) => ({
-    flex: "0 0 auto",
-    width: size,
-    height: size,
-    borderRadius: 12,
-    background: theme.accent,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#fff",
-    fontWeight: 800,
-    fontSize: size * 0.45,
-    boxShadow: `0 2px 0 ${theme.accentDark}`,
-});
-
-// tiny masked icon helper (same technique you use in switches)
-const makeMaskIcon = (url, size = 18, color = "rgba(0,0,0,0.55)", scale = 1.2) => ({
-    width: size,
-    height: size,
-    display: "inline-block",
-    flex: "0 0 auto",
-    backgroundColor: color,
-    maskRepeat: "no-repeat",
-    maskPosition: "center",
-    maskSize: "contain",
-    WebkitMaskRepeat: "no-repeat",
-    WebkitMaskPosition: "center",
-    WebkitMaskSize: "contain",
-    maskImage: `url(${url})`,
-    WebkitMaskImage: `url(${url})`,
-    transform: `scale(${scale})`,
-    transformOrigin: "center",
-});
+import { Check, LockKey } from "@phosphor-icons/react";
+import ModalShell, { modalShellTokens } from "./ModalShell.jsx";
 
 const isPaidStatus = (status) => status === "paid" || status === "attention";
 
@@ -61,7 +27,6 @@ export default function PdfTypeModal({
                                      }) {
     const [selected, setSelected] = useState(defaultValue);
     const [hovered, setHovered] = useState(null);
-    const [btnHovered, setBtnHovered] = useState(false);
     const [loading, setLoading] = useState(false);
 
     // paid upsell modal (for locked option)
@@ -73,22 +38,11 @@ export default function PdfTypeModal({
     const paid = isPaidStatus(account?.status);
     const hasEmail = !!account?.email;
 
-    const lockScroll = () => {
-        disableBodyScroll(document.querySelector('#pdf-type-modal'));
-    }
-
-    const unlockScroll = () => {
-        clearAllBodyScrollLocks();
-        enableBodyScroll(document.querySelector('#pdf-type-modal'));
-    }
-
     useEffect(() => {
         if (!open) return;
 
-        lockScroll();
         setSelected(defaultValue);
         setHovered(null);
-        setBtnHovered(false);
         setLoading(false);
         setLimitOpen(false);
         setLoginOpen(false);
@@ -132,88 +86,47 @@ export default function PdfTypeModal({
         width: 18,
         height: 18,
         borderRadius: 999,
-        border: `2px solid ${isActive ? theme.green : "rgba(0,0,0,0.35)"}`,
+        border: `2px solid ${isActive ? "#000" : "rgba(0,0,0,0.45)"}`,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         flex: "0 0 auto",
+        marginTop: 2,
     });
 
     const radioDotStyle = (isActive) => ({
         width: 10,
         height: 10,
         borderRadius: 999,
-        background: isActive ? theme.green : "transparent",
+        background: isActive ? "#000" : "transparent",
     });
-
-    const lockIcon = makeMaskIcon("/lock-icon.svg", 18, "rgba(0,0,0,0.45)", 1.25);
 
     const cardStyle = (isActive, isHover, locked) => ({
         width: "100%",
         textAlign: "left",
-        borderRadius: theme.radius * 0.9,
-        border: `2px solid ${
-            locked ? "rgba(0,0,0,0.10)" : isActive ? theme.green : "rgba(0,0,0,0.12)"
-        }`,
-        background: locked
-            ? "rgba(0,0,0,0.03)"
-            : isActive
-                ? "rgba(75,163,110,0.14)"
-                : "rgba(0,0,0,0.04)",
+        borderRadius: modalShellTokens.optionRadius,
+        border: `${modalShellTokens.optionBorderWidth}px solid #000`,
+        background: isActive ? theme.accent : "transparent",
         padding: "14px 14px",
         display: "flex",
         gap: 12,
         alignItems: "flex-start",
         cursor: loading || locked ? "default" : "pointer",
-        opacity: loading ? 0.7 : 1,
+        opacity: loading || locked ? 0.7 : 1,
         filter: "none",
-        transform: !loading && !locked && isHover ? "translateY(1px)" : "none",
-        transition: "transform 120ms ease",
+        transition: "background-color 120ms ease, border-color 120ms ease",
     });
 
     const mainButtonStyle = {
-        appearance: "none",
-        padding: "12px 16px",
-        fontWeight: 800,
-        fontSize: "clamp(0.95rem, 3.5vw, 1.05rem)",
-        lineHeight: 1,
-        borderRadius: 999,
-        background: loading ? theme.accentDark : theme.accent,
-        color: "#fff",
-        border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: 'var(--font-family-base)',
-        whiteSpace: "nowrap",
-        opacity: loading ? 0.75 : 1,
-        transform: btnHovered && !loading ? "translateY(1px)" : "none",
-        filter: btnHovered && !loading ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
-        cursor: loading ? "not-allowed" : "pointer",
+        backgroundColor: theme.accent,
         width: "100%",
+        flex: 1,
+        boxSizing: "border-box",
     };
 
-    const unlockBtnStyle = (isHover) => ({
-        appearance: "none",
-        padding: "8px 12px",
-        fontWeight: 900,
-        fontSize: "0.95rem",
-        lineHeight: 1,
-        borderRadius: 999,
-        background: loading ? theme.greenDark : theme.green,
-        color: "#fff",
-        border: "2px solid rgba(0,0,0,0.18)",
-        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: 'var(--font-family-base)',
-        whiteSpace: "nowrap",
-        cursor: "pointer",
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 8,
-        filter: isHover ? "brightness(0.95)" : "none",
-        transform: isHover ? "translateY(1px)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
+    const unlockBtnStyle = {
         marginTop: 10,
-    });
+    };
 
     // ✅ register block styles (embedded, no extra modal)
     const infoBoxStyle = {
@@ -284,113 +197,17 @@ export default function PdfTypeModal({
                 }}
             />
 
-            <div
-                style={{
-                    position: "fixed",
-                    inset: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    zIndex: 9998,
-                    paddingBottom: "env(safe-area-inset-bottom)",
-                    paddingTop: "env(safe-area-inset-top)",
-                    backdropFilter: "blur(6px)",
-                    WebkitBackdropFilter: "blur(6px)",
-                }}
-                onClick={() => {
-                    if (loading) return;
-                    if (limitOpen || loginOpen) return;
-                    unlockScroll();
-                    onClose();
-                }}
+            <ModalShell
+                open={open}
+                id="pdf-type-modal"
+                theme={theme}
+                title="Обери форму завдань"
+                subtitle={ruleLabel}
+                onClose={onClose}
+                closeDisabled={loading || limitOpen || loginOpen}
+                hidden={limitOpen || loginOpen}
             >
-                <div
-                    id={'pdf-type-modal'}
-                    style={{
-                        background: theme.bg,
-                        padding: "28px",
-                        paddingTop: 0,
-                        borderRadius: theme.radius * 1.2,
-                        border: `4px solid ${theme.accent}`,
-                        width: "90%",
-                        maxWidth: 520,
-                        textAlign: "center",
-                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                        display: limitOpen || loginOpen ? "none" : "block",
-                    }}
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <div style={{display: "flex", justifyContent: "space-between"}}>
-                        <div />
-                        <p
-                            onClick={() => {
-                                if (loading) return;
-                                unlockScroll();
-                                onClose();
-                            }}
-                            style={{
-                                marginBottom: 0,
-                                marginTop: 4,
-                                marginRight: -16,
-                                color: theme.accent,
-                                fontSize: "1.3rem",
-                                fontWeight: 500,
-                                textAlign: "left",
-                                cursor: loading ? "not-allowed" : "pointer",
-                                userSelect: "none",
-                                WebkitUserSelect: "none",
-                                WebkitTouchCallout: "none",
-                                opacity: loading ? 0.6 : 1,
-                            }}
-                        >
-                            ✕
-                        </p>
-                    </div>
-
-                    <div
-                        style={{
-                            marginLeft: 0,
-                            marginBottom: 16,
-                            display: "flex",
-                            justifyContent: "space-between",
-                        }}
-                    >
-                        <div style={{display: "flex", flexDirection: "column"}}>
-                            <h2
-                                style={{
-                                    textAlign: "left",
-                                    marginBottom: 0,
-                                    marginTop: 0,
-                                    color: theme.text,
-                                    fontSize: "1.5rem",
-                                    fontWeight: 800,
-                                }}
-                            >
-                                Обери форму завдань
-                            </h2>
-
-                            <p
-                                style={{
-                                    marginBottom: 0,
-                                    marginTop: 8,
-                                    marginLeft: 0,
-                                    color: theme.text,
-                                    fontWeight: 800,
-                                    opacity: 0.55,
-                                    fontSize: "1rem",
-                                    textAlign: "left",
-                                }}
-                            >
-                                {ruleLabel}
-                            </p>
-                        </div>
-
-                        <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                            <div style={logoStyle(56, theme)}>GL</div>
-                        </div>
-                    </div>
-
-                    <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 18}}>
+                    <div style={{display: "flex", flexDirection: "column", gap: 12}}>
                         {options.map((o) => {
                             const locked = isLockedOption(o);
                             const isActive = selected === o.id;
@@ -427,17 +244,18 @@ export default function PdfTypeModal({
                                             }}
                                             aria-hidden
                                         >
-                                            <span style={lockIcon} />
+                                            <LockKey size={22} weight="bold" color="rgba(0,0,0,0.45)" aria-hidden />
                                         </div>
                                     )}
 
                                     <div style={{display: "flex", flexDirection: "column", gap: 4, width: "100%"}}>
                                         <div
                                             style={{
-                                                fontWeight: 900,
-                                                color: theme.text,
+                                                fontWeight: 700,
+                                                color: "#000",
                                                 fontSize: "1.05rem",
                                                 opacity: locked ? 0.75 : 1,
+                                                lineHeight: 1.15,
                                             }}
                                         >
                                             {o.title}
@@ -445,10 +263,12 @@ export default function PdfTypeModal({
 
                                         <div
                                             style={{
-                                                fontWeight: 800,
-                                                color: theme.text,
-                                                opacity: locked ? 0.45 : 0.55,
+                                                fontWeight: 400,
+                                                color: "#000",
+                                                opacity: locked ? 0.65 : 1,
                                                 fontSize: "0.95rem",
+                                                lineHeight: 1.15,
+                                                marginTop: 0,
                                             }}
                                         >
                                             {o.subtitle}
@@ -487,20 +307,25 @@ export default function PdfTypeModal({
 
                         {/* ✅ Register gate: show explanation + register button instead of Download */}
                         {mustRegisterToDownload ? (
-                            <div >
-
-                                <Button
-                                    onMouseEnter={() => setBtnHovered(true)}
-                                    onMouseLeave={() => setBtnHovered(false)}
-                                    disabled={loading}
-                                    style={{...mainButtonStyle}}
-                                    onClick={() => {
-                                        if (loading) return;
-                                        openLogin();
-                                    }}
-                                >
-                                    Увійти або зареєструватися
-                                </Button>
+                            <div>
+                                <div style={{ display: "flex",
+                                    width: "100%", marginTop: 0 }}>
+                                    <Button
+                                        variant="offset"
+                                        compact
+                                        fullWidth
+                                        shadowColor={theme.accent}
+                                        shadowOffset={5}
+                                        disabled={loading}
+                                        style={mainButtonStyle}
+                                        onClick={() => {
+                                            if (loading) return;
+                                            openLogin();
+                                        }}
+                                    >
+                                        Увійти або зареєструватися
+                                    </Button>
+                                </div>
 
                                 <div
                                     style={{
@@ -516,37 +341,39 @@ export default function PdfTypeModal({
                                 </div>
                             </div>
                         ) : (
-                            <Button
-                                onMouseEnter={() => setBtnHovered(true)}
-                                onMouseLeave={() => setBtnHovered(false)}
-                                disabled={loading}
-                                style={{...mainButtonStyle, marginTop: 10}}
-                                onClick={async () => {
-                                    try {
-                                        setLoading(true);
+                            <div style={{ display: "flex", marginTop: 0 }}>
+                                <Button
+                                    variant="offset"
+                                    compact
+                                    fullWidth
+                                    shadowColor={theme.accent}
+                                    shadowOffset={4}
+                                    disabled={loading}
+                                    style={mainButtonStyle}
+                                    onClick={async () => {
+                                        try {
+                                            setLoading(true);
 
-                                        // safety: if not paid and somehow selected locked option, force translations
-                                        //const safeSelected = selected;//(!paid && selected === "choose_variant") ? "translations" : selected;
+                                            // safety: if not paid and somehow selected locked option, force translations
+                                            //const safeSelected = selected;//(!paid && selected === "choose_variant") ? "translations" : selected;
 
-                                        await onConfirm(selected);
-                                    } finally {
-                                        setLoading(false);
-                                    }
-                                }}
-                            >
-                                {loading ? "Стягую..." : "Стягнути"}
-                            </Button>
+                                            await onConfirm(selected);
+                                        } finally {
+                                            setLoading(false);
+                                        }
+                                    }}
+                                >
+                                    {loading ? "Стягую..." : "Стягнути"}
+                                </Button>
+                            </div>
                         )}
                     </div>
-                </div>
-            </div>
+            </ModalShell>
         </>
     );
 }
 
 function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
-    const [h, setH] = useState(false);
-
     return (
         <div style={{marginTop: 6}}>
             <div
@@ -557,36 +384,23 @@ function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
                     opacity: 0.55,
                 }}
             >
-                ✓ Усі копії без вотермарку
+                <Check size={16} weight="bold" aria-hidden style={{ marginRight: 6, verticalAlign: "-2px" }} />
+                Усі копії без вотермарку
             </div>
 
             <Button
                 type="button"
-                onMouseEnter={() => setH(true)}
-                onMouseLeave={() => setH(false)}
+                variant="offset"
+                compact
+                shadowColor={theme.accent}
+                shadowOffset={0}
                 onClick={(e) => {
                     e.stopPropagation();
                     onOpenLimit();
                 }}
-                style={unlockBtnStyle(h)}
+                style={unlockBtnStyle}
             >
-        <span
-            aria-hidden
-            style={{
-                width: 14,
-                height: 14,
-                display: "inline-block",
-                backgroundColor: "#fff",
-                maskRepeat: "no-repeat",
-                maskPosition: "center",
-                maskSize: "contain",
-                WebkitMaskRepeat: "no-repeat",
-                WebkitMaskPosition: "center",
-                WebkitMaskSize: "contain",
-                maskImage: "url(/lock-icon.svg)",
-                WebkitMaskImage: "url(/lock-icon.svg)",
-            }}
-        />
+                <LockKey size={16} weight="bold" aria-hidden />
                 Оформити підписку
             </Button>
         </div>

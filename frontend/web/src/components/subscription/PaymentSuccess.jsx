@@ -6,6 +6,7 @@ import {setPaymentIntent} from "../../services/dataService.js";
 import {syncPrevAccountInfoToLS} from "../../services/marathonService.js";
 import {trackMetaEvent} from "../../services/gaService.js";
 import { Button } from "../Buttons.jsx";
+import { Check } from "@phosphor-icons/react";
 
 export default function PaymentSuccess() {
     const navigate = useNavigate();
@@ -136,7 +137,7 @@ export default function PaymentSuccess() {
                     }}>
                         {benefits.map((txt, i) => (
                             <li key={i}>
-                                <span style={{marginRight: 8, color: legacyGlobalStyling.accent, fontWeight: 700}}>✓</span>
+                                <Check size={16} weight="bold" color={legacyGlobalStyling.accent} aria-hidden style={{ marginRight: 8, verticalAlign: "-2px" }} />
                                 {txt}
                             </li>
                         ))}

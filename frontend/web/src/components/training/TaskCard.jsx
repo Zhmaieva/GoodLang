@@ -128,9 +128,9 @@ export default function TaskCard({
     const styles = {
         card: {
             background: CARD_BG,
-            border: "1px solid #6F625B",
+            border: "0px solid #6F625B",
             borderRadius: 5,
-            padding: isCompact ? 16 : 20,
+            padding: isCompact ? 0 : 0,
         },
 
         // ✅ header row
@@ -204,7 +204,7 @@ export default function TaskCard({
             height: 70,
             borderRadius: 5,
 
-            border: "1px solid #6F625B",
+            border: "1px solid #000",
             outline: "none",
             boxShadow: "none",
 

@@ -50,9 +50,9 @@ nav.actions{display:flex;gap:10px;flex-wrap:wrap}
 .trow:last-child{border-bottom:none}
 .rule-name{font-weight:700}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 10px;border-radius:5px;border:none;color:#fff}
-.badge.ok{background:#4F6F8F;color:#fff}
-.badge.warn{background:#C18A3D;color:#fff}
-.badge.bad{background:#B85C4A;color:#fff}
+.badge.ok{background:var(--accent);color:#fff}
+.badge.warn{background:#fe6124;color:#fff}
+.badge.bad{background:#fe2f31;color:#fff}
 .bar{height:10px;background:#C18A3D;border:none;border-radius:5px;position:relative;overflow:hidden}
 .bar > i{position:absolute;left:0;top:0;bottom:0;background:var(--accent)}
 
@@ -69,8 +69,8 @@ nav.actions{display:flex;gap:10px;flex-wrap:wrap}
 .queue-list{display:grid;grid-template-columns:1fr;gap:8px}
 .queue-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--bg);border:2px solid var(--accent);border-radius:5px;padding:10px;cursor:pointer}
 .queue-item .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:4px 8px;border-radius:5px;border:none}
-.chip.risk{background:#B85C4A;color:#fff}
-.chip.learn{background:#C18A3D;color:#fff}
+.chip.risk{background:#fe2f31;color:#fff}
+.chip.learn{background:#fe6124;color:#fff}
 .chip.new{background:#fff;color:#3a2a1d;border-color:var(--accent)}
 
 @media (max-width: 980px){

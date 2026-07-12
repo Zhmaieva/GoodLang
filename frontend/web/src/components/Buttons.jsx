@@ -4,7 +4,7 @@ import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
 const FONT_FAMILY = 'var(--font-family-base)';
 const DEFAULT_ACCENT = APP_ACCENT_COLOR;
 const DEFAULT_ACCENT_DARK = "#2d7fca";
-const DEFAULT_TEXT = "#33302E";
+const DEFAULT_TEXT = "#000";
 const DEFAULT_BG = APP_BACKGROUND_COLOR;
 const DEFAULT_BORDER = "#000";
 
@@ -106,7 +106,7 @@ function getVariantStyle({
             minWidth: isMobile ? "92px" : "120px",
             height: compact ? "40px" : "48px",
             padding: compact ? "8px 16px" : "13px 20px",
-            fontWeight: 600,
+            fontWeight: 700,
             fontSize: compact ? (isMobile ? "0.95rem" : "1rem") : isMobile ? "0.95rem" : "1.2rem",
             letterSpacing: compact ? "0.3px" : "0.5px",
             borderRadius: 5,

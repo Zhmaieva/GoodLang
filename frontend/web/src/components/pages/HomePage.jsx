@@ -13,6 +13,7 @@ import { getSavedTrainingLevel } from "../../services/trainingDirector.js";
 import { marathonService } from "../../services/marathonService.js";
 import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import { ArrowRight } from "@phosphor-icons/react";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -308,7 +309,12 @@ export default function HomePage({ theme }) {
                                             style={weakRuleButtonLayoutStyle(true)}
                                             onClick={handleAnalyticsClick}
                                         >
-                                            {!isMobile ? "View all rules →" : "All rules"}
+                                            {!isMobile ? (
+                                                <>
+                                                    View all rules
+                                                    <ArrowRight size={18} weight="bold" aria-hidden />
+                                                </>
+                                            ) : "All rules"}
                                         </Button>
                                     )}
 

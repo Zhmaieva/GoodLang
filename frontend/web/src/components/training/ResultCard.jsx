@@ -24,10 +24,10 @@ export default function ResultCard({
     const styles = {
         card: {
             background: CARD_BG,
-            border: `2px solid ${CARD_BORDER_IDLE}`,
+            border: `0px solid ${CARD_BORDER_IDLE}`,
             borderRadius: 5,
             boxShadow: CARD_SHADOW_IDLE,
-            padding: 20,
+            padding: 0,
         },
 
         title: {

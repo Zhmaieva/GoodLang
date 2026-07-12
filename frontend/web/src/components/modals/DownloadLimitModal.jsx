@@ -8,6 +8,7 @@ import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
 import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 import { Button } from "../Buttons.jsx";
+import { FilePdf, X } from "@phosphor-icons/react";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -260,7 +261,7 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                                 WebkitUserSelect: "none",
                                 WebkitTouchCallout: "none",
                             }}>
-                                ✕
+                                <X size={18} weight="bold" aria-hidden />
                             </p>
                         </div>
 
@@ -310,13 +311,12 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                                 gap: 12,
                             }}
                         >
-                            <img
-                                src="/pdf.png"   // ⬅️ поклади файл у /public
-                                alt="Preview of grammar rules"
-                                style={{
-                                    width: "100%",
-                                    maxWidth: 340,
-                                }}
+                            <FilePdf
+                                size={160}
+                                weight="duotone"
+                                color={theme.accent}
+                                aria-label="Preview of grammar rules"
+                                style={{ maxWidth: "100%" }}
                             />
 
                             <p

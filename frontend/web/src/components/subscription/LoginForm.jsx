@@ -7,7 +7,7 @@ import {
     callVerifyCodeApi
 } from "../../services/api.js";
 import TermsOfUseModal from "./TermsOfUseModal.jsx";
-import {getStripe, logoStyle} from "./LimitModal.jsx";
+import {getStripe} from "./LimitModal.jsx";
 import { useNavigate } from "react-router-dom";
 import { logError } from "../../services/logger.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
@@ -18,6 +18,7 @@ import {enableBodyScroll, disableBodyScroll} from 'body-scroll-lock';
 import {localizationService} from "../../localization/localizationService.js";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import { Button } from "../Buttons.jsx";
+import ModalShell from "../modals/ModalShell.jsx";
 
 export default function LoginForm({
                                       theme,
@@ -36,9 +37,6 @@ export default function LoginForm({
     const [cookieOpen, setCookieOpen] = useState(false);
     const [termsOpen, setTermsOpen] = useState(false);
     const [termsReadOnly, setTermsReadOnly] = useState(false);
-
-    // hover for Trainer-style button
-    const [btnHover, setBtnHover] = useState(false);
 
     const inputsRef = useRef([]);
     const checkoutRef = useRef(null);
@@ -71,54 +69,9 @@ export default function LoginForm({
         };
     }, [cookieOpen, termsOpen]);
 
-    const wrapperStyle = {
-        position: "fixed",
-        inset: 0,
-        width: "100%",
-        height: "100dvh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 9999,
-        paddingBottom: "env(safe-area-inset-bottom)",
-        paddingTop: "env(safe-area-inset-top)",
-        backdropFilter: "blur(6px)",
-        WebkitBackdropFilter: "blur(6px)",
-    };
-
-    const boxStyle = {
-        background: theme.bg,
-        padding: "28px",
-        borderRadius: theme.radius * 1.2,
-        border: `4px solid ${theme.accent}`,
-        width: "90%",
-        maxWidth: 520,
-        textAlign: "center",
-        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-        fontFamily: 'var(--font-family-base)',
-        lineHeight: 1.4,
-    };
-
-    // Trainer / LimitModal button style
     const mainButtonStyle = (disabled) => ({
-        appearance: "none",
-        padding: "10px 14px",
-        fontWeight: 800,
-        fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
-        lineHeight: 1,
-        borderRadius: 999,
-        background: disabled ? "#999" : theme.accent,
-        color: "#fff",
-        border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: 'var(--font-family-base)',
-        whiteSpace: "nowrap",
+        backgroundColor: disabled ? "#999" : theme.accent,
         opacity: disabled ? 0.7 : 1,
-        transform: btnHover && !disabled ? "translateY(1px)" : "none",
-        filter: btnHover && !disabled ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
-        cursor: disabled ? "not-allowed" : "pointer",
-        width: "100%",
     });
 
     // -----------------------------
@@ -436,92 +389,28 @@ export default function LoginForm({
     }, [step]);
 
     const closeDisabled = loading || isPaying;
+    const modalTitle = step === "email" ? "Enter your email" : "Enter the code from your email";
+    const modalSubtitle = step === "email" ? "You’ll receive a confirmation email" : `Code sent to: ${emailInput}`;
 
     return (
         <>
             {(!cookieOpen && !termsOpen) && (
-                <div id={"login-form"} style={wrapperStyle}
-                     onClick={(e) => {
-                         e.stopPropagation();
-                         unlockScroll();
-                         onClose();
-                     }}
+                <ModalShell
+                    id="login-form"
+                    theme={theme}
+                    title={modalTitle}
+                    subtitle={modalSubtitle}
+                    onClose={() => {
+                        unlockScroll();
+                        if (!closeDisabled) onClose();
+                    }}
+                    closeDisabled={closeDisabled}
+                    maxWidth={520}
                 >
-                    <div style={boxStyle} onClick={(e) => e.stopPropagation()}>
                         {!termsOpen && !isPaying && (
                             <div style={{display: "flex", flexDirection: "column", gap: 12}}>
                                 {step === "email" && (
                                     <>
-                                        <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
-                                            <div></div>
-
-                                            <p
-                                                onClick={() => {
-                                                    unlockScroll()
-                                                    if (!closeDisabled) onClose();
-                                                }}
-                                                style={{
-                                                    marginBottom: 16,
-                                                    marginTop: -22,
-                                                    marginLeft: 0,
-                                                    marginRight: -16,
-                                                    color: theme.accent,
-                                                    fontSize: "1.3rem",
-                                                    fontWeight: 500,
-                                                    textAlign: "left",
-                                                    cursor: closeDisabled ? "not-allowed" : "pointer",
-                                                    userSelect: "none",
-                                                    WebkitUserSelect: "none",
-                                                    WebkitTouchCallout: "none",
-                                                    opacity: closeDisabled ? 0.6 : 1,
-                                                }}
-                                            >
-                                                ✕
-                                            </p>
-                                        </div>
-
-                                        <div
-                                            style={{
-                                                marginLeft: 0,
-                                                marginBottom: 16,
-                                                display: "flex",
-                                                justifyContent: "space-between",
-                                            }}
-                                        >
-                                            <div style={{display: "flex", flexDirection: "column"}}>
-                                                <h2
-                                                    style={{
-                                                        textAlign: "left",
-                                                        marginBottom: 0,
-                                                        marginTop: 0,
-                                                        color: theme.text,
-                                                        fontSize: "18pt",
-                                                        fontWeight: 800,
-                                                    }}
-                                                >
-                                                    Enter your email
-                                                </h2>
-                                                <p
-                                                    style={{
-                                                        marginBottom: 0,
-                                                        marginTop: 8,
-                                                        marginLeft: 0,
-                                                        color: theme.text,
-                                                        fontWeight: 800,
-                                                        opacity: 0.55,
-                                                        fontSize: "1rem",
-                                                        textAlign: "left",
-                                                    }}
-                                                >
-                                                    You’ll receive a confirmation email
-                                                </p>
-                                            </div>
-
-                                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                                <div style={logoStyle(64)}>GL</div>
-                                            </div>
-                                        </div>
-
                                         <input
                                             className={"highlight-input"}
                                             type="email"
@@ -547,9 +436,12 @@ export default function LoginForm({
                                         />
 
                                         <Button
+                                            variant="offset"
+                                            compact
+                                            fullWidth
+                                            shadowColor={theme.accent}
+                                            shadowOffset={5}
                                             style={mainButtonStyle(loading)}
-                                            onMouseEnter={() => setBtnHover(true)}
-                                            onMouseLeave={() => setBtnHover(false)}
                                             onClick={handleEmailSubmit}
                                             disabled={loading}
                                         >
@@ -560,78 +452,6 @@ export default function LoginForm({
 
                                 {step === "code" && (
                                     <>
-                                        <div style={{display: "flex", height: "0", justifyContent: "space-between"}}>
-                                            <div></div>
-
-                                            <p
-                                                onClick={() => {
-                                                    unlockScroll()
-                                                    if (!closeDisabled) onClose();
-                                                }}
-                                                style={{
-                                                    marginBottom: 16,
-                                                    marginTop: -20,
-                                                    marginLeft: 0,
-                                                    marginRight: -18,
-                                                    color: theme.accent,
-                                                    fontSize: "1.3rem",
-                                                    fontWeight: 500,
-                                                    textAlign: "left",
-                                                    cursor: closeDisabled ? "not-allowed" : "pointer",
-                                                    userSelect: "none",
-                                                    WebkitUserSelect: "none",
-                                                    WebkitTouchCallout: "none",
-                                                    opacity: closeDisabled ? 0.6 : 1,
-                                                }}
-                                            >
-                                                ✕
-                                            </p>
-                                        </div>
-
-                                        <div
-                                            style={{
-                                                marginLeft: 0,
-                                                marginBottom: 16,
-                                                display: "flex",
-                                                justifyContent: "space-between",
-                                            }}
-                                        >
-                                            <div style={{display: "flex", flexDirection: "column"}}>
-                                                <h2
-                                                    style={{
-                                                        textAlign: "left",
-                                                        marginBottom: 0,
-                                                        marginTop: 0,
-                                                        color: theme.text,
-                                                        fontSize: "18pt",
-                                                        fontWeight: 800,
-                                                    }}
-                                                >
-                                                    Enter the code from your email
-                                                </h2>
-                                                <p
-                                                    style={{
-                                                        marginBottom: 0,
-                                                        marginTop: 8,
-                                                        marginLeft: 0,
-                                                        color: theme.text,
-                                                        fontSize: "16px",
-                                                        fontWeight: 700,
-                                                        textAlign: "left",
-                                                        overflow: "clip",
-                                                        maxWidth: 310,
-                                                        opacity: .7,
-                                                    }}
-                                                >
-                                                    Code sent to: {emailInput}
-                                                </p>
-                                            </div>
-
-                                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                                <div style={logoStyle(64)}>GL</div>
-                                            </div>
-                                        </div>
-
                                         <div
                                             className={'highlight-input-wrapper'}
                                             onPaste={handlePaste}
@@ -694,9 +514,12 @@ export default function LoginForm({
                                         </div>
 
                                         <Button
+                                            variant="offset"
+                                            compact
+                                            fullWidth
+                                            shadowColor={theme.accent}
+                                            shadowOffset={5}
                                             style={mainButtonStyle(loading)}
-                                            onMouseEnter={() => setBtnHover(true)}
-                                            onMouseLeave={() => setBtnHover(false)}
                                             onClick={handleVerify}
                                             disabled={loading}
                                         >
@@ -751,8 +574,7 @@ export default function LoginForm({
                                 />
                             </div>
                         )}
-                    </div>
-                </div>
+                </ModalShell>
             )}
 
             {termsOpen && !isPaying && (

@@ -5,6 +5,7 @@ import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 import {featureToggleService} from "../../services/featureToggleService.js";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import { CaretDown, CaretUp, Printer, SpinnerGap } from "@phosphor-icons/react";
 
 export default function RulesTable({
                                        account,
@@ -186,8 +187,8 @@ export default function RulesTable({
 
         return (
             <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 0.9, marginLeft: 6 }}>
-        <span style={{ opacity: upOpacity, fontSize: 12 }}>▲</span>
-        <span style={{ opacity: downOpacity, fontSize: 12 }}>▼</span>
+        <CaretUp size={12} weight="fill" style={{ opacity: upOpacity }} />
+        <CaretDown size={12} weight="fill" style={{ opacity: downOpacity }} />
       </span>
         );
     };
@@ -224,6 +225,25 @@ export default function RulesTable({
         background: isHover ? "#e5e5e5" : theme?.bg ?? APP_BACKGROUND_COLOR,
         transition: "background-color 120ms ease",
     });
+
+    const DownloadIcon = ({ idx, size }) => {
+        const downloading = downloadingRow === idx;
+
+        return downloading ? (
+            <SpinnerGap
+                size={size}
+                weight="bold"
+                aria-label="Loading"
+                style={{
+                    display: "block",
+                    animation: "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite",
+                    transformOrigin: "50% 50%",
+                }}
+            />
+        ) : (
+            <Printer size={size} weight="bold" aria-label="Print" style={{ display: "block" }} />
+        );
+    };
 
     function scrollRowToTop(idx, topOffset = 0) {
         const container = scrollRef.current;
@@ -412,20 +432,7 @@ export default function RulesTable({
                                                         style={iconBtn(idx === hover)}
                                                         title="Print rule"
                                                     >
-                                                        <img
-                                                            src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
-                                                            alt="Print"
-                                                            style={{
-                                                                width: 56,
-                                                                height: 56,
-                                                                display: "block",
-                                                                animation:
-                                                                    downloadingRow === idx
-                                                                        ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
-                                                                        : "none",
-                                                                transformOrigin: "50% 50%",
-                                                            }}
-                                                        />
+                                                        <DownloadIcon idx={idx} size={56} />
                                                     </div>
                                                 )}
                                             </div>
@@ -451,20 +458,7 @@ export default function RulesTable({
                                                         style={iconBtn(idx === hover)}
                                                         title="Print rule"
                                                     >
-                                                        <img
-                                                            src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
-                                                            alt="Print"
-                                                            style={{
-                                                                width: 56,
-                                                                height: 56,
-                                                                display: "block",
-                                                                animation:
-                                                                    downloadingRow === idx
-                                                                        ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
-                                                                        : "none",
-                                                                transformOrigin: "50% 50%",
-                                                            }}
-                                                        />
+                                                        <DownloadIcon idx={idx} size={26} />
                                                     </div>
                                                 )}
                                             </div>
@@ -499,23 +493,9 @@ export default function RulesTable({
                                         style={iconBtn(idx === hover)}
                                         title="Print rule"
                                     >
-                                        <img
-                                            key={downloadingRow === idx ? `loading-${idx}` : `print-${idx}`}
-                                            src={downloadingRow === idx ? "/loading-icon.svg" : "/print-icon.svg"}
-                                            alt={downloadingRow === idx ? "Loading" : "Print"}
-                                            style={{
-                                                position: "relative",
-                                                top: -4,
-                                                width: 38,
-                                                height: 38,
-                                                display: "block",
-                                                animation:
-                                                    downloadingRow === idx
-                                                        ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite"
-                                                        : "none",
-                                                transformOrigin: "50% 50%",
-                                            }}
-                                        />
+                                        <span style={{ position: "relative", top: -4, display: "block" }}>
+                                            <DownloadIcon idx={idx} size={28} />
+                                        </span>
                                     </div>
                                 </div>
 

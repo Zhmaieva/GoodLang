@@ -9,6 +9,16 @@ import { off, on } from "../../services/events.js";
 import { useNavigate } from "react-router-dom";
 import { LEVEL_MAP } from "./LevelKpi.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import {
+    AppleLogo,
+    Brain,
+    Desktop,
+    Flower,
+    House,
+    Note,
+    PencilSimple,
+    Tree,
+} from "@phosphor-icons/react";
 
 // ✅ marathon
 import { marathonService, readAccountInfoFromLS } from "../../services/marathonService.js";
@@ -149,14 +159,14 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         };
 
         const ICON_LANE = [
-            { src: "/house-icon.svg", gap: 15 },
-            { src: "/apple-icon.svg", gap: 15 },
-            { src: "/flower-icon.svg", gap: 15 },
-            { src: "/computer-icon.svg", gap: 15 },
-            { src: "/brain-icon.svg", gap: 15 },
-            { src: "/pencil-icon.svg", gap: 15 },
-            { src: "/note-icon.svg", gap: 15 },
-            { src: "/tree-icon.svg", gap: 15 },
+            { Icon: House, gap: 15 },
+            { Icon: AppleLogo, gap: 15 },
+            { Icon: Flower, gap: 15 },
+            { Icon: Desktop, gap: 15 },
+            { Icon: Brain, gap: 15 },
+            { Icon: PencilSimple, gap: 15 },
+            { Icon: Note, gap: 15 },
+            { Icon: Tree, gap: 15 },
         ];
 
         const cardStyleHeader = {
@@ -281,6 +291,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         const iconStyle = {
             width: 18,
             height: 18,
+            color: "#000",
             opacity: 0.88,
             filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.10))",
             flex: "0 0 auto",
@@ -367,7 +378,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                         return (
                             <React.Fragment key={`${prefix}-${i}`}>
                 <span style={{ display: "inline-flex", alignItems: "center", flex: "0 0 auto" }}>
-                  <img src={it.src} alt="" style={iconStyle} draggable={false} />
+                  <it.Icon size={18} weight="bold" style={iconStyle} aria-hidden />
                 </span>
 
                                 {i !== ICON_LANE.length - 1 ? (
@@ -585,22 +596,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                         </div>
 
                         <span style={tipBubbleRuntime} aria-hidden>
-              <span
-                  style={{
-                      width: 16,
-                      height: 16,
-                      backgroundColor: "#fff",
-                      transform: "scale(1.5)",
-                      maskImage: "url(/brain-icon.svg)",
-                      WebkitMaskImage: "url(/brain-icon.svg)",
-                      maskRepeat: "no-repeat",
-                      WebkitMaskRepeat: "no-repeat",
-                      maskPosition: "center",
-                      WebkitMaskPosition: "center",
-                      maskSize: "contain",
-                      WebkitMaskSize: "contain",
-                  }}
-              />
+              <Brain size={24} weight="bold" color="#fff" aria-hidden />
             </span>
                     </div>
                 </div>

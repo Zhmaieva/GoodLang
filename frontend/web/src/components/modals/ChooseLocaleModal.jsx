@@ -1,23 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { localizationService } from "../../localization/localizationService.js";
-import FeatureToggleService, {featureToggleService} from "../../services/featureToggleService.js";
+import { featureToggleService } from "../../services/featureToggleService.js";
 import { Button } from "../Buttons.jsx";
-
-const logoStyle = (size, theme) => ({
-    flex: "0 0 auto",
-    width: size,
-    height: size,
-    borderRadius: 12,
-    background: theme.accent,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#fff",
-    fontWeight: 800,
-    fontSize: size * 0.45,
-    boxShadow: `0 2px 0 ${theme.accentDark}`,
-});
+import ModalShell, { modalShellTokens } from "./ModalShell.jsx";
 
 export default function ChooseLocaleModal({
                                               open,
@@ -26,23 +11,11 @@ export default function ChooseLocaleModal({
     const [selected, setSelected] = useState(null);
     const [initial, setInitial] = useState(null);
     const [hovered, setHovered] = useState(null);
-    const [btnHovered, setBtnHovered] = useState(false);
 
     const options = useMemo(() => localizationService.getAvailableLocales(), [localizationService.getAvailableLocales()]);
 
     const hasDefinedLocale = !!localizationService.isLocaleDefined();
     const canClose = !!selected;
-
-    const lockScroll = () => {
-        // const _el = document.querySelector("#choose-locale-modal");
-        // if (_el) disableBodyScroll(_el);
-    };
-
-    const unlockScroll = () => {
-        // const _el = document.querySelector("#choose-locale-modal");
-        // clearAllBodyScrollLocks();
-        // if (_el) enableBodyScroll(_el);
-    };
 
     useEffect(() => {
         if (!open) return;
@@ -54,19 +27,12 @@ export default function ChooseLocaleModal({
         setSelected(_saved);
         setInitial(_saved);
         setHovered(null);
-        setBtnHovered(false);
-        lockScroll();
-
-        return () => {
-            unlockScroll();
-        };
     }, [open]);
 
     if (!open) return null;
 
     const handleClose = () => {
         if (!canClose) return;
-        unlockScroll();
         window.location.reload();
     }
 
@@ -74,7 +40,7 @@ export default function ChooseLocaleModal({
         width: 18,
         height: 18,
         borderRadius: 999,
-        border: `2px solid ${isActive ? theme.green : "rgba(0,0,0,0.35)"}`,
+        border: `2px solid ${isActive ? "#000" : "rgba(0,0,0,0.45)"}`,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -85,45 +51,27 @@ export default function ChooseLocaleModal({
         width: 10,
         height: 10,
         borderRadius: 999,
-        background: isActive ? theme.green : "transparent",
+        background: isActive ? "#000" : "transparent",
     });
 
     const cardStyle = (isActive, isHover) => ({
         width: "100%",
         textAlign: "left",
-        borderRadius: theme.radius * 0.9,
-        border: `2px solid ${isActive ? theme.green : "rgba(0,0,0,0.12)"}`,
-        background: isActive
-            ? "rgba(75,163,110,0.14)"
-            : "rgba(0,0,0,0.04)",
+        borderRadius: modalShellTokens.optionRadius,
+        border: `${modalShellTokens.optionBorderWidth}px solid #000`,
+        background: isActive ? theme.accent : "transparent",
         padding: "14px 14px",
         display: "flex",
         gap: 12,
         alignItems: "flex-start",
         cursor: "pointer",
-        transform: isHover ? "translateY(1px)" : "none",
-        transition: "transform 120ms ease",
+        filter: isHover && !isActive ? "brightness(0.98)" : "none",
+        transition: "background-color 120ms ease, filter 120ms ease",
     });
 
     const mainButtonStyle = {
-        appearance: "none",
-        padding: "12px 16px",
-        fontWeight: 800,
-        fontSize: "clamp(0.95rem, 3.5vw, 1.05rem)",
-        lineHeight: 1,
-        borderRadius: 999,
         display: canClose ? "initial" : "none",
-        background: canClose ? theme.accent : "rgba(0,0,0,0.18)",
-        color: "#fff",
-        border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-        fontFamily: 'var(--font-family-base)',
-        whiteSpace: "nowrap",
-        transform: btnHovered && canClose ? "translateY(1px)" : "none",
-        filter: btnHovered && canClose ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
-        cursor: canClose ? "pointer" : "not-allowed",
-        width: "100%",
+        backgroundColor: canClose ? theme.accent : "rgba(0,0,0,0.18)",
         marginTop: 10,
         opacity: canClose ? 1 : 0.8,
     };
@@ -149,102 +97,16 @@ export default function ChooseLocaleModal({
         return null;
 
     return (
-        <div
-            style={{
-                position: "fixed",
-                inset: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                zIndex: 9998,
-                paddingBottom: "env(safe-area-inset-bottom)",
-                paddingTop: "env(safe-area-inset-top)",
-                backdropFilter: "blur(6px)",
-                WebkitBackdropFilter: "blur(6px)",
-            }}
-            onClick={handleClose}
+        <ModalShell
+            open={open}
+            id="choose-locale-modal"
+            theme={theme}
+            title="Choose a language"
+            subtitle={selectedLocaleName || "What is your mother tongue"}
+            onClose={handleClose}
+            closeDisabled={!canClose}
+            maxWidth={520}
         >
-            <div
-                id="choose-locale-modal"
-                style={{
-                    background: theme.bg,
-                    padding: "28px",
-                    paddingTop: 0,
-                    borderRadius: theme.radius * 1.2,
-                    border: `4px solid ${theme.accent}`,
-                    width: "90%",
-                    maxWidth: 520,
-                    textAlign: "center",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                }}
-                onClick={(e) => e.stopPropagation()}
-            >
-                <div style={{display: "flex", justifyContent: "space-between"}}>
-                    <div/>
-                    <p
-                        onClick={handleClose}
-                        style={{
-                            marginBottom: 0,
-                            marginTop: 4,
-                            marginRight: -16,
-                            visibility: canClose ? "visible" : "hidden",
-                            color: canClose ? theme.accent : "rgba(0,0,0,0.28)",
-                            fontSize: "1.3rem",
-                            fontWeight: 500,
-                            textAlign: "left",
-                            cursor: canClose ? "pointer" : "not-allowed",
-                            userSelect: "none",
-                            WebkitUserSelect: "none",
-                            WebkitTouchCallout: "none",
-                        }}
-                    >
-                        ✕
-                    </p>
-                </div>
-
-                <div
-                    style={{
-                        marginLeft: 0,
-                        marginBottom: 16,
-                        display: "flex",
-                        justifyContent: "space-between",
-                    }}
-                >
-                    <div style={{display: "flex", flexDirection: "column"}}>
-                        <h2
-                            style={{
-                                textAlign: "left",
-                                marginBottom: 0,
-                                marginTop: 0,
-                                color: theme.text,
-                                fontSize: "1.5rem",
-                                fontWeight: 800,
-                            }}
-                        >
-                            Choose a language
-                        </h2>
-
-                        <p
-                            style={{
-                                marginBottom: 0,
-                                marginTop: 8,
-                                marginLeft: 0,
-                                color: theme.text,
-                                fontWeight: 800,
-                                opacity: 0.55,
-                                fontSize: "1rem",
-                                textAlign: "left",
-                            }}
-                        >
-                            {selectedLocaleName || "What is your mother tongue"}
-                        </p>
-                    </div>
-
-                    <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                        <div style={logoStyle(56, theme)}>GL</div>
-                    </div>
-                </div>
-
                 <div style={{display: "flex", flexDirection: "column"}}>
                     <div style={listOuterStyle}>
                         <div style={listWrapStyle}>
@@ -320,16 +182,18 @@ export default function ChooseLocaleModal({
                     )}
 
                     <Button
-                        onMouseEnter={() => setBtnHovered(true)}
-                        onMouseLeave={() => setBtnHovered(false)}
+                        variant="offset"
+                        compact
+                        fullWidth
+                        shadowColor={theme.accent}
+                        shadowOffset={5}
+                        disabled={!canClose}
                         style={mainButtonStyle}
                         onClick={handleClose}
                     >
                         Ok
                     </Button>
                 </div>
-
-            </div>
-        </div>
+        </ModalShell>
     );
 }

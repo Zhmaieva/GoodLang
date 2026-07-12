@@ -133,9 +133,9 @@ export const legacyGlobalStyling = {
     blue: "#3a6ea5",
     text: "#33302E",
     muted: "#a47856",
-    bad: "#ef476f",
-    warn: "#ffd166",
-    good: "#4ba36e",
+    bad: "#fe2f31",
+    warn: "#fe6124",
+    good: APP_ACCENT_COLOR,
     radius: 20,
 };
 

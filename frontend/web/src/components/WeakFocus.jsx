@@ -75,7 +75,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
         fontFamily: 'var(--font-family-base)',
         fontWeight: 700,
         color: "#fff",
-        background: "#B85C4A",
+        background: "#fe2f31",
         border: "none",
         borderRadius: 5,
         padding: "4px 10px",

@@ -1,287 +1,149 @@
-import React, {useEffect, useState} from "react";
-import {callManageSubscriptionApi} from "../../services/api.js";
+import React, { useState } from "react";
+import { callManageSubscriptionApi } from "../../services/api.js";
 import LoginModal from "./LoginModal.jsx";
-import {logoStyle} from "./LimitModal.jsx";
-import {fmtDate} from "../pages/analyticsLogic.js";
-import {marathonService} from "../../services/marathonService.js";
+import { fmtDate } from "../pages/analyticsLogic.js";
+import { marathonService } from "../../services/marathonService.js";
 import { Button } from "../Buttons.jsx";
-import {clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll} from "body-scroll-lock"; // ✅ adjust path if needed
-
+import { Check } from "@phosphor-icons/react";
+import ModalShell from "../modals/ModalShell.jsx";
 
 export default function AccountStatusModal({ accountInfo, theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
-    const [account, setAccount] = useState(accountInfo);
+    const [account] = useState(accountInfo);
 
     const onManage = async () => {
         try {
             const { url } = await callManageSubscriptionApi();
-            window.open(url, "_blank"); // open in new tab
+            window.open(url, "_blank");
         } catch (e) {
             console.error("Failed to open subscription management", e);
         }
-    }
-
-    const lockScroll = () => {
-        disableBodyScroll(document.querySelector('#acc-modal'));
-    }
-
-    const unlockScroll = () => {
-        clearAllBodyScrollLocks();
-        enableBodyScroll(document.querySelector('#acc-modal'));
-    }
-
-    const onCloseHandler = () => {
-        unlockScroll();
-        onClose();
-    }
-
-    useEffect(() => {
-        lockScroll();
-    });
-
-    if (!open) return null;
+    };
 
     const titleMap = {
         paid: "You're all set",
-        attention: "Your subscription is expiring"
+        attention: "Your subscription is expiring",
     };
 
-    const closeBtnStyle = {
-        appearance: "none",
-        padding: "10px 18px",
-        fontWeight: 800,
-        fontSize: 14,
-        lineHeight: 1,
-        borderRadius: 999,
-        fontFamily: 'var(--font-family-base)',
+    const subtitle = account?.isTrial
+        ? `Trial ends on ${fmtDate(account?.trialEndsOn)}`
+        : marathonService.isInMarathon()
+            ? "7-day marathon. Subscription ends when the marathon finishes or if you drop out."
+            : "Monthly subscription";
 
-        background: "#fffdf8",
-        color: theme.text,
-        border: `2px solid ${theme.accent}`,
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
-
-        cursor: "pointer",
-        transition: "transform 120ms ease",
+    const buttonStyle = {
+        backgroundColor: theme.accent,
     };
 
     return (
         <>
-            {
-                !loginModalOpen &&
-                <div id={'acc-modal'} onClick={onCloseHandler} style={{
-                    position: "fixed",
-                    top: 0, left: 0,
-                    width: "100%",
-                    inset: 0,
-                    height: "100dvh",
+            <ModalShell
+                open={open}
+                id="acc-modal"
+                theme={theme}
+                title={titleMap[status]}
+                subtitle={subtitle}
+                onClose={onClose}
+                hidden={loginModalOpen}
+                maxWidth={480}
+            >
+                {account?.email && (
+                    <p
+                        style={{
+                            marginTop: 0,
+                            marginBottom: 18,
+                            color: theme.text,
+                            fontSize: "1rem",
+                            fontWeight: 400,
+                            textAlign: "left",
+                        }}
+                    >
+                        {account.email}
+                    </p>
+                )}
 
-                    // ✅ blur background like MarathonPurchaseModal, but without darkening
-                    background: "rgba(255,255,255,0)",
-
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    zIndex: 9999,
-
-                    // ✅ blur underlying page
-                    backdropFilter: "blur(6px)",
-                    WebkitBackdropFilter: "blur(6px)",
-
-                    // ✅ safe-area padding (matches your other modals)
-                    paddingBottom: "env(safe-area-inset-bottom)",
-                    paddingTop: "env(safe-area-inset-top)",
-                }}>
-                    <div onClick={(e) => e.stopPropagation()} style={{
-                        background: theme.bg,
-                        padding: "36px",
-                        borderRadius: theme.radius * 1.2,
-                        border: `4px solid ${theme.accent}`,
-                        width: "90%",
-                        maxWidth: 480,
-                        textAlign: "center",
-                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                        gap: "12px"
-                    }}>
-                        <div style={{display: "flex", justifyContent: "space-between"}}>
-                            {
-                                account?.email &&
-                                <p style={{
-                                    marginBottom: 16,
-                                    marginTop: 0,
-                                    marginLeft: 0,
-                                    color: theme.muted,
-                                    fontSize: "1rem",
-                                    fontWeight: 500,
-                                    textAlign: "left",
-                                }}>
-                                    {account?.email}
-                                </p>
-                            }
-                            {
-                                !account?.email && <div></div>
-                            }
-                            <p onClick={onCloseHandler} style={{
-                                marginBottom: 16,
-                                marginTop: -22,
-                                marginLeft: 0,
-                                marginRight: -18,
-                                color: theme.accent,
-                                fontSize: "1.3rem",
-                                fontWeight: 500,
-                                textAlign: "left",
-                                cursor: "pointer",
-                                userSelect: "none",
-                                WebkitUserSelect: "none",
-                                WebkitTouchCallout: "none",
-                            }}>
-                                ✕
-                            </p>
-                        </div>
-
-                        <div style={{
-                            marginLeft: 0,
-                            marginBottom: 16,
-                            display: "flex",
-                            justifyContent: "space-between",
-                        }}>
-                            <div style={{display: "flex", flexDirection: "column", width: '100%'}}>
-                                <h2 style={{
-                                    textAlign: "left",
-                                    marginBottom: 0,
-                                    marginTop: 0,
-                                    color: theme.text,
-                                    fontSize: "1.5rem",
-                                    fontWeight: 800
-                                }}>
-                                    {titleMap[status]}
-                                </h2>
-                                {
-                                    !account?.isTrial && <p style={{
-                                        marginBottom: 16,
-                                        marginTop: 8,
-                                        marginLeft: 0,
-                                        color: theme.text,
-                                        fontSize: "1rem",
-                                        textAlign: "left",
-                                        opacity: 0.7,
-                                        fontWeight: 700,
-                                        maxWidth: '90%'
-                                    }}>
-                                        {
-                                            marathonService.isInMarathon()
-                                                ? "7-day marathon. Subscription ends when the marathon finishes or if you drop out."
-                                                : "Monthly subscription"
-                                        }
-                                    </p>
-                                }
-                                {
-                                    account?.isTrial && <p style={{
-                                        marginBottom: 16,
-                                        marginTop: 8,
-                                        marginLeft: 0,
-                                        color: theme.text,
-                                        fontSize: "1rem",
-                                        textAlign: "left"
-                                    }}>
-                                        Trial ends on {fmtDate(account?.trialEndsOn)}
-                                    </p>
-                                }
-                            </div>
-
-                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                <div style={logoStyle(64)}>GL</div>
-                            </div>
-                        </div>
-
-                        <div style={{textAlign: "left", margin: "0 0 28px 0", maxWidth: 280}}>
-                            <ul style={{
-                                listStyle: "none",
-                                padding: 0,
-                                margin: 0,
-                                lineHeight: "1.6",
-                                color: theme.text,
-                                fontSize: "16px",
-                                fontWeight: 500
-                            }}>
-                                <li>
-                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Unlimited tasks
-                                </li>
-                                <li>
-                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Cloud progress sync
-                                </li>
-                                <li>
-                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Access from all devices
-                                </li>
-                                <li>
-                                    <span style={{marginRight: 8, color: theme.accent, fontWeight: 700}}>✓</span>
-                                    Priority support
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div style={{
-                            display: "flex",
-                            marginTop: "12px",
-                            flexDirection: "column",
-                            gap: "12px",
-                            justifyContent: "space-between"
-                        }}>
-                            {!marathonService.isInMarathon() && (status === "paid" || status === "attention") && !account?.isTrial && (
-                                <Button
-                                    style={{
-                                        background: theme.accent,
-                                        boxShadow: `2px 2px 0 ${theme.accentDark}`,
-                                        color: "white",
-                                        padding: "10px 20px",
-                                        borderRadius: theme.radius,
-                                        border: "none",
-                                        cursor: "pointer",
-                                        fontSize: "1rem",
-                                        fontWeight: 700,
-                                        width: "100%",
-                                        opacity: 1
-                                    }}
-                                    onClick={onManage} // open stripe portal
-                                >
-                                    Manage subscription
-                                </Button>
-                            )}
-
-                            <Button onClick={() => {
-                                setLoginModalOpen(true)
-                            }} style={marathonService.isInMarathon() ? {
-                                background: theme.accent,
-                                boxShadow: `2px 2px 0 ${theme.accentDark}`,
-                                color: "white",
-                                padding: "10px 20px",
-                                borderRadius: theme.radius,
-                                border: "none",
-                                cursor: "pointer",
-                                fontSize: "1rem",
-                                fontWeight: 700,
-                                width: "100%",
-                                opacity: 1
-                            } : closeBtnStyle}>
-                                Sign in to another account
-                            </Button>
-                        </div>
-                    </div>
+                <div style={{ textAlign: "left", margin: "0 0 28px 0" }}>
+                    <ul
+                        style={{
+                            listStyle: "none",
+                            padding: 0,
+                            margin: 0,
+                            lineHeight: "1.6",
+                            color: theme.text,
+                            fontSize: "16px",
+                            fontWeight: 500,
+                        }}
+                    >
+                        {[
+                            "Unlimited tasks",
+                            "Cloud progress sync",
+                            "Access from all devices",
+                            "Priority support",
+                        ].map((item) => (
+                            <li key={item}>
+                                <Check
+                                    size={16}
+                                    weight="bold"
+                                    color={theme.accent}
+                                    aria-hidden
+                                    style={{ marginRight: 8, verticalAlign: "-2px" }}
+                                />
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-            }
-            {
-                loginModalOpen &&
+
+                <div
+                    style={{
+                        display: "flex",
+                        marginTop: "12px",
+                        flexDirection: "column",
+                        gap: "12px",
+                    }}
+                >
+                    {!marathonService.isInMarathon() && (status === "paid" || status === "attention") && !account?.isTrial && (
+                        <Button
+                            variant="offset"
+                            compact
+                            fullWidth
+                            shadowColor={theme.accent}
+                            shadowOffset={5}
+                            style={buttonStyle}
+                            onClick={onManage}
+                        >
+                            Manage subscription
+                        </Button>
+                    )}
+
+                    <Button
+                        variant="offset"
+                        compact
+                        fullWidth
+                        shadowColor={theme.accent}
+                        shadowOffset={5}
+                        onClick={() => setLoginModalOpen(true)}
+                        style={buttonStyle}
+                    >
+                        Sign in to another account
+                    </Button>
+                </div>
+            </ModalShell>
+
+            {loginModalOpen && (
                 <div onClick={(e) => e.stopPropagation()}>
-                    <LoginModal forceLogin={true} theme={theme} account={account} open={loginModalOpen}
-                                onClose={() => {
-                                    setLoginModalOpen(false);
-                                    onCloseHandler();
-                                }
-                                }/>
+                    <LoginModal
+                        forceLogin={true}
+                        theme={theme}
+                        account={account}
+                        open={loginModalOpen}
+                        onClose={() => {
+                            setLoginModalOpen(false);
+                            onClose?.();
+                        }}
+                    />
                 </div>
-            }
+            )}
         </>
     );
 }

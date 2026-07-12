@@ -22,6 +22,7 @@ import BrandHeader from "../BrandHeader.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
 import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import { ArrowLeft } from "@phosphor-icons/react";
 
 export default function AnalyticsPage({theme}) {
     // ----- State (mirrors your script) -----
@@ -177,7 +178,8 @@ export default function AnalyticsPage({theme}) {
                                          }}
                                          onClick={handlePracticeClick}
                                      >
-                                         ← Go to practice
+                                         <ArrowLeft size={18} weight="bold" aria-hidden />
+                                         Go to practice
                                      </Button>
                                  }
                     />

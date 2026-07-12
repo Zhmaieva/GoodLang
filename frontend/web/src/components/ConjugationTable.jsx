@@ -73,7 +73,13 @@ export default function ConjugationTable({ theme, headers = [], rows = [] }) {
                 {rows.map((row, i) => (
                     <tr key={i}>
                         {row.map((cell, j) => (
-                            <td key={j} style={thtdBase}>
+                            <td
+                                key={j}
+                                style={{
+                                    ...thtdBase,
+                                    borderBottom: i === rows.length - 1 ? "none" : thtdBase.borderBottom,
+                                }}
+                            >
                                 {cell}
                             </td>
                         ))}

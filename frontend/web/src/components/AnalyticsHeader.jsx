@@ -1,4 +1,5 @@
 import { Button } from "./Buttons.jsx";
+import { ArrowLeft } from "@phosphor-icons/react";
 
 export default function AnalyticsHeader({ onBack, onExport }) {
     return (
@@ -13,7 +14,10 @@ export default function AnalyticsHeader({ onBack, onExport }) {
                 </div>
             </div>
             <nav className="actions">
-                <Button className="btn secondary" onClick={onBack}>← Practice</Button>
+                <Button className="btn secondary" onClick={onBack}>
+                    <ArrowLeft size={18} weight="bold" aria-hidden />
+                    Practice
+                </Button>
                 {/*<Button className="btn" onClick={onExport}>Роздрукувати результати</Button>*/}
             </nav>
         </header>

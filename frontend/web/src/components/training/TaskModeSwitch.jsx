@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState} from "react";
 import { Button } from "../Buttons.jsx";
+import { GearSix, LockKey } from "@phosphor-icons/react";
 
 export default function TaskModeSwitch({
                                            theme,
@@ -70,39 +71,12 @@ export default function TaskModeSwitch({
 
     const lockedTooltipText = "Choose task format after the level assessment";
 
-    const iconBase = {
-        width: 12, // layout box stays small
-        height: 12,
-        display: "inline-block",
+    const iconStyle = (isLocked) => ({
         flex: "0 0 auto",
         marginRight: ".5rem",
-
-        // mask props (colorable)
-        backgroundColor: "#fff",
-        maskRepeat: "no-repeat",
-        maskPosition: "center",
-        maskSize: "contain",
-        WebkitMaskRepeat: "no-repeat",
-        WebkitMaskPosition: "center",
-        WebkitMaskSize: "contain",
-    };
-
-    const gearIcon = {
-        ...iconBase,
-        maskImage: "url(/gear-icon.svg)",
-        WebkitMaskImage: "url(/gear-icon.svg)",
-        transform: "rotate(30deg) scale(2)",
+        transform: isLocked ? "scale(1.15)" : "rotate(30deg) scale(1.15)",
         transformOrigin: "center",
-    };
-
-    const lockIcon = {
-        ...iconBase,
-        maskImage: "url(/lock-icon.svg)",
-        WebkitMaskImage: "url(/lock-icon.svg)",
-        // ✅ no rotate when locked
-        transform: "scale(1.5)",
-        transformOrigin: "center",
-    };
+    });
 
     const wrap = {
         display: "flex",
@@ -234,7 +208,11 @@ export default function TaskModeSwitch({
                         handleClick(value);
                     }}
                 >
-                    {!expanded && <span style={locked ? lockIcon : gearIcon} aria-hidden />}
+                    {!expanded && (
+                        locked
+                            ? <LockKey size={18} weight="bold" style={iconStyle(true)} aria-hidden />
+                            : <GearSix size={18} weight="bold" style={iconStyle(false)} aria-hidden />
+                    )}
 
                     {getLabel(label)}
 

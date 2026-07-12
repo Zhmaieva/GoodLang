@@ -7,6 +7,7 @@ import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.j
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
 import { Button } from "../Buttons.jsx";
+import { Check, X } from "@phosphor-icons/react";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -32,6 +33,16 @@ export const logoStyle = (size) => ({
     fontSize: size * 0.45,
     boxShadow: `0 2px 0 ${legacyGlobalStyling.accentDark}`,
 });
+
+const BenefitCheck = ({ color }) => (
+    <Check
+        size={16}
+        weight="bold"
+        color={color}
+        aria-hidden
+        style={{ marginRight: 8, verticalAlign: "-2px" }}
+    />
+);
 
 export default function LimitModal({
                                        subscribeIntent = false,
@@ -285,7 +296,7 @@ export default function LimitModal({
                                         WebkitTouchCallout: "none",
                                     }}
                                 >
-                                    ✕
+                                    <X size={18} weight="bold" aria-hidden />
                                 </p>
                             </div>
 
@@ -454,54 +465,30 @@ export default function LimitModal({
                                     {featurePdf && (
                                         <>
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 1800+ вправ у форматі PDF
                                             </li>
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Відсутність вотермарків на всіх PDF
                                             </li>
 
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Priority support
                                             </li>
 
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Unlimited training
                                             </li>
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Cloud progress saving
                                             </li>
 
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Cancel anytime
                                             </li>
                                         </>
@@ -510,29 +497,17 @@ export default function LimitModal({
                                     {!featurePdf && (
                                         <>
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Unlimited training
                                             </li>
 
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Cloud progress saving
                                             </li>
 
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Priority support
                                             </li>
 
@@ -546,11 +521,7 @@ export default function LimitModal({
                                             {/*</li>*/}
 
                                             <li>
-                                                <span style={{
-                                                    marginRight: 8,
-                                                    color: theme.accent,
-                                                    fontWeight: 700
-                                                }}>✓</span>
+                                                <BenefitCheck color={theme.accent} />
                                                 Cancel anytime
                                             </li>
                                         </>

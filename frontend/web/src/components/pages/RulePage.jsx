@@ -22,6 +22,7 @@ import {featureToggleService} from "../../services/featureToggleService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import { ArrowLeft, Printer, SpinnerGap } from "@phosphor-icons/react";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -354,18 +355,19 @@ export default function RulePage({ data, theme }) {
                                         style={iconBtn()}
                                         title="Друкувати правило"
                                     >
-                                        <div
-                                            aria-label={isDownloading ? "Loading" : "Print"}
-                                            style={{
-                                                width: 16,
-                                                height: 16,
-                                                backgroundColor: "#000",
-                                                WebkitMask: `url(${isDownloading ? "/loading-icon.svg" : "/print-icon.svg"}) no-repeat center / contain`,
-                                                mask: `url(${isDownloading ? "/loading-icon.svg" : "/print-icon.svg"}) no-repeat center / contain`,
-                                                animation: isDownloading ? "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite" : "none",
-                                                transformOrigin: "50% 50%",
-                                            }}
-                                        />
+                                        {isDownloading ? (
+                                            <SpinnerGap
+                                                size={18}
+                                                weight="bold"
+                                                aria-label="Loading"
+                                                style={{
+                                                    animation: "spin-pause .9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite",
+                                                    transformOrigin: "50% 50%",
+                                                }}
+                                            />
+                                        ) : (
+                                            <Printer size={18} weight="bold" aria-label="Print" />
+                                        )}
 
                                         <div>{!isDownloading ? "Print tasks" : "Preparing document..."}</div>
                                     </div>
@@ -380,7 +382,8 @@ export default function RulePage({ data, theme }) {
                                 style={standardButtonStyle}
                                 onClick={handleAnalyticsClick}
                             >
-                                ← Back to rules
+                                <ArrowLeft size={18} weight="bold" aria-hidden />
+                                Back to rules
                             </Button>
                         </>
                     }

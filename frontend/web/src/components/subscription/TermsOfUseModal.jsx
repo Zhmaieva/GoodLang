@@ -1,12 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import {
     callAccountInfoApi,
     callAccountVerifyApi,
     callDataSyncApi,
     callVerifyCodeApi
 } from "../../services/api.js";
-import { logoStyle } from "./LimitModal.jsx";
-import { useNavigate } from "react-router-dom";
 import { logError } from "../../services/logger.js";
 import { ensureAnalytics, trackMetaEvent, trackPageView } from "../../services/gaService.js";
 import CookieConsentModal from "../modals/CookieConsentModal.jsx";
@@ -14,6 +12,7 @@ import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/s
 import { ACTION_TYPES } from "../../utils/constants.js";
 import {localizationService} from "../../localization/localizationService.js";
 import { Button } from "../Buttons.jsx";
+import ModalShell from "../modals/ModalShell.jsx";
 
 export default function TermsOfUseModal({
                                             ruleToDownload = null,
@@ -26,8 +25,6 @@ export default function TermsOfUseModal({
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [isPaying, setIsPaying] = useState(false);
-    const [btnHover, setBtnHover] = useState(false);
-    const [secondaryHover, setSecondaryHover] = useState(false);
 
     const [cookieOpen, setCookieOpen] = useState(false);
 
@@ -116,97 +113,40 @@ export default function TermsOfUseModal({
         }
     }
 
-    const overlayStyle = {
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.35)",
-        backdropFilter: "blur(6px)",
-        WebkitBackdropFilter: "blur(6px)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 9999,
-    };
-
-    const cardStyle = {
-        background: theme.bg,
-        padding: 28,
-        borderRadius: theme.radius * 1.2,
-        border: `4px solid ${theme.accent}`,
-        width: "92%",
-        maxWidth: 560,
-        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-    };
-
     const termsBoxStyle = {
         textAlign: "left",
-        background: "#fffdf8",
-        borderRadius: theme.radius,
-        border: `3px solid ${theme.accent}`,
+        borderRadius: 5,
+        border: `2px solid ${theme.accent}`,
         padding: 14,
         maxHeight: 260,
         overflowY: "auto",
         lineHeight: 1.55,
         color: theme.text,
-        boxShadow: `2px 2px 0 ${theme.accentDark}`,
     };
 
     const primaryBtn = {
-        appearance: "none",
-        padding: "10px 14px",
-        fontWeight: 800,
-        fontSize: "1rem",
-        lineHeight: 1,
-        borderRadius: 999,
-        background: loading ? "#999" : theme.accent,
-        color: "#fff",
-        border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: 'var(--font-family-base)',
-        width: "100%",
-        cursor: loading ? "not-allowed" : "pointer",
+        backgroundColor: loading ? "#999" : theme.accent,
         opacity: loading ? 0.7 : 1,
-        transform: (btnHover || (readOnly && secondaryHover)) && !loading ? "translateY(1px)" : "none",
-        filter: (btnHover || (readOnly && secondaryHover)) && !loading ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
-    };
-
-    const secondaryBtn = {
-        appearance: "none",
-        padding: "10px 14px",
-        fontWeight: 800,
-        fontSize: "1rem",
-        lineHeight: 1,
-        borderRadius: 999,
-        background: "#fff",
-        color: theme.text,
-        border: "2px solid rgba(0,0,0,0.12)",
-        boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
-        fontFamily: 'var(--font-family-base)',
-        width: "100%",
-        cursor: loading ? "not-allowed" : "pointer",
-        opacity: loading ? 0.7 : 1,
-        transform: secondaryHover && !loading ? "translateY(1px)" : "none",
-        filter: secondaryHover && !loading ? "brightness(0.95)" : "none",
-        transition: "transform 120ms ease, filter 120ms ease",
     };
 
     return (
         <>
             {!cookieOpen && !isPaying && (
-                <div style={overlayStyle}>
-                    <div style={cardStyle} onClick={(e) => e.stopPropagation()}>
-                        <div style={{display: "flex", justifyContent: "space-between", marginBottom: 16}}>
-                            <div>
-                                <h2 style={{margin: 0, fontWeight: 800}}>Terms of use</h2>
-                                <p style={{marginTop: 8}}>
-                                    {readOnly
-                                        ? "Please review"
-                                        : "Before signing up, please confirm that you agree to the Terms of Use."}
-                                </p>
-                            </div>
-                            <div style={logoStyle(56, theme)}>GL</div>
-                        </div>
+                <ModalShell
+                    id="terms-modal"
+                    theme={theme}
+                    title="Terms of use"
+                    subtitle={
+                        readOnly
+                            ? "Please review"
+                            : "Before signing up, please confirm that you agree to the Terms of Use."
+                    }
+                    onClose={onClose}
+                    closeOnBackdrop={readOnly}
+                    hideClose={!readOnly}
+                    maxWidth={560}
+                    width="92%"
+                >
 
                         <div style={termsBoxStyle}>
                             <h3 style={{marginTop: 0}}>1. General Provisions</h3>
@@ -423,8 +363,11 @@ export default function TermsOfUseModal({
                         <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 16}}>
                             {!readOnly && (
                                 <Button
-                                    onMouseEnter={() => setBtnHover(true)}
-                                    onMouseLeave={() => setBtnHover(false)}
+                                    variant="offset"
+                                    compact
+                                    fullWidth
+                                    shadowColor={theme.accent}
+                                    shadowOffset={5}
                                     onClick={handleAgree}
                                     disabled={loading}
                                     style={primaryBtn}
@@ -434,19 +377,21 @@ export default function TermsOfUseModal({
                             )}
 
                             <Button
-                                onMouseEnter={() => setSecondaryHover(true)}
-                                onMouseLeave={() => setSecondaryHover(false)}
+                                variant="offset"
+                                compact
+                                fullWidth
+                                shadowColor={theme.accent}
+                                shadowOffset={5}
                                 onClick={onClose}
                                 disabled={loading}
-                                style={readOnly ? primaryBtn : secondaryBtn}
+                                style={primaryBtn}
                             >
                                 {readOnly ? "OK" : "Decline"}
                             </Button>
 
                             {error && <div style={{color: "red", fontWeight: 700}}>{error}</div>}
                         </div>
-                    </div>
-                </div>
+                </ModalShell>
             )}
 
             {cookieOpen && (

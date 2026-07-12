@@ -13,6 +13,7 @@ import {downloadCrossword} from "../../services/api.js"; // adjust path if neede
 import {useLocation} from "react-router-dom";
 import {ensureAnalytics, trackMetaCustomEvent, trackPageView} from "../../services/gaService.js";
 import { Button } from "../Buttons.jsx";
+import { SpinnerGap } from "@phosphor-icons/react";
 
 
 export default function LandingCrossword({theme}) {
@@ -545,10 +546,11 @@ html{ scroll-behavior: smooth; }
                         >
                             {isDownloading ? (
                                 <>
-                                    <img
-                                        src="/loading-icon.svg"
-                                        alt="Loading"
+                                    <SpinnerGap
+                                        size={18}
+                                        weight="bold"
                                         className="btnIcon btnIconSpinning"
+                                        aria-label="Loading"
                                     />
                                     Завантажую…
                                 </>
