@@ -63,7 +63,6 @@ export default function ConjugationTable({
         ...thtdBase,
         background: headerBackground ?? backgroundColor,
         textTransform: "uppercase",
-        fontSize: isMobile ? 10 : 12,
         color: headerColor ?? "#000",
         letterSpacing: ".06em",
         fontWeight: 700,

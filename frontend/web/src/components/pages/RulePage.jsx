@@ -178,7 +178,7 @@ export default function RulePage({ data, theme }) {
                 letterSpacing: ".06em",
                 textTransform: "uppercase",
                 fontWeight: 900,
-                color: theme.text,
+                color: "#000",
                 fontFamily: 'var(--font-family-base)',
             }}
         >
@@ -196,7 +196,6 @@ export default function RulePage({ data, theme }) {
         color: theme.text,
         fontFamily: 'var(--font-family-base)',
         fontWeight: 400,
-        opacity: 0.95,
     };
 
     const removeLeadingExampleIcon = (value) =>
@@ -343,7 +342,6 @@ export default function RulePage({ data, theme }) {
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
                                     fontWeight: 700,
-                                    opacity: 0.9,
                                 }}
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
@@ -385,7 +383,6 @@ export default function RulePage({ data, theme }) {
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
                                     fontWeight: 700,
-                                    opacity: 0.9,
                                 }}
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
