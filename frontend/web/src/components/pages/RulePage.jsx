@@ -26,6 +26,7 @@ import { ArrowLeft, Printer, SpinnerGap } from "@phosphor-icons/react";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
+    const BUTTON_OFFSET = 4;
 
     const [account, setAccount] = useState(null);
     const [hover, setHover] = useState(null);
@@ -318,6 +319,16 @@ export default function RulePage({ data, theme }) {
                     </>
                 );
 
+            case "form":
+            case "clarification":
+            case "short_answers":
+                return (
+                    <>
+                        <SectionTitle>{section.title}</SectionTitle>
+                        <div style={textStyle} dangerouslySetInnerHTML={{ __html: section.html }} />
+                    </>
+                );
+
             case "usage":
                 return (
                     <>
@@ -341,7 +352,7 @@ export default function RulePage({ data, theme }) {
                                     fontSize: ruleBodyFontSize,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
-                                    fontWeight: 700,
+                                    fontWeight: 400,
                                 }}
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
@@ -382,7 +393,7 @@ export default function RulePage({ data, theme }) {
                                     fontSize: ruleBodyFontSize,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
-                                    fontWeight: 700,
+                                    fontWeight: 400,
                                 }}
                                 dangerouslySetInnerHTML={{ __html: section.hint }}
                             />
@@ -452,7 +463,6 @@ export default function RulePage({ data, theme }) {
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
-        backgroundColor: "transparent",
         color: "#000",
         borderColor: "#000",
     };
@@ -474,8 +484,9 @@ export default function RulePage({ data, theme }) {
                             <Button
                                 variant="offset"
                                 compact
+                                isMobile={isMobile}
                                 shadowColor={FRAME_COLOR}
-                                shadowOffset={0}
+                                shadowOffset={BUTTON_OFFSET}
                                 style={standardButtonStyle}
                                 onClick={handleAnalyticsClick}
                             >
@@ -488,11 +499,14 @@ export default function RulePage({ data, theme }) {
 
                 <div style={sectionsCanvas}>
                     <section style={ruleContentStyle}>
-                        {data.sections.map((section, i) => (
-                            <div key={i} style={getRuleSectionStyle(i === 0)}>
-                                {renderSection(section)}
-                            </div>
-                        ))}
+                        {data.sections
+                            .map((section) => ({ section, rendered: renderSection(section) }))
+                            .filter(({ rendered }) => rendered)
+                            .map(({ section, rendered }, i) => (
+                                <div key={`${section.type}-${i}`} style={getRuleSectionStyle(i === 0)}>
+                                    {rendered}
+                                </div>
+                            ))}
                     </section>
                 </div>
 

@@ -134,6 +134,7 @@ export default function AnalyticsPage({theme}) {
     const handlePracticeClick = () => navigate('/');
 
     const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
+    const BUTTON_OFFSET = 4;
 
     const pageShellStyle = {
         width: "100%",
@@ -169,10 +170,11 @@ export default function AnalyticsPage({theme}) {
                                      <Button
                                          variant="offset"
                                          compact
+                                         isMobile={isMobile}
                                          shadowColor={FRAME_COLOR}
-                                         shadowOffset={0}
+                                         shadowOffset={BUTTON_OFFSET}
                                          style={{
-                                             maxWidth: 180,
+                                             maxWidth: 280,
                                              whiteSpace: "nowrap",
                                              overflow: "hidden",
                                              textOverflow: "ellipsis",

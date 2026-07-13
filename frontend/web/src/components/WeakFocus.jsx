@@ -5,6 +5,8 @@ import { getAllStatistics } from "../services/dataService.js";
 import { Button } from "./Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
 
+const BUTTON_OFFSET = 4;
+
 export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrainingComplete = (_) => {} }) {
     const navigate = useNavigate();
 
@@ -160,7 +162,7 @@ export default function WeakFocus({ rows, pct, statusOf, fmtDate, theme, onTrain
                             variant="offset"
                             compact
                             shadowColor={theme?.accent ?? APP_ACCENT_COLOR}
-                            shadowOffset={0}
+                            shadowOffset={BUTTON_OFFSET}
                             onClick={() => {
                                 const url = `/rule/${rule.rule}`;
                                 window.open(url, "_blank", "noopener,noreferrer");

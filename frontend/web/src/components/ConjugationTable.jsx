@@ -62,7 +62,6 @@ export default function ConjugationTable({
     const theadTh = {
         ...thtdBase,
         background: headerBackground ?? backgroundColor,
-        textTransform: "uppercase",
         color: headerColor ?? "#000",
         letterSpacing: ".06em",
         fontWeight: 700,

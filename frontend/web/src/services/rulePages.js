@@ -434,40 +434,24 @@ export const RULE_PAGE_SIMPLE_ADJ = {
             hint: "We do not say: ❌ <em>a house big</em>. In English, adjectives usually come before the noun."
         },
         {
-            type: "form",
+            type: "forms",
             title: "Form",
-            html: `
-        <ul>
-          <li>
-            <strong>Adj + noun:</strong><br>
-            <em>a small dog</em>, <em>a new phone</em>
-          </li>
-          <li>
-            <strong>Subject + be + adj:</strong><br>
-            <em>He is tall.</em> / <em>The coffee is hot.</em>
-          </li>
-          <li>
-            <strong>Very</strong> makes the adjective stronger:<br>
-            <em>very big</em>, <em>very nice</em>
-          </li>
-        </ul>
-      `
+            headers: ["Structure", "Example"],
+            rows: [
+                ["Adj + noun", "a small dog, a new phone"],
+                ["Subject + be + adj", "He is tall. / The coffee is hot."],
+                ["Very + adjective", "very big, very nice"]
+            ]
         },
         {
-            type: "clarification",
+            type: "forms",
             title: "Order of adjectives",
-            html: `
-        <p>
-          If there are two adjectives, the opinion usually comes before size or color:
-        </p>
-        <ul>
-          <li>✅ <em>a nice big house</em></li>
-          <li>✅ <em>a small red bag</em></li>
-        </ul>
-        <p>
-          (For A1 learners it is enough to remember: <strong>nice</strong> → <strong>big/small</strong> → <strong>color</strong>.)
-        </p>
-      `
+            headers: ["Rule", "Example"],
+            rows: [
+                ["Opinion usually comes before size or color", "a nice big house"],
+                ["Size usually comes before color", "a small red bag"],
+                ["Simple A1 order", "nice → big/small → color"]
+            ]
         },
         {
             type: "examples",
@@ -571,30 +555,15 @@ export const RULE_PAGE_YES_NO_Q = {
                 "Main rule: in questions the auxiliary verb comes first (Do/Does/Am/Is/Are/Can)."
         },
         {
-            type: "short_answers",
+            type: "forms",
             title: "Short answers",
-            html: `
-        <p>
-          Short answers repeat the same auxiliary verb:
-        </p>
-        <ul>
-          <li>
-            <strong>Do/Does:</strong><br>
-            ✅ <em>Yes, I do.</em> / ✅ <em>No, she doesn't.</em>
-          </li>
-          <li>
-            <strong>Am/Is/Are:</strong><br>
-            ✅ <em>Yes, he is.</em> / ✅ <em>No, I’m not.</em>
-          </li>
-          <li>
-            <strong>Can:</strong><br>
-            ✅ <em>Yes, we can.</em> / ✅ <em>No, I can’t.</em>
-          </li>
-        </ul>
-        <p>
-          In polite conversation, it is better not to answer only <em>Yes</em> or <em>No</em> — a short form is usually added.
-        </p>
-      `
+            headers: ["Auxiliary", "Short answer"],
+            rows: [
+                ["Do / Does", "Yes, I do. / No, she doesn't."],
+                ["Am / Is / Are", "Yes, he is. / No, I’m not."],
+                ["Can", "Yes, we can. / No, I can’t."]
+            ],
+            hint: "Short answers repeat the same auxiliary verb. In polite conversation, it is better not to answer only Yes or No."
         },
         {
             type: "examples",
@@ -737,20 +706,13 @@ export const RULE_PAGE_CAN_CANT = {
             ]
         },
         {
-            type: "clarification",
+            type: "forms",
             title: "Important",
-            html: `
-        <ul>
-          <li>
-            <strong>Can</strong> does not change with different subjects:<br>
-            ✅ I can / He can / They can
-          </li>
-          <li>
-            For past ability or a specific achievement, it is often better
-            to use <strong>was / were able to</strong>.
-          </li>
-        </ul>
-      `
+            headers: ["Point", "Example / note"],
+            rows: [
+                ["Can does not change with different subjects", "I can / He can / They can"],
+                ["Past ability or a specific achievement", "Use was / were able to"]
+            ]
         },
         {
             type: "mistakes",
@@ -797,24 +759,14 @@ export const RULE_PAGE_COUNT_UNCOUNT = {
             hint: "If you can add a number (1, 2, 3), the noun is countable."
         },
         {
-            type: "form",
+            type: "forms",
             title: "Form",
-            html: `
-        <ul>
-          <li>
-            <strong>Countable:</strong><br>
-            a book / two books / many books
-          </li>
-          <li>
-            <strong>Uncountable:</strong><br>
-            water / some water / much water
-          </li>
-          <li>
-            For uncountable nouns we often use containers:<br>
-            <em>a piece of</em>, <em>a glass of</em>, <em>a bottle of</em>
-          </li>
-        </ul>
-      `
+            headers: ["Noun type", "Example"],
+            rows: [
+                ["Countable", "a book / two books / many books"],
+                ["Uncountable", "water / some water / much water"],
+                ["Container phrases", "a piece of / a glass of / a bottle of"]
+            ]
         },
         {
             type: "examples",
@@ -872,25 +824,14 @@ export const RULE_PAGE_BE_FROM_NATIONALITY = {
             hint: "Both forms are correct: <em>I am from Ukraine</em> or <em>I am Ukrainian</em>."
         },
         {
-            type: "clarification",
+            type: "forms",
             title: "Important to remember",
-            html: `
-        <ul>
-          <li>
-            <strong>from</strong> + <strong>country / city</strong><br>
-            ✅ I am from Poland.<br>
-            ❌ I am from Polish.
-          </li>
-          <li>
-            <strong>be</strong> + <strong>nationality adjective</strong><br>
-            ✅ She is Italian.<br>
-            ❌ She is an Italian.
-          </li>
-          <li>
-            Nationality words <strong>do not use an article</strong>.
-          </li>
-        </ul>
-      `
+            headers: ["Pattern", "Correct", "Incorrect"],
+            rows: [
+                ["from + country / city", "I am from Poland.", "I am from Polish."],
+                ["be + nationality adjective", "She is Italian.", "She is an Italian."],
+                ["Nationality adjective", "No article", "an Italian"]
+            ]
         },
         {
             type: "examples",
@@ -2053,35 +1994,31 @@ export const RULE_PAGE_SUPERLATIVES = {
         {
             type: "forms",
             title: "Forming superlatives",
-            headers: ["Adjective type", "Form", "Example", "Meaning", "Note"],
+            headers: ["Adjective type", "Form", "Example", "Meaning"],
             rows: [
                 [
                     "Short (1 syllable)",
                     "the adj + -est",
                     "cheap → the cheapest",
                     "superlative form",
-                    "",
                 ],
                 [
                     "Ends with -y",
                     "y → iest",
                     "happy → the happiest",
                     "superlative form",
-                    "",
                 ],
                 [
                     "Long (2+ syllables)",
                     "the most + adj",
                     "the most interesting",
                     "superlative form",
-                    "",
                 ],
                 [
                     "Irregular",
                     "good → the best",
                     "bad → the worst",
                     "irregular forms",
-                    "",
                 ],
             ],
             hint:

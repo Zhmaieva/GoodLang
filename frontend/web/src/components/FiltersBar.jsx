@@ -10,6 +10,7 @@ const LEVELS = [
 ];
 
 const SELECTED_BUTTON_COLOR = "#000";
+const BUTTON_OFFSET = 4;
 
 export default function FiltersBar({
                                        filterLevel,
@@ -60,12 +61,13 @@ export default function FiltersBar({
                                 key={lvl.id}
                                 variant="offset"
                                 compact
+                                isMobile={isMobile}
                                 shadowColor={selected ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
-                                shadowOffset={0}
+                                shadowOffset={BUTTON_OFFSET}
                                 aria-pressed={selected}
                                 onClick={() => onLevelChange(lvl.id)}
                                 style={{
-                                    backgroundColor: selected ? SELECTED_BUTTON_COLOR : "transparent",
+                                    backgroundColor: selected ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR,
                                     color: selected ? "#fff" : "#000",
                                     borderColor: SELECTED_BUTTON_COLOR,
 
@@ -99,11 +101,12 @@ export default function FiltersBar({
                 <Button
                     variant="offset"
                     compact
+                    isMobile={isMobile}
                     shadowColor={showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
-                    shadowOffset={0}
+                    shadowOffset={BUTTON_OFFSET}
                     onClick={onToggleWeak}
                     style={{
-                        backgroundColor: showWeakOnly ? SELECTED_BUTTON_COLOR : "transparent",
+                        backgroundColor: showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR,
                         color: showWeakOnly ? "#fff" : "#000",
                         borderColor: SELECTED_BUTTON_COLOR,
                     }}

@@ -374,6 +374,8 @@ export default function PdfTypeModal({
 }
 
 function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
+    const BUTTON_OFFSET = 4;
+
     return (
         <div style={{marginTop: 6}}>
             <div
@@ -393,7 +395,7 @@ function LockedCta({ theme, onOpenLimit, unlockBtnStyle }) {
                 variant="offset"
                 compact
                 shadowColor={theme.accent}
-                shadowOffset={0}
+                shadowOffset={BUTTON_OFFSET}
                 onClick={(e) => {
                     e.stopPropagation();
                     onOpenLimit();
