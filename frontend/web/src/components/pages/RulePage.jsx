@@ -204,7 +204,7 @@ export default function RulePage({ data, theme }) {
 
     const cleanMistakeText = (value) =>
         String(value ?? "")
-            .replace(/❌|✅/g, "")
+            .replace(/❌|✅|×|✓/g, "")
             .replace(/<\/?(em|strong)>/g, "")
             .trim();
 
@@ -285,12 +285,12 @@ export default function RulePage({ data, theme }) {
     const formatMistakeBullet = (bullet) => {
         const raw = String(bullet ?? "");
 
-        if (!raw.includes("❌") && !raw.includes("✅")) {
+        if (!/[❌✅×✓]/u.test(raw)) {
             return raw;
         }
 
         const parts = raw.split("→");
-        const correctIndex = parts.findIndex((part, index) => index > 0 && part.includes("✅"));
+        const correctIndex = parts.findIndex((part, index) => index > 0 && /[✅✓]/u.test(part));
 
         if (correctIndex !== -1) {
             const wrong = cleanMistakeText(parts.slice(0, correctIndex).join(" → "));

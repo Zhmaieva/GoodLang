@@ -16,10 +16,10 @@ export const RULE_PAGE_TO_BE = {
             type: "usage",
             title: "When we use to be",
             badges: [
-                "🆔 Identity: <strong>I’m a student.</strong>",
-                "🙂 Description: <strong>She’s happy.</strong>",
-                "📍 Location: <strong>We’re at home.</strong>",
-                "🕰️ Time / weather / age: <strong>It’s Monday. I’m 7.</strong>",
+                "Identity: <strong>I’m a student.</strong>",
+                "Description: <strong>She’s happy.</strong>",
+                "Location: <strong>We’re at home.</strong>",
+                "Time / weather / age: <strong>It’s Monday. I’m 7.</strong>",
             ]},
         {
             type: "forms",
@@ -44,9 +44,9 @@ export const RULE_PAGE_TO_BE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I are / I is</em> → ✅ <strong>I am</strong>",
-                "❌ <em>I have 7 years</em> → ✅ <strong>I’m 7 (years old)</strong>",
-                "❌ <em>She very happy</em> → ✅ <strong>She is very happy</strong>",
+                "× <em>I are / I is</em> → ✓ <strong>I am</strong>",
+                "× <em>I have 7 years</em> → ✓ <strong>I’m 7 (years old)</strong>",
+                "× <em>She very happy</em> → ✓ <strong>She is very happy</strong>",
             ],
             note:
                 "In Present Simple, questions and negatives with <em>to be</em> are formed <strong>without</strong> the auxiliary verbs <em>do/does</em>.",
@@ -104,8 +104,8 @@ export const RULE_PAGE_THERE_IS_ARE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>There is three cats</em> → ✅ <strong>There are three cats</strong>.",
-                "❌ <em>There aren't any informations</em> → ✅ <strong>information</strong> (uncountable)."
+                "× <em>There is three cats</em> → ✓ <strong>There are three cats</strong>.",
+                "× <em>There aren't any informations</em> → ✓ <strong>information</strong> (uncountable)."
             ],
             note: "Remember subject–verb agreement (is — singular, are — plural)."
         },
@@ -155,8 +155,8 @@ export const RULE_PAGE_HAVE_HAVE_GOT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I have got two childrens</em> → ✅ <strong>children</strong> (irregular plural).",
-                "❌ Using 'have got' too often in formal writing."
+                "× <em>I have got two childrens</em> → ✓ <strong>children</strong> (irregular plural).",
+                "× Using 'have got' too often in formal writing."
             ],
             note: "In negatives you can use either 'haven't got' or 'don't have' (both are correct, but the style is slightly different)."
         },
@@ -207,8 +207,8 @@ export const RULE_PAGE_POSSESSIVE_S = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>the childrens' toys</em> → ✅ <strong>children's toys</strong>.",
-                "❌ <em>Johns car</em> → ✅ <strong>John's car</strong> (apostrophe required)."
+                "× <em>the childrens' toys</em> → ✓ <strong>children's toys</strong>.",
+                "× <em>Johns car</em> → ✓ <strong>John's car</strong> (apostrophe required)."
             ],
             note: "The apostrophe is important — it changes the meaning."
         },
@@ -309,8 +309,8 @@ export const RULE_PAGE_ARTICLES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I have the car</em> (when talking about any car) → ✅ <strong>I have a car</strong>.",
-                "❌ <em>an university</em> (the word starts with /juː/) → ✅ <strong>a university</strong>."
+                "× <em>I have the car</em> (when talking about any car) → ✓ <strong>I have a car</strong>.",
+                "× <em>an university</em> (the word starts with /juː/) → ✓ <strong>a university</strong>."
             ],
             note: "Remember: the sound at the beginning of the word matters, not the letter."
         },
@@ -352,8 +352,8 @@ export const RULE_PAGE_DEMONSTRATIVES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>this books</em> → ✅ <strong>these books</strong>.",
-                "❌ <em>those is</em> → ✅ <strong>those are</strong>."
+                "× <em>this books</em> → ✓ <strong>these books</strong>.",
+                "× <em>those is</em> → ✓ <strong>those are</strong>."
             ]
         },
         { type: "trainer", title: "Mini trainer (Demonstratives)" }
@@ -419,7 +419,7 @@ export const RULE_PAGE_SIMPLE_ADJ = {
         </p>
         <p>
           In English, adjectives <strong>do not change</strong> for gender or number:
-          ✅ <em>a big house</em> / ✅ <em>two big houses</em>
+          <em>a big house</em> / <em>two big houses</em>
         </p>
       `
         },
@@ -431,7 +431,7 @@ export const RULE_PAGE_SIMPLE_ADJ = {
                 "After <strong>to be</strong>: <strong>She is happy.</strong>",
                 "After feel / look / seem: <strong>I feel tired.</strong>"
             ],
-            hint: "We do not say: ❌ <em>a house big</em>. In English, adjectives usually come before the noun."
+            hint: "We do not say: <em>a house big</em>. In English, adjectives usually come before the noun."
         },
         {
             type: "forms",
@@ -514,9 +514,9 @@ export const RULE_PAGE_PRESENT_SIMPLE_FREQ = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He don't work</em> → ✅ <strong>He doesn't work</strong>",
-                "❌ <em>She doesn't works</em> → ✅ <strong>She doesn't work</strong>",
-                "❌ <em>Does she works?</em> → ✅ <strong>Does she work?</strong>"
+                "× <em>He don't work</em> → ✓ <strong>He doesn't work</strong>",
+                "× <em>She doesn't works</em> → ✓ <strong>She doesn't work</strong>",
+                "× <em>Does she works?</em> → ✓ <strong>Does she work?</strong>"
             ]
         },
 
@@ -547,9 +547,9 @@ export const RULE_PAGE_YES_NO_Q = {
             type: "usage",
             title: "How to form them",
             badges: [
-                "🟧 Present Simple: <strong>Do/Does + subject + verb?</strong>",
-                "🟧 To be: <strong>Am/Is/Are + subject + ...?</strong>",
-                "🟧 Can: <strong>Can + subject + verb?</strong>"
+                "Present Simple: <strong>Do/Does + subject + verb?</strong>",
+                "To be: <strong>Am/Is/Are + subject + ...?</strong>",
+                "Can: <strong>Can + subject + verb?</strong>"
             ],
             hint:
                 "Main rule: in questions the auxiliary verb comes first (Do/Does/Am/Is/Are/Can)."
@@ -576,8 +576,8 @@ export const RULE_PAGE_YES_NO_Q = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>You like pizza?</em> → ✅ <strong>Do you like pizza?</strong>",
-                "❌ <em>Does she likes tea?</em> → ✅ <strong>Does she like tea?</strong>"
+                "× <em>You like pizza?</em> → ✓ <strong>Do you like pizza?</strong>",
+                "× <em>Does she likes tea?</em> → ✓ <strong>Does she like tea?</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Yes/No questions)" }
@@ -616,8 +616,8 @@ export const RULE_PAGE_WH_Q = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Who did call you?</em> → ✅ <strong>Who called you?</strong>",
-                "❌ <em>What does make you happy?</em> → ✅ <strong>What makes you happy?</strong>"
+                "× <em>Who did call you?</em> → ✓ <strong>Who called you?</strong>",
+                "× <em>What does make you happy?</em> → ✓ <strong>What makes you happy?</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Wh-questions)" }
@@ -656,8 +656,8 @@ export const RULE_PAGE_IMPERATIVES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>You close the door.</em> → ✅ <strong>Close the door.</strong>",
-                "❌ <em>You don’t be late.</em> → ✅ <strong>Don’t be late.</strong>"
+                "× <em>You close the door.</em> → ✓ <strong>Close the door.</strong>",
+                "× <em>You don’t be late.</em> → ✓ <strong>Don’t be late.</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Imperatives)" }
@@ -718,8 +718,8 @@ export const RULE_PAGE_CAN_CANT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I can to swim.</em> → ✅ <strong>I can swim.</strong>",
-                "❌ <em>Do you can help me?</em> → ✅ <strong>Can you help me?</strong>"
+                "× <em>I can to swim.</em> → ✓ <strong>I can swim.</strong>",
+                "× <em>Do you can help me?</em> → ✓ <strong>Can you help me?</strong>"
             ]
         },
         {
@@ -781,9 +781,9 @@ export const RULE_PAGE_COUNT_UNCOUNT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Two advices.</em> → ✅ <strong>Two pieces of advice.</strong>",
-                "❌ <em>Many money.</em> → ✅ <strong>Much money.</strong>",
-                "❌ <em>These informations.</em> → ✅ <strong>This information.</strong>"
+                "× <em>Two advices.</em> → ✓ <strong>Two pieces of advice.</strong>",
+                "× <em>Many money.</em> → ✓ <strong>Much money.</strong>",
+                "× <em>These informations.</em> → ✓ <strong>This information.</strong>"
             ]
         },
         {
@@ -846,8 +846,8 @@ export const RULE_PAGE_BE_FROM_NATIONALITY = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>She is a Polish.</em> → ✅ <strong>She is Polish.</strong>",
-                "❌ <em>He is from the France.</em> → ✅ <strong>He is from France.</strong>"
+                "× <em>She is a Polish.</em> → ✓ <strong>She is Polish.</strong>",
+                "× <em>He is from the France.</em> → ✓ <strong>He is from France.</strong>"
             ]
         },
         {
@@ -875,10 +875,10 @@ export const RULE_PAGE_PRESENT_CONT_NOW = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "⏳ Action happening now: <strong>She is talking on the phone.</strong>",
-                "📅 Personal plans: <strong>I’m meeting my friend tomorrow.</strong>",
-                "🚂 Scheduled event (organized by you): <strong>We’re leaving at 6.</strong>",
-                "👥 Arrangement with someone: <strong>She’s having dinner with her parents on Sunday.</strong>",
+                "Action happening now: <strong>She is talking on the phone.</strong>",
+                "Personal plans: <strong>I’m meeting my friend tomorrow.</strong>",
+                "Scheduled event (organized by you): <strong>We’re leaving at 6.</strong>",
+                "Arrangement with someone: <strong>She’s having dinner with her parents on Sunday.</strong>",
             ],
             hint:
                 "Future time words in the context make Present Continuous refer to the future."
@@ -909,10 +909,10 @@ export const RULE_PAGE_PRESENT_CONT_NOW = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I read now.</em> → ✅ <strong>I am reading now.</strong>",
-                "❌ <em>She is liking this movie.</em> → ✅ <strong>She likes this movie.</strong>",
-                "❌ <em>I am living in Indonesia.</em> → ✅ <strong>I live in Indonesia.</strong>",
-                "❌ <em>I meet my friend tomorrow.</em> → ✅ <strong>I’m meeting my friend tomorrow.</strong>"
+                "× <em>I read now.</em> → ✓ <strong>I am reading now.</strong>",
+                "× <em>She is liking this movie.</em> → ✓ <strong>She likes this movie.</strong>",
+                "× <em>I am living in Indonesia.</em> → ✓ <strong>I live in Indonesia.</strong>",
+                "× <em>I meet my friend tomorrow.</em> → ✓ <strong>I’m meeting my friend tomorrow.</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Present Continuous)" }
@@ -964,11 +964,11 @@ export const RULE_PAGE_PREP_PLACE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>The picture is in the wall.</em> → ✅ <strong>The picture is on the wall.</strong>",
-                "❌ <em>She is in the bus.</em> → ✅ <strong>She is on the bus.</strong> (public transport is treated as a platform/service)",
-                "❌ <em>He is on the car.</em> → ✅ <strong>He is in the car.</strong>",
-                "❌ <em>The shop is in the corner.</em> → ✅ <strong>The shop is at the corner.</strong>",
-                "❌ <em>A bird is sitting on a tree.</em> → ✅ <strong>A bird is sitting in a tree.</strong> (inside branches)"
+                "× <em>The picture is in the wall.</em> → ✓ <strong>The picture is on the wall.</strong>",
+                "× <em>She is in the bus.</em> → ✓ <strong>She is on the bus.</strong> (public transport is treated as a platform/service)",
+                "× <em>He is on the car.</em> → ✓ <strong>He is in the car.</strong>",
+                "× <em>The shop is in the corner.</em> → ✓ <strong>The shop is at the corner.</strong>",
+                "× <em>A bird is sitting on a tree.</em> → ✓ <strong>A bird is sitting in a tree.</strong> (inside branches)"
             ]
         },
         { type: "trainer", title: "Mini trainer (Prepositions of place)" }
@@ -1019,14 +1019,14 @@ export const RULE_PAGE_PREP_TIME = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>In Monday</em> → ✅ <strong>On Monday</strong>",
-                "❌ <em>On 5 o’clock</em> → ✅ <strong>At 5 o’clock</strong>",
-                "❌ <em>At the morning</em> → ✅ <strong>In the morning</strong>",
-                "❌ <em>I will call you after 2 hours.</em> → ✅ <strong>I will call you in 2 hours.</strong>",
-                "❌ <em>I live here from 5 years.</em> → ✅ <strong>I have lived here for 5 years.</strong>",
-                "❌ <em>I study here since two years.</em> → ✅ <strong>I have studied here for two years.</strong>",
-                "❌ <em>We finished until 6 pm.</em> → ✅ <strong>We finished by 6 pm.</strong>",
-                "❌ <em>I was tired on the meeting.</em> → ✅ <strong>I was tired during the meeting.</strong>"
+                "× <em>In Monday</em> → ✓ <strong>On Monday</strong>",
+                "× <em>On 5 o’clock</em> → ✓ <strong>At 5 o’clock</strong>",
+                "× <em>At the morning</em> → ✓ <strong>In the morning</strong>",
+                "× <em>I will call you after 2 hours.</em> → ✓ <strong>I will call you in 2 hours.</strong>",
+                "× <em>I live here from 5 years.</em> → ✓ <strong>I have lived here for 5 years.</strong>",
+                "× <em>I study here since two years.</em> → ✓ <strong>I have studied here for two years.</strong>",
+                "× <em>We finished until 6 pm.</em> → ✓ <strong>We finished by 6 pm.</strong>",
+                "× <em>I was tired on the meeting.</em> → ✓ <strong>I was tired during the meeting.</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Prepositions of time)" }
@@ -1063,10 +1063,10 @@ export const RULE_PAGE_ORDINALS_DATES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>My birthday is on 21 May</em> → ✅ <strong>My birthday is on the 21st of May</strong>",
-                "❌ <em>Today is 1 May</em> → ✅ <strong>Today is the 1st of May</strong>",
-                "❌ <em>He was born in 3 July</em> → ✅ <strong>He was born on 3rd July</strong>",
-                "❌ <em>We met on May the five</em> → ✅ <strong>We met on May the fifth</strong>"
+                "× <em>My birthday is on 21 May</em> → ✓ <strong>My birthday is on the 21st of May</strong>",
+                "× <em>Today is 1 May</em> → ✓ <strong>Today is the 1st of May</strong>",
+                "× <em>He was born in 3 July</em> → ✓ <strong>He was born on 3rd July</strong>",
+                "× <em>We met on May the five</em> → ✓ <strong>We met on May the fifth</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Ordinals & dates)" }
@@ -1104,10 +1104,10 @@ export const RULE_PAGE_WOULD_LIKE_TO = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I would like eat.</em> → ✅ <strong>I would like to eat.</strong>",
-                "❌ <em>I want to order coffee.</em> → ✅ <strong>I would like to order coffee.</strong> (both are grammatically correct, but 'would like' is more polite)",
-                "❌ <em>I would like that you come.</em> → ✅ <strong>I would like you to come.</strong>",
-                "❌ <em>Would you like come with us?</em> → ✅ <strong>Would you like to come with us?</strong>"
+                "× <em>I would like eat.</em> → ✓ <strong>I would like to eat.</strong>",
+                "× <em>I want to order coffee.</em> → ✓ <strong>I would like to order coffee.</strong> (both are grammatically correct, but 'would like' is more polite)",
+                "× <em>I would like that you come.</em> → ✓ <strong>I would like you to come.</strong>",
+                "× <em>Would you like come with us?</em> → ✓ <strong>Would you like to come with us?</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Would like to)" }
@@ -1145,11 +1145,11 @@ export const RULE_PAGE_LETS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Let’s to go home.</em> → ✅ <strong>Let’s go home.</strong>",
-                "❌ <em>Let’s going to the park.</em> → ✅ <strong>Let’s go to the park.</strong>",
-                "❌ <em>Let us go?</em> → ✅ <strong>Let’s go.</strong>",
-                "❌ <em>Let’s we start now.</em> → ✅ <strong>Let’s start now.</strong>",
-                "❌ <em>Let’s don’t talk about it.</em> → ✅ <strong>Let’s not talk about it.</strong>"
+                "× <em>Let’s to go home.</em> → ✓ <strong>Let’s go home.</strong>",
+                "× <em>Let’s going to the park.</em> → ✓ <strong>Let’s go to the park.</strong>",
+                "× <em>Let us go?</em> → ✓ <strong>Let’s go.</strong>",
+                "× <em>Let’s we start now.</em> → ✓ <strong>Let’s start now.</strong>",
+                "× <em>Let’s don’t talk about it.</em> → ✓ <strong>Let’s not talk about it.</strong>"
             ]
         },
         { type: "trainer", title: "Mini trainer (Let's)" }
@@ -1217,11 +1217,11 @@ export const RULE_PAGE_PAST_SIMPLE = {
             type: "usage",
             title: "When we use Past Simple",
             badges: [
-                "📅 Completed actions: <strong>I watched a film yesterday.</strong>",
-                "🕰️ Specific time in the past: <strong>She visited Rome last year.</strong>",
-                "🔁 Sequence of actions: <strong>He came home, ate dinner and went to bed.</strong>",
-                "❓ Questions about the past: <strong>Did you call him?</strong>",
-                "🚫 Negatives in the past: <strong>I didn’t understand the question.</strong>",
+                "Completed actions: <strong>I watched a film yesterday.</strong>",
+                "Specific time in the past: <strong>She visited Rome last year.</strong>",
+                "Sequence of actions: <strong>He came home, ate dinner and went to bed.</strong>",
+                "Questions about the past: <strong>Did you call him?</strong>",
+                "Negatives in the past: <strong>I didn’t understand the question.</strong>",
             ],
             hint:
                 "Common time markers: <em>yesterday, last week, two days ago, in 2010, when I was a child</em>.",
@@ -1251,7 +1251,7 @@ export const RULE_PAGE_PAST_SIMPLE = {
                 ],
             ],
             hint:
-                "⚠️ The verb <strong>to be</strong> has its own Past Simple forms — <strong>was / were</strong> (without <strong>did</strong>). " +
+                "The verb <strong>to be</strong> has its own Past Simple forms — <strong>was / were</strong> (without <strong>did</strong>). " +
                 "For other verbs: <strong>V2 / V-ed</strong> appears only in affirmative sentences, while with <strong>did / didn’t</strong> we use <strong>V1</strong>.",
         },
         {
@@ -1266,10 +1266,10 @@ export const RULE_PAGE_PAST_SIMPLE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Did you finished?</em> → ✅ <strong>Did you finish?</strong>",
-                "❌ <em>He didn’t went</em> → ✅ <strong>He didn’t go</strong>",
-                "❌ <em>She not worked yesterday</em> → ✅ <strong>She didn’t work yesterday</strong>",
-                "❌ <em>Did you were at home?</em> → ✅ <strong>Were you at home?</strong>",
+                "× <em>Did you finished?</em> → ✓ <strong>Did you finish?</strong>",
+                "× <em>He didn’t went</em> → ✓ <strong>He didn’t go</strong>",
+                "× <em>She not worked yesterday</em> → ✓ <strong>She didn’t work yesterday</strong>",
+                "× <em>Did you were at home?</em> → ✓ <strong>Were you at home?</strong>",
             ],
         },
         {
@@ -1295,10 +1295,10 @@ export const RULE_PAGE_WAS_WERE = {
             type: "usage",
             title: "When we use was / were",
             badges: [
-                "🆔 Identity in the past: <strong>He was a teacher.</strong>",
-                "🙂 State/feelings: <strong>They were tired.</strong>",
-                "📍 Location: <strong>We were at home.</strong>",
-                "🕰️ Age/time in the past: <strong>I was 10 years old.</strong>",
+                "Identity in the past: <strong>He was a teacher.</strong>",
+                "State/feelings: <strong>They were tired.</strong>",
+                "Location: <strong>We were at home.</strong>",
+                "Age/time in the past: <strong>I was 10 years old.</strong>",
             ],
             hint:
                 "<strong>Was</strong>: I, he, she, it. <strong>Were</strong>: you, we, they.",
@@ -1338,8 +1338,8 @@ export const RULE_PAGE_WAS_WERE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Did you was?</em> → ✅ <strong>Were you?</strong>",
-                "❌ <em>He didn’t was</em> → ✅ <strong>He wasn’t</strong>",
+                "× <em>Did you was?</em> → ✓ <strong>Were you?</strong>",
+                "× <em>He didn’t was</em> → ✓ <strong>He wasn’t</strong>",
             ],
             note:
                 "Questions and negatives with <strong>was / were</strong> are formed <strong>without did / didn’t</strong>.",
@@ -1366,9 +1366,9 @@ export const RULE_PAGE_PAST_CONTINUOUS = {
             type: "usage",
             title: "When we use Past Continuous",
             badges: [
-                "⏱️ Action at a specific moment: <strong>At 7 p.m. I was cooking.</strong>",
-                "📚 Background action when something happened: <strong>He was reading when I called.</strong>",
-                "🔁 Annoying repeated action in the past (with always): <strong>She was always losing her keys.</strong>",
+                "Action at a specific moment: <strong>At 7 p.m. I was cooking.</strong>",
+                "Background action when something happened: <strong>He was reading when I called.</strong>",
+                "Annoying repeated action in the past (with always): <strong>She was always losing her keys.</strong>",
             ],
             hint:
                 "Often used with <em>when / while</em>: <strong>While I was studying, they were watching TV.</strong>",
@@ -1410,8 +1410,8 @@ export const RULE_PAGE_PAST_CONTINUOUS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>They was playing</em> → ✅ <strong>They were playing</strong>",
-                "❌ <em>Was you working?</em> → ✅ <strong>Were you working?</strong>",
+                "× <em>They was playing</em> → ✓ <strong>They were playing</strong>",
+                "× <em>Was you working?</em> → ✓ <strong>Were you working?</strong>",
             ],
             note:
                 "Remember correct use of <strong>was / were</strong> and the <strong>-ing</strong> form.",
@@ -1438,9 +1438,9 @@ export const RULE_PAGE_GOING_TO_PLANS = {
             type: "usage",
             title: "When we use going to",
             badges: [
-                "🗓️ Plan (decision already made): <strong>I’m going to visit my friend.</strong>",
-                "📌 Intention: <strong>She’s going to start a new job.</strong>",
-                "🔮 Obvious prediction: <strong>Look at the clouds – it’s going to rain.</strong>",
+                "Plan (decision already made): <strong>I’m going to visit my friend.</strong>",
+                "Intention: <strong>She’s going to start a new job.</strong>",
+                "Obvious prediction: <strong>Look at the clouds – it’s going to rain.</strong>",
             ],
             hint:
                 "Important: the decision was made <em>before the moment of speaking</em>.",
@@ -1485,8 +1485,8 @@ export const RULE_PAGE_GOING_TO_PLANS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He going to study</em> → ✅ <strong>He is going to study</strong>",
-                "❌ <em>Are you going study?</em> → ✅ <strong>Are you going to study?</strong>",
+                "× <em>He going to study</em> → ✓ <strong>He is going to study</strong>",
+                "× <em>Are you going study?</em> → ✓ <strong>Are you going to study?</strong>",
             ],
             note: "Do not forget <strong>to</strong> after <strong>going</strong>.",
         },
@@ -1512,9 +1512,9 @@ export const RULE_PAGE_WILL_PREDICTIONS = {
             type: "usage",
             title: "When we use will",
             badges: [
-                "💡 Decision made now: <strong>I’m thirsty. I’ll make some tea.</strong>",
-                "🔮 Predictions: <strong>I think it’ll be cold tomorrow.</strong>",
-                "🤝 Promises / offers: <strong>I’ll help you.</strong>",
+                "Decision made now: <strong>I’m thirsty. I’ll make some tea.</strong>",
+                "Predictions: <strong>I think it’ll be cold tomorrow.</strong>",
+                "Promises / offers: <strong>I’ll help you.</strong>",
             ],
             hint:
                 "Common contractions: <strong>I’ll, you’ll, he’ll</strong>. Negative form: <strong>won’t</strong> (will not).",
@@ -1547,8 +1547,8 @@ export const RULE_PAGE_WILL_PREDICTIONS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He will to go</em> → ✅ <strong>He will go</strong>",
-                "❌ <em>Won’t he will come?</em> → ✅ <strong>Won’t he come?</strong>",
+                "× <em>He will to go</em> → ✓ <strong>He will go</strong>",
+                "× <em>Won’t he will come?</em> → ✓ <strong>Won’t he come?</strong>",
             ],
             note: "After <strong>will / won’t</strong> we always use the base verb (<strong>V1</strong>).",
         },
@@ -1575,10 +1575,10 @@ export const RULE_PAGE_BE_GOING_TO_VS_WILL = {
             type: "usage",
             title: "When to choose each",
             badges: [
-                "🗓️ Plan made in advance: <strong>I’m going to visit my grandma.</strong>",
-                "💡 Decision made now: <strong>OK, I’ll visit my grandma.</strong>",
-                "🔮 Obvious prediction: <strong>Look at the clouds. It’s going to rain.</strong>",
-                "🤔 Opinion/belief: <strong>I think it’ll rain.</strong>",
+                "Plan made in advance: <strong>I’m going to visit my grandma.</strong>",
+                "Decision made now: <strong>OK, I’ll visit my grandma.</strong>",
+                "Obvious prediction: <strong>Look at the clouds. It’s going to rain.</strong>",
+                "Opinion/belief: <strong>I think it’ll rain.</strong>",
             ],
             hint:
                 "In spoken English both forms are often interchangeable, but context usually shows which one fits better.",
@@ -1597,8 +1597,8 @@ export const RULE_PAGE_BE_GOING_TO_VS_WILL = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Using <em>will</em> for events that were already planned → better: <strong>be going to</strong>.",
-                "❌ Using <em>be going to</em> for spontaneous decisions → better: <strong>will</strong>.",
+                "× Using <em>will</em> for events that were already planned → better: <strong>be going to</strong>.",
+                "× Using <em>be going to</em> for spontaneous decisions → better: <strong>will</strong>.",
             ],
             note:
                 "Ask yourself: was this planned earlier or decided <em>right now</em>?",
@@ -1626,9 +1626,9 @@ export const RULE_PAGE_MUST_MUSTNT = {
             type: "usage",
             title: "When we use must / mustn’t",
             badges: [
-                "📏 Rules / instructions: <strong>You must wear a seat belt.</strong>",
-                "🧠 Personal obligation: <strong>I must finish this today.</strong>",
-                "⛔ Prohibition: <strong>You mustn’t smoke here.</strong>",
+                "Rules / instructions: <strong>You must wear a seat belt.</strong>",
+                "Personal obligation: <strong>I must finish this today.</strong>",
+                "Prohibition: <strong>You mustn’t smoke here.</strong>",
             ],
         },
         {
@@ -1667,8 +1667,8 @@ export const RULE_PAGE_MUST_MUSTNT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>You must to go</em> → ✅ <strong>You must go</strong>",
-                "❌ Confusing <strong>mustn’t</strong> (prohibition) with <strong>don’t have to</strong> (not necessary).",
+                "× <em>You must to go</em> → ✓ <strong>You must go</strong>",
+                "× Confusing <strong>mustn’t</strong> (prohibition) with <strong>don’t have to</strong> (not necessary).",
             ],
             note:
                 "<strong>Mustn’t</strong> = prohibited. <strong>Don’t have to</strong> = optional / not necessary.",
@@ -1696,9 +1696,9 @@ export const RULE_PAGE_SHOULD_SHOULDNT = {
             type: "usage",
             title: "When we use should",
             badges: [
-                "🩺 Health advice: <strong>You should drink more water.</strong>",
-                "📚 Recommendations: <strong>He should study harder.</strong>",
-                "⚠️ Warnings: <strong>You shouldn’t drive so fast.</strong>",
+                "Health advice: <strong>You should drink more water.</strong>",
+                "Recommendations: <strong>He should study harder.</strong>",
+                "Warnings: <strong>You shouldn’t drive so fast.</strong>",
             ],
             hint:
                 "We do not say <em>should to</em>.",
@@ -1736,8 +1736,8 @@ export const RULE_PAGE_SHOULD_SHOULDNT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>You should to go</em> → ✅ <strong>You should go</strong>",
-                "❌ <em>I don’t should</em> → ✅ <strong>I shouldn’t</strong>",
+                "× <em>You should to go</em> → ✓ <strong>You should go</strong>",
+                "× <em>I don’t should</em> → ✓ <strong>I shouldn’t</strong>",
             ],
         },
         {
@@ -1763,9 +1763,9 @@ export const RULE_PAGE_HAVE_TO_DONT_HAVE_TO = {
             type: "usage",
             title: "When we use have to",
             badges: [
-                "📏 Rules/laws: <strong>We have to wear uniforms at school.</strong>",
-                "📅 Everyday obligations: <strong>I have to get up early.</strong>",
-                "😌 Lack of necessity: <strong>You don’t have to come.</strong>",
+                "Rules/laws: <strong>We have to wear uniforms at school.</strong>",
+                "Everyday obligations: <strong>I have to get up early.</strong>",
+                "Lack of necessity: <strong>You don’t have to come.</strong>",
             ]
         },
         {
@@ -1802,8 +1802,8 @@ export const RULE_PAGE_HAVE_TO_DONT_HAVE_TO = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Confusing <strong>don’t have to</strong> with <strong>mustn’t</strong>.",
-                "❌ <em>He don’t has to</em> → ✅ <strong>He doesn’t have to</strong>",
+                "× Confusing <strong>don’t have to</strong> with <strong>mustn’t</strong>.",
+                "× <em>He don’t has to</em> → ✓ <strong>He doesn’t have to</strong>",
             ],
             note:
                 "Remember: <strong>mustn’t</strong> = forbidden, while <strong>don’t have to</strong> = optional / not necessary.",
@@ -1831,9 +1831,9 @@ export const RULE_PAGE_MAY_MIGHT = {
             type: "usage",
             title: "When we use may / might",
             badges: [
-                "🤔 Uncertain prediction: <strong>It may rain later.</strong>",
-                "🔮 Even less certain: <strong>It might rain later.</strong>",
-                "🙏 Polite permission (often may): <strong>May I open the window?</strong>",
+                "Uncertain prediction: <strong>It may rain later.</strong>",
+                "Even less certain: <strong>It might rain later.</strong>",
+                "Polite permission (often may): <strong>May I open the window?</strong>",
             ]
         },
         {
@@ -1870,8 +1870,8 @@ export const RULE_PAGE_MAY_MIGHT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He may to come</em> → ✅ <strong>He may come</strong>",
-                "❌ <em>She don’t may</em> → ✅ <strong>She may not</strong>",
+                "× <em>He may to come</em> → ✓ <strong>He may come</strong>",
+                "× <em>She don’t may</em> → ✓ <strong>She may not</strong>",
             ],
             note:
                 "We do not use <strong>do/does</strong> with <em>may/might</em>.",
@@ -1899,9 +1899,9 @@ export const RULE_PAGE_COMPARATIVES = {
             type: "usage",
             title: "When we use comparatives",
             badges: [
-                "👫 Comparing two people/things: <strong>My brother is taller than me.</strong>",
-                "📚 Longer adjectives: <strong>more interesting, more expensive</strong>",
-                "↔️ Use <strong>than</strong> in comparisons: <strong>smaller than</strong>",
+                "Comparing two people/things: <strong>My brother is taller than me.</strong>",
+                "Longer adjectives: <strong>more interesting, more expensive</strong>",
+                "Use <strong>than</strong> in comparisons: <strong>smaller than</strong>",
             ],
             hint:
                 "Short adjectives: <strong>adj + -er</strong> (taller, bigger). Long adjectives: <strong>more + adj</strong> (more beautiful).",
@@ -1956,8 +1956,8 @@ export const RULE_PAGE_COMPARATIVES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>more cheap</em> → ✅ <strong>cheaper</strong>",
-                "❌ <em>beautifuler</em> → ✅ <strong>more beautiful</strong>",
+                "× <em>more cheap</em> → ✓ <strong>cheaper</strong>",
+                "× <em>beautifuler</em> → ✓ <strong>more beautiful</strong>",
             ],
             note: "Check if the adjective is short or long before using -er or more.",
         },
@@ -1984,9 +1984,9 @@ export const RULE_PAGE_SUPERLATIVES = {
             type: "usage",
             title: "When we use superlatives",
             badges: [
-                "🏆 The best / worst: <strong>This is the best day.</strong>",
-                "📊 Comparing many things: <strong>He is the tallest in the class.</strong>",
-                "📌 Usually with <strong>the</strong>: <strong>the most expensive, the oldest</strong>",
+                "The best / worst: <strong>This is the best day.</strong>",
+                "Comparing many things: <strong>He is the tallest in the class.</strong>",
+                "Usually with <strong>the</strong>: <strong>the most expensive, the oldest</strong>",
             ],
             hint:
                 "Short adjectives: <strong>the adj + -est</strong>. Long adjectives: <strong>the most + adj</strong>.",
@@ -2037,8 +2037,8 @@ export const RULE_PAGE_SUPERLATIVES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>the most cheap</em> → ✅ <strong>the cheapest</strong>",
-                "❌ <em>beautifulest</em> → ✅ <strong>the most beautiful</strong>",
+                "× <em>the most cheap</em> → ✓ <strong>the cheapest</strong>",
+                "× <em>beautifulest</em> → ✓ <strong>the most beautiful</strong>",
             ],
             note:
                 "Do not combine <strong>more + -er</strong> or <strong>most + -est</strong>.",
@@ -2066,34 +2066,31 @@ export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
             type: "usage",
             title: "When we use too / enough",
             badges: [
-                "⚠️ Excess: <strong>This bag is too heavy.</strong>",
-                "✅ Sufficient amount: <strong>It’s warm enough.</strong>",
+                "Excess: <strong>This bag is too heavy.</strong>",
+                "Sufficient amount: <strong>It’s warm enough.</strong>",
             ]
         },
         {
             type: "forms",
             title: "Word order",
-            headers: ["Structure", "Example", "Meaning", "Note", "Another example"],
+            headers: ["Structure", "Example", "Meaning", "Another example"],
             rows: [
                 [
                     "too + adj / adv",
                     "too big",
                     "excessive degree",
-                    "usually negative meaning",
                     "too quickly",
                 ],
                 [
                     "adj + enough",
                     "warm enough",
                     "sufficient degree",
-                    "",
                     "old enough",
                 ],
                 [
                     "enough + noun",
                     "enough time",
                     "sufficient quantity",
-                    "",
                     "enough water",
                 ],
             ],
@@ -2113,11 +2110,11 @@ export const RULE_PAGE_ENOUGH_TOO_MUCH_MANY = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em><strong style='color:red'>too enough</strong></em> — this structure does not exist.",
-                "❌ <em>This chair is <strong style='color:red'>enough big.</strong></em> → ✅ <strong>big enough</strong>",
-                "❌ <em>She spoke English <strong style='color:red'>enough well</strong>.</em> → ✅ <strong>well enough</strong>",
-                "❌ <em>This coffee is <strong style='color:red'>enough hot</strong>.</em> → ✅ <strong>hot enough</strong>",
-                "❌ <em>We have <strong style='color:red'>money enough</strong>.</em> → ✅ <strong>enough money</strong>",
+                "× too enough — this structure does not exist.",
+                "× This chair is enough big. → ✓ This chair is big enough.",
+                "× She spoke English enough well. → ✓ She spoke English well enough.",
+                "× This coffee is enough hot. → ✓ This coffee is hot enough.",
+                "× We have money enough. → ✓ We have enough money.",
             ],
             note:
                 "Ask yourself: is it 'too much' or 'enough'? Then choose the correct structure.",
@@ -2145,9 +2142,9 @@ export const RULE_PAGE_ADVERBS_FREQUENCY_OFTEN_NEVER = {
             type: "usage",
             title: "Where to place frequency adverbs",
             badges: [
-                "👤 Usually before the main verb: <strong>We often play tennis.</strong>",
-                "🧱 After the verb <strong>to be</strong>: <strong>She is always late.</strong>",
-                "❓ In questions — after the subject: <strong>Do you often read?</strong>",
+                "Usually before the main verb: <strong>We often play tennis.</strong>",
+                "After the verb <strong>to be</strong>: <strong>She is always late.</strong>",
+                "In questions — after the subject: <strong>Do you often read?</strong>",
             ],
             hint:
                 "Typical Present Simple order: <strong>subject + adverb + verb</strong>: <em>I usually get up at 7.</em>",
@@ -2195,8 +2192,8 @@ export const RULE_PAGE_ADVERBS_FREQUENCY_OFTEN_NEVER = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>She always is late</em> → ✅ <strong>She is always late</strong>",
-                "❌ <em>I don’t never go</em> → ✅ <strong>I never go</strong>",
+                "× <em>She always is late</em> → ✓ <strong>She is always late</strong>",
+                "× <em>I don’t never go</em> → ✓ <strong>I never go</strong>",
             ],
             note:
                 "Avoid double negatives: <strong>never</strong> already means 'not ever'.",
@@ -2264,7 +2261,7 @@ export const RULE_PAGE_QUANTIFIERS_SOME_ANY_A_LOT_MUCH_MANY = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>much apples</em> → ✅ <strong>many apples</strong> or <strong>a lot of apples</strong>",
+                "× <em>much apples</em> → ✓ <strong>many apples</strong> or <strong>a lot of apples</strong>",
             ],
             note:
                 "First decide if the noun is countable or uncountable, then choose <strong>much</strong> or <strong>many</strong>.",
@@ -2292,9 +2289,9 @@ export const RULE_PAGE_LIKE_LOVE_HATE_ING = {
             type: "usage",
             title: "When we use -ing",
             badges: [
-                "💚 General preference: <strong>I like reading.</strong>",
-                "❤️ Strong liking: <strong>She loves dancing.</strong>",
-                "💔 Dislike: <strong>He hates waiting.</strong>",
+                "General preference: <strong>I like reading.</strong>",
+                "Strong liking: <strong>She loves dancing.</strong>",
+                "Dislike: <strong>He hates waiting.</strong>",
             ],
             hint:
                 "Structure: <strong>like/love/hate + V-ing</strong> or <strong>like/love/hate + noun</strong>.",
@@ -2336,8 +2333,8 @@ export const RULE_PAGE_LIKE_LOVE_HATE_ING = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I like to reading</em> → ✅ <strong>I like reading</strong>",
-                "❌ <em>She loves sing</em> → ✅ <strong>She loves singing</strong>",
+                "× <em>I like to reading</em> → ✓ <strong>I like reading</strong>",
+                "× <em>She loves sing</em> → ✓ <strong>She loves singing</strong>",
             ],
             note:
                 "After these verbs we do not use <em>to</em> when the next verb is in the <strong>V-ing</strong> form.",
@@ -2364,9 +2361,9 @@ export const RULE_PAGE_ZERO_CONDITIONAL = {
             type: "usage",
             title: "When we use the Zero Conditional",
             badges: [
-                "🌍 Laws of nature: <strong>If you heat water, it boils.</strong>",
-                "📅 Habits: <strong>If I’m tired, I go to bed early.</strong>",
-                "📏 Rules: <strong>If you don’t wear a helmet, you get a fine.</strong>",
+                "Laws of nature: <strong>If you heat water, it boils.</strong>",
+                "Habits: <strong>If I’m tired, I go to bed early.</strong>",
+                "Rules: <strong>If you don’t wear a helmet, you get a fine.</strong>",
             ],
             hint:
                 "Structure: <strong>If + Present Simple, Present Simple</strong>. The order can be reversed.",
@@ -2403,7 +2400,7 @@ export const RULE_PAGE_ZERO_CONDITIONAL = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Using <em>will</em> in either clause → Zero Conditional does not use <strong>will</strong>.",
+                "× Using <em>will</em> in either clause → Zero Conditional does not use <strong>will</strong>.",
             ],
             note:
                 "The Zero Conditional expresses something that is always true, not a specific future situation.",
@@ -2431,9 +2428,9 @@ export const RULE_PAGE_FIRST_CONDITIONAL = {
             type: "usage",
             title: "When we use the 1st Conditional",
             badges: [
-                "🔮 Real plans: <strong>If it is sunny, we’ll go to the park.</strong>",
-                "⚠️ Warnings: <strong>If you are late, you’ll miss the bus.</strong>",
-                "💬 Promises: <strong>If you help me, I’ll help you.</strong>",
+                "Real plans: <strong>If it is sunny, we’ll go to the park.</strong>",
+                "Warnings: <strong>If you are late, you’ll miss the bus.</strong>",
+                "Promises: <strong>If you help me, I’ll help you.</strong>",
             ]
         },
         {
@@ -2471,7 +2468,7 @@ export const RULE_PAGE_FIRST_CONDITIONAL = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>If it will rain, we’ll stay</em> → ✅ <strong>If it rains, we’ll stay</strong>",
+                "× <em>If it will rain, we’ll stay</em> → ✓ <strong>If it rains, we’ll stay</strong>",
             ],
             note:
                 "The if-clause always uses <strong>Present Simple</strong>, even when talking about the future.",
@@ -2538,7 +2535,7 @@ export const RULE_PAGE_TIME_CLAUSE_FUTURE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>When I will finish, I’ll call you</em> → ✅ <strong>When I finish, I’ll call you</strong>",
+                "× <em>When I will finish, I’ll call you</em> → ✓ <strong>When I finish, I’ll call you</strong>",
             ],
             note:
                 "Remember: after <strong>when / before / after / as soon as</strong> we use <strong>Present Simple</strong>, even when talking about the future.",
@@ -2566,10 +2563,10 @@ export const RULE_PAGE_HOW_OFTEN_LONG_MUCH = {
             type: "usage",
             title: "How to choose the correct “how…” question",
             badges: [
-                "📅 Frequency: <strong>How often</strong> → <strong>How often do you travel?</strong>",
-                "⏱️ Duration: <strong>How long</strong> → <strong>How long does the meeting last?</strong>",
-                "🥛 Quantity (uncountable nouns): <strong>How much</strong> → <strong>How much water do you drink?</strong>",
-                "💸 Price: <strong>How much</strong> + <strong>is/are</strong> → <strong>How much is this T-shirt?</strong>",
+                "Frequency: <strong>How often</strong> → <strong>How often do you travel?</strong>",
+                "Duration: <strong>How long</strong> → <strong>How long does the meeting last?</strong>",
+                "Quantity (uncountable nouns): <strong>How much</strong> → <strong>How much water do you drink?</strong>",
+                "Price: <strong>How much</strong> + <strong>is/are</strong> → <strong>How much is this T-shirt?</strong>",
             ],
             hint:
                 "If you ask about countable things (books, apples, cars), use <strong>How many</strong>, not <strong>How much</strong>.",
@@ -2625,7 +2622,7 @@ export const RULE_PAGE_HOW_OFTEN_LONG_MUCH = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>How much apples?</em> → ✅ <strong>How many apples?</strong>",
+                "× <em>How much apples?</em> → ✓ <strong>How many apples?</strong>",
             ],
             note:
                 "First decide whether the question is about <strong>frequency</strong>, <strong>duration</strong>, or <strong>quantity/price</strong>, then choose the correct <strong>how…</strong> form.",
@@ -2654,10 +2651,10 @@ export const RULE_PAGE_BECAUSE_SO_BUT_ALTHOUGH = {
             type: "usage",
             title: "When to use each conjunction",
             badges: [
-                "🤔 Reason: <strong>I stayed at home because I was tired.</strong>",
-                "➡️ Result: <strong>I was tired, so I stayed at home.</strong>",
-                "⚖️ Contrast: <strong>It’s cold, but it’s sunny.</strong>",
-                "🎭 Formal contrast: <strong>Although it was cold, we went out.</strong>",
+                "Reason: <strong>I stayed at home because I was tired.</strong>",
+                "Result: <strong>I was tired, so I stayed at home.</strong>",
+                "Contrast: <strong>It’s cold, but it’s sunny.</strong>",
+                "Formal contrast: <strong>Although it was cold, we went out.</strong>",
             ],
         },
         {
@@ -2703,8 +2700,8 @@ export const RULE_PAGE_BECAUSE_SO_BUT_ALTHOUGH = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Mixing up <strong>because</strong> and <strong>so</strong> in the sentence structure.",
-                "❌ <em>Although but…</em> — do not combine these two conjunctions together.",
+                "× Mixing up <strong>because</strong> and <strong>so</strong> in the sentence structure.",
+                "× <em>Although but…</em> — do not combine these two conjunctions together.",
             ],
         },
         {
@@ -2730,9 +2727,9 @@ export const RULE_PAGE_BEFORE_AFTER_ING = {
             type: "usage",
             title: "When to use -ing or a full clause",
             badges: [
-                "✅ If the <strong>same subject</strong> performs both actions → we can use <strong>before/after + V-ing</strong>.",
-                "✅ If the <strong>subjects are different</strong> → use a <strong>full clause</strong> (before/after + S + V).",
-                "🧠 Test: can the same person perform both actions? If yes, the V-ing form works.",
+                "If the <strong>same subject</strong> performs both actions → we can use <strong>before/after + V-ing</strong>.",
+                "If the <strong>subjects are different</strong> → use a <strong>full clause</strong> (before/after + S + V).",
+                "Test: can the same person perform both actions? If yes, the V-ing form works.",
             ],
             hint:
                 "<strong>Before/after + V-ing</strong> usually implies the same subject performing both actions.",
@@ -2769,7 +2766,7 @@ export const RULE_PAGE_BEFORE_AFTER_ING = {
             ],
             hint:
                 "If the subjects are different, do not shorten the clause: " +
-                "✅ <strong>Before he arrives, I’ll…</strong> (not <em>Before arriving…</em>).",
+                "<strong>Before he arrives, I’ll…</strong> (not <em>Before arriving…</em>).",
         },
         {
             type: "examples",
@@ -2785,9 +2782,9 @@ export const RULE_PAGE_BEFORE_AFTER_ING = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Before go to bed</em> → ✅ <strong>Before going to bed</strong> or <strong>Before I go to bed</strong>",
-                "❌ <em>After eat, we left</em> → ✅ <strong>After eating, we left</strong> or <strong>After we ate, we left</strong>",
-                "❌ <em>Before arriving, I’ll call him</em> (unclear subject) → ✅ <strong>Before he arrives, I’ll call him</strong>",
+                "× <em>Before go to bed</em> → ✓ <strong>Before going to bed</strong> or <strong>Before I go to bed</strong>",
+                "× <em>After eat, we left</em> → ✓ <strong>After eating, we left</strong> or <strong>After we ate, we left</strong>",
+                "× <em>Before arriving, I’ll call him</em> (unclear subject) → ✓ <strong>Before he arrives, I’ll call him</strong>",
             ],
             note:
                 "After <strong>before/after</strong> use either <strong>V-ing</strong> or a <strong>full clause with a subject</strong>. " +
@@ -2816,9 +2813,9 @@ export const RULE_PAGE_BE_GOOD_AT_INTERESTED_IN_ING = {
             type: "usage",
             title: "Structure",
             badges: [
-                "🎯 Ability: <strong>She is good at drawing.</strong>",
-                "🔧 Difficulty: <strong>He is bad at cooking.</strong>",
-                "✨ Interest: <strong>They are interested in learning English.</strong>",
+                "Ability: <strong>She is good at drawing.</strong>",
+                "Difficulty: <strong>He is bad at cooking.</strong>",
+                "Interest: <strong>They are interested in learning English.</strong>",
             ],
             hint:
                 "Remember to use <strong>am/is/are</strong> before the adjective: <em>I’m good at…</em>",
@@ -2862,8 +2859,8 @@ export const RULE_PAGE_BE_GOOD_AT_INTERESTED_IN_ING = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I good at sing</em> → ✅ <strong>I’m good at singing</strong>",
-                "❌ <em>interested of English</em> → ✅ <strong>interested in English</strong>",
+                "× <em>I good at sing</em> → ✓ <strong>I’m good at singing</strong>",
+                "× <em>interested of English</em> → ✓ <strong>interested in English</strong>",
             ]
         },
         {
@@ -2889,9 +2886,9 @@ export const RULE_PAGE_MAKE_DO_DIFFERENCE = {
             type: "usage",
             title: "How to choose quickly",
             badges: [
-                "✅ If it is a <strong>task / job / routine</strong> → <strong>do</strong> (homework, chores, work).",
-                "✅ If it is a <strong>result</strong> (something created) → <strong>make</strong> (a cake, a plan, a decision).",
-                "✅ If it is an <strong>effect / impact</strong> → <strong>make</strong>: <strong>make a difference</strong>.",
+                "If it is a <strong>task / job / routine</strong> → <strong>do</strong> (homework, chores, work).",
+                "If it is a <strong>result</strong> (something created) → <strong>make</strong> (a cake, a plan, a decision).",
+                "If it is an <strong>effect / impact</strong> → <strong>make</strong>: <strong>make a difference</strong>.",
             ],
             hint:
                 "Do not translate the idea of “робити” literally. Think: <em>perform</em> (do) or <em>create / cause</em> (make).",
@@ -2934,9 +2931,9 @@ export const RULE_PAGE_MAKE_DO_DIFFERENCE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>make homework</em> → ✅ <strong>do homework</strong>",
-                "❌ <em>do a mistake</em> → ✅ <strong>make a mistake</strong>",
-                "❌ <em>do a difference</em> → ✅ <strong>make a difference</strong>",
+                "× <em>make homework</em> → ✓ <strong>do homework</strong>",
+                "× <em>do a mistake</em> → ✓ <strong>make a mistake</strong>",
+                "× <em>do a difference</em> → ✓ <strong>make a difference</strong>",
             ],
             note:
                 "If you see nouns like <em>mistake / decision / plan / difference</em>, they usually go with <strong>make</strong>.",
@@ -2966,10 +2963,10 @@ export const RULE_PAGE_PRESENT_PERFECT = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "📌 Experience: <strong>I’ve been to Italy.</strong>",
-                "🎯 Result now: <strong>She has lost her keys.</strong>",
-                "🕒 Recently finished: <strong>We’ve just finished.</strong>",
-                "📅 Actions up to now: <strong>They’ve lived here for years.</strong>"
+                "Experience: <strong>I’ve been to Italy.</strong>",
+                "Result now: <strong>She has lost her keys.</strong>",
+                "Recently finished: <strong>We’ve just finished.</strong>",
+                "Actions up to now: <strong>They’ve lived here for years.</strong>"
             ],
             hint:
                 "We don’t say <em>I have done/finished/watched something yesterday</em>."
@@ -2996,7 +2993,7 @@ export const RULE_PAGE_PRESENT_PERFECT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Using it with a specific past time (<em>yesterday, last year</em>)."
+                "× Using it with a specific past time (<em>yesterday, last year</em>)."
             ],
             note:
                 "Do not use Present Perfect with specific past time markers."
@@ -3028,9 +3025,9 @@ export const RULE_PAGE_SINCE_FOR = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "📍 Starting point → <strong>since 2010 / since Monday / since I was a child</strong>",
-                "⏳ Period of time → <strong>for two years / for a long time / for three hours</strong>",
-                "🕒 Often used with <strong>Present Perfect</strong>: <strong>I’ve lived here since 2015.</strong>",
+                "Starting point → <strong>since 2010 / since Monday / since I was a child</strong>",
+                "Period of time → <strong>for two years / for a long time / for three hours</strong>",
+                "Often used with <strong>Present Perfect</strong>: <strong>I’ve lived here since 2015.</strong>",
             ],
             hint:
                 "Ask yourself: <em>when did it start?</em> → <strong>since</strong>; " +
@@ -3069,7 +3066,7 @@ export const RULE_PAGE_SINCE_FOR = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I live here since 2015.</em> → missing Perfect → ✅ <strong>I have lived here since 2015.</strong>",
+                "× <em>I live here since 2015.</em> → missing Perfect → ✓ <strong>I have lived here since 2015.</strong>",
             ],
         },
         {
@@ -3099,9 +3096,9 @@ export const RULE_PAGE_PRESENT_PERFECT_CONT = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "⏳ Duration of an action → <strong>I’ve been studying for three hours.</strong>",
-                "😓 Recent action with visible result → <strong>She’s been crying.</strong>",
-                "🏃 Process (focus on the action, not the result) → <strong>They’ve been working all day.</strong>",
+                "Duration of an action → <strong>I’ve been studying for three hours.</strong>",
+                "Recent action with visible result → <strong>She’s been crying.</strong>",
+                "Process (focus on the action, not the result) → <strong>They’ve been working all day.</strong>",
             ],
             hint:
                 "The focus is on the <em>process</em> or <em>duration</em> of the action, not only the result.",
@@ -3140,8 +3137,8 @@ export const RULE_PAGE_PRESENT_PERFECT_CONT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I am working here for 5 years</em> → ✅ <strong>I have been working here for 5 years</strong>",
-                "❌ Using it with <em>stative verbs</em> (know, like, love) → ✅ <strong>I’ve known her for years</strong>",
+                "× <em>I am working here for 5 years</em> → ✓ <strong>I have been working here for 5 years</strong>",
+                "× Using it with <em>stative verbs</em> (know, like, love) → ✓ <strong>I’ve known her for years</strong>",
             ],
         },
         {
@@ -3191,10 +3188,10 @@ export const RULE_PAGE_ALREADY_YET_JUST = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Did you finish yet?</em> → ✅ <strong>Have you finished yet?</strong> (when the result matters)",
-                "❌ <em>I just have finished</em> → ✅ <strong>I’ve just finished</strong>",
-                "❌ <em>I haven’t already done it.</em> → ✅ <strong>I haven’t done it yet.</strong>",
-                "❌ <em>She has left just.</em> → ✅ <strong>She has just left.</strong>",
+                "× <em>Did you finish yet?</em> → ✓ <strong>Have you finished yet?</strong> (when the result matters)",
+                "× <em>I just have finished</em> → ✓ <strong>I’ve just finished</strong>",
+                "× <em>I haven’t already done it.</em> → ✓ <strong>I haven’t done it yet.</strong>",
+                "× <em>She has left just.</em> → ✓ <strong>She has just left.</strong>",
             ],
         },
         {
@@ -3224,9 +3221,9 @@ export const RULE_PAGE_PAST_PERFECT = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "⏱️ An action that happened before another past action: <strong>She had left before I arrived.</strong>",
-                "📚 Cause or background: <strong>I was tired because I had worked all day.</strong>",
-                "📖 In stories when it is important to show the order of past events.",
+                "An action that happened before another past action: <strong>She had left before I arrived.</strong>",
+                "Cause or background: <strong>I was tired because I had worked all day.</strong>",
+                "In stories when it is important to show the order of past events.",
             ],
         },
         {
@@ -3264,7 +3261,7 @@ export const RULE_PAGE_PAST_PERFECT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Incorrect verb form: <em>had went</em> → ✅ had + V3: <strong>had gone</strong>",
+                "× Incorrect verb form: <em>had went</em> → ✓ had + V3: <strong>had gone</strong>",
             ],
         },
         {
@@ -3293,9 +3290,9 @@ export const RULE_PAGE_USED_TO = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "🧒 Past habits (that stopped): <strong>I used to play outside every day.</strong>",
-                "🏠 Past states: <strong>We used to live in Kyiv.</strong>",
-                "🚬 Contrast between past and present: <strong>I used to smoke, but I don’t anymore.</strong>",
+                "Past habits (that stopped): <strong>I used to play outside every day.</strong>",
+                "Past states: <strong>We used to live in Kyiv.</strong>",
+                "Contrast between past and present: <strong>I used to smoke, but I don’t anymore.</strong>",
             ],
             hint:
                 "If you can mentally add <em>“but not anymore”</em>, " +
@@ -3338,8 +3335,8 @@ export const RULE_PAGE_USED_TO = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>didn’t used to</em> → ✅ <strong>didn’t use to</strong>",
-                "❌ Confusing it with <em>be used to</em> → ✅ <strong>I am used to waking up early.</strong> (this means “I am accustomed to it”).",
+                "× <em>didn’t used to</em> → ✓ <strong>didn’t use to</strong>",
+                "× Confusing it with <em>be used to</em> → ✓ <strong>I am used to waking up early.</strong> (this means “I am accustomed to it”).",
             ],
         },
         {
@@ -3368,9 +3365,9 @@ export const RULE_PAGE_BE_USED_TO_GET_USED_TO = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "🟢 State (“already accustomed”) → <strong>I’m used to cold weather.</strong>",
-                "🔄 Process (“becoming accustomed”) → <strong>She’s getting used to her new job.</strong>",
-                "🕒 They can be used in different tenses: <strong>I was used to… / I will get used to…</strong>",
+                "State (“already accustomed”) → <strong>I’m used to cold weather.</strong>",
+                "Process (“becoming accustomed”) → <strong>She’s getting used to her new job.</strong>",
+                "They can be used in different tenses: <strong>I was used to… / I will get used to…</strong>",
             ],
             hint:
                 "The word <strong>to</strong> here is a <em>preposition</em>, " +
@@ -3408,8 +3405,8 @@ export const RULE_PAGE_BE_USED_TO_GET_USED_TO = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I’m used to eat early.</em> → ✅ <strong>I’m used to eating early.</strong>",
-                "❌ <em>I used to waking up early.</em> → ✅ <strong>I used to wake up early.</strong>"
+                "× <em>I’m used to eat early.</em> → ✓ <strong>I’m used to eating early.</strong>",
+                "× <em>I used to waking up early.</em> → ✓ <strong>I used to wake up early.</strong>"
             ],
         },
         {
@@ -3438,9 +3435,9 @@ export const RULE_PAGE_SECOND_CONDITIONAL = {
             type: "usage",
             title: "When to use the 2nd Conditional",
             badges: [
-                "💭 Imaginary situation: <strong>If I had more time, I would travel.</strong>",
-                "🎯 Advice / hypothetical situation: <strong>If I were you, I’d talk to her.</strong>",
-                "🎲 Unlikely situation: <strong>If I won the lottery, I’d buy a house.</strong>",
+                "Imaginary situation: <strong>If I had more time, I would travel.</strong>",
+                "Advice / hypothetical situation: <strong>If I were you, I’d talk to her.</strong>",
+                "Unlikely situation: <strong>If I won the lottery, I’d buy a house.</strong>",
             ],
         },
         {
@@ -3480,7 +3477,7 @@ export const RULE_PAGE_SECOND_CONDITIONAL = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>If I will have time…</em> → ✅ <strong>If I had time…</strong>",
+                "× <em>If I will have time…</em> → ✓ <strong>If I had time…</strong>",
             ],
         },
         {
@@ -3509,9 +3506,9 @@ export const RULE_PAGE_THIRD_CONDITIONAL = {
             type: "usage",
             title: "When to use the 3rd Conditional",
             badges: [
-                "😔 Regret: <strong>If I had known, I would have helped.</strong>",
-                "🔍 Analyzing a mistake: <strong>If we had left earlier, we wouldn’t have missed the bus.</strong>",
-                "🎯 Imagining an alternative outcome: <strong>If she had studied, she would have passed the exam.</strong>",
+                "Regret: <strong>If I had known, I would have helped.</strong>",
+                "Analyzing a mistake: <strong>If we had left earlier, we wouldn’t have missed the bus.</strong>",
+                "Imagining an alternative outcome: <strong>If she had studied, she would have passed the exam.</strong>",
             ],
             hint:
                 "Simple idea: <strong>a past condition</strong> → <strong>a different past result</strong> (but it is already too late to change it).",
@@ -3533,7 +3530,7 @@ export const RULE_PAGE_THIRD_CONDITIONAL = {
                 ],
             ],
             hint:
-                "We do not use <em>would</em> in the if-clause: ✅ <strong>If I had…</strong> (not <em>If I would have…</em>).",
+                "We do not use <em>would</em> in the if-clause: <strong>If I had…</strong> (not <em>If I would have…</em>).",
         },
         {
             type: "examples",
@@ -3551,9 +3548,9 @@ export const RULE_PAGE_THIRD_CONDITIONAL = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>If I would have known…</em> → ✅ <strong>If I had known…</strong>",
-                "❌ <em>would had</em> → ✅ <strong>would have</strong>",
-                "❌ Confusing it with the 2nd Conditional (imaginary present/future) → ✅ 3rd Conditional = <strong>regret about the past</strong>",
+                "× <em>If I would have known…</em> → ✓ <strong>If I had known…</strong>",
+                "× <em>would had</em> → ✓ <strong>would have</strong>",
+                "× Confusing it with the 2nd Conditional (imaginary present/future) → ✓ 3rd Conditional = <strong>regret about the past</strong>",
             ],
             note:
                 "Quick check: if the situation is about the past and cannot be changed anymore, it is almost always the <strong>Third Conditional</strong>.",
@@ -3584,9 +3581,9 @@ export const RULE_PAGE_WISH_PAST_PAST_PERFECT = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "😔 Regret about the present → <strong>I wish I knew the answer.</strong>",
-                "⏳ Regret about the past → <strong>I wish I had studied more.</strong>",
-                "⚠️ Often used with emotions: regret, disappointment, sadness.",
+                "Regret about the present → <strong>I wish I knew the answer.</strong>",
+                "Regret about the past → <strong>I wish I had studied more.</strong>",
+                "Often used with emotions: regret, disappointment, sadness.",
             ],
             hint:
                 "<strong>Wish</strong> does not describe reality — after it we use past forms, " +
@@ -3628,9 +3625,9 @@ export const RULE_PAGE_WISH_PAST_PAST_PERFECT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I wish I would know.</em> → ✅ <strong>I wish I knew.</strong>",
-                "❌ <em>I wish I will go there.</em> → ✅ <strong>I wish I could go there.</strong>",
-                "❌ <em>I wish I didn’t say that yesterday.</em> → for past regret → ✅ <strong>I wish I hadn’t said that.</strong>",
+                "× <em>I wish I would know.</em> → ✓ <strong>I wish I knew.</strong>",
+                "× <em>I wish I will go there.</em> → ✓ <strong>I wish I could go there.</strong>",
+                "× <em>I wish I didn’t say that yesterday.</em> → for past regret → ✓ <strong>I wish I hadn’t said that.</strong>",
             ],
         },
         {
@@ -3660,9 +3657,9 @@ export const RULE_PAGE_MODAL_PERFECTS = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "🧭 Advice or regret about the past → <strong>You should have told me.</strong>",
-                "🎯 Missed opportunity → <strong>He could have won.</strong>",
-                "⚠️ Criticism after the fact → <strong>They should have known better.</strong>",
+                "Advice or regret about the past → <strong>You should have told me.</strong>",
+                "Missed opportunity → <strong>He could have won.</strong>",
+                "Criticism after the fact → <strong>They should have known better.</strong>",
             ],
         },
         {
@@ -3693,7 +3690,7 @@ export const RULE_PAGE_MODAL_PERFECTS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Confusing present modals with modal perfects: <em>You should go</em> ≠ <strong>You should have gone</strong>",
+                "× Confusing present modals with modal perfects: <em>You should go</em> ≠ <strong>You should have gone</strong>",
             ],
         },
         {
@@ -3723,9 +3720,9 @@ export const RULE_PAGE_GERUND_VS_INFINITIVE = {
             type: "usage",
             title: "When to use each form",
             badges: [
-                "🟢 After some verbs — <strong>V-ing</strong>: <strong>enjoy, mind, finish, suggest, avoid</strong>",
-                "🔵 After other verbs — <strong>to + V</strong>: <strong>want, need, decide, plan, hope</strong>",
-                "⚠️ With some verbs the form changes the meaning: <strong>stop / remember / try</strong>",
+                "After some verbs — <strong>V-ing</strong>: <strong>enjoy, mind, finish, suggest, avoid</strong>",
+                "After other verbs — <strong>to + V</strong>: <strong>want, need, decide, plan, hope</strong>",
+                "With some verbs the form changes the meaning: <strong>stop / remember / try</strong>",
             ],
         },
         {
@@ -3755,8 +3752,8 @@ export const RULE_PAGE_GERUND_VS_INFINITIVE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He suggested to go.</em> → ✅ <strong>He suggested going.</strong>",
-                "❌ <em>She enjoys to read.</em> → ✅ <strong>She enjoys reading.</strong>",
+                "× <em>He suggested to go.</em> → ✓ <strong>He suggested going.</strong>",
+                "× <em>She enjoys to read.</em> → ✓ <strong>She enjoys reading.</strong>",
             ],
         },
         {
@@ -3817,8 +3814,8 @@ export const RULE_PAGE_PASSIVE_VOICE_ALL_TENSES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Incorrect form of <em>be</em> → the tense does not match.",
-                "❌ <em>is build</em> → ✅ <strong>is built</strong> (V3 is required)."
+                "× Incorrect form of <em>be</em> → the tense does not match.",
+                "× <em>is build</em> → ✓ <strong>is built</strong> (V3 is required)."
             ],
         },
         {
@@ -3849,9 +3846,9 @@ export const RULE_PAGE_GET_PAST_PARTICIPLE = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "🔄 Change of state: <strong>get married / get lost / get dressed</strong>",
-                "⚠️ Often an unexpected or unwanted result: <strong>get hurt / get fired</strong>",
-                "🗣️ Informal alternative to the passive: <strong>She got hired.</strong>",
+                "Change of state: <strong>get married / get lost / get dressed</strong>",
+                "Often an unexpected or unwanted result: <strong>get hurt / get fired</strong>",
+                "Informal alternative to the passive: <strong>She got hired.</strong>",
             ],
             hint:
                 "Unlike the classic passive (<em>be + V3</em>), " +
@@ -3881,9 +3878,9 @@ export const RULE_PAGE_GET_PAST_PARTICIPLE = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Confusing it with the classic passive → <em>get + V3</em> ≠ <em>be + V3</em> (different style).",
-                "❌ <em>get married with</em> → ✅ <strong>get married to</strong>",
-                "❌ Using it in very formal writing → it is better to use <strong>be + V3</strong>.",
+                "× Confusing it with the classic passive → <em>get + V3</em> ≠ <em>be + V3</em> (different style).",
+                "× <em>get married with</em> → ✓ <strong>get married to</strong>",
+                "× Using it in very formal writing → it is better to use <strong>be + V3</strong>.",
             ],
         },
         {
@@ -3912,8 +3909,8 @@ export const RULE_PAGE_REPORTED_SPEECH = {
             type: "usage",
             title: "Basic rules",
             badges: [
-                "⏪ Backshift of tenses: <em>am → was, did → had done</em>",
-                "🕒 Change of time and place words (now → then, today → that day)",
+                "Backshift of tenses: <em>am → was, did → had done</em>",
+                "Change of time and place words (now → then, today → that day)",
             ],
             hint:
                 "Example: <em>“I am tired.”</em> → <strong>He said he was tired.</strong>",
@@ -3958,8 +3955,8 @@ export const RULE_PAGE_REPORTED_SPEECH = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ No tense shift → <em>He said he is tired</em> → ✅ <strong>he was tired</strong>",
-                "❌ Pronouns not changed → <em>She said I was late</em> (when it should be <em>he / she</em>)"
+                "× No tense shift → <em>He said he is tired</em> → ✓ <strong>he was tired</strong>",
+                "× Pronouns not changed → <em>She said I was late</em> (when it should be <em>he / she</em>)"
             ],
         },
         {
@@ -3988,9 +3985,9 @@ export const RULE_PAGE_QUESTION_TAGS = {
             type: "usage",
             title: "Basic rule",
             badges: [
-                "➕ Positive statement → ❓ negative tag: <strong>You’re tired, aren’t you?</strong>",
-                "➖ Negative statement → ❓ positive tag: <strong>You aren’t tired, are you?</strong>",
-                "🧩 The auxiliary verb in the tag depends on the tense and structure of the sentence",
+                "Positive statement → negative tag: <strong>You’re tired, aren’t you?</strong>",
+                "Negative statement → positive tag: <strong>You aren’t tired, are you?</strong>",
+                "The auxiliary verb in the tag depends on the tense and structure of the sentence",
             ],
         },
         {
@@ -4024,8 +4021,8 @@ export const RULE_PAGE_QUESTION_TAGS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Incorrect auxiliary verb → <em>You like it, do you?</em> → ✅ <strong>don’t you</strong>",
-                "❌ Incorrect pronoun → <em>Anna is here, isn’t Anna?</em> → ✅ <strong>isn’t she</strong>",
+                "× Incorrect auxiliary verb → <em>You like it, do you?</em> → ✓ <strong>don’t you</strong>",
+                "× Incorrect pronoun → <em>Anna is here, isn’t Anna?</em> → ✓ <strong>isn’t she</strong>",
             ],
         },
         {
@@ -4054,10 +4051,10 @@ export const RULE_PAGE_TOO_ENOUGH_SO_SUCH = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "⚠️ Excess → <strong>too + adjective / adverb</strong>: <strong>too expensive</strong>",
-                "✅ Sufficiency → <strong>adjective + enough</strong>: <strong>old enough</strong>",
-                "📏 Quantity → <strong>too much / too many</strong>",
-                "🔥 Emphasis → <strong>so + adjective</strong>, <strong>such + (adjective) + noun</strong>",
+                "Excess → <strong>too + adjective / adverb</strong>: <strong>too expensive</strong>",
+                "Sufficiency → <strong>adjective + enough</strong>: <strong>old enough</strong>",
+                "Quantity → <strong>too much / too many</strong>",
+                "Emphasis → <strong>so + adjective</strong>, <strong>such + (adjective) + noun</strong>",
             ],
             hint:
                 "If the meaning is “a problem / excessive” → <strong>too</strong>. " +
@@ -4103,10 +4100,10 @@ export const RULE_PAGE_TOO_ENOUGH_SO_SUCH = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>enough big</em> → ✅ <strong>big enough</strong>",
-                "❌ <em>too many money</em> → ✅ <strong>too much money</strong>",
-                "❌ <em>so a good idea</em> → ✅ <strong>such a good idea</strong>",
-                "❌ Confusing meanings: <em>too</em> (negative excess) ≠ <em>very</em> (neutral emphasis)",
+                "× <em>enough big</em> → ✓ <strong>big enough</strong>",
+                "× <em>too many money</em> → ✓ <strong>too much money</strong>",
+                "× <em>so a good idea</em> → ✓ <strong>such a good idea</strong>",
+                "× Confusing meanings: <em>too</em> (negative excess) ≠ <em>very</em> (neutral emphasis)",
             ],
         },
         {
@@ -4160,9 +4157,9 @@ export const RULE_PAGE_RELATIVE_CLAUSES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Omitting <em>who / which</em> when it is the subject → <em>The man helped us</em>",
-                "❌ Using <em>which</em> for people → ✅ <strong>who</strong>",
-                "❌ Relative clause placed far from the noun → unclear what it describes",
+                "× Omitting <em>who / which</em> when it is the subject → <em>The man helped us</em>",
+                "× Using <em>which</em> for people → ✓ <strong>who</strong>",
+                "× Relative clause placed far from the noun → unclear what it describes",
             ],
         },
         {
@@ -4191,9 +4188,9 @@ export const RULE_PAGE_REFLEXIVE_PRONOUNS = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "🔁 The action is directed at oneself: <strong>He hurt himself.</strong>",
-                "🧍‍♂️ After certain verbs (hurt, blame, introduce, enjoy)",
-                "⚠️ For emphasis (“on one’s own”): <strong>I did it myself.</strong>",
+                "The action is directed at oneself: <strong>He hurt himself.</strong>",
+                "After certain verbs (hurt, blame, introduce, enjoy)",
+                "For emphasis (“on one’s own”): <strong>I did it myself.</strong>",
             ],
         },
         {
@@ -4213,8 +4210,8 @@ export const RULE_PAGE_REFLEXIVE_PRONOUNS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Unnecessary reflexive pronoun → <em>I washed myself my hands.</em> → ✅ <strong>I washed my hands.</strong>",
-                "❌ Confusing reflexive and personal pronouns → <em>She blamed her.</em> (someone else, not herself)",
+                "× Unnecessary reflexive pronoun → <em>I washed myself my hands.</em> → ✓ <strong>I washed my hands.</strong>",
+                "× Confusing reflexive and personal pronouns → <em>She blamed her.</em> (someone else, not herself)",
             ],
         },
         {
@@ -4243,9 +4240,9 @@ export const RULE_PAGE_ADVERBS_OF_MANNER = {
             type: "usage",
             title: "When and how we use them",
             badges: [
-                "🧩 Often formed from adjectives: <strong>quick → quickly</strong>",
-                "⚠️ Some words do not change: <strong>fast, hard, late, early</strong>",
-                "📍 Usually placed <em>after the verb</em> or <em>after the object</em>",
+                "Often formed from adjectives: <strong>quick → quickly</strong>",
+                "Some words do not change: <strong>fast, hard, late, early</strong>",
+                "Usually placed <em>after the verb</em> or <em>after the object</em>",
             ],
         },
         {
@@ -4285,7 +4282,7 @@ export const RULE_PAGE_ADVERBS_OF_MANNER = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>She sings beautiful.</em> → ✅ <strong>beautifully</strong>"
+                "× <em>She sings beautiful.</em> → ✓ <strong>beautifully</strong>"
             ],
         },
         {
@@ -4314,9 +4311,9 @@ export const RULE_PAGE_IN_ORDER_TO_SO_THAT = {
             type: "usage",
             title: "When to use each",
             badges: [
-                "🎯 Purpose without a subject → <strong>(in order) to + V</strong>: <strong>I work to earn money.</strong>",
-                "👥 Purpose with a subject → <strong>so that + subject + verb</strong>: <strong>I left early so that I wouldn’t be late.</strong>",
-                "🗣️ <strong>To</strong> is neutral; <strong>in order to</strong> is more formal",
+                "Purpose without a subject → <strong>(in order) to + V</strong>: <strong>I work to earn money.</strong>",
+                "Purpose with a subject → <strong>so that + subject + verb</strong>: <strong>I left early so that I wouldn’t be late.</strong>",
+                "<strong>To</strong> is neutral; <strong>in order to</strong> is more formal",
             ],
             hint:
                 "If the clause has its own subject, use <strong>so that</strong>.",
@@ -4344,9 +4341,9 @@ export const RULE_PAGE_IN_ORDER_TO_SO_THAT = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I work in order to I earn money.</em> → ✅ <strong>I work in order to earn money.</strong>",
-                "❌ <em>I left early to I wouldn’t be late.</em> → ✅ <strong>I left early so that I wouldn’t be late.</strong>",
-                "❌ Overusing <em>in order to</em> in casual speech (it can sound too formal)",
+                "× <em>I work in order to I earn money.</em> → ✓ <strong>I work in order to earn money.</strong>",
+                "× <em>I left early to I wouldn’t be late.</em> → ✓ <strong>I left early so that I wouldn’t be late.</strong>",
+                "× Overusing <em>in order to</em> in casual speech (it can sound too formal)",
             ],
         },
         {
@@ -4378,10 +4375,10 @@ export const RULE_PAGE_MODALS_OF_PROBABILITY = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "🔍 Logical conclusion → <strong>He must be tired.</strong>",
-                "🤔 Uncertain guess → <strong>She might be at work.</strong>",
-                "🚫 Impossibility → <strong>He can’t be serious.</strong>",
-                "🕒 Used for present and past (with have + V3)",
+                "Logical conclusion → <strong>He must be tired.</strong>",
+                "Uncertain guess → <strong>She might be at work.</strong>",
+                "Impossibility → <strong>He can’t be serious.</strong>",
+                "Used for present and past (with have + V3)",
             ],
         },
         {
@@ -4417,8 +4414,8 @@ export const RULE_PAGE_MODALS_OF_PROBABILITY = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Using <em>mustn’t</em> for assumptions → ❌ (it means prohibition) → ✅ use <strong>can’t</strong> for impossibility",
-                "❌ Omitting <em>have</em> in past assumptions → <em>must forgot</em> → ✅ <strong>must have forgotten</strong>",
+                "× Using <em>mustn’t</em> for assumptions → × (it means prohibition) → ✓ use <strong>can’t</strong> for impossibility",
+                "× Omitting <em>have</em> in past assumptions → <em>must forgot</em> → ✓ <strong>must have forgotten</strong>",
             ],
         },
         {
@@ -4447,9 +4444,9 @@ export const RULE_PAGE_BE_SUPPOSED_TO = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "📅 Schedule / plan: <strong>I’m supposed to start at 9.</strong>",
-                "📜 Rule / instruction: <strong>You’re supposed to wear a helmet.</strong>",
-                "⚠️ Broken expectation: <strong>He wasn’t supposed to be here.</strong>",
+                "Schedule / plan: <strong>I’m supposed to start at 9.</strong>",
+                "Rule / instruction: <strong>You’re supposed to wear a helmet.</strong>",
+                "Broken expectation: <strong>He wasn’t supposed to be here.</strong>",
             ],
         },
         {
@@ -4480,8 +4477,8 @@ export const RULE_PAGE_BE_SUPPOSED_TO = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I’m supposed of going now.</em> → ✅ <strong>I’m supposed to go now.</strong>",
-                "❌ <em>You’re supposed for doing this.</em> → ✅ <strong>You’re supposed to do this.</strong>"
+                "× <em>I’m supposed of going now.</em> → ✓ <strong>I’m supposed to go now.</strong>",
+                "× <em>You’re supposed for doing this.</em> → ✓ <strong>You’re supposed to do this.</strong>"
             ],
         },
         {
@@ -4540,10 +4537,10 @@ export const RULE_PAGE_LET_MAKE_ALLOW = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>They allowed me go.</em> → ✅ <strong>allowed me to go</strong>",
-                "❌ <em>He made me to do it.</em> → ✅ <strong>made me do it</strong>",
-                "❌ <em>Let to go.</em> → ✅ <strong>Let me go.</strong>",
-                "❌ <em>allowed to me</em> → ✅ <strong>allowed me</strong>",
+                "× <em>They allowed me go.</em> → ✓ <strong>allowed me to go</strong>",
+                "× <em>He made me to do it.</em> → ✓ <strong>made me do it</strong>",
+                "× <em>Let to go.</em> → ✓ <strong>Let me go.</strong>",
+                "× <em>allowed to me</em> → ✓ <strong>allowed me</strong>",
             ],
         },
         {
@@ -4573,10 +4570,10 @@ export const RULE_PAGE_REPORTED_QUESTIONS = {
             type: "usage",
             title: "Basic rules",
             badges: [
-                "❓ Wh-questions → <strong>asked + wh-word</strong>: <strong>He asked where I lived.</strong>",
-                "❓ Yes/No questions → <strong>asked if / whether</strong>: <strong>She asked if I liked it.</strong>",
-                "⏪ Tense shift (backshift) often happens",
-                "🔀 Word order becomes the same as in statements",
+                "Wh-questions → <strong>asked + wh-word</strong>: <strong>He asked where I lived.</strong>",
+                "Yes/No questions → <strong>asked if / whether</strong>: <strong>She asked if I liked it.</strong>",
+                "Tense shift (backshift) often happens",
+                "Word order becomes the same as in statements",
             ],
             hint:
                 "In reported questions there is <em>no inversion</em>: " +
@@ -4608,8 +4605,8 @@ export const RULE_PAGE_REPORTED_QUESTIONS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He asked where did I live.</em> → ✅ <strong>where I lived</strong>",
-                "❌ <em>She asked do I like it.</em> → ✅ <strong>if I liked it</strong>",
+                "× <em>He asked where did I live.</em> → ✓ <strong>where I lived</strong>",
+                "× <em>She asked do I like it.</em> → ✓ <strong>if I liked it</strong>",
             ],
         },
         {
@@ -4638,9 +4635,9 @@ export const RULE_PAGE_CAUSATIVE_HAVE_GET = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "✂️ Services: <strong>I had my hair cut.</strong>",
-                "🔧 Repairs / technical work: <strong>We got the car repaired.</strong>",
-                "🗣️ <strong>have</strong> — neutral; <strong>get</strong> — more conversational",
+                "Services: <strong>I had my hair cut.</strong>",
+                "Repairs / technical work: <strong>We got the car repaired.</strong>",
+                "<strong>have</strong> — neutral; <strong>get</strong> — more conversational",
             ],
             hint:
                 "The focus is not on the person who performs the action, but on the <em>result</em>.",
@@ -4674,9 +4671,9 @@ export const RULE_PAGE_CAUSATIVE_HAVE_GET = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Confusing it with the passive → <em>I had my hair cut</em> ≠ <em>My hair was cut</em> (different focus).",
-                "❌ <em>I cut my hair</em> (different meaning: you did it yourself).",
-                "❌ <em>have my hair to cut</em> → ✅ <strong>have my hair cut</strong>",
+                "× Confusing it with the passive → <em>I had my hair cut</em> ≠ <em>My hair was cut</em> (different focus).",
+                "× <em>I cut my hair</em> (different meaning: you did it yourself).",
+                "× <em>have my hair to cut</em> → ✓ <strong>have my hair cut</strong>",
             ],
         },
         {
@@ -4706,10 +4703,10 @@ export const RULE_PAGE_PHRASAL_VERBS_COMMON = {
             type: "usage",
             title: "How they work",
             badges: [
-                "🔗 Meaning ≠ sum of parts: <strong>give up</strong> = stop trying",
-                "↔️ Some are separable: <strong>turn off the light / turn the light off</strong>",
-                "🚫 Some are inseparable: <strong>look after the child</strong>",
-                "🧍‍♂️ Pronouns always go in the middle: <strong>pick it up</strong>",
+                "Meaning ≠ sum of parts: <strong>give up</strong> = stop trying",
+                "Some are separable: <strong>turn off the light / turn the light off</strong>",
+                "Some are inseparable: <strong>look after the child</strong>",
+                "Pronouns always go in the middle: <strong>pick it up</strong>",
             ],
         },
         {
@@ -4738,7 +4735,7 @@ export const RULE_PAGE_PHRASAL_VERBS_COMMON = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>pick up it</em> → ✅ <strong>pick it up</strong>",
+                "× <em>pick up it</em> → ✓ <strong>pick it up</strong>",
             ],
         },
         {
@@ -4768,9 +4765,9 @@ export const RULE_PAGE_EACH_OTHER_ONE_ANOTHER = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "🤝 Reciprocal action → <strong>They help each other.</strong>",
-                "👥 Traditionally: <strong>each other</strong> — for two people, <strong>one another</strong> — for more",
-                "🗣️ In modern English they are often interchangeable",
+                "Reciprocal action → <strong>They help each other.</strong>",
+                "Traditionally: <strong>each other</strong> — for two people, <strong>one another</strong> — for more",
+                "In modern English they are often interchangeable",
             ],
             hint:
                 "If the action happens <em>between people</em>, not to the same person, " +
@@ -4802,8 +4799,8 @@ export const RULE_PAGE_EACH_OTHER_ONE_ANOTHER = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Confusing with reflexive pronouns → <em>They helped themselves</em> ≠ <strong>each other</strong>",
-                "❌ <em>each others</em> → ❌ (no plural form)"
+                "× Confusing with reflexive pronouns → <em>They helped themselves</em> ≠ <strong>each other</strong>",
+                "× <em>each others</em> → × (no plural form)"
             ],
         },
         {
@@ -4832,9 +4829,9 @@ export const RULE_PAGE_SO_DO_I_NEITHER_DO_I = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "➕ Positive → <strong>So + auxiliary + subject</strong>: <strong>I like coffee. — So do I.</strong>",
-                "➖ Negative → <strong>Neither + auxiliary + subject</strong>: <strong>I don’t like tea. — Neither do I.</strong>",
-                "🔁 The auxiliary verb depends on the tense and structure",
+                "Positive → <strong>So + auxiliary + subject</strong>: <strong>I like coffee. — So do I.</strong>",
+                "Negative → <strong>Neither + auxiliary + subject</strong>: <strong>I don’t like tea. — Neither do I.</strong>",
+                "The auxiliary verb depends on the tense and structure",
             ],
         },
         {
@@ -4870,8 +4867,8 @@ export const RULE_PAGE_SO_DO_I_NEITHER_DO_I = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Neither I do.</em> → ✅ <strong>Neither do I.</strong>",
-                "❌ Wrong auxiliary → <em>I’m tired. — So do I.</em> → ✅ <strong>So am I.</strong>",
+                "× <em>Neither I do.</em> → ✓ <strong>Neither do I.</strong>",
+                "× Wrong auxiliary → <em>I’m tired. — So do I.</em> → ✓ <strong>So am I.</strong>",
             ],
         },
         {
@@ -4915,8 +4912,8 @@ export const RULE_PAGE_NOT_ONLY_BUT_ALSO = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Different grammatical structures after <em>not only</em> and <em>but also</em>.",
-                "❌ Missing inversion in very formal writing when the sentence begins with <em>Not only</em>."
+                "× Different grammatical structures after <em>not only</em> and <em>but also</em>.",
+                "× Missing inversion in very formal writing when the sentence begins with <em>Not only</em>."
             ]
         },
         { type: "trainer", title: "Mini trainer (Not only … but also)" }
@@ -4945,9 +4942,9 @@ export const RULE_PAGE_CLEFT_SENTENCES = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "🎯 Focus on a specific element → <strong>It was John who called.</strong>",
-                "🧩 Focus on an idea or action → <strong>What I need is a break.</strong>",
-                "✍️ Often used in writing or neutral speech to add emphasis without relying on intonation",
+                "Focus on a specific element → <strong>It was John who called.</strong>",
+                "Focus on an idea or action → <strong>What I need is a break.</strong>",
+                "Often used in writing or neutral speech to add emphasis without relying on intonation",
             ],
         },
         {
@@ -4979,8 +4976,8 @@ export const RULE_PAGE_CLEFT_SENTENCES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Incorrect tense → <em>It is yesterday that we met</em> → ✅ <strong>It was yesterday that we met</strong>",
-                "❌ Using cleft structure unnecessarily when simple word order is enough",
+                "× Incorrect tense → <em>It is yesterday that we met</em> → ✓ <strong>It was yesterday that we met</strong>",
+                "× Using cleft structure unnecessarily when simple word order is enough",
             ],
         },
         {
@@ -5010,9 +5007,9 @@ export const RULE_PAGE_MIXED_CONDITIONALS = {
             type: "usage",
             title: "Main types",
             badges: [
-                "⏳ Past → present (cause in the past, result now): " +
+                "Past → present (cause in the past, result now): " +
                 "<strong>If I had studied, I would speak better now.</strong>",
-                "⏳ Present → past (a general condition affecting the past): " +
+                "Present → past (a general condition affecting the past): " +
                 "<strong>If I were taller, I would have become a pilot.</strong>",
             ],
             hint:
@@ -5051,9 +5048,9 @@ export const RULE_PAGE_MIXED_CONDITIONALS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Using the same time reference in both clauses → not a mixed conditional",
-                "❌ <em>If I had studied, I would have a job now.</em> → restructure or use <strong>would have had</strong>",
-                "❌ Forgetting that <em>were</em> is used for all persons in unreal conditions",
+                "× Using the same time reference in both clauses → not a mixed conditional",
+                "× <em>If I had studied, I would have a job now.</em> → restructure or use <strong>would have had</strong>",
+                "× Forgetting that <em>were</em> is used for all persons in unreal conditions",
             ],
         },
         {
@@ -5098,8 +5095,8 @@ export const RULE_PAGE_THIRD_CONDITIONAL_VARIATIONS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Incorrect contraction: <em>would of</em> instead of <strong>would have</strong>.",
-                "❌ Incorrect word order after inversion with <em>Had</em>."
+                "× Incorrect contraction: <em>would of</em> instead of <strong>would have</strong>.",
+                "× Incorrect word order after inversion with <em>Had</em>."
             ]
         },
         { type: "trainer", title: "Mini trainer (3rd Conditional variations)" }
@@ -5127,9 +5124,9 @@ export const RULE_PAGE_ADV_PASSIVES_REPORTING_VERBS = {
             type: "usage",
             title: "Two main types",
             badges: [
-                "📰 General opinion or reports → <strong>It is said that…</strong>",
-                "👤 Focus on the person → <strong>He is said to…</strong>",
-                "✍️ Common in formal style (news, reports, academic writing)",
+                "General opinion or reports → <strong>It is said that…</strong>",
+                "Focus on the person → <strong>He is said to…</strong>",
+                "Common in formal style (news, reports, academic writing)",
             ],
             hint:
                 "Both constructions report <em>indirect information</em> without naming the source.",
@@ -5163,9 +5160,9 @@ export const RULE_PAGE_ADV_PASSIVES_REPORTING_VERBS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He is said that he is rich.</em> → ❌ (use the infinitive form instead)",
-                "❌ <em>He is said to is rich.</em> → ✅ <strong>to be rich</strong>",
-                "❌ Incorrect tense → <em>is said to leave yesterday</em> → ✅ <strong>to have left</strong>"
+                "× <em>He is said that he is rich.</em> → × (use the infinitive form instead)",
+                "× <em>He is said to is rich.</em> → ✓ <strong>to be rich</strong>",
+                "× Incorrect tense → <em>is said to leave yesterday</em> → ✓ <strong>to have left</strong>"
             ],
         },
         {
@@ -5196,9 +5193,9 @@ export const RULE_PAGE_PARTICIPLE_CLAUSES = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "⏱️ Time / reason → <strong>Feeling tired, he went to bed.</strong>",
-                "📄 Passive meaning → <strong>Built in 1990, the house looks old.</strong>",
-                "✂️ To shorten clauses with <strong>when / because / if</strong>",
+                "Time / reason → <strong>Feeling tired, he went to bed.</strong>",
+                "Passive meaning → <strong>Built in 1990, the house looks old.</strong>",
+                "To shorten clauses with <strong>when / because / if</strong>",
             ],
             hint:
                 "The subject of the participle clause must be <em>the same</em> as the subject of the main clause.",
@@ -5232,8 +5229,8 @@ export const RULE_PAGE_PARTICIPLE_CLAUSES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Dangling participle → <em>Walking down the street, the house appeared.</em>",
-                "❌ Different subjects in the clauses → the participle clause becomes illogical",
+                "× Dangling participle → <em>Walking down the street, the house appeared.</em>",
+                "× Different subjects in the clauses → the participle clause becomes illogical",
             ],
         },
         {
@@ -5263,9 +5260,9 @@ export const RULE_PAGE_REDUCED_RELATIVE_CLAUSES = {
             type: "usage",
             title: "How we reduce them",
             badges: [
-                "🟢 Active: <strong>who / that + V</strong> → <strong>V-ing</strong>",
-                "🔵 Passive: <strong>which / that + be + V3</strong> → <strong>V3</strong>",
-                "⚠️ The subject remains the same",
+                "Active: <strong>who / that + V</strong> → <strong>V-ing</strong>",
+                "Passive: <strong>which / that + be + V3</strong> → <strong>V3</strong>",
+                "The subject remains the same",
             ],
             hint:
                 "We reduce a relative clause only when it <em>describes a noun</em>, " +
@@ -5318,7 +5315,7 @@ export const RULE_PAGE_REDUCED_RELATIVE_CLAUSES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Incorrect tense or form → <em>The people lived here</em> (this has a different meaning)"
+                "× Incorrect tense or form → <em>The people lived here</em> (this has a different meaning)"
             ],
         },
         {
@@ -5348,11 +5345,11 @@ export const RULE_PAGE_COMPLEX_PREPOSITIONS = {
             type: "usage",
             title: "When and how we use them",
             badges: [
-                "⚠️ Cause (often formal) → <strong>due to</strong>",
-                "😊 Positive cause → <strong>thanks to</strong>",
-                "🔹 Neutral cause → <strong>because of</strong>",
-                "📍 Position / place → <strong>in front of, next to, on top of</strong>",
-                "🚫 Contrast → <strong>in spite of</strong>",
+                "Cause (often formal) → <strong>due to</strong>",
+                "Positive cause → <strong>thanks to</strong>",
+                "Neutral cause → <strong>because of</strong>",
+                "Position / place → <strong>in front of, next to, on top of</strong>",
+                "Contrast → <strong>in spite of</strong>",
             ]
         },
         {
@@ -5386,7 +5383,7 @@ export const RULE_PAGE_COMPLEX_PREPOSITIONS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>Because of he was tired</em> → ✅ <strong>because of being tired</strong>",
+                "× <em>Because of he was tired</em> → ✓ <strong>because of being tired</strong>",
             ],
         },
         {
@@ -5415,10 +5412,10 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
             type: "usage",
             title: "How we use them",
             badges: [
-                "📌 Before a noun → <strong>despite the rain</strong>",
-                "📌 Before a verb → <strong>despite / in spite of + V-ing</strong>",
-                "🟰 <strong>Despite</strong> and <strong>in spite of</strong> have the same meaning",
-                "✍️ <strong>Despite</strong> is slightly shorter and more commonly used",
+                "Before a noun → <strong>despite the rain</strong>",
+                "Before a verb → <strong>despite / in spite of + V-ing</strong>",
+                "<strong>Despite</strong> and <strong>in spite of</strong> have the same meaning",
+                "<strong>Despite</strong> is slightly shorter and more commonly used",
             ],
             hint:
                 "After <strong>despite / in spite of</strong> we cannot use a full clause with a subject and verb.",
@@ -5442,15 +5439,15 @@ export const RULE_PAGE_DESPITE_IN_SPITE_OF_ING = {
                 ],
             ],
             hint:
-                "<strong>Despite</strong> ≠ <strong>despite of</strong> (❌). " +
+                "<strong>Despite</strong> ≠ <strong>despite of</strong>. " +
                 "<strong>In spite of</strong> always includes <strong>of</strong>.",
         },
         {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>despite of the rain</em> → ✅ <strong>despite the rain</strong>",
-                "❌ <em>despite she was tired</em> → ✅ <strong>despite being tired</strong> / <strong>although she was tired</strong>",
+                "× <em>despite of the rain</em> → ✓ <strong>despite the rain</strong>",
+                "× <em>despite she was tired</em> → ✓ <strong>despite being tired</strong> / <strong>although she was tired</strong>",
             ],
         },
         {
@@ -5514,8 +5511,8 @@ export const RULE_PAGE_WOULD_RATHER_PREFER = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>I’d rather you to go.</em> → ✅ <strong>I’d rather you went.</strong>",
-                "❌ <em>I’d rather stayed.</em> → ✅ <strong>I’d rather stay.</strong>",
+                "× <em>I’d rather you to go.</em> → ✓ <strong>I’d rather you went.</strong>",
+                "× <em>I’d rather stayed.</em> → ✓ <strong>I’d rather stay.</strong>",
             ],
         },
         {
@@ -5544,9 +5541,9 @@ export const RULE_PAGE_HAD_BETTER = {
             type: "usage",
             title: "When we use it",
             badges: [
-                "⚠️ Warning → <strong>You’d better leave now.</strong>",
-                "⏰ Urgent advice → <strong>We’d better hurry.</strong>",
-                "🚨 Possible consequences (often implied)",
+                "Warning → <strong>You’d better leave now.</strong>",
+                "Urgent advice → <strong>We’d better hurry.</strong>",
+                "Possible consequences (often implied)",
             ],
             hint:
                 "<strong>Had better</strong> sounds stronger than <em>should</em> and can feel like insistence.",
@@ -5579,8 +5576,8 @@ export const RULE_PAGE_HAD_BETTER = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>had better to go</em> → ✅ <strong>had better go</strong>",
-                "❌ <em>had better went</em> → ✅ <strong>had better go</strong>"
+                "× <em>had better to go</em> → ✓ <strong>had better go</strong>",
+                "× <em>had better went</em> → ✓ <strong>had better go</strong>"
             ],
         },
         {
@@ -5609,10 +5606,10 @@ export const RULE_PAGE_ADVANCED_MODALS_OF_DEDUCTION = {
             type: "usage",
             title: "When we use them",
             badges: [
-                "🔍 Logical conclusion → <strong>must</strong>",
-                "🤔 Possibility → <strong>may / might / could</strong>",
-                "🚫 Impossibility → <strong>can’t</strong>",
-                "🕒 For past deductions → <strong>modal + have + V3</strong>",
+                "Logical conclusion → <strong>must</strong>",
+                "Possibility → <strong>may / might / could</strong>",
+                "Impossibility → <strong>can’t</strong>",
+                "For past deductions → <strong>modal + have + V3</strong>",
             ],
         },
         {
@@ -5646,8 +5643,8 @@ export const RULE_PAGE_ADVANCED_MODALS_OF_DEDUCTION = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>He must left</em> → ✅ <strong>must have left</strong>",
-                "❌ Incorrect tense → for past deductions always use <strong>have + V3</strong>",
+                "× <em>He must left</em> → ✓ <strong>must have left</strong>",
+                "× Incorrect tense → for past deductions always use <strong>have + V3</strong>",
             ],
         },
         {
@@ -5678,9 +5675,9 @@ export const RULE_PAGE_COMPLEX_NOUN_PHRASES = {
             type: "usage",
             title: "How they are built",
             badges: [
-                "🧩 Before the noun → <strong>det + adj + noun</strong>",
-                "🔗 After the noun → <strong>prepositional phrase / relative clause</strong>",
-                "📚 Common in formal and written language",
+                "Before the noun → <strong>det + adj + noun</strong>",
+                "After the noun → <strong>prepositional phrase / relative clause</strong>",
+                "Common in formal and written language",
             ],
             hint:
                 "In English, most descriptive elements appear <em>before</em> the noun, " +
@@ -5715,9 +5712,9 @@ export const RULE_PAGE_COMPLEX_NOUN_PHRASES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Using too many adjectives without a logical order",
-                "❌ Missing commas in a list of adjectives",
-                "❌ Overly long phrases that are difficult to read",
+                "× Using too many adjectives without a logical order",
+                "× Missing commas in a list of adjectives",
+                "× Overly long phrases that are difficult to read",
             ],
         },
         {
@@ -5747,10 +5744,10 @@ export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
             type: "usage",
             title: "Main rules",
             badges: [
-                "❓ Wh-questions → <strong>wh-word + subject + verb</strong>",
-                "❓ Yes/No questions → <strong>if / whether + subject + verb</strong>",
-                "⏪ Backshift often occurs (present → past)",
-                "🔗 Often used after <em>ask, wonder, want to know</em>",
+                "Wh-questions → <strong>wh-word + subject + verb</strong>",
+                "Yes/No questions → <strong>if / whether + subject + verb</strong>",
+                "Backshift often occurs (present → past)",
+                "Often used after <em>ask, wonder, want to know</em>",
             ],
         },
         {
@@ -5782,8 +5779,8 @@ export const RULE_PAGE_INDIRECT_SPEECH_QUESTION_FORMS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>She asked where was he.</em> → ✅ <strong>where he was</strong>",
-                "❌ <em>He asked did I see her.</em> → ✅ <strong>if I had seen her</strong>",
+                "× <em>She asked where was he.</em> → ✓ <strong>where he was</strong>",
+                "× <em>He asked did I see her.</em> → ✓ <strong>if I had seen her</strong>",
             ],
         },
         {
@@ -5828,7 +5825,7 @@ export const RULE_PAGE_COMPOUND_SENTENCES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Comma splice: two clauses joined only by a comma without a conjunction."
+                "× Comma splice: two clauses joined only by a comma without a conjunction."
             ]
         },
         {
@@ -5874,7 +5871,7 @@ export const RULE_PAGE_COMPLEX_SENTENCES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Missing commas after introductory subordinate clauses in writing."
+                "× Missing commas after introductory subordinate clauses in writing."
             ]
         },
         {
@@ -5920,7 +5917,7 @@ export const RULE_PAGE_COMPOUND_COMPLEX_SENTENCES = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Very long sentences without clear punctuation or logical pauses."
+                "× Very long sentences without clear punctuation or logical pauses."
             ]
         },
         {
@@ -5950,10 +5947,10 @@ export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
             type: "usage",
             title: "When and how we use them",
             badges: [
-                "🔀 Choice between two options → <strong>either … or</strong>",
-                "🚫 Negative for both → <strong>neither … nor</strong>",
-                "➕ Both options → <strong>both … and</strong>",
-                "✨ Emphasis → <strong>not only … but also</strong>",
+                "Choice between two options → <strong>either … or</strong>",
+                "Negative for both → <strong>neither … nor</strong>",
+                "Both options → <strong>both … and</strong>",
+                "Emphasis → <strong>not only … but also</strong>",
             ],
         },
         {
@@ -5987,8 +5984,8 @@ export const RULE_PAGE_CORRELATIVE_CONJUNCTIONS = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ Breaking parallel structure → <em>both reading and write</em> → ❌",
-                "❌ Incorrect agreement → <em>Neither you nor I is ready</em> → ✅ <strong>am ready</strong>",
+                "× Breaking parallel structure → <em>both reading and write</em> → ×",
+                "× Incorrect agreement → <em>Neither you nor I is ready</em> → ✓ <strong>am ready</strong>",
             ],
         },
         {
@@ -6047,8 +6044,8 @@ export const RULE_PAGE_PREP_DIRECTION = {
             type: "mistakes",
             title: "Common mistakes",
             bullets: [
-                "❌ <em>go into school</em> (for general direction) → ✅ <strong>go to school</strong>",
-                "❌ <em>walk to the room</em> (when meaning inside) → ✅ <strong>walk into the room</strong>",
+                "× <em>go into school</em> (for general direction) → ✓ <strong>go to school</strong>",
+                "× <em>walk to the room</em> (when meaning inside) → ✓ <strong>walk into the room</strong>",
             ],
         },
         {

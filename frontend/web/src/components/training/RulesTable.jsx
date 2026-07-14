@@ -363,7 +363,7 @@ export default function RulesTable({
                     height: "100%",
                     overflowY: "auto",
                     WebkitOverflowScrolling: "touch",
-                    paddingBottom: 36,
+                    paddingBottom: isMobile ? 36 : 0,
                 }}
             >
                 <div id="tbody">

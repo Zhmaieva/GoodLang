@@ -165,16 +165,19 @@ export default function AccountStatusButton({ theme }) {
         accent: isPaid ? theme.green : theme.accent,
         accentDark: isPaid ? theme.greenDark : theme.accentDark,
     };
+    const BUTTON_OFFSET = 4;
 
     return (
         <>
 
             <Button
-                variant="primary"
+                variant="offset"
+                compact
                 theme={buttonTheme}
+                shadowColor={buttonTheme.accent}
+                shadowOffset={BUTTON_OFFSET}
                 style={{
                     fontFamily: 'var(--font-family-base)',
-                    height: "100%",
                     minWidth: "180px",
                     visibility: account?.status ? "visible" : "hidden",
                 }}
@@ -182,8 +185,7 @@ export default function AccountStatusButton({ theme }) {
             >
                 {account?.status === "paid" && "My subscription"}
                 {account?.status === "attention" && "Subscription (expiring)"}
-                {account?.status === "free" && account?.email && "Get more practice"}
-                {account?.status === "free" && !account?.email && "Subscribe / Sign in"}
+                {account?.status === "free" && "Get more practice"}
             </Button>
 
 

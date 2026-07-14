@@ -101,6 +101,20 @@ export default function LoginForm({
         boxShadow: INPUT_SHADOW,
     };
 
+    const emailInputStyle = {
+        ...baseInputStyle,
+        borderRadius: 5,
+        border: "1px solid #000",
+        padding: "10px 12px",
+        fontSize: 16,
+        fontWeight: 400,
+        color: "#000",
+        textAlign: "left",
+        minHeight: 42,
+        marginBottom: 10,
+        boxShadow: "none",
+    };
+
     // individual digit input inside the “gapped” code box
     const codeInputStyle = {
         ...baseInputStyle,
@@ -400,6 +414,8 @@ export default function LoginForm({
                     theme={theme}
                     title={modalTitle}
                     subtitle={modalSubtitle}
+                    titleStyle={step === "email" ? { fontSize: "1.75rem" } : undefined}
+                    panelStyle={step === "email" ? { padding: 40 } : undefined}
                     onClose={() => {
                         unlockScroll();
                         if (!closeDisabled) onClose();
@@ -412,7 +428,7 @@ export default function LoginForm({
                                 {step === "email" && (
                                     <>
                                         <input
-                                            className={"highlight-input"}
+                                            className={"highlight-input login-email-input"}
                                             type="email"
                                             placeholder="goodlang.app@example.com"
                                             value={emailInput}
@@ -427,7 +443,7 @@ export default function LoginForm({
                                                 }
                                             }}
                                             style={{
-                                                ...baseInputStyle,
+                                                ...emailInputStyle,
                                                 width: "100%",
                                                 opacity: loading ? 0.7 : 1,
                                             }}
@@ -534,7 +550,25 @@ export default function LoginForm({
                                     {`
                                         input::placeholder,
                                         textarea::placeholder {
-                                            text-align: center;
+                                            text-align: left;
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            color: #000;
+                                            opacity: 0.5;
+                                        }
+
+                                        .login-email-input,
+                                        .login-email-input:focus {
+                                            border-width: 1px !important;
+                                            border-color: #000 !important;
+                                            outline: none;
+                                        }
+
+                                        .login-email-input:focus,
+                                        .login-email-input:focus-visible {
+                                            border-width: 1px !important;
+                                            border-color: ${theme.accent} !important;
+                                            outline: none;
                                         }
                                     `}
                                 </style>

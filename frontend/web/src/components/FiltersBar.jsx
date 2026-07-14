@@ -63,7 +63,7 @@ export default function FiltersBar({
                                 compact
                                 isMobile={isMobile}
                                 shadowColor={selected ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
-                                shadowOffset={BUTTON_OFFSET}
+                                shadowOffset={selected ? 0 : BUTTON_OFFSET}
                                 aria-pressed={selected}
                                 onClick={() => onLevelChange(lvl.id)}
                                 style={{
@@ -103,7 +103,7 @@ export default function FiltersBar({
                     compact
                     isMobile={isMobile}
                     shadowColor={showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
-                    shadowOffset={BUTTON_OFFSET}
+                    shadowOffset={showWeakOnly ? 0 : BUTTON_OFFSET}
                     onClick={onToggleWeak}
                     style={{
                         backgroundColor: showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR,

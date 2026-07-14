@@ -14,6 +14,7 @@ import { marathonService } from "../../services/marathonService.js";
 import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 import { ArrowRight } from "@phosphor-icons/react";
+import AccountStatusButton from "../subscription/AccountStatusButton.jsx";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -212,7 +213,7 @@ export default function HomePage({ theme }) {
         flexDirection: "column",
 
         padding: isMobile ? "24px 16px 32px" : "40px 40px 40px",
-        border: `2px solid ${FRAME_COLOR}`,
+        border: "1px solid #000",
         borderRadius: 12,
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
         boxShadow: "0 18px 45px rgba(0,0,0,0.10)",
@@ -251,6 +252,7 @@ export default function HomePage({ theme }) {
             <div style={pageShellStyle}>
                 <main style={pageContentStyle} ref={containerRef}>
                     <header style={headerStyle}>
+                        <AccountStatusButton theme={theme} />
                         {/*<nav style={navStyle}>
                             <Button
                                 variant="offset"
