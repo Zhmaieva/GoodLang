@@ -43,10 +43,13 @@ function endOfLocalDayMs() {
 }
 
 export default function AccuracyKpi({ header, mobile, theme }) {
-    const [accuracy, setAccuracy] = useState(0);
-    const [attemptsLeft, setAttemptsLeft] = useState(0);
+    const initialOverall = useMemo(() => getOverallAccuracy(), []);
+    const initialAccuracy = Number.isFinite(initialOverall?.accuracy) ? initialOverall.accuracy : 0;
+
+    const [accuracy, setAccuracy] = useState(initialAccuracy);
+    const [attemptsLeft, setAttemptsLeft] = useState(initialOverall?.attemptsLeft ?? 0);
     const [isMobile, setIsMobile] = useState(mobile);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [hover, setHover] = useState(false);
     const [levelInfo, setLevelInfo] = useState(LEVEL_MAP?.A1 ?? { label: "A1" });
     const [levelNameInfo, setLevelNameInfo] = useState("");

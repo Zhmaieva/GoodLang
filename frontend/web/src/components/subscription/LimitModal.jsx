@@ -7,7 +7,7 @@ import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.j
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
 import { Button } from "../Buttons.jsx";
-import { Check, X } from "@phosphor-icons/react";
+import { X } from "@phosphor-icons/react";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -34,16 +34,6 @@ export const logoStyle = (size) => ({
     boxShadow: `0 2px 0 ${legacyGlobalStyling.accentDark}`,
 });
 
-const BenefitCheck = ({ color }) => (
-    <Check
-        size={16}
-        weight="bold"
-        color={color}
-        aria-hidden
-        style={{ marginRight: 8, verticalAlign: "-2px" }}
-    />
-);
-
 export default function LimitModal({
                                        subscribeIntent = false,
                                        isLimitReached,
@@ -64,13 +54,8 @@ export default function LimitModal({
     const [account, setAccount] = useState(null);
     const [subscribe, setSubscribe] = useState(subscribeIntent);
 
-    const [hovered, setHovered] = useState(false);
-    const [signInHovered, setSignInHovered] = useState(false);
-
     const [skillAccuracy, setSkillAccuracy] = useState(0);
     const [attemptsLeft, setAttemptsLeft] = useState(0);
-
-    const [showInfo, setShowInfo] = useState(false);
 
     const refreshSkill = async () => {
         const overall = getOverallAccuracy();
@@ -226,6 +211,21 @@ export default function LimitModal({
     const hoursLeft = promo?.expirationDate ? hoursLeftFromExpiration(promo.expirationDate) : null;
     const hoursWord = hoursLeft != null ? pluralizeHoursUk(hoursLeft) : null;
 
+    const benefitItemStyle = {
+        display: "flex",
+        alignItems: "baseline",
+        gap: 10,
+        marginBottom: 3,
+    };
+
+    const benefitMarkerStyle = {
+        flex: "0 0 auto",
+        width: 10,
+        color: "#000",
+        fontWeight: 400,
+        lineHeight: 1,
+    };
+
     return (
         <>
             {
@@ -248,57 +248,60 @@ export default function LimitModal({
                         <div
                             style={{
                                 background: theme.bg,
-                                padding: "32px",
-                                borderRadius: theme.radius * 1.2,
-                                border: `4px solid ${theme.accent}`,
+                                padding: 40,
+                                borderRadius: 12,
+                                border: "1px solid #000",
                                 width: "90%",
-                                maxWidth: 460,
+                                maxWidth: 520,
                                 textAlign: "center",
-                                boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                                boxShadow: "none",
                                 display: !isPaying ? "block" : "none",
+                                position: "relative",
                             }}
                             onClick={(e) => {
                                 e.stopPropagation();
-                                setShowInfo(false);
                             }}
                         >
-                            <div style={{display: "flex", justifyContent: "space-between"}}>
-                                {account?.email ? (
-                                    <p style={{
-                                        marginBottom: 16,
-                                        marginTop: 0,
-                                        marginLeft: 0,
-                                        color: theme.muted,
-                                        fontSize: "16px",
-                                        fontWeight: 500,
-                                        textAlign: "left"
-                                    }}>
-                                        {account?.email}
-                                    </p>
-                                ) : (
-                                    <div />
-                                )}
+                            <button
+                                type="button"
+                                onClick={onClose}
+                                style={{
+                                    position: "absolute",
+                                    top: 40,
+                                    right: 40,
+                                    width: 24,
+                                    height: 24,
+                                    padding: 0,
+                                    border: "none",
+                                    background: "transparent",
+                                    color: theme.accent,
+                                    cursor: "pointer",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    userSelect: "none",
+                                    WebkitUserSelect: "none",
+                                    WebkitTouchCallout: "none",
+                                }}
+                                aria-label="Close"
+                            >
+                                <X size={18} weight="bold" aria-hidden />
+                            </button>
 
-                                <p
-                                    onClick={onClose}
-                                    style={{
-                                        marginBottom: 16,
-                                        marginTop: -22,
-                                        marginLeft: 0,
-                                        marginRight: -18,
-                                        color: theme.accent,
-                                        fontSize: "1.3rem",
-                                        fontWeight: 500,
-                                        textAlign: "left",
-                                        cursor: "pointer",
-                                        userSelect: "none",
-                                        WebkitUserSelect: "none",
-                                        WebkitTouchCallout: "none",
-                                    }}
-                                >
-                                    <X size={18} weight="bold" aria-hidden />
+                            {account?.email && (
+                                <p style={{
+                                    marginBottom: 12,
+                                    marginTop: 0,
+                                    marginLeft: 0,
+                                    paddingRight: 36,
+                                    color: theme.muted,
+                                    fontSize: "16px",
+                                    fontWeight: 500,
+                                    textAlign: "left"
+                                }}>
+                                    {account?.email}
                                 </p>
-                            </div>
+                            )}
 
                             <div style={{
                                 marginLeft: 0,
@@ -314,8 +317,8 @@ export default function LimitModal({
                                             marginBottom: 0,
                                             marginTop: 0,
                                             color: theme.text,
-                                            fontSize: "1.5rem",
-                                            fontWeight: 800
+                                            fontSize: "1.75rem",
+                                            fontWeight: 700
                                         }}>
                                             {"Unlimited learning"}
                                         </h2>
@@ -327,7 +330,7 @@ export default function LimitModal({
                                             marginBottom: 0,
                                             marginTop: 0,
                                             color: theme.text,
-                                            fontSize: "1.5rem",
+                                            fontSize: "1.75rem",
                                             fontWeight: 700
                                         }}>
                                             Keep practicing
@@ -398,8 +401,8 @@ export default function LimitModal({
                                             marginBottom: 0,
                                             marginTop: 0,
                                             color: theme.text,
-                                            fontSize: "1.5rem",
-                                            fontWeight: 800
+                                            fontSize: "1.75rem",
+                                            fontWeight: 700
                                         }}>
                                             {"All learning tools"}
                                         </h2>
@@ -446,49 +449,46 @@ export default function LimitModal({
                                     </p>
                                 </div>
 
-                                <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                    <div style={logoStyle(64)}>GL</div>
-                                </div>
                             </div>
 
-                            <div style={{textAlign: "left", margin: "0 0 28px 10px", maxWidth: 320}}>
+                            <div style={{textAlign: "left", margin: "0 0 28px 0", maxWidth: 360}}>
                                 <ul style={{
                                     listStyle: "none",
                                     padding: 0,
                                     margin: 0,
-                                    lineHeight: "1.6",
+                                    lineHeight: "1.45",
                                     color: theme.text,
-                                    fontSize: "16px",
-                                    fontWeight: 500
+                                    fontSize: "15px",
+                                    fontWeight: 400
                                 }}>
                                     {/* ✅ NEW featurePdf bullets */}
                                     {featurePdf && (
                                         <>
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 1800+ вправ у форматі PDF
                                             </li>
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Відсутність вотермарків на всіх PDF
                                             </li>
 
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Priority support
                                             </li>
 
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Unlimited training
                                             </li>
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Cloud progress saving
                                             </li>
 
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Cancel anytime
                                             </li>
                                         </>
@@ -496,18 +496,18 @@ export default function LimitModal({
 
                                     {!featurePdf && (
                                         <>
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Unlimited training
                                             </li>
 
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Cloud progress saving
                                             </li>
 
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Priority support
                                             </li>
 
@@ -520,8 +520,8 @@ export default function LimitModal({
                                             {/*    1800+ вправ у форматі PDF*/}
                                             {/*</li>*/}
 
-                                            <li>
-                                                <BenefitCheck color={theme.accent} />
+                                            <li style={benefitItemStyle}>
+                                                <span style={benefitMarkerStyle}>•</span>
                                                 Cancel anytime
                                             </li>
                                         </>
@@ -531,62 +531,30 @@ export default function LimitModal({
 
                         <div style={{display: "flex", flexDirection: "column", gap: 12}}>
                             <Button
-                                onMouseEnter={() => setHovered(true)}
-                                onMouseLeave={() => setHovered(false)}
+                                variant="offset"
+                                compact
+                                fullWidth
+                                theme={theme}
+                                shadowColor={theme.accent}
+                                shadowOffset={4}
                                 onClick={handleSubscribe}
                                 disabled={loading}
-                                style={{
-                                    appearance: "none",
-                                    padding: "10px 14px",
-                                    fontWeight: 800,
-                                    fontSize: "clamp(0.9rem, 3.5vw, 1rem)",
-                                    lineHeight: 1,
-                                    borderRadius: 999,
-                                    background: loading ? "#999" : theme.accent,
-                                    color: "#fff",
-                                    border: "2px solid rgba(0,0,0,0.12)",
-                                    boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                    fontFamily: 'var(--font-family-base)',
-                                    whiteSpace: "nowrap",
-                                    opacity: (loading) ? 0.7 : 1,
-                                    transform: hovered ? "translateY(1px)" : "none",
-                                    filter: hovered ? "brightness(0.95)" : "none",
-                                    transition: "transform 120ms ease, filter 120ms ease",
-                                    cursor: loading ? "not-allowed" : "pointer",
-                                    width: "100%",
-                                }}
                             >
                                 {loading ? "Loading…" : "Subscribe"}
                             </Button>
 
                                 <Button
-                                    onMouseEnter={() => setSignInHovered(true)}
-                                    onMouseLeave={() => setSignInHovered(false)}
+                                    variant="offset"
+                                    compact
+                                    fullWidth
+                                    theme={theme}
+                                    shadowColor={theme.accent}
+                                    shadowOffset={4}
                                     onClick={async () => {
                                         if (!account) await loadAccountInfo().then();
                                         setLoginModalOpen(true);
                                     }}
                                     disabled={loading}
-                                    style={{
-                                        appearance: "none",
-                                        padding: "10px 14px",
-                                        fontWeight: 800,
-                                        fontSize: "clamp(0.9rem, 3.5vw, 1rem)",
-                                        lineHeight: 1,
-                                        borderRadius: 999,
-                                        background: loading ? "#999" : "#fff",
-                                        color: theme.text,
-                                        border: "2px solid rgba(0,0,0,0.12)",
-                                        boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
-                                        fontFamily: 'var(--font-family-base)',
-                                        whiteSpace: "nowrap",
-                                        opacity: (loading) ? 0.7 : 1,
-                                        transform: signInHovered ? "translateY(1px)" : "none",
-                                        filter: signInHovered ? "brightness(0.95)" : "none",
-                                        transition: "transform 120ms ease, filter 120ms ease",
-                                        cursor: loading ? "not-allowed" : "pointer",
-                                        width: "100%",
-                                    }}
                                 >
                                     {account?.email ? "Sign in with another account" : "Sign in or sign up"}
                                 </Button>
@@ -599,13 +567,13 @@ export default function LimitModal({
                                         marginTop: 12,
                                         marginBottom: 0,
                                         fontSize: "0.95rem",
-                                        fontWeight: 700,
-                                        color: theme.text,
-                                        letterSpacing: "0.5px",
+                                        fontWeight: 400,
+                                        color: "#000",
+                                        letterSpacing: 0,
                                         width: "100%",
-                                        opacity: 0.5,
+                                        opacity: 1,
                                         display: "inline-block",
-                                        textAlign: "center"
+                                        textAlign: "left"
                                     }}
                                 >
                                     +60% more daily tasks for registered users

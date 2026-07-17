@@ -88,35 +88,26 @@ export default function ResultCard({
         },
 
         correctWrap: {
-            marginTop: 14,
             background: SOFT_INNER,
-            border: `2px solid ${SOFT_STROKE_ACCENT}`,
+            border: `1px solid #6F625B`,
             borderRadius: 5,
-            boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
             padding: "12px 14px",
         },
 
         correctTitle: {
             fontFamily: 'var(--font-family-base)',
-            fontSize: "0.95rem",
-            fontWeight: 900,
+            fontSize: "1.2rem",
+            fontWeight: 700,
             color: theme.text,
-            marginBottom: 8,
-            letterSpacing: ".03em",
-            opacity: 0.95,
+            marginBottom: 10,
+            letterSpacing: ".02em",
         },
 
         correctText: {
             fontFamily: 'var(--font-family-base)',
             fontSize: "1rem",
-            fontWeight: 800,
+            fontWeight: 500,
             color: theme.text,
-            background: "rgba(255,255,255,0.78)",
-            border: `2px solid ${SOFT_STROKE}`,
-            borderRadius: 5,
-            padding: "10px 12px",
-            display: "inline-block",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
             whiteSpace: "pre-wrap",
         },
 
@@ -124,17 +115,7 @@ export default function ResultCard({
             marginTop: 16,
             display: "flex",
             flexDirection: "column",
-            gap: 8,
-        },
-
-        rulesTitle: {
-            fontFamily: 'var(--font-family-base)',
-            fontSize: "0.95rem",
-            fontWeight: 900,
-            letterSpacing: ".03em",
-            color: theme.text,
-            marginBottom: 2,
-            opacity: 0.95,
+            gap: 0,
         },
 
         rulesWrap: {
@@ -147,15 +128,15 @@ export default function ResultCard({
             appearance: "none",
             cursor: "pointer",
             borderRadius: 5,
-            border: `2px solid ${SOFT_STROKE_ACCENT}`,
-            background: theme?.bg ?? APP_BACKGROUND_COLOR,
-            padding: "10px 14px",
+            border: "2px solid #fe2f31",
+            background: "transparent",
+            padding: "4px 14px",
             fontSize: "1rem",
             fontWeight: 600,
             fontFamily: 'var(--font-family-base)',
-            letterSpacing: ".02em",
+            letterSpacing: 0,
             color: theme.text,
-            boxShadow: "0 8px 18px rgba(0,0,0,0.10)",
+            boxShadow: "none",
             transition: "transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease",
         },
     };
@@ -197,48 +178,34 @@ export default function ResultCard({
                         <span>{feedbackText}</span>
                         {showLoader ? <BarsLoader /> : null}
                     </span>
+
+                    {recommendedRules.length > 0 && (
+                        <div style={styles.rulesOuterWrap}>
+                            <div style={styles.rulesWrap}>
+                                {recommendedRules.map((rule) => (
+                                    <Button
+                                        key={rule}
+                                        type="button"
+                                        style={styles.ruleButton}
+                                        onClick={() => openRuleInNewTab(rule)}
+                                    >
+                                        {RULE_LABELS[rule] || rule}
+                                    </Button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
             {correctAnswer ? (
                 <div key={correctKey} style={{ ...styles.floatIn, marginTop: 14 }}>
+                    <div style={styles.correctTitle}>Correct answer</div>
                     <div style={styles.correctWrap}>
-                        <div style={styles.correctTitle}>Correct answer</div>
                         <div style={styles.correctText}>{correctAnswer}</div>
                     </div>
                 </div>
             ) : null}
-
-            {recommendedRules.length > 0 && (
-                <div style={styles.rulesOuterWrap}>
-                    <div style={styles.rulesTitle}>Recommended rules:</div>
-
-                    <div style={styles.rulesWrap}>
-                        {recommendedRules.map((rule) => (
-                            <Button
-                                key={rule}
-                                type="button"
-                                style={styles.ruleButton}
-                                onClick={() => openRuleInNewTab(rule)}
-                                onMouseDown={(e) => {
-                                    e.currentTarget.style.transform = "translateY(1px)";
-                                    e.currentTarget.style.boxShadow = "0 6px 14px rgba(0,0,0,0.10)";
-                                }}
-                                onMouseUp={(e) => {
-                                    e.currentTarget.style.transform = "none";
-                                    e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,0.10)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = "none";
-                                    e.currentTarget.style.boxShadow = "0 8px 18px rgba(0,0,0,0.10)";
-                                }}
-                            >
-                                {RULE_LABELS[rule] || rule}
-                            </Button>
-                        ))}
-                    </div>
-                </div>
-            )}
 
             <style>{`
             @keyframes glFloatIn {

@@ -23,6 +23,7 @@ import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR, LEARNED_STATUS_COLOR } from "../../theme.js";
 import { ArrowLeft, Printer, SpinnerGap } from "@phosphor-icons/react";
+import SiteHeader from "../SiteHeader.jsx";
 
 export default function RulePage({ data, theme }) {
     const isMobile = typeof window !== "undefined" && window.innerWidth < 600;
@@ -131,9 +132,18 @@ export default function RulePage({ data, theme }) {
 
     const SOFT_INNER = "transparent";
 
-    const pageShellStyle = {
+    const pageLayoutStyle = {
         width: "100%",
         minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+    };
+
+    const pageShellStyle = {
+        width: "100%",
+        flex: "1 0 auto",
+        minHeight: 0,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -144,17 +154,17 @@ export default function RulePage({ data, theme }) {
     const container = {
         maxWidth: 1100,
         width: "100%",
-        padding: isMobile ? "24px 16px 32px" : "40px 40px 40px",
+        padding: 0,
         margin: 0,
-        border: `2px solid ${FRAME_COLOR}`,
-        borderRadius: 12,
+        border: "none",
+        borderRadius: 0,
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
-        boxShadow: "0 18px 45px rgba(0,0,0,0.10)",
+        boxShadow: "none",
         boxSizing: "border-box",
     };
 
     const sectionsCanvas = {
-        padding: isMobile ? 0 : 12,
+        padding: 0,
     };
 
     const ruleContentStyle = {
@@ -471,8 +481,10 @@ export default function RulePage({ data, theme }) {
 
     return (
         <AppShell theme={theme} noPadding>
-            <div style={pageShellStyle}>
-                <main style={container}>
+            <div style={pageLayoutStyle}>
+                <SiteHeader theme={theme} />
+                <div style={pageShellStyle}>
+                    <main style={container}>
                 <BrandHeader
                     theme={theme}
                     title={"GoodLang"}
@@ -510,8 +522,10 @@ export default function RulePage({ data, theme }) {
                     </section>
                 </div>
 
+                    </main>
+                </div>
+
                 <FooterBar theme={theme} />
-                </main>
             </div>
 
             {/* ✅ Pdf type choose modal */}

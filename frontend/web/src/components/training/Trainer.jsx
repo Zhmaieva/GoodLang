@@ -1087,19 +1087,29 @@ export default function Trainer({
     }
 
     return isError ? (
-        <div style={{
-            fontSize: "24px",
-            alignSelf: "center",
-            width: "100%",
-            fontWeight: 800,
-            textAlign: "center"
-        }}>
-            Oops, an error occurred :( <br/>
-            Write to{" "}
-            <a style={{color: theme.accent, textDecoration: "none"}} href="mailto:goodlang.app@gmail.com">
-                goodlang.app@gmail.com
-            </a>{" "}
-            and we will help you.
+        <div
+            role="alert"
+            style={{
+                alignSelf: "center",
+                width: "100%",
+                maxWidth: 520,
+                fontSize: 16,
+                lineHeight: 1.45,
+                fontWeight: 400,
+                textAlign: "center",
+                color: "#000",
+            }}
+        >
+            <div style={{fontSize: 18, fontWeight: 600, marginBottom: 6}}>
+                Oops, something went wrong.
+            </div>
+            <div>
+                Please write to{" "}
+                <a style={{color: theme.accent, fontWeight: 400, textDecoration: "none"}} href="mailto:goodlang.app@gmail.com">
+                    goodlang.app@gmail.com
+                </a>{" "}
+                and we will help you.
+            </div>
         </div>
     ) : (
         <section id="trainer" style={gridStyle}>

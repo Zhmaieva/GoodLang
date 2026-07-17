@@ -4,7 +4,13 @@ import { localizationService } from "../localization/localizationService.js";
 import {featureToggleService} from "../services/featureToggleService.js";
 import { Button } from "./Buttons.jsx";
 
-export default function LocaleButton({ theme }) {
+export default function LocaleButton({
+                                         theme,
+                                         compact = true,
+                                         isMobile = false,
+                                         shadowColor,
+                                         shadowOffset = 4,
+                                     }) {
     const [modalOpen, setModalOpen] = useState(false);
     const [currentLocale, setCurrentLocale] = useState(
         localizationService.isLocaleDefined() ? localizationService.getLocale() : null
@@ -35,11 +41,13 @@ export default function LocaleButton({ theme }) {
     return (
         <>
             <Button
-                variant="segmented"
-                active
-                theme={{ ...theme, accent: theme.green, accentDark: theme.greenDark }}
+                variant="offset"
+                compact={compact}
+                isMobile={isMobile}
+                theme={theme}
+                shadowColor={shadowColor ?? theme.accent}
+                shadowOffset={shadowOffset}
                 style={{
-                    fontFamily: 'var(--font-family-base)',
                     minWidth: "120px",
                 }}
                 onClick={handleOpen}

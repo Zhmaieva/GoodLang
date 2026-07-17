@@ -1305,7 +1305,7 @@ html, body, #root, .gl-page {
     flex: 1;
     min-width: 240px;
     border-radius: 18px;
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     padding: 14px 14px;
     font-weight: 900;
     font-size: 1rem;

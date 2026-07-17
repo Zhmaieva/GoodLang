@@ -410,7 +410,7 @@ export default function GoodLangLandingTeaStyleThemed({
                 fontWeight: 800,
                 padding: "12px 14px",
                 borderRadius: 999,
-                border: `3px solid ${theme.accent}`,
+                border: `1px solid ${theme.accent}`,
                 background: "#fff",
                 color: theme.text,
                 fontSize: "1rem",

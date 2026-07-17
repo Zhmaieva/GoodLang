@@ -6,15 +6,16 @@ import { getTrainingLevel } from "../../services/trainingDirector.js";
 import { getPendingTrainingTaskKeys } from "../../services/trainingTaskCache.js";
 import { Button } from "../Buttons.jsx";
 import { GearSix, LockKey } from "@phosphor-icons/react";
+import ModalShell from "../modals/ModalShell.jsx";
 
 export default function LevelSwitch({
                                         level,
                                         loading,
                                         onLevelChange,
                                         theme,
-                                        compact = false,
+                                    compact = false,
                                     }) {
-    const [expanded, setExpanded] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
 
     // tooltip (for calibration lock)
     const [tipOpen, setTipOpen] = useState(false);
@@ -74,7 +75,7 @@ export default function LevelSwitch({
             const { isCalibration } = getTrainingLevel() || {};
 
             if (isCalibration) {
-                setExpanded(false);
+                setModalOpen(false);
                 // keep tooltip behaviour controlled by hover/click
             } else {
                 setTipOpen(false);
@@ -113,7 +114,7 @@ export default function LevelSwitch({
 
     const selectedOption = options.find((o) => o.value === level) ?? options[0];
 
-    const handleClick = async (value, actionType) => {
+    const openLevelModal = async () => {
         // calibration lock: behave like TaskModeSwitch
         if (isCalibrationNow) {
             if (compact) showTipForASecond(); // mobile: tap -> show -> dissolve
@@ -121,28 +122,23 @@ export default function LevelSwitch({
             return;
         }
 
-        if (!expanded) {
-            setExpanded(true);
-            await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY);
-            return;
-        }
+        if (loading) return;
 
+        setModalOpen(true);
+        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY);
+    };
+
+    const handleOptionClick = async (value, actionType) => {
         if (!loading) {
             onLevelChange(value);
             await callAccountVerifyApi(actionType);
         }
-        setExpanded(false);
+        setModalOpen(false);
     };
 
-    const visibleOptions = expanded ? options : [selectedOption];
+    const getLabel = (label) => `Level: ${label}`;
 
-    const getLabel = (label) => {
-        if (expanded) return label;
-
-        return `Level: ${label}`;
-    };
-
-    const isOptionPending = (value) => expanded && value !== level && pendingLevels.has(value);
+    const isOptionPending = (value) => modalOpen && value !== level && pendingLevels.has(value);
 
     const miniLoaderWrap = {
         display: "inline-flex",
@@ -179,9 +175,9 @@ export default function LevelSwitch({
         background: theme.muted,
         color: "#fff",
         padding: "10px 12px",
-        borderRadius: 12,
+        borderRadius: 5,
         fontSize: '1rem',
-        fontWeight: 800,
+        fontWeight: 400,
         lineHeight: 1.25,
         width: 310,
         boxShadow: "0 10px 24px rgba(0,0,0,0.25)",
@@ -208,60 +204,113 @@ export default function LevelSwitch({
     };
 
     const lockedTooltipText = "Обирай формат завдань після оцінки рівня";
+    const SELECTED_BUTTON_COLOR = "#000";
+    const BUTTON_OFFSET = 4;
+
+    const optionGridStyle = {
+        display: "grid",
+        gridTemplateColumns: compact ? "1fr" : "repeat(2, minmax(0, 1fr))",
+        gap: 14,
+    };
+
+    const getOptionButtonStyle = (selected) => ({
+        backgroundColor: selected ? SELECTED_BUTTON_COLOR : theme.accent,
+        color: selected ? "#fff" : "#000",
+        borderColor: SELECTED_BUTTON_COLOR,
+        width: "100%",
+        minWidth: 0,
+        whiteSpace: "nowrap",
+    });
 
     return (
         <div style={wrap} role="group" aria-label="Вибір рівня">
-            {visibleOptions.map(({ value, label, actionType }) => (
-                <Button
-                    key={value}
-                    variant="segmented"
-                    theme={{ ...theme, accent: theme.green, accentDark: theme.greenDark }}
-                    active={level === value}
-                    onMouseEnter={() => {
-                        if (isCalibrationNow && !compact) {
-                            setTipOpen(true);
-                            setTipVisible(true);
-                        }
-                    }}
-                    onMouseLeave={() => {
-                        if (isCalibrationNow && !compact) {
-                            setTipVisible(false);
-                            setTipOpen(false);
-                        }
-                    }}
-                    style={{
-                        fontFamily: 'var(--font-family-base)',
-                        whiteSpace: "nowrap",
-                        position: "relative",
-                        filter: isCalibrationNow ? "saturate(0.5)" : undefined,
-                        cursor: isCalibrationNow ? "not-allowed" : undefined,
-                    }}
-                    aria-pressed={level === value}
-                    disabled={loading} // keep same semantics; calibration handled in handler + styling
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        handleClick(value, actionType);
-                    }}
-                >
-                    {/* ✅ same icons logic: show only when collapsed */}
-                    {!expanded && (
-                        isCalibrationNow
-                            ? <LockKey size={18} weight="bold" style={iconStyle(true)} aria-hidden />
-                            : <GearSix size={18} weight="bold" style={iconStyle(false)} aria-hidden />
-                    )}
+            <Button
+                variant="offset"
+                theme={theme}
+                compact={compact}
+                shadowColor={theme.accent}
+                shadowOffset={BUTTON_OFFSET}
+                onMouseEnter={() => {
+                    if (isCalibrationNow && !compact) {
+                        setTipOpen(true);
+                        setTipVisible(true);
+                    }
+                }}
+                onMouseLeave={() => {
+                    if (isCalibrationNow && !compact) {
+                        setTipVisible(false);
+                        setTipOpen(false);
+                    }
+                }}
+                style={{
+                    fontFamily: 'var(--font-family-base)',
+                    whiteSpace: "nowrap",
+                    position: "relative",
+                    filter: isCalibrationNow ? "saturate(0.5)" : undefined,
+                    cursor: isCalibrationNow ? "not-allowed" : undefined,
+                }}
+                aria-expanded={modalOpen}
+                disabled={loading}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    openLevelModal();
+                }}
+            >
+                {isCalibrationNow
+                    ? <LockKey size={18} weight="bold" style={iconStyle(true)} aria-hidden />
+                    : <GearSix size={18} weight="bold" style={iconStyle(false)} aria-hidden />
+                }
 
-                    {getLabel(label)}
-                    {isOptionPending(value) && <LevelPendingLoader />}
+                {getLabel(selectedOption.label)}
 
-                    {/* ✅ tooltip only when calibration */}
-                    {isCalibrationNow && tipOpen && (
-                        <span style={tooltipStyle} role="tooltip">
-              <span style={tooltipArrow} aria-hidden />
-                            {lockedTooltipText}
-            </span>
-                    )}
-                </Button>
-            ))}
+                {isCalibrationNow && tipOpen && (
+                    <span style={tooltipStyle} role="tooltip">
+                        <span style={tooltipArrow} aria-hidden />
+                        {lockedTooltipText}
+                    </span>
+                )}
+            </Button>
+
+            <ModalShell
+                open={modalOpen}
+                id="level-difficulty-modal"
+                theme={theme}
+                title="Choose difficulty"
+                subtitle="Pick the level for the next training tasks."
+                onClose={() => setModalOpen(false)}
+                maxWidth={620}
+                panelStyle={{
+                    border: "1px solid #000",
+                    borderRadius: 12,
+                    padding: compact ? 28 : 40,
+                }}
+                titleStyle={{ fontSize: "1.75rem" }}
+                contentStyle={optionGridStyle}
+            >
+                {options.map(({ value, label, actionType }) => {
+                    const selected = level === value;
+
+                    return (
+                        <Button
+                            key={value}
+                            variant="offset"
+                            compact
+                            fullWidth
+                            theme={theme}
+                            shadowColor={selected ? SELECTED_BUTTON_COLOR : theme.accent}
+                            shadowOffset={selected ? 0 : BUTTON_OFFSET}
+                            aria-pressed={selected}
+                            disabled={loading}
+                            onClick={() => handleOptionClick(value, actionType)}
+                            style={getOptionButtonStyle(selected)}
+                        >
+                            {label}
+                            {isOptionPending(value) && <LevelPendingLoader />}
+                        </Button>
+                    );
+                })}
+            </ModalShell>
+
             <style>{`
                 @keyframes glLevelPending {
                     0%, 100% { transform: translateY(2px) scaleY(1); opacity: 0.55; }

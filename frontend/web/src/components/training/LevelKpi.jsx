@@ -10,26 +10,37 @@ export const LEVEL_MAP = {
     B2: { label: "Advanced", percent: 100 },
 };
 
+function getLevelKpiSnapshot() {
+    const userLevel = inferUserLevel();
+    const overall = getOverallAccuracy();
+    const acc = Number.isFinite(overall?.accuracy) ? overall.accuracy : 0;
+
+    let inferred = userLevel?.level || "A1";
+    if (inferred === "A1" && acc > 40) inferred = "A2";
+    if (inferred !== "B2" && acc > 85) inferred = "B2";
+
+    return {
+        accuracy: acc,
+        attemptsLeft: overall?.attemptsLeft ?? 0,
+        levelInfo: LEVEL_MAP[inferred] || LEVEL_MAP.A1,
+    };
+}
+
 export default function LevelKpi({ mobile, theme }) {
+    const initialSnapshot = React.useMemo(() => getLevelKpiSnapshot(), []);
+
     const [isMobile, setIsMobile] = React.useState(mobile);
-    const [accuracy, setAccuracy] = React.useState(0);
-    const [attemptsLeft, setAttemptsLeft] = React.useState(0);
-    const [levelInfo, setLevelInfo] = React.useState(0);
-    const [isLoading, setIsLoading] = React.useState(true);
+    const [accuracy, setAccuracy] = React.useState(initialSnapshot.accuracy);
+    const [attemptsLeft, setAttemptsLeft] = React.useState(initialSnapshot.attemptsLeft);
+    const [levelInfo, setLevelInfo] = React.useState(initialSnapshot.levelInfo);
+    const [isLoading, setIsLoading] = React.useState(false);
 
     const onRefresh = () => {
-        const userLevel = inferUserLevel();
-        const overall = getOverallAccuracy();
-        const acc = Number.isFinite(overall?.accuracy) ? overall.accuracy : 0;
+        const snapshot = getLevelKpiSnapshot();
 
-        let inferred = userLevel?.level || "A1";
-        if (inferred === "A1" && acc > 40) inferred = "A2";
-        if (inferred !== "B2" && acc > 85) inferred = "B2";
-
-        setLevelInfo(LEVEL_MAP[inferred] || LEVEL_MAP.A1);
-
-        setAccuracy(acc);
-        setAttemptsLeft(overall.attemptsLeft ?? 0);
+        setLevelInfo(snapshot.levelInfo);
+        setAccuracy(snapshot.accuracy);
+        setAttemptsLeft(snapshot.attemptsLeft);
 
         // (unchanged) but set loading false after first refresh
         setIsLoading(false);

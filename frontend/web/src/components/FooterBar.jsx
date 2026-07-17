@@ -1,18 +1,33 @@
 import React from "react";
 import TermsOfUseModal from "./subscription/TermsOfUseModal.jsx";
+import { APP_BACKGROUND_COLOR } from "../theme.js";
 
 export default function FooterBar({ theme }) {
     const [touOpen, setTouOpen] = React.useState(false);
+    const footerTextColor = APP_BACKGROUND_COLOR;
 
     return (
         <>
-            <footer>
+            <footer
+                style={{
+                    width: "100%",
+                    height: 100,
+                    background: "#000",
+                    color: footerTextColor,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "0 24px",
+                    boxSizing: "border-box",
+                    flexShrink: 0,
+                }}
+            >
                 <style>{`
                     .footer-link,
                     .footer-link:visited,
                     .footer-link:hover,
                     .footer-link:active {
-                        color: ${theme.accent};
+                        color: ${footerTextColor};
                         text-decoration: none;
                     }
                 `}</style>
@@ -20,18 +35,12 @@ export default function FooterBar({ theme }) {
                 <div
                     style={{
                         width: "100%",
-                        height: "2px",
-                        backgroundColor: theme.accent,
-                        marginBottom: "20px",
-                        marginTop: "20px",
-                    }}
-                />
-
-                <div
-                    style={{
-                        width: "100%",
                         display: "flex",
+                        alignItems: "center",
                         justifyContent: "space-between",
+                        flexWrap: "nowrap",
+                        gap: 16,
+                        minWidth: 0,
                     }}
                 >
                     <div
@@ -40,15 +49,19 @@ export default function FooterBar({ theme }) {
                             fontSize: "1rem",
                             alignSelf: "center",
                             textAlign: "center",
-                            color: "#33302E",
+                            color: footerTextColor,
+                            minWidth: 0,
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
                         }}
                     >
                         © 2026 GoodLang •{" "}
                         <a
                             style={{
-                                color: theme.accent,
+                                color: footerTextColor,
                                 textDecoration: "none",
-                                fontWeight: 800,
+                                fontWeight: 500,
                             }}
                             href="mailto:goodlang.app@gmail.com"
                         >
@@ -63,8 +76,10 @@ export default function FooterBar({ theme }) {
                         style={{
                             fontWeight: 500,
                             fontSize: "1rem",
-                            color: "#33302E",
+                            color: footerTextColor,
                             textDecoration: "underline",
+                            flexShrink: 0,
+                            whiteSpace: "nowrap",
                         }}
                         href="#"
                     >

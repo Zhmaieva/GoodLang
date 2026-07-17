@@ -82,12 +82,13 @@ export default function LoginForm({
     const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
     const INPUT_SHADOW = "0 8px 20px rgba(0,0,0,0.08)";
     const INPUT_RADIUS = 14;
+    const ERROR_COLOR = "#fe2f31";
 
     const baseInputStyle = {
         resize: "none",
         flex: 1,
         borderRadius: INPUT_RADIUS,
-        border: `2px solid ${SOFT_STROKE_ACCENT}`,
+        border: `1px solid ${SOFT_STROKE_ACCENT}`,
         background: SOFT_INNER,
         padding: "12px 14px",
         fontSize: "18pt",
@@ -119,14 +120,16 @@ export default function LoginForm({
     const codeInputStyle = {
         ...baseInputStyle,
         width: 34,
-        height: 58,
+        height: 42,
         textAlign: "center",
         padding: 0,
-        fontSize: "18pt",
+        fontSize: 16,
+        fontWeight: 400,
+        color: "#000",
         border: "none",
         marginBottom: 0,
         backgroundColor: "transparent",
-        boxShadow: "none", // keep shadow on the container, like TaskCard (single surface)
+        boxShadow: "none",
     };
 
     function focusLastFilled(newCode) {
@@ -414,8 +417,8 @@ export default function LoginForm({
                     theme={theme}
                     title={modalTitle}
                     subtitle={modalSubtitle}
-                    titleStyle={step === "email" ? { fontSize: "1.75rem" } : undefined}
-                    panelStyle={step === "email" ? { padding: 40 } : undefined}
+                    titleStyle={{ fontSize: "1.75rem" }}
+                    panelStyle={{ padding: 40 }}
                     onClose={() => {
                         unlockScroll();
                         if (!closeDisabled) onClose();
@@ -475,17 +478,18 @@ export default function LoginForm({
                                                 display: "flex",
                                                 resize: "none",
                                                 justifyContent: "space-between",
-                                                borderRadius: INPUT_RADIUS,
-                                                border: `2px solid ${SOFT_STROKE_ACCENT}`,
+                                                borderRadius: 5,
+                                                border: "1px solid #000",
                                                 background: SOFT_INNER,
-                                                fontSize: "18pt",
-                                                fontWeight: 700,
-                                                color: theme.text,
+                                                fontSize: 16,
+                                                fontWeight: 400,
+                                                color: "#000",
                                                 textAlign: "center",
                                                 caretColor: "grey",
-                                                marginBottom: 16,
-                                                boxShadow: INPUT_SHADOW,
+                                                marginBottom: 10,
+                                                boxShadow: "none",
                                                 padding: "0 10px",
+                                                minHeight: 42,
                                                 opacity: loading ? 0.7 : 1,
                                             }}
                                         >
@@ -544,7 +548,7 @@ export default function LoginForm({
                                     </>
                                 )}
 
-                                {error && <div style={{color: theme.text, fontWeight: 700}}>{error}</div>}
+                                {error && <div style={{ color: ERROR_COLOR, fontWeight: 400 }}>{error}</div>}
 
                                 <style>
                                     {`

@@ -465,7 +465,7 @@ export default function LandingPage3({theme}) {
   padding: 12px 14px;
   font-family:var(--font-family-base);
   font-weight: 800;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 14px;
   min-width: 160px;
   box-shadow: 0 3px 0 #000;
@@ -476,7 +476,7 @@ export default function LandingPage3({theme}) {
 }
 
 .emailInput:focus-visible {
-  outline: 3px solid rgba(0,0,0,0.35);
+  outline: 1px solid rgba(0,0,0,0.35);
   outline-offset: 3px;
 }
 
@@ -501,7 +501,7 @@ export default function LandingPage3({theme}) {
 .emailInput {
   padding: 12px 14px;
   font-size: 16px;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 
 .secondaryBtn {

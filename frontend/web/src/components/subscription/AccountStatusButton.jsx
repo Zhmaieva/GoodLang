@@ -19,8 +19,26 @@ import DailyTasksCompletedModal from "../modals/DailyTasksCompletedModal.jsx";
 import DailyTasksNeedMorePracticeModal from "../modals/DailyTasksNeedMorePractiseModal.jsx";
 import { Button } from "../Buttons.jsx";
 
+let cachedAccountInfo = null;
+let accountInfoRequest = null;
+
+function loadCachedAccountInfo() {
+    if (!accountInfoRequest) {
+        accountInfoRequest = callAccountInfoApi()
+            .then((data) => {
+                cachedAccountInfo = data;
+                return data;
+            })
+            .finally(() => {
+                accountInfoRequest = null;
+            });
+    }
+
+    return accountInfoRequest;
+}
+
 export default function AccountStatusButton({ theme }) {
-    const [account, setAccount] = useState(null);
+    const [account, setAccount] = useState(() => cachedAccountInfo);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [statusModalOpen, setStatusModalOpen] = useState(false);
@@ -39,7 +57,7 @@ export default function AccountStatusButton({ theme }) {
 
     const loadStatus = useCallback(async () => {
         try {
-            const data = await callAccountInfoApi();
+            const data = await loadCachedAccountInfo();
             if (!mountedRef.current) return null;
             setAccount(data);
 

@@ -4,8 +4,8 @@ import { X } from "@phosphor-icons/react";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
 
 export const modalShellTokens = {
-    panelPadding: "56px",
-    panelBorderWidth: 2,
+    panelPadding: "40px",
+    panelBorderWidth: 1,
     panelRadius: 10,
     optionBorderWidth: 1,
     optionRadius: 5,
@@ -34,9 +34,9 @@ export default function ModalShell({
     subtitleStyle,
 }) {
     const modalId = id ?? "modal-shell";
-    const accent = theme?.accent ?? APP_ACCENT_COLOR;
     const bg = theme?.bg ?? APP_BACKGROUND_COLOR;
     const text = theme?.text ?? "#000";
+    const accent = theme?.accent ?? APP_ACCENT_COLOR;
 
     useEffect(() => {
         if (!open) return;
@@ -83,7 +83,7 @@ export default function ModalShell({
                     background: bg,
                     padding: modalShellTokens.panelPadding,
                     borderRadius: modalShellTokens.panelRadius,
-                    border: `${modalShellTokens.panelBorderWidth}px solid ${accent}`,
+                    border: `${modalShellTokens.panelBorderWidth}px solid #000`,
                     width,
                     maxWidth,
                     boxShadow: "0 6px 20px rgba(0,0,0,0.15)",

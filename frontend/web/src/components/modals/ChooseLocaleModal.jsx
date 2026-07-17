@@ -36,30 +36,12 @@ export default function ChooseLocaleModal({
         window.location.reload();
     }
 
-    const radioStyle = (isActive) => ({
-        width: 18,
-        height: 18,
-        borderRadius: 999,
-        border: `2px solid ${isActive ? "#000" : "rgba(0,0,0,0.45)"}`,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flex: "0 0 auto",
-    });
-
-    const radioDotStyle = (isActive) => ({
-        width: 10,
-        height: 10,
-        borderRadius: 999,
-        background: isActive ? "#000" : "transparent",
-    });
-
     const cardStyle = (isActive, isHover) => ({
         width: "100%",
         textAlign: "left",
         borderRadius: modalShellTokens.optionRadius,
         border: `${modalShellTokens.optionBorderWidth}px solid #000`,
-        background: isActive ? theme.accent : "transparent",
+        background: isActive ? "#000" : "transparent",
         padding: "14px 14px",
         display: "flex",
         gap: 12,
@@ -70,15 +52,13 @@ export default function ChooseLocaleModal({
     });
 
     const mainButtonStyle = {
-        display: canClose ? "initial" : "none",
-        backgroundColor: canClose ? theme.accent : "rgba(0,0,0,0.18)",
         marginTop: 10,
-        opacity: canClose ? 1 : 0.8,
+        display: canClose ? "block" : "none",
     };
 
     const listOuterStyle = {
         position: "relative",
-        marginTop: 18,
+        marginTop: 2,
     };
 
     const listWrapStyle = {
@@ -90,9 +70,6 @@ export default function ChooseLocaleModal({
         paddingRight: 4,
     };
 
-    const selectedLocaleName =
-        options.find((o) => o.locale === selected)?.name || null;
-
     if (!featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION))
         return null;
 
@@ -102,7 +79,7 @@ export default function ChooseLocaleModal({
             id="choose-locale-modal"
             theme={theme}
             title="Choose a language"
-            subtitle={selectedLocaleName || "What is your mother tongue"}
+            titleStyle={{ fontSize: "1.75rem" }}
             onClose={handleClose}
             closeDisabled={!canClose}
             maxWidth={520}
@@ -133,15 +110,11 @@ export default function ChooseLocaleModal({
                                             }
                                         }}
                                     >
-                                        <div style={radioStyle(isActive)}>
-                                            <div style={radioDotStyle(isActive)}/>
-                                        </div>
-
                                         <div style={{display: "flex", flexDirection: "column", gap: 4, width: "100%"}}>
                                             <div
                                                 style={{
-                                                    fontWeight: 900,
-                                                    color: theme.text,
+                                                    fontWeight: 600,
+                                                    color: isActive ? "#fff" : "#000",
                                                     fontSize: "1.05rem",
                                                 }}
                                             >
@@ -153,17 +126,6 @@ export default function ChooseLocaleModal({
                             })}
                         </div>
 
-                        <div
-                            style={{
-                                pointerEvents: "none",
-                                position: "absolute",
-                                left: 0,
-                                right: 0,
-                                bottom: 0,
-                                height: 40,
-                                background: `linear-gradient(to bottom, rgba(255,255,255,0), ${theme.bg})`,
-                            }}
-                        />
                     </div>
 
                     {!canClose && (
@@ -185,10 +147,11 @@ export default function ChooseLocaleModal({
                         variant="offset"
                         compact
                         fullWidth
+                        theme={theme}
                         shadowColor={theme.accent}
-                        shadowOffset={5}
+                        shadowOffset={4}
                         disabled={!canClose}
-                        style={mainButtonStyle}
+                        wrapperStyle={mainButtonStyle}
                         onClick={handleClose}
                     >
                         Ok

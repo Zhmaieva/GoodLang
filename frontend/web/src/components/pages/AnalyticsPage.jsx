@@ -16,14 +16,11 @@ import FiltersBar from "../FiltersBar";
 import RulesTable from "../training/RulesTable.jsx";
 import WeakFocus from "../WeakFocus";
 import FooterBar from "../FooterBar";
-import {useNavigate} from "react-router-dom";
 import {getAllStatistics, getOverallAccuracy} from "../../services/dataService.js";
 import AppShell from "../AppShell.jsx";
-import BrandHeader from "../BrandHeader.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
-import { Button } from "../Buttons.jsx";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
-import { ArrowLeft } from "@phosphor-icons/react";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import SiteHeader from "../SiteHeader.jsx";
 
 export default function AnalyticsPage({theme}) {
     // ----- State (mirrors your script) -----
@@ -130,19 +127,22 @@ export default function AnalyticsPage({theme}) {
         setTimeout(() => URL.revokeObjectURL(url), 4000);
     };
 
-    const navigate = useNavigate();
-    const handlePracticeClick = () => navigate('/');
-
-    const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
-    const BUTTON_OFFSET = 4;
-
-    const pageShellStyle = {
+    const pageLayoutStyle = {
         width: "100%",
         minHeight: "100vh",
         display: "flex",
-        alignItems: "center",
+        flexDirection: "column",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+    };
+
+    const pageShellStyle = {
+        width: "100%",
+        flex: "1 0 auto",
+        minHeight: 0,
+        display: "flex",
+        alignItems: "flex-start",
         justifyContent: "center",
-        padding: isMobile ? "16px 12px" : "48px 24px",
+        padding: isMobile ? "12px 12px" : "24px 24px 16px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
@@ -153,87 +153,69 @@ export default function AnalyticsPage({theme}) {
         minHeight: "auto",
         display: "flex",
         flexDirection: "column",
-        padding: isMobile ? "24px 16px 32px" : "40px 40px 40px",
-        border: `2px solid ${FRAME_COLOR}`,
-        borderRadius: 12,
+        padding: isMobile ? "24px 16px 24px" : "40px 40px 24px",
+        border: "none",
+        borderRadius: 0,
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
-        boxShadow: "0 18px 45px rgba(0,0,0,0.10)",
+        boxShadow: "none",
         boxSizing: "border-box",
     };
 
     return (
         <AppShell theme={theme} noPadding>
-            <div style={pageShellStyle}>
-                <main style={pageContentStyle}>
-                    <BrandHeader theme={theme} title={"GoodLang"} subtitle={"Progress overview and list of rules"}  onExport={onExportJSON}
-                                 right={
-                                     <Button
-                                         variant="offset"
-                                         compact
-                                         isMobile={isMobile}
-                                         shadowColor={FRAME_COLOR}
-                                         shadowOffset={BUTTON_OFFSET}
-                                         style={{
-                                             maxWidth: 280,
-                                             whiteSpace: "nowrap",
-                                             overflow: "hidden",
-                                             textOverflow: "ellipsis",
-                                         }}
-                                         onClick={handlePracticeClick}
-                                     >
-                                         <ArrowLeft size={18} weight="bold" aria-hidden />
-                                         Go to practice
-                                     </Button>
-                                 }
-                    />
-                    {
-                        (!isMobile || !isTeacher || hasData) &&
-                        <KPIGrid
-                            theme={theme}
-                            attempts={kpis.totalAttempts}
-                            masteredRules={kpis.mastered}
-                        />
-                    }
+            <div style={pageLayoutStyle}>
+                <SiteHeader theme={theme} showPracticeButton />
+                <div style={pageShellStyle}>
+                    <main style={pageContentStyle}>
+                        {
+                            (!isMobile || !isTeacher || hasData) &&
+                            <KPIGrid
+                                theme={theme}
+                                attempts={kpis.totalAttempts}
+                                masteredRules={kpis.mastered}
+                            />
+                        }
 
-                    <FiltersBar
-                        advanced={(!isMobile || !isTeacher || hasData)}
-                        filterLevel={filterLevel}
-                        onLevelChange={setFilterLevel}
-                        query={query}
-                        onQueryChange={setQuery}
-                        showWeakOnly={showWeakOnly}
-                        onToggleWeak={() => setShowWeakOnly(v => !v)}
-                        theme={theme}
-                    />
-                    <div style={{ marginBottom: 25 }}>
-                        <RulesTable
+                        <FiltersBar
                             advanced={(!isMobile || !isTeacher || hasData)}
-                            account={account}
+                            filterLevel={filterLevel}
+                            onLevelChange={setFilterLevel}
+                            query={query}
+                            onQueryChange={setQuery}
+                            showWeakOnly={showWeakOnly}
+                            onToggleWeak={() => setShowWeakOnly(v => !v)}
                             theme={theme}
-                            rows={tableRows}
-                            pct={pct}
-                            statusOf={statusOf}
-                            fmtDate={fmtDate}
-                            fmtLastPractice={fmtLastPractice}
-                            onRowClick={(rule) => {
-                                const url = `/rule/${rule.rule}`;
-                                window.open(url, "_blank", "noopener,noreferrer");
-                            }}
                         />
-                    </div>
+                        <div style={{ marginBottom: 0 }}>
+                            <RulesTable
+                                advanced={(!isMobile || !isTeacher || hasData)}
+                                account={account}
+                                theme={theme}
+                                rows={tableRows}
+                                pct={pct}
+                                statusOf={statusOf}
+                                fmtDate={fmtDate}
+                                fmtLastPractice={fmtLastPractice}
+                                onRowClick={(rule) => {
+                                    const url = `/rule/${rule.rule}`;
+                                    window.open(url, "_blank", "noopener,noreferrer");
+                                }}
+                            />
+                        </div>
 
-                    {/*<WeakFocus rows={filteredRules} pct={pct} statusOf={statusOf} fmtDate={fmtDate} theme={theme}
-                               onTrainingComplete={(statistics) => setRules(statistics)}
-                    />
-                    <QueueSection*/}
-                    {/*    queue={queue}*/}
-                    {/*    onGenerate={onGenerateQueue}*/}
-                    {/*    onStartPractice={onStartPractice}*/}
-                    {/*    fmtDateEnShort={fmtDateEnShort}*/}
-                    {/*/>
-                    <FooterBar theme={theme}/>*/}
-                </main>
+                        {/*<WeakFocus rows={filteredRules} pct={pct} statusOf={statusOf} fmtDate={fmtDate} theme={theme}
+                                   onTrainingComplete={(statistics) => setRules(statistics)}
+                        />
+                        <QueueSection*/}
+                        {/*    queue={queue}*/}
+                        {/*    onGenerate={onGenerateQueue}*/}
+                        {/*    onStartPractice={onStartPractice}*/}
+                        {/*    fmtDateEnShort={fmtDateEnShort}*/}
+                        {/*/>*/}
+                    </main>
 
+                </div>
+                <FooterBar theme={theme}/>
             </div>
         </AppShell>
     );

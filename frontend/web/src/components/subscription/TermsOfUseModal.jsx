@@ -25,6 +25,7 @@ export default function TermsOfUseModal({
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [isPaying, setIsPaying] = useState(false);
+    const ERROR_COLOR = "#fe2f31";
 
     const [cookieOpen, setCookieOpen] = useState(false);
 
@@ -389,7 +390,7 @@ export default function TermsOfUseModal({
                                 {readOnly ? "OK" : "Decline"}
                             </Button>
 
-                            {error && <div style={{color: "red", fontWeight: 700}}>{error}</div>}
+                            {error && <div style={{ color: ERROR_COLOR, fontWeight: 400 }}>{error}</div>}
                         </div>
                 </ModalShell>
             )}

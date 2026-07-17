@@ -519,7 +519,7 @@ html{ scroll-behavior: smooth; }
   padding: 12px 14px;
   font-family: var(--font-soft);
   font-weight: 800;
-  border: var(--border);
+  border: 1px solid var(--ink);
   border-radius: var(--radius);
   box-shadow: var(--shadow-btn);
   flex: 1;
@@ -528,7 +528,7 @@ html{ scroll-behavior: smooth; }
 }
 .emailInput:focus{ outline: none; }
 .emailInput:focus-visible{
-  outline: 3px solid rgba(0,0,0,0.35);
+  outline: 1px solid rgba(0,0,0,0.35);
   outline-offset: 3px;
 }
 

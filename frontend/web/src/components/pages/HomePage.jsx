@@ -1,31 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import AppShell from "../AppShell";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import Trainer from "../training/Trainer.jsx";
 import FooterBar from "../FooterBar.jsx";
-import { callAccountVerifyApi, callEmailUnsubscribeApi } from "../../services/api.js";
-import { ACTION_TYPES } from "../../utils/constants.js";
-import { getAllStatistics } from "../../services/dataService.js";
-import { on, off } from "../../services/events.js";
+import { callEmailUnsubscribeApi } from "../../services/api.js";
 import InfoModal from "../modals/InfoModal.jsx";
-import { getSavedTrainingLevel } from "../../services/trainingDirector.js";
-import { marathonService } from "../../services/marathonService.js";
-import { Button } from "../Buttons.jsx";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
-import { ArrowRight } from "@phosphor-icons/react";
-import AccountStatusButton from "../subscription/AccountStatusButton.jsx";
+import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import SiteHeader from "../SiteHeader.jsx";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
     const [level, setLevel] = useState(getSavedTrainingLevel() || "managed");
 
-    const [weakRules, setWeakRules] = useState([]);
-    const [allRulesVisible, setAllRulesVisible] = useState(false);
-
     const [isMobile, setIsMobile] = useState(false);
-    const [isInMarathonView, setIsInMarathonView] = useState(false);
-    const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
 
     const [infoOpen, setInfoOpen] = useState(false);
     const [infoTitle, setInfoTitle] = useState("Information");
@@ -33,7 +22,6 @@ export default function HomePage({ theme }) {
 
     const { ref: containerRef } = useBreakpoint(880);
 
-    const navigate = useNavigate();
     const location = useLocation();
 
     const gridStyle = {
@@ -42,63 +30,9 @@ export default function HomePage({ theme }) {
         gap: 24,
     };
 
-    const topRowStyle = {
-        display: "flex",
-        gap: 10,
-        alignItems: "center",
-        flexWrap: "wrap",
-        justifyContent: "flex-start",
-        margin: "10px 0 0",
-    };
-
-    const weakRuleButtonLayoutStyle = (keepFullSize = false) => ({
-        width: isMobile || (weakRules?.length || 0) <= 0 ? "100%" : "initial",
-        maxWidth:
-            isMobile || (weakRules?.length || 0) <= 0
-                ? "100%"
-                : isMobile && !keepFullSize
-                    ? 140
-                    : 280,
-
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-    });
-
-    const handleAnalyticsClick = async () => {
-        callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_ANALYTICS).then();
-        navigate("/analytics");
-    };
-
-    const handleRuleClick = async (ruleId) => {
-        callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_RULE_PREVIEW).then();
-        navigate(`/rule/${encodeURIComponent(ruleId)}`);
-    };
-
-    const computeWeakRules = () => {
-        const stats = getAllStatistics();
-        if (!Array.isArray(stats) || !stats.length) return [];
-
-        const attempted = stats.filter((x) => (x?.attemptsNumber ?? 0) > 0);
-
-        const sorted = attempted.sort((a, b) => {
-            const aNeeds = a.status === "needs practice" ? 0 : 1;
-            const bNeeds = b.status === "needs practice" ? 0 : 1;
-            if (aNeeds !== bNeeds) return aNeeds - bNeeds;
-
-            const accA = Number.isFinite(a.accuracy) ? a.accuracy : 0;
-            const accB = Number.isFinite(b.accuracy) ? b.accuracy : 0;
-            if (accA !== accB) return accA - accB;
-
-            const attA = a.attemptsNumber ?? 0;
-            const attB = b.attemptsNumber ?? 0;
-            return attA - attB;
-        });
-
-        return sorted.slice(0, 3).map((x) => ({
-            id: x.rule,
-            label: x.ruleName || x.rule,
-        }));
+    const handleLevelChange = (nextLevel) => {
+        saveTrainingLevel(nextLevel);
+        setLevel(nextLevel);
     };
 
     useEffect(() => {
@@ -156,46 +90,28 @@ export default function HomePage({ theme }) {
     }, [location.pathname, location.search, location.hash]);
 
     useEffect(() => {
-        const onRefresh = () => {
-            setWeakRules(computeWeakRules());
-            setAllRulesVisible(true);
-        };
-
-        onRefresh();
-
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
 
-        checkMarathonView().then();
-
         window.addEventListener("resize", onResize);
-        window.addEventListener("onMarathonUpdate", checkMarathonView);
-
-        on("weeklyProgressUpdate", onRefresh);
 
         return () => {
-            off("weeklyProgressUpdate", onRefresh);
             window.removeEventListener("resize", onResize);
-            window.removeEventListener("onMarathonUpdate", checkMarathonView);
         };
     }, []);
 
-    useEffect(() => {
-        checkMarathonView().then();
-    }, [loading]);
-
-    const checkMarathonView = async () => {
-        const result = await marathonService.isMarathonView(true);
-        setIsInMarathonView(result);
-        setIsMarathonLoaded(true);
+    const pageLayoutStyle = {
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
-
-    const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
-    const BUTTON_OFFSET = 4;
 
     const pageShellStyle = {
         width: "100%",
-        minHeight: "100vh",
+        flex: "1 0 auto",
+        minHeight: 0,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -205,39 +121,18 @@ export default function HomePage({ theme }) {
 
     const pageContentStyle = {
         minWidth: 0,
-        width: "100%",
-        maxWidth: 1100,
+        width: isMobile ? "100%" : "60%",
         minHeight: "auto",
 
         display: "flex",
         flexDirection: "column",
 
-        padding: isMobile ? "24px 16px 32px" : "40px 40px 40px",
-        border: "1px solid #000",
-        borderRadius: 12,
+        padding: 0,
+        border: "none",
+        borderRadius: 0,
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
-        boxShadow: "0 18px 45px rgba(0,0,0,0.10)",
+        boxShadow: "none",
         boxSizing: "border-box",
-    };
-
-    const headerStyle = {
-        width: "100%",
-        minHeight: "48px",
-
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "flex-end",
-
-        marginBottom: 0,
-    };
-
-    const navStyle = {
-        display: "flex",
-        alignItems: "center",
-        gap: isMobile ? 12 : 16,
-        paddingBottom: BUTTON_OFFSET,
-        paddingRight: BUTTON_OFFSET,
-        flexWrap: "wrap",
     };
 
     const mainContentStyle = {
@@ -249,108 +144,40 @@ export default function HomePage({ theme }) {
 
     return (
         <AppShell theme={theme} noPadding>
-            <div style={pageShellStyle}>
-                <main style={pageContentStyle} ref={containerRef}>
-                    <header style={headerStyle}>
-                        <AccountStatusButton theme={theme} />
-                        {/*<nav style={navStyle}>
-                            <Button
-                                variant="offset"
-                                compact
-                                isMobile={isMobile}
-                                shadowColor={FRAME_COLOR}
-                                shadowOffset={BUTTON_OFFSET}
-                                onClick={() => navigate("/trainer")}
-                            >
-                                Trainer
-                            </Button>
-                            <Button
-                                variant="offset"
-                                compact
-                                isMobile={isMobile}
-                                shadowColor={FRAME_COLOR}
-                                shadowOffset={BUTTON_OFFSET}
-                                onClick={() => navigate("/analytics")}
-                            >
-                                Progress
-                            </Button>
-                            <Button
-                                variant="offset"
-                                compact
-                                isMobile={isMobile}
-                                shadowColor={FRAME_COLOR}
-                                shadowOffset={BUTTON_OFFSET}
-                                onClick={() => navigate("/welcome")}
-                            >
-                                About
-                            </Button>
-                        </nav>*/}
-                    </header>
+            <div style={pageLayoutStyle}>
+                <SiteHeader
+                    theme={theme}
+                    loading={loading}
+                    level={level}
+                    onLevelChange={handleLevelChange}
+                />
 
-                    {infoOpen && (
-                        <InfoModal
-                            theme={theme}
-                            title={infoTitle}
-                            message={infoMessage}
-                            buttonText="OK"
-                            onClose={() => setInfoOpen(false)}
-                        />
-                    )}
-
-                    <div style={mainContentStyle}>
-                        <section style={gridStyle}>
-                            {!isMobile && isMarathonLoaded && !isInMarathonView && (
-                                <div style={topRowStyle}>
-                                    {!isMobile && allRulesVisible && (
-                                        <Button
-                                            variant="offset"
-                                            compact
-                                            isMobile={isMobile}
-                                            shadowColor={FRAME_COLOR}
-                                            shadowOffset={BUTTON_OFFSET}
-                                            style={weakRuleButtonLayoutStyle(true)}
-                                            onClick={handleAnalyticsClick}
-                                        >
-                                            {!isMobile ? (
-                                                <>
-                                                    View all rules
-                                                    <ArrowRight size={18} weight="bold" aria-hidden />
-                                                </>
-                                            ) : "All rules"}
-                                        </Button>
-                                    )}
-
-                                    {!isMobile && weakRules.map((r) => {
-                                        return (
-                                            <Button
-                                                key={r.id}
-                                                variant="offset"
-                                                compact
-                                                isMobile={isMobile}
-                                                shadowColor={FRAME_COLOR}
-                                                shadowOffset={BUTTON_OFFSET}
-                                                style={weakRuleButtonLayoutStyle()}
-                                                onClick={() => handleRuleClick(r.id)}
-                                                title={`Open rule: ${r.label}`}
-                                            >
-                                                {r.label}
-                                            </Button>
-                                        );
-                                    })}
-                                </div>
-                            )}
-
-                            <Trainer
-                                freeTraining
+                <div style={pageShellStyle}>
+                    <main style={pageContentStyle} ref={containerRef}>
+                        {infoOpen && (
+                            <InfoModal
                                 theme={theme}
-                                onLoadingChange={setLoading}
-                                nextLevel={level}
+                                title={infoTitle}
+                                message={infoMessage}
+                                buttonText="OK"
+                                onClose={() => setInfoOpen(false)}
                             />
-                        </section>
+                        )}
 
-                        <FooterBar theme={theme} />
-                    </div>
-                </main>
+                        <div style={mainContentStyle}>
+                            <section style={gridStyle}>
+                                <Trainer
+                                    freeTraining
+                                    theme={theme}
+                                    onLoadingChange={setLoading}
+                                    nextLevel={level}
+                                />
+                            </section>
+                        </div>
+                    </main>
+                </div>
+
+                <FooterBar theme={theme} />
             </div>
         </AppShell>
     );
