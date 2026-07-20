@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import AppShell from "../AppShell";
-import BrandHeader from "../BrandHeader";
 import Badge from "../Badge";
 import ConjugationTable from "../ConjugationTable";
 import Examples from "../Examples";
 import Note from "../Note";
 import Trainer from "../training/Trainer.jsx";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import FooterBar from "../FooterBar.jsx";
 import { callAccountInfoApi, callAccountVerifyApi, dowloadPdf } from "../../services/api.js";
 import { logError } from "../../services/logger.js";
@@ -20,9 +19,7 @@ import { getPdfDownloads, setPdfDownloads } from "../../services/dataService.js"
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {featureToggleService} from "../../services/featureToggleService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
-import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR, LEARNED_STATUS_COLOR } from "../../theme.js";
-import { ArrowLeft, Printer, SpinnerGap } from "@phosphor-icons/react";
 import SiteHeader from "../SiteHeader.jsx";
 
 export default function RulePage({ data, theme }) {
@@ -44,6 +41,18 @@ export default function RulePage({ data, theme }) {
     const [goToAnalytics, setGoToAnalytics] = useState(false);
 
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useLayoutEffect(() => {
+        const scrollToPageStart = () => {
+            window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        };
+
+        scrollToPageStart();
+        requestAnimationFrame(scrollToPageStart);
+    }, [location.pathname]);
 
     useEffect(() => {
         loadAccountInfo().then();
@@ -145,7 +154,7 @@ export default function RulePage({ data, theme }) {
         flex: "1 0 auto",
         minHeight: 0,
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "center",
         padding: isMobile ? "16px 12px" : "48px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
@@ -165,6 +174,35 @@ export default function RulePage({ data, theme }) {
 
     const sectionsCanvas = {
         padding: 0,
+    };
+
+    const breadcrumbStyle = {
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        marginBottom: isMobile ? 18 : 24,
+        color: "#000",
+        fontSize: isMobile ? "1rem" : "1.05rem",
+        fontWeight: 400,
+    };
+
+    const breadcrumbButtonStyle = {
+        appearance: "none",
+        border: "none",
+        background: "transparent",
+        padding: 0,
+        margin: 0,
+        color: "#000",
+        font: "inherit",
+        fontWeight: 500,
+        textDecoration: "underline",
+        textUnderlineOffset: 3,
+        cursor: "pointer",
+    };
+
+    const breadcrumbCurrentStyle = {
+        color: "#000",
+        fontWeight: 600,
     };
 
     const ruleContentStyle = {
@@ -458,25 +496,6 @@ export default function RulePage({ data, theme }) {
         }
     };
 
-    const iconBtn = () => ({
-        maxWidth: 480,
-        gap: 8,
-        cursor: isDownloading ? "default" : "pointer",
-        opacity: isDownloading ? 0.5 : 1,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "start",
-    });
-
-    const standardButtonStyle = {
-        maxWidth: 280,
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        color: "#000",
-        borderColor: "#000",
-    };
-
     const showPrintButton = !featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION);
 
     return (
@@ -485,29 +504,27 @@ export default function RulePage({ data, theme }) {
                 <SiteHeader theme={theme} />
                 <div style={pageShellStyle}>
                     <main style={container}>
-                <BrandHeader
-                    theme={theme}
-                    title={"GoodLang"}
-                    subtitle={<>{data.title}</>}
-                    right={
-                        <>
-                            {/* Print tasks button is temporarily hidden. */}
-
-                            <Button
-                                variant="offset"
-                                compact
-                                isMobile={isMobile}
-                                shadowColor={FRAME_COLOR}
-                                shadowOffset={BUTTON_OFFSET}
-                                style={standardButtonStyle}
-                                onClick={handleAnalyticsClick}
-                            >
-                                <ArrowLeft size={18} weight="bold" aria-hidden />
-                                Back to rules
-                            </Button>
-                        </>
-                    }
-                />
+                <nav style={breadcrumbStyle} aria-label="Breadcrumb">
+                    <button
+                        type="button"
+                        style={breadcrumbButtonStyle}
+                        onClick={() => navigate("/trainer")}
+                    >
+                        Trainer
+                    </button>
+                    <span>/</span>
+                    <button
+                        type="button"
+                        style={breadcrumbButtonStyle}
+                        onClick={handleAnalyticsClick}
+                    >
+                        Rules
+                    </button>
+                    <span>/</span>
+                    <span style={breadcrumbCurrentStyle} aria-current="page">
+                        {data.title}
+                    </span>
+                </nav>
 
                 <div style={sectionsCanvas}>
                     <section style={ruleContentStyle}>

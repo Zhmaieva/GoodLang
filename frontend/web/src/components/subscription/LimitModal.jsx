@@ -6,7 +6,7 @@ import {legacyGlobalStyling} from "../../App.jsx";
 import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
-import { Button } from "../Buttons.jsx";
+import { Button, HEADER_BUTTON_FONT_FAMILY, HEADER_BUTTON_FONT_WEIGHT } from "../Buttons.jsx";
 import { X } from "@phosphor-icons/react";
 
 let stripeLoaded = null;
@@ -226,6 +226,18 @@ export default function LimitModal({
         lineHeight: 1,
     };
 
+    const modalTitleStyle = {
+        textAlign: "left",
+        marginBottom: 0,
+        marginTop: 0,
+        color: theme.text,
+        fontFamily: HEADER_BUTTON_FONT_FAMILY,
+        fontSize: "1.75rem",
+        fontWeight: HEADER_BUTTON_FONT_WEIGHT,
+        letterSpacing: "0.02em",
+        lineHeight: 1,
+    };
+
     return (
         <>
             {
@@ -257,6 +269,7 @@ export default function LimitModal({
                                 boxShadow: "none",
                                 display: !isPaying ? "block" : "none",
                                 position: "relative",
+                                fontFamily: "var(--font-family-base)",
                             }}
                             onClick={(e) => {
                                 e.stopPropagation();
@@ -312,27 +325,13 @@ export default function LimitModal({
                                 <div style={{display: "flex", flexDirection: "column"}}>
                                     {/* ✅ TITLE SWITCH */}
                                     {!featurePdf && (!hasEnoughEval || improvePct === null) && (
-                                        <h2 style={{
-                                            textAlign: "left",
-                                            marginBottom: 0,
-                                            marginTop: 0,
-                                            color: theme.text,
-                                            fontSize: "1.75rem",
-                                            fontWeight: 700
-                                        }}>
+                                        <h2 style={modalTitleStyle}>
                                             {"Unlimited learning"}
                                         </h2>
                                     )}
 
                                     {!featurePdf && hasEnoughEval && improvePct != null && (
-                                        <h2 style={{
-                                            textAlign: "left",
-                                            marginBottom: 0,
-                                            marginTop: 0,
-                                            color: theme.text,
-                                            fontSize: "1.75rem",
-                                            fontWeight: 700
-                                        }}>
+                                        <h2 style={modalTitleStyle}>
                                             Keep practicing
 
                                             {/*<span style={{ position: "relative" }}>*/}
@@ -396,14 +395,7 @@ export default function LimitModal({
                                     )}
 
                                     {featurePdf && (
-                                        <h2 style={{
-                                            textAlign: "left",
-                                            marginBottom: 0,
-                                            marginTop: 0,
-                                            color: theme.text,
-                                            fontSize: "1.75rem",
-                                            fontWeight: 700
-                                        }}>
+                                        <h2 style={modalTitleStyle}>
                                             {"All learning tools"}
                                         </h2>
                                     )}

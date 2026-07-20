@@ -2,6 +2,7 @@ import React, {useEffect, useMemo} from "react";
 import {Routes, Route, useNavigate} from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AnalyticsPage from "./components/pages/AnalyticsPage";
+import VocabularyPage from "./components/pages/VocabularyPage.jsx";
 import RulePage from "./components/pages/RulePage.jsx";
 import PaymentSuccess from "./components/subscription/PaymentSuccess.jsx";
 import PaymentCancel from "./components/subscription/PaymentCancel.jsx";
@@ -177,6 +178,7 @@ export default function App() {
                 <Route path="/trainer" element={<HomePage theme={legacyGlobalStyling} />} />
                 <Route path="/crossword" element={<LandingCrossword theme={legacyGlobalStyling} />} />
                 <Route path="/analytics" element={<AnalyticsPage theme={legacyGlobalStyling} />} />
+                <Route path="/vocabulary" element={<VocabularyPage theme={legacyGlobalStyling} />} />
                 <Route path="/payment/success" element={<PaymentSuccess />} />
                 <Route path="/payment/cancel" element={<PaymentCancel />} />
 

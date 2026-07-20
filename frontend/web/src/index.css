@@ -1,11 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200&display=swap');
+
 :root{
   --accent-dark:#2d7fca; --green:#4ba36e; --blue:#3a6ea5;
-  --text:#000; --muted:#000; --radius:5px; --font-family-base:initial;
+  --text:#000; --muted:#000; --radius:5px; --font-family-base:initial; --font-family-header:"Antonio", "Arial Narrow", sans-serif;
 }
 *{box-sizing:border-box}
 html, body, #root { height: 100%; }
 *, input, button, textarea, select {
   font-family: var(--font-family-base);
+}
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+.highlight-input:focus,
+.highlight-input:focus-visible {
+  outline: 1px solid #000 !important;
+  outline-offset: -1px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+textarea.highlight-input,
+textarea.highlight-input:focus,
+textarea.highlight-input:focus-visible,
+textarea.highlight-input:active {
+  outline: 1px solid #000 !important;
+  outline-offset: -1px !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+textarea.task-answer-input,
+textarea.task-answer-input:active {
+  border: 1px solid #000 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+textarea.task-answer-input:focus,
+textarea.task-answer-input:focus-visible {
+  border: 1px solid var(--accent) !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 body{
   margin:0; font-family:var(--font-family-base); background:var(--bg); color:var(--text);

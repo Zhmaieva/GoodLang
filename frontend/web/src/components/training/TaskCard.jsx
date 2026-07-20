@@ -3,6 +3,49 @@ import TaskModeSwitch from "./TaskModeSwitch.jsx";
 import { marathonService } from "../../services/marathonService.js";
 import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import { localizationService } from "../../localization/localizationService.js";
+import { Lightbulb } from "@phosphor-icons/react";
+
+const NON_LATIN_LETTER_PATTERN = /[^\W\d_A-Za-z]/u;
+const ENGLISH_HINT_FRAGMENT_PATTERN = /['’][A-Za-z]+|[A-Za-z]+(?:[’'][A-Za-z]+)?(?:\s*(?:\/|\+|→|-)\s*[A-Za-z]+(?:[’'][A-Za-z]+)?)*/g;
+
+function renderHintContent(value) {
+    const text = String(value ?? "");
+
+    if (!NON_LATIN_LETTER_PATTERN.test(text)) {
+        return text;
+    }
+
+    const parts = [];
+    let lastIndex = 0;
+
+    for (const match of text.matchAll(ENGLISH_HINT_FRAGMENT_PATTERN)) {
+        const start = match.index ?? 0;
+        const fragment = match[0];
+
+        if (start > lastIndex) {
+            parts.push(text.slice(lastIndex, start));
+        }
+
+        parts.push(
+            <strong key={`hint-english-${start}`} style={{ fontWeight: 800 }}>
+                {fragment}
+            </strong>
+        );
+
+        lastIndex = start + fragment.length;
+    }
+
+    if (!parts.length) {
+        return text;
+    }
+
+    if (lastIndex < text.length) {
+        parts.push(text.slice(lastIndex));
+    }
+
+    return parts;
+}
 
 export default function TaskCard({
                                      theme,
@@ -44,6 +87,8 @@ export default function TaskCard({
     const [isCompact, setIsCompact] = useState(() => window.innerWidth < 915);
     const [isInMarathonView, setIsInMarathonView] = useState(false);
     const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
+    const [hintVisible, setHintVisible] = useState(false);
+    const [hintButtonHovered, setHintButtonHovered] = useState(false);
 
     useEffect(() => {
         const onResize = () => setIsCompact(window.innerWidth < 900);
@@ -104,10 +149,18 @@ export default function TaskCard({
     };
 
     const isLockedNow = locked && secondsLeft > 0;
-    const isActionBlocked = loading || actionDisabled || isLockedNow;
+    const isActionBusy = loading || actionDisabled;
     const buttonText = isLockedNow
         ? `Subscribe or wait ${formatTime(secondsLeft)}`
         : mainBtnText;
+    const cleanHint = String(hint ?? "").replace(/^hint:\s*/i, "").trim();
+    const hintLabel = localizationService.localize("hint");
+    const showHintLabel = localizationService.localize("showHint");
+    const hideHintLabel = localizationService.localize("hideHint");
+
+    useEffect(() => {
+        setHintVisible(false);
+    }, [cleanHint, taskText]);
 
     const modeWrapDesktopBehavior = useMemo(() => {
         return {
@@ -150,12 +203,11 @@ export default function TaskCard({
             minWidth: 0,
         },
 
-        // ✅ task line: keep task + hint on same baseline row
         taskLine: {
             minHeight: 34,
             display: "flex",
-            gap: 10,
-            flexWrap: "wrap",
+            flexDirection: "column",
+            gap: 8,
             minWidth: 0,
         },
 
@@ -165,20 +217,77 @@ export default function TaskCard({
             color: "#33302E",
             minWidth: 0,
             flex: "1 1 auto",
-            fontSize: "1.25rem",
+            fontSize: "1.6rem",
         },
 
         hintText: {
             fontFamily: 'var(--font-family-base)',
-            background: TEXT_DARK,
-            padding: "4px 14px",
-            borderRadius: 5,
-            color: "#fff",
+            color: TEXT_DARK,
             whiteSpace: "pre-wrap",
             flex: "0 1 auto",
+            fontWeight: 400,
+            fontSize: "0.95rem",
+            lineHeight: 1.2,
+        },
+
+        hintRow: {
+            display: "flex",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: 10,
+        },
+
+        hintButton: {
+            alignSelf: "flex-start",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            minHeight: 42,
+            background: hintVisible ? "#000" : "transparent",
+            border: "1px solid #000",
+            borderRadius: 5,
+            padding: "6px 10px",
+            color: hintVisible ? APP_BACKGROUND_COLOR : TEXT_DARK,
+            fontFamily: 'var(--font-family-base)',
+            fontSize: "0.95rem",
+            fontWeight: 400,
+            lineHeight: 1.2,
+            cursor: "pointer",
+            outline: "none",
+            boxShadow: "none",
+            transform: hintButtonHovered ? "translateY(1px)" : "none",
+            transition: "background-color 140ms ease, color 140ms ease, transform 120ms ease",
+        },
+
+        hintIcon: {
+            width: 18,
+            height: 18,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 5,
+            background: hintVisible ? APP_BACKGROUND_COLOR : "#000",
+            color: hintVisible ? "#000" : APP_BACKGROUND_COLOR,
+            lineHeight: 1,
+        },
+
+        hintPanel: {
+            flex: "0 1 auto",
+            minWidth: 0,
+            maxWidth: "100%",
+            minHeight: 42,
+            display: "inline-flex",
+            alignItems: "center",
+            border: "1px solid #000",
+            borderLeft: "4px solid #000",
+            borderRadius: 5,
+            background: "transparent",
+            padding: "6px 10px",
+            boxSizing: "border-box",
+        },
+
+        hintLabel: {
             fontWeight: 600,
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-            alignContent: "center",
         },
 
         // ✅ right column
@@ -197,18 +306,20 @@ export default function TaskCard({
             gap: 12,
         },
 
-        textarea: {
-            fontFamily: 'var(--font-family-base)',
-            resize: "none",
-            flex: 1,
-            height: 70,
-            borderRadius: 5,
+                        textarea: {
+                            fontFamily: 'var(--font-family-base)',
+                            resize: "none",
+                            flex: 1,
+                            height: 70,
+                            borderRadius: 5,
 
-            border: "1px solid #000",
-            outline: "none",
-            boxShadow: "none",
+                            border: "1px solid #000",
+                            outline: "none",
+                            boxShadow: "none",
+                            WebkitAppearance: "none",
+                            appearance: "none",
 
-            background: SOFT_INNER,
+                            background: SOFT_INNER,
             padding: "12px 14px",
             fontWeight: 400,
             fontSize: "1.1rem",
@@ -321,9 +432,28 @@ export default function TaskCard({
                             />
                         )}
 
-                        {hint && !loading && (
-                            <div style={styles.hintText}>
-                                Hint: {hint.toLowerCase()}
+                        {cleanHint && !loading && (
+                            <div style={styles.hintRow}>
+                                <Button
+                                    variant="unstyled"
+                                    style={styles.hintButton}
+                                    aria-expanded={hintVisible}
+                                    aria-controls="task-hint"
+                                    onMouseEnter={() => setHintButtonHovered(true)}
+                                    onMouseLeave={() => setHintButtonHovered(false)}
+                                    onClick={() => setHintVisible((value) => !value)}
+                                >
+                                    <span style={styles.hintIcon}>
+                                        <Lightbulb size={14} weight="regular" />
+                                    </span>
+                                    <span>{hintVisible ? hideHintLabel : showHintLabel}</span>
+                                </Button>
+
+                                {hintVisible && (
+                                    <div id="task-hint" style={styles.hintPanel}>
+                                        <div style={styles.hintText}>{renderHintContent(cleanHint)}</div>
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>
@@ -362,7 +492,7 @@ export default function TaskCard({
                     </div>
                 ) : (
                     <textarea
-                        className="highlight-input"
+                        className="highlight-input task-answer-input"
                         ref={textareaRef}
                         placeholder="... translate into English"
                         autoComplete="off"
@@ -382,9 +512,9 @@ export default function TaskCard({
                     shadowOffset={BUTTON_OFFSET}
                     aria-label="Check the translation"
                     onClick={onMainButtonClick}
-                    disabled={isActionBlocked}
+                    disabled={isActionBusy}
                 >
-                    {isActionBlocked ? <BarsLoader /> : buttonText}
+                    {isActionBusy ? <BarsLoader /> : buttonText}
                 </Button>
             </div>
         </div>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
 
 const FONT_FAMILY = 'var(--font-family-base)';
+export const HEADER_BUTTON_FONT_FAMILY = '"Antonio", sans-serif';
+export const HEADER_BUTTON_FONT_WEIGHT = 200;
 const DEFAULT_ACCENT = APP_ACCENT_COLOR;
 const DEFAULT_ACCENT_DARK = "#2d7fca";
 const DEFAULT_TEXT = "#000";
@@ -162,6 +164,24 @@ function getVariantStyle({
             border: "none",
             font: "inherit",
         },
+        header: {
+            padding: compact ? "4px 6px 6px" : "6px 6px 8px",
+            minWidth: 0,
+            flex: "0 0 auto",
+            height: "auto",
+            background: "transparent",
+            color: "#000",
+            border: "none",
+            borderRadius: 0,
+            boxShadow: "none",
+            overflow: "visible",
+            fontFamily: HEADER_BUTTON_FONT_FAMILY,
+            fontWeight: HEADER_BUTTON_FONT_WEIGHT,
+            fontSize: compact ? (isMobile ? "1.1rem" : "1.25rem") : isMobile ? "1.36rem" : "1.62rem",
+            letterSpacing: "0.02em",
+            textTransform: "uppercase",
+            textDecoration: "none",
+        },
         unstyled: {},
     };
 
@@ -221,6 +241,23 @@ export function Button({
                   }),
                   style
               );
+    const headerContentStyle =
+        variant === "header"
+            ? {
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flex: "0 0 auto",
+                  gap: 8,
+                  whiteSpace: "nowrap",
+                  paddingBottom: 4,
+                  backgroundImage: "linear-gradient(#000, #000)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "50% 100%",
+                  backgroundSize: hovered && !disabled ? "100% 2px" : "0% 2px",
+                  transition: "background-size 220ms cubic-bezier(0.22, 1, 0.36, 1)",
+              }
+            : null;
 
     if (usesOffsetLayer) {
         const offsetWrapperStyle = mergeStyles(
@@ -276,7 +313,11 @@ export function Button({
             onMouseLeave={handleMouseLeave}
             {...props}
         >
-            {children}
+            {variant === "header" ? (
+                <span style={headerContentStyle}>{children}</span>
+            ) : (
+                children
+            )}
         </button>
     );
 }

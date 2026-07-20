@@ -1,5 +1,101 @@
 const locales = import.meta.glob("./data/*.json", { eager: true });
 
+const UI_LABELS = {
+    hint: {
+        "uk-UA": "Підказка",
+        "ru-RU": "Подсказка",
+        "pl-PL": "Wskazówka",
+        "de-DE": "Hinweis",
+        "fr-FR": "Indice",
+        "es-ES": "Pista",
+        "it-IT": "Suggerimento",
+        "pt-PT": "Dica",
+        "nl-NL": "Tip",
+        "sv-SE": "Tips",
+        "no-NO": "Tips",
+        "da-DK": "Tip",
+        "fi-FI": "Vihje",
+        "cs-CZ": "Nápověda",
+        "sk-SK": "Pomôcka",
+        "hu-HU": "Tipp",
+        "ro-RO": "Indiciu",
+        "bg-BG": "Подсказка",
+        "el-GR": "Υπόδειξη",
+        "tr-TR": "İpucu",
+        "zh-CN": "提示",
+        "ja-JP": "ヒント",
+        "ko-KR": "힌트",
+        "th-TH": "คำใบ้",
+        "vi-VN": "Gợi ý",
+        "id-ID": "Petunjuk",
+        "ms-MY": "Petunjuk",
+        "he-IL": "רמז",
+        "ar-SA": "تلميح",
+    },
+    showHint: {
+        "uk-UA": "Показати підказку",
+        "ru-RU": "Показать подсказку",
+        "pl-PL": "Pokaż wskazówkę",
+        "de-DE": "Hinweis anzeigen",
+        "fr-FR": "Afficher l’indice",
+        "es-ES": "Mostrar pista",
+        "it-IT": "Mostra suggerimento",
+        "pt-PT": "Mostrar dica",
+        "nl-NL": "Toon tip",
+        "sv-SE": "Visa tips",
+        "no-NO": "Vis tips",
+        "da-DK": "Vis tip",
+        "fi-FI": "Näytä vihje",
+        "cs-CZ": "Zobrazit nápovědu",
+        "sk-SK": "Zobraziť pomôcku",
+        "hu-HU": "Tipp mutatása",
+        "ro-RO": "Arată indiciul",
+        "bg-BG": "Покажи подсказка",
+        "el-GR": "Εμφάνιση υπόδειξης",
+        "tr-TR": "İpucunu göster",
+        "zh-CN": "显示提示",
+        "ja-JP": "ヒントを表示",
+        "ko-KR": "힌트 보기",
+        "th-TH": "แสดงคำใบ้",
+        "vi-VN": "Hiện gợi ý",
+        "id-ID": "Tampilkan petunjuk",
+        "ms-MY": "Tunjukkan petunjuk",
+        "he-IL": "הצג רמז",
+        "ar-SA": "إظهار التلميح",
+    },
+    hideHint: {
+        "uk-UA": "Сховати підказку",
+        "ru-RU": "Скрыть подсказку",
+        "pl-PL": "Ukryj wskazówkę",
+        "de-DE": "Hinweis ausblenden",
+        "fr-FR": "Masquer l’indice",
+        "es-ES": "Ocultar pista",
+        "it-IT": "Nascondi suggerimento",
+        "pt-PT": "Ocultar dica",
+        "nl-NL": "Verberg tip",
+        "sv-SE": "Dölj tips",
+        "no-NO": "Skjul tips",
+        "da-DK": "Skjul tip",
+        "fi-FI": "Piilota vihje",
+        "cs-CZ": "Skrýt nápovědu",
+        "sk-SK": "Skryť pomôcku",
+        "hu-HU": "Tipp elrejtése",
+        "ro-RO": "Ascunde indiciul",
+        "bg-BG": "Скрий подсказка",
+        "el-GR": "Απόκρυψη υπόδειξης",
+        "tr-TR": "İpucunu gizle",
+        "zh-CN": "隐藏提示",
+        "ja-JP": "ヒントを非表示",
+        "ko-KR": "힌트 숨기기",
+        "th-TH": "ซ่อนคำใบ้",
+        "vi-VN": "Ẩn gợi ý",
+        "id-ID": "Sembunyikan petunjuk",
+        "ms-MY": "Sembunyikan petunjuk",
+        "he-IL": "הסתר רמז",
+        "ar-SA": "إخفاء التلميح",
+    },
+};
+
 export default class LocalizationService {
 
     setLocale = (locale) => {
@@ -71,6 +167,10 @@ export default class LocalizationService {
 
     localize = (key) => {
         const locale = this.getLocale() || "uk-UA";
+
+        if (UI_LABELS[key]) {
+            return UI_LABELS[key][locale] || UI_LABELS[key]["uk-UA"] || key;
+        }
 
         const dict = locales[`./data/${locale}.json`];
 

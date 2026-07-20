@@ -21,12 +21,15 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
     };
 
     const titleMap = {
+        free: "Your profile",
         paid: "You're all set",
         attention: "Your subscription is expiring",
     };
 
     const subtitle = account?.isTrial
         ? `Trial ends on ${fmtDate(account?.trialEndsOn)}`
+        : status === "free"
+            ? "Free account"
         : marathonService.isInMarathon()
             ? "7-day marathon. Subscription ends when the marathon finishes or if you drop out."
             : "Monthly subscription";
@@ -62,37 +65,39 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                     </p>
                 )}
 
-                <div style={{ textAlign: "left", margin: "0 0 28px 0" }}>
-                    <ul
-                        style={{
-                            listStyle: "none",
-                            padding: 0,
-                            margin: 0,
-                            lineHeight: "1.6",
-                            color: theme.text,
-                            fontSize: "16px",
-                            fontWeight: 500,
-                        }}
-                    >
-                        {[
-                            "Unlimited tasks",
-                            "Cloud progress sync",
-                            "Access from all devices",
-                            "Priority support",
-                        ].map((item) => (
-                            <li key={item}>
-                                <Check
-                                    size={16}
-                                    weight="bold"
-                                    color={theme.accent}
-                                    aria-hidden
-                                    style={{ marginRight: 8, verticalAlign: "-2px" }}
-                                />
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                {status !== "free" && (
+                    <div style={{ textAlign: "left", margin: "0 0 28px 0" }}>
+                        <ul
+                            style={{
+                                listStyle: "none",
+                                padding: 0,
+                                margin: 0,
+                                lineHeight: "1.6",
+                                color: theme.text,
+                                fontSize: "16px",
+                                fontWeight: 500,
+                            }}
+                        >
+                            {[
+                                "Unlimited tasks",
+                                "Cloud progress sync",
+                                "Access from all devices",
+                                "Priority support",
+                            ].map((item) => (
+                                <li key={item}>
+                                    <Check
+                                        size={16}
+                                        weight="bold"
+                                        color={theme.accent}
+                                        aria-hidden
+                                        style={{ marginRight: 8, verticalAlign: "-2px" }}
+                                    />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
 
                 <div
                     style={{

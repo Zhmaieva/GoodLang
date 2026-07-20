@@ -438,7 +438,7 @@ export default function Trainer({
         setTextToTranslateOriginal(data.textToTranslateOriginal || "");
         setTaskText(data.textToTranslate || "—");
         setTaskHint(data.hint || null);
-        setHint("Tip: translate the sentence and press 'Check'.");
+        setHint("Translate the sentence and press 'CHECK'.");
         setRules(data.rules || []);
         setAnswer("");
         setGapSelected(null);
@@ -827,9 +827,12 @@ export default function Trainer({
             }
 
             if (!data.allowed) {
+                setIsDetailedFeedbackLoading(false);
+                setHint("Continue learning with a subscription, or wait");
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
                 setLocked(true);
+                return;
             }
 
             const serverReturnedNextTask = taskFromData(data);
@@ -997,6 +1000,12 @@ export default function Trainer({
         await loadNewTask(diff, { overrideTaskType: override });
     }
 
+    function closeLimitModal() {
+        setLimitModalOpen(false);
+        setIsEvaluating(false);
+        setIsDetailedFeedbackLoading(false);
+    }
+
     // -----------------------------
     // Mode switch handling (your latest rule)
     // -----------------------------
@@ -1126,8 +1135,8 @@ export default function Trainer({
                 setAnswer={setAnswer}
                 isInputDisabled={loading || isEvaluating || mode === "next"}
                 mainBtnText={mode === "check"
-                    ? 'Check'
-                    : 'Next sentence'}
+                    ? 'CHECK'
+                    : 'NEXT SENTENCE'}
                 onMainButtonClick={onMainButtonClick}
                 loading={loading}
                 actionDisabled={isEvaluating}
@@ -1162,7 +1171,7 @@ export default function Trainer({
                 isLimitReached={true}
                 theme={theme}
                 open={limitModalOpen}
-                onClose={() => setLimitModalOpen(false)}
+                onClose={closeLimitModal}
             />
 
             {/*<MarathonInfoModal*/}

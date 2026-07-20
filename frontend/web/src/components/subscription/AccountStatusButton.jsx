@@ -37,7 +37,7 @@ function loadCachedAccountInfo() {
     return accountInfoRequest;
 }
 
-export default function AccountStatusButton({ theme }) {
+export default function AccountStatusButton({ theme, variant = "offset" }) {
     const [account, setAccount] = useState(() => cachedAccountInfo);
     const [limitModalOpen, setLimitModalOpen] = useState(false);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -189,21 +189,21 @@ export default function AccountStatusButton({ theme }) {
         <>
 
             <Button
-                variant="offset"
+                variant={variant}
                 compact
                 theme={buttonTheme}
                 shadowColor={buttonTheme.accent}
                 shadowOffset={BUTTON_OFFSET}
                 style={{
-                    fontFamily: 'var(--font-family-base)',
-                    minWidth: "180px",
+                    fontFamily: variant === "header" ? '"Antonio", sans-serif' : 'var(--font-family-base)',
+                    minWidth: variant === "header" ? undefined : "180px",
                     visibility: account?.status ? "visible" : "hidden",
                 }}
                 onClick={handleClick}
             >
                 {account?.status === "paid" && "My subscription"}
                 {account?.status === "attention" && "Subscription (expiring)"}
-                {account?.status === "free" && "Get more practice"}
+                {account?.status === "free" && "PRACTICE"}
             </Button>
 
 

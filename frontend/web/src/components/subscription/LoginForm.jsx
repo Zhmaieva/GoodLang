@@ -574,6 +574,21 @@ export default function LoginForm({
                                             border-color: ${theme.accent} !important;
                                             outline: none;
                                         }
+
+                                        .highlight-input-wrapper,
+                                        .highlight-input-wrapper:focus,
+                                        .highlight-input-wrapper:focus-within {
+                                            border-width: 1px !important;
+                                            outline: none !important;
+                                        }
+
+                                        .highlight-input-inner,
+                                        .highlight-input-inner:focus,
+                                        .highlight-input-inner:focus-visible {
+                                            border: none !important;
+                                            outline: none !important;
+                                            box-shadow: none !important;
+                                        }
                                     `}
                                 </style>
                             </div>

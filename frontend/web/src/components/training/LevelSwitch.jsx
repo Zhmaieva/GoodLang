@@ -14,6 +14,7 @@ export default function LevelSwitch({
                                         onLevelChange,
                                         theme,
                                     compact = false,
+                                    variant = "offset",
                                     }) {
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -225,7 +226,7 @@ export default function LevelSwitch({
     return (
         <div style={wrap} role="group" aria-label="Вибір рівня">
             <Button
-                variant="offset"
+                variant={variant}
                 theme={theme}
                 compact={compact}
                 shadowColor={theme.accent}
@@ -243,7 +244,7 @@ export default function LevelSwitch({
                     }
                 }}
                 style={{
-                    fontFamily: 'var(--font-family-base)',
+                    fontFamily: variant === "header" ? '"Antonio", sans-serif' : 'var(--font-family-base)',
                     whiteSpace: "nowrap",
                     position: "relative",
                     filter: isCalibrationNow ? "saturate(0.5)" : undefined,
@@ -256,10 +257,11 @@ export default function LevelSwitch({
                     openLevelModal();
                 }}
             >
-                {isCalibrationNow
-                    ? <LockKey size={18} weight="bold" style={iconStyle(true)} aria-hidden />
-                    : <GearSix size={18} weight="bold" style={iconStyle(false)} aria-hidden />
-                }
+                {variant !== "header" && (
+                    isCalibrationNow
+                        ? <LockKey size={18} weight="bold" style={iconStyle(true)} aria-hidden />
+                        : <GearSix size={18} weight="bold" style={iconStyle(false)} aria-hidden />
+                )}
 
                 {getLabel(selectedOption.label)}
 

@@ -7,6 +7,7 @@ import ModalShell, { modalShellTokens } from "./ModalShell.jsx";
 export default function ChooseLocaleModal({
                                               open,
                                               theme,
+                                              onClose,
                                           }) {
     const [selected, setSelected] = useState(null);
     const [initial, setInitial] = useState(null);
@@ -14,8 +15,8 @@ export default function ChooseLocaleModal({
 
     const options = useMemo(() => localizationService.getAvailableLocales(), [localizationService.getAvailableLocales()]);
 
-    const hasDefinedLocale = !!localizationService.isLocaleDefined();
-    const canClose = !!selected;
+    const canConfirm = !!selected;
+    const canCancel = !!initial;
 
     useEffect(() => {
         if (!open) return;
@@ -31,8 +32,23 @@ export default function ChooseLocaleModal({
 
     if (!open) return null;
 
-    const handleClose = () => {
-        if (!canClose) return;
+    const handleCancel = () => {
+        if (!canCancel) return;
+        setSelected(initial);
+        setHovered(null);
+        onClose?.();
+    }
+
+    const handleConfirm = () => {
+        if (!canConfirm) return;
+
+        if (selected === initial) {
+            onClose?.();
+            return;
+        }
+
+        localizationService.setLocale(selected);
+        onClose?.();
         window.location.reload();
     }
 
@@ -53,12 +69,16 @@ export default function ChooseLocaleModal({
 
     const mainButtonStyle = {
         marginTop: 10,
-        display: canClose ? "block" : "none",
+        display: canConfirm ? "block" : "none",
     };
 
     const listOuterStyle = {
         position: "relative",
         marginTop: 2,
+        border: "1px solid #000",
+        borderRadius: modalShellTokens.optionRadius,
+        padding: 12,
+        boxSizing: "border-box",
     };
 
     const listWrapStyle = {
@@ -80,8 +100,8 @@ export default function ChooseLocaleModal({
             theme={theme}
             title="Choose a language"
             titleStyle={{ fontSize: "1.75rem" }}
-            onClose={handleClose}
-            closeDisabled={!canClose}
+            onClose={handleCancel}
+            closeDisabled={!canCancel}
             maxWidth={520}
         >
                 <div style={{display: "flex", flexDirection: "column"}}>
@@ -98,7 +118,6 @@ export default function ChooseLocaleModal({
                                         onMouseLeave={() => setHovered(null)}
                                         onClick={() => {
                                             setSelected(o.locale);
-                                            localizationService.setLocale(o.locale);
                                         }}
                                         style={cardStyle(isActive, isHover)}
                                         role="button"
@@ -106,7 +125,6 @@ export default function ChooseLocaleModal({
                                         onKeyDown={(e) => {
                                             if (e.key === "Enter" || e.key === " ") {
                                                 setSelected(o.locale);
-                                                localizationService.setLocale(o.locale);
                                             }
                                         }}
                                     >
@@ -128,7 +146,7 @@ export default function ChooseLocaleModal({
 
                     </div>
 
-                    {!canClose && (
+                    {!canConfirm && (
                         <div
                             style={{
                                 marginTop: 12,
@@ -150,9 +168,9 @@ export default function ChooseLocaleModal({
                         theme={theme}
                         shadowColor={theme.accent}
                         shadowOffset={4}
-                        disabled={!canClose}
+                        disabled={!canConfirm}
                         wrapperStyle={mainButtonStyle}
-                        onClick={handleClose}
+                        onClick={handleConfirm}
                     >
                         Ok
                     </Button>

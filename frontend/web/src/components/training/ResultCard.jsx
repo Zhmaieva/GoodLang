@@ -1,6 +1,70 @@
 import { RULE_LABELS } from "../../utils/rules.js";
 import { Button } from "../Buttons.jsx";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import { BookOpen } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
+
+function removeTrailingCorrectAnswer(feedback, correctAnswer) {
+    let next = String(feedback ?? "").trim();
+    const answer = String(correctAnswer ?? "").trim();
+
+    if (!answer) {
+        return next;
+    }
+
+    const answerWithoutEndPunctuation = answer.replace(/[.!?]+$/u, "");
+    const candidates = [answer, answerWithoutEndPunctuation]
+        .filter(Boolean)
+        .flatMap((value) => [
+            value,
+            `**${value}**`,
+            `"${value}"`,
+            `“${value}”`,
+        ])
+        .sort((a, b) => b.length - a.length);
+
+    for (const candidate of candidates) {
+        if (next.endsWith(candidate)) {
+            next = next.slice(0, -candidate.length).trim();
+            break;
+        }
+    }
+
+    return next.replace(/\s*[:;,—-]\s*$/u, ".").trim();
+}
+
+function renderInlineMarkdown(value) {
+    const text = String(value ?? "");
+    const parts = [];
+    const pattern = /\*\*(.+?)\*\*/g;
+    let lastIndex = 0;
+
+    for (const match of text.matchAll(pattern)) {
+        const start = match.index ?? 0;
+
+        if (start > lastIndex) {
+            parts.push(text.slice(lastIndex, start));
+        }
+
+        parts.push(
+            <strong key={`feedback-bold-${start}`} style={{ fontWeight: 700 }}>
+                {match[1]}
+            </strong>
+        );
+
+        lastIndex = start + match[0].length;
+    }
+
+    if (!parts.length) {
+        return text;
+    }
+
+    if (lastIndex < text.length) {
+        parts.push(text.slice(lastIndex));
+    }
+
+    return parts;
+}
 
 export default function ResultCard({
                                        theme,
@@ -10,6 +74,8 @@ export default function ResultCard({
                                        quickVerdict = null,
                                        isDetailedLoading = false,
                                    }) {
+    const navigate = useNavigate();
+
     // ----- same “TaskCard” styling tokens -----
     const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
     const CARD_BORDER_IDLE = theme?.accent ?? APP_ACCENT_COLOR;
@@ -112,44 +178,63 @@ export default function ResultCard({
         },
 
         rulesOuterWrap: {
-            marginTop: 16,
+            marginTop: 12,
+            paddingTop: 10,
             display: "flex",
-            flexDirection: "column",
-            gap: 0,
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: 8,
+            borderTop: "1px solid #000",
+        },
+
+        rulesLabel: {
+            fontFamily: 'var(--font-family-base)',
+            fontSize: "0.88rem",
+            fontWeight: 400,
+            color: "#000",
         },
 
         rulesWrap: {
             display: "flex",
             flexWrap: "wrap",
-            gap: 10,
+            gap: 8,
         },
 
         ruleButton: {
             appearance: "none",
             cursor: "pointer",
             borderRadius: 5,
-            border: "2px solid #fe2f31",
+            border: "1px solid #000",
             background: "transparent",
-            padding: "4px 14px",
-            fontSize: "1rem",
-            fontWeight: 600,
+            padding: "4px 10px",
+            fontSize: "0.95rem",
+            fontWeight: 400,
             fontFamily: 'var(--font-family-base)',
             letterSpacing: 0,
             color: theme.text,
             boxShadow: "none",
-            transition: "transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease",
+            gap: 6,
+            transition: "background-color 140ms ease, color 140ms ease",
+        },
+
+        ruleIcon: {
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
         },
     };
 
-    const openRuleInNewTab = (rule) => {
-        const url = `/rule/${rule}`;
-        window.open(url, "_blank", "noopener,noreferrer");
+    const openRule = (rule) => {
+        navigate(`/rule/${rule}`);
     };
 
     // ✅ keying forces remount => animation replays on content change
     const hintKey = `hint:${hint ?? ""}`;
     const correctKey = `correct:${correctAnswer ?? ""}`;
-    const cleanHint = String(hint ?? "").replaceAll('❌','').replaceAll('✔','').trim();
+    const cleanHint = removeTrailingCorrectAnswer(
+        String(hint ?? "").replaceAll('❌','').replaceAll('✔','').trim(),
+        correctAnswer
+    );
     const feedbackText = isDetailedLoading
         ? quickVerdict === false
             ? "Not quite, summarizing feedback"
@@ -175,20 +260,24 @@ export default function ResultCard({
             <div key={hintKey} style={styles.floatIn}>
                 <div style={styles.feedback}>
                     <span style={styles.feedbackRow}>
-                        <span>{feedbackText}</span>
+                        <span>{renderInlineMarkdown(feedbackText)}</span>
                         {showLoader ? <BarsLoader /> : null}
                     </span>
 
                     {recommendedRules.length > 0 && (
                         <div style={styles.rulesOuterWrap}>
+                            <span style={styles.rulesLabel}>Rule reference</span>
                             <div style={styles.rulesWrap}>
                                 {recommendedRules.map((rule) => (
                                     <Button
                                         key={rule}
                                         type="button"
                                         style={styles.ruleButton}
-                                        onClick={() => openRuleInNewTab(rule)}
+                                        onClick={() => openRule(rule)}
                                     >
+                                        <span style={styles.ruleIcon}>
+                                            <BookOpen size={16} weight="regular" />
+                                        </span>
                                         {RULE_LABELS[rule] || rule}
                                     </Button>
                                 ))}

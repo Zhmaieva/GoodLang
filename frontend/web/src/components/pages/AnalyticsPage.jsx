@@ -1,4 +1,5 @@
 import React, {useEffect, useMemo, useState} from "react";
+import { useNavigate } from "react-router-dom";
 import {
     seedWordsMap,
     computeKPIs,
@@ -23,6 +24,8 @@ import { APP_BACKGROUND_COLOR } from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
 
 export default function AnalyticsPage({theme}) {
+    const navigate = useNavigate();
+
     // ----- State (mirrors your script) -----
     const [rules, setRules] = useState([...getAllStatistics()]);
     const [words, setWords] = useState(seedWordsMap());
@@ -142,7 +145,7 @@ export default function AnalyticsPage({theme}) {
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
-        padding: isMobile ? "12px 12px" : "24px 24px 16px",
+        padding: isMobile ? "16px 12px" : "48px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
@@ -153,12 +156,41 @@ export default function AnalyticsPage({theme}) {
         minHeight: "auto",
         display: "flex",
         flexDirection: "column",
-        padding: isMobile ? "24px 16px 24px" : "40px 40px 24px",
+        padding: 0,
         border: "none",
         borderRadius: 0,
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
         boxShadow: "none",
         boxSizing: "border-box",
+    };
+
+    const breadcrumbStyle = {
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        marginBottom: isMobile ? 18 : 24,
+        color: "#000",
+        fontSize: isMobile ? "1rem" : "1.05rem",
+        fontWeight: 400,
+    };
+
+    const breadcrumbButtonStyle = {
+        appearance: "none",
+        border: "none",
+        background: "transparent",
+        padding: 0,
+        margin: 0,
+        color: "#000",
+        font: "inherit",
+        fontWeight: 500,
+        textDecoration: "underline",
+        textUnderlineOffset: 3,
+        cursor: "pointer",
+    };
+
+    const breadcrumbCurrentStyle = {
+        color: "#000",
+        fontWeight: 600,
     };
 
     return (
@@ -167,6 +199,20 @@ export default function AnalyticsPage({theme}) {
                 <SiteHeader theme={theme} showPracticeButton />
                 <div style={pageShellStyle}>
                     <main style={pageContentStyle}>
+                        <nav style={breadcrumbStyle} aria-label="Breadcrumb">
+                            <button
+                                type="button"
+                                style={breadcrumbButtonStyle}
+                                onClick={() => navigate("/trainer")}
+                            >
+                                Trainer
+                            </button>
+                            <span>/</span>
+                            <span style={breadcrumbCurrentStyle} aria-current="page">
+                                Rules
+                            </span>
+                        </nav>
+
                         {
                             (!isMobile || !isTeacher || hasData) &&
                             <KPIGrid
@@ -197,8 +243,7 @@ export default function AnalyticsPage({theme}) {
                                 fmtDate={fmtDate}
                                 fmtLastPractice={fmtLastPractice}
                                 onRowClick={(rule) => {
-                                    const url = `/rule/${rule.rule}`;
-                                    window.open(url, "_blank", "noopener,noreferrer");
+                                    navigate(`/rule/${rule.rule}`);
                                 }}
                             />
                         </div>
