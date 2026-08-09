@@ -116,17 +116,21 @@ export default function TermsOfUseModal({
 
     const termsBoxStyle = {
         textAlign: "left",
-        borderRadius: 5,
-        border: `2px solid ${theme.accent}`,
-        padding: 14,
+        borderRadius: 18,
+        border: `1px solid ${theme.border}`,
+        padding: "18px 20px",
         maxHeight: 260,
         overflowY: "auto",
         lineHeight: 1.55,
         color: theme.text,
+        background: theme.surface,
     };
 
     const primaryBtn = {
         backgroundColor: loading ? "#999" : theme.accent,
+        color: "#fff",
+        borderColor: "transparent",
+        boxShadow: loading ? "none" : "0 12px 28px rgba(123, 97, 216, 0.16)",
         opacity: loading ? 0.7 : 1,
     };
 
@@ -368,7 +372,7 @@ export default function TermsOfUseModal({
                                     compact
                                     fullWidth
                                     shadowColor={theme.accent}
-                                    shadowOffset={5}
+                                    shadowOffset={0}
                                     onClick={handleAgree}
                                     disabled={loading}
                                     style={primaryBtn}
@@ -382,7 +386,7 @@ export default function TermsOfUseModal({
                                 compact
                                 fullWidth
                                 shadowColor={theme.accent}
-                                shadowOffset={5}
+                                shadowOffset={0}
                                 onClick={onClose}
                                 disabled={loading}
                                 style={primaryBtn}

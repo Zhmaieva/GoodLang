@@ -1,25 +1,29 @@
 import React from "react";
 
 export default function Examples({ items, theme, fontSize }) {
-    // aligned with RulePage / SurfaceCard (flat, no shadow)
+    const border = theme?.border ?? "#e6e8f0";
+    const surface = theme?.surface ?? "#fff";
+    const text = theme?.text ?? "#1f2436";
+    const muted = theme?.muted ?? "#70758a";
+
     const block = {
-        background: "transparent",
-        border: `2px solid ${theme.accent}`,
-        borderRadius: 5,
-        padding: 10,
-        margin: "6px 0",
+        background: surface,
+        border: `1px solid ${border}`,
+        borderRadius: 14,
+        padding: "14px 16px",
+        margin: "8px 0",
     };
 
     const en = {
         fontSize,
         fontWeight: 400,
-        color: theme.text,
+        color: text,
         fontFamily: 'var(--font-family-base)',
     };
 
     const ua = {
         fontSize,
-        color: theme.muted,
+        color: muted,
         marginTop: 2,
         fontWeight: 400,
         fontFamily: 'var(--font-family-base)',

@@ -1,12 +1,17 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import AppShell from "../AppShell.jsx";
 import SiteHeader from "../SiteHeader.jsx";
 import FooterBar from "../FooterBar.jsx";
 import { Button } from "../Buttons.jsx";
+import { CaretDown, CaretUp } from "@phosphor-icons/react";
 import {
     APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
     APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
+    APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
     LEARNED_STATUS_COLOR,
 } from "../../theme.js";
 
@@ -122,6 +127,28 @@ const STATUS_META = {
     },
 };
 
+const STATUS_ORDER = {
+    needsPractice: 1,
+    recovered: 2,
+    learned: 3,
+};
+
+const VOCABULARY_LEVEL_ORDER = {
+    A1: 1,
+    A2: 2,
+    B1: 3,
+    B2: 4,
+    C1: 5,
+    C2: 6,
+};
+
+const LAST_MISTAKE_ORDER = {
+    Today: 1,
+    Yesterday: 2,
+    "Last week": 3,
+    "Ages ago": 4,
+};
+
 function StatusChip({ status }) {
     const meta = STATUS_META[status] ?? STATUS_META.needsPractice;
 
@@ -133,12 +160,12 @@ function StatusChip({ status }) {
                 justifyContent: "center",
                 width: "fit-content",
                 minWidth: 0,
-                padding: "6px 10px",
-                borderRadius: 5,
+                padding: "7px 12px",
+                borderRadius: 999,
                 background: meta.color,
                 color: meta.textColor,
                 fontWeight: 700,
-                fontSize: "12px",
+                fontSize: "0.78rem",
                 lineHeight: 1,
                 whiteSpace: "nowrap",
             }}
@@ -156,9 +183,9 @@ function ProgressBar({ value, theme }) {
             aria-label={`${safeValue}%`}
             style={{
                 width: "100%",
-                height: 10,
-                borderRadius: 5,
-                background: "#000",
+                height: 8,
+                borderRadius: 999,
+                background: "#edf0f7",
                 overflow: "hidden",
             }}
         >
@@ -175,28 +202,34 @@ function ProgressBar({ value, theme }) {
 }
 
 function SummaryCard({ label, value, note, progress, theme, isMobile }) {
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
+    const text = theme?.text ?? APP_TEXT_COLOR;
+    const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
+
     return (
         <article
             style={{
                 minHeight: isMobile ? 132 : 150,
-                border: "1px solid #000",
-                borderRadius: 5,
-                padding: isMobile ? 16 : 20,
+                border: `1px solid ${border}`,
+                borderRadius: 18,
+                padding: isMobile ? 16 : 22,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
                 gap: 14,
-                background: theme?.bg ?? APP_BACKGROUND_COLOR,
+                background: surface,
+                boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
             }}
         >
             <div>
                 <div
                     style={{
-                        fontSize: isMobile ? "0.9rem" : "1rem",
+                        fontSize: isMobile ? "0.78rem" : "0.82rem",
                         textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                        fontWeight: 700,
-                        color: "#000",
+                        letterSpacing: "0.08em",
+                        fontWeight: 800,
+                        color: muted,
                     }}
                 >
                     {label}
@@ -206,8 +239,8 @@ function SummaryCard({ label, value, note, progress, theme, isMobile }) {
                         marginTop: 10,
                         fontSize: isMobile ? "2rem" : "2.45rem",
                         lineHeight: 1,
-                        fontWeight: 700,
-                        color: "#000",
+                        fontWeight: 800,
+                        color: text,
                     }}
                 >
                     {value}
@@ -220,9 +253,9 @@ function SummaryCard({ label, value, note, progress, theme, isMobile }) {
                 <div
                     style={{
                         marginTop: 9,
-                        fontSize: isMobile ? "0.92rem" : "1rem",
-                        color: "#000",
-                        fontWeight: 400,
+                        fontSize: isMobile ? "0.86rem" : "0.92rem",
+                        color: muted,
+                        fontWeight: 600,
                     }}
                 >
                     {note}
@@ -233,11 +266,12 @@ function SummaryCard({ label, value, note, progress, theme, isMobile }) {
 }
 
 export default function VocabularyPage({ theme }) {
-    const navigate = useNavigate();
     const [isMobile, setIsMobile] = useState(
         typeof window !== "undefined" ? window.innerWidth < 915 : false
     );
     const [activeFilter, setActiveFilter] = useState("all");
+    const [sortKey, setSortKey] = useState("level");
+    const [sortDir, setSortDir] = useState("asc");
 
     useEffect(() => {
         const onResize = () => setIsMobile(window.innerWidth < 915);
@@ -247,10 +281,61 @@ export default function VocabularyPage({ theme }) {
         return () => window.removeEventListener("resize", onResize);
     }, []);
 
+    const toggleSort = (key) => {
+        if (sortKey === key) {
+            setSortDir((direction) => (direction === "asc" ? "desc" : "asc"));
+        } else {
+            setSortKey(key);
+            setSortDir("asc");
+        }
+    };
+
+    const getSortValue = (item, key) => {
+        switch (key) {
+            case "word":
+                return String(item.word ?? "").toLowerCase();
+            case "level":
+                return VOCABULARY_LEVEL_ORDER[item.level] ?? 999;
+            case "meaning":
+                return String(item.meaning ?? "").toLowerCase();
+            case "accuracy":
+                return Number.isFinite(item.accuracy) ? item.accuracy : -1;
+            case "lastMistake":
+                return LAST_MISTAKE_ORDER[item.lastMistake] ?? 999;
+            case "status":
+                return STATUS_ORDER[item.status] ?? 999;
+            default:
+                return "";
+        }
+    };
+
     const filteredWords = useMemo(() => {
-        if (activeFilter === "all") return VOCABULARY_WORDS;
-        return VOCABULARY_WORDS.filter((word) => word.status === activeFilter);
-    }, [activeFilter]);
+        const list = activeFilter === "all"
+            ? [...VOCABULARY_WORDS]
+            : VOCABULARY_WORDS.filter((word) => word.status === activeFilter);
+        const direction = sortDir === "asc" ? 1 : -1;
+
+        list.sort((a, b) => {
+            const av = getSortValue(a, sortKey);
+            const bv = getSortValue(b, sortKey);
+
+            if (typeof av === "number" && typeof bv === "number") {
+                if (av !== bv) return (av - bv) * direction;
+            } else {
+                if (av < bv) return -1 * direction;
+                if (av > bv) return 1 * direction;
+            }
+
+            const aw = String(a.word ?? "").toLowerCase();
+            const bw = String(b.word ?? "").toLowerCase();
+            if (aw < bw) return -1;
+            if (aw > bw) return 1;
+
+            return 0;
+        });
+
+        return list;
+    }, [activeFilter, sortKey, sortDir]);
 
     const pageLayoutStyle = {
         width: "100%",
@@ -267,48 +352,45 @@ export default function VocabularyPage({ theme }) {
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
-        padding: isMobile ? "16px 12px" : "48px 24px",
+        padding: isMobile ? "18px 12px" : "40px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
     const pageContentStyle = {
         width: "100%",
-        maxWidth: 1100,
+        maxWidth: 1180,
         minWidth: 0,
         display: "flex",
         flexDirection: "column",
-        color: "#000",
+        color: theme?.text ?? APP_TEXT_COLOR,
     };
 
-    const breadcrumbStyle = {
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-        marginBottom: isMobile ? 18 : 24,
-        color: "#000",
-        fontSize: isMobile ? "1rem" : "1.05rem",
-        fontWeight: 400,
+    const pageIntroStyle = {
+        marginBottom: isMobile ? 22 : 28,
     };
 
-    const breadcrumbButtonStyle = {
-        appearance: "none",
-        border: "none",
-        background: "transparent",
-        padding: 0,
+    const pageTitleStyle = {
         margin: 0,
-        color: "#000",
-        font: "inherit",
-        fontWeight: 500,
-        textDecoration: "underline",
-        textUnderlineOffset: 3,
-        cursor: "pointer",
+        color: theme?.text ?? APP_TEXT_COLOR,
+        fontSize: isMobile ? "2rem" : "2.4rem",
+        lineHeight: 1.08,
+        fontWeight: 850,
+        letterSpacing: "-0.02em",
+    };
+
+    const pageSubtitleStyle = {
+        margin: "10px 0 0",
+        color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
+        fontSize: isMobile ? "1rem" : "1.05rem",
+        lineHeight: 1.5,
+        fontWeight: 600,
     };
 
     const summaryGridStyle = {
         display: "grid",
         gap: isMobile ? 12 : 16,
         gridTemplateColumns: isMobile ? "1fr" : "repeat(4, 1fr)",
-        marginTop: 14,
+        marginTop: 0,
     };
 
     const bodyGridStyle = {
@@ -329,15 +411,17 @@ export default function VocabularyPage({ theme }) {
         display: "flex",
         gap: 10,
         flexWrap: "wrap",
-        marginTop: 22,
-        marginBottom: 10,
+        marginTop: 28,
+        marginBottom: 14,
     };
 
     const tableStyle = {
-        border: "1px solid #000",
-        borderRadius: 5,
+        border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+        borderRadius: 18,
         overflowX: "auto",
         overflowY: "hidden",
+        background: theme?.surface ?? APP_SURFACE_COLOR,
+        boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
     };
 
     const tableGridStyle = {
@@ -352,20 +436,61 @@ export default function VocabularyPage({ theme }) {
 
     const tableHeaderStyle = {
         ...tableGridStyle,
-        padding: "10px 14px",
-        borderBottom: "1px solid #000",
-        fontSize: "12px",
-        fontWeight: 700,
-        letterSpacing: "0.06em",
+        padding: "16px 20px",
+        borderBottom: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+        fontSize: "0.72rem",
+        fontWeight: 800,
+        letterSpacing: "0.08em",
         textTransform: "uppercase",
-        color: "#000",
+        color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
     };
+
+    const tableHeaderButtonStyle = {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 6,
+        width: "fit-content",
+        border: "none",
+        padding: 0,
+        background: "transparent",
+        color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
+        font: "inherit",
+        fontWeight: 800,
+        letterSpacing: "inherit",
+        textTransform: "inherit",
+        cursor: "pointer",
+        userSelect: "none",
+    };
+
+    const ArrowPair = ({ columnKey }) => {
+        const active = sortKey === columnKey;
+        const upOpacity = active && sortDir === "asc" ? 1 : 0.25;
+        const downOpacity = active && sortDir === "desc" ? 1 : 0.25;
+
+        return (
+            <span style={{ display: "inline-flex", flexDirection: "column", lineHeight: 0.9 }}>
+                <CaretUp size={12} weight="fill" style={{ opacity: upOpacity }} />
+                <CaretDown size={12} weight="fill" style={{ opacity: downOpacity }} />
+            </span>
+        );
+    };
+
+    const SortHeader = ({ columnKey, children }) => (
+        <button
+            type="button"
+            style={tableHeaderButtonStyle}
+            onClick={() => toggleSort(columnKey)}
+        >
+            {children}
+            <ArrowPair columnKey={columnKey} />
+        </button>
+    );
 
     const tableRowStyle = {
         ...tableGridStyle,
-        padding: "12px 14px",
-        borderBottom: "1px solid #000",
-        color: "#000",
+        padding: "18px 20px",
+        borderBottom: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+        color: theme?.text ?? APP_TEXT_COLOR,
     };
 
     const wordNameStyle = {
@@ -377,14 +502,14 @@ export default function VocabularyPage({ theme }) {
 
     const wordStyle = {
         fontSize: isMobile ? "1rem" : "1.05rem",
-        fontWeight: 700,
-        color: "#000",
+        fontWeight: 800,
+        color: theme?.text ?? APP_TEXT_COLOR,
     };
 
     const metaStyle = {
         fontSize: isMobile ? "0.9rem" : "0.95rem",
         fontWeight: 400,
-        color: "#000",
+        color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
     };
 
     return (
@@ -394,19 +519,12 @@ export default function VocabularyPage({ theme }) {
 
                 <div style={pageShellStyle}>
                     <main style={pageContentStyle}>
-                        <nav style={breadcrumbStyle} aria-label="Breadcrumb">
-                            <button
-                                type="button"
-                                style={breadcrumbButtonStyle}
-                                onClick={() => navigate("/trainer")}
-                            >
-                                Trainer
-                            </button>
-                            <span>/</span>
-                            <span style={{ fontWeight: 600 }} aria-current="page">
-                                Vocabulary
-                            </span>
-                        </nav>
+                        <section style={pageIntroStyle}>
+                            <h1 style={pageTitleStyle}>Vocabulary</h1>
+                            <p style={pageSubtitleStyle}>
+                                Track the words you know, recover weak spots, and build confident recall.
+                            </p>
+                        </section>
 
                         <section style={summaryGridStyle} aria-label="Vocabulary summary">
                             <SummaryCard
@@ -456,13 +574,18 @@ export default function VocabularyPage({ theme }) {
                                                 compact
                                                 isMobile={isMobile}
                                                 theme={theme}
-                                                shadowColor={selected ? "#000" : theme?.accent ?? APP_ACCENT_COLOR}
-                                                shadowOffset={selected ? 0 : 4}
+                                                shadowOffset={0}
                                                 onClick={() => setActiveFilter(filter.id)}
                                                 style={{
-                                                    backgroundColor: selected ? "#000" : theme?.accent ?? APP_ACCENT_COLOR,
-                                                    color: selected ? "#fff" : "#000",
-                                                    borderColor: "#000",
+                                                    backgroundColor: selected
+                                                        ? theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR
+                                                        : theme?.surface ?? APP_SURFACE_COLOR,
+                                                    color: selected
+                                                        ? theme?.accent ?? APP_ACCENT_COLOR
+                                                        : theme?.text ?? APP_TEXT_COLOR,
+                                                    borderColor: selected
+                                                        ? theme?.accent ?? APP_ACCENT_COLOR
+                                                        : theme?.border ?? APP_BORDER_COLOR,
                                                 }}
                                             >
                                                 {filter.label}
@@ -473,11 +596,11 @@ export default function VocabularyPage({ theme }) {
 
                                 <div style={tableStyle}>
                                     <div style={tableHeaderStyle}>
-                                        <span>Word</span>
-                                        <span>Translation</span>
-                                        <span>Progress</span>
-                                        <span>Last mistake</span>
-                                        <span>Status</span>
+                                        <SortHeader columnKey="level">Word (Level)</SortHeader>
+                                        <div>Translation</div>
+                                        <SortHeader columnKey="accuracy">Progress</SortHeader>
+                                        <SortHeader columnKey="lastMistake">Last mistake</SortHeader>
+                                        <SortHeader columnKey="status">Status</SortHeader>
                                     </div>
 
                                     {filteredWords.map((item, index) => (
@@ -495,7 +618,7 @@ export default function VocabularyPage({ theme }) {
                                             </div>
                                             <div style={metaStyle}>{item.meaning}</div>
                                             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                                                <strong style={{ fontSize: "1rem", color: "#000" }}>
+                                                <strong style={{ fontSize: "1rem", color: theme?.text ?? APP_TEXT_COLOR }}>
                                                     {item.accuracy}%
                                                 </strong>
                                                 <ProgressBar value={item.accuracy} theme={theme} />

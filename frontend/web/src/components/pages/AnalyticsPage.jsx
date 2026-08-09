@@ -20,7 +20,7 @@ import FooterBar from "../FooterBar";
 import {getAllStatistics, getOverallAccuracy} from "../../services/dataService.js";
 import AppShell from "../AppShell.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_BACKGROUND_COLOR, APP_MUTED_TEXT_COLOR, APP_TEXT_COLOR } from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
 
 export default function AnalyticsPage({theme}) {
@@ -145,14 +145,14 @@ export default function AnalyticsPage({theme}) {
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
-        padding: isMobile ? "16px 12px" : "48px 24px",
+        padding: isMobile ? "18px 12px" : "40px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
     const pageContentStyle = {
         minWidth: 0,
         width: "100%",
-        maxWidth: 1100,
+        maxWidth: 1180,
         minHeight: "auto",
         display: "flex",
         flexDirection: "column",
@@ -164,32 +164,24 @@ export default function AnalyticsPage({theme}) {
         boxSizing: "border-box",
     };
 
-    const breadcrumbStyle = {
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-        marginBottom: isMobile ? 18 : 24,
-        color: "#000",
-        fontSize: isMobile ? "1rem" : "1.05rem",
-        fontWeight: 400,
+    const pageIntroStyle = {
+        marginBottom: isMobile ? 22 : 28,
     };
 
-    const breadcrumbButtonStyle = {
-        appearance: "none",
-        border: "none",
-        background: "transparent",
-        padding: 0,
+    const pageTitleStyle = {
         margin: 0,
-        color: "#000",
-        font: "inherit",
-        fontWeight: 500,
-        textDecoration: "underline",
-        textUnderlineOffset: 3,
-        cursor: "pointer",
+        color: theme?.text ?? APP_TEXT_COLOR,
+        fontSize: isMobile ? "2rem" : "2.4rem",
+        lineHeight: 1.08,
+        fontWeight: 850,
+        letterSpacing: "-0.02em",
     };
 
-    const breadcrumbCurrentStyle = {
-        color: "#000",
+    const pageSubtitleStyle = {
+        margin: "10px 0 0",
+        color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
+        fontSize: isMobile ? "1rem" : "1.05rem",
+        lineHeight: 1.5,
         fontWeight: 600,
     };
 
@@ -199,19 +191,12 @@ export default function AnalyticsPage({theme}) {
                 <SiteHeader theme={theme} showPracticeButton />
                 <div style={pageShellStyle}>
                     <main style={pageContentStyle}>
-                        <nav style={breadcrumbStyle} aria-label="Breadcrumb">
-                            <button
-                                type="button"
-                                style={breadcrumbButtonStyle}
-                                onClick={() => navigate("/trainer")}
-                            >
-                                Trainer
-                            </button>
-                            <span>/</span>
-                            <span style={breadcrumbCurrentStyle} aria-current="page">
-                                Grammar
-                            </span>
-                        </nav>
+                        <section style={pageIntroStyle}>
+                            <h1 style={pageTitleStyle}>Grammar Rules</h1>
+                            <p style={pageSubtitleStyle}>
+                                Learn the rules, practice in context, speak with confidence.
+                            </p>
+                        </section>
 
                         {
                             (!isMobile || !isTeacher || hasData) &&

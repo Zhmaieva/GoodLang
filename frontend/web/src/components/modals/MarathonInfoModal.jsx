@@ -218,9 +218,14 @@ export default function MarathonInfoModal({
                 compact
                 fullWidth
                 shadowColor={theme.accent}
-                shadowOffset={5}
+                shadowOffset={0}
                 onClick={handleStart}
-                style={{ backgroundColor: theme.accent }}
+                style={{
+                    backgroundColor: theme.accent,
+                    color: "#fff",
+                    borderColor: "transparent",
+                    boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                }}
             >
                 Start marathon
             </Button>
@@ -231,10 +236,15 @@ export default function MarathonInfoModal({
                     compact
                     fullWidth
                     shadowColor={theme.accent}
-                    shadowOffset={5}
+                    shadowOffset={0}
                     onClick={() => setLoginOpen(true)}
                     wrapperStyle={{ marginTop: 8 }}
-                    style={{ backgroundColor: theme.accent }}
+                    style={{
+                        backgroundColor: theme.accent,
+                        color: "#fff",
+                        borderColor: "transparent",
+                        boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                    }}
                 >
                     Log in to another account
                 </Button>

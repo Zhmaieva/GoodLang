@@ -7,7 +7,7 @@ import FooterBar from "../FooterBar.jsx";
 import { callEmailUnsubscribeApi } from "../../services/api.js";
 import InfoModal from "../modals/InfoModal.jsx";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
-import { APP_BACKGROUND_COLOR } from "../../theme.js";
+import { APP_BACKGROUND_COLOR, APP_BORDER_COLOR, APP_SURFACE_COLOR } from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
 
 export default function HomePage({ theme }) {
@@ -115,23 +115,23 @@ export default function HomePage({ theme }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: isMobile ? "16px 12px" : "48px 24px",
+        padding: isMobile ? "24px 12px" : "64px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
     const pageContentStyle = {
         minWidth: 0,
-        width: isMobile ? "100%" : "60%",
+        width: isMobile ? "100%" : "min(880px, 92vw)",
         minHeight: "auto",
 
         display: "flex",
         flexDirection: "column",
 
-        padding: 0,
-        border: "none",
-        borderRadius: 0,
-        background: theme?.bg ?? APP_BACKGROUND_COLOR,
-        boxShadow: "none",
+        padding: isMobile ? "24px" : "56px 64px",
+        border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+        borderRadius: 24,
+        background: theme?.surface ?? APP_SURFACE_COLOR,
+        boxShadow: "0 24px 70px rgba(31, 36, 54, 0.08)",
         boxSizing: "border-box",
     };
 

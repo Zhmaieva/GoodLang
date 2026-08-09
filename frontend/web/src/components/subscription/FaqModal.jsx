@@ -8,14 +8,15 @@ export default function FaqModal({
                                  }) {
     const contentStyle = {
         textAlign: "left",
-        borderRadius: 5,
-        border: `2px solid ${theme.accent}`,
-        padding: "14px 14px",
+        borderRadius: 18,
+        border: `1px solid ${theme.border}`,
+        padding: "18px 20px",
         maxHeight: 320,
         overflowY: "auto",
         lineHeight: 1.55,
         color: theme.text,
         fontSize: "1rem",
+        background: theme.surface,
     };
 
     return (
@@ -91,8 +92,13 @@ export default function FaqModal({
                     compact
                     fullWidth
                     shadowColor={theme.accent}
-                    shadowOffset={5}
-                    style={{ backgroundColor: theme.accent }}
+                    shadowOffset={0}
+                    style={{
+                        backgroundColor: theme.accent,
+                        color: "#fff",
+                        borderColor: "transparent",
+                        boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                    }}
                     onClick={onClose}
                 >
                     OK

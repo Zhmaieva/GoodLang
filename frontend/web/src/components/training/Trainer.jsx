@@ -127,11 +127,12 @@ export default function Trainer({
     const [locked, setLocked] = useState(false);
 
     const [taskText, setTaskText] = useState("Loading task…");
-    const [hint, setHintValue] = useState("Hint: translate and press 'Check'.");
+    const [hint, setHintValue] = useState("");
     const [taskHint, setTaskHint] = useState(null);
 
     const [account, setAccount] = useState(null);
     const [correctAnswer, setCorrectAnswer] = useState("");
+    const [naturalAnswer, setNaturalAnswer] = useState("");
     const [isEvaluating, setIsEvaluating] = useState(false);
     const [isDetailedFeedbackLoading, setIsDetailedFeedbackLoading] = useState(false);
     const [quickVerdict, setQuickVerdict] = useState(null);
@@ -224,8 +225,9 @@ export default function Trainer({
     function resetToLoadingPlaceholders() {
         evaluationRunRef.current += 1;
         setTaskText("Loading task…");
-        setHint("Loading new task…");
+        setHint("");
         setCorrectAnswer("");
+        setNaturalAnswer("");
         setWeakRules([]);
         setQuickVerdict(null);
         setIsDetailedFeedbackLoading(false);
@@ -371,6 +373,7 @@ export default function Trainer({
         setRules([]);
         setAnswer("");
         setCorrectAnswer("");
+        setNaturalAnswer("");
         setWeakRules([]);
         setQuickVerdict(null);
         setIsDetailedFeedbackLoading(false);
@@ -412,6 +415,7 @@ export default function Trainer({
         setRules([]);
         setAnswer("");
         setCorrectAnswer("");
+        setNaturalAnswer("");
         setWeakRules([]);
         setQuickVerdict(null);
         setIsDetailedFeedbackLoading(false);
@@ -438,11 +442,12 @@ export default function Trainer({
         setTextToTranslateOriginal(data.textToTranslateOriginal || "");
         setTaskText(data.textToTranslate || "—");
         setTaskHint(data.hint || null);
-        setHint("Translate the sentence and press 'CHECK'.");
+        setHint("");
         setRules(data.rules || []);
         setAnswer("");
         setGapSelected(null);
         setCorrectAnswer("");
+        setNaturalAnswer("");
         setWeakRules([]);
         setQuickVerdict(null);
         setIsDetailedFeedbackLoading(false);
@@ -462,10 +467,11 @@ export default function Trainer({
         setGapSelected(null);
         setTaskText(data.textToTranslate || "—");
         setTaskHint(null);
-        setHint("Tip: select the correct option.");
+        setHint("");
         setRules(data.rules || []);
         setAnswer("");
         setCorrectAnswer("");
+        setNaturalAnswer("");
         setWeakRules([]);
         setQuickVerdict(null);
         setIsDetailedFeedbackLoading(false);
@@ -726,6 +732,7 @@ export default function Trainer({
             setHint("");
             setWeakRules([]);
             setCorrectAnswer("");
+            setNaturalAnswer("");
 
             const {seed, skip} = getSeed();
             logInfo("evaluating answer...");
@@ -757,18 +764,18 @@ export default function Trainer({
                     if (completionHandled) return quickData;
 
                     const isQuickCorrect = !!quickData.isAnswerCorrect;
-                    setQuickVerdict(isQuickCorrect);
 
                     if (!isQuickCorrect) {
-                        setHint("Doesn't seem right, double checking");
                         return quickData;
                     }
 
                     completionHandled = true;
                     quickCorrectApplied = true;
+                    setQuickVerdict(true);
                     setIsDetailedFeedbackLoading(false);
                     setHint("Well done!");
                     setCorrectAnswer("");
+                    setNaturalAnswer("");
                     setWeakRules([]);
                     clearCurrentTaskCache();
 
@@ -819,6 +826,7 @@ export default function Trainer({
 
             if (!data.isSuccess) {
                 setIsDetailedFeedbackLoading(false);
+                setNaturalAnswer("");
                 setHint("Continue learning with a subscription, or wait");
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
@@ -828,6 +836,7 @@ export default function Trainer({
 
             if (!data.allowed) {
                 setIsDetailedFeedbackLoading(false);
+                setNaturalAnswer("");
                 setHint("Continue learning with a subscription, or wait");
                 setWaitTimeSeconds(data.waitTimeSeconds);
                 setLimitModalOpen(true);
@@ -848,6 +857,10 @@ export default function Trainer({
 
             const { isCalibration } = getTrainingLevel();
 
+            if (quickCorrectApplied && data.isAnswerCorrect) {
+                setNaturalAnswer(data.naturalAnswer || "");
+            }
+
             if (!quickCorrectApplied) {
                 completionHandled = true;
                 setQuickVerdict(!!data.isAnswerCorrect);
@@ -861,14 +874,16 @@ export default function Trainer({
                 setTaskModeLocked(!!isCalibration);
 
                 if (data.isAnswerCorrect) {
-                    setHint("Well done!");
+                    setHint(data.naturalAnswer ? "Nice work! You expressed the idea well." : "Well done!");
                     setCorrectAnswer("");
+                    setNaturalAnswer(data.naturalAnswer || "");
                     setWeakRules([]);
                 } else {
                     setWeakRules(buildRecommendedRules(data, data.scores || []));
                     const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
                     setHint(tip);
                     setCorrectAnswer(data.correctAnswer || "");
+                    setNaturalAnswer("");
                 }
 
                 if (isCalibrationNow()) {
@@ -935,6 +950,7 @@ export default function Trainer({
             }
         } catch (e) {
             setIsDetailedFeedbackLoading(false);
+            setNaturalAnswer("");
             console.error(e);
             setIsError(true);
 
@@ -1004,6 +1020,24 @@ export default function Trainer({
         setLimitModalOpen(false);
         setIsEvaluating(false);
         setIsDetailedFeedbackLoading(false);
+    }
+
+    function retryCurrentTask() {
+        evaluationRunRef.current += 1;
+        setMode("check");
+        setCorrectAnswer("");
+        setNaturalAnswer("");
+        setWeakRules([]);
+        setQuickVerdict(null);
+        setHint("");
+        setIsDetailedFeedbackLoading(false);
+        setIsEvaluating(false);
+
+        window.setTimeout(() => {
+            if (taskType !== "gap" && !notFocused && textareaRef.current) {
+                textareaRef.current.focus({ preventScroll: true });
+            }
+        }, 0);
     }
 
     // -----------------------------
@@ -1122,49 +1156,57 @@ export default function Trainer({
         </div>
     ) : (
         <section id="trainer" style={gridStyle}>
-            <TaskCard
-                waitTimeSeconds={waitTimeSeconds}
-                hint={
-                    taskType === "gap"
-                        ? null
-                        : (freeTraining ? taskHint : null)
-                }
-                theme={theme}
-                taskText={renderedTaskText}
-                answer={answer}
-                setAnswer={setAnswer}
-                isInputDisabled={loading || isEvaluating || mode === "next"}
-                mainBtnText={mode === "check"
-                    ? 'CHECK'
-                    : 'NEXT SENTENCE'}
-                onMainButtonClick={onMainButtonClick}
-                loading={loading}
-                actionDisabled={isEvaluating}
-                textareaRef={textareaRef}
-                onKeyDown={handleKeyDown}
-                locked={locked}
-                account={account}
+            {(mode === "check" || loading) && (
+                <TaskCard
+                    waitTimeSeconds={waitTimeSeconds}
+                    hint={
+                        taskType === "gap"
+                            ? null
+                            : (freeTraining ? taskHint : null)
+                    }
+                    theme={theme}
+                    taskText={renderedTaskText}
+                    answer={answer}
+                    setAnswer={setAnswer}
+                    isInputDisabled={loading || isEvaluating || mode === "next"}
+                    mainBtnText={mode === "check"
+                        ? 'Check answer'
+                        : 'NEXT SENTENCE'}
+                    onMainButtonClick={onMainButtonClick}
+                    loading={loading}
+                    actionDisabled={isEvaluating}
+                    textareaRef={textareaRef}
+                    onKeyDown={handleKeyDown}
+                    locked={locked}
+                    account={account}
 
-                taskType={taskType}
-                gapOptions={gapOptions}
-                gapSelected={gapSelected}
-                setGapSelected={setGapSelected}
+                    taskType={taskType}
+                    gapOptions={gapOptions}
+                    gapSelected={gapSelected}
+                    setGapSelected={setGapSelected}
 
-                // ✅ mode selector props
-                taskMode={taskMode}
-                setTaskMode={onTaskModeSelected}
-                taskModeLocked={taskModeLocked}
-                taskModeLockReason={taskModeLockReason}
-            />
+                    // ✅ mode selector props
+                    taskMode={taskMode}
+                    setTaskMode={onTaskModeSelected}
+                    taskModeLocked={taskModeLocked}
+                    taskModeLockReason={taskModeLockReason}
+                />
+            )}
 
-            <ResultCard
-                theme={theme}
-                hint={hint}
-                correctAnswer={correctAnswer}
-                weakRules={weakRules}
-                quickVerdict={quickVerdict}
-                isDetailedLoading={isDetailedFeedbackLoading}
-            />
+            {mode === "next" && (
+                <ResultCard
+                    theme={theme}
+                    hint={hint}
+                    userAnswer={taskType === "gap" ? String(gapSelected ?? "") : answer}
+                    correctAnswer={correctAnswer}
+                    naturalAnswer={naturalAnswer}
+                    rules={rules}
+                    weakRules={weakRules}
+                    quickVerdict={quickVerdict}
+                    isDetailedLoading={isDetailedFeedbackLoading}
+                    onContinue={onMainButtonClick}
+                />
+            )}
 
             <LimitModal
                 waitTimeSeconds={waitTimeSeconds}

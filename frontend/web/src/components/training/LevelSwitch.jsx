@@ -206,22 +206,22 @@ export default function LevelSwitch({
     };
 
     const lockedTooltipText = "Обирай формат завдань після оцінки рівня";
-    const SELECTED_BUTTON_COLOR = "#000";
     const BUTTON_OFFSET = 4;
 
     const optionGridStyle = {
         display: "grid",
         gridTemplateColumns: compact ? "1fr" : "repeat(2, minmax(0, 1fr))",
-        gap: 14,
+        gap: 12,
     };
 
     const getOptionButtonStyle = (selected) => ({
-        backgroundColor: selected ? SELECTED_BUTTON_COLOR : theme.accent,
-        color: selected ? "#fff" : "#000",
-        borderColor: SELECTED_BUTTON_COLOR,
+        backgroundColor: selected ? theme.accent : theme.surface,
+        color: selected ? "#fff" : theme.text,
+        borderColor: selected ? theme.accent : theme.border,
         width: "100%",
         minWidth: 0,
         whiteSpace: "nowrap",
+        boxShadow: selected ? "0 12px 28px rgba(123, 97, 216, 0.16)" : "none",
     });
 
     return (
@@ -283,11 +283,7 @@ export default function LevelSwitch({
                 subtitle="Pick the level for the next training tasks."
                 onClose={() => setModalOpen(false)}
                 maxWidth={520}
-                panelStyle={{
-                    border: "1px solid #000",
-                    borderRadius: 12,
-                    padding: compact ? 28 : 40,
-                }}
+                panelStyle={{ padding: compact ? 28 : 40 }}
                 titleStyle={{ fontSize: "1.75rem" }}
                 contentStyle={optionGridStyle}
             >
@@ -301,8 +297,9 @@ export default function LevelSwitch({
                             compact
                             fullWidth
                             theme={theme}
-                            shadowColor={selected ? SELECTED_BUTTON_COLOR : theme.accent}
-                            shadowOffset={selected ? 0 : BUTTON_OFFSET}
+                            selected={selected}
+                            shadowColor={theme.accent}
+                            shadowOffset={0}
                             aria-pressed={selected}
                             disabled={loading}
                             onClick={() => handleOptionClick(value, actionType)}

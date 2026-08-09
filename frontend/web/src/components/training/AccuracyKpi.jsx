@@ -8,7 +8,14 @@ import {
 import { off, on } from "../../services/events.js";
 import { useNavigate } from "react-router-dom";
 import { LEVEL_MAP } from "./LevelKpi.jsx";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
+    APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../../theme.js";
 import {
     AppleLogo,
     Brain,
@@ -610,12 +617,17 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // -------------------------
     // NON-HEADER MODE (RESTORED OLD LOOK WITH PROGRESS BAR)
     // -------------------------
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
+    const text = theme?.text ?? APP_TEXT_COLOR;
+    const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
+
     const labelStyle = {
-        fontSize: isMobile ? "0.9rem" : "1rem",
-        color: "#000",
+        fontSize: isMobile ? "0.78rem" : "0.82rem",
+        color: muted,
         textTransform: "uppercase",
-        letterSpacing: ".06em",
-        fontWeight: 700,
+        letterSpacing: ".08em",
+        fontWeight: 800,
         fontFamily: 'var(--font-family-base)',
     };
 
@@ -624,20 +636,20 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         fontSize: showEmpty
             ? isMobile ? "1.25rem" : "1.55rem"
             : isMobile ? "2rem" : "2.45rem",
-        fontWeight: 700,
-        color: "#000",
+        fontWeight: 800,
+        color: text,
         fontFamily: 'var(--font-family-base)',
         lineHeight: showEmpty ? 1.15 : 1,
     };
 
     const cardStyle = {
         visibility: isLoading ? "hidden" : "visible",
-        background: theme?.bg ?? APP_BACKGROUND_COLOR,
-        border: "1px solid #000",
-        borderRadius: 5,
-        boxShadow: "none",
+        background: surface,
+        border: `1px solid ${border}`,
+        borderRadius: 18,
+        boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
         minHeight: isMobile ? 132 : 150,
-        padding: isMobile ? 16 : 20,
+        padding: isMobile ? 16 : 22,
         display: "flex",
         flexDirection: "column",
         gap: 14,
@@ -648,9 +660,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const sparkStyle = {
         width: "100%",
-        height: 10,
-        borderRadius: 5,
-        background: "#000",
+        height: 8,
+        borderRadius: 999,
+        background: "#edf0f7",
         border: "none",
         position: "relative",
         overflow: "hidden",
@@ -658,9 +670,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const noteStyle = {
         marginTop: 9,
-        fontSize: isMobile ? "0.92rem" : "1rem",
-        color: "#000",
-        fontWeight: 400,
+        fontSize: isMobile ? "0.86rem" : "0.92rem",
+        color: muted,
+        fontWeight: 600,
     };
 
 

@@ -123,21 +123,37 @@ import LandingCrossword from "./components/pages/LandingCrossword.jsx";
 import LandingPageMarathon from "./components/pages/MarathonLanding.jsx";
 import GoodLangSchoolsLanding2 from "./components/pages/GoodLangSchoolsLanding2.jsx";
 import {RootRedirect} from "./components/routing/RootRedirect.jsx";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR, LEARNED_STATUS_COLOR } from "./theme.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
+    APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
+    APP_DARK_COLOR,
+    APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
+    APP_SURFACE_MUTED_COLOR,
+    APP_TEXT_COLOR,
+    LEARNED_STATUS_COLOR,
+} from "./theme.js";
 
 export const legacyGlobalStyling = {
     bg: APP_BACKGROUND_COLOR,
+    surface: APP_SURFACE_COLOR,
+    surfaceMuted: APP_SURFACE_MUTED_COLOR,
+    border: APP_BORDER_COLOR,
     accent: APP_ACCENT_COLOR,
-    accentDark: APP_ACCENT_COLOR,
+    accentSoft: APP_ACCENT_SOFT_COLOR,
+    accentDark: "#6047c6",
+    dark: APP_DARK_COLOR,
     green: "#4ba36e",
     greenDark: "#2d6f48",
     blue: "#3a6ea5",
-    text: "#33302E",
-    muted: "#a47856",
-    bad: "#fe2f31",
+    text: APP_TEXT_COLOR,
+    muted: APP_MUTED_TEXT_COLOR,
+    bad: "#e5484d",
     warn: "#fe6124",
     good: LEARNED_STATUS_COLOR,
-    radius: 20,
+    radius: 18,
 };
 
 export default function App() {

@@ -86,7 +86,7 @@ export default function PdfTypeModal({
         width: 18,
         height: 18,
         borderRadius: 999,
-        border: `2px solid ${isActive ? "#000" : "rgba(0,0,0,0.45)"}`,
+        border: `1px solid ${isActive ? "#fff" : theme.border}`,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -98,15 +98,15 @@ export default function PdfTypeModal({
         width: 10,
         height: 10,
         borderRadius: 999,
-        background: isActive ? "#000" : "transparent",
+        background: isActive ? "#fff" : "transparent",
     });
 
     const cardStyle = (isActive, isHover, locked) => ({
         width: "100%",
         textAlign: "left",
         borderRadius: modalShellTokens.optionRadius,
-        border: `${modalShellTokens.optionBorderWidth}px solid #000`,
-        background: isActive ? theme.accent : "transparent",
+        border: `${modalShellTokens.optionBorderWidth}px solid ${isActive ? theme.accent : theme.border}`,
+        background: isActive ? theme.accent : theme.surface,
         padding: "14px 14px",
         display: "flex",
         gap: 12,
@@ -114,11 +114,15 @@ export default function PdfTypeModal({
         cursor: loading || locked ? "default" : "pointer",
         opacity: loading || locked ? 0.7 : 1,
         filter: "none",
-        transition: "background-color 120ms ease, border-color 120ms ease",
+        boxShadow: isActive ? "0 12px 28px rgba(123, 97, 216, 0.16)" : "none",
+        transition: "background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease",
     });
 
     const mainButtonStyle = {
         backgroundColor: theme.accent,
+        color: "#fff",
+        borderColor: "transparent",
+        boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
         width: "100%",
         flex: 1,
         boxSizing: "border-box",
@@ -131,8 +135,8 @@ export default function PdfTypeModal({
     // ✅ register block styles (embedded, no extra modal)
     const infoBoxStyle = {
         borderRadius: theme.radius * 0.9,
-        border: "2px solid rgba(0,0,0,0.10)",
-        background: "rgba(0,0,0,0.03)",
+        border: `1px solid ${theme.border}`,
+        background: theme.surface,
         padding: "14px 14px",
         textAlign: "left",
         marginTop: 6,
@@ -244,7 +248,7 @@ export default function PdfTypeModal({
                                             }}
                                             aria-hidden
                                         >
-                                            <LockKey size={22} weight="bold" color="rgba(0,0,0,0.45)" aria-hidden />
+                                            <LockKey size={22} weight="bold" color={theme.muted} aria-hidden />
                                         </div>
                                     )}
 
@@ -252,7 +256,7 @@ export default function PdfTypeModal({
                                         <div
                                             style={{
                                                 fontWeight: 700,
-                                                color: "#000",
+                                                color: isActive ? "#fff" : theme.text,
                                                 fontSize: "1.05rem",
                                                 opacity: locked ? 0.75 : 1,
                                                 lineHeight: 1.15,
@@ -264,7 +268,7 @@ export default function PdfTypeModal({
                                         <div
                                             style={{
                                                 fontWeight: 400,
-                                                color: "#000",
+                                                color: isActive ? "#fff" : theme.muted,
                                                 opacity: locked ? 0.65 : 1,
                                                 fontSize: "0.95rem",
                                                 lineHeight: 1.15,
@@ -315,7 +319,7 @@ export default function PdfTypeModal({
                                         compact
                                         fullWidth
                                         shadowColor={theme.accent}
-                                        shadowOffset={5}
+                                        shadowOffset={0}
                                         disabled={loading}
                                         style={mainButtonStyle}
                                         onClick={() => {
@@ -347,7 +351,7 @@ export default function PdfTypeModal({
                                     compact
                                     fullWidth
                                     shadowColor={theme.accent}
-                                    shadowOffset={4}
+                                    shadowOffset={0}
                                     disabled={loading}
                                     style={mainButtonStyle}
                                     onClick={async () => {

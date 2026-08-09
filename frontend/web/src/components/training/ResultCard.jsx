@@ -1,8 +1,15 @@
 import { RULE_LABELS } from "../../utils/rules.js";
 import { Button } from "../Buttons.jsx";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
-import { BookOpen } from "@phosphor-icons/react";
-import { useNavigate } from "react-router-dom";
+import {
+    APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
+    APP_BORDER_COLOR,
+    APP_DARK_COLOR,
+    APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../../theme.js";
+import { CheckCircle, Lightbulb, Sparkle, XCircle } from "@phosphor-icons/react";
 
 function removeTrailingCorrectAnswer(feedback, correctAnswer) {
     let next = String(feedback ?? "").trim();
@@ -66,70 +73,241 @@ function renderInlineMarkdown(value) {
     return parts;
 }
 
+function normalizeAnswer(value) {
+    return String(value ?? "")
+        .trim()
+        .toLowerCase()
+        .replace(/[’]/g, "'")
+        .replace(/[.!?]+$/u, "")
+        .replace(/\s+/g, " ");
+}
+
 export default function ResultCard({
-                                       theme,
-                                       hint,
-                                       correctAnswer,
-                                       weakRules = [],
-                                       quickVerdict = null,
-                                       isDetailedLoading = false,
-                                   }) {
-    const navigate = useNavigate();
+    theme,
+    hint,
+    userAnswer = "",
+    correctAnswer,
+    naturalAnswer = "",
+    rules = [],
+    weakRules = [],
+    quickVerdict = null,
+    isDetailedLoading = false,
+    onContinue,
+}) {
+    const SURFACE = theme?.surface ?? APP_SURFACE_COLOR;
+    const BORDER = theme?.border ?? APP_BORDER_COLOR;
+    const TEXT = theme?.text ?? APP_TEXT_COLOR;
+    const MUTED = theme?.muted ?? APP_MUTED_TEXT_COLOR;
+    const ACCENT = theme?.accent ?? APP_ACCENT_COLOR;
+    const ACCENT_SOFT = theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR;
+    const DARK = theme?.dark ?? APP_DARK_COLOR;
+    const SUCCESS = "#2f9f5f";
+    const SUCCESS_SOFT = "#effaf3";
+    const DANGER = "#e5484d";
+    const DANGER_SOFT = "#fff4f4";
+    const INSIGHT_SOFT = "#f7f4ff";
 
-    // ----- same “TaskCard” styling tokens -----
-    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
-    const CARD_BORDER_IDLE = theme?.accent ?? APP_ACCENT_COLOR;
-    const CARD_SHADOW_IDLE = "none";
-    const SOFT_INNER = theme?.bg ?? APP_BACKGROUND_COLOR;
-    const SOFT_RED = "rgba(255, 230, 228, 0.92)";
-    const SOFT_GREEN = "rgba(232, 247, 238, 0.92)";
-    const SOFT_STROKE = "rgba(0,0,0,0.12)";
-    const SOFT_STROKE_ACCENT = theme?.accent ?? APP_ACCENT_COLOR;
-    const SOFT_STROKE_ACCENT_2 = theme?.accent ?? APP_ACCENT_COLOR;
+    const cleanHint = removeTrailingCorrectAnswer(
+        String(hint ?? "").replaceAll("❌", "").replaceAll("✔", "").trim(),
+        correctAnswer
+    );
+    const isCorrect = quickVerdict === true;
+    const isIncorrect = quickVerdict === false || Boolean(correctAnswer);
+    const hasResult = isCorrect || isIncorrect;
+    const hasNeutralMessage = !hasResult && Boolean(cleanHint);
+    const shouldRender = hasResult || hasNeutralMessage;
 
+    if (!shouldRender) {
+        return null;
+    }
+
+    const primaryRule = rules[0] || weakRules[0] || "";
+    const primaryRuleLabel = RULE_LABELS[primaryRule] || "this rule";
+    const answerToShow = String(correctAnswer || userAnswer || "").trim();
+    const naturalAnswerText = String(naturalAnswer ?? "").trim();
+    const hasNaturalAnswer = isCorrect
+        && naturalAnswerText
+        && normalizeAnswer(naturalAnswerText) !== normalizeAnswer(answerToShow);
+    const explanationText = cleanHint || (
+        isCorrect
+            ? `Great job. You used ${primaryRuleLabel} correctly.`
+            : "We are checking the details."
+    );
     const styles = {
-        card: {
-            background: CARD_BG,
-            border: `0px solid ${CARD_BORDER_IDLE}`,
-            borderRadius: 5,
-            boxShadow: CARD_SHADOW_IDLE,
-            padding: 0,
+        shell: {
+            width: "100%",
+            maxWidth: 720,
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "stretch",
+            gap: 18,
+            animation: "glFeedbackEnter 420ms cubic-bezier(0.22, 1, 0.36, 1) both",
+        },
+
+        headingWrap: {
+            textAlign: "center",
+            display: "grid",
+            gap: 8,
         },
 
         title: {
-            fontFamily: 'var(--font-family-base)',
-            fontSize: "1.2rem",
-            color: theme.text,
-            fontWeight: 700,
-            marginBottom: 10,
-            marginTop: 0,
-            letterSpacing: ".02em",
+            margin: 0,
+            color: TEXT,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "clamp(2rem, 4.2vw, 2.8rem)",
+            lineHeight: 1.05,
+            fontWeight: 800,
+            letterSpacing: "-0.03em",
         },
 
-        // animated wrappers (same animation, different keys)
-        floatIn: {
-            animation: "glFloatIn 420ms ease-out both",
-            willChange: "transform, opacity",
-        },
-
-        feedback: {
-            fontFamily: 'var(--font-family-base)',
-            background: SOFT_INNER,
-            border: `1px solid #6F625B`,
-            padding: "12px 14px",
-            borderRadius: 5,
-            color: theme.text,
-            minHeight: 44,
-            fontWeight: 500,
-            whiteSpace: "pre-wrap",
+        subtitle: {
+            margin: 0,
+            color: MUTED,
+            fontFamily: "var(--font-family-base)",
             fontSize: "1rem",
+            lineHeight: 1.5,
+            fontWeight: 500,
         },
 
-        feedbackRow: {
+        panel: ({ tone = "neutral", delay = 0 } = {}) => {
+            const toneMap = {
+                success: {
+                    background: SUCCESS_SOFT,
+                    border: "rgba(47, 159, 95, 0.22)",
+                    color: "#175c35",
+                },
+                danger: {
+                    background: DANGER_SOFT,
+                    border: "rgba(229, 72, 77, 0.22)",
+                    color: TEXT,
+                },
+                insight: {
+                    background: INSIGHT_SOFT,
+                    border: BORDER,
+                    color: TEXT,
+                },
+                neutral: {
+                    background: SURFACE,
+                    border: BORDER,
+                    color: TEXT,
+                },
+            };
+            const current = toneMap[tone] ?? toneMap.neutral;
+
+            return {
+                width: "100%",
+                border: `1px solid ${current.border}`,
+                borderRadius: 20,
+                background: current.background,
+                color: current.color,
+                padding: "20px 24px",
+                boxSizing: "border-box",
+                boxShadow: "0 18px 42px rgba(31, 36, 54, 0.06)",
+                animation: "glFeedbackPanel 480ms cubic-bezier(0.22, 1, 0.36, 1) both",
+                animationDelay: `${delay}ms`,
+            };
+        },
+
+        answerRow: {
+            display: "flex",
+            alignItems: "center",
+            gap: 18,
+        },
+
+        iconBubble: ({ tone = "success" } = {}) => ({
+            width: 38,
+            height: 38,
+            borderRadius: 999,
+            flex: "0 0 auto",
             display: "inline-flex",
             alignItems: "center",
-            gap: 12,
-            flexWrap: "wrap",
+            justifyContent: "center",
+            background: tone === "danger" ? "rgba(229, 72, 77, 0.12)" : "rgba(47, 159, 95, 0.14)",
+            color: tone === "danger" ? DANGER : SUCCESS,
+            animation: "glFeedbackPop 360ms cubic-bezier(0.22, 1, 0.36, 1) both",
+        }),
+
+        label: ({ tone = "neutral" } = {}) => ({
+            margin: "0 0 8px",
+            color: tone === "danger" ? DANGER : tone === "success" ? SUCCESS : TEXT,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "0.88rem",
+            lineHeight: 1.2,
+            fontWeight: 800,
+        }),
+
+        answerText: {
+            margin: 0,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "1.18rem",
+            lineHeight: 1.45,
+            fontWeight: 650,
+            color: TEXT,
+            whiteSpace: "pre-wrap",
+        },
+
+        explanationRow: {
+            display: "grid",
+            gridTemplateColumns: "38px 1fr",
+            gap: 16,
+            alignItems: "start",
+        },
+
+        explanationIcon: {
+            width: 38,
+            height: 38,
+            borderRadius: 999,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: ACCENT_SOFT,
+            color: ACCENT,
+        },
+
+        explanationTitle: {
+            margin: "0 0 8px",
+            color: TEXT,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "1rem",
+            lineHeight: 1.3,
+            fontWeight: 800,
+        },
+
+        explanationText: {
+            margin: 0,
+            color: MUTED,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "1rem",
+            lineHeight: 1.6,
+            fontWeight: 500,
+            whiteSpace: "pre-wrap",
+        },
+
+        naturalRow: {
+            display: "grid",
+            gridTemplateColumns: "38px 1fr",
+            gap: 16,
+            alignItems: "center",
+        },
+
+        naturalIntro: {
+            margin: "0 0 10px",
+            color: MUTED,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "1rem",
+            lineHeight: 1.5,
+            fontWeight: 500,
+        },
+
+        naturalText: {
+            margin: 0,
+            color: TEXT,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "1.2rem",
+            lineHeight: 1.45,
+            fontWeight: 700,
+            whiteSpace: "pre-wrap",
         },
 
         loaderWrap: {
@@ -137,176 +315,219 @@ export default function ResultCard({
             alignItems: "center",
             gap: 8,
             minHeight: 22,
+            marginLeft: 10,
         },
 
         bars: {
             display: "inline-flex",
             alignItems: "flex-end",
-            gap: 8,
-            height: 22,
+            gap: 6,
+            height: 18,
         },
 
         bar: {
-            width: 7,
+            width: 5,
             borderRadius: 999,
-            background: theme.text,
-            boxShadow: "0 6px 14px rgba(0,0,0,0.10)",
+            background: DARK,
         },
 
-        correctWrap: {
-            background: SOFT_INNER,
-            border: `1px solid #6F625B`,
-            borderRadius: 5,
-            padding: "12px 14px",
-        },
-
-        correctTitle: {
-            fontFamily: 'var(--font-family-base)',
-            fontSize: "1.2rem",
-            fontWeight: 700,
-            color: theme.text,
-            marginBottom: 10,
-            letterSpacing: ".02em",
-        },
-
-        correctText: {
-            fontFamily: 'var(--font-family-base)',
-            fontSize: "1rem",
-            fontWeight: 500,
-            color: theme.text,
-            whiteSpace: "pre-wrap",
-        },
-
-        rulesOuterWrap: {
-            marginTop: 12,
-            paddingTop: 10,
+        actionRow: {
             display: "flex",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: 8,
-            borderTop: "1px solid #000",
-        },
-
-        rulesLabel: {
-            fontFamily: 'var(--font-family-base)',
-            fontSize: "0.88rem",
-            fontWeight: 400,
-            color: "#000",
-        },
-
-        rulesWrap: {
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 8,
-        },
-
-        ruleButton: {
-            appearance: "none",
-            cursor: "pointer",
-            borderRadius: 5,
-            border: "1px solid #000",
-            background: "transparent",
-            padding: "4px 10px",
-            fontSize: "0.95rem",
-            fontWeight: 400,
-            fontFamily: 'var(--font-family-base)',
-            letterSpacing: 0,
-            color: theme.text,
-            boxShadow: "none",
-            gap: 6,
-            transition: "background-color 140ms ease, color 140ms ease",
-        },
-
-        ruleIcon: {
-            display: "inline-flex",
-            alignItems: "center",
             justifyContent: "center",
+            marginTop: 6,
+        },
+
+        actionButton: {
+            minWidth: 220,
+            minHeight: 52,
+            borderRadius: 14,
+        },
+
+        notice: {
+            width: "100%",
+            maxWidth: 620,
+            margin: "0 auto",
+            border: `1px solid ${BORDER}`,
+            borderRadius: 16,
+            background: SURFACE,
+            color: MUTED,
+            padding: "14px 18px",
+            boxSizing: "border-box",
+            fontFamily: "var(--font-family-base)",
+            fontSize: "0.98rem",
+            fontWeight: 500,
+            textAlign: "center",
+            animation: "glFeedbackEnter 260ms ease-out both",
         },
     };
-
-    const openRule = (rule) => {
-        navigate(`/rule/${rule}`);
-    };
-
-    // ✅ keying forces remount => animation replays on content change
-    const hintKey = `hint:${hint ?? ""}`;
-    const correctKey = `correct:${correctAnswer ?? ""}`;
-    const cleanHint = removeTrailingCorrectAnswer(
-        String(hint ?? "").replaceAll('❌','').replaceAll('✔','').trim(),
-        correctAnswer
-    );
-    const feedbackText = isDetailedLoading
-        ? quickVerdict === false
-            ? "Not quite, summarizing feedback"
-            : "Checking..."
-        : cleanHint;
-    const showLoader = isDetailedLoading && quickVerdict !== true;
-    const recommendedRules = weakRules.slice(0, 3);
 
     const BarsLoader = () => (
-        <div style={styles.loaderWrap} aria-label="Loading detailed feedback" role="status">
-            <div style={styles.bars}>
-                <span style={{ ...styles.bar, height: 10, animation: "glWave 700ms ease-in-out infinite" }} />
-                <span style={{ ...styles.bar, height: 16, animation: "glWave 700ms ease-in-out infinite 120ms" }} />
-                <span style={{ ...styles.bar, height: 10, animation: "glWave 700ms ease-in-out infinite 240ms" }} />
-            </div>
-        </div>
+        <span style={styles.loaderWrap} aria-label="Loading detailed feedback" role="status">
+            <span style={styles.bars}>
+                <span style={{ ...styles.bar, height: 8, animation: "glWave 700ms ease-in-out infinite" }} />
+                <span style={{ ...styles.bar, height: 14, animation: "glWave 700ms ease-in-out infinite 120ms" }} />
+                <span style={{ ...styles.bar, height: 8, animation: "glWave 700ms ease-in-out infinite 240ms" }} />
+            </span>
+        </span>
     );
 
+    if (hasNeutralMessage) {
+        return (
+            <div style={styles.notice}>
+                {renderInlineMarkdown(cleanHint)}
+                <SharedAnimations />
+            </div>
+        );
+    }
+
     return (
-        <div style={styles.card}>
-            <h2 style={styles.title}>Result</h2>
-
-            <div key={hintKey} style={styles.floatIn}>
-                <div style={styles.feedback}>
-                    <span style={styles.feedbackRow}>
-                        <span>{renderInlineMarkdown(feedbackText)}</span>
-                        {showLoader ? <BarsLoader /> : null}
-                    </span>
-
-                    {recommendedRules.length > 0 && (
-                        <div style={styles.rulesOuterWrap}>
-                            <span style={styles.rulesLabel}>Rule reference</span>
-                            <div style={styles.rulesWrap}>
-                                {recommendedRules.map((rule) => (
-                                    <Button
-                                        key={rule}
-                                        type="button"
-                                        style={styles.ruleButton}
-                                        onClick={() => openRule(rule)}
-                                    >
-                                        <span style={styles.ruleIcon}>
-                                            <BookOpen size={16} weight="regular" />
-                                        </span>
-                                        {RULE_LABELS[rule] || rule}
-                                    </Button>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-                </div>
+        <div style={styles.shell} aria-live="polite">
+            <div style={styles.headingWrap}>
+                <h2 style={styles.title}>{isCorrect ? "Correct!" : "Almost there"}</h2>
+                {isCorrect && hasNaturalAnswer ? (
+                    <p style={styles.subtitle}>Nice work! You expressed the idea well.</p>
+                ) : !isCorrect ? (
+                    <p style={styles.subtitle}>
+                        You're on the right track. Let's fix a small detail.
+                    </p>
+                ) : null}
             </div>
 
-            {correctAnswer ? (
-                <div key={correctKey} style={{ ...styles.floatIn, marginTop: 14 }}>
-                    <div style={styles.correctTitle}>Correct answer</div>
-                    <div style={styles.correctWrap}>
-                        <div style={styles.correctText}>{correctAnswer}</div>
+            {isIncorrect && userAnswer ? (
+                <div style={styles.panel({ tone: "danger", delay: 40 })}>
+                    <div style={styles.answerRow}>
+                        <div style={{ flex: "1 1 auto", minWidth: 0 }}>
+                            <p style={styles.label({ tone: "danger" })}>Your answer</p>
+                            <p style={styles.answerText}>{userAnswer}</p>
+                        </div>
+                        <span style={styles.iconBubble({ tone: "danger" })}>
+                            <XCircle size={28} weight="fill" />
+                        </span>
                     </div>
                 </div>
             ) : null}
 
-            <style>{`
-            @keyframes glFloatIn {
-                0%   { opacity: 0; transform: translateY(10px); }
-                100% { opacity: 1; transform: translateY(0px); }
+            {answerToShow ? (
+                <div style={styles.panel({ tone: "success", delay: isIncorrect ? 90 : 40 })}>
+                    <div style={styles.answerRow}>
+                        <div style={{ flex: "1 1 auto", minWidth: 0 }}>
+                            {isIncorrect ? (
+                                <p style={styles.label({ tone: "success" })}>Correct answer</p>
+                            ) : null}
+                            <p style={styles.answerText}>{answerToShow}</p>
+                        </div>
+                        <span style={styles.iconBubble({ tone: "success" })}>
+                            <CheckCircle size={28} weight="fill" />
+                        </span>
+                    </div>
+                </div>
+            ) : null}
+
+            {hasNaturalAnswer ? (
+                <div style={styles.panel({ tone: "insight", delay: 90 })}>
+                    <div style={styles.naturalRow}>
+                        <span style={styles.explanationIcon}>
+                            <Sparkle size={22} weight="fill" />
+                        </span>
+                        <div>
+                            <p style={styles.naturalIntro}>
+                                Your answer is correct. A native speaker might say:
+                            </p>
+                            <p style={styles.naturalText}>{naturalAnswerText}</p>
+                        </div>
+                    </div>
+                </div>
+            ) : null}
+
+            {isIncorrect ? (
+                <div style={styles.panel({ tone: "insight", delay: 140 })}>
+                    <div style={styles.explanationRow}>
+                        <span style={styles.explanationIcon}>
+                            <Lightbulb size={22} weight="regular" />
+                        </span>
+                        <div>
+                            <p style={styles.explanationTitle}>What to adjust</p>
+                            <p style={styles.explanationText}>
+                                {renderInlineMarkdown(explanationText)}
+                                {isDetailedLoading ? <BarsLoader /> : null}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            ) : null}
+
+            <div style={styles.actionRow}>
+                <Button
+                    variant="primary"
+                    theme={theme}
+                    disabled={isDetailedLoading && isIncorrect}
+                    onClick={onContinue}
+                    style={styles.actionButton}
+                >
+                    Continue
+                </Button>
+            </div>
+
+            <SharedAnimations />
+        </div>
+    );
+}
+
+function SharedAnimations() {
+    return (
+        <style>{`
+            @keyframes glFeedbackEnter {
+                0% {
+                    opacity: 0;
+                    transform: translateY(18px) scale(0.985);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
             }
+
+            @keyframes glFeedbackPanel {
+                0% {
+                    opacity: 0;
+                    transform: translateY(12px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes glFeedbackPop {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.72);
+                }
+
+                70% {
+                    opacity: 1;
+                    transform: scale(1.08);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
             @keyframes glWave {
-                0%, 100% { transform: translateY(4px) scaleY(1); opacity: 0.65; }
-                25% { transform: translateY(0px) scaleY(1.5); opacity: 1; }
-                70% { transform: translateY(-8px) scaleY(1); opacity: 1; }
+                0%, 100% {
+                    transform: translateY(3px) scaleY(1);
+                    opacity: 0.55;
+                }
+
+                35% {
+                    transform: translateY(-4px) scaleY(1.45);
+                    opacity: 1;
+                }
             }
         `}</style>
-        </div>
     );
 }

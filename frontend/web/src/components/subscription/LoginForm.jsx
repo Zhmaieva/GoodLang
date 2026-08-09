@@ -71,7 +71,10 @@ export default function LoginForm({
 
     const mainButtonStyle = (disabled) => ({
         backgroundColor: disabled ? "#999" : theme.accent,
+        color: "#fff",
         opacity: disabled ? 0.7 : 1,
+        borderColor: "transparent",
+        boxShadow: disabled ? "none" : "0 12px 28px rgba(123, 97, 216, 0.16)",
     });
 
     // -----------------------------
@@ -80,7 +83,6 @@ export default function LoginForm({
     // -----------------------------
     const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
     const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
-    const INPUT_SHADOW = "0 8px 20px rgba(0,0,0,0.08)";
     const INPUT_RADIUS = 14;
     const ERROR_COLOR = "#fe2f31";
 
@@ -99,20 +101,21 @@ export default function LoginForm({
         caretColor: "grey",
         marginBottom: 16,
         outline: "none",
-        boxShadow: INPUT_SHADOW,
+        boxShadow: "none",
     };
 
     const emailInputStyle = {
         ...baseInputStyle,
-        borderRadius: 5,
-        border: "1px solid #000",
-        padding: "10px 12px",
+        borderRadius: 14,
+        border: `1px solid ${theme.border}`,
+        background: theme.surface,
+        padding: "14px 16px",
         fontSize: 16,
         fontWeight: 400,
-        color: "#000",
+        color: theme.text,
         textAlign: "left",
-        minHeight: 42,
-        marginBottom: 10,
+        minHeight: 52,
+        marginBottom: 12,
         boxShadow: "none",
     };
 
@@ -125,7 +128,7 @@ export default function LoginForm({
         padding: 0,
         fontSize: 16,
         fontWeight: 400,
-        color: "#000",
+        color: theme.text,
         border: "none",
         marginBottom: 0,
         backgroundColor: "transparent",
@@ -418,7 +421,6 @@ export default function LoginForm({
                     title={modalTitle}
                     subtitle={modalSubtitle}
                     titleStyle={{ fontSize: "1.75rem" }}
-                    panelStyle={{ padding: 40 }}
                     onClose={() => {
                         unlockScroll();
                         if (!closeDisabled) onClose();
@@ -459,7 +461,7 @@ export default function LoginForm({
                                             compact
                                             fullWidth
                                             shadowColor={theme.accent}
-                                            shadowOffset={5}
+                                            shadowOffset={0}
                                             style={mainButtonStyle(loading)}
                                             onClick={handleEmailSubmit}
                                             disabled={loading}
@@ -478,18 +480,18 @@ export default function LoginForm({
                                                 display: "flex",
                                                 resize: "none",
                                                 justifyContent: "space-between",
-                                                borderRadius: 5,
-                                                border: "1px solid #000",
-                                                background: SOFT_INNER,
+                                                borderRadius: 14,
+                                                border: `1px solid ${theme.border}`,
+                                                background: theme.surface,
                                                 fontSize: 16,
                                                 fontWeight: 400,
-                                                color: "#000",
+                                                color: theme.text,
                                                 textAlign: "center",
                                                 caretColor: "grey",
                                                 marginBottom: 10,
                                                 boxShadow: "none",
                                                 padding: "0 10px",
-                                                minHeight: 42,
+                                                minHeight: 52,
                                                 opacity: loading ? 0.7 : 1,
                                             }}
                                         >
@@ -538,7 +540,7 @@ export default function LoginForm({
                                             compact
                                             fullWidth
                                             shadowColor={theme.accent}
-                                            shadowOffset={5}
+                                            shadowOffset={0}
                                             style={mainButtonStyle(loading)}
                                             onClick={handleVerify}
                                             disabled={loading}
@@ -561,11 +563,11 @@ export default function LoginForm({
                                             opacity: 0.5;
                                         }
 
-                                        .login-email-input,
-                                        .login-email-input:focus {
+                                        .login-email-input {
                                             border-width: 1px !important;
-                                            border-color: #000 !important;
+                                            border-color: ${theme.border} !important;
                                             outline: none;
+                                            box-shadow: none !important;
                                         }
 
                                         .login-email-input:focus,
@@ -573,6 +575,7 @@ export default function LoginForm({
                                             border-width: 1px !important;
                                             border-color: ${theme.accent} !important;
                                             outline: none;
+                                            box-shadow: none !important;
                                         }
 
                                         .highlight-input-wrapper,
@@ -601,13 +604,13 @@ export default function LoginForm({
                                     inset: 0,
                                     width: "100vw",
                                     height: "100vh",
-                                    background: "rgba(0,0,0,0.35)",
+                                    background: "rgba(248, 249, 252, 0.66)",
                                     display: "flex",
                                     alignItems: isMobile ? "top" : "center",
                                     justifyContent: "center",
                                     zIndex: 9999,
-                                    backdropFilter: "blur(6px)",
-                                    WebkitBackdropFilter: "blur(6px)",
+                                    backdropFilter: "blur(8px)",
+                                    WebkitBackdropFilter: "blur(8px)",
                                 }}
                             >
                                 <div
@@ -617,10 +620,10 @@ export default function LoginForm({
                                         width: "92vw",
                                         maxWidth: 720,
                                         margin: "0 auto",
-                                        background: theme.bg,
-                                        borderRadius: theme.radius * 1.2,
-                                        border: `4px solid ${theme.accent}`,
-                                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                                        background: theme.surface,
+                                        borderRadius: 26,
+                                        border: `1px solid ${theme.border}`,
+                                        boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
                                         maxHeight: "75%",
                                         overflow: "auto",
                                     }}

@@ -42,6 +42,9 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
 
     const buttonStyle = {
         backgroundColor: theme.accent,
+        color: "#fff",
+        borderColor: "transparent",
+        boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
     };
 
     return (
@@ -55,6 +58,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                 onClose={onClose}
                 hidden={loginModalOpen}
                 maxWidth={480}
+                panelStyle={{ borderColor: theme.border }}
             >
                 {account?.email && (
                     <p
@@ -78,10 +82,10 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 listStyle: "none",
                                 padding: 0,
                                 margin: 0,
-                                lineHeight: "1.6",
+                                lineHeight: "1.7",
                                 color: theme.text,
                                 fontSize: "16px",
-                                fontWeight: 500,
+                                fontWeight: 400,
                             }}
                         >
                             {[
@@ -119,7 +123,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             compact
                             fullWidth
                             shadowColor={theme.accent}
-                            shadowOffset={5}
+                            shadowOffset={0}
                             style={buttonStyle}
                             disabled={manageLoading}
                             onClick={onManage}
@@ -133,7 +137,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                         compact
                         fullWidth
                         shadowColor={theme.accent}
-                        shadowOffset={5}
+                        shadowOffset={0}
                         onClick={() => setLoginModalOpen(true)}
                         style={buttonStyle}
                     >

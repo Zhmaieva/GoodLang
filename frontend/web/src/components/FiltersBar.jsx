@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { Button } from "./Buttons.jsx";
-import { APP_ACCENT_COLOR } from "../theme.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
+    APP_BORDER_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../theme.js";
 
 const LEVELS = [
     { id: "all", label: "All" },
@@ -8,9 +14,6 @@ const LEVELS = [
     { id: "intermediate", label: "Intermediate" },
     { id: "advanced", label: "Advanced" },
 ];
-
-const SELECTED_BUTTON_COLOR = "#000";
-const BUTTON_OFFSET = 4;
 
 export default function FiltersBar({
                                        filterLevel,
@@ -31,12 +34,17 @@ export default function FiltersBar({
         return () => window.removeEventListener("resize", onResize);
     }, []);
 
-    // input should match your current “highlight-input” behavior; we keep it minimal
+    const accent = theme?.accent ?? APP_ACCENT_COLOR;
+    const accentSoft = theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const text = theme?.text ?? APP_TEXT_COLOR;
+
     const inputStyle = {
-        fontSize: "1rem",
+        fontSize: "0.94rem",
         fontWeight: 600,
-        fontFamily: 'var(--font-family-base)',
-        color: "#000",
+        fontFamily: "var(--font-family-base)",
+        color: text,
     };
 
     return (
@@ -62,16 +70,13 @@ export default function FiltersBar({
                                 variant="offset"
                                 compact
                                 isMobile={isMobile}
-                                shadowColor={selected ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
-                                shadowOffset={selected ? 0 : BUTTON_OFFSET}
+                                shadowOffset={0}
                                 aria-pressed={selected}
                                 onClick={() => onLevelChange(lvl.id)}
                                 style={{
-                                    backgroundColor: selected ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR,
-                                    color: selected ? "#fff" : "#000",
-                                    borderColor: SELECTED_BUTTON_COLOR,
-
-                                    // keep your truncation behavior
+                                    backgroundColor: selected ? accentSoft : surface,
+                                    color: selected ? accent : text,
+                                    borderColor: selected ? accent : border,
                                     flexShrink: 1,
                                     overflow: "hidden",
                                     textOverflow: "ellipsis",
@@ -102,13 +107,12 @@ export default function FiltersBar({
                     variant="offset"
                     compact
                     isMobile={isMobile}
-                    shadowColor={showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR}
-                    shadowOffset={showWeakOnly ? 0 : BUTTON_OFFSET}
+                    shadowOffset={0}
                     onClick={onToggleWeak}
                     style={{
-                        backgroundColor: showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR,
-                        color: showWeakOnly ? "#fff" : "#000",
-                        borderColor: SELECTED_BUTTON_COLOR,
+                        backgroundColor: showWeakOnly ? accentSoft : surface,
+                        color: showWeakOnly ? accent : text,
+                        borderColor: showWeakOnly ? accent : border,
                         outline: "none",
                     }}
                 >

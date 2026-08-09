@@ -36,10 +36,13 @@ export default function InfoModal({
                 compact
                 fullWidth
                 shadowColor={theme.accent}
-                shadowOffset={5}
+                shadowOffset={0}
                 onClick={onClose}
                 style={{
                     backgroundColor: theme.accent,
+                    color: "#fff",
+                    borderColor: "transparent",
+                    boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
                 }}
             >
                 {buttonText}

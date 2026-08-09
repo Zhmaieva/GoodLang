@@ -4,7 +4,14 @@ import {dowloadPdf} from "../../services/api.js";
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 import {featureToggleService} from "../../services/featureToggleService.js";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
+    APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../../theme.js";
 import { CaretDown, CaretUp, Printer, SpinnerGap } from "@phosphor-icons/react";
 
 export default function RulesTable({
@@ -180,6 +187,10 @@ export default function RulesTable({
     }, [rows, sortKey, sortDir, statusOf]);
 
     const barColor = theme?.accent ?? APP_ACCENT_COLOR;
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
+    const text = theme?.text ?? APP_TEXT_COLOR;
+    const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
 
     const ArrowPair = ({ columnKey }) => {
         const active = sortKey === columnKey;
@@ -200,9 +211,9 @@ export default function RulesTable({
         gap: 6,
         cursor: "pointer",
         userSelect: "none",
-        fontWeight: 700,
+        fontWeight: 800,
         fontFamily: 'var(--font-family-base)',
-        color: "#000",
+        color: muted,
         pointerEvents: "auto",
     };
 
@@ -223,7 +234,7 @@ export default function RulesTable({
     const row = (isHover) => ({
         cursor: "pointer",
         userSelect: "none",
-        background: isHover ? "#e5e5e5" : theme?.bg ?? APP_BACKGROUND_COLOR,
+        background: isHover ? "#faf9ff" : surface,
         transition: "background-color 120ms ease",
     });
 
@@ -323,18 +334,16 @@ export default function RulesTable({
     return (
         <div className="table" style={{
             height: "100%",
-            background: theme?.bg ?? APP_BACKGROUND_COLOR,
-            border: "1px solid #000",
-            borderRadius: 5,
-            boxShadow: "none",
+            background: surface,
+            border: `1px solid ${border}`,
+            borderRadius: 18,
+            boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
             overflow: "hidden",                           // clips header corners cleanly
             fontFamily: 'var(--font-family-base)',
-            color: "#000",
+            color: text,
         }} aria-live="polite">
             {!isMobile && (
                 <div className="thead">
-                    <div style={{ opacity: 0.8 }}>#</div>
-
                     <div style={headerBtnStyle} onClick={() => toggleSort("level")} role="button" tabIndex={0}>
                         Rule (Level) <ArrowPair columnKey="level" />
                     </div>
@@ -405,16 +414,16 @@ export default function RulesTable({
                                                     textAlign: "left",
                                                     marginBottom: 0,
                                                     marginTop: 0,
-                                                    color: "#000",
-                                                    fontSize: "1.5rem",
-                                                    fontWeight: 700,
+                                                    color: text,
+                                                    fontSize: "1.1rem",
+                                                    fontWeight: 800,
                                                     fontFamily: 'var(--font-family-base)',
                                                 }}
                                             >
                                                 {r.ruleName}
                                             </h2>
 
-                                            <div style={{ fontSize: "1rem", fontWeight: 600, opacity: .7, marginBottom: 8, fontFamily: 'var(--font-family-base)', color: "#000" }}>
+                                            <div style={{ fontSize: "0.92rem", fontWeight: 600, opacity: 1, marginBottom: 8, fontFamily: 'var(--font-family-base)', color: muted }}>
                                                 Level: {LEVEL_MAP[r.level]?.label}
                                             </div>
 
@@ -461,12 +470,6 @@ export default function RulesTable({
                                 key={r.ruleName}
                                 onClick={() => onRowClick(r)}
                             >
-                                <div style={{ display: "flex", justifyContent: "space-around" }}>
-                                    <div>{idx + 1}</div>
-
-                                    {/* Print button is temporarily hidden. */}
-                                </div>
-
                                 <div>
                                     <div className="rule-name">{r.ruleName}</div>
                                     <div className="sub">Level: {LEVEL_MAP[r.level]?.label}</div>

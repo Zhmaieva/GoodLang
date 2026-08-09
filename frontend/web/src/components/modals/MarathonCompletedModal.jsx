@@ -37,7 +37,7 @@ export default function MarathonCompletedModal({
                     marginBottom: 20,
                     textAlign: "left",
                     color: theme.text,
-                    fontWeight: 700,
+                    fontWeight: 400,
                     lineHeight: 1.35,
                     fontSize: 14.5,
                 }}
@@ -53,9 +53,14 @@ export default function MarathonCompletedModal({
                 compact
                 fullWidth
                 shadowColor={theme.accent}
-                shadowOffset={5}
+                shadowOffset={0}
                 onClick={goToAnalytics}
-                style={{ backgroundColor: theme.accent }}
+                style={{
+                    backgroundColor: theme.accent,
+                    color: "#fff",
+                    borderColor: "transparent",
+                    boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                }}
             >
                 Мій прогрес
             </Button>

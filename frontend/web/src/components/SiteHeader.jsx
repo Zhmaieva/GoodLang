@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./Buttons.jsx";
 import LoginModal from "./subscription/LoginModal.jsx";
 import LocaleButton from "./LocaleButton.jsx";
@@ -11,6 +11,14 @@ import { callAccountInfoApi } from "../services/api.js";
 import { marathonService } from "../services/marathonService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../services/trainingDirector.js";
 import { off, on } from "../services/events.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
+    APP_BORDER_COLOR,
+    APP_DARK_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../theme.js";
 
 function readCachedAccountInfo() {
     try {
@@ -28,6 +36,7 @@ export default function SiteHeader({
     showPracticeButton = false,
 }) {
     const navigate = useNavigate();
+    const location = useLocation();
     const [internalLevel, setInternalLevel] = useState(getSavedTrainingLevel() || "managed");
     const [isMobile, setIsMobile] = useState(
         typeof window !== "undefined" ? window.innerWidth < 915 : false
@@ -90,7 +99,15 @@ export default function SiteHeader({
         navigate("/analytics");
     };
 
+    const handleBackToRulesClick = async () => {
+        await handleAnalyticsClick();
+    };
+
     const handleLogoClick = () => {
+        navigate("/trainer");
+    };
+
+    const handlePracticeClick = () => {
         navigate("/trainer");
     };
 
@@ -109,27 +126,38 @@ export default function SiteHeader({
     };
 
     const level = controlledLevel ?? internalLevel;
+    const pathname = location.pathname;
+    const isRulePage = pathname.startsWith("/rule/");
     const isSignedIn = Boolean(account?.email);
+    const accent = theme?.accent ?? APP_ACCENT_COLOR;
+    const accentSoft = theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const text = theme?.text ?? APP_TEXT_COLOR;
+    const dark = theme?.dark ?? APP_DARK_COLOR;
 
     const headerStyle = {
         width: "100%",
-        minHeight: 100,
-        background: "#95b5fe",
+        minHeight: 76,
+        background: surface,
+        borderBottom: `1px solid ${border}`,
+        boxShadow: "0 8px 28px rgba(31, 36, 54, 0.04)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "0 24px",
+        padding: isMobile ? "0 14px" : "0 28px",
         boxSizing: "border-box",
         flexShrink: 0,
     };
 
     const innerStyle = {
         width: "100%",
+        maxWidth: 1180,
         position: "relative",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        gap: 24,
+        gap: isMobile ? 14 : 24,
         flexWrap: "nowrap",
         whiteSpace: "nowrap",
         overflowX: "auto",
@@ -137,14 +165,14 @@ export default function SiteHeader({
         paddingBottom: 0,
         paddingRight: 0,
         boxSizing: "border-box",
-        fontFamily: '"Antonio", sans-serif',
-        fontWeight: 200,
+        fontFamily: "var(--font-family-base)",
+        fontWeight: 700,
     };
 
     const headerGroupStyle = {
         display: "flex",
         alignItems: "center",
-        gap: 32,
+        gap: isMobile ? 10 : 14,
         flexWrap: "nowrap",
         flex: "0 0 auto",
         minWidth: "max-content",
@@ -156,14 +184,14 @@ export default function SiteHeader({
         left: isMobile ? "auto" : "50%",
         transform: isMobile ? "none" : "translateX(-50%)",
         justifyContent: "center",
-        gap: isMobile ? 24 : 56,
+        gap: isMobile ? 18 : 36,
     };
 
     const rightGroupStyle = {
         ...headerGroupStyle,
         flex: "0 0 auto",
         marginLeft: "auto",
-        gap: 24,
+        gap: isMobile ? 8 : 12,
     };
 
     const logoButtonStyle = {
@@ -172,20 +200,20 @@ export default function SiteHeader({
         background: "transparent",
         display: "inline-flex",
         alignItems: "center",
-        gap: 10,
+        gap: 8,
         padding: 0,
         margin: 0,
-        color: "#000",
+        color: text,
         cursor: "pointer",
         flex: "0 0 auto",
     };
 
     const logoMarkStyle = {
-        width: isMobile ? 62 : 78,
-        height: isMobile ? 34 : 42,
-        border: "2px solid #000",
-        borderRadius: 0,
-        background: theme?.accent ?? "#95b5fe",
+        width: isMobile ? 38 : 44,
+        height: isMobile ? 38 : 44,
+        border: `1px solid ${border}`,
+        borderRadius: 14,
+        background: accentSoft,
         position: "relative",
         display: "inline-flex",
         alignItems: "center",
@@ -193,6 +221,7 @@ export default function SiteHeader({
         flex: "0 0 auto",
         boxSizing: "border-box",
         overflow: "hidden",
+        boxShadow: "0 8px 22px rgba(123, 97, 216, 0.10)",
     };
 
     const logoMarkInnerStyle = {
@@ -201,33 +230,17 @@ export default function SiteHeader({
         justifyContent: "center",
         width: "100%",
         height: "100%",
-        color: "#000",
-        fontFamily: '"Antonio", sans-serif',
-        fontWeight: 700,
-        fontSize: isMobile ? "2.18rem" : "2.85rem",
-        lineHeight: 0.78,
-        letterSpacing: "-0.08em",
+        color: accent,
+        fontFamily: "var(--font-family-base)",
+        fontWeight: 900,
+        fontSize: isMobile ? "1.05rem" : "1.18rem",
+        lineHeight: 1,
+        letterSpacing: "-0.04em",
         textTransform: "uppercase",
-        transform: "scaleX(1.22)",
     };
 
     const logoRegistrationStyle = {
-        position: "absolute",
-        top: isMobile ? 2 : 3,
-        right: isMobile ? 3 : 4,
-        width: isMobile ? 9 : 11,
-        height: isMobile ? 9 : 11,
-        border: "1px solid #000",
-        borderRadius: "50%",
-        color: "#000",
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "Arial, sans-serif",
-        fontWeight: 800,
-        fontSize: isMobile ? "0.42rem" : "0.5rem",
-        lineHeight: 1,
-        background: "transparent",
+        display: "none",
     };
 
     const settingsContentStyle = {
@@ -237,16 +250,20 @@ export default function SiteHeader({
 
     const settingsIconButtonStyle = {
         appearance: "none",
-        border: "none",
-        background: "transparent",
-        color: "#000",
+        border: `1px solid ${border}`,
+        background: surface,
+        color: text,
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
+        width: isMobile ? 38 : 40,
+        height: isMobile ? 38 : 40,
+        borderRadius: 999,
         padding: 0,
         margin: 0,
         cursor: "pointer",
         lineHeight: 1,
+        boxShadow: "none",
     };
 
     return (
@@ -265,6 +282,18 @@ export default function SiteHeader({
                                 <span style={logoRegistrationStyle}>R</span>
                             </span>
                         </button>
+
+                        {isRulePage && !isInMarathonView && (
+                            <Button
+                                variant="header"
+                                compact
+                                isMobile={isMobile}
+                                theme={theme}
+                                onClick={handleBackToRulesClick}
+                            >
+                                ← Back to rules
+                            </Button>
+                        )}
                     </div>
 
                     {!isMobile && !isInMarathonView && (
@@ -272,21 +301,34 @@ export default function SiteHeader({
                             <Button
                                 variant="header"
                                 compact
+                                active={pathname === "/" || pathname.startsWith("/trainer")}
                                 isMobile={isMobile}
                                 theme={theme}
-                                onClick={handleAnalyticsClick}
+                                onClick={handlePracticeClick}
                             >
-                                GRAMMAR
+                                Practice
                             </Button>
 
                             <Button
                                 variant="header"
                                 compact
+                                active={pathname.startsWith("/analytics") || pathname.startsWith("/rule")}
+                                isMobile={isMobile}
+                                theme={theme}
+                                onClick={handleAnalyticsClick}
+                            >
+                                Grammar
+                            </Button>
+
+                            <Button
+                                variant="header"
+                                compact
+                                active={pathname.startsWith("/vocabulary")}
                                 isMobile={isMobile}
                                 theme={theme}
                                 onClick={handleVocabularyClick}
                             >
-                                VOCABULARY
+                                Vocabulary
                             </Button>
                         </nav>
                     )}
@@ -306,17 +348,17 @@ export default function SiteHeader({
                         {accountLoaded && (
                             isSignedIn ? (
                                 <Button
-                                    variant="offset"
+                                    variant="secondary"
                                     compact
                                     isMobile={isMobile}
                                     theme={theme}
-                                    shadowColor={theme.accent}
-                                    shadowOffset={4}
+                                    shadowOffset={0}
                                     onMouseEnter={() => setProfileHovered(true)}
                                     onMouseLeave={() => setProfileHovered(false)}
                                     style={{
-                                        backgroundColor: profileHovered ? "#000" : theme.accent,
-                                        color: profileHovered ? theme.bg : "#000",
+                                        minWidth: isMobile ? 82 : 96,
+                                        backgroundColor: profileHovered ? dark : surface,
+                                        color: profileHovered ? "#fff" : text,
                                     }}
                                     onClick={() => setProfileVisible(true)}
                                 >
@@ -324,12 +366,12 @@ export default function SiteHeader({
                                 </Button>
                             ) : (
                                 <Button
-                                    variant="offset"
+                                    variant="primary"
                                     compact
                                     isMobile={isMobile}
                                     theme={theme}
-                                    shadowColor={theme.accent}
-                                    shadowOffset={4}
+                                    shadowOffset={0}
+                                    style={{ minWidth: isMobile ? 82 : 96 }}
                                     onClick={() => setLoginVisible(true)}
                                 >
                                     SIGN IN
@@ -345,7 +387,7 @@ export default function SiteHeader({
                 id="site-settings-modal"
                 theme={theme}
                 title="Settings"
-                subtitle="Language direction and training difficulty."
+                subtitle="Update your translation direction and training level."
                 onClose={() => setSettingsVisible(false)}
                 maxWidth={520}
                 contentStyle={settingsContentStyle}
@@ -355,7 +397,7 @@ export default function SiteHeader({
                     fullWidth
                     isMobile={isMobile}
                     theme={theme}
-                    variant="offset"
+                    variant="secondary"
                     style={{ width: "100%" }}
                 />
 
@@ -366,7 +408,7 @@ export default function SiteHeader({
                     loading={loading}
                     onLevelChange={handleLevelChange}
                     theme={theme}
-                    variant="offset"
+                    variant="secondary"
                 />
             </ModalShell>
 

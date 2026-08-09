@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_BACKGROUND_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../theme.js";
 
 /**
  * A fully dynamic table component with mobile responsiveness.
@@ -47,24 +52,28 @@ export default function ConjugationTable({
 
     const accentColor = theme?.accent ?? APP_ACCENT_COLOR;
     const backgroundColor = theme?.bg ?? APP_BACKGROUND_COLOR;
+    const surfaceColor = theme?.surface ?? APP_SURFACE_COLOR;
+    const textColor = theme?.text ?? APP_TEXT_COLOR;
 
     const bodyFontSize = fontSize ?? (isMobile ? 14 : 16);
 
     const thtdBase = {
-        padding: isMobile ? "6px 8px" : 10,
-        borderBottom: `2px solid ${accentColor}`,
+        padding: isMobile ? "10px 12px" : "14px 16px",
+        borderBottom: `1px solid ${accentColor}`,
         verticalAlign: "top",
         textAlign: "left",
         fontSize: bodyFontSize,
         lineHeight: 1.3,
+        color: textColor,
+        fontFamily: "var(--font-family-base)",
     };
 
     const theadTh = {
         ...thtdBase,
-        background: headerBackground ?? backgroundColor,
-        color: headerColor ?? "#000",
-        letterSpacing: ".06em",
-        fontWeight: 700,
+        background: headerBackground ?? surfaceColor ?? backgroundColor,
+        color: headerColor ?? textColor,
+        letterSpacing: ".03em",
+        fontWeight: 800,
         whiteSpace: "nowrap",
     };
 

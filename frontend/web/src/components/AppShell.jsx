@@ -1,4 +1,4 @@
-import { APP_BACKGROUND_COLOR } from "../theme.js";
+import { APP_BACKGROUND_COLOR, APP_TEXT_COLOR } from "../theme.js";
 
 export default function AppShell({ children, theme, noPadding = false }) {
     const styles = {
@@ -9,8 +9,8 @@ export default function AppShell({ children, theme, noPadding = false }) {
             alignItems: "stretch",
             justifyContent: "stretch",
             background: theme?.bg ?? APP_BACKGROUND_COLOR,
-            color: theme.text,
-            fontFamily: 'var(--font-family-base)',
+            color: theme?.text ?? APP_TEXT_COLOR,
+            fontFamily: "var(--font-family-base)",
             overflowX: "hidden",
         },
 
@@ -33,10 +33,39 @@ export default function AppShell({ children, theme, noPadding = false }) {
                     min-height: 100%;
                     overflow-x: hidden;
                     background: var(--bg);
+                    color: var(--text);
+                }
+
+                body {
+                    font-family: var(--font-family-base);
                 }
 
                 *, *::before, *::after {
                     box-sizing: border-box;
+                }
+
+                button,
+                input,
+                textarea,
+                select {
+                    font: inherit;
+                }
+
+                input,
+                textarea,
+                select {
+                    color: var(--text);
+                }
+
+                input:focus,
+                textarea:focus,
+                select:focus {
+                    outline: none;
+                    box-shadow: none !important;
+                }
+
+                ::selection {
+                    background: rgba(123, 97, 216, 0.18);
                 }
             `}</style>
 

@@ -221,7 +221,7 @@ export default function LimitModal({
     const benefitMarkerStyle = {
         flex: "0 0 auto",
         width: 10,
-        color: "#000",
+        color: theme.accent,
         fontWeight: 400,
         lineHeight: 1,
     };
@@ -232,10 +232,17 @@ export default function LimitModal({
         marginTop: 0,
         color: theme.text,
         fontFamily: "var(--font-family-base)",
-        fontSize: "1.75rem",
-        fontWeight: 700,
+        fontSize: "clamp(2rem, 6vw, 3rem)",
+        fontWeight: 800,
         letterSpacing: 0,
-        lineHeight: 1,
+        lineHeight: 1.05,
+    };
+
+    const primaryModalButtonStyle = {
+        backgroundColor: theme.accent,
+        color: "#fff",
+        borderColor: "transparent",
+        boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
     };
 
     return (
@@ -246,27 +253,28 @@ export default function LimitModal({
                         style={{
                             position: "fixed",
                             inset: 0,
-                            backdropFilter: "blur(6px)",
-                            WebkitBackdropFilter: "blur(6px)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                             zIndex: 9999,
+                            background: "rgba(248, 249, 252, 0.66)",
                             paddingBottom: "env(safe-area-inset-bottom)",
                             paddingTop: "env(safe-area-inset-top)",
+                            backdropFilter: "blur(8px)",
+                            WebkitBackdropFilter: "blur(8px)",
                         }}
                         onClick={onCloseHandler}
                     >
                         <div
                             style={{
-                                background: theme.bg,
+                                background: theme.surface,
                                 padding: 40,
-                                borderRadius: 12,
-                                border: "1px solid #000",
+                                borderRadius: 26,
+                                border: `1px solid ${theme.border}`,
                                 width: "90%",
                                 maxWidth: 520,
                                 textAlign: "center",
-                                boxShadow: "none",
+                                boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
                                 display: !isPaying ? "block" : "none",
                                 position: "relative",
                                 fontFamily: "var(--font-family-base)",
@@ -280,10 +288,10 @@ export default function LimitModal({
                                 onClick={onClose}
                                 style={{
                                     position: "absolute",
-                                    top: 40,
-                                    right: 40,
-                                    width: 24,
-                                    height: 24,
+                                    top: 18,
+                                    right: 18,
+                                    width: 36,
+                                    height: 36,
                                     padding: 0,
                                     border: "none",
                                     background: "transparent",
@@ -298,7 +306,7 @@ export default function LimitModal({
                                 }}
                                 aria-label="Close"
                             >
-                                <X size={18} weight="bold" aria-hidden />
+                                <X size={28} weight="regular" aria-hidden />
                             </button>
 
                             {account?.email && (
@@ -371,7 +379,6 @@ export default function LimitModal({
                                             {/*                left: "25%",*/}
                                             {/*                transform: "translateX(-25%)",*/}
                                             {/*                background: "#fffdf8",*/}
-                                            {/*                border: `2px solid ${theme.accent}`,*/}
                                             {/*                borderRadius: 12,*/}
                                             {/*                boxShadow: `3px 3px 0 ${theme.accentDark}`,*/}
                                             {/*                padding: "10px 12px",*/}
@@ -528,7 +535,8 @@ export default function LimitModal({
                                 fullWidth
                                 theme={theme}
                                 shadowColor={theme.accent}
-                                shadowOffset={4}
+                                shadowOffset={0}
+                                style={primaryModalButtonStyle}
                                 onClick={handleSubscribe}
                                 disabled={loading}
                             >
@@ -541,7 +549,8 @@ export default function LimitModal({
                                     fullWidth
                                     theme={theme}
                                     shadowColor={theme.accent}
-                                    shadowOffset={4}
+                                    shadowOffset={0}
+                                    style={primaryModalButtonStyle}
                                     onClick={async () => {
                                         if (!account) await loadAccountInfo().then();
                                         setLoginModalOpen(true);
@@ -560,7 +569,7 @@ export default function LimitModal({
                                         marginBottom: 0,
                                         fontSize: "0.95rem",
                                         fontWeight: 400,
-                                        color: "#000",
+                                        color: theme.text,
                                         letterSpacing: 0,
                                         width: "100%",
                                         opacity: 1,
@@ -580,10 +589,10 @@ export default function LimitModal({
                                 width: "92vw",
                                 maxWidth: 720,
                                 margin: "0 auto",
-                                background: theme.bg,
+                                background: theme.surface,
                                 borderRadius: theme.radius * 1.2,
-                                border: `4px solid ${theme.accent}`,
-                                boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                                border: `1px solid ${theme.border}`,
+                                boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
                                 maxHeight: "75%",
                                 overflow: "auto",
                             }}

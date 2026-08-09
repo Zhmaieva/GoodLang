@@ -1,7 +1,13 @@
 import React, { useEffect } from "react";
 import { getOverallAccuracy, inferUserLevel } from "../../services/dataService.js";
 import { off, on } from "../../services/events.js";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_BORDER_COLOR,
+    APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../../theme.js";
 
 export const LEVEL_MAP = {
     A1: { label: "Beginner", percent: 33 },
@@ -62,17 +68,19 @@ export default function LevelKpi({ mobile, theme }) {
     }, []);
 
     // ✅ NON-header AccuracyKpi-like card styling tokens
-    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
-    const CARD_BORDER = "#000";
-    const CARD_SHADOW = "none";
+    const CARD_BG = theme?.surface ?? APP_SURFACE_COLOR;
+    const CARD_BORDER = theme?.border ?? APP_BORDER_COLOR;
+    const CARD_SHADOW = "0 16px 44px rgba(31, 36, 54, 0.06)";
+    const TEXT = theme?.text ?? APP_TEXT_COLOR;
+    const MUTED = theme?.muted ?? APP_MUTED_TEXT_COLOR;
 
     const cardStyle = {
         background: CARD_BG,
         border: `1px solid ${CARD_BORDER}`,
-        borderRadius: 5,
+        borderRadius: 18,
         boxShadow: CARD_SHADOW,
         minHeight: isMobile ? 132 : 150,
-        padding: isMobile ? 16 : 20,
+        padding: isMobile ? 16 : 22,
         display: "flex",
         flexDirection: "column",
         gap: 14,
@@ -83,11 +91,11 @@ export default function LevelKpi({ mobile, theme }) {
     };
 
     const labelStyle = {
-        fontSize: isMobile ? "0.9rem" : "1rem",
-        color: "#000",
+        fontSize: isMobile ? "0.78rem" : "0.82rem",
+        color: MUTED,
         textTransform: "uppercase",
-        letterSpacing: ".06em",
-        fontWeight: 700,
+        letterSpacing: ".08em",
+        fontWeight: 800,
         fontFamily: 'var(--font-family-base)',
     };
 
@@ -99,16 +107,16 @@ export default function LevelKpi({ mobile, theme }) {
             ? isMobile ? "1.25rem" : "1.55rem"
             : isMobile ? "2rem" : "2.45rem",
         lineHeight: showEmpty ? 1.15 : 1,
-        fontWeight: 700,
-        color: "#000",
+        fontWeight: 800,
+        color: TEXT,
         fontFamily: 'var(--font-family-base)',
     };
 
     const sparkStyle = {
         width: "100%",
-        height: 10,
-        borderRadius: 5,
-        background: "#000",
+        height: 8,
+        borderRadius: 999,
+        background: "#edf0f7",
         border: "none",
         position: "relative",
         overflow: "hidden",
@@ -118,9 +126,9 @@ export default function LevelKpi({ mobile, theme }) {
 
     const noteStyle = {
         marginTop: 9,
-        fontSize: isMobile ? "0.92rem" : "1rem",
-        color: "#000",
-        fontWeight: 400,
+        fontSize: isMobile ? "0.86rem" : "0.92rem",
+        color: MUTED,
+        fontWeight: 600,
     };
 
     const sparkFillStyle = (width) => ({

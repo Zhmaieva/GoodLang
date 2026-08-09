@@ -10,21 +10,6 @@ import { Button } from "../Buttons.jsx";
 import {ACTION_TYPES} from "../../utils/constants.js"; // ✅ reuse same Stripe singleton loader
 import { X } from "@phosphor-icons/react";
 
-const logoStyle = (size, theme) => ({
-    flex: "0 0 auto",
-    width: size,
-    height: size,
-    borderRadius: 12,
-    background: theme.accent,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#fff",
-    fontWeight: 800,
-    fontSize: size * 0.45,
-    boxShadow: `0 2px 0 ${theme.accentDark}`,
-});
-
 export default function MarathonPurchaseModal({
                                                   open,
                                                   onClose,
@@ -166,10 +151,11 @@ export default function MarathonPurchaseModal({
                             alignItems: "center",
                             justifyContent: "center",
                             zIndex: 9998,
+                            background: "rgba(248, 249, 252, 0.66)",
                             paddingBottom: "env(safe-area-inset-bottom)",
                             paddingTop: "env(safe-area-inset-top)",
-                            backdropFilter: "blur(6px)",
-                            WebkitBackdropFilter: "blur(6px)",
+                            backdropFilter: "blur(8px)",
+                            WebkitBackdropFilter: "blur(8px)",
                         }}
                         onClick={(e) => {
                             e?.stopPropagation();
@@ -193,10 +179,10 @@ export default function MarathonPurchaseModal({
 
                         // ✅ keep your look
                         margin: "12px auto 0",
-                        background: theme.bg,
+                        background: theme.surface,
                         borderRadius: theme.radius * 1.2,
-                        border: `4px solid ${theme.accent}`,
-                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                        border: `1px solid ${theme.border}`,
+                        boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
 
                         // ✅ make it usable on mobile
                         maxHeight: window.innerWidth < 400 ? "75vh" : "85vh",
@@ -206,21 +192,20 @@ export default function MarathonPurchaseModal({
                         {!isPaying &&
                         <div
                             style={{
-                                background: theme.bg,
-                                padding: "28px",
-                                paddingTop: 0,
-                                borderRadius: theme.radius * 1.2,
-                                border: `4px solid ${theme.accent}`,
+                                background: theme.surface,
+                                padding: 40,
+                                borderRadius: 26,
+                                border: `1px solid ${theme.border}`,
                                 width: "90%",
                                 maxWidth: 520,
 
                                 textAlign: "center",
-                                boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                                boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
                             }}
                             onClick={(e) => e.stopPropagation()}
                         >
                             {/* top row with close */}
-                            <div style={{display: "flex", justifyContent: "space-between"}}>
+                            <div style={{display: "flex", justifyContent: "flex-end"}}>
                                 <div/>
                                 <p
                                     onClick={() => {
@@ -228,21 +213,24 @@ export default function MarathonPurchaseModal({
                                         onCloseHandler();
                                     }}
                                     style={{
-                                        marginBottom: 0,
-                                        marginTop: 4,
-                                        marginRight: -16,
+                                        margin: "-22px -22px 0 0",
                                         color: theme.accent,
                                         fontSize: "1.3rem",
                                         fontWeight: 500,
-                                        textAlign: "left",
+                                        textAlign: "center",
                                         cursor: loading ? "not-allowed" : "pointer",
+                                        width: 36,
+                                        height: 36,
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
                                         userSelect: "none",
                                         WebkitUserSelect: "none",
                                         WebkitTouchCallout: "none",
                                         opacity: loading ? 0.6 : 1,
                                     }}
                                 >
-                                    <X size={18} weight="bold" aria-hidden />
+                                    <X size={28} weight="regular" aria-hidden />
                                 </p>
                             </div>
 
@@ -262,7 +250,7 @@ export default function MarathonPurchaseModal({
                                             marginBottom: 0,
                                             marginTop: 0,
                                             color: theme.text,
-                                            fontSize: "clamp(1rem, 3.4vh, 2rem)",
+                                            fontSize: "clamp(2rem, 6vw, 3rem)",
                                             fontWeight: 800,
                                         }}
                                     >
@@ -275,7 +263,7 @@ export default function MarathonPurchaseModal({
                                             marginTop: 8,
                                             marginLeft: 0,
                                             color: theme.text,
-                                            fontWeight: 800,
+                                            fontWeight: 400,
                                             opacity: 0.55,
                                             fontSize: "clamp(.75rem, 1.9vh, 1rem)",
                                             textAlign: "left",
@@ -285,9 +273,6 @@ export default function MarathonPurchaseModal({
                                     </p>
                                 </div>
 
-                            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                                <div style={logoStyle(56, theme)}>GL</div>
-                            </div>
                         </div>
 
                         <MarathonPlanner theme={theme} onChange={(ids) => setPlannedRuleIds(ids)} max={7}
@@ -310,11 +295,11 @@ export default function MarathonPurchaseModal({
                                             fontWeight: 800,
                                             fontSize: "clamp(0.95rem, 3.5vw, 1rem)",
                                             lineHeight: 1,
-                                            borderRadius: 999,
+                                            borderRadius: 14,
                                             background: (loading || safeRuleIds.length !== 7) ? "#999" : theme.accent,
                                             color: "#fff",
-                                            border: "2px solid rgba(0,0,0,0.12)",
-                                            boxShadow: "2px 2px 0 rgba(0,0,0,0.18)",
+                                            border: "1px solid transparent",
+                                            boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
                                             fontFamily: 'var(--font-family-base)',
                                             whiteSpace: "nowrap",
                                             opacity: (loading || safeRuleIds.length !== 7) ? 0.7 : 1,

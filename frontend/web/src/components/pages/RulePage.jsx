@@ -19,7 +19,13 @@ import { getPdfDownloads, setPdfDownloads } from "../../services/dataService.js"
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {featureToggleService} from "../../services/featureToggleService.js";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR, LEARNED_STATUS_COLOR } from "../../theme.js";
+import {
+    APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+    LEARNED_STATUS_COLOR,
+} from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
 
 export default function RulePage({ data, theme }) {
@@ -136,7 +142,9 @@ export default function RulePage({ data, theme }) {
         setPdfTypeModalOpen(true);
     };
 
-    const FRAME_COLOR = theme?.accent ?? APP_ACCENT_COLOR;
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
+    const text = theme?.text ?? APP_TEXT_COLOR;
     const FORMS_TABLE_COLOR = LEARNED_STATUS_COLOR;
 
     const SOFT_INNER = "transparent";
@@ -156,18 +164,18 @@ export default function RulePage({ data, theme }) {
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
-        padding: isMobile ? "16px 12px" : "48px 24px",
+        padding: isMobile ? "24px 12px" : "64px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 
     const container = {
-        maxWidth: 1100,
+        maxWidth: 980,
         width: "100%",
         padding: 0,
         margin: 0,
         border: "none",
         borderRadius: 0,
-        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        background: "transparent",
         boxShadow: "none",
         boxSizing: "border-box",
     };
@@ -176,58 +184,29 @@ export default function RulePage({ data, theme }) {
         padding: 0,
     };
 
-    const breadcrumbStyle = {
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-        marginBottom: isMobile ? 18 : 24,
-        color: "#000",
-        fontSize: isMobile ? "1rem" : "1.05rem",
-        fontWeight: 400,
-    };
-
-    const breadcrumbButtonStyle = {
-        appearance: "none",
-        border: "none",
-        background: "transparent",
-        padding: 0,
-        margin: 0,
-        color: "#000",
-        font: "inherit",
-        fontWeight: 500,
-        textDecoration: "underline",
-        textUnderlineOffset: 3,
-        cursor: "pointer",
-    };
-
-    const breadcrumbCurrentStyle = {
-        color: "#000",
-        fontWeight: 600,
-    };
-
     const ruleContentStyle = {
-        background: "transparent",
-        border: "1px solid #000",
-        borderRadius: 5,
-        padding: isMobile ? 18 : 24,
-        boxShadow: "none",
+        background: surface,
+        border: `1px solid ${border}`,
+        borderRadius: 22,
+        padding: isMobile ? 22 : 40,
+        boxShadow: "0 18px 60px rgba(31, 36, 54, 0.06)",
     };
 
     const getRuleSectionStyle = (isFirst) => ({
-        borderTop: isFirst ? "none" : "1px solid #000",
-        marginTop: isFirst ? 0 : isMobile ? 18 : 24,
-        paddingTop: isFirst ? 0 : isMobile ? 18 : 24,
+        borderTop: isFirst ? "none" : `1px solid ${border}`,
+        marginTop: isFirst ? 0 : isMobile ? 24 : 34,
+        paddingTop: isFirst ? 0 : isMobile ? 24 : 34,
     });
 
     const SectionTitle = ({ children }) => (
         <div
             style={{
-                margin: "4px 2px 10px",
-                fontSize: isMobile ? 13 : 20,
-                letterSpacing: ".06em",
+                margin: "4px 0 12px",
+                fontSize: isMobile ? ".82rem" : "1rem",
+                letterSpacing: ".08em",
                 textTransform: "uppercase",
-                fontWeight: 900,
-                color: "#000",
+                fontWeight: 850,
+                color: text,
                 fontFamily: 'var(--font-family-base)',
             }}
         >
@@ -242,7 +221,7 @@ export default function RulePage({ data, theme }) {
     const textStyle = {
         fontSize: ruleBodyFontSize,
         lineHeight: 1.45,
-        color: theme.text,
+        color: text,
         fontFamily: 'var(--font-family-base)',
         fontWeight: 400,
     };
@@ -396,7 +375,7 @@ export default function RulePage({ data, theme }) {
                         {section.hint && (
                             <p
                                 style={{
-                                    color: "#000",
+                                    color: text,
                                     fontSize: ruleBodyFontSize,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
@@ -417,8 +396,8 @@ export default function RulePage({ data, theme }) {
                         <div
                             style={{
                                 background: SOFT_INNER,
-                                border: `2px solid ${FORMS_TABLE_COLOR}`,
-                                borderRadius: 5,
+                                border: `1px solid ${FORMS_TABLE_COLOR}`,
+                                borderRadius: 14,
                                 padding: 0,
                                 overflow: "hidden",
                                 boxShadow: "none",
@@ -429,7 +408,7 @@ export default function RulePage({ data, theme }) {
                                 headers={section.headers}
                                 rows={section.rows}
                                 headerBackground={FORMS_TABLE_COLOR}
-                                headerColor={APP_BACKGROUND_COLOR}
+                                headerColor={surface}
                                 fontSize={ruleBodyFontSize}
                             />
                         </div>
@@ -437,7 +416,7 @@ export default function RulePage({ data, theme }) {
                         {section.hint && (
                             <div
                                 style={{
-                                    color: "#000",
+                                    color: text,
                                     fontSize: ruleBodyFontSize,
                                     marginTop: 8,
                                     fontFamily: 'var(--font-family-base)',
@@ -504,28 +483,6 @@ export default function RulePage({ data, theme }) {
                 <SiteHeader theme={theme} />
                 <div style={pageShellStyle}>
                     <main style={container}>
-                <nav style={breadcrumbStyle} aria-label="Breadcrumb">
-                    <button
-                        type="button"
-                        style={breadcrumbButtonStyle}
-                        onClick={() => navigate("/trainer")}
-                    >
-                        Trainer
-                    </button>
-                    <span>/</span>
-                    <button
-                        type="button"
-                        style={breadcrumbButtonStyle}
-                        onClick={handleAnalyticsClick}
-                    >
-                        Grammar
-                    </button>
-                    <span>/</span>
-                    <span style={breadcrumbCurrentStyle} aria-current="page">
-                        {data.title}
-                    </span>
-                </nav>
-
                 <div style={sectionsCanvas}>
                     <section style={ruleContentStyle}>
                         {data.sections

@@ -56,15 +56,18 @@ export default function ChooseLocaleModal({
         width: "100%",
         textAlign: "left",
         borderRadius: modalShellTokens.optionRadius,
-        border: `${modalShellTokens.optionBorderWidth}px solid #000`,
-        background: isActive ? "#000" : "transparent",
+        border: `${modalShellTokens.optionBorderWidth}px solid ${isActive ? theme.accent : theme.border}`,
+        background: isActive ? theme.accent : theme.surface,
         padding: "14px 14px",
         display: "flex",
         gap: 12,
         alignItems: "flex-start",
         cursor: "pointer",
-        filter: isHover && !isActive ? "brightness(0.98)" : "none",
-        transition: "background-color 120ms ease, filter 120ms ease",
+        outline: "none",
+        boxShadow: isActive ? "0 12px 28px rgba(123, 97, 216, 0.16)" : "none",
+        filter: isHover && !isActive ? "brightness(0.99)" : "none",
+        transition: "background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease, filter 120ms ease",
+        WebkitTapHighlightColor: "transparent",
     });
 
     const mainButtonStyle = {
@@ -75,9 +78,6 @@ export default function ChooseLocaleModal({
     const listOuterStyle = {
         position: "relative",
         marginTop: 2,
-        border: "1px solid #000",
-        borderRadius: modalShellTokens.optionRadius,
-        padding: 12,
         boxSizing: "border-box",
     };
 
@@ -132,7 +132,7 @@ export default function ChooseLocaleModal({
                                             <div
                                                 style={{
                                                     fontWeight: 600,
-                                                    color: isActive ? "#fff" : "#000",
+                                                    color: isActive ? "#fff" : theme.text,
                                                     fontSize: "1.05rem",
                                                 }}
                                             >
@@ -167,9 +167,15 @@ export default function ChooseLocaleModal({
                         fullWidth
                         theme={theme}
                         shadowColor={theme.accent}
-                        shadowOffset={4}
+                        shadowOffset={0}
                         disabled={!canConfirm}
                         wrapperStyle={mainButtonStyle}
+                        style={{
+                            backgroundColor: theme.accent,
+                            color: "#fff",
+                            borderColor: "transparent",
+                            boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                        }}
                         onClick={handleConfirm}
                     >
                         Ok

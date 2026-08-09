@@ -1,16 +1,23 @@
 import React, { useState } from "react";
-import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../theme.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
+    APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
+    APP_DARK_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../theme.js";
 
-const FONT_FAMILY = 'var(--font-family-base)';
-export const HEADER_BUTTON_FONT_FAMILY = '"Antonio", sans-serif';
-export const HEADER_BUTTON_FONT_WEIGHT = 200;
-const DEFAULT_ACCENT = APP_ACCENT_COLOR;
-const DEFAULT_ACCENT_DARK = "#2d7fca";
-const DEFAULT_TEXT = "#000";
-const DEFAULT_BG = APP_BACKGROUND_COLOR;
-const DEFAULT_BORDER = "#000";
+const FONT_FAMILY = "var(--font-family-base)";
+export const HEADER_BUTTON_FONT_FAMILY = "Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif";
+export const HEADER_BUTTON_FONT_WEIGHT = 500;
 
 const mergeStyles = (...styles) => Object.assign({}, ...styles.filter(Boolean));
+
+function getThemeToken(theme, key, fallback) {
+    return theme?.[key] ?? fallback;
+}
 
 const baseButtonStyle = {
     appearance: "none",
@@ -26,13 +33,10 @@ const baseButtonStyle = {
     gap: 8,
     lineHeight: 1,
     textDecoration: "none",
+    whiteSpace: "nowrap",
     transition:
-        "transform 120ms ease, filter 120ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease",
+        "transform 140ms ease, color 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease",
 };
-
-function getThemeToken(theme, key, fallback) {
-    return theme?.[key] ?? fallback;
-}
 
 function getVariantStyle({
     variant,
@@ -43,119 +47,101 @@ function getVariantStyle({
     fullWidth,
     compact,
     isMobile,
+    shadowOffset,
 }) {
-    const accent = getThemeToken(theme, "accent", DEFAULT_ACCENT);
-    const accentDark = getThemeToken(theme, "accentDark", DEFAULT_ACCENT_DARK);
-    const text = getThemeToken(theme, "text", DEFAULT_TEXT);
+    const accent = getThemeToken(theme, "accent", APP_ACCENT_COLOR);
+    const accentSoft = getThemeToken(theme, "accentSoft", APP_ACCENT_SOFT_COLOR);
+    const surface = getThemeToken(theme, "surface", APP_SURFACE_COLOR);
+    const border = getThemeToken(theme, "border", APP_BORDER_COLOR);
+    const text = getThemeToken(theme, "text", APP_TEXT_COLOR);
+    const dark = getThemeToken(theme, "dark", APP_DARK_COLOR);
+    const bg = getThemeToken(theme, "bg", APP_BACKGROUND_COLOR);
+    const hasSoftShadow = Number(shadowOffset) > 0;
 
     const disabledStyle = disabled
         ? {
-              opacity: 0.62,
+              opacity: 0.58,
               cursor: "default",
               transform: "none",
-              filter: "none",
+              boxShadow: "none",
           }
         : null;
 
-    const sharedPill = {
-        borderRadius: 999,
-        fontWeight: 800,
-        fontSize: compact ? "0.9rem" : "1rem",
-        padding: compact ? "8px 12px" : "10px 16px",
+    const sharedControl = {
+        borderRadius: 14,
+        fontWeight: 700,
+        fontSize: compact ? "0.92rem" : "1rem",
+        minHeight: compact ? 40 : 46,
+        padding: compact ? "0 14px" : "0 18px",
         width: fullWidth ? "100%" : undefined,
     };
 
     const styles = {
         primary: {
-            ...sharedPill,
-            background: accent,
+            ...sharedControl,
+            background: dark,
             color: "#fff",
-            boxShadow: `2px 2px 0 ${accentDark}`,
-            transform: hovered && !disabled ? "translateY(1px)" : "none",
-            filter: hovered && !disabled ? "brightness(0.95)" : "none",
+            border: "1px solid transparent",
+            boxShadow: "0 12px 28px rgba(23, 27, 47, 0.16)",
+            transform: hovered && !disabled ? "translateY(-1px)" : "none",
         },
         secondary: {
-            ...sharedPill,
-            background: DEFAULT_BG,
+            ...sharedControl,
+            background: surface,
             color: text,
-            border: "1px solid rgba(0,0,0,0.22)",
-            boxShadow: "2px 2px 0 rgba(0,0,0,0.16)",
-            transform: hovered && !disabled ? "translateY(1px)" : "none",
-            filter: hovered && !disabled ? "brightness(0.98)" : "none",
+            border: `1px solid ${border}`,
+            boxShadow: hovered && !disabled ? "0 10px 22px rgba(32, 36, 58, 0.08)" : "none",
+            transform: hovered && !disabled ? "translateY(-1px)" : "none",
         },
         ghost: {
-            ...sharedPill,
+            ...sharedControl,
             background: "transparent",
             color: text,
-            border: "1px solid rgba(0,0,0,0.18)",
-            transform: hovered && !disabled ? "translateY(1px)" : "none",
-            filter: hovered && !disabled ? "brightness(0.96)" : "none",
+            border: `1px solid ${border}`,
+            transform: hovered && !disabled ? "translateY(-1px)" : "none",
         },
         nav: {
-            borderRadius: 999,
-            padding: compact ? "7px 10px" : "8px 12px",
-            fontWeight: 800,
-            fontSize: compact ? "0.9rem" : "0.95rem",
-            background: "rgba(255,255,255,0.78)",
-            color: text,
-            border: "1px solid rgba(0,0,0,0.16)",
-            opacity: hovered && !disabled ? 0.86 : 1,
+            ...sharedControl,
+            background: active ? accentSoft : "transparent",
+            color: active ? accent : text,
+            border: `1px solid ${active ? "transparent" : border}`,
         },
         offset: {
-            position: "relative",
-            zIndex: 1,
-            width: fullWidth ? "100%" : undefined,
-            minWidth: isMobile ? "92px" : "120px",
-            height: compact ? "40px" : "48px",
-            padding: compact ? "8px 16px" : "13px 20px",
-            fontWeight: 600,
-            fontSize: compact ? (isMobile ? "0.95rem" : "1rem") : isMobile ? "0.95rem" : "1.2rem",
-            letterSpacing: compact ? "0.3px" : "0.5px",
-            borderRadius: 5,
-            border: `1px solid ${DEFAULT_BORDER}`,
-            backgroundColor: "#95b5fe",
-            color: DEFAULT_TEXT,
-            cursor: disabled ? "default" : "pointer",
-            transition: "color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease",
+            ...sharedControl,
+            minWidth: isMobile ? 92 : 112,
+            background: active ? accentSoft : surface,
+            color: text,
+            border: `1px solid ${active ? accent : border}`,
+            boxShadow: hasSoftShadow
+                ? hovered && !disabled
+                    ? "0 12px 24px rgba(123, 97, 216, 0.16)"
+                    : "0 8px 18px rgba(123, 97, 216, 0.10)"
+                : "none",
+            transform: hovered && !disabled ? "translateY(-1px)" : "none",
         },
         choice: {
-            borderRadius: 999,
-            padding: "0 14px",
-            minWidth: 60,
-            height: compact ? 38 : 44,
-            fontWeight: 900,
-            fontSize: compact ? "0.95rem" : "1rem",
-            border: `2px solid ${active ? accent : "rgba(168,19,21,0.45)"}`,
-            background: active ? accent : "rgba(255,255,255,0.78)",
+            ...sharedControl,
+            background: active ? dark : surface,
             color: active ? "#fff" : text,
-            boxShadow: active
-                ? "0 10px 22px rgba(0,0,0,0.14)"
-                : "0 8px 18px rgba(0,0,0,0.10)",
-            transform: active ? "translateY(-1px)" : "none",
+            border: `1px solid ${active ? dark : border}`,
+            boxShadow: active ? "none" : "0 8px 18px rgba(32, 36, 58, 0.06)",
         },
         segmented: {
-            borderRadius: 999,
-            padding: compact ? "8px 10px" : "9px 12px",
-            fontWeight: 900,
-            fontSize: compact ? "0.86rem" : "0.95rem",
-            background: active ? accent : "rgba(255,255,255,0.78)",
+            ...sharedControl,
+            background: active ? accent : surface,
             color: active ? "#fff" : text,
-            border: `2px solid ${active ? accentDark : "rgba(0,0,0,0.12)"}`,
-            boxShadow: active ? `2px 2px 0 ${accentDark}` : "none",
-            transform: hovered && !disabled ? "translateY(1px)" : "none",
+            border: `1px solid ${active ? accent : border}`,
+            boxShadow: active ? "0 10px 24px rgba(123, 97, 216, 0.16)" : "none",
         },
         icon: {
-            width: compact ? 34 : 38,
-            height: compact ? 34 : 38,
+            width: compact ? 36 : 40,
+            height: compact ? 36 : 40,
             padding: 0,
             borderRadius: 999,
-            fontWeight: 900,
-            fontSize: compact ? "0.95rem" : "1rem",
-            background: active ? accent : "rgba(255,255,255,0.76)",
-            color: active ? "#fff" : text,
-            border: "1px solid rgba(0,0,0,0.16)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.08)",
-            transform: hovered && !disabled ? "translateY(1px)" : "none",
+            background: active ? accentSoft : surface,
+            color: active ? accent : text,
+            border: `1px solid ${border}`,
+            boxShadow: hovered && !disabled ? "0 10px 22px rgba(32, 36, 58, 0.08)" : "none",
         },
         plain: {
             padding: 0,
@@ -165,25 +151,46 @@ function getVariantStyle({
             font: "inherit",
         },
         header: {
-            padding: compact ? "4px 6px 6px" : "6px 6px 8px",
+            padding: compact ? "4px 2px 9px" : "6px 2px 11px",
             minWidth: 0,
-            flex: "0 0 auto",
             height: "auto",
             background: "transparent",
-            color: "#000",
+            color: text,
             border: "none",
             borderRadius: 0,
             boxShadow: "none",
             overflow: "visible",
             fontFamily: HEADER_BUTTON_FONT_FAMILY,
             fontWeight: HEADER_BUTTON_FONT_WEIGHT,
-            fontSize: compact ? (isMobile ? "1.1rem" : "1.25rem") : isMobile ? "1.36rem" : "1.62rem",
-            letterSpacing: "0.02em",
-            textTransform: "uppercase",
+            fontSize: compact ? (isMobile ? "0.9rem" : "0.95rem") : isMobile ? "0.98rem" : "1.02rem",
+            letterSpacing: 0,
+            textTransform: "none",
             textDecoration: "none",
+        },
+        danger: {
+            ...sharedControl,
+            background: "#e5484d",
+            color: "#fff",
+            border: "1px solid transparent",
+            boxShadow: "0 12px 26px rgba(229, 72, 77, 0.16)",
         },
         unstyled: {},
     };
+
+    if (variant === "header" && active) {
+        styles.header.color = accent;
+    }
+
+    if (variant === "plain") {
+        styles.plain.color = text;
+    }
+
+    if (variant === "offset" && active) {
+        styles.offset.background = dark;
+        styles.offset.color = bg;
+        styles.offset.borderColor = dark;
+        styles.offset.boxShadow = "none";
+    }
 
     return mergeStyles(styles[variant] ?? styles.primary, disabledStyle);
 }
@@ -203,16 +210,13 @@ export function Button({
     wrapperStyle,
     className,
     shadowColor,
-    shadowOffset = 5,
+    shadowOffset = 0,
     onMouseEnter,
     onMouseLeave,
     ...props
 }) {
     const [hovered, setHovered] = useState(false);
     const isActive = active || selected;
-    const usesOffsetLayer = variant === "offset";
-    const accent = getThemeToken(theme, "accent", DEFAULT_ACCENT);
-    const computedShadowColor = shadowColor ?? accent;
 
     const handleMouseEnter = (event) => {
         if (!disabled) setHovered(true);
@@ -238,9 +242,11 @@ export function Button({
                       fullWidth,
                       compact,
                       isMobile,
+                      shadowOffset,
                   }),
                   style
               );
+
     const headerContentStyle =
         variant === "header"
             ? {
@@ -250,60 +256,16 @@ export function Button({
                   flex: "0 0 auto",
                   gap: 8,
                   whiteSpace: "nowrap",
-                  paddingBottom: 4,
-                  backgroundImage: "linear-gradient(#000, #000)",
+                  paddingBottom: 7,
+                  backgroundImage: `linear-gradient(${getThemeToken(theme, "accent", APP_ACCENT_COLOR)}, ${getThemeToken(theme, "accent", APP_ACCENT_COLOR)})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "0 100%",
-                  backgroundSize: hovered && !disabled ? "100% 1.5px" : "0% 1.5px",
+                  backgroundSize: (hovered || isActive) && !disabled ? "100% 2px" : "0% 2px",
                   transition: "background-size 220ms cubic-bezier(0.22, 1, 0.36, 1)",
               }
             : null;
 
-    if (usesOffsetLayer) {
-        const offsetWrapperStyle = mergeStyles(
-            {
-                position: "relative",
-                display: fullWidth ? "block" : "inline-block",
-                width: fullWidth ? "100%" : undefined,
-                isolation: "isolate",
-            },
-            wrapperStyle
-        );
-
-        const offsetLayerStyle = {
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            top: hovered && !disabled ? 0 : shadowOffset,
-            left: hovered && !disabled ? 0 : shadowOffset,
-            backgroundColor: computedShadowColor,
-            transition: "top 0.2s ease, left 0.2s ease",
-            zIndex: 0,
-            pointerEvents: "none",
-            borderRadius: 5,
-        };
-
-        return (
-            <div
-                style={offsetWrapperStyle}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <div style={offsetLayerStyle} />
-                <button
-                    type={type}
-                    disabled={disabled}
-                    className={className}
-                    style={buttonStyle}
-                    {...props}
-                >
-                    {children}
-                </button>
-            </div>
-        );
-    }
-
-    return (
+    const button = (
         <button
             type={type}
             disabled={disabled}
@@ -320,4 +282,8 @@ export function Button({
             )}
         </button>
     );
+
+    if (!wrapperStyle) return button;
+
+    return <span style={wrapperStyle}>{button}</span>;
 }

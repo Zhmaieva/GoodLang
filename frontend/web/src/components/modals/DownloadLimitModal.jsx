@@ -2,7 +2,6 @@ import React, {useState, useRef, useEffect, useCallback} from "react";
 import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "../subscription/LoginModal.jsx";
-import {legacyGlobalStyling} from "../../App.jsx";
 import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
@@ -20,21 +19,6 @@ export async function getStripe() {
 
     return stripeLoaded;
 }
-
-export const logoStyle = (size) => ({
-    flex: "0 0 auto",
-    width: size,
-    height: size,
-    borderRadius: 12,
-    background: legacyGlobalStyling.accent,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#fff",
-    fontWeight: 800,
-    fontSize: size * 0.45,
-    boxShadow: `0 2px 0 ${legacyGlobalStyling.accentDark}`,
-});
 
 export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = false, isLimitReached, theme, open, onClose, waitTimeSeconds }) {
     const navigate = useNavigate();
@@ -222,20 +206,21 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                     alignItems: "center",
                     justifyContent: "center",
                     zIndex: 9999,
+                    background: "rgba(248, 249, 252, 0.66)",
                     paddingBottom: "env(safe-area-inset-bottom)",
                     paddingTop: "env(safe-area-inset-top)",
-                    backdropFilter: "blur(6px)",
-                    WebkitBackdropFilter: "blur(6px)",
+                    backdropFilter: "blur(8px)",
+                    WebkitBackdropFilter: "blur(8px)",
                 }} onClick={onCloseHandler}>
                     <div style={{
-                        background: theme.bg,
-                        padding: "32px",
-                        borderRadius: theme.radius * 1.2,
-                        border: `4px solid ${theme.accent}`,
+                        background: theme.surface,
+                        padding: 40,
+                        borderRadius: 26,
+                        border: `1px solid ${theme.border}`,
                         width: "90%",
                         maxWidth: 460,
                         textAlign: "center",
-                        boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                        boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
                         display: !isPaying ? "block" : "none",
                     }} onClick={e => {
                         e.stopPropagation()
@@ -248,20 +233,22 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                             }
 
                             <p onClick={onClose} style={{
-                                marginBottom: 16,
-                                marginTop: -22,
-                                marginLeft: 0,
-                                marginRight: -18,
+                                margin: 0,
                                 color: theme.accent,
                                 fontSize: "1.3rem",
                                 fontWeight: 500,
-                                textAlign: "left",
+                                textAlign: "center",
                                 cursor: "pointer",
+                                width: 36,
+                                height: 36,
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
                                 userSelect: "none",
                                 WebkitUserSelect: "none",
                                 WebkitTouchCallout: "none",
                             }}>
-                                <X size={18} weight="bold" aria-hidden />
+                                <X size={28} weight="regular" aria-hidden />
                             </p>
                         </div>
 
@@ -277,7 +264,7 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                                     marginBottom: 0,
                                     marginTop: 0,
                                     color: theme.text,
-                                    fontSize: "1.5rem",
+                                    fontSize: "clamp(2rem, 6vw, 3rem)",
                                     fontWeight: 800
                                 }}>
                                     {"Доступ до всіх правил"}
@@ -297,9 +284,6 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                                 </p>
                             </div>
 
-                            <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                                <div style={logoStyle(64)}>GL</div>
-                            </div>
                         </div>
 
                         <div
@@ -354,11 +338,11 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                                     fontWeight: 800,
                                     fontSize: "clamp(0.9rem, 3.5vw, 1rem)",
                                     lineHeight: 1,
-                                    borderRadius: 999,
+                                    borderRadius: 14,
                                     background: loading ? theme.accentDark : theme.accent,
                                     color: "#fff",
-                                    border: "2px solid rgba(0,0,0,0.12)",
-                                    boxShadow: `2px 2px 0 rgba(0,0,0,0.18)`,
+                                    border: "1px solid transparent",
+                                    boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
                                     fontFamily: 'var(--font-family-base)',
                                     whiteSpace: "nowrap",
                                     opacity: (loading) ? 0.7 : 1,
@@ -383,10 +367,10 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
                             width: "92vw",
                             maxWidth: 720,          // 👈 makes it feel much better
                             margin: "0 auto",
-                            background: theme.bg,
+                            background: theme.surface,
                             borderRadius: theme.radius * 1.2,
-                            border: `4px solid ${theme.accent}`,
-                            boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+                            border: `1px solid ${theme.border}`,
+                            boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
 
                             maxHeight: "75%",      // 👈 prevents “super long” look
                             overflow: "auto",
