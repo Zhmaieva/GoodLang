@@ -109,6 +109,7 @@ export default function FiltersBar({
                         backgroundColor: showWeakOnly ? SELECTED_BUTTON_COLOR : theme?.accent ?? APP_ACCENT_COLOR,
                         color: showWeakOnly ? "#fff" : "#000",
                         borderColor: SELECTED_BUTTON_COLOR,
+                        outline: "none",
                     }}
                 >
                     {showWeakOnly ? "Show all" : "Weak only"}

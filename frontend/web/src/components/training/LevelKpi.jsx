@@ -67,16 +67,16 @@ export default function LevelKpi({ mobile, theme }) {
     const CARD_SHADOW = "none";
 
     const cardStyle = {
-        // keep layout the same; only style language changes
         background: CARD_BG,
         border: `1px solid ${CARD_BORDER}`,
         borderRadius: 5,
         boxShadow: CARD_SHADOW,
-        padding: isMobile ? "12px" : "18px",
+        minHeight: isMobile ? 132 : 150,
+        padding: isMobile ? 16 : 20,
         display: "flex",
         flexDirection: "column",
-        gap: isMobile ? "1px" : "6px",
-        textAlign: "center",
+        gap: 14,
+        textAlign: "left",
         userSelect: "none",
         visibility: isLoading ? "hidden" : "visible",
         justifyContent: "space-between",
@@ -91,24 +91,36 @@ export default function LevelKpi({ mobile, theme }) {
         fontFamily: 'var(--font-family-base)',
     };
 
+    const showEmpty = attemptsLeft > 0;
+
     const valueStyle = {
-        fontSize: isMobile ? "1rem" : "2rem",
+        marginTop: 10,
+        fontSize: showEmpty
+            ? isMobile ? "1.25rem" : "1.55rem"
+            : isMobile ? "2rem" : "2.45rem",
+        lineHeight: showEmpty ? 1.15 : 1,
         fontWeight: 700,
         color: "#000",
         fontFamily: 'var(--font-family-base)',
     };
 
-    // ✅ your preferred spark style (no border)
     const sparkStyle = {
-        height: isMobile ? "6px" : "8px",
+        width: "100%",
+        height: 10,
         borderRadius: 5,
         background: "#000",
         border: "none",
-        marginTop: "6px",
         position: "relative",
         overflow: "hidden",
         transition: "width 650ms cubic-bezier(0.22, 1, 0.36, 1)",
 
+    };
+
+    const noteStyle = {
+        marginTop: 9,
+        fontSize: isMobile ? "0.92rem" : "1rem",
+        color: "#000",
+        fontWeight: 400,
     };
 
     const sparkFillStyle = (width) => ({
@@ -121,23 +133,26 @@ export default function LevelKpi({ mobile, theme }) {
         top: 0,
     });
 
-    const showEmpty = attemptsLeft > 0;
-
     return (
         <div style={cardStyle}>
             {showEmpty ? (
-                <>
+                <div>
                     <div style={labelStyle}>Level</div>
                     <div style={valueStyle}>
                         {attemptsLeft} {attemptsLeft > 4 ? "sentences" : "sentence"} left for evaluation
                     </div>
-                </>
+                </div>
             ) : (
                 <>
-                    <div style={labelStyle}>Level</div>
-                    <div style={valueStyle}>{levelInfo?.label}</div>
-                    <div style={sparkStyle}>
-                        <i style={sparkFillStyle(accuracy ?? 0)} />
+                    <div>
+                        <div style={labelStyle}>Level</div>
+                        <div style={valueStyle}>{levelInfo?.label}</div>
+                    </div>
+                    <div>
+                        <div style={sparkStyle}>
+                            <i style={sparkFillStyle(accuracy ?? 0)} />
+                        </div>
+                        <div style={noteStyle}>Current training level</div>
                     </div>
                 </>
             )}

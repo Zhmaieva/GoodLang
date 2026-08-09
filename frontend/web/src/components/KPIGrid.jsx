@@ -33,11 +33,12 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         border: `1px solid ${CARD_BORDER}`,
         borderRadius: 5,
         boxShadow: CARD_SHADOW,
-        padding: isMobile ? "12px" : "18px",
+        minHeight: isMobile ? 132 : 150,
+        padding: isMobile ? 16 : 20,
         display: "flex",
         flexDirection: "column",
-        gap: "6px",
-        textAlign: "center",
+        gap: 14,
+        textAlign: "left",
         userSelect: "none",
         justifyContent: "space-between",
     };
@@ -52,21 +53,29 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
     };
 
     const valueStyle = {
-        fontSize: isMobile ? "1rem" : "2rem",
+        marginTop: 10,
+        fontSize: isMobile ? "2rem" : "2.45rem",
+        lineHeight: 1,
         fontWeight: 700,
         color: "#000",
         fontFamily: 'var(--font-family-base)',
     };
 
-    // ✅ your preferred spark style (no border)
     const sparkStyle = {
-        height: isMobile ? "6px" : "8px",
+        width: "100%",
+        height: 10,
         borderRadius: 5,
         background: "#000",
         border: "none",
-        marginTop: "6px",
         position: "relative",
         overflow: "hidden",
+    };
+
+    const noteStyle = {
+        marginTop: 9,
+        fontSize: isMobile ? "0.92rem" : "1rem",
+        color: "#000",
+        fontWeight: 400,
     };
 
     const sparkFillStyle = (width) => ({
@@ -88,18 +97,28 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
             <AccuracyKpi mobile={isMobile} theme={theme} />
 
             <div style={cardStyle}>
-                <div style={labelStyle}>Attempts</div>
-                <div style={valueStyle}>{attempts ?? 0}</div>
-                <div style={sparkStyle}>
-                    <i style={sparkFillStyle(attemptsPct)} />
+                <div>
+                    <div style={labelStyle}>Attempts</div>
+                    <div style={valueStyle}>{attempts ?? 0}</div>
+                </div>
+                <div>
+                    <div style={sparkStyle}>
+                        <i style={sparkFillStyle(attemptsPct)} />
+                    </div>
+                    <div style={noteStyle}>Practice answers checked</div>
                 </div>
             </div>
 
             <div style={cardStyle}>
-                <div style={labelStyle}>Rules learned</div>
-                <div style={valueStyle}>{masteredRules ?? 0}</div>
-                <div style={sparkStyle}>
-                    <i style={sparkFillStyle(masteredPct)} />
+                <div>
+                    <div style={labelStyle}>Rules learned</div>
+                    <div style={valueStyle}>{masteredRules ?? 0}</div>
+                </div>
+                <div>
+                    <div style={sparkStyle}>
+                        <i style={sparkFillStyle(masteredPct)} />
+                    </div>
+                    <div style={noteStyle}>Stable grammar rules</div>
                 </div>
             </div>
 

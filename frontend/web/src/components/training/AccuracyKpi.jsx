@@ -620,11 +620,14 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     };
 
     const valueStyle = {
-        fontSize: isMobile ? "1rem" : "2rem",
+        marginTop: 10,
+        fontSize: showEmpty
+            ? isMobile ? "1.25rem" : "1.55rem"
+            : isMobile ? "2rem" : "2.45rem",
         fontWeight: 700,
         color: "#000",
         fontFamily: 'var(--font-family-base)',
-        lineHeight: 1.1,
+        lineHeight: showEmpty ? 1.15 : 1,
     };
 
     const cardStyle = {
@@ -633,24 +636,31 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         border: "1px solid #000",
         borderRadius: 5,
         boxShadow: "none",
-        padding: isMobile ? "12px" : "18px",
+        minHeight: isMobile ? 132 : 150,
+        padding: isMobile ? 16 : 20,
         display: "flex",
         flexDirection: "column",
-        gap: isMobile ? "2px" : "6px",
-        textAlign: "center",
+        gap: 14,
+        textAlign: "left",
         userSelect: "none",
         justifyContent: "space-between",
     };
 
-    // ✅ old spark bar sizes
     const sparkStyle = {
-        height: isMobile ? "6px" : "8px",
+        width: "100%",
+        height: 10,
         borderRadius: 5,
         background: "#000",
         border: "none",
-        marginTop: "6px",
         position: "relative",
         overflow: "hidden",
+    };
+
+    const noteStyle = {
+        marginTop: 9,
+        fontSize: isMobile ? "0.92rem" : "1rem",
+        color: "#000",
+        fontWeight: 400,
     };
 
 
@@ -669,19 +679,25 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     return (
         <div style={cardStyle}>
-            <div style={labelStyle}>{titleDefault}</div>
+            <div>
+                <div style={labelStyle}>{titleDefault}</div>
 
-            {showEmpty ? (
-                <div style={valueStyle}>
-                    {attemptsLeft} {attemptsLeft > 1 ? "sentences" : "sentence"} left to calculate accuracy
-                </div>
-            ) : (
-                <>
+                {showEmpty ? (
+                    <div style={valueStyle}>
+                        {attemptsLeft} {attemptsLeft > 1 ? "sentences" : "sentence"} left to calculate accuracy
+                    </div>
+                ) : (
                     <div style={valueStyle}>{(accuracy ?? 0) === 0 ? "0.00" : accuracy.toFixed(2)}%</div>
+                )}
+            </div>
+
+            {!showEmpty && (
+                <div>
                     <div style={sparkStyle}>
                         <i style={sparkFillStyle(Math.min(100, accuracy ?? 0))} />
                     </div>
-                </>
+                    <div style={noteStyle}>Overall grammar accuracy</div>
+                </div>
             )}
         </div>
     );

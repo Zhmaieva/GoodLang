@@ -15,6 +15,7 @@ export default function LevelSwitch({
                                         theme,
                                     compact = false,
                                     variant = "offset",
+                                    fullWidth = false,
                                     }) {
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -229,6 +230,7 @@ export default function LevelSwitch({
                 variant={variant}
                 theme={theme}
                 compact={compact}
+                fullWidth={fullWidth}
                 shadowColor={theme.accent}
                 shadowOffset={BUTTON_OFFSET}
                 onMouseEnter={() => {
@@ -280,7 +282,7 @@ export default function LevelSwitch({
                 title="Choose difficulty"
                 subtitle="Pick the level for the next training tasks."
                 onClose={() => setModalOpen(false)}
-                maxWidth={620}
+                maxWidth={520}
                 panelStyle={{
                     border: "1px solid #000",
                     borderRadius: 12,

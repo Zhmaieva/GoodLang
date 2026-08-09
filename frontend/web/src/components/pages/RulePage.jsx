@@ -518,7 +518,7 @@ export default function RulePage({ data, theme }) {
                         style={breadcrumbButtonStyle}
                         onClick={handleAnalyticsClick}
                     >
-                        Rules
+                        Grammar
                     </button>
                     <span>/</span>
                     <span style={breadcrumbCurrentStyle} aria-current="page">

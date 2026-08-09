@@ -253,8 +253,8 @@ export function Button({
                   paddingBottom: 4,
                   backgroundImage: "linear-gradient(#000, #000)",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "50% 100%",
-                  backgroundSize: hovered && !disabled ? "100% 2px" : "0% 2px",
+                  backgroundPosition: "0 100%",
+                  backgroundSize: hovered && !disabled ? "100% 1.5px" : "0% 1.5px",
                   transition: "background-size 220ms cubic-bezier(0.22, 1, 0.36, 1)",
               }
             : null;

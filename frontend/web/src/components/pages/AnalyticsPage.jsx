@@ -209,7 +209,7 @@ export default function AnalyticsPage({theme}) {
                             </button>
                             <span>/</span>
                             <span style={breadcrumbCurrentStyle} aria-current="page">
-                                Rules
+                                Grammar
                             </span>
                         </nav>
 

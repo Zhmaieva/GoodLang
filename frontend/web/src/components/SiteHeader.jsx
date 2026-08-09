@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "./Buttons.jsx";
-import AccountStatusButton from "./subscription/AccountStatusButton.jsx";
 import LoginModal from "./subscription/LoginModal.jsx";
-import FaqModal from "./subscription/FaqModal.jsx";
 import LocaleButton from "./LocaleButton.jsx";
 import LevelSwitch from "./training/LevelSwitch.jsx";
 import AccountStatusModal from "./subscription/AccountStatusModal.jsx";
-import { callAccountInfoApi, callAccountVerifyApi } from "../services/api.js";
+import ModalShell from "./modals/ModalShell.jsx";
+import { GearSix } from "@phosphor-icons/react";
+import { callAccountInfoApi } from "../services/api.js";
 import { marathonService } from "../services/marathonService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../services/trainingDirector.js";
-import { ACTION_TYPES } from "../utils/constants.js";
 import { off, on } from "../services/events.js";
 
 function readCachedAccountInfo() {
@@ -34,10 +33,10 @@ export default function SiteHeader({
         typeof window !== "undefined" ? window.innerWidth < 915 : false
     );
     const [isInMarathonView, setIsInMarathonView] = useState(false);
-    const [isMarathonLoaded, setIsMarathonLoaded] = useState(false);
-    const [faqVisible, setFaqVisible] = useState(false);
+    const [settingsVisible, setSettingsVisible] = useState(false);
     const [loginVisible, setLoginVisible] = useState(false);
     const [profileVisible, setProfileVisible] = useState(false);
+    const [profileHovered, setProfileHovered] = useState(false);
     const [account, setAccount] = useState(() => readCachedAccountInfo());
     const [accountLoaded, setAccountLoaded] = useState(() => Boolean(readCachedAccountInfo()));
 
@@ -47,7 +46,6 @@ export default function SiteHeader({
         const checkMarathonView = async () => {
             const result = await marathonService.isMarathonView(true);
             setIsInMarathonView(result);
-            setIsMarathonLoaded(true);
         };
 
         onResize();
@@ -89,12 +87,7 @@ export default function SiteHeader({
     }, []);
 
     const handleAnalyticsClick = async () => {
-        callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_ANALYTICS).then();
         navigate("/analytics");
-    };
-
-    const handlePracticeClick = () => {
-        navigate("/trainer");
     };
 
     const handleLogoClick = () => {
@@ -103,11 +96,6 @@ export default function SiteHeader({
 
     const handleVocabularyClick = () => {
         navigate("/vocabulary");
-    };
-
-    const handleFaqClick = async () => {
-        setFaqVisible(true);
-        await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_FAQ);
     };
 
     const handleLevelChange = (nextLevel) => {
@@ -137,6 +125,7 @@ export default function SiteHeader({
 
     const innerStyle = {
         width: "100%",
+        position: "relative",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -161,10 +150,20 @@ export default function SiteHeader({
         minWidth: "max-content",
     };
 
+    const centerGroupStyle = {
+        ...headerGroupStyle,
+        position: isMobile ? "static" : "absolute",
+        left: isMobile ? "auto" : "50%",
+        transform: isMobile ? "none" : "translateX(-50%)",
+        justifyContent: "center",
+        gap: isMobile ? 24 : 56,
+    };
+
     const rightGroupStyle = {
         ...headerGroupStyle,
         flex: "0 0 auto",
         marginLeft: "auto",
+        gap: 24,
     };
 
     const logoButtonStyle = {
@@ -182,40 +181,72 @@ export default function SiteHeader({
     };
 
     const logoMarkStyle = {
-        width: isMobile ? 36 : 44,
-        height: isMobile ? 36 : 44,
-        border: "none",
-        borderRadius: 8,
-        background: "#000",
+        width: isMobile ? 62 : 78,
+        height: isMobile ? 34 : 42,
+        border: "2px solid #000",
+        borderRadius: 0,
+        background: theme?.accent ?? "#95b5fe",
         position: "relative",
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         flex: "0 0 auto",
+        boxSizing: "border-box",
+        overflow: "hidden",
     };
 
     const logoMarkInnerStyle = {
-        position: "absolute",
-        inset: isMobile ? 5 : 6,
-        border: `${isMobile ? 2 : 3}px solid ${theme?.accent ?? "#95b5fe"}`,
-        borderRadius: 5,
-        color: theme?.accent ?? "#95b5fe",
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        fontFamily: "var(--font-family-base)",
-        fontWeight: 800,
-        fontSize: isMobile ? "1rem" : "1.18rem",
-        lineHeight: 1,
+        width: "100%",
+        height: "100%",
+        color: "#000",
+        fontFamily: '"Antonio", sans-serif',
+        fontWeight: 700,
+        fontSize: isMobile ? "2.18rem" : "2.85rem",
+        lineHeight: 0.78,
+        letterSpacing: "-0.08em",
+        textTransform: "uppercase",
+        transform: "scaleX(1.22)",
     };
 
-    const logoTextStyle = {
-        fontFamily: '"Antonio", sans-serif',
-        fontWeight: 200,
-        fontSize: isMobile ? "1.35rem" : "1.78rem",
+    const logoRegistrationStyle = {
+        position: "absolute",
+        top: isMobile ? 2 : 3,
+        right: isMobile ? 3 : 4,
+        width: isMobile ? 9 : 11,
+        height: isMobile ? 9 : 11,
+        border: "1px solid #000",
+        borderRadius: "50%",
+        color: "#000",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "Arial, sans-serif",
+        fontWeight: 800,
+        fontSize: isMobile ? "0.42rem" : "0.5rem",
         lineHeight: 1,
-        letterSpacing: "0.02em",
-        textTransform: "uppercase",
+        background: "transparent",
+    };
+
+    const settingsContentStyle = {
+        display: "grid",
+        gap: 14,
+    };
+
+    const settingsIconButtonStyle = {
+        appearance: "none",
+        border: "none",
+        background: "transparent",
+        color: "#000",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 0,
+        margin: 0,
+        cursor: "pointer",
+        lineHeight: 1,
     };
 
     return (
@@ -231,64 +262,47 @@ export default function SiteHeader({
                         >
                             <span style={logoMarkStyle}>
                                 <span style={logoMarkInnerStyle}>GL</span>
+                                <span style={logoRegistrationStyle}>R</span>
                             </span>
-                            <span style={logoTextStyle}>GoodLang</span>
                         </button>
-
-                        <Button
-                            variant="header"
-                            compact
-                            isMobile={isMobile}
-                            theme={theme}
-                            onClick={handleFaqClick}
-                        >
-                            FAQ
-                        </Button>
-
-                        <AccountStatusButton theme={theme} variant="header" />
-
-                        {!isMobile && isMarathonLoaded && !isInMarathonView && (
-                            <>
-                                <Button
-                                    variant="header"
-                                    compact
-                                    isMobile={isMobile}
-                                    theme={theme}
-                                    onClick={handleAnalyticsClick}
-                                >
-                                    GRAMMAR
-                                </Button>
-
-                                <Button
-                                    variant="header"
-                                    compact
-                                    isMobile={isMobile}
-                                    theme={theme}
-                                    onClick={handleVocabularyClick}
-                                >
-                                    VOCABULARY
-                                </Button>
-
-                                <LocaleButton
-                                    compact
-                                    isMobile={isMobile}
-                                    theme={theme}
-                                    variant="header"
-                                />
-
-                                <LevelSwitch
-                                    compact
-                                    level={level}
-                                    loading={loading}
-                                    onLevelChange={handleLevelChange}
-                                    theme={theme}
-                                    variant="header"
-                                />
-                            </>
-                        )}
                     </div>
 
+                    {!isMobile && !isInMarathonView && (
+                        <nav style={centerGroupStyle} aria-label="Main navigation">
+                            <Button
+                                variant="header"
+                                compact
+                                isMobile={isMobile}
+                                theme={theme}
+                                onClick={handleAnalyticsClick}
+                            >
+                                GRAMMAR
+                            </Button>
+
+                            <Button
+                                variant="header"
+                                compact
+                                isMobile={isMobile}
+                                theme={theme}
+                                onClick={handleVocabularyClick}
+                            >
+                                VOCABULARY
+                            </Button>
+                        </nav>
+                    )}
+
                     <div style={rightGroupStyle}>
+                        {!isInMarathonView && (
+                            <Button
+                                variant="plain"
+                                aria-label="Open settings"
+                                onClick={() => setSettingsVisible(true)}
+                                style={settingsIconButtonStyle}
+                            >
+                                <GearSix size={isMobile ? 24 : 30} weight="regular" aria-hidden />
+                            </Button>
+                        )}
+
                         {accountLoaded && (
                             isSignedIn ? (
                                 <Button
@@ -298,6 +312,12 @@ export default function SiteHeader({
                                     theme={theme}
                                     shadowColor={theme.accent}
                                     shadowOffset={4}
+                                    onMouseEnter={() => setProfileHovered(true)}
+                                    onMouseLeave={() => setProfileHovered(false)}
+                                    style={{
+                                        backgroundColor: profileHovered ? "#000" : theme.accent,
+                                        color: profileHovered ? theme.bg : "#000",
+                                    }}
                                     onClick={() => setProfileVisible(true)}
                                 >
                                     PROFILE
@@ -320,12 +340,35 @@ export default function SiteHeader({
                 </div>
             </header>
 
-            {faqVisible && (
-                <FaqModal
+            <ModalShell
+                open={settingsVisible}
+                id="site-settings-modal"
+                theme={theme}
+                title="Settings"
+                subtitle="Language direction and training difficulty."
+                onClose={() => setSettingsVisible(false)}
+                maxWidth={520}
+                contentStyle={settingsContentStyle}
+            >
+                <LocaleButton
+                    compact
+                    fullWidth
+                    isMobile={isMobile}
                     theme={theme}
-                    onClose={() => setFaqVisible(false)}
+                    variant="offset"
+                    style={{ width: "100%" }}
                 />
-            )}
+
+                <LevelSwitch
+                    compact
+                    fullWidth
+                    level={level}
+                    loading={loading}
+                    onLevelChange={handleLevelChange}
+                    theme={theme}
+                    variant="offset"
+                />
+            </ModalShell>
 
             <LoginModal
                 forceLogin

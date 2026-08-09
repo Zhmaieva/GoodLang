@@ -6,7 +6,7 @@ import {legacyGlobalStyling} from "../../App.jsx";
 import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
-import { Button, HEADER_BUTTON_FONT_FAMILY, HEADER_BUTTON_FONT_WEIGHT } from "../Buttons.jsx";
+import { Button } from "../Buttons.jsx";
 import { X } from "@phosphor-icons/react";
 
 let stripeLoaded = null;
@@ -231,10 +231,10 @@ export default function LimitModal({
         marginBottom: 0,
         marginTop: 0,
         color: theme.text,
-        fontFamily: HEADER_BUTTON_FONT_FAMILY,
+        fontFamily: "var(--font-family-base)",
         fontSize: "1.75rem",
-        fontWeight: HEADER_BUTTON_FONT_WEIGHT,
-        letterSpacing: "0.02em",
+        fontWeight: 700,
+        letterSpacing: 0,
         lineHeight: 1,
     };
 

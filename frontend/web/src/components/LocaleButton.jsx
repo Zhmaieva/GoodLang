@@ -49,6 +49,9 @@ export default function LocaleButton({
                                          shadowColor,
                                          shadowOffset = 4,
                                          variant = "offset",
+                                         fullWidth = false,
+                                         style,
+                                         wrapperStyle,
                                      }) {
     const [modalOpen, setModalOpen] = useState(false);
     const [currentLocale, setCurrentLocale] = useState(
@@ -86,10 +89,13 @@ export default function LocaleButton({
                 compact={compact}
                 isMobile={isMobile}
                 theme={theme}
+                fullWidth={fullWidth}
                 shadowColor={shadowColor ?? theme.accent}
                 shadowOffset={shadowOffset}
+                wrapperStyle={wrapperStyle}
                 style={{
                     minWidth: variant === "header" ? undefined : "120px",
+                    ...style,
                 }}
                 onClick={handleOpen}
             >

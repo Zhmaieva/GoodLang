@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { X } from "@phosphor-icons/react";
 import { APP_ACCENT_COLOR, APP_BACKGROUND_COLOR } from "../../theme.js";
-import { HEADER_BUTTON_FONT_FAMILY, HEADER_BUTTON_FONT_WEIGHT } from "../Buttons.jsx";
 
 export const modalShellTokens = {
     panelPadding: "40px",
@@ -129,11 +128,11 @@ export default function ModalShell({
                                     textAlign: "left",
                                     margin: 0,
                                     color: text,
-                                    fontFamily: HEADER_BUTTON_FONT_FAMILY,
+                                    fontFamily: "var(--font-family-base)",
                                     fontSize: "2rem",
-                                    fontWeight: HEADER_BUTTON_FONT_WEIGHT,
+                                    fontWeight: 700,
                                     lineHeight: 1,
-                                    letterSpacing: "0.02em",
+                                    letterSpacing: 0,
                                     ...titleStyle,
                                 }}
                             >

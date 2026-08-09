@@ -9,14 +9,20 @@ import ModalShell from "../modals/ModalShell.jsx";
 
 export default function AccountStatusModal({ accountInfo, theme, open, onClose, status }) {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
+    const [manageLoading, setManageLoading] = useState(false);
     const [account] = useState(accountInfo);
 
     const onManage = async () => {
+        if (manageLoading) return;
+
+        setManageLoading(true);
         try {
             const { url } = await callManageSubscriptionApi();
-            window.open(url, "_blank");
+            if (!url) throw new Error("Subscription management URL was not returned");
+            window.location.assign(url);
         } catch (e) {
             console.error("Failed to open subscription management", e);
+            setManageLoading(false);
         }
     };
 
@@ -115,9 +121,10 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             shadowColor={theme.accent}
                             shadowOffset={5}
                             style={buttonStyle}
+                            disabled={manageLoading}
                             onClick={onManage}
                         >
-                            Manage subscription
+                            {manageLoading ? "Opening..." : "Manage subscription"}
                         </Button>
                     )}
 
