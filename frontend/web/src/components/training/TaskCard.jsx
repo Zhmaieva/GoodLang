@@ -164,7 +164,6 @@ export default function TaskCard({
         : mainBtnText;
     const cleanHint = String(hint ?? "").replace(/^hint:\s*/i, "").trim();
     const showHintLabel = localizationService.localize("showHint");
-    const hideHintLabel = localizationService.localize("hideHint");
 
     useEffect(() => {
         setHintVisible(false);
@@ -534,29 +533,29 @@ export default function TaskCard({
                         )}
                     </Button>
 
-                    {cleanHint && !loading && (
+                    {cleanHint && !loading && !hintVisible && (
                         <Button
                             variant="unstyled"
                             style={styles.hintButton}
-                            aria-expanded={hintVisible}
+                            aria-expanded={false}
                             aria-controls="task-hint"
                             onMouseEnter={() => setHintButtonHovered(true)}
                             onMouseLeave={() => setHintButtonHovered(false)}
-                            onClick={() => setHintVisible((value) => !value)}
+                            onClick={() => setHintVisible(true)}
                         >
                             <span style={styles.hintIcon}>
                                 <Lightbulb size={14} weight="regular" />
                             </span>
-                            <span>{hintVisible ? hideHintLabel : showHintLabel}</span>
+                            <span>{showHintLabel}</span>
                         </Button>
                     )}
-                </div>
 
-                {cleanHint && !loading && hintVisible && (
-                    <div id="task-hint" style={{ ...styles.hintPanel, alignSelf: "center" }}>
-                        <div style={styles.hintText}>{renderHintContent(cleanHint)}</div>
-                    </div>
-                )}
+                    {cleanHint && !loading && hintVisible && (
+                        <div id="task-hint" style={styles.hintPanel}>
+                            <div style={styles.hintText}>{renderHintContent(cleanHint)}</div>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

@@ -118,7 +118,7 @@ const STATUS_META = {
     recovered: {
         label: "Recovered",
         color: APP_ACCENT_COLOR,
-        textColor: "#000",
+        textColor: "#fff",
     },
     needsPractice: {
         label: "Needs practice",

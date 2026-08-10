@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./Buttons.jsx";
-import LoginModal from "./subscription/LoginModal.jsx";
+import LimitModal from "./subscription/LimitModal.jsx";
 import LocaleButton from "./LocaleButton.jsx";
 import LevelSwitch from "./training/LevelSwitch.jsx";
-import AccountStatusModal from "./subscription/AccountStatusModal.jsx";
 import ModalShell from "./modals/ModalShell.jsx";
 import { GearSix } from "@phosphor-icons/react";
 import { callAccountInfoApi } from "../services/api.js";
@@ -16,6 +15,7 @@ import {
     APP_ACCENT_SOFT_COLOR,
     APP_BORDER_COLOR,
     APP_DARK_COLOR,
+    APP_MUTED_TEXT_COLOR,
     APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../theme.js";
@@ -43,8 +43,7 @@ export default function SiteHeader({
     );
     const [isInMarathonView, setIsInMarathonView] = useState(false);
     const [settingsVisible, setSettingsVisible] = useState(false);
-    const [loginVisible, setLoginVisible] = useState(false);
-    const [profileVisible, setProfileVisible] = useState(false);
+    const [subscribeVisible, setSubscribeVisible] = useState(false);
     const [profileHovered, setProfileHovered] = useState(false);
     const [account, setAccount] = useState(() => readCachedAccountInfo());
     const [accountLoaded, setAccountLoaded] = useState(() => Boolean(readCachedAccountInfo()));
@@ -134,6 +133,7 @@ export default function SiteHeader({
     const border = theme?.border ?? APP_BORDER_COLOR;
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
+    const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
     const dark = theme?.dark ?? APP_DARK_COLOR;
 
     const headerStyle = {
@@ -243,6 +243,17 @@ export default function SiteHeader({
         display: "none",
     };
 
+    const backToRulesButtonStyle = {
+        color: muted,
+        fontFamily: "var(--font-family-base)",
+        fontSize: isMobile ? "0.92rem" : "0.98rem",
+        fontWeight: 500,
+        letterSpacing: 0,
+        marginLeft: isRulePage && !isMobile ? 42 : 0,
+        padding: 0,
+        textDecoration: "none",
+    };
+
     const settingsContentStyle = {
         display: "grid",
         gap: 14,
@@ -285,10 +296,11 @@ export default function SiteHeader({
 
                         {isRulePage && !isInMarathonView && (
                             <Button
-                                variant="header"
+                                variant="plain"
                                 compact
                                 isMobile={isMobile}
                                 theme={theme}
+                                style={backToRulesButtonStyle}
                                 onClick={handleBackToRulesClick}
                             >
                                 ← Back to rules
@@ -360,7 +372,7 @@ export default function SiteHeader({
                                         backgroundColor: profileHovered ? dark : surface,
                                         color: profileHovered ? "#fff" : text,
                                     }}
-                                    onClick={() => setProfileVisible(true)}
+                                    onClick={() => navigate("/profile")}
                                 >
                                     PROFILE
                                 </Button>
@@ -372,9 +384,9 @@ export default function SiteHeader({
                                     theme={theme}
                                     shadowOffset={0}
                                     style={{ minWidth: isMobile ? 82 : 96 }}
-                                    onClick={() => setLoginVisible(true)}
+                                    onClick={() => setSubscribeVisible(true)}
                                 >
-                                    SIGN IN
+                                    SUBSCRIBE
                                 </Button>
                             )
                         )}
@@ -412,29 +424,16 @@ export default function SiteHeader({
                 />
             </ModalShell>
 
-            <LoginModal
-                forceLogin
+            <LimitModal
+                subscribeIntent
+                isLimitReached={false}
                 theme={theme}
-                account={account}
-                open={loginVisible}
+                open={subscribeVisible}
                 onClose={() => {
-                    setLoginVisible(false);
+                    setSubscribeVisible(false);
                     loadAccountInfo().then();
                 }}
             />
-
-            {isSignedIn && (
-                <AccountStatusModal
-                    accountInfo={account}
-                    theme={theme}
-                    open={profileVisible}
-                    onClose={() => {
-                        setProfileVisible(false);
-                        loadAccountInfo().then();
-                    }}
-                    status={account?.status}
-                />
-            )}
         </>
     );
 }
