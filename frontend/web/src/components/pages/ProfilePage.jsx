@@ -14,7 +14,7 @@ import ChooseLocaleModal from "../modals/ChooseLocaleModal.jsx";
 import ModalShell from "../modals/ModalShell.jsx";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "../subscription/AccountStatusModal.jsx";
-import { callAccountInfoApi } from "../../services/api.js";
+import { callAccountInfoApi, callManageSubscriptionApi } from "../../services/api.js";
 import { localizationService } from "../../localization/localizationService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
 import {
@@ -96,6 +96,9 @@ export default function ProfilePage({ theme }) {
     const [hoveredRow, setHoveredRow] = useState(null);
     const [limitVisible, setLimitVisible] = useState(false);
     const [accountStatusVisible, setAccountStatusVisible] = useState(false);
+    const [billingVisible, setBillingVisible] = useState(false);
+    const [billingLoading, setBillingLoading] = useState(false);
+    const [billingError, setBillingError] = useState("");
     const [languageVisible, setLanguageVisible] = useState(false);
     const [levelVisible, setLevelVisible] = useState(false);
     const [legalVisible, setLegalVisible] = useState(false);
@@ -140,7 +143,7 @@ export default function ProfilePage({ theme }) {
         ? "paid"
         : account?.status;
 
-    const handleManageSubscription = () => {
+    const handlePlanOverview = () => {
         if (!billingStatus) return;
 
         if (billingStatus === "free") {
@@ -149,6 +152,38 @@ export default function ProfilePage({ theme }) {
         }
 
         setAccountStatusVisible(true);
+    };
+
+    const handleBilling = () => {
+        if (!billingStatus || billingLoading) return;
+
+        if (billingStatus === "free") {
+            setLimitVisible(true);
+            return;
+        }
+
+        setBillingError("");
+        setBillingVisible(true);
+    };
+
+    const openBillingPortal = async () => {
+        if (billingLoading) return;
+
+        setBillingLoading(true);
+        setBillingError("");
+        try {
+            const { url } = await callManageSubscriptionApi();
+            if (url) {
+                window.location.assign(url);
+                return;
+            }
+            setBillingError("We couldn't open billing for this account. Please contact us at goodlang.app@gmail.com.");
+        } catch (error) {
+            console.error("Failed to open billing portal", error);
+            setBillingError("We couldn't open billing for this account. Please contact us at goodlang.app@gmail.com.");
+        } finally {
+            setBillingLoading(false);
+        }
     };
 
     const handleLevelSelect = (nextLevel) => {
@@ -165,6 +200,11 @@ export default function ProfilePage({ theme }) {
     const closeLegalModal = () => {
         setLegalVisible(false);
         setLegalView("menu");
+    };
+
+    const closeBillingModal = () => {
+        setBillingVisible(false);
+        setBillingError("");
     };
 
     const pageStyle = {
@@ -318,6 +358,11 @@ export default function ProfilePage({ theme }) {
         gap: 12,
     };
 
+    const billingGridStyle = {
+        display: "grid",
+        gap: 12,
+    };
+
     const levelButtonStyle = (selected) => ({
         justifyContent: "center",
         gap: 10,
@@ -346,6 +391,23 @@ export default function ProfilePage({ theme }) {
     const legalButtonStyle = {
         justifyContent: "center",
         boxShadow: "none",
+    };
+
+    const billingPrimaryButtonStyle = {
+        justifyContent: "center",
+        background: colors.dark,
+        color: "#fff",
+        borderColor: colors.dark,
+        boxShadow: "none",
+    };
+
+    const billingErrorStyle = {
+        margin: 0,
+        color: colors.muted,
+        fontSize: "0.86rem",
+        fontWeight: 400,
+        lineHeight: 1.4,
+        textAlign: "center",
     };
 
     const legalContentStyle = {
@@ -567,15 +629,17 @@ export default function ProfilePage({ theme }) {
                             icon: <CrownSimple style={iconStyle} weight="regular" />,
                             title: "Current plan",
                             value: planLabel,
-                            onClick: handleManageSubscription,
+                            onClick: handlePlanOverview,
                         })}
                         {renderRow({
                             key: "billing",
                             icon: <CreditCard style={iconStyle} weight="regular" />,
                             title: "Billing",
-                            subtitle: "Manage plan, renewal, and payment method",
+                            subtitle: billingLoading
+                                ? "Opening billing..."
+                                : "Manage plan, renewal, and payment method",
                             divider: false,
-                            onClick: handleManageSubscription,
+                            onClick: handleBilling,
                         })}
                     </section>
 
@@ -623,6 +687,32 @@ export default function ProfilePage({ theme }) {
                     status={billingStatus}
                 />
             )}
+            <ModalShell
+                open={billingVisible}
+                id="profile-billing-modal"
+                theme={theme}
+                title="Billing"
+                subtitle="Manage your plan, renewal, and payment method."
+                onClose={closeBillingModal}
+                maxWidth={520}
+                titleStyle={{ fontSize: "1.75rem" }}
+                contentStyle={billingGridStyle}
+            >
+                <Button
+                    variant="offset"
+                    compact
+                    fullWidth
+                    theme={theme}
+                    shadowColor={theme.accent}
+                    shadowOffset={0}
+                    style={billingPrimaryButtonStyle}
+                    disabled={billingLoading}
+                    onClick={openBillingPortal}
+                >
+                    {billingLoading ? "Opening..." : "Manage subscription"}
+                </Button>
+                {billingError && <p style={billingErrorStyle}>{billingError}</p>}
+            </ModalShell>
             <ModalShell
                 open={levelVisible}
                 id="profile-level-modal"
