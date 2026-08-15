@@ -3,6 +3,7 @@ import AppShell from "../AppShell.jsx";
 import SiteHeader from "../SiteHeader.jsx";
 import FooterBar from "../FooterBar.jsx";
 import { Button } from "../Buttons.jsx";
+import Pagination from "../Pagination.jsx";
 import { CaretDown, CaretUp } from "@phosphor-icons/react";
 import {
     APP_ACCENT_COLOR,
@@ -101,6 +102,8 @@ const VOCABULARY_WORDS = [
         example: "I asked for a refund.",
     },
 ];
+
+const WORDS_PER_PAGE = 10;
 
 const FILTERS = [
     { id: "all", label: "All" },
@@ -272,6 +275,7 @@ export default function VocabularyPage({ theme }) {
     const [activeFilter, setActiveFilter] = useState("all");
     const [sortKey, setSortKey] = useState("level");
     const [sortDir, setSortDir] = useState("asc");
+    const [page, setPage] = useState(1);
 
     useEffect(() => {
         const onResize = () => setIsMobile(window.innerWidth < 915);
@@ -336,6 +340,22 @@ export default function VocabularyPage({ theme }) {
 
         return list;
     }, [activeFilter, sortKey, sortDir]);
+
+    const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
+
+    const paginatedWords = useMemo(() => {
+        const safePage = Math.min(page, totalPages);
+        const start = (safePage - 1) * WORDS_PER_PAGE;
+        return filteredWords.slice(start, start + WORDS_PER_PAGE);
+    }, [filteredWords, page, totalPages]);
+
+    useEffect(() => {
+        setPage(1);
+    }, [activeFilter, sortKey, sortDir]);
+
+    useEffect(() => {
+        setPage((currentPage) => Math.min(currentPage, totalPages));
+    }, [totalPages]);
 
     const pageLayoutStyle = {
         width: "100%",
@@ -603,13 +623,13 @@ export default function VocabularyPage({ theme }) {
                                         <SortHeader columnKey="status">Status</SortHeader>
                                     </div>
 
-                                    {filteredWords.map((item, index) => (
+                                    {paginatedWords.map((item, index) => (
                                         <article
                                             key={item.id}
                                             style={{
                                                 ...tableRowStyle,
                                                 borderBottom:
-                                                    index === filteredWords.length - 1 ? "none" : tableRowStyle.borderBottom,
+                                                    index === paginatedWords.length - 1 ? "none" : tableRowStyle.borderBottom,
                                             }}
                                         >
                                             <div style={wordNameStyle}>
@@ -628,6 +648,17 @@ export default function VocabularyPage({ theme }) {
                                         </article>
                                     ))}
                                 </div>
+
+                                <Pagination
+                                    page={page}
+                                    totalPages={totalPages}
+                                    onPageChange={setPage}
+                                    theme={theme}
+                                    isMobile={isMobile}
+                                    style={{
+                                        marginTop: 12,
+                                    }}
+                                />
                             </section>
 
                         </section>

@@ -4,6 +4,7 @@ import {dowloadPdf} from "../../services/api.js";
 import PdfTypeModal from "../modals/PdfTypeModal.jsx";
 import {getPdfDownloads, setPdfDownloads} from "../../services/dataService.js";
 import {featureToggleService} from "../../services/featureToggleService.js";
+import Pagination from "../Pagination.jsx";
 import {
     APP_ACCENT_COLOR,
     APP_BACKGROUND_COLOR,
@@ -25,6 +26,8 @@ export default function RulesTable({
                                        theme,
                                        advanced = true
                                    }) {
+    const ROWS_PER_PAGE = 12;
+
     const LEVEL_MAP = {
         A1: { label: "Beginner" },
         A2: { label: "Intermediate" },
@@ -34,26 +37,12 @@ export default function RulesTable({
 
     // Hidden sort order (lower -> higher)
     const LEVEL_ORDER = { A1: 1, A2: 2, B1: 3, B2: 4 };
-    const STORAGE_KEY = "rules_table_sort_v2";
 
     const [isMobile, setIsMobile] = useState(false);
 
-    function readSortFromLS() {
-        try {
-            const raw = localStorage.getItem(STORAGE_KEY);
-            if (!raw) return null;
-            const parsed = JSON.parse(raw);
-            if (!parsed?.sortKey || !parsed?.sortDir) return null;
-            return parsed;
-        } catch (_) {
-            return null;
-        }
-    }
-
-    const saved = readSortFromLS();
-
-    const [sortKey, setSortKey] = useState(saved?.sortKey ?? "level");
-    const [sortDir, setSortDir] = useState(saved?.sortDir ?? "asc");
+    const [sortKey, setSortKey] = useState("level");
+    const [sortDir, setSortDir] = useState("asc");
+    const [page, setPage] = useState(1);
 
     const scrollRef = React.useRef(null);
     const rowRefs = React.useRef({});
@@ -93,32 +82,11 @@ export default function RulesTable({
         }
     }
 
-    // save whenever user changes
-    useEffect(() => {
-        try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify({ sortKey, sortDir }));
-        } catch (_) {}
-    }, [sortKey, sortDir]);
-
     useEffect(() => {
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);
-    }, []);
-
-    // load saved sorting
-    useEffect(() => {
-        try {
-            const raw = localStorage.getItem(STORAGE_KEY);
-            if (!raw) return;
-
-            const parsed = JSON.parse(raw);
-
-            if (parsed.sortKey === "ruleName") parsed.sortKey = "level";
-            if (parsed?.sortKey) setSortKey(parsed.sortKey);
-            if (parsed?.sortDir) setSortDir(parsed.sortDir);
-        } catch (_) {}
     }, []);
 
     const toggleSort = (key) => {
@@ -185,6 +153,22 @@ export default function RulesTable({
 
         return list;
     }, [rows, sortKey, sortDir, statusOf]);
+
+    const totalPages = Math.max(1, Math.ceil(sortedRows.length / ROWS_PER_PAGE));
+
+    const paginatedRows = useMemo(() => {
+        const safePage = Math.min(page, totalPages);
+        const start = (safePage - 1) * ROWS_PER_PAGE;
+        return sortedRows.slice(start, start + ROWS_PER_PAGE);
+    }, [page, sortedRows, totalPages]);
+
+    useEffect(() => {
+        setPage(1);
+    }, [rows, sortKey, sortDir]);
+
+    useEffect(() => {
+        setPage((currentPage) => Math.min(currentPage, totalPages));
+    }, [totalPages]);
 
     const barColor = theme?.accent ?? APP_ACCENT_COLOR;
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
@@ -307,9 +291,12 @@ export default function RulesTable({
         }
 
         autoDownloadRanRef.current = true;
+        setPage(Math.floor(idx / ROWS_PER_PAGE) + 1);
 
         requestAnimationFrame(() => {
-            scrollRowToTop(idx, 0);
+            requestAnimationFrame(() => {
+                scrollRowToTop(idx % ROWS_PER_PAGE, 0);
+            });
         });
 
         // ✅ start immediately from URL (no modal)
@@ -376,7 +363,7 @@ export default function RulesTable({
                 }}
             >
                 <div id="tbody">
-                    {sortedRows.map((r, idx) => {
+                    {paginatedRows.map((r, idx) => {
                         const a = r.accuracy;
                         const st = statusOf(r);
 
@@ -492,6 +479,18 @@ export default function RulesTable({
                     })}
                 </div>
             </div>
+
+            <Pagination
+                page={page}
+                totalPages={totalPages}
+                onPageChange={setPage}
+                theme={theme}
+                isMobile={isMobile}
+                style={{
+                    borderTop: `1px solid ${border}`,
+                    background: surface,
+                }}
+            />
 
             <PdfTypeModal
                 account={account}

@@ -133,6 +133,7 @@ export default function HomePage({ theme }) {
         background: theme?.surface ?? APP_SURFACE_COLOR,
         boxShadow: "0 24px 70px rgba(31, 36, 54, 0.08)",
         boxSizing: "border-box",
+        transform: "translateY(-20px)",
     };
 
     const mainContentStyle = {

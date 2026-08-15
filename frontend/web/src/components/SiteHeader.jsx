@@ -5,7 +5,6 @@ import LimitModal from "./subscription/LimitModal.jsx";
 import LocaleButton from "./LocaleButton.jsx";
 import LevelSwitch from "./training/LevelSwitch.jsx";
 import ModalShell from "./modals/ModalShell.jsx";
-import { GearSix } from "@phosphor-icons/react";
 import { callAccountInfoApi } from "../services/api.js";
 import { marathonService } from "../services/marathonService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../services/trainingDirector.js";
@@ -259,24 +258,6 @@ export default function SiteHeader({
         gap: 14,
     };
 
-    const settingsIconButtonStyle = {
-        appearance: "none",
-        border: `1px solid ${border}`,
-        background: surface,
-        color: text,
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: isMobile ? 38 : 40,
-        height: isMobile ? 38 : 40,
-        borderRadius: 999,
-        padding: 0,
-        margin: 0,
-        cursor: "pointer",
-        lineHeight: 1,
-        boxShadow: "none",
-    };
-
     return (
         <>
             <header style={headerStyle}>
@@ -346,17 +327,6 @@ export default function SiteHeader({
                     )}
 
                     <div style={rightGroupStyle}>
-                        {!isInMarathonView && (
-                            <Button
-                                variant="plain"
-                                aria-label="Open settings"
-                                onClick={() => setSettingsVisible(true)}
-                                style={settingsIconButtonStyle}
-                            >
-                                <GearSix size={isMobile ? 24 : 30} weight="regular" aria-hidden />
-                            </Button>
-                        )}
-
                         {accountLoaded && (
                             isSignedIn ? (
                                 <Button

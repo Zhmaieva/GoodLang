@@ -23,7 +23,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
     const gridStyle = {
         display: "grid",
         gap: isMobile ? "12px" : "18px",
-        marginTop: "18px",
+        marginTop: 0,
         gridTemplateColumns: isMobile
             ? "repeat(auto-fit, minmax(120px, 1fr))"
             : "repeat(4, 1fr)",

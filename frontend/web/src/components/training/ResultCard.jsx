@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { RULE_LABELS } from "../../utils/rules.js";
 import { Button } from "../Buttons.jsx";
 import {
@@ -116,6 +117,36 @@ export default function ResultCard({
     const hasResult = isCorrect || isIncorrect;
     const hasNeutralMessage = !hasResult && Boolean(cleanHint);
     const shouldRender = hasResult || hasNeutralMessage;
+    const isContinueDisabled = isDetailedLoading && isIncorrect;
+
+    useEffect(() => {
+        if (!hasResult || hasNeutralMessage || isContinueDisabled || typeof onContinue !== "function") {
+            return undefined;
+        }
+
+        const handleKeyDown = (event) => {
+            if (event.key !== "Enter") {
+                return;
+            }
+
+            const target = event.target;
+            const tagName = target?.tagName;
+            const isTypingField = target?.isContentEditable
+                || tagName === "INPUT"
+                || tagName === "TEXTAREA"
+                || tagName === "SELECT";
+
+            if (isTypingField) {
+                return;
+            }
+
+            event.preventDefault();
+            onContinue();
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [hasResult, hasNeutralMessage, isContinueDisabled, onContinue]);
 
     if (!shouldRender) {
         return null;
@@ -460,7 +491,7 @@ export default function ResultCard({
                 <Button
                     variant="primary"
                     theme={theme}
-                    disabled={isDetailedLoading && isIncorrect}
+                    disabled={isContinueDisabled}
                     onClick={onContinue}
                     style={styles.actionButton}
                 >
