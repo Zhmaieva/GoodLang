@@ -40,11 +40,20 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
             ? "7-day marathon. Subscription ends when the marathon finishes or if you drop out."
             : "Monthly subscription";
 
-    const buttonStyle = {
-        backgroundColor: theme.accent,
+    const primaryButtonStyle = {
+        justifyContent: "center",
+        background: theme.dark,
         color: "#fff",
-        borderColor: "transparent",
-        boxShadow: "0 12px 28px rgba(116, 119, 184, 0.16)",
+        borderColor: theme.dark,
+        boxShadow: "none",
+    };
+
+    const secondaryButtonStyle = {
+        justifyContent: "center",
+        background: theme.surface,
+        color: theme.text,
+        borderColor: theme.border,
+        boxShadow: "none",
     };
 
     return (
@@ -60,21 +69,6 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                 maxWidth={480}
                 panelStyle={{ borderColor: theme.border }}
             >
-                {account?.email && (
-                    <p
-                        style={{
-                            marginTop: 0,
-                            marginBottom: 18,
-                            color: theme.text,
-                            fontSize: "1rem",
-                            fontWeight: 400,
-                            textAlign: "left",
-                        }}
-                    >
-                        {account.email}
-                    </p>
-                )}
-
                 {status !== "free" && (
                     <div style={{ textAlign: "left", margin: "0 0 28px 0" }}>
                         <ul
@@ -82,7 +76,10 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 listStyle: "none",
                                 padding: 0,
                                 margin: 0,
-                                lineHeight: "1.7",
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: "12px",
+                                lineHeight: 1.35,
                                 color: theme.text,
                                 fontSize: "16px",
                                 fontWeight: 400,
@@ -94,14 +91,30 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                                 "Access from all devices",
                                 "Priority support",
                             ].map((item) => (
-                                <li key={item}>
-                                    <Check
-                                        size={16}
-                                        weight="bold"
-                                        color={theme.accent}
+                                <li
+                                    key={item}
+                                    style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "12px",
+                                    }}
+                                >
+                                    <span
                                         aria-hidden
-                                        style={{ marginRight: 8, verticalAlign: "-2px" }}
-                                    />
+                                        style={{
+                                            width: 28,
+                                            height: 28,
+                                            borderRadius: "50%",
+                                            backgroundColor: theme.accentSoft,
+                                            color: theme.accent,
+                                            display: "inline-flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            flex: "0 0 auto",
+                                        }}
+                                    >
+                                        <Check size={18} weight="bold" />
+                                    </span>
                                     {item}
                                 </li>
                             ))}
@@ -124,7 +137,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             fullWidth
                             shadowColor={theme.accent}
                             shadowOffset={0}
-                            style={buttonStyle}
+                            style={primaryButtonStyle}
                             disabled={manageLoading}
                             onClick={onManage}
                         >
@@ -139,7 +152,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                         shadowColor={theme.accent}
                         shadowOffset={0}
                         onClick={() => setLoginModalOpen(true)}
-                        style={buttonStyle}
+                        style={secondaryButtonStyle}
                     >
                         Sign in to another account
                     </Button>

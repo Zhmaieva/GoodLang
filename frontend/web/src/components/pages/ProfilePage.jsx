@@ -12,7 +12,9 @@ import SiteHeader from "../SiteHeader.jsx";
 import { Button } from "../Buttons.jsx";
 import ChooseLocaleModal from "../modals/ChooseLocaleModal.jsx";
 import ModalShell from "../modals/ModalShell.jsx";
-import { callAccountInfoApi, callManageSubscriptionApi } from "../../services/api.js";
+import LimitModal from "../subscription/LimitModal.jsx";
+import AccountStatusModal from "../subscription/AccountStatusModal.jsx";
+import { callAccountInfoApi } from "../../services/api.js";
 import { localizationService } from "../../localization/localizationService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
 import {
@@ -92,9 +94,12 @@ function getPlanLabel(account) {
 export default function ProfilePage({ theme }) {
     const [account, setAccount] = useState(() => readCachedAccountInfo());
     const [hoveredRow, setHoveredRow] = useState(null);
-    const [billingLoading, setBillingLoading] = useState(false);
+    const [limitVisible, setLimitVisible] = useState(false);
+    const [accountStatusVisible, setAccountStatusVisible] = useState(false);
     const [languageVisible, setLanguageVisible] = useState(false);
     const [levelVisible, setLevelVisible] = useState(false);
+    const [legalVisible, setLegalVisible] = useState(false);
+    const [legalView, setLegalView] = useState("menu");
     const [selectedLevel, setSelectedLevel] = useState(getSavedTrainingLevel() || "managed");
     const [isMobile, setIsMobile] = useState(
         typeof window !== "undefined" ? window.innerWidth < 760 : false
@@ -131,27 +136,35 @@ export default function ProfilePage({ theme }) {
     const languagePair = getLanguagePairLabel();
     const levelLabel = LEVEL_LABELS[selectedLevel] || "Adaptive";
     const planLabel = getPlanLabel(account);
+    const billingStatus = account?.status === "active" || account?.isPaid
+        ? "paid"
+        : account?.status;
 
-    const handleManageSubscription = async () => {
-        if (billingLoading) return;
+    const handleManageSubscription = () => {
+        if (!billingStatus) return;
 
-        setBillingLoading(true);
-        try {
-            const { url } = await callManageSubscriptionApi();
-            if (url) {
-                window.location.href = url;
-            }
-        } catch (error) {
-            console.error("Failed to open billing portal", error);
-        } finally {
-            setBillingLoading(false);
+        if (billingStatus === "free") {
+            setLimitVisible(true);
+            return;
         }
+
+        setAccountStatusVisible(true);
     };
 
     const handleLevelSelect = (nextLevel) => {
         saveTrainingLevel(nextLevel);
         setSelectedLevel(nextLevel);
         setLevelVisible(false);
+    };
+
+    const openLegalMenu = () => {
+        setLegalView("menu");
+        setLegalVisible(true);
+    };
+
+    const closeLegalModal = () => {
+        setLegalVisible(false);
+        setLegalView("menu");
     };
 
     const pageStyle = {
@@ -280,7 +293,27 @@ export default function ProfilePage({ theme }) {
         { value: "advanced", label: "Advanced" },
     ];
 
+    const legalOptions = [
+        {
+            value: "privacy",
+            label: "Privacy Policy",
+            },
+        {
+            value: "terms",
+            label: "Terms of Service",
+            },
+        {
+            value: "contact",
+            label: "Contact: goodlang.app@gmail.com",
+            },
+    ];
+
     const levelGridStyle = {
+        display: "grid",
+        gap: 12,
+    };
+
+    const legalGridStyle = {
         display: "grid",
         gap: 12,
     };
@@ -309,6 +342,131 @@ export default function ProfilePage({ theme }) {
         textTransform: "uppercase",
         letterSpacing: "0.04em",
     });
+
+    const legalButtonStyle = {
+        justifyContent: "center",
+        boxShadow: "none",
+    };
+
+    const legalContentStyle = {
+        padding: 0,
+        color: "#465174",
+        fontSize: "0.95rem",
+        lineHeight: 1.55,
+        fontWeight: 400,
+        maxHeight: "46vh",
+        overflowY: "auto",
+    };
+
+    const legalParagraphStyle = {
+        margin: "0 0 12px",
+    };
+
+    const backButtonStyle = {
+        marginTop: 14,
+        boxShadow: "none",
+    };
+
+    const renderLegalDocument = () => {
+        if (legalView === "privacy") {
+            return (
+                <>
+                    <div style={legalContentStyle}>
+                        <p style={legalParagraphStyle}>
+                            GoodLang stores only the personal data needed to run the service:
+                            your email address and practice results, such as scores, completion time,
+                            and grammar rule codes.
+                        </p>
+                        <p style={legalParagraphStyle}>
+                            We do not store the full text of your answers. We may collect analytical
+                            and technical metadata to improve service quality and performance.
+                        </p>
+                        <p style={legalParagraphStyle}>
+                            You can request deletion of your personal data by contacting us at
+                            {" "}goodlang.app@gmail.com.
+                        </p>
+                        <p style={{ margin: 0 }}>
+                            Payments are processed by Stripe. Stripe may process payment data under
+                            its own privacy and payment policies.
+                        </p>
+                    </div>
+                    <Button
+                        variant="secondary"
+                        compact
+                        fullWidth
+                        theme={theme}
+                        style={backButtonStyle}
+                        onClick={() => setLegalView("menu")}
+                    >
+                        Back
+                    </Button>
+                </>
+            );
+        }
+
+        if (legalView === "terms") {
+            return (
+                <>
+                    <div style={legalContentStyle}>
+                        <p style={legalParagraphStyle}>
+                            By using GoodLang, you agree to use the service in good faith and only
+                            for its intended learning purpose.
+                        </p>
+                        <p style={legalParagraphStyle}>
+                            Paid subscriptions renew automatically unless canceled before the end of
+                            the current billing cycle. Subscription management and payment processing
+                            are handled through Stripe.
+                        </p>
+                        <p style={legalParagraphStyle}>
+                            The service is provided as is. We do not guarantee specific learning
+                            outcomes or uninterrupted availability.
+                        </p>
+                        <p style={{ margin: 0 }}>
+                            We may update these terms and notify users about significant changes by
+                            email.
+                        </p>
+                    </div>
+                    <Button
+                        variant="secondary"
+                        compact
+                        fullWidth
+                        theme={theme}
+                        style={backButtonStyle}
+                        onClick={() => setLegalView("menu")}
+                    >
+                        Back
+                    </Button>
+                </>
+            );
+        }
+
+        return (
+            <div style={legalGridStyle}>
+                {legalOptions.map((option) => (
+                    <Button
+                        key={option.value}
+                        variant="offset"
+                        compact
+                        fullWidth
+                        theme={theme}
+                        shadowColor={theme.accent}
+                        shadowOffset={0}
+                        style={legalButtonStyle}
+                        onClick={() => {
+                            if (option.value === "contact") {
+                                window.location.href = "mailto:goodlang.app@gmail.com";
+                                return;
+                            }
+
+                            setLegalView(option.value);
+                        }}
+                    >
+                        {option.label}
+                    </Button>
+                ))}
+            </div>
+        );
+    };
 
     const renderRow = ({
         key,
@@ -415,9 +573,7 @@ export default function ProfilePage({ theme }) {
                             key: "billing",
                             icon: <CreditCard style={iconStyle} weight="regular" />,
                             title: "Billing",
-                            subtitle: billingLoading
-                                ? "Opening billing..."
-                                : "Manage plan, renewal, and payment method",
+                            subtitle: "Manage plan, renewal, and payment method",
                             divider: false,
                             onClick: handleManageSubscription,
                         })}
@@ -439,7 +595,7 @@ export default function ProfilePage({ theme }) {
                             title: "Legal",
                             subtitle: "Privacy Policy, Terms of Service, Contact",
                             divider: false,
-                            onClick: () => {},
+                            onClick: openLegalMenu,
                         })}
                     </section>
                 </section>
@@ -449,6 +605,24 @@ export default function ProfilePage({ theme }) {
                 theme={theme}
                 onClose={() => setLanguageVisible(false)}
             />
+            {account && (
+                <LimitModal
+                    accountInfo={account}
+                    isLimitReached={false}
+                    theme={theme}
+                    open={limitVisible}
+                    onClose={() => setLimitVisible(false)}
+                />
+            )}
+            {account && (
+                <AccountStatusModal
+                    accountInfo={account}
+                    theme={theme}
+                    open={accountStatusVisible}
+                    onClose={() => setAccountStatusVisible(false)}
+                    status={billingStatus}
+                />
+            )}
             <ModalShell
                 open={levelVisible}
                 id="profile-level-modal"
@@ -485,6 +659,19 @@ export default function ProfilePage({ theme }) {
                         </Button>
                     );
                 })}
+            </ModalShell>
+            <ModalShell
+                open={legalVisible}
+                id="profile-legal-modal"
+                theme={theme}
+                title={legalView === "menu" ? "Legal" : legalView === "privacy" ? "Privacy Policy" : "Terms of Service"}
+                subtitle={legalView === "menu" ? "Privacy Policy, Terms of Service, and contact information." : null}
+                onClose={closeLegalModal}
+                maxWidth={560}
+                titleStyle={{ fontSize: "1.75rem" }}
+                contentStyle={legalGridStyle}
+            >
+                {renderLegalDocument()}
             </ModalShell>
         </div>
     );
