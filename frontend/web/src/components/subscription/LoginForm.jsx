@@ -74,7 +74,7 @@ export default function LoginForm({
         color: "#fff",
         opacity: disabled ? 0.7 : 1,
         borderColor: "transparent",
-        boxShadow: disabled ? "none" : "0 12px 28px rgba(123, 97, 216, 0.16)",
+        boxShadow: disabled ? "none" : "0 12px 28px rgba(116, 119, 184, 0.16)",
     });
 
     // -----------------------------

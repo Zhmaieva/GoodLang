@@ -108,13 +108,14 @@ export default function LevelSwitch({
     };
 
     const options = [
-        { value: "managed", label: "Adaptive", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADAPTIVE },
+        { value: "managed", label: "Adaptive", recommended: true, actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADAPTIVE },
         { value: "beginner", label: "Beginner", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_BEGINNER },
         { value: "intermediate", label: "Intermediate", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_AVERAGE },
         { value: "advanced", label: "Advanced", actionType: ACTION_TYPES.BUTTON_CLICK_CHANGE_DIFFICULTY_ADVANCED },
     ];
 
-    const selectedOption = options.find((o) => o.value === level) ?? options[0];
+    const effectiveLevel = level || "managed";
+    const selectedOption = options.find((o) => o.value === effectiveLevel) ?? options[0];
 
     const openLevelModal = async () => {
         // calibration lock: behave like TaskModeSwitch
@@ -140,7 +141,7 @@ export default function LevelSwitch({
 
     const getLabel = (label) => `Level: ${label}`;
 
-    const isOptionPending = (value) => modalOpen && value !== level && pendingLevels.has(value);
+    const isOptionPending = (value) => modalOpen && value !== effectiveLevel && pendingLevels.has(value);
 
     const miniLoaderWrap = {
         display: "inline-flex",
@@ -220,8 +221,28 @@ export default function LevelSwitch({
         borderColor: selected ? theme.accent : theme.border,
         width: "100%",
         minWidth: 0,
-        whiteSpace: "nowrap",
-        boxShadow: selected ? "0 12px 28px rgba(123, 97, 216, 0.16)" : "none",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 10,
+        whiteSpace: "normal",
+        boxShadow: selected ? "0 12px 28px rgba(116, 119, 184, 0.16)" : "none",
+    });
+
+    const recommendedBadgeStyle = (selected) => ({
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "4px 8px",
+        borderRadius: 999,
+        background: selected ? "rgba(255, 255, 255, 0.18)" : theme.accentSoft,
+        color: selected ? "#fff" : theme.accent,
+        fontFamily: "var(--font-family-base)",
+        fontSize: "0.68rem",
+        lineHeight: 1,
+        fontWeight: 800,
+        textTransform: "uppercase",
+        letterSpacing: "0.04em",
     });
 
     return (
@@ -287,8 +308,8 @@ export default function LevelSwitch({
                 titleStyle={{ fontSize: "1.75rem" }}
                 contentStyle={optionGridStyle}
             >
-                {options.map(({ value, label, actionType }) => {
-                    const selected = level === value;
+                {options.map(({ value, label, recommended, actionType }) => {
+                    const selected = effectiveLevel === value;
 
                     return (
                         <Button
@@ -305,7 +326,12 @@ export default function LevelSwitch({
                             onClick={() => handleOptionClick(value, actionType)}
                             style={getOptionButtonStyle(selected)}
                         >
-                            {label}
+                            <span>{label}</span>
+                            {recommended && (
+                                <span style={recommendedBadgeStyle(selected)}>
+                                    Recommended
+                                </span>
+                            )}
                             {isOptionPending(value) && <LevelPendingLoader />}
                         </Button>
                     );

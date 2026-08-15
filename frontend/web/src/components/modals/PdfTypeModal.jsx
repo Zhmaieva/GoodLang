@@ -114,7 +114,7 @@ export default function PdfTypeModal({
         cursor: loading || locked ? "default" : "pointer",
         opacity: loading || locked ? 0.7 : 1,
         filter: "none",
-        boxShadow: isActive ? "0 12px 28px rgba(123, 97, 216, 0.16)" : "none",
+        boxShadow: isActive ? "0 12px 28px rgba(116, 119, 184, 0.16)" : "none",
         transition: "background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease",
     });
 
@@ -122,7 +122,7 @@ export default function PdfTypeModal({
         backgroundColor: theme.accent,
         color: "#fff",
         borderColor: "transparent",
-        boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+        boxShadow: "0 12px 28px rgba(116, 119, 184, 0.16)",
         width: "100%",
         flex: 1,
         boxSizing: "border-box",

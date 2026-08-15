@@ -288,7 +288,7 @@ export default function TaskCard({
             display: "inline-flex",
             alignItems: "center",
             border: `1px solid ${BORDER}`,
-            borderRadius: 999,
+            borderRadius: 14,
             background: SURFACE,
             padding: "8px 14px",
             boxSizing: "border-box",

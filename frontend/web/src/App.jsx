@@ -144,7 +144,7 @@ export const legacyGlobalStyling = {
     border: APP_BORDER_COLOR,
     accent: APP_ACCENT_COLOR,
     accentSoft: APP_ACCENT_SOFT_COLOR,
-    accentDark: "#6047c6",
+    accentDark: "#55589a",
     dark: APP_DARK_COLOR,
     green: "#4ba36e",
     greenDark: "#2d6f48",

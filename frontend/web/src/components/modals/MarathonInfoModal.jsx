@@ -224,7 +224,7 @@ export default function MarathonInfoModal({
                     backgroundColor: theme.accent,
                     color: "#fff",
                     borderColor: "transparent",
-                    boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                    boxShadow: "0 12px 28px rgba(116, 119, 184, 0.16)",
                 }}
             >
                 Start marathon
@@ -243,7 +243,7 @@ export default function MarathonInfoModal({
                         backgroundColor: theme.accent,
                         color: "#fff",
                         borderColor: "transparent",
-                        boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                        boxShadow: "0 12px 28px rgba(116, 119, 184, 0.16)",
                     }}
                 >
                     Log in to another account

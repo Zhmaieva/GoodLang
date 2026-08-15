@@ -114,8 +114,8 @@ function getVariantStyle({
             border: `1px solid ${active ? accent : border}`,
             boxShadow: hasSoftShadow
                 ? hovered && !disabled
-                    ? "0 12px 24px rgba(123, 97, 216, 0.16)"
-                    : "0 8px 18px rgba(123, 97, 216, 0.10)"
+                    ? "0 12px 24px rgba(116, 119, 184, 0.16)"
+                    : "0 8px 18px rgba(116, 119, 184, 0.10)"
                 : "none",
             transform: hovered && !disabled ? "translateY(-1px)" : "none",
         },
@@ -131,7 +131,7 @@ function getVariantStyle({
             background: active ? accent : surface,
             color: active ? "#fff" : text,
             border: `1px solid ${active ? accent : border}`,
-            boxShadow: active ? "0 10px 24px rgba(123, 97, 216, 0.16)" : "none",
+            boxShadow: active ? "0 10px 24px rgba(116, 119, 184, 0.16)" : "none",
         },
         icon: {
             width: compact ? 36 : 40,

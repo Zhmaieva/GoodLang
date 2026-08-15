@@ -215,7 +215,7 @@ export default function ProfilePage({ theme }) {
         appearance: "none",
         border: "none",
         background: highlighted
-            ? "linear-gradient(90deg, rgba(123, 97, 216, 0.13), rgba(123, 97, 216, 0.07))"
+            ? "linear-gradient(90deg, rgba(116, 119, 184, 0.13), rgba(116, 119, 184, 0.07))"
             : hoveredRow === key
               ? "#fbfbff"
               : "transparent",
@@ -274,7 +274,7 @@ export default function ProfilePage({ theme }) {
     };
 
     const levelOptions = [
-        { value: "managed", label: "Adaptive" },
+        { value: "managed", label: "Adaptive", recommended: true },
         { value: "beginner", label: "Beginner" },
         { value: "intermediate", label: "Intermediate" },
         { value: "advanced", label: "Advanced" },
@@ -287,10 +287,27 @@ export default function ProfilePage({ theme }) {
 
     const levelButtonStyle = (selected) => ({
         justifyContent: "center",
+        gap: 10,
         background: selected ? colors.dark : colors.surface,
         color: selected ? "#fff" : colors.text,
         borderColor: selected ? colors.dark : colors.border,
         boxShadow: "none",
+    });
+
+    const recommendedBadgeStyle = (selected) => ({
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "4px 8px",
+        borderRadius: 999,
+        background: selected ? "rgba(255, 255, 255, 0.18)" : colors.accentSoft,
+        color: selected ? "#fff" : colors.accent,
+        fontFamily: "var(--font-family-base)",
+        fontSize: "0.68rem",
+        lineHeight: 1,
+        fontWeight: 800,
+        textTransform: "uppercase",
+        letterSpacing: "0.04em",
     });
 
     const renderRow = ({
@@ -459,7 +476,12 @@ export default function ProfilePage({ theme }) {
                             style={levelButtonStyle(selected)}
                             onClick={() => handleLevelSelect(option.value)}
                         >
-                            {option.label}
+                            <span>{option.label}</span>
+                            {option.recommended && (
+                                <span style={recommendedBadgeStyle(selected)}>
+                                    Recommended
+                                </span>
+                            )}
                         </Button>
                     );
                 })}

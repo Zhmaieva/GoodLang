@@ -220,7 +220,7 @@ export default function SiteHeader({
         flex: "0 0 auto",
         boxSizing: "border-box",
         overflow: "hidden",
-        boxShadow: "0 8px 22px rgba(123, 97, 216, 0.10)",
+        boxShadow: "0 8px 22px rgba(116, 119, 184, 0.10)",
     };
 
     const logoMarkInnerStyle = {

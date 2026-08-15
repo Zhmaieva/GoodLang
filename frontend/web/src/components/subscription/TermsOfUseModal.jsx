@@ -130,7 +130,7 @@ export default function TermsOfUseModal({
         backgroundColor: loading ? "#999" : theme.accent,
         color: "#fff",
         borderColor: "transparent",
-        boxShadow: loading ? "none" : "0 12px 28px rgba(123, 97, 216, 0.16)",
+        boxShadow: loading ? "none" : "0 12px 28px rgba(116, 119, 184, 0.16)",
         opacity: loading ? 0.7 : 1,
     };
 

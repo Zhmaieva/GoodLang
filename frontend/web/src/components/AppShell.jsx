@@ -65,7 +65,7 @@ export default function AppShell({ children, theme, noPadding = false }) {
                 }
 
                 ::selection {
-                    background: rgba(123, 97, 216, 0.18);
+                    background: rgba(116, 119, 184, 0.18);
                 }
             `}</style>
 

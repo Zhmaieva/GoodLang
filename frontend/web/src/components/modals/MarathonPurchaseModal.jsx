@@ -299,7 +299,7 @@ export default function MarathonPurchaseModal({
                                             background: (loading || safeRuleIds.length !== 7) ? "#999" : theme.accent,
                                             color: "#fff",
                                             border: "1px solid transparent",
-                                            boxShadow: "0 12px 28px rgba(123, 97, 216, 0.16)",
+                                            boxShadow: "0 12px 28px rgba(116, 119, 184, 0.16)",
                                             fontFamily: 'var(--font-family-base)',
                                             whiteSpace: "nowrap",
                                             opacity: (loading || safeRuleIds.length !== 7) ? 0.7 : 1,
