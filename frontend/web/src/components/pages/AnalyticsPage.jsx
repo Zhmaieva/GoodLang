@@ -192,7 +192,7 @@ export default function AnalyticsPage({theme}) {
                 <div style={pageShellStyle}>
                     <main style={pageContentStyle}>
                         <section style={pageIntroStyle}>
-                            <h1 style={pageTitleStyle}>Grammar Rules</h1>
+                            <h1 style={pageTitleStyle}>Grammar rules</h1>
                             <p style={pageSubtitleStyle}>
                                 Learn the rules, practice in context, speak with confidence.
                             </p>

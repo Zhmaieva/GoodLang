@@ -2,7 +2,13 @@ import TaskCard from "./TaskCard.jsx";
 import ResultCard from "./ResultCard.jsx";
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {addAnswer, getAllStatistics, getOverallAccuracy, getSeed, saveSeed} from "../../services/dataService.js";
-import {callAccountInfoApi, callAccountVerifyApi, callQuickTranslateAPI, callTranslateAPI} from "../../services/api.js";
+import {
+    callAccountInfoApi,
+    callAccountVerifyApi,
+    callQuickTranslateAPI,
+    callSaveVocabularyCandidatesApi,
+    callTranslateAPI,
+} from "../../services/api.js";
 import {
     getSavedTaskMode,
     getSavedTaskModeSync,
@@ -28,6 +34,7 @@ import {
     prefetchTrainingTask,
     setCachedTrainingTask
 } from "../../services/trainingTaskCache.js";
+import {saveLocalVocabularyCandidates} from "../../services/vocabularyService.js";
 
 export default function Trainer({
                                     theme,
@@ -360,6 +367,226 @@ export default function Trainer({
         for (const rule of Array.isArray(data?.rules) ? data.rules : []) add(rule);
 
         return out.slice(0, 3);
+    }
+
+    const vocabularyStopWords = new Set([
+        "a",
+        "an",
+        "and",
+        "are",
+        "as",
+        "at",
+        "be",
+        "been",
+        "being",
+        "but",
+        "by",
+        "can",
+        "could",
+        "did",
+        "do",
+        "does",
+        "for",
+        "from",
+        "had",
+        "has",
+        "have",
+        "he",
+        "her",
+        "him",
+        "his",
+        "i",
+        "in",
+        "is",
+        "it",
+        "its",
+        "may",
+        "might",
+        "more",
+        "must",
+        "my",
+        "not",
+        "now",
+        "of",
+        "on",
+        "or",
+        "our",
+        "she",
+        "should",
+        "so",
+        "than",
+        "that",
+        "the",
+        "their",
+        "them",
+        "there",
+        "they",
+        "this",
+        "to",
+        "was",
+        "we",
+        "were",
+        "will",
+        "with",
+        "would",
+        "you",
+        "your",
+    ]);
+
+    function normalizeVocabularyToken(value) {
+        return String(value ?? "")
+            .trim()
+            .toLowerCase()
+            .replace(/[“”]/g, "\"")
+            .replace(/[’‘]/g, "'")
+            .replace(/^[^a-z]+|[^a-z]+$/gi, "");
+    }
+
+    function getVocabularyTokens(text) {
+        return (String(text ?? "").match(/[A-Za-z][A-Za-z'-]*/g) ?? [])
+            .map(normalizeVocabularyToken)
+            .filter((token) => token.length >= 3 && !vocabularyStopWords.has(token));
+    }
+
+    function getEditDistance(a, b) {
+        const source = String(a ?? "");
+        const target = String(b ?? "");
+        const matrix = Array.from({ length: source.length + 1 }, () => []);
+
+        for (let i = 0; i <= source.length; i += 1) matrix[i][0] = i;
+        for (let j = 0; j <= target.length; j += 1) matrix[0][j] = j;
+
+        for (let i = 1; i <= source.length; i += 1) {
+            for (let j = 1; j <= target.length; j += 1) {
+                const substitutionCost = source[i - 1] === target[j - 1] ? 0 : 1;
+                matrix[i][j] = Math.min(
+                    matrix[i - 1][j] + 1,
+                    matrix[i][j - 1] + 1,
+                    matrix[i - 1][j - 1] + substitutionCost
+                );
+            }
+        }
+
+        return matrix[source.length][target.length];
+    }
+
+    function getAllowedTypoDistance(word) {
+        if (word.length <= 5) return 1;
+        return 2;
+    }
+
+    function stripDoubleFinalConsonant(value) {
+        return String(value ?? "").replace(/([bcdfghjklmnpqrstvwxyz])\1$/i, "$1");
+    }
+
+    function isLikelyGrammarInflection(userToken, correctToken) {
+        if (!userToken || !correctToken) return false;
+
+        const user = normalizeVocabularyToken(userToken);
+        const correct = normalizeVocabularyToken(correctToken);
+        const variants = new Set([
+            `${correct}s`,
+            `${correct}es`,
+            `${correct}d`,
+            `${correct}ed`,
+            `${correct}ing`,
+            `${correct.slice(0, -1)}ies`,
+        ]);
+
+        if (correct.endsWith("e")) {
+            variants.add(`${correct.slice(0, -1)}ed`);
+            variants.add(`${correct.slice(0, -1)}ing`);
+        }
+
+        if (correct.endsWith("y")) {
+            variants.add(`${correct.slice(0, -1)}ied`);
+        }
+
+        if (user.endsWith("ed")) {
+            variants.add(`${stripDoubleFinalConsonant(correct)}ed`);
+        }
+
+        if (user.endsWith("ing")) {
+            variants.add(`${stripDoubleFinalConsonant(correct)}ing`);
+        }
+
+        return variants.has(user);
+    }
+
+    function findCorrectedTypo(userToken, correctTokens) {
+        if (!userToken || correctTokens.includes(userToken)) return null;
+
+        let bestMatch = null;
+        let bestDistance = Infinity;
+
+        for (const correctToken of correctTokens) {
+            if (!correctToken || correctToken[0] !== userToken[0]) continue;
+            if (isLikelyGrammarInflection(userToken, correctToken)) continue;
+
+            const distance = getEditDistance(userToken, correctToken);
+            const allowedDistance = getAllowedTypoDistance(correctToken);
+
+            if (distance > 0 && distance <= allowedDistance && distance < bestDistance) {
+                bestMatch = correctToken;
+                bestDistance = distance;
+            }
+        }
+
+        return bestMatch;
+    }
+
+    function buildMistakeVocabularyCandidates({ userAnswer, correctAnswer, level, occurredAt }) {
+        const userTokens = getVocabularyTokens(userAnswer);
+        const correctTokens = getVocabularyTokens(correctAnswer);
+        const seen = new Set();
+
+        return userTokens
+            .map((token) => findCorrectedTypo(token, correctTokens))
+            .filter((word) => {
+                if (!word || seen.has(word)) return false;
+                seen.add(word);
+                return true;
+            })
+            .map((word) => ({
+                word,
+                level,
+                source: "learner_mistake",
+                example: correctAnswer,
+                isCorrect: false,
+                score: 0,
+                occurredAt,
+            }));
+    }
+
+    function saveVocabularyFromEvaluation({
+                                              userAnswer,
+                                              result,
+                                              fallbackLevel,
+                                              isQuick = false,
+                                          }) {
+        const occurredAt = new Date().toISOString();
+        const currentLevel = result?.level ?? fallbackLevel ?? difficulty ?? level ?? null;
+        const candidates = result?.isAnswerCorrect
+            ? []
+            : buildMistakeVocabularyCandidates({
+                userAnswer,
+                correctAnswer: result?.correctAnswer || result?.naturalAnswer || "",
+                level: currentLevel,
+                occurredAt,
+            });
+
+        if (!candidates.length || (isQuick === true && !result?.isAnswerCorrect)) return;
+
+        callSaveVocabularyCandidatesApi({
+            candidates,
+            userLocale: localizationService.getLocale(),
+        })
+            .then(() => emit("vocabularyUpdated"))
+            .catch((error) => {
+                console.error("Failed to save vocabulary candidates", error);
+                const localWords = saveLocalVocabularyCandidates(candidates);
+                if (localWords.length > 0) emit("vocabularyUpdated");
+            });
     }
 
     function resetCurrentTaskOnly() {
@@ -781,6 +1008,12 @@ export default function Trainer({
 
                     const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                     addAnswer(rules.map(() => 1), rules, null);
+                    saveVocabularyFromEvaluation({
+                        userAnswer: userAns,
+                        result: { isAnswerCorrect: true, level: difficulty },
+                        fallbackLevel: difficulty,
+                        isQuick: true,
+                    });
                     const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                     if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
 
@@ -868,6 +1101,11 @@ export default function Trainer({
 
                 const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                 addAnswer(data.scores || [], rules, data.level);
+                saveVocabularyFromEvaluation({
+                    userAnswer: userAns,
+                    result: data,
+                    fallbackLevel: data.level,
+                });
                 const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                 if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
 

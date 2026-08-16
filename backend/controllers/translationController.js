@@ -433,8 +433,13 @@ export const translationsController = {
                 scores = rulesArr.map(() => 1);
                 result.tip_if_wrong = null;
                 result.correct_answer = null;
+                result.natural_answer = null;
                 result.answer_is_correct = true;
                 result.violated_rules = [];
+            }
+
+            if (!result.answer_is_correct) {
+                result.natural_answer = null;
             }
 
             const { allowed, waitTimeSeconds } = skipCoach
@@ -450,6 +455,7 @@ export const translationsController = {
                 options: newTaskType === 1 ? newOptions : undefined,
                 isAnswerCorrect: result.answer_is_correct,
                 correctAnswer: result.correct_answer,
+                naturalAnswer: result.natural_answer ?? null,
                 tipIfWrong: result.tip_if_wrong,
                 scores: scores,
                 violatedRules: uniqueValidRules(result.violated_rules),

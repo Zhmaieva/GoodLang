@@ -42,6 +42,32 @@ function parseJsonObject(text) {
     }
 }
 
+function neutralizeTutorTip(text = "", targetLocale = "uk-UA") {
+    const safeText = String(text ?? "").trim();
+    const safeLocale = String(targetLocale ?? "").toLowerCase();
+
+    if (!safeText || !safeLocale.startsWith("uk")) return safeText;
+
+    return safeText
+        .replace(/Добре побудував(?:ла)? ([^.]+)\./gi, "Конструкцію $1 побудовано добре.")
+        .replace(/Ти добре побудував(?:ла)?/gi, "Добре побудовано")
+        .replace(/Ти побудував(?:ла)?/gi, "Побудовано")
+        .replace(/Ти використав(?:ла)?/gi, "Використано")
+        .replace(/Ти написав(?:ла)?/gi, "Написано")
+        .replace(/Ти зробив(?:ла)?/gi, "Зроблено")
+        .replace(/Ти виправив(?:ла)?/gi, "Виправлено")
+        .replace(/Просто виправ/gi, "Варто лише виправити")
+        .replace(/Виправ дрібні помилки/gi, "Варто виправити дрібні помилки")
+        .replace(/(?:^|\s*)Усе речення має звучати так\.?$/gi, "")
+        .replace(/(?:^|\s*)Все речення має звучати так\.?$/gi, "")
+        .replace(/(?:^|\s*)Повне речення має звучати так\.?$/gi, "")
+        .replace(/(?:^|\s*)Правильне речення має звучати так\.?$/gi, "")
+        .replace(/(?:^|\s*)Усе речення повинно звучати так\.?$/gi, "")
+        .replace(/(?:^|\s*)Все речення повинно звучати так\.?$/gi, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
 function normalizeGeneratedRules(modelRules = [], targetRules = [], allRules = ALL_PROJECT_RULES) {
     const allowed = new Set(normalizeRuleList(allRules, ALL_PROJECT_RULES));
     const out = [];
@@ -379,6 +405,7 @@ Schema:
 {
   "answer_is_correct": boolean,
   "correct_answer": string,
+  "natural_answer": string | null,
   "tip_if_wrong": string,
   "scores": number[],
   "violated_rules": string[]
@@ -395,10 +422,11 @@ HINT: ${hint}
 
 TASKS:
 1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to RULES_TO_SCORE_IN_ORDER[0] as the target rule, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
-2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Address user informally a omitting gender, yet assertive way to express the tip.
+2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Use gender-neutral, impersonal wording. For Ukrainian, avoid gendered past-tense verbs and direct forms such as "побудував", "побудувала", "виправив", "виправила", "зробив", "зробила"; prefer impersonal forms like "побудовано", "варто виправити", "потрібно використати". Do not say that the whole sentence should sound a certain way, because the correct answer is shown separately.
 3) Also, give correct translation from TARGET_LANGUAGE to English.
-4) Check LEARNER_ENGLISH against RELATED_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from RELATED_GRAMMAR_RULES.
-5) For each rule in RULES_TO_SCORE_IN_ORDER, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLISH -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
+4) If LEARNER_ENGLISH is correct and communicates the meaning well, but a native speaker would probably choose a more natural or idiomatic phrasing, return that phrasing in natural_answer. Do not use natural_answer for actual grammar corrections; those belong in correct_answer when answer_is_correct is false. Return null if LEARNER_ENGLISH is incorrect, already natural, or if the natural version would be almost identical.
+5) Check LEARNER_ENGLISH against RELATED_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from RELATED_GRAMMAR_RULES.
+6) For each rule in RULES_TO_SCORE_IN_ORDER, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLISH -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
 
 LEARNER_ENGLISH: ${userEnglish || "(none)"}
 `;
@@ -416,7 +444,15 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
     // The Responses API returns structured items; easiest is to read the top-level output_text
     const txt = resp.output_text; // SDK helper that concatenates text parts
     const parsed = JSON.parse(txt);
+    parsed.tip_if_wrong = neutralizeTutorTip(parsed.tip_if_wrong, targetLocale);
     parsed.violated_rules = normalizeRuleList(parsed.violated_rules, []).filter((r) => relatedRules.includes(r));
+    parsed.natural_answer = parsed.answer_is_correct && parsed.natural_answer
+        ? String(parsed.natural_answer).trim()
+        : null;
+
+    if (parsed.natural_answer && clearText(parsed.natural_answer) === clearText(userEnglish)) {
+        parsed.natural_answer = null;
+    }
 
     return parsed;
 }
@@ -538,7 +574,7 @@ INSTRUCTIONS:
 1) Pick the correct option for SENTENCE_TEMPLATE from OPTIONS when OPTIONS are provided.
 2) Evaluate whether LEARNER_CHOICE is correct.
 3) correct_answer must be the full sentence with {GAP} replaced by the correct option.
-4) If wrong, give a short helpful tip in TARGET_LANGUAGE.
+4) If wrong, give a short helpful tip in TARGET_LANGUAGE. Use gender-neutral, impersonal wording. For Ukrainian, avoid gendered past-tense verbs and direct forms such as "побудував", "побудувала", "виправив", "виправила", "зробив", "зробила"; prefer impersonal forms like "побудовано", "варто виправити", "потрібно використати". Do not say that the whole sentence should sound a certain way, because the correct answer is shown separately.
 5) Check the learner answer against RELATED_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from RELATED_GRAMMAR_RULES.
 6) Return one score for each rule in RULES_TO_SCORE_IN_ORDER, in order: 1 when the rule is satisfied, 0 when it is violated.
 `;
@@ -562,7 +598,7 @@ INSTRUCTIONS:
         return {
             answer_is_correct: !!parsed.answer_is_correct,
             correct_answer: String(parsed.correct_answer ?? ""),
-            tip_if_wrong: String(parsed.tip_if_wrong ?? ""),
+            tip_if_wrong: neutralizeTutorTip(parsed.tip_if_wrong, targetLocale),
             scores,
             violated_rules: normalizeRuleList(parsed.violated_rules, []).filter((r) => relatedRules.includes(r))
         };
@@ -589,7 +625,7 @@ CORRECT_OPTION: ${correct}
 LEARNER_CHOICE: ${userAnswer || "(none)"}
 
 INSTRUCTIONS:
-1) Give a short, helpful tip in TARGET_LANGUAGE explaining why LEARNER_CHOICE is wrong and why CORRECT_OPTION fits.
+1) Give a short, helpful tip in TARGET_LANGUAGE explaining why LEARNER_CHOICE is wrong and why CORRECT_OPTION fits. Use gender-neutral, impersonal wording. For Ukrainian, avoid gendered past-tense verbs and direct forms such as "побудував", "побудувала", "виправив", "виправила", "зробив", "зробила"; prefer impersonal forms like "побудовано", "варто виправити", "потрібно використати". Do not say that the whole sentence should sound a certain way, because the correct answer is shown separately.
 2) Never mention the grammar rule names (GRAMMAR_RULES) as they are.
 3) Keep it practical and short (1-3 sentences).
 4) Do NOT include any other keys besides tip_if_wrong.
@@ -621,7 +657,7 @@ INSTRUCTIONS:
         violated_rules: scoreRules,
 
         // LLM-only explanation
-        tip_if_wrong: String(parsed.tip_if_wrong ?? "")
+        tip_if_wrong: neutralizeTutorTip(parsed.tip_if_wrong, targetLocale)
     };
 }
 
@@ -684,4 +720,83 @@ ${safeValue}
     } catch {
         return safeValue;
     }
+}
+
+function getLanguageNameFromLocale(locale = "uk-UA") {
+    const safeLocale = String(locale ?? "").toLowerCase();
+
+    if (safeLocale.startsWith("uk")) return "Ukrainian";
+    if (safeLocale.startsWith("en")) return "English";
+    if (safeLocale.startsWith("pl")) return "Polish";
+    if (safeLocale.startsWith("de")) return "German";
+    if (safeLocale.startsWith("fr")) return "French";
+    if (safeLocale.startsWith("es")) return "Spanish";
+    if (safeLocale.startsWith("it")) return "Italian";
+    if (safeLocale.startsWith("pt")) return "Portuguese";
+    if (safeLocale.startsWith("nl")) return "Dutch";
+    if (safeLocale.startsWith("cs")) return "Czech";
+    if (safeLocale.startsWith("da")) return "Danish";
+    if (safeLocale.startsWith("id")) return "Indonesian";
+    if (safeLocale.startsWith("ms")) return "Malay";
+
+    return "Ukrainian";
+}
+
+export async function translateVocabularyWords({
+                                                   words = [],
+                                                   locale = "uk-UA",
+                                               } = {}) {
+    const uniqueWords = [...new Set(
+        (Array.isArray(words) ? words : [])
+            .map((word) => String(word ?? "").trim().toLowerCase())
+            .filter(Boolean)
+    )];
+
+    if (!uniqueWords.length) return {};
+
+    const targetLanguage = getLanguageNameFromLocale(locale);
+    const systemPrompt = `
+You translate English vocabulary items for a language-learning app.
+Return JSON only.
+
+Schema:
+{
+  "translations": [
+    { "word": string, "translation": string }
+  ]
+}
+`;
+
+    const userPrompt = `
+Translate each English word into ${targetLanguage}.
+
+Rules:
+1. Use a short dictionary-style translation.
+2. Keep one or two common meanings only.
+3. Do not add examples or explanations.
+4. Preserve the input word exactly in the "word" field.
+
+WORDS:
+${JSON.stringify(uniqueWords)}
+`;
+
+    const resp = await client.responses.create(buildJsonResponseRequest({
+        model: OPENAI_QUICK_CHECK_MODEL,
+        temperature: 0,
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    }));
+
+    const parsed = parseJsonObject(resp.output_text);
+    const translations = {};
+
+    for (const item of Array.isArray(parsed.translations) ? parsed.translations : []) {
+        const word = String(item?.word ?? "").trim().toLowerCase();
+        const translation = String(item?.translation ?? "").trim();
+        if (word && translation) translations[word] = translation;
+    }
+
+    return translations;
 }

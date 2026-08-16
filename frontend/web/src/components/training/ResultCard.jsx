@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { RULE_LABELS } from "../../utils/rules.js";
 import { Button } from "../Buttons.jsx";
 import {
@@ -10,7 +11,7 @@ import {
     APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../../theme.js";
-import { CheckCircle, Lightbulb, Sparkle, XCircle } from "@phosphor-icons/react";
+import { ArrowRight, BookOpen, Check, Lightbulb, Sparkle, X } from "@phosphor-icons/react";
 
 function removeTrailingCorrectAnswer(feedback, correctAnswer) {
     let next = String(feedback ?? "").trim();
@@ -83,6 +84,60 @@ function normalizeAnswer(value) {
         .replace(/\s+/g, " ");
 }
 
+function normalizeRuleSearchText(value) {
+    return String(value ?? "")
+        .toLowerCase()
+        .replace(/&/g, " and ")
+        .replace(/[^a-z0-9]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function getRuleSearchPhrases(ruleId) {
+    const label = RULE_LABELS[ruleId] || "";
+    const baseLabel = label.replace(/\(.+?\)/g, " ");
+    const idText = String(ruleId ?? "").replace(/_/g, " ");
+    const phrases = [label, baseLabel, idText]
+        .map(normalizeRuleSearchText)
+        .filter(Boolean);
+
+    return [...new Set([
+        ...phrases,
+        ...phrases.map((phrase) => phrase.replace(/\bconditionals\b/g, "conditional")),
+        ...phrases.map((phrase) => phrase.replace(/\bquestions\b/g, "question")),
+        ...phrases.map((phrase) => phrase.replace(/\bclauses\b/g, "clause")),
+        ...phrases.map((phrase) => phrase.replace(/\bprepositions\b/g, "preposition")),
+        ...phrases.map((phrase) => phrase.replace(/\bmodals\b/g, "modal")),
+    ].filter(Boolean))];
+}
+
+function pickRuleFromExplanation({ explanationText, rules = [], weakRules = [] }) {
+    const candidates = [...new Set([...weakRules, ...rules].filter(Boolean))];
+    const normalizedExplanation = normalizeRuleSearchText(explanationText);
+
+    if (!candidates.length) return "";
+    if (!normalizedExplanation) return candidates[0];
+
+    let best = {
+        rule: "",
+        index: Infinity,
+        phraseLength: 0,
+    };
+
+    for (const rule of candidates) {
+        for (const phrase of getRuleSearchPhrases(rule)) {
+            const index = normalizedExplanation.indexOf(phrase);
+
+            if (index === -1) continue;
+            if (index < best.index || (index === best.index && phrase.length > best.phraseLength)) {
+                best = { rule, index, phraseLength: phrase.length };
+            }
+        }
+    }
+
+    return best.rule || candidates[0];
+}
+
 export default function ResultCard({
     theme,
     hint,
@@ -95,6 +150,7 @@ export default function ResultCard({
     isDetailedLoading = false,
     onContinue,
 }) {
+    const navigate = useNavigate();
     const SURFACE = theme?.surface ?? APP_SURFACE_COLOR;
     const BORDER = theme?.border ?? APP_BORDER_COLOR;
     const TEXT = theme?.text ?? APP_TEXT_COLOR;
@@ -164,32 +220,53 @@ export default function ResultCard({
             ? `Great job. You used ${primaryRuleLabel} correctly.`
             : "We are checking the details."
     );
+    const grammarRuleToOpen = isIncorrect
+        ? pickRuleFromExplanation({ explanationText, rules, weakRules })
+        : "";
+    const canOpenGrammarRule = Boolean(grammarRuleToOpen);
+    const openGrammarRule = () => {
+        if (!grammarRuleToOpen) return;
+        navigate(`/rule/${grammarRuleToOpen}`);
+    };
+
     const styles = {
         shell: {
             width: "100%",
-            maxWidth: 720,
+            maxWidth: 980,
             margin: "0 auto",
+            border: `1px solid ${BORDER}`,
+            borderRadius: 24,
+            background: SURFACE,
+            boxShadow: "0 24px 70px rgba(31, 36, 54, 0.08)",
+            overflow: "hidden",
             display: "flex",
             flexDirection: "column",
             alignItems: "stretch",
-            gap: 18,
             animation: "glFeedbackEnter 420ms cubic-bezier(0.22, 1, 0.36, 1) both",
         },
 
+        content: {
+            padding: "clamp(32px, 4vw, 48px) clamp(20px, 3vw, 32px) 30px",
+            display: "flex",
+            flexDirection: "column",
+            gap: 18,
+        },
+
         headingWrap: {
-            textAlign: "center",
+            textAlign: "left",
             display: "grid",
             gap: 8,
+            marginBottom: 20,
         },
 
         title: {
             margin: 0,
             color: TEXT,
             fontFamily: "var(--font-family-base)",
-            fontSize: "clamp(2rem, 4.2vw, 2.8rem)",
+            fontSize: "clamp(2.25rem, 5vw, 3.1rem)",
             lineHeight: 1.05,
             fontWeight: 800,
-            letterSpacing: "-0.03em",
+            letterSpacing: 0,
         },
 
         subtitle: {
@@ -232,9 +309,9 @@ export default function ResultCard({
                 borderRadius: 20,
                 background: current.background,
                 color: current.color,
-                padding: "20px 24px",
+                padding: "20px 22px",
                 boxSizing: "border-box",
-                boxShadow: "0 18px 42px rgba(31, 36, 54, 0.06)",
+                boxShadow: "0 12px 30px rgba(31, 36, 54, 0.035)",
                 animation: "glFeedbackPanel 480ms cubic-bezier(0.22, 1, 0.36, 1) both",
                 animationDelay: `${delay}ms`,
             };
@@ -243,19 +320,22 @@ export default function ResultCard({
         answerRow: {
             display: "flex",
             alignItems: "center",
-            gap: 18,
+            gap: 16,
         },
 
         iconBubble: ({ tone = "success" } = {}) => ({
-            width: 38,
-            height: 38,
+            width: 54,
+            height: 54,
             borderRadius: 999,
             flex: "0 0 auto",
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            background: tone === "danger" ? "rgba(229, 72, 77, 0.12)" : "rgba(47, 159, 95, 0.14)",
+            background: "#fff",
             color: tone === "danger" ? DANGER : SUCCESS,
+            boxShadow: tone === "danger"
+                ? "inset 0 0 0 8px rgba(229, 72, 77, 0.12)"
+                : "inset 0 0 0 8px rgba(47, 159, 95, 0.14)",
             animation: "glFeedbackPop 360ms cubic-bezier(0.22, 1, 0.36, 1) both",
         }),
 
@@ -271,7 +351,7 @@ export default function ResultCard({
         answerText: {
             margin: 0,
             fontFamily: "var(--font-family-base)",
-            fontSize: "1.18rem",
+            fontSize: "1.08rem",
             lineHeight: 1.45,
             fontWeight: 650,
             color: TEXT,
@@ -280,20 +360,21 @@ export default function ResultCard({
 
         explanationRow: {
             display: "grid",
-            gridTemplateColumns: "38px 1fr",
+            gridTemplateColumns: "54px 1fr",
             gap: 16,
             alignItems: "start",
         },
 
         explanationIcon: {
-            width: 38,
-            height: 38,
+            width: 54,
+            height: 54,
             borderRadius: 999,
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            background: ACCENT_SOFT,
+            background: "#fff",
             color: ACCENT,
+            boxShadow: `inset 0 0 0 8px ${ACCENT_SOFT}`,
         },
 
         explanationTitle: {
@@ -309,7 +390,7 @@ export default function ResultCard({
             margin: 0,
             color: MUTED,
             fontFamily: "var(--font-family-base)",
-            fontSize: "1rem",
+            fontSize: "1.04rem",
             lineHeight: 1.6,
             fontWeight: 500,
             whiteSpace: "pre-wrap",
@@ -364,14 +445,40 @@ export default function ResultCard({
 
         actionRow: {
             display: "flex",
-            justifyContent: "center",
-            marginTop: 6,
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 16,
+            padding: "20px clamp(20px, 3vw, 32px)",
+            borderTop: `1px solid ${BORDER}`,
+            background: SURFACE,
+            flexWrap: "wrap",
         },
 
         actionButton: {
-            minWidth: 220,
+            minWidth: 230,
             minHeight: 52,
             borderRadius: 14,
+        },
+
+        grammarButton: {
+            minWidth: 194,
+            minHeight: 52,
+            borderRadius: 14,
+            color: ACCENT,
+            borderColor: BORDER,
+        },
+
+        footerNote: {
+            width: "100%",
+            margin: "16px auto 0",
+            display: "inline-flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 10,
+            color: MUTED,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "0.95rem",
+            fontWeight: 600,
         },
 
         notice: {
@@ -412,95 +519,119 @@ export default function ResultCard({
     }
 
     return (
-        <div style={styles.shell} aria-live="polite">
-            <div style={styles.headingWrap}>
-                <h2 style={styles.title}>{isCorrect ? "Correct!" : "Almost there"}</h2>
-                {isCorrect && hasNaturalAnswer ? (
-                    <p style={styles.subtitle}>Nice work! You expressed the idea well.</p>
-                ) : !isCorrect ? (
-                    <p style={styles.subtitle}>
-                        You're on the right track. Let's fix a small detail.
-                    </p>
-                ) : null}
-            </div>
-
-            {isIncorrect && userAnswer ? (
-                <div style={styles.panel({ tone: "danger", delay: 40 })}>
-                    <div style={styles.answerRow}>
-                        <div style={{ flex: "1 1 auto", minWidth: 0 }}>
-                            <p style={styles.label({ tone: "danger" })}>Your answer</p>
-                            <p style={styles.answerText}>{userAnswer}</p>
-                        </div>
-                        <span style={styles.iconBubble({ tone: "danger" })}>
-                            <XCircle size={28} weight="fill" />
-                        </span>
-                    </div>
-                </div>
-            ) : null}
-
-            {answerToShow ? (
-                <div style={styles.panel({ tone: "success", delay: isIncorrect ? 90 : 40 })}>
-                    <div style={styles.answerRow}>
-                        <div style={{ flex: "1 1 auto", minWidth: 0 }}>
-                            {isIncorrect ? (
-                                <p style={styles.label({ tone: "success" })}>Correct answer</p>
-                            ) : null}
-                            <p style={styles.answerText}>{answerToShow}</p>
-                        </div>
-                        <span style={styles.iconBubble({ tone: "success" })}>
-                            <CheckCircle size={28} weight="fill" />
-                        </span>
-                    </div>
-                </div>
-            ) : null}
-
-            {hasNaturalAnswer ? (
-                <div style={styles.panel({ tone: "insight", delay: 90 })}>
-                    <div style={styles.naturalRow}>
-                        <span style={styles.explanationIcon}>
-                            <Sparkle size={22} weight="fill" />
-                        </span>
-                        <div>
-                            <p style={styles.naturalIntro}>
-                                Your answer is correct. A native speaker might say:
+        <>
+            <div style={styles.shell} aria-live="polite">
+                <div style={styles.content}>
+                    <div style={styles.headingWrap}>
+                        <h2 style={styles.title}>{isCorrect ? "Correct!" : "Almost there!"}</h2>
+                        {isCorrect && hasNaturalAnswer ? (
+                            <p style={styles.subtitle}>Nice work! You expressed the idea well.</p>
+                        ) : !isCorrect ? (
+                            <p style={styles.subtitle}>
+                                You're on the right track. Let's fix a small detail.
                             </p>
-                            <p style={styles.naturalText}>{naturalAnswerText}</p>
-                        </div>
+                        ) : null}
                     </div>
+
+                    {isIncorrect && userAnswer ? (
+                        <div style={styles.panel({ tone: "danger", delay: 40 })}>
+                            <div style={styles.answerRow}>
+                                <span style={styles.iconBubble({ tone: "danger" })}>
+                                    <X size={22} weight="bold" />
+                                </span>
+                                <div style={{ flex: "1 1 auto", minWidth: 0 }}>
+                                    <p style={styles.label({ tone: "danger" })}>Your answer</p>
+                                    <p style={styles.answerText}>{userAnswer}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ) : null}
+
+                    {answerToShow ? (
+                        <div style={styles.panel({ tone: "success", delay: isIncorrect ? 90 : 40 })}>
+                            <div style={styles.answerRow}>
+                                <span style={styles.iconBubble({ tone: "success" })}>
+                                    <Check size={22} weight="bold" />
+                                </span>
+                                <div style={{ flex: "1 1 auto", minWidth: 0 }}>
+                                    {isIncorrect ? (
+                                        <p style={styles.label({ tone: "success" })}>Correct answer</p>
+                                    ) : null}
+                                    <p style={styles.answerText}>{answerToShow}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ) : null}
+
+                    {hasNaturalAnswer ? (
+                        <div style={styles.panel({ tone: "insight", delay: 90 })}>
+                            <div style={styles.naturalRow}>
+                                <span style={styles.explanationIcon}>
+                                    <Sparkle size={22} weight="fill" />
+                                </span>
+                                <div>
+                                    <p style={styles.naturalIntro}>
+                                        Your answer is correct. A native speaker might say:
+                                    </p>
+                                    <p style={styles.naturalText}>{naturalAnswerText}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ) : null}
+
+                    {isIncorrect ? (
+                        <div style={styles.panel({ tone: "insight", delay: 140 })}>
+                            <div style={styles.explanationRow}>
+                                <span style={styles.explanationIcon}>
+                                    <Lightbulb size={26} weight="regular" />
+                                </span>
+                                <div>
+                                    <p style={styles.explanationTitle}>What to adjust</p>
+                                    <p style={styles.explanationText}>
+                                        {renderInlineMarkdown(explanationText)}
+                                        {isDetailedLoading ? <BarsLoader /> : null}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ) : null}
                 </div>
-            ) : null}
+
+                <div style={styles.actionRow}>
+                    {isIncorrect && canOpenGrammarRule ? (
+                        <Button
+                            variant="secondary"
+                            theme={theme}
+                            disabled={isDetailedLoading}
+                            onClick={openGrammarRule}
+                            style={styles.grammarButton}
+                        >
+                            <BookOpen size={22} weight="regular" />
+                            See grammar rule
+                        </Button>
+                    ) : <span />}
+                    <Button
+                        variant="primary"
+                        theme={theme}
+                        disabled={isContinueDisabled}
+                        onClick={onContinue}
+                        style={styles.actionButton}
+                    >
+                        Continue
+                        <ArrowRight size={24} weight="regular" />
+                    </Button>
+                </div>
+            </div>
 
             {isIncorrect ? (
-                <div style={styles.panel({ tone: "insight", delay: 140 })}>
-                    <div style={styles.explanationRow}>
-                        <span style={styles.explanationIcon}>
-                            <Lightbulb size={22} weight="regular" />
-                        </span>
-                        <div>
-                            <p style={styles.explanationTitle}>What to adjust</p>
-                            <p style={styles.explanationText}>
-                                {renderInlineMarkdown(explanationText)}
-                                {isDetailedLoading ? <BarsLoader /> : null}
-                            </p>
-                        </div>
-                    </div>
+                <div style={styles.footerNote}>
+                    <span style={{ color: ACCENT, fontSize: "1.4rem", lineHeight: 1 }}>♡</span>
+                    Every mistake is a step forward!
                 </div>
             ) : null}
 
-            <div style={styles.actionRow}>
-                <Button
-                    variant="primary"
-                    theme={theme}
-                    disabled={isContinueDisabled}
-                    onClick={onContinue}
-                    style={styles.actionButton}
-                >
-                    Continue
-                </Button>
-            </div>
-
             <SharedAnimations />
-        </div>
+        </>
     );
 }
 

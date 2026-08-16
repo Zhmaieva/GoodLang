@@ -243,6 +243,48 @@ export async function callManageSubscriptionApi() {
     return { ...data, isSuccess: true };
 }
 
+export async function callVocabularyApi() {
+    const url = `${API_BASE}/vocabulary`;
+
+    const res = await fetch(url, {
+        headers: {
+            'Authorization': `Bearer ${await getToken()}`,
+        }
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+        throw new Error("Server error: " + res.status);
+    }
+
+    return { ...data, isSuccess: true };
+}
+
+export async function callSaveVocabularyCandidatesApi(payload = {}) {
+    const url = `${API_BASE}/vocabulary/candidates`;
+    const body = Array.isArray(payload)
+        ? { candidates: payload }
+        : payload;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            'Authorization': `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify(body),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+        throw new Error("Server error: " + res.status);
+    }
+
+    return { ...data, isSuccess: true };
+}
+
 export async function callSendPromoCodeApi({ email }) {
     const res = await fetch(`${API_BASE}/accounts/send-promo-code`, {
         method: "POST",

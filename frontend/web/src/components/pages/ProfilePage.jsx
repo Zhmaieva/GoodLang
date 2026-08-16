@@ -7,7 +7,9 @@ import {
     EnvelopeSimple,
     GlobeHemisphereWest,
     ShieldCheck,
+    SignOut,
 } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
 import SiteHeader from "../SiteHeader.jsx";
 import { Button } from "../Buttons.jsx";
 import ChooseLocaleModal from "../modals/ChooseLocaleModal.jsx";
@@ -92,6 +94,7 @@ function getPlanLabel(account) {
 }
 
 export default function ProfilePage({ theme }) {
+    const navigate = useNavigate();
     const [account, setAccount] = useState(() => readCachedAccountInfo());
     const [hoveredRow, setHoveredRow] = useState(null);
     const [limitVisible, setLimitVisible] = useState(false);
@@ -166,6 +169,20 @@ export default function ProfilePage({ theme }) {
         setBillingVisible(true);
     };
 
+    const handleLogout = () => {
+        try {
+            localStorage.removeItem("token");
+            localStorage.removeItem("account_info");
+            localStorage.removeItem("account_info_prev");
+            localStorage.removeItem("purchase");
+            localStorage.removeItem("paymentIntentType");
+        } catch {
+            // Logout should still navigate even if local storage is unavailable.
+        }
+
+        navigate("/");
+    };
+
     const openBillingPortal = async () => {
         if (billingLoading) return;
 
@@ -235,6 +252,34 @@ export default function ProfilePage({ theme }) {
         alignItems: "center",
         gap: isMobile ? 20 : 32,
         padding: isMobile ? "30px 24px" : "46px 56px",
+    };
+
+    const heroInfoStyle = {
+        display: "flex",
+        alignItems: "center",
+        gap: isMobile ? 20 : 32,
+        minWidth: 0,
+    };
+
+    const logoutButtonStyle = {
+        marginLeft: "auto",
+        appearance: "none",
+        border: `1px solid ${colors.border}`,
+        borderRadius: 14,
+        padding: isMobile ? "10px 12px" : "12px 16px",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 8,
+        background: colors.surface,
+        color: "#26345f",
+        fontFamily: "var(--font-family-base)",
+        fontSize: isMobile ? 13 : 14,
+        fontWeight: 800,
+        lineHeight: 1,
+        cursor: "pointer",
+        whiteSpace: "nowrap",
+        boxShadow: "0 10px 28px rgba(31, 36, 54, 0.06)",
     };
 
     const avatarStyle = {
@@ -573,32 +618,44 @@ export default function ProfilePage({ theme }) {
             <main style={contentStyle}>
                 <section style={cardStyle} aria-label="User profile">
                     <div style={heroStyle}>
-                        <div style={avatarStyle} aria-hidden>
-                            GL
+                        <div style={heroInfoStyle}>
+                            <div style={avatarStyle} aria-hidden>
+                                GL
+                            </div>
+                            <div>
+                                <h1
+                                    style={{
+                                        margin: 0,
+                                        color: colors.text,
+                                        fontSize: isMobile ? 28 : 34,
+                                        lineHeight: 1.06,
+                                        fontWeight: 850,
+                                    }}
+                                >
+                                    My profile
+                                </h1>
+                                <p
+                                    style={{
+                                        margin: "8px 0 0",
+                                        color: "#465174",
+                                        fontSize: isMobile ? 15 : 16,
+                                        fontWeight: 500,
+                                        overflowWrap: "anywhere",
+                                    }}
+                                >
+                                    {email}
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h1
-                                style={{
-                                    margin: 0,
-                                    color: colors.text,
-                                    fontSize: isMobile ? 28 : 34,
-                                    lineHeight: 1.06,
-                                    fontWeight: 850,
-                                }}
-                            >
-                                My profile
-                            </h1>
-                            <p
-                                style={{
-                                    margin: "8px 0 0",
-                                    color: "#465174",
-                                    fontSize: isMobile ? 15 : 16,
-                                    fontWeight: 500,
-                                }}
-                            >
-                                {email}
-                            </p>
-                        </div>
+                        <button
+                            type="button"
+                            style={logoutButtonStyle}
+                            onClick={handleLogout}
+                            aria-label="Log out"
+                        >
+                            <SignOut size={isMobile ? 18 : 20} weight="bold" aria-hidden />
+                            {!isMobile && "Log out"}
+                        </button>
                     </div>
 
                     <section style={sectionStyle}>

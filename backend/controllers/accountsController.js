@@ -1,9 +1,15 @@
 import {
     addInquiry,
+    confirmAccountEmailChange,
     createAccount,
-    getAccountInfo, sendPromoCode,
-    sendVerificationCode, unsubscribeByToken,
-    verifyCode
+    getAccountInfo,
+    sendCurrentEmailChangeCode,
+    sendNewEmailChangeCode,
+    sendPromoCode,
+    sendVerificationCode,
+    unsubscribeByToken,
+    verifyCode,
+    verifyCurrentEmailChangeCode,
 } from "../database/repositories/accountsRepository.js";
 import jwt from "jsonwebtoken";
 import {ACTION_TYPES, SECRET_KEY} from "../core/constants.js";
@@ -15,6 +21,49 @@ const appVersion = process.env.APP_VERSION || "1.0.0";
 
 function generateToken({id}) {
     return jwt.sign({ id }, SECRET_KEY);
+}
+
+const emailChangeTokenTtl = "20m";
+
+function generateEmailChangeToken({ id, step, email }) {
+    return jwt.sign(
+        { id: String(id), step, email, purpose: "email-change" },
+        SECRET_KEY,
+        { expiresIn: emailChangeTokenTtl }
+    );
+}
+
+function createPublicError(message, statusCode = 400) {
+    const error = new Error(message);
+    error.statusCode = statusCode;
+    error.publicMessage = message;
+    return error;
+}
+
+function readEmailChangeToken(token, accountId, step) {
+    if (!token) {
+        throw createPublicError("Confirm the previous step first");
+    }
+
+    try {
+        const payload = jwt.verify(token, SECRET_KEY);
+        if (
+            payload?.purpose !== "email-change" ||
+            payload?.id !== String(accountId) ||
+            payload?.step !== step
+        ) {
+            throw new Error("Invalid token");
+        }
+        return payload;
+    } catch {
+        throw createPublicError("Email change confirmation expired. Please start again.");
+    }
+}
+
+function sendPublicError(res, error) {
+    return res.status(error.statusCode || 400).json({
+        error: error.publicMessage || error.message || "Something went wrong",
+    });
 }
 
 export const accountsController = {
@@ -73,6 +122,76 @@ export const accountsController = {
 
                 res.json({verified: true});
             } catch (e) {
+                next(e);
+            }
+        });
+
+        app.post(`/accounts/email-change/start`, authMiddleware, async (req, res, next) => {
+            try {
+                const { email } = await sendCurrentEmailChangeCode(req.user.id);
+
+                res.json({ message: "Code sent to current email", email });
+            } catch (e) {
+                if (e.publicMessage) return sendPublicError(res, e);
+                next(e);
+            }
+        });
+
+        app.post(`/accounts/email-change/verify-current`, authMiddleware, async (req, res, next) => {
+            try {
+                const { code } = req.body;
+                if (!code) return res.status(400).json({ error: "Code required" });
+
+                const { email } = await verifyCurrentEmailChangeCode(req.user.id, code);
+
+                res.json({
+                    message: "Current email confirmed",
+                    email,
+                    changeToken: generateEmailChangeToken({
+                        id: req.user.id,
+                        step: "current-confirmed",
+                        email,
+                    }),
+                });
+            } catch (e) {
+                if (e.publicMessage) return sendPublicError(res, e);
+                next(e);
+            }
+        });
+
+        app.post(`/accounts/email-change/send-new-code`, authMiddleware, async (req, res, next) => {
+            try {
+                const { newEmail, changeToken } = req.body;
+                readEmailChangeToken(changeToken, req.user.id, "current-confirmed");
+
+                const { email } = await sendNewEmailChangeCode(req.user.id, newEmail);
+
+                res.json({
+                    message: "Code sent to new email",
+                    email,
+                    changeToken: generateEmailChangeToken({
+                        id: req.user.id,
+                        step: "new-code-sent",
+                        email,
+                    }),
+                });
+            } catch (e) {
+                if (e.publicMessage) return sendPublicError(res, e);
+                next(e);
+            }
+        });
+
+        app.post(`/accounts/email-change/confirm`, authMiddleware, async (req, res, next) => {
+            try {
+                const { code, changeToken } = req.body;
+                if (!code) return res.status(400).json({ error: "Code required" });
+
+                const payload = readEmailChangeToken(changeToken, req.user.id, "new-code-sent");
+                const { email, oldEmail } = await confirmAccountEmailChange(req.user.id, payload.email, code);
+
+                res.json({ message: "Email changed", email, oldEmail });
+            } catch (e) {
+                if (e.publicMessage) return sendPublicError(res, e);
                 next(e);
             }
         });

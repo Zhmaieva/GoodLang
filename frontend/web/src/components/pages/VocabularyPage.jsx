@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import AppShell from "../AppShell.jsx";
 import SiteHeader from "../SiteHeader.jsx";
 import FooterBar from "../FooterBar.jsx";
@@ -15,93 +15,9 @@ import {
     APP_TEXT_COLOR,
     LEARNED_STATUS_COLOR,
 } from "../../theme.js";
-
-const VOCABULARY_WORDS = [
-    {
-        id: "appointment",
-        word: "appointment",
-        meaning: "зустріч, запис",
-        level: "B1",
-        status: "recovered",
-        accuracy: 92,
-        previousMistakes: 5,
-        correctStreak: 6,
-        lastMistake: "Ages ago",
-        example: "I have an appointment at nine.",
-    },
-    {
-        id: "borrow",
-        word: "borrow",
-        meaning: "позичати у когось",
-        level: "A2",
-        status: "needsPractice",
-        accuracy: 38,
-        previousMistakes: 7,
-        correctStreak: 1,
-        lastMistake: "Yesterday",
-        example: "Can I borrow your pen?",
-    },
-    {
-        id: "receipt",
-        word: "receipt",
-        meaning: "чек, квитанція",
-        level: "B1",
-        status: "needsPractice",
-        accuracy: 64,
-        previousMistakes: 3,
-        correctStreak: 2,
-        lastMistake: "Today",
-        example: "Keep the receipt after you pay.",
-    },
-    {
-        id: "neighbourhood",
-        word: "neighbourhood",
-        meaning: "район",
-        level: "B1",
-        status: "learned",
-        accuracy: 100,
-        previousMistakes: 2,
-        correctStreak: 8,
-        lastMistake: "Ages ago",
-        example: "This neighbourhood is quiet.",
-    },
-    {
-        id: "afford",
-        word: "afford",
-        meaning: "мати змогу оплатити",
-        level: "B1",
-        status: "needsPractice",
-        accuracy: 44,
-        previousMistakes: 6,
-        correctStreak: 0,
-        lastMistake: "Today",
-        example: "I cannot afford a new laptop.",
-    },
-    {
-        id: "eventually",
-        word: "eventually",
-        meaning: "зрештою",
-        level: "B2",
-        status: "recovered",
-        accuracy: 88,
-        previousMistakes: 4,
-        correctStreak: 5,
-        lastMistake: "Last week",
-        example: "Eventually, we found the answer.",
-    },
-    {
-        id: "refund",
-        word: "refund",
-        meaning: "повернення коштів",
-        level: "B1",
-        status: "needsPractice",
-        accuracy: 71,
-        previousMistakes: 2,
-        correctStreak: 3,
-        lastMistake: "Last week",
-        example: "I asked for a refund.",
-    },
-];
+import { callVocabularyApi } from "../../services/api.js";
+import { off, on } from "../../services/events.js";
+import { getLocalVocabularyWords, mergeVocabularyWords } from "../../services/vocabularyService.js";
 
 const WORDS_PER_PAGE = 10;
 
@@ -272,6 +188,11 @@ export default function VocabularyPage({ theme }) {
     const [isMobile, setIsMobile] = useState(
         typeof window !== "undefined" ? window.innerWidth < 915 : false
     );
+    const [words, setWords] = useState([]);
+    const [summary, setSummary] = useState(null);
+    const [vocabularyState, setVocabularyState] = useState("loading");
+    const [loading, setLoading] = useState(true);
+    const [loadError, setLoadError] = useState("");
     const [activeFilter, setActiveFilter] = useState("all");
     const [sortKey, setSortKey] = useState("level");
     const [sortDir, setSortDir] = useState("asc");
@@ -284,6 +205,50 @@ export default function VocabularyPage({ theme }) {
 
         return () => window.removeEventListener("resize", onResize);
     }, []);
+
+    const loadVocabulary = useCallback(({ silent = false } = {}) => {
+        let cancelled = false;
+
+        if (!silent) setLoading(true);
+        callVocabularyApi()
+            .then((data) => {
+                if (cancelled) return;
+                const mergedWords = mergeVocabularyWords(data?.words);
+                setWords(mergedWords);
+                setSummary(data?.summary ?? null);
+                setVocabularyState(mergedWords.length > 0 ? "ready" : data?.state ?? "ready");
+                setLoadError("");
+            })
+            .catch((error) => {
+                if (cancelled) return;
+                console.error("Failed to load vocabulary", error);
+                const localWords = getLocalVocabularyWords();
+                setWords(localWords);
+                setSummary(null);
+                setVocabularyState(localWords.length > 0 ? "ready" : "error");
+                setLoadError(localWords.length > 0
+                    ? ""
+                    : "Vocabulary is not available right now. Please try again later.");
+            })
+            .finally(() => {
+                if (!cancelled) setLoading(false);
+            });
+
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    useEffect(() => loadVocabulary(), [loadVocabulary]);
+
+    useEffect(() => {
+        const handleVocabularyUpdated = () => {
+            loadVocabulary({ silent: true });
+        };
+
+        on("vocabularyUpdated", handleVocabularyUpdated);
+        return () => off("vocabularyUpdated", handleVocabularyUpdated);
+    }, [loadVocabulary]);
 
     const toggleSort = (key) => {
         if (sortKey === key) {
@@ -315,8 +280,8 @@ export default function VocabularyPage({ theme }) {
 
     const filteredWords = useMemo(() => {
         const list = activeFilter === "all"
-            ? [...VOCABULARY_WORDS]
-            : VOCABULARY_WORDS.filter((word) => word.status === activeFilter);
+            ? [...words]
+            : words.filter((word) => word.status === activeFilter);
         const direction = sortDir === "asc" ? 1 : -1;
 
         list.sort((a, b) => {
@@ -339,7 +304,7 @@ export default function VocabularyPage({ theme }) {
         });
 
         return list;
-    }, [activeFilter, sortKey, sortDir]);
+    }, [activeFilter, sortKey, sortDir, words]);
 
     const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
 
@@ -356,6 +321,27 @@ export default function VocabularyPage({ theme }) {
     useEffect(() => {
         setPage((currentPage) => Math.min(currentPage, totalPages));
     }, [totalPages]);
+
+    const vocabularyLevelSummary = summary?.vocabularyLevel ?? {
+        value: loading ? "..." : "-",
+        progress: 0,
+        note: loading ? "Loading vocabulary" : "Not enough data yet",
+    };
+    const learnedWordsSummary = summary?.learnedWords ?? {
+        value: loading ? "..." : words.filter((word) => word.status === "learned").length,
+        progress: 0,
+        note: loading ? "Loading vocabulary" : "No learned words yet",
+    };
+    const needsPracticeSummary = summary?.needsPractice ?? {
+        value: loading ? "..." : words.filter((word) => word.status === "needsPractice").length,
+        progress: 0,
+        note: loading ? "Loading vocabulary" : "No weak words yet",
+    };
+    const recoveredSummary = summary?.recovered ?? {
+        value: loading ? "..." : words.filter((word) => word.status === "recovered").length,
+        progress: 0,
+        note: loading ? "Loading vocabulary" : "No recovered words yet",
+    };
 
     const pageLayoutStyle = {
         width: "100%",
@@ -532,6 +518,23 @@ export default function VocabularyPage({ theme }) {
         color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
     };
 
+    const emptyStateStyle = {
+        padding: "28px 20px",
+        color: loadError ? "#9b2c2c" : theme?.muted ?? APP_MUTED_TEXT_COLOR,
+        fontSize: "0.95rem",
+        fontWeight: 600,
+        textAlign: "center",
+    };
+
+    const tableMessage = loading
+        ? "Loading vocabulary..."
+        : loadError
+            || (vocabularyState === "noPracticeYet" || words.length === 0
+                ? "Your vocabulary will appear here after you complete a few practice tasks."
+                : filteredWords.length === 0
+                    ? "No words match this filter."
+                    : "");
+
     return (
         <AppShell theme={theme} noPadding>
             <div style={pageLayoutStyle}>
@@ -551,33 +554,33 @@ export default function VocabularyPage({ theme }) {
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Vocabulary level"
-                                value="B1"
-                                progress={62}
-                                note="Moving toward B2"
+                                value={vocabularyLevelSummary.value}
+                                progress={vocabularyLevelSummary.progress}
+                                note={vocabularyLevelSummary.note}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Learned words"
-                                value="148"
-                                progress={74}
-                                note="Stable in recent tasks"
+                                value={learnedWordsSummary.value}
+                                progress={learnedWordsSummary.progress}
+                                note={learnedWordsSummary.note}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Needs practice"
-                                value="17"
-                                progress={28}
-                                note="Should return in the queue"
+                                value={needsPracticeSummary.value}
+                                progress={needsPracticeSummary.progress}
+                                note={needsPracticeSummary.note}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Recovered"
-                                value="23"
-                                progress={58}
-                                note="Was weak, now correct"
+                                value={recoveredSummary.value}
+                                progress={recoveredSummary.progress}
+                                note={recoveredSummary.note}
                             />
                         </section>
 
@@ -623,42 +626,48 @@ export default function VocabularyPage({ theme }) {
                                         <SortHeader columnKey="status">Status</SortHeader>
                                     </div>
 
-                                    {paginatedWords.map((item, index) => (
-                                        <article
-                                            key={item.id}
-                                            style={{
-                                                ...tableRowStyle,
-                                                borderBottom:
-                                                    index === paginatedWords.length - 1 ? "none" : tableRowStyle.borderBottom,
-                                            }}
-                                        >
-                                            <div style={wordNameStyle}>
-                                                <span style={wordStyle}>{item.word}</span>
-                                                <span style={metaStyle}>Level: {item.level}</span>
-                                            </div>
-                                            <div style={metaStyle}>{item.meaning}</div>
-                                            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                                                <strong style={{ fontSize: "1rem", color: theme?.text ?? APP_TEXT_COLOR }}>
-                                                    {item.accuracy}%
-                                                </strong>
-                                                <ProgressBar value={item.accuracy} theme={theme} />
-                                            </div>
-                                            <div style={metaStyle}>{item.lastMistake}</div>
-                                            <StatusChip status={item.status} />
-                                        </article>
-                                    ))}
+                                    {tableMessage ? (
+                                        <div style={emptyStateStyle}>{tableMessage}</div>
+                                    ) : (
+                                        paginatedWords.map((item, index) => (
+                                            <article
+                                                key={item.id}
+                                                style={{
+                                                    ...tableRowStyle,
+                                                    borderBottom:
+                                                        index === paginatedWords.length - 1 ? "none" : tableRowStyle.borderBottom,
+                                                }}
+                                            >
+                                                <div style={wordNameStyle}>
+                                                    <span style={wordStyle}>{item.word}</span>
+                                                    <span style={metaStyle}>Level: {item.level}</span>
+                                                </div>
+                                                <div style={metaStyle}>{item.meaning || "-"}</div>
+                                                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                                                    <strong style={{ fontSize: "1rem", color: theme?.text ?? APP_TEXT_COLOR }}>
+                                                        {item.accuracy}%
+                                                    </strong>
+                                                    <ProgressBar value={item.accuracy} theme={theme} />
+                                                </div>
+                                                <div style={metaStyle}>{item.lastMistake}</div>
+                                                <StatusChip status={item.status} />
+                                            </article>
+                                        ))
+                                    )}
                                 </div>
 
-                                <Pagination
-                                    page={page}
-                                    totalPages={totalPages}
-                                    onPageChange={setPage}
-                                    theme={theme}
-                                    isMobile={isMobile}
-                                    style={{
-                                        marginTop: 12,
-                                    }}
-                                />
+                                {!loading && !loadError && filteredWords.length > 0 && (
+                                    <Pagination
+                                        page={page}
+                                        totalPages={totalPages}
+                                        onPageChange={setPage}
+                                        theme={theme}
+                                        isMobile={isMobile}
+                                        style={{
+                                            marginTop: 12,
+                                        }}
+                                    />
+                                )}
                             </section>
 
                         </section>

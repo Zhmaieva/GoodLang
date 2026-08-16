@@ -491,6 +491,9 @@ export default function TaskCard({
                         ref={textareaRef}
                         placeholder="... translate into English"
                         autoComplete="off"
+                        autoCorrect="off"
+                        autoCapitalize="off"
+                        spellCheck={false}
                         value={answer}
                         onChange={(e) => setAnswer(e.target.value)}
                         onKeyDown={onKeyDown}
