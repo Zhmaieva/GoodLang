@@ -232,12 +232,12 @@ export default function ResultCard({
     const styles = {
         shell: {
             width: "100%",
-            maxWidth: 980,
+            maxWidth: "100%",
             margin: "0 auto",
-            border: `1px solid ${BORDER}`,
+            border: "none",
             borderRadius: 24,
             background: SURFACE,
-            boxShadow: "0 24px 70px rgba(31, 36, 54, 0.08)",
+            boxShadow: "none",
             overflow: "hidden",
             display: "flex",
             flexDirection: "column",
@@ -246,26 +246,26 @@ export default function ResultCard({
         },
 
         content: {
-            padding: "clamp(32px, 4vw, 48px) clamp(20px, 3vw, 32px) 30px",
+            padding: 0,
             display: "flex",
             flexDirection: "column",
-            gap: 18,
+            gap: 10,
         },
 
         headingWrap: {
             textAlign: "left",
             display: "grid",
-            gap: 8,
-            marginBottom: 20,
+            gap: 6,
+            marginBottom: 4,
         },
 
         title: {
             margin: 0,
             color: TEXT,
             fontFamily: "var(--font-family-base)",
-            fontSize: "clamp(2.25rem, 5vw, 3.1rem)",
-            lineHeight: 1.05,
-            fontWeight: 800,
+            fontSize: "clamp(1.45rem, 3vw, 1.65rem)",
+            lineHeight: 1.32,
+            fontWeight: 750,
             letterSpacing: 0,
         },
 
@@ -309,7 +309,7 @@ export default function ResultCard({
                 borderRadius: 20,
                 background: current.background,
                 color: current.color,
-                padding: "20px 22px",
+                padding: "14px 18px",
                 boxSizing: "border-box",
                 boxShadow: "0 12px 30px rgba(31, 36, 54, 0.035)",
                 animation: "glFeedbackPanel 480ms cubic-bezier(0.22, 1, 0.36, 1) both",
@@ -320,12 +320,12 @@ export default function ResultCard({
         answerRow: {
             display: "flex",
             alignItems: "center",
-            gap: 16,
+            gap: 14,
         },
 
         iconBubble: ({ tone = "success" } = {}) => ({
-            width: 54,
-            height: 54,
+            width: 46,
+            height: 46,
             borderRadius: 999,
             flex: "0 0 auto",
             display: "inline-flex",
@@ -360,14 +360,14 @@ export default function ResultCard({
 
         explanationRow: {
             display: "grid",
-            gridTemplateColumns: "54px 1fr",
-            gap: 16,
+            gridTemplateColumns: "46px 1fr",
+            gap: 14,
             alignItems: "start",
         },
 
         explanationIcon: {
-            width: 54,
-            height: 54,
+            width: 46,
+            height: 46,
             borderRadius: 999,
             display: "inline-flex",
             alignItems: "center",
@@ -448,8 +448,8 @@ export default function ResultCard({
             justifyContent: "space-between",
             alignItems: "center",
             gap: 16,
-            padding: "20px clamp(20px, 3vw, 32px)",
-            borderTop: `1px solid ${BORDER}`,
+            padding: "20px 0 0",
+            borderTop: "none",
             background: SURFACE,
             flexWrap: "wrap",
         },

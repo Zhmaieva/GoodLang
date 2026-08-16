@@ -511,8 +511,9 @@ export default function TaskCard({
                         onClick={onMainButtonClick}
                         disabled={isActionBusy}
                         style={{
-                            width: isCompact ? "100%" : 220,
+                            width: isCompact ? "100%" : isLockedNow ? 260 : 220,
                             minHeight: 50,
+                            padding: isLockedNow ? "0 26px" : undefined,
                             borderRadius: 14,
                             opacity: isCheckingAnswer ? 1 : undefined,
                         }}

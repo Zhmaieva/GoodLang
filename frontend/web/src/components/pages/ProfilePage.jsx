@@ -279,7 +279,7 @@ export default function ProfilePage({ theme }) {
         lineHeight: 1,
         cursor: "pointer",
         whiteSpace: "nowrap",
-        boxShadow: "0 10px 28px rgba(31, 36, 54, 0.06)",
+        boxShadow: "none",
     };
 
     const avatarStyle = {

@@ -82,7 +82,7 @@ function getVariantStyle({
             background: dark,
             color: "#fff",
             border: "1px solid transparent",
-            boxShadow: "0 12px 28px rgba(23, 27, 47, 0.16)",
+            boxShadow: "none",
             transform: hovered && !disabled ? "translateY(-1px)" : "none",
         },
         secondary: {

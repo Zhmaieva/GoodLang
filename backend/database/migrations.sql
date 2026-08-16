@@ -1070,3 +1070,43 @@ $$
 $$;
 
 COMMIT;
+
+-- Migration: set_daily_translation_limit_to_15
+-- Description: Set the free daily practice target and quota default to 15 sentences.
+
+BEGIN;
+
+DO
+$$
+    BEGIN
+        IF NOT EXISTS (
+            SELECT 1
+            FROM migrations_history
+            WHERE id = 'set_daily_translation_limit_to_15'
+        ) THEN
+
+            ALTER TABLE accounts
+                ALTER COLUMN translation_limit SET DEFAULT 15;
+
+            ALTER TABLE accounts
+                ALTER COLUMN translations_quota SET DEFAULT 15;
+
+            UPDATE accounts
+            SET
+                translations_quota = LEAST(
+                    15,
+                    GREATEST(0, COALESCE(translations_quota, 0))
+                        + GREATEST(0, 15 - COALESCE(translation_limit, 15))
+                ),
+                translation_limit = 15
+            WHERE COALESCE(status, 'free') = 'free'
+              AND COALESCE(translation_limit, 0) < 15;
+
+            INSERT INTO migrations_history (id, applied_on)
+            VALUES ('set_daily_translation_limit_to_15', (NOW() AT TIME ZONE 'UTC'));
+
+        END IF;
+    END
+$$;
+
+COMMIT;

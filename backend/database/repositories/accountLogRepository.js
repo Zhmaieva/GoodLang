@@ -17,7 +17,7 @@ export async function checkTranslationLimit(accountId, soft = true) {
     }
 
     // Account-based limits (fallback-safe)
-    const limit = Number.isFinite(account.translationLimit) ? account.translationLimit : 7;
+    const limit = Number.isFinite(account.translationLimit) ? account.translationLimit : 15;
     const windowSeconds = Number.isFinite(account.limitTimeSpanSeconds) ? account.limitTimeSpanSeconds : (24 * 3600);
     const windowMs = windowSeconds * 1000;
 

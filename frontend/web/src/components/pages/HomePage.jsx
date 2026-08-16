@@ -7,8 +7,13 @@ import FooterBar from "../FooterBar.jsx";
 import { callEmailUnsubscribeApi } from "../../services/api.js";
 import InfoModal from "../modals/InfoModal.jsx";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
-import { APP_BACKGROUND_COLOR, APP_BORDER_COLOR, APP_SURFACE_COLOR } from "../../theme.js";
+import {
+    APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
+    APP_SURFACE_COLOR,
+} from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
+import { emit } from "../../services/events.js";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -172,6 +177,7 @@ export default function HomePage({ theme }) {
                                     theme={theme}
                                     onLoadingChange={setLoading}
                                     nextLevel={level}
+                                    onAnswerEvaluated={() => emit("refreshAccount")}
                                 />
                             </section>
                         </div>

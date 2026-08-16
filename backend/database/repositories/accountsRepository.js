@@ -95,7 +95,7 @@ export async function getAccountInfo(accountId, promoCode) {
             status: "free",
             isTrial: false,
             trialEndsOn: null,
-            translationLimit: 10,            // safe fallback
+            translationLimit: 15,            // safe fallback
             limitTimeSpanSeconds: 24 * 3600, // safe fallback
             translationsQuota: 0,
             promo: null,
@@ -310,7 +310,7 @@ export async function getAccountInfo(accountId, promoCode) {
         trialEndsOn: rows[0].trial_ended_at,
         translationsQuota: rows[0].translations_quota || 0,
 
-        translationLimit: Number(rows[0].translation_limit ?? 7),
+        translationLimit: Number(rows[0].translation_limit ?? 15),
         limitTimeSpanSeconds: Number(rows[0].limit_time_span_seconds ?? 24 * 3600),
 
         promo,

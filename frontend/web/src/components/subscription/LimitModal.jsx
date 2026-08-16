@@ -7,7 +7,7 @@ import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.j
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
 import { Button } from "../Buttons.jsx";
-import { X } from "@phosphor-icons/react";
+import { Check, X } from "@phosphor-icons/react";
 
 let stripeLoaded = null;
 export async function getStripe() {
@@ -213,17 +213,21 @@ export default function LimitModal({
 
     const benefitItemStyle = {
         display: "flex",
-        alignItems: "baseline",
-        gap: 10,
-        marginBottom: 3,
+        alignItems: "center",
+        gap: 12,
+        marginBottom: 12,
     };
 
     const benefitMarkerStyle = {
         flex: "0 0 auto",
-        width: 10,
+        width: 28,
+        height: 28,
+        borderRadius: "50%",
+        backgroundColor: theme.accentSoft,
         color: theme.accent,
-        fontWeight: 400,
-        lineHeight: 1,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
     };
 
     const modalTitleStyle = {
@@ -464,30 +468,42 @@ export default function LimitModal({
                                     {featurePdf && (
                                         <>
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 1800+ вправ у форматі PDF
                                             </li>
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Відсутність вотермарків на всіх PDF
                                             </li>
 
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Priority support
                                             </li>
 
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Unlimited training
                                             </li>
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Cloud progress saving
                                             </li>
 
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Cancel anytime
                                             </li>
                                         </>
@@ -496,17 +512,23 @@ export default function LimitModal({
                                     {!featurePdf && (
                                         <>
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Unlimited training
                                             </li>
 
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Cloud progress saving
                                             </li>
 
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Priority support
                                             </li>
 
@@ -520,7 +542,9 @@ export default function LimitModal({
                                             {/*</li>*/}
 
                                             <li style={benefitItemStyle}>
-                                                <span style={benefitMarkerStyle}>•</span>
+                                                <span style={benefitMarkerStyle} aria-hidden>
+                                                    <Check size={18} weight="bold" />
+                                                </span>
                                                 Cancel anytime
                                             </li>
                                         </>
