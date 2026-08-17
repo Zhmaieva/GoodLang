@@ -6,8 +6,9 @@ import {
     callAccountInfoApi,
     callAccountVerifyApi,
     callQuickTranslateAPI,
-    callSaveVocabularyCandidatesApi,
     callTranslateAPI,
+    callVocabularyEvaluationApi,
+    callVocabularyTranslationsApi,
 } from "../../services/api.js";
 import {
     getSavedTaskMode,
@@ -34,7 +35,10 @@ import {
     prefetchTrainingTask,
     setCachedTrainingTask
 } from "../../services/trainingTaskCache.js";
-import {saveLocalVocabularyCandidates} from "../../services/vocabularyService.js";
+import {
+    saveLocalVocabularyEvaluation,
+    saveLocalVocabularyTranslations,
+} from "../../services/vocabularyService.js";
 
 export default function Trainer({
                                     theme,
@@ -140,6 +144,7 @@ export default function Trainer({
     const [account, setAccount] = useState(null);
     const [correctAnswer, setCorrectAnswer] = useState("");
     const [naturalAnswer, setNaturalAnswer] = useState("");
+    const [vocabularyFeedback, setVocabularyFeedback] = useState("");
     const [isEvaluating, setIsEvaluating] = useState(false);
     const [isDetailedFeedbackLoading, setIsDetailedFeedbackLoading] = useState(false);
     const [quickVerdict, setQuickVerdict] = useState(null);
@@ -369,6 +374,7 @@ export default function Trainer({
         return out.slice(0, 3);
     }
 
+    /* eslint-disable no-unused-vars */
     const vocabularyStopWords = new Set([
         "a",
         "an",
@@ -564,30 +570,11 @@ export default function Trainer({
                                               fallbackLevel,
                                               isQuick = false,
                                           }) {
-        const occurredAt = new Date().toISOString();
-        const currentLevel = result?.level ?? fallbackLevel ?? difficulty ?? level ?? null;
-        const candidates = result?.isAnswerCorrect
-            ? []
-            : buildMistakeVocabularyCandidates({
-                userAnswer,
-                correctAnswer: result?.correctAnswer || result?.naturalAnswer || "",
-                level: currentLevel,
-                occurredAt,
-            });
-
-        if (!candidates.length || (isQuick === true && !result?.isAnswerCorrect)) return;
-
-        callSaveVocabularyCandidatesApi({
-            candidates,
-            userLocale: localizationService.getLocale(),
-        })
-            .then(() => emit("vocabularyUpdated"))
-            .catch((error) => {
-                console.error("Failed to save vocabulary candidates", error);
-                const localWords = saveLocalVocabularyCandidates(candidates);
-                if (localWords.length > 0) emit("vocabularyUpdated");
-            });
+        // Vocabulary evaluation is performed together with the detailed translation request.
+        // This legacy helper remains temporarily for cached task compatibility.
+        return { userAnswer, result, fallbackLevel, isQuick };
     }
+    /* eslint-enable no-unused-vars */
 
     function resetCurrentTaskOnly() {
         evaluationRunRef.current += 1;
@@ -960,6 +947,7 @@ export default function Trainer({
             setWeakRules([]);
             setCorrectAnswer("");
             setNaturalAnswer("");
+            setVocabularyFeedback("");
 
             const {seed, skip} = getSeed();
             logInfo("evaluating answer...");
@@ -1008,12 +996,6 @@ export default function Trainer({
 
                     const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                     addAnswer(rules.map(() => 1), rules, null);
-                    saveVocabularyFromEvaluation({
-                        userAnswer: userAns,
-                        result: { isAnswerCorrect: true, level: difficulty },
-                        fallbackLevel: difficulty,
-                        isQuick: true,
-                    });
                     const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                     if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
 
@@ -1054,8 +1036,45 @@ export default function Trainer({
                 });
 
             const detailedPromise = callTranslateAPI(evaluationParams);
-            const data = await detailedPromise;
+            const vocabularyPromise = callVocabularyEvaluationApi({
+                targetSentence: evaluationParams.textToTranslateOriginal,
+                userAnswer: userAns,
+                targetLocale: localizationService.getLocale(),
+            }).catch((error) => {
+                console.error("Vocabulary evaluation failed", error);
+                return { isSuccess: false, words: [], feedback: "" };
+            });
+            const [data, vocabularyData] = await Promise.all([
+                detailedPromise,
+                vocabularyPromise,
+            ]);
             if (evaluationRunRef.current !== evaluationRun) return;
+
+            if (vocabularyData?.isSuccess) {
+                setVocabularyFeedback(vocabularyData.feedback || "");
+                saveLocalVocabularyEvaluation({
+                    words: vocabularyData.words,
+                    level: difficulty,
+                    locale: localizationService.getLocale(),
+                });
+                if (vocabularyData.translations) {
+                    saveLocalVocabularyTranslations(
+                        vocabularyData.translations,
+                        localizationService.getLocale(),
+                    );
+                }
+                emit("vocabularyUpdated");
+                void callVocabularyTranslationsApi({
+                    words: (vocabularyData.words || []).map((item) => item?.word).filter(Boolean),
+                    allLocales: true,
+                }).then((allLocaleData) => {
+                    if (!allLocaleData?.isSuccess) return;
+                    saveLocalVocabularyTranslations(allLocaleData.translations);
+                    emit("vocabularyUpdated");
+                }).catch((error) => {
+                    console.error("Background vocabulary translations failed", error);
+                });
+            }
 
             if (!data.isSuccess) {
                 setIsDetailedFeedbackLoading(false);
@@ -1101,11 +1120,6 @@ export default function Trainer({
 
                 const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                 addAnswer(data.scores || [], rules, data.level);
-                saveVocabularyFromEvaluation({
-                    userAnswer: userAns,
-                    result: data,
-                    fallbackLevel: data.level,
-                });
                 const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
                 if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
 
@@ -1440,6 +1454,7 @@ export default function Trainer({
                     naturalAnswer={naturalAnswer}
                     rules={rules}
                     weakRules={weakRules}
+                    vocabularyFeedback={vocabularyFeedback}
                     quickVerdict={quickVerdict}
                     isDetailedLoading={isDetailedFeedbackLoading}
                     onContinue={onMainButtonClick}

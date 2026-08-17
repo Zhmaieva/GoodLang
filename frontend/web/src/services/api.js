@@ -261,6 +261,34 @@ export async function callVocabularyApi() {
     return { ...data, isSuccess: true };
 }
 
+export async function callVocabularyEvaluationApi(payload = {}) {
+    const res = await fetch(`${API_BASE}/vocabulary/evaluate`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error("Server error: " + res.status);
+    return { ...data, isSuccess: true };
+}
+
+export async function callVocabularyTranslationsApi(payload = {}) {
+    const res = await fetch(`${API_BASE}/vocabulary/translations`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error("Server error: " + res.status);
+    return { ...data, isSuccess: true };
+}
+
 export async function callSaveVocabularyCandidatesApi(payload = {}) {
     const url = `${API_BASE}/vocabulary/candidates`;
     const body = Array.isArray(payload)

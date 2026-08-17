@@ -2,9 +2,13 @@ import { authMiddleware } from "../middleware/authMiddleware.js";
 import {
     enrichVocabularyCandidates,
     extractVocabularyCandidatesFromText,
-    VOCABULARY_SUMMARY,
-    VOCABULARY_WORDS,
 } from "../core/vocabulary.js";
+import {
+    evaluateVocabularyUsage,
+    SUPPORTED_VOCABULARY_LOCALES,
+    translateVocabularyWords,
+    translateVocabularyWordsForLocales,
+} from "../core/сore.js";
 import { getTranslationCallCountSince } from "../database/repositories/accountLogRepository.js";
 import {
     buildVocabularySummary,
@@ -39,15 +43,45 @@ export const vocabularyController = {
                     });
                 }
 
-                return res.json({
-                    state: "ready",
-                    source: "seed",
-                    words: VOCABULARY_WORDS,
-                    summary: VOCABULARY_SUMMARY,
-                });
+                return res.json({ state: "ready", source: "user", words: [], summary: buildVocabularySummary([]) });
             } catch (error) {
                 console.error("Failed to load vocabulary:", error);
                 return res.status(500).json({ error: "Failed to load vocabulary" });
+            }
+        });
+
+        app.post(`/${name}/evaluate`, authMiddleware, async (req, res) => {
+            try {
+                const result = await evaluateVocabularyUsage({
+                    targetSentence: req.body?.targetSentence,
+                    userAnswer: req.body?.userAnswer,
+                    targetLocale: req.body?.targetLocale ?? "uk-UA",
+                });
+                return res.json({ isSuccess: true, ...result });
+            } catch (error) {
+                console.error("Failed to evaluate vocabulary usage:", error);
+                return res.status(500).json({ error: "Failed to evaluate vocabulary usage" });
+            }
+        });
+
+        app.post(`/${name}/translations`, authMiddleware, async (req, res) => {
+            try {
+                const words = Array.isArray(req.body?.words) ? req.body.words : [];
+                const translations = req.body?.allLocales
+                    ? await translateVocabularyWordsForLocales({
+                        words,
+                        locales: SUPPORTED_VOCABULARY_LOCALES,
+                    })
+                    : Object.fromEntries(Object.entries(await translateVocabularyWords({
+                        words,
+                        locale: req.body?.locale ?? "uk-UA",
+                    })).map(([word, translation]) => [word, {
+                        [req.body?.locale ?? "uk-UA"]: translation,
+                    }]));
+                return res.json({ isSuccess: true, translations });
+            } catch (error) {
+                console.error("Failed to translate vocabulary words:", error);
+                return res.status(500).json({ error: "Failed to translate vocabulary words" });
             }
         });
 

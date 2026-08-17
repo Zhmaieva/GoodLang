@@ -146,6 +146,7 @@ export default function ResultCard({
     naturalAnswer = "",
     rules = [],
     weakRules = [],
+    vocabularyFeedback = "",
     quickVerdict = null,
     isDetailedLoading = false,
     onContinue,
@@ -579,7 +580,7 @@ export default function ResultCard({
                         </div>
                     ) : null}
 
-                    {isIncorrect ? (
+                    {isIncorrect || vocabularyFeedback ? (
                         <div style={styles.panel({ tone: "insight", delay: 140 })}>
                             <div style={styles.explanationRow}>
                                 <span style={styles.explanationIcon}>
@@ -591,6 +592,11 @@ export default function ResultCard({
                                         {renderInlineMarkdown(explanationText)}
                                         {isDetailedLoading ? <BarsLoader /> : null}
                                     </p>
+                                    {vocabularyFeedback ? (
+                                        <p style={{ ...styles.explanationText, marginTop: 12 }}>
+                                            {vocabularyFeedback}
+                                        </p>
+                                    ) : null}
                                 </div>
                             </div>
                         </div>

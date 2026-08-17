@@ -5,6 +5,7 @@ import {
     saveSeedState, upsertAnswers
 } from "../database/repositories/scoresRepository.js";
 import {getAccountInfo} from "../database/repositories/accountsRepository.js";
+import {upsertLocalVocabularyRecords} from "../database/repositories/vocabularyRepository.js";
 
 const name = 'data-sync';
 
@@ -19,7 +20,8 @@ export const dataSyncController = {
                     since,
                     answers = [],
                     seedState = null,
-                    deviceId
+                    deviceId,
+                    vocabulary = []
                 } = req.body;
 
                 const accountInfo = await getAccountInfo(userId);
@@ -36,6 +38,7 @@ export const dataSyncController = {
                 const updatedOn = new Date();
                 // 1. Save incoming answers (ignore duplicates)
                 await upsertAnswers(userId, deviceId, answers, updatedOn);
+                await upsertLocalVocabularyRecords(userId, vocabulary, updatedOn);
 
                 // 2. Save seed/skip if provided
                 if (seedState?.updatedAt) {

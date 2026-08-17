@@ -1,39 +1,6 @@
 const STORAGE_KEY = "goodlang_vocabulary_local";
 const STORAGE_VERSION_KEY = "goodlang_vocabulary_local_version";
-const STORAGE_VERSION = "7";
-const FALLBACK_TRANSLATIONS_UK = {
-    another: "інший",
-    book: "книга",
-    books: "книги",
-    city: "місто",
-    closer: "ближче",
-    different: "інший, різний",
-    easily: "легко",
-    english: "англійська",
-    "hadn't": "не мав / не зробив",
-    hadnt: "не мав / не зробив",
-    learn: "вчити, вивчати",
-    learned: "вивчив",
-    learning: "навчання",
-    listen: "слухати",
-    listening: "слухання",
-    live: "жити",
-    lived: "жив",
-    move: "переїжджати, рухатися",
-    moved: "переїхав, рухався",
-    music: "музика",
-    professional: "професійний",
-    reading: "читання",
-    ride: "їхати, кататися",
-    ridden: "їздив, катався",
-    sell: "продавати",
-    sold: "продав",
-    speak: "говорити",
-    studied: "вчився, вивчав",
-    study: "вчитися, вивчати",
-    university: "університет",
-    work: "робота, працювати",
-};
+const STORAGE_VERSION = "8";
 const LOCAL_STOP_WORDS = new Set([
     "a",
     "an",
@@ -155,29 +122,31 @@ function getLastMistakeLabel(value) {
 }
 
 function getStatus(record) {
-    if ((record.mistakeCount ?? 0) > 0 && (record.correctStreak ?? 0) < 3) {
+    if ((record.mistakeCount ?? 0) > 0 && (record.correctStreak ?? 0) < 2) {
         return "needsPractice";
     }
 
-    if ((record.correctStreak ?? 0) >= 5) {
+    if ((record.correctStreak ?? 0) >= 4) {
         return "learned";
     }
 
-    return "recovered";
+    if ((record.mistakeCount ?? 0) > 0) return "recovered";
+    return null;
 }
 
-function toVocabularyItem(record) {
-    const attempts = Math.max(1, Number(record.attempts) || 1);
-    const correctCount = Number(record.correctCount) || 0;
+function toVocabularyItem(record, locale = record.displayLocale) {
     const word = normalizeWord(record.word);
+    const displayLocale = locale || record.displayLocale || "uk-UA";
 
     return {
         id: `local-${word}`,
         word,
-        meaning: record.meaning || FALLBACK_TRANSLATIONS_UK[word] || "",
+        meaning: record.translations?.[displayLocale]
+            || record.translations?.[String(displayLocale).split("-")[0]]
+            || record.translations?.uk || "",
+        translations: record.translations || {},
         level: record.level || "-",
         status: getStatus(record),
-        accuracy: Math.round((correctCount / attempts) * 100),
         previousMistakes: Number(record.mistakeCount) || 0,
         correctStreak: Number(record.correctStreak) || 0,
         lastMistake: getLastMistakeLabel(record.lastMistakeAt),
@@ -186,10 +155,68 @@ function toVocabularyItem(record) {
     };
 }
 
-export function getLocalVocabularyWords() {
+export function getLocalVocabularyWords(locale = null) {
     return Object.values(readMap())
-        .map(toVocabularyItem)
-        .filter((item) => item.word && !LOCAL_STOP_WORDS.has(item.word));
+        .map((record) => toVocabularyItem(record, locale || record.displayLocale))
+        .filter((item) => item.word && item.status && !LOCAL_STOP_WORDS.has(item.word));
+}
+
+export function buildLocalVocabularySummary(words = []) {
+    const safeWords = Array.isArray(words) ? words : [];
+    const count = (status) => safeWords.filter((word) => word.status === status).length;
+    const level = safeWords.some((word) => word.level === "B2")
+        ? "B2"
+        : safeWords.some((word) => word.level === "B1") ? "B1" : "-";
+
+    return {
+        vocabularyLevel: { value: level, note: "Based on practiced words" },
+        learnedWords: { value: count("learned"), note: "Stable in recent tasks" },
+        needsPractice: { value: count("needsPractice"), note: "Should return in the queue" },
+        recovered: { value: count("recovered"), note: "Was weak, now correct" },
+    };
+}
+
+export function saveLocalVocabularyEvaluation({ words = [], translations = {}, level = null, locale = "uk" } = {}) {
+    const current = readMap();
+    const now = new Date().toISOString();
+    for (const evaluation of Array.isArray(words) ? words : []) {
+        const word = normalizeWord(evaluation?.word);
+        if (!word || LOCAL_STOP_WORDS.has(word)) continue;
+        const existing = current[word] ?? {
+            word, attempts: 0, correctCount: 0, mistakeCount: 0, correctStreak: 0,
+            translations: {}, createdAt: now,
+        };
+        const correct = evaluation?.correct === true;
+        existing.attempts += 1;
+        existing.correctCount += correct ? 1 : 0;
+        existing.mistakeCount += correct ? 0 : 1;
+        existing.correctStreak = correct ? existing.correctStreak + 1 : 0;
+        existing.level = level || existing.level || "-";
+        existing.updatedAt = now;
+        existing._synced = false;
+        existing.displayLocale = String(locale || "uk-UA");
+        existing.translations = { ...existing.translations, ...(translations[word] ? { [existing.displayLocale]: translations[word] } : {}) };
+        if (!correct) existing.lastMistakeAt = now;
+        current[word] = existing;
+    }
+    writeMap(current);
+    return getLocalVocabularyWords();
+}
+
+export function saveLocalVocabularyTranslations(translations = {}, locale = null) {
+    const current = readMap();
+    for (const [rawWord, values] of Object.entries(translations || {})) {
+        const word = normalizeWord(rawWord);
+        if (!word || !current[word]) continue;
+        current[word].translations = {
+            ...(current[word].translations || {}),
+            ...(values && typeof values === "object" ? values : {}),
+        };
+        if (locale) current[word].displayLocale = locale;
+        current[word]._synced = false;
+    }
+    writeMap(current);
+    return getLocalVocabularyWords();
 }
 
 export function saveLocalVocabularyCandidates(candidates = []) {
@@ -211,7 +238,7 @@ export function saveLocalVocabularyCandidates(candidates = []) {
             createdAt: now,
         };
         const isCorrect = candidate?.isCorrect === true || Number(candidate?.score) >= 100;
-        const meaning = candidate?.meaning || FALLBACK_TRANSLATIONS_UK[word] || "";
+        const meaning = candidate?.meaning || "";
 
         existing.word = word;
         existing.meaning = meaning || existing.meaning || "";
@@ -236,20 +263,22 @@ export function saveLocalVocabularyCandidates(candidates = []) {
     return getLocalVocabularyWords();
 }
 
-export function mergeVocabularyWords(remoteWords = []) {
+export function mergeVocabularyWords(remoteWords = [], locale = "uk-UA") {
     const merged = new Map();
 
     for (const word of Array.isArray(remoteWords) ? remoteWords : []) {
         const key = normalizeWord(word?.word || word?.id);
-        if (key && !LOCAL_STOP_WORDS.has(key)) {
-            merged.set(key, {
-                ...word,
-                meaning: word?.meaning || FALLBACK_TRANSLATIONS_UK[key] || "",
+        if (key && !LOCAL_STOP_WORDS.has(key) && word?.status) {
+        merged.set(key, {
+            ...word,
+            meaning: word?.translations?.[locale]
+                || word?.translations?.[String(locale).split("-")[0]]
+                || word?.meaning || word?.translations?.uk || "",
             });
         }
     }
 
-    for (const word of getLocalVocabularyWords()) {
+    for (const word of getLocalVocabularyWords(locale)) {
         const key = normalizeWord(word.word);
         if (!key) continue;
 
@@ -257,10 +286,20 @@ export function mergeVocabularyWords(remoteWords = []) {
         merged.set(key, {
             ...existing,
             ...word,
-            meaning: word.meaning || existing.meaning || "",
+            meaning: word.meaning || existing.meaning || word.translations?.[word.displayLocale] || word.translations?.uk || "",
             level: word.level && word.level !== "-" ? word.level : existing.level || word.level,
         });
     }
 
     return [...merged.values()];
+}
+
+export function getLocalVocabularyRecords() {
+    return Object.values(readMap()).filter((record) => record?.word);
+}
+
+export function markLocalVocabularySynced() {
+    const current = readMap();
+    for (const record of Object.values(current)) record._synced = true;
+    writeMap(current);
 }

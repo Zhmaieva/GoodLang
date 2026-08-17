@@ -1,6 +1,7 @@
 import { LEVEL_RULES, RULE_LABELS } from "../utils/rules";
 import {callDataSyncApi} from "./api.js";
 import {emit} from "./events.js";
+import {getLocalVocabularyRecords, markLocalVocabularySynced} from "./vocabularyService.js";
 
 const STORAGE_KEY = "answers_data";
 const STORAGE_KEY_SEED = "samples_seed";
@@ -97,6 +98,7 @@ export async function syncWithServer() {
         skip: Number(localStorage.getItem(STORAGE_KEY_SKIP)) || 0,
         updatedAt: localStorage.getItem(STORAGE_KEY_SEED_UPDATED) || null,
     };
+    const localVocabulary = getLocalVocabularyRecords().filter((word) => word._synced !== true);
 
     const chunks = chunkArray(recentLocal, CHUNK_SIZE);
 
@@ -109,6 +111,7 @@ export async function syncWithServer() {
             deviceId: getDeviceId(),
             answers: [],
             seedState: seedLocal,
+            vocabulary: localVocabulary,
         };
 
         const server = await callDataSyncApi(payload);
@@ -116,6 +119,7 @@ export async function syncWithServer() {
 
         mergedAll = mergeAnswersById(mergedAll, server.answers, server.serverTime);
         saveAnswers(mergedAll);
+        if (localVocabulary.length) markLocalVocabularySynced();
 
         // seed merge (same logic you had)
         if (server.seedState?.updatedAt) {
@@ -144,6 +148,7 @@ export async function syncWithServer() {
             deviceId: getDeviceId(),
             answers: answersChunk,
             seedState: seedLocal,
+            vocabulary: localVocabulary,
         };
 
         const server = await callDataSyncApi(payload);
@@ -152,6 +157,7 @@ export async function syncWithServer() {
         // merge and persist after each chunk
         mergedAll = mergeAnswersById(mergedAll, server.answers, server.serverTime);
         saveAnswers(mergedAll);
+        if (localVocabulary.length) markLocalVocabularySynced();
 
         // update lastServerSync as we go (authoritative)
         if (server.serverTime) {
@@ -795,4 +801,3 @@ export function inferUserLevel() {
 function clamp01(x) {
     return Math.max(0, Math.min(1, Number.isFinite(x) ? x : 0));
 }
-

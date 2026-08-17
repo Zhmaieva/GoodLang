@@ -726,6 +726,7 @@ function getLanguageNameFromLocale(locale = "uk-UA") {
     const safeLocale = String(locale ?? "").toLowerCase();
 
     if (safeLocale.startsWith("uk")) return "Ukrainian";
+    if (safeLocale.startsWith("ru")) return "Russian";
     if (safeLocale.startsWith("en")) return "English";
     if (safeLocale.startsWith("pl")) return "Polish";
     if (safeLocale.startsWith("de")) return "German";
@@ -734,13 +735,35 @@ function getLanguageNameFromLocale(locale = "uk-UA") {
     if (safeLocale.startsWith("it")) return "Italian";
     if (safeLocale.startsWith("pt")) return "Portuguese";
     if (safeLocale.startsWith("nl")) return "Dutch";
+    if (safeLocale.startsWith("sv")) return "Swedish";
+    if (safeLocale.startsWith("no")) return "Norwegian";
     if (safeLocale.startsWith("cs")) return "Czech";
+    if (safeLocale.startsWith("sk")) return "Slovak";
+    if (safeLocale.startsWith("hu")) return "Hungarian";
+    if (safeLocale.startsWith("ro")) return "Romanian";
+    if (safeLocale.startsWith("bg")) return "Bulgarian";
+    if (safeLocale.startsWith("el")) return "Greek";
+    if (safeLocale.startsWith("tr")) return "Turkish";
+    if (safeLocale.startsWith("zh")) return "Simplified Chinese";
+    if (safeLocale.startsWith("ja")) return "Japanese";
+    if (safeLocale.startsWith("ko")) return "Korean";
+    if (safeLocale.startsWith("th")) return "Thai";
+    if (safeLocale.startsWith("vi")) return "Vietnamese";
     if (safeLocale.startsWith("da")) return "Danish";
     if (safeLocale.startsWith("id")) return "Indonesian";
     if (safeLocale.startsWith("ms")) return "Malay";
+    if (safeLocale.startsWith("he")) return "Hebrew";
+    if (safeLocale.startsWith("ar")) return "Arabic";
 
-    return "Ukrainian";
+    return "English";
 }
+
+export const SUPPORTED_VOCABULARY_LOCALES = Object.freeze([
+    "uk-UA", "ru-RU", "pl-PL", "de-DE", "fr-FR", "es-ES", "it-IT", "pt-PT", "nl-NL",
+    "sv-SE", "no-NO", "da-DK", "fi-FI", "cs-CZ", "sk-SK", "hu-HU", "ro-RO", "bg-BG",
+    "el-GR", "tr-TR", "zh-CN", "ja-JP", "ko-KR", "th-TH", "vi-VN", "id-ID", "ms-MY",
+    "he-IL", "ar-SA",
+]);
 
 export async function translateVocabularyWords({
                                                    words = [],
@@ -799,4 +822,172 @@ ${JSON.stringify(uniqueWords)}
     }
 
     return translations;
+}
+
+export async function translateVocabularyWordsForLocales({
+    words = [],
+    locales = SUPPORTED_VOCABULARY_LOCALES,
+} = {}) {
+    const uniqueWords = [...new Set((Array.isArray(words) ? words : [])
+        .map((word) => String(word ?? "").trim().toLowerCase()).filter(Boolean))];
+    const requestedLocales = [...new Set((Array.isArray(locales) ? locales : SUPPORTED_VOCABULARY_LOCALES)
+        .filter((locale) => SUPPORTED_VOCABULARY_LOCALES.includes(locale)))];
+    if (!uniqueWords.length || !requestedLocales.length) return {};
+
+    const languageList = requestedLocales
+        .map((locale) => `${locale}: ${getLanguageNameFromLocale(locale)}`)
+        .join(", ");
+    const resp = await client.responses.create(buildJsonResponseRequest({
+        model: OPENAI_QUICK_CHECK_MODEL,
+        temperature: 0,
+        input: [
+            {
+                role: "system",
+                content: [{ type: "input_text", text: `Translate English vocabulary words into every requested locale. Return JSON only as {"translations":[{"word":string,"translations":{"locale":string}}]}. Use short dictionary-style translations. Locales: ${languageList}` }],
+            },
+            {
+                role: "user",
+                content: [{ type: "input_text", text: `WORDS:\n${JSON.stringify(uniqueWords)}` }],
+            },
+        ],
+    }));
+    const parsed = parseJsonObject(resp.output_text);
+    const result = {};
+    for (const item of Array.isArray(parsed.translations) ? parsed.translations : []) {
+        const word = String(item?.word ?? "").trim().toLowerCase();
+        if (!word || !uniqueWords.includes(word)) continue;
+        const values = {};
+        for (const locale of requestedLocales) {
+            const value = String(item?.translations?.[locale] ?? "").trim();
+            if (value) values[locale] = value;
+        }
+        if (Object.keys(values).length) result[word] = values;
+    }
+    return result;
+}
+
+const VOCABULARY_EVALUATION_STOP_WORDS = new Set([
+    "a", "an", "and", "are", "as", "at", "be", "been", "being", "but", "by",
+    "can", "could", "did", "do", "does", "for", "from", "had", "has", "have",
+    "he", "her", "him", "his", "i", "if", "in", "is", "it", "its", "may", "might",
+    "more", "must", "my", "not", "now", "of", "on", "or", "our", "she", "should",
+    "so", "than", "that", "the", "their", "them", "there", "they", "this", "to", "was",
+    "we", "were", "will", "with", "would", "you", "your",
+]);
+
+function extractVocabularyEvaluationWords(text = "") {
+    const words = String(text).match(/[A-Za-z][A-Za-z'-]*/g) ?? [];
+    return [...new Set(words.map((word) => word.toLowerCase())
+        .filter((word) => word.length >= 3 && !VOCABULARY_EVALUATION_STOP_WORDS.has(word)))];
+}
+
+export async function evaluateVocabularyUsage({
+    targetSentence = "",
+    userAnswer = "",
+    targetLocale = "uk-UA",
+    model = OPENAI_RUNTIME_MODEL,
+} = {}) {
+    const words = [...new Set([
+        ...extractVocabularyEvaluationWords(targetSentence),
+        ...extractVocabularyEvaluationWords(userAnswer),
+    ])];
+    if (!words.length) return { words: [], feedback: "", translations: {} };
+
+    const getTargetTranslations = async (evaluatedWords) => {
+        try {
+            const translated = await translateVocabularyWords({
+                words: evaluatedWords.map((item) => item.word),
+                locale: targetLocale,
+            });
+            return Object.fromEntries(Object.entries(translated).map(([word, translation]) => [word, {
+                [targetLocale]: translation,
+            }]));
+        } catch (error) {
+            console.error("Failed to translate vocabulary target locale:", error);
+            return {};
+        }
+    };
+
+    const targetLanguage = getLanguageNameFromLocale(targetLocale);
+    const systemPrompt = `
+You evaluate English vocabulary usage in a learner's English translation.
+Return JSON only. Do not evaluate verb tense: a wrong verb tense is still correct here.
+Return one object for every supplied vocabulary word with the canonical intended English word,
+correct (boolean), and mistakeType (null, "spelling", or "word_fit").
+For a spelling mistake, use the corrected intended word in the "word" field (for example,
+the learner's "cal" should be returned as "call").
+Also add important English vocabulary words that the target sentence intends the learner to use
+but that are missing from the learner answer. Mark those words correct=false and mistakeType="word_fit".
+This applies even when the target sentence is localized and contains no English tokens.
+Do not mention grammar or verb tense. Add only words used or clearly intended by the target sentence.
+Schema: {"words":[{"word":string,"correct":boolean,"mistakeType":null|"spelling"|"word_fit"}]}
+`;
+    const userPrompt = `
+TARGET SENTENCE:
+${String(targetSentence)}
+
+LEARNER ANSWER:
+${String(userAnswer)}
+
+VOCABULARY WORDS TO CHECK:
+${JSON.stringify(words)}
+`;
+    const resp = await client.responses.create(buildJsonResponseRequest({
+        model,
+        temperature: 0,
+        input: [
+            { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
+            { role: "user", content: [{ type: "input_text", text: userPrompt }] },
+        ],
+    }));
+    const parsed = parseJsonObject(resp.output_text);
+    const evaluated = [];
+    for (const item of Array.isArray(parsed.words) ? parsed.words : []) {
+        const word = String(item?.word ?? "").trim().toLowerCase();
+        if (!/^[a-z][a-z'-]*$/.test(word) || word.length < 3 || evaluated.some((entry) => entry.word === word)) continue;
+        const mistakeType = item?.correct === true
+            ? null
+            : ["spelling", "word_fit"].includes(item?.mistakeType) ? item.mistakeType : "word_fit";
+        evaluated.push({ word, correct: item?.correct === true, mistakeType });
+    }
+    if (!evaluated.length) {
+        for (const word of words) {
+            evaluated.push({ word, correct: true, mistakeType: null });
+        }
+    }
+    const mistakes = evaluated.filter((item) => item.correct !== true);
+    if (!mistakes.length) {
+        return {
+            words: evaluated,
+            feedback: "",
+            translations: await getTargetTranslations(evaluated),
+        };
+    }
+
+    const feedbackResponse = await client.responses.create(buildJsonResponseRequest({
+        model,
+        temperature: 0,
+        input: [
+            {
+                role: "system",
+                content: [{
+                    type: "input_text",
+                    text: `Explain only the spelling and word-fit mistakes in one short paragraph in ${targetLanguage}. Do not mention grammar or verb tense. Return JSON: {"feedback":string}`,
+                }],
+            },
+            {
+                role: "user",
+                content: [{
+                    type: "input_text",
+                    text: `${userPrompt}\nEVALUATED WORDS:\n${JSON.stringify(mistakes)}`,
+                }],
+            },
+        ],
+    }));
+    const feedback = parseJsonObject(feedbackResponse.output_text);
+    return {
+        words: evaluated,
+        feedback: String(feedback.feedback ?? "").trim(),
+        translations: await getTargetTranslations(evaluated),
+    };
 }

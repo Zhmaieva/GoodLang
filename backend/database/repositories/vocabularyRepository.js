@@ -1,8 +1,5 @@
 import { connectDB } from "../mongo.js";
-import {
-    getVocabularyStatus,
-    normalizeVocabularyCandidate,
-} from "../../core/vocabulary.js";
+import { normalizeVocabularyCandidate } from "../../core/vocabulary.js";
 
 const COLLECTION = "good_lang_vocabulary";
 const CAPTURE_VERSION = 5;
@@ -23,22 +20,21 @@ function getLastMistakeLabel(lastMistakeAt) {
 }
 
 function toVocabularyItem(doc) {
-    const attempts = Math.max(0, Number(doc.attempts) || 0);
-    const correctCount = Math.max(0, Number(doc.correctCount) || 0);
     const mistakeCount = Math.max(0, Number(doc.mistakeCount) || 0);
-    const accuracy = attempts > 0
-        ? Math.round((correctCount / attempts) * 100)
-        : 0;
+    const correctStreak = Math.max(0, Number(doc.correctStreak) || 0);
+    const status = mistakeCount === 0
+        ? null
+        : correctStreak >= 4 ? "learned" : correctStreak >= 2 ? "recovered" : "needsPractice";
 
     return {
         id: doc.word,
         word: doc.word,
-        meaning: doc.meaning ?? "",
+        meaning: doc.translations?.uk ?? doc.meaning ?? "",
+        translations: doc.translations ?? {},
         level: doc.level ?? "",
-        status: getVocabularyStatus({ attempts, correctCount, mistakeCount }),
-        accuracy,
+        status,
         previousMistakes: mistakeCount,
-        correctStreak: Math.max(0, Number(doc.correctStreak) || 0),
+        correctStreak,
         lastMistake: getLastMistakeLabel(doc.lastMistakeAt),
         example: doc.example ?? "",
         captureVersion: doc.captureVersion ?? 0,
@@ -114,33 +110,49 @@ export async function getVocabularyForUser(userId) {
     return docs.map(toVocabularyItem);
 }
 
+export async function upsertLocalVocabularyRecords(userId, records = [], updatedOn = new Date()) {
+    const valid = Array.isArray(records) ? records.filter((record) => record?.word) : [];
+    if (!valid.length) return;
+    const db = await connectDB();
+    const bulk = db.collection(COLLECTION).initializeUnorderedBulkOp();
+    for (const record of valid) {
+        const word = String(record.word).trim().toLowerCase();
+        bulk.find({ userId, word }).upsert().updateOne({
+            $set: {
+                userId, word, level: record.level ?? null,
+                translations: record.translations ?? {}, example: record.example ?? "",
+                attempts: Math.max(0, Number(record.attempts) || 0),
+                correctCount: Math.max(0, Number(record.correctCount) || 0),
+                mistakeCount: Math.max(0, Number(record.mistakeCount) || 0),
+                correctStreak: Math.max(0, Number(record.correctStreak) || 0),
+                lastMistakeAt: record.lastMistakeAt ? new Date(record.lastMistakeAt) : null,
+                updatedAt: updatedOn, captureVersion: CAPTURE_VERSION,
+            },
+            $setOnInsert: { createdAt: updatedOn },
+        });
+    }
+    await bulk.execute();
+}
+
 export function buildVocabularySummary(words = []) {
     const learnedWords = words.filter((word) => word.status === "learned").length;
     const needsPractice = words.filter((word) => word.status === "needsPractice").length;
     const recovered = words.filter((word) => word.status === "recovered").length;
-    const averageAccuracy = words.length
-        ? Math.round(words.reduce((sum, word) => sum + (Number(word.accuracy) || 0), 0) / words.length)
-        : 0;
-
     return {
         vocabularyLevel: {
-            value: words.some((word) => word.level === "B2") ? "B2" : "B1",
-            progress: averageAccuracy,
-            note: "Based on your recent practice",
+            value: words.some((word) => word.level === "B2") ? "B2" : words.some((word) => word.level === "B1") ? "B1" : "-",
+            note: "Based on practiced words",
         },
         learnedWords: {
             value: learnedWords,
-            progress: words.length ? Math.round((learnedWords / words.length) * 100) : 0,
             note: "Stable in recent tasks",
         },
         needsPractice: {
             value: needsPractice,
-            progress: words.length ? Math.round((needsPractice / words.length) * 100) : 0,
             note: "Should return in the queue",
         },
         recovered: {
             value: recovered,
-            progress: words.length ? Math.round((recovered / words.length) * 100) : 0,
             note: "Was weak, now correct",
         },
     };

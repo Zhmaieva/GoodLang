@@ -532,7 +532,7 @@ export default function LoginForm({
                                                 resize: "none",
                                                 justifyContent: "space-between",
                                                 borderRadius: 14,
-                                                border: `1px solid ${theme.border}`,
+                                                border: `1px solid ${theme.accent}`,
                                                 background: theme.surface,
                                                 fontSize: 16,
                                                 fontWeight: 400,
@@ -628,7 +628,7 @@ export default function LoginForm({
                                         .login-email-input:focus,
                                         .login-email-input:focus-visible {
                                             border-width: 1px !important;
-                                            border-color: ${theme.accent} !important;
+                                            border-color: ${theme.border} !important;
                                             outline: none;
                                             box-shadow: none !important;
                                         }

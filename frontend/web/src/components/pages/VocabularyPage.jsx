@@ -16,8 +16,13 @@ import {
     LEARNED_STATUS_COLOR,
 } from "../../theme.js";
 import { callVocabularyApi } from "../../services/api.js";
+import { localizationService } from "../../localization/localizationService.js";
 import { off, on } from "../../services/events.js";
-import { getLocalVocabularyWords, mergeVocabularyWords } from "../../services/vocabularyService.js";
+import {
+    buildLocalVocabularySummary,
+    getLocalVocabularyWords,
+    mergeVocabularyWords,
+} from "../../services/vocabularyService.js";
 
 const WORDS_PER_PAGE = 10;
 
@@ -94,33 +99,7 @@ function StatusChip({ status }) {
     );
 }
 
-function ProgressBar({ value, theme }) {
-    const safeValue = Math.max(0, Math.min(100, Number(value) || 0));
-
-    return (
-        <div
-            aria-label={`${safeValue}%`}
-            style={{
-                width: "100%",
-                height: 8,
-                borderRadius: 999,
-                background: "#edf0f7",
-                overflow: "hidden",
-            }}
-        >
-            <span
-                style={{
-                    display: "block",
-                    width: `${safeValue}%`,
-                    height: "100%",
-                    background: theme?.accent ?? APP_ACCENT_COLOR,
-                }}
-            />
-        </div>
-    );
-}
-
-function SummaryCard({ label, value, note, progress, theme, isMobile }) {
+function SummaryCard({ label, value, note, theme, isMobile }) {
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
@@ -166,9 +145,6 @@ function SummaryCard({ label, value, note, progress, theme, isMobile }) {
                 </div>
             </div>
             <div>
-                {typeof progress === "number" && (
-                    <ProgressBar value={progress} theme={theme} />
-                )}
                 <div
                     style={{
                         marginTop: 9,
@@ -213,18 +189,18 @@ export default function VocabularyPage({ theme }) {
         callVocabularyApi()
             .then((data) => {
                 if (cancelled) return;
-                const mergedWords = mergeVocabularyWords(data?.words);
+                const mergedWords = mergeVocabularyWords(data?.words, localizationService.getLocale() || "uk-UA");
                 setWords(mergedWords);
-                setSummary(data?.summary ?? null);
+                setSummary(buildLocalVocabularySummary(mergedWords));
                 setVocabularyState(mergedWords.length > 0 ? "ready" : data?.state ?? "ready");
                 setLoadError("");
             })
             .catch((error) => {
                 if (cancelled) return;
                 console.error("Failed to load vocabulary", error);
-                const localWords = getLocalVocabularyWords();
+                const localWords = getLocalVocabularyWords(localizationService.getLocale() || "uk-UA");
                 setWords(localWords);
-                setSummary(null);
+                setSummary(buildLocalVocabularySummary(localWords));
                 setVocabularyState(localWords.length > 0 ? "ready" : "error");
                 setLoadError(localWords.length > 0
                     ? ""
@@ -267,8 +243,6 @@ export default function VocabularyPage({ theme }) {
                 return VOCABULARY_LEVEL_ORDER[item.level] ?? 999;
             case "meaning":
                 return String(item.meaning ?? "").toLowerCase();
-            case "accuracy":
-                return Number.isFinite(item.accuracy) ? item.accuracy : -1;
             case "lastMistake":
                 return LAST_MISTAKE_ORDER[item.lastMistake] ?? 999;
             case "status":
@@ -324,22 +298,18 @@ export default function VocabularyPage({ theme }) {
 
     const vocabularyLevelSummary = summary?.vocabularyLevel ?? {
         value: loading ? "..." : "-",
-        progress: 0,
         note: loading ? "Loading vocabulary" : "Not enough data yet",
     };
     const learnedWordsSummary = summary?.learnedWords ?? {
         value: loading ? "..." : words.filter((word) => word.status === "learned").length,
-        progress: 0,
         note: loading ? "Loading vocabulary" : "No learned words yet",
     };
     const needsPracticeSummary = summary?.needsPractice ?? {
         value: loading ? "..." : words.filter((word) => word.status === "needsPractice").length,
-        progress: 0,
         note: loading ? "Loading vocabulary" : "No weak words yet",
     };
     const recoveredSummary = summary?.recovered ?? {
         value: loading ? "..." : words.filter((word) => word.status === "recovered").length,
-        progress: 0,
         note: loading ? "Loading vocabulary" : "No recovered words yet",
     };
 
@@ -433,8 +403,8 @@ export default function VocabularyPage({ theme }) {
     const tableGridStyle = {
         display: "grid",
         gridTemplateColumns: isMobile
-            ? "160px 160px 120px 150px 140px"
-            : "1.1fr 1.1fr 0.8fr 0.9fr 0.9fr",
+            ? "180px 180px 150px 140px"
+            : "1.2fr 1.2fr 1fr 0.9fr",
         gap: 10,
         alignItems: "center",
         minWidth: isMobile ? 730 : 0,
@@ -555,7 +525,6 @@ export default function VocabularyPage({ theme }) {
                                 isMobile={isMobile}
                                 label="Vocabulary level"
                                 value={vocabularyLevelSummary.value}
-                                progress={vocabularyLevelSummary.progress}
                                 note={vocabularyLevelSummary.note}
                             />
                             <SummaryCard
@@ -563,7 +532,6 @@ export default function VocabularyPage({ theme }) {
                                 isMobile={isMobile}
                                 label="Learned words"
                                 value={learnedWordsSummary.value}
-                                progress={learnedWordsSummary.progress}
                                 note={learnedWordsSummary.note}
                             />
                             <SummaryCard
@@ -571,7 +539,6 @@ export default function VocabularyPage({ theme }) {
                                 isMobile={isMobile}
                                 label="Needs practice"
                                 value={needsPracticeSummary.value}
-                                progress={needsPracticeSummary.progress}
                                 note={needsPracticeSummary.note}
                             />
                             <SummaryCard
@@ -579,7 +546,6 @@ export default function VocabularyPage({ theme }) {
                                 isMobile={isMobile}
                                 label="Recovered"
                                 value={recoveredSummary.value}
-                                progress={recoveredSummary.progress}
                                 note={recoveredSummary.note}
                             />
                         </section>
@@ -621,7 +587,6 @@ export default function VocabularyPage({ theme }) {
                                     <div style={tableHeaderStyle}>
                                         <SortHeader columnKey="level">Word (Level)</SortHeader>
                                         <div>Translation</div>
-                                        <SortHeader columnKey="accuracy">Progress</SortHeader>
                                         <SortHeader columnKey="lastMistake">Last mistake</SortHeader>
                                         <SortHeader columnKey="status">Status</SortHeader>
                                     </div>
@@ -643,12 +608,6 @@ export default function VocabularyPage({ theme }) {
                                                     <span style={metaStyle}>Level: {item.level}</span>
                                                 </div>
                                                 <div style={metaStyle}>{item.meaning || "-"}</div>
-                                                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                                                    <strong style={{ fontSize: "1rem", color: theme?.text ?? APP_TEXT_COLOR }}>
-                                                        {item.accuracy}%
-                                                    </strong>
-                                                    <ProgressBar value={item.accuracy} theme={theme} />
-                                                </div>
                                                 <div style={metaStyle}>{item.lastMistake}</div>
                                                 <StatusChip status={item.status} />
                                             </article>
