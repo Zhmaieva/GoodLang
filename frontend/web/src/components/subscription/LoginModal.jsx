@@ -10,7 +10,9 @@ export default function LoginModal({
                                        account,
                                        forceLogin = false,
                                        ruleToDownload = null,
-                                       fileTypeToDownload = 'translations'
+                                       fileTypeToDownload = 'translations',
+                                       emailChange = false,
+                                       onAccountChange = () => {}
                                    }) {
     if (!open) return null;
 
@@ -19,6 +21,8 @@ export default function LoginModal({
                     ruleToDownload={ruleToDownload}
                     theme={theme}
                     account={account}
+                    emailChange={emailChange}
+                    onAccountChange={onAccountChange}
                     fileTypeToDownload={fileTypeToDownload}
                     onClose={() => {
                         if (forceLogin) onClose();

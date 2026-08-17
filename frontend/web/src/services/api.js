@@ -300,11 +300,14 @@ export async function callSendPromoCodeApi({ email }) {
     return data;
 }
 
-export async function callSendCodeApi({ email }) {
+export async function callSendCodeApi({ email, changeToken }) {
     const res = await fetch(`${API_BASE}/accounts/send-code`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await getToken()}`,
+        },
+        body: JSON.stringify({ email, changeToken }),
     });
 
     const data = await res.json();
@@ -327,7 +330,7 @@ export async function callSendInquiry({ email }) {
     }
 }
 
-export async function callVerifyCodeApi({ email, code, termsAccepted = false }) {
+export async function callVerifyCodeApi({ email, code, termsAccepted = false, emailChangeStep }) {
     const isTeacher = localStorage.getItem("teacher") === "true";
 
     const qs = new URLSearchParams();
@@ -345,6 +348,7 @@ export async function callVerifyCodeApi({ email, code, termsAccepted = false }) 
                 email,
                 code,
                 termsAccepted,
+                emailChangeStep,
                 ...(isTeacher && { teacher: true }),
             }),
         }

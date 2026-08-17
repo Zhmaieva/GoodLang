@@ -584,26 +584,6 @@ export default function LimitModal({
                                     {account?.email ? "Sign in with another account" : "Sign in or sign up"}
                                 </Button>
                             </div>
-
-                            {(!account?.email) && !featurePdf && (
-                                <div
-                                    style={{
-                                        marginLeft: 0,
-                                        marginTop: 12,
-                                        marginBottom: 0,
-                                        fontSize: "0.95rem",
-                                        fontWeight: 400,
-                                        color: theme.text,
-                                        letterSpacing: 0,
-                                        width: "100%",
-                                        opacity: 1,
-                                        display: "inline-block",
-                                        textAlign: "left"
-                                    }}
-                                >
-                                    +60% more daily tasks for registered users
-                                </div>
-                            )}
                         </div>
 
                         <div

@@ -25,10 +25,14 @@ export default function LoginForm({
                                       account,
                                       ruleToDownload = null,
                                       fileTypeToDownload = "translations",
+                                      emailChange = false,
+                                      onAccountChange = () => {},
                                       onClose = () => {}
                                   }) {
-    const [step, setStep] = useState("email"); // "email" | "code"
-    const [emailInput, setEmailInput] = useState("");
+    const [step, setStep] = useState(emailChange ? "code" : "email"); // "email" | "code"
+    const [emailInput, setEmailInput] = useState(emailChange ? account?.email || "" : "");
+    const [emailChangeStage, setEmailChangeStage] = useState(emailChange ? "current" : null);
+    const [changeToken, setChangeToken] = useState("");
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
@@ -40,8 +44,19 @@ export default function LoginForm({
 
     const inputsRef = useRef([]);
     const checkoutRef = useRef(null);
+    const currentEmailCodeRequestedRef = useRef(false);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!emailChange || !account?.email || currentEmailCodeRequestedRef.current) return;
+
+        currentEmailCodeRequestedRef.current = true;
+        setLoading(true);
+        callSendCodeApi({ email: account.email })
+            .catch((err) => setError(err?.message || "Failed to send the code"))
+            .finally(() => setLoading(false));
+    }, [account?.email, emailChange]);
 
     useEffect(() => {
         lockScroll()
@@ -167,7 +182,7 @@ export default function LoginForm({
         setLoading(true);
         setError("");
         try {
-            await callSendCodeApi({ email: emailInput });
+            await callSendCodeApi({ email: emailInput, changeToken });
             setStep("code");
         } catch (err) {
             setError(err?.message || "Failed to send the code");
@@ -276,8 +291,29 @@ export default function LoginForm({
         setLoading(true);
         setError("");
         try {
-            const oldAccount = await callAccountInfoApi();
-            const { token, mustAcceptTerms } = await callVerifyCodeApi({ email: emailInput, code: enteredCode });
+            const oldAccount = emailChangeStage === "current"
+                ? null
+                : await callAccountInfoApi();
+            const {
+                token,
+                mustAcceptTerms,
+                isEmailChange,
+                currentEmailVerified,
+                changeToken: verifiedChangeToken,
+            } = await callVerifyCodeApi({
+                email: emailInput,
+                code: enteredCode,
+                emailChangeStep: emailChangeStage,
+            });
+
+            if (currentEmailVerified) {
+                setChangeToken(verifiedChangeToken);
+                setEmailChangeStage("new");
+                setEmailInput("");
+                setCode(new Array(6).fill(""));
+                setStep("email");
+                return;
+            }
 
             if (mustAcceptTerms) {
                 setTermsOpen(true);
@@ -287,6 +323,13 @@ export default function LoginForm({
             localStorage.setItem("token", token);
 
             const newAccount = await callAccountInfoApi();
+
+            if (isEmailChange) {
+                onAccountChange(newAccount);
+                unlockScroll();
+                onClose();
+                return;
+            }
 
             const savedLocale = localizationService.getLocale();
 
@@ -403,14 +446,22 @@ export default function LoginForm({
 
     // auto focus first code input when step changes
     useEffect(() => {
-        if (step === "code" && inputsRef.current[0]) {
+        if (step === "code" && !loading && inputsRef.current[0]) {
             inputsRef.current[0].focus();
         }
-    }, [step]);
+    }, [loading, step]);
 
     const closeDisabled = loading || isPaying;
-    const modalTitle = step === "email" ? "Enter your email" : "Enter the code from your email";
-    const modalSubtitle = step === "email" ? "You’ll receive a confirmation email" : `Code sent to: ${emailInput}`;
+    const modalTitle = emailChangeStage === "current"
+        ? "Verify your current email"
+        : step === "email"
+            ? emailChange ? "Enter your new email" : "Enter your email"
+            : emailChange ? "Verify your new email" : "Enter the code from your email";
+    const modalSubtitle = emailChangeStage === "current"
+        ? `Code sent to your current email: ${emailInput}`
+        : step === "email"
+            ? "You’ll receive a confirmation email"
+            : `Code sent to: ${emailInput}`;
 
     return (
         <>
@@ -545,7 +596,11 @@ export default function LoginForm({
                                             onClick={handleVerify}
                                             disabled={loading}
                                         >
-                                            {loading ? "Checking..." : "Sign in"}
+                                            {loading
+                                                ? "Checking..."
+                                                : emailChangeStage === "current"
+                                                    ? "Verify current email"
+                                                    : emailChange ? "Change email" : "Sign in"}
                                         </Button>
                                     </>
                                 )}

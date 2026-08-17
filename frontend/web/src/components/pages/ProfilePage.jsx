@@ -16,6 +16,7 @@ import ChooseLocaleModal from "../modals/ChooseLocaleModal.jsx";
 import ModalShell from "../modals/ModalShell.jsx";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "../subscription/AccountStatusModal.jsx";
+import LoginModal from "../subscription/LoginModal.jsx";
 import { callAccountInfoApi, callManageSubscriptionApi } from "../../services/api.js";
 import { localizationService } from "../../localization/localizationService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
@@ -105,6 +106,7 @@ export default function ProfilePage({ theme }) {
     const [languageVisible, setLanguageVisible] = useState(false);
     const [levelVisible, setLevelVisible] = useState(false);
     const [legalVisible, setLegalVisible] = useState(false);
+    const [emailChangeVisible, setEmailChangeVisible] = useState(false);
     const [legalView, setLegalView] = useState("menu");
     const [selectedLevel, setSelectedLevel] = useState(getSavedTrainingLevel() || "managed");
     const [isMobile, setIsMobile] = useState(
@@ -138,7 +140,7 @@ export default function ProfilePage({ theme }) {
         [theme]
     );
 
-    const email = account?.email || "learner@example.com";
+    const email = account?.email || "";
     const languagePair = getLanguagePairLabel();
     const levelLabel = LEVEL_LABELS[selectedLevel] || "Adaptive";
     const planLabel = getPlanLabel(account);
@@ -659,7 +661,6 @@ export default function ProfilePage({ theme }) {
                     </div>
 
                     <section style={sectionStyle}>
-                        <h2 style={sectionLabelStyle}>Preferences</h2>
                         {renderRow({
                             key: "language",
                             icon: <GlobeHemisphereWest style={iconStyle} weight="regular" />,
@@ -674,41 +675,23 @@ export default function ProfilePage({ theme }) {
                             title: "Level",
                             subtitle: "Set your current proficiency level",
                             value: levelLabel,
-                            divider: false,
                             onClick: () => setLevelVisible(true),
                         })}
-                    </section>
-
-                    <section style={sectionStyle}>
-                        <h2 style={sectionLabelStyle}>Subscription</h2>
                         {renderRow({
                             key: "plan",
                             icon: <CrownSimple style={iconStyle} weight="regular" />,
                             title: "Current plan",
+                            subtitle: "Manage subscription & billing",
                             value: planLabel,
                             onClick: handlePlanOverview,
                         })}
-                        {renderRow({
-                            key: "billing",
-                            icon: <CreditCard style={iconStyle} weight="regular" />,
-                            title: "Billing",
-                            subtitle: billingLoading
-                                ? "Opening billing..."
-                                : "Manage plan, renewal, and payment method",
-                            divider: false,
-                            onClick: handleBilling,
-                        })}
-                    </section>
-
-                    <section style={{ ...sectionStyle, paddingBottom: isMobile ? 24 : 34 }}>
-                        <h2 style={sectionLabelStyle}>Account</h2>
                         {renderRow({
                             key: "email",
                             icon: <EnvelopeSimple style={iconStyle} weight="regular" />,
                             title: "Email",
                             subtitle: "Change the email you use for sign-in",
                             value: email,
-                            onClick: () => {},
+                            onClick: () => setEmailChangeVisible(true),
                         })}
                         {renderRow({
                             key: "legal",
@@ -725,6 +708,15 @@ export default function ProfilePage({ theme }) {
                 open={languageVisible}
                 theme={theme}
                 onClose={() => setLanguageVisible(false)}
+            />
+            <LoginModal
+                forceLogin
+                theme={theme}
+                account={account}
+                open={emailChangeVisible}
+                emailChange
+                onAccountChange={setAccount}
+                onClose={() => setEmailChangeVisible(false)}
             />
             {account && (
                 <LimitModal

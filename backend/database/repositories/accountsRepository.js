@@ -357,7 +357,7 @@ export async function getAccountById(accountId) {
 /**
  * Send verification code only if account exists
  */
-export async function sendVerificationCode(email) {
+export async function sendVerificationCode(email, currentId, currentEmailVerified = false) {
     if (email?.length === 0 || email.length > 40)
         return {};
 
@@ -378,7 +378,27 @@ export async function sendVerificationCode(email) {
         [email]
     );
 
-    const accountId = !accounts[0] ? null : accounts[0].id;
+    const { rows: currentAccounts } = currentId ? await pool.query(
+        'SELECT email FROM accounts WHERE id=$1',
+        [currentId]
+    ) : { rows: [] };
+    const isEmailChange = Boolean(currentAccounts[0]?.email);
+
+    if (isEmailChange && accounts[0] && accounts[0].id !== currentId) {
+        const error = new Error("Email is already registered");
+        error.statusCode = 400;
+        throw error;
+    }
+
+    if (isEmailChange && !accounts[0] && !currentEmailVerified) {
+        const error = new Error("Confirm your current email first");
+        error.statusCode = 400;
+        throw error;
+    }
+
+    const accountId = accounts[0]?.id === currentId
+        ? currentId
+        : isEmailChange || !accounts[0] ? null : accounts[0].id;
 
     const code = (Math.floor(100000 + Math.random() * 900000)).toString(); // 6-digit code
     const expiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 min
@@ -386,7 +406,7 @@ export async function sendVerificationCode(email) {
     await pool.query(
         `INSERT INTO sign_in_links (account_id, email, code, created_at, expires_at)
          VALUES ($1,$2,$3,NOW(),$4)
-         ON CONFLICT (email) DO UPDATE SET code=$3, created_at=NOW(), expires_at=$4`,
+         ON CONFLICT (email) DO UPDATE SET account_id=$1, code=$3, created_at=NOW(), expires_at=$4`,
         [accountId, email, code, expiresAt]
     );
 
@@ -596,14 +616,22 @@ export async function verifyCode(currentId, email, code, termsAccepted) {
 
         return {
             codeAccepted: true,
-            accountId: rows[0].account_id
+            accountId: rows[0].account_id,
+            isEmailChange: false
         }
     }
 
-    if (!termsAccepted) {
+    const { rows: currentAccounts } = await pool.query(
+        'SELECT email FROM accounts WHERE id=$1',
+        [currentId]
+    );
+    const isEmailChange = Boolean(currentAccounts[0]?.email);
+
+    if (!termsAccepted && !isEmailChange) {
         return {
             codeAccepted: true,
-            accountId: null
+            accountId: null,
+            isEmailChange: false
         }
     }
 
@@ -627,7 +655,8 @@ export async function verifyCode(currentId, email, code, termsAccepted) {
 
     return {
         codeAccepted: true,
-        accountId: newAccountId
+        accountId: newAccountId,
+        isEmailChange
     }
 }
 

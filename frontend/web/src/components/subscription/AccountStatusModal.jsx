@@ -20,6 +20,7 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
             const { url } = await callManageSubscriptionApi();
             if (!url) throw new Error("Subscription management URL was not returned");
             window.location.assign(url);
+            setManageLoading(false);
         } catch (e) {
             console.error("Failed to open subscription management", e);
             setManageLoading(false);
@@ -144,18 +145,6 @@ export default function AccountStatusModal({ accountInfo, theme, open, onClose, 
                             {manageLoading ? "Opening..." : "Manage subscription"}
                         </Button>
                     )}
-
-                    <Button
-                        variant="offset"
-                        compact
-                        fullWidth
-                        shadowColor={theme.accent}
-                        shadowOffset={0}
-                        onClick={() => setLoginModalOpen(true)}
-                        style={secondaryButtonStyle}
-                    >
-                        Sign in to another account
-                    </Button>
                 </div>
             </ModalShell>
 
