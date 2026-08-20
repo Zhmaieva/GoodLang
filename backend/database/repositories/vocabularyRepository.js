@@ -119,12 +119,13 @@ export async function upsertLocalVocabularyRecords(userId, records = [], updated
         const word = String(record.word).trim().toLowerCase();
         bulk.find({ userId, word }).upsert().updateOne({
             $set: {
-                userId, word, level: record.level ?? null,
+                userId, word, level: record.level ?? null, levelSource: record.levelSource ?? null,
                 translations: record.translations ?? {}, example: record.example ?? "",
                 attempts: Math.max(0, Number(record.attempts) || 0),
                 correctCount: Math.max(0, Number(record.correctCount) || 0),
                 mistakeCount: Math.max(0, Number(record.mistakeCount) || 0),
                 correctStreak: Math.max(0, Number(record.correctStreak) || 0),
+                usageHistory: Array.isArray(record.usageHistory) ? record.usageHistory : [],
                 lastMistakeAt: record.lastMistakeAt ? new Date(record.lastMistakeAt) : null,
                 updatedAt: updatedOn, captureVersion: CAPTURE_VERSION,
             },

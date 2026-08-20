@@ -56,6 +56,7 @@ export const vocabularyController = {
                     targetSentence: req.body?.targetSentence,
                     userAnswer: req.body?.userAnswer,
                     targetLocale: req.body?.targetLocale ?? "uk-UA",
+                    fallbackLevel: req.body?.level ?? "A1",
                 });
                 return res.json({ isSuccess: true, ...result });
             } catch (error) {

@@ -36,6 +36,7 @@ import {
     setCachedTrainingTask
 } from "../../services/trainingTaskCache.js";
 import {
+    getLocalVocabularyWords,
     saveLocalVocabularyEvaluation,
     saveLocalVocabularyTranslations,
 } from "../../services/vocabularyService.js";
@@ -372,6 +373,17 @@ export default function Trainer({
         for (const rule of Array.isArray(data?.rules) ? data.rules : []) add(rule);
 
         return out.slice(0, 3);
+    }
+
+    function getVocabularyForSample() {
+        const words = getLocalVocabularyWords(localizationService.getLocale());
+        const needsPractice = words.filter((word) => word.status === "needsPractice");
+        const recovered = words.filter((word) => word.status === "recovered");
+        const candidates = needsPractice.length && recovered.length
+            ? (Math.random() < 0.75 ? needsPractice : recovered)
+            : needsPractice.length ? needsPractice : recovered;
+        if (!candidates.length) return null;
+        return candidates[Math.floor(Math.random() * candidates.length)] || null;
     }
 
     /* eslint-disable no-unused-vars */
@@ -711,6 +723,7 @@ export default function Trainer({
                                          suppressLimitState = false,
                                          avoidSentence = "",
                                      }) {
+        const vocabulary = getVocabularyForSample();
         if (freeTraining && await marathonService.isMarathonView(true)) {
             const nextMarathonRule = marathonService.getNextMarathonRule();
             return await callTranslateAPI({
@@ -719,7 +732,9 @@ export default function Trainer({
                 skip,
                 taskType: "translations",
                 use_same_task_type: true,
-                userLocale: localizationService.getLocale()
+                userLocale: localizationService.getLocale(),
+                vocabularyWord: vocabulary?.word || null,
+                vocabularyWordTranslation: vocabulary?.meaning || null,
             });
         }
 
@@ -765,6 +780,8 @@ export default function Trainer({
             use_same_task_type,
             userLocale: localizationService.getLocale(),
             avoidSentence,
+            vocabularyWord: vocabulary?.word || null,
+            vocabularyWordTranslation: vocabulary?.meaning || null,
         });
 
         if (!result.allowed && !suppressLimitState) {
@@ -958,6 +975,7 @@ export default function Trainer({
             evaluationRunRef.current = evaluationRun;
             let completionHandled = false;
             let quickCorrectApplied = false;
+            const vocabularyForNextSample = getVocabularyForSample();
             const evaluationParams = {
                 freeTraining,
                 textToTranslate: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
@@ -970,6 +988,8 @@ export default function Trainer({
                 task_type: currentTaskTypeParam,
                 use_same_task_type: getUseSameTaskType(),
                 userLocale: localizationService.getLocale(),
+                vocabularyWord: vocabularyForNextSample?.word || null,
+                vocabularyWordTranslation: vocabularyForNextSample?.meaning || null,
             };
 
             callQuickTranslateAPI(evaluationParams)
@@ -1040,6 +1060,7 @@ export default function Trainer({
                 targetSentence: evaluationParams.textToTranslateOriginal,
                 userAnswer: userAns,
                 targetLocale: localizationService.getLocale(),
+                level: difficulty,
             }).catch((error) => {
                 console.error("Vocabulary evaluation failed", error);
                 return { isSuccess: false, words: [], feedback: "" };

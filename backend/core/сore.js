@@ -234,6 +234,8 @@ export async function generateTranslationSample({
                                                     targetLocale = "uk-UA",
                                                     model = OPENAI_RUNTIME_MODEL,
                                                     avoidSentence = "",
+                                                    vocabularyWord = null,
+                                                    vocabularyWordTranslation = null,
                                                 }) {
     const requestedRules = normalizeRuleList(targetRules);
     if (!requestedRules.length) throw new Error("targetRules required");
@@ -257,8 +259,7 @@ Schema:
 }
 
 Rules:
-- Create one natural sentence in SOURCE_LOCALE for a learner to translate into English.
-- Do not use Ukrainian unless SOURCE_LOCALE is Ukrainian.
+- Create exactly one natural sentence in SOURCE_LOCALE for a learner to translate into English.
 - The English answer must require PRIMARY_RULE.
 - If REQUESTED_RULES contains more than one rule, include as many requested rules as naturally possible without making the sentence awkward.
 - "rules" must contain only IDs from PROJECT_RULES, with PRIMARY_RULE first.
@@ -266,6 +267,8 @@ Rules:
 - "en" must contain 2 to 4 acceptable English translations.
 - "hint" must be a short hint in SOURCE_LOCALE about the grammar pattern, without giving away the full answer.
 - Keep the sentence appropriate for CEFR_LEVEL when provided.
+- If VOCABULARY_WORD is provided, build every expected English translation around that exact word form. Do not change its spelling, tense, number, or form.
+- If VOCABULARY_WORD_TRANSLATION is provided, use that translated meaning naturally in the SOURCE_LOCALE sentence. Never place the English VOCABULARY_WORD itself in the SOURCE_LOCALE sentence.
 - If PREVIOUS_SENTENCE_TO_AVOID is provided, create a clearly different follow-up sentence:
   - Do not reuse the same subject/person/entity.
   - Do not reuse the same object/topic/entity.
@@ -281,6 +284,8 @@ SOURCE_LOCALE: ${sourceLocale}
 CEFR_LEVEL: ${level || "(not specified)"}
 VARIATION_KEY: ${JSON.stringify({ seed, skip })}
 PREVIOUS_SENTENCE_TO_AVOID: ${avoidSentence ? JSON.stringify(String(avoidSentence)) : "(none)"}
+VOCABULARY_WORD: ${vocabularyWord ? JSON.stringify(String(vocabularyWord)) : "(none)"}
+VOCABULARY_WORD_TRANSLATION: ${vocabularyWordTranslation ? JSON.stringify(String(vocabularyWordTranslation)) : "(none)"}
 
 PROJECT_RULES:
 ${formatRulesForPrompt(allowedRules)}
@@ -866,27 +871,42 @@ export async function translateVocabularyWordsForLocales({
     return result;
 }
 
-const VOCABULARY_EVALUATION_STOP_WORDS = new Set([
-    "a", "an", "and", "are", "as", "at", "be", "been", "being", "but", "by",
-    "can", "could", "did", "do", "does", "for", "from", "had", "has", "have",
-    "he", "her", "him", "his", "i", "if", "in", "is", "it", "its", "may", "might",
-    "more", "must", "my", "not", "now", "of", "on", "or", "our", "she", "should",
-    "so", "than", "that", "the", "their", "them", "there", "they", "this", "to", "was",
-    "we", "were", "will", "with", "would", "you", "your",
-]);
-
 function extractVocabularyEvaluationWords(text = "") {
     const words = String(text).match(/[A-Za-z][A-Za-z'-]*/g) ?? [];
-    return [...new Set(words.map((word) => word.toLowerCase())
-        .filter((word) => word.length >= 3 && !VOCABULARY_EVALUATION_STOP_WORDS.has(word)))];
+    return [...new Set(words.map((word) => word.toLowerCase()))];
+}
+
+function vocabularyEditDistance(left, right) {
+    const a = String(left ?? "");
+    const b = String(right ?? "");
+    const row = Array.from({ length: b.length + 1 }, (_, index) => index);
+    for (let i = 1; i <= a.length; i += 1) {
+        let previous = row[0];
+        row[0] = i;
+        for (let j = 1; j <= b.length; j += 1) {
+            const current = row[j];
+            row[j] = Math.min(
+                row[j] + 1,
+                row[j - 1] + 1,
+                previous + (a[i - 1] === b[j - 1] ? 0 : 1),
+            );
+            previous = current;
+        }
+    }
+    return row[b.length];
 }
 
 export async function evaluateVocabularyUsage({
     targetSentence = "",
     userAnswer = "",
     targetLocale = "uk-UA",
+    fallbackLevel = "A1",
     model = OPENAI_RUNTIME_MODEL,
 } = {}) {
+    const validCefrLevels = new Set(["A1", "A2", "B1", "B2", "C1", "C2"]);
+    const safeFallbackLevel = validCefrLevels.has(String(fallbackLevel).toUpperCase())
+        ? String(fallbackLevel).toUpperCase()
+        : "A1";
     const words = [...new Set([
         ...extractVocabularyEvaluationWords(targetSentence),
         ...extractVocabularyEvaluationWords(userAnswer),
@@ -914,13 +934,18 @@ You evaluate English vocabulary usage in a learner's English translation.
 Return JSON only. Do not evaluate verb tense: a wrong verb tense is still correct here.
 Return one object for every supplied vocabulary word with the canonical intended English word,
 correct (boolean), and mistakeType (null, "spelling", or "word_fit").
+Assign each word its English vocabulary CEFR level: A1, A2, B1, B2, C1, or C2.
+Never omit a supplied word because it is correct. Correct words must also be returned with
+correct=true and mistakeType=null.
 For a spelling mistake, use the corrected intended word in the "word" field (for example,
 the learner's "cal" should be returned as "call").
 Also add important English vocabulary words that the target sentence intends the learner to use
-but that are missing from the learner answer. Mark those words correct=false and mistakeType="word_fit".
+but that are missing from the learner answer. Do not mark a word incorrect merely because it was omitted.
 This applies even when the target sentence is localized and contains no English tokens.
+Mark a word incorrect only when there is direct evidence of a spelling mistake or an incorrect
+translation/word choice in the learner answer. When uncertain, use correct=true and mistakeType=null.
 Do not mention grammar or verb tense. Add only words used or clearly intended by the target sentence.
-Schema: {"words":[{"word":string,"correct":boolean,"mistakeType":null|"spelling"|"word_fit"}]}
+Schema: {"words":[{"word":string,"correct":boolean,"mistakeType":null|"spelling"|"word_fit","level":"A1"|"A2"|"B1"|"B2"|"C1"|"C2"}]}
 `;
     const userPrompt = `
 TARGET SENTENCE:
@@ -944,15 +969,26 @@ ${JSON.stringify(words)}
     const evaluated = [];
     for (const item of Array.isArray(parsed.words) ? parsed.words : []) {
         const word = String(item?.word ?? "").trim().toLowerCase();
-        if (!/^[a-z][a-z'-]*$/.test(word) || word.length < 3 || evaluated.some((entry) => entry.word === word)) continue;
-        const mistakeType = item?.correct === true
-            ? null
-            : ["spelling", "word_fit"].includes(item?.mistakeType) ? item.mistakeType : "word_fit";
-        evaluated.push({ word, correct: item?.correct === true, mistakeType });
+        if (!/^[a-z][a-z'-]*$/.test(word) || evaluated.some((entry) => entry.word === word)) continue;
+        const explicitMistakeType = ["spelling", "word_fit"].includes(item?.mistakeType)
+            ? item.mistakeType
+            : null;
+        const isExplicitMistake = item?.correct === false && explicitMistakeType !== null;
+        const mistakeType = isExplicitMistake ? explicitMistakeType : null;
+        const level = validCefrLevels.has(String(item?.level).toUpperCase())
+            ? String(item.level).toUpperCase()
+            : safeFallbackLevel;
+        evaluated.push({ word, correct: !isExplicitMistake, mistakeType, level });
     }
-    if (!evaluated.length) {
-        for (const word of words) {
-            evaluated.push({ word, correct: true, mistakeType: null });
+    for (const word of words) {
+        const representedDirectly = evaluated.some((item) => item.word === word);
+        const representedBySpellingCorrection = evaluated.some((item) =>
+            item.correct === false
+            && item.mistakeType === "spelling"
+            && vocabularyEditDistance(word, item.word) <= (Math.max(word.length, item.word.length) <= 5 ? 1 : 2)
+        );
+        if (!representedDirectly && !representedBySpellingCorrection) {
+            evaluated.push({ word, correct: true, mistakeType: null, level: safeFallbackLevel });
         }
     }
     const mistakes = evaluated.filter((item) => item.correct !== true);

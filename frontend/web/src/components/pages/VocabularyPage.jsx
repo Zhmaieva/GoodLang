@@ -99,7 +99,7 @@ function StatusChip({ status }) {
     );
 }
 
-function SummaryCard({ label, value, note, theme, isMobile }) {
+function SummaryCard({ label, value, theme, isMobile }) {
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
@@ -108,13 +108,13 @@ function SummaryCard({ label, value, note, theme, isMobile }) {
     return (
         <article
             style={{
-                minHeight: isMobile ? 132 : 150,
+                minHeight: isMobile ? 104 : 120,
                 border: `1px solid ${border}`,
                 borderRadius: 18,
                 padding: isMobile ? 16 : 22,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-between",
+                justifyContent: "center",
                 gap: 14,
                 background: surface,
                 boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
@@ -142,18 +142,6 @@ function SummaryCard({ label, value, note, theme, isMobile }) {
                     }}
                 >
                     {value}
-                </div>
-            </div>
-            <div>
-                <div
-                    style={{
-                        marginTop: 9,
-                        fontSize: isMobile ? "0.86rem" : "0.92rem",
-                        color: muted,
-                        fontWeight: 600,
-                    }}
-                >
-                    {note}
                 </div>
             </div>
         </article>
@@ -525,28 +513,24 @@ export default function VocabularyPage({ theme }) {
                                 isMobile={isMobile}
                                 label="Vocabulary level"
                                 value={vocabularyLevelSummary.value}
-                                note={vocabularyLevelSummary.note}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Learned words"
                                 value={learnedWordsSummary.value}
-                                note={learnedWordsSummary.note}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Needs practice"
                                 value={needsPracticeSummary.value}
-                                note={needsPracticeSummary.note}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Recovered"
                                 value={recoveredSummary.value}
-                                note={recoveredSummary.note}
                             />
                         </section>
 

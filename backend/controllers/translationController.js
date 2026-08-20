@@ -127,6 +127,8 @@ async function buildRuntimeTask({
                                     userLocale,
                                     model,
                                     avoidSentence,
+                                    vocabularyWord,
+                                    vocabularyWordTranslation,
                                 }) {
     const requestedRules = uniqueValidRules(targetRules);
     const rulesForSample = requestedRules.length ? requestedRules : [randomRule(level ?? "A1")];
@@ -161,6 +163,8 @@ async function buildRuntimeTask({
         targetLocale: userLocale,
         model,
         avoidSentence,
+        vocabularyWord,
+        vocabularyWordTranslation,
     });
 
     return {
@@ -248,7 +252,9 @@ export const translationsController = {
                 task_type = "0",
                 use_same_task_type = "true",
                 userLocale = 'uk-UA',
-                avoidSentence = ""
+                avoidSentence = "",
+                vocabularyWord = "",
+                vocabularyWordTranslation = ""
             } = req.query;
 
             const taskType = Number(task_type) || 0;
@@ -272,6 +278,13 @@ export const translationsController = {
                     userLocale,
                     model: runtimeModel,
                     avoidSentence,
+                    vocabularyWord: vocabularyWord && String(vocabularyWord).toLowerCase() !== "null"
+                        ? String(vocabularyWord).trim()
+                        : null,
+                    vocabularyWordTranslation: vocabularyWordTranslation
+                        && String(vocabularyWordTranslation).toLowerCase() !== "null"
+                        ? String(vocabularyWordTranslation).trim()
+                        : null,
                 });
 
                 const { allowed, waitTimeSeconds } = skipCoach
@@ -407,6 +420,13 @@ export const translationsController = {
                         userLocale,
                         model: runtimeModel,
                         avoidSentence: textToTranslate ?? "",
+                        vocabularyWord: vocabularyWord && String(vocabularyWord).toLowerCase() !== "null"
+                            ? String(vocabularyWord).trim()
+                            : null,
+                        vocabularyWordTranslation: vocabularyWordTranslation
+                            && String(vocabularyWordTranslation).toLowerCase() !== "null"
+                            ? String(vocabularyWordTranslation).trim()
+                            : null,
                     });
 
                     newTaskType = nextTask.taskType;

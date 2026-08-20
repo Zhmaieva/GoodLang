@@ -1,6 +1,8 @@
 const STORAGE_KEY = "goodlang_vocabulary_local";
 const STORAGE_VERSION_KEY = "goodlang_vocabulary_local_version";
 const STORAGE_VERSION = "8";
+const CEFR_LEVELS = new Set(["A1", "A2", "B1", "B2", "C1", "C2"]);
+const ONE_MONTH_MS = 30 * 24 * 60 * 60 * 1000;
 const LOCAL_STOP_WORDS = new Set([
     "a",
     "an",
@@ -122,7 +124,9 @@ function getLastMistakeLabel(value) {
 }
 
 function getStatus(record) {
-    if ((record.mistakeCount ?? 0) > 0 && (record.correctStreak ?? 0) < 2) {
+    if ((record.mistakeCount ?? 0) === 0) return null;
+
+    if ((record.correctStreak ?? 0) < 2) {
         return "needsPractice";
     }
 
@@ -158,18 +162,74 @@ function toVocabularyItem(record, locale = record.displayLocale) {
 export function getLocalVocabularyWords(locale = null) {
     return Object.values(readMap())
         .map((record) => toVocabularyItem(record, locale || record.displayLocale))
-        .filter((item) => item.word && item.status && !LOCAL_STOP_WORDS.has(item.word));
+        .filter((item) => item.word && item.status);
 }
 
 export function buildLocalVocabularySummary(words = []) {
     const safeWords = Array.isArray(words) ? words : [];
     const count = (status) => safeWords.filter((word) => word.status === status).length;
-    const level = safeWords.some((word) => word.level === "B2")
-        ? "B2"
-        : safeWords.some((word) => word.level === "B1") ? "B1" : "-";
+    const records = Object.values(readMap());
+    const cutoff = Date.now() - ONE_MONTH_MS;
+    const bands = [
+        { value: "Advanced", label: "B2+", levels: new Set(["B2", "C1", "C2"]) },
+        { value: "Intermediate", label: "A2–B1", levels: new Set(["A2", "B1"]) },
+        { value: "Beginner", label: "A1", levels: new Set(["A1"]) },
+    ];
+
+    const scoredBands = bands.map((band) => {
+        let weightedAttempts = 0;
+        let weightedCorrect = 0;
+        for (const record of records) {
+            const recordLevel = String(record?.level ?? "").toUpperCase();
+            if (!band.levels.has(recordLevel)) continue;
+            const history = Array.isArray(record.usageHistory) ? record.usageHistory : [];
+            if (history.length) {
+                const trackedCorrect = history.filter((attempt) => attempt?.correct === true).length;
+                const untrackedAttempts = Math.max(0, (Number(record?.attempts) || 0) - history.length);
+                const untrackedCorrect = Math.max(0, Math.min(
+                    untrackedAttempts,
+                    (Number(record?.correctCount) || 0) - trackedCorrect,
+                ));
+                if (untrackedAttempts > 0) {
+                    const baselineTime = new Date(record?.createdAt || record?.updatedAt).getTime();
+                    const baselineWeight = Number.isFinite(baselineTime) && baselineTime < cutoff ? 0.5 : 1;
+                    weightedAttempts += untrackedAttempts * baselineWeight;
+                    weightedCorrect += untrackedCorrect * baselineWeight;
+                }
+                for (const attempt of history) {
+                    const occurredAt = new Date(attempt?.occurredAt).getTime();
+                    const weight = Number.isFinite(occurredAt) && occurredAt < cutoff ? 0.5 : 1;
+                    weightedAttempts += weight;
+                    if (attempt?.correct === true) weightedCorrect += weight;
+                }
+            } else {
+                const attempts = Math.max(0, Number(record?.attempts) || 0);
+                const correct = Math.max(0, Math.min(attempts, Number(record?.correctCount) || 0));
+                const recordTime = new Date(record?.updatedAt || record?.createdAt).getTime();
+                const weight = Number.isFinite(recordTime) && recordTime < cutoff ? 0.5 : 1;
+                weightedAttempts += attempts * weight;
+                weightedCorrect += correct * weight;
+            }
+        }
+        const accuracy = weightedAttempts > 0 ? weightedCorrect / weightedAttempts : null;
+        return { ...band, accuracy };
+    });
+    const earnedLevel = scoredBands.find((band) => band.accuracy !== null && band.accuracy >= 0.75);
+    const beginnerBand = scoredBands.find((band) => band.value === "Beginner");
+    const vocabularyLevel = earnedLevel
+        ? {
+            value: earnedLevel.value,
+            note: `${earnedLevel.label} · ${Math.round(earnedLevel.accuracy * 100)}% weighted accuracy`,
+        }
+        : {
+            value: "Beginner",
+            note: beginnerBand?.accuracy != null
+                ? `A1 · ${Math.round(beginnerBand.accuracy * 100)}% weighted accuracy`
+                : "Not enough data yet",
+        };
 
     return {
-        vocabularyLevel: { value: level, note: "Based on practiced words" },
+        vocabularyLevel,
         learnedWords: { value: count("learned"), note: "Stable in recent tasks" },
         needsPractice: { value: count("needsPractice"), note: "Should return in the queue" },
         recovered: { value: count("recovered"), note: "Was weak, now correct" },
@@ -181,7 +241,7 @@ export function saveLocalVocabularyEvaluation({ words = [], translations = {}, l
     const now = new Date().toISOString();
     for (const evaluation of Array.isArray(words) ? words : []) {
         const word = normalizeWord(evaluation?.word);
-        if (!word || LOCAL_STOP_WORDS.has(word)) continue;
+        if (!word) continue;
         const existing = current[word] ?? {
             word, attempts: 0, correctCount: 0, mistakeCount: 0, correctStreak: 0,
             translations: {}, createdAt: now,
@@ -191,7 +251,16 @@ export function saveLocalVocabularyEvaluation({ words = [], translations = {}, l
         existing.correctCount += correct ? 1 : 0;
         existing.mistakeCount += correct ? 0 : 1;
         existing.correctStreak = correct ? existing.correctStreak + 1 : 0;
-        existing.level = level || existing.level || "-";
+        const evaluatedLevel = String(evaluation?.level ?? "").toUpperCase();
+        const fallbackLevel = String(level ?? "").toUpperCase();
+        if (existing.levelSource !== "evaluation") {
+            existing.level = CEFR_LEVELS.has(evaluatedLevel)
+                ? evaluatedLevel
+                : CEFR_LEVELS.has(fallbackLevel) ? fallbackLevel : "-";
+            existing.levelSource = "evaluation";
+        }
+        existing.usageHistory = Array.isArray(existing.usageHistory) ? existing.usageHistory : [];
+        existing.usageHistory.push({ correct, occurredAt: now });
         existing.updatedAt = now;
         existing._synced = false;
         existing.displayLocale = String(locale || "uk-UA");
@@ -268,7 +337,7 @@ export function mergeVocabularyWords(remoteWords = [], locale = "uk-UA") {
 
     for (const word of Array.isArray(remoteWords) ? remoteWords : []) {
         const key = normalizeWord(word?.word || word?.id);
-        if (key && !LOCAL_STOP_WORDS.has(key) && word?.status) {
+        if (key && word?.status) {
         merged.set(key, {
             ...word,
             meaning: word?.translations?.[locale]
