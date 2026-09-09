@@ -85,11 +85,11 @@ export default function LoginForm({
     }, [cookieOpen, termsOpen]);
 
     const mainButtonStyle = (disabled) => ({
-        backgroundColor: disabled ? "#999" : theme.accent,
+        backgroundColor: disabled ? "#999" : theme.dark,
         color: "#fff",
         opacity: disabled ? 0.7 : 1,
-        borderColor: "transparent",
-        boxShadow: disabled ? "none" : "0 12px 28px rgba(116, 119, 184, 0.16)",
+        borderColor: disabled ? "transparent" : theme.dark,
+        boxShadow: "none",
     });
 
     // -----------------------------
@@ -511,7 +511,7 @@ export default function LoginForm({
                                             variant="offset"
                                             compact
                                             fullWidth
-                                            shadowColor={theme.accent}
+                                            shadowColor={theme.dark}
                                             shadowOffset={0}
                                             style={mainButtonStyle(loading)}
                                             onClick={handleEmailSubmit}
@@ -590,7 +590,7 @@ export default function LoginForm({
                                             variant="offset"
                                             compact
                                             fullWidth
-                                            shadowColor={theme.accent}
+                                            shadowColor={theme.dark}
                                             shadowOffset={0}
                                             style={mainButtonStyle(loading)}
                                             onClick={handleVerify}

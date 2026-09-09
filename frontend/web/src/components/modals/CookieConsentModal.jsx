@@ -10,10 +10,10 @@ export default function CookieConsentModal({
                                                disableLinks = false,
                                            }) {
     const buttonStyle = {
-        backgroundColor: theme.accent,
+        backgroundColor: theme.dark,
         color: "#fff",
-        borderColor: "transparent",
-        boxShadow: "0 12px 28px rgba(116, 119, 184, 0.16)",
+        borderColor: theme.dark,
+        boxShadow: "none",
     };
 
     return (
@@ -71,7 +71,7 @@ export default function CookieConsentModal({
                     variant="offset"
                     compact
                     fullWidth
-                    shadowColor={theme.accent}
+                    shadowColor={theme.dark}
                     shadowOffset={0}
                     onClick={onReject}
                     style={buttonStyle}
@@ -83,7 +83,7 @@ export default function CookieConsentModal({
                     variant="offset"
                     compact
                     fullWidth
-                    shadowColor={theme.accent}
+                    shadowColor={theme.dark}
                     shadowOffset={0}
                     onClick={onAccept}
                     style={buttonStyle}

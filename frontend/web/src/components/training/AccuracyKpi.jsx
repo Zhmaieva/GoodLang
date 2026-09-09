@@ -640,6 +640,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         color: text,
         fontFamily: 'var(--font-family-base)',
         lineHeight: showEmpty ? 1.15 : 1,
+        overflowWrap: "anywhere",
     };
 
     const cardStyle = {
@@ -648,6 +649,9 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         border: `1px solid ${border}`,
         borderRadius: 18,
         boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
+        boxSizing: "border-box",
+        width: "100%",
+        minWidth: 0,
         minHeight: isMobile ? 132 : 150,
         padding: isMobile ? 16 : 22,
         display: "flex",
@@ -673,6 +677,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         fontSize: isMobile ? "0.86rem" : "0.92rem",
         color: muted,
         fontWeight: 600,
+        overflowWrap: "anywhere",
     };
 
 

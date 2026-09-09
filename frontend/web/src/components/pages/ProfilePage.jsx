@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import {
     CaretRight,
     ChartBar,
-    CreditCard,
     CrownSimple,
     EnvelopeSimple,
     GlobeHemisphereWest,
@@ -87,7 +86,7 @@ function getLanguagePairLabel() {
 }
 
 function getPlanLabel(account) {
-    if (account?.status === "active" || account?.status === "paid" || account?.isPaid) {
+    if (["active", "paid", "attention"].includes(account?.status) || account?.isPaid) {
         return "Monthly subscription";
     }
 
@@ -141,9 +140,11 @@ export default function ProfilePage({ theme }) {
     );
 
     const email = account?.email || "";
+    const isSignedIn = Boolean(email);
     const languagePair = getLanguagePairLabel();
     const levelLabel = LEVEL_LABELS[selectedLevel] || "Adaptive";
     const planLabel = getPlanLabel(account);
+    const isSubscribed = ["active", "paid", "attention"].includes(account?.status) || account?.isPaid;
     const billingStatus = account?.status === "active" || account?.isPaid
         ? "paid"
         : account?.status;
@@ -282,17 +283,6 @@ export default function ProfilePage({ theme }) {
         cursor: "pointer",
         whiteSpace: "nowrap",
         boxShadow: "none",
-    };
-
-    const avatarStyle = {
-        color: colors.accent,
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: isMobile ? 34 : 42,
-        lineHeight: 1,
-        fontWeight: 900,
-        flex: "0 0 auto",
     };
 
     const sectionStyle = {
@@ -621,9 +611,6 @@ export default function ProfilePage({ theme }) {
                 <section style={cardStyle} aria-label="User profile">
                     <div style={heroStyle}>
                         <div style={heroInfoStyle}>
-                            <div style={avatarStyle} aria-hidden>
-                                GL
-                            </div>
                             <div>
                                 <h1
                                     style={{
@@ -645,19 +632,21 @@ export default function ProfilePage({ theme }) {
                                         overflowWrap: "anywhere",
                                     }}
                                 >
-                                    {email}
+                                    {email || "Not signed in"}
                                 </p>
                             </div>
                         </div>
-                        <button
-                            type="button"
-                            style={logoutButtonStyle}
-                            onClick={handleLogout}
-                            aria-label="Log out"
-                        >
-                            <SignOut size={isMobile ? 18 : 20} weight="bold" aria-hidden />
-                            {!isMobile && "Log out"}
-                        </button>
+                        {isSubscribed && (
+                            <button
+                                type="button"
+                                style={logoutButtonStyle}
+                                onClick={handleLogout}
+                                aria-label="Log out"
+                            >
+                                <SignOut size={isMobile ? 18 : 20} weight="bold" aria-hidden />
+                                {!isMobile && "Log out"}
+                            </button>
+                        )}
                     </div>
 
                     <section style={sectionStyle}>
@@ -689,8 +678,10 @@ export default function ProfilePage({ theme }) {
                             key: "email",
                             icon: <EnvelopeSimple style={iconStyle} weight="regular" />,
                             title: "Email",
-                            subtitle: "Change the email you use for sign-in",
-                            value: email,
+                            subtitle: isSignedIn
+                                ? "Change the email you use for sign-in"
+                                : "Sign in to sync your account",
+                            value: email || "Not signed in",
                             onClick: () => setEmailChangeVisible(true),
                         })}
                         {renderRow({
@@ -714,19 +705,17 @@ export default function ProfilePage({ theme }) {
                 theme={theme}
                 account={account}
                 open={emailChangeVisible}
-                emailChange
+                emailChange={isSignedIn}
                 onAccountChange={setAccount}
                 onClose={() => setEmailChangeVisible(false)}
             />
-            {account && (
-                <LimitModal
-                    accountInfo={account}
-                    isLimitReached={false}
-                    theme={theme}
-                    open={limitVisible}
-                    onClose={() => setLimitVisible(false)}
-                />
-            )}
+            <LimitModal
+                accountInfo={account}
+                isLimitReached={false}
+                theme={theme}
+                open={limitVisible}
+                onClose={() => setLimitVisible(false)}
+            />
             {account && (
                 <AccountStatusModal
                     accountInfo={account}

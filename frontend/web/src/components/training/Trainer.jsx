@@ -734,7 +734,6 @@ export default function Trainer({
                 use_same_task_type: true,
                 userLocale: localizationService.getLocale(),
                 vocabularyWord: vocabulary?.word || null,
-                vocabularyWordTranslation: vocabulary?.meaning || null,
             });
         }
 
@@ -781,7 +780,6 @@ export default function Trainer({
             userLocale: localizationService.getLocale(),
             avoidSentence,
             vocabularyWord: vocabulary?.word || null,
-            vocabularyWordTranslation: vocabulary?.meaning || null,
         });
 
         if (!result.allowed && !suppressLimitState) {
@@ -989,7 +987,6 @@ export default function Trainer({
                 use_same_task_type: getUseSameTaskType(),
                 userLocale: localizationService.getLocale(),
                 vocabularyWord: vocabularyForNextSample?.word || null,
-                vocabularyWordTranslation: vocabularyForNextSample?.meaning || null,
             };
 
             callQuickTranslateAPI(evaluationParams)

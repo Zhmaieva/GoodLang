@@ -141,6 +141,12 @@ function getStatus(record) {
 function toVocabularyItem(record, locale = record.displayLocale) {
     const word = normalizeWord(record.word);
     const displayLocale = locale || record.displayLocale || "uk-UA";
+    const status = getStatus(record);
+    const attempts = Math.max(0, Number(record.attempts) || 0);
+    const correctCount = Math.max(0, Number(record.correctCount) || 0);
+    const isAlwaysCorrect = attempts > 0
+        && (Number(record.mistakeCount) || 0) === 0
+        && correctCount === attempts;
 
     return {
         id: `local-${word}`,
@@ -150,7 +156,10 @@ function toVocabularyItem(record, locale = record.displayLocale) {
             || record.translations?.uk || "",
         translations: record.translations || {},
         level: record.level || "-",
-        status: getStatus(record),
+        status,
+        displayStatus: status || (isAlwaysCorrect ? "learned" : null),
+        attempts,
+        correctCount,
         previousMistakes: Number(record.mistakeCount) || 0,
         correctStreak: Number(record.correctStreak) || 0,
         lastMistake: getLastMistakeLabel(record.lastMistakeAt),
@@ -162,12 +171,12 @@ function toVocabularyItem(record, locale = record.displayLocale) {
 export function getLocalVocabularyWords(locale = null) {
     return Object.values(readMap())
         .map((record) => toVocabularyItem(record, locale || record.displayLocale))
-        .filter((item) => item.word && item.status);
+        .filter((item) => item.word && item.displayStatus);
 }
 
 export function buildLocalVocabularySummary(words = []) {
     const safeWords = Array.isArray(words) ? words : [];
-    const count = (status) => safeWords.filter((word) => word.status === status).length;
+    const count = (status) => safeWords.filter((word) => (word.displayStatus || word.status) === status).length;
     const records = Object.values(readMap());
     const cutoff = Date.now() - ONE_MONTH_MS;
     const bands = [
@@ -337,7 +346,7 @@ export function mergeVocabularyWords(remoteWords = [], locale = "uk-UA") {
 
     for (const word of Array.isArray(remoteWords) ? remoteWords : []) {
         const key = normalizeWord(word?.word || word?.id);
-        if (key && word?.status) {
+        if (key && (word?.displayStatus || word?.status)) {
         merged.set(key, {
             ...word,
             meaning: word?.translations?.[locale]

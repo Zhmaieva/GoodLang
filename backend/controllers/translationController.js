@@ -122,13 +122,10 @@ async function buildRuntimeTask({
                                     taskType,
                                     targetRules,
                                     level,
-                                    seed,
-                                    skip,
                                     userLocale,
                                     model,
                                     avoidSentence,
                                     vocabularyWord,
-                                    vocabularyWordTranslation,
                                 }) {
     const requestedRules = uniqueValidRules(targetRules);
     const rulesForSample = requestedRules.length ? requestedRules : [randomRule(level ?? "A1")];
@@ -138,8 +135,6 @@ async function buildRuntimeTask({
             targetRules: rulesForSample,
             allRules: PROJECT_RULES,
             level,
-            seed,
-            skip,
             model,
             avoidSentence,
         });
@@ -158,13 +153,10 @@ async function buildRuntimeTask({
         targetRules: rulesForSample,
         allRules: PROJECT_RULES,
         level,
-        seed,
-        skip,
         targetLocale: userLocale,
         model,
         avoidSentence,
         vocabularyWord,
-        vocabularyWordTranslation,
     });
 
     return {
@@ -254,7 +246,6 @@ export const translationsController = {
                 userLocale = 'uk-UA',
                 avoidSentence = "",
                 vocabularyWord = "",
-                vocabularyWordTranslation = ""
             } = req.query;
 
             const taskType = Number(task_type) || 0;
@@ -273,17 +264,11 @@ export const translationsController = {
                     taskType,
                     targetRules: rulesArr,
                     level: level ?? "A1",
-                    seed,
-                    skip: currentSkip,
                     userLocale,
                     model: runtimeModel,
                     avoidSentence,
                     vocabularyWord: vocabularyWord && String(vocabularyWord).toLowerCase() !== "null"
                         ? String(vocabularyWord).trim()
-                        : null,
-                    vocabularyWordTranslation: vocabularyWordTranslation
-                        && String(vocabularyWordTranslation).toLowerCase() !== "null"
-                        ? String(vocabularyWordTranslation).trim()
                         : null,
                 });
 
@@ -415,17 +400,11 @@ export const translationsController = {
                         taskType: newTaskType,
                         targetRules: [targetRule],
                         level: getRuleLevel(targetRule) ?? level ?? "A1",
-                        seed,
-                        skip: newSkip,
                         userLocale,
                         model: runtimeModel,
                         avoidSentence: textToTranslate ?? "",
                         vocabularyWord: vocabularyWord && String(vocabularyWord).toLowerCase() !== "null"
                             ? String(vocabularyWord).trim()
-                            : null,
-                        vocabularyWordTranslation: vocabularyWordTranslation
-                            && String(vocabularyWordTranslation).toLowerCase() !== "null"
-                            ? String(vocabularyWordTranslation).trim()
                             : null,
                     });
 

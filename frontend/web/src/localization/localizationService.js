@@ -98,12 +98,25 @@ const UI_LABELS = {
 
 export default class LocalizationService {
 
+    resolveLocale = (value) => {
+        const requested = String(value ?? "").trim().replaceAll("_", "-").toLowerCase();
+        if (!requested) return null;
+
+        const exact = this.BASE_LOCALES.find(({locale}) => locale.toLowerCase() === requested);
+        if (exact) return exact.locale;
+
+        const language = requested.split("-")[0];
+        return this.BASE_LOCALES.find(({locale}) => locale.toLowerCase().split("-")[0] === language)?.locale
+            ?? null;
+    };
+
     setLocale = (locale) => {
-        localStorage.setItem("localization", locale);
+        const resolved = this.resolveLocale(locale);
+        if (resolved) localStorage.setItem("localization", resolved);
     };
 
     getLocale = () => {
-        return localStorage.getItem("localization");
+        return this.resolveLocale(localStorage.getItem("localization"));
     };
 
     isLocaleDefined = () => {

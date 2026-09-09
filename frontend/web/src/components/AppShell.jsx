@@ -11,7 +11,7 @@ export default function AppShell({ children, theme, noPadding = false }) {
             background: theme?.bg ?? APP_BACKGROUND_COLOR,
             color: theme?.text ?? APP_TEXT_COLOR,
             fontFamily: "var(--font-family-base)",
-            overflowX: "hidden",
+            overflowX: "clip",
         },
 
         container: {
@@ -31,7 +31,7 @@ export default function AppShell({ children, theme, noPadding = false }) {
                     padding: 0;
                     width: 100%;
                     min-height: 100%;
-                    overflow-x: hidden;
+                    overflow-x: clip;
                     background: var(--bg);
                     color: var(--text);
                 }

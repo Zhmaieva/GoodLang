@@ -9,8 +9,6 @@ import InfoModal from "../modals/InfoModal.jsx";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
 import {
     APP_BACKGROUND_COLOR,
-    APP_BORDER_COLOR,
-    APP_SURFACE_COLOR,
 } from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
 import { emit } from "../../services/events.js";
@@ -133,10 +131,10 @@ export default function HomePage({ theme }) {
         flexDirection: "column",
 
         padding: isMobile ? "24px" : "56px 64px",
-        border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
-        borderRadius: 24,
-        background: theme?.surface ?? APP_SURFACE_COLOR,
-        boxShadow: "0 24px 70px rgba(31, 36, 54, 0.08)",
+        border: "none",
+        borderRadius: 0,
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        boxShadow: "none",
         boxSizing: "border-box",
         transform: "translateY(-20px)",
     };

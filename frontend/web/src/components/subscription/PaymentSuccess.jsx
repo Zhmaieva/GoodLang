@@ -121,7 +121,7 @@ export default function PaymentSuccess() {
                     </div>
 
                     <div style={{display: "flex", alignItems: "flex-start", gap: 12}}>
-                        <div style={logoStyle(64)}>GL</div>
+                        <div style={logoStyle(64)}>Good Lang</div>
                     </div>
                 </div>
 

@@ -79,6 +79,9 @@ export default function LevelKpi({ mobile, theme }) {
         border: `1px solid ${CARD_BORDER}`,
         borderRadius: 18,
         boxShadow: CARD_SHADOW,
+        boxSizing: "border-box",
+        width: "100%",
+        minWidth: 0,
         minHeight: isMobile ? 132 : 150,
         padding: isMobile ? 16 : 22,
         display: "flex",
@@ -105,11 +108,12 @@ export default function LevelKpi({ mobile, theme }) {
         marginTop: 10,
         fontSize: showEmpty
             ? isMobile ? "1.25rem" : "1.55rem"
-            : isMobile ? "2rem" : "2.45rem",
+            : isMobile ? "1.5rem" : "2.45rem",
         lineHeight: showEmpty ? 1.15 : 1,
         fontWeight: 800,
         color: TEXT,
         fontFamily: 'var(--font-family-base)',
+        overflowWrap: "anywhere",
     };
 
     const sparkStyle = {
@@ -129,6 +133,7 @@ export default function LevelKpi({ mobile, theme }) {
         fontSize: isMobile ? "0.86rem" : "0.92rem",
         color: MUTED,
         fontWeight: 600,
+        overflowWrap: "anywhere",
     };
 
     const sparkFillStyle = (width) => ({

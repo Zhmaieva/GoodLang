@@ -14,40 +14,43 @@
     body {
       margin: 0;
       padding: 0;
-      background: #fff3df;
+      background: #f8f9fc;
       font-family:{{FONT_FAMILY}};
-      color: #3a2a1d;
+      color: #20243a;
     }
 
     .wrap {
       width: 100%;
       padding: 20px 12px;
+      box-sizing: border-box;
     }
 
     .card {
       max-width: 640px;
       margin: 0 auto;
-      background: #fffdf8;
-      border: 3px solid #ff6138;
-      box-shadow: 4px 4px 0 #d74e2a;
-      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid #e6e8f1;
+      box-shadow: 0 16px 44px rgba(31, 36, 54, 0.08);
+      border-radius: 24px;
       overflow: hidden;
     }
 
     .header {
-      background: #ff6138;
-      color: #ffffff;
-      padding: 16px 18px;
-      font-size: 18px;
+      background: #ffffff;
+      color: #000000;
+      padding: 22px 22px 18px;
+      border-bottom: 1px solid #e6e8f1;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
       font-weight: bold;
-      letter-spacing: 0.3px;
+      letter-spacing: -0.4px;
     }
 
     .body {
       padding: 18px;
       font-size: 16px;
       line-height: 1.5;
-      color: #000;
+      color: #20243a;
     }
 
     .p {
@@ -68,15 +71,15 @@
     .dot {
       width: 6px;
       height: 6px;
-      background: #ff6138;
+      background: #7477b8;
       border-radius: 999px;
       margin-top: 6px;
       flex-shrink: 0;
     }
 
     .rules {
-      background: #fffaf3;
-      border: 2px dashed #ff6138;
+      background: #f0f1fb;
+      border: 1px solid #e6e8f1;
       border-radius: 16px;
       padding: 12px 14px;
       margin: 14px 0;
@@ -87,7 +90,7 @@
     }
 
     .rule a {
-      color: #000;
+      color: #7477b8;
       font-weight: 800;
       text-decoration: underline;
     }
@@ -95,18 +98,18 @@
     .footer {
       padding: 16px 18px 20px;
       font-size: 14px;
-      color: #7a5b44;
+      color: #7d8499;
+      border-top: 1px solid #e6e8f1;
     }
 
     .brand {
       text-decoration: none;
       display: inline-block;
       margin-top: 6px;
-      background: #ff6138;
-      color: #fff;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 13px;
+      color: #000000;
+      padding: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
       font-weight: bold;
       letter-spacing: 0.3px;
       user-select: none;
@@ -117,7 +120,7 @@
 <body>
 <div class="wrap">
   <div class="card">
-    <div class="header">GoodLang</div>
+    <div class="header">Good Lang</div>
 
     <div class="body">
       <p class="p">
@@ -167,11 +170,11 @@
 
     <div class="footer">
       See you around,<br />
-      <span class="brand">GoodLang</span>
+      <span class="brand">Good Lang</span>
 
       <div style="text-align: right; font-size: 0.65rem; margin-top:10px">
         Не хочеш отримувати ці листи?
-        <a href="{{UNSUBSCRIBE_URL}}" style="color:#7a5b44; font-weight:700; text-decoration:underline;">
+        <a href="{{UNSUBSCRIBE_URL}}" style="color:#7d8499; font-weight:700; text-decoration:underline;">
           Відписатися
         </a>
       </div>

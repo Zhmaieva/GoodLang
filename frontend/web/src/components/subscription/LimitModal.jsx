@@ -2,7 +2,6 @@ import React, {useState, useRef, useEffect, useCallback} from "react";
 import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
-import {legacyGlobalStyling} from "../../App.jsx";
 import {setPaymentIntent, getOverallAccuracy} from "../../services/dataService.js";
 import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
@@ -21,17 +20,16 @@ export async function getStripe() {
 
 export const logoStyle = (size) => ({
     flex: "0 0 auto",
-    width: size,
-    height: size,
-    borderRadius: 12,
-    background: legacyGlobalStyling.accent,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: "#fff",
-    fontWeight: 800,
-    fontSize: size * 0.45,
-    boxShadow: `0 2px 0 ${legacyGlobalStyling.accentDark}`,
+    color: "#000",
+    fontFamily: 'Georgia, "Times New Roman", serif',
+    fontWeight: 700,
+    fontSize: size * 0.4,
+    lineHeight: 1,
+    letterSpacing: "-0.035em",
+    whiteSpace: "nowrap",
 });
 
 export default function LimitModal({
@@ -243,10 +241,10 @@ export default function LimitModal({
     };
 
     const primaryModalButtonStyle = {
-        backgroundColor: theme.accent,
+        backgroundColor: theme.dark,
         color: "#fff",
-        borderColor: "transparent",
-        boxShadow: "0 12px 28px rgba(116, 119, 184, 0.16)",
+        borderColor: theme.dark,
+        boxShadow: "none",
     };
 
     return (
@@ -338,13 +336,13 @@ export default function LimitModal({
                                     {/* ✅ TITLE SWITCH */}
                                     {!featurePdf && (!hasEnoughEval || improvePct === null) && (
                                         <h2 style={modalTitleStyle}>
-                                            {"Unlimited learning"}
+                                            {"Learn faster"}
                                         </h2>
                                     )}
 
                                     {!featurePdf && hasEnoughEval && improvePct != null && (
                                         <h2 style={modalTitleStyle}>
-                                            Keep practicing
+                                            Learn faster
 
                                             {/*<span style={{ position: "relative" }}>*/}
                                             {/*    <h2*/}
@@ -558,7 +556,7 @@ export default function LimitModal({
                                 compact
                                 fullWidth
                                 theme={theme}
-                                shadowColor={theme.accent}
+                                shadowColor={theme.dark}
                                 shadowOffset={0}
                                 style={primaryModalButtonStyle}
                                 onClick={handleSubscribe}
@@ -572,7 +570,7 @@ export default function LimitModal({
                                     compact
                                     fullWidth
                                     theme={theme}
-                                    shadowColor={theme.accent}
+                                    shadowColor={theme.dark}
                                     shadowOffset={0}
                                     style={primaryModalButtonStyle}
                                     onClick={async () => {

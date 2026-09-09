@@ -229,13 +229,10 @@ export async function generateTranslationSample({
                                                     targetRules = [],
                                                     allRules = ALL_PROJECT_RULES,
                                                     level = null,
-                                                    seed = null,
-                                                    skip = 0,
                                                     targetLocale = "uk-UA",
                                                     model = OPENAI_RUNTIME_MODEL,
                                                     avoidSentence = "",
                                                     vocabularyWord = null,
-                                                    vocabularyWordTranslation = null,
                                                 }) {
     const requestedRules = normalizeRuleList(targetRules);
     if (!requestedRules.length) throw new Error("targetRules required");
@@ -266,9 +263,10 @@ Rules:
 - "rules" should include every PROJECT_RULE needed to judge the correct English answer.
 - "en" must contain 2 to 4 acceptable English translations.
 - "hint" must be a short hint in SOURCE_LOCALE about the grammar pattern, without giving away the full answer.
-- Keep the sentence appropriate for CEFR_LEVEL when provided.
-- If VOCABULARY_WORD is provided, build every expected English translation around that exact word form. Do not change its spelling, tense, number, or form.
-- If VOCABULARY_WORD_TRANSLATION is provided, use that translated meaning naturally in the SOURCE_LOCALE sentence. Never place the English VOCABULARY_WORD itself in the SOURCE_LOCALE sentence.
+- Keep the sentence appropriate for CEFR_LEVEL when provided, impacting the vocabulary difficulty.
+- VOCABULARY_WORD, when provided, is a neutral English dictionary base form.
+- Express the meaning of VOCABULARY_WORD naturally in the SOURCE_LOCALE sentence. Never place the English VOCABULARY_WORD itself in the SOURCE_LOCALE sentence.
+- Use VOCABULARY_WORD in every expected English translation, but fit it naturally to the sentence and required grammar rules. Conjugate verbs, pluralize nouns, or use a possessive form when the sentence requires it; do not force the supplied base form to appear unchanged.
 - If PREVIOUS_SENTENCE_TO_AVOID is provided, create a clearly different follow-up sentence:
   - Do not reuse the same subject/person/entity.
   - Do not reuse the same object/topic/entity.
@@ -282,10 +280,8 @@ PRIMARY_RULE: ${primaryRule}
 REQUESTED_RULES: ${JSON.stringify(requestedRules)}
 SOURCE_LOCALE: ${sourceLocale}
 CEFR_LEVEL: ${level || "(not specified)"}
-VARIATION_KEY: ${JSON.stringify({ seed, skip })}
 PREVIOUS_SENTENCE_TO_AVOID: ${avoidSentence ? JSON.stringify(String(avoidSentence)) : "(none)"}
 VOCABULARY_WORD: ${vocabularyWord ? JSON.stringify(String(vocabularyWord)) : "(none)"}
-VOCABULARY_WORD_TRANSLATION: ${vocabularyWordTranslation ? JSON.stringify(String(vocabularyWordTranslation)) : "(none)"}
 
 PROJECT_RULES:
 ${formatRulesForPrompt(allowedRules)}
@@ -318,8 +314,6 @@ export async function generateGapSample({
                                             targetRules = [],
                                             allRules = ALL_PROJECT_RULES,
                                             level = null,
-                                            seed = null,
-                                            skip = 0,
                                             model = OPENAI_RUNTIME_MODEL,
                                             avoidSentence = "",
                                         }) {
@@ -348,7 +342,7 @@ Rules:
 - "rules" must contain only IDs from PROJECT_RULES, with PRIMARY_RULE first.
 - "rules" should include every PROJECT_RULE needed to judge the sentence.
 - "options" must contain 3 to 5 short choices, including "correct". Use "" as an option only when a zero article / no word answer is appropriate.
-- Keep the sentence appropriate for CEFR_LEVEL when provided.
+- Keep the sentence appropriate for CEFR_LEVEL when provided, impacting the vocabulary difficulty.
 - If PREVIOUS_SENTENCE_TO_AVOID is provided, create a clearly different follow-up sentence:
   - Do not reuse the same subject/person/entity.
   - Do not reuse the same object/topic/entity.
@@ -361,7 +355,6 @@ Rules:
 PRIMARY_RULE: ${primaryRule}
 REQUESTED_RULES: ${JSON.stringify(requestedRules)}
 CEFR_LEVEL: ${level || "(not specified)"}
-VARIATION_KEY: ${JSON.stringify({ seed, skip })}
 PREVIOUS_SENTENCE_TO_AVOID: ${avoidSentence ? JSON.stringify(String(avoidSentence)) : "(none)"}
 
 PROJECT_RULES:
@@ -876,26 +869,6 @@ function extractVocabularyEvaluationWords(text = "") {
     return [...new Set(words.map((word) => word.toLowerCase()))];
 }
 
-function vocabularyEditDistance(left, right) {
-    const a = String(left ?? "");
-    const b = String(right ?? "");
-    const row = Array.from({ length: b.length + 1 }, (_, index) => index);
-    for (let i = 1; i <= a.length; i += 1) {
-        let previous = row[0];
-        row[0] = i;
-        for (let j = 1; j <= b.length; j += 1) {
-            const current = row[j];
-            row[j] = Math.min(
-                row[j] + 1,
-                row[j - 1] + 1,
-                previous + (a[i - 1] === b[j - 1] ? 0 : 1),
-            );
-            previous = current;
-        }
-    }
-    return row[b.length];
-}
-
 export async function evaluateVocabularyUsage({
     targetSentence = "",
     userAnswer = "",
@@ -932,13 +905,20 @@ export async function evaluateVocabularyUsage({
     const systemPrompt = `
 You evaluate English vocabulary usage in a learner's English translation.
 Return JSON only. Do not evaluate verb tense: a wrong verb tense is still correct here.
-Return one object for every supplied vocabulary word with the canonical intended English word,
+Return one object for every supplied vocabulary word with the neutral dictionary base form of the intended English word,
 correct (boolean), and mistakeType (null, "spelling", or "word_fit").
+The "word" field must always be a basic vocabulary headword, never the surface form from the sentence:
+- Remove possessive forms: "teacher's" becomes "teacher".
+- Return nouns in singular form: "phones" becomes "phone".
+- Return verbs in their bare present-simple dictionary form: "calls", "called", and "calling" become "call"; "went" becomes "go".
+- Return other parts of speech in their neutral dictionary form.
+Judge whether the learner used the surface word correctly before reducing it to its base form. A required
+tense, number, or possessive inflection is not a vocabulary mistake.
 Assign each word its English vocabulary CEFR level: A1, A2, B1, B2, C1, or C2.
 Never omit a supplied word because it is correct. Correct words must also be returned with
 correct=true and mistakeType=null.
-For a spelling mistake, use the corrected intended word in the "word" field (for example,
-the learner's "cal" should be returned as "call").
+For a spelling mistake, first identify the corrected intended word and then return its neutral base form
+in the "word" field (for example, the learner's "cal" should be returned as "call").
 Also add important English vocabulary words that the target sentence intends the learner to use
 but that are missing from the learner answer. Do not mark a word incorrect merely because it was omitted.
 This applies even when the target sentence is localized and contains no English tokens.
@@ -979,17 +959,6 @@ ${JSON.stringify(words)}
             ? String(item.level).toUpperCase()
             : safeFallbackLevel;
         evaluated.push({ word, correct: !isExplicitMistake, mistakeType, level });
-    }
-    for (const word of words) {
-        const representedDirectly = evaluated.some((item) => item.word === word);
-        const representedBySpellingCorrection = evaluated.some((item) =>
-            item.correct === false
-            && item.mistakeType === "spelling"
-            && vocabularyEditDistance(word, item.word) <= (Math.max(word.length, item.word.length) <= 5 ? 1 : 2)
-        );
-        if (!representedDirectly && !representedBySpellingCorrection) {
-            evaluated.push({ word, correct: true, mistakeType: null, level: safeFallbackLevel });
-        }
     }
     const mistakes = evaluated.filter((item) => item.correct !== true);
     if (!mistakes.length) {

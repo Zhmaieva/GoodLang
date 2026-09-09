@@ -30,60 +30,31 @@ export function sendVerificationEmail(to, code) {
         subject: "Your GoodLang login code",
         text: `Your GoodLang login code: ${code}`,
         html: `
-<table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-<tr>
-<td style="padding-bottom:16px;">
-<table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-<tr>
-<td valign="top" style="font-family:${FONT_FAMILY_CSS};">
-<h2 style="
-margin:0;
-font-size:24px;
-font-weight:800;
-color:#ff6138;
-">
-${code}
-</h2>
-
-<p style="
-margin:8px 0 16px 0;
-font-size:16px;
-font-weight:500;
-">
-Your login code for <strong>GoodLang</strong>
-</p>
-</td>
-
-<td width="64" valign="top" align="right">
-<table width="64" height="64" cellpadding="0" cellspacing="0" role="presentation"
-style="
-background:#ff6138;
-border-radius:12px;
-text-align:center;
-">
-<tr>
-<td style="
-color:#ffffff;
-font-weight:800;
-font-size:28px;
-font-family:${FONT_FAMILY_CSS};
-line-height:64px;
-">
-GL
-</td>
-</tr>
+<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f8f9fc;">
+  <tr>
+    <td align="center" style="padding:24px 12px;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:560px;background:#ffffff;border:1px solid #e6e8f1;border-radius:24px;">
+        <tr>
+          <td style="padding:22px;border-bottom:1px solid #e6e8f1;color:#000000;font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;letter-spacing:-0.4px;">
+            Good Lang
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:24px 22px;font-family:${FONT_FAMILY_CSS};color:#20243a;">
+            <p style="margin:0 0 10px;font-size:16px;line-height:1.5;">Your login code:</p>
+            <div style="display:inline-block;padding:12px 16px;background:#171b2f;color:#ffffff;border-radius:14px;font-size:26px;font-weight:800;letter-spacing:0.14em;">
+              ${code}
+            </div>
+            <p style="margin:18px 0 0;font-size:13px;line-height:1.5;color:#7d8499;">
+              If this wasn’t you, please email us at
+              <a href="mailto:goodlang.app@gmail.com" style="color:#7477b8;font-weight:700;">goodlang.app@gmail.com</a>.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-
-<p style="font-family:${FONT_FAMILY_CSS}; opacity: 0.5">
-If this wasn’t you, please email us at 
-<a href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
-</p>
 `,
     }).then(() => {
         console.log(`Verification email sent to ${to}: ${info.messageId}`);
@@ -122,89 +93,41 @@ export function sendPromoEmail(to, code, expiresAt) {
 Valid for another ${hoursLeft} ${hoursWord}.
 Activate it here: ${SUBSCRIBE_URL}`,
         html: `
-<table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-<tr>
-<td style="padding-bottom:16px;">
-<table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-<tr>
-<td valign="top" style="font-family:${FONT_FAMILY_CSS};">
-<h2 style="
-margin:0;
-font-size:24px;
-font-weight:800;
-color:#ff6138;
-">
-${code}
-</h2>
-
-<p style="
-margin:8px 0 8px 0;
-font-size:16px;
-font-weight:500;
-">
-🎁 This is your promo code for the <strong>GoodLang</strong> monthly subscription  
-⏳ Valid for another ${hoursLeft} ${hoursWord}
-</p>
-
-<p style="
-margin:0 0 12px 0;
-font-size:15px;
-">
-Apply the code using this link:
-</p>
-
-<a
-href="${SUBSCRIBE_URL}"
-style="
-color:#ff6138;
-font-weight:900;
-font-size:15px;
-text-decoration:none;
-"
->
-${SUBSCRIBE_URL}
-</a>
-</td>
-
-<td width="64" valign="top" align="right">
-<table width="64" height="64" cellpadding="0" cellspacing="0" role="presentation"
-style="
-background:#ff6138;
-border-radius:12px;
-text-align:center;
-">
-<tr>
-<td style="
-color:#ffffff;
-font-weight:800;
-font-size:28px;
-font-family:${FONT_FAMILY_CSS};
-line-height:64px;
-">
-GL
-</td>
-</tr>
+<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f8f9fc;">
+  <tr>
+    <td align="center" style="padding:24px 12px;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:560px;background:#ffffff;border:1px solid #e6e8f1;border-radius:24px;">
+        <tr>
+          <td style="padding:22px;border-bottom:1px solid #e6e8f1;color:#000000;font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;letter-spacing:-0.4px;">
+            Good Lang
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:24px 22px;font-family:${FONT_FAMILY_CSS};color:#20243a;">
+            <div style="padding:16px;background:#f0f1fb;border:1px solid #e6e8f1;border-radius:16px;">
+              <p style="margin:0 0 12px;font-size:16px;line-height:1.5;">
+                🎁 Your promo code for the <strong>GoodLang</strong> monthly subscription:
+              </p>
+              <div style="display:inline-block;padding:10px 14px;background:#171b2f;color:#ffffff;border-radius:12px;font-size:20px;font-weight:800;letter-spacing:0.06em;">
+                ${code}
+              </div>
+              <p style="margin:14px 0;font-size:14px;line-height:1.5;color:#7d8499;">
+                ⏳ Valid for another ${hoursLeft} ${hoursWord}
+              </p>
+              <a href="${SUBSCRIBE_URL}" style="display:inline-block;max-width:100%;padding:11px 16px;background:#171b2f;color:#ffffff;border-radius:14px;font-size:15px;font-weight:800;line-height:1.3;text-decoration:none;word-break:break-word;">
+                Activate discount
+              </a>
+            </div>
+            <p style="margin:18px 0 0;font-size:13px;line-height:1.5;color:#7d8499;">
+              If you didn’t sign up for GoodLang, ignore this email or contact us at
+              <a href="mailto:goodlang.app@gmail.com" style="color:#7477b8;font-weight:700;">goodlang.app@gmail.com</a>.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-
-<p style="
-font-family:${FONT_FAMILY_CSS};
-opacity:0.5;
-font-size:13px;
-">
-If you didn’t sign up for GoodLang, just ignore this email or contact us at
-<a
-href="mailto:goodlang.app@gmail.com"
-style="color:#ff6138; text-decoration:none;"
->
-goodlang.app@gmail.com
-</a>
-</p>
 `
     }).then(info => {
         console.log(`Promo email sent to ${to}: ${info.messageId}`);

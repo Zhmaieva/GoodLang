@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./Buttons.jsx";
-import LimitModal from "./subscription/LimitModal.jsx";
 import LocaleButton from "./LocaleButton.jsx";
 import LevelSwitch from "./training/LevelSwitch.jsx";
 import ModalShell from "./modals/ModalShell.jsx";
@@ -10,8 +9,6 @@ import { marathonService } from "../services/marathonService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../services/trainingDirector.js";
 import { off, on } from "../services/events.js";
 import {
-    APP_ACCENT_COLOR,
-    APP_ACCENT_SOFT_COLOR,
     APP_BORDER_COLOR,
     APP_DARK_COLOR,
     APP_MUTED_TEXT_COLOR,
@@ -42,7 +39,6 @@ export default function SiteHeader({
     );
     const [isInMarathonView, setIsInMarathonView] = useState(false);
     const [settingsVisible, setSettingsVisible] = useState(false);
-    const [subscribeVisible, setSubscribeVisible] = useState(false);
     const [profileHovered, setProfileHovered] = useState(false);
     const [account, setAccount] = useState(() => readCachedAccountInfo());
     const [accountLoaded, setAccountLoaded] = useState(() => Boolean(readCachedAccountInfo()));
@@ -126,9 +122,7 @@ export default function SiteHeader({
     const level = controlledLevel ?? internalLevel;
     const pathname = location.pathname;
     const isRulePage = pathname.startsWith("/rule/");
-    const isSignedIn = Boolean(account?.email);
-    const accent = theme?.accent ?? APP_ACCENT_COLOR;
-    const accentSoft = theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR;
+    const isProfilePage = pathname.startsWith("/profile");
     const border = theme?.border ?? APP_BORDER_COLOR;
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
@@ -138,6 +132,9 @@ export default function SiteHeader({
     const headerStyle = {
         width: "100%",
         minHeight: 76,
+        position: isMobile ? "sticky" : "relative",
+        top: isMobile ? 0 : undefined,
+        zIndex: isMobile ? 1001 : undefined,
         background: surface,
         borderBottom: `1px solid ${border}`,
         boxShadow: "0 8px 28px rgba(31, 36, 54, 0.04)",
@@ -207,39 +204,18 @@ export default function SiteHeader({
         flex: "0 0 auto",
     };
 
-    const logoMarkStyle = {
-        width: isMobile ? 38 : 44,
-        height: isMobile ? 38 : 44,
-        border: `1px solid ${border}`,
-        borderRadius: 14,
-        background: accentSoft,
-        position: "relative",
+    const logoWordmarkStyle = {
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         flex: "0 0 auto",
-        boxSizing: "border-box",
-        overflow: "hidden",
-        boxShadow: "0 8px 22px rgba(116, 119, 184, 0.10)",
-    };
-
-    const logoMarkInnerStyle = {
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-        height: "100%",
-        color: accent,
-        fontFamily: "var(--font-family-base)",
-        fontWeight: 900,
-        fontSize: isMobile ? "1.05rem" : "1.18rem",
+        color: "#000",
+        fontFamily: 'Georgia, "Times New Roman", serif',
+        fontWeight: 700,
+        fontSize: isMobile ? "1.28rem" : "1.48rem",
         lineHeight: 1,
-        letterSpacing: "-0.04em",
-        textTransform: "uppercase",
-    };
-
-    const logoRegistrationStyle = {
-        display: "none",
+        letterSpacing: "-0.035em",
+        whiteSpace: "nowrap",
     };
 
     const backToRulesButtonStyle = {
@@ -258,6 +234,34 @@ export default function SiteHeader({
         gap: 14,
     };
 
+    const mobileNavStyle = {
+        position: "fixed",
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 1000,
+        display: "flex",
+        justifyContent: "center",
+        background: surface,
+        borderTop: `1px solid ${border}`,
+        boxShadow: "0 -8px 28px rgba(31, 36, 54, 0.08)",
+        padding: "8px 12px calc(8px + env(safe-area-inset-bottom))",
+    };
+
+    const mobileNavInnerStyle = {
+        width: "100%",
+        maxWidth: 520,
+        display: "grid",
+        gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+        alignItems: "center",
+        gap: 12,
+    };
+
+    const mobileNavButtonStyle = {
+        width: "100%",
+        minWidth: 0,
+    };
+
     return (
         <>
             <header style={headerStyle}>
@@ -269,10 +273,7 @@ export default function SiteHeader({
                             aria-label="Go to GoodLang home page"
                             onClick={handleLogoClick}
                         >
-                            <span style={logoMarkStyle}>
-                                <span style={logoMarkInnerStyle}>GL</span>
-                                <span style={logoRegistrationStyle}>R</span>
-                            </span>
+                            <span style={logoWordmarkStyle}>Good Lang</span>
                         </button>
 
                         {isRulePage && !isInMarathonView && (
@@ -328,41 +329,82 @@ export default function SiteHeader({
 
                     <div style={rightGroupStyle}>
                         {accountLoaded && (
-                            isSignedIn ? (
-                                <Button
-                                    variant="secondary"
-                                    compact
-                                    isMobile={isMobile}
-                                    theme={theme}
-                                    shadowOffset={0}
-                                    onMouseEnter={() => setProfileHovered(true)}
-                                    onMouseLeave={() => setProfileHovered(false)}
-                                    style={{
-                                        minWidth: isMobile ? 82 : 96,
-                                        backgroundColor: profileHovered ? dark : surface,
-                                        color: profileHovered ? "#fff" : text,
-                                    }}
-                                    onClick={() => navigate("/profile")}
-                                >
-                                    PROFILE
-                                </Button>
-                            ) : (
-                                <Button
-                                    variant="primary"
-                                    compact
-                                    isMobile={isMobile}
-                                    theme={theme}
-                                    shadowOffset={0}
-                                    style={{ minWidth: isMobile ? 82 : 96 }}
-                                    onClick={() => setSubscribeVisible(true)}
-                                >
-                                    SUBSCRIBE
-                                </Button>
-                            )
+                            <Button
+                                variant="secondary"
+                                compact
+                                isMobile={isMobile}
+                                theme={theme}
+                                shadowOffset={0}
+                                onMouseEnter={() => setProfileHovered(true)}
+                                onMouseLeave={() => setProfileHovered(false)}
+                                style={{
+                                    minWidth: isMobile ? 82 : 96,
+                                    backgroundColor: profileHovered || isProfilePage ? dark : surface,
+                                    color: profileHovered || isProfilePage ? "#fff" : text,
+                                }}
+                                onClick={() => navigate("/profile")}
+                                aria-current={isProfilePage ? "page" : undefined}
+                            >
+                                PROFILE
+                            </Button>
                         )}
                     </div>
                 </div>
             </header>
+
+            {isMobile && !isInMarathonView && (
+                <>
+                    <style>{`
+                        @media (max-width: 914px) {
+                            body {
+                                padding-bottom: calc(64px + env(safe-area-inset-bottom));
+                            }
+                        }
+                    `}</style>
+                    <nav style={mobileNavStyle} aria-label="Main navigation">
+                        <div style={mobileNavInnerStyle}>
+                            <Button
+                                variant="header"
+                                compact
+                                active={pathname === "/" || pathname.startsWith("/trainer")}
+                                isMobile
+                                theme={theme}
+                                style={mobileNavButtonStyle}
+                                onClick={handlePracticeClick}
+                                aria-current={pathname === "/" || pathname.startsWith("/trainer") ? "page" : undefined}
+                            >
+                                Practice
+                            </Button>
+
+                            <Button
+                                variant="header"
+                                compact
+                                active={pathname.startsWith("/analytics") || pathname.startsWith("/rule")}
+                                isMobile
+                                theme={theme}
+                                style={mobileNavButtonStyle}
+                                onClick={handleAnalyticsClick}
+                                aria-current={pathname.startsWith("/analytics") || pathname.startsWith("/rule") ? "page" : undefined}
+                            >
+                                Grammar
+                            </Button>
+
+                            <Button
+                                variant="header"
+                                compact
+                                active={pathname.startsWith("/vocabulary")}
+                                isMobile
+                                theme={theme}
+                                style={mobileNavButtonStyle}
+                                onClick={handleVocabularyClick}
+                                aria-current={pathname.startsWith("/vocabulary") ? "page" : undefined}
+                            >
+                                Vocabulary
+                            </Button>
+                        </div>
+                    </nav>
+                </>
+            )}
 
             <ModalShell
                 open={settingsVisible}
@@ -394,16 +436,6 @@ export default function SiteHeader({
                 />
             </ModalShell>
 
-            <LimitModal
-                subscribeIntent
-                isLimitReached={false}
-                theme={theme}
-                open={subscribeVisible}
-                onClose={() => {
-                    setSubscribeVisible(false);
-                    loadAccountInfo().then();
-                }}
-            />
         </>
     );
 }

@@ -23,13 +23,13 @@ import {
     getLocalVocabularyWords,
     mergeVocabularyWords,
 } from "../../services/vocabularyService.js";
+import "./analytics.css";
 
 const WORDS_PER_PAGE = 10;
 
 const FILTERS = [
     { id: "all", label: "All" },
     { id: "needsPractice", label: "Needs practice" },
-    { id: "recovered", label: "Recovered" },
     { id: "learned", label: "Learned" },
 ];
 
@@ -37,11 +37,6 @@ const STATUS_META = {
     learned: {
         label: "Learned",
         color: LEARNED_STATUS_COLOR,
-        textColor: "#fff",
-    },
-    recovered: {
-        label: "Recovered",
-        color: APP_ACCENT_COLOR,
         textColor: "#fff",
     },
     needsPractice: {
@@ -66,12 +61,30 @@ const VOCABULARY_LEVEL_ORDER = {
     C2: 6,
 };
 
+const VOCABULARY_LEVEL_NAMES = {
+    A1: "Beginner",
+    A2: "Intermediate",
+    B1: "Intermediate",
+    B2: "Advanced",
+    C1: "Advanced",
+    C2: "Advanced",
+};
+
 const LAST_MISTAKE_ORDER = {
     Today: 1,
     Yesterday: 2,
     "Last week": 3,
     "Ages ago": 4,
 };
+
+function getDisplayStatus(word) {
+    const status = word?.displayStatus || word?.status;
+    return status === "recovered" ? "needsPractice" : status;
+}
+
+function getVocabularyLevelName(level) {
+    return VOCABULARY_LEVEL_NAMES[String(level ?? "").toUpperCase()] || "-";
+}
 
 function StatusChip({ status }) {
     const meta = STATUS_META[status] ?? STATUS_META.needsPractice;
@@ -88,7 +101,7 @@ function StatusChip({ status }) {
                 borderRadius: 999,
                 background: meta.color,
                 color: meta.textColor,
-                fontWeight: 700,
+                fontWeight: 800,
                 fontSize: "0.78rem",
                 lineHeight: 1,
                 whiteSpace: "nowrap",
@@ -112,6 +125,9 @@ function SummaryCard({ label, value, theme, isMobile }) {
                 border: `1px solid ${border}`,
                 borderRadius: 18,
                 padding: isMobile ? 16 : 22,
+                boxSizing: "border-box",
+                width: "100%",
+                minWidth: 0,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -139,6 +155,7 @@ function SummaryCard({ label, value, theme, isMobile }) {
                         lineHeight: 1,
                         fontWeight: 800,
                         color: text,
+                        overflowWrap: "anywhere",
                     }}
                 >
                     {value}
@@ -158,6 +175,7 @@ export default function VocabularyPage({ theme }) {
     const [loading, setLoading] = useState(true);
     const [loadError, setLoadError] = useState("");
     const [activeFilter, setActiveFilter] = useState("all");
+    const [query, setQuery] = useState("");
     const [sortKey, setSortKey] = useState("level");
     const [sortDir, setSortDir] = useState("asc");
     const [page, setPage] = useState(1);
@@ -234,19 +252,29 @@ export default function VocabularyPage({ theme }) {
             case "lastMistake":
                 return LAST_MISTAKE_ORDER[item.lastMistake] ?? 999;
             case "status":
-                return STATUS_ORDER[item.status] ?? 999;
+                return STATUS_ORDER[getDisplayStatus(item)] ?? 999;
             default:
                 return "";
         }
     };
 
     const filteredWords = useMemo(() => {
+        const normalizedQuery = query.trim().toLocaleLowerCase();
         const list = activeFilter === "all"
             ? [...words]
-            : words.filter((word) => word.status === activeFilter);
+            : words.filter((word) => getDisplayStatus(word) === activeFilter);
         const direction = sortDir === "asc" ? 1 : -1;
 
-        list.sort((a, b) => {
+        const matchingWords = normalizedQuery
+            ? list.filter((word) => {
+                const sourceWord = String(word?.word ?? "").toLocaleLowerCase();
+                const selectedLocaleTranslation = String(word?.meaning ?? "").toLocaleLowerCase();
+                return sourceWord.includes(normalizedQuery)
+                    || selectedLocaleTranslation.includes(normalizedQuery);
+            })
+            : list;
+
+        matchingWords.sort((a, b) => {
             const av = getSortValue(a, sortKey);
             const bv = getSortValue(b, sortKey);
 
@@ -265,8 +293,8 @@ export default function VocabularyPage({ theme }) {
             return 0;
         });
 
-        return list;
-    }, [activeFilter, sortKey, sortDir, words]);
+        return matchingWords;
+    }, [activeFilter, query, sortKey, sortDir, words]);
 
     const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
 
@@ -278,7 +306,7 @@ export default function VocabularyPage({ theme }) {
 
     useEffect(() => {
         setPage(1);
-    }, [activeFilter, sortKey, sortDir]);
+    }, [activeFilter, query, sortKey, sortDir]);
 
     useEffect(() => {
         setPage((currentPage) => Math.min(currentPage, totalPages));
@@ -289,16 +317,14 @@ export default function VocabularyPage({ theme }) {
         note: loading ? "Loading vocabulary" : "Not enough data yet",
     };
     const learnedWordsSummary = summary?.learnedWords ?? {
-        value: loading ? "..." : words.filter((word) => word.status === "learned").length,
+        value: loading ? "..." : words.filter((word) => getDisplayStatus(word) === "learned").length,
         note: loading ? "Loading vocabulary" : "No learned words yet",
     };
-    const needsPracticeSummary = summary?.needsPractice ?? {
-        value: loading ? "..." : words.filter((word) => word.status === "needsPractice").length,
+    const needsPracticeSummary = {
+        value: loading
+            ? "..."
+            : words.filter((word) => getDisplayStatus(word) === "needsPractice").length,
         note: loading ? "Loading vocabulary" : "No weak words yet",
-    };
-    const recoveredSummary = summary?.recovered ?? {
-        value: loading ? "..." : words.filter((word) => word.status === "recovered").length,
-        note: loading ? "Loading vocabulary" : "No recovered words yet",
     };
 
     const pageLayoutStyle = {
@@ -353,7 +379,9 @@ export default function VocabularyPage({ theme }) {
     const summaryGridStyle = {
         display: "grid",
         gap: isMobile ? 12 : 16,
-        gridTemplateColumns: isMobile ? "1fr" : "repeat(4, 1fr)",
+        gridTemplateColumns: isMobile
+            ? "repeat(auto-fit, minmax(min(100%, 150px), 1fr))"
+            : "repeat(3, 1fr)",
         marginTop: 0,
     };
 
@@ -382,20 +410,17 @@ export default function VocabularyPage({ theme }) {
     const tableStyle = {
         border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
         borderRadius: 18,
-        overflowX: "auto",
-        overflowY: "hidden",
+        overflow: "hidden",
         background: theme?.surface ?? APP_SURFACE_COLOR,
         boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
     };
 
     const tableGridStyle = {
         display: "grid",
-        gridTemplateColumns: isMobile
-            ? "180px 180px 150px 140px"
-            : "1.2fr 1.2fr 1fr 0.9fr",
+        gridTemplateColumns: "1.5fr 0.55fr 1fr 0.9fr",
         gap: 10,
         alignItems: "center",
-        minWidth: isMobile ? 730 : 0,
+        minWidth: 0,
     };
 
     const tableHeaderStyle = {
@@ -457,6 +482,16 @@ export default function VocabularyPage({ theme }) {
         color: theme?.text ?? APP_TEXT_COLOR,
     };
 
+    const mobileRowStyle = {
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "space-between",
+        gap: 18,
+        padding: "18px 14px",
+        borderBottom: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+        color: theme?.text ?? APP_TEXT_COLOR,
+    };
+
     const wordNameStyle = {
         display: "flex",
         flexDirection: "column",
@@ -474,6 +509,12 @@ export default function VocabularyPage({ theme }) {
         fontSize: isMobile ? "0.9rem" : "0.95rem",
         fontWeight: 400,
         color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
+    };
+
+    const translationStyle = {
+        fontSize: isMobile ? "0.9rem" : "0.95rem",
+        fontWeight: 400,
+        color: theme?.text ?? APP_TEXT_COLOR,
     };
 
     const emptyStateStyle = {
@@ -526,12 +567,6 @@ export default function VocabularyPage({ theme }) {
                                 label="Needs practice"
                                 value={needsPracticeSummary.value}
                             />
-                            <SummaryCard
-                                theme={theme}
-                                isMobile={isMobile}
-                                label="Recovered"
-                                value={recoveredSummary.value}
-                            />
                         </section>
 
                         <section style={bodyGridStyle}>
@@ -565,37 +600,94 @@ export default function VocabularyPage({ theme }) {
                                             </Button>
                                         );
                                     })}
+
+                                    <div className="search">
+                                        <input
+                                            className="highlight-input"
+                                            type="search"
+                                            placeholder="Search word or translation…"
+                                            aria-label="Search vocabulary by word or translation"
+                                            value={query}
+                                            onChange={(event) => setQuery(event.target.value)}
+                                        />
+                                    </div>
                                 </div>
 
                                 <div style={tableStyle}>
-                                    <div style={tableHeaderStyle}>
-                                        <SortHeader columnKey="level">Word (Level)</SortHeader>
-                                        <div>Translation</div>
-                                        <SortHeader columnKey="lastMistake">Last mistake</SortHeader>
-                                        <SortHeader columnKey="status">Status</SortHeader>
-                                    </div>
+                                    {!isMobile && (
+                                        <div style={tableHeaderStyle}>
+                                            <SortHeader columnKey="word">Word</SortHeader>
+                                            <SortHeader columnKey="level">Level</SortHeader>
+                                            <SortHeader columnKey="lastMistake">Last mistake</SortHeader>
+                                            <SortHeader columnKey="status">Status</SortHeader>
+                                        </div>
+                                    )}
 
                                     {tableMessage ? (
                                         <div style={emptyStateStyle}>{tableMessage}</div>
                                     ) : (
-                                        paginatedWords.map((item, index) => (
-                                            <article
-                                                key={item.id}
-                                                style={{
-                                                    ...tableRowStyle,
-                                                    borderBottom:
-                                                        index === paginatedWords.length - 1 ? "none" : tableRowStyle.borderBottom,
-                                                }}
-                                            >
-                                                <div style={wordNameStyle}>
-                                                    <span style={wordStyle}>{item.word}</span>
-                                                    <span style={metaStyle}>Level: {item.level}</span>
-                                                </div>
-                                                <div style={metaStyle}>{item.meaning || "-"}</div>
-                                                <div style={metaStyle}>{item.lastMistake}</div>
-                                                <StatusChip status={item.status} />
-                                            </article>
-                                        ))
+                                        paginatedWords.map((item, index) => {
+                                            const isLastRow = index === paginatedWords.length - 1;
+
+                                            if (isMobile) {
+                                                return (
+                                                    <article
+                                                        key={item.id}
+                                                        style={{
+                                                            ...mobileRowStyle,
+                                                            borderBottom: isLastRow ? "none" : mobileRowStyle.borderBottom,
+                                                        }}
+                                                    >
+                                                        <div style={{ ...wordNameStyle, flex: "1 1 auto" }}>
+                                                            <span style={{ ...wordStyle, fontSize: "1.1rem" }}>{item.word}</span>
+                                                            <span style={translationStyle}>{item.meaning || "-"}</span>
+                                                            <span style={{ ...metaStyle, fontWeight: 600 }}>
+                                                                Level: {getVocabularyLevelName(item.level)}
+                                                            </span>
+                                                            <div style={{ marginTop: 8 }}>
+                                                                <StatusChip status={getDisplayStatus(item)} />
+                                                            </div>
+                                                        </div>
+
+                                                        <div
+                                                            style={{
+                                                                flex: "0 0 auto",
+                                                                display: "flex",
+                                                                flexDirection: "column",
+                                                                alignItems: "flex-end",
+                                                                gap: 4,
+                                                                textAlign: "right",
+                                                            }}
+                                                        >
+                                                            <span style={{ ...metaStyle, fontSize: "0.75rem", fontWeight: 700 }}>
+                                                                Last mistake
+                                                            </span>
+                                                            <span style={{ ...metaStyle, color: theme?.text ?? APP_TEXT_COLOR, fontWeight: 700 }}>
+                                                                {item.lastMistake || "-"}
+                                                            </span>
+                                                        </div>
+                                                    </article>
+                                                );
+                                            }
+
+                                            return (
+                                                <article
+                                                    key={item.id}
+                                                    style={{
+                                                        ...tableRowStyle,
+                                                        borderBottom: isLastRow ? "none" : tableRowStyle.borderBottom,
+                                                    }}
+                                                >
+                                                    <div style={wordNameStyle}>
+                                                        <span style={wordStyle}>{item.word}</span>
+                                                        <span style={translationStyle}>{item.meaning || "-"}</span>
+                                                    </div>
+                                                    <div style={metaStyle}>{getVocabularyLevelName(item.level)}</div>
+                                                    <div style={metaStyle}>{item.lastMistake}</div>
+                                                    <StatusChip status={getDisplayStatus(item)} />
+                                                </article>
+                                            );
+                                        })
                                     )}
                                 </div>
 

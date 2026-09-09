@@ -25,7 +25,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         gap: isMobile ? "12px" : "18px",
         marginTop: 0,
         gridTemplateColumns: isMobile
-            ? "repeat(auto-fit, minmax(120px, 1fr))"
+            ? "repeat(auto-fit, minmax(min(100%, 150px), 1fr))"
             : "repeat(4, 1fr)",
     };
 
@@ -40,6 +40,9 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         border: `1px solid ${CARD_BORDER}`,
         borderRadius: 18,
         boxShadow: CARD_SHADOW,
+        boxSizing: "border-box",
+        width: "100%",
+        minWidth: 0,
         minHeight: isMobile ? 132 : 150,
         padding: isMobile ? 16 : 22,
         display: "flex",
@@ -66,6 +69,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         fontWeight: 800,
         color: TEXT,
         fontFamily: "var(--font-family-base)",
+        overflowWrap: "anywhere",
     };
 
     const sparkStyle = {
@@ -83,6 +87,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         fontSize: isMobile ? "0.86rem" : "0.92rem",
         color: MUTED,
         fontWeight: 600,
+        overflowWrap: "anywhere",
     };
 
     const sparkFillStyle = (width) => ({

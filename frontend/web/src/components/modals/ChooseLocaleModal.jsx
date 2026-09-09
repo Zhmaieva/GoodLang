@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useLayoutEffect, useMemo, useState } from "react";
 import { localizationService } from "../../localization/localizationService.js";
 import { featureToggleService } from "../../services/featureToggleService.js";
 import { Button } from "../Buttons.jsx";
@@ -9,22 +9,23 @@ export default function ChooseLocaleModal({
                                               theme,
                                               onClose,
 }) {
-    const [selected, setSelected] = useState(null);
-    const [initial, setInitial] = useState(null);
+    const getSavedLocale = () => localizationService.isLocaleDefined()
+        ? localizationService.getLocale()
+        : null;
+    const [selected, setSelected] = useState(getSavedLocale);
+    const [initial, setInitial] = useState(getSavedLocale);
 
-    const options = useMemo(() => localizationService.getAvailableLocales(), [localizationService.getAvailableLocales()]);
+    const options = useMemo(() => localizationService.getAvailableLocales(), []);
 
     const canCancel = !!initial;
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!open) return;
 
-        const _saved = localizationService.isLocaleDefined()
-            ? localizationService.getLocale()
-            : null;
+        const saved = getSavedLocale();
 
-        setSelected(_saved);
-        setInitial(_saved);
+        setSelected(saved);
+        setInitial(saved);
     }, [open]);
 
     if (!open) return null;

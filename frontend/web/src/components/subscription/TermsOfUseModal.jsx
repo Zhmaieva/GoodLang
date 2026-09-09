@@ -127,10 +127,10 @@ export default function TermsOfUseModal({
     };
 
     const primaryBtn = {
-        backgroundColor: loading ? "#999" : theme.accent,
+        backgroundColor: loading ? "#999" : theme.dark,
         color: "#fff",
-        borderColor: "transparent",
-        boxShadow: loading ? "none" : "0 12px 28px rgba(116, 119, 184, 0.16)",
+        borderColor: loading ? "transparent" : theme.dark,
+        boxShadow: "none",
         opacity: loading ? 0.7 : 1,
     };
 
@@ -371,7 +371,7 @@ export default function TermsOfUseModal({
                                     variant="offset"
                                     compact
                                     fullWidth
-                                    shadowColor={theme.accent}
+                                    shadowColor={theme.dark}
                                     shadowOffset={0}
                                     onClick={handleAgree}
                                     disabled={loading}
@@ -385,7 +385,7 @@ export default function TermsOfUseModal({
                                 variant="offset"
                                 compact
                                 fullWidth
-                                shadowColor={theme.accent}
+                                shadowColor={theme.dark}
                                 shadowOffset={0}
                                 onClick={onClose}
                                 disabled={loading}

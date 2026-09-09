@@ -22,9 +22,12 @@ function getLastMistakeLabel(lastMistakeAt) {
 function toVocabularyItem(doc) {
     const mistakeCount = Math.max(0, Number(doc.mistakeCount) || 0);
     const correctStreak = Math.max(0, Number(doc.correctStreak) || 0);
+    const attempts = Math.max(0, Number(doc.attempts) || 0);
+    const correctCount = Math.max(0, Number(doc.correctCount) || 0);
     const status = mistakeCount === 0
         ? null
         : correctStreak >= 4 ? "learned" : correctStreak >= 2 ? "recovered" : "needsPractice";
+    const isAlwaysCorrect = attempts > 0 && mistakeCount === 0 && correctCount === attempts;
 
     return {
         id: doc.word,
@@ -33,6 +36,9 @@ function toVocabularyItem(doc) {
         translations: doc.translations ?? {},
         level: doc.level ?? "",
         status,
+        displayStatus: status || (isAlwaysCorrect ? "learned" : null),
+        attempts,
+        correctCount,
         previousMistakes: mistakeCount,
         correctStreak,
         lastMistake: getLastMistakeLabel(doc.lastMistakeAt),
@@ -136,9 +142,10 @@ export async function upsertLocalVocabularyRecords(userId, records = [], updated
 }
 
 export function buildVocabularySummary(words = []) {
-    const learnedWords = words.filter((word) => word.status === "learned").length;
-    const needsPractice = words.filter((word) => word.status === "needsPractice").length;
-    const recovered = words.filter((word) => word.status === "recovered").length;
+    const displayStatus = (word) => word.displayStatus || word.status;
+    const learnedWords = words.filter((word) => displayStatus(word) === "learned").length;
+    const needsPractice = words.filter((word) => displayStatus(word) === "needsPractice").length;
+    const recovered = words.filter((word) => displayStatus(word) === "recovered").length;
     return {
         vocabularyLevel: {
             value: words.some((word) => word.level === "B2") ? "B2" : words.some((word) => word.level === "B1") ? "B1" : "-",

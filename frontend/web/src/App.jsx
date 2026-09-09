@@ -180,7 +180,7 @@ export default function App() {
     })
 
     return (
-        <section style={{overflowX: 'hidden'}}>
+        <section style={{overflowX: 'clip'}}>
             <GaRouteTracker />
             <SyncOnRouteChange />
             <Routes>
