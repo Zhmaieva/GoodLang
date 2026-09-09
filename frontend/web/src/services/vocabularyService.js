@@ -229,12 +229,16 @@ export function buildLocalVocabularySummary(words = []) {
         ? {
             value: earnedLevel.value,
             note: `${earnedLevel.label} · ${Math.round(earnedLevel.accuracy * 100)}% weighted accuracy`,
+            progress: Math.round(earnedLevel.accuracy * 100),
         }
         : {
             value: "Beginner",
             note: beginnerBand?.accuracy != null
                 ? `A1 · ${Math.round(beginnerBand.accuracy * 100)}% weighted accuracy`
                 : "Not enough data yet",
+            progress: beginnerBand?.accuracy != null
+                ? Math.round(beginnerBand.accuracy * 100)
+                : 0,
         };
 
     return {

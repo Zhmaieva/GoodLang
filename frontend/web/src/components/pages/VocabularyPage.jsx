@@ -112,28 +112,27 @@ function StatusChip({ status }) {
     );
 }
 
-function SummaryCard({ label, value, theme, isMobile }) {
-    const surface = theme?.surface ?? APP_SURFACE_COLOR;
-    const border = theme?.border ?? APP_BORDER_COLOR;
+function SummaryCard({ label, value, progress = 0, theme, isMobile }) {
     const text = theme?.text ?? APP_TEXT_COLOR;
     const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
+    const safeProgress = Math.max(0, Math.min(100, Number(progress) || 0));
 
     return (
         <article
             style={{
                 minHeight: isMobile ? 104 : 120,
-                border: `1px solid ${border}`,
-                borderRadius: 18,
+                border: "none",
+                borderRadius: 0,
                 padding: isMobile ? 16 : 22,
                 boxSizing: "border-box",
                 width: "100%",
                 minWidth: 0,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
+                justifyContent: "space-between",
                 gap: 14,
-                background: surface,
-                boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
+                background: theme?.bg ?? APP_BACKGROUND_COLOR,
+                boxShadow: "none",
             }}
         >
             <div>
@@ -160,6 +159,27 @@ function SummaryCard({ label, value, theme, isMobile }) {
                 >
                     {value}
                 </div>
+            </div>
+
+            <div
+                aria-label={`${label}: ${Math.round(safeProgress)}%`}
+                style={{
+                    width: "100%",
+                    height: 8,
+                    borderRadius: 999,
+                    background: "#edf0f7",
+                    overflow: "hidden",
+                }}
+            >
+                <span
+                    style={{
+                        display: "block",
+                        width: `${safeProgress}%`,
+                        height: "100%",
+                        borderRadius: 999,
+                        background: theme?.accent ?? APP_ACCENT_COLOR,
+                    }}
+                />
             </div>
         </article>
     );
@@ -315,17 +335,27 @@ export default function VocabularyPage({ theme }) {
     const vocabularyLevelSummary = summary?.vocabularyLevel ?? {
         value: loading ? "..." : "-",
         note: loading ? "Loading vocabulary" : "Not enough data yet",
+        progress: 0,
     };
+    const learnedWordsCount = words.filter((word) => getDisplayStatus(word) === "learned").length;
+    const needsPracticeCount = words.filter((word) => getDisplayStatus(word) === "needsPractice").length;
+    const categorizedWordsCount = learnedWordsCount + needsPracticeCount;
     const learnedWordsSummary = summary?.learnedWords ?? {
-        value: loading ? "..." : words.filter((word) => getDisplayStatus(word) === "learned").length,
+        value: loading ? "..." : learnedWordsCount,
         note: loading ? "Loading vocabulary" : "No learned words yet",
     };
     const needsPracticeSummary = {
         value: loading
             ? "..."
-            : words.filter((word) => getDisplayStatus(word) === "needsPractice").length,
+            : needsPracticeCount,
         note: loading ? "Loading vocabulary" : "No weak words yet",
     };
+    const learnedWordsProgress = categorizedWordsCount > 0
+        ? (learnedWordsCount / categorizedWordsCount) * 100
+        : 0;
+    const needsPracticeProgress = categorizedWordsCount > 0
+        ? (needsPracticeCount / categorizedWordsCount) * 100
+        : 0;
 
     const pageLayoutStyle = {
         width: "100%",
@@ -353,27 +383,6 @@ export default function VocabularyPage({ theme }) {
         display: "flex",
         flexDirection: "column",
         color: theme?.text ?? APP_TEXT_COLOR,
-    };
-
-    const pageIntroStyle = {
-        marginBottom: isMobile ? 22 : 28,
-    };
-
-    const pageTitleStyle = {
-        margin: 0,
-        color: theme?.text ?? APP_TEXT_COLOR,
-        fontSize: isMobile ? "2rem" : "2.4rem",
-        lineHeight: 1.08,
-        fontWeight: 850,
-        letterSpacing: "-0.02em",
-    };
-
-    const pageSubtitleStyle = {
-        margin: "10px 0 0",
-        color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
-        fontSize: isMobile ? "1rem" : "1.05rem",
-        lineHeight: 1.5,
-        fontWeight: 600,
     };
 
     const summaryGridStyle = {
@@ -408,11 +417,11 @@ export default function VocabularyPage({ theme }) {
     };
 
     const tableStyle = {
-        border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
-        borderRadius: 18,
+        border: "none",
+        borderRadius: 0,
         overflow: "hidden",
-        background: theme?.surface ?? APP_SURFACE_COLOR,
-        boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        boxShadow: "none",
     };
 
     const tableGridStyle = {
@@ -541,31 +550,27 @@ export default function VocabularyPage({ theme }) {
 
                 <div style={pageShellStyle}>
                     <main style={pageContentStyle}>
-                        <section style={pageIntroStyle}>
-                            <h1 style={pageTitleStyle}>Vocabulary</h1>
-                            <p style={pageSubtitleStyle}>
-                                Track the words you know, recover weak spots, and build confident recall.
-                            </p>
-                        </section>
-
                         <section style={summaryGridStyle} aria-label="Vocabulary summary">
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Vocabulary level"
                                 value={vocabularyLevelSummary.value}
+                                progress={vocabularyLevelSummary.progress}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Learned words"
                                 value={learnedWordsSummary.value}
+                                progress={learnedWordsProgress}
                             />
                             <SummaryCard
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Needs practice"
                                 value={needsPracticeSummary.value}
+                                progress={needsPracticeProgress}
                             />
                         </section>
 
@@ -619,7 +624,9 @@ export default function VocabularyPage({ theme }) {
                                             <SortHeader columnKey="word">Word</SortHeader>
                                             <SortHeader columnKey="level">Level</SortHeader>
                                             <SortHeader columnKey="lastMistake">Last mistake</SortHeader>
-                                            <SortHeader columnKey="status">Status</SortHeader>
+                                            <div style={{ justifySelf: "end" }}>
+                                                <SortHeader columnKey="status">Status</SortHeader>
+                                            </div>
                                         </div>
                                     )}
 
@@ -684,7 +691,9 @@ export default function VocabularyPage({ theme }) {
                                                     </div>
                                                     <div style={metaStyle}>{getVocabularyLevelName(item.level)}</div>
                                                     <div style={metaStyle}>{item.lastMistake}</div>
-                                                    <StatusChip status={getDisplayStatus(item)} />
+                                                    <div style={{ justifySelf: "end" }}>
+                                                        <StatusChip status={getDisplayStatus(item)} />
+                                                    </div>
                                                 </article>
                                             );
                                         })

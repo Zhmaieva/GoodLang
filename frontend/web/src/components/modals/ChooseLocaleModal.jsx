@@ -16,6 +16,17 @@ export default function ChooseLocaleModal({
     const [initial, setInitial] = useState(getSavedLocale);
 
     const options = useMemo(() => localizationService.getAvailableLocales(), []);
+    const orderedOptions = useMemo(() => {
+        if (!selected) return options;
+
+        const activeOption = options.find((option) => option.locale === selected);
+        if (!activeOption) return options;
+
+        return [
+            activeOption,
+            ...options.filter((option) => option.locale !== selected),
+        ];
+    }, [options, selected]);
 
     const canCancel = !!initial;
 
@@ -105,7 +116,7 @@ export default function ChooseLocaleModal({
             contentStyle={listOuterStyle}
         >
                 <div style={listWrapStyle}>
-                    {options.map((o) => {
+                    {orderedOptions.map((o) => {
                         const isActive = selected === o.locale;
 
                         return (

@@ -132,8 +132,10 @@ export default function SiteHeader({
     const headerStyle = {
         width: "100%",
         minHeight: 76,
-        position: isMobile ? "sticky" : "relative",
+        position: isMobile ? "fixed" : "relative",
         top: isMobile ? 0 : undefined,
+        left: isMobile ? 0 : undefined,
+        right: isMobile ? 0 : undefined,
         zIndex: isMobile ? 1001 : undefined,
         background: surface,
         borderBottom: `1px solid ${border}`,
@@ -144,6 +146,13 @@ export default function SiteHeader({
         padding: isMobile ? "0 14px" : "0 28px",
         boxSizing: "border-box",
         flexShrink: 0,
+    };
+
+    const mobileHeaderSpacerStyle = {
+        display: isMobile ? "block" : "none",
+        width: "100%",
+        height: 76,
+        flex: "0 0 76px",
     };
 
     const innerStyle = {
@@ -351,6 +360,8 @@ export default function SiteHeader({
                     </div>
                 </div>
             </header>
+
+            <div aria-hidden="true" style={mobileHeaderSpacerStyle} />
 
             {isMobile && !isInMarathonView && (
                 <>

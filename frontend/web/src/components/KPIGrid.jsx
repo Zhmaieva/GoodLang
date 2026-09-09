@@ -3,9 +3,8 @@ import AccuracyKpi from "./training/AccuracyKpi.jsx";
 import LevelKpi from "./training/LevelKpi.jsx";
 import {
     APP_ACCENT_COLOR,
-    APP_BORDER_COLOR,
+    APP_BACKGROUND_COLOR,
     APP_MUTED_TEXT_COLOR,
-    APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../theme.js";
 
@@ -29,17 +28,15 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
             : "repeat(4, 1fr)",
     };
 
-    const CARD_BG = theme?.surface ?? APP_SURFACE_COLOR;
-    const CARD_BORDER = theme?.border ?? APP_BORDER_COLOR;
-    const CARD_SHADOW = "0 16px 44px rgba(31, 36, 54, 0.06)";
+    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
     const TEXT = theme?.text ?? APP_TEXT_COLOR;
     const MUTED = theme?.muted ?? APP_MUTED_TEXT_COLOR;
 
     const cardStyle = {
         background: CARD_BG,
-        border: `1px solid ${CARD_BORDER}`,
-        borderRadius: 18,
-        boxShadow: CARD_SHADOW,
+        border: "none",
+        borderRadius: 0,
+        boxShadow: "none",
         boxSizing: "border-box",
         width: "100%",
         minWidth: 0,
@@ -82,14 +79,6 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
         overflow: "hidden",
     };
 
-    const noteStyle = {
-        marginTop: 9,
-        fontSize: isMobile ? "0.86rem" : "0.92rem",
-        color: MUTED,
-        fontWeight: 600,
-        overflowWrap: "anywhere",
-    };
-
     const sparkFillStyle = (width) => ({
         display: "block",
         position: "absolute",
@@ -117,7 +106,6 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
                     <div style={sparkStyle}>
                         <i style={sparkFillStyle(attemptsPct)} />
                     </div>
-                    <div style={noteStyle}>Practice answers checked</div>
                 </div>
             </div>
 
@@ -130,7 +118,6 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
                     <div style={sparkStyle}>
                         <i style={sparkFillStyle(masteredPct)} />
                     </div>
-                    <div style={noteStyle}>Stable grammar rules</div>
                 </div>
             </div>
 

@@ -94,6 +94,12 @@ body {
     border-bottom: none;
 }
 
+.thead .col-last,
+.trow .col-last {
+    justify-self: end;
+    text-align: right;
+}
+
 .trow:hover {
     background: #faf9ff;
 }

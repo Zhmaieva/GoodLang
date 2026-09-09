@@ -11,9 +11,7 @@ import { LEVEL_MAP } from "./LevelKpi.jsx";
 import {
     APP_ACCENT_COLOR,
     APP_BACKGROUND_COLOR,
-    APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
-    APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../../theme.js";
 import {
@@ -617,8 +615,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // -------------------------
     // NON-HEADER MODE (RESTORED OLD LOOK WITH PROGRESS BAR)
     // -------------------------
-    const surface = theme?.surface ?? APP_SURFACE_COLOR;
-    const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
     const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
 
@@ -645,10 +641,10 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const cardStyle = {
         visibility: isLoading ? "hidden" : "visible",
-        background: surface,
-        border: `1px solid ${border}`,
-        borderRadius: 18,
-        boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
+        background: theme?.bg ?? APP_BACKGROUND_COLOR,
+        border: "none",
+        borderRadius: 0,
+        boxShadow: "none",
         boxSizing: "border-box",
         width: "100%",
         minWidth: 0,
@@ -671,15 +667,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         position: "relative",
         overflow: "hidden",
     };
-
-    const noteStyle = {
-        marginTop: 9,
-        fontSize: isMobile ? "0.86rem" : "0.92rem",
-        color: muted,
-        fontWeight: 600,
-        overflowWrap: "anywhere",
-    };
-
 
     const sparkFillStyle = (width) => ({
         visibility: !isLoading ? "visible" : "hidden",
@@ -713,7 +700,6 @@ export default function AccuracyKpi({ header, mobile, theme }) {
                     <div style={sparkStyle}>
                         <i style={sparkFillStyle(Math.min(100, accuracy ?? 0))} />
                     </div>
-                    <div style={noteStyle}>Overall grammar accuracy</div>
                 </div>
             )}
         </div>

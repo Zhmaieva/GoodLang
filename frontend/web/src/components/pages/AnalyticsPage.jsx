@@ -20,7 +20,7 @@ import FooterBar from "../FooterBar";
 import {getAllStatistics, getOverallAccuracy} from "../../services/dataService.js";
 import AppShell from "../AppShell.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
-import { APP_BACKGROUND_COLOR, APP_MUTED_TEXT_COLOR, APP_TEXT_COLOR } from "../../theme.js";
+import { APP_BACKGROUND_COLOR } from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
 
 export default function AnalyticsPage({theme}) {
@@ -164,40 +164,12 @@ export default function AnalyticsPage({theme}) {
         boxSizing: "border-box",
     };
 
-    const pageIntroStyle = {
-        marginBottom: isMobile ? 22 : 28,
-    };
-
-    const pageTitleStyle = {
-        margin: 0,
-        color: theme?.text ?? APP_TEXT_COLOR,
-        fontSize: isMobile ? "2rem" : "2.4rem",
-        lineHeight: 1.08,
-        fontWeight: 850,
-        letterSpacing: "-0.02em",
-    };
-
-    const pageSubtitleStyle = {
-        margin: "10px 0 0",
-        color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
-        fontSize: isMobile ? "1rem" : "1.05rem",
-        lineHeight: 1.5,
-        fontWeight: 600,
-    };
-
     return (
         <AppShell theme={theme} noPadding>
             <div style={pageLayoutStyle}>
                 <SiteHeader theme={theme} showPracticeButton />
                 <div style={pageShellStyle}>
                     <main style={pageContentStyle}>
-                        <section style={pageIntroStyle}>
-                            <h1 style={pageTitleStyle}>Grammar rules</h1>
-                            <p style={pageSubtitleStyle}>
-                                Learn the rules, practice in context, speak with confidence.
-                            </p>
-                        </section>
-
                         {
                             (!isMobile || !isTeacher || hasData) &&
                             <KPIGrid
