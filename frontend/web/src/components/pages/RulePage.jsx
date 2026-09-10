@@ -147,7 +147,7 @@ export default function RulePage({ data, theme }) {
     const text = theme?.text ?? APP_TEXT_COLOR;
     const FORMS_TABLE_COLOR = LEARNED_STATUS_COLOR;
 
-    const SOFT_INNER = "transparent";
+    const SOFT_INNER = APP_SURFACE_COLOR;
 
     const pageLayoutStyle = {
         width: "100%",
@@ -185,7 +185,7 @@ export default function RulePage({ data, theme }) {
     };
 
     const ruleContentStyle = {
-        background: surface,
+        background: APP_SURFACE_COLOR,
         border: `1px solid ${border}`,
         borderRadius: 22,
         padding: isMobile ? 22 : 40,

@@ -10,6 +10,7 @@ import {
     APP_BACKGROUND_COLOR,
     APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../../theme.js";
 import { CaretDown, CaretUp, Printer, SpinnerGap } from "@phosphor-icons/react";
@@ -170,7 +171,7 @@ export default function RulesTable({
     }, [totalPages]);
 
     const barColor = theme?.accent ?? APP_ACCENT_COLOR;
-    const surface = theme?.bg ?? APP_BACKGROUND_COLOR;
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
     const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
@@ -321,9 +322,9 @@ export default function RulesTable({
         <div className="table" style={{
             height: "100%",
             background: surface,
-            border: "none",
-            borderRadius: 0,
-            boxShadow: "none",
+            border: `1px solid ${border}`,
+            borderRadius: 18,
+            boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
             overflow: "hidden",
             fontFamily: 'var(--font-family-base)',
             color: text,

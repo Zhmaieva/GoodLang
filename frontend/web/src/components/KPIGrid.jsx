@@ -3,8 +3,9 @@ import AccuracyKpi from "./training/AccuracyKpi.jsx";
 import LevelKpi from "./training/LevelKpi.jsx";
 import {
     APP_ACCENT_COLOR,
-    APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../theme.js";
 
@@ -28,15 +29,16 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
             : "repeat(4, 1fr)",
     };
 
-    const CARD_BG = theme?.bg ?? APP_BACKGROUND_COLOR;
+    const CARD_BG = theme?.surface ?? APP_SURFACE_COLOR;
+    const CARD_BORDER = theme?.border ?? APP_BORDER_COLOR;
     const TEXT = theme?.text ?? APP_TEXT_COLOR;
     const MUTED = theme?.muted ?? APP_MUTED_TEXT_COLOR;
 
     const cardStyle = {
         background: CARD_BG,
-        border: "none",
-        borderRadius: 0,
-        boxShadow: "none",
+        border: `1px solid ${CARD_BORDER}`,
+        borderRadius: 18,
+        boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
         boxSizing: "border-box",
         width: "100%",
         minWidth: 0,

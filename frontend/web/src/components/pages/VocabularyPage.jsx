@@ -10,6 +10,7 @@ import {
     APP_BACKGROUND_COLOR,
     APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
     LEARNED_STATUS_COLOR,
 } from "../../theme.js";
@@ -137,8 +138,8 @@ function SummaryCard({
         <article
             style={{
                 minHeight: isMobile ? 104 : 120,
-                border: "none",
-                borderRadius: 0,
+                border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+                borderRadius: 18,
                 padding: isMobile ? 16 : 22,
                 boxSizing: "border-box",
                 width: "100%",
@@ -147,8 +148,8 @@ function SummaryCard({
                 flexDirection: "column",
                 justifyContent: "space-between",
                 gap: 14,
-                background: theme?.bg ?? APP_BACKGROUND_COLOR,
-                boxShadow: "none",
+                background: APP_SURFACE_COLOR,
+                boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
             }}
         >
             <div>
@@ -450,11 +451,12 @@ export default function VocabularyPage({ theme }) {
     };
 
     const tableStyle = {
-        border: "none",
-        borderRadius: 0,
-        overflow: "hidden",
-        background: theme?.bg ?? APP_BACKGROUND_COLOR,
-        boxShadow: "none",
+        border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+        borderRadius: 18,
+        overflowX: "auto",
+        overflowY: "hidden",
+        background: APP_SURFACE_COLOR,
+        boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
     };
 
     const tableGridStyle = {

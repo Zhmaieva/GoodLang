@@ -11,7 +11,9 @@ import { LEVEL_MAP } from "./LevelKpi.jsx";
 import {
     APP_ACCENT_COLOR,
     APP_BACKGROUND_COLOR,
+    APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../../theme.js";
 import {
@@ -615,6 +617,8 @@ export default function AccuracyKpi({ header, mobile, theme }) {
     // -------------------------
     // NON-HEADER MODE (RESTORED OLD LOOK WITH PROGRESS BAR)
     // -------------------------
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
     const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
 
@@ -641,10 +645,10 @@ export default function AccuracyKpi({ header, mobile, theme }) {
 
     const cardStyle = {
         visibility: isLoading ? "hidden" : "visible",
-        background: theme?.bg ?? APP_BACKGROUND_COLOR,
-        border: "none",
-        borderRadius: 0,
-        boxShadow: "none",
+        background: surface,
+        border: `1px solid ${border}`,
+        borderRadius: 18,
+        boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
         boxSizing: "border-box",
         width: "100%",
         minWidth: 0,
