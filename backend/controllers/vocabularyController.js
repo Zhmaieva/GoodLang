@@ -9,7 +9,10 @@ import {
     translateVocabularyWords,
     translateVocabularyWordsForLocales,
 } from "../core/сore.js";
-import { getTranslationCallCountSince } from "../database/repositories/accountLogRepository.js";
+import {
+    checkTranslationLimit,
+    getTranslationCallCountSince,
+} from "../database/repositories/accountLogRepository.js";
 import {
     buildVocabularySummary,
     getVocabularyForUser,
@@ -17,6 +20,18 @@ import {
 } from "../database/repositories/vocabularyRepository.js";
 
 const name = "vocabulary";
+
+async function ensureVocabularyQuota(accountId, res) {
+    const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, true);
+
+    if (allowed) return true;
+
+    res.status(429).json({
+        message: "Free translation limit reached. Wait or upgrade to premium.",
+        waitTimeSeconds,
+    });
+    return false;
+}
 
 export const vocabularyController = {
     mapRoutes: function (app) {
@@ -52,6 +67,8 @@ export const vocabularyController = {
 
         app.post(`/${name}/evaluate`, authMiddleware, async (req, res) => {
             try {
+                if (!(await ensureVocabularyQuota(req.user.id, res))) return;
+
                 const result = await evaluateVocabularyUsage({
                     targetSentence: req.body?.targetSentence,
                     userAnswer: req.body?.userAnswer,
@@ -67,6 +84,8 @@ export const vocabularyController = {
 
         app.post(`/${name}/translations`, authMiddleware, async (req, res) => {
             try {
+                if (!(await ensureVocabularyQuota(req.user.id, res))) return;
+
                 const words = Array.isArray(req.body?.words) ? req.body.words : [];
                 const translations = req.body?.allLocales
                     ? await translateVocabularyWordsForLocales({

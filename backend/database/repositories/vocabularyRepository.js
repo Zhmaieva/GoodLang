@@ -41,6 +41,7 @@ function toVocabularyItem(doc) {
         correctCount,
         previousMistakes: mistakeCount,
         correctStreak,
+        lastPracticeAt: doc.lastPracticeAt ?? doc.updatedAt ?? null,
         lastMistake: getLastMistakeLabel(doc.lastMistakeAt),
         example: doc.example ?? "",
         captureVersion: doc.captureVersion ?? 0,
@@ -67,6 +68,7 @@ export async function upsertVocabularyCandidates(userId, candidates = [], update
             source: candidate.source,
             example: candidate.example,
             captureVersion: CAPTURE_VERSION,
+            lastPracticeAt: candidate.occurredAt ?? updatedOn,
             updatedAt: updatedOn,
             ...(isCorrect ? {} : { lastMistakeAt: candidate.occurredAt }),
         };
@@ -123,6 +125,15 @@ export async function upsertLocalVocabularyRecords(userId, records = [], updated
     const bulk = db.collection(COLLECTION).initializeUnorderedBulkOp();
     for (const record of valid) {
         const word = String(record.word).trim().toLowerCase();
+        const usageHistory = Array.isArray(record.usageHistory) ? record.usageHistory : [];
+        const lastPracticeAt = record.lastPracticeAt
+            ?? usageHistory[usageHistory.length - 1]?.occurredAt
+            ?? record.updatedAt
+            ?? updatedOn;
+        const parsedLastPracticeAt = new Date(lastPracticeAt);
+        const safeLastPracticeAt = Number.isNaN(parsedLastPracticeAt.getTime())
+            ? updatedOn
+            : parsedLastPracticeAt;
         bulk.find({ userId, word }).upsert().updateOne({
             $set: {
                 userId, word, level: record.level ?? null, levelSource: record.levelSource ?? null,
@@ -131,7 +142,8 @@ export async function upsertLocalVocabularyRecords(userId, records = [], updated
                 correctCount: Math.max(0, Number(record.correctCount) || 0),
                 mistakeCount: Math.max(0, Number(record.mistakeCount) || 0),
                 correctStreak: Math.max(0, Number(record.correctStreak) || 0),
-                usageHistory: Array.isArray(record.usageHistory) ? record.usageHistory : [],
+                usageHistory,
+                lastPracticeAt: safeLastPracticeAt,
                 lastMistakeAt: record.lastMistakeAt ? new Date(record.lastMistakeAt) : null,
                 updatedAt: updatedOn, captureVersion: CAPTURE_VERSION,
             },

@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useMemo, useState } from "react";
 import { localizationService } from "../../localization/localizationService.js";
-import { featureToggleService } from "../../services/featureToggleService.js";
 import { Button } from "../Buttons.jsx";
 import ModalShell from "./ModalShell.jsx";
 
@@ -98,9 +97,6 @@ export default function ChooseLocaleModal({
         textAlign: "center",
     };
 
-    if (!featureToggleService.get(featureToggleService.FEATURE_NAME.LOCALIZATION))
-        return null;
-
     return (
         <ModalShell
             open={open}
@@ -111,6 +107,8 @@ export default function ChooseLocaleModal({
             titleStyle={{ fontSize: "1.75rem" }}
             onClose={handleCancel}
             closeDisabled={!canCancel}
+            closeOnBackdrop={canCancel}
+            hideClose={!canCancel}
             maxWidth={520}
             panelStyle={{ padding: 40 }}
             contentStyle={listOuterStyle}

@@ -195,7 +195,9 @@ export const translationsController = {
                 return res.status(400).send("Message too long.");
             }
 
-            const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, false);
+            // The detailed evaluation owns quota consumption. Quick evaluation only
+            // checks availability because both requests run for the same answer.
+            const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, true);
             if (!allowed) {
                 return res.status(429).json({
                     message: `Free translation limit reached. Wait or upgrade to premium.`,
@@ -298,7 +300,9 @@ export const translationsController = {
             }
 
             if (!skipCoach) {
-                const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, false);
+                // Only the completed primary evaluation consumes quota. The quick
+                // validator and vocabulary evaluation use soft checks above.
+                const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, true);
                 if (!allowed) {
                     return res.status(429).json({
                         message: `Free translation limit reached. Wait or upgrade to premium.`,
@@ -384,9 +388,10 @@ export const translationsController = {
 
             const violatedRules = uniqueValidRules(result.violated_rules);
             const scoredWeakRules = rulesArr.filter((_, i) => scores[i] < 1);
+            const taskViolatedRules = violatedRules.filter((rule) => rulesArr.includes(rule));
             const fallbackRules = !level && !freeTraining ? rulesArr : [];
             const nextRuleCandidates = uniqueValidRules([
-                ...violatedRules,
+                ...taskViolatedRules,
                 ...scoredWeakRules,
                 ...fallbackRules,
             ]);
@@ -421,6 +426,13 @@ export const translationsController = {
             }
 
             if (!skipCoach) {
+                const { allowed, waitTimeSeconds } = await checkTranslationLimit(accountId, false);
+                if (!allowed) {
+                    return res.status(429).json({
+                        message: `Free translation limit reached. Wait or upgrade to premium.`,
+                        waitTimeSeconds,
+                    });
+                }
                 await recordTranslationUsage(accountId, taskType);
             }
 
@@ -441,9 +453,7 @@ export const translationsController = {
                 result.natural_answer = null;
             }
 
-            const { allowed, waitTimeSeconds } = skipCoach
-                ? { allowed: true, waitTimeSeconds: 0 }
-                : await checkTranslationLimit(accountId);
+            const responseViolatedRules = uniqueValidRules(result.violated_rules);
 
             return res.json({
                 taskType: newTaskType,
@@ -457,10 +467,13 @@ export const translationsController = {
                 naturalAnswer: result.natural_answer ?? null,
                 tipIfWrong: result.tip_if_wrong,
                 scores: scores,
-                violatedRules: uniqueValidRules(result.violated_rules),
+                violatedRules: responseViolatedRules,
+                violatedRule: responseViolatedRules[0] ?? null,
                 skip: newSkip,
-                allowed,
-                waitTimeSeconds,
+                // The current primary evaluation has completed successfully.
+                // The next evaluation request will perform the quota check.
+                allowed: true,
+                waitTimeSeconds: 0,
             });
         } catch (e) {
             if (!skipCoach) console.log(e);

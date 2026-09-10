@@ -490,7 +490,7 @@ export default function ProfilePage({ theme }) {
                         </p>
                     </div>
                     <Button
-                        variant="secondary"
+                        variant="primary"
                         compact
                         fullWidth
                         theme={theme}
@@ -526,7 +526,7 @@ export default function ProfilePage({ theme }) {
                         </p>
                     </div>
                     <Button
-                        variant="secondary"
+                        variant="primary"
                         compact
                         fullWidth
                         theme={theme}
@@ -544,11 +544,10 @@ export default function ProfilePage({ theme }) {
                 {legalOptions.map((option) => (
                     <Button
                         key={option.value}
-                        variant="offset"
+                        variant="primary"
                         compact
                         fullWidth
                         theme={theme}
-                        shadowColor={theme.accent}
                         shadowOffset={0}
                         style={legalButtonStyle}
                         onClick={() => {

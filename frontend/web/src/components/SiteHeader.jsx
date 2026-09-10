@@ -39,7 +39,6 @@ export default function SiteHeader({
     );
     const [isInMarathonView, setIsInMarathonView] = useState(false);
     const [settingsVisible, setSettingsVisible] = useState(false);
-    const [profileHovered, setProfileHovered] = useState(false);
     const [account, setAccount] = useState(() => readCachedAccountInfo());
     const [accountLoaded, setAccountLoaded] = useState(() => Boolean(readCachedAccountInfo()));
 
@@ -344,12 +343,11 @@ export default function SiteHeader({
                                 isMobile={isMobile}
                                 theme={theme}
                                 shadowOffset={0}
-                                onMouseEnter={() => setProfileHovered(true)}
-                                onMouseLeave={() => setProfileHovered(false)}
                                 style={{
                                     minWidth: isMobile ? 82 : 96,
-                                    backgroundColor: profileHovered || isProfilePage ? dark : surface,
-                                    color: profileHovered || isProfilePage ? "#fff" : text,
+                                    backgroundColor: dark,
+                                    color: "#fff",
+                                    borderColor: dark,
                                 }}
                                 onClick={() => navigate("/profile")}
                                 aria-current={isProfilePage ? "page" : undefined}

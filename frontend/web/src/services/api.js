@@ -73,11 +73,12 @@ export async function callDataSyncApi(payload) {
     return { isSuccess: true, ...data };
 }
 
-export async function callTranslateAPI(params) {
+export async function callTranslateAPI(params, { signal } = {}) {
     const qs = new URLSearchParams(params);
     const url = `${API_BASE}/translations?${qs.toString()}`;
 
     const res = await fetch(url, {
+        signal,
         headers: {
             'Authorization': `Bearer ${await getToken()}` // add Authorization header
         }
@@ -85,6 +86,9 @@ export async function callTranslateAPI(params) {
 
     const data = await res.json();
     if (!res.ok) {
+        if (res.status === 429) {
+            return { ...data, isSuccess: false, isLimitReached: true, status: 429 };
+        }
         if (data?.waitTimeSeconds) {
             return  { ...data, isSuccess: false };
         }
@@ -93,11 +97,12 @@ export async function callTranslateAPI(params) {
     return  { ...data, isSuccess: true };
 }
 
-export async function callQuickTranslateAPI(params) {
+export async function callQuickTranslateAPI(params, { signal } = {}) {
     const qs = new URLSearchParams(params);
     const url = `${API_BASE}/translations/quick?${qs.toString()}`;
 
     const res = await fetch(url, {
+        signal,
         headers: {
             'Authorization': `Bearer ${await getToken()}`
         }
@@ -105,6 +110,9 @@ export async function callQuickTranslateAPI(params) {
 
     const data = await res.json();
     if (!res.ok) {
+        if (res.status === 429) {
+            return { ...data, isSuccess: false, isLimitReached: true, status: 429 };
+        }
         if (data?.waitTimeSeconds) {
             return  { ...data, isSuccess: false };
         }
@@ -261,30 +269,38 @@ export async function callVocabularyApi() {
     return { ...data, isSuccess: true };
 }
 
-export async function callVocabularyEvaluationApi(payload = {}) {
+export async function callVocabularyEvaluationApi(payload = {}, { signal } = {}) {
     const res = await fetch(`${API_BASE}/vocabulary/evaluate`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${await getToken()}`,
         },
+        signal,
         body: JSON.stringify(payload),
     });
     const data = await res.json();
+    if (res.status === 429) {
+        return { ...data, isSuccess: false, isLimitReached: true, status: 429 };
+    }
     if (!res.ok) throw new Error("Server error: " + res.status);
     return { ...data, isSuccess: true };
 }
 
-export async function callVocabularyTranslationsApi(payload = {}) {
+export async function callVocabularyTranslationsApi(payload = {}, { signal } = {}) {
     const res = await fetch(`${API_BASE}/vocabulary/translations`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${await getToken()}`,
         },
+        signal,
         body: JSON.stringify(payload),
     });
     const data = await res.json();
+    if (res.status === 429) {
+        return { ...data, isSuccess: false, isLimitReached: true, status: 429 };
+    }
     if (!res.ok) throw new Error("Server error: " + res.status);
     return { ...data, isSuccess: true };
 }

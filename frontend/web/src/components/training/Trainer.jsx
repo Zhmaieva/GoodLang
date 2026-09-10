@@ -111,7 +111,6 @@ export default function Trainer({
     // -----------------------------
     // ✅ Calibration forcing
     // -----------------------------
-    const [calibrationNextTaskType, setCalibrationNextTaskType] = useState(0); // 0 translate, 1 gap
     const isCalibrationNow = () => {
         if (nextLevel !== "managed") return false;
         try {
@@ -149,6 +148,7 @@ export default function Trainer({
     const [isEvaluating, setIsEvaluating] = useState(false);
     const [isDetailedFeedbackLoading, setIsDetailedFeedbackLoading] = useState(false);
     const [quickVerdict, setQuickVerdict] = useState(null);
+    const [isQuickFeedbackPending, setIsQuickFeedbackPending] = useState(false);
     const textareaRef = useRef(null);
     const evaluationRunRef = useRef(0);
     const currentTaskCacheKeyRef = useRef(null);
@@ -162,6 +162,7 @@ export default function Trainer({
 
     // weak rules
     const [weakRules, setWeakRules] = useState([]);
+    const [violatedRule, setViolatedRule] = useState("");
 
     const setHint = (value) => {
         setHintValue(value);
@@ -242,16 +243,21 @@ export default function Trainer({
         setCorrectAnswer("");
         setNaturalAnswer("");
         setWeakRules([]);
+        setViolatedRule("");
         setQuickVerdict(null);
+        setIsQuickFeedbackPending(false);
         setIsDetailedFeedbackLoading(false);
     }
 
     // -----------------------------
     // Helpers for task type + server params
     // -----------------------------
-    const gapsAvailable = true; // difficulty === "A1";
+    // Choose-option tasks are not part of the client trainer, including onboarding evaluation.
+    const gapsAvailable = false;
 
     function getUseSameTaskType() {
+        if (!gapsAvailable) return "true";
+
         // as you specified:
         // - translations/gaps => true
         // - combined => false
@@ -301,6 +307,7 @@ export default function Trainer({
 
     function taskFromData(data) {
         if (!data?.textToTranslate || !(data.rules?.length > 0)) return null;
+        if (!gapsAvailable && Number(data.taskType ?? 0) === 1) return null;
 
         return {
             taskType: Number(data.taskType ?? 0),
@@ -364,7 +371,9 @@ export default function Trainer({
             out.push(value);
         };
 
-        for (const rule of Array.isArray(data?.violatedRules) ? data.violatedRules : []) add(rule);
+        for (const rule of Array.isArray(data?.violatedRules) ? data.violatedRules : []) {
+            if (rules.includes(rule)) add(rule);
+        }
         for (const rule of Array.isArray(data?.violated_rules) ? data.violated_rules : []) add(rule);
         rules.forEach((rule, index) => {
             if (Number(scores[index] ?? 1) < 1) add(rule);
@@ -601,7 +610,9 @@ export default function Trainer({
         setCorrectAnswer("");
         setNaturalAnswer("");
         setWeakRules([]);
+        setViolatedRule("");
         setQuickVerdict(null);
+        setIsQuickFeedbackPending(false);
         setIsDetailedFeedbackLoading(false);
         setTaskHint(null);
         setMode("check");
@@ -643,7 +654,9 @@ export default function Trainer({
         setCorrectAnswer("");
         setNaturalAnswer("");
         setWeakRules([]);
+        setViolatedRule("");
         setQuickVerdict(null);
+        setIsQuickFeedbackPending(false);
         setIsDetailedFeedbackLoading(false);
         setTaskHint(null);
         setMode("check");
@@ -675,7 +688,9 @@ export default function Trainer({
         setCorrectAnswer("");
         setNaturalAnswer("");
         setWeakRules([]);
+        setViolatedRule("");
         setQuickVerdict(null);
+        setIsQuickFeedbackPending(false);
         setIsDetailedFeedbackLoading(false);
         setMode("check");
 
@@ -700,6 +715,7 @@ export default function Trainer({
         setNaturalAnswer("");
         setWeakRules([]);
         setQuickVerdict(null);
+        setIsQuickFeedbackPending(false);
         setIsDetailedFeedbackLoading(false);
         setMode("check");
 
@@ -834,6 +850,32 @@ export default function Trainer({
         }));
     }
 
+    async function refreshManagedEvaluationCache({ overrideTaskType = 0, avoidSentence = "" } = {}) {
+        if (freeTraining || nextLevel !== "managed") return;
+
+        const cacheKey = buildTaskCacheKey({
+            levelKey: "managed",
+            ruleId: null,
+            taskTypeOverride: overrideTaskType,
+        });
+
+        clearCachedTrainingTask(cacheKey);
+
+        const { seed, skip } = getSeed();
+        const task = taskFromData(await fetchNextSentence({
+            nextLevel: "managed",
+            nextRule: null,
+            selectedDifficulty: difficulty || randomDifficulty("managed"),
+            seed,
+            skip,
+            overrideTaskType,
+            suppressLimitState: true,
+            avoidSentence,
+        }));
+
+        if (task) setCachedTrainingTask(cacheKey, task);
+    }
+
     async function prefetchPracticeRuleCache() {
         if (await marathonService.isMarathonView(true)) return;
 
@@ -864,13 +906,31 @@ export default function Trainer({
             setGapSelected(null);
             setWeakRules([]);
 
-            const hasPreload = !!(nextTextToTranslate && nextRules && nextRules.length > 0);
+            const hasAnyPreload = !!(nextTextToTranslate && nextRules && nextRules.length > 0);
+            const hasPreload = hasAnyPreload
+                && (gapsAvailable || Number(nextTaskType ?? 0) !== 1);
+
+            if (hasAnyPreload && !hasPreload) {
+                setNextTextToTranslate("");
+                setNextTextToTranslateOriginal("");
+                setNextRules([]);
+                setNextHint(null);
+                setNextTaskType(0);
+                setNextOptions([]);
+            }
             const cacheKey = buildTaskCacheKey({
                 levelKey: nextLevel,
                 ruleId: nextRule,
                 taskTypeOverride: overrideTaskType,
             });
-            const cachedTask = getCachedTrainingTask(cacheKey);
+            const cachedTaskCandidate = getCachedTrainingTask(cacheKey);
+            const cachedTask = !gapsAvailable && Number(cachedTaskCandidate?.taskType ?? 0) === 1
+                ? null
+                : cachedTaskCandidate;
+
+            if (cachedTaskCandidate && !cachedTask) {
+                clearCachedTrainingTask(cacheKey);
+            }
 
             if (cachedTask) {
                 applyTask(cachedTask);
@@ -954,12 +1014,18 @@ export default function Trainer({
             return;
         }
 
+        let evaluationAbortController = null;
+        let limitResponse = null;
+        let evaluationStopped = false;
+
         try {
             setIsEvaluating(true);
             setIsDetailedFeedbackLoading(true);
             setQuickVerdict(null);
+            setIsQuickFeedbackPending(false);
             setHint("");
             setWeakRules([]);
+            setViolatedRule("");
             setCorrectAnswer("");
             setNaturalAnswer("");
             setVocabularyFeedback("");
@@ -971,8 +1037,6 @@ export default function Trainer({
             const answeredCacheKey = currentTaskCacheKeyRef.current;
             const evaluationRun = evaluationRunRef.current + 1;
             evaluationRunRef.current = evaluationRun;
-            let completionHandled = false;
-            let quickCorrectApplied = false;
             const vocabularyForNextSample = getVocabularyForSample();
             const evaluationParams = {
                 freeTraining,
@@ -989,84 +1053,64 @@ export default function Trainer({
                 vocabularyWord: vocabularyForNextSample?.word || null,
             };
 
-            callQuickTranslateAPI(evaluationParams)
+            evaluationAbortController = new AbortController();
+            const { signal } = evaluationAbortController;
+            const stopOnLimit = (response) => {
+                if (!response?.isLimitReached && response?.status !== 429) {
+                    return response;
+                }
+
+                evaluationStopped = true;
+                limitResponse = response;
+                evaluationAbortController.abort();
+                const error = new Error("TRANSLATION_LIMIT_REACHED");
+                error.code = "TRANSLATION_LIMIT_REACHED";
+                error.limitResponse = response;
+                throw error;
+            };
+            const shouldRethrowCoordinatedError = (error) => (
+                error?.code === "TRANSLATION_LIMIT_REACHED" || error?.name === "AbortError"
+            );
+
+            const quickPromise = callQuickTranslateAPI(evaluationParams, { signal })
+                .then(stopOnLimit)
                 .then((quickData) => {
+                    if (evaluationStopped) return quickData;
                     if (evaluationRunRef.current !== evaluationRun) return quickData;
                     if (!quickData.isSuccess) return quickData;
-                    if (completionHandled) return quickData;
 
                     const isQuickCorrect = !!quickData.isAnswerCorrect;
-
-                    if (!isQuickCorrect) {
-                        return quickData;
-                    }
-
-                    completionHandled = true;
-                    quickCorrectApplied = true;
-                    setQuickVerdict(true);
-                    setIsDetailedFeedbackLoading(false);
-                    setHint("Well done!");
-                    setCorrectAnswer("");
-                    setNaturalAnswer("");
-                    setWeakRules([]);
-                    clearCurrentTaskCache();
-
-                    const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
-                    addAnswer(rules.map(() => 1), rules, null);
-                    const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
-                    if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
-
-                    const { isCalibration } = getTrainingLevel();
-                    setTaskModeLocked(!!isCalibration);
-
-                    if (isCalibrationNow()) {
-                        setCalibrationNextTaskType(0);
-                    }
-
-                    emit("weeklyProgressUpdate");
-
-                    if (freeTraining) {
-                        emit("marathonProgressUpdate");
-                        emit("marathonProgressUpdateHardRefresh");
-                    }
-
+                    setQuickVerdict(isQuickCorrect);
+                    setIsQuickFeedbackPending(true);
                     setMode("next");
-                    saveSeed({seed, skip: skip + 1});
-                    onAnswerEvaluated();
-                    setIsEvaluating(false);
-
-                    if (answeredCacheKey) {
-                        prefetchTaskForCache({
-                            levelKey: nextLevel,
-                            ruleId: nextRule,
-                            selectedDifficulty: difficulty,
-                            overrideTaskType: Number(currentTaskTypeParam),
-                            avoidSentence: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
-                        }).then();
-                    }
 
                     return quickData;
                 })
                 .catch((e) => {
+                    if (shouldRethrowCoordinatedError(e)) throw e;
                     console.error(e);
                     return null;
                 });
 
-            const detailedPromise = callTranslateAPI(evaluationParams);
+            const detailedPromise = callTranslateAPI(evaluationParams, { signal })
+                .then(stopOnLimit);
             const vocabularyPromise = callVocabularyEvaluationApi({
                 targetSentence: evaluationParams.textToTranslateOriginal,
                 userAnswer: userAns,
                 targetLocale: localizationService.getLocale(),
                 level: difficulty,
-            }).catch((error) => {
+            }, { signal }).then(stopOnLimit).catch((error) => {
+                if (shouldRethrowCoordinatedError(error)) throw error;
                 console.error("Vocabulary evaluation failed", error);
                 return { isSuccess: false, words: [], feedback: "" };
             });
-            const [data, vocabularyData] = await Promise.all([
+            const [, data, vocabularyData] = await Promise.all([
+                quickPromise,
                 detailedPromise,
                 vocabularyPromise,
             ]);
             if (evaluationRunRef.current !== evaluationRun) return;
+            setIsQuickFeedbackPending(false);
 
             if (vocabularyData?.isSuccess) {
                 setVocabularyFeedback(vocabularyData.feedback || "");
@@ -1095,77 +1139,64 @@ export default function Trainer({
             }
 
             if (!data.isSuccess) {
-                setIsDetailedFeedbackLoading(false);
-                setNaturalAnswer("");
-                setHint("Continue learning with a subscription, or wait");
-                setWaitTimeSeconds(data.waitTimeSeconds);
-                setLimitModalOpen(true);
-                setLocked(true);
+                showTranslationLimit(data.waitTimeSeconds);
                 return;
             }
 
             if (!data.allowed) {
-                setIsDetailedFeedbackLoading(false);
-                setNaturalAnswer("");
-                setHint("Continue learning with a subscription, or wait");
-                setWaitTimeSeconds(data.waitTimeSeconds);
-                setLimitModalOpen(true);
-                setLocked(true);
+                showTranslationLimit(data.waitTimeSeconds);
                 return;
             }
 
+            const { isCalibration } = getTrainingLevel();
             const serverReturnedNextTask = taskFromData(data);
-            if (!quickCorrectApplied) {
-                clearCachedTrainingTask(answeredCacheKey);
-                currentTaskCacheKeyRef.current = null;
-                if (!data.isAnswerCorrect && serverReturnedNextTask && answeredCacheKey) {
-                    setCachedTrainingTask(answeredCacheKey, serverReturnedNextTask);
-                }
-            } else if (serverReturnedNextTask && answeredCacheKey) {
+            clearCurrentTaskCache();
+            const canCacheServerReturnedNextTask = freeTraining
+                && !(nextLevel === "managed" && isCalibration);
+            if (!data.isAnswerCorrect && serverReturnedNextTask && answeredCacheKey && canCacheServerReturnedNextTask) {
                 setCachedTrainingTask(answeredCacheKey, serverReturnedNextTask);
             }
 
-            const { isCalibration } = getTrainingLevel();
+            setQuickVerdict(!!data.isAnswerCorrect);
+            setIsDetailedFeedbackLoading(false);
 
-            if (quickCorrectApplied && data.isAnswerCorrect) {
+            const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
+            addAnswer(data.scores || [], rules, data.level);
+            const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
+            if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
+
+            if (!freeTraining && nextLevel === "managed") {
+                try {
+                    await refreshManagedEvaluationCache({
+                        overrideTaskType: Number(currentTaskTypeParam),
+                        avoidSentence: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
+                    });
+                } catch (error) {
+                    console.error("Managed evaluation pre-cache failed", error);
+                }
+            }
+
+            setTaskModeLocked(!!isCalibration);
+
+            if (data.isAnswerCorrect) {
+                setHint(data.naturalAnswer ? "Nice work! You expressed the idea well." : "Well done!");
+                setCorrectAnswer("");
                 setNaturalAnswer(data.naturalAnswer || "");
+                setWeakRules([]);
+                setViolatedRule("");
+            } else {
+                setViolatedRule(String(data.violatedRule || "").trim());
+                setWeakRules(buildRecommendedRules(data, data.scores || []));
+                const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
+                setHint(tip);
+                setCorrectAnswer(data.correctAnswer || "");
+                setNaturalAnswer("");
             }
 
-            if (!quickCorrectApplied) {
-                completionHandled = true;
-                setQuickVerdict(!!data.isAnswerCorrect);
-                setIsDetailedFeedbackLoading(false);
+            emit("weeklyProgressUpdate");
 
-                const prevAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
-                addAnswer(data.scores || [], rules, data.level);
-                const newAttemptsLeft = getOverallAccuracy()?.attemptsLeft ?? 0;
-                if (prevAttemptsLeft === 1 && newAttemptsLeft === 0) trackMetaCustomEvent("CompleteEvaluation");
-
-                setTaskModeLocked(!!isCalibration);
-
-                if (data.isAnswerCorrect) {
-                    setHint(data.naturalAnswer ? "Nice work! You expressed the idea well." : "Well done!");
-                    setCorrectAnswer("");
-                    setNaturalAnswer(data.naturalAnswer || "");
-                    setWeakRules([]);
-                } else {
-                    setWeakRules(buildRecommendedRules(data, data.scores || []));
-                    const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
-                    setHint(tip);
-                    setCorrectAnswer(data.correctAnswer || "");
-                    setNaturalAnswer("");
-                }
-
-                if (isCalibrationNow()) {
-                    const forced = data.isAnswerCorrect ? 0 : 1;
-                    setCalibrationNextTaskType(!gapsAvailable ? 0 : forced);
-                }
-
-                emit("weeklyProgressUpdate");
-
-                if (freeTraining)
-                    emit("marathonProgressUpdate");
-            }
+            if (freeTraining)
+                emit("marathonProgressUpdate");
 
             const serverNextType = Number(data.taskType ?? 0);
             const serverProvidedNextTask = !!(data.textToTranslate && (data.rules?.length ?? 0) > 0);
@@ -1201,24 +1232,30 @@ export default function Trainer({
                 setNextOptions([]);
             }
 
-            if (!quickCorrectApplied) {
-                setMode("next");
-                if (data.isAnswerCorrect && answeredCacheKey) {
-                    prefetchTaskForCache({
-                        levelKey: nextLevel,
-                        ruleId: nextRule,
-                        selectedDifficulty: difficulty,
-                        overrideTaskType: Number(currentTaskTypeParam),
-                        avoidSentence: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
-                    }).then();
-                }
+            setMode("next");
+            if (freeTraining && data.isAnswerCorrect && answeredCacheKey) {
+                prefetchTaskForCache({
+                    levelKey: nextLevel,
+                    ruleId: nextRule,
+                    selectedDifficulty: difficulty,
+                    overrideTaskType: Number(currentTaskTypeParam),
+                    avoidSentence: taskType === "gap" ? (gapSentence || "") : (textToTranslate || ""),
+                }).then();
             }
 
             saveSeed({seed, skip: data.skip ?? (skip + 1)});
-            if (!quickCorrectApplied) {
-                onAnswerEvaluated();
-            }
+            onAnswerEvaluated();
         } catch (e) {
+            evaluationStopped = true;
+            evaluationAbortController?.abort();
+            if (limitResponse || e?.code === "TRANSLATION_LIMIT_REACHED") {
+                showTranslationLimit(
+                    limitResponse?.waitTimeSeconds ?? e?.limitResponse?.waitTimeSeconds ?? 0,
+                );
+                return;
+            }
+
+            setIsQuickFeedbackPending(false);
             setIsDetailedFeedbackLoading(false);
             setNaturalAnswer("");
             console.error(e);
@@ -1274,14 +1311,7 @@ export default function Trainer({
         const diff = randomDifficulty(level);
         setDifficulty(diff);
 
-        // ✅ calibration override:
-        // - wrong => 1 gap
-        // - correct => 0 translation
-        // - initial calibration is forced to 0 in the nextLevel effect
-        const override =
-            isCalibrationNow()
-                ? (!gapsAvailable ? 0 : calibrationNextTaskType)
-                : getRequestedTaskType();
+        const override = isCalibrationNow() ? 0 : getRequestedTaskType();
 
         await loadNewTask(diff, { overrideTaskType: override });
     }
@@ -1290,6 +1320,18 @@ export default function Trainer({
         setLimitModalOpen(false);
         setIsEvaluating(false);
         setIsDetailedFeedbackLoading(false);
+        setIsQuickFeedbackPending(false);
+    }
+
+    function showTranslationLimit(seconds = 0) {
+        setIsQuickFeedbackPending(false);
+        setIsDetailedFeedbackLoading(false);
+        setNaturalAnswer("");
+        setHint("Continue learning with a subscription, or wait");
+        setWaitTimeSeconds(seconds || 0);
+        setLimitModalOpen(true);
+        setLocked(true);
+        setMode("check");
     }
 
     function retryCurrentTask() {
@@ -1299,6 +1341,7 @@ export default function Trainer({
         setNaturalAnswer("");
         setWeakRules([]);
         setQuickVerdict(null);
+        setIsQuickFeedbackPending(false);
         setHint("");
         setIsDetailedFeedbackLoading(false);
         setIsEvaluating(false);
@@ -1366,11 +1409,6 @@ export default function Trainer({
         setTaskModeLocked(!!isCalibration || (freeTraining && await marathonService.isMarathonView(true)));
         setTaskModeLockReason("");
         if (taskMode === "combined") setNextRequestedTaskType(0);
-
-        // ✅ calibration always starts with translation
-        if (isCalibrationNow()) {
-            setCalibrationNextTaskType(0);
-        }
 
         resetToLoadingPlaceholders();
 
@@ -1471,10 +1509,12 @@ export default function Trainer({
                     correctAnswer={correctAnswer}
                     naturalAnswer={naturalAnswer}
                     rules={rules}
+                    violatedRule={violatedRule}
                     weakRules={weakRules}
                     vocabularyFeedback={vocabularyFeedback}
                     quickVerdict={quickVerdict}
                     isDetailedLoading={isDetailedFeedbackLoading}
+                    isQuickFeedbackPending={isQuickFeedbackPending}
                     onContinue={onMainButtonClick}
                 />
             )}

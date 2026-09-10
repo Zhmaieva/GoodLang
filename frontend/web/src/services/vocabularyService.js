@@ -147,6 +147,12 @@ function toVocabularyItem(record, locale = record.displayLocale) {
     const isAlwaysCorrect = attempts > 0
         && (Number(record.mistakeCount) || 0) === 0
         && correctCount === attempts;
+    const usageHistory = Array.isArray(record.usageHistory) ? record.usageHistory : [];
+    const lastPracticeAt = record.lastPracticeAt
+        || usageHistory[usageHistory.length - 1]?.occurredAt
+        || record.updatedAt
+        || record.createdAt
+        || null;
 
     return {
         id: `local-${word}`,
@@ -162,6 +168,7 @@ function toVocabularyItem(record, locale = record.displayLocale) {
         correctCount,
         previousMistakes: Number(record.mistakeCount) || 0,
         correctStreak: Number(record.correctStreak) || 0,
+        lastPracticeAt,
         lastMistake: getLastMistakeLabel(record.lastMistakeAt),
         example: record.example || "",
         source: "local",
@@ -274,6 +281,7 @@ export function saveLocalVocabularyEvaluation({ words = [], translations = {}, l
         }
         existing.usageHistory = Array.isArray(existing.usageHistory) ? existing.usageHistory : [];
         existing.usageHistory.push({ correct, occurredAt: now });
+        existing.lastPracticeAt = now;
         existing.updatedAt = now;
         existing._synced = false;
         existing.displayLocale = String(locale || "uk-UA");
@@ -327,6 +335,7 @@ export function saveLocalVocabularyCandidates(candidates = []) {
         existing.level = candidate?.level || existing.level || "-";
         existing.example = candidate?.example || existing.example || "";
         existing.attempts = (Number(existing.attempts) || 0) + 1;
+        existing.lastPracticeAt = candidate?.occurredAt || now;
         existing.updatedAt = now;
 
         if (isCorrect) {

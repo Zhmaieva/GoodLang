@@ -12,10 +12,15 @@ import {
 } from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
 import { emit } from "../../services/events.js";
+import ChooseLocaleModal from "../modals/ChooseLocaleModal.jsx";
+import { localizationService } from "../../localization/localizationService.js";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
     const [level, setLevel] = useState(getSavedTrainingLevel() || "managed");
+    const [localeSelectionRequired, setLocaleSelectionRequired] = useState(
+        () => !localizationService.isLocaleDefined()
+    );
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -145,6 +150,22 @@ export default function HomePage({ theme }) {
         flexDirection: "column",
         justifyContent: "flex-start",
     };
+
+    if (localeSelectionRequired) {
+        return (
+            <AppShell theme={theme} noPadding>
+                <div style={pageLayoutStyle}>
+                    <ChooseLocaleModal
+                        open
+                        theme={theme}
+                        onClose={() => {
+                            setLocaleSelectionRequired(!localizationService.isLocaleDefined());
+                        }}
+                    />
+                </div>
+            </AppShell>
+        );
+    }
 
     return (
         <AppShell theme={theme} noPadding>

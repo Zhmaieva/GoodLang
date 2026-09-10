@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { RULE_LABELS } from "../../utils/rules.js";
 import { Button } from "../Buttons.jsx";
 import {
@@ -9,6 +8,7 @@ import {
     APP_DARK_COLOR,
     APP_MUTED_TEXT_COLOR,
     APP_SURFACE_COLOR,
+    APP_SURFACE_MUTED_COLOR,
     APP_TEXT_COLOR,
 } from "../../theme.js";
 import { ArrowRight, BookOpen, Check, Lightbulb, Sparkle, X } from "@phosphor-icons/react";
@@ -145,13 +145,14 @@ export default function ResultCard({
     correctAnswer,
     naturalAnswer = "",
     rules = [],
+    violatedRule = "",
     weakRules = [],
     vocabularyFeedback = "",
     quickVerdict = null,
     isDetailedLoading = false,
+    isQuickFeedbackPending = false,
     onContinue,
 }) {
-    const navigate = useNavigate();
     const SURFACE = theme?.surface ?? APP_SURFACE_COLOR;
     const BORDER = theme?.border ?? APP_BORDER_COLOR;
     const TEXT = theme?.text ?? APP_TEXT_COLOR;
@@ -173,11 +174,11 @@ export default function ResultCard({
     const isIncorrect = quickVerdict === false || Boolean(correctAnswer);
     const hasResult = isCorrect || isIncorrect;
     const hasNeutralMessage = !hasResult && Boolean(cleanHint);
-    const shouldRender = hasResult || hasNeutralMessage;
+    const shouldRender = hasResult || hasNeutralMessage || isQuickFeedbackPending;
     const isContinueDisabled = isDetailedLoading && isIncorrect;
 
     useEffect(() => {
-        if (!hasResult || hasNeutralMessage || isContinueDisabled || typeof onContinue !== "function") {
+        if (isQuickFeedbackPending || !hasResult || hasNeutralMessage || isContinueDisabled || typeof onContinue !== "function") {
             return undefined;
         }
 
@@ -203,7 +204,7 @@ export default function ResultCard({
 
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [hasResult, hasNeutralMessage, isContinueDisabled, onContinue]);
+    }, [hasResult, hasNeutralMessage, isContinueDisabled, isQuickFeedbackPending, onContinue]);
 
     if (!shouldRender) {
         return null;
@@ -211,7 +212,7 @@ export default function ResultCard({
 
     const primaryRule = rules[0] || weakRules[0] || "";
     const primaryRuleLabel = RULE_LABELS[primaryRule] || "this rule";
-    const answerToShow = String(correctAnswer || userAnswer || "").trim();
+    const answerToShow = String(correctAnswer || (isCorrect ? userAnswer : "")).trim();
     const naturalAnswerText = String(naturalAnswer ?? "").trim();
     const hasNaturalAnswer = isCorrect
         && naturalAnswerText
@@ -222,12 +223,13 @@ export default function ResultCard({
             : "We are checking the details."
     );
     const grammarRuleToOpen = isIncorrect
-        ? pickRuleFromExplanation({ explanationText, rules, weakRules })
+        ? violatedRule || pickRuleFromExplanation({ explanationText, rules, weakRules })
         : "";
     const canOpenGrammarRule = Boolean(grammarRuleToOpen);
     const openGrammarRule = () => {
         if (!grammarRuleToOpen) return;
-        navigate(`/rule/${grammarRuleToOpen}`);
+        const ruleUrl = `/rule/${encodeURIComponent(grammarRuleToOpen)}`;
+        window.open(ruleUrl, "_blank", "noopener,noreferrer");
     };
 
     const styles = {
@@ -236,10 +238,10 @@ export default function ResultCard({
             maxWidth: "100%",
             margin: "0 auto",
             border: "none",
-            borderRadius: 24,
-            background: SURFACE,
+            borderRadius: 0,
+            background: "transparent",
             boxShadow: "none",
-            overflow: "hidden",
+            overflow: "visible",
             display: "flex",
             flexDirection: "column",
             alignItems: "stretch",
@@ -451,7 +453,7 @@ export default function ResultCard({
             gap: 16,
             padding: "20px 0 0",
             borderTop: "none",
-            background: SURFACE,
+            background: "transparent",
             flexWrap: "wrap",
         },
 
@@ -469,19 +471,6 @@ export default function ResultCard({
             borderColor: BORDER,
         },
 
-        footerNote: {
-            width: "100%",
-            margin: "16px auto 0",
-            display: "inline-flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 10,
-            color: MUTED,
-            fontFamily: "var(--font-family-base)",
-            fontSize: "0.95rem",
-            fontWeight: 600,
-        },
-
         notice: {
             width: "100%",
             maxWidth: 620,
@@ -495,6 +484,26 @@ export default function ResultCard({
             fontFamily: "var(--font-family-base)",
             fontSize: "0.98rem",
             fontWeight: 500,
+            textAlign: "center",
+            animation: "glFeedbackEnter 260ms ease-out both",
+        },
+
+        pendingNotice: {
+            width: "100%",
+            margin: 0,
+            border: `1px solid ${BORDER}`,
+            borderRadius: 16,
+            background: theme?.surfaceMuted ?? APP_SURFACE_MUTED_COLOR,
+            color: MUTED,
+            padding: "16px 18px",
+            boxSizing: "border-box",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 4,
+            fontFamily: "var(--font-family-base)",
+            fontSize: "0.98rem",
+            fontWeight: 600,
             textAlign: "center",
             animation: "glFeedbackEnter 260ms ease-out both",
         },
@@ -580,7 +589,12 @@ export default function ResultCard({
                         </div>
                     ) : null}
 
-                    {isIncorrect || vocabularyFeedback ? (
+                    {isQuickFeedbackPending ? (
+                        <div style={styles.pendingNotice} aria-live="polite">
+                            <span>{isCorrect ? "Double checking…" : "Writing feedback…"}</span>
+                            <BarsLoader />
+                        </div>
+                    ) : isIncorrect || vocabularyFeedback ? (
                         <div style={styles.panel({ tone: "insight", delay: 140 })}>
                             <div style={styles.explanationRow}>
                                 <span style={styles.explanationIcon}>
@@ -603,38 +617,33 @@ export default function ResultCard({
                     ) : null}
                 </div>
 
-                <div style={styles.actionRow}>
-                    {isIncorrect && canOpenGrammarRule ? (
+                {!isQuickFeedbackPending && (
+                    <div style={styles.actionRow}>
+                        {isIncorrect && canOpenGrammarRule ? (
+                            <Button
+                                variant="secondary"
+                                theme={theme}
+                                disabled={isDetailedLoading}
+                                onClick={openGrammarRule}
+                                style={styles.grammarButton}
+                            >
+                                <BookOpen size={22} weight="regular" />
+                                See grammar rule
+                            </Button>
+                        ) : <span />}
                         <Button
-                            variant="secondary"
+                            variant="primary"
                             theme={theme}
-                            disabled={isDetailedLoading}
-                            onClick={openGrammarRule}
-                            style={styles.grammarButton}
+                            disabled={isContinueDisabled}
+                            onClick={onContinue}
+                            style={styles.actionButton}
                         >
-                            <BookOpen size={22} weight="regular" />
-                            See grammar rule
+                            Continue
+                            <ArrowRight size={24} weight="regular" />
                         </Button>
-                    ) : <span />}
-                    <Button
-                        variant="primary"
-                        theme={theme}
-                        disabled={isContinueDisabled}
-                        onClick={onContinue}
-                        style={styles.actionButton}
-                    >
-                        Continue
-                        <ArrowRight size={24} weight="regular" />
-                    </Button>
-                </div>
+                    </div>
+                )}
             </div>
-
-            {isIncorrect ? (
-                <div style={styles.footerNote}>
-                    <span style={{ color: ACCENT, fontSize: "1.4rem", lineHeight: 1 }}>♡</span>
-                    Every mistake is a step forward!
-                </div>
-            ) : null}
 
             <SharedAnimations />
         </>

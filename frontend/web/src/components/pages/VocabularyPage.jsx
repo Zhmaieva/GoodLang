@@ -2,22 +2,21 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import AppShell from "../AppShell.jsx";
 import SiteHeader from "../SiteHeader.jsx";
 import FooterBar from "../FooterBar.jsx";
-import { Button } from "../Buttons.jsx";
+import FiltersBar from "../FiltersBar.jsx";
 import Pagination from "../Pagination.jsx";
 import { CaretDown, CaretUp } from "@phosphor-icons/react";
 import {
     APP_ACCENT_COLOR,
-    APP_ACCENT_SOFT_COLOR,
     APP_BACKGROUND_COLOR,
     APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
-    APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
     LEARNED_STATUS_COLOR,
 } from "../../theme.js";
 import { callVocabularyApi } from "../../services/api.js";
 import { localizationService } from "../../localization/localizationService.js";
 import { off, on } from "../../services/events.js";
+import { getOverallAccuracy } from "../../services/dataService.js";
 import {
     buildLocalVocabularySummary,
     getLocalVocabularyWords,
@@ -26,12 +25,6 @@ import {
 import "./analytics.css";
 
 const WORDS_PER_PAGE = 10;
-
-const FILTERS = [
-    { id: "all", label: "All" },
-    { id: "needsPractice", label: "Needs practice" },
-    { id: "learned", label: "Learned" },
-];
 
 const STATUS_META = {
     learned: {
@@ -70,16 +63,31 @@ const VOCABULARY_LEVEL_NAMES = {
     C2: "Advanced",
 };
 
-const LAST_MISTAKE_ORDER = {
-    Today: 1,
-    Yesterday: 2,
-    "Last week": 3,
-    "Ages ago": 4,
-};
-
 function getDisplayStatus(word) {
     const status = word?.displayStatus || word?.status;
     return status === "recovered" ? "needsPractice" : status;
+}
+
+function getWordAccuracy(word) {
+    const attempts = Math.max(0, Number(word?.attempts) || 0);
+    const correct = Math.max(0, Math.min(attempts, Number(word?.correctCount) || 0));
+    return attempts > 0 ? (correct / attempts) * 100 : 0;
+}
+
+function formatLastPractice(value) {
+    if (!value) return "—";
+
+    const timestamp = new Date(value).getTime();
+    if (!Number.isFinite(timestamp)) return "—";
+
+    const days = Math.max(0, Math.floor((Date.now() - timestamp) / 86400000));
+    if (days > 30) return "Ages ago";
+    if (days === 0) return "Today";
+    if (days === 1) return "Yesterday";
+    if (days < 7) return `${days} days ago`;
+
+    const weeks = Math.floor(days / 7);
+    return `${weeks} ${weeks === 1 ? "week" : "weeks"} ago`;
 }
 
 function getVocabularyLevelName(level) {
@@ -112,7 +120,15 @@ function StatusChip({ status }) {
     );
 }
 
-function SummaryCard({ label, value, progress = 0, theme, isMobile }) {
+function SummaryCard({
+    label,
+    value,
+    progress = 0,
+    theme,
+    isMobile,
+    compactValue = false,
+    hideProgress = false,
+}) {
     const text = theme?.text ?? APP_TEXT_COLOR;
     const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
     const safeProgress = Math.max(0, Math.min(100, Number(progress) || 0));
@@ -150,8 +166,10 @@ function SummaryCard({ label, value, progress = 0, theme, isMobile }) {
                 <div
                     style={{
                         marginTop: 10,
-                        fontSize: isMobile ? "2rem" : "2.45rem",
-                        lineHeight: 1,
+                        fontSize: compactValue
+                            ? isMobile ? "1.25rem" : "1.55rem"
+                            : isMobile ? "2rem" : "2.45rem",
+                        lineHeight: compactValue ? 1.15 : 1,
                         fontWeight: 800,
                         color: text,
                         overflowWrap: "anywhere",
@@ -161,26 +179,28 @@ function SummaryCard({ label, value, progress = 0, theme, isMobile }) {
                 </div>
             </div>
 
-            <div
-                aria-label={`${label}: ${Math.round(safeProgress)}%`}
-                style={{
-                    width: "100%",
-                    height: 8,
-                    borderRadius: 999,
-                    background: "#edf0f7",
-                    overflow: "hidden",
-                }}
-            >
-                <span
+            {!hideProgress && (
+                <div
+                    aria-label={`${label}: ${Math.round(safeProgress)}%`}
                     style={{
-                        display: "block",
-                        width: `${safeProgress}%`,
-                        height: "100%",
+                        width: "100%",
+                        height: 8,
                         borderRadius: 999,
-                        background: theme?.accent ?? APP_ACCENT_COLOR,
+                        background: "#edf0f7",
+                        overflow: "hidden",
                     }}
-                />
-            </div>
+                >
+                    <span
+                        style={{
+                            display: "block",
+                            width: `${safeProgress}%`,
+                            height: "100%",
+                            borderRadius: 999,
+                            background: theme?.accent ?? APP_ACCENT_COLOR,
+                        }}
+                    />
+                </div>
+            )}
         </article>
     );
 }
@@ -194,11 +214,15 @@ export default function VocabularyPage({ theme }) {
     const [vocabularyState, setVocabularyState] = useState("loading");
     const [loading, setLoading] = useState(true);
     const [loadError, setLoadError] = useState("");
-    const [activeFilter, setActiveFilter] = useState("all");
+    const [filterLevel, setFilterLevel] = useState("all");
+    const [showWeakOnly, setShowWeakOnly] = useState(false);
     const [query, setQuery] = useState("");
     const [sortKey, setSortKey] = useState("level");
     const [sortDir, setSortDir] = useState("asc");
     const [page, setPage] = useState(1);
+    const [sentencesLeft, setSentencesLeft] = useState(
+        () => Math.max(0, Number(getOverallAccuracy()?.attemptsLeft) || 0)
+    );
 
     useEffect(() => {
         const onResize = () => setIsMobile(window.innerWidth < 915);
@@ -245,11 +269,20 @@ export default function VocabularyPage({ theme }) {
 
     useEffect(() => {
         const handleVocabularyUpdated = () => {
+            setSentencesLeft(Math.max(0, Number(getOverallAccuracy()?.attemptsLeft) || 0));
             loadVocabulary({ silent: true });
         };
 
+        const handleEvaluationUpdated = () => {
+            setSentencesLeft(Math.max(0, Number(getOverallAccuracy()?.attemptsLeft) || 0));
+        };
+
         on("vocabularyUpdated", handleVocabularyUpdated);
-        return () => off("vocabularyUpdated", handleVocabularyUpdated);
+        on("weeklyProgressUpdate", handleEvaluationUpdated);
+        return () => {
+            off("vocabularyUpdated", handleVocabularyUpdated);
+            off("weeklyProgressUpdate", handleEvaluationUpdated);
+        };
     }, [loadVocabulary]);
 
     const toggleSort = (key) => {
@@ -267,10 +300,14 @@ export default function VocabularyPage({ theme }) {
                 return String(item.word ?? "").toLowerCase();
             case "level":
                 return VOCABULARY_LEVEL_ORDER[item.level] ?? 999;
-            case "meaning":
-                return String(item.meaning ?? "").toLowerCase();
-            case "lastMistake":
-                return LAST_MISTAKE_ORDER[item.lastMistake] ?? 999;
+            case "accuracy":
+                return getWordAccuracy(item);
+            case "attempts":
+                return Math.max(0, Number(item.attempts) || 0);
+            case "lastPractice": {
+                const timestamp = new Date(item.lastPracticeAt).getTime();
+                return Number.isFinite(timestamp) ? timestamp : 0;
+            }
             case "status":
                 return STATUS_ORDER[getDisplayStatus(item)] ?? 999;
             default:
@@ -280,9 +317,12 @@ export default function VocabularyPage({ theme }) {
 
     const filteredWords = useMemo(() => {
         const normalizedQuery = query.trim().toLocaleLowerCase();
-        const list = activeFilter === "all"
+        const levelFiltered = filterLevel === "all"
             ? [...words]
-            : words.filter((word) => getDisplayStatus(word) === activeFilter);
+            : words.filter((word) => getVocabularyLevelName(word.level).toLowerCase() === filterLevel);
+        const list = showWeakOnly
+            ? levelFiltered.filter((word) => getDisplayStatus(word) === "needsPractice")
+            : levelFiltered;
         const direction = sortDir === "asc" ? 1 : -1;
 
         const matchingWords = normalizedQuery
@@ -314,7 +354,7 @@ export default function VocabularyPage({ theme }) {
         });
 
         return matchingWords;
-    }, [activeFilter, query, sortKey, sortDir, words]);
+    }, [filterLevel, query, showWeakOnly, sortKey, sortDir, words]);
 
     const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
 
@@ -326,7 +366,7 @@ export default function VocabularyPage({ theme }) {
 
     useEffect(() => {
         setPage(1);
-    }, [activeFilter, query, sortKey, sortDir]);
+    }, [filterLevel, query, showWeakOnly, sortKey, sortDir]);
 
     useEffect(() => {
         setPage((currentPage) => Math.min(currentPage, totalPages));
@@ -356,6 +396,7 @@ export default function VocabularyPage({ theme }) {
     const needsPracticeProgress = categorizedWordsCount > 0
         ? (needsPracticeCount / categorizedWordsCount) * 100
         : 0;
+    const isVocabularyEvaluationPending = sentencesLeft > 0;
 
     const pageLayoutStyle = {
         width: "100%",
@@ -408,14 +449,6 @@ export default function VocabularyPage({ theme }) {
         background: "transparent",
     };
 
-    const filterRowStyle = {
-        display: "flex",
-        gap: 10,
-        flexWrap: "wrap",
-        marginTop: 28,
-        marginBottom: 14,
-    };
-
     const tableStyle = {
         border: "none",
         borderRadius: 0,
@@ -426,8 +459,8 @@ export default function VocabularyPage({ theme }) {
 
     const tableGridStyle = {
         display: "grid",
-        gridTemplateColumns: "1.5fr 0.55fr 1fr 0.9fr",
-        gap: 10,
+        gridTemplateColumns: "1.45fr 0.8fr 0.7fr 0.95fr 0.85fr",
+        gap: 12,
         alignItems: "center",
         minWidth: 0,
     };
@@ -509,19 +542,25 @@ export default function VocabularyPage({ theme }) {
     };
 
     const wordStyle = {
-        fontSize: isMobile ? "1rem" : "1.05rem",
+        fontSize: isMobile ? "1.1rem" : "inherit",
         fontWeight: 800,
         color: theme?.text ?? APP_TEXT_COLOR,
     };
 
     const metaStyle = {
-        fontSize: isMobile ? "0.9rem" : "0.95rem",
-        fontWeight: 400,
+        fontSize: isMobile ? "0.92rem" : "0.86rem",
+        fontWeight: isMobile ? 600 : 400,
         color: theme?.muted ?? APP_MUTED_TEXT_COLOR,
     };
 
     const translationStyle = {
-        fontSize: isMobile ? "0.9rem" : "0.95rem",
+        fontSize: "inherit",
+        fontWeight: 400,
+        color: theme?.text ?? APP_TEXT_COLOR,
+    };
+
+    const tableDataStyle = {
+        fontSize: "inherit",
         fontWeight: 400,
         color: theme?.text ?? APP_TEXT_COLOR,
     };
@@ -555,8 +594,12 @@ export default function VocabularyPage({ theme }) {
                                 theme={theme}
                                 isMobile={isMobile}
                                 label="Vocabulary level"
-                                value={vocabularyLevelSummary.value}
+                                value={isVocabularyEvaluationPending
+                                    ? `${sentencesLeft} ${sentencesLeft === 1 ? "sentence" : "sentences"} left for evaluation`
+                                    : vocabularyLevelSummary.value}
                                 progress={vocabularyLevelSummary.progress}
+                                compactValue={isVocabularyEvaluationPending}
+                                hideProgress={isVocabularyEvaluationPending}
                             />
                             <SummaryCard
                                 theme={theme}
@@ -576,54 +619,25 @@ export default function VocabularyPage({ theme }) {
 
                         <section style={bodyGridStyle}>
                             <section style={panelStyle}>
-                                <div style={filterRowStyle} role="group" aria-label="Vocabulary filters">
-                                    {FILTERS.map((filter) => {
-                                        const selected = activeFilter === filter.id;
-
-                                        return (
-                                            <Button
-                                                key={filter.id}
-                                                variant="offset"
-                                                compact
-                                                isMobile={isMobile}
-                                                theme={theme}
-                                                shadowOffset={0}
-                                                onClick={() => setActiveFilter(filter.id)}
-                                                style={{
-                                                    backgroundColor: selected
-                                                        ? theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR
-                                                        : theme?.surface ?? APP_SURFACE_COLOR,
-                                                    color: selected
-                                                        ? theme?.accent ?? APP_ACCENT_COLOR
-                                                        : theme?.text ?? APP_TEXT_COLOR,
-                                                    borderColor: selected
-                                                        ? theme?.accent ?? APP_ACCENT_COLOR
-                                                        : theme?.border ?? APP_BORDER_COLOR,
-                                                }}
-                                            >
-                                                {filter.label}
-                                            </Button>
-                                        );
-                                    })}
-
-                                    <div className="search">
-                                        <input
-                                            className="highlight-input"
-                                            type="search"
-                                            placeholder="Search word or translation…"
-                                            aria-label="Search vocabulary by word or translation"
-                                            value={query}
-                                            onChange={(event) => setQuery(event.target.value)}
-                                        />
-                                    </div>
-                                </div>
+                                <FiltersBar
+                                    filterLevel={filterLevel}
+                                    onLevelChange={setFilterLevel}
+                                    query={query}
+                                    onQueryChange={setQuery}
+                                    showWeakOnly={showWeakOnly}
+                                    onToggleWeak={() => setShowWeakOnly((current) => !current)}
+                                    searchPlaceholder="Search word or translation…"
+                                    searchAriaLabel="Search vocabulary by word or translation"
+                                    theme={theme}
+                                />
 
                                 <div style={tableStyle}>
                                     {!isMobile && (
                                         <div style={tableHeaderStyle}>
-                                            <SortHeader columnKey="word">Word</SortHeader>
-                                            <SortHeader columnKey="level">Level</SortHeader>
-                                            <SortHeader columnKey="lastMistake">Last mistake</SortHeader>
+                                            <SortHeader columnKey="level">Word (Level)</SortHeader>
+                                            <SortHeader columnKey="accuracy">Accuracy</SortHeader>
+                                            <SortHeader columnKey="attempts">Attempts</SortHeader>
+                                            <SortHeader columnKey="lastPractice">Last practice</SortHeader>
                                             <div style={{ justifySelf: "end" }}>
                                                 <SortHeader columnKey="status">Status</SortHeader>
                                             </div>
@@ -635,6 +649,9 @@ export default function VocabularyPage({ theme }) {
                                     ) : (
                                         paginatedWords.map((item, index) => {
                                             const isLastRow = index === paginatedWords.length - 1;
+                                            const accuracy = getWordAccuracy(item);
+                                            const roundedAccuracy = Math.round(accuracy * 100) / 100;
+                                            const lastPractice = formatLastPractice(item.lastPracticeAt);
 
                                             if (isMobile) {
                                                 return (
@@ -646,9 +663,13 @@ export default function VocabularyPage({ theme }) {
                                                         }}
                                                     >
                                                         <div style={{ ...wordNameStyle, flex: "1 1 auto" }}>
-                                                            <span style={{ ...wordStyle, fontSize: "1.1rem" }}>{item.word}</span>
-                                                            <span style={translationStyle}>{item.meaning || "-"}</span>
-                                                            <span style={{ ...metaStyle, fontWeight: 600 }}>
+                                                            <span style={wordStyle}>
+                                                                {item.word}
+                                                                {item.meaning && (
+                                                                    <span style={translationStyle}> / {item.meaning}</span>
+                                                                )}
+                                                            </span>
+                                                            <span style={metaStyle}>
                                                                 Level: {getVocabularyLevelName(item.level)}
                                                             </span>
                                                             <div style={{ marginTop: 8 }}>
@@ -662,15 +683,19 @@ export default function VocabularyPage({ theme }) {
                                                                 display: "flex",
                                                                 flexDirection: "column",
                                                                 alignItems: "flex-end",
-                                                                gap: 4,
+                                                                gap: 8,
                                                                 textAlign: "right",
+                                                                width: 92,
                                                             }}
                                                         >
-                                                            <span style={{ ...metaStyle, fontSize: "0.75rem", fontWeight: 700 }}>
-                                                                Last mistake
-                                                            </span>
-                                                            <span style={{ ...metaStyle, color: theme?.text ?? APP_TEXT_COLOR, fontWeight: 700 }}>
-                                                                {item.lastMistake || "-"}
+                                                            <div style={{ width: "100%" }}>
+                                                                <strong>{roundedAccuracy}%</strong>
+                                                                <div className="bar" aria-label={`${roundedAccuracy}% accuracy`}>
+                                                                    <i style={{ width: `${accuracy}%`, background: theme?.accent ?? APP_ACCENT_COLOR }} />
+                                                                </div>
+                                                            </div>
+                                                            <span style={{ ...metaStyle, fontSize: "0.78rem", fontWeight: 600 }}>
+                                                                {lastPractice}
                                                             </span>
                                                         </div>
                                                     </article>
@@ -686,11 +711,22 @@ export default function VocabularyPage({ theme }) {
                                                     }}
                                                 >
                                                     <div style={wordNameStyle}>
-                                                        <span style={wordStyle}>{item.word}</span>
-                                                        <span style={translationStyle}>{item.meaning || "-"}</span>
+                                                        <span style={wordStyle}>
+                                                            {item.word}
+                                                            {item.meaning && (
+                                                                <span style={translationStyle}> / {item.meaning}</span>
+                                                            )}
+                                                        </span>
+                                                        <span style={metaStyle}>Level: {getVocabularyLevelName(item.level)}</span>
                                                     </div>
-                                                    <div style={metaStyle}>{getVocabularyLevelName(item.level)}</div>
-                                                    <div style={metaStyle}>{item.lastMistake}</div>
+                                                    <div>
+                                                        <strong>{roundedAccuracy}%</strong>
+                                                        <div className="bar" aria-label={`${roundedAccuracy}% accuracy`}>
+                                                            <i style={{ width: `${accuracy}%`, background: theme?.accent ?? APP_ACCENT_COLOR }} />
+                                                        </div>
+                                                    </div>
+                                                    <div style={tableDataStyle}>{item.attempts || 0}</div>
+                                                    <div style={tableDataStyle}>{lastPractice}</div>
                                                     <div style={{ justifySelf: "end" }}>
                                                         <StatusChip status={getDisplayStatus(item)} />
                                                     </div>

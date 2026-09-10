@@ -648,7 +648,7 @@ export default function AccuracyKpi({ header, mobile, theme }) {
         boxSizing: "border-box",
         width: "100%",
         minWidth: 0,
-        minHeight: isMobile ? 132 : 150,
+        minHeight: isMobile ? 104 : 120,
         padding: isMobile ? 16 : 22,
         display: "flex",
         flexDirection: "column",

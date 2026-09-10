@@ -99,7 +99,6 @@ export default function LoginForm({
     const SOFT_INNER = "rgba(255, 250, 243, 0.92)";
     const SOFT_STROKE_ACCENT = "rgba(255,97,56,0.55)";
     const INPUT_RADIUS = 14;
-    const ERROR_COLOR = "#fe2f31";
 
     const baseInputStyle = {
         resize: "none",
@@ -137,17 +136,24 @@ export default function LoginForm({
     // individual digit input inside the “gapped” code box
     const codeInputStyle = {
         ...baseInputStyle,
-        width: 34,
-        height: 42,
+        width: 40,
+        height: 52,
         textAlign: "center",
         padding: 0,
-        fontSize: 16,
-        fontWeight: 400,
+        fontFamily: '"Source Serif 4", Georgia, "Times New Roman", serif',
+        fontSize: 22,
+        fontWeight: 800,
+        lineHeight: "52px",
+        fontVariantNumeric: "lining-nums tabular-nums",
+        fontFeatureSettings: '"lnum" 1, "tnum" 1',
         color: theme.text,
         border: "none",
         marginBottom: 0,
         backgroundColor: "transparent",
         boxShadow: "none",
+        boxSizing: "border-box",
+        alignSelf: "center",
+        appearance: "none",
     };
 
     function focusLastFilled(newCode) {
@@ -530,6 +536,7 @@ export default function LoginForm({
                                             style={{
                                                 display: "flex",
                                                 resize: "none",
+                                                alignItems: "center",
                                                 justifyContent: "space-between",
                                                 borderRadius: 14,
                                                 border: `1px solid ${theme.accent}`,
@@ -542,7 +549,7 @@ export default function LoginForm({
                                                 marginBottom: 10,
                                                 boxShadow: "none",
                                                 padding: "0 10px",
-                                                minHeight: 52,
+                                                minHeight: 58,
                                                 opacity: loading ? 0.7 : 1,
                                             }}
                                         >
@@ -605,7 +612,7 @@ export default function LoginForm({
                                     </>
                                 )}
 
-                                {error && <div style={{ color: ERROR_COLOR, fontWeight: 400 }}>{error}</div>}
+                                {error && <div style={{ color: theme.text, fontWeight: 400 }}>{error}</div>}
 
                                 <style>
                                     {`

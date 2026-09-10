@@ -394,7 +394,6 @@ export async function evaluateAndCoach({
                                        }) {
 
     const scoreRules = normalizeRuleList(rules);
-    const relatedRules = normalizeRuleList(rules);
 
     const systemPrompt = `
 You are a friendly but precise ESL grammar tutor. You never invalidate informal speech.
@@ -413,8 +412,8 @@ Schema:
     const userPrompt = `
 TARGET_LANGUAGE: ${targetLocale}
 RULES_TO_SCORE_IN_ORDER: ${JSON.stringify(scoreRules)}
-RELATED_GRAMMAR_RULES:
-${formatRulesForPrompt(relatedRules, [])}
+PROJECT_GRAMMAR_RULES:
+${formatRulesForPrompt(ALL_PROJECT_RULES, [])}
 TEXT_TO_TRANSLATE: ${textToTranslate}
 HINT: ${hint}
 
@@ -423,7 +422,7 @@ TASKS:
 2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Use gender-neutral, impersonal wording. For Ukrainian, avoid gendered past-tense verbs and direct forms such as "побудував", "побудувала", "виправив", "виправила", "зробив", "зробила"; prefer impersonal forms like "побудовано", "варто виправити", "потрібно використати". Do not say that the whole sentence should sound a certain way, because the correct answer is shown separately.
 3) Also, give correct translation from TARGET_LANGUAGE to English.
 4) If LEARNER_ENGLISH is correct and communicates the meaning well, but a native speaker would probably choose a more natural or idiomatic phrasing, return that phrasing in natural_answer. Do not use natural_answer for actual grammar corrections; those belong in correct_answer when answer_is_correct is false. Return null if LEARNER_ENGLISH is incorrect, already natural, or if the natural version would be almost identical.
-5) Check LEARNER_ENGLISH against RELATED_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from RELATED_GRAMMAR_RULES.
+5) Check LEARNER_ENGLISH against PROJECT_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from PROJECT_GRAMMAR_RULES. This list is the canonical project-wide rule list, not only the rules attached to this sentence.
 6) For each rule in RULES_TO_SCORE_IN_ORDER, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLISH -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
 
 LEARNER_ENGLISH: ${userEnglish || "(none)"}
@@ -443,7 +442,7 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
     const txt = resp.output_text; // SDK helper that concatenates text parts
     const parsed = JSON.parse(txt);
     parsed.tip_if_wrong = neutralizeTutorTip(parsed.tip_if_wrong, targetLocale);
-    parsed.violated_rules = normalizeRuleList(parsed.violated_rules, []).filter((r) => relatedRules.includes(r));
+    parsed.violated_rules = normalizeRuleList(parsed.violated_rules, []);
     parsed.natural_answer = parsed.answer_is_correct && parsed.natural_answer
         ? String(parsed.natural_answer).trim()
         : null;
@@ -516,7 +515,6 @@ export async function evaluateGapAndCoach({
                                           }) {
     const { rules = [], en = [], options = [], correct } = task;
     const scoreRules = normalizeRuleList(rules);
-    const relatedRules = normalizeRuleList(rules);
 
     targetLocale = targetLocale === 'null' ? null : targetLocale;
 
@@ -560,8 +558,8 @@ Schema:
         const userPrompt = `
 TARGET_LANGUAGE: ${targetLocale}
 RULES_TO_SCORE_IN_ORDER: ${JSON.stringify(scoreRules)}
-RELATED_GRAMMAR_RULES:
-${formatRulesForPrompt(relatedRules, [])}
+PROJECT_GRAMMAR_RULES:
+${formatRulesForPrompt(ALL_PROJECT_RULES, [])}
 
 TASK_TYPE: GAP_CHOICE
 SENTENCE_TEMPLATE: ${sentence}
@@ -573,7 +571,7 @@ INSTRUCTIONS:
 2) Evaluate whether LEARNER_CHOICE is correct.
 3) correct_answer must be the full sentence with {GAP} replaced by the correct option.
 4) If wrong, give a short helpful tip in TARGET_LANGUAGE. Use gender-neutral, impersonal wording. For Ukrainian, avoid gendered past-tense verbs and direct forms such as "побудував", "побудувала", "виправив", "виправила", "зробив", "зробила"; prefer impersonal forms like "побудовано", "варто виправити", "потрібно використати". Do not say that the whole sentence should sound a certain way, because the correct answer is shown separately.
-5) Check the learner answer against RELATED_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from RELATED_GRAMMAR_RULES.
+5) Check the learner answer against PROJECT_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from PROJECT_GRAMMAR_RULES. This list is the canonical project-wide rule list, not only the rules attached to this sentence.
 6) Return one score for each rule in RULES_TO_SCORE_IN_ORDER, in order: 1 when the rule is satisfied, 0 when it is violated.
 `;
 
@@ -598,7 +596,7 @@ INSTRUCTIONS:
             correct_answer: String(parsed.correct_answer ?? ""),
             tip_if_wrong: neutralizeTutorTip(parsed.tip_if_wrong, targetLocale),
             scores,
-            violated_rules: normalizeRuleList(parsed.violated_rules, []).filter((r) => relatedRules.includes(r))
+            violated_rules: normalizeRuleList(parsed.violated_rules, [])
         };
     }
 

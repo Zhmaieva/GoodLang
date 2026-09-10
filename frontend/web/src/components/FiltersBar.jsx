@@ -22,6 +22,8 @@ export default function FiltersBar({
                                        onQueryChange,
                                        showWeakOnly,
                                        onToggleWeak,
+                                       searchPlaceholder,
+                                       searchAriaLabel,
                                        advanced = true,
                                        theme, // ✅ pass theme from App/HomePage like others
                                    }) {
@@ -95,8 +97,8 @@ export default function FiltersBar({
                     className={"highlight-input"}
                     style={inputStyle}
                     type="search"
-                    placeholder={`Search rule…${isMobile ? "" : " (e.g., Present Perfect, or, wish)"}`}
-                    aria-label="Search rule"
+                    placeholder={searchPlaceholder ?? `Search rule…${isMobile ? "" : " (e.g., Present Perfect, or, wish)"}`}
+                    aria-label={searchAriaLabel ?? "Search rule"}
                     value={query}
                     onChange={(e) => onQueryChange(e.target.value)}
                 />

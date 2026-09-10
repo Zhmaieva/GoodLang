@@ -24,10 +24,16 @@ export const transporter = nodemailer.createTransport({
  * @param {string} code - 6-digit code
  */
 export function sendVerificationEmail(to, code) {
+    const codeDigits = String(code ?? "").match(/\d/g) ?? [];
+    const codeCells = codeDigits.map((digit) => `
+              <td align="center" valign="middle" style="width:${100 / Math.max(1, codeDigits.length)}%;padding:16px 0;font-family:${FONT_FAMILY_CSS};font-size:22px;font-weight:800;line-height:1;color:#20243a;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:'lnum' 1,'tnum' 1;">
+                ${digit}
+              </td>`).join("");
+
     const info = transporter.sendMail({
         from: `"GoodLang" <goodlang.app@gmail.com>`,
         to,
-        subject: "Your GoodLang login code",
+        subject: `Your GoodLang login code`,
         text: `Your GoodLang login code: ${code}`,
         html: `
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f8f9fc;">
@@ -42,9 +48,10 @@ export function sendVerificationEmail(to, code) {
         <tr>
           <td style="padding:24px 22px;font-family:${FONT_FAMILY_CSS};color:#20243a;">
             <p style="margin:0 0 10px;font-size:16px;line-height:1.5;">Your login code:</p>
-            <div style="display:inline-block;padding:12px 16px;background:#171b2f;color:#ffffff;border-radius:14px;font-size:26px;font-weight:800;letter-spacing:0.14em;">
-              ${code}
-            </div>
+            <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;max-width:360px;background:#ffffff;border:2px solid #7477b8;border-radius:14px;border-collapse:separate;border-spacing:0;table-layout:fixed;">
+              <tr>${codeCells}
+              </tr>
+            </table>
             <p style="margin:18px 0 0;font-size:13px;line-height:1.5;color:#7d8499;">
               If this wasn’t you, please email us at
               <a href="mailto:goodlang.app@gmail.com" style="color:#7477b8;font-weight:700;">goodlang.app@gmail.com</a>.
