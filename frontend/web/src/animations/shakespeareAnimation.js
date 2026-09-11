@@ -12,21 +12,50 @@ export const TRAINER_ANIMATION_EVENTS = Object.freeze({
 
 export const TRAINER_ANIMATION_PENDING_KEY = "goodlang:trainer-animation-pending";
 
-export function createShakespeareTrainerAnimation() {
-    const skeleton = new AnimationSkeleton(AnimationParts.Shakespeare, 0.65, 2, 0);
+export function createShakespeareTrainerAnimation(isMobile = false) {
+    const offsets = isMobile
+        ? {
+            initialX: 0.65,
+            initialY: 2,
+            visibleY: 0.6,
+            hiddenY: 2,
+            handAnchorX: -0.4,
+            handAnchorY: 0.3,
+        }
+        : {
+            initialX: 0.65,
+            initialY: 2,
+            visibleY: 0.75,
+            hiddenY: 2,
+            handAnchorX: -0.4,
+            handAnchorY: 0.3,
+        };
+
+    const skeleton = new AnimationSkeleton(
+        AnimationParts.Shakespeare,
+        offsets.initialX,
+        offsets.initialY,
+        0,
+    );
     const shakespeareImg = skeleton.baseImage;
-    const thumbsUpHandImg = skeleton.AddChild(AnimationParts.ThumbsUp, -.4, 0.3, 1, false);
+    const thumbsUpHandImg = skeleton.AddChild(
+        AnimationParts.ThumbsUp,
+        offsets.handAnchorX,
+        offsets.handAnchorY,
+        1,
+        false,
+    );
     const animation = new Animation(skeleton);
 
     animation.toggleVisible(thumbsUpHandImg, true);
     animation.rotateRelative(thumbsUpHandImg, -70, .95, .75, 0);
-    animation.translateYRelative(shakespeareImg, 0.75, 1000);
+    animation.translateYRelative(shakespeareImg, offsets.visibleY, 1000);
     animation.Idle(1000);
     animation.rotateRelative(thumbsUpHandImg, 90, .95, .75, 250);
     const rotateStartStep = animation.rotateRelative(thumbsUpHandImg, 30, .95, .75, 500);
     animation.rotateRelative(thumbsUpHandImg, -30, .95, .75, 500);
     animation.loop(rotateStartStep, 3);
-    const hideStep = animation.translateYRelative(shakespeareImg, 2, 1000);
+    const hideStep = animation.translateYRelative(shakespeareImg, offsets.hiddenY, 1000);
 
     animation.on(TRAINER_ANIMATION_EVENTS.NEXT_SENTENCE, () => {
         if (!skeleton.visible) {
@@ -40,6 +69,8 @@ export function createShakespeareTrainerAnimation() {
     return {
         skeleton,
         animation,
+        isMobile,
+        offsets,
         images: { shakespeareImg, thumbsUpHandImg },
         steps: { rotateStartStep, hideStep },
     };

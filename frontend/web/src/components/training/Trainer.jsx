@@ -53,10 +53,25 @@ export default function Trainer({
                                     freeTraining = false,
                                     nextLevel = null,
                                     nextRule = null,
-                                    onAnswerEvaluated = _ => {},
-                                    notFocused = false,
+                                onAnswerEvaluated = _ => {},
+                                notFocused = false,
                                 }) {
-    const shakespeareAnimation = useMemo(() => createShakespeareTrainerAnimation(), []);
+    const [isMobileAnimation, setIsMobileAnimation] = useState(
+        () => typeof window !== "undefined" && window.innerWidth < 915
+    );
+    const shakespeareAnimation = useMemo(
+        () => createShakespeareTrainerAnimation(isMobileAnimation),
+        [isMobileAnimation]
+    );
+
+    useEffect(() => {
+        const updateAnimationBreakpoint = () => {
+            setIsMobileAnimation(window.innerWidth < 915);
+        };
+
+        window.addEventListener("resize", updateAnimationBreakpoint);
+        return () => window.removeEventListener("resize", updateAnimationBreakpoint);
+    }, []);
 
     const LEVEL_TO_DIFFICULTY = useMemo(
         () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),

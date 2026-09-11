@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { X } from "@phosphor-icons/react";
 import {
@@ -75,7 +76,7 @@ export default function ModalShell({
         };
     }, [modalId, open]);
 
-    if (!open) return null;
+    if (!open || typeof document === "undefined") return null;
 
     const handleClose = () => {
         if (closeDisabled) return;
@@ -83,7 +84,7 @@ export default function ModalShell({
         onClose?.();
     };
 
-    return (
+    return createPortal(
         <div
             style={{
                 position: "fixed",
@@ -190,6 +191,7 @@ export default function ModalShell({
                 <div style={contentStyle}>{children}</div>
                 {footer}
             </div>
-        </div>
+        </div>,
+        document.body,
     );
 }
