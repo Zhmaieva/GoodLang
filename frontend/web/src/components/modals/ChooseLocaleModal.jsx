@@ -120,7 +120,6 @@ export default function ChooseLocaleModal({
         >
                 <div
                     style={listWrapStyle}
-                    data-body-scroll-lock-scrollable="true"
                 >
                     {orderedOptions.map((o) => {
                         const isActive = selected === o.locale;

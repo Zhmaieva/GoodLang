@@ -43,11 +43,9 @@ export default function HomePage({ theme }) {
         window.history.scrollRestoration = "manual";
         scrollToTop();
         const frame = window.requestAnimationFrame(scrollToTop);
-        const timer = window.setTimeout(scrollToTop, 120);
 
         return () => {
             window.cancelAnimationFrame(frame);
-            window.clearTimeout(timer);
             window.history.scrollRestoration = previousScrollRestoration;
         };
     }, [location.pathname]);

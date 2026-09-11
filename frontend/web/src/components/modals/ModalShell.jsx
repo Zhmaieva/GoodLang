@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { X } from "@phosphor-icons/react";
 import {
@@ -18,17 +18,6 @@ export const modalShellTokens = {
     maxWidth: 520,
 };
 
-function allowMarkedScrollableRegion(target) {
-    let element = target;
-
-    while (element && element !== document.body) {
-        if (element.dataset?.bodyScrollLockScrollable === "true") return true;
-        element = element.parentElement;
-    }
-
-    return false;
-}
-
 function readVisualViewport() {
     if (typeof window === "undefined") {
         return { top: 0, left: 0, width: "100%", height: "100%" };
@@ -41,45 +30,6 @@ function readVisualViewport() {
         width: viewport?.width ?? window.innerWidth,
         height: viewport?.height ?? window.innerHeight,
     };
-}
-
-const activeScrollLocks = new Set();
-let savedDocumentOverflow = null;
-let savedBodyOverflow = null;
-let modalTouchMoveHandler = null;
-
-function acquireModalScrollLock(token) {
-    if (activeScrollLocks.has(token)) return;
-
-    if (activeScrollLocks.size === 0) {
-        savedDocumentOverflow = document.documentElement.style.overflow;
-        savedBodyOverflow = document.body.style.overflow;
-        document.documentElement.style.overflow = "hidden";
-        document.body.style.overflow = "hidden";
-
-        modalTouchMoveHandler = (event) => {
-            if (!allowMarkedScrollableRegion(event.target)) event.preventDefault();
-        };
-        document.addEventListener("touchmove", modalTouchMoveHandler, { passive: false });
-    }
-
-    activeScrollLocks.add(token);
-}
-
-function releaseModalScrollLock(token) {
-    const wasActive = activeScrollLocks.delete(token);
-    if (!wasActive) return;
-    if (activeScrollLocks.size > 0) return;
-
-    if (modalTouchMoveHandler) {
-        document.removeEventListener("touchmove", modalTouchMoveHandler);
-        modalTouchMoveHandler = null;
-    }
-
-    document.documentElement.style.overflow = savedDocumentOverflow ?? "";
-    document.body.style.overflow = savedBodyOverflow ?? "";
-    savedDocumentOverflow = null;
-    savedBodyOverflow = null;
 }
 
 export default function ModalShell({
@@ -104,24 +54,12 @@ export default function ModalShell({
     subtitleStyle,
 }) {
     const modalId = id ?? "modal-shell";
-    const scrollLockToken = useRef(Symbol(modalId));
     const [visualViewport, setVisualViewport] = useState(readVisualViewport);
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
     const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
     const accent = theme?.accent ?? APP_ACCENT_COLOR;
-
-    useEffect(() => {
-        if (!open) return;
-
-        const token = scrollLockToken.current;
-        acquireModalScrollLock(token);
-
-        return () => {
-            releaseModalScrollLock(token);
-        };
-    }, [open]);
 
     useEffect(() => {
         if (!open) return;
@@ -144,7 +82,6 @@ export default function ModalShell({
 
     const handleClose = () => {
         if (closeDisabled) return;
-        releaseModalScrollLock(scrollLockToken.current);
         onClose?.();
     };
 
@@ -165,7 +102,6 @@ export default function ModalShell({
                 background: "rgba(248, 249, 252, 0.66)",
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
-                overscrollBehavior: "none",
                 boxSizing: "border-box",
             }}
             onClick={() => {
@@ -174,7 +110,6 @@ export default function ModalShell({
         >
             <div
                 id={modalId}
-                data-body-scroll-lock-scrollable="true"
                 style={{
                     position: "relative",
                     background: surface,

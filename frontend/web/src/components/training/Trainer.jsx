@@ -173,7 +173,6 @@ export default function Trainer({
     const [quickVerdict, setQuickVerdict] = useState(null);
     const [isQuickFeedbackPending, setIsQuickFeedbackPending] = useState(false);
     const textareaRef = useRef(null);
-    const keyboardResetTimersRef = useRef([]);
     const evaluationRunRef = useRef(0);
     const currentTaskCacheKeyRef = useRef(null);
     const lastPracticeRuleCacheRef = useRef(null);
@@ -195,35 +194,31 @@ export default function Trainer({
         document.body.scrollTop = 0;
     }, [notFocused]);
 
-    const settleAfterKeyboard = useCallback(() => {
-        keyboardResetTimersRef.current.forEach((timer) => window.clearTimeout(timer));
-        keyboardResetTimersRef.current = [0, 350, 700].map((delay) => (
-            window.setTimeout(resetTrainerScroll, delay)
-        ));
-    }, [resetTrainerScroll]);
-
     useEffect(() => {
         if (notFocused || !window.visualViewport) return;
 
         const viewport = window.visualViewport;
         let largestHeight = viewport.height;
         let keyboardWasOpen = false;
+        let resetFrame = null;
 
         const handleViewportResize = () => {
             largestHeight = Math.max(largestHeight, viewport.height);
             const keyboardIsOpen = largestHeight - viewport.height > 140;
 
-            if (keyboardWasOpen && !keyboardIsOpen) settleAfterKeyboard();
+            if (keyboardWasOpen && !keyboardIsOpen) {
+                if (resetFrame != null) window.cancelAnimationFrame(resetFrame);
+                resetFrame = window.requestAnimationFrame(resetTrainerScroll);
+            }
             keyboardWasOpen = keyboardIsOpen;
         };
 
         viewport.addEventListener("resize", handleViewportResize);
-        return () => viewport.removeEventListener("resize", handleViewportResize);
-    }, [notFocused, settleAfterKeyboard]);
-
-    useEffect(() => () => {
-        keyboardResetTimersRef.current.forEach((timer) => window.clearTimeout(timer));
-    }, []);
+        return () => {
+            viewport.removeEventListener("resize", handleViewportResize);
+            if (resetFrame != null) window.cancelAnimationFrame(resetFrame);
+        };
+    }, [notFocused, resetTrainerScroll]);
 
     const setHint = (value) => {
         setHintValue(value);
@@ -1373,7 +1368,6 @@ export default function Trainer({
     async function onMainButtonClick() {
         if (textareaRef.current === document.activeElement) {
             textareaRef.current.blur();
-            settleAfterKeyboard();
         }
 
         if (locked) {

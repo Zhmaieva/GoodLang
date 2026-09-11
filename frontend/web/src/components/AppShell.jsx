@@ -46,10 +46,6 @@ export default function AppShell({ children, theme, noPadding = false }) {
                     }
                 }
 
-                html, body {
-                    overscroll-behavior-y: none;
-                }
-
                 body {
                     font-family: var(--font-family-base);
                 }

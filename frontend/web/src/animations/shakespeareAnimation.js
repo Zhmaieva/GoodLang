@@ -51,10 +51,13 @@ export function createShakespeareTrainerAnimation(isMobile = false) {
     animation.rotateRelative(thumbsUpHandImg, -70, .95, .75, 0);
     animation.translateYRelative(shakespeareImg, offsets.visibleY, 1000);
     animation.Idle(1000);
-    animation.rotateRelative(thumbsUpHandImg, 70, .95, .75, 250);
-    const rotateStartStep = animation.rotateRelative(thumbsUpHandImg, 30, .95, .75, 500);
-    animation.rotateRelative(thumbsUpHandImg, -30, .95, .75, 500);
-    animation.loop(rotateStartStep, 3);
+    animation.rotateRelative(thumbsUpHandImg, 90, .95, .75, 250);
+    animation.rotateRelative(thumbsUpHandImg, 10, .95, .75, 300);
+    animation.rotateRelative(thumbsUpHandImg, -5, .95, .75, 300);
+    animation.rotateRelative(thumbsUpHandImg, -30, .95, .75, 200);
+    const rotateStartStep = animation.rotateRelative(thumbsUpHandImg, 2, .95, .75, 100);
+    animation.rotateRelative(thumbsUpHandImg, -2, .95, .75, 100);
+    animation.Idle(1000);
     const hideStep = animation.translateYRelative(shakespeareImg, offsets.hiddenY, 1000);
 
     animation.on(TRAINER_ANIMATION_EVENTS.NEXT_SENTENCE, () => {
