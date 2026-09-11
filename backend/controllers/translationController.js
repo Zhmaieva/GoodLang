@@ -4,6 +4,7 @@ import {
     evaluateGapAndCoach,
     generateGapSample,
     generateTranslationSample,
+    OPENAI_EVALUATION_MODEL,
     OPENAI_QUICK_CHECK_MODEL,
     OPENAI_RUNTIME_MODEL,
     preEvaluate,
@@ -248,10 +249,10 @@ export const translationsController = {
                 userLocale = 'uk-UA',
                 avoidSentence = "",
                 vocabularyWord = "",
-            } = req.query;
+        } = req.query;
 
-            const taskType = Number(task_type) || 0;
-            const runtimeModel = await selectRuntimeModelForAccount(accountId);
+        const taskType = Number(task_type) || 0;
+        const runtimeModel = await selectRuntimeModelForAccount(accountId);
             const useSameTaskType =
                 String(use_same_task_type).toLowerCase() === "true" ||
                 String(use_same_task_type) === "1";
@@ -327,7 +328,7 @@ export const translationsController = {
                     },
                     userAnswer: translation ?? "",
                     targetLocale: userLocale || "uk-UA",
-                    model: runtimeModel,
+                    model: OPENAI_EVALUATION_MODEL,
                 });
             } else {
                 const accountShortInfo = await getAccountById(req.user.id);
@@ -351,7 +352,7 @@ export const translationsController = {
                         targetLocale: userLocale || "uk-UA",
                         userEnglish: translation ?? "",
                         textToTranslate: textToTranslate ?? "",
-                        model: runtimeModel,
+                        model: OPENAI_EVALUATION_MODEL,
                     });
                 }
 

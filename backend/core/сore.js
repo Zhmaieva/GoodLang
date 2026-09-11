@@ -8,6 +8,7 @@ const client = new OpenAI({ apiKey:
 });
 export const OPENAI_RUNTIME_MODEL = process.env.OPENAI_RUNTIME_MODEL || "gpt-5.4-mini";
 export const OPENAI_QUICK_CHECK_MODEL = process.env.OPENAI_QUICK_CHECK_MODEL || "gpt-5.4-nano";
+export const OPENAI_EVALUATION_MODEL = process.env.OPENAI_EVALUATION_MODEL || "gpt-5.5";
 
 const languagesMap = {
     "Ukrainian": "ua",
@@ -97,15 +98,114 @@ function normalizeOptions(options = [], correct = "") {
     return cleaned.slice(0, 5);
 }
 
-function buildJsonResponseRequest({ input, temperature = 0.2, model = OPENAI_RUNTIME_MODEL }) {
+function buildJsonResponseRequest({
+    input,
+    temperature = 0.2,
+    model = OPENAI_RUNTIME_MODEL,
+    reasoningEffort = "low",
+}) {
     const useReasoningConfig = String(model).startsWith("gpt-5");
     return {
         model,
         ...(useReasoningConfig
-            ? { reasoning: { effort: "low" } }
+            ? { reasoning: { effort: reasoningEffort } }
             : { temperature }),
         text: { format: { type: "json_object" } },
         input,
+    };
+}
+
+function getGenerationLanguageProfile(level) {
+    const normalizedLevel = String(level ?? "").trim().toUpperCase();
+
+    if (["B2", "C1", "C2", "ADVANCED"].includes(normalizedLevel)) {
+        return `ADVANCED_FLUENT:
+- Use fluent, contemporary adult English with a predominantly B2-C1 lexical range and occasional natural C2 vocabulary.
+- Require at least one meaningful lexical challenge: a precise verb, nuanced adjective, abstract noun, strong collocation, phrasal verb, or idiomatic expression.
+- Prefer realistic professional, social, cultural, academic, or public-life situations over generic textbook scenarios.
+- Make the expected English translations sound genuinely native and idiomatic rather than like literal word-for-word translations.
+- When the source meaning supports it, include at least one idiomatic or strongly collocational translation among the accepted answers.
+- Keep every answer natural and broadly useful; avoid obscure, archaic, literary, or needlessly ornate vocabulary.`;
+    }
+
+    if (["A2", "B1", "INTERMEDIATE"].includes(normalizedLevel)) {
+        return `INTERMEDIATE_REAL_WORLD:
+- Use practical A2-B2 vocabulary from realistic adult life, work, travel, relationships, services, news, and everyday problem-solving.
+- Make the lexical demand noticeably richer than beginner material, normally including a useful B1-B2 word, phrasal verb, or common collocation.
+- Prefer specific, natural verbs and nouns over repetitive textbook words such as do, make, go, good, bad, thing, and nice when a common real-world alternative fits.
+- Expected translations should sound like normal contemporary English and may use common idiomatic phrasing, but must remain accessible to an intermediate learner.
+- Avoid both childlike examples and rare advanced vocabulary.`;
+    }
+
+    return `BEGINNER_FOUNDATION:
+- Use common, concrete, high-frequency A1-A2 vocabulary and straightforward everyday situations.
+- Keep the lexical load simple enough that the requested grammar remains the main challenge.
+- Prefer direct, natural English and avoid unnecessary idioms or rare words.`;
+}
+
+const INTERMEDIATE_DIVERSITY_CONTEXTS = Object.freeze([
+    "a disrupted journey or last-minute change of plans",
+    "a realistic workplace handover, deadline, or misunderstanding",
+    "a housing, repair, neighbour, or local-service problem",
+    "an online purchase, subscription, refund, or customer-service exchange",
+    "a social commitment where expectations unexpectedly change",
+    "a practical financial choice involving a trade-off",
+    "a community event, course, appointment, or public service",
+    "a technology problem affecting ordinary daily life",
+]);
+
+const ADVANCED_DIVERSITY_CONTEXTS = Object.freeze([
+    "a delicate workplace negotiation with competing priorities",
+    "an ethical or reputational dilemma in research, media, or technology",
+    "a public-policy decision with an unintended consequence",
+    "a nuanced disagreement about evidence, responsibility, or fairness",
+    "a cultural assumption that causes a subtle misunderstanding",
+    "a strategic decision made with incomplete information",
+    "a professional setback that forces an unexpected compromise",
+    "a privacy, sustainability, or institutional-trust issue",
+]);
+
+const BEGINNER_DIVERSITY_CONTEXTS = Object.freeze([
+    "an everyday errand with a small unexpected problem",
+    "a simple plan involving friends or family",
+    "a journey, meal, purchase, appointment, or household task",
+    "a clear change between an original plan and what happened",
+]);
+
+const DIVERSITY_STRUCTURES = Object.freeze([
+    "Build the meaning around a contrast or concession, not a flat statement.",
+    "Use a cause-and-consequence relationship with a concrete outcome.",
+    "Include an expectation followed by a believable reversal.",
+    "Frame the event through reported information or another person's perspective.",
+    "Use a decision, obstacle, and practical consequence in one compact sentence.",
+    "Make timing or sequence essential to understanding the situation.",
+]);
+
+const DIVERSITY_PERSPECTIVES = Object.freeze([
+    "Use an individual speaker without a generic personal name.",
+    "Use a team, organisation, household, or community as the subject.",
+    "Use a specific role such as a tenant, editor, colleague, passenger, or researcher.",
+    "Use an impersonal or passive perspective when the target grammar allows it.",
+]);
+
+let generationDiversitySequence = Math.floor(Math.random() * 10000);
+
+function getGenerationDiversityBrief(level) {
+    const normalizedLevel = String(level ?? "").trim().toUpperCase();
+    const contexts = ["B2", "C1", "C2", "ADVANCED"].includes(normalizedLevel)
+        ? ADVANCED_DIVERSITY_CONTEXTS
+        : ["A2", "B1", "INTERMEDIATE"].includes(normalizedLevel)
+            ? INTERMEDIATE_DIVERSITY_CONTEXTS
+            : BEGINNER_DIVERSITY_CONTEXTS;
+    const sequence = generationDiversitySequence++;
+
+    return {
+        id: sequence,
+        text: [
+            `Scenario direction: ${contexts[sequence % contexts.length]}.`,
+            DIVERSITY_STRUCTURES[(sequence * 5 + 1) % DIVERSITY_STRUCTURES.length],
+            DIVERSITY_PERSPECTIVES[(sequence * 7 + 2) % DIVERSITY_PERSPECTIVES.length],
+        ].join("\n"),
     };
 }
 
@@ -242,6 +342,8 @@ export async function generateTranslationSample({
     const sourceLocale = !targetLocale || String(targetLocale).toLowerCase() === "null"
         ? "uk-UA"
         : String(targetLocale).trim();
+    const languageProfile = getGenerationLanguageProfile(level);
+    const diversityBrief = getGenerationDiversityBrief(level);
 
     const systemPrompt = `
 You generate ESL grammar translation practice samples.
@@ -263,7 +365,12 @@ Rules:
 - "rules" should include every PROJECT_RULE needed to judge the correct English answer.
 - "en" must contain 2 to 4 acceptable English translations.
 - "hint" must be a short hint in SOURCE_LOCALE about the grammar pattern, without giving away the full answer.
-- Keep the sentence appropriate for CEFR_LEVEL when provided, impacting the vocabulary difficulty.
+- Follow LANGUAGE_PROFILE closely. It controls vocabulary range, context maturity, collocations, and idiomaticity; CEFR_LEVEL still controls overall learner accessibility.
+- Vocabulary difficulty must not replace or weaken PRIMARY_RULE: every accepted English answer must still demonstrate the requested grammar rule.
+- For intermediate and advanced profiles, avoid mechanically simple sentences whose only difficulty is PRIMARY_RULE.
+- The SOURCE_LOCALE sentence must express enough meaning to justify any advanced word, collocation, phrasal verb, or idiomatic English rendering in "en".
+- Follow DIVERSITY_BRIEF as a creative constraint without mentioning it. Vary subjects, sentence openings, semantic domains, and discourse structure instead of falling back to recurring textbook templates.
+- Avoid generic placeholder names and overused scenarios unless DIVERSITY_BRIEF specifically requires them.
 - VOCABULARY_WORD, when provided, is a neutral English dictionary base form.
 - Express the meaning of VOCABULARY_WORD naturally in the SOURCE_LOCALE sentence. Never place the English VOCABULARY_WORD itself in the SOURCE_LOCALE sentence.
 - Use VOCABULARY_WORD in every expected English translation, but fit it naturally to the sentence and required grammar rules. Conjugate verbs, pluralize nouns, or use a possessive form when the sentence requires it; do not force the supplied base form to appear unchanged.
@@ -280,6 +387,10 @@ PRIMARY_RULE: ${primaryRule}
 REQUESTED_RULES: ${JSON.stringify(requestedRules)}
 SOURCE_LOCALE: ${sourceLocale}
 CEFR_LEVEL: ${level || "(not specified)"}
+LANGUAGE_PROFILE:
+${languageProfile}
+DIVERSITY_BRIEF_${diversityBrief.id}:
+${diversityBrief.text}
 PREVIOUS_SENTENCE_TO_AVOID: ${avoidSentence ? JSON.stringify(String(avoidSentence)) : "(none)"}
 VOCABULARY_WORD: ${vocabularyWord ? JSON.stringify(String(vocabularyWord)) : "(none)"}
 
@@ -322,6 +433,8 @@ export async function generateGapSample({
 
     const allowedRules = normalizeRuleList(allRules, ALL_PROJECT_RULES);
     const primaryRule = requestedRules[0];
+    const languageProfile = getGenerationLanguageProfile(level);
+    const diversityBrief = getGenerationDiversityBrief(level);
 
     const systemPrompt = `
 You generate ESL multiple-choice gap-fill grammar practice samples.
@@ -342,7 +455,11 @@ Rules:
 - "rules" must contain only IDs from PROJECT_RULES, with PRIMARY_RULE first.
 - "rules" should include every PROJECT_RULE needed to judge the sentence.
 - "options" must contain 3 to 5 short choices, including "correct". Use "" as an option only when a zero article / no word answer is appropriate.
-- Keep the sentence appropriate for CEFR_LEVEL when provided, impacting the vocabulary difficulty.
+- Follow LANGUAGE_PROFILE closely. It controls the vocabulary range and maturity of the sentence context; CEFR_LEVEL still controls overall learner accessibility.
+- For intermediate and advanced profiles, the surrounding sentence must remain lexically demanding even when the missing answer itself is a short grammar word or form.
+- At advanced level, prefer fluent collocations, phrasal verbs, and idiomatic contemporary contexts while keeping exactly one unambiguous correct option.
+- Follow DIVERSITY_BRIEF as a creative constraint without mentioning it. Vary subjects, sentence openings, semantic domains, and discourse structure instead of falling back to recurring textbook templates.
+- Avoid generic placeholder names and overused scenarios unless DIVERSITY_BRIEF specifically requires them.
 - If PREVIOUS_SENTENCE_TO_AVOID is provided, create a clearly different follow-up sentence:
   - Do not reuse the same subject/person/entity.
   - Do not reuse the same object/topic/entity.
@@ -355,6 +472,10 @@ Rules:
 PRIMARY_RULE: ${primaryRule}
 REQUESTED_RULES: ${JSON.stringify(requestedRules)}
 CEFR_LEVEL: ${level || "(not specified)"}
+LANGUAGE_PROFILE:
+${languageProfile}
+DIVERSITY_BRIEF_${diversityBrief.id}:
+${diversityBrief.text}
 PREVIOUS_SENTENCE_TO_AVOID: ${avoidSentence ? JSON.stringify(String(avoidSentence)) : "(none)"}
 
 PROJECT_RULES:
@@ -390,7 +511,7 @@ export async function evaluateAndCoach({
                                            userEnglish = "",                // learner's translation attempt (English)
                                            textToTranslate = "",
                                            hint = "",
-                                           model = OPENAI_RUNTIME_MODEL,
+                                           model = OPENAI_EVALUATION_MODEL,
                                        }) {
 
     const scoreRules = normalizeRuleList(rules);
@@ -431,6 +552,7 @@ LEARNER_ENGLISH: ${userEnglish || "(none)"}
     const resp = await client.responses.create(buildJsonResponseRequest({
         model,
         temperature: 0.2,
+        reasoningEffort: "medium",
         input: [
             { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
             { role: "user",   content: [{ type: "input_text", text: userPrompt }] },
@@ -511,7 +633,7 @@ export async function evaluateGapAndCoach({
                                               task,
                                               userAnswer = "",
                                               targetLocale = "uk-UA",
-                                              model = OPENAI_RUNTIME_MODEL,
+                                              model = OPENAI_EVALUATION_MODEL,
                                           }) {
     const { rules = [], en = [], options = [], correct } = task;
     const scoreRules = normalizeRuleList(rules);
@@ -578,6 +700,7 @@ INSTRUCTIONS:
         const resp = await client.responses.create(buildJsonResponseRequest({
             model,
             temperature: 0.2,
+            reasoningEffort: "medium",
             input: [
                 { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
                 { role: "user", content: [{ type: "input_text", text: userPrompt }] }
@@ -631,6 +754,7 @@ INSTRUCTIONS:
     const resp = await client.responses.create(buildJsonResponseRequest({
         model,
         temperature: 0.2,
+        reasoningEffort: "medium",
         input: [
             { role: "system", content: [{ type: "input_text", text: systemPrompt }] },
             { role: "user", content: [{ type: "input_text", text: userPrompt }] }
