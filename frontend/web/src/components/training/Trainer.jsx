@@ -40,6 +40,12 @@ import {
     saveLocalVocabularyEvaluation,
     saveLocalVocabularyTranslations,
 } from "../../services/vocabularyService.js";
+import SkeletalAnimation from "../animation/SkeletalAnimation.jsx";
+import {
+    createShakespeareTrainerAnimation,
+    TRAINER_ANIMATION_EVENTS,
+    TRAINER_ANIMATION_PENDING_KEY,
+} from "../../animations/shakespeareAnimation.js";
 
 export default function Trainer({
                                     theme,
@@ -50,6 +56,8 @@ export default function Trainer({
                                     onAnswerEvaluated = _ => {},
                                     notFocused = false,
                                 }) {
+    const shakespeareAnimation = useMemo(() => createShakespeareTrainerAnimation(), []);
+
     const LEVEL_TO_DIFFICULTY = useMemo(
         () => ({ beginner: ["A1"], intermediate: ["A2", "B1"], advanced: ["B2"] }),
         []
@@ -191,6 +199,30 @@ export default function Trainer({
         setAccount(data);
         await callAccountVerifyApi(ACTION_TYPES.PAGE_OPEN_TRAINER);
     };
+
+    useEffect(() => {
+        const startAnimation = () => {
+            shakespeareAnimation.animation.reset();
+            void shakespeareAnimation.animation.render();
+        };
+
+        shakespeareAnimation.animation.reset();
+        on(TRAINER_ANIMATION_EVENTS.START, startAnimation);
+
+        try {
+            if (sessionStorage.getItem(TRAINER_ANIMATION_PENDING_KEY) === "true") {
+                sessionStorage.removeItem(TRAINER_ANIMATION_PENDING_KEY);
+                startAnimation();
+            }
+        } catch {
+            // The normal trainer flow does not depend on session storage.
+        }
+
+        return () => {
+            off(TRAINER_ANIMATION_EVENTS.START, startAnimation);
+            shakespeareAnimation.animation.reset();
+        };
+    }, [shakespeareAnimation]);
 
     useEffect(() => {
         loadAccount().then();
@@ -1179,6 +1211,8 @@ export default function Trainer({
             setTaskModeLocked(!!isCalibration);
 
             if (data.isAnswerCorrect) {
+                shakespeareAnimation.animation.reset();
+                void shakespeareAnimation.animation.render();
                 setHint(data.naturalAnswer ? "Nice work! You expressed the idea well." : "Well done!");
                 setCorrectAnswer("");
                 setNaturalAnswer(data.naturalAnswer || "");
@@ -1305,6 +1339,7 @@ export default function Trainer({
         }
 
         // ✅ NEXT:
+        shakespeareAnimation.animation.emit(TRAINER_ANIMATION_EVENTS.NEXT_SENTENCE);
         resetCurrentTaskOnly();
         resetToLoadingPlaceholders();
 
@@ -1464,6 +1499,7 @@ export default function Trainer({
         </div>
     ) : (
         <section id="trainer" style={gridStyle}>
+            <SkeletalAnimation skeleton={shakespeareAnimation.skeleton} />
             {(mode === "check" || loading) && (
                 <TaskCard
                     waitTimeSeconds={waitTimeSeconds}

@@ -7,7 +7,11 @@ import ModalShell from "./modals/ModalShell.jsx";
 import { callAccountInfoApi } from "../services/api.js";
 import { marathonService } from "../services/marathonService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../services/trainingDirector.js";
-import { off, on } from "../services/events.js";
+import { emit, off, on } from "../services/events.js";
+import {
+    TRAINER_ANIMATION_EVENTS,
+    TRAINER_ANIMATION_PENDING_KEY,
+} from "../animations/shakespeareAnimation.js";
 import {
     APP_BORDER_COLOR,
     APP_DARK_COLOR,
@@ -97,6 +101,18 @@ export default function SiteHeader({
     };
 
     const handleLogoClick = () => {
+        const trainerIsMounted = ["/", "/trainer", "/greetings", "/hello"].includes(location.pathname);
+
+        if (trainerIsMounted) {
+            emit(TRAINER_ANIMATION_EVENTS.START);
+        } else {
+            try {
+                sessionStorage.setItem(TRAINER_ANIMATION_PENDING_KEY, "true");
+            } catch {
+                // Navigation still works when session storage is unavailable.
+            }
+        }
+
         navigate("/trainer");
     };
 
