@@ -903,8 +903,17 @@ export async function evaluateVocabularyUsage({
     const systemPrompt = `
 You evaluate English vocabulary usage in a learner's English translation.
 Return JSON only. Do not evaluate verb tense: a wrong verb tense is still correct here.
-Return one object for every supplied vocabulary word with the neutral dictionary base form of the intended English word,
-correct (boolean), and mistakeType (null, "spelling", or "word_fit").
+Return only established, real English vocabulary headwords or a high-confidence correction to an
+established, real English word. Never return an invented spelling, nonce word, keyboard mash,
+transliteration, or other nonsense token as a vocabulary word.
+If a learner token is not a real English word and context does not identify exactly one credible real
+English correction with high confidence, omit that token completely. Do not guess the nearest-looking
+word, do not add it to feedback, and do not return a vocabulary record for it.
+Each returned object must include the neutral dictionary base form of the English word, correct
+(boolean), mistakeType (null, "spelling", or "word_fit"), and lexicalStatus ("real" or
+"clear_correction"). Use lexicalStatus="real" only for an established English word. Use
+lexicalStatus="clear_correction" only when a misspelling or misuse has one unambiguous established
+English counterpart supported by the sentence context.
 The "word" field must always be a basic vocabulary headword, never the surface form from the sentence:
 - Remove possessive forms: "teacher's" becomes "teacher".
 - Return nouns in singular form: "phones" becomes "phone".
@@ -913,17 +922,21 @@ The "word" field must always be a basic vocabulary headword, never the surface f
 Judge whether the learner used the surface word correctly before reducing it to its base form. A required
 tense, number, or possessive inflection is not a vocabulary mistake.
 Assign each word its English vocabulary CEFR level: A1, A2, B1, B2, C1, or C2.
-Never omit a supplied word because it is correct. Correct words must also be returned with
-correct=true and mistakeType=null.
+Do not omit a supplied real English word because it is correct. Correct real words must also be
+returned with correct=true, mistakeType=null, and lexicalStatus="real". The requirement to return
+correct words never applies to nonsense or unresolved tokens; those must be omitted.
 For a spelling mistake, first identify the corrected intended word and then return its neutral base form
-in the "word" field (for example, the learner's "cal" should be returned as "call").
+in the "word" field (for example, the learner's "cal" may be returned as "call" when the sentence
+clearly supports that correction). If multiple corrections are plausible, omit the token.
 Also add important English vocabulary words that the target sentence intends the learner to use
 but that are missing from the learner answer. Do not mark a word incorrect merely because it was omitted.
 This applies even when the target sentence is localized and contains no English tokens.
 Mark a word incorrect only when there is direct evidence of a spelling mistake or an incorrect
 translation/word choice in the learner answer. When uncertain, use correct=true and mistakeType=null.
-Do not mention grammar or verb tense. Add only words used or clearly intended by the target sentence.
-Schema: {"words":[{"word":string,"correct":boolean,"mistakeType":null|"spelling"|"word_fit","level":"A1"|"A2"|"B1"|"B2"|"C1"|"C2"}]}
+Do not mention grammar or verb tense. Add only real words used or clearly intended by the target sentence.
+Before returning each item, verify that its "word" is an attested English dictionary headword. When
+that verification is uncertain, omit the item.
+Schema: {"words":[{"word":string,"correct":boolean,"mistakeType":null|"spelling"|"word_fit","lexicalStatus":"real"|"clear_correction","level":"A1"|"A2"|"B1"|"B2"|"C1"|"C2"}]}
 `;
     const userPrompt = `
 TARGET SENTENCE:
@@ -948,6 +961,10 @@ ${JSON.stringify(words)}
     for (const item of Array.isArray(parsed.words) ? parsed.words : []) {
         const word = String(item?.word ?? "").trim().toLowerCase();
         if (!/^[a-z][a-z'-]*$/.test(word) || evaluated.some((entry) => entry.word === word)) continue;
+        const lexicalStatus = ["real", "clear_correction"].includes(item?.lexicalStatus)
+            ? item.lexicalStatus
+            : null;
+        if (!lexicalStatus) continue;
         const explicitMistakeType = ["spelling", "word_fit"].includes(item?.mistakeType)
             ? item.mistakeType
             : null;
@@ -956,7 +973,14 @@ ${JSON.stringify(words)}
         const level = validCefrLevels.has(String(item?.level).toUpperCase())
             ? String(item.level).toUpperCase()
             : safeFallbackLevel;
-        evaluated.push({ word, correct: !isExplicitMistake, mistakeType, level });
+        evaluated.push({
+            word,
+            correct: !isExplicitMistake,
+            mistakeType,
+            lexicalStatus,
+            isRealEnglishWord: true,
+            level,
+        });
     }
     const mistakes = evaluated.filter((item) => item.correct !== true);
     if (!mistakes.length) {

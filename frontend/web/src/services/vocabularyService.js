@@ -260,6 +260,7 @@ export function saveLocalVocabularyEvaluation({ words = [], translations = {}, l
     const current = readMap();
     const now = new Date().toISOString();
     for (const evaluation of Array.isArray(words) ? words : []) {
+        if (evaluation?.isRealEnglishWord !== true) continue;
         const word = normalizeWord(evaluation?.word);
         if (!word) continue;
         const existing = current[word] ?? {

@@ -46,6 +46,7 @@ import {
     TRAINER_ANIMATION_EVENTS,
     TRAINER_ANIMATION_PENDING_KEY,
 } from "../../animations/shakespeareAnimation.js";
+import { createBusTrainerAnimation } from "../../animations/busAnimation.js";
 
 export default function Trainer({
                                     theme,
@@ -59,14 +60,42 @@ export default function Trainer({
     const [isMobileAnimation, setIsMobileAnimation] = useState(
         () => typeof window !== "undefined" && window.innerWidth < 915
     );
+    const [animationViewportWidth, setAnimationViewportWidth] = useState(
+        () => typeof window !== "undefined" ? window.innerWidth : 1440
+    );
     const shakespeareAnimation = useMemo(
         () => createShakespeareTrainerAnimation(isMobileAnimation),
         [isMobileAnimation]
+    );
+    const busAnimation = useMemo(
+        () => createBusTrainerAnimation(isMobileAnimation, animationViewportWidth),
+        [animationViewportWidth, isMobileAnimation]
+    );
+    const trainerAnimations = useMemo(
+        () => [busAnimation, shakespeareAnimation],
+        [busAnimation, shakespeareAnimation]
+    );
+    const activeTrainerAnimationRef = useRef(null);
+
+    const startAnimation = useCallback((animationDefinition) => {
+        activeTrainerAnimationRef.current?.animation.reset();
+        activeTrainerAnimationRef.current = animationDefinition;
+        animationDefinition.animation.reset();
+        void animationDefinition.animation.render();
+    }, []);
+    const startShakespeareAnimation = useCallback(
+        () => startAnimation(shakespeareAnimation),
+        [shakespeareAnimation, startAnimation]
+    );
+    const startBusAnimation = useCallback(
+        () => startAnimation(busAnimation),
+        [busAnimation, startAnimation]
     );
 
     useEffect(() => {
         const updateAnimationBreakpoint = () => {
             setIsMobileAnimation(window.innerWidth < 915);
+            setAnimationViewportWidth(window.innerWidth);
         };
 
         window.addEventListener("resize", updateAnimationBreakpoint);
@@ -249,28 +278,24 @@ export default function Trainer({
     };
 
     useEffect(() => {
-        const startAnimation = () => {
-            shakespeareAnimation.animation.reset();
-            void shakespeareAnimation.animation.render();
-        };
-
-        shakespeareAnimation.animation.reset();
-        on(TRAINER_ANIMATION_EVENTS.START, startAnimation);
+        trainerAnimations.forEach(({ animation }) => animation.reset());
+        on(TRAINER_ANIMATION_EVENTS.START, startBusAnimation);
 
         try {
             if (sessionStorage.getItem(TRAINER_ANIMATION_PENDING_KEY) === "true") {
                 sessionStorage.removeItem(TRAINER_ANIMATION_PENDING_KEY);
-                startAnimation();
+                startBusAnimation();
             }
         } catch {
             // The normal trainer flow does not depend on session storage.
         }
 
         return () => {
-            off(TRAINER_ANIMATION_EVENTS.START, startAnimation);
-            shakespeareAnimation.animation.reset();
+            off(TRAINER_ANIMATION_EVENTS.START, startBusAnimation);
+            trainerAnimations.forEach(({ animation }) => animation.reset());
+            activeTrainerAnimationRef.current = null;
         };
-    }, [shakespeareAnimation]);
+    }, [startBusAnimation, trainerAnimations]);
 
     useEffect(() => {
         loadAccount().then();
@@ -1193,9 +1218,11 @@ export default function Trainer({
             setIsQuickFeedbackPending(false);
 
             if (vocabularyData?.isSuccess) {
+                const verifiedVocabularyWords = (vocabularyData.words || [])
+                    .filter((item) => item?.isRealEnglishWord === true);
                 setVocabularyFeedback(vocabularyData.feedback || "");
                 saveLocalVocabularyEvaluation({
-                    words: vocabularyData.words,
+                    words: verifiedVocabularyWords,
                     level: difficulty,
                     locale: localizationService.getLocale(),
                 });
@@ -1206,16 +1233,18 @@ export default function Trainer({
                     );
                 }
                 emit("vocabularyUpdated");
-                void callVocabularyTranslationsApi({
-                    words: (vocabularyData.words || []).map((item) => item?.word).filter(Boolean),
-                    allLocales: true,
-                }).then((allLocaleData) => {
-                    if (!allLocaleData?.isSuccess) return;
-                    saveLocalVocabularyTranslations(allLocaleData.translations);
-                    emit("vocabularyUpdated");
-                }).catch((error) => {
-                    console.error("Background vocabulary translations failed", error);
-                });
+                if (verifiedVocabularyWords.length > 0) {
+                    void callVocabularyTranslationsApi({
+                        words: verifiedVocabularyWords.map((item) => item.word),
+                        allLocales: true,
+                    }).then((allLocaleData) => {
+                        if (!allLocaleData?.isSuccess) return;
+                        saveLocalVocabularyTranslations(allLocaleData.translations);
+                        emit("vocabularyUpdated");
+                    }).catch((error) => {
+                        console.error("Background vocabulary translations failed", error);
+                    });
+                }
             }
 
             if (!data.isSuccess) {
@@ -1259,14 +1288,14 @@ export default function Trainer({
             setTaskModeLocked(!!isCalibration);
 
             if (data.isAnswerCorrect) {
-                shakespeareAnimation.animation.reset();
-                void shakespeareAnimation.animation.render();
+                startShakespeareAnimation();
                 setHint(data.naturalAnswer ? "Nice work! You expressed the idea well." : "Well done!");
                 setCorrectAnswer("");
                 setNaturalAnswer(data.naturalAnswer || "");
                 setWeakRules([]);
                 setViolatedRule("");
             } else {
+                startBusAnimation();
                 setViolatedRule(String(data.violatedRule || "").trim());
                 setWeakRules(buildRecommendedRules(data, data.scores || []));
                 const tip = data.tipIfWrong ? " " + data.tipIfWrong : "";
@@ -1391,7 +1420,7 @@ export default function Trainer({
         }
 
         // ✅ NEXT:
-        shakespeareAnimation.animation.emit(TRAINER_ANIMATION_EVENTS.NEXT_SENTENCE);
+        activeTrainerAnimationRef.current?.animation.emit(TRAINER_ANIMATION_EVENTS.NEXT_SENTENCE);
         resetCurrentTaskOnly();
         resetToLoadingPlaceholders();
 
@@ -1552,6 +1581,8 @@ export default function Trainer({
     ) : (
         <section id="trainer" style={gridStyle}>
             <SkeletalAnimation skeleton={shakespeareAnimation.skeleton} />
+            <SkeletalAnimation skeleton={busAnimation.skeletons.busSkeleton} />
+            <SkeletalAnimation skeleton={busAnimation.skeletons.peelSkeleton} />
             {(mode === "check" || loading) && (
                 <TaskCard
                     waitTimeSeconds={waitTimeSeconds}
