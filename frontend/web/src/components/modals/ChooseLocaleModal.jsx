@@ -15,17 +15,18 @@ export default function ChooseLocaleModal({
     const [initial, setInitial] = useState(getSavedLocale);
 
     const options = useMemo(() => localizationService.getAvailableLocales(), []);
+    const browserLocale = useMemo(() => localizationService.getBrowserLocale(), []);
     const orderedOptions = useMemo(() => {
-        if (!selected) return options;
+        const priorityLocales = [selected, browserLocale].filter(Boolean);
+        const prioritized = priorityLocales
+            .map((locale) => options.find((option) => option.locale === locale))
+            .filter((option, index, list) => (
+                option && list.findIndex((candidate) => candidate?.locale === option.locale) === index
+            ));
+        const prioritySet = new Set(prioritized.map((option) => option.locale));
 
-        const activeOption = options.find((option) => option.locale === selected);
-        if (!activeOption) return options;
-
-        return [
-            activeOption,
-            ...options.filter((option) => option.locale !== selected),
-        ];
-    }, [options, selected]);
+        return [...prioritized, ...options.filter((option) => !prioritySet.has(option.locale))];
+    }, [browserLocale, options, selected]);
 
     const canCancel = !!initial;
 
@@ -82,8 +83,12 @@ export default function ChooseLocaleModal({
         display: "grid",
         gridTemplateColumns: "1fr",
         gap: 12,
+        minHeight: 0,
         maxHeight: "46vh",
         overflowY: "auto",
+        WebkitOverflowScrolling: "touch",
+        overscrollBehaviorY: "contain",
+        touchAction: "pan-y",
         paddingRight: 4,
     };
 
@@ -113,7 +118,10 @@ export default function ChooseLocaleModal({
             panelStyle={{ padding: 40 }}
             contentStyle={listOuterStyle}
         >
-                <div style={listWrapStyle}>
+                <div
+                    style={listWrapStyle}
+                    data-body-scroll-lock-scrollable="true"
+                >
                     {orderedOptions.map((o) => {
                         const isActive = selected === o.locale;
 

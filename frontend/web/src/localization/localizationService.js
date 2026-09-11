@@ -123,6 +123,21 @@ export default class LocalizationService {
         return !!this.getLocale();
     };
 
+    getBrowserLocale = () => {
+        if (typeof navigator === "undefined") return null;
+
+        const requestedLocales = Array.isArray(navigator.languages) && navigator.languages.length > 0
+            ? navigator.languages
+            : [navigator.language];
+
+        for (const requestedLocale of requestedLocales) {
+            const resolved = this.resolveLocale(requestedLocale);
+            if (resolved) return resolved;
+        }
+
+        return null;
+    };
+
     BASE_LOCALES = [
         { locale: "uk-UA", name: "Українська" },
         { locale: "ru-RU", name: "Русский" },
@@ -158,16 +173,11 @@ export default class LocalizationService {
     ];
 
     getAvailableLocales = () => {
-        const browserLocale = navigator.language;
+        const browserLocale = this.getBrowserLocale();
         const locales = [...this.BASE_LOCALES];
-
-        let recommended = null;
-
-        if (browserLocale) {
-            recommended = locales.find(l =>
-                l.locale.toLowerCase().startsWith(browserLocale.slice(0, 2).toLowerCase())
-            );
-        }
+        const recommended = browserLocale
+            ? locales.find(({ locale }) => locale === browserLocale)
+            : null;
 
         const rest = locales
             .filter(l => !recommended || l.locale !== recommended.locale)

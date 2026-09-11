@@ -19,6 +19,17 @@ export const modalShellTokens = {
     maxWidth: 520,
 };
 
+function allowMarkedScrollableRegion(target) {
+    let element = target;
+
+    while (element && element !== document.body) {
+        if (element.dataset?.bodyScrollLockScrollable === "true") return true;
+        element = element.parentElement;
+    }
+
+    return false;
+}
+
 export default function ModalShell({
     open = true,
     id,
@@ -52,7 +63,11 @@ export default function ModalShell({
         if (!open) return;
 
         const element = document.querySelector(`#${modalId}`);
-        if (element) disableBodyScroll(element);
+        if (element) {
+            disableBodyScroll(element, {
+                allowTouchMove: allowMarkedScrollableRegion,
+            });
+        }
 
         return () => {
             clearAllBodyScrollLocks();
