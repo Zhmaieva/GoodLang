@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { X } from "@phosphor-icons/react";
 import {
@@ -27,6 +27,20 @@ function allowMarkedScrollableRegion(target) {
     }
 
     return false;
+}
+
+function readVisualViewport() {
+    if (typeof window === "undefined") {
+        return { top: 0, left: 0, width: "100%", height: "100%" };
+    }
+
+    const viewport = window.visualViewport;
+    return {
+        top: viewport?.offsetTop ?? 0,
+        left: viewport?.offsetLeft ?? 0,
+        width: viewport?.width ?? window.innerWidth,
+        height: viewport?.height ?? window.innerHeight,
+    };
 }
 
 const activeScrollLocks = new Set();
@@ -91,6 +105,7 @@ export default function ModalShell({
 }) {
     const modalId = id ?? "modal-shell";
     const scrollLockToken = useRef(Symbol(modalId));
+    const [visualViewport, setVisualViewport] = useState(readVisualViewport);
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
@@ -108,6 +123,23 @@ export default function ModalShell({
         };
     }, [open]);
 
+    useEffect(() => {
+        if (!open) return;
+
+        const viewport = window.visualViewport;
+        const updateViewport = () => setVisualViewport(readVisualViewport());
+        updateViewport();
+        viewport?.addEventListener("resize", updateViewport);
+        viewport?.addEventListener("scroll", updateViewport);
+        window.addEventListener("orientationchange", updateViewport);
+
+        return () => {
+            viewport?.removeEventListener("resize", updateViewport);
+            viewport?.removeEventListener("scroll", updateViewport);
+            window.removeEventListener("orientationchange", updateViewport);
+        };
+    }, [open]);
+
     if (!open || typeof document === "undefined") return null;
 
     const handleClose = () => {
@@ -120,7 +152,10 @@ export default function ModalShell({
         <div
             style={{
                 position: "fixed",
-                inset: 0,
+                top: visualViewport.top,
+                left: visualViewport.left,
+                width: visualViewport.width,
+                height: visualViewport.height,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -131,6 +166,7 @@ export default function ModalShell({
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
                 overscrollBehavior: "none",
+                boxSizing: "border-box",
             }}
             onClick={() => {
                 if (closeOnBackdrop) handleClose();
@@ -138,6 +174,7 @@ export default function ModalShell({
         >
             <div
                 id={modalId}
+                data-body-scroll-lock-scrollable="true"
                 style={{
                     position: "relative",
                     background: surface,
@@ -148,6 +185,9 @@ export default function ModalShell({
                     maxWidth,
                     boxShadow: "0 24px 80px rgba(31, 36, 54, 0.14)",
                     display: hidden ? "none" : "block",
+                    maxHeight: "calc(100% - 24px)",
+                    overflowY: "auto",
+                    WebkitOverflowScrolling: "touch",
                     fontFamily: "var(--font-family-base)",
                     color: text,
                     ...panelStyle,

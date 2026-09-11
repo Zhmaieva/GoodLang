@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect, useCallback} from "react";
+import { createPortal } from "react-dom";
 import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import LoginModal from "./LoginModal.jsx";
@@ -149,7 +150,7 @@ export default function LimitModal({
     const improvePct = computeImprovePct(skillAccuracy);
     const hasEnoughEval = attemptsLeft <= 0;
 
-    if (!open) return null;
+    if (!open || typeof document === "undefined") return null;
 
     async function handleSubscribe() {
         try {
@@ -247,7 +248,7 @@ export default function LimitModal({
         boxShadow: "none",
     };
 
-    return (
+    return createPortal(
         <>
             {
                 !loginModalOpen && (
@@ -616,6 +617,7 @@ export default function LimitModal({
                     }}
                 />
             )}
-        </>
+        </>,
+        document.body,
     );
 }

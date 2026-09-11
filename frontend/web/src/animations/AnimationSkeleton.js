@@ -392,9 +392,19 @@ export class Animation {
     async startFrom(index, version) {
         // Give the renderer one committed frame at the initial position before
         // applying the first interpolated movement.
-        await this.wait(20, version);
+        await this.waitForPaint();
         if (version !== this.runVersion) return;
         await this.runFrom(index, version);
+    }
+
+    waitForPaint() {
+        if (typeof requestAnimationFrame !== "function") {
+            return new Promise((resolve) => setTimeout(resolve, 32));
+        }
+
+        return new Promise((resolve) => {
+            requestAnimationFrame(() => requestAnimationFrame(resolve));
+        });
     }
 
     async runFrom(startIndex, version) {

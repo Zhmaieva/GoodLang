@@ -14,7 +14,6 @@ import CookieConsentModal from "../modals/CookieConsentModal.jsx";
 import { acceptCookies, getCookieConsent, rejectCookies } from "../../services/settingsService.js";
 import { ensureAnalytics, trackMetaCustomEvent, trackPageView } from "../../services/gaService.js";
 import { ACTION_TYPES } from "../../utils/constants.js";
-import {enableBodyScroll, disableBodyScroll} from 'body-scroll-lock';
 import {localizationService} from "../../localization/localizationService.js";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import { Button } from "../Buttons.jsx";
@@ -59,30 +58,11 @@ export default function LoginForm({
     }, [account?.email, emailChange]);
 
     useEffect(() => {
-        lockScroll()
         const onResize = () => setIsMobile(window.innerWidth < 915);
         onResize();
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);
     }, []);
-
-    // lock body scroll while modal is shown (prevents scroll propagation outside modal)
-    useEffect(() => {
-        const isOpen = !cookieOpen && !termsOpen;
-        if (!isOpen) return;
-
-        const prevOverflow = document.body.style.overflow;
-        const prevPaddingRight = document.body.style.paddingRight;
-
-        const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
-        document.body.style.overflow = "hidden";
-        if (scrollBarWidth > 0) document.body.style.paddingRight = `${scrollBarWidth}px`;
-
-        return () => {
-            document.body.style.overflow = prevOverflow;
-            document.body.style.paddingRight = prevPaddingRight;
-        };
-    }, [cookieOpen, termsOpen]);
 
     const mainButtonStyle = (disabled) => ({
         backgroundColor: disabled ? "#999" : theme.dark,
@@ -332,7 +312,6 @@ export default function LoginForm({
 
             if (isEmailChange) {
                 onAccountChange(newAccount);
-                unlockScroll();
                 onClose();
                 return;
             }
@@ -403,21 +382,12 @@ export default function LoginForm({
 
             reloadWithRuleParam(ruleToDownload);
 
-            unlockScroll()
             onClose();
         } catch (err) {
             setError("Invalid code");
         } finally {
             setLoading(false);
         }
-    }
-
-    const lockScroll = () => {
-        disableBodyScroll(document.querySelector('#login-form'));
-    }
-
-    const unlockScroll = () => {
-        enableBodyScroll(document.querySelector('#login-form'));
     }
 
     function reloadWithRuleParam(ruleId) {
@@ -479,7 +449,6 @@ export default function LoginForm({
                     subtitle={modalSubtitle}
                     titleStyle={{ fontSize: "1.75rem" }}
                     onClose={() => {
-                        unlockScroll();
                         if (!closeDisabled) onClose();
                     }}
                     closeDisabled={closeDisabled}
@@ -705,7 +674,6 @@ export default function LoginForm({
                         const termsRo = termsReadOnly;
                         setTermsReadOnly(false);
                         if (!termsRo) {
-                            unlockScroll();
                             onClose();
                         } else {
                             setCookieOpen(true);
@@ -730,7 +698,6 @@ export default function LoginForm({
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_ACCEPT_COOKIES);
 
-                        unlockScroll();
                         reloadWithRuleParam(ruleToDownload);
                     }}
                     onReject={async () => {
@@ -738,7 +705,6 @@ export default function LoginForm({
 
                         await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_REJECT_COOKIES);
 
-                        unlockScroll();
                         reloadWithRuleParam(ruleToDownload);
                     }}
                     onOpenPolicy={async () => {
