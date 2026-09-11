@@ -52,8 +52,7 @@ export function createShakespeareTrainerAnimation(isMobile = false) {
     animation.translateYRelative(shakespeareImg, offsets.visibleY, 1000);
     animation.Idle(1000);
     animation.rotateRelative(thumbsUpHandImg, 90, .95, .75, 250);
-    animation.rotateRelative(thumbsUpHandImg, 10, .95, .75, 300);
-    animation.rotateRelative(thumbsUpHandImg, -5, .95, .75, 300);
+    animation.Idle(200);
     animation.rotateRelative(thumbsUpHandImg, -30, .95, .75, 200);
     const rotateStartStep = animation.rotateRelative(thumbsUpHandImg, 2, .95, .75, 100);
     animation.rotateRelative(thumbsUpHandImg, -2, .95, .75, 100);
