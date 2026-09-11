@@ -401,7 +401,7 @@ export default function VocabularyPage({ theme }) {
 
     const pageLayoutStyle = {
         width: "100%",
-        minHeight: "100vh",
+        minHeight: "var(--app-viewport-height, 100vh)",
         display: "flex",
         flexDirection: "column",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
@@ -414,7 +414,9 @@ export default function VocabularyPage({ theme }) {
         display: "flex",
         alignItems: "flex-start",
         justifyContent: "center",
-        padding: isMobile ? "18px 12px" : "40px 24px",
+        padding: isMobile
+            ? "18px 12px calc(18px + var(--mobile-nav-clearance, 0px))"
+            : "40px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 

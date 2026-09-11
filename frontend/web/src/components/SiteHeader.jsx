@@ -381,8 +381,8 @@ export default function SiteHeader({
                 <>
                     <style>{`
                         @media (max-width: 914px) {
-                            body {
-                                padding-bottom: calc(64px + env(safe-area-inset-bottom));
+                            :root {
+                                --mobile-nav-clearance: calc(64px + env(safe-area-inset-bottom));
                             }
                         }
                     `}</style>

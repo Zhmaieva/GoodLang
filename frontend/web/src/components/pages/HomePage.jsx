@@ -110,7 +110,7 @@ export default function HomePage({ theme }) {
 
     const pageLayoutStyle = {
         width: "100%",
-        minHeight: "100vh",
+        minHeight: "var(--app-viewport-height, 100vh)",
         display: "flex",
         flexDirection: "column",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
@@ -123,7 +123,9 @@ export default function HomePage({ theme }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: isMobile ? "24px 12px" : "64px 24px",
+        padding: isMobile
+            ? "24px 12px calc(24px + var(--mobile-nav-clearance, 0px))"
+            : "64px 24px",
         background: theme?.bg ?? APP_BACKGROUND_COLOR,
     };
 

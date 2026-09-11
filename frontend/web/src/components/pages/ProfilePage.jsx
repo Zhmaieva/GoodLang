@@ -228,7 +228,7 @@ export default function ProfilePage({ theme }) {
     };
 
     const pageStyle = {
-        minHeight: "100vh",
+        minHeight: "var(--app-viewport-height, 100vh)",
         background: colors.bg,
         color: colors.text,
         fontFamily: "var(--font-family-base)",
@@ -238,7 +238,9 @@ export default function ProfilePage({ theme }) {
         width: "100%",
         maxWidth: 1040,
         margin: "0 auto",
-        padding: isMobile ? "28px 16px 52px" : "54px 24px 80px",
+        padding: isMobile
+            ? "28px 16px calc(52px + var(--mobile-nav-clearance, 0px))"
+            : "54px 24px 80px",
         boxSizing: "border-box",
     };
 

@@ -3,7 +3,7 @@ import { APP_BACKGROUND_COLOR, APP_TEXT_COLOR } from "../theme.js";
 export default function AppShell({ children, theme, noPadding = false }) {
     const styles = {
         app: {
-            minHeight: "100vh",
+            minHeight: "var(--app-viewport-height, 100vh)",
             width: "100%",
             display: "flex",
             alignItems: "stretch",
@@ -34,6 +34,20 @@ export default function AppShell({ children, theme, noPadding = false }) {
                     overflow-x: clip;
                     background: var(--bg);
                     color: var(--text);
+                }
+
+                :root {
+                    --app-viewport-height: 100vh;
+                }
+
+                @supports (height: 100dvh) {
+                    :root {
+                        --app-viewport-height: 100dvh;
+                    }
+                }
+
+                html, body {
+                    overscroll-behavior-y: none;
                 }
 
                 body {
