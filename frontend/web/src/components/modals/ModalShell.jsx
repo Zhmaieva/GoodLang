@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { X } from "@phosphor-icons/react";
 import {
     APP_ACCENT_COLOR,
-    APP_BACKGROUND_COLOR,
     APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
     APP_SURFACE_COLOR,
@@ -31,6 +29,45 @@ function allowMarkedScrollableRegion(target) {
     return false;
 }
 
+const activeScrollLocks = new Set();
+let savedDocumentOverflow = null;
+let savedBodyOverflow = null;
+let modalTouchMoveHandler = null;
+
+function acquireModalScrollLock(token) {
+    if (activeScrollLocks.has(token)) return;
+
+    if (activeScrollLocks.size === 0) {
+        savedDocumentOverflow = document.documentElement.style.overflow;
+        savedBodyOverflow = document.body.style.overflow;
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+
+        modalTouchMoveHandler = (event) => {
+            if (!allowMarkedScrollableRegion(event.target)) event.preventDefault();
+        };
+        document.addEventListener("touchmove", modalTouchMoveHandler, { passive: false });
+    }
+
+    activeScrollLocks.add(token);
+}
+
+function releaseModalScrollLock(token) {
+    const wasActive = activeScrollLocks.delete(token);
+    if (!wasActive) return;
+    if (activeScrollLocks.size > 0) return;
+
+    if (modalTouchMoveHandler) {
+        document.removeEventListener("touchmove", modalTouchMoveHandler);
+        modalTouchMoveHandler = null;
+    }
+
+    document.documentElement.style.overflow = savedDocumentOverflow ?? "";
+    document.body.style.overflow = savedBodyOverflow ?? "";
+    savedDocumentOverflow = null;
+    savedBodyOverflow = null;
+}
+
 export default function ModalShell({
     open = true,
     id,
@@ -53,7 +90,7 @@ export default function ModalShell({
     subtitleStyle,
 }) {
     const modalId = id ?? "modal-shell";
-    const bg = theme?.bg ?? APP_BACKGROUND_COLOR;
+    const scrollLockToken = useRef(Symbol(modalId));
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const border = theme?.border ?? APP_BORDER_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
@@ -63,24 +100,19 @@ export default function ModalShell({
     useEffect(() => {
         if (!open) return;
 
-        const element = document.querySelector(`#${modalId}`);
-        if (element) {
-            disableBodyScroll(element, {
-                allowTouchMove: allowMarkedScrollableRegion,
-            });
-        }
+        const token = scrollLockToken.current;
+        acquireModalScrollLock(token);
 
         return () => {
-            clearAllBodyScrollLocks();
-            if (element) enableBodyScroll(element);
+            releaseModalScrollLock(token);
         };
-    }, [modalId, open]);
+    }, [open]);
 
     if (!open || typeof document === "undefined") return null;
 
     const handleClose = () => {
         if (closeDisabled) return;
-        clearAllBodyScrollLocks();
+        releaseModalScrollLock(scrollLockToken.current);
         onClose?.();
     };
 
@@ -98,6 +130,7 @@ export default function ModalShell({
                 background: "rgba(248, 249, 252, 0.66)",
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
+                overscrollBehavior: "none",
             }}
             onClick={() => {
                 if (closeOnBackdrop) handleClose();

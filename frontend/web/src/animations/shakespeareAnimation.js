@@ -17,7 +17,7 @@ export function createShakespeareTrainerAnimation(isMobile = false) {
         ? {
             initialX: 0.65,
             initialY: 2,
-            visibleY: 0.6,
+            visibleY: 0.5,
             hiddenY: 2,
             handAnchorX: -0.4,
             handAnchorY: 0.3,

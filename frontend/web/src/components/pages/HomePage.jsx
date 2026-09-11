@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import AppShell from "../AppShell";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
@@ -31,6 +31,26 @@ export default function HomePage({ theme }) {
     const { ref: containerRef } = useBreakpoint(880);
 
     const location = useLocation();
+
+    useLayoutEffect(() => {
+        const previousScrollRestoration = window.history.scrollRestoration;
+        const scrollToTop = () => {
+            window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        };
+
+        window.history.scrollRestoration = "manual";
+        scrollToTop();
+        const frame = window.requestAnimationFrame(scrollToTop);
+        const timer = window.setTimeout(scrollToTop, 120);
+
+        return () => {
+            window.cancelAnimationFrame(frame);
+            window.clearTimeout(timer);
+            window.history.scrollRestoration = previousScrollRestoration;
+        };
+    }, [location.pathname]);
 
     const gridStyle = {
         display: "flex",
