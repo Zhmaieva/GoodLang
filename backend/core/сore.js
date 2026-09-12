@@ -143,6 +143,27 @@ function getGenerationLanguageProfile(level) {
 - Prefer direct, natural English and avoid unnecessary idioms or rare words.`;
 }
 
+function getSentenceLengthGuidance(level) {
+    const normalizedLevel = String(level ?? "").trim().toUpperCase();
+
+    if (["B2", "C1", "C2", "ADVANCED"].includes(normalizedLevel)) {
+        return `- Keep the sentence compact: usually 10-18 words, and never more than 24 words.
+- Use one main idea and normally one independent clause. Use a second clause only when PRIMARY_RULE requires it.
+- Include at most one meaningful lexical challenge; do not turn the sentence into a vocabulary exercise.
+- Prefer a short, clear sentence over a sophisticated or multi-part sentence.`;
+    }
+
+    if (["A2", "B1", "INTERMEDIATE"].includes(normalizedLevel)) {
+        return `- Keep the sentence short: usually 8-15 words, and never more than 20 words.
+- Use one clear main idea and normally one clause. Add a second clause only when PRIMARY_RULE requires it.
+- Use simple sentence structure; vocabulary level may be appropriate, but syntax must stay easy to process.`;
+    }
+
+    return `- Keep the sentence very short: usually 5-12 words, and never more than 16 words.
+- Use one clear idea and one simple clause whenever the grammar rule allows it.
+- Do not add extra details, clauses, contrast, or explanation just to make the sentence interesting.`;
+}
+
 const INTERMEDIATE_DIVERSITY_CONTEXTS = Object.freeze([
     "a disrupted journey or last-minute change of plans",
     "a realistic workplace handover, deadline, or misunderstanding",
@@ -366,10 +387,11 @@ Rules:
 - "en" must contain 2 to 4 acceptable English translations.
 - "hint" must be a short hint in SOURCE_LOCALE about the grammar pattern, without giving away the full answer.
 - Follow LANGUAGE_PROFILE closely. It controls vocabulary range, context maturity, collocations, and idiomaticity; CEFR_LEVEL still controls overall learner accessibility.
+- Follow SENTENCE_LENGTH_GUIDANCE strictly. Short, simple syntax is more important than adding detail or variety.
 - Vocabulary difficulty must not replace or weaken PRIMARY_RULE: every accepted English answer must still demonstrate the requested grammar rule.
-- For intermediate and advanced profiles, avoid mechanically simple sentences whose only difficulty is PRIMARY_RULE.
+- For intermediate and advanced profiles, add difficulty through one useful word or collocation, not through extra clauses or sentence length.
 - The SOURCE_LOCALE sentence must express enough meaning to justify any advanced word, collocation, phrasal verb, or idiomatic English rendering in "en".
-- Follow DIVERSITY_BRIEF as a creative constraint without mentioning it. Vary subjects, sentence openings, semantic domains, and discourse structure instead of falling back to recurring textbook templates.
+- Follow DIVERSITY_BRIEF as a light creative constraint without mentioning it. Vary the situation or subject, but do not combine multiple suggested structures in one sentence.
 - Avoid generic placeholder names and overused scenarios unless DIVERSITY_BRIEF specifically requires them.
 - VOCABULARY_WORD, when provided, is a neutral English dictionary base form.
 - Express the meaning of VOCABULARY_WORD naturally in the SOURCE_LOCALE sentence. Never place the English VOCABULARY_WORD itself in the SOURCE_LOCALE sentence.
@@ -389,6 +411,8 @@ SOURCE_LOCALE: ${sourceLocale}
 CEFR_LEVEL: ${level || "(not specified)"}
 LANGUAGE_PROFILE:
 ${languageProfile}
+SENTENCE_LENGTH_GUIDANCE:
+${getSentenceLengthGuidance(level)}
 DIVERSITY_BRIEF_${diversityBrief.id}:
 ${diversityBrief.text}
 PREVIOUS_SENTENCE_TO_AVOID: ${avoidSentence ? JSON.stringify(String(avoidSentence)) : "(none)"}
@@ -456,9 +480,10 @@ Rules:
 - "rules" should include every PROJECT_RULE needed to judge the sentence.
 - "options" must contain 3 to 5 short choices, including "correct". Use "" as an option only when a zero article / no word answer is appropriate.
 - Follow LANGUAGE_PROFILE closely. It controls the vocabulary range and maturity of the sentence context; CEFR_LEVEL still controls overall learner accessibility.
-- For intermediate and advanced profiles, the surrounding sentence must remain lexically demanding even when the missing answer itself is a short grammar word or form.
-- At advanced level, prefer fluent collocations, phrasal verbs, and idiomatic contemporary contexts while keeping exactly one unambiguous correct option.
-- Follow DIVERSITY_BRIEF as a creative constraint without mentioning it. Vary subjects, sentence openings, semantic domains, and discourse structure instead of falling back to recurring textbook templates.
+- Follow SENTENCE_LENGTH_GUIDANCE strictly. Keep the surrounding sentence short and easy to parse, even when the vocabulary is above beginner level.
+- For intermediate and advanced profiles, use at most one useful lexical challenge; do not make the sentence longer to demonstrate vocabulary.
+- At advanced level, prefer one compact collocation or phrasal verb while keeping exactly one unambiguous correct option.
+- Follow DIVERSITY_BRIEF as a light creative constraint without mentioning it. Vary the situation or subject, but do not combine multiple suggested structures in one sentence.
 - Avoid generic placeholder names and overused scenarios unless DIVERSITY_BRIEF specifically requires them.
 - If PREVIOUS_SENTENCE_TO_AVOID is provided, create a clearly different follow-up sentence:
   - Do not reuse the same subject/person/entity.
@@ -474,6 +499,8 @@ REQUESTED_RULES: ${JSON.stringify(requestedRules)}
 CEFR_LEVEL: ${level || "(not specified)"}
 LANGUAGE_PROFILE:
 ${languageProfile}
+SENTENCE_LENGTH_GUIDANCE:
+${getSentenceLengthGuidance(level)}
 DIVERSITY_BRIEF_${diversityBrief.id}:
 ${diversityBrief.text}
 PREVIOUS_SENTENCE_TO_AVOID: ${avoidSentence ? JSON.stringify(String(avoidSentence)) : "(none)"}
@@ -539,12 +566,13 @@ TEXT_TO_TRANSLATE: ${textToTranslate}
 HINT: ${hint}
 
 TASKS:
-1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to RULES_TO_SCORE_IN_ORDER[0] as the target rule, and if it is a correct translation from TEXT_TO_TRANSLATE. Pay extra attention to accurate translation. Never evaluate correctness of TEXT_TO_TRANSLATE itself. 
-2) If wrong, give a helpful human tip in TARGET_LANGUAGE. Use gender-neutral, impersonal wording. For Ukrainian, avoid gendered past-tense verbs and direct forms such as "побудував", "побудувала", "виправив", "виправила", "зробив", "зробила"; prefer impersonal forms like "побудовано", "варто виправити", "потрібно використати". Do not say that the whole sentence should sound a certain way, because the correct answer is shown separately.
-3) Also, give correct translation from TARGET_LANGUAGE to English.
-4) If LEARNER_ENGLISH is correct and communicates the meaning well, but a native speaker would probably choose a more natural or idiomatic phrasing, return that phrasing in natural_answer. Do not use natural_answer for actual grammar corrections; those belong in correct_answer when answer_is_correct is false. Return null if LEARNER_ENGLISH is incorrect, already natural, or if the natural version would be almost identical.
-5) Check LEARNER_ENGLISH against PROJECT_GRAMMAR_RULES and return every violated rule ID in violated_rules. Use only IDs from PROJECT_GRAMMAR_RULES. This list is the canonical project-wide rule list, not only the rules attached to this sentence.
-6) For each rule in RULES_TO_SCORE_IN_ORDER, give score in output array accordingly: if LEARNER_ENGLISH is full grammatical mismatch of correct translation -> 0; ELSE if this exact particular specific rule was violated anywhere in LEARNER_ENGLISH -> 0; ELSE if absolutely correct -> 1; ELSE if 1 misused word or typo -> 0.95; ELSE if 2-3 misused words or typos -> 0.85; ELSE 0.75
+1) Evaluate if LEARNER_ENGLISH is correct according to English rules and, if when HINT is present, first and foremost according to HINT and also referring to RULES_TO_SCORE_IN_ORDER[0] as the target rule, and if it communicates the meaning of TEXT_TO_TRANSLATE. Mark it incorrect for a grammar violation, materially changed meaning, or an unintelligible answer. Do not mark it incorrect only for a minor spelling or vocabulary issue that does not obscure the meaning or the requested grammar. Never evaluate correctness of TEXT_TO_TRANSLATE itself.
+2) Focus this evaluation on grammar, the requested rule, and whether the meaning is understandable. Do not analyze, enumerate, or explain spelling, vocabulary, or word-choice mistakes; the separate vocabulary evaluator handles those details. If a lexical mistake does not prevent understanding or obscure the requested grammar, do not make it the focus of the result.
+3) If wrong, give a helpful human tip in TARGET_LANGUAGE. Keep the tip focused on grammar and the requested rule. Use gender-neutral, impersonal wording. For Ukrainian, avoid gendered past-tense verbs and direct forms such as "побудував", "побудувала", "виправив", "виправила", "зробив", "зробила"; prefer impersonal forms like "побудовано", "варто виправити", "потрібно використати". Do not say that the whole sentence should sound a certain way, because the correct answer is shown separately.
+4) Also, give correct translation from TARGET_LANGUAGE to English.
+5) If LEARNER_ENGLISH is grammatically correct and communicates the meaning well, but a native speaker would probably choose a more natural or idiomatic phrasing, return that phrasing in natural_answer. Do not use natural_answer for actual grammar corrections; those belong in correct_answer when answer_is_correct is false. Return null if LEARNER_ENGLISH is incorrect, already natural, or if the natural version would be almost identical. Do not use natural_answer to discuss vocabulary mistakes.
+6) Check LEARNER_ENGLISH against PROJECT_GRAMMAR_RULES and return every violated grammar rule ID in violated_rules. Use only IDs from PROJECT_GRAMMAR_RULES. This list is the canonical project-wide rule list, not only the rules attached to this sentence.
+7) For each rule in RULES_TO_SCORE_IN_ORDER, score only that rule: use 0 when it is violated and 1 when it is satisfied. Do not reduce a rule score for spelling, vocabulary, or word-choice issues unless they make the grammar rule impossible to evaluate.
 
 LEARNER_ENGLISH: ${userEnglish || "(none)"}
 `;
