@@ -21,6 +21,10 @@ import { callAccountInfoApi, callManageSubscriptionApi } from "../../services/ap
 import { localizationService } from "../../localization/localizationService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
 import {
+    PRIVACY_POLICY_SECTIONS,
+    TERMS_OF_SERVICE_SECTIONS,
+} from "../../legal/legalDocuments.js";
+import {
     APP_ACCENT_COLOR,
     APP_ACCENT_SOFT_COLOR,
     APP_BACKGROUND_COLOR,
@@ -393,6 +397,10 @@ export default function ProfilePage({ theme }) {
             label: "Terms of Service",
             },
         {
+            value: "deletion",
+            label: "User data deletion",
+            },
+        {
             value: "contact",
             label: "Contact: goodlang.app@gmail.com",
             },
@@ -474,34 +482,51 @@ export default function ProfilePage({ theme }) {
         margin: "0 0 12px",
     };
 
+    const legalHeadingStyle = {
+        margin: "22px 0 8px",
+        color: colors.text,
+        fontSize: "1.05rem",
+        lineHeight: 1.3,
+        fontWeight: 800,
+    };
+
     const backButtonStyle = {
         marginTop: 14,
         boxShadow: "none",
     };
 
+    const renderLegalSections = (sections) => (
+        <div style={legalContentStyle}>
+            {sections.map((section, sectionIndex) => (
+                <section key={section.title}>
+                    <h3
+                        style={{
+                            ...legalHeadingStyle,
+                            marginTop: sectionIndex === 0 ? 0 : legalHeadingStyle.margin,
+                        }}
+                    >
+                        {section.title}
+                    </h3>
+                    {section.paragraphs.map((paragraph, paragraphIndex) => (
+                        <p
+                            key={`${section.title}-${paragraphIndex}`}
+                            style={paragraphIndex === section.paragraphs.length - 1
+                                ? { ...legalParagraphStyle, marginBottom: 0 }
+                                : legalParagraphStyle}
+                        >
+                            {paragraph}
+                        </p>
+                    ))}
+                </section>
+            ))}
+        </div>
+    );
+
     const renderLegalDocument = () => {
         if (legalView === "privacy") {
             return (
                 <>
-                    <div style={legalContentStyle}>
-                        <p style={legalParagraphStyle}>
-                            GoodLang stores only the personal data needed to run the service:
-                            your email address and practice results, such as scores, completion time,
-                            and grammar rule codes.
-                        </p>
-                        <p style={legalParagraphStyle}>
-                            We do not store the full text of your answers. We may collect analytical
-                            and technical metadata to improve service quality and performance.
-                        </p>
-                        <p style={legalParagraphStyle}>
-                            You can request deletion of your personal data by contacting us at
-                            {" "}goodlang.app@gmail.com.
-                        </p>
-                        <p style={{ margin: 0 }}>
-                            Payments are processed by Stripe. Stripe may process payment data under
-                            its own privacy and payment policies.
-                        </p>
-                    </div>
+                    {renderLegalSections(PRIVACY_POLICY_SECTIONS)}
                     <Button
                         variant="primary"
                         compact
@@ -519,23 +544,39 @@ export default function ProfilePage({ theme }) {
         if (legalView === "terms") {
             return (
                 <>
+                    {renderLegalSections(TERMS_OF_SERVICE_SECTIONS)}
+                    <Button
+                        variant="primary"
+                        compact
+                        fullWidth
+                        theme={theme}
+                        style={backButtonStyle}
+                        onClick={() => setLegalView("menu")}
+                    >
+                        Back
+                    </Button>
+                </>
+            );
+        }
+
+        if (legalView === "deletion") {
+            return (
+                <>
                     <div style={legalContentStyle}>
                         <p style={legalParagraphStyle}>
-                            By using GoodLang, you agree to use the service in good faith and only
-                            for its intended learning purpose.
+                            For registered users, GoodLang retains only the server data needed to
+                            operate the account and service. This may include the account email,
+                            service usage history, practice scores, completion time, grammar rule
+                            codes, and analytical or technical metadata. We do not store the full
+                            text of your answers.
                         </p>
                         <p style={legalParagraphStyle}>
-                            Paid subscriptions renew automatically unless canceled before the end of
-                            the current billing cycle. Subscription management and payment processing
-                            are handled through Stripe.
-                        </p>
-                        <p style={legalParagraphStyle}>
-                            The service is provided as is. We do not guarantee specific learning
-                            outcomes or uninterrupted availability.
+                            To request deletion of your server data, email
+                            {" "}<a href="mailto:goodlang.app@gmail.com">goodlang.app@gmail.com</a>
+                            {" "}and provide the email address associated with your GoodLang account.
                         </p>
                         <p style={{ margin: 0 }}>
-                            We may update these terms and notify users about significant changes by
-                            email.
+                            Data belonging to non-registered users is not retained on the GoodLang server.
                         </p>
                     </div>
                     <Button
@@ -704,7 +745,7 @@ export default function ProfilePage({ theme }) {
                             key: "legal",
                             icon: <ShieldCheck style={iconStyle} weight="regular" />,
                             title: "Legal",
-                            subtitle: "Privacy Policy, Terms of Service, Contact",
+                            subtitle: "Privacy, terms, and user data deletion",
                             divider: false,
                             onClick: openLegalMenu,
                         })}
@@ -808,8 +849,16 @@ export default function ProfilePage({ theme }) {
                 open={legalVisible}
                 id="profile-legal-modal"
                 theme={theme}
-                title={legalView === "menu" ? "Legal" : legalView === "privacy" ? "Privacy Policy" : "Terms of Service"}
-                subtitle={legalView === "menu" ? "Privacy Policy, Terms of Service, and contact information." : null}
+                title={legalView === "menu"
+                    ? "Legal"
+                    : legalView === "privacy"
+                        ? "Privacy Policy"
+                        : legalView === "deletion"
+                            ? "User data deletion"
+                            : "Terms of Service"}
+                subtitle={legalView === "menu"
+                    ? "Privacy Policy, Terms of Service, user data deletion, and contact information."
+                    : null}
                 onClose={closeLegalModal}
                 maxWidth={560}
                 titleStyle={{ fontSize: "1.75rem" }}

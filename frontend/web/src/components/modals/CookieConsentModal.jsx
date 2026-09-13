@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../Buttons.jsx";
+import { isCookieConsentManagedNatively } from "../../services/settingsService.js";
 import ModalShell from "./ModalShell.jsx";
 
 export default function CookieConsentModal({
@@ -9,6 +10,11 @@ export default function CookieConsentModal({
                                                onOpenPolicy,
                                                disableLinks = false,
                                            }) {
+    // Native GoodLang manages this decision outside the website. Keep this
+    // guard in the modal itself so direct state changes in any parent can
+    // never display the web cookie prompt inside the mobile app.
+    if (isCookieConsentManagedNatively()) return null;
+
     const buttonStyle = {
         backgroundColor: theme.dark,
         color: "#fff",

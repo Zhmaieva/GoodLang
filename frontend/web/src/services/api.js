@@ -419,7 +419,22 @@ export async function callManageSubscriptionApi() {
     return { ...data, isSuccess: true };
 }
 
-export async function callVocabularyApi() {
+function accountCanSyncData(account) {
+    return account?.status === "paid" || account?.status === "attention";
+}
+
+export async function callVocabularyApi(account = null) {
+    const accountInfo = account ?? await callAccountInfoApi();
+    if (!accountCanSyncData(accountInfo)) {
+        return {
+            isSuccess: true,
+            syncSkipped: true,
+            state: "localOnly",
+            words: [],
+            summary: null,
+        };
+    }
+
     const url = `${API_BASE}/vocabulary`;
 
     const res = await apiFetch(url, {
@@ -473,7 +488,12 @@ export async function callVocabularyTranslationsApi(payload = {}, { signal } = {
     return { ...data, isSuccess: true };
 }
 
-export async function callSaveVocabularyCandidatesApi(payload = {}) {
+export async function callSaveVocabularyCandidatesApi(payload = {}, account = null) {
+    const accountInfo = account ?? await callAccountInfoApi();
+    if (!accountCanSyncData(accountInfo)) {
+        return { isSuccess: true, syncSkipped: true };
+    }
+
     const url = `${API_BASE}/vocabulary/candidates`;
     const body = Array.isArray(payload)
         ? { candidates: payload }

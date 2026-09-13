@@ -8,6 +8,7 @@ import {dataSyncController} from "./controllers/dataSyncController.js";
 import {filesController} from "./controllers/filesController.js";
 import {marathonsController} from "./controllers/marathonsController.js";
 import {vocabularyController} from "./controllers/vocabularyController.js";
+import {legalController} from "./controllers/legalController.js";
 
 const args = process.argv;
 const portIndex = args.indexOf('-p');
@@ -41,6 +42,7 @@ dataSyncController.mapRoutes(app);
 filesController.mapRoutes(app);
 marathonsController.mapRoutes(app);
 vocabularyController.mapRoutes(app);
+legalController.mapRoutes(app);
 
 // Catch-all handler for undefined routes
 app.use(async (req, res) => {

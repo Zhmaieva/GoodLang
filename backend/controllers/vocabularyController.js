@@ -18,6 +18,7 @@ import {
     getVocabularyForUser,
     upsertVocabularyCandidates,
 } from "../database/repositories/vocabularyRepository.js";
+import { getAccountInfo } from "../database/repositories/accountsRepository.js";
 
 const name = "vocabulary";
 
@@ -33,10 +34,22 @@ async function ensureVocabularyQuota(accountId, res) {
     return false;
 }
 
+async function ensureVocabularySyncAllowed(accountId, res) {
+    const accountInfo = await getAccountInfo(accountId);
+    if (accountInfo?.status === "paid" || accountInfo?.status === "attention") {
+        return true;
+    }
+
+    res.status(400).json({ error: "Can't sync free account" });
+    return false;
+}
+
 export const vocabularyController = {
     mapRoutes: function (app) {
         app.get(`/${name}`, authMiddleware, async (req, res) => {
             try {
+                if (!(await ensureVocabularySyncAllowed(req.user.id, res))) return;
+
                 const translationCount = await getTranslationCallCountSince(req.user.id, new Date(0));
 
                 if (translationCount === 0) {
@@ -107,6 +120,8 @@ export const vocabularyController = {
 
         app.post(`/${name}/candidates`, authMiddleware, async (req, res) => {
             try {
+                if (!(await ensureVocabularySyncAllowed(req.user.id, res))) return;
+
                 const candidates = Array.isArray(req.body?.candidates)
                     ? req.body.candidates
                     : [];

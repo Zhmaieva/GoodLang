@@ -254,6 +254,15 @@ export default function VocabularyPage({ theme }) {
         callVocabularyApi()
             .then((data) => {
                 if (cancelled) return;
+                if (data?.syncSkipped) {
+                    const localWords = getLocalVocabularyWords(localizationService.getLocale() || "uk-UA");
+                    setWords(localWords);
+                    setSummary(buildLocalVocabularySummary(localWords));
+                    setVocabularyState(localWords.length > 0 ? "ready" : "noPracticeYet");
+                    setLoadError("");
+                    return;
+                }
+
                 const mergedWords = mergeVocabularyWords(data?.words, localizationService.getLocale() || "uk-UA");
                 setWords(mergedWords);
                 setSummary(buildLocalVocabularySummary(mergedWords));
