@@ -15,7 +15,6 @@ import {
 import {
     APP_BORDER_COLOR,
     APP_DARK_COLOR,
-    APP_MUTED_TEXT_COLOR,
     APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../theme.js";
@@ -96,10 +95,6 @@ export default function SiteHeader({
         navigate("/analytics");
     };
 
-    const handleBackToRulesClick = async () => {
-        await handleAnalyticsClick();
-    };
-
     const handleLogoClick = () => {
         const trainerIsMounted = ["/", "/trainer", "/greetings", "/hello"].includes(location.pathname);
 
@@ -136,12 +131,10 @@ export default function SiteHeader({
 
     const level = controlledLevel ?? internalLevel;
     const pathname = location.pathname;
-    const isRulePage = pathname.startsWith("/rule/");
     const isProfilePage = pathname.startsWith("/profile");
     const border = theme?.border ?? APP_BORDER_COLOR;
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
-    const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
     const dark = theme?.dark ?? APP_DARK_COLOR;
 
     const headerStyle = {
@@ -242,17 +235,6 @@ export default function SiteHeader({
         whiteSpace: "nowrap",
     };
 
-    const backToRulesButtonStyle = {
-        color: muted,
-        fontFamily: "var(--font-family-base)",
-        fontSize: isMobile ? "0.92rem" : "0.98rem",
-        fontWeight: 500,
-        letterSpacing: 0,
-        marginLeft: isRulePage && !isMobile ? 42 : 0,
-        padding: 0,
-        textDecoration: "none",
-    };
-
     const settingsContentStyle = {
         display: "grid",
         gap: 14,
@@ -300,18 +282,6 @@ export default function SiteHeader({
                             <span style={logoWordmarkStyle}>Good Lang</span>
                         </button>
 
-                        {isRulePage && !isInMarathonView && (
-                            <Button
-                                variant="plain"
-                                compact
-                                isMobile={isMobile}
-                                theme={theme}
-                                style={backToRulesButtonStyle}
-                                onClick={handleBackToRulesClick}
-                            >
-                                ← Back to rules
-                            </Button>
-                        )}
                     </div>
 
                     {!isMobile && !isInMarathonView && (

@@ -536,10 +536,6 @@ export default function ResultCard({
                         <h2 style={styles.title}>{isCorrect ? "Correct!" : "Almost there!"}</h2>
                         {isCorrect && hasNaturalAnswer ? (
                             <p style={styles.subtitle}>Nice work! You expressed the idea well.</p>
-                        ) : !isCorrect ? (
-                            <p style={styles.subtitle}>
-                                You're on the right track. Let's fix a small detail.
-                            </p>
                         ) : null}
                     </div>
 

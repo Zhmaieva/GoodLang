@@ -3,13 +3,20 @@ import AccuracyKpi from "./training/AccuracyKpi.jsx";
 import LevelKpi from "./training/LevelKpi.jsx";
 import {
     APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
     APP_BORDER_COLOR,
     APP_MUTED_TEXT_COLOR,
     APP_SURFACE_COLOR,
     APP_TEXT_COLOR,
 } from "../theme.js";
 
-export default function KPIGrid({ theme, attempts, masteredRules }) {
+export default function KPIGrid({
+    theme,
+    attempts,
+    masteredRules,
+    masteredRulesSelected = false,
+    onMasteredRulesClick,
+}) {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 915);
 
     useEffect(() => {
@@ -111,7 +118,23 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
                 </div>
             </div>
 
-            <div style={cardStyle}>
+            <button
+                type="button"
+                aria-pressed={masteredRulesSelected}
+                onClick={onMasteredRulesClick}
+                style={{
+                    ...cardStyle,
+                    borderColor: masteredRulesSelected
+                        ? theme?.accent ?? APP_ACCENT_COLOR
+                        : CARD_BORDER,
+                    background: masteredRulesSelected
+                        ? theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR
+                        : CARD_BG,
+                    color: TEXT,
+                    cursor: "pointer",
+                    fontFamily: "inherit",
+                }}
+            >
                 <div>
                     <div style={labelStyle}>Rules learned</div>
                     <div style={valueStyle}>{masteredRules ?? 0}</div>
@@ -121,7 +144,7 @@ export default function KPIGrid({ theme, attempts, masteredRules }) {
                         <i style={sparkFillStyle(masteredPct)} />
                     </div>
                 </div>
-            </div>
+            </button>
 
             <LevelKpi mobile={isMobile} theme={theme} />
         </section>

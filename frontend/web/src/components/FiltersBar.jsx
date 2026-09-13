@@ -111,6 +111,7 @@ export default function FiltersBar({
                     isMobile={isMobile}
                     shadowOffset={0}
                     onClick={onToggleWeak}
+                    aria-pressed={showWeakOnly}
                     style={{
                         backgroundColor: showWeakOnly ? accentSoft : surface,
                         color: showWeakOnly ? accent : text,
@@ -118,7 +119,7 @@ export default function FiltersBar({
                         outline: "none",
                     }}
                 >
-                    {showWeakOnly ? "Show all" : "Weak only"}
+                    Weak only
                 </Button>
             )}
         </div>

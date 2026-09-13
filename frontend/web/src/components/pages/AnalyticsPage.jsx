@@ -30,7 +30,7 @@ export default function AnalyticsPage({theme}) {
     const [rules, setRules] = useState([...getAllStatistics()]);
     const [words, setWords] = useState(seedWordsMap());
     const [filterLevel, setFilterLevel] = useState("all");
-    const [showWeakOnly, setShowWeakOnly] = useState(false);
+    const [statusFilter, setStatusFilter] = useState("all");
     const [query, setQuery] = useState("");
     const [queue, setQueue] = useState([]);
     const [account, setAccount] = useState(null);
@@ -103,10 +103,17 @@ export default function AnalyticsPage({theme}) {
     }, [rules, filterLevel, query]);
 
 
-    const tableRows = useMemo(
-        () => (showWeakOnly ? filteredRules.filter(r => statusOf(r).cls === "bad") : filteredRules),
-        [filteredRules, showWeakOnly]
-    );
+    const tableRows = useMemo(() => {
+        if (statusFilter === "learned") {
+            return filteredRules.filter((rule) => statusOf(rule).cls === "ok");
+        }
+
+        if (statusFilter === "weak") {
+            return filteredRules.filter((rule) => statusOf(rule).cls === "bad");
+        }
+
+        return filteredRules;
+    }, [filteredRules, statusFilter]);
 
     const kpis = useMemo(() => computeKPIs(filteredRules), [filteredRules]);
     const vocab = useMemo(() => computeVocab(words), [words]);
@@ -178,6 +185,8 @@ export default function AnalyticsPage({theme}) {
                                 theme={theme}
                                 attempts={kpis.totalAttempts}
                                 masteredRules={kpis.mastered}
+                                masteredRulesSelected={statusFilter === "learned"}
+                                onMasteredRulesClick={() => setStatusFilter("learned")}
                             />
                         }
 
@@ -187,8 +196,10 @@ export default function AnalyticsPage({theme}) {
                             onLevelChange={setFilterLevel}
                             query={query}
                             onQueryChange={setQuery}
-                            showWeakOnly={showWeakOnly}
-                            onToggleWeak={() => setShowWeakOnly(v => !v)}
+                            showWeakOnly={statusFilter === "weak"}
+                            onToggleWeak={() => setStatusFilter((current) => (
+                                current === "weak" ? "all" : "weak"
+                            ))}
                             theme={theme}
                         />
                         <div style={{ marginBottom: 0 }}>

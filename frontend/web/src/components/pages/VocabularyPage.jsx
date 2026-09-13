@@ -129,16 +129,24 @@ function SummaryCard({
     isMobile,
     compactValue = false,
     hideProgress = false,
+    selected = false,
+    onClick,
 }) {
     const text = theme?.text ?? APP_TEXT_COLOR;
     const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
     const safeProgress = Math.max(0, Math.min(100, Number(progress) || 0));
+    const Card = onClick ? "button" : "article";
 
     return (
-        <article
+        <Card
+            type={onClick ? "button" : undefined}
+            aria-pressed={onClick ? selected : undefined}
+            onClick={onClick}
             style={{
                 minHeight: isMobile ? 104 : 120,
-                border: `1px solid ${theme?.border ?? APP_BORDER_COLOR}`,
+                border: `1px solid ${selected
+                    ? theme?.accent ?? APP_ACCENT_COLOR
+                    : theme?.border ?? APP_BORDER_COLOR}`,
                 borderRadius: 18,
                 padding: isMobile ? 16 : 22,
                 boxSizing: "border-box",
@@ -148,8 +156,14 @@ function SummaryCard({
                 flexDirection: "column",
                 justifyContent: "space-between",
                 gap: 14,
-                background: APP_SURFACE_COLOR,
+                background: selected
+                    ? theme?.accentSoft ?? "#f1f1fb"
+                    : APP_SURFACE_COLOR,
                 boxShadow: "0 16px 44px rgba(31, 36, 54, 0.06)",
+                color: text,
+                cursor: onClick ? "pointer" : "default",
+                fontFamily: "inherit",
+                textAlign: "left",
             }}
         >
             <div>
@@ -202,7 +216,7 @@ function SummaryCard({
                     />
                 </div>
             )}
-        </article>
+        </Card>
     );
 }
 
@@ -216,7 +230,7 @@ export default function VocabularyPage({ theme }) {
     const [loading, setLoading] = useState(true);
     const [loadError, setLoadError] = useState("");
     const [filterLevel, setFilterLevel] = useState("all");
-    const [showWeakOnly, setShowWeakOnly] = useState(false);
+    const [statusFilter, setStatusFilter] = useState("needsPractice");
     const [query, setQuery] = useState("");
     const [sortKey, setSortKey] = useState("level");
     const [sortDir, setSortDir] = useState("asc");
@@ -321,9 +335,9 @@ export default function VocabularyPage({ theme }) {
         const levelFiltered = filterLevel === "all"
             ? [...words]
             : words.filter((word) => getVocabularyLevelName(word.level).toLowerCase() === filterLevel);
-        const list = showWeakOnly
-            ? levelFiltered.filter((word) => getDisplayStatus(word) === "needsPractice")
-            : levelFiltered;
+        const list = statusFilter === "all"
+            ? levelFiltered
+            : levelFiltered.filter((word) => getDisplayStatus(word) === statusFilter);
         const direction = sortDir === "asc" ? 1 : -1;
 
         const matchingWords = normalizedQuery
@@ -355,7 +369,7 @@ export default function VocabularyPage({ theme }) {
         });
 
         return matchingWords;
-    }, [filterLevel, query, showWeakOnly, sortKey, sortDir, words]);
+    }, [filterLevel, query, sortKey, sortDir, statusFilter, words]);
 
     const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
 
@@ -367,7 +381,7 @@ export default function VocabularyPage({ theme }) {
 
     useEffect(() => {
         setPage(1);
-    }, [filterLevel, query, showWeakOnly, sortKey, sortDir]);
+    }, [filterLevel, query, sortKey, sortDir, statusFilter]);
 
     useEffect(() => {
         setPage((currentPage) => Math.min(currentPage, totalPages));
@@ -611,6 +625,8 @@ export default function VocabularyPage({ theme }) {
                                 label="Learned words"
                                 value={learnedWordsSummary.value}
                                 progress={learnedWordsProgress}
+                                selected={statusFilter === "learned"}
+                                onClick={() => setStatusFilter("learned")}
                             />
                             <SummaryCard
                                 theme={theme}
@@ -618,6 +634,8 @@ export default function VocabularyPage({ theme }) {
                                 label="Needs practice"
                                 value={needsPracticeSummary.value}
                                 progress={needsPracticeProgress}
+                                selected={statusFilter === "needsPractice"}
+                                onClick={() => setStatusFilter("needsPractice")}
                             />
                         </section>
 
@@ -628,8 +646,10 @@ export default function VocabularyPage({ theme }) {
                                     onLevelChange={setFilterLevel}
                                     query={query}
                                     onQueryChange={setQuery}
-                                    showWeakOnly={showWeakOnly}
-                                    onToggleWeak={() => setShowWeakOnly((current) => !current)}
+                                    showWeakOnly={statusFilter === "needsPractice"}
+                                    onToggleWeak={() => setStatusFilter((current) => (
+                                        current === "needsPractice" ? "all" : "needsPractice"
+                                    ))}
                                     searchPlaceholder="Search word or translation…"
                                     searchAriaLabel="Search vocabulary by word or translation"
                                     theme={theme}
