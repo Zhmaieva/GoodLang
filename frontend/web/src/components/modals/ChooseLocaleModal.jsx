@@ -107,8 +107,8 @@ export default function ChooseLocaleModal({
             open={open}
             id="choose-locale-modal"
             theme={theme}
-            title="Choose your native language"
-            subtitle="Pick the language you naturally speak."
+            title="Your mother tongue"
+            subtitle="Choose one that you naturally speak."
             titleStyle={{ fontSize: "1.75rem" }}
             onClose={handleCancel}
             closeDisabled={!canCancel}
@@ -143,12 +143,6 @@ export default function ChooseLocaleModal({
                         );
                     })}
                 </div>
-
-                {!canCancel && (
-                    <p style={disabledHintStyle}>
-                        Choose your native language to continue.
-                    </p>
-                )}
 
         </ModalShell>
     );

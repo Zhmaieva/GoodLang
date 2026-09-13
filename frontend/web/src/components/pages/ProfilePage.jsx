@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
     CaretRight,
     ChartBar,
@@ -16,6 +16,7 @@ import ModalShell from "../modals/ModalShell.jsx";
 import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "../subscription/AccountStatusModal.jsx";
 import LoginModal from "../subscription/LoginModal.jsx";
+import FrontendLogsModal from "../modals/FrontendLogsModal.jsx";
 import { callAccountInfoApi, callManageSubscriptionApi } from "../../services/api.js";
 import { localizationService } from "../../localization/localizationService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
@@ -106,6 +107,8 @@ export default function ProfilePage({ theme }) {
     const [levelVisible, setLevelVisible] = useState(false);
     const [legalVisible, setLegalVisible] = useState(false);
     const [emailChangeVisible, setEmailChangeVisible] = useState(false);
+    const [frontendLogsVisible, setFrontendLogsVisible] = useState(false);
+    const profileTitlePressCountRef = useRef(0);
     const [legalView, setLegalView] = useState("menu");
     const [selectedLevel, setSelectedLevel] = useState(getSavedTrainingLevel() || "managed");
     const [isMobile, setIsMobile] = useState(
@@ -225,6 +228,14 @@ export default function ProfilePage({ theme }) {
     const closeBillingModal = () => {
         setBillingVisible(false);
         setBillingError("");
+    };
+
+    const handleProfileTitlePress = () => {
+        profileTitlePressCountRef.current += 1;
+        if (profileTitlePressCountRef.current < 10) return;
+
+        profileTitlePressCountRef.current = 0;
+        setFrontendLogsVisible(true);
     };
 
     const pageStyle = {
@@ -614,12 +625,16 @@ export default function ProfilePage({ theme }) {
                         <div style={heroInfoStyle}>
                             <div>
                                 <h1
+                                    onClick={handleProfileTitlePress}
                                     style={{
                                         margin: 0,
                                         color: colors.text,
                                         fontSize: isMobile ? 28 : 34,
                                         lineHeight: 1.06,
                                         fontWeight: 850,
+                                        userSelect: "none",
+                                        WebkitUserSelect: "none",
+                                        touchAction: "manipulation",
                                     }}
                                 >
                                     My profile
@@ -802,6 +817,11 @@ export default function ProfilePage({ theme }) {
             >
                 {renderLegalDocument()}
             </ModalShell>
+            <FrontendLogsModal
+                open={frontendLogsVisible}
+                theme={theme}
+                onClose={() => setFrontendLogsVisible(false)}
+            />
         </div>
     );
 }

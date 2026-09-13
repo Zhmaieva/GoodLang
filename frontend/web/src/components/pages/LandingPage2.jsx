@@ -58,19 +58,19 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           tools = [
                                                               {
                                                                   title: "Translate sentences from you mother tongue into English",
-                                                                  url: "../../../1.PNG"
+                                                                  url: `${import.meta.env.BASE_URL}1.PNG`
                                                               },
                                                               {
                                                                   title: "See exactly where you made a mistake — with explanations and examples",
-                                                                  url: "../../../2.PNG"
+                                                                  url: `${import.meta.env.BASE_URL}2.PNG`
                                                               },
                                                               {
                                                                   title: "Get a list of rules to study",
-                                                                  url: "../../../3.PNG"
+                                                                  url: `${import.meta.env.BASE_URL}3.PNG`
                                                               },
                                                               {
                                                                   title: "The next sentence is selected based on your level",
-                                                                  url: "../../../4.PNG"
+                                                                  url: `${import.meta.env.BASE_URL}4.PNG`
                                                               },
                                                           ],
 
@@ -82,19 +82,19 @@ export default function GoodLangLandingTeaStyleThemed({
                                                                   quote:
                                                                       "For me, unlike every other type of exercise, repeated translation really works.",
                                                                   name: "Ivanna",
-                                                                  url: "../../../u1.jpg"
+                                                                  url: `${import.meta.env.BASE_URL}u1.jpg`
                                                               },
                                                               {
                                                                   quote:
                                                                       "I used to feel like sometimes I knew English at a C1 level, and other times I couldn’t put two words together. Now I’ve started speaking confidently.",
                                                                   name: "Vlad",
-                                                                  url: "../../../u2.jpg"
+                                                                  url: `${import.meta.env.BASE_URL}u2.jpg`
                                                               },
                                                               {
                                                                   quote:
                                                                       "I can actually see my progress instead of guessing whether my English has improved.",
                                                                   name: "Maksym",
-                                                                  url: "../../../u3.jpg"
+                                                                  url: `${import.meta.env.BASE_URL}u3.jpg`
                                                               },
                                                           ],
 
@@ -110,8 +110,8 @@ export default function GoodLangLandingTeaStyleThemed({
                                                           emailPlaceholder = "you@example.com",
 
                                                           heroScreens = [
-                                                              { src: "../../../shot1.jpg", alt: "App screen 1" },
-                                                              { src: "../../../shot2.jpg", alt: "App screen 2" },
+                                                              { src: `${import.meta.env.BASE_URL}shot1.jpg`, alt: "App screen 1" },
+                                                              { src: `${import.meta.env.BASE_URL}shot2.jpg`, alt: "App screen 2" },
                                                               // { src: "../../../public/shot3.png", alt: "App screen 3" },
                                                           ],
 

@@ -2,9 +2,9 @@ import React, { useMemo, useRef, useState } from "react";
 import {callSendInquiry} from "../../services/api.js";
 import { Button } from "../Buttons.jsx";
 
-// Uses /public/handPict.png
-// In Vite/CRA, "/handPict.png" resolves to public asset.
-const handSrc = "/handPict.png";
+// Uses /public/handPict.PNG.
+// BASE_URL is "/" on the website and "./" in the bundled native build.
+const handSrc = `${import.meta.env.BASE_URL}handPict.PNG`;
 
 const TOKENS = {
     bg0: "#fff3df",
@@ -159,8 +159,8 @@ export default function GoodLangSchoolsLanding2() {
                 </div>
             </div>
 
-            <img className="gl-hand-right" src={'handPict.PNG'} />
-            <img className="gl-hand-left" src={'handPict.PNG'} />
+            <img className="gl-hand-right" src={handSrc} alt="" />
+            <img className="gl-hand-left" src={handSrc} alt="" />
 
             {/* HERO */}
             <Section
@@ -216,7 +216,7 @@ export default function GoodLangSchoolsLanding2() {
                             <div style={{
                                 height: 0,
                             }}>
-                                <img className={'gl-card-img'} src={'1list.PNG'}/>
+                                <img className={'gl-card-img'} src={`${import.meta.env.BASE_URL}1list.PNG`} alt=""/>
                             </div>
                         </div>
                         <div className="gl-bulletText">
@@ -238,7 +238,7 @@ export default function GoodLangSchoolsLanding2() {
                             <div style={{
                                 height: 0,
                             }}>
-                                <img className={'gl-card-img'} src={'1lamp.PNG'}/>
+                                <img className={'gl-card-img'} src={`${import.meta.env.BASE_URL}1lamp.PNG`} alt=""/>
                             </div>
                         </div>
                         <div className="gl-bulletText">
@@ -259,7 +259,7 @@ export default function GoodLangSchoolsLanding2() {
                             <div style={{
                                 height: 0,
                             }}>
-                                <img className={'gl-card-img'} src={'hand3.PNG'}/>
+                                <img className={'gl-card-img'} src={`${import.meta.env.BASE_URL}hand3.PNG`} alt=""/>
                             </div>
                         </div>
                         <div className="gl-bulletText">
@@ -381,7 +381,7 @@ export default function GoodLangSchoolsLanding2() {
                                             width: 42,
                                             position: "relative",
                                             top: -10,
-                                        }} src={'hand3.PNG'}/>
+                                        }} src={`${import.meta.env.BASE_URL}hand3.PNG`} alt=""/>
                                     </div>
 
                                 </div>
@@ -438,7 +438,7 @@ export default function GoodLangSchoolsLanding2() {
                                             width: 42,
                                             position: "relative",
                                             top: -10,
-                                        }} src={'1message.PNG'}/>
+                                        }} src={`${import.meta.env.BASE_URL}1message.PNG`} alt=""/>
                                     </div>
 
                                 </div>
@@ -497,7 +497,7 @@ export default function GoodLangSchoolsLanding2() {
                                             width: 42,
                                             position: "relative",
                                             top: -10,
-                                        }} src={'1lamp.PNG'}/>
+                                        }} src={`${import.meta.env.BASE_URL}1lamp.PNG`} alt=""/>
                                     </div>
 
                                 </div>

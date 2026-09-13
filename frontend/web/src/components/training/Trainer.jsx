@@ -63,6 +63,7 @@ export default function Trainer({
     const [animationViewportWidth, setAnimationViewportWidth] = useState(
         () => typeof window !== "undefined" ? window.innerWidth : 1440
     );
+    const shouldAutoFocusTrainerInput = !notFocused && !isMobileAnimation;
     const shakespeareAnimation = useMemo(
         () => createShakespeareTrainerAnimation(isMobileAnimation),
         [isMobileAnimation]
@@ -215,39 +216,6 @@ export default function Trainer({
     // weak rules
     const [weakRules, setWeakRules] = useState([]);
     const [violatedRule, setViolatedRule] = useState("");
-
-    const resetTrainerScroll = useCallback(() => {
-        if (notFocused) return;
-        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-    }, [notFocused]);
-
-    useEffect(() => {
-        if (notFocused || !window.visualViewport) return;
-
-        const viewport = window.visualViewport;
-        let largestHeight = viewport.height;
-        let keyboardWasOpen = false;
-        let resetFrame = null;
-
-        const handleViewportResize = () => {
-            largestHeight = Math.max(largestHeight, viewport.height);
-            const keyboardIsOpen = largestHeight - viewport.height > 140;
-
-            if (keyboardWasOpen && !keyboardIsOpen) {
-                if (resetFrame != null) window.cancelAnimationFrame(resetFrame);
-                resetFrame = window.requestAnimationFrame(resetTrainerScroll);
-            }
-            keyboardWasOpen = keyboardIsOpen;
-        };
-
-        viewport.addEventListener("resize", handleViewportResize);
-        return () => {
-            viewport.removeEventListener("resize", handleViewportResize);
-            if (resetFrame != null) window.cancelAnimationFrame(resetFrame);
-        };
-    }, [notFocused, resetTrainerScroll]);
 
     const setHint = (value) => {
         setHintValue(value);
@@ -1463,7 +1431,7 @@ export default function Trainer({
         setIsEvaluating(false);
 
         window.setTimeout(() => {
-            if (taskType !== "gap" && !notFocused && textareaRef.current) {
+            if (taskType !== "gap" && shouldAutoFocusTrainerInput && textareaRef.current) {
                 textareaRef.current.focus({ preventScroll: true });
             }
         }, 0);
@@ -1535,8 +1503,10 @@ export default function Trainer({
     // Focus textarea only for translation tasks
     useEffect(() => {
         if (taskType === "gap") return;
-        if (mode === "check" && !notFocused && textareaRef.current && !loading) textareaRef.current.focus();
-    }, [mode, loading, taskType, notFocused]);
+        if (mode === "check" && shouldAutoFocusTrainerInput && textareaRef.current && !loading) {
+            textareaRef.current.focus({ preventScroll: true });
+        }
+    }, [mode, loading, taskType, shouldAutoFocusTrainerInput]);
 
     // Also enforce lock if difficulty changes away from A1
     useEffect(() => {

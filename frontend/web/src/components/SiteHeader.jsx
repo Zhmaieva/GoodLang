@@ -7,11 +7,8 @@ import ModalShell from "./modals/ModalShell.jsx";
 import { callAccountInfoApi } from "../services/api.js";
 import { marathonService } from "../services/marathonService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../services/trainingDirector.js";
-import { emit, off, on } from "../services/events.js";
-import {
-    TRAINER_ANIMATION_EVENTS,
-    TRAINER_ANIMATION_PENDING_KEY,
-} from "../animations/shakespeareAnimation.js";
+import { off, on } from "../services/events.js";
+import { TRAINER_ANIMATION_PENDING_KEY } from "../animations/shakespeareAnimation.js";
 import {
     APP_BORDER_COLOR,
     APP_DARK_COLOR,
@@ -66,6 +63,67 @@ export default function SiteHeader({
     }, []);
 
     useEffect(() => {
+        const root = document.documentElement;
+        if (!isMobile) {
+            root.classList.remove("goodlang-mobile-keyboard-open");
+            return undefined;
+        }
+
+        // The native wrapper receives reliable keyboard lifecycle events from
+        // iOS/Android. Its WebView does not consistently expose keyboard size
+        // through visualViewport, so do not overwrite the native signal here.
+        if (window.__GOODLANG_NATIVE__?.isNativeApp === true) {
+            return undefined;
+        }
+
+        const viewport = window.visualViewport;
+        let fullViewportHeight = Math.max(
+            window.innerHeight,
+            viewport?.height ?? 0,
+        );
+
+        const isTextInputFocused = () => {
+            const activeElement = document.activeElement;
+            return activeElement instanceof HTMLElement
+                && activeElement.matches("input, textarea, select, [contenteditable='true']");
+        };
+
+        const updateKeyboardState = () => {
+            const viewportHeight = viewport?.height ?? window.innerHeight;
+            const inputFocused = isTextInputFocused();
+
+            if (!inputFocused) {
+                fullViewportHeight = Math.max(fullViewportHeight, window.innerHeight, viewportHeight);
+            }
+
+            root.classList.toggle(
+                "goodlang-mobile-keyboard-open",
+                inputFocused && fullViewportHeight - viewportHeight > 120,
+            );
+        };
+
+        const resetViewportBaseline = () => {
+            root.classList.remove("goodlang-mobile-keyboard-open");
+            fullViewportHeight = Math.max(window.innerHeight, viewport?.height ?? 0);
+            window.requestAnimationFrame(updateKeyboardState);
+        };
+
+        updateKeyboardState();
+        viewport?.addEventListener("resize", updateKeyboardState, {passive: true});
+        document.addEventListener("focusin", updateKeyboardState, {passive: true});
+        document.addEventListener("focusout", updateKeyboardState, {passive: true});
+        window.addEventListener("orientationchange", resetViewportBaseline);
+
+        return () => {
+            viewport?.removeEventListener("resize", updateKeyboardState);
+            document.removeEventListener("focusin", updateKeyboardState);
+            document.removeEventListener("focusout", updateKeyboardState);
+            window.removeEventListener("orientationchange", resetViewportBaseline);
+            root.classList.remove("goodlang-mobile-keyboard-open");
+        };
+    }, [isMobile]);
+
+    useEffect(() => {
         if (controlledLevel) return;
 
         const saved = getSavedTrainingLevel();
@@ -96,16 +154,12 @@ export default function SiteHeader({
     };
 
     const handleLogoClick = () => {
-        const trainerIsMounted = ["/", "/trainer", "/greetings", "/hello"].includes(location.pathname);
-
-        if (trainerIsMounted) {
-            emit(TRAINER_ANIMATION_EVENTS.START);
-        } else {
-            try {
-                sessionStorage.setItem(TRAINER_ANIMATION_PENDING_KEY, "true");
-            } catch {
-                // Navigation still works when session storage is unavailable.
-            }
+        try {
+            // Clear animation requests left by an older bundle/session. Logo
+            // navigation must never trigger the trainer's wrong-answer bus.
+            sessionStorage.removeItem(TRAINER_ANIMATION_PENDING_KEY);
+        } catch {
+            // Navigation still works when session storage is unavailable.
         }
 
         navigate("/trainer");
@@ -136,10 +190,19 @@ export default function SiteHeader({
     const surface = theme?.surface ?? APP_SURFACE_COLOR;
     const text = theme?.text ?? APP_TEXT_COLOR;
     const dark = theme?.dark ?? APP_DARK_COLOR;
+    const isNativeApp = typeof window !== "undefined"
+        && window.__GOODLANG_NATIVE__?.isNativeApp === true;
 
     const headerStyle = {
         width: "100%",
-        minHeight: 76,
+        height: isMobile
+            ? (isNativeApp
+                ? "calc(76px + var(--native-safe-top, 0px))"
+                : 76)
+            : undefined,
+        minHeight: isNativeApp
+            ? "calc(76px + var(--native-safe-top, 0px))"
+            : 76,
         position: isMobile ? "fixed" : "relative",
         top: isMobile ? 0 : undefined,
         left: isMobile ? 0 : undefined,
@@ -151,16 +214,26 @@ export default function SiteHeader({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: isMobile ? "0 14px" : "0 28px",
+        padding: isNativeApp
+            ? (isMobile
+                ? "var(--native-safe-top, 0px) 14px 0"
+                : "var(--native-safe-top, 0px) 28px 0")
+            : (isMobile ? "0 14px" : "0 28px"),
         boxSizing: "border-box",
         flexShrink: 0,
+        overflow: isMobile ? "hidden" : undefined,
+        overscrollBehavior: isMobile ? "none" : undefined,
     };
 
     const mobileHeaderSpacerStyle = {
         display: isMobile ? "block" : "none",
         width: "100%",
-        height: 76,
-        flex: "0 0 76px",
+        height: isNativeApp
+            ? "calc(76px + var(--native-safe-top, 0px))"
+            : 76,
+        flex: isNativeApp
+            ? "0 0 calc(76px + var(--native-safe-top, 0px))"
+            : "0 0 76px",
     };
 
     const innerStyle = {
@@ -173,7 +246,7 @@ export default function SiteHeader({
         gap: isMobile ? 14 : 24,
         flexWrap: "nowrap",
         whiteSpace: "nowrap",
-        overflowX: "auto",
+        overflowX: isMobile ? "hidden" : "auto",
         overflowY: "hidden",
         paddingBottom: 0,
         paddingRight: 0,
@@ -244,14 +317,21 @@ export default function SiteHeader({
         position: "fixed",
         left: 0,
         right: 0,
-        bottom: 0,
+        bottom: isNativeApp
+            ? "calc(-1 * var(--mobile-nav-safe-bottom, var(--native-safe-bottom, 0px)))"
+            : 0,
         zIndex: 1000,
         display: "flex",
         justifyContent: "center",
         background: surface,
         borderTop: `1px solid ${border}`,
         boxShadow: "0 -8px 28px rgba(31, 36, 54, 0.08)",
-        padding: "8px 12px calc(8px + env(safe-area-inset-bottom))",
+        // Extend one safe-area height below the CSS viewport while adding the
+        // same amount back as padding. Buttons stay put and the white surface
+        // continues behind the home indicator/system navigation area.
+        padding: isNativeApp
+            ? "8px 12px calc(8px + var(--mobile-nav-safe-bottom, var(--native-safe-bottom, 0px)) + var(--mobile-nav-safe-bottom, var(--native-safe-bottom, 0px)))"
+            : "8px 12px calc(8px + var(--mobile-nav-safe-bottom, env(safe-area-inset-bottom)))",
     };
 
     const mobileNavInnerStyle = {
@@ -352,7 +432,7 @@ export default function SiteHeader({
                     <style>{`
                         @media (max-width: 914px) {
                             :root {
-                                --mobile-nav-clearance: calc(64px + env(safe-area-inset-bottom));
+                                --mobile-nav-clearance: calc(64px + var(--mobile-nav-safe-bottom, env(safe-area-inset-bottom)));
                             }
                         }
                     `}</style>

@@ -1,5 +1,12 @@
 // src/services/cookieConsent.js
 export function getCookieConsent() {
+    if (
+        typeof window !== "undefined"
+        && window.__GOODLANG_NATIVE__?.cookieConsentManagedNatively === true
+    ) {
+        return "accepted";
+    }
+
     return localStorage.getItem("cookieConsent"); // "accepted" | "rejected" | null
 }
 

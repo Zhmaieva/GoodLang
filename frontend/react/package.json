@@ -1,0 +1,30 @@
+{
+  "name": "goodlang-react",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "sync:web": "node scripts/bundle-web.mjs",
+    "prestart": "npm run sync:web",
+    "start": "expo start",
+    "preandroid": "npm run sync:web",
+    "android": "expo run:android",
+    "preios": "npm run sync:web",
+    "ios": "expo run:ios",
+    "check": "npx expo-doctor"
+  },
+  "dependencies": {
+    "expo": "^57.0.22",
+    "expo-splash-screen": "~57.0.9",
+    "expo-status-bar": "~57.0.1",
+    "expo-tracking-transparency": "~57.0.2",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-webview": "13.16.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "babel-preset-expo": "~57.0.0"
+  }
+}

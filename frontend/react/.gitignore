@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+.web-build/
+.DS_Store
+android/
+ios/
+npm-debug.log*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision

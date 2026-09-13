@@ -8,6 +8,11 @@ const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 // Put your Pixel ID in .env as VITE_META_PIXEL_ID
 const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
 
+function isNativeMetaTrackingAllowed() {
+    const nativeContext = window.__GOODLANG_NATIVE__;
+    return !nativeContext || nativeContext.trackingStatus === "granted";
+}
+
 function loadGA(measurementId) {
     if (!measurementId) return;
     if (gaLoaded) return;
@@ -30,6 +35,7 @@ function loadGA(measurementId) {
 
 function loadMetaPixel(pixelId) {
     if (!pixelId) return;
+    if (!isNativeMetaTrackingAllowed()) return;
     if (metaLoaded) return;
     metaLoaded = true;
 
@@ -102,6 +108,7 @@ export function trackPageView(path) {
 export function trackMetaEvent(eventName, params = {}) {
     const consentValue = getCookieConsent();
     if (consentValue !== "accepted") return;
+    if (!isNativeMetaTrackingAllowed()) return;
 
     ensureAnalytics();
     if (!window.fbq) return;
@@ -115,6 +122,7 @@ export function trackMetaEvent(eventName, params = {}) {
 export function trackMetaCustomEvent(eventName, params = {}) {
     const consentValue = getCookieConsent();
     if (consentValue !== "accepted") return;
+    if (!isNativeMetaTrackingAllowed()) return;
 
     ensureAnalytics();
     if (!window.fbq) return;

@@ -5,6 +5,7 @@ import hand3 from "../../../public/hand3.PNG";
 import messageRight2 from "../../../public/messageRight2.png";
 import messageCenter2 from "../../../public/messageCenter2.png";
 import messageLeft2 from "../../../public/messageLeft2.png";
+import poster from "../../../public/poster.png";
 import {useNavigate} from "react-router-dom";
 import TermsOfUseModal from "../subscription/TermsOfUseModal.jsx";
 import React, {useEffect, useRef, useState} from "react";
@@ -790,7 +791,7 @@ html{ scroll-behavior: smooth; }
                             <video
                                 className="howVideo"
                                 src="https://d1bhp94ins4f62.cloudfront.net/goodlang/HowToPdf2.mp4"
-                                poster="../../../public/poster.png"
+                                poster={poster}
                                 autoPlay
                                 muted
                                 loop

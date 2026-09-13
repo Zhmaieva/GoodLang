@@ -23,9 +23,9 @@ function getDriveDuration(isMobile, viewportWidth, initialX, visibleX) {
 }
 
 export const BusAnimationParts = Object.freeze({
-    Bus: "/animations/london-bus.png",
-    Wheel: "/animations/london-bus-wheel.png",
-    BananaPeel: "/animations/banana-peel.png",
+    Bus: `${import.meta.env.BASE_URL}animations/london-bus.png`,
+    Wheel: `${import.meta.env.BASE_URL}animations/london-bus-wheel.png`,
+    BananaPeel: `${import.meta.env.BASE_URL}animations/banana-peel.png`,
 });
 
 export function createBusTrainerAnimation(

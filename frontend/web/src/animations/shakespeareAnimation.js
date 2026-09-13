@@ -1,8 +1,8 @@
 import { Animation, AnimationSkeleton } from "./AnimationSkeleton.js";
 
 export const AnimationParts = Object.freeze({
-    Shakespeare: "/animations/shakespeare.png",
-    ThumbsUp: "/animations/shakespeare-thumbs-up.png",
+    Shakespeare: `${import.meta.env.BASE_URL}animations/shakespeare.png`,
+    ThumbsUp: `${import.meta.env.BASE_URL}animations/shakespeare-thumbs-up.png`,
 });
 
 export const TRAINER_ANIMATION_EVENTS = Object.freeze({
@@ -50,13 +50,13 @@ export function createShakespeareTrainerAnimation(isMobile = false) {
     animation.toggleVisible(thumbsUpHandImg, true);
     animation.rotateRelative(thumbsUpHandImg, -70, .95, .75, 0);
     animation.translateYRelative(shakespeareImg, offsets.visibleY, 1000);
-    animation.Idle(1000);
+    animation.Idle(500);
     animation.rotateRelative(thumbsUpHandImg, 90, .95, .75, 250);
     animation.Idle(200);
     animation.rotateRelative(thumbsUpHandImg, -30, .95, .75, 200);
     const rotateStartStep = animation.rotateRelative(thumbsUpHandImg, 2, .95, .75, 100);
     animation.rotateRelative(thumbsUpHandImg, -2, .95, .75, 100);
-    animation.Idle(1000);
+    animation.Idle(1500);
     const hideStep = animation.translateYRelative(shakespeareImg, offsets.hiddenY, 1000);
 
     animation.on(TRAINER_ANIMATION_EVENTS.NEXT_SENTENCE, () => {

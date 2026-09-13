@@ -1,15 +1,183 @@
 import {getToken} from "./accountService.js";
-import {logError} from "./logger.js";
+import {logError, logInfo, logWarning} from "./logger.js";
 import {getPromoCode} from "./dataService.js";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 const STORAGE_KEY_APP_VERSION = "app_version";
 const CLIENT_APP_VERSION = "1.4.1"; // hardcoded client version
+const MAX_LOGGED_RESPONSE_LENGTH = 12000;
+const MAX_LOGGED_RESPONSE_CONTENT_LENGTH = 128000;
+let apiRequestSequence = 0;
+
+const SENSITIVE_KEYS = new Set([
+    "authorization",
+    "password",
+    "token",
+    "accesstoken",
+    "refreshtoken",
+    "changetoken",
+    "secret",
+    "clientsecret",
+    "email",
+    "promocode",
+    "paymentintent",
+    "emailunsubscribetoken",
+]);
+
+function normalizeLogKey(key) {
+    return String(key || "").replaceAll("_", "").replaceAll("-", "").toLowerCase();
+}
+
+function redactText(value) {
+    return String(value)
+        .replace(/Bearer\s+\S+/gi, "Bearer [REDACTED]")
+        .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, "[REDACTED_EMAIL]")
+        .replace(/\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\b/g, "[REDACTED_TOKEN]");
+}
+
+function sanitizeLogValue(value, {redactCode = false} = {}, key = "") {
+    const normalizedKey = normalizeLogKey(key);
+    if (SENSITIVE_KEYS.has(normalizedKey) || (redactCode && normalizedKey === "code")) {
+        return "[REDACTED]";
+    }
+    if (typeof value === "string") return redactText(value);
+    if (Array.isArray(value)) {
+        return value.map((item) => sanitizeLogValue(item, {redactCode}));
+    }
+    if (value && typeof value === "object") {
+        return Object.fromEntries(
+            Object.entries(value).map(([nestedKey, nestedValue]) => [
+                nestedKey,
+                sanitizeLogValue(nestedValue, {redactCode}, nestedKey),
+            ])
+        );
+    }
+    return value;
+}
+
+function sanitizeUrlForLog(value) {
+    try {
+        const url = new URL(String(value), window.location.origin);
+        url.searchParams.forEach((_parameterValue, key) => {
+            const normalizedKey = normalizeLogKey(key);
+            if (
+                SENSITIVE_KEYS.has(normalizedKey)
+                || normalizedKey === "code"
+                || normalizedKey.endsWith("token")
+            ) {
+                url.searchParams.set(key, "[REDACTED]");
+            }
+        });
+        return url.toString();
+    } catch {
+        return redactText(value);
+    }
+}
+
+function sanitizeRequestBodyForLog(body) {
+    if (body == null) return null;
+    if (typeof body !== "string") {
+        return `[${body?.constructor?.name || typeof body}]`;
+    }
+
+    try {
+        return sanitizeLogValue(JSON.parse(body), {redactCode: true});
+    } catch {
+        return redactText(body).slice(0, MAX_LOGGED_RESPONSE_LENGTH);
+    }
+}
+
+async function readResponseBodyForLog(response) {
+    const contentType = response.headers.get("content-type") || "";
+    const contentLength = Number(response.headers.get("content-length"));
+    if (
+        contentType.startsWith("application/pdf")
+        || contentType.startsWith("image/")
+        || contentType.startsWith("audio/")
+        || contentType.startsWith("video/")
+        || contentType.includes("application/octet-stream")
+    ) {
+        return `[binary response: ${contentType || "unknown content type"}]`;
+    }
+    if (Number.isFinite(contentLength) && contentLength > MAX_LOGGED_RESPONSE_CONTENT_LENGTH) {
+        return `[response omitted: ${contentLength} bytes]`;
+    }
+
+    try {
+        const text = await response.clone().text();
+        if (!text) return null;
+
+        try {
+            return sanitizeLogValue(JSON.parse(text));
+        } catch {
+            return redactText(text.slice(0, MAX_LOGGED_RESPONSE_LENGTH));
+        }
+    } catch (error) {
+        return `[response body unavailable: ${error?.message || "unknown error"}]`;
+    }
+}
+
+async function apiFetch(input, options = {}) {
+    const requestId = ++apiRequestSequence;
+    const method = String(options.method || "GET").toUpperCase();
+    const url = sanitizeUrlForLog(input);
+    const startedAt = performance.now();
+
+    logInfo("[API request]", {
+        requestId,
+        method,
+        url,
+        body: sanitizeRequestBodyForLog(options.body),
+    });
+
+    try {
+        const response = await fetch(input, options);
+        const responseLog = {
+            requestId,
+            method,
+            url,
+            status: response.status,
+            statusText: response.statusText,
+            ok: response.ok,
+            durationMs: Math.round(performance.now() - startedAt),
+            responseUrl: sanitizeUrlForLog(response.url || input),
+            redirected: response.redirected,
+            contentType: response.headers.get("content-type") || null,
+            serverRequestId: response.headers.get("x-request-id")
+                || response.headers.get("request-id")
+                || null,
+            cloudflareRay: response.headers.get("cf-ray") || null,
+            body: await readResponseBodyForLog(response),
+        };
+
+        if (response.ok) {
+            logInfo("[API response]", responseLog);
+        } else {
+            logWarning("[API response]", responseLog);
+        }
+        return response;
+    } catch (error) {
+        const errorLog = {
+            requestId,
+            method,
+            url,
+            status: null,
+            durationMs: Math.round(performance.now() - startedAt),
+            error,
+        };
+        if (error?.name === "AbortError") {
+            logWarning("[API aborted]", errorLog);
+        } else {
+            logError("[API network error]", errorLog);
+        }
+        throw error;
+    }
+}
 
 export async function callCheckoutApi() {
     const url = `${API_BASE}/payments/create-checkout-session`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -30,7 +198,7 @@ export async function callCheckoutApi() {
 export async function callCheckoutMarathonApi(ruleIds) {
     const url = `${API_BASE}/payments/create-marathon-checkout-session`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -55,7 +223,7 @@ export async function callCheckoutMarathonApi(ruleIds) {
 export async function callDataSyncApi(payload) {
     const url = `${API_BASE}/data-sync`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -77,7 +245,7 @@ export async function callTranslateAPI(params, { signal } = {}) {
     const qs = new URLSearchParams(params);
     const url = `${API_BASE}/translations?${qs.toString()}`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         signal,
         headers: {
             'Authorization': `Bearer ${await getToken()}` // add Authorization header
@@ -101,7 +269,7 @@ export async function callQuickTranslateAPI(params, { signal } = {}) {
     const qs = new URLSearchParams(params);
     const url = `${API_BASE}/translations/quick?${qs.toString()}`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         signal,
         headers: {
             'Authorization': `Bearer ${await getToken()}`
@@ -132,7 +300,7 @@ export async function callSignUpApi(params) {
 
     const url = `${API_BASE}/accounts/start?${qs.toString()}`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -193,7 +361,7 @@ export async function callAccountInfoApi() {
 
     const url = `${API_BASE}/accounts/info${params.toString() ? `?${params.toString()}` : ""}`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         headers: {
             Authorization: `Bearer ${await getToken()}`,
         },
@@ -219,7 +387,7 @@ export async function callAccountVerifyApi(actionType) {
     try {
         const url = `${API_BASE}/accounts/verify?action_type=${actionType}`;
 
-        const res = await fetch(url, {
+        const res = await apiFetch(url, {
             headers: {
                 'Authorization': `Bearer ${await getToken()}`,
             },
@@ -235,7 +403,7 @@ export async function callAccountVerifyApi(actionType) {
 export async function callManageSubscriptionApi() {
     const url = `${API_BASE}/payments/manage`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         headers: {
             'Authorization': `Bearer ${await getToken()}`,
         }
@@ -254,7 +422,7 @@ export async function callManageSubscriptionApi() {
 export async function callVocabularyApi() {
     const url = `${API_BASE}/vocabulary`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         headers: {
             'Authorization': `Bearer ${await getToken()}`,
         }
@@ -270,7 +438,7 @@ export async function callVocabularyApi() {
 }
 
 export async function callVocabularyEvaluationApi(payload = {}, { signal } = {}) {
-    const res = await fetch(`${API_BASE}/vocabulary/evaluate`, {
+    const res = await apiFetch(`${API_BASE}/vocabulary/evaluate`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -288,7 +456,7 @@ export async function callVocabularyEvaluationApi(payload = {}, { signal } = {})
 }
 
 export async function callVocabularyTranslationsApi(payload = {}, { signal } = {}) {
-    const res = await fetch(`${API_BASE}/vocabulary/translations`, {
+    const res = await apiFetch(`${API_BASE}/vocabulary/translations`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -311,7 +479,7 @@ export async function callSaveVocabularyCandidatesApi(payload = {}) {
         ? { candidates: payload }
         : payload;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -330,7 +498,7 @@ export async function callSaveVocabularyCandidatesApi(payload = {}) {
 }
 
 export async function callSendPromoCodeApi({ email }) {
-    const res = await fetch(`${API_BASE}/accounts/send-promo-code`, {
+    const res = await apiFetch(`${API_BASE}/accounts/send-promo-code`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -345,7 +513,7 @@ export async function callSendPromoCodeApi({ email }) {
 }
 
 export async function callSendCodeApi({ email, changeToken }) {
-    const res = await fetch(`${API_BASE}/accounts/send-code`, {
+    const res = await apiFetch(`${API_BASE}/accounts/send-code`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -361,7 +529,7 @@ export async function callSendCodeApi({ email, changeToken }) {
 
 export async function callSendInquiry({ email }) {
     try {
-        await fetch(`${API_BASE}/accounts/inquiry`, {
+        await apiFetch(`${API_BASE}/accounts/inquiry`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -380,7 +548,7 @@ export async function callVerifyCodeApi({ email, code, termsAccepted = false, em
     const qs = new URLSearchParams();
     if (isTeacher) qs.set("teacher", "true");
 
-    const res = await fetch(
+    const res = await apiFetch(
         `${API_BASE}/accounts/verify-code${qs.toString() ? `?${qs.toString()}` : ""}`,
         {
             method: "POST",
@@ -410,7 +578,7 @@ export async function downloadCrossword(code) {
 
     const url = `${API_BASE}/files/pdf/crossword?p=${encodeURIComponent(p)}`;
 
-    const res = await fetch(url, {
+    const res = await apiFetch(url, {
         method: "GET",
         headers: {
             Authorization: `Bearer ${await getToken()}`,
@@ -474,7 +642,7 @@ async function callGeneratePdfApi(ruleName, pdfType, opts = {}) {
 
     let attempt = 0;
     while (true) {
-        const res = await fetch(url, {
+        const res = await apiFetch(url, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${await getToken()}`,
@@ -543,7 +711,7 @@ export async function callEmailUnsubscribeApi(emailUnsubscribeToken) {
         const qs = new URLSearchParams({ email_unsubscribe_token: token });
         const url = `${API_BASE}/accounts/emails/unsubscribe?${qs.toString()}`;
 
-        const res = await fetch(url, { method: "GET" });
+        const res = await apiFetch(url, { method: "GET" });
 
         // endpoint may return text/plain
         const bodyText = await res.text().catch(() => "");
@@ -578,7 +746,7 @@ export async function callUpdateMarathonStatusApi(status) {
     }
 
     try {
-        const res = await fetch(`${API_BASE}/marathons/status`, {
+        const res = await apiFetch(`${API_BASE}/marathons/status`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -624,7 +792,7 @@ export async function callCompleteMarathonDayApi(opts = {}) {
     try {
         const { requireAllTasksAnswered = false } = opts || {};
 
-        const res = await fetch(`${API_BASE}/marathons/complete-day`, {
+        const res = await apiFetch(`${API_BASE}/marathons/complete-day`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
