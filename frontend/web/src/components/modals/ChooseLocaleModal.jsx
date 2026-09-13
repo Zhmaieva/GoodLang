@@ -1,21 +1,39 @@
 import React, { useLayoutEffect, useMemo, useState } from "react";
+import { Check, MagnifyingGlass } from "@phosphor-icons/react";
 import { localizationService } from "../../localization/localizationService.js";
+import {
+    APP_ACCENT_COLOR,
+    APP_ACCENT_SOFT_COLOR,
+    APP_BORDER_COLOR,
+    APP_DARK_COLOR,
+    APP_MUTED_TEXT_COLOR,
+    APP_SURFACE_COLOR,
+    APP_TEXT_COLOR,
+} from "../../theme.js";
 import { Button } from "../Buttons.jsx";
 import ModalShell from "./ModalShell.jsx";
 
+function localeFlag(locale) {
+    const region = String(locale ?? "").split("-")[1]?.toUpperCase();
+    if (!region || region.length !== 2) return "";
+
+    return String.fromCodePoint(...[...region].map((letter) => 127397 + letter.charCodeAt(0)));
+}
+
 export default function ChooseLocaleModal({
-                                              open,
-                                              theme,
-                                              onClose,
+    open,
+    theme,
+    onClose,
 }) {
     const getSavedLocale = () => localizationService.isLocaleDefined()
         ? localizationService.getLocale()
         : null;
-    const [selected, setSelected] = useState(getSavedLocale);
+    const browserLocale = useMemo(() => localizationService.getBrowserLocale(), []);
+    const [selected, setSelected] = useState(() => getSavedLocale() || browserLocale);
     const [initial, setInitial] = useState(getSavedLocale);
+    const [query, setQuery] = useState("");
 
     const options = useMemo(() => localizationService.getAvailableLocales(), []);
-    const browserLocale = useMemo(() => localizationService.getBrowserLocale(), []);
     const orderedOptions = useMemo(() => {
         const priorityLocales = [selected, browserLocale].filter(Boolean);
         const prioritized = priorityLocales
@@ -27,17 +45,33 @@ export default function ChooseLocaleModal({
 
         return [...prioritized, ...options.filter((option) => !prioritySet.has(option.locale))];
     }, [browserLocale, options, selected]);
+    const filteredOptions = useMemo(() => {
+        const normalizedQuery = query.trim().toLocaleLowerCase();
+        if (!normalizedQuery) return orderedOptions;
+
+        return orderedOptions.filter((option) => (
+            option.name.toLocaleLowerCase().includes(normalizedQuery)
+            || option.locale.toLocaleLowerCase().includes(normalizedQuery)
+        ));
+    }, [orderedOptions, query]);
 
     const canCancel = !!initial;
+    const accent = theme?.accent ?? APP_ACCENT_COLOR;
+    const accentSoft = theme?.accentSoft ?? APP_ACCENT_SOFT_COLOR;
+    const border = theme?.border ?? APP_BORDER_COLOR;
+    const dark = theme?.dark ?? APP_DARK_COLOR;
+    const muted = theme?.muted ?? APP_MUTED_TEXT_COLOR;
+    const surface = theme?.surface ?? APP_SURFACE_COLOR;
+    const text = theme?.text ?? APP_TEXT_COLOR;
 
     useLayoutEffect(() => {
         if (!open) return;
 
         const saved = getSavedLocale();
-
-        setSelected(saved);
+        setSelected(saved || browserLocale);
         setInitial(saved);
-    }, [open]);
+        setQuery("");
+    }, [browserLocale, open]);
 
     if (!open) return null;
 
@@ -45,105 +79,181 @@ export default function ChooseLocaleModal({
         if (!canCancel) return;
         setSelected(initial);
         onClose?.();
-    }
+    };
 
-    const handleOptionClick = (nextLocale) => {
-        setSelected(nextLocale);
+    const handleContinue = () => {
+        if (!selected) return;
 
-        if (nextLocale === initial) {
+        if (selected === initial) {
             onClose?.();
             return;
         }
 
-        localizationService.setLocale(nextLocale);
+        localizationService.setLocale(selected);
         onClose?.();
         window.location.reload();
-    }
+    };
 
     const optionButtonStyle = (isActive) => ({
-        background: isActive ? theme.dark : theme.surface,
-        color: isActive ? theme.bg : theme.text,
-        borderColor: isActive ? theme.dark : theme.border,
+        appearance: "none",
         width: "100%",
         minWidth: 0,
-        display: "inline-flex",
+        minHeight: 50,
+        padding: "8px 14px",
+        display: "grid",
+        gridTemplateColumns: "34px minmax(0, 1fr) 24px",
         alignItems: "center",
-        justifyContent: "center",
         gap: 10,
-        whiteSpace: "normal",
+        border: `1px solid ${isActive ? accent : border}`,
+        borderRadius: 14,
+        background: isActive ? accentSoft : surface,
+        color: text,
+        cursor: "pointer",
+        fontFamily: "var(--font-family-base)",
+        fontSize: "0.95rem",
+        fontWeight: 700,
+        textAlign: "left",
         boxShadow: "none",
     });
-
-    const listOuterStyle = {
-        position: "relative",
-        boxSizing: "border-box",
-    };
-
-    const listWrapStyle = {
-        display: "grid",
-        gridTemplateColumns: "1fr",
-        gap: 12,
-        minHeight: 0,
-        maxHeight: "46vh",
-        overflowY: "auto",
-        WebkitOverflowScrolling: "touch",
-        overscrollBehaviorY: "contain",
-        touchAction: "pan-y",
-        paddingRight: 4,
-    };
-
-    const disabledHintStyle = {
-        marginTop: 14,
-        color: theme.muted,
-        fontFamily: "var(--font-family-base)",
-        fontSize: "0.92rem",
-        lineHeight: 1.4,
-        fontWeight: 500,
-        textAlign: "center",
-    };
 
     return (
         <ModalShell
             open={open}
             id="choose-locale-modal"
             theme={theme}
-            title="Your mother tongue"
-            subtitle="Choose one that you naturally speak."
-            titleStyle={{ fontSize: "1.75rem" }}
             onClose={handleCancel}
             closeDisabled={!canCancel}
             closeOnBackdrop={canCancel}
             hideClose={!canCancel}
-            maxWidth={520}
-            panelStyle={{ padding: 40 }}
-            contentStyle={listOuterStyle}
+            maxWidth={760}
+            panelStyle={{ padding: "28px 32px 32px" }}
         >
-                <div
-                    style={listWrapStyle}
+            <h2
+                style={{
+                    margin: "2px 52px 18px 0",
+                    color: text,
+                    fontFamily: "var(--font-family-base)",
+                    fontSize: "clamp(1.75rem, 4vw, 2.25rem)",
+                    fontWeight: 800,
+                    lineHeight: 1.1,
+                    letterSpacing: 0,
+                }}
+            >
+                What’s your native language?
+            </h2>
+
+            <label
+                style={{
+                    minHeight: 48,
+                    padding: "0 14px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    border: `1px solid ${border}`,
+                    borderRadius: 14,
+                    background: surface,
+                    color: muted,
+                    boxSizing: "border-box",
+                }}
+            >
+                <MagnifyingGlass size={21} weight="regular" aria-hidden />
+                <input
+                    type="search"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    placeholder="Search language..."
+                    aria-label="Search language"
+                    autoComplete="off"
+                    style={{
+                        width: "100%",
+                        minWidth: 0,
+                        padding: 0,
+                        border: "none",
+                        outline: "none",
+                        background: "transparent",
+                        color: text,
+                        fontFamily: "var(--font-family-base)",
+                        fontSize: "0.95rem",
+                        fontWeight: 500,
+                    }}
+                />
+            </label>
+
+            <div
+                style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 250px), 1fr))",
+                    gap: 10,
+                    maxHeight: "48vh",
+                    marginTop: 12,
+                    paddingRight: 3,
+                    overflowY: "auto",
+                    overscrollBehaviorY: "contain",
+                }}
+            >
+                {filteredOptions.map((option) => {
+                    const isActive = selected === option.locale;
+
+                    return (
+                        <button
+                            key={option.locale}
+                            type="button"
+                            aria-pressed={isActive}
+                            onClick={() => setSelected(option.locale)}
+                            style={optionButtonStyle(isActive)}
+                        >
+                            <span aria-hidden style={{ fontSize: "1.55rem", lineHeight: 1 }}>
+                                {localeFlag(option.locale)}
+                            </span>
+                            <span style={{ overflow: "hidden", textOverflow: "ellipsis" }}>
+                                {option.name}
+                            </span>
+                            {isActive ? (
+                                <span
+                                    aria-hidden
+                                    style={{
+                                        width: 22,
+                                        height: 22,
+                                        borderRadius: 999,
+                                        display: "inline-flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        background: dark,
+                                        color: "#fff",
+                                    }}
+                                >
+                                    <Check size={14} weight="bold" />
+                                </span>
+                            ) : <span aria-hidden />}
+                        </button>
+                    );
+                })}
+            </div>
+
+            {filteredOptions.length === 0 && (
+                <p
+                    style={{
+                        margin: "20px 0",
+                        color: muted,
+                        fontFamily: "var(--font-family-base)",
+                        fontSize: "0.95rem",
+                        textAlign: "center",
+                    }}
                 >
-                    {orderedOptions.map((o) => {
-                        const isActive = selected === o.locale;
+                    No languages found.
+                </p>
+            )}
 
-                        return (
-                            <Button
-                                key={o.locale}
-                                variant="offset"
-                                compact
-                                fullWidth
-                                theme={theme}
-                                selected={isActive}
-                                shadowColor={theme.accent}
-                                shadowOffset={0}
-                                aria-pressed={isActive}
-                                onClick={() => handleOptionClick(o.locale)}
-                                style={optionButtonStyle(isActive)}
-                            >
-                                <span>{o.name}</span>
-                            </Button>
-                        );
-                    })}
-                </div>
-
+            <Button
+                variant="primary"
+                fullWidth
+                theme={theme}
+                disabled={!selected}
+                onClick={handleContinue}
+                style={{ minHeight: 50, marginTop: 14 }}
+            >
+                Continue
+            </Button>
         </ModalShell>
     );
 }
