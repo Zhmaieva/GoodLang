@@ -24,6 +24,7 @@ import {
     mergeVocabularyWords,
 } from "../../services/vocabularyService.js";
 import "./analytics.css";
+import MobileVocabulary from "../mobile/MobileVocabulary.jsx";
 
 const WORDS_PER_PAGE = 10;
 
@@ -230,7 +231,7 @@ export default function VocabularyPage({ theme }) {
     const [loading, setLoading] = useState(true);
     const [loadError, setLoadError] = useState("");
     const [filterLevel, setFilterLevel] = useState("all");
-    const [statusFilter, setStatusFilter] = useState("needsPractice");
+    const [statusFilter, setStatusFilter] = useState(() => window.innerWidth < 915 ? "all" : "needsPractice");
     const [query, setQuery] = useState("");
     const [sortKey, setSortKey] = useState("level");
     const [sortDir, setSortDir] = useState("asc");
@@ -608,6 +609,17 @@ export default function VocabularyPage({ theme }) {
                 : filteredWords.length === 0
                     ? "No words match this filter."
                     : "");
+
+    if (isMobile) {
+        return <AppShell theme={theme} noPadding><SiteHeader theme={theme} />
+            <MobileVocabulary words={paginatedWords} totalWords={words.length} loading={loading} error={loadError}
+                query={query} setQuery={setQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter}
+                filterLevel={filterLevel} setFilterLevel={setFilterLevel} sortKey={sortKey} setSortKey={setSortKey}
+                sortDir={sortDir} setSortDir={setSortDir} page={page} totalPages={totalPages} setPage={setPage}
+                theme={theme} getAccuracy={getWordAccuracy} getStatus={getDisplayStatus} formatDate={formatLastPractice}
+                summary={summary} sentencesLeft={sentencesLeft} />
+        </AppShell>;
+    }
 
     return (
         <AppShell theme={theme} noPadding>

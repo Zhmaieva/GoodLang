@@ -1,3 +1,4 @@
+import {reloadApp} from "./reloadApp.js";
 import {getToken} from "./accountService.js";
 import {logError, logInfo, logWarning} from "./logger.js";
 import {getPromoCode} from "./dataService.js";
@@ -350,7 +351,7 @@ function syncVersionAndMaybeReload(serverVersion) {
     localStorage.setItem(STORAGE_KEY_APP_VERSION, serverVersion);
 
     if (shouldReload) {
-        window.location.reload();
+        reloadApp();
     }
 }
 

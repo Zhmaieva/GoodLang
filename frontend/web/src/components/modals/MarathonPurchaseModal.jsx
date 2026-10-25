@@ -1,3 +1,4 @@
+import {reloadApp} from "../../services/reloadApp.js";
 // MarathonPurchaseModal.jsx
 import React, { useEffect, useRef, useState } from "react";
 import LoginModal from "../subscription/LoginModal.jsx"; // adjust path if needed
@@ -75,7 +76,7 @@ export default function MarathonPurchaseModal({
 
         if (isPaying) {
             // same pattern as LimitModal: if embedded checkout was mounted, refresh
-            window.location.reload();
+            reloadApp();
             return;
         }
         onClose?.();

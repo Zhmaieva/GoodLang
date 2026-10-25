@@ -1,3 +1,4 @@
+import {reloadApp} from "../../services/reloadApp.js";
 import React, { useLayoutEffect, useMemo, useState } from "react";
 import { Check, MagnifyingGlass } from "@phosphor-icons/react";
 import { localizationService } from "../../localization/localizationService.js";
@@ -11,6 +12,8 @@ import {
     APP_TEXT_COLOR,
 } from "../../theme.js";
 import { Button } from "../Buttons.jsx";
+import MobileLocalePicker from "../mobile/MobileLocalePicker.jsx";
+import useMobileLayout from "../mobile/useMobileLayout.js";
 import ModalShell from "./ModalShell.jsx";
 
 function localeFlag(locale) {
@@ -25,6 +28,7 @@ export default function ChooseLocaleModal({
     theme,
     onClose,
 }) {
+    const isMobile = useMobileLayout();
     const getSavedLocale = () => localizationService.isLocaleDefined()
         ? localizationService.getLocale()
         : null;
@@ -35,7 +39,7 @@ export default function ChooseLocaleModal({
 
     const options = useMemo(() => localizationService.getAvailableLocales(), []);
     const orderedOptions = useMemo(() => {
-        const priorityLocales = [selected, browserLocale].filter(Boolean);
+        const priorityLocales = [isMobile ? initial || browserLocale : selected, browserLocale].filter(Boolean);
         const prioritized = priorityLocales
             .map((locale) => options.find((option) => option.locale === locale))
             .filter((option, index, list) => (
@@ -44,7 +48,7 @@ export default function ChooseLocaleModal({
         const prioritySet = new Set(prioritized.map((option) => option.locale));
 
         return [...prioritized, ...options.filter((option) => !prioritySet.has(option.locale))];
-    }, [browserLocale, options, selected]);
+    }, [browserLocale, initial, isMobile, options, selected]);
     const filteredOptions = useMemo(() => {
         const normalizedQuery = query.trim().toLocaleLowerCase();
         if (!normalizedQuery) return orderedOptions;
@@ -91,8 +95,21 @@ export default function ChooseLocaleModal({
 
         localizationService.setLocale(selected);
         onClose?.();
-        window.location.reload();
+        reloadApp();
     };
+
+    if (isMobile) {
+        return <MobileLocalePicker
+            options={filteredOptions}
+            selected={selected}
+            query={query}
+            canCancel={canCancel}
+            onQueryChange={setQuery}
+            onSelect={setSelected}
+            onClose={handleCancel}
+            onContinue={handleContinue}
+        />;
+    }
 
     const optionButtonStyle = (isActive) => ({
         appearance: "none",

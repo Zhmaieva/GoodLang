@@ -1,3 +1,4 @@
+import {reloadApp} from "../../services/reloadApp.js";
 import React, { useState } from "react";
 import {
     callAccountInfoApi,
@@ -13,6 +14,10 @@ import { ACTION_TYPES } from "../../utils/constants.js";
 import {localizationService} from "../../localization/localizationService.js";
 import { Button } from "../Buttons.jsx";
 import ModalShell from "../modals/ModalShell.jsx";
+import MobileSheet from "../mobile/MobileSheet.jsx";
+import useMobileLayout from "../mobile/useMobileLayout.js";
+import { mobileCopy as t } from "../mobile/mobileCopy.js";
+import "../mobile/mobile-account-flows.css";
 
 export default function TermsOfUseModal({
                                             ruleToDownload = null,
@@ -28,6 +33,8 @@ export default function TermsOfUseModal({
     const ERROR_COLOR = "#fe2f31";
 
     const [cookieOpen, setCookieOpen] = useState(false);
+    const isMobile = useMobileLayout();
+    const Dialog = isMobile ? MobileSheet : ModalShell;
 
     async function syncData() {
         try {
@@ -106,21 +113,21 @@ export default function TermsOfUseModal({
             const url = new URL(window.location.href);
             ruleId ? url.searchParams.set("ruleToDownload", ruleId) : url.searchParams.delete("ruleToDownload");
             window.history.replaceState({}, "", url.toString());
-            window.location.reload();
+            reloadApp();
         } catch {
-            window.location.href = ruleId
+            reloadApp(ruleId
                 ? `${window.location.pathname}?ruleToDownload=${encodeURIComponent(ruleId)}`
-                : window.location.pathname;
+                : window.location.pathname);
         }
     }
 
     const termsBoxStyle = {
         textAlign: "left",
-        borderRadius: 18,
-        border: `1px solid ${theme.border}`,
-        padding: "18px 20px",
-        maxHeight: 260,
-        overflowY: "auto",
+        borderRadius: isMobile ? 0 : 18,
+        border: isMobile ? "none" : `1px solid ${theme.border}`,
+        padding: isMobile ? 0 : "18px 20px",
+        maxHeight: isMobile ? undefined : 260,
+        overflowY: isMobile ? undefined : "auto",
         lineHeight: 1.55,
         color: theme.text,
         background: theme.surface,
@@ -137,22 +144,33 @@ export default function TermsOfUseModal({
     return (
         <>
             {!cookieOpen && !isPaying && (
-                <ModalShell
+                <Dialog
                     id="terms-modal"
                     theme={theme}
-                    title="Terms of use"
-                    subtitle={
+                    title={isMobile ? t("Умови використання", "Terms of use") : "Terms of use"}
+                    subtitle={!isMobile && (
                         readOnly
                             ? "Please review"
                             : "Before signing up, please confirm that you agree to the Terms of Use."
-                    }
+                    )}
                     onClose={onClose}
                     closeOnBackdrop={readOnly}
                     hideClose={!readOnly}
                     maxWidth={560}
                     width="92%"
+                    className="gl-flow-document-sheet"
+                    dismissible={readOnly && !loading}
+                    footer={isMobile && <div className="gl-flow-actions">
+                        {!readOnly && <button type="button" className="gl-primary" onClick={handleAgree} disabled={loading}>
+                            {loading ? t("Підтверджуємо…", "Confirming…") : t("Погоджуюся", "I agree")}
+                        </button>}
+                        <button type="button" className={readOnly ? "gl-primary" : "gl-text-button gl-flow-secondary"} onClick={onClose} disabled={loading}>
+                            {readOnly ? t("Готово", "Done") : t("Відхилити", "Decline")}
+                        </button>
+                        {error && <p className="gl-flow-error" role="alert">{error}</p>}
+                    </div>}
                 >
-
+                        {isMobile && !readOnly && <p className="gl-flow-description">{t("Перегляньте умови перед створенням акаунта.", "Review the terms before creating your account.")}</p>}
                         <div style={termsBoxStyle}>
                             <h3 style={{marginTop: 0}}>1. General Provisions</h3>
                             <p>
@@ -365,7 +383,7 @@ export default function TermsOfUseModal({
                             </p>
                         </div>
 
-                        <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 16}}>
+                        {!isMobile && <div style={{display: "flex", flexDirection: "column", gap: 12, marginTop: 16}}>
                             {!readOnly && (
                                 <Button
                                     variant="offset"
@@ -395,8 +413,8 @@ export default function TermsOfUseModal({
                             </Button>
 
                             {error && <div style={{ color: ERROR_COLOR, fontWeight: 400 }}>{error}</div>}
-                        </div>
-                </ModalShell>
+                        </div>}
+                </Dialog>
             )}
 
             {cookieOpen && (

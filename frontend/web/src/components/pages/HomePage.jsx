@@ -14,6 +14,7 @@ import SiteHeader from "../SiteHeader.jsx";
 import { emit } from "../../services/events.js";
 import ChooseLocaleModal from "../modals/ChooseLocaleModal.jsx";
 import { localizationService } from "../../localization/localizationService.js";
+import useExerciseViewport from "../mobile/useExerciseViewport.js";
 
 export default function HomePage({ theme }) {
     const [loading, setLoading] = useState(false);
@@ -22,7 +23,8 @@ export default function HomePage({ theme }) {
         () => !localizationService.isLocaleDefined()
     );
 
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(() => window.innerWidth < 915);
+    useExerciseViewport(isMobile && !localeSelectionRequired);
 
     const [infoOpen, setInfoOpen] = useState(false);
     const [infoTitle, setInfoTitle] = useState("Information");
@@ -189,7 +191,7 @@ export default function HomePage({ theme }) {
 
     return (
         <AppShell theme={theme} noPadding>
-            <div style={pageLayoutStyle}>
+            <div className="gl-practice-layout" style={pageLayoutStyle}>
                 <SiteHeader
                     theme={theme}
                     loading={loading}
@@ -197,8 +199,8 @@ export default function HomePage({ theme }) {
                     onLevelChange={handleLevelChange}
                 />
 
-                <div style={pageShellStyle}>
-                    <main style={pageContentStyle} ref={containerRef}>
+                <div className="gl-practice-shell" style={pageShellStyle}>
+                    <main className="gl-practice-main" style={pageContentStyle} ref={containerRef}>
                         {infoOpen && (
                             <InfoModal
                                 theme={theme}

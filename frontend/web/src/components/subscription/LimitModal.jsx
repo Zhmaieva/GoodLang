@@ -1,3 +1,4 @@
+import {reloadApp} from "../../services/reloadApp.js";
 import React, {useState, useRef, useEffect, useCallback} from "react";
 import { createPortal } from "react-dom";
 import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
@@ -8,13 +9,17 @@ import {ACTION_TYPES} from "../../utils/constants.js";
 import {off, on} from "../../services/events.js";
 import { Button } from "../Buttons.jsx";
 import { Check, X } from "@phosphor-icons/react";
+import MobileSubscriptionSheet from "../mobile/MobileSubscriptionSheet.jsx";
+import useMobileLayout from "../mobile/useMobileLayout.js";
 
 let stripeLoaded = null;
 export async function getStripe() {
     if (stripeLoaded) return stripeLoaded;
+    const publishableKey = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY;
+    if (!publishableKey) throw new Error("Stripe publishable key is not configured");
 
     const { loadStripe } = await import("@stripe/stripe-js");
-    stripeLoaded = await loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+    stripeLoaded = await loadStripe(publishableKey);
 
     return stripeLoaded;
 }
@@ -43,14 +48,18 @@ export default function LimitModal({
                                        featurePdf = false}) {
     featurePdf = false;//temp block pdf selling
 
+    const isMobile = useMobileLayout();
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [isPaying, setIsPaying] = useState(false);
+    const [checkoutError, setCheckoutError] = useState(false);
     const checkoutRef = useRef(null);
 
     const [timeLeft, setTimeLeft] = useState(0);
     const [loginModalOpen, setLoginModalOpen] = useState(false);
     const [account, setAccount] = useState(null);
+    const [accountLoading, setAccountLoading] = useState(false);
+    const [accountError, setAccountError] = useState(false);
     const [subscribe, setSubscribe] = useState(subscribeIntent);
 
     const [skillAccuracy, setSkillAccuracy] = useState(0);
@@ -70,21 +79,36 @@ export default function LimitModal({
     }, []);
 
     useEffect(() => {
+        if (!open) return;
         refreshSkill().then();
+        setAccountLoading(true);
 
-        setTimeout(async () => {
-            await loadAccountInfo();
-            if (subscribeIntent) {
-                await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_DISCOUNT_SUBSCRIPTION);
+        const timer = setTimeout(async () => {
+            try {
+                await loadAccountInfo();
+                if (subscribeIntent) await callAccountVerifyApi(ACTION_TYPES.MODAL_SHOWN_DISCOUNT_SUBSCRIPTION);
+            } catch {
+                // The mobile price state offers a retry without opening checkout.
             }
         }, 200);
 
         setSubscribe(subscribeIntent);
-    }, [subscribeIntent]);
+        return () => clearTimeout(timer);
+    }, [open, subscribeIntent]);
 
     const loadAccountInfo = async () => {
-        const account = await callAccountInfoApi();
-        setAccount(account);
+        setAccountLoading(true);
+        setAccountError(false);
+        try {
+            const nextAccount = await callAccountInfoApi();
+            setAccount(nextAccount);
+            return nextAccount;
+        } catch (error) {
+            setAccountError(true);
+            throw error;
+        } finally {
+            setAccountLoading(false);
+        }
     };
 
     const onCloseHandler = useCallback(async () => {
@@ -93,7 +117,7 @@ export default function LimitModal({
             try {
                  await callAccountVerifyApi(ACTION_TYPES.MODAL_CANCELLED_STRIPE);
             } catch {}
-            window.location.reload();
+            reloadApp();
         }
         onClose();
     }, [isPaying, onClose]);
@@ -154,13 +178,14 @@ export default function LimitModal({
 
     async function handleSubscribe() {
         try {
+            setCheckoutError(false);
             setLoading(true);
 
             await callAccountVerifyApi(ACTION_TYPES.BUTTON_CLICK_WANT_PREMIUM);
 
-            if (!account) await loadAccountInfo();
+            const currentAccount = account || await loadAccountInfo();
 
-            if (!account?.email) {
+            if (!currentAccount?.email) {
                 setPaymentIntent(true);
                 setLoginModalOpen(true);
                 return;
@@ -197,6 +222,7 @@ export default function LimitModal({
             } catch {}
 
             console.error("Stripe error:", err);
+            setCheckoutError(true);
             setLoading(false);
         }
     }
@@ -247,6 +273,24 @@ export default function LimitModal({
         borderColor: theme.dark,
         boxShadow: "none",
     };
+
+    const login = loginModalOpen && <LoginModal forceLogin theme={theme} account={account} open={loginModalOpen}
+        onClose={() => { setLoginModalOpen(false); setLoading(false); onCloseHandler(); }} />;
+
+    if (isMobile) {
+        return <>
+            {!loginModalOpen && <MobileSubscriptionSheet account={account} loading={loading} priceLoading={accountLoading} accountError={accountError} checkoutError={checkoutError}
+                onRetry={() => loadAccountInfo().catch(() => {})} onSubscribe={handleSubscribe}
+                onSignIn={async () => {
+                    try {
+                        if (!account) await loadAccountInfo();
+                        setLoginModalOpen(true);
+                    } catch { /* Keep the offer open for a retry. */ }
+                }} onClose={onCloseHandler} isPaying={isPaying} isLimitReached={isLimitReached}
+                timeLeft={timeLeft} hoursLeft={hoursLeft} improvePct={improvePct} hasEnoughEval={hasEnoughEval} />}
+            {login}
+        </>;
+    }
 
     return createPortal(
         <>
@@ -604,19 +648,7 @@ export default function LimitModal({
                 )
             }
 
-            {loginModalOpen && (
-                <LoginModal
-                    forceLogin={true}
-                    theme={theme}
-                    account={account}
-                    open={loginModalOpen}
-                    onClose={() => {
-                        setLoginModalOpen(false);
-                        setLoading(false);
-                        onCloseHandler();
-                    }}
-                />
-            )}
+            {login}
         </>,
         document.body,
     );

@@ -1,3 +1,4 @@
+import {reloadApp} from "../../services/reloadApp.js";
 import React, {useState, useRef, useEffect, useCallback} from "react";
 import {callAccountInfoApi, callAccountVerifyApi, callCheckoutApi} from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
@@ -83,7 +84,7 @@ export default function DownloadLimitModal({ ruleToDownload, subscribeIntent = f
     const onCloseHandler = useCallback(() => {
         unlockScroll();
         setPaymentIntent(false);
-        if (isPaying) window.location.reload();
+        if (isPaying) reloadApp();
         onClose();
     }, [isPaying, onClose]);
 

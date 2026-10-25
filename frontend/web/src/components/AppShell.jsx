@@ -1,4 +1,5 @@
 import { APP_BACKGROUND_COLOR, APP_TEXT_COLOR } from "../theme.js";
+import "./mobile/mobile.css";
 
 export default function AppShell({ children, theme, noPadding = false }) {
     const styles = {

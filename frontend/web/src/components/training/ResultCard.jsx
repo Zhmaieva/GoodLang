@@ -12,6 +12,8 @@ import {
     APP_TEXT_COLOR,
 } from "../../theme.js";
 import { ArrowRight, BookOpen, Check, Lightbulb, Sparkle, X } from "@phosphor-icons/react";
+import MobileFeedback from "../mobile/MobileFeedback.jsx";
+import useMobileLayout from "../mobile/useMobileLayout.js";
 
 function removeTrailingCorrectAnswer(feedback, correctAnswer) {
     let next = String(feedback ?? "").trim();
@@ -153,6 +155,7 @@ export default function ResultCard({
     isQuickFeedbackPending = false,
     onContinue,
 }) {
+    const isMobile = useMobileLayout();
     const SURFACE = theme?.surface ?? APP_SURFACE_COLOR;
     const BORDER = theme?.border ?? APP_BORDER_COLOR;
     const TEXT = theme?.text ?? APP_TEXT_COLOR;
@@ -178,7 +181,7 @@ export default function ResultCard({
     const isContinueDisabled = isDetailedLoading && isIncorrect;
 
     useEffect(() => {
-        if (isQuickFeedbackPending || !hasResult || hasNeutralMessage || isContinueDisabled || typeof onContinue !== "function") {
+        if (isMobile || isQuickFeedbackPending || !hasResult || hasNeutralMessage || isContinueDisabled || typeof onContinue !== "function") {
             return undefined;
         }
 
@@ -204,7 +207,7 @@ export default function ResultCard({
 
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [hasResult, hasNeutralMessage, isContinueDisabled, isQuickFeedbackPending, onContinue]);
+    }, [hasResult, hasNeutralMessage, isContinueDisabled, isQuickFeedbackPending, isMobile, onContinue]);
 
     if (!shouldRender) {
         return null;
@@ -518,6 +521,13 @@ export default function ResultCard({
             </span>
         </span>
     );
+
+    if (isMobile && !hasNeutralMessage) {
+        return <MobileFeedback isCorrect={isCorrect} answer={answerToShow} userAnswer={userAnswer}
+            naturalAnswer={hasNaturalAnswer ? naturalAnswerText : ""} explanation={renderInlineMarkdown(explanationText)}
+            vocabularyFeedback={vocabularyFeedback} pending={isQuickFeedbackPending} disabled={isContinueDisabled}
+            grammarRule={grammarRuleToOpen} onContinue={onContinue} />;
+    }
 
     if (hasNeutralMessage) {
         return (

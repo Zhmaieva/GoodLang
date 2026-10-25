@@ -1,0 +1,24 @@
+.gl-sheet.gl-locale-sheet {
+    height: min(720px, 84dvh);
+    padding-inline: 20px;
+}
+
+.gl-locale-sheet .gl-sheet-heading { margin-bottom: 8px; }
+.gl-locale-sheet .gl-sheet-heading h2 { font-size: 22px; letter-spacing: -.5px; }
+.gl-locale-sheet .gl-sheet-content { display: flex; flex: 1; flex-direction: column; overflow: hidden; }
+.gl-locale-description { flex-shrink: 0; margin: 0 0 16px; color: #7a788f; font-size: 14px; line-height: 1.45; }
+.gl-locale-search { display: flex; flex-shrink: 0; align-items: center; gap: 9px; min-height: 44px; margin-bottom: 12px; padding: 0 12px; border-radius: 12px; background: #f1f0f6; color: #7a788f; }
+.gl-locale-search input { width: 100%; min-width: 0; margin: 0; padding: 11px 0; border: 0; outline: none; background: transparent; color: #272438; font: 400 16px/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.gl-locale-search input::placeholder { color: #7a788f; opacity: 1; }
+.gl-locale-search:focus-within { box-shadow: inset 0 0 0 1.5px #7866cc; }
+.gl-locale-list { flex: 1; min-height: 0; margin: 0; padding: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; list-style: none; }
+.gl-locale-option { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 54px; padding: 10px 4px; border: 0; border-bottom: 1px solid #eeedf4; border-radius: 0; background: transparent; color: #272438; font: 400 17px/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-align: left; cursor: pointer; }
+.gl-locale-list li:last-child .gl-locale-option { border-bottom: 0; }
+.gl-locale-flag { display: flex; flex-shrink: 0; align-items: center; justify-content: center; width: 28px; font-size: 23px; line-height: 1; }
+.gl-locale-name { flex: 1; overflow-wrap: anywhere; }
+.gl-locale-check { display: flex; flex-shrink: 0; align-items: center; justify-content: center; width: 21px; height: 21px; border: 1.5px solid #dedbe9; border-radius: 50%; color: #fff; box-sizing: border-box; }
+.gl-locale-option[aria-pressed="true"] { color: #6653b8; font-weight: 600; }
+.gl-locale-option[aria-pressed="true"] .gl-locale-check { border-color: #7866cc; background: #7866cc; }
+.gl-locale-empty { padding: 22px 8px; color: #7a788f; font-size: 14px; line-height: 1.5; text-align: center; }
+.gl-locale-sheet .gl-sheet-footer { padding-top: 14px; border-top: 1px solid #eeedf4; }
+.gl-locale-sheet .gl-primary { min-height: 50px; border-radius: 15px; font-size: 16px; }

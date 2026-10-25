@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
     CaretRight,
+    Check,
     ChartBar,
     CrownSimple,
     EnvelopeSimple,
@@ -17,6 +18,10 @@ import LimitModal from "../subscription/LimitModal.jsx";
 import AccountStatusModal from "../subscription/AccountStatusModal.jsx";
 import LoginModal from "../subscription/LoginModal.jsx";
 import FrontendLogsModal from "../modals/FrontendLogsModal.jsx";
+import MobileProfile from "../mobile/MobileProfile.jsx";
+import MobileSheet from "../mobile/MobileSheet.jsx";
+import useMobileLayout from "../mobile/useMobileLayout.js";
+import { mobileCopy as t } from "../mobile/mobileCopy.js";
 import { callAccountInfoApi, callManageSubscriptionApi } from "../../services/api.js";
 import { localizationService } from "../../localization/localizationService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../../services/trainingDirector.js";
@@ -98,6 +103,14 @@ function getPlanLabel(account) {
     return "Free plan";
 }
 
+function ProfileDialog({ mobile, subtitle, children, ...props }) {
+    if (!mobile) return <ModalShell {...props} subtitle={subtitle}>{children}</ModalShell>;
+    return <MobileSheet {...props} className="gl-profile-sheet">
+        {subtitle && <p className="gl-sheet-description">{subtitle}</p>}
+        {children}
+    </MobileSheet>;
+}
+
 export default function ProfilePage({ theme }) {
     const navigate = useNavigate();
     const [account, setAccount] = useState(() => readCachedAccountInfo());
@@ -115,16 +128,7 @@ export default function ProfilePage({ theme }) {
     const profileTitlePressCountRef = useRef(0);
     const [legalView, setLegalView] = useState("menu");
     const [selectedLevel, setSelectedLevel] = useState(getSavedTrainingLevel() || "managed");
-    const [isMobile, setIsMobile] = useState(
-        typeof window !== "undefined" ? window.innerWidth < 760 : false
-    );
-
-    useEffect(() => {
-        const onResize = () => setIsMobile(window.innerWidth < 760);
-        onResize();
-        window.addEventListener("resize", onResize);
-        return () => window.removeEventListener("resize", onResize);
-    }, []);
+    const isMobile = useMobileLayout();
 
     useEffect(() => {
         callAccountInfoApi()
@@ -474,8 +478,8 @@ export default function ProfilePage({ theme }) {
         fontSize: "0.95rem",
         lineHeight: 1.55,
         fontWeight: 400,
-        maxHeight: "46vh",
-        overflowY: "auto",
+        maxHeight: isMobile ? undefined : "46vh",
+        overflowY: isMobile ? undefined : "auto",
     };
 
     const legalParagraphStyle = {
@@ -535,7 +539,7 @@ export default function ProfilePage({ theme }) {
                         style={backButtonStyle}
                         onClick={() => setLegalView("menu")}
                     >
-                        Back
+                        {isMobile ? t("До списку", "Back to list") : "Back"}
                     </Button>
                 </>
             );
@@ -553,7 +557,7 @@ export default function ProfilePage({ theme }) {
                         style={backButtonStyle}
                         onClick={() => setLegalView("menu")}
                     >
-                        Back
+                        {isMobile ? t("До списку", "Back to list") : "Back"}
                     </Button>
                 </>
             );
@@ -587,7 +591,7 @@ export default function ProfilePage({ theme }) {
                         style={backButtonStyle}
                         onClick={() => setLegalView("menu")}
                     >
-                        Back
+                        {isMobile ? t("До списку", "Back to list") : "Back"}
                     </Button>
                 </>
             );
@@ -660,7 +664,9 @@ export default function ProfilePage({ theme }) {
     return (
         <div style={pageStyle}>
             <SiteHeader theme={theme} />
-            <main style={contentStyle}>
+            {isMobile ? <MobileProfile account={account} isSubscribed={isSubscribed}
+                onPlan={handlePlanOverview} onEmail={() => setEmailChangeVisible(true)} onLegal={openLegalMenu}
+                onLogout={handleLogout} onTitlePress={handleProfileTitlePress} /> : <main style={contentStyle}>
                 <section style={cardStyle} aria-label="User profile">
                     <div style={heroStyle}>
                         <div style={heroInfoStyle}>
@@ -751,7 +757,7 @@ export default function ProfilePage({ theme }) {
                         })}
                     </section>
                 </section>
-            </main>
+            </main>}
             <ChooseLocaleModal
                 open={languageVisible}
                 theme={theme}
@@ -782,12 +788,12 @@ export default function ProfilePage({ theme }) {
                     status={billingStatus}
                 />
             )}
-            <ModalShell
+            <ProfileDialog mobile={isMobile}
                 open={billingVisible}
                 id="profile-billing-modal"
                 theme={theme}
-                title="Billing"
-                subtitle="Manage your plan, renewal, and payment method."
+                title={isMobile ? t("Підписка", "Subscription") : "Billing"}
+                subtitle={isMobile ? t("План, поновлення та спосіб оплати.", "Your plan, renewal and payment method.") : "Manage your plan, renewal, and payment method."}
                 onClose={closeBillingModal}
                 maxWidth={520}
                 titleStyle={{ fontSize: "1.75rem" }}
@@ -807,19 +813,29 @@ export default function ProfilePage({ theme }) {
                     {billingLoading ? "Opening..." : "Manage subscription"}
                 </Button>
                 {billingError && <p style={billingErrorStyle}>{billingError}</p>}
-            </ModalShell>
-            <ModalShell
+            </ProfileDialog>
+            <ProfileDialog mobile={isMobile}
                 open={levelVisible}
                 id="profile-level-modal"
                 theme={theme}
-                title="Choose difficulty"
-                subtitle="Pick the level for the next training tasks."
+                title={isMobile ? t("Складність", "Difficulty") : "Choose difficulty"}
+                subtitle={isMobile ? t("Застосуємо до наступних завдань.", "Applies to your next practice tasks.") : "Pick the level for the next training tasks."}
                 onClose={() => setLevelVisible(false)}
                 maxWidth={520}
                 titleStyle={{ fontSize: "1.75rem" }}
                 contentStyle={levelGridStyle}
             >
-                {levelOptions.map((option) => {
+                {isMobile ? <div role="group" aria-label={t("Складність завдань", "Practice difficulty")}>
+                    {levelOptions.map((option) => <button type="button" key={option.value}
+                        className="gl-profile-choice" aria-pressed={selectedLevel === option.value}
+                        onClick={() => handleLevelSelect(option.value)}>
+                        <span><span>{option.value === "managed" ? t("Адаптивна", "Adaptive")
+                            : option.value === "beginner" ? t("Початкова", "Beginner")
+                                : option.value === "intermediate" ? t("Середня", "Intermediate") : t("Висока", "Advanced")}</span>
+                            {option.recommended && <small>{t("Підлаштовується під ваші відповіді", "Adjusts to your answers")}</small>}</span>
+                        <span className="gl-profile-choice-mark">{selectedLevel === option.value && <Check size={15} weight="bold" aria-hidden="true" />}</span>
+                    </button>)}
+                </div> : levelOptions.map((option) => {
                     const selected = selectedLevel === option.value;
 
                     return (
@@ -844,28 +860,32 @@ export default function ProfilePage({ theme }) {
                         </Button>
                     );
                 })}
-            </ModalShell>
-            <ModalShell
+            </ProfileDialog>
+            <ProfileDialog mobile={isMobile}
                 open={legalVisible}
                 id="profile-legal-modal"
                 theme={theme}
-                title={legalView === "menu"
-                    ? "Legal"
-                    : legalView === "privacy"
-                        ? "Privacy Policy"
-                        : legalView === "deletion"
-                            ? "User data deletion"
-                            : "Terms of Service"}
+                title={isMobile && legalView === "menu" ? t("Конфіденційність та умови", "Privacy & terms")
+                    : legalView === "menu" ? "Legal" : legalView === "privacy" ? "Privacy Policy"
+                        : legalView === "deletion" ? "User data deletion" : "Terms of Service"}
                 subtitle={legalView === "menu"
-                    ? "Privacy Policy, Terms of Service, user data deletion, and contact information."
+                    ? isMobile ? null : "Privacy Policy, Terms of Service, user data deletion, and contact information."
                     : null}
                 onClose={closeLegalModal}
                 maxWidth={560}
                 titleStyle={{ fontSize: "1.75rem" }}
                 contentStyle={legalGridStyle}
             >
-                {renderLegalDocument()}
-            </ModalShell>
+                {isMobile && legalView === "menu" ? <div className="gl-profile-legal-options">
+                    {legalOptions.map((option) => <button type="button" key={option.value} onClick={() => {
+                        if (option.value === "contact") window.location.href = "mailto:goodlang.app@gmail.com";
+                        else setLegalView(option.value);
+                    }}><span>{option.value === "privacy" ? t("Політика конфіденційності", "Privacy policy")
+                        : option.value === "terms" ? t("Умови використання", "Terms of service")
+                            : option.value === "deletion" ? t("Видалення даних", "Delete my data") : t("Написати нам", "Contact us")}</span>
+                        <CaretRight size={17} aria-hidden="true" /></button>)}
+                </div> : renderLegalDocument()}
+            </ProfileDialog>
             <FrontendLogsModal
                 open={frontendLogsVisible}
                 theme={theme}

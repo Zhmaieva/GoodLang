@@ -1,3 +1,4 @@
+import {reloadApp} from "../../services/reloadApp.js";
 import React, { useState, useRef, useEffect } from "react";
 import {
     callAccountInfoApi,
@@ -18,6 +19,9 @@ import {localizationService} from "../../localization/localizationService.js";
 import {getPaymentIntent, setPaymentIntent} from "../../services/dataService.js";
 import { Button } from "../Buttons.jsx";
 import ModalShell from "../modals/ModalShell.jsx";
+import MobileLoginSheet from "../mobile/MobileLoginSheet.jsx";
+import { MobileCheckoutSheet } from "../mobile/MobileSubscriptionSheet.jsx";
+import useMobileLayout from "../mobile/useMobileLayout.js";
 
 export default function LoginForm({
                                       theme,
@@ -35,7 +39,7 @@ export default function LoginForm({
     const [code, setCode] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
-    const [isMobile, setIsMobile] = useState(false);
+    const isMobile = useMobileLayout();
     const [isPaying, setIsPaying] = useState(false);
     const [cookieOpen, setCookieOpen] = useState(false);
     const [termsOpen, setTermsOpen] = useState(false);
@@ -56,13 +60,6 @@ export default function LoginForm({
             .catch((err) => setError(err?.message || "Failed to send the code"))
             .finally(() => setLoading(false));
     }, [account?.email, emailChange]);
-
-    useEffect(() => {
-        const onResize = () => setIsMobile(window.innerWidth < 915);
-        onResize();
-        window.addEventListener("resize", onResize);
-        return () => window.removeEventListener("resize", onResize);
-    }, []);
 
     const mainButtonStyle = (disabled) => ({
         backgroundColor: disabled ? "#999" : theme.dark,
@@ -369,6 +366,7 @@ export default function LoginForm({
                     } catch {}
 
                     console.error("Stripe error:", err);
+                    setError("Could not open checkout. Please try again later.");
                     setLoading(false);
                 }
                 return;
@@ -402,13 +400,13 @@ export default function LoginForm({
             }
 
             window.history.replaceState({}, "", url.toString());
-            window.location.reload();
+            reloadApp();
         } catch (e) {
             const encoded = ruleId ? encodeURIComponent(ruleId) : "";
             const encodedType = fileTypeToDownload ? encodeURIComponent(fileTypeToDownload) : "";
-            window.location.href = ruleId
+            reloadApp(ruleId
                 ? `${window.location.pathname}?ruleToDownload=${encoded}&pdf_type=${encodedType}`
-                : window.location.pathname;
+                : window.location.pathname);
         }
     }
 
@@ -439,9 +437,18 @@ export default function LoginForm({
             ? "You’ll receive a confirmation email"
             : `Code sent to: ${emailInput}`;
 
+    const mobileLogin = isPaying ? <MobileCheckoutSheet containerId="embedded-checkout-container-login-form"
+        onClose={onClose} dismissible={!closeDisabled} /> : <MobileLoginSheet
+        step={step} emailChangeStage={emailChangeStage} emailChange={emailChange} email={emailInput}
+        onEmailChange={(value) => { setError(""); setEmailInput(value); }} code={code.join("")}
+        onCodeChange={(value) => { setError(""); setCode(Array.from({length: 6}, (_, index) => value[index] || "")); }}
+        onEmailSubmit={handleEmailSubmit} onVerify={handleVerify} loading={loading} error={error} onClose={onClose}
+        onEditEmail={() => { setError(""); setCode(new Array(6).fill("")); setStep("email"); }} />;
+
     return (
         <>
-            {(!cookieOpen && !termsOpen) && (
+            {isMobile && !cookieOpen && !termsOpen && mobileLogin}
+            {(!isMobile && !cookieOpen && !termsOpen) && (
                 <ModalShell
                     id="login-form"
                     theme={theme}

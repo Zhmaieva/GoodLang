@@ -1,0 +1,43 @@
+.gl-auth-sheet .gl-sheet-heading, .gl-subscription-sheet .gl-sheet-heading { margin-bottom: 14px; }
+.gl-auth-sheet .gl-sheet-heading h2, .gl-subscription-sheet .gl-sheet-heading h2, .gl-checkout-sheet .gl-sheet-heading h2 { font-size: 22px; }
+.gl-flow-description { margin: 0 0 22px; color: #7a788f; font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
+.gl-auth-email { display: inline-block; margin-top: 5px; color: #272438; font-weight: 500; overflow-wrap: anywhere; }
+.gl-auth-form { display: flex; flex-direction: column; gap: 9px; padding-bottom: 2px; }
+.gl-flow-label { color: #625c71; font-size: 13px; line-height: 1.4; }
+.gl-flow-input { box-sizing: border-box; width: 100%; min-width: 0; min-height: 52px; padding: 12px 14px; border: 1px solid #e5e2ef; border-radius: 14px; background: #f8f7fc; color: #272438; font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-appearance: none; outline: none; }
+.gl-flow-input::placeholder { color: #9993a6; font-size: inherit; font-weight: 400; text-align: inherit; opacity: 1; }
+.gl-flow-input:focus { border-color: #7866cc; }
+.gl-flow-input[aria-invalid="true"] { border-color: #bd5265; }
+.gl-flow-input.gl-auth-code { min-height: 58px; padding: 8px 12px; text-align: center; font-size: 28px; line-height: 1.4; letter-spacing: .3em; padding-left: calc(12px + .3em); font-variant-numeric: tabular-nums; }
+.gl-flow-error { margin: 2px 0 0; color: #ac4558; font-size: 13px; line-height: 1.45; }
+.gl-auth-edit { margin-top: 9px; font-size: 14px; }
+.gl-auth-sheet .gl-sheet-footer, .gl-subscription-sheet .gl-sheet-footer, .gl-flow-document-sheet .gl-sheet-footer { padding-top: 20px; }
+.gl-auth-sheet .gl-primary, .gl-subscription-sheet .gl-primary, .gl-flow-document-sheet .gl-primary { min-height: 50px; border-radius: 15px; font-size: 16px; }
+.gl-flow-actions { display: flex; flex-direction: column; gap: 5px; }
+.gl-flow-secondary { justify-content: center; width: 100%; min-height: 44px; padding: 10px 4px; font-size: 14px; text-align: center; }
+.gl-subscription-price { padding: 16px; margin-bottom: 22px; border-radius: 16px; background: #f4f1fc; }
+.gl-subscription-price > p:first-child { margin: 0 0 8px; color: #7a788f; font-size: 13px; line-height: 1.4; }
+.gl-subscription-price > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 7px; }
+.gl-subscription-price strong { color: #272438; font-size: 32px; font-weight: 650; line-height: 1.2; letter-spacing: -.8px; }
+.gl-subscription-price span, .gl-subscription-price del { color: #7a788f; font-size: 14px; }
+.gl-subscription-price small { padding: 3px 7px; border-radius: 7px; background: #e5dff8; color: #6653b8; font-size: 12px; font-weight: 600; }
+.gl-subscription-price .gl-subscription-price-status { margin: 0; color: #7a788f; font-size: 15px; line-height: 1.5; }
+.gl-subscription-price .gl-subscription-offer { margin: 10px 0 0; color: #7866cc; font-size: 12px; line-height: 1.4; }
+.gl-subscription-benefits { display: flex; flex-direction: column; gap: 16px; margin: 0; padding: 0 0 3px; list-style: none; }
+.gl-subscription-benefits li { display: flex; align-items: center; gap: 12px; color: #272438; font-size: 15px; line-height: 1.4; }
+.gl-subscription-benefits li > span { display: grid; place-items: center; width: 25px; height: 25px; flex-shrink: 0; border-radius: 50%; background: #eeebfa; color: #7866cc; }
+.gl-subscription-wait { margin: 0 0 16px; color: #7a788f; font-size: 13px; line-height: 1.5; }
+.gl-checkout-sheet { height: min(800px, 90dvh); }
+.gl-checkout-sheet .gl-sheet-content { flex: 1; }
+.gl-mobile-checkout { width: 100%; min-width: 0; background: #fff; }
+.gl-flow-document-sheet { height: min(740px, 88dvh); }
+.gl-flow-document-sheet .gl-sheet-content { flex: 1; }
+.gl-flow-document-sheet .gl-sheet-content h3 { color: #272438; font-size: 16px; line-height: 1.4; margin: 20px 0 8px; }
+.gl-flow-document-sheet .gl-sheet-content p { font-size: 14px; line-height: 1.6; }
+@media (max-height: 400px) {
+    .gl-auth-sheet .gl-sheet-handle { margin-bottom: 10px; }
+    .gl-auth-sheet .gl-sheet-heading { margin-bottom: 8px; }
+    .gl-auth-sheet .gl-flow-description { margin-bottom: 12px; font-size: 13px; }
+    .gl-auth-sheet .gl-sheet-footer { padding-top: 12px; }
+    .gl-auth-sheet .gl-auth-code { min-height: 52px; font-size: 24px; line-height: 1.35; }
+}

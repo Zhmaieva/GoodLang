@@ -1,3 +1,4 @@
+import {reloadApp} from "./reloadApp.js";
 import {callAccountInfoApi, callCompleteMarathonDayApi, callUpdateMarathonStatusApi} from "./api.js";
 import { getAllStatistics } from "./dataService.js";
 import {emit} from "./events.js";
@@ -379,7 +380,7 @@ export const marathonService = {
             if (old?.currentDay?.dayStartAt !== a?.currentDay?.dayStartAt
                 || old?.currentDay?.dayNumber !== a?.currentDay?.dayNumber) {
                 syncPrevAccountInfoToLS();
-                window.location.reload();
+                reloadApp();
             } else if (old?.currentDayTasks?.length > 0 && (a?.currentDayTasks?.length ?? 0) === 0) {
                 dayTasksJustCompleted = true;
                 syncPrevAccountInfoToLS();
@@ -392,7 +393,7 @@ export const marathonService = {
             const endMs = Date.parse(dayEndAt); // ISO UTC-safe
             if (Number.isFinite(endMs) && endMs < Date.now()) {
                 await callAccountInfoApi();      // refresh LS cache
-                window.location.reload();
+                reloadApp();
             }
         }
 

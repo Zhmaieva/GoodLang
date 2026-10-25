@@ -1,3 +1,4 @@
+import {reloadApp} from "../../services/reloadApp.js";
 import { useEffect, useMemo, useState } from "react";
 import TaskModeSwitch from "./TaskModeSwitch.jsx";
 import { marathonService } from "../../services/marathonService.js";
@@ -13,6 +14,7 @@ import {
 } from "../../theme.js";
 import { localizationService } from "../../localization/localizationService.js";
 import { Lightbulb } from "@phosphor-icons/react";
+import MobileExerciseTask from "../mobile/MobileExerciseTask.jsx";
 
 const NON_LATIN_LETTER_PATTERN = /[^\W\d_A-Za-z]/u;
 const ENGLISH_HINT_FRAGMENT_PATTERN = /['’][A-Za-z]+|[A-Za-z]+(?:[’'][A-Za-z]+)?(?:\s*(?:\/|\+|→|-)\s*[A-Za-z]+(?:[’'][A-Za-z]+)?)*/g;
@@ -71,6 +73,7 @@ export default function TaskCard({
                                      waitTimeSeconds = 0,
                                      account,
                                      actionDisabled = false,
+                                     reviewing = false,
 
                                      // gap mode
                                      taskType = "translate", // "translate" | "gap"
@@ -99,7 +102,7 @@ export default function TaskCard({
     const [hintButtonHovered, setHintButtonHovered] = useState(false);
 
     useEffect(() => {
-        const onResize = () => setIsCompact(window.innerWidth < 900);
+        const onResize = () => setIsCompact(window.innerWidth < 915);
         checkMarathonView().then();
 
         window.addEventListener("resize", onResize, { passive: true });
@@ -131,7 +134,7 @@ export default function TaskCard({
                 setSecondsLeft((prev) => {
                     if (prev <= 1) {
                         clearInterval(interval);
-                        window.location.reload();
+                        reloadApp();
                         return 0;
                     }
                     return prev - 1;
@@ -430,6 +433,16 @@ export default function TaskCard({
             `}</style>
         </div>
     );
+
+    if (isCompact) {
+        const noAnswer = taskType === "gap" ? gapSelected === null : !answer.trim();
+        return <MobileExerciseTask taskText={taskText} answer={answer} setAnswer={setAnswer}
+            textareaRef={textareaRef} onKeyDown={onKeyDown} isInputDisabled={isInputDisabled}
+            taskType={taskType} gapOptions={gapOptions} gapSelected={gapSelected} setGapSelected={setGapSelected}
+            loading={loading} checking={isCheckingAnswer} buttonText={buttonText} onMainButtonClick={onMainButtonClick}
+            actionDisabled={isActionBusy || (!reviewing && !locked && noAnswer)}
+            hint={cleanHint} hintContent={renderHintContent(cleanHint)} />;
+    }
 
     return (
         <div

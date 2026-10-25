@@ -47,6 +47,8 @@ import {
     TRAINER_ANIMATION_PENDING_KEY,
 } from "../../animations/shakespeareAnimation.js";
 import { createBusTrainerAnimation } from "../../animations/busAnimation.js";
+import PracticeProgress from "../mobile/PracticeProgress.jsx";
+import { mobileCopy as mobileText } from "../mobile/mobileCopy.js";
 
 export default function Trainer({
                                     theme,
@@ -1553,7 +1555,8 @@ export default function Trainer({
             <SkeletalAnimation skeleton={shakespeareAnimation.skeleton} />
             <SkeletalAnimation skeleton={busAnimation.skeletons.busSkeleton} />
             <SkeletalAnimation skeleton={busAnimation.skeletons.peelSkeleton} />
-            {(mode === "check" || loading) && (
+            {isMobileAnimation && freeTraining && <PracticeProgress level={nextLevel} />}
+            {(isMobileAnimation || mode === "check" || loading) && (
                 <TaskCard
                     waitTimeSeconds={waitTimeSeconds}
                     hint={
@@ -1566,7 +1569,10 @@ export default function Trainer({
                     answer={answer}
                     setAnswer={setAnswer}
                     isInputDisabled={loading || isEvaluating || mode === "next"}
-                    mainBtnText={mode === "check"
+                    reviewing={mode === "next"}
+                    mainBtnText={isMobileAnimation
+                        ? (mode === "check" ? mobileText("Перевірити", "Check answer") : mobileText("Далі", "Continue"))
+                        : mode === "check"
                         ? 'Check answer'
                         : 'NEXT SENTENCE'}
                     onMainButtonClick={onMainButtonClick}

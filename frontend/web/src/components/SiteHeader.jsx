@@ -9,6 +9,7 @@ import { marathonService } from "../services/marathonService.js";
 import { getSavedTrainingLevel, saveTrainingLevel } from "../services/trainingDirector.js";
 import { off, on } from "../services/events.js";
 import { TRAINER_ANIMATION_PENDING_KEY } from "../animations/shakespeareAnimation.js";
+import MobileHeader from "./mobile/MobileHeader.jsx";
 import {
     APP_BORDER_COLOR,
     APP_DARK_COLOR,
@@ -347,6 +348,11 @@ export default function SiteHeader({
         width: "100%",
         minWidth: 0,
     };
+
+    if (isMobile) {
+        return <MobileHeader theme={theme} level={level} loading={loading}
+            onLevelChange={handleLevelChange} account={account} hideNavigation={isInMarathonView} />;
+    }
 
     return (
         <>

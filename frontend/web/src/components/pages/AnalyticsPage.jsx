@@ -22,6 +22,7 @@ import AppShell from "../AppShell.jsx";
 import {callAccountInfoApi} from "../../services/api.js";
 import { APP_BACKGROUND_COLOR } from "../../theme.js";
 import SiteHeader from "../SiteHeader.jsx";
+import MobileGrammar from "../mobile/MobileGrammar.jsx";
 
 export default function AnalyticsPage({theme}) {
     const navigate = useNavigate();
@@ -77,6 +78,7 @@ export default function AnalyticsPage({theme}) {
     const loadAccountInfo = async () => {
         const account = await callAccountInfoApi();
         setAccount(account);
+        setRules([...getAllStatistics()]);
     }
 
 
@@ -172,6 +174,14 @@ export default function AnalyticsPage({theme}) {
         boxShadow: "none",
         boxSizing: "border-box",
     };
+
+    if (isMobile) {
+        return <AppShell theme={theme} noPadding><SiteHeader theme={theme} />
+            <MobileGrammar rows={tableRows} query={query} setQuery={setQuery}
+                statusFilter={statusFilter} setStatusFilter={setStatusFilter}
+                filterLevel={filterLevel} setFilterLevel={setFilterLevel} kpis={kpis} />
+        </AppShell>;
+    }
 
     return (
         <AppShell theme={theme} noPadding>
