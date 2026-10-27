@@ -1,11 +1,10 @@
 // console.js (Node 18+, console app)
+import "../config/env.js";
 import OpenAI from "openai";
 import {GrammarRule, LEVEL_RULES, RULE_LABELS} from "./rules.js";
 import {ALL_RULES_SAMPLES} from "./allRulesSamples.js";
 
-const client = new OpenAI({ apiKey:
-        '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'
-});
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export const OPENAI_RUNTIME_MODEL = process.env.OPENAI_RUNTIME_MODEL || "gpt-5.4-mini";
 export const OPENAI_QUICK_CHECK_MODEL = process.env.OPENAI_QUICK_CHECK_MODEL || "gpt-5.4-nano";
 export const OPENAI_EVALUATION_MODEL = process.env.OPENAI_EVALUATION_MODEL || "gpt-5.5";

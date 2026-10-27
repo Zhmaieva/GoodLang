@@ -1,8 +1,8 @@
+import "../../config/env.js";
 // emails/tou/touSender.js
 import fs from "node:fs/promises";
 import path from "node:path";
 import { markFailed, markSent, tryInsertTrackingRow } from "../massEmailService.js";
-import "dotenv/config";
 import {applyFontFamilyTemplate} from "../../../shared/fontFamily.js";
 
 /* ----------------------------- template helpers ---------------------------- */

@@ -1,8 +1,8 @@
+import "../../config/env.js";
 // emails/promoRegularSender.js
 import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
-import "dotenv/config";
 
 import { markFailed, markSent, tryInsertTrackingRow } from "../massEmailService.js";
 import { calcPrices } from "../../database/repositories/accountsRepository.js";

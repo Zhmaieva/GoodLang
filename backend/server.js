@@ -1,5 +1,5 @@
+import './config/env.js';
 import express from "express";
-import 'dotenv/config';
 import {translationsController} from "./controllers/translationController.js";
 import {healthController} from "./controllers/healthController.js";
 import {accountsController} from "./controllers/accountsController.js";

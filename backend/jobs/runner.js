@@ -2,12 +2,12 @@
 // Run one async job every `intervalMs`, but NEVER overlap.
 // If a tick is still running, next tick is skipped.
 
+import "../config/env.js";
 import {runTipsTick} from "../emails/tips/tipsSender.js";
 import {pool} from "../database/pool.js";
 import {transporter} from "../core/emailSender.js";
 import {fileURLToPath} from "node:url";
 import path from "node:path";
-import "dotenv/config";
 import {
     downgradeAttentionAccountsAfterMarathonAge,
     failInProgressMarathonsForFreeAccounts
